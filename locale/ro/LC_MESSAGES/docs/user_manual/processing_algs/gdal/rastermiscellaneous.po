@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-06-22 13:01+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
@@ -322,6 +322,10 @@ msgstr ""
 msgid "[string]"
 msgstr "[string]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:66
+msgid "Default: '2 4 8 16'"
+msgstr "Implicit: '2 4 8 16'"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:72
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:91
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:106
@@ -423,6 +427,27 @@ msgstr ""
 msgid "``EXTRA``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:110
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:235
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:259
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:265
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:431
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:596
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:604
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:625
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:745
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:819
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:833
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:847
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:861
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:881
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:909
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1100
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1226
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1564
+msgid "Default: None"
+msgstr "Default: Nici o valoare"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:114
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:269
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:485
@@ -507,6 +532,19 @@ msgstr ""
 msgid "Options:"
 msgstr "Opţiuni:"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:182
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:417
+msgid "0 --- Average (``average``)"
+msgstr "0 --- Medie (``average``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:183
+msgid "1 --- Highest (``highest``)"
+msgstr "1 --- Cel mai mare (``highest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:184
+msgid "2 --- Lowest (``lowest``)"
+msgstr "2 --- Cel mai mic (``lowest``)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:186
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:550
 msgid "``SEPARATE``"
@@ -526,6 +564,11 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1526
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Implicit: ``[Salvare într-un fișier temporar]``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:204
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:572
+msgid "Specification of the output raster layer. One of:"
+msgstr "Specificare strat raster de ieșire. Unul dintre:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -552,11 +595,36 @@ msgstr ""
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:246
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:717
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1236
+msgid "0 --- Nearest Neighbour (``nearest``)"
+msgstr "0 --- Cel Mai Apropiat Vecin (``nearest``)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:247
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:718
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1237
 msgid "1 --- Bilinear (``bilinear``)"
 msgstr "1 --- Biliniar (``biliniar``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:248
+msgid "2 --- Cubic Convolution (``cubic``)"
+msgstr "2 --- Convoluție Cubică (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:249
+msgid "3 --- B-Spline Convolution (``cubicspline``)"
+msgstr "3 --- Convoluție B-Spline (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:250
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:721
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1240
+msgid "4 --- Lanczos Windowed Sinc (``lanczos``)"
+msgstr "4 --- Lanczos Windowed Sinc (``lanczos``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:251
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:722
+msgid "5 --- Average (``average``)"
+msgstr "5 --- Medie (``average``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:252
 msgid "6 --- Mode (``mode``)"
@@ -599,9 +667,30 @@ msgstr "2 --- Raster (``raster``)"
 msgid "``ZOOM``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:357
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:378
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:384
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:447
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:455
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:463
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:612
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:730
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:887
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:965
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:980
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1257
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1272
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1551
+msgid "Default: ''"
+msgstr "Implicit: \""
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:360
 msgid "``VIEWER``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:366
+msgid "0 --- All (``all``)"
+msgstr "0 --- Toate (``all``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:367
 msgid "1 --- GoogleMaps (``google``)"
@@ -614,6 +703,10 @@ msgstr "2 --- OpenLayers (``openlayers``)"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:369
 msgid "3 --- Leaflet (``leaflet``)"
 msgstr "3 --- Leaflet (``leaflet``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:370
+msgid "4 --- None (``none``)"
+msgstr "4 --- Niciunul (``none``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:375
 msgid "``TITLE``"
@@ -637,6 +730,11 @@ msgstr "**Director de ieșire**"
 msgid "[folder]"
 msgstr "[folder]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:391
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1189
+msgid "Default: ``[Save to temporary folder]``"
+msgstr "Implicit: ``[Salvare într-un fișier temporar]``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary Directory"
 msgstr "Salvare Intr-un Director Temporar"
@@ -645,6 +743,10 @@ msgstr "Salvare Intr-un Director Temporar"
 msgid "Save to Directory"
 msgstr "Salvare în Director"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:418
+msgid "1 --- Nearest neighbour (``near``)"
+msgstr "1 --- Cel Mai Apropiat Vecin (``near``)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:419
 msgid "2 --- Bilinear (``bilinear``)"
 msgstr "2 --- Biliniar (``biliniar``)"
@@ -652,6 +754,18 @@ msgstr "2 --- Biliniar (``biliniar``)"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:420
 msgid "3 --- Cubic (``cubic``)"
 msgstr "3 --- Cubic (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:421
+msgid "4 --- Cubic spline (``cubicspline``)"
+msgstr "4 --- Cubic spline (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:422
+msgid "5 --- Lanczos Windowed sinc (``lanczos``)"
+msgstr "5 --- Lanczos Windowed sinc (``lanczos``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:423
+msgid "6 --- Antialias (``antialias``)"
+msgstr "6 --- Antialias (``antialias``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:428
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1223
@@ -675,6 +789,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1517
 msgid "[number]"
 msgstr "[număr]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:439
+msgid "Default: 0.0"
+msgstr "Implicit: 0.0"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:444
 msgid "``URL``"
@@ -708,6 +826,11 @@ msgstr "**Algorithm ID**: ``gdal:gdal2tiles``"
 msgid "``PCT``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:555
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1274
+msgid "**Output data type**"
+msgstr "**Tipul datelor de ieșire**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:556
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1275
 msgid "``DATA_TYPE``"
@@ -719,6 +842,69 @@ msgstr ""
 msgid "Default: 5"
 msgstr "Implicit: 5"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "0 --- Byte        (Întreg, fără semn, opt biți (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "1 --- Int16       (Întreg, cu semn, șaisprezece biți (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "2 --- UInt16      (Întreg, fără semn, șaisprezece biți (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "3 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr ""
+"3 --- UInt32      (Treizeci și doi de biți în virgulă mobilă (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "4 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr ""
+"4 --- Int32       (Treizeci și doi de biți în virgulă mobilă (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "5 --- Float32     (Thirty two bit floating point (float))"
+msgstr "5 --- Float32     (Treizeci și doi de biți în virgulă mobilă (float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+msgid "6 --- Float64     (Sixty four bit floating point (double))"
+msgstr ""
+"6 --- Float64     (Șaizeci și patru de biți în virgulă mobilă (double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "7 --- CInt16      (Complex Int16)"
+msgstr "7 --- CInt16      (Complex Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "8 --- CInt32      (Complex Int32)"
+msgstr "8 --- CInt32      (Complex Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "9 --- CFloat32    (Complex Float32)"
+msgstr "9 --- CFloat32    (Complex Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "10 --- CFloat64   (Complex Float64)"
+msgstr "10 --- CFloat64   (Complex Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+#: ../../docs/user_manual/processing_algs/algs_include.rst:21
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"Opțiunile disponibile depind de versiunea GDAL construită cu ajutorul QGIS "
+"(consultați meniul :menuselection:`Help --> About`)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:593
 msgid "``NODATA_INPUT``"
 msgstr ""
@@ -726,6 +912,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:601
 msgid "``NODATA_OUTPUT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:606
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:724
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:959
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1251
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1545
+msgid "**Additional creation options**"
+msgstr "**Opțiuni suplimentare de creare**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:609
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:727
@@ -757,10 +951,11 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1264
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1558
 msgid ""
-"For Batch Process: separate multiple options with a pipe character (``|``)."
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
 msgstr ""
-"Pentru Procesarea în Serie: separați opțiunile multiple cu un caracter pipe "
-"(``|``)."
+"Procesarea în Serie și Designerul de Modele: separați opțiunile multiple cu "
+"un caracter pipe (``|``)."
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:647
 msgid "**Algorithm ID**: ``gdal:merge``"
@@ -781,10 +976,19 @@ msgstr ""
 msgid "**Output**"
 msgstr "**Rezultat**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:713
+msgid "Default: 2"
+msgstr "Implicit: 2"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:719
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1238
 msgid "2 --- Cubic (``cubic``)"
 msgstr "2 --- Cubic (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:720
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1239
+msgid "3 --- Cubic Spline (``cubicspline``)"
+msgstr "3 --- Cubic Spline (``cubicspline``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:767
 msgid "**Algorithm ID**: ``gdal:pansharp``"
@@ -884,13 +1088,54 @@ msgstr ""
 msgid "The calculation formula. Examples:"
 msgstr "Formula de calcul. Exemple:"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:891
+msgid ""
+"``A*(A>0)`` --- outputs the value of the raster A if the value of A is "
+"greater than 0. If not, outputs 0."
+msgstr ""
+"``A*(A>0)`` --- afișează valoarea rasterului A dacă valoarea lui A este mai "
+"mare decât 0. În caz contrar, rezultatul este 0."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:894
+msgid ""
+"``A*(A>0 and A>B)``--- outputs the value of A if that value is bigger than 0"
+" and bigger than the value of B. If not, outputs 0."
+msgstr ""
+"``A*(A>0 și A>B)``--- afișează valoarea lui A dacă acea valoare este mai "
+"mare decât 0 și mai mare decât valoarea lui B. În caz contrar, rezultatul "
+"este 0."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:897
+msgid ""
+"``A*logical_or(A<=177,A>=185)`` --- outputs the value of A if A <= 177 or A "
+">= 185. If not, outputs 0."
+msgstr ""
+"``A*logical_or(A<=177,A>=185)`` --- afișează valoarea lui A dacă A <= 177 "
+"sau A >= 185. În caz contrar, rezultatul este 0."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:900
+msgid ""
+"``sqrt(A*A+B*B)`` --- Outputs the square root of the sum of the value of A "
+"squared and the value of B squared."
+msgstr ""
+"``sqrt(A*A+B*B)`` --- Afișează rădăcina pătrată a sumei dintre valorile lui "
+"A pătrat și a lui B pătrat."
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:906
 msgid "``NO_DATA``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:913
+msgid "|324|"
+msgstr "|324|"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:917
 msgid "[extent]"
 msgstr "[extent]"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Metodele disponibile sunt:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:925
 msgid "``RTYPE``"
@@ -916,6 +1161,11 @@ msgstr ""
 msgid "``NO_METADATA``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1072
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1116
+msgid "[html]"
+msgstr "[html]"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1123
 msgid "**Algorithm ID**: ``gdal:gdalinfo``"
 msgstr "**Algorithm ID**: ``gdal:gdalinfo``"
@@ -924,6 +1174,11 @@ msgstr "**Algorithm ID**: ``gdal:gdalinfo``"
 msgid "``TILE_SIZE_X``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1165
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1171
+msgid "Default: 256"
+msgstr "Implicit: 256"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1168
 msgid "``TILE_SIZE_Y``"
 msgstr ""
@@ -931,6 +1186,11 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1174
 msgid "``OVERLAP``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1183
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1497
+msgid "Default: 1"
+msgstr "Implicit: 1"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1198
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1316
@@ -942,9 +1202,17 @@ msgstr ""
 msgid "[file]"
 msgstr "[file]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1201
+msgid "Default: ``[Skip output]``"
+msgstr "Implicit: ``[Omitere rezultat]``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1245
 msgid "``DELIMITER``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1248
+msgid "Default: ';'"
+msgstr "Implicit: ';'"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1287
 msgid "``ONLY_PYRAMIDS``"
@@ -965,6 +1233,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1364
 msgid "``PATH_FIELD_NAME`` Optional"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1368
+msgid "Default: 'location'"
+msgstr "Implicit: 'location'"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1372
 msgid "``ABSOLUTE_PATH``"
@@ -1007,13 +1279,29 @@ msgstr "3 -- Proj.4 (``PROJ``)"
 msgid "**Algorithm ID**: ``gdal:tileindex``"
 msgstr "**Algorithm ID**: ``gdal:tileindex``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1492
+msgid "Input elevation raster layer"
+msgstr "Introduceți stratul raster al elevației"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1493
+msgid "**Band number**"
+msgstr "**Numărul benzii**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1494
 msgid "``BAND``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1498
+msgid "The number of the band to use as elevation"
+msgstr "Numărul benzii de utilizat ca elevație"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1500
 msgid "``OBSERVER``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1501
+msgid "[point]"
+msgstr "[point]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1504
 msgid "``OBSERVER_HEIGHT``"
@@ -1031,6 +1319,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1516
 msgid "``MAX_DISTANCE``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1519
+msgid "Default: 100.0"
+msgstr "Implicit: 100.0"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1586
 msgid "**Algorithm ID**: ``gdal:viewshed``"

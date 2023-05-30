@@ -1560,12 +1560,24 @@ msgstr ""
 msgid "flip_coordinates(geometry)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid ""
+"``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
+msgstr ""
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "force_polygon_ccw"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "force_polygon_ccw(geometry)"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
@@ -2079,6 +2091,12 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "pole_of_inaccessibility(geometry, tolerance)"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6

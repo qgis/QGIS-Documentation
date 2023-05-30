@@ -7,15 +7,16 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-22 02:35+0000\n"
+"POT-Creation-Date: 2023-07-06 09:08+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,7 +59,7 @@ msgstr "**이 강의의 목표:** WMS를 사용하고 그 한계를 이해하기
 msgid "|basic| |FA| Loading a WMS Layer"
 msgstr "|basic| |FA| WMS 레이어 불러오기"
 
-#: ../../docs/training_manual/online_resources/wms.rst:281
+#: ../../docs/training_manual/online_resources/wms.rst:282
 msgid "basic"
 msgstr ""
 
@@ -68,11 +69,11 @@ msgid ""
 "layers visible."
 msgstr "새 맵에 해당 레이어들을 불러오거나, 기본 맵에서 이 레이어들만 보이도록 설정하십시오."
 
-#: ../../docs/training_manual/online_resources/wms.rst:282
+#: ../../docs/training_manual/online_resources/wms.rst:283
 msgid "dataSourceManager"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:279
+#: ../../docs/training_manual/online_resources/wms.rst:280
 msgid "addWmsLayer"
 msgstr ""
 
@@ -99,39 +100,33 @@ msgstr ":guilabel:`Connect` 를 클릭하십시오. 아래에 있는 목록에�
 msgid "These are all the layers hosted by this WMS server."
 msgstr "해당 WMS 서버가 호스팅하고 있는 레이어들입니다."
 
-#: ../../docs/training_manual/online_resources/wms.rst:79
-msgid ""
-"Click once on the :guilabel:`OSM-WMS` layer. This will display its "
-":guilabel:`Coordinate Reference System`:"
-msgstr ""
-":guilabel:`OSM-WMS` 레이어를 한 번 클릭하십시오. 해당 레이어의 :guilabel:`Coordinate Reference"
-" System` 을 표출할 것입니다."
+#: ../../docs/training_manual/online_resources/wms.rst:289
+msgid "setProjection"
+msgstr "setProjection"
 
-#: ../../docs/training_manual/online_resources/wms.rst:90
-msgid ""
-"We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo "
-"Mercator`."
-msgstr "*투영된* CRS가 필요하므로, :guilabel:`WGS 84 / Psuedo Mercator` 를 선택합시다."
+#: ../../docs/training_manual/online_resources/wms.rst:287
+msgid "search"
+msgstr "search"
 
-#: ../../docs/training_manual/online_resources/wms.rst:119
+#: ../../docs/training_manual/online_resources/wms.rst:118
 msgid "Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list."
 msgstr "목록에서 :guilabel:`WGS 84 / Pseudo Mercator` 를 선택합니다."
 
-#: ../../docs/training_manual/online_resources/wms.rst:124
+#: ../../docs/training_manual/online_resources/wms.rst:123
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK`를 클릭하십시오."
 
-#: ../../docs/training_manual/online_resources/wms.rst:133
+#: ../../docs/training_manual/online_resources/wms.rst:132
 msgid ""
 "Note how the WMS layer's streets and our own streets overlap. That's a good "
 "sign!"
 msgstr "어떻게 WMS 레이어의 도로와 사용자의 도로가 겹쳐지는지 살펴보십시오. 좋은 징조군요!"
 
-#: ../../docs/training_manual/online_resources/wms.rst:137
+#: ../../docs/training_manual/online_resources/wms.rst:136
 msgid "The nature and limitations of WMS"
 msgstr "WMS의 본질과 한계"
 
-#: ../../docs/training_manual/online_resources/wms.rst:139
+#: ../../docs/training_manual/online_resources/wms.rst:138
 msgid ""
 "By now you may have noticed that this WMS layer actually has many features "
 "in it. It has streets, rivers, nature reserves, and so on. What's more, even"
@@ -141,7 +136,7 @@ msgstr ""
 "지금쯤이면 이 WMS 레이어가 실제로 많은 피처들을 담고 있다는 사실을 알아차렸을 겁니다. 도로, 강, 자연 보호 구역 등을 담고 "
 "있습니다. 더우기, 벡터로 이루어져 있는 것으로 보이지만 사용자가 심볼을 변경할 수 없는 래스터 같기도 합니다. 어째서일까요?"
 
-#: ../../docs/training_manual/online_resources/wms.rst:144
+#: ../../docs/training_manual/online_resources/wms.rst:143
 msgid ""
 "This is how a WMS works: it's a map, similar to a normal map on paper, that "
 "you receive as an image. What usually happens is that you have vector "
@@ -155,7 +150,7 @@ msgstr ""
 "렌더링해서 사용자에게 이미지 형식으로 맵을 전송합니다. QGIS는 이 이미지를 표출할 수 있지만 그 심볼을 변경할 수는 없습니다. 모든 "
 "작업이 서버에서 이루어지기 때문입니다."
 
-#: ../../docs/training_manual/online_resources/wms.rst:151
+#: ../../docs/training_manual/online_resources/wms.rst:150
 msgid ""
 "This has several advantages, because you don't need to worry about the "
 "symbology. It's already worked out, and should be nice to look at on any "
@@ -164,7 +159,7 @@ msgstr ""
 "사용자가 심볼에 대해 걱정할 필요가 없다는 점에서 몇몇 강점이 있습니다. 능숙하게 설계된 WMS라면 이미 모든 작업이 이루어져 보기 좋은"
 " 맵을 전송하기 때문입니다."
 
-#: ../../docs/training_manual/online_resources/wms.rst:155
+#: ../../docs/training_manual/online_resources/wms.rst:154
 msgid ""
 "On the other hand, you can't change the symbology if you don't like it, and "
 "if things change on the WMS server, then they'll change on your map as well."
@@ -176,67 +171,48 @@ msgstr ""
 "변경됩니다. 때때로 WMS 스타일의 맵의 일부로서가 아니라 사용자에게 벡터 레이어를 개별적으로 전송하는 WFS(Web Feature "
 "Service)를 이용하는 편이 나은 이유입니다."
 
-#: ../../docs/training_manual/online_resources/wms.rst:160
-msgid ""
-"This will be covered in the next lesson, however. First, let's add another "
-"WMS layer from the :guilabel:`terrestris` WMS server."
-msgstr ""
-"하지만 WMS에 대해서는 다음 상의에서 배울 것입니다. 그 전에, :guilabel:`terrestris` WMS 서버에서 다른 WMS "
-"레이어를 추가해봅시다."
-
-#: ../../docs/training_manual/online_resources/wms.rst:165
+#: ../../docs/training_manual/online_resources/wms.rst:164
 msgid "|basic| |TY|"
 msgstr ""
 
 #: ../../docs/training_manual/online_resources/wms.rst:192
-msgid "|moderate| |TY|"
-msgstr ""
-
-#: ../../docs/training_manual/online_resources/wms.rst:286
-msgid "moderate"
-msgstr ""
-
-#: ../../docs/training_manual/online_resources/wms.rst:197
-msgid "Add the :guilabel:`bluemarble` layer."
-msgstr ":guilabel:`bluemarble` 레이어를 추가합니다."
-
 #: ../../docs/training_manual/online_resources/wms.rst:223
 msgid "|hard| |TY|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:284
+#: ../../docs/training_manual/online_resources/wms.rst:285
 msgid "hard"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:225
+#: ../../docs/training_manual/online_resources/wms.rst:194
 msgid "Part of the difficulty of using WMS is finding a good (free) server."
 msgstr "WMS를 이용하는 데 어려운 점 가운데 하나는 좋은 (무료) 서버를 찾는 일입니다."
 
-#: ../../docs/training_manual/online_resources/wms.rst:231
+#: ../../docs/training_manual/online_resources/wms.rst:200
 msgid ""
 "Remember that what you need in order to use a WMS is only its URL (and "
 "preferably some sort of description)."
 msgstr "WMS를 이용하는 데 필요한 것은 URL(그리고 어떤 형태의 설명이 있으면 좋습니다)뿐이라는 것을 기억하십시오."
 
-#: ../../docs/training_manual/online_resources/wms.rst:247
+#: ../../docs/training_manual/online_resources/wms.rst:248
 msgid "|IC|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:249
+#: ../../docs/training_manual/online_resources/wms.rst:250
 msgid ""
 "Using a WMS, you can add inactive maps as backdrops for your existing map "
 "data."
 msgstr "WMS를 사용하면, 고정된 맵을 사용자의 기존 맵 데이터의 배경으로 추가할 수 있습니다."
 
-#: ../../docs/training_manual/online_resources/wms.rst:252
+#: ../../docs/training_manual/online_resources/wms.rst:253
 msgid "|FR|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:259
+#: ../../docs/training_manual/online_resources/wms.rst:260
 msgid "|WN|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:261
+#: ../../docs/training_manual/online_resources/wms.rst:262
 msgid ""
 "Now that you've added an inactive map as a backdrop, you'll be glad to know "
 "that it's also possible to add features (such as the other vector layers you"

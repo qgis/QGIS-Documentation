@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +35,10 @@ msgstr ""
 "caseta instrumentelor de procesare. *Dicționarul parametrilor* furnizează "
 "valorile și NUMELE parametrilor. Pentru detalii despre rularea algoritmilor "
 "de procesare din consola Python, parcurgeți :ref:`processing_console`."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:44
+msgid "Directory"
+msgstr "Director"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:48
 #: ../../docs/user_manual/processing_algs/algs_include.rst:57
@@ -65,3 +70,284 @@ msgstr "Salvare în Fișier..."
 #: ../../docs/user_manual/processing_algs/algs_include.rst:82
 msgid "Layer"
 msgstr "Strat"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:88
+#: ../../docs/user_manual/processing_algs/algs_include.rst:100
+#: ../../docs/user_manual/processing_algs/algs_include.rst:114
+msgid "Save to Geopackage…"
+msgstr "Salvare în Geopackage…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:89
+#: ../../docs/user_manual/processing_algs/algs_include.rst:101
+#: ../../docs/user_manual/processing_algs/algs_include.rst:115
+msgid "Save to Database Table…"
+msgstr "Salvare în Tabela Bazei de Date..."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:102
+msgid "Append to Layer…"
+msgstr "Adăugare în Stratul..."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:129
+msgid "Available methods are:"
+msgstr "Metodele disponibile sunt:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:160
+msgid ""
+"Using the figure above, we are looking for the green circles by spatially "
+"comparing them to the orange rectangle feature. Available geometric "
+"predicates are:"
+msgstr ""
+"Folosind figura de mai sus, căutăm cercurile verzi comparându-le spațial cu "
+"entitatea dreptunghiulară portocalie. Predicatele geometrice disponibile "
+"sunt:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:167
+msgid "*Intersect*"
+msgstr "*Intersect*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:165
+msgid ""
+"Tests whether a geometry intersects another. Returns 1 (true) if the "
+"geometries spatially intersect (share any portion of space - overlap or "
+"touch) and 0 if they don’t. In the picture above, this will return circles "
+"1, 2 and 3."
+msgstr ""
+"Testează dacă o geometrie o intersectează pe alta. Returnează 1 (adevărat) "
+"dacă geometriile se intersectează spațial (împart orice porțiune de spațiu -"
+" se suprapun sau se ating) și 0 dacă nu se intersectează. În imaginea de mai"
+" sus, vor fi returnate cercurile 1, 2 și 3."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:174
+msgid "*Contain*"
+msgstr "*Contain*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:170
+msgid ""
+"Returns 1 (true) if and only if no points of b lie in the exterior of a, and"
+" at least one point of the interior of b lies in the interior of a. In the "
+"picture, no circle is returned, but the rectangle would be if you would look"
+" for it the other way around, as it contains circle 1 completely. This is "
+"the opposite of *are within*."
+msgstr ""
+"Returnează 1 (adevărat) dacă și numai dacă niciun punct al lui b nu se află "
+"în exteriorul lui a, iar cel puțin un punct din interiorul lui b se află în "
+"interiorul lui a. În imagine, nu este returnat niciun cerc, ar fi însă cazul"
+" dreptunghiului dacă l-ați căuta invers, întrucât conține cercul 1 complet. "
+"Acest predicat geometric este opusul lui *se află în interior*."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:178
+msgid "*Disjoint*"
+msgstr "*Disjoint*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:177
+msgid ""
+"Returns 1 (true) if the geometries do not share any portion of space (no "
+"overlap, not touching). Only circle 4 is returned."
+msgstr ""
+"Returnează 1 (adevărat) dacă geometriile nu împart nicio porțiune de spațiu "
+"(fără suprapunere, fără atingere). Doar cercul 4 este returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:182
+msgid "*Equal*"
+msgstr "*Equal*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:181
+msgid ""
+"Returns 1 (true) if and only if geometries are exactly the same. No circles "
+"will be returned."
+msgstr ""
+"Returnează 1 (adevărat) dacă și numai dacă geometriile sunt întru totul "
+"similare. Niciun cerc nu va fi returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:187
+msgid "*Touch*"
+msgstr "*Touch*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:185
+msgid ""
+"Tests whether a geometry touches another. Returns 1 (true) if the geometries"
+" have at least one point in common, but their interiors do not intersect. "
+"Only circle 3 is returned."
+msgstr ""
+"Testează dacă o geometrie o atinge pe alta. Returnează 1 (adevărat) dacă "
+"geometriile au cel puțin un punct în comun, iar interiorul lor nu se "
+"intersectează. Doar cercul 3 este returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:192
+msgid "*Overlap*"
+msgstr "*Overlap*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:190
+msgid ""
+"Tests whether a geometry overlaps another. Returns 1 (true) if the "
+"geometries share space, are of the same dimension, but are not completely "
+"contained by each other. Only circle 2 is returned."
+msgstr ""
+"Testează dacă o geometrie se suprapune peste alta. Returnează 1 (adevărat) "
+"dacă geometriile împart spațiul, sunt de aceeași dimensiune, dar nu sunt "
+"complet conținute una în cealaltă. Doar cercul 2 este returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:196
+msgid "*Are within*"
+msgstr "*Are within*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:195
+msgid ""
+"Tests whether a geometry is within another. Returns 1 (true) if geometry a "
+"is completely inside geometry b. Only circle 1 is returned."
+msgstr ""
+"Testează dacă o geometrie este conținută în alta. Returnează 1 (adevărat) "
+"dacă geometria a se află complet în interiorul geometriei b. Doar cercul 1 "
+"este returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:204
+msgid "*Cross*"
+msgstr "*Cross*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:199
+msgid ""
+"Returns 1 (true) if the supplied geometries have some, but not all, interior"
+" points in common and the actual crossing is of a lower dimension than the "
+"highest supplied geometry. For example, a line crossing a polygon will cross"
+" as a line (true). Two lines crossing will cross as a point (true). Two "
+"polygons cross as a polygon (false). In the picture, no circles will be "
+"returned."
+msgstr ""
+"Returnează 1 (adevărat) dacă geometriile furnizate au unele, dar nu toate, "
+"punctele interioare, în comun, iar traversarea reală este de o dimensiune "
+"mai mică decât cea mai mare geometrie furnizată. De exemplu, o linie care "
+"traversează un poligon se va încrucișa ca o linie (adevărat). Două linii "
+"care se încrucișează se vor încrucișa ca punct (adevărat). Două poligoane se"
+" încrucișează ca poligon (fals). În imagine, niciun cerc nu va fi returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:237
+#: ../../docs/user_manual/processing_algs/algs_include.rst:260
+#: ../../docs/user_manual/processing_algs/algs_include.rst:289
+msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "0 --- Byte        (Întreg, fără semn, opt biți (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:238
+#: ../../docs/user_manual/processing_algs/algs_include.rst:261
+#: ../../docs/user_manual/processing_algs/algs_include.rst:290
+msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "1 --- Int16       (Întreg, cu semn, șaisprezece biți (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:239
+#: ../../docs/user_manual/processing_algs/algs_include.rst:262
+#: ../../docs/user_manual/processing_algs/algs_include.rst:291
+msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "2 --- UInt16      (Întreg, fără semn, șaisprezece biți (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:240
+#: ../../docs/user_manual/processing_algs/algs_include.rst:292
+msgid "3 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr ""
+"3 --- UInt32      (Treizeci și doi de biți în virgulă mobilă (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:241
+#: ../../docs/user_manual/processing_algs/algs_include.rst:293
+msgid "4 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr ""
+"4 --- Int32       (Treizeci și doi de biți în virgulă mobilă (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:242
+#: ../../docs/user_manual/processing_algs/algs_include.rst:265
+#: ../../docs/user_manual/processing_algs/algs_include.rst:294
+msgid "5 --- Float32     (Thirty two bit floating point (float))"
+msgstr "5 --- Float32     (Treizeci și doi de biți în virgulă mobilă (float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:243
+#: ../../docs/user_manual/processing_algs/algs_include.rst:266
+#: ../../docs/user_manual/processing_algs/algs_include.rst:295
+msgid "6 --- Float64     (Sixty four bit floating point (double))"
+msgstr ""
+"6 --- Float64     (Șaizeci și patru de biți în virgulă mobilă (double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:245
+#: ../../docs/user_manual/processing_algs/algs_include.rst:272
+#: ../../docs/user_manual/processing_algs/algs_include.rst:301
+#: ../../docs/user_manual/processing_algs/algs_include.rst:330
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"Opțiunile disponibile depind de versiunea GDAL construită cu ajutorul QGIS "
+"(consultați meniul :menuselection:`Help --> About`)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:263
+msgid "3 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr ""
+"3 --- Int32       (Treizeci și doi de biți în virgulă mobilă (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:264
+#: ../../docs/user_manual/processing_algs/algs_include.rst:321
+msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr ""
+"4 --- UInt32      (Treizeci și doi de biți în virgulă mobilă (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:267
+#: ../../docs/user_manual/processing_algs/algs_include.rst:296
+msgid "7 --- CInt16      (Complex Int16)"
+msgstr "7 --- CInt16      (Complex Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:268
+#: ../../docs/user_manual/processing_algs/algs_include.rst:297
+msgid "8 --- CInt32      (Complex Int32)"
+msgstr "8 --- CInt32      (Complex Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:269
+#: ../../docs/user_manual/processing_algs/algs_include.rst:298
+msgid "9 --- CFloat32    (Complex Float32)"
+msgstr "9 --- CFloat32    (Complex Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:270
+#: ../../docs/user_manual/processing_algs/algs_include.rst:299
+msgid "10 --- CFloat64   (Complex Float64)"
+msgstr "10 --- CFloat64   (Complex Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:317
+msgid "0 --- Use Input Layer Data Type"
+msgstr "0 --- Se Utilizează Tipul Datelor din Stratul de Intrare"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:318
+msgid "1 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "1 --- Byte        (Întreg, fără semn, opt biți (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:319
+msgid "2 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "2 --- Int16       (Întreg, cu semn, șaisprezece biți (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:320
+msgid "3 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr ""
+"3 --- UInt16      (Număr întreg, fără semn, șaisprezece biți (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:322
+msgid "5 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr ""
+"5 --- Int32       (Treizeci și doi de biți în virgulă mobilă (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:323
+msgid "6 --- Float32     (Thirty two bit floating point (float))"
+msgstr "6 --- Float32     (Treizeci și doi de biți în virgulă mobilă (float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:324
+msgid "7 --- Float64     (Sixty four bit floating point (double))"
+msgstr ""
+"7 --- Float64     (Șaizeci și patru de biți în virgulă mobilă (double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:325
+msgid "8 --- CInt16      (Complex Int16)"
+msgstr "8 --- CInt16      (Complex Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:326
+msgid "9 --- CInt32      (Complex Int32)"
+msgstr "9 --- CInt32      (Complex Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:327
+msgid "10 --- CFloat32   (Complex Float32)"
+msgstr "10 --- CFloat32   (Complex Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:328
+msgid "11 --- CFloat64   (Complex Float64)"
+msgstr "11 --- CFloat64   (Complex Float64)"

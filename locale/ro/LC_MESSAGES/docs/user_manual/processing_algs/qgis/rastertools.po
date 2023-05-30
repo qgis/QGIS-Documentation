@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -87,6 +88,10 @@ msgstr ""
 msgid "[extent]"
 msgstr "[extent]"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Metodele disponibile sunt:"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:50
 msgid "``TILE_SIZE``"
 msgstr ""
@@ -110,9 +115,17 @@ msgstr ""
 msgid "[number]"
 msgstr "[număr]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:53
+msgid "Default: 1024"
+msgstr "Implicit: 1024"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:56
 msgid "``MAP_UNITS_PER_PIXEL``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:59
+msgid "Default: 100.0"
+msgstr "Implicit: 100.0"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:62
 msgid "``MAKE_BACKGROUND_TRANSPARENT``"
@@ -229,9 +242,17 @@ msgstr "Umplere celule NoData"
 msgid "``INPUT``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:149
+msgid "**Band number**"
+msgstr "**Numărul benzii**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:150
 msgid "``BAND``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:153
+msgid "Default: 1"
+msgstr "Implicit: 1"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:156
 msgid "``FILL_VALUE``"
@@ -240,6 +261,11 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:159
 msgid "Default: 1.0"
 msgstr "Implicit: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:161
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:183
+msgid "**Output raster**"
+msgstr "**Raster de ieșire**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:191
 msgid "**Algorithm ID**: ``native:fillnodata``"
@@ -250,20 +276,42 @@ msgstr "**ID Algorithm**: ``nativ:fillnodata``"
 msgid "``ZOOM_MIN``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:232
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:238
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:398
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:404
+msgid "Default: 12"
+msgstr "Implicit: 12"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:235
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:401
 msgid "``ZOOM_MAX``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:240
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:406
+msgid "**DPI**"
+msgstr "**DPI**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:241
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:407
 msgid "``DPI``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:244
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:410
+msgid "Default: 96"
+msgstr "Implicit: 96"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:249
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:415
 msgid "``BACKGROUND_COLOR``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:252
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:418
+msgid "Default: QColor(0, 0, 0, 0)"
+msgstr "Implicit: QColor(0, 0, 0, 0)"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:255
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:421
@@ -290,14 +338,34 @@ msgstr "1 --- JPG"
 msgid "``QUALITY``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:270
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:436
+msgid "Default: 75"
+msgstr "Implicit: 75"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:275
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:441
 msgid "``METATILESIZE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:278
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:444
+msgid "Default: 4"
+msgstr "Implicit: 4"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:287
 msgid "``TILE_WIDTH``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:290
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:298
+msgid "Default: 256"
+msgstr "Implicit: 256"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:291
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:299
+msgid "Minimum 1, maximum 4096."
+msgstr "Minimum 1, maximum 4096."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:295
 msgid "``TILE_HEIGHT``"
@@ -322,6 +390,10 @@ msgstr ""
 msgid "[folder]"
 msgstr "[folder]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:314
+msgid "Default: ``[Save to temporary folder]``"
+msgstr "Implicit: ``[Salvare într-un fișier temporar]``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to a Temporary Directory"
 msgstr "Salvare Intr-un Director Temporar"
@@ -334,6 +406,11 @@ msgstr "Salvare în Director"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:350
 msgid "``OUTPUT_HTML``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:325
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:351
+msgid "[html]"
+msgstr "[html]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:357
 msgid "**Algorithm ID**: ``qgis:tilesxyzdirectory``"

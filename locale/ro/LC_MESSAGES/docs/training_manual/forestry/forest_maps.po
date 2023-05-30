@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,6 +58,10 @@ msgstr ""
 "QGIS, pentru a genera hărți tipăribile detaliate, în scopul sprijinirii "
 "activității de inventariere în teren."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:16
+msgid "|basic| |FA| Preparing the Print Layout"
+msgstr "|basic| |FA| Pregătirea Hărților pentru Tipărire"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:489
 msgid "basic"
 msgstr ""
@@ -76,6 +81,23 @@ msgstr ""
 "va trebui să adăugați și o mulțime de alte elemente care completează harta "
 "tipărită."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:24
+msgid ""
+"Open the QGIS project from the previous lesson :file:`forest_inventory.qgs`."
+" You should have at least the following layers:"
+msgstr ""
+"Deschideți proiectul QGIS din lecția anterioară "
+":file:`forest_inventory.qgs`. Ar trebui să aveți cel puțin următoarele "
+"straturi:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:27
+msgid ""
+":guilabel:`forest_stands_2012` (with a 50% transparency, green fill and "
+"darker green border lines)"
+msgstr ""
+":guilabel:`forest_stands_2012` (cu o transparență de 50%, umplere verde și "
+"linii de margine de culoare verde mai închis)"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:29
 msgid ":guilabel:`systematic_plots_clip`"
 msgstr ""
@@ -84,9 +106,21 @@ msgstr ""
 msgid ":guilabel:`rautjarvi_aerial`"
 msgstr ""
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:32
+msgid "Save the project with a new name, :file:`map_creation.qgs`."
+msgstr "Salvați proiectul sub un nume nou, :file:`map_creation.qgs`."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:494
 msgid "layoutManager"
 msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:48
+msgid "Check :guilabel:`Size` is :guilabel:`A4`."
+msgstr "Asigurați-vă că :guilabel:`Dimensiunea` este :guilabel:`A4`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:49
+msgid "Check :guilabel:`Orientation` is :guilabel:`Landscape`."
+msgstr "Asigurați-vă că :guilabel:`Orientarea` este :guilabel:`Peisaj`."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:60
 msgid "You need to activate the use of the grid:"
@@ -192,6 +226,15 @@ msgstr ""
 "cât mai clar, dar întotdeauna să fie posibilă vizualizarea elementelor din "
 "fundalul hărții. Vă puteți orienta după această imagine:"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:142
+msgid ""
+"You get a new layer named ``forest_stands_2012 copy`` that you can use to "
+"define a different style, for example with no filling and red borders."
+msgstr ""
+"Obțineți un nou strat numit ``forest_stands_2012 copy`` pe care îl puteți "
+"utiliza pentru a defini un stil diferit, de ex.: fără umplere și cu margini "
+"roșii."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:145
 msgid ""
 "Now you have two different visualizations of the forest stands and you can "
@@ -272,6 +315,23 @@ msgstr ""
 "un dreptunghi umbrit deasupra hărții mici, care reprezintă extinderea "
 "vizibilă în harta mai mare."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:218
+msgid ""
+"Deactivate all layers except for :guilabel:`basic_map` and "
+":guilabel:`forest_stands_2012`."
+msgstr ""
+"Dezactivați toate straturile, cu excepția :guilabel:`basic_map` și "
+":guilabel:`forest_stands_2012`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:232
+msgid ""
+"Go to the map window again and select the layers you want to be visible "
+"(``systematic_plots_clip``, ``forest_stands_2012 copy`` and ``Basic_map``)."
+msgstr ""
+"Mergeți din nou la fereastra hărții și selectați straturile pe care le "
+"doriți să fie vizibile (``systematic_plots_clip``, ``forest_stands_2012 "
+"copy`` și ``Basic_map``)."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:234
 msgid "Zoom again to have only a few lines of sample plots visible."
 msgstr ""
@@ -351,6 +411,10 @@ msgstr ""
 #: ../../docs/training_manual/forestry/forest_maps.rst:282
 msgid "Set the tool as shown in this image:"
 msgstr "Setați instrumentul așa cum se arată în această imagine:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:289
+msgid "Save the output as :file:`atlas_coverage.shp`."
+msgstr "Salvați rezultatul ca :file:`atlas_coverage.shp`."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:292
 msgid ""

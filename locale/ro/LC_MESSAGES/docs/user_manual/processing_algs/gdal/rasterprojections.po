@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-06-22 13:01+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
@@ -25,9 +25,25 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:2
+msgid "Raster projections"
+msgstr "Proiecții raster"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:14
 msgid "Assign projection"
 msgstr "Asignare proiecție"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:15
+msgid "Applies a coordinate system to a raster dataset."
+msgstr "Aplică un sistem de coordonate unui set de date raster."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:17
+msgid ""
+"This algorithm is derived from the `GDAL edit utility "
+"<https://gdal.org/programs/gdal_edit.html>`_."
+msgstr ""
+"Acest algoritm este derivat din `utilitatrul de editare GDAL "
+"<https://gdal.org/programs/gdal_edit.html>`_."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:23
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:81
@@ -109,6 +125,10 @@ msgstr ""
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:40
+msgid "The projection (CRS) of the output layer"
+msgstr "Proiecția (CRS-ul) stratului de ieșire"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:43
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:108
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:319
@@ -143,6 +163,14 @@ msgstr ""
 "valorile și NUMELE parametrilor. Pentru detalii despre rularea algoritmilor "
 "de procesare din consola Python, parcurgeți :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:71
+msgid "Extract projection"
+msgstr "Extragere proiecție"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:91
+msgid "**Input file**"
+msgstr "**Fișier de intrare**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:100
 msgid "``PRJ_FILE_CREATE``"
 msgstr ""
@@ -156,6 +184,10 @@ msgstr "[boolean]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:305
 msgid "Default: False"
 msgstr "Implicit: False"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:118
+msgid "**World file**"
+msgstr "**Fișier world**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:119
 msgid "``WORLD_FILE``"
@@ -174,6 +206,10 @@ msgstr ""
 msgid "**Algorithm ID**: ``gdal:extractprojection``"
 msgstr "**Algorithm ID**: ``gdal:extractprojection``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:143
+msgid "Warp (reproject)"
+msgstr "Warp (reproiectare)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:157
 msgid "Basic parameters"
 msgstr "Parametri de bază"
@@ -181,6 +217,10 @@ msgstr "Parametri de bază"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:169
 msgid "``INPUT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:172
+msgid "**Source CRS**"
+msgstr "**CRS-ul sursei**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:174
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:180
@@ -196,6 +236,10 @@ msgstr "Opţional"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:175
 msgid "``SOURCE_CRS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:178
+msgid "**Target CRS**"
+msgstr "**CRS-ul destinației**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:181
 msgid "``TARGET_CRS``"
@@ -219,9 +263,53 @@ msgstr "[enumerare]"
 msgid "Default: 0"
 msgstr "Implicit: 0"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:194
+msgid "0 --- Nearest neighbour"
+msgstr "0 --- Cel mai apropiat vecin"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:195
 msgid "1 --- Bilinear"
 msgstr "1 --- Biliniar"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:196
+msgid "2 --- Cubic"
+msgstr "2 --- Cubic"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:197
+msgid "3 --- Cubic spline"
+msgstr "3 --- Cubic spline"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:198
+msgid "4 --- Lanczos windowed sinc"
+msgstr "4 --- Lanczos windowed sinc"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:199
+msgid "5 --- Average"
+msgstr "5 --- Medie"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:200
+msgid "6 --- Mode"
+msgstr "6 --- Mod"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:201
+msgid "7 --- Maximum"
+msgstr "7 --- Maximum"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:202
+msgid "8 --- Minimum"
+msgstr "8 --- Minimum"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:203
+msgid "9 --- Median"
+msgstr "9 --- Median"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:204
+msgid "10 --- First quartile"
+msgstr "10 --- Prima quartilă"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:205
+msgid "11 --- Third quartile"
+msgstr "11 --- A treia quartilă"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:209
 msgid "``NODATA``"
@@ -232,14 +320,29 @@ msgstr ""
 msgid "[number]"
 msgstr "[număr]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:212
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:222
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:315
+msgid "Default: None"
+msgstr "Default: Nici o valoare"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:219
 msgid "``TARGET_RESOLUTION``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:224
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:329
+msgid "**Reprojected**"
+msgstr "**Reproiectat**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:228
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:333
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Implicit: ``[Salvare într-un fișier temporar]``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:229
+msgid "Specification of the output raster layer. One of:"
+msgstr "Specificare strat raster de ieșire. Unul dintre:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -253,6 +356,10 @@ msgstr "Salvare în Fișier..."
 msgid "Advanced parameters"
 msgstr "Parametri avansați"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:248
+msgid "**Additional creation options**"
+msgstr "**Opțiuni suplimentare de creare**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:251
 msgid "``OPTIONS``"
 msgstr ""
@@ -261,6 +368,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:313
 msgid "[string]"
 msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:254
+msgid "Default: ''"
+msgstr "Implicit: \""
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:255
 msgid ""
@@ -276,14 +387,79 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:261
 msgid ""
-"For Batch Process: separate multiple options with a pipe character (``|``)."
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
 msgstr ""
-"Pentru Procesarea în Serie: separați opțiunile multiple cu un caracter pipe "
-"(``|``)."
+"Procesarea în Serie și Designerul de Modele: separați opțiunile multiple cu "
+"un caracter pipe (``|``)."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:263
+msgid "**Output data type**"
+msgstr "**Tipul datelor de ieșire**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:264
 msgid "``DATA_TYPE``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "0 --- Use Input Layer Data Type"
+msgstr "0 --- Se Utilizează Tipul Datelor din Stratul de Intrare"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "1 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "1 --- Byte        (Întreg, fără semn, opt biți (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "2 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "2 --- Int16       (Întreg, cu semn, șaisprezece biți (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "3 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr ""
+"3 --- UInt16      (Număr întreg, fără semn, șaisprezece biți (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr ""
+"4 --- UInt32      (Treizeci și doi de biți în virgulă mobilă (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "5 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr ""
+"5 --- Int32       (Treizeci și doi de biți în virgulă mobilă (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "6 --- Float32     (Thirty two bit floating point (float))"
+msgstr "6 --- Float32     (Treizeci și doi de biți în virgulă mobilă (float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+msgid "7 --- Float64     (Sixty four bit floating point (double))"
+msgstr ""
+"7 --- Float64     (Șaizeci și patru de biți în virgulă mobilă (double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "8 --- CInt16      (Complex Int16)"
+msgstr "8 --- CInt16      (Complex Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "9 --- CInt32      (Complex Int32)"
+msgstr "9 --- CInt32      (Complex Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "10 --- CFloat32   (Complex Float32)"
+msgstr "10 --- CFloat32   (Complex Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "11 --- CFloat64   (Complex Float64)"
+msgstr "11 --- CFloat64   (Complex Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:21
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"Opțiunile disponibile depind de versiunea GDAL construită cu ajutorul QGIS "
+"(consultați meniul :menuselection:`Help --> About`)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:278
 msgid "``TARGET_EXTENT``"
@@ -292,6 +468,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:279
 msgid "[extent]"
 msgstr "[extent]"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Metodele disponibile sunt:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:292
 msgid "``TARGET_EXTENT_CRS``"

@@ -5,17 +5,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# 徐保才 <1302638819@qq.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-22 02:35+0000\n"
+"POT-Creation-Date: 2023-07-06 09:08+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: 徐保才 <1302638819@qq.com>, 2023\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,7 +56,7 @@ msgstr "**本课目标:** 使用WMS并了解其局限性。"
 msgid "|basic| |FA| Loading a WMS Layer"
 msgstr "|basic| 跟我做: 加载WMS图层"
 
-#: ../../docs/training_manual/online_resources/wms.rst:281
+#: ../../docs/training_manual/online_resources/wms.rst:282
 msgid "basic"
 msgstr ""
 
@@ -96,11 +97,11 @@ msgstr ""
 "要添加WMS图层，请单击 |dataSourceManager| 按钮打开 :guilabel:`数据源管理器` 对话框，并启用 "
 "|addWmsLayer| :guilabel:`WMS/WMTS` 选项卡。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:282
+#: ../../docs/training_manual/online_resources/wms.rst:283
 msgid "dataSourceManager"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:279
+#: ../../docs/training_manual/online_resources/wms.rst:280
 msgid "addWmsLayer"
 msgstr ""
 
@@ -160,97 +161,64 @@ msgstr "单击 :guilabel:`连接` 。在下面的列表中，您现在应该可�
 msgid "These are all the layers hosted by this WMS server."
 msgstr "这些都是此WMS服务器托管的图层。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:79
-msgid ""
-"Click once on the :guilabel:`OSM-WMS` layer. This will display its "
-":guilabel:`Coordinate Reference System`:"
-msgstr "在 :guilabel:`OSM-WMS` 图层上单击一次。这将显示其 :guilabel:`坐标参照系` ："
+#: ../../docs/training_manual/online_resources/wms.rst:289
+msgid "setProjection"
+msgstr "setProjection"
 
-#: ../../docs/training_manual/online_resources/wms.rst:85
-msgid ""
-"Since we're not using ``WGS 84`` for our map, let's see all the CRSs we have"
-" to choose from."
-msgstr "因为我们的地图未使用 ``WGS 84`` ，让我们看看所有CRS并从中选择一个。"
+#: ../../docs/training_manual/online_resources/wms.rst:287
+msgid "search"
+msgstr "search"
 
-#: ../../docs/training_manual/online_resources/wms.rst:88
-msgid ""
-"Click the :guilabel:`Change...` button. You will see a standard "
-":guilabel:`Coordinate Reference System Selector` dialog."
-msgstr "单击 :guilabel:`更改...` 按钮，您将看到一个标准 :guilabel:`坐标参照系选择器` 对话框。"
-
-#: ../../docs/training_manual/online_resources/wms.rst:90
-msgid ""
-"We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo "
-"Mercator`."
-msgstr "我们需要一个 *投影* 的CRS，所以选择 :guilabel:`WGS 84 / Pseudo Mercator` 。"
-
-#: ../../docs/training_manual/online_resources/wms.rst:93
-msgid "Enter the value ``pseudo`` in the :guilabel:`Filter` field:"
-msgstr "在 :guilabel:`过滤器` 字段中输入 ``pseudo`` 值。"
-
-#: ../../docs/training_manual/online_resources/wms.rst:94
-msgid ""
-"Choose :guilabel:`WGS 84 / Pseudo Mercator` (with epsg:3857) from the list."
-msgstr "从列表中选择 :guilabel:`WGS 84 / Pseudo Mercator` (带有 epsg:3857) 。"
-
-#: ../../docs/training_manual/online_resources/wms.rst:99
+#: ../../docs/training_manual/online_resources/wms.rst:98
 msgid ""
 "Click :guilabel:`OK`. The Coordinate Reference System associated with the "
 "entry has changed."
 msgstr "单击 :guilabel:`确定` 。与条目关联的坐标参照系已更改。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:102
-msgid ""
-"Click :guilabel:`Add` and the new layer will appear in your map as "
-":guilabel:`OpenStreetMap WMS - by terrestris`."
-msgstr ""
-"单击 :guilabel:`添加` ，新图层将在地图中显示为 :guilabel:`OpenStreetMap WMS - by terrestris`"
-" 。"
-
-#: ../../docs/training_manual/online_resources/wms.rst:104
+#: ../../docs/training_manual/online_resources/wms.rst:103
 msgid ""
 "Close the :guilabel:`Data Source Manager` dialog if not done automatically"
 msgstr "如果未自动完成，请关闭 :guilabel:`数据源管理器` 对话框。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:105
+#: ../../docs/training_manual/online_resources/wms.rst:104
 msgid ""
 "In the :guilabel:`Layers` panel, click and drag it to the bottom of the "
 "list."
 msgstr "在 :guilabel:`图层` 面板，单击并将其拖动到列表底部。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:106
+#: ../../docs/training_manual/online_resources/wms.rst:105
 msgid ""
 "Zoom out in order to get a global view of the layers. You will notice that "
 "your layers aren't located correctly (near west of Africa). This is because "
 "\"on the fly\" projection is disabled."
 msgstr "缩小以获得图层的全局视图。您会注意到图层的位置不正确 (靠近非洲西部)，这是因为 \"动态\" 投影被禁用。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:114
+#: ../../docs/training_manual/online_resources/wms.rst:113
 msgid ""
 "Let's enable the reprojection again, but using the same projection as the "
 ":guilabel:`OpenStreetMap WMS` layer, which is :guilabel:`WGS 84 / Pseudo "
 "Mercator`."
 msgstr ""
-"再次启用重投影，但使用与 :guilabel:`OpenStreetMap WMS` 图层相同的投影，即 :guilabel:`WGS 84 / "
-"Pseudo Mercator` 。"
+"再次启用重投影，但使用与 :guilabel:`开放街道地图WMS` 图层相同的投影，即 :guilabel:`WGS 84 / Pseudo "
+"Mercator` 。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:117
+#: ../../docs/training_manual/online_resources/wms.rst:116
 msgid "Open the :menuselection:`Project --> Properties... --> CRS` tab"
 msgstr "打开 :menuselection:`工程 --> 工程属性... --> CRS` 选项卡"
 
-#: ../../docs/training_manual/online_resources/wms.rst:118
+#: ../../docs/training_manual/online_resources/wms.rst:117
 msgid "Uncheck :guilabel:`No CRS (or unknown/non-Earth projection)`"
 msgstr "取消勾选 :guilabel:`无CRS (或未知/非地球投影)`"
 
-#: ../../docs/training_manual/online_resources/wms.rst:119
+#: ../../docs/training_manual/online_resources/wms.rst:118
 msgid "Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list."
 msgstr "从列表中选择 :guilabel:`WGS 84 / Pseudo Mercator` 。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:124
+#: ../../docs/training_manual/online_resources/wms.rst:123
 msgid "Click :guilabel:`OK`."
 msgstr "单击 :guilabel:`确定` 。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:125
+#: ../../docs/training_manual/online_resources/wms.rst:124
 msgid ""
 "Now right-click on one of your own layers in the :guilabel:`Layers` panel "
 "and click :guilabel:`Zoom to layer(s)`. You should see the |majorUrbanName| "
@@ -259,17 +227,17 @@ msgstr ""
 "现在，在 :guilabel:`图层` 面板中您自己的一个图层上右键单击，然后单击 :guilabel:`缩放到图层` 。您应该看到 "
 "|majorUrbanName| 地区："
 
-#: ../../docs/training_manual/online_resources/wms.rst:133
+#: ../../docs/training_manual/online_resources/wms.rst:132
 msgid ""
 "Note how the WMS layer's streets and our own streets overlap. That's a good "
 "sign!"
 msgstr "请注意WMS图层的街道和我们自己的街道是如何重叠的。这是个好兆头！"
 
-#: ../../docs/training_manual/online_resources/wms.rst:137
+#: ../../docs/training_manual/online_resources/wms.rst:136
 msgid "The nature and limitations of WMS"
 msgstr "WMS的特点和局限性"
 
-#: ../../docs/training_manual/online_resources/wms.rst:139
+#: ../../docs/training_manual/online_resources/wms.rst:138
 msgid ""
 "By now you may have noticed that this WMS layer actually has many features "
 "in it. It has streets, rivers, nature reserves, and so on. What's more, even"
@@ -278,7 +246,7 @@ msgid ""
 msgstr ""
 "到目前为止，您可能已经注意到，这个WMS图层实际上有很多要素，比如街道、河流、自然保护区等等。更重要的是，尽管看起来像是由矢量组成的，但它似乎是栅格，您无法更改其符号。为什么？"
 
-#: ../../docs/training_manual/online_resources/wms.rst:144
+#: ../../docs/training_manual/online_resources/wms.rst:143
 msgid ""
 "This is how a WMS works: it's a map, similar to a normal map on paper, that "
 "you receive as an image. What usually happens is that you have vector "
@@ -289,14 +257,14 @@ msgid ""
 msgstr ""
 "这就是WMS的工作原理：它是一张地图，类似于纸上的普通地图，您可以将其作为图像接收。通常的情况是，你有矢量图层，QGIS将其渲染为地图。但是使用WMS时，这些矢量图层位于WMS服务器，该服务器将其渲染为地图，并将该地图作为图像发送给您。QGIS可以显示此图像，但不能更改其符号，因为所有这些都是在服务器上处理的。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:151
+#: ../../docs/training_manual/online_resources/wms.rst:150
 msgid ""
 "This has several advantages, because you don't need to worry about the "
 "symbology. It's already worked out, and should be nice to look at on any "
 "competently designed WMS."
 msgstr "这有几个优点，因为您无需担心符号。这已经解决了，在任何设计得当的WMS上都可以看到。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:155
+#: ../../docs/training_manual/online_resources/wms.rst:154
 msgid ""
 "On the other hand, you can't change the symbology if you don't like it, and "
 "if things change on the WMS server, then they'll change on your map as well."
@@ -307,111 +275,30 @@ msgstr ""
 "另一方面，如果您不喜欢符号，也无法将其修改。如果WMS服务器上进行了更改，那么您的地图也随之变化。这就是为什么有时需要使用Web要素服务 "
 "(WFS)，它单独提供矢量图层，而不是作为WMS样式地图的一部分。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:160
-msgid ""
-"This will be covered in the next lesson, however. First, let's add another "
-"WMS layer from the :guilabel:`terrestris` WMS server."
-msgstr "不过，这将在下一课介绍。首先，让我们从 :guilabel:`terrestris` WMS 服务器添加另一个WMS图层。"
-
-#: ../../docs/training_manual/online_resources/wms.rst:165
+#: ../../docs/training_manual/online_resources/wms.rst:164
 msgid "|basic| |TY|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:167
-msgid "Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel."
-msgstr "在 :guilabel:`图层` 面板隐藏 :guilabel:`OSM-WSM` 图层。"
-
-#: ../../docs/training_manual/online_resources/wms.rst:168
-msgid ""
-"Add the \"ZAF CGS 1M Bedrock Lithostratigraphy\" WMS server at this URL: "
-"``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``"
-msgstr ""
-"在以下URL添加 \"ZAF CGS 1M Bedrock Lithostratigraphy\" WMS 服务器： "
-"``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``"
-
-#: ../../docs/training_manual/online_resources/wms.rst:170
-msgid ""
-"Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (you can also use the"
-" :menuselection:`Layer --> Add Layer -->` |addWmsLayer| :menuselection:`Add "
-"WMS/WMTS Layer...` button to open the Data Source Manager dialog). Remember "
-"to check that it's in the same :guilabel:`WGS 84 / World Mercator` "
-"projection as the rest of your map!"
-msgstr ""
-"将 :guilabel:`BEDROCKGEOLOGY` 图层加载到地图中 (您也可以使用 :menuselection:`图层 --> 添加图层 "
-"-->` |addWmsLayer| :menuselection:`添加WMS/WMTS图层...` "
-"按钮打开数据源管理器对话框)。记得检查是否与地图的其他部分都使用的 :guilabel:`WGS 84 / World Mercator` 投影！"
-
-#: ../../docs/training_manual/online_resources/wms.rst:175
-msgid ""
-"You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG` and its "
-":guilabel:`Tile size` option to ``200`` by ``200``, so that it loads faster:"
-msgstr ""
-"您可能希望将其 :guilabel:`编码` 设置为 :guilabel:`JPEG` ，并将其 :guilabel:`瓦片大小` 选项设置为 "
-"``200`` × ``200`` ，以便更快加载："
-
-#: ../../docs/training_manual/online_resources/wms.rst:182
-#: ../../docs/training_manual/online_resources/wms.rst:200
-#: ../../docs/training_manual/online_resources/wms.rst:234
+#: ../../docs/training_manual/online_resources/wms.rst:176
+#: ../../docs/training_manual/online_resources/wms.rst:203
+#: ../../docs/training_manual/online_resources/wms.rst:228
 msgid "Answer"
 msgstr "回答"
 
-#: ../../docs/training_manual/online_resources/wms.rst:185
-msgid "Your map should look like this (you may need to re-order the layers):"
-msgstr "您的地图应如下所示 (可能需要重新排序图层)："
-
 #: ../../docs/training_manual/online_resources/wms.rst:192
-msgid "|moderate| |TY|"
-msgstr ""
-
-#: ../../docs/training_manual/online_resources/wms.rst:286
-msgid "moderate"
-msgstr ""
-
-#: ../../docs/training_manual/online_resources/wms.rst:194
-msgid ""
-"Hide all other WMS layers to prevent them from rendering unnecessarily in "
-"the background."
-msgstr "隐藏所有其他WMS图层，防止它们在后台进行不必要的渲染。"
-
-#: ../../docs/training_manual/online_resources/wms.rst:196
-msgid "Add the \"OGC\" WMS server at this URL: ``http://ogc.gbif.org:80/wms``"
-msgstr "在以下URL添加 \"OGC\" WMS 服务器: ``http://ogc.gbif.org:80/wms``"
-
-#: ../../docs/training_manual/online_resources/wms.rst:197
-msgid "Add the :guilabel:`bluemarble` layer."
-msgstr "添加 :guilabel:`bluemarble` 图层。"
-
-#: ../../docs/training_manual/online_resources/wms.rst:203
-msgid ""
-"Use the same approach as before to add the new server and the appropriate "
-"layer as hosted on that server:"
-msgstr "使用与之前相同的方法添加新服务器和该服务器上托管的相应图层："
-
-#: ../../docs/training_manual/online_resources/wms.rst:212
-msgid ""
-"If you zoom into the |majorUrbanName| area, you'll notice that this dataset "
-"has a low resolution:"
-msgstr "如果放大 |majorUrbanName| 地区，您会注意到该数据集的分辨率较低："
-
-#: ../../docs/training_manual/online_resources/wms.rst:218
-msgid ""
-"Therefore, it's better not to use this data for the current map. The Blue "
-"Marble data is more suitable at global or national scales"
-msgstr "因此，最好不要将这些数据用于当前地图。Blue Marble 数据更适用于全球或全国范围"
-
 #: ../../docs/training_manual/online_resources/wms.rst:223
 msgid "|hard| |TY|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:284
+#: ../../docs/training_manual/online_resources/wms.rst:285
 msgid "hard"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:225
+#: ../../docs/training_manual/online_resources/wms.rst:194
 msgid "Part of the difficulty of using WMS is finding a good (free) server."
 msgstr "使用WMS的部分困难在于找到一个好的 (免费) 服务器。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:227
+#: ../../docs/training_manual/online_resources/wms.rst:196
 msgid ""
 "Find a new WMS at `directory.spatineo.com "
 "<https://directory.spatineo.com/>`_ (or elsewhere online). It must not have "
@@ -421,31 +308,55 @@ msgstr ""
 "在 `directory.spatineo.com <https://directory.spatineo.com/>`_ (或其他在线网站) "
 "中查找新的WMS。不得有相关费用或限制，且必须覆盖 |majorUrbanName| 研究区域。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:231
+#: ../../docs/training_manual/online_resources/wms.rst:200
 msgid ""
 "Remember that what you need in order to use a WMS is only its URL (and "
 "preferably some sort of description)."
 msgstr "请记住，使用WMS所需的只是其URL (最好是某种描述)。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:247
+#: ../../docs/training_manual/online_resources/wms.rst:231
+msgid ""
+"Hide all other WMS layers to prevent them from rendering unnecessarily in "
+"the background."
+msgstr "隐藏所有其他WMS图层，防止它们在后台进行不必要的渲染。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:232
+msgid ""
+"Use the same approach as before to add the new server and the appropriate "
+"layer as hosted on that server:"
+msgstr "使用与之前相同的方法添加新服务器和该服务器上托管的相应图层："
+
+#: ../../docs/training_manual/online_resources/wms.rst:238
+msgid ""
+"If you zoom into the |majorUrbanName| area, you'll notice that this dataset "
+"has a low resolution:"
+msgstr "如果放大 |majorUrbanName| 地区，您会注意到该数据集的分辨率较低："
+
+#: ../../docs/training_manual/online_resources/wms.rst:243
+msgid ""
+"Therefore, it's better not to use this data for the current map. The Blue "
+"Marble data is more suitable at global or national scales"
+msgstr "因此，最好不要将这些数据用于当前地图。Blue Marble 数据更适用于全球或全国范围"
+
+#: ../../docs/training_manual/online_resources/wms.rst:248
 msgid "|IC|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:249
+#: ../../docs/training_manual/online_resources/wms.rst:250
 msgid ""
 "Using a WMS, you can add inactive maps as backdrops for your existing map "
 "data."
 msgstr "使用WMS，可以将非活动地图添加为现有地图数据的后面。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:252
+#: ../../docs/training_manual/online_resources/wms.rst:253
 msgid "|FR|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:254
+#: ../../docs/training_manual/online_resources/wms.rst:255
 msgid "`Spatineo Directory <https://directory.spatineo.com/>`_"
 msgstr "`Spatineo Directory <https://directory.spatineo.com/>`_"
 
-#: ../../docs/training_manual/online_resources/wms.rst:255
+#: ../../docs/training_manual/online_resources/wms.rst:256
 msgid ""
 "`OpenStreetMap.org list of WMS servers "
 "<https://wiki.openstreetmap.org/wiki/WMS>`_"
@@ -453,11 +364,11 @@ msgstr ""
 "`OpenStreetMap.org list of WMS servers "
 "<https://wiki.openstreetmap.org/wiki/WMS>`_"
 
-#: ../../docs/training_manual/online_resources/wms.rst:259
+#: ../../docs/training_manual/online_resources/wms.rst:260
 msgid "|WN|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:261
+#: ../../docs/training_manual/online_resources/wms.rst:262
 msgid ""
 "Now that you've added an inactive map as a backdrop, you'll be glad to know "
 "that it's also possible to add features (such as the other vector layers you"

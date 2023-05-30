@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-06-02 20:43+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Transifex Bot <>, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "|basic| |FA| The Tools and the Data"
 msgstr "|basic| Идем дальше: Инструменты и данные"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:297
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:291
 msgid "basic"
 msgstr ""
 
@@ -158,17 +158,7 @@ msgstr "Используйте ``Shortest`` в :guilabel:`Path type to calculate
 msgid "Use these two points as starting and ending points for the analysis:"
 msgstr "Используйте эти две точки как начальную и конечную точки для анализа:"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:69
-msgid ""
-"Click on the :guilabel:`...` button next to :guilabel:`Start point (x, y)` "
-"and choose the location tagged with ``Starting Point`` in the picture. The "
-"coordinates of the clicked point are added."
-msgstr ""
-"Кликни на кнопку :guilabel:`...` рядом с :guilabel:`Start point (x, y)` и "
-"выберите место и пометьте ``Starting Point`` на картинке. Координаты "
-"отобранной точки добавлены."
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:73
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:74
 msgid ""
 "Do the same thing, but choosing the location tagged with ``Ending point`` "
 "for :guilabel:`End point (x, y)`"
@@ -176,11 +166,11 @@ msgstr ""
 "Сделайте то же самое, но выбрав место, помеченное ``Ending point`` для "
 ":guilabel:`End point (x, y)`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:75
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:76
 msgid "Click on the :guilabel:`Run` button:"
 msgstr "Кликните на кнопку :guilabel:`Run`:"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:81
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:82
 msgid ""
 "A new line layer is created representing the shortest path between the "
 "chosen points. Uncheck the ``network_lines`` layer to see the result better:"
@@ -189,7 +179,7 @@ msgstr ""
 "выбранными точками. Уберите надпись в слое ``network_lines``, чтобы лучше "
 "увидеть результат:"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:89
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:90
 msgid ""
 "Open the attribute table of the output layer. It contains three fields, "
 "representing the coordinates of the start and end points and the **cost**."
@@ -197,7 +187,7 @@ msgstr ""
 "Откройте таблицу атрибутов выходного слоя. Там есть три поля, представляющие"
 " координаты начальной и конечной точек и **стоимость/затраты**."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:93
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:94
 msgid ""
 "We chose ``Shortest`` as :guilabel:`Path type to calculate`, so the **cost**"
 " represent the **distance**, in layer units, between the two locations."
@@ -206,7 +196,7 @@ msgstr ""
 "**стоимость** представляла собой **расстояние** в единицах слоя между двумя "
 "местоположениями\\участками."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:97
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:98
 msgid ""
 "In our case, the *shortest* distance between the chosen points is around "
 "``1000`` meters:"
@@ -214,7 +204,7 @@ msgstr ""
 "В нашем случае *кратчайшее* расстояние между выбранными точками составляет "
 "около ``1000`` метров:"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:104
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:105
 msgid ""
 "Now that you know how to use the tool, feel free to test other locations."
 msgstr ""
@@ -225,7 +215,7 @@ msgstr ""
 msgid "|moderate| |TY| Fastest path"
 msgstr "|moderate| Попробуйте сами: Самый быстрый путь"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:301
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:295
 msgid "moderate"
 msgstr ""
 
@@ -262,7 +252,7 @@ msgstr ""
 ":guilabel:`End point (x, y)` как мы делали ранее."
 
 #: ../../docs/training_manual/vector_analysis/network_analysis.rst:149
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:205
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:204
 msgid "Choose ``Fastest`` as the :guilabel:`Path type to calculate`"
 msgstr "Выберите ``Fastest`` в :guilabel:`Path type to calculate`."
 
@@ -300,36 +290,19 @@ msgstr ""
 "скорости. Мы можем преобразовать поле стоимости из часов с дробями в более "
 "удобочитаемые значения - *минуты*."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:167
-msgid ""
-"Open the field calculator by clicking on the |calculateField| icon and add "
-"the new field :guilabel:`minutes` by multiplying the :guilabel:`cost` field "
-"by 60:"
-msgstr ""
-"Откройте поле калькулятора, нажав на значок |calculateField| и добавьте "
-"новое поле :guilabel:`minutes`, умножив поле :guilabel:`cost` на 60:"
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:298
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:292
 msgid "calculateField"
 msgstr "calculateField"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:175
-msgid ""
-"That's it! Now you know how many minutes it will take to get from one point "
-"to the other one."
-msgstr ""
-"Вот и все! Теперь вы знаете, сколько минут потребуется, чтобы добраться из "
-"одной точки в другую."
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:181
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:180
 msgid "|hard| Shortest path with speed limit"
 msgstr "|hard| Кратчайший путь с ограничением скорости"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:300
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:294
 msgid "hard"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:182
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:181
 msgid ""
 "The Network analysis toolbox has other interesting options. Looking at the "
 "following map:"
@@ -337,7 +310,7 @@ msgstr ""
 "На панели инструментов сетевого анализа имеются и другие интересные опции. "
 "Посмотрите на эту карту:"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:189
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:188
 msgid ""
 "we would like to know the **fastest** route considering the **speed limits**"
 " of each road (the labels represent the speed limits in km/h). The shortest "
@@ -351,7 +324,7 @@ msgstr ""
 "фиолетовый маршрут. Но на этом участке дороги ограничение скорости "
 "составляет 20 км / ч, а по зеленой дороге можно ехать со скоростью 100 км/ч!"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:197
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:195
 msgid ""
 "As we did in the first exercise, we will use the :menuselection:`Network "
 "analysis --> Shortest path (point to point)` and we will manually choose the"
@@ -361,7 +334,7 @@ msgstr ""
 "--> Shortest path (point to point)` и вручную выберем начальную и конечную "
 "точки."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:200
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:199
 msgid ""
 "Open the :menuselection:`Network analysis --> Shortest path (point to "
 "point)` algorithm"
@@ -369,7 +342,7 @@ msgstr ""
 "Откройте алгоритм :menuselection:`Network analysis --> Shortest path (point "
 "to point)`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:203
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:202
 msgid ""
 "Select :guilabel:`network_lines` for the :guilabel:`Vector layer "
 "representing network` parameter"
@@ -377,23 +350,11 @@ msgstr ""
 "Выберите :guilabel:`network_lines` в параметрах :guilabel:`Vector layer "
 "representing network`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:206
-msgid ""
-"Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, "
-"y)` and choose the start point."
-msgstr ""
-"Кликни на кнопку :guilabel:`...` рядом с :guilabel:`Start point (x, y)` и "
-"выберите начальную точку."
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:208
-msgid "Do the same thing for :guilabel:`End point (x, y)`"
-msgstr "То же самое проделайте по :guilabel:`End point (x, y)`."
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:209
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:207
 msgid "Open the :guilabel:`Advanced parameters` menu"
 msgstr "Откройте меню :guilabel:`Advanced parameters`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:210
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:208
 msgid ""
 "Choose the *speed* field as the :guilabel:`Speed Field` parameter. With this"
 " option the algorithm will take into account the speed limits for each road."
@@ -401,24 +362,24 @@ msgstr ""
 "Выберите поле *скорости* в качестве параметра :guilabel:`Speed Field`. С "
 "этой опцией алгоритм будет учитывать ограничения скорости для каждой дороги."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:219
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:216
 msgid "Click on the :guilabel:`Run` button"
 msgstr "Нажмите на кнопку :guilabel:`Run`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:220
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:217
 msgid "Turn off the ``network_lines`` layer to better see the result"
 msgstr "Выключите слой ``network_lines``, чтобы лучше увидеть результат."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:226
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:223
 msgid ""
 "As you can see the fastest route does not correspond to the shortest one."
 msgstr "Как видите, самый быстрый маршрут не соответствует самому короткому."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:231
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:227
 msgid "|moderate| Service area (from layer)"
 msgstr "|moderate| Зона обслуживания (из слоя)"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:232
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:228
 msgid ""
 "The :menuselection:`Network Analysis --> Service area (from layer)` "
 "algorithm can answer the question: given a point layer, what are all the "
@@ -428,7 +389,7 @@ msgstr ""
 "может ответить на вопрос: какие местности доступны с учетом значения "
 "расстояния или времени?"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:236
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:232
 msgid ""
 "The :menuselection:`Network Analysis --> Service area (from point)` is the "
 "same algorithm, but it allows you to manually choose the point on the map."
@@ -436,7 +397,7 @@ msgstr ""
 ":menuselection:`Network Analysis --> Service area (from point)` является тем"
 " же алгоритмом, но он позволяет вручную выбрать точку на карте."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:241
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:237
 msgid ""
 "Given a distance of ``250`` meters we want to know how far we can go on the "
 "network from each point of the :guilabel:`network_points` layer."
@@ -444,11 +405,11 @@ msgstr ""
 "С учетом расстояние ``250`` метров, мы хотим узнать, как далеко мы можем "
 "пройти в сети от каждой точки слоя :guilabel:`network_points`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:245
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:240
 msgid "Uncheck all the layers except ``network_points``"
 msgstr "Снимите флажок со всех слоев, кроме ``network_points``."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:246
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:241
 msgid ""
 "Open the :menuselection:`Network Analysis --> Service area (from layer)` "
 "algorithm"
@@ -456,32 +417,32 @@ msgstr ""
 "Откройте алгоритм :menuselection:`Network Analysis --> Service area (from "
 "layer)`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:249
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:244
 msgid ""
 "Choose ``network_lines`` for :guilabel:`Vector layer representing network`"
 msgstr ""
 "Выберите ``network_lines`` для :guilabel:`Vector layer representing "
 "network`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:251
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:246
 msgid ""
 "Choose ``network_points`` for :guilabel:`Vector layer with start points`"
 msgstr ""
 "Выберите ``network_points`` для :guilabel:`Vector layer with start points`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:253
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:248
 msgid "Choose ``Shortest`` in :guilabel:`Path type to calculate`"
 msgstr "Выберите ``Shortest`` в :guilabel:`Path type to calculate`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:254
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:249
 msgid "Enter ``250`` for the :guilabel:`Travel cost` parameter"
 msgstr "Наберите ``250`` для параметра :guilabel:`Travel cost`."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:255
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:250
 msgid "Click on :guilabel:`Run` and close the dialog"
 msgstr "Кликните на кнопку :guilabel:`Run` и закройте диалоговое окно."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:261
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:256
 msgid ""
 "The output layer represents the maximum path you can reach from the point "
 "features given a distance of 250 meters:"
@@ -489,15 +450,15 @@ msgstr ""
 "Выходной слой представляет собой максимальный путь, который вы можете пройти"
 " от точечных объектов на расстоянии 250 метров:"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:268
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:263
 msgid "Cool isn't it?"
 msgstr "Круто, не правда ли?"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:271
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:266
 msgid "|IC|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:273
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:268
 msgid ""
 "Now you know how to use :guilabel:`Network analysis` algorithm to solve "
 "shortest and fastest path problems."
@@ -505,7 +466,7 @@ msgstr ""
 "Теперь вы узнали, как пользоваться алгоритмом :guilabel:`Network analysis` "
 "для решения задач, связанных с кратчайшим и самыми быстрым маршрутом."
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:276
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:271
 msgid ""
 "We are now ready to perform some spatial statistic on vector layer data. "
 "Let's go!"
@@ -513,11 +474,11 @@ msgstr ""
 "Мы теперь сможем выполнить некоторые действия по пространственной статистике"
 " с данными векторного слоя. Поехали!"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:281
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:275
 msgid "|WN|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:283
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:277
 msgid ""
 "Next you'll see how to run spatial statistics algorithms on vector datasets."
 msgstr ""

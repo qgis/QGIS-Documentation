@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-08-10 09:49+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
@@ -51,11 +51,11 @@ msgstr ""
 ":menuselection:`Salvare` sau :menuselection:`Proiect -->` |fileSaveAs| "
 ":menuselection:`Salvare Ca...`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:228
+#: ../../docs/user_manual/introduction/project_files.rst:230
 msgid "fileSave"
 msgstr "fileSave"
 
-#: ../../docs/user_manual/introduction/project_files.rst:230
+#: ../../docs/user_manual/introduction/project_files.rst:232
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
 
@@ -74,7 +74,7 @@ msgstr ""
 " atunci când este necesar` setarea din :menuselection:`Setări --> Opțiuni "
 "--> Generalități`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:220
+#: ../../docs/user_manual/introduction/project_files.rst:222
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -90,7 +90,7 @@ msgstr ""
 ":menuselection:`Deschide...`, :menuselection:`Proiect --> Nou din șablon` "
 "sau :menuselection:`Proiect --> Deschide Recent -->`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:226
+#: ../../docs/user_manual/introduction/project_files.rst:228
 msgid "fileOpen"
 msgstr "fileOpen"
 
@@ -127,7 +127,7 @@ msgstr ""
 "să salvați proiectul existent, dacă s-au efectuat modificări de când a fost "
 "deschis sau de la ultima salvare."
 
-#: ../../docs/user_manual/introduction/project_files.rst:224
+#: ../../docs/user_manual/introduction/project_files.rst:226
 msgid "fileNew"
 msgstr "fileNew"
 
@@ -253,22 +253,6 @@ msgstr ""
 "rezervă a fișierului este creată în același director cu fișierul de proiect "
 "care are extensia ``.qgs~``."
 
-#: ../../docs/user_manual/introduction/project_files.rst:110
-msgid ""
-"The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the "
-"default is to save using a compressed format with the ``.qgz`` extension. "
-"The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together"
-" with its associated sqlite database (``.qgd``) for :ref:`auxiliary data "
-"<vector_auxiliary_storage>`. You can get to these files by unzipping the "
-"``.qgz`` file."
-msgstr ""
-"Extensia pentru proiectele QGIS este ``.qgs``, dar la momentul salvării din "
-"QGIS, implicită este salvarea în formatul comprimat cu extensia ``.qgz``. "
-"Fișierul ``.qgs`` este încorporat în fișierul ``.qgz`` (o arhivă zip), "
-"împreună cu baza de date sqlite asociată (``.qgd``) a :ref:`datelor "
-"auxiliare <vector_auxiliary_storage>`. Puteți ajunge la aceste fișiere "
-"dezarhivând fișierul ``.qgz``."
-
 #: ../../docs/user_manual/introduction/project_files.rst:120
 msgid ""
 "The :ref:`vector_auxiliary_storage` mechanism makes a zipped project "
@@ -276,14 +260,6 @@ msgid ""
 msgstr ""
 "Mecanismul :ref:`vector_auxiliary_storage` face un proiect zip deosebit de "
 "util, deoarece acesta înglobează date auxiliare."
-
-#: ../../docs/user_manual/introduction/project_files.rst:125
-msgid ""
-"Projects can also be saved/loaded to/from a PostgreSQL database using the "
-"following Project menu items:"
-msgstr ""
-"Proiectele pot fi, de asemenea, salvate/încărcate într-o bază de date "
-"PostgreSQL, folosind următoarele elemente din meniul Proiect:"
 
 #: ../../docs/user_manual/introduction/project_files.rst:128
 msgid ":menuselection:`Project --> Open from`"
@@ -293,34 +269,11 @@ msgstr ":menuselection:`Proiect --> Deschidere din`"
 msgid ":menuselection:`Project --> Save to`"
 msgstr ":menuselection:`Proiect --> Salvare în`"
 
-#: ../../docs/user_manual/introduction/project_files.rst:131
-msgid ""
-"Both menu items have a sub-menu with a list of extra project storage "
-"implementations (PostgreSQL and GeoPackage). Clicking the action will open a"
-" dialog to pick a GeoPackage connection and project or a PostgreSQL "
-"connection, schema and project."
-msgstr ""
-"Ambele elemente de meniu au un câte un submeniu cu o listă de implementări "
-"suplimentare de stocare a proiectului (PostgreSQL și GeoPackage). Făcând "
-"clic pe acțiune, se va deschide un dialog care permite alegerea unei "
-"conexiuni și a unui proiect GeoPackage sau a unei conexiuni, a unei scheme "
-"și a unui proiect PostgreSQL."
-
-#: ../../docs/user_manual/introduction/project_files.rst:136
-msgid ""
-"Projects stored in Geopackage or PostgreSQL can also be loaded through the "
-"QGIS browser panel, either by double-clicking them or by dragging them to "
-"the map canvas."
-msgstr ""
-"Proiectele stocate în Geopackage sau PostgreSQL pot fi încărcate și prin "
-"intermediul panoului Navigatorului QGIS, fie printr-un dublu clic pe ele, "
-"fie trăgându-le pe canevasul hărții."
-
-#: ../../docs/user_manual/introduction/project_files.rst:144
+#: ../../docs/user_manual/introduction/project_files.rst:145
 msgid "Handling broken file paths"
 msgstr "Gestionarea căilor de fișiere întrerupte"
 
-#: ../../docs/user_manual/introduction/project_files.rst:146
+#: ../../docs/user_manual/introduction/project_files.rst:147
 msgid ""
 "When opening a project, QGIS may fail to reach some data sources due to "
 "unavailable service/database, or to a renamed or moved file. QGIS then opens"
@@ -333,7 +286,7 @@ msgstr ""
 "straturilor indisponibile`, care face referire la straturile negăsite. Veți "
 "putea:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:152
+#: ../../docs/user_manual/introduction/project_files.rst:153
 msgid ""
 "Double-click in the :guilabel:`Datasource` field, adjust the path of each "
 "layer and click :guilabel:`Apply changes`;"
@@ -341,7 +294,7 @@ msgstr ""
 "Efectua dublu clic în câmpul :guilabel:`Sursei de date`, să ajustați calea "
 "fiecărui strat apoi să faceți clic pe :guilabel:`Aplicare modificări`;"
 
-#: ../../docs/user_manual/introduction/project_files.rst:154
+#: ../../docs/user_manual/introduction/project_files.rst:155
 msgid ""
 "Select a row, press :guilabel:`Browse` to indicate the correct location and "
 "click :guilabel:`Apply changes`;"
@@ -349,7 +302,7 @@ msgstr ""
 "Selecta un rând, să apăsați pe :guilabel:`Răsfoire` pentru a indica locația "
 "corectă apoi să faceți clic pe :guilabel:`Aplicare modificări`;"
 
-#: ../../docs/user_manual/introduction/project_files.rst:156
+#: ../../docs/user_manual/introduction/project_files.rst:157
 msgid ""
 "Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
 "fix all or selected broken path(s). Be aware that the browsing may take some"
@@ -360,7 +313,7 @@ msgstr ""
 "selectate. Rețineți că răsfoirea poate dura ceva timp. Apoi faceți clic pe "
 ":guilabel:`Aplicare modificări`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:159
+#: ../../docs/user_manual/introduction/project_files.rst:160
 msgid ""
 "Ignore the message and open your project with the broken path(s) by clicking"
 " :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the "
@@ -376,11 +329,11 @@ msgstr ""
 "afișată lângă acesta în panoul :guilabel:`Straturilor` sau alegând "
 ":guilabel:`Reparare sursă de date...` din meniul contextual al stratului."
 
-#: ../../docs/user_manual/introduction/project_files.rst:232
+#: ../../docs/user_manual/introduction/project_files.rst:234
 msgid "indicatorBadLayer"
 msgstr "indicatorBadLayer"
 
-#: ../../docs/user_manual/introduction/project_files.rst:166
+#: ../../docs/user_manual/introduction/project_files.rst:167
 msgid ""
 "With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
 "fixed, QGIS scans through all other broken paths and tries to auto-fix those"
@@ -391,17 +344,17 @@ msgstr ""
 "căi întrerupte și încearcă să le repare automat pe cele care au întreruptă "
 "aceeași cale de fișier."
 
-#: ../../docs/user_manual/introduction/project_files.rst:169
+#: ../../docs/user_manual/introduction/project_files.rst:170
 msgid ""
 "|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
 msgstr ""
 "|deleteSelected| :guilabel:`Elimină straturile indisponibile` din proiect."
 
-#: ../../docs/user_manual/introduction/project_files.rst:222
+#: ../../docs/user_manual/introduction/project_files.rst:224
 msgid "deleteSelected"
 msgstr "deleteSelected"
 
-#: ../../docs/user_manual/introduction/project_files.rst:171
+#: ../../docs/user_manual/introduction/project_files.rst:172
 msgid ""
 "Launching QGIS from command line using the :ref:`skipbadlayers` option can "
 "help you skip the :guilabel:`Handle Unavailable Layers` dialog at startup."
@@ -410,11 +363,11 @@ msgstr ""
 " poate ajuta să săriți peste fereastra de :guilabel:`Gestionare a "
 "straturilor indisponibile` de la pornire."
 
-#: ../../docs/user_manual/introduction/project_files.rst:177
+#: ../../docs/user_manual/introduction/project_files.rst:178
 msgid "Generating output"
 msgstr "Obținerea rezultatelor"
 
-#: ../../docs/user_manual/introduction/project_files.rst:182
+#: ../../docs/user_manual/introduction/project_files.rst:183
 msgid ""
 "There are several ways to generate output from your QGIS session. We have "
 "already discussed saving as a project file in :ref:`sec_projects`. Other "
@@ -424,25 +377,11 @@ msgstr ""
 "discutat deja despre salvarea sub formă de fișier proiect în "
 ":ref:`sec_projects`. Alte modalități de a produce fișiere de ieșire sunt:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:187
-msgid ""
-"Creating images: :menuselection:`Project --> Import/Export -->` "
-"|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
-"canvas rendering to an image format (PNG, JPG, TIFF...) at custom scale, "
-"resolution, size, ... Georeferencing the image is possible. See "
-":ref:`exportingmapcanvas` for more details."
-msgstr ""
-"Crearea imaginilor: :menuselection:`Proiect --> Importare/Exportare -->` "
-"|saveMapAsImage| :menuselection:`Exportare Hartă Într-o Imagine...` redă "
-"canevasul hărții în formatul unei imagini (PNG, JPG, TIFF...) la scară "
-"personalizată, rezoluție, dimensiune, ... Este posibilă și georeferențierea "
-"imaginii. Consultați :ref:`exportingmapcanvas` pentru mai multe detalii."
-
-#: ../../docs/user_manual/introduction/project_files.rst:236
+#: ../../docs/user_manual/introduction/project_files.rst:238
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
 
-#: ../../docs/user_manual/introduction/project_files.rst:194
+#: ../../docs/user_manual/introduction/project_files.rst:196
 msgid ""
 "Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
 " Map to PDF...` outputs the map canvas rendering to PDF at custom scale, "
@@ -455,7 +394,7 @@ msgstr ""
 "georeferențiere, ...). Consultați :ref:`exportingmapcanvas` pentru mai multe"
 " detalii."
 
-#: ../../docs/user_manual/introduction/project_files.rst:200
+#: ../../docs/user_manual/introduction/project_files.rst:202
 msgid ""
 "Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export"
 " Project to DXF...` opens a dialog where you can define the 'Symbology "
@@ -470,7 +409,7 @@ msgstr ""
 "simbologiei', simbolurile originale din QGIS pot fi exportate cu fidelitate "
 "ridicată (v. secțiunea :ref:`create_dxf_files`)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:207
+#: ../../docs/user_manual/introduction/project_files.rst:209
 msgid ""
 "Designing maps: :menuselection:`Project -->` |newLayout| :menuselection:`New"
 " Print Layout...` opens a dialog where you can layout and print the current "
@@ -481,6 +420,6 @@ msgstr ""
 "dialog în care puteți aranja și tipări canevasul hărții curente  (v. "
 "secțiunea :ref:`label_printlayout`)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:234
+#: ../../docs/user_manual/introduction/project_files.rst:236
 msgid "newLayout"
 msgstr "newLayout"

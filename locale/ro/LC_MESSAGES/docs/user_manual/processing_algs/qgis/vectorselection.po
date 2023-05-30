@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
-# Sorin Călinică <scalinica@gmail.com>, 2023
 # Transifex Bot <>, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -229,6 +229,13 @@ msgstr "[vector: oricare]"
 msgid "``FIELD``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:597
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:768
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:842
+msgid "[tablefield: any]"
+msgstr "[tablefield: any]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:45
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:845
 msgid "``OPERATOR``"
@@ -292,6 +299,16 @@ msgstr "4 --- <"
 msgid "5 --- <="
 msgstr "5 --- <="
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:857
+msgid "6 --- begins with"
+msgstr "6 --- începe cu"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:58
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:858
+msgid "7 --- contains"
+msgstr "7 --- conţine"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:59
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:859
 msgid "8 --- is null"
@@ -301,6 +318,11 @@ msgstr "8 --- is null"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:860
 msgid "9 --- is not null"
 msgstr "9 --- is not null"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:61
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:861
+msgid "10 --- does not contain"
+msgstr "10 --- nu conține"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:445
@@ -360,10 +382,25 @@ msgstr ""
 msgid "[same as input]"
 msgstr "[la fel ca intrarea]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:164
+msgid "Default: ``[Create Temporary Layer]``"
+msgstr "Implicit: ``[Creare Strat temporar]``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 #: ../../docs/user_manual/processing_algs/algs_include.rst:5
 msgid "Save to File…"
 msgstr "Salvare în Fișier..."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "Save to Geopackage…"
+msgstr "Salvare în Geopackage…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Save to Database Table…"
+msgstr "Salvare în Tabela Bazei de Date..."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:82
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:111
@@ -371,6 +408,11 @@ msgstr "Salvare în Fișier..."
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:202
 msgid "``FAIL_OUTPUT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:176
+msgid "Default: ``[Skip output]``"
+msgstr "Implicit: ``[Omitere rezultat]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:95
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:186
@@ -449,15 +491,201 @@ msgstr "**Algorithm ID**: ``qgis:extractbyexpression``"
 msgid ":ref:`qgisselectbylocation`, :ref:`qgisextractwithindistance`"
 msgstr ":ref:`qgisselectbylocation`, :ref:`qgisextractwithindistance`"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid ""
+"Using the figure above, we are looking for the green circles by spatially "
+"comparing them to the orange rectangle feature. Available geometric "
+"predicates are:"
+msgstr ""
+"Folosind figura de mai sus, căutăm cercurile verzi comparându-le spațial cu "
+"entitatea dreptunghiulară portocalie. Predicatele geometrice disponibile "
+"sunt:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "*Intersect*"
+msgstr "*Intersect*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid ""
+"Tests whether a geometry intersects another. Returns 1 (true) if the "
+"geometries spatially intersect (share any portion of space - overlap or "
+"touch) and 0 if they don’t. In the picture above, this will return circles "
+"1, 2 and 3."
+msgstr ""
+"Testează dacă o geometrie o intersectează pe alta. Returnează 1 (adevărat) "
+"dacă geometriile se intersectează spațial (împart orice porțiune de spațiu -"
+" se suprapun sau se ating) și 0 dacă nu se intersectează. În imaginea de mai"
+" sus, vor fi returnate cercurile 1, 2 și 3."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:26
+msgid "*Contain*"
+msgstr "*Contain*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:22
+msgid ""
+"Returns 1 (true) if and only if no points of b lie in the exterior of a, and"
+" at least one point of the interior of b lies in the interior of a. In the "
+"picture, no circle is returned, but the rectangle would be if you would look"
+" for it the other way around, as it contains circle 1 completely. This is "
+"the opposite of *are within*."
+msgstr ""
+"Returnează 1 (adevărat) dacă și numai dacă niciun punct al lui b nu se află "
+"în exteriorul lui a, iar cel puțin un punct din interiorul lui b se află în "
+"interiorul lui a. În imagine, nu este returnat niciun cerc, ar fi însă cazul"
+" dreptunghiului dacă l-ați căuta invers, întrucât conține cercul 1 complet. "
+"Acest predicat geometric este opusul lui *se află în interior*."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:30
+msgid "*Disjoint*"
+msgstr "*Disjoint*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:29
+msgid ""
+"Returns 1 (true) if the geometries do not share any portion of space (no "
+"overlap, not touching). Only circle 4 is returned."
+msgstr ""
+"Returnează 1 (adevărat) dacă geometriile nu împart nicio porțiune de spațiu "
+"(fără suprapunere, fără atingere). Doar cercul 4 este returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:34
+msgid "*Equal*"
+msgstr "*Equal*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:33
+msgid ""
+"Returns 1 (true) if and only if geometries are exactly the same. No circles "
+"will be returned."
+msgstr ""
+"Returnează 1 (adevărat) dacă și numai dacă geometriile sunt exact aceleași. "
+"Niciun cerc nu va fi returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:39
+msgid "*Touch*"
+msgstr "*Touch*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:37
+msgid ""
+"Tests whether a geometry touches another. Returns 1 (true) if the geometries"
+" have at least one point in common, but their interiors do not intersect. "
+"Only circle 3 is returned."
+msgstr ""
+"Testează dacă o geometrie o atinge pe alta. Returnează 1 (adevărat) dacă "
+"geometriile au cel puțin un punct în comun, iar interiorul lor nu se "
+"intersectează. Doar cercul 3 este returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:44
+msgid "*Overlap*"
+msgstr "*Overlap*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:42
+msgid ""
+"Tests whether a geometry overlaps another. Returns 1 (true) if the "
+"geometries share space, are of the same dimension, but are not completely "
+"contained by each other. Only circle 2 is returned."
+msgstr ""
+"Testează dacă o geometrie se suprapune peste alta. Returnează 1 (adevărat) "
+"dacă geometriile împart spațiul, sunt de aceeași dimensiune, dar nu sunt "
+"complet conținute una în cealaltă. Doar cercul 2 este returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:48
+msgid "*Are within*"
+msgstr "*Are within*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:47
+msgid ""
+"Tests whether a geometry is within another. Returns 1 (true) if geometry a "
+"is completely inside geometry b. Only circle 1 is returned."
+msgstr ""
+"Testează dacă o geometrie este conținută în alta. Returnează 1 (adevărat) "
+"dacă geometria a se află complet în interiorul geometriei b. Doar cercul 1 "
+"este returnat."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:56
+msgid "*Cross*"
+msgstr "*Cross*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:51
+msgid ""
+"Returns 1 (true) if the supplied geometries have some, but not all, interior"
+" points in common and the actual crossing is of a lower dimension than the "
+"highest supplied geometry. For example, a line crossing a polygon will cross"
+" as a line (true). Two lines crossing will cross as a point (true). Two "
+"polygons cross as a polygon (false). In the picture, no circles will be "
+"returned."
+msgstr ""
+"Returnează 1 (adevărat) dacă geometriile furnizate au unele, dar nu toate, "
+"punctele interioare, în comun, iar traversarea reală este de o dimensiune "
+"mai mică decât cea mai mare geometrie furnizată. De exemplu, o linie care "
+"traversează un poligon se va încrucișa ca o linie (adevărat). Două linii "
+"care se încrucișează se vor încrucișa ca punct (adevărat). Două poligoane se"
+" încrucișează ca poligon (fals). În imagine, niciun cerc nu va fi returnat."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:254
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1016
 msgid "``PREDICATE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:255
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1017
+msgid "[enumeration] [list]"
+msgstr "[enumeration] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:257
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1019
+msgid "Default: [0]"
+msgstr "Implicit: [0]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:261
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1023
+msgid "0 --- intersect"
+msgstr "0 --- intersectează"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:262
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1024
+msgid "1 --- contain"
+msgstr "1 --- conţin"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:263
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1025
+msgid "2 --- disjoint"
+msgstr "2 --- disjunge"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:264
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1026
+msgid "3 --- equal"
+msgstr "3 --- egal"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:265
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1027
+msgid "4 --- touch"
+msgstr "4 --- atinge"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:266
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1028
+msgid "5 --- overlap"
+msgstr "5 --- se suprapun"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:267
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1029
+msgid "6 --- are within"
+msgstr "6 --- se află în interior"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:268
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1030
+msgid "7 --- cross"
+msgstr "7 --- traversează"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:274
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1036
 msgid "``INTERSECT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:281
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:373
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:527
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:619
+msgid "Default: ``[Create temporary layer]``"
+msgstr "Implicit: ``[Creare Strat temporar]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:312
 msgid "**Algorithm ID**: ``qgis:extractbylocation``"
@@ -486,6 +714,11 @@ msgstr ""
 msgid "[number]"
 msgstr "[număr]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:354
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1113
+msgid "Default: 100"
+msgstr "Implicit: 100"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:358
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:508
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:600
@@ -497,6 +730,34 @@ msgstr "[număr]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1117
 msgid "``METHOD``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:365
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:877
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:947
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1047
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1124
+msgid "0 --- creating new selection"
+msgstr "0 --- creează o nouă selecție"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:366
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:878
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:948
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1048
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1125
+msgid "1 --- adding to current selection"
+msgstr "1 --- adăugare la selecția curentă"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:367
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1049
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1126
+msgid "2 --- selecting within current selection"
+msgstr "2 --- selectare în cadrul selecției curente"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:368
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1050
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1127
+msgid "3 --- removing from current selection"
+msgstr "3 --- eliminare din selecția curentă"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:402
 msgid "**Algorithm ID**: ``native:extractwithindistance``"
@@ -592,12 +853,33 @@ msgstr "**ID Algorithm**: ``nativ:filterbygeometry``"
 msgid ":ref:`qgisrandomselection`"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:514
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:606
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:692
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:777
+msgid "0 --- Number of selected features"
+msgstr "0 --- Numărul de entități selectate"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:515
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:607
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:693
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:778
+msgid "1 --- Percentage of selected features"
+msgstr "1 --- Procentajul entităților selectate"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:518
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:610
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:696
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:781
 msgid "``NUMBER``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:521
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:613
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:699
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:784
+msgid "Default: 10"
+msgstr "Implicit: 10"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:556
 msgid "**Algorithm ID**: ``qgis:randomextract``"
@@ -630,6 +912,16 @@ msgstr "**Algorithm ID**: ``qgis:randomselectionwithinsubsets``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:822
 msgid ":ref:`qgisextractbyattribute`"
 msgstr ":ref:`qgisextractbyattribute`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:879
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:949
+msgid "2 --- removing from current selection"
+msgstr "2 --- eliminare din selecția curentă"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:880
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:950
+msgid "3 --- selecting within current selection"
+msgstr "3 --- selectare în cadrul selecției curente"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:901
 msgid "**Algorithm ID**: ``qgis:selectbyattribute``"

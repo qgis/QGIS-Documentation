@@ -336,7 +336,7 @@ msgid ""
 "Connection...` also opens the :guilabel:`Create a New WMS/WMTS "
 "Connection...` dialog."
 msgstr ""
-":ref:`Browser panel <label_browserpanel>` 内の |wms| :guilabel:`WMS/WMTS` "
+":ref:`ブラウザパネル <label_browserpanel>` 内の |wms| :guilabel:`WMS/WMTS` "
 "エントリーを右クリックして、 :guilabel:`新規接続...` を選択すると、 :guilabel:`新規WMS/ 接続を作成` "
 "ダイアログが表示されます。"
 
@@ -674,13 +674,13 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:335
 msgid "**Layer Order**"
-msgstr "**レイヤー順序**"
+msgstr "**レイヤ順序**"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:337
 msgid ""
 "The :guilabel:`Layer Order` tab lists the selected layers available from the"
 " current connected WMS server."
-msgstr ":guilabel:`レイヤ順序` タブは、現在接続しているWMSサーバーから利用できる選択されたレイヤーを一覧表示します。"
+msgstr ":guilabel:`レイヤ順序` タブは、現在接続しているWMSサーバーから利用できる選択されたレイヤを一覧表示します。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:340
 msgid ""
@@ -689,7 +689,7 @@ msgid ""
 "change the overlay order, you can use the :guilabel:`Up` and "
 ":guilabel:`Down` buttons of the :guilabel:`Layer Order` tab."
 msgstr ""
-"サーバーによってレンダリングされたWMSレイヤーは、 :guilabel:`レイヤー` "
+"サーバーによってレンダリングされたWMSレイヤは、 :guilabel:`レイヤ` "
 "タブにリストされている順序で、リストの上から下にオーバーレイされます。オーバーレイの順序を変更するのに、 :guilabel:`レイヤ順序` タブの "
 ":guilabel:`上` ボタンと :guilabel:`下` ボタンを使うことができます。"
 
@@ -927,10 +927,10 @@ msgid ""
 "WMS XML elements ``LatLonBoundingBox``, ``EX_GeographicBoundingBox`` or the "
 "CRS:84 ``BoundingBox``."
 msgstr ""
-"** WGS 84バウンディングボックス** --- WGS "
-"84座標での、レイヤのバウンディングボックス。一部のWMSサーバーは、（例えば、UTM座標が代わりに使用されている）これを正しく設定しないでください。この場合、このレイヤの初期ビューはQGISによって非常に「ズームアウト」外観でレンダリングされてもよいです。WMSのウェブマスターは、彼らがWMSのXML要素"
+"**WGS 84バウンディングボックス** --- WGS "
+"84座標での、レイヤのバウンディングボックス。一部のWMSサーバーはこれを正しく設定しません（例えば、代わりにUTM座標が使われます）。この場合、このレイヤの初期ビューは、QGISによって非常に「縮小」された外観でレンダリングされるかもしれません。WMSのウェブマスターに、WMSのXML要素"
 " ``LatLonBoundingBox`` 、 ``EX_GeographicBoundingBox`` またはCRS:84 "
-"``BoundingBox`` として知っている可能性がある、このエラーが通知されなければなりません。"
+"``BoundingBox`` として知っている可能性がある、このエラーを知らされるべきです。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:509
 msgid ""
@@ -961,7 +961,7 @@ msgid ""
 "temporal mode, meaning that the layer will follow the temporal controller's "
 "current time range by default."
 msgstr ""
-"ラスター :ref:`時系列プロパティ <raster_temporal>`（すなわち :guilabel:`動的時系列コントロール` ）は、WMS と"
+"ラスタ :ref:`時系列プロパティ <raster_temporal>` （すなわち :guilabel:`動的時系列コントロール` ）は、WMS と"
 " WMTS レイヤに設定することができます。デフォルトでは、時間軸を有効にした WMS または WMTS レイヤがプロジェクトに追加されると、 "
 ":guilabel:`レイヤ` パネルに |indicatorTemporal| :sup:`Temporal Layer` "
 "というアイコンが横に表示されます。その :guilabel:`Temporal` プロパティのデフォルトは :guilabel:`自動` "
@@ -977,8 +977,12 @@ msgid ""
 "unchecking :guilabel:`Dynamic Temporal Control` and picking an option under "
 ":guilabel:`Static WMS-T Temporal Range`:"
 msgstr ""
-":guilabel:`動的時系列コントロール` のチェックを外し、:guilabel:`静的WMS-"
-"T時間範囲`のオプションを選択すると、レイヤーの特定の静的時間値を表示することができます:"
+":guilabel:`動的時系列コントロール` のチェックを外し、:guilabel:`静的WMS-T時間範囲` "
+"のオプションを選択すると、レイヤの特定の静的時間値を表示することができます:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:531
+msgid ":guilabel:`Server default`"
+msgstr ":guilabel:`Server default`"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:570
 msgid "QGIS Server properties"
@@ -1001,7 +1005,27 @@ msgid ""
 msgstr ""
 ":guilabel:`WMS印刷レイヤ`: 印刷に使用する代替の WMS レイヤを設定することができます "
 "(:ref:`GetProjectSettings <wms_getprojectsettings>` "
-"返信)。一般的に印刷に適さないWMTSレイヤーに便利です。"
+"返信)。一般的に印刷に適さないWMTSレイヤに便利です。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:578
+msgid ""
+"|checkbox| :guilabel:`Publish WMS/WMTS data source uri`: Allows a web client"
+" to fetch the WMS/WMTS data directly"
+msgstr ""
+"|checkbox| :guilabel:`WMS/SMTSデータソースURIを公開する`: "
+"ウェブクライアントがWMS/WMTSデータを直接取得できるようにします"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:580
+msgid "|checkbox| :guilabel:`Advertise as background layer`"
+msgstr "|checkbox| :guilabel:`背景レイヤ扱いする`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:587
+msgid "QGIS Server properties of a WMS/WMTS layer"
+msgstr "WMS/WMTSレイヤのQGISサーバープロパティ"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:592
+msgid "Show WMS legend graphic in table of contents and layout"
+msgstr "WMS凡例のグラフィックをコンテンツのテーブルおよびレイアウトに表示する"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:594
 msgid ""
@@ -1115,9 +1139,104 @@ msgstr ""
 msgid "**Loading a WFS Layer**"
 msgstr "**WFS レイヤを読み込む**"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:669
+msgid ""
+"As an example, we use the Gateway Geomatics WFS server and display a layer."
+msgstr "例として、Gateway Geomatics WFSサーバーを使ってレイヤを表示します。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:675
+msgid ""
+"To be able to load a WFS Layer, first create a connection to the WFS server:"
+msgstr "WFSレイヤを読み込めるように、まずそのWFSサーバーへの接続を作ります。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:677
+msgid ""
+"Open the :guilabel:`Data Source Manager` dialog by pressing the "
+"|dataSourceManager| :sup:`Open Data Source Manager` button"
+msgstr ""
+"|dataSourceManager| :sup:`データソースマネージャを開く` を押して :guilabel:`データソースマネージャ` "
+"ダイアログを開きます"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:679
+msgid "Enable the |addWfsLayer| :guilabel:`WFS/OGC API-Features` tab"
+msgstr "|addWfsLayer| :guilabel:`WFS/OGC API - 地物` タブを有効にします"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:768
 msgid "addWfsLayer"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:680
+msgid ""
+"Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS "
+"Connection` dialog"
+msgstr ":guilabel:`新規...` をクリックして :guilabel:`新規WFS接続を作成` ダイアログを開きます"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:682
+msgid "Enter ``Gateway Geomatics`` as name"
+msgstr "名前に ``Gateway Geomatics`` を入力します"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:683
+msgid "Enter the URL (see above)"
+msgstr "URLを入力します（上記参照）"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:690
+msgid "Creating a connection to a WFS server"
+msgstr "WMSサーバーへの接続を作る"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:692
+msgid ""
+"In case of an OGC API - Features (OAPIF), the URL to provide should be the "
+":ref:`landing page <oapif_endpoints>`, ie the main page from which it is "
+"possible to navigate to all the available service endpoints."
+msgstr ""
+"OGC API - 地物 (OAPIF) の場合、与えるURLは :ref:`landing page <oapif_endpoints>` "
+"、つまり、そこからすべての利用可能なサービスのエンドポイントに移動可能なメインページでなければなりません。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:696
+msgid "In the WFS settings dialog, you can:"
+msgstr "WFS設定ダイアログでは、以下の設定ができます："
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:698
+msgid ""
+"Indicate the WFS version of the server. If unknown, press the "
+":guilabel:`Detect` button to automatically retrieve it."
+msgstr "サーバーのWFSバージョンを示します。不明な場合は :guilabel:`検出する` ボタンを押すと自動的に取得されます。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:700
+msgid ""
+"Define the :guilabel:`maximum number of features` retrieved in a single "
+"GetFetFeature request. If empty, no limit is set."
+msgstr ""
+"1回のGetFetFeatureリクエストで取得する :guilabel:``地物数の最大値` を決めます。空の場合、制限は設定されません。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:702
+msgid "And depending on the WFS version, indicate whether to:"
+msgstr "WFSバージョンに依って、次のどれかを指定します:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:704
+msgid ""
+":guilabel:`Enable feature paging` and specify the maximum number of features"
+" to retrieve with :guilabel:`Page size`. If no limit is defined, then the "
+"server default is applied."
+msgstr ""
+":guilabel:`地物ページングを有効にする`、そして、:guilabel:`ページサイズ` "
+"に取得する地物の最大数を指定します。限度を設定しない場合はサーバーのデフォルトが適用されます。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:707
+msgid "Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`"
+msgstr ":guilabel:`軸方位を無視する (WFS 1.1/WFS 2.0)` を強制する"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:708
+msgid ":guilabel:`Invert axis orientation`."
+msgstr ":guilabel:`軸方位を逆にする`。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:709
+msgid ":guilabel:`Use GML2 encoding for transactions`."
+msgstr ":guilabel:`トランザクションにGML2を使う`。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:721
+msgid "Press :guilabel:`OK` to create the connection."
+msgstr ":guilabel:`OK` を押して接続を作成します。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:723
 msgid ""
@@ -1125,13 +1244,82 @@ msgid ""
 "recognized."
 msgstr "好みで設定した可能性のあるすべてのプロキシ設定も認識されていることに注意してください。"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:725
+msgid "Now we are ready to load WFS layers from the above connection."
+msgstr "これで、上記の接続からWFSレイヤを読み込む準備ができました。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:727
+msgid ""
+"Choose 'Gateway Geomatics' from the :guilabel:`Server Connections` drop-down"
+" list."
+msgstr ":guilabel:`サーバ接続` ドロップダウンリストから 'Gateway Geomatics' を選択します。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:728
+msgid "Click :guilabel:`Connect`"
+msgstr ":guilabel:`接続` をクリックします"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:729
+msgid "Select the :guilabel:`Parks` layer in the list"
+msgstr "リストの:guilabel:`Parks` レイヤを選択します"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:730
+msgid "You can also choose whether to:"
+msgstr "また次を選択することもできます:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:732
+msgid ""
+"|unchecked| :guilabel:`Use title for layer name`, showing the layer's title "
+"as defined on the server in the :guilabel:`Layers` panel instead of its "
+":guilabel:`Name`"
+msgstr ""
+"|unchecked| :guilabel:`タイトルをレイヤ名にする` は、サーバー上で定義されたレイヤの :guilabel:`名前` "
+"の代わりにタイトルを :guilabel:`レイヤ` パネルに表示します。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:735
+msgid ""
+"|checkbox| :guilabel:`Only request features overlapping the view extent`"
+msgstr "|checkbox| :guilabel:`ビュー領域に重なる地物のみをリクエストする`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:736
+msgid ""
+":guilabel:`Change...` the layer's CRS to any other supported by the service"
+msgstr "レイヤのCRSをサーバーがサポートしている他のものに :guilabel:`変更...` します"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:737
+msgid ""
+"or build a query to specify particular features to retrieve from the "
+"service: double-click on the row of the layer to open the :guilabel:`SQL "
+"Query Composer` dialog. That dialog provides widgets to write an advanced "
+"SQL query relying on available tables and columns of the service, with "
+"sorting and filtering and a bunch of SQL functions, spatial predicates and "
+"operators."
+msgstr ""
+"サービスから取得する特定の地物を指定するためのクエリを作ります: レイヤの行をダブルクリックすると :guilabel:`SQLクエリコンポーザ` "
+"ダイアログが開きます。このダイアログは、ソートやフィルタリング、SQL関数、空間述語、演算子の束を使い、サービスの利用可能なテーブルとカラムに依存した、高度なSQLクエリを記述するためのウィジェットを提供します。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:743
+msgid ""
+"The query you build will appear after validation in the :guilabel:`SQL` "
+"column within the :guilabel:`WFS / OGC API - Features` table, and the "
+"filtered layer will display the |indicatorFilter| icon next to it in the "
+":guilabel:`Layers` panel. It is thus possibe to adjust the query at any "
+"moment."
+msgstr ""
+"作成したクエリは、検証後に :guilabel:`WFS / OGC API - 地物` テーブルの :guilabel:`SQL` "
+"カラムに表示され、フィルタリングされたレイヤは :guilabel:`Layers` パネルでその横に |indicatorFilter| "
+"アイコンが表示されます。このように、いつでもクエリを調整することができます。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:778
 msgid "indicatorFilter"
 msgstr "indicatorFilter"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:748
+msgid "Click :guilabel:`Add` to add the layer to the map."
+msgstr ":guilabel:`追加` をクリックしてマップにレイヤを追加します。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:755
 msgid "Adding a WFS layer"
-msgstr "WFSレイヤーを追加"
+msgstr "WFSレイヤを追加"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:757
 msgid ""
@@ -1139,4 +1327,4 @@ msgid ""
 "QGIS main window. Once the layer is loaded, you can identify and select a "
 "couple of features and view the attribute table."
 msgstr ""
-"ダウンロードの進行状況がQGISメインウィンドウの左下に視覚化されていることに気付くでしょう。そのレイヤーが読み込まれると、いくつかの地物を識別して選択し、属性テーブルを表示できます。"
+"ダウンロードの進行状況がQGISメインウィンドウの左下に視覚化されていることに気付くでしょう。そのレイヤが読み込まれると、いくつかの地物を識別して選択し、属性テーブルを表示できます。"

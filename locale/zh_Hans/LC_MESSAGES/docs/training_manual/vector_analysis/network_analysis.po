@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-06-02 20:43+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Transifex Bot <>, 2023\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
@@ -44,7 +44,7 @@ msgstr "**本课目标:** 学习使用 :guilabel:`网络分析` 算法。"
 msgid "|basic| |FA| The Tools and the Data"
 msgstr "|basic| 跟我做: 工具和数据"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:297
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:291
 msgid "basic"
 msgstr ""
 
@@ -135,38 +135,29 @@ msgstr ":guilabel:`要计算的路径类型` 使用 ``最短``"
 msgid "Use these two points as starting and ending points for the analysis:"
 msgstr "使用以下两个点作为分析的起点和终点："
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:69
-msgid ""
-"Click on the :guilabel:`...` button next to :guilabel:`Start point (x, y)` "
-"and choose the location tagged with ``Starting Point`` in the picture. The "
-"coordinates of the clicked point are added."
-msgstr ""
-"单击 :guilabel:`起点 (x, y)` 旁边的 :guilabel:`...` 按钮，选择图片中标记 ``起点`` "
-"的位置，将添加单击点的坐标。"
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:73
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:74
 msgid ""
 "Do the same thing, but choosing the location tagged with ``Ending point`` "
 "for :guilabel:`End point (x, y)`"
 msgstr "执行相同的操作，但选择标记 ``终点`` 的位置作为 :guilabel:`终点 (x, y)`"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:75
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:76
 msgid "Click on the :guilabel:`Run` button:"
 msgstr "单击 :guilabel:`运行` 按钮："
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:81
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:82
 msgid ""
 "A new line layer is created representing the shortest path between the "
 "chosen points. Uncheck the ``network_lines`` layer to see the result better:"
 msgstr "将创建一个新的线图层，表示所选点之间的最短路径。取消勾选 ``network_lines`` 图层可以更好地查看结果："
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:89
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:90
 msgid ""
 "Open the attribute table of the output layer. It contains three fields, "
 "representing the coordinates of the start and end points and the **cost**."
 msgstr "打开输出图层的属性表。它包含三个字段，表示起点和终点的坐标以及 **cost** 。"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:93
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:94
 msgid ""
 "We chose ``Shortest`` as :guilabel:`Path type to calculate`, so the **cost**"
 " represent the **distance**, in layer units, between the two locations."
@@ -174,13 +165,13 @@ msgstr ""
 "我们选择 ``最短`` 作为 :guilabel:`要计算的路径类型` ，因此 **cost** 表示两个位置之间的 **距离** "
 "(使用图层单位表示)。"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:97
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:98
 msgid ""
 "In our case, the *shortest* distance between the chosen points is around "
 "``1000`` meters:"
 msgstr "在我们的例子中，所选点之间的 *最短* 距离约为 ``1000`` 米："
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:104
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:105
 msgid ""
 "Now that you know how to use the tool, feel free to test other locations."
 msgstr "既然您已经知道如何使用该工具，那就可以自由地测试其他位置了。"
@@ -189,7 +180,7 @@ msgstr "既然您已经知道如何使用该工具，那就可以自由地测试
 msgid "|moderate| |TY| Fastest path"
 msgstr "|moderate| 试一试 最快路径"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:301
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:295
 msgid "moderate"
 msgstr ""
 
@@ -255,7 +246,7 @@ msgstr ""
 "像之前一样填写 :guilabel:`输入图层`, :guilabel:`起点 (x, y)` 和 :guilabel:`终点 (x, y)` "
 
 #: ../../docs/training_manual/vector_analysis/network_analysis.rst:149
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:205
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:204
 msgid "Choose ``Fastest`` as the :guilabel:`Path type to calculate`"
 msgstr "选择 ``最快`` 作为 :guilabel:`要计算的路径类型`"
 
@@ -286,40 +277,25 @@ msgid ""
 "the more readable *minutes* values."
 msgstr "*cost* 字段包含依据您选择的速度参数的值。我们可以将 *cost* 字段从带有小数的小时数转换为可读性更强的 *分钟* 值。"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:167
-msgid ""
-"Open the field calculator by clicking on the |calculateField| icon and add "
-"the new field :guilabel:`minutes` by multiplying the :guilabel:`cost` field "
-"by 60:"
-msgstr ""
-"单击 |calculateField| 图标打开字段计算器，将 :guilabel:`cost` 字段乘以60来添加新字段 "
-":guilabel:`minutes` ："
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:298
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:292
 msgid "calculateField"
 msgstr "calculateField"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:175
-msgid ""
-"That's it! Now you know how many minutes it will take to get from one point "
-"to the other one."
-msgstr "就是这样！现在您知道从一个点到另一个点需要多少分钟了。"
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:181
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:180
 msgid "|hard| Shortest path with speed limit"
 msgstr "|hard| 有限速的最短路径"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:300
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:294
 msgid "hard"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:182
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:181
 msgid ""
 "The Network analysis toolbox has other interesting options. Looking at the "
 "following map:"
 msgstr "网络分析工具箱还有其他有趣的选项。请看下面的地图："
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:189
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:188
 msgid ""
 "we would like to know the **fastest** route considering the **speed limits**"
 " of each road (the labels represent the speed limits in km/h). The shortest "
@@ -330,7 +306,7 @@ msgstr ""
 "考虑到每条道路的 **速度限制** ，我们想知道 **最快** 的路线 (标签表示以 km/h "
 "为单位的速度限制)。不考虑限速的情况下，最短路径当然是紫色路径。但是在那条路上限速是20千米/小时，而在绿色道路上您可以以100千米/小时的速度行驶！"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:197
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:195
 msgid ""
 "As we did in the first exercise, we will use the :menuselection:`Network "
 "analysis --> Shortest path (point to point)` and we will manually choose the"
@@ -338,56 +314,46 @@ msgid ""
 msgstr ""
 "正如在第一个练习中所做的那样，我们将使用 :menuselection:`网络分析 --> 最短路径 (点到点)` ，并手动选择起点和终点。"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:200
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:199
 msgid ""
 "Open the :menuselection:`Network analysis --> Shortest path (point to "
 "point)` algorithm"
 msgstr "打开 :menuselection:`网络分析 --> 最短路径 (点到点)` 算法"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:203
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:202
 msgid ""
 "Select :guilabel:`network_lines` for the :guilabel:`Vector layer "
 "representing network` parameter"
 msgstr "为 :guilabel:`描绘网络的矢量图层` 参数选择 :guilabel:`network_lines`"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:206
-msgid ""
-"Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, "
-"y)` and choose the start point."
-msgstr "单击 :guilabel:`起点 (x, y)` 旁边的 :guilabel:`...` 按钮并选择起点。"
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:208
-msgid "Do the same thing for :guilabel:`End point (x, y)`"
-msgstr "对 :guilabel:`终点 (x, y)` 执行相同的操作"
-
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:209
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:207
 msgid "Open the :guilabel:`Advanced parameters` menu"
 msgstr "打开 :guilabel:`高级参数` 菜单"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:210
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:208
 msgid ""
 "Choose the *speed* field as the :guilabel:`Speed Field` parameter. With this"
 " option the algorithm will take into account the speed limits for each road."
 msgstr "选择 *速度* 字段作为 :guilabel:`速度字段` 参数。通过此选项，算法将考虑每条道路的速度限制情况。"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:219
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:216
 msgid "Click on the :guilabel:`Run` button"
 msgstr "单击 :guilabel:`运行` 按钮"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:220
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:217
 msgid "Turn off the ``network_lines`` layer to better see the result"
 msgstr "为更好地查看结果，请关闭 ``network_lines`` 图层"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:226
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:223
 msgid ""
 "As you can see the fastest route does not correspond to the shortest one."
 msgstr "正如您所见，最快的路线并不对应最短的路线。"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:231
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:227
 msgid "|moderate| Service area (from layer)"
 msgstr "|moderate| 服务区 (从图层)"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:232
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:228
 msgid ""
 "The :menuselection:`Network Analysis --> Service area (from layer)` "
 "algorithm can answer the question: given a point layer, what are all the "
@@ -395,81 +361,81 @@ msgid ""
 msgstr ""
 ":menuselection:`网络分析 --> 服务区 (从图层)` 算法可以回答以下问题：给定一个点图层，给定距离或时间值，所有可达区域是什么？"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:236
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:232
 msgid ""
 "The :menuselection:`Network Analysis --> Service area (from point)` is the "
 "same algorithm, but it allows you to manually choose the point on the map."
 msgstr ":menuselection:`网络分析 --> 服务区 (从点)` 是相同的算法，但它允许您手动选择地图上的点。"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:241
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:237
 msgid ""
 "Given a distance of ``250`` meters we want to know how far we can go on the "
 "network from each point of the :guilabel:`network_points` layer."
 msgstr "给定 ``250`` 米的距离，我们想知道从 :guilabel:`network_points` 图层的每个点在网络上可以走多远。"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:245
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:240
 msgid "Uncheck all the layers except ``network_points``"
 msgstr "取消勾选除 ``network_points`` 以外的所有图层"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:246
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:241
 msgid ""
 "Open the :menuselection:`Network Analysis --> Service area (from layer)` "
 "algorithm"
 msgstr "打开 :menuselection:`网络分析 --> 服务区 (从图层)` 算法"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:249
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:244
 msgid ""
 "Choose ``network_lines`` for :guilabel:`Vector layer representing network`"
 msgstr "为 :guilabel:`描绘网络的矢量图层` 选择 ``network_lines``"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:251
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:246
 msgid ""
 "Choose ``network_points`` for :guilabel:`Vector layer with start points`"
 msgstr "为 :guilabel:`包含起始点的矢量图层` 选择 ``network_points``"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:253
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:248
 msgid "Choose ``Shortest`` in :guilabel:`Path type to calculate`"
 msgstr "在 :guilabel:`要计算的路径类型` 中选择 ``最短``"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:254
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:249
 msgid "Enter ``250`` for the :guilabel:`Travel cost` parameter"
 msgstr "输入 ``250`` 作为 :guilabel:`出行成本` 参数"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:255
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:250
 msgid "Click on :guilabel:`Run` and close the dialog"
 msgstr "单击 :guilabel:`运行` 并关闭对话框"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:261
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:256
 msgid ""
 "The output layer represents the maximum path you can reach from the point "
 "features given a distance of 250 meters:"
 msgstr "输出图层表示从给定250米距离的点要素可以到达的最大路径："
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:268
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:263
 msgid "Cool isn't it?"
 msgstr "很酷，不是吗？"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:271
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:266
 msgid "|IC|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:273
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:268
 msgid ""
 "Now you know how to use :guilabel:`Network analysis` algorithm to solve "
 "shortest and fastest path problems."
 msgstr "现在您知道如何使用 :guilabel:`网络分析` 算法来解决最短和最快的路径问题。"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:276
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:271
 msgid ""
 "We are now ready to perform some spatial statistic on vector layer data. "
 "Let's go!"
 msgstr "我们现在准备对矢量图层数据执行一些空间统计。出发！"
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:281
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:275
 msgid "|WN|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/network_analysis.rst:283
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:277
 msgid ""
 "Next you'll see how to run spatial statistics algorithms on vector datasets."
 msgstr "接下来，您将看到如何对矢量数据集运行空间统计算法。"

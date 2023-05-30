@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# _ __ <td_safemail-linux@yahoo.fr>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-13 12:32+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: _ __ <td_safemail-linux@yahoo.fr>, 2023\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,26 @@ msgstr ""
 "Generated-By: Babel 2.12.1\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/map_views/map_view.rst:6
+msgid "2D Map View"
+msgstr "Vue Carte 2D"
+
+#: ../../docs/user_manual/map_views/map_view.rst:14
+msgid ""
+"The 2D map view (also called **Map canvas**) is the central place where maps"
+" are displayed. QGIS opens by default with a single map view (called ``main "
+"map``), showing layers in 2D, and tightly bound to the :guilabel:`Layers` "
+"panel. That window reflects the rendering (symbology, labeling, "
+"visibilities...) you applied to the loaded layers."
+msgstr ""
+"La vue cartographique 2D (appelée aussi **Map Canevas**) est la vue "
+"principale dans laquelle les cartes sont affichée. QGIS s'ouvre par défaut "
+"avec une fenêtre affichant une seule vue cartographique (appelée \"carte "
+"principale\") constituée de couches 2D qui sont associée au panneau  "
+":guilabel:`Layers` . Cette fenêtre affiche les différentes couches chargées "
+"avec les options d'affichage/ de rendu que vous leurs avez appliquées "
+"(symboles, étiquettes, opacités, ...)"
 
 #: ../../docs/user_manual/map_views/map_view.rst:26
 msgid "QGIS GUI"
@@ -42,14 +63,8 @@ msgid ""
 "canvas resize is performed, so only features falling within the current map "
 "canvas extent will be visible."
 msgstr ""
-"Lorsque vous ajoutez une couche (voir par exemple :ref:`opening_data`), QGIS"
-" recherche automatiquement son Système de Coordonnées de Référence (SCR). Si"
-" un SCR différent est définit par défaut pour le projet (voir "
-":ref:`project_crs`), la couche est reprojetée \"à la volée\" dans ce SCR et "
-"la vue cartographique zoome sur l'emprise de la couche s'il s'agit d'un "
-"projet vide. S'il y a déjà des couches dans le projet, il n'y a pas de "
-"recentrage de la vue, seules les entités comprises dans l'emprise courante "
-"de la vue seront visibles."
+"Lorsque vous ajoutez une couche (voir par exemple :ref:`opening_data`), QGIS recherche automatiquement son Système de Coordonnées de Référence (SCR). Si un SCR différent est défini par défaut pour le projet (voir :ref:`project_crs`), la couche est reprojetée \"à la volée\" dans ce SCR. \n"
+"Si vous avez ouvert la couche d'un projet vide initialement, la vue cartographique est zoomée sur l'emprise de la couche . S'il y a déjà des couches dans le projet, il n'y a pas de recentrage de la vue, seules les entités comprises dans l'emprise courante de la vue seront visibles."
 
 #: ../../docs/user_manual/map_views/map_view.rst:56
 #: ../../docs/user_manual/map_views/map_view.rst:751
@@ -61,33 +76,134 @@ msgstr "Outil"
 msgid "Usage"
 msgstr "Usage"
 
+#: ../../docs/user_manual/map_views/map_view.rst:58
+msgid "|pan| :sup:`Pan Map`"
+msgstr "Déplacement de la carte :sup:`Pan Map`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1325
 msgid "pan"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:59
+msgid ""
+"Single left click: the map is centered on the clicked point, at the same "
+"scale"
+msgstr ""
+"Simple Clic gauche : la carte est centrée sur le point sous le curseur, sans"
+" modification de l'échelle d'affichage."
+
+#: ../../docs/user_manual/map_views/map_view.rst:60
+msgid "Hold down the left mouse button and drag the map canvas."
+msgstr ""
+"Maintenez le bouton gauche de la souris enfoncé et déplacez la souris: la "
+"canevas de la carte est déplacé."
+
+#: ../../docs/user_manual/map_views/map_view.rst:62
+msgid "|zoomIn| :sup:`Zoom In`"
+msgstr "|zoomIn| :guilabel:`Zoom +` (grossissant)"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1384
 msgid "zoomIn"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:63
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets doubled"
+msgstr ""
+"Simple Clic gauche : la carte est centrée sur le point sous le curseur, et "
+"l'échelle est doublée."
+
+#: ../../docs/user_manual/map_views/map_view.rst:65
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom in to "
+"an area."
+msgstr ""
+"Clic gauche maintenu, tracer un rectangle: la carte est zoomer sur cette "
+"zone."
+
+#: ../../docs/user_manual/map_views/map_view.rst:67
+msgid ""
+"Hold the :kbd:`Alt` key to switch to the |zoomOut| :sup:`Zoom Out` tool."
+msgstr ""
+"En maintenant la touche  :kbd:`Alt` le zoom bascule sur la fonction "
+"|zoomOut| :sup:` Dé-zoom` ."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1390
 msgid "zoomOut"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:69
+msgid "|zoomOut| :sup:`Zoom Out`"
+msgstr "|zoomOut| :sup:`Dé-Zoom`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:70
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets halved"
+msgstr ""
+"Simple Clic gauche : la carte est centrée sur le point sous le curseur, et "
+"l'échelle est divisée par deux."
+
+#: ../../docs/user_manual/map_views/map_view.rst:72
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom out "
+"from an area."
+msgstr ""
+"Clic gauche maintenu, tracer un rectangle: la carte est dézoomer à partir de"
+" cette zone."
+
+#: ../../docs/user_manual/map_views/map_view.rst:74
+msgid "Hold the :kbd:`Alt` key to switch to the |zoomIn| :sup:`Zoom In` tool."
+msgstr ""
+"En maintenant la touche  :kbd:`Alt` le zoom bascule sur la fonction |zoomIn|"
+" :sup:` Zoom` ."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1327
 msgid "panToSelected"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:79
+msgid "|zoomToSelected| :sup:`Zoom To Selection`"
+msgstr "|zoomToSelected| :guilabel:`Zoom sur la sélection`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1396
 msgid "zoomToSelected"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:83
+#: ../../docs/user_manual/map_views/map_view.rst:88
+#: ../../docs/user_manual/map_views/map_view.rst:100
+msgid "*Also available in the layer contextual menu*"
+msgstr "Disponible aussi dans le menu contextuel d'un couche."
+
+#: ../../docs/user_manual/map_views/map_view.rst:84
+msgid "|zoomToLayer| :sup:`Zoom To Layer(s)`"
+msgstr "|zoomToLayer| :guilabel:`Zoom sur les couche(s)`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1394
 msgid "zoomToLayer"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:85
+msgid ""
+"Zoom to the extent of all the selected layers in the :guilabel:`Layers` "
+"panel."
+msgstr ""
+"Zoom sur l'emprise de l'ensemble des couches selectionnées dans panneau "
+":guilabel:`Layers`."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1382
 msgid "zoomFullExtent"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:90
+msgid ""
+"Zoom to the extent of all the layers in the project or to the :ref:`project "
+"full extent <project_full_extent>`."
+msgstr ""
+"Zoom sur l'emprise globale de toutes les couches du projet ou de "
+":ref:`project full extent ` <project_full_extent>."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1386
 msgid "zoomLast"

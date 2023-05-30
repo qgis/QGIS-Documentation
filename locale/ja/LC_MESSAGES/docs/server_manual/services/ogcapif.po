@@ -7,15 +7,16 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-08-08 18:30+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,19 +25,104 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/server_manual/services/ogcapif.rst:53
+#: ../../docs/server_manual/services/ogcapif.rst:6
+msgid ""
+"OGC API Features (OAPIF) is the first implementation of the new generation "
+"of OGC protocols. It is described by the `OGC API - Features - Part 1: Core "
+"<http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ document."
+msgstr ""
+"OGC API Features（OAPIF）は、新世代のOGCプロトコルの最初の実装です。これは `OGC API - Features - Part"
+" 1：コア <http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ ドキュメントで説明されています。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:13
+msgid ""
+"Here is a quick informal summary of the most important differences between "
+"the well known WFS protocol and OAPIF:"
+msgstr "以下は、よく知られたWFSプロトコルとOAPIFの最も重要な相違点を簡単にまとめたものです："
+
+#: ../../docs/server_manual/services/ogcapif.rst:16
+msgid ""
+"OAPIF is based on a `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+msgstr ""
+"OAPIFは `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ "
+"APIを基にしています"
+
+#: ../../docs/server_manual/services/ogcapif.rst:19
+msgid ""
+"OAPIF must follow the `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
+msgstr ""
+"OAPIFは `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ "
+"仕様に従わなければなりません"
+
+#: ../../docs/server_manual/services/ogcapif.rst:22
+msgid ""
+"OAPIF supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS OAPIF) and it uses `content"
+" negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"determine which format is to be served to the client"
+msgstr ""
+"OAPIF は複数の出力形式をサポートしていますが、どの形式も指定することはありません（QGIS OAPIF で現在利用できるのは GeoJSON と "
+"HTML のみです）。また、`content negotiation "
+"<https://en.wikipedia.org/wiki/Content_negotiation>`_ "
+"を使用して、クライアントに提供する形式を決定します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:27
+msgid "JSON and HTML are first class citizens in OAPIF"
+msgstr "JSONとHTMLはOAPIFの一級市民です"
+
+#: ../../docs/server_manual/services/ogcapif.rst:28
+msgid "OAPIF is self-documenting (through the ``/api`` endpoint)"
+msgstr "OAPIFは（``/api`` エンドポイントを通して）自己文書化されています。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:29
+msgid "OAPIF is fully navigable (through links) and browsable"
+msgstr "OAPIFは（リンクを通じて）完全に誘導可能性があり、ブラウズ可能です"
+
+#: ../../docs/server_manual/services/ogcapif.rst:33
+msgid ""
+"While the OGC API Features implementation in QGIS can make use of the "
+"``MAP`` parameter to specify the project file, no extra query parameters are"
+" allowed by the OPENAPI specification. For this reason it is strongly "
+"recommended that ``MAP`` is not exposed in the URL and the project file is "
+"specified in the environment by other means (i.e. setting "
+"``QGIS_PROJECT_FILE`` in the environment through a web server rewrite rule)."
+msgstr ""
+"QGIS の OGC API Features の実装では、プロジェクトファイルを指定するために ``MAP`` "
+"パラメータを活用することができますが、OPENAPI 仕様では余分なクエリパラメータを使用することはできません。このため、``MAP`` を URL "
+"で公開せず、他の方法（例えば、ウェブサーバの書き換えルールで ``QGIS_PROJECT_FILE`` "
+"を環境に設定する）でプロジェクトファイルを指定することを強く推奨します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:44
+msgid ""
+"The **API** endpoint provides comprehensive documentation of all supported "
+"parameters and output formats of your service. The following paragraphs will"
+" only describe the most important ones."
+msgstr ""
+"**API** "
+"エンドポイントは、サポートされているすべてのパラメータとサービスの出力形式に関する包括的なドキュメントを提供します。以下の段落では、最も重要なもののみを説明します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:52
+msgid ""
+"The implementation of OGC API Features in QGIS Server currently supports the"
+" following resource representation (output) formats:"
+msgstr "QGIS ServerにおけるOGC API Featuresの実装は、現在、以下のリソース表現（出力）形式をサポートしています："
+
+#: ../../docs/server_manual/services/ogcapif.rst:55
 msgid "HTML"
 msgstr ""
 
-#: ../../docs/server_manual/services/ogcapif.rst:54
+#: ../../docs/server_manual/services/ogcapif.rst:56
 msgid "JSON"
 msgstr ""
 
-#: ../../docs/server_manual/services/ogcapif.rst:62
+#: ../../docs/server_manual/services/ogcapif.rst:64
 msgid "``.json``"
 msgstr ""
 
-#: ../../docs/server_manual/services/ogcapif.rst:63
+#: ../../docs/server_manual/services/ogcapif.rst:65
 msgid "``.html``"
 msgstr ""
 
@@ -55,6 +141,10 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/conformance``"
 msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "API"
+msgstr "API"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/api``"
@@ -80,6 +170,15 @@ msgstr ""
 msgid "``/collections/{collectionId}/items/{featureId}``"
 msgstr ""
 
-#: ../../docs/server_manual/services/ogcapif.rst:251
+#: ../../docs/server_manual/services/ogcapif.rst:240
+#: ../../docs/server_manual/services/ogcapif.rst:315
+#: ../../docs/server_manual/services/ogcapif.rst:327
+#: ../../docs/server_manual/services/ogcapif.rst:341
+#: ../../docs/server_manual/services/ogcapif.rst:352
+#: ../../docs/server_manual/services/ogcapif.rst:381
+msgid "URL example:"
+msgstr "URLの例:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:254
 msgid "Feature filtering"
 msgstr "地物フィルタリング"

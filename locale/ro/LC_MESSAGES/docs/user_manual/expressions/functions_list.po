@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2023
 # Transifex Bot <>, 2023
 # 
 #, fuzzy
@@ -1283,6 +1284,14 @@ msgstr ""
 msgid "array_all(array_a, array_b)"
 msgstr "array_all(array_a, array_b)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:46
+msgid "``array_all(array(1,2,3),array(2,3))`` → TRUE"
+msgstr "``array_all(array(1,2,3),array(2,3))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:47
+msgid "``array_all(array(1,2,3),array(1,2,4))`` → FALSE"
+msgstr "``array_all(array(1,2,3),array(1,2,4))`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:55
 msgid "array_append"
 msgstr ""
@@ -1321,6 +1330,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:104
 msgid "array_contains(array, value)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:109
+msgid "``array_contains(array(1,2,3),2)`` → TRUE"
+msgstr "``array_contains(array(1,2,3),2)`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:117
 msgid "array_count"
@@ -1412,6 +1425,10 @@ msgstr "``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]"
 msgid "array_get"
 msgstr "array_get"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:255
+msgid "array_get(array, pos)"
+msgstr "array_get(array, pos)"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:260
 msgid "``array_get(array('a','b','c'),1)`` → 'b'"
 msgstr "``array_get(array('a','b','c'),1)`` → 'b'"
@@ -1439,6 +1456,10 @@ msgstr "array_intersect"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:36
 msgid "array_intersect(array1, array2)"
 msgstr "array_intersect(array1, array2)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:41
+msgid "``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → TRUE"
+msgstr "``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:49
 msgid "array_last"
@@ -1658,6 +1679,14 @@ msgstr ""
 msgid "array_remove_at(array, pos)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:324
+msgid "``array_remove_at(array(1, 2, 3), 1)`` → [1, 3 ]"
+msgstr "``array_remove_at(array(1, 2, 3), 1)`` → [1, 3 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:325
+msgid "``array_remove_at(array(1, 2, 3), -1)`` → [1, 2 ]"
+msgstr "``array_remove_at(array(1, 2, 3), -1)`` → [1, 2 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:333
 msgid "array_replace"
 msgstr ""
@@ -1804,9 +1833,25 @@ msgstr "``array_to_string(array('1','','3'),',','0')`` → '1,0,3'"
 msgid "generate_series"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:497
+msgid "Creates an array containing a sequence of numbers."
+msgstr "Creează o matrice care conține o secvență de numere."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:503
 msgid "generate_series(start, stop, [step=1])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:507
+msgid "**start** - first value of the sequence"
+msgstr "**start** - prima valoare a secvenței"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:508
+msgid "**stop** - value that ends the sequence once reached"
+msgstr "**stop** - valoare care încheie secvența o dată atinsă"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:509
+msgid "**step** - value used as the increment between values"
+msgstr "**pas** - valoare folosită ca increment între valori"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:511
 msgid "``generate_series(1,5)`` → [ 1, 2, 3, 4, 5 ]"
@@ -1820,9 +1865,27 @@ msgstr "``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]"
 msgid "geometries_to_array"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:522
+msgid "Splits a geometry into simpler geometries in an array."
+msgstr "Împarte o geometrie într-o matrice cu geometrii mai simple."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:528
 msgid "geometries_to_array(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:530
+msgid "**geometry** - the input geometry"
+msgstr "**geometrie** - geometria de intrare"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:532
+msgid ""
+"``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1,"
+" 3 2, 5 8)),LineString (3 2, 4 2))'))`` → an array of a polygon and a line "
+"geometries"
+msgstr ""
+"``geometries_to_array(geom_from_wkt('GeometryCollection (Poligon ((5 8, 4 1,"
+" 3 2, 5 8)),LineString (3 2, 4 2))'))`` → o matrice de geometrii poligonale "
+"și liniare"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:533
 msgid ""
@@ -1831,13 +1894,40 @@ msgid ""
 "1, 3 2, 5 8))'"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:534
+msgid ""
+"``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
+"5,10 10,10 0,5 5))'))`` → an array of two polygon geometries"
+msgstr ""
+"``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
+"5,10 10,10 0,5 5))'))`` → o matrice cu două geometrii poligonale"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:542
 msgid "regexp_matches"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:544
+msgid ""
+"Returns an array of all strings captured by capturing groups, in the order "
+"the groups themselves appear in the supplied regular expression against a "
+"string."
+msgstr ""
+"Returnează o matrice având toate șirurile capturate de grupuri, în ordinea "
+"în care grupurile însele apar în expresia regulată furnizată față de un șir."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:550
 msgid "regexp_matches(string, regex, [empty_value=''])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:554
+msgid ""
+"**string** - the string to capture groups from against the regular "
+"expression"
+msgstr "**șir** - șirul din care expresia regulată va captura grupurile"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:555
+msgid "**regex** - the regular expression used to capture groups"
+msgstr "**regex** - expresia regulată folosită pentru a captura grupuri"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:558
 msgid "``regexp_matches('QGIS=>rocks','(.*)=>(.*)')`` → [ 'QGIS', 'rocks' ]"
@@ -1855,6 +1945,14 @@ msgstr ""
 msgid "string_to_array"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:569
+msgid ""
+"Splits string into an array using supplied delimiter and optional string for"
+" empty values."
+msgstr ""
+"Împarte șirul într-o matrice, folosind delimitatorul furnizat și șirul "
+"opțional pentru valorile goale."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:575
 msgid "string_to_array(string, [delimiter=','], [empty_value=''])"
 msgstr ""
@@ -1865,6 +1963,11 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/String.rst:325
 msgid "**string** - the input string"
 msgstr "**string** - șirul de intrare"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:580
+msgid "**delimiter** - the string delimiter used to split the input string"
+msgstr ""
+"**delimitator** - delimitatorul folosit pentru a diviza șirul de intrare"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:583
 msgid "``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]"
@@ -1898,6 +2001,42 @@ msgstr ""
 msgid "color_cmyk(cyan, magenta, yellow, black)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:45
+msgid ""
+"**cyan** - cyan component of the color, as a percentage integer value from 0"
+" to 100"
+msgstr ""
+"**cyan** - componenta cyan a culorii, ca valoare procentuală întreagă, de la"
+" 0 la 100"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:23
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:46
+msgid ""
+"**magenta** - magenta component of the color, as a percentage integer value "
+"from 0 to 100"
+msgstr ""
+"**magenta** - componenta magenta a culorii, ca valoare procentuală întreagă,"
+" de la 0 la 100"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:24
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:47
+msgid ""
+"**yellow** - yellow component of the color, as a percentage integer value "
+"from 0 to 100"
+msgstr ""
+"**galben** - componenta galbenă a culorii, ca valoare întreagă procentuală, "
+"de la 0 la 100"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:25
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:48
+msgid ""
+"**black** - black component of the color, as a percentage integer value from"
+" 0 to 100"
+msgstr ""
+"**negru** - componenta neagră a culorii, ca valoare întreagă procentuală, de"
+" la 0 la 100"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:27
 msgid "``color_cmyk(100,50,0,10)`` → '0,115,230'"
 msgstr "``color_cmyk(100,50,0,10)`` → '0,115,230'"
@@ -1918,6 +2057,16 @@ msgstr ""
 msgid "color_cmyka(cyan, magenta, yellow, black, alpha)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:49
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:114
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:266
+msgid ""
+"**alpha** - alpha component as an integer value from 0 (completely "
+"transparent) to 255 (opaque)."
+msgstr ""
+"**alfa** - componentă alfa, ca valoare întreagă de la 0 (transparență "
+"completă) la 255 (opacitate completă)."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:51
 msgid "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
 msgstr "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
@@ -1926,9 +2075,24 @@ msgstr "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
 msgid "color_grayscale_average"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:61
+msgid ""
+"Applies a grayscale filter and returns a string representation from a "
+"provided color."
+msgstr ""
+"Aplică un filtru în tonuri de gri și returnează o reprezentare sub formă de "
+"șir dintr-o culoare furnizată."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:67
 msgid "color_grayscale_average(color)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:69
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:201
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:309
+msgid "**color** - a color string"
+msgstr "**culoare** - culoarea sub formă de șir"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:71
 msgid "``color_grayscale_average('255,100,50')`` → '135,135,135,255'"
@@ -1938,9 +2102,44 @@ msgstr "``color_grayscale_average('255,100,50')`` → '135,135,135,255'"
 msgid "color_hsl"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:81
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, and"
+" lightness attributes."
+msgstr ""
+"Returnează o reprezentare sub formă de șir a unei culori, pe baza "
+"atributelor sale de nuanță, saturație și luminozitate."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:87
 msgid "color_hsl(hue, saturation, lightness)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:89
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:111
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:134
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:156
+msgid "**hue** - hue of the color, as an integer value from 0 to 360"
+msgstr "**hue** - nuanța culorii, ca valoare întreagă, de la 0 la 360"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:90
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:112
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:135
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:157
+msgid ""
+"**saturation** - saturation percentage of the color as an integer value from"
+" 0 to 100"
+msgstr ""
+"**saturation** - procentajul saturației culorii, ca valoare întreagă, de la "
+"0 la 100"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:91
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:113
+msgid ""
+"**lightness** - lightness percentage of the color as an integer value from 0"
+" to 100"
+msgstr ""
+"**lightness** - procentul de luminozitate al culorii, ca valoare întreagă, "
+"de la 0 la 100"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:93
 msgid "``color_hsl(100,50,70)`` → '166,217,140'"
@@ -1970,9 +2169,23 @@ msgstr "``color_hsla(100,50,70,200)`` → '166,217,140,200'"
 msgid "color_hsv"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:126
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, and"
+" value attributes."
+msgstr ""
+"Returnează o reprezentare sub formă de șir a unei culori, pe baza "
+"atributelor sale de nuanță, saturație și valoare."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:132
 msgid "color_hsv(hue, saturation, value)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:136
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:158
+msgid "**value** - value percentage of the color as an integer from 0 to 100"
+msgstr ""
+"**value** - valoare procentuală a culorii, ca număr întreg, de la 0 la 100"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:138
 msgid "``color_hsv(40,100,100)`` → '255,170,0'"
@@ -1982,9 +2195,25 @@ msgstr "``color_hsv(40,100,100)`` → '255,170,0'"
 msgid "color_hsva"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:148
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, "
+"value and alpha (transparency) attributes."
+msgstr ""
+"Returnează o reprezentare de tip șir a unei culori, bazată pe atributele "
+"nuanța, saturația, valoarea și alfa (transparență)."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:154
 msgid "color_hsva(hue, saturation, value, alpha)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:159
+msgid ""
+"**alpha** - alpha component as an integer value from 0 (completely "
+"transparent) to 255 (opaque)"
+msgstr ""
+"**alpha** - componenta alfa, ca valoare întreagă de la 0 (transparență "
+"completă) la 255 (opacitate completă)."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:161
 msgid "``color_hsva(40,100,100,200)`` → '255,170,0,200'"
@@ -1994,9 +2223,30 @@ msgstr "``color_hsva(40,100,100,200)`` → '255,170,0,200'"
 msgid "color_mix_rgb"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:171
+msgid ""
+"Returns a string representing a color mixing the red, green, blue, and alpha"
+" values of two provided colors based on a given ratio."
+msgstr ""
+"Returnează un șir reprezentând o culoare dată de amestecul valorilor roșu, "
+"verde, albastru și alfa furnizate pentru două culori și în baza unei rații "
+"date."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:177
 msgid "color_mix_rgb(color1, color2, ratio)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:179
+msgid "**color1** - a color string"
+msgstr "**color1** - culoarea 1 sub formă de șir"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:180
+msgid "**color2** - a color string"
+msgstr "**color2** - culoarea 2 sub formă de șir"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:181
+msgid "**ratio** - a ratio"
+msgstr "**ratio** - rezultatul raportului dintre două valori"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:183
 msgid "``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'"
@@ -2006,9 +2256,95 @@ msgstr "``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'"
 msgid "color_part"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:193
+msgid ""
+"Returns a specific component from a color string, e.g., the red component or"
+" alpha component."
+msgstr ""
+"Returnează o anumită componentă din șirul unei culori; de ex.: componenta "
+"roșie sau componenta alfa."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:199
 msgid "color_part(color, component)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:202
+msgid ""
+"**component** - a string corresponding to the color component to return. "
+"Valid options are:"
+msgstr ""
+"**component** - un șir corespunzător componentei de culoare de returnat. "
+"Opțiunile valide sunt:"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:206
+msgid "red: RGB red component (0-255)"
+msgstr "red: codul RGB al componentei roșii (0-255)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:207
+msgid "green: RGB green component (0-255)"
+msgstr "green: codul RGB al componentei verzi (0-255)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:23
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:208
+msgid "blue: RGB blue component (0-255)"
+msgstr "blue: codul RGB al componentei albastre (0-255)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:24
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:209
+msgid "alpha: alpha (transparency) value (0-255)"
+msgstr "alpha: valoarea alfa (transparența) (0-255)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:25
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:210
+msgid "hue: HSV hue (0-360)"
+msgstr "hue: codul HSV al nuanței (0-360)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:26
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:211
+msgid "saturation: HSV saturation (0-100)"
+msgstr "saturation: codul HSV al saturației (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:27
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:212
+msgid "value: HSV value (0-100)"
+msgstr "value: codul HSV al valorii (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:28
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:213
+msgid "hsl_hue: HSL hue (0-360)"
+msgstr "hsl_hue: codul HSL al nuanței (0-360)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:29
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:214
+msgid "hsl_saturation: HSL saturation (0-100)"
+msgstr "hsl_saturation: codul HSL al saturației (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:30
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:215
+msgid "lightness: HSL lightness (0-100)"
+msgstr "lightness: codul HSL al luminozității (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:31
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:216
+msgid "cyan: CMYK cyan component (0-100)"
+msgstr "cyan: codul CMYK al componentei cyan (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:32
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:217
+msgid "magenta: CMYK magenta component (0-100)"
+msgstr "magenta: codul CMYK al componentei magenta (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:33
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:218
+msgid "yellow: CMYK yellow component (0-100)"
+msgstr "yellow: codul CMYK al componentei galbene (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:34
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:219
+msgid "black: CMYK black component (0-100)"
+msgstr "black: codul CMYK al componentei negre (0-100)"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:223
 msgid "``color_part('200,10,30','green')`` → 10"
@@ -2018,9 +2354,32 @@ msgstr "``color_part('200,10,30','green')`` → 10"
 msgid "color_rgb"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:233
+msgid ""
+"Returns a string representation of a color based on its red, green, and blue"
+" components."
+msgstr ""
+"Returnează o reprezentare de tip șir a unei culori, în funcție de "
+"componentele sale roșie, verde și albastră."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:239
 msgid "color_rgb(red, green, blue)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:241
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:263
+msgid "**red** - red component as an integer value from 0 to 255"
+msgstr "**red** - componenta roșie, ca valoare întreagă de la 0 la 255"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:242
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:264
+msgid "**green** - green component as an integer value from 0 to 255"
+msgstr "**green** - componenta verde, ca valoare întreagă de la 0 la 255"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:243
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:265
+msgid "**blue** - blue component as an integer value from 0 to 255"
+msgstr "**blue** - componenta albastră, ca valoare întreagă de la 0 la 255"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:245
 msgid "``color_rgb(255,127,0)`` → '255,127,0'"
@@ -2029,6 +2388,14 @@ msgstr "``color_rgb(255,127,0)`` → '255,127,0'"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:253
 msgid "color_rgba"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:255
+msgid ""
+"Returns a string representation of a color based on its red, green, blue, "
+"and alpha (transparency) components."
+msgstr ""
+"Returnează o reprezentare de tip șir a unei culori, în funcție de "
+"componentele sale roșie, verde, albastră și alfa (transparență)."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:261
 msgid "color_rgba(red, green, blue, alpha)"
@@ -2042,9 +2409,26 @@ msgstr "``color_rgba(255,127,0,200)`` → '255,127,0,200'"
 msgid "create_ramp"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:278
+msgid "Returns a gradient ramp from a map of color strings and steps."
+msgstr ""
+"Returnează o rampă gradientală pornind de la o hartă cu șiruri de culori și "
+"pași."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:284
 msgid "create_ramp(map, [discrete=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:288
+msgid "**map** - a map of color strings and steps"
+msgstr "**map** - o hartă cu șiruri de culori și pași"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:289
+msgid ""
+"**discrete** - set this parameter to true to create a discrete color ramp"
+msgstr ""
+"**discrete** - setați acest parametru la true pentru a crea o rampă de "
+"culori discretă"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:41
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:291
@@ -2063,6 +2447,33 @@ msgstr "Returnează o culoare, de tip șir, mai închisă (sau mai deschisă)"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:307
 msgid "darker(color, factor)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:310
+msgid "**factor** - an integer corresponding to the darkening factor:"
+msgstr "**factor** - un număr întreg corespunzător factorului de întunecare:"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:312
+msgid ""
+"if the factor is greater than 100, this function returns a darker color "
+"(e.g., setting factor to 200 returns a color that is half the brightness);"
+msgstr ""
+"dacă factorul este mai mare de 100, această funcție returnează o culoare mai"
+" închisă (de ex.: setarea factorului la 200 returnează o culoare care are o "
+"jumătate din luminozitate);"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:313
+msgid ""
+"if the factor is less than 100, the return color is lighter, but using the "
+"lighter() function for this purpose is recommended;"
+msgstr ""
+"dacă factorul este mai mic de 100, culoarea returnată este mai deschisă; "
+"totuși, se recomandă utilizarea funcției lighter() în acest scop;"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:314
+msgid "if the factor is 0 or negative, the return value is unspecified."
+msgstr ""
+"dacă factorul este 0 sau negativ, valoarea returnată este nespecificată."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:318
 msgid "``darker('200,10,30', 200)`` → '100,5,15,255'"
@@ -2084,6 +2495,27 @@ msgstr "Returnează o culoare, de tip șir, mai deschisă (sau mai închisă)"
 msgid "lighter(color, factor)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:17
+msgid "**factor** - an integer corresponding to the lightening factor:"
+msgstr "**factor** - un număr întreg corespunzător factorului de iluminare:"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:19
+msgid ""
+"if the factor is greater than 100, this function returns a lighter color "
+"(e.g., setting factor to 150 returns a color that is 50% brighter);"
+msgstr ""
+"dacă factorul este mai mare de 100, această funcție returnează o culoare mai"
+" deschisă (de ex.: setarea factorului la 150 returnează o culoare cu 50% mai"
+" strălucitoare);"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:20
+msgid ""
+"if the factor is less than 100, the return color is darker, but using the "
+"darker() function for this purpose is recommended;"
+msgstr ""
+"dacă factorul este mai mic de 100, culoarea returnată este mai închisă; "
+"totuși, se recomandă utilizarea funcției darker() în acest scop;"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:25
 msgid "``lighter('200,10,30', 200)`` → '255,158,168,255'"
 msgstr "``lighter('200,10,30', 200)`` → '255,158,168,255'"
@@ -2096,9 +2528,17 @@ msgstr "Mai multe detalii: :ref:`expression_function_Color_darker`"
 msgid "project_color"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid "Returns a color from the project's color scheme."
+msgstr "Returnează o culoare din schema de culori a proiectului."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:14
 msgid "project_color(name)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:16
+msgid "**name** - a color name"
+msgstr "**nume** - numele unei culori"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:18
 msgid "``project_color('Logo color')`` → '20,140,50'"
@@ -2113,17 +2553,70 @@ msgstr ""
 msgid "ramp_color"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid "Returns a string representing a color from a color ramp."
+msgstr "Returnează un șir reprezentând o culoare dintr-o rampă de culoare."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:10
+msgid "**Saved ramp variant**"
+msgstr "**Varianta salvată a rampei**"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:12
+msgid "Returns a string representing a color from a saved ramp"
+msgstr "Returnează un șir reprezentând o culoare dintr-o rampă salvată"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:18
 msgid "ramp_color(ramp_name, value)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:20
+msgid ""
+"**ramp_name** - the name of the color ramp as a string, for example "
+"'Spectral'"
+msgstr ""
+"**ramp_name** - numele rampei de culoare, sub formă de șir, de ex.: "
+"„Spectral”"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:39
+msgid ""
+"**value** - the position on the ramp to select the color from as a real "
+"number between 0 and 1"
+msgstr ""
+"**value** - poziția de pe rampă, de unde se va selecta culoarea, ca număr "
+"real între 0 și 1"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:23
 msgid "``ramp_color('Spectral',0.3)`` → '253,190,115,255'"
 msgstr "``ramp_color('Spectral',0.3)`` → '253,190,115,255'"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:25
+msgid ""
+"The color ramps available vary between QGIS installations. This function may"
+" not give the expected results if you move your QGIS project between "
+"installations."
+msgstr ""
+"Rampele de culoare disponibile variază în diversele versiuni de QGIS. Este "
+"posibil ca această funcție să nu dea rezultatele așteptate, dacă deschideți "
+"proiectul în alte versiuni de QGIS."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:28
+msgid "**Expression-created ramp variant**"
+msgstr "**Variantă de rampă creată folosind expresii**"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:30
+msgid "Returns a string representing a color from an expression-created ramp"
+msgstr ""
+"Returnează un șir care reprezintă o culoare dintr-o rampă creată printr-o "
+"expresie"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:36
 msgid "ramp_color(ramp, value)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:38
+msgid "**ramp** - the color ramp"
+msgstr "**ramp** - rampa de culoare"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:101
 msgid "Further reading: :ref:`color-ramp`, :ref:`color_ramp_widget`"
@@ -2133,13 +2626,41 @@ msgstr "Mai multe detalii: :ref:`color-ramp`, :ref:`color_ramp_widget`"
 msgid "set_color_part"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid ""
+"Sets a specific color component for a color string, e.g., the red component "
+"or alpha component."
+msgstr ""
+"Setează o componentă de culoare specifică pentru șirul unei culori, de ex.: "
+"componenta roșie sau componenta alfa."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:14
 msgid "set_color_part(color, component, value)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:17
+msgid ""
+"**component** - a string corresponding to the color component to set. Valid "
+"options are:"
+msgstr ""
+"**component** - un șir corespunzător componentei culorii de setat. Opțiunile"
+" valide sunt:"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:37
+msgid ""
+"**value** - new value for color component, respecting the ranges listed "
+"above"
+msgstr ""
+"**value** - noua valoare pentru componenta de culoare, respectând "
+"intervalele enumerate mai sus"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:39
 msgid "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
 msgstr "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:108
+msgid "Conditional Functions"
+msgstr "Funcții Condiționale"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:110
 msgid ""
@@ -2152,6 +2673,23 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:18
 msgid "CASE"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:14
+msgid ""
+"CASE is used to evaluate a series of conditions and return a result for the "
+"first condition met. The conditions are evaluated sequentially, and if a "
+"condition is true, the evaluation stops, and the corresponding result is "
+"returned. If none of the conditions are true, the value in the ELSE clause "
+"is returned. Furthermore, if no ELSE clause is set and none of the "
+"conditions are met, NULL is returned."
+msgstr ""
+"CASE se folosește pentru a evalua o serie de condiții și pentru a returna un"
+" rezultat pentru prima condiție îndeplinită. Condițiile sunt evaluate "
+"secvențial, iar dacă o condiție este adevărată, evaluarea se oprește iar "
+"rezultatul corespunzător este returnat. Dacă niciuna dintre condiții nu este"
+" adevărată, se returnează valoarea din clauza ELSE. În plus, dacă nu este "
+"setată nicio clauză ELSE și nici una dintre condiții nu este îndeplinită, se"
+" returnează valoarea NULL."
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:20
 msgid "WHEN *condition* THEN *result*"
@@ -2169,13 +2707,69 @@ msgstr "[ ELSE *result* ]"
 msgid "END"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:28
+msgid "[ ] marks optional components"
+msgstr "[ ] marchează componentele opționale"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:36
+msgid "**WHEN condition** - A condition expression to evaluate"
+msgstr "**WHEN condition** - Expresia condiției de evaluat"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:37
+msgid ""
+"**THEN result** - If *condition* evaluates to True then *result* is "
+"evaluated and returned."
+msgstr ""
+"**THEN result** - Dacă *condiția* este evaluată la True, atunci este evaluat"
+" și returnat *rezultatul*."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:38
+msgid ""
+"**ELSE result** - If none of the above conditions evaluated to True then "
+"*result* is evaluated and returned."
+msgstr ""
+"**ELSE result** - Dacă niciuna dintre condițiile de mai sus nu este evaluată"
+" la True, atunci este evaluat și returnat *rezultatul*."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:40
+msgid ""
+"``CASE WHEN \"name\" IS NULL THEN 'None' END`` → Returns the string 'None' "
+"if the \"name\" field is NULL"
+msgstr ""
+"``CASE WHEN 'name' IS NULL THEN 'None' END`` → Returnează șirul 'None' dacă "
+"câmpul \"nume\" este NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:41
+msgid ""
+"``CASE WHEN $area > 10000 THEN 'Big property' WHEN $area > 5000 THEN 'Medium"
+" property' ELSE 'Small property' END`` → Returns the string 'Big property' "
+"if the area is bigger than 10000, 'Medium property' if the area is between "
+"5000 and 10000, and 'Small property' for others"
+msgstr ""
+"``CASE WHEN $area > 10000 THEN 'Big property' WHEN $area > 5000 THEN 'Medium"
+" property' ELSE 'Small property' END`` → Returnează șirul 'Big property' "
+"dacă aria este mai mare de 10000, 'Medium property' dacă aria este între "
+"5000 și 10000 și 'Small property' în rest"
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:49
 msgid "coalesce"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:51
+msgid "Returns the first non-NULL value from the expression list."
+msgstr "Returnează prima valoare non-NULL din lista de expresii."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:53
+msgid "This function can take any number of arguments."
+msgstr "Această funcție poate prelua orice număr de argumente."
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:59
 msgid "coalesce(expression1, expression2, ...)"
 msgstr "coalesce(expression1, expression2, ...)"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:61
+msgid "**expression** - any valid expression or value, regardless of type."
+msgstr "**expresie** - orice expresie sau valoare validă, indiferent de tip."
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:63
 msgid "``coalesce(NULL, 2)`` → 2"
@@ -2189,13 +2783,53 @@ msgstr "``coalesce(NULL, 2, 3)`` → 2"
 msgid "``coalesce(7, NULL, 3*2)`` → 7"
 msgstr "``coalesce(7, NULL, 3*2)`` → 7"
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:66
+msgid ""
+"``coalesce(\"fieldA\", \"fallbackField\", 'ERROR')`` → value of fieldA if it"
+" is non-NULL else the value of \"fallbackField\" or the string 'ERROR' if "
+"both are NULL"
+msgstr ""
+"``coalesce('fieldA', 'fallbackField', 'ERROR')`` → valoarea câmpului A dacă "
+"nu este NULL, în caz contrar valoarea lui 'fallbackField' sau șirul 'ERROR' "
+"dacă ambele sunt NULL"
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:74
 msgid "if"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:76
+msgid ""
+"Tests a condition and returns a different result depending on the "
+"conditional check."
+msgstr ""
+"Testează o condiție și returnează un rezultat diferit, în funcție de "
+"verificarea condiționată."
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:82
 msgid "if(condition, result_when_true, result_when_false)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:84
+msgid "**condition** - the condition which should be checked"
+msgstr "**condition** - condiția care ar trebui verificată"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:85
+msgid ""
+"**result_when_true** - the result which will be returned when the condition "
+"is true or another value that does not convert to false."
+msgstr ""
+"**result_when_true** - rezultatul care va fi returnat atunci când condiția "
+"este adevărată sau o altă valoare care nu se poate converti în fals."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:86
+msgid ""
+"**result_when_false** - the result which will be returned when the condition"
+" is false or another value that converts to false like 0 or ''. NULL will "
+"also be converted to false."
+msgstr ""
+"**result_when_false** - rezultatul care va fi returnat atunci când condiția "
+"este falsă sau o altă valoare care se transformă în fals, cum ar fi 0 sau "
+"''. NULL se va converti, de asemenea, în fals."
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:88
 msgid "``if( 1+1=2, 'Yes', 'No' )`` → 'Yes'"
@@ -2217,6 +2851,14 @@ msgstr ""
 "``if( '', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is false"
 " (empty)'"
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:92
+msgid ""
+"``if( ' ', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is true"
+" (not empty)'"
+msgstr ""
+"``if( ' ', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is true"
+" (not empty)'"
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:93
 msgid "``if( 0, 'One', 'Zero' )`` → 'Zero'"
 msgstr "``if( 0, 'One', 'Zero' )`` → 'Zero'"
@@ -2229,9 +2871,30 @@ msgstr "``if( 10, 'One', 'Zero' )`` → 'One'"
 msgid "nullif"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:104
+msgid ""
+"Returns a NULL value if value1 equals value2; otherwise it returns value1. "
+"This can be used to conditionally substitute values with NULL."
+msgstr ""
+"Returnează o valoare NULL dacă valoarea1 este egală cu valoarea2; în caz "
+"contrar, returnează valoarea1. Se poate folosi pentru a înlocui condiționat "
+"valorile cu NULL."
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:110
 msgid "nullif(value1, value2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:112
+msgid ""
+"**value1** - The value that should either be used or substituted with NULL."
+msgstr ""
+"**value1** - Valoarea care ar trebui fie folosită, fie înlocuită cu NULL."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:113
+msgid ""
+"**value2** - The control value that will trigger the NULL substitution."
+msgstr ""
+"**value2** - Valoarea de control care va declanșa substituirea cu NULL."
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:115
 msgid "``nullif('(none)', '(none)')`` → NULL"
@@ -2240,6 +2903,14 @@ msgstr "``nullif('(none)', '(none)')`` → NULL"
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:116
 msgid "``nullif('text', '(none)')`` → 'text'"
 msgstr "``nullif('text', '(none)')`` → 'text'"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:117
+msgid ""
+"``nullif(\"name\", '')`` → NULL, if name is an empty string (or already "
+"NULL), the name in any other case."
+msgstr ""
+"``nullif(\"name\", '')`` → NULL, dacă numele este un șir vid (sau deja "
+"NULL), iar numele în restul cazurilor."
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:125
 #: ../../docs/user_manual/expressions/expression_help/String.rst:225
@@ -2300,6 +2971,16 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:40
 msgid "hash(string, method)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:43
+msgid ""
+"**method** - The hash method among 'md4', 'md5', 'sha1', 'sha224', 'sha384',"
+" 'sha512', 'sha3_224', 'sha3_256', 'sha3_384', 'sha3_512', 'keccak_224', "
+"'keccak_256', 'keccak_384', 'keccak_512'"
+msgstr ""
+"**method** - Metoda de codificare dintre 'md4', 'md5', 'sha1', 'sha224', "
+"'sha384', 'sha512', 'sha3_224', 'sha3_256', 'sha3_384', 'sha3_512', "
+"'keccak_224', 'keccak_256', 'keccak_384', 'keccak_512'"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:45
 msgid "``hash('QGIS', 'md4')`` → 'c0fc71c241cdebb6e888cbac0e2b68eb'"
@@ -2383,6 +3064,10 @@ msgstr ""
 msgid "md5"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:68
+msgid "Creates a md5 hash from a string."
+msgstr "Creează o codificare md5 dintr-un șir."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:74
 msgid "md5(string)"
 msgstr ""
@@ -2394,6 +3079,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:86
 msgid "sha256"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:88
+msgid "Creates a sha256 hash from a string."
+msgstr "Creează o codificare sha256 dintr-un șir."
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:94
 msgid "sha256(string)"
@@ -2409,9 +3098,17 @@ msgstr ""
 msgid "to_base64"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:108
+msgid "Encodes a binary value into a string, using the Base64 encoding."
+msgstr "Codifică o valoare binară într-un șir, folosind Base64."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:114
 msgid "to_base64(value)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:116
+msgid "**value** - the binary value to encode"
+msgstr "**value** - valoarea binară de codificat"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:118
 msgid "``to_base64('QGIS')`` → 'UUdJUw=='"
@@ -2476,6 +3173,15 @@ msgstr "``to_decimal('6°21\\'16.445')`` → 6.3545680555"
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:198
 msgid "to_dm"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:206
+msgid "to_dm(coordinate, axis, precision, [formatting=])"
+msgstr "to_dm(coordinate, axis, precision, [formatting=])"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:212
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:239
+msgid "**precision** - Number of decimals."
+msgstr "**precision** - Numărul de zecimale."
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:215
 msgid "``to_dm(6.1545681, 'x', 3)`` → 6°9.274′"
@@ -2558,10 +3264,21 @@ msgstr "``to_real('123.45')`` → 123.45"
 msgid "to_string"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:316
+#: ../../docs/user_manual/expressions/expression_help/String.rst:454
+msgid "Converts a number to string."
+msgstr "Convertește un număr într-un șir."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:322
 #: ../../docs/user_manual/expressions/expression_help/String.rst:460
 msgid "to_string(number)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:324
+#: ../../docs/user_manual/expressions/expression_help/String.rst:462
+msgid "**number** - Integer or real value. The number to convert to string."
+msgstr ""
+"**number** - Număr întreg sau valoare reală. Numărul de convertit în șir."
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:326
 #: ../../docs/user_manual/expressions/expression_help/String.rst:464
@@ -2637,6 +3354,17 @@ msgstr ""
 msgid "age(datetime1, datetime2)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:36
+msgid "**datetime1** - a string, date or datetime representing the later date"
+msgstr ""
+"**datetime1** - un șir, dată sau datetime care reprezintă o dată ulterioară"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:37
+msgid ""
+"**datetime2** - a string, date or datetime representing the earlier date"
+msgstr ""
+"**datetime2** - un șir, dată sau datetime care reprezintă data anterioară"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:39
 msgid "``day(age('2012-05-12','2012-05-02'))`` → 10"
 msgstr "``day(age('2012-05-12','2012-05-02'))`` → 10"
@@ -2653,6 +3381,10 @@ msgstr ""
 msgid "datetime_from_epoch(int)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:58
+msgid "**int** - number (milliseconds)"
+msgstr "**int** - număr (milisecunde)"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:60
 msgid "``datetime_from_epoch(1483225200000)`` → 2017-01-01T00:00:00"
 msgstr "``datetime_from_epoch(1483225200000)`` → 2017-01-01T00:00:00"
@@ -2660,6 +3392,10 @@ msgstr "``datetime_from_epoch(1483225200000)`` → 2017-01-01T00:00:00"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:68
 msgid "day"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:70
+msgid "Extracts the day from a date, or the number of days from an interval."
+msgstr "Extrage ziua dintr-o dată sau numărul de zile dintr-un interval."
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:80
 msgid "day(date)"
@@ -2721,13 +3457,33 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "Expression"
+msgstr "Expresie"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "Output"
+msgstr "Rezultat"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
 msgid "d"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the day as number without a leading zero (1 to 31)"
+msgstr "ziua, un număr fără zero la început (de la 1 la 31)"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
 msgid "dd"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the day as number with a leading zero (01 to 31)"
+msgstr "ziua, un număr cu zero la început (de la 01 la 31)"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
@@ -2797,8 +3553,18 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the minute without a leading zero (0 to 59)"
+msgstr "minutul, fără zero la început (de la 0 la 59)"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
 msgid "mm"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the minute with a leading zero (00 to 59)"
+msgstr "minutul, cu zero la început (de la 00 la 59)"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
@@ -2807,8 +3573,18 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the second without a leading zero (0 to 59)"
+msgstr "secunda, fără zero la început (de la 0 la 59)"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
 msgid "ss"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the second with a leading zero (00 to 59)"
+msgstr "secunda, cu un zero la început (de la 00 la 59)"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:222
@@ -2899,6 +3675,21 @@ msgstr ""
 msgid "make_datetime(year, month, day, hour, minute, second)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:292
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:344
+msgid "**hour** - Hour number"
+msgstr "**hour** - Ora"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:293
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:345
+msgid "**minute** - Minutes"
+msgstr "**minute** - Minute"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:294
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:346
+msgid "**second** - Seconds (fractional values include milliseconds)"
+msgstr "**second** - Secunde (valorile facționale includ milisecunde)"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:296
 msgid ""
 "``make_datetime(2020,5,4,13,45,30.5)`` → datetime value 2020-05-04 "
@@ -2911,6 +3702,14 @@ msgstr ""
 msgid "make_interval"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:306
+msgid ""
+"Creates an interval value from year, month, weeks, days, hours, minute and "
+"seconds values."
+msgstr ""
+"Creează o valoare de tip interval din valorile an, lună, săptămâni, zile, "
+"ore, minute și secunde."
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:312
 msgid ""
 "make_interval([years=0], [months=0], [weeks=0], [days=0], [hours=0], "
@@ -2918,6 +3717,43 @@ msgid ""
 msgstr ""
 "make_interval([years=0], [months=0], [weeks=0], [days=0], [hours=0], "
 "[minutes=0], [seconds=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:316
+msgid "**years** - Number of years (assumes a 365.25 day year length)."
+msgstr ""
+"**years** - Numărul de ani (presupunând o lungime a anului de 365,25 zile)."
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:318
+msgid "**weeks** - Number of weeks"
+msgstr "**weeks** - Numărul de săptămâni"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:319
+msgid "**days** - Number of days"
+msgstr "**days** - Numărul de zile"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:320
+msgid "**hours** - Number of hours"
+msgstr "**hours** - Numărul de ore"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:321
+msgid "**minutes** - Number of minutes"
+msgstr "**minutes** - Numărul de minute"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:322
+msgid "**seconds** - Number of seconds"
+msgstr "**seconds** - Numărul de secunde"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:324
+msgid "``make_interval(hours:=3)`` → interval: 3 hours"
+msgstr "``make_interval(hours:=3)`` → interval: 3 ore"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:325
+msgid "``make_interval(days:=2, hours:=3)`` → interval: 2.125 days"
+msgstr "``make_interval(days:=2, hours:=3)`` → interval: 2.125 zile"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:326
+msgid "``make_interval(minutes:=0.5, seconds:=5)`` → interval: 35 seconds"
+msgstr "``make_interval(minutes:=0.5, seconds:=5)`` → interval: 35 secounde"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:334
 msgid "make_time"
@@ -3085,13 +3921,49 @@ msgstr "Fields and Values"
 msgid "NULL"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:14
+msgid "Equates to a NULL value."
+msgstr "Echivalează cu o valoare NULL."
+
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:22
+msgid "``NULL`` → a NULL value"
+msgstr "``NULL`` → o valoare NULL"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:246
+msgid "This group contains functions which manipulate file and path names."
+msgstr ""
+"Acest grup conține funcții care manipulează numele fișierelor și căilor."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:12
 msgid "base_file_name"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:14
+msgid ""
+"Returns the base name of the file without the directory or file suffix."
+msgstr ""
+"Returnează numele de bază al fișierului, fără directorul sau sufixul "
+"fișierului."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:20
 msgid "base_file_name(path)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:85
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:105
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:125
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:145
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:165
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:186
+msgid ""
+"**path** - a file path or a map layer value. If a map layer value is "
+"specified then the file source of the layer will be used."
+msgstr ""
+"**path** - o cale de fișier sau o valoare a unui strat de hartă. Dacă este "
+"specificată o valoare a unui strat de hartă, atunci va fi folosită sursa "
+"fișierului stratului."
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:24
 msgid ""
@@ -3105,9 +3977,31 @@ msgstr ""
 msgid "exif"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:34
+msgid "Retrieves exif tag values from an image file."
+msgstr "Preia valorile etichetelor exif dintr-un fișier imagine."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:40
 msgid "exif(path, [tag])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:44
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid ""
+"**path** - An image file path or a map layer value. If a map layer value is "
+"specified then the file source of the layer will be used."
+msgstr ""
+"**cale** - O cale a unui fișier de tip imagine sau o valoare a unui strat de"
+" hartă. Dacă este specificată o valoare a unui strat de hartă, atunci se va "
+"folosi sursa fișierului stratului."
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:45
+msgid ""
+"**tag** - The tag to return. If empty, a map with all exif tag values will "
+"be returned."
+msgstr ""
+"**tag** - Eticheta de returnat. Dacă se lasă necompletat, atunci se va "
+"returna o hartă cu toate valorile etichetelor exif."
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:47
 msgid "``exif('/my/photo.jpg','Exif.Image.Orientation')`` → 0"
@@ -3117,13 +4011,29 @@ msgstr "``exif('/my/photo.jpg','Exif.Image.Orientation')`` → 0"
 msgid "file_exists"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:57
+msgid "Returns TRUE if a file path exists."
+msgstr "Returnează TRUE dacă există o cale de fișier."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:63
 msgid "file_exists(path)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:67
+msgid "``file_exists('/home/qgis/data/country_boundaries.shp')`` → TRUE"
+msgstr "``file_exists('/home/qgis/data/country_boundaries.shp')`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:75
 msgid "file_name"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:77
+msgid ""
+"Returns the name of a file (including the file extension), excluding the "
+"directory."
+msgstr ""
+"Returnează numele unui fișier (inclusiv extensia fișierului), excluzând "
+"directorul."
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:83
 msgid "file_name(path)"
@@ -3141,6 +4051,14 @@ msgstr ""
 msgid "file_path"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:97
+msgid ""
+"Returns the directory component of a file path. This does not include the "
+"file name."
+msgstr ""
+"Returnează directorul, din compunerea unei căi de fișier. Nu se include și "
+"numele fișierului."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:103
 msgid "file_path(path)"
 msgstr ""
@@ -3155,6 +4073,10 @@ msgstr ""
 msgid "file_size"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:117
+msgid "Returns the size (in bytes) of a file."
+msgstr "Returnează dimensiunea (în octeți) a unui fișier."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:123
 msgid "file_size(path)"
 msgstr ""
@@ -3166,6 +4088,10 @@ msgstr "``file_size('/home/qgis/data/country_boundaries.geojson')`` → 5674"
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:135
 msgid "file_suffix"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:137
+msgid "Returns the file suffix (extension) from a file path."
+msgstr "Returnează sufixul fișierului (extensia) dintr-o cale de fișier."
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:143
 msgid "file_suffix(path)"
@@ -3179,9 +4105,21 @@ msgstr "``file_suffix('/home/qgis/data/country_boundaries.shp')`` → 'shp'"
 msgid "is_directory"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:157
+msgid "Returns TRUE if a path corresponds to a directory."
+msgstr "Returnează TRUE dacă o cale corespunde unui director."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:163
 msgid "is_directory(path)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:167
+msgid "``is_directory('/home/qgis/data/country_boundaries.shp')`` → FALSE"
+msgstr "``is_directory('/home/qgis/data/country_boundaries.shp')`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:168
+msgid "``is_directory('/home/qgis/data/')`` → TRUE"
+msgstr "``is_directory('/home/qgis/data/')`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:176
 msgid "is_file"
@@ -3190,6 +4128,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:184
 msgid "is_file(path)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:188
+msgid "``is_file('/home/qgis/data/country_boundaries.shp')`` → TRUE"
+msgstr "``is_file('/home/qgis/data/country_boundaries.shp')`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:189
+msgid "``is_file('/home/qgis/data/')`` → FALSE"
+msgstr "``is_file('/home/qgis/data/')`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Form.rst:12
 msgid "current_parent_value"
@@ -3358,6 +4304,10 @@ msgstr ""
 msgid "is_layer_visible(layer)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/General.rst:87
+msgid "``is_layer_visible('baseraster')`` → TRUE"
+msgstr "``is_layer_visible('baseraster')`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/General.rst:95
 msgid "mime_type"
 msgstr ""
@@ -3471,6 +4421,32 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
 msgid "apply_dash_pattern"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
+msgid ""
+"apply_dash_pattern(geometry, pattern, [start_rule=no_rule], "
+"[end_rule=no_rule], [adjustment=both], [pattern_offset=0])"
+msgstr ""
+"apply_dash_pattern(geometry, pattern, [start_rule=no_rule], "
+"[end_rule=no_rule], [adjustment=both], [pattern_offset=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:85
+msgid ""
+"``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"array(3, 1)))`` → MultiLineString ((1 1, 4 1),(5 1, 8 1),(9 1, 10 1, 10 1))"
+msgstr ""
+"``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"array(3, 1)))`` → MultiLineString ((1 1, 4 1),(5 1, 8 1),(9 1, 10 1, 10 1))"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:86
+msgid ""
+"``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"array(3, 1), start_rule:='half_dash'))`` → MultiLineString ((1 1, 2.5 "
+"1),(3.5 1, 6.5 1),(7.5 1, 10 1, 10 1))"
+msgstr ""
+"``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"array(3, 1), start_rule:='half_dash'))`` → MultiLineString ((1 1, 2.5 "
+"1),(3.5 1, 6.5 1),(7.5 1, 10 1, 10 1))"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:94
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:102
@@ -3740,6 +4716,31 @@ msgstr ""
 msgid "concave_hull(geometry, target_percent, [allow_holes=False])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+msgid ""
+"``geom_to_wkt(concave_hull(geom_from_wkt('MULTILINESTRING((106 164,30 112,74"
+" 70,82 112,130 94,130 62,122 40,156 32,162 76,172 88),(132 178,134 148,128 "
+"136,96 128,132 108,150 130,170 142,174 110,156 96,158 90,158 88),(22 64,66 "
+"28,94 38,94 68,114 76,112 30,132 10,168 18,178 34,186 52,184 74,190 100,190 "
+"122,182 148,178 170,176 184,156 164,146 178,132 186,92 182,56 158,36 150,62 "
+"150,76 128,88 118))'), 0.99))`` → 'Polygon ((30 112, 36 150, 92 182, 132 "
+"186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 "
+"28, 22 64, 30 112))'"
+msgstr ""
+"``geom_to_wkt(concave_hull(geom_from_wkt('MULTILINESTRING((106 164,30 112,74"
+" 70,82 112,130 94,130 62,122 40,156 32,162 76,172 88),(132 178,134 148,128 "
+"136,96 128,132 108,150 130,170 142,174 110,156 96,158 90,158 88),(22 64,66 "
+"28,94 38,94 68,114 76,112 30,132 10,168 18,178 34,186 52,184 74,190 100,190 "
+"122,182 148,178 170,176 184,156 164,146 178,132 186,92 182,56 158,36 150,62 "
+"150,76 128,88 118))'), 0.99))`` → 'Polygon ((30 112, 36 150, 92 182, 132 "
+"186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 "
+"28, 22 64, 30 112))'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:364
+msgid "Further reading: :ref:`expression_function_GeometryGroup_convex_hull`"
+msgstr ""
+"Mai multe detalii: :ref:`expression_function_GeometryGroup_convex_hull`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "contains"
 msgstr ""
@@ -3747,6 +4748,22 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "contains(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), "
+"geom_from_wkt( 'POINT(0.5 0.5 )' ) )`` → TRUE"
+msgstr ""
+"``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), "
+"geom_from_wkt( 'POINT(0.5 0.5 )' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
+msgstr ""
+"``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:370
 msgid ""
@@ -3770,6 +4787,14 @@ msgstr ""
 "``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) "
 ")`` → 'POLYGON((3 3, 4 10, 4 4, 3 3))'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:376
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_concave_hull`, "
+":ref:`qgisconvexhull` algorithm"
+msgstr ""
+"Mai multe detalii: :ref:`expression_function_GeometryGroup_concave_hull`, "
+":ref:`qgisconvexhull` algorithm"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "crosses"
 msgstr ""
@@ -3777,6 +4802,22 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "crosses(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 "
+"4, 5 5)' ) )`` → FALSE"
+msgstr ""
+"``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 "
+"4, 5 5)' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:383
 msgid ""
@@ -3792,6 +4833,18 @@ msgstr ""
 msgid "densify_by_count(geometry, vertices)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(densify_by_count(geom_from_wkt('LINESTRING(1 1, 10 1)'), 3))``"
+" → LineString (1 1, 3.25 1, 5.5 1, 7.75 1, 10 1)"
+msgstr ""
+"``geom_to_wkt(densify_by_count(geom_from_wkt('LINESTRING(1 1, 10 1)'), 3))``"
+" → LineString (1 1, 3.25 1, 5.5 1, 7.75 1, 10 1)"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:389
+msgid "Further reading: :ref:`qgisdensifygeometries` algorithm"
+msgstr "Mai multe detalii: :ref:`qgisdensifygeometries` algorithm"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "densify_by_distance"
 msgstr ""
@@ -3799,6 +4852,19 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "densify_by_distance(geometry, distance)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(densify_by_distance(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"4))`` → LineString (1 1, 4 1, 7 1, 10 1)"
+msgstr ""
+"``geom_to_wkt(densify_by_distance(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"4))`` → LineString (1 1, 4 1, 7 1, 10 1)"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:395
+msgid "Further reading: :ref:`qgisdensifygeometriesgivenaninterval` algorithm"
+msgstr ""
+"Mai multe detalii: :ref:`qgisdensifygeometriesgivenaninterval` algorithm"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "difference"
@@ -3827,6 +4893,22 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "disjoint(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( "
+"'POINT(4 4)' ))`` → FALSE"
+msgstr ""
+"``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( "
+"'POINT(4 4)' ))`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:407
 msgid ""
@@ -3984,6 +5066,12 @@ msgstr ""
 msgid "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 msgstr "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid ""
+"``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
+msgstr ""
+
 #: ../../docs/user_manual/expressions/functions_list.rst:425
 msgid "Further reading: :ref:`qgisswapxy` algorithm"
 msgstr "Mai multe detalii: Algoritmul :ref:`qgisswapxy` "
@@ -3996,6 +5084,21 @@ msgstr ""
 msgid "force_polygon_ccw(geometry)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/functions_list.rst:431
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_force_polygon_cw`, "
+":ref:`expression_function_GeometryGroup_force_rhr`"
+msgstr ""
+"Mai multe detalii: "
+":ref:`expression_function_GeometryGroup_force_polygon_cw`, "
+":ref:`expression_function_GeometryGroup_force_rhr`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "force_polygon_cw"
 msgstr ""
@@ -4003,6 +5106,23 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "force_polygon_cw(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``geom_to_wkt(force_polygon_cw(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0,"
+" 4 2, 0 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
+msgstr ""
+"``geom_to_wkt(force_polygon_cw(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0,"
+" 4 2, 0 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:438
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_force_polygon_ccw`,"
+" :ref:`expression_function_GeometryGroup_force_rhr`"
+msgstr ""
+"Mai multe detalii: "
+":ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
+":ref:`expression_function_GeometryGroup_force_rhr`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "force_rhr"
@@ -4019,6 +5139,16 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(force_rhr(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0"
 " 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:445
+msgid ""
+"Further reading: :ref:`qgisforcerhr` algorithm, "
+":ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
+":ref:`expression_function_GeometryGroup_force_polygon_cw`"
+msgstr ""
+"Mai multe detalii: :ref:`qgisforcerhr` algorithm, "
+":ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
+":ref:`expression_function_GeometryGroup_force_polygon_cw`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "geom_from_gml"
@@ -4261,6 +5391,22 @@ msgstr ""
 msgid "intersects(geometry1, geometry2)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``intersects( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'LINESTRING(3 3,"
+" 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``intersects( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'LINESTRING(3 3,"
+" 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) "
+")`` → FALSE"
+msgstr ""
+"``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) "
+")`` → FALSE"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:459
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_overlay_intersects`"
@@ -4276,6 +5422,22 @@ msgstr ""
 msgid "intersects_bbox(geometry1, geometry2)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3"
+" 3, 4 4, 5 5, 3 3))' ) )`` → FALSE"
+msgstr ""
+"``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3"
+" 3, 4 4, 5 5, 3 3))' ) )`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
 msgid "is_closed"
 msgstr ""
@@ -4283,6 +5445,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
 msgid "is_closed(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid "``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+msgstr "``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
+msgid "``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
+msgstr "``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 msgid "is_empty"
@@ -4292,6 +5462,28 @@ msgstr ""
 msgid "is_empty(geometry)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
+msgid "``is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+msgstr "``is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid "``is_empty(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE"
+msgstr "``is_empty(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:63
+msgid "``is_empty(geom_from_wkt('POINT(7 4)'))`` → FALSE"
+msgstr "``is_empty(geom_from_wkt('POINT(7 4)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:64
+msgid "``is_empty(geom_from_wkt('POINT EMPTY'))`` → TRUE"
+msgstr "``is_empty(geom_from_wkt('POINT EMPTY'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:465
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_is_empty_or_null`"
+msgstr ""
+"Mai multe detalii: :ref:`expression_function_GeometryGroup_is_empty_or_null`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "is_empty_or_null"
 msgstr ""
@@ -4299,6 +5491,36 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "is_empty_or_null(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``is_empty_or_null(NULL)`` → TRUE"
+msgstr "``is_empty_or_null(NULL)`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+msgstr ""
+"``is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid "``is_empty_or_null(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE"
+msgstr "``is_empty_or_null(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid "``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → FALSE"
+msgstr "``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
+msgid "``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → TRUE"
+msgstr "``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:471
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_is_empty`, "
+":ref:`expression_function_Fields_and_Values_NULL`"
+msgstr ""
+"Mai multe detalii: :ref:`expression_function_GeometryGroup_is_empty`, "
+":ref:`expression_function_Fields_and_Values_NULL`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "is_multipart"
@@ -4308,6 +5530,16 @@ msgstr ""
 msgid "is_multipart(geometry)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → TRUE"
+msgstr ""
+"``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``is_multipart(geom_from_wkt('POINT (0 0)'))`` → FALSE"
+msgstr "``is_multipart(geom_from_wkt('POINT (0 0)'))`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "is_valid"
 msgstr ""
@@ -4315,6 +5547,22 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "is_valid(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid "``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
+msgstr "``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
+msgstr "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:478
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_make_valid`, "
+":ref:`qgischeckvalidity` algorithm"
+msgstr ""
+"Mai multe detalii: :ref:`expression_function_GeometryGroup_make_valid`, "
+":ref:`qgischeckvalidity` algorithm"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -4393,6 +5641,30 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
 msgid "line_interpolate_point(geometry, distance)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:60
+msgid ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 8 0)'), distance:=5))`` → 'Point (5 0)'"
+msgstr ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 8 0)'), distance:=5))`` → 'Point (5 0)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
+msgid ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 1 1, 2 0)'), distance:=2.1))`` → 'Point (1.48492424 0.51507576)'"
+msgstr ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 1 1, 2 0)'), distance:=2.1))`` → 'Point (1.48492424 0.51507576)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 1 0)'), distance:=2))`` → NULL"
+msgstr ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 1 0)'), distance:=2))`` → NULL"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:491
 msgid "Further reading: :ref:`qgisinterpolatepoint` algorithm"
@@ -4684,6 +5956,22 @@ msgstr ""
 msgid "make_rectangle_3points"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:272
+msgid ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+msgstr ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:273
+msgid ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+msgstr ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:281
 msgid "make_regular_polygon"
 msgstr ""
@@ -4766,6 +6054,14 @@ msgstr ""
 msgid "make_valid(geometry, [method=structure], [keep_collapsed=false])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:368
+msgid ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
+"2))')))`` → 'Polygon ((3 2, 5 8, 4 1, 3 2))'"
+msgstr ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
+"2))')))`` → 'Polygon ((3 2, 5 8, 4 1, 3 2))'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:369
 msgid ""
 "``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
@@ -4778,6 +6074,14 @@ msgid ""
 "``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8))'), "
 "method:='linework'))`` → 'Polygon ((3 2, 4 1, 5 8, 3 2))'"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/functions_list.rst:503
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_is_valid`, "
+":ref:`qgisfixgeometries` algorithm"
+msgstr ""
+"Mai multe detalii: :ref:`expression_function_GeometryGroup_is_valid`, "
+":ref:`qgisfixgeometries` algorithm"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "minimal_circle"
@@ -4850,6 +6154,12 @@ msgid ""
 msgstr ""
 "``num_geometries(geom_from_wkt('GEOMETRYCOLLECTION(POINT(0 1), POINT(0 0), "
 "POINT(1 0), POINT(1 1))'))`` → 4"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``num_geometries(geom_from_wkt('MULTIPOINT((0 1), (0 0), (1 0))'))`` → 3"
+msgstr ""
+"``num_geometries(geom_from_wkt('MULTIPOINT((0 1), (0 0), (1 0))'))`` → 3"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "num_interior_rings"
@@ -4963,6 +6273,22 @@ msgstr ""
 msgid "overlaps(geometry1, geometry2)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
+msgstr ""
+"``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
 msgid "overlay_contains"
 msgstr ""
@@ -4971,6 +6297,17 @@ msgstr ""
 msgid ""
 "overlay_contains(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
+msgid ""
+"``array_sort(overlay_contains(layer:='regions', expression:=\"name\", "
+"filter:= population > 10000))`` → an ordered array of names, for the regions"
+" contained in the current feature and with a population greater than 10000"
+msgstr ""
+"``array_sort(overlay_contains(layer:='regions', expression:='name', "
+"filter:=population > 10000))`` → o matrice ordonată după numele regiunilor "
+"conținute în entitatea curentă, și cu o populație de peste 10000 de "
+"locuitori"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:534
 msgid ""
@@ -4989,6 +6326,17 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "overlay_crosses(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
+msgid ""
+"``array_sort(overlay_crosses(layer:='regions', expression:=\"name\", "
+"filter:= population > 10000))`` → an ordered array of names, for the regions"
+" crossed by the current feature and with a population greater than 10000"
+msgstr ""
+"``array_sort(overlay_crosses(layer:='regions', expression:='name', filter:= "
+"population > 10000))`` → o matrice ordonată după numele regiunilor "
+"traversate de entitatea curentă, și cu o populație de peste 10000 de "
+"locuitori"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:542
 msgid ""
@@ -5009,6 +6357,18 @@ msgid ""
 "overlay_disjoint(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
+msgid ""
+"``array_sort(overlay_disjoint(layer:='regions', expression:=\"name\", "
+"filter:= population > 10000))`` → an ordered array of names, for the regions"
+" spatially disjoint from the current feature and with a population greater "
+"than 10000"
+msgstr ""
+"``array_sort(overlay_disjoint(layer:='regions', expression:='name', "
+"filter:=population > 10000))`` → o matrice ordonată după numele regiunilor "
+"disjunse spațial de entitatea curentă, și cu o populație de peste 10000 de "
+"locuitori"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:550
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_disjoint`, "
@@ -5027,6 +6387,18 @@ msgstr ""
 msgid "overlay_equals(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
+msgid ""
+"``array_sort(overlay_equals(layer:='regions', expression:=\"name\", filter:="
+" population > 10000))`` → an ordered array of names, for the regions "
+"spatially equal to the current feature and with a population greater than "
+"10000"
+msgstr ""
+"``array_sort(overlay_equals(layer:='regions', expression:='name', "
+"filter:=population > 10000))`` → o matrice ordonată după numele regiunilor "
+"egale spațial cu entitatea curentă, și cu o populație de peste 10000 de "
+"locuitori"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:558
 msgid ""
 "Further reading: :ref:`array manipulation <array_functions>`, "
@@ -5038,6 +6410,17 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "overlay_intersects"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
+msgid ""
+"``array_sort(overlay_intersects(layer:='regions', expression:=\"name\", "
+"filter:= population > 10000))`` → an ordered array of names, for the regions"
+" intersected by the current feature and with a population greater than 10000"
+msgstr ""
+"``array_sort(overlay_intersects(layer:='regions', expression:='name', "
+"filter:=population > 10000))`` → o matrice ordonată după numele regiunilor "
+"intersectate de entitatea curentă, și cu o populație de peste 10000 de "
+"locuitori"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:565
 msgid ""
@@ -5061,6 +6444,26 @@ msgstr ""
 "overlay_nearest(layer, [expression], [filter], [limit=1], [max_distance], "
 "[cache=false])"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_nearest(layer:='airports', expression:= name, max_distance:= "
+"5000)`` → the name of the closest airport within a distance of 5000 map "
+"units from the current feature, as an array"
+msgstr ""
+"``overlay_nearest(layer:='airports', expression:= name, max_distance:= "
+"5000)`` → numele celui mai apropiat aeroport, situat la o distanță de 5000 "
+"de unități de hartă față de entitatea curentă, sub formă de matrice"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
+msgid ""
+"``overlay_nearest(layer:='airports', expression:=\"name\", filter:= "
+"\"Use\"='Civilian', limit:=3)`` → an array of names, for up to the three "
+"closest civilian airports ordered by distance"
+msgstr ""
+"``overlay_nearest(layer:='airports', expression:='name', filter:= "
+"'Use'='Civil', limit:=3)`` → o matrice cu nume, pentru până la cele mai "
+"apropiate trei aeroporturi civile, ordonată după distanță"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:573
 msgid ""
 "Further reading: :ref:`array manipulation <array_functions>`, "
@@ -5076,6 +6479,16 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "overlay_touches(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
+msgid ""
+"``array_sort(overlay_touches(layer:='regions', expression:=\"name\", "
+"filter:= population > 10000))`` → an ordered array of names, for the regions"
+" touched by the current feature and with a population greater than 10000"
+msgstr ""
+"``array_sort(overlay_touches(layer:='regions', expression:='name', "
+"filter:=population > 10000))`` → o matrice ordonată după numele regiunilor "
+"atinse de entitatea curentă, și cu o populație de peste 10000 de locuitori"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:580
 msgid ""
@@ -5094,6 +6507,16 @@ msgstr "overlay_within"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "overlay_within(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
+msgid ""
+"``array_sort(overlay_within(layer:='regions', expression:=\"name\", filter:="
+" population > 10000))`` → an ordered array of names, for the regions "
+"containing the current feature and with a population greater than 10000"
+msgstr ""
+"``array_sort(overlay_within(layer:='regions', expression:='name', "
+"filter:=population > 10000))`` → o matrice ordonată după numele regiunilor "
+"care conțin entitatea curentă, și au o populație de peste 10000 de locuitori"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:588
 msgid ""
@@ -5164,6 +6587,12 @@ msgstr ""
 msgid "pole_of_inaccessibility(geometry, tolerance)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
+msgstr ""
+
 #: ../../docs/user_manual/expressions/functions_list.rst:608
 msgid "Further reading: :ref:`qgispoleofinaccessibility` algorithm"
 msgstr "Mai multe detalii: Algoritmul :ref:`qgispoleofinaccessibility`"
@@ -5206,6 +6635,14 @@ msgstr ""
 msgid "relate(geometry, geometry, pattern)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid ""
+"``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( "
+"'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → TRUE"
+msgstr ""
+"``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( "
+"'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 msgid "reverse"
 msgstr ""
@@ -5242,6 +6679,26 @@ msgstr ""
 msgid "roundness(geometry)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 1, 1 1, 1 0, 0 0))')), "
+"3)`` → 0.785"
+msgstr ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 1, 1 1, 1 0, 0 0))')), "
+"3)`` → 0.785"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
+msgid ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 0.1, 1 0.1, 1 0, 0 0))')),"
+" 3)`` → 0.260"
+msgstr ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 0.1, 1 0.1, 1 0, 0 0))')),"
+" 3)`` → 0.260"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:626
+msgid "Further reading: :ref:`qgisroundness` algorithm"
+msgstr "Mai multe detalii: :ref:`qgisroundness` algorithm"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "scale"
 msgstr ""
@@ -5277,6 +6734,34 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "shared_paths(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('MULTILINESTRING((26 125,26 200,126"
+" 200,126 125,26 125),(51 150,101 150,76 175,51 "
+"150)))'),geom_from_wkt('LINESTRING(151 100,126 156.25,126 125,90 161, 76 "
+"175)')))`` → 'GeometryCollection (MultiLineString ((126 156.25, 126 "
+"125),(101 150, 90 161),(90 161, 76 175)),MultiLineString EMPTY)'"
+msgstr ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('MULTILINESTRING((26 125,26 200,126"
+" 200,126 125,26 125),(51 150,101 150,76 175,51 "
+"150)))'),geom_from_wkt('LINESTRING(151 100,126 156.25,126 125,90 161, 76 "
+"175)')))`` → 'GeometryCollection (MultiLineString ((126 156.25, 126 "
+"125),(101 150, 90 161),(90 161, 76 175)),MultiLineString EMPTY)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('LINESTRING(76 175,90 161,126 "
+"125,126 156.25,151 100)'),geom_from_wkt('MULTILINESTRING((26 125,26 200,126 "
+"200,126 125,26 125),(51 150,101 150,76 175,51 150))')))`` → "
+"'GeometryCollection (MultiLineString EMPTY,MultiLineString ((76 175, 90 "
+"161),(90 161, 101 150),(126 125, 126 156.25)))'"
+msgstr ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('LINESTRING(76 175,90 161,126 "
+"125,126 156.25,151 100)'),geom_from_wkt('MULTILINESTRING((26 125,26 200,126 "
+"200,126 125,26 125),(51 150,101 150,76 175,51 150))')))`` → "
+"'GeometryCollection (MultiLineString EMPTY,MultiLineString ((76 175, 90 "
+"161),(90 161, 101 150),(126 125, 126 156.25)))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
 msgid "shortest_line"
@@ -5399,6 +6884,14 @@ msgstr ""
 msgid "square_wave_randomized"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"square_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+msgstr ""
+"square_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
 msgid "start_point"
 msgstr ""
@@ -5474,6 +6967,22 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "touches(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` "
+"→ FALSE"
+msgstr ""
+"``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` "
+"→ FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:686
 msgid ""
@@ -5561,6 +7070,14 @@ msgstr ""
 msgid "wave_randomized"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:112
+msgid ""
+"wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, "
+"max_amplitude, [seed=0])"
+msgstr ""
+"wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, "
+"max_amplitude, [seed=0])"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:131
 msgid "wedge_buffer"
 msgstr ""
@@ -5576,6 +7093,22 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "within(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, "
+"0 1, 1 1, 1 0, 0 0))' ) )`` → TRUE"
+msgstr ""
+"``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, "
+"0 1, 1 1, 1 0, 0 0))' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 "
+"1, 1 1, 1 0, 0 0 ))' ) )`` → FALSE"
+msgstr ""
+"``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 "
+"1, 1 1, 1 0, 0 0 ))' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:710
 msgid ""
@@ -6019,6 +7552,10 @@ msgstr ""
 msgid "**key** - the key to lookup"
 msgstr "**key** - cheia de căutare"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:169
+msgid "``map_exist(map('1','one','2','two'),'3')`` → FALSE"
+msgstr "``map_exist(map('1','one','2','two'),'3')`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:177
 msgid "map_get"
 msgstr ""
@@ -6089,6 +7626,14 @@ msgstr ""
 msgid "map_prefix_keys(map, prefix)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:42
+msgid ""
+"``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
+"'one', 'prefix-2': 'two' }"
+msgstr ""
+"``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
+"'one', 'prefix-2': 'two' }"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:50
 msgid "map_to_hstore"
 msgstr ""
@@ -6140,6 +7685,15 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:101
 msgid "url_encode(map)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:105
+#, python-format
+msgid ""
+"``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → "
+"'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'"
+msgstr ""
+"``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → "
+"'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:806
 msgid "Mathematical Functions"
@@ -6695,6 +8249,18 @@ msgstr ""
 msgid "a < b"
 msgstr "a < b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
+msgid "``5 < 4`` → FALSE"
+msgstr "``5 < 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
+msgid "``5 < 5`` → FALSE"
+msgstr "``5 < 5`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:66
+msgid "``4 < 5`` → TRUE"
+msgstr "``4 < 5`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:74
 msgid "<="
 msgstr ""
@@ -6703,6 +8269,18 @@ msgstr ""
 msgid "a <= b"
 msgstr "a <= b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:87
+msgid "``5 <= 4`` → FALSE"
+msgstr "``5 <= 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:88
+msgid "``5 <= 5`` → TRUE"
+msgstr "``5 <= 5`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:89
+msgid "``4 <= 5`` → TRUE"
+msgstr "``4 <= 5`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "<>"
 msgstr ""
@@ -6710,6 +8288,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:105
 msgid "a <> b"
 msgstr "a <> b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:110
+msgid "``5 <> 4`` → TRUE"
+msgstr "``5 <> 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:111
+msgid "``4 <> 4`` → FALSE"
+msgstr "``4 <> 4`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
 msgid "``5 <> NULL`` → NULL"
@@ -6727,6 +8313,14 @@ msgstr ""
 msgid "a = b"
 msgstr "a = b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:134
+msgid "``5 = 4`` → FALSE"
+msgstr "``5 = 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:135
+msgid "``4 = 4`` → TRUE"
+msgstr "``4 = 4`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:136
 msgid "``5 = NULL`` → NULL"
 msgstr "``5 = NULL`` → NULL"
@@ -6743,6 +8337,18 @@ msgstr ""
 msgid "a > b"
 msgstr "a > b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:158
+msgid "``5 > 4`` → TRUE"
+msgstr "``5 > 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:159
+msgid "``5 > 5`` → FALSE"
+msgstr "``5 > 5`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:160
+msgid "``4 > 5`` → FALSE"
+msgstr "``4 > 5`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:168
 msgid ">="
 msgstr ""
@@ -6750,6 +8356,18 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
 msgid "a >= b"
 msgstr "a >= b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:181
+msgid "``5 >= 4`` → TRUE"
+msgstr "``5 >= 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:182
+msgid "``5 >= 5`` → TRUE"
+msgstr "``5 >= 5`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:183
+msgid "``4 >= 5`` → FALSE"
+msgstr "``4 >= 5`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:191
 msgid "AND"
@@ -6759,13 +8377,113 @@ msgstr ""
 msgid "a AND b"
 msgstr "a AND b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:204
+msgid "``TRUE AND TRUE`` → TRUE"
+msgstr "``TRUE AND TRUE`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:205
+msgid "``TRUE AND FALSE`` → FALSE"
+msgstr "``TRUE AND FALSE`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:206
+msgid "``4 = 2+2 AND 1 = 1`` → TRUE"
+msgstr "``4 = 2+2 AND 1 = 1`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:207
+msgid "``4 = 2+2 AND 1 = 2`` → FALSE"
+msgstr "``4 = 2+2 AND 1 = 2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:215
 msgid "BETWEEN"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:228
+msgid "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
+msgstr "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:229
+msgid "``2 BETWEEN 1 AND 3`` → TRUE"
+msgstr "``2 BETWEEN 1 AND 3`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:230
+msgid "``2 BETWEEN 2 AND 3`` → TRUE"
+msgstr "``2 BETWEEN 2 AND 3`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:231
+msgid "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
+msgstr "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:232
+msgid "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
+msgstr "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:860
+msgid "Further reading: :ref:`expression_function_Operators_NOT_BETWEEN`"
+msgstr "Mai multe detalii: :ref:`expression_function_Operators_NOT_BETWEEN`"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "ILIKE"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``'A' ILIKE 'A'`` → TRUE"
+msgstr "``'A' ILIKE 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``'A' ILIKE 'a'`` → TRUE"
+msgstr "``'A' ILIKE 'a'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``'A' ILIKE 'B'`` → FALSE"
+msgstr "``'A' ILIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+msgid "``'ABC' ILIKE 'b'`` → FALSE"
+msgstr "``'ABC' ILIKE 'b'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:23
+msgid "``'ABC' ILIKE 'B'`` → FALSE"
+msgstr "``'ABC' ILIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:24
+msgid "``'ABC' ILIKE '_b_'`` → TRUE"
+msgstr "``'ABC' ILIKE '_b_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
+msgid "``'ABC' ILIKE '_B_'`` → TRUE"
+msgstr "``'ABC' ILIKE '_B_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``'ABCD' ILIKE '_b_'`` → FALSE"
+msgstr "``'ABCD' ILIKE '_b_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:27
+msgid "``'ABCD' ILIKE '_B_'`` → FALSE"
+msgstr "``'ABCD' ILIKE '_B_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
+msgid "``'ABCD' ILIKE '_b%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '_b%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
+msgid "``'ABCD' ILIKE '_B%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '_B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:30
+msgid "``'ABCD' ILIKE '%b%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '%b%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:31
+msgid "``'ABCD' ILIKE '%B%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '%B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:32
+msgid "``'ABCD%' ILIKE 'abcd\\\\%'`` → TRUE"
+msgstr "``'ABCD%' ILIKE 'abcd\\\\%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:33
+msgid "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
+msgstr "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
 msgid "IN"
@@ -6775,6 +8493,14 @@ msgstr ""
 msgid "a IN b"
 msgstr "a IN b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:54
+msgid "``'A' IN ('A','B')`` → TRUE"
+msgstr "``'A' IN ('A','B')`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:55
+msgid "``'A' IN ('C','B')`` → FALSE"
+msgstr "``'A' IN ('C','B')`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:63
 msgid "IS"
 msgstr ""
@@ -6782,6 +8508,26 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:71
 msgid "a IS b"
 msgstr "a IS b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:76
+msgid "``'A' IS 'A'`` → TRUE"
+msgstr "``'A' IS 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:77
+msgid "``'A' IS 'a'`` → FALSE"
+msgstr "``'A' IS 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:78
+msgid "``4 IS 4`` → TRUE"
+msgstr "``4 IS 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:79
+msgid "``4 IS 2+2`` → TRUE"
+msgstr "``4 IS 2+2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:80
+msgid "``4 IS 2`` → FALSE"
+msgstr "``4 IS 2`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:89
 msgid "IS NOT"
@@ -6791,9 +8537,61 @@ msgstr ""
 msgid "a IS NOT b"
 msgstr "a IS NOT b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:102
+msgid "``'a' IS NOT 'b'`` → TRUE"
+msgstr "``'a' IS NOT 'b'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:103
+msgid "``'a' IS NOT 'a'`` → FALSE"
+msgstr "``'a' IS NOT 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:104
+msgid "``4 IS NOT 2+2`` → FALSE"
+msgstr "``4 IS NOT 2+2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
 msgid "LIKE"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:125
+msgid "``'A' LIKE 'A'`` → TRUE"
+msgstr "``'A' LIKE 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:126
+msgid "``'A' LIKE 'a'`` → FALSE"
+msgstr "``'A' LIKE 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:127
+msgid "``'A' LIKE 'B'`` → FALSE"
+msgstr "``'A' LIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:128
+msgid "``'ABC' LIKE 'B'`` → FALSE"
+msgstr "``'ABC' LIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:129
+msgid "``'ABC' LIKE '_B_'`` → TRUE"
+msgstr "``'ABC' LIKE '_B_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:130
+msgid "``'ABCD' LIKE '_B_'`` → FALSE"
+msgstr "``'ABCD' LIKE '_B_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:131
+msgid "``'ABCD' LIKE '_B%'`` → TRUE"
+msgstr "``'ABCD' LIKE '_B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:132
+msgid "``'ABCD' LIKE '%B%'`` → TRUE"
+msgstr "``'ABCD' LIKE '%B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:133
+msgid "``'1%' LIKE '1\\\\%'`` → TRUE"
+msgstr "``'1%' LIKE '1\\\\%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:134
+msgid "``'1_' LIKE '1\\\\%'`` → FALSE"
+msgstr "``'1_' LIKE '1\\\\%'`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:142
 msgid "NOT"
@@ -6803,9 +8601,41 @@ msgstr ""
 msgid "NOT a"
 msgstr "NOT a"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:154
+msgid "``NOT 1`` → FALSE"
+msgstr "``NOT 1`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:155
+msgid "``NOT 0`` → TRUE"
+msgstr "``NOT 0`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:163
 msgid "NOT BETWEEN"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
+msgid "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
+msgstr "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:177
+msgid "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
+msgstr "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:178
+msgid "``2 NOT BETWEEN 2 AND 3`` → FALSE"
+msgstr "``2 NOT BETWEEN 2 AND 3`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:179
+msgid "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
+msgstr "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:180
+msgid "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
+msgstr "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:866
+msgid "Further reading: :ref:`expression_function_Operators_BETWEEN`"
+msgstr "Mai multe detalii: :ref:`expression_function_Operators_BETWEEN`"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "OR"
@@ -6814,6 +8644,18 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "a OR b"
 msgstr "a OR b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``4 = 2+2 OR 1 = 1`` → TRUE"
+msgstr "``4 = 2+2 OR 1 = 1`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``4 = 2+2 OR 1 = 2`` → TRUE"
+msgstr "``4 = 2+2 OR 1 = 2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``4 = 2   OR 1 = 2`` → FALSE"
+msgstr "``4 = 2   OR 1 = 2`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
 msgid "[]"
@@ -6902,6 +8744,22 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "string ~ regex"
 msgstr "string ~ regex"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``'hello' ~ 'll'`` → TRUE"
+msgstr "``'hello' ~ 'll'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``'hello' ~ '^ll'`` → FALSE"
+msgstr "``'hello' ~ '^ll'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``'hello' ~ 'llo$'`` → TRUE"
+msgstr "``'hello' ~ 'llo$'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+msgid "``'abc123' ~ '\\\\d+'`` → TRUE"
+msgstr "``'abc123' ~ '\\\\d+'`` → TRUE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:886
 msgid "Further reading: :ref:`expression_function_String_regexp_match`"
@@ -7088,6 +8946,14 @@ msgstr ""
 msgid "represent_attributes(layer, feature)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/functions_list.rst:947
+msgid ""
+"Further reading: "
+":ref:`expression_function_Record_and_Attributes_represent_value`"
+msgstr ""
+"Mai multe detalii: "
+":ref:`expression_function_Record_and_Attributes_represent_value`"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "represent_value"
 msgstr ""
@@ -7095,6 +8961,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
 msgid "represent_value(value, [fieldName])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/functions_list.rst:953
+msgid ""
+"Further reading: :ref:`widget types <edit_widgets>`, "
+":ref:`expression_function_Record_and_Attributes_represent_attributes`"
+msgstr ""
+"Mai multe detalii: :ref:`widget types <edit_widgets>`, "
+":ref:`expression_function_Record_and_Attributes_represent_attributes`"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "sqlite_fetch_and_increment"

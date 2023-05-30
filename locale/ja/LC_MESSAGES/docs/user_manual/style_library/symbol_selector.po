@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoyuki arai <tarai.3367@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,7 +78,7 @@ msgstr "シンボルツリー内で選択されたアイテムのレベルにも
 msgid ""
 "|symbologyAdd| add new symbol layer: you can stack as many symbols as you "
 "want"
-msgstr "|symbologyAdd| シンボルレイヤの追加：好きなだけシンボルレイヤを重ねることができます"
+msgstr "|symbologyAdd| シンボルレイヤを追加：好きなだけシンボルレイヤを重ねることができます"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:786
 msgid "symbologyAdd"
@@ -85,7 +86,7 @@ msgstr ""
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:44
 msgid "|symbologyRemove| remove the selected symbol layer"
-msgstr "|symbologyRemove| シンボルレイヤの削除"
+msgstr "|symbologyRemove| シンボルレイヤを削除"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:788
 msgid "symbologyRemove"
@@ -116,13 +117,13 @@ msgstr "シンボルレイヤを上下に移動"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:53
 msgid "Configuring a symbol"
-msgstr "シンボルの構成"
+msgstr "シンボルの設定"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:55
 msgid ""
 "In QGIS, configuring a symbol is done in two steps: the symbol and then the "
 "symbol layer."
-msgstr "QGISでは、シンボルの構成は2ステップになっています：シンボルと、シンボルレイヤです。"
+msgstr "QGISでは、シンボルの設定は2ステップになっています：シンボルと、シンボルレイヤです。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:59
 msgid "The symbol"
@@ -135,7 +136,7 @@ msgid ""
 "symbols (including, of any other type) or symbol layers."
 msgstr ""
 "ツリーの最上位レベルはレイヤのジオメトリによって異なり、 **マーカー** 、 **ライン** もしくは **塗りつぶし** "
-"タイプです。各シンボルは、1つ以上のシンボル（ほかのタイプの新シンボルも含む）またはシンボルレイヤを埋め込むことができます。"
+"タイプです。各シンボルは、1つ以上のシンボル（ほかのタイプのシンボルも含む）またはシンボルレイヤを埋め込むことができます。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:65
 msgid "You can setup some parameters that apply to the global symbol:"
@@ -404,7 +405,7 @@ msgstr "マーカーシンボル"
 msgid ""
 "Appropriate for point geometry features, marker symbols have several "
 ":guilabel:`Symbol layer types`:"
-msgstr "ポイントジオメトリの地物に適するように、マーカーシンボルにはいくつかの :guilabel:`シンボルレイヤタイプ` があります："
+msgstr "マーカーシンボルはポイントジオメトリの地物に適したシンボルで、いくつかの :guilabel:`シンボルレイヤタイプ` があります："
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:180
 msgid "**Simple marker** (default)"
@@ -515,7 +516,7 @@ msgid ""
 "marker symbol overlaps with labels or other symbols whose colors are close, "
 "making it hard to decipher. More details at :ref:`vector_mask_menu`."
 msgstr ""
-"**マスク** "
+"**マスクグリッド（Mask）** "
 "：このシンボルのサブシンボルはマスク形状を定義し、色の特性は無視されて不透明度だけが使用されます。これは、マーカーシンボルが色の近いラベルや他のシンボルと重なって見えづらい場合に便利です。詳細は"
 " :ref:`vector_mask_menu` を参照してください。"
 
@@ -598,7 +599,7 @@ msgstr "ラインシンボル"
 msgid ""
 "Appropriate for line geometry features, line symbols have the following "
 "symbol layer types:"
-msgstr "ラインジオメトリの地物に適するように、ラインシンボルには以下のようなシンボルレイヤタイプがあります："
+msgstr "ラインシンボルはラインジオメトリの地物に適したシンボルで、以下のようなシンボルレイヤタイプがあります："
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:275
 msgid "**Simple line** (default)"
@@ -615,6 +616,17 @@ msgid ""
 msgstr ""
 "シンプルラインのシンボルレイヤタイプは :ref:`シンプルマーカーシンボル <simple_marker_symbol>` "
 "と同様のプロパティが多数ありますが、これに加えて、"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:287
+msgid ""
+"|checkbox| :guilabel:`Use custom dash pattern`: overrides the "
+":guilabel:`Stroke style` setting with a custom dash. You would need to "
+"define length of consecutive dashes and spaces shaping the model, in the "
+"chosen unit. The total length of the pattern is displayed at the bottom of "
+"the dialog."
+msgstr ""
+"|checkbox| :guilabel:`破線を使用` ： :guilabel:`ストロークスタイル` "
+"の設定をカスタムの破線で上書きします。破線のモデルを形作る、連続した破線（dash）とスペースの長さを選択した単位で定義する必要があります。パターンの長さの合計がダイアログの下部に表示されます。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:292
 msgid ""
@@ -646,12 +658,29 @@ msgstr ""
 "：破線パターンの配置を動的に調整して、破線要素が鋭角部に出入りし、鋭角が完全な破線要素で表現されるようにします。これは "
 ":guilabel:`破線の間隔を線の長さに調整する` の設定に依存します。"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+msgid ""
+":guilabel:`Trim lines` from :guilabel:`Start` and/or :guilabel:`End`: allows"
+" for the line rendering to trim off the first x mm and last y mm from the "
+"actual line string when drawing the line. It supports a range of :ref:`units"
+" <unit_selector>`, including percentage of the overall line length, and can "
+"be data defined for extra control. The start/end trim distance can be used "
+"e.g. when creating complex symbols where a line layer should not overlap "
+"marker symbol layers placed at the start and end of the line."
+msgstr ""
+":guilabel:`開始` や :guilabel:`終了` 位置からの :guilabel:`線をトリミング` "
+"：これにより、ラインを描画する際に実際のラインストリングから最初のx mmと最後のy "
+"mmを切り取ったラインをレンダリングできます。これはライン全体の長さに対するパーセンテージも含め様々な :ref:`単位 "
+"<unit_selector>` "
+"をサポートしており、さらに細かく制御するためにデータ定義とすることもできます。開始・終了のトリミング距離は例えば、ラインの始点と終点に配置されたマーカーシンボルレイヤにラインレイヤがに重なってはいけないような、複雑なシンボルを作成する場合に使用します。"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:313
 msgid ""
 "**Arrow**: draws lines as curved (or not) arrows with a single or a double "
 "head with configurable (and data-defined):"
 msgstr ""
-"**矢印** ：ラインを曲がった（または直線的な）矢印として描画します。ヘッドは一方向または両方向で、設定が可能です（データ定義とすることもできます）。"
+"**矢印** "
+"：ラインを曲がった（または直線的な）矢印として描画します。ヘッドは一方向または両方向とすることができ、ヘッドの設定が可能です（データ定義とすることもできます）。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:316
 msgid ":guilabel:`Head type`"
@@ -702,8 +731,8 @@ msgid ""
 "width` and :guilabel:`Single color` parameters) or vary along the geometry. "
 "When varying, necessary inputs are:"
 msgstr ""
-"**補間された線** ：ラインのレンダリングについて、ラインの :guilabel:`ストローク幅` や :guilabel:`色` 一定（パラメータを"
-" :guilabel:`固定幅` や :guilabel:`単一色` "
+"**補間された線** ：ラインのレンダリングについて、ラインの :guilabel:`ストローク幅` や :guilabel:`色` "
+"を一定（パラメータを :guilabel:`固定幅` や :guilabel:`単一色` "
 "に設定）としたり、ジオメトリに沿って変化させたりすることができます。可変とする場合には、以下の入力が必要です："
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:339
@@ -777,6 +806,64 @@ msgid ""
 " the length of a line."
 msgstr ""
 "**マーカーライン** ：ラインの長さにわたって :ref:`マーカーシンボル <vector_marker_symbols>` を繰り返します。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:376
+msgid ""
+"The :guilabel:`Marker placement` can be set using a regular interval setting"
+" (starting from the first vertex) and/or the line geometry property (on "
+"first or last vertex, inner vertices, the central point of the line or of "
+"each segment, or on every curve point)."
+msgstr ""
+":guilabel:`マーカーの位置` "
+"：位置は、（最初の頂点から開始する）等間隔の設定にすることもできますが、ラインジオメトリのプロパティに基づく設定（最初の点、最後の点、内部の点、ラインの中央の点、セグメントの中央の点、すべてのカーブ点）にすることもできます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:380
+msgid ""
+"When first or last vertex placement is enabled, the |checkbox| "
+":guilabel:`Place on every part extremity` option will make the markers "
+"render also at the first or last vertex for every part of multipart "
+"geometries."
+msgstr ""
+"最初の点または最後の点を有効にすると、 |checkbox| :guilabel:`各パートの両端に配置` "
+"オプションを使用でき、マルチパートジオメトリの各パートの最初または最後の頂点にもマーカーをレンダリングします。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:383
+msgid ""
+":guilabel:`Offset along line`: the markers placement can also be given an "
+"offset along the line, in the ref:`unit <unit_selector>` of your choice "
+"(millimeters, points, map unit, meters at scale, percentage, ...):"
+msgstr ""
+":guilabel:`ラインに沿ったオフセット` ：マーカーの配置には、好みの ref:`単位 <unit_selector>` "
+"（ミリメートル、ポイント、地図単位、縮尺済みメートル、パーセントなど）で指定した、ラインに沿った方向のオフセットを指定することもできます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:387
+msgid ""
+"A positive value offsets the markers symbols in the line direction (with "
+":guilabel:`On first vertex` and :guilabel:`With interval` placements) and "
+"backwards (with :guilabel:`On last vertex` placement)."
+msgstr ""
+"正の値を指定すると、（マーカーの位置が :guilabel:`最初の点` や :guilabel:`With interval` "
+"の場合には）ラインの方向にマーカーシンボルをオフセットします。位置が :guilabel:`最後の点` の場合は反対方向にオフセットします。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:390
+msgid ""
+"A negative value on a not closed line will result in no offset (for "
+":guilabel:`On first vertex` and :guilabel:`On last vertex` placements) or "
+"backwards offset of the symbols (from the last vertex)."
+msgstr ""
+"負の値を指定すると、ラインが閉じていない場合には、オフセットは生じない（位置が :guilabel:`最初の点` や :guilabel:`最後の点` "
+"の場合）か、（最後の頂点から）反対向きにシンボルをオフセットします。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:393
+#, python-format
+msgid ""
+"With a closed ring, QGIS treats the offset as continuing to loop around the "
+"ring (forward or backward). E.g. setting the offset to 150% (resp. -10% or "
+"-110%) results in the offset being treated as 50% (resp. 90%) of the length "
+"of the closed ring."
+msgstr ""
+"閉じたリングの場合には、QGISはリングでオフセットが（前方または後方に）周回するものとして扱います。例えば、オフセットを150%（または "
+"-10%、-110%）に設定すると、オフセットは閉じたリングの50%（またはいずれも90%）として扱います。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:398
 msgid ""

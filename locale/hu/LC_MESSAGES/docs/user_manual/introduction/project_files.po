@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-08-10 09:49+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Transifex Bot <>, 2023\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
@@ -52,11 +52,11 @@ msgstr ""
 ":menuselection:`Projekt -->` |fileSaveAs| :menuselection:`Mentés másként…` "
 "használatával."
 
-#: ../../docs/user_manual/introduction/project_files.rst:228
+#: ../../docs/user_manual/introduction/project_files.rst:230
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:230
+#: ../../docs/user_manual/introduction/project_files.rst:232
 msgid "fileSaveAs"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 "szabályozza a :menuselection:`Beállítások --> Beállítások --> Általános` "
 "alatt."
 
-#: ../../docs/user_manual/introduction/project_files.rst:220
+#: ../../docs/user_manual/introduction/project_files.rst:222
 msgid "checkbox"
 msgstr ""
 
@@ -91,7 +91,7 @@ msgstr ""
 ":menuselection:`Megnyitás...`, :menuselection:`Projekt --> Új sablonból` "
 "vagy :menuselection:`Projekt --> Korábbi megnyitása -->`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:226
+#: ../../docs/user_manual/introduction/project_files.rst:228
 msgid "fileOpen"
 msgstr ""
 
@@ -121,7 +121,7 @@ msgstr ""
 "legutóbbi mentés óta módosítva lett, a rendszer rákérdez a projekt "
 "mentésére."
 
-#: ../../docs/user_manual/introduction/project_files.rst:224
+#: ../../docs/user_manual/introduction/project_files.rst:226
 msgid "fileNew"
 msgstr ""
 
@@ -246,22 +246,6 @@ msgstr ""
 "Amikor QGIS-ben elment egy ``.qgs`` projektfájlt, ugyanabban a könyvtárban "
 "létrejön a fájl biztonsági másolata ``.qgs~`` kiterjesztéssel."
 
-#: ../../docs/user_manual/introduction/project_files.rst:110
-msgid ""
-"The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the "
-"default is to save using a compressed format with the ``.qgz`` extension. "
-"The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together"
-" with its associated sqlite database (``.qgd``) for :ref:`auxiliary data "
-"<vector_auxiliary_storage>`. You can get to these files by unzipping the "
-"``.qgz`` file."
-msgstr ""
-"A QGIS projektek kiterjesztése ``.qgs``, de a QGIS-ből történő mentéskor az "
-"alapértelmezett a ``.qgz`` kiterjesztésű tömörített formátumban történő "
-"mentés. A ``.qgs`` fájl a ``.qgz`` fájlba (zip archívum) van beágyazva egy "
-"hozzá tartozó sqlite adatbázissal (``.qgd``), ami a :ref:`segédadatokat "
-"<vector_auxiliary_storage>` tartalmazza. Ezeket a fájlokat a ``.qgz`` fájl "
-"kicsomagolásával érheti el."
-
 #: ../../docs/user_manual/introduction/project_files.rst:120
 msgid ""
 "The :ref:`vector_auxiliary_storage` mechanism makes a zipped project "
@@ -269,14 +253,6 @@ msgid ""
 msgstr ""
 "A :ref:`vector_auxiliary_storage` mechanizmus miatt különösen hasznos a "
 "tömörített projektfájl használata, mivel magába ágyazza a segédadatokat."
-
-#: ../../docs/user_manual/introduction/project_files.rst:125
-msgid ""
-"Projects can also be saved/loaded to/from a PostgreSQL database using the "
-"following Project menu items:"
-msgstr ""
-"A projektek PostgreSQL adatbázisba is menthetőek illetve betölthetőek onnan "
-"a következő menüpontok segítségével:"
 
 #: ../../docs/user_manual/introduction/project_files.rst:128
 msgid ":menuselection:`Project --> Open from`"
@@ -286,33 +262,11 @@ msgstr ":menuselection:`Projekt --> Megnyitás innen`"
 msgid ":menuselection:`Project --> Save to`"
 msgstr ":menuselection:`Projekt --> Mentés ide`"
 
-#: ../../docs/user_manual/introduction/project_files.rst:131
-msgid ""
-"Both menu items have a sub-menu with a list of extra project storage "
-"implementations (PostgreSQL and GeoPackage). Clicking the action will open a"
-" dialog to pick a GeoPackage connection and project or a PostgreSQL "
-"connection, schema and project."
-msgstr ""
-"Mindkét menüpontnak van egy-egy almenüje az extra projekttárolási "
-"megvalósításokkal (PostgreSQL és GeoPackage). A menüpontra kattintva "
-"megnyílik egy párbeszédablak a GeoPackage kapcsolat és projekt vagy egy "
-"PostgreSQL kapcsolat, séma és projekt kiválasztásához."
-
-#: ../../docs/user_manual/introduction/project_files.rst:136
-msgid ""
-"Projects stored in Geopackage or PostgreSQL can also be loaded through the "
-"QGIS browser panel, either by double-clicking them or by dragging them to "
-"the map canvas."
-msgstr ""
-"A Geopackage-ben vagy PostgreSQL-ben tárolt projektek a QGIS böngészőpanelén"
-" keresztül is betölthetők, akár dupla kattintással, akár a térképvászonra "
-"húzva."
-
-#: ../../docs/user_manual/introduction/project_files.rst:144
+#: ../../docs/user_manual/introduction/project_files.rst:145
 msgid "Handling broken file paths"
 msgstr "Törött fájlelérési utak kezelése"
 
-#: ../../docs/user_manual/introduction/project_files.rst:146
+#: ../../docs/user_manual/introduction/project_files.rst:147
 msgid ""
 "When opening a project, QGIS may fail to reach some data sources due to "
 "unavailable service/database, or to a renamed or moved file. QGIS then opens"
@@ -325,7 +279,7 @@ msgstr ""
 ":guilabel:`Nem elérhető rétegek kezelése` párbeszédablakot, amely listázza a"
 " nem található rétegeket. A következőket teheti:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:152
+#: ../../docs/user_manual/introduction/project_files.rst:153
 msgid ""
 "Double-click in the :guilabel:`Datasource` field, adjust the path of each "
 "layer and click :guilabel:`Apply changes`;"
@@ -334,7 +288,7 @@ msgstr ""
 "rétegek útvonalát, majd nyoma meg a :guilabel:`Módosítások alkalmazása` "
 "gombot;"
 
-#: ../../docs/user_manual/introduction/project_files.rst:154
+#: ../../docs/user_manual/introduction/project_files.rst:155
 msgid ""
 "Select a row, press :guilabel:`Browse` to indicate the correct location and "
 "click :guilabel:`Apply changes`;"
@@ -342,7 +296,7 @@ msgstr ""
 "Válasszon ki egy sort, majd a :guilabel:`Tallózás` gombbal keresse meg a "
 "megfelelő helyet és nyomja meg a :guilabel:`Módosítások alkalmazása` gombot;"
 
-#: ../../docs/user_manual/introduction/project_files.rst:156
+#: ../../docs/user_manual/introduction/project_files.rst:157
 msgid ""
 "Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
 "fix all or selected broken path(s). Be aware that the browsing may take some"
@@ -353,7 +307,7 @@ msgstr ""
 "útvonalát. Ne feledje, hogy az átnézés eltarthat egy ideig. Ez után "
 "kattintson a :guilabel:`Módosítások alkalmazása` gombra."
 
-#: ../../docs/user_manual/introduction/project_files.rst:159
+#: ../../docs/user_manual/introduction/project_files.rst:160
 msgid ""
 "Ignore the message and open your project with the broken path(s) by clicking"
 " :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the "
@@ -369,11 +323,11 @@ msgstr ""
 "nem kattint a :guilabel:`Rétegek` panelen vagy az :guilabel:`Adatforrás "
 "helyreállítása...` környezeti menüelemre."
 
-#: ../../docs/user_manual/introduction/project_files.rst:232
+#: ../../docs/user_manual/introduction/project_files.rst:234
 msgid "indicatorBadLayer"
 msgstr "indicatorBadLayer"
 
-#: ../../docs/user_manual/introduction/project_files.rst:166
+#: ../../docs/user_manual/introduction/project_files.rst:167
 msgid ""
 "With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
 "fixed, QGIS scans through all other broken paths and tries to auto-fix those"
@@ -384,17 +338,17 @@ msgstr ""
 "megpróbálja automatikusan kijavítani azokat, amelyeknek ugyanaz a hibás "
 "fájlútvonala van."
 
-#: ../../docs/user_manual/introduction/project_files.rst:169
+#: ../../docs/user_manual/introduction/project_files.rst:170
 msgid ""
 "|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
 msgstr ""
 "|deleteSelected| :guilabel:`Nem elérhető rétegek eltávolítása` a projektből."
 
-#: ../../docs/user_manual/introduction/project_files.rst:222
+#: ../../docs/user_manual/introduction/project_files.rst:224
 msgid "deleteSelected"
 msgstr "deleteSelected"
 
-#: ../../docs/user_manual/introduction/project_files.rst:171
+#: ../../docs/user_manual/introduction/project_files.rst:172
 msgid ""
 "Launching QGIS from command line using the :ref:`skipbadlayers` option can "
 "help you skip the :guilabel:`Handle Unavailable Layers` dialog at startup."
@@ -402,11 +356,11 @@ msgstr ""
 "A QGIS-t parancssorból indítva a :ref:`skipbadlayers` kapcsolóval kihagyható"
 " az indításkori :guilabel:`Nem elérhető rétegek kezelése` párbeszédablak."
 
-#: ../../docs/user_manual/introduction/project_files.rst:177
+#: ../../docs/user_manual/introduction/project_files.rst:178
 msgid "Generating output"
 msgstr "Kimenetek előállítása"
 
-#: ../../docs/user_manual/introduction/project_files.rst:182
+#: ../../docs/user_manual/introduction/project_files.rst:183
 msgid ""
 "There are several ways to generate output from your QGIS session. We have "
 "already discussed saving as a project file in :ref:`sec_projects`. Other "
@@ -416,26 +370,11 @@ msgstr ""
 "projektfájlként való mentést már tárgyaltuk az :ref:`sec_projects` "
 "szakaszban. A kimeneti fájlok előállításának további módjai a következők:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:187
-msgid ""
-"Creating images: :menuselection:`Project --> Import/Export -->` "
-"|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
-"canvas rendering to an image format (PNG, JPG, TIFF...) at custom scale, "
-"resolution, size, ... Georeferencing the image is possible. See "
-":ref:`exportingmapcanvas` for more details."
-msgstr ""
-"Képek készítése: :menuselection:`Projekt --> Import/Export -->` "
-"|saveMapAsImage| :menuselection:`Térkép exportálása képként…` a térképvászon"
-" tartalmát kirendereli egy kép formátumba (PNG, JPG, TIFF...) egyéni "
-"méretarányban, felbontással, méretben, stb. Lehetőség van a kép "
-"georeferálására. Bővebb részletekért lásd a :ref:`exportingmapcanvas` "
-"fejezetet."
-
-#: ../../docs/user_manual/introduction/project_files.rst:236
+#: ../../docs/user_manual/introduction/project_files.rst:238
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
 
-#: ../../docs/user_manual/introduction/project_files.rst:194
+#: ../../docs/user_manual/introduction/project_files.rst:196
 msgid ""
 "Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
 " Map to PDF...` outputs the map canvas rendering to PDF at custom scale, "
@@ -448,7 +387,7 @@ msgstr ""
 "felbontással, és pár speciális beállítással (egyszerűsítés, georeferálás, "
 "stb.). Bővebb részletekért lásd a :ref:`exportingmapcanvas` fejezetet."
 
-#: ../../docs/user_manual/introduction/project_files.rst:200
+#: ../../docs/user_manual/introduction/project_files.rst:202
 msgid ""
 "Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export"
 " Project to DXF...` opens a dialog where you can define the 'Symbology "
@@ -463,7 +402,7 @@ msgstr ""
 "módon' keresztül az eredeti QGIS jelrendszer szimbólumokat nagy pontossággal"
 " tudja exportálni (lásd a :ref:`create_dxf_files` szakaszt)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:207
+#: ../../docs/user_manual/introduction/project_files.rst:209
 msgid ""
 "Designing maps: :menuselection:`Project -->` |newLayout| :menuselection:`New"
 " Print Layout...` opens a dialog where you can layout and print the current "
@@ -474,6 +413,6 @@ msgstr ""
 "megtervezheti és kinyomtathatja a térképet (lásd még "
 ":ref:`label_printlayout`)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:234
+#: ../../docs/user_manual/introduction/project_files.rst:236
 msgid "newLayout"
 msgstr ""

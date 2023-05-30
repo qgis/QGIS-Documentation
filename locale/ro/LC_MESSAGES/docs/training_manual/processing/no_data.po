@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,6 +91,34 @@ msgstr "Interfața diferă pentru versiunile recente."
 msgid "The dialog contains 2 parameters."
 msgstr "Dialogul conține 2 parametri."
 
+#: ../../docs/training_manual/processing/no_data.rst:22
+msgid ""
+"The layers to use for the analysis. This is a multiple input, that meaning "
+"that you can select as many layers as you want. Click on the button on the "
+"right--hand side and then select the layers that you want to use in the "
+"dialog that will appear."
+msgstr ""
+"Straturile de utilizat pentru analiză. Aceasta este o intrare multiplă, ceea"
+" ce înseamnă că puteți selecta câte straturi doriți. Faceți clic pe butonul "
+"din partea dreaptă și apoi selectați straturile pe care doriți să le "
+"utilizați în dialogul care va apărea."
+
+#: ../../docs/training_manual/processing/no_data.rst:23
+msgid ""
+"The formula to apply. The formula uses the layers selected in the above "
+"parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, "
+"g2, g3...`` as variable names. That is, the formula ``a + 2 * b`` is the "
+"same as ``g1 + 2 * g2`` and will compute the sum of the value in the first "
+"layer plus two times the value in the second layer. The ordering of the "
+"layers is the same ordering that you see in the selection dialog."
+msgstr ""
+"Formula de aplicat. Formula folosește ca variabile straturile selectate în "
+"parametrul de mai sus, folosind litere din alfabet (``a, b, c...``) sau "
+"``g1, g2, g3...``. Adică, formula ``a + 2 * b`` este aceeași cu ``g1 + 2 * "
+"g2`` și va calcula suma valorii din primul strat plus de două ori valoarea "
+"din al doilea strat. Ordinea straturilor corespunde ordinii pe care o vedeți"
+" în dialogul de selecție."
+
 #: ../../docs/training_manual/processing/no_data.rst:25
 msgid "The calculator is case sensitive."
 msgstr "Calculator ține cont de majuscule/minuscule."
@@ -116,13 +145,85 @@ msgstr ""
 "Pentru utilizatorii care nu sunt englezi: folosiți întotdeauna \".\", nu "
 "\",\"."
 
+#: ../../docs/training_manual/processing/no_data.rst:37
+msgid ""
+"Click *Run* to run the algorithm. You will get a layer that has the same "
+"appearance of the input layer, but with different values. The input layer "
+"that we used has valid values in all its cells, so the last parameter has no"
+" effect at all."
+msgstr ""
+"Faceți clic pe *Run* pentru a rula algoritmul. Veți obține un strat care are"
+" același aspect cu cel al stratului de intrare, dar cu valori diferite. "
+"Stratul de intrare pe care l-am folosit are valori valide în toate celulele "
+"sale, astfel încât ultimul parametru nu are niciun efect."
+
+#: ../../docs/training_manual/processing/no_data.rst:39
+msgid ""
+"Let's now perform another calculation, this time on the *accflow* layer. "
+"This layer contains values of accumulated flow, a hydrological parameter. It"
+" contains those values only within the area of a given watershed, with no--"
+"data values outside of it. As you can see, the rendering is not very "
+"informative, due to the way values are distributed. Using the logarithm of "
+"that flow accumulation will yield a much more informative representation. We"
+" can calculate that using the raster calculator."
+msgstr ""
+"Să facem acum un alt calcul, de data aceasta pe stratul *accflow*. Acest "
+"strat conține valori ale debitului acumulat, un parametru hidrologic. "
+"Conține acele valori numai în zona unui bazin hidrografic dat, cu valori "
+"fără date în afara acestuia. După cum puteți vedea, randarea nu este foarte "
+"informativă, din cauza modului în care sunt distribuite valorile. Folosind "
+"logaritmul acestei acumulări de flux va rezulta o reprezentare mult mai "
+"informativă. O putem calcula folosind calculatorul raster."
+
+#: ../../docs/training_manual/processing/no_data.rst:41
+msgid ""
+"Open the algorithm dialog again, select the *accflow* layer as the only "
+"input layer, and enter the following formula: ``log(a)``."
+msgstr ""
+"Deschideți iarăși dialogul algoritmului, selectați stratul *accflow* ca "
+"singur strat de intrare, apoi introduceți următoarea formulă: ``log(a)``."
+
 #: ../../docs/training_manual/processing/no_data.rst:43
 msgid "Here is the layer that you will get."
 msgstr "Acesta este stratul pe care îl veți obține."
 
+#: ../../docs/training_manual/processing/no_data.rst:47
+msgid ""
+"If you select the *Identify* tool to know the value of a layer at a given "
+"point, select the layer that we have just created, and click on a point "
+"outside of the basin, you will see that it contains a no--data value."
+msgstr ""
+"Dacă selectați instrumentul *Identificare* pentru a cunoaște valoarea unui "
+"strat într-un anumit punct, selectați stratul pe care tocmai l-am creat și "
+"faceți clic pe un punct din afara bazinului, veți vedea că acesta conține o "
+"valoare no--data."
+
+#: ../../docs/training_manual/processing/no_data.rst:51
+msgid ""
+"For the next exercise we are going to use two layers instead of one, and we "
+"are going to get a DEM with valid elevation values only within the basin "
+"defined in the second layer. Open the calculator dialog and select both "
+"layers of the project in the input layers field. Enter the following formula"
+" in the corresponding field:"
+msgstr ""
+"Pentru exercițiul următor vom folosi două straturi în loc de unul și vom "
+"obține un DEM cu valori de cotă valide numai în bazinul definit în cel de-al"
+" doilea strat. Deschideți dialogul calculatorului și alegeți ambele straturi"
+" ale proiectului în câmpul straturilor de intrare. Introduceți următoarea "
+"formulă în câmpul corespunzător:"
+
 #: ../../docs/training_manual/processing/no_data.rst:59
 msgid "Here is the resulting layer."
 msgstr "Acesta este stratul rezultat."
+
+#: ../../docs/training_manual/processing/no_data.rst:73
+msgid ""
+"Let's finish this lesson with another masking exercise. We are going to "
+"calculate the slope in all areas with an elevation between 1000 and 1500 "
+"meters."
+msgstr ""
+"Să încheiem această lecție cu un alt exercițiu de mascare. Urmează să "
+"calculăm panta în toate zonele cu o altitudine între 1000 și 1500 de metri."
 
 #: ../../docs/training_manual/processing/no_data.rst:75
 msgid ""
@@ -139,6 +240,16 @@ msgid ""
 msgstr ""
 "Pornește calculatorul folosind DEM-ul doar ca pe un strat de intrare, și "
 "următoarea formulă"
+
+#: ../../docs/training_manual/processing/no_data.rst:83
+msgid ""
+"As you can see, we can use the calculator not only to do simple algebraic "
+"operations, but also to run more complex calculation involving conditional "
+"sentences, like the one above."
+msgstr ""
+"După cum puteți vedea, putem folosi calculatorul nu numai pentru a face "
+"operații algebrice simple, ci și pentru a efectua calcule mai complexe, care"
+" implică propoziții condiționate, precum cea de mai sus."
 
 #: ../../docs/training_manual/processing/no_data.rst:85
 msgid ""

@@ -6,17 +6,17 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
-# Sorin Călinică <scalinica@gmail.com>, 2023
 # Transifex Bot <>, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-06-22 13:01+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -133,6 +133,10 @@ msgstr ""
 msgid "[extent]"
 msgstr "[extent]"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Metodele disponibile sunt:"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:53
 msgid "``OVERCRS``"
 msgstr ""
@@ -203,6 +207,19 @@ msgstr ""
 msgid "[number]"
 msgstr "[număr]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:64
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:124
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:214
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:248
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:256
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:323
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:454
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:463
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:605
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:614
+msgid "Default: None"
+msgstr "Default: Nici o valoare"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:68
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:139
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:267
@@ -221,6 +238,11 @@ msgstr ""
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Implicit: ``[Salvare într-un fișier temporar]``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:72
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:271
+msgid "Specification of the output raster layer. One of:"
+msgstr "Specificare strat raster de ieșire. Unul dintre:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Salvare într-un Fișier Temporar"
@@ -235,6 +257,11 @@ msgstr "Salvare în Fișier..."
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:576
 msgid "Advanced parameters"
 msgstr "Parametri avansați"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:90
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:289
+msgid "**Additional creation options**"
+msgstr "**Opțiuni suplimentare de creare**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:93
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:292
@@ -253,6 +280,11 @@ msgstr ""
 msgid "[string]"
 msgstr "[string]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:96
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:295
+msgid "Default: ''"
+msgstr "Implicit: \""
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:97
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:296
 msgid ""
@@ -269,10 +301,16 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:103
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:302
 msgid ""
-"For Batch Process: separate multiple options with a pipe character (``|``)."
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
 msgstr ""
-"Pentru Procesarea în Serie: separați opțiunile multiple cu un caracter pipe "
-"(``|``)."
+"Procesarea în Serie și Designerul de Modele: separați opțiunile multiple cu "
+"un caracter pipe (``|``)."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:105
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:304
+msgid "**Output data type**"
+msgstr "**Tipul datelor de ieșire**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:106
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:305
@@ -293,6 +331,66 @@ msgstr "Implicit: 0"
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:311
 msgid "Options:"
 msgstr "Opţiuni:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "0 --- Use Input Layer Data Type"
+msgstr "0 --- Se Utilizează Tipul Datelor din Stratul de Intrare"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "1 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "1 --- Byte        (Întreg, fără semn, opt biți (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "2 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "2 --- Int16       (Întreg, cu semn, șaisprezece biți (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "3 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr ""
+"3 --- UInt16      (Număr întreg, fără semn, șaisprezece biți (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr ""
+"4 --- UInt32      (Treizeci și doi de biți în virgulă mobilă (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "5 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr ""
+"5 --- Int32       (Treizeci și doi de biți în virgulă mobilă (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "6 --- Float32     (Thirty two bit floating point (float))"
+msgstr "6 --- Float32     (Treizeci și doi de biți în virgulă mobilă (float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+msgid "7 --- Float64     (Sixty four bit floating point (double))"
+msgstr ""
+"7 --- Float64     (Șaizeci și patru de biți în virgulă mobilă (double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "8 --- CInt16      (Complex Int16)"
+msgstr "8 --- CInt16      (Complex Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "9 --- CInt32      (Complex Int32)"
+msgstr "9 --- CInt32      (Complex Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "10 --- CFloat32   (Complex Float32)"
+msgstr "10 --- CFloat32   (Complex Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "11 --- CFloat64   (Complex Float64)"
+msgstr "11 --- CFloat64   (Complex Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:21
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"Opțiunile disponibile depind de versiunea GDAL construită cu ajutorul QGIS "
+"(consultați meniul :menuselection:`Help --> About`)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:121
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:320
@@ -341,6 +439,10 @@ msgstr ""
 msgid "[vector: polygon]"
 msgstr "[vector: poligon]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:187
+msgid "**Source CRS**"
+msgstr "**CRS-ul sursei**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:188
 msgid "``SOURCE_CRS``"
 msgstr ""
@@ -350,9 +452,17 @@ msgstr ""
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:191
+msgid "**Target CRS**"
+msgstr "**CRS-ul destinației**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:192
 msgid "``TARGET_CRS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:197
+msgid "|324|"
+msgstr "|324|"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:200
 msgid "``TARGET_EXTENT``"
@@ -365,6 +475,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:225
 msgid "``CROP_TO_CUTLINE``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:228
+msgid "Default: True"
+msgstr "Implicit: True"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:231
 msgid "``KEEP_RESOLUTION``"
@@ -394,6 +508,11 @@ msgstr "**Algorithm ID**: ``gdal:cliprasterbymasklayer``"
 msgid "Contour"
 msgstr "Curbe de nivel"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:383
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:522
+msgid "**Band number**"
+msgstr "**Numărul benzii**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:384
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:523
 msgid "``BAND``"
@@ -404,19 +523,38 @@ msgstr ""
 msgid "[raster band]"
 msgstr "[raster band]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:387
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:526
+msgid "Default: 1"
+msgstr "Implicit: 1"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:390
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:529
 msgid "``INTERVAL``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:393
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:532
+msgid "Default: 10.0"
+msgstr "Implicit: 10.0"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:399
 msgid "``FIELD_NAME``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:402
+msgid "Default: 'ELEV'"
+msgstr "Implicit: 'ELEV'"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:407
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:538
 msgid "``OFFSET``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:410
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:541
+msgid "Default: 0.0"
+msgstr "Implicit: 0.0"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:414
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:480
@@ -441,9 +579,17 @@ msgstr "**Algorithm ID**: ``gdal:contour``"
 msgid "``FIELD_NAME_MIN``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:549
+msgid "Default: 'ELEV_MIN'"
+msgstr "Implicit: 'ELEV_MIN'"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:556
 msgid "``FIELD_NAME_MAX``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:559
+msgid "Default: 'ELEV_MAX'"
+msgstr "Implicit: 'ELEV_MAX'"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:637
 msgid "**Algorithm ID**: ``gdal:contour_polygon``"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-08-10 09:49+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
@@ -51,11 +51,11 @@ msgstr ""
 "menuselection:` Projeto -> `| fileSaveAs | : menuselection: `Salvar como "
 "...`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:228
+#: ../../docs/user_manual/introduction/project_files.rst:230
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:230
+#: ../../docs/user_manual/introduction/project_files.rst:232
 msgid "fileSaveAs"
 msgstr ""
 
@@ -74,7 +74,7 @@ msgstr ""
 " de dados quando necessário` em :menuselection:`Configurações --> Opções -->"
 " Geral`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:220
+#: ../../docs/user_manual/introduction/project_files.rst:222
 msgid "checkbox"
 msgstr ""
 
@@ -90,7 +90,7 @@ msgstr ""
 ":menuselection:`Abrir...`, :menuselection:`Projeto--> Novo a partir de "
 "modelo` or :menuselection:`Projeto --> Abrir Recente -->`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:226
+#: ../../docs/user_manual/introduction/project_files.rst:228
 msgid "fileOpen"
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 "possibilitar salvar o projeto existente caso mudanças tenham sido feitas "
 "desde que este tenha sido aberto ou salvo."
 
-#: ../../docs/user_manual/introduction/project_files.rst:224
+#: ../../docs/user_manual/introduction/project_files.rst:226
 msgid "fileNew"
 msgstr ""
 
@@ -220,22 +220,6 @@ msgstr ""
 "arquivo é criado no mesmo diretório do arquivo de projeto, com a extensão "
 "``.qgs~``."
 
-#: ../../docs/user_manual/introduction/project_files.rst:110
-msgid ""
-"The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the "
-"default is to save using a compressed format with the ``.qgz`` extension. "
-"The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together"
-" with its associated sqlite database (``.qgd``) for :ref:`auxiliary data "
-"<vector_auxiliary_storage>`. You can get to these files by unzipping the "
-"``.qgz`` file."
-msgstr ""
-"A extensão para o projeto do QGIS é ``.qgs`` mas quando se salva desde o "
-"QGIS, o padrão é salvar utilizando um formato comprimido com a extensão "
-"``.qgz``. O arquivo ``.qgs`` é incorporado no arquivo ``.qgz`` (um arquivo "
-"zip), juntamente com sua base de dados associada (``.qgd``)  para  for "
-":ref:`auxiliary data 1`. Você pode acessar esses arquivos descomprimindo o "
-"arquivo  ``.qgz``."
-
 #: ../../docs/user_manual/introduction/project_files.rst:120
 msgid ""
 "The :ref:`vector_auxiliary_storage` mechanism makes a zipped project "
@@ -243,14 +227,6 @@ msgid ""
 msgstr ""
 "O mecanismo :ref:`vector_auxiliary_storage` torna um projeto zipado "
 "particularmente útil, desde que incorpore dados auxiliares"
-
-#: ../../docs/user_manual/introduction/project_files.rst:125
-msgid ""
-"Projects can also be saved/loaded to/from a PostgreSQL database using the "
-"following Project menu items:"
-msgstr ""
-"Projetos também podem ser salvos/carregados de/para uma base de dados "
-"PostGreSQL usando os seguintes itens do meu Projeto:"
 
 #: ../../docs/user_manual/introduction/project_files.rst:128
 msgid ":menuselection:`Project --> Open from`"
@@ -260,33 +236,11 @@ msgstr ":menuselection:`Projeto --> Abrir a partir de`"
 msgid ":menuselection:`Project --> Save to`"
 msgstr ":menuselection:`Projeto --> Guardar para`"
 
-#: ../../docs/user_manual/introduction/project_files.rst:131
-msgid ""
-"Both menu items have a sub-menu with a list of extra project storage "
-"implementations (PostgreSQL and GeoPackage). Clicking the action will open a"
-" dialog to pick a GeoPackage connection and project or a PostgreSQL "
-"connection, schema and project."
-msgstr ""
-"Ambos os itens do meu possuem um sub-menu com uma lista de implementações de"
-" armazenamento extra de projeto  (PostgreSQL e GeoPackage). Clicando na ação"
-" abrirá um diálogo para escolher uma conexão GeoPackage e projeto ou uma "
-"conexão PostgreSQL, esquema e projeto."
-
-#: ../../docs/user_manual/introduction/project_files.rst:136
-msgid ""
-"Projects stored in Geopackage or PostgreSQL can also be loaded through the "
-"QGIS browser panel, either by double-clicking them or by dragging them to "
-"the map canvas."
-msgstr ""
-"Os projetos armazenados em Geopackage ou PostgreSQL também podem ser "
-"carregados através do painel do navegador QGIS, seja clicando duas vezes "
-"sobre eles ou arrastando-os para a tela do mapa."
-
-#: ../../docs/user_manual/introduction/project_files.rst:144
+#: ../../docs/user_manual/introduction/project_files.rst:145
 msgid "Handling broken file paths"
 msgstr "Manipulação de caminhos de arquivos quebrados"
 
-#: ../../docs/user_manual/introduction/project_files.rst:146
+#: ../../docs/user_manual/introduction/project_files.rst:147
 msgid ""
 "When opening a project, QGIS may fail to reach some data sources due to "
 "unavailable service/database, or to a renamed or moved file. QGIS then opens"
@@ -298,7 +252,7 @@ msgstr ""
 "movido. O QGIS abre então uma janela :guilabel:`Manusear camadas "
 "indisponíveis', referenciando as camadas infundadas. Você pode:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:154
+#: ../../docs/user_manual/introduction/project_files.rst:155
 msgid ""
 "Select a row, press :guilabel:`Browse` to indicate the correct location and "
 "click :guilabel:`Apply changes`;"
@@ -306,7 +260,7 @@ msgstr ""
 "Selecione uma linha, pressione :guilabel:`Navegar` para indicar a "
 "localização correta e clique :guilabel:`Aplicar mudanças`;"
 
-#: ../../docs/user_manual/introduction/project_files.rst:156
+#: ../../docs/user_manual/introduction/project_files.rst:157
 msgid ""
 "Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
 "fix all or selected broken path(s). Be aware that the browsing may take some"
@@ -317,11 +271,11 @@ msgstr ""
 "Esteja ciente de que a navegação pode levar algum tempo. Depois clique em "
 ":guilabel:`Aplicar mudanças`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:232
+#: ../../docs/user_manual/introduction/project_files.rst:234
 msgid "indicatorBadLayer"
 msgstr "Indicador de camada ruim"
 
-#: ../../docs/user_manual/introduction/project_files.rst:166
+#: ../../docs/user_manual/introduction/project_files.rst:167
 msgid ""
 "With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
 "fixed, QGIS scans through all other broken paths and tries to auto-fix those"
@@ -332,21 +286,21 @@ msgstr ""
 "caminhos quebrados e tenta fixar automaticamente aqueles que têm o mesmo "
 "caminho de arquivo quebrado."
 
-#: ../../docs/user_manual/introduction/project_files.rst:169
+#: ../../docs/user_manual/introduction/project_files.rst:170
 msgid ""
 "|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
 msgstr ""
 "|deleteSelected| :guilabel:`Remover camadas indisponíveis' do projeto."
 
-#: ../../docs/user_manual/introduction/project_files.rst:222
+#: ../../docs/user_manual/introduction/project_files.rst:224
 msgid "deleteSelected"
 msgstr "Excluir Selecionado"
 
-#: ../../docs/user_manual/introduction/project_files.rst:177
+#: ../../docs/user_manual/introduction/project_files.rst:178
 msgid "Generating output"
 msgstr "Gerando saída"
 
-#: ../../docs/user_manual/introduction/project_files.rst:182
+#: ../../docs/user_manual/introduction/project_files.rst:183
 msgid ""
 "There are several ways to generate output from your QGIS session. We have "
 "already discussed saving as a project file in :ref:`sec_projects`. Other "
@@ -356,25 +310,11 @@ msgstr ""
 " como um arquivo de projeto em :ref:`sec_projects`. Outras maneiras de "
 "produzir arquivos de saída são:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:187
-msgid ""
-"Creating images: :menuselection:`Project --> Import/Export -->` "
-"|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
-"canvas rendering to an image format (PNG, JPG, TIFF...) at custom scale, "
-"resolution, size, ... Georeferencing the image is possible. See "
-":ref:`exportingmapcanvas` for more details."
-msgstr ""
-"Criar imagens: :menuselection:`Projeto --> Importar/Exportar -->` "
-"|saveMapAsImage| :menuselection:`Exportar Mapa como Imagem...` resulta numa "
-"tela de mapa renderizada para um  formato de imagem (PNG, JPG, TIFF...) em "
-"escala personalizada, resolução, tamanho, ... É possível georreferenciar a "
-"imagem. Veja :ref:`exportingmapcanvas` para mais detalhes."
-
-#: ../../docs/user_manual/introduction/project_files.rst:236
+#: ../../docs/user_manual/introduction/project_files.rst:238
 msgid "saveMapAsImage"
 msgstr "salvar mapa como imagem"
 
-#: ../../docs/user_manual/introduction/project_files.rst:194
+#: ../../docs/user_manual/introduction/project_files.rst:196
 msgid ""
 "Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
 " Map to PDF...` outputs the map canvas rendering to PDF at custom scale, "
@@ -387,7 +327,7 @@ msgstr ""
 "(simplificação, georreferenciamento, ...). Veja :ref:`exportingmapcanvas` "
 "para mais detalhes."
 
-#: ../../docs/user_manual/introduction/project_files.rst:200
+#: ../../docs/user_manual/introduction/project_files.rst:202
 msgid ""
 "Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export"
 " Project to DXF...` opens a dialog where you can define the 'Symbology "
@@ -402,6 +342,6 @@ msgstr ""
 "símbolos da simbologia orifinal do QGIS podem ser exportados com alta "
 "fidelidade (veja seção :ref:`create_dxf_files`)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:234
+#: ../../docs/user_manual/introduction/project_files.rst:236
 msgid "newLayout"
 msgstr ""

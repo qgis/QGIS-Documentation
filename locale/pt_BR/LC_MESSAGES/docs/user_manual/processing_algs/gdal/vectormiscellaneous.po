@@ -8,6 +8,7 @@
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
 # Gabriel, 2023
+# Fernanda Martins, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Gabriel, 2023\n"
+"Last-Translator: Fernanda Martins, 2023\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,6 +33,24 @@ msgstr "Diversos vetoriais"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:14
 msgid "Build virtual vector"
 msgstr "Construir vetor virtual"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:15
+msgid ""
+"Creates a virtual vector layer that contains a set of vector layers. The "
+"output virtual vector layer will not be opened in the current project."
+msgstr ""
+"Cria uma camada vetorial virtual que contém um conjunto de camadas "
+"vetoriais. A camada de vetor virtual de saída não será aberta no projeto "
+"atual."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:19
+msgid ""
+"This algorithm is especially useful in case another algorithm needs multiple"
+" layers but accept only one ``vrt`` in which the layers are specified."
+msgstr ""
+"Este algoritmo é especialmente útil no caso de outro algoritmo precisar de "
+"várias camadas, mas aceitar apenas um ``vrt`` no qual as camadas são "
+"especificadas."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:24
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:97
@@ -156,6 +175,11 @@ msgstr "[boleano]"
 msgid "Default: False"
 msgstr "Padrão: Falso"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:44
+msgid "Check if you want to unite all the vectors in a single ``vrt`` file"
+msgstr ""
+"Verifique se você deseja unir todos os vetores em um único arquivo ``vrt``"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:46
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:70
 msgid "**Virtual vector**"
@@ -237,6 +261,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:88
 msgid "Execute SQL"
 msgstr "Executar SQL"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:90
+msgid ""
+"Runs a simple or complex query with SQL syntax on the source layer. The "
+"result of the query will be added as a new layer."
+msgstr ""
+"Executa uma consulta simples ou complexa com sintaxe SQL na camada de "
+"origem. O resultado da consulta será adicionado como uma nova camada."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:100
 msgid "Basic parameters"
@@ -441,6 +473,11 @@ msgstr ""
 msgid "The PostgreSQL database to connect to"
 msgstr "O banco de dados PostgreSQL para conexão com"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:227
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:526
+msgid "**Shape encoding**"
+msgstr "**Codificação de forma**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:230
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:529
 msgid "``SHAPE_ENCODING``"
@@ -534,6 +571,11 @@ msgstr "8 --- MULTIPOLÍGONO"
 msgid "9 --- MULTILINESTRING"
 msgstr "9 --- CADEIA DE LINHAS MÚLTIPLAS"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:253
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:552
+msgid "**Assign an output CRS**"
+msgstr "**Atribua um SRC de saída**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:256
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:555
 msgid "``A_SRS``"
@@ -566,15 +608,35 @@ msgstr "Padrão: Nenhum"
 msgid "Defines the output CRS of the database table"
 msgstr "Define o SRC de saída da tabela de banco de dados"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:261
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:560
+msgid "**Reproject to this CRS on output**"
+msgstr "**Reprojetar para este SRC na saída**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:264
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:563
 msgid "``T_SRS``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:268
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:567
+msgid "Reprojects/transforms to this CRS on output"
+msgstr "Reprojeta/transforma para este SRC na saída"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:269
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:568
+msgid "**Override source CRS**"
+msgstr "**Substitui a fonte do SRC**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:272
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:571
 msgid "``S_SRS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:276
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:575
+msgid "Overrides the input layer CRS"
+msgstr "Substitui o SRC da camada de entrada"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:277
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:616
@@ -679,6 +741,14 @@ msgstr ""
 msgid "Default: 'geom'"
 msgstr "Padrão: 'geom'"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:322
+msgid ""
+"Defines in which attribute field of the database there will be the geometry "
+"information"
+msgstr ""
+"Define em qual campo de atributo do banco de dados estarão as informações de"
+" geometria"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:324
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:662
 msgid "**Vector dimensions**"
@@ -744,6 +814,12 @@ msgid ""
 msgstr ""
 "A distância máxima entre dois nós. Utilizada para criar pontos "
 "intermediários. Por padrão, não há densificação."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:357
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:695
+msgid "**Select features by extent (defined in input layer CRS)**"
+msgstr ""
+"**Selecionar feições por extensão (definido na camada de entrada SRC)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:360
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:698
@@ -962,10 +1038,22 @@ msgstr "**Continuar após uma falha, pulando a feição com falha**"
 msgid "``SKIPFAILURES``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:460
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:807
+msgid "**Promote to Multipart**"
+msgstr "**Promover para Multipartes**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:463
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:810
 msgid "``PROMOTETOMULTI``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:467
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:814
+msgid "Casts features geometry type to multipart in the output table"
+msgstr ""
+"Converte o tipo de geometria de recursos para várias partes na tabela de "
+"saída"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:468
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:815
@@ -991,6 +1079,14 @@ msgstr "Este algoritmo não tem saída."
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:503
 msgid "Export to PostgreSQL (new connection)"
 msgstr "Exportação para PostgreSQL (nova conexão)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:504
+msgid ""
+"Imports vector layers inside a PostGreSQL database. A new connection to the "
+"PostGIS database must be created."
+msgstr ""
+"Importa camadas vetoriais dentro de um banco de dados PostGreSQL. Uma nova "
+"conexão com o banco de dados PostGIS deve ser criada."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:576
 msgid "**Host**"
@@ -1169,6 +1265,13 @@ msgstr "**Informação da camada**"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:922
 msgid "[html]"
 msgstr "[html]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:898
+msgid ""
+"Specify the output HTML file that includes the file information. One of:"
+msgstr ""
+"Especifique o arquivo HTML de saída que inclui as informações do arquivo. Um"
+" de:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:905
 msgid ""

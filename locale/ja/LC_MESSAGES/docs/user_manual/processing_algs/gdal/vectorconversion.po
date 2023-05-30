@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-06-22 13:01+0000\n"
 "PO-Revision-Date: 2023-03-19 14:53+0000\n"
 "Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -131,6 +131,10 @@ msgstr "[ベクタ：任意]"
 msgid "Input vector layer"
 msgstr "入力ベクタレイヤ"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:41
+msgid "|324|"
+msgstr "|324|"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:42
 msgid "``CONVERT_ALL_LAYERS``"
 msgstr ""
@@ -189,6 +193,11 @@ msgstr "ファイルに保存..."
 msgid "Advanced parameters"
 msgstr "詳細パラメータ"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:74
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:431
+msgid "**Additional creation options**"
+msgstr "**追加の生成オプション**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:76
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:145
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:171
@@ -216,6 +225,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:479
 msgid "[string]"
 msgstr "[文字列]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:80
+msgid "Default: '' (no additional options)"
+msgstr "デフォルト： ''（追加オプションなし）"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:81
+msgid "Additional GDAL creation options."
+msgstr "追加のGDAL生成オプション"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:84
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:179
@@ -327,6 +344,10 @@ msgstr "[数値]"
 msgid "Default: 0.0"
 msgstr "デフォルト： 0.0"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:309
+msgid "**Default menu**: :menuselection:`Raster --> Conversion`"
+msgstr "**デフォルトメニュー**: :menuselection:`ラスタ --> 変換`"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:348
 msgid "``USE_Z``"
 msgstr ""
@@ -351,6 +372,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:375
 msgid "``HEIGHT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:382
+msgid "**Output extent**"
+msgstr "**出力領域**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:385
 msgid "``EXTENT``"
@@ -397,6 +422,10 @@ msgstr "キャンバスに描画: 考慮する領域を区切る矩形をクリ�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "``xmin, xmax, ymin, ymax`` として座標を入力"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:395
+msgid "**Assign a specified nodata value to output bands**"
+msgstr "**指定したnodata値を出力バンドに割り当てる**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:398
 msgid "``NODATA``"
 msgstr ""
@@ -408,6 +437,22 @@ msgstr "デフォルト： ``[一時ファイルに保存]``"
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:408
 msgid "Specification of the output raster layer. One of:"
 msgstr "出力ラスタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:438
+msgid ""
+"For adding one or more creation options that control the raster to be "
+"created (colors, block size, file compression...). For convenience, you can "
+"rely on predefined profiles (see :ref:`GDAL driver options section "
+"<gdal_createoptions>`)."
+msgstr ""
+"作成するラスタを制御する1つ以上の作成オプションを追加します（色、ブロックサイズ、ファイル圧縮...）。便利なことに、定義済みのプロファイルを利用することができます"
+" (:ref:`GDAL ドライバのオプションセクション <gdal_createoptions>` を参照)。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:444
+msgid ""
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
+msgstr "バッチプロセスとモデルデザイナー: 複数のオプションをパイプ文字 (``|``) で区切ります。"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:446
 msgid "**Output data type**"
@@ -421,9 +466,65 @@ msgstr ""
 msgid "Default: 5"
 msgstr "デフォルト： 5"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:451
+msgid "Defines the format of the output raster file."
+msgstr "出力ラスタファイルの形式を定義します。"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:453
 msgid "Options:"
 msgstr "オプション:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "0 -- Byte （符号なし8ビット整数 (quint8)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "1 -- Int16 （符号付き16ビット整数 (qint16)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "2 -- UInt16 （符号なし16ビット整数 (quint16)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "3 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr "3 -- UInt32 （符号なし32ビット整数 (quint32)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "4 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "4 -- Int32 （符号あり32ビット整数 (qint32)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "5 --- Float32     (Thirty two bit floating point (float))"
+msgstr "5 -- Float32 （32ビット浮動小数点数 (float)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+msgid "6 --- Float64     (Sixty four bit floating point (double))"
+msgstr "6 -- Float64 （64ビット浮動小数点数 (double)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "7 --- CInt16      (Complex Int16)"
+msgstr "7 -- CInt16 （複素数 Int16）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "8 --- CInt32      (Complex Int32)"
+msgstr "8 -- CInt32 （複素数 Int32）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "9 --- CFloat32    (Complex Float32)"
+msgstr "9 -- CFloat32 （複素数 Float32）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "10 --- CFloat64   (Complex Float64)"
+msgstr "10 -- CFloat64 （複素数 Float64）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:21
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"利用可能なオプションは、QGISと一緒にビルドされたGDALのバージョンによって異なります（ :menuselection:`ヘルプ --> "
+"QGISについて` メニューを参照）"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:462
 msgid "``INIT``"
