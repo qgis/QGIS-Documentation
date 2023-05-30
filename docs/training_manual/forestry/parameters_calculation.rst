@@ -111,7 +111,7 @@ smaller stands:
 .. figure:: img/stands_no_info.png
    :align: center
 
-Lets calculate now the same averages for the whole forest as you did before,
+Let's calculate now the same averages for the whole forest as you did before,
 only this time you will use the averages you got for the stands as the bases
 for the calculation. Remember that in the previous situation, each sample plot
 represented a theoretical stand of ``80x80 m``. Now you have to consider the
@@ -127,8 +127,8 @@ volumes and stem numbers for each of them:
 #. Create a new field called ``area``.
 #. Set the :guilabel:`Output field type` to ``Decimal number (real)``.
 #. Set the :guilabel:`Precision` to ``2``.
-#. In the :guilabel:`Expression` box, write ``$area / 10000``. This will
-   calculate the area of the forest stands in ha.
+#. In the :guilabel:`Expression` box, write ``$area / 10000``.
+   This will calculate the area of the forest stands in ha.
 #. Click :guilabel:`OK`.
 
 Now calculate a field with the total volumes and number of stems estimated for every stand:
