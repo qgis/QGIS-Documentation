@@ -153,10 +153,10 @@ Statistics of translation
 
 .. list of substitutions for the statistics:
 
-.. |today| replace:: *2023-05-23*
-.. |total_strings| replace:: **29249**
+.. |today| replace:: *2023-05-30*
+.. |total_strings| replace:: **29248**
 .. |nb_languages| replace:: **58**
-.. |global_percentage| replace:: **14.05%**
+.. |global_percentage| replace:: **14.08%**
 
 .. |stats_ar| replace:: 4.63
 .. |stats_az| replace:: 0.88
@@ -167,12 +167,12 @@ Statistics of translation
 .. |stats_da| replace:: 1.59
 .. |stats_de| replace:: 22.96
 .. |stats_el| replace:: 1.25
-.. |stats_es| replace:: 98.01
+.. |stats_es| replace:: 98.41
 .. |stats_et| replace:: 2.26
 .. |stats_eu| replace:: 1.77
 .. |stats_fa| replace:: 0.68
 .. |stats_fi| replace:: 2.23
-.. |stats_fr| replace:: 84.36
+.. |stats_fr| replace:: 84.4
 .. |stats_gl| replace:: 1.35
 .. |stats_he| replace:: 1.69
 .. |stats_hi| replace:: 1.2
@@ -180,12 +180,12 @@ Statistics of translation
 .. |stats_hu| replace:: 19.58
 .. |stats_id| replace:: 3.45
 .. |stats_ig| replace:: 0.87
-.. |stats_it| replace:: 100.0
-.. |stats_ja| replace:: 80.1
+.. |stats_it| replace:: 99.99
+.. |stats_ja| replace:: 80.35
 .. |stats_ka| replace:: 0.98
 .. |stats_kab| replace:: 0.98
-.. |stats_ko| replace:: 87.15
-.. |stats_lt| replace:: 6.38
+.. |stats_ko| replace:: 87.14
+.. |stats_lt| replace:: 7.21
 .. |stats_mk| replace:: 0.99
 .. |stats_ml| replace:: 0.97
 .. |stats_mn| replace:: 0.98
@@ -193,11 +193,11 @@ Statistics of translation
 .. |stats_ms| replace:: 0.91
 .. |stats_my| replace:: 0.97
 .. |stats_nb| replace:: 3.77
-.. |stats_nl| replace:: 92.97
+.. |stats_nl| replace:: 92.96
 .. |stats_nqo| replace:: 2.52
 .. |stats_pa| replace:: 0.0
 .. |stats_pl| replace:: 2.75
-.. |stats_pt_BR| replace:: 70.94
+.. |stats_pt_BR| replace:: 71.35
 .. |stats_pt_PT| replace:: 8.56
 .. |stats_ro| replace:: 28.58
 .. |stats_ru| replace:: 15.55
@@ -215,5 +215,5 @@ Statistics of translation
 .. |stats_ur| replace:: 0.86
 .. |stats_vi| replace:: 1.11
 .. |stats_zh-Hans| replace:: 20.97
-.. |stats_zh-Hant| replace:: 2.19
+.. |stats_zh-Hant| replace:: 2.2
 
