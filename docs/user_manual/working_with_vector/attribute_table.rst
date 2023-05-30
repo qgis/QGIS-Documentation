@@ -110,7 +110,6 @@ calculations to all or part of the features in the layer. This bar uses the same
 :ref:`expressions <vector_expressions>` as the |calculateField| :sup:`Field
 Calculator` (see :ref:`calculate_fields_values`).
 
-The attribute table supports :kbd:`Shift+Mouse Wheel` scrolling in attribute table to switch to a horizontal scrolling action instead of vertical.
 
 .. _attribute_table_view:
 
@@ -124,6 +123,10 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   A right-click on the column header allows you to :ref:`configure the table
   display <configure_table_columns>` while a right-click on a cell provides
   :ref:`interaction with the feature <interacting_features_table>`.
+
+  The attribute table supports :kbd:`Shift+Mouse Wheel` scrolling in table view mode
+  to switch between vertical and horizontal scrolling movements.
+  This can also be achieved replacing the mouse with the trackpad on macOS.
 * The |formView| :sup:`Form view` shows :ref:`feature identifiers
   <maptips>` in a first panel and displays only the attributes of the clicked
   identifier in the second one.
@@ -234,10 +237,10 @@ by preview expression` option.
 .. tip:: **Sorting based on columns of different types**
 
   Trying to sort an attribute table based on columns of string and numeric types
-  may lead to unexpected result because of the ``concat("USE", "ID")`` expression
+  may lead to unexpected result because of the ``concat("USE", "ID")`` expression
   returning string values (ie, ``'Borough105' < 'Borough6'``).
-  You can workaround this by using eg ``concat("USE", lpad("ID", 3, 0))`` which
-  returns ``'Borough105' > 'Borough006'``.
+  You can workaround this by using eg ``concat("USE", lpad("ID", 3, 0))`` which
+  returns ``'Borough105' > 'Borough006'``.
 
 .. index:: Conditional formatting
 .. _conditional_formatting:
@@ -283,9 +286,6 @@ Adding new rule opens a form to define:
 .. index::
    pair: Attributes; Selection
 .. _interacting_features_table:
-
-When :guilabel:`Show Features with Failing Constraints` has been selected, the attribute table cells will turn dark or light orange if the field value fails to meet active constraints.
-
 
 Interacting with features in an attribute table
 ===============================================
@@ -355,7 +355,10 @@ left of the attribute table dialog. This list offers the following filters:
 * |openTableVisible| :guilabel:`Show Features visible on map` - same as using
   :guilabel:`Open Attribute Table (Visible Features)` from the :guilabel:`Layer`
   menu or the :guilabel:`Attributes Toolbar` or pressing :kbd:`Ctrl+F6`
-* |openTableInvalid| :guilabel:`Show Features with Failing Constraints`- features will be filtered to only show the ones which have failing (hard or soft) constraints
+* |openTableInvalid| :guilabel:`Show Features with Failing Constraints` -
+  features will be filtered to only show the ones which have failing :ref:`constraints <constraints>`.
+  Depending on whether the unmet constraint is hard or soft,
+  failing field values are displayed in respectively dark or light orange cells.
 * |openTableEdited| :guilabel:`Show Edited and New Features` - same as using
   :guilabel:`Open Attribute Table (Edited and New Features)` from the :guilabel:`Layer`
   menu or the :guilabel:`Attributes Toolbar`
