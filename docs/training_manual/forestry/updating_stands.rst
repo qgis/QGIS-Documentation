@@ -5,9 +5,10 @@ Now that you have digitized the information from the old inventory maps and
 added the corresponding information to the forest stands, the next step is
 to create the inventory of the current state of the forest.
 
-You will digitize new forest stands using an aerial photo. As with the previous lesson, you will use an aerial Color Infrared (CIR) photograph. This type of imagery,
-where the infrared light is recorded instead of the blue light, is widely used
-to study vegetated areas. 
+You will digitize new forest stands using an aerial photo.
+As with the previous lesson, you will use an aerial Color Infrared (CIR) photograph.
+This type of imagery, where the infrared light is recorded instead of the blue light,
+is widely used to study vegetated areas.
 
 After digitizing the forest stands, you will add information such as new
 constraints given by conservation regulations.
@@ -24,44 +25,44 @@ downloading a variety of geographical data like aerial imagery, traditional
 topographic maps, DEM, LiDAR data, etc. The service can be accessed in
 English `here <https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en>`_.
 The aerial image used in this exercise has been created from two orthorectified
-CIR images downloaded from that service (M4134F_21062012 and M4143E_21062012). 
+CIR images downloaded from that service (M4134F_21062012 and M4143E_21062012).
 
-* Open QGIS and set the project's CRS to :guilabel:`ETRS89 / ETRS-TM35FIN` in
-  :menuselection:`Project --> Properties... --> CRS`
+#. Open QGIS and set the project's CRS to :guilabel:`ETRS89 / ETRS-TM35FIN` in
+   :menuselection:`Project --> Properties... --> CRS`
+#. Add the CIR image :file:`rautjarvi_aerial.tif` to the project:
 
-* Add the CIR image :file:`rautjarvi_aerial.tif` to the project
-	#. Go to the :file:`exercise_data\\forestry\\` folder using your file manager browser
-	#. Drag and drop the file :file:`rautjarvi_aerial.tif` onto your project
-* Save the QGIS project as :file:`digitizing_2012.qgs`
+   #. Go to the :file:`exercise_data\\forestry\\` folder using your file manager browser
+   #. Drag and drop the file :file:`rautjarvi_aerial.tif` onto your project
+#. Save the QGIS project as :file:`digitizing_2012.qgs`
 
-The CIR images are from 2012. You can compare the stands that were created
-in 1994 with the situation almost 20 years later.
+The CIR images are from 2012.
+You can compare the stands that were created in 1994 with the situation almost 20 years later.
 
-* Add the ``forest_stands_1994`` layer created in the previous lesson
-	#. Go to the :file:`exercise_data\\forestry\\` folder using your file manager browser
-	#. Drag and drop the file :file:`forest_stands_1994.shp` onto your project
-* Set the symbology for the layer so that you can see through your polygons
-   #. Right click ``forest_stands_1994``
+#. Add the :file:`forest_stands_1994.shp` layer created in the previous lesson:
+
+   #. Go to the :file:`exercise_data\\forestry\\` folder using your file manager browser
+   #. Drag and drop the file :file:`forest_stands_1994.shp` onto your project
+#. Set the symbology for the layer so that you can see through your polygons:
+
+   #. Right click :guilabel:`forest_stands_1994`
    #. Select :guilabel:`Properties`
-   #. Go to the |symbology| ``Symbology`` tab	
-   #. Set :guilabel:`Fill color` to ``Transparent fill``
+   #. Go to the |symbology| :guilabel:`Symbology` tab
+   #. Set :guilabel:`Fill color` to transparent fill
    #. Set :guilabel:`Stroke color` to purple
    #. Set :guilabel:`Stroke width` to ``0.50 mm``
-* Review how the old forest stands follow (or not) what you might visually
-  interpret as an homogeneous forest.
+#. Review how the old forest stands follow (or not) what you might visually
+   interpret as an homogeneous forest.
+#. Zoom and pan around the area. You probably will notice that some of the old
+   forest stands might be still corresponding with the image but others are not.
 
-Zoom and pan around the area. You probably will notice that some of the old
-forest stands might be still corresponding with the image but others are not.
+   This is a normal situation, as some 20 years have passed
+   and different forest operations have been carried out (harvesting, thinning...).
+   It is also possible that the forest stands looked homogeneous back in 1992 to the person
+   who digitized them but as time has passed some forest has developed in different ways.
+   It is also possible that that forest inventory priorities back then were different from those of today.
 
-This is a normal situation, as some 20 years have passed and different
-forest operations have been carried out (harvesting, thinning...). It is also
-possible that the forest stands looked homogeneous back in 1992 to the person
-who digitized them but as time has passed some forest has developed in different
-ways. It is also possible that the priorities for the forest inventory were different then compared to what they 
-are today.
-
-Next, you will create new forest stands for this image without using the old
-ones. Later you can compare them to see the differences.
+Next, you will create new forest stands for this image without using the old ones.
+Later you can compare them to see the differences.
 
 
 |basic| Interpreting the CIR Image
@@ -72,25 +73,23 @@ the roads and the lake. You don't have to digitize the whole area, as in the
 previous exercise you can start with a vector file that already contains most
 of the forest stands.
 
-* Remove the layer |polygonLayer| ``forest_stands_1994``
-* Add the file :file:`forest_stands_2012.shp` to the project
-	#. Go to the :file:`exercise_data\\forestry\\` folder using your file manager browser
-	#. Drag and drop the file :file:`forest_stands_2012.shp` onto your project
-* Set the styling of this layer so that the polygons have no fill and the borders are visible
-   #. Right click ``forest_stands_2012``
-   #. Select :guilabel:`Properties`
-   #. Go to the |symbology| ``Symbology`` tab	
-   #. Set :guilabel:`Fill color` to Transparent fill
+#. Remove the layer |polygonLayer| :guilabel:`forest_stands_1994`
+#. Add the file :file:`exercise_data\\forestry\\forest_stands_2012.shp` to the project
+#. Set the styling of this layer so that the polygons have no fill and the borders are visible
+
+   #. Open :guilabel:`Properties` dialog of the ``forest_stands_2012`` layer
+   #. Go to the |symbology| :guilabel:`Symbology` tab
+   #. Set :guilabel:`Fill color` to transparent fill
    #. Set :guilabel:`Stroke color` to green
    #. Set :guilabel:`Stroke width` to ``0.50 mm``
-   
-.. figure:: img/stands_2012_1.png
-   :align: center
 
-|
+   .. figure:: img/stands_2012_1.png
+      :align: center
+
+   |
 
 You can see that the northern section of the inventory area is still missing.
-Your task is to digitize the missing forest stands. 
+Your task is to digitize the missing forest stands.
 
 Before you start, spend some time reviewing the forest stands already
 digitized and the corresponding forest in the image. Try to get an idea about
@@ -99,24 +98,22 @@ how the stands borders are decided, it helps if you have some forestry knowledge
 Some points to consider:
 
 * Which forests have deciduous species (in Finland these are mostly birch forests) and
-  which ones have conifers (in this areas these are pine or spruce)? In CIR images,
-  deciduous species usually show up as a bright red color whereas conifers
-  show as a dark green color.
+  which ones have conifers (in this area these are pine or spruce)?
+  In CIR images, deciduous species usually show up as a bright red color
+  whereas conifers show as a dark green color.
 * How old is the forest? The size of the tree crowns can be identified in the imagery.
 * How dense are the different forest stands? A forest stand where a
-  thinning operation has recently been done would show spaces between
-  the tree crowns and should be easy to differentiate from other forest stands
-  around it.
-* Blueish areas indicate barren terrain, roads and urban areas, crops that have
-  not started to grow etc.
+  thinning operation has recently been done would show spaces between the tree crowns
+  and should be easy to differentiate from other forest stands around it.
+* Blueish areas indicate barren terrain, roads and urban areas,
+  crops that have not started to grow etc.
 * Don't use zooms too close to the image when trying to identify forest stands.
-  A scale between 1:3 000 and 1: 5 000 should be enough for this imagery.
+  A scale between 1:3 000 and 1:5 000 should be enough for this imagery.
   See the image below (1:4000 scale):
 
 .. figure:: img/zoom_to_CIR_1-4000.png
    :align: center
 
-|
 
 |basic| |TY| Digitizing Forest Stands from CIR Imagery
 -------------------------------------------------------------------------------
@@ -130,48 +127,41 @@ too big either (no more than 3 ha).
 
 With these points in mind, you can now digitize the missing forest stands.
 
-* Set up the snapping and topology options:
-	#. Go to :menuselection:`Project --> Snapping options...`
-	#. Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced Configuration`
-	#. Check the |checkbox| ``forest_stands_2012`` layer
-	#. Set :guilabel:`Type` to ``Vertex``
-	#. Set :guilabel:`Tolerance` to ``10``
-	#. Set :guilabel:`Units` to ``pixels``
-	#. Check |checkbox| ``Avoid Overlap``
-	#. Press |topologicalEditing| :guilabel:`Topological editing`
-	#. Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`
-	#. Close the pop-up
+#. Set up the snapping and topology options:
 
+   #. Go to :menuselection:`Project --> Snapping options...`
+   #. Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced Configuration`
+   #. Check the |checkbox| :guilabel:`forest_stands_2012` layer
 
-.. figure:: img/snapping_2012.png
-   :align: center
+      #. Set :guilabel:`Type` to :guilabel:`Vertex`
+      #. Set :guilabel:`Tolerance` to ``10``
+      #. Set :guilabel:`Units` to :guilabel:`pixels`
+      #. Check the box under :guilabel:`Avoid Overlap`
+      #. Press |topologicalEditing| :guilabel:`Topological editing`
+      #. Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`
+      #. Close the pop-up
 
-|
-   
-* Select the ``forest_stands_2012`` layer on the Layers list
+      .. figure:: img/snapping_2012.png
+         :align: center
 
-* Click the |toggleEditing| :sup:`Toggle Editing` button to enable editing
+#. Select the :guilabel:`forest_stands_2012` layer on the Layers list
+#. Click the |toggleEditing| :sup:`Toggle Editing` button to enable editing
+#. Start digitizing using the same techniques as in the previous lesson.
+   The only difference is that you don't have any point layer that you are snapping to.
+   For this area you should get around 14 new forest stands.
+   While digitizing, fill in the ``StandID`` field with numbers starting at ``901``.
+#. When you are finished your layer should look something like:
 
-Start digitizing using the same techniques as in the previous lesson. The only difference is
-that you don't have any point layer that you are snapping to. For this area you
-should get around 14 new forest stands. While digitizing, fill in the
-``StandID`` field with numbers starting at :kbd:`901`.
+   .. figure:: img/new_stands_ready.png
+      :align: center
 
-When you are finished your layer should look something like:
+Now you have a new set of polygons showing the different forest stands in 2012 - as interpreted from the CIR images.
+However, you are missing the forest inventory data.
+For that you will need to visit the forest and get some sample data that you will use
+to estimate the forest attributes for each of the forest stands.
+You will see how to do that in the next lesson.
 
-.. figure:: img/new_stands_ready.png
-   :align: center
-
-|
-
-Now you have a new set of polygons showing the different forest stands in 2012 - as interpreted from the CIR images. 
-However, you are missing the forest inventory data. For that you will need to visit the forest and get some sample data that you will use to
-estimate the forest attributes for each of the forest stands. You will see how
-to do that in the next lesson.
-
-You can add some extra
-information about conservation regulations that need to be taken
-into account for this area.
+You can add some extra information about conservation regulations that need to be taken into account for this area.
 
 
 |basic| |FA| Updating Forest Stands with Conservation Information
