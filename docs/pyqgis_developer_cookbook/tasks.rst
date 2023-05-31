@@ -75,7 +75,7 @@ There are several ways to create a QGIS task:
         pass
 
     task = QgsTask.fromFunction('heavy function', heavyFunction,
-                         onfinished=workdone)
+                         on_finished=workdone)
 
 * Create a task from a processing algorithm
 
