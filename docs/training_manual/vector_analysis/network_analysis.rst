@@ -17,7 +17,7 @@ You can see that there are many tools available:
 
 .. figure:: img/select_network_algorithms.png
    :align: center
-   :width: 75%
+   :width: 50%
 
 Open the project :file:`exercise_data/network_analysis/network.qgz`.
 It contains two layers:
@@ -69,6 +69,7 @@ between two points.
 #. Click on the :guilabel:`...` button next to
    :guilabel:`Start point (x, y)` and choose the location tagged with
    ``Starting Point`` in the picture.
+   Enable the snapping options for an accurate selection.
    The coordinates of the clicked point are added.
 #. Do the same thing, but choosing the location tagged with
    ``Ending point`` for :guilabel:`End point (x, y)`
@@ -76,7 +77,7 @@ between two points.
 
    .. figure:: img/shortest_point.png
       :align: center
-      :width: 100%
+      :width: 80%
 
 #. A new line layer is created representing the shortest path between
    the chosen points.
@@ -84,7 +85,7 @@ between two points.
 
    .. figure:: img/shortest_point_result.png
       :align: center
-      :width: 100%
+      :width: 80%
 
 #. Open the attribute table of the output layer.
    It contains three fields, representing the coordinates of the
@@ -99,10 +100,9 @@ between two points.
 
    .. figure:: img/shortest_point_attributes.png
       :align: center
-      :width: 100%
+      :width: 80%
 
-Now that you know how to use the tool, feel free to test other
-locations.
+Now that you know how to use the tool, feel free to test other locations.
 
 
 .. _network_fastest_path:
@@ -165,8 +165,7 @@ previous exercises.
    more readable *minutes* values.
 
 #. Open the field calculator by clicking on the |calculateField| icon
-   and add the new field :guilabel:`minutes` by multiplying the
-   :guilabel:`cost` field by 60:
+#. Add a new field to store the path cost in :guilabel:`minutes`.
 
    .. figure:: img/shortest_path_conversion.png
       :align: center
@@ -174,28 +173,28 @@ previous exercises.
 
 That's it!
 Now you know how many minutes it will take to get from one point to
-the other one.
+the other one if the whole network speed is at ``4 km/h``.
 
 
 |hard| Shortest path with speed limit
 ----------------------------------------------------------------------
-The Network analysis toolbox has other interesting options. Looking
-at the following map:
+The Network analysis toolbox has other interesting options.
+Looking at the following map:
 
 .. figure:: img/speed_limit.png
    :align: center
    :width: 100%
 
 we would like to know the **fastest** route considering the **speed
-limits** of each road (the labels represent the speed limits in
-km/h).
+limits** of each road (the labels represent the speed limits in km/h).
 The shortest path without considering speed limits would of course be
 the purple path.
 But in that road the speed limit is 20 km/h, while in the green road
 you can go at 100 km/h!
 
 As we did in the first exercise, we will use the
-:menuselection:`Network analysis --> Shortest path (point to point)` and we will manually choose the start and end points.
+:menuselection:`Network analysis --> Shortest path (point to point)`
+and we will manually choose the start and end points.
 
 #. Open the
    :menuselection:`Network analysis --> Shortest path (point to point)`
@@ -203,12 +202,10 @@ As we did in the first exercise, we will use the
 #. Select :guilabel:`network_lines` for the
    :guilabel:`Vector layer representing network` parameter
 #. Choose ``Fastest`` as the :guilabel:`Path type to calculate`
-#. Click on the :guilabel:`...` button next to the
-   :guilabel:`Start point (x, y)` and choose the start point.
-#. Do the same thing for :guilabel:`End point (x, y)`
+#. Select the :guilabel:`Start point (x, y)` and :guilabel:`End point (x, y)`
+   as we did before
 #. Open the :guilabel:`Advanced parameters` menu
-#. Choose the *speed* field as the :guilabel:`Speed Field`
-   parameter.
+#. Choose the *speed* field as the :guilabel:`Speed Field` parameter.
    With this option the algorithm will take into account the speed
    limits for each road.
 
@@ -223,8 +220,7 @@ As we did in the first exercise, we will use the
       :align: center
       :width: 100%
 
-As you can see the fastest route does not correspond to the shortest
-one.
+As you can see the fastest route does not correspond to the shortest one.
 
 
 |moderate| Service area (from layer)
@@ -239,8 +235,7 @@ the reachable areas given a distance or a time value?
    point on the map.
 
 Given a distance of ``250`` meters we want to know how far we can go
-on the network from each point of the :guilabel:`network_points`
-layer.
+on the network from each point of the :guilabel:`network_points` layer.
 
 #. Uncheck all the layers except ``network_points``
 #. Open the
@@ -270,11 +265,10 @@ Cool isn't it?
 |IC|
 ----------------------------------------------------------------------
 
-Now you know how to use :guilabel:`Network analysis` algorithm to
-solve shortest and fastest path problems.
+Now you know how to use :guilabel:`Network analysis` algorithm
+to solve shortest and fastest path problems.
 
-We are now ready to perform some spatial statistic on vector layer
-data.
+We are now ready to perform some spatial statistic on vector layer data.
 Let's go!
 
 |WN|
