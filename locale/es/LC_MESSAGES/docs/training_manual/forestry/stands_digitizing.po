@@ -8,6 +8,7 @@
 # Damián Ortega Terol <dortegat@gmail.com>, 2023
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Eric Armijo, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 17:53+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Eric Armijo, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,6 +64,14 @@ msgstr "|basic| |FA| Extrayendo los Bordes de las Masas Forestales"
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:424
 msgid "basic"
 msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:17
+msgid ""
+"Open your :file:`map_digitizing.qgs` project in QGIS, that you saved from "
+"the previous lesson."
+msgstr ""
+"Abra su proyecto :file:`map_digitizing.qgs` en QGIS, que guardó en la "
+"lección anterior."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:20
 msgid ""
@@ -111,6 +120,18 @@ msgstr ""
 "Abre GIMP (si todavía no lo has instalado, descárgatelo de internet o "
 "pregunta a tu profesor)."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:37
+msgid ""
+"Open the original map image, :menuselection:`File --> Open`, "
+":file:`rautjarvi_map.tif` in the :file:`exercise_data/forestry` folder. Note"
+" that the forest stands are represented as green lines (with the number of "
+"the stand also in green inside each polygon)."
+msgstr ""
+"Abra la imagen del mapa original, :menuselection:`Archivo --> Abrir`, "
+":file:`rautjarvi_map.tif` en la carpeta :file:`exercise_data/forestry`. "
+"Observe que las masas forestales están representadas como líneas verdes (con"
+" el número de la masa también en verde dentro de cada polígono)."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:47
 msgid ""
 "Now you can select the pixels in the image that are making up the forest "
@@ -122,6 +143,17 @@ msgstr ""
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:50
 msgid "Open the tool :menuselection:`Select --> By color`."
 msgstr "Abre la herramienta :menuselection:`Select --> By color`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:51
+msgid ""
+"With the tool active, zoom into the image (:kbd:`Ctrl` + mouse wheel) so "
+"that a forest stand line is close enough to differentiate the pixels forming"
+" the line. See the left image below."
+msgstr ""
+"Con la herramienta activa, haga acercamiento en la imagen (:kbd:`Ctrl` + "
+"rueda del ratón) de modo que una línea de masa forestal esté lo "
+"suficientemente cerca como para diferenciar los píxeles que forman la línea."
+" Vea la imagen de la izquierda."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:54
 msgid ""
@@ -171,6 +203,16 @@ msgstr ""
 msgid "Copy (:kbd:`Ctr+C`) the selected pixels."
 msgstr "Copia (:guilabel:`Ctr+C`) los píxeles seleccionados."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:71
+msgid ""
+"And paste the pixels directly (:kbd:`Ctr+V`), GIMP will display the pasted "
+"pixels as a new temporary layer in the :guilabel:`Layers - Brushes` panel as"
+" a :guilabel:`Floating Selection (Pasted Layer)`."
+msgstr ""
+"Y pegue los píxeles directamente (:kbd:`Ctr+V`), GIMP mostrará los píxeles "
+"pegados como una nueva capa temporal en el panel :guilabel:`Capas - "
+"Pinceles` como una :guilabel:`Selección flotante (capa pegada)`."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:74
 msgid "Right click that temporary layer and select :guilabel:`To New Layer`."
 msgstr ""
@@ -184,6 +226,19 @@ msgid ""
 msgstr ""
 "Haz clic en el icono \"eye\" junto a la capa original para desactivarlo, "
 "para que solo sea visible la :guilabel:`Pasted Layer`:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:83
+msgid ""
+"Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select "
+"File Type (By Extension)` as a :guilabel:`TIFF image`, select the "
+":file:`digitizing` folder and name it :file:`rautjarvi_map_green.tif`. "
+"Select no compression when asked."
+msgstr ""
+"Por último, seleccione :menuselection:`Archivo --> Exportar...`, ponga "
+":guilabel:`Seleccionar tipo de archivo (por extensión)` como "
+":guilabel:`imagen TIFF`, seleccione la carpeta :file:`digitizing` y nómbrela"
+" :file:`rautjarvi_map_green.tif`. Seleccione sin compresión cuando se le "
+"pregunte."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:88
 msgid ""
@@ -208,6 +263,23 @@ msgid ""
 msgstr ""
 "Como hiciste en la lección anterior, necesitas georeferenciar esta nueva "
 "imagen para ser capaz de utilizarla con el resto de tus datos."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:98
+msgid ""
+"Note that you don't need to digitize the ground control points anymore "
+"because this image is basically the same image as the original map image, as"
+" far as the Georeferencer tool is concerned. Here are some things you should"
+" remember:"
+msgstr ""
+"Tenga en cuenta que ya no necesita digitalizar los puntos de control del "
+"terreno porque esta imagen es básicamente la misma que la imagen del mapa "
+"original, en lo que respecta a la herramienta Georreferenciador. Aquí hay "
+"algunas cosas que debe recordar:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:102
+msgid "This image is also, of course, in ``KKJ / Finland zone 2`` CRS."
+msgstr ""
+"Esta imagen también está, por supuesto, en ``KKJ / Finlandia zona 2`` CRS."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:103
 msgid ""
@@ -263,6 +335,14 @@ msgstr ""
 "(Raster to Vector)` para vectorizar tus líneas verdes a polígonos. Si no "
 "recuerdas cómo, puedes repasarlo en el módulo 9.1.1."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:124
+msgid ""
+"Save as :file:`rautjarvi_green_polygon.shp` inside the :file:`digitizing` "
+"folder."
+msgstr ""
+"Guardar como :file:`rautjarvi_green_polygon.shp` dentro de la carpeta "
+":file:`digitizing`."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:126
 msgid ""
 "Zoom in and see what the polygons look like. You will get something like "
@@ -270,9 +350,39 @@ msgid ""
 msgstr ""
 "Amplía el zum y observa como se ven los polígonos. Obtendrás algo como esto:"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:133
+msgid ""
+"Next option to get points out of those polygons is to get their centroids:"
+msgstr ""
+"La siguiente opción para obtener puntos de esos polígonos es obtener sus "
+"centroides:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:135
+msgid "Open :menuselection:`Vector --> Geometry Tools --> Centroids...`."
+msgstr ""
+"Abrir :menuselection:`Vector --> Herramientas de geometría --> "
+"Centroides...`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:136
+msgid ""
+"Set :guilabel:`Input Layer` to |polygonLayer| "
+":guilabel:`rautjarvi_green_polygon` (the polygon layer you have just "
+"created)"
+msgstr ""
+"Establezca :guilabel:`Input Layer` a |polygonLayer| "
+":guilabel:`rautjarvi_green_polygon` (la capa poligonal que acabas de crear)"
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:433
 msgid "polygonLayer"
 msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:138
+msgid ""
+"Set :guilabel:`Centroids` output to :file:`green_centroids.shp` file within "
+"the folder :file:`digitizing`"
+msgstr ""
+"Establezca la salida :guilabel:`Centroids` en el archivo "
+":file:`green_centroids.shp` dentro de la carpeta :file:`digitizing`."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:427
 msgid "checkbox"

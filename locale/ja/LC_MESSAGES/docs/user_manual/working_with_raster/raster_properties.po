@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,6 +97,14 @@ msgstr "|temporal| :ref:`時系列 <raster_temporal>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:974
 msgid "temporal"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:29
+msgid "|elevationscale| :ref:`Elevation <raster_elevation>`"
+msgstr "|elevationscale| :ref:`標高 <raster_elevation>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:938
+msgid "elevationscale"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:30
@@ -1122,6 +1131,18 @@ msgstr ""
 "「最近傍（Nearest "
 "neighbour）」法を適用する場合、地図を拡大していくとピクセル化された構造となることがあります。このような見た目は、「バイリニア（Bilinear）」法もしくは「キュービック（Cubic）」法を使用すると改善することができます。これらの手法はシャープな縁をぼかして、結果として滑らかな画像が得られます。この手法は、例えばデジタル地形図のラスタ地図などに適用すると良いでしょう。"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:575
+msgid ""
+"|checkbox| :guilabel:`Early resampling`: allows to calculate the raster "
+"rendering at the provider level where the resolution of the source is known,"
+" and ensures a better zoom in rendering with QGIS custom styling. Really "
+"convenient for tile rasters loaded using an :ref:`interpretation method "
+"<interpretation>`."
+msgstr ""
+"|checkbox| :guilabel:`Early resampling`: "
+"ソースの解像度がわかっているプロバイダレベルでラスターレンダリングを計算することができ、QGISカスタムスタイルでのレンダリングでより良いズームが確保されます。ref:`interpretation"
+" method `を使用して読み込まれたタイルラスターにとても便利です。"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:586
 msgid "Transparency Properties"
 msgstr "透過性プロパティ"
@@ -1315,6 +1336,15 @@ msgstr ""
 msgid "mapIdentification"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:698
+msgid ""
+"You can also activate scale dependent visibility on a layer from within the "
+":guilabel:`Layers` panel: right-click on the layer and in the contextual "
+"menu, select :guilabel:`Set Layer Scale Visibility`."
+msgstr ""
+"レイヤの縮尺に応じた表示は、:guilabel:`レイヤ` パネルからも有効にすることもできます:　レイヤを右クリックし、コンテキストメニューから "
+":guilabel:`レイヤの縮尺表示を設定` を選択します。"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:703
 msgid ""
 ":guilabel:`Refresh layer at interval (seconds)`: set a timer to "
@@ -1383,9 +1413,51 @@ msgstr ""
 ":guilabel:`レイヤのみ再描画` "
 "：レイヤは新しいアニメーションフレーム毎に再描画されます。これは、レンダラーの設定に時間ベースの式の値を使用しているレイヤ（例：レンダラーの透明度をデータによって定義することで、ラスタレイヤをフェードイン/アウトする）に便利です。"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:755
+msgid "Elevation Properties"
+msgstr "標高プロパティ"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:768
+msgid "Raster Elevation Properties"
+msgstr "ラスタ標高プロパティ"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:770
+msgid ""
+"|unchecked| :guilabel:`Represents Elevation Surface`: whether the raster "
+"layer represents a height surface (e.g DEM) and the pixel values should be "
+"interpreted as elevations. You will need to fill in the :guilabel:`Band` to "
+"pick values from and can apply a :guilabel:`Scale` factor and an "
+":guilabel:`Offset`."
+msgstr ""
+"|unchecked| :guilabel:`標高サーフェスを表示`: "
+"ラスターレイヤーが標高面（DEMなど）を表し、ピクセル値が標高として解釈されるかどうかを指定します。また、 :guilabel:`スケール` "
+"ファクターと :guilabel:`オフセット` を適用することができます。"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:978
 msgid "unchecked"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:775
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls the rendering "
+":guilabel:`Style` the raster elevation will use when drawing a profile "
+"chart. It can be set as:"
+msgstr ""
+":guilabel:`断面図の外観`: 断面図を描く際に、ラスター標高が使用するレンダリングの :guilabel:`スタイル` "
+"を制御します。次のように設定できます："
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:779
+msgid ""
+"a profile :guilabel:`Line` with a :ref:`line style <vector_line_symbols>` "
+"applied"
+msgstr " :ref:`線のスタイル <vector_line_symbols>` を適用した断面図 :guilabel:`線`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:780
+msgid ""
+"a surface with :guilabel:`Fill below` and a corresponding :ref:`fill style "
+"<vector_fill_symbols>`"
+msgstr ""
+":guilabel:`下を塗りつぶす` と対応する :ref:`塗りつぶしスタイル <vector_fill_symbols>` を持つ表面"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:788
 msgid "Pyramids Properties"
@@ -1551,6 +1623,59 @@ msgstr "ラスタの「凡例」タブ"
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:894
 msgid "QGIS Server Properties"
 msgstr "QGIS サーバー"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:896
+msgid ""
+"The |overlay| :guilabel:`QGIS Server` tab helps you configure settings of "
+"the data when published by :ref:`QGIS Server <QGIS-Server-manual>`. The "
+"configuration concerns:"
+msgstr ""
+"|overlay| :guilabel:`QGISサーバー` タブでは、 :ref:`QGISサーバー <QGIS-Server-manual>` "
+"で公開されるデータの設定を行うことができます。設定内容は以下の通りです："
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:900
+msgid ""
+":guilabel:`Description`: provides information to describe the data, such as "
+":guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Summary`, a "
+":guilabel:`List of Keywords`,  and a :guilabel:`Data URL` whose "
+":guilabel:`Type` can be in ``text/html``, ``text/plain`` or "
+"``application/pdf``."
+msgstr ""
+":guilabel:`説明`: :guilabel:`短い名前`、:guilabel:`タイトル`、:guilabel:`要約`, "
+":guilabel:`キーワード`, :guilabel:`形式` が ``text/html``、``text/plain`` または "
+"``application/pdf`` である、:guilabel:`データURL` など、データを表す情報を提示します。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:904
+msgid ""
+":guilabel:`Attribution`: a :guilabel:`Title` and :guilabel:`URL` to identify"
+" who provides the data"
+msgstr ":guilabel:`帰属`: データの提供者を特定するための :guilabel:`タイトル` と :guilabel:`URL`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:906
+msgid ""
+":guilabel:`Metadata URL`: a list of :guilabel:`URL` for the metadata that "
+"can be of ``FGDC`` or ``TC211`` :guilabel:`Type`, and in ``text/plain`` or "
+"``text/xml`` :guilabel:`Format`"
+msgstr ""
+":guilabel:`メタデータURL`: ``FGDC`` または ``TC211`` :guilabel:`データ型` で、 "
+"``text/plain`` または ``text/xml`` :guilabel:`形式` であるメタデータの :guilabel:`URL` 一覧"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:909
+msgid ""
+":guilabel:`Legend URL`: a :guilabel:`URL` for the legend, in either "
+"``image/png`` or ``image/jpeg`` :guilabel:`Format`"
+msgstr ""
+":guilabel:`凡例URL`: 凡例の :guilabel:`URL` で、``image/png`` または ``image/jpeg`` "
+":guilabel:`形式` のいずれか"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:913
+msgid ""
+"When the raster layer you want to publish is already provided by a web "
+"service, further :ref:`properties <wms_server_properties>` are available for"
+" setting."
+msgstr ""
+"公開したいラスターレイヤーが既にWebサービスで提供されている場合、さらに :ref:`properties "
+"<wms_server_properties>` を設定することができます。"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:921
 msgid "QGIS Server in Raster Properties"

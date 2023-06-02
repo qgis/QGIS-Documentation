@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-04 17:03+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,6 +64,30 @@ msgstr ""
 msgid "Let's now dive into the process."
 msgstr "さあ、では集中して始めてみましょう。"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:27
+msgid ""
+"Documentation sources are stored using the git version control system and "
+"are available on GitHub at https://github.com/qgis/QGIS-Documentation. A "
+"list of issues to fix and features to explain can be found at "
+"https://github.com/qgis/QGIS-Documentation/issues."
+msgstr ""
+"ドキュメントのソースはgitバージョン管理システムを使って保存され、GitHubのhttps://github.com/qgis/QGIS-"
+"Documentation で公開されています。修正すべき問題や説明すべき機能の一覧は、https://github.com/qgis/QGIS-"
+"Documentation/issues にあります。"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:32
+msgid ""
+"If you are a first-time contributor and do not know where to start from, you"
+" may be interested in tackling our `welcoming issue reports "
+"<https://github.com/qgis/QGIS-Documentation/contribute>`_-."
+msgstr ""
+"初めて貢献される方で、何から始めたらいいかわからないという方は、`問題レポートへようこそ<https://github.com/qgis/QGIS-"
+"Documentation/contribute>`_ に取り組むのが面白いかもしれません。"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:36
+msgid "There are two main ways, not mutually exclusive, to modify the files:"
+msgstr "ファイルを修正するには、排他的ではない2つの方法があります:"
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:38
 msgid ":ref:`Using the GitHub web interface <github_interface>`"
 msgstr ":ref:`GitHub のウェブインタフェースを使用する <github_interface>`"
@@ -96,9 +121,20 @@ msgstr "変更がメインリポジトリに挿入されるようにプルリク
 msgid "create, update, or delete branches"
 msgstr "ブランチを作成、更新または削除する"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:53
+msgid ""
+"If you are not yet familiar with git and GitHub vocabulary, you may want to "
+"read the GitHub `Hello-world <https://docs.github.com/en/get-"
+"started/quickstart/hello-world>`_ project to learn some basic vocabulary and"
+" actions that will be used below."
+msgstr ""
+"もしあなたがgitやGitHubの語彙にまだ慣れていないなら、GitHubの `Hello-world "
+"<https://docs.github.com/en/get-started/quickstart/hello-world>`_ "
+"プロジェクトを読んで、以下で使用する基本的な語彙やアクションを学ぶとよいでしょう。"
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:57
 msgid "**If you are fixing a reported issue**"
-msgstr "**報告されたIssueをあなたが修正中なら**"
+msgstr "**報告されたissueを修正するとき**"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:59
 msgid ""
@@ -109,6 +145,10 @@ msgid ""
 msgstr ""
 "もしあなたが `issue <https://github.com/qgis/QGIS- Documentation / issues>`_ "
 "を修正するための変更を加えている最中なら、issueレポートにコメントをして、それをあなた自身に割り当ててください。これにより、複数の人が同じissueに取り組むことを防ぐことができます。"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:65
+msgid "Fork QGIS-Documentation"
+msgstr "QGISドキュメントをフォークする"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:67
 msgid ""
@@ -127,6 +167,10 @@ msgstr ""
 "`QGIS-Documentation のリポジトリ <https://github.com/qgis/QGIS-Documentation>`_ "
 "ページに移動して、右上隅の |githubFork| ボタンをクリックします。"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:667
+msgid "githubFork"
+msgstr "githubFork"
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:74
 msgid ""
 "In your GitHub account you will find a QGIS-Documentation repository "
@@ -140,13 +184,17 @@ msgstr ""
 "が作られていることと思います。このリポジトリは公式のQGIS-"
 "Documentationリポジトリのコピーです。あなたに完全な書込権限が与えられていて、公式のドキュメントに影響を与えることなく変更を加えることができます。"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:81
+msgid "Make changes"
+msgstr "変更を加える"
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:83
 msgid ""
 "There are different ways to contribute to QGIS documentation. We show them "
 "separately below, but you can switch from one process to the other without "
 "any harm."
 msgstr ""
-"QGISドキュメンテーションに貢献するにはいくつかの異なった方法があります。以下ではそれらを別々に示しますが、あるプロセスから別のプロセスに切り替えることに何ら問題はありません。"
+"QGISドキュメントに貢献するにはいくつかの異なった方法があります。以下ではそれらを別々に示しますが、あるプロセスから別のプロセスに切り替えることに何ら問題はありません。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:90
 msgid "Alternative 1: Use the ``Edit on GitHub`` shortcut"
@@ -217,6 +265,10 @@ msgid ""
 msgstr ""
 "|githubBranch| をクリックして `` patch-xxx`` ブランチを探し、このブランチを選択します。 |githubBranch| "
 "ボタンが :guilabel:`Branch: patch-xxx` に変わります。"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:659
+msgid "githubBranch"
+msgstr "githubBranch"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:120
 msgid "Jump down to :ref:`Modify files <modify_files>` below."

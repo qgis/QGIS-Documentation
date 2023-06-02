@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-05-29 08:40+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
 "Last-Translator: Transifex Bot <>, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "|basic| The GIS Process"
 msgstr "|basic| Процесс GIS"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:491
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:489
 msgid "basic"
 msgstr ""
 
@@ -256,7 +256,7 @@ msgstr ""
 "Кликните правой кнопкой мыши на слой ``roads`` и выберите "
 ":guilabel:`Filter...`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:104
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:103
 msgid ""
 "In the dialog that pops up we filter these features with the following "
 "expression::"
@@ -264,7 +264,7 @@ msgstr ""
 "В диалоговом окне, которое появится, мы должны отфильтровать эти объекты с "
 "помощью следующего выражения::"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:109
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:107
 msgid ""
 "The concatenation of the two operators ``NOT`` and ``IN`` excludes all the "
 "features that have these attribute values in the ``highway`` field."
@@ -272,7 +272,7 @@ msgstr ""
 "Объединение двух команд ``NOT`` и ``IN`` исключает все объекты, которые "
 "имеют эти атрибуты значений в поле ``highway``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:110
 msgid ""
 "``IS NOT NULL`` combined with the ``AND`` operator excludes roads with no "
 "value in the ``highway`` field."
@@ -280,7 +280,7 @@ msgstr ""
 "``IS NOT NULL`` в сочетании с ``AND`` исключает дороги, не имеющие значения "
 "в поле ``highway``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:116
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
 msgid ""
 "Note the |indicatorFilter| icon next to the :guilabel:`roads` layer. It "
 "helps you remember that this layer has a filter activated, so some features "
@@ -290,19 +290,19 @@ msgstr ""
 "поможет вам запомнить, что на этом слое активирован фильтр и потому "
 "некоторые функции могут быть недоступны в проекте."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:494
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:492
 msgid "indicatorFilter"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:121
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:117
 msgid "The map with all the data should look like the following one:"
 msgstr "Карта со всеми данными должна выглядеть следующим образом:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:128
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:124
 msgid "|basic| |TY| Convert Layers' CRS"
 msgstr "|basic| Попробуйте сами: Сконвертировать ССК слоев"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:130
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:126
 msgid ""
 "Because we are going to be measuring distances within our layers, we need to"
 " change the layers' CRS. To do this, we need to select each layer in turn, "
@@ -314,7 +314,7 @@ msgstr ""
 "сохранить слой по-новому с нашей новой проекцией, а затем импортировать этот"
 " новый слой на нашу карту."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:135
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:131
 msgid ""
 "You have many different options, e.g. you can export each layer as an ESRI "
 "Shapefile format dataset, you can append the layers to an existing "
@@ -330,7 +330,7 @@ msgstr ""
 "опцию, чтобы :file:`training_data.gpkg` остался чистым. Вы сможете выбрать "
 "для себя свой лучший рабочий процесс."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:139
 msgid ""
 "In this example, we are using the *WGS 84 / UTM zone 34S* CRS, but you "
 "should use a UTM CRS which is more appropriate for your region."
@@ -338,18 +338,18 @@ msgstr ""
 "На этом примере мы используем ССК WGS 84 / UTM zone 34S, но вы должны "
 "использовать UTM ССК, который больше подходит для вашего региона."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:147
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
 msgid ""
 "Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
 msgstr ""
 "Кликните правой кнопкой мыши на слой :guilabel:`roads` в панели "
 ":guilabel:`Layers`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:149
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:145
 msgid "Click :guilabel:`Export --> Save Features As...`"
 msgstr "Кликните :guilabel:`Export --> Save Features As...`"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:150
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:146
 msgid ""
 "In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`"
 " as :guilabel:`Format`"
@@ -357,7 +357,7 @@ msgstr ""
 "В диалоговом окне :guilabel:`Save Vector Layer As` выберите "
 ":guilabel:`GeoPackage` в качестве :guilabel:`Format`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:152
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:148
 msgid ""
 "Click on :guilabel:`...` for the :guilabel:`File name`, and name the new "
 "GeoPackage ``vector_analysis``"
@@ -365,19 +365,19 @@ msgstr ""
 "Кликните на :guilabel:`...` для :guilabel:`File name` и назовите новый "
 "GeoPackage ``vector_analysis``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:154
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:150
 msgid "Change the :guilabel:`Layer name` to ``roads_34S``"
 msgstr "Изменить :guilabel:`Layer name` на ``roads_34S``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:155
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:151
 msgid "Change the :guilabel:`CRS` to *WGS 84 / UTM zone 34S*"
 msgstr "Измените :guilabel:`CRS` на *WGS 84 / UTM зону 34S*."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:156
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:152
 msgid "Click on :guilabel:`OK`:"
 msgstr "Кликните на :guilabel:`OK`:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:161
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:157
 msgid ""
 "This will create the new GeoPackage database and add the ``roads_34S`` "
 "layer."
@@ -385,25 +385,7 @@ msgstr ""
 "Это позволит создать новую базу данных GeoPackage и добавить слой "
 "``roads_34S``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:164
-msgid ""
-"Repeat this process for each layer, creating a new layer in the "
-":file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the "
-"original name and removing each of the old layers from the project."
-msgstr ""
-"Повторите этот процесс для каждого слоя, создав новый слой в "
-":file:`vector_analysis.gpkg` файле GeoPackage с ``_34S`` как приложение к "
-"исходному названию и убрав каждый из старых слоев из проекта."
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:169
-msgid ""
-"When you choose to save a layer to an existing GeoPackage, QGIS will "
-"**append** that layer to the GeoPackage."
-msgstr ""
-"Когда вы решите сохранить слой в существующий GeoPackage, QGIS **добавит** "
-"этот слой в GeoPackage."
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:172
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:170
 msgid ""
 "Once you have completed the process for all the layers, right click on any "
 "layer and click :guilabel:`Zoom to layer extent` to focus the map to the "
@@ -413,7 +395,7 @@ msgstr ""
 " кнопкой мыши на любой слой и нажать :guilabel:`Zoom to layer extent`, чтобы"
 " сфокусировать карту на местность, которая вас интересует."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:176
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:174
 msgid ""
 "Now that we have converted OSM data to a UTM projection, we can begin our "
 "calculations."
@@ -421,16 +403,16 @@ msgstr ""
 "Теперь, когда мы преобразовали данные OSM в Универсальную поперечную "
 "проекцию Меркатора (УППМ), мы можем начать наши вычисления."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:178
 msgid "|basic| |FA| Analyzing the Problem: Distances From Schools and Roads"
 msgstr "|basic| Идем дальше: Анализируем проблемы: расстояние от школ и дорог"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:182
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
 msgid "QGIS allows you to calculate distances between any vector object."
 msgstr ""
 "QGIS позволяет рассчитывать расстояния между любыми векторными объектами."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:184
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:182
 msgid ""
 "Make sure that only the ``roads_34S`` and ``buildings_34S`` layers are "
 "visible (to simplify the map while you're working)"
@@ -438,7 +420,7 @@ msgstr ""
 "Удостоверьтесь в том, что только слои ``roads_34S`` и ``buildings_34S`` были"
 " видны (для упрощения карты во время работы)."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:186
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:184
 msgid ""
 "Click on the :menuselection:`Processing --> Toolbox` to open the analytical "
 "*core* of QGIS. Basically, **all** algorithms (for vector **and** raster "
@@ -448,7 +430,7 @@ msgstr ""
 "аналитическое **ядро** ​​QGIS. В основном, в этом наборе инструментов "
 "имеются **все** алгоритмы (для векторного **и** растрового анализа)."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:190
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:188
 msgid ""
 "We start by calculating the area around the ``roads_34S`` by using the "
 ":guilabel:`Buffer` algorithm. You can find it in the :menuselection:`Vector "
@@ -458,7 +440,7 @@ msgstr ""
 " :guilabel:`Buffer`. Вы можете найти его в группе :menuselection:`Vector "
 "Geometry`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:197
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:195
 msgid ""
 "Or you can type ``buffer`` in the search menu in the upper part of the "
 "toolbox:"
@@ -466,11 +448,11 @@ msgstr ""
 "Или вы можете набрать в меню поиска ``buffer`` в верхней части панели "
 "инструментов:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:203
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:201
 msgid "Double click on it to open the algorithm dialog"
 msgstr "Два раза кликните по нему, чтобы открыть диалоговое окно алгоритма."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:204
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:202
 msgid ""
 "Select ``roads_34S`` as :guilabel:`Input layer`, set :guilabel:`Distance` to"
 " 50 and use the default values for the rest of the parameters."
@@ -479,7 +461,7 @@ msgstr ""
 ":guilabel:`Distance` до 50 и используйте значения по умолчанию для остальных"
 " параметров."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:211
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:209
 msgid ""
 "The default :guilabel:`Distance` is in meters because our input dataset is "
 "in a Projected Coordinate System that uses meter as its basic measurement "
@@ -492,7 +474,7 @@ msgstr ""
 "использовать поле со списком, чтобы выбрать другие проецируемые единицы, "
 "такие как километры, ярды и т.д."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:217
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:215
 msgid ""
 "If you are trying to make a buffer on a layer with a Geographical Coordinate"
 " System, Processing will warn you and suggest to reproject the layer to a "
@@ -502,7 +484,7 @@ msgstr ""
 " система при обработке предупредит вас и предложит перепроецировать слой в "
 "метрическую систему координат."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:221
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:219
 msgid ""
 "By default, *Processing* creates temporary layers and adds them to the "
 ":guilabel:`Layers` panel. You can also append the result to the GeoPackage "
@@ -512,32 +494,32 @@ msgstr ""
 "панель :guilabel:`Layers`. Вы также можете приложить результат в базу данных"
 " GeoPackage:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:225
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:223
 msgid ""
 "Clicking on the :guilabel:`...` button and choose :guilabel:`Save to "
 "GeoPackage...`"
 msgstr ""
 "Нажав на кнопку :guilabel:`...` и выбрав :guilabel:`Save to GeoPackage...`"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:227
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:225
 msgid "Naming the new layer ``roads_buffer_50m``"
 msgstr "Назвав новый слой ``roads_buffer_50m``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:228
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:226
 msgid "Saving it in the :file:`vector_analysis.gpkg` file"
 msgstr "Сохранив его в файле :file:`vector_analysis.gpkg`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:233
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:231
 msgid "Click on :guilabel:`Run`, and then close the :guilabel:`Buffer` dialog"
 msgstr ""
 "Кликните на :guilabel:`Run`, а затем закройте диалоговой окно  "
 ":guilabel:`Buffer`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:236
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:234
 msgid "Now your map will look something like this:"
 msgstr "Ваша карта теперь будет выглядеть примерно так:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:241
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:239
 msgid ""
 "If your new layer is at the top of the :guilabel:`Layers` list, it will "
 "probably obscure much of your map, but this gives you all the areas in your "
@@ -547,7 +529,7 @@ msgstr ""
 " скорее всего, закроет большую часть вашей карты, но вы сможете увидеть все "
 "местности в вашем регионе, которые находятся на расстоянии в 50 м от дороги."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:245
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:243
 msgid ""
 "Notice that there are distinct areas within your buffer, which correspond to"
 " each individual road. To get rid of this problem:"
@@ -556,7 +538,7 @@ msgstr ""
 "соответствующие каждой отдельной дороге. Чтобы устранить эту проблему "
 "необходимо:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:248
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:246
 msgid ""
 "Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer with"
 " :guilabel:`Dissolve results` enabled."
@@ -564,16 +546,16 @@ msgstr ""
 "Убрать надпись :guilabel:`roads_buffer_50m` в слое и снова создать буфер с "
 "включённой :guilabel:`Dissolve results` командой."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:254
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:252
 msgid "Save the output as :guilabel:`roads_buffer_50m_dissolved`"
 msgstr "Сохраните выход как :guilabel:`roads_buffer_50m_dissolved`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:255
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:253
 msgid "Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog"
 msgstr ""
 "Кликните на :guilabel:`Run` и закройте диалоговой окно :guilabel:`Buffer`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:257
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:255
 msgid ""
 "Once you have added the layer to the :guilabel:`Layers` panel, it will look "
 "like this:"
@@ -581,11 +563,11 @@ msgstr ""
 "После того, как вы добавили слой в панель :guilabel:`Layers`, она будет "
 "выглядеть так:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:263
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:261
 msgid "Now there are no unnecessary subdivisions."
 msgstr "Теперь лишних делений уже нет."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:265
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:263
 msgid ""
 "The *Short Help* on the right side of the dialog explains how the algorithm "
 "works. If you need more information, just click on the :guilabel:`Help` "
@@ -596,21 +578,21 @@ msgstr ""
 " на кнопку :guilabel:`Help` в нижней части, чтобы открыть более подробное "
 "руководство по алгоритму."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:273
 msgid "|basic| |TY| Distance from schools"
 msgstr "|basic| Попробуйте сами: Расстояние от школ"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:277
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
 msgid "Use the same approach as above and create a buffer for your schools."
 msgstr ""
 "Следуйте тому же подходу, который описан выше, и создайте буфер для ваших "
 "школ."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:308
 msgid "|basic| |FA| Overlapping Areas"
 msgstr "|basic| Идем дальше: Зоны перекрытия"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:312
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
 msgid ""
 "Now we have identified areas where the road is less than 50 meters away and "
 "areas where there is a school within 1 km (direct line, not by road). But "
@@ -626,7 +608,7 @@ msgstr ""
 "использовать инструмент :guilabel:`Intersect`. Вы сможете найти его в группе"
 " :menuselection:`Vector Overlay` в :guilabel:`Processing Toolbox`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:321
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:319
 msgid ""
 "Use the two buffer layers as :guilabel:`Input layer` and :guilabel:`Overlay "
 "layer`, choose :file:`vector_analysis.gpkg` GeoPackage in "
@@ -639,11 +621,11 @@ msgstr ""
 "``road_school_buffers_intersect``. Остальное оставьте как предлагается (по "
 "умолчанию)."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:328
 msgid "Click :guilabel:`Run`."
 msgstr "Кликните на кнопку :guilabel:`Run`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:332
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
 msgid ""
 "In the image below, the blue areas are where both of the distance criteria "
 "are satisfied."
@@ -651,7 +633,7 @@ msgstr ""
 "На изображении ниже местности, окрашенные синим цветом это те местности, где"
 " оба соответствия по критериям расстояния соблюдены."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:338
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:336
 msgid ""
 "You may remove the two buffer layers and only keep the one that shows where "
 "they overlap, since that's what we really wanted to know in the first place:"
@@ -660,11 +642,11 @@ msgstr ""
 "показывает, где они перекрываются, так как мы действительно хотели это "
 "выяснить в первую очередь:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:346
 msgid "|basic| |FA| Extract the Buildings"
 msgstr "|basic| Идем дальше: Извлечение зданий"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:350
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
 msgid ""
 "Now you've got the area that the buildings must overlap. Next, you want to "
 "extract the buildings in that area."
@@ -672,7 +654,7 @@ msgstr ""
 "Теперь у вас есть местность, на которой здания должны перекрывать друг "
 "друга. Теперь вам надо извлечь здания в этой местности."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:353
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:351
 msgid ""
 "Look for the menu entry :menuselection:`Vector Selection --> Extract by "
 "location` within the *Processing Toolbox*"
@@ -680,7 +662,7 @@ msgstr ""
 "Ищите пункт в меню :menuselection:`Vector Selection --> Extract by location`"
 " в *Панели инструментов обработки*."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:356
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:354
 msgid ""
 "Select ``buildings_34S`` in :guilabel:`Extract features from`. Check "
 ":guilabel:`intersect` in :guilabel:`Where the features (geometric "
@@ -694,11 +676,11 @@ msgstr ""
 " the features from`. Сохраните в :file:`vector_analysis.gpkg` и назовите "
 "слой ``well_located_houses``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:367
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:365
 msgid "Click :guilabel:`Run` and close the dialog"
 msgstr "Кликните на кнопку :guilabel:`Run` и закройте диалоговое окно."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:368
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
 msgid ""
 "You will probably find that not much seems to have changed. If so, move the "
 ":guilabel:`well_located_houses` layer to the top of the layers list, then "
@@ -708,13 +690,13 @@ msgstr ""
 " слой :guilabel:`well_located_houses` в верхнюю часть списка слоев, затем "
 "увеличьте масштаб."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
 msgid ""
 "The red buildings are those which match our criteria, while the buildings in"
 " green are those which do not."
 msgstr "Здания красным цветом отвечают нашим критериям, а зеленым - нет."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:377
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
 msgid ""
 "Now you have two separated layers and can remove ``buildings_34S`` from the "
 "layer list."
@@ -722,15 +704,15 @@ msgstr ""
 "Теперь у вас два отдельных слоя и вы сможете убрать ``buildings_34S`` из "
 "списка слоев."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:380
 msgid "|moderate| |TY| Further Filter our Buildings"
 msgstr "|moderate| Попробуйте сами: Дальше отфильтровать наши здания"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:497
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:495
 msgid "moderate"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:384
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
 msgid ""
 "We now have a layer which shows us all the buildings within 1km of a school "
 "and within 50m of a road. We now need to reduce that selection to only show "
@@ -740,7 +722,7 @@ msgstr ""
 " школы и в пределах 50 м от дороги. Нам теперь надо сократить этот отбор и "
 "показать только те здания, которые находятся в пределах 500 м от ресторана."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:389
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
 msgid ""
 "Using the processes described above, create a new layer called "
 ":guilabel:`houses_restaurants_500m` which further filters your "
@@ -752,11 +734,11 @@ msgstr ""
 "профильтрует ваш слой :guilabel:`well_located_houses` для того, чтобы "
 "показать только те, которые находятся в пределах 500 м от ресторана."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
 msgid "|basic| |FA| Select Buildings of the Right Size"
 msgstr "|basic| Идем дальше: Выбираем здания подходящего размера"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:423
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
 msgid ""
 "To see which buildings are of the correct size (more than 100 square "
 "meters), we need to calculate their size."
@@ -764,7 +746,7 @@ msgstr ""
 "Чтобы увидеть, какие здания имеют правильный размер (более 100 квадратных "
 "метров), нам надо рассчитать их размер."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:426
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
 msgid ""
 "Select the :guilabel:`houses_restaurants_500m` layer and open the *Field "
 "Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
@@ -774,11 +756,11 @@ msgstr ""
 "поля*, нажав на кнопку |calculateField| :sup:`Open Field Calculator` на "
 "главной панели инструментов или в окне таблицы."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:492
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:490
 msgid "calculateField"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:430
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:428
 msgid ""
 "Select :guilabel:`Create a new field`, set the :guilabel:`Output field name`"
 " to ``AREA``, choose :guilabel:`Decimal number (real)` as :guilabel:`Output "
@@ -789,14 +771,14 @@ msgstr ""
 ":guilabel:`Output field type`, и выберите ``$area`` из группы "
 ":menuselection:`Geometry`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:439
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:437
 msgid ""
 "The new field ``AREA`` will contain the area of each building in square "
 "meters."
 msgstr ""
 "В новом поле ``AREA`` будет площадь каждого здания в квадратных метрах."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:441
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:439
 msgid ""
 "Click :guilabel:`OK`. The ``AREA`` field has been added at the end of the "
 "attribute table."
@@ -804,7 +786,7 @@ msgstr ""
 "Кликните на :guilabel:`OK`. Поле ``AREA`` добавлено в конце таблицы "
 "атрибутов."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:442
 msgid ""
 "Click the |toggleEditing| :sup:`Toggle Editing` button to finish editing, "
 "and save your edits when prompted."
@@ -813,11 +795,11 @@ msgstr ""
 "чтобы завершить редактирование и сохраните ваши изменения при появлении "
 "запроса."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:498
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:496
 msgid "toggleEditing"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:446
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
 msgid ""
 "In the :menuselection:`Source` tab of the layer properties, set the "
 ":guilabel:`Provider Feature Filter` to ``\"AREA >= 100``."
@@ -825,11 +807,11 @@ msgstr ""
 "Во вкладке :menuselection:`Source` в свойствах слоя установите "
 ":guilabel:`Provider Feature Filter` на ``\"AREA >= 100``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:450
 msgid "Click :guilabel:`OK`."
 msgstr "Кликните на кнопку :guilabel:`OK`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:454
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
 msgid ""
 "Your map should now only show you those buildings which match our starting "
 "criteria and which are more than 100 square meters in size."
@@ -837,11 +819,11 @@ msgstr ""
 "Ваша карта теперь должна показывать только те здания, которые соответствуют "
 "нашим первоначальным критериям и имеют размер более 100 квадратных метров."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:457
 msgid "|basic| |TY|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:461
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
 msgid ""
 "Save your solution as a new layer, using the approach you learned above for "
 "doing so. The file should be saved within the same GeoPackage database, with"
@@ -851,11 +833,11 @@ msgstr ""
 "выше. Файл должен быть сохранен внутри той же базы данных GeoPackage с "
 "названием ``solution``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:465
 msgid "|IC|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:469
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
 msgid ""
 "Using the GIS problem solving approach together with QGIS vector analysis "
 "tools, you were able to solve a problem with multiple criteria quickly and "
@@ -864,11 +846,11 @@ msgstr ""
 "Следуя подходу решения проблем GIS вместе с инструментами векторного анализа"
 " QGIS, вы смогли быстро и легко решить проблему с несколькими критериями."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:472
 msgid "|WN|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:476
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
 msgid ""
 "In the next lesson, we will look at how to calculate the shortest distance "
 "along roads from one point to another."

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-05-29 08:40+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
 "Last-Translator: Transifex Bot <>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -47,7 +47,7 @@ msgstr "**このレッスンの目標:** 質問を尋ね、分析ツールを使
 msgid "|basic| The GIS Process"
 msgstr "|basic| GISプロセス"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:491
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:489
 msgid "basic"
 msgstr ""
 
@@ -228,13 +228,13 @@ msgstr "さらに、OSMのデータはどこでも更新されるとは限らな
 msgid "Right click on the ``roads`` layer and choose :guilabel:`Filter...`."
 msgstr "``roads``レイヤを右クリックし、 :guilabel:`フィルタ...` を選択します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:104
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:103
 msgid ""
 "In the dialog that pops up we filter these features with the following "
 "expression::"
 msgstr "ポップアップするダイアログで、これらの地物を次の式でフィルタリングします::"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:109
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:107
 msgid ""
 "The concatenation of the two operators ``NOT`` and ``IN`` excludes all the "
 "features that have these attribute values in the ``highway`` field."
@@ -242,14 +242,14 @@ msgstr ""
 "``NOT`` と ``IN`` の2つの演算子を連結すると、 ``highway`` "
 "フィールドにこれらの属性値を持つすべての地物を除外することができます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:110
 msgid ""
 "``IS NOT NULL`` combined with the ``AND`` operator excludes roads with no "
 "value in the ``highway`` field."
 msgstr ""
 "``IS NOT NULL`` と ``AND`` 演算子を組み合わせると、 ``highway`` フィールドに値がない道路は除外されます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:116
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
 msgid ""
 "Note the |indicatorFilter| icon next to the :guilabel:`roads` layer. It "
 "helps you remember that this layer has a filter activated, so some features "
@@ -258,19 +258,19 @@ msgstr ""
 ":guilabel:`roads` レイヤの横にある |indicatorFilter| "
 "アイコンに注目してください。このレイヤはフィルタが有効になっているので、プロジェクトで利用できない地物があることを思い出すのに役立ちます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:494
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:492
 msgid "indicatorFilter"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:121
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:117
 msgid "The map with all the data should look like the following one:"
 msgstr "すべてのデータが入った地図は、次のように表示されます:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:128
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:124
 msgid "|basic| |TY| Convert Layers' CRS"
 msgstr "|basic| |TY| レイヤーCRSの変換"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:130
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:126
 msgid ""
 "Because we are going to be measuring distances within our layers, we need to"
 " change the layers' CRS. To do this, we need to select each layer in turn, "
@@ -280,7 +280,7 @@ msgstr ""
 "レイヤ内の距離を測定するつもりなので、レイヤの CRS "
 "を変更する必要があります。これを行うには、各レイヤを順番に選択し、新しい投影法で新しいレイヤに保存し、その新しいレイヤをマップにインポートする必要があります。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:135
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:131
 msgid ""
 "You have many different options, e.g. you can export each layer as an ESRI "
 "Shapefile format dataset, you can append the layers to an existing "
@@ -294,23 +294,23 @@ msgstr ""
 "ファイルを作成し、そこに新たに再投影したレイヤで埋め尽くしたりすることが可能です。ここでは、最後の方法を紹介しますので、 "
 ":file:`training_data.gpkg` はきれいなままです。ご自分に合ったワークフローを自由に選択してください。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:139
 msgid ""
 "In this example, we are using the *WGS 84 / UTM zone 34S* CRS, but you "
 "should use a UTM CRS which is more appropriate for your region."
 msgstr ""
 "この例では、*WGS 84 / UTM zone 34S* CRSを使用していますが、あなたの地域に適したUTM CRSを使用する必要があります。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:147
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
 msgid ""
 "Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
 msgstr ":guilabel:`レイヤ` パネルで :guilabel:`roads` レイヤを右クリックします"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:149
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:145
 msgid "Click :guilabel:`Export --> Save Features As...`"
 msgstr ":guilabel:`エクスポート --> 新規ファイルに地物を保存...` をクリックします"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:150
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:146
 msgid ""
 "In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`"
 " as :guilabel:`Format`"
@@ -318,7 +318,7 @@ msgstr ""
 ":guilabel:`名前をつけてベクタレイヤを保存` ダイアログで、 :guilabel:`GeoPackage` を :guilabel:`形式` "
 "として選択します"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:152
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:148
 msgid ""
 "Click on :guilabel:`...` for the :guilabel:`File name`, and name the new "
 "GeoPackage ``vector_analysis``"
@@ -326,41 +326,25 @@ msgstr ""
 ":guilabel:`...` の :guilabel:`ファイル名` をクリックし、新しい GeoPackage の名前を "
 "``vector_analysis`` にします"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:154
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:150
 msgid "Change the :guilabel:`Layer name` to ``roads_34S``"
 msgstr ":guilabel:`レイヤ名` を ``roads_34S`` に変更します"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:155
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:151
 msgid "Change the :guilabel:`CRS` to *WGS 84 / UTM zone 34S*"
 msgstr ":guilabel:`CRS` を *WGS 84 / UTM zone 34S* に変更します"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:156
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:152
 msgid "Click on :guilabel:`OK`:"
 msgstr ":guilabel:`OK` をクリックします:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:161
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:157
 msgid ""
 "This will create the new GeoPackage database and add the ``roads_34S`` "
 "layer."
 msgstr "これにより、新しいGeoPackageデータベースが作成され、``roads_34S`` レイヤが追加されます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:164
-msgid ""
-"Repeat this process for each layer, creating a new layer in the "
-":file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the "
-"original name and removing each of the old layers from the project."
-msgstr ""
-"この作業を各レイヤに対して繰り返してください。:file:`vector_analysis.gpkg` GeoPackage ファイルに元の名前の後に "
-"``_34S`` を付けた新しいレイヤを作成し、プロジェクトから古い各レイヤを削除します。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:169
-msgid ""
-"When you choose to save a layer to an existing GeoPackage, QGIS will "
-"**append** that layer to the GeoPackage."
-msgstr ""
-"既存の GeoPackage にレイヤを保存することを選択すると、QGIS はそのレイヤを GeoPackage に **追加** します。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:172
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:170
 msgid ""
 "Once you have completed the process for all the layers, right click on any "
 "layer and click :guilabel:`Zoom to layer extent` to focus the map to the "
@@ -369,28 +353,28 @@ msgstr ""
 "すべてのレイヤの処理が完了したら、任意のレイヤを右クリックして :guilabel:`レイヤの領域にズーム` "
 "をクリックすると、地図が関心域にフォーカスされます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:176
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:174
 msgid ""
 "Now that we have converted OSM data to a UTM projection, we can begin our "
 "calculations."
 msgstr "さて、OSMデータをUTM投影に変換したので、計算を始められます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:178
 msgid "|basic| |FA| Analyzing the Problem: Distances From Schools and Roads"
 msgstr "|basic| |FA| 問題の分析:学校と道路からの距離"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:182
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
 msgid "QGIS allows you to calculate distances between any vector object."
 msgstr "QGISでは、任意のベクタオブジェクト間の距離を計算することができます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:184
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:182
 msgid ""
 "Make sure that only the ``roads_34S`` and ``buildings_34S`` layers are "
 "visible (to simplify the map while you're working)"
 msgstr ""
 "``roads_34S`` と ``buildings_34S`` のレイヤのみが表示されていることを確認します（作業中の地図を扱い易くするため）"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:186
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:184
 msgid ""
 "Click on the :menuselection:`Processing --> Toolbox` to open the analytical "
 "*core* of QGIS. Basically, **all** algorithms (for vector **and** raster "
@@ -399,7 +383,7 @@ msgstr ""
 ":menuselection:`プロセシング --> ツールボックス` をクリックして、QGISの解析の *コア* を開きます。基本的に、 "
 "**すべての** アルゴリズム（ベクタ **および** ラスタ分析）がこのツールボックスで利用可能です。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:190
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:188
 msgid ""
 "We start by calculating the area around the ``roads_34S`` by using the "
 ":guilabel:`Buffer` algorithm. You can find it in the :menuselection:`Vector "
@@ -408,24 +392,24 @@ msgstr ""
 "まずは :guilabel:`Buffer` アルゴリズムを使用して ``roads_34S`` の周囲の領域を計算します。このアルゴリズムは "
 ":menuselection:`ベクタジオメトリ` グループで見つけることができます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:197
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:195
 msgid ""
 "Or you can type ``buffer`` in the search menu in the upper part of the "
 "toolbox:"
 msgstr "または、ツールボックスの上部にある検索メニューに ``バッファ`` と入力してください:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:203
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:201
 msgid "Double click on it to open the algorithm dialog"
 msgstr "ダブルクリックしてアルゴリズムダイアログを開きます"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:204
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:202
 msgid ""
 "Select ``roads_34S`` as :guilabel:`Input layer`, set :guilabel:`Distance` to"
 " 50 and use the default values for the rest of the parameters."
 msgstr ""
 "入力レイヤとして ``roads_34S`` を選択し、 :guilabel:`距離` を50に設定し、残りのパラメータは既定値を使用します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:211
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:209
 msgid ""
 "The default :guilabel:`Distance` is in meters because our input dataset is "
 "in a Projected Coordinate System that uses meter as its basic measurement "
@@ -435,14 +419,14 @@ msgstr ""
 "既定の :guilabel:`距離` "
 "はメートル単位です。これは、入力データセットが、メートルを基本的な測定単位として使用する投影座標系なためです。コンボボックスを使って、キロメートルやヤードなど、他の投影単位を選択することができます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:217
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:215
 msgid ""
 "If you are trying to make a buffer on a layer with a Geographical Coordinate"
 " System, Processing will warn you and suggest to reproject the layer to a "
 "metric Coordinate System."
 msgstr "地理座標系を持つレイヤにバッファを作成しようとすると、プロセシングは警告を発し、メトリック座標系にレイヤーを再投影するよう提案します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:221
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:219
 msgid ""
 "By default, *Processing* creates temporary layers and adds them to the "
 ":guilabel:`Layers` panel. You can also append the result to the GeoPackage "
@@ -451,29 +435,29 @@ msgstr ""
 "既定で *プロセシング* は一時的なレイヤを作成し、それらを :guilabel:`レイヤ` パネルに追加します。また、その結果を GeoPackage"
 " データベースに追加することもできます:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:225
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:223
 msgid ""
 "Clicking on the :guilabel:`...` button and choose :guilabel:`Save to "
 "GeoPackage...`"
 msgstr ":guilabel:`...` ボタンをクリックして、 :guilabel:`GeoPackageに保存...` を選択します"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:227
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:225
 msgid "Naming the new layer ``roads_buffer_50m``"
 msgstr "新しいレイヤの名前 ``roads_buffer_50m`` にします"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:228
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:226
 msgid "Saving it in the :file:`vector_analysis.gpkg` file"
 msgstr "これを :file:`vector_analysis.gpkg` ファイルに保存します"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:233
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:231
 msgid "Click on :guilabel:`Run`, and then close the :guilabel:`Buffer` dialog"
 msgstr ":guilabel:`実行` をクリックし、次に :guilabel:`バッファ` ダイアログを閉じます"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:236
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:234
 msgid "Now your map will look something like this:"
 msgstr "地図は次のようになっているでしょう："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:241
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:239
 msgid ""
 "If your new layer is at the top of the :guilabel:`Layers` list, it will "
 "probably obscure much of your map, but this gives you all the areas in your "
@@ -482,13 +466,13 @@ msgstr ""
 "新しいレイヤが :guilabel:`レイヤ` "
 "リストの一番上にある場合、おそらく地図の大部分が見えなくなりますが、これで地域内の道路から50m以内のすべての地域が表示されます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:245
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:243
 msgid ""
 "Notice that there are distinct areas within your buffer, which correspond to"
 " each individual road. To get rid of this problem:"
 msgstr "バッファの中に、それぞれの道路に対応する明確な地域があることに注意してください。この問題を解消するために;"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:248
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:246
 msgid ""
 "Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer with"
 " :guilabel:`Dissolve results` enabled."
@@ -496,25 +480,25 @@ msgstr ""
 ":guilabel:`roads_buffer_50m` レイヤのチェックを外し、 :guilabel:`結果を融合する` "
 "を有効にしてバッファを作成し直します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:254
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:252
 msgid "Save the output as :guilabel:`roads_buffer_50m_dissolved`"
 msgstr "出力を :guilabel:`roads_buffer_50m_dissolved` という名前で保存します"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:255
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:253
 msgid "Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog"
 msgstr ":guilabel:`実行` をクリックして、 :guilabel:`バッファ` ダイアログを閉じます"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:257
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:255
 msgid ""
 "Once you have added the layer to the :guilabel:`Layers` panel, it will look "
 "like this:"
 msgstr "レイヤを :guilabel:`レイヤ` パネルに追加すると、次のような表示になります:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:263
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:261
 msgid "Now there are no unnecessary subdivisions."
 msgstr "今不要な下位区分はありません。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:265
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:263
 msgid ""
 "The *Short Help* on the right side of the dialog explains how the algorithm "
 "works. If you need more information, just click on the :guilabel:`Help` "
@@ -523,15 +507,15 @@ msgstr ""
 "ダイアログの右側にある *Short Help* は、このアルゴリズムがどのように動作するかを説明しています。より詳しい情報が必要な場合は、下部の "
 ":guilabel:`ヘルプ` ボタンをクリックすると、アルゴリズムのより詳細なガイドが表示されます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:273
 msgid "|basic| |TY| Distance from schools"
 msgstr "|basic| |TY| 学校からの距離"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:277
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
 msgid "Use the same approach as above and create a buffer for your schools."
 msgstr "上記と同じアプローチを使用し、学校のためのバッファを作成します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:279
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:277
 msgid ""
 "It shall be ``1 km`` in radius. Save the new layer in the "
 ":file:`vector_analysis.gpkg` file as ``schools_buffer_1km_dissolved``."
@@ -539,20 +523,20 @@ msgstr ""
 "半径は ``1 km`` とします。新しいレイヤーを :file:`vector_analysis.gpkg` ファイルに "
 "``schools_buffer_1km_dissolved`` という名前で保存します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:282
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:394
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:280
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:392
 msgid "Answer"
 msgstr "答え"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:285
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:283
 msgid "Your buffer dialog should look like this:"
 msgstr "バッファダイアログはこのように表示されます:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:288
 msgid "The :guilabel:`Buffer distance` is :guilabel:`1` kilometer."
 msgstr ":guilabel:`バッファ距離` は :guilabel:`1` キロメートルです。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:292
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
 msgid ""
 "The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This"
 " is optional, but it's recommended, because it makes the output buffers look"
@@ -561,11 +545,11 @@ msgstr ""
 ":guilabel:`Segments to approximate` の値は :guilabel:`20` "
 "に設定されます。これはオプションですが、出力バッファがより滑らかになるため、推奨されています。これを:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:299
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:297
 msgid "To this:"
 msgstr "これと比較してみましょう:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:304
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:302
 msgid ""
 "The first image shows the buffer with the :guilabel:`Segments to "
 "approximate` value set to :guilabel:`5` and the second shows the value set "
@@ -576,11 +560,11 @@ msgstr ""
 ":guilabel:`20` "
 "に設定したバッファを示します。この例では、微妙な違いですが、高い値の方がバッファのエッジが滑らかになっていることがわかります。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:308
 msgid "|basic| |FA| Overlapping Areas"
 msgstr "|basic| |FA| 重複エリア"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:312
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
 msgid ""
 "Now we have identified areas where the road is less than 50 meters away and "
 "areas where there is a school within 1 km (direct line, not by road). But "
@@ -593,7 +577,7 @@ msgstr ""
 " :guilabel:`交差(intersect)` ツールを使用する必要があります。このツールは :guilabel:`プロセシングツールボックス` "
 "の :menuselection:`ベクタオーバーレイ` グループで見つけることができます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:321
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:319
 msgid ""
 "Use the two buffer layers as :guilabel:`Input layer` and :guilabel:`Overlay "
 "layer`, choose :file:`vector_analysis.gpkg` GeoPackage in "
@@ -605,39 +589,39 @@ msgstr ""
 ":guilabel:`レイヤ名` ``road_school_buffers_intersect`` "
 "を選択します。残りは提案のままにしておきます（既定）。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:328
 msgid "Click :guilabel:`Run`."
 msgstr ":guilabel:`実行` をクリックします。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:332
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
 msgid ""
 "In the image below, the blue areas are where both of the distance criteria "
 "are satisfied."
 msgstr "下の画像の青い領域が両方の距離基準を満たしたところです。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:338
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:336
 msgid ""
 "You may remove the two buffer layers and only keep the one that shows where "
 "they overlap, since that's what we really wanted to know in the first place:"
 msgstr "2つのバッファレイヤを除去しそれらが重なる場所を示すものだけ残しても良いです。それがそもそも本当に知りたかったものですので："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:346
 msgid "|basic| |FA| Extract the Buildings"
 msgstr "|basic| |FA| 建物を抽出する"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:350
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
 msgid ""
 "Now you've got the area that the buildings must overlap. Next, you want to "
 "extract the buildings in that area."
 msgstr "これで、ビルが重なるべき領域ができました。次に、その範囲にある建物を抽出したいですね。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:353
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:351
 msgid ""
 "Look for the menu entry :menuselection:`Vector Selection --> Extract by "
 "location` within the *Processing Toolbox*"
 msgstr "*プロセシングツールボックス* から、メニュー項目 :menuselection:`ベクタ選択 --> 場所による抽出` を探します"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:356
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:354
 msgid ""
 "Select ``buildings_34S`` in :guilabel:`Extract features from`. Check "
 ":guilabel:`intersect` in :guilabel:`Where the features (geometric "
@@ -650,11 +634,11 @@ msgstr ""
 "でバッファの交差レイヤを選択します。:file:`vector_analysis.gpkg` に保存し、レイヤの名前を "
 "``well_located_houses`` にします。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:367
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:365
 msgid "Click :guilabel:`Run` and close the dialog"
 msgstr ":guilabel:`実行` をクリックしてダイアログを閉じます"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:368
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
 msgid ""
 "You will probably find that not much seems to have changed. If so, move the "
 ":guilabel:`well_located_houses` layer to the top of the layers list, then "
@@ -663,27 +647,27 @@ msgstr ""
 "おそらく、あまり変化がないように見えると思います。その場合は、 :guilabel:`well_located_houses` "
 "レイヤをレイヤリストの一番上に移動し、拡大してください。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
 msgid ""
 "The red buildings are those which match our criteria, while the buildings in"
 " green are those which do not."
 msgstr "赤色の建物は私たちの基準に合致しているもの、緑色の建物は合致していないものです。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:377
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
 msgid ""
 "Now you have two separated layers and can remove ``buildings_34S`` from the "
 "layer list."
 msgstr "これで2つのレイヤーが分離され、レイヤリストから ``buildings_34S`` を削除することができます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:380
 msgid "|moderate| |TY| Further Filter our Buildings"
 msgstr "|moderate| |TY| さらに建物をフィルタ"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:497
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:495
 msgid "moderate"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:384
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
 msgid ""
 "We now have a layer which shows us all the buildings within 1km of a school "
 "and within 50m of a road. We now need to reduce that selection to only show "
@@ -691,7 +675,7 @@ msgid ""
 msgstr ""
 "今、私たちの学校の1キロ内や道路の50メートル内のすべての建物を表示するレイヤーを持っています。今その選択を、レストランの500メートル内にある建物を表示するだけに削減する必要があります。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:389
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
 msgid ""
 "Using the processes described above, create a new layer called "
 ":guilabel:`houses_restaurants_500m` which further filters your "
@@ -702,39 +686,39 @@ msgstr ""
 "という名前の新しいレイヤを作りなさい。このレイヤは :guilabel:`well_located_houses` "
 "レイヤをさらにフィルタリングして、レストランから 500m 以内にある住宅のみを表示します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:397
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:395
 msgid ""
 "To create the new :guilabel:`houses_restaurants_500m` layer, we go through a"
 " two step process:"
 msgstr "新しい :guilabel:`houses_restaurants_500m` レイヤを作成するために、2つのステップを経ます:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:400
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
 msgid ""
 "First, create a buffer of 500m around the restaurants and add the layer to "
 "the map:"
 msgstr "まず、レストランの周囲500mにバッファを作り、地図にレイヤを追加します:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:409
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:407
 msgid "Next, extract buildings within that buffer area:"
 msgstr "次に、そのバッファ領域内の建物を抽出します;"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:414
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:412
 msgid ""
 "Your map should now show only those buildings which are within 50m of a "
 "road, 1km of a school and 500m of a restaurant:"
 msgstr "道路から50m、学校から1km、レストランから500mの範囲にある建物だけが地図に表示されるようになりました:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
 msgid "|basic| |FA| Select Buildings of the Right Size"
 msgstr "|basic| |FA| 正しいサイズの建物の選択"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:423
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
 msgid ""
 "To see which buildings are of the correct size (more than 100 square "
 "meters), we need to calculate their size."
 msgstr "どの建物が適正規模（100平方メートル以上）かを確認するためには、その大きさを計算する必要があります。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:426
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
 msgid ""
 "Select the :guilabel:`houses_restaurants_500m` layer and open the *Field "
 "Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
@@ -743,11 +727,11 @@ msgstr ""
 ":guilabel:`houses_restaurants_500m` レイヤを選択し、メインツールバーの |calculateField| "
 ":sup:`フィールド計算機を開く` ボタンまたは属性テーブルウィンドウをクリックして *フィールド計算機* を開きます"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:492
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:490
 msgid "calculateField"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:430
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:428
 msgid ""
 "Select :guilabel:`Create a new field`, set the :guilabel:`Output field name`"
 " to ``AREA``, choose :guilabel:`Decimal number (real)` as :guilabel:`Output "
@@ -757,30 +741,30 @@ msgstr ""
 ":guilabel:`フィールド型` を :guilabel:`小数点付き数値 (real)` に、 :menuselection:`地物` "
 "グループを選択して、 ``$area`` を選択します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:439
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:437
 msgid ""
 "The new field ``AREA`` will contain the area of each building in square "
 "meters."
 msgstr "新しいフィールド ``AREA`` には、各建物の面積 (平方メートル) が入ります。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:441
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:439
 msgid ""
 "Click :guilabel:`OK`. The ``AREA`` field has been added at the end of the "
 "attribute table."
 msgstr ":guilabel:`OK`をクリックします。属性テーブルの末尾に ``AREA`` フィールドが追加されました。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:442
 msgid ""
 "Click the |toggleEditing| :sup:`Toggle Editing` button to finish editing, "
 "and save your edits when prompted."
 msgstr ""
 "編集を終了するには |toggleEditing| :sup:`編集モード切替` ボタンをクリックし、プロンプトが表示されたら編集を保存します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:498
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:496
 msgid "toggleEditing"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:446
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
 msgid ""
 "In the :menuselection:`Source` tab of the layer properties, set the "
 ":guilabel:`Provider Feature Filter` to ``\"AREA >= 100``."
@@ -788,21 +772,21 @@ msgstr ""
 "レイヤプロパティの :menuselection:`ソース` タブで、 :guilabel:`プロバイダ地物フィルタ` を ``\"AREA >= "
 "100`` に設定します。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:450
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` をクリックします。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:454
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
 msgid ""
 "Your map should now only show you those buildings which match our starting "
 "criteria and which are more than 100 square meters in size."
 msgstr "これで地図には、開始条件に一致する100平方メートル以上の建物だけが表示されるようになりました。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:457
 msgid "|basic| |TY|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:461
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
 msgid ""
 "Save your solution as a new layer, using the approach you learned above for "
 "doing so. The file should be saved within the same GeoPackage database, with"
@@ -811,22 +795,22 @@ msgstr ""
 "上記で学んだ方法で、解決策を新しいレイヤとして保存します。このファイルは同じ GeoPackage データベース内に ``solution`` "
 "という名前で保存されます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:465
 msgid "|IC|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:469
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
 msgid ""
 "Using the GIS problem solving approach together with QGIS vector analysis "
 "tools, you were able to solve a problem with multiple criteria quickly and "
 "easily."
 msgstr "GISの問題解決アプローチとQGISのベクトル解析ツールを併用することで、複数の条件を持つ問題を迅速かつ容易に解決することができましたね。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:472
 msgid "|WN|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:476
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
 msgid ""
 "In the next lesson, we will look at how to calculate the shortest distance "
 "along roads from one point to another."

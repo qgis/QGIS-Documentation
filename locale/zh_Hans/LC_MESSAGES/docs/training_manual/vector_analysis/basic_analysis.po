@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-05-29 08:40+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
 "Last-Translator: Transifex Bot <>, 2023\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
@@ -47,7 +47,7 @@ msgstr "**本课目标:** 提出问题并使用分析工具进行解决。"
 msgid "|basic| The GIS Process"
 msgstr "|basic| GIS流程"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:491
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:489
 msgid "basic"
 msgstr ""
 
@@ -223,25 +223,25 @@ msgstr "此外，OSM数据可能不会在所有地方更新，我们还将排除
 msgid "Right click on the ``roads`` layer and choose :guilabel:`Filter...`."
 msgstr "右键单击 ``roads`` 图层并选择 :guilabel:`过滤...` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:104
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:103
 msgid ""
 "In the dialog that pops up we filter these features with the following "
 "expression::"
 msgstr "在弹出的对话框中，我们使用以下表达式过滤这些要素::"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:109
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:107
 msgid ""
 "The concatenation of the two operators ``NOT`` and ``IN`` excludes all the "
 "features that have these attribute values in the ``highway`` field."
 msgstr "两个运算符 ``NOT`` 和 ``IN`` 的连接将排除 ``highway`` 字段中具有这些属性值的所有要素。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:110
 msgid ""
 "``IS NOT NULL`` combined with the ``AND`` operator excludes roads with no "
 "value in the ``highway`` field."
 msgstr "``IS NOT NULL`` 与 ``AND`` 运算符结合使用时，排除在 ``highway`` 字段中空值的道路。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:116
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
 msgid ""
 "Note the |indicatorFilter| icon next to the :guilabel:`roads` layer. It "
 "helps you remember that this layer has a filter activated, so some features "
@@ -250,19 +250,19 @@ msgstr ""
 "请注意 :guilabel:`roads` 图层旁边的 |indicatorFilter| "
 "图标。这有助于您记住，该图层有已激活的过滤器，因此某些要素可能在工程中不可用。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:494
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:492
 msgid "indicatorFilter"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:121
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:117
 msgid "The map with all the data should look like the following one:"
 msgstr "包含所有数据的地图应如下所示："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:128
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:124
 msgid "|basic| |TY| Convert Layers' CRS"
 msgstr "|basic| 试一试 转换图层的CRS"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:130
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:126
 msgid ""
 "Because we are going to be measuring distances within our layers, we need to"
 " change the layers' CRS. To do this, we need to select each layer in turn, "
@@ -270,7 +270,7 @@ msgid ""
 "layer into our map."
 msgstr "因为我们要测量图层内的距离，所以需要更改图层的CRS。为此，依次选择每个图层，使用新投影将图层保存到新图层，然后将新图层导入地图。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:135
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:131
 msgid ""
 "You have many different options, e.g. you can export each layer as an ESRI "
 "Shapefile format dataset, you can append the layers to an existing "
@@ -283,28 +283,28 @@ msgstr ""
 "格式的数据集，也可以将图层附加到现有的GeoPackage文件，或是创建另外的GeoPackage文件并用新的重投影图层填充。我们将选择最后的选项，这样"
 " :file:`training_data.gpkg` 将保持原样。请随意为自己选择最佳的工作流程。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:139
 msgid ""
 "In this example, we are using the *WGS 84 / UTM zone 34S* CRS, but you "
 "should use a UTM CRS which is more appropriate for your region."
 msgstr "在此示例，我们使用的是 *WGS 84 / UTM zone 34S* CRS，但您应该使用更符合您所在地区的 UTM CRS。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:147
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
 msgid ""
 "Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
 msgstr "右键单击 :guilabel:`图层` 面板中的 :guilabel:`roads` 图层"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:149
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:145
 msgid "Click :guilabel:`Export --> Save Features As...`"
 msgstr "单击 :guilabel:`导出 --> 要素另存为...`"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:150
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:146
 msgid ""
 "In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`"
 " as :guilabel:`Format`"
 msgstr "在 :guilabel:`矢量图层另存为` 对话框中，选择 :guilabel:`格式` 为 :guilabel:`GeoPackage`"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:152
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:148
 msgid ""
 "Click on :guilabel:`...` for the :guilabel:`File name`, and name the new "
 "GeoPackage ``vector_analysis``"
@@ -312,67 +312,52 @@ msgstr ""
 "单击 :guilabel:`文件名` 后面的 :guilabel:`...` ，选择保存位置并将新的GeoPackage命名为 "
 "``vector_analysis``"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:154
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:150
 msgid "Change the :guilabel:`Layer name` to ``roads_34S``"
 msgstr "将 :guilabel:`图层名` 更改为 ``roads_34S``"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:155
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:151
 msgid "Change the :guilabel:`CRS` to *WGS 84 / UTM zone 34S*"
 msgstr "将 :guilabel:`CRS` 更改为 *WGS 84 / UTM zone 34S*"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:156
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:152
 msgid "Click on :guilabel:`OK`:"
 msgstr "单击 :guilabel:`确定`:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:161
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:157
 msgid ""
 "This will create the new GeoPackage database and add the ``roads_34S`` "
 "layer."
 msgstr "这将创建新的GeoPackage数据库并添加 ``roads_34S`` 图层。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:164
-msgid ""
-"Repeat this process for each layer, creating a new layer in the "
-":file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the "
-"original name and removing each of the old layers from the project."
-msgstr ""
-"对每个图层重复此过程，在 :file:`vector_analysis.gpkg` GeoPackage 文件中创建新图层，原始名称后附加 "
-"``_34S`` ，并从工程中移除每个原图层。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:169
-msgid ""
-"When you choose to save a layer to an existing GeoPackage, QGIS will "
-"**append** that layer to the GeoPackage."
-msgstr "选择将图层保存到现有GeoPackage时，QGIS会将该图层 **追加** 到GeoPackage。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:172
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:170
 msgid ""
 "Once you have completed the process for all the layers, right click on any "
 "layer and click :guilabel:`Zoom to layer extent` to focus the map to the "
 "area of interest."
 msgstr "完成所有图层的处理后，右键单击任意图层，然后单击 :guilabel:`缩放到图层范围` ，将地图聚焦到关注区。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:176
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:174
 msgid ""
 "Now that we have converted OSM data to a UTM projection, we can begin our "
 "calculations."
 msgstr "现在，我们已经将OSM数据转换为UTM投影，可以开始计算了。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:178
 msgid "|basic| |FA| Analyzing the Problem: Distances From Schools and Roads"
 msgstr "|basic| 跟我做: 分析问题 - 学校和道路的距离"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:182
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
 msgid "QGIS allows you to calculate distances between any vector object."
 msgstr "QGIS允许您计算任何矢量对象之间的距离。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:184
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:182
 msgid ""
 "Make sure that only the ``roads_34S`` and ``buildings_34S`` layers are "
 "visible (to simplify the map while you're working)"
 msgstr "确保只有 ``roads_34S`` 和 ``buildings_34S`` 图层可见 (以便在使用时简化地图)"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:186
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:184
 msgid ""
 "Click on the :menuselection:`Processing --> Toolbox` to open the analytical "
 "*core* of QGIS. Basically, **all** algorithms (for vector **and** raster "
@@ -381,7 +366,7 @@ msgstr ""
 "单击 :menuselection:`数据处理 --> 工具箱` 打开QGIS分析 *核心* 工具箱。基本上， **所有** 算法 (用于矢量 "
 "**和** 栅格分析) 都可以在此工具箱中获取。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:190
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:188
 msgid ""
 "We start by calculating the area around the ``roads_34S`` by using the "
 ":guilabel:`Buffer` algorithm. You can find it in the :menuselection:`Vector "
@@ -390,24 +375,24 @@ msgstr ""
 "我们首先使用 :guilabel:`缓冲区` 算法计算 ``roads_34S`` 周围的面积。您可以在 :menuselection:`矢量几何图形`"
 " 组中找到。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:197
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:195
 msgid ""
 "Or you can type ``buffer`` in the search menu in the upper part of the "
 "toolbox:"
 msgstr "也可以在工具箱上部的搜索栏中键入 ``buffer`` 或 ``缓冲区`` ："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:203
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:201
 msgid "Double click on it to open the algorithm dialog"
 msgstr "双击它以打开算法对话框"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:204
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:202
 msgid ""
 "Select ``roads_34S`` as :guilabel:`Input layer`, set :guilabel:`Distance` to"
 " 50 and use the default values for the rest of the parameters."
 msgstr ""
 "在 :guilabel:`输入图层` 中选择 ``roads_34S`` ，将 :guilabel:`距离` 设置为50，其余参数使用默认值。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:211
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:209
 msgid ""
 "The default :guilabel:`Distance` is in meters because our input dataset is "
 "in a Projected Coordinate System that uses meter as its basic measurement "
@@ -417,14 +402,14 @@ msgstr ""
 "默认 default :guilabel:`距离` "
 "以米为单位，因为我们的输入数据集位于投影坐标系中，该坐标系使用米作为基本测量单位。您可以使用组合框选择其他投影单位，如千米、码等。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:217
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:215
 msgid ""
 "If you are trying to make a buffer on a layer with a Geographical Coordinate"
 " System, Processing will warn you and suggest to reproject the layer to a "
 "metric Coordinate System."
 msgstr "如果尝试在具有地理坐标系的图层上创建缓冲区，数据处理将警告您，并建议将图层重投影到度量坐标系。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:221
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:219
 msgid ""
 "By default, *Processing* creates temporary layers and adds them to the "
 ":guilabel:`Layers` panel. You can also append the result to the GeoPackage "
@@ -432,29 +417,29 @@ msgid ""
 msgstr ""
 "默认情况下， *数据处理* 会创建临时图层并将其添加到 :guilabel:`图层` 面板。还可以通过以下方式将结果追加到GeoPackage数据库："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:225
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:223
 msgid ""
 "Clicking on the :guilabel:`...` button and choose :guilabel:`Save to "
 "GeoPackage...`"
 msgstr "单击 :guilabel:`...` 按钮并选择 :guilabel:`保存到GeoPackage...`"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:227
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:225
 msgid "Naming the new layer ``roads_buffer_50m``"
 msgstr "将新图层命名为 ``roads_buffer_50m``"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:228
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:226
 msgid "Saving it in the :file:`vector_analysis.gpkg` file"
 msgstr "将其保存在 :file:`vector_analysis.gpkg` 文件"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:233
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:231
 msgid "Click on :guilabel:`Run`, and then close the :guilabel:`Buffer` dialog"
 msgstr "单击 :guilabel:`运行` ，然后关闭 :guilabel:`缓冲区` 对话框"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:236
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:234
 msgid "Now your map will look something like this:"
 msgstr "现在，您的地图应该如下所示："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:241
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:239
 msgid ""
 "If your new layer is at the top of the :guilabel:`Layers` list, it will "
 "probably obscure much of your map, but this gives you all the areas in your "
@@ -462,38 +447,38 @@ msgid ""
 msgstr ""
 "如果您的新图层位于 :guilabel:`图层` 列表顶部，它可能会遮挡大部分地图，但这将为您提供所在地区距离道路50米范围以内的所有区域。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:245
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:243
 msgid ""
 "Notice that there are distinct areas within your buffer, which correspond to"
 " each individual road. To get rid of this problem:"
 msgstr "请注意，缓冲区内有不同的区域，对应于每条单独的道路。要解决此问题，请执行以下操作："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:248
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:246
 msgid ""
 "Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer with"
 " :guilabel:`Dissolve results` enabled."
 msgstr ""
 "取消勾选 :guilabel:`roads_buffer_50m` 图层，并在启用 :guilabel:`融合结果` 的情况下重新创建缓冲区。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:254
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:252
 msgid "Save the output as :guilabel:`roads_buffer_50m_dissolved`"
 msgstr "将输出保存为 :guilabel:`roads_buffer_50m_dissolved`"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:255
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:253
 msgid "Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog"
 msgstr "单击 :guilabel:`运行` 并关闭 :guilabel:`缓冲区` 对话框"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:257
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:255
 msgid ""
 "Once you have added the layer to the :guilabel:`Layers` panel, it will look "
 "like this:"
 msgstr "将图层添加到 :guilabel:`图层` 面板后，它将如下所示："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:263
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:261
 msgid "Now there are no unnecessary subdivisions."
 msgstr "现在没有多余的细分。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:265
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:263
 msgid ""
 "The *Short Help* on the right side of the dialog explains how the algorithm "
 "works. If you need more information, just click on the :guilabel:`Help` "
@@ -501,15 +486,15 @@ msgid ""
 msgstr ""
 "对话框右侧的 *简短帮助* 解释了算法的工作原理。如果需要更多信息，只需单击底部的 :guilabel:`帮助` 按钮，即可打开更详细的算法指南。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:273
 msgid "|basic| |TY| Distance from schools"
 msgstr "|basic| 试一试 学校的距离"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:277
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
 msgid "Use the same approach as above and create a buffer for your schools."
 msgstr "使用与上面相同的方法，为您的学校创建缓冲区。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:279
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:277
 msgid ""
 "It shall be ``1 km`` in radius. Save the new layer in the "
 ":file:`vector_analysis.gpkg` file as ``schools_buffer_1km_dissolved``."
@@ -517,20 +502,20 @@ msgstr ""
 "其半径应为 ``1 km`` ，在 :file:`vector_analysis.gpkg` 文件保存新图层为 "
 "``schools_buffer_1km_dissolved`` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:282
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:394
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:280
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:392
 msgid "Answer"
 msgstr "回答"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:285
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:283
 msgid "Your buffer dialog should look like this:"
 msgstr "您的缓冲区对话框应如下所示："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:288
 msgid "The :guilabel:`Buffer distance` is :guilabel:`1` kilometer."
 msgstr ":guilabel:`缓冲距离` 为 :guilabel:`1` 千米。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:292
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
 msgid ""
 "The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This"
 " is optional, but it's recommended, because it makes the output buffers look"
@@ -538,11 +523,11 @@ msgid ""
 msgstr ""
 ":guilabel:`近似线段数` 值设置为 :guilabel:`20` 。这是可选的，但建议这样做，因为这会使输出缓冲区看起来更平滑。比较一下："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:299
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:297
 msgid "To this:"
 msgstr "对此："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:304
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:302
 msgid ""
 "The first image shows the buffer with the :guilabel:`Segments to "
 "approximate` value set to :guilabel:`5` and the second shows the value set "
@@ -552,11 +537,11 @@ msgstr ""
 "第一幅图显示的缓冲区是将 :guilabel:`近似线段数` 值设置为 :guilabel:`5` ，第二幅图显示的是设置为 "
 ":guilabel:`20` 的值。在我们的示例中，差异很小，但您可以看到，缓冲区的边随着值的增加而变得更平滑。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:308
 msgid "|basic| |FA| Overlapping Areas"
 msgstr "|basic| 跟我做: 重叠区域"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:312
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
 msgid ""
 "Now we have identified areas where the road is less than 50 meters away and "
 "areas where there is a school within 1 km (direct line, not by road). But "
@@ -569,7 +554,7 @@ msgstr ""
 "(直线，而不是公路)。但很明显，我们只想要同时满足这两个条件的区域。为此，需要使用 :guilabel:`相交` 工具，您可以在 "
 ":guilabel:`处理工具箱` 中的 :menuselection:`矢量叠加` 组中找到。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:321
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:319
 msgid ""
 "Use the two buffer layers as :guilabel:`Input layer` and :guilabel:`Overlay "
 "layer`, choose :file:`vector_analysis.gpkg` GeoPackage in "
@@ -580,39 +565,39 @@ msgstr ""
 ":file:`vector_analysis.gpkg` 的GeoPackage，并将 :guilabel:`图层名` 命名为 "
 "``road_school_buffers_intersect`` 。其它参数按建议 (默认) 处理。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:328
 msgid "Click :guilabel:`Run`."
 msgstr "单击 :guilabel:`运行` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:332
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
 msgid ""
 "In the image below, the blue areas are where both of the distance criteria "
 "are satisfied."
 msgstr "下图中，蓝色区域是同时满足两个距离条件的区域。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:338
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:336
 msgid ""
 "You may remove the two buffer layers and only keep the one that shows where "
 "they overlap, since that's what we really wanted to know in the first place:"
 msgstr "您可以移除两个缓冲区图层，只保留显示它们重叠位置的缓冲区图层，因为这是我们一开始真正想知道的："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:346
 msgid "|basic| |FA| Extract the Buildings"
 msgstr "|basic| 跟我做: 提取建筑物"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:350
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
 msgid ""
 "Now you've got the area that the buildings must overlap. Next, you want to "
 "extract the buildings in that area."
 msgstr "现在，您已获得了建筑必须重叠的区域。接下来，是要提取该地区的建筑物。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:353
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:351
 msgid ""
 "Look for the menu entry :menuselection:`Vector Selection --> Extract by "
 "location` within the *Processing Toolbox*"
 msgstr "在 *处理工具箱* 查找菜单项 :menuselection:`矢量选择 --> 按位置提取`"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:356
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:354
 msgid ""
 "Select ``buildings_34S`` in :guilabel:`Extract features from`. Check "
 ":guilabel:`intersect` in :guilabel:`Where the features (geometric "
@@ -624,11 +609,11 @@ msgstr ""
 " :guilabel:`相交` ；在 :guilabel:`与以下要素进行比较` 中选择缓冲区相交图层。保存到 "
 ":file:`vector_analysis.gpkg` ，并将该图层命名为 ``well_located_houses`` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:367
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:365
 msgid "Click :guilabel:`Run` and close the dialog"
 msgstr "单击 :guilabel:`运行` 并关闭对话框"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:368
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
 msgid ""
 "You will probably find that not much seems to have changed. If so, move the "
 ":guilabel:`well_located_houses` layer to the top of the layers list, then "
@@ -636,34 +621,34 @@ msgid ""
 msgstr ""
 "您可能会发现似乎没有太大变化。如果是这样，请将 :guilabel:`well_located_houses` 图层移到图层列表的顶部，然后放大。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
 msgid ""
 "The red buildings are those which match our criteria, while the buildings in"
 " green are those which do not."
 msgstr "红色的建筑符合我们的条件，而绿色的建筑则不符合我们的要求。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:377
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
 msgid ""
 "Now you have two separated layers and can remove ``buildings_34S`` from the "
 "layer list."
 msgstr "现在您有了两个独立的图层，可以从图层列表中移除 ``buildings_34S`` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:380
 msgid "|moderate| |TY| Further Filter our Buildings"
 msgstr "|moderate| 试一试 进一步过滤建筑物"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:497
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:495
 msgid "moderate"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:384
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
 msgid ""
 "We now have a layer which shows us all the buildings within 1km of a school "
 "and within 50m of a road. We now need to reduce that selection to only show "
 "buildings which are within 500m of a restaurant."
 msgstr "我们现在有一个图层，显示了学校1千米和道路50米范围以内的所有建筑。现在需要减少选择，只显示距离餐厅500米以内的建筑。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:389
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
 msgid ""
 "Using the processes described above, create a new layer called "
 ":guilabel:`houses_restaurants_500m` which further filters your "
@@ -673,39 +658,39 @@ msgstr ""
 "使用上述流程，创建一个名为 :guilabel:`houses_restaurants_500m` 的新图层，该图层可进一步过滤 "
 ":guilabel:`well_located_houses` 图层，仅显示餐厅500m范围内的房屋。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:397
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:395
 msgid ""
 "To create the new :guilabel:`houses_restaurants_500m` layer, we go through a"
 " two step process:"
 msgstr "要创建 :guilabel:`houses_restaurants_500m` 新图层，需要经过两个步骤："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:400
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
 msgid ""
 "First, create a buffer of 500m around the restaurants and add the layer to "
 "the map:"
 msgstr "首先，在餐厅周围创建500米的缓冲区，并将图层添加到地图："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:409
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:407
 msgid "Next, extract buildings within that buffer area:"
 msgstr "接下来，提取该缓冲区内的建筑物："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:414
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:412
 msgid ""
 "Your map should now show only those buildings which are within 50m of a "
 "road, 1km of a school and 500m of a restaurant:"
 msgstr "您的地图现在应该只显示距离道路50米、学校1千米和餐厅500米范围以内的建筑："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
 msgid "|basic| |FA| Select Buildings of the Right Size"
 msgstr "|basic| 跟我做: 选择面积合适的建筑"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:423
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
 msgid ""
 "To see which buildings are of the correct size (more than 100 square "
 "meters), we need to calculate their size."
 msgstr "要查看哪些建筑的面积符合要求 (超过100平方米)，我们需要计算它们的面积。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:426
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
 msgid ""
 "Select the :guilabel:`houses_restaurants_500m` layer and open the *Field "
 "Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
@@ -714,11 +699,11 @@ msgstr ""
 "选择 :guilabel:`houses_restaurants_500m` 图层，通过单击主工具栏或属性表窗口中的 |calculateField| "
 ":sup:`打开字段计算器` 按钮打开 *字段计算器*"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:492
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:490
 msgid "calculateField"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:430
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:428
 msgid ""
 "Select :guilabel:`Create a new field`, set the :guilabel:`Output field name`"
 " to ``AREA``, choose :guilabel:`Decimal number (real)` as :guilabel:`Output "
@@ -728,29 +713,29 @@ msgstr ""
 ":guilabel:`输出字段类型` 为 :guilabel:`小数 (实型)` ，然后从 :menuselection:`几何图形` 组中选择 "
 "``$area`` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:439
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:437
 msgid ""
 "The new field ``AREA`` will contain the area of each building in square "
 "meters."
 msgstr "新字段 ``AREA`` 将包含每栋建筑的面积，单位是平方米。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:441
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:439
 msgid ""
 "Click :guilabel:`OK`. The ``AREA`` field has been added at the end of the "
 "attribute table."
 msgstr "单击 :guilabel:`确定` 。 ``AREA`` 字段已添加到属性表的末尾。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:442
 msgid ""
 "Click the |toggleEditing| :sup:`Toggle Editing` button to finish editing, "
 "and save your edits when prompted."
 msgstr "单击 |toggleEditing| :sup:`切换编辑模式` 按钮完成编辑，并在出现提示时保存编辑。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:498
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:496
 msgid "toggleEditing"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:446
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
 msgid ""
 "In the :menuselection:`Source` tab of the layer properties, set the "
 ":guilabel:`Provider Feature Filter` to ``\"AREA >= 100``."
@@ -758,43 +743,43 @@ msgstr ""
 "在图层属性的 :menuselection:`源` 选项卡中，将 :guilabel:`提供程序的要素过滤` 设置为 ``\"AREA >= 100``"
 " 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:450
 msgid "Click :guilabel:`OK`."
 msgstr "单击 :guilabel:`确定` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:454
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
 msgid ""
 "Your map should now only show you those buildings which match our starting "
 "criteria and which are more than 100 square meters in size."
 msgstr "您的地图现在应该只显示那些符合我们开始的条件，并且面积超过100平方米的建筑。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:457
 msgid "|basic| |TY|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:461
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
 msgid ""
 "Save your solution as a new layer, using the approach you learned above for "
 "doing so. The file should be saved within the same GeoPackage database, with"
 " the name ``solution``."
 msgstr "使用上述学到的方法，将解决方案另存为一个新图层。该文件应保存在同一GeoPackage数据库中，名称是 ``solution`` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:465
 msgid "|IC|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:469
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
 msgid ""
 "Using the GIS problem solving approach together with QGIS vector analysis "
 "tools, you were able to solve a problem with multiple criteria quickly and "
 "easily."
 msgstr "将GIS问题解决方法和QGIS矢量分析工具结合使用，您能够快速轻松地解决含有多个条件的问题。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:472
 msgid "|WN|"
 msgstr ""
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:476
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
 msgid ""
 "In the next lesson, we will look at how to calculate the shortest distance "
 "along roads from one point to another."

@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-17 05:05+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -7258,6 +7258,14 @@ msgstr "Plus de détails : l'algorithme :ref:`qgisdifference`"
 msgid "disjoint"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether geometries do not spatially intersect. Returns TRUE if the "
+"geometries do not share any space together."
+msgstr ""
+"Teste si des géométries ne s'intersectent pas. Renvoie vrai (TRUE) si les "
+"géométries n'ont aucune surface en commun."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "disjoint(geometry1, geometry2)"
 msgstr ""
@@ -8002,6 +8010,15 @@ msgstr "Plus de détails : l'algorithme :ref:`qgisintersection`"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "intersects"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry intersects another. Returns TRUE if the geometries "
+"spatially intersect (share any portion of space) and false if they do not."
+msgstr ""
+"Teste si une géométrie en croise une autre. Retourne vrai (TRUE) si les "
+"géométries se croisent dans l'espace (partagent une partie de l'espace) et "
+"faux (FALSE) si elles ne se croisent pas."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "intersects(geometry1, geometry2)"
@@ -9410,9 +9427,10 @@ msgid ""
 "from a target layer, or an array of expression-based results for the "
 "features in the target layer contained in the current feature."
 msgstr ""
-"Retourne si l'entité actuelle contient spatialement au moins une entité "
-"d'une couche cible, ou un tableau de résultats basés sur des expressions "
-"pour les entités de la couche cible contenues dans l'entité actuelle."
+"Indique si l'entité actuelle contient spatialement au moins une entité d'une"
+" couche cible, ou renvoie un tableau de valeurs, résultat d'une expression "
+"portant sur les entités de la couche cible qui sont contenues dans l'entité "
+"actuelle."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid ""
@@ -9475,6 +9493,14 @@ msgstr ""
 "local (la plupart du temps, ce n'est pas souhaité, sauf si vous travaillez "
 "avec un fournisseur de données particulièrement lent)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``overlay_contains('regions')`` → TRUE if the current feature spatially "
+"contains a region"
+msgstr ""
+"``overlay_contains('régions')`` → vrai (TRUE) si l'entité actuelle contient "
+"spatialement une entité de la couche \"régions\""
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
 msgid ""
 "``overlay_contains('regions', name)`` → an array of names, for the regions "
@@ -9533,9 +9559,9 @@ msgid ""
 "from a target layer, or an array of expression-based results for the "
 "features in the target layer crossed by the current feature."
 msgstr ""
-"Renvoie si l'entité actuelle croise spatialement au moins une entité d'une "
-"couche cible, ou un tableau de résultats basés sur des expressions pour les "
-"éléments de la couche cible croisés par l'entité actuelle."
+"Indique si l'entité actuelle croise spatialement au moins une entité d'une "
+"couche cible, ou renvoie un tableau de valeurs, résultat d'une expression "
+"portant sur les entités de la couche cible croisées par l'entité actuelle."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -9608,10 +9634,10 @@ msgid ""
 "features of a target layer, or an array of expression-based results for the "
 "features in the target layer that are disjoint from the current feature."
 msgstr ""
-"Retourne si l'entité actuelle est spatialement disjointe de toutes les "
-"entités d'une couche cible, ou un tableau de résultats basés sur des "
-"expressions pour les entités dans la couche cible qui sont disjointes de "
-"l'entité actuelle."
+"Indique si l'entité actuelle est spatialement disjointe de toute entité "
+"d'une couche cible, ou renvoie un tableau de valeurs, résultat d'une "
+"expression portant sur les entités de la couche cible qui sont disjointes de"
+" l'entité actuelle."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -9688,10 +9714,10 @@ msgid ""
 "features in the target layer that are spatially equal to the current "
 "feature."
 msgstr ""
-"Retourne si l'entité actuelle est spatialement égale à au moins une entité "
-"d'une couche cible, ou un tableau de résultats basés sur des expressions "
-"pour les entités de la couche cible qui sont spatialement égales à l'entité "
-"actuelle."
+"Indique si l'entité actuelle est spatialement égale à au moins une entité "
+"d'une couche cible, ou renvoie un tableau de valeurs, résultat d'une "
+"expression portant sur les entités de la couche cible qui sont spatialement "
+"égales à l'entité actuelle."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -9764,9 +9790,10 @@ msgid ""
 "feature from a target layer, or an array of expression-based results for the"
 " features in the target layer intersected by the current feature."
 msgstr ""
-"Retourne si l'entité actuelle coupe spatialement au moins une entité d'une "
-"couche cible, ou un ensemble de résultats basés sur des expressions pour les"
-" entités de la couche cible coupés par l'entité actuelle."
+"Indique si l'entité actuelle intersecte spatialement au moins une entité "
+"d'une couche cible, ou renvoie un tableau de valeurs, résultat d'une "
+"expression portant sur les entités de la couche cible intersectées par "
+"l'entité actuelle."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -9956,9 +9983,9 @@ msgid ""
 "from a target layer, or an array of expression-based results for the "
 "features in the target layer touched by the current feature."
 msgstr ""
-"Indique si l'entité actuelle touche dans l'espace au moins une entité d'une "
-"couche cible, ou un ensemble de résultats basés sur des expressions pour les"
-" entités de la couche cible touchés par l'entité actuelle."
+"Indique si l'entité actuelle touche spatialement au moins une entité d'une "
+"couche cible, ou renvoie un tableau de valeurs, résultat d'une expression "
+"portant sur les entités de la couche cible touchées par l'entité actuelle."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -10031,10 +10058,10 @@ msgid ""
 " from a target layer, or an array of expression-based results for the "
 "features in the target layer that contain the current feature."
 msgstr ""
-"Retourne si l'entité actuelle se trouve dans l'espace dans au moins une "
-"entité d'une couche cible, ou un tableau de résultats basés sur des "
-"expressions pour les entités dans la couche cible qui contiennent l'entité "
-"actuelle."
+"Indique si l'entité actuelle est spatialement contenue dans au moins une "
+"entité de la couche cible, ou renvoie un tableau de valeurs, résultat d'une "
+"expression portant sur les entités de la couche cible qui contiennent "
+"spatialement l'entité actuelle."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""

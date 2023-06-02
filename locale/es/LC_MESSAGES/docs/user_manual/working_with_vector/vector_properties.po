@@ -201,7 +201,7 @@ msgstr "expression"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3657
 msgid "elevationscale"
-msgstr "elevationscale"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:46
 msgid "|editMetadata| :ref:`Metadata <vectormetadatamenu>`"
@@ -1780,6 +1780,10 @@ msgstr "Representador con desplazamiento puntual"
 msgid "pointDisplacementSymbol"
 msgstr "pointDisplacementSymbol"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:768
+msgid "Configure the :guilabel:`Placement methods`:"
+msgstr "Configure los métodos :guilabel:`Colocación`:"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:770
 msgid ""
 "**Ring**: places all the features on a circle whose radius depends on the "
@@ -1801,6 +1805,67 @@ msgid ""
 msgstr ""
 "**Grid**: genera una malla regular con un símbolo puntual en cada "
 "intersección."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:775
+msgid ""
+"Displaced symbols are placed on the :guilabel:`Displacement lines`. While "
+"the minimal spacing of the displacement lines depends on the point symbols "
+"renderer, you can still customize some of their settings such as the "
+":guilabel:`Stroke width`, :guilabel:`Stroke color` and :guilabel:`Size "
+"adjustment` (e.g., to add more spacing between the rendered points)."
+msgstr ""
+"Los símbolos desplazados se colocan en las :guilabel:`Líneas de "
+"desplazamiento`. Aunque el espaciado mínimo de las líneas de desplazamiento "
+"depende del renderizador de símbolos de puntos, puede personalizar algunos "
+"de sus ajustes, como la :guilabel:`Anchura de trazo`, :guilabel:`Color de "
+"trazo` y :guilabel:`Ajuste de tamaño` (por ejemplo, para añadir más "
+"espaciado entre los puntos renderizados)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:781
+msgid ""
+"Use the :guilabel:`Labels` group options to perform points labeling: the "
+"labels are placed near the displaced symbol, and not at the feature real "
+"position."
+msgstr ""
+"Utilice las opciones del grupo :guilabel:`Etiquetas` para realizar el "
+"etiquetado de puntos: las etiquetas se colocan cerca del símbolo desplazado,"
+" y no en la posición real del objeto espacial."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:784
+msgid ""
+"Select the :guilabel:`Label attribute`: a field of the layer to use for "
+"labeling"
+msgstr ""
+"Seleccione el atributo :guilabel:`Etiqueta`: un campo de la capa a utilizar "
+"para el etiquetado"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:785
+msgid "Indicate the :guilabel:`Label font` properties and size"
+msgstr ""
+"Indicar las propiedades y el tamaño de :guilabel:`Fuente de la etiqueta"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:786
+msgid "Pick a :guilabel:`Label color`"
+msgstr "Elija un :guilabel:`Color de la etiqueta"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:787
+msgid ""
+"Set a :guilabel:`Label distance factor`: for each point feature, offsets the"
+" label from the symbol center proportionally to the symbol's diagonal size."
+msgstr ""
+"Establezca un :guilabel:`Factor de distancia de la etiqueta`: para cada "
+"objeto espacial punto, desplaza la etiqueta desde el centro del símbolo "
+"proporcionalmente al tamaño de la diagonal del símbolo."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:789
+msgid ""
+"Turn on |unchecked| :guilabel:`Use scale dependent labeling` if you want to "
+"display labels only on scales larger than a given :guilabel:`Minimum map "
+"scale`."
+msgstr ""
+"Active |unchecked| :guilabel:`Utilizar etiquetado dependiente de la escala` "
+"si desea mostrar etiquetas sólo en escalas mayores que una determinada "
+":guilabel:`Escala mínima del mapa`."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:798
 msgid "Point displacement dialog"
@@ -1825,6 +1890,26 @@ msgstr ""
 msgid "Point Cluster Renderer"
 msgstr "Representador de Clúster de punto"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:816
+msgid ""
+"Unlike the |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer"
+" which blows up nearest or overlaid point features placement, the "
+"|pointClusterSymbol| :guilabel:`Point Cluster` renderer groups nearby points"
+" into a single rendered marker symbol. Points that fall within a specified "
+"distance from each others are merged into a single symbol. Points "
+"aggregation is made based on the closest group being formed, rather than "
+"just assigning them the first group within the search distance."
+msgstr ""
+"A diferencia del renderizador |pointDisplacementSymbol| "
+":guilabel:`Desplazamiento de puntos`, que amplía la colocación de los "
+"objetos espaciales puntos más cercanos o superpuestos, el renderizador "
+"|pointClusterSymbol| :guilabel:`Cúmulo de puntos` agrupa los puntos cercanos"
+" en un único símbolo de marcador renderizado. Los puntos que se encuentran "
+"dentro de una distancia especificada entre sí se fusionan en un único "
+"símbolo. La agregación de puntos se realiza en función del grupo más cercano"
+" que se forme, en lugar de asignarles simplemente el primer grupo dentro de "
+"la distancia de búsqueda."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3737
 msgid "pointClusterSymbol"
 msgstr "pointClusterSymbol"
@@ -1832,6 +1917,40 @@ msgstr "pointClusterSymbol"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:824
 msgid "From the main dialog, you can:"
 msgstr "Desde el diálogo principal, puede:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:830
+msgid ""
+"Select the :guilabel:`Renderer` type, i.e. how you want to classify features"
+" in the layer (single, categorized, rule-based...)"
+msgstr ""
+"Seleccione el tipo de :guilabel:`Renderizador`, es decir, cómo desea "
+"clasificar los objetos espaciales en la capa (simples, categorizados, "
+"basados en reglas...)"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:832
+msgid ""
+"Press the :guilabel:`Renderer Settings...` button to configure features' "
+"symbology as usual. Note that this symbology is only visible on features "
+"that are not clustered, the :guilabel:`Cluster symbol` being applied "
+"otherwise. Also, when all the point features in a cluster belong to the same"
+" rendering class, and thus would be applied the same color, that color "
+"represents the ``@cluster_color`` variable of the cluster."
+msgstr ""
+"Pulse el botón :guilabel:`Configuración del renderizador...` para configurar"
+" la simbología de los elementos de la forma habitual. Tenga en cuenta que "
+"esta simbología sólo es visible en los elementos que no están agrupados, ya "
+"que en caso contrario se aplica el símbolo :guilabel:`Agrupamiento`. Además,"
+" cuando todas los objetos espaciales punto de un grupo pertenecen a la misma"
+" clase de renderizado, y por tanto se les aplicaría el mismo color, ese "
+"color representa la variable ``@cluster_color`` del grupo."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:838
+msgid ""
+"Indicate the maximal :guilabel:`Distance` to consider for clustering "
+"features. Supports common symbol units."
+msgstr ""
+"Indique la máxima :guilabel:`Distancia` a considerar para agrupar objetos "
+"espaciales. Admite unidades de símbolo comunes."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:846
 msgid "Point Cluster dialog"
@@ -3921,6 +4040,18 @@ msgid ""
 msgstr ""
 "Presione :guilabel:`Encontrar` para devolver el :guilabel:`valor Máximo` del"
 " atributo o ingrese un valor personalizado en el control."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1863
+msgid ""
+"For histogram and stacked bars, enter a :guilabel:`Bar length` value, used "
+"to represent the :guilabel:`Maximum value` of the attributes. For each "
+"feature, the bar length will then be scaled linearly to keep this matching."
+msgstr ""
+"Para el histograma y las barras apiladas, introduzca un valor "
+":guilabel:`Longitud de barra`, utilizado para representar el "
+":guilabel:`Valor máximo` de los atributos. Para cada característica, la "
+"longitud de la barra se escalará linealmente para mantener esta "
+"correspondencia."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1867
 msgid ""
@@ -6446,9 +6577,40 @@ msgstr "Para finalizar y añadir la acción, click en el botón :guilabel:`OK`."
 msgid "Edit action dialog configured with the example"
 msgstr "Diálogo de edición de acción configurado con el ejemplo"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2987
+msgid "This completes the action, and it is ready to use."
+msgstr "Esto completa la acción, y está listo para usar."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2989
+msgid ""
+"Close the :guilabel:`Layer Properties` dialog and zoom in to an area of "
+"interest. Make sure the ``lakes`` layer is active and identify a lake. In "
+"the result box you'll now see that our action is visible:"
+msgstr ""
+"Cierre el cuadro de diálogo :guilabel:`Propiedades de capa` y acerque el "
+"zoom a un área de interés. Asegúrese de que la capa ``lakes`` está activa e "
+"identifique un lago. En el cuadro de resultados verá ahora que nuestra "
+"acción es visible:"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2998
 msgid "Select feature and choose action"
 msgstr "Seleccionar objetos espaciales y elegir una acción"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3000
+msgid ""
+"When we click on the action, it brings up our default browser and navigates "
+"to the URL https://www.google.com/search?q=Tustumena. It is also possible to"
+" add further attribute fields to the action. Therefore, you can add a ``+`` "
+"to the end of the action text, select another field and click on "
+":guilabel:`Insert Field`. In this example, there is just no other field "
+"available that would make sense to search for."
+msgstr ""
+"Cuando hacemos clic en la acción, se abre nuestro navegador por defecto y se"
+" navega a la URL https://www.google.com/search?q=Tustumena. También es "
+"posible añadir más campos de atributo a la acción. Por lo tanto, puede "
+"añadir un ``+`` al final del texto de la acción, seleccionar otro campo y "
+"hacer clic en :guilabel:`Insertar campo`. En este ejemplo, no hay ningún "
+"otro campo disponible que tenga sentido buscar."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3007
 msgid ""
@@ -6647,6 +6809,10 @@ msgstr "Textos de aviso del mapa con código HTML"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3136
 msgid "Rendering Properties"
 msgstr "Propiedades de representación"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3143
+msgid "Layer Rendering Properties dialog"
+msgstr "Cuadro de diálogo Propiedades de renderizado de capas"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3146
 msgid "Scale dependent visibility"
@@ -6973,6 +7139,147 @@ msgstr ""
 "controlar las propiedades de elevación de la capa dentro de una vista de "
 "mapa :ref:`3D <label_3dmapview>` y su aparición en los gráficos de la "
 "herramienta de perfil. En concreto, puede establecer:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3299
+msgid "Vector layer elevation properties dialog"
+msgstr "Diálogo de propiedades de elevación de la capa vectorial"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3302
+msgid ""
+":guilabel:`Elevation Clamping`: defines how and whether the features "
+"altitude should be:"
+msgstr ""
+":guilabel:`Sujeción por elevación`: define cómo y si debe ser la altitud de "
+"los objetos espaciales:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3305
+msgid ""
+":guilabel:`Clamped to terrain`: takes elevation directly from the terrain "
+"height and ignores any existing Z values in the features. A data-defined "
+":guilabel:`Offset` value from the terrain can also be filled."
+msgstr ""
+":guilabel:`Sujeto al terreno`: toma la elevación directamente de la altura "
+"del terreno e ignora cualquier valor Z existente en las características. "
+"También se puede rellenar un valor :guilabel:`Desplazamiento` del terreno "
+"definido por los datos."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3308
+msgid ""
+":guilabel:`Relative to terrain`: any existing Z values in the features are "
+"added to the terrain height. A :guilabel:`Scale` factor followed by a data-"
+"defined :guilabel:`Offset` can be used to adjust the elevation. This option "
+"is not available for 2D geometry layers."
+msgstr ""
+":guilabel:`Relativo al terreno`: cualquier valor Z existente en los objetos "
+"espaciales se añade a la altura del terreno. Puede utilizarse un factor "
+":guilabel:`Escala` seguido de un :guilabel:`Desplazamiento` definido por los"
+" datos para ajustar la elevación. Esta opción no está disponible para capas "
+"de geometría 2D."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3312
+msgid ""
+":guilabel:`Absolute`: ignores the terrain height and directly takes Z values"
+" from the features for the elevation. A :guilabel:`Scale` factor followed by"
+" a data-defined :guilabel:`Offset` can be used to adjust the elevation. For "
+"2D geometry layers (with no Z values), a data-defined :guilabel:`Base "
+"height` can instead be set."
+msgstr ""
+":guilabel:`Absoluto`: ignora la altura del terreno y toma directamente los "
+"valores Z de los objetos espaciales para la elevación. Puede utilizarse un "
+"factor :guilabel:`Escala` seguido de un valor :guilabel:`Desplazamiento` "
+"definido por los datos para ajustar la elevación. En el caso de capas "
+"geométricas 2D (sin valores Z), puede definirse en su lugar una "
+":guilabel:`Altura base` definida por datos."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3317
+msgid ""
+"|unchecked| :guilabel:`Enable extrusion`: you can set a :guilabel:`Height` "
+"to control how high features vertically extend above their base. This is "
+"convenient to indicate that a 2D geometry layers, e.g. a polygon building "
+"footprints layer, actually represents 3D objects."
+msgstr ""
+"|unchecked| :guilabel:`Activar extrusión`: puede establecer una "
+":guilabel:`Altura` para controlar la altura a la que los objetos espaciales "
+"se extienden verticalmente por encima de su base. Esto es conveniente para "
+"indicar que una capa de geometría 2D, por ejemplo una capa de polígonos de "
+"huellas de edificios, representa en realidad objetos 3D."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3321
+msgid ""
+":guilabel:`Elevation Binding`: only relevant when combining an "
+":guilabel:`Elevation clamping` relying on the terrain with a line or polygon"
+" layer, this option controls how feature elevation is set relative to the "
+"terrain height. The terrain can be sampled:"
+msgstr ""
+":guilabel:`Fijación por elevación`: sólo relevante cuando se combina una "
+":guilabel:`Sujeción por elevación` que depende del terreno con una capa de "
+"líneas o polígonos, esta opción controla cómo se establece la elevación de "
+"la característica en relación con la altura del terreno. El terreno puede "
+"ser muestreado:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3326
+msgid ""
+"at the feature's :guilabel:`Centroid`, with the centroid height being added "
+"to each vertex's z value"
+msgstr ""
+"en el :guilabel:`Centroide` del objeto espacial, añadiendo la altura del "
+"centroide al valor z de cada vértice"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3328
+msgid ""
+"at every individual :guilabel:`Vertex` before being added to the vertex's z "
+"value"
+msgstr ""
+"en cada :guilabel:`Vértice` individual antes de ser añadido al valor z del "
+"vértice"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3331
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls how features are rendered "
+"when drawing a profile chart. Two main :guilabel:`Interpretation` modes are "
+"available:"
+msgstr ""
+":guilabel:`Apariencia del gráfico de perfil`: controla cómo se representan "
+"los objetos espaciales al dibujar un gráfico de perfil. Existen dos modos "
+"principales de :guilabel:`Interpretación`:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3335
+msgid ""
+"as :guilabel:`Individual features`: samples discrete positions where the "
+"cross section profile line intersects the vector features. That intersection"
+" can be represented as point, line or surface depending on the layer type "
+"and whether an extrusion is applied."
+msgstr ""
+"as :guilabel:`Objetos espaciales individuales`: muestrea posiciones "
+"discretas en las que la línea del perfil de la sección transversal interseca"
+" las características del vector. Esa intersección puede representarse como "
+"punto, línea o superficie en función del tipo de capa y de si se aplica una "
+"extrusión."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3347
+msgid ""
+"Depending on the layer settings, profile symbols can be represented with a "
+"custom style, using:"
+msgstr ""
+"Dependiendo de la configuración de la capa, los símbolos de perfil pueden "
+"representarse con un estilo personalizado, utilizando:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3356
+msgid ""
+"as :guilabel:`Continuous Surface (e.g. contours)`: the elevation chart will "
+"be rendered as a surface instead of separate features by joining the sampled"
+" elevation results into a continuous line. This can enhance visualisation "
+"and is designed for vector layers which represent a continuous elevation "
+"surface, e.g contour lines or surveyed elevation points. The line "
+":guilabel:`Style` can be set as:"
+msgstr ""
+"as :guilabel:`Superficie continua (por ejemplo, curvas de nivel)`: el "
+"gráfico de elevación se representará como una superficie en lugar de como "
+"objetos espaciales separados, uniendo los resultados de elevación "
+"muestreados en una línea continua. Esto puede mejorar la visualización y "
+"está diseñado para capas vectoriales que representan una superficie de "
+"elevación continua, por ejemplo, curvas de nivel o puntos de elevación "
+"topográfica. La línea :guilabel:`Estilo` puede establecerse como:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3363
 msgid "a profile :guilabel:`Line` with a :guilabel:`Line style` applied"

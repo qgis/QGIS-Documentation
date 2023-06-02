@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-17 05:05+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -947,6 +948,14 @@ msgstr ""
 "berekenen van de samenstelling te beperken. Velden en geometrie zijn van de "
 "objecten op de samengevoegde laag. Toegang tot het bronobject kan worden "
 "verkregen met de variabele @parent."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:55
+msgid ""
+"**concatenator** - optional string to use to join values for 'concatenate' "
+"and 'concatenate_unique' aggregates"
+msgstr ""
+"**concatenator** - optionele tekenreeks om te gebruiken voor het "
+"samenstellen van de waarden bij 'concatenate' en 'concatenate_unique' "
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:56
 msgid ""
@@ -2039,6 +2048,11 @@ msgstr "``array(2,10)[0]`` → 2"
 msgid "array_all"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:35
+msgid "Returns TRUE if an array contains all the values of a given array."
+msgstr ""
+"Geeft TRUE terug als een array alle waarden van een opgegeven array bevat."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:41
 msgid "array_all(array_a, array_b)"
 msgstr "array_all(array_a, array_b)"
@@ -2050,6 +2064,14 @@ msgstr "**array_a** - een array"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:44
 msgid "**array_b** - the array of values to search"
 msgstr "**array_b** - de te doorzoeken array met waarden"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:46
+msgid "``array_all(array(1,2,3),array(2,3))`` → TRUE"
+msgstr "``array_all(array(1,2,3),array(2,3))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:47
+msgid "``array_all(array(1,2,3),array(1,2,4))`` → FALSE"
+msgstr "``array_all(array(1,2,3),array(1,2,4))`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:55
 msgid "array_append"
@@ -2124,6 +2146,10 @@ msgstr "``array_cat(array(1,2),array(2,3))`` → [ 1, 2, 2, 3 ]"
 msgid "array_contains"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:98
+msgid "Returns TRUE if an array contains the given value."
+msgstr "Geeft TRUE terug als een array de opgegeven waarde bevat."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:104
 msgid "array_contains(array, value)"
 msgstr ""
@@ -2132,6 +2158,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:194
 msgid "**value** - the value to search"
 msgstr "**value** - de op te zoeken waarde"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:109
+msgid "``array_contains(array(1,2,3),2)`` → TRUE"
+msgstr "``array_contains(array(1,2,3),2)`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:117
 msgid "array_count"
@@ -2339,6 +2369,11 @@ msgstr "``array_insert(array(1,2,3),1,100)`` → [ 1, 100, 2, 3 ]"
 msgid "array_intersect"
 msgstr "array_intersect"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:30
+msgid "Returns TRUE if at least one element of array1 exists in array2."
+msgstr ""
+"Geeft TRUE terug als tenminste één element van array1 bestaat in array2."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:36
 msgid "array_intersect(array1, array2)"
 msgstr "array_intersect(array1, array2)"
@@ -2350,6 +2385,10 @@ msgstr "**array1** - een array"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:39
 msgid "**array2** - another array"
 msgstr "**array2** - een andere array"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:41
+msgid "``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → TRUE"
+msgstr "``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:49
 msgid "array_last"
@@ -2698,6 +2737,16 @@ msgstr "``array_remove_all(array('a','b','c','b'),'b')`` → [ 'a', 'c' ]"
 msgid "array_remove_at"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:313
+msgid ""
+"Returns an array with the item at the given index removed. Supports positive"
+" (0 for the first element) and negative (the last -Nth value, -1 for the "
+"last element) index."
+msgstr ""
+"Geeft een array terug waaruit het item op de opgegeven index is verwijderd. "
+"Ondersteunt positieve (0 voor het eerste element) en negatieve (de laatste "
+"-Ne waarde, -1 voor het laatste element) index."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:319
 msgid "array_remove_at(array, pos)"
 msgstr ""
@@ -2705,6 +2754,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:322
 msgid "**pos** - the position to remove (0 based)"
 msgstr "**pos** - de te verwijderen positie (0-gebaseerd)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:324
+msgid "``array_remove_at(array(1, 2, 3), 1)`` → [1, 3 ]"
+msgstr "``array_remove_at(array(1, 2, 3), 1)`` → [1, 3 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:325
+msgid "``array_remove_at(array(1, 2, 3), -1)`` → [1, 2 ]"
+msgstr "``array_remove_at(array(1, 2, 3), -1)`` → [1, 2 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:333
 msgid "array_replace"
@@ -3021,9 +3078,27 @@ msgstr "``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]"
 msgid "geometries_to_array"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:522
+msgid "Splits a geometry into simpler geometries in an array."
+msgstr "Splitst een geometrie in eenvoudiger geometrieën in een array."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:528
 msgid "geometries_to_array(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:530
+msgid "**geometry** - the input geometry"
+msgstr "**geometry** - de invoergeometrie"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:532
+msgid ""
+"``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1,"
+" 3 2, 5 8)),LineString (3 2, 4 2))'))`` → an array of a polygon and a line "
+"geometries"
+msgstr ""
+"``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1,"
+" 3 2, 5 8)),LineString (3 2, 4 2))'))`` → an array of a polygon and a line "
+"geometries"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:533
 msgid ""
@@ -3031,6 +3106,14 @@ msgid ""
 " ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
 "1, 3 2, 5 8))'"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:534
+msgid ""
+"``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
+"5,10 10,10 0,5 5))'))`` → an array of two polygon geometries"
+msgstr ""
+"``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
+"5,10 10,10 0,5 5))'))`` → an array of two polygon geometries"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:542
 msgid "regexp_matches"
@@ -5899,6 +5982,18 @@ msgstr "Haal de datum/tijd op tot 100 dagen vanaf nu:"
 msgid "Fields and Values"
 msgstr "Velden en waarden"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:214
+msgid ""
+"Contains a list of fields from the active layer, and special values. Fields "
+"list includes the ones stored in the dataset, :ref:`virtual <virtual_field>`"
+" and :ref:`auxiliary <vector_auxiliary_storage>` ones as well as from "
+":ref:`joins <sec_joins>`."
+msgstr ""
+"Bevat een lijst met velden uit de actieve laag, en speciale waarden. De "
+"lijst met velden is inclusief die welke zijn opgeslagen in de gegevensset, "
+":ref:`virtueel <virtual_field>` en :ref:`hulp <vector_auxiliary_storage>` "
+"als ook van :ref:`joins <sec_joins>`."
+
 #: ../../docs/user_manual/expressions/functions_list.rst:219
 msgid ""
 "Double-click a field name to have it added to your expression. You can also "
@@ -5977,6 +6072,22 @@ msgstr ""
 msgid "base_file_name(path)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:85
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:105
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:125
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:145
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:165
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:186
+msgid ""
+"**path** - a file path or a map layer value. If a map layer value is "
+"specified then the file source of the layer will be used."
+msgstr ""
+"**path** - een bestandspad of een waarde van een kaartlaag. Als een waarde "
+"van een kaartlaag is gespecificeerd dan zal de bestandsbron van de laag "
+"worden gebruikt."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:24
 msgid ""
 "``base_file_name('/home/qgis/data/country_boundaries.shp')`` → "
@@ -5997,6 +6108,16 @@ msgstr "Haalt tags exif op uit een afbeeldingsbestand."
 msgid "exif(path, [tag])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:44
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid ""
+"**path** - An image file path or a map layer value. If a map layer value is "
+"specified then the file source of the layer will be used."
+msgstr ""
+"**path** - een bestandspad voor een afbeelding of een waarde van een "
+"kaartlaag. Als een waarde van een kaartlaag is gespecificeerd dan zal de "
+"bestandsbron van de laag worden gebruikt."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:45
 msgid ""
 "**tag** - The tag to return. If empty, a map with all exif tag values will "
@@ -6013,9 +6134,17 @@ msgstr "``exif('/my/photo.jpg','Exif.Image.Orientation')`` → 0"
 msgid "file_exists"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:57
+msgid "Returns TRUE if a file path exists."
+msgstr "Geeft TRUE terug als een bestandspad bestaat."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:63
 msgid "file_exists(path)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:67
+msgid "``file_exists('/home/qgis/data/country_boundaries.shp')`` → TRUE"
+msgstr "``file_exists('/home/qgis/data/country_boundaries.shp')`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:75
 msgid "file_name"
@@ -6099,17 +6228,41 @@ msgstr "``file_suffix('/home/qgis/data/country_boundaries.shp')`` → 'shp'"
 msgid "is_directory"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:157
+msgid "Returns TRUE if a path corresponds to a directory."
+msgstr "Geeft TRUE terug als een pad correspondeert met een map."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:163
 msgid "is_directory(path)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:167
+msgid "``is_directory('/home/qgis/data/country_boundaries.shp')`` → FALSE"
+msgstr "``is_directory('/home/qgis/data/country_boundaries.shp')`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:168
+msgid "``is_directory('/home/qgis/data/')`` → TRUE"
+msgstr "``is_directory('/home/qgis/data/')`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:176
 msgid "is_file"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:178
+msgid "Returns TRUE if a path corresponds to a file."
+msgstr "Geeft TRUE terug als een pad correspondeert met een bestand."
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:184
 msgid "is_file(path)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:188
+msgid "``is_file('/home/qgis/data/country_boundaries.shp')`` → TRUE"
+msgstr "``is_file('/home/qgis/data/country_boundaries.shp')`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:189
+msgid "``is_file('/home/qgis/data/')`` → FALSE"
+msgstr "``is_file('/home/qgis/data/')`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:259
 msgid "Form Functions"
@@ -6480,9 +6633,17 @@ msgstr "``eval_template('QGIS [% upper(\\'rocks\\') %]')`` → QGIS ROCKS"
 msgid "is_layer_visible"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/General.rst:77
+msgid "Returns TRUE if a specified layer is visible."
+msgstr "Geeft TRUE terug als een gespecificeerde laag zichtbaar is."
+
 #: ../../docs/user_manual/expressions/expression_help/General.rst:83
 msgid "is_layer_visible(layer)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:87
+msgid "``is_layer_visible('baseraster')`` → TRUE"
+msgstr "``is_layer_visible('baseraster')`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/General.rst:95
 msgid "mime_type"
@@ -6756,6 +6917,95 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
 msgid "apply_dash_pattern"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
+msgid ""
+"Applies a dash pattern to a geometry, returning a MultiLineString geometry "
+"which is the input geometry stroked along each line/ring with the specified "
+"pattern."
+msgstr ""
+"Past een streepjespatroon toe op een geometrie, wat een MultiLineString-"
+"geometrie teruggeeft waarvan de invoergeometrie gestreept is langs elke "
+"lijn/ring met het gespecificeerde patroon."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
+msgid ""
+"apply_dash_pattern(geometry, pattern, [start_rule=no_rule], "
+"[end_rule=no_rule], [adjustment=both], [pattern_offset=0])"
+msgstr ""
+"apply_dash_pattern(geometry, pattern, [start_rule=no_rule], "
+"[end_rule=no_rule], [adjustment=both], [pattern_offset=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:78
+msgid ""
+"**geometry** - a geometry (accepts (multi)linestrings or (multi)polygons)."
+msgstr ""
+"**geometry** - een geometrie (accepteert (multi)linestrings of "
+"(multi)polygonen)."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:79
+msgid ""
+"**pattern** - dash pattern, as an array of numbers representing dash and gap"
+" lengths. Must contain an even number of elements."
+msgstr ""
+"**pattern** - streepjespatroon, als een array van getallen die lengten van "
+"streepjes en gaten weergeven. Moet een even aantal elementen bevatten."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:80
+msgid ""
+"**start_rule** - optional rule for constraining the start of the pattern. "
+"Valid values are 'no_rule', 'full_dash', 'half_dash', 'full_gap', "
+"'half_gap'."
+msgstr ""
+"**start_rule** - optionele regel voor het beperken van het begin van het "
+"patroon. Geldige waarden zijn 'no_rule', 'full_dash', 'half_dash', "
+"'full_gap', 'half_gap'."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:81
+msgid ""
+"**end_rule** - optional rule for constraining the end of the pattern. Valid "
+"values are 'no_rule', 'full_dash', 'half_dash', 'full_gap', 'half_gap'."
+msgstr ""
+"**end_rule** - optionele regel voor het beperken van het einde van het "
+"patroon. Geldige waarden zijn 'no_rule', 'full_dash', 'half_dash', "
+"'full_gap', 'half_gap'."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:82
+msgid ""
+"**adjustment** - optional rule for specifying which part of patterns are "
+"adjusted to fit the desired pattern rules. Valid values are 'both', 'dash', "
+"'gap'."
+msgstr ""
+"**adjustment** - optionele regel voor het specificeren van welk deel van de "
+"patronen moeten worden aangepast om te zorgen dat de regels van het gewenste"
+" patroon passen. Geldige waarden zijn 'both', 'dash', 'gap'."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:83
+msgid ""
+"**pattern_offset** - Optional distance specifying a specific distance along "
+"the pattern to commence at."
+msgstr ""
+"**pattern_offset** - Optionele afstand die een specifieke afstand "
+"specificeert langs het patroon waar het moet beginnen."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:85
+msgid ""
+"``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"array(3, 1)))`` → MultiLineString ((1 1, 4 1),(5 1, 8 1),(9 1, 10 1, 10 1))"
+msgstr ""
+"``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"array(3, 1)))`` → MultiLineString ((1 1, 4 1),(5 1, 8 1),(9 1, 10 1, 10 1))"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:86
+msgid ""
+"``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"array(3, 1), start_rule:='half_dash'))`` → MultiLineString ((1 1, 2.5 "
+"1),(3.5 1, 6.5 1),(7.5 1, 10 1, 10 1))"
+msgstr ""
+"``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"array(3, 1), start_rule:='half_dash'))`` → MultiLineString ((1 1, 2.5 "
+"1),(3.5 1, 6.5 1),(7.5 1, 10 1, 10 1))"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:94
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:102
@@ -7063,6 +7313,14 @@ msgstr ""
 "``buffer($geometry, 10.5)`` → polygoon van de geometrie van het huidige "
 "object, gebufferd op 10.5 eenheden"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
+msgid ""
+"Buffer (in yellow) of points, line, polygon with positive buffer, and "
+"polygon with negative buffer"
+msgstr ""
+"Buffer (in geel) van punten, lijn, polygoon met positieve buffer, en "
+"polygoon met negatieve buffer"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:340
 msgid "Further reading: :ref:`qgisbuffer` algorithm"
 msgstr "Lees verder: algoritme :ref:`qgisbuffer`"
@@ -7323,17 +7581,97 @@ msgstr ""
 msgid "concave_hull"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid ""
+"Returns a possibly concave polygon that contains all the points in the "
+"geometry"
+msgstr ""
+"Geeft een mogelijke bolle polygoon die alle punten in de geometrie bevat"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
 msgid "concave_hull(geometry, target_percent, [allow_holes=False])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
+msgid ""
+"**target_percent** - the percentage of area of the convex hull the solution "
+"tries to approach. A target_percent of 1 gives the same result as the convex"
+" hull. A target_percent between 0 and 0.99 produces a result that should "
+"have a smaller area than the convex hull."
+msgstr ""
+"**target_percent** - het percentage gebied dat de oplossing voor de convex "
+"hull probeert te benaderen. Een target_percent van 1 geeft hetzelfde "
+"resultaat als de convex hull. Een target_percent tussen 0 en 0.99 produceert"
+" een resultaat dat een kleiner gebied zou moeten hebben dan de convex hull."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
+msgid ""
+"**allow_holes** - optional argument specifying whether to allow holes within"
+" the output geometry. Defaults to FALSE, set to TRUE to avoid including "
+"holes in the output geometry."
+msgstr ""
+"**allow_holes** - optioneel argument dat specificeert of gaten zijn "
+"toegestaan in de uitvoergeometrie. Standaard is FALSE, stel in op TRUE om "
+"opnemen van gaten in de uitvoergeometrie te vermijden."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+msgid ""
+"``geom_to_wkt(concave_hull(geom_from_wkt('MULTILINESTRING((106 164,30 112,74"
+" 70,82 112,130 94,130 62,122 40,156 32,162 76,172 88),(132 178,134 148,128 "
+"136,96 128,132 108,150 130,170 142,174 110,156 96,158 90,158 88),(22 64,66 "
+"28,94 38,94 68,114 76,112 30,132 10,168 18,178 34,186 52,184 74,190 100,190 "
+"122,182 148,178 170,176 184,156 164,146 178,132 186,92 182,56 158,36 150,62 "
+"150,76 128,88 118))'), 0.99))`` → 'Polygon ((30 112, 36 150, 92 182, 132 "
+"186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 "
+"28, 22 64, 30 112))'"
+msgstr ""
+"``geom_to_wkt(concave_hull(geom_from_wkt('MULTILINESTRING((106 164,30 112,74"
+" 70,82 112,130 94,130 62,122 40,156 32,162 76,172 88),(132 178,134 148,128 "
+"136,96 128,132 108,150 130,170 142,174 110,156 96,158 90,158 88),(22 64,66 "
+"28,94 38,94 68,114 76,112 30,132 10,168 18,178 34,186 52,184 74,190 100,190 "
+"122,182 148,178 170,176 184,156 164,146 178,132 186,92 182,56 158,36 150,62 "
+"150,76 128,88 118))'), 0.99))`` → 'Polygon ((30 112, 36 150, 92 182, 132 "
+"186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 "
+"28, 22 64, 30 112))'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:364
+msgid "Further reading: :ref:`expression_function_GeometryGroup_convex_hull`"
+msgstr "Lees verder: :ref:`expression_function_GeometryGroup_convex_hull`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "contains"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry contains another. Returns TRUE if and only if no "
+"points of geometry2 lie in the exterior of geometry1, and at least one point"
+" of the interior of geometry2 lies in the interior of geometry1."
+msgstr ""
+"Test of een geometrie een andere bevat. Geeft TRUE terug als, en alleen als,"
+" er geen punten van geometry2 in het exterieur van geometry1 liggen, en "
+"tenminste één punt van het interieur van geometry2 in het interieur van "
+"geometry1 ligt."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "contains(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), "
+"geom_from_wkt( 'POINT(0.5 0.5 )' ) )`` → TRUE"
+msgstr ""
+"``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), "
+"geom_from_wkt( 'POINT(0.5 0.5 )' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
+msgstr ""
+"``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:370
 msgid ""
@@ -7366,13 +7704,46 @@ msgstr ""
 "``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) "
 ")`` → 'POLYGON((3 3, 4 10, 4 4, 3 3))'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:376
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_concave_hull`, "
+":ref:`qgisconvexhull` algorithm"
+msgstr ""
+"Lees verder: :ref:`expression_function_GeometryGroup_concave_hull`, "
+"algoritme :ref:`qgisconvexhull`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "crosses"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry crosses another. Returns TRUE if the supplied "
+"geometries have some, but not all, interior points in common."
+msgstr ""
+"Test of een geometrie kruist met een andere. Geeft TRUE terug als de "
+"opgegeven geometrieën enkele, maar niet alle, punten in het interieur "
+"gemeenschappelijk hebben."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "crosses(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 "
+"4, 5 5)' ) )`` → FALSE"
+msgstr ""
+"``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 "
+"4, 5 5)' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:383
 msgid ""
@@ -7383,9 +7754,33 @@ msgstr "Lees verder: :ref:`expression_function_GeometryGroup_overlay_crosses`"
 msgid "densify_by_count"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Takes a polygon or line layer geometry and generates a new one in which the "
+"geometries have a larger number of vertices than the original one."
+msgstr ""
+"Neemt een geometrie van een polygonen-laag of lijn-laag en maakt een nieuwe "
+"waarin de geometrieën een groter aantal punten hebben dan de originele."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "densify_by_count(geometry, vertices)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+msgid "**vertices** - number of vertices to add (per segment)"
+msgstr "**vertices** - aantal toe te voegen punten (per segment)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(densify_by_count(geom_from_wkt('LINESTRING(1 1, 10 1)'), 3))``"
+" → LineString (1 1, 3.25 1, 5.5 1, 7.75 1, 10 1)"
+msgstr ""
+"``geom_to_wkt(densify_by_count(geom_from_wkt('LINESTRING(1 1, 10 1)'), 3))``"
+" → LineString (1 1, 3.25 1, 5.5 1, 7.75 1, 10 1)"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:389
+msgid "Further reading: :ref:`qgisdensifygeometries` algorithm"
+msgstr "Lees verder: algoritme :ref:`qgisdensifygeometries`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "densify_by_distance"
