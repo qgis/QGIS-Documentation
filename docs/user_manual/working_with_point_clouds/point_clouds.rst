@@ -315,17 +315,8 @@ also configure:
   Check this setting if you do not want to render those values.
 * :guilabel:`Legend settings`, for display in the :guilabel:`Layers`
   panel and in the :ref:`layout legend <layout_legend_item>`.
-  More details at :ref:`point_cloud_legend_settings`.
-
-
-.. _point_cloud_legend_settings:
-
-Customize Color Ramp Legend
-^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
-
-Since the customization works the same way as with a raster layer, you can
-find information in the raster data chapter under
-:ref:`raster_legend_settings`.
+  Customization works the same way as with a raster layer
+  (find more details at :ref:`raster_legend_settings`).
 
 
 .. _point_cloud_rgb:
