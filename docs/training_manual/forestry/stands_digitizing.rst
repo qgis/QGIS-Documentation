@@ -197,8 +197,7 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 
    .. figure:: img/snapping_settings_forest.png
       :align: center
-
-   |
+      :width: 100%
 
    With these snapping settings, whenever you are digitizing and get close enough
    to one of the points in the centroids layer or any vertex of your digitized
@@ -325,8 +324,7 @@ file or a spreadsheet. For this exercise, the information from the inventory for
 
       .. figure:: img/inventory_csv_import.png
         :align: center
-
-      |
+        :width: 100%
 
    #. Press :guilabel:`Add` to load the formatted :file:`csv` file in the project.
 
@@ -356,8 +354,7 @@ You will see that the field names are prefixed with ``rautjarvi_1994_``. To chan
 
    .. figure:: img/join_csv.png
       :align: center
-
-   |
+      :width: 80%
 
 The data from the :file:`.csv` file is just linked to your vector file. To make
 this link permanent, so that the data is actually recorded to the vector file
@@ -372,8 +369,8 @@ you need to save the ``forest_stands`` layer as a new vector file. To do this:
 
 .. figure:: img/save_vector_layer.png
    :align: center
+   :width: 80%
 
-|
 
 |basic| |TY| Adding Area and Perimeter 
 -------------------------------------------------------------------------------
