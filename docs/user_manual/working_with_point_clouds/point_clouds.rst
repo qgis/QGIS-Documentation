@@ -5,7 +5,6 @@
 Working with Point Clouds
 **************************
 
-
 .. only:: html
 
    .. contents::
@@ -56,7 +55,6 @@ attribute table of point clouds in QGIS. However, the |identify|
 attributes, even of a single data point.
 
 
-
 .. _`point_clouds_properties`:
 
 Point Clouds Properties
@@ -95,7 +93,6 @@ following sections:
   at :ref:`save_layer_property`
 
 
-
 .. _point_clouds_information:
 
 Information Properties
@@ -115,14 +112,12 @@ the current layer. Provided information are:
 * Picked from the |editMetadata| :ref:`Metadata <point_clouds_metadata>` tab
   (where they can be edited): access, extents, links, contacts, history...
 
-
 .. _figure_point_cloud_information:
 
 .. figure:: img/point_cloud_information.png
    :align: center
 
    Point cloud information tab
-
 
 
 .. _point_clouds_source:
@@ -144,7 +139,6 @@ information about the point cloud layer:
   this process only if the CRS applied to the layer is a wrong
   one or if none was applied.
 
-
 .. _figure_point_cloud_source:
 
 .. figure:: img/point_cloud_source.png
@@ -153,22 +147,28 @@ information about the point cloud layer:
    Point cloud source tab
 
 
-
 .. _point_clouds_symbology:
 
 Symbology Properties
 --------------------
 
 In the |symbology| :guilabel:`Symbology` tab the settings for the
-rendering of the point cloud are made. There are different options
-for rendering point clouds that can be selected using the drop-down
+rendering of the point cloud are made.
+In the upper part, the settings of the different feature renderers can be found.
+In the lower part, there are sections with which general settings
+for the entire layer can be made and which apply over feature renderers.
+
+Feature Rendering types
+.........................
+
+There are different options for rendering point clouds that can be selected using the drop-down
 menu at the top of the :guilabel:`Symbology` tab
 (see :numref:`figure_point_cloud_symbology_overview`):
 
 * |pointCloudExtent| :guilabel:`Extent Only`: Only a bounding box of the extent
-  of the data is displayed; the symbol can be changed with the
-  :ref:`vector_fill_symbols` dialog by clicking in the line, clicking on the
-  |browserCollapse| arrow at the end leads you to :ref:`color_widget`.
+  of the data is displayed; convenient for overviewing the data extent.
+  As usual, the :guilabel:`Symbol` :ref:`widget <symbol_widget_selector>` helps you configure
+  any properties (color, stroke, opacity, sub-layers, ...) you'd like for the box.
 * |singlebandPseudocolor| :guilabel:`Attribute by Ramp`: The data is drawn over
   a color gradient. See :ref:`point_cloud_ramp`
 * |multibandColor| :guilabel:`RGB`: Draw the data using red, green and blue
@@ -185,12 +185,10 @@ renderer:
   classified renderer will be used
 * else it will fall back to rendering based on Z attribute
 
-
 If you do not know the attributes of the point cloud, the |basicStatistics|
 :guilabel:`Statistics` :ref:`tab <point_clouds_statistics>` provides a good
 overview of which attributes are contained in the point cloud and in which
 ranges the values are located.
-
 
 .. _figure_point_cloud_symbology_overview:
 
@@ -200,10 +198,6 @@ ranges the values are located.
    Point cloud symbology tab
 
 
-In the upper part of the :guilabel:`Symbology` tab, the settings of the different
-renderers can be found. In the lower part there are sections with which general
-settings for the entire layer can be made and which are the same for all
-renderers:
 
 * Under :guilabel:`Point Symbol`, the size and the unit (e.g. millimeters,
   pixels, inches) with which each data point is displayed can be set. Either
@@ -233,11 +227,10 @@ renderers:
     through the settings described in :ref:`blend-modes`.
 
 
-
 .. _point_cloud_ramp:
 
 Attribute by Ramp Renderer
-..........................
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 With |singlebandPseudocolor| :guilabel:`Attribute by Ramp`, the data can be
 displayed by numerical values over a color gradient. Such numerical values
@@ -247,14 +240,12 @@ gradient via interpolation. The distinct values and their assignment to a
 certain color are called "color map" and are shown in the table. There are
 various setting options, which are described below the figure.
 
-
 .. _figure_point_cloud_attribute_by_ramp:
 
 .. figure:: img/point_cloud_attribute_by_ramp.png
    :align: center
 
    Point cloud symbology tab: Attribute by Ramp
-
 
 * :guilabel:`Min` and :guilabel:`Max` define the range that is applied to
   the color ramp: the :guilabel:`Min` value represents the left, the
@@ -266,15 +257,15 @@ various setting options, which are described below the figure.
 * The :guilabel:`Interpolation` entry defines how values are
   assigned their color:
 
-   * :guilabel:`Discrete` (a ``<=`` symbol appears in the header of the
-     :guilabel:`Value` column): The color is taken from the closest color map
-     entry with equal or higher value
-   * :guilabel:`Linear` The color is linearly interpolated from the color map
-     entries above and below the pixel value, meaning that to each dataset
-     value corresponds a unique color
-   * :guilabel:`Exact` (a ``=`` symbol appears in the header of the
-     :guilabel:`Value` column): Only pixels with value equal to a color map
-     entry are applied a color; others are not rendered.
+  * :guilabel:`Discrete` (a ``<=`` symbol appears in the header of the
+    :guilabel:`Value` column): The color is taken from the closest color map
+    entry with equal or higher value
+  * :guilabel:`Linear` The color is linearly interpolated from the color map
+    entries above and below the pixel value, meaning that to each dataset
+    value corresponds a unique color
+  * :guilabel:`Exact` (a ``=`` symbol appears in the header of the
+    :guilabel:`Value` column): Only pixels with value equal to a color map
+    entry are applied a color; others are not rendered.
 * The :guilabel:`Color ramp` widget helps you select the color ramp to assign
   to the dataset. As usual with :ref:`this widget <color_ramp_widget>`,
   you can create a new one and edit or save the currently selected one.
@@ -340,7 +331,7 @@ find information in the raster data chapter under
 .. _point_cloud_rgb:
 
 RGB Renderer
-.............
+^^^^^^^^^^^^
 
 With the |multibandColor| :guilabel:`RGB` renderer, three selected attributes
 from the point cloud will be used as the red, green and blue component. If the
@@ -356,7 +347,6 @@ A :guilabel:`Contrast enhancement` method can be applied to the values:
   If you have problems with it, you should use the default setting
   :guilabel:`Stretch to MinMax`.
 
-
 .. _figure_point_cloud_rgb:
 
 .. figure:: img/point_cloud_rgb.png
@@ -365,11 +355,10 @@ A :guilabel:`Contrast enhancement` method can be applied to the values:
    The point cloud RGB renderer
 
 
-
 .. _point_cloud_classification:
 
 Classification Renderer
-........................
+^^^^^^^^^^^^^^^^^^^^^^^
 
 In the |paletted| :guilabel:`Classification` rendering, the point cloud is shown
 differentiated by color on the basis of an attribute. Any type of attribute
@@ -384,14 +373,12 @@ However, the data may deviate from this schema; in case of doubt, you have to
 ask the person or institution from which you received the data for the
 definitions.
 
-
 .. _figure_point_cloud_classification:
 
 .. figure:: img/point_cloud_classification.png
    :align: center
 
    The point cloud classification renderer
-
 
 In the table all used values are displayed with the corresponding color and
 legend. At the beginning of each row there is a |checkbox| check box; if it is
@@ -428,14 +415,12 @@ the drop down menu at the top of the tab:
 * |multibandColor| :guilabel:`RGB`: See :ref:`point_cloud_rgb`
 * |paletted| :guilabel:`Classification`: See :ref:`point_cloud_classification`
 
-
 .. _figure_point_cloud_3d_view:
 
 .. figure:: img/point_cloud_3d_view.png
    :align: center
 
    The point cloud 3D view tab with the classification renderer
-
 
 In the lower part of the |3d| :guilabel:`3D View` tab you can find the
 :guilabel:`Point Symbol` section. Here you can make general settings for the
@@ -502,14 +487,12 @@ the data in 3D maps. There are two setting options:
   also be restored with the |refresh| :sup:`Refresh` button at the end of
   the line.
 
-
 .. _figure_point_cloud_elevation:
 
 .. figure:: img/point_cloud_elevation.png
    :align: center
 
    The point cloud elevation tab
-
 
 
 .. _point_clouds_metadata:
@@ -520,7 +503,6 @@ Metadata Properties
 The |editMetadata| :guilabel:`Metadata` tab provides you with options
 to create and edit a metadata report on your layer.
 See :ref:`metadatamenu` for more information.
-
 
 
 .. _point_clouds_statistics:
@@ -541,7 +523,6 @@ table in the lower section. Here all values contained in the attribute are
 listed, as well as their absolute :guilabel:`Count` and relative :guilabel:`%`
 abundance.
 
-
 .. _figure_point_cloud_statistics:
 
 .. figure:: img/point_cloud_statistics.png
@@ -559,8 +540,6 @@ abundance.
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |basicStatistics| image:: /static/common/mAlgorithmBasicStatistics.png
-   :width: 1.5em
-.. |browserCollapse| image:: /static/common/browser_collapse.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
