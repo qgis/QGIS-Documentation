@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -362,6 +363,44 @@ msgstr ""
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:130
 msgid "GRASS LOCATION and MAPSET"
 msgstr "GRASS LOCATION en MAPSET"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:132
+msgid ""
+"GRASS data are stored in a directory referred to as GISDBASE. This "
+"directory, often called :file:`grassdata`, must be created before you start "
+"working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS "
+"data are organized by projects stored in subdirectories called "
+":file:`LOCATIONs`. Each :file:`LOCATION` is defined by its coordinate "
+"system, map projection and geographical boundaries. Each :file:`LOCATION` "
+"can have several :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) "
+"that are used to subdivide the project into different topics or sub-regions,"
+" or as workspaces for individual team members (see Neteler & Mitasova 2008 "
+"in :ref:`literature_and_web`). In order to analyze vector and raster layers "
+"with GRASS modules, you generally have to import them into a GRASS "
+":file:`LOCATION`. (This is not strictly true -- with the GRASS modules "
+":file:`r.external` and :file:`v.external` you can create read-only links to "
+"external GDAL-supported datasets without importing them. This is not the "
+"usual way for beginners to work with GRASS, therefore this functionality "
+"will not be described here.)"
+msgstr ""
+"Gegevens voor GRASS worden opgeslagen in een map waarnaar wordt verwezen als"
+" GISDBASE. Deze map, vaak :file:`grassdata` genaamd, moet worden gemaakt "
+"vóórdat u met de plug-in GRASS gaat werken in QGIS. Binnen deze map zijn de "
+"GIS-gegevens van GRASS georganiseerd in projecten die zijn opgeslagen in "
+"submappen, genaamd :file:`LOCATION's`. Elke :file:`LOCATION` wordt "
+"gedefinieerd door zijn coördinatensysteem, kaartprojectie en geografische "
+"grenzen. Elke :file:`LOCATION` kan verscheidene :file:`MAPSET's` (submappen "
+"van :file:`LOCATION`) hebben, die worden gebruikt om het project op te delen"
+" in verschillende onderwerpen of subregio's, of als werkruimte voor "
+"individuele teamleden (zie Neteler & Mitasova 2008 in "
+":ref:`literature_and_web`). Over het algemeen moet u, om vector- en "
+"rasterlagen met modules van GRASS te analyseren, ze importeren in een GRASS "
+":file:`LOCATION`. (Dit is niet helemaal waar -- met de modules voor GRASS "
+":file:`r.external` en :file:`v.external` kunt u koppelingen maken die "
+"alleen-lezen zijn naar externe gegevenssets, die door GDAL/OGR ondersteund "
+"worden, zonder ze te importeren. Dit is echter niet de normale manier voor "
+"beginners om te werken met GRASS, en daarom zal deze functionaliteit hier "
+"niet worden beschreven.)"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:152
 msgid "GRASS data in the alaska LOCATION"
