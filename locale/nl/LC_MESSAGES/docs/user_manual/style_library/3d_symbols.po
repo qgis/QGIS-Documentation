@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -119,6 +120,21 @@ msgstr ""
 ":guilabel:`Torus` gedefinieerd door een :guilabel:`Straal` en een "
 ":guilabel:`Kleine straal`"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:46
+msgid ""
+":guilabel:`3D Model`, using a 3D model file: supported formats include "
+"wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`. Models can be a file"
+" on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. Community-created models are shared on the QGIS "
+"Hub at https://plugins.qgis.org/wavefronts."
+msgstr ""
+":guilabel:`3D-model`, gebruikt een 3D-modelbestand: ondersteunde indelingen "
+"bevatten wavefront :file:`.obj`, :file:`.glTF` en :file:`.fbx`. Modellen "
+"kunnen alleen een bestand op schijf zijn, een URL op afstand URL of "
+":ref:`ingebed in het project <embedded_file_selector>`. Door de gemeenschap "
+"gemaakte modellen worden gedeeld op de QGIS Hub op "
+"https://plugins.qgis.org/wavefronts."
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:51
 msgid ""
 ":guilabel:`Billboard`, defined by the :guilabel:`Billboard height` and the "
@@ -146,6 +162,14 @@ msgstr ""
 "van de 3D-vectors worden opgegeven als absolute metingen vanaf 0. "
 ":guilabel:`Relatief` en :guilabel:`Terrein` voegen opgegeven waarden voor "
 "hoogte toe aan de onderliggende hoogte van het terrein."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:60
+#: ../../docs/user_manual/style_library/3d_symbols.rst:91
+#: ../../docs/user_manual/style_library/3d_symbols.rst:136
+msgid "The :ref:`shading <shading_texture>` properties can be defined."
+msgstr ""
+"De eigenschappen voor :ref:`schaduw <shading_texture>` kunnen worden "
+"gedefinieerd."
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:61
 msgid ""
@@ -377,6 +401,43 @@ msgid ""
 msgstr ""
 "Verscheidene technieken voor schaduw worden in QGIS gebruikt en hun "
 "beschikbaarheid is afhankelijk van het type geometrie van het symbool:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:163
+msgid ""
+":guilabel:`Realistic (Phong)`: describes the way a surface reflects light as"
+" a combination of the :guilabel:`Diffuse` reflection of rough surfaces with "
+"the :guilabel:`Specular` reflection of shiny surfaces "
+"(:guilabel:`Shininess`). It also includes an :guilabel:`Ambient` option to "
+"account for the small amount of light that is scattered about the entire "
+"scene. Use the :guilabel:`Opacity` slider to render semi-transparent objects"
+" in 3D. Read more at "
+"https://en.wikipedia.org/wiki/Phong_reflection_model#Description"
+msgstr ""
+":guilabel:`Realistisch (Phong)`: beschrijft de manier waarop een oppervlak "
+"licht reflecteert als een combinatie van de :guilabel:`Verspreiden` "
+"reflectie van ruwe oppervlakken met de :guilabel:`Spiegelen` reflectie van "
+"glimmende oppervlakken (:guilabel:`Glanzen`). Het omvat ook een optie "
+":guilabel:`Omringen` om rekening te houden met de kleine hoeveelheid licht "
+"dat over de gehele scene wordt verspreid. Gebruik de schuifbalk "
+":guilabel:`Opaciteit` om semi-transparente objecten in 3D te renderen. Lees "
+"meer op https://en.wikipedia.org/wiki/Phong_reflection_model#Description"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:170
+msgid ""
+":guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic "
+"(Phong)` except that an image is used as :guilabel:`Diffuse Texture`. The "
+"image can be a file on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. The :guilabel:`Texture scale` and "
+":guilabel:`Texture rotation` are required. Use the :guilabel:`Opacity` "
+"slider to render semi-transparent objects in 3D."
+msgstr ""
+":guilabel:`Realistisch met textuur (Phong)`: hetzelfde als de "
+":guilabel:`Realistisch (Phong)`, behalve dat een afbeelding wordt gebruikt "
+"als :guilabel:`Diffuse textuur`. De afbeelding mag een bestand op schijf "
+"zijn, een URL op afstand of :ref:`ingebed in het project "
+"<embedded_file_selector>`. De :guilabel:`Textuur schaal ` en "
+":guilabel:`Textuur rotatie` zijn vereist. Gebruik de schuifbalk "
+":guilabel:`Opaciteit` om semi-transparente objecten in 3D te renderen."
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:176
 msgid ""
