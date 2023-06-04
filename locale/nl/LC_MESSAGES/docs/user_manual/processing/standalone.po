@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,6 +44,16 @@ msgid "From a command line tool, run ``qgis_process`` and you should get:"
 msgstr ""
 "Voer, vanuit een programma voor de opdrachtregel,, ``qgis_process`` uit en u"
 " zou moeten krijgen:"
+
+#: ../../docs/user_manual/processing/standalone.rst:48
+msgid ""
+"Only installed plugins that advertise ``hasProcessingProvider=yes`` in their"
+" :file:`metadata.txt` file are recognized and can be activated or loaded by "
+"qgis_process tool."
+msgstr ""
+"Alleen geïnstalleerde plug-ins die in hun bestand :file:`metadata.txt` "
+"hebben opgenomen ``hasProcessingProvider=yes`` worden herkend en kunnen "
+"worden geactiveerd of geladen door het gereedschap qgis_process."
 
 #: ../../docs/user_manual/processing/standalone.rst:53
 msgid ""
@@ -77,6 +88,19 @@ msgstr ""
 "Als een parameter een lijst met waarden accepteert, stel dan dezelfde "
 "variabele meerdere keren in."
 
+#: ../../docs/user_manual/processing/standalone.rst:79
+msgid ""
+"While running an algorithm a text-based feedback bar is shown, and the "
+"operation can be cancelled via :kbd:`CTRL+C`."
+msgstr ""
+"Bij het uitvoeren van een algoritme wordt een op tekst gebaseerde balk voor "
+"terugkoppeling weergegeven, en de bewerking kan worden geannuleerd met "
+":kbd:`CTRL+C`."
+
+#: ../../docs/user_manual/processing/standalone.rst:82
+msgid "The ``run`` command also supports further parameters."
+msgstr "De opdracht ``run`` ondersteunt ook meer parameters."
+
 #: ../../docs/user_manual/processing/standalone.rst:84
 msgid "``--json`` will format stdout output in a JSON structured way."
 msgstr ""
@@ -104,3 +128,43 @@ msgid ""
 msgstr ""
 "``--project_path`` zal het gespecificeerde project laden om het algoritme "
 "uit te voeren."
+
+#: ../../docs/user_manual/processing/standalone.rst:90
+msgid ""
+"Complex input parameters, i.e. parameter types which are themselves "
+"specified as a dictionary type object for algorithms, are supported by "
+"qgis_process. To indicate that parameters will be specified via stdin, the "
+"qgis_process command must follow the format (with a trailing ``-`` in place "
+"of the usual arguments list)."
+msgstr ""
+"Complexe parameters voor de invoer, d.i. typen parameter die van zichzelf "
+"worden gespecificeerd als een dictionary type object voor algoritmes, worden"
+" ondersteund door qgis_process. De opdracht voor qgis_process moet de "
+"indeling ( met een achterliggende ``-`` in plaats van de normale lijst met "
+"argumenten) volgen om aan te geven dat parameters zullen worden "
+"gespecificeerd via stdin, "
+
+#: ../../docs/user_manual/processing/standalone.rst:101
+msgid ""
+"The JSON object must contain an \"inputs\" key, which is a map of the input "
+"parameter values. E.g."
+msgstr ""
+"Het object voor JSON moet een sleutel \"inputs\" bevatten, wat een kaart is "
+"van de waarden van de parameters voor de invoer. Bijv."
+
+#: ../../docs/user_manual/processing/standalone.rst:108
+msgid ""
+"Additionally, extra settings like the distance units, area units, ellipsoid "
+"and project path can be included in this JSON object:"
+msgstr ""
+"Aanvullend kunnen extra instellingen, zoals de eenheden voor afstand, "
+"eenheden voor gebied, ellipsoïde en projectpad worden opgenomen in dit "
+"object voor JSON:"
+
+#: ../../docs/user_manual/processing/standalone.rst:121
+msgid ""
+"Specifying input parameters via stdin implies automatically the :file:`JSON`"
+" output format for results."
+msgstr ""
+"Specificeren van parameters voor de invoer via stdin impliceert automatisch "
+"de indeling voor de uitvoer :file:`JSON` voor de resultaten."
