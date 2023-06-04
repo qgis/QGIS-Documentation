@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:53+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,6 +85,23 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:124
 msgid "Output using print layout"
 msgstr "Uitvoer door Afdruklay-out te gebruiken"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:126
+msgid ""
+"Print layout is a very handy tool if you would like to do a more "
+"sophisticated output than the simple rendering shown above. It is possible "
+"to create complex map layouts consisting of map views, labels, legend, "
+"tables and other elements that are usually present on paper maps. The "
+"layouts can be then exported to PDF, SVG, raster images or directly printed "
+"on a printer."
+msgstr ""
+"Afdruklay-out is een zeer handig gereedschap als u een uitgebreidere uitvoer"
+" wilt dan de eenvoudige rendering van die welke hierboven is weergegeven. "
+"Het is mogelijk complexe lay-outs voor kaarten te maken, bestaande uit "
+"weergaven van kaarten, labels, legenda, tabellen en andere elementen die "
+"gewoonlijk aanwezig zijn op papieren kaarten. De lay-outs kunnen dan worden "
+"geëxporteerd naar PDF, SVG, rasterafbeeldingen of direct worden afgedrukt op"
+" een printer."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:132
 msgid ""
@@ -221,6 +239,49 @@ msgstr ""
 " toegevoegd aan de lay-out), kunnen we doorgaan en een raster- en/of vector-"
 "uitvoer produceren."
 
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:263
+msgid "Checking layout validity"
+msgstr "Geldigheid lay-out controleren"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:265
+msgid ""
+"A layout is a made of a set of interconnected items and it can happen that "
+"these connections are broken during modifications (a legend connected to a "
+"removed map, an image item with missing source file,...) or you may want to "
+"apply custom constraints to the layout items. The "
+":class:`QgsAbstractValidityCheck <qgis.core.QgsAbstractValidityCheck>` helps"
+" you achieve this."
+msgstr ""
+"Een lay-out is gemaakt uit een set van onderling verbonden items en het kan "
+"gebeuren dat deze verbindingen defect raken tijdens aanpassingen (een "
+"legenda die is verbonden met een verwijderde kaart, een afbeeldingsitem met "
+"een ontbrekend bronbestand,…) of u wilt misschien aangepaste beperkingen "
+"toepassen op de items van de lay-out. De klasse "
+":class:`QgsAbstractValidityCheck <qgis.core.QgsAbstractValidityCheck>` helpt"
+" u dit te bereiken."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:270
+msgid "A basic check looks like:"
+msgstr "Een basiscontrole ziet eruit als dit:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:279
+msgid ""
+"Here's a check which throws a warning whenever a layout map item is set to "
+"the web mercator projection:"
+msgstr ""
+"Hier is een controle die een waarschuwing opwerpt, iedere keer als een "
+"kaartitem van een lay-out is ingesteld op de projectie Web Mercator:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:297
+msgid ""
+"And here's a more complex example, which throws a warning if any layout map "
+"items are set to a CRS which is only valid outside of the extent shown in "
+"that map item:"
+msgstr ""
+"En hier is een meer complexer voorbeeld, dat een waarschuwing opwerpt als "
+"een kaartitem is ingesteld op een CRS dat alleen geldig is buiten het in dat"
+" kaartitem weergegeven bereik:"
+
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:324
 msgid "Exporting the layout"
 msgstr "Lay-out exporteren"
@@ -232,6 +293,18 @@ msgid ""
 msgstr ""
 "De klasse :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>` moet "
 "worden gebruikt om een lay-out te exporteren."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:336
+msgid ""
+"Use :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>` or "
+":meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case "
+"you want to export to respectively an SVG or image file instead of a PDF "
+"file."
+msgstr ""
+"Gebruik :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>` of "
+":meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in het "
+"geval dat u wilt exporteren naar een SVG of afbeeldingsbestand in plaats van"
+" een bestand PDF."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:340
 msgid "Exporting a layout atlas"
