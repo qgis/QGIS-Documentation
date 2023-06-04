@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-09 10:03+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -83,6 +84,74 @@ msgstr ""
 "webplatform Transifex en beschikbaar gemaakt voor vertalers, die dan met het"
 " bewerkingsprogramma kunnen beginnen met het vertalen vanuit het Engels naar"
 " hun eigen taal."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:33
+msgid ""
+"When a file is translated at 100%, the translated strings are automatically "
+"pulled back to the documentation repository, under :file:`/QGIS-"
+"Documentation/locale/<language>`."
+msgstr ""
+"Wanneer een bestand 100% is vertaald, worden de vertaalde tekenreeksen "
+"automatisch teruggehaald naar de opslagplaats voor de documentatie, onder "
+":file:`/QGIS-Documentation/locale/<language>`."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:35
+msgid ""
+"At the next build of the documentation (which occurs at least once a day -- "
+"see time at the bottom of the page), a script reuses the sentences to create"
+" translated output."
+msgstr ""
+"Bij de volgende bouw van de documentatie (die tenminste één keer per dag "
+"wordt uitgevoerd -- bekijk de tijd aan de onderkant van de pagina), "
+"hergebruikt een script de zinnen om vertaalde uitvoer te maken."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:37
+msgid ""
+"For files not fully translated, a script pulls every two weeks translated "
+"strings from Transifex to Github and these are as well published at the next"
+" build."
+msgstr ""
+"Voor bestanden die niet volledig vertaald zijn, haalt een script elke twee "
+"weken de vertaalde tekenreeksen op vanuit Transifex naar Github en deze "
+"worden ook gepubliceerd bij de volgende bouw."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:39
+msgid ""
+"Whenever an :file:`.rst` file is updated, the English :file:`.po` file is "
+"updated and the changes are pushed to the corresponding file in Transifex. "
+"This means that when a new paragraph is added to an :file:`.rst` document "
+"that was already translated, only the new/updated sentences are added to the"
+" translated :file:`.po` file and needs to be translated."
+msgstr ""
+"Elke keer als een bestand :file:`.rst` is bijgewerkt, wordt het Engelse "
+"bestand :file:`.po` bijgewerkt en de wijzigingen worden doorgezet naar het "
+"corresponderende bestand in Transifex. Dit betekent dat wanneer een nieuwe "
+"alinea is toegevoegd aan een document :file:`.rst` dat al was vertaald, "
+"alleen de nieuwe/bijgewerkte zinnen worden toegevoegd aan het vertaalde "
+"bestand :file:`.po` en dienen te worden vertaald."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:45
+msgid "Translating QGIS Desktop specificities"
+msgstr "Bijzonderheden bij vertalen van QGIS Desktop "
+
+#: ../../docs/documentation_guidelines/do_translations.rst:47
+msgid ""
+"The main difference with translating QGIS applications is that instead of "
+":file:`.po` files, all the translatable strings in the :file:`.py`, "
+":file:`.cpp`, :file:`.yaml` files that shape a particular version of the "
+"application are pushed to and pulled from Transifex as a single :file:`.ts` "
+"file (e.g. ``qgis-application/qgis_en.ts (branch release-3_30)`` ). "
+"Translations are pulled to Github in development branch (daily), and at "
+"release time (for every released versions)."
+msgstr ""
+"Het belangrijkste verschil met het vertalen van toepassingen van QGIS is dat"
+" in plaats van :file:`.po`-bestanden, alle te vertalen tekenreeksen in de "
+"bestanden :file:`.py`, :file:`.cpp`, :file:`.yaml` die een bepaalde versie "
+"van de toepassing vormen worden doorgezet naar en teruggehaald van Transifex"
+" als één enkel bestand :file:`.ts` (bijv. ``qgis-application/qgis_en.ts "
+"(branch release-3_30)`` ). Vertalingen worden in Github in de branch "
+"development getrokken (dagelijks), en bij het maken van een uitgave (voor "
+"alle uitgegeven versies)."
 
 #: ../../docs/documentation_guidelines/do_translations.rst:54
 msgid "Two different tools are currently used to do translations in QGIS:"
