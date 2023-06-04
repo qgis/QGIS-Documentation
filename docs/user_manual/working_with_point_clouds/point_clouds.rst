@@ -371,6 +371,8 @@ Layer Rendering
 In the :guilabel:`Layer Rendering` section you have the following options
 to modify the rendering of the layer:
 
+.. _point_cloud_draw_order:
+
 * :guilabel:`Draw order`: allows to control whether point clouds rendering order on 2d map canvas
   should rely on their Z value.
   It is possible to render :
@@ -399,7 +401,8 @@ to modify the rendering of the layer:
   described in :ref:`blend-modes`.
 
 * :guilabel:`Eye dome lighting`: this applies shading effects to the map canvas for a better depth rendering.
-  Rendering quality depends on whether point clouds are drawn orderly.
+  Rendering quality depends on the :ref:`draw order <point_cloud_draw_order>` property;
+  the :guilabel:`Default` draw order may give sub-optimal results.
   Following parameters can be controlled:
 
   * :guilabel:`Strength`: increases the contrast, allowing for better depth perception
