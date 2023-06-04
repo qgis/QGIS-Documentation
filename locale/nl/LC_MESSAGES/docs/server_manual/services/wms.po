@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-26 14:33+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -503,6 +504,19 @@ msgstr "een :ref:`korte naam <services_basics_short_name>`"
 #: ../../docs/server_manual/services/wms.rst:177
 msgid "the layer id"
 msgstr "de laag-ID"
+
+#: ../../docs/server_manual/services/wms.rst:179
+msgid ""
+"The project option allowing to select layers by their id is in "
+":menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project --> "
+"Properties...` dialog. Check the :guilabel:`Use layer ids as names` checkbox"
+" to activate this option."
+msgstr ""
+"De projectoptie die het mogelijk maakt lagen te selecteren op hun ID staat "
+"in het menu :menuselection:`QGIS Server --> menu WMS Capabilities` van het "
+"dialoogvenster :menuselection:`Project --> Eigenschappen…`. Selecteer het "
+"keuzevak :guilabel:`Laag-ID's als naam gebruiken` om deze optie te "
+"activeren."
 
 #: ../../docs/server_manual/services/wms.rst:196
 msgid "STYLES"
@@ -1237,6 +1251,20 @@ msgstr ""
 #: ../../docs/server_manual/services/wms.rst:695
 msgid "FEATURE_COUNT"
 msgstr "FEATURE_COUNT"
+
+#: ../../docs/server_manual/services/wms.rst:697
+msgid ""
+"This parameter specifies the maximum number of features per layer to return."
+" For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
+"``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from layer1 "
+"will be returned. Likewise a maximum of 3 features from layer2 will be "
+"returned."
+msgstr ""
+"Deze parameter specificeert het maximale aantal terug te geven objecten per "
+"laag. Als bijvoorbeeld ``QUERY_LAYERS`` is ingesteld op ``laag1,laag2`` en "
+"``FEATURE_COUNT`` is ingesteld op ``3`` dan zal een maximum van 3 objecten "
+"uit laag1 worden teruggegeven. Op dezelfde wijze zal een maximum van 3 "
+"objecten van laag2 worden teruggegeven."
 
 #: ../../docs/server_manual/services/wms.rst:704
 msgid "By default, only 1 feature per layer is returned."
@@ -2543,6 +2571,14 @@ msgid "Server response to a GetMap request with redlining parameters"
 msgstr ""
 "Antwoord van de server voor een verzoek GetMap met parameters redlining"
 
+#: ../../docs/server_manual/services/wms.rst:1974
+msgid ""
+"You can see there are several parameters in this request to control the "
+"redlining feature. The full list includes:"
+msgstr ""
+"U kunt zien dat er verschillende parameters in dit verzoek staan om de "
+"mogelijkheid voor redlining te beheren. De volledige lijst omvat:"
+
 #: ../../docs/server_manual/services/wms.rst:1977
 msgid ""
 "**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
@@ -2576,6 +2612,14 @@ msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
 msgstr ""
 "**HIGHLIGHT_LABELCOLOR**: Deze parameter beheert de kleur van het label."
 
+#: ../../docs/server_manual/services/wms.rst:1986
+msgid ""
+"**HIGHLIGHT_LABEL_DISTANCE**: controls the distance between feature (e.g. "
+"point or line) and the label in mm"
+msgstr ""
+"**HIGHLIGHT_LABEL_DISTANCE**: beheert de afstand tussen object (bijv. punt "
+"of lijn) en het label in mm"
+
 #: ../../docs/server_manual/services/wms.rst:1988
 msgid ""
 "**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label (e.g."
@@ -2583,6 +2627,20 @@ msgid ""
 msgstr ""
 "**HIGHLIGHT_LABELFONT**: Deze parameter beheert het lettertype van het "
 "label. (bijv. Arial)"
+
+#: ../../docs/server_manual/services/wms.rst:1990
+msgid ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally on a"
+" point using the specified alignment (e.g. 'left', 'center', 'right')"
+msgstr ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: plaatst het label horizontaal op "
+"een punt met de gespecificeerde uitlijning (bijv. 'links', 'midden', "
+"'rechts')"
+
+#: ../../docs/server_manual/services/wms.rst:1992
+msgid "**HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees"
+msgstr ""
+"**HIGHLIGHT_LABEL_ROTATION**: beheert de rotatie van het label in graden"
 
 #: ../../docs/server_manual/services/wms.rst:1993
 msgid ""
@@ -2597,6 +2655,15 @@ msgid ""
 msgstr ""
 "**HIGHLIGHT_LABELSTRING**: U kunt de tekst voor uw labels doorgeven met deze"
 " parameter."
+
+#: ../../docs/server_manual/services/wms.rst:1997
+msgid ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: places the label vertically on a "
+"point using the specified alignment (e.g. 'top', 'half', 'bottom')"
+msgstr ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: plaatst het label verticaal op een "
+"punt met de gespecificeerde uitlijning (bijv. 'boven', 'halverwege', "
+"'onder')"
 
 #: ../../docs/server_manual/services/wms.rst:1999
 msgid ""
