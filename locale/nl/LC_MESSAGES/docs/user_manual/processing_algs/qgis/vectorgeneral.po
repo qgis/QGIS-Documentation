@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# DiGro, 2023
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2739,6 +2739,16 @@ msgstr ""
 "als een polygoon (false). In de afbeelding zullen geen cirkels worden "
 "teruggegeven."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1565
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1727
+msgid "**Join to features in**"
+msgstr "**Samenvoegen met objecten in**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1571
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1733
+msgid "**Where the features**"
+msgstr "**Waar de objecten**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1572
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1734
 msgid "``PREDICATE``"
@@ -2748,6 +2758,15 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1737
 msgid "Default: [0]"
 msgstr "Standaard: [0]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1576
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1738
+msgid ""
+"Type of spatial relation the source feature should have with the target "
+"feature so that they could be joined. One or more of:"
+msgstr ""
+"Type ruimtelijke relatie dat het bronobject zou moeten hebben met een "
+"doelobject, zodat zij zouden kunnen worden samengevoegd. Één of meer van:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1579
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1741
@@ -2759,6 +2778,31 @@ msgstr "0 --- kruist met"
 msgid "1 --- contain"
 msgstr "1 --- bevat"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1581
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1743
+msgid "2 --- equal"
+msgstr "2 --- is gelijk aan"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1582
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1744
+msgid "3 --- touch"
+msgstr "2 --- raken"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1583
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1745
+msgid "4 --- overlap"
+msgstr "4 --- overlappen"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1584
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1746
+msgid "5 --- are within"
+msgstr "5 --- zijn binnen"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1585
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1747
+msgid "6 --- cross"
+msgstr "6 --- kruisen"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1587
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1749
 msgid ""
@@ -2768,10 +2812,25 @@ msgstr ""
 "Als meer dan één voorwaarde wordt gekozen, moet aan tenminste één worden "
 "voldaan (bewerking OR) om een object uit te kunnen nemen."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1590
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1752
+msgid "**By comparing to**"
+msgstr "**In vergelijking met**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1591
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1753
 msgid "``JOIN``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1593
+msgid ""
+"The join layer. Features of this vector layer will **add** their attributes "
+"to the source layer attribute table if they satisfy the spatial "
+"relationship."
+msgstr ""
+"De samen te voegen laag. Objecten van deze vectorlaag zullen hun attributen "
+"**toevoegen** aan de attributentabel van de bronlaag, als zij voldoen aan de"
+" ruimtelijke relatie."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1595
 msgid "**Fields to add (leave empty to use all fields)**"
@@ -2784,12 +2843,29 @@ msgstr ""
 msgid "``JOIN_FIELDS``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1600
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1763
+msgid ""
+"Select the specific fields you want to add from the join layer. By default "
+"all the fields are added."
+msgstr ""
+"Selecteer de specifieke velden die u wilt toevoegen vanuit de samen te "
+"voegen laag. Standaard worden alle velden toegevoegd."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1611
 msgid ""
 "2 --- Take attributes of the feature with largest overlap only (one-to-one)"
 msgstr ""
 "2 --- Alleen attributen gebruiken van object met grootste overlapping (één-"
 "tot-één)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1619
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1800
+msgid ""
+"Remove from the output the input layer's features which could not be joined"
+msgstr ""
+"Verwijder objecten van de invoerlaag, die niet konden worden gekoppeld, uit "
+"de uitvoer"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1673
 msgid "Vector layer of the non-matched features"
@@ -2816,6 +2892,16 @@ msgstr ""
 msgid ":ref:`qgisjoinattributesbylocation`"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1755
+msgid ""
+"The join layer. Features of this vector layer will **add** summaries of "
+"their attributes to the source layer attribute table if they satisfy the "
+"spatial relationship."
+msgstr ""
+"De samen te voegen laag. Objecten van deze vectorlaag zullen hun "
+"samenvattingen van hun attributen **toevoegen** aan de attributentabel van "
+"de bronlaag, als zij voldoen aan de ruimtelijke relatie."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1758
 msgid "**Fields to summarize (leave empty to use all fields)**"
 msgstr ""
@@ -2835,6 +2921,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1771
 msgid "Default: []"
 msgstr "Standaard: []"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1772
+msgid ""
+"For each input feature, statistics are calculated on joined fields of their "
+"matching features. One or more of:"
+msgstr ""
+"Voor elk invoerobject worden statistieken berekend voor samengevoegde velden"
+" of hun overeenkomende objecten. Één of meer van:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1775
 msgid "0 --- count"
