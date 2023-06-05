@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,6 +100,14 @@ msgstr "|temporal| :ref:`Tijdbeheer <raster_temporal>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:974
 msgid "temporal"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:29
+msgid "|elevationscale| :ref:`Elevation <raster_elevation>`"
+msgstr "|elevationscale| :ref:`Hoogte<raster_elevation>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:938
+msgid "elevationscale"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:30
@@ -1305,6 +1314,20 @@ msgstr ""
 "vlakkere afbeelding. Deze methode kan bijvoorbeeld worden toegepast op "
 "digitale topografische rasterkaarten."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:575
+msgid ""
+"|checkbox| :guilabel:`Early resampling`: allows to calculate the raster "
+"rendering at the provider level where the resolution of the source is known,"
+" and ensures a better zoom in rendering with QGIS custom styling. Really "
+"convenient for tile rasters loaded using an :ref:`interpretation method "
+"<interpretation>`."
+msgstr ""
+"|checkbox| :guilabel:`Vroeg hersamplen`: maakt het mogelijk het renderen van"
+" de raster te berekenen op het niveau van de provider waarbij de resolutie "
+"van de bron bekend is, en zorgt voor een beter renderen bij inzoomen met "
+"aangepaste opmaak voor QGIS. Echt handig voor tegelrasters die worden "
+"geladen met een :ref:`interpretatie methode <interpretation>`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:586
 msgid "Transparency Properties"
 msgstr "Eigenschappen voor transparantie"
@@ -1535,6 +1558,16 @@ msgstr ""
 msgid "mapIdentification"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:698
+msgid ""
+"You can also activate scale dependent visibility on a layer from within the "
+":guilabel:`Layers` panel: right-click on the layer and in the contextual "
+"menu, select :guilabel:`Set Layer Scale Visibility`."
+msgstr ""
+"U kunt het schaalafhankelijk renderen ook activeren op een laag vanuit het "
+"paneel :guilabel:`Lagen`. Klik met rechts op de laag en selecteer in het "
+"contextmenu, :guilabel:`Zichtbaarheidsschaal laag instellen`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:703
 msgid ""
 ":guilabel:`Refresh layer at interval (seconds)`: set a timer to "
@@ -1612,9 +1645,68 @@ msgstr ""
 "renderen (bijv. data-bepaalde opaciteit voor de renderer, om in of uit te "
 "vervagen op een rasterlaag)."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:755
+msgid "Elevation Properties"
+msgstr "Eigenschappen Hoogte"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:757
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and its appearance in the profile tool charts. Specifically, you can set:"
+msgstr ""
+"De tab |elevationscale| :guilabel:`Hoogte` verschaft opties om de "
+"eigenschappen voor hoogte van de laag te beheren in een "
+":ref:`3D-kaartweergave <label_3dmapview>` en het uiterlijk in de diagrammen "
+"van het profiel. Specifiek kunt u instellen:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:768
+msgid "Raster Elevation Properties"
+msgstr "Eigenschappen rasterhoogte"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:770
+msgid ""
+"|unchecked| :guilabel:`Represents Elevation Surface`: whether the raster "
+"layer represents a height surface (e.g DEM) and the pixel values should be "
+"interpreted as elevations. You will need to fill in the :guilabel:`Band` to "
+"pick values from and can apply a :guilabel:`Scale` factor and an "
+":guilabel:`Offset`."
+msgstr ""
+"|unchecked| :guilabel:`Geeft oppervlakte hoogte weer`: of de rasterlaag een "
+"oppervlak voor hoogte weergeeft (bijv. DEM) en de pixelwaarden zouden moeten"
+" worden geïnterpreteerd als hoogtes. U zult de :guilabel:`Band` moeten "
+"invullen om waarden op te halen en kunt een :guilabel:`Schaal`-factor "
+"toepassen en een :guilabel:`Verschuiving`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:978
 msgid "unchecked"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:775
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls the rendering "
+":guilabel:`Style` the raster elevation will use when drawing a profile "
+"chart. It can be set as:"
+msgstr ""
+":guilabel:`Uiterlijk diagram profiel`: beheert het renderen "
+":guilabel:`Stijl` die de hoogte van de raster zal gebruiken bij het tekenen "
+"van een diagram van het profiel. Het kan worden ingesteld als:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:779
+msgid ""
+"a profile :guilabel:`Line` with a :ref:`line style <vector_line_symbols>` "
+"applied"
+msgstr ""
+"een profiel :guilabel:`Lijn` met een toegepaste :ref:`lijnstijl "
+"<vector_line_symbols>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:780
+msgid ""
+"a surface with :guilabel:`Fill below` and a corresponding :ref:`fill style "
+"<vector_fill_symbols>`"
+msgstr ""
+"een oppervlak met :guilabel:`Vullen onder` en een corresponderende "
+":ref:`stijl voor vulling <vector_fill_symbols>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:788
 msgid "Pyramids Properties"
@@ -1804,6 +1896,66 @@ msgstr "Raster Legenda"
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:894
 msgid "QGIS Server Properties"
 msgstr "Eigenschappen QGIS Server"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:896
+msgid ""
+"The |overlay| :guilabel:`QGIS Server` tab helps you configure settings of "
+"the data when published by :ref:`QGIS Server <QGIS-Server-manual>`. The "
+"configuration concerns:"
+msgstr ""
+"De tab |overlay| :guilabel:`QGIS Server` helpt u instellingen configureren "
+"van de gegevens indien gepubliceerd door :ref:`QGIS Server <QGIS-Server-"
+"manual>`. De configuratie betreft:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:900
+msgid ""
+":guilabel:`Description`: provides information to describe the data, such as "
+":guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Summary`, a "
+":guilabel:`List of Keywords`,  and a :guilabel:`Data URL` whose "
+":guilabel:`Type` can be in ``text/html``, ``text/plain`` or "
+"``application/pdf``."
+msgstr ""
+":guilabel:`Omschrijving`: verschaft informatie om de gegevens te "
+"beschrijven, zoals :guilabel:`Korte naam`, :guilabel:`Titel`, "
+":guilabel:`Samenvatting`, een :guilabel:`Sleutelwoordenlijst`,  en "
+":guilabel:`Gegevens URL` waarvan het :guilabel:`Type` mag zijn "
+"``text/html``, ``text/plain`` of ``application/pdf``."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:904
+msgid ""
+":guilabel:`Attribution`: a :guilabel:`Title` and :guilabel:`URL` to identify"
+" who provides the data"
+msgstr ""
+":guilabel:`Naamsvermelding`: een :guilabel:`Titel` en :guilabel:`URL` om te "
+"identificeren wie de gegevens verschaft"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:906
+msgid ""
+":guilabel:`Metadata URL`: a list of :guilabel:`URL` for the metadata that "
+"can be of ``FGDC`` or ``TC211`` :guilabel:`Type`, and in ``text/plain`` or "
+"``text/xml`` :guilabel:`Format`"
+msgstr ""
+":guilabel:`Metadata URL`: een lijst van :guilabel:`URL` voor de metadata die"
+" kan zijn van het :guilabel:`Type` ``FGDC`` of ``TC211``, en in "
+":guilabel:`Indeling` ``text/plain`` of ``text/xml``"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:909
+msgid ""
+":guilabel:`Legend URL`: a :guilabel:`URL` for the legend, in either "
+"``image/png`` or ``image/jpeg`` :guilabel:`Format`"
+msgstr ""
+":guilabel:`Legenda URL`: een :guilabel:`URL` voor de legenda, in ofwel "
+":guilabel:`Indeling` ``image/png`` of ``image/jpeg``"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:913
+msgid ""
+"When the raster layer you want to publish is already provided by a web "
+"service, further :ref:`properties <wms_server_properties>` are available for"
+" setting."
+msgstr ""
+"Wanneer de rasterlaag die u wilt publiceren al wordt verschaft door een "
+"webservice, zijn verdere :ref:`eigenschappen <wms_server_properties>` "
+"beschikbaar om in te stellen."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:921
 msgid "QGIS Server in Raster Properties"
