@@ -119,7 +119,7 @@ API Documentation
 It is required to write API documentation for every class, method, enum and
 other code that is available in the public API.
 
-QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ or documentation.
+QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ for documentation.
 Write descriptive and meaningful comments
 that give a reader information about what to expect, what happens in edge cases
 and give hints about other interfaces he could be looking for, best
@@ -470,7 +470,7 @@ As soon as a SIP file is added to one of the source file
 :source:`gui_auto.sip <python/gui/gui_auto.sip>` or
 :source:`analysis_auto.sip <python/analysis/analysis_auto.sip>`),
 it will be considered as generated automatically.
-A test on will ensure that this file is up to date with its corresponding header.
+A test will ensure that this file is up to date with its corresponding header.
 
 To force recreation of SIP files, :source:`sipify_all.sh <scripts/sipify_all.sh>`
 shall be executed.
