@@ -101,6 +101,7 @@ Endpoints points provided by the QGIS implementation are:
    "Feature", "``/collections/{collectionId}/items/{featureId}``", "Information
    about a single feature"
 
+Similar to WFS-T (transactional Web Feature Service) it is possible to add, update and delete features (CRUD). The respective requests are described on "``/api``".
 
 Landing Page
 ^^^^^^^^^^^^^^^^^^^^
