@@ -287,7 +287,7 @@ the configuration defined in the dialog without running the algorithm:
 The :guilabel:`Run as Batch Process...` button triggers the :ref:`batch processing
 mode <processing_batch>` allowing to configure and run multiple instances of
 the algorithm with a variety of parameters.
-A :guilabel:`Run as Single Process...` helps you switch back from the batch mode.
+A :guilabel:`Run as Single Process...` button helps you switch back from the batch mode.
 
 When an algorithm execution finishes (either successfully or not), a new button
 :guilabel:`Change Parameters` is shown as long as the :guilabel:`Log` tab is active.
