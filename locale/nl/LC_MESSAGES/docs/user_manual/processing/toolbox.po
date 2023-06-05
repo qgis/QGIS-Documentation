@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -212,6 +213,10 @@ msgstr ""
 ":guilabel:`Log`) in het linkerdeel, de beschrijving van het algoritme "
 "rechts, en een set knoppen aan de onderkant."
 
+#: ../../docs/user_manual/processing/toolbox.rst:90
+msgid "Parameter types"
+msgstr "Typen parameters"
+
 #: ../../docs/user_manual/processing/toolbox.rst:92
 msgid ""
 "The :guilabel:`Parameters` tab is used to set the input values that the "
@@ -249,6 +254,16 @@ msgstr ""
 " een knop aan de rechterkant om u bestandsnamen te laten selecteren die "
 "lagen vertegenwoordigen die momenteel niet geladen zijn in QGIS."
 
+#: ../../docs/user_manual/processing/toolbox.rst:106
+msgid ""
+"A **vector layer**, to select from a list of all vector layers available in "
+"QGIS. Layers not currently loaded in QGIS can be selected as well, just like"
+" for raster layers."
+msgstr ""
+"Een **vectorlaag**, om te selecteren uit een lijst van alle beschikbare "
+"vectorlagen in QGIS. Lagen die momenteel niet zijn geladen in QGIS kunnen "
+"ook worden geselecteerd, net als voor rasterlagen."
+
 #: ../../docs/user_manual/processing/toolbox.rst:110
 msgid ""
 "You will see an iterator button by each vector layer selector, as shown in "
@@ -256,6 +271,10 @@ msgid ""
 msgstr ""
 "U zult een knop voor doorlopen zien bij elke vectorlaag om te selecteren, "
 "zoals weergegeven in de afbeelding hieronder."
+
+#: ../../docs/user_manual/processing/toolbox.rst:118
+msgid "Vector input widget"
+msgstr "Widget voor invoer vector"
 
 #: ../../docs/user_manual/processing/toolbox.rst:120
 msgid ""
@@ -373,9 +392,54 @@ msgstr ""
 "Coördinaten ReferentieSysteem <crs_selector>` dat verschijnt als u klikt op "
 "de knop aan de rechterkant."
 
+#: ../../docs/user_manual/processing/toolbox.rst:164
+msgid ""
+"An **extent**, a text box defining a rectangle through its corners "
+"coordinate in the format ``xmin, xmax, ymin, ymax``. Press the "
+"|mapIdentification| :sup:`Set to current map canvas extent` button to use "
+"the map canvas extent. Clicking the arrow on the right-hand side of the "
+"value selector, a pop-up menu will appear, giving you options to:"
+msgstr ""
+"Een **bereik**, een tekstvak dat een rechthoek definieert met zijn "
+"hoekcoördinaten in de indeling ``xmin``, ``xmax``, ``ymin``, ``ymax``. Druk "
+"op de knop  |mapIdentification| :sup:`Op huidig bereik kaartvenster "
+"instellen` om het bereik van het kaartvenster te gebruiken. Klikken op de "
+"pijl aan de rechterkant van de selectie voor de waarde laat een pop-upmenu "
+"verschijnen dat u opties geeft om:"
+
 #: ../../docs/user_manual/processing/toolbox.rst:426
 msgid "mapIdentification"
 msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:170
+msgid ""
+":menuselection:`Calculate from layer -->`: fills the text box with the "
+"coordinates of the bounding box of a layer to select among the loaded ones"
+msgstr ""
+":menuselection:`Uit laag berekenen -->`: vult het tekstvak met de "
+"coördinaten van het begrenzingsvak van een uit de geladen lagen te "
+"selecteren laag"
+
+#: ../../docs/user_manual/processing/toolbox.rst:172
+msgid ""
+":menuselection:`Calculate from layout map -->`: fills the text box with the "
+"coordinates of a map item selected from a layout in the current project"
+msgstr ""
+":menuselection:`Uit lay-out laag berekenen -->`: vult het tekstvak met de "
+"coördinaten van een kaartitem, geselecteerd in een lay-out in het huidige "
+"project"
+
+#: ../../docs/user_manual/processing/toolbox.rst:174
+msgid ""
+":menuselection:`Calculate from bookmark -->`: fills the text box with the "
+"coordinates of a saved bookmark"
+msgstr ""
+":menuselection:`Uit Favoriete plaats berekenen -->`: vult het tekstvak met "
+"de coördinaten van een opgeslagen Favoriete plaats"
+
+#: ../../docs/user_manual/processing/toolbox.rst:176
+msgid "|mapIdentification| :guilabel:`Use current map canvas extent`"
+msgstr "|mapIdentification| :guilabel:`Bereik huidig kaartvenster gebruiken`"
 
 #: ../../docs/user_manual/processing/toolbox.rst:177
 msgid ""
@@ -455,6 +519,29 @@ msgstr ""
 "heeft. Met die parameter kunt u de verwijzingslaag kiezen en alle "
 "eigenschappen daarvan (celgrootte, bereik, CRS) zullen worden gebruikt."
 
+#: ../../docs/user_manual/processing/toolbox.rst:227
+msgid "Logging the execution"
+msgstr "Loggen van de uitvoering"
+
+#: ../../docs/user_manual/processing/toolbox.rst:229
+msgid ""
+"Along with the :guilabel:`Parameters` tab, there is another tab named "
+":guilabel:`Log` (see :numref:`figure_alg_dialog_log` below). Information "
+"provided by the algorithm during its execution is written in this tab, "
+"allowing you to track the execution as well as being aware and having more "
+"details about the algorithm as it runs. Information on algorithm execution "
+"is also output in the :menuselection:`View --> Panels --> Log Messages "
+"Panel`."
+msgstr ""
+"Naast de tab :guilabel:`Parameters` is er ook een andere tab, genaamd "
+":guilabel:`Log` (zie :numref:`figure_alg_dialog_log` hieronder). Informatie "
+"die wordt verschaft door het algoritme gedurende de uitvoering ervan wordt "
+"in deze tab weggeschreven en stelt u in staat de uitvoering te volgen en in "
+"de gaten te houden en meer details te verkrijgen over het algoritme als het "
+"wordt uitgevoerd. Informatie over het uitvoeren van het algoritme wordt ook "
+"uitgevoerd in het :menuselection:`Beeld --> Panelen --> paneel "
+"Logboekmeldingen `."
+
 #: ../../docs/user_manual/processing/toolbox.rst:237
 msgid ""
 "Notice that not all algorithms write information to the :guilabel:`Log` tab,"
@@ -497,6 +584,10 @@ msgstr ""
 msgid "clearConsole"
 msgstr "clearConsole"
 
+#: ../../docs/user_manual/processing/toolbox.rst:257
+msgid "Other tools"
+msgstr "Andere gereedschappen"
+
 #: ../../docs/user_manual/processing/toolbox.rst:259
 msgid ""
 "On the right hand side of the dialog you will find a short description of "
@@ -522,6 +613,81 @@ msgstr ""
 "knop :guilabel:`Help` aan de onderzijde van het dialoogvenster die u brengt "
 "naar de :ref:`Processing providers en algoritmes <processing_algs>` of naar "
 "de documentatie van de provider (voor enkele providers van derde-partijen)."
+
+#: ../../docs/user_manual/processing/toolbox.rst:269
+msgid ""
+"The :menuselection:`Advanced -->` menu provides functions to reuse the "
+"configuration defined in the dialog without running the algorithm:"
+msgstr ""
+"Het menu :menuselection:`Geavanceerd -->` verschaft functies om de "
+"configuratie, die is gedefinieerd in het dialoogvenster, opnieuw te "
+"gebruiken zonder het algoritme uit te voeren:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:272
+msgid ""
+":guilabel:`Copy as Python Command`: allows for easy copying of the "
+"equivalent :ref:`PyQGIS command <processing_console>` to run the tool using "
+"the parameters defined in the dialog"
+msgstr ""
+":guilabel:`Als opdracht voor Python kopiëren`: maakt het gemakkelijk om het "
+"equivalent van de :ref:`opdracht van PyQGIS <processing_console>` te "
+"kopiëren om het gereedschap uit te voeren met de parameters die zijn "
+"gedefinieerd in het dialoogvenster."
+
+#: ../../docs/user_manual/processing/toolbox.rst:275
+msgid ""
+":guilabel:`Copy as qgis_process Command`: allows for easy generation of "
+":ref:`qgis_process command <processing_standalone>`, including its "
+"environment settings like the distance units, area units, ellipsoid, and any"
+" tricky parameter values like GeoPackage outputs with specific layers"
+msgstr ""
+":guilabel:`Als opdracht voor qgis_process kopiëren`: maakt het maken van een"
+" :ref:`opdracht voor qgis_process <processing_standalone>` , inclusief zijn "
+"instellingen voor de omgeving, zoals eenheden voor afstanden, eenheden voor "
+"gebied, ellipsoïde, en enkele moeilijkere waarden voor parameters zoals "
+"uitvoer naar GeoPackage met specifieke lagen, gemakkelijker."
+
+#: ../../docs/user_manual/processing/toolbox.rst:279
+msgid ""
+":guilabel:`Copy as JSON`: all the settings of the command are copied in a "
+":file:`JSON` format, ready to be consumed by qgis_process. This is a "
+"convenient way to see the expected format of the commands, even for complex "
+"parameters (like TIN interpolation parameters). You can store these easily "
+"and then restore them later by pasting the values."
+msgstr ""
+":guilabel:`Als JSON kopiëren`: alle instellingen voor de opdracht worden "
+"gekopieerd naar de indeling :file:`JSON`, klaar om te worden gebruikt door "
+"qgis_process. Dit is een handige manier om de verwachte indeling van de "
+"opdrachten te bekijken, zelfs voor complexe parameters (zoals parameters "
+"voor TIN interpolatie). U kunt ze gemakkelijk opslaan en ze later "
+"terugplaatsen door de waarden te plakken."
+
+#: ../../docs/user_manual/processing/toolbox.rst:284
+msgid ":guilabel:`Paste Settings` in a :file:`JSON` format"
+msgstr ":guilabel:`Instellingen plakken` in de indeling :file:`JSON`"
+
+#: ../../docs/user_manual/processing/toolbox.rst:287
+msgid ""
+"The :guilabel:`Run as Batch Process...` button triggers the :ref:`batch "
+"processing mode <processing_batch>` allowing to configure and run multiple "
+"instances of the algorithm with a variety of parameters. A :guilabel:`Run as"
+" Single Process...` helps you switch back from the batch mode."
+msgstr ""
+"De knop :guilabel:`Uitvoeren als een Batch proces…` activeert de :ref:`modus"
+" In batch verwerken <processing_batch>` wat het mogelijk maakt meerdere "
+"instanties van het algoritme te configureren en uit te voeren met een "
+"variëteit aan parameters. Een knop :guilabel:`Als enkel proces uitvoeren...`"
+" helpt u terug te schakelen vanuit de modus Batch."
+
+#: ../../docs/user_manual/processing/toolbox.rst:292
+msgid ""
+"When an algorithm execution finishes (either successfully or not), a new "
+"button :guilabel:`Change Parameters` is shown as long as the :guilabel:`Log`"
+" tab is active."
+msgstr ""
+"Wanneer de uitvoering van een algoritme is voltooid (ofwel met succes of "
+"niet), wordt een nieuwe knop :guilabel:`Parameters wijzigen` weergegeven, "
+"zolang de tab :guilabel:`Log` actief is."
 
 #: ../../docs/user_manual/processing/toolbox.rst:296
 msgid "A note on projections"
