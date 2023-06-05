@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -183,6 +184,18 @@ msgstr ""
 "bijv. "
 "``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=mijnproject``."
 
+#: ../../docs/server_manual/config.rst:80
+msgid "QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS"
+msgstr "QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS"
+
+#: ../../docs/server_manual/config.rst:81
+msgid ""
+"Comma separated list of strings that represent the allowed extra SQL tokens "
+"accepted as components of a feature filter."
+msgstr ""
+"Kommagescheiden lijst met tekenreeksen die de toegestane extra tokens, "
+"geaccepteerd als componenten van een objectfilter, voor SQL weergeven."
+
 #: ../../docs/server_manual/config.rst:83
 #: ../../docs/server_manual/config.rst:113
 #: ../../docs/server_manual/config.rst:210
@@ -280,6 +293,14 @@ msgstr ""
 #: ../../docs/server_manual/config.rst:270
 msgid "false"
 msgstr "false"
+
+#: ../../docs/server_manual/config.rst:115
+msgid "QGIS_SERVER_FORCE_READONLY_LAYERS"
+msgstr "QGIS_SERVER_FORCE_READONLY_LAYERS"
+
+#: ../../docs/server_manual/config.rst:116
+msgid "Force QGIS Server to open all layers in a read only mode"
+msgstr "Forceer QGIS Server om alle lagen te openen in modus Alleen-lezen"
 
 #: ../../docs/server_manual/config.rst:120
 msgid "QGIS_SERVER_IGNORE_BAD_LAYERS"
@@ -478,6 +499,49 @@ msgid ""
 msgstr ""
 "Activeert parallel renderen voor verzoeken GetMap voor WMS. Het is standaard"
 " uitgeschakeld (``false``). Beschikbare waarden zijn:"
+
+#: ../../docs/server_manual/config.rst:212
+msgid "QGIS_SERVER_PROJECT_CACHE_CHECK_INTERVAL"
+msgstr "QGIS_SERVER_PROJECT_CACHE_CHECK_INTERVAL"
+
+#: ../../docs/server_manual/config.rst:213
+msgid "Controls the periodic strategy interval for cache invalidation"
+msgstr ""
+"Beheert de periodieke strategie-interval voor ongeldigheid van de cache"
+
+#: ../../docs/server_manual/config.rst:217
+msgid "QGIS_SERVER_PROJECT_CACHE_STRATEGY"
+msgstr "QGIS_SERVER_PROJECT_CACHE_STRATEGY"
+
+#: ../../docs/server_manual/config.rst:218
+msgid ""
+"Defines method for invalidating the project cache. Available strategies are:"
+msgstr ""
+"Definieert methode voor ongeldigheid van de projectcache. Beschikbare "
+"strategieën zijn:"
+
+#: ../../docs/server_manual/config.rst:220
+msgid "``filesystem``: uses the file system watcher strategy"
+msgstr "``filesystem``: gebruikt de bestandssysteem volgstrategie"
+
+#: ../../docs/server_manual/config.rst:221
+msgid ""
+"``periodic``: uses the last modified value of a project for checking changes"
+" on project configuration. Convenient on atypical file systems, such as NFS,"
+" or when the project file is stored in a database system like PostgreSQL."
+msgstr ""
+"``periodic``: gebruikt de laatst aangepaste waarde van een project om te "
+"controleren op wijzigingen in de configuratie van het project. Handig op "
+"a-typische bestandssystemen, zoals NFS, of wanneer het projectbestand is "
+"opgeslagen in een databasesysteem, zoals PostgreSQL."
+
+#: ../../docs/server_manual/config.rst:224
+msgid "``off``: disables internal cache invalidation completely"
+msgstr "``off``: volledig uitschakelen van ongeldigheid voor de interne cache"
+
+#: ../../docs/server_manual/config.rst:225
+msgid "filesystem"
+msgstr "bestandssysteem"
 
 #: ../../docs/server_manual/config.rst:230
 msgid "QGIS_SERVER_SERVICE_URL"
