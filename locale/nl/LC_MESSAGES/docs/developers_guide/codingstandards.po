@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -281,6 +282,19 @@ msgstr ""
 "Het is vereist om documentatie voor de API te schrijven voor elke klasse, "
 "methode, enumeratie en andere code die beschikbaar is in de publieke API."
 
+#: ../../docs/developers_guide/codingstandards.rst:122
+msgid ""
+"QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ or documentation. "
+"Write descriptive and meaningful comments that give a reader information "
+"about what to expect, what happens in edge cases and give hints about other "
+"interfaces he could be looking for, best practices and code samples."
+msgstr ""
+"QGIS gebruikt `Doxygen <https://www.doxygen.nl/index.html>`_ voor "
+"documentatie. Schrijf beschrijvende en betekenisvolle opmerkingen die een "
+"lezer informatie geven over wat te verwachten, wat gebeurt er in "
+"randgevallen en geef hints over andere interfaces die hij zou kunnen "
+"gebruiken, goede beste werkwijzen en voorbeelden van code."
+
 #: ../../docs/developers_guide/codingstandards.rst:129
 msgid "Methods"
 msgstr "Methoden"
@@ -410,6 +424,21 @@ msgstr ""
 "Elk bronbestand zou een gedeelte header moeten hebben met een patroon als in"
 " het volgende voorbeeld:"
 
+#: ../../docs/developers_guide/codingstandards.rst:252
+msgid ""
+"There is a template for Qt Creator in git repository. To use it, copy it "
+"from :source:`qt_creator_license_template "
+"<editors/QtCreator/qt_creator_license_template>` to a local location, adjust"
+" the mail address and - if required - the name and configure QtCreator to "
+"use it: :menuselection:`Tools --> Options --> C++ --> File Naming`."
+msgstr ""
+"Er staat een sjabloon voor Qt Creator in de opslagplaats van GIT. Kopieer "
+"het, om het te gebruiken,  vanuit  :source:`qt_creator_license_template "
+"<editors/QtCreator/qt_creator_license_template>`  naar een lokale locatie, "
+"pas het mailadres aan en - indien vereist - de naam en configureer QtCreator"
+" om het te gebruiken: ``Tools`` -> ``Options`` -> ``C++`` -> ``File "
+"Naming``."
+
 #: ../../docs/developers_guide/codingstandards.rst:260
 msgid "Variable Names"
 msgstr "Namen van variabelen"
@@ -531,6 +560,21 @@ msgstr "In VIM wordt dit gedaan met ``set expandtab ts=2``"
 msgid "Indentation"
 msgstr "Inspringen"
 
+#: ../../docs/developers_guide/codingstandards.rst:343
+msgid ""
+"Source code should be indented to improve readability. There is a "
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` file that looks up "
+"the changed files and reindents them using astyle. This should be run before"
+" committing. You can also use :source:`astyle.sh <scripts/astyle.sh>` to "
+"indent individual files."
+msgstr ""
+"Broncode zou moeten worden ingesprongen om de leesbaarheid te verbeteren. Er"
+" is een bestand :source:`prepare_commit.sh <scripts/prepare_commit.sh>` dat "
+"de gewijzigde bestanden ophaalt en ze opnieuw laat inspringen met astyle. "
+"Dit zou moeten worden uitgevoerd vóór het indienen. U kunt ook "
+":source:`astyle.sh <scripts/astyle.sh>` gebruiken om individuele bestanden "
+"in te laten springen."
+
 #: ../../docs/developers_guide/codingstandards.rst:349
 msgid ""
 "As newer versions of astyle indent differently than the version used to do a"
@@ -559,6 +603,15 @@ msgstr "Compatibiliteit met de API"
 #: ../../docs/developers_guide/codingstandards.rst:375
 msgid "There is :api:`API documentation <>` for C++."
 msgstr "Er is :api:`API documentatie <>` voor C++."
+
+#: ../../docs/developers_guide/codingstandards.rst:377
+msgid ""
+"We try to keep the API stable and backwards compatible. Cleanups to the API "
+"should be done in a manner similar to the Qt source code e.g."
+msgstr ""
+"We proberen de API stabiel en achterwaarts compatibel te houden. Opschonen "
+"van de API zou op een manier moeten worden gedaan die soortgelijk is aan de "
+"broncode voor Qt bijv."
 
 #: ../../docs/developers_guide/codingstandards.rst:417
 msgid "SIP Bindings"
@@ -663,6 +716,14 @@ msgstr ""
 "``,`` bevat, zou het type moeten worden omsloten door enkele "
 "aanhalingstekens ``'``"
 
+#: ../../docs/developers_guide/codingstandards.rst:453
+msgid ""
+"A demo file, :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>`, is also available."
+msgstr ""
+"Een demo-bestand, :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>`, is ook beschikbaar."
+
 #: ../../docs/developers_guide/codingstandards.rst:457
 msgid "Generating the SIP file"
 msgstr "Het SIP-bestand maken"
@@ -672,13 +733,102 @@ msgid "The SIP file can be generated using a dedicated script. For instance:"
 msgstr ""
 "Het SIP-bestand kan worden gemaakt met een toegewezen script. Bijvoorbeeld:"
 
+#: ../../docs/developers_guide/codingstandards.rst:465
+msgid ""
+"To automatically generate the SIP file of a newly added C++ file "
+":source:`sip_include.sh <scripts/sip_include.sh>` needs to be executed."
+msgstr ""
+"Om automatisch het SIP-bestand van een nieuw toegevoegd bestand in C++ te "
+"maken, moet :source:`sip_include.sh <scripts/sip_include.sh>` worden "
+"uitgevoerd."
+
+#: ../../docs/developers_guide/codingstandards.rst:468
+msgid ""
+"As soon as a SIP file is added to one of the source file "
+"(:source:`core_auto.sip <python/core/core_auto.sip>`, :source:`gui_auto.sip "
+"<python/gui/gui_auto.sip>` or :source:`analysis_auto.sip "
+"<python/analysis/analysis_auto.sip>`), it will be considered as generated "
+"automatically. A test on will ensure that this file is up to date with its "
+"corresponding header."
+msgstr ""
+"Zodra een SIP-bestand is toegevoegd aan een van de "
+"bronbestanden(:source:`core_auto.sip <python/core/core_auto.sip>`, "
+":source:`gui_auto.sip <python/gui/gui_auto.sip>` of "
+":source:`analysis_auto.sip <python/analysis/analysis_auto.sip>`), zal het "
+"worden beschouwd als automatisch gemaakt. Een test zal er voor zorgen dat "
+"dit bestand up to date is met zijn overeenkomende header."
+
+#: ../../docs/developers_guide/codingstandards.rst:475
+msgid ""
+"To force recreation of SIP files, :source:`sipify_all.sh "
+"<scripts/sipify_all.sh>` shall be executed."
+msgstr ""
+"Voor het forceren van het opnieuw maken van SIP-bestanden zal "
+":source:`sipify_all.sh <scripts/sipify_all.sh>` worden uitgevoerd."
+
 #: ../../docs/developers_guide/codingstandards.rst:479
 msgid "Improving sipify script"
 msgstr "Verbeteren van script sipify"
 
+#: ../../docs/developers_guide/codingstandards.rst:481
+msgid ""
+"If some improvements are required for sipify script, please add the missing "
+"bits to the demo file :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>` and create the expected header "
+":source:`sipifyheader.expected.sip "
+"<tests/code_layout/sipify/sipifyheader.expected.sip>`. This will also be "
+"automatically tested as a unit test of the script itself."
+msgstr ""
+"Als enkele verbeteringen vereist zijn voor het script sipify, voeg dan de "
+"ontbrekende gedeelten toe aan het demo-bestand :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>` en maak de verwachte header "
+":source:`sipifyheader.expected.sip "
+"<tests/code_layout/sipify/sipifyheader.expected.sip>`. Dit zal ook "
+"automatisch worden getest als een eenheidstest van het script zelf."
+
 #: ../../docs/developers_guide/codingstandards.rst:489
 msgid "Settings"
 msgstr "Instellingen"
+
+#: ../../docs/developers_guide/codingstandards.rst:491
+msgid ""
+"QGIS code base offers a mechanism to declare, register and use settings."
+msgstr ""
+"De codebasis van QGIS biedt een mechanisme om instellingen te declareren, "
+"registreren en te gebruiken."
+
+#: ../../docs/developers_guide/codingstandards.rst:493
+msgid ""
+"settings should be defined using one of the available implementations "
+"(:api:`QgsSettingsEntryString <classQgsSettingsEntryString.html>`, "
+":api:`QgsSettingsEntryInteger <classQgsSettingsEntryInteger.html>`, …)."
+msgstr ""
+"instellingen zouden moeten worden gedefinieerd met een van de beschikbare "
+"implementaties (:api:`QgsSettingsEntryString "
+"<classQgsSettingsEntryString.html>`, :api:`QgsSettingsEntryInteger "
+"<classQgsSettingsEntryInteger.html>`, …)."
+
+#: ../../docs/developers_guide/codingstandards.rst:496
+msgid ""
+"they are declared as ``const static`` either in a dedicated class or in the "
+"registry directly (core, gui, app, …)."
+msgstr ""
+"zij worden gedeclareerd als ``const static``, ofwel in een aangewezen klasse"
+" of direct in het register (core, gui, app, …)."
+
+#: ../../docs/developers_guide/codingstandards.rst:498
+msgid ""
+"they always must be added to the registry using ``addSettingsEntry`` method "
+"of  :api:`QgsSettingsRegistry <classQgsSettingsRegistry.html>`."
+msgstr ""
+"zij moeten altijd aan het register worden toegevoegd met de methode "
+"``addSettingsEntry`` van :api:`QgsSettingsRegistry "
+"<classQgsSettingsRegistry.html>`."
+
+#: ../../docs/developers_guide/codingstandards.rst:500
+msgid "the setting key should be using a ``kebab-case``."
+msgstr ""
+"de sleutel voor de instelling zou een ``kebab-case`` moeten gebruiken."
 
 #: ../../docs/developers_guide/codingstandards.rst:503
 msgid "Coding Style"
@@ -773,6 +923,14 @@ msgstr "Wat is gemakkelijker te lezen, dit:"
 #: ../../docs/developers_guide/codingstandards.rst:548
 msgid "or this:"
 msgstr "of dit:"
+
+#: ../../docs/developers_guide/codingstandards.rst:554
+msgid ""
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` script will take "
+"care of this."
+msgstr ""
+"script :source:`prepare_commit.sh <scripts/prepare_commit.sh>` zal hier voor"
+" zorgen."
 
 #: ../../docs/developers_guide/codingstandards.rst:559
 msgid "Put commands on separate lines"
