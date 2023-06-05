@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1054,21 +1055,125 @@ msgstr ""
 "een keuzemenu naast zich die het mogelijk maakt te beheren hoe het zal "
 "worden geserveerd tijdens de werkstroom:"
 
+#: ../../docs/user_manual/processing/modeler.rst:397
+msgid ""
+"|fieldInteger| :sup:`Value`: allows you to assign a static value to the "
+"parameter. Depending on the parameter type, the widget will let you enter a "
+"number (``5.0``), a string (``mytext``), select layer(s) loaded in the QGIS "
+"project or from a folder, pick items from a list, ..."
+msgstr ""
+"|fieldInteger| :sup:`Waarde`: stelt u in staat een statische waarde toe te "
+"wijzen aan de parameter. Afhankelijk van het type parameter zal de widget u "
+"een getal laten invoeren (5.0``), een tekenreeks (``mytext``), la(a)g(en) "
+"selecteren die zijn geladen in het project van QGIS of vanuit een map, items"
+" kiezen vanuit een lijst, …"
+
 #: ../../docs/user_manual/processing/modeler.rst:704
 msgid "fieldInteger"
 msgstr "fieldInteger"
+
+#: ../../docs/user_manual/processing/modeler.rst:401
+msgid ""
+"|expression| :sup:`Pre-calculated Value`: opens the :ref:`Expression Builder"
+" <vector_expressions>` dialog and lets you define an expression to fill the "
+"parameter. Model inputs together with some other layer statistics are "
+"available as **variables** and are listed at the top of the Search dialog of"
+" the Expression Builder. The expression is evaluated once before the child "
+"algorithm is executed and used during the execution of that algorithm."
+msgstr ""
+"|expression| :sup:`Vooraf berekende waarde`: opent het dialoogvenster "
+":ref:`Expressiebouwer <vector_expressions>` en laat u een expressie "
+"definiëren om de parameter te vullen. Invoer voor modellen, samen met enkele"
+" andere statistieken voor de laag, zijn beschikbaar als **variabelen** en "
+"worden vermeld aan de bovenzijde van het dialoogvenster Zoeken van de "
+"Expressiebouwer. De expressie wordt eenmaal geëvalueerd voordat het kind-"
+"algoritme wordt uitgevoerd en gebruikt gedurende het uitvoeren van dat "
+"algoritme."
 
 #: ../../docs/user_manual/processing/modeler.rst:702
 msgid "expression"
 msgstr ""
 
+#: ../../docs/user_manual/processing/modeler.rst:407
+msgid ""
+"|processingModel| :sup:`Model Input`: allows to use an input added to the "
+"model as a parameter. Once clicked, this option will list all the suitable "
+"inputs for the parameter."
+msgstr ""
+"|processingModel| :sup:`Model invoer`: maakt het mogelijk een aan het model "
+"toegevoegde invoer als een parameter te gebruiken. Eenmaal aangeklikt zal "
+"deze optie alle geschikte invoer voor de parameter vermelden."
+
 #: ../../docs/user_manual/processing/modeler.rst:720
 msgid "processingModel"
 msgstr ""
 
+#: ../../docs/user_manual/processing/modeler.rst:409
+msgid ""
+"|processingAlgorithm| :sup:`Algorithm Output`: allows to use the output of "
+"another algorithm as an input of the current algorithm. As of model inputs, "
+"this option will list all the suitable inputs for the parameter."
+msgstr ""
+"|processingAlgorithm| :sup:`Uitvoer algoritme`: maakt het mogelijk de "
+"uitvoer van een ander algoritme als invoer voor het huidige algoritme te "
+"gebruiken. Net als bij Model invoer zal deze optie alle geschikte invoer "
+"voor de parameter vermelden."
+
 #: ../../docs/user_manual/processing/modeler.rst:718
 msgid "processingAlgorithm"
 msgstr ""
+
+#: ../../docs/user_manual/processing/modeler.rst:412
+msgid ""
+"The **output parameter** also has the above options in its drop-down menu:"
+msgstr ""
+"De **parameter uitvoer** heeft ook de hierboven vermelde opties in zijn "
+"keuzemenu:"
+
+#: ../../docs/user_manual/processing/modeler.rst:414
+msgid ""
+"add static outputs for child algorithms, e.g. always saving a child "
+"algorithm's output to a predefined geopackage or postgres layer"
+msgstr ""
+"statische uitvoeren voor kind-algoritmes toevoegen, bijv. altijd de uitvoer "
+"een een kind-algoritme opslaan naar een vooraf gedefinieerde laag van een "
+"Geopackage of Postgres"
+
+#: ../../docs/user_manual/processing/modeler.rst:416
+msgid ""
+"use an expression based output values for child algorithms, e.g. generating "
+"an automatic file name based on today's date and saving outputs to that file"
+msgstr ""
+"een expressie gebruiken, gebaseerd op uitvoerwaarden voor kind-algoritmes, "
+"bijv. genereren van een automatische bestandsnaam, gebaseerd op de datum van"
+" vandaag en uitvoeren naar dat bestand opslaan"
+
+#: ../../docs/user_manual/processing/modeler.rst:418
+msgid ""
+"use a model input, e.g. the *File/Folder* model input to specify an output "
+"file or folder"
+msgstr ""
+"een model invoer gebruiken, bijv. de model invoer *Bestand/Map* om een "
+"bestand of map voor de uitvoer te specificeren"
+
+#: ../../docs/user_manual/processing/modeler.rst:420
+msgid ""
+"use another algorithm output, e.g. the output of the *Create directory* "
+"algorithm (from *Modeler tools*)"
+msgstr ""
+"een andere uitvoer van een algoritme gebruiken, bijv. de uitvoer van het "
+"algoritme *Map maken* (uit *Grafische modellen bouwen*)"
+
+#: ../../docs/user_manual/processing/modeler.rst:422
+msgid ""
+"an addditional |modelOutput| :sup:`Model Output` option makes the output of "
+"the algorithm available in the model. If a layer generated by the algorithm "
+"is only to be used as input to another algorithm, don't edit that text box."
+msgstr ""
+"een aanvullende optie |modelOutput| ``Uitvoer model`` maakt de uitvoer van "
+"het algoritme beschikbaar in het model. Als een door het algoritme gemaakte "
+"laag alleen moet worden gebruikt als invoer voor een ander algoritme, bewerk"
+" dat tekstvak dan niet."
 
 #: ../../docs/user_manual/processing/modeler.rst:714
 msgid "modelOutput"
@@ -1380,6 +1485,16 @@ msgstr ""
 #: ../../docs/user_manual/processing/modeler.rst:688
 msgid "addToProject"
 msgstr ""
+
+#: ../../docs/user_manual/processing/modeler.rst:579
+msgid ""
+"Project models are available in the |qgsProjectFile|:guilabel:`Project "
+"models` menu of the toolbox and in the :menuselection:`Project --> Models` "
+"menu item."
+msgstr ""
+"Projectmodellen zijn beschikbaar in het menu "
+"|qgsProjectFile|:guilabel:`Projectmodellen` van de Toolbox en in het menu-"
+"item :menuselection:`Project --> Modellen`."
 
 #: ../../docs/user_manual/processing/modeler.rst:722
 msgid "qgsProjectFile"
