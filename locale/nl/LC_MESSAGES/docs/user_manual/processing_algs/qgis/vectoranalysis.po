@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-04 12:11+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1964,6 +1965,14 @@ msgstr "**Totaal unieke waarden**"
 msgid "``TOTAL_VALUES``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1120
+msgid "The number of unique values in the input field"
+msgstr "Het aantal unieke waarden in het invoerveld"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1121
+msgid "**Unique values concatenated**"
+msgstr "**Unieke waarden samengevoegd**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1122
 msgid "``UNIQUE_VALUES``"
 msgstr ""
@@ -2216,10 +2225,19 @@ msgstr "[vector: elke] [lijst]"
 msgid "The overlay layers."
 msgstr "De over te leggen lagen."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1355
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1401
+msgid "**Overlap**"
+msgstr "*Overlapt*"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1360
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1487
 msgid "Specify the output vector layer. One of:"
 msgstr "Specificeer de uitvoer vectorlaag. Één van:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1378
+msgid "**Grid size**"
+msgstr "**Rastergrootte**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1380
 msgid "|328|"
@@ -2232,6 +2250,16 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1386
 msgid "Default: Not set"
 msgstr "Standaard: Niet ingesteld"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1387
+msgid ""
+"If provided, the input geometries are snapped to a grid of the given size, "
+"and the result vertices are computed on that same grid. Requires GEOS 3.9.0 "
+"or higher."
+msgstr ""
+"Indien opgegeven worden de geometrieën voor de invoer gesnapt aan een raster"
+" van de opgegeven grootte, en de resulterende punten worden berekend op "
+"datzelfde raster. Vereist GEOS 3.9.0 of hoger."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1404
 msgid ""
@@ -2247,17 +2275,78 @@ msgstr ""
 msgid "**Algorithm ID**: ``native:calculatevectoroverlaps``"
 msgstr "**ID algoritme**: ``native:calculatevectoroverlaps``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1421
+msgid "Shortest line between features"
+msgstr "Kortste lijn tussen objecten"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1422
 msgid "|324|"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1424
+msgid ""
+"Creates a line layer as the shortest line between the source and the "
+"destination layer. By default only the first nearest feature of the "
+"destination layer is taken into account. The n-nearest neighboring features "
+"number can be specified. If a maximum distance is specified, then only "
+"features which are closer than this distance will be considered."
+msgstr ""
+"Maakt een lijnlaag als de kortste lijn tussen de bron- en de doellaag. "
+"Standaard wordt alleen rekening gehouden met het eerste dichtstbijzijnde "
+"object van de doellaag. Het nummer voor het n-dichtstbijzijnde object kan "
+"worden gespecificeerd. Als een maximale afstand is gespecificeerd, dan "
+"worden alleen objecten die dichterbij liggen dan die afstand worden "
+"overwogen."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1427
+msgid ""
+"The output features will contain all the source layer attributes, all the "
+"attributes from the n-nearest feature and the additional field of the "
+"distance."
+msgstr ""
+"De objecten voor de uitvoer zullen alle attribuutwaarden van de bronlaag "
+"bevatten, alle attributen van het n-dichtstbijzijnde object en het "
+"aanvullende veld voor de afstand."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1429
+msgid ""
+"This algorithm uses purely Cartesian calculations for distance, and does not"
+" consider geodetic or ellipsoid properties when determining feature "
+"proximity. The measurement and output coordinate system is based on the "
+"coordinate system of the source layer."
+msgstr ""
+"Dit algoritme gebruikt alleen maar Cartesiaanse  berekeningen voor afstand, "
+"en neemt geen geodetische of ellipsoïde eigenschappen in overweging bij het "
+"bepalen van de nabijheid van objecten. De maateenheid en het "
+"coördinatensysteem zijn gebaseerd op het coördinatensysteem van de bronlaag."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1437
+msgid "Shortest line from point features to lines"
+msgstr "Kortste lijn van objecten punt naar lijnen"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1450
+msgid "**Source layer**"
+msgstr "**Bronlaag**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1451
 msgid "``SOURCE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1453
+msgid "Origin layer for which to search for nearest neighbors"
+msgstr "Laag van waaruit gezocht moet worden naar dichtstbijzijnde buren"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1454
+msgid "**Destination layer**"
+msgstr "**Doellaag**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1455
 msgid "``DESTINATION``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1457
+msgid "Target Layer in which to search for nearest neighbors"
+msgstr "Laag waarin gezocht moet worden naar dichtstbijzijnde buren"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1458
 msgid "**Method**"
@@ -2267,6 +2356,24 @@ msgstr "**Methode**"
 msgid "``METHOD``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1463
+msgid "Shortest distance calculation method Possible values are:"
+msgstr ""
+"Methode voor berekening van de kortst mogelijke afstand. Mogelijke waarden "
+"zijn:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1466
+msgid "0 --- Distance to nearest point on feature"
+msgstr "0 --- Afstand tot dichtstbijzijnde punt op object"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1467
+msgid "1 --- Distance to feature centroid"
+msgstr "1 --- Afstand tot zwaartepunt van object"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1469
+msgid "**Maximum number of neighbors**"
+msgstr "**Maximum aantal buren**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1470
 msgid "``NEIGHBORS``"
 msgstr ""
@@ -2274,6 +2381,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1473
 msgid "Default: 1"
 msgstr "Standaard: 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1474
+msgid "Maximum number of neighbors to look for"
+msgstr "Maximale aantal buren om naar te zoeken"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1475
 msgid "**Maximum distance**"
@@ -2283,9 +2394,35 @@ msgstr "**Maximum afstand**"
 msgid "``DISTANCE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1480
+msgid ""
+"Only destination features which are closer than this distance will be "
+"considered."
+msgstr ""
+"Alleen objecten die dichterbij liggen dan deze afstand zullen in overweging "
+"worden genomen."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1482
+msgid "**Shortest lines**"
+msgstr "**Kortste lijnen**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1504
 msgid "**Output layer**"
 msgstr "**Uitvoerlaag**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1507
+msgid ""
+"Line vector layer joining source features to their nearest neighbor(s) in "
+"the destination layer. Contains all attributes for both source and "
+"destination features, and the computed distance."
+msgstr ""
+"Lijn vectorlaag die bronobjecten samenvoegt met hun dichtstbijzijnde "
+"bu(u)r(en) in de doellaag. Bevat alle attributen voor zowel de bron- als de "
+"doelobjecten, en de berekende afstand."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1514
+msgid "**Algorithm ID**: ``native:shortestline``"
+msgstr "**ID algoritme**: ``native:shortestline``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1524
 msgid "ST-DBSCAN clustering"
