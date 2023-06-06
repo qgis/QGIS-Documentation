@@ -1749,6 +1749,14 @@ msgstr ""
 "Waarden Z en M (indien aanwezig) kunnen worden vertaald en op schaal "
 "gebracht."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:115
+msgid ""
+"Vector point layer (green dots) before (left), and after (right) an affine "
+"transformation (translation)."
+msgstr ""
+"Vector puntlaag (groene punten) vóór (links), en na (rechts) een affiene "
+"transformatie (vertaling)."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:117
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4284
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5192
@@ -2538,6 +2546,14 @@ msgstr "**ID algoritme**: ``native:boundingboxes``"
 msgid "Buffer"
 msgstr "Buffer"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:538
+msgid ""
+"Computes a buffer area for all the features in an input layer, using a fixed"
+" or data defined distance."
+msgstr ""
+"Berekent een buffergebied met een vaste of data-bepaalde afstand voor alle "
+"objecten op een invoerlaag."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:541
 msgid ""
 "It is possible to use a negative distance for polygon input layers. In this "
@@ -2765,6 +2781,27 @@ msgstr ""
 msgid "Default: 2.0"
 msgstr "Standaard: 2.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4420
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6371
+msgid ""
+"Sets the maximum distance from the offset geometry to use when creating a "
+"mitered join as a factor of the offset distance (only applicable for miter "
+"join styles). Minimum: 1.0"
+msgstr ""
+"Stelt de maximale afstand van de te gebruiken geometrie voor de verschuiving"
+" bij het maken van een puntige verbindingsstijl in als een factor van de "
+"afstand van de verschuiving  (alleen van toepassing voor puntige "
+"verbindingsstijlen). Minimum: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:641
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4429
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6380
+msgid "A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1"
+msgstr ""
+"Een buffer van 10m met een limiet van 2 en een buffer van 10m met een limiet"
+" van 1"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:642
 msgid "**Dissolve result**"
 msgstr "**Resultaat samenvoegen**"
@@ -2801,6 +2838,23 @@ msgstr "[Booleaanse waarde]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5409
 msgid "Default: False"
 msgstr "Standaard: False"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:647
+msgid ""
+"Dissolve the final buffer. If ``True`` (checked), overlapping buffers will "
+"be dissolved (combined) into a single multipart feature."
+msgstr ""
+"De uiteindelijke buffer samenvoegen. Indien ``True`` (geselecteerd) zullen "
+"overlappende buffers worden samengesmolten (gecombineerd) tot een één enkel "
+"meerdelig object."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:654
+msgid ""
+"Standard (three single part features - left), dissolved (1 multipart feature"
+" with 2 parts - right)"
+msgstr ""
+"Standaard (drie eendelige objecten - links), samengevoegd (1 meerdelig "
+"object met 2 delen - rechts)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:655
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:678
@@ -4430,6 +4484,23 @@ msgstr ""
 " voor de gespecificeerde attributen). Als alternatief kunnen alle objecten "
 "worden samengesmolten tot één object."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2167
+msgid ""
+"All output geometries will be converted to multi geometries. In case the "
+"input is a polygon layer, common boundaries of adjacent polygons being "
+"dissolved will get erased. If enabled, the optional \"Keep disjoint features"
+" separate\" setting will cause features and parts that do not overlap or "
+"touch to be exported as separate features (instead of parts of a single "
+"multipart feature)."
+msgstr ""
+"Alle geometrieën voor de uitvoer zullen worden geconverteerd naar multi-"
+"geometrieën. In het geval dat de invoer een polygonenlaag is, zullen "
+"gedeelde grenzen van aanliggende polygonen die worden samengevoegd, worden "
+"gewist. Indien ingeschakeld zal de optionele instelling \"Losgemaakte "
+"objecten afzonderlijk behouden\" er voor zorgen dat objecten en delen die "
+"niet overlappen of raken, worden geëxporteerd als afzonderlijke objecten (in"
+" plaats van delen van één enkel meerdelig object)."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2174
 msgid ""
 "The resulting attribute table will have the same fields as the input layer. "
@@ -4439,6 +4510,10 @@ msgstr ""
 "De resulterende attributentabel zal dezelfde velden hebben als de "
 "invoerlaag. De waarden in de velden van de uitvoerlaag zijn die van het "
 "eerste object van de invoer dat zal worden verwerkt."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2183
+msgid "Dissolving a layer into a single multipart feature"
+msgstr "Samenvoegen van een laag tot één enkel meerdelig object"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2187
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5196
@@ -4473,6 +4548,13 @@ msgstr ""
 "Als geen veld wordt opgegeven dan worden alle objecten samengesmolten, wat "
 "resulteert in één enkel (meerdelig) object."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2225
+msgid ""
+"Dissolve the polygon layer on a common attribute (2 multipart features)"
+msgstr ""
+"De polygonenlaag samenvoegen op een gemeenschappelijk attribuut (2 "
+"meerdelige objecten)"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2227
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2280
 msgid "**Dissolved**"
@@ -4482,9 +4564,34 @@ msgstr "**Samengesmolten**"
 msgid "Advanced parameters"
 msgstr "Gevorderde parameters"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2249
+msgid "**Keep disjoint features separate**"
+msgstr "**Losgemaakte objecten afzonderlijk behouden**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2251
+msgid "|326|"
+msgstr "|326|"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2252
 msgid "``SEPARATE_DISJOINT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2256
+msgid ""
+"Parts of dissolved features are exported as separate features (instead of "
+"parts of a multipart feature)."
+msgstr ""
+"Delen van losgemaakte objecten worden geëxporteerd als afzonderlijke "
+"objecten (in plaats van delen van een meerdelig object)."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2262
+msgid "source (left), dissolve all (3 distinct features - right)"
+msgstr "bron (links), alles samengevoegd (3 afzonderlijke objecten - rechts)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2267
+msgid "source (left), dissolve on field (5 distinct features - right)"
+msgstr ""
+"bron (links), samengevoegd op veld (5 afzonderlijke objecten - rechts)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2283
 msgid "The output vector layer with dissolved geometries"
@@ -4616,11 +4723,26 @@ msgstr ""
 msgid "**Offset**"
 msgstr "**Verschuiving**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2356
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3327
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6066
+msgid "|328|"
+msgstr "|328|"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2357
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6067
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6484
 msgid "``OFFSET``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2361
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6071
+msgid ""
+"Offset value: it is algebraically added to the band values after applying "
+"the \"Scale factor\"."
+msgstr ""
+"Waarde verschuiving: het wordt algebraïsch toegevoegd aan de waarden van de "
+"band na het toepassen van de \"Schaalfactor\"."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2363
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2386
@@ -5544,6 +5666,35 @@ msgstr "Waarden M zullen uit de uitvoer worden verwijderd."
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3308
 msgid ":ref:`qgischeckvalidity`"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3325
+msgid "**Repair method**"
+msgstr "**Methode voor repareren**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3332
+msgid "Method used to repair the geometries. One of:"
+msgstr "Gebruikte methode voor repareren van de geometrieën. Één van:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3334
+msgid ""
+"0 --- ``Linework``: combines all rings into a set of noded lines and then "
+"extracts valid polygons from that linework"
+msgstr ""
+"0 --- ``Lijnenwerk``: combineert alle ringen naar een set met geknoopte "
+"lijnen en trekt dan geldige polygonen af van dat lijnenwerk"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3336
+msgid ""
+"1 --- ``Structure``: first makes all rings valid and then merges shells and "
+"subtracts holes from shells to generate valid result. Assumes that holes and"
+" shells are correctly categorized. Requires QGIS version built with GEOS "
+"3.10 or later (check :menuselection:`Help --> About` menu)."
+msgstr ""
+"1 --- ``Structuur``: maakt eerst alle ringen geldig en voegt dan omhulsels "
+"samen en strekt gaten van de omhulsels af om een geldig resultaat te maken. "
+"Gaat ervan uit dat gaten en omhulsels correct zijn gecategoriseerd. Vereist "
+"een versie van  QGIS die is gebouwd met GEOS 3.10 of later (controleer het "
+"menu :menuselection:`Help --> Info`)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3341
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3363
@@ -7212,6 +7363,53 @@ msgstr "De uitvoer vectorlaag met geroteerde geometrieën"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5691
 msgid "**Algorithm ID**: ``native:rotatefeatures``"
 msgstr "**ID algoritme**: ``native:rotatefeatures``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5701
+msgid "Roundness"
+msgstr "Rondheid"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5702
+msgid "|324|"
+msgstr "|324|"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5704
+msgid ""
+"Calculates the roundness of each feature and stores it as a new field. The "
+"input vector layer must contain polygons."
+msgstr ""
+"Berekent de rondheid van elk object en slaat die op als een nieuw veld. De "
+"invoer vectorlaag moet polygonen bevatten."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5706
+msgid ""
+"The roundness of a polygon is defined as 4π × polygon area / perimeter². The"
+" roundness value varies between 0 and 1. A perfect circle has a roundness of"
+" 1, while a completely flat polygon has a roundness of 0."
+msgstr ""
+"De rondheid van een polygoon wordt gedefinieerd als 4π × gebied polygoon / "
+"perimeter². De waarde van de rondheid varieert tussen 0 en 1. Een perfecte "
+"cirkel heeft een rondheid van 1, terwijl een volledig platte polygoon een "
+"rondheid heeft van 0."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5710
+msgid "The algorithm returns NULL for multipart polygon features."
+msgstr "Het algoritme geeft NULL terug voor meerdelige polygoonobjecten."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5732
+msgid "**Roundness**"
+msgstr "**Rondheid**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5737
+msgid "Specify the output vector layer (with roundness field). One of:"
+msgstr "Specificeer de uitvoer vectorlaag (met veld voor rondheid). Één van:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5758
+msgid "The output vector layer with roundness value in a field"
+msgstr "De uitvoer vectorlaag met de waarde voor rondheid in een veld"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5763
+msgid "**Algorithm ID**: ``native:roundness``"
+msgstr "**ID algoritme**: ``native:roundness``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5773
 msgid "Segmentize by maximum angle"
