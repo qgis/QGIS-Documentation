@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,6 +48,16 @@ msgid ""
 msgstr ""
 "QGIS Server bibliotheek: een bibliotheek die een API verschaft voor het "
 "maken van webservices voor OGC"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:45
+msgid ""
+"QGIS Server FCGI: a FCGI binary application :file:`qgis_mapserv.fcgi` that "
+"together with a web server implements a set of OGC services (WMS, WFS, WCS "
+"etc.) and OGC APIs (WFS3/OAPIF)"
+msgstr ""
+"QGIS Server FCGI: een FCGI binaire toepassing :file:`qgis_mapserv.fcgi` die,"
+" samen met een webserver, een set services van OGC implementeert (WMS, WFS, "
+"WCS etc.) en API's voor OGC (WFS3/OAPIF)"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:48
 msgid ""
@@ -218,6 +229,23 @@ msgstr ""
 "Een minimaal voorbeeld voor het gebruiken van de API voor QGIS Server API "
 "(zonde het gedeelte voor HTTP) volgt:"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:147
+msgid ""
+"Here is a complete standalone application example developed for the "
+"continuous integrations testing on QGIS source code repository, it showcases"
+" a wide set of different plugin filters and authentication schemes (not mean"
+" for production because they were developed for testing purposes only but "
+"still interesting for learning): :source:`qgis_wrapped_server.py "
+"<tests/src/python/qgis_wrapped_server.py>`"
+msgstr ""
+"Hier staat een volledig voorbeeld van een zelfstandige toepassing, "
+"ontwikkeld voor het doorlopend testen van integraties in de opslagplaats "
+"voor de broncode van QGIS. Het laat een brede set van verschillende plug-ins"
+" voor filters en authenticatieschema's zien (niet bedoeld voor productie, "
+"omdat zij alleen voor testdoeleinden werden ontwikkeld, maar nog steeds "
+"interessant zijn om van te leren): :source:`qgis_wrapped_server.py "
+"<tests/src/python/qgis_wrapped_server.py>`"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:154
 msgid "Server plugins"
 msgstr "Server plug-ins"
@@ -374,6 +402,18 @@ msgstr ""
 "eigenschappen bewerken (invoer/uitvoer) en exceptions opwerpen (hoewel op "
 "een bijzondere manier zoals we hieronder zullen zien)."
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:210
+msgid ""
+"All these methods return a boolean value indicating if the call should be "
+"propagated to the subsequent filters. If one of these method returns "
+":const:`False` then the chain stop, otherwise the call will propagate to the"
+" next filter."
+msgstr ""
+"Al deze methoden geven een Booleaanse waarde terug die aangeeft of de "
+"aanroep zou moeten worden doorgezet naar de opeenvolgende filters. Als één "
+"van deze methoden :const:`False` teruggeeft stopt de keten, anders zal de "
+"aanroep worden doorgezet naar het volgende filter."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:214
 msgid ""
 "Here is the pseudo code showing how the server handles a typical request and"
@@ -387,6 +427,10 @@ msgid "The following paragraphs describe the available callbacks in details."
 msgstr ""
 "De volgende alinea's beschrijven de beschikbare terugkoppelingen tot in "
 "detail."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:237
+msgid "onRequestReady"
+msgstr "onRequestReady"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:239
 msgid ""
@@ -423,6 +467,103 @@ msgstr ""
 "U zou zelfs een bronservice volledig kunnen vervangen door de parameter "
 "**SERVICE** te wijzigen en op die manier de bronservice volledig omzeilen "
 "(niet dat dat echter enige zin zou hebben)."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:253
+msgid "onSendResponse"
+msgstr "onSendResponse"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:255
+msgid ""
+"This is called whenever any partial output is flushed from response buffer "
+"(i.e to **FCGI** ``stdout`` if the fcgi server is used) and from there, to "
+"the client. This occurs when huge content is streamed (like WFS GetFeature)."
+" In this case :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` may be called multiple times."
+msgstr ""
+"Dit wordt aangeroepen wanneer een gedeeltelijk antwoord wordt verwijderd uit"
+" de buffer voor het antwoord (d.i. naar **FCGI** ``stdout`` als de fcgi "
+"server wordt gebruikt) en vanaf daar naar de cliënt. Dit gebeurt als heel "
+"veel inhoud wordt gestroomd (zoals WFS GetFeature). In dat geval zou "
+":meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` "
+"meerdere keren kunnen worden aangeropen."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:260
+msgid ""
+"Note that if the response is not streamed, then :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` will not be called at all."
+msgstr ""
+"Onthoud dat als het antwoord niet wordt gestroomd, dan zal "
+":meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` "
+"helemaal niet worden aangeroepen."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:262
+msgid ""
+"In all case, the last (or unique) chunk will be sent to client after a call "
+"to :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+msgstr ""
+"In alle gevallen zal het laatste (of unieke) gedeelte worden verzonden aan "
+"de cliënt na het aanroepen van :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:265
+msgid ""
+"Returning :const:`False` will prevent flushing of data to the client. This "
+"is desirable when a plugin wants to collect all chunks from a response and "
+"examine or change the response in :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+msgstr ""
+"Teruggeven van :const:`False` zal het doorsturen van gegevens naar de cliënt"
+" voorkomen. Dit is gewenst als een plug-in alle gedeelten uit een antwoord "
+"wil verzamelen en het antwoord onderzoeken of wijzigen in "
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:271
+msgid "onResponseComplete"
+msgstr "onResponseComplete"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:273
+msgid ""
+"This is called once when core services (if hit) finish their process and the"
+" request is ready to be sent to the client. As discussed above, this method "
+"will be called before the last (or unique) chunk of data is sent to the "
+"client. For streaming services, multiple calls to :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` might have been called."
+msgstr ""
+"Dit wordt eenmaal aangeroepen wanneer de bronservices (indien aangesproken) "
+"hun proces voltooien en het verzoek gereed is om te worden verzonden naar de"
+" cliënt. Zoals hierboven besproken zal deze methode worden aangeroepen "
+"vóórdat het laatste (of unieke) gedeelte gegevens is verzonden aan de "
+"cliënt. Voor services voor streaming zouden meerdere aanroepen naar "
+":meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` "
+"gebeurd kunnen zijn."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:279
+msgid ""
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` is the ideal place to "
+"provide new services implementation (WPS or custom services) and to perform "
+"direct manipulation of the output coming from core services (for example to "
+"add a watermark upon a WMS image)."
+msgstr ""
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` is de ideale plek om "
+"implementatie voor nieuwe services te verschaffen (WPS of aangepaste "
+"services) en om de uitvoer, komende vanaf bronservices, direct te bewerken "
+"(bijvoorbeeld om een watermerk aan een afbeelding van WMS toe te voegen)."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:284
+msgid ""
+"Note that returning :const:`False` will prevent the next plugins to execute "
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` but, in any case, prevent "
+"response to be sent to the client."
+msgstr ""
+"Onthoud dathet reuggeven van :const:`False` zal voorkomen dat de volgende "
+"plug-ins :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` uitvoeren maarbut, in elk "
+"geval, voorkomen dat het antwoord wordt verzonden aan de cliënt."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:290
 msgid "Raising exceptions from a plugin"
@@ -494,6 +635,21 @@ msgid ""
 msgstr ""
 "Alleen plug-ins die de metadata ``server=True`` hebben ingesteld zullen "
 "worden geladen en uitgevoerd door QGIS Server."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:324
+msgid ""
+"The `qgis3-server-vagrant <https://github.com/elpaso/qgis3-server-"
+"vagrant/tree/master/resources/web/plugins>`_ example plugin discussed here "
+"(with many more) is available on github, a few server plugins are also "
+"published in the official `QGIS plugins repository "
+"<https://plugins.qgis.org/plugins/server>`_."
+msgstr ""
+"De voorbeeldplug-in `qgis3-server-vagrant "
+"<https://github.com/elpaso/qgis3-server-"
+"vagrant/tree/master/resources/web/plugins>`_ die hier wordt besproken (naast"
+" vele andere) is beschikbaar op GitHub, een klein aantal serverplug-ins zijn"
+" ook gepubliceerd in de officiële `opslagplaats van plug-ins voor QGIS "
+"<https://plugins.qgis.org/plugins/server>`_."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:329
 #: ../../docs/pyqgis_developer_cookbook/server.rst:554
@@ -809,6 +965,19 @@ msgstr ""
 msgid "layerFilterExpression"
 msgstr ""
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:637
+msgid "Used to add an Expression to limit the results."
+msgstr "Gebruikt om een expressie toe te voegen om de resultaten te beperken."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:639
+#: ../../docs/pyqgis_developer_cookbook/server.rst:652
+msgid ""
+"For example, to limit to features where the attribute ``role`` is equal to "
+"``user``."
+msgstr ""
+"Bijvoorbeeld om te beperken tot de mogelijkheid waar het attribuut ``role`` "
+"gelijk is aan ``user``."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:648
 msgid "layerFilterSubsetString"
 msgstr ""
@@ -879,6 +1048,10 @@ msgstr ""
 "<qgis.server.QgsAccessControlFilter.LayerPermissions.canDelete>` om een "
 "object te kunnen verwijderen."
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:677
+msgid "For example, to limit everything on read only access:"
+msgstr "Bijvoorbeeld om alles te beperken tot toegang voor Alleen-lezen:"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:689
 msgid "authorizedLayerAttributes"
 msgstr ""
@@ -894,6 +1067,10 @@ msgid "The argument attribute return the current set of visible attributes."
 msgstr ""
 "Het argument attribute geeft de huidige set van zichtbare attributen terug."
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:695
+msgid "For example, to hide the ``role`` attribute:"
+msgstr "Bijvoorbeeld om het attribuut ``role`` te verbergen:"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:704
 msgid "allowToEdit"
 msgstr ""
@@ -907,9 +1084,27 @@ msgstr ""
 msgid "It is used in the ``WFS-Transaction`` protocol."
 msgstr "Het wordt gebruikt in het protocol ``WFS-Transaction``."
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:710
+msgid ""
+"For example, to be able to edit only feature that has the attribute ``role``"
+" with the value ``user``:"
+msgstr ""
+"Bijvoorbeeld om het mogelijk te maken alleen objecten te bewerken die het "
+"attribuut ``role`` hebben met de waarde ``user``."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:720
 msgid "cacheKey"
 msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:722
+msgid ""
+"QGIS Server maintains a cache of the capabilities then to have a cache per "
+"role you can return the role in this method. Or return ``None`` to "
+"completely disable the cache."
+msgstr ""
+"QGIS Server onderhoudt een cache van de capabilities, om dan een cache per "
+"rol te hebben kunt u de rol teruggeven met deze methode. Of geef ``None`` "
+"terug om de cache volledig uit te schakelen."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:728
 msgid "Custom services"
@@ -922,6 +1117,28 @@ msgid ""
 msgstr ""
 "In QGIS Server zijn bronservices, zoals WMS, WFS en WCS, geïmplementeerd als"
 " subklassen van :class:`QgsService <qgis.server.QgsService>`."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:733
+msgid ""
+"To implement a new service that will be executed when the query string "
+"parameter ``SERVICE`` matches the service name, you can implement your own "
+":class:`QgsService <qgis.server.QgsService>` and register your service on "
+"the :meth:`serviceRegistry() "
+"<qgis.server.QgsServerInterface.serviceRegistry>` by calling its "
+":meth:`registerService(service) "
+"<qgis.server.QgsServiceRegistry.registerService>`."
+msgstr ""
+"U kunt, om een nieuwe service te implementeren die zal worden uitgevoerd als"
+" de tekenreeks voor de query voor de parameter ``SERVICE`` overeenkomt met "
+"de naam voor de service, uw eigen :class:`QgsService "
+"<qgis.server.QgsService>` implementeren en uw service registreren in "
+":meth:`serviceRegistry() <qgis.server.QgsServerInterface.serviceRegistry>` "
+"door de methode :meth:`registerService(service) "
+"<qgis.server.QgsServiceRegistry.registerService>` daarvan aan te roepen"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:738
+msgid "Here is an example of a custom service named ``CUSTOM``:"
+msgstr "Hier is een voorbeeld van een aangepaste service, genaamd ``CUSTOM``:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:769
 msgid "Custom APIs"
@@ -941,6 +1158,25 @@ msgstr ""
 "zijn geregistreerd bij een instantie van :class:`QgsServerOgcApi "
 "<qgis.server.QgsServerOgcApi>` (of zijn ouderklasse :class:`QgsServerApi "
 "<qgis.server.QgsServerApi>`)."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:776
+msgid ""
+"To implement a new API that will be executed when the url path matches a "
+"certain URL, you can implement your own :class:`QgsServerOgcApiHandler "
+"<qgis.server.QgsServerOgcApiHandler>` instances, add them to an "
+":class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` and register the API "
+"on the :meth:`serviceRegistry() "
+"<qgis.server.QgsServerInterface.serviceRegistry>` by calling its "
+":meth:`registerApi(api) <qgis.server.QgsServiceRegistry.registerApi>`."
+msgstr ""
+"U kunt, om een nieuwe API te implementeren die zal worden uitgevoerd als het"
+" pad voor de URL overeenkomt met een bepaalde URL, uw eigen instanties "
+":class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>` "
+"implementeren, ze toevoegen aan een :class:`QgsServerOgcApi "
+"<qgis.server.QgsServerOgcApi>` en de API registreren in het "
+":meth:`serviceRegistry() <qgis.server.QgsServerInterface.serviceRegistry>` "
+"door de methode :meth:`registerApi(api) "
+"<qgis.server.QgsServiceRegistry.registerApi>` daarvan aan te roepen."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:782
 msgid ""
