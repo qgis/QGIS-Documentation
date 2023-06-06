@@ -819,7 +819,7 @@ Configure your project
 ======================
 
 To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a QGIS project
-file with some data or use one of your current project. Define the colors and
+file with some data or use one of your current projects. Define the colors and
 styles of the layers in QGIS and the project CRS, if not already defined.
 Then, go to the :guilabel:`QGIS Server` menu of the
 :menuselection:`Project --> Properties...` dialog and provide
