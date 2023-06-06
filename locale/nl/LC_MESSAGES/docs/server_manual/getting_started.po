@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-29 06:13+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -258,6 +259,16 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:237
 msgid "NGINX HTTP Server"
 msgstr "NGINX HTTP Server"
+
+#: ../../docs/server_manual/getting_started.rst:241
+msgid ""
+"You can also use QGIS Server with `NGINX <https://nginx.org/en/docs/>`__. "
+"Unlike Apache, NGINX does not automatically spawn FastCGI processes. The "
+"FastCGI processes are to be started by something else."
+msgstr ""
+"U kunt QGIS Server ook gebruiken met `NGINX <https://nginx.org/en/docs/>`__."
+" Anders dan bij Apache voert NGINX niet automatisch FastCGI-processen uit. "
+"De processen van FastCGI moeten door iets anders worden gestart."
 
 #: ../../docs/server_manual/getting_started.rst:245
 msgid "Install NGINX:"
@@ -810,6 +821,20 @@ msgstr ""
 " enkele van de eerdere lagen op kunnen halen dankzij QGIS Server door iets "
 "zoals dit te doen in uw webbrowser om de laag *countries* op te halen:"
 
+#: ../../docs/server_manual/getting_started.rst:767
+msgid ""
+"If you followed the above instructions to install an Apache HTTP Server:"
+msgstr ""
+"Als u bovenstaande instructies volgde om een Apache HTTP Server te "
+"installeren:"
+
+#: ../../docs/server_manual/getting_started.rst:782
+msgid ""
+"If you followed the above instructions to install an NGINX HTTP Server:"
+msgstr ""
+"Als u bovenstaande instructies volgde om een NGINX HTTP Server te "
+"installeren:"
+
 #: ../../docs/server_manual/getting_started.rst:797
 msgid "If you obtain the next image, then QGIS Server is running correctly:"
 msgstr ""
@@ -837,9 +862,41 @@ msgstr "Bijvoorbeeld met spawn-fcgi:"
 msgid "Configure your project"
 msgstr "Uw project configureren"
 
+#: ../../docs/server_manual/getting_started.rst:821
+msgid ""
+"To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a "
+"QGIS project file with some data or use one of your current project. Define "
+"the colors and styles of the layers in QGIS and the project CRS, if not "
+"already defined. Then, go to the :guilabel:`QGIS Server` menu of the "
+":menuselection:`Project --> Properties...` dialog and provide some "
+"information about the OWS in the :guilabel:`Service Capabilities` tab."
+msgstr ""
+"U moet, om een nieuw QGIS Server WMS, WFS, OAPIF of WCS te verschaffen,  een"
+" projectbestand voor QGIS maken met enkele gegevens of een van uw huidige "
+"projecten gebruiken. Definieer de kleuren en stijlen voor de lagen in QGIS "
+"en het project-CRS, als dat nog niet is gedefinieerd. Ga dan naar het menu "
+":guilabel:`QGIS Server` van het dialoogvenster :menuselection:`Project --> "
+"Eigenschappen…` en geef wat informatie over het OWS op de tab "
+":guilabel:`Service mogelijkheden`."
+
 #: ../../docs/server_manual/getting_started.rst:833
 msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
 msgstr "Definities voor een project QGIS Server WMS/WFS/WCS"
+
+#: ../../docs/server_manual/getting_started.rst:835
+msgid ""
+"You have to :guilabel:`Enable Service Capabilities` first, if it is "
+"deactivated. This will appear in the GetCapabilities response of the WMS, "
+"WFS or WCS. If you don't check |checkbox| :guilabel:`Enable Service "
+"capabilities`, QGIS Server will use the information given in the "
+":file:`wms_metadata.xml` file located in the :file:`cgi-bin` folder."
+msgstr ""
+"U moet eerst :guilabel:`Service-mogelijkheden inschakelen`, als dat nog niet"
+" geselecteerd is. Dit zal verschijnen in het antwoord GetCapabilities van de"
+" WMS, WFS of WCS. Als u |checkbox| :guilabel:`Service-mogelijkheden "
+"inschakelen` niet selecteert zal QGIS Server de informatie gebruiken die is "
+"opgegeven in het bestand :file:`wms_metadata.xml` dat is opgeslagen in de "
+"map :file:`cgi-bin`."
 
 #: ../../docs/server_manual/getting_started.rst:1052
 msgid "checkbox"
@@ -848,6 +905,43 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:842
 msgid "WMS capabilities"
 msgstr "WMS-mogelijkheden"
+
+#: ../../docs/server_manual/getting_started.rst:844
+msgid ""
+"In the :guilabel:`WMS capabilities` tab, you can define the extent "
+"advertised in the WMS GetCapabilities response by entering the minimum and "
+"maximum X and Y values in the fields under :guilabel:`Advertised extent`."
+msgstr ""
+"U kunt, op de tab :guilabel:`WMS` , het te vermelden bereik definiëren dat "
+"in het antwoord van WMS GetCapabilities verschijnt, door de minimum en "
+"maximum waarden voor X en Y in te voeren in de velden onder "
+":guilabel:`Advertentiebereik`."
+
+#: ../../docs/server_manual/getting_started.rst:854
+msgid "Definitions in the WMS tab"
+msgstr "Definities op de tab WMS"
+
+#: ../../docs/server_manual/getting_started.rst:856
+msgid ""
+"Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
+"extent currently displayed in the QGIS map canvas. By checking |checkbox| "
+":guilabel:`CRS restrictions`, you can restrict in which coordinate reference"
+" systems (CRS) QGIS Server will offer to render maps. It is recommended that"
+" you restrict the offered CRS as this reduces the size of the WMS "
+"GetCapabilities response. Use the |symbologyAdd| button below to select "
+"those CRSs from the Coordinate Reference System Selector, or click "
+":guilabel:`Used` to add the CRSs used in the QGIS project to the list."
+msgstr ""
+"Klikken op :guilabel:`Huidige bereik van kaartvenster gebruiken` stelt deze "
+"waarden in op het bereik dat momenteel wordt weergegeven in het kaartvenster"
+" van QGIS. Door |checkbox| :guilabel:`CRS-beperkingen` te selecteren kunt u "
+"beperken in welke coördinaten referentiesystemen (CRS) QGIS Server zal "
+"aanbieden de kaarten te renderen. Aanbevolen wordt om u te beperken tot het "
+"aangeboden CRS omdat dat de grootte van het antwoord van WMS GetCapabilities"
+" reduceert. Gebruik de knop |symbologyAdd| onderin om het CRS te selecteren "
+"uit de selectie voor Coördinaten ReferentieSysteem, of klik op "
+":guilabel:`Huidige gebruikte` om het in het project van QGIS gebruikte CRS "
+"aan de lijst toe te voegen."
 
 #: ../../docs/server_manual/getting_started.rst:1054
 msgid "symbologyAdd"
@@ -1022,9 +1116,85 @@ msgstr ""
 "Map gebruikt voor één van zijn attributen, wordt die informatie ook "
 "weergegeven in de uitvoer van GetFeatureInfo."
 
+#: ../../docs/server_manual/getting_started.rst:933
+msgid "WMTS capabilities"
+msgstr "WMTS-mogelijkheden"
+
+#: ../../docs/server_manual/getting_started.rst:935
+msgid ""
+"In the :guilabel:`WMTS capabilities` tab you can select the layers you want "
+"to publish as WMTS and specify if you want to publish as PNG or JPEG."
+msgstr ""
+"Op de tab :guilabel:`WMTS` kunt u de lagen selecteren die u wilt publiceren "
+"als WMTS en specificeren of u als PNG of JPEG wilt publiceren."
+
+#: ../../docs/server_manual/getting_started.rst:943
+msgid "Definitions in the WMTS tab"
+msgstr "Definities op de tab WMTS"
+
+#: ../../docs/server_manual/getting_started.rst:945
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WMTS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WMTS GetCapabilities response."
+msgstr ""
+"Als u een URL invoert in het veld :guilabel:`Gegeven URL` van het gedeelte "
+":guilabel:`WMTS`, zal QGIS Server deze specifieke URL opnemen in het "
+"antwoord van WMTS GetCapabilities."
+
+#: ../../docs/server_manual/getting_started.rst:950
+msgid "WFS/OAPIF capabilities"
+msgstr "WFS/OAPIF-mogelijkheden"
+
+#: ../../docs/server_manual/getting_started.rst:952
+msgid ""
+"In the :guilabel:`WFS/OAPIF capabilities` tab, you can select the layers you"
+" want to publish as WFS or OAPIF, and specify if they will allow update, "
+"insert and delete operations."
+msgstr ""
+"Op de tab :guilabel:`WFS/OAPIF` kunt u de lagen selecteren die u wilt "
+"publiceren als WFS of OAPIF en specificeren of zij bewerkingen voor updaten,"
+" invoegen en verwijderen toestaan."
+
+#: ../../docs/server_manual/getting_started.rst:961
+msgid "Definitions in the WFS/OAPIF tab"
+msgstr "Definities op de tab WFS/OAPIF"
+
+#: ../../docs/server_manual/getting_started.rst:963
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WFS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WFS GetCapabilities response."
+msgstr ""
+"Als u een URL invoert in het veld :guilabel:`Gegeven URL` van het gedeelte "
+":guilabel:`WFS`, zal QGIS Server deze specifieke URL opnemen in het antwoord"
+" van WFS GetCapabilities."
+
 #: ../../docs/server_manual/getting_started.rst:968
 msgid "WCS capabilities"
 msgstr "WCS-mogelijkheden"
+
+#: ../../docs/server_manual/getting_started.rst:970
+msgid ""
+"In the :guilabel:`WCS capabilities` tab, you can select the layers that you "
+"want to publish as WCS."
+msgstr ""
+"Op de tab :guilabel:`WCS` kunt u de lagen selecteren die u wilt publiceren "
+"als WCS."
+
+#: ../../docs/server_manual/getting_started.rst:978
+msgid "Definitions in the WCS tab"
+msgstr "Definities op de tab WCS"
+
+#: ../../docs/server_manual/getting_started.rst:980
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WCS GetCapabilities response."
+msgstr ""
+"Als u een URL invoert in het veld :guilabel:`Gegeven URL` van het gedeelte "
+":guilabel:`WCS`, zal QGIS Server deze specifieke URL opnemen in het antwoord"
+" van WCS GetCapabilities."
 
 #: ../../docs/server_manual/getting_started.rst:985
 msgid "Fine tuning your OWS"
