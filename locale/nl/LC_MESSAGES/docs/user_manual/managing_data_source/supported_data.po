@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:53+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,6 +85,27 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:49
 msgid "Vector Data"
 msgstr "Vectorgegevens"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:51
+msgid ""
+"Many of the features and tools available in QGIS work the same, regardless "
+"the vector data source. However, because of the differences in format "
+"specifications (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file "
+"formats, AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server, "
+"SAP HANA Spatial databases and many more), QGIS may handle some of their "
+"properties differently. Support is provided by the `GDAL vector drivers "
+"<https://gdal.org/drivers/vector/index.html>`_. This section describes how "
+"to work with these specifics."
+msgstr ""
+"Veel mogelijkheden en gereedschappen die beschikbaar zijn in QGIS werken "
+"hetzelfde, ongeacht de bron voor de vectorgegevens. Echter, vanwege de "
+"verschillen in specificaties van indelingen (GeoPackage, ESRI Shapefile, "
+"MapInfo en MicroStation bestandsindelingen, AutoCAD DXF, PostGIS, "
+"SpatiaLite, Oracle Spatial, MSSQL Spatial, SAP HANA Spatial databases, en "
+"nog veel meer), zou QGIS sommige van hun eigenschappen verschillend af "
+"kunnen handelen. Ondersteuning wordt verschaft door de ``GDAL vector drivers"
+" <https://gdal.org/drivers/vector/index.html>`_. Dit gedeelte beschrijft hoe"
+" te werken met deze specifieken."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:63
 msgid ""
@@ -209,6 +231,14 @@ msgstr ""
 "specificaties van ESRI op `technical specification "
 "<https://www.esri.com/content/dam/esrisites/sitecore-"
 "archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>`_."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:118
+msgid ""
+"GDAL has read-write support for compressed ESRI Shapefile format "
+"(:file:`shz` and :file:`shp.zip`)."
+msgstr ""
+"GDAL heeft ondersteuning voor lezen-schrijven voor gecomprimeerde indeling "
+"ESRI Shapefile (:file:`shz` en :file:`shp.zip`)."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:121
 msgid "**Improving Performance for ESRI Shapefile format datasets**"
@@ -360,6 +390,14 @@ msgstr ""
 " coördinaten) moeten zijn gespecificeerd als getallen. Het "
 "coördinatensysteem is niet belangrijk."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:186
+msgid ""
+"If you have a CSV file with non-string columns, you can have an accompanying"
+" CSVT file (see section :ref:`csvt_files`)."
+msgstr ""
+"Als u een CSV-bestand hebt met kolommen die geen tekenreeks zijn, mag u een "
+"begeleidend bestand CSVT hebben (bekijk het gedeelte :ref:`csvt_files`)."
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:189
 msgid ""
 "The elevation point data file :file:`elevp.csv` in the QGIS sample dataset "
@@ -449,6 +487,17 @@ msgstr ""
 msgid "Using CSVT file to control field formatting"
 msgstr "CSVT-bestand gebruiken voor beheren van de opmaak van velden"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:247
+msgid ""
+"When loading CSV files, the GDAL driver assumes all fields are strings (i.e."
+" text) unless it is told otherwise. You can create a CSVT file to tell GDAL "
+"(and QGIS) the data type of the different columns:"
+msgstr ""
+"Bij het laden van CSV-bestanden gaat het stuurprogramma van GDAL er van uit "
+"dat alle velden tekenreeksen (d.i. tekst) is, tenzij anders is aangegeven. U"
+" kunt een bestand CSVT maken om GDAL (en QGIS) het type gegevens in de "
+"verschillende kolommen door te geven:"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Type"
 msgstr "Type"
@@ -476,6 +525,14 @@ msgstr "4"
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Boolean"
 msgstr "Boolean"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Integer(Boolean)"
+msgstr "Integer(Boolean)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "true"
+msgstr "true"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Decimal number"
@@ -525,6 +582,38 @@ msgstr "DateTime (YYYY-MM-DD HH:MM:SS+nn)"
 msgid "2016-07-28 18:33:12+00"
 msgstr "2016-07-28 18:33:12+00"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "CoordX"
+msgstr "CoordX"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "8.8249"
+msgstr "8.8249"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "CoordY"
+msgstr "CoordY"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "47.2274"
+msgstr "47.2274"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Point(X)"
+msgstr "Punt(X)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Point(Y)"
+msgstr "Punt(Y)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "WKT"
+msgstr "WKT"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "POINT(15 20)"
+msgstr "POINT(15 20)"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:267
 msgid ""
 "The CSVT file is a **ONE line** plain text file with the data types in "
@@ -554,9 +643,36 @@ msgstr ""
 "*U vindt meer informatie op* `GDAL CSV Driver "
 "<https://gdal.org/drivers/vector/csv.html>`_."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:284
+msgid "**Detect Field Types**"
+msgstr "**Veldtypen detecteren**"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:286
+msgid ""
+"Instead of using a CSVT file to tell the data types, QGIS provides the "
+"possibility to automatically detect the field types and to change the "
+"assumed field types."
+msgstr ""
+"In plaats van een CSVT-bestand te gebruiken om de gegevenstypen door te "
+"geven, verschaft QGIS de mogelijkheid om automatisch de veldtypen te "
+"detecteren en om de veronderstelde gegevenstypen te wijzigen."
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:295
 msgid "PostGIS Layers"
 msgstr "PostGIS-lagen"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:297
+msgid ""
+"PostGIS layers are stored in a PostgreSQL database. The advantages of "
+"PostGIS are spatial indexing, filtering and querying capabilities. Using "
+"PostGIS, vector functions such as select and identify work more accurately "
+"than they do with GDAL layers in QGIS."
+msgstr ""
+"Lagen voor PostGIS worden opgeslagen in een database van PostgreSQL. De "
+"voordelen van PostGIS zijn mogelijkheden voor ruimtelijk indexeren, filteren"
+" en bevragen. Door PostGIS te gebruiken werken functies voor vectors, zoals "
+"selecteren en identificeren nauwkeuriger dan dat zij dat doen met lagen van "
+"GDAL in QGIS."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:306
 msgid "**PostGIS Layers**"
@@ -855,6 +971,14 @@ msgstr ""
 "Dit zal de gegevensset in de indeling Shapefile :file:`alaska.shp` "
 "importeren in de database van PostGIS *postgis* met de gebruiker *postgres* "
 "met het wachtwoord *topsecret* op de hostserver *myhost.de*."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:460
+msgid ""
+"Note that GDAL must be built with PostgreSQL to support PostGIS. You can "
+"verify this by typing (in |nix|)::"
+msgstr ""
+"Onthoud dat GDAL moet zijn gebouwd met PostgreSQL om PostGIS te "
+"ondersteunen. U kunt dit verifiëren door te typen (in |nix|)::"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:716
 msgid "nix"
@@ -1193,6 +1317,61 @@ msgstr ""
 ":guilabel:`Object-id` . Voor de beste uitvoering zou de waarde van "
 ":guilabel:`Object-id` één enkele kolom ``INTEGER`` moeten zijn."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:655
+msgid "Layers crossing 180° longitude"
+msgstr "Lagen die de 180° lengtegraad overschrijden"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+msgid ""
+"Many GIS packages don't wrap layers with a geographic reference system "
+"(lat/lon) crossing the 180 degrees longitude line. As result, if we open "
+"such a layer in QGIS, we could see two widely separated locations, that "
+"should appear near each other. In :numref:`Figure_vector_crossing`, the tiny"
+" point on the far left of the map canvas (Chatham Islands) should be within "
+"the grid, to the right of the New Zealand main islands."
+msgstr ""
+"Veel GIS-pakketten verpakken lagen met een geografisch referentiesysteem "
+"(lat/lon) dat de lijn van 180-graden longitude kruist niet "
+"(https://postgis.net/docs/ST_Shift_Longitude.html). Als resultaat, wanneer "
+"we een dergelijke laag in QGIS openen, zouden we twee wijd verspreide "
+"locaties zien, die vlak naast elkaar zouden verschijnen. In "
+":numref:`Figure_vector_crossing`, zou het kleine puntje aan de uiterste "
+"linkerkant van het kaartvenster (Chatham Islands) binnen het raster moeten "
+"liggen, rechts van de hoofdeilanden van Nieuw-Zeeland."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:670
+msgid "Map in lat/lon crossing the 180° longitude line"
+msgstr "Kaarten maken voor lat/lon die de 180° lengtegraad overschrijden"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:673
+msgid "Solving in PostGIS"
+msgstr "Oplossen in PostGIS"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:675
+msgid ""
+"A work-around is to transform the longitude values using PostGIS and the "
+"`ST_ShiftLongitude <https://postgis.net/docs/ST_Shift_Longitude.html>`_ "
+"function. This function reads every point/vertex in every component of every"
+" feature in a geometry, and shifts its longitude coordinate from -180..0° to"
+" 180..360° and vice versa if between these ranges. This function is "
+"symmetrical so the result is a 0..360° representation of a -180..180° data "
+"and a -180..180° representation of a 0..360° data."
+msgstr ""
+"Een tijdelijke oplossing is om de waarden van longitude te transformeren met"
+" PostGIS en de functie `ST_ShiftLongitude "
+"<https://postgis.net/docs/ST_Shift_Longitude.html>`_. Deze functie leest elk"
+" punt in elke component van elk object in een geometrie, en verschuift de "
+"coördinaat van de longitude van -180…0° naar 180…360° en vice versa indien "
+"zij in dit bereik liggen. Deze functie is symmetrisch, dus het resultaat is "
+"een 0…360° weergave van gegevens voor -180…180° data en een weergave van "
+"-180…180° van gegevens voor 0…360°."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:688
+msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
+msgstr ""
+"Het overschrijden van de 180° lengtegraad met het toepassen van de functie "
+"**ST_ShiftLongitude**"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:691
 msgid ""
 "Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using, for "
@@ -1200,6 +1379,12 @@ msgid ""
 msgstr ""
 "Importeer gegevens in PostGIS (:ref:`vector_import_data_in_postgis`), "
 "bijvoorbeeld door gebruik te maken van de plug-in DB Manager."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
+msgid "Use the PostGIS command line interface to issue the following command:"
+msgstr ""
+"Gebruik de interface voor de opdrachtregel van PostGIS om de volgende "
+"opdracht op te geven:"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:700
 msgid ""
