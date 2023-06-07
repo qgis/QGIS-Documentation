@@ -160,6 +160,7 @@ Where :file:`qgis_sample_data` represents the path to the unzipped dataset.
 
    #. To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`,
       and drag and drop the |dbSchema| :guilabel:`lakes.gml` file over QGIS main dialog.
+      (Or just double-click as mentioned above.)
    #. The :guilabel:`Select Items to Add` dialog opens, scanning the file.
       This is due to :file:`.gml` file format being able to store more than one layer at a time.
 
