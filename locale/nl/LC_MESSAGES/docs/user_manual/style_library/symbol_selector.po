@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -723,6 +724,20 @@ msgstr ""
 " het :ref:`standaard markeringssymbool <simple_marker_symbol>`, en, in "
 "aanvulling daarop:"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:287
+msgid ""
+"|checkbox| :guilabel:`Use custom dash pattern`: overrides the "
+":guilabel:`Stroke style` setting with a custom dash. You would need to "
+"define length of consecutive dashes and spaces shaping the model, in the "
+"chosen unit. The total length of the pattern is displayed at the bottom of "
+"the dialog."
+msgstr ""
+"|checkbox| :guilabel:`Gebruik aangepast lijnpatroon`: overschrijft de "
+"instelling :guilabel:`Lijnstijl` door een aangepast streepje. U zou de "
+"lengte van opvolgende streepjes en witruimte moeten definiëren om het model "
+"te vormen, in de gekozen eenheid. De totale lengte van het patroon wordt "
+"weergegeven aan de onderzijde van het dialoogvenster."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:292
 msgid ""
 ":guilabel:`Pattern offset`: the positioning of the dashes/spaces in the line"
@@ -758,6 +773,26 @@ msgstr ""
 "worden weergegeven door een volledig element streepje dat in en uit de "
 "scherpe hoek komt. Afhankelijk van :guilabel:`Streepjespatroon uitlijnen op "
 "lijnlengte`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+msgid ""
+":guilabel:`Trim lines` from :guilabel:`Start` and/or :guilabel:`End`: allows"
+" for the line rendering to trim off the first x mm and last y mm from the "
+"actual line string when drawing the line. It supports a range of :ref:`units"
+" <unit_selector>`, including percentage of the overall line length, and can "
+"be data defined for extra control. The start/end trim distance can be used "
+"e.g. when creating complex symbols where a line layer should not overlap "
+"marker symbol layers placed at the start and end of the line."
+msgstr ""
+":guilabel:`Lijnen afbreken` vanaf :guilabel:`Start` en/of :guilabel:`Einde`:"
+" maakt het mogelijk voor het renderen van de lijn om de eerste x mm en de "
+"laatste y mm te verwijderen van de feitelijke lijn bij het tekenen van die "
+"lijn. Het ondersteunt een bereik aan :ref:`eenheden <unit_selector>`, "
+"inclusief een percentage van de totale lengte van de lijn, en kan worden "
+"data-bepaald voor extra beheer. De afstand voor start/einde kan bijvoorbeeld"
+" worden gebruikt bij het maken van complexe symbolen waar een lijnlaag het "
+"markeringssymbool dat is geplaatst aan het begin of einde van de lijn niet "
+"zou moeten overlappen."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:313
 msgid ""
@@ -910,6 +945,76 @@ msgstr ""
 "**Symbolenlijn**: herhaalt een :ref:`markeringssymbool "
 "<vector_marker_symbols>` over de lengte van een lijn."
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:376
+msgid ""
+"The :guilabel:`Marker placement` can be set using a regular interval setting"
+" (starting from the first vertex) and/or the line geometry property (on "
+"first or last vertex, inner vertices, the central point of the line or of "
+"each segment, or on every curve point)."
+msgstr ""
+"De :guilabel:`Plaatsing markering` kan worden ingesteld met een instelling "
+"voor een regelmatige interval (beginnend bij het eerste punt) en/of de "
+"eigenschap van de geometrie lijn (op eerste of laatste punt, binnenste "
+"punten, het centrale punt van de lijn of van elk segment, of op elk punt van"
+" een boog)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:380
+msgid ""
+"When first or last vertex placement is enabled, the |checkbox| "
+":guilabel:`Place on every part extremity` option will make the markers "
+"render also at the first or last vertex for every part of multipart "
+"geometries."
+msgstr ""
+"Als plaatsing op het eerste of laatste punt is ingeschakeld, zal de optie "
+"|checkbox| :guilabel:`Plaatsen op uiteinde van elk deel` er voor zorgen dat "
+"de markeringen ook renderen op het eerste of laatste punt voor elk deel van "
+"meerdelige geometrieën."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:383
+msgid ""
+":guilabel:`Offset along line`: the markers placement can also be given an "
+"offset along the line, in the ref:`unit <unit_selector>` of your choice "
+"(millimeters, points, map unit, meters at scale, percentage, ...):"
+msgstr ""
+":guilabel:`Verspringen volgens lijn`: de plaatsing van de markeringen kan "
+"ook een verschuiving langs de lijn worden gegeven, in de ref:`eenheid "
+"<unit_selector>` van uw keuze (millimeters, punten, kaarteenheden, meters op"
+" schaal, percentage, …):"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:387
+msgid ""
+"A positive value offsets the markers symbols in the line direction (with "
+":guilabel:`On first vertex` and :guilabel:`With interval` placements) and "
+"backwards (with :guilabel:`On last vertex` placement)."
+msgstr ""
+"Een positieve waarde verschuift de symbolen voor de markering in de richting"
+" van de lijn (met plaatsingen :guilabel:`Op eerste punt` en :guilabel:`Met "
+"interval`) en achterwaarts (met plaatsing :guilabel:`Op laatste punt`)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:390
+msgid ""
+"A negative value on a not closed line will result in no offset (for "
+":guilabel:`On first vertex` and :guilabel:`On last vertex` placements) or "
+"backwards offset of the symbols (from the last vertex)."
+msgstr ""
+"Een negatieve waarde op een niet gesloten lijn zal niet resulteren in een "
+"verschuiving (voor plaatsingen :guilabel:`Op eerste punt` en :guilabel:`Op "
+"laatste punt`) of achterwaartse verschuiving van de symbolen (vanaf het "
+"laatste punt)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:393
+#, python-format
+msgid ""
+"With a closed ring, QGIS treats the offset as continuing to loop around the "
+"ring (forward or backward). E.g. setting the offset to 150% (resp. -10% or "
+"-110%) results in the offset being treated as 50% (resp. 90%) of the length "
+"of the closed ring."
+msgstr ""
+"Met een gesloten ring behandelt QGIS de verschuiving als doorlopend langs de"
+" ring (voorwaarts of achterwaarts). Bijv. instellen van de verschuiving op "
+"150% (resp. -10% of -110%) resulteert erin dat de verschuiving wordt "
+"behandeld als 50% (resp. 90%) van de lengte van de gesloten ring."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:398
 msgid ""
 "The |checkbox| :guilabel:`Rotate marker to follow line direction` option "
@@ -978,6 +1083,38 @@ msgstr ":guilabel:`Rotatie van streepjes`"
 msgid "Examples of hashed lines"
 msgstr "Voorbeeld van gestreepte lijnen"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:436
+msgid ""
+"**Raster line**: renders and repeats a raster image following the length of "
+"a line feature shape. The :guilabel:`Stroke width`, :guilabel:`Offset`, "
+":guilabel:`Join style`, :guilabel:`Cap style` and :guilabel:`Opacity` can be"
+" adjusted."
+msgstr ""
+"**Rasterlijn**: rendert en herhaalt een rasterafbeelding die de vorm van de "
+"lengte van een object lijn volgt. De :guilabel:`Lijndikte`, "
+":guilabel:`Verspringing`, :guilabel:`Verbindingsstijl`, "
+":guilabel:`Eindstijl` en :guilabel:`Opaciteit` kunnen worden aangepast."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:447
+msgid "Examples of raster lines"
+msgstr "Voorbeelden van rasterlijnen"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:451
+msgid ""
+"**Lineburst**: renders a gradient along the width of a line. You can choose "
+"between :guilabel:`Two color` or :guilabel:`Color ramp` and the "
+":guilabel:`Stroke width`, :guilabel:`Offset`, :guilabel:`Join style`, "
+":guilabel:`Cap style` can be adjusted."
+msgstr ""
+"**Lineburst**: rendert een kleurverloop langs de breedte van een lijn. U "
+"kunt kiezen tussen :guilabel:`Twee kleuren` of :guilabel:`Kleurverloop` en "
+"de :guilabel:`Lijndikte`, :guilabel:`Verspringing`, "
+":guilabel:`Verbindingsstijl`, :guilabel:`Eindstijl` kunnen worden aangepast."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:462
+msgid "Examples of lineburst lines"
+msgstr "Voorbeelden van lineburstlijnen"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:468
 msgid "Fill Symbols"
 msgstr "Standaard vulling"
@@ -1045,6 +1182,23 @@ msgstr ""
 "geometrie van het symbool behoort tot (:guilabel:`Markeringen alleen clippen"
 " naar huidige deel van polygoon`)"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:501
+msgid ""
+"**Gradient fill**: uses a radial, linear or conical gradient, based on "
+"either simple two color gradients or a predefined :ref:`gradient color ramp "
+"<color-ramp>` to fill polygons. The gradient can be rotated and applied on a"
+" single feature basis or across the whole map extent. Also start and end "
+"points can be set via coordinates or using the centroid (of feature or map)."
+" A data-defined offset can be defined."
+msgstr ""
+"**Geleidelijke vulling**: gebruikt een radiaal, lineair of conisch "
+"kleurverloop, gebaseerd op ofwel eenvoudige tweekleurige kleurverlopen of "
+"een vooraf gedefinieerd :ref:`kleurverloop <color-ramp>` om polygonen te "
+"vullen. Het kleurverloop kan worden gedraaid en toegepast op basis van één "
+"enkel object of over het gehele kaartbereik. Ook kunnen begin- en eindpunten"
+" worden ingesteld via coördinaten of met het zwaartepunt (van object of "
+"kaart). Een data-bepaalde verschuiving lan worden gedefinieerd."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:507
 msgid ""
 "**Line pattern fill**: fills the polygon with a hatching pattern of "
@@ -1052,6 +1206,31 @@ msgid ""
 msgstr ""
 "**Lijnpatroonvulling**: vult de polygoon met een gearceerd patroon van "
 ":ref:`lijnsymboollagen <vector_line_symbols>`. U kunt instellen:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:510
+#: ../../docs/user_manual/style_library/symbol_selector.rst:536
+msgid ""
+":guilabel:`Alignment`: defines how the pattern is positioned relative to the"
+" feature(s):"
+msgstr ""
+":guilabel:`Uitlijning`: definieert hoe het patroon is gepositioneerd, "
+"relatief ten opzichte van de/het object(en):"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:513
+msgid ""
+":guilabel:`Align pattern to feature`: lines are rendered within each feature"
+msgstr ""
+":guilabel:`Patroon uitlijnen op objecten`: lijnen worden gerenderd in elk "
+"object"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:515
+msgid ""
+":guilabel:`Align pattern to map extent`: a pattern is rendered over the "
+"whole map extent, allowing lines to align nicely across features"
+msgstr ""
+":guilabel:`Patroon uitlijnen op kaartbereik`: een patroon wordt gerenderd "
+"over het gehele kaartbereik, wat het mogelijk maakt lijnen netjes uit te "
+"lijnen in objecten"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:517
 msgid ":guilabel:`Rotation` of the lines, counter-clockwise"
@@ -1067,6 +1246,45 @@ msgstr ""
 ":guilabel:`Verspringing`: afstand van de lijnen vanaf de grens van het "
 "object"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:520
+msgid ""
+":guilabel:`Clipping`: allows to control how lines in the fill should be "
+"clipped to the polygon shape. Options are:"
+msgstr ""
+":guilabel:`Clippen`: maakt het mogelijk te beheren hoe lijnen in de vulling "
+"zouden moeten worden geclipt naar de vorm van de polygoon. Opties zijn:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:523
+msgid ""
+":guilabel:`Clip During Render Only`: lines are created covering the whole "
+"bounding box of the feature and then clipped while drawing. Line extremities"
+" (beginning and end) will not be visible."
+msgstr ""
+":guilabel:`Alleen clippen tijden renderen`: lijnen worden gemaakt die het "
+"gehele begrenzingsvak van het object bedekken en dan geclipt bij het "
+"tekenen. Uiteinden van de lijn (begin en einde) zullen niet zichtbaar zijn."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:526
+msgid ""
+":guilabel:`Clip Lines Before Render`: lines are clipped to the exact shape "
+"of the polygon prior to rendering. Line extremities (including cap styles, "
+"start/end marker line objects, ...) will be visible, and may sometimes "
+"extend outside of the polygon (depending on the line symbol settings)."
+msgstr ""
+":guilabel:`Lijnen clippen vóór renderen`: lijnen worden geclipt naar de "
+"exacte vorm van de polygoon voorafgaande aan het renderen. Uiteinden van de "
+"lijn (inclusief eindstijlen, objecten voor start/einde van markeringslijnen,"
+" …) zullen zichtbaar zijn, en zouden soms tot buiten de polygoon kunnen "
+"reiken (afhankelijk van de instellingen voor de symbolen van de lijn)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:530
+msgid ""
+":guilabel:`No Clipping`: no clipping at all is done - lines will cover the "
+"whole bounding box of the feature"
+msgstr ""
+":guilabel:`Niet clippen`: er wordt helemaal niet geclipt - lijnen zullen het"
+" gehele begrenzingsvak van het object bedekken"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:533
 msgid ""
 "**Point pattern fill**: fills the polygon with a grid pattern of "
@@ -1074,6 +1292,28 @@ msgid ""
 msgstr ""
 "**Puntpatroonvulling**: vult de polygoon met een rasterpatroon van "
 ":ref:`markeringssymbolen <vector_marker_symbols>`. U kunt instellen:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:539
+msgid ""
+":guilabel:`Align pattern to feature`: marker lines are rendered within each "
+"feature"
+msgstr ""
+":guilabel:`Patroon uitlijnen op objecten`: markeringslijnen worden gerenderd"
+" in elk object"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:541
+msgid ""
+":guilabel:`Align pattern to map extent`: a pattern is rendered over the "
+"whole map extent, allowing markers to align nicely across features"
+msgstr ""
+":guilabel:`Patroon uitlijnen op kaartbereik`: een patroon wordt gerenderd "
+"over het gehele kaartbereik, wat het mogelijk maakt markeringen netjes uit "
+"te lijnen in objecten"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:549
+msgid "Aligning point pattern to feature (left) and to map extent (right)"
+msgstr ""
+"Uitlijnen van puntpatroon op object (links) en op kaartbereik (rechts)"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:551
 msgid ""
@@ -1100,6 +1340,112 @@ msgid ""
 msgstr ""
 ":guilabel:`Verspringing`: afstanden :guilabel:`Horizontaal` en "
 ":guilabel:`Verticaal` vanaf de grens van het object"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:557
+msgid ""
+":guilabel:`Clipping`: allows to control how markers in the fill should be "
+"clipped to the polygon shape. Options are:"
+msgstr ""
+":guilabel:`Clippen`: maakt het mogelijk te beheren hoe markeringen in de "
+"vulling zouden moeten worden geclipt naar de vorm van de polygoon. Opties "
+"zijn:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:560
+msgid ""
+":guilabel:`Clip to shape`: markers are clipped so that only the portions "
+"inside the polygon are visible"
+msgstr ""
+":guilabel:`Naar vorm clippen`: markeringen worden geclipt zodat alleen de "
+"gedeelten binnen de polygoon zichtbaar zijn"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:562
+msgid ""
+":guilabel:`Marker centroid within shape`: only markers where the center of "
+"the marker falls inside the polygon are drawn, but these markers won't be "
+"clipped to the outside of the polygon"
+msgstr ""
+":guilabel:`Middelpunt in vorm markeren`: alleen markeringen waar het "
+"middelpunt van de markering binnen de polygoon valt worden getekend, maar "
+"deze markeringen worden niet buiten de polygoon geclipt"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:565
+msgid ""
+":guilabel:`Marker completely within shape`: only markers which fall "
+"completely within the polygon are shown"
+msgstr ""
+":guilabel:`Binnen vorm volledig markeren`: alleen markeringen die volledig "
+"binnen de polygoon liggen worden weergegeven"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:567
+msgid ""
+":guilabel:`No clipping`: any marker which intersects at all with the polygon"
+" will be completely rendered (strictly speaking its the \"intersects with "
+"the bounding box of the marker\")"
+msgstr ""
+":guilabel:`Niet clippen`: elke markering die enigszins kruist met de "
+"polygoon zal volledig worden gerenderd (strikt gesproken is het \"kruist met"
+" het begrenzingsvak van de markering\")"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:576
+msgid ""
+"Clipping markers in fill - From left to right: Clip to shape, Marker "
+"centroid within shape, Marker completely within shape, No clipping"
+msgstr ""
+"Markeringen in vulling clippen - Van links naar rechts: Naar vorm clippen, "
+"Middelpunt in vorm markeren, Binnen vorm volledig markeren, Niet clippen"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:579
+msgid ":guilabel:`Rotation` of the whole pattern, clockwise"
+msgstr ""
+":guilabel:`Rotatie` van het gehele patroon, met de wijzers van de klok mee"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:580
+msgid ""
+"The :guilabel:`Randomize pattern` group setting allows each point in a point"
+" pattern fill to be randomly shifted up to the specified maximum distance "
+":guilabel:`Horizontally` or :guilabel:`Vertically`. You can specify the "
+"maximum offset in any supported units, such as millimeters, points, map "
+"units, or even \"percentage\" (where percentage is relative to the pattern "
+"width or height)."
+msgstr ""
+"De instelling van de groep :guilabel:`Willekeurig patroon` maakt het "
+"mogelijk elk punt in de vulling van een puntpatroon willekeurig wordt "
+"verschoven tot de gespecificeerde maximale afstand :guilabel:`Horizontaal` "
+"of :guilabel:`Verticaal`. U kunt de maximale verschuiving specificeren in "
+"elke ondersteunde eenheid, zoals millimeters, punten, kaarteenheden, of "
+"zelfs een \"percentage\" (waar percentage relatief is ten opzichte van de "
+"breedte of hoogte van het patroon)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:587
+msgid ""
+"You can set an optional random number seed to avoid the symbol patterns "
+"\"jumping\" around between map refreshes. Data defined overrides are also "
+"supported."
+msgstr ""
+"U kunt een optioneel willekeurig aantal zaad instellen om te vermijden dat "
+"de patronen van de symbolen \"rondspringen\" bij het vernieuwen van de "
+"kaart. Data-bepaalde instellingen worden ook ondersteund."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:590
+msgid ""
+"The main difference between the :guilabel:`Randomize pattern` and the "
+":ref:`random marker fill <random_marker_fill>` symbol type is that the "
+"random offset with a point pattern allows for quasi-\"regular\" placement of"
+" markers – because the points in the pattern are effectively constrained to "
+"a grid, this allows creation of semi-random fills which don’t have empty "
+"areas or overlapping markers. (As opposed to the random marker fill, which "
+"will always place points completely randomly… sometimes resulting in visual "
+"clusters of points or unwanted empty areas)."
+msgstr ""
+"Het belangrijkste verschil tussen :guilabel:`Willekeurig patroon` en het "
+"symbooltype :ref:`willekeurige vulling markeringen <random_marker_fill>` is "
+"dat de willekeurige verschuiving met een puntpatroon de quasi-\"normale\" "
+"plaatsing van markeringen mogelijk maakt – omdat de punten in het patroon "
+"effectief worden beperkt tot een raster, dit maakt het mogelijk semi-"
+"willekeurige vullingen te maken die geen lege gebieden hebben of "
+"overlappende markeringen. (Tegengesteld aan de willekeurige vulling voor "
+"markeringen die altijd punten volledig willekeurig plaatst… wat soms "
+"resulteert in visuele clusters van punten of ongewenste lege gebieden)."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:601
 msgid ""
@@ -1171,6 +1517,28 @@ msgstr ""
 "Coördinaat (object of kaartvenster), rotatie en verspringing. De breedte van"
 " de afbeelding kan worden ingesteld met elk van de :ref:`algemene eenheden "
 "<unit_selector>` of een percentage van de originele grootte."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:622
+msgid ""
+"**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>` of a "
+"given size (:guilabel:`Texture width`)."
+msgstr ""
+"**SVG-vulling**: vult de polygoon met :ref:`SVG-markeringen <svg_marker>` "
+"van een bepaalde grootte (:guilabel:`Textuur breedte`)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:624
+msgid ""
+"**Shapeburst fill**: buffers a gradient fill, where a gradient is drawn from"
+" the boundary of a polygon towards the polygon's centre. Configurable "
+"parameters include distance from the boundary to shade, use of color ramps "
+"or simple two color gradients, optional blurring of the fill and offsets."
+msgstr ""
+"**Shapeburst-vulling**: buffert een vulling van een kleurverloop, waar een "
+"kleurverloop wordt getekend vanaf de grens van een polygoon naar het midden "
+"van de polygoon. Parameters die kunnen worden geconfigureerd omvatten "
+"afstand vanaf de grens die moet worden geschaduwd, gebruiken van "
+"kleurverlopen of eenvoudige tweekleurige verlopen, optioneel vervagen van de"
+" vulling en verschuivingen."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:629
 msgid ""
