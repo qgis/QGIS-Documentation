@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,6 +66,14 @@ msgstr ""
 "meer… Lees de complete lijst met `ondersteunde rasterindelingen "
 "<https://gdal.org/drivers/raster/index.html>`_."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:32
+msgid ""
+"Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, MS "
+"SQL Server, SAP HANA, MySQL..."
+msgstr ""
+"Indelingen voor databases omvatten PostgreSQL/PostGIS, SQLite/SpatiaLite, "
+"Oracle, MS SQL Server, SAP HANA, MySQL…"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:34
 msgid ""
 "Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS "
@@ -110,6 +119,33 @@ msgstr ""
 "opdrachtregel ``ogrinfo --formats`` (voor vectors) en ``gdalinfo --formats``"
 " (voor rasters) uit, of selecteer het menu :menuselection:`Extra --> Opties "
 "--> GDAL` in QGIS."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:57
+msgid ""
+"In QGIS, depending on the data format, there are different tools to open a "
+"dataset, mainly available in the :menuselection:`Layer --> Add Layer -->` "
+"menu or from the :guilabel:`Manage Layers` toolbar (enabled through "
+":menuselection:`View --> Toolbars` menu). However, all these tools point to "
+"a unique dialog, the :guilabel:`Data Source Manager` dialog, that you can "
+"open with the |dataSourceManager| :sup:`Open Data Source Manager` button, "
+"available on the :guilabel:`Data Source Manager Toolbar`, or by pressing "
+":kbd:`Ctrl+L`. The :guilabel:`Data Source Manager` dialog "
+"(:numref:`figure_datasource_manager`) offers a unified interface to open "
+"file-based data as well as databases or web services supported by QGIS."
+msgstr ""
+"In QGIS, afhankelijk van de gegevensindeling, staan verschillende "
+"gereedschappen om een gegevensset te openen, voornamelijk beschikbaar in het"
+" menu :menuselection:`Kaartlagen --> Laag toevoegen -->` of vanaf de "
+"werkbalk :guilabel:`Kaartlagen beheren` (ingeschakeld via het menu "
+":menuselection:`Beeld --> Werkbalken`). Al deze gereedschappen verwijzen "
+"naar een uniek dialoogvenster, het dialoogvenster :guilabel:`Databronnen "
+"beheren`, dat u kunt openen met de knop |dataSourceManager| "
+":sup:`Databronnen beheren openen`, beschikbaar op de werkbalk "
+":guilabel:`Databronnen beheren`, of door te drukken op :kbd:`Ctrl+L`. Het "
+"dialoogvenster :guilabel:`Databronnen beheren` "
+":numref:`figure_datasource_manager` biedt een geünificeerde interface om "
+"gegevens, gebaseerd op bestanden, te openen, als ook databases of "
+"webservices die worden ondersteund door QGIS."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1539
 msgid "dataSourceManager"
@@ -369,6 +405,10 @@ msgstr "|postgis| :guilabel:`PostGIS`"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1565
 msgid "postgis"
 msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:152
+msgid "|mssql| :guilabel:`MS SQL Server`"
+msgstr "|mssql| :guilabel:`MS SQL Server`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1555
 msgid "mssql"
@@ -783,6 +823,20 @@ msgstr ""
 msgid "The DB Manager"
 msgstr "De DB Manager"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:292
+msgid ""
+"The :guilabel:`DB Manager` Plugin is another tool for integrating and "
+"managing spatial database formats supported by QGIS (PostGIS, SpatiaLite, "
+"GeoPackage, Oracle Spatial, MS SQL Server, Virtual layers). It can be "
+"activated from the :menuselection:`Plugins --> Manage and Install "
+"Plugins...` menu."
+msgstr ""
+"De plug-in :guilabel:`DB Manager` is een ander gereedschap voor het "
+"integreren en beheren van indelingen voor ruimtelijke databases, ondersteunt"
+" door QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MS SQL Server, "
+"virtuele lagen). Het kan worden geactiveerd vanuit het menu "
+":menuselection:`Plug-ins --> Plug-ins beheren en installeren…`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:298
 msgid "The |dbManager| :sup:`DB Manager` Plugin provides several features:"
 msgstr ""
@@ -1021,6 +1075,18 @@ msgstr ""
 "|radioButtonOn| :guilabel:`Map` als :guilabel:`Type bron`. In dit geval kan "
 "een map worden geselecteerd in het dialoogvenster, na het drukken op "
 ":guilabel:`…` :sup:`Bladeren`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:421
+msgid ""
+"With the |radioButtonOn| :guilabel:`Database` source type you can select an "
+"existing database connection or create one to the selected database type. "
+"Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``, "
+"``MS SQL Server`` as well as ``PostgreSQL`` or ``MySQL`` ."
+msgstr ""
+"Met het Type bron |radioButtonOn| :guilabel:`Database` kunt u een bestaande "
+"databaseverbinding selecteren of er een maken voor het geselecteerde type "
+"database. Enkele mogelijke typen databases zijn ``ODBC``, ``Esri Personal "
+"Geodatabase``, ``MS SQL Server``, als ook ``PostgreSQL`` of ``MySQL``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:426
 msgid ""
@@ -1341,6 +1407,86 @@ msgstr ""
 msgid "|checkbox|:guilabel:`Discard empty fields`."
 msgstr "|checkbox|:guilabel:`Sla lege velden over`."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:548
+msgid ""
+":guilabel:`Custom boolean literals`: allows you to add a custom couple of "
+"string that will be detected as boolean values."
+msgstr ""
+":guilabel:`Aangepaste Booleaanse letterlijken`: stelt u in staat een "
+"aangepast stel tekenreeksen toe te voegen die zullen worden gedetecteerd als"
+" Booleaanse waarden."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:553
+msgid "Field type detection"
+msgstr "Veldtype detecteren "
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:555
+msgid ""
+"QGIS tries to detect the field types automatically (unless "
+"|checkbox|:guilabel:`Detect field types` is not checked) by examining the "
+"content of an optional sidecar CSVT file (see: `GeoCSV specification "
+"<https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_) and by "
+"scanning the whole file to make sure that all values can actually be "
+"converted without errors, the fall-back field type is text."
+msgstr ""
+"QGIS probeert automatisch veldtypen te detecteren (tenzij |checkbox| "
+":guilabel:`Veldtypen detecteren` niet is geselecteerd) door de inhoud van "
+"een optionele bijgevoegd CSVT-bestand te onderzoeken (bekijk: `GeoCSV "
+"specification "
+"<https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_) en door "
+"het gehele bestand te scannen om er voor te zorgen dat alle waarden "
+"feitelijk kunnen worden geconverteerd zonder fouten, het veldtype waarop "
+"wordt teruggevallen is text."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:562
+msgid ""
+"The detected field type appears under the field name in sample data preview "
+"table and can be manually changed if necessary."
+msgstr ""
+"Het gedetecteerde veldtype verschijnt onder de veldnaam in de voorbeeldtabel"
+" met gegevens en kan handmatig worden gewijzigd indien nodig."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:565
+msgid "The following field types are supported:"
+msgstr "En de volgende veldtypen worden ondersteund:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:567
+msgid ""
+"``Boolean`` case-insensitive literal couples that are interpreted as boolean"
+" values are ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``"
+msgstr ""
+"``Boolean`` hoofdletterongevoelige koppels van letterlijken die worden "
+"geïnterpreteerd als Booleaanse waarden zijn ``1``/``0``, ``true``/``false``,"
+" ``t``/``f``, ``yes``/``no``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:568
+msgid "``Whole Number (integer)``"
+msgstr "``Geheel getal (integer)``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:569
+msgid "``Whole Number (integer - 64 bit)``"
+msgstr "``Geheel getal (integer - 64 bit)``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:570
+msgid "``Decimal Number``: double precision floating point number"
+msgstr "``Decimaal getal``: double-precisie zwevende punt-getal"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:571
+msgid "``Date``"
+msgstr "``Datum``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:572
+msgid "``Time``"
+msgstr "``Tijd``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:573
+msgid "``Date and Time``"
+msgstr "``Datum en tijd``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:574
+msgid "``Text``"
+msgstr "``Tekst``"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:578
 msgid "Geometry definition"
 msgstr "Geometrie definitie"
@@ -1449,6 +1595,26 @@ msgstr ""
 "Deze laag is het resultaat van een query op het bronbestand :file:`.csv` "
 "(deswege, eraan gekoppeld) en zou moeten :ref:`worden opgeslagen "
 "<general_saveas>` om een ruimtelijke laag op schijf te krijgen."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:620
+msgid "Sample Data"
+msgstr "Voorbeeldgegevens"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:622
+msgid ""
+"As you set the parser properties, the sample data preview updates regarding "
+"to the applied settings."
+msgstr ""
+"Als u de eigenschappen voor het parsen instelt, wordt de voorbeeldweergave "
+"bijgewerkt, met inachtneming van de toegepaste instellingen."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:625
+msgid ""
+"Also in the Sample Data Table it is possible to override the automatically "
+"determined column types."
+msgstr ""
+"In de tabel met Voorbeeldgegevens is het mogelijk om de automatisch bepaalde"
+" veldtypen te wijzigen."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:632
 msgid "Importing a DXF or DWG file"
@@ -1710,6 +1876,22 @@ msgstr ""
 "willekeurig aantal waypoints, routes en tracks in hetzelfde bestand kan "
 "bevatten."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:747
+msgid ""
+"Use the :guilabel:`...` :sup:`Browse` button to select the GPX file, then "
+"use the check boxes to select the feature types you want to load from that "
+"GPX file. Each feature type will be loaded in a separate layer."
+msgstr ""
+"Gebruik de knop :guilabel:`…` :sup:`Bladeren` om het GPX-bestand te "
+"selecteren, gebruik dan de keuzevakken om de typen objecten te selecteren "
+"die u wilt laden vanuit dat GPX-bestand. Elk type object zal in een "
+"afzonderlijke laag worden geladen."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:751
+msgid "More on GPS data manipulation at :ref:`working_gps`."
+msgstr ""
+"Meer over het manipuleren van gegevens voor GPS in :ref:`working_gps`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:758
 msgid "Loading GPS Data dialog"
 msgstr "Dialoogvenster GPS-gegevens laden"
@@ -1759,6 +1941,10 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1521
 msgid "addPostgisLayer"
 msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:786
+msgid "|addMssqlLayer| :menuselection:`Add MS SQL Server Layer`"
+msgstr "|addMssqlLayer| :menuselection:`MS SQL Server-laag toevoegen`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1515
 msgid "addMssqlLayer"
@@ -2101,6 +2287,14 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`Opslaan/laden van projecten van QGIS in de database "
 "toestaan` - meer details :ref:`hier <saveprojecttodb>`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:899
+msgid ""
+"|checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the "
+"database` - more details :ref:`here <savemetadatatodb>`"
+msgstr ""
+"|checkbox| :guilabel:`Opslaan/laden van metadata van lagen van QGIS in de "
+"database toestaan` - meer details :ref:`hier <savemetadatatodb>`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:902
 msgid "**Use estimated table metadata to speed up operations**"
@@ -2445,6 +2639,22 @@ msgid ""
 msgstr ""
 "Het wordt aanbevolen dat uw tabellen een **primaire sleutel** hebben, om er "
 "voor te zorgen dat de gereedschappen voor selecteren correct werken."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1067
+msgid "Connecting to MS SQL Server"
+msgstr "Verbinden met MS SQL Server"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1069
+msgid ""
+"In addition to some of the options in "
+":ref:`vector_create_stored_connection`, creating a new MS SQL Server "
+"connection dialog proposes you to fill a **Provider/DSN** name. You can also"
+" display available databases."
+msgstr ""
+"In aanvulling op enkele opties in :ref:`vector_create_stored_connection`, "
+"stelt het dialoogvenster voor het maken van een nieuwe verbinding voor MS "
+"SQL Server u voor om een **Provider/DSN**-naam in te vullen. U kunt ook "
+"aanwezige databases weergeven."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1076
 msgid "Connecting to SAP HANA"
@@ -2810,6 +3020,49 @@ msgstr ""
 "de tabellen van de database met slepen-en-neerzetten naar het kaartvenster "
 "te brengen."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1223
+msgid "The Layer Metadata Search Panel"
+msgstr "Het paneel Metadata voor laag zoeken"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1225
+msgid ""
+"The layer metadata search panel allows to browse layers metadata from "
+"registered metadata providers and add them to the project."
+msgstr ""
+"Het paneel Metadata voor laag zoeken stelt u in staat door de metadata van "
+"lagen te bladeren van geregistreerde providers van metadata en dat toe te "
+"voegen aan het project."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1228
+msgid ""
+"The list can be filtered by text, by current project and by map canvas "
+"extent."
+msgstr ""
+"De lijst kan worden gefilterd op tekst, op huidig project en op bereik "
+"kaartvenster."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1230
+msgid ""
+"The sources of metadata are implemented through a layer metadata provider "
+"system that can be extended by plugins."
+msgstr ""
+"De bronnen voor de metadata zijn geïmplementeerd door een systeem voor "
+"providers van metadata voor lagen dat kan worden uitgebreid met plug-ins."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1233
+msgid ""
+"QGIS provides out of the box the layer metadata providers that retrieve the "
+"metadata from the connections that allow for metadata storage (for more "
+"details :ref:`save metadata to the database <savemetadatatodb>`)."
+msgstr ""
+"QGIS verschaft van nature de providers voor metadata van lagen die metadata "
+"ophalen van de verbindingen die het opslaan van metadata toestaan (voor meer"
+" details :ref:`metadata opslaan naar de database <savemetadatatodb>`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1240
+msgid "Layer Metadata Search Panel"
+msgstr "Metadata voor laag zoeken"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1243
 msgid "QGIS Custom formats"
 msgstr "QGIS aangepaste indelingen"
@@ -3098,6 +3351,54 @@ msgstr ""
 "(niet op schaal gebracht)`, :guilabel:`Standaard (256x256 / 96DPI)` en "
 ":guilabel:`Hoog (512x512 / 192DPI)`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1366
+msgid ""
+":guilabel:`Interpretation`: converts WMTS/XYZ raster datasets to a raster "
+"layer of single band float type following a predefined encoding scheme. "
+"Supported schemes are :guilabel:`Default` (no conversion is done), "
+":guilabel:`MapTiler Terrain RGB` and :guilabel:`Terrarium Terrain RGB`. The "
+"selected converter will translate the RGB source values to float values for "
+"each pixel. Once loaded, the layer will be presented as a single band "
+"floating point raster layer, ready for styling using QGIS usual :ref:`raster"
+" renderers <raster_rendering>`."
+msgstr ""
+":guilabel:`Interpretatie`: converteert WMTS/XYZ raster gegevenssets naar een"
+" rasterlaag van het type enkele band float volgens een vooraf gedefinieerd "
+"schema voor de codering. Ondersteunde schema's zijn :guilabel:`Standaard` "
+"(er wordt geen conversie uitgevoerd), :guilabel:`MapTiler Terrein RGB` en "
+":guilabel:`Terrarium Terrein RGB`. De geselecteerde converter zal de RGB "
+"bronwaarden vertalen naar waarden float voor elke pixel. Eenmaal geladen zal"
+" de laag worden weergegeven als een enkelband, zwevende punt getal "
+"rasterlaag, klaar voor het opmaken met de gewone :ref:`raster renderers ` "
+"voor QGIS. "
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1375
+msgid ""
+"By default, QGIS provides some default and ready-to-use XYZ Tiles services:"
+msgstr ""
+"Standaard verschaft QGIS enkele standaard en klaar om te gebruiken XYZ "
+"Tiles-services:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1377
+msgid ""
+"|xyz| :guilabel:`Mapzen Global Terrain`, allowing an immediate access to "
+"global DEM source for the projects. More details and resources at "
+"https://registry.opendata.aws/terrain-tiles/"
+msgstr ""
+"|xyz| :guilabel:`Mapzen Global Terrain`, wat onmiddellijke toegang toestaat "
+"voor globale DEM-bron voor de projecten. Meer details en bronnen op "
+"https://registry.opendata.aws/terrain-tiles/"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1380
+msgid ""
+"|xyz| :guilabel:`OpenStreetMap` to access the world 2D map. "
+":numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the "
+"OpenStreetMap XYZ Tile service configuration."
+msgstr ""
+"|xyz| :guilabel:`OpenStreetMap` voor toegang tot de 2D-kaart van de wereld. "
+":numref:`figure_xyz_tiles_openstreetmap` geeft het dialoogvenster weer met "
+"de configuratie van de OpenStreetMap XYZ Tile-service."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1388
 msgid "XYZ Tiles - OpenStreetMap configuration"
 msgstr "XYZ Tiles - OpenStreetMap configuratie"
@@ -3287,6 +3588,10 @@ msgstr ":guilabel:`Bijwerken`"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1482
 msgid ":guilabel:`Edit connection...`"
 msgstr ":guilabel:`Verbinding bewerken…`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1483
+msgid ":guilabel:`Remove connection...`"
+msgstr ":guilabel:`Verbinding verwijderen…`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1484
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1489
