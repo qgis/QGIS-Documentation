@@ -8,6 +8,8 @@ protocols.
 It is described by the `OGC API - Features - Part 1: Core
 <http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ document.
 
+The API can be reached on typical installations via `http://localhost/qgisserver/wfs3`
+
 Here is a quick informal summary of the most important differences
 between the well known WFS protocol and OAPIF:
 
@@ -99,6 +101,7 @@ Endpoints points provided by the QGIS implementation are:
    "Feature", "``/collections/{collectionId}/items/{featureId}``", "Information
    about a single feature"
 
+Similar to WFS-T (transactional Web Feature Service), it is possible to add, update and delete features (CRUD). The respective requests are described on "``/api``".
 
 Landing Page
 ^^^^^^^^^^^^^^^^^^^^
@@ -238,7 +241,7 @@ URL example:
 
 .. code-block:: bash
 
-    http://localhost/qgisserver/oapif/collection_one/items.json?offset=10&limit=10
+    http://localhost/qgisserver/wfs3/collection_one/items.json?offset=10&limit=10
 
 .. note::
 
@@ -274,21 +277,21 @@ Returns only the features with date dimension matching ``2019-01-01``
 
 .. code-block:: bash
 
-    http://localhost/qgisserver/oapif/collection_one/items.json?datetime=2019-01-01
+    http://localhost/qgisserver/wfs3/collection_one/items.json?datetime=2019-01-01
 
 Returns only the features with datetime dimension matching
 ``2019-01-01T01:01:01``
 
 .. code-block:: bash
 
-    http://localhost/qgisserver/oapif/collection_one/items.json?datetime=2019-01-01T01:01:01
+    http://localhost/qgisserver/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01
 
 Returns only the features with datetime dimension in the range
 ``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``
 
 .. code-block:: bash
 
-    http://localhost/qgisserver/oapif/collection_one/items.json?datetime=2019-01-01T01:01:01/2019-01-01T12:00:00
+    http://localhost/qgisserver/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01/2019-01-01T12:00:00
 
 
 Bounding box filter
@@ -313,7 +316,7 @@ URL example:
 
 .. code-block:: bash
 
-    http://localhost/qgisserver/oapif/collection_one/items.json?bbox=-180,-90,180,90
+    http://localhost/qgisserver/wfs3/collection_one/items.json?bbox=-180,-90,180,90
 
 If the *CRS* of the bounding box is not
 `WGS 84 <https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, a different CRS can
@@ -325,7 +328,7 @@ URL example:
 
 .. code-block:: bash
 
-    http://localhost/qgisserver/oapif/collection_one/items.json?bbox=913191,5606014,913234,5606029&bbox-crs=http://www.opengis.net/def/crs/EPSG/9.6.2/3857
+    http://localhost/qgisserver/wfs3/collection_one/items.json?bbox=913191,5606014,913234,5606029&bbox-crs=http://www.opengis.net/def/crs/EPSG/9.6.2/3857
 
 
 Attribute filters
@@ -341,7 +344,7 @@ filters all features where attribute ``name`` equals "my value"
 
 .. code-block:: bash
 
-    http://localhost/qgisserver/oapif/collection_one/items.json?attribute_one=my%20value
+    http://localhost/qgisserver/wfs3/collection_one/items.json?attribute_one=my%20value
 
 
 Partial matches are also supported by using a ``*`` ("star") operator:
@@ -352,7 +355,7 @@ filters all features where attribute ``name`` ends with "value"
 
 .. code-block:: bash
 
-    http://localhost/qgisserver/oapif/collection_one/items.json?attribute_one=*value
+    http://localhost/qgisserver/wfs3/collection_one/items.json?attribute_one=*value
 
 Feature sorting
 ---------------
@@ -365,7 +368,7 @@ To sort the results in descending order, a boolean flag (``sortdesc``) can be se
 
 .. code-block:: bash
 
-  http://localhost/qgisserver/oapif/collection_one/items.json?sortby=name&sortdesc=1
+  http://localhost/qgisserver/wfs3/collection_one/items.json?sortby=name&sortdesc=1
 
 
 Attribute selection
@@ -381,7 +384,7 @@ returns only the ``name`` attribute
 
 .. code-block:: bash
 
-    http://localhost/qgisserver/oapif/collection_one/items.json?properties=name
+    http://localhost/qgisserver/wfs3/collection_one/items.json?properties=name
 
 
 Customize the HTML pages
@@ -407,8 +410,8 @@ Custom template functions
 - ``json_dump( )``: prints the JSON data passed to the template
 - ``static( path )``: returns the full URL to the specified static path.
   For example: "static( "/style/black.css" )" with a root path
-  "http://localhost/qgisserver/oapif" will return
-  "http://localhost/qgisserver/oapif/static/style/black.css".
+  "http://localhost/qgisserver/wfs3" will return
+  "http://localhost/qgisserver/wfs3/static/style/black.css".
 - ``links_filter( links, key, value )``: Returns filtered links from a
   link list
 - ``content_type_name( content_type )``: Returns a short name from a
