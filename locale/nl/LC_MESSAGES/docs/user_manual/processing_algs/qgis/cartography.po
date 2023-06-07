@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# DiGro, 2023
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1414,13 +1414,39 @@ msgstr "Afbeeldingsbestanden gemaakt door de lay-out van atlas"
 msgid "**Algorithm ID**: ``native:atlaslayouttoimage``"
 msgstr "**ID algoritme**: ``native:atlaslayouttoimage``"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:562
+msgid "Export atlas layout as PDF (multiple files)"
+msgstr "Lay-out van atlas als PDF exporteren (meerdere bestanden)"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:563
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1179
+msgid "|324|"
+msgstr "|324|"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:565
+msgid "Exports the atlas of a print layout to multiple PDF files."
+msgstr ""
+"Exporteert de atlas van een afdruklay-out naar meerdere PDF-bestanden."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:612
+msgid "**Output filename**"
+msgstr "**Uitvoer bestandsnaam**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:615
 msgid "``OUTPUT_FILENAME``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:617
+msgid "Name pattern of the PDF output files."
+msgstr "Patroon voor de naam van de PDF uitvoerbestanden."
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:619
 msgid "``OUTPUT_FOLDER``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:621
+msgid "Destination folder for the output PDF files."
+msgstr "Doelmap voor de PDF uitvoerbestanden."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:648
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:824
@@ -1440,11 +1466,36 @@ msgstr ""
 msgid "Determines if vectorial data should be left as vectors"
 msgstr "Bepaalt of vectorgegevens als vectoren zouden moeten worden gelaten"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:654
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:830
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1084
+msgid "**Always export as raster**"
+msgstr "**Altijd als raster exporteren**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:656
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:699
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:832
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:875
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1086
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1129
+msgid "|328|"
+msgstr "|328|"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:657
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:833
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1087
 msgid "``FORCE_RASTER``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:661
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:837
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1091
+msgid ""
+"Forces all the items in the map to be rasterized. This parameter takes "
+"precedence over the ``FORCE_VECTOR`` parameter."
+msgstr ""
+"Forceert dat alle items in de kaart worden gerasteriseerd. Deze parameter "
+"heeft voorrang boven de parameter ``FORCE_VECTOR``."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:663
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:839
@@ -1535,11 +1586,41 @@ msgstr "0 - Tekst altijd als paden exporteren (Aanbevolen)"
 msgid "1 - Always export texts as text objects"
 msgstr "1 - Tekst altijd als tekstobjecten exporteren"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:697
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:873
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1127
+msgid "**Image compression**"
+msgstr "**Compressie afbeelding**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:700
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:876
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1130
 msgid "``IMAGE_COMPRESSION``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:704
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:880
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1134
+msgid ""
+"Determines compression level of the image and how suitable the file could be"
+" for printing outputs or post-production in external applications. Possible "
+"options are:"
+msgstr ""
+"Bepaalt het niveau van compressie voor de afbeelding en hoe geschikt het "
+"bestand zou kunnen zijn voor afgedrukte uitvoeren of post-productie in "
+"externe toepassingen. Mogelijke opties zijn:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:708
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:884
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1138
+msgid "0 - Lossy (JPEG)"
+msgstr "0 - Met verlies (JPEG)"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:709
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:885
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1139
+msgid "1 - Lossless"
+msgstr "1 - Zonder verlies"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:722
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:788
@@ -1553,6 +1634,18 @@ msgstr "**PDF-bestand**"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:901
 msgid "PDF file corresponding to the exported atlas layout"
 msgstr "PDF-bestand dat overeenkomt met de geëxporteerde atlas van de lay-out"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:730
+msgid "**Algorithm ID**: ``native:atlaslayouttomultiplepdf``"
+msgstr "**ID algoritme**: ``native:atlaslayouttomultiplepdf``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:740
+msgid "Export atlas layout as PDF (single file)"
+msgstr "Lay-out van atlas als PDF exporteren (enkel bestand)"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:741
+msgid "Exports the atlas of a print layout as a single PDF file."
+msgstr "Exporteert de atlas van een afdruklay-out naar één enkel PDF-bestand."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:792
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:941
@@ -1633,6 +1726,37 @@ msgstr "PDF-bestand(en dat overeenkomt met de geëxporteerde afdruklay-out"
 msgid "**Algorithm ID**: ``native:printlayouttopdf``"
 msgstr "**ID algoritme**: ``native:printlayouttopdf``"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1178
+msgid "Extract labels"
+msgstr "Labels uitnemen"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1181
+msgid ""
+"Extracts label information from a rendered map at a given extent and scale."
+msgstr ""
+"Neemt informatie van labels uit van een gerenderde kaart met een opgegeven "
+"bereik en schaal."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1183
+msgid ""
+"If a map theme is provided, the rendered map will match the visibility and "
+"symbology of that theme. If left blank, all visible layers from the project "
+"will be used. Extracted label information include: position (served as point"
+" geometries), the associated layer name and feature ID, label text, rotation"
+" (in degree, clockwise), multiline alignment, and font details."
+msgstr ""
+"Als een kaartthema wordt verschaft zal de gerenderde kaart overeenkomen met "
+"de zichtbaarheid en symbologie van dat thema. Indien leeg gelaten zullen "
+"alle zichtbare lagen van het project worden gebruikt. Uitgenomen informatie "
+"van de label omvat: positie (weergegeven als geometrieën punt), de naam van "
+"de geassocieerde laag en object-ID, labeltekst, rotatie (in graden, met de "
+"wijzers van de klok mee), meerregelige uitlijning en details over het "
+"lettertype."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1204
+msgid "**Map extent**"
+msgstr "**Kaartbereik**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1205
 msgid "``EXTENT``"
 msgstr ""
@@ -1640,6 +1764,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1206
 msgid "[extent]"
 msgstr "[bereik]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1207
+msgid "Extent of the map to extract the labels from"
+msgstr "Bereik van de kaart waaruit de labels moeten worden uitgenomen"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -1698,13 +1826,54 @@ msgstr ""
 msgid "[scale]"
 msgstr "[schaal]"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1216
+msgid ""
+"Extracted labels will be rendered using their properties set at this scale."
+msgstr ""
+"Uitgenomen labels zullen worden gerenderd met hun eigenschappen ingesteld op"
+" deze schaal."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1217
+msgid "**Map theme**"
+msgstr "**Kaartthema**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1220
 msgid "``MAP_THEME``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1221
+msgid "[maptheme]"
+msgstr "[maptheme]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1222
+msgid ""
+"A map theme displaying the layers to extract the labels from. If unset, "
+"labels of the currently visible layers are extracted."
+msgstr ""
+"Een kaartthema dat de lagen weergeeft waaruit de labels moeten worden "
+"uitgenomen. Indien niet ingesteld zullen labels van de momenteel zichtbare "
+"lagen worden uitgenomen."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1224
+msgid "**Include unplaced labels**"
+msgstr "**Niet geplaatste labels opnemen**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1227
 msgid "``INCLUDE_UNPLACED``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1231
+msgid ""
+"Specify whether all overlapping labels should be extracted, including the "
+"conflicting (thus unplaced) ones."
+msgstr ""
+"Specificeer of alle overlappende labels zouden moeten worden uitgenomen, "
+"inclusief de conflicterende (dus niet geplaatste)."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1233
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1275
+msgid "**Extracted labels**"
+msgstr "**Uitgenomen labels**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1237
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1345
@@ -1716,6 +1885,42 @@ msgstr "Standaard: ``[Tijdelijke laag maken]``"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1346
 msgid "Specify the output vector layer for the extent(s). One of:"
 msgstr "Specificeer de uitvoer vectorlaag voor de/het bereik(en). Één van:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1255
+msgid "**Map resolution (in DPI)**"
+msgstr "**Kaartresolutie (in DPI)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1260
+msgid "Default: 96.0"
+msgstr "Standaard: 96.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1278
+msgid ""
+"Point vector layer representing the fetched labels. Each feature has "
+"attributes identifying its source (layer, feature ID) and the assigned "
+"labeling properties (text, font, size, rotation, ...). A default style with "
+"labeling and null symbol is also applied to the layer."
+msgstr ""
+"Punt vectorlaag die de opgehaalde labels weergeeft. Elk object heeft "
+"attributen die zijn bronlaag identificeren (laag, object-ID) en de "
+"toegewezen eigenschappen voor labelen (tekst, lettertype, grootte, rotatie, "
+"…). Een standaard stijl met labelen en symbool null wordt ook toegepast op "
+"de laag."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1283
+msgid ""
+"Because some of the generated fields have name with more than 10 characters,"
+" using the ESRI shapefile format (:file:`.SHP`) to store the output may lead"
+" to unexpected rendering while loading the layer in QGIS."
+msgstr ""
+"Omdat enkele van de gemaakte velden namen hebben met meer dan 10 tekens, zou"
+" het gebruiken van de indeling ESRI shapefile (:file:`.SHP`) om de uitvoer "
+"op te slaan kunnen leiden tot onverwacht renderen bij het laden van de laag "
+"in QGIS."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1290
+msgid "**Algorithm ID**: ``native:extractlabels``"
+msgstr "**ID algoritme**: ``native:extractlabels``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1300
 msgid "Print layout map extent to layer"
@@ -2052,6 +2257,16 @@ msgstr "**ID algoritme**: ``qgis:topologicalcoloring``"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1591
 msgid "Transfer annotations from main layer"
 msgstr "Annotaties verplaatsen vanaf hoofdlaag"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1593
+msgid ""
+"Transfers all :ref:`annotations <annotation_layer>` from the main annotation"
+" layer in a project to a new annotation layer. Items placement can then be "
+"adjusted within the layer stack."
+msgstr ""
+"Verplaatst alle :ref:`annotations <annotation_layer>` vanaf de hoofdlaag "
+"voor annotaties in een project naar een nieuwe laag met annotaties. "
+"Plaatsing van items kan dan worden aangepast in de laagstapel."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1608
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1626
