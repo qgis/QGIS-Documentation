@@ -26,7 +26,7 @@ Install QGIS Server with:
  apt install qgis-server --no-install-recommends --no-install-suggests
 
  # if you want to install server plugins, also:
- apt install python-qgis
+ apt install python3-qgis
 
 QGIS Server should be used in production without QGIS Desktop (with
 the accompanying X Server) installed on the same machine.
