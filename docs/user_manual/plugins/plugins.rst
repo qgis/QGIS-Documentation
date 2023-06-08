@@ -159,7 +159,7 @@ you will be given some of the following options:
   of the selected plugin
 * :guilabel:`Reinstall Plugin`: installs the same stable version of the plugin
   e.g. after it has failed to load
-* :guilabel:`Reinstall Experimental Plugin`: installs the same stable version
+* :guilabel:`Reinstall Experimental Plugin`: installs the same experimental version
   of the plugin e.g. after it has failed to load
 * :guilabel:`Upgrade Plugin`: upgrades selected plugin to its latest stable version
 * :guilabel:`Upgrade Experimental Plugin`: upgrades selected plugin to its
