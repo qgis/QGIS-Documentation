@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
-# DiGro, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,6 +53,21 @@ msgstr ""
 msgid "**Geometry modification only**"
 msgstr "**Past alleen geometrie aan**"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"This operation modifies only the features geometry. The attribute values of "
+"the features are **not modified**, although properties such as area or "
+"length of the features will be modified by the overlay operation. If such "
+"properties are stored as attributes, those attributes will have to be "
+"manually updated."
+msgstr ""
+"Deze bewerking past alleen de geometrie van het object aan. De waarden van "
+"de attributen van de objecten worden **niet aangepast**, hoewel "
+"eigenschappen zoals het gebied of de lengte van objecten wel zullen worden "
+"aangepast door de bewerking clippen. Als dergelijke eigenschappen worden "
+"opgeslagen als attributen, moeten deze attributen handmatig worden "
+"bijgewerkt."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:25
 msgid ""
 "This algorithm uses spatial indexes on the providers, prepared geometries "
@@ -62,6 +77,16 @@ msgstr ""
 "Dit algoritme gebruikt ruimtelijke indexen voor de providers, vooraf bereide"
 " geometrieën en past een bewerking knippen toe als de geometrie niet geheel "
 "wordt omsloten door de masker-geometrie."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:32
+msgid ""
+"Clipping operation between a two-feature input layer 'a' and a single "
+"feature overlay layer 'b' (left) - resulting in a new layer with the "
+"modified 'a' features (right)"
+msgstr ""
+"Bewerking Clippen tussen een invoerlaag met twee objecten 'a' en een "
+"overleglaag met één enkel object 'b' (links) - resulterend in een nieuwe "
+"laag met de aangepaste objecten 'a' (rechts)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:36
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:125
@@ -469,6 +494,24 @@ msgstr ""
 "overlappen worden gesplitst langs de grenzen van die object(en) en alleen de"
 " gedeelten buiten de objecten van de overleglaag worden behouden. "
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:121
+msgid ""
+"Difference operation between a two-features input layer 'a' and a single "
+"feature overlay layer 'b' (left) - resulting in a new layer with the "
+"modified 'a' features (right)"
+msgstr ""
+"Bewerking Verschil tussen een invoerlaag met twee objecten 'a' en een "
+"overleglaag met één enkel object 'b' (links) - resulterend in een nieuwe "
+"laag met de aangepaste objecten 'a' (rechts)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:130
+msgid ""
+":ref:`qgismultidifference`, :ref:`qgissymmetricaldifference`, "
+":ref:`qgisclip`"
+msgstr ""
+":ref:`qgismultidifference`, :ref:`qgissymmetricaldifference`, "
+":ref:`qgisclip`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:136
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:440
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:582
@@ -523,6 +566,20 @@ msgstr ""
 msgid "Advanced parameters"
 msgstr "Gevorderde parameters"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:514
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:928
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1065
+msgid "**Grid size**"
+msgstr "**Rastergrootte**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:516
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:930
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1067
+msgid "|328|"
+msgstr "|328|"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:189
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:464
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:473
@@ -563,6 +620,19 @@ msgstr "[getal]"
 msgid "Default: Not set"
 msgstr "Standaard: Niet ingesteld"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:523
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:937
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1074
+msgid ""
+"If provided, the input geometries are snapped to a grid of the given size, "
+"and the result vertices are computed on that same grid. Requires GEOS 3.9.0 "
+"or higher."
+msgstr ""
+"Indien opgegeven worden de geometrieën voor de invoer gesnapt aan een raster"
+" van de opgegeven grootte, en de resulterende punten worden berekend op "
+"datzelfde raster. Vereist GEOS 3.9.0 of hoger."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:212
 msgid ""
 "Layer containing (parts of) features from the input layer not overlapping "
@@ -575,6 +645,60 @@ msgstr ""
 msgid "**Algorithm ID**: ``qgis:difference``"
 msgstr "**ID algoritme**: ``qgis:difference``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:228
+msgid "Difference (multiple)"
+msgstr "Verschil (meerdere)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:229
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:558
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1108
+msgid "|326|"
+msgstr "|326|"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:231
+msgid ""
+"Extracts features from the input layer that fall completely outside or only "
+"partially overlap the features from any of the overlay layer(s)."
+msgstr ""
+"Neemt objecten uit de invoerlaag die volledig buiten vallen of slechts "
+"gedeeltelijk de objecten overlappen van een/de overgelegde la(a)g(en)."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:234
+msgid ""
+"For each overlay layer the difference is calculated between the result of "
+"all previous difference operations and this overlay layer. Input layer "
+"features that partially overlap feature(s) in the overlay layer are split "
+"along those features' boundary and only the portions outside the overlay "
+"layer features are retained."
+msgstr ""
+"Voor elke overgelegde laag wordt het verschil berekend tussen het resultaat "
+"van alle eerdere bewerkingen Verschil en deze overgelegde laag. Objecten van"
+" de invoerlaag die gedeeltelijk object(en) overlappen in de overgelegde laag"
+" worden gesplitst langs de grens van dat object en alleen de gedeelten "
+"buiten de objecten van de overgelegde laag worden behouden."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:247
+msgid ""
+"Difference operation between a two-feature input layer 'a' and single "
+"feature overlay layers 'b' and 'c' (left) - resulting in a new layer with "
+"the modified 'a' features (right)"
+msgstr ""
+"Bewerking Verschil tussen een invoerlaag met twee objecten 'a' en een "
+"overleglagen met één enkel object 'b' en 'c' (links) - resulterend in een "
+"nieuwe laag met de aangepaste objecten 'a' (rechts)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:251
+msgid ""
+":ref:`qgisdifference`, :ref:`qgissymmetricaldifference`, :ref:`qgisclip`"
+msgstr ""
+":ref:`qgisdifference`, :ref:`qgissymmetricaldifference`, :ref:`qgisclip`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:268
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:597
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1163
+msgid "**Overlay layers**"
+msgstr "**Overleglagen**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:269
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:598
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1166
@@ -586,6 +710,38 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1167
 msgid "[vector: any] [list]"
 msgstr "[vector: elke] [lijst]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:271
+msgid ""
+"List of layers containing the geometries that will be subtracted from the "
+"input layer geometries. They are expected to have at least as many "
+"dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D) as the input layer"
+" geometries."
+msgstr ""
+"Lijst met lagen die de geometrieën bevatten die zullen worden afgetrokken "
+"van de geometrieën van de invoerlaag. Zij worden verwacht tenminste net "
+"zoveel dimensies (punt: 0D, lijn: 1D, polygoon: 2D, volume: 3D) te hebben "
+"als de geometrieën van de invoerlaag."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:280
+msgid ""
+"Specify the layer to contain the (parts of) features from the input layer "
+"that do not overlap features of the overlay layers. One of:"
+msgstr ""
+"Specificeer de laag die (delen van) objecten van de invoerlaag moet bevatten"
+" die geen objecten van de overleglaag overlappen. Één van:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:302
+msgid ""
+"Layer containing (parts of) features from the input layer not overlapping "
+"features from the overlay layers."
+msgstr ""
+"Laag die (delen van) objecten van de invoerlaag bevat die geen objecten van "
+"de overleglagen overlappen."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:308
+msgid "**Algorithm ID**: ``qgis:multidifference``"
+msgstr "**ID algoritme**: ``qgis:multidifference``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:318
 msgid "Extract/clip by extent"
@@ -744,6 +900,20 @@ msgstr ""
 "Objecten op de kruisingslaag worden de attributen toegewezen van de "
 "overlappende objecten uit zowel de invoerlaag als de overleglaag."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:428
+msgid ""
+"Intersection operation between a two-feature input layer 'a' and a single "
+"feature overlay layer 'b' (left) - overlapping areas become a new two-"
+"feature layer with both layers' attributes (right)"
+msgstr ""
+"Bewerking Kruising tussen een invoerlaag met twee objecten 'a' en een "
+"overleglagen met één enkel object 'b' (links) - overlappende gebieden worden"
+" een nieuwe laag met twee objecten met attributen van beide lagen (rechts)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:434
+msgid ":ref:`qgismultiintersection`, :ref:`qgisclip`, :ref:`qgisdifference`"
+msgstr ":ref:`qgismultiintersection`, :ref:`qgisclip`, :ref:`qgisdifference`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:458
 msgid ""
 "Layer containing the features to check for overlap. Its features' geometry "
@@ -798,6 +968,17 @@ msgstr ""
 msgid "``OVERLAY_FIELDS``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:478
+msgid ""
+"Field(s) of the overlay layer to keep in the output. If no fields are chosen"
+" all fields are taken. Duplicate field names will be appended a count suffix"
+" to avoid collision."
+msgstr ""
+"Veld(en) van de overleglaag die moeten worden behouden in de uitvoer. Als er"
+" geen velden worden gekozen worden alle velden genomen. Aan duplicaat "
+"veldnamen zal een getal als achtervoegsel worden toegevoegd om botsingen te "
+"voorkomen."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:481
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:538
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:637
@@ -838,6 +1019,17 @@ msgstr ""
 msgid "[string]"
 msgstr "[tekenreeks]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:512
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:926
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1063
+msgid ""
+"Add a prefix to identify fields of the overlay layer. Duplicate field names "
+"will be appended a count suffix to avoid collision."
+msgstr ""
+"Voeg een voorvoegsel toe om velden van de overleglaag te identificeren. Aan "
+"duplicaat veldnamen zal een getal als achtervoegsel worden toegevoegd om "
+"botsingen te voorkomen."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:541
 msgid ""
 "Layer containing (parts of) features from the input layer that overlap the "
@@ -849,6 +1041,74 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:547
 msgid "**Algorithm ID**: ``qgis:intersection``"
 msgstr "**ID algoritme**: ``qgis:intersection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:557
+msgid "Intersection (multiple)"
+msgstr "Kruising (meerdere)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:560
+msgid ""
+"Extracts the overlapping portions of features in the input and all overlay "
+"layers."
+msgstr ""
+"Neemt de overlappende gedeelten uit van objecten in de invoer- en alle "
+"overleglagen."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:562
+msgid ""
+"Features in the output layer are assigned the attributes of the overlapping "
+"features from both the input and overlay layers."
+msgstr ""
+"Objecten op de uitvoerlaag worden de attributen toegewezen van de "
+"overlappende objecten uit zowel de invoerlaag als de overleglagen."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:572
+msgid ""
+"Intersection operation between a two-feature input layer 'a' and single "
+"feature overlay layers 'b' and 'c' (left) - overlapping areas become a new "
+"two-feature layer with all layers' attributes (right)"
+msgstr ""
+"Bewerking Kruising tussen een invoerlaag met twee objecten 'a' en "
+"overleglagen met één enkel object 'b' en 'c' (links) - overlappende gebieden"
+" worden een nieuwe laag met twee objecten met attributen van alle lagen "
+"(rechts)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:576
+msgid ":ref:`qgisintersection`, :ref:`qgisclip`, :ref:`qgisdifference`"
+msgstr ":ref:`qgisintersection`, :ref:`qgisclip`, :ref:`qgisdifference`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:600
+msgid ""
+"Layers containing the features to check for overlap. The features' geometry "
+"is expected to have at least as many dimensions (point: 0D, line: 1D, "
+"polygon: 2D, volume: 3D) as the input layer's."
+msgstr ""
+"Lagen die de objecten bevatten die moeten worden gecontroleerd op "
+"overlappen. Van de geometrie van de objecten wordt verwacht dat die "
+"tenminste net zoveel dimensies (punt: 0D, lijn: 1D, polygoon: 2D, volume: "
+"3D) heeft als die van de invoerlaag."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:622
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1200
+msgid ""
+"Add a prefix to identify fields of the overlay layers. Duplicate field names"
+" will be appended a count suffix to avoid collision."
+msgstr ""
+"Voeg een voorvoegsel toe om velden van de overleglagen te identificeren. Aan"
+" duplicaat veldnamen zal een getal als achtervoegsel worden toegevoegd om "
+"botsingen te voorkomen."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:640
+msgid ""
+"Layer containing (parts of) features from the input layer that overlap all "
+"the overlay layers."
+msgstr ""
+"Laag die (delen van) objecten van de invoerlaag bevat die alle overleglagen "
+"overlappen."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:646
+msgid "**Algorithm ID**: ``qgis:multiintersection``"
+msgstr "**ID algoritme**: ``qgis:multiintersection``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:656
 msgid "Line intersections"
@@ -896,6 +1156,17 @@ msgstr ""
 msgid "``INTERSECT_FIELDS``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:705
+msgid ""
+"Field(s) of the intersect layer to keep in the output. If no fields are "
+"chosen all fields are taken. Duplicate field names will be appended a count "
+"suffix to avoid collision."
+msgstr ""
+"Veld(en) van de kruisingslaag die moeten worden behouden in de uitvoer. Als "
+"er geen velden worden gekozen worden alle velden genomen. Aan duplicaat "
+"veldnamen zal een getal als achtervoegsel worden toegevoegd om botsingen te "
+"voorkomen."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:710
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:753
 msgid "[vector: point]"
@@ -917,9 +1188,21 @@ msgstr "**Voorvoegsel velden kruisen**"
 msgid "``INTERSECT_FIELDS_PREFIX``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:738
+msgid "Add a prefix to identify fields of the intersect layer."
+msgstr ""
+"Voeg een voorvoegsel toe om velden van de kruisingslaag te identificeren."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:751
 msgid "**Intersections**"
 msgstr "**Kruisingen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:754
+msgid ""
+"Point vector layer of the lines intersections, with both layers' attributes."
+msgstr ""
+"Punt vectorlaag van de kruisingen van lijnen, met attributen van beide "
+"lagen."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:760
 msgid "**Algorithm ID**: ``qgis:lineintersections``"
@@ -928,6 +1211,16 @@ msgstr "**ID algoritme**: ``qgis:lineintersections``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:770
 msgid "Split with lines"
 msgstr "Splitsen met lijnen"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:771
+msgid ""
+"Splits the lines or polygons in one layer using the lines or polygon rings "
+"in another layer to define the breaking points. Intersection between "
+"geometries in both layers are considered as split points."
+msgstr ""
+"Splitst de lijnen of polygonen in een laag met behulp van de lijnen in een "
+"andere laag om de breekpunten te definiëren. Kruisingen tussen geometrieën "
+"in beide lagen worden als punten om te splitsen beschouwd."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:776
 msgid "Output will contain multi geometries for split features."
@@ -961,6 +1254,12 @@ msgstr "**Laag splitsen**"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:802
 msgid "``LINES``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:804
+msgid "Layer whose lines or rings are used to define the breaking points."
+msgstr ""
+"Laag waarvan de lijnen of ringen worden gebruikt om de breekpunten te "
+"definiëren."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:805
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:830
@@ -1006,6 +1305,16 @@ msgstr ""
 "De attributentabel van de laag voor het symmetrisch verschil bevat "
 "attributen uit zowel de invoerlaag als de overleglaag."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:863
+msgid ""
+"Symmetrical difference operation between a two-features input layer 'a' and "
+"a single feature overlay layer 'b' (left) - resulting three-feature layer "
+"with both layers' attributes (right)"
+msgstr ""
+"Bewerking Symmetrisch verschil tussen een invoerlaag met twee objecten en "
+"een overleglaag met één enkel object 'b'  (links) - resulterende laag met "
+"drie objecten met attributen van beide lagen (rechts)"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:869
 msgid ":ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`"
 msgstr ":ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`"
@@ -1035,6 +1344,14 @@ msgstr ""
 "Specificeer de laag die (delen van) de objecten bevat uit de invoer- en "
 "overleglaag die geen objecten overlappen van de andere laag. Één van:"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:954
+msgid ""
+"Layer containing (parts of) features from each layer not overlapping the "
+"other layer, with both layers' attributes."
+msgstr ""
+"Laag die (delen van) objecten van elke laag bevat die niet worden de andere "
+"laag overlappen, met attributen van beide lagen."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:960
 msgid "**Algorithm ID**: ``qgis:symmetricaldifference``"
 msgstr "**ID algoritme**: ``qgis:symmetricaldifference``"
@@ -1055,6 +1372,66 @@ msgstr ""
 "afzonderlijke objecten voor overlappende en niet-overlappende gedeelten. Het"
 " gebied van het overlappen zal net zoveel identieke overlappende objecten "
 "maken als er objecten zijn die deel uitmaken van het overlappen."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:979
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1118
+msgid ""
+"Union operation with a single input layer with two overlapping features "
+"(left) - resulting in four features (middle) - features moved for clarity "
+"(right)"
+msgstr ""
+"Bewerking Verenigen met één enkele invoerlaag met twee overlappende objecten"
+" (links) - resulterende in vier objecten (midden) - objecten zijn verplaatst"
+" voor duidelijkheid (rechts)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:982
+msgid ""
+"An overlay layer can also be used, in which case features from each layer "
+"are split at their overlap with features from the other one, creating a "
+"layer containing all the portions from both input and overlay layers. "
+"Features on the same layer will not split each other. The attribute table of"
+" the union layer is filled with attribute values from the respective "
+"original layer for non-overlapping features, and attribute values from both "
+"layers for overlapping features."
+msgstr ""
+"Een overleglaag kan ook worden gebruikt, in welk geval objecten van elke "
+"laag worden gesplitst op hun overlapping met de andere, een laag makend die "
+"alle gedeelten van zowel de invoer- als de overleglaag bevat. Objecten op "
+"dezelfde laag zullen elkaar niet splitsen. De attributentabel van de "
+"verenigde laag wordt gevuld met waarden van de attributen uit de "
+"respectievelijke originele laag voor niet-overlappende objecten, en de "
+"waarden van attributen uit beide lagen voor overlappende objecten."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:993
+msgid ""
+"Union operation between a two-feature input layer 'a' and a single feature "
+"overlay layer 'b' (left) - resulting five-feature layer with attributes from"
+" both layers (right)"
+msgstr ""
+"Bewerking Verenigen tussen een invoerlaag met twee objecten 'a' en een "
+"overleglaag met één enkel object 'b' (links) - resulterend in een laag met "
+"vijf objecten met attributen van beide lagen (rechts)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:998
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1137
+msgid ""
+"With an overlay layer, features on the same layer will not split each other."
+" If you want to split overlaps on the same layer as well as other layers, "
+"first run the algorithm with multiple layers then run the algorithm again "
+"with only the previous output."
+msgstr ""
+"Met een overleglaag zullen objecten op dezelfde laag elkaar niet splitsen. "
+"Als u overlappingen op dezelfde laag wilt splitsen, als ook op andere lagen,"
+" voer dan eerst het algoritme met meerdere lagen uit en voer dan het "
+"algoritme opnieuw uit met alleen de eerdere uitvoer."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1005
+msgid ""
+":ref:`qgismultiunion`, :ref:`qgisclip`, :ref:`qgisdifference`, "
+":ref:`qgisintersection`"
+msgstr ""
+":ref:`qgismultiunion`, :ref:`qgisclip`, :ref:`qgisdifference`, "
+":ref:`qgisintersection`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1025
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1162
@@ -1095,3 +1472,71 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1097
 msgid "**Algorithm ID**: ``qgis:union``"
 msgstr "**ID algoritme**: ``qgis:union``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1107
+msgid "Union (multiple)"
+msgstr "Verenigen (meerdere)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1121
+msgid ""
+"Multiple overlay layers can also be used, in which case features from each "
+"layer are split at their overlap with features from all other layers, "
+"creating a layer containing all the portions from both input and overlay "
+"layers. Features on the same layer will not split each other. The attribute "
+"table of the Union layer is filled with attribute values from the respective"
+" original layer for non-overlapping features, and attribute values from "
+"overlay layers for overlapping features."
+msgstr ""
+"Meerdere overleglagen kunnen ook worden gebruikt, in welk geval objecten van"
+" elke laag worden gesplitst op hun overlapping met de andere, een laag "
+"makend die alle gedeelten van zowel de invoer- als de overleglaag bevat. "
+"Objecten op dezelfde laag zullen elkaar niet splitsen. De attributentabel "
+"van de verenigde laag wordt gevuld met waarden van de attributen uit de "
+"respectievelijke originele laag voor niet-overlappende objecten, en de "
+"waarden van attributen uit beide lagen voor overlappende objecten."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1132
+msgid ""
+"Union operation between a two-feature input layer 'a' and single feature "
+"overlay layers 'b' and 'c' (left) - resulting eleven-feature layer with "
+"attributes from all layers (right)"
+msgstr ""
+"Bewerking Verenigen tussen een invoerlaag met twee objecten 'a' en een "
+"overleglaag met één enkel object 'b' (links) - resulterend in een laag met "
+"elf objecten met attributen van alle lagen (rechts)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1142
+msgid ""
+":ref:`qgisunion`, :ref:`qgisclip`, :ref:`qgisdifference`, "
+":ref:`qgisintersection`"
+msgstr ""
+":ref:`qgisunion`, :ref:`qgisclip`, :ref:`qgisdifference`, "
+":ref:`qgisintersection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1168
+msgid ""
+"Layers that will be combined to the first one. Ideally the geometry type "
+"should be the same as input layer."
+msgstr ""
+"Lagen die zullen worden gecombineerd met de eerste. Idealiter zou het type "
+"geometrie hetzelfde moeten zijn als die van de invoerlaag."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1175
+msgid ""
+"Specify the layer to contain the (split and duplicated) features from the "
+"input layer and the overlay layers. One of:"
+msgstr ""
+"Specificeer de laag die de (gesplitste en gedupliceerde) objecten bevat uit "
+"de invoer- en overleglagen. Één van:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1218
+msgid ""
+"Layer containing all the overlapping and non-overlapping parts from the "
+"processed layer(s), with all layers' attributes."
+msgstr ""
+"Laag die alle overlappende en niet-overlappende delen van de verwerkte "
+"la(a)g(en) bevat, met attributen van alle lagen."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1225
+msgid "**Algorithm ID**: ``qgis:multiunion``"
+msgstr "**ID algoritme**: ``qgis:multiunion``"
