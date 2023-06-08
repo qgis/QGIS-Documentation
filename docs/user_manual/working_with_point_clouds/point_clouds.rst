@@ -371,6 +371,17 @@ Layer Rendering
 In the :guilabel:`Layer Rendering` section you have the following options
 to modify the rendering of the layer:
 
+.. _point_cloud_draw_order:
+
+* :guilabel:`Draw order`: allows to control whether point clouds rendering order on 2d map canvas
+  should rely on their Z value.
+  It is possible to render :
+
+  * with the :guilabel:`Default` order in which the points are stored in the layer,
+  * from :guilabel:`Bottom to top` (points with larger Z values cover lower points
+    giving the looks of a true ortho photo),
+  * or from :guilabel:`Top to bottom` where the scene appears as viewed from below.
+
 .. _`point_clouds_symbology_maxerror`:
 
 * :guilabel:`Maximum error`: Point clouds usually contains more points than are needed for the display.
@@ -388,6 +399,15 @@ to modify the rendering of the layer:
 * :guilabel:`Blending mode`: You can achieve special rendering effects with this tool.
   The pixels of your overlaying and underlying layers are mixed through the settings
   described in :ref:`blend-modes`.
+
+* :guilabel:`Eye dome lighting`: this applies shading effects to the map canvas for a better depth rendering.
+  Rendering quality depends on the :ref:`draw order <point_cloud_draw_order>` property;
+  the :guilabel:`Default` draw order may give sub-optimal results.
+  Following parameters can be controlled:
+
+  * :guilabel:`Strength`: increases the contrast, allowing for better depth perception
+  * :guilabel:`Distance`: represents the distance of the used pixels off the center pixel
+    and has the effect of making edges thicker.
 
 
 .. _point_clouds_3d:
