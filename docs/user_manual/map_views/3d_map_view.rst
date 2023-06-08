@@ -280,20 +280,22 @@ Advanced
 .. _eye_dome_lighting:
 
 * |unchecked| :guilabel:`Show Eye Dome Lighting` (EDL):
-  a post processing effect which compares each pixel's depth (distance off the camera)
-  with neighbor pixels depth and highlights the edges according to the depth difference.
-  Affects the whole scene. Following parameters can be controlled:
+  a post processing effect which enhances depth perception.
+  Each pixel's depth (distance off the camera) is compared to its neighboring pixels' depth
+  and gets highlighted according to that depth difference, making the edges stand out.
+  Affects the whole scene and can be combined with :ref:`Screen Space Ambient Occlusion <ambient_occlusion>`.
+  Following parameters can be controlled:
 
   * :guilabel:`Lighting strength`: increases the contrast, allowing for better depth perception
-    (needs to be adjusted when zooming in)
   * :guilabel:`Lighting distance`: represents the distance of the used pixels off the center pixel
     and has the effect of making edges thicker.
 
 .. _ambient_occlusion:
 
 * Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO):
-  a post processing effect which nicely renders depth perception of the data in 3D
-  and can be combined with Eye dome Lighting.
+  a post processing effect which also enhances depth perception
+  by applying a darker shading to areas which are less exposed to ambient lighting.
+  Affects the whole scene and can be combined with :ref:`Eye dome Lighting <eye_dome_lighting>`.
   Following parameters can be controlled:
 
   * :guilabel:`Radius`: how far we will reach to calculate ambient occlusion
@@ -314,7 +316,7 @@ Advanced
   from the point of view of the light used for shadows (for troubleshooting). 
   The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
   and docked in a :guilabel:`Corner`.
-* |unchecked| :guilabel:`Debug Depth Map`: renders the scene as a red-black image
+* |unchecked| :guilabel:`Debug Depth Map`: renders the scene's depth map as an  image
   with nearer pixels being darker (for troubleshooting).
   The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
   and docked in a :guilabel:`Corner`.
