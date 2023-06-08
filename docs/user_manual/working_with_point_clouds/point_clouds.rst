@@ -406,7 +406,6 @@ to modify the rendering of the layer:
   Following parameters can be controlled:
 
   * :guilabel:`Strength`: increases the contrast, allowing for better depth perception
-    (needs to be adjusted when zooming in)
   * :guilabel:`Distance`: represents the distance of the used pixels off the center pixel
     and has the effect of making edges thicker.
 
