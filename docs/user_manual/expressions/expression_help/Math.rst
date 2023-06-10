@@ -458,10 +458,10 @@ Rounds a number to number of decimal places.
 
 .. end_round_section
 
-.. _expression_function_Math_scale_exp:
+.. _expression_function_Math_scale_exponential:
 
-scale_exp
-.........
+scale_exponential
+.................
 
 Transforms a given value from an input domain to an output range using an exponential curve. This function can be used to ease values in or out of the specified output range.
 
@@ -469,7 +469,7 @@ Transforms a given value from an input domain to an output range using an expone
    :widths: 15 85
 
    * - Syntax
-     - scale_exp(value, domain_min, domain_max, range_min, range_max, exponent)
+     - scale_exponential(value, domain_min, domain_max, range_min, range_max, exponent)
    * - Arguments
      - * **value** - A value in the input domain. The function will return a corresponding scaled value in the output range.
        * **domain_min** - Specifies the minimum value in the input domain, the smallest value the input value should take.
@@ -486,7 +486,7 @@ Transforms a given value from an input domain to an output range using an expone
          easing out, using an exponent of 0.5
 
 
-.. end_scale_exp_section
+.. end_scale_exponential_section
 
 .. _expression_function_Math_scale_linear:
 
@@ -517,6 +517,36 @@ Transforms a given value from an input domain to an output range using linear in
 
 
 .. end_scale_linear_section
+
+.. _expression_function_Math_scale_polynomial:
+
+scale_polynomial
+................
+
+Transforms a given value from an input domain to an output range using a polynomial curve. This function can be used to ease values in or out of the specified output range.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - scale_polynomial(value, domain_min, domain_max, range_min, range_max, exponent)
+   * - Arguments
+     - * **value** - A value in the input domain. The function will return a corresponding scaled value in the output range.
+       * **domain_min** - Specifies the minimum value in the input domain, the smallest value the input value should take.
+       * **domain_max** - Specifies the maximum value in the input domain, the largest value the input value should take.
+       * **range_min** - Specifies the minimum value in the output range, the smallest value which should be output by the function.
+       * **range_max** - Specifies the maximum value in the output range, the largest value which should be output by the function.
+       * **exponent** - A positive value (greater than 0), which dictates the way input values are mapped to the output range. Large exponents will cause the output values to 'ease in', starting slowly before accelerating as the input values approach the domain maximum. Smaller exponents (less than 1) will cause output values to 'ease out', where the mapping starts quickly but slows as it approaches the domain maximum.
+   * - Examples
+     - * ``scale_polynomial(5,0,10,0,100,2)`` → 25
+
+         easing in, using an exponent of 2
+       * ``scale_polynomial(3,0,10,0,100,0.5)`` → 54.772
+
+         easing out, using an exponent of 0.5
+
+
+.. end_scale_polynomial_section
 
 .. _expression_function_Math_sin:
 

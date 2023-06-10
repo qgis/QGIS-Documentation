@@ -121,6 +121,27 @@ Division of two values
 
 .. end_/_section
 
+.. _expression_function_Operators_floordiv:
+
+//
+..
+
+Floor division of two values
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - a // b
+   * - Arguments
+     - * **a** - value
+       * **b** - value
+   * - Examples
+     - * ``9 // 2`` → 4
+
+
+.. end_//_section
+
 .. _expression_function_Operators_lt:
 
 <
