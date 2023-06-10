@@ -1103,8 +1103,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
-.. |sensor| image:: /static/common/sensor.png
-   :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
@@ -1456,6 +1454,8 @@ Icon                            Substitution                        Icon        
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
+   :width: 1.5em
+.. |sensor| image:: /static/common/sensor.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em

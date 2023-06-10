@@ -301,13 +301,9 @@ of forest parameters.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
-.. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
-   :width: 1.5em
 .. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
    :width: 1.5em
-.. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
-   :width: 1.5em
+.. |basic| image:: /static/common/basic.png
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |openTable| image:: /static/common/mActionOpenTable.png
@@ -318,11 +314,9 @@ of forest parameters.
    :width: 1.5em
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
-.. |symbologyAdd| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |topologicalEditing| image:: /static/common/mIconTopologicalEditing.png
-   :width: 1.5em
-.. |symbology| image:: /static/common/symbology.png
    :width: 1.5em
