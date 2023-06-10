@@ -284,7 +284,7 @@ Changing the symbology of vector layers
    :guilabel:`Streets` layer
 #. Select :guilabel:`Properties` from the menu that appears
 #. Switch to the :guilabel:`Symbology` tab in the dialog that appears
-#. Click on the :guilabel:`Fill` entry in the top widget
+#. Click on the :guilabel:`Line` entry in the top widget
 #. Select a symbol in the list below or set a new one (color,
    transparency, ...)
 #. Click :guilabel:`OK` to close the :guilabel:`Layer Properties`
