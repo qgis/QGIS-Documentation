@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -196,6 +197,14 @@ msgstr "|expression| :ref:`Variabelen <vectorvariablesmenu>`"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3659
 msgid "expression"
 msgstr "expression"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:45
+msgid "|elevationscale| :ref:`Elevation <vectorelevationmenu>`"
+msgstr "|elevationscale| :ref:`Hoogte<vectorelevationmenu>`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3657
+msgid "elevationscale"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:46
 msgid "|editMetadata| :ref:`Metadata <vectormetadatamenu>`"
@@ -482,6 +491,17 @@ msgstr ""
 "(inclusief de indeling DateTime voor het veld ``toa``) werken voor "
 "gegevenssets van GeoPackage."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:162
+msgid ""
+"The filter is made at the data provider (OGR, PostgreSQL, MS SQL Server...) "
+"level. So the syntax depends on the data provider (DateTime is for instance "
+"not supported for the ESRI Shapefile format). The complete expression::"
+msgstr ""
+"Het filter is gemaakt op het niveau van de gegevensprovider (OGR, "
+"PostgreSQL, MS SQL Server…). Dus is de syntaxis afhankelijk van de "
+"gegevensprovider (DateTime wordt bijvoorbeeld niet ondersteund voor de "
+"indeling ESRI Shapefile). De volledige expressie::"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:172
 msgid ""
 "You can also open the :guilabel:`Query Builder` dialog using the "
@@ -659,6 +679,23 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:258
 msgid "Features rendering"
 msgstr "Objecten renderen"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:260
+msgid ""
+"The renderer is responsible for drawing a feature together with the correct "
+"symbol. Regardless layer geometry type, there are four common types of "
+"renderers: single symbol, categorized, graduated and rule-based. For point "
+"layers, there are point displacement, point cluster and heatmap renderers "
+"available while polygon layers can also be rendered with the merged "
+"features, inverted polygons and 2.5 D renderers."
+msgstr ""
+"De renderer is verantwoordelijk voor het tekenen van een object tezamen met "
+"het juiste symbool. Ongeacht het type geometrie van de laag zijn er vier "
+"algemene typen renderers: Enkel symbool, Categorieën, Gradueel en Op regel "
+"gebaseerd. Voor puntlagen zijn renderers voor verplaatsing van punten, "
+"cluster van punten en heatmap beschikbaar, terwijl polygonenlagen ook kunnen"
+" worden gerenderd met de samengevoegde objecten, geïnverteerde polygonen en "
+"2.5D-renderers."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:266
 msgid ""
@@ -1785,11 +1822,69 @@ msgstr "Opties voor Regel-gebaseerde symbologie"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:749
 msgid "Point displacement Renderer"
-msgstr "Renderer Puntverplaatsing"
+msgstr "Renderer Verplaatsing punt"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:751
+msgid ""
+"The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer takes "
+"the point features falling in a given distance tolerance from each other and"
+" places their symbols around their barycenter, following different placement"
+" methods. This can be a convenient way to visualize all the features of a "
+"point layer, even if they have the same location (e.g. amenities in a "
+"building)."
+msgstr ""
+"De renderer |pointDisplacementSymbol| :guilabel:`Verplaatsing punt` neemt de"
+" objecten punt die liggen binnen een opgegeven tolerantie voor de afstand "
+"van elkaar en plaatst hun symbolen rondom hun zwaartepunt, verschillende "
+"methoden voor plaatsing volgend. Dit kan een handige manier zijn om alle "
+"objecten van een puntenlaag te visualiseren, zelfs als zij dezelfde locatie "
+"hebben (bijv. voorzieningen in een gebouw)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3739
 msgid "pointDisplacementSymbol"
 msgstr "pointDisplacementSymbol"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:757
+msgid "To configure a point displacement renderer, you have to:"
+msgstr "U moet, om een renderer Verplaatsing punt te configureren:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:759
+msgid ""
+"Set the :guilabel:`Center symbol`: how the virtual point at the center will "
+"look like"
+msgstr ""
+"Stel het :guilabel:`Midden symbool` in: hoe het virtuele punt in het midden "
+"eruit zal zien"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:761
+msgid ""
+"Select the :guilabel:`Renderer` type: how you want to classify features in "
+"the layer (single, categorized, rule-based...)"
+msgstr ""
+"Selecteer het type :guilabel:`Renderer`: hoe u objecten in de laag wil "
+"classificeren (enkel, gecategoriseerd, op regel-gebaseerd…)"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:763
+msgid ""
+"Press the :guilabel:`Renderer Settings...` button to configure features' "
+"symbology according to the selected renderer"
+msgstr ""
+"Druk op de knop :guilabel:`Instellingen renderer…` om de symbologie van de "
+"punten te configureren overeenkomstig de geselecteerde renderer"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:765
+msgid ""
+"Indicate the :guilabel:`Distance` tolerance in which close features are "
+"considered overlapping and then displaced over the same virtual point. "
+"Supports common symbol units."
+msgstr ""
+"Geef de tolerantie :guilabel:`Afstand` op waarbinnen objecten dichtbij "
+"worden geacht te overlappen en dan verplaatst over hetzelfde virtuele punt. "
+"Ondersteunt de algemene eenheden voor symbolen."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:768
+msgid "Configure the :guilabel:`Placement methods`:"
+msgstr "Configureer de :guilabel:`Methode plaatsing`:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:770
 msgid ""
@@ -1813,9 +1908,70 @@ msgstr ""
 "**Raster**: maakt een regelmatig raster met een puntsymbool op elke "
 "kruising."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:775
+msgid ""
+"Displaced symbols are placed on the :guilabel:`Displacement lines`. While "
+"the minimal spacing of the displacement lines depends on the point symbols "
+"renderer, you can still customize some of their settings such as the "
+":guilabel:`Stroke width`, :guilabel:`Stroke color` and :guilabel:`Size "
+"adjustment` (e.g., to add more spacing between the rendered points)."
+msgstr ""
+"Verplaatste symbolen worden geplaatst op de :guilabel:`Verplaatsingslijnen`."
+" Waar de minimale afstand van de  verplaatsingslijnen afhankelijk is van de "
+"renderer van het puntsymbool kunt u nog steeds enkele van hun instellingen "
+"aanpassen, zoals de :guilabel:`Lijndikte`, :guilabel:`Lijnkleur` en "
+":guilabel:`Grootte aanpassen` (bijv. om meer afstand tussen de gerenderde "
+"punten toe te voegen)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:781
+msgid ""
+"Use the :guilabel:`Labels` group options to perform points labeling: the "
+"labels are placed near the displaced symbol, and not at the feature real "
+"position."
+msgstr ""
+"Gebruik de opties van de groep :guilabel:`Labels` om labelen van de punten "
+"uit te voeren: de labels worden geplaatst nabij het verplaatste symbool, en "
+"niet op de echte positie van het object."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:784
+msgid ""
+"Select the :guilabel:`Label attribute`: a field of the layer to use for "
+"labeling"
+msgstr ""
+"Selecteer het :guilabel:`Attribuut van label`: een veld van de laag om te "
+"gebruiken voor labelen"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:785
+msgid "Indicate the :guilabel:`Label font` properties and size"
+msgstr ""
+"Geef de eigenschappen en grootte van het :guilabel:`Label lettertype` aan"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:786
+msgid "Pick a :guilabel:`Label color`"
+msgstr "Kies een :guilabel:`Labelkleur`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:787
+msgid ""
+"Set a :guilabel:`Label distance factor`: for each point feature, offsets the"
+" label from the symbol center proportionally to the symbol's diagonal size."
+msgstr ""
+"Stel een :guilabel:`Factor labelafstand` in: voor elk object punt, "
+"verschuift het label vanaf het midden van het symbool proportioneel naar de "
+"diagonale grootte van het symbpol."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:789
+msgid ""
+"Turn on |unchecked| :guilabel:`Use scale dependent labeling` if you want to "
+"display labels only on scales larger than a given :guilabel:`Minimum map "
+"scale`."
+msgstr ""
+"Schakel |unchecked| :guilabel:`Schaalafhankelijk labelen` in als u alleen "
+"labels wilt weergeven in schalen die groter zijn dan een opgegeven "
+":guilabel:`Minimale schaal kaart`."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:798
 msgid "Point displacement dialog"
-msgstr "Dialoogvenster Puntverplaatsing"
+msgstr "Dialoogvenster Verplaatsing punt"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:802
 msgid ""
@@ -1825,7 +1981,7 @@ msgid ""
 "the Processing :ref:`qgispointsdisplacement` algorithm if you want to create"
 " displaced features."
 msgstr ""
-"De renderer Puntverplaatsing verandert niet de geometrie van de objecten, "
+"De renderer Verplaatsing punt verandert niet de geometrie van de objecten, "
 "wat betekent dat de punten niet van hun positie worden verplaatst. Zij zijn "
 "nog steeds geplaatst op hun initiële plaats. Wijzigingen zijn alleen "
 "visueel, voor het doel renderen. Gebruik in plaats daarvan het algoritme van"
@@ -1836,6 +1992,25 @@ msgstr ""
 msgid "Point Cluster Renderer"
 msgstr "Renderer Cluster punten "
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:816
+msgid ""
+"Unlike the |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer"
+" which blows up nearest or overlaid point features placement, the "
+"|pointClusterSymbol| :guilabel:`Point Cluster` renderer groups nearby points"
+" into a single rendered marker symbol. Points that fall within a specified "
+"distance from each others are merged into a single symbol. Points "
+"aggregation is made based on the closest group being formed, rather than "
+"just assigning them the first group within the search distance."
+msgstr ""
+"Anders dan de renderer |pointDisplacementSymbol| :guilabel:`Verplaatsing "
+"punt` die de plaatsing van overgelegde of nabije punten opblaast, groepeert "
+"de renderer |pointClusterSymbol| :guilabel:`Cluster punten` nabije punten "
+"naar één enkel gerenderd markeringssymbool. Punten die vallen binnen een "
+"bepaalde afstand van elkaar worden samengevoegd tot één enkel symbool. Bij "
+"elkaar voegen van punten is gebaseerd op de dichtstbijzijnde gevormde groep,"
+" in plaats van ze gewoon toe te wijzen aan de eerste groep binnen de "
+"zoekafstand."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3737
 msgid "pointClusterSymbol"
 msgstr "pointClusterSymbol"
@@ -1843,6 +2018,51 @@ msgstr "pointClusterSymbol"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:824
 msgid "From the main dialog, you can:"
 msgstr "Vanuit het hoofddialoogvenster kunt u:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:826
+msgid ""
+"Set the symbol to represent the point cluster in the :guilabel:`Cluster "
+"symbol`; the default rendering displays the number of aggregated features "
+"thanks to the ``@cluster_size`` :ref:`variable <general_tools_variables>` on"
+" Font marker symbol layer."
+msgstr ""
+"Stel het symbool in om de clusterpunten weer te geven in :guilabel:`Symbool "
+"voor cluster`; de standaard rendering geeft het aantal samengevoegde "
+"objecten weer door de  :ref:`variabele <general_tools_variables>` "
+"``@cluster_size`` op de symboollaag Lettertypemarkering."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:830
+msgid ""
+"Select the :guilabel:`Renderer` type, i.e. how you want to classify features"
+" in the layer (single, categorized, rule-based...)"
+msgstr ""
+"Selecteer het type :guilabel:`Renderer`, d.i. hoe u objecten in de laag wilt"
+" classificeren (enkel, gecategoriseerd, op regel-gebaseerd…)"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:832
+msgid ""
+"Press the :guilabel:`Renderer Settings...` button to configure features' "
+"symbology as usual. Note that this symbology is only visible on features "
+"that are not clustered, the :guilabel:`Cluster symbol` being applied "
+"otherwise. Also, when all the point features in a cluster belong to the same"
+" rendering class, and thus would be applied the same color, that color "
+"represents the ``@cluster_color`` variable of the cluster."
+msgstr ""
+"Druk zoals gewoonlijk op de knop :guilabel:`Instellingen renderer…` om de "
+"symbologie van de objecten te configureren. Onthoud dat deze symbologie "
+"alleen zichtbaar is voor objecten die niet geclusterd zijn, anders wordt het"
+" :guilabel:`Symbool voor cluster` toegepast. Ook, als alle objecten punt in "
+"een cluster behoren tot dezelfde klasse voor renderen, en dus dezelfde kleur"
+" zou worden toegepast, die kleur wordt weergegeven in de variabele "
+"@cluster_color`` van de cluster."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:838
+msgid ""
+"Indicate the maximal :guilabel:`Distance` to consider for clustering "
+"features. Supports common symbol units."
+msgstr ""
+"Geef de maximale :guilabel:`Afstand` op die in acht moet worden genomen voor"
+" het clusteren van objecten. Ondersteunt de algemene eenheden voor symbolen."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:846
 msgid "Point Cluster dialog"
@@ -3966,6 +4186,17 @@ msgstr ""
 "Klik op :guilabel:`Vind` om de :guilabel:`Maximale waarde` terug te geven "
 "van het attribuut of voer een aangepaste waarde in de widget in."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1863
+msgid ""
+"For histogram and stacked bars, enter a :guilabel:`Bar length` value, used "
+"to represent the :guilabel:`Maximum value` of the attributes. For each "
+"feature, the bar length will then be scaled linearly to keep this matching."
+msgstr ""
+"Voor histogram en kolommen, voer een waarde :guilabel:`Lengte balk` in, "
+"gebruikt om de :guilabel:`Maximale waarde` van de attributen weer te geven. "
+"Voor elk object zal de lengte van de balk dan lineair op schaal worden "
+"gebracht om deze overeenkomst te behouden."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1867
 msgid ""
 "For pie chart and text diagram, enter a :guilabel:`Size` value, used to "
@@ -4251,6 +4482,29 @@ msgstr ""
 msgid "3D properties of a point layer"
 msgstr "3D-eigenschappen van een puntenlaag"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2016
+msgid ""
+"**Prefer the** :guilabel:`Elevation` **tab for symbol elevation and terrain "
+"settings**"
+msgstr ""
+"**Voorkeur voor de tab** :guilabel:`Hoogte` **voor instellingen voor "
+"symbolen voor hoogte en terrein**"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2018
+msgid ""
+"Features' elevation and altitude related properties (:guilabel:`Altitude "
+"clamping`, :guilabel:`Altitude binding`, :guilabel:`Extrusion` or "
+":guilabel:`Height`) in the :guilabel:`3D View` tab inherit their default "
+"values from the layer's :ref:`Elevation properties <vectorelevationmenu>` "
+"and should preferably be set from within the :guilabel:`Elevation` tab."
+msgstr ""
+"Eigenschappen voor hoogte en aan hoogte gerelateerd  (:guilabel:`Hoogte "
+"vastzetten`, :guilabel:`Binding hoogte`, :guilabel:`Uitstrekken` of "
+":guilabel:`Hoogte`) in de tab :guilabel:`3D weergave` erven hun standaard "
+"waarden van de :ref:`Eigenschappen voor hoogte <vectorelevationmenu>` van de"
+" laag en zouden bij voorkeur moeten worden ingesteld op de tab  "
+":guilabel:`Hoogte`."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2024
 msgid ""
 "For better performance, data from vector layers are loaded in the "
@@ -4275,6 +4529,15 @@ msgstr ""
 " laag zal zijn. Drie zoomniveaus betekent dat er 16 tegels zullen zijn op "
 "het bladniveau (elk extra zoomniveau vermenigvuldigt dat met 4). De "
 "standaard is ``3`` en het maximum is ``8``."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2032
+msgid ""
+"|checkbox| :guilabel:`Show bounding boxes of tiles`: especially useful if "
+"there are issues with tiles not showing up when they should."
+msgstr ""
+"|checkbox| :guilabel:`Begrenzingsvakken van tegels weergeven`: in het "
+"bijzonder nuttig als er problemen zijn met tegels die niet worden "
+"weergegeven terwijl dat wel zou moeten."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2039
 msgid "Fields Properties"
@@ -4307,6 +4570,17 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3643
 msgid "deleteAttribute"
 msgstr "deleteAttribute"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2049
+msgid ""
+"You can also rename fields by double-clicking its name. This is only "
+"supported for data providers like PostgreSQL, Oracle, Memory layer and some "
+"GDAL layers depending on the GDAL version."
+msgstr ""
+"U kunt ook velden hernoemen door te dubbelklikken op de naam van het veld. "
+"Dit wordt alleen ondersteund voor gegevensproviders zoals PostgreSQL, "
+"Oracle, geheugenlaag en enkele lagen van GDAL, afhankelijk van  de versie "
+"van GDAL."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2053
 msgid ""
@@ -4754,6 +5028,14 @@ msgstr ""
 "met de andere velden. De geassocieerde actie zal worden ingebed op de "
 "gekozen plaats in het huidige formulier voor de laag."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2231
+msgid ""
+"Further customize the form by adding one or more widgets from "
+":guilabel:`Other Widgets` (see :ref:`other_widgets`)"
+msgstr ""
+"Pas het formulier verder aan door een of meer widgets toe te voegen vanuit "
+":guilabel:`Andere widgets` (bekijk :ref:`other_widgets`)"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2233
 msgid "Apply the layer's properties dialog"
 msgstr "Het dialoogvenster Laageigenschappen toe te passen"
@@ -4766,6 +5048,37 @@ msgstr ""
 "Open een attributenformulier van een object (bijv. met het gereedschap "
 "|identify| :sup:`Objecten identificeren`) en het zou het nieuwe formulier "
 "moeten weergeven."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2240
+msgid "Other Widgets"
+msgstr "Andere widgets"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2242
+msgid ""
+"The drag and drop designer offers a number of widgets that are not connected"
+" to a particular field. They can be used to enhance the appearance of the "
+"form or to display dynamically calculated values."
+msgstr ""
+"De Ontwerper Slepen en neerzetten biedt een aantal widgets die niet zijn "
+"verbonden met een bepaald veld. Zij kunnen worden gebruikt om het uiterlijk "
+"van het formulier te verbeteren of om dynamisch berekende waarden weer te "
+"geven."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2245
+msgid ""
+":guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain "
+"the result of dynamically calculated expressions."
+msgstr ""
+":guilabel:`HTML-widget`: bed een pagina voor HTML in, de bron van de HTML "
+"mag het resultaat van dynamisch berekende expressies bevatten."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2246
+msgid ""
+":guilabel:`QML Widget`: embeds a QML page, the QML source may contain the "
+"result of dynamically calculated expressions."
+msgstr ""
+":guilabel:`QML-widget`: bed een pagina voor QML in, de bron van de QML mag "
+"het resultaat van dynamisch berekende expressies bevatten."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2251
 msgid "Using custom ui-file"
@@ -5120,6 +5433,28 @@ msgstr ""
 "gekleurd weergegeven en een overeenkomend kruis wordt weergegeven naast de "
 "widget. U kunt over het kruis gaan met de muis om er achter te komen welke "
 "beperkingen zijn toegepast op het veld en de waarde te repareren:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2401
+msgid ""
+"A yellow cross appears when the unmet constraint is an unenforced one "
+"(``soft constraint``) and it does not prevent you to save the changes with "
+"the \"wrong\" values;"
+msgstr ""
+"Een geel kruis verschijnt als de beperking waaraan niet voldaan wordt er een"
+" is die niet geforceerd kan worden afgedwongen (``zachte beperking``) en het"
+" belet u niet om de wijzigingen met de \"verkeerde\" waarden op te slaan;"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2403
+msgid ""
+"An orange cross can not be ignored and does not allow you to save your "
+"modifications until they meet the constraints. It appears when the "
+"|checkbox| :guilabel:`Enforce constraint` option is checked (``hard "
+"constraint``)."
+msgstr ""
+"Een oranje kruis kan niet worden genegeerd en staat u dus niet toe de "
+"wijzigingen op te slaan, totdat zij voldoen aan de beperkingen. Het "
+"verschijnt als de optie |checkbox| :guilabel:`Beperking voor expressie "
+"forceren` is geselecteerd (``harde beperking``)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2411
 msgid "Edit widgets"
@@ -5542,6 +5877,16 @@ msgstr ""
 "|unchecked| :guilabel:`Voorvoegsel voor naam aangepast veld` voor gekoppelde"
 " velden, om botsingen tussen namen van velden te vermijden "
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2551
+msgid ""
+"QGIS currently has support for joining non-spatial table formats supported "
+"by GDAL (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL "
+"providers."
+msgstr ""
+"QGIS heeft momenteel ondersteuning voor het koppelen van niet-ruimtelijke "
+"tabelindelingen, ondersteund door GDAL (bijv. CSV, DBF en Excel), "
+"tekengescheiden tekst en de provider PostgreSQL."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2558
 msgid "Auxiliary Storage Properties"
 msgstr "Eigenschappen Hulpopslag"
@@ -5951,6 +6296,80 @@ msgstr ""
 msgid "Overview action dialog with some sample actions"
 msgstr "Overzicht dialoogvenster Acties met enkele voorbeeldacties"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2789
+msgid ""
+"Actions are useful when you frequently want to run an external application "
+"or view a web page based on one or more values in your vector layer. They "
+"are of different types and can be used like this:"
+msgstr ""
+"Acties zijn erg handig wanneer u regelmatig een extern programma wilt "
+"uitvoeren of een webpagina wilt bekijken die is gebaseerd op een of meer "
+"waarden in uw vectorlaag. Zij zijn van verschillende typen die als volgt "
+"gebruikt kunnen worden:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2793
+msgid ""
+":guilabel:`Generic`, :guilabel:`macOS`, :guilabel:`Windows` and "
+":guilabel:`Unix` actions start an external process."
+msgstr ""
+"Acties :guilabel:`Algemeen`, :guilabel:`macOS`, :guilabel:`Windows` en "
+":guilabel:`Unix` starten een extern proces."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2795
+msgid ":guilabel:`Python` actions execute a Python expression."
+msgstr "De actie :guilabel:`Python` voert een expressie voor Python uit."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2796
+msgid ""
+":guilabel:`Generic` and :guilabel:`Python` actions are visible everywhere."
+msgstr ""
+"Acties :guilabel:`Algemeen` en :guilabel:`Python` zijn overal zichtbaar."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2797
+msgid ""
+":guilabel:`macOS`, :guilabel:`Windows` and :guilabel:`Unix` actions are "
+"visible only on the respective platform (i.e., you can define three \"Edit\""
+" actions to open an editor and the users can only see and execute the one "
+"\"Edit\" action for their platform to run the editor)."
+msgstr ""
+"De acties :guilabel:`macOS`, :guilabel:`Windows` en :guilabel:`Unix` zijn "
+"alleen zichtbaar op die specifieke besturingssystemen (u kunt bijv. drie "
+"acties \"Bewerken\" maken om een bewerkingsprogramma te openen, maar de "
+"gebruikers kunnen alleen de actie \"Bewerken\" voor hun platform zien en "
+"uitvoeren om het bewerkingsprogramma uit te voeren)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2801
+msgid ":guilabel:`Open URL`: Uses a HTTP GET request to open a provided URL."
+msgstr ""
+":guilabel:`URL openen `: Gebruikt een HTTP-verzoek GET op ene opgegeven URL "
+"te openen."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2802
+msgid ""
+":guilabel:`Submit URL (urlencoded or JSON)`: Same as the :guilabel:`Open "
+"URL` action but using a HTTP POST request. Data are posted to a URL, using "
+"\"application/x-www-form-urlencoded\" or \"application/json\" if the body is"
+" a valid JSON."
+msgstr ""
+":guilabel:`URL indienen (urlencoded of JSON)`: Hetzelfde als de actie "
+":guilabel:`URL openen` maar gebruikt een HTTP-verzoek POST. Gegevens worden "
+"gepost naar een URL, met \"application/x-www-form-urlencoded\" of "
+"\"application/json\" als de body een geldige JSON is."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2807
+msgid "An example of action call could be::"
+msgstr "Een voorbeeld van een aanroep van een actie zou kunnen zijn::"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2811
+msgid ""
+":guilabel:`Submit URL (multipart)`: Same as the :guilabel:`Open URL` action "
+"but using a HTTP POST request. Data are posted to a URL, using "
+"\"multipart/form-data\"."
+msgstr ""
+":guilabel:`URL indienen (multipart)`: Hetzelfde als de actie :guilabel:`URL "
+"openen` maar gebruikt een HTTP-verzoek POST. Gegevens worden gepost naar een"
+" URL, met \"multipart/form-data\"."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2815
 msgid ""
 "There are several examples included in the dialog. You can load them by "
@@ -5993,6 +6412,61 @@ msgstr ""
 ":sup:`Een nieuwe actie toevoegen` om het dialoogvenster :guilabel:`Actie "
 "bewerken` te openen."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2837
+#, python-format
+msgid ""
+"Select the action :guilabel:`Type` and provide a descriptive name for the "
+"action. The action itself must contain the name of the application that will"
+" be executed when the action is invoked. You can add one or more attribute "
+"field values as arguments to the application. When the action is invoked, "
+"any set of characters that start with a ``%`` followed by the name of a "
+"field will be replaced by the value of that field. The special characters "
+"``%%`` will be replaced by the value of the field that was selected from the"
+" identify results or attribute table (see :ref:`using_actions`). Double "
+"quote marks can be used to group text into a single argument to the program,"
+" script or command. Double quotes will be ignored if preceded by a "
+"backslash."
+msgstr ""
+"Selecteer het :guilabel:`Type` voor de actie en geef een beschrijvende naam "
+"voor de actie. De actie zelf moet de naam van de toepassing bevatten die "
+"moet worden uitgevoerd als de actie wordt gestart. U kunt één of meer "
+"waarden van velden met attributen als argumenten toevoegen voor de "
+"toepassing. Wanneer de actie wordt gestart, zal elke set tekens die begint "
+"met een ``%``, gevolgd door de naam van een veld, worden vervangen door de "
+"waarde van dat veld. De speciale tekens ``%%`` zullen worden vervangen door "
+"de waarde van het veld dat werd geselecteerd uit de resultaten van de "
+"identificatie of de attributentabel (zie :ref:`using_actions`). Dubbele "
+"aanhalingstekens kunnen worden gebruikt om tekst te groeperen naar één enkel"
+" argument voor het programma, script of de opdracht. Dubbele "
+"aanhalingstekens zullen worden genegeerd indien zij worden voorafgegaan door"
+" een backslash."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2848
+msgid ""
+"The :guilabel:`Action Scopes` allows you to define where the action should "
+"be available. You have following choices:"
+msgstr ""
+"De :guilabel:`Bereiken actie` maken het voor u mogelijk te definiëren *waar*"
+" de actie beschikbaar zou moeten zijn. U heeft de volgende keuzes:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2851
+msgid ""
+":guilabel:`Field`: action is available when right click in the cell within "
+"the attribute table, in the feature form and in the default action button of"
+" the main toolbar."
+msgstr ""
+":guilabel:`Veld`: actie is beschikbaar bij met rechts klikken in de cel in "
+"de attributentabel, in het objectformulier en in de standaard actieknop van "
+"de hoofdwerkbalk."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2854
+msgid ""
+":guilabel:`Feature`: action is available when right click in the cell within"
+" the attribute table."
+msgstr ""
+":guilabel:`Object`: actie is beschikbaar bij met rechts klikken in de cel in"
+" de attributentabel."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2856
 msgid ""
 ":guilabel:`Canvas`: action is available in the main action button in the "
@@ -6000,6 +6474,25 @@ msgid ""
 msgstr ""
 ":guilabel:`Kaartvenster`: actie is beschikbaar in de hoofd actieknop op de "
 "werkbalk."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2857
+msgid ""
+":guilabel:`Form`: action is available only in a feature form designed using "
+"the :ref:`drag-and-drop <drag_drop_designer>` mode."
+msgstr ""
+":guilabel:`Formulier`: actie is alleen beschikbaar in een formulier van een "
+"object dat is ontworpen in de modus :ref:`slepen en neerzetten "
+"<drag_drop_designer>`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2859
+msgid ""
+":guilabel:`Layer`: action is available in the action button in the attribute"
+" table toolbar. Be aware that this type of action involves the entire layer "
+"and not the single features."
+msgstr ""
+":guilabel:`Laag`: actie is beschikbaar in de actieknop op de  werkbalk "
+"Attributentabel. Onthoud dat dit type actie de gehele laag betreft en niet "
+"alleen de enkele objecten."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2862
 #, python-format
@@ -6229,6 +6722,10 @@ msgstr "Klik op de tab :guilabel:`Acties`."
 msgid "Click |symbologyAdd| :sup:`Add a new action`."
 msgstr "Klik op |symbologyAdd| :sup:`Een nieuwe actie toevoegen`."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2959
+msgid "Choose the :guilabel:`Open URL` action type,"
+msgstr "Sluit het type actie :guilabel:`URL openen`,"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2960
 msgid "Enter a name for the action, for example ``Google Search``."
 msgstr "Geef een naam voor de actie bijvoorbeeld ``Google Search``."
@@ -6241,6 +6738,27 @@ msgstr ""
 "Aanvullend kunt u een :guilabel:`Verkorte naam` of zelfs een "
 ":guilabel:`Pictogram` toevoegen."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2962
+msgid ""
+"Choose the :guilabel:`Action Scopes`. See :ref:`adding_actions` for further "
+"information. Leave the default settings for this example."
+msgstr ""
+"Kies het :guilabel:`Bereik`. Bekijk :ref:`adding_actions` voor meer "
+"informatie. Laat voor dit voorbeeld de standaardinstellingen staan."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2965
+msgid ""
+"For the action, add the URL used for doing a Google search, up to but not "
+"including the search term: ``https://www.google.com/search?q=``"
+msgstr ""
+"Voeg, voor de actie, de URL in voor een zoekactie met Google, maar zonder de"
+" zoekterm: ``https://www.google.com/search?q=``"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2967
+msgid "The text in the :guilabel:`Action` field should now look like this::"
+msgstr ""
+"De tekst in het veld :guilabel:`Actie` zou er nu als volgt uit moeten zien::"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2971
 msgid ""
 "Click on the drop-down box containing the field names for the ``lakes`` "
@@ -6248,6 +6766,18 @@ msgid ""
 msgstr ""
 "Klik op  de keuzelijst die veldnamen voor de vectorlaag ``lakes`` bevat. "
 "Deze keuzelijst staat links van de knop :guilabel:`Toevoegen`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2973
+msgid ""
+"From the drop-down box, select :guilabel:`NAMES` and click "
+":guilabel:`Insert`."
+msgstr ""
+"Selecteer :guilabel:`NAMES` in de keuzelijst en klik op "
+":guilabel:`Toevoegen`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2974
+msgid "Your action text now looks like this::"
+msgstr "De tekst van uw actie ziet er nu als volgt uit::"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2978
 msgid "To finalize and add the action, click the :guilabel:`OK` button."
@@ -6259,9 +6789,41 @@ msgstr ""
 msgid "Edit action dialog configured with the example"
 msgstr "Overzicht dialoogvenster Acties bewerken met de voorbeeldacties"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2987
+msgid "This completes the action, and it is ready to use."
+msgstr "Dit voltooit de actie, en die is klaar voor gebruik."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2989
+msgid ""
+"Close the :guilabel:`Layer Properties` dialog and zoom in to an area of "
+"interest. Make sure the ``lakes`` layer is active and identify a lake. In "
+"the result box you'll now see that our action is visible:"
+msgstr ""
+"Sluit het dialoogvenster :guilabel:`Laageigenschappen`. Zorg er voor dat de "
+"laag ``lakes`` geselecteerd is in de legenda en start de functie "
+":guilabel:`Objecten identificeren`. Na het selecteren van een meer zie je "
+"dat de actie beschikbaar is in het resultaat:"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2998
 msgid "Select feature and choose action"
 msgstr "Selecteer een object en kies een actie"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3000
+msgid ""
+"When we click on the action, it brings up our default browser and navigates "
+"to the URL https://www.google.com/search?q=Tustumena. It is also possible to"
+" add further attribute fields to the action. Therefore, you can add a ``+`` "
+"to the end of the action text, select another field and click on "
+":guilabel:`Insert Field`. In this example, there is just no other field "
+"available that would make sense to search for."
+msgstr ""
+"Wanneer we op de actie klikken, zal deze uw standaard browser opstarten en "
+"navigeren naar de URL https://www.google.com/search?q=Tustumena. Het is ook "
+"mogelijk om nog meer attribuutvelden aan de zoekterm toe te voegen Daartoe "
+"kunt u aan het einde van de tekst van de actie een  '+' toevoegen, een ander"
+" veld te selecteren en te klikken op :guilabel:`Toevoegen`. Voor dit "
+"voorbeeld is er echter geen veld beschikbaar dat zin zou hebben om op te "
+"zoeken."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3007
 msgid ""
@@ -6467,6 +7029,10 @@ msgstr "Tip voor kaart gemaakt met HTML-code"
 msgid "Rendering Properties"
 msgstr "Rendering"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3143
+msgid "Layer Rendering Properties dialog"
+msgstr "Dialoogvenster Laageigenschappen"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3146
 msgid "Scale dependent visibility"
 msgstr "Schaalafhankelijke zichtbaarheid"
@@ -6491,6 +7057,16 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3711
 msgid "mapIdentification"
 msgstr "mapIdentification"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3157
+msgid ""
+"You can also activate scale dependent visibility on a layer from within the "
+":guilabel:`Layers` panel: right-click on the layer and in the contextual "
+"menu, select :guilabel:`Set Layer Scale Visibility`."
+msgstr ""
+"U kunt het schaalafhankelijk renderen ook activeren op een laag vanuit het "
+"paneel :guilabel:`Lagen`. Klik met rechts op de laag en selecteer in het "
+"contextmenu, :guilabel:`Zichtbaarheidsschaal laag instellen`."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3163
 msgid "Simplify geometry"
@@ -6769,6 +7345,223 @@ msgid ""
 msgstr ""
 "Meer informatie over het gebruiken van variabelen in het gedeelte "
 ":ref:`general_tools_variables`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3286
+msgid "Elevation Properties"
+msgstr "Eigenschappen hoogte"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3288
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and its appearance in the profile tool charts. Specifically, you can set:"
+msgstr ""
+"De tab |elevationscale| :guilabel:`Hoogte` verschaft opties om de "
+"eigenschappen voor hoogte van de laag te beheren in een "
+":ref:`3D-kaartweergave <label_3dmapview>` en het uiterlijk in de diagrammen "
+"van het profiel. Specifiek kunt u instellen:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3299
+msgid "Vector layer elevation properties dialog"
+msgstr "Dialoogvenster Eigenschappen Hoogte vectorlaag"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3302
+msgid ""
+":guilabel:`Elevation Clamping`: defines how and whether the features "
+"altitude should be:"
+msgstr ""
+":guilabel:`Hoogte vastzetten`: definieert hoe en of de hoogte van de "
+"objecten zou moeten:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3305
+msgid ""
+":guilabel:`Clamped to terrain`: takes elevation directly from the terrain "
+"height and ignores any existing Z values in the features. A data-defined "
+":guilabel:`Offset` value from the terrain can also be filled."
+msgstr ""
+":guilabel:`Vastgemaakt aan terrein`: neemt de hoogte direct uit de hoogte "
+"van het terrein en negeert bestaande waarden Z in de objecten. Een data-"
+"bepaalde waarde voor :guilabel:`Verschuiving` vanaf het terrein kan ook "
+"wordne ingevuld."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3308
+msgid ""
+":guilabel:`Relative to terrain`: any existing Z values in the features are "
+"added to the terrain height. A :guilabel:`Scale` factor followed by a data-"
+"defined :guilabel:`Offset` can be used to adjust the elevation. This option "
+"is not available for 2D geometry layers."
+msgstr ""
+":guilabel:`Relatief aan terrein`: bestaande waarden Z in de objecten worden "
+"toegevoegd aan de hoogte van het terrein. Een :guilabel:`Schaal`factor, "
+"gevolgd door een data-bepaalde :guilabel:`Verschuiving` kan worden gebruikt "
+"om de hoogte aan te passen. Deze optie is niet beschikbaar voor lagen met 2D"
+" geometrie."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3312
+msgid ""
+":guilabel:`Absolute`: ignores the terrain height and directly takes Z values"
+" from the features for the elevation. A :guilabel:`Scale` factor followed by"
+" a data-defined :guilabel:`Offset` can be used to adjust the elevation. For "
+"2D geometry layers (with no Z values), a data-defined :guilabel:`Base "
+"height` can instead be set."
+msgstr ""
+":guilabel:`Absoluut`: negeert de hoogte van het terrein en neemt voor de "
+"hoogte de waarden Z direct uit de objecten. Een :guilabel:`Schaal`factor,, "
+"gevolgd door een data-bepaalde :guilabel:`Verschuiving` kan worden gebruikt "
+"om de hoogte aan te passen. Voor lagen met 2D geometrie (zonder waarden Z), "
+"kan in plaats daarvan een :guilabel:`Basishoogte` worden ingesteld."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3317
+msgid ""
+"|unchecked| :guilabel:`Enable extrusion`: you can set a :guilabel:`Height` "
+"to control how high features vertically extend above their base. This is "
+"convenient to indicate that a 2D geometry layers, e.g. a polygon building "
+"footprints layer, actually represents 3D objects."
+msgstr ""
+"|unchecked| :guilabel:`Uitstrekken inschakelen`: u kunt een "
+":guilabel:`Hoogte` instellen om te beheren hoe objecten zich verticaal "
+"uitstrekken boven hun basis. Dit is handig om aan te geven dat lagen met 2D "
+"geometrie, bijv. een laag met polygoon voetafdruk van een gebouw, in feite "
+"3D objecten weergeeft."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3321
+msgid ""
+":guilabel:`Elevation Binding`: only relevant when combining an "
+":guilabel:`Elevation clamping` relying on the terrain with a line or polygon"
+" layer, this option controls how feature elevation is set relative to the "
+"terrain height. The terrain can be sampled:"
+msgstr ""
+":guilabel:`Hoogte binden`: alleen relevant bij het combineren van een "
+":guilabel:`Hoogte vastzetten` vertrouwend op het terrein met een lijnen- of "
+"polygonenlaag, deze optie beheert hoe de hoogte van objecten ris ingesteld, "
+"relatief aan de hoogte van het terrein. Het terrein kan worden bemonsterd:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3326
+msgid ""
+"at the feature's :guilabel:`Centroid`, with the centroid height being added "
+"to each vertex's z value"
+msgstr ""
+"op het :guilabel:`Zwaartepunt` van het object, waarbij de hoogte van het "
+"zwaartepunt wordt toegevoegd aan de waarde Z van elk punt"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3328
+msgid ""
+"at every individual :guilabel:`Vertex` before being added to the vertex's z "
+"value"
+msgstr ""
+"op elk individueel :guilabel:`Punt` voordat het wordt toegevoegd aan de "
+"waarde Z van het punt"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3331
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls how features are rendered "
+"when drawing a profile chart. Two main :guilabel:`Interpretation` modes are "
+"available:"
+msgstr ""
+":guilabel:`Uiterlijk diagram profiel`: beheert hoe objecten worden gerenderd"
+" bij het tekenen van een diagram voor een profiel. Twee belangrijke modi "
+"voor :guilabel:`Interpretatie` zijn beschikbaar:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3335
+msgid ""
+"as :guilabel:`Individual features`: samples discrete positions where the "
+"cross section profile line intersects the vector features. That intersection"
+" can be represented as point, line or surface depending on the layer type "
+"and whether an extrusion is applied."
+msgstr ""
+"als :guilabel:`Individuele objecten`: samplet afzonderlijke posities waar de"
+" kruisende profiellijn kruist met de vectorobjecten. Die kruising kan worden"
+" weergegeven als punt, lijn of oppervlak, afhankelijk van het type laag en "
+"of uitstrekken is toegepast."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3340
+msgid ""
+"With checking |checkbox| :guilabel:`Respect layer symbology`, features will "
+"be rendered on the profile chart with their corresponding :ref:`layer "
+"styling <vector_style_menu>` (allowing e.g. categorized classes to be "
+"visible on the profile chart). If the profile symbol type does not match the"
+" layer's renderer symbol types, only the symbol color from the renderer is "
+"applied to the profile symbol."
+msgstr ""
+"Door |checkbox| :guilabel:`Symbologie laag respecteren ` te selecteren, "
+"zullen objecten worden gerenderd op het diagram van het profiel met hun "
+"corresponderende :ref:`opmaak voor de laag <vector_style_menu>` (wat het "
+"mogelijk maakt om bijv. gecategoriseerde klassen zichtbaar te kaken op het "
+"diagram voor het profiel). Als het type symbool voor het profiel niet "
+"overeenkomt met de typen symbool van de renderer van de laag, zal alleen de "
+"kleur van de renderer worden toegepast op het symbool voor het profiel."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3347
+msgid ""
+"Depending on the layer settings, profile symbols can be represented with a "
+"custom style, using:"
+msgstr ""
+"Afhankelijk van de instellingen van de laag kunnen symbolen voor het profiel"
+" worden weergegeven met een aangepaste opmaak, met:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3350
+msgid ""
+":ref:`Marker style <vector_marker_symbols>`: for non-extruded point and line"
+" features, and for non-extruded polygon features touched by the profile line"
+msgstr ""
+":ref:`Stijl markering <vector_marker_symbols>`: voor niet-uitgestrekte "
+"objecten punt en lijn, en voor niet-uitgestrekte objecten polygoon die "
+"worden geraakt door de lijn van het profiel"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3352
+msgid ""
+":ref:`Line style <vector_line_symbols>`: for extruded point and line "
+"features, and for non-extruded polygon features intersected by the profile "
+"line"
+msgstr ""
+":ref:`Lijnstijl <vector_line_symbols>`: voor uitgestrekte objecten punt en "
+"lijn, en voor niet-uitgestrekte objecten polygoon die worden gekruist door "
+"de lijn van het profiel"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3354
+msgid ":ref:`Fill style <vector_fill_symbols>`: for extruded polygon features"
+msgstr ""
+":ref:`Vullingstijl <vector_fill_symbols>`: voor uitgestrekte objecten "
+"polygoon"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3356
+msgid ""
+"as :guilabel:`Continuous Surface (e.g. contours)`: the elevation chart will "
+"be rendered as a surface instead of separate features by joining the sampled"
+" elevation results into a continuous line. This can enhance visualisation "
+"and is designed for vector layers which represent a continuous elevation "
+"surface, e.g contour lines or surveyed elevation points. The line "
+":guilabel:`Style` can be set as:"
+msgstr ""
+"als :guilabel:`Doorlopend oppervlak (bijv. Contouren)`: het diagram van de "
+"hoogte zal worden gerenderd als een oppervlak in plaats van afzonderlijke "
+"objecten door de gemonsterde resultaten voor de hoogte in een doorlopende "
+"lijn samen te voegen. Dit kan de visualisatie verbeteren en is ontworpen "
+"voor vectorlagen die een doorlopend oppervlak voor hoogte weergeven, bijv. "
+"contourlijnen of in kaart gebrachte punten voor hoogte. De lijn "
+":guilabel:`Stijl` kan wordne ingesteld als:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3363
+msgid "a profile :guilabel:`Line` with a :guilabel:`Line style` applied"
+msgstr "een profiel :guilabel:`Lijn` met een toegepaste :guilabel:`lijnstijl`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3364
+msgid ""
+"a surface with :guilabel:`Fill below` and a corresponding :guilabel:`Fill "
+"style`"
+msgstr ""
+"een oppervlak met :guilabel:`Vullen onder` en een corresponderende "
+":guilabel:`Vullingstijl`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3367
+msgid ""
+"Moreover, you can check |unchecked| :guilabel:`Show markers at sampled "
+"points` to make them visible over the interpretation line and assign them a "
+":guilabel:`Marker style`."
+msgstr ""
+"Meer nog, u kunt |unchecked| :guilabel:`Markeringen weergeven op bemonsterde"
+" punten` selecteren om ze zichtbaar te maken op de lijn voor interpretatie "
+"en ze een :guilabel:`Stijl markerering` toe te wijzen."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3376
 msgid "Metadata Properties"
