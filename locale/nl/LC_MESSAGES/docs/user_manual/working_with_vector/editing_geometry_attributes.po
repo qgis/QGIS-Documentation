@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-23 10:17+0000\n"
 "PO-Revision-Date: 2023-03-19 14:53+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,6 +29,16 @@ msgstr ""
 msgid "Editing"
 msgstr "Bewerken"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:12
+msgid ""
+"QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS, MS SQL "
+"Server and Oracle Spatial vector layers and tables. They can be of 2D or 3D "
+"geometry type."
+msgstr ""
+"QGIS heeft diverse mogelijkheden voor het bewerken van vectorlagen en "
+"tabellen van OGR, SpatiaLite, PostGIS, MS SQL Server en Oracle Spatial en "
+"tabellen. Zij mogen van het type 2D of 3D zijn."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:17
 msgid ""
 "The procedure for editing GRASS layers is different - see section "
@@ -39,6 +50,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:22
 msgid "**Concurrent Edits**"
 msgstr "**Tegelijk bewerken**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:24
+msgid ""
+"QGIS does not track if somebody else is editing the same feature at the same"
+" time as you are. The last person to save the edits wins."
+msgstr ""
+"QGIS houdt niet bij of iemand anders hetzelfde object bewerkt, terwijl u "
+"doet ook doet. De laatste persoon, die de bewerkingen opslaat, wint."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:30
 msgid "**Validating Edits**"
@@ -139,6 +158,24 @@ msgstr ""
 msgid "Snapping and Digitizing Options"
 msgstr "Opties voor snappen en digitaliseren"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:85
+msgid ""
+"Global :ref:`snapping and digitizing settings <digitizing_options>` "
+"(snapping mode, tolerance value, and units...) can be overridden in the "
+"project from the :menuselection:`Project --> Snapping Options...` menu. In "
+"the :guilabel:`Snapping and Digitizing Options`, you can also configure some"
+" other properties (snapping layers, scale limit, topology...) The "
+":guilabel:`Snapping Toolbar` gives access to most of these features."
+msgstr ""
+"Globale :ref:`instellingen voor snappen en digitaliseren "
+"<digitizing_options>` (modus Snappen, waarde voor tolerantie, en eenheden…) "
+"kunnen worden overschreven in het project vanuit het menu "
+":menuselection:`Project --> Opties voor snappen…` menu. In de "
+":guilabel:`Opties voor snappen en digitaliseren` kunt u ook enkele andere "
+"eigenschappen configureren (snappen in lagen, begrenzing schaal, topologie…)"
+" De :guilabel:`Werkbalk Snappen` geeft toegang tot de meeste van deze "
+"mogelijkheden."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:92
 msgid ""
 "By default, snapping is disabled in a project until you press the |snapping|"
@@ -215,6 +252,10 @@ msgid "QGIS will show different *snap* icons depending on the kind of *snap*:"
 msgstr ""
 "QGIS zal verschillende pictogrammen voor *snappen* weergeven, afhankelijk "
 "van het soort *snappen*:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:125
+msgid "Snapping icons"
+msgstr "Pictogrammen voor snappen"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:130
 msgid "Snapping to a vertex: box icon"
@@ -490,6 +531,15 @@ msgid ""
 msgstr ""
 "Topologisch bewerken werkt met objecten uit verschillende lagen, zo lang als"
 " de lagen zichtbaar zijn en in modus Bewerken staan."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:275
+msgid ""
+"In layer with Z or M values, topological editing will interpolate the Z or M"
+" value of the vertex based on the value of the edge used for the connection."
+msgstr ""
+"Op een laag met waarden Z of M zal topologisch bewerken de waarde Z of M van"
+" het punt interpoleren, gebaseerd op de waarde van de rand die wordt "
+"gebruikt voor de verbinding."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:282
 msgid "Overlapping control"
@@ -787,6 +837,10 @@ msgstr ""
 "Met het gebruiken van de basisgereedschappen voor digitaliseren kunt u de "
 "volgende functies uitvoeren:"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:412
+msgid "Vector layer basic editing toolbar"
+msgstr "Basis werkbalk voor Bewerken van vectorlaag"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:415
 msgid "Tool"
 msgstr "Gereedschap"
@@ -849,12 +903,20 @@ msgid "digitizeWithSegment"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:422
+msgid "Digitize using straight segments"
+msgstr "Digitaliseren met rechte segmenten"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:422
 msgid "|digitizeWithCurve|"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2116
 msgid "digitizeWithCurve"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:422
+msgid "Digitize using curve lines"
+msgstr "Digitaliseren met gebogen lijnen"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
 msgid "|streamingDigitize|"
@@ -865,12 +927,20 @@ msgid "streamingDigitize"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
+msgid "Enable freehand digitizing"
+msgstr "Vrije hand digitaliseren inschakelen"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
 msgid "|digitizeShape|"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2114
 msgid "digitizeShape"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
+msgid "Digitize polygon of regular shape"
+msgstr "Polygoon met normale vorm digitaliseren"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:426
 msgid "|newTableRow|"
@@ -944,9 +1014,17 @@ msgstr ""
 msgid "Vertex Tool (Current Layer)"
 msgstr "Gereedschap Punten (Huidige laag)"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:432
+msgid "|checkbox| :guilabel:`Show Vertex Editor`"
+msgstr "|checkbox| :guilabel:`Puntenbewerker weregeven`"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2090
 msgid "checkbox"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:432
+msgid "Set whether the vertex editor panel should auto-open"
+msgstr "Stel in of het paneel Puntenbewerker automatisch zou moeten openen"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:432
 msgid "|multiEdit|"
@@ -1082,6 +1160,79 @@ msgstr ""
 "regelmatig te gebruiken. Deze zal ook controleren of u uw gegevens nog naar "
 "de gegevensbron kunt schrijven."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:471
+msgid "Geometry editing techniques"
+msgstr "Technieken voor bewerken geometrie"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:473
+msgid ""
+"When a geometry drawing tool (mainly the ones that add, split, reshape "
+"features) is enabled for a line or polygon based layer, you can select the "
+"technique for adding new vertices:"
+msgstr ""
+"Wanneer een tekengreeedschap voor een geometrie (voornamelijk die welke "
+"toevoegen, splitsen, objecten opnieuw vormen) is ingeschakeld voor een op "
+"lijn of  polygoon gebaseerde laag, kunt u de techniek selecteren voor het "
+"toevoegen van nieuwe punten:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:477
+msgid ""
+"The |digitizeWithSegment| :sup:`Digitize with Segment`: draws straight "
+"segment whose start and end points are defined by left clicks."
+msgstr ""
+"Het gereedschap |digitizeWithSegment| :sup:`Digitaliseren met segment`: "
+"tekent recht segment waarvan de begin- en eindpunten worden gedefinieerd "
+"door klikken met links."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:479
+msgid ""
+"The |digitizeWithCurve| :sup:`Digitize with Curve`: draws curve line based "
+"on three consecutive nodes defined by left clicks (start, point along the "
+"arc, end). If the geometry type does not support curves, then consecutive "
+"smaller segments are used to approximate the curvature."
+msgstr ""
+"Het gereedschap |digitizeWithCurve| :sup:`Digitaliseren met boog`: tekent "
+"een gebogen lijn, gebaseerd op drie opeenvolgende punten, gedefinieerd door "
+"klikken met links (begin, punt langs de boog, einde). Als het type geometrie"
+" geen bogen ondersteund, dan zullen opeenvolgende kleinere segmenten worden "
+"gebruikt om het uiterlijk van de boog te benaderen."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:483
+msgid ""
+"The |streamingDigitize| :sup:`Stream Digitizing`: draws lines in freehand "
+"mode, i.e. nodes are added following cursor movement in the map canvas and a"
+" :guilabel:`Streaming Tolerance`. The streaming tolerance defines the "
+"spacing between consecutive vertices. Currently, the only supported unit is "
+"pixels (``px``). Only the starting left click and the ending right click are"
+" necessary in this mode."
+msgstr ""
+"Het gereedschap |streamingDigitize| :sup:`Stroom digitaliseren`: tekent "
+"lijnen in modus Vrije hand, d.i. knopen worden toegevoegd die de "
+"verplaatsing van de cursor in het kaartvenster volgen en een "
+":guilabel:`Tolerantie stromen`. De tolerantie voor stromen definieert de "
+"afstand tussen opeenvolgende punten. Momenteel is de enige ondersteunde "
+"eenheid pixels (``px``). In deze modus zijn alleen de klik voor het begin en"
+" de klik met rechts voor het einde noodzakelijk."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:489
+msgid ""
+"The |digitizeShape| :sup:`Digitize Shape`: triggers tools on the :ref:`Shape"
+" Digitizing Toolbar <shape_edit>` to draw a polygon of a regular shape."
+msgstr ""
+"Het gereedschap |digitizeShape| :sup:`Vorm digitaliseren`: activeert "
+"gereedschappen op de werkbalk :ref:`Regelmatige vorm digitaliseren "
+"<shape_edit>` om een polygoon met een regelmatige vorm te tekenen."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:492
+msgid ""
+"The selected technique remains while switching among the digitizing tools. "
+"You can combine any of the first three methods while drawing the same "
+"geometry."
+msgstr ""
+"De geselecteerde techniek wordt behouden bij het schakelen tussen de "
+"gereedschappen voor digitaliseren. U kunt elk van de eerste drie methoden "
+"combineren bij het tekenen van dezelfde geometrie."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:500
 msgid "Adding Features"
 msgstr "Objecten toevoegen "
@@ -1117,6 +1268,14 @@ msgstr ""
 "om objecten te maken met de ingeschakelde ruimtelijke gereedschappen. "
 "Digitaliseren van de geometrie:"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:513
+msgid ""
+"(Optional as it is the default) Select the |digitizeWithSegment| "
+":sup:`Digitize With Segment` geometry drawing method"
+msgstr ""
+"(Optioneel omdat het de standaard is) Selecteer de methode voor tekenen "
+"|digitizeWithSegment| :sup:`Digitaliseren met segment` van een geometrie"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:515
 msgid ""
 "Left-click on the map area to create the first point of your new feature. "
@@ -1140,6 +1299,59 @@ msgstr ""
 ":ref:`snappen aan objecten <snapping_options>`, de :ref:`snappen-aan-raster "
 "<snap_to_grid>` of het paneel :ref:`Geavanceerd digitaliseren "
 "<advanced_digitizing_panel>` voor het nauwkeurig plaatsen van elk punt."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:524
+msgid ""
+"Along with drawing straight segments between nodes you click one by one, "
+"lines and polygons can be:"
+msgstr ""
+"Naast het tekenen van rechte segmenten tussen knopen die u een voor een "
+"klikt, kunnen lijnen en polygonen worden:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:527
+msgid ""
+":ref:`traced automatically <tracing>`, accelerating the digitization. This "
+"will create consecutive straight lines between the vertices you place, "
+"following existing features."
+msgstr ""
+":ref:`automatisch getraceerd <tracing>`, het digitaliseren versnellend. Dit "
+"zal opeenvolgende rechte lijnen maken tussen de punten die u plaatst, "
+"bestaande objecten volgend."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:530
+msgid ""
+"free-hand digitized, pressing :kbd:`R` or activating |streamingDigitize| "
+":sup:`Stream Digitizing`."
+msgstr ""
+"vrije-hand gedigitaliseerd, druk op :kbd:`R` of activeer |streamingDigitize|"
+" :sup:`Stroom digitaliseren`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:532
+msgid ""
+"drawn as curve, pressing :kbd:`Ctrl+Shift+G` or activating "
+"|digitizeWithCurve| :sup:`Digitize with Curve`."
+msgstr ""
+"getekend als boog, druk op :kbd:`Ctrl+Shift+G` of activeer "
+"|digitizeWithCurve| :sup:`Digitaliseren met boog`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:536
+msgid ""
+"While digitizing line or polygon geometries, you can switch back and forth "
+"between the geometry drawing methods, allowing you to create features mixing"
+" straight segments, free-hand ones and curved parts."
+msgstr ""
+"Tijdens het digitaliseren van geometrieën lijn of polygoon kunt u heen en "
+"weer schakelen tussen de methoden voor het tekenen van geometrieën, wat het "
+"voor u mogelijk maakt objecten te tekenen met gemixte rechte, vrij-hand en "
+"gebogen delen."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:540
+msgid ""
+"Press :kbd:`Delete` or :kbd:`Backspace` key to revert the last node(s) you "
+"may wrongly add."
+msgstr ""
+"Druk op de toets :kbd:`Delete` of :kbd:`Backspace` om de laatste kno(o)p(en)"
+" te verwijderen die u misschien foutief toevoegde."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:542
 msgid ""
@@ -1501,13 +1713,163 @@ msgstr ""
 msgid "The Vertex Editor Panel"
 msgstr "Het paneel Punten bewerker"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:725
+msgid ""
+"With enabling a vertex tool, you also open the :guilabel:`Vertex Editor` "
+"panel. Right-clicking over a feature fills the panel with the list of all "
+"the vertices of the feature with their :guilabel:`x`, :guilabel:`y` "
+"(:guilabel:`z`, :guilabel:`m` if applicable) coordinates and :guilabel:`r` "
+"(for the radius, in case of circular geometry). The feature is also made "
+"exclusive for editing, meaning that the edit of any other features is "
+"disabled:"
+msgstr ""
+"Door het inschakelen van een gereedschap voor punten opent u ook het paneel "
+":guilabel:`Puntenbewerker`. Rechtsklikken op een object vult het paneel met "
+"de lijst van alle punten van het object met hun coördinaten :guilabel:`X`, "
+":guilabel:`Y` (:guilabel:`Z`, :guilabel:`M` indien van toepassing) en "
+":guilabel:`R` (voor de straal, in het geval van een cirkelvormige "
+"geometrie). Het object wordt ook exclusief voor bewerken ingesteld, wat "
+"betekent dat het bewerken van enig ander object uitgeschakeld is:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:731
+msgid ""
+"Selecting a row in the table does select the corresponding vertex in the map"
+" canvas, and vice versa."
+msgstr ""
+"Selecteren van een rij in de tabel selecteert het overeenkomende punt in het"
+" kaartvenster, en vice versa."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:732
+msgid ""
+"Clicking or dragging over the map canvas will only select or move vertices "
+"and segments of that feature"
+msgstr ""
+"Klikken of slepen over het kaartvenster zal alleen punten en segmenten van "
+"dat object selecteren of verplaatsen"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:733
+msgid ""
+"Change a coordinate in the table and the vertex position is updated. This is"
+" a convenient way to edit Z coordinate or M value on vertices."
+msgstr ""
+"Wijzig een coördinaat in de tabel en de positie van het punt wordt "
+"bijgewerkt. Dit is een handige manier om coördinaten Z of waarden M te "
+"bewerken voor punten."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:735
+msgid "You can also select multiple rows and delete them altogether."
+msgstr ""
+"U kunt ook meerdere rijen tegelijk selecteren en ze allemaal verwijderen."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:736
+msgid "New vertices can only be added to the bound feature"
+msgstr "Nieuw punten kunnen alleen worden toegevoegd aan het verbonden object"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:738
+msgid ""
+"If you do not want the :guilabel:`Vertex Editor` panel to immediately show "
+"each time you interact with vertex tools (and potentially hide other panels "
+"or disturb panels placement), uncheck the :guilabel:`Auto-open table` entry "
+"in the |hamburgerMenu| :sup:`Options` menu at the top of the panel. You can "
+"then also close the panel. To reopen the panel, you would need to right-"
+"click over a panel or toolbar and select it in the list or tick the "
+":guilabel:`Show vertex editor` entry in the :guilabel:`Digitizing toolbar`."
+msgstr ""
+"Als u niet wilt dat het paneel :guilabel:`Puntenbewerker` onmiddellijk wordt"
+" weergegeven elke keer dat u interacteert met gereedschappen voor punten (en"
+" potentieel ander panelen verbergt of de plaatsing van panelen verstoort), "
+"deselecteer het item :guilabel:`Auto openen tabel` in het menu "
+"|hamburgerMenu| :sup:`Opties` aan de bovenzijde van het paneel. U kunt dan "
+"ook het paneel sluiten. U zou, om het paneel opnieuw te openen, met rechts "
+"moeten klikken op een paneel of werkbalk en het selecteren in de lijst of "
+"klikken op het item :guilabel:`Puntenbewerker weergeven` op de "
+":guilabel:`werkbalk Digitaliseren`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2144
+msgid "hamburgerMenu"
+msgstr "hamburgerMenu"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:753
 msgid "Vertex editor panel showing selected nodes"
 msgstr "Paneel Punten bewerker dat geselecteerde punten weergeeft"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:759
+msgid "Rules of Z coordinate or M value assignment"
+msgstr "Regels voor toewijzen van coördinaat Z of waarde M"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:761
+msgid ""
+"Digitizing 3D vector features or features with M value is not that different"
+" from (X,Y) 2D layers'. Tools and options described in this chapter are "
+"still available and help you place the vertex or point in a planar "
+"environment. Then you may need to handle the Z coordinate (or M value) "
+"assignment:"
+msgstr ""
+"Digitaliseren van 3D vectorobjecten of objecten met waarde M verschilt niet "
+"zoveel van (X,Y) 2D-lagen. Gereedschappen en opties die worden beschreven in"
+" dit hoofdstuk zijn nog steeds beschikbaar en helpen u bij het plaatsen van "
+"het punt in een vlakke omgeving. Dan dient u de toewijzing van het "
+"coördinaat Z  (of waarde M ) af te handelen:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:766
+msgid ""
+"By default, QGIS will assign to new vertices the :guilabel:`Default Z value`"
+" (respectively :guilabel:`Default M value`) set in the "
+":menuselection:`Settings --> Options --> Digitizing` tab. If the "
+":ref:`Advanced Digitizing Panel <advanced_digitizing_panel>` is in use, then"
+" the value is taken from its :guilabel:`z` (respectively :guilabel:`m`) "
+"widget."
+msgstr ""
+"Standaard zal QGIS aan nieuwe punten de :guilabel:`Standaard waarde Z` "
+"(respectievelijk :guilabel:`Standaard waarde M`) toewijzen, ingesteld op de "
+"tab :menuselection:`Extra --> Opties --> Digitaliseren`. Als het "
+":ref:`paneel Geavanceerd digitaliseren <advanced_digitizing_panel>` in "
+"gebruik is, dan wordt de waarde genomen uit de widget :guilabel:`Z` "
+"(respectievelijk :guilabel:`M`) daarvan."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:772
+msgid ""
+"When snapping to a vertex, the new or moved vertex takes the snapped one's Z"
+" or M value."
+msgstr ""
+"Bij het snappen aan een punt zullen nieuwe of verplaatste punten de waarde Z"
+" of M van de gesnapte punten overnemen."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:773
+msgid ""
+"When snapping to a segment while the topological editing is on, then the new"
+" vertex Z or M value is interpolated along the segment."
+msgstr ""
+"Bij het snappen aan een segment terwijl Topologisch bewerken is "
+"ingeschakeld, dan wordt de nieuwe waarde Z of M van het punt geïnterpoleerd "
+"langs het segment."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:775
+msgid ""
+"If the :guilabel:`z` (respectively :guilabel:`m`) widget of the "
+":guilabel:`Advanced Digitizing Panel` is |locked| locked, then its value is "
+"applied to the vertex, taking precedence over any snapped vertex or segment "
+"Z or M value."
+msgstr ""
+"Als de widget :guilabel:`Z` (respectievelijk :guilabel:`M`) van het "
+":guilabel:`paneel Geavanceerd digitaliseren` is |locked| vergrendeld, dan "
+"wordt de waarde daarvan toegepast op het punt, voorrang nemend over enige "
+"waarde Z of M van een gesnapt punt of segment."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2148
 msgid "locked"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:780
+msgid ""
+"To edit Z or M values of an existing feature, you can use the :ref:`Vertex "
+"editor panel <vertex_editor_panel>`. To create features with custom Z or M "
+"values you may want to rely on the :guilabel:`Advanced Digitizing Panel`."
+msgstr ""
+"U kunt, om waarden Z of M van een bestaand object te bewerken, het "
+":ref:`paneel Puntenbewerker <vertex_editor_panel>` gebruiken. Voor het maken"
+" van aangepaste waarden Z of M zou u willen vertrouwen op het "
+":guilabel:`paneel Geavanceerd digitaliseren`."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:789
 msgid "Cutting, Copying and Pasting Features"
@@ -1661,6 +2023,23 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:855
 msgid "**Copy string attribute into another**"
 msgstr "**Tekenreeks van attribuut naar een ander kopiëren**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:857
+msgid ""
+"If you have created a new column in your attribute table with type 'string' "
+"and want to paste values from another attribute column that has a greater "
+"length the length of the column size will be extended to the same amount. "
+"This is because the GDAL Shapefile driver knows to auto-extend string and "
+"integer fields to dynamically  accommodate for the length of the data to be "
+"inserted."
+msgstr ""
+"Indien u een nieuwe kolom hebt gemaakt in uw attributentabel van het type "
+"'string' en u wilt daarin waarden plakken vanuit een andere kolom met "
+"attributen die een grotere lengte hebben, zal de grootte van de kolom worden"
+" uitgebreid tot dezelfde grootte. Dat is omdat het stuurprogramma voor het "
+"GDAL Shapefile de velden voor string en integer automatisch weet te "
+"vergroten om dynamisch aan te passen tot de lengte van de gegevens die "
+"moeten worden ingevoerd."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:868
 msgid "Deleting Selected Features"
@@ -1873,6 +2252,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:966
 msgid "Advanced digitizing"
 msgstr "Geavanceerd digitaliseren"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:969
+msgid "Vector layer advanced editing toolbar"
+msgstr "Werkbalk voor Geavanceerd bewerken voor vectorlaag"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:972
 msgid "Icon"
@@ -3212,9 +3595,65 @@ msgstr ""
 msgid "Shape digitizing"
 msgstr "Vorm digitaliseren"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1547
+msgid ""
+"The :guilabel:`Shape Digitizing` toolbar is synchronized with the "
+"|digitizeShape| :sup:`Digitize Shape` :ref:`geometry drawing method "
+"<drawing_methods>` you can select on the :guilabel:`Advanced Digitizing "
+"Toolbar`. It offers a set of tools to draw lines or polygons features of "
+"regular shape."
+msgstr ""
+"De werkbalk :guilabel:`Regelmatige vorm digitaliseren` is gesynchroniseerd "
+"met d |digitizeShape| :sup:`Vorm digitaliseren` :ref:`methode voor het "
+"tekenen van een geometrie <drawing_methods>` die u kunt selecteren op de "
+":guilabel:`werkbalk Geavanceerd digitaliseren`. Het biedt een set "
+"gereedschappen om lijnen of polygonen te tekenen met ene regelmatige vorm."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1556
+msgid "Circular string by radius"
+msgstr "Cirkel-tekenreeks per straal"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1558
+msgid ""
+"The |circularStringRadius| :sup:`Circular string by radius` button allows to"
+" add line or polygon features with a circular geometry, given two nodes on "
+"the curve and a radius:"
+msgstr ""
+"De knop |circularStringRadius| :sup:`Cirkel-tekenreeks per straal` maakt het"
+" mogelijk objecten lijn of polygoon met een cirkelvormige geometrie toe te "
+"voegen, gegeven de twee knopen op de boog en een straal:"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2102
 msgid "circularStringRadius"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1562
+msgid "Left click twice to place the two points on the geometry."
+msgstr ""
+"Klik tweemaal met links om de twee punten op de geometrie te plaatsen."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1563
+msgid ""
+"A :guilabel:`Radius` widget in the top right corner of the map canvas "
+"displays current radius (corresponding to distance between the points). Edit"
+" that field to the value you want."
+msgstr ""
+"Een widget :guilabel:`Straal` in de rechterbovenhoek van het kaartvenster "
+"geeft de huidige straal weer (corresponderend met de afstand tussen de "
+"punten). Bewerk dat veld naar de waarde die u wilt gebruiken."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1566
+msgid ""
+"An overview of the arcs matching these constraints is displayed while moving"
+" around the cursor. Right-click to validate when the expected arc is shown."
+msgstr ""
+"Een overzicht van de bogen die overeenkomen met deze beperkingen wordt "
+"weergegeven bij het verplaatsen van de muis. Klik met rechts om te valideren"
+" als de verwachte boog wordt weergegeven."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1569
+msgid "Add a new point to start shaping another arc."
+msgstr "Voeg een nieuw punt toe om een andere boog vorm te geven."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1571
 msgid ""
@@ -3258,21 +3697,82 @@ msgstr ""
 "gegevensprovider, zal het worden opgeslagen als een gebogen geometrie, "
 "Indien niet, dan zal QGIS segmenten maken van de circulaire bogen."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1591
+msgid ""
+"|circle2Points| :sup:`Circle from 2 points`: The two points define the "
+"diameter and the orientation of  the circle. (Left-click, right-click)"
+msgstr ""
+"|circle2Points| :sup:`Cirkel uit 2 punten`: De twee punten definiëren de "
+"diameter en de oriëntatie van de cirkel. (Klik met links, klik met rechts)"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2092
 msgid "circle2Points"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1593
+msgid ""
+"|circle3Points| :sup:`Circle from 3 points`: Draws a circle from three known"
+" points on the circle. (Left-click, left-click, right-click)"
+msgstr ""
+"|circle3Points| :sup:`Cirkel uit 3 punten`: Tekent een cirkel uit drie "
+"bekende punten op de cirkel. (Klik met links, klik met links, klik met "
+"rechts)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2096
 msgid "circle3Points"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1595
+msgid ""
+"|circleCenterPoint| :sup:`Circle from center and a point`: Draws a circle "
+"with a given center and a point on the circle (Left-click, right-click). "
+"When used with the :ref:`advanced_digitizing_panel` this tool can become a "
+"\"Add circle from center and radius\" tool by setting and locking the "
+"distance value after first click."
+msgstr ""
+"|circleCenterPoint| :sup:`Cirkel vanuit middelpunt en een punt`: Tekent een "
+"cirkel met een opgegeven middelpunt en een punt op de cirkel (Klik met "
+"links, klik met rechts). Indien gebruikt met het "
+":ref:`advanced_digitizing_panel` kan dit gereedschap een gereedschap "
+"\"Cirkel uit middelpunt en straal toevoegen\" worden door het instellen en "
+"vastzetten van een waarde Afstand na de eerste klik."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2100
 msgid "circleCenterPoint"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1600
+msgid ""
+"|circle3Tangents| :sup:`Circle from 3 tangents`: Draws a circle that is "
+"tangential to three segments. **Note that you must activate snapping to "
+"segments** (See :ref:`snapping_tolerance`). Click on a segment to add a "
+"tangent. If two tangents are parallel, the coordinates of the click on the "
+"first parallel tangent are used to determine the positioning of the circle. "
+"If three tangents are parallel, an error message appears and the input is "
+"cleared. (Left-click, left-click, right-click)"
+msgstr ""
+"|circle3Tangents| :sup:`Cirkel uit 3 tangens`: Tekent een cirkel die "
+"tangentiaal is naar drie segmenten. **Onthoud dat u Snappen naar segmenten "
+"moet activeren** (Bekijk :ref:`snapping_tolerance`). Klik op een segment om "
+"een tangens toe te voegen. Als twee tangens parallel zijn, worden de "
+"coördinaten van de klik op de eerste parallelle tangens gebruikt om de "
+"positie van de cirkel te bepalen. Als drie tangens parallel zijn wordt een "
+"foutbericht weergegeven en de invoer wordt leeggemaakt. (Klik met links, "
+"klik met links, klik met rechts)"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2098
 msgid "circle3Tangents"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1607
+msgid ""
+"|circle2TangentsPoint| :sup:`Circle from 2 tangents and a point`: Similar to"
+" circle from 3 tangents, except that you have to select two tangents, enter "
+"a radius and select the desired center."
+msgstr ""
+"|circle2TangentsPoint| :sup:`Cirkel uit 2 tangens en een punt`: Soortgelijk "
+"aan cirkel vanuit 3 tangens, behalve dat u twee tangens moet selecteren, een"
+" straal moet invoeren en het gewenste middelpunt moet selecteren."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2094
 msgid "circle2TangentsPoint"
@@ -3297,17 +3797,54 @@ msgstr ""
 "Ellipsen kunnen niet worden geconverteerd naar cirkeltekenreeksen, zij "
 "zullen dus altijd worden gesegmenteerd."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1623
+msgid ""
+"|ellipseCenter2Points| :sup:`Ellipse from center and two points`: Draws an "
+"ellipse with a given center, major axis and minor axis. (Left-click, left-"
+"click, right-click)"
+msgstr ""
+"|ellipseCenter2Points| :sup:`Ellips uit middelpunt en twee punten`: Tekent "
+"een ellips met een opgegeven middelpunt, hoofdas en hulpas. (Klik met links,"
+" klik met links en klik met rechts)"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2128
 msgid "ellipseCenter2Points"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1626
+msgid ""
+"|ellipseCenterPoint| :sup:`Ellipse from center and a point`: Draws an "
+"ellipse into a bounding box with the center and a corner. (Left-click, "
+"right-click)"
+msgstr ""
+"|ellipseCenterPoint| :sup:`Ellips uit middelpunt en een punt`: Tekent een "
+"ellips in een begrenzingsvak met het middelpunt en een hoek. (Klik met "
+"links, klik met rechts)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2130
 msgid "ellipseCenterPoint"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1629
+msgid ""
+"|ellipseExtent| :sup:`Ellipse from extent`: Draws an ellipse into a bounding"
+" box with two opposite corners. (Left-click, right-click)"
+msgstr ""
+"|ellipseExtent| :sup:`Ellips uit bereik`: Tekent een ellips in een "
+"begrenzingsvak met twee tegenoverliggende hoeken. (Klik met links, klik met "
+"rechts)"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2132
 msgid "ellipseExtent"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1631
+msgid ""
+"|ellipseFoci| :sup:`Ellipse from foci`: Draws an ellipse by 2 points for "
+"foci and a point on the ellipse. (Left-click, left-click, right-click)"
+msgstr ""
+"|ellipseFoci| :sup:`Ellips uit foci`: Tekent een ellips uit 2 punten voor "
+"foci en een punt op de ellips. (Klik met links, klik met rechts)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2134
 msgid "ellipseFoci"
@@ -3456,6 +3993,37 @@ msgstr ""
 msgid "The Advanced Digitizing panel"
 msgstr "Het paneel Geavanceerd digitaliseren"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1691
+msgid ""
+"When capturing, reshaping, splitting new or existing geometries you also "
+"have the possibility to use the Advanced Digitizing panel. You can digitize "
+"lines exactly parallel or perpendicular to a particular angle or lock lines "
+"to specific angles. Furthermore, you can make a precise definition of your "
+"new geometry by entering X and Y coordinates as well as Z  for 3D features, "
+"or M values."
+msgstr ""
+"Bij het vastleggen, opnieuw vormgeven of splitsen van nieuwe of bestaande "
+"geometrieën heeft u ook de mogelijkheid om het paneel Geavanceerd "
+"digitaliseren te gebruiken. U kunt lijnen exact parallel of loodrecht onder "
+"een specifieke hoek digitaliseren of lijnen onder specifieke hoeken "
+"vastzetten. Verder kunt u een precieze definitie voor uw nieuwe geometrie "
+"maken, door het invoeren van coördinaten X en Y en ook Z voor 3D-objecten, "
+"of waarden M."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1704
+msgid ""
+"The :guilabel:`Advanced Digitizing` panel can be opened either with a right-"
+"click on the toolbar, from :menuselection:`View --> Panels -->` menu or "
+"pressing :kbd:`Ctrl+4`. Once the panel is visible, click the |cad| "
+":sup:`Enable advanced digitizing tools` button to activate the set of tools."
+msgstr ""
+"Het paneel :guilabel:`Geavanceerd digitaliseren` kan worden geopend ofwel "
+"met een klik met rechts op de werkbalk, vanuit het menu "
+":menuselection:`Beeld --> Panelen` of door te drukken op :kbd:`Ctrl+4`. Als "
+"het paneel eenmaal zichtbaar is, klik dan op de knop |cad| :sup:`gereedschap"
+" Geavanceerd digitaliseren inschakelen` om de set gereedschappen in te "
+"schakelen."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1709
 msgid ""
 "The tools are not enabled if the map view is in geographic coordinates."
@@ -3558,13 +4126,111 @@ msgstr ""
 msgid "settings"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1737
+msgid ""
+"|floater| :sup:`Toggle Floater`: displays a live preview of the coordinates "
+"right next to the cursor, allowing quick digitizing. The values can be "
+"accessed using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`, "
+"edited and |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`)."
+msgstr ""
+"|floater| :sup:`Zwevend schakelen`: geeft een live voorbeeld van de "
+"coördinaten, direct naast de cursor, wat snel digitaliseren mogelijk maakt. "
+"Toegang tot de waarden is te verkrijgen via de :ref:`sneltoetsen van het "
+"paneel <digitizing_panel_shortcuts>`, bewerken en |locked| "
+":sup:`Vergrendeld` na validatie (drukken op :kbd:`Enter`)."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2142
 msgid "floater"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1741
+msgid ""
+"|extractVertices| :sup:`Construction Tools` provides a couple of options "
+"that constrain the vertices placement based on extrapolated coordinates of "
+"existing elements:"
+msgstr ""
+"|extractVertices| :sup:`Gereedschappen voor constructie` verschaft een "
+"aantal opties die de plaatsing van punten beperken, gebaseerd op "
+"geëxtrapoleerde coördinaten van bestaande elementen:"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2136
 msgid "extractVertices"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1745
+msgid ""
+"|unchecked| :guilabel:`Line Extension`: hover over a segment and you get a "
+"purple dotted line extending the segment across the map canvas. You can snap"
+" the vertex anywhere on this virtual line."
+msgstr ""
+"|unchecked| :guilabel:`Uitbreiding lijn`: ga met de muis over een segment en"
+" u krijgt een paars gestippelde lijn die het segment verlengt in het "
+"kaartvenster. U kunt het punt snappen overal op deze virtuele lijn."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1748
+msgid ""
+"|unchecked| :guilabel:`X/Y Point`: hover over a vertex and you get a purple "
+"dotted line along its X or Y coordinate, across the map canvas. You can snap"
+" the vertex anywhere on this virtual line. It is even possible to hover over"
+" two different vertices, generating virtual coordinate lines for both, and "
+"snap to their intersection."
+msgstr ""
+"|unchecked| :guilabel:`X/Y-punt`: ga met de muis over een punt en u krijgt "
+"een paars gestippelde lijn langs zijn coördinaat X of Y, in het "
+"kaartvenster. U kunt het punt snappen overal op deze virtuele lijn. Het is "
+"zelfs mogelijk om over twee verschillende punten te gaan met de muis, "
+"virtuele  lijnen voor coördinaten maken voor beide, en snappen aan hun "
+"kruising."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1754
+msgid ""
+"Below the toolbar, you will find a number of text boxes whose value reflects"
+" by default the position or movement of the cursor in the map canvas. "
+"Editing these values helps you constrain the position of the items you edit:"
+msgstr ""
+"Onder de  werkbalk zult u een aantal tekstvakken zien waarvan de waarde "
+"standaard de positie of verplaatsing in het kaartvenster weergeeft. Bewerken"
+" van deze waarden helpt u de positie van de items die u bewerkt te beperken:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1758
+msgid ""
+":guilabel:`d` for the distance from a reference position, usually the last "
+"edited vertex"
+msgstr ""
+":guilabel:`d` voor de afstand vanaf een verwijzingspositie, gewoonlijk het "
+"laatste bewerkte punt"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1760
+msgid ""
+":guilabel:`a` for the angle (absolute or relative) from a reference "
+"position, usually the last edited segment"
+msgstr ""
+":guilabel:`a` voor de hoek (absoluut of relatief) vanaf een "
+"verwijzingspositie, gewoonlijk het laatste bewerkte punt"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1762
+msgid ":guilabel:`x` for the X coordinate of the pointer"
+msgstr ":guilabel:`x` voor de coördinaat X van de aanwijzer"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1763
+msgid ":guilabel:`y` for the Y coordinate of the pointer"
+msgstr ":guilabel:`y` voor de coördinaat Y van de aanwijzer"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1764
+msgid ""
+":guilabel:`z` for the default Z value or the Z coordinate of the vertex or "
+"segment under the pointer"
+msgstr ""
+":guilabel:`z` voor de standaard waarde Z of het coördinaat Z van het punt of"
+" segment onder de aanwijzer"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1766
+msgid ""
+":guilabel:`m` for the default M value or the M value of the vertex or "
+"segment under the pointer"
+msgstr ""
+":guilabel:`m` voor de standaard waarde M of het coördinaat M van het punt of"
+" segment onder de aanwijzer"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1773
 msgid "Keyboard shortcuts"
@@ -3578,6 +4244,12 @@ msgstr ""
 "Er zijn een aantal snelkoppelingen voor het toetsenbord beschikbaar om de "
 "snelheid, bij het gebruiken van het paneel Geavanceerd digitaliseren, te "
 "verhogen:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1778
+msgid "Keyboard shortcuts of the Advanced Digitizing Panel tools"
+msgstr ""
+"Sneltoetsen voor het toetsenbord voor de gereedschappen van het paneel "
+"Geavanceerd digitaliseren"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1781
 msgid "Key"
@@ -3772,9 +4444,64 @@ msgstr ""
 "klik op de knop |locked| rechts daarvan om de muis vast te zetten op de Y-as"
 " van het kaartvenster."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1822
+msgid ""
+"If the layer has Z coordinate or M values, the corresponding :guilabel:`z` "
+"or :guilabel:`m` widget is enabled and displays its default value, as set in"
+" :menuselection:`Settings --> Options --> Digitizing` tab."
+msgstr ""
+"Als de laag een coördinaat Z of waarden M heeft, wordt het corresponderen "
+"widget :guilabel:`Z` of :guilabel:`M` ingeschakeld en geeft zijn standaard "
+"waarde weer, zoals ingesteld op de tab :menuselection:`Extra --> Opties --> "
+"Digialtseren`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1826
+msgid ""
+"Click the :guilabel:`z` or :guilabel:`m` text box (or use respectively the "
+":kbd:`Z` or :kbd:`M` keyboard shortcut)."
+msgstr ""
+"Klik op het tekstvak :guilabel:`z` of :guilabel:`m` (of gebruik de sneltoets"
+" voor het toetsenbord :kbd:`Z` of :kbd:`M`)."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1828
+msgid ""
+"Type the coordinate value you want and press :kbd:`Enter` or click the "
+"|locked| button to their right to lock the value in the widget."
+msgstr ""
+"Typ de waarde die u wilt voor de coördinaat en druk op :kbd:`Enter` of klik "
+"op de knop |locked| rechts daarvan om de waarde vast te zetten in de widget."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1831
+msgid ""
+"Read :ref:`digitizing_zm` for details on how Z coordinate and M values are "
+"automatically determined from existing features."
+msgstr ""
+"Lees :ref:`digitizing_zm` voor details over hoe coördinaat Z en waarden M "
+"automatisch worden bepaald uit bestaande objecten."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1834
+msgid ""
+"Two blue dotted lines and a green cross identify the exact coordinates you "
+"entered. Click on the map canvas to add a vertex at the green cross "
+"position."
+msgstr ""
+"Twee blauwe gestippelde lijnen en een groen kruis identificeren de exact "
+"coördinaten die u hebt ingevoerd. Klik in het kaartvenster om een punt op de"
+" positie van het groene kruis toe te voegen."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1841
 msgid "Start drawing at given coordinates"
 msgstr "Begin met tekenen op de opgegeven coördinaten"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1843
+msgid ""
+"You can proceed as above, adding a new set of coordinates for the next "
+"vertex, or switch to another :ref:`mode of digitizing <drawing_methods>` "
+"(e.g. segment, curve or stream)."
+msgstr ""
+"U kunt doorgaan zoals hierboven, een nieuwe set coördinaten toevoegen voor "
+"het volgende punt, of schakelen naar een andere :ref:`modus voor "
+"digitaliseren <drawing_methods>` (bijv. segment, boog of stroom)."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1847
 msgid "If you want to draw a segment of a given length:"
