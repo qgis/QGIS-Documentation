@@ -142,12 +142,34 @@ We will use:
 Where :file:`qgis_sample_data` represents the path to the unzipped dataset.
 
 #. Start QGIS as seen in :ref:`label_startingqgis`.
-#. To load the files in QGIS:
+#. The data we will be working with are in ``Albers Equal Area``,
+   so let's set the project's CRS accordingly:
+
+   #. Click the |setProjection| :sup:`Select projection` button
+      in the bottom right of QGIS interface.
+      The project properties dialog opens with the :guilabel:`CRS` tab active.
+   #. Type `̀`2964`` in the |search| :guilabel:`Filter` text area.
+   #. Select the row with ``NAD27 / Alaska Albers`` CRS name.
+
+      .. _figure_selectCRS:
+
+      .. figure:: img/selectCRS.png
+         :align: center
+
+         Select the Coordinate Reference System of data
+
+   #. Press :guilabel:`OK`
+
+   .. note:: You can ignore/close for now the "ballpark transform" message
+    that could display.
+
+#. Load the files in QGIS:
 
    #. Click on the |dataSourceManager| :sup:`Open Data Source Manager` icon.
       The Data Source Manager should open in Browser mode.
    #. Browse to the folder :file:`qgis_sample_data/raster/`
-   #. Select the ERDAS IMG file |rasterLayer| :guilabel:`landcover.img` and double-click it.
+   #. Select the ERDAS IMG file |rasterLayer| :guilabel:`landcover.img`
+      and double-click it.
       The landcover layer is added in the background while the Data Source
       Manager window remains open.
 
@@ -173,23 +195,17 @@ Where :file:`qgis_sample_data` represents the path to the unzipped dataset.
 
    #. In our case there is a single |polygonLayer| :guilabel:`lakes` layer.
       Select it and press :guilabel:`Add Layers`.
-   #. The layer is added to the :guilabel:`Layers` panel but it displays
-      |indicatorNoCRS| :sup:`Layer has no coordinate reference system set` next to it.
-      Let's adjust that by clicking the icon.
-   #. A :guilabel:`Coordinate Reference System Selector` dialog opens.
-      In the :guilabel:`Filter` menu, type ``2964``,
-      filtering the list of Coordinate Reference Systems below.
+   #. The layer is added to the :guilabel:`Layers` panel
+#. Close the Data Source Manager window
 
-      .. _figure_selectCRS:
+In the :guilabel:`Layers` panel, you can notice that the :guilabel:`lakes` layer
+displays |indicatorNoCRS| :sup:`Layer has no coordinate reference system set` next to it.
+Let's adjust that.
 
-      .. figure:: img/selectCRS.png
-         :align: center
-
-         Select the Coordinate Reference System of data
-
-   #. Select the :guilabel:`NAD27 / Alaska Albers` entry
-   #. Click :guilabel:`OK`
-   #. Close the Data Source Manager window
+#. Click the |indicatorNoCRS| icon.
+   The :guilabel:`Coordinate Reference System Selector` dialog opens.
+#. As done earlier, find and select the :guilabel:`NAD27 / Alaska Albers` CRS entry.
+#. Click :guilabel:`OK`
 
 You now have the two layers available in your project in some random colours.
 Let's do some customization on the lakes layer.
@@ -290,6 +306,10 @@ features and settings, and how to use them.
 .. |rasterLayer| image:: /static/common/mIconRasterLayer.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
+   :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
