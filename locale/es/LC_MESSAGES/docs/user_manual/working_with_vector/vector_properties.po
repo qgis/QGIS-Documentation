@@ -488,6 +488,17 @@ msgstr ""
 "(incluido el formato DateTime para el campo ``toa``) funciona para los "
 "conjuntos de datos GeoPackage."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:162
+msgid ""
+"The filter is made at the data provider (OGR, PostgreSQL, MS SQL Server...) "
+"level. So the syntax depends on the data provider (DateTime is for instance "
+"not supported for the ESRI Shapefile format). The complete expression::"
+msgstr ""
+"El filtro se realiza a nivel del proveedor de datos (OGR, PostgreSQL, MS SQL"
+" Server...). Por lo tanto, la sintaxis depende del proveedor de datos (por "
+"ejemplo, el formato ESRI Shapefile no admite DateTime). La expresión "
+"completa::"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:172
 msgid ""
 "You can also open the :guilabel:`Query Builder` dialog using the "
@@ -664,6 +675,24 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:258
 msgid "Features rendering"
 msgstr "Representación de elementos"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:260
+msgid ""
+"The renderer is responsible for drawing a feature together with the correct "
+"symbol. Regardless layer geometry type, there are four common types of "
+"renderers: single symbol, categorized, graduated and rule-based. For point "
+"layers, there are point displacement, point cluster and heatmap renderers "
+"available while polygon layers can also be rendered with the merged "
+"features, inverted polygons and 2.5 D renderers."
+msgstr ""
+"El renderizador se encarga de dibujar un elemento junto con el símbolo "
+"correcto. Independientemente del tipo de geometría de la capa, existen "
+"cuatro tipos comunes de renderizadores: símbolo único, categorizado, "
+"graduado y basado en reglas. Para las capas de puntos, hay disponibles "
+"renderizadores de desplazamiento de puntos, cluster de puntos y mapa de "
+"calor, mientras que las capas de polígonos también pueden renderizarse con "
+"los renderizadores de características fusionadas, polígonos invertidos y 2,5"
+" D."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:266
 msgid ""
@@ -1776,9 +1805,65 @@ msgstr "Opciones de simbología basada en reglas"
 msgid "Point displacement Renderer"
 msgstr "Representador con desplazamiento puntual"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:751
+msgid ""
+"The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer takes "
+"the point features falling in a given distance tolerance from each other and"
+" places their symbols around their barycenter, following different placement"
+" methods. This can be a convenient way to visualize all the features of a "
+"point layer, even if they have the same location (e.g. amenities in a "
+"building)."
+msgstr ""
+"El renderizador |pointDisplacementSymbol| :guilabel:`DesplazamientoDePuntos`"
+" toma los objetos espaciales de puntos que caen en una tolerancia de "
+"distancia dada entre sí y coloca sus símbolos alrededor de su baricentro, "
+"siguiendo diferentes métodos de colocación. Esta puede ser una forma "
+"conveniente de visualizar todas los objetos espaciales de una capa de "
+"puntos, incluso si tienen la misma ubicación (por ejemplo, servicios en un "
+"edificio)."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3739
 msgid "pointDisplacementSymbol"
 msgstr "pointDisplacementSymbol"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:757
+msgid "To configure a point displacement renderer, you have to:"
+msgstr ""
+"Para configurar un renderizador de desplazamiento de puntos, tienes que:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:759
+msgid ""
+"Set the :guilabel:`Center symbol`: how the virtual point at the center will "
+"look like"
+msgstr ""
+"Establece el :guilabel:`Símbolo del centro`: cómo será el punto virtual en "
+"el centro"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:761
+msgid ""
+"Select the :guilabel:`Renderer` type: how you want to classify features in "
+"the layer (single, categorized, rule-based...)"
+msgstr ""
+"Seleccione el tipo de :guilabel:`Renderizador`: cómo desea clasificar los "
+"objetos espaciales en la capa (simples, categorizadas, basadas en reglas...)"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:763
+msgid ""
+"Press the :guilabel:`Renderer Settings...` button to configure features' "
+"symbology according to the selected renderer"
+msgstr ""
+"Pulse el botón :guilabel:`Configuración del renderizador...` para configurar"
+" la simbología de las características según el renderizador seleccionado"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:765
+msgid ""
+"Indicate the :guilabel:`Distance` tolerance in which close features are "
+"considered overlapping and then displaced over the same virtual point. "
+"Supports common symbol units."
+msgstr ""
+"Indica la tolerancia :guilabel:`Distancia` en la que se consideran "
+"superpuestas los objetos espaciales cercanos y luego desplazadas sobre el "
+"mismo punto virtual. Admite unidades de símbolo comunes."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:768
 msgid "Configure the :guilabel:`Placement methods`:"
