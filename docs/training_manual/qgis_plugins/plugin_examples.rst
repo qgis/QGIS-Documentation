@@ -12,44 +12,52 @@ and get acquainted with some useful plugins.
 -------------------------------------------------------------------------------
 
 The QuickMapServices plugin is a simple and easy to use plugin that adds base maps
-to your QGIS project. It has many different options and settings, let's start to
-explore some of its features.
+to your QGIS project.
+It has many different options and settings.
+Let's start to explore some of its features.
 
 #. Start a new map and add the :guilabel:`roads` layer from the :file:`training_data`
    Geopackage.
 #. Install the **QuickMapServices** plugin.
-#. Open the plugin's search tab by clicking on :menuselection:`Web -->
-   QuickMapServices --> Search QMS`. This option of the plugin allows you to filter
-   the available base maps by the current extent of the map canvas.
-#. Click on the :guilabel:`Filter by extent` and you should see one service available.
-#. Click on the :guilabel:`Add` button next to the map to load it.
-#. The base map will be loaded and you will have a satellite background for the
-   map.
+#. Click on :menuselection:`Web --> QuickMapServices`.
+   The first menu lists different map providers (``OSM``, ``NASA``) with available maps.
+#. Click on an entry and you would load the base map into your project.
 
    .. figure:: img/qms_result.png
       :align: center
-      :width: 60%
+      :width: 80%
 
-The QuickMapServices plugin makes a lot of base maps available.
+Nice! But one of the main strengths of QMS is to provide access to many data providers.
+Let's add them.
 
-#. Close the :guilabel:`Search QMS` panel we opened before
-#. Click again on :menuselection:`Web --> QuickMapServices`. The first menu
-   lists different map providers with available maps:
+#. Click on :menuselection:`Web --> QuickMapServices --> Settings`
+#. Go to the :guilabel:`More services` tab.
+#. Read carefully the message of this tab and if you agree click on the
+   :guilabel:`Get Contributed pack` button.
+#. Click :guilabel:`Save`.
+
+#. Reopen the :menuselection:`Web --> QuickMapServices` menu you will see
+   that more providers are available.
 
    .. figure:: img/qms_menu.png
       :align: center
 
-But there is more.
+#. Choose the one that best fits your needs, and load the data in the project!
 
-If the default maps are not enough for you, you can add other map providers.
+It is also possible to search trough the now available data providers
 
-#. Click on :menuselection:`Web --> QuickMapServices --> Settings` and go to the
-   :guilabel:`More services` tab.
-#. Read carefully the message of this tab and if you agree click on the
-   :guilabel:`Get Contributed pack` button.
+#. Open the plugin's search tab by clicking on :menuselection:`Web --> QuickMapServices --> Search QMS`.
+   This option of the plugin allows you to filter the available base maps
+   by the current extent of the map canvas or using a search word.
+#. Click on the :guilabel:`Filter by extent` and you should see one service available.
+   If no service is found, zoom out and pan around the world (or your location)
+   or search with a keyword.
+#. Click on the :guilabel:`Add` button next to a returned dataset to load it.
+#. The base map will be loaded and you will have a background for the map.
 
-If you now open the :menuselection:`Web --> QuickMapServices` menu you will see
-that more providers are available. Choose the one that best fits your needs!
+   .. figure:: img/qms_search_added.png
+      :align: center
+      :width: 80%
 
 
 |basic| |FA| The QuickOSM Plugin
