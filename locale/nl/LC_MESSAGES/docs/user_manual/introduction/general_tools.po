@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# DiGro, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,6 +69,31 @@ msgstr ""
 msgid "Layers Panel"
 msgstr "Paneel Lagen"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:48
+msgid ""
+"The :guilabel:`Layers` panel (also called the ``map legend``) lists all the "
+"layers in the project and helps you manage their visibility and shape the "
+"map. You can show or hide the panel by pressing :kbd:`Ctrl+1`."
+msgstr ""
+"Het paneel :guilabel:`Lagen` (ook wel ``kaartlegenda ` genoemd`) vermeld "
+"alle lagen in het project en helpt u hun zichtbaarheid te beheren en de "
+"kaart te vormen. U kunt het paneel weergeven of verbergen door te drukken op"
+" :kbd:`Ctrl+1`."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:52
+msgid "At the top of the :guilabel:`Layers` panel, a toolbar allows you to:"
+msgstr ""
+"Aan de bovenzijde van het paneel :guilabel:`Lagen` stelt een werkbalk u in "
+"staat om:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:54
+msgid ""
+"|symbology| :sup:`Open the layer styling dock (F7)`: toggle the :ref:`Layer "
+"Styling <layer_styling_panel>` panel on and off."
+msgstr ""
+"|symbology| :sup:`Paneel Laag opmaken openen (F7)`: in-/uitschakelen van het"
+" paneel :ref:`Laag opmaken <layer_styling_panel>`."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2315
 msgid "symbology"
 msgstr ""
@@ -81,6 +107,14 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:2149
 msgid "addGroup"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:57
+msgid ""
+"|showPresets| :sup:`Manage Map Themes`: control visibility of layers and "
+"arrange them in different :ref:`map themes <map_themes>`."
+msgstr ""
+"|showPresets| :sup:`Kaartthema's beheren`: beheer voor de zichtbaarheid van "
+"lagen en ze schikken in verschillende :ref:`kaartthema's <map_themes>`."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2307
 msgid "showPresets"
@@ -411,6 +445,29 @@ msgstr ""
 msgid "Overview of the context menu of the Layers panel"
 msgstr "Overzicht van het contextmenu van het paneel Lagen"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:164
+msgid ""
+"At the bottom of the toolbar, the main component of the Layers panel is the "
+"frame listing all the layers added to the project, optionally organized in "
+"groups. A layer with a checked box next to it displays its contents "
+"overlapping the map canvas extent, unless a :ref:`scale-based visibility "
+"<label_scaledepend>` is set. A layer can be selected and dragged up or down "
+"in the legend to change the Z-ordering. Z-ordering means that layers listed "
+"nearer the top of the legend are drawn over layers listed lower down in the "
+"legend. Also a layer or a group of layers can be dragged across several QGIS"
+" instances."
+msgstr ""
+"Aan de onderzijde van de werkbalk is de belangrijkste component van het "
+"paneel Lagen het frame dat alle aan het project toegevoegde lagen vermeld, "
+"optioneel gerangschikt in groepen. Een laag met een geselecteerd vak ernaast"
+" geeft zijn inhoud weer die het bereik van het kaartvenster overlapt, tenzij"
+" een :ref:`schaalafhankelijke zichtbaarheid <label_scaledepend>` is "
+"ingesteld. Een laag kan worden geselecteerd en in de legenda naar boven of "
+"beneden worden gesleept om de Z-volgorde te wijzigen. Z-volgorde betekent "
+"dat lagen, die dichter bij de bovenzijde van de legenda worden vermeld, "
+"worden getekend boven lagen die lager in de legenda staan. Ook kan een laag "
+"of een groep lagen worden gesleept naar andere instanties van QGIS."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:173
 msgid ""
 "The Z-ordering behavior can be overridden by the :ref:`Layer Order "
@@ -418,6 +475,18 @@ msgid ""
 msgstr ""
 "Het gedrag van de Z-volgorde kan worden overschreven door middel van het "
 "paneel :ref:`Laagvolgorde <layer_order>`."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:176
+msgid ""
+"Depending on the item selected in the panel, a right-click shows a dedicated"
+" set of options presented below."
+msgstr ""
+"Afhankelijk van het geselecteerde item in het paneel geeft een klik met "
+"rechts een aangewezen set opties weer die hieronder worden weergegeven."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:180
+msgid "Contextual menus from :guilabel:`Layers` panel items"
+msgstr "Contextmenu's van items van het paneel :guilabel:`Lagen`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:183
 msgid "Option"
@@ -434,6 +503,14 @@ msgstr "Vectorlaag"
 #: ../../docs/user_manual/introduction/general_tools.rst:183
 msgid "Raster Layer"
 msgstr "Rasterlaag"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:183
+msgid "Mesh Layer"
+msgstr "Laag met mazen"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:183
+msgid "Point Cloud Layer"
+msgstr "Puntenwolklaag"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:185
 msgid "|zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`"
@@ -594,6 +671,10 @@ msgstr "|dbManager| :guilabel:`SQL-laag bijwerken…`"
 msgid "dbManager"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:195
+msgid "|addVirtualLayer| :guilabel:`Edit Virtual Layer...`"
+msgstr "|addVirtualLayer| :guilabel:`Virtuele laag bewerken…`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2151
 msgid "addVirtualLayer"
 msgstr ""
@@ -690,9 +771,25 @@ msgstr ":guilabel:`Zichtbaarheidsschaal instellen…`"
 msgid ":guilabel:`Zoom to Visible Scale`"
 msgstr ":guilabel:`Zoom naar zichtbaarheidsschaal`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:215
+msgid ":menuselection:`Layer CRS -->`"
+msgstr ":menuselection:`Laag-CRS -->`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:216
 msgid ":menuselection:`--> Set Project CRS from Layer`"
 msgstr ":menuselection:`Project-CRS van laag overnemen`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:217
+msgid ":menuselection:`--> Set to..` (recent CRSs)"
+msgstr ":menuselection:`--> Instellen op…` (recente CRS-en)"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:218
+msgid ":menuselection:`--> Set Layer CRS...`"
+msgstr ":menuselection:`--> Laag-CRS instellen…`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:219
+msgid ":menuselection:`Set Group CRS...`"
+msgstr ":menuselection:`CRS voor groep instellen…`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:220
 msgid ":guilabel:`Set Group WMS Data...`"
@@ -804,6 +901,14 @@ msgstr ""
 msgid "Interact with groups and layers"
 msgstr "Interactie met groepen en lagen"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:256
+msgid ""
+"Layers in the legend window can be organized into groups. There are "
+"different ways to do this:"
+msgstr ""
+"Lagen in het venster Legenda kunnen in groepen worden ondergebracht. Er zijn"
+" verschillende manieren om dit te doen:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:259
 msgid ""
 "Press the |folder| icon to add a new group. Type in a name for the group and"
@@ -817,6 +922,14 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:2213
 msgid "folder"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:262
+msgid ""
+"Select more than one layer, then press the |folder| icon. The selected "
+"layers are automatically inserted into the new group."
+msgstr ""
+"Selecteer meer dan één laag, druk dan op het pictogram |folder|. De "
+"geselecteerde lagen worden automatisch in de nieuwe groep ingevoegd."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:264
 msgid ""
@@ -912,6 +1025,16 @@ msgstr ""
 msgid "More information on layers and groups using indicator icon"
 msgstr "Meer informatie over lagen en groepen met pictogram voor indicatie"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:303
+msgid ""
+"In some circumstances, formatting or icons next to the layer or group in the"
+" :guilabel:`Layers` panel change to give more information about the "
+"layer/group. These elements are:"
+msgstr ""
+"Onder sommige omstandigheden wijzigen pictogrammen of opmaak naast de laag "
+"of groep in het paneel :guilabel:`Lagen` om meer informatie te verschaffen "
+"over de laag/groep. Deze elementen zijn:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:307
 msgid ""
 "|toggleEditing| to indicate that the layer is in edit mode and you can "
@@ -987,6 +1110,20 @@ msgstr ""
 msgid "indicatorBadLayer"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:321
+msgid ""
+"|indicatorMemory| to remind you that the layer is a :ref:`temporary scratch "
+"layer <vector_new_scratch_layer>` and its content will be discarded when you"
+" close this project. To avoid data loss and make the layer permanent, click "
+"the icon to store the layer in any of the GDAL vector formats supported by "
+"QGIS."
+msgstr ""
+"|indicatorMemory| om u er aan te herinneren dat de laag een :ref:`tijdelijke"
+" tekenlaag <vector_new_scratch_layer>` is en dat de inhoud ervan zal worden "
+"genegeerd als u het project sluit, Klik op het pictogram om de laag op te "
+"slaan in een van de door QGIS ondersteunde vectorindelingen voor GDAL om "
+"gegevensverlies te vermijden en de laag permanent te maken."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2247
 msgid "indicatorMemory"
 msgstr "indicatorMemory"
@@ -1050,6 +1187,141 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:2253
 msgid "indicatorNotes"
 msgstr "indicatorNotes"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:333
+msgid ""
+"A grayed name, when the map canvas current scale is outside the layer's "
+"visibility scale range (as set in its :menuselection:`Rendering` "
+"properties). Select the contextual menu :guilabel:`Zoom to Visible Scale` "
+"option to zoom the map to the layer's nearest visibility scale bound."
+msgstr ""
+"Een uitgegrijsde naam, als de huidige schaal van het kaartvenster buiten het"
+" schaalbereik van de zichtbaarheid voor de laag ligt (zoals ingesteld in "
+"zijn eigenschappen :menuselection:`Renderen`). Selecteer de optie in het "
+"contextmenu :guilabel:`Zoomen naar zichtbare schaal` om de kaart in te "
+"zoomen naar de dichtstbijzijnde grens voor de schaal van de zichtbaarheid."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:341
+msgid "Control layers rendering through grouping"
+msgstr "Renderen van lagen beheren door groeperen"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:343
+msgid ""
+"Groups are a means of structuring layers within a tree in the project but "
+"they can also impact how their component layers are rendered, namely as a "
+"single flattened object during map renders."
+msgstr ""
+"Groepen zijn een manier om lagen te structureren binnen een boom in het "
+"project, maar zij kunnen ook invloed hebben over hoe hun componentlagen "
+"worden gerenderd, namelijk als één afgevlakt object bij het renderen van de "
+"kaart."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:347
+msgid ""
+"The option for such a rendering is available within the :guilabel:`Layer "
+"Styling` panel whenever a group is selected. Under the |symbology| "
+":sup:`Symbology` tab, check |checkbox| :guilabel:`Render Layers as a Group` "
+"to enable a set of options to control the appearance of the child layers as "
+"a whole, instead of individual layers:"
+msgstr ""
+"De optie voor een dergelijk renderen is beschikbaar in het paneel "
+":guilabel:`Laag opmaken` wanneer ene groep is geselecteerd. Selecteer, op de"
+" tab |symbology| :sup:`Symbologie`, |checkbox| :guilabel:`Lagen renderen als"
+" een groep` om een set opties in te schakelen om het uiterlijk van de "
+"kindlagen als één geheel te beheren, in plaats van als individuele lagen:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:351
+msgid ""
+":guilabel:`Opacity`: Features from child layers which are obscured by other "
+"child layers remain obscured, and the opacity applies to the \"whole of "
+"group\" only."
+msgstr ""
+":guilabel:`Opaciteit`: Objecten uit kindlagen die worden bedekt door andere "
+"kindlagen blijven bedekt, en de opaciteit wordt alleen op de \"gehele "
+"groep\" toegepast."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:359
+msgid "Setting opacity on layers vs on a group"
+msgstr "Instellen van opaciteit op lagen vs op een groep"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:361
+#, python-format
+msgid ""
+"The image on the left shows two layers being rendered at 50% opacity "
+"(underlying features are visible, but semi-masked by the 50% red feature on "
+"top). The second image shows the result of setting the opacity on the group "
+"(parts of the blue underlying child layer is completely obscured by the red "
+"layer on top and then the result is rendered at 50% opacity)."
+msgstr ""
+"De afbeelding aan de linkerkant geeft twee lagen weer die zijn gerenderd met"
+" 50% opaciteit (onderliggende objecten zijn zichtbaar, maar semi-gemaskeerd "
+"door het 50% rode object bovenop). De tweede afbeelding geeft het resultaat "
+"weer van het instellen van de opaciteit op de groep (delen van de blauwe "
+"onderliggende kindlaag wordt volledig bedekt door de rode laag bovenop en "
+"dan wordt het resultaat gerenderd met 50% opaciteit)."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:367
+msgid ""
+":guilabel:`Blend modes`: Just like opacity, setting a :ref:`blend mode "
+"<blend-modes>` (like multiply, overlay, ...) for an entire group results "
+"first in flattening features of child layers, with upper ones obscuring "
+"lower. The rendering is then obtained by blending the flat group and the "
+"layers sitting below the group."
+msgstr ""
+":guilabel:`Meng-modi`: Net als met opaciteit resulteert het instellen van "
+"een :ref:`meng-modus <blend-modes>` (zoals vermenigvuldigen, overleg, …) "
+"voor een gehele groep eerst in het afvlakken van objecten van kindlagen, "
+"waarbij bovenste de onderste bedekken. Het renderen wordt dan verkregen door"
+" de vlakke groep te mengen en de lagen die onder de groep liggen."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:371
+msgid ""
+"When the child layers have blend modes assigned, it is applied before "
+"flattening but the scope is restricted to only affecting other child layers "
+"from that group, and not other layers sitting below the whole group."
+msgstr ""
+"Als de kindlagen een mengmodus hebben toegewezen gekregen wordt die "
+"toegepast vóór het afvlakken, maar het bereik is beperkt tot het alleen "
+"beïnvloeden andere kindlagen uit die groep, en geen andere lagen die onder "
+"de gehele groep liggen."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:374
+msgid ""
+"Some more :ref:`blending modes <blending_clipping>` options are available "
+"for child layers in groups, in their :guilabel:`Symbology` tab which perform"
+" \"clipping\" style operations on other child layers during the render. You "
+"can e.g. clip the render of one layer’s content by the content in a second "
+"\"mask\" layer."
+msgstr ""
+"Enkele extra opties :ref:`meng-modi <blending_clipping>` zijn beschikbaar "
+"voor kindlagen in groepen, op hun tab :guilabel:`Symbologie` die bewerkingen"
+" in de stijl van \"clippen\" uitvoeren op andere kindlagen tijden het "
+"renderen. U kunt bijvoorbeeld het renderen van de inhoud van de ene laag "
+"clippen naar de inhoud van een tweede \"maskeer\"-laag."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:379
+msgid ""
+":guilabel:`Layer effects`: applies :ref:`effects <draw_effects>` only to the"
+" flattened render of the child layers; So e.g. a drop shadow effect applied "
+"to the group would not be visible for obscured child layers."
+msgstr ""
+":guilabel:`Laageffecten`: past :ref:`effecten <draw_effects>` alleen toe op "
+"het afgevlakt renderen van de kindlagen; Dus, bijvoorbeeld, het effect van "
+"een valschaduw die is toegepast op de groep zou niet zichtbaar zijn op "
+"bedekte kindlagen."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:383
+msgid ""
+"When a group is set to :guilabel:`Render layers as a group`, then only the "
+"group will be shown in the :guilabel:`Layer Order` panel list. Group "
+"children will not be visible in this order list, as their ordering is "
+"determined by the placement of the group layer."
+msgstr ""
+"Wanneer een groep is ingesteld op :guilabel:`Lagen renderen als een groep`, "
+"dan zal alleen de groep worden weergegeven in de lijst van het paneel "
+":guilabel:`Volgorde lagen`. Kinderen van de groep zullen in de lijst voor de"
+" volgorde niet zichtbaar zijn, omdat hun volgorde wordt bepaald door de "
+"plaatsing van de laag van de groep."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:394
 msgid "Editing vector layer style"
@@ -1211,6 +1483,17 @@ msgstr ""
 "Selecteer, vanuit een keuzelijst met huidige lagen in het paneel Lagen, een "
 "item en:"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:461
+msgid "Depending on the active item, set:"
+msgstr "Stel, afhankelijk van het actieve item, in:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:463
+msgid ""
+"|symbology| :guilabel:`Symbology` for groups (see :ref:`render_as_group`)"
+msgstr ""
+"|symbology| :guilabel:`Symbologie` voor groepen (bekijk "
+":ref:`render_as_group`)"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:464
 msgid ""
 "|symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`, "
@@ -1262,6 +1545,21 @@ msgstr ""
 ":guilabel:`3D-weergave` voor lagen met mazen. Deze opties zijn dezelfde als "
 "in :ref:`label_meshproperties`."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:474
+msgid ""
+"|symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and "
+"|elevationscale| :guilabel:`Elevation` properties for point cloud layer. "
+"These options are the same as in the :ref:`point_clouds_properties`."
+msgstr ""
+"Eigenschappen |symbology| :guilabel:`Symbologiey`, |3d| "
+":guilabel:`3D-weergave` en |elevationscale| :guilabel:`Hoogte` voor "
+"puntenwolklaag. Deze opties zijn hetzelfde als in de "
+":ref:`point_clouds_properties`."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2195
+msgid "elevationscale"
+msgstr ""
+
 #: ../../docs/user_manual/introduction/general_tools.rst:477
 msgid ""
 "Manage the associated style(s) in the |stylePreset| :guilabel:`Style "
@@ -1283,7 +1581,7 @@ msgstr ""
 "Volg de |history| :guilabel:`Geschiedenis` van door u toegepaste wijzigingen"
 " op de laagstijl in het huidige project; u kunt daar naar elke status "
 "terugkeren of die annuleren door het te selecteren in de lijst en te drukken"
-" op  :guilabel:`Apply`."
+" op :guilabel:`Toepassen`."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2225
 msgid "history"
@@ -1298,7 +1596,7 @@ msgstr ""
 "Een andere krachtige mogelijkheid van dit  paneel is het keuzevak |checkbox|"
 " :guilabel:`Live bijwerken`. Selecteer het om uw wijzigingen automatisch "
 "direct te renderen in het kaartvenster: U hoeft niet langer op de knop  "
-":guilabel:`Apply` te drukken."
+":guilabel:`Toepassen` te drukken."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:492
 msgid "Defining a layer's symbology from the layer styling panel"
@@ -1437,6 +1735,28 @@ msgstr ""
 "overzichtsinformatie voor een vectorlaag. Dit paneel stelt u in staat te "
 "selecteren:"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:585
+msgid ""
+"the vector layer to compute the statistics on: it can be selected from the "
+"top drop-down menu, or synced with the active layer in the "
+":guilabel:`Layers` panel using the :guilabel:`Follow selected layer` "
+"checkbox at the bottom of the statistics drop-down list"
+msgstr ""
+"de vectorlaag waarvan de statistieken moeten worden berekend: kan worden "
+"geselecteerd uit het keuzemenu, of gesynchroniseerd met de actieve laag in "
+"het paneel :guilabel:`Lagen` met het keuzevak :guilabel:`Geselecteerde laag "
+"volgen` aan de onderzijde van de lijst met statistieken"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:589
+msgid ""
+"the field or |expression| :ref:`expression <vector_expressions>` to use: for"
+" each layer, the last entry is remembered and automatically computed upon "
+"layer reselection."
+msgstr ""
+"het te gebruiken veld of |expression| :ref:`expressie <vector_expressions>`:"
+" voor elke laag, het laatste item wordt onthouden en automatisch berekend "
+"bij het opnieuw selecteren van de laag."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2201
 msgid "expression"
 msgstr ""
@@ -1450,6 +1770,10 @@ msgstr ""
 "de terug te geven statistieken met behulp van een keuzeknop aan de rechter "
 "onderkant van het dialoogvenster. Afhankelijk van het type veld (of waarden "
 "van de expressie) zijn de beschikbare statistieken:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:596
+msgid "Statistics available for each field type"
+msgstr "Beschikbare statistieken voor elk type veld"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:599
 msgid "Statistics"
@@ -1553,6 +1877,14 @@ msgstr "Gemiddelde lengte"
 msgid "The statistical summary can be:"
 msgstr "Het statistisch overzicht kan worden:"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:624
+msgid ""
+"returned for the whole layer or |checkbox| :guilabel:`Selected features "
+"only`"
+msgstr ""
+"teruggegeven voor de gehele laag of voor |checkbox| :guilabel:`Alleen "
+"geselecteerde objecten`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:625
 msgid ""
 "|editCopy| copied to the clipboard and pasted as a table in another "
@@ -1586,29 +1918,136 @@ msgstr "Statistieken voor een veld weergeven"
 msgid "Debugging/Development Tools Panel"
 msgstr "Paneel Gereedschappen voor debuggen/ontwikkeling"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:643
+msgid ""
+"The :guilabel:`Debugging/Development Tools` panel (:kbd:`F12`) provides a "
+"unified place for handling and debugging actions within QGIS. Available "
+"tools are organized under following tabs:"
+msgstr ""
+"Het paneel :guilabel:`Gereedschappen voor debuggen/ontwikkeling` "
+"(:kbd:`F12`) verschaft één enkele plaats voor het afhandelen en debuggen van"
+" acties binnen QGIS. Beschikbare gereedschappen zijn gerangschikt onder de "
+"volgende tabs:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:647
+msgid "|networkAndProxy| :guilabel:`Network Logger`"
+msgstr "|networkAndProxy| :guilabel:`Netwerklogger`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2269
 msgid "networkAndProxy"
 msgstr "networkAndProxy"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:648
+msgid "|dbManager| :guilabel:`Query Logger`"
+msgstr "|dbManager| :guilabel:`Querylogger`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:649
+msgid "|stopwatch| :guilabel:`Profiler`"
+msgstr "|stopwatch| :guilabel:`Profileren`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2311
+msgid "stopwatch"
+msgstr "stopwatch"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:651
+msgid ""
+"Plugin authors can extend the panel with custom tabs for debugging and "
+"developping their own plugins. This is done using "
+":meth:`registerDevToolWidgetFactory "
+"<qgis.gui.QgisInterface.registerDevToolWidgetFactory>` method."
+msgstr ""
+"Auteurs van plug-ins kunnen het paneel uitbreiden met aangepaste tabs voor "
+"debuggen en ontwikkelen van hun eigen plug-ins. Dit wordt gedaan met de "
+"methode :meth:`registerDevToolWidgetFactory "
+"<qgis.gui.QgisInterface.registerDevToolWidgetFactory>`."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:657
 msgid "Network Logger"
 msgstr "Netwerklogger"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:659
+msgid ""
+"The |networkAndProxy| :guilabel:`Network Logger` tab helps you record and "
+"display network requests, along with a whole load of useful details like "
+"request and reply status, header, errors, SSL configuration errors, "
+"timeouts, cache status, etc."
+msgstr ""
+"De tab |networkAndProxy| :guilabel:`Netwerklogger` helpt u verzoeken aan het"
+" netwerk vast te leggen en weer te geven, naast een geheel aan nuttige "
+"details, zoals status van verzoek en antwoord, header, fouten, fouten in de "
+"configuratie van SSL, time-outs, status van de cache, etc."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:664
+#: ../../docs/user_manual/introduction/general_tools.rst:703
+msgid "From its top toolbar, you can:"
+msgstr "Met zijn bovenste werkbalk kunt u:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:666
+#: ../../docs/user_manual/introduction/general_tools.rst:705
+msgid "|record| :guilabel:`Record Log`: which will start or stop the logging."
+msgstr ""
+"|record| :guilabel:`Log opnemen`: wat het loggen zal starten of stoppen."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2279
 msgid "record"
 msgstr "record"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:667
+#: ../../docs/user_manual/introduction/general_tools.rst:706
+msgid "|deleteSelected| :guilabel:`Clear Log`: will clear the log history."
+msgstr ""
+"|deleteSelected| :guilabel:`Log leegmaken: zal de geschiedenis van het log "
+"wissen."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2181
 msgid "deleteSelected"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:668
+#: ../../docs/user_manual/introduction/general_tools.rst:707
+msgid ""
+"|fileSave| :guilabel:`Save Log...`: will first show a big warning that the "
+"log is sensitive and should be treated as confidential and then allow you to"
+" save the log."
+msgstr ""
+"|fileSave| :guilabel:`Log opslaan…`: zal eerst een grote waarschuwing "
+"weergeven dat het log gevoelige informatie bevat en als vertrouwelijk zou "
+"moeten worden behandeld en u dan toestaan het log op te slaan."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2209
 msgid "fileSave"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:671
+msgid ""
+"Press the |options| :guilabel:`Settings` drop-down menu to select whether to"
+" :guilabel:`Show Successful Requests`, :guilabel:`Show Timeouts` and "
+":guilabel:`Show Replies Served from Cache`."
+msgstr ""
+"Druk op het keuzemenu |options| :guilabel:`Instellingen` om te selecteren "
+"voor :guilabel:`Succesvolle verzoeken weergeven`, :guilabel:`Time-outs "
+"weergeven` en :guilabel:`Antwoorden weergeven die zijn geserveerd door de "
+"cache`."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2273
 msgid "options"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:674
+msgid ""
+"|unchecked| :guilabel:`Disable cache`: will disable the cache so that every "
+"request has to be performed."
+msgstr ""
+"|unchecked| :guilabel:`Cache uitschakelen`: zal de cache uitschakelen zodat "
+"elk verzoek moet worden uitgevoerd."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:676
+msgid ""
+"|search| :guilabel:`Filter requests` based on URL string subsets or request "
+"status"
+msgstr ""
+"|search| :guilabel:`Verzoeken filteren`, gebaseerd op subsets van URL's of "
+"status van verzoek"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2285
 msgid "search"
@@ -1630,13 +2069,98 @@ msgstr ":guilabel:`URL kopiëren`"
 msgid ":guilabel:`Copy As cURL` to use it in the terminal."
 msgstr ":guilabel:`Als cURL kopiëren` om in de terminal te gebruiken."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:685
+#: ../../docs/user_manual/introduction/general_tools.rst:716
+msgid ""
+":guilabel:`Copy as JSON`: copies the tree values as a json string to the "
+"clipboard, for easy pasting in bug reports or for remote assistance."
+msgstr ""
+":guilabel:`Als JSON kopiëren`: kopieert de waarden van de boom als een "
+"tekenreeks voor JSON naar het klembord, om gemakkelijk te plakken in "
+"rapporten voor bugs of voor assistentie op afstand."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:691
 msgid "Network Logger output for GET Request"
 msgstr "Netwerklogger uitvoer voor verzoek GET"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:694
+msgid "Query Logger"
+msgstr "Querylogger"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:696
+msgid ""
+"The |dbManager| :guilabel:`Query Logger` is the place to log the SQL "
+"commands sent by the data provider and the connections API to the backend "
+"database, together with their execution time as measured by QGIS (i.e. in "
+"the client that sent the commands). This can be useful when investigating "
+"performances of a particular layer during debugging or development of a QGIS"
+" algorithm or plugin."
+msgstr ""
+"De |dbManager| :guilabel:`Querylogger` is de plaats om de opdrachten voor "
+"SQL te loggen die worden verzonden door de gegevensprovider en de API voor "
+"verbindingen naar de achterliggende database, samen met hun tijd voor "
+"uitvoering zoals die is gemeten door QGIS (d.i. in de cliënt die de "
+"opdrachten verzond). Dit kan nuttig zijn bij het onderzoeken van de "
+"uitvoering van een bepaalde laag tijdens het debuggen of ontwikkelen van een"
+" algoritme of plug-in voor QGIS."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:710
+msgid ""
+"|search| :guilabel:`Filter queries` based on the query string subsets or "
+"details such as provider type, start time, initiator, ..."
+msgstr ""
+"|search| :guilabel:`Query's filteren`, gebaseerd op de subsets van "
+"tekenreeksen van de query of details, zoals type provider, starttijd, "
+"initiator, …"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:713
+msgid "Right-click on a reported query, and you can:"
+msgstr "Klik met rechts op een gerapporteerde query, en u kunt:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:715
+msgid ":guilabel:`Copy SQL` command called by QGIS on the database"
+msgstr ""
+":guilabel:`SQL kopiëren`, opdracht aangeroepen door QGIS op de database"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:722
+msgid "Query Logger output"
+msgstr "Querylogger uitvoer"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:725
 msgid "Profiler"
 msgstr "Profiler"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:727
+msgid ""
+"The |stopwatch| :guilabel:`Profiler` tab allows to get load times for every "
+"single operation involved in actions requested by the user. Depending on the"
+" context, these operations can be settings reading, menu, map canvas or 3D "
+"views creation, resolving map layers reference, bookmark or layout loading, "
+"... This helps identify causes of slow load times."
+msgstr ""
+"De tab |stopwatch| :guilabel:`Profileren` maakt het mogelijk tijden te laden"
+" voor elke bewerking die is betrokken bij acties die zijn verzocht door de "
+"gebruiker. Afhankelijk van de context, kunnen deze bewerkingen zijn het "
+"lezen van instellingen, menu, kaartvenster of maken van 3D-weergaven, "
+"oplossen van verwijzing naar kaartlagen, Favoriete plaatsen of laden van een"
+" lay-out, … Dit helpt bij het identificeren van de oorzaken voor trage "
+"laadtijden."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:733
+msgid ""
+"Default supported actions can be selected from the :guilabel:`Categories` "
+"drop-down menu:"
+msgstr ""
+"Standaard ondersteunde acties kunnen worden geselecteerd uit het keuzemenu "
+":guilabel:`Categorie`:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:736
+msgid "QGIS :guilabel:`Startup`"
+msgstr "QGIS :guilabel:`Opstarten`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:737
+msgid ":guilabel:`Project Load`"
+msgstr ":guilabel:`Project laden`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:742
 msgid "Profiler for QGIS Startup"
@@ -2127,6 +2651,10 @@ msgid ""
 msgstr ""
 "Naast elk veld staat een keuzelijst met de opties om het zoekgedrag te "
 "beheren:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:946
+msgid "Query operators per data type"
+msgstr "Query operators per type gegevens"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:949
 msgid "Field search option"
@@ -2761,6 +3289,14 @@ msgstr ""
 msgid "Copy feature attributes: Copy the attributes of the feature"
 msgstr "Objectattributen kopiëren: Kopieert de attributen van het object"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1161
+msgid ""
+"Select features by attribute value: Select all features in the layer that "
+"match the selected attribute"
+msgstr ""
+"Objecten selecteren op waarde attribuut: Selecteer alle objecten op de laag "
+"die overeenkomen met het geselecteerde attribuut"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1163
 msgid "Clear result: Remove results in the window"
 msgstr "Wis resultaat: Het scherm Identificatieresultaten wordt leeggemaakt"
@@ -3005,6 +3541,25 @@ msgstr ""
 msgid "Save in database"
 msgstr "Opslaan in database"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1276
+msgid ""
+"Vector layer styles can also be stored in a database if the layer datasource"
+" is a database provider. Supported formats are PostGIS, GeoPackage, "
+"SpatiaLite, MS SQL Server and Oracle. The layer style is saved inside a "
+"table (named :file:`layer_styles`) in the database. Click on "
+":menuselection:`Save Style... --> Save in database` then fill in the dialog "
+"to define a style name, add a description, a :file:`.ui` file if applicable "
+"and to check if the style should be the default style."
+msgstr ""
+"Stijlen voor vectorlagen kunnen ook worden opgeslagen in een database als de"
+" gegevensbron voor de laag een provider voor een database is. Ondersteunde "
+"indelingen zijn PostGIS, GeoPackage, SpatiaLite, MS SQL Server en Oracle. De"
+" laagstijl wordt opgeslagen in een tabel (genaamd :file:`layer_styles`) in "
+"de database. Klik op het item :menuselection:`Stijl opslaan… --> Opslaan in "
+"database` en vul het dialoogvenster in om een stijlnaam te definiëren, een "
+"beschrijving toe te voegen, een :file:`.ui`-bestand, indien van toepassing, "
+"en selecteer of de stijl de standaardstijl zou moeten zijn."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1283
 msgid ""
 "You can save several styles for a single table in the database. However, "
@@ -3025,6 +3580,18 @@ msgstr "Dialoogvenster Stijl in database opslaan"
 #: ../../docs/user_manual/introduction/general_tools.rst:1295
 msgid "**Sharing style files between databases**"
 msgstr "**Bestanden van stijlen delen tussen databases**"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1297
+msgid ""
+"You can only save your style in a database if the layer comes from such a "
+"database. You can't mix databases (layer in Oracle and style in MS SQL "
+"Server for instance). Use instead a plain text file if you want the style to"
+" be shared among databases."
+msgstr ""
+"U kunt uw stijl alleen maar opslaan in een database als de laag afkomstig is"
+" uit een dergelijke  database. U kunt databases niet mixen (bijvoorbeeld "
+"laag in Oracle en stijl in MS SQL Server). Gebruik in plaats daarvan een "
+"bestand met platte tekst als u de stijl wilt delen tussen databases."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1304
 msgid ""
@@ -3236,6 +3803,78 @@ msgstr ""
 "Een overzicht van de ingevulde informatie wordt verschaft op de tab "
 ":guilabel:`Validatie` en helpt u potentiële problemen in relatie tot het "
 "formulier te identificeren. U kunt ze ofwel repareren of ze negeren."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1390
+msgid ""
+"Metadata are saved in the project file by default, the :guilabel:`Metadata` "
+"drop-down offers options for loading/saving metadata from :file:`.qmd` file "
+"and for loading/saving metadata in the \"Default\" location."
+msgstr ""
+"Metadata worden standaard opgeslagen in het projectbestand, het keuzemenu "
+":guilabel:`Metadata` biedt opties voor het laden/opslaan van metadata vanuit"
+" een bestand :file:`.qmd` en voor het laden/opslaan van metadata op de "
+"locatie \"Standaard\"."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1399
+msgid "Metadata load/save options"
+msgstr "Opties laden/opslaan metadata"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1402
+msgid ""
+"The \"Default\" location used by :guilabel:`Save as Default` and "
+":guilabel:`Restore Default` changes depending on the underlying data source "
+"and on its configuration:"
+msgstr ""
+"De locatie \"Standaard\" gebruikt door :guilabel:`Als standaard opslaan` en "
+":guilabel:`Standaard herstellen` wijzigen, afhankelijk van de onderliggende "
+"databron en diens configuratie:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1407
+msgid ""
+"For PostgreSQL data sources if the configuration option :guilabel:`Allow "
+"saving/loading QGIS layer metadata in the database` is checked the metadata "
+"are stored inside a dedicated table in the database."
+msgstr ""
+"Voor databronnen van PostgreSQL, als de optie voor configuratie "
+":guilabel:`Opslaan/laden in de database van metadata van QGIS-laag toestaan`"
+" is geselecteerd worden de metadata opgeslagen in een aangewezen tabel in de"
+" database."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1412
+msgid ""
+"For GeoPackage data sources :guilabel:`Save as Default` always saves the "
+"metadata in the internal metadata tables of the GeoPackage."
+msgstr ""
+"Voor databronnen van GeoPackage slaat :guilabel:`Als standaard opslaan` "
+"altijd de metadata op in de interne tabellen voor metadata van het "
+"GeoPackage."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1415
+msgid ""
+"When metadata are saved into the internal tables of PostgreSQL or GeoPackage"
+" they become available for search and filtering in the browser and in the "
+":ref:`layer metadata search panel <layer_metadata_search_panel>`."
+msgstr ""
+"Als metadata wordt opgeslagen in de interne tabellen van PostgreSQL of "
+"GeoPackage worden zij beschikbaar voor zoeken en filteren in de browser en "
+"in het :ref:`paneel Laag metadata zoeken <layer_metadata_search_panel>`."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1419
+msgid ""
+"For all other file based data sources :guilabel:`Save as Default` saves the "
+"metadata in a :file:`.qmd` file alongside the file."
+msgstr ""
+"Voor alle andere op bestanden gebaseerde databronnen slaat :guilabel:`Als "
+"standaard opslaan` de metadata op in een bestand :file:`.qmd`, naast het "
+"bestand."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1422
+msgid ""
+"In all other cases :guilabel:`Save as Default` saves the metadata in a local"
+" :file:`.sqlite` database."
+msgstr ""
+"In alle andere gevallen slaat :guilabel:`Als standaard opslaan` de metadata "
+"op in een lokale database van :file:`.sqlite`."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1429
 msgid "Layer notes"
@@ -3750,6 +4389,14 @@ msgstr ""
 "slepen-en-neerzetten van een kleur van de ene widget naar een ander om snel "
 "te aan te passen"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1651
+msgid ""
+"Scroll the mouse wheel over a color selector widget to quickly modify the "
+"opacity of the associated color."
+msgstr ""
+"Scroll het muiswiel over een widget voor het selecteren van kleur om snel de"
+" opaciteit van de geassocieerde kleur aan te passen."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1654
 msgid ""
 "When the color widget is set to a :ref:`project color <project_colors>` "
@@ -3802,6 +4449,14 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:1687
 msgid ":guilabel:`Invert Color Ramp`"
 msgstr ":guilabel:`Kleurverloop omdraaien`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1688
+msgid ""
+":guilabel:`Clear Current Ramp` to unset any assigned color ramp to the "
+"widget (available only in some contexts)"
+msgstr ""
+":guilabel:`Huidig kleurverloop leegmaken` om een aan de widget toegewezen "
+"kleurverloop ongedaan te maken (alleen beschikbaar in bepaalde contexten)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1690
 msgid ""
@@ -3899,6 +4554,22 @@ msgid ":guilabel:`Paste Symbol` to the current item, speeding configuration"
 msgstr ""
 ":guilabel:`Symbool plakken` naar het huidige item, versnelt configuratie"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1727
+msgid ""
+":guilabel:`Clear Current Symbol` to unset any assigned symbol to the widget "
+"(available only in some contexts)"
+msgstr ""
+":guilabel:`Huidig symbool leegmaken` om een aan de widget toegewezen "
+"kleurverloop ongedaan te maken (alleen beschikbaar in bepaalde contexten)"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1730
+msgid ""
+"Scroll the mouse wheel over a marker or line symbol widget to quickly modify"
+" the size of the associated symbol."
+msgstr ""
+"Scroll het muiswiel over een widget voor een symbool voor markering of "
+"lijnsymbool om snel de grootte van het geassocieerde symbool aan te passen."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1737
 msgid "Remote or embedded file selector"
 msgstr "Bestand op afstand of ingebed bestand selecteren"
@@ -3965,9 +4636,68 @@ msgid "extract the embedded file from the widget and save it on disk."
 msgstr ""
 "het ingebedde bestand uitnemen uit de widget en het opslaan op schijf."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1762
+msgid "Visibility Scale Selector"
+msgstr "Schaal zichtbaarheid selecteren"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1764
+msgid ""
+"The visibility scale selector provides options to control the scales at "
+"which an element will be made visible in the map canvas. Out of the "
+"specified range of scales, the elements are not displayed. It can be applied"
+" e.g. to layers, labels or diagrams, from their :guilabel:`Rendering` "
+"properties tab."
+msgstr ""
+"Het selecteren van de schaal voor de zichtbaarheid bevat opties om de "
+"schalen te beheren waarop een element zichtbaar zal worden gemaakt in het "
+"kaartvenster. Buiten het gespecificeerde bereik aan schalen worden de "
+"elementen niet weergegeven. Het kan, bijvoorbeeld, worden toegepast op "
+"lagen, labels of diagrammen, vanaf de tab :guilabel:`Renderen` van hun "
+"eigenschappen."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1770
+msgid "Tick the |checkbox| :guilabel:`Scale dependent visibility` box"
+msgstr ""
+"Selecteer het vak |checkbox| :guilabel:`Schaalafhankelijke zichtbaarheid`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1771
+msgid ""
+"Fill the :guilabel:`Minimum (exclusive)` box with the most zoomed out "
+"desired scale, typing the value or selecting it from the :ref:`predefined "
+"scales <predefinedscales>`"
+msgstr ""
+"Vul het vak :guilabel:`Minimum (exclusief)` met de meest uitgezoomde "
+"gewenste schaal, typ de waarde of selecteer die uit de :ref:`vooraf "
+"gedefinieerde schalen <predefinedscales>`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1773
+msgid ""
+"and/or fill the :guilabel:`Maximum (inclusive)` box with the most zoomed in "
+"desired scale"
+msgstr ""
+"en/of vul het vak :guilabel:`Maximum (inclusief)` met de meest ingezoomde "
+"gewenste waarde schaal"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1775
+msgid ""
+"The |mapIdentification| :sup:`Set to current canvas scale` button next to "
+"the scale boxes sets the current map canvas scale as boundary of the range "
+"visibility. Press the arrow next to the button to access scales from "
+"layouts' maps and reuse them to fill the box."
+msgstr ""
+"De knop |mapIdentification| :sup:`Op huidige schaal kaartvenster instellen` "
+"naast de vakken voor de schalen stelt de schaal van het huidige kaartvenster"
+" in als grens voor het bereik van de zichtbaarheid. Druk op de pijl naast de"
+" knop om toegang te krijgen tot schalen van lay-outs en die opnieuw "
+"gebruiken om het vak te vullen."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2265
 msgid "mapIdentification"
 msgstr "mapIdentification"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1785
+msgid "Visibility scale selector widget"
+msgstr "Widget Schaal zichtbaarheid selecteren"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1792
 msgid "Spatial Extent Selector"
@@ -3983,6 +4713,45 @@ msgstr ""
 "wanneer u een ruimtelijk bereik wilt selecteren om aan een laag toe te "
 "wijzen of om de uit te voeren acties te beperken. Afhankelijk van de "
 "context, biedt het selectie tussen:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1798
+msgid ":guilabel:`Current Layer Extent`: e.g. when exporting a layer"
+msgstr ":guilabel:`Huidig laagbereik`: bijv. bij exporteren van een laag"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1799
+msgid ""
+":menuselection:`Calculate from Layer -->`: uses extent of a layer loaded in "
+"the current project"
+msgstr ""
+":menuselection:`Uit laag berekenen -->`: gebruikt het bereik van een laag "
+"die in het huidige project is geladen"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1801
+msgid "Use current :guilabel:`Map Canvas Extent`"
+msgstr "Huidige :guilabel:`Bereik kaartvenster` gebruiken"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1802
+msgid ""
+":guilabel:`Draw on Canvas`: a rectangle whose coordinates are then used"
+msgstr ""
+":guilabel:`In kaartvenster tekenen`: een rechthoek waarvan dan de "
+"coördinaten worden gebruikt"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1803
+msgid ""
+":guilabel:`Calculate from Bookmark`: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+":guilabel:`Berekenen uit Favoriete plaats`: gebruikt het bereik van een "
+"opgeslagen :ref:`Favoriete plaats<sec_bookmarks>`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1804
+msgid ""
+":guilabel:`Calculate from Layout Map`: uses extent of a :ref:`layout map "
+"<layout_map_item>`"
+msgstr ""
+":guilabel:`Berekenen uit kaart afdruklay-out`: gebruikt het bereik van een "
+":ref:`afdruklay-out kaart <layout_map_item>`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1805
 msgid "Enter or edit the coordinates as ``xmin, xmax, ymin, ymax``"
@@ -4012,6 +4781,14 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:1831
 msgid "Font selector drop-down menu"
 msgstr "Keuzemenu Lettertype selecteren"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1833
+msgid ""
+":guilabel:`Clear Current Text Format` to unset any assigned text format to "
+"the widget (available only in some contexts)"
+msgstr ""
+":guilabel:`Huidige tekstindeling leegmaken` om een aan de widget toegewezen "
+"tekstindeling ongedaan te maken (alleen beschikbaar in bepaalde contexten)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1835
 msgid ":guilabel:`Font Size` in the associated unit"
@@ -4055,6 +4832,14 @@ msgstr ""
 "de widget :ref:`Kleur selecteren <color_widget>` om het bewerken van kleuren"
 " sneller te maken"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1846
+msgid ""
+"Scroll the mouse wheel over a font selector widget to quickly modify the "
+"font size of the associated text."
+msgstr ""
+"Scroll het muiswiel over een widget voor het selecteren van lettertype om "
+"snel de grootte van de geassocieerde tekst aan te passen."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1853
 msgid "Unit Selector"
 msgstr "Eenheid selecteren"
@@ -4091,6 +4876,21 @@ msgstr ":guilabel:`Pixels`"
 #: ../../docs/user_manual/introduction/general_tools.rst:1864
 msgid ":guilabel:`Inches`"
 msgstr ":guilabel:`Inches`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1865
+msgid ""
+":guilabel:`Percentage`: allows you to set some properties as a percent of "
+"another one. For example, this is useful for creation of text formats where "
+"the components (buffer size, shadow radius...) nicely scale as the text size"
+" is changed, instead of having constant buffer/shadow sizes. So you don't "
+"need to adjust those sizes, when the text size changes."
+msgstr ""
+":guilabel:`Percentage`: staat u toe sommige eigenschappen in te stellen als "
+"een percentage van een ander. Dit is bijvoorbeeld nuttig voor het maken van "
+"tekstindelingen waar de componenten (grootte buffer, straal schaduw…) netjes"
+" worden geschaald als de grootte van de tekst wordt gewijzigd, in plaats van"
+" constante grootte voor buffer/schaduw te hebben. Dus u heft deze groottes "
+"niet aan te passen als de grootte van de tekst wijzigt."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1870
 msgid ""
@@ -4332,6 +5132,232 @@ msgstr ""
 "deze gereedschappen die u eerder mogelijk alleen kende vanuit grafische "
 "programma's. Meng-modi kunnen worden toegepast op lagen en objecten, en ook "
 "op items van afdruklay-out:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1968
+msgid ""
+":guilabel:`Normal`: This is the standard blend mode, which uses the alpha "
+"channel of the top pixel to blend with the pixel beneath it. The colors "
+"aren't mixed."
+msgstr ""
+":guilabel:`Normaal`: Dit is de standaard mengmodus die het alfakanaal van de"
+" bovenliggende pixel mengt met de pixel eronder. De kleuren worden niet "
+"gemengd."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1970
+msgid ""
+":guilabel:`Lighten`: This selects the maximum of each component from the "
+"foreground and background pixels. Be aware that the results tend to be "
+"jagged and harsh."
+msgstr ""
+":guilabel:`Lichter maken`: Deze selecteert de maximumwaarden van de pixels "
+"van de voor- en achtergrond. Het resultaat is vaak ruw, grof en kartelig."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1972
+msgid ""
+":guilabel:`Screen`: Light pixels from the source are painted over the "
+"destination, while dark pixels are not. This mode is most useful for mixing "
+"the texture of one item with another item (such as using a hillshade to "
+"texture another layer)."
+msgstr ""
+":guilabel:`Screen`: Lichte pixels van de bronlaag worden getekend over de "
+"doellaag, terwijl dat niet gebeurt met donkere pixels. Deze modus is "
+"geschikt voor het mengen van de textuur van de ene laag met die van een "
+"andere laag. (zoals  om schaduwen van heuvels te maken in een andere laag)."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1975
+msgid ""
+":guilabel:`Dodge`: Brighten and saturate underlying pixels based on the "
+"lightness of the top pixel. Brighter top pixels cause the saturation and "
+"brightness of the underlying pixels to increase. This works best if the top "
+"pixels aren't too bright. Otherwise the effect is too extreme."
+msgstr ""
+":guilabel:`Dodge`: Onderliggende pixels feller maken en met meer kleur, "
+"gebaseerd op de helderheid van de bovenste pixel. Heldere pixels bovenop "
+"zorgen er voor dat de verzadiging en helderheid van de onderliggende pixels "
+"wordt verhoogd. Dit werkt het beste wanneer de bovenste pixels niet te fel "
+"zijn. Anders wordt het resultaat te extreem."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1979
+msgid ""
+":guilabel:`Addition`: Adds pixel values of one item to the other. In case of"
+" values above the maximum value (in the case of RGB), white is displayed. "
+"This mode is suitable for highlighting features."
+msgstr ""
+":guilabel:`Toevoegen`: Telt de waarde van de pixel van de ene laag op bij de"
+" andere. Wanneer de waarden boven de maximale waarde  (in het geval van RGB)"
+" uitkomen, zal wit worden weergegeven. Deze modus is geschikt om objecten te"
+" accentueren."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1982
+msgid ""
+":guilabel:`Darken`: Retains the lowest values of each component of the "
+"foreground and background pixels. Like lighten, the results tend to be "
+"jagged and harsh."
+msgstr ""
+":guilabel:`Donkerder maken`: Behoudt de laagste waarden van elke component "
+"van de pixels van voor- en achtergrond. Net zoals bij de modus Lichter "
+"maken, neigen de resultaten naar ruw, grof en gekarteld."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1984
+msgid ""
+":guilabel:`Multiply`: Pixel values of the top item are multiplied with the "
+"corresponding values for the bottom item. The results are darker."
+msgstr ""
+":guilabel:`Vermenigvuldigen`: Pixelwaarden van het bovenste item worden "
+"vermenigvuldigd met de overeenkomende waarden van het onderste item. De "
+"resultaten zijn donkerder."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1986
+msgid ""
+":guilabel:`Burn`: Darker colors in the top item cause the underlying items "
+"to darken. Burn can be used to tweak and colorize underlying layers."
+msgstr ""
+":guilabel:`Branden`: Donkere kleuren in de toplaag zorgen ervoor dat "
+"onderliggende lagen ook donkerder worden. Branden kan worden gebruikt om de "
+"kleuren van onderliggende lagen bij te stellen."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1988
+msgid ""
+":guilabel:`Overlay`: Combines multiply and screen blending modes. Light "
+"parts become lighter and dark parts become darker."
+msgstr ""
+":guilabel:`Overlay`: Combineert de mengmodi vermenigvuldigen en screen. "
+"Lichtere delen worden lichter en donkere delen worden donkerder."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1990
+msgid ""
+":guilabel:`Soft light`: Very similar to overlay, but instead of using "
+"multiply/screen it uses color burn/dodge. This is supposed to emulate "
+"shining a soft light onto an image."
+msgstr ""
+":guilabel:`Zacht licht`: Lijkt erg op overlay, maar in plaats van de "
+"combinatie vermenigvuldigen/screen wordt de combinatie branden/dodge "
+"gebruikt. Hiervan wordt verwacht het effect na te bootsen van het schijnen "
+"van een zacht licht op een afbeelding."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1992
+msgid ""
+":guilabel:`Hard light`: Hard light is also very similar to the overlay mode."
+" It's supposed to emulate projecting a very intense light onto an image."
+msgstr ""
+":guilabel:`Hard licht`: Hard licht lijkt op de modus overlay. Deze moet "
+"ervoor zorgen dat het lijkt of er een sterk licht schijnt op het "
+"kaartvenster."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1994
+msgid ""
+":guilabel:`Difference`: Subtracts the top pixel from the bottom pixel, or "
+"the other way around, in order always to get a positive value. Blending with"
+" black produces no change, as the difference with all colors is zero."
+msgstr ""
+":guilabel:`Verschil`: Trekt de waarde van de bovenste pixel van de "
+"onderliggende pixel af of omgekeerd, zodat er altijd een positieve waarde "
+"ontstaat. Het mixen met zwart levert geen wijziging op, omdat het verschil "
+"voor alle kleuren nul is."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1997
+msgid ""
+":guilabel:`Subtract`: Subtracts pixel values of one item from the other. In "
+"the case of negative values, black is displayed."
+msgstr ""
+":guilabel:`Aftrekken`: Trekt de waarde van de pixel van de ene laag af van "
+"de andere. In het geval van negatieve waarden wordt zwart weergegeven."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2005
+msgid "Examples of blend modes applied to a green feature over an orange"
+msgstr ""
+"Voorbeelden van mengmodi, toegepast op een groen object bovenop een oranje"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2007
+msgid ""
+"From top to bottom, left to right: Normal -- Lighten, Screen, Dodge, "
+"Addition -- Difference, Subtract -- Darken, Multiply, Burn -- Overlay, Soft "
+"light, Hard light"
+msgstr ""
+"Van boven naar beneden, van links naar rechts: Normaal -- Lichter maken, "
+"Screen, Dodge, Toevoegen -- Verschil, Aftrekken -- Donkerder maken, "
+"Vermenigvuldigen, Branden -- Overlay, Zacht licht, Hard licht"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2013
+msgid ""
+"When a layer is part of a group that :ref:`renders layers as a group "
+"<render_as_group>`, additional blending modes are available for the "
+"rendering. They provide methods to clip the render of one layer’s content by"
+" the content in a second \"mask\" layer."
+msgstr ""
+"Als een laag deel uitmaakt van een groep die :ref:`lagen rendert als een "
+"groep <render_as_group>`, zijn aanvullende mengmodi beschikbaar voor het "
+"renderen. Zij verschaffen methoden om het renderen van de inhoud van een "
+"laag te clippen naar de inhoud van een tweede \"maskeer\"laag."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2017
+msgid ""
+":guilabel:`Masked By Below`: The output is the top pixel, where the opacity "
+"is reduced by that of the bottom pixel."
+msgstr ""
+":guilabel:`Gemaskeerd op onder`: De uitvoer is de bovenste pixel, waarbij de"
+" opaciteit is verkleind door die van de onderste pixel."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2018
+msgid ""
+":guilabel:`Mask Below`: The output is the bottom pixel, where the opacity is"
+" reduced by that of the top pixel."
+msgstr ""
+":guilabel:`Maskeer onder`: De uitvoer is de onderste pixel, waarbij de "
+"opaciteit is verkleind met die van de bovenste pixel."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2019
+msgid ""
+":guilabel:`Inverse Masked By Below`: The output is the top pixel, where the "
+"opacity is reduced by the inverse of the bottom pixel."
+msgstr ""
+":guilabel:`Gemaskeerd op onder omdraaien`: De uitvoer is de bovenste pixel, "
+"waarbij de opaciteit is verkleind met die van het omdraaien van de onderste "
+"pixel."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2020
+msgid ""
+":guilabel:`Inverse Mask Below`: The output is the bottom pixel, where the "
+"opacity is reduced by the inverse of the top pixel."
+msgstr ""
+":guilabel:`Maskeer onder omdraaien`: De uitvoer is de onderste pixel, "
+"waarbij de opaciteit is verkleind met die van het omdraaien van de bovenste "
+"pixel."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2021
+msgid ""
+":guilabel:`Paint Inside Below`: The top pixel is blended on top of the "
+"bottom pixel, with the opacity of the top pixel reduced by the opacity of "
+"the bottom pixel."
+msgstr ""
+":guilabel:`Kleuren binnen onder`: De bovenste pixel wordt gemengd bovenop de"
+" onderste pixel, met de opaciteit van de bovenste pixel verkleind met de "
+"opaciteit van de onderste pixel."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2023
+msgid ""
+":guilabel:`Paint Below Inside`: The bottom pixel is blended on top of the "
+"top pixel, with the opacity of the bottom pixel reduced by the opacity of "
+"the top pixel."
+msgstr ""
+":guilabel:`Kleuren onder binnen`: De onderste pixel wordt gemengd bovenop de"
+" bovenste pixel, met de opaciteit van de onderste pixel verkleind met de "
+"opaciteit van de bovenste pixel."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2031
+msgid "Examples of blend clipping mode applied to top green layer in a group"
+msgstr ""
+"Voorbeelden van clip mengmodus, toegepast op de bovenste groene laag van een"
+" groep"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2033
+msgid ""
+"**A**: Mask Below **B**: Masked By Below **C**: Paint Below Inside **D**: "
+"Inverse Mask Below **E**: Inverse Masked By Below **F**: Paint Inside Below"
+msgstr ""
+"**A**: Maskeer onder **B**: Maskeer op onder **C**: Kleuren onder binnen "
+"**D**: Maskeer onder omdraaien **E**: Maskeer op onder omdraaien **F**: "
+"Kleuren binnen onder"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2041
 msgid "Data defined override setup"
