@@ -7786,9 +7786,39 @@ msgstr "Lees verder: algoritme :ref:`qgisdensifygeometries`"
 msgid "densify_by_distance"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Takes a polygon or line layer geometry and generates a new one in which the "
+"geometries are densified by adding additional vertices on edges that have a "
+"maximum distance of the specified interval distance."
+msgstr ""
+"Neemt een geometrie van een polygoon- of lijnlaag en maakt een nieuwe waarin"
+" de geometrieën zijn verdicht door aanvullende punten toe te voegen op "
+"randen die een maximale afstand hebben ten opzichte van de gespecificeerde "
+"interval voor de afstand."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "densify_by_distance(geometry, distance)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+msgid ""
+"**distance** - maximum interval distance between vertices in output geometry"
+msgstr ""
+"**distance** - maximale interval afstand tussen punten in de "
+"uitvoergeometrie"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(densify_by_distance(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"4))`` → LineString (1 1, 4 1, 7 1, 10 1)"
+msgstr ""
+"``geom_to_wkt(densify_by_distance(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
+"4))`` → LineString (1 1, 4 1, 7 1, 10 1)"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:395
+msgid "Further reading: :ref:`qgisdensifygeometriesgivenaninterval` algorithm"
+msgstr "Lees verder: :ref:`qgisdensifygeometriesgivenaninterval` algorithm"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "difference"
@@ -7822,9 +7852,33 @@ msgstr "Lees verder: algoritme :ref:`qgisdifference`"
 msgid "disjoint"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether geometries do not spatially intersect. Returns TRUE if the "
+"geometries do not share any space together."
+msgstr ""
+"Test of geometrieën elkaar niet ruimtelijk kruisen. Geeft TRUE terug als de "
+"geometrieën geen enkele ruimte met elkaar delen."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "disjoint(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( "
+"'POINT(4 4)' ))`` → FALSE"
+msgstr ""
+"``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( "
+"'POINT(4 4)' ))`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:407
 msgid ""
@@ -7835,6 +7889,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "distance"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the minimum distance (based on spatial reference) between two "
+"geometries in projected units."
+msgstr ""
+"Geeft de minimum afstand (gebaseerd op ruimtelijke verwijzing) tussen twee "
+"geometrieën in geprojecteerde eenheden terug."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "distance(geometry1, geometry2)"
@@ -8076,6 +8138,14 @@ msgstr ""
 msgid "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 msgstr "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid ""
+"``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
+msgstr ""
+"``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:425
 msgid "Further reading: :ref:`qgisswapxy` algorithm"
 msgstr "Lees verder: algoritme :ref:`qgisswapxy`"
@@ -8083,6 +8153,15 @@ msgstr "Lees verder: algoritme :ref:`qgisswapxy`"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "force_polygon_ccw"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Forces a geometry to respect the convention where exterior rings are "
+"counter-clockwise, interior rings are clockwise."
+msgstr ""
+"Forceert een geometrie om de conventie te respecteren waar buitenste ringen "
+"tegen de wijzers van de klok in gaan, binnenste ringen gaan met de wijzers "
+"van de klok mee."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "force_polygon_ccw(geometry)"
@@ -8096,17 +8175,75 @@ msgstr ""
 "**geometry** - een geometrie. Elke geometrie die geen polygoon is wordt "
 "ongewijzigd teruggegeven."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
+msgstr ""
+"``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:431
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_force_polygon_cw`, "
+":ref:`expression_function_GeometryGroup_force_rhr`"
+msgstr ""
+"Lees verder: :ref:`expression_function_GeometryGroup_force_polygon_cw`, "
+":ref:`expression_function_GeometryGroup_force_rhr`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "force_polygon_cw"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Forces a geometry to respect the convention where exterior rings are "
+"clockwise, interior rings are counter-clockwise."
+msgstr ""
+"Forceert een geometrie om de conventie te respecteren waar buitenste ringen "
+"met de wijzers van de klok mee gaan, binnenste ringen tegen de wijzers van "
+"de klok in gaan."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "force_polygon_cw(geometry)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``geom_to_wkt(force_polygon_cw(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0,"
+" 4 2, 0 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
+msgstr ""
+"``geom_to_wkt(force_polygon_cw(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0,"
+" 4 2, 0 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:438
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_force_polygon_ccw`,"
+" :ref:`expression_function_GeometryGroup_force_rhr`"
+msgstr ""
+"Lees verder: :ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
+":ref:`expression_function_GeometryGroup_force_rhr`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "force_rhr"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Forces a geometry to respect the Right-Hand-Rule, in which the area that is "
+"bounded by a polygon is to the right of the boundary. In particular, the "
+"exterior ring is oriented in a clockwise direction and the interior rings in"
+" a counter-clockwise direction. Due to the inconsistency in the definition "
+"of the Right-Hand-Rule in some contexts it is recommended to use the "
+"explicit force_polygon_cw function instead."
+msgstr ""
+"Forceert een geometrie polygoon om de rechterhandregel te respecteren, "
+"waarin het gebied, dat is gebonden aan een polygoon, aan de rechterkant van "
+"de grens ligt. In het bijzonder, de buitenste ring is georiënteerd in een "
+"richting met de klok mee en de binnenste ringen in een richting tegen de "
+"wijzers van de klok in. Vanwege de inconsistentie in de definitie van de "
+"rechterhandregel in sommige contexten wordt aanbevolen om in plaats daarvan "
+"de expliciete functie force_polygon_cw te gebruiken."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "force_rhr(geometry)"
@@ -8119,6 +8256,16 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(force_rhr(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0"
 " 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:445
+msgid ""
+"Further reading: :ref:`qgisforcerhr` algorithm, "
+":ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
+":ref:`expression_function_GeometryGroup_force_polygon_cw`"
+msgstr ""
+"Lees verder: algoritme :ref:`qgisforcerhr`, "
+":ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
+":ref:`expression_function_GeometryGroup_force_polygon_cw`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "geom_from_gml"
@@ -8259,6 +8406,17 @@ msgstr ""
 msgid "$geometry"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:113
+msgid ""
+"Returns the geometry of the current feature. Can be used for processing with"
+" other functions. **WARNING: This function is deprecated. It is recommended "
+"to use the replacement @geometry variable instead.**"
+msgstr ""
+"Geeft de geometrie terug van het huidige object. Kan worden gebruikt voor "
+"het verwerken met andere functies. **WAARSCHUWING: Deze functie is "
+"vervallen. Aanbevolen wordt om de vervanging, de variabele @geometry in "
+"plaats daarvan te gebruiken.**"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:121
 msgid "``geom_to_wkt( $geometry )`` → 'POINT(6 50)'"
 msgstr "``geom_to_wkt( $geometry )`` → 'POINT(6 50)'"
@@ -8297,9 +8455,29 @@ msgstr ""
 "geometrie in WKT van het object met de ID 1 op de laag \"streets\", bijv. "
 "'POINT(6 50)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:143
+msgid ""
+"``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )`` → TRUE if the current feature spatially intersects the 'Main "
+"St.' named feature in the \"streets\" layer"
+msgstr ""
+"``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )`` → TRUE als het huidige object ruimtelijk kruist met het "
+"benoemde object 'Main St.' op de laag \"streets\""
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:151
 msgid "geometry_n"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:153
+msgid ""
+"Returns a specific geometry from a geometry collection, or NULL if the input"
+" geometry is not a collection. Also returns a part from a multipart "
+"geometry."
+msgstr ""
+"Geeft een specifieke geometrie terug uit een verzameling geometrieën, of "
+"NULL als de invoergeometrie geen verzameling is. Geeft ook een deel van een "
+"meerdelige geometrie terug."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:159
 msgid "geometry_n(geometry, index)"
@@ -8577,9 +8755,34 @@ msgstr "Lees verder: algoritme :ref:`qgisintersection`"
 msgid "intersects"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry intersects another. Returns TRUE if the geometries "
+"spatially intersect (share any portion of space) and false if they do not."
+msgstr ""
+"Test of een geometrie een andere kruist. Geeft TRUE terug als de geometrieën"
+" elkaar ruimtelijk kruisen (een stukje ruimte met elkaar delen) en FALSE als"
+" zij dat niet doen."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "intersects(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``intersects( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'LINESTRING(3 3,"
+" 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``intersects( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'LINESTRING(3 3,"
+" 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) "
+")`` → FALSE"
+msgstr ""
+"``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) "
+")`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:459
 msgid ""
@@ -8591,49 +8794,203 @@ msgstr ""
 msgid "intersects_bbox"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry's bounding box overlaps another geometry's bounding"
+" box. Returns TRUE if the geometries spatially intersect the bounding box "
+"defined and false if they do not."
+msgstr ""
+"Test of een begrenzingsvak van een geometrie het begrenzingsvak van een "
+"andere geometrie overlapt. Geeft TRUE terug als de geometrieën ruimtelijk "
+"kruisen met het gedefinieerde begrenzingsvak en FALSE als zij dat niet doen."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "intersects_bbox(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3"
+" 3, 4 4, 5 5, 3 3))' ) )`` → FALSE"
+msgstr ""
+"``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3"
+" 3, 4 4, 5 5, 3 3))' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
 msgid "is_closed"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid ""
+"Returns TRUE if a line string is closed (start and end points are "
+"coincident), or false if a line string is not closed. If the geometry is not"
+" a line string then the result will be NULL."
+msgstr ""
+"Geeft TRUE terug als een lijn gesloten is (begin- en eindpunt zijn "
+"hetzelfde), of FALSE als een lijn niet gesloten is. Als de geometrie geen "
+"lijn is, zal het resultaat NULL zijn. "
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
 msgid "is_closed(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid "``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+msgstr "``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
+msgid "``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
+msgstr "``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 msgid "is_empty"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
+msgid ""
+"Returns TRUE if a geometry is empty (without coordinates), false if the "
+"geometry is not empty and NULL if there is no geometry. See also "
+"is_empty_or_null."
+msgstr ""
+"Geeft TRUE terug als een geometrie leeg is (zonder coördinaten), FALSE als "
+"de geometrie niet leeg is en NULL als er geen geometrie is. Bekijk ook "
+"is_empty_or_null."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
 msgid "is_empty(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
+msgid "``is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+msgstr "``is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid "``is_empty(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE"
+msgstr "``is_empty(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:63
+msgid "``is_empty(geom_from_wkt('POINT(7 4)'))`` → FALSE"
+msgstr "``is_empty(geom_from_wkt('POINT(7 4)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:64
+msgid "``is_empty(geom_from_wkt('POINT EMPTY'))`` → TRUE"
+msgstr "``is_empty(geom_from_wkt('POINT EMPTY'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:465
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_is_empty_or_null`"
+msgstr ""
+"Lees verder: :ref:`expression_function_GeometryGroup_is_empty_or_null`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "is_empty_or_null"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns TRUE if a geometry is NULL or empty (without coordinates) or false "
+"otherwise. This function is like the expression '$geometry IS NULL or "
+"is_empty($geometry)'"
+msgstr ""
+"Geeft TRUE terug als een geometrie NULL of leeg is (zonder coördinaten), "
+"anders FALSE. Deze functie is hetzelfde als de expressie '$geometry IS NULL "
+"or is_empty($geometry)'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "is_empty_or_null(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``is_empty_or_null(NULL)`` → TRUE"
+msgstr "``is_empty_or_null(NULL)`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+msgstr ""
+"``is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid "``is_empty_or_null(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE"
+msgstr "``is_empty_or_null(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid "``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → FALSE"
+msgstr "``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
+msgid "``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → TRUE"
+msgstr "``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:471
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_is_empty`, "
+":ref:`expression_function_Fields_and_Values_NULL`"
+msgstr ""
+"Lees verder: :ref:`expression_function_GeometryGroup_is_empty`, "
+":ref:`expression_function_Fields_and_Values_NULL`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "is_multipart"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Returns TRUE if the geometry is of Multi type."
+msgstr "Geeft TRUE terug als de geometrie van het type Multi is."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "is_multipart(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → TRUE"
+msgstr ""
+"``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``is_multipart(geom_from_wkt('POINT (0 0)'))`` → FALSE"
+msgstr "``is_multipart(geom_from_wkt('POINT (0 0)'))`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "is_valid"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"Returns TRUE if a geometry is valid; if it is well-formed in 2D according to"
+" the OGC rules."
+msgstr ""
+"Geeft TRUE terug als een geometrie geldig is; of het goed gevormd is in 2D, "
+"overeenkomstig de regels van OGC."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "is_valid(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid "``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
+msgstr "``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
+msgstr "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:478
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_make_valid`, "
+":ref:`qgischeckvalidity` algorithm"
+msgstr ""
+"Lees verder: :ref:`expression_function_GeometryGroup_make_valid`, "
+":ref:`qgischeckvalidity` algorithm"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -8829,6 +9186,30 @@ msgid "**distance** - distance along line to interpolate"
 msgstr ""
 "**distance** - afstand langs de lijn waarop moet worden geïnterpoleerd"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:60
+msgid ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 8 0)'), distance:=5))`` → 'Point (5 0)'"
+msgstr ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 8 0)'), distance:=5))`` → 'Punt (5 0)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
+msgid ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 1 1, 2 0)'), distance:=2.1))`` → 'Point (1.48492424 0.51507576)'"
+msgstr ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 1 1, 2 0)'), distance:=2.1))`` → 'Punt (1.48492424 0.51507576)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 1 0)'), distance:=2))`` → NULL"
+msgstr ""
+"``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
+"0, 1 0)'), distance:=2))`` → NULL"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:491
 msgid "Further reading: :ref:`qgisinterpolatepoint` algorithm"
 msgstr "Lees verder: algoritme :ref:`qgisinterpolatepoint`"
@@ -8946,6 +9327,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/functions_list.rst:497
 msgid "Further reading: :ref:`qgislinesubstring` algorithm"
 msgstr "Lees verder: algoritme :ref:`qgislinesubstring`"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Returns the m (measure) value of a point geometry."
+msgstr "Geeft de waarde M (meting) van een geometrie punt terug."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "m(geometry)"
@@ -9508,9 +9893,52 @@ msgstr ""
 msgid "make_valid"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:354
+msgid ""
+"Returns a valid geometry or an empty geometry if the geometry could not be "
+"made valid."
+msgstr ""
+"Geeft een geldige geometrie terug of een lege geometrie als de geometrie "
+"niet geldig gemaakt kon worden."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:360
 msgid "make_valid(geometry, [method=structure], [keep_collapsed=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:365
+msgid ""
+"**method** - repair algorithm. May be either 'structure' or 'linework'. The "
+"'linework' option combines all rings into a set of noded lines and then "
+"extracts valid polygons from that linework. The 'structure' method first "
+"makes all rings valid and then merges shells and subtracts holes from shells"
+" to generate valid result. Assumes that holes and shells are correctly "
+"categorized."
+msgstr ""
+"**method** - algoritme repareren. Ofwel 'structure' of 'linework'. De optie "
+"'linework' combineert alle ringen naar een set verbonden lijnen en neemt dan"
+" de geldige polygonen uit dat netwerk uit. De methode 'structure' maakt "
+"eerst alle ringen geldig en voegt dan schillen samen en trekt gaten af van "
+"de schillen om een geldig resultaat te maken. Gaat ervan uit dat gaten en "
+"schillen correct zijn gecategoriseerd."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:366
+msgid ""
+"**keep_collapsed** - if set to true, then components that have collapsed "
+"into a lower dimensionality will be kept. For example, a ring collapsing to "
+"a line, or a line collapsing to a point."
+msgstr ""
+"**keep_collapsed** - indien ingesteld op TRUE, dan zullen componenten die "
+"zijn ingeklapt naar een lagere dimensionaliteit worden behouden. "
+"Bijvoorbeeld een ring die is ingeklapt naar een lijn, of een lijn die is "
+"ingeklapt naar een punt."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:368
+msgid ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
+"2))')))`` → 'Polygon ((3 2, 5 8, 4 1, 3 2))'"
+msgstr ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
+"2))')))`` → 'Polygoon ((3 2, 5 8, 4 1, 3 2))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:369
 msgid ""
@@ -9524,6 +9952,18 @@ msgid ""
 "``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8))'), "
 "method:='linework'))`` → 'Polygon ((3 2, 4 1, 5 8, 3 2))'"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:371
+msgid "``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → An empty geometry"
+msgstr "``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → Een lege geometrie"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:503
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_is_valid`, "
+":ref:`qgisfixgeometries` algorithm"
+msgstr ""
+"Lees verder: :ref:`expression_function_GeometryGroup_is_valid`, "
+":ref:`qgisfixgeometries` algorithm"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "minimal_circle"
@@ -9613,9 +10053,23 @@ msgstr "Lees verder: algoritme :ref:`qgisextractvertices`"
 msgid "num_geometries"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the number of geometries in a geometry collection, or the number of "
+"parts in a multi-part geometry. The function returns NULL if the input "
+"geometry is not a collection."
+msgstr ""
+"Geeft het aantal geometrieën terug uit een verzameling geometrieën, of het "
+"aantal delen in een meerdelige geometrie. De functie geeft NULL terug als de"
+" invoergeometrie geen verzameling is."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "num_geometries(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**geometry** - geometry collection or multi-part geometry"
+msgstr "**geometry** - verzameling geometrie of meerdelige geometrie"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid ""
@@ -9624,6 +10078,12 @@ msgid ""
 msgstr ""
 "``num_geometries(geom_from_wkt('GEOMETRYCOLLECTION(POINT(0 1), POINT(0 0), "
 "POINT(1 0), POINT(1 1))'))`` → 4"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``num_geometries(geom_from_wkt('MULTIPOINT((0 1), (0 0), (1 0))'))`` → 3"
+msgstr ""
+"``num_geometries(geom_from_wkt('MULTIPOINT((0 1), (0 0), (1 0))'))`` → 3"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "num_interior_rings"
@@ -9867,9 +10327,35 @@ msgstr "Lees verder: algoritme :ref:`qgisorientedminimumboundingbox`"
 msgid "overlaps"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry overlaps another. Returns TRUE if the geometries "
+"share space, are of the same dimension, but are not completely contained by "
+"each other."
+msgstr ""
+"Test of een geometrie een andere overlapt. Geeft TRUE terug als de "
+"geometrieën ruimte delen, van dezelfde dimensie zijn, maar niet volledig "
+"door elkaar worden omvat."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "overlaps(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
+msgstr ""
+"``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
 msgid "overlay_contains"
@@ -9947,6 +10433,24 @@ msgstr ""
 "(dit is meestal niet gewenst, tenzij u werkt met een bijzonder trage "
 "gegevensprovider)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``overlay_contains('regions')`` → TRUE if the current feature spatially "
+"contains a region"
+msgstr ""
+"``overlay_contains('regions')`` → TRUE als het huidige object ruimtelijk een"
+" region bevat"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
+msgid ""
+"``overlay_contains('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature spatially contains a region with a population greater than "
+"10000"
+msgstr ""
+"``overlay_contains('regions', filter:= population > 10000)`` → TRUE als het "
+"huidige object ruimtelijk een region bevat met een population die groter is "
+"dan 10000"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
 msgid ""
 "``overlay_contains('regions', name)`` → an array of names, for the regions "
@@ -10020,6 +10524,24 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "overlay_crosses(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_crosses('regions')`` → TRUE if the current feature spatially "
+"crosses a region"
+msgstr ""
+"``overlay_crosses('regions')`` → TRUE als het huidige object ruimtelijk "
+"kruist met een region"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_crosses('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature spatially crosses a region with a population greater than "
+"10000"
+msgstr ""
+"``overlay_crosses('regions', filter:= population > 10000)`` → TRUE als het "
+"huidige object ruimtelijk kruist met een region met een population die "
+"groter is dan 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
@@ -10096,6 +10618,24 @@ msgstr ""
 msgid ""
 "overlay_disjoint(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_disjoint('regions')`` → TRUE if the current feature is spatially "
+"disjoint from all the regions"
+msgstr ""
+"``overlay_disjoint('regions')`` → TRUE als het huidige object ruimtelijk is "
+"losgekoppeld van alle regions"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_disjoint('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature is spatially disjoint from all the regions with a population"
+" greater than 10000"
+msgstr ""
+"``overlay_disjoint('regions', filter:= population > 10000)`` → TRUE als het "
+"huidige object ruimtelijk is losgekoppeld van alle regions met een "
+"population die groter is dan 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
@@ -10175,6 +10715,24 @@ msgstr ""
 msgid "overlay_equals(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_equals('regions')`` → TRUE if the current feature is spatially "
+"equal to a region"
+msgstr ""
+"``overlay_equals('regions')`` → TRUE als het huidige object ruimtelijk "
+"gelijk is aan een region"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature is spatially equal to a region with a population greater "
+"than 10000"
+msgstr ""
+"``overlay_equals('regions', filter:= population > 10000)`` →  TRUE als het "
+"huidige object ruimtelijk gelijk is aan een region met een population die "
+"groter is dan 10000"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
 "``overlay_equals('regions', name)`` → an array of names, for the regions "
@@ -10247,6 +10805,116 @@ msgstr ""
 "beschreven in de functie voor PostGIS `ST_Intersects "
 "<https://postgis.net/docs/ST_Intersects.html>`_."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
+msgstr ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid "**min_overlap** - defines an optional exclusion filter:"
+msgstr "**min_overlap** - definieert een optioneel filter voor uitsluiting:"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"for polygons, a minimum area in current feature squared units for the "
+"intersection. If the intersection results in multiple polygons the "
+"intersection will be returned if at least one of the polygons has an area "
+"greater or equal to the value"
+msgstr ""
+"voor polygonen, een minimum gebied in vierkante eenheden van het huidige "
+"object voor de kruising. Als de resultaten van de kruising resulteert in "
+"meerdere polygonen zal de kruising worden teruggegeven als tenminste één van"
+" de polygonen een gebied heeft dat groter of gelijk is aan de waarde."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid ""
+"for lines, a minimum length in current feature units. If the intersection "
+"results in multiple lines the intersection will be returned if at least one "
+"of the lines has a length greater or equal to the value."
+msgstr ""
+"voor lijnen, een minimum gebied in eenheden van het huidige object. Als de "
+"resultaten van de kruising resulteert in meerdere lijnen zal de kruising "
+"worden teruggegeven als tenminste één van de polygonen een lengte heeft die "
+"groter of gelijk is aan de waarde."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"**min_inscribed_circle_radius** - defines an optional exclusion filter (for "
+"polygons only): minimum radius in current feature units for the maximum "
+"inscribed circle of the intersection. If the intersection results in "
+"multiple polygons the intersection will be returned if at least one of the "
+"polygons has a radius for the maximum inscribed circle greater or equal to "
+"the value."
+msgstr ""
+"**min_inscribed_circle_radius** - definieert een optioneel filter voor "
+"uitsluiting (alleen voor polygonen): minimum straal in eenheden voor het "
+"huidige object voor de maximale ingesloten cirkel van de kruising. Als de "
+"resultaten van de kruising resulteert in meerdere polygonen zal de kruising "
+"worden teruggegeven als tenminste één van de polygonen een straal voor de "
+"maximale ingesloten cirkel heeft die groter of gelijk is aan de waarde."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
+msgid ""
+"Read more on the underlying GEOS predicate, as described in PostGIS "
+"`ST_MaximumInscribedCircle "
+"<https://postgis.net/docs/ST_MaximumInscribedCircle.html>`_ function."
+msgstr ""
+"Lees meer over het onderliggende predikaat van GEOS, zoals beschreven in de "
+"functie voor PostGIS `ST_MaximumInscribedCircle "
+"<https://postgis.net/docs/ST_MaximumInscribedCircle.html>`_."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+msgid "This argument requires GEOS >= 3.9."
+msgstr "Dit argument vereist GEOS >= 3.9."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
+msgid ""
+"**return_details** - Set this to true to return a list of maps containing "
+"(key names in quotes) the feature 'id', the expression 'result' and the "
+"'overlap' value. The 'radius' of the maximum inscribed circle is also "
+"returned when the target layer is a polygon. Only valid when used with the "
+"expression parameter"
+msgstr ""
+"**return_details** - Stel dit in op TRUE om een lijst kaarten terug te geven"
+" die (sleutel namen tussen aanhalingstekens) het object 'id', de expressie "
+"'result' en de waarde 'overlap' bevatten. De 'straal' van de maximale "
+"ingesloten cirkel wordt ook teruggegeven als de doellaag een polygoon is. "
+"Alleen geldig indien gebruikt met de parameter expression"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"**sort_by_intersection_size** - only valid when used with an expression, set"
+" this to 'des' to return the results ordered by the overlap value in "
+"descending order or set this to 'asc' for ascending order."
+msgstr ""
+"**sort_by_intersection_size** - alleen geldig indien gebruikt met een "
+"expressie, stel dit in op 'des' om de resultaten weer te geven in de "
+"volgorde van de waarde overlap in aflopende volgorde of stel het in op 'asc'"
+" voor oplopende volgorde."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
+msgid ""
+"``overlay_intersects('regions')`` → TRUE if the current feature spatially "
+"intersects a region"
+msgstr ""
+"``overlay_intersects('regions')`` → TRUE als het huidige object ruimtelijk "
+"een region kruist "
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
+msgid ""
+"``overlay_intersects('regions', filter:= population > 10000)`` → TRUE if the"
+" current feature spatially intersects a region with a population greater "
+"than 10000"
+msgstr ""
+"``overlay_intersects('regions', filter:= population > 10000)`` → TRUE als "
+"het huidige object ruimtelijk een region kruist met een population die "
+"groter is dan 10000"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
 msgid ""
 "``overlay_intersects('regions', name)`` → an array of names, for the regions"
@@ -10285,6 +10953,50 @@ msgstr ""
 "``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
 "limit:=2)`` → een array van geometrieën (in WKT), voor maximaal twee regions"
 " gekruist door het huidige object"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
+msgid ""
+"``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE if the "
+"current feature spatially intersects a region and the intersection area (of "
+"at least one of the parts in case of multipolygons) is greater or equal to "
+"0.54"
+msgstr ""
+"``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE als het "
+"huidige object ruimtelijk een region kruist en het gebied van de kruising "
+"(of tenminste één van de delen in het geval van multipolygonen) is groter of"
+" gelijk aan 0.54"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
+msgid ""
+"``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` "
+"→ TRUE if the current feature spatially intersects a region and the "
+"intersection area maximum inscribed circle's radius (of at least one of the "
+"parts in case of multipart) is greater or equal to 0.54"
+msgstr ""
+"``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` "
+"→ TRUE als het huidige object ruimtelijk een region kruist en de maximale "
+"ingesloten cirkel van het gebied van de kruising (of tenminste één van de "
+"delen in het geval van multipolygonen) is groter of gelijk aan 0.54"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
+"return_details:=true)`` → an array of maps containing 'id', 'result', "
+"'overlap' and 'radius'"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
+"return_details:=true)`` → een array van kaarten die 'id', 'result', "
+"'overlap' en 'radius' bevatten"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
+"sort_by_intersection_size:='des')`` → an array of geometries (in WKT) "
+"ordered by the overlap value in descending order"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
+"sort_by_intersection_size:='des')`` → een array van geometrieën (in WKT) op "
+"volgorde van de waarde overlap in aflopende volgorde"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:565
 msgid ""
@@ -10358,6 +11070,23 @@ msgstr ""
 "**max_distance** - een optionele afstand om het zoeken naar overeenkomende "
 "objecten te beperken. Indien niet ingesteld zullen alle objecten van de "
 "doellaag worden gebruikt."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_nearest('airports')`` → TRUE if the \"airports\" layer has at "
+"least one feature"
+msgstr ""
+"``overlay_nearest('airports')`` → TRUE als de laag \"airports\" minstens één"
+" object heeft"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid ""
+"``overlay_nearest('airports', max_distance:= 5000)`` → TRUE if there is an "
+"airport within a distance of 5000 map units from the current feature"
+msgstr ""
+"``overlay_nearest('airports', max_distance:= 5000)`` → TRUE als er een "
+"vliegveld is binnen een afstand van 5000 kaarteenheden vanaf het huidige "
+"object"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid ""
@@ -10441,6 +11170,24 @@ msgstr ""
 msgid "overlay_touches(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_touches('regions')`` → TRUE if the current feature spatially "
+"touches a region"
+msgstr ""
+"``overlay_touches('regions')`` → TRUE als het huidige object ruimtelijk een "
+"region raakt"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_touches('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature spatially touches a region with a population greater than "
+"10000"
+msgstr ""
+"``overlay_touches('regions', filter:= population > 10000)`` → TRUE als het "
+"huidige object ruimtelijk een region raakt met een population die groter is "
+"dan 10000"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
 "``overlay_touches('regions', name)`` → an array of names, for the regions "
@@ -10514,6 +11261,24 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "overlay_within(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_within('regions')`` → TRUE if the current feature is spatially "
+"within a region"
+msgstr ""
+"``overlay_within('regions')`` → TRUE als het huidige object ruimtelijk in "
+"een region ligt"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_within('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature is spatially within a region with a population greater than "
+"10000"
+msgstr ""
+"``overlay_within('regions', filter:= population > 10000)`` → TRUE als het "
+"huidige object ruimtelijk in een region ligt met een population die groter "
+"is dan 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
@@ -10702,6 +11467,14 @@ msgstr ""
 "**tolerance** - maximale afstand tussen het teruggegeven punt en de locatie "
 "van de ware pool"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
+msgstr ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Punt(1.546875 2.546875)'"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:608
 msgid "Further reading: :ref:`qgispoleofinaccessibility` algorithm"
 msgstr "Lees verder: algoritme :ref:`qgispoleofinaccessibility`"
@@ -10807,6 +11580,14 @@ msgstr ""
 msgid "**pattern** - DE-9IM pattern to match"
 msgstr "**pattern** - het patroon voor DE-9IM dat overeen moet komen"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid ""
+"``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( "
+"'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → TRUE"
+msgstr ""
+"``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( "
+"'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 msgid "reverse"
 msgstr ""
@@ -10863,6 +11644,17 @@ msgstr ""
 "**center** - middelpunt van de rotatie. Indien niet gespecificeerd wordt het"
 " midden van het begrenzingsvak van de geometrie gebruikt"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid ""
+"**per_part** - apply rotation per part. If true, then rotation will apply "
+"around the center of each part's bounding box when the input geometry is "
+"multipart and an explicit rotation center point is not specified."
+msgstr ""
+"**per_part** - rotatie per deel toepassen. Indien TRUE, dan zal de rotatie "
+"worden toegepast rondom het midden van het begrenzingsvak van elk deel als "
+"de invoergeometrie meerdelig is en een expliciet punt voor de rotatie niet "
+"is gespecificeerd."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
 msgid ""
 "``rotate($geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees "
@@ -10887,17 +11679,93 @@ msgstr "Objecten roteren"
 msgid "roundness"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid ""
+"Calculates how close a polygon shape is to a circle. The function Returns "
+"TRUE when the polygon shape is a perfect circle and 0 when it is completely "
+"flat."
+msgstr ""
+"Berekent hoe dichtbij de vorm van een polygoon is bij een cirkel. De functie"
+" geeft TRUE terug als de vorm van de polygoon  een perfecte cirkel is en 0 "
+"als hij volledig vlak is."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
 msgid "roundness(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
+msgid "**geometry** - a polygon"
+msgstr "**geometry** - een polygoon"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 1, 1 1, 1 0, 0 0))')), "
+"3)`` → 0.785"
+msgstr ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 1, 1 1, 1 0, 0 0))')), "
+"3)`` → 0.785"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
+msgid ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 0.1, 1 0.1, 1 0, 0 0))')),"
+" 3)`` → 0.260"
+msgstr ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 0.1, 1 0.1, 1 0, 0 0))')),"
+" 3)`` → 0.260"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:626
+msgid "Further reading: :ref:`qgisroundness` algorithm"
+msgstr "Lees verder: algoritme :ref:`qgisroundness`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "scale"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a scaled version of a geometry. Calculations are in the Spatial "
+"Reference System of this geometry."
+msgstr ""
+"Geeft een geschaalde versie van een geometrie terug. Berekeningen zijn in "
+"het ruimtelijke referentiesysteem van deze geometrie."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "scale(geometry, x_scale, y_scale, [center])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "**x_scale** - x-axis scaling factor"
+msgstr "**x_scale** - schaalfactor X-as"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid "**y_scale** - y-axis scaling factor"
+msgstr "**y_scale** - schaalfactor Y-as"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid ""
+"**center** - scaling center point. If not specified, the center of the "
+"geometry's bounding box is used."
+msgstr ""
+"**center** - middelpunt van het op schaal brengen. Indien niet "
+"gespecificeerd wordt het midden van het begrenzingsvak van de geometrie "
+"gebruikt"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``scale($geometry, 2, 0.5, make_point(4, 5))`` → geometry scaled twice "
+"horizontally and halved vertically, around the (4, 5) point"
+msgstr ""
+"``scale($geometry, 2, 0.5, make_point(4, 5))`` → geometrie tweemaal "
+"horizontaal geschaald en verticaal gehalveerd, rond het punt (4, 5)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``scale($geometry, 2, 0.5)`` → geometry twice horizontally and halved "
+"vertically, around the center of its bounding box"
+msgstr ""
+"``scale($geometry, 2, 0.5, make_point(4, 5))`` → geometrie tweemaal "
+"horizontaal geschaald en verticaal gehalveerd, rond het middelpunt van zijn "
+"begrenzingsvak"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
 msgid "segments_to_lines"
@@ -10931,9 +11799,58 @@ msgstr "Lees verder: algoritme :ref:`qgisexplodelines`"
 msgid "shared_paths"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a collection containing paths shared by the two input geometries. "
+"Those going in the same direction are in the first element of the "
+"collection, those going in the opposite direction are in the second element."
+" The paths themselves are given in the direction of the first geometry."
+msgstr ""
+"Geeft een verzameling terug die paden bevat die worden gedeeld door de twee "
+"invoergeometrieën. Die welke in dezelfde richting gaan staan in het eerste "
+"element van de verzameling, die welke in tegengestelde richting gaan staan "
+"in het tweede element. De paden zelf worden gegeven in de richting van de "
+"eerste geometrie."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "shared_paths(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**geometry1** - a LineString/MultiLineString geometry"
+msgstr "**geometry1** - een geometrie LineString/MultiLineString"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+msgid "**geometry2** - a LineString/MultiLineString geometry"
+msgstr "**geometry2** - een geometrie LineString/MultiLineString"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('MULTILINESTRING((26 125,26 200,126"
+" 200,126 125,26 125),(51 150,101 150,76 175,51 "
+"150)))'),geom_from_wkt('LINESTRING(151 100,126 156.25,126 125,90 161, 76 "
+"175)')))`` → 'GeometryCollection (MultiLineString ((126 156.25, 126 "
+"125),(101 150, 90 161),(90 161, 76 175)),MultiLineString EMPTY)'"
+msgstr ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('MULTILINESTRING((26 125,26 200,126"
+" 200,126 125,26 125),(51 150,101 150,76 175,51 "
+"150)))'),geom_from_wkt('LINESTRING(151 100,126 156.25,126 125,90 161, 76 "
+"175)')))`` → 'GeometrieVerzameling (MultiLineString ((126 156.25, 126 "
+"125),(101 150, 90 161),(90 161, 76 175)),MultiLineString EMPTY)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('LINESTRING(76 175,90 161,126 "
+"125,126 156.25,151 100)'),geom_from_wkt('MULTILINESTRING((26 125,26 200,126 "
+"200,126 125,26 125),(51 150,101 150,76 175,51 150))')))`` → "
+"'GeometryCollection (MultiLineString EMPTY,MultiLineString ((76 175, 90 "
+"161),(90 161, 101 150),(126 125, 126 156.25)))'"
+msgstr ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('LINESTRING(76 175,90 161,126 "
+"125,126 156.25,151 100)'),geom_from_wkt('MULTILINESTRING((26 125,26 200,126 "
+"200,126 125,26 125),(51 150,101 150,76 175,51 150))')))`` → "
+"'GeometrieVerzameling (MultiLineString EMPTY,MultiLineString ((76 175, 90 "
+"161),(90 161, 101 150),(126 125, 126 156.25)))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
 msgid "shortest_line"
@@ -11232,13 +12149,104 @@ msgstr "Lees verder: algoritme :ref:`qgissmoothgeometry`"
 msgid "square_wave"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Constructs square/rectangular waves along the boundary of a geometry."
+msgstr ""
+"Construeert vierkante/rechthoekige golven rondom de grens van een geometrie."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "square_wave(geometry, wavelength, amplitude, [strict=False])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "**wavelength** - wavelength of square waveform"
+msgstr "**wavelength** - lengte golf van vierkante vorm golf"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid "**amplitude** - amplitude of square waveform"
+msgstr "**amplitude** - grootte van vierkante vorm golf"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid ""
+"**strict** - By default the wavelength argument is treated as a \"maximum "
+"wavelength\", where the actual wavelength will be dynamically adjusted so "
+"that an exact number of square waves are created along the boundaries of the"
+" geometry. If the strict argument is set to true then the wavelength will be"
+" used exactly and an incomplete pattern may be used for the final waveform."
+msgstr ""
+"**strict** - Standaard wordt het argument wavelength behandeld als een "
+"\"maximum wavelength\", waar de feitelijk golflengte dynamisch zal worden "
+"aangepast, zodat een exact aantal vierkante golven wordt gemaakt langs de "
+"grenzen van de geometrie. Als het argument strict is ingesteld op true dan "
+"zal de golflengte exact worden gebruikt, en een onvolledig patroon kan "
+"worden gebruikt voor de uiteindelijke vorm van de golf."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Square waves"
+" with wavelength 3 and amplitude 1 along the linestring"
+msgstr ""
+"``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Vierkante "
+"golven met golflengte 3 en grootte 1 langs de lijn"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "square_wave_randomized"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"Constructs randomized square/rectangular waves along the boundary of a "
+"geometry."
+msgstr ""
+"Construeert willekeurige vierkante/rechthoekige golven rondom de grens van "
+"een geometrie."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"square_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+msgstr ""
+"square_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:117
+msgid "**min_wavelength** - minimum wavelength of waves"
+msgstr "**min_wavelength** - minimum golflengte van de golven"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:118
+msgid "**max_wavelength** - maximum wavelength of waves"
+msgstr "**max_wavelength** - maximum golflengte van de golven"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:119
+msgid "**min_amplitude** - minimum amplitude of waves"
+msgstr "**min_amplitude** - minimum grootte van de golven"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:120
+msgid "**max_amplitude** - maximum amplitude of waves"
+msgstr "**max_amplitude** - maximum grootte van de golven"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:121
+msgid ""
+"**seed** - specifies a random seed for generating waves. If the seed is 0, "
+"then a completely random set of waves will be generated."
+msgstr ""
+"**seed** - specificeert een willekeurig zaad voor het maken van golven. Als "
+"zaad 0 is, dan zal een volledig willekeurige set golven worden gemaakt."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``square_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, "
+"0.2)`` → Randomly sized square waves with wavelengths between 2 and 3 and "
+"amplitudes between 0.1 and 0.2 along the linestring"
+msgstr ""
+"``square_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, "
+"0.2)`` → Vierkante golven met willekeurige grootte met golflengten tussen 2 "
+"en 3 en groottes tussen 0.1 en 0.2 langs de lijn"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
 msgid "start_point"
@@ -11377,9 +12385,34 @@ msgstr "Lees verder: algoritme :ref:`qgistaperedbuffer`"
 msgid "touches"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry touches another. Returns TRUE if the geometries "
+"have at least one point in common, but their interiors do not intersect."
+msgstr ""
+"Test of een geometrie een andere raakt. Geeft TRUE terug als de geometrieën "
+"tenminste één gemeenschappelijk punt hebben, maar hun interieurs niet "
+"kruisen."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "touches(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` "
+"→ FALSE"
+msgstr ""
+"``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` "
+"→ FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:686
 msgid ""
@@ -11465,13 +12498,74 @@ msgstr "Lees verder: algoritme :ref:`qgistranslategeometry`"
 msgid "triangular_wave"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Constructs triangular waves along the boundary of a geometry."
+msgstr "Construeert driehoekige golven rondom de grens van een geometrie."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "triangular_wave(geometry, wavelength, amplitude, [strict=False])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "**wavelength** - wavelength of triangular waveform"
+msgstr "**wavelength** - lengte golf van driehoekige vorm golf"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid "**amplitude** - amplitude of triangular waveform"
+msgstr "**amplitude** - grootte van driehoekige vorm golf"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid ""
+"**strict** - By default the wavelength argument is treated as a \"maximum "
+"wavelength\", where the actual wavelength will be dynamically adjusted so "
+"that an exact number of triangular waves are created along the boundaries of"
+" the geometry. If the strict argument is set to true then the wavelength "
+"will be used exactly and an incomplete pattern may be used for the final "
+"waveform."
+msgstr ""
+"**strict** - Standaard wordt het argument wavelength behandeld als een "
+"\"maximum wavelength\", waar de feitelijk golflengte dynamisch zal worden "
+"aangepast, zodat een exact aantal driehoekige golven wordt gemaakt langs de "
+"grenzen van de geometrie. Als het argument strict is ingesteld op true dan "
+"zal de golflengte exact worden gebruikt, en een onvolledig patroon kan "
+"worden gebruikt voor de uiteindelijke vorm van de golf."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → "
+"Triangular waves with wavelength 3 and amplitude 1 along the linestring"
+msgstr ""
+"``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → "
+"Driehoekige golven met golflengte 3 en grootte 1 langs de lijn"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "triangular_wave_randomized"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"Constructs randomized triangular waves along the boundary of a geometry."
+msgstr ""
+"Construeert willekeurige driehoekige golven rondom de grens van een "
+"geometrie."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"triangular_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+msgstr ""
+"triangular_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``triangular_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, "
+"0.1, 0.2)`` → Randomly sized triangular waves with wavelengths between 2 and"
+" 3 and amplitudes between 0.1 and 0.2 along the linestring"
+msgstr ""
+"```triangular_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, "
+"0.1, 0.2)`` → Driehoekige golven met willekeurige grootte met golflengten "
+"tussen 2 en 3 en groottes tussen 0.1 en 0.2 langs de lijn"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
 msgid "union"
@@ -11500,13 +12594,76 @@ msgstr ""
 msgid "wave"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:81
+msgid "Constructs rounded (sine-like) waves along the boundary of a geometry."
+msgstr ""
+"Construeert afgeronde (sinus-achtige) golven rondom de grens van een "
+"geometrie."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:87
 msgid "wave(geometry, wavelength, amplitude, [strict=False])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:92
+msgid "**wavelength** - wavelength of sine-like waveform"
+msgstr "**wavelength** - lengte golf van sinus-achtige vorm golf"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:93
+msgid "**amplitude** - amplitude of sine-like waveform"
+msgstr "**amplitude** - grootte van sinus-achtige vorm golf"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:94
+msgid ""
+"**strict** - By default the wavelength argument is treated as a \"maximum "
+"wavelength\", where the actual wavelength will be dynamically adjusted so "
+"that an exact number of waves are created along the boundaries of the "
+"geometry. If the strict argument is set to true then the wavelength will be "
+"used exactly and an incomplete pattern may be used for the final waveform."
+msgstr ""
+"**strict** - Standaard wordt het argument wavelength behandeld als een "
+"\"maximum wavelength\", waar de feitelijk golflengte dynamisch zal worden "
+"aangepast, zodat een exact aantal golven wordt gemaakt langs de grenzen van "
+"de geometrie. Als het argument strict is ingesteld op true dan zal de "
+"golflengte exact worden gebruikt, en een onvolledig patroon kan worden "
+"gebruikt voor de uiteindelijke vorm van de golf."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:96
+msgid ""
+"``wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Sine-like waves "
+"with wavelength 3 and amplitude 1 along the linestring"
+msgstr ""
+"``wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Sinus-achtige "
+"golven met golflengte 3 en grootte 1 langs de lijn"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:104
 msgid "wave_randomized"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:106
+msgid ""
+"Constructs randomized curved (sine-like) waves along the boundary of a "
+"geometry."
+msgstr ""
+"Construeert willekeurige gebogen (sinus-achtige) golven rondom de grens van "
+"een geometrie."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:112
+msgid ""
+"wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, "
+"max_amplitude, [seed=0])"
+msgstr ""
+"wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, "
+"max_amplitude, [seed=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:123
+msgid ""
+"``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` "
+"→ Randomly sized curved waves with wavelengths between 2 and 3 and "
+"amplitudes between 0.1 and 0.2 along the linestring"
+msgstr ""
+"``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` "
+"→ Gebogen golven met willekeurige grootte met golflengten tussen 2 en 3 en "
+"groottes tussen 0.1 en 0.2 langs de lijn"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:131
 msgid "wedge_buffer"
@@ -11571,9 +12728,33 @@ msgstr "Lees verder: algoritme :ref:`qgiswedgebuffers`"
 msgid "within"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry is within another. Returns TRUE if the geometry1 is"
+" completely within geometry2."
+msgstr ""
+"Test of een geometrie in een andere ligt. Geeft TRUE terug als geometry1 "
+"volledig binnen geometry2 ligt."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "within(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, "
+"0 1, 1 1, 1 0, 0 0))' ) )`` → TRUE"
+msgstr ""
+"``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, "
+"0 1, 1 1, 1 0, 0 0))' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 "
+"1, 1 1, 1 0, 0 0 ))' ) )`` → FALSE"
+msgstr ""
+"``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 "
+"1, 1 1, 1 0, 0 0 ))' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:710
 msgid ""
@@ -12018,6 +13199,31 @@ msgstr ""
 msgid "Map Layers"
 msgstr "Lagen"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:747
+msgid ""
+"This group contains a list of the available layers in the current project "
+"and, for each layer, their fields (stored in the dataset, virtual or "
+"auxiliary ones as well as from joins). The fields can be interacted the same"
+" way as mentioned in :ref:`fields_values`, except that a double-click will "
+"add the name as a string (single quoted) to the expression instead of as a "
+"field reference given that they do not belong to the active layer. This "
+"offers a convenient way to write expressions referring to different layers, "
+"such as when performing :ref:`aggregates <aggregates_function>`, "
+":ref:`attribute <record_attributes>` or :ref:`spatial <geometry_functions>` "
+"queries."
+msgstr ""
+"Deze groep bevat een lijst van de beschikbare lagen in het huidige project "
+"en, voor elke laag, hun velden (opgeslagen in de gegevensset, virtueel of "
+"die van de hulpopslag, als ook van samenvoegingen). De velden kunnen op "
+"dezelfde manier worden bewerkt als vermeld in :ref:`fields_values`, behalve "
+"dat een dubbelklik de naam als een tekenreeks zal toevoegen (enkele "
+"aanhalingstekens) voor de expressie in plaats van als een opgegeven "
+"verwijzing naar een veld dat zij niet behoren tot de actieve laag. Dit biedt"
+" een handige manier om expressies te schrijven die verwijzen naar andere "
+"lagen, zoals bij het uitvoeren van query's :ref:`samenvoegen "
+"<aggregates_function>`, :ref:`attributen <record_attributes>` of "
+":ref:`ruimtelijk <geometry_functions>`."
+
 #: ../../docs/user_manual/expressions/functions_list.rst:757
 msgid "It also provides some convenient functions to manipulate layers."
 msgstr "Het verschaft ook enkele handige functies om lagen te bewerken."
@@ -12388,6 +13594,10 @@ msgstr "``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }"
 msgid "map_exist"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:158
+msgid "Returns TRUE if the given key exists in the map."
+msgstr "Geeft TRUE terug als de opgegeven sleutel bestaat in de kaart."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:164
 msgid "map_exist(map, key)"
 msgstr ""
@@ -12396,6 +13606,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:188
 msgid "**key** - the key to lookup"
 msgstr "**key** - de sleutel die moet worden gezocht"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:169
+msgid "``map_exist(map('1','one','2','two'),'3')`` → FALSE"
+msgstr "``map_exist(map('1','one','2','two'),'3')`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:177
 msgid "map_get"
@@ -12472,9 +13686,27 @@ msgstr ""
 msgid "map_prefix_keys"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:31
+msgid "Returns a map with all keys prefixed by a given string."
+msgstr ""
+"Geeft een kaart terug waarin alle sleutels worden voorafgegaan door een "
+"opgegeven tekenreeks."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:37
 msgid "map_prefix_keys(map, prefix)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:40
+msgid "**prefix** - a string"
+msgstr "**prefix** - een tekenreeks"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:42
+msgid ""
+"``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
+"'one', 'prefix-2': 'two' }"
+msgstr ""
+"``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
+"'one', 'prefix-2': 'two' }"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:50
 msgid "map_to_hstore"
@@ -12526,9 +13758,35 @@ msgstr "``to_json(array(1,2,3))`` → [1,2,3]"
 msgid "url_encode"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:93
+msgid ""
+"Returns an URL encoded string from a map. Transforms all characters in their"
+" properly-encoded form producing a fully-compliant query string."
+msgstr ""
+"Geeft een URL-gecodeerde tekenreeks terug uit een kaart. Transformeert alle "
+"tekens naar hun correct gecodeerde vorm een volledig conforme tekenreeks "
+"voor de query producerend."
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:95
+msgid "Note that the plus sign '+' is not converted."
+msgstr "Onthoud dat het plusteken '+' niet wordt geconverteerd."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:101
 msgid "url_encode(map)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:103
+msgid "**map** - a map."
+msgstr "**map** - een kaart."
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:105
+#, python-format
+msgid ""
+"``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → "
+"'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'"
+msgstr ""
+"``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → "
+"'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:806
 msgid "Mathematical Functions"
@@ -13396,6 +14654,10 @@ msgstr ""
 msgid "%"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
+msgid "Remainder of division. Takes the sign of the dividend."
+msgstr "Restant van de deling. Neemt het teken van de deler."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
 msgid "a % b"
 msgstr "a % b"
@@ -13432,6 +14694,18 @@ msgstr "**a** - waarde"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:179
 msgid "**b** - value"
 msgstr "**b** - waarde"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
+msgid "``9 % 2`` → 1"
+msgstr "``9 % 2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``9 % -2`` → 1"
+msgstr "``9 % -2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:27
+msgid "``-9 % 2`` → -1"
+msgstr "``-9 % 2`` → -1"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
 msgid "``5 % NULL`` → NULL"
@@ -13561,6 +14835,18 @@ msgstr ""
 msgid "a < b"
 msgstr "a < b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
+msgid "``5 < 4`` → FALSE"
+msgstr "``5 < 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
+msgid "``5 < 5`` → FALSE"
+msgstr "``5 < 5`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:66
+msgid "``4 < 5`` → TRUE"
+msgstr "``4 < 5`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:74
 msgid "<="
 msgstr ""
@@ -13577,6 +14863,18 @@ msgstr ""
 msgid "a <= b"
 msgstr "a <= b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:87
+msgid "``5 <= 4`` → FALSE"
+msgstr "``5 <= 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:88
+msgid "``5 <= 5`` → TRUE"
+msgstr "``5 <= 5`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:89
+msgid "``4 <= 5`` → TRUE"
+msgstr "``4 <= 5`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "<>"
 msgstr ""
@@ -13588,6 +14886,14 @@ msgstr "Vergelijkt twee waarden en evalueert naar 1 als zij niet gelijk zijn."
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:105
 msgid "a <> b"
 msgstr "a <> b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:110
+msgid "``5 <> 4`` → TRUE"
+msgstr "``5 <> 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:111
+msgid "``4 <> 4`` → FALSE"
+msgstr "``4 <> 4`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
 msgid "``5 <> NULL`` → NULL"
@@ -13608,6 +14914,14 @@ msgstr "Vergelijkt twee waarden en evalueert naar 1 als zij gelijk zijn."
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:129
 msgid "a = b"
 msgstr "a = b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:134
+msgid "``5 = 4`` → FALSE"
+msgstr "``5 = 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:135
+msgid "``4 = 4`` → TRUE"
+msgstr "``4 = 4`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:136
 msgid "``5 = NULL`` → NULL"
@@ -13633,6 +14947,18 @@ msgstr ""
 msgid "a > b"
 msgstr "a > b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:158
+msgid "``5 > 4`` → TRUE"
+msgstr "``5 > 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:159
+msgid "``5 > 5`` → FALSE"
+msgstr "``5 > 5`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:160
+msgid "``4 > 5`` → FALSE"
+msgstr "``4 > 5`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:168
 msgid ">="
 msgstr ""
@@ -13649,9 +14975,25 @@ msgstr ""
 msgid "a >= b"
 msgstr "a >= b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:181
+msgid "``5 >= 4`` → TRUE"
+msgstr "``5 >= 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:182
+msgid "``5 >= 5`` → TRUE"
+msgstr "``5 >= 5`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:183
+msgid "``4 >= 5`` → FALSE"
+msgstr "``4 >= 5`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:191
 msgid "AND"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:193
+msgid "Returns TRUE when conditions a and b are true."
+msgstr "Geeft TRUE terug als voorwaarden a en b waar zijn."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:199
 msgid "a AND b"
@@ -13668,13 +15010,99 @@ msgstr "**a** - voorwaarde"
 msgid "**b** - condition"
 msgstr "**b** - voorwaarde"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:204
+msgid "``TRUE AND TRUE`` → TRUE"
+msgstr "``TRUE AND TRUE`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:205
+msgid "``TRUE AND FALSE`` → FALSE"
+msgstr "``TRUE AND FALSE`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:206
+msgid "``4 = 2+2 AND 1 = 1`` → TRUE"
+msgstr "``4 = 2+2 AND 1 = 1`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:207
+msgid "``4 = 2+2 AND 1 = 2`` → FALSE"
+msgstr "``4 = 2+2 AND 1 = 2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:215
 msgid "BETWEEN"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:217
+msgid ""
+"Returns TRUE if value is within the specified range. The range is considered"
+" inclusive of the bounds. To test for exclusion NOT BETWEEN can be used."
+msgstr ""
+"Geeft TRUE terug als de waarde binnen het gespecificeerde bereik ligt. Het "
+"bereik wordt beschouwd inclusief de begrenzingen. Voor het testen van "
+"uitsluiting kan NOT BETWEEN worden gebruikt."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:223
+msgid "value BETWEEN lower_bound AND higher_bound"
+msgstr "value BETWEEN lower_bound AND higher_bound"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:173
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:225
+msgid ""
+"**value** - the value to compare with a range. It can be a string, a number "
+"or a date."
+msgstr ""
+"**value** - de te verwachten waarde om te vergelijken met een bereik. Het "
+"mag een tekenreeks, een getal of een datum zijn."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:174
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:226
+msgid "**lower_bound AND higher_bound** - range bounds"
+msgstr "**lower_bound AND higher_bound** - grenzen van bereik"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:228
+msgid "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
+msgstr "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:229
+msgid "``2 BETWEEN 1 AND 3`` → TRUE"
+msgstr "``2 BETWEEN 1 AND 3`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:230
+msgid "``2 BETWEEN 2 AND 3`` → TRUE"
+msgstr "``2 BETWEEN 2 AND 3`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:231
+msgid "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
+msgstr "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:232
+msgid "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
+msgstr "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:234
+msgid ""
+"*value BETWEEN lower_bound AND higher_bound* is the same as \"*value >= "
+"lower_bound AND value <= higher_bound*\"."
+msgstr ""
+"*value BETWEEN lower_bound AND higher_bound* is hetzelfde als \"*value >= "
+"lower_bound AND value <= higher_bound*\"."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:860
+msgid "Further reading: :ref:`expression_function_Operators_NOT_BETWEEN`"
+msgstr "Lees verder: :ref:`expression_function_Operators_NOT_BETWEEN`"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "ILIKE"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:8
+msgid ""
+"Returns TRUE if the first parameter matches case-insensitive the supplied "
+"pattern. LIKE can be used instead of ILIKE to make the match case-sensitive."
+" Works with numbers also."
+msgstr ""
+"Geeft TRUE terug als de eerste parameter, niet hoofdlettergevoelig, "
+"overeenkomt met het opgegeven patroon. LIKE kan worden gebruikt in plaats "
+"van ILIKE om de overeenkomst hoofdlettergevoelig te maken. Werkt ook met "
+"getallen."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "string/number ILIKE pattern"
@@ -13692,9 +15120,73 @@ msgstr ""
 "**pattern** - te vinden patroon, u kunt '%' als een jokerteken gebruiken, "
 "'_' als één enkel teken en '\\\\\\\\' om deze speciale teken te escapen."
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``'A' ILIKE 'A'`` → TRUE"
+msgstr "``'A' ILIKE 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``'A' ILIKE 'a'`` → TRUE"
+msgstr "``'A' ILIKE 'a'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``'A' ILIKE 'B'`` → FALSE"
+msgstr "``'A' ILIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+msgid "``'ABC' ILIKE 'b'`` → FALSE"
+msgstr "``'ABC' ILIKE 'b'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:23
+msgid "``'ABC' ILIKE 'B'`` → FALSE"
+msgstr "``'ABC' ILIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:24
+msgid "``'ABC' ILIKE '_b_'`` → TRUE"
+msgstr "``'ABC' ILIKE '_b_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
+msgid "``'ABC' ILIKE '_B_'`` → TRUE"
+msgstr "``'ABC' ILIKE '_B_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``'ABCD' ILIKE '_b_'`` → FALSE"
+msgstr "``'ABCD' ILIKE '_b_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:27
+msgid "``'ABCD' ILIKE '_B_'`` → FALSE"
+msgstr "``'ABCD' ILIKE '_B_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
+msgid "``'ABCD' ILIKE '_b%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '_b%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
+msgid "``'ABCD' ILIKE '_B%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '_B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:30
+msgid "``'ABCD' ILIKE '%b%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '%b%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:31
+msgid "``'ABCD' ILIKE '%B%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '%B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:32
+msgid "``'ABCD%' ILIKE 'abcd\\\\%'`` → TRUE"
+msgstr "``'ABCD%' ILIKE 'abcd\\\\%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:33
+msgid "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
+msgstr "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
 msgid "IN"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
+msgid "Returns TRUE if value is found within a list of values."
+msgstr "Geeft TRUE terug als de waarde is gevonden in een lijst met waarden."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:49
 msgid "a IN b"
@@ -13704,9 +15196,21 @@ msgstr "a IN b"
 msgid "**b** - list of values"
 msgstr "**b** - lijst met waarden"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:54
+msgid "``'A' IN ('A','B')`` → TRUE"
+msgstr "``'A' IN ('A','B')`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:55
+msgid "``'A' IN ('C','B')`` → FALSE"
+msgstr "``'A' IN ('C','B')`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:63
 msgid "IS"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
+msgid "Returns TRUE if a is the same as b."
+msgstr "Geeft TRUE terug als a hetzelfde is als b."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:71
 msgid "a IS b"
@@ -13720,6 +15224,26 @@ msgstr "**a** - elke waarde"
 msgid "**b** - any value"
 msgstr "**b** - elke waarde"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:76
+msgid "``'A' IS 'A'`` → TRUE"
+msgstr "``'A' IS 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:77
+msgid "``'A' IS 'a'`` → FALSE"
+msgstr "``'A' IS 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:78
+msgid "``4 IS 4`` → TRUE"
+msgstr "``4 IS 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:79
+msgid "``4 IS 2+2`` → TRUE"
+msgstr "``4 IS 2+2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:80
+msgid "``4 IS 2`` → FALSE"
+msgstr "``4 IS 2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:81
 msgid "``$geometry IS NULL`` → 0, if your geometry is not NULL"
 msgstr "``$geometry IS NULL`` → 0, als uw geometrie niet NULL is"
@@ -13728,13 +15252,37 @@ msgstr "``$geometry IS NULL`` → 0, als uw geometrie niet NULL is"
 msgid "IS NOT"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:91
+msgid "Returns TRUE if a is not the same as b."
+msgstr "Geeft TRUE terug als a niet hetzelfde is als b."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "a IS NOT b"
 msgstr "a IS NOT b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:102
+msgid "``'a' IS NOT 'b'`` → TRUE"
+msgstr "``'a' IS NOT 'b'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:103
+msgid "``'a' IS NOT 'a'`` → FALSE"
+msgstr "``'a' IS NOT 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:104
+msgid "``4 IS NOT 2+2`` → FALSE"
+msgstr "``4 IS NOT 2+2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
 msgid "LIKE"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:114
+msgid ""
+"Returns TRUE if the first parameter matches the supplied pattern. Works with"
+" numbers also."
+msgstr ""
+"Geeft TRUE terug als de eerste parameter overeenkomt met het opgegeven "
+"patroon. Werkt ook met getallen."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:120
 msgid "string/number LIKE pattern"
@@ -13753,6 +15301,46 @@ msgstr ""
 "als een jokerteken gebruiken, '_' als één enkel teken en '\\\\\\\\' om deze "
 "speciale teken te escapen."
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:125
+msgid "``'A' LIKE 'A'`` → TRUE"
+msgstr "``'A' LIKE 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:126
+msgid "``'A' LIKE 'a'`` → FALSE"
+msgstr "``'A' LIKE 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:127
+msgid "``'A' LIKE 'B'`` → FALSE"
+msgstr "``'A' LIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:128
+msgid "``'ABC' LIKE 'B'`` → FALSE"
+msgstr "``'ABC' LIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:129
+msgid "``'ABC' LIKE '_B_'`` → TRUE"
+msgstr "``'ABC' LIKE '_B_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:130
+msgid "``'ABCD' LIKE '_B_'`` → FALSE"
+msgstr "``'ABCD' LIKE '_B_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:131
+msgid "``'ABCD' LIKE '_B%'`` → TRUE"
+msgstr "``'ABCD' LIKE '_B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:132
+msgid "``'ABCD' LIKE '%B%'`` → TRUE"
+msgstr "``'ABCD' LIKE '%B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:133
+msgid "``'1%' LIKE '1\\\\%'`` → TRUE"
+msgstr "``'1%' LIKE '1\\\\%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:134
+msgid "``'1_' LIKE '1\\\\%'`` → FALSE"
+msgstr "``'1_' LIKE '1\\\\%'`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:142
 msgid "NOT"
 msgstr ""
@@ -13765,17 +15353,85 @@ msgstr "Draait een voorwaarde om."
 msgid "NOT a"
 msgstr "NOT a"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:154
+msgid "``NOT 1`` → FALSE"
+msgstr "``NOT 1`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:155
+msgid "``NOT 0`` → TRUE"
+msgstr "``NOT 0`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:163
 msgid "NOT BETWEEN"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:165
+msgid ""
+"Returns TRUE if value is not within the specified range. The range is "
+"considered inclusive of the bounds."
+msgstr ""
+"Geeft TRUE terug als de waarde niet binnen het gespecificeerde bereik ligt. "
+"Het bereik wordt beschouwd inclusief de begrenzingen."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:171
+msgid "value NOT BETWEEN lower_bound AND higher_bound"
+msgstr "value NOT BETWEEN lower_bound AND higher_bound"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
+msgid "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
+msgstr "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:177
+msgid "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
+msgstr "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:178
+msgid "``2 NOT BETWEEN 2 AND 3`` → FALSE"
+msgstr "``2 NOT BETWEEN 2 AND 3`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:179
+msgid "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
+msgstr "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:180
+msgid "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
+msgstr "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:182
+msgid ""
+"*value NOT BETWEEN lower_bound AND higher_bound* is the same as \"*value < "
+"lower_bound OR value > higher_bound*\"."
+msgstr ""
+"*value NOT BETWEEN lower_bound AND higher_bound* is hetzelfde als \"*value <"
+" lower_bound OR value > higher_bound*\"."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:866
+msgid "Further reading: :ref:`expression_function_Operators_BETWEEN`"
+msgstr "Lees verder: :ref:`expression_function_Operators_BETWEEN`"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "OR"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:8
+msgid "Returns TRUE when condition a or b is true."
+msgstr "Geeft TRUE terug als voorwaarde a of b waar is."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "a OR b"
 msgstr "a OR b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``4 = 2+2 OR 1 = 1`` → TRUE"
+msgstr "``4 = 2+2 OR 1 = 1`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``4 = 2+2 OR 1 = 2`` → TRUE"
+msgstr "``4 = 2+2 OR 1 = 2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``4 = 2   OR 1 = 2`` → FALSE"
+msgstr "``4 = 2   OR 1 = 2`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
 msgid "[]"
@@ -13912,6 +15568,22 @@ msgid "**regex** - A regular expression. Slashes must be escaped, eg \\\\\\\\d."
 msgstr ""
 "**regex** - Een reguliere expressie. Backslashes moeten worden geëscapet, "
 "bijv. \\\\\\\\d."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``'hello' ~ 'll'`` → TRUE"
+msgstr "``'hello' ~ 'll'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``'hello' ~ '^ll'`` → FALSE"
+msgstr "``'hello' ~ '^ll'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``'hello' ~ 'llo$'`` → TRUE"
+msgstr "``'hello' ~ 'llo$'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+msgid "``'abc123' ~ '\\\\d+'`` → TRUE"
+msgstr "``'abc123' ~ '\\\\d+'`` → TRUE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:886
 msgid "Further reading: :ref:`expression_function_String_regexp_match`"
@@ -14177,6 +15849,18 @@ msgstr "Lees verder: :ref:`maps_functions`"
 msgid "$currentfeature"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid ""
+"Returns the current feature being evaluated. This can be used with the "
+"'attribute' function to evaluate attribute values from the current feature. "
+"**WARNING: This function is deprecated. It is recommended to use the "
+"replacement @feature variable instead.**"
+msgstr ""
+"Geeft het huidige object terug dat wordt geëvalueerd. Dit kan wordnegebruikt"
+" met de functie 'attribute' om waarden attributen te evalueren van het "
+"huidige object. **WAARSCHUWING: Deze functie is vervallen. Aanbevolen wordt "
+"de vervanging, de variabele @feature, in plaats daarvan te gebruiken.**"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
 msgid ""
 "``attribute( $currentfeature, 'name' )`` → value stored in 'name' attribute "
@@ -14321,6 +16005,14 @@ msgstr ""
 "Geeft het eerste object uit een laag terug dat voldoet aan een bepaalde "
 "opgegeven waarde voor een attribuut."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:85
+msgid "**Single value variant**"
+msgstr "**Variant enkele waarde**"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:87
+msgid "Along with the layer ID, a single column and value are specified."
+msgstr "Naast de laag-ID worden een enkele kolom en waarde gespecificeerd."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:93
 msgid "get_feature(layer, attribute, value)"
 msgstr ""
@@ -14329,6 +16021,11 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:112
 msgid "**layer** - layer name or ID"
 msgstr "**layer** - laagnaam of ID"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:96
+msgid "**attribute** - attribute name to use for the match"
+msgstr ""
+"**attribute** - naam van het te gebruiken attribuut voor d eovereenkomst"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:97
 msgid "**value** - attribute value to match"
@@ -14342,9 +16039,31 @@ msgstr ""
 "``get_feature('streets','name','main st')`` → feeste gevonden object op de "
 "laag \"streets\" met de waarde \"main st\" in het veld \"name\""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:104
+msgid ""
+"Along with the layer ID, a map containing the columns (key) and their "
+"respective value to be used."
+msgstr ""
+"Naast de laag-ID wordt een kaart, die de kolommen (sleutel) en hun "
+"respectievelijk waarde bevatten, gebruikt."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:110
 msgid "get_feature(layer, attribute)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:113
+msgid "**attribute** - Map containing the column and value pairs to use"
+msgstr "**attribute** - Kaart die de te gebruiken paren kolom en waarde bevat"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:115
+msgid ""
+"``get_feature('streets',map('name','main st','lane_num','4'))`` → first "
+"feature found in \"streets\" layer with \"main st\" value in the \"name\" "
+"field and  \"4\" value in the \"lane_num\" field"
+msgstr ""
+"``get_feature('streets','name','main st')`` → eerste gevonden object op de "
+"laag \"streets\" met de waarde \"main st\" in het veld \"name\" en waarde "
+"\"4\" in het veld \"lane_num\""
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:123
 msgid "get_feature_by_id"
@@ -14384,6 +16103,15 @@ msgstr "Lees verder: :ref:`expression_function_Record_and_Attributes_$id`"
 msgid "$id"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid ""
+"Returns the feature id of the current row. **WARNING: This function is "
+"deprecated. It is recommended to use the replacement @id variable instead.**"
+msgstr ""
+"Geeft de object-ID terug van de huidige rij. **WAARSCHUWING: Deze functie is"
+" vervallen. Aanbevolen wordt om de vervanging, de variabele @id, in plaats "
+"daarvan te gebruiken.**"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
 msgid "``$id`` → 42"
 msgstr "``$id`` → 42"
@@ -14392,9 +16120,42 @@ msgstr "``$id`` → 42"
 msgid "is_selected"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:26
+msgid ""
+"Returns TRUE if a feature is selected. Can be used with zero, one or two "
+"arguments, see below for details."
+msgstr ""
+"Geeft TRUE terug als een object is geselecteerd. Kan worden gebruikt met "
+"nul, een of twee argumenten, bekijk de details hieronder."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:30
+msgid ""
+"If called with no parameters, the function will return TRUE if the current "
+"feature in the current layer is selected."
+msgstr ""
+"Indien aangeroepen zonder parameters, zal de functie TRUE teruggeven als het"
+" huidige object op de huidige laag is geselecteerd."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:36
 msgid "is_selected()"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:38
+msgid ""
+"``is_selected()`` → TRUE if the current feature in the current layer is "
+"selected."
+msgstr ""
+"``is_selected()`` → TRUE als het huidige object op de huidige laag is "
+"geselecteerd."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:43
+msgid ""
+"If called with a 'feature' parameter only, the function returns TRUE if the "
+"specified feature from the current layer is selected."
+msgstr ""
+"Indien aangeroepen met alleen een parameter 'feature' zal de functie TRUE "
+"teruggeven als het gespecificeerde object op de huidige laag is "
+"geselecteerd."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:49
 msgid "is_selected(feature)"
@@ -14407,9 +16168,44 @@ msgstr ""
 "**feature** - Het object dat zou moeten worden gecontroleerd of het "
 "geselecteerd is."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:53
+msgid ""
+"``is_selected(@atlas_feature)`` → TRUE if the current atlas feature is "
+"selected."
+msgstr ""
+"``is_selected(@atlas_feature)`` → TRUE als het huidige object van atlas is "
+"geselecteerd."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:54
+msgid ""
+"``is_selected(get_feature('streets', 'name', 'Main St.'))`` → TRUE if the "
+"unique named \"Main St.\" feature on the active \"streets\" layer is "
+"selected."
+msgstr ""
+"``is_selected(get_feature('streets', 'name', 'Main St.')))`` → TRUE als het "
+"unieke benoemde object \"Main St.\" op de actieve laag \"streets\" is "
+"geselecteerd."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:55
+msgid ""
+"``is_selected(get_feature_by_id('streets', 1))`` → TRUE if the feature with "
+"the id 1 on the active \"streets\" layer is selected."
+msgstr ""
+"``is_selected(get_feature_by_id('streets', 1))`` → TRUE als het object met "
+"de ID 1 op de actieve laag \"streets\" is geselecteerd."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:58
 msgid "**Two parameters**"
 msgstr "**Twee parameters**"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:60
+msgid ""
+"If the function is called with both a layer and a feature, it will return "
+"TRUE if the specified feature from the specified layer is selected."
+msgstr ""
+"Als de functie wordt aangeroepen met zowel een laag als een object zal de "
+"functie TRUE teruggeven als het gespecificeerde object op de gespecificeerde"
+" laag is geselecteerd."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:66
 msgid "is_selected(layer, feature)"
@@ -14422,6 +16218,26 @@ msgid ""
 msgstr ""
 "**layer** - De laag (zijn ID of naam) waarop de selectie zal worden "
 "gecontroleerd."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:71
+msgid ""
+"``is_selected( 'streets', get_feature('streets', 'name', \"street_name\"))``"
+" → TRUE if the current building's street is selected (assuming the building "
+"layer has a field named 'street_name' and the 'streets' layer has a field "
+"called 'name' with unique values)."
+msgstr ""
+"``is_selected( 'streets', get_feature('streets', 'name', \"street_name\"))``"
+" → TRUE als de huidige straat van het gebouw is geselecteerd (er van "
+"uitgaande dat de laag met gebouwen een veld, genaamd 'street_name', heeft en"
+" de laag 'streets' een veld, genaamd 'name', met unieke waarden heeft)."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:72
+msgid ""
+"``is_selected( 'streets', get_feature_by_id('streets', 1))`` → TRUE if the "
+"feature with the id 1 on the \"streets\" layer is selected."
+msgstr ""
+"``is_selected( 'streets', get_feature_by_id('streets', 1))`` → TRUE als het "
+"object met de ID 1 op de laag \"streets\" is geselecteerd."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:80
 msgid "maptip"
@@ -14535,17 +16351,94 @@ msgstr ""
 msgid "represent_attributes"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:162
+msgid ""
+"Returns a map with the attribute names as keys and the configured "
+"representation values as values. The representation value for the attributes"
+" depends on the configured widget type for each attribute.  Can be used with"
+" zero, one or more arguments, see below for details."
+msgstr ""
+"Geeft een kaart terug met de namen van de attributen als sleutels en de "
+"geconfigureerde weergaven voor waarden als waarden. De weergegeven waarde "
+"voor de attributen is afhankelijk van het geconfigureerde type widget voor "
+"elk attribuut. Mag worden gebruikt met nul, een of meer argumenten, kijk "
+"hieronder voor de details."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:166
+msgid ""
+"If called with no parameters, the function will return the representation of"
+" the attributes of the current feature in the current layer."
+msgstr ""
+"Indien aangeroepen zonder parameters, zal de functie de weergave van de "
+"attributen van het huidige object op de huidige laag teruggeven."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:172
 msgid "represent_attributes()"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:174
+msgid ""
+"``represent_attributes()`` → The representation of the attributes for the "
+"current feature."
+msgstr ""
+"``represent_attributes()`` → De weergave van de attributen voor het huidige "
+"object."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:179
+msgid ""
+"If called with a 'feature' parameter only, the function will return the "
+"representation of the attributes of the specified feature from the current "
+"layer."
+msgstr ""
+"Indien aangeroepen met alleen een parameter 'feature' zal de functie de "
+"weergave van de attributen van het gespecificeerde object op de huidige laag"
+" teruggeven."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:185
 msgid "represent_attributes(feature)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:189
+msgid ""
+"``represent_attributes(@atlas_feature)`` → The representation of the "
+"attributes for the specified feature from the current layer."
+msgstr ""
+"``represent_attributes(@atlas_feature)`` → De weergave van de attributen "
+"voor het gespecificeerde object van de huidige laag."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:194
+msgid ""
+"If called with a 'layer' and a 'feature' parameter, the function will return"
+" the representation of the attributes of the specified feature from the "
+"specified layer."
+msgstr ""
+"Indien aangeroepen met de parameters 'layer' en 'feature' zal de functie de "
+"weergave van de attributen van het gespecificeerde object op de "
+"gespecificeerde laag teruggeven."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:200
 msgid "represent_attributes(layer, feature)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:202
+msgid "**layer** - The layer (or its ID or name)."
+msgstr "**layer** - De laag (of zijn ID of naam)."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:205
+msgid ""
+"``represent_attributes('atlas_layer', @atlas_feature)`` → The representation"
+" of the attributes for the specified feature from the specified layer."
+msgstr ""
+"``represent_attributes(@atlas_layer, @atlas_feature)`` → De weergave van de "
+"attributen voor het gespecificeerde object van de gespecificeerde laag."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:947
+msgid ""
+"Further reading: "
+":ref:`expression_function_Record_and_Attributes_represent_value`"
+msgstr ""
+"Lees verder: "
+":ref:`expression_function_Record_and_Attributes_represent_value`"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "represent_value"
@@ -14569,6 +16462,14 @@ msgid "**value** - The value which should be resolved. Most likely a field."
 msgstr ""
 "**value** - De waarde die zou moeten worden opgelost. Meestal een veld."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+msgid ""
+"**fieldName** - The field name for which the widget configuration should be "
+"loaded."
+msgstr ""
+"**fieldName** - De veldnaam waarvoor de configuratie van de widget zou "
+"moeten worden geladen."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:21
 msgid "``represent_value(\"field_with_value_map\")`` → Description for value"
 msgstr "``represent_value(\"field_with_value_map\")`` → Omschrijving voor waarde"
@@ -14580,6 +16481,14 @@ msgid ""
 msgstr ""
 "``represent_value('static value', 'field_name')`` → Omschrijving voor "
 "statische waarde"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:953
+msgid ""
+"Further reading: :ref:`widget types <edit_widgets>`, "
+":ref:`expression_function_Record_and_Attributes_represent_attributes`"
+msgstr ""
+"Lees verder: :ref:`typen widget <edit_widgets>`, "
+":ref:`expression_function_Record_and_Attributes_represent_attributes`"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "sqlite_fetch_and_increment"
@@ -14981,6 +16890,14 @@ msgstr ""
 "gebruiker van QGIS gebruikt. Breekt ook het aantal decimale plaatsen af tot "
 "het aantal opgegeven plaatsen."
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:103
+msgid ""
+"format_number(number, [places=0], [language], [omit_group_separators=false],"
+" [trim_trailing_zeroes=false])"
+msgstr ""
+"format_number(number, [places=0], [language], [omit_group_separators=false],"
+" [trim_trailing_zeroes=false])"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:107
 msgid "**number** - number to be formatted"
 msgstr "**number** - getal dat moet worden opgemaakt"
@@ -15004,6 +16921,23 @@ msgstr ""
 " <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_) gebruikt om het "
 "getal als een tekenreeks op te maken. Standaard wordt de locale van de "
 "huidige gebruiker van QGIS gebruikt."
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:110
+msgid ""
+"**omit_group_separators** - if set to true then group separators will not be"
+" included in the string"
+msgstr ""
+"**omit_group_separators** - indien ingesteld op TRUE dan zullen "
+"scheidingstekens voor groepen niet worden opgenomen in de tekenreeks"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:111
+msgid ""
+"**trim_trailing_zeroes** - if set to true then trailing zeros following the "
+"decimal point will be trimmed from the string"
+msgstr ""
+"**trim_trailing_zeroes** - indien ingesteld op TRUE dan zullen "
+"achterliggende nullen, die volgen op de decimale punt, worden weggelaten uit"
+" de tekenreeks"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:113
 msgid ""
@@ -15469,6 +17403,10 @@ msgstr ""
 msgid "**string** - string to trim"
 msgstr "**string** - tekenreeks die moet worden getrimd"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:484
+msgid "``trim('   hello world  ')`` → 'hello world'"
+msgstr "``trim('   hello world  ')`` → 'hello world'"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:492
 msgid "upper"
 msgstr ""
@@ -15808,6 +17746,15 @@ msgid "feature |328|"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The current feature being evaluated. This can be used with the 'attribute' "
+"function to evaluate attribute values from the current feature."
+msgstr ""
+"Geeft het huidige object weer dat wordt geëvalueerd. Dit kan worden gebruikt"
+" met de functie 'attribute' om waarden van attributen van het huidige object"
+" te evalueren."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "frame_duration"
 msgstr ""
 
@@ -15872,6 +17819,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "geometry |328|"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The geometry of the current feature being evaluated"
+msgstr "De geometrie van het huidige object dat wordt geëvalueerd"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "geometry_part_count"
@@ -15943,6 +17894,10 @@ msgstr "De huidige waarde annotatieraster"
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "id |328|"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The ID of the current feature being evaluated"
+msgstr "De ID van het huidige object dat wordt geëvalueerd"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "item_id"
