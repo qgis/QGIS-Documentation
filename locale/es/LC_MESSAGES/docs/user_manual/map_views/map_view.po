@@ -323,6 +323,33 @@ msgstr ""
 msgid "Keyboard"
 msgstr "Teclado"
 
+#: ../../docs/user_manual/map_views/map_view.rst:108
+msgid ""
+"Pan map: Hold down the :kbd:`Space` key and move the mouse. Press the arrow "
+"keys to pan up, down, left and right."
+msgstr ""
+"Desplaza el mapa: Mantén pulsada la tecla :kbd:`Espacio` y mueve el ratón. "
+"Pulsa las flechas para desplazarte hacia arriba, abajo, izquierda y derecha."
+
+#: ../../docs/user_manual/map_views/map_view.rst:110
+msgid "Zoom in: Press :kbd:`PgUp` or :kbd:`Ctrl++`"
+msgstr "Acercar: Pulse :kbd:`Subir página` o :kbd:`Ctrl++`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:111
+msgid "Zoom out: Press :kbd:`PgDown` or :kbd:`Ctrl+-`"
+msgstr "Alejar: Pulse :kbd:`Bajar página` o :kbd:`Ctrl+-`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:112
+msgid ""
+"Zoom to area: When certain map tools are active (Identify, Measure...), hold"
+" down :kbd:`Shift` and drag a rectangle on the map to zoom to that area. Not"
+" compatible with active selection or edit tools."
+msgstr ""
+"Acercar a una zona: Cuando ciertas herramientas de mapa están activas "
+"(Identificar, Medir...), mantenga pulsado :kbd:`Mayús` y arrastre un "
+"rectángulo en el mapa para hacer zoom a esa zona. No es compatible con las "
+"herramientas de selección o edición activas."
+
 #: ../../docs/user_manual/map_views/map_view.rst:116
 msgid ""
 "Right-click over the map and you should be able to |editCopy| "
@@ -339,6 +366,10 @@ msgstr ""
 msgid "editCopy"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:127
+msgid "Controlling map rendering"
+msgstr "Control de la representación de mapas"
+
 #: ../../docs/user_manual/map_views/map_view.rst:129
 msgid ""
 "By default, QGIS renders all visible layers whenever the map canvas is "
@@ -347,6 +378,14 @@ msgstr ""
 "De forma predeterminada, QGIS representa todas las capas visibles cada vez "
 "que se actualiza el lienzo del mapa. Los eventos que desencadenan una "
 "actualización del lienzo del mapa incluyen:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:132
+msgid "changing the visibility of a layer"
+msgstr "cambiar la visibilidad de una capa"
+
+#: ../../docs/user_manual/map_views/map_view.rst:133
+msgid "modifying symbology of a visible layer"
+msgstr "modificar la simbología de una capa visible"
 
 #: ../../docs/user_manual/map_views/map_view.rst:134
 msgid "adding a layer"
@@ -364,6 +403,36 @@ msgstr "redimensionando la ventana QGIS"
 msgid "QGIS allows you to control the rendering process in a number of ways."
 msgstr ""
 "QGIS le permite controlar el proceso de representación de varias maneras."
+
+#: ../../docs/user_manual/map_views/map_view.rst:142
+msgid "or with dedicated tools in the GUI."
+msgstr "o con herramientas específicas de la interfaz gráfica de usuario."
+
+#: ../../docs/user_manual/map_views/map_view.rst:144
+msgid ""
+"To stop the map drawing, press the :kbd:`Esc` key. This will halt the "
+"refresh of the map canvas and leave the map partially drawn. It may however "
+"take a bit of time after pressing :kbd:`Esc` for the map drawing to halt."
+msgstr ""
+"Para detener el dibujo del mapa, pulsa la tecla :kbd:`Esc`. Esto detendrá la"
+" actualización del lienzo del mapa y dejará el mapa parcialmente dibujado. "
+"Sin embargo, puede tardar un poco después de pulsar :kbd:`Esc` para que el "
+"dibujo del mapa se detenga."
+
+#: ../../docs/user_manual/map_views/map_view.rst:148
+msgid ""
+"To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in "
+"the bottom-right corner of the status bar. When |checkbox| "
+":guilabel:`Render` is unchecked, QGIS does not redraw the canvas in response"
+" to any of the usual triggers mentioned earlier. Examples of when you might "
+"want to suspend rendering include:"
+msgstr ""
+"Para suspender la renderización, haga clic en la casilla |checkbox| "
+":guilabel:`Renderizar` en la esquina inferior derecha de la barra de estado."
+" Cuando |checkbox| :guilabel:`Renderizar` está desmarcada, QGIS no redibuja "
+"el lienzo en respuesta a ninguno de los disparadores habituales mencionados "
+"anteriormente. Ejemplos de cuando puede querer suspender el renderizado "
+"incluyen:"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1289
 msgid "checkbox"
@@ -558,6 +627,19 @@ msgstr ""
 msgid ":guilabel:`Frames rate`: number of steps that are shown per second"
 msgstr ":guilabel:`Frames rate`: número de pasos que se muestran por segundo"
 
+#: ../../docs/user_manual/map_views/map_view.rst:221
+msgid ""
+"|unchecked| :guilabel:`Cumulative range`: all animation frames will have the"
+" same start date-time but different end dates and times. This is useful if "
+"you wish to accumulate data in your temporal visualization instead of "
+"showing a ‘moving time window’ across your data."
+msgstr ""
+"|unchecked| :guilabel:`Rango acumulativo`: todos los fotogramas de la "
+"animación tendrán la misma fecha-hora de inicio pero diferentes fechas y "
+"horas de finalización. Esto es útil si desea acumular datos en su "
+"visualización temporal en lugar de mostrar una \"ventana de tiempo en "
+"movimiento\" a través de sus datos."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1378
 msgid "unchecked"
 msgstr ""
@@ -732,6 +814,10 @@ msgstr "El tiempo :guilabel:`Range` para la animación"
 msgid "the :guilabel:`Step (frame length)` in the unit of your choice"
 msgstr "El :guilabel:`Paso (longitud del marco)` en la unidad de su elección"
 
+#: ../../docs/user_manual/map_views/map_view.rst:304
+msgid "Bookmarking extents on the map"
+msgstr "Marcar extensiones en el mapa"
+
 #: ../../docs/user_manual/map_views/map_view.rst:306
 msgid ""
 "Spatial Bookmarks allow you to \"bookmark\" a geographic location and return"
@@ -811,6 +897,17 @@ msgstr ""
 msgid "Indicate the :guilabel:`CRS` to use for the extent"
 msgstr "Indique el :guilabel:`CRS` a usar para la extensión"
 
+#: ../../docs/user_manual/map_views/map_view.rst:338
+msgid ""
+"Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User "
+"Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list"
+" is set to :guilabel:`User Bookmarks`)"
+msgstr ""
+"Seleccione si el marcador será :guilabel:`Guardado en` :guilabel:`Marcadores"
+" del usuario` o :guilabel:`Marcadores del proyecto` (de forma "
+"predeterminada, esta lista desplegable está establecida en "
+":guilabel:`Marcadores del usuario`)"
+
 #: ../../docs/user_manual/map_views/map_view.rst:341
 msgid "Press :guilabel:`Save` to add the bookmark to the list"
 msgstr "Presione :guilabel:`Guardar` para añadir el marcador a la lista"
@@ -851,6 +948,10 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:359
 msgid "You can perform the following tasks:"
 msgstr "Puede realizar las siguientes tareas:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:361
+msgid "Managing bookmark actions"
+msgstr "Gestionar las acciones de los marcadores"
 
 #: ../../docs/user_manual/map_views/map_view.rst:366
 msgid "Task"
@@ -1018,6 +1119,10 @@ msgid ""
 msgstr ""
 "También puede hacer zoom a los marcadores escribiendo el nombre del marcador"
 " en el :ref:`locator <label_statusbar>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:414
+msgid "Decorating the map"
+msgstr "Decorar el mapa"
 
 #: ../../docs/user_manual/map_views/map_view.rst:416
 msgid ""
@@ -1705,6 +1810,39 @@ msgstr ""
 msgid "Annotation Tools"
 msgstr "Herramientas de anotaciones"
 
+#: ../../docs/user_manual/map_views/map_view.rst:724
+msgid "Two families of annotations are available in QGIS:"
+msgstr "QGIS dispone de dos familias de anotaciones:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:726
+msgid ""
+"**Feature annotations**: they are actual georeferenced features of text, "
+"marker, line or polygon type stored within a special layer type called "
+"\"annotation layer\". They are tied to a particular geographic location, "
+"meaning that moving your map, changing the scale or changing projection "
+"won’t cause your annotations to jump around the map. Rather, they’ll be "
+"locked in place to the location you’ve drawn them."
+msgstr ""
+"**Anotaciones de obejtos espaciales**: son objetos espaciales "
+"georreferenciados reales de tipo texto, marcador, línea o polígono "
+"almacenadas en un tipo de capa especial denominada \"capa de anotaciones\". "
+"Están vinculadas a una ubicación geográfica concreta, lo que significa que "
+"mover el mapa, cambiar la escala o cambiar la proyección no hará que las "
+"anotaciones salten por el mapa. Por el contrario, permanecerán fijas en el "
+"lugar donde las hayas dibujado."
+
+#: ../../docs/user_manual/map_views/map_view.rst:731
+msgid ""
+"**Balloon annotations**: these are individuals annotations of text, form or "
+"image type placed inside a bubble. They can be associated to any layer for "
+"their visibility, are drawn on top of the map canvas. The size is dependent "
+"from the map canvas scale, and its position can be anchored."
+msgstr ""
+"**Anotaciones de globo**: son anotaciones individuales de tipo texto, forma "
+"o imagen colocadas dentro de una burbuja. Pueden asociarse a cualquier capa "
+"para su visibilidad, se dibujan sobre el lienzo del mapa. El tamaño depende "
+"de la escala del lienzo del mapa, y su posición puede ser anclada."
+
 #: ../../docs/user_manual/map_views/map_view.rst:736
 msgid "**Layout the map with annotations**"
 msgstr "**Diseño del mapa con anotaciones**"
@@ -1730,17 +1868,72 @@ msgstr ""
 ":guilabel:`Dibujar elementos del lienzo del mapa` en las propiedades del "
 "elemento del mapa correspondiente"
 
+#: ../../docs/user_manual/map_views/map_view.rst:745
+msgid ""
+"The :guilabel:`Annotations Toolbar` provides a set of tools to create and "
+"interact with both families of annotations."
+msgstr ""
+"La :guilabel:`Barra de herramientas de anotaciones` proporciona un conjunto "
+"de herramientas para crear e interactuar con ambas familias de anotaciones."
+
+#: ../../docs/user_manual/map_views/map_view.rst:748
+msgid "The Annotations Toolbar actions"
+msgstr "Acciones de la barra de herramientas de anotaciones"
+
+#: ../../docs/user_manual/map_views/map_view.rst:751
+msgid "Scope"
+msgstr "Alcance"
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "|createAnnotationLayer| :sup:`New Annotation Layer`"
+msgstr "|createAnnotationLayer| :sup:`Nueva capa de anotación`."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1293
 msgid "createAnnotationLayer"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "Create a new layer to store annotations"
+msgstr "Crear una nueva capa para almacenar anotaciones"
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "Feature annotations"
+msgstr "Anotaciones de objetos espaciales"
+
+#: ../../docs/user_manual/map_views/map_view.rst:755
+msgid ":sup:`Main Annotation Layer Properties`"
+msgstr ":sup:`Propiedades principales de la capa de anotación`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:755
+msgid "Control settings of the Main Annotation Layer"
+msgstr "Ajustes de control de la capa de anotación principal"
+
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid "|select| :sup:`Modify Annotations`"
+msgstr "|select| :sup:`Modificar Anotaciones`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1343
 msgid "select"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid "Select, move, resize and modify symbology properties of annotations"
+msgstr ""
+"Seleccionar, desplazar, redimensionar y modificar las propiedades "
+"simbológicas de las anotaciones"
+
+#: ../../docs/user_manual/map_views/map_view.rst:759
+#: ../../docs/user_manual/map_views/map_view.rst:811
+msgid "|addPolygon| :sup:`Create Polygon Annotation`"
+msgstr "|addPolygon| :sup:`Crear Anotación de Polígono`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1281
 msgid "addPolygon"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:759
+msgid "Create an annotation as a polygon feature"
+msgstr "Crear una anotación como objeto espacial polígono"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1283
 msgid "addPolyline"

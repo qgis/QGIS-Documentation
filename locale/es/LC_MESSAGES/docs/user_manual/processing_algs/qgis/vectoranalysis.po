@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # vareli <ehespinosa@ya.com>, 2023
-# Eric Armijo, 2023
 # Transifex Bot <>, 2023
+# Eric Armijo, 2023
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-04 12:11+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Eric Armijo, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2327,6 +2327,14 @@ msgstr "**Methodo**"
 msgid "``METHOD``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1467
+msgid "1 --- Distance to feature centroid"
+msgstr "1 --- Distancia al centroide del objeto espacial"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1469
+msgid "**Maximum number of neighbors**"
+msgstr "**Número máximo de vecinos**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1470
 msgid "``NEIGHBORS``"
 msgstr ""
@@ -2334,6 +2342,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1473
 msgid "Default: 1"
 msgstr "Predeterminado: 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1474
+msgid "Maximum number of neighbors to look for"
+msgstr "Número máximo de vecinos a buscar"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1475
 msgid "**Maximum distance**"
@@ -2343,9 +2355,35 @@ msgstr "**Distancia máxima**"
 msgid "``DISTANCE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1480
+msgid ""
+"Only destination features which are closer than this distance will be "
+"considered."
+msgstr ""
+"Sólo se tendrán en cuenta los objetos espaciales de destino que estén más "
+"cerca que esta distancia."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1482
+msgid "**Shortest lines**"
+msgstr "**Líneas más cortas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1504
 msgid "**Output layer**"
 msgstr "**Capa saliente**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1507
+msgid ""
+"Line vector layer joining source features to their nearest neighbor(s) in "
+"the destination layer. Contains all attributes for both source and "
+"destination features, and the computed distance."
+msgstr ""
+"Capa de vectores lineales que une los elementos de origen con su(s) "
+"vecino(s) más cercano(s) en la capa de destino. Contiene todos los atributos"
+" de los elementos de origen y destino, así como la distancia calculada."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1514
+msgid "**Algorithm ID**: ``native:shortestline``"
+msgstr "**ID del algoritmo**: ``native:shortestline``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1524
 msgid "ST-DBSCAN clustering"

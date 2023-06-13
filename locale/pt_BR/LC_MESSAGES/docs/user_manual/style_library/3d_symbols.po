@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Gabriela Piedade, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Gabriela Piedade, 2023\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,6 +29,22 @@ msgstr ""
 msgid "Creating 3D Symbols"
 msgstr "Criando símbolos 3D"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:12
+msgid ""
+"The :guilabel:`Style Manager` helps you create and store 3D symbols for "
+"every geometry type to render in the :ref:`3D map view <label_3dmapview>`."
+msgstr ""
+"O :guilabel:`Gerenciador de Estilo` te ajuda a criar e armazenar símbolos 3D"
+" para todo tipo de geometria a ser renderizada no :ref:`3D map view"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:15
+msgid ""
+"As of the other items, enable the |3d| :guilabel:`3D Symbols` tab and expand"
+" the |symbologyAdd| button menu to create:"
+msgstr ""
+"A partir dos demais itens, habilite o |3d| :guilabel:`Símbolos 3D` e expanda"
+" o menu de botões |symbologyAdd| para criar:"
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:200
 msgid "3d"
 msgstr ""
@@ -36,6 +53,18 @@ msgstr ""
 msgid "symbologyAdd"
 msgstr ""
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:18
+msgid ":ref:`3D point symbols <3d_pointlayers>`"
+msgstr ":ref:`3D point symbols <3d_pointlayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:19
+msgid ":ref:`3D line symbols <3d_linelayers>`"
+msgstr ":ref:`3D line symbols <3d_linelayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:20
+msgid ":ref:`3D polygon symbols <3d_polygonlayers>`"
+msgstr ":ref:`3D polygon symbols <3d_polygonlayers>`"
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:26
 msgid "Point Layers"
 msgstr "Camadas de Ponto"
@@ -43,6 +72,76 @@ msgstr "Camadas de Ponto"
 #: ../../docs/user_manual/style_library/3d_symbols.rst:33
 msgid "Properties of a 3D point symbol"
 msgstr "Propriedades de um símbolo de ponto 3D"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:35
+msgid ""
+"You can define different types of 3D :guilabel:`Shape` to use for point "
+"symbols. They are mainly defined by their dimensions whose unit refers to "
+"the CRS of the project. Available types are:"
+msgstr ""
+"Você pode definir diferentes tipos de :guilabel:`Forma` 3D para usar para "
+"símbolos de ponto. Eles são definidos principalmente por suas dimensões, "
+"cuja unidade se refere ao SRC do projeto. Os tipos disponíveis são:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:39
+msgid ":guilabel:`Sphere` defined by a :guilabel:`Radius`"
+msgstr ":guilabel:`Esfera` definida por um :guilabel:`Raio`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:40
+msgid ""
+":guilabel:`Cylinder` defined by a :guilabel:`Radius` and :guilabel:`Length`"
+msgstr ""
+":guilabel:`Cilindro` definido por um :guilabel:`Raio` e "
+":guilabel:`Comprimento`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:41
+msgid ":guilabel:`Cube` defined by a :guilabel:`Size`"
+msgstr ":guilabel:`Cubo` definido por um :guilabel:`Tamanho`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:42
+msgid ""
+":guilabel:`Cone` defined by a :guilabel:`Top radius`, a :guilabel:`Bottom "
+"radius` and a :guilabel:`Length`"
+msgstr ""
+":guilabel:`Cone` definido por um :guilabel:`Raio superior`, um "
+":guilabel:`Raio inferior` e um :guilabel:`Comprimento`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:44
+msgid ":guilabel:`Plane` defined by a :guilabel:`Size`"
+msgstr ":guilabel:`Plano` definido por um :guilabel:`Tamanho`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:45
+msgid ""
+":guilabel:`Torus` defined by a :guilabel:`Radius` and a :guilabel:`Minor "
+"radius`"
+msgstr ""
+":guilabel:`Toro` definido por um :guilabel:`Raio` e um :guilabel:`Raio "
+"menor`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:46
+msgid ""
+":guilabel:`3D Model`, using a 3D model file: supported formats include "
+"wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`. Models can be a file"
+" on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. Community-created models are shared on the QGIS "
+"Hub at https://plugins.qgis.org/wavefronts."
+msgstr ""
+":guilabel:`Modelo 3D`, usando um arquivo de modelo 3D: formatos de frente de onda suportados incluem :file:`.obj`, :file:`.glTF` e :file:`.fbx`. Os modelos podem ser um arquivo em disco, um URL remoto ou :ref:`embedded in the project . Os modelos criados pela comunidade são compartilhados no QGIS Hub em https://plugins.qgis.org/wavefronts.\n"
+" \n"
+"\n"
+" "
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:51
+msgid ""
+":guilabel:`Billboard`, defined by the :guilabel:`Billboard height` and the "
+":guilabel:`Billboard symbol` (usually based on a :ref:`marker symbol "
+"<vector_marker_symbols>`). The symbol will have a stable size. Convenient "
+"for visualizing 3D point clouds Shapes."
+msgstr ""
+":guilabel:`Quadro de avisos`, definido pela :guilabel:`Altura do quadro de "
+"avisos` e pelo :guilabel:`Símbolo do quadro de avisos` (geralmente baseado "
+"em um :ref:`marker symbol `). O símbolo terá um tamanho estável. Conveniente"
+" para visualizar Formas de nuvens de pontos 3D."
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:72
 msgid "Line layers"

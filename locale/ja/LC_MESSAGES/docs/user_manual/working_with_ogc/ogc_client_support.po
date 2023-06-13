@@ -7,6 +7,7 @@
 # Translators:
 # Transifex Bot <>, 2023
 # Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-29 06:13+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,9 +39,19 @@ msgstr ""
 "Open Geospatial Consortium "
 "(OGC)は世界中の300以上の企業、政府、非営利団体、研究組織が集まった国際的組織です。ここのメンバーは地理空間コンテンツとサービス、GISデータの解析と交換のための標準の開発と実装を行っています。"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:19
+msgid ""
+"Describing a basic data model for geographic features, an increasing number "
+"of specifications are developed by OGC to serve specific needs for "
+"interoperable location and geospatial technology, including GIS. Further "
+"information can be found at https://www.ogc.org/."
+msgstr ""
+"GISを含む、相互運用可能な位置・地理空間技術の特定のニーズに対応するため、地理的地物の基本的なデータモデルを記述する仕様がOGCによって次々に開発されました。詳細は"
+" https://www.ogc.org/ にあります。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:26
 msgid "Important OGC specifications supported by QGIS are:"
-msgstr "QGISでサポートされている重要なOGC仕様は以下のとおりです。"
+msgstr "QGISでサポートされている重要なOGC仕様は以下のとおりです:"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:28
 msgid "**WMS** --- Web Map Service (:ref:`ogc-wms`)"
@@ -85,9 +96,8 @@ msgid ""
 " specifications as a client, being **SFS** (through support of the "
 "PostgreSQL / PostGIS data provider, see section :ref:`label_postgis`)."
 msgstr ""
-"OGCサービスは、異なるGISの実装とデータストアとの間の地理空間データを交換するためにますます使用されています。QGISは **SFS** "
-"（PostgreSQL/PostGISのデータプロバイダーのサポートにより、 :ref:`label_postgis` "
-"のセクションを参照）され、クライアントとして上記の仕様に対処できます。"
+"OGCサービスは、異なるGISの実装とデータストアとの間の地理空間データを交換するためにますます使用されています。QGISは（PostgreSQL/PostGISのデータプロバイダーのサポートにより、"
+" :ref:`label_postgis` のセクションを参照） **SFS** され、クライアントとして上記の仕様に対処できます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:43
 msgid ""
@@ -145,6 +155,21 @@ msgid ""
 msgstr ""
 "WMSレイヤは、WMSサーバーにアクセスするURLを知っていればとても簡単に追加できます。サーバーに対してアクセスできる接続ができ、サーバーがデータ転送方式としてHTTPを理解できれば大丈夫です。"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:81
+msgid ""
+"Additionally, QGIS will cache your WMS responses (i.e. images) for 24h as "
+"long as the GetCapabilities request is not triggered. The GetCapabilities "
+"request is triggered every time the :guilabel:`Connect` button in the "
+":guilabel:`WMS/WMTS` dialog is used to retrieve the WMS server capabilities."
+" This is an automatic feature meant to optimize project loading time. If a "
+"project is saved with a WMS layer, the corresponding WMS tiles will be "
+"loaded from the cache the next time the project is opened as long as they "
+"are not older than 24h."
+msgstr ""
+"さらに、QGISはGetCapabilitiesリクエストがトリガーされない限り、WMSレスポンス（画像など）を24時間キャッシュします。GetCapabilitiesリクエストは、"
+" :guilabel:`WMS/WMTS` ダイアログの :guilabel:`Connect` "
+"ボタンを使用してWMSサーバーの能力を取得するたびにトリガーされます。これは、プロジェクトのロード時間を最適化するための自動機能です。プロジェクトがWMSレイヤーとともに保存されている場合、対応するWMSタイルは、24時間以上経過していない限り、次にプロジェクトを開いたときにキャッシュから読み込まれます。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:90
 msgid "Overview of WMTS Support"
 msgstr "WMTS サポートの概要"
@@ -194,6 +219,10 @@ msgstr ""
 "**WMTS KVP** サービスにアクセスするには、QGISユーザーは WMS/WMTS "
 "インターフェイスを開き、WMTSタイルサービスのURLに次の文字列を追加する必要があります："
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:124
+msgid "An example of this type of address is:"
+msgstr "このタイプのアドレスの例は次のとおりです:"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:130
 msgid ""
 "For testing the topo2 layer in this WMTS works nicely. Adding this string "
@@ -207,6 +236,16 @@ msgid ""
 "The **RESTful WMTS** service takes a different form, a straightforward URL. "
 "The format recommended by the OGC is:"
 msgstr "**RESTful WMTS** サービスは、異ったわかりやすいURLの形式を使います。この形式は OGC に推奨されています："
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:140
+msgid ""
+"This format helps you to recognize that it is a RESTful address. A RESTful "
+"WMTS is accessed in QGIS by simply adding its address in the WMS setup in "
+"the URL field of the form. An example of this type of address for the case "
+"of an Austrian basemap is:"
+msgstr ""
+"この形式は、RESTfulアドレスであることを認識するのに役立ちます。 RESTful "
+"WMTSは、フォームのURLフィールドのWMSセットアップでそのアドレスを追加するだけでQGISでアクセスされます。オーストリアのベースマップを例にした、このタイプのアドレスは次のとおりです:"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:148
 msgid ""
@@ -229,6 +268,12 @@ msgstr "WMTSを読んだときに,  WMS-C についても考えるでしょう."
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:159
 msgid "Selecting WMS/WMTS Servers"
 msgstr " WMS/WMTS サーバーを選択する"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:161
+msgid ""
+"The first time you use the WMS/WMTS feature in QGIS, there are no servers "
+"defined."
+msgstr "QGISでWMS/WMTS機能を初めて使用するとき、定義されたサーバーはありません。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:163
 msgid "You then need to create connections to the server you are targeting:"
@@ -361,6 +406,15 @@ msgstr ""
 ":guilabel:`DPI-Mode`: 有効なオプションは、 **すべて**, **オフ**, **QGIS**, **UMN** および "
 "**GeoServer** です"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:217
+msgid ""
+"|unchecked| :guilabel:`Ignore GetMap/GetTile/GetLegendGraphic URI reported "
+"in capabilities`: if checked, use given URI from the :guilabel:`URL` field "
+"above."
+msgstr ""
+"|unchecked| :guilabel:`capabilitiesのGetMap/GetTile/GetLegendGraphic URI "
+"を無視`: チェックした場合、上の :guilabel:`URL` フィールドからURIを使います。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:790
 msgid "unchecked"
 msgstr ""
@@ -370,8 +424,8 @@ msgid ""
 "|unchecked| :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`: "
 "if checked, use given URI from the :guilabel:`URL` field above."
 msgstr ""
-"|unchecked| :guilabel:`機能で報告されたGetFeatureInfoURIを無視する` ：チェックした場合、上記の "
-":guilabel:`URL` フィールドから指定されたURIを使用します。"
+"|unchecked| :guilabel:`capabilitiesで返答されたGetFeatureInfoURIを無視する` "
+"：チェックした場合、上記の :guilabel:`URL` フィールドから指定されたURIを使用します。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:221
 msgid "|unchecked| :guilabel:`Ignore axis orientation (WMS 1.3/WMTS)`"
@@ -386,7 +440,7 @@ msgid ""
 "their reported extents, resulting in truncated symbols on the borders of "
 "these layers."
 msgstr ""
-"|unchecked| :guilabel:`Ignore reported layer extents`: "
+"|unchecked| :guilabel:`レイヤ範囲を無視`: "
 "ラスタレイヤによって報告される範囲はレンダリングできる実際の領域よりも小さい場合があるため（特に、データ範囲よりも多くのスペースを必要とするシンボルを使用するWMSサーバーの場合）、このオプションをオンにすると、報告された範囲にラスタレイヤがトリミングされず、これらのレイヤの境界で地図記号が切り捨てられるのを避けられます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:228
@@ -400,6 +454,12 @@ msgstr "|unchecked| :guilabel:`Smooth pixmap transformation`"
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:230
 msgid "Press :guilabel:`OK`"
 msgstr ":guilabel:`OK` を押します。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:232
+msgid ""
+"Once the new WMS/WMTS server connection has been created, it will be "
+"preserved for future QGIS sessions."
+msgstr "新しいWMS/WMTSサーバー接続が作成されると、将来のQGISセッションのために保存されます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:237
 msgid ""
@@ -541,14 +601,44 @@ msgid ""
 " up the WMS request into multiple requests."
 msgstr ":guilabel:`タイルサイズ` WMS要求を複数の要求に分割するためにタイルサイズを設定したい場合（例 256x256）"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:305
+msgid ""
+":guilabel:`Request step size`: if you want to reduce the effect of cut "
+"labels at tile borders, increasing the step size creates larger requests, "
+"fewer tiles and fewer borders. The default value is 2000."
+msgstr ""
+":guilabel:`要求ステップサイズ`: "
+"タイルの境界でカットラベルの効果を減らしたい場合、ステップサイズを大きくすると、より大きなリクエスト、より少ないタイル、より少ないボーダーを作成します。デフォルト値は2000です。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:308
 msgid ""
 "The :guilabel:`Maximum number of GetFeatureInfo results` from the server"
 msgstr "サーバーからの :guilabel:`GetFeatureInfoの最大値`"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:310
+msgid ""
+"Each WMS layer can be presented in multiple CRSs, depending on the "
+"capability of the WMS server. If you select a WMS from the list, a field "
+"with the default projection provided by the web server appears. Press the "
+"|setProjection| :sup:`Select CRS` widget to replace the default projection "
+"of the WMS with another CRS supported by the WMS server."
+msgstr ""
+"各WMSレイヤは、WMSサーバーの機能に応じて、複数のCRSで表示できます。リストからWMSを選択すると、Webサーバーによって提供されるデフォルトの投影法のフィールドが表示されます。"
+" |setProjection| :sup:`Select CRSを選択` "
+"ウィジェットを押して、WMSのデフォルトの投影法をWMSサーバーでサポートされている別のCRSに置き換えます。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:788
 msgid "setProjection"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:315
+msgid ""
+"A dialog similar to the one shown in :numref:`figure_projection_custom` will"
+" appear. The main difference with the WMS version of the dialog is that only"
+" those CRSs supported by the WMS server will be shown."
+msgstr ""
+":numref:`figure_projection_custom` "
+"で示したものと同様のダイアログが表示されます。WMS版のダイアログとの主な違いは、WMSサーバーでサポートされているCRSのみが表示されることです。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:319
 msgid ""
@@ -560,9 +650,37 @@ msgstr ""
 "最後に、WMSサーバーがこの機能をサポートしている場合 |checkbox| :guilabel:`文脈WMS凡例を使用` "
 "を有効にできます。そのときは、現在の地図ビューの範囲に関連する凡例だけ表示されますので、現在の地図で見えないものの凡例項目は含まれません。"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:324
+msgid ""
+"At the bottom of the dialog, a :guilabel:`Layer name` text field displays "
+"the selected item's :guilabel:`Title`. You can change the name at your will."
+" This name will appear in the :guilabel:`Layers` panel after you pressed the"
+" :guilabel:`Add` button and loaded the layer(s) in QGIS."
+msgstr ""
+"ダイアログの下部には、 :guilabel:`レイヤ名` というテキストフィールドがあり、選択した項目の :guilabel:`タイトル` "
+"を表示します。この名前は自由に変更することができます。この名前は、:guilabel:`追加` "
+"ボタンを押してQGISにレイヤを読み込んだ後、:guilabel:`レイヤ` パネルに表示されます。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:329
+msgid ""
+"You can select several layers at once, but only one image style per layer. "
+"When several layers are selected, they will be combined at the WMS server "
+"and transmitted to QGIS in one go, as a single layer. The default name is a "
+"slash (``/``) separated list of their original title. You can however opt to"
+" |checkbox| :guilabel:`Load as separate layers`."
+msgstr ""
+"一度に複数のレイヤを選択することができますが、画像スタイルはレイヤ毎に1つのみです。複数のレイヤが選択されると、それらはWMSサーバーで結合され、1つのレイヤとしてQGISに一括送信されます。デフォルトの名前は、スラッシュ(``/``)で区切られた元のタイトルのリストです。ただし、|checkbox|"
+" :guilabel:`別のレイヤとして読み込む` を選択することができます。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:335
 msgid "**Layer Order**"
 msgstr "**レイヤー順序**"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:337
+msgid ""
+"The :guilabel:`Layer Order` tab lists the selected layers available from the"
+" current connected WMS server."
+msgstr ":guilabel:`レイヤ順序` タブは、現在接続しているWMSサーバーから利用できる選択されたレイヤーを一覧表示します。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:340
 msgid ""
@@ -571,17 +689,57 @@ msgid ""
 "change the overlay order, you can use the :guilabel:`Up` and "
 ":guilabel:`Down` buttons of the :guilabel:`Layer Order` tab."
 msgstr ""
-"サーバーによってレンダリングされたWMSレイヤーは、リストの上から下に、 :guilabel:`レイヤー` "
-"タブにリストされている順序でオーバーレイされます。オーバーレイの順序を変更する場合は、 :guilabel:`レイヤー順序` タブの "
-":guilabel:`上へ` ボタンと :guilabel:`下へ` ボタンを使用できます。"
+"サーバーによってレンダリングされたWMSレイヤーは、 :guilabel:`レイヤー` "
+"タブにリストされている順序で、リストの上から下にオーバーレイされます。オーバーレイの順序を変更するのに、 :guilabel:`レイヤ順序` タブの "
+":guilabel:`上` ボタンと :guilabel:`下` ボタンを使うことができます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:347
 msgid "**Transparency**"
 msgstr "**透過性**"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:349
+msgid ""
+"The :guilabel:`Global transparency` setting from the :guilabel:`Layer "
+"Properties` is hard coded to be always on, where available."
+msgstr ""
+":guilabel:`レイヤプロパティ` の :guilabel:`グローバルな不透明度` "
+"設定は、利用可能な場合は常にオンになるようにハードコードされています。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:356
 msgid "Tilesets"
 msgstr "タイルセット"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:360
+msgid ""
+"When using WMTS (Cached WMS) services you are able to browse through the "
+":guilabel:`Tilesets` tab given by the server. Additional information like "
+"tile size, formats and supported CRS are listed in this table."
+msgstr ""
+"WMTS（キャッシュWMS）サービスを使用する場合、サーバーが提供する :guilabel:`タイルセット` "
+"タブを閲覧することができます。タイルのサイズ、フォーマット、サポートされているCRSなどの追加情報は、この表に記載されています。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:371
+msgid ""
+"Selecting a layer to load, it is also possible to apply an "
+":ref:`Interpretation method <interpretation>`, converting it into a raster "
+"layer of single band float type, ready for styling using QGIS usual "
+":ref:`raster renderers <raster_rendering>`."
+msgstr ""
+"読み込むレイヤーを選択すると、 :ref:`Interpretation method <interpretation>` を適用し、QGIS の通常の"
+" :ref:`raster renderers <raster_rendering>` を使ってスタイリングできる、シングルバンド float "
+"タイプのラスターレイヤーに変換することも可能です。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:376
+msgid ""
+"In combination with this feature, you can use the tile scale slider by "
+"selecting :menuselection:`View --> Panels` ( or |kde| "
+":menuselection:`Settings --> Panels`), then choosing :guilabel:`Tile Scale "
+"Panel`. This gives you the available scales from the tile server with a nice"
+" slider docked in."
+msgstr ""
+"この機能と組み合わせて、タイルスケールスライダーを使用するには、 :menuselection:`ビュー --> パネル` （または |kde| "
+":menuselection:`設定 --> パネル`）を選択し、 :guilabel:`タイルスケールパネル` "
+"を選びます。これにより、タイルサーバーから利用可能なスケールが、素敵なスライダーとともにドッキングして表示されます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:782
 msgid "kde"
@@ -636,6 +794,26 @@ msgstr ""
 "|identify| :sup:`識別`ツールは、GML形式でWMSサーバーの応答（GetFeatureInfo）を（それはこの文脈ではQGIS "
 "GUIでの地物と呼ばれる）をサポートしています。「地物」フォーマットがサーバーによってサポートされており、選択された場合は、識別ツールの結果は、通常のベクタレイヤからのように、ベクタ地物です。単一の地物をツリーで選択された場合、それは地図で強調表示され、それがクリップボードにコピーされ、別のベクタレイヤに貼り付けできます。GML形式でGetFeatureInfoをサポートするために、以下のUMN"
 " Mapserverの設定例を参照してください。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:446
+msgid "Viewing Properties"
+msgstr "プロパティを表示する"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:448
+msgid ""
+"Once you have added a WMS server, you can view its properties by right-"
+"clicking on it in the legend and selecting :menuselection:`Properties`. The "
+"WMS/WMTS layer properties is much like the raster layer properties so you "
+"will find detailed description at :ref:`raster_properties_dialog`. However, "
+"there are some differences, which will be explained below."
+msgstr ""
+"WMSサーバーを追加したら、凡例でそのサーバーを右クリックして :menuselection:`プロパティ` "
+"を選択することで、そのプロパティを見ることができます。WMS/WMTSレイヤーのプロパティはラスターレイヤーのプロパティとよく似ているので、詳細な説明は"
+" :ref:`raster_properties_dialog` で見ることができます。しかし、いくつかの相違点があるので、以下に説明します。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:457
+msgid "Information properties"
+msgstr "情報プロパティ"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:461
 msgid "**Metadata Tab**"
@@ -768,9 +946,62 @@ msgid ""
 "in by the WMS server."
 msgstr "**スタイルで利用可能** ---このレイヤがWMSサーバーによって描画されることができる画像のスタイル。"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:517
+msgid "Temporal properties"
+msgstr "時系列プロパティ"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:519
+msgid ""
+"Raster :ref:`temporal properties <raster_temporal>` (namely "
+":guilabel:`Dynamic Temporal Control`) can be set for WMS and WMTS layers. By"
+" default, when a time-dimension enabled WMS or WMTS layer is added to the "
+"project, it is indicated in the :guilabel:`Layers` panel with the "
+"|indicatorTemporal| :sup:`Temporal Layer` icon next to it. Its "
+":guilabel:`Temporal` properties default to the :guilabel:`Automatic` "
+"temporal mode, meaning that the layer will follow the temporal controller's "
+"current time range by default."
+msgstr ""
+"ラスター :ref:`時系列プロパティ <raster_temporal>`（すなわち :guilabel:`動的時系列コントロール` ）は、WMS と"
+" WMTS レイヤに設定することができます。デフォルトでは、時間軸を有効にした WMS または WMTS レイヤがプロジェクトに追加されると、 "
+":guilabel:`レイヤ` パネルに |indicatorTemporal| :sup:`Temporal Layer` "
+"というアイコンが横に表示されます。その :guilabel:`Temporal` プロパティのデフォルトは :guilabel:`自動` "
+"時系列モードで、これはレイヤがデフォルトで 時系列コントローラー の現在の時間範囲に従うことを意味しています。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:780
 msgid "indicatorTemporal"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:527
+msgid ""
+"You can then opt to show a specific static time value for the layer by "
+"unchecking :guilabel:`Dynamic Temporal Control` and picking an option under "
+":guilabel:`Static WMS-T Temporal Range`:"
+msgstr ""
+":guilabel:`動的時系列コントロール` のチェックを外し、:guilabel:`静的WMS-"
+"T時間範囲`のオプションを選択すると、レイヤーの特定の静的時間値を表示することができます:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:570
+msgid "QGIS Server properties"
+msgstr "QGISサーバープロパティ"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:572
+msgid ""
+"In addition to the raster layer :ref:`properties <raster_server>`, "
+"publishing a WMS/WMTS layer with QGIS Server will display following options:"
+msgstr ""
+"ラスターレイヤー :ref:`プロパティ <raster_server>` に加えて、WMS/WMTSレイヤーをQGIS "
+"Serverで公開すると、以下のオプションが表示されます:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:575
+msgid ""
+":guilabel:`WMS Print layer`: Allows to set alternative WMS layer that should"
+" be used for printing (in the :ref:`GetProjectSettings "
+"<wms_getprojectsettings>` reply). Convenient for WMTS layers that are "
+"generally not suitable for printing."
+msgstr ""
+":guilabel:`WMS印刷レイヤ`: 印刷に使用する代替の WMS レイヤを設定することができます "
+"(:ref:`GetProjectSettings <wms_getprojectsettings>` "
+"返信)。一般的に印刷に適さないWMTSレイヤーに便利です。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:594
 msgid ""

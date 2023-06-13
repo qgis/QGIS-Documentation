@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Eric Armijo, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Eric Armijo, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +28,16 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:7
 msgid "Structuring Python Plugins"
 msgstr "Estructurar Complementos de Python"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:15
+msgid "The main steps for creating a plugin are:"
+msgstr "Los pasos principales para crear un complemento son:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:17
+msgid ""
+"*Idea*: Have an idea about what you want to do with your new QGIS plugin."
+msgstr ""
+"*Idea*: Tenga una idea de lo que quiere hacer con tu nuevo complemento QGIS."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:23
 msgid ""
@@ -43,6 +54,107 @@ msgid ""
 msgstr ""
 "*Publish*: Publique su complemento en el repositorio de QGIS o cree su "
 "propio repositorio como un \"arsenal\" de \"armas GIS\" personales."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:33
+msgid "Getting started"
+msgstr "Cómo empezar"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:35
+msgid ""
+"Before starting to write a new plugin, have a look at the "
+":ref:`official_pyqgis_repository`. The source code of existing plugins can "
+"help you to learn more about programming. You may also find that a similar "
+"plugin already exists and you may be able to extend it or at least build on "
+"it to develop your own."
+msgstr ""
+"Antes de empezar a escribir un nuevo complemento, eche un vistazo al "
+":ref:`official_pyqgis_repository`. El código fuente de los complementos "
+"existentes puede ayudarle a aprender más sobre programación. También puedes "
+"encontrar que ya existe un complemento similar y puede ser capaz de "
+"extenderlo o al menos basarte en él para desarrollar el tuyo propio."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:44
+msgid "Set up plugin file structure"
+msgstr "Configurar la estructura de archivos del complemento"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:46
+msgid ""
+"To get started with a new plugin, we need to set up the necessary plugin "
+"files."
+msgstr ""
+"Para empezar con un nuevo complemento, necesitamos configurar los archivos "
+"necesarios del complemento."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:48
+msgid "There are two plugin template resources that can help get you started:"
+msgstr ""
+"Existen dos recursos de plantillas de complementos que pueden ayudarle a "
+"empezar:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:50
+msgid ""
+"For educational purposes or whenever a minimalist approach is desired, the "
+"`minimal plugin template <https://github.com/wonder-sk/qgis-minimal-"
+"plugin>`_ provides the basic files (skeleton) necessary to create a valid "
+"QGIS Python plugin."
+msgstr ""
+"Para fines educativos o siempre que se desee un enfoque minimalista, la "
+"plantilla `minimal plugin template <https://github.com/wonder-sk/qgis-"
+"minimal-plugin>`_ proporciona los archivos básicos (esqueleto) necesarios "
+"para crear un complemento válido de QGIS Python."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:53
+msgid ""
+"For a more fully feature plugin template, the `Plugin Builder "
+"<https://plugins.qgis.org/plugins/pluginbuilder3/>`_ can create templates "
+"for multiple different plugin types, including features such as localization"
+" (translation) and testing."
+msgstr ""
+"Para una plantilla de complemento más completa, el `Plugin Builder "
+"<https://plugins.qgis.org/plugins/pluginbuilder3/>`_ puede crear plantillas "
+"para múltiples tipos de complementos diferentes, incluyendo características "
+"como localización (traducción) y pruebas."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:58
+msgid "A typical plugin directory includes the following files:"
+msgstr "Un directorio de complementos típico incluye los siguientes archivos:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:60
+msgid ""
+":file:`metadata.txt` - *required* - Contains general info, version, name and"
+" some other metadata used by plugins website and plugin infrastructure."
+msgstr ""
+":file:`metadata.txt` - *requerido* - Contiene información general, versión, "
+"nombre y algunos otros metadatos utilizados por el sitio web de complementos"
+" y la infraestructura de complementos."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:62
+msgid ""
+":file:`__init__.py` - *required* - The starting point of the plugin. It has "
+"to have the :func:`classFactory` method and may have any other "
+"initialisation code."
+msgstr ""
+":file:`__init__.py` - *requerido* - El punto de inicio del complemento. "
+"Tiene que tener el método :func:`classFactory` y puede tener cualquier otro "
+"código de inicialización."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:64
+msgid ""
+":file:`mainPlugin.py` - *core code* - The main working code of the plugin. "
+"Contains all the information about the actions of the plugin and the main "
+"code."
+msgstr ""
+":file:`mainPlugin.py` - *código núcleo* - El código principal de trabajo del"
+" complemento. Contiene toda la información sobre las acciones del "
+"complemento y el código principal."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:66
+msgid ""
+":file:`form.ui` - *for plugins with custom GUI* -  The GUI created by Qt "
+"Designer."
+msgstr ""
+":file:`form.ui` - *para complementos con IGU personalizada* - La IGU creada "
+"por Qt Designer."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:98
 msgid "All metadata must be in UTF-8 encoding."
