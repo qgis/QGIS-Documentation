@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
 # Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-07 15:48+0000\n"
+"POT-Creation-Date: 2023-06-14 12:36+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
@@ -61,15 +61,15 @@ msgstr ""
 "|win| MS 윈도우와 |osx| 맥OS에서 표준 인스톨러를 사용할 수 있습니다. 수많은 |nix| GNU/리눅스 배포판을 위한 "
 "바이너리 패키지(rpm 및 deb)나 설치 관리자에 추가할 수 있는 소프트웨어 저장소도 제공합니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:296
+#: ../../docs/user_manual/introduction/getting_started.rst:316
 msgid "win"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:286
+#: ../../docs/user_manual/introduction/getting_started.rst:302
 msgid "osx"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:284
+#: ../../docs/user_manual/introduction/getting_started.rst:300
 msgid "nix"
 msgstr ""
 
@@ -254,10 +254,59 @@ msgid "Start QGIS as seen in :ref:`label_startingqgis`."
 msgstr ":ref:`label_startingqgis` 에서 배운대로 QGIS를 실행하십시오."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:145
-msgid "To load the files in QGIS:"
-msgstr "QGIS에 파일들을 불러오려면:"
+msgid ""
+"The data we will be working with are in ``Albers Equal Area``, so let's set "
+"the project's CRS accordingly:"
+msgstr ""
+"여기에서 작업할 데이터는 ``알베르스 정적원추도법(Albers Equal Area)`` 으로 투영되었으므로, 이에 맞춰 프로젝트 좌표계를"
+" 설정해줍시다:"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:147
+#: ../../docs/user_manual/introduction/getting_started.rst:148
+msgid ""
+"Click the |setProjection| :sup:`Select projection` button in the bottom "
+"right of QGIS interface. The project properties dialog opens with the "
+":guilabel:`CRS` tab active."
+msgstr ""
+"QGIS 인터페이스의 우하단에 있는 |setProjection| :sup:`Select projection` 버튼을 클릭하십시오. "
+"프로젝트 속성 대화창의 :guilabel:`CRS` 탭이 열립니다."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:312
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:151
+msgid "Type `̀`2964`` in the |search| :guilabel:`Filter` text area."
+msgstr "|search| :guilabel:`Filter` 텍스트 란에 `̀`2964`` 를 입력하십시오."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:310
+msgid "search"
+msgstr "search"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:152
+msgid "Select the row with ``NAD27 / Alaska Albers`` CRS name."
+msgstr "``NAD27 / Alaska Albers`` 좌표계 이름을 가진 행을 선택하십시오."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:159
+msgid "Select the Coordinate Reference System of data"
+msgstr "해당 데이터의 좌표계를 선택"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:161
+msgid "Press :guilabel:`OK`"
+msgstr ":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:163
+msgid ""
+"You can ignore/close for now the \"ballpark transform\" message that could "
+"display."
+msgstr ""
+"\"근사치 변환(ballpark transform)\" 이라는 메시지가 표시될 수도 있는데, 지금은 그냥 무시하거나 메시지 창을 닫으면 "
+"됩니다."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:166
+msgid "Load the files in QGIS:"
+msgstr "QGIS에 파일들을 불러오십시오:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:168
 msgid ""
 "Click on the |dataSourceManager| :sup:`Open Data Source Manager` icon. The "
 "Data Source Manager should open in Browser mode."
@@ -265,15 +314,15 @@ msgstr ""
 "|dataSourceManager| :sup:`Open Data Source Manager` 아이콘을 클릭하십시오. 데이터소스 "
 "관리자(Data Source Manager)가 탐색기(Browser) 모드로 열릴 것입니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:274
+#: ../../docs/user_manual/introduction/getting_started.rst:290
 msgid "dataSourceManager"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:149
+#: ../../docs/user_manual/introduction/getting_started.rst:170
 msgid "Browse to the folder :file:`qgis_sample_data/raster/`"
 msgstr ":file:`qgis_sample_data/raster/` 폴더를 찾으십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:150
+#: ../../docs/user_manual/introduction/getting_started.rst:171
 msgid ""
 "Select the ERDAS IMG file |rasterLayer| :guilabel:`landcover.img` and "
 "double-click it. The landcover layer is added in the background while the "
@@ -282,15 +331,15 @@ msgstr ""
 "ERDAS IMG 파일 |rasterLayer| :guilabel:`landcover.img` 를 선택한 다음 더블클릭하십시오. 배경에 "
 "'landcover' 레이어가 추가될 것입니다. 데이터소스 관리자 창은 닫히지 않습니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:290
+#: ../../docs/user_manual/introduction/getting_started.rst:306
 msgid "rasterLayer"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:159
+#: ../../docs/user_manual/introduction/getting_started.rst:181
 msgid "Adding data to a new project in QGIS"
 msgstr "QGIS의 새 프로젝트에 데이터 추가하기"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:161
+#: ../../docs/user_manual/introduction/getting_started.rst:183
 msgid ""
 "To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`, "
 "and drag and drop the |dbSchema| :guilabel:`lakes.gml` file over QGIS main "
@@ -300,11 +349,11 @@ msgstr ""
 ":guilabel:`lakes.gml` 파일을 QGIS 주 대화창으로 드래그&드롭하십시오. (또는 앞에서 설명한 대로 더블클릭하기만 해도"
 " 됩니다.)"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:276
+#: ../../docs/user_manual/introduction/getting_started.rst:292
 msgid "dbSchema"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:164
+#: ../../docs/user_manual/introduction/getting_started.rst:186
 msgid ""
 "The :guilabel:`Select Items to Add` dialog opens, scanning the file. This is"
 " due to :file:`.gml` file format being able to store more than one layer at "
@@ -313,11 +362,11 @@ msgstr ""
 ":guilabel:`Select Items to Add` 대화창이 열리고 파일을 스캔합니다. :file:`.gml` 파일 포맷이 한 번에"
 " 하나 이상의 레이어를 저장할 수 있기 때문입니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:172
+#: ../../docs/user_manual/introduction/getting_started.rst:194
 msgid "Select layers within a file"
 msgstr "파일 안에 있는 레이어를 선택하기"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:174
+#: ../../docs/user_manual/introduction/getting_started.rst:196
 msgid ""
 "In our case there is a single |polygonLayer| :guilabel:`lakes` layer. Select"
 " it and press :guilabel:`Add Layers`."
@@ -325,50 +374,51 @@ msgstr ""
 "이 경우 |polygonLayer| :guilabel:`lakes` 레이어 한 개가 있습니다. 이 레이어를 선택한 다음 "
 ":guilabel:`Add Layers` 버튼을 누르십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:288
+#: ../../docs/user_manual/introduction/getting_started.rst:304
 msgid "polygonLayer"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:176
-msgid ""
-"The layer is added to the :guilabel:`Layers` panel but it displays "
-"|indicatorNoCRS| :sup:`Layer has no coordinate reference system set` next to"
-" it. Let's adjust that by clicking the icon."
-msgstr ""
-":guilabel:`Layers` 패널에 레이어가 추가되지만 그 옆에 |indicatorNoCRS| :sup:`Layer has no "
-"coordinate reference system set` 아이콘이 표시됩니다. 이를 바로잡으려면 해당 아이콘을 클릭하십시오."
+#: ../../docs/user_manual/introduction/getting_started.rst:198
+msgid "The layer is added to the :guilabel:`Layers` panel"
+msgstr "레이어가 :guilabel:`Layers` 패널에 추가됩니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:280
-msgid "indicatorNoCRS"
-msgstr ""
-
-#: ../../docs/user_manual/introduction/getting_started.rst:179
-msgid ""
-"A :guilabel:`Coordinate Reference System Selector` dialog opens. In the "
-":guilabel:`Filter` menu, type ``2964``, filtering the list of Coordinate "
-"Reference Systems below."
-msgstr ""
-":guilabel:`Coordinate Reference System Selector` 대화창이 열립니다. "
-":guilabel:`Filter` 메뉴에서 ``2964`` 를 입력해서 아래쪽에 있는 좌표계(Coordinate Reference "
-"System)를 필터링하십시오."
-
-#: ../../docs/user_manual/introduction/getting_started.rst:188
-msgid "Select the Coordinate Reference System of data"
-msgstr "해당 데이터의 좌표계를 선택"
-
-#: ../../docs/user_manual/introduction/getting_started.rst:190
-msgid "Select the :guilabel:`NAD27 / Alaska Albers` entry"
-msgstr ":guilabel:`NAD27 / Alaska Albers` 항목을 선택합니다."
-
-#: ../../docs/user_manual/introduction/getting_started.rst:191
-msgid "Click :guilabel:`OK`"
-msgstr ":guilabel:`OK` 를 클릭합니다."
-
-#: ../../docs/user_manual/introduction/getting_started.rst:192
+#: ../../docs/user_manual/introduction/getting_started.rst:199
 msgid "Close the Data Source Manager window"
 msgstr "데이터소스 관리자 창을 닫으십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:194
+#: ../../docs/user_manual/introduction/getting_started.rst:201
+msgid ""
+"In the :guilabel:`Layers` panel, you can notice that the :guilabel:`lakes` "
+"layer displays |indicatorNoCRS| :sup:`Layer has no coordinate reference "
+"system set` next to it. Let's adjust that."
+msgstr ""
+":guilabel:`Layers` 패널을 보면, :guilabel:`lakes` 레이어 옆에 |indicatorNoCRS| "
+":sup:`Layer has no coordinate reference system set` 아이콘이 표시되어 있을 것입니다. 이를 "
+"바로잡아 봅시다."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:296
+msgid "indicatorNoCRS"
+msgstr ""
+
+#: ../../docs/user_manual/introduction/getting_started.rst:205
+msgid ""
+"Click the |indicatorNoCRS| icon. The :guilabel:`Coordinate Reference System "
+"Selector` dialog opens."
+msgstr ""
+"|indicatorNoCRS| 아이콘을 클릭하십시오. :guilabel:`Coordinate Reference System "
+"Selector` 대화창이 열립니다."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:207
+msgid ""
+"As done earlier, find and select the :guilabel:`NAD27 / Alaska Albers` CRS "
+"entry."
+msgstr "앞에서와 마찬가지로, :guilabel:`NAD27 / Alaska Albers` 좌표계 항목을 찾아 선택하십시오."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:208
+msgid "Click :guilabel:`OK`"
+msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:210
 msgid ""
 "You now have the two layers available in your project in some random "
 "colours. Let's do some customization on the lakes layer."
@@ -376,115 +426,115 @@ msgstr ""
 "이제 사용자의 프로젝트 안에서 몇몇 랜덤한 색상으로 표시된 레이어 2개를 사용할 수 있습니다. 'lakes' 레이어에 대해 간단한 사용자"
 " 지정 작업을 해보겠습니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:197
+#: ../../docs/user_manual/introduction/getting_started.rst:213
 msgid ""
 "Select the |zoomIn| :sup:`Zoom In` tool on the :guilabel:`Navigation` "
 "toolbar"
 msgstr ":guilabel:`Navigation` 툴바에 있는 |zoomIn| :sup:`Zoom In` 도구를 선택하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:298
+#: ../../docs/user_manual/introduction/getting_started.rst:318
 msgid "zoomIn"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:198
+#: ../../docs/user_manual/introduction/getting_started.rst:214
 msgid "Zoom to an area with some lakes"
 msgstr "호수가 몇 개 보이도록 마음에 드는 영역으로 조금 확대해보세요."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:199
+#: ../../docs/user_manual/introduction/getting_started.rst:215
 msgid ""
 "Double-click the :file:`lakes` layer in the map legend to open the "
 ":guilabel:`Properties` dialog"
 msgstr "맵 범례에 있는 :file:`lakes` 레이어를 더블 클릭해서 :guilabel:`Properties` 대화창을 엽니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:201
+#: ../../docs/user_manual/introduction/getting_started.rst:217
 msgid "To change the lakes color:"
 msgstr "호수의 색상을 변경하려면:"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:203
+#: ../../docs/user_manual/introduction/getting_started.rst:219
 msgid "Click on the |symbology| :guilabel:`Symbology` tab"
 msgstr "|symbology| :guilabel:`Symbology` 탭을 클릭합니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:294
+#: ../../docs/user_manual/introduction/getting_started.rst:314
 msgid "symbology"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:204
+#: ../../docs/user_manual/introduction/getting_started.rst:220
 msgid "Select blue as fill color."
 msgstr "채우기(fill) 색상으로 파란색을 선택하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:211
+#: ../../docs/user_manual/introduction/getting_started.rst:227
 msgid "Selecting Lakes color"
 msgstr "호수 색상을 선택하기"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:213
+#: ../../docs/user_manual/introduction/getting_started.rst:229
 msgid ""
 "Press :guilabel:`OK`. Lakes are now displayed in blue in the map canvas."
 msgstr ":guilabel:`OK` 를 클릭하십시오. 이제 호수들이 맵 캔버스 상에서 파란색으로 보일 것입니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:214
+#: ../../docs/user_manual/introduction/getting_started.rst:230
 msgid "To display the name of the lakes:"
 msgstr "호수의 이름을 보이게 하려면:"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:216
+#: ../../docs/user_manual/introduction/getting_started.rst:232
 msgid "Reopen the :file:`lakes` layer :guilabel:`Properties` dialog"
 msgstr ":file:`lakes` 레이어의 :guilabel:`Properties` 대화창을 다시 여십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:217
+#: ../../docs/user_manual/introduction/getting_started.rst:233
 msgid "Click on the |labelingSingle| :guilabel:`Labels` tab"
 msgstr "|labelingSingle| :guilabel:`Labels` 탭을 클릭합니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:282
+#: ../../docs/user_manual/introduction/getting_started.rst:298
 msgid "labelingSingle"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:218
+#: ../../docs/user_manual/introduction/getting_started.rst:234
 msgid ""
 "Select :guilabel:`Single labels` in the drop-down menu to enable labeling."
 msgstr "드롭다운 메뉴에서 :guilabel:`Single labels` 를 선택해서 라벨 작업을 활성화합니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:219
+#: ../../docs/user_manual/introduction/getting_started.rst:235
 msgid "From the :guilabel:`Label with` list, choose the ``NAMES`` field."
 msgstr ":guilabel:`Label with` 목록에서 ``NAMES`` 항목을 선택하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:226
+#: ../../docs/user_manual/introduction/getting_started.rst:242
 msgid "Showing Lakes names"
 msgstr "호수의 이름을 표시"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:228
+#: ../../docs/user_manual/introduction/getting_started.rst:244
 msgid "Press :guilabel:`Apply`. Names will now load over the boundaries."
 msgstr ":guilabel:`Apply` 를 클릭하십시오. 호수의 경계선 위로 이름을 불러올 것입니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:229
+#: ../../docs/user_manual/introduction/getting_started.rst:245
 msgid ""
 "You can improve readability of the labels by adding a white buffer around "
 "them:"
 msgstr "라벨 텍스트 주위에 하얀색의 버퍼를 추가해서 라벨의 가독성을 향상시킬 수 있습니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:231
+#: ../../docs/user_manual/introduction/getting_started.rst:247
 msgid "Click the :guilabel:`Buffer` tab in the list on the left"
 msgstr "왼쪽에 있는 목록에서 :guilabel:`Buffer` 탭을 클릭하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:232
+#: ../../docs/user_manual/introduction/getting_started.rst:248
 msgid "Check |checkbox| :guilabel:`Draw text buffer`"
 msgstr "|checkbox| :guilabel:`Draw text buffer` 를 체크하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:272
+#: ../../docs/user_manual/introduction/getting_started.rst:288
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:233
+#: ../../docs/user_manual/introduction/getting_started.rst:249
 msgid "Choose ``3`` as buffer size"
 msgstr "버퍼 크기로 ``3`` 을 선택하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:234
+#: ../../docs/user_manual/introduction/getting_started.rst:250
 msgid "Click :guilabel:`Apply`"
 msgstr ":guilabel:`Apply` 를 클릭합니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:235
+#: ../../docs/user_manual/introduction/getting_started.rst:251
 msgid "Check if the result looks good, and update the value if needed."
 msgstr "결과가 보기에 좋은지 확인하고, 필요할 경우 버퍼 크기 값을 조정하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:236
+#: ../../docs/user_manual/introduction/getting_started.rst:252
 msgid ""
 "Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties` "
 "dialog and apply the changes."
@@ -492,31 +542,31 @@ msgstr ""
 "마지막으로 :guilabel:`OK` 를 클릭해서 :guilabel:`Layer Properties` 대화창을 닫고 변경 사항을 "
 "적용합니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:239
+#: ../../docs/user_manual/introduction/getting_started.rst:255
 msgid ""
 "Let's now add some decorations in order to shape the map and export it out "
 "of QGIS:"
 msgstr "이제 맵을 조판하기 위한 몇몇 장식을 추가한 다음 QGIS에서 내보내보겠습니다:"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:242
+#: ../../docs/user_manual/introduction/getting_started.rst:258
 msgid "Select :menuselection:`View --> Decorations --> Scale Bar` menu"
 msgstr ":menuselection:`View --> Decorations --> Scale Bar` 메뉴를 선택하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:243
+#: ../../docs/user_manual/introduction/getting_started.rst:259
 msgid ""
 "In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` "
 "option"
 msgstr "대화창이 열리면, |checkbox| :guilabel:`Enable Scale Bar` 옵션을 체크하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:244
+#: ../../docs/user_manual/introduction/getting_started.rst:260
 msgid "Customize the options of the dialog as you want"
 msgstr "사용자가 바라는대로 대화창의 옵션을 지정해보십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:245
+#: ../../docs/user_manual/introduction/getting_started.rst:261
 msgid "Press :guilabel:`Apply`"
 msgstr ":guilabel:`Apply` 를 클릭합니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:246
+#: ../../docs/user_manual/introduction/getting_started.rst:262
 msgid ""
 "Likewise, from the decorations menu, add more items (north arrow, "
 "copyright...) to the map canvas with custom properties."
@@ -524,7 +574,7 @@ msgstr ""
 "같은 방식으로, 장식(Decorations) 메뉴에서 더 많은 (방위표, 저작권 등등의) 항목들을 사용자 지정 속성으로 맵 캔버스에 "
 "추가해보십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:248
+#: ../../docs/user_manual/introduction/getting_started.rst:264
 msgid ""
 "Click :menuselection:`Project --> Import/Export -->` |saveMapAsImage| "
 ":menuselection:`Export Map to Image...`"
@@ -532,21 +582,21 @@ msgstr ""
 ":menuselection:`Project --> Import/Export -->` |saveMapAsImage| "
 ":menuselection:`Export Map to Image...` 를 클릭하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:292
+#: ../../docs/user_manual/introduction/getting_started.rst:308
 msgid "saveMapAsImage"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:250
+#: ../../docs/user_manual/introduction/getting_started.rst:266
 msgid "Press :guilabel:`Save` in the opened dialog"
 msgstr "열린 대화창에 있는 :guilabel:`Save` 버튼을 클릭하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:251
+#: ../../docs/user_manual/introduction/getting_started.rst:267
 msgid ""
 "Select a file location, a format and confirm by pressing :guilabel:`Save` "
 "again."
 msgstr "파일 위치와 포맷을 선택한 다음 :guilabel:`Save` 를 다시 클릭해서 확정하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:253
+#: ../../docs/user_manual/introduction/getting_started.rst:269
 msgid ""
 "Press :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to "
 "store your changes as a :file:`.qgz` project file."
@@ -554,11 +604,11 @@ msgstr ""
 "사용자의 변경 사항을 :file:`.qgz` 프로젝트 파일로 저장하려면 :menuselection:`Project -->` "
 "|fileSave| :menuselection:`Save...` 메뉴를 클릭하십시오."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:278
+#: ../../docs/user_manual/introduction/getting_started.rst:294
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:256
+#: ../../docs/user_manual/introduction/getting_started.rst:272
 msgid ""
 "That's it! You can see how easy it is to visualize raster and vector layers "
 "in QGIS, configure them and generate your map in an image format you can use"
@@ -569,7 +619,7 @@ msgstr ""
 "수 있는 이미지 포맷으로 생성할 수 있는지 아시겠지요. 다음 장에서는 사용할 수 있는 기능, 특징 및 설정들과 그 사용법을 "
 "배워보겠습니다."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:262
+#: ../../docs/user_manual/introduction/getting_started.rst:278
 msgid ""
 "To continue learning QGIS through step-by-step exercises, follow the "
 ":ref:`Training manual <QGIS-training-manual-index-reference>`."
