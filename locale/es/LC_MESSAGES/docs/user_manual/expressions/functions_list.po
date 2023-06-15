@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
-# Eric Armijo, 2023
 # vareli <ehespinosa@ya.com>, 2023
+# Eric Armijo, 2023
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-17 05:05+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: vareli <ehespinosa@ya.com>, 2023\n"
+"Last-Translator: Eric Armijo, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -943,6 +943,14 @@ msgstr ""
 "espaciales usados para calcular el agregado. Los campos y la geometría son "
 "de los objetos espaciales en la capa unida. Los objetos fuente pueden ser "
 "accedidos con la variable @parent. "
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:55
+msgid ""
+"**concatenator** - optional string to use to join values for 'concatenate' "
+"and 'concatenate_unique' aggregates"
+msgstr ""
+"**concatenador** - cadena opcional para unir valores en los agregados "
+"'concatenate' y 'concatenate_unique' "
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:56
 msgid ""
@@ -8033,6 +8041,14 @@ msgstr ""
 msgid "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 msgstr "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid ""
+"``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
+msgstr ""
+"``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:425
 msgid "Further reading: :ref:`qgisswapxy` algorithm"
 msgstr "Otras lecturas: algoritmo :ref:`qgisswapxy`"
@@ -8061,6 +8077,14 @@ msgid ""
 msgstr ""
 "**geometry** - una geometría. Todas las geometrías que no sean de polígono "
 "se devuelven sin cambios."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
+msgstr ""
+"``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:431
 msgid ""
@@ -8865,6 +8889,14 @@ msgstr "``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 msgid "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
 msgstr "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:478
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_make_valid`, "
+":ref:`qgischeckvalidity` algorithm"
+msgstr ""
+"Lectura adicional: :ref:`expression_function_GeometryGroup_make_valid`, "
+"algoritmo :ref:`qgischeckvalidity"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -11338,6 +11370,14 @@ msgid ""
 msgstr ""
 "**tolerance** - distancia máxima entre el punto devuelto y la verdadera "
 "localización del polo"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
+msgstr ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:608
 msgid "Further reading: :ref:`qgispoleofinaccessibility` algorithm"
@@ -14505,6 +14545,10 @@ msgstr ""
 msgid "%"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
+msgid "Remainder of division. Takes the sign of the dividend."
+msgstr "Resto de la división. Toma el signo del dividendo."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
 msgid "a % b"
 msgstr "a % b"
@@ -14541,6 +14585,18 @@ msgstr "**a** - valor"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:179
 msgid "**b** - value"
 msgstr "**b** - valor"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
+msgid "``9 % 2`` → 1"
+msgstr "``9 % 2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``9 % -2`` → 1"
+msgstr "``9 % -2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:27
+msgid "``-9 % 2`` → -1"
+msgstr "``-9 % 2`` → -1"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
 msgid "``5 % NULL`` → NULL"
@@ -16008,6 +16064,16 @@ msgstr ""
 "``is_selected(@atlas_feature)`` → TRUE si el objeto espacial actual del "
 "atlas está seleccionado."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:54
+msgid ""
+"``is_selected(get_feature('streets', 'name', 'Main St.'))`` → TRUE if the "
+"unique named \"Main St.\" feature on the active \"streets\" layer is "
+"selected."
+msgstr ""
+"``is_selected(get_feature('streets', 'name', 'Main St.'))`` → TRUE if the "
+"unique named \"Main St.\" feature on the active \"streets\" layer is "
+"selected."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:55
 msgid ""
 "``is_selected(get_feature_by_id('streets', 1))`` → TRUE if the feature with "
@@ -16278,6 +16344,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
 msgid "**value** - The value which should be resolved. Most likely a field."
 msgstr "**value** - El valor que debe resolverse. Probablemente un campo."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+msgid ""
+"**fieldName** - The field name for which the widget configuration should be "
+"loaded."
+msgstr ""
+"**fieldName** - El nombre del campo para el que debe cargarse la "
+"configuración del widget."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:21
 msgid "``represent_value(\"field_with_value_map\")`` → Description for value"
