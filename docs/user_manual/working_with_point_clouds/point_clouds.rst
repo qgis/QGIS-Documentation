@@ -158,6 +158,8 @@ In the upper part, the settings of the different feature renderers can be found.
 In the lower part, there are sections with which general settings
 for the entire layer can be made and which apply over feature renderers.
 
+.. _point_clouds_rendering_types:
+
 Feature Rendering types
 .........................
 
@@ -416,16 +418,26 @@ to modify the rendering of the layer:
 --------------------
 
 In the |3d| :guilabel:`3D View` tab you can make the settings for the rendering
-of the point cloud in 3D maps. Following options can be selected from
-the drop down menu at the top of the tab: 
+of the point cloud in 3D maps.
+
+3D Rendering modes
+..................
+
+Following options can be selected from the drop down menu at the top of the tab: 
 
 * :guilabel:`No Rendering`: Data are not displayed
+* :guilabel:`Follow 2D Symbology`: Syncs features rendering in 3D
+  with :ref:`symbology assigned in 2D <point_clouds_rendering_types>`
 * |singleColor| :guilabel:`Single Color`: All points are displayed in the same
   :ref:`color <color-selector>` regardless of attributes
-* |singlebandPseudocolor| :guilabel:`Attribute by Ramp`: See
-  :ref:`point_cloud_ramp`
-* |multibandColor| :guilabel:`RGB`: See :ref:`point_cloud_rgb`
-* |paletted| :guilabel:`Classification`: See :ref:`point_cloud_classification`
+* |singlebandPseudocolor| :guilabel:`Attribute by Ramp`: Interpolates a given attribute
+  over a color ramp and assigns to features their matching color.
+  See :ref:`point_cloud_ramp`.
+* |multibandColor| :guilabel:`RGB`: Use different attributes of the features
+  to set the Red, Green and Blue color components to assign to them.
+  See :ref:`point_cloud_rgb`.
+* |paletted| :guilabel:`Classification`: differentiates points by color
+  on the basis of an attribute. See :ref:`point_cloud_classification`.
 
 .. _figure_point_cloud_3d_view:
 
@@ -433,6 +445,9 @@ the drop down menu at the top of the tab:
    :align: center
 
    The point cloud 3D view tab with the classification renderer
+
+3D Point Symbol
+...............
 
 In the lower part of the |3d| :guilabel:`3D View` tab you can find the
 :guilabel:`Point Symbol` section. Here you can make general settings for the
@@ -449,8 +464,14 @@ options:
   :ref:`Maximum error <point_clouds_symbology_maxerror>`).
 * :guilabel:`Point budget`: To avoid long rendering, you can set the maximum
   number of points that will be rendered
-* :guilabel:`Point cloud size`: For your information only, the total number of
-  points is shown here
+* Check |checkbox| :guilabel:`Render as surface (Triangulate)` to render
+  the point cloud layer in the 3D view with a solid surface obtained by triangulation.
+  You can control dimensions of the computed triangles:
+
+  * |checkbox| :guilabel:`Skip triangles longer than` a threshold value:
+    sets in the horizontal plan, the maximum length of a side of the triangles to consider
+  * |checkbox| :guilabel:`Skip triangles taller than` a threshold value:
+    sets in the vertical plan, the maximum height of a side of the triangles to consider
 * |checkbox| :guilabel:`Show bounding boxes`: Especially useful for debugging,
   shows bounding boxes of nodes in hierarchy
 
