@@ -8147,6 +8147,14 @@ msgstr "参考： :ref:`expression_function_GeometryGroup_overlay_intersects`"
 msgid "intersects_bbox"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry's bounding box overlaps another geometry's bounding"
+" box. Returns TRUE if the geometries spatially intersect the bounding box "
+"defined and false if they do not."
+msgstr ""
+"ジオメトリのバウンディングボックスが他のジオメトリのバウンディングボックスに重なるかどうかをテストします。ジオメトリが定義されたバウンディングボックスと空間的に交差している場合はTRUE、交差していない場合はFALSEを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "intersects_bbox(geometry1, geometry2)"
 msgstr ""
@@ -8171,6 +8179,14 @@ msgstr ""
 msgid "is_closed"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid ""
+"Returns TRUE if a line string is closed (start and end points are "
+"coincident), or false if a line string is not closed. If the geometry is not"
+" a line string then the result will be NULL."
+msgstr ""
+"ラインストリングが閉じている（始点と終点が一致している）場合はTRUE、閉じていない場合はFALSEを返します。ジオメトリがラインストリングでない場合、結果はNULLとなります。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
 msgid "is_closed(geometry)"
 msgstr ""
@@ -8186,6 +8202,15 @@ msgstr "``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 msgid "is_empty"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
+msgid ""
+"Returns TRUE if a geometry is empty (without coordinates), false if the "
+"geometry is not empty and NULL if there is no geometry. See also "
+"is_empty_or_null."
+msgstr ""
+"ジオメトリが空（座標なし）の場合は TRUE、ジオメトリが空でない場合は false、ジオメトリが存在しない場合は NULL "
+"を返します。is_empty_or_null も参照してください。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
 msgid "is_empty(geometry)"
@@ -8215,6 +8240,15 @@ msgstr "参考: :ref:`expression_function_GeometryGroup_is_empty_or_null`"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "is_empty_or_null"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns TRUE if a geometry is NULL or empty (without coordinates) or false "
+"otherwise. This function is like the expression '$geometry IS NULL or "
+"is_empty($geometry)'"
+msgstr ""
+"ジオメトリがNULLか空（座標値を持たない）の場合はTRUE、それ以外ならfalseを返します。この関数は、式 '$geometry IS NULL "
+"or is_empty($geometry)' と同様です"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "is_empty_or_null(geometry)"
@@ -8254,6 +8288,10 @@ msgstr ""
 msgid "is_multipart"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Returns TRUE if the geometry is of Multi type."
+msgstr "マルチタイプのジオメトリならばTRUEを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "is_multipart(geometry)"
 msgstr ""
@@ -8271,6 +8309,12 @@ msgstr "``is_multipart(geom_from_wkt('POINT (0 0)'))`` → FALSE"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "is_valid"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"Returns TRUE if a geometry is valid; if it is well-formed in 2D according to"
+" the OGC rules."
+msgstr "ジオメトリが有効な場合、つまりOGCの規約に従って正しく作成された2Dジオメトリである場合にはTRUEを返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "is_valid(geometry)"
@@ -8590,6 +8634,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/functions_list.rst:497
 msgid "Further reading: :ref:`qgislinesubstring` algorithm"
 msgstr "参考： :ref:`qgislinesubstring` アルゴリズム"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Returns the m (measure) value of a point geometry."
+msgstr "ポイントジオメトリのm値 (measure) を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "m(geometry)"
@@ -9131,9 +9179,36 @@ msgstr ""
 msgid "make_valid"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:354
+msgid ""
+"Returns a valid geometry or an empty geometry if the geometry could not be "
+"made valid."
+msgstr "有効なジオメトリ、またはジオメトリを有効にできない場合は空のジオメトリを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:360
 msgid "make_valid(geometry, [method=structure], [keep_collapsed=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:365
+msgid ""
+"**method** - repair algorithm. May be either 'structure' or 'linework'. The "
+"'linework' option combines all rings into a set of noded lines and then "
+"extracts valid polygons from that linework. The 'structure' method first "
+"makes all rings valid and then merges shells and subtracts holes from shells"
+" to generate valid result. Assumes that holes and shells are correctly "
+"categorized."
+msgstr ""
+"**method** - "
+"修復アルゴリズム。「structure」または「linework」のいずれかを指定します。「linework」オプションは、すべてのリングをノード化されたラインのセットに結合し、そのラインワークから有効なポリゴンを抽出します。「structure」メソッドでは、まずすべてのリングを有効なものにし、次にシェルをマージし、シェルからホールを引いて有効な結果を生成します。ホールとシェルが正しく分類されていることを前提とします。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:366
+msgid ""
+"**keep_collapsed** - if set to true, then components that have collapsed "
+"into a lower dimensionality will be kept. For example, a ring collapsing to "
+"a line, or a line collapsing to a point."
+msgstr ""
+"**keep_collapsed** - "
+"trueに設定すると、低い次元に折りたたまれた要素が保持されます。例えば、リングが折りたたまれて線になったり、線が折りたたまれて点になったりするような場合です。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:368
 msgid ""
@@ -9249,9 +9324,21 @@ msgstr "参考： :ref:`qgisextractvertices` アルゴリズム"
 msgid "num_geometries"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the number of geometries in a geometry collection, or the number of "
+"parts in a multi-part geometry. The function returns NULL if the input "
+"geometry is not a collection."
+msgstr ""
+"ジオメトリコレクションに含まれるジオメトリの数、またはマルチパーツジオメトリに含まれるパーツの数を返します。入力ジオメトリがコレクションでない場合、この関数はNULLを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "num_geometries(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**geometry** - geometry collection or multi-part geometry"
+msgstr "**geometry** - ジオメトリコレクションまたはマルチパートジオメトリ"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid ""
@@ -9482,6 +9569,14 @@ msgstr "参考： :ref:`qgisorientedminimumboundingbox` アルゴリズム"
 msgid "overlaps"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry overlaps another. Returns TRUE if the geometries "
+"share space, are of the same dimension, but are not completely contained by "
+"each other."
+msgstr ""
+"あるジオメトリがもう一つのジオメトリにオーバーラップするかどうかをテストします。ジオメトリが空間を共有していて、同じ次元であり、かつ、互いが完全に含まれない場合にTRUEを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "overlaps(geometry1, geometry2)"
 msgstr ""
@@ -9567,6 +9662,21 @@ msgstr ""
 "**cache** - "
 "この引数をtrueに設定すると、ローカルな空間インデックスを作成します（特に遅いデータプロバイダで作業していない限りは、ほとんどの場合でこれは不要です）"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``overlay_contains('regions')`` → TRUE if the current feature spatially "
+"contains a region"
+msgstr "``overlay_contains('regions')`` → 現在の地物がregions の地物を空間的に含む場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
+msgid ""
+"``overlay_contains('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature spatially contains a region with a population greater than "
+"10000"
+msgstr ""
+"``overlay_contains('regions', filter:= population > 10000)`` → "
+"現在の地物がpopulation が10000より大きいregions の地物を空間的に含む場合にTRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
 msgid ""
 "``overlay_contains('regions', name)`` → an array of names, for the regions "
@@ -9632,6 +9742,21 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "overlay_crosses(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_crosses('regions')`` → TRUE if the current feature spatially "
+"crosses a region"
+msgstr "``overlay_crosses('regions')`` → 現在の地物がregionと空間的にクロスする場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_crosses('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature spatially crosses a region with a population greater than "
+"10000"
+msgstr ""
+"``overlay_crosses('regions', filter:= population > 10000)`` → "
+"現在の地物がpopulationが10000を超えるregionと空間的にクロスする場合にTRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
@@ -9699,6 +9824,22 @@ msgstr ""
 msgid ""
 "overlay_disjoint(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_disjoint('regions')`` → TRUE if the current feature is spatially "
+"disjoint from all the regions"
+msgstr ""
+"``overlay_disjoint('regions')`` → 現在の地物がregions のすべての地物と空間的に非接続である場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_disjoint('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature is spatially disjoint from all the regions with a population"
+" greater than 10000"
+msgstr ""
+"``overlay_disjoint('regions', filter:= population > 10000)`` → "
+"現在の地物がpopulation が10000より大きいregions の地物すべてと空間的に非接続である場合にTRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
@@ -9769,6 +9910,21 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "overlay_equals(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_equals('regions')`` → TRUE if the current feature is spatially "
+"equal to a region"
+msgstr "``overlay_equals('regions')`` → 現在の地物がregions と空間的に等しい場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature is spatially equal to a region with a population greater "
+"than 10000"
+msgstr ""
+"``overlay_equals('regions', filter:= population > 10000)`` → "
+"現在の地物がpopulation が10000より大きいregions の地物と空間的に同じ場合にTRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
@@ -9843,6 +9999,87 @@ msgstr ""
 "[min_overlap], [min_inscribed_circle_radius], [return_details], "
 "[sort_by_intersection_size])"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid "**min_overlap** - defines an optional exclusion filter:"
+msgstr "**min_overlap** - （オプション）除外フィルタを定義します:"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"for polygons, a minimum area in current feature squared units for the "
+"intersection. If the intersection results in multiple polygons the "
+"intersection will be returned if at least one of the polygons has an area "
+"greater or equal to the value"
+msgstr ""
+"ポリゴンの場合は、現在の地物の平方単位による交差の最小面積。交差が複数のポリゴンで構成されている場合、そのうち少なくとも1つのポリゴンの面積がこの値以上であれば、交差が返されます。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid ""
+"for lines, a minimum length in current feature units. If the intersection "
+"results in multiple lines the intersection will be returned if at least one "
+"of the lines has a length greater or equal to the value."
+msgstr ""
+"ラインの場合、現在の地物の単位による最小の長さ。交差が複数のラインになる場合、そのうち少なくとも1つのラインの長さがこの値以上であれば、交差が返されます。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"**min_inscribed_circle_radius** - defines an optional exclusion filter (for "
+"polygons only): minimum radius in current feature units for the maximum "
+"inscribed circle of the intersection. If the intersection results in "
+"multiple polygons the intersection will be returned if at least one of the "
+"polygons has a radius for the maximum inscribed circle greater or equal to "
+"the value."
+msgstr ""
+"**min_inscribed_circle_radius** - "
+"オプションの除外フィルター（ポリゴンのみ）を定義します：現在の地物の単位による交差の最大内接円の最小半径。交差が複数のポリゴンからなる場合、ポリゴンの少なくとも1つが最大内接円の半径がこの値以上であれば、交差が返されます。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
+msgid ""
+"Read more on the underlying GEOS predicate, as described in PostGIS "
+"`ST_MaximumInscribedCircle "
+"<https://postgis.net/docs/ST_MaximumInscribedCircle.html>`_ function."
+msgstr ""
+"この関数の基礎となるGEOSの述語については、PostGIS `ST_MaximumInscribedCircle "
+"<https://postgis.net/docs/ST_MaximumInscribedCircle.html>`_ 関数の説明を参照してください。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+msgid "This argument requires GEOS >= 3.9."
+msgstr "この引数はGEOS >= 3.9を必要とします。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
+msgid ""
+"**return_details** - Set this to true to return a list of maps containing "
+"(key names in quotes) the feature 'id', the expression 'result' and the "
+"'overlap' value. The 'radius' of the maximum inscribed circle is also "
+"returned when the target layer is a polygon. Only valid when used with the "
+"expression parameter"
+msgstr ""
+"**return_details** - "
+"trueに設定すると、地物'id'、式の'result'、'overlap'の値を含むマップのリストを返します（キー名は引用符で囲む）。また、対象レイヤーがポリゴンの場合、最大内接円の'radius'も返されます。expressionパラメータと併用した場合のみ有効"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"**sort_by_intersection_size** - only valid when used with an expression, set"
+" this to 'des' to return the results ordered by the overlap value in "
+"descending order or set this to 'asc' for ascending order."
+msgstr ""
+"**sort_by_intersection_size** - 式と一緒に使用した場合のみ有効です。この値を 'des' "
+"に設定すると、オーバーラップ値で降順に、 'asc' に設定すると昇順に結果を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
+msgid ""
+"``overlay_intersects('regions')`` → TRUE if the current feature spatially "
+"intersects a region"
+msgstr "``overlay_intersects('regions')`` → 現在の地物がregions の地物と空間的に交差する場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
+msgid ""
+"``overlay_intersects('regions', filter:= population > 10000)`` → TRUE if the"
+" current feature spatially intersects a region with a population greater "
+"than 10000"
+msgstr ""
+"``overlay_intersects('regions', filter:= population > 10000)`` → "
+"現在の地物がpopulation が10000より大きいregions の地物と空間的に交差する場合にTRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
 msgid ""
 "``overlay_intersects('regions', name)`` → an array of names, for the regions"
@@ -9876,6 +10113,45 @@ msgid ""
 msgstr ""
 "``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
 "limit:=2)`` → 現在の地物と交差するregions の地物のジオメトリ（WKT形式、上限2個）の配列"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
+msgid ""
+"``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE if the "
+"current feature spatially intersects a region and the intersection area (of "
+"at least one of the parts in case of multipolygons) is greater or equal to "
+"0.54"
+msgstr ""
+"``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → "
+"現在の地物がregionと空間的に交差し、その（マルチポリゴンの場合は少なくとも1つの部分の）交差する面積が0.54以上であればTRUE。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
+msgid ""
+"``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` "
+"→ TRUE if the current feature spatially intersects a region and the "
+"intersection area maximum inscribed circle's radius (of at least one of the "
+"parts in case of multipart) is greater or equal to 0.54"
+msgstr ""
+"``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` "
+"→ 現在の地物が空間的にregionと交差し、交差する区域の最大内接円の半径（マルチパートの場合、少なくとも１つのパートの半径）が 0.54 "
+"以上の場合に TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
+"return_details:=true)`` → an array of maps containing 'id', 'result', "
+"'overlap' and 'radius'"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
+"return_details:=true)`` → 'id', 'result', 'overlap' と 'radius' を含むマップの配列。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
+"sort_by_intersection_size:='des')`` → an array of geometries (in WKT) "
+"ordered by the overlap value in descending order"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), "
+"sort_by_intersection_size:='des')`` → オーバーラップ値の降順で並べられた（WKTによる）ジオメトリの配列"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:565
 msgid ""
@@ -9939,6 +10215,20 @@ msgid ""
 msgstr ""
 "**max_distance** - "
 "（オプション）マッチする地物の検索を制限するための距離。設定されていない場合、対象レイヤの全ての地物を検索に使用します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_nearest('airports')`` → TRUE if the \"airports\" layer has at "
+"least one feature"
+msgstr "``overlay_nearest('airports')`` → \"airports\" レイヤに少なくとも1つ地物がある場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid ""
+"``overlay_nearest('airports', max_distance:= 5000)`` → TRUE if there is an "
+"airport within a distance of 5000 map units from the current feature"
+msgstr ""
+"``overlay_nearest('airports', max_distance:= 5000)`` → 現在の地物から距離5000地図単位以内に "
+"airportsの地物がある場合にTRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid ""
@@ -10012,6 +10302,21 @@ msgstr ""
 msgid "overlay_touches(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_touches('regions')`` → TRUE if the current feature spatially "
+"touches a region"
+msgstr "``overlay_touches('regions')`` → 現在の地物がregions の地物と空間的に接触する場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_touches('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature spatially touches a region with a population greater than "
+"10000"
+msgstr ""
+"``overlay_touches('regions', filter:= population > 10000)`` → "
+"現在の地物がpopulation が10000より大きいregions の地物と空間的に接触する場合にTRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
 "``overlay_touches('regions', name)`` → an array of names, for the regions "
@@ -10077,6 +10382,21 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "overlay_within(layer, [expression], [filter], [limit], [cache=false])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``overlay_within('regions')`` → TRUE if the current feature is spatially "
+"within a region"
+msgstr "``overlay_within('regions')`` → 現在の地物がregions の地物によって空間的に含まれる場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_within('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature is spatially within a region with a population greater than "
+"10000"
+msgstr ""
+"``overlay_within('regions', filter:= population > 10000)`` → "
+"現在の地物がpopulation が10000より大きいregions の地物によって空間的に含まれる場合にTRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid ""
@@ -10240,6 +10560,14 @@ msgid ""
 "pole location"
 msgstr "**tolerance** - 真の極位置と関数戻り値のポイントの間に許容する最大距離"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
+msgstr ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:608
 msgid "Further reading: :ref:`qgispoleofinaccessibility` algorithm"
 msgstr "参考： :ref:`qgispoleofinaccessibility` アルゴリズム"
@@ -10337,6 +10665,14 @@ msgstr ""
 msgid "**pattern** - DE-9IM pattern to match"
 msgstr "**pattern** - マッチさせるDE-9IMパターン"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid ""
+"``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( "
+"'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → TRUE"
+msgstr ""
+"``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( "
+"'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 msgid "reverse"
 msgstr ""
@@ -10387,6 +10723,15 @@ msgid ""
 "geometry's bounding box is used."
 msgstr "**center** - 回転の中心。指定しない場合はバウンディングボックスの中心を使用します"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid ""
+"**per_part** - apply rotation per part. If true, then rotation will apply "
+"around the center of each part's bounding box when the input geometry is "
+"multipart and an explicit rotation center point is not specified."
+msgstr ""
+"**per_part** - "
+"パーツごとに回転を適用します。trueを指定すると、入力ジオメトリがマルチパートで、明示的な回転中心点が指定されていない場合、各パーツのバウンディングボックスの中心を中心に回転が適用されます。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
 msgid ""
 "``rotate($geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees "
@@ -10408,17 +10753,84 @@ msgstr "地物の回転"
 msgid "roundness"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid ""
+"Calculates how close a polygon shape is to a circle. The function Returns "
+"TRUE when the polygon shape is a perfect circle and 0 when it is completely "
+"flat."
+msgstr ""
+"ポリゴン形状が円にどれだけ近いかを計算します。この関数は、ポリゴン形状が完全な円である場合に TRUE を、完全に平坦である場合に 0 を返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
 msgid "roundness(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
+msgid "**geometry** - a polygon"
+msgstr "**geometry** - ポリゴン"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 1, 1 1, 1 0, 0 0))')), "
+"3)`` → 0.785"
+msgstr ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 1, 1 1, 1 0, 0 0))')), "
+"3)`` → 0.785"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
+msgid ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 0.1, 1 0.1, 1 0, 0 0))')),"
+" 3)`` → 0.260"
+msgstr ""
+"``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 0.1, 1 0.1, 1 0, 0 0))')),"
+" 3)`` → 0.260"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:626
+msgid "Further reading: :ref:`qgisroundness` algorithm"
+msgstr "Further reading: :ref:`qgisroundness` アルゴリズム"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "scale"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a scaled version of a geometry. Calculations are in the Spatial "
+"Reference System of this geometry."
+msgstr "拡大縮小したジオメトリを返します。計算はジオメトリの空間参照系で行われます。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "scale(geometry, x_scale, y_scale, [center])"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "**x_scale** - x-axis scaling factor"
+msgstr "**scale_x** - x軸方向スケーリング係数"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid "**y_scale** - y-axis scaling factor"
+msgstr "**scale_y** - y軸方向スケーリング係数"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid ""
+"**center** - scaling center point. If not specified, the center of the "
+"geometry's bounding box is used."
+msgstr "**center** - 拡大縮小の中心。指定しない場合はジオメトリのバウンディングボックスの中心を使用します"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``scale($geometry, 2, 0.5, make_point(4, 5))`` → geometry scaled twice "
+"horizontally and halved vertically, around the (4, 5) point"
+msgstr ""
+"``scale($geometry, 2, 0.5, make_point(4, 5))`` → (4, 5) "
+"の点を中心に、水平方向に2倍、垂直方向に半分にスケールされたジオメトリ"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``scale($geometry, 2, 0.5)`` → geometry twice horizontally and halved "
+"vertically, around the center of its bounding box"
+msgstr ""
+"``scale($geometry, 2, 0.5)`` → そのバウンディングボックスの中央を中心にジオメトリを水平方向に2倍、垂直方向に半分にする"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
 msgid "segments_to_lines"
@@ -10450,9 +10862,54 @@ msgstr "参考： :ref:`qgisexplodelines` アルゴリズム"
 msgid "shared_paths"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a collection containing paths shared by the two input geometries. "
+"Those going in the same direction are in the first element of the "
+"collection, those going in the opposite direction are in the second element."
+" The paths themselves are given in the direction of the first geometry."
+msgstr ""
+"2つの入力ジオメトリが共有するパスを含むコレクションを返します。同じ方向に進むものはコレクションの最初の要素に、反対方向に進むものは2番目の要素にあります。パスそのものは、最初のジオメトリの方向で与えられます。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "shared_paths(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**geometry1** - a LineString/MultiLineString geometry"
+msgstr "**geometry1** - ラインストリング/マルチラインストリングジオメトリ"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+msgid "**geometry2** - a LineString/MultiLineString geometry"
+msgstr "**geometry2** - ラインストリング/マルチラインストリングジオメトリ"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('MULTILINESTRING((26 125,26 200,126"
+" 200,126 125,26 125),(51 150,101 150,76 175,51 "
+"150)))'),geom_from_wkt('LINESTRING(151 100,126 156.25,126 125,90 161, 76 "
+"175)')))`` → 'GeometryCollection (MultiLineString ((126 156.25, 126 "
+"125),(101 150, 90 161),(90 161, 76 175)),MultiLineString EMPTY)'"
+msgstr ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('MULTILINESTRING((26 125,26 200,126"
+" 200,126 125,26 125),(51 150,101 150,76 175,51 "
+"150)))'),geom_from_wkt('LINESTRING(151 100,126 156.25,126 125,90 161, 76 "
+"175)')))`` → 'GeometryCollection (MultiLineString ((126 156.25, 126 "
+"125),(101 150, 90 161),(90 161, 76 175)),MultiLineString EMPTY)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('LINESTRING(76 175,90 161,126 "
+"125,126 156.25,151 100)'),geom_from_wkt('MULTILINESTRING((26 125,26 200,126 "
+"200,126 125,26 125),(51 150,101 150,76 175,51 150))')))`` → "
+"'GeometryCollection (MultiLineString EMPTY,MultiLineString ((76 175, 90 "
+"161),(90 161, 101 150),(126 125, 126 156.25)))'"
+msgstr ""
+"``geom_to_wkt(shared_paths(geom_from_wkt('LINESTRING(76 175,90 161,126 "
+"125,126 156.25,151 100)'),geom_from_wkt('MULTILINESTRING((26 125,26 200,126 "
+"200,126 125,26 125),(51 150,101 150,76 175,51 150))')))`` → "
+"'GeometryCollection (MultiLineString EMPTY,MultiLineString ((76 175, 90 "
+"161),(90 161, 101 150),(126 125, 126 156.25)))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
 msgid "shortest_line"
@@ -10716,13 +11173,94 @@ msgstr "参考： :ref:`qgissmoothgeometry` アルゴリズム"
 msgid "square_wave"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Constructs square/rectangular waves along the boundary of a geometry."
+msgstr "ジオメトリの境界に沿って方形波/矩形波を構築します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "square_wave(geometry, wavelength, amplitude, [strict=False])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "**wavelength** - wavelength of square waveform"
+msgstr "**wavelength** - 方形波の波長"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid "**amplitude** - amplitude of square waveform"
+msgstr "**amplitude** - 矩形波の振幅"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid ""
+"**strict** - By default the wavelength argument is treated as a \"maximum "
+"wavelength\", where the actual wavelength will be dynamically adjusted so "
+"that an exact number of square waves are created along the boundaries of the"
+" geometry. If the strict argument is set to true then the wavelength will be"
+" used exactly and an incomplete pattern may be used for the final waveform."
+msgstr ""
+"**strict** - "
+"デフォルトでは、波長の引数は「最大波長」として扱われ、実際の波長はジオメトリの境界に沿って正確な数の矩形波が作成されるように動的に調整されます。strict引数をtrueに設定すると、波長が正確に使用され、最終的な波形に不完全なパターンが使用される可能性があります。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Square waves"
+" with wavelength 3 and amplitude 1 along the linestring"
+msgstr ""
+"``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → "
+"ラインストリングに沿った波長3、振幅1の方形波"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "square_wave_randomized"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"Constructs randomized square/rectangular waves along the boundary of a "
+"geometry."
+msgstr "ジオメトリの境界に沿ってランダムな方形波／矩形波を構築します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"square_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+msgstr ""
+"square_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:117
+msgid "**min_wavelength** - minimum wavelength of waves"
+msgstr "**min_wavelength** - 最小の波長"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:118
+msgid "**max_wavelength** - maximum wavelength of waves"
+msgstr "**max_wavelength** - 最大の波長"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:119
+msgid "**min_amplitude** - minimum amplitude of waves"
+msgstr "**min_amplitude** - 最小の振幅"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:120
+msgid "**max_amplitude** - maximum amplitude of waves"
+msgstr "**max_amplitude** - 最大の振幅"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:121
+msgid ""
+"**seed** - specifies a random seed for generating waves. If the seed is 0, "
+"then a completely random set of waves will be generated."
+msgstr "**seed**は、波を生成するための乱数の根を指定します。seedを0にすると、完全にランダムな波のセットが生成されます。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``square_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, "
+"0.2)`` → Randomly sized square waves with wavelengths between 2 and 3 and "
+"amplitudes between 0.1 and 0.2 along the linestring"
+msgstr ""
+"``square_wave_randomized(geom_from_wkt('LineString(0 0 0, 10 0)'), 2, 3, "
+"0.1, 0.2)`` → ラインストリングに沿った、波長が2～3、振幅が0.1～0.2のランダムなサイズの方形波"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
 msgid "start_point"
@@ -10854,9 +11392,32 @@ msgstr "参考： :ref:`qgistaperedbuffer` アルゴリズム"
 msgid "touches"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry touches another. Returns TRUE if the geometries "
+"have at least one point in common, but their interiors do not intersect."
+msgstr ""
+"あるジオメトリがもう一つのジオメトリに接するかどうかをテストします。ジオメトリが共通の点を持ち、かつ内部が交差しない場合、TRUEを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "touches(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` "
+"→ FALSE"
+msgstr ""
+"``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` "
+"→ FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:686
 msgid ""
@@ -10936,13 +11497,58 @@ msgstr "参考： :ref:`qgistranslategeometry` アルゴリズム"
 msgid "triangular_wave"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Constructs triangular waves along the boundary of a geometry."
+msgstr "ジオメトリの境界に沿って三角波を構築します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "triangular_wave(geometry, wavelength, amplitude, [strict=False])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "**wavelength** - wavelength of triangular waveform"
+msgstr "**wavelength** - 三角波の波長"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid "**amplitude** - amplitude of triangular waveform"
+msgstr "**amplitude** - 三角波の振幅"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid ""
+"**strict** - By default the wavelength argument is treated as a \"maximum "
+"wavelength\", where the actual wavelength will be dynamically adjusted so "
+"that an exact number of triangular waves are created along the boundaries of"
+" the geometry. If the strict argument is set to true then the wavelength "
+"will be used exactly and an incomplete pattern may be used for the final "
+"waveform."
+msgstr ""
+"**strict** - "
+"デフォルトでは、波長の引数は「最大波長」として扱われ、実際の波長はジオメトリの境界に沿って正確な数の三角波が作成されるように動的に調整されます。strict引数をtrueに設定すると、波長が正確に使用され、最終的な波形に不完全なパターンが使用される可能性があります。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → "
+"Triangular waves with wavelength 3 and amplitude 1 along the linestring"
+msgstr ""
+"``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → "
+"ラインストリングに沿った波長3、振幅1の三角波"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "triangular_wave_randomized"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"Constructs randomized triangular waves along the boundary of a geometry."
+msgstr "ジオメトリの境界に沿ってランダムな三角波を構築します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"triangular_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+msgstr ""
+"triangular_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
 msgid "union"
@@ -10969,13 +11575,58 @@ msgstr ""
 msgid "wave"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:81
+msgid "Constructs rounded (sine-like) waves along the boundary of a geometry."
+msgstr "ジオメトリの境界に沿って丸みを帯びた（正弦のような）波を構築します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:87
 msgid "wave(geometry, wavelength, amplitude, [strict=False])"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:92
+msgid "**wavelength** - wavelength of sine-like waveform"
+msgstr "**wavelength** - 正弦のような波の波長"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:93
+msgid "**amplitude** - amplitude of sine-like waveform"
+msgstr "**amplitude** - 正弦のような波の振幅"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:94
+msgid ""
+"**strict** - By default the wavelength argument is treated as a \"maximum "
+"wavelength\", where the actual wavelength will be dynamically adjusted so "
+"that an exact number of waves are created along the boundaries of the "
+"geometry. If the strict argument is set to true then the wavelength will be "
+"used exactly and an incomplete pattern may be used for the final waveform."
+msgstr ""
+"**strict** - "
+"デフォルトでは、波長の引数は「最大波長」として扱われ、実際の波長はジオメトリの境界に沿って正確な数の波が作成されるように動的に調整されます。strict引数をtrueに設定すると、波長が正確に使用され、最終的な波形に不完全なパターンが使用される可能性があります。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:96
+msgid ""
+"``wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Sine-like waves "
+"with wavelength 3 and amplitude 1 along the linestring"
+msgstr ""
+"``wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → "
+"ラインストリングに沿った、波長3、振幅1の正弦のような波"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:104
 msgid "wave_randomized"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:106
+msgid ""
+"Constructs randomized curved (sine-like) waves along the boundary of a "
+"geometry."
+msgstr "ジオメトリの境界に沿ってランダムな曲線（正弦のような）波を構築します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:112
+msgid ""
+"wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, "
+"max_amplitude, [seed=0])"
+msgstr ""
+"wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, "
+"max_amplitude, [seed=0])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:131
 msgid "wedge_buffer"
@@ -11035,6 +11686,22 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "within(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, "
+"0 1, 1 1, 1 0, 0 0))' ) )`` → TRUE"
+msgstr ""
+"``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, "
+"0 1, 1 1, 1 0, 0 0))' ) )`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 "
+"1, 1 1, 1 0, 0 0 ))' ) )`` → FALSE"
+msgstr ""
+"``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 "
+"1, 1 1, 1 0, 0 0 ))' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:710
 msgid ""
@@ -11786,6 +12453,10 @@ msgstr "``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }"
 msgid "map_exist"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:158
+msgid "Returns TRUE if the given key exists in the map."
+msgstr "指定されたキーがマップ型オブジェクトに存在する場合、TRUEを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:164
 msgid "map_exist(map, key)"
 msgstr ""
@@ -11794,6 +12465,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:188
 msgid "**key** - the key to lookup"
 msgstr "**key** - 調べたいキー"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:169
+msgid "``map_exist(map('1','one','2','two'),'3')`` → FALSE"
+msgstr "``map_exist(map('1','one','2','two'),'3')`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:177
 msgid "map_get"
@@ -11869,6 +12544,18 @@ msgstr ""
 msgid "map_prefix_keys(map, prefix)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:40
+msgid "**prefix** - a string"
+msgstr "**prefix** - 文字列"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:42
+msgid ""
+"``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
+"'one', 'prefix-2': 'two' }"
+msgstr ""
+"``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
+"'one', 'prefix-2': 'two' }"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:50
 msgid "map_to_hstore"
 msgstr ""
@@ -11920,6 +12607,19 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:101
 msgid "url_encode(map)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:103
+msgid "**map** - a map."
+msgstr "**map** - マップ。"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:105
+#, python-format
+msgid ""
+"``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → "
+"'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'"
+msgstr ""
+"``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → "
+"'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:806
 msgid "Mathematical Functions"
@@ -12900,6 +13600,18 @@ msgstr "2つの値を比較し、左の値が右の値より小さい場合、1 
 msgid "a < b"
 msgstr "a < b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
+msgid "``5 < 4`` → FALSE"
+msgstr "``5 < 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
+msgid "``5 < 5`` → FALSE"
+msgstr "``5 < 5`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:66
+msgid "``4 < 5`` → TRUE"
+msgstr "``4 < 5`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:74
 msgid "<="
 msgstr ""
@@ -12914,6 +13626,18 @@ msgstr "2つの値を比較し、左の値が右の値より小さいか等し�
 msgid "a <= b"
 msgstr "a <= b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:87
+msgid "``5 <= 4`` → FALSE"
+msgstr "``5 <= 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:88
+msgid "``5 <= 5`` → TRUE"
+msgstr "``5 <= 5`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:89
+msgid "``4 <= 5`` → TRUE"
+msgstr "``4 <= 5`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "<>"
 msgstr ""
@@ -12925,6 +13649,14 @@ msgstr "2つの値を比較し、両者が等しくない場合、1 と評価さ
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:105
 msgid "a <> b"
 msgstr "a <> b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:110
+msgid "``5 <> 4`` → TRUE"
+msgstr "``5 <> 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:111
+msgid "``4 <> 4`` → FALSE"
+msgstr "``4 <> 4`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
 msgid "``5 <> NULL`` → NULL"
@@ -12945,6 +13677,14 @@ msgstr "2つの値を比較し、両者が等しい場合、1 と評価されま
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:129
 msgid "a = b"
 msgstr "a = b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:134
+msgid "``5 = 4`` → FALSE"
+msgstr "``5 = 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:135
+msgid "``4 = 4`` → TRUE"
+msgstr "``4 = 4`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:136
 msgid "``5 = NULL`` → NULL"
@@ -12968,6 +13708,18 @@ msgstr "2つの値を比較し、左の値が右の値より大きい場合、1 
 msgid "a > b"
 msgstr "a > b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:158
+msgid "``5 > 4`` → TRUE"
+msgstr "``5 > 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:159
+msgid "``5 > 5`` → FALSE"
+msgstr "``5 > 5`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:160
+msgid "``4 > 5`` → FALSE"
+msgstr "``4 > 5`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:168
 msgid ">="
 msgstr ""
@@ -12981,6 +13733,18 @@ msgstr "2つの値を比較し、左の値が右の値より大きいか等し�
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
 msgid "a >= b"
 msgstr "a >= b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:181
+msgid "``5 >= 4`` → TRUE"
+msgstr "``5 >= 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:182
+msgid "``5 >= 5`` → TRUE"
+msgstr "``5 >= 5`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:183
+msgid "``4 >= 5`` → FALSE"
+msgstr "``4 >= 5`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:191
 msgid "AND"
@@ -13001,9 +13765,45 @@ msgstr "**a** - 条件式"
 msgid "**b** - condition"
 msgstr "**b** - 条件式"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:204
+msgid "``TRUE AND TRUE`` → TRUE"
+msgstr "``TRUE AND TRUE`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:205
+msgid "``TRUE AND FALSE`` → FALSE"
+msgstr "``TRUE AND FALSE`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:206
+msgid "``4 = 2+2 AND 1 = 1`` → TRUE"
+msgstr "``4 = 2+2 AND 1 = 1`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:207
+msgid "``4 = 2+2 AND 1 = 2`` → FALSE"
+msgstr "``4 = 2+2 AND 1 = 2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:215
 msgid "BETWEEN"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:228
+msgid "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
+msgstr "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:229
+msgid "``2 BETWEEN 1 AND 3`` → TRUE"
+msgstr "``2 BETWEEN 1 AND 3`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:230
+msgid "``2 BETWEEN 2 AND 3`` → TRUE"
+msgstr "``2 BETWEEN 2 AND 3`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:231
+msgid "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
+msgstr "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:232
+msgid "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
+msgstr "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "ILIKE"
@@ -13025,6 +13825,66 @@ msgstr ""
 "**pattern** - 検索するパターン。 '%' をワイルドカードとして、 '_' を任意の1文字として、 '\\\\\\\\' "
 "をこれらの特殊文字のエスケープとして利用できます。"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``'A' ILIKE 'A'`` → TRUE"
+msgstr "``'A' ILIKE 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``'A' ILIKE 'a'`` → TRUE"
+msgstr "``'A' ILIKE 'a'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``'A' ILIKE 'B'`` → FALSE"
+msgstr "``'A' ILIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+msgid "``'ABC' ILIKE 'b'`` → FALSE"
+msgstr "``'ABC' ILIKE 'b'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:23
+msgid "``'ABC' ILIKE 'B'`` → FALSE"
+msgstr "``'ABC' ILIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:24
+msgid "``'ABC' ILIKE '_b_'`` → TRUE"
+msgstr "``'ABC' ILIKE '_b_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
+msgid "``'ABC' ILIKE '_B_'`` → TRUE"
+msgstr "``'ABC' ILIKE '_B_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``'ABCD' ILIKE '_b_'`` → FALSE"
+msgstr "``'ABCD' ILIKE '_b_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:27
+msgid "``'ABCD' ILIKE '_B_'`` → FALSE"
+msgstr "``'ABCD' ILIKE '_B_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
+msgid "``'ABCD' ILIKE '_b%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '_b%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
+msgid "``'ABCD' ILIKE '_B%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '_B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:30
+msgid "``'ABCD' ILIKE '%b%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '%b%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:31
+msgid "``'ABCD' ILIKE '%B%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '%B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:32
+msgid "``'ABCD%' ILIKE 'abcd\\\\%'`` → TRUE"
+msgstr "``'ABCD%' ILIKE 'abcd\\\\%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:33
+msgid "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
+msgstr "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
 msgid "IN"
 msgstr ""
@@ -13036,6 +13896,14 @@ msgstr "a IN b"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:52
 msgid "**b** - list of values"
 msgstr "**b** - 値のリスト"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:54
+msgid "``'A' IN ('A','B')`` → TRUE"
+msgstr "``'A' IN ('A','B')`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:55
+msgid "``'A' IN ('C','B')`` → FALSE"
+msgstr "``'A' IN ('C','B')`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:63
 msgid "IS"
@@ -13053,6 +13921,26 @@ msgstr "**a** - 任意の値"
 msgid "**b** - any value"
 msgstr "**b** - 任意の値"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:76
+msgid "``'A' IS 'A'`` → TRUE"
+msgstr "``'A' IS 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:77
+msgid "``'A' IS 'a'`` → FALSE"
+msgstr "``'A' IS 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:78
+msgid "``4 IS 4`` → TRUE"
+msgstr "``4 IS 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:79
+msgid "``4 IS 2+2`` → TRUE"
+msgstr "``4 IS 2+2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:80
+msgid "``4 IS 2`` → FALSE"
+msgstr "``4 IS 2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:81
 msgid "``$geometry IS NULL`` → 0, if your geometry is not NULL"
 msgstr "``$geometry IS NULL`` → ジオメトリが NULL でない場合は 0"
@@ -13064,6 +13952,18 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "a IS NOT b"
 msgstr "a IS NOT b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:102
+msgid "``'a' IS NOT 'b'`` → TRUE"
+msgstr "``'a' IS NOT 'b'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:103
+msgid "``'a' IS NOT 'a'`` → FALSE"
+msgstr "``'a' IS NOT 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:104
+msgid "``4 IS NOT 2+2`` → FALSE"
+msgstr "``4 IS NOT 2+2`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
 msgid "LIKE"
@@ -13085,6 +13985,46 @@ msgstr ""
 "**pattern** - 値と比較するパターン。 '%' をワイルドカードとして、 '_' を任意の1文字として、 '\\\\\\\\' "
 "をこれらの特殊文字のエスケープとして利用できます。"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:125
+msgid "``'A' LIKE 'A'`` → TRUE"
+msgstr "``'A' LIKE 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:126
+msgid "``'A' LIKE 'a'`` → FALSE"
+msgstr "``'A' LIKE 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:127
+msgid "``'A' LIKE 'B'`` → FALSE"
+msgstr "``'A' LIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:128
+msgid "``'ABC' LIKE 'B'`` → FALSE"
+msgstr "``'ABC' LIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:129
+msgid "``'ABC' LIKE '_B_'`` → TRUE"
+msgstr "``'ABC' LIKE '_B_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:130
+msgid "``'ABCD' LIKE '_B_'`` → FALSE"
+msgstr "``'ABCD' LIKE '_B_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:131
+msgid "``'ABCD' LIKE '_B%'`` → TRUE"
+msgstr "``'ABCD' LIKE '_B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:132
+msgid "``'ABCD' LIKE '%B%'`` → TRUE"
+msgstr "``'ABCD' LIKE '%B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:133
+msgid "``'1%' LIKE '1\\\\%'`` → TRUE"
+msgstr "``'1%' LIKE '1\\\\%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:134
+msgid "``'1_' LIKE '1\\\\%'`` → FALSE"
+msgstr "``'1_' LIKE '1\\\\%'`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:142
 msgid "NOT"
 msgstr ""
@@ -13097,9 +14037,37 @@ msgstr "条件式の否定を返します。"
 msgid "NOT a"
 msgstr "NOT a"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:154
+msgid "``NOT 1`` → FALSE"
+msgstr "``NOT 1`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:155
+msgid "``NOT 0`` → TRUE"
+msgstr "``NOT 0`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:163
 msgid "NOT BETWEEN"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
+msgid "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
+msgstr "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:177
+msgid "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
+msgstr "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:178
+msgid "``2 NOT BETWEEN 2 AND 3`` → FALSE"
+msgstr "``2 NOT BETWEEN 2 AND 3`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:179
+msgid "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
+msgstr "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:180
+msgid "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
+msgstr "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "OR"
@@ -13108,6 +14076,18 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "a OR b"
 msgstr "a OR b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``4 = 2+2 OR 1 = 1`` → TRUE"
+msgstr "``4 = 2+2 OR 1 = 1`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``4 = 2+2 OR 1 = 2`` → TRUE"
+msgstr "``4 = 2+2 OR 1 = 2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``4 = 2   OR 1 = 2`` → FALSE"
+msgstr "``4 = 2   OR 1 = 2`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
 msgid "[]"
@@ -13239,6 +14219,22 @@ msgstr "**string** - 文字列"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:17
 msgid "**regex** - A regular expression. Slashes must be escaped, eg \\\\\\\\d."
 msgstr "**regex** - 正規表現。バックスラッシュにはエスケープが必要です。例： \\\\\\\\d."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``'hello' ~ 'll'`` → TRUE"
+msgstr "``'hello' ~ 'll'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``'hello' ~ '^ll'`` → FALSE"
+msgstr "``'hello' ~ '^ll'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``'hello' ~ 'llo$'`` → TRUE"
+msgstr "``'hello' ~ 'llo$'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+msgid "``'abc123' ~ '\\\\d+'`` → TRUE"
+msgstr "``'abc123' ~ '\\\\d+'`` → TRUE"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:886
 msgid "Further reading: :ref:`expression_function_String_regexp_match`"
@@ -13668,6 +14664,12 @@ msgstr "参考： :ref:`expression_function_Record_and_Attributes_$id`"
 msgid "$id"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid ""
+"Returns the feature id of the current row. **WARNING: This function is "
+"deprecated. It is recommended to use the replacement @id variable instead.**"
+msgstr "現在の行の地物IDを返します。**警告: この関数は非推奨です。代わりに代替の@id変数を使用することをお勧めします。**"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
 msgid "``$id`` → 42"
 msgstr "``$id`` → 42"
@@ -13676,9 +14678,33 @@ msgstr "``$id`` → 42"
 msgid "is_selected"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:26
+msgid ""
+"Returns TRUE if a feature is selected. Can be used with zero, one or two "
+"arguments, see below for details."
+msgstr "地物が選択されている場合にTRUEを返します。0個、1個、または2個の引数をとることができ、詳しくは以下の通りです。"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:30
+msgid ""
+"If called with no parameters, the function will return TRUE if the current "
+"feature in the current layer is selected."
+msgstr "引数なしで関数を呼んだ場合、関数は現在のレイヤの現在の地物が選択されている場合にTRUEを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:36
 msgid "is_selected()"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:38
+msgid ""
+"``is_selected()`` → TRUE if the current feature in the current layer is "
+"selected."
+msgstr "``is_selected()`` → 現在のレイヤの現在の地物が選択されている場合、TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:43
+msgid ""
+"If called with a 'feature' parameter only, the function returns TRUE if the "
+"specified feature from the current layer is selected."
+msgstr "'feature' だけを引数として関数を呼んだ場合、関数は現在のレイヤの指定された地物が選択されている場合にTRUEを返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:49
 msgid "is_selected(feature)"
@@ -13688,6 +14714,21 @@ msgstr "is_selected(feature)"
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:69
 msgid "**feature** - The feature which should be checked for selection."
 msgstr "**feature** - 選択されているかどうかを確認したい地物"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:53
+msgid ""
+"``is_selected(@atlas_feature)`` → TRUE if the current atlas feature is "
+"selected."
+msgstr "``is_selected(@atlas_feature)`` → 現在の地図帳地物が選択されている場合、TRUE。"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:54
+msgid ""
+"``is_selected(get_feature('streets', 'name', 'Main St.'))`` → TRUE if the "
+"unique named \"Main St.\" feature on the active \"streets\" layer is "
+"selected."
+msgstr ""
+"``is_selected(get_feature('streets', 'name', 'Main St.')))`` →アクティブな "
+"\"streets\" レイヤで地物に一意に名前が付けられ、その中で \"Main St.\" 地物が選択されている場合に TRUE。"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:58
 msgid "**Two parameters**"
@@ -13798,13 +14839,55 @@ msgstr "``num_selected('streets')`` → 'streets' レイヤ上で選択されて
 msgid "represent_attributes"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:162
+msgid ""
+"Returns a map with the attribute names as keys and the configured "
+"representation values as values. The representation value for the attributes"
+" depends on the configured widget type for each attribute.  Can be used with"
+" zero, one or more arguments, see below for details."
+msgstr ""
+"属性名をキーとし、設定された表現値を値とするマップを返します。属性の表現値は、各属性に設定されているウィジェットタイプに依存します。 "
+"0個、1個、またはそれ以上の引数とともに使用することができます。詳細は以下をご覧ください。"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:166
+msgid ""
+"If called with no parameters, the function will return the representation of"
+" the attributes of the current feature in the current layer."
+msgstr "パラメータなしで呼び出された場合、この関数は、現在のレイヤの地物の属性の表現を返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:172
 msgid "represent_attributes()"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:174
+msgid ""
+"``represent_attributes()`` → The representation of the attributes for the "
+"current feature."
+msgstr "``represent_attributes()`` → 現在の地物の属性の表現。"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:179
+msgid ""
+"If called with a 'feature' parameter only, the function will return the "
+"representation of the attributes of the specified feature from the current "
+"layer."
+msgstr "'feature' パラメータだけで呼び出した場合、関数は現在のレイヤから指定された地物の属性の表現を返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:185
 msgid "represent_attributes(feature)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:189
+msgid ""
+"``represent_attributes(@atlas_feature)`` → The representation of the "
+"attributes for the specified feature from the current layer."
+msgstr "``represent_attributes(@atlas_feature)`` → 現在のレイヤから指定された地物の属性の表現。"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:194
+msgid ""
+"If called with a 'layer' and a 'feature' parameter, the function will return"
+" the representation of the attributes of the specified feature from the "
+"specified layer."
+msgstr "'layer' と 'feature' パラメータで呼び出した場合、関数は指定されたレイヤから指定された地物の属性の表現を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:200
 msgid "represent_attributes(layer, feature)"
