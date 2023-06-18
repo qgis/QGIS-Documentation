@@ -284,7 +284,6 @@ Feature Service (WFS). That's the topic of the next lesson.
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/common/moderate.png
 .. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
