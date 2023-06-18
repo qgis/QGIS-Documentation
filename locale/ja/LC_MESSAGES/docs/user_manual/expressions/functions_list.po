@@ -11550,6 +11550,15 @@ msgstr ""
 "triangular_wave_randomized(geometry, min_wavelength, max_wavelength, "
 "min_amplitude, max_amplitude, [seed=0])"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``triangular_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, "
+"0.1, 0.2)`` → Randomly sized triangular waves with wavelengths between 2 and"
+" 3 and amplitudes between 0.1 and 0.2 along the linestring"
+msgstr ""
+"``triangular_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, "
+"0.1, 0.2)`` → ラインストリングに沿った、波長が2～3、振幅が0.1～0.2のランダムなサイズの三角波"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
 msgid "union"
 msgstr ""
@@ -11628,6 +11637,15 @@ msgstr ""
 "wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, "
 "max_amplitude, [seed=0])"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:123
+msgid ""
+"``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` "
+"→ Randomly sized curved waves with wavelengths between 2 and 3 and "
+"amplitudes between 0.1 and 0.2 along the linestring"
+msgstr ""
+"``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` "
+"→ ラインストリングに沿った、波長が2～3、振幅が0.1～0.2のランダムなサイズの丸まった波"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:131
 msgid "wedge_buffer"
 msgstr ""
@@ -11682,6 +11700,13 @@ msgstr "参考： :ref:`qgiswedgebuffers` アルゴリズム"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "within"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry is within another. Returns TRUE if the geometry1 is"
+" completely within geometry2."
+msgstr ""
+"ジオメトリが別のジオメトリの内部にあるかどうかをテストします。geometry1が完全にgeoemtry2の内部にある場合、TRUEを返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "within(geometry1, geometry2)"
@@ -12102,6 +12127,26 @@ msgstr "この関数は、レイヤの :ref:`「アクセス」メタデータ�
 #: ../../docs/user_manual/expressions/functions_list.rst:745
 msgid "Map Layers"
 msgstr "地図レイヤ"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:747
+msgid ""
+"This group contains a list of the available layers in the current project "
+"and, for each layer, their fields (stored in the dataset, virtual or "
+"auxiliary ones as well as from joins). The fields can be interacted the same"
+" way as mentioned in :ref:`fields_values`, except that a double-click will "
+"add the name as a string (single quoted) to the expression instead of as a "
+"field reference given that they do not belong to the active layer. This "
+"offers a convenient way to write expressions referring to different layers, "
+"such as when performing :ref:`aggregates <aggregates_function>`, "
+":ref:`attribute <record_attributes>` or :ref:`spatial <geometry_functions>` "
+"queries."
+msgstr ""
+"このグループには、現在のプロジェクトで利用可能なレイヤーのリストと、各レイヤーのフィールド（データセットに格納されているもの、仮想または補助的なもの、および結合によるもの）が含まれます。フィールドは"
+" :ref:`fields_values` "
+"で述べたのと同じように操作することができます。ただし、ダブルクリックすると、フィールドの参照としてではなく、文字列（シングルクォート）として式に追加されます（アクティブレイヤに属さないため）。これは、"
+" :ref:`aggregates <aggregates_function>`、 :ref:`attribute "
+"<record_attributes>`、 :ref:`spatial <geometry_functions>` "
+"のクエリを実行するときなど、異なるレイヤーを参照する式を書くのに便利な方法となります。"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:757
 msgid "It also provides some convenient functions to manipulate layers."
@@ -12540,6 +12585,10 @@ msgstr ""
 msgid "map_prefix_keys"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:31
+msgid "Returns a map with all keys prefixed by a given string."
+msgstr "すべてのキーが与えられた文字列でプリフィックスされたマップを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:37
 msgid "map_prefix_keys(map, prefix)"
 msgstr ""
@@ -12603,6 +12652,16 @@ msgstr "``to_json(array(1,2,3))`` → [1,2,3]"
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:91
 msgid "url_encode"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:93
+msgid ""
+"Returns an URL encoded string from a map. Transforms all characters in their"
+" properly-encoded form producing a fully-compliant query string."
+msgstr "マップから URL エンコードされた文字列を返します。すべての文字を適切にエンコードした形で変換し、完全準拠のクエリ文字列を生成します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:95
+msgid "Note that the plus sign '+' is not converted."
+msgstr "プラス記号 '+' は変換されないことに注意してください。"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:101
 msgid "url_encode(map)"
@@ -13429,6 +13488,10 @@ msgstr ""
 msgid "%"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
+msgid "Remainder of division. Takes the sign of the dividend."
+msgstr "除算の余り。被除数の符号をとる。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
 msgid "a % b"
 msgstr "a % b"
@@ -13750,6 +13813,10 @@ msgstr "``4 >= 5`` → FALSE"
 msgid "AND"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:193
+msgid "Returns TRUE when conditions a and b are true."
+msgstr "条件式 a と条件式 b がともに true である場合に TRUE を返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:199
 msgid "a AND b"
 msgstr "a AND b"
@@ -13785,6 +13852,29 @@ msgstr "``4 = 2+2 AND 1 = 2`` → FALSE"
 msgid "BETWEEN"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:217
+msgid ""
+"Returns TRUE if value is within the specified range. The range is considered"
+" inclusive of the bounds. To test for exclusion NOT BETWEEN can be used."
+msgstr ""
+"値が指定された範囲内にあるとき、TRUE を返します。範囲は、境界を含むとみなされます。除外を調べるには、NOT BETWEENを使うことができます。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:223
+msgid "value BETWEEN lower_bound AND higher_bound"
+msgstr "value BETWEEN lower_bound AND higher_bound"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:173
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:225
+msgid ""
+"**value** - the value to compare with a range. It can be a string, a number "
+"or a date."
+msgstr "**value** - 範囲と比較する値。文字列、数字または日付です。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:174
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:226
+msgid "**lower_bound AND higher_bound** - range bounds"
+msgstr "**lower_bound AND higher_bound** - 範囲"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:228
 msgid "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
 msgstr "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
@@ -13805,9 +13895,30 @@ msgstr "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
 msgid "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
 msgstr "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:234
+msgid ""
+"*value BETWEEN lower_bound AND higher_bound* is the same as \"*value >= "
+"lower_bound AND value <= higher_bound*\"."
+msgstr ""
+"*value BETWEEN lower_bound AND higher_bound* は \"*value >= lower_bound AND "
+"value <= higher_bound*\" と同じです。"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:860
+msgid "Further reading: :ref:`expression_function_Operators_NOT_BETWEEN`"
+msgstr "参考： :ref:`expression_function_Operators_NOT_BETWEEN`"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "ILIKE"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:8
+msgid ""
+"Returns TRUE if the first parameter matches case-insensitive the supplied "
+"pattern. LIKE can be used instead of ILIKE to make the match case-sensitive."
+" Works with numbers also."
+msgstr ""
+"最初の引数が与えられたパターンと大文字・小文字を区別せずに一致する場合に TRUE を返します。マッチングで大文字・小文字を区別する場合には、ILIKE"
+" の代わりに LIKE を使用してください。数値にも対応しています。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "string/number ILIKE pattern"
@@ -13889,6 +14000,10 @@ msgstr "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
 msgid "IN"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
+msgid "Returns TRUE if value is found within a list of values."
+msgstr "リストの中に値が見つかった場合に TRUE を返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:49
 msgid "a IN b"
 msgstr "a IN b"
@@ -13908,6 +14023,10 @@ msgstr "``'A' IN ('C','B')`` → FALSE"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:63
 msgid "IS"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
+msgid "Returns TRUE if a is the same as b."
+msgstr "a と b が同じ場合に TRUE を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:71
 msgid "a IS b"
@@ -13949,6 +14068,10 @@ msgstr "``$geometry IS NULL`` → ジオメトリが NULL でない場合は 0"
 msgid "IS NOT"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:91
+msgid "Returns TRUE if a is not the same as b."
+msgstr "a と b が同じではない場合に TRUEを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "a IS NOT b"
 msgstr "a IS NOT b"
@@ -13968,6 +14091,12 @@ msgstr "``4 IS NOT 2+2`` → FALSE"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
 msgid "LIKE"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:114
+msgid ""
+"Returns TRUE if the first parameter matches the supplied pattern. Works with"
+" numbers also."
+msgstr "最初の引数が与えられたパターンと一致する場合に TRUEを返します。数値にも対応しています。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:120
 msgid "string/number LIKE pattern"
@@ -14049,6 +14178,16 @@ msgstr "``NOT 0`` → TRUE"
 msgid "NOT BETWEEN"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:165
+msgid ""
+"Returns TRUE if value is not within the specified range. The range is "
+"considered inclusive of the bounds."
+msgstr "値が指定された範囲内にない場合、TRUE を返します。範囲は、境界を含むとみなされます。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:171
+msgid "value NOT BETWEEN lower_bound AND higher_bound"
+msgstr "value NOT BETWEEN lower_bound AND higher_bound"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
 msgid "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
 msgstr "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
@@ -14069,9 +14208,25 @@ msgstr "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
 msgid "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
 msgstr "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:182
+msgid ""
+"*value NOT BETWEEN lower_bound AND higher_bound* is the same as \"*value < "
+"lower_bound OR value > higher_bound*\"."
+msgstr ""
+"*value NOT BETWEEN lower_bound AND higher_bound* は \"*value < lower_bound OR"
+" value > higher_bound*\" と同じです。"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:866
+msgid "Further reading: :ref:`expression_function_Operators_BETWEEN`"
+msgstr "参考： :ref:`expression_function_Operators_BETWEEN`"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "OR"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:8
+msgid "Returns TRUE when condition a or b is true."
+msgstr "条件式 a、条件式 b のいずれかが true である場合に TRUE を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "a OR b"
@@ -14478,6 +14633,16 @@ msgstr "参考： :ref:`maps_functions`"
 msgid "$currentfeature"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid ""
+"Returns the current feature being evaluated. This can be used with the "
+"'attribute' function to evaluate attribute values from the current feature. "
+"**WARNING: This function is deprecated. It is recommended to use the "
+"replacement @feature variable instead.**"
+msgstr ""
+"現在評価されている地物を返します。'attribute' 関数と併用することで、現在の地物から属性値を評価することができます。**警告: "
+"この関数は非推奨です。代わりに代替の@feature変数を使用することが推奨されます。**"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
 msgid ""
 "``attribute( $currentfeature, 'name' )`` → value stored in 'name' attribute "
@@ -14604,6 +14769,14 @@ msgstr "get_feature"
 msgid "Returns the first feature of a layer matching a given attribute value."
 msgstr "指定された属性値にマッチした最初の地物を返します。"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:85
+msgid "**Single value variant**"
+msgstr "**単独の値のバージョン**"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:87
+msgid "Along with the layer ID, a single column and value are specified."
+msgstr "レイヤID、および、ひとつの列と値を指定します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:93
 msgid "get_feature(layer, attribute, value)"
 msgstr ""
@@ -14612,6 +14785,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:112
 msgid "**layer** - layer name or ID"
 msgstr "**layer** - レイヤ名またはID"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:96
+msgid "**attribute** - attribute name to use for the match"
+msgstr "**attribute** - マッチに使う属性名"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:97
 msgid "**value** - attribute value to match"
@@ -14625,9 +14802,29 @@ msgstr ""
 "``get_feature('streets','name','main st')`` → \"name\" フィールドの値が \"main st\" "
 "となっている、 \"streets\" レイヤで最初に見つかった地物"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:104
+msgid ""
+"Along with the layer ID, a map containing the columns (key) and their "
+"respective value to be used."
+msgstr "レイヤID、および、使用する列（キー）とその値を含むマップ"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:110
 msgid "get_feature(layer, attribute)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:113
+msgid "**attribute** - Map containing the column and value pairs to use"
+msgstr "**attribute** - 使用する列と値のペアを含んでいるマップ"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:115
+msgid ""
+"``get_feature('streets',map('name','main st','lane_num','4'))`` → first "
+"feature found in \"streets\" layer with \"main st\" value in the \"name\" "
+"field and  \"4\" value in the \"lane_num\" field"
+msgstr ""
+"``get_feature('streets',map('name','main st','lane_num','4'))`` → "
+"\"name\"フィールドの値が\"main "
+"st\"、\"lane_num\"フィールドの値が\"4\"である、\"streets\"レイヤの最初の地物"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:123
 msgid "get_feature_by_id"
@@ -14730,9 +14927,23 @@ msgstr ""
 "``is_selected(get_feature('streets', 'name', 'Main St.')))`` →アクティブな "
 "\"streets\" レイヤで地物に一意に名前が付けられ、その中で \"Main St.\" 地物が選択されている場合に TRUE。"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:55
+msgid ""
+"``is_selected(get_feature_by_id('streets', 1))`` → TRUE if the feature with "
+"the id 1 on the active \"streets\" layer is selected."
+msgstr ""
+"``is_selected(get_feature_by_id('streets', 1))`` → アクティブな \"streets\" "
+"レイヤでid=1 の地物が選択されている場合に TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:58
 msgid "**Two parameters**"
 msgstr "**引数が2つのバージョン**"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:60
+msgid ""
+"If the function is called with both a layer and a feature, it will return "
+"TRUE if the specified feature from the specified layer is selected."
+msgstr "レイヤと地物の両方を引数にとって関数を呼んだ場合、関数は指定されたレイヤの指定された地物が選択されている場合にTRUEを返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:66
 msgid "is_selected(layer, feature)"
@@ -14743,6 +14954,25 @@ msgid ""
 "**layer** - The layer (its ID or name) on which the selection will be "
 "checked."
 msgstr "**layer** - 地物の選択をチェックしたいレイヤ（IDまたはレイヤ名）"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:71
+msgid ""
+"``is_selected( 'streets', get_feature('streets', 'name', \"street_name\"))``"
+" → TRUE if the current building's street is selected (assuming the building "
+"layer has a field named 'street_name' and the 'streets' layer has a field "
+"called 'name' with unique values)."
+msgstr ""
+"``is_selected( 'streets', get_feature('streets', 'name', \"street_name\"))``"
+" → "
+"現在の建物のstreetが選択されていればTRUE（建物レイヤに'street_name'というフィールドがあり、'streets'レイヤにユニークな値を持つ'name'というフィールドがあると仮定している）。"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:72
+msgid ""
+"``is_selected( 'streets', get_feature_by_id('streets', 1))`` → TRUE if the "
+"feature with the id 1 on the \"streets\" layer is selected."
+msgstr ""
+"``is_selected( 'streets', get_feature_by_id('streets', 1))`` → "
+"\"streets\"レイヤの id 1 の地物が選択されている場合に TRUE。"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:80
 msgid "maptip"
@@ -14893,6 +15123,24 @@ msgstr "'layer' と 'feature' パラメータで呼び出した場合、関数�
 msgid "represent_attributes(layer, feature)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:202
+msgid "**layer** - The layer (or its ID or name)."
+msgstr "**layer** - レイヤ（IDまたはレイヤ名）。"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:205
+msgid ""
+"``represent_attributes('atlas_layer', @atlas_feature)`` → The representation"
+" of the attributes for the specified feature from the specified layer."
+msgstr ""
+"``represent_attributes('atlas_layer', @atlas_feature)`` → "
+"指定されたレイヤから指定された地物の属性の表現。"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:947
+msgid ""
+"Further reading: "
+":ref:`expression_function_Record_and_Attributes_represent_value`"
+msgstr "参考： :ref:`expression_function_Record_and_Attributes_represent_value`"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "represent_value"
 msgstr ""
@@ -14912,6 +15160,12 @@ msgstr ""
 msgid "**value** - The value which should be resolved. Most likely a field."
 msgstr "**value** - 評価する値。ほとんどの場合はフィールドを指定。"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+msgid ""
+"**fieldName** - The field name for which the widget configuration should be "
+"loaded."
+msgstr "**fieldName** - ウィジェットの設置が読み込まれるフィールド名。"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:21
 msgid "``represent_value(\"field_with_value_map\")`` → Description for value"
 msgstr "``represent_value(\"field_with_value_map\")`` → バリューマップの値の説明"
@@ -14923,6 +15177,14 @@ msgid ""
 msgstr ""
 "``represent_value('static value', 'field_name')`` → 'field_name' がstatic "
 "value であることの説明"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:953
+msgid ""
+"Further reading: :ref:`widget types <edit_widgets>`, "
+":ref:`expression_function_Record_and_Attributes_represent_attributes`"
+msgstr ""
+"参考： :ref:`widget types <edit_widgets>`, "
+":ref:`expression_function_Record_and_Attributes_represent_attributes`"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "sqlite_fetch_and_increment"
@@ -15283,6 +15545,14 @@ msgid ""
 msgstr ""
 "3桁毎にロケールの桁区切り文字で区切られた数字を返します。デフォルトでは、現在のQGISユーザーのロケールが使用されます。また、指定された桁数で小数点以下の桁数をそろえます。"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:103
+msgid ""
+"format_number(number, [places=0], [language], [omit_group_separators=false],"
+" [trim_trailing_zeroes=false])"
+msgstr ""
+"format_number(number, [places=0], [language], [omit_group_separators=false],"
+" [trim_trailing_zeroes=false])"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:107
 msgid "**number** - number to be formatted"
 msgstr "**number** - フォーマットする数値"
@@ -15303,6 +15573,18 @@ msgstr ""
 "**language** - 数値を文字列にフォーマットする際に使用する言語（2文字または3文字の小文字、 `ISO 639 言語名コード "
 "<https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_ "
 "）。デフォルトでは現在のQGISユーザーのロケールを使用します"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:110
+msgid ""
+"**omit_group_separators** - if set to true then group separators will not be"
+" included in the string"
+msgstr "**omit_group_separators** - trueに設定すると、グループセパレータは文字列に含まれません"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:111
+msgid ""
+"**trim_trailing_zeroes** - if set to true then trailing zeros following the "
+"decimal point will be trimmed from the string"
+msgstr "**trim_trailing_zeroes** - trueを指定すると、小数点以下のゼロが文字列から取り除かれます"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:113
 msgid ""
@@ -15720,6 +16002,10 @@ msgstr ""
 msgid "**string** - string to trim"
 msgstr "**string** - 空白を削除したい文字列"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:484
+msgid "``trim('   hello world  ')`` → 'hello world'"
+msgstr "``trim('   hello world  ')`` → 'hello world'"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:492
 msgid "upper"
 msgstr ""
@@ -16029,6 +16315,12 @@ msgid "feature |328|"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The current feature being evaluated. This can be used with the 'attribute' "
+"function to evaluate attribute values from the current feature."
+msgstr "評価されている現在の地物。この関数を 'attribute' 関数と共に使用すると、現在の地物の属性値を評価できます。"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "frame_duration"
 msgstr ""
 
@@ -16087,6 +16379,10 @@ msgstr "全キャンバス領域でのy最小値（全レイヤ）"
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "geometry |328|"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The geometry of the current feature being evaluated"
+msgstr "現在評価されている地物のジオメトリ"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "geometry_part_count"
@@ -16150,6 +16446,10 @@ msgstr "現在のグリッド注記の値"
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "id |328|"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The ID of the current feature being evaluated"
+msgstr "評価されている現在の地物のID"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "item_id"
