@@ -513,9 +513,9 @@ or a point layer over a polygon layer.
 The model creator can also set an optional "Group name" for the outputs for 
 automatically grouping outputs within the layer tree using a new group name or by
 adding them to an existing group.
-At the bottom of the ``Input`` panel you will find the
-``Reorder Output Layers...`` button and by clicking on it a new dialog pops up
-allowing you to change the order of the output layers:
+In the ``Model`` menu you will find the ``Reorder Output Layers...`` entry and by
+clicking on it a new dialog pops up allowing you to change the order of the output
+layers:
 
 .. figure:: img/model_reorder_output_layers.png
    :align: center
