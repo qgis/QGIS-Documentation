@@ -49,6 +49,11 @@ From a command line tool, run ``qgis_process`` and you should get:
   in their :file:`metadata.txt` file are recognized and can be activated
   or loaded by qgis_process tool.
 
+.. hint:: Before calling qgis_process on a system without window manager (e.g. a headless server),
+    you should set::
+
+     export QT_QPA_PLATFORM=offscreen
+
 
 The command ``list`` can be used to get a list of all available providers
 and algorithms.
