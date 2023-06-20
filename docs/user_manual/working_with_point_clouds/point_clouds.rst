@@ -491,13 +491,28 @@ In the |elevationscale| :guilabel:`Elevation` tab, you can set corrections for
 the Z-values of the data. This may be necessary to adjust the elevation of
 the data in 3D maps. There are two setting options:
 
-* You can set a :guilabel:`Scale`: If ``10`` is entered here, a point that has a
-  value Z=``5`` is displayed at a height of ``50``.
-* An :guilabel:`offset` to the z-level can be entered. This is useful to match
-  different data sources in its height to each other. By default, the
-  lowest z-value contained in the data is used as this value. This value can
-  also be restored with the |refresh| :sup:`Refresh` button at the end of
-  the line.
+* Under :guilabel:`Elevation` group:
+
+  * You can set a :guilabel:`Scale`: If ``10`` is entered here, a point that has a
+    value Z = ``5`` is displayed at a height of ``50``.
+  * An :guilabel:`offset` to the z-level can be entered.
+    This is useful to match different data sources in its height to each other.
+    By default, the lowest z-value contained in the data is used as this value.
+    This value can also be restored with the |refresh| :sup:`Refresh` button
+    at the end of the line.
+* Under :guilabel:`Profile Chart Accuracy`, the :guilabel:`Maximum error`
+  helps you control how dense or sparse the points will be rendered in the elevation profile.
+  Larger values result in a faster generation with less points included.
+* Under :guilabel:`Profile Chart Appearance`, you can control the point display:
+
+  * :guilabel:`Point size`: the size to render the points with, in supported units
+    (millimeters, map units, pixels, ...)
+  * :guilabel:`Style`: whether to render the points as :guilabel:`Circle` or :guilabel:`Square`
+  * Apply a single :guilabel:`Color` to all the points visible in the profile view
+  * Check |checkbox| :guilabel:`Respect layer's coloring` to instead show the points
+    with the color assigned via their :ref:`2D symbology <point_clouds_symbology>`
+  * |unchecked| :guilabel:`Apply opacity by distance from curve effect`,
+    reducing the opacity of points which are further from the profile curve
 
 .. _figure_point_cloud_elevation:
 
@@ -593,3 +608,5 @@ abundance.
    :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
