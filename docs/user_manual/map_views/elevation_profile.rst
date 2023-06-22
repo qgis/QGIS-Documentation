@@ -10,11 +10,13 @@ Elevation Profile View
    .. contents::
       :local:
 
-When your project includes 3D layers you can create a side view, an elevation profile along a line.  Vector, raster, mesh and point clouds layers are supported 3D layer formats that can be used to create an elevation profile.
 
-You can open a new empty Elevation Profile view from the menu via :menuselection:`View -->` |layoutItem3DMap| :menuselection:`Elevation Profile`
+The :guilabel:`Elevation Profile` panel is a plotting tool for side view,
+for visualizing elevation data along a line.
+It supports vector, raster, mesh and point cloud layers. Data can be of 2D or 3D type.
 
-You can create several Elevation Profile views from the menu! When the first one is docked, they are piled on top of each other. Please undock the last added Elevation Profile view to see the previous created view.
+To add an elevation profile view, go to :menuselection:`View -->` |layoutItem3DMap| :menuselection:`Elevation Profile` menu.
+You can add as many profile views as you want, and they can be docked, piled on top of each other, or floating.
 
 .. _figure_elevation_tool_interaction:
 
@@ -23,126 +25,203 @@ You can create several Elevation Profile views from the menu! When the first one
 
    Elevation Profile dialog embedded below main map canvas
 
-.. note:: The Elevation Profile line also has a width that can be set using |options| :sup:`Options`. Figure :ref:`figure_elevation_tool_interaction` shows a coastline with a town behind a sea-dike. Point cloud information inside the width of the Elevation Profile line is included in the Elevation Profile view.
-   
-The following tools are provided at the top of the Elevation Profile dialog:
+   Figure shows a coastline with a town behind a sea-dike.
+   A larger tolerance applied to the elevation profile line returns more point cloud features.
 
-* |layerTree| :sup:`Show Layer Tree` : Switch Elevation Profile Legend on/off
-* |captureLine| :sup:`Capture Curve` : Draw a line on map canvas to create Elevation Profile
-* |captureCurveFromFeature| :sup:`Capture Curve From Feature` : Select a line feature on map canvas to create Elevation Profile
-* |arrowLeft| :sup:`Nudge Left` : Move Elevation Profile line to the left
-* |arrowRight| :sup:`Nudge Right` : Move Elevation Profile line to the right
-* |clearConsole| :sup:`Clear` : Clear Elevation Profile
-* |identify| :sup:`Identify Features` : Identify features in the Elevation Profile
-* |pan| :sup:`Pan` : Pan the Elevation profile
-* |zoomInXAxis| :sup:`Zoom X Axis` : Zoom in/out along the X-axis
-* |zoomIn|:sup:`Zoom` : Zoom in/out 
-* |zoomFullExtent| :sup:`Zoom Full` : Zoom in to the full extent
-* |snapping| :sup:`Enable Snapping` : Snap to nearest vertical feature
-* |measure| :sup:`Measurement Distances` : Measure horizontal and vertical distances
-* |saveAsPDF| :sup:`Export as PDF`: Export the plot in PDF format
-* |saveMapAsImage| :sup:`Export as Image` : Export the plot to several image formats
-* |options| :sup:`Options` : Open options menu
-* |dock| :sup:`Dock Elevation Profile View` : Switch from docked to floating and dockable QGIS panel
+
+The interface
+=============
+
+At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you with the following tools:
+
+.. list-table:: Elevation Profile View toolbar
+   :header-rows: 1
+   :class: longtable
+   :widths: 20 10 70
+
+   * - Tool
+     - Shorcut
+     - Description
+   * - |layerTree| :sup:`Show Layer Tree`
+     -
+     - Shows or hides a list of project layers to configure rendering in the profile view.
+   * - |captureLine| :sup:`Capture Curve`
+     -
+     - Draws interactively a line over the map canvas to represent the profile curve.
+   * - |captureCurveFromFeature| :sup:`Capture Curve From Feature`
+     -
+     - Picks an existing line feature on the map canvas and generate a profile curve along that line.
+   * - |arrowLeft| :sup:`Nudge Left`
+     - :kbd:`Ctrl+Alt+,`
+     - Allows you to slowly move the capture line across the map to the left
+       (e.g. to find the optimal profile line based on the elevation).
+   * - |arrowRight| :sup:`Nudge Right`
+     - :kbd:`Ctrl+Alt+.`
+     - Allows you to slowly move the capture line across the map to the right
+       (e.g. to find the optimal profile line based on the elevation).
+   * - |clearConsole| :sup:`Clear`
+     -
+     - Removes the profile line and any plot displayed in the :guilabel:`Elevation Profile` view 
+   * - |identify| :sup:`Identify Features`
+     -
+     - Identifies features in the plot canvas via either a single click, or click-and-drag rectangle.
+       Results are shown in the standard :ref:`Identify Results <identify>` dock.
+   * - |pan| :sup:`Pan`
+     - :kbd:`Space`
+     - Click and drag to pan the plot canvas. Can also be done with the middle mouse button.
+   * - |zoomInXAxis| :sup:`Zoom X Axis`
+     -
+     - Zooms in/out along the horizontal axis, keeping the vertical ratio
+   * - |zoomIn| :sup:`zoom`
+     - :kbd:`Ctrl+Space`
+     - Click or click-and-drag a rectangle over the plot to zoom in.
+       Press :kbd:`Alt` and click to instead zoom out.
+   * - |zoomFullExtent| :sup:`Zoom Full`
+     -
+     - Zooms the :guilabel:`Elevation Profile` view to the extent of the capture line
+   * - |snapping| :sup:`Enable Snapping`
+     -
+     - Allows to snap to the edge or vertex of the plot features in the profile view.
+       Convenient for accurate retrieval of coordinates or distance measurements.
+   * - |measure| :sup:`Measure Distances`
+     -
+     - Measures horizontal and vertical distances
+   * - |saveAsPDF| :sup:`Export As PDF`
+     -
+     - Exports plots to PDF (as high quality vector objects)
+   * - |saveMapAsImage| :sup:`Export As Image`
+     -
+     - Exports plots to several image formats
+   * - |options| :sup:`Options`
+     -
+     - Provides access to configuration settings of the profile elevation line.
+   * - |dock| :sup:`Dock Elevation Profile View`
+     -
+     - Switch between docked and floating status of the view
+
+
+In the bottom left, a copy of the :guilabel:`Layers` panel can be displayed
+pushing the |layerTree| :guilabel:`Show Layer Tree` button.
+This is however an independent widget, with its own set of visible layers, in a custom stack order.
+It allows you to control layers rendering and behavior within the plot canvas:
+
+* Tick the box next to the layer name to set whether it should be rendered in the plot canvas
+* Drag-and-drop layers up or down to change the order of the layers
+* style rendering of layers in the profile view: double-click a layer or right-click
+  and select :guilabel:`Properties...` to open the layer's :guilabel:`Elevation` properties tab
+  for configuration.
+  A summary of elevation settings is displayed as tooltip when hovering over the layer.
+
+
+On the right of the layer tree, the plot canvas is the main place you can preview the elevation profile of the enabled layers.
+It is based on a graduated grid in which the horizontal axis displays the length of the profile line
+and the vertical axis displays the Z elevation of the observed features.
+It also allows a set of interactions such as zooming, panning, measuring, identifying features, ... using the tools at the top.
 
   
 .. _`elevation_profile_create`:
   
-Create
-======
+Creating an elevation profile
+=============================
 
-|captureLine| :sup:`Capture Curve`  is used to draw a line, in the main map canvas, to create an Elevation Profile along given line. Use the left mouse button to add points to the line, use the right mouse button to finalize the line and create the Elevation Profile.
+To create a profile view, you can:
 
-|captureCurveFromFeature| :sup:`Capture Curve From Feature`  is used to select a line feature in the map canvas that is used to create the Elevation Profile.
+#. Go to :menuselection:`View -->` |layoutItem3DMap| :menuselection:`Elevation Profile` menu.
+   The :guilabel:`Elevation profile` panel opens.
+#. Create the profile line along which the terrain and the features will be rendered.
+   Select a drawing tool:
 
-|options| :sup:`Options`  can be used to set the Tolerance value. This value is used to set the width of the Elevation Profile line visible in the main map canvas.
+   * |captureLine| :sup:`Capture Curve`: click left over the main map canvas to add vertices
+     and click right to finalize a line that will be used as profile line 
+   * or |captureCurveFromFeature| :sup:`Capture Curve From Feature`:
+     click a line feature on the map canvas to select it as the profile line.
+     If multiple features are present at the clicked point then a popup menu will appear
+     allowing you to select among them.
 
-When an Elevation Profile is created it will zoom in on the full extent of created Elevation Profile line. On the X-axis you can see the length of the profile and on the Y-axis the height range between minimum and maximum height captured, both in map units. 
+   All the line digitizing capabilities such as the :ref:`snapping options <snapping_options>`,
+   :ref:`tracing <tracing>`, :ref:`digitizing techniques <drawing_methods>`
+   or the advanced :ref:`digitizing panel <advanced_digitizing_panel>` are available for use.
 
-.. _`elevation_profile_change`:
+   The plot canvas may start rendering some features.
+#. The next step is to configure the elevation properties of the layers you want to visualize.
 
+   #. Push on the |layerTree| :sup:`Show Layer Tree` button to display the list of layers.
+   #. Toggle visibility of the layers you are interested in.
+      These are the only ones rendered in the profile view
+      and selected layers can be different from the main :guilabel:`Layers` panel's.
+   #. Double-click a layer name or right-click and select :guilabel:`Properties`.
+      The :guilabel:`Elevation` properties tab of the layer opens.
+      This is the place you configure how each feature or terrain should render on the profile view.
+      Available properties depend on the layer type:
 
-Change
-======
+      * :ref:`Raster Elevation Properties <raster_elevation>`
+      * :ref:`Vector Elevation Properties <vectorelevationmenu>`
+      * :ref:`Point Cloud Elevation Properties <point_clouds_elevation>`
+      * :ref:`Mesh Elevation Properties <meshelevation>` 
 
-|arrowLeft| :sup:`Nudge Left` and |arrowRight| :sup:`Nudge right`
-are used to shift the position of the Elevation Profile line in the map canvas to the left or right. of the current Elevation Profile line. The Elevation Profile will be redrawn. It is moved sideways using the tolerance value given in |options| :sup:`Options`.
+      The profile view starts rendering terrain or features of active layers
+      crossing the given profile curve, as soon as they have elevation properties configured.
 
-You can draw a new profile line with |captureLine| :sup:`Capture Curve` or select another line feature |captureCurveFromFeature| :sup:`Capture Curve From Feature` to create a new profile. To erase it first with the |clearConsole| :sup:`Clear` button, is not really neccesary, but good habit.
+#. Under |options| :sup:`Options` drop-down menu, you can set the :guilabel:`Tolerance` value.
+   This value is used to create a flat buffer around the elevation profile line, visible in the main map canvas.
+   Any visible point feature overlapping that buffer will be captured in the plot canvas.
 
-.. _`elevation_profile_presentation`:
-
-Presentation
-============
-
-|layerTree| :sup:`Show Layer Tree`  can be used to hide or show the legend.
-
-The legend can be used to:
-
-* turn the visibility of 3D layers on or off
-* change the order of layers, just drag an drop the layers up or down
-* change the style of the selected layers in the Elevation Profile legend
-
-Right click on on a layer in the legend gives access to the menu option :guilabel:`Properties...` in a popup menu. When you select :guilabel:`Properties...` this will open the |elevationscale| :guilabel:`Elevation` tab in the Layer Properties where you can give specific settings to change the presentation of a layer for the Elevation Profile. When you double click on a layer in the legend, this will instantly open the |elevationscale| :guilabel:`Elevation Tab` in the Layer Properties dialog.
-
-The Elevation tab options provided are dependent on the format. Please follow the link for the full description of the Elevation tab for each format:
-
-* :ref:`Raster Elevation Properties <raster_elevation>`
-* :ref:`Vector Elevation Properties <vectorelevationmenu>`
-* :ref:`Point Cloud Elevation Properties <point_clouds_elevation>`
-* :ref:`Mesh Elevation Properties <meshelevation>` 
-
-For all Elevation layers you can adapt the Elevation scaling and offset to correct or change the profile appearance. You can use the scaling option to convert layers from one map unit to the other (i.e. feet to meters). 
-
-For the appearance of the elevation of a Raster DEM you can choose in :guilabel:`Style` either for a :guilabel:`Line` or :guilabel:`Fill Below` style.
-You can give it the symbology you like with the standard :guilabel:`Symbology Settings editor`.
-
-Mesh, vector and cloud points have the option :guilabel:`Respect layer's coloring`. When activated the layer uses the same symbols styling as used in the main canvas. However, you can decide to give the layers in the Elevation Profile another style. First deactivate the option :guilabel:`Respect layers coloring` and create for the layer a new style to use in the Elevation Profile!  
-
-For Point Clouds you have a great option to activate :guilabel:`Apply Opacity by distance from curve effect` so near objects in the point cloud are better visible!
 
 .. _`elevation_profile_interaction`:
 
-Interaction
-===========
+Interacting with the profile plots
+==================================
 
-When you move the mouse pointer in the Elevation Profile view, you will see a cross hair Appear. Beside the vertical cross hair the height information is given, beside the horizontal cross hair the distance from the beginning of the Elevation Profile Line is given. You can also see a black dot move along the Elevation Profile line on the main map canvas when you move the mouse pointer in the Elevation Provile view (see :ref:`figure_elevation_tool_interaction`).  
+When an elevation profile line is created, the plot canvas zooms to its full extent.
+On the X-axis you can see the length of the profile and,
+on the Y-axis the height range between minimum and maximum height captured, both in map units. 
 
-|identify| :sup:`Identify Features`  is used to identify features of selected layer in the legend. You can select multiple features when you hold :kbd:`Shift` and drag a rectangle across several features. Selected features in vector format will also be selected in the main map canvas (see :ref:`figure_elevation_tool_interaction`).
+When you move the mouse pointer in the elevation profile view, you will see two crossing dot lines:
 
-|pan| :sup:`Pan`  is used to pan the Elevation profile and move it in any direction you want.
+* the vertical line shows the height information
+* the horizontal line shows the distance from the beginning of the elevation profile Line
 
-|zoomInXAxis| :sup:`Zoom X Axis`  is used to Zoom in/out along the X-Axis keeping the ratio of the Y-axis (the elevation) the same. You can stretch out the Elevation profile along the X axis by pressing the Left mouse button or the scroll wheel.
+When you move the mouse pointer in the elevation profile canvas,
+you can also see a black dot move along the elevation profile line on the main map canvas.
+At the middle of the profile line, an arrow indicates its direction.
 
-|zoomIn| :sup:`Zoom`  is used to Zoom in or Zoom out on a certain point with the scroll wheel. In combination with the :kbd:`Ctrl` key you can zoom in or out more smoothly. You can also hold :kbd:`Shift` and use the left button to drag a rectangle over the area you want to zoom into.
+As for the main map canvas, QGIS provides means to navigate on the plot canvas:
 
-|zoomFullExtent| :sup:`Zoom Full`  is the default zoom level used at the beginning and shows the full extent of all features you selected. Use it to reset the zoom level.
-  
-|snapping| :sup:`Enable Snapping`  can be turned on or of. When turned on it will Snap to the nearest vertical feature of selected layer in the legend. It is useful to read the elevation from the cross hairs, but also helps to select a feature using the identify tool. But it really is usefull to measure distances.
-  
-|measure| :sup:`Measurement Distances`  is used to Measure horizontal and vertical distances. With Snapping enabled, it is easier to select the points in the Vertical elevation. The distances are given in used map units.
+* |pan| :sup:`Pan` is used to move the elevation profile extent in any direction you want.
+  Holding :kbd:`Space` key while moving the mouse also shifts the plot canvas extent.
+* |zoomInXAxis| :sup:`Zoom X Axis` is used to zoom in along the horizontal axis,
+  keeping the ratio of the vertical axis (the elevation) the same.
+  Left click to stretch out the plot along the X axis, with the clicked point at the center of the axis,
+  or drag a rectangle to stretch out the plot along the X axis to the rectangle width.
+  Hold :kbd:`Alt` while using |zoomInXAxis| :sup:`Zoom X Axis` to zoom out along that axis.
+* |zoomIn| :sup:`Zoom` is used to zoom in on a certain point (using left click),
+  or to a certain extent (dragging a rectangle on the area).
+  Hold :kbd:`Alt` while using |zoomIn| :sup:`Zoom` to instead zoom out.
+  In combination with the :kbd:`Ctrl` key you can zoom in or out more smoothly.
+* |zoomFullExtent| :sup:`Zoom Full` is the default zoom level used at the beginning
+  and shows the full extent of the profile line, with all returned features.
+  Use it to reset the zoom level.
 
-.. _`elevation_profile_troubleshoot`:
+It is also possible to interact with the elements displayed in the plot canvas:
 
-Troubleshoot
-============
+* Press |snapping| :sup:`Enable snapping` button to accurately catch points, vertices or edges of the features,
+  for an accurate measurement or coordinates report.
+* |identify| :sup:`Identify Features` is used to identify features of the visible layers in the layer tree.
+  You can drag a rectangle across several features in the profile view to query all of them.
+  When compatible with the format (e.g. vector, point cloud), these features will be highlighted in the main map canvas.
+* |measure| :sup:`Measurement Distances`: click or select two points in the plot canvas
+  to report the horizontal :guilabel:`Distance`, the :guilabel:`Elevation`
+  and the :guilabel:`Total distance` between them, in map units.
+* |arrowLeft| :sup:`Nudge Left` and |arrowRight| :sup:`Nudge right` are used to shift
+  the position of the elevation profile line in the map canvas to its left or right.
+  The plot canvas will be redrawn, showing features and terrain overlapping the profile line buffer.
+  The line is moved sideways using the :guilabel:`Tolerance` value in |options| :sup:`Options` menu.
 
-Here are some solutions for the following problems:
+.. warning:: Closing an elevation profile view currently removes it from the project.
 
-#. Raster or mesh layer does not appear in the legend of the Elevation Profile.
-   Open the properties layer of the Raster or Mesh layer from the Layers panel, open the tab |elevationscale| :guilabel:`Elevation` and activate :guilabel:`Represents Elevation Surface`. Press the :guilabel:`OK` button.
-  
-#. The features of the vector layer are appearing on elevation level Z=0 of the Elevation Profile.
-   Your vector layer is probably still in 2D, you can check this and make it 3D using one of the following options in the Processing Toolbox:
-  
-   * When the vector layer has an attribute with the Z-value, you can use the Processing function |processingAlgorithm| :guilabel:`Set Z value` to create a 3D vector layer with that value.
-   * When you have a DEM Raster (Digital Elevation Model) you can use the Processing function |processingAlgorithm| :guilabel:`Drape (set Z value from raster)` to add elevation to your vector layer.
+For more details, give a look to `QGIS elevation profile/cross section tool -- a deep dive!
+<https://www.youtube.com/watch?v=AknJjNPystU>`_, a presentation done by Nyall Dawson.
 
-.. tip:: **Two great introduction video's on the Elevation Profile tool**
-
-   In `QGIS elevation profile/cross section tool -- a deep dive! <https://www.youtube.com/watch?v=AknJjNPystU>`_ Nyall Dawson presented the Elevation Profile tool to the QGIS community. This video presents in one hour many aspects of the Elevation Profile tool.
-   
-   In `Exploring the New Elevation Profile Tool with Point Clouds in QGIS 3.26 <https://www.youtube.com/watch?v=ky0HkttaQ58>`_ Hans van der Kwast shows in 8 minutes how to download some point cloud data of the city of Rotterdam and create a nice skyline view of the Rotterdam harbour using the Elevation Profile tool.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
