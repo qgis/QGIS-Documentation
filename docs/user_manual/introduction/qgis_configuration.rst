@@ -1520,18 +1520,19 @@ This, among other settings, can be customized in :menuselection:`Settings -->`
 
   * :guilabel:`Use last closed profile`
   * a specific user profile to select from :guilabel:`Always use profile` drop-down menu
-  * :guilabel:`Let user choose profile at start up`:
+  * :guilabel:`Choose profile at start up`:
     Opens the :guilabel:`User Profile Selector` dialog listing available user profiles.
     Double-click an entry or select a profile and press :guilabel:`OK` to use that user profile
     for the starting session.
     It is also possible to |symbologyAdd| :guilabel:`Add new profile` to the list:
     a profile is created from scratch and automatically run with the opening session.
 
-* :guilabel:`Profile selector`: configures size of icons to use when selecting a profile
-  from the :guilabel:`User Profile Selector` dialog.
-* :guilabel:`Active profile`: lets you configure a specific icon to display next to the current profile
-  in the :menuselection:`Settings --> User profiles` menu or the :guilabel:`User Profile Selector` dialog.
-  Press |refresh| :sup:`Reset profile icon` to remove custom modifications.
+* Under :guilabel:`Profile display`, you can set:
+
+  * The size of icons to use when selecting a profile from the :guilabel:`User Profile Selector` dialog.
+  * A specific icon to display next to the current profile in the :menuselection:`Settings --> User profiles` menu
+    or the :guilabel:`User Profile Selector` dialog.
+    Press |refresh| :sup:`Reset profile icon` to remove custom modifications.
 
 
 .. index:: Project properties
