@@ -135,7 +135,7 @@ Coordinate Reference System and Geometry
 Query Builder
 -------------
 
-The :guilabel:`Query Builder` dialog is accessible through the eponym button
+The Query Builder dialog is accessible through the :guilabel:`Query Builder` button
 at the bottom of the :guilabel:`Source` tab in the Layer Properties dialog,
 under the :guilabel:`Provider feature filter` group.
 
