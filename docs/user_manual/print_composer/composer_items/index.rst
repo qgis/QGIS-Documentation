@@ -16,5 +16,6 @@ Layout Items
    composer_scale_bar
    composer_tables
    composer_image
+   layout_elevation_profile
    composer_html_frame
    composer_shapes
