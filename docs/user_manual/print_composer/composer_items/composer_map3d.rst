@@ -9,8 +9,7 @@ The 3D Map Item
    .. contents::
       :local:
 
-The 3D Map item is used to display a
-:ref:`3D map view <label_3dmapview>`.
+The 3D Map item is used to display a :ref:`3D map view <label_3dmapview>`.
 Use the |add3DMap| :guilabel:`Add 3D Map` button, and follow
 :ref:`items creation instructions <create_layout_item>` to add a new
 3D Map item that you can later manipulate the same way as demonstrated
