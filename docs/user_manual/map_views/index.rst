@@ -16,5 +16,5 @@ show different scale or extent, or display a different set of the loaded layers 
    :maxdepth: 2
 
    map_view
-   elevation_profile
    3d_map_view
+   elevation_profile

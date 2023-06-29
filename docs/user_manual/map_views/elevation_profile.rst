@@ -169,7 +169,7 @@ To create a profile view, you can:
 
 .. _`elevation_profile_interaction`:
 
-Interacting with the profile plots
+Interacting with the profile Views
 ==================================
 
 When an elevation profile line is created, the plot canvas zooms to its full extent.
@@ -217,7 +217,7 @@ It is also possible to interact with the elements displayed in the plot canvas:
   The plot canvas will be redrawn, showing features and terrain overlapping the profile line buffer.
   The line is moved sideways using the :guilabel:`Tolerance` value in |options| :sup:`Options` menu.
 
-.. warning:: Closing an elevation profile view currently removes it from the project.
+.. warning:: Closing an elevation profile view or the project currently removes the view from the project.
 
 For more details, give a look to `QGIS elevation profile/cross section tool -- a deep dive!
 <https://www.youtube.com/watch?v=AknJjNPystU>`_, a presentation done by Nyall Dawson.
