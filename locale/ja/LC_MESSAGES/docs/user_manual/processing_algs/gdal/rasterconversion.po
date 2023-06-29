@@ -33,6 +33,10 @@ msgstr "ラスタ変換"
 msgid "gdal2xyz"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:16
+msgid "Converts raster data to XYZ ASCII file format."
+msgstr "ラスタデータをXYZアスキーファイル形式に変換します。"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:19
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:100
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:180
@@ -149,6 +153,10 @@ msgstr ""
 msgid "[raster]"
 msgstr "[ラスタ]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:33
+msgid "Raster layer to convert"
+msgstr "変換するラスタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:34
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:115
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:198
@@ -173,6 +181,15 @@ msgstr "[ラスタのバンド]"
 msgid "Default: The first band of the input layer"
 msgstr "デフォルト：入力レイヤの1番目のバンド"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:39
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:120
+msgid "If the raster is multiband, choose the band you want to convert"
+msgstr "ラスタがマルチバンドの場合には、変換したいバンドを選択してください"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:41
+msgid "**Output comma-separated values**"
+msgstr "**カンマ区切りの値を出力する**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:42
 msgid "``CSV``"
 msgstr ""
@@ -190,6 +207,16 @@ msgstr "[ブール値]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:518
 msgid "Default: False"
 msgstr "デフォルト： False"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:46
+msgid ""
+"Sets whether the output file should be of type comma-separated values (csv)."
+msgstr "出力ファイルのタイプをカンマ区切り値(csv)にするかどうかを設定します。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:48
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:71
+msgid "**XYZ ASCII file**"
+msgstr "**出力ファイル**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:49
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:129
@@ -244,6 +271,10 @@ msgstr "出力"
 msgid "[table]"
 msgstr "[テーブル]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:74
+msgid "Table file containing the values exported from the raster band."
+msgstr "ラスタバンドからエクスポートされた値を含んだテーブルファイル。"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:77
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:157
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:269
@@ -252,6 +283,10 @@ msgstr "[テーブル]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:595
 msgid "Python code"
 msgstr "Python コード"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:79
+msgid "**Algorithm ID**: ``gdal:gdal2xyz``"
+msgstr "**アルゴリズムID**: ``gdal:gdal2xyz``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -264,9 +299,79 @@ msgstr ""
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:89
+msgid "PCT to RGB"
+msgstr "PCTをRGBに変換"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:90
+msgid ""
+"Converts an 8 bit paletted image to a 24 bit RGB. It will convert a "
+"pseudocolor band from the input file to an RGB file of the desired format."
+msgstr "8ビットのパレット画像を24ビットのRGBに変換します。入力ファイルから擬似カラーバンドを求めるフォーマットのRGBファイルに変換します。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:94
+msgid ""
+"This algorithm is derived from the `GDAL pct2rgb utility "
+"<https://gdal.org/programs/pct2rgb.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL pct2rgb utility <https://gdal.org/programs/pct2rgb.html>`_ "
+"から派生したものです。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:97
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:177
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:407
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:479
+msgid "**Default menu**: :menuselection:`Raster --> Conversion`"
+msgstr "**デフォルトメニュー**: :menuselection:`ラスタ --> 変換`"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:114
+msgid "Input 8 bit raster image"
+msgstr "入力する8ビットのラスタ画像"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:122
+msgid "**Generate a RGBA file**"
+msgstr "**RGBAファイルを生成**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:123
 msgid "``RGBA``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:127
+msgid "Sets whether the output file should be of type RGBA."
+msgstr "出力ファイルのタイプをRGBAにするかどうかを設定します。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:128
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:151
+msgid "**PCT to RGB**"
+msgstr "**PCTをRGBに変換**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:154
+msgid "24 bit RGB raster image"
+msgstr "24ビットRGBラスタ画像"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:159
+msgid "**Algorithm ID**: ``gdal:pcttorgb``"
+msgstr "**アルゴリズムID**: ``gdal:pcttorgb``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:169
+msgid "Polygonize (raster to vector)"
+msgstr "ラスタをベクタ化 (polygonize)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:170
+msgid ""
+"Creates vector polygons for all connected regions of pixels in the raster "
+"sharing a common pixel value. Each polygon is created with an attribute "
+"indicating the pixel value of that polygon."
+msgstr ""
+"共通のピクセル値を共有するラスター内のピクセルのすべての連結領域に対してベクトルポリゴンを生成します。各ポリゴンは、そのポリゴンのピクセル値を示す属性とともに生成されます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:174
+msgid ""
+"This algorithm is derived from the `GDAL polygonize utility "
+"<https://gdal.org/programs/gdal_polygonize.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL polygonize utility "
+"<https://gdal.org/programs/gdal_polygonize.html>`_ から派生したものです。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:183
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:293
@@ -280,6 +385,14 @@ msgstr "基本パラメータ"
 msgid "Input raster layer"
 msgstr "入力ラスタレイヤ"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:203
+msgid "If the raster is multiband, choose the band you want to use"
+msgstr "ラスタがマルチバンドの場合には、使いたいバンドを選択してください"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:204
+msgid "**Name of the field to create**"
+msgstr "**作成する属性の名前**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:205
 msgid "``FIELD``"
 msgstr ""
@@ -292,14 +405,44 @@ msgstr ""
 msgid "[string]"
 msgstr "[文字列]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:208
+msgid "Default: 'DN'"
+msgstr "デフォルト：'DN'"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:209
+msgid "Specify the field name for the attributes of the connected regions."
+msgstr "連結領域の属性のフィールド名を指定します。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:211
+msgid "**Use 8-connectedness**"
+msgstr "**上下左右の4方向でなく、8方向の連結関係をチェックする**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:212
 msgid "``EIGHT_CONNECTEDNESS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:216
+msgid ""
+"If not set, raster cells must have a common border to be considered "
+"connected (*4-connected*). If set, touching raster cells are also considered"
+" connected (*8-connected*)."
+msgstr ""
+"設定されていない場合、ラスターセルが連結されているとみなされるには、共通の境界線が必要です "
+"(*4-connected*)。設定されている場合、接触しているラスターセルも連結されているとみなされます (*8-connected*)。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:220
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:263
+msgid "**Vectorized**"
+msgstr "**ベクタ化**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:222
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:265
 msgid "[vector: polygon]"
 msgstr "[ベクタ：ポリゴン]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:225
+msgid "Specification of the output (polygon) vector layer. One of:"
+msgstr "出力する（ポリゴン）ベクタレイヤの指定。次のいずれかです:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:233
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:326
@@ -341,6 +484,14 @@ msgstr "GDALコマンドラインオプションを追加します"
 msgid "Output vector layer"
 msgstr "出力ベクタレイヤ"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:271
+msgid "**Algorithm ID**: ``gdal:polygonize``"
+msgstr "**アルゴリズムID**: ``gdal:polygonize``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:281
+msgid "Rearrange bands"
+msgstr "バンドを再構成"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:282
 msgid ""
 "Creates a new raster using selected band(s) from a given raster layer. The "
@@ -349,9 +500,30 @@ msgid ""
 msgstr ""
 "与えられたラスタレイヤから選択されたバンドを使って新しいラスタを作成します。このアルゴリズムではさらに新しく作成されたラスタでバンドの並べ替えを行うことができます。"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:286
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:476
+msgid ""
+"This algorithm is derived from the `GDAL translate utility "
+"<https://gdal.org/programs/gdal_translate.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL translate utility "
+"<https://gdal.org/programs/gdal_translate.html>`_ から派生したものです。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:308
+msgid "**Selected band(s)**"
+msgstr "**選択するバンド**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:309
 msgid "``BANDS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:310
+msgid "[raster band] [list]"
+msgstr "［ラスタバンド］［リスト］"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:313
+msgid "Ordered list of the bands to use to create the new raster"
+msgstr "新しいラスタを作成するために使用するバンドの順序付きリスト"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:314
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:374
@@ -360,10 +532,19 @@ msgstr ""
 msgid "**Converted**"
 msgstr "**出力レイヤ**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:318
+msgid "Default:  ``[Save to temporary file]``"
+msgstr "デフォルト： ``[一時ファイルに保存]``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:319
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:437
 msgid "Specification of the output raster. One of:"
 msgstr "出力ラスタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:336
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:543
+msgid "**Additional creation options**"
+msgstr "**追加の生成オプション**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:339
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:546
@@ -374,6 +555,24 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:549
 msgid "Default: ''"
 msgstr "デフォルト： ''"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:343
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:550
+msgid ""
+"For adding one or more creation options that control the raster to be "
+"created (colors, block size, file compression...). For convenience, you can "
+"rely on predefined profiles (see :ref:`GDAL driver options section "
+"<gdal_createoptions>`)."
+msgstr ""
+"作成するラスタを制御する1つ以上の作成オプションを追加します（色、ブロックサイズ、ファイル圧縮...）。便利なことに、定義済みのプロファイルを利用することができます"
+" (:ref:`GDAL ドライバのオプションセクション <gdal_createoptions>` を参照)。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:349
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:556
+msgid ""
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
+msgstr "バッチプロセスとモデルデザイナー: 複数のオプションをパイプ文字 (``|``) で区切ります。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:351
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:566
@@ -400,6 +599,108 @@ msgstr "デフォルト： 0"
 msgid "Defines the data type of the output raster file. Options:"
 msgstr "出力ラスタファイルのデータ型を定義します。オプションは以下のとおり："
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "0 --- Use Input Layer Data Type"
+msgstr "0 -- 入力レイヤのデータ型を使う"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "1 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "1 --- Byte        （8ビット符号なし整数 (quint8)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "2 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "2 --- Int16       （16ビット符号あり整数 (qint16)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "3 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "3 --- UInt16      （16ビット符号なし整数 (quint16)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr "4 --- UInt32      （32ビット符号なし整数 (quint32)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "5 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "5 -- Int32 （符号あり32ビット整数 (qint32)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "6 --- Float32     (Thirty two bit floating point (float))"
+msgstr "6 -- Float32 （32ビット浮動小数点数 (float)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+msgid "7 --- Float64     (Sixty four bit floating point (double))"
+msgstr "7 -- Float64 （64ビット浮動小数点数 (double)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "8 --- CInt16      (Complex Int16)"
+msgstr "8 -- CInt16 （複素数 Int16）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "9 --- CInt32      (Complex Int32)"
+msgstr "9 -- CInt32 （複素数 Int32）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "10 --- CFloat32   (Complex Float32)"
+msgstr "10 -- CFloat32 （複素数 Float32）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "11 --- CFloat64   (Complex Float64)"
+msgstr "11 -- CFloat64 （複素数 Float64）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:21
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"利用可能なオプションは、QGISと一緒にビルドされたGDALのバージョンによって異なります（ :menuselection:`ヘルプ --> "
+"QGISについて` メニューを参照）"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:377
+msgid "Output raster layer with rearranged bands."
+msgstr "再構成されたバンドを持つ出力ラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:382
+msgid "**Algorithm ID**: ``gdal:rearrange_bands``"
+msgstr "**アルゴリズムID**: ``gdal:rearrange_bands``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:392
+msgid "RGB to PCT"
+msgstr "RGBをPCTに変換"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:393
+msgid ""
+"Converts a 24 bit RGB image into a 8 bit paletted. Computes an optimal "
+"pseudo-color table for the given RGB-image using a median cut algorithm on a"
+" downsampled RGB histogram. Then it converts the image into a pseudo-colored"
+" image using the color table. This conversion utilizes Floyd-Steinberg "
+"dithering (error diffusion) to maximize output image visual quality."
+msgstr ""
+"24ビットRGB画像を8ビットパレットに変換します。ダウンサンプリングされたRGBヒストグラムに対して、メディアンカットアルゴリズムを用いて、与えられたRGB画像に最適な擬似カラーテーブルを計算します．そして、そのカラーテーブルを用いて画像を擬似カラー画像に変換します。この変換は、出力画像の視覚的品質を最大化するために、フロイド-"
+"スタインバーグディザリング（誤差拡散）を利用します。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:400
+msgid ""
+"If you want to classify a raster map and want to reduce the number of "
+"classes it can be helpful to downsample your image with this algorithm "
+"before."
+msgstr "ラスターマップを分類したい場合であって階級の数を減らしたい場合は、このアルゴリズムで画像をダウンサンプリングするのが有効です。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:404
+msgid ""
+"This algorithm is derived from the `GDAL rgb2pct utility "
+"<https://gdal.org/programs/rgb2pct.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL rgb2pct utility <https://gdal.org/programs/rgb2pct.html>`_ "
+"から派生したものです。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:424
+msgid "Input (RGB) raster layer"
+msgstr "入力(RGB)ラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:425
+msgid "**Number of colors**"
+msgstr "**色数**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:426
 msgid "``NCOLORS``"
 msgstr ""
@@ -413,6 +714,37 @@ msgstr "[数値]"
 msgid "Default: 2"
 msgstr "デフォルト： 2"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:430
+msgid ""
+"The number of colors the resulting image will contain. A value from 2-256 is"
+" possible."
+msgstr "結果の画像に含まれる色の数。2〜256の値が可能です。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:432
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:454
+msgid "**RGB to PCT**"
+msgstr "**RGBをPCTに変換**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:457
+msgid "Output raster layer."
+msgstr "出力ラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:462
+msgid "**Algorithm ID**: ``gdal:rgbtopct``"
+msgstr "**アルゴリズムID**: ``gdal:rgbtopct``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:472
+msgid "Translate (convert format)"
+msgstr "形式変換 (convert format)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:474
+msgid "Converts raster data between different formats."
+msgstr "異なる形式のラスタデータを変換します"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:500
+msgid "**Override the projection of the output file**"
+msgstr "**出力ファイルの投影法を上書きする**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:503
 msgid "``TARGET_CRS``"
 msgstr ""
@@ -420,6 +752,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:504
 msgid "[crs]"
 msgstr "[crs]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:505
+msgid "Specify a projection for the output file"
+msgstr "出力ファイルの投影法を指定します"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:506
+msgid "**Assign a specified nodata value to output bands**"
+msgstr "**指定したnodata値を出力バンドに割り当てる**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:509
 msgid "``NODATA``"
@@ -429,6 +769,30 @@ msgstr ""
 msgid "Default: Not set"
 msgstr "デフォルト：未設定"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:513
+msgid "Defines the value to use for nodata in the output raster"
+msgstr "出力ラスタでnodataに使う値を定義します"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:514
+msgid "**Copy all subdatasets of this file to individual output files**"
+msgstr "**各出力ファイルにこのファイルの全てのサブデータセットをコピーする**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:515
 msgid "``COPY_SUBDATASETS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:519
+msgid "Create individual files for subdatasets"
+msgstr "サブデータセット用の個別ファイルを作成します"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:525
+msgid "Specification of the output (translated) raster layer. One of:"
+msgstr "出力（翻訳）ラスタレイヤの指定。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:592
+msgid "Output (translated) raster layer."
+msgstr "出力（変換された）ラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:597
+msgid "**Algorithm ID**: ``gdal:translate``"
+msgstr "**アルゴリズムID**: ``gdal:translate``"
