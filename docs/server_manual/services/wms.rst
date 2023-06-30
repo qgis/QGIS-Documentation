@@ -543,7 +543,7 @@ and **Romania** they're highlighted in yellow.
 
 .. _wms_formatoptions:
 
-FORMAT-OPTIONS
+FORMAT_OPTIONS
 ^^^^^^^^^^^^^^
 
 This parameter can be used to specify options for the selected format.
