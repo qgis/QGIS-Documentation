@@ -390,31 +390,28 @@ as their ordering is determined by the placement of the group layer.
 
 .. _editing_style_layer:
 
-Editing vector layer style
-...........................
+Editing layer style
+....................
 
-From the Layers panel, you have shortcuts to change the layer rendering quickly
-and easily. Right-click on a vector layer and select :menuselection:`Styles -->`
-in the list in order to:
+From the :guilabel:`Layers` panel, you have shortcuts to change the layer rendering quickly and easily.
 
-* see the :ref:`styles <manage_custom_style>` currently applied to the layer.
+Right-click on a layer and select :menuselection:`Styles -->` in the list in order to:
+
+* see the :ref:`styles <manage_custom_style>` currently available for the layer.
   If you defined many styles for the layer, you can switch from one to another
   and your layer rendering will automatically be updated on the map canvas.
 * copy part or all of the current style, and when applicable, paste a copied
   style from another layer
+* :guilabel:`Rename current...` style
+* :guilabel:`Add` a new style (which is actually a copy of the current one)
+* or :guilabel:`Remove current` style (only when multiple styles are available).
 
   .. tip:: **Quickly share a layer style**
 
     From the context menu, copy the style of a layer and paste it to a group
     or a selection of layers: the style is applied to all the layers that
-    are of the same type (vector/raster) as the original layer and,
+    are of the same type (vector, raster, mesh, point cloud, ...) as the original layer and,
     for vector layers, have the same geometry type (point, line or polygon).
-
-* rename the current style, add a new style (which is actually a copy of
-  the current one) or delete the current style (when multiple styles are
-  available).
-
-.. note:: The previous options are also available for raster or mesh layers.
 
 * update the :ref:`symbol color <color-selector>` using a **Color Wheel**.
   For convenience, the recently used colors are also available at the bottom
