@@ -257,6 +257,12 @@ Basic parameters
 
        Default: QColor(0, 0, 0, 0)
      - Choose the background color for the tiles
+   * - **Enable antialiasing**
+     - ``ANTIALIAS``
+     - [boolean]
+
+       Default: True
+     - Determines if antialiasing should be enabled
    * - **Tile format**
      - ``TILE_FORMAT``
      - [enumeration]
@@ -464,6 +470,12 @@ Parameters
 
        Default: QColor(0, 0, 0, 0)
      - Choose the background color for the tiles
+   * - **Enable antialiasing**
+     - ``ANTIALIAS``
+     - [boolean]
+
+       Default: True
+     - Determines if antialiasing should be enabled
    * - **Tile format**
      - ``TILE_FORMAT``
      - [enumeration]
