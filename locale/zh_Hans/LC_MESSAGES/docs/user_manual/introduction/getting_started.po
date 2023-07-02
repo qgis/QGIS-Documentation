@@ -5,17 +5,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# 徐保才 <1302638819@qq.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-06-14 12:36+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: 徐保才 <1302638819@qq.com>, 2023\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,15 +59,15 @@ msgstr ""
 "标准安装程序适用于 |win| MS Windows 和 |osx| macOS，二进制软件包 (rpm and deb) 或软件库适用于多种版本的 "
 "GUN/Linux |nix| 操作系统。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:295
+#: ../../docs/user_manual/introduction/getting_started.rst:316
 msgid "win"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:285
+#: ../../docs/user_manual/introduction/getting_started.rst:302
 msgid "osx"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:283
+#: ../../docs/user_manual/introduction/getting_started.rst:300
 msgid "nix"
 msgstr ""
 
@@ -140,6 +141,15 @@ msgid ""
 msgstr ""
 "阿拉斯加数据集包含了用于示例和用户手册中截图的所有GIS数据。它还包含了一个较小的GRASS数据库。QGIS样本数据集的投影坐标系是单位为英尺的阿拉斯加阿尔伯斯等面积坐标系（Alaska"
 " Albers Equal Area）。该投影坐标系的EPSG号为2964。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:101
+msgid ""
+"If you intend to use QGIS as a graphical front end for GRASS, you can find a"
+" selection of sample locations (e.g., Spearfish or South Dakota) at the "
+"official GRASS GIS website, https://grass.osgeo.org/download/data/."
+msgstr ""
+"如果打算使用QGIS作为GRASS的图形前端，您可以在 GRASS GIS 官方网站找到一些示例 "
+"(例如斯皮尔菲什或南达科他州)，网址是：https://grass.osgeo.org/download/data/ 。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:109
 msgid "Starting and stopping QGIS"
@@ -231,219 +241,308 @@ msgid "Start QGIS as seen in :ref:`label_startingqgis`."
 msgstr "启动QGIS，参见启动和关闭QGIS（:ref:`label_startingqgis`）。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:145
-msgid "To load the files in QGIS:"
+msgid ""
+"The data we will be working with are in ``Albers Equal Area``, so let's set "
+"the project's CRS accordingly:"
+msgstr "将使用的数据位于 ``Albers Equal Area`` ，因此让我们相应地设置工程的CRS："
+
+#: ../../docs/user_manual/introduction/getting_started.rst:148
+msgid ""
+"Click the |setProjection| :sup:`Select projection` button in the bottom "
+"right of QGIS interface. The project properties dialog opens with the "
+":guilabel:`CRS` tab active."
+msgstr ""
+"单击QGIS界面右下角的 |setProjection| :sup:`选择投影` 按钮。工程属性对话框打开时 :guilabel:`CRS` "
+"选项卡处于激活状态。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:312
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:151
+msgid "Type `̀`2964`` in the |search| :guilabel:`Filter` text area."
+msgstr "在 |search| :guilabel:`过滤` 文本区键入 `̀`2964`` 。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:310
+msgid "search"
+msgstr "search"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:152
+msgid "Select the row with ``NAD27 / Alaska Albers`` CRS name."
+msgstr "选择CRS名称为 ``NAD27 / Alaska Albers`` 的行。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:159
+msgid "Select the Coordinate Reference System of data"
+msgstr "选择数据的坐标参考系"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:161
+msgid "Press :guilabel:`OK`"
+msgstr "按 :guilabel:`确定`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:163
+msgid ""
+"You can ignore/close for now the \"ballpark transform\" message that could "
+"display."
+msgstr "您可以暂时忽略/关闭可能显示的 \"相近变换\" 信息。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:166
+msgid "Load the files in QGIS:"
 msgstr "在QGIS中加载文件："
 
-#: ../../docs/user_manual/introduction/getting_started.rst:147
+#: ../../docs/user_manual/introduction/getting_started.rst:168
 msgid ""
 "Click on the |dataSourceManager| :sup:`Open Data Source Manager` icon. The "
 "Data Source Manager should open in Browser mode."
 msgstr "单击|dataSourceManager| :sup:`打开数据源管理器`图标。数据源管理器应该在浏览器模式下打开。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:273
+#: ../../docs/user_manual/introduction/getting_started.rst:290
 msgid "dataSourceManager"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:149
+#: ../../docs/user_manual/introduction/getting_started.rst:170
 msgid "Browse to the folder :file:`qgis_sample_data/raster/`"
 msgstr "浏览到文件夹 :file:`qgis_sample_data/raster/`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:289
+#: ../../docs/user_manual/introduction/getting_started.rst:171
+msgid ""
+"Select the ERDAS IMG file |rasterLayer| :guilabel:`landcover.img` and "
+"double-click it. The landcover layer is added in the background while the "
+"Data Source Manager window remains open."
+msgstr ""
+"选择 ERDAS IMG 文件 |rasterLayer| :guilabel:`landcover.img` "
+"并双击。landcover图层添加到画布，同时数据源管理器窗口依旧保持打开状态。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:306
 msgid "rasterLayer"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:159
+#: ../../docs/user_manual/introduction/getting_started.rst:181
 msgid "Adding data to a new project in QGIS"
 msgstr "在QGIS中添加数据到新工程"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:275
+#: ../../docs/user_manual/introduction/getting_started.rst:183
+msgid ""
+"To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`, "
+"and drag and drop the |dbSchema| :guilabel:`lakes.gml` file over QGIS main "
+"dialog. (Or just double-click as mentioned above.)"
+msgstr ""
+"要加载lakes数据，请浏览至文件夹 :file:`qgis_sample_data/gml/` ，然后将 |dbSchema| "
+":guilabel:`lakes.gml` 文件拖放到QGIS主对话框上 (或者如上所述双击即可)。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:292
 msgid "dbSchema"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:287
+#: ../../docs/user_manual/introduction/getting_started.rst:186
+msgid ""
+"The :guilabel:`Select Items to Add` dialog opens, scanning the file. This is"
+" due to :file:`.gml` file format being able to store more than one layer at "
+"a time."
+msgstr ":guilabel:`选择要添加的项` 对话框被打开并扫描文件。这是由于 :file:`.gml` 文件格式能够一次储存多个图层。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:194
+msgid "Select layers within a file"
+msgstr "选择文件中的图层"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:196
+msgid ""
+"In our case there is a single |polygonLayer| :guilabel:`lakes` layer. Select"
+" it and press :guilabel:`Add Layers`."
+msgstr ""
+"在此示例中，只有一个 |polygonLayer| :guilabel:`lakes` 图层。选择然后按 :guilabel:`添加图层` 按钮。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:304
 msgid "polygonLayer"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:279
-msgid "indicatorNoCRS"
-msgstr ""
+#: ../../docs/user_manual/introduction/getting_started.rst:198
+msgid "The layer is added to the :guilabel:`Layers` panel"
+msgstr "该图层被添加到 :guilabel:`图层` 面板中"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:178
-msgid ""
-"A :guilabel:`Coordinate Reference System Selector` dialog opens. In the "
-":guilabel:`Filter` menu, type ``2964``, filtering the list of Coordinate "
-"Reference Systems below."
-msgstr ""
-"打开 :guilabel:`坐标参考系选择器` 对话框。 在 :guilabel:` 过滤器` 菜单中输入 ``2964`` "
-"，过滤下面的坐标参考系列表。"
-
-#: ../../docs/user_manual/introduction/getting_started.rst:187
-msgid "Select the Coordinate Reference System of data"
-msgstr "选择数据的坐标参考系"
-
-#: ../../docs/user_manual/introduction/getting_started.rst:189
-msgid "Select the :guilabel:`NAD27 / Alaska Albers` entry"
-msgstr "选择 :guilabel:`NAD27 / Alaska Albers` 条目"
-
-#: ../../docs/user_manual/introduction/getting_started.rst:190
-msgid "Click :guilabel:`OK`"
-msgstr "单击 :guilabel:`确定`"
-
-#: ../../docs/user_manual/introduction/getting_started.rst:191
+#: ../../docs/user_manual/introduction/getting_started.rst:199
 msgid "Close the Data Source Manager window"
 msgstr "关闭数据源管理窗口"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:193
+#: ../../docs/user_manual/introduction/getting_started.rst:201
+msgid ""
+"In the :guilabel:`Layers` panel, you can notice that the :guilabel:`lakes` "
+"layer displays |indicatorNoCRS| :sup:`Layer has no coordinate reference "
+"system set` next to it. Let's adjust that."
+msgstr ""
+"在 :guilabel:`图层` 面板，您可能注意到 :guilabel:`lakes` 图层旁边显示 |indicatorNoCRS| "
+":sup:`图层未设置坐标参照系` 。我们来调整一下。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:296
+msgid "indicatorNoCRS"
+msgstr ""
+
+#: ../../docs/user_manual/introduction/getting_started.rst:205
+msgid ""
+"Click the |indicatorNoCRS| icon. The :guilabel:`Coordinate Reference System "
+"Selector` dialog opens."
+msgstr "单击 |indicatorNoCRS| 图标，将打开 :guilabel:`坐标参照系选择器` 对话框。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:207
+msgid ""
+"As done earlier, find and select the :guilabel:`NAD27 / Alaska Albers` CRS "
+"entry."
+msgstr "如前所述，查找并选择 :guilabel:`NAD27 / Alaska Albers` CRS条目。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:208
+msgid "Click :guilabel:`OK`"
+msgstr "单击 :guilabel:`确定`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:210
 msgid ""
 "You now have the two layers available in your project in some random "
 "colours. Let's do some customization on the lakes layer."
 msgstr "现在您的项目中有了一些随机颜色渲染的两个可用图层。让我们在湖泊图层做一些定制吧。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:196
+#: ../../docs/user_manual/introduction/getting_started.rst:213
 msgid ""
 "Select the |zoomIn| :sup:`Zoom In` tool on the :guilabel:`Navigation` "
 "toolbar"
 msgstr "在 :guilabel:`导航` 工具栏上选择 |zoomIn| :sup:`放大` 工具"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:297
+#: ../../docs/user_manual/introduction/getting_started.rst:318
 msgid "zoomIn"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:197
+#: ../../docs/user_manual/introduction/getting_started.rst:214
 msgid "Zoom to an area with some lakes"
 msgstr "缩放到一些湖泊的区域"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:198
+#: ../../docs/user_manual/introduction/getting_started.rst:215
 msgid ""
 "Double-click the :file:`lakes` layer in the map legend to open the "
 ":guilabel:`Properties` dialog"
 msgstr "在图例中双击 :file:`lakes` 图层，打开 :guilabel:`属性` 对话框"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:200
+#: ../../docs/user_manual/introduction/getting_started.rst:217
 msgid "To change the lakes color:"
 msgstr "改变湖泊颜色"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:202
+#: ../../docs/user_manual/introduction/getting_started.rst:219
 msgid "Click on the |symbology| :guilabel:`Symbology` tab"
 msgstr "单击 |symbology| :guilabel:`符号` 选项卡"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:293
+#: ../../docs/user_manual/introduction/getting_started.rst:314
 msgid "symbology"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:203
+#: ../../docs/user_manual/introduction/getting_started.rst:220
 msgid "Select blue as fill color."
 msgstr "选择蓝色作为填充颜色"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:210
+#: ../../docs/user_manual/introduction/getting_started.rst:227
 msgid "Selecting Lakes color"
 msgstr "选择湖泊颜色"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:212
+#: ../../docs/user_manual/introduction/getting_started.rst:229
 msgid ""
 "Press :guilabel:`OK`. Lakes are now displayed in blue in the map canvas."
 msgstr "按下 :guilabel:`确定` 。现在地图画布中湖泊显示为蓝色了。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:213
+#: ../../docs/user_manual/introduction/getting_started.rst:230
 msgid "To display the name of the lakes:"
 msgstr "显示湖泊名称："
 
-#: ../../docs/user_manual/introduction/getting_started.rst:215
+#: ../../docs/user_manual/introduction/getting_started.rst:232
 msgid "Reopen the :file:`lakes` layer :guilabel:`Properties` dialog"
 msgstr "重新打开 :file:`lakes` layer :guilabel:`属性` 对话框"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:216
+#: ../../docs/user_manual/introduction/getting_started.rst:233
 msgid "Click on the |labelingSingle| :guilabel:`Labels` tab"
 msgstr "单击 |labelingSingle| :guilabel:`标注` 选项卡"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:281
+#: ../../docs/user_manual/introduction/getting_started.rst:298
 msgid "labelingSingle"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:217
+#: ../../docs/user_manual/introduction/getting_started.rst:234
 msgid ""
 "Select :guilabel:`Single labels` in the drop-down menu to enable labeling."
 msgstr "在下拉菜单中选择 :guilabel:`单一标注` 来启用标注。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:218
+#: ../../docs/user_manual/introduction/getting_started.rst:235
 msgid "From the :guilabel:`Label with` list, choose the ``NAMES`` field."
 msgstr "从 :guilabel:`标注为` 列表中选择 ``NAMES`` 字段"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:225
+#: ../../docs/user_manual/introduction/getting_started.rst:242
 msgid "Showing Lakes names"
 msgstr "显示湖泊名称"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:227
+#: ../../docs/user_manual/introduction/getting_started.rst:244
 msgid "Press :guilabel:`Apply`. Names will now load over the boundaries."
 msgstr "按下 :guilabel:`应用` 。现在名称加载在边界上。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:228
+#: ../../docs/user_manual/introduction/getting_started.rst:245
 msgid ""
 "You can improve readability of the labels by adding a white buffer around "
 "them:"
 msgstr "你可以在标注周围添加白色轮廓已增加标注的辨识度："
 
-#: ../../docs/user_manual/introduction/getting_started.rst:230
+#: ../../docs/user_manual/introduction/getting_started.rst:247
 msgid "Click the :guilabel:`Buffer` tab in the list on the left"
 msgstr "单击左边列表中的 :guilabel:`描边` 选项卡"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:231
+#: ../../docs/user_manual/introduction/getting_started.rst:248
 msgid "Check |checkbox| :guilabel:`Draw text buffer`"
 msgstr "勾选 |checkbox| :guilabel:`绘制文本描边`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:271
+#: ../../docs/user_manual/introduction/getting_started.rst:288
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:232
+#: ../../docs/user_manual/introduction/getting_started.rst:249
 msgid "Choose ``3`` as buffer size"
 msgstr "描边大小选择 ``3``"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:233
+#: ../../docs/user_manual/introduction/getting_started.rst:250
 msgid "Click :guilabel:`Apply`"
 msgstr "单击 :guilabel:`应用`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:234
+#: ../../docs/user_manual/introduction/getting_started.rst:251
 msgid "Check if the result looks good, and update the value if needed."
 msgstr "检查结果是否良好，如果需要可以调整轮廓大小值。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:235
+#: ../../docs/user_manual/introduction/getting_started.rst:252
 msgid ""
 "Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties` "
 "dialog and apply the changes."
 msgstr "最终单击 :guilabel:`确定` 来关闭 :guilabel:`图层属性`对话框并应用变更。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:238
+#: ../../docs/user_manual/introduction/getting_started.rst:255
 msgid ""
 "Let's now add some decorations in order to shape the map and export it out "
 "of QGIS:"
 msgstr "现在，让我们添加一些装饰以塑造地图并将其导出QGIS："
 
-#: ../../docs/user_manual/introduction/getting_started.rst:241
+#: ../../docs/user_manual/introduction/getting_started.rst:258
 msgid "Select :menuselection:`View --> Decorations --> Scale Bar` menu"
 msgstr "选择 :menuselection:`视图 --> 装饰 --> 比例尺` 菜单"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:242
+#: ../../docs/user_manual/introduction/getting_started.rst:259
 msgid ""
 "In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` "
 "option"
 msgstr "在打开的对话框中，选中 |checkbox| :guilabel:`启用比例尺`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:243
+#: ../../docs/user_manual/introduction/getting_started.rst:260
 msgid "Customize the options of the dialog as you want"
 msgstr "根据你的需要自定义对话框中的选项"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:244
+#: ../../docs/user_manual/introduction/getting_started.rst:261
 msgid "Press :guilabel:`Apply`"
 msgstr "按下:guilabel:`应用`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:245
+#: ../../docs/user_manual/introduction/getting_started.rst:262
 msgid ""
 "Likewise, from the decorations menu, add more items (north arrow, "
 "copyright...) to the map canvas with custom properties."
 msgstr "同样，可以从装饰菜单中添加更多项（指北针、版权…）到自定义属性的地图画布中。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:247
+#: ../../docs/user_manual/introduction/getting_started.rst:264
 msgid ""
 "Click :menuselection:`Project --> Import/Export -->` |saveMapAsImage| "
 ":menuselection:`Export Map to Image...`"
@@ -451,21 +550,21 @@ msgstr ""
 "单击 :menuselection:`工程 -->导入/导出 -->` |saveMapAsImage| "
 ":menuselection:`导出为图片...`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:291
+#: ../../docs/user_manual/introduction/getting_started.rst:308
 msgid "saveMapAsImage"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:249
+#: ../../docs/user_manual/introduction/getting_started.rst:266
 msgid "Press :guilabel:`Save` in the opened dialog"
 msgstr "在打开的对话框中按下 :guilabel:`保存` "
 
-#: ../../docs/user_manual/introduction/getting_started.rst:250
+#: ../../docs/user_manual/introduction/getting_started.rst:267
 msgid ""
 "Select a file location, a format and confirm by pressing :guilabel:`Save` "
 "again."
 msgstr "选择文件位置与格式，并再次按下:guilabel:`保存`确认。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:252
+#: ../../docs/user_manual/introduction/getting_started.rst:269
 msgid ""
 "Press :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to "
 "store your changes as a :file:`.qgz` project file."
@@ -473,11 +572,11 @@ msgstr ""
 "按下 :menuselection:`工程 -->` |fileSave| :menuselection:`保存...` ，将你的修改保存到 "
 ":file:`.qgz`工程文件中。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:277
+#: ../../docs/user_manual/introduction/getting_started.rst:294
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:255
+#: ../../docs/user_manual/introduction/getting_started.rst:272
 msgid ""
 "That's it! You can see how easy it is to visualize raster and vector layers "
 "in QGIS, configure them and generate your map in an image format you can use"
@@ -486,7 +585,7 @@ msgid ""
 msgstr ""
 "就这样！您可以看到在QGIS中可视化栅格和矢量图层、配置它们并以可以在其他软件中使用的图像格式生成地图是多么容易。让我们继续了解有关可用功能、特性和设置的更多信息，以及如何使用它们。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:261
+#: ../../docs/user_manual/introduction/getting_started.rst:278
 msgid ""
 "To continue learning QGIS through step-by-step exercises, follow the "
 ":ref:`Training manual <QGIS-training-manual-index-reference>`."
