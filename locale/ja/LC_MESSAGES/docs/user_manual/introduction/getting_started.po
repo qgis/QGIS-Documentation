@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
 # Takaki IEKURA <tacostea@gmail.com>, 2023
+# Harrissou Sant-anna, 2023
 # tomoyuki arai <tarai.3367@gmail.com>, 2023
 # 
 #, fuzzy
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-07 15:48+0000\n"
+"POT-Creation-Date: 2023-06-14 12:36+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -61,15 +61,15 @@ msgstr ""
 "|win| MS Windowsおよび |osx| macOS用では、標準インストーラが提供されています。 GNU / Linux各種 |nix| "
 "向けには、バイナリパッケージ（rpmおよびdeb）またはソフトウェアリポジトリが提供されています。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:296
+#: ../../docs/user_manual/introduction/getting_started.rst:316
 msgid "win"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:286
+#: ../../docs/user_manual/introduction/getting_started.rst:302
 msgid "osx"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:284
+#: ../../docs/user_manual/introduction/getting_started.rst:300
 msgid "nix"
 msgstr ""
 
@@ -254,10 +254,56 @@ msgid "Start QGIS as seen in :ref:`label_startingqgis`."
 msgstr ":ref:`label_startingqgis` で説明されている方法でQGISを起動します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:145
-msgid "To load the files in QGIS:"
-msgstr "QGIS にファイルをロードします。"
+msgid ""
+"The data we will be working with are in ``Albers Equal Area``, so let's set "
+"the project's CRS accordingly:"
+msgstr ""
+"今回扱うデータは ``Albers Equal Area`` 図法で作成されています。このため、プロジェクトのCRSを適切に設定しましょう:"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:147
+#: ../../docs/user_manual/introduction/getting_started.rst:148
+msgid ""
+"Click the |setProjection| :sup:`Select projection` button in the bottom "
+"right of QGIS interface. The project properties dialog opens with the "
+":guilabel:`CRS` tab active."
+msgstr ""
+"QGISインターフェースの右下にある |setProjection| :sup:`CRSを選択` "
+"ボタンをクリックします。プロジェクトのプロパティダイアログが開き、 :guilabel:`CRS` タブがアクティブになります。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:312
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:151
+msgid "Type `̀`2964`` in the |search| :guilabel:`Filter` text area."
+msgstr "|search| :guilabel:`フィルタ` のテキストボックスに `̀`2964`` と入力します。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:310
+msgid "search"
+msgstr "search"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:152
+msgid "Select the row with ``NAD27 / Alaska Albers`` CRS name."
+msgstr "``NAD27 / Alaska Albers`` というCRS名の行を選択します。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:159
+msgid "Select the Coordinate Reference System of data"
+msgstr "データの座標参照系を選択する"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:161
+msgid "Press :guilabel:`OK`"
+msgstr ":guilabel:`OK` を押します"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:163
+msgid ""
+"You can ignore/close for now the \"ballpark transform\" message that could "
+"display."
+msgstr "\"概算transformが使用されました\" というメッセージが表示されるかもしれませんが、今のところは無視するか閉じてしまってかまいません。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:166
+msgid "Load the files in QGIS:"
+msgstr "QGISにファイルを読み込みます:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:168
 msgid ""
 "Click on the |dataSourceManager| :sup:`Open Data Source Manager` icon. The "
 "Data Source Manager should open in Browser mode."
@@ -265,15 +311,15 @@ msgstr ""
 "|dataSourceManager| :sup:`データソースマネージャを開く` "
 "アイコンをクリックします。データソースマネージャがブラウザモードで開きます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:274
+#: ../../docs/user_manual/introduction/getting_started.rst:290
 msgid "dataSourceManager"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:149
+#: ../../docs/user_manual/introduction/getting_started.rst:170
 msgid "Browse to the folder :file:`qgis_sample_data/raster/`"
 msgstr ":file:`qgis_sample_data/raster/` フォルダに移動します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:150
+#: ../../docs/user_manual/introduction/getting_started.rst:171
 msgid ""
 "Select the ERDAS IMG file |rasterLayer| :guilabel:`landcover.img` and "
 "double-click it. The landcover layer is added in the background while the "
@@ -282,19 +328,29 @@ msgstr ""
 "ERDAS IMGファイル |rasterLayer| :guilabel:`landcover.img` "
 "を選択してダブルクリックします。データソースマネージャウィンドウは開いたままで、landcoverレイヤがバックグラウンドで追加されます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:290
+#: ../../docs/user_manual/introduction/getting_started.rst:306
 msgid "rasterLayer"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:159
+#: ../../docs/user_manual/introduction/getting_started.rst:181
 msgid "Adding data to a new project in QGIS"
 msgstr "新しいQGISプロジェクトにデータを追加する"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:276
+#: ../../docs/user_manual/introduction/getting_started.rst:183
+msgid ""
+"To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`, "
+"and drag and drop the |dbSchema| :guilabel:`lakes.gml` file over QGIS main "
+"dialog. (Or just double-click as mentioned above.)"
+msgstr ""
+"lakesデータを読み込むには、 :file:`qgis_sample_data/gml/` フォルダに移動し、 |dbSchema| "
+":guilabel:`lakes.gml` "
+"ファイルをQGISのメインダイアログにドラッグ＆ドロップします（または、上で述べたようにファイルをダブルクリックします）。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:292
 msgid "dbSchema"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:164
+#: ../../docs/user_manual/introduction/getting_started.rst:186
 msgid ""
 "The :guilabel:`Select Items to Add` dialog opens, scanning the file. This is"
 " due to :file:`.gml` file format being able to store more than one layer at "
@@ -303,11 +359,11 @@ msgstr ""
 ":guilabel:`追加するアイテムを選択` ダイアログが開き、ファイルをスキャンします。これは、 :file:`.gml` "
 "ファイル形式が一度に複数のレイヤを保存できるためです。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:172
+#: ../../docs/user_manual/introduction/getting_started.rst:194
 msgid "Select layers within a file"
 msgstr "ファイル内のレイヤの選択"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:174
+#: ../../docs/user_manual/introduction/getting_started.rst:196
 msgid ""
 "In our case there is a single |polygonLayer| :guilabel:`lakes` layer. Select"
 " it and press :guilabel:`Add Layers`."
@@ -315,49 +371,48 @@ msgstr ""
 "今回は、単一の |polygonLayer| :guilabel:`lakes` があります。これを選択し、 :guilabel:`レイヤを追加` "
 "ボタンを押します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:288
+#: ../../docs/user_manual/introduction/getting_started.rst:304
 msgid "polygonLayer"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:176
-msgid ""
-"The layer is added to the :guilabel:`Layers` panel but it displays "
-"|indicatorNoCRS| :sup:`Layer has no coordinate reference system set` next to"
-" it. Let's adjust that by clicking the icon."
-msgstr ""
-"このレイヤが :guilabel:`レイヤ` パネルに追加されますが、レイヤの横には |indicatorNoCRS| "
-":sup:`レイヤにCRSが設定されていません` と表示されます。このアイコンをクリックして、設定を行いましょう。"
+#: ../../docs/user_manual/introduction/getting_started.rst:198
+msgid "The layer is added to the :guilabel:`Layers` panel"
+msgstr ":guilabel:`レイヤ` パネルにレイヤが追加されます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:280
-msgid "indicatorNoCRS"
-msgstr ""
-
-#: ../../docs/user_manual/introduction/getting_started.rst:179
-msgid ""
-"A :guilabel:`Coordinate Reference System Selector` dialog opens. In the "
-":guilabel:`Filter` menu, type ``2964``, filtering the list of Coordinate "
-"Reference Systems below."
-msgstr ""
-":guilabel:`座標参照系の選択` ダイアログが開きます。 :guilabel:`フィルター` メニューで ``2964`` "
-"と打ち込んでください。フィルタされた座標参照系のリストが下に表示されます。"
-
-#: ../../docs/user_manual/introduction/getting_started.rst:188
-msgid "Select the Coordinate Reference System of data"
-msgstr "データの座標参照系を選択する"
-
-#: ../../docs/user_manual/introduction/getting_started.rst:190
-msgid "Select the :guilabel:`NAD27 / Alaska Albers` entry"
-msgstr ":guilabel:`NAD27 / Alaska Albers` エントリを選択します。"
-
-#: ../../docs/user_manual/introduction/getting_started.rst:191
-msgid "Click :guilabel:`OK`"
-msgstr ":guilabel:`OK` をクリックします。"
-
-#: ../../docs/user_manual/introduction/getting_started.rst:192
+#: ../../docs/user_manual/introduction/getting_started.rst:199
 msgid "Close the Data Source Manager window"
 msgstr "データソースマネージャウィンドウを閉じます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:194
+#: ../../docs/user_manual/introduction/getting_started.rst:201
+msgid ""
+"In the :guilabel:`Layers` panel, you can notice that the :guilabel:`lakes` "
+"layer displays |indicatorNoCRS| :sup:`Layer has no coordinate reference "
+"system set` next to it. Let's adjust that."
+msgstr ""
+":guilabel:`レイヤ` パネルにおいて、 :guilabel:`lakes` レイヤの横に |indicatorNoCRS| "
+":sup:`レイヤにCRSが設定されていません` と表示されているのに気づくでしょう。これを解決しましょう。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:296
+msgid "indicatorNoCRS"
+msgstr ""
+
+#: ../../docs/user_manual/introduction/getting_started.rst:205
+msgid ""
+"Click the |indicatorNoCRS| icon. The :guilabel:`Coordinate Reference System "
+"Selector` dialog opens."
+msgstr "|indicatorNoCRS| アイコンをクリックします。 :guilabel:`CRSセレクタ` ダイアログが開きます。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:207
+msgid ""
+"As done earlier, find and select the :guilabel:`NAD27 / Alaska Albers` CRS "
+"entry."
+msgstr "上で行ったのと同様に、 :guilabel:`NAD27 / Alaska Albers` のCRSエントリを検索して選択します。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:208
+msgid "Click :guilabel:`OK`"
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:210
 msgid ""
 "You now have the two layers available in your project in some random "
 "colours. Let's do some customization on the lakes layer."
@@ -365,151 +420,151 @@ msgstr ""
 "これでプロジェクトで2つのレイヤを使用できるようになりました。レイヤはQGISによってランダムな配色がされています。では、 "
 "lakesレイヤをカスタマイズしてみましょう。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:197
+#: ../../docs/user_manual/introduction/getting_started.rst:213
 msgid ""
 "Select the |zoomIn| :sup:`Zoom In` tool on the :guilabel:`Navigation` "
 "toolbar"
 msgstr ":guilabel:`ナビゲーション` ツールバーで |zoomIn| :sup:`拡大` ツールを選択します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:298
+#: ../../docs/user_manual/introduction/getting_started.rst:318
 msgid "zoomIn"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:198
+#: ../../docs/user_manual/introduction/getting_started.rst:214
 msgid "Zoom to an area with some lakes"
 msgstr "湖がある場所にズームします。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:199
+#: ../../docs/user_manual/introduction/getting_started.rst:215
 msgid ""
 "Double-click the :file:`lakes` layer in the map legend to open the "
 ":guilabel:`Properties` dialog"
 msgstr ":file:`lakes` レイヤをレイヤパネルでダブルクリックして :guilabel:`レイヤプロパティ` ダイアログを開きます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:201
+#: ../../docs/user_manual/introduction/getting_started.rst:217
 msgid "To change the lakes color:"
 msgstr "湖の色を変えるには、次のように操作します："
 
-#: ../../docs/user_manual/introduction/getting_started.rst:203
+#: ../../docs/user_manual/introduction/getting_started.rst:219
 msgid "Click on the |symbology| :guilabel:`Symbology` tab"
 msgstr "|symbology| :guilabel:`シンボロジ` タブをクリックします。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:294
+#: ../../docs/user_manual/introduction/getting_started.rst:314
 msgid "symbology"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:204
+#: ../../docs/user_manual/introduction/getting_started.rst:220
 msgid "Select blue as fill color."
 msgstr "塗りつぶし色として青を選択します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:211
+#: ../../docs/user_manual/introduction/getting_started.rst:227
 msgid "Selecting Lakes color"
 msgstr "湖の色を選択する"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:213
+#: ../../docs/user_manual/introduction/getting_started.rst:229
 msgid ""
 "Press :guilabel:`OK`. Lakes are now displayed in blue in the map canvas."
 msgstr ":guilabel:`OK` を押します。マップキャンバスでは、湖が青色で表示されます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:214
+#: ../../docs/user_manual/introduction/getting_started.rst:230
 msgid "To display the name of the lakes:"
 msgstr "湖の名前を表示するには、次のように操作します："
 
-#: ../../docs/user_manual/introduction/getting_started.rst:216
+#: ../../docs/user_manual/introduction/getting_started.rst:232
 msgid "Reopen the :file:`lakes` layer :guilabel:`Properties` dialog"
 msgstr ":file:`lakes` レイヤで :guilabel:`レイヤプロパティ` ダイアログを再度開きます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:217
+#: ../../docs/user_manual/introduction/getting_started.rst:233
 msgid "Click on the |labelingSingle| :guilabel:`Labels` tab"
 msgstr "|labelingSingle| :guilabel:`ラベル` タブをクリックします。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:282
+#: ../../docs/user_manual/introduction/getting_started.rst:298
 msgid "labelingSingle"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:218
+#: ../../docs/user_manual/introduction/getting_started.rst:234
 msgid ""
 "Select :guilabel:`Single labels` in the drop-down menu to enable labeling."
 msgstr "ドロップダウンメニューで :guilabel:`単一定義(single)` を選択すると、ラベリングが有効になります。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:219
+#: ../../docs/user_manual/introduction/getting_started.rst:235
 msgid "From the :guilabel:`Label with` list, choose the ``NAMES`` field."
 msgstr ":guilabel:`値` リストから ``NAMES`` フィールドを選びます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:226
+#: ../../docs/user_manual/introduction/getting_started.rst:242
 msgid "Showing Lakes names"
 msgstr "湖の名前を表示する"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:228
+#: ../../docs/user_manual/introduction/getting_started.rst:244
 msgid "Press :guilabel:`Apply`. Names will now load over the boundaries."
 msgstr ":guilabel:`適用` を押します。すると名前が湖の領域の上に表示されます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:229
+#: ../../docs/user_manual/introduction/getting_started.rst:245
 msgid ""
 "You can improve readability of the labels by adding a white buffer around "
 "them:"
 msgstr "ラベルに白いバッファを追加してラベルを読みやすくするには、次のように操作します："
 
-#: ../../docs/user_manual/introduction/getting_started.rst:231
+#: ../../docs/user_manual/introduction/getting_started.rst:247
 msgid "Click the :guilabel:`Buffer` tab in the list on the left"
 msgstr "左のリストで :guilabel:`バッファ` タブをクリックします。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:232
+#: ../../docs/user_manual/introduction/getting_started.rst:248
 msgid "Check |checkbox| :guilabel:`Draw text buffer`"
 msgstr "|checkbox| :guilabel:`テキストバッファを描画` にチェックを入れます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:272
+#: ../../docs/user_manual/introduction/getting_started.rst:288
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:233
+#: ../../docs/user_manual/introduction/getting_started.rst:249
 msgid "Choose ``3`` as buffer size"
 msgstr "サイズを ``3`` にします。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:234
+#: ../../docs/user_manual/introduction/getting_started.rst:250
 msgid "Click :guilabel:`Apply`"
 msgstr ":guilabel:`適用` をクリックします。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:235
+#: ../../docs/user_manual/introduction/getting_started.rst:251
 msgid "Check if the result looks good, and update the value if needed."
 msgstr "出来栄えを確認して、必要なら値を変更します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:236
+#: ../../docs/user_manual/introduction/getting_started.rst:252
 msgid ""
 "Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties` "
 "dialog and apply the changes."
 msgstr "最後に :guilabel:`OK` をクリックして :guilabel:`レイヤプロパティ` ダイアログを閉じ、変更を適用します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:239
+#: ../../docs/user_manual/introduction/getting_started.rst:255
 msgid ""
 "Let's now add some decorations in order to shape the map and export it out "
 "of QGIS:"
 msgstr "今度は、地図の見栄えを整えるためにいくつか整飾を加えて、QGISからエクスポートしてみましょう。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:242
+#: ../../docs/user_manual/introduction/getting_started.rst:258
 msgid "Select :menuselection:`View --> Decorations --> Scale Bar` menu"
 msgstr "メニューから :menuselection:`ビュー --> 地図整飾 --> スケールバー`  を選択します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:243
+#: ../../docs/user_manual/introduction/getting_started.rst:259
 msgid ""
 "In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` "
 "option"
 msgstr "開いたダイアログで、 |checkbox| :guilabel:`スケールバーを有効にする` にチェックを入れます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:244
+#: ../../docs/user_manual/introduction/getting_started.rst:260
 msgid "Customize the options of the dialog as you want"
 msgstr "好みにあわせてダイアログのオプションを設定します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:245
+#: ../../docs/user_manual/introduction/getting_started.rst:261
 msgid "Press :guilabel:`Apply`"
 msgstr ":guilabel:`適用` を押します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:246
+#: ../../docs/user_manual/introduction/getting_started.rst:262
 msgid ""
 "Likewise, from the decorations menu, add more items (north arrow, "
 "copyright...) to the map canvas with custom properties."
 msgstr "同様に地図整飾メニューから、さらに方位記号、著作権ラベルなどのアイテムを、属性を調整して地図キャンバスに追加できます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:248
+#: ../../docs/user_manual/introduction/getting_started.rst:264
 msgid ""
 "Click :menuselection:`Project --> Import/Export -->` |saveMapAsImage| "
 ":menuselection:`Export Map to Image...`"
@@ -517,21 +572,21 @@ msgstr ""
 "メニューから :menuselection:`プロジェクト --> インポートとエクスポート -->` |saveMapAsImage| "
 ":menuselection:`地図を画像にエクスポート...` を選びます。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:292
+#: ../../docs/user_manual/introduction/getting_started.rst:308
 msgid "saveMapAsImage"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:250
+#: ../../docs/user_manual/introduction/getting_started.rst:266
 msgid "Press :guilabel:`Save` in the opened dialog"
 msgstr "開いたダイアログで :guilabel:`保存` を押します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:251
+#: ../../docs/user_manual/introduction/getting_started.rst:267
 msgid ""
 "Select a file location, a format and confirm by pressing :guilabel:`Save` "
 "again."
 msgstr "ファイルの保存場所とフォーマットを選択し、再度 :guilabel:`保存` を押して確定します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:253
+#: ../../docs/user_manual/introduction/getting_started.rst:269
 msgid ""
 "Press :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to "
 "store your changes as a :file:`.qgz` project file."
@@ -539,11 +594,11 @@ msgstr ""
 "変更を :file:`.qgz` プロジェクトファイルに保存する場合は、 :menuselection:`プロジェクト -->` |fileSave| "
 ":menuselection:`保存...` を選択します。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:278
+#: ../../docs/user_manual/introduction/getting_started.rst:294
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:256
+#: ../../docs/user_manual/introduction/getting_started.rst:272
 msgid ""
 "That's it! You can see how easy it is to visualize raster and vector layers "
 "in QGIS, configure them and generate your map in an image format you can use"
@@ -552,7 +607,7 @@ msgid ""
 msgstr ""
 "これでおしまいです。QGISでラスタレイヤやベクタレイヤを可視化し、設定を行った上で、他のソフトウェアで使用できる画像フォーマットで地図を作成するのがいかに簡単であるか理解できたと思います。引き続き、QGISで使える機能や特徴、設定、およびその使用方法についてさらに学んでいきましょう。"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:262
+#: ../../docs/user_manual/introduction/getting_started.rst:278
 msgid ""
 "To continue learning QGIS through step-by-step exercises, follow the "
 ":ref:`Training manual <QGIS-training-manual-index-reference>`."
