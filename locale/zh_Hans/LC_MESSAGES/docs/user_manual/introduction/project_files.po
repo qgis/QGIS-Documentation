@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# 徐保才 <1302638819@qq.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: 徐保才 <1302638819@qq.com>, 2023\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -97,7 +98,7 @@ msgid ""
 "way to the map canvas."
 msgstr ""
 "启动时，会显示 :guilabel:`工程模板` 和 :guilabel:`最近工程` 列表，包括屏幕截图、名称和文件路径 (最多支持10个工程)。 "
-":guilabel:`最近工程` 列表可以方便地访问最近使用的工程；双击条目打开工程或工程模板；右键单击条目:guilabel:`固定到列表`, "
+":guilabel:`最近工程` 列表可以方便地访问最近使用的工程；双击条目打开工程或工程模板；右键单击条目 :guilabel:`固定到列表`, "
 ":guilabel:`打开目录....` 或 :guilabel:`从列表中移除` 。您还可以添加图层并自动创建新工程，之后列表消失，让位于地图画布。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:57
@@ -144,6 +145,18 @@ msgstr "图层属性，包括符号化和样式"
 msgid "Layer notes"
 msgstr "图层注释"
 
+#: ../../docs/user_manual/introduction/project_files.rst:78
+msgid "2D and 3D map views"
+msgstr "2D和3D地图视图"
+
+#: ../../docs/user_manual/introduction/project_files.rst:79
+msgid "Projection for each map view"
+msgstr "每个地图视图的投影"
+
+#: ../../docs/user_manual/introduction/project_files.rst:80
+msgid "Last viewed extent for each map"
+msgstr "每个地图的上次查看范围"
+
 #: ../../docs/user_manual/introduction/project_files.rst:81
 msgid "Print layouts"
 msgstr "打印布局"
@@ -179,7 +192,7 @@ msgstr "插件设置"
 #: ../../docs/user_manual/introduction/project_files.rst:89
 msgid ""
 "QGIS Server settings from the OWS settings tab in the Project properties"
-msgstr "工程属性中OWS设置选项卡的QGIS服务器设置"
+msgstr "工程属性中OWS设置选项卡的 QGIS Server 设置"
 
 #: ../../docs/user_manual/introduction/project_files.rst:90
 msgid "Queries stored in the DB Manager"
@@ -253,15 +266,14 @@ msgid ""
 "connection, schema and project."
 msgstr ""
 "这两个菜单项都有一个子菜单，其中列出了另外的工程存储实现方式 "
-"(PostgreSQL和GeoPackage)。单击将打开一个对话框，选择GeoPackage (连接和工程两个选项) 或PostgreSQL "
-"(连接、架构和工程三个选项)。"
+"(PostgreSQL和地理包)。单击将打开对话框，选择地理包连接和工程或PostgreSQL连接、架构和工程。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:136
 msgid ""
 "Projects stored in Geopackage or PostgreSQL can also be loaded through the "
 "QGIS browser panel, either by double-clicking them or by dragging them to "
 "the map canvas."
-msgstr "存储在Geopackage或PostgreSQL中的工程也可以通过QGIS浏览器面板加载，方法是双击或将它们拖到地图画布。"
+msgstr "存储在地理包或PostgreSQL中的工程也可以通过QGIS浏览器面板加载，方法是双击或将它们拖到地图画布。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:144
 msgid "Handling broken file paths"
@@ -288,6 +300,15 @@ msgid ""
 "Select a row, press :guilabel:`Browse` to indicate the correct location and "
 "click :guilabel:`Apply changes`;"
 msgstr "选择某一行，单击 :guilabel:`浏览` 按钮找到相关图层所在数据源的正确位置，然后单击 :guilabel:`应用更改`;"
+
+#: ../../docs/user_manual/introduction/project_files.rst:156
+msgid ""
+"Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
+"fix all or selected broken path(s). Be aware that the browsing may take some"
+" time. Then click :guilabel:`Apply changes`."
+msgstr ""
+"单击 :guilabel:`自动查找` 浏览文件夹，并尝试自动修复所有或选中的断开路径。请注意，浏览可能需要一些时间。然后单击 "
+":guilabel:`应用更改` 。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:159
 msgid ""
@@ -323,6 +344,13 @@ msgstr "从工程 |deleteSelected| :guilabel:`移除不可用图层` 。"
 #: ../../docs/user_manual/introduction/project_files.rst:222
 msgid "deleteSelected"
 msgstr "deleteSelected"
+
+#: ../../docs/user_manual/introduction/project_files.rst:171
+msgid ""
+"Launching QGIS from command line using the :ref:`skipbadlayers` option can "
+"help you skip the :guilabel:`Handle Unavailable Layers` dialog at startup."
+msgstr ""
+"使用 :ref:`skipbadlayers` 选项从命令行启动QGIS可以帮助您在启动时跳过 :guilabel:`处理不可用图层` 对话框。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:177
 msgid "Generating output"
