@@ -339,10 +339,10 @@ discrete values of a field or an expression.
 To use categorized symbology for a layer:
 
 #. Select the :guilabel:`Value` of classification: it can be an existing field
-   or an :ref:`expression <vector_expressions>` you can type in the box or build
-   using the associated |expression| button. Using expressions for categorizing
-   avoids the need to create an ad hoc field for symbology purposes (eg, if your
-   classification criteria are derived from one or more attributes).
+   or an :ref:`expression <vector_expressions>` you can type in the box
+   or build using the associated |expression| button.
+   Using expressions for categorizing avoids the need to create a field for symbology purposes only
+   (eg, if your classification criteria are derived from one or more attributes).
 
    The expression used to classify features can be of any type; eg, it can:
 
@@ -474,8 +474,11 @@ to define rotation and size scale from specified columns.
 
 Also, analogous to the Categorized Renderer, it allows you to select:
 
-* The value (using the fields listbox or the |expression|
-  :sup:`Set value expression` function)
+* The :guilabel:`Value` of classification: it can be an existing field
+  or an :ref:`expression <vector_expressions>` you can type in the box
+  or build using the associated |expression| button.
+  Using expressions for graduating avoids the need to create a field for symbology purposes only
+  (eg, if your classification criteria are derived from one or more attributes).
 * The symbol (using the Symbol selector dialog)
 * The legend format and the precision
 * The method to use to change the symbol: color or size
@@ -545,14 +548,7 @@ the major_rivers layer of the QGIS sample dataset.
 The created classes also appear in a tree hierarchy in the :guilabel:`Layers` panel.
 Double-click an entry in the map legend to edit the assigned symbol.
 Right-click and you will get some :ref:`more options <editing_style_layer>`.
-.. tip:: **Thematic maps using an expression**
 
-   Categorized and graduated thematic maps can be created using the result
-   of an expression. In the properties dialog for vector layers, the attribute
-   chooser is extended with a |expression| :sup:`Set column expression` function.
-   So you don't need to write the classification attribute
-   to a new column in your attribute table if you want the classification
-   attribute to be a composite of multiple fields, or a formula of some sort.
 
 .. index:: Proportional symbol, Multivariate analysis, Size assistant
 .. _proportional_symbols:
