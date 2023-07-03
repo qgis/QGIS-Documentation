@@ -413,23 +413,30 @@ Right-click on a layer and select :menuselection:`Styles -->` in the list in ord
     are of the same type (vector, raster, mesh, point cloud, ...) as the original layer and,
     for vector layers, have the same geometry type (point, line or polygon).
 
+When using a symbology based on features classification
+(e.g. :ref:`categorized <categorized_renderer>`, :ref:`graduated <graduated_renderer>`
+or :ref:`rule-based <rule_based_rendering>` for vector layers,
+or :ref:`classification <point_cloud_classification>` for point clouds),
+right-clicking a class entry in the :guilabel:`Layers` panels makes it possible
+to edit the visibility of the classes (and their features) and avoid (un)checking them one by one:
+
+* |toggleAllLayers| :guilabel:`Toggle Items`
+* |showAllLayers| :guilabel:`Show All Items`
+* |hideAllLayers| :guilabel:`Hide All Items`
+
+With vector layer, the contextual menu of a class leaf entry also gives access to:
+
+* |selectAll| :guilabel:`Select features`: selects in the layer all the features matching that class
+* |openTable| :guilabel:`Show in attribute table`: opens an attribute table
+  filtered to only the features matching that class
 * update the :ref:`symbol color <color-selector>` using a **Color Wheel**.
-  For convenience, the recently used colors are also available at the bottom
-  of the color wheel.
-* :guilabel:`Edit Symbol...`: open the :ref:`Symbol Selector <symbol-selector>`
-  dialog and change feature symbol (symbol, size, color...).
+  For convenience, the recently used colors are also available at the bottom of the color wheel.
+* :guilabel:`Edit Symbol...`: opens the :ref:`Symbol Selector <symbol-selector>`
+  dialog to change feature symbol (symbol, size, color...).
+* :guilabel:`Copy Symbol`
+* :guilabel:`Paste Symbol`
 
-When using a classification symbology type (based on :ref:`categorized
-<categorized_renderer>`, :ref:`graduated <graduated_renderer>` or
-:ref:`rule-based <rule_based_rendering>`), the aforementioned symbol-level
-options are available from the class entry context menu. Also provided are the
-|toggleAllLayers| :guilabel:`Toggle Items`, |showAllLayers| :guilabel:`Show All
-Items` and |hideAllLayers| :guilabel:`Hide All Items` entries to switch the
-visibility of all the classes of features. These avoid (un)checking items
-one by one.
-
-.. tip:: Double-clicking a class leaf entry also opens the
- :guilabel:`Symbol Selector` dialog.
+.. tip:: Double-clicking a class leaf entry also opens the :guilabel:`Symbol Selector` dialog.
 
 
 .. index::
