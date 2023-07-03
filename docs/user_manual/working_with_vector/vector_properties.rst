@@ -440,6 +440,10 @@ Right-clicking over selected item(s) shows a contextual menu to:
 
 * :guilabel:`Unmerge Categories` that were previously merged
 
+The created classes also appear in a tree hierarchy in the :guilabel:`Layers` panel.
+Double-click an entry in the map legend to edit the assigned symbol.
+Right-click and you will get some :ref:`more options <editing_style_layer>`.
+
 .. _categorized_advanced_menu:
 
 The :guilabel:`Advanced` menu gives access to options to speed classification
@@ -452,23 +456,6 @@ or fine-tune the symbols rendering:
   assigns to each category a symbol whose name represents the classification
   value of the category
 * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering.
-
-.. tip:: **Edit categories directly from the** :guilabel:`Layers` **panel**
-
-   When a layer symbology is based on a :ref:`categorized <categorized_renderer>`,
-   :ref:`graduated <graduated_renderer>` or :ref:`rule-based <rule_based_rendering>`
-   symbology mode, you can edit each of the categories from the :guilabel:`Layers`
-   Panel. Right-click on a sub-item of the layer and you will:
-
-   * |toggleAllLayers| :guilabel:`Toggle items` visibility
-   * |showAllLayers| :guilabel:`Show all items`
-   * |hideAllLayers| :guilabel:`Hide all items`
-   * Modify the symbol color thanks to the :ref:`color selector
-     <color-selector>` wheel
-   * :guilabel:`Edit symbol...` from the :ref:`symbol selector
-     <symbol-selector>` dialog
-   * :guilabel:`Copy symbol`
-   * :guilabel:`Paste symbol`
 
 
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
@@ -555,6 +542,9 @@ the major_rivers layer of the QGIS sample dataset.
 
    Graduated Symbolizing options
 
+The created classes also appear in a tree hierarchy in the :guilabel:`Layers` panel.
+Double-click an entry in the map legend to edit the assigned symbol.
+Right-click and you will get some :ref:`more options <editing_style_layer>`.
 .. tip:: **Thematic maps using an expression**
 
    Categorized and graduated thematic maps can be created using the result
@@ -730,6 +720,7 @@ the features of the specific rule and the nested ones.
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click an entry in the map legend to edit the assigned symbol.
+Right-click and you will get some :ref:`more options <editing_style_layer>`.
 
 The example in :numref:`figure_rule_based_symbology` shows the rule-based rendering
 dialog for the rivers layer of the QGIS sample dataset.
