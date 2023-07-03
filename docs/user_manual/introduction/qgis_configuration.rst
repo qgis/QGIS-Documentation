@@ -229,6 +229,12 @@ Already defined environment variables are displayed in :guilabel:`Current enviro
 variables`, and it's possible to filter them by activating
 |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
+User Profiles Settings
+----------------------
+
+.. note:: For more information on how to manage user profiles,
+  please read the dedicated section at :ref:`user_profiles`.
+
 .. index:: CRS, On-the-fly reprojection
 .. _crs_options:
 
@@ -1439,9 +1445,11 @@ Changes are automatically saved in the :file:`QGIS3.ini` file.
 .. index:: User profile
 .. _user_profiles:
 
-
 Working with User Profiles
 ==========================
+
+The concept
+-----------
 
 The :menuselection:`Settings --> User Profiles` menu provides functions to set
 and access user profiles. A user profile is a unified application configuration
@@ -1472,8 +1480,8 @@ But you can create as many user profiles as you want:
 
    The user profile folder can be opened from within QGIS using the
    :guilabel:`Open Active Profile Folder`.
-#. A new instance of QGIS is started, using a clean
-   configuration. You can then set your custom configurations.
+#. A new instance of QGIS is started, using a clean configuration.
+   You can then set your custom configurations.
 
 If you have more than one profile in your QGIS installation, the name of the
 active profile is shown in the application title bar between square brackets.
@@ -1484,15 +1492,47 @@ And you can switch from one to the other by selecting them in the :menuselection
 User Profiles` menu. You can also run QGIS with a specific user profile from the
 :ref:`command line <label_commandline>`.
 
-Unless changed, the profile of the last closed QGIS session will be used in the
-following QGIS sessions.
-
 .. tip:: **Run QGIS under a new user profile to check for bug persistence**
 
  When you encounter weird behavior with some functions in QGIS, create a new user
  profile and run the commands again. Sometimes, bugs are related to some leftovers
  in the current user profile and creating a new one may fix them as it restarts
  QGIS with the new (clean) profile.
+
+.. _user_profile_setting:
+
+Setting user profile
+--------------------
+
+By default, QGIS opens a new session with the profile of the last closed session.
+This, among other settings, can be customized in :menuselection:`Settings -->`
+|options| :menuselection:`Options -->` |user| :menuselection:`User Profiles` tab:
+
+.. _figure_userprofiles_settings:
+
+.. figure:: img/options_userprofiles.png
+   :align: center
+
+   User profiles settings
+
+* :guilabel:`Startup profile`: indicates the user profile to use when starting a QGIS session.
+  It can be:
+
+  * :guilabel:`Use last closed profile`
+  * a specific user profile to select from :guilabel:`Always use profile` drop-down menu
+  * :guilabel:`Choose profile at start up`:
+    Opens the :guilabel:`User Profile Selector` dialog listing available user profiles.
+    Double-click an entry or select a profile and press :guilabel:`OK` to use that user profile
+    for the starting session.
+    It is also possible to |symbologyAdd| :guilabel:`Add new profile` to the list:
+    a profile is created from scratch and automatically run with the opening session.
+
+* Under :guilabel:`Profile display`, you can set:
+
+  * The size of icons to use when selecting a profile from the :guilabel:`User Profile Selector` dialog.
+  * A specific icon to display next to the current profile in the :menuselection:`Settings --> User profiles` menu
+    or the :guilabel:`User Profile Selector` dialog.
+    Press |refresh| :sup:`Reset profile icon` to remove custom modifications.
 
 
 .. index:: Project properties
@@ -2349,8 +2389,8 @@ documentation screenshots should be created (see QgsAppScreenShots::Categories).
 ``--profile``
 .............
 
-Loads QGIS using a specific profile from the user's profile folder. Unless
-changed, the selected profile will be used in the following QGIS sessions.
+Loads QGIS using a specific profile from the user's profile folder.
+This option takes precedence over :ref:`user profile startup setting <user_profile_setting>`.
 
 .. _profiles-path_option:
 
@@ -2500,6 +2540,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |raster| image:: /static/common/mIconRaster.png
    :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
 .. |relations| image:: /static/common/relations.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
@@ -2540,6 +2582,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |user| image:: /static/common/user.png
+   :width: 1.5em
 .. |win| image:: /static/common/win.png
    :width: 1em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png

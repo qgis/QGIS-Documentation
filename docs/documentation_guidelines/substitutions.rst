@@ -132,7 +132,7 @@ Icon                     Substitution                 Icon                     S
 =======================  ===========================  =======================  ===========================
 |fileNew|                ``|fileNew|``                |fileOpen|               ``|fileOpen|``
 |fileSave|               ``|fileSave|``               |fileSaveAs|             ``|fileSaveAs|``
-|fileExit|               ``|fileExit|``               \                        \
+|fileExit|               ``|fileExit|``               |user|                   ``|user|``
 =======================  ===========================  =======================  ===========================
 
 Edit
@@ -1607,6 +1607,8 @@ Icon                            Substitution                        Icon        
 .. |unlockAll| image:: /static/common/mActionUnlockAll.png
    :width: 1.5em
 .. |unlocked| image:: /static/common/unlocked.png
+   :width: 1.5em
+.. |user| image:: /static/common/user.png
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
    :width: 1.5em
