@@ -1730,14 +1730,33 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   existing one (more at :ref:`parallel_or_perpendicular`)
 * |settings| :sup:`Snap to common angles`: when moving the cursor,
   displays a virtual line that you can snap to to add the next vertex.
-  The snapping line is defined by the last added vertex and an (absolute or
-  relative to previous segment) angle from a preset list
-  (following steps of 5°, 10°, 15°, 18°, 22.5°, 30°, 45° or 90°).
+  The snapping line is defined by the last added vertex
+  and an (absolute or relative to previous segment) angle from a preset list
+  (following steps of 0.1°, 0.5°, 1°, 5°, 10°, 15°, 18°, 22.5°, 30°, 45° or 90°).
   Choose :guilabel:`Do not snap to common angles` to disable this feature.
-* |floater| :sup:`Toggle Floater`: displays a live preview of the coordinates
-  right next to the cursor, allowing quick digitizing. The values can be accessed
-  using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`, edited and
-  |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`).
+
+  :ref:`Snapping to features <snapping_options>` can be used along with
+  snapping to common angles for accurate digitizing.
+  For a fine-grained control on how the target element to snap to is retained,
+  you can indicate whether to prioritize snapping to features over common angles,
+  and vice-versa under the :guilabel:`Snapping priority` entry.
+  You can switch from one method to the other during the digitizing operation,
+  and this avoids disabling any of the snapping options in the meantime.
+  
+* |floater| :sup:`Floater settings`: if the :guilabel:`Show floater` item is checked,
+  a contextual menu with digitizing information follows the cursor during digitizing.
+  The values can be accessed using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`,
+  edited and |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`).
+  The type of information to return can be selected in the bottom part of the menu:
+
+  * :guilabel:`Show distance`
+  * :guilabel:`Show angle`
+  * :guilabel:`Show XY coordinates`
+  * :guilabel:`Show Z value`
+  * :guilabel:`Show M value`
+  * :guilabel:`Show bearing/azimuth`
+  * :guilabel:`Show common snapping angle`
+
 * |extractVertices| :sup:`Construction Tools` provides a couple of options that
   constrain the vertices placement based on extrapolated coordinates of
   existing elements:
