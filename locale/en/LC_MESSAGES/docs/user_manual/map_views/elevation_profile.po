@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-06 09:08+0000\n"
+"POT-Creation-Date: 2023-07-06 09:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -24,486 +24,584 @@ msgstr ""
 msgid "Elevation Profile View"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:13
+#: ../../docs/user_manual/map_views/elevation_profile.rst:14
 msgid ""
-"When your project includes 3D layers you can create a side view, an "
-"elevation profile along a line.  Vector, raster, mesh and point clouds "
-"layers are supported 3D layer formats that can be used to create an "
-"elevation profile."
+"The :guilabel:`Elevation Profile` panel is a plotting tool for side view,"
+" for visualizing elevation data along a line. It supports vector, raster,"
+" mesh and point cloud layers. Data can be of 2D or 3D type."
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:15
+#: ../../docs/user_manual/map_views/elevation_profile.rst:18
 msgid ""
-"You can open a new empty Elevation Profile view from the menu via "
-":menuselection:`View -->` |layoutItem3DMap| :menuselection:`Elevation "
-"Profile`"
+"To add an elevation profile view, go to :menuselection:`View -->` "
+"|layoutItem3DMap| :menuselection:`Elevation Profile` menu. You can add as"
+" many profile views as you want, and they can be docked, piled on top of "
+"each other, or floating."
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:171
+#: ../../docs/user_manual/map_views/elevation_profile.rst:250
 msgid "layoutItem3DMap"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:17
-msgid ""
-"You can create several Elevation Profile views from the menu! When the "
-"first one is docked, they are piled on top of each other. Please undock "
-"the last added Elevation Profile view to see the previous created view."
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:24
-msgid "Elevation Profile dialog embedded below main map canvas"
-msgstr ""
-
 #: ../../docs/user_manual/map_views/elevation_profile.rst:26
-msgid ""
-"The Elevation Profile line also has a width that can be set using "
-"|options| :sup:`Options`. Figure :ref:`figure_elevation_tool_interaction`"
-" shows a coastline with a town behind a sea-dike. Point cloud information"
-" inside the width of the Elevation Profile line is included in the "
-"Elevation Profile view."
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:175
-msgid "options"
+msgid "Elevation Profile dialog embedded below main map canvas"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:28
 msgid ""
-"The following tools are provided at the top of the Elevation Profile "
-"dialog:"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:30
-msgid ""
-"|layerTree| :sup:`Show Layer Tree` : Switch Elevation Profile Legend "
-"on/off"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:169
-msgid "layerTree"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:31
-msgid ""
-"|captureLine| :sup:`Capture Curve` : Draw a line on map canvas to create "
-"Elevation Profile"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:159
-msgid "captureLine"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:32
-msgid ""
-"|captureCurveFromFeature| :sup:`Capture Curve From Feature` : Select a "
-"line feature on map canvas to create Elevation Profile"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:157
-msgid "captureCurveFromFeature"
+"Figure shows a coastline with a town behind a sea-dike. A larger "
+"tolerance applied to the elevation profile line returns more point cloud "
+"features."
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:33
-msgid "|arrowLeft| :sup:`Nudge Left` : Move Elevation Profile line to the left"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:153
-msgid "arrowLeft"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:34
-msgid "|arrowRight| :sup:`Nudge Right` : Move Elevation Profile line to the right"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:155
-msgid "arrowRight"
+msgid "The interface"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:35
-msgid "|clearConsole| :sup:`Clear` : Clear Elevation Profile"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:161
-msgid "clearConsole"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:36
 msgid ""
-"|identify| :sup:`Identify Features` : Identify features in the Elevation "
-"Profile"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:167
-msgid "identify"
+"At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides"
+" you with the following tools:"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:37
-msgid "|pan| :sup:`Pan` : Pan the Elevation profile"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:177
-msgid "pan"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:38
-msgid "|zoomInXAxis| :sup:`Zoom X Axis` : Zoom in/out along the X-axis"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:191
-msgid "zoomInXAxis"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:39
-msgid "|zoomIn|:sup:`Zoom` : Zoom in/out"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:189
-msgid "zoomIn"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:40
-msgid "|zoomFullExtent| :sup:`Zoom Full` : Zoom in to the full extent"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:187
-msgid "zoomFullExtent"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:41
-msgid "|snapping| :sup:`Enable Snapping` : Snap to nearest vertical feature"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:185
-msgid "snapping"
+msgid "Elevation Profile View toolbar"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:42
-msgid ""
-"|measure| :sup:`Measurement Distances` : Measure horizontal and vertical "
-"distances"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:173
-msgid "measure"
+msgid "Tool"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:43
-msgid "|saveAsPDF| :sup:`Export as PDF`: Export the plot in PDF format"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:181
-msgid "saveAsPDF"
+msgid "Shorcut"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:44
-msgid ""
-"|saveMapAsImage| :sup:`Export as Image` : Export the plot to several "
-"image formats"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:183
-msgid "saveMapAsImage"
+msgid "Description"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:45
-msgid "|options| :sup:`Options` : Open options menu"
+msgid "|layerTree| :sup:`Show Layer Tree`"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:46
+#: ../../docs/user_manual/map_views/elevation_profile.rst:248
+msgid "layerTree"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:47
 msgid ""
-"|dock| :sup:`Dock Elevation Profile View` : Switch from docked to "
-"floating and dockable QGIS panel"
+"Shows or hides a list of project layers to configure rendering in the "
+"profile view."
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:163
-msgid "dock"
+#: ../../docs/user_manual/map_views/elevation_profile.rst:48
+msgid "|captureLine| :sup:`Capture Curve`"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:52
-msgid "Create"
+#: ../../docs/user_manual/map_views/elevation_profile.rst:238
+msgid "captureLine"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:50
+msgid ""
+"Draws interactively a line over the map canvas to represent the profile "
+"curve."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:51
+msgid "|captureCurveFromFeature| :sup:`Capture Curve From Feature`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:236
+msgid "captureCurveFromFeature"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:53
+msgid ""
+"Picks an existing line feature on the map canvas and generate a profile "
+"curve along that line."
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:54
-msgid ""
-"|captureLine| :sup:`Capture Curve`  is used to draw a line, in the main "
-"map canvas, to create an Elevation Profile along given line. Use the left"
-" mouse button to add points to the line, use the right mouse button to "
-"finalize the line and create the Elevation Profile."
+msgid "|arrowLeft| :sup:`Nudge Left`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:232
+msgid "arrowLeft"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:55
+msgid ":kbd:`Ctrl+Alt+,`"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:56
 msgid ""
-"|captureCurveFromFeature| :sup:`Capture Curve From Feature`  is used to "
-"select a line feature in the map canvas that is used to create the "
-"Elevation Profile."
+"Allows you to slowly move the capture line across the map to the left "
+"(e.g. to find the optimal profile line based on the elevation)."
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:58
-msgid ""
-"|options| :sup:`Options`  can be used to set the Tolerance value. This "
-"value is used to set the width of the Elevation Profile line visible in "
-"the main map canvas."
+msgid "|arrowRight| :sup:`Nudge Right`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:234
+msgid "arrowRight"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:59
+msgid ":kbd:`Ctrl+Alt+.`"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:60
 msgid ""
-"When an Elevation Profile is created it will zoom in on the full extent "
-"of created Elevation Profile line. On the X-axis you can see the length "
-"of the profile and on the Y-axis the height range between minimum and "
-"maximum height captured, both in map units."
+"Allows you to slowly move the capture line across the map to the right "
+"(e.g. to find the optimal profile line based on the elevation)."
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:66
-msgid "Change"
+#: ../../docs/user_manual/map_views/elevation_profile.rst:62
+msgid "|clearConsole| :sup:`Clear`"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:68
+#: ../../docs/user_manual/map_views/elevation_profile.rst:240
+msgid "clearConsole"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:64
 msgid ""
-"|arrowLeft| :sup:`Nudge Left` and |arrowRight| :sup:`Nudge right` are "
-"used to shift the position of the Elevation Profile line in the map "
-"canvas to the left or right. of the current Elevation Profile line. The "
-"Elevation Profile will be redrawn. It is moved sideways using the "
-"tolerance value given in |options| :sup:`Options`."
+"Removes the profile line and any plot displayed in the "
+":guilabel:`Elevation Profile` view"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:65
+msgid "|identify| :sup:`Identify Features`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:246
+msgid "identify"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:67
+msgid ""
+"Identifies features in the plot canvas via either a single click, or "
+"click-and-drag rectangle. Results are shown in the standard "
+":ref:`Identify Results <identify>` dock."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:69
+msgid "|pan| :sup:`Pan`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:256
+msgid "pan"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:70
+msgid ":kbd:`Space`"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:71
 msgid ""
-"You can draw a new profile line with |captureLine| :sup:`Capture Curve` "
-"or select another line feature |captureCurveFromFeature| :sup:`Capture "
-"Curve From Feature` to create a new profile. To erase it first with the "
-"|clearConsole| :sup:`Clear` button, is not really neccesary, but good "
-"habit."
+"Click and drag to pan the plot canvas. Can also be done with the middle "
+"mouse button."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:72
+msgid "|zoomInXAxis| :sup:`Zoom X Axis`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:270
+msgid "zoomInXAxis"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:74
+msgid "Zooms in/out along the horizontal axis, keeping the vertical ratio"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:75
+msgid "|zoomIn| :sup:`zoom`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:268
+msgid "zoomIn"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:76
-msgid "Presentation"
+msgid ":kbd:`Ctrl+Space`"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:78
+#: ../../docs/user_manual/map_views/elevation_profile.rst:77
 msgid ""
-"|layerTree| :sup:`Show Layer Tree`  can be used to hide or show the "
-"legend."
+"Click or click-and-drag a rectangle over the plot to zoom in. Press "
+":kbd:`Alt` and click to instead zoom out."
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:80
-msgid "The legend can be used to:"
+#: ../../docs/user_manual/map_views/elevation_profile.rst:79
+msgid "|zoomFullExtent| :sup:`Zoom Full`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:266
+msgid "zoomFullExtent"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:81
+msgid ""
+"Zooms the :guilabel:`Elevation Profile` view to the extent of the capture"
+" line"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:82
-msgid "turn the visibility of 3D layers on or off"
+msgid "|snapping| :sup:`Enable Snapping`"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:83
-msgid "change the order of layers, just drag an drop the layers up or down"
+#: ../../docs/user_manual/map_views/elevation_profile.rst:264
+msgid "snapping"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:84
-msgid "change the style of the selected layers in the Elevation Profile legend"
+msgid ""
+"Allows to snap to the edge or vertex of the plot features in the profile "
+"view. Convenient for accurate retrieval of coordinates or distance "
+"measurements."
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:86
-msgid ""
-"Right click on on a layer in the legend gives access to the menu option "
-":guilabel:`Properties...` in a popup menu. When you select "
-":guilabel:`Properties...` this will open the |elevationscale| "
-":guilabel:`Elevation` tab in the Layer Properties where you can give "
-"specific settings to change the presentation of a layer for the Elevation"
-" Profile. When you double click on a layer in the legend, this will "
-"instantly open the |elevationscale| :guilabel:`Elevation Tab` in the "
-"Layer Properties dialog."
+msgid "|measure| :sup:`Measure Distances`"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:165
-msgid "elevationscale"
+#: ../../docs/user_manual/map_views/elevation_profile.rst:252
+msgid "measure"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:88
-msgid ""
-"The Elevation tab options provided are dependent on the format. Please "
-"follow the link for the full description of the Elevation tab for each "
-"format:"
+msgid "Measures horizontal and vertical distances"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:90
-msgid ":ref:`Raster Elevation Properties <raster_elevation>`"
+#: ../../docs/user_manual/map_views/elevation_profile.rst:89
+msgid "|saveAsPDF| :sup:`Export As PDF`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:260
+msgid "saveAsPDF"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:91
-msgid ":ref:`Vector Elevation Properties <vectorelevationmenu>`"
+msgid "Exports plots to PDF (as high quality vector objects)"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:92
-msgid ":ref:`Point Cloud Elevation Properties <point_clouds_elevation>`"
+msgid "|saveMapAsImage| :sup:`Export As Image`"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:93
-msgid ":ref:`Mesh Elevation Properties <meshelevation>`"
+#: ../../docs/user_manual/map_views/elevation_profile.rst:262
+msgid "saveMapAsImage"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:94
+msgid "Exports plots to several image formats"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:95
-msgid ""
-"For all Elevation layers you can adapt the Elevation scaling and offset "
-"to correct or change the profile appearance. You can use the scaling "
-"option to convert layers from one map unit to the other (i.e. feet to "
-"meters)."
+msgid "|options| :sup:`Options`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:254
+msgid "options"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:97
-msgid ""
-"For the appearance of the elevation of a Raster DEM you can choose in "
-":guilabel:`Style` either for a :guilabel:`Line` or :guilabel:`Fill Below`"
-" style. You can give it the symbology you like with the standard "
-":guilabel:`Symbology Settings editor`."
+msgid "Provides access to configuration settings of the profile elevation line."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:98
+msgid "|dock| :sup:`Dock Elevation Profile View`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:242
+msgid "dock"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:100
-msgid ""
-"Mesh, vector and cloud points have the option :guilabel:`Respect layer's "
-"coloring`. When activated the layer uses the same symbols styling as used"
-" in the main canvas. However, you can decide to give the layers in the "
-"Elevation Profile another style. First deactivate the option "
-":guilabel:`Respect layers coloring` and create for the layer a new style "
-"to use in the Elevation Profile!"
+msgid "Switch between docked and floating status of the view"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:102
+#: ../../docs/user_manual/map_views/elevation_profile.rst:103
 msgid ""
-"For Point Clouds you have a great option to activate :guilabel:`Apply "
-"Opacity by distance from curve effect` so near objects in the point cloud"
-" are better visible!"
+"In the bottom left, a copy of the :guilabel:`Layers` panel can be "
+"displayed pushing the |layerTree| :guilabel:`Show Layer Tree` button. "
+"This is however an independent widget, with its own set of visible "
+"layers, in a custom stack order. It allows you to control layers "
+"rendering and behavior within the plot canvas:"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:107
-msgid "Interaction"
+#: ../../docs/user_manual/map_views/elevation_profile.rst:108
+msgid ""
+"Tick the box next to the layer name to set whether it should be rendered "
+"in the plot canvas"
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:109
+msgid "Drag-and-drop layers up or down to change the order of the layers"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:110
 msgid ""
-"When you move the mouse pointer in the Elevation Profile view, you will "
-"see a cross hair Appear. Beside the vertical cross hair the height "
-"information is given, beside the horizontal cross hair the distance from "
-"the beginning of the Elevation Profile Line is given. You can also see a "
-"black dot move along the Elevation Profile line on the main map canvas "
-"when you move the mouse pointer in the Elevation Provile view (see "
-":ref:`figure_elevation_tool_interaction`)."
+"style rendering of layers in the profile view: double-click a layer or "
+"right-click and select :guilabel:`Properties...` to open the layer's "
+":guilabel:`Elevation` properties tab for configuration. A summary of "
+"elevation settings is displayed as tooltip when hovering over the layer."
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:111
+#: ../../docs/user_manual/map_views/elevation_profile.rst:116
 msgid ""
-"|identify| :sup:`Identify Features`  is used to identify features of "
-"selected layer in the legend. You can select multiple features when you "
-"hold :kbd:`Shift` and drag a rectangle across several features. Selected "
-"features in vector format will also be selected in the main map canvas "
-"(see :ref:`figure_elevation_tool_interaction`)."
+"On the right of the layer tree, the plot canvas is the main place you can"
+" preview the elevation profile of the enabled layers. It is based on a "
+"graduated grid in which the horizontal axis displays the length of the "
+"profile line and the vertical axis displays the Z elevation of the "
+"observed features. It also allows a set of interactions such as zooming, "
+"panning, measuring, identifying features, ... using the tools at the top."
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:113
+#: ../../docs/user_manual/map_views/elevation_profile.rst:125
+msgid "Creating an elevation profile"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:127
+msgid "To create a profile view, you can:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:129
 msgid ""
-"|pan| :sup:`Pan`  is used to pan the Elevation profile and move it in any"
-" direction you want."
+"Go to :menuselection:`View -->` |layoutItem3DMap| "
+":menuselection:`Elevation Profile` menu. The :guilabel:`Elevation "
+"profile` panel opens."
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:115
+#: ../../docs/user_manual/map_views/elevation_profile.rst:131
 msgid ""
-"|zoomInXAxis| :sup:`Zoom X Axis`  is used to Zoom in/out along the X-Axis"
-" keeping the ratio of the Y-axis (the elevation) the same. You can "
-"stretch out the Elevation profile along the X axis by pressing the Left "
-"mouse button or the scroll wheel."
+"Create the profile line along which the terrain and the features will be "
+"rendered. Select a drawing tool:"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:117
+#: ../../docs/user_manual/map_views/elevation_profile.rst:134
 msgid ""
-"|zoomIn| :sup:`Zoom`  is used to Zoom in or Zoom out on a certain point "
-"with the scroll wheel. In combination with the :kbd:`Ctrl` key you can "
-"zoom in or out more smoothly. You can also hold :kbd:`Shift` and use the "
-"left button to drag a rectangle over the area you want to zoom into."
+"|captureLine| :sup:`Capture Curve`: click left over the main map canvas "
+"to add vertices and click right to finalize a line that will be used as "
+"profile line"
 msgstr ""
 
-#: ../../docs/user_manual/map_views/elevation_profile.rst:119
+#: ../../docs/user_manual/map_views/elevation_profile.rst:136
 msgid ""
-"|zoomFullExtent| :sup:`Zoom Full`  is the default zoom level used at the "
-"beginning and shows the full extent of all features you selected. Use it "
-"to reset the zoom level."
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:121
-msgid ""
-"|snapping| :sup:`Enable Snapping`  can be turned on or of. When turned on"
-" it will Snap to the nearest vertical feature of selected layer in the "
-"legend. It is useful to read the elevation from the cross hairs, but also"
-" helps to select a feature using the identify tool. But it really is "
-"usefull to measure distances."
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:123
-msgid ""
-"|measure| :sup:`Measurement Distances`  is used to Measure horizontal and"
-" vertical distances. With Snapping enabled, it is easier to select the "
-"points in the Vertical elevation. The distances are given in used map "
-"units."
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:128
-msgid "Troubleshoot"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:130
-msgid "Here are some solutions for the following problems:"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:132
-msgid ""
-"Raster or mesh layer does not appear in the legend of the Elevation "
-"Profile. Open the properties layer of the Raster or Mesh layer from the "
-"Layers panel, open the tab |elevationscale| :guilabel:`Elevation` and "
-"activate :guilabel:`Represents Elevation Surface`. Press the "
-":guilabel:`OK` button."
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:135
-msgid ""
-"The features of the vector layer are appearing on elevation level Z=0 of "
-"the Elevation Profile. Your vector layer is probably still in 2D, you can"
-" check this and make it 3D using one of the following options in the "
-"Processing Toolbox:"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:138
-msgid ""
-"When the vector layer has an attribute with the Z-value, you can use the "
-"Processing function |processingAlgorithm| :guilabel:`Set Z value` to "
-"create a 3D vector layer with that value."
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:179
-msgid "processingAlgorithm"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:139
-msgid ""
-"When you have a DEM Raster (Digital Elevation Model) you can use the "
-"Processing function |processingAlgorithm| :guilabel:`Drape (set Z value "
-"from raster)` to add elevation to your vector layer."
+"or |captureCurveFromFeature| :sup:`Capture Curve From Feature`: click a "
+"line feature on the map canvas to select it as the profile line. If "
+"multiple features are present at the clicked point then a popup menu will"
+" appear allowing you to select among them."
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:141
-msgid "**Two great introduction video's on the Elevation Profile tool**"
-msgstr ""
-
-#: ../../docs/user_manual/map_views/elevation_profile.rst:143
 msgid ""
-"In `QGIS elevation profile/cross section tool -- a deep dive! "
-"<https://www.youtube.com/watch?v=AknJjNPystU>`_ Nyall Dawson presented "
-"the Elevation Profile tool to the QGIS community. This video presents in "
-"one hour many aspects of the Elevation Profile tool."
+"All the line digitizing capabilities such as the :ref:`snapping options "
+"<snapping_options>`, :ref:`tracing <tracing>`, :ref:`digitizing "
+"techniques <drawing_methods>` or the advanced :ref:`digitizing panel "
+"<advanced_digitizing_panel>` are available for use."
 msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:145
+msgid "The plot canvas may start rendering some features."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:146
 msgid ""
-"In `Exploring the New Elevation Profile Tool with Point Clouds in QGIS "
-"3.26 <https://www.youtube.com/watch?v=ky0HkttaQ58>`_ Hans van der Kwast "
-"shows in 8 minutes how to download some point cloud data of the city of "
-"Rotterdam and create a nice skyline view of the Rotterdam harbour using "
-"the Elevation Profile tool."
+"The next step is to configure the elevation properties of the layers you "
+"want to visualize."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:148
+msgid ""
+"Push on the |layerTree| :sup:`Show Layer Tree` button to display the list"
+" of layers."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:149
+msgid ""
+"Toggle visibility of the layers you are interested in. These are the only"
+" ones rendered in the profile view and selected layers can be different "
+"from the main :guilabel:`Layers` panel's."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:152
+msgid ""
+"Double-click a layer name or right-click and select "
+":guilabel:`Properties`. The :guilabel:`Elevation` properties tab of the "
+"layer opens. This is the place you configure how each feature or terrain "
+"should render on the profile view. Available properties depend on the "
+"layer type:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:157
+msgid ":ref:`Raster Elevation Properties <raster_elevation>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:158
+msgid ":ref:`Vector Elevation Properties <vectorelevationmenu>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:159
+msgid ":ref:`Point Cloud Elevation Properties <point_clouds_elevation>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:160
+msgid ":ref:`Mesh Elevation Properties <meshelevation>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:162
+msgid ""
+"The profile view starts rendering terrain or features of active layers "
+"crossing the given profile curve, as soon as they have elevation "
+"properties configured."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:165
+msgid ""
+"Under |options| :sup:`Options` drop-down menu, you can set the "
+":guilabel:`Tolerance` value. This value is used to create a flat buffer "
+"around the elevation profile line, visible in the main map canvas. Any "
+"visible point feature overlapping that buffer will be captured in the "
+"plot canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:173
+msgid "Interacting with the profile Views"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:175
+msgid ""
+"When an elevation profile line is created, the plot canvas zooms to its "
+"full extent. On the X-axis you can see the length of the profile and, on "
+"the Y-axis the height range between minimum and maximum height captured, "
+"both in map units."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:179
+msgid ""
+"When you move the mouse pointer in the elevation profile view, you will "
+"see two crossing dot lines:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:181
+msgid "the vertical line shows the height information"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:182
+msgid ""
+"the horizontal line shows the distance from the beginning of the "
+"elevation profile Line"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:184
+msgid ""
+"When you move the mouse pointer in the elevation profile canvas, you can "
+"also see a black dot move along the elevation profile line on the main "
+"map canvas. At the middle of the profile line, an arrow indicates its "
+"direction."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:188
+msgid ""
+"As for the main map canvas, QGIS provides means to navigate on the plot "
+"canvas:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:190
+msgid ""
+"|pan| :sup:`Pan` is used to move the elevation profile extent in any "
+"direction you want. Holding :kbd:`Space` key while moving the mouse also "
+"shifts the plot canvas extent."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:192
+msgid ""
+"|zoomInXAxis| :sup:`Zoom X Axis` is used to zoom in along the horizontal "
+"axis, keeping the ratio of the vertical axis (the elevation) the same. "
+"Left click to stretch out the plot along the X axis, with the clicked "
+"point at the center of the axis, or drag a rectangle to stretch out the "
+"plot along the X axis to the rectangle width. Hold :kbd:`Alt` while using"
+" |zoomInXAxis| :sup:`Zoom X Axis` to zoom out along that axis."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:197
+msgid ""
+"|zoomIn| :sup:`Zoom` is used to zoom in on a certain point (using left "
+"click), or to a certain extent (dragging a rectangle on the area). Hold "
+":kbd:`Alt` while using |zoomIn| :sup:`Zoom` to instead zoom out. In "
+"combination with the :kbd:`Ctrl` key you can zoom in or out more "
+"smoothly."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:201
+msgid ""
+"|zoomFullExtent| :sup:`Zoom Full` is the default zoom level used at the "
+"beginning and shows the full extent of the profile line, with all "
+"returned features. Use it to reset the zoom level."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:205
+msgid ""
+"It is also possible to interact with the elements displayed in the plot "
+"canvas:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:207
+msgid ""
+"Press |snapping| :sup:`Enable snapping` button to accurately catch "
+"points, vertices or edges of the features, for an accurate measurement or"
+" coordinates report."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:209
+msgid ""
+"|identify| :sup:`Identify Features` is used to identify features of the "
+"visible layers in the layer tree. You can drag a rectangle across several"
+" features in the profile view to query all of them. When compatible with "
+"the format (e.g. vector, point cloud), these features will be highlighted"
+" in the main map canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:212
+msgid ""
+"|measure| :sup:`Measurement Distances`: click or select two points in the"
+" plot canvas to report the horizontal :guilabel:`Distance`, the "
+":guilabel:`Elevation` and the :guilabel:`Total distance` between them, in"
+" map units."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:215
+msgid ""
+"|arrowLeft| :sup:`Nudge Left` and |arrowRight| :sup:`Nudge right` are "
+"used to shift the position of the elevation profile line in the map "
+"canvas to its left or right. The plot canvas will be redrawn, showing "
+"features and terrain overlapping the profile line buffer. The line is "
+"moved sideways using the :guilabel:`Tolerance` value in |options| "
+":sup:`Options` menu."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:220
+msgid ""
+"Closing an elevation profile view or the project currently removes the "
+"view from the project."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:222
+msgid ""
+"For more details, give a look to `QGIS elevation profile/cross section "
+"tool -- a deep dive! <https://www.youtube.com/watch?v=AknJjNPystU>`_, a "
+"presentation done by Nyall Dawson."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:244
+msgid "elevationscale"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:258
+msgid "processingAlgorithm"
 msgstr ""
 
