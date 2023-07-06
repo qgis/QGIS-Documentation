@@ -76,22 +76,21 @@ symbology:
 
    These are all the layers hosted by this WMS server.
 
-#. Click once on the :guilabel:`OSM-WMS` layer. This will display its
-   :guilabel:`Coordinate Reference System`:
+#. Click once on the :guilabel:`OSM-WMS` layer.
+   This will display the default :guilabel:`Coordinate Reference System` in use
+   and the number of CRSes supported by the dataset:
 
    .. figure:: img/osm_wms_selected.png
       :align: center
 
-   Since we're not using ``WGS 84`` for our map, let's see all the CRSs we have
-   to choose from.
+   Since we're not using ``EPSG:4326 - WGS 84`` for our map,
+   let's find one that meets our needs.
 
-   #. Click the :guilabel:`Change...` button. You will see a standard
-      :guilabel:`Coordinate Reference System Selector` dialog.
-   #. We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo
-      Mercator`.
-
-      #. Enter the value ``pseudo`` in the :guilabel:`Filter` field:
-      #. Choose :guilabel:`WGS 84 / Pseudo Mercator` (with epsg:3857) from the list.
+   #. Click the |setProjection|:sup:`Select CRS` button. You will see a standard
+      :guilabel:`Coordinate Reference System Selector` dialog
+      showing all the CRS the data is published with.
+   #. We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo-Mercator`
+      with ``EPSG:3857``. You can use the top |search| :guilabel:`Filter` widget.
 
          .. figure:: img/pseudo_mercator_selected.png
             :align: center
@@ -99,8 +98,8 @@ symbology:
       #. Click :guilabel:`OK`. The Coordinate Reference System associated with
          the entry has changed.
 
-#. Click :guilabel:`Add` and the new layer will appear in your map as
-   :guilabel:`OpenStreetMap WMS - by terrestris`.
+#. Click :guilabel:`Add` to load the layer in your project using :guilabel:`Layer name``
+   (default is :guilabel:`OpenStreetMap WMS - by terrestris`).
 #. Close the :guilabel:`Data Source Manager` dialog if not done automatically
 #. In the :guilabel:`Layers` panel, click and drag it to the bottom of the list.
 #. Zoom out in order to get a global view of the layers. You will notice that
@@ -130,8 +129,8 @@ symbology:
       :align: center
       :width: 100%
 
-Note how the WMS layer's streets and our own streets overlap. That's a good
-sign!
+Note how the WMS layer's streets and our own streets overlap.
+That's a good sign!
 
 The nature and limitations of WMS
 ...............................................................................
@@ -157,90 +156,92 @@ things change on the WMS server, then they'll change on your map as well. This
 is why you sometimes want to use a Web Feature Service (WFS) instead, which
 gives you vector layers separately, and not as part of a WMS-style map.
 
-This will be covered in the next lesson, however. First, let's add another WMS
-layer from the :guilabel:`terrestris` WMS server.
+This will be covered in the next lesson, however.
+First, let's add another WMS layer.
 
 
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-#. Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel.
-#. Add the "ZAF CGS 1M Bedrock Lithostratigraphy" WMS server at this URL:
-   ``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``
-#. Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (you can also use the
-   :menuselection:`Layer --> Add Layer -->` |addWmsLayer| :menuselection:`Add
-   WMS/WMTS Layer...` button to open the Data Source Manager dialog).
-   Remember to check that it's in the same
-   :guilabel:`WGS 84 / World Mercator` projection as the rest of your map!
-#. You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG` and its
-   :guilabel:`Tile size` option to ``200`` by ``200``, so that it loads
-   faster:
+#. Add the ``eAtlas`` WMS server at this URL: ``https://maps.eatlas.org.au/maps/wms``
+#. Load a :guilabel:`World: Hillshading` layer into the map.
+#. You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG`
+   and its :guilabel:`Tile size` option to ``200`` by ``200``, so that it loads faster.
+#. Your map should look like this (you may need to re-order the layers, and apply some transparency):
 
-   .. figure:: img/bedrock_geology_layer.png
-      :align: center
+      .. figure:: img/world_hillshading_result.png
+         :align: center
+         :width: 100%
 
 .. admonition:: Answer
    :class: dropdown
 
-   Your map should look like this (you may need to re-order the layers):
+   #. Go to the Data Source Manager, WMS / WMTS tab and create a new connection entry
+   #. Use the |search| text box to filter the list of layers and select the corresponding layer
+   #. Remember to check/turn its CRS into :guilabel:`EPSG:3857 - WGS 84 / Pseudo Mercator`
+      as the rest of the map.
 
-   .. figure:: img/geology_layer_result.png
-      :align: center
+      .. figure:: img/add_world_hillshading_layer.png
+         :align: center
+         :width: 100%
 
-
-|moderate| |TY|
--------------------------------------------------------------------------------
-
-#. Hide all other WMS layers to prevent them from rendering unnecessarily in
-   the background.
-#. Add the "OGC" WMS server at this URL: ``http://ogc.gbif.org:80/wms``
-#. Add the :guilabel:`bluemarble` layer.
-
-
-.. admonition:: Answer
-   :class: dropdown
-
-   * Use the same approach as before to add the new server and the appropriate
-     layer as hosted on that server:
-   
-     .. figure:: img/add_ogc_server.png
-        :align: center
-   
-     .. figure:: img/add_bluemarble_layer.png
-        :align: center
-   
-   * If you zoom into the |majorUrbanName| area, you'll notice that this dataset has a
-     low resolution:
-   
-   .. figure:: img/low_resolution_dataset.png
-      :align: center
-   
-   Therefore, it's better not to use this data for the current map. The Blue
-   Marble data is more suitable at global or national scales
-
+   #. After the layer is loaded, you can modify its :guilabel:`Opacity` value
+      (under the :guilabel:`Transparency` properties tab)
 
 |hard| |TY|
 -------------------------------------------------------------------------------
 
 Part of the difficulty of using WMS is finding a good (free) server.
 
-* Find a new WMS at `directory.spatineo.com <https://directory.spatineo.com/>`_ (or
-  elsewhere online). It must not have associated fees or restrictions, and must
-  have coverage over the |majorUrbanName| study area.
+* Find a new WMS at `directory.spatineo.com <https://directory.spatineo.com/>`_ (or elsewhere online).
+  It must not have associated fees or restrictions,
+  and must have coverage over the |majorUrbanName| study area.
 
-  Remember that what you need in order to use a WMS is only its URL (and
-  preferably some sort of description).
+  Remember that what you need in order to use a WMS is only its URL
+  (and preferably some sort of description).
 
 .. admonition:: Answer
    :class: dropdown
 
-   You may notice that many WMS servers are not always available. Sometimes this
-   is temporary, sometimes it is permanent. An example of a WMS server that
-   worked at the time of writing is the :guilabel:`MapServer Demonstration Server`
-   WMS at https://demo.mapserver.org/cgi-bin/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
-   . It does not require fees or have access constraints, and it is global.
-   Therefore, it does satisfy the requirements. Keep in mind, however, that this
-   is merely an example. There are many other WMS servers to choose from.
+   Spatineo is one of many places you can search for a OGC data.
+   Type in the text area a name, keyword, location of your interest
+   to see if you get some working results.
+   For this lesson, you might want to filter the results to include WMS only.
+
+   You may notice that many WMS servers are not always available.
+   Sometimes this  is temporary, sometimes it is permanent.
+   An example of a WMS server that worked at the time of writing
+   is the :guilabel:`MapServer Demonstration Server` WMS
+   at https://demo.mapserver.org/cgi-bin/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities.
+   It does not require fees or have access constraints, and it is global.
+   Therefore, it does satisfy the requirements.
+   Keep in mind, however, that this is merely an example.
+   There are many other WMS servers to choose from.
+
+
+|hard| |TY|
+-------------------------------------------------------------------------------
+
+* Add the :guilabel:`bluemarble` layer from the :guilabel:`MapServer Demonstration Server`.
+  Is that a suitable dataset for our study area?
+
+.. admonition:: Answer
+   :class: dropdown
+
+   #. Hide all other WMS layers to prevent them from rendering unnecessarily in the background.
+   #. Use the same approach as before to add the new server and the appropriate
+      layer as hosted on that server:
+
+      .. figure:: img/add_bluemarble_layer.png
+         :align: center
+
+   #. If you zoom into the |majorUrbanName| area, you'll notice that this dataset has a low resolution:
+
+      .. figure:: img/low_resolution_dataset.png
+         :align: center
+
+      Therefore, it's better not to use this data for the current map.
+      The Blue Marble data is more suitable at global or national scales
 
 
 |IC|
@@ -283,4 +284,7 @@ Feature Service (WFS). That's the topic of the next lesson.
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/common/moderate.png
+.. |search| image:: /static/common/search.png
+   :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em

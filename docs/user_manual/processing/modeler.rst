@@ -61,6 +61,11 @@ Model menu
      -
      -
      - Sets the order in which inputs are presented to the user in the algorithm dialog.
+   * - :guilabel:`Reorder Output Layers...`
+     -
+     -
+     - Sets a specific order which the outputs from the model must use when loading the
+       results into a project.
    * - |fileOpen| :guilabel:`Open Model...`
      - :kbd:`Ctrl+O`
      - |checkbox|
@@ -500,6 +505,22 @@ allowing you to change the order of the inputs:
 
    Reorder Model Inputs
 
+There is also the possibility to set a specific order which the outputs from
+the model must use when loading the results into a project. This gives the model
+creator a means of ensuring that layers are logically ordered on the canvas when
+running a model, such as placing a vector layer output over a raster layer output,
+or a point layer over a polygon layer.
+The model creator can also set an optional "Group name" for the outputs for 
+automatically grouping outputs within the layer tree using a new group name or by
+adding them to an existing group.
+In the ``Model`` menu you will find the ``Reorder Output Layers...`` entry and by
+clicking on it a new dialog pops up allowing you to change the order of the output
+layers:
+
+.. figure:: img/model_reorder_output_layers.png
+   :align: center
+
+   Reorder Output Layers
 
 Comments can also be added to inputs or algorithms present in the modeler.
 This can be done by going in the :guilabel:`Comment` tab of the item or with

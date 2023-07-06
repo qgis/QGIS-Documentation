@@ -333,8 +333,7 @@ Let's now add our custom rules.
 #. Repeat the steps above to add the following rules:
 
    #. **Other residential** label with the criterion
-      ``"landuse" = 'residential' AND "name" <> 'Swellendam'`` (or
-      ``"landuse" = 'residential' AND "name" != 'Swellendam'``). 
+      ``"landuse" = 'residential' AND "name" <> 'Swellendam'``. 
       Choose a pale blue-grey :guilabel:`Fill color`
    #. **Big non residential areas** label with the criterion
       ``"landuse" <> 'residential' AND "AREA" >= 605000``.
