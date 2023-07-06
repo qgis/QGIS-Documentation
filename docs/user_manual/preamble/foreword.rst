@@ -12,10 +12,12 @@ SourceForge in June the same year.
 We have worked hard to make GIS software (which is traditionally
 expensive proprietary software) available to anyone with access to a
 personal computer.
+
 QGIS currently runs on most Unix platforms, Windows, and macOS.
 QGIS is developed using the Qt toolkit (https://www.qt.io) and C++.
 This means that QGIS feels snappy and has a pleasing, easy-to-use
-graphical user interface (GUI).
+graphical user interface (GUI). There are also independently created 
+QGIS versions that run on Android and iOS.
 
 QGIS aims to be a user-friendly GIS, providing common functions and
 features.
