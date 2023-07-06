@@ -703,7 +703,7 @@ actions like:
    * - |layoutItem3DMap| :guilabel:`Elevation Profile`
      -
      -
-     -
+     - :ref:`label_elevation_profile_view`
    * - |zoomFullExtent| :guilabel:`Zoom Full`
      - :kbd:`Ctrl+Shift+F`
      - :guilabel:`Map Navigation`

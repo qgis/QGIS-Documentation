@@ -593,9 +593,8 @@ Elevation Properties
 
 The |elevationscale| :guilabel:`Elevation` tab provides options to control
 the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
-and its appearance in the profile tool charts. Specifically, you can set:
-
-.. Todo: Add above a ref link to profile tool
+and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
+Specifically, you can set:
 
 .. _figure_mesh_elevation:
 
@@ -605,8 +604,8 @@ and its appearance in the profile tool charts. Specifically, you can set:
    Mesh Elevation properties
 
 * :guilabel:`Elevation Surface`: how the mesh layer vertices Z values
-  should be interpreted as terrain elevation. You can apply a
-  :guilabel:`Scale` factor and an :guilabel:`Offset`.
+  should be interpreted as terrain elevation.
+  You can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
 * :guilabel:`Profile Chart Appearance`: controls the rendering
   :guilabel:`Style` the mesh elevation will use when drawing a profile chart.
   It can be set as:

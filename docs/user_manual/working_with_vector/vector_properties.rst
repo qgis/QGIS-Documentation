@@ -3300,9 +3300,8 @@ Elevation Properties
 
 The |elevationscale| :guilabel:`Elevation` tab provides options to control
 the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
-and its appearance in the profile tool charts. Specifically, you can set:
-
-.. Todo: Add above a ref link to profile tool
+and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
+Specifically, you can set:
 
 .. _figure_elevationvector:
 

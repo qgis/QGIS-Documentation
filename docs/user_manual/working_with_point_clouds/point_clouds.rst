@@ -510,7 +510,8 @@ Elevation Properties
 
 In the |elevationscale| :guilabel:`Elevation` tab, you can set corrections for
 the Z-values of the data. This may be necessary to adjust the elevation of
-the data in 3D maps. There are two setting options:
+the data in 3D maps and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
+There are following options:
 
 * Under :guilabel:`Elevation` group:
 
