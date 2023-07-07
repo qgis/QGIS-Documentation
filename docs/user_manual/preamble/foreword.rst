@@ -16,8 +16,9 @@ personal computer.
 QGIS currently runs on most Unix platforms, Windows, and macOS.
 QGIS is developed using the Qt toolkit (https://www.qt.io) and C++.
 This means that QGIS feels snappy and has a pleasing, easy-to-use
-graphical user interface (GUI). There are also independently created 
-QGIS versions that run on Android and iOS.
+graphical user interface (GUI). There are also independently created
+applications that allow you to take QGIS into the field. These 
+applications can run on Android and iOS.
 
 QGIS aims to be a user-friendly GIS, providing common functions and
 features.
