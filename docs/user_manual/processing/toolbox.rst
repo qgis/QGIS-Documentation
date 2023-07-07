@@ -85,6 +85,7 @@ The dialog shows two tabs (:guilabel:`Parameters` and :guilabel:`Log`)
 on the left part, the algorithm description on the right, and a set of
 buttons at the bottom.
 
+.. _alg_parameter_types:
 
 Parameter types
 ...............

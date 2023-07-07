@@ -10,11 +10,17 @@
       :local:
 
 The Processing Options menu (:menuselection:`Settings--> Options -->`
-:guilabel:`Processing` tab) allows you to configure how algorithms work.
+|processingAlgorithm| :guilabel:`Processing` tab) allows you to configure how algorithms work.
 Configuration parameters are structured in separate blocks that you can
 select on the left-hand side of the dialog.
 
-The :guilabel:`General` block contains a number of interesting parameters.
+General
+=======
+
+The :guilabel:`General` block contains the default settings to control
+how the algorithm dialog as well as input or output parameters should behave.
+Some of the settings can however be overridden at the algorithm runtime,
+for :ref:`individual parameters <alg_parameter_types>`.
 
 * :guilabel:`Default output raster layer extension` is by default ``tif``
 * :guilabel:`Default output vector layer extension` is by default ``gpkg``
@@ -109,9 +115,12 @@ The :guilabel:`General` block contains a number of interesting parameters.
   and press :guilabel:`OK`.
 * :guilabel:`Warn before executing if parameter CRS's do not match`
 
-The :guilabel:`Menus` block controls whether an algorithm, script or
-model (built-in or provided by plugins) should be made available through
-a dedicated menu or toolbar (along with the Processing Toolbox).
+Menus
+=====
+
+The |menu| :guilabel:`Menus` block controls whether an algorithm, script or
+model (built-in or provided by plugins) should be made available
+through a dedicated menu or toolbar (along with the Processing Toolbox).
 For each item of each provider, you can:
 
 * :guilabel:`Add button in toolbar`, making it available in the
@@ -123,12 +132,34 @@ For each item of each provider, you can:
 Restart QGIS to apply the settings.
 At any time, your changes can be :guilabel:`Reset to defaults`.
 
-In the :guilabel:`Models` and :guilabel:`Scripts` blocks, you can set
-a default folder to store, and look for models and scripts respectively.
+Models and Scripts
+==================
 
-You will also find a block for algorithm :guilabel:`Providers`.
-This is the place installed providers expose their settings.
+In the |processingModel| :guilabel:`Models` and |pythonFile| :guilabel:`Scripts` blocks,
+you can set a default folder to store, and look for models and scripts respectively.
+
+Providers
+=========
+
+You will also find a block for algorithm |processingAlgorithm| :guilabel:`Providers`.
+This is the place where installed providers expose their settings.
 For example, built-in providers contain an :guilabel:`Activate` item
 that you can use to make their algorithms appear or not in the toolbox.
-Some algorithm providers have their own configuration items, which will
-be explained when covering particular algorithm providers.
+Some algorithm providers have their own configuration items,
+which will be explained when covering particular algorithm providers.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |menu| image:: /static/common/menu.png
+   :width: 1.5em
+.. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |processingModel| image:: /static/common/processingModel.png
+   :width: 1.5em
+.. |pythonFile| image:: /static/common/mIconPythonFile.png
+   :width: 1.5em
