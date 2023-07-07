@@ -27,11 +27,11 @@ for :ref:`individual parameters <alg_parameter_types>`.
 * :guilabel:`Invalid features filtering` when executing algorithm:
 
   * :guilabel:`Do not filter (better performance)`: all the features
-    (with valid and invalid geometries) are processed, but the result may be
-    erroneous depending on how the geometry invalidity affects the operations
-  * :guilabel:`Skip (ignore) features with invalid geometries`, meaning
-    that only a subset of your dataset (the valid geometry features) will
-    be processed
+    (with valid and invalid geometries) are processed, but the result may be erroneous
+    depending on how the geometry invalidity affects the operations
+  * :guilabel:`Skip (ignore) features with invalid geometries`,
+    meaning that only a subset of your dataset (the valid geometry features)
+    will be processed
   * :guilabel:`Stop algorithm execution when a geometry is invalid`:
     you'll need to track and fix the invalid geometries if you want the algorithm
     to process the whole layer. Algorithms like :ref:`qgischeckvalidity` or
@@ -113,7 +113,12 @@ for :ref:`individual parameters <alg_parameter_types>`.
 
   Select the style file (:file:`.qml`) that you want for each output
   and press :guilabel:`OK`.
-* :guilabel:`Warn before executing if parameter CRS's do not match`
+* :guilabel:`Warn before executing if parameter CRS's do not match`: By default, QGIS native algorithms
+  (i.e. the ones listed under the |menu| :menuselection:`Menus --> QGIS (native C++)` group)
+  transparently reproject the input layers to the first one's CRS before execution.
+  Check this option to get a notification from the other tools that do not suppport reprojection,
+  when the inputs CRS are not identical.
+  Third-party providers are not concerned.
 
 Menus
 =====
