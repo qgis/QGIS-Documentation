@@ -760,11 +760,11 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
   numbers (e.g., meters to kilometers)
 * :guilabel:`Preferred distance units`: options are 'Meters', 'Kilometers',
   'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', 'Millimeters',
-  'Degrees' or 'Map Units'
+  'Inches', 'Degrees' or 'Map Units'
 * :guilabel:`Preferred area units`: options are 'Square meters', 'Square
   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
   'Acres', 'Square nautical miles', 'Square centimeters', 'Square millimeters',
-  'Square degrees' or 'Map Units'
+  'Square inches', 'Square degrees' or 'Map Units'
 * :guilabel:`Preferred angle units`: options are 'Degrees', 'Radians',
   'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions',
   milliradians (SI definition) or mil (NATO/military definition)
@@ -793,7 +793,7 @@ These options can be overridden at the :ref:`project level <coordinate_and_beari
 
 * Define a :guilabel:`Zoom factor` for zoom tools or wheel mouse
 * |checkbox| :guilabel:`Reverse wheel zoom` allows you to adjust
-  mouse wheel scrolling direction. 
+  mouse wheel scrolling direction.
 
 .. _predefinedscales:
 
