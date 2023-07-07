@@ -523,6 +523,7 @@ Icon                            Substitution                        Icon        
 |rasterInfo|                    ``|rasterInfo|``                    |rasterOverview|                ``|rasterOverview|``
 |vrt|                           ``|vrt|``                           |voronoi|                       ``|voronoi|``
 |translate|                     ``|translate|``                     |warp|                          ``|warp|``
+|iterate|                       ``|iterate|``                       |terminal|                      ``|terminal|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -1065,6 +1066,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
    :width: 1.5em
+.. |iterate| image:: /static/common/mIconIterate.png
+   :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
 .. |joinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
@@ -1573,6 +1576,8 @@ Icon                            Substitution                        Icon        
 .. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
    :width: 1.5em
 .. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
+   :width: 1.5em
+.. |terminal| image:: /static/common/mActionTerminal.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
