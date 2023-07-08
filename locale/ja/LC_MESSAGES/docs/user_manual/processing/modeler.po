@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
-# Miyoshi Tomoya, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -173,6 +173,10 @@ msgstr ""
 msgid ":kbd:`Ctrl+O`"
 msgstr ":kbd:`Ctrl+O`"
 
+#: ../../docs/user_manual/processing/modeler.rst:67
+msgid "Opens a :file:`.model3` file for edit or execution"
+msgstr "編集または実行のために :file:`.model3` ファイルを開く"
+
 #: ../../docs/user_manual/processing/modeler.rst:68
 msgid "|fileSave| :guilabel:`Save Model`"
 msgstr "|fileSave| :guilabel:`モデルを保存`"
@@ -185,6 +189,10 @@ msgstr ""
 msgid ":kbd:`Ctrl+S`"
 msgstr ":kbd:`Ctrl+S`"
 
+#: ../../docs/user_manual/processing/modeler.rst:71
+msgid "Saves the model to disk as a :file:`.model3` file"
+msgstr "モデルをディスクに :file:`.model3` ファイルとして保存する"
+
 #: ../../docs/user_manual/processing/modeler.rst:72
 msgid "|fileSaveAs| :guilabel:`Save Model as...`"
 msgstr "|fileSaveAs| :guilabel:`モデルを別名で保存...`"
@@ -196,6 +204,10 @@ msgstr ""
 #: ../../docs/user_manual/processing/modeler.rst:73
 msgid ":kbd:`Ctrl+Shift+S`"
 msgstr ":kbd:`Ctrl+Shift+S`"
+
+#: ../../docs/user_manual/processing/modeler.rst:75
+msgid "Saves the model to disk as a new :file:`.model3` file"
+msgstr "モデルを新しい :file:`.model3` ファイルとしてディスクに保存する"
 
 #: ../../docs/user_manual/processing/modeler.rst:76
 msgid "|fileSave| :guilabel:`Save Model in project`"
@@ -315,6 +327,12 @@ msgstr ""
 msgid ":kbd:`Ctrl+Y`"
 msgstr ":kbd:`Ctrl+Y`"
 
+#: ../../docs/user_manual/processing/modeler.rst:128
+msgid ""
+"Rollback the latest canceled action. See also the :guilabel:`Undo/Redo` "
+"panel."
+msgstr "最後に取り消されたアクションをロールバックします。:guilabel:`元に戻す/やり直す` パネルも参照すること。"
+
 #: ../../docs/user_manual/processing/modeler.rst:129
 msgid "|undo| :guilabel:`Undo`"
 msgstr "|undo| :guilabel:`元に戻す`"
@@ -326,6 +344,10 @@ msgstr ""
 #: ../../docs/user_manual/processing/modeler.rst:130
 msgid ":kbd:`Ctrl+Z`"
 msgstr ":kbd:`Ctrl+Z`"
+
+#: ../../docs/user_manual/processing/modeler.rst:132
+msgid "Cancel the previous change. See also the :guilabel:`Undo/Redo` panel."
+msgstr "直前の変更を取り消す。:guilabel:`元に戻す/やり直す` パネルも参照すること。"
 
 #: ../../docs/user_manual/processing/modeler.rst:133
 msgid "|editCut| :guilabel:`Cut`"
@@ -339,6 +361,10 @@ msgstr ""
 msgid ":kbd:`Ctrl+X`"
 msgstr ":kbd:`Ctrl+X`"
 
+#: ../../docs/user_manual/processing/modeler.rst:136
+msgid "Cuts a selection of components from the model."
+msgstr "モデルから選択されたコンポーネントを切り取る。"
+
 #: ../../docs/user_manual/processing/modeler.rst:137
 msgid "|editCopy| :guilabel:`Copy`"
 msgstr "|editCopy| :guilabel:`コピー`"
@@ -350,6 +376,10 @@ msgstr ""
 #: ../../docs/user_manual/processing/modeler.rst:138
 msgid ":kbd:`Ctrl+C`"
 msgstr ":kbd:`Ctrl+C`"
+
+#: ../../docs/user_manual/processing/modeler.rst:140
+msgid "Copies a selection of components from the model."
+msgstr "モデルから選択したコンポーネントをコピーする。"
 
 #: ../../docs/user_manual/processing/modeler.rst:141
 msgid "|editPaste| :guilabel:`Paste`"
@@ -369,7 +399,7 @@ msgid ""
 "within the same model. The selected components keep their original "
 "properties and comments."
 msgstr ""
-"カットまたはコピーされたコンポーネントの選択部分を、モデルから別のモデル、または同じモデル内に貼り付けます。選択されたコンポーネントは、元のプロパティとコメントを保持します。"
+"切り取りまたはコピーされたコンポーネントの選択部分を、モデルから別のモデル、または同じモデル内に貼り付けます。選択されたコンポーネントは、元のプロパティとコメントを保持します。"
 
 #: ../../docs/user_manual/processing/modeler.rst:147
 msgid "|deleteSelected| :guilabel:`Delete selected components`"
@@ -897,32 +927,293 @@ msgid ""
 "following picture shows both the ``Drape (set Z value from raster)`` and the"
 " ``Climb along line`` algorithm dialogs."
 msgstr ""
-"アルゴリズムをモデルに追加するには、入力と同様に、その名前をダブルクリックするか、ドラッグ＆ドロップします。入力の場合と同様に、アルゴリズムの説明を変更したり、コメントを追加したりすることができます。アルゴリズムを追加すると、ツールボックスからアルゴリズムを実行するときに表示される実行パネルと同じような内容の実行ダイアログが表示されます。次の図は、``Drape"
-" (set Z value from raster)``と``Climb along line``の両方のアルゴリズムダイアログを示しています。"
+"アルゴリズムをモデルに追加するには、入力と同様に、その名前をダブルクリックするか、ドラッグ＆ドロップします。入力の場合と同様に、アルゴリズムの説明を変更したり、コメントを追加したりすることができます。アルゴリズムを追加すると、ツールボックスからアルゴリズムを実行するときに表示される実行パネルと同じような内容の実行ダイアログが表示されます。次の図は、``ドレープ（ラスタ値をZ値に代入）``"
+" と ``線に沿った上昇下降量`` の両方のアルゴリズムダイアログを示しています。"
 
 #: ../../docs/user_manual/processing/modeler.rst:390
 msgid "Model Algorithm parameters"
 msgstr "モデルアルゴリズムパラメーター"
 
+#: ../../docs/user_manual/processing/modeler.rst:393
+msgid ""
+"As you can see, there are however some differences. Each parameter has a "
+"drop-down menu next to it allowing to control how it will be served during "
+"the workflow:"
+msgstr ""
+"ご覧のように、いくつかの違いがあります。各パラメータの横にドロップダウンメニューがあり、ワークフロー中にどのように処理されるかをコントロールすることができます:"
+
+#: ../../docs/user_manual/processing/modeler.rst:397
+msgid ""
+"|fieldInteger| :sup:`Value`: allows you to assign a static value to the "
+"parameter. Depending on the parameter type, the widget will let you enter a "
+"number (``5.0``), a string (``mytext``), select layer(s) loaded in the QGIS "
+"project or from a folder, pick items from a list, ..."
+msgstr ""
+"|fieldInteger| :sup:`値`: "
+"パラメータに静的な値を割り当てることができます。パラメータタイプに応じて、ウィジェットは数値(``5.0``)、文字列(``mytext``)を入力したり、QGISプロジェクトまたはフォルダからレイヤーを選択したり、リストから項目を選択したりすることができます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:704
+msgid "fieldInteger"
+msgstr "fieldInteger"
+
+#: ../../docs/user_manual/processing/modeler.rst:401
+msgid ""
+"|expression| :sup:`Pre-calculated Value`: opens the :ref:`Expression Builder"
+" <vector_expressions>` dialog and lets you define an expression to fill the "
+"parameter. Model inputs together with some other layer statistics are "
+"available as **variables** and are listed at the top of the Search dialog of"
+" the Expression Builder. The expression is evaluated once before the child "
+"algorithm is executed and used during the execution of that algorithm."
+msgstr ""
+"|expression| :sup:`事前計算済値`: :ref:`式ビルダ <vector_expressions>` "
+"ダイアログを開き、パラメータを埋める式を定義します。モデル入力と他のレイヤの統計情報は **変数** "
+"として利用でき、式ビルダーの検索ダイアログの上部にリストされます。式は子アルゴリズムが実行される前に一度評価され、そのアルゴリズムの実行中に使用されます。"
+
 #: ../../docs/user_manual/processing/modeler.rst:702
 msgid "expression"
 msgstr ""
+
+#: ../../docs/user_manual/processing/modeler.rst:407
+msgid ""
+"|processingModel| :sup:`Model Input`: allows to use an input added to the "
+"model as a parameter. Once clicked, this option will list all the suitable "
+"inputs for the parameter."
+msgstr ""
+"|processingModel| :sup:`モデル入力`: "
+"はモデルに追加された入力をパラメータとして使用することができます。このオプションをクリックすると、パラメータに適した入力がすべてリストアップされます。"
 
 #: ../../docs/user_manual/processing/modeler.rst:720
 msgid "processingModel"
 msgstr ""
 
+#: ../../docs/user_manual/processing/modeler.rst:409
+msgid ""
+"|processingAlgorithm| :sup:`Algorithm Output`: allows to use the output of "
+"another algorithm as an input of the current algorithm. As of model inputs, "
+"this option will list all the suitable inputs for the parameter."
+msgstr ""
+"|processingAlgorithm| :sup:`アルゴリズム出力`: "
+"は、別のアルゴリズムの出力を、現在のアルゴリズムの入力として使用することができます。モデル入力と同様に、このオプションはパラメータに適した入力をすべてリストアップします。"
+
 #: ../../docs/user_manual/processing/modeler.rst:718
 msgid "processingAlgorithm"
 msgstr ""
+
+#: ../../docs/user_manual/processing/modeler.rst:412
+msgid ""
+"The **output parameter** also has the above options in its drop-down menu:"
+msgstr "**出力パラメータ** にも、ドロップダウンメニューに上記のオプションがあります:"
+
+#: ../../docs/user_manual/processing/modeler.rst:414
+msgid ""
+"add static outputs for child algorithms, e.g. always saving a child "
+"algorithm's output to a predefined geopackage or postgres layer"
+msgstr "子アルゴリズムに静的出力を追加する。例えば、子アルゴリズムの出力を定義済みのgeopackageやpostgresレイヤに常に保存する"
+
+#: ../../docs/user_manual/processing/modeler.rst:416
+msgid ""
+"use an expression based output values for child algorithms, e.g. generating "
+"an automatic file name based on today's date and saving outputs to that file"
+msgstr "子アルゴリズムに式を基にした出力値を使う。例えば、今日の日付に基づいて自動ファイル名を生成し、そのファイルに出力を保存する"
+
+#: ../../docs/user_manual/processing/modeler.rst:418
+msgid ""
+"use a model input, e.g. the *File/Folder* model input to specify an output "
+"file or folder"
+msgstr "モデル入力を使う。例えば、*ファイル/フォルダ* モデル入力を使って、出力ファイルまたはフォルダを指定する"
+
+#: ../../docs/user_manual/processing/modeler.rst:420
+msgid ""
+"use another algorithm output, e.g. the output of the *Create directory* "
+"algorithm (from *Modeler tools*)"
+msgstr "別のアルゴリズム出力を使う。例えば、（*モデラーツール* の）*ディレクトリを作成* アルゴリズムの出力"
+
+#: ../../docs/user_manual/processing/modeler.rst:422
+msgid ""
+"an addditional |modelOutput| :sup:`Model Output` option makes the output of "
+"the algorithm available in the model. If a layer generated by the algorithm "
+"is only to be used as input to another algorithm, don't edit that text box."
+msgstr ""
+"追加の |modelOutput| :sup:`モデル出力` "
+"オプションは、アルゴリズムの出力をモデルで利用できるようにします。アルゴリズムによって生成されたレイヤが他のアルゴリズムの入力としてのみ使用される場合は、このテキストボックスを編集しないでください。"
+
+#: ../../docs/user_manual/processing/modeler.rst:714
+msgid "modelOutput"
+msgstr "modelOutput"
+
+#: ../../docs/user_manual/processing/modeler.rst:426
+msgid ""
+"In the following picture you can see the two input parameters defined as "
+"``Model Input`` and the temporary output layer:"
+msgstr "次の図では、``モデル入力`` として定義された2つの入力パラメータと、一時的な出力レイヤを見ることができます:"
+
+#: ../../docs/user_manual/processing/modeler.rst:432
+msgid "Algorithm Input and Output parameters"
+msgstr "アルゴリズム入力と出力パラメータ"
+
+#: ../../docs/user_manual/processing/modeler.rst:434
+msgid ""
+"You will also find an additional parameter named :guilabel:`Dependencies` "
+"that is not available when calling the algorithm from the toolbox. This "
+"parameter allows you to define the order in which algorithms are executed, "
+"by explicitly defining one algorithm as a *parent* of the current one. This "
+"will force the *parent* algorithm to be executed before the current one."
+msgstr ""
+"また、ツールボックスからアルゴリズムを呼び出すときには利用できない :guilabel:`Dependencies` "
+"という追加のパラメータがあります。このパラメータにより、あるアルゴリズムを現在のアルゴリズムの *親* "
+"として明示的に定義することで、アルゴリズムの実行順序を定義することができます。これにより、現在のアルゴリズムの前に *親* アルゴリズムが実行されます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:440
+msgid ""
+"When you use the output of a previous algorithm as the input of your "
+"algorithm, that implicitly sets the previous algorithm as parent of the "
+"current one (and places the corresponding arrow in the modeler canvas). "
+"However, in some cases an algorithm might depend on another one even if it "
+"does not use any output object from it (for instance, an algorithm that "
+"executes a SQL sentence on a PostGIS database and another one that imports a"
+" layer into that same database). In that case, just select the previous "
+"algorithm in the *Dependencies* parameter and they will be executed in the "
+"correct order."
+msgstr ""
+"直前のアルゴリズムの出力を自分のアルゴリズムの入力として使用する場合、暗黙的に直前のアルゴリズムが現在のアルゴリズムの親として設定されます（そしてモデラーキャンバスに対応する矢印が配置されます）。しかし、あるアルゴリズムが、その出力オブジェクトを使用していなくても、別のアルゴリズムに依存している場合があります（例えば、PostGISデータベース上でSQL文を実行するアルゴリズムと、その同じデータベースにレイヤをインポートする別のアルゴリズム）。その場合、*Dependencies*"
+" パラメータで前のアルゴリズムを選択するだけで、正しい順序で実行されます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:451
+msgid ""
+"Once all the parameters have been assigned valid values, click on "
+":guilabel:`OK` and the algorithm will be added to the canvas. It will be "
+"linked to the elements in the canvas (algorithms or inputs) that provide "
+"objects that are used as inputs for the algorithm."
+msgstr ""
+"すべてのパラメータに有効な値が代入されたら、 :guilabel:`OK` "
+"をクリックしてアルゴリズムをキャンバスに追加します。これは、アルゴリズムの入力として使用されるオブジェクトを提供するキャンバスの要素（アルゴリズムまたは入力）にリンクされます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:456
+msgid ""
+"Elements can be dragged to a different position on the canvas using the "
+"|select| :sup:`Select/Move Item` tool. This is useful to make the structure "
+"of the model clearer and more intuitive. You can also resize the elements, "
+"grasping their border. This is particularly useful if the description of the"
+" input or algorithm is long. With :menuselection:`View --> Enable snapping` "
+"option checked, items resizing or displacement can be bound to a virtual "
+"grid, for a more visually structured algorithm design."
+msgstr ""
+"要素は、|select| :sup:`アイテムを選択/移動` "
+"ツールを使ってキャンバス上の別の位置にドラッグすることができます。これはモデルの構造をより明確に、より直感的にするのに便利です。また、要素の境界をつかんでサイズを変更することもできます。これは入力やアルゴリズムの説明が長い場合に特に便利です。:menuselection:`ビュー"
+" --> スナップの有効化` "
+"オプションをチェックすると、アイテムのサイズ変更や移動が仮想的なグリッドに拘束され、より視覚的に構造化されたアルゴリズム設計が可能になります。"
 
 #: ../../docs/user_manual/processing/modeler.rst:734
 msgid "select"
 msgstr "select"
 
+#: ../../docs/user_manual/processing/modeler.rst:465
+msgid ""
+"Links between elements are updated automatically and you can see a ``+`` "
+"button at the top and at the bottom of each algorithm. Clicking the button "
+"will list all the inputs and outputs of the algorithm so you can have a "
+"quick overview."
+msgstr ""
+"要素間のリンクは自動的に更新され、各アルゴリズムの上部と下部に ``+`` "
+"ボタンが表示されます。ボタンをクリックすると、そのアルゴリズムのすべての入力と出力が一覧表示されるので、概要を素早く把握することができます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:475
+msgid "A complete model"
+msgstr "完成したモデル"
+
+#: ../../docs/user_manual/processing/modeler.rst:477
+msgid ""
+"With the :menuselection:`Edit --> Add Group Box` tool, you can add a "
+"draggable *box* to the canvas. This feature is very useful in big models to "
+"group related elements in the modeler canvas and to keep the workflow clean."
+" For example we might group together all the inputs of the example:"
+msgstr ""
+":menuselection:`編集 --> グループボックスを追加` ツールを使用すると、キャンバスにドラッグ可能な *ボックス* "
+"を追加することができます。この機能は、大きなモデルで関連する要素をモデラーキャンバス内でグループ化し、ワークフローをすっきりさせるのに非常に便利です。例えば、例のすべての入力をグループ化することができます:"
+
+#: ../../docs/user_manual/processing/modeler.rst:486
+msgid "Model Group Box"
+msgstr "モデルグループボックス"
+
+#: ../../docs/user_manual/processing/modeler.rst:488
+msgid ""
+"You can change the name and the color of the boxes. Group boxes are very "
+"useful when used together with :menuselection:`View --> Zoom To -->` tool, "
+"allowing you to zoom to a specific part of the model. You can also zoom in "
+"and out by using the mouse wheel."
+msgstr ""
+"ボックスの名前と色は変更できます。グループボックスは :menuselection:`ビュー --> 対象ズーム -->` "
+"ツールと一緒に使うと非常に便利で、モデルの特定の部分にズームインすることができます。また、マウスホイールを使って拡大、縮小することもできます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:493
+msgid ""
+"You might want to change the order of the inputs and how they are listed in "
+"the main model dialog. At the bottom of the ``Input`` panel you will find "
+"the ``Reorder Model Inputs...`` button and by clicking on it a new dialog "
+"pops up allowing you to change the order of the inputs:"
+msgstr ""
+"入力の順番を変更したり、メインのモデルダイアログにどのように入力が表示されるかを変更したい場 合があるかもしれません。``入力`` パネルの一番下に "
+"``モデル入力の並べ替え... `` "
+"というボタンがあり、これをクリックすると新しいダイアログがポップアップ表示され、入力の順番を変更することができます:"
+
+#: ../../docs/user_manual/processing/modeler.rst:501
+msgid "Reorder Model Inputs"
+msgstr "モデル入力の並べ替え"
+
+#: ../../docs/user_manual/processing/modeler.rst:504
+msgid ""
+"Comments can also be added to inputs or algorithms present in the modeler. "
+"This can be done by going in the :guilabel:`Comment` tab of the item or with"
+" a right-click. In the same tab a color can be set manual for individual "
+"model comments. Comments are visible only in the modeler canvas and not in "
+"the final algorithm dialog; they can be hidden by deactivating "
+":menuselection:`View --> Show Comments`."
+msgstr ""
+"コメントはモデラーにある入力やアルゴリズムに追加することもできます。これはアイテムの :guilabel:`コメント` "
+"タブを開くか、右クリックすることで行えます。同じタブで、個々のモデルコメントに対して手動で色を設定することができます。コメントはモデラーキャンバスのみに表示され、最終アルゴリズムダイアログには表示されません。"
+" :menuselection:`ビュー --> コメントを表示` を無効にすることで非表示にすることができます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:511
+msgid ""
+"You can run your algorithm any time by clicking on the |start| :sup:`Run "
+"model` button. When using the editor to execute a model, any non-default "
+"values will be saved in the inputs. This means that executing the model at a"
+" later time from the editor will have the dialog prefilled with those values"
+" on any subsequent run."
+msgstr ""
+"|start| :sup:`モデルを実行` "
+"ボタンをクリックすることで、いつでもアルゴリズムを実行することができます。モデルを実行するためにエディタを使用するとき、デフォルト以外の値は入力に保存されます。これは、後でエディタからモデルを実行すると、ダイアログにそれらの値が事前に入力されることを意味します。"
+
 #: ../../docs/user_manual/processing/modeler.rst:738
 msgid "start"
 msgstr "start"
+
+#: ../../docs/user_manual/processing/modeler.rst:516
+msgid ""
+"In order to use the algorithm from the toolbox, it has to be saved and the "
+"modeler dialog closed, to allow the toolbox to refresh its contents."
+msgstr "ツールボックスのアルゴリズムを使用するには、保存してモデラーダイアログを閉じ、ツールボックスの内容を更新する必要があります。"
+
+#: ../../docs/user_manual/processing/modeler.rst:522
+msgid "Documenting your model"
+msgstr "モデルを文書化する"
+
+#: ../../docs/user_manual/processing/modeler.rst:524
+msgid ""
+"You need to document your model, and this can be done from the modeler "
+"itself. Click on the |editHelpContent|:sup:`Edit model help` button, and a "
+"dialog like the one shown next will appear."
+msgstr ""
+"モデルを文書化する必要がありますが、これはモデラー自身から行うことができます。|editHelpContent| :sup:`モデルのヘルプを編集` "
+"ボタンをクリックすると、次に示すようなダイアログが表示されます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:698
+msgid "editHelpContent"
+msgstr "editHelpContent"
+
+#: ../../docs/user_manual/processing/modeler.rst:533
+msgid "Editing Help"
+msgstr "ヘルプを編集する"
 
 #: ../../docs/user_manual/processing/modeler.rst:535
 msgid ""
@@ -944,9 +1235,66 @@ msgstr "モデルヘルプはモデル自体の一部として保存されます
 msgid "Saving and loading models"
 msgstr "モデルを保存したりロードする"
 
+#: ../../docs/user_manual/processing/modeler.rst:552
+msgid "Saving models"
+msgstr "モデルを保存する"
+
+#: ../../docs/user_manual/processing/modeler.rst:554
+msgid ""
+"Use the |fileSave|:sup:`Save model` button to save the current model and the"
+" |fileOpen|:sup:`Open Model` button to open a previously saved model. Models"
+" are saved with the :file:`.model3` extension. If the model has already been"
+" saved from the modeler window, you will not be prompted for a filename. "
+"Since there is already a file associated with the model, that file will be "
+"used for subsequent saves."
+msgstr ""
+"現在のモデルを保存するには |fileSave| :sup:`モデルを保存` ボタンを、以前に保存したモデルを開くには |fileOpen| "
+":sup:`モデルを開く` ボタンを使用します。モデルは :file:`.model3` "
+"という拡張子で保存されます。モデルがすでにモデラーウィンドウから保存されている場合、ファイル名を入力するプロンプトは表示されません。モデルにはすでにファイルが関連付けられているため、以降の保存にはそのファイルが使用されます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:562
+msgid ""
+"Before saving a model, you have to enter a name and a group for it in the "
+"text boxes in the upper part of the window."
+msgstr "モデルを保存する前に、ウィンドウ上部のテキストボックスに名前とグループを入力する必要があります。"
+
+#: ../../docs/user_manual/processing/modeler.rst:565
+msgid ""
+"Models saved in the :file:`models` folder (the default folder when you are "
+"prompted for a filename to save the model) will appear in the toolbox in the"
+" corresponding branch. When the toolbox is invoked, it searches the "
+":file:`models` folder for files with the :file:`.model3` extension and loads"
+" the models they contain. Since a model is itself an algorithm, it can be "
+"added to the toolbox just like any other algorithm."
+msgstr ""
+":file:`models` "
+"フォルダ（モデルを保存するためのファイル名を入力するプロンプトが表示されたときのデフォルトのフォルダ）に保存されたモデルは、対応するブランチのツールボックスに表示されます。ツールボックスが起動されると、"
+" :file:`models` フォルダから :file:`.model3` "
+"という拡張子のファイルを探し、その中に含まれるモデルをロードします。モデルはそれ自体がアルゴリズムなので、他のアルゴリズムと同じようにツールボックスに追加することができます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:574
+msgid ""
+"Models can also be saved within the project file using the "
+"|addToProject|:sup:`Save model in project` button. Models saved using this "
+"method won't be written as :file:`.model3` files on the disk but will be "
+"embedded in the project file."
+msgstr ""
+"また、|addToProject| :sup:`モデルをプロジェクトに保存` "
+"ボタンを使ってプロジェクトファイル内にモデルを保存することもできます。この方法で保存されたモデルはディスク上に :file:`.model3` "
+"ファイルとして書き出されるのではなく、プロジェクトファイルに埋め込まれます。"
+
 #: ../../docs/user_manual/processing/modeler.rst:688
 msgid "addToProject"
 msgstr ""
+
+#: ../../docs/user_manual/processing/modeler.rst:579
+msgid ""
+"Project models are available in the |qgsProjectFile|:guilabel:`Project "
+"models` menu of the toolbox and in the :menuselection:`Project --> Models` "
+"menu item."
+msgstr ""
+"プロジェクトモデルはツールボックスの |qgsProjectFile| :guilabel:`Project models` メニューと "
+":menuselection:`プロジェクト --> モデル` メニュー項目で利用できます。"
 
 #: ../../docs/user_manual/processing/modeler.rst:722
 msgid "qgsProjectFile"
@@ -958,13 +1306,80 @@ msgid ""
 " the :guilabel:`Modeler` group."
 msgstr "モデルフォルダは :guilabel:`モデラー` グループ下、処理設定ダイアログから設定できます。"
 
+#: ../../docs/user_manual/processing/modeler.rst:586
+msgid ""
+"Models loaded from the :file:`models` folder appear not only in the toolbox,"
+" but also in the algorithms tree in the :guilabel:`Algorithms` tab of the "
+"modeler window. That means that you can incorporate a model as a part of a "
+"bigger model, just like other algorithms."
+msgstr ""
+":file:`models` フォルダからロードされたモデルはツールボックスだけでなく、モデラーウィンドウの :guilabel:`アルゴリズム` "
+"タブにあるアルゴリズムツリーにも表示されます。つまり、他のアルゴリズムと同じように、より大きなモデルの一部としてモデルを組み込むことができるのです。"
+
+#: ../../docs/user_manual/processing/modeler.rst:592
+msgid ""
+"Models will show up in the :ref:`Browser <browser_panel>` panel and can be "
+"run from there."
+msgstr "モデルは :ref:`ブラウザ <browser_panel>` パネルに表示され、そこから実行することができます。"
+
 #: ../../docs/user_manual/processing/modeler.rst:596
 msgid "Exporting a model as a Python script"
 msgstr "Pythonスクリプトとしてモデルを出力する"
 
+#: ../../docs/user_manual/processing/modeler.rst:598
+msgid ""
+"As we will see in a later chapter, Processing algorithms can be called from "
+"the QGIS Python console, and new Processing algorithms can be created using "
+"Python. A quick way to create such a Python script is to create a model and "
+"then export it as a Python file."
+msgstr ""
+"後の章で説明するように、プロセシングアルゴリズムはQGIS "
+"Pythonコンソールから呼び出すことができ、Pythonを使って新しいプロセシングアルゴリズムを作成することができます。このようなPythonスクリプトを作成する簡単な方法は、モデルを作成し、それをPythonファイルとしてエクスポートすることです。"
+
+#: ../../docs/user_manual/processing/modeler.rst:604
+msgid ""
+"To do so, click on the |saveAsPython|:sup:`Export as Script Algorithm...` in"
+" the modeler canvas or right click on the name of the model in the "
+"Processing Toolbox and choose |saveAsPython|:sup:`Export Model as Python "
+"Algorithm...`."
+msgstr ""
+"これを行うには、モデラーキャンバスで |saveAsPython| :sup:`スクリプトアルゴリズムとして出力...` "
+"をクリックするか、プロセシングツールボックスでモデルの名前を右クリックして |saveAsPython| "
+":sup:`Pythonアルゴリズムとしてモデルを出力...` を選択します。"
+
+#: ../../docs/user_manual/processing/modeler.rst:728
+msgid "saveAsPython"
+msgstr "saveAsPython"
+
+#: ../../docs/user_manual/processing/modeler.rst:609
+msgid "Exporting a model as an image, PDF or SVG"
+msgstr "モデルを画像、PDF又はSVGとしてエクスポートする"
+
+#: ../../docs/user_manual/processing/modeler.rst:611
+msgid ""
+"A model can also be exported as an image, SVG or PDF (for illustration "
+"purposes) by clicking |saveMapAsImage|:sup:`Export as image`, "
+"|saveAsPDF|:sup:`Export as PDF` or |saveAsSVG|:sup:`Export as SVG`."
+msgstr ""
+"|saveMapAsImage| :sup:`画像として出力`、 |saveAsPDF|:sup:`PDFとして出力`、 "
+"|saveAsSVG|:sup:`SVGとして出力` をクリックすると、モデルを画像、SVG、PDF（図解用）としてエクスポートすることもできます。"
+
 #: ../../docs/user_manual/processing/modeler.rst:617
 msgid "Editing a model"
 msgstr "モデルを編集する"
+
+#: ../../docs/user_manual/processing/modeler.rst:619
+msgid ""
+"You can edit the model you are currently creating, redefining the workflow "
+"and the relationships between the algorithms and inputs that define the "
+"model."
+msgstr "現在作成中のモデルを編集し、ワークフローや、モデルを定義するアルゴリズムと入力の関係を再定義することができます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:623
+msgid ""
+"If you right-click on an algorithm in the canvas, you will see a context "
+"menu like the one shown next:"
+msgstr "キャンバス内のアルゴリズムを右クリックすると、次に示すようなコンテキストメニューが表示されます："
 
 #: ../../docs/user_manual/processing/modeler.rst:631
 msgid "Modeler Right Click"
@@ -986,6 +1401,49 @@ msgstr ""
 msgid "Cannot Delete Algorithm"
 msgstr "アルゴリズムを削除できない"
 
+#: ../../docs/user_manual/processing/modeler.rst:649
+msgid ""
+"Selecting the :guilabel:`Edit...` option will show the parameter dialog of "
+"the algorithm, so you can change the inputs and parameter values. Not all "
+"input elements available in the model will appear as available inputs. "
+"Layers or values generated at a more advanced step in the workflow defined "
+"by the model will not be available if they cause circular dependencies."
+msgstr ""
+":guilabel:`編集...` "
+"オプションを選択すると、アルゴリズムのパラメータダイアログが表示され、入力やパラメータの値を変更することができます。モデルで利用可能なすべての入力要素が利用可能な入力として表示されるわけではありません。モデルで定義されたワークフローのより高度なステップで生成されたレイヤや値は、循環依存関係を引き起こす場合には利用できません。"
+
+#: ../../docs/user_manual/processing/modeler.rst:657
+msgid ""
+"Select the new values and click on the :guilabel:`OK` button as usual. The "
+"connections between the model elements will change in the modeler canvas "
+"accordingly."
+msgstr ""
+"新しい値を選択し、通常通り :guilabel:`OK` ボタンをクリックします。モデル要素間の接続は、それに応じてモデラーキャンバスで変更されます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:661
+msgid ""
+"The :guilabel:`Add comment...` allows you to add a comment to the algorithm "
+"to better describe the behavior."
+msgstr ":guilabel:`コメントを追加...` を使うと、アルゴリズムにコメントを追加して動作をより分かりやすく説明することができます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:664
+msgid ""
+"A model can be run partially by deactivating some of its algorithms. To do "
+"it, select the :guilabel:`Deactivate` option in the context menu that "
+"appears when right-clicking on an algorithm element. The selected algorithm,"
+" and all the ones in the model that depend on it will be displayed in grey "
+"and will not be executed as part of the model."
+msgstr ""
+"モデルを部分的に実行するには、いくつかのアルゴリズムを非アクティブにします。これを行うには、アルゴリズム要素を右クリックしたときに表示されるコンテキストメニューの"
+" :guilabel:`無効化` "
+"オプションを選択します。選択されたアルゴリズムと、それに依存するモデル内のすべてのアルゴリズムが灰色で表示され、モデルの一部として実行されなくなります。"
+
 #: ../../docs/user_manual/processing/modeler.rst:675
 msgid "Model With Deactivated Algorithms"
-msgstr "無効化されたアルゴリズムを使用したモデル"
+msgstr "無効化されたアルゴリズムを持つモデル"
+
+#: ../../docs/user_manual/processing/modeler.rst:677
+msgid ""
+"When right-clicking on an algorithm that is not active, you will see a "
+":guilabel:`Activate` menu option that you can use to reactivate it."
+msgstr "アクティブでないアルゴリズムを右クリックすると、 :guilabel:`有効化` メニューオプションが表示されます。"
