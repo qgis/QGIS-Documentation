@@ -81,34 +81,32 @@ dialog similar to that in the :numref:`figure_parameters_dialog` below is shown
 
    Algorithm Dialog - Parameters
 
-The dialog shows two tabs (:guilabel:`Parameters` and :guilabel:`Log`)
-on the left part, the algorithm description on the right, and a set of
-buttons at the bottom.
+The dialog shows two tabs (:guilabel:`Parameters` and :guilabel:`Log`) on the left part,
+the algorithm description on the right, and a set of buttons at the bottom.
 
 
 Parameter types
 ...............
 
-The :guilabel:`Parameters` tab is used to set the input values that the algorithm needs to be
-executed. It shows a list of input values and configuration parameters to
-be set. It of course has a different content, depending on the requirements of
-the algorithm to be executed, and is created automatically based on those
-requirements.
+The :guilabel:`Parameters` tab is used to set the input values that the algorithm needs to be executed.
+It shows a list of input values and configuration parameters to be set.
+It of course has a different content, depending on the requirements of the algorithm to be executed,
+and is created automatically based on those requirements.
 
-Although the number and type of parameters depend on the characteristics of the
-algorithm, the structure is similar for all of them. The parameters found in the
-table can be of one of the following types.
+Although the number and type of parameters depend on the characteristics of the algorithm,
+the structure is similar for all of them.
+The parameters found in the table can be of one of the following types.
 
-* A **raster layer**, to select from a list of all such layers available
-  (currently opened) in QGIS. The selector contains as well a button on its
-  right-hand side, to let you select filenames that represent layers currently
-  not loaded in QGIS.
-* A **vector layer**, to select from a list of all vector layers available in
-  QGIS. Layers not currently loaded in QGIS can be selected as well, just like
-  for raster layers.
-  
-  You will see an iterator button by each vector layer selector, as shown in the
-  figure below.
+.. _vector_widget:
+
+* A **vector layer**, to select from a list of all vector layers available (currently opened) in QGIS.
+  You can also use unloaded layers: press the :guilabel:`...` button on the widget right-hand side,
+  and select:
+
+  * :guilabel:`Select file...`: selects file on disk using the Operating System file explorer
+  * :guilabel:`Browse for layer...`: opens the :ref:`Browser panel <label_browserpanel>`,
+    allowing to take the layers directly from database sources (PostgreSQL, SQL Server, Oracle, ...),
+    web services (WFS, AFS, ...) or files on disk.
 
   .. _figure_vector_iterator:
 
@@ -117,26 +115,36 @@ table can be of one of the following types.
 
      Vector input widget
 
-  If the algorithm contains several of them, you will be able to toggle just
-  one of them. If the button corresponding to a vector input is toggled, the
-  algorithm will be executed iteratively on each one of its features, instead
-  of just once for the whole layer, producing as many outputs as times the
-  algorithm is executed. This allows for automating the process when all
-  features in a layer have to be processed separately.
+  .. note::
 
-.. note::
+     By default, the layer widget shows the CRS of the layer along with its name.
+     If you do not want to see this additional information,
+     you can disable this functionality in the Processing Settings dialog,
+     unchecking the :menuselection:`General --> Show layer CRS definition in selection boxes` option.
 
- By default, the parameters dialog will show a description of the CRS of each layer along with
- its name. If you do not want to see this additional information, you can
- disable this functionality in the Processing Settings dialog, unchecking the
- :menuselection:`General --> Show layer CRS definition in selection boxes` option.
+  The vector input widget also has an iterator |iterate| button:
+  If toggled, the algorithm will be executed iteratively on each one of its features,
+  instead of just once for the whole layer, producing as many outputs as times the algorithm is executed.
+  This allows for automating the process when all features in a layer have to be processed separately.
+  If the algorithm contains several input vectors you can iterate over,
+  the iteration will be processed only on the first toggled parameter,
+  in the order parameters are declared in the algorithm.
 
-* A **table**, to select from a list of all available in QGIS. Non-spatial
-  tables are loaded into QGIS like vector layers, and in fact they are treated as
-  such by the program. Currently, the list of available tables that you will see
-  when executing an algorithm that needs one of them is restricted to
-  tables coming from files in dBase (:file:`.dbf`) or Comma-Separated Values
-  (:file:`.csv`) formats.
+  It is also possible to limit the algorithm execution on the vector layer
+  to its :guilabel:`Selected features only`.
+* A **table**, to select from a list of all available in QGIS.
+  Non-spatial tables are loaded into QGIS like vector layers, and use the :ref:`same widget <vector_widget>`.
+* A **raster layer**, to select from a list of all raster layers available in QGIS.
+  The selector contains as well a :guilabel:`...` button on its right-hand side,
+  to let you select filenames that represent layers currently not loaded in QGIS.
+
+  .. _figure_raster_input:
+
+  .. figure:: img/raster_input.png
+     :align: center
+
+     Raster input widget
+
 * An **option**, to choose from a selection list of possible options.
 * A **numerical value**, to be introduced in a spin box. In some contexts (when
   the parameter applies at the feature level and not at the layer's), you will
@@ -422,6 +430,8 @@ to a temporary file and deleted once you exit QGIS).
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |iterate| image:: /static/common/mIconIterate.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
