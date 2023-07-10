@@ -140,11 +140,9 @@ Add field to attributes table
 -----------------------------
 Adds a new field to a vector layer.
 
-The name and characteristics of the attribute are defined as
-parameters.
+The name and characteristics of the attribute are defined as parameters.
 
-The new attribute is not added to the input layer but a new layer is
-generated instead.
+The new attribute is not added to the input layer but a new layer is generated instead.
 
 Parameters
 ..........
@@ -190,6 +188,18 @@ Parameters
        
        Default: 0
      - Precision of the field. Useful with Float field type.
+   * - **Field alias**
+
+       Optional
+     - ``FIELD_ALIAS``
+     - [string]
+     - Set a name to use as alias for the field. Not supported by all format types.
+   * - **Field comment**
+     - ``FIELD_COMMENT``
+
+       Optional
+     - [string]
+     - Store a comment describing the field. Not supported by all format types.
    * - **Added**
      - ``OUTPUT``
      - [same as input]
@@ -896,17 +906,16 @@ Parameters
      - ``FIELDS_MAPPING``
      - [list]
      - List of output fields with their definitions.
-       The embedded table lists all the fields of the source
-       layer and allows you to edit them:
+       The embedded table lists all the fields of the source layer
+       and allows you to edit them:
 
        * Click |newAttribute| to create a new field.
        * Click |deleteAttribute| to remove a field.
-       * Use |arrowUp| and |arrowDown| to change the selected field
-	 order.
+       * Use |arrowUp| and |arrowDown| to change the selected field order.
        * Click |clearText| to reset to the default view.
+       * Click |invertSelection| to invert the selection in the fields list.
 
-       For each of the fields you'd like to reuse, you need to
-       fill the following options:
+       For each of the fields you'd like to reuse, you need to fill the following options:
 
        :guilabel:`Source expression` (``expression``) [expression]
          Field or expression from the input layer.
@@ -928,6 +937,14 @@ Parameters
        :guilabel:`Constraints` (``constraints``) [string]
          When using a template layer, indicates whether there are constraints
          applied to the template field. Hover over the cell to display the constraints.
+
+       :guilabel:`Field alias` (``field_alias``) [string]
+         Set a name to use as alias for the field. Not supported by all format types.
+         Existing aliases are displayed and will be copied to the destination layer if supported.
+
+       :guilabel:`Field comment` (``field_comment``) [string]
+         Store a comment describing the field. Not supported by all format types.
+         Existing comments are displayed and will be copied to the destination layer if supported.
 
        :guilabel:`Load fields from template layer`
          Allows to select a layer from the current project as a template
@@ -1200,6 +1217,8 @@ Python code
 .. |clearText| image:: /static/common/mIconClearText.png
    :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
