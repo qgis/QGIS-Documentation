@@ -222,6 +222,10 @@ It is also possible to interact with the elements displayed in the plot canvas:
 For more details, give a look to `QGIS elevation profile/cross section tool -- a deep dive!
 <https://www.youtube.com/watch?v=AknJjNPystU>`_, a presentation done by Nyall Dawson.
 
+.. raw:: html
+
+  <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/AknJjNPystU" title="QGIS elevation profile/cross section tool -- a deep dive!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe></p>
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
