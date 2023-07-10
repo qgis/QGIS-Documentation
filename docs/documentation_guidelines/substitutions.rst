@@ -240,6 +240,7 @@ Icon                            Substitution                        Icon        
 |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
 |temporal|                      ``|temporal``                       |temporalNavigationOff|         ``|temporalNavigationOff|``
 |temporalNavigationFixedRange|  ``|temporalNavigationFixedRange|``  |temporalNavigationAnimated|    ``|temporalNavigationAnimated|``
+|newElevationProfile|           ``|newElevationProfile|``
 ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -1229,6 +1230,8 @@ Icon                            Substitution                        Icon        
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
+   :width: 1.5em
+.. |newElevationProfile| image:: /static/common/mActionNewElevationProfile.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em

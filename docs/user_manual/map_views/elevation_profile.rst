@@ -126,7 +126,7 @@ Creating an elevation profile
 
 To create a profile view, you can:
 
-#. Go to :menuselection:`View -->` |layoutItem3DMap| :menuselection:`Elevation Profile` menu.
+#. Go to :menuselection:`View -->` |newElevationProfile| :menuselection:`Elevation Profile` menu.
    The :guilabel:`Elevation profile` panel opens.
 #. Create the profile line along which the terrain and the features will be rendered.
    Select a drawing tool:
@@ -241,8 +241,6 @@ For more details, give a look to `QGIS elevation profile/cross section tool -- a
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
-.. |elevationscale| image:: /static/common/elevationscale.png
-   :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |layerTree| image:: /static/common/mIconLayerTree.png
@@ -251,11 +249,11 @@ For more details, give a look to `QGIS elevation profile/cross section tool -- a
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
+.. |newElevationProfile| image:: /static/common/mActionNewElevationProfile.png
+   :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |pan| image:: /static/common/mActionPan.png
-   :width: 1.5em
-.. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em

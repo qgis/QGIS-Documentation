@@ -700,7 +700,7 @@ actions like:
      -
      - :guilabel:`Attributes`
      - :ref:`statistical_summary`
-   * - |layoutItem3DMap| :guilabel:`Elevation Profile`
+   * - |newElevationProfile| :guilabel:`Elevation Profile`
      -
      -
      - :ref:`label_elevation_profile_view`
@@ -2374,8 +2374,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
-.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
-   :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
 .. |lineIntersections| image:: /static/common/mAlgorithmLineIntersections.png
@@ -2433,6 +2431,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
+   :width: 1.5em
+.. |newElevationProfile| image:: /static/common/mActionNewElevationProfile.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
