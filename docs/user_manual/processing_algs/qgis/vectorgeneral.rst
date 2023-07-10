@@ -2226,6 +2226,13 @@ Basic parameters
 
        Default: ``EPSG:4326 - WGS 84``
      - Destination coordinate reference system
+   * - **Convert curved geometries to straight segments**
+     - ``CONVERT_CURVED_GEOMETRIES``
+     - [boolean]
+
+       Default: False
+     - If checked, curved geometries will be converted to straight segments in the process,
+       avoiding potential distortion issues.
    * - **Reprojected**
      - ``OUTPUT``
      - [same as input]
