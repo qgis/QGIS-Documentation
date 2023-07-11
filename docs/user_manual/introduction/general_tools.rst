@@ -390,49 +390,53 @@ as their ordering is determined by the placement of the group layer.
 
 .. _editing_style_layer:
 
-Editing vector layer style
-...........................
+Editing layer style
+....................
 
-From the Layers panel, you have shortcuts to change the layer rendering quickly
-and easily. Right-click on a vector layer and select :menuselection:`Styles -->`
-in the list in order to:
+From the :guilabel:`Layers` panel, you have shortcuts to change the layer rendering quickly and easily.
 
-* see the :ref:`styles <manage_custom_style>` currently applied to the layer.
+Right-click on a layer and select :menuselection:`Styles -->` in the list in order to:
+
+* see the :ref:`styles <manage_custom_style>` currently available for the layer.
   If you defined many styles for the layer, you can switch from one to another
   and your layer rendering will automatically be updated on the map canvas.
 * copy part or all of the current style, and when applicable, paste a copied
   style from another layer
+* :guilabel:`Rename current...` style
+* :guilabel:`Add` a new style (which is actually a copy of the current one)
+* or :guilabel:`Remove current` style (only when multiple styles are available).
 
   .. tip:: **Quickly share a layer style**
 
     From the context menu, copy the style of a layer and paste it to a group
     or a selection of layers: the style is applied to all the layers that
-    are of the same type (vector/raster) as the original layer and,
+    are of the same type (vector, raster, mesh, point cloud, ...) as the original layer and,
     for vector layers, have the same geometry type (point, line or polygon).
 
-* rename the current style, add a new style (which is actually a copy of
-  the current one) or delete the current style (when multiple styles are
-  available).
+When using a symbology based on features classification
+(e.g. :ref:`categorized <categorized_renderer>`, :ref:`graduated <graduated_renderer>`
+or :ref:`rule-based <rule_based_rendering>` for vector layers,
+or :ref:`classification <point_cloud_classification>` for point clouds),
+right-clicking a class entry in the :guilabel:`Layers` panels makes it possible
+to edit the visibility of the classes (and their features) and avoid (un)checking them one by one:
 
-.. note:: The previous options are also available for raster or mesh layers.
+* |toggleAllLayers| :guilabel:`Toggle Items`
+* |showAllLayers| :guilabel:`Show All Items`
+* |hideAllLayers| :guilabel:`Hide All Items`
 
+With vector layer, the contextual menu of a class leaf entry also gives access to:
+
+* |selectAll| :guilabel:`Select features`: selects in the layer all the features matching that class
+* |openTable| :guilabel:`Show in attribute table`: opens an attribute table
+  filtered to only the features matching that class
 * update the :ref:`symbol color <color-selector>` using a **Color Wheel**.
-  For convenience, the recently used colors are also available at the bottom
-  of the color wheel.
-* :guilabel:`Edit Symbol...`: open the :ref:`Symbol Selector <symbol-selector>`
-  dialog and change feature symbol (symbol, size, color...).
+  For convenience, the recently used colors are also available at the bottom of the color wheel.
+* :guilabel:`Edit Symbol...`: opens the :ref:`Symbol Selector <symbol-selector>`
+  dialog to change feature symbol (symbol, size, color...).
+* :guilabel:`Copy Symbol`
+* :guilabel:`Paste Symbol`
 
-When using a classification symbology type (based on :ref:`categorized
-<categorized_renderer>`, :ref:`graduated <graduated_renderer>` or
-:ref:`rule-based <rule_based_rendering>`), the aforementioned symbol-level
-options are available from the class entry context menu. Also provided are the
-|toggleAllLayers| :guilabel:`Toggle Items`, |showAllLayers| :guilabel:`Show All
-Items` and |hideAllLayers| :guilabel:`Hide All Items` entries to switch the
-visibility of all the classes of features. These avoid (un)checking items
-one by one.
-
-.. tip:: Double-clicking a class leaf entry also opens the
- :guilabel:`Symbol Selector` dialog.
+.. tip:: Double-clicking a class leaf entry also opens the :guilabel:`Symbol Selector` dialog.
 
 
 .. index::
