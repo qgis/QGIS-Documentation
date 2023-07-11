@@ -139,6 +139,16 @@ The parameters found in the table can be of one of the following types.
     * :guilabel:`Invalid feature filtering`: allows the :ref:`default method <processing_general_settings>`
       for handling features with invalid geometries to be overridden
     * :guilabel:`Limit features processed`: optional limit on number of features processed from the source
+    * :guilabel:`Feature filter`: allows to enter an expression to subset the layer dynamically
+      when running the tool, avoiding the need for separate steps to set layer filters
+      or create layer subsets.
+
+    .. _figure_vector_input_parameters:
+
+    .. figure:: img/vector_input_parameters.png
+       :align: center
+
+       Advanced options for vector input widget
 
   * It is also possible to limit the algorithm execution on the vector layer
     to its :guilabel:`Selected features only`.
