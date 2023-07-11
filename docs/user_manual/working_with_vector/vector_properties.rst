@@ -3663,8 +3663,6 @@ To do so:
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
    :width: 1.5em
-.. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
-   :width: 1.5em
 .. |histogram| image:: /static/common/histogram.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
@@ -3753,8 +3751,6 @@ To do so:
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
-   :width: 1.5em
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
    :width: 1.5em
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
@@ -3783,8 +3779,6 @@ To do so:
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
-   :width: 1.5em
-.. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
