@@ -14,6 +14,8 @@ The Processing Options menu (:menuselection:`Settings--> Options -->`
 Configuration parameters are structured in separate blocks that you can
 select on the left-hand side of the dialog.
 
+.. _processing_general_settings:
+
 General
 =======
 
