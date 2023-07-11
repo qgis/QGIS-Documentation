@@ -489,6 +489,7 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |processingAlgorithm|           ``|processingAlgorithm|``           |processingModel|               ``|processingModel|``
 |processingHistory|             ``|processingHistory|``             |processingResult|              ``|processingResult|``
+|menu|                          ``|menu|``
 |processSelected|               ``|processSelected|``               |editHelpContent|               ``|editHelpContent|``  
 |saveAsPython|                  ``|saveAsPython|``                  |modelOutput|                   ``|modelOutput|``  
 |qgsProjectFile|                ``|qgsProjectFile|``                |addToProject|                  ``|addToProject|``
@@ -1154,6 +1155,8 @@ Icon                            Substitution                        Icon        
 .. |measureArea| image:: /static/common/mActionMeasureArea.png
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
+   :width: 1.5em
+.. |menu| image:: /static/common/menu.png
    :width: 1.5em
 .. |merge| image:: /static/common/merge.png
    :width: 1.5em
