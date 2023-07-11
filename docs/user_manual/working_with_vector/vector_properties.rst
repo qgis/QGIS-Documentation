@@ -339,10 +339,10 @@ discrete values of a field or an expression.
 To use categorized symbology for a layer:
 
 #. Select the :guilabel:`Value` of classification: it can be an existing field
-   or an :ref:`expression <vector_expressions>` you can type in the box or build
-   using the associated |expression| button. Using expressions for categorizing
-   avoids the need to create an ad hoc field for symbology purposes (eg, if your
-   classification criteria are derived from one or more attributes).
+   or an :ref:`expression <vector_expressions>` you can type in the box
+   or build using the associated |expression| button.
+   Using expressions for categorizing avoids the need to create a field for symbology purposes only
+   (eg, if your classification criteria are derived from one or more attributes).
 
    The expression used to classify features can be of any type; eg, it can:
 
@@ -440,6 +440,10 @@ Right-clicking over selected item(s) shows a contextual menu to:
 
 * :guilabel:`Unmerge Categories` that were previously merged
 
+The created classes also appear in a tree hierarchy in the :guilabel:`Layers` panel.
+Double-click an entry in the map legend to edit the assigned symbol.
+Right-click and you will get some :ref:`more options <editing_style_layer>`.
+
 .. _categorized_advanced_menu:
 
 The :guilabel:`Advanced` menu gives access to options to speed classification
@@ -452,23 +456,6 @@ or fine-tune the symbols rendering:
   assigns to each category a symbol whose name represents the classification
   value of the category
 * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering.
-
-.. tip:: **Edit categories directly from the** :guilabel:`Layers` **panel**
-
-   When a layer symbology is based on a :ref:`categorized <categorized_renderer>`,
-   :ref:`graduated <graduated_renderer>` or :ref:`rule-based <rule_based_rendering>`
-   symbology mode, you can edit each of the categories from the :guilabel:`Layers`
-   Panel. Right-click on a sub-item of the layer and you will:
-
-   * |toggleAllLayers| :guilabel:`Toggle items` visibility
-   * |showAllLayers| :guilabel:`Show all items`
-   * |hideAllLayers| :guilabel:`Hide all items`
-   * Modify the symbol color thanks to the :ref:`color selector
-     <color-selector>` wheel
-   * :guilabel:`Edit symbol...` from the :ref:`symbol selector
-     <symbol-selector>` dialog
-   * :guilabel:`Copy symbol`
-   * :guilabel:`Paste symbol`
 
 
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
@@ -487,8 +474,11 @@ to define rotation and size scale from specified columns.
 
 Also, analogous to the Categorized Renderer, it allows you to select:
 
-* The value (using the fields listbox or the |expression|
-  :sup:`Set value expression` function)
+* The :guilabel:`Value` of classification: it can be an existing field
+  or an :ref:`expression <vector_expressions>` you can type in the box
+  or build using the associated |expression| button.
+  Using expressions for graduating avoids the need to create a field for symbology purposes only
+  (eg, if your classification criteria are derived from one or more attributes).
 * The symbol (using the Symbol selector dialog)
 * The legend format and the precision
 * The method to use to change the symbol: color or size
@@ -555,14 +545,10 @@ the major_rivers layer of the QGIS sample dataset.
 
    Graduated Symbolizing options
 
-.. tip:: **Thematic maps using an expression**
+The created classes also appear in a tree hierarchy in the :guilabel:`Layers` panel.
+Double-click an entry in the map legend to edit the assigned symbol.
+Right-click and you will get some :ref:`more options <editing_style_layer>`.
 
-   Categorized and graduated thematic maps can be created using the result
-   of an expression. In the properties dialog for vector layers, the attribute
-   chooser is extended with a |expression| :sup:`Set column expression` function.
-   So you don't need to write the classification attribute
-   to a new column in your attribute table if you want the classification
-   attribute to be a composite of multiple fields, or a formula of some sort.
 
 .. index:: Proportional symbol, Multivariate analysis, Size assistant
 .. _proportional_symbols:
@@ -730,6 +716,7 @@ the features of the specific rule and the nested ones.
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click an entry in the map legend to edit the assigned symbol.
+Right-click and you will get some :ref:`more options <editing_style_layer>`.
 
 The example in :numref:`figure_rule_based_symbology` shows the rule-based rendering
 dialog for the rivers layer of the QGIS sample dataset.
