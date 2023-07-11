@@ -123,16 +123,25 @@ The parameters found in the table can be of one of the following types.
      you can disable this functionality in the Processing Settings dialog,
      unchecking the :menuselection:`General --> Show layer CRS definition in selection boxes` option.
 
-  The vector input widget also has an iterator |iterate| button:
-  If toggled, the algorithm will be executed iteratively on each one of its features,
-  instead of just once for the whole layer, producing as many outputs as times the algorithm is executed.
-  This allows for automating the process when all features in a layer have to be processed separately.
-  If the algorithm contains several input vectors you can iterate over,
-  the iteration will be processed only on the first toggled parameter,
-  in the order parameters are declared in the algorithm.
+  The vector input widget also has following features:
 
-  It is also possible to limit the algorithm execution on the vector layer
-  to its :guilabel:`Selected features only`.
+  * an iterator |iterate| button:
+    If toggled, the algorithm will be executed iteratively on each one of its features,
+    instead of just once for the whole layer, producing as many outputs as times the algorithm is executed.
+    This allows for automating the process when all features in a layer have to be processed separately.
+    If the algorithm contains several input vectors you can iterate over,
+    the iteration will be processed only on the first toggled parameter,
+    in the order parameters are declared in the algorithm.
+
+  * |options| :sup:`Advanced options` button to adjust settings to use for that specific parameter.
+    These settings concern:
+
+    * :guilabel:`Invalid feature filtering`: allows the :ref:`default method <processing_general_settings>`
+      for handling features with invalid geometries to be overridden
+    * :guilabel:`Limit features processed`: optional limit on number of features processed from the source
+
+  * It is also possible to limit the algorithm execution on the vector layer
+    to its :guilabel:`Selected features only`.
 * A **table**, to select from a list of all available in QGIS.
   Non-spatial tables are loaded into QGIS like vector layers, and use the :ref:`same widget <vector_widget>`.
 * A **raster layer**, to select from a list of all raster layers available in QGIS.
