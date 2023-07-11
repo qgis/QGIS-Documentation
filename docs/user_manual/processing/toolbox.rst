@@ -297,19 +297,20 @@ some third-party providers).
 The :menuselection:`Advanced -->` menu provides functions to reuse
 the configuration defined in the dialog without running the algorithm:
 
-* :guilabel:`Copy as Python Command`: allows for easy copying of the equivalent
-  :ref:`PyQGIS command <processing_console>` to run the tool using the
-  parameters defined in the dialog
-* :guilabel:`Copy as qgis_process Command`: allows for easy generation of
+* |settings| :guilabel:`Algorithm Settings...`: allows to override processing settings
+  for the current algorithm execution. More details at :ref:`alg_override_setting`.
+* |pythonFile| :guilabel:`Copy as Python Command`: allows for easy copying of the equivalent
+  :ref:`PyQGIS command <processing_console>` to run the tool using the parameters defined in the dialog
+* |terminal| :guilabel:`Copy as qgis_process Command`: allows for easy generation of
   :ref:`qgis_process command <processing_standalone>`, including its environment
   settings like the distance units, area units, ellipsoid, and any tricky
   parameter values like GeoPackage outputs with specific layers
-* :guilabel:`Copy as JSON`: all the settings of the command are copied in
+* |editCopy| :guilabel:`Copy as JSON`: all the settings of the command are copied in
   a :file:`JSON` format, ready to be consumed by qgis_process.
   This is a convenient way to see the expected format of the commands,
   even for complex parameters (like TIN interpolation parameters).
   You can store these easily and then restore them later by pasting the values.
-* :guilabel:`Paste Settings` in a :file:`JSON` format
+* |editPaste| :guilabel:`Paste Settings` in a :file:`JSON` format
 
 
 The :guilabel:`Run as Batch Process...` button triggers the :ref:`batch processing
@@ -319,6 +320,26 @@ A :guilabel:`Run as Single Process...` helps you switch back from the batch mode
 
 When an algorithm execution finishes (either successfully or not), a new button
 :guilabel:`Change Parameters` is shown as long as the :guilabel:`Log` tab is active.
+
+.. _alg_override_setting:
+
+Override algorithm settings
+............................
+
+Triggered from within the :guilabel:`Advanced` drop-down menu at the bottom of an algorithm dialog,
+the |settings| :guilabel:`Algorithm Settings...` shows a panel
+allowing users to control general processing settings which apply to that algorithm execution only.
+It is intended to be a place where a user can override their :ref:`global processing settings <processing_general_settings>`
+on an ad-hoc basis without having to change their usual default settings.
+
+Settings that can be overridden are:
+
+* :guilabel:`Invalid feature filtering`: unlike the existing per-parameter setting override for this,
+  setting the handling method here will apply to **ALL inputs** for the algorithm
+* :guilabel:`Calculation settings`, such as :guilabel:`Distance units` and :guilabel:`Area units`
+  to use for distance/area measurements
+* :guilabel:`Environment settings`, such as :guilabel:`Temporary folder` and :guilabel:`Number of threads to use`
+
 
 A note on projections
 .....................
@@ -449,6 +470,8 @@ to a temporary file and deleted once you exit QGIS).
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |iterate| image:: /static/common/mIconIterate.png
@@ -468,4 +491,8 @@ to a temporary file and deleted once you exit QGIS).
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
 .. |search| image:: /static/common/search.png
+   :width: 1.5em
+.. |settings| image:: /static/common/settings.png
+   :width: 1.5em
+.. |terminal| image:: /static/common/mActionTerminal.png
    :width: 1.5em

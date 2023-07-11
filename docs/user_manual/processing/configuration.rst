@@ -21,8 +21,9 @@ General
 
 The :guilabel:`General` block contains the default settings to control
 how the algorithm dialog as well as input or output parameters should behave.
-Some of the settings can however be overridden at the algorithm runtime,
-for :ref:`individual parameters <alg_parameter_types>`.
+Some of the settings can however be overridden at the algorithm level,
+per :ref:`algorithm run <alg_override_setting>`
+or for :ref:`individual parameters <alg_parameter_types>`.
 
 * :guilabel:`Default output raster layer extension` is by default ``tif``
 * :guilabel:`Default output vector layer extension` is by default ``gpkg``
