@@ -656,8 +656,8 @@ WFS and WFS-T Client
 
 In QGIS, a WFS layer behaves pretty much like any other vector layer.
 You can identify and select features, and view the attribute table.
-QGIS supports WFS 1.0.0, 1.1.0, 2.0 and OGC API - Features (OAPIF),
-including editing (through WFS-T).
+QGIS supports WFS 1.0.0, 1.1.0, 2.0 and OGC API - Features (OAPIF).
+Editing is supported via WFS-T and OGC API - Features (Part 4).
 QGIS also supports background download and progressive rendering,
 on-disk caching of downloaded features and version autodetection.
 
