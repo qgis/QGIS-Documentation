@@ -711,6 +711,20 @@ Red circles will appear when hovering vertices.
 
      Moving the top vertex snaps all the vertices to the grid
 
+* **Converting adjacent segments to/from curve**: Select the center vertex of the segment you want
+  to convert, hit the :kbd:`O` letter key.
+  If the vertex was in a curve, the curve is converted into straight lines.
+  If the vertex was between two straight lines, they are converted into a curve.
+  A first or a last vertex of a line can't be converted to a center vertex curve.
+  The layer must be compatible with curve geometry type.
+
+  .. _figure_vertex_convert_curve:
+
+  .. figure:: img/vertex_convert_curve.png
+     :align: center
+
+     Switch from curve to straight lines with :kbd:`O` letter
+
 Each change made with the vertex tool is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support
 topological editing when this is turned on.
