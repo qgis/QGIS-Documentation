@@ -1742,12 +1742,13 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   and vice-versa under the :guilabel:`Snapping priority` entry.
   You can switch from one method to the other during the digitizing operation,
   and this avoids disabling any of the snapping options in the meantime.
+  Press :kbd:`N` (or :kbd:`Shift+N`) during a digitizing operation to cycle through the angles list.
   
 * |floater| :sup:`Floater settings`: if the :guilabel:`Show floater` item is checked,
   a contextual menu with digitizing information follows the cursor during digitizing.
   The values can be accessed using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`,
   edited and |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`).
-  The type of information to return can be selected in the bottom part of the menu:
+  The type of information to display can be selected in the bottom part of the menu:
 
   * :guilabel:`Show distance`
   * :guilabel:`Show angle`
