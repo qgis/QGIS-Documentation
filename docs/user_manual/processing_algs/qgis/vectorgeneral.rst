@@ -2226,6 +2226,15 @@ Basic parameters
 
        Default: ``EPSG:4326 - WGS 84``
      - Destination coordinate reference system
+   * - **Convert curved geometries to straight segments**
+
+       |332|
+     - ``CONVERT_CURVED_GEOMETRIES``
+     - [boolean]
+
+       Default: False
+     - If checked, curved geometries will be converted to straight segments in the process,
+       avoiding potential distortion issues.
    * - **Reprojected**
      - ``OUTPUT``
      - [same as input]
@@ -2697,5 +2706,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |332| replace:: ``NEW in 3.32``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
