@@ -123,16 +123,35 @@ The parameters found in the table can be of one of the following types.
      you can disable this functionality in the Processing Settings dialog,
      unchecking the :menuselection:`General --> Show layer CRS definition in selection boxes` option.
 
-  The vector input widget also has an iterator |iterate| button:
-  If toggled, the algorithm will be executed iteratively on each one of its features,
-  instead of just once for the whole layer, producing as many outputs as times the algorithm is executed.
-  This allows for automating the process when all features in a layer have to be processed separately.
-  If the algorithm contains several input vectors you can iterate over,
-  the iteration will be processed only on the first toggled parameter,
-  in the order parameters are declared in the algorithm.
+  The vector input widget also has following features:
 
-  It is also possible to limit the algorithm execution on the vector layer
-  to its :guilabel:`Selected features only`.
+  * an iterator |iterate| button:
+    If toggled, the algorithm will be executed iteratively on each one of its features,
+    instead of just once for the whole layer, producing as many outputs as times the algorithm is executed.
+    This allows for automating the process when all features in a layer have to be processed separately.
+    If the algorithm contains several input vectors you can iterate over,
+    the iteration will be processed only on the first toggled parameter,
+    in the order parameters are declared in the algorithm.
+
+  * |options| :sup:`Advanced options` button to adjust settings to use for that specific parameter.
+    These settings concern:
+
+    * :guilabel:`Invalid feature filtering`: allows the :ref:`default method <processing_general_settings>`
+      for handling features with invalid geometries to be overridden
+    * :guilabel:`Limit features processed`: optional limit on number of features processed from the source
+    * :guilabel:`Feature filter`: allows to enter an expression to subset the layer dynamically
+      when running the tool, avoiding the need for separate steps to set layer filters
+      or create layer subsets.
+
+    .. _figure_vector_input_parameters:
+
+    .. figure:: img/vector_input_parameters.png
+       :align: center
+
+       Advanced options for vector input widget
+
+  * It is also possible to limit the algorithm execution on the vector layer
+    to its :guilabel:`Selected features only`.
 * A **table**, to select from a list of all available in QGIS.
   Non-spatial tables are loaded into QGIS like vector layers, and use the :ref:`same widget <vector_widget>`.
 * A **raster layer**, to select from a list of all raster layers available in QGIS.
@@ -278,19 +297,20 @@ some third-party providers).
 The :menuselection:`Advanced -->` menu provides functions to reuse
 the configuration defined in the dialog without running the algorithm:
 
-* :guilabel:`Copy as Python Command`: allows for easy copying of the equivalent
-  :ref:`PyQGIS command <processing_console>` to run the tool using the
-  parameters defined in the dialog
-* :guilabel:`Copy as qgis_process Command`: allows for easy generation of
+* |settings| :guilabel:`Algorithm Settings...`: allows to override processing settings
+  for the current algorithm execution. More details at :ref:`alg_override_setting`.
+* |pythonFile| :guilabel:`Copy as Python Command`: allows for easy copying of the equivalent
+  :ref:`PyQGIS command <processing_console>` to run the tool using the parameters defined in the dialog
+* |terminal| :guilabel:`Copy as qgis_process Command`: allows for easy generation of
   :ref:`qgis_process command <processing_standalone>`, including its environment
   settings like the distance units, area units, ellipsoid, and any tricky
   parameter values like GeoPackage outputs with specific layers
-* :guilabel:`Copy as JSON`: all the settings of the command are copied in
+* |editCopy| :guilabel:`Copy as JSON`: all the settings of the command are copied in
   a :file:`JSON` format, ready to be consumed by qgis_process.
   This is a convenient way to see the expected format of the commands,
   even for complex parameters (like TIN interpolation parameters).
   You can store these easily and then restore them later by pasting the values.
-* :guilabel:`Paste Settings` in a :file:`JSON` format
+* |editPaste| :guilabel:`Paste Settings` in a :file:`JSON` format
 
 
 The :guilabel:`Run as Batch Process...` button triggers the :ref:`batch processing
@@ -300,6 +320,26 @@ A :guilabel:`Run as Single Process...` helps you switch back from the batch mode
 
 When an algorithm execution finishes (either successfully or not), a new button
 :guilabel:`Change Parameters` is shown as long as the :guilabel:`Log` tab is active.
+
+.. _alg_override_setting:
+
+Override algorithm settings
+............................
+
+Triggered from within the :guilabel:`Advanced` drop-down menu at the bottom of an algorithm dialog,
+the |settings| :guilabel:`Algorithm Settings...` shows a panel
+allowing users to control general processing settings which apply to that algorithm execution only.
+It is intended to be a place where a user can override their :ref:`global processing settings <processing_general_settings>`
+on an ad-hoc basis without having to change their usual default settings.
+
+Settings that can be overridden are:
+
+* :guilabel:`Invalid feature filtering`: unlike the existing per-parameter setting override for this,
+  setting the handling method here will apply to **ALL inputs** for the algorithm
+* :guilabel:`Calculation settings`, such as :guilabel:`Distance units` and :guilabel:`Area units`
+  to use for distance/area measurements
+* :guilabel:`Environment settings`, such as :guilabel:`Temporary folder` and :guilabel:`Number of threads to use`
+
 
 A note on projections
 .....................
@@ -430,6 +470,8 @@ to a temporary file and deleted once you exit QGIS).
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |iterate| image:: /static/common/mIconIterate.png
@@ -449,4 +491,8 @@ to a temporary file and deleted once you exit QGIS).
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
 .. |search| image:: /static/common/search.png
+   :width: 1.5em
+.. |settings| image:: /static/common/settings.png
+   :width: 1.5em
+.. |terminal| image:: /static/common/mActionTerminal.png
    :width: 1.5em
