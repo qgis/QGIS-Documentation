@@ -5,9 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# tomoyuki arai <tarai.3367@gmail.com>, 2023
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# tomoyuki arai <tarai.3367@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-13 12:32+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,6 +25,22 @@ msgstr ""
 "Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/map_views/map_view.rst:6
+msgid "2D Map View"
+msgstr "2Dマップビュー"
+
+#: ../../docs/user_manual/map_views/map_view.rst:14
+msgid ""
+"The 2D map view (also called **Map canvas**) is the central place where maps"
+" are displayed. QGIS opens by default with a single map view (called ``main "
+"map``), showing layers in 2D, and tightly bound to the :guilabel:`Layers` "
+"panel. That window reflects the rendering (symbology, labeling, "
+"visibilities...) you applied to the loaded layers."
+msgstr ""
+"2Dマップビュー（ **マップキャンバス** とも呼びます）は、地図が表示される中心的な場所です。デフォルトでは、QGISは単一のマップビュー（ "
+"``メインマップ`` と呼ばれます）を開き、レイヤを2Dで表示し、 :guilabel:`レイヤ` "
+"パネルと緊密に結合しています。このウィンドウは、読み込んだレイヤに適用したレンダリング（シンボロジ、ラベル、可視性など）を反映します。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:26
 msgid "QGIS GUI"
@@ -46,7 +63,22 @@ msgstr ""
 "レイヤを追加（たとえば :ref:`opening_data` "
 "を参照）すると、QGISは自動的にそのレイヤのCRSを探します。空のQGISプロジェクトから始める場合、デフォルトで別のCRSがプロジェクトに設定されているとき（"
 " :ref:`project_crs` "
-"を参照）には、レイヤの範囲は「オンザフライ」にそのCRSに変換され、マップビューはその範囲にズームします。プロジェクトにすでにレイヤがある場合にはマップキャンバスのサイズ変更は実行されず、現在のマップキャンバス範囲にある地物が表示されるだけです。"
+"を参照）には、レイヤの範囲は「オンザフライ」にそのCRSに変換され、マップビューはその範囲にズームします。プロジェクトにすでにレイヤがある場合には、マップキャンバスのサイズ変更は実行されず、現在のマップキャンバス範囲にある地物が表示されるだけです。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:44
+msgid ""
+"Click on the map view and you should be able to interact with it, panning or"
+" zooming to different areas of the map. Dedicated tools are provided in the "
+":guilabel:`Navigation Toolbar` and in the :menuselection:`View` menu, with "
+"handful shortcuts from the keyboard or the mouse buttons."
+msgstr ""
+"マップビューをクリックして、地図のさまざまな場所にパンやズームすることでマップを操作することができます。 "
+":guilabel:`ナビゲーションツールバー` と :menuselection:`ビュー` "
+"メニューには専用のツールがあり、キーボードやマウスボタンによるショートカットもあります。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:51
+msgid "Map canvas navigation tools"
+msgstr "マップキャンバスのナビゲーションツール"
 
 #: ../../docs/user_manual/map_views/map_view.rst:56
 #: ../../docs/user_manual/map_views/map_view.rst:751
@@ -58,17 +90,76 @@ msgstr "ツール"
 msgid "Usage"
 msgstr "利用方法"
 
+#: ../../docs/user_manual/map_views/map_view.rst:58
+msgid "|pan| :sup:`Pan Map`"
+msgstr "|pan| :sup:`地図を移動`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1325
 msgid "pan"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:59
+msgid ""
+"Single left click: the map is centered on the clicked point, at the same "
+"scale"
+msgstr "左シングルクリック：地図はクリックした点を中心に、同じ縮尺で表示されます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:60
+msgid "Hold down the left mouse button and drag the map canvas."
+msgstr "左マウスボタンを押しながらドラッグすると、マップキャンバスが移動します。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:62
+msgid "|zoomIn| :sup:`Zoom In`"
+msgstr "|zoomIn| :sup:`拡大`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1384
 msgid "zoomIn"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:63
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets doubled"
+msgstr "左シングルクリック：地図はクリックした点を中心に、縮尺が2倍で表示されます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:65
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom in to "
+"an area."
+msgstr "左マウスボタンでマップキャンバス上で四角形をドラッグすると、そのエリアにズームします。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:67
+msgid ""
+"Hold the :kbd:`Alt` key to switch to the |zoomOut| :sup:`Zoom Out` tool."
+msgstr ":kbd:`Alt` キーを押しながらだと、 |zoomOut| :sup:`縮小` ツールに切り替わります。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1390
 msgid "zoomOut"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:69
+msgid "|zoomOut| :sup:`Zoom Out`"
+msgstr "|zoomOut| :sup:`縮小`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:70
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets halved"
+msgstr "左シングルクリック：地図はクリックした点を中心に、縮尺が半分で表示されます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:72
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom out "
+"from an area."
+msgstr "左マウスボタンでマップキャンバス上で四角形をドラッグすると、そのエリアからズームアウトします。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:74
+msgid "Hold the :kbd:`Alt` key to switch to the |zoomIn| :sup:`Zoom In` tool."
+msgstr ":kbd:`Alt` キーを押しながらだと、 |zoomIn| :sup:`拡大` ツールに切り替わります。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:76
+msgid "|panToSelected| :sup:`Pan Map to Selection`"
+msgstr "|panToSelected| :sup:`選択部分にパン`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1327
 msgid "panToSelected"
@@ -80,6 +171,10 @@ msgid ""
 ":guilabel:`Layers` panel."
 msgstr ":guilabel:`レイヤ` パネルで選択されたレイヤの選択地物にマップをパンします。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:79
+msgid "|zoomToSelected| :sup:`Zoom To Selection`"
+msgstr "|zoomToSelected| :sup:`選択部分にズーム`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1396
 msgid "zoomToSelected"
 msgstr ""
@@ -90,6 +185,16 @@ msgid ""
 ":guilabel:`Layers` panel."
 msgstr ":guilabel:`レイヤ` パネルで選択されたレイヤの選択地物にズームします。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:83
+#: ../../docs/user_manual/map_views/map_view.rst:88
+#: ../../docs/user_manual/map_views/map_view.rst:100
+msgid "*Also available in the layer contextual menu*"
+msgstr "*レイヤのコンテキストメニューからも利用できます*"
+
+#: ../../docs/user_manual/map_views/map_view.rst:84
+msgid "|zoomToLayer| :sup:`Zoom To Layer(s)`"
+msgstr "|zoomToLayer| :sup:`レイヤの領域にズーム`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1394
 msgid "zoomToLayer"
 msgstr ""
@@ -99,6 +204,10 @@ msgid ""
 "Zoom to the extent of all the selected layers in the :guilabel:`Layers` "
 "panel."
 msgstr ":guilabel:`レイヤ` パネルで選択されたレイヤすべてを合わせた範囲にズームします。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:89
+msgid "|zoomFullExtent| :sup:`Zoom Full`"
+msgstr "|zoomFullExtent| :sup:`全域表示`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1382
 msgid "zoomFullExtent"
@@ -111,6 +220,10 @@ msgid ""
 msgstr ""
 "プロジェクト内の全てのレイヤを含む範囲、または :ref:`プロジェクト範囲の全域 <project_full_extent>` にズームします。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:92
+msgid "|zoomLast| :sup:`Zoom Last`"
+msgstr "|zoomLast| :sup:`前の領域へズーム`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1386
 msgid "zoomLast"
 msgstr ""
@@ -119,6 +232,10 @@ msgstr ""
 msgid "Zoom the map to the previous extent in history."
 msgstr "マップを履歴内の前の表示範囲にズームします。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:94
+msgid "|zoomNext| :sup:`Zoom Next`"
+msgstr "|zoomNext| :sup:`次の表示領域にズーム`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1388
 msgid "zoomNext"
 msgstr ""
@@ -126,6 +243,10 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:95
 msgid "Zoom the map to the next extent in history."
 msgstr "マップを履歴内の次の表示範囲にズームします。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:96
+msgid "|zoomActual| :sup:`Zoom to Native Resolution`"
+msgstr "|zoomActual| :sup:`ネイティブ解像度にズーム（100%）`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1380
 msgid "zoomActual"
@@ -136,6 +257,53 @@ msgid ""
 "Zoom the map to a level where one pixel of the active raster layer covers "
 "one screen pixel."
 msgstr "アクティブなラスタレイヤの1ピクセルがスクリーンの1ピクセルに一致するようにマップを拡大縮小します。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:101
+msgid "Mouse wheel"
+msgstr "マウスホイール"
+
+#: ../../docs/user_manual/map_views/map_view.rst:102
+msgid "Pan map: Hold and drag the mouse wheel."
+msgstr "地図の移動：マウスホイールを押しながらドラッグします。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:103
+msgid ""
+"Zoom: Roll the mouse wheel to zoom in or zoom out. With :kbd:`Ctrl` key "
+"pressed while rolling the mouse wheel results in a finer zoom."
+msgstr ""
+"ズーム： マウスホイールを回転させると拡大・縮小します。 :kbd:`Ctrl` キーを押しながらマウスホイールを回転させると、細かくズームできます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:106
+msgid ""
+"Press the back or forward button to browse the map canvas zoom history."
+msgstr "戻る・進むボタンを押すと、マップキャンバスのズーム履歴をブラウズします。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:107
+msgid "Keyboard"
+msgstr "キーボード"
+
+#: ../../docs/user_manual/map_views/map_view.rst:108
+msgid ""
+"Pan map: Hold down the :kbd:`Space` key and move the mouse. Press the arrow "
+"keys to pan up, down, left and right."
+msgstr "地図の移動： :kbd:`Space` キーを押しながらマウスを移動します。矢印キーで上下左右に移動できます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:110
+msgid "Zoom in: Press :kbd:`PgUp` or :kbd:`Ctrl++`"
+msgstr "拡大： :kbd:`PgUp` または :kbd:`Ctrl++`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:111
+msgid "Zoom out: Press :kbd:`PgDown` or :kbd:`Ctrl+-`"
+msgstr "縮小： :kbd:`PgDown` または :kbd:`Ctrl+-`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:112
+msgid ""
+"Zoom to area: When certain map tools are active (Identify, Measure...), hold"
+" down :kbd:`Shift` and drag a rectangle on the map to zoom to that area. Not"
+" compatible with active selection or edit tools."
+msgstr ""
+"領域にズーム：何らかのマップツール（地物情報表示や計測ツールなど）がアクティブな時に、地図上で :kbd:`Shift` "
+"キーを押しながら四角形をドラッグすると、その領域にズームします。選択ツールや編集ツールがアクティブな場合には対応していません。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:116
 msgid ""
@@ -151,12 +319,24 @@ msgstr ""
 msgid "editCopy"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:127
+msgid "Controlling map rendering"
+msgstr "地図のレンダリングの制御"
+
 #: ../../docs/user_manual/map_views/map_view.rst:129
 msgid ""
 "By default, QGIS renders all visible layers whenever the map canvas is "
 "refreshed. The events that trigger a refresh of the map canvas include:"
 msgstr ""
 "デフォルトでは、QGISはマップキャンバスが更新されるたびにすべての可視レイヤをレンダリングします。マップキャンバスの更新を発生させるイベントは次のとおりです。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:132
+msgid "changing the visibility of a layer"
+msgstr "レイヤの可視性の変更"
+
+#: ../../docs/user_manual/map_views/map_view.rst:133
+msgid "modifying symbology of a visible layer"
+msgstr "可視レイヤのシンボロジの変更"
 
 #: ../../docs/user_manual/map_views/map_view.rst:134
 msgid "adding a layer"
@@ -173,6 +353,42 @@ msgstr "QGISウィンドウのサイズ変更"
 #: ../../docs/user_manual/map_views/map_view.rst:138
 msgid "QGIS allows you to control the rendering process in a number of ways."
 msgstr "QGISではいくつかの方法でレンダリング処理を制御できます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:140
+msgid "at the :ref:`global level <rendering_options>`"
+msgstr ":ref:`グローバルレベル <rendering_options>` での制御"
+
+#: ../../docs/user_manual/map_views/map_view.rst:141
+msgid ""
+"per layer, using e.g. the :ref:`scale dependent rendering "
+"<label_scaledepend>`"
+msgstr "例えば :ref:`縮尺に応じたレンダリング <label_scaledepend>` を使用した、レイヤ毎の制御"
+
+#: ../../docs/user_manual/map_views/map_view.rst:142
+msgid "or with dedicated tools in the GUI."
+msgstr "GUI上の専用ツールによる制御"
+
+#: ../../docs/user_manual/map_views/map_view.rst:144
+msgid ""
+"To stop the map drawing, press the :kbd:`Esc` key. This will halt the "
+"refresh of the map canvas and leave the map partially drawn. It may however "
+"take a bit of time after pressing :kbd:`Esc` for the map drawing to halt."
+msgstr ""
+"マップの描画を停止するには、 :kbd:`Esc` "
+"キーを押します。これによりマップキャンバスの更新は中断され、マップは部分的に描画されたままになります。ただし、 :kbd:`Esc` "
+"を押してからマップの描画が停止するまでには少し時間がかかる場合があります。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:148
+msgid ""
+"To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in "
+"the bottom-right corner of the status bar. When |checkbox| "
+":guilabel:`Render` is unchecked, QGIS does not redraw the canvas in response"
+" to any of the usual triggers mentioned earlier. Examples of when you might "
+"want to suspend rendering include:"
+msgstr ""
+"レンダリングを中断するには、ステータスバーの右下角にある |checkbox| :guilabel:`レンダ` チェックボックスをクリックします。 "
+"|checkbox| :guilabel:`レンダ` "
+"がチェックされていない場合、QGISは上で述べた通常のトリガーでは反応せず、キャンバスの再描画を行いません。レンダリングを中断したい場合の例としては、以下のようなものがあります："
 
 #: ../../docs/user_manual/map_views/map_view.rst:1289
 msgid "checkbox"
@@ -227,6 +443,14 @@ msgid ""
 ":ref:`raster layers <raster_temporal>`: controls whether to display or not "
 "the layer."
 msgstr ":ref:`ラスタレイヤ <raster_temporal>` ：レイヤの表示・非表示をコントロールします"
+
+#: ../../docs/user_manual/map_views/map_view.rst:177
+msgid ""
+":ref:`WMTS layers <wmts_temporal>`: controls whether the data should be "
+"rendered based on a static time range or following a dynamic temporal range"
+msgstr ""
+":ref:`WMTSレイヤ <wmts_temporal>` "
+"：固定の時間範囲に基づくか、動的な時間範囲に従って、データをレンダリングするかどうかを制御します"
 
 #: ../../docs/user_manual/map_views/map_view.rst:179
 msgid ""
@@ -340,7 +564,17 @@ msgstr ""
 
 #: ../../docs/user_manual/map_views/map_view.rst:219
 msgid ":guilabel:`Frames rate`: number of steps that are shown per second"
-msgstr ":guilabel:`秒` ：1秒あたりに表示されるステップ数"
+msgstr ":guilabel:`フレーム数/秒` ：1秒あたりに表示されるステップ数"
+
+#: ../../docs/user_manual/map_views/map_view.rst:221
+msgid ""
+"|unchecked| :guilabel:`Cumulative range`: all animation frames will have the"
+" same start date-time but different end dates and times. This is useful if "
+"you wish to accumulate data in your temporal visualization instead of "
+"showing a ‘moving time window’ across your data."
+msgstr ""
+"|unchecked| :guilabel:`累積範囲` "
+"：全てのアニメーションフレームで範囲の終了日時は異なりますが、開始日時は同じになります。これは、データの時間範囲にわたって「移動する時間窓」を表示するのではなく、時系列ビジュアライゼーションでデータを累積して表示したい場合に便利です。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1378
 msgid "unchecked"
@@ -407,7 +641,7 @@ msgstr ""
 "時間範囲を分割するための時間 :guilabel:`ステップ` を入力します。 ``秒`` から ``世紀`` "
 "まで、さまざまな単位がサポートされています。 ``ソースのタイムスタンプ`` "
 "もステップとして使用できます。これを選択した場合、プロジェクト内のレイヤで利用可能な全ての時間範囲をステップした時系列ナビゲーションとなります。これは、例えば不定期な日付の画像を提供するWMS-"
-"Tサービスのように、利用可能な日時が不連続となっているレイヤがプロジェクトに含まれている場合に便利です。このオプションでは、次に利用可能な画像が表示されるまでの時間間隔だけステップすることができます。"
+"Tサービスのように、利用可能な日時が不連続となっているレイヤがプロジェクトに含まれている場合に便利です。このオプションでは、次に利用可能な画像が表示されるまでの時間間隔の分だけステップします。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:253
 msgid ""
@@ -426,13 +660,24 @@ msgstr ""
 msgid "Temporal navigation through a layer"
 msgstr "レイヤの時系列ナビゲーション"
 
+#: ../../docs/user_manual/map_views/map_view.rst:264
+msgid ""
+"The animation can also be previewed by moving the time slider. Checking the "
+"|unchecked| :guilabel:`Loop` checkbox will repeatedly run the animation "
+"while clicking |play| stops a running animation. A full set of video player "
+"buttons is available."
+msgstr ""
+"アニメーションは、時間スライダーを動かすことでもプレビューできます。 |unchecked| :guilabel:`ループ` "
+"チェックボックスにチェックを入れると、 |play| "
+"ボタンをクリックしてアニメーションを停止するまでは、アニメーションを繰り返し再生します。ビデオプレイヤーのボタンは全て使用できます。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:269
 msgid ""
 "Horizontal scrolling using the mouse wheel (where supported) with the cursor"
 " on the map canvas will also allow you to navigate, or “scrub”, the temporal"
 " navigation slider backwards and forwards."
 msgstr ""
-"（マウスがサポートしている場合には）マップキャンバス上にカーソルを置いてマウスホイールを水平スクロールすることでも時間操作ができます。「スクラブ」、つまり時系列ナビゲーションスライダーを前後に移動させることでも操作できます。"
+"（マウスがサポートしている場合には）マップキャンバス上にカーソルを置いてマウスホイールを水平スクロールすることでも時間操作ができます。「スクラブ」、つまり時系列ナビゲーションスライダーを左右に移動させることでも操作できます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:273
 msgid ""
@@ -473,7 +718,7 @@ msgstr "使用する :ref:`領域 <extent_selector>` の再定義"
 msgid ""
 "control the :guilabel:`Resolution` of the image (:guilabel:`Output width` "
 "and :guilabel:`Output height`)"
-msgstr "画像の :guilabel:`解像度` の制御（ :guilabel:`出力の幅` と :guilabel:`出力の高さ` ）"
+msgstr "画像の :guilabel:`解像度` の制御（ :guilabel:`出力幅` と :guilabel:`出力高` ）"
 
 #: ../../docs/user_manual/map_views/map_view.rst:290
 msgid ""
@@ -492,7 +737,11 @@ msgstr "アニメーションの時間の :guilabel:`範囲（Range）`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:295
 msgid "the :guilabel:`Step (frame length)` in the unit of your choice"
-msgstr "好きな単位での :guilabel:`停止（フレーム長）`"
+msgstr "好きな単位での :guilabel:`ステップ（フレーム長）`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:304
+msgid "Bookmarking extents on the map"
+msgstr "地図上の範囲のブックマーク"
 
 #: ../../docs/user_manual/map_views/map_view.rst:306
 msgid ""
@@ -563,6 +812,16 @@ msgstr ":ref:`範囲セレクタ <extent_selector>` ウィジェットを使用�
 msgid "Indicate the :guilabel:`CRS` to use for the extent"
 msgstr "領域に使用する :guilabel:`CRS` を指定します"
 
+#: ../../docs/user_manual/map_views/map_view.rst:338
+msgid ""
+"Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User "
+"Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list"
+" is set to :guilabel:`User Bookmarks`)"
+msgstr ""
+"ブックマークの :guilabel:`保存先` を :guilabel:`ユーザー・ブックマーク` か "
+":guilabel:`プロジェクト・ブックマーク` のどちらにするか選択します（デフォルトでは、このドロップダウンリストは "
+":guilabel:`ユーザー・ブックマーク` に設定されています）"
+
 #: ../../docs/user_manual/map_views/map_view.rst:341
 msgid "Press :guilabel:`Save` to add the bookmark to the list"
 msgstr ":guilabel:`保存` ボダンを押して、ブックマークをリストに追加します"
@@ -600,6 +859,10 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:359
 msgid "You can perform the following tasks:"
 msgstr "以下の作業を行うことができます："
+
+#: ../../docs/user_manual/map_views/map_view.rst:361
+msgid "Managing bookmark actions"
+msgstr "ブックマークのアクションの管理"
 
 #: ../../docs/user_manual/map_views/map_view.rst:366
 msgid "Task"
@@ -751,6 +1014,10 @@ msgid ""
 ":ref:`locator <label_statusbar>`."
 msgstr ":ref:`ロケータ <label_statusbar>` バーにブックマーク名を入力して、ブックマーク範囲にズームすることもできます。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:414
+msgid "Decorating the map"
+msgstr "地図の整飾"
+
 #: ../../docs/user_manual/map_views/map_view.rst:416
 msgid ""
 "Decorations include Grid, Title Label, Copyright Label, Image, North Arrow, "
@@ -795,7 +1062,7 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:440
 msgid ""
 "The :guilabel:`Grid type`: it can be :guilabel:`Line` or :guilabel:`Marker`"
-msgstr ":guilabel:`グリッドタイプ` ： :guilabel:`ライン` もしくは :guilabel:`マーカー` から選びます"
+msgstr ":guilabel:`グリッド型` ： :guilabel:`ライン` もしくは :guilabel:`マーカー` から選びます"
 
 #: ../../docs/user_manual/map_views/map_view.rst:441
 msgid ""
@@ -1337,6 +1604,43 @@ msgstr ""
 msgid "Annotation Tools"
 msgstr "注記ツール"
 
+#: ../../docs/user_manual/map_views/map_view.rst:718
+msgid ""
+"Annotations are another type of elements added onto the map canvas to "
+"provide additional information that can not be depicted by the rendered "
+"layers. Unlike :ref:`labels <vector_labels_tab>` that rely on attribute "
+"values stored in vector layers, annotations are independent details, stored "
+"within the project file itself."
+msgstr ""
+"注記は、レンダリングされたレイヤでは表現することができない追加情報を提供するための、マップキャンバスに追加されるもう一つの種類の要素です。ベクタレイヤが持つ属性値に依存する"
+" :ref:`ラベル <vector_labels_tab>` とは異なり、注記は独立した詳細情報で、プロジェクト自体に格納されます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:724
+msgid "Two families of annotations are available in QGIS:"
+msgstr "QGISでは2種類の注記が利用できます:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:726
+msgid ""
+"**Feature annotations**: they are actual georeferenced features of text, "
+"marker, line or polygon type stored within a special layer type called "
+"\"annotation layer\". They are tied to a particular geographic location, "
+"meaning that moving your map, changing the scale or changing projection "
+"won’t cause your annotations to jump around the map. Rather, they’ll be "
+"locked in place to the location you’ve drawn them."
+msgstr ""
+"**地物注記**: "
+"これは、実際にジオリファレンスされたテキスト、マーカー、ライン、またはポリゴンタイプの地物で、「注記レイヤ」と呼ばれる特別なレイヤに保存されます。この注記は特定の地理的な位置に紐づいているため、地図を移動したり、縮尺や投影法を変えたりしても、注記が地図上のあちこちに行ってしまうことはありません。そうではなく、注記を描画した位置に固定されます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:731
+msgid ""
+"**Balloon annotations**: these are individuals annotations of text, form or "
+"image type placed inside a bubble. They can be associated to any layer for "
+"their visibility, are drawn on top of the map canvas. The size is dependent "
+"from the map canvas scale, and its position can be anchored."
+msgstr ""
+"**バルーン注記**: "
+"これは、テキスト、フォーム、または画像形式の独立した注記で、吹き出し内に配置されます。この注記は、視認性を向上させる目的でどんなレイヤにも関連付けることができ、マップキャンバスの最上位に表示されます。注記のサイズはマップキャンバスの縮尺に依存し、位置は固定できます。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:736
 msgid "**Layout the map with annotations**"
 msgstr "**マップに注記をレイアウトする**"
@@ -1358,57 +1662,382 @@ msgstr ""
 ":ref:`印刷レイアウト <create-output>` の場合には、対応する地図のアイテムプロパティで "
 ":guilabel:`地図キャンバスアイテムの描画` にチェックを入れる必要があります。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:745
+msgid ""
+"The :guilabel:`Annotations Toolbar` provides a set of tools to create and "
+"interact with both families of annotations."
+msgstr ":guilabel:`注記ツールバー` には、両方の種類の注記を作成したり操作したりするためのツールがあります。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:748
+msgid "The Annotations Toolbar actions"
+msgstr "注記ツールバーのアクション"
+
+#: ../../docs/user_manual/map_views/map_view.rst:751
+msgid "Scope"
+msgstr "スコープ"
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "|createAnnotationLayer| :sup:`New Annotation Layer`"
+msgstr "|createAnnotationLayer| :sup:`新規注記レイヤ`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1293
 msgid "createAnnotationLayer"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "Create a new layer to store annotations"
+msgstr "注記を保存するための新しいレイヤを作成します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "Feature annotations"
+msgstr "地物注記"
+
+#: ../../docs/user_manual/map_views/map_view.rst:755
+msgid ":sup:`Main Annotation Layer Properties`"
+msgstr ":sup:`メイン注記レイヤの属性`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:755
+msgid "Control settings of the Main Annotation Layer"
+msgstr "メイン注記レイヤの設定を行います"
+
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid "|select| :sup:`Modify Annotations`"
+msgstr "|select| :sup:`注記を修正`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1343
 msgid "select"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid "Select, move, resize and modify symbology properties of annotations"
+msgstr "注記の選択や移動、大きさの変更や、注記のシンボロジのプロパティを修正します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:759
+#: ../../docs/user_manual/map_views/map_view.rst:811
+msgid "|addPolygon| :sup:`Create Polygon Annotation`"
+msgstr "|addPolygon| :sup:`ポリゴン注記を作成`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1281
 msgid "addPolygon"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:759
+msgid "Create an annotation as a polygon feature"
+msgstr "ポリゴン地物の注記を作成します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:761
+#: ../../docs/user_manual/map_views/map_view.rst:812
+msgid "|addPolyline| :sup:`Create Line Annotation`"
+msgstr "|addPolyline| :sup:`ライン注記を作成`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1283
 msgid "addPolyline"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:761
+msgid "Create an annotation as a polyline feature"
+msgstr "ポリライン地物の注記を作成します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:763
+#: ../../docs/user_manual/map_views/map_view.rst:813
+msgid "|addMarker| :sup:`Create Marker Annotation`"
+msgstr "|addMarker| :sup:`マーカー注記を作成`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1279
 msgid "addMarker"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:763
+msgid "Create an annotation as a point feature"
+msgstr "ポイント地物の注記を作成します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:765
+#: ../../docs/user_manual/map_views/map_view.rst:814
+msgid "|actionText| :sup:`Create Text Annotation at Point`"
+msgstr "|actionText| :sup:`点上の注記を作成`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1271
 msgid "actionText"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:765
+msgid "Create an annotation as a text label"
+msgstr "テキストラベルの注記を作成します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+msgid "|textAnnotation| :sup:`Text Annotation`"
+msgstr "|textAnnotation| :sup:`注記`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1374
 msgid "textAnnotation"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+msgid "Select and create a text formatted annotation"
+msgstr "テキスト形式の注記の選択と作成ができます"
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+#: ../../docs/user_manual/map_views/map_view.rst:899
+msgid "Balloon annotations"
+msgstr "バルーン注記"
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "|htmlAnnotation| :sup:`HTML Annotation`"
+msgstr "|htmlAnnotation| :sup:`HTML注記`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1303
 msgid "htmlAnnotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "Select and create annotation with an :file:`HTML` file's content"
+msgstr ":file:`HTML` ファイルの内容の注記の選択と作成ができます"
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "|svgAnnotation| :sup:`SVG Annotation`"
+msgstr "|svgAnnotation| :sup:`SVG注記`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1364
 msgid "svgAnnotation"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "Select and create annotation showing an :file:`SVG` file"
+msgstr ":file:`SVG` ファイルを表示する注記の選択と作成ができます"
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid "|formAnnotation| :sup:`Form Annotation`"
+msgstr "|formAnnotation| :sup:`注記フォーム`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1301
 msgid "formAnnotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid ""
+"Select and create annotation showing attributes of a vector layer in a "
+"custom form file"
+msgstr "カスタムフォームファイルの形式でベクタレイヤの属性を表示する注記の選択と作成ができます"
+
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "|annotation| :sup:`Move Annotation`"
+msgstr "|annotation| :sup:`注記を移動`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1285
 msgid "annotation"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "Adjust size and position of annotation element"
+msgstr "注記要素の大きさや位置を調整します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:782
+msgid "Feature Annotations"
+msgstr "地物注記"
+
+#: ../../docs/user_manual/map_views/map_view.rst:784
+msgid ""
+"Feature annotations are stored in **annotation layers**. Unlike conventional"
+" layers, an annotation layer is available only in the current project and "
+"can contain features of different types (text, marker, line, polygon). The "
+"layer has no attributes and no symbology associated, but instead each "
+"feature can be symbolized on an item-by-item basis, through :guilabel:`Layer"
+" Styling` panel."
+msgstr ""
+"地物注記は **注記レイヤ** "
+"に保存されます。通常のレイヤとは異なり、注記レイヤは現在のプロジェクトでのみ利用可能で、さまざまなタイプ（テキスト、マーカー、ライン、ポリゴン）の地物を持つことができます。このレイヤは属性テーブルを持たず、関連付けられたシンボロジもありませんが、その代わり、各地物は"
+" :guilabel:`レイヤスタイル` パネルを使用してアイテム毎にシンボルを設定できます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:790
+msgid "Two types of annotation layer are available in QGIS:"
+msgstr "QGISには2種類の注記レイヤがあります:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:792
+msgid ""
+"A common :guilabel:`Annotation Layer`: you can create one using the "
+"|createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed in "
+"the :guilabel:`Layers` panel, allowing you to control its features' "
+"visibility, move it to show above or below particular layers in your map, "
+"like any common layer. Double-click the layer and you can access its "
+"properties."
+msgstr ""
+"通常の :guilabel:`注記レイヤ`: これは |createAnnotationLayer| :sup:`新規注記レイヤ` "
+"ツールを使用して作成できます。このレイヤは :guilabel:`レイヤ` "
+"パネルに表示され、一般的なレイヤと同様に、地物の可視性を制御したり、マップ内の特定のレイヤの上または下に表示するように移動させたりすることができます。レイヤをダブルクリックすると、プロパティにアクセスできます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid ""
+"The :guilabel:`Main Annotation Layer`: By default, this is where annotations"
+" are stored when no annotation layer is available in the project or is "
+"selected at creation time. This layer is always drawn on the very top of "
+"your map and you won't see it listed in the :guilabel:`Layers` panel "
+"alongside the other layers in your project, meaning that its features are "
+"always visible. The :guilabel:`Main Annotation Layer Properties` entry on "
+"the :guilabel:`Annotations` toolbar helps you open its properties dialog."
+msgstr ""
+":guilabel:`メイン注記レイヤ`: "
+"デフォルトでは、プロジェクトに注記レイヤがない場合、または注記の作成時に注記レイヤが選択されていない場合、メイン注記レイヤに注記が保存されます。このレイヤは常にマップの一番上に描画され、プロジェクト内のその他のレイヤと並んで"
+" :guilabel:`レイヤ` パネルに表示されることはありません。つまり、このレイヤの地物は常に表示されます。 :guilabel:`注記` "
+"ツールバーの :guilabel:`メイン注記レイヤの属性...` エントリを使用すると、メイン注記レイヤのプロパティダイアログを開きます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:807
+msgid "Interaction"
+msgstr "インタラクション"
+
+#: ../../docs/user_manual/map_views/map_view.rst:809
+msgid ""
+"The Feature annotations have dedicated tools for creation depending on their"
+" type:"
+msgstr "地物注記には、その種類に応じた専用の作成ツールがあります:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:816
+msgid ""
+"All the usual QGIS shortcuts for creating features apply when creating "
+"annotation items. A line or polygon annotation is drawn by left-clicking "
+"once for each vertex, with a final right mouse click to complete the shape. "
+"Snapping can be enabled while you draw, you can use the :guilabel:`Advanced "
+"Digitizing Tools` to precisely place vertices, and even switch the "
+":ref:`drawing tools <drawing_methods>` to the streaming mode for completely "
+"free-form shapes."
+msgstr ""
+"地物を作成する際の通常の QGIS "
+"ショートカットはすべて、注記アイテムを作成するときにも適用されます。ラインまたはポリゴンの注記は、各頂点を左クリックし、最後にマウスの右クリックで図形作成を終了することで描画します。描画にあたってスナップを有効にでき、"
+" :guilabel:`高度なデジタイズツール` を使用して頂点を正確に配置したり、 :ref:`描画ツール <drawing_methods>` "
+"をストリーム・デジタイジングモードに切り替えて、完全に自由な形状を作成することさえもできます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:823
+msgid ""
+"Unlike common layers, an annotation layer does not need to be active before "
+"you select its features. Simply grab the |select| :sup:`Modify Annotations` "
+"tool and you will be able to interact with any feature annotation:"
+msgstr ""
+"通常のレイヤとは異なり、注記レイヤは地物を選択する前にレイヤをアクティブにする必要はありません。単に |select| :sup:`注記を修正` "
+"ツールを使用するだけで、任意の地物注記の操作ができます:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:827
+msgid "**Selection**: simply left-click on the annotation"
+msgstr "**選択**: 注記を左クリック"
+
+#: ../../docs/user_manual/map_views/map_view.rst:828
+msgid ""
+"**Moving**: Left click on a selected annotation item to start moving it. A "
+"right-click or pressing :kbd:`Esc` key cancels the move, while a second left"
+" click will confirm the move. The displacement can also be controlled "
+"pressing the cursor keys:"
+msgstr ""
+"**移動**: 選択した注記アイテムを左クリックすることで移動を開始。右クリックまたは :kbd:`Esc` "
+"キーを押すと移動をキャンセル。2回目の左クリックで移動を確定。移動量はカーソルキーを押すことでも制御可:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:833
+msgid ":kbd:`Shift+key` for big movement"
+msgstr ":kbd:`Shift+key` ：大きく移動"
+
+#: ../../docs/user_manual/map_views/map_view.rst:834
+msgid ":kbd:`Alt+key` for ``1 px`` movement"
+msgstr ":kbd:`Alt+key` ： ``1 ピクセル`` だけ移動"
+
+#: ../../docs/user_manual/map_views/map_view.rst:835
+msgid ""
+"**Geometry modification**: for line or polygon annotations, left-click on a "
+"vertex of the geometry, move and click again. Double-click a segment to add "
+"a new vertex."
+msgstr ""
+"**ジオメトリの修正**: "
+"ライン注記やポリゴン注記の場合は、ジオメトリの頂点上を左クリックし、移動してからもう一度左クリック。セグメントをダブルクリックすると、新しい頂点を追加。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:838
+msgid ""
+"**Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while an "
+"annotation is selected will delete that annotation"
+msgstr "**削除**: 注記が選択されている時に :kbd:`Del` キーまたは :kbd:`Backspace` キーを押すと、その注記を削除"
+
+#: ../../docs/user_manual/map_views/map_view.rst:840
+msgid ":ref:`Change feature symbology <annotation_feature_symbology>`"
+msgstr ":ref:`地物のシンボロジの変更 <annotation_feature_symbology>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:845
+msgid "Feature symbology"
+msgstr "地物のシンボロジ"
+
+#: ../../docs/user_manual/map_views/map_view.rst:847
+msgid ""
+"A selected annotation will display its :guilabel:`Symbology` properties in "
+"the :guilabel:`Layer styling` panel. You can:"
+msgstr ""
+"選択した注記は、 :guilabel:`レイヤスタイル` パネルに :guilabel:`シンボロジ` "
+"プロパティを表示します。ここでは、次の操作が可能です:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:850
+msgid ""
+"modify the appearance using full capabilities of the :ref:`symbol <symbol-"
+"selector>` or the :ref:`text format <text_format>` (including the text "
+"itself), depending on the type."
+msgstr ""
+"見た目（テキスト自体も含む）の修正を、注記の種類に応じて :ref:`シンボル <symbol-selector>` や "
+":ref:`テキストフォーマット <text_format>` の全機能を使用して行えます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:853
+msgid "configure a :guilabel:`Reference scale`"
+msgstr ":guilabel:`参照スケール` の設定"
+
+#: ../../docs/user_manual/map_views/map_view.rst:854
+msgid "set a :guilabel:`Z index`"
+msgstr ":guilabel:`Z-index` の設定"
+
+#: ../../docs/user_manual/map_views/map_view.rst:855
+msgid "modify some of the :guilabel:`Layer rendering` settings"
+msgstr ":guilabel:`レイヤレンダリング` の設定の修正"
 
 #: ../../docs/user_manual/map_views/map_view.rst:858
 msgid "Layer Properties"
 msgstr "レイヤプロパティ"
 
+#: ../../docs/user_manual/map_views/map_view.rst:860
+msgid ""
+"The properties dialog of an annotation layer provides the following tabs:"
+msgstr "注記レイヤのプロパティダイアログには、以下のタブがあります:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:862
+msgid ""
+":guilabel:`Information`: a read-only dialog representing an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer."
+msgstr ""
+":guilabel:`情報`: 読み取り専用のダイアログで、現在のレイヤの要約された情報やメタデータをさっと掴むことができる興味深い場所です。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:864
+msgid ""
+":guilabel:`Source`: defines general settings for the annotation layer. You "
+"can:"
+msgstr ":guilabel:`ソース`: 注記レイヤの一般的な設定を定義します。以下の設定ができます:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:866
+msgid ""
+"Set a :guilabel:`Layer name` that will be used to identify the layer in the "
+"project (in the :guilabel:`Layers Panel`, with expressions, ...)"
+msgstr ""
+"プロジェクト内（ :guilabel:`レイヤ` パネルや式など）でレイヤを識別するのに使用する :guilabel:`レイヤ名` を設定できます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:868
+msgid ""
+"Display the layer's :ref:`Assigned Coordinate Reference System (CRS) "
+"<layer_crs>`: you can change the layer's CRS, selecting a recently used one "
+"in the drop-down list or clicking on |setProjection| :sup:`Select CRS` "
+"button (see :ref:`crs_selector`). Use this process only if the CRS applied "
+"to the layer is a wrong one or if none was applied."
+msgstr ""
+"レイヤに :ref:`設定されたCRS <layer_crs>` を表示できます: 最近使用したCRSをドロップダウンリストから選ぶか、 "
+"|setProjection| :sup:`CRSを選択` ボタン（ :ref:`crs_selector` "
+"参照）をクリックすることで、レイヤのCRSを変更できます。 "
+"レイヤのCRSが間違っている場合か、CRSが何も設定されていない場合にのみ、この操作を行ってください。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1350
 msgid "setProjection"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:874
+msgid ":guilabel:`Rendering`:"
+msgstr ":guilabel:`レンダリング`:"
 
 #: ../../docs/user_manual/map_views/map_view.rst:876
 msgid ""
@@ -1419,8 +2048,8 @@ msgid ""
 "canvas scale as boundary of the range visibility. See "
 ":ref:`label_scaledepend` for more information."
 msgstr ""
-":guilabel:`最大（含む）` と :guilabel:`最小（含まない）` "
-"縮尺を設定して、地物が表示される縮尺の範囲を定義できます。この範囲の外では地物は非表示になります。 |mapIdentification| "
+":guilabel:`最大縮尺（含む）` と :guilabel:`最小縮尺（含まない）` "
+"を設定して、地物が表示される縮尺の範囲を定義できます。この範囲の外では地物は非表示になります。 |mapIdentification| "
 ":sup:`現在のキャンバスの縮尺に設定` ボタンを使用すると、可視性の範囲の境界として現在のマップキャンバスの縮尺を使用できます。詳細については "
 ":ref:`label_scaledepend` 参照してください。"
 
@@ -1428,12 +2057,47 @@ msgstr ""
 msgid "mapIdentification"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:882
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your "
+"vector layer to your needs. You can also make a precise definition of the "
+"percentage of visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`不透明度` "
+"：このツールを使用すると、マップキャンバスで背面にあるレイヤを見えるようにできます。スライダーを使用して、レイヤの見え方を必要に応じて変化させてください。スライダーの横にあるメニューで不透明度の割合を正確に定義することもできます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:886
+msgid ""
+":guilabel:`Blending mode` at the :guilabel:`Layer` level: You can achieve "
+"special rendering effects with these tools that you may previously only know"
+" from graphics programs. The pixels of your overlaying and underlying layers"
+" are mixed through the settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`レイヤ` レベルの :guilabel:`混合モード`  "
+"：このツールを使用すると、これまではグラフィックソフトでしか使えなかったような、特別なレンダリング効果が得られます。上下のレイヤのピクセルは、 "
+":ref:`blend-modes` で説明されている設定で混合されます。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:890
 msgid ""
 "Apply :ref:`paint effects <draw_effects>` on all the layer features with the"
 " :guilabel:`Draw Effects` button."
 msgstr ""
 ":guilabel:`描画エフェクト` ボタンを使用して、レイヤの地物すべてに :ref:`描画効果 <draw_effects>` を適用します。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid ""
+"Some of these options are accessible from the feature annotation "
+":guilabel:`Symbology` properties."
+msgstr "これらのオプションの一部は、地物注記の :guilabel:`シンボロジ` プロパティからアクセスできます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:901
+msgid ""
+"You can add balloon annotations through :menuselection:`Edit --> Add "
+"Annotation -->` menu or from the :guilabel:`Annotations Toolbar`:"
+msgstr ""
+"バルーン注記は :menuselection:`編集 --> 注記を追加 -->` メニューか、 :guilabel:`注記ツールバー` "
+"から追加できます:"
 
 #: ../../docs/user_manual/map_views/map_view.rst:904
 msgid "|textAnnotation| :sup:`Text Annotation` for custom formatted text"
@@ -1464,6 +2128,25 @@ msgstr ""
 "<provide_ui_file>` に似ていますが、これは注記アイテムに表示されます。詳細については、Tim Sutton 氏によるビデオ "
 "https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s "
 "も参照してください。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:913
+msgid ""
+"|annotation| :sup:`Move Annotation` to adjust annotation element size or "
+"position (using click and drag)"
+msgstr "|annotation| :sup:`注記を移動` （クリック＆ドラッグで）注記要素の大きさや位置を調節します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:921
+msgid "Examples of balloon annotations"
+msgstr "バルーン注記の例"
+
+#: ../../docs/user_manual/map_views/map_view.rst:924
+msgid ""
+"To add a balloon annotation, select the corresponding tool and click on the "
+"map canvas. An empty balloon is added. Double-click on it and a dialog opens"
+" with various options. This dialog is almost the same for all the annotation"
+" types:"
+msgstr ""
+"バルーン注記を追加するには、対応するツールを選択してマップキャンバスをクリックします。空のバルーンが追加されます。これをダブルクリックすると、さまざまなオプションを含むダイアログが開きます。このダイアログは、すべての注記タイプでほぼ同じです。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:928
 msgid ""
@@ -1513,6 +2196,10 @@ msgid ""
 ":guilabel:`Contents margins`: sets interior margins of the annotation frame."
 msgstr ":guilabel:`コンテンツのマージン`: 注記フレームの内側のマージンを設定します。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:949
+msgid "A ballon annotation text dialog"
+msgstr "バルーン注記のテキストダイアログ"
+
 #: ../../docs/user_manual/map_views/map_view.rst:951
 msgid ""
 "Annotations can be selected when an annotation tool is enabled. They can "
@@ -1531,6 +2218,15 @@ msgid ""
 msgstr ""
 "注記を削除するには、その注記を選択して :kbd:`Del` または :kbd:`Backspace` "
 "キーを押すか、またはその注記をダブルクリックしてプロパティダイアログの :guilabel:`削除` ボタンを押します。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:960
+msgid ""
+"If you press :kbd:`Ctrl+T` while a balloon :guilabel:`Annotation` tool (move"
+" annotation, text annotation, form annotation) is active, the visibility "
+"states of the items are inverted."
+msgstr ""
+"バルーン :guilabel:`注記` ツール（注記の移動、文字注記、注記フォーム ）が有効な時に :kbd:`Ctrl+T` "
+"を押すと、アイテムの表示・非表示が反転します。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:970
 msgid "Measuring"
@@ -1766,6 +2462,21 @@ msgstr "角度の計測"
 #: ../../docs/user_manual/map_views/map_view.rst:1106
 msgid "Setting additional map views"
 msgstr "追加のマップビューの設定"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1108
+msgid ""
+"It is also possible to open additional map views whose content could diverge"
+" from the :guilabel:`Layers` panel current state. To add a new map view, go "
+"to :menuselection:`View -->` |newMap| :menuselection:`New Map View`. A new "
+"floating widget, mimicking the main map view's rendering, is added to QGIS. "
+"You can add as many map views as you need. They can be kept floating, placed"
+" side by side or stacked on top of each other."
+msgstr ""
+"また、 :guilabel:`レイヤ` "
+"パネルの現在の状態とは違った内容のマップビューを追加で開くこともできます。新しいマップビューを追加するには、:menuselection:`ビュー "
+"-->` |newMap| :menuselection:`新規マップビュー` "
+"を押します。すると、メインマップビューのレンダリングをコピーする新しいフローティングウィジェットがQGISに追加されます。 "
+"マップビューは必要なだけ追加することができます。追加したマップビューはフローティングのままにすることも、縦横に並べたり、上に積み重ねたりすることもできます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1319
 msgid "newMap"
@@ -2012,6 +2723,15 @@ msgstr ""
 "|checkbox| :guilabel:`RDF メタデータのエクスポート（title, authorなど）`: "
 "タイトル、著者、日付、説明などをエクスポートします。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:1221
+msgid ""
+"|unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`: Generate a "
+"`georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_. You "
+"can:"
+msgstr ""
+"|unchecked| :guilabel:`ジオPDF（GeoPDF）を作成`: `ジオリファレンスされた PDF ファイル "
+"<https://gdal.org/drivers/raster/pdf.html>`_ を作成します。以下の設定ができます。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1225
 msgid "Choose the GeoPDF :guilabel:`Format`"
 msgstr ":guilabel:`形式` : GeoPDF フォーマットの選択"
@@ -2025,9 +2745,31 @@ msgstr ""
 "|checkbox| :guilabel:`ベクタ地物情報を含める`: 地図に表示される地物のすべてのジオメトリと属性情報を出力 GeoPDF "
 "ファイルに含めます。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:1233
+msgid ""
+"A GeoPDF file can also be used as a data source. For more on GeoPDF support "
+"in QGIS, see https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/."
+msgstr ""
+"GeoPDF ファイルもデータソースとして使用できます。QGISでの GeoPDF サポートの詳細については、 https://north-"
+"road.com/2019/09/03/qgis-3-10-loves-geopdf/ を参照してください。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1237
 msgid ":guilabel:`Rasterize map`"
 msgstr ":guilabel:`地図をラスタ化する`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1238
+msgid ""
+"|checkbox| :guilabel:`Simplify geometries to reduce output file size`: "
+"Geometries will be simplified while exporting the map by removing vertices "
+"that are not discernibly different at the export resolution (e.g. if the "
+"export resolution is ``300 dpi``, vertices that are less than ``1/600 inch``"
+" apart will be removed). This can reduce the size and complexity of the "
+"export file (very large files can fail to load in other applications)."
+msgstr ""
+"|checkbox| :guilabel:`ジオメトリを簡略化してファイルを縮小する` "
+"：地図をエクスポートする際に、エクスポート先の解像度では区別することができない頂点を削除することで、ジオメトリが簡略化されます（たとえば、エクスポート解像度が"
+" ``300 dpi`` ならば、 ``1/600 インチ`` "
+"よりも近い頂点は削除されます）。これにより、出力ファイルのサイズと複雑さを減少させることができます（非常に大きなファイルは他のアプリケーションで読み込みに失敗する可能性があります）。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1246
 msgid ""
