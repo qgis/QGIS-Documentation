@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Transifex Bot <>, 2023
-# tomoyuki arai <tarai.3367@gmail.com>, 2023
 # Harrissou Sant-anna, 2023
+# tomoyuki arai <tarai.3367@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-08 15:34+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,9 +29,48 @@ msgstr ""
 msgid "3D Map View"
 msgstr "3Dマップビュー"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:14
+msgid ""
+"3D visualization support is offered through the 3D map view. You can create,"
+" manage and open 3D map views via :menuselection:`View --> 3D Map Views -->`"
+" menu:"
+msgstr ""
+"3次元可視化サポートは3Dマップビューによって提供されます。 :menuselection:`ビュー --> 3Dマップビュー -->` "
+"メニューから、3Dマップビューの作成や管理を行ったり、3Dマップビューを開くことができます:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:17
+msgid ""
+"By clicking on |new3DMap| :menuselection:`New 3D Map View` you can create a "
+"new 3D map view. A floating and dockable QGIS panel will appear (see "
+":ref:`figure_3dmapview`). It has the same extent and view as the 2D main map"
+" canvas and provides a set of navigation tools to turn the view into 3D."
+msgstr ""
+"|new3DMap| :menuselection:`新規3Dマップビュー` "
+"をクリックすると、新しい3Dマップビューを作成できます。ドッキング可能なフローティングのQGISパネルが現れます（ "
+":ref:`figure_3dmapview` "
+"参照）。これは2Dのメインマップキャンバスと同じ範囲とビューを持っており、このビューを3次元に変化させるためのナビゲーションツール群があります。"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:439
 msgid "new3DMap"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:21
+msgid ""
+"By clicking on :menuselection:`Manage 3D Map Views` you get in the 3D Map "
+"Views Manager. Here you get the ability to open, duplicate, remove and "
+"rename 3D map views."
+msgstr ""
+":menuselection:`3Dマップビューを管理` "
+"をクリックすると、3Dマップビューマネージャが表示されます。ここでは、3Dマップビューの表示、複製、削除や名前の変更ができます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:23
+msgid ""
+"If you created one or more 3D map views, you see them listed in "
+":menuselection:`3D Map Views`. You can turn them on and off by clicking on. "
+"They will be saved by saving the project, even if they are turned off."
+msgstr ""
+"1つ以上の3Dマップビューを作成すると、ビューが :menuselection:`3Dマップビュー` "
+"のメニュー内にリスト表示されます。これをクリックすることで、表示・非表示を切り替えられます。たとえビューが非表示であっても、プロジェクトを保存することで、3Dマップビューは保存されます。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:32
 msgid "The 3D Map View dialog"
@@ -40,6 +79,12 @@ msgstr "3Dマップビューダイアログ"
 #: ../../docs/user_manual/map_views/3d_map_view.rst:34
 msgid "The following tools are provided at the top of the 3D map view panel:"
 msgstr "3Dマップビューパネルの上部には、以下のツールがあります。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:36
+msgid ""
+"|pan| :sup:`Camera Control`: moves the view, keeping the same angle and "
+"direction of the camera"
+msgstr "|pan| :sup:`カメラコントロール`: カメラの角度と方向を維持しながらビューを移動させます"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:443
 msgid "pan"
@@ -54,6 +99,14 @@ msgstr "|zoomFullExtent| :sup:`全域表示`: ビューをレイヤ全体の範�
 #: ../../docs/user_manual/map_views/3d_map_view.rst:459
 msgid "zoomFullExtent"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:40
+msgid ""
+"|3dNavigation| :sup:`Toggle On-Screen Notification`: shows/hides the "
+"navigation widget (that is meant to ease controlling of the map view)"
+msgstr ""
+"|3dNavigation| :sup:`画面操作を切り替え`: "
+"（マップビューの操作を簡単にするための）ナビゲーションウィジェットを表示/非表示にします"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:427
 msgid "3dNavigation"
@@ -71,6 +124,12 @@ msgstr ""
 msgid "identify"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:44
+msgid ""
+"|measure| :sup:`Measurement Line`: measures the horizontal distance between "
+"points"
+msgstr "|measure| :sup:`計測ライン`: ポイント間の水平距離を測定します"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:437
 msgid "measure"
 msgstr ""
@@ -87,9 +146,28 @@ msgstr ""
 msgid "play"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:47
+msgid ""
+"|saveMapAsImage| :sup:`Save as Image...`: exports the current view to an "
+"image file format"
+msgstr "|saveMapAsImage| :sup:`画像として保存...`: 現在のビューを画像ファイル形式でエクスポートします"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:447
 msgid "saveMapAsImage"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:49
+msgid ""
+"|3d| :sup:`Export 3D Scene`: exports the current view as a 3D scene "
+"(:file:`.obj` file), allowing post-processing in applications like "
+"Blender... The terrain and vector features are exported as 3D objects. The "
+"export settings, overriding the layers :ref:`properties <sec_3_d_view>` or "
+"map view :ref:`configuration <scene_configuration>`, include:"
+msgstr ""
+"|3d| :sup:`3Dシーンの出力` ：現在のビューを3Dシーン（ :file:`.obj` "
+"ファイル）として出力し、Blender等のアプリケーションで後処理できるようにします。地形とベクタ地物が3Dオブジェクトとしてエクスポートされます。エクスポート設定には以下のものが含まれ、レイヤの"
+" :ref:`プロパティ <sec_3_d_view>` やマップビューの :ref:`設定 <scene_configuration>` "
+"を上書きします。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:425
 msgid "3d"
@@ -109,7 +187,7 @@ msgstr ":guilabel:`地形テキスチャの解像度`"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:58
 msgid ":guilabel:`Model scale`"
-msgstr ":guilabel:`モデル縮尺`"
+msgstr ":guilabel:`モデルスケール`"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:59
 msgid "|checkbox| :guilabel:`Smooth edges`"
@@ -139,9 +217,45 @@ msgstr ""
 msgid "showPresets"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:64
+msgid "The |options| :sup:`Options` menu provides shortcuts to:"
+msgstr "|options| :sup:`オプション` メニューには、以下のショートカットがあります:"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:441
 msgid "options"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:66
+msgid ""
+"Add visual effects to the 3D rendering, such as showing :ref:`shadows "
+"<shadows>`, :ref:`eye dome lighting <eye_dome_lighting>` or :ref:`ambient "
+"occlusion <ambient_occlusion>`"
+msgstr ""
+":ref:`影 <shadows>` の表示や、 :ref:`アイドーム照明（EDL） <eye_dome_lighting>` 、 "
+":ref:`環境光遮蔽（ambient occlusion） <ambient_occlusion>` といった3Dレンダリングへの視覚効果の追加"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:68
+msgid ""
+"Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or "
+":guilabel:`3D camera follows 2D Map view`)"
+msgstr ""
+"ビューの同期（ :guilabel:`2D地図ビューが3Dカメラに従う` や、 :guilabel:`3Dカメラが2D地図ビューに従う` ）"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:70
+msgid ":guilabel:`Show visible camera area in 2D map view`"
+msgstr ":guilabel:`2D地図ビューにカメラの視界を表示`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:71
+msgid ""
+"|options| :sup:`Configure` the 3D map view :ref:`settings "
+"<scene_configuration>`."
+msgstr "|options| :sup:`設定` ：3Dマップビューの :ref:`設定 <scene_configuration>`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:72
+msgid ""
+"|dock| :sup:`Dock 3D Map View`: switch from docked widget to top level "
+"window"
+msgstr "|dock| :sup:`3Dマップビューを合体`: ドッキング可能なウィジェットからトップレベルウィンドウへと切り替えます"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:431
 msgid "dock"
@@ -150,6 +264,17 @@ msgstr ""
 #: ../../docs/user_manual/map_views/3d_map_view.rst:77
 msgid "Scene Configuration"
 msgstr "シーン設定"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:79
+msgid ""
+"The 3D map view opens with some default settings you can customize. To do "
+"so, expand the |options| :sup:`Options` menu at the top of the 3D canvas "
+"panel and press the |options| :menuselection:`Configure` button to open the "
+":guilabel:`3D configuration` window."
+msgstr ""
+"3Dマップビューはデフォルトの設定で開かれますが、設定のいくつかはカスタマイズが可能です。設定を変更するためには、3Dキャンバスパネルの上部にある "
+"|options| :sup:`オプション` メニューを展開し、 |options| :menuselection:`設定` ボタンを押すことで、 "
+":guilabel:`3Dコンフィグレーション` ウィンドウを開きます。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:89
 msgid "The 3D Map Configuration dialog"
@@ -179,7 +304,7 @@ msgstr ""
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:106
 msgid "The elevation terrain :guilabel:`Type` can be:"
-msgstr "地形は以下の :guilabel:`タイプ` があります。"
+msgstr "地形は以下の :guilabel:`型` があります。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:108
 msgid "a :guilabel:`Flat terrain`"
@@ -236,6 +361,14 @@ msgid ""
 msgstr ""
 ":guilabel:`スカートの高さ`: "
 "地形のタイル間に小さな亀裂が見られることがあります。この値を上げると地形タイルの周りに垂直方向の壁（\"スカート\"）が追加され、亀裂を隠すことができます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:131
+msgid ""
+":guilabel:`Offset`: moves the terrain up or down, e.g. to adjust its "
+"elevation with respect to the ground level of other objects in the scene."
+msgstr ""
+":guilabel:`オフセット`: "
+"地形を上下に移動します。例えば、シーン内の他のオブジェクトのグラウンドレベルに応じて地形の標高を調節するために使います。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:134
 msgid ""
@@ -331,6 +464,12 @@ msgstr "3D光源コンフィグレーションダイアログ"
 msgid "Shadow"
 msgstr "影"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:183
+msgid ""
+"Check |unchecked| :guilabel:`Show shadows` to display shadows within your "
+"scene, given:"
+msgstr "|unchecked| :guilabel:`影を表示` をチェックすると、シーンに影を表示します。次の設定があります："
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:186
 msgid "a :guilabel:`Directional light`"
 msgstr ":guilabel:`方向光源`"
@@ -364,6 +503,76 @@ msgstr ""
 #: ../../docs/user_manual/map_views/3d_map_view.rst:197
 msgid "Camera & Skybox"
 msgstr "カメラとSkybox"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:199
+msgid ""
+"In this tab, you can control different parameters like camera, 3D axis, "
+"navigation synchronization and skybox."
+msgstr "このタブでは、カメラ、3D軸、ナビゲーションの同期やSkyboxといったさまざまなパラメータを制御できます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:207
+msgid "The 3D Map Camera Configuration dialog"
+msgstr "3Dカメラコンフィグレーションダイアログ"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:209
+msgid ""
+"The :guilabel:`Camera` parameter group overrides some :ref:`default camera "
+"settings <3d_options>` made in the :menuselection:`Settings --> Options --> "
+"3D` dialog."
+msgstr ""
+":guilabel:`カメラ` パラメータグループは、 :menuselection:`設定 --> オプション --> 3D` ダイアログで設定した "
+":ref:`デフォルトカメラ設定 <3d_options>` の一部を上書きできます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:212
+msgid ""
+"Check |unchecked| :guilabel:`Show 3D Axis` to enable 3D axis tool. This "
+"parameter group allows to set the axis type and its position."
+msgstr ""
+"|unchecked| :guilabel:`3D軸を表示` "
+"にチェックを入れると、3D軸ツールを有効化します。このパラメータグループは、軸のタイプや位置を設定できます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:215
+msgid ""
+"With the :guilabel:`Coordinate Reference System` type an orthogonal axis "
+"will be represented."
+msgstr ":guilabel:`座標参照系` タイプを使用すると、直交する軸で表現されます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:217
+msgid ""
+"With the :guilabel:`Cube` type, a 3D cube will be represented. The cube "
+"faces can be used to change the camera view: for example, click on the "
+":guilabel:`north` face to set the camera to see from the north."
+msgstr ""
+":guilabel:`Cube` タイプを使用すると、3Dキューブで表現されます。キューブの面は、カメラのビューの変更に使用できます: 例えば、 "
+":guilabel:`北` の面をクリックすると、カメラが北側から見るように設定されます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:221
+msgid ""
+"Right-click the 3D axis to quickly set its position and type, and the camera"
+" view."
+msgstr "3D軸を右クリックすると、カメラの位置やタイプ、ビューの設定を素早く行えます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:228
+msgid "The 3D Axis context menu"
+msgstr "3D軸のコンテキストメニュー"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:230
+msgid ""
+"The :guilabel:`Navigation Synchronization` parameter group adds options to "
+"synchronize 2D view with 3D camera position or 3D camera position with 2D "
+"view or bi directional synchronization. The last option displays the extent "
+"visible from the 3D camera over the 2D map view."
+msgstr ""
+":guilabel:`ナビゲーションを同期` "
+"パラメータグループは、2D地図ビューを3Dカメラ位置に同期させたり、または3Dカメラ位置を2D地図ビューに同期させたり、あるいは双方向に同期させたりするオプションを追加します。一番下のオプションは、2Dマップビュー上に3Dカメラで見えている範囲を表示させます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:235
+msgid ""
+"Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering in the "
+"scene. The skybox type can be:"
+msgstr ""
+"|unchecked| :guilabel:`Skyboxを表示` "
+"にチェックを入れると、シーンのスカイボックスレンダリングを有効化できます。スカイボックスのタイプには、以下があります："
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:238
 msgid ""
@@ -449,6 +658,10 @@ msgstr ""
 msgid "|unchecked| :guilabel:`Show camera's view center`"
 msgstr "|unchecked| :guilabel:`カメラのビューセンターを表示する`"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:272
+msgid "|unchecked| :guilabel:`Show camera's rotation center`"
+msgstr "|unchecked| :guilabel:`カメラの回転中心を表示`"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:273
 msgid ""
 "|unchecked| :guilabel:`Show light sources`: shows a sphere at light source "
@@ -456,6 +669,110 @@ msgid ""
 "relative to the scene contents"
 msgstr ""
 "|unchecked| :guilabel:`ライト源を表示` ：光源の原点に球体を表示し、シーンコンテンツに対する光源の移動や配置を容易にします"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:275
+msgid "|unchecked| :guilabel:`Show frames per second (FPS)`"
+msgstr "|unchecked| :guilabel:`FPSを表示`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:276
+msgid ""
+"|unchecked| :guilabel:`Show debug overlay`: visual overlay which displays "
+"some useful debugging and profiling information. This allows in particular "
+"to quickly see the frame graph and the scene graph."
+msgstr ""
+"|unchecked| :guilabel:`デバッグオーバーレイを表示`: "
+"デバッグとプロファイルに関する便利な情報を表示するビジュアルオーバーレイです。これによって特にフレームグラフやシーングラフを素早く確認できます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:282
+msgid ""
+"|unchecked| :guilabel:`Show Eye Dome Lighting` (EDL): a post processing "
+"effect which enhances depth perception. Each pixel's depth (distance off the"
+" camera) is compared to its neighboring pixels' depth and gets highlighted "
+"according to that depth difference, making the edges stand out. Affects the "
+"whole scene and can be combined with :ref:`Screen Space Ambient Occlusion "
+"<ambient_occlusion>`. Following parameters can be controlled:"
+msgstr ""
+"|unchecked| :guilabel:`アイドーム照明（EDL）を表示`: "
+"奥行きの感覚を高めるポストプロセス効果です。各ピクセルの奥行き（カメラからの距離）は隣接ピクセルの奥行きと比較され、奥行きの差に応じて強調表示され、エッジが目立つようになります。これはシーン全体に影響し、"
+" :ref:`環境光遮蔽（Ambient Occlusion） <ambient_occlusion>` "
+"と組み合わせることができます。以下のパラメータを制御できます:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:289
+msgid ""
+":guilabel:`Lighting strength`: increases the contrast, allowing for better "
+"depth perception"
+msgstr ":guilabel:`照明の強度`: コントラストを増加させ、より奥行き間隔を高めます"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:290
+msgid ""
+":guilabel:`Lighting distance`: represents the distance of the used pixels "
+"off the center pixel and has the effect of making edges thicker."
+msgstr ":guilabel:`照明の距離`: 使用するピクセルの中心ピクセルからの距離を表します。エッジを太くする効果があります。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:295
+msgid ""
+"Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO): a post "
+"processing effect which also enhances depth perception by applying a darker "
+"shading to areas which are less exposed to ambient lighting. Affects the "
+"whole scene and can be combined with :ref:`Eye dome Lighting "
+"<eye_dome_lighting>`. Following parameters can be controlled:"
+msgstr ""
+"スクリーン空間への |unchecked| :guilabel:`環境光遮蔽（Ambient Occlusion）` の追加: "
+"環境光に当たりにくい部分により暗い影を適用するポストプロセス効果で、こちらも奥行き感を高めます。これはシーン全体に影響し、 :ref:`アイドーム照明 "
+"<eye_dome_lighting>` と組み合わせることができます。以下のパラメータを制御できます:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:301
+msgid ""
+":guilabel:`Radius`: how far we will reach to calculate ambient occlusion"
+msgstr ":guilabel:`半径`: 環境光遮蔽を計算する距離"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:302
+msgid ""
+":guilabel:`Intensity`: how strong the effect should be (higher values make "
+"things darker)"
+msgstr ":guilabel:`強度（Intensity）`: 効果の強さ（値が大きいほど暗くなる）"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:303
+msgid ""
+":guilabel:`Occlusion threshold`: how many neighboring points need to be "
+"occluded for the effect to appear (lower values than 50% will make the "
+"output darker, but possibly providing greater range of occlusion)"
+msgstr ""
+":guilabel:`遮蔽閾値（Occlusion Threshold）`: "
+"隣接点がいくつ遮蔽されると効果が現れるか（50%より低い値の場合、アウトプットは暗くなるが、遮蔽の範囲は広くなることがある）"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:311
+msgid ""
+"Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or "
+"Screen-Space Ambient Occlusion (SSAO)"
+msgstr "アイドーム照明（EDL）および環境光遮蔽（SSAO）を使用した3Dマップの点群レンダリング"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:313
+msgid ""
+"From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL"
+msgstr "左上から順に、両方なし -- SSAOのみ -- EDLのみ -- SSAOとEDL両方"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:315
+msgid ""
+"|unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black "
+"image from the point of view of the light used for shadows (for "
+"troubleshooting). The widget is set with a proportional :guilabel:`Size` to "
+"the 3D map view's, and docked in a :guilabel:`Corner`."
+msgstr ""
+"|unchecked| :guilabel:`シャドーマップのデバッグ`: "
+"影に使用する光源の視点から、シーンを赤と黒のイメージとしてレンダリングします（トラブルシューティング用）。ウィジェットは3Dマップビューに比例した "
+":guilabel:`大きさ` に設定され、指定した :guilabel:`コーナー` にドッキングされます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:319
+msgid ""
+"|unchecked| :guilabel:`Debug Depth Map`: renders the scene's depth map as an"
+"  image with nearer pixels being darker (for troubleshooting). The widget is"
+" set with a proportional :guilabel:`Size` to the 3D map view's, and docked "
+"in a :guilabel:`Corner`."
+msgstr ""
+"|unchecked| :guilabel:`深度マップのデバッグ`: "
+"シーンの深度マップをカメラに近いピクセルは暗い色の画像としてレンダリングします（トラブルシューティング用）。ウィジェットは3Dマップビューに比例した "
+":guilabel:`大きさ` に設定され、指定した :guilabel:`コーナー` にドッキングされます。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:328
 msgid "Navigation options"
