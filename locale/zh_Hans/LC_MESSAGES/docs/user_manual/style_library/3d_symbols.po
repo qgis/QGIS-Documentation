@@ -173,10 +173,226 @@ msgstr "线图层"
 msgid "Properties of a 3D line symbol"
 msgstr "3D线符号的属性"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:81
+msgid ""
+"Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can define"
+" the :guilabel:`Extrusion` of the vector lines. If the lines do not have "
+"z-values, you can define the 3d volumes with this setting."
+msgstr ""
+"在 :guilabel:`宽度` 和 :guilabel:`高度` 设置之下，可以定义矢量线的 :guilabel:`拉伸` "
+"。如果线没有Z值，可以使用此设置定义3D体积。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:84
+msgid ""
+"With the :guilabel:`Altitude clamping` you define the position of the 3D "
+"lines relative to the underlying terrain surface, if you have included "
+"raster elevation data or other 3D vectors."
+msgstr "如果已包含栅格高程或其他3D矢量数据，可以使用 :guilabel:`海拔限制` 定义3D线相对于基础地形表面的位置。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:87
+msgid ""
+"The :guilabel:`Altitude binding` defines how the feature is clamped to the "
+"terrain. Either every :guilabel:`Vertex` of the feature will be clamped to "
+"the terrain or this will be done by the :guilabel:`Centroid`."
+msgstr ""
+":guilabel:`海拔约束` 用于定义如何将要素限制到地形。要素的每个 :guilabel:`顶点` 都将被限制到地形，或者是 "
+":guilabel:`质心` 。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:90
+msgid "It is possible to |checkbox|:guilabel:`Render as simple 3D lines`."
+msgstr "可以 |checkbox|:guilabel:`渲染为简单3D线` 。"
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:202
 msgid "checkbox"
 msgstr ""
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:96
+msgid "Polygon Layers"
+msgstr "多边形图层"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:103
+msgid "Properties of a 3D polygon symbol"
+msgstr "3D多边形符号的属性"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:105
+msgid ""
+"As for the other ones, :guilabel:`Height` can be defined in CRS units. You "
+"can also use the |dataDefine| button to overwrite the value with a custom "
+"expression, a variable or an entry of the attribute table"
+msgstr ":guilabel:`高度` 使用CRS单位进行定义。还可以使用 |dataDefine| 按钮用自定义表达式、变量或属性表条目盖写值"
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:204
 msgid "dataDefine"
 msgstr ""
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:109
+msgid ""
+"Again, :guilabel:`Extrusion` is possible for missing z-values. Also for the "
+"extrusion you can use the |dataDefine| button in order to use the values of "
+"the vector layer and have different results for each polygon:"
+msgstr ""
+"同样，缺少Z值时可能会出现 :guilabel:`拉伸` 选项。此外，对于拉伸，您可以点击 |dataDefine| "
+"按钮来使用矢量图层的值，为每个多边形获得不同的结果："
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:116
+msgid "Data Defined Extrusion"
+msgstr "数据定义拉伸"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:118
+msgid ""
+"The :guilabel:`Altitude clamping`, :guilabel:`Altitude binding` can be "
+"defined as explained above."
+msgstr ":guilabel:`海拔限制` 和 :guilabel:`海拔约束` 可以如上所述进行定义。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:120
+msgid "The :guilabel:`Culling mode` to apply to the symbol; it can be:"
+msgstr "应用于符号的 :guilabel:`剔除模式` ，可以是："
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:122
+msgid ""
+":guilabel:`No Culling`: this can help to avoid seemingly missing surfaces "
+"when polygonZ/multipatch data do not have consistent ordering of vertices "
+"(e.g. all clock-wise or counter clock-wise)"
+msgstr ""
+":guilabel:`未剔除`: 有助于避免在 polygonZ/multipatch 数据的顶点排序不一致时 "
+"(例如，所有顺时针或逆时针方向)，看似缺失的表面"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:125
+msgid ":guilabel:`Front`"
+msgstr ":guilabel:`正面`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:126
+msgid "or :guilabel:`Back`"
+msgstr "或 :guilabel:`后面`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:127
+msgid ""
+"The :guilabel:`Rendered facade` determines the faces to display. Possible "
+"values are :guilabel:`No facades`, :guilabel:`Walls`, :guilabel:`Roofs`, or "
+":guilabel:`Walls and roofs`"
+msgstr ""
+":guilabel:`渲染外观` 确定要显示的面。可使用的值是 :guilabel:`无立面` 、 :guilabel:`立面` 、 "
+":guilabel:`顶部` 或 :guilabel:`立面和顶部`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:130
+msgid ""
+"|checkbox| :guilabel:`Add back faces`: for each triangle, creates both front"
+" and back face with correct normals - at the expense of increased number of "
+"vertex data. This option can be used to fix shading issues (e.g., due to "
+"data with inconsistent order of vertices)."
+msgstr ""
+"|checkbox| :guilabel:`添加背面`: 对于每个三角形，创建具有正确法线的正面和背面 - "
+"以增加顶点数据数量为代价。此选项可用于解决晕渲问题 (例如，数据顶点顺序不一致)。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:134
+msgid ""
+"|checkbox| :guilabel:`Invert normals (experimental)`: can be useful for "
+"fixing clockwise/counter-clockwise face vertex orders"
+msgstr "|checkbox| :guilabel:`反转法线 (实验)`: 可用于修复顺时针方向/逆时针方向的面的顶点顺序"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:137
+msgid ""
+"Display of the |checkbox| :guilabel:`Edges` of the symbols can be enabled "
+"and assigned a :guilabel:`Width` and :guilabel:`Color`."
+msgstr ""
+"可以启用符号的 |checkbox| :guilabel:`边缘` 是否显示，并指定 :guilabel:`宽度` 和 :guilabel:`颜色` 。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:140
+msgid "**Combination for best rendering of 3D data**"
+msgstr "**组合设置可实现3D数据的最佳渲染效果**"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:142
+msgid ""
+":guilabel:`Culling mode`, :guilabel:`Add back faces` and :guilabel:`Invert "
+"normals` are all meant to fix the look of 3D data if it does not look right."
+" Typically when loading some data, it is best to first try ``culling "
+"mode=back`` and ``add back faces=disabled`` - it is the most efficient. If "
+"the rendering does not look correct, try ``add back faces=enabled`` and keep"
+" ``culling mode=no culling``. Other combinations are more advanced and "
+"useful only in some scenarios based on how mixed up is the input dataset."
+msgstr ""
+":guilabel:`剔除模式` 、 :guilabel:`添加背面` 和 :guilabel:`反转法线` "
+"都是为了在3D数据看起来不正确的情况下修复其外观。通常，在加载某些数据时，最好先尝试 ``剔除模式=后面`` 和 ``添加背面=禁用`` - "
+"这是最有效的设置。如果渲染看起来不正确，请尝试 ``添加背面=启用`` ，并保持 ``剔除模式=未剔除`` "
+"。其他更高级的组合设置，仅在基于输入数据集的混合程度的某些场景中有效。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:153
+msgid "Shading the texture"
+msgstr "晕渲纹理"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:155
+msgid ""
+"Shading helps you reveal 3d details of objects which may otherwise be hidden"
+" due to the scene's lighting. Ultimately, it's an easier material to work "
+"with as you don't need to worry about setting up appropriate scene lighting "
+"in order to visualise features."
+msgstr ""
+"晕渲有助于显示对象的3D细节，否则可能会因场景的照明而被隐藏。最终，它是一种更容易使用的材质，因为不需要担心设置是否为恰当的场景照明而影响可视化要素。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:160
+msgid ""
+"Various techniques of shading are used in QGIS and their availability "
+"depends on the geometry type of the symbol:"
+msgstr "QGIS使用了各种晕渲技术，其可用性取决于符号的几何图形类型："
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:163
+msgid ""
+":guilabel:`Realistic (Phong)`: describes the way a surface reflects light as"
+" a combination of the :guilabel:`Diffuse` reflection of rough surfaces with "
+"the :guilabel:`Specular` reflection of shiny surfaces "
+"(:guilabel:`Shininess`). It also includes an :guilabel:`Ambient` option to "
+"account for the small amount of light that is scattered about the entire "
+"scene. Use the :guilabel:`Opacity` slider to render semi-transparent objects"
+" in 3D. Read more at "
+"https://en.wikipedia.org/wiki/Phong_reflection_model#Description"
+msgstr ""
+":guilabel:`写实 (材质)`: 将表面反射光线的方式描述为粗糙表面的 :guilabel:`漫反射` 与有光滑表面的 "
+":guilabel:`镜面` 反射 (:guilabel:`光滑度`) 的组合。它还包括一个 :guilabel:`环境光` "
+"选项，用于考虑整个场景中散射的少量光线。使用 :guilabel:`不透明度` 滑块以3D形式渲染半透明对象。更多信息，请访问 "
+"https://en.wikipedia.org/wiki/Phong_reflection_model#Description"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:170
+msgid ""
+":guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic "
+"(Phong)` except that an image is used as :guilabel:`Diffuse Texture`. The "
+"image can be a file on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. The :guilabel:`Texture scale` and "
+":guilabel:`Texture rotation` are required. Use the :guilabel:`Opacity` "
+"slider to render semi-transparent objects in 3D."
+msgstr ""
+":guilabel:`写实纹理 (材质)`: 与 :guilabel:`写实 (材质)` 相同，不同之处在于将图像用作 "
+":guilabel:`漫反射纹理` 。图像可以是磁盘的文件、远程URL或 :ref:`嵌入到工程中 <embedded_file_selector>` "
+"。 :guilabel:`纹理缩放` 和 :guilabel:`纹理旋转角度` 是必需项。使用 :guilabel:`不透明度` "
+"滑块以3D形式渲染半透明对象。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:176
+msgid ""
+":guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-"
+"tones so that edge lines and highlights remain visually prominent. Along "
+"with the :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` "
+"options, you need to provide a :guilabel:`Warm` color (for surface facing "
+"toward the light) and a :guilabel:`Cool` color (for the ones facing away). "
+"Also, the relative contributions to the cool and warm colors by the diffuse "
+"color are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties "
+"respectively. See also https://en.wikipedia.org/wiki/Gooch_shading"
+msgstr ""
+":guilabel:`CAD (Gooch着色)`: 这种技术允许仅在中间色调中使用晕渲处理，从而使边缘线和高光在视觉上保持突显。除了 "
+":guilabel:`漫反射` 、 :guilabel:`高光` 、 :guilabel:`光滑度` 选项外，还需要提供 :guilabel:`暖色` "
+"(用于面向光源的表面) 和 :guilabel:`冷色` (用于背对的表面)。此外，漫反射颜色对冷色和暖色的相对贡献分别由 "
+":guilabel:`透明度` 和 :guilabel:`贝塔` 属性控制。另请参阅 "
+"https://en.wikipedia.org/wiki/Gooch_shading"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:184
+msgid ":guilabel:`Embedded Textures` with 3D models shape"
+msgstr "具有3D模型形状的 :guilabel:`嵌入式纹理`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:188
+msgid "Application example"
+msgstr "应用示例"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:190
+msgid ""
+"To go through the settings explained above you can have a look at "
+"https://app.merginmaps.com/projects/saber/luxembourg/tree."
+msgstr ""
+"要完成上述设置，您可以查看 https://app.merginmaps.com/projects/saber/luxembourg/tree 。"
