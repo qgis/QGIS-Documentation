@@ -479,7 +479,7 @@ To deploy or update your manifests:
 
 .. code-block:: bash
 
-  kubectl apply -k ./
+  kubectl apply -f ./
 
 To check what is currently deployed:
 
