@@ -364,95 +364,95 @@ Create a file :file:`deployments.yaml` with this content:
 
 .. code-block:: yaml
 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: qgis-server
-  namespace: qgis-server
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      myLabel: qgis-server
-  template:
-    metadata:
-      labels:
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: qgis-server
+    namespace: qgis-server
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
         myLabel: qgis-server
-    spec:
-      containers:
-        - name: qgis-server
-          image: localhost:32000/qgis-server:latest
-          imagePullPolicy: Always
-          env:
-            - name: LANG
-              value: en_EN.UTF-8
-            - name: QGIS_PROJECT_FILE
-              value: /data/osm.qgs
-            - name: QGIS_SERVER_LOG_LEVEL
-              value: "0"
-            - name: DEBUG
-              value: "1"
-          ports:
-            - containerPort: 5555
-          volumeMounts:
-            - name: qgis-data
-              mountPath: /data/
-      volumes:
-        - name: qgis-data
-          hostPath:
-            path: REPLACE_WITH_FULL_PATH/data
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: qgis-nginx
-  namespace: qgis-server
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      myLabel: qgis-nginx
-  template:
-    metadata:
-      labels:
+    template:
+      metadata:
+        labels:
+          myLabel: qgis-server
+      spec:
+        containers:
+          - name: qgis-server
+            image: localhost:32000/qgis-server:latest
+            imagePullPolicy: Always
+            env:
+              - name: LANG
+                value: en_EN.UTF-8
+              - name: QGIS_PROJECT_FILE
+                value: /data/osm.qgs
+              - name: QGIS_SERVER_LOG_LEVEL
+                value: "0"
+              - name: DEBUG
+                value: "1"
+            ports:
+              - containerPort: 5555
+            volumeMounts:
+              - name: qgis-data
+                mountPath: /data/
+        volumes:
+          - name: qgis-data
+            hostPath:
+              path: REPLACE_WITH_FULL_PATH/data
+  
+  ---
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: qgis-nginx
+    namespace: qgis-server
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
         myLabel: qgis-nginx
-    spec:
-      containers:
-        - name: qgis-nginx
-          image: nginx:1.13
-          ports:
-            - containerPort: 80
-          volumeMounts:
-            - name: nginx-conf
-              mountPath: /etc/nginx/conf.d/
-      volumes:
-        - name: nginx-conf
-          configMap:
-            name: nginx-configuration
-
----
-kind: ConfigMap 
-apiVersion: v1 
-metadata: 
-  name: nginx-configuration
-data: 
-  nginx.conf: |
-    server {
-      listen 80;
-      server_name _;
-      location / {
-        root  /usr/share/nginx/html;
-        index index.html index.htm;
-      }
-      location /qgis-server {
-        proxy_buffers 16 16k;
-        proxy_buffer_size 16k;
-        gzip off;
-        include fastcgi_params;
-        fastcgi_pass qgis-server:5555;
+    template:
+      metadata:
+        labels:
+          myLabel: qgis-nginx
+      spec:
+        containers:
+          - name: qgis-nginx
+            image: nginx:1.13
+            ports:
+              - containerPort: 80
+            volumeMounts:
+              - name: nginx-conf
+                mountPath: /etc/nginx/conf.d/
+        volumes:
+          - name: nginx-conf
+            configMap:
+              name: nginx-configuration
+  
+  ---
+  kind: ConfigMap 
+  apiVersion: v1 
+  metadata: 
+    name: nginx-configuration
+  data: 
+    nginx.conf: |
+      server {
+        listen 80;
+        server_name _;
+        location / {
+          root  /usr/share/nginx/html;
+          index index.html index.htm;
         }
-      }
+        location /qgis-server {
+          proxy_buffers 16 16k;
+          proxy_buffer_size 16k;
+          gzip off;
+          include fastcgi_params;
+          fastcgi_pass qgis-server:5555;
+          }
+        }
 
 
 Service manifests
