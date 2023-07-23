@@ -247,21 +247,21 @@ Now that you have Swarm working, create the service file (see
       # Should use version with utf-8 locale support:
       image: qgis-server:latest
       volumes:
-      - REPLACE_WITH_FULL_PATH/data:/data:ro
+        - REPLACE_WITH_FULL_PATH/data:/data:ro
       environment:
-      - LANG=en_EN.UTF-8
-      - QGIS_PROJECT_FILE=/data/osm.qgs
-      - QGIS_SERVER_LOG_LEVEL=0  # INFO (log all requests)
-      - DEBUG=1                  # display env before spawning QGIS Server
+        - LANG=en_EN.UTF-8
+        - QGIS_PROJECT_FILE=/data/osm.qgs
+        - QGIS_SERVER_LOG_LEVEL=0  # INFO (log all requests)
+        - DEBUG=1                  # display env before spawning QGIS Server
   
     nginx:
       image: nginx:1.13
       ports:
-      - 8080:80
+        - 8080:80
       volumes:
-      - REPLACE_WITH_FULL_PATH/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+        - REPLACE_WITH_FULL_PATH/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       depends_on:
-      - qgis-server
+        - qgis-server
   
 
 To deploy (or update) the stack, type:
