@@ -5,17 +5,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Eric Armijo, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-22 02:35+0000\n"
+"POT-Creation-Date: 2023-07-06 09:08+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Eric Armijo, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,7 +65,7 @@ msgstr ""
 msgid "|basic| |FA| Loading a WMS Layer"
 msgstr "|basic| |FA| Cargar una capa WMS"
 
-#: ../../docs/training_manual/online_resources/wms.rst:281
+#: ../../docs/training_manual/online_resources/wms.rst:282
 msgid "basic"
 msgstr ""
 
@@ -113,11 +114,11 @@ msgstr ""
 "cuadro de diálogo :guilabel:`Administrador de fuentes de datos` y habilitar "
 "la pestaña |addWmsLayer| :guilabel:`WMS / WMTS`."
 
-#: ../../docs/training_manual/online_resources/wms.rst:282
+#: ../../docs/training_manual/online_resources/wms.rst:283
 msgid "dataSourceManager"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:279
+#: ../../docs/training_manual/online_resources/wms.rst:280
 msgid "addWmsLayer"
 msgstr ""
 
@@ -189,47 +190,51 @@ msgstr "Todas esas capas se encuentran en el servidor WMS."
 
 #: ../../docs/training_manual/online_resources/wms.rst:79
 msgid ""
-"Click once on the :guilabel:`OSM-WMS` layer. This will display its "
-":guilabel:`Coordinate Reference System`:"
+"Click once on the :guilabel:`OSM-WMS` layer. This will display the default "
+":guilabel:`Coordinate Reference System` in use and the number of CRSes "
+"supported by the dataset:"
 msgstr ""
-"Haz click una vez en la capa :guilabel:`OSM-WMS`. Esto presentará su "
-":guilabel:`Sistema de Coordenadas de Referencia`:"
+"Haga clic una vez en la capa :guilabel:`OSM-WMS`. Esto mostrará el "
+":guilabel:`Sistema de Referencia de Coordenadas` por defecto en uso y el "
+"número de SRCs soportados por el conjunto de datos:"
 
-#: ../../docs/training_manual/online_resources/wms.rst:85
+#: ../../docs/training_manual/online_resources/wms.rst:86
 msgid ""
-"Since we're not using ``WGS 84`` for our map, let's see all the CRSs we have"
-" to choose from."
+"Since we're not using ``EPSG:4326 - WGS 84`` for our map, let's find one "
+"that meets our needs."
 msgstr ""
-"Como no estamos usando ``WGS 84`` para nuestro mapa, veamos todos los CRS "
-"que tenemos para elegir."
+"Puesto que no vamos a utilizar ``EPSG:4326 - WGS 84`` para nuestro mapa, "
+"busquemos uno que satisfaga nuestras necesidades."
 
-#: ../../docs/training_manual/online_resources/wms.rst:88
+#: ../../docs/training_manual/online_resources/wms.rst:89
 msgid ""
-"Click the :guilabel:`Change...` button. You will see a standard "
-":guilabel:`Coordinate Reference System Selector` dialog."
+"Click the |setProjection|:sup:`Select CRS` button. You will see a standard "
+":guilabel:`Coordinate Reference System Selector` dialog showing all the CRS "
+"the data is published with."
 msgstr ""
-"Click en el botón :guilabel:`Cambiar...`. verá un diálogo estándar "
-":guilabel:`Selector del Sistema de Coordenadas de Referencia`."
+"Haga clic en el botón |setProjection|:sup:`Seleccionar SRC`. Aparecerá un "
+"cuadro de diálogo estándar :guilabel:`Coordinate Reference System Selector` "
+"que muestra todos los SRC con los que se publican los datos."
 
-#: ../../docs/training_manual/online_resources/wms.rst:90
+#: ../../docs/training_manual/online_resources/wms.rst:289
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/training_manual/online_resources/wms.rst:92
 msgid ""
-"We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo "
-"Mercator`."
+"We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo-"
+"Mercator` with ``EPSG:3857``. You can use the top |search| "
+":guilabel:`Filter` widget."
 msgstr ""
-"Queremos un SCR *proyectado*, así que vamos a elegir :guilabel:`WGS 84 / "
-"Pseudo Mercator`."
+"Queremos un SRC *proyectado*, así que elijamos :guilabel:`WGS 84 / Pseudo-"
+"Mercator` con ``EPSG:3857``. Puede utilizar el widget superior |search| "
+":guilabel:`Filter`."
 
-#: ../../docs/training_manual/online_resources/wms.rst:93
-msgid "Enter the value ``pseudo`` in the :guilabel:`Filter` field:"
-msgstr "Escriba el valor ``pseudo`` en el campo :guilabel:`Filtrar`:"
+#: ../../docs/training_manual/online_resources/wms.rst:287
+msgid "search"
+msgstr "search"
 
-#: ../../docs/training_manual/online_resources/wms.rst:94
-msgid ""
-"Choose :guilabel:`WGS 84 / Pseudo Mercator` (with epsg:3857) from the list."
-msgstr ""
-"Elija :guilabel:`WGS 84 / Pseudo Mercator` (con epsg:3857) en la lista."
-
-#: ../../docs/training_manual/online_resources/wms.rst:99
+#: ../../docs/training_manual/online_resources/wms.rst:98
 msgid ""
 "Click :guilabel:`OK`. The Coordinate Reference System associated with the "
 "entry has changed."
@@ -237,29 +242,31 @@ msgstr ""
 "Click en :guilabel:`Aceptar`. El sistema de referencia de coordenadas "
 "asociado con la entrada ha cambiado."
 
-#: ../../docs/training_manual/online_resources/wms.rst:102
+#: ../../docs/training_manual/online_resources/wms.rst:101
 msgid ""
-"Click :guilabel:`Add` and the new layer will appear in your map as "
-":guilabel:`OpenStreetMap WMS - by terrestris`."
+"Click :guilabel:`Add` to load the layer in your project using "
+":guilabel:`Layer name`` (default is :guilabel:`OpenStreetMap WMS - by "
+"terrestris`)."
 msgstr ""
-"Click en :guilabel:`Añadir` y la nueva capa aparecerá como "
-":guilabel:`OpenStreetMap WMS - by terrestris`."
+"Haga clic en :guilabel:`Añadir` para cargar la capa en su proyecto "
+"utilizando :guilabel:`Layer name`` (por defecto es :guilabel:`OpenStreetMap "
+"WMS - por terrestris`)."
 
-#: ../../docs/training_manual/online_resources/wms.rst:104
+#: ../../docs/training_manual/online_resources/wms.rst:103
 msgid ""
 "Close the :guilabel:`Data Source Manager` dialog if not done automatically"
 msgstr ""
 "Cierre el diálogo :guilabel:`Administrador de Fuentes de Datos` si no lo ha "
 "echo automaticamente"
 
-#: ../../docs/training_manual/online_resources/wms.rst:105
+#: ../../docs/training_manual/online_resources/wms.rst:104
 msgid ""
 "In the :guilabel:`Layers` panel, click and drag it to the bottom of the "
 "list."
 msgstr ""
 "En el panel :guilabel:`Capas`, click y arrastrela al final de la lista."
 
-#: ../../docs/training_manual/online_resources/wms.rst:106
+#: ../../docs/training_manual/online_resources/wms.rst:105
 msgid ""
 "Zoom out in order to get a global view of the layers. You will notice that "
 "your layers aren't located correctly (near west of Africa). This is because "
@@ -269,7 +276,7 @@ msgstr ""
 "capas no están ubicadas correctamente (cerca del oeste de África). Esto se "
 "debe a que la proyección \"sobre la marcha\" está deshabilitada."
 
-#: ../../docs/training_manual/online_resources/wms.rst:114
+#: ../../docs/training_manual/online_resources/wms.rst:113
 msgid ""
 "Let's enable the reprojection again, but using the same projection as the "
 ":guilabel:`OpenStreetMap WMS` layer, which is :guilabel:`WGS 84 / Pseudo "
@@ -279,23 +286,23 @@ msgstr ""
 "la capa :guilabel:`OpenStreetMap WMS`, que es :guilabel:`WGS 84 / Pseudo "
 "Mercator`."
 
-#: ../../docs/training_manual/online_resources/wms.rst:117
+#: ../../docs/training_manual/online_resources/wms.rst:116
 msgid "Open the :menuselection:`Project --> Properties... --> CRS` tab"
 msgstr "Abra la pestaña :menuselection:`Proyecto --> Propiedades... --> SRC`"
 
-#: ../../docs/training_manual/online_resources/wms.rst:118
+#: ../../docs/training_manual/online_resources/wms.rst:117
 msgid "Uncheck :guilabel:`No CRS (or unknown/non-Earth projection)`"
 msgstr "Desmarque :guilabel:`No SRC (o proyección desconocida/no-Terrestre)`"
 
-#: ../../docs/training_manual/online_resources/wms.rst:119
+#: ../../docs/training_manual/online_resources/wms.rst:118
 msgid "Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list."
 msgstr "Elige :guilabel:`WGS 84 / Pseudo Mercator` de la lista."
 
-#: ../../docs/training_manual/online_resources/wms.rst:124
+#: ../../docs/training_manual/online_resources/wms.rst:123
 msgid "Click :guilabel:`OK`."
 msgstr "Haz clic en :guilabel:`Aceptar`."
 
-#: ../../docs/training_manual/online_resources/wms.rst:125
+#: ../../docs/training_manual/online_resources/wms.rst:124
 msgid ""
 "Now right-click on one of your own layers in the :guilabel:`Layers` panel "
 "and click :guilabel:`Zoom to layer(s)`. You should see the |majorUrbanName| "
@@ -305,7 +312,7 @@ msgstr ""
 ":guilabel:`Capas` y haga clic en :guilabel:`Zoom a la capa(s)`. Debería ver "
 "el |majorUrbanName| área:"
 
-#: ../../docs/training_manual/online_resources/wms.rst:133
+#: ../../docs/training_manual/online_resources/wms.rst:132
 msgid ""
 "Note how the WMS layer's streets and our own streets overlap. That's a good "
 "sign!"
@@ -313,11 +320,11 @@ msgstr ""
 "Observa cómo las calles de la capa WMS y nuestras propias calles se solapan."
 " ¡Eso es una buena noticia!"
 
-#: ../../docs/training_manual/online_resources/wms.rst:137
+#: ../../docs/training_manual/online_resources/wms.rst:136
 msgid "The nature and limitations of WMS"
 msgstr "La naturaleza y limitaciones de WMS"
 
-#: ../../docs/training_manual/online_resources/wms.rst:139
+#: ../../docs/training_manual/online_resources/wms.rst:138
 msgid ""
 "By now you may have noticed that this WMS layer actually has many features "
 "in it. It has streets, rivers, nature reserves, and so on. What's more, even"
@@ -329,7 +336,7 @@ msgstr ""
 "de que parece que está hecho de vectores, parece ser un mapa ráster, no "
 "puedes cambiar su simbología. ¿Por qué?"
 
-#: ../../docs/training_manual/online_resources/wms.rst:144
+#: ../../docs/training_manual/online_resources/wms.rst:143
 msgid ""
 "This is how a WMS works: it's a map, similar to a normal map on paper, that "
 "you receive as an image. What usually happens is that you have vector "
@@ -346,7 +353,7 @@ msgstr ""
 "pero no puede cambiar su simbología, porque todo eso es manejado por el "
 "servidor."
 
-#: ../../docs/training_manual/online_resources/wms.rst:151
+#: ../../docs/training_manual/online_resources/wms.rst:150
 msgid ""
 "This has several advantages, because you don't need to worry about the "
 "symbology. It's already worked out, and should be nice to look at on any "
@@ -356,7 +363,7 @@ msgstr ""
 "simbología. Ya está todo hecho, y debería quedar bonito a la vista en "
 "cualquier WMS competente. "
 
-#: ../../docs/training_manual/online_resources/wms.rst:155
+#: ../../docs/training_manual/online_resources/wms.rst:154
 msgid ""
 "On the other hand, you can't change the symbology if you don't like it, and "
 "if things change on the WMS server, then they'll change on your map as well."
@@ -370,126 +377,101 @@ msgstr ""
 "que te dá capas vectoriales por separado, y no como parte de un mapa de "
 "estilo WMS."
 
-#: ../../docs/training_manual/online_resources/wms.rst:160
+#: ../../docs/training_manual/online_resources/wms.rst:159
 msgid ""
 "This will be covered in the next lesson, however. First, let's add another "
-"WMS layer from the :guilabel:`terrestris` WMS server."
+"WMS layer."
 msgstr ""
-"Eso será cubierto en la siguiente lección, sin embargo. Primero, añade otra "
-"capa WMS del servidor :guilabel:`terrestris`."
+"Sin embargo, esto se tratará en la próxima lección. En primer lugar, vamos a"
+" añadir otra capa WMS."
 
-#: ../../docs/training_manual/online_resources/wms.rst:165
+#: ../../docs/training_manual/online_resources/wms.rst:164
 msgid "|basic| |TY|"
 msgstr ""
 
+#: ../../docs/training_manual/online_resources/wms.rst:166
+msgid ""
+"Add the ``eAtlas`` WMS server at this URL: "
+"``https://maps.eatlas.org.au/maps/wms``"
+msgstr ""
+"Añada el servidor WMS ``eAtlas`` en esta URL: "
+"``https://maps.eatlas.org.au/maps/wms``"
+
 #: ../../docs/training_manual/online_resources/wms.rst:167
-msgid "Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel."
-msgstr "Oculta la capa :guilabel:`OSM-WSM` en el panel :guilabel:`Capas`."
+msgid "Load a :guilabel:`World: Hillshading` layer into the map."
+msgstr "Cargue una capa :guilabel:`Mundo: Sombreado de colinas` en el mapa."
 
 #: ../../docs/training_manual/online_resources/wms.rst:168
 msgid ""
-"Add the \"ZAF CGS 1M Bedrock Lithostratigraphy\" WMS server at this URL: "
-"``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``"
+"You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG` and its "
+":guilabel:`Tile size` option to ``200`` by ``200``, so that it loads faster."
 msgstr ""
-"Añade el servidor WMS \"ZAF CGS 1M Bedrock Lithostratigraphy\" a esta URL: "
-"``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``"
+"Puede que desee establecer su :guilabel:`Codificación` a :guilabel:`JPEG` y "
+"su opción :guilabel:`Tamaño de tesela` a ``200`` por ``200``, para que "
+"cargue más rápido."
 
 #: ../../docs/training_manual/online_resources/wms.rst:170
 msgid ""
-"Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (you can also use the"
-" :menuselection:`Layer --> Add Layer -->` |addWmsLayer| :menuselection:`Add "
-"WMS/WMTS Layer...` button to open the Data Source Manager dialog). Remember "
-"to check that it's in the same :guilabel:`WGS 84 / World Mercator` "
-"projection as the rest of your map!"
+"Your map should look like this (you may need to re-order the layers, and "
+"apply some transparency):"
 msgstr ""
-"Carga la capa :guilabel:`BEDROCKGEOLOGY` en el mapa (también puede usar el "
-"botón :menuselection:`Capa --> Añadir Capa -->` |addWmsLayer| "
-":menuselection:`Añadir capa WMS/WMTS...` para abrirel diálogo del "
-"Administrador de Fuentes de Datos). Recuerde marcar que está en la misma "
-"proyección :guilabel:`WGS 84 / World Mercator` que el resto de su mapa!"
+"Su mapa debería tener este aspecto (puede que tengas que reordenar las capas"
+" y aplicar alguna transparencia):"
 
-#: ../../docs/training_manual/online_resources/wms.rst:175
-msgid ""
-"You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG` and its "
-":guilabel:`Tile size` option to ``200`` by ``200``, so that it loads faster:"
-msgstr ""
-"Es posible que desee establecer su :guilabel:`Codificación` a "
-":guilabel:`JPEG` y su opción :guilabel:`Tamaño de tesela` a ``200`` por "
-"``200``, para que cargue más rápido:"
-
-#: ../../docs/training_manual/online_resources/wms.rst:182
-#: ../../docs/training_manual/online_resources/wms.rst:200
-#: ../../docs/training_manual/online_resources/wms.rst:234
+#: ../../docs/training_manual/online_resources/wms.rst:176
+#: ../../docs/training_manual/online_resources/wms.rst:203
+#: ../../docs/training_manual/online_resources/wms.rst:228
 msgid "Answer"
 msgstr "Respuesta"
 
-#: ../../docs/training_manual/online_resources/wms.rst:185
-msgid "Your map should look like this (you may need to re-order the layers):"
-msgstr "Su mapa debería verse así (es posible que deba re-ordenar las capas):"
+#: ../../docs/training_manual/online_resources/wms.rst:179
+msgid ""
+"Go to the Data Source Manager, WMS / WMTS tab and create a new connection "
+"entry"
+msgstr ""
+"Vaya al Administrador de fuentes de datos, pestaña WMS / WMTS y cree una "
+"nueva entrada de conexión"
+
+#: ../../docs/training_manual/online_resources/wms.rst:180
+msgid ""
+"Use the |search| text box to filter the list of layers and select the "
+"corresponding layer"
+msgstr ""
+"Utilice el cuadro de texto |search| para filtrar la lista de capas y "
+"seleccione la capa correspondiente"
+
+#: ../../docs/training_manual/online_resources/wms.rst:181
+msgid ""
+"Remember to check/turn its CRS into :guilabel:`EPSG:3857 - WGS 84 / Pseudo "
+"Mercator` as the rest of the map."
+msgstr ""
+"Recuerde comprobar/cambiar su SRC a :guilabel:`EPSG:3857 - WGS 84 / Pseudo "
+"Mercator` como el resto del mapa."
+
+#: ../../docs/training_manual/online_resources/wms.rst:188
+msgid ""
+"After the layer is loaded, you can modify its :guilabel:`Opacity` value "
+"(under the :guilabel:`Transparency` properties tab)"
+msgstr ""
+"Una vez cargada la capa, puede modificar su valor :guilabel:`Opacidad` (en "
+"la pestaña de propiedades :guilabel:`Transparencia`)"
 
 #: ../../docs/training_manual/online_resources/wms.rst:192
-msgid "|moderate| |TY|"
-msgstr ""
-
-#: ../../docs/training_manual/online_resources/wms.rst:286
-msgid "moderate"
-msgstr ""
-
-#: ../../docs/training_manual/online_resources/wms.rst:194
-msgid ""
-"Hide all other WMS layers to prevent them from rendering unnecessarily in "
-"the background."
-msgstr ""
-"Oculte todas las demás capas WMS para evitar que se procesen "
-"innecesariamente en segundo plano."
-
-#: ../../docs/training_manual/online_resources/wms.rst:196
-msgid "Add the \"OGC\" WMS server at this URL: ``http://ogc.gbif.org:80/wms``"
-msgstr "Añade el servidor WMS \"OGC\" en esta URL: ``http://ogc.gbif.org:80/wms``"
-
-#: ../../docs/training_manual/online_resources/wms.rst:197
-msgid "Add the :guilabel:`bluemarble` layer."
-msgstr "Añade la capa :guilabel:`bluemarble`."
-
-#: ../../docs/training_manual/online_resources/wms.rst:203
-msgid ""
-"Use the same approach as before to add the new server and the appropriate "
-"layer as hosted on that server:"
-msgstr ""
-"Utilice el mismo enfoque que antes para agregar el nuevo servidor y la capa "
-"apropiada como alojada en ese servidor:"
-
-#: ../../docs/training_manual/online_resources/wms.rst:212
-msgid ""
-"If you zoom into the |majorUrbanName| area, you'll notice that this dataset "
-"has a low resolution:"
-msgstr ""
-"Si hace zoom en el |majorUrbanName| notará que este conjunto de datos tiene "
-"una resolución baja:"
-
-#: ../../docs/training_manual/online_resources/wms.rst:218
-msgid ""
-"Therefore, it's better not to use this data for the current map. The Blue "
-"Marble data is more suitable at global or national scales"
-msgstr ""
-"Por lo tanto, es mejor no usar estos datos para el mapa actual. Los datos de"
-" Blue Marble son más adecuados a escala global o nacional"
-
 #: ../../docs/training_manual/online_resources/wms.rst:223
 msgid "|hard| |TY|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:284
+#: ../../docs/training_manual/online_resources/wms.rst:285
 msgid "hard"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:225
+#: ../../docs/training_manual/online_resources/wms.rst:194
 msgid "Part of the difficulty of using WMS is finding a good (free) server."
 msgstr ""
 "Parte de la dificultad del uso de WMS es encontrar un servidor bueno (y "
 "gratuito)."
 
-#: ../../docs/training_manual/online_resources/wms.rst:227
+#: ../../docs/training_manual/online_resources/wms.rst:196
 msgid ""
 "Find a new WMS at `directory.spatineo.com "
 "<https://directory.spatineo.com/>`_ (or elsewhere online). It must not have "
@@ -501,7 +483,7 @@ msgstr ""
 " debe tener tarifas o restricciones asociadas, y debe tener cobertura sobre "
 "el área de estudio |majorUrbanName|."
 
-#: ../../docs/training_manual/online_resources/wms.rst:231
+#: ../../docs/training_manual/online_resources/wms.rst:200
 msgid ""
 "Remember that what you need in order to use a WMS is only its URL (and "
 "preferably some sort of description)."
@@ -509,11 +491,85 @@ msgstr ""
 "Recuerda que lo que necesitas para utilizar un WMS solo es su URL (y "
 "preferiblemente algún tipo de descripción)."
 
-#: ../../docs/training_manual/online_resources/wms.rst:247
+#: ../../docs/training_manual/online_resources/wms.rst:206
+msgid ""
+"Spatineo is one of many places you can search for a OGC data. Type in the "
+"text area a name, keyword, location of your interest to see if you get some "
+"working results. For this lesson, you might want to filter the results to "
+"include WMS only."
+msgstr ""
+"Spatineo es uno de los muchos lugares donde puedes buscar datos OGC. Escribe"
+" en el área de texto un nombre, una palabra clave o una ubicación de tu "
+"interés para ver si obtienes algunos resultados que funcionen. Para esta "
+"lección, es posible que desee filtrar los resultados para incluir sólo WMS."
+
+#: ../../docs/training_manual/online_resources/wms.rst:211
+msgid ""
+"You may notice that many WMS servers are not always available. Sometimes "
+"this  is temporary, sometimes it is permanent. An example of a WMS server "
+"that worked at the time of writing is the :guilabel:`MapServer Demonstration"
+" Server` WMS at https://demo.mapserver.org/cgi-"
+"bin/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities. It does not "
+"require fees or have access constraints, and it is global. Therefore, it "
+"does satisfy the requirements. Keep in mind, however, that this is merely an"
+" example. There are many other WMS servers to choose from."
+msgstr ""
+"Es posible que observe que muchos servidores WMS no siempre están "
+"disponibles. A veces esto es temporal, a veces es permanente. Un ejemplo de "
+"servidor WMS que funcionaba en el momento de escribir estas líneas es el "
+":guilabel:`Servidor de demostración MapServer` WMS en "
+"https://demo.mapserver.org/cgi-"
+"bin/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities. No requiere "
+"cuotas ni tiene restricciones de acceso, y es global. Por lo tanto, cumple "
+"los requisitos. No obstante, ten en cuenta que se trata de un mero ejemplo. "
+"Hay muchos otros servidores WMS entre los que elegir."
+
+#: ../../docs/training_manual/online_resources/wms.rst:225
+msgid ""
+"Add the :guilabel:`bluemarble` layer from the :guilabel:`MapServer "
+"Demonstration Server`. Is that a suitable dataset for our study area?"
+msgstr ""
+"Añada la capa :guilabel:`bluemarble` del servidor de demostración "
+":guilabel:`MapServer`. ¿Es un conjunto de datos adecuado para nuestra zona "
+"de estudio?"
+
+#: ../../docs/training_manual/online_resources/wms.rst:231
+msgid ""
+"Hide all other WMS layers to prevent them from rendering unnecessarily in "
+"the background."
+msgstr ""
+"Oculte todas las demás capas WMS para evitar que se procesen "
+"innecesariamente en segundo plano."
+
+#: ../../docs/training_manual/online_resources/wms.rst:232
+msgid ""
+"Use the same approach as before to add the new server and the appropriate "
+"layer as hosted on that server:"
+msgstr ""
+"Utilice el mismo enfoque que antes para agregar el nuevo servidor y la capa "
+"apropiada como alojada en ese servidor:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:238
+msgid ""
+"If you zoom into the |majorUrbanName| area, you'll notice that this dataset "
+"has a low resolution:"
+msgstr ""
+"Si hace zoom en el |majorUrbanName| notará que este conjunto de datos tiene "
+"una resolución baja:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:243
+msgid ""
+"Therefore, it's better not to use this data for the current map. The Blue "
+"Marble data is more suitable at global or national scales"
+msgstr ""
+"Por lo tanto, es mejor no usar estos datos para el mapa actual. Los datos de"
+" Blue Marble son más adecuados a escala global o nacional"
+
+#: ../../docs/training_manual/online_resources/wms.rst:248
 msgid "|IC|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:249
+#: ../../docs/training_manual/online_resources/wms.rst:250
 msgid ""
 "Using a WMS, you can add inactive maps as backdrops for your existing map "
 "data."
@@ -521,15 +577,15 @@ msgstr ""
 "Utilizando un WMS puedes añadir mapas inactivos como fondo para tu mapa de "
 "datos existente."
 
-#: ../../docs/training_manual/online_resources/wms.rst:252
+#: ../../docs/training_manual/online_resources/wms.rst:253
 msgid "|FR|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:254
+#: ../../docs/training_manual/online_resources/wms.rst:255
 msgid "`Spatineo Directory <https://directory.spatineo.com/>`_"
 msgstr "`Spatineo Directory <https://directory.spatineo.com/>`_"
 
-#: ../../docs/training_manual/online_resources/wms.rst:255
+#: ../../docs/training_manual/online_resources/wms.rst:256
 msgid ""
 "`OpenStreetMap.org list of WMS servers "
 "<https://wiki.openstreetmap.org/wiki/WMS>`_"
@@ -537,11 +593,11 @@ msgstr ""
 "`OpenStreetMap.org lista de servidores WMS "
 "<https://wiki.openstreetmap.org/wiki/WMS>`_"
 
-#: ../../docs/training_manual/online_resources/wms.rst:259
+#: ../../docs/training_manual/online_resources/wms.rst:260
 msgid "|WN|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wms.rst:261
+#: ../../docs/training_manual/online_resources/wms.rst:262
 msgid ""
 "Now that you've added an inactive map as a backdrop, you'll be glad to know "
 "that it's also possible to add features (such as the other vector layers you"
