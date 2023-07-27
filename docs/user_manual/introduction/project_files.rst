@@ -188,8 +188,9 @@ Other ways to produce output files are:
   :menuselection:`Project --> Import/Export -->` |saveMapAsImage|
   :menuselection:`Export Map to Image...` outputs the map canvas
   rendering to an image format (PNG, JPG, TIFF...) at custom scale,
-  resolution, size, ...
-  Georeferencing the image is possible.
+  resolution and size. Including georeference information in the
+  exported image is possible, simply enable
+  |checkbox| :guilabel:`Append georeference information (embedded or via world file)`. 
   See :ref:`exportingmapcanvas` for more details.
 * Exporting to PDF files:
   :menuselection:`Project --> Import/Export --> Export Map to PDF...`
