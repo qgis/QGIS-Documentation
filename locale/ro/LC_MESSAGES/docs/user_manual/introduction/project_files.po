@@ -6,7 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,38 +24,463 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
+#: ../../docs/user_manual/introduction/project_files.rst:9
+msgid "Working with Project Files"
+msgstr "Lucrul cu Fișierele Proiectelor"
+
+#: ../../docs/user_manual/introduction/project_files.rst:21
+msgid "Introducing QGIS projects"
+msgstr "Prezentarea proiectelor QGIS"
+
+#: ../../docs/user_manual/introduction/project_files.rst:22
+msgid ""
+"The state of your QGIS session is called a project. QGIS works on one "
+"project at a time. A setting can be project-specific or an application-wide "
+"default for new projects (see section :ref:`gui_options`). QGIS can save the"
+" state of your workspace into a :ref:`QGIS project file <qgisprojectfile>` "
+"using the menu options :menuselection:`Project -->` |fileSave| "
+":menuselection:`Save` or :menuselection:`Project -->` |fileSaveAs| "
+":menuselection:`Save As...`."
+msgstr ""
+"Starea unei sesiuni de QGIS poartă numele de proiect. În orice moment, QGIS "
+"permite lucrul la un singur proiect. O setare poate fi specifică doar unui "
+"proiect sau poate fi valabilă, la nivel de aplicație, pentru toate "
+"proiectele noi (v. secțiunea :ref:`gui_options`). QGIS poate salva starea "
+"spațiului dvs. de lucru într-un :ref:`fișier proiect QGIS<qgisprojectfile>` "
+"folosind opțiunile de meniu :menuselection:`Proiect -->` |fileSave| "
+":menuselection:`Salvare` sau :menuselection:`Proiect -->` |fileSaveAs| "
+":menuselection:`Salvare Ca...`."
+
 #: ../../docs/user_manual/introduction/project_files.rst:228
 msgid "fileSave"
-msgstr ""
+msgstr "fileSave"
 
 #: ../../docs/user_manual/introduction/project_files.rst:230
 msgid "fileSaveAs"
+msgstr "fileSaveAs"
+
+#: ../../docs/user_manual/introduction/project_files.rst:34
+msgid ""
+"If the project has been modified the ``*`` symbol will appear in the title "
+"bar and QGIS will, by default, ask you if you would like to save the "
+"changes. This behavior is controlled by the |checkbox| :guilabel:`Prompt to "
+"save project and data source changes when required` setting under "
+":menuselection:`Settings --> Options --> General`."
 msgstr ""
+"Dacă proiectul a fost modificat, simbolul ``*`` va apărea în bara de titlu "
+"iar QGIS vă va întreba, în mod implicit, dacă doriți să salvați "
+"modificările. Acest comportament este controlat de opțiunea de "
+":guilabel:`Solicitare a salvării modificărilor proiectului și sursei de date"
+" atunci când este necesar` setarea din :menuselection:`Setări --> Opțiuni "
+"--> Generalități`."
 
 #: ../../docs/user_manual/introduction/project_files.rst:220
 msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/introduction/project_files.rst:40
+msgid ""
+"You can load existing projects into QGIS from the Browser panel or by "
+"through :menuselection:`Project -->` |fileOpen| :menuselection:`Open...`, "
+":menuselection:`Project --> New from template` or :menuselection:`Project "
+"--> Open Recent -->`."
 msgstr ""
+"Puteți încărca proiectele existente în QGIS folosind panoul Navigatorului "
+"sau accesând :menuselection:`Proiect -->` |fileOpen| "
+":menuselection:`Deschide...`, :menuselection:`Proiect --> Nou din șablon` "
+"sau :menuselection:`Proiect --> Deschide Recent -->`."
 
 #: ../../docs/user_manual/introduction/project_files.rst:226
 msgid "fileOpen"
+msgstr "fileOpen"
+
+#: ../../docs/user_manual/introduction/project_files.rst:46
+msgid ""
+"At startup, a list of :guilabel:`Project Templates` and :guilabel:`Recent "
+"Projects` are displayed, including screenshots, names and file paths (for up"
+" to ten projects). The :guilabel:`Recent Projects` list is handy to access "
+"recently used projects. Double-click an entry to open the project or project"
+" template. Right-click an entry to :guilabel:`Pin to List`, :guilabel:`Open "
+"Directory...` or :guilabel:`Remove from List`. You can also add a layer to "
+"create a new project automatically. The lists will then disappear, giving "
+"way to the map canvas."
 msgstr ""
+"La pornire, sunt afișate listele :guilabel:`Șabloanelor proiect` și a "
+":guilabel:`Proiectelor recente`, inclusiv capturi de ecran, nume și căi de "
+"fișiere (pentru până la zece proiecte). Lista :guilabel:`Proiectelor "
+"recente` permite accesarea proiectelor utilizate recent. Faceți dublu clic "
+"pe o poziție pentru a deschide proiectul sau șablonul de proiect. Efectuați "
+"clic dreapta pe o poziție pentru a o :guilabel:`Reține în Listă`, pentru a-i"
+" :guilabel:`Deschide Directorul...` sau pentru a o :guilabel:`Elimina din "
+"Listă`. De asemenea, puteți adăuga un strat pentru a crea automat un nou "
+"proiect. Listele vor dispărea apoi, făcând loc canevasului hărții."
+
+#: ../../docs/user_manual/introduction/project_files.rst:57
+msgid ""
+"If you want to clear your session and start fresh, go to "
+":menuselection:`Project -->` |fileNew| :menuselection:`New`. This will "
+"prompt you to save the existing project if changes have been made since it "
+"was opened or last saved."
+msgstr ""
+"Dacă doriți să ștergeți sesiunea și să reîncepeți, accesați "
+":menuselection:`Proiect -->` |fileNew| :menuselection:`Nou`. Vi se va cere "
+"să salvați proiectul existent, dacă s-au efectuat modificări de când a fost "
+"deschis sau de la ultima salvare."
 
 #: ../../docs/user_manual/introduction/project_files.rst:224
 msgid "fileNew"
+msgstr "fileNew"
+
+#: ../../docs/user_manual/introduction/project_files.rst:62
+msgid ""
+"When you open a fresh project, the title bar will show ``Untitled Project`` "
+"until you save it."
 msgstr ""
+"Când deschideți un proiect nou, bara de titlu va afișa ``Proiect fără "
+"titlu`` până când îl veți salva."
+
+#: ../../docs/user_manual/introduction/project_files.rst:70
+msgid "Starting a new project in QGIS"
+msgstr "Începerea unui nou proiect în QGIS"
+
+#: ../../docs/user_manual/introduction/project_files.rst:72
+msgid "The information saved in a project file includes:"
+msgstr "Informațiile salvate într-un fișier de proiect includ:"
+
+#: ../../docs/user_manual/introduction/project_files.rst:74
+msgid "Layers added"
+msgstr "Straturile adăugate"
+
+#: ../../docs/user_manual/introduction/project_files.rst:75
+msgid "Which layers can be queried"
+msgstr "Straturile care pot fi interogate"
+
+#: ../../docs/user_manual/introduction/project_files.rst:76
+msgid "Layer properties, including symbolization and styles"
+msgstr "Proprietățile stratului, inclusiv simbolizarea și stilurile"
+
+#: ../../docs/user_manual/introduction/project_files.rst:77
+msgid "Layer notes"
+msgstr "Notițele straturilor"
+
+#: ../../docs/user_manual/introduction/project_files.rst:78
+msgid "2D and 3D map views"
+msgstr "Vizualizări 2D și 3D ale hărților"
+
+#: ../../docs/user_manual/introduction/project_files.rst:79
+msgid "Projection for each map view"
+msgstr "Proiecția pentru fiecare vizualizare de hartă"
+
+#: ../../docs/user_manual/introduction/project_files.rst:80
+msgid "Last viewed extent for each map"
+msgstr "Ultima extindere vizualizată pentru fiecare hartă"
+
+#: ../../docs/user_manual/introduction/project_files.rst:81
+msgid "Print layouts"
+msgstr "Compozițiile imprimabile"
+
+#: ../../docs/user_manual/introduction/project_files.rst:82
+msgid "Print layout elements with settings"
+msgstr "Setări pentru elementele compozițiilor imprimabile"
+
+#: ../../docs/user_manual/introduction/project_files.rst:83
+msgid "Print layout atlas settings"
+msgstr "Setări pentru atlasurile compozițiilor imprimabile"
+
+#: ../../docs/user_manual/introduction/project_files.rst:84
+msgid "Digitizing settings"
+msgstr "Setări de digitizare"
+
+#: ../../docs/user_manual/introduction/project_files.rst:85
+msgid "Table Relations"
+msgstr "Relațiile dintre Tabele"
+
+#: ../../docs/user_manual/introduction/project_files.rst:86
+msgid "Project Macros"
+msgstr "Comenzi Macro pentru Proiecte"
+
+#: ../../docs/user_manual/introduction/project_files.rst:87
+msgid "Project default styles"
+msgstr "Stilurile implicite ale proiectului"
+
+#: ../../docs/user_manual/introduction/project_files.rst:88
+msgid "Plugins settings"
+msgstr "Setările pkuginurilor"
+
+#: ../../docs/user_manual/introduction/project_files.rst:89
+msgid ""
+"QGIS Server settings from the OWS settings tab in the Project properties"
+msgstr ""
+"Setările serverului QGIS, din fila Setărilor OWS a Proprietăților "
+"proiectului"
+
+#: ../../docs/user_manual/introduction/project_files.rst:90
+msgid "Queries stored in the DB Manager"
+msgstr "Interogările stocate în DB Manager"
+
+#: ../../docs/user_manual/introduction/project_files.rst:92
+msgid ""
+"The project file is saved in XML format (see :ref:`qgisprojectfile`). This "
+"means that it is possible to edit the file outside of QGIS if you know what "
+"you are doing. The project file format has been updated several times. "
+"Project files from older QGIS versions may not work properly any more."
+msgstr ""
+"Fișierul proiect este salvat în format XML (v. :ref:`qgisprojectfile`). "
+"Aceasta înseamnă că este posibil să editați fișierul în afara QGIS, dacă "
+"știți ce faceți. Formatul fișierului de proiect a fost actualizat de mai "
+"multe ori. Este posibil ca fișierele de proiect din versiunile QGIS mai "
+"vechi să nu mai funcționeze corect."
+
+#: ../../docs/user_manual/introduction/project_files.rst:100
+msgid ""
+"By default, QGIS will warn you of version differences. This behavior is "
+"controlled in the :guilabel:`General` tab of :menuselection:`Settings --> "
+"Options` (|checkbox| :guilabel:`Warn when opening a project file saved with "
+"an older version of QGIS`)."
+msgstr ""
+"În mod implicit, QGIS vă va avertiza cu privire la diferențele de versiune. "
+"Acest comportament este controlat în fila :guilabel:`Generalități` din "
+":menuselection:`Setări --> Opțiuni` (|checkbox| :guilabel:`Avertizare la "
+"deschiderea unui fișier de proiect salvat cu o versiune mai veche de QGIS`)."
+
+#: ../../docs/user_manual/introduction/project_files.rst:106
+msgid ""
+"Whenever you save a ``.qgs`` project file in QGIS, a backup of the file is "
+"created in the same directory as the project file, with the extension "
+"``.qgs~``."
+msgstr ""
+"Ori de câte ori salvați un fișier de proiect ``.qgs`` în QGIS, o copie de "
+"rezervă a fișierului este creată în același director cu fișierul de proiect "
+"care are extensia ``.qgs~``."
+
+#: ../../docs/user_manual/introduction/project_files.rst:110
+msgid ""
+"The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the "
+"default is to save using a compressed format with the ``.qgz`` extension. "
+"The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together"
+" with its associated sqlite database (``.qgd``) for :ref:`auxiliary data "
+"<vector_auxiliary_storage>`. You can get to these files by unzipping the "
+"``.qgz`` file."
+msgstr ""
+"Extensia pentru proiectele QGIS este ``.qgs``, dar la momentul salvării din "
+"QGIS, implicită este salvarea în formatul comprimat cu extensia ``.qgz``. "
+"Fișierul ``.qgs`` este încorporat în fișierul ``.qgz`` (o arhivă zip), "
+"împreună cu baza de date sqlite asociată (``.qgd``) a :ref:`datelor "
+"auxiliare <vector_auxiliary_storage>`. Puteți ajunge la aceste fișiere "
+"dezarhivând fișierul ``.qgz``."
+
+#: ../../docs/user_manual/introduction/project_files.rst:120
+msgid ""
+"The :ref:`vector_auxiliary_storage` mechanism makes a zipped project "
+"particularly useful, since it embeds auxiliary data."
+msgstr ""
+"Mecanismul :ref:`vector_auxiliary_storage` face un proiect zip deosebit de "
+"util, deoarece acesta înglobează date auxiliare."
+
+#: ../../docs/user_manual/introduction/project_files.rst:125
+msgid ""
+"Projects can also be saved/loaded to/from a PostgreSQL database using the "
+"following Project menu items:"
+msgstr ""
+"Proiectele pot fi, de asemenea, salvate/încărcate într-o bază de date "
+"PostgreSQL, folosind următoarele elemente din meniul Proiect:"
+
+#: ../../docs/user_manual/introduction/project_files.rst:128
+msgid ":menuselection:`Project --> Open from`"
+msgstr ":menuselection:`Proiect --> Deschidere din`"
+
+#: ../../docs/user_manual/introduction/project_files.rst:129
+msgid ":menuselection:`Project --> Save to`"
+msgstr ":menuselection:`Proiect --> Salvare în`"
+
+#: ../../docs/user_manual/introduction/project_files.rst:131
+msgid ""
+"Both menu items have a sub-menu with a list of extra project storage "
+"implementations (PostgreSQL and GeoPackage). Clicking the action will open a"
+" dialog to pick a GeoPackage connection and project or a PostgreSQL "
+"connection, schema and project."
+msgstr ""
+"Ambele elemente de meniu au un câte un submeniu cu o listă de implementări "
+"suplimentare de stocare a proiectului (PostgreSQL și GeoPackage). Făcând "
+"clic pe acțiune, se va deschide un dialog care permite alegerea unei "
+"conexiuni și a unui proiect GeoPackage sau a unei conexiuni, a unei scheme "
+"și a unui proiect PostgreSQL."
+
+#: ../../docs/user_manual/introduction/project_files.rst:136
+msgid ""
+"Projects stored in Geopackage or PostgreSQL can also be loaded through the "
+"QGIS browser panel, either by double-clicking them or by dragging them to "
+"the map canvas."
+msgstr ""
+"Proiectele stocate în Geopackage sau PostgreSQL pot fi încărcate și prin "
+"intermediul panoului Navigatorului QGIS, fie printr-un dublu clic pe ele, "
+"fie trăgându-le pe canevasul hărții."
+
+#: ../../docs/user_manual/introduction/project_files.rst:144
+msgid "Handling broken file paths"
+msgstr "Gestionarea căilor de fișiere întrerupte"
+
+#: ../../docs/user_manual/introduction/project_files.rst:146
+msgid ""
+"When opening a project, QGIS may fail to reach some data sources due to "
+"unavailable service/database, or to a renamed or moved file. QGIS then opens"
+" the :guilabel:`Handle Unavailable Layers` dialog, referencing the unfound "
+"layers. You can:"
+msgstr ""
+"La deschiderea unui proiect, QGIS poate să nu găsească unele surse de date, "
+"din cauza indisponibilității serviciului/bazei de date sau a redenumirii sau"
+" mutării unui fișier. QGIS va deschide fereastra de :guilabel:`Gestionare a "
+"straturilor indisponibile`, care face referire la straturile negăsite. Veți "
+"putea:"
+
+#: ../../docs/user_manual/introduction/project_files.rst:152
+msgid ""
+"Double-click in the :guilabel:`Datasource` field, adjust the path of each "
+"layer and click :guilabel:`Apply changes`;"
+msgstr ""
+"Efectua dublu clic în câmpul :guilabel:`Sursei de date`, să ajustați calea "
+"fiecărui strat apoi să faceți clic pe :guilabel:`Aplicare modificări`;"
+
+#: ../../docs/user_manual/introduction/project_files.rst:154
+msgid ""
+"Select a row, press :guilabel:`Browse` to indicate the correct location and "
+"click :guilabel:`Apply changes`;"
+msgstr ""
+"Selecta un rând, să apăsați pe :guilabel:`Răsfoire` pentru a indica locația "
+"corectă apoi să faceți clic pe :guilabel:`Aplicare modificări`;"
+
+#: ../../docs/user_manual/introduction/project_files.rst:156
+msgid ""
+"Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
+"fix all or selected broken path(s). Be aware that the browsing may take some"
+" time. Then click :guilabel:`Apply changes`."
+msgstr ""
+"Apăsa pe :guilabel:`Auto-Identificare` pentru a răsfoi dosarele și a încerca"
+" remedierea automată a tuturor căi(lor) incorecte sau doar a celor "
+"selectate. Rețineți că răsfoirea poate dura ceva timp. Apoi faceți clic pe "
+":guilabel:`Aplicare modificări`."
+
+#: ../../docs/user_manual/introduction/project_files.rst:159
+msgid ""
+"Ignore the message and open your project with the broken path(s) by clicking"
+" :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the "
+":guilabel:`Layers` panel, but without any data until you fix the path using "
+"the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in the "
+":guilabel:`Layers` panel, or :guilabel:`Repair Data Source...` in the layer "
+"contextual menu."
+msgstr ""
+"Ignora mesajul și să deschideți proiectul cu căi(le) întrerupte făcând clic "
+"pe :guilabel:`Păstrare straturi indisponibile`. Stratul dvs. este apoi "
+"afișat în panoul :guilabel:`Straturilor`, dar fără date, până la remedierea "
+"căii cu ajutorul pictogramei |indicatorBadLayer| :sup:`Strat indisponibil!` "
+"afișată lângă acesta în panoul :guilabel:`Straturilor` sau alegând "
+":guilabel:`Reparare sursă de date...` din meniul contextual al stratului."
 
 #: ../../docs/user_manual/introduction/project_files.rst:232
 msgid "indicatorBadLayer"
 msgstr "indicatorBadLayer"
 
+#: ../../docs/user_manual/introduction/project_files.rst:166
+msgid ""
+"With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
+"fixed, QGIS scans through all other broken paths and tries to auto-fix those"
+" that have the same broken file path."
+msgstr ""
+"Când se folosește instrumentul de :guilabel:`Reparare sursă de date...`, o "
+"dată ce o cale a stratului a fost remediată, QGIS scanează toate celelalte "
+"căi întrerupte și încearcă să le repare automat pe cele care au întreruptă "
+"aceeași cale de fișier."
+
+#: ../../docs/user_manual/introduction/project_files.rst:169
+msgid ""
+"|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
+msgstr ""
+"|deleteSelected| :guilabel:`Elimină straturile indisponibile` din proiect."
+
 #: ../../docs/user_manual/introduction/project_files.rst:222
 msgid "deleteSelected"
 msgstr "deleteSelected"
+
+#: ../../docs/user_manual/introduction/project_files.rst:171
+msgid ""
+"Launching QGIS from command line using the :ref:`skipbadlayers` option can "
+"help you skip the :guilabel:`Handle Unavailable Layers` dialog at startup."
+msgstr ""
+"Lansarea QGIS din linia de comandă folosind opțiunea :ref:`skipbadlayers` vă"
+" poate ajuta să săriți peste fereastra de :guilabel:`Gestionare a "
+"straturilor indisponibile` de la pornire."
+
+#: ../../docs/user_manual/introduction/project_files.rst:177
+msgid "Generating output"
+msgstr "Obținerea rezultatelor"
+
+#: ../../docs/user_manual/introduction/project_files.rst:182
+msgid ""
+"There are several ways to generate output from your QGIS session. We have "
+"already discussed saving as a project file in :ref:`sec_projects`. Other "
+"ways to produce output files are:"
+msgstr ""
+"Există mai multe moduri de a genera rezultate din sesiunea dvs. de QGIS. Am "
+"discutat deja despre salvarea sub formă de fișier proiect în "
+":ref:`sec_projects`. Alte modalități de a produce fișiere de ieșire sunt:"
+
+#: ../../docs/user_manual/introduction/project_files.rst:187
+msgid ""
+"Creating images: :menuselection:`Project --> Import/Export -->` "
+"|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
+"canvas rendering to an image format (PNG, JPG, TIFF...) at custom scale, "
+"resolution, size, ... Georeferencing the image is possible. See "
+":ref:`exportingmapcanvas` for more details."
+msgstr ""
+"Crearea imaginilor: :menuselection:`Proiect --> Importare/Exportare -->` "
+"|saveMapAsImage| :menuselection:`Exportare Hartă Într-o Imagine...` redă "
+"canevasul hărții în formatul unei imagini (PNG, JPG, TIFF...) la scară "
+"personalizată, rezoluție, dimensiune, ... Este posibilă și georeferențierea "
+"imaginii. Consultați :ref:`exportingmapcanvas` pentru mai multe detalii."
 
 #: ../../docs/user_manual/introduction/project_files.rst:236
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
 
+#: ../../docs/user_manual/introduction/project_files.rst:194
+msgid ""
+"Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
+" Map to PDF...` outputs the map canvas rendering to PDF at custom scale, "
+"resolution, and with some advanced settings (simplification, georeferencing,"
+" ...). See :ref:`exportingmapcanvas` for more details."
+msgstr ""
+"Exportarea în fișiere PDF: :menuselection:`Proiect --> Importare/Exportare "
+"--> Exportare Hartă într-un PDF...` redă canevasul hărții în format PDF la "
+"scară, rezoluție personalizată și cu unele setări avansate (simplificare, "
+"georeferențiere, ...). Consultați :ref:`exportingmapcanvas` pentru mai multe"
+" detalii."
+
+#: ../../docs/user_manual/introduction/project_files.rst:200
+msgid ""
+"Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export"
+" Project to DXF...` opens a dialog where you can define the 'Symbology "
+"mode', the 'Symbology scale' and vector layers you want to export to DXF. "
+"Through the 'Symbology mode', symbols from the original QGIS Symbology can "
+"be exported with high fidelity (see section :ref:`create_dxf_files`)."
+msgstr ""
+"Exportul în fișiere DXF: :menuselection:`Proiect --> Import/Export --> "
+"Export Project to DXF...` deschide un dialog în care puteți defini 'Modul "
+"Simbologie', 'Scara simbolului' și straturile vectoriale dorite. pentru a "
+"exporta în DXF. Prin „Modul Simbologie”, simbolurile din simbolul QGIS "
+"original pot fi exportate cu fidelitate ridicată (vezi secțiunea "
+":ref:`create_dxf_files`)."
+
+#: ../../docs/user_manual/introduction/project_files.rst:207
+msgid ""
+"Designing maps: :menuselection:`Project -->` |newLayout| :menuselection:`New"
+" Print Layout...` opens a dialog where you can layout and print the current "
+"map canvas (see section :ref:`label_printlayout`)."
+msgstr ""
+"Proiectarea hărților: :menuselection:`Proiect -->` |newLayout| "
+":menuselection:`Compoziție Imprimabilă Nouă ...` deschide o fereastră de "
+"dialog în care puteți aranja și tipări canevasul hărții curente  (v. "
+"secțiunea :ref:`label_printlayout`)."
+
 #: ../../docs/user_manual/introduction/project_files.rst:234
 msgid "newLayout"
-msgstr ""
+msgstr "newLayout"
