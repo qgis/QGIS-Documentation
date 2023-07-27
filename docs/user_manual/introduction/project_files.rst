@@ -111,7 +111,7 @@ The extension for QGIS projects is ``.qgs`` but when saving from QGIS,
 the default is to save using a compressed format with the ``.qgz``
 extension.
 The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive),
-together with its associated sqlite database (``.qgd``) for
+together with its associated SQLite database (``.qgd``) for
 :ref:`auxiliary data <vector_auxiliary_storage>`.
 You can get to these files by unzipping the ``.qgz`` file.
 
@@ -122,18 +122,19 @@ You can get to these files by unzipping the ``.qgz`` file.
 
 .. _`saveprojecttodb`:
 
-Projects can also be saved/loaded to/from a PostgreSQL database using the
-following Project menu items:
+Projects can also be saved/loaded to/from a PostgreSQL, GeoPackage or 
+Oracle database using the following Project menu items:
 
 * :menuselection:`Project --> Open from`
 * :menuselection:`Project --> Save to`
 
 Both menu items have a sub-menu with a list of extra project storage
-implementations (PostgreSQL and GeoPackage).
+implementations (PostgreSQL, GeoPackage and Oracle).
 Clicking the action will open a dialog to pick a GeoPackage connection
-and project or a PostgreSQL connection, schema and project.
+and project, a PostgreSQL connection, schema and project or Oracle
+connection, owner and project.
 
-Projects stored in Geopackage or PostgreSQL can also be loaded
+Projects stored in GeoPackage, PostgreSQL or Oracle can also be loaded
 through the QGIS browser panel, either by double-clicking them or by
 dragging them to the map canvas.
 
