@@ -309,6 +309,14 @@ msgstr ""
 "ejecute ``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)``"
 " para ver la lista de directorios por defecto."
 
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:167
+msgid ""
+"The ``startup.py`` script is executed immediately upon initializing python "
+"in QGIS, early on in the start of the application."
+msgstr ""
+"El script ``startup.py`` se ejecuta inmediatamente después de inicializar "
+"python en QGIS, al inicio de la aplicación."
+
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:174
 msgid "The PYQGIS_STARTUP environment variable"
 msgstr "La variable de entorno PYQGIS_STARTUP"
@@ -334,6 +342,66 @@ msgstr ""
 " Este método es muy útil para la limpieza de sys.path, que puede tener rutas"
 " no deseables, o para aislar/cargar el entorno inicial sin necesidad de un "
 "entorno virtual, por ejemplo,  homebrew o MacPorts se instala en Mac."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:191
+msgid "The ``--code`` parameter"
+msgstr "El parámetro ``--code``"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:193
+msgid ""
+"You can provide custom code to execute as startup paramteter to QGIS. To do "
+"so, create a python file, for example ``qgis_init.py``, to execute and start"
+" QGIS from the command line using ``qgis --code qgis_init.py``."
+msgstr ""
+"Puede proporcionar código personalizado para ejecutar como parámetro de "
+"inicio a QGIS. Para ello, cree un archivo python, por ejemplo "
+"``qgis_init.py``, para ejecutar e iniciar QGIS desde la línea de comandos "
+"usando ``qgis --code qgis_init.py``."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:197
+msgid ""
+"Code provided via ``--code`` is executed late in the QGIS initialization "
+"phase, after the application components have been loaded."
+msgstr ""
+"El código proporcionado a través de ``--code`` se ejecuta al final de la "
+"fase de inicialización de QGIS, después de que se hayan cargado los "
+"componentes de la aplicación."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:201
+msgid "Additional arguments for Python"
+msgstr "Argumentos adicionales para Python"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:203
+msgid ""
+"To provide additional arguments for your ``--code`` script or for other "
+"python code that is executed, you can use the ``--py-args`` argument. Any "
+"argument coming after ``--py-args`` and before a ``--`` arg (if present) "
+"will be passed to Python but ignored by the QGIS application itself."
+msgstr ""
+"Para proporcionar argumentos adicionales para tu script ``--code`` o para "
+"otro código python que se ejecute, puedes usar el argumento ``--py-args``. "
+"Cualquier argumento que venga después de ``--py-args`` y antes de ``--`` arg"
+" (si está presente) será pasado a Python pero ignorado por la propia "
+"aplicación QGIS."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:209
+msgid ""
+"In the following example, ``myfile.tif`` will be available via ``sys.argv`` "
+"in Python but will not be loaded by QGIS. Whereas ``otherfile.tif`` will be "
+"loaded by QGIS but is not present in ``sys.argv``."
+msgstr ""
+"En el siguiente ejemplo, ``myfile.tif`` estará disponible a través de "
+"``sys.argv`` en Python pero no será cargado por QGIS. Mientras que "
+"``otherfile.tif`` será cargado por QGIS pero no está presente en "
+"``sys.argv``."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:218
+msgid ""
+"If you want access to every command line parameter from within Python, you "
+"can use ``QCoreApplication.arguments()``"
+msgstr ""
+"Si quiere acceder a todos los parámetros de la línea de comandos desde "
+"Python, puedes utilizar ``QCoreApplication.arguments()``."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:228
 msgid "Python Applications"
