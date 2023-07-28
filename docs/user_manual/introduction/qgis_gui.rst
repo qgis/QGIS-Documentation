@@ -221,8 +221,9 @@ Edit
 ----
 
 The :menuselection:`Edit` menu provides most of the native tools needed
-to edit layer attributes or geometry (see :ref:`editingvector` for
-details).
+to edit layer attributes or geometry. To enable :menuselection:`Edit`
+menu options you need to switch to editing mode by clicking on |toggleEditing|
+:sup:`Toggle editing` (see :ref:`editingvector` for details).
 
 .. list-table:: The Edit menu items
    :header-rows: 1
