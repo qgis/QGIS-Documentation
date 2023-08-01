@@ -80,12 +80,12 @@ The :menuselection:`Project` menu provides access and exit points for
   project file as a template (see
   :ref:`Project files options <projectfiles_options>` for template
   configuration)
-* :guilabel:`Open...` a project from a file, a GeoPackage or a
-  PostgreSQL database
+* :guilabel:`Open...` a project from a file, a GeoPackage, PostgreSQL
+  or Oracle database
 * :guilabel:`Close` a project or revert it to its last saved state
 * :guilabel:`Save` a project in :file:`.qgs` or :file:`.qgz` file
-  format, either as a file or within a GeoPackage or PostgreSQL
-  database
+  format, either as a file or within a GeoPackage, PostgreSQL or
+  Oracle database
 * Export the map canvas to different formats or use a
   :ref:`print layout <label_printlayout>` for more complex output
 * Set project properties and snapping options for geometry editing.
@@ -119,6 +119,10 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      - :ref:`sec_projects`
    * - :menuselection:`--> PostgreSQL...`
+     -
+     -
+     - :ref:`sec_projects`
+   * - :menuselection:`--> Oracle...`
      -
      -
      - :ref:`sec_projects`
