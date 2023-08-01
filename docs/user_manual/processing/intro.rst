@@ -40,7 +40,7 @@ and will be explained later in this chapter).
 
    Processing Toolbox
 
-* The :guilabel:`Graphical Modeler`: Several algorithms can be combined
+* The :guilabel:`Model Designer`: Several algorithms can be combined
   graphically using the modeler to define a workflow, creating a single
   process that involves several subprocesses.
 

@@ -20,7 +20,7 @@ to include these additional applications, and it will explain some
 particular features of the algorithms based on them.
 Once you have correctly configured the system, you will be able to
 execute external algorithms from any component like the toolbox or the
-graphical modeler, just like you do with any other algorithm.
+model designer, just like you do with any other algorithm.
 
 By default, algorithms that rely on an external application not
 shipped with QGIS are not enabled.

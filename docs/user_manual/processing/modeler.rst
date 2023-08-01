@@ -1,6 +1,6 @@
 .. _`processing.modeler`:
 
-The graphical modeler
+The model designer
 =====================
 
 .. only:: html
@@ -8,20 +8,20 @@ The graphical modeler
    .. contents::
       :local:
 
-The *graphical modeler* allows you to create complex models using
+The *model designer* allows you to create complex models using
 a simple and easy-to-use interface.
 When working with a GIS, most analysis operations are not
 isolated, rather part of a chain of operations.
-Using the graphical modeler, that chain of operations can be wrapped
+Using the model designer, that chain of operations can be wrapped
 into a single process, making it convenient to execute later with a
 different set of inputs.
 No matter how many steps and different algorithms it involves, a
 model is executed as a single algorithm, saving time and effort.
 
-The graphical modeler can be opened from the Processing menu
+The model designer can be opened from the Processing menu
 (:menuselection:`Processing --> Graphical Modeler`).
 
-The graphical modeler interface
+The model designer interface
 -------------------------------
 
 .. _figure_modeler:
@@ -29,7 +29,7 @@ The graphical modeler interface
 .. figure:: img/modeler_canvas.png
    :align: center
 
-   Modeler
+   Model designer
 
 In its main part, the modeler has a working canvas where the structure
 of the model and the workflow it represents can be constructed.
