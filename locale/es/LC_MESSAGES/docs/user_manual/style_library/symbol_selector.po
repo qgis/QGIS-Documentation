@@ -718,6 +718,20 @@ msgstr ""
 "propiedades que el :ref:`simple marker symbol <simple_marker_symbol>`, y "
 "además:"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:287
+msgid ""
+"|checkbox| :guilabel:`Use custom dash pattern`: overrides the "
+":guilabel:`Stroke style` setting with a custom dash. You would need to "
+"define length of consecutive dashes and spaces shaping the model, in the "
+"chosen unit. The total length of the pattern is displayed at the bottom of "
+"the dialog."
+msgstr ""
+"|checkbox| :guilabel:`Usar patrón de guión personalizado`: anula la "
+"configuración de :guilabel:`Estilo de trazo` con un guión personalizado. "
+"Tendrá que definir la longitud de los guiones y espacios consecutivos que "
+"conforman el modelo, en la unidad elegida. La longitud total del patrón se "
+"muestra en la parte inferior del diálogo."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:292
 msgid ""
 ":guilabel:`Pattern offset`: the positioning of the dashes/spaces in the line"
@@ -753,6 +767,25 @@ msgstr ""
 "las esquinas afiladas estén representadas por un elemento de guión completo "
 "que entra y sale de la esquina afilada. Depende de :guilabel:`Alinear el "
 "patrón de trazos con la longitud de la línea`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+msgid ""
+":guilabel:`Trim lines` from :guilabel:`Start` and/or :guilabel:`End`: allows"
+" for the line rendering to trim off the first x mm and last y mm from the "
+"actual line string when drawing the line. It supports a range of :ref:`units"
+" <unit_selector>`, including percentage of the overall line length, and can "
+"be data defined for extra control. The start/end trim distance can be used "
+"e.g. when creating complex symbols where a line layer should not overlap "
+"marker symbol layers placed at the start and end of the line."
+msgstr ""
+":guilabel:`Recortar líneas` de :guilabel:`Inicio` y/o :guilabel:`Fin`: "
+"permite que el renderizado de líneas recorte los primeros x mm y los últimos"
+" y mm de la cadena de líneas real al dibujar la línea. Admite un rango de "
+":ref:`unidades <unit_selector>`, incluyendo el porcentaje de la longitud "
+"total de la línea, y puede definirse con datos para un control extra. La "
+"distancia de recorte inicial/final puede utilizarse, por ejemplo, al crear "
+"símbolos complejos en los que una capa de línea no debe superponerse a las "
+"capas de símbolos marcadores colocadas al principio y al final de la línea."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:313
 msgid ""
@@ -928,6 +961,17 @@ msgstr ""
 "|checkbox| :guilabel:`Colocar en cada extremidad de la parte` hará que los "
 "marcadores se representen también en el primer o último vértice para cada "
 "parte de las geometrías multiparte."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:383
+msgid ""
+":guilabel:`Offset along line`: the markers placement can also be given an "
+"offset along the line, in the ref:`unit <unit_selector>` of your choice "
+"(millimeters, points, map unit, meters at scale, percentage, ...):"
+msgstr ""
+":guilabel:`Desplazamiento a lo largo de la línea`: la colocación de los "
+"marcadores también puede tener un desplazamiento a lo largo de la línea, en "
+"la ref:`unidad <unit_selector>` de su elección (milímetros, puntos, unidad "
+"cartográfica, metros a escala, porcentaje, ...):"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:387
 msgid ""
@@ -1128,6 +1172,23 @@ msgstr ""
 "en límite del polígono`) o la parte de la geometría a la que pertenece el "
 "símbolo (:guilabel:`Cortar marcadores solo en límites de la parte actual`)"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:501
+msgid ""
+"**Gradient fill**: uses a radial, linear or conical gradient, based on "
+"either simple two color gradients or a predefined :ref:`gradient color ramp "
+"<color-ramp>` to fill polygons. The gradient can be rotated and applied on a"
+" single feature basis or across the whole map extent. Also start and end "
+"points can be set via coordinates or using the centroid (of feature or map)."
+" A data-defined offset can be defined."
+msgstr ""
+"**Relleno de degradado**: utiliza un degradado radial, lineal o cónico, "
+"basado en degradados simples de dos colores o en una predefinida :ref:`rampa"
+" de colores de degradado <color-ramp>` para rellenar polígonos. El gradiente"
+" puede girarse y aplicarse a un elemento concreto o a toda la extensión del "
+"mapa. Los puntos inicial y final pueden establecerse mediante coordenadas o "
+"utilizando el centroide (del objeto espacial o del mapa). Puede definirse un"
+" desplazamiento definido por los datos."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:507
 msgid ""
 "**Line pattern fill**: fills the polygon with a hatching pattern of "
@@ -1244,6 +1305,12 @@ msgstr ""
 "representa sobre toda la extensión del mapa, permitiendo que los marcadores "
 "se alineen bien a través de los objetos espaciales"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:549
+msgid "Aligning point pattern to feature (left) and to map extent (right)"
+msgstr ""
+"Alineación del patrón de puntos con el elemento (izquierda) y con la "
+"extensión del mapa (derecha)"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:551
 msgid ""
 ":guilabel:`Distance`: :guilabel:`Horizontal` and :guilabel:`Vertical` "
@@ -1269,6 +1336,14 @@ msgid ""
 msgstr ""
 ":guilabel:`Desplazamiento`: distancias :guilabel:`Horizontal` y "
 ":guilabel:`Vertical` desde el límite del objeto espacial"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:557
+msgid ""
+":guilabel:`Clipping`: allows to control how markers in the fill should be "
+"clipped to the polygon shape. Options are:"
+msgstr ""
+":guilabel:`Recorte`: permite controlar cómo deben recortarse los marcadores "
+"en el relleno a la forma del polígono. Las opciones son:"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:560
 msgid ""
@@ -1348,6 +1423,27 @@ msgstr ""
 "los patrones de símbolos \"salten\" entre actualizaciones del mapa. También "
 "se admiten anulaciones definidas por datos."
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:590
+msgid ""
+"The main difference between the :guilabel:`Randomize pattern` and the "
+":ref:`random marker fill <random_marker_fill>` symbol type is that the "
+"random offset with a point pattern allows for quasi-\"regular\" placement of"
+" markers – because the points in the pattern are effectively constrained to "
+"a grid, this allows creation of semi-random fills which don’t have empty "
+"areas or overlapping markers. (As opposed to the random marker fill, which "
+"will always place points completely randomly… sometimes resulting in visual "
+"clusters of points or unwanted empty areas)."
+msgstr ""
+"La principal diferencia entre el tipo de símbolo :guilabel:`Aleatorizar "
+"patrón` y el :ref:`relleno de marcador aleatorio <random_marker_fill>` es "
+"que el desplazamiento aleatorio con un patrón de puntos permite una "
+"colocación casi \"regular\" de los marcadores, ya que los puntos del patrón "
+"están limitados a una cuadrícula, lo que permite crear rellenos "
+"semialeatorios sin áreas vacías ni marcadores superpuestos. (A diferencia "
+"del relleno de marcador aleatorio, que siempre colocará los puntos de forma "
+"completamente aleatoria... lo que a veces da lugar a agrupaciones visuales "
+"de puntos o áreas vacías no deseadas)."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:601
 msgid ""
 "**Random marker fill**: fills the polygon with a :ref:`marker symbol "
@@ -1420,6 +1516,14 @@ msgstr ""
 " (objeto o ventana gráfica), rotación y desplazamiento. El ancho de la "
 "imagen se puede configurar usando cualquiera de las :ref:`common units "
 "<unit_selector>`  o como un porcentaje del tamaño original."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:622
+msgid ""
+"**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>` of a "
+"given size (:guilabel:`Texture width`)."
+msgstr ""
+"**Relleno SVG**: rellena el polígono utilizando :ref:`marcadores SVG "
+"<svg_marker>` de un tamaño determinado (:guilabel:`Anchura de la textura`)."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:624
 msgid ""
