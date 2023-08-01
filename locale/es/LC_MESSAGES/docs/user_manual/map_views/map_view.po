@@ -404,6 +404,18 @@ msgid "QGIS allows you to control the rendering process in a number of ways."
 msgstr ""
 "QGIS le permite controlar el proceso de representación de varias maneras."
 
+#: ../../docs/user_manual/map_views/map_view.rst:140
+msgid "at the :ref:`global level <rendering_options>`"
+msgstr "a nivel :ref:`global <rendering_options>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:141
+msgid ""
+"per layer, using e.g. the :ref:`scale dependent rendering "
+"<label_scaledepend>`"
+msgstr ""
+"por capa, utilizando, por ejemplo, la función :ref: `renderización "
+"dependiente de la escala <label_scaledepend>`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:142
 msgid "or with dedicated tools in the GUI."
 msgstr "o con herramientas específicas de la interfaz gráfica de usuario."
@@ -499,6 +511,15 @@ msgid ""
 "the layer."
 msgstr ""
 ":ref:`raster layers <raster_temporal>`: controla si mostrar o no la capa."
+
+#: ../../docs/user_manual/map_views/map_view.rst:177
+msgid ""
+":ref:`WMTS layers <wmts_temporal>`: controls whether the data should be "
+"rendered based on a static time range or following a dynamic temporal range"
+msgstr ""
+":ref:`Capas WMTS <wmts_temporal>`: controla si los datos deben representarse"
+" basándose en un intervalo temporal estático o siguiendo un intervalo "
+"temporal dinámico."
 
 #: ../../docs/user_manual/map_views/map_view.rst:179
 msgid ""
@@ -736,6 +757,19 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:262
 msgid "Temporal navigation through a layer"
 msgstr "Navegación temporal a través de una capa"
+
+#: ../../docs/user_manual/map_views/map_view.rst:264
+msgid ""
+"The animation can also be previewed by moving the time slider. Checking the "
+"|unchecked| :guilabel:`Loop` checkbox will repeatedly run the animation "
+"while clicking |play| stops a running animation. A full set of video player "
+"buttons is available."
+msgstr ""
+"La animación también puede previsualizarse moviendo el deslizador de tiempo."
+" Si se marca la casilla de verificación |unchecked| :guilabel:`Bucle` se "
+"ejecutará repetidamente la animación, mientras que si se pulsa |play| se "
+"detendrá una animación en ejecución. Hay disponible un conjunto completo de "
+"botones de reproducción de vídeo."
 
 #: ../../docs/user_manual/map_views/map_view.rst:269
 msgid ""
@@ -1810,6 +1844,21 @@ msgstr ""
 msgid "Annotation Tools"
 msgstr "Herramientas de anotaciones"
 
+#: ../../docs/user_manual/map_views/map_view.rst:718
+msgid ""
+"Annotations are another type of elements added onto the map canvas to "
+"provide additional information that can not be depicted by the rendered "
+"layers. Unlike :ref:`labels <vector_labels_tab>` that rely on attribute "
+"values stored in vector layers, annotations are independent details, stored "
+"within the project file itself."
+msgstr ""
+"Las anotaciones son otro tipo de elementos que se añaden al lienzo del mapa "
+"para proporcionar información adicional que no puede ser representada por "
+"las capas renderizadas. A diferencia de :ref:`etiquetas <vector_labels_tab>`"
+" que se basan en valores de atributos almacenados en capas vectoriales, las "
+"anotaciones son detalles independientes, almacenados en el propio archivo "
+"del proyecto."
+
 #: ../../docs/user_manual/map_views/map_view.rst:724
 msgid "Two families of annotations are available in QGIS:"
 msgstr "QGIS dispone de dos familias de anotaciones:"
@@ -1935,37 +1984,269 @@ msgstr ""
 msgid "Create an annotation as a polygon feature"
 msgstr "Crear una anotación como objeto espacial polígono"
 
+#: ../../docs/user_manual/map_views/map_view.rst:761
+#: ../../docs/user_manual/map_views/map_view.rst:812
+msgid "|addPolyline| :sup:`Create Line Annotation`"
+msgstr "|addPolyline| :sup:`Crear Anotación de Línea`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1283
 msgid "addPolyline"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:761
+msgid "Create an annotation as a polyline feature"
+msgstr "Crear una anotación como objeto espacial polilínea"
+
+#: ../../docs/user_manual/map_views/map_view.rst:763
+#: ../../docs/user_manual/map_views/map_view.rst:813
+msgid "|addMarker| :sup:`Create Marker Annotation`"
+msgstr "|addMarker| :sup:`Crear Anotación de Marcador`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1279
 msgid "addMarker"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:763
+msgid "Create an annotation as a point feature"
+msgstr "Crear una anotación como objeto espacial punto"
+
+#: ../../docs/user_manual/map_views/map_view.rst:765
+#: ../../docs/user_manual/map_views/map_view.rst:814
+msgid "|actionText| :sup:`Create Text Annotation at Point`"
+msgstr "|actionText| :sup:`Crear anotación de texto en un punto`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1271
 msgid "actionText"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:765
+msgid "Create an annotation as a text label"
+msgstr "Crear una anotación como etiqueta de texto"
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+msgid "|textAnnotation| :sup:`Text Annotation`"
+msgstr "|textAnnotation| :sup:`Anotación Texto`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1374
 msgid "textAnnotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:767
+msgid "Select and create a text formatted annotation"
+msgstr "Seleccionar y crear una anotación con formato de texto"
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+#: ../../docs/user_manual/map_views/map_view.rst:899
+msgid "Balloon annotations"
+msgstr "Anotaciones de globos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "|htmlAnnotation| :sup:`HTML Annotation`"
+msgstr "|htmlAnnotation| :sup:`Anotación HTML`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1303
 msgid "htmlAnnotation"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "Select and create annotation with an :file:`HTML` file's content"
+msgstr ""
+"Seleccionar y crear una anotación con el contenido de un fichero :file:`HTML"
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "|svgAnnotation| :sup:`SVG Annotation`"
+msgstr "|svgAnnotation| :sup:`Anotación SVG`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1364
 msgid "svgAnnotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "Select and create annotation showing an :file:`SVG` file"
+msgstr "Seleccionar y crear una anotación mostrando un fichero :file:`SVG`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid "|formAnnotation| :sup:`Form Annotation`"
+msgstr "|formAnnotation| :sup:`Anotación de formulario`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1301
 msgid "formAnnotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid ""
+"Select and create annotation showing attributes of a vector layer in a "
+"custom form file"
+msgstr ""
+"Seleccionar y crear una anotación que muestre los atributos de una capa "
+"vectorial en un archivo de formulario personalizado"
+
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "|annotation| :sup:`Move Annotation`"
+msgstr "|anotación| :sup:`Mover Anotación`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1285
 msgid "annotation"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "Adjust size and position of annotation element"
+msgstr "Ajustar el tamaño y la posición del elemento de anotación"
+
+#: ../../docs/user_manual/map_views/map_view.rst:782
+msgid "Feature Annotations"
+msgstr "Anotaciones de objetos espaciales"
+
+#: ../../docs/user_manual/map_views/map_view.rst:784
+msgid ""
+"Feature annotations are stored in **annotation layers**. Unlike conventional"
+" layers, an annotation layer is available only in the current project and "
+"can contain features of different types (text, marker, line, polygon). The "
+"layer has no attributes and no symbology associated, but instead each "
+"feature can be symbolized on an item-by-item basis, through :guilabel:`Layer"
+" Styling` panel."
+msgstr ""
+"Las anotaciones de objetos espaciales se almacenan en **capas de "
+"anotación**. A diferencia de las capas convencionales, una capa de anotación"
+" sólo está disponible en el proyecto actual y puede contener objetos "
+"espaciales de diferentes tipos (texto, marcador, línea, polígono). La capa "
+"no tiene atributos ni simbología asociada, sino que cada objeto espacial "
+"puede simbolizarse elemento por elemento, a través del panel "
+":guilabel:`Estilos de capa`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:790
+msgid "Two types of annotation layer are available in QGIS:"
+msgstr "QGIS dispone de dos tipos de capas de anotación:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:792
+msgid ""
+"A common :guilabel:`Annotation Layer`: you can create one using the "
+"|createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed in "
+"the :guilabel:`Layers` panel, allowing you to control its features' "
+"visibility, move it to show above or below particular layers in your map, "
+"like any common layer. Double-click the layer and you can access its "
+"properties."
+msgstr ""
+"Una :guilabel:`Capa de anotación` común: puede crear una con la herramienta "
+"|createAnnotationLayer| :sup:`Nueva capa de anotación`. Aparece en el panel "
+":guilabel:`Capas`, permitiéndole controlar la visibilidad de sus objetos "
+"espaciales, moverla para que se muestre por encima o por debajo de "
+"determinadas capas de su mapa, como cualquier capa común. Haga doble clic en"
+" la capa para acceder a sus propiedades."
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid ""
+"The :guilabel:`Main Annotation Layer`: By default, this is where annotations"
+" are stored when no annotation layer is available in the project or is "
+"selected at creation time. This layer is always drawn on the very top of "
+"your map and you won't see it listed in the :guilabel:`Layers` panel "
+"alongside the other layers in your project, meaning that its features are "
+"always visible. The :guilabel:`Main Annotation Layer Properties` entry on "
+"the :guilabel:`Annotations` toolbar helps you open its properties dialog."
+msgstr ""
+"La :guilabel:`Capa principal de anotaciones`: De forma predeterminada, aquí "
+"es donde se almacenan las anotaciones cuando no hay ninguna capa de "
+"anotaciones disponible en el proyecto o está seleccionada en el momento de "
+"la creación. Esta capa se dibuja siempre en la parte superior del mapa y no "
+"aparecerá en el panel :guilabel:`Capas` junto a las demás capas del "
+"proyecto, lo que significa que sus características son siempre visibles. La "
+"entrada :guilabel:`Propiedades de la capa principal de anotaciones` de la "
+"barra de herramientas :guilabel:`Anotaciones` le ayuda a abrir su cuadro de "
+"diálogo de propiedades."
+
+#: ../../docs/user_manual/map_views/map_view.rst:807
+msgid "Interaction"
+msgstr "Interacción"
+
+#: ../../docs/user_manual/map_views/map_view.rst:809
+msgid ""
+"The Feature annotations have dedicated tools for creation depending on their"
+" type:"
+msgstr ""
+"Las anotaciones de objetos espaciales disponen de herramientas específicas "
+"para su creación en función de su tipo:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:816
+msgid ""
+"All the usual QGIS shortcuts for creating features apply when creating "
+"annotation items. A line or polygon annotation is drawn by left-clicking "
+"once for each vertex, with a final right mouse click to complete the shape. "
+"Snapping can be enabled while you draw, you can use the :guilabel:`Advanced "
+"Digitizing Tools` to precisely place vertices, and even switch the "
+":ref:`drawing tools <drawing_methods>` to the streaming mode for completely "
+"free-form shapes."
+msgstr ""
+"Todos los atajos habituales de QGIS para crear características se aplican al"
+" crear elementos de anotación. Una anotación de línea o polígono se dibuja "
+"haciendo clic con el botón izquierdo del ratón una vez para cada vértice, "
+"con un clic final con el botón derecho del ratón para completar la forma. Se"
+" puede activar el ajuste mientras dibuja, puede utilizar la "
+":guilabel:`Herramientas avanzadas de digitalización` para colocar los "
+"vértices con precisión, e incluso cambiar la :ref:`herramientas de dibujo "
+"<drawing_methods>` al modo transmisión para formas completamente libres."
+
+#: ../../docs/user_manual/map_views/map_view.rst:823
+msgid ""
+"Unlike common layers, an annotation layer does not need to be active before "
+"you select its features. Simply grab the |select| :sup:`Modify Annotations` "
+"tool and you will be able to interact with any feature annotation:"
+msgstr ""
+"A diferencia de las capas comunes, una capa de anotación no necesita estar "
+"activa antes de seleccionar sus características. Basta con utilizar la "
+"herramienta |select| :sup:`Modificar anotaciones` para interactuar con "
+"cualquier anotación:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:827
+msgid "**Selection**: simply left-click on the annotation"
+msgstr ""
+"**Selección**: basta con hacer clic con el botón izquierdo del ratón en la "
+"anotación."
+
+#: ../../docs/user_manual/map_views/map_view.rst:828
+msgid ""
+"**Moving**: Left click on a selected annotation item to start moving it. A "
+"right-click or pressing :kbd:`Esc` key cancels the move, while a second left"
+" click will confirm the move. The displacement can also be controlled "
+"pressing the cursor keys:"
+msgstr ""
+"**Mover**: Haga clic con el botón izquierdo del ratón en un elemento de "
+"anotación seleccionado para empezar a moverlo. Un clic con el botón derecho "
+"o pulsando la tecla :kbd:`Esc` cancela el desplazamiento, mientras que un "
+"segundo clic con el botón izquierdo lo confirmará. El desplazamiento también"
+" puede controlarse pulsando las teclas del cursor:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:833
+msgid ":kbd:`Shift+key` for big movement"
+msgstr ":kbd:`Mayús+tecla` para grandes movimientos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:834
+msgid ":kbd:`Alt+key` for ``1 px`` movement"
+msgstr ":kbd:`Alt+tecla` para movimiento ``1 px``"
+
+#: ../../docs/user_manual/map_views/map_view.rst:835
+msgid ""
+"**Geometry modification**: for line or polygon annotations, left-click on a "
+"vertex of the geometry, move and click again. Double-click a segment to add "
+"a new vertex."
+msgstr ""
+"**Modificación de geometrías**: para anotaciones de líneas o polígonos, haz "
+"clic con el botón izquierdo del ratón en un vértice de la geometría, "
+"desplázalo y vuelve a hacer clic. Haz doble clic en un segmento para añadir "
+"un nuevo vértice."
+
+#: ../../docs/user_manual/map_views/map_view.rst:838
+msgid ""
+"**Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while an "
+"annotation is selected will delete that annotation"
+msgstr ""
+"**Borrar**: Si pulsa la tecla :kbd:`Supr` o :kbd:`Retroceso` mientras una "
+"anotación está seleccionada, se eliminará dicha anotación."
+
+#: ../../docs/user_manual/map_views/map_view.rst:840
+msgid ":ref:`Change feature symbology <annotation_feature_symbology>`"
+msgstr ""
+":ref:`Cambiar la simbología de los objetos espaciales "
+"<annotation_feature_symbology>`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:845
 msgid "Feature symbology"
@@ -1978,6 +2259,16 @@ msgid ""
 msgstr ""
 "Una anotación seleccionada mostrará sus propiedades :guilabel:`Simbología` "
 "en el panel :guilabel:`Estilo de capas`. Usted puede:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:850
+msgid ""
+"modify the appearance using full capabilities of the :ref:`symbol <symbol-"
+"selector>` or the :ref:`text format <text_format>` (including the text "
+"itself), depending on the type."
+msgstr ""
+"modificar la apariencia utilizando todas las capacidades del :ref:`símbolo "
+"<symbol-selector>` o el :ref:`formato de texto <text_format>` (incluido el "
+"propio texto), según el tipo."
 
 #: ../../docs/user_manual/map_views/map_view.rst:853
 msgid "configure a :guilabel:`Reference scale`"
@@ -2028,6 +2319,21 @@ msgstr ""
 "Establezca un :guilabel:`Nombre de capa` que se utilizará para identificar "
 "la capa en el proyecto (en el :guilabel:`Panel de capas`, con expresiones, "
 "...)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:868
+msgid ""
+"Display the layer's :ref:`Assigned Coordinate Reference System (CRS) "
+"<layer_crs>`: you can change the layer's CRS, selecting a recently used one "
+"in the drop-down list or clicking on |setProjection| :sup:`Select CRS` "
+"button (see :ref:`crs_selector`). Use this process only if the CRS applied "
+"to the layer is a wrong one or if none was applied."
+msgstr ""
+"Mostrar el sistema de referencia de coordenadas (SRC) :ref:`asignado a la "
+"capa<layer_crs>`: puede cambiar el SRC de la capa, seleccionando uno "
+"utilizado recientemente en la lista desplegable o pulsando el botón "
+"|setProjection| :sup:`Seleccionar SRC` (véase :ref:`crs_selector`). Utilice "
+"este proceso sólo si el SRC aplicado a la capa es incorrecto o si no se ha "
+"aplicado ninguno."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1350
 msgid "setProjection"
