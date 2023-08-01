@@ -390,7 +390,7 @@ difficult to understand if you have read the previous chapter.
 The first lines, however, need some additional explanation.
 They provide the information that is needed to turn your code into
 an algorithm that can be run from any of the GUI components, like
-the toolbox or the graphical modeler.
+the toolbox or the model designer.
 
 These lines are all calls to the ``@alg`` decorator functions that
 help simplify the coding of the algorithm.

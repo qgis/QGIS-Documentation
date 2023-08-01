@@ -44,6 +44,6 @@ the text output from an external process. In other cases, the output is presente
 as text, but internally is divided into several smaller outputs, usually in
 the form of numeric values. The algorithm that we have just executed is one of them.
 Each one of those values is handled as a single output, and stored in a variable.
-This has no importance at all now, but once we move to the graphical modeler,
+This has no importance at all now, but once we move to the model designer,
 you will see that it will allow us to use those values as numeric inputs for
 other algorithms. 
