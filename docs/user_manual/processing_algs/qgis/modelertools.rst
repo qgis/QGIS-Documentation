@@ -3,7 +3,7 @@ Modeler tools
 
 .. warning::
 
- These tools are only available in the Graphical Modeler.
+ These tools are only available in the model designer.
  They are not available in the Processing Toolbox.
 
 .. only:: html
