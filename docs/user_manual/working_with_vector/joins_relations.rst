@@ -97,7 +97,7 @@ because there are several airports in most regions.
 
 .. _figure_relations_map:
 
-.. figure:: img/relations1.png
+.. figure:: img/regions_with_airports.png
    :align: center
 
    Alaska region with airports
@@ -163,7 +163,7 @@ Open the :guilabel:`Relations` tab and click on |symbologyAdd| :guilabel:`Add Re
 
 .. _figure_relations_manager:
 
-.. figure:: img/relations2.png
+.. figure:: img/regions_airports_mapping.png
    :align: center
 
    Adding a relation between regions and airports layers
@@ -186,7 +186,7 @@ or you will have to choose to open it in the identification dialog under actions
 
 .. _figure_embedded_form:
 
-.. figure:: img/relations3.png
+.. figure:: img/airport_relation_dataview.png
    :align: center
 
    Identification dialog regions with relation to airports
@@ -227,7 +227,7 @@ to work correctly.
 
 .. _figure_select_relation_tools:
 
-.. figure:: img/relations11.png
+.. figure:: img/airport_relation_formproperties.png
    :align: center
 
    Drag and Drop Designer for configure regions-airports relation tools
@@ -254,7 +254,7 @@ This widget allows you to easily and quickly open the forms of the linked parent
 
 .. _figure_linked_forms:
 
-.. figure:: img/relations4.png
+.. figure:: img/airport_attributes.png
    :align: center
 
    Identification dialog airport with relation to regions
@@ -269,7 +269,7 @@ and will even have a combobox, which allows you to assign the current airport to
 
 .. _figure_linked_forms_embedded:
 
-.. figure:: img/relations5.png
+.. figure:: img/airport_attributes_expanded.png
    :align: center
 
 Moreover if you toggle the editing mode of the airport layer,
@@ -404,7 +404,7 @@ Remember to load the three tables in the QGIS project first.
 
 .. _figure_setup_relations:
 
-.. figure:: img/relations6.png
+.. figure:: img/airports_airlines_relation.png
    :align: center
 
    Relations and autodiscover
@@ -428,7 +428,7 @@ and for the second one the **airports (id)** option.
 
 .. _figure_cardinality:
 
-.. figure:: img/relations7.png
+.. figure:: img/airports_airlines_relation_formproperties.png
    :align: center
 
    Set relationship cardinality
@@ -439,7 +439,7 @@ A record will automatically be inserted in the ``airports_airlines`` table.
 
 .. _figure_relationship_working:
 
-.. figure:: img/relations8.png
+.. figure:: img/add_airport_airline.png
    :align: center
 
    N-M relationship between airports and airlines
@@ -504,7 +504,7 @@ from the newly appeared dropdown.
 
 .. _figure_define_polymorphic_relation:
 
-.. figure:: img/relations9.png
+.. figure:: img/polymorphic_relation_properties.png
    :align: center
 
    Adding a polymorphic relation using ``documents`` layer as referencing and ``animals`` and ``plants`` as referenced layers.
@@ -554,10 +554,10 @@ via the :guilabel:`Edit Polymorphic Relation` menu entry.
 
 .. _figure_list_polymorphic_relations:
 
-.. figure:: img/relations10.png
+.. figure:: img/polymorphic_relations.png
    :align: center
 
-   Preview of the newly created polymorphic relation and it's child relations for animals and plants.
+   Preview of the newly created polymorphic relation and its child relations for animals and plants.
 
 
 The example above uses the following database schema:
