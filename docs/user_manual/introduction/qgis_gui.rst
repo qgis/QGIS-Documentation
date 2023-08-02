@@ -620,7 +620,7 @@ views using the :menuselection:`View` tools. For example, you can:
 
 * Create new 2D or 3D map views next to the main map canvas
 * :ref:`Zoom or pan <zoom_pan>` to any place
-* Query displayed features' attributes or geometry
+* Query displayed features, attributes or geometry
 * Enhance the map view with preview modes, annotations or decorations
 * Access any panel or toolbar
 
@@ -632,7 +632,7 @@ actions like:
 * :guilabel:`Toggle Panel Visibility`: shows or hides enabled
   :ref:`panels <panels_tools>` - useful when digitizing features (for
   maximum canvas visibility) as well as for (projected/recorded)
-  presentations using QGIS' main canvas
+  presentations using QGIS main canvas
 * :guilabel:`Toggle Map Only`: hides panels, toolbars, menus and status
   bar and only shows the map canvas. Combined with the full screen
   option, it makes your screen display only the map
@@ -696,6 +696,11 @@ actions like:
      - :kbd:`Ctrl+Shift+J`
      - :guilabel:`Attributes`
      - :ref:`sec_measure`
+   * - :menuselection:`-->` |measureBearing|
+       :guilabel:`Measure Bearing`
+     -
+     - :guilabel:`Attributes`
+     - :ref:`sec_measure`   
    * - :menuselection:`-->` |measureAngle|
        :guilabel:`Measure Angle`
      -
@@ -2398,6 +2403,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |measureAngle| image:: /static/common/mActionMeasureAngle.png
    :width: 1.5em
 .. |measureArea| image:: /static/common/mActionMeasureArea.png
+   :width: 1.5em
+.. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
 .. |merge| image:: /static/common/merge.png
    :width: 1.5em
