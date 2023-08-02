@@ -6,18 +6,18 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# vareli <ehespinosa@ya.com>, 2023
 # Transifex Bot <>, 2023
 # Eric Armijo, 2023
-# vareli <ehespinosa@ya.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-07-13 15:24+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: vareli <ehespinosa@ya.com>, 2023\n"
+"Last-Translator: Eric Armijo, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -87,7 +87,7 @@ msgstr ""
 "Modelo...`, :guilabel:`Abrir Modelo existente...` y :guilabel:`Agregar "
 "Modelo a la caja de Herramientas...`;"
 
-#: ../../docs/user_manual/processing/toolbox.rst:434
+#: ../../docs/user_manual/processing/toolbox.rst:454
 msgid "processingModel"
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 " :guilabel:`Crear Nuevo Script desde Plantilla...`, :guilabel:`Abrir Script "
 "existente...` y :guilabel:`Agregar Script a Caja de Herramientas...`;"
 
-#: ../../docs/user_manual/processing/toolbox.rst:438
+#: ../../docs/user_manual/processing/toolbox.rst:458
 msgid "pythonFile"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "open the |processingHistory| :sup:`History` panel;"
 msgstr "Abra el panel |processingHistory| :sup:`Historial`;"
 
-#: ../../docs/user_manual/processing/toolbox.rst:432
+#: ../../docs/user_manual/processing/toolbox.rst:452
 msgid "processingHistory"
 msgstr ""
 
@@ -117,7 +117,7 @@ msgstr ""
 msgid "open the |processingResult| :sup:`Results Viewer` panel;"
 msgstr "abra el panel |processingResult| :sup:`Visor de Resultados`;"
 
-#: ../../docs/user_manual/processing/toolbox.rst:436
+#: ../../docs/user_manual/processing/toolbox.rst:456
 msgid "processingResult"
 msgstr ""
 
@@ -134,7 +134,7 @@ msgstr ""
 "que son adecuados para ejecutarse en la capa activa sin generar una nueva "
 "capa;"
 
-#: ../../docs/user_manual/processing/toolbox.rst:430
+#: ../../docs/user_manual/processing/toolbox.rst:450
 msgid "processSelected"
 msgstr ""
 
@@ -142,7 +142,7 @@ msgstr ""
 msgid "open the |options| :sup:`Options` dialog."
 msgstr "abra el diálogo |options| :sup:`Opciones`."
 
-#: ../../docs/user_manual/processing/toolbox.rst:428
+#: ../../docs/user_manual/processing/toolbox.rst:448
 msgid "options"
 msgstr ""
 
@@ -161,7 +161,7 @@ msgstr ""
 " o scripts en la caja de herramientas se reduce a solo aquellos que "
 "contienen el texto que ha ingresado en sus nombres o palabras clave."
 
-#: ../../docs/user_manual/processing/toolbox.rst:440
+#: ../../docs/user_manual/processing/toolbox.rst:460
 msgid "search"
 msgstr ""
 
@@ -233,7 +233,7 @@ msgstr ""
 " tiene un contenido diferente, dependiendo de los requisitos del algoritmo a"
 " ejecutar, y se crea automáticamente en función de esos requisitos."
 
-#: ../../docs/user_manual/processing/toolbox.rst:98
+#: ../../docs/user_manual/processing/toolbox.rst:97
 msgid ""
 "Although the number and type of parameters depend on the characteristics of "
 "the algorithm, the structure is similar for all of them. The parameters "
@@ -243,93 +243,151 @@ msgstr ""
 "algoritmo, la estructura es similar para todos ellos. Los parámetros "
 "encontrados en la tabla pueden ser de uno de los siguientes tipos."
 
-#: ../../docs/user_manual/processing/toolbox.rst:102
+#: ../../docs/user_manual/processing/toolbox.rst:103
 msgid ""
-"A **raster layer**, to select from a list of all such layers available "
-"(currently opened) in QGIS. The selector contains as well a button on its "
-"right-hand side, to let you select filenames that represent layers currently"
-" not loaded in QGIS."
-msgstr ""
-"Una **capa ráster**, para seleccionar de una lista de todas las capas "
-"disponibles (actualmente abiertas) en QGIS. El selector también contiene un "
-"botón en su lado derecho, que le permite seleccionar nombres de archivo que "
-"representan capas que actualmente no están cargadas en QGIS."
-
-#: ../../docs/user_manual/processing/toolbox.rst:106
-msgid ""
-"A **vector layer**, to select from a list of all vector layers available in "
-"QGIS. Layers not currently loaded in QGIS can be selected as well, just like"
-" for raster layers."
+"A **vector layer**, to select from a list of all vector layers available "
+"(currently opened) in QGIS. You can also use unloaded layers: press the "
+":guilabel:`...` button on the widget right-hand side, and select:"
 msgstr ""
 "Una **capa vectorial**, para seleccionar de una lista de todas las capas "
-"vectoriales disponibles en QGIS. Las capas no cargadas actualmente en QGIS "
-"pueden seleccionarse también, igual que para las capas ráster."
+"vectoriales disponibles (actualmente abiertas) en QGIS. También puede "
+"utilizar capas no cargadas: pulse el botón :guilabel:`...` en la parte "
+"derecha del widget, y seleccione:"
 
-#: ../../docs/user_manual/processing/toolbox.rst:110
+#: ../../docs/user_manual/processing/toolbox.rst:107
 msgid ""
-"You will see an iterator button by each vector layer selector, as shown in "
-"the figure below."
+":guilabel:`Select file...`: selects file on disk using the Operating System "
+"file explorer"
 msgstr ""
-"Verá un botón de iterador junto a cada selector de capa vectorial, como se "
-"muestra en la figura siguiente."
+":guilabel:`Seleccionar archivo...`: selecciona un archivo del disco "
+"utilizando el explorador de archivos del sistema operativo"
 
-#: ../../docs/user_manual/processing/toolbox.rst:118
+#: ../../docs/user_manual/processing/toolbox.rst:108
+msgid ""
+":guilabel:`Browse for layer...`: opens the :ref:`Browser panel "
+"<label_browserpanel>`, allowing to take the layers directly from database "
+"sources (PostgreSQL, SQL Server, Oracle, ...), web services (WFS, AFS, ...) "
+"or files on disk."
+msgstr ""
+":guilabel:`Buscar capa...`: abre el :ref:`panel Navegador "
+"<label_browserpanel>`, que permite tomar las capas directamente de fuentes "
+"de bases de datos (PostgreSQL, SQL Server, Oracle, ...), servicios web (WFS,"
+" AFS, ...) o archivos en disco."
+
+#: ../../docs/user_manual/processing/toolbox.rst:117
 msgid "Vector input widget"
 msgstr "Widget de entrada de vectores"
 
-#: ../../docs/user_manual/processing/toolbox.rst:120
+#: ../../docs/user_manual/processing/toolbox.rst:121
 msgid ""
-"If the algorithm contains several of them, you will be able to toggle just "
-"one of them. If the button corresponding to a vector input is toggled, the "
-"algorithm will be executed iteratively on each one of its features, instead "
-"of just once for the whole layer, producing as many outputs as times the "
-"algorithm is executed. This allows for automating the process when all "
-"features in a layer have to be processed separately."
+"By default, the layer widget shows the CRS of the layer along with its name."
+" If you do not want to see this additional information, you can disable this"
+" functionality in the Processing Settings dialog, unchecking the "
+":menuselection:`General --> Show layer CRS definition in selection boxes` "
+"option."
 msgstr ""
-"Si el algoritmo contiene varios de ellos, será capaz de cambiar cada uno de "
-"ellos. Si el botón correspondiente a una entrada vectorial se cambia, el "
-"algoritmo será ejecutado iterativamente  en cada uno de sus elementos, en "
-"lugar de sólo una vez para toda la capa, produciendo mayor cantidad de "
-"salidas como veces que se ejecuta el algoritmo. Esto permite la "
-"automatización del proceso cuando todas las características de una capa "
-"tienen que ser procesados por separado."
+"De forma predeterminada, el widget de capa muestra el SRC de la capa junto "
+"con su nombre. Si no desea ver esta información adicional, puede desactivar "
+"esta funcionalidad en el cuadro de diálogo Configuración de procesamiento, "
+"desmarcando la opción :menuselection:`General --> Mostrar definición de SRC "
+"de capa en cuadros de selección`."
 
-#: ../../docs/user_manual/processing/toolbox.rst:129
+#: ../../docs/user_manual/processing/toolbox.rst:126
+msgid "The vector input widget also has following features:"
+msgstr ""
+"El widget de entrada de vectores también tiene las siguientes "
+"características:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:128
 msgid ""
-"By default, the parameters dialog will show a description of the CRS of each"
-" layer along with its name. If you do not want to see this additional "
-"information, you can disable this functionality in the Processing Settings "
-"dialog, unchecking the :menuselection:`General --> Show layer CRS definition"
-" in selection boxes` option."
+"an iterator |iterate| button: If toggled, the algorithm will be executed "
+"iteratively on each one of its features, instead of just once for the whole "
+"layer, producing as many outputs as times the algorithm is executed. This "
+"allows for automating the process when all features in a layer have to be "
+"processed separately. If the algorithm contains several input vectors you "
+"can iterate over, the iteration will be processed only on the first toggled "
+"parameter, in the order parameters are declared in the algorithm."
 msgstr ""
-"Por defecto, el diálogo de parámetros mostrará una descripción del SRC de "
-"cada capa junto con su nombre. Si no desea ver esta información adicional, "
-"puede deshabilitar esta funcionalidad en el cuadro de diálogo Configuración "
-"de procesamiento, desmarcando la opción :menuselection:`General -> Mostrar "
-"definición de capa SRC en cuadros de selección`."
+"un botón iterador |iterate|: Si está activado, el algoritmo se ejecutará "
+"iterativamente en cada una de sus objetos espaciales, en lugar de una sola "
+"vez para toda la capa, produciendo tantas salidas como veces se ejecute el "
+"algoritmo. Esto permite automatizar el proceso cuando todas las "
+"características de una capa deben procesarse por separado. Si el algoritmo "
+"contiene varios vectores de entrada sobre los que se puede iterar, la "
+"iteración se procesará sólo sobre el primer parámetro conmutado, en el orden"
+" en que se declaran los parámetros en el algoritmo."
 
-#: ../../docs/user_manual/processing/toolbox.rst:134
+#: ../../docs/user_manual/processing/toolbox.rst:444
+msgid "iterate"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:136
+msgid ""
+"|options| :sup:`Advanced options` button to adjust settings to use for that "
+"specific parameter. These settings concern:"
+msgstr ""
+"|options| :sup:`Opciones avanzadas` para ajustar la configuración a utilizar"
+" para ese parámetro específico. Estos ajustes se refieren a:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:139
+msgid ""
+":guilabel:`Invalid feature filtering`: allows the :ref:`default method "
+"<processing_general_settings>` for handling features with invalid geometries"
+" to be overridden"
+msgstr ""
+":guilabel:`Filtrado de objetos espaciales no válidos`: permite el "
+":ref:`método predeterminado <processing_general_settings>` para el "
+"tratamiento de objetos espaciales con geometrías no válidas que deben "
+"anularse"
+
+#: ../../docs/user_manual/processing/toolbox.rst:141
+msgid ""
+":guilabel:`Limit features processed`: optional limit on number of features "
+"processed from the source"
+msgstr ""
+":guilabel:`Límite de objetos espaciales procesados`: límite opcional del "
+"número de objetos espaciales procesados desde el origen."
+
+#: ../../docs/user_manual/processing/toolbox.rst:143
+msgid ""
+"It is also possible to limit the algorithm execution on the vector layer to "
+"its :guilabel:`Selected features only`."
+msgstr ""
+"También es posible limitar la ejecución del algoritmo en la capa vectorial a"
+" su :guilabel:`Sólo objetos espaciales seleccionados`."
+
+#: ../../docs/user_manual/processing/toolbox.rst:145
 msgid ""
 "A **table**, to select from a list of all available in QGIS. Non-spatial "
-"tables are loaded into QGIS like vector layers, and in fact they are treated"
-" as such by the program. Currently, the list of available tables that you "
-"will see when executing an algorithm that needs one of them is restricted to"
-" tables coming from files in dBase (:file:`.dbf`) or Comma-Separated Values "
-"(:file:`.csv`) formats."
+"tables are loaded into QGIS like vector layers, and use the :ref:`same "
+"widget <vector_widget>`."
 msgstr ""
-"Una **tabla**, para seleccionar de una lista de todos los disponibles en "
-"QGIS. Las tablas no espaciales se cargan en QGIS como capas vectoriales y, "
-"de hecho, el programa las trata como tales. Actualmente, la lista de tablas "
-"disponibles que verá al ejecutar un algoritmo que necesita una de ellas está"
-" restringida a tablas provenientes de archivos en formatos dBase "
-"(:file:`.dbf`) o valores separados por comas (:file:`.csv`)."
+"Una **tabla**, para seleccionar de una lista de todas las disponibles en "
+"QGIS. Las tablas no espaciales se cargan en QGIS como capas vectoriales, y "
+"utilizan el :ref:`mismo widget<vector_widget>`."
 
-#: ../../docs/user_manual/processing/toolbox.rst:140
+#: ../../docs/user_manual/processing/toolbox.rst:147
+msgid ""
+"A **raster layer**, to select from a list of all raster layers available in "
+"QGIS. The selector contains as well a :guilabel:`...` button on its right-"
+"hand side, to let you select filenames that represent layers currently not "
+"loaded in QGIS."
+msgstr ""
+"Una **capa ráster**, para seleccionar de una lista de todas las capas ráster"
+" disponibles en QGIS. El selector contiene también un botón :guilabel:`...` "
+"en su parte derecha, para permitirle seleccionar nombres de archivos que "
+"representan capas actualmente no cargadas en QGIS."
+
+#: ../../docs/user_manual/processing/toolbox.rst:156
+msgid "Raster input widget"
+msgstr "Widget de entrada Raster"
+
+#: ../../docs/user_manual/processing/toolbox.rst:158
 msgid "An **option**, to choose from a selection list of possible options."
 msgstr ""
 "Una **opción**, para elegir de una lista de selección de posibles opciones."
 
-#: ../../docs/user_manual/processing/toolbox.rst:141
+#: ../../docs/user_manual/processing/toolbox.rst:159
 msgid ""
 "A **numerical value**, to be introduced in a spin box. In some contexts "
 "(when the parameter applies at the feature level and not at the layer's), "
@@ -352,26 +410,26 @@ msgstr ""
 "estas variables, como el tamaño de celda de una capa o la coordenada más al "
 "norte de otra."
 
-#: ../../docs/user_manual/processing/toolbox.rst:420
+#: ../../docs/user_manual/processing/toolbox.rst:438
 msgid "dataDefine"
 msgstr ""
 
-#: ../../docs/user_manual/processing/toolbox.rst:155
+#: ../../docs/user_manual/processing/toolbox.rst:173
 msgid "Expression based input"
 msgstr "Entrada basada en expresión"
 
-#: ../../docs/user_manual/processing/toolbox.rst:157
+#: ../../docs/user_manual/processing/toolbox.rst:175
 msgid ""
 "A **range**, with min and max values to be introduced in two text boxes."
 msgstr ""
 "Un **rango**, con valores mínimos y máximos que se introducirán en dos "
 "cuadros de texto."
 
-#: ../../docs/user_manual/processing/toolbox.rst:158
+#: ../../docs/user_manual/processing/toolbox.rst:176
 msgid "A **text string**, to be introduced in a text box."
 msgstr "Una **cadena de texto**, que se introducirá en un cuadro de texto."
 
-#: ../../docs/user_manual/processing/toolbox.rst:159
+#: ../../docs/user_manual/processing/toolbox.rst:177
 msgid ""
 "A **field**, to choose from the attributes table of a vector layer or a "
 "single table selected in another parameter."
@@ -379,7 +437,7 @@ msgstr ""
 "Un **campo**, para elegir de la tabla de atributos de una capa vectorial o "
 "de una sola tabla seleccionada en otro parámetro."
 
-#: ../../docs/user_manual/processing/toolbox.rst:161
+#: ../../docs/user_manual/processing/toolbox.rst:179
 msgid ""
 "A **coordinate reference system**. You can select it among the recently used"
 " ones from the drop-down list or from the :ref:`CRS selection "
@@ -391,7 +449,7 @@ msgstr ""
 " de SRC<crs_selector>` que aparece al hacer clic en el botón del lado "
 "derecho."
 
-#: ../../docs/user_manual/processing/toolbox.rst:164
+#: ../../docs/user_manual/processing/toolbox.rst:182
 msgid ""
 "An **extent**, a text box defining a rectangle through its corners "
 "coordinate in the format ``xmin, xmax, ymin, ymax``. Press the "
@@ -406,11 +464,11 @@ msgstr ""
 "la flecha situada a la derecha del selector de valores, aparecerá un menú "
 "emergente con opciones para:"
 
-#: ../../docs/user_manual/processing/toolbox.rst:426
+#: ../../docs/user_manual/processing/toolbox.rst:446
 msgid "mapIdentification"
 msgstr ""
 
-#: ../../docs/user_manual/processing/toolbox.rst:170
+#: ../../docs/user_manual/processing/toolbox.rst:188
 msgid ""
 ":menuselection:`Calculate from layer -->`: fills the text box with the "
 "coordinates of the bounding box of a layer to select among the loaded ones"
@@ -419,7 +477,7 @@ msgstr ""
 " las coordenadas del cuadro delimitador de una capa a seleccionar entre las "
 "cargadas."
 
-#: ../../docs/user_manual/processing/toolbox.rst:172
+#: ../../docs/user_manual/processing/toolbox.rst:190
 msgid ""
 ":menuselection:`Calculate from layout map -->`: fills the text box with the "
 "coordinates of a map item selected from a layout in the current project"
@@ -428,7 +486,7 @@ msgstr ""
 "caja de texto con las coordenadas de un elemento de mapa seleccionado de una"
 " disposición del proyecto actual."
 
-#: ../../docs/user_manual/processing/toolbox.rst:174
+#: ../../docs/user_manual/processing/toolbox.rst:192
 msgid ""
 ":menuselection:`Calculate from bookmark -->`: fills the text box with the "
 "coordinates of a saved bookmark"
@@ -436,13 +494,13 @@ msgstr ""
 ":menuselection:`Calcular a partir de marcador -->`: rellena la caja de texto"
 " con las coordenadas de un marcador guardado"
 
-#: ../../docs/user_manual/processing/toolbox.rst:176
+#: ../../docs/user_manual/processing/toolbox.rst:194
 msgid "|mapIdentification| :guilabel:`Use current map canvas extent`"
 msgstr ""
 "|mapIdentification| :guilabel:`Utilizar la extensión actual del lienzo del "
 "mapa`"
 
-#: ../../docs/user_manual/processing/toolbox.rst:177
+#: ../../docs/user_manual/processing/toolbox.rst:195
 msgid ""
 ":guilabel:`Draw on canvas`: the parameters window will hide itself, so you "
 "can click and drag onto the canvas. Once you have defined the extent "
@@ -454,11 +512,11 @@ msgstr ""
 "definido el rectángulo de extensión, volverá a aparecer el cuadro de diálogo"
 " que contiene los valores en el cuadro de texto de la extensión."
 
-#: ../../docs/user_manual/processing/toolbox.rst:187
+#: ../../docs/user_manual/processing/toolbox.rst:205
 msgid "Extent selector"
 msgstr "Selector de extensión"
 
-#: ../../docs/user_manual/processing/toolbox.rst:189
+#: ../../docs/user_manual/processing/toolbox.rst:207
 msgid ""
 "A **list of elements** (whether raster or vector layers, tables, fields) to "
 "select from. Click on the :guilabel:`...` button at the left of the option "
@@ -473,11 +531,11 @@ msgstr ""
 "elementos seleccionados se muestra en el widget del cuadro de texto del "
 "parámetro."
 
-#: ../../docs/user_manual/processing/toolbox.rst:200
+#: ../../docs/user_manual/processing/toolbox.rst:218
 msgid "Multiple Selection"
 msgstr "Selección Múltiple"
 
-#: ../../docs/user_manual/processing/toolbox.rst:202
+#: ../../docs/user_manual/processing/toolbox.rst:220
 msgid ""
 "A **small table** to be edited by the user. These are used to define "
 "parameters like lookup tables or convolution kernels, among others."
@@ -486,17 +544,17 @@ msgstr ""
 "para definir parámetros como tablas de búsqueda o núcleos de convolución, "
 "entre otros."
 
-#: ../../docs/user_manual/processing/toolbox.rst:205
+#: ../../docs/user_manual/processing/toolbox.rst:223
 msgid ""
 "Click on the button on the right side to see the table and edit its values."
 msgstr ""
 "Click en el botón del lado derecho para ver la tabla y editar sus valores."
 
-#: ../../docs/user_manual/processing/toolbox.rst:212
+#: ../../docs/user_manual/processing/toolbox.rst:230
 msgid "Fixed Table"
 msgstr "Tabla Fija"
 
-#: ../../docs/user_manual/processing/toolbox.rst:214
+#: ../../docs/user_manual/processing/toolbox.rst:232
 msgid ""
 "Depending on the algorithm, the number of rows can be modified or not by "
 "using the buttons on the right side of the window."
@@ -504,7 +562,7 @@ msgstr ""
 "Dependiendo del algoritmo, el número de filas que pueden ser modificadas o "
 "no al utilizar los botones del lado derecho de la ventana."
 
-#: ../../docs/user_manual/processing/toolbox.rst:219
+#: ../../docs/user_manual/processing/toolbox.rst:237
 msgid ""
 "Some algorithms require many parameters to run, e.g. in the "
 ":ref:`qgisrastercalculator` you have to specify manually the cell size, the "
@@ -520,11 +578,11 @@ msgstr ""
 "Con este parámetro se puede elegir la capa de referencia y se utilizarán "
 "todas sus propiedades (tamaño de celda, extensión, SRC)."
 
-#: ../../docs/user_manual/processing/toolbox.rst:227
+#: ../../docs/user_manual/processing/toolbox.rst:245
 msgid "Logging the execution"
 msgstr "Registro de la ejecución"
 
-#: ../../docs/user_manual/processing/toolbox.rst:229
+#: ../../docs/user_manual/processing/toolbox.rst:247
 msgid ""
 "Along with the :guilabel:`Parameters` tab, there is another tab named "
 ":guilabel:`Log` (see :numref:`figure_alg_dialog_log` below). Information "
@@ -542,7 +600,7 @@ msgstr ""
 " información sobre la ejecución del algoritmo también se muestra en "
 ":menuselection:`Ver --> Paneles --> Panel de Mensajes de Registro`."
 
-#: ../../docs/user_manual/processing/toolbox.rst:237
+#: ../../docs/user_manual/processing/toolbox.rst:255
 msgid ""
 "Notice that not all algorithms write information to the :guilabel:`Log` tab,"
 " and many of them might run silently without producing any output other than"
@@ -553,11 +611,11 @@ msgstr ""
 "silenciosamente sin producir ningún resultado más que los archivos finales. "
 "Compruebe el :guilabel:`Panel de registro de mensajes` en ese caso."
 
-#: ../../docs/user_manual/processing/toolbox.rst:247
+#: ../../docs/user_manual/processing/toolbox.rst:265
 msgid "Algorithm Dialog - Log"
 msgstr "Diálogo Algoritmo - Registro"
 
-#: ../../docs/user_manual/processing/toolbox.rst:249
+#: ../../docs/user_manual/processing/toolbox.rst:267
 msgid ""
 "At the bottom of the :guilabel:`Log` tab you will find buttons to |fileSave|"
 " :guilabel:`Save Log to File`, |editCopy| :guilabel:`Copy Log to Clipboard` "
@@ -572,23 +630,23 @@ msgstr ""
 "marcado :guilabel:`Mantener el diálogo abierto después de ejecutar el "
 "algoritmo` en la parte :guilabel:`General` de las opciones de Procesamiento."
 
-#: ../../docs/user_manual/processing/toolbox.rst:424
+#: ../../docs/user_manual/processing/toolbox.rst:442
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/processing/toolbox.rst:422
+#: ../../docs/user_manual/processing/toolbox.rst:440
 msgid "editCopy"
 msgstr ""
 
-#: ../../docs/user_manual/processing/toolbox.rst:418
+#: ../../docs/user_manual/processing/toolbox.rst:436
 msgid "clearConsole"
 msgstr "clearConsole"
 
-#: ../../docs/user_manual/processing/toolbox.rst:257
+#: ../../docs/user_manual/processing/toolbox.rst:275
 msgid "Other tools"
 msgstr "Otras herramientas"
 
-#: ../../docs/user_manual/processing/toolbox.rst:259
+#: ../../docs/user_manual/processing/toolbox.rst:277
 msgid ""
 "On the right hand side of the dialog you will find a short description of "
 "the algorithm, which will help you understand its purpose and its basic "
@@ -600,7 +658,7 @@ msgstr ""
 " Si dicha descripción no está disponible, no se mostrará el panel de "
 "descripción."
 
-#: ../../docs/user_manual/processing/toolbox.rst:263
+#: ../../docs/user_manual/processing/toolbox.rst:281
 msgid ""
 "For a more detailed help file, which might include description of every "
 "parameter it uses, or examples, you will find a :guilabel:`Help` button at "
@@ -614,7 +672,7 @@ msgstr ""
 ":ref:`Documentación de algoritmos de procesamiento<processing_algs>`o a la "
 "documentación del proveedor (para algunos proveedores externos)."
 
-#: ../../docs/user_manual/processing/toolbox.rst:269
+#: ../../docs/user_manual/processing/toolbox.rst:287
 msgid ""
 "The :menuselection:`Advanced -->` menu provides functions to reuse the "
 "configuration defined in the dialog without running the algorithm:"
@@ -622,7 +680,7 @@ msgstr ""
 "El menú :menuselection:`Avanzado -->` proporciona funciones para reutilizar "
 "la configuración definida en el diálogo sin ejecutar el algoritmo:"
 
-#: ../../docs/user_manual/processing/toolbox.rst:272
+#: ../../docs/user_manual/processing/toolbox.rst:290
 msgid ""
 ":guilabel:`Copy as Python Command`: allows for easy copying of the "
 "equivalent :ref:`PyQGIS command <processing_console>` to run the tool using "
@@ -632,7 +690,7 @@ msgstr ""
 ":ref:`comando PyQGIS  <processing_console>` para correr la herramienta "
 "utilizando los parámetros definidos en el diálogo"
 
-#: ../../docs/user_manual/processing/toolbox.rst:275
+#: ../../docs/user_manual/processing/toolbox.rst:293
 msgid ""
 ":guilabel:`Copy as qgis_process Command`: allows for easy generation of "
 ":ref:`qgis_process command <processing_standalone>`, including its "
@@ -645,7 +703,7 @@ msgstr ""
 "elipsoide y cualquier valor de parámetro complicado como salidas GeoPackage "
 "con las capas específicas"
 
-#: ../../docs/user_manual/processing/toolbox.rst:279
+#: ../../docs/user_manual/processing/toolbox.rst:297
 msgid ""
 ":guilabel:`Copy as JSON`: all the settings of the command are copied in a "
 ":file:`JSON` format, ready to be consumed by qgis_process. This is a "
@@ -660,11 +718,11 @@ msgstr ""
 "puede almacenar estos fácilmente y luego restaurarlos más tarde pegando los "
 "valores."
 
-#: ../../docs/user_manual/processing/toolbox.rst:284
+#: ../../docs/user_manual/processing/toolbox.rst:302
 msgid ":guilabel:`Paste Settings` in a :file:`JSON` format"
 msgstr ":guilabel:`Pegar configuración` en formato :file:`JSON"
 
-#: ../../docs/user_manual/processing/toolbox.rst:287
+#: ../../docs/user_manual/processing/toolbox.rst:305
 msgid ""
 "The :guilabel:`Run as Batch Process...` button triggers the :ref:`batch "
 "processing mode <processing_batch>` allowing to configure and run multiple "
@@ -677,7 +735,7 @@ msgstr ""
 ":guilabel:`Correr como Proceso Único...` le ayuda a volver atrás desde el "
 "modo por lotes."
 
-#: ../../docs/user_manual/processing/toolbox.rst:292
+#: ../../docs/user_manual/processing/toolbox.rst:310
 msgid ""
 "When an algorithm execution finishes (either successfully or not), a new "
 "button :guilabel:`Change Parameters` is shown as long as the :guilabel:`Log`"
@@ -687,11 +745,11 @@ msgstr ""
 "un nuevo botón :guilabel:`Cambiar parámetros` siempre que la pestaña "
 ":guilabel:`Registro` esté activa."
 
-#: ../../docs/user_manual/processing/toolbox.rst:296
+#: ../../docs/user_manual/processing/toolbox.rst:314
 msgid "A note on projections"
 msgstr "Un comentario sobre proyecciones"
 
-#: ../../docs/user_manual/processing/toolbox.rst:298
+#: ../../docs/user_manual/processing/toolbox.rst:316
 msgid ""
 "Processing algorithm execution are always performed in the input layer "
 "coordinate reference system (CRS). Due to QGIS's on-the-fly reprojecting "
@@ -712,7 +770,7 @@ msgstr ""
 " todas las capas se volverán a proyectar para que coincidan con el sistema "
 "de referencia de coordenadas de la primera capa de entrada."
 
-#: ../../docs/user_manual/processing/toolbox.rst:307
+#: ../../docs/user_manual/processing/toolbox.rst:325
 msgid ""
 "This is however less true for most of the external applications whose "
 "algorithms are exposed through the processing framework as they assume that "
@@ -724,7 +782,7 @@ msgstr ""
 " que asumen que todas las capas ya están en un sistema de coordenadas común "
 "y listas para ser analizadas."
 
-#: ../../docs/user_manual/processing/toolbox.rst:311
+#: ../../docs/user_manual/processing/toolbox.rst:329
 msgid ""
 "By default, the parameters dialog will show a description of the CRS of each"
 " layer along with its name, making it easy to select layers that share the "
@@ -741,7 +799,7 @@ msgstr ""
 "desmarcando la opción: guilabel: `Mostrar definición de capa SRC en cuadros "
 "de selección`."
 
-#: ../../docs/user_manual/processing/toolbox.rst:317
+#: ../../docs/user_manual/processing/toolbox.rst:335
 msgid ""
 "If you try to execute an algorithm using as input two or more layers with "
 "unmatching CRSs, a warning dialog will be shown. This occurs thanks to the "
@@ -752,7 +810,7 @@ msgstr ""
 "ocurre gracias a la opción :guilabel:`Advertir antes de ejecutar si la capa "
 "SRC no coincide`."
 
-#: ../../docs/user_manual/processing/toolbox.rst:321
+#: ../../docs/user_manual/processing/toolbox.rst:339
 msgid ""
 "You still can execute the algorithm, but be aware that in most cases that "
 "will produce wrong results, such as empty layers due to input layers not "
@@ -762,13 +820,13 @@ msgstr ""
 "producirán resultados incorrectos, como capas vacias debido a que las capas "
 "de entrada no se solapan."
 
-#: ../../docs/user_manual/processing/toolbox.rst:324
+#: ../../docs/user_manual/processing/toolbox.rst:342
 msgid "**Use Processing algorithms to do intermediate reprojection**"
 msgstr ""
 "**Usar algoritmos de procesamiento para realizar una reproyección "
 "intermedia**"
 
-#: ../../docs/user_manual/processing/toolbox.rst:326
+#: ../../docs/user_manual/processing/toolbox.rst:344
 msgid ""
 "When an algorithm can not successfully perform on multiple input layers due "
 "to unmatching CRSs, use QGIS internal algorithm such as "
@@ -780,34 +838,34 @@ msgstr ""
 ":ref:`qgisreprojectlayer` para realizar la reproyección de capas al mismo "
 "SRC antes de ejecutar el algoritmo usando estas salidas."
 
-#: ../../docs/user_manual/processing/toolbox.rst:333
+#: ../../docs/user_manual/processing/toolbox.rst:351
 msgid "Data objects generated by algorithms"
 msgstr "Resultados generados por algoritmos"
 
-#: ../../docs/user_manual/processing/toolbox.rst:335
+#: ../../docs/user_manual/processing/toolbox.rst:353
 msgid ""
 "Data objects generated by an algorithm can be of any of the following types:"
 msgstr ""
 "Los tipos de resultados que se pueden generar cor un algoritmo son los "
 "siguientes:"
 
-#: ../../docs/user_manual/processing/toolbox.rst:337
+#: ../../docs/user_manual/processing/toolbox.rst:355
 msgid "A raster layer"
 msgstr "Una capa ráster."
 
-#: ../../docs/user_manual/processing/toolbox.rst:338
+#: ../../docs/user_manual/processing/toolbox.rst:356
 msgid "A vector layer"
 msgstr "Una capa vectorial."
 
-#: ../../docs/user_manual/processing/toolbox.rst:339
+#: ../../docs/user_manual/processing/toolbox.rst:357
 msgid "A table"
 msgstr "Una tabla"
 
-#: ../../docs/user_manual/processing/toolbox.rst:340
+#: ../../docs/user_manual/processing/toolbox.rst:358
 msgid "An HTML file (used for text and graphical outputs)"
 msgstr "Un archivo HTML (usado para salidas de texto y salidas gráficas)."
 
-#: ../../docs/user_manual/processing/toolbox.rst:342
+#: ../../docs/user_manual/processing/toolbox.rst:360
 msgid ""
 "These are all saved to disk, and the parameters table will contain a text "
 "box corresponding to each one of these outputs, where you can type the "
@@ -827,7 +885,7 @@ msgstr ""
 "(algoritmos que no utilizan aplicaciones externas) también puedes guardar en"
 " una base de datos PostGIS, GeoPackage o SpatiaLite, o una capa de memoria."
 
-#: ../../docs/user_manual/processing/toolbox.rst:350
+#: ../../docs/user_manual/processing/toolbox.rst:368
 msgid ""
 "To select an output channel, just click on the button on the right side of "
 "the text box, and you will see a small context menu with the available "
@@ -837,7 +895,7 @@ msgstr ""
 " lado derecho del cuadro de texto y verá un pequeño menú contextual con las "
 "opciones disponibles."
 
-#: ../../docs/user_manual/processing/toolbox.rst:353
+#: ../../docs/user_manual/processing/toolbox.rst:371
 msgid ""
 "In the most usual case, you will select saving to a file. If you select that"
 " option, you will be prompted with a save file dialog, where you can select "
@@ -851,7 +909,7 @@ msgstr ""
 "archivo admitidas se muestran en el selector de formato de archivo del "
 "cuadro de diálogo, según el tipo de salida y el algoritmo."
 
-#: ../../docs/user_manual/processing/toolbox.rst:358
+#: ../../docs/user_manual/processing/toolbox.rst:376
 msgid ""
 "The format of the output is defined by the filename extension. The supported"
 " formats depend on what is supported by the algorithm itself. To select a "
@@ -877,7 +935,7 @@ msgstr ""
 "modificar en el cuadro de diálogo de configuración, seleccionando cualquier "
 "otro de los formatos compatibles con QGIS."
 
-#: ../../docs/user_manual/processing/toolbox.rst:369
+#: ../../docs/user_manual/processing/toolbox.rst:387
 msgid ""
 "If you do not enter any filename in the output text box (or select the "
 "corresponding option in the context menu), the result will be saved as a "
@@ -892,7 +950,7 @@ msgstr ""
 "que salga de QGIS (tenga cuidado con eso, en caso de que guarde su proyecto "
 "y contenga capas temporales)."
 
-#: ../../docs/user_manual/processing/toolbox.rst:375
+#: ../../docs/user_manual/processing/toolbox.rst:393
 msgid ""
 "You can set a default folder for output data objects. Go to the settings "
 "dialog (you can open it from the :menuselection:`Settings --> Options --> "
@@ -909,7 +967,7 @@ msgstr ""
 " de que escriba solo un nombre de archivo sin ruta (es decir, "
 ":file:`myfile.shp`) al ejecutar un algoritmo."
 
-#: ../../docs/user_manual/processing/toolbox.rst:382
+#: ../../docs/user_manual/processing/toolbox.rst:400
 msgid ""
 "When running an algorithm that uses a vector layer in iterative mode, the "
 "entered file path is used as the base path for all generated files, which "
@@ -924,7 +982,7 @@ msgstr ""
 "extensión del archivo (y el formato) se utiliza para todos los archivos "
 "generados."
 
-#: ../../docs/user_manual/processing/toolbox.rst:387
+#: ../../docs/user_manual/processing/toolbox.rst:405
 msgid ""
 "Apart from raster layers and tables, algorithms also generate graphics and "
 "text as HTML files. These results are shown at the end of the algorithm "
@@ -941,7 +999,7 @@ msgstr ""
 ":menuselection:`Procesamiento -> Visor de Resultados` en el menú principal "
 "de QGIS."
 
-#: ../../docs/user_manual/processing/toolbox.rst:393
+#: ../../docs/user_manual/processing/toolbox.rst:411
 msgid ""
 "Some external applications might have files (with no particular extension "
 "restrictions) as output, but they do not belong to any of the categories "
@@ -960,7 +1018,7 @@ msgstr ""
 "datos LiDAR. Los archivos se crean, pero no se ve nada nuevo en su sesión de"
 " trabajo en QGIS."
 
-#: ../../docs/user_manual/processing/toolbox.rst:401
+#: ../../docs/user_manual/processing/toolbox.rst:419
 msgid ""
 "For all the other types of output, you will find a checkbox that you can use"
 " to tell the algorithm whether to load the file once it is generated by the "
@@ -971,7 +1029,7 @@ msgstr ""
 "archivo una vez que se genera por el algoritmo o no. Por defecto, se abren "
 "todos los archivos."
 
-#: ../../docs/user_manual/processing/toolbox.rst:405
+#: ../../docs/user_manual/processing/toolbox.rst:423
 msgid ""
 "Optional outputs are not supported. That is, all outputs are created. "
 "However, you can uncheck the corresponding checkbox if you are not "
