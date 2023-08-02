@@ -32,34 +32,6 @@ The latest documentation is available at <https://docs.qgis.org/latest>
 
 The best way to build the documentation is within a Python Virtual Environment (venv).
 
-## Build on Linux
-
-To check/create the venv and use it in the build:
-
-```
-make -f venv.mk html
-```
-
-The venv.mk will create/update a virtual env (if not available) in current dir/venv AND run the html build in it.
-
-You can also use that virtual environment later doing:
-
-```
-source venv/bin/activate
-```
-
-to activate the venv and then run the build from within that venv:
-
-```
-make html
-```
-
-If, for some reason, you want to start from scratch:
-
-```
-make -f venv.mk cleanall
-```
-
 ## Build on macOS or Linux
 
 You can also use your own virtual env by creating it first:
@@ -128,6 +100,34 @@ Want to build your own language? Note that you will use the translations from th
 ```
 set SPHINXOPTS=-D language=nl
 make.bat html
+```
+
+## Build on Linux (alternative)
+
+To check/create the venv and use it in the build:
+
+```
+make -f venv.mk html
+```
+
+The venv.mk will create/update a virtual env (if not available) in current dir/venv AND run the html build in it.
+
+You can also use that virtual environment later doing:
+
+```
+source venv/bin/activate
+```
+
+to activate the venv and then run the build from within that venv:
+
+```
+make html
+```
+
+If, for some reason, you want to start from scratch:
+
+```
+make -f venv.mk cleanall
 ```
 
 ## Build PDFs
