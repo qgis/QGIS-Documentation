@@ -174,6 +174,21 @@ msgstr ""
 msgid "saveMapAsImage"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:49
+msgid ""
+"|3d| :sup:`Export 3D Scene`: exports the current view as a 3D scene "
+"(:file:`.obj` file), allowing post-processing in applications like "
+"Blender... The terrain and vector features are exported as 3D objects. The "
+"export settings, overriding the layers :ref:`properties <sec_3_d_view>` or "
+"map view :ref:`configuration <scene_configuration>`, include:"
+msgstr ""
+"|3d| :sup:`Exportar escena 3D`: exporta la vista actual como una escena 3D "
+"(archivo:file:`.obj`), permitiendo el post-procesado en aplicaciones como "
+"Blender... El terreno y las características vectoriales se exportan como "
+"objetos 3D. Los ajustes de exportación, que anulan las capas "
+":ref:`propiedades <sec_3_d_view>` o vista de mapa :ref:`configuración "
+"<scene_configuration>`, incluir:"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:425
 msgid "3d"
 msgstr ""
@@ -231,6 +246,16 @@ msgstr "El menú |options| :sup:`Opciones` proporciona accesos directos a:"
 msgid "options"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:66
+msgid ""
+"Add visual effects to the 3D rendering, such as showing :ref:`shadows "
+"<shadows>`, :ref:`eye dome lighting <eye_dome_lighting>` or :ref:`ambient "
+"occlusion <ambient_occlusion>`"
+msgstr ""
+"Añada efectos visuales al renderizado 3D, como mostrar :ref:`sombras 1`, "
+":ref:`iluminación de la cúpula del ojo <eye_dome_lighting>` o "
+":ref:`obstrucción ambiental <ambient_occlusion>`"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:68
 msgid ""
 "Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or "
@@ -243,6 +268,14 @@ msgstr ""
 msgid ":guilabel:`Show visible camera area in 2D map view`"
 msgstr ""
 ":guilabel:`Mostrar el área visible de la cámara en la vista de mapa 2D`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:71
+msgid ""
+"|options| :sup:`Configure` the 3D map view :ref:`settings "
+"<scene_configuration>`."
+msgstr ""
+"|options| :sup:`Configurar` la vista de mapa 3D :ref:`configuración "
+"<scene_configuration>`."
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:72
 msgid ""
@@ -495,6 +528,14 @@ msgstr "El cuadro de diálogo Configuración de luces de mapa 3D"
 msgid "Shadow"
 msgstr "Sombras"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:183
+msgid ""
+"Check |unchecked| :guilabel:`Show shadows` to display shadows within your "
+"scene, given:"
+msgstr ""
+"Marque |unchecked| :guilabel:`Mostrar sombras` para mostrar sombras dentro "
+"de su escena, dada:"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:186
 msgid "a :guilabel:`Directional light`"
 msgstr "una :guilabel:`luz Direccional`"
@@ -543,6 +584,16 @@ msgstr ""
 #: ../../docs/user_manual/map_views/3d_map_view.rst:207
 msgid "The 3D Map Camera Configuration dialog"
 msgstr "El cuadro de diálogo Configuración de la cámara del mapa 3D"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:209
+msgid ""
+"The :guilabel:`Camera` parameter group overrides some :ref:`default camera "
+"settings <3d_options>` made in the :menuselection:`Settings --> Options --> "
+"3D` dialog."
+msgstr ""
+"El grupo de parámetros :guilabel: `Cámara` anula algunas :ref: `ajustes "
+"predeterminados de la cámara <3d_options>` realizados en el diálogo "
+":menuselection:`Configuración --> Opciones --> 3D`."
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:212
 msgid ""
@@ -709,6 +760,10 @@ msgstr ""
 msgid "|unchecked| :guilabel:`Show camera's view center`"
 msgstr "|unchecked| :guilabel:`Show camera's view center`"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:272
+msgid "|unchecked| :guilabel:`Show camera's rotation center`"
+msgstr "|unchecked| :guilabel:`Mostrar el centro de rotación de la cámara`"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:273
 msgid ""
 "|unchecked| :guilabel:`Show light sources`: shows a sphere at light source "
@@ -718,6 +773,137 @@ msgstr ""
 "|unchecked| :guilabel:`Mostrar fuentes luminosas`: muestra una esferea en el"
 " origen de la fuente de luz, permitiendo fácilmente el reposicionado y "
 "emplazamiento de las fuentes de luz relativas al contenido de la escena"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:275
+msgid "|unchecked| :guilabel:`Show frames per second (FPS)`"
+msgstr "|unchecked| :guilabel:`Mostrar imágenes por segundo (FPS)`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:276
+msgid ""
+"|unchecked| :guilabel:`Show debug overlay`: visual overlay which displays "
+"some useful debugging and profiling information. This allows in particular "
+"to quickly see the frame graph and the scene graph."
+msgstr ""
+"|unchecked| :guilabel:`Mostrar superposición de depuración`: superposición "
+"visual que muestra alguna información útil de depuración y perfilado. Esto "
+"permite, en particular, ver rápidamente el gráfico de fotogramas y el "
+"gráfico de escenas."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:282
+msgid ""
+"|unchecked| :guilabel:`Show Eye Dome Lighting` (EDL): a post processing "
+"effect which enhances depth perception. Each pixel's depth (distance off the"
+" camera) is compared to its neighboring pixels' depth and gets highlighted "
+"according to that depth difference, making the edges stand out. Affects the "
+"whole scene and can be combined with :ref:`Screen Space Ambient Occlusion "
+"<ambient_occlusion>`. Following parameters can be controlled:"
+msgstr ""
+"|unchecked| :guilabel: \"Mostrar iluminación de cúpula ocular\" (EDL): "
+"efecto de postprocesado que mejora la percepción de la profundidad. La "
+"profundidad de cada píxel (distancia de la cámara) se compara con la "
+"profundidad de sus píxeles vecinos y se resalta según esa diferencia de "
+"profundidad, haciendo que los bordes destaquen. Afecta a toda la escena y "
+"puede combinarse con :ref: `Oclusión ambiental en el espacio de la pantalla "
+"<ambient_occlusion>`. Se pueden controlar los siguientes parámetros:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:289
+msgid ""
+":guilabel:`Lighting strength`: increases the contrast, allowing for better "
+"depth perception"
+msgstr ""
+":guilabel:`Fuerza de iluminación`: aumenta el contraste, permitiendo una "
+"mejor percepción de la profundidad."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:290
+msgid ""
+":guilabel:`Lighting distance`: represents the distance of the used pixels "
+"off the center pixel and has the effect of making edges thicker."
+msgstr ""
+":guilabel:`Distancia de iluminación`: representa la distancia de los píxeles"
+" utilizados respecto al píxel central y tiene el efecto de hacer los bordes "
+"más gruesos."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:295
+msgid ""
+"Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO): a post "
+"processing effect which also enhances depth perception by applying a darker "
+"shading to areas which are less exposed to ambient lighting. Affects the "
+"whole scene and can be combined with :ref:`Eye dome Lighting "
+"<eye_dome_lighting>`. Following parameters can be controlled:"
+msgstr ""
+"Añadir espacio en pantalla |unchecked| :guilabel:`Oclusión ambiental` "
+"(SSAO): efecto de postprocesado que también mejora la percepción de la "
+"profundidad aplicando un sombreado más oscuro a las zonas menos expuestas a "
+"la iluminación ambiental. Afecta a toda la escena y puede combinarse con "
+":ref:`Iluminación de la cúpula del ojo <eye_dome_lighting>`. Se pueden "
+"controlar los siguientes parámetros:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:301
+msgid ""
+":guilabel:`Radius`: how far we will reach to calculate ambient occlusion"
+msgstr ""
+":guilabel:`Radio`: hasta dónde llegaremos para calcular la oclusión "
+"ambiental"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:302
+msgid ""
+":guilabel:`Intensity`: how strong the effect should be (higher values make "
+"things darker)"
+msgstr ""
+":guilabel:`Intensidad`: intensidad del efecto (los valores más altos "
+"oscurecen)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:303
+msgid ""
+":guilabel:`Occlusion threshold`: how many neighboring points need to be "
+"occluded for the effect to appear (lower values than 50% will make the "
+"output darker, but possibly providing greater range of occlusion)"
+msgstr ""
+":guilabel:`Umbral de oclusión`: cuántos puntos vecinos deben estar ocluidos "
+"para que aparezca el efecto (valores inferiores al 50% harán que la salida "
+"sea más oscura, pero posiblemente proporcionando un mayor rango de "
+"oclusión)."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:311
+msgid ""
+"Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or "
+"Screen-Space Ambient Occlusion (SSAO)"
+msgstr ""
+"Renderizado de nubes de puntos en mapas 3D mediante iluminación Eye Dome "
+"(EDL) y oclusión ambiental en el espacio de la pantalla (SSAO)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:313
+msgid ""
+"From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL"
+msgstr ""
+"Desde arriba, de izquierda a derecha: Sin efecto -- Sólo SSAO -- Sólo EDL --"
+" SSAO y EDL"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:315
+msgid ""
+"|unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black "
+"image from the point of view of the light used for shadows (for "
+"troubleshooting). The widget is set with a proportional :guilabel:`Size` to "
+"the 3D map view's, and docked in a :guilabel:`Corner`."
+msgstr ""
+"|unchecked| :guilabel:`Depurar mapa de sombras`: representa la escena como "
+"una imagen rojo-negro desde el punto de vista de la luz utilizada para las "
+"sombras (para solucionar problemas). El widget se establece con un "
+":guilabel:`Tamaño` proporcional al de la vista del mapa 3D, y se acopla en "
+"una :guilabel:`Esquina`."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:319
+msgid ""
+"|unchecked| :guilabel:`Debug Depth Map`: renders the scene's depth map as an"
+"  image with nearer pixels being darker (for troubleshooting). The widget is"
+" set with a proportional :guilabel:`Size` to the 3D map view's, and docked "
+"in a :guilabel:`Corner`."
+msgstr ""
+"|unchecked| :guilabel:`Mapa de profundidad de depuración`: representa el "
+"mapa de profundidad de la escena como una imagen en la que los píxeles más "
+"cercanos son más oscuros (para solucionar problemas). El widget tiene un "
+":guilabel:`Tamaño` proporcional al de la vista del mapa 3D, y se acopla en "
+"una :guilabel:`Esquina`."
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:328
 msgid "Navigation options"
