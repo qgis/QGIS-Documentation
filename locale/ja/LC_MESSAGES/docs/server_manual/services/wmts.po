@@ -25,6 +25,10 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../docs/server_manual/services/wmts.rst:2
+msgid "Web Map Tile Service (WMTS)"
+msgstr "Web Map Tile Service (WMTS)"
+
 #: ../../docs/server_manual/services/wmts.rst:4
 msgid ""
 "The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP "
@@ -34,6 +38,14 @@ msgid ""
 msgstr ""
 "QGISサーバに実装された **1.0.0** "
 "WMTS標準は、QGISプロジェクトから作成されたタイル地図画像を要求するためのHTTPインターフェースを提供します。典型的なWMTSリクエストでは、使用するQGISプロジェクト、レンダリングするレイヤなどの一部のWMSパラメータ、およびタイルパラメータを定義しました。"
+
+#: ../../docs/server_manual/services/wmts.rst:9
+msgid "Specifications document of the service:"
+msgstr "サービスの仕様書:"
+
+#: ../../docs/server_manual/services/wmts.rst:11
+msgid "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
+msgstr "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
 
 #: ../../docs/server_manual/services/wmts.rst:13
 msgid "Standard requests provided by QGIS Server:"
@@ -48,8 +60,24 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`GetCapabilities <wmts_getcapabilities>`"
+msgstr ":ref:`GetCapabilities <wmts_getcapabilities>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
 msgid "Returns XML metadata with information about the server"
 msgstr "サーバーに関する情報を含むXMLメタデータを返します"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`GetTile <wmts_gettile>`"
+msgstr ":ref:`GetTile <wmts_gettile>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Returns a tile"
+msgstr "タイルを返します"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
+msgstr ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Retrieves data (geometry and values) for a pixel location"
@@ -59,9 +87,15 @@ msgstr "ピクセル位置のデータ（ジオメトリと値）を取得しま
 msgid "GetCapabilities"
 msgstr ""
 
+#: ../../docs/server_manual/services/wmts.rst:29
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMTS 1.0.0 specifications:"
+msgstr "OGC WMTS 1.0.0仕様に従った **GetCapabilities** リクエストの標準パラメータ:"
+
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Parameter"
-msgstr "パラメーター"
+msgstr "パラメータ"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Required"
@@ -74,6 +108,10 @@ msgstr ""
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Yes"
 msgstr "はい"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the service (**WMTS**)"
+msgstr "サービスの名称 (**WMTS**)"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`REQUEST <services_basics_request>`"
@@ -105,9 +143,77 @@ msgstr "QGISプロジェクトファイル"
 msgid "URL example:"
 msgstr "URLの例:"
 
+#: ../../docs/server_manual/services/wmts.rst:64
+msgid "GetTile"
+msgstr "GetTile"
+
+#: ../../docs/server_manual/services/wmts.rst:66
+msgid ""
+"Standard parameters for the **GetTile** request according to the OGC WMTS "
+"1.0.0 specifications:"
+msgstr "OGC WMTS 1.0.0仕様に従った **GetTile** リクエストの標準パラメータ:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the request (**GetTile**)"
+msgstr "リクエストの名称 (**GetTile**)"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`LAYER <wms_layers>`"
+msgstr ":ref:`LAYER <wms_layers>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Layer identifier"
+msgstr "レイヤ識別"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`FORMAT <wmts_gettile_format>`"
+msgstr ":ref:`FORMAT <wmts_gettile_format>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Output format of the tile"
+msgstr "タイルの出力フォーマット"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`"
+msgstr ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the pyramid"
+msgstr "ピラミッドの名称"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
+msgstr ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Meshing"
+msgstr "メッシュを作る"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILEROW <wmts_gettile_tilerow>`"
+msgstr ":ref:`TILEROW <wmts_gettile_tilerow>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Row coordinate in the mesh"
+msgstr "メッシュの行座標"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILECOL <wmts_gettile_tilecol>`"
+msgstr ":ref:`TILECOL <wmts_gettile_tilecol>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Column coordinate in the mesh"
+msgstr "メッシュの列座標"
+
 #: ../../docs/server_manual/services/wmts.rst:112
 msgid "FORMAT"
 msgstr "FORMAT"
+
+#: ../../docs/server_manual/services/wmts.rst:114
+msgid ""
+"This parameter may be used to specify the format of tile image. Available "
+"values are:"
+msgstr "このパラメータを使ってタイル画像のフォーマットを指定することができます。使用できる値は："
 
 #: ../../docs/server_manual/services/wmts.rst:117
 msgid "``jpg``"
@@ -125,13 +231,67 @@ msgstr ""
 msgid "``image/png``"
 msgstr ""
 
+#: ../../docs/server_manual/services/wmts.rst:122
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then the "
+"default format PNG is used instead."
+msgstr "``FORMAT`` パラメータがこれらのいずれとも異なる場合、代わりに既定のフォーマット PNGが使われます。"
+
+#: ../../docs/server_manual/services/wmts.rst:129
+msgid "TILEMATRIXSET"
+msgstr "TILEMATRIXSET"
+
+#: ../../docs/server_manual/services/wmts.rst:131
+msgid ""
+"This parameter defines the CRS to use when computing the underlying pyramid."
+" Format: ``EPSG:XXXX``."
+msgstr "このパラメータは、基礎となるピラミッドを計算するときに使用する CRS を定義します。フォーマット: ``EPSG:XXXX``。"
+
+#: ../../docs/server_manual/services/wmts.rst:138
+msgid "TILEMATRIX"
+msgstr "TILEMATRIX"
+
+#: ../../docs/server_manual/services/wmts.rst:140
+msgid "This parameter allows to define the matrix to use for the output tile."
+msgstr "このパラメータは出力タイルで使用する格子を定義することができます。"
+
+#: ../../docs/server_manual/services/wmts.rst:146
+msgid "TILEROW"
+msgstr "TILEROW"
+
+#: ../../docs/server_manual/services/wmts.rst:148
+msgid ""
+"This parameter allows to select the row of the tile to get within the "
+"matrix."
+msgstr "このパラメータは格子から取得するタイルの行を選択することができます。"
+
+#: ../../docs/server_manual/services/wmts.rst:155
+msgid "TILECOL"
+msgstr "TILECOL"
+
+#: ../../docs/server_manual/services/wmts.rst:157
+msgid ""
+"This parameter allows to select the column of the tile to get within the "
+"matrix."
+msgstr "このパラメータは格子から取得するタイルの列を選択することができます。"
+
 #: ../../docs/server_manual/services/wmts.rst:165
 msgid "GetFeatureInfo"
 msgstr "GetFeatureInfo"
 
+#: ../../docs/server_manual/services/wmts.rst:167
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMTS 1.0.0 specification:"
+msgstr "OGC WMTS 1.0.0 仕様に従った **GetFeatureInfo** リクエストの標準パラメータ："
+
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Name of the request (**GetFeatureInfo**)"
 msgstr "リクエストの名称 (**GetFeatureInfo**)"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`"
+msgstr ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "No"
@@ -140,6 +300,32 @@ msgstr "いいえ"
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Output format"
 msgstr "出力形式"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`I <wmts_getfeatureinfo_i>`"
+msgstr ":ref:`I <wmts_getfeatureinfo_i>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "X coordinate of a pixel"
+msgstr "ピクセルのX座標"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`J <wmts_getfeatureinfo_j>`"
+msgstr ":ref:`J <wmts_getfeatureinfo_j>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Y coordinate of a pixel"
+msgstr "ピクセルのY座標"
+
+#: ../../docs/server_manual/services/wmts.rst:214
+msgid "INFOFORMAT"
+msgstr "INFOFORMAT"
+
+#: ../../docs/server_manual/services/wmts.rst:216
+msgid ""
+"This parameter allows to define the output format of the result. Available "
+"values are:"
+msgstr "このパラメータでは、結果の出力形式を定義することができます。使用できる値は："
 
 #: ../../docs/server_manual/services/wmts.rst:219
 msgid "``text/xml``"
@@ -157,10 +343,26 @@ msgstr ""
 msgid "``application/vnd.ogc.gml``"
 msgstr ""
 
+#: ../../docs/server_manual/services/wmts.rst:224
+msgid "The default value is ``text/plain``."
+msgstr "既定値は ``text/plain`` です。"
+
 #: ../../docs/server_manual/services/wmts.rst:230
 msgid "I"
 msgstr "I"
 
+#: ../../docs/server_manual/services/wmts.rst:232
+msgid ""
+"This parameter allows to define the X coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr "このパラメータは、基礎情報を取得したいピクセルのX座標を定義します。"
+
 #: ../../docs/server_manual/services/wmts.rst:239
 msgid "J"
 msgstr "J"
+
+#: ../../docs/server_manual/services/wmts.rst:241
+msgid ""
+"This parameter allows to define the Y coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr "このパラメータは、基礎情報を取得したいピクセルのY座標を定義します。"
