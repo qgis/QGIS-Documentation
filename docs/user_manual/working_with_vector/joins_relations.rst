@@ -48,14 +48,16 @@ to features from another loaded layer. The join is based on an attribute
 that is shared by the layers. This enable to add one or more attribute from a table 
 to the other.
 
-To create a join on a layer (identified as ``target layer``):
+To create a join on a layer (identified below as ``target layer``):
 
 #. Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab
 #. Click the |symbologyAdd| :sup:`Add new join` button.
    The :guilabel:`Add vector join` dialog appears.
 #. Select the :guilabel:`Join layer` you want to connect with the target vector layer
-#. Specify the :guilabel:`Join field` and the :guilabel:`Target field`
-   that are common to both the join layer and the target layer
+#. Specify the :guilabel:`Join field` (from the ``join layer``)
+   and the :guilabel:`Target field` (from the ``target layer``).
+   These are the fields that are used to find matching feature in both layers
+   hence they should have values in common.
 .. index:: Joins, Foreign key
 .. _vector_relations:
 #. Press :guilabel:`OK` and a summary of selected parameters is added to the :guilabel:`Join` panel.
@@ -70,7 +72,17 @@ To create a join on a layer (identified as ``target layer``):
 The steps above will create a join,
 where **ALL** the attributes of the first matching feature in the join layer
 is added to the target layer's feature.
-QGIS provides more options to tweak the join:
+The following logic is used to pair features during a join process:
+
+* All the features in the target layer are returned, regardless they have a match
+* If the target field contains duplicate values, these features are assigned the same feature
+  from the join layer.
+* If the join field contains duplicate matching values, only the first fetched feature is picked.
+
+.. note:: Joins in QGIS are based on a single field matching so most of the times,
+  you would want to make sure that values in the matchable fields are unique.
+
+QGIS provides some more options to tweak the join:
 
 * |checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to cache values
   in memory (without geometries) from the joined layer in order to speed up lookups.
