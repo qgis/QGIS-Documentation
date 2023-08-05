@@ -18,25 +18,29 @@ usually used to link objects (features) from two layers (tables) together.
       :local:
 
 
-.. index:: Joins, Foreign key
-.. _vector_joins:
 
-Foreword: Joins
-========================================
 
 QGIS allows you to create and manage joins between tables (spatial or non spatial).
 This is done on the layer level (properties). Joins enable you to define
 links between an attribute of a table and a value stored in another table.
 
+.. index:: Joins, Foreign key
+.. _`sec_joins`:
 The most simple example is not even a real join but the possibility offered by QGIS
 to set a value list directly in the attribute form using the Value Map widget
 (TODO : ADD link to /working_with_vector/vector_properties.html#edit-widgets) 
 to define mapping values manually or using a CSV or layer import.
 
+Joining features between two layers
+====================================
 The second example is to use the Value Relation widget
 (TODO : ADD link to /working_with_vector/vector_properties.html#edit-widgets) 
 to define a relation between an attribute and an other attribute contained in another layer.
 
+**Joins** allow you to associate features of the current layer
+to features from another loaded vector layer.
+Whether they are spatially enabled and their geometry type does not matter.
+The join is based on an attribute that is shared by the layers, in a one-to-one relationship.
 The third example is to use the Joins tab 
 (TODO : add link /working_with_vector/vector_properties.html#joins-properties)
 to associate features of the current layer
@@ -44,9 +48,62 @@ to features from another loaded layer. The join is based on an attribute
 that is shared by the layers. This enable to add one or more attribute from a table 
 to the other.
 
+To create a join on a layer (identified as ``target layer``):
 
+#. Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab
+#. Click the |symbologyAdd| :sup:`Add new join` button.
+   The :guilabel:`Add vector join` dialog appears.
+#. Select the :guilabel:`Join layer` you want to connect with the target vector layer
+#. Specify the :guilabel:`Join field` and the :guilabel:`Target field`
+   that are common to both the join layer and the target layer
 .. index:: Joins, Foreign key
 .. _vector_relations:
+#. Press :guilabel:`OK` and a summary of selected parameters is added to the :guilabel:`Join` panel.
+
+.. _figure_joins:
+
+.. figure:: img/join_attributes.png
+   :align: center
+
+   Join an attribute table to an existing vector layer
+
+The steps above will create a join,
+where **ALL** the attributes of the first matching feature in the join layer
+is added to the target layer's feature.
+QGIS provides more options to tweak the join:
+
+* |checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to cache values
+  in memory (without geometries) from the joined layer in order to speed up lookups.
+* |unchecked| :guilabel:`Create attribute index on the join field` to speed up lookups
+* |unchecked| :guilabel:`Dynamic form`: helps to synchronize join fields on the fly,
+  according to the :guilabel:`Target field`.
+  This way, constraints for join fields are also correctly updated.
+  Note that it's deactivated by default because it may be very time consuming
+  if you have a lot of features or a myriad of joins.
+* If the target layer is editable, then some icons will be displayed
+  in the attribute table next to fields, in order to inform about their status:
+
+  * |joinNotEditable|: the join layer is not configured to be editable.
+    If you want to be able to edit join features from the target attribute table,
+    then you have to check the option |checkbox| :guilabel:`Editable join layer`.
+  * |joinedLayerNotEditable|: the join layer is well configured to be editable,
+    but its current status is read only.
+  * |joinHasNotUpsertOnEdit|: the join layer is editable,
+    but synchronization mechanisms are not activated.
+    If you want to automatically add a feature in the join layer
+    when a feature is created in the target layer,
+    then you have to check the option |checkbox| :guilabel:`Upsert on edit`.
+    Symmetrically, the option |checkbox| :guilabel:`Delete cascade` may be activated
+    if you  want to automatically delete join features.
+* |unchecked| :guilabel:`Joined fields`: instead of adding all the fields from the joined layer,
+  you can specify a subset.
+* |unchecked| :guilabel:`Custom field name prefix` for joined fields,
+  in order to avoid name collision
+
+QGIS currently has support for joining non-spatial table formats supported by GDAL
+(e.g., CSV, DBF and Excel), delimited text and the PostgreSQL providers.
+
+.. is the above still true? No more supported formats (oracle, mssql, ...)???
 
 Foreword: Relations
 ========================================
@@ -606,12 +663,22 @@ The example above uses the following database schema:
    :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
 .. |duplicateFeature| image:: /static/common/mActionDuplicateFeature.png
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.2em
+.. |join| image:: /static/common/join.png
+   :width: 2em
+.. |joinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
+   :width: 1.5em
+.. |joinNotEditable| image:: /static/common/mIconJoinNotEditable.png
+   :width: 1.5em
+.. |joinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
+   :width: 1.5em
 .. |link| image:: /static/common/mActionLink.png
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
@@ -624,6 +691,8 @@ The example above uses the following database schema:
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
 .. |unlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
