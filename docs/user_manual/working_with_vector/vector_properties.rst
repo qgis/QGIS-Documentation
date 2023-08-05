@@ -35,7 +35,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
    * - |diagram| :ref:`Diagrams <sec_diagram>`
      - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
-   * - |join| :ref:`Joins <sec_joins>`
+   * - |join| :ref:`Joins <vector_joins>`
      - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
      - |action| :ref:`Actions <actions_menu>`
    * - |display| :ref:`Display <maptips>`
@@ -2545,70 +2545,16 @@ with the field type. The available widgets are:
 
 
 .. index:: Jointure, Join layers
-.. _`sec_joins`:
+.. _vector_joins:
 
 Joins Properties
 ================
 
 The |join| :guilabel:`Joins` tab allows you to associate features
-of the current layer (called ``Target layer``) to features from another
-loaded vector layer (or table). The join is based on an attribute that is shared by the
-layers. The layers can be geometryless (tables) or not but their join attribute
-should be of the same type.
-
-To create a join:
-
-#. Click the |symbologyAdd| :sup:`Add new join` button. The :guilabel:`Add vector
-   join` dialog appears.
-#. Select the :guilabel:`Join layer` you want to connect with the target vector
-   layer
-#. Specify the :guilabel:`Join field` and the :guilabel:`Target field` that are
-   common to both the join layer and the target layer
-#. Press :guilabel:`OK` and a summary of selected parameters is added to the
-   :guilabel:`Join` panel.
-
-.. _figure_joins:
-
-.. figure:: img/join_attributes.png
-   :align: center
-
-   Join an attribute table to an existing vector layer
-
-The steps above will create a join, where **ALL** the attributes of the
-first matching feature in the join layer is added to the target layer's feature.
-QGIS provides more options to tweak the join:
-
-* |checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to cache
-  values in memory (without geometries) from the joined layer in order to speed
-  up lookups.
-* |unchecked| :guilabel:`Create attribute index on the join field`
-* |unchecked| :guilabel:`Dynamic form`: helps to synchronize join fields on the
-  fly, according to the :guilabel:`Target field`. This way, constraints for
-  join fields are also correctly updated. Note that it's deactivated by default
-  because it may be very time consuming if you have a lot of features or a
-  myriad of joins.
-* If the target layer is editable, then some icons will be displayed in the
-  attribute table next to fields, in order to inform about their status:
-
-  * |joinNotEditable|: the join layer is not configured to be
-    editable. If you want to be able to edit join features from the target
-    attribute table, then you have to check the option
-    |checkbox| :guilabel:`Editable join layer`.
-  * |joinedLayerNotEditable|: the join layer is well configured to be
-    editable, but its current status is read only.
-  * |joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization
-    mechanisms are not activated. If you want to automatically add a feature in
-    the join layer when a feature is created in the target layer, then you have
-    to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically,
-    the option |checkbox| :guilabel:`Delete cascade` may be activated if you
-    want to automatically delete join features.
-* |unchecked| :guilabel:`Joined fields`: instead of adding all the fields from
-  the joined layer, you can specify a subset.
-* |unchecked| :guilabel:`Custom field name prefix` for joined fields, in order
-  to avoid name collision
-
-QGIS currently has support for joining non-spatial table formats supported by
-GDAL (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL providers.
+of the current layer to features from another loaded vector layer (or table).
+The join is based on an attribute that is shared by the layers,
+in a one-to-one relationship.
+For more details on joins, please read :ref:`sec_joins`.
 
 
 .. _vector_auxiliary_storage:
@@ -3757,12 +3703,6 @@ To do so:
    :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
-.. |joinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
-   :width: 1.5em
-.. |joinNotEditable| image:: /static/common/mIconJoinNotEditable.png
-   :width: 1.5em
-.. |joinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
-   :width: 1.5em
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em
 .. |labelbuffer| image:: /static/common/labelbuffer.png
