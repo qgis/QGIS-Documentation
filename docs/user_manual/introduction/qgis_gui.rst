@@ -1776,7 +1776,7 @@ Processing
      - :kbd:`Ctrl+Alt+T`
      -
      - :ref:`processing.toolbox`
-   * - |processingModel| :guilabel:`Graphical Modeler...`
+   * - |processingModel| :guilabel:`Model Designer...`
      - :kbd:`Ctrl+Alt+G`
      -
      - :ref:`processing.modeler`

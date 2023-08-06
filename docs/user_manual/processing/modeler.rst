@@ -19,7 +19,7 @@ No matter how many steps and different algorithms it involves, a
 model is executed as a single algorithm, saving time and effort.
 
 The model designer can be opened from the Processing menu
-(:menuselection:`Processing --> Graphical Modeler`).
+(:menuselection:`Processing --> Model Designer`).
 
 The model designer interface
 -------------------------------
@@ -193,7 +193,7 @@ View menu
    * - |checkbox| :guilabel:`Show Comments`
      -
      -
-     - Displays comments associated to every algorithm or input in the graphical designer
+     - Displays comments associated to every algorithm or input in the model designer
    * - |unchecked| :guilabel:`Enable Snapping`
      -
      -
