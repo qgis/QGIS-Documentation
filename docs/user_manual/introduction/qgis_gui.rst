@@ -1005,6 +1005,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Manage Layers`
      - :ref:`vector_virtual_layers`
+   * - :menuselection:`-->` |addHanaLayer|
+       :guilabel:`Add SAP HANA Spatial Layer...`
+     -
+     - :guilabel:`Manage Layers`
+     - :ref:`db_tools`
    * - :menuselection:`-->` |addWmsLayer|
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
@@ -2225,6 +2230,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
    :width: 1.5em
 .. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
+.. |addHanaLayer| image:: /static/common/mActionAddHanaLayer.png
    :width: 1.5em
 .. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
    :width: 1.5em
