@@ -10,7 +10,7 @@ It is described by the `OGC API - Features - Part 1: Core
 
 Layers of servers implementing `OGC API - Features - Part 4: Create, Replace,
 Update and Delete <https://docs.ogc.org/DRAFTS/20-002.html>`_ can be turned into 
-edition mode to allow creating, modifying and deleting features. Note that each 
+editing mode to allow creating, modifying and deleting features. Note that each 
 created/modified/deleted feature requires a dedicated network request, so 
 performance might suffer in case of simultaneous modification of hundreds or 
 more features at a time. 
