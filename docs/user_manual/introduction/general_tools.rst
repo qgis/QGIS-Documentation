@@ -1508,7 +1508,7 @@ manage:
   :ref:`project_properties`)
 * **vector layer variables** from the :guilabel:`Layer Properties` dialog
   (see :ref:`vector_properties_dialog`);
-* **modeler variables** from the :guilabel:`Graphical Modeler` dialog
+* **modeler variables** from the :guilabel:`Model Designer` dialog
   (see :ref:`processing.modeler`);
 * **layout variables** from the :guilabel:`Layout` panel in the
   Print layout (see :ref:`layout_panel`);
