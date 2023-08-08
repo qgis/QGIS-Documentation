@@ -50,6 +50,8 @@ jobs:
       name: Create Pull Request for master
       uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # v5.0.2
       with:
+        token: ${{ secrets.GH_PAT }}
+        push-to-fork: geo-ninja/QGIS-Documentation
         commit-message: Update statistics of translation
         title: Update statistics of translation
         delete-branch: true
