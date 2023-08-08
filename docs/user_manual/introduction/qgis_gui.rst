@@ -620,7 +620,7 @@ views using the :menuselection:`View` tools. For example, you can:
 
 * Create new 2D or 3D map views next to the main map canvas
 * :ref:`Zoom or pan <zoom_pan>` to any place
-* Query displayed features' attributes or geometry
+* Query the attributes or geometry of the displayed features 
 * Enhance the map view with preview modes, annotations or decorations
 * Access any panel or toolbar
 
