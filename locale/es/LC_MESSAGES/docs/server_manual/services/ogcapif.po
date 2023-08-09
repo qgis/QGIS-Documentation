@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
 # Eric Armijo, 2023
 # 
 #, fuzzy
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-08-08 18:30+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
 "Last-Translator: Eric Armijo, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
@@ -41,13 +41,21 @@ msgstr ""
 
 #: ../../docs/server_manual/services/ogcapif.rst:11
 msgid ""
+"The API can be reached on typical installations via "
+"`http://localhost/qgisserver/wfs3`"
+msgstr ""
+"En instalaciones típicas, se puede acceder a la API a través de "
+"`http://localhost/qgisserver/wfs3`."
+
+#: ../../docs/server_manual/services/ogcapif.rst:13
+msgid ""
 "Here is a quick informal summary of the most important differences between "
 "the well known WFS protocol and OAPIF:"
 msgstr ""
 "He aquí un rápido resumen informal de las diferencias más importantes entre "
 "el conocido protocolo WFS y la OAPIF:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:14
+#: ../../docs/server_manual/services/ogcapif.rst:16
 msgid ""
 "OAPIF is based on a `REST "
 "<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
@@ -55,7 +63,7 @@ msgstr ""
 "OAPIF se basa en una API `REST "
 "<https://en.wikipedia.org/wiki/Representational_state_transfer>`_"
 
-#: ../../docs/server_manual/services/ogcapif.rst:17
+#: ../../docs/server_manual/services/ogcapif.rst:19
 msgid ""
 "OAPIF must follow the `OPENAPI "
 "<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
@@ -63,7 +71,7 @@ msgstr ""
 "La OAPIF debe seguir las especificaciones de `OPENAPI "
 "<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_."
 
-#: ../../docs/server_manual/services/ogcapif.rst:20
+#: ../../docs/server_manual/services/ogcapif.rst:22
 msgid ""
 "OAPIF supports multiple output formats but it does not dictate any (only "
 "GeoJSON and HTML are currently available in QGIS OAPIF) and it uses `content"
@@ -76,19 +84,19 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Content_negotiation>`_ para determinar qué "
 "formato se debe servir al cliente"
 
-#: ../../docs/server_manual/services/ogcapif.rst:25
+#: ../../docs/server_manual/services/ogcapif.rst:27
 msgid "JSON and HTML are first class citizens in OAPIF"
 msgstr "JSON y HTML son ciudadanos de primera clase en OAPIF"
 
-#: ../../docs/server_manual/services/ogcapif.rst:26
+#: ../../docs/server_manual/services/ogcapif.rst:28
 msgid "OAPIF is self-documenting (through the ``/api`` endpoint)"
 msgstr "OAPIF se autodocumenta (a través del punto final ``/api``)"
 
-#: ../../docs/server_manual/services/ogcapif.rst:27
+#: ../../docs/server_manual/services/ogcapif.rst:29
 msgid "OAPIF is fully navigable (through links) and browsable"
 msgstr "La OAPIF es totalmente navegable (a través de enlaces) y navegable"
 
-#: ../../docs/server_manual/services/ogcapif.rst:31
+#: ../../docs/server_manual/services/ogcapif.rst:33
 msgid ""
 "While the OGC API Features implementation in QGIS can make use of the "
 "``MAP`` parameter to specify the project file, no extra query parameters are"
@@ -105,7 +113,7 @@ msgstr ""
 "entorno por otros medios (es decir, estableciendo ``QGIS_PROJECT_FILE`` en "
 "el entorno a través de una regla de reescritura del servidor web)."
 
-#: ../../docs/server_manual/services/ogcapif.rst:42
+#: ../../docs/server_manual/services/ogcapif.rst:44
 msgid ""
 "The **API** endpoint provides comprehensive documentation of all supported "
 "parameters and output formats of your service. The following paragraphs will"
@@ -115,11 +123,11 @@ msgstr ""
 "parámetros y formatos de salida admitidos de su servicio. Los siguientes "
 "párrafos solo describirán los más importantes."
 
-#: ../../docs/server_manual/services/ogcapif.rst:48
+#: ../../docs/server_manual/services/ogcapif.rst:50
 msgid "Resource representation"
 msgstr "Representación de recurso"
 
-#: ../../docs/server_manual/services/ogcapif.rst:50
+#: ../../docs/server_manual/services/ogcapif.rst:52
 msgid ""
 "The implementation of OGC API Features in QGIS Server currently supports the"
 " following resource representation (output) formats:"
@@ -127,15 +135,15 @@ msgstr ""
 "La implementación de las funcionalidades de la API OGC en QGIS Server admite"
 " actualmente los siguientes formatos de representación de recursos (salida):"
 
-#: ../../docs/server_manual/services/ogcapif.rst:53
+#: ../../docs/server_manual/services/ogcapif.rst:55
 msgid "HTML"
 msgstr ""
 
-#: ../../docs/server_manual/services/ogcapif.rst:54
+#: ../../docs/server_manual/services/ogcapif.rst:56
 msgid "JSON"
 msgstr ""
 
-#: ../../docs/server_manual/services/ogcapif.rst:56
+#: ../../docs/server_manual/services/ogcapif.rst:58
 msgid ""
 "The format that is actually served will depend on content negotiation, but a"
 " specific format can be explicitly requested by appending a format specifier"
@@ -145,30 +153,30 @@ msgstr ""
 "pero se puede solicitar explícitamente un formato específico agregando un "
 "especificador de formato a los puntos finales."
 
-#: ../../docs/server_manual/services/ogcapif.rst:60
+#: ../../docs/server_manual/services/ogcapif.rst:62
 msgid "Supported format specifier extensions are:"
 msgstr "Las extensiones de especificador de formato admitidas son:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:62
+#: ../../docs/server_manual/services/ogcapif.rst:64
 msgid "``.json``"
 msgstr ""
 
-#: ../../docs/server_manual/services/ogcapif.rst:63
+#: ../../docs/server_manual/services/ogcapif.rst:65
 msgid "``.html``"
 msgstr ""
 
-#: ../../docs/server_manual/services/ogcapif.rst:65
+#: ../../docs/server_manual/services/ogcapif.rst:67
 msgid ""
 "Additional format specifier aliases may be defined by specific endpoints:"
 msgstr ""
 "Los alias de especificador de formato adicionales se pueden definir por "
 "puntos finales específicos:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:68
+#: ../../docs/server_manual/services/ogcapif.rst:70
 msgid "``.openapi``: alias for ``.json`` supported by the **API** endpoint"
 msgstr "``.openapi``: alias para ``.json`` soportado por la **API** endpoint"
 
-#: ../../docs/server_manual/services/ogcapif.rst:69
+#: ../../docs/server_manual/services/ogcapif.rst:71
 msgid ""
 "``.geojson``: alias for ``.json`` supported by the **Features** and "
 "**Feature** endpoints"
@@ -176,11 +184,11 @@ msgstr ""
 "``.geojson``: alias para ``.json`` soportado por los endpoints **Features** "
 "y **Feature**"
 
-#: ../../docs/server_manual/services/ogcapif.rst:75
+#: ../../docs/server_manual/services/ogcapif.rst:77
 msgid "Endpoints"
 msgstr "Puntos finales"
 
-#: ../../docs/server_manual/services/ogcapif.rst:77
+#: ../../docs/server_manual/services/ogcapif.rst:79
 msgid ""
 "The API provides a list of endpoints that the clients can retrieve. The "
 "system is designed in such a way that every response provides a set of links"
@@ -191,7 +199,7 @@ msgstr ""
 "proporciona un conjunto de enlaces para navegar a través de todos los "
 "recursos proporcionados."
 
-#: ../../docs/server_manual/services/ogcapif.rst:81
+#: ../../docs/server_manual/services/ogcapif.rst:83
 msgid "Endpoints points provided by the QGIS implementation are:"
 msgstr "Los puntos finales proporcionados por la implementación de QGIS son:"
 
@@ -208,7 +216,7 @@ msgid "Description"
 msgstr "Descripción"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
-#: ../../docs/server_manual/services/ogcapif.rst:104
+#: ../../docs/server_manual/services/ogcapif.rst:107
 msgid "Landing Page"
 msgstr "Página de Aterrizaje"
 
@@ -302,7 +310,17 @@ msgstr ""
 msgid "Information about a single feature"
 msgstr "Información acerca de un objeto espacial solo"
 
-#: ../../docs/server_manual/services/ogcapif.rst:106
+#: ../../docs/server_manual/services/ogcapif.rst:104
+msgid ""
+"Similar to WFS-T (transactional Web Feature Service), it is possible to add,"
+" update and delete features (CRUD). The respective requests are described on"
+" \"``/api``\"."
+msgstr ""
+"De forma similar a WFS-T (Web Feature Service transaccional), es posible "
+"añadir, actualizar y eliminar características (CRUD). Las solicitudes "
+"correspondientes se describen en \"``/api``\"."
+
+#: ../../docs/server_manual/services/ogcapif.rst:109
 msgid ""
 "The main endpoint is the **Landing Page**. From that page it is possible to "
 "navigate to all the available service endpoints. The **Landing Page** must "
@@ -312,7 +330,7 @@ msgstr ""
 "posible navegar a todos los puntos finales de servicio disponibles. La "
 "**página de destino** debe proporcionar enlaces a"
 
-#: ../../docs/server_manual/services/ogcapif.rst:110
+#: ../../docs/server_manual/services/ogcapif.rst:113
 msgid ""
 "the API definition (path ``/api`` link relations ``service-desc`` and "
 "``service-doc``),"
@@ -320,7 +338,7 @@ msgstr ""
 "la definición de API (ruta ``/api`` relaciones de enlace ``service-desc`` y "
 "``service-doc``),"
 
-#: ../../docs/server_manual/services/ogcapif.rst:112
+#: ../../docs/server_manual/services/ogcapif.rst:115
 msgid ""
 "the Conformance declaration (path ``/conformance``, link relation "
 "``conformance``), and"
@@ -328,20 +346,20 @@ msgstr ""
 "la declaración de conformidad (ruta ``/conformidad``, relación de enlace "
 "``conformidad``), y"
 
-#: ../../docs/server_manual/services/ogcapif.rst:114
+#: ../../docs/server_manual/services/ogcapif.rst:117
 msgid "the Collections (path ``/collections``, link relation ``data``)."
 msgstr ""
 "las Colecciones (ruta ``/colecciones``, relación de enlace ``datos``)."
 
-#: ../../docs/server_manual/services/ogcapif.rst:121
+#: ../../docs/server_manual/services/ogcapif.rst:124
 msgid "Server OAPIF landing page"
 msgstr "Página de inicio del servidor OAPIF"
 
-#: ../../docs/server_manual/services/ogcapif.rst:126
+#: ../../docs/server_manual/services/ogcapif.rst:129
 msgid "API Definition"
 msgstr "Definición API"
 
-#: ../../docs/server_manual/services/ogcapif.rst:128
+#: ../../docs/server_manual/services/ogcapif.rst:131
 msgid ""
 "The **API Definition** is an OPENAPI-compliant description of the API "
 "provided by the service. In its HTML representation it is a browsable page "
@@ -354,7 +372,7 @@ msgstr ""
 "enumeran y documentan con precisión. La ruta de este punto final es "
 "``/api``."
 
-#: ../../docs/server_manual/services/ogcapif.rst:135
+#: ../../docs/server_manual/services/ogcapif.rst:138
 msgid ""
 "The API definition provides a comprehensive and authoritative documentation "
 "of the service, including all supported parameters and returned formats."
@@ -363,15 +381,15 @@ msgstr ""
 " servicio, incluidos todos los parámetros admitidos y los formatos "
 "devueltos."
 
-#: ../../docs/server_manual/services/ogcapif.rst:141
+#: ../../docs/server_manual/services/ogcapif.rst:144
 msgid "This endpoint is analogue to WFS's ``GetCapabilities``"
 msgstr "Este punto final es análogo a ``GetCapabilities`` de WFS's"
 
-#: ../../docs/server_manual/services/ogcapif.rst:144
+#: ../../docs/server_manual/services/ogcapif.rst:147
 msgid "Collections list"
 msgstr "Lista de colecciones"
 
-#: ../../docs/server_manual/services/ogcapif.rst:146
+#: ../../docs/server_manual/services/ogcapif.rst:149
 msgid ""
 "The collections endpoint provides a list of all the collections available in"
 " the service. Since the service \"serves\" a single QGIS project the "
@@ -385,15 +403,15 @@ msgstr ""
 " (si se publicaron como WFS en las propiedades del proyecto). La ruta de "
 "este punto final es ``/collections/``."
 
-#: ../../docs/server_manual/services/ogcapif.rst:158
+#: ../../docs/server_manual/services/ogcapif.rst:161
 msgid "Server OAPIF collections list page"
 msgstr "Página de la lista de colecciones del servidor OAPIF"
 
-#: ../../docs/server_manual/services/ogcapif.rst:162
+#: ../../docs/server_manual/services/ogcapif.rst:165
 msgid "Collection detail"
 msgstr "Detalle de colección"
 
-#: ../../docs/server_manual/services/ogcapif.rst:164
+#: ../../docs/server_manual/services/ogcapif.rst:167
 msgid ""
 "While the collections endpoint does not provide detailed information about "
 "each available collection, that information is available in the "
@@ -405,8 +423,8 @@ msgstr ""
 "en los puntos finales ``/collections/{collectionId}``. La información típica"
 " incluye la extensión, una descripción, SRC y otros metadatos."
 
-#: ../../docs/server_manual/services/ogcapif.rst:170
-#: ../../docs/server_manual/services/ogcapif.rst:191
+#: ../../docs/server_manual/services/ogcapif.rst:173
+#: ../../docs/server_manual/services/ogcapif.rst:194
 msgid ""
 "The HTML representation also provides a browsable map with the available "
 "features."
@@ -414,15 +432,15 @@ msgstr ""
 "La representación HTML también proporciona un mapa navegable con las "
 "funciones disponibles."
 
-#: ../../docs/server_manual/services/ogcapif.rst:179
+#: ../../docs/server_manual/services/ogcapif.rst:182
 msgid "Server OAPIF collection detail page"
 msgstr "Página de detalles de la colección del servidor OAPIF"
 
-#: ../../docs/server_manual/services/ogcapif.rst:185
+#: ../../docs/server_manual/services/ogcapif.rst:188
 msgid "Features list"
 msgstr "Lista de objetos espaciales"
 
-#: ../../docs/server_manual/services/ogcapif.rst:187
+#: ../../docs/server_manual/services/ogcapif.rst:190
 msgid ""
 "This endpoint provides a list of all features in a collection knowing the "
 "collection ID. The path of this endpoint is "
@@ -432,19 +450,19 @@ msgstr ""
 "colección que conocen el ID de la colección. La ruta de este punto final es "
 "``/collections/{collectionId}/items``."
 
-#: ../../docs/server_manual/services/ogcapif.rst:197
+#: ../../docs/server_manual/services/ogcapif.rst:200
 msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
 msgstr "Este punto final es análogo a ``GetFeature`` en WFS 1 y WFS 2."
 
-#: ../../docs/server_manual/services/ogcapif.rst:205
+#: ../../docs/server_manual/services/ogcapif.rst:208
 msgid "Server OAPIF features list page"
 msgstr "Página de la lista de funcionalidades del servidor OAPIF"
 
-#: ../../docs/server_manual/services/ogcapif.rst:209
+#: ../../docs/server_manual/services/ogcapif.rst:212
 msgid "Feature detail"
 msgstr "Detalle de objeto espacial"
 
-#: ../../docs/server_manual/services/ogcapif.rst:211
+#: ../../docs/server_manual/services/ogcapif.rst:214
 msgid ""
 "This endpoint provides all the available information about a single feature,"
 " including the feature attributes and its geometry. The path of this "
@@ -454,7 +472,7 @@ msgstr ""
 "entidad, incluidos los atributos de la entidad y su geometría. La ruta de "
 "este punto final es ``/collections/{collectionId}/items/{itemId}``."
 
-#: ../../docs/server_manual/services/ogcapif.rst:216
+#: ../../docs/server_manual/services/ogcapif.rst:219
 msgid ""
 "The HTML representation also provides a browsable map with the feature "
 "geometry."
@@ -462,15 +480,15 @@ msgstr ""
 "La representación HTML también proporciona un mapa navegable con la "
 "geometría de la entidad."
 
-#: ../../docs/server_manual/services/ogcapif.rst:225
+#: ../../docs/server_manual/services/ogcapif.rst:228
 msgid "Server OAPIF feature detail page"
 msgstr "Página de detalles de la funcionalidad OAPIF"
 
-#: ../../docs/server_manual/services/ogcapif.rst:230
+#: ../../docs/server_manual/services/ogcapif.rst:233
 msgid "Pagination"
 msgstr "Paginación"
 
-#: ../../docs/server_manual/services/ogcapif.rst:232
+#: ../../docs/server_manual/services/ogcapif.rst:235
 msgid ""
 "Pagination of a long list of features is implemented in the OGC API through "
 "``next`` and ``prev`` links, QGIS server constructs these links by appending"
@@ -481,16 +499,16 @@ msgstr ""
 "construye estos enlaces agregando ``límite`` y ``compensación`` como "
 "parámetros de cadena de consulta."
 
-#: ../../docs/server_manual/services/ogcapif.rst:237
-#: ../../docs/server_manual/services/ogcapif.rst:312
-#: ../../docs/server_manual/services/ogcapif.rst:324
-#: ../../docs/server_manual/services/ogcapif.rst:338
-#: ../../docs/server_manual/services/ogcapif.rst:349
-#: ../../docs/server_manual/services/ogcapif.rst:378
+#: ../../docs/server_manual/services/ogcapif.rst:240
+#: ../../docs/server_manual/services/ogcapif.rst:315
+#: ../../docs/server_manual/services/ogcapif.rst:327
+#: ../../docs/server_manual/services/ogcapif.rst:341
+#: ../../docs/server_manual/services/ogcapif.rst:352
+#: ../../docs/server_manual/services/ogcapif.rst:381
 msgid "URL example:"
 msgstr "URL ejemplo:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:245
+#: ../../docs/server_manual/services/ogcapif.rst:248
 msgid ""
 "The maximum acceptable value for ``limit`` can be configured with the "
 "``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: "
@@ -500,11 +518,11 @@ msgstr ""
 "de configuración del servidor ``QGIS_SERVER_API_WFS3_MAX_LIMIT`` (ver: "
 ":ref:`qgis-server-envvar`)."
 
-#: ../../docs/server_manual/services/ogcapif.rst:251
+#: ../../docs/server_manual/services/ogcapif.rst:254
 msgid "Feature filtering"
 msgstr "Filtrado de objetos espaciales"
 
-#: ../../docs/server_manual/services/ogcapif.rst:253
+#: ../../docs/server_manual/services/ogcapif.rst:256
 msgid ""
 "The features available in a collection can be filtered/searched by "
 "specifying one or more filters."
@@ -512,11 +530,11 @@ msgstr ""
 "Las funciones disponibles en una colección se pueden filtrar/buscar "
 "especificando uno o más filtros."
 
-#: ../../docs/server_manual/services/ogcapif.rst:258
+#: ../../docs/server_manual/services/ogcapif.rst:261
 msgid "Date and time filter"
 msgstr "Filtro de fecha y hora"
 
-#: ../../docs/server_manual/services/ogcapif.rst:259
+#: ../../docs/server_manual/services/ogcapif.rst:262
 msgid ""
 "Collections with date and/or datetime attributes can be filtered by "
 "specifying a ``datetime`` argument in the query string. By default the first"
@@ -531,7 +549,7 @@ msgstr ""
 "dimensión de \"Fecha\" u \"Hora\" en :menuselection:`Servidor QGIS  -> "
 "Dimensión` del cuadro de diálogo de propiedades de la capa."
 
-#: ../../docs/server_manual/services/ogcapif.rst:266
+#: ../../docs/server_manual/services/ogcapif.rst:269
 msgid ""
 "The date and time filtering syntax is fully described in the "
 ":ref:`ogc_api_features_api_definition` and also supports ranges (begin and "
@@ -541,17 +559,17 @@ msgstr ""
 ":ref:`ogc_api_features_api_definition` y también admite rangos (se incluyen "
 "los valores de inicio y finalización) además de valores únicos."
 
-#: ../../docs/server_manual/services/ogcapif.rst:271
+#: ../../docs/server_manual/services/ogcapif.rst:274
 msgid "URL examples:"
 msgstr "URL ejemplos:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:273
+#: ../../docs/server_manual/services/ogcapif.rst:276
 msgid "Returns only the features with date dimension matching ``2019-01-01``"
 msgstr ""
 "Devuelve solo las funciones con coincidencia de dimensión de fecha "
 "``2019-01-01``"
 
-#: ../../docs/server_manual/services/ogcapif.rst:279
+#: ../../docs/server_manual/services/ogcapif.rst:282
 msgid ""
 "Returns only the features with datetime dimension matching "
 "``2019-01-01T01:01:01``"
@@ -559,7 +577,7 @@ msgstr ""
 "Devuelve solo las funciones con coincidencia de dimensión de fecha y hora "
 "``2019-01-01T01:01:01``"
 
-#: ../../docs/server_manual/services/ogcapif.rst:286
+#: ../../docs/server_manual/services/ogcapif.rst:289
 msgid ""
 "Returns only the features with datetime dimension in the range "
 "``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
@@ -567,38 +585,38 @@ msgstr ""
 "Devuelve solo las entidades con dimensión de fecha y hora en el rango "
 "``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
 
-#: ../../docs/server_manual/services/ogcapif.rst:295
+#: ../../docs/server_manual/services/ogcapif.rst:298
 msgid "Bounding box filter"
 msgstr "Filtro de recuadro delimitador"
 
-#: ../../docs/server_manual/services/ogcapif.rst:297
+#: ../../docs/server_manual/services/ogcapif.rst:300
 msgid ""
 "A bounding box spatial filter can be specified with the ``bbox`` parameter:"
 msgstr ""
 "Se puede especificar un filtro espacial de cuadro delimitador con el "
 "parámetro ``bbox``:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:299
+#: ../../docs/server_manual/services/ogcapif.rst:302
 msgid "The order of the comma separated elements is:"
 msgstr "El orden de los elementos separados por comas es:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:301
+#: ../../docs/server_manual/services/ogcapif.rst:304
 msgid "Lower left corner, WGS 84 longitude"
 msgstr "Esquina inferior izquierda, longitud WGS 84"
 
-#: ../../docs/server_manual/services/ogcapif.rst:302
+#: ../../docs/server_manual/services/ogcapif.rst:305
 msgid "Lower left corner, WGS 84 latitude"
 msgstr "Esquina inferior izquierda, latitud WGS 84"
 
-#: ../../docs/server_manual/services/ogcapif.rst:303
+#: ../../docs/server_manual/services/ogcapif.rst:306
 msgid "Upper right corner, WGS 84 longitude"
 msgstr "Esquina superior derecha, longitud WGS 84"
 
-#: ../../docs/server_manual/services/ogcapif.rst:304
+#: ../../docs/server_manual/services/ogcapif.rst:307
 msgid "Upper right corner, WGS 84 latitude"
 msgstr "Esquina superior derecha, latitud WGS 84"
 
-#: ../../docs/server_manual/services/ogcapif.rst:307
+#: ../../docs/server_manual/services/ogcapif.rst:310
 msgid ""
 "The OGC specifications also allow a 6 item bbox specifier where the third "
 "and sixth items are the Z components, this is not yet supported by QGIS "
@@ -608,7 +626,7 @@ msgstr ""
 "elementos donde el tercer y sexto elemento son los componentes Z, esto aún "
 "no es compatible con el servidor QGIS."
 
-#: ../../docs/server_manual/services/ogcapif.rst:318
+#: ../../docs/server_manual/services/ogcapif.rst:321
 msgid ""
 "If the *CRS* of the bounding box is not `WGS 84 "
 "<https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, a different CRS can be "
@@ -622,11 +640,11 @@ msgstr ""
 "identificador de formato SRC debe estar en el formato ʻOGC URI "
 "<https://www.opengis.net/def/crs/>`_:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:332
+#: ../../docs/server_manual/services/ogcapif.rst:335
 msgid "Attribute filters"
 msgstr "Filtros de Atributos"
 
-#: ../../docs/server_manual/services/ogcapif.rst:334
+#: ../../docs/server_manual/services/ogcapif.rst:337
 msgid ""
 "Attribute filters can be combined with the bounding box filter and they are "
 "in the general form: ``<attribute name>=<attribute value>``. Multiple "
@@ -636,27 +654,27 @@ msgstr ""
 "delimitador y están en la forma general: ``<attribute name>=<attribute "
 "value>``. Se pueden combinar varios filtros usando el operador \"Y\"."
 
-#: ../../docs/server_manual/services/ogcapif.rst:340
+#: ../../docs/server_manual/services/ogcapif.rst:343
 msgid "filters all features where attribute ``name`` equals \"my value\""
 msgstr "filtra todas las entidades donde ``nombre`` es igual a \"mi valor\""
 
-#: ../../docs/server_manual/services/ogcapif.rst:347
+#: ../../docs/server_manual/services/ogcapif.rst:350
 msgid "Partial matches are also supported by using a ``*`` (\"star\") operator:"
 msgstr ""
 "Coincidencias parciales también son soportads usando el operador ``*`` "
 "(\"estrella\")"
 
-#: ../../docs/server_manual/services/ogcapif.rst:351
+#: ../../docs/server_manual/services/ogcapif.rst:354
 msgid "filters all features where attribute ``name`` ends with \"value\""
 msgstr ""
 "filtra todas las entidades donde el atributo ``nombre`` finaliza con "
 "\"valor\""
 
-#: ../../docs/server_manual/services/ogcapif.rst:358
+#: ../../docs/server_manual/services/ogcapif.rst:361
 msgid "Feature sorting"
 msgstr "Ordenar Entidad"
 
-#: ../../docs/server_manual/services/ogcapif.rst:360
+#: ../../docs/server_manual/services/ogcapif.rst:363
 msgid ""
 "It is possible to order the result set by field value using the ``sortby`` "
 "query parameter."
@@ -664,7 +682,7 @@ msgstr ""
 "Es posible ordenar el conjunto de resultados por valor de campo utilizando "
 "el parámetro de consulta ``sortby``."
 
-#: ../../docs/server_manual/services/ogcapif.rst:363
+#: ../../docs/server_manual/services/ogcapif.rst:366
 msgid ""
 "The results are sorted in ascending order by default. To sort the results in"
 " descending order, a boolean flag (``sortdesc``) can be set:"
@@ -673,11 +691,11 @@ msgstr ""
 "ordenar los resultados en orden descendente, una bandera booleana "
 "(``sortdesc``) puede establecerse:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:372
+#: ../../docs/server_manual/services/ogcapif.rst:375
 msgid "Attribute selection"
 msgstr "Selección de atributos"
 
-#: ../../docs/server_manual/services/ogcapif.rst:374
+#: ../../docs/server_manual/services/ogcapif.rst:377
 msgid ""
 "The feature attributes returned by a :ref:`ogc_api_features_features_list` "
 "call can be limited by adding a comma separated list of attribute names in "
@@ -688,15 +706,15 @@ msgstr ""
 "de nombres de atributos separados por comas en el argumento opcional de "
 "cadena de consulta ``propiedades``."
 
-#: ../../docs/server_manual/services/ogcapif.rst:380
+#: ../../docs/server_manual/services/ogcapif.rst:383
 msgid "returns only the ``name`` attribute"
 msgstr "devuelve solo el atributo ``nombre``"
 
-#: ../../docs/server_manual/services/ogcapif.rst:388
+#: ../../docs/server_manual/services/ogcapif.rst:391
 msgid "Customize the HTML pages"
 msgstr "Personaliza las páginas HTML"
 
-#: ../../docs/server_manual/services/ogcapif.rst:390
+#: ../../docs/server_manual/services/ogcapif.rst:393
 msgid ""
 "The HTML representation uses a set of HTML templates to generate the "
 "response. The template is parsed by a template engine called `inja "
@@ -713,16 +731,16 @@ msgstr ""
 "representación ``JSON`` y algunas funciones adicionales están disponibles "
 "para la plantilla:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:402
+#: ../../docs/server_manual/services/ogcapif.rst:405
 msgid "Custom template functions"
 msgstr "Funciones personalizadas de plantilla"
 
-#: ../../docs/server_manual/services/ogcapif.rst:404
+#: ../../docs/server_manual/services/ogcapif.rst:407
 msgid "``path_append( path )``: appends a directory path to the current url"
 msgstr ""
 "``path_append( path )``: adjunta una ruta de directorio a la actual url"
 
-#: ../../docs/server_manual/services/ogcapif.rst:405
+#: ../../docs/server_manual/services/ogcapif.rst:408
 msgid ""
 "``path_chomp( n )``: removes the specified number \"n\" of directory "
 "components from the current url path"
@@ -730,23 +748,23 @@ msgstr ""
 "``path_chomp( n )``: borra el número especificado \"n\" de componentes del "
 "directorio de la ruta url actual"
 
-#: ../../docs/server_manual/services/ogcapif.rst:407
+#: ../../docs/server_manual/services/ogcapif.rst:410
 msgid "``json_dump( )``: prints the JSON data passed to the template"
 msgstr "``json_dump( )``: imprime los datos JSON pasados a la plantilla"
 
-#: ../../docs/server_manual/services/ogcapif.rst:408
+#: ../../docs/server_manual/services/ogcapif.rst:411
 msgid ""
 "``static( path )``: returns the full URL to the specified static path. For "
 "example: \"static( \"/style/black.css\" )\" with a root path "
-"\"http://localhost/qgisserver/oapif\" will return "
-"\"http://localhost/qgisserver/oapif/static/style/black.css\"."
+"\"http://localhost/qgisserver/wfs3\" will return "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
 msgstr ""
 "``static( path )``: devuelve la URL completa a la ruta estática "
 "especificada. Por ejemplo: \"static( \"/style/black.css\" )\" con una ruta "
-"raíz \"http://localhost/qgisserver/oapif\" devolverá "
-"\"http://localhost/qgisserver/oapif/static/style/black.css\"."
+"raiz \"http://localhost/qgisserver/wfs3\" devolverá "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
 
-#: ../../docs/server_manual/services/ogcapif.rst:412
+#: ../../docs/server_manual/services/ogcapif.rst:415
 msgid ""
 "``links_filter( links, key, value )``: Returns filtered links from a link "
 "list"
@@ -754,7 +772,7 @@ msgstr ""
 "``links_filter( links, key, value )``: Devuelve enlaces filtrados de una "
 "lista de enlaces"
 
-#: ../../docs/server_manual/services/ogcapif.rst:414
+#: ../../docs/server_manual/services/ogcapif.rst:417
 msgid ""
 "``content_type_name( content_type )``: Returns a short name from a content "
 "type, for example \"text/html\" will return \"HTML\""
@@ -762,7 +780,7 @@ msgstr ""
 "``content_type_name( content_type )``: Devuelve un nombre corto de un tipo "
 "de contenido, por ejemplo \"text/html\" devolverá \"HTML\""
 
-#: ../../docs/server_manual/services/ogcapif.rst:416
+#: ../../docs/server_manual/services/ogcapif.rst:419
 msgid ""
 "``nl2br( text )``: Returns the input text with all newlines replaced by "
 "\"<br>\" tags"
@@ -770,7 +788,7 @@ msgstr ""
 "``nl2br( text )``: Devuelve el texto de entrada con todas los saltos de "
 "línea reemplazados por etiquetas \"<br>\""
 
-#: ../../docs/server_manual/services/ogcapif.rst:418
+#: ../../docs/server_manual/services/ogcapif.rst:421
 msgid ""
 "``starts_with( string, prefix )``: returns true if a string begins with the "
 "provided string prefix, false otherwise"
@@ -778,11 +796,11 @@ msgstr ""
 "``starts_with( string, prefix )``: devuelve true si una cadena comienza con "
 "el prefijo de cadena proporcionado, false en caso contrario"
 
-#: ../../docs/server_manual/services/ogcapif.rst:425
+#: ../../docs/server_manual/services/ogcapif.rst:428
 msgid "Template overrides"
 msgstr "Sobreescritura de Plantilla"
 
-#: ../../docs/server_manual/services/ogcapif.rst:427
+#: ../../docs/server_manual/services/ogcapif.rst:430
 msgid ""
 "Templates and static assets are stored in subdirectories of the QGIS server "
 "default API resource directory "
@@ -796,12 +814,12 @@ msgstr ""
 "directorio base se puede personalizar cambiando la variable de entorno "
 "``QGIS_SERVER_API_RESOURCES_DIRECTORY``."
 
-#: ../../docs/server_manual/services/ogcapif.rst:433
+#: ../../docs/server_manual/services/ogcapif.rst:436
 msgid "A typical Linux installation will have the following directory tree:"
 msgstr ""
 "Una instalación típica de Linux tendrá el siguiente árbol de directorios:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:458
+#: ../../docs/server_manual/services/ogcapif.rst:461
 msgid ""
 "To override the templates you can copy the whole tree to another location "
 "and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location."
