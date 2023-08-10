@@ -76,7 +76,7 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
 
 .. _figure_layout_legend_items:
 
-.. figure:: img/legend_items.png
+.. figure:: img/item_properties_legend.png
    :align: center
 
    Legend Items group
@@ -120,8 +120,10 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
   layout.
   
 * With the |checkbox| :guilabel:`Only show items inside linked map`, only the
-  legend items visible in the linked map will be listed in the legend. This tool
-  remains available when |checkbox| :guilabel:`Auto-update` is active
+  legend items visible in the linked map will be listed in the legend. If you 
+  have more then one map you can click on :guilabel:`...` and select other 
+  maps from your layout.
+  This tool remains available when |checkbox| :guilabel:`Auto-update` is active.
 * While generating an atlas with polygon features, you can filter out legend
   items that lie outside the current atlas feature. To do that, check the
   |checkbox| :guilabel:`Only show items inside current atlas feature` option.
