@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-08-10 09:49+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: DiGro, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
@@ -51,11 +51,11 @@ msgstr ""
 ":menuselection:`Project -->` |fileSave| :menuselection:`Opslaan` of "
 ":menuselection:`Project -->` |fileSaveAs| :menuselection:`Opslaan als…`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:228
+#: ../../docs/user_manual/introduction/project_files.rst:230
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:230
+#: ../../docs/user_manual/introduction/project_files.rst:232
 msgid "fileSaveAs"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgstr ""
 "het project en wijzigingen in brondata op te slaan indien nodig` onder "
 ":menuselection:`Extra --> Opties --> Algemeen`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:220
+#: ../../docs/user_manual/introduction/project_files.rst:222
 msgid "checkbox"
 msgstr ""
 
@@ -89,7 +89,7 @@ msgstr ""
 ":menuselection:`Project --> Nieuw uit sjabloon` of :menuselection:`Project "
 "--> Recent geopend -->`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:226
+#: ../../docs/user_manual/introduction/project_files.rst:228
 msgid "fileOpen"
 msgstr ""
 
@@ -128,7 +128,7 @@ msgstr ""
 "wijzigingen zijn geweest sinds de laatste keer dat het werd geopend of voor "
 "het laatst werd opgeslagen."
 
-#: ../../docs/user_manual/introduction/project_files.rst:224
+#: ../../docs/user_manual/introduction/project_files.rst:226
 msgid "fileNew"
 msgstr ""
 
@@ -259,15 +259,15 @@ msgid ""
 "The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the "
 "default is to save using a compressed format with the ``.qgz`` extension. "
 "The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together"
-" with its associated sqlite database (``.qgd``) for :ref:`auxiliary data "
+" with its associated SQLite database (``.qgd``) for :ref:`auxiliary data "
 "<vector_auxiliary_storage>`. You can get to these files by unzipping the "
 "``.qgz`` file."
 msgstr ""
-"De extensie voor projecten van QGIS is ``.qgs``, maar indien wordt "
-"opgeslagen vanuit QGIS is de standaard om op te slaan in een gecomprimeerde "
+"De extensie voor projecten van QGIS is ``.qgs``, maar indien het wordt "
+"opgeslagen vanuit QGIS is de standaard om op te slaan een gecomprimeerde "
 "indeling met de extensie ``.qgz``. Het bestand ``.qgs`` wordt ingebed in het"
 " bestand ``.qgz`` (een ZIP-archief), samen met de daaraan geassocieerde "
-"database van Sqlite (``.qgd``) voor :ref:`hulpgegevens "
+"database van SQLite (``.qgd``) voor :ref:`hulpgegevens "
 "<vector_auxiliary_storage>`. U kunt bij deze bestanden komen door het "
 "bestand ``.qgz`` uit te pakken."
 
@@ -281,11 +281,11 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/project_files.rst:125
 msgid ""
-"Projects can also be saved/loaded to/from a PostgreSQL database using the "
-"following Project menu items:"
+"Projects can also be saved/loaded to/from a PostgreSQL, GeoPackage or Oracle"
+" database using the following Project menu items:"
 msgstr ""
 "Projecten kunnen ook worden opgeslagen/geladen in/uit een database van "
-"PostgreSQL met de volgende items van het menu Project:"
+"PostgreSQL, GeoPackage of Oracle met de volgende items van het menu Project:"
 
 #: ../../docs/user_manual/introduction/project_files.rst:128
 msgid ":menuselection:`Project --> Open from`"
@@ -298,30 +298,31 @@ msgstr ":menuselection:`Project --> Opslaan naar`"
 #: ../../docs/user_manual/introduction/project_files.rst:131
 msgid ""
 "Both menu items have a sub-menu with a list of extra project storage "
-"implementations (PostgreSQL and GeoPackage). Clicking the action will open a"
-" dialog to pick a GeoPackage connection and project or a PostgreSQL "
-"connection, schema and project."
+"implementations (PostgreSQL, GeoPackage and Oracle). Clicking the action "
+"will open a dialog to pick a GeoPackage connection and project, a PostgreSQL"
+" connection, schema and project or Oracle connection, owner and project."
 msgstr ""
 "Beide menu-items hebben een submenu met een lijst van extra implementaties "
-"voor opslaan van een project (PostgreSQL en GeoPackage). Klikken op de actie"
-" zal een dialoogvenster openen om een verbinding voor GeoPackage en een "
-"project te kiezen of een verbinding naar PostgreSQL, schema en project."
+"voor opslaan van een project (PostgreSQL, GeoPackage en Oracle). Klikken op "
+"de actie zal een dialoogvenster openen om een verbinding voor GeoPackage en "
+"een project te kiezen of een verbinding naar PostgreSQL, schema en project "
+"of verbinding, eigenaar en project naar Oracle."
 
-#: ../../docs/user_manual/introduction/project_files.rst:136
+#: ../../docs/user_manual/introduction/project_files.rst:137
 msgid ""
-"Projects stored in Geopackage or PostgreSQL can also be loaded through the "
-"QGIS browser panel, either by double-clicking them or by dragging them to "
-"the map canvas."
+"Projects stored in GeoPackage, PostgreSQL or Oracle can also be loaded "
+"through the QGIS browser panel, either by double-clicking them or by "
+"dragging them to the map canvas."
 msgstr ""
-"In Geopackage of PostgreSQL opgeslagen projecten kunnen ook worden geladen "
-"vanuit het paneel Browser van QGIS, door te dubbelklikken op de naam of door"
-" het te slepen en neer te zetten in het kaartvenster."
+"In GeoPackage, PostgreSQL of Oracle opgeslagen projecten kunnen ook worden "
+"geladen vanuit het paneel Browser van QGIS, door te dubbelklikken op de naam"
+" of door het te slepen en neer te zetten in het kaartvenster."
 
-#: ../../docs/user_manual/introduction/project_files.rst:144
+#: ../../docs/user_manual/introduction/project_files.rst:145
 msgid "Handling broken file paths"
 msgstr "Afhandelen defecte bestandspaden"
 
-#: ../../docs/user_manual/introduction/project_files.rst:146
+#: ../../docs/user_manual/introduction/project_files.rst:147
 msgid ""
 "When opening a project, QGIS may fail to reach some data sources due to "
 "unavailable service/database, or to a renamed or moved file. QGIS then opens"
@@ -334,7 +335,7 @@ msgstr ""
 ":guilabel:`Niet beschikbare lagen afhandelen` dat verwijst naar de niet "
 "gevonden lagen. U kunt:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:152
+#: ../../docs/user_manual/introduction/project_files.rst:153
 msgid ""
 "Double-click in the :guilabel:`Datasource` field, adjust the path of each "
 "layer and click :guilabel:`Apply changes`;"
@@ -342,7 +343,7 @@ msgstr ""
 "Dubbelklik in het veld :guilabel:`Databron`, pas het pad naar elke laag aan "
 "en klik op :guilabel:`Wijzigingen toepassen`;"
 
-#: ../../docs/user_manual/introduction/project_files.rst:154
+#: ../../docs/user_manual/introduction/project_files.rst:155
 msgid ""
 "Select a row, press :guilabel:`Browse` to indicate the correct location and "
 "click :guilabel:`Apply changes`;"
@@ -350,7 +351,7 @@ msgstr ""
 "Selecteer een rij, druk op :guilabel:`Bladeren` om de juiste locatie aan te "
 "geven en klik op :guilabel:`Wijzigingen toepassen`;"
 
-#: ../../docs/user_manual/introduction/project_files.rst:156
+#: ../../docs/user_manual/introduction/project_files.rst:157
 msgid ""
 "Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
 "fix all or selected broken path(s). Be aware that the browsing may take some"
@@ -361,7 +362,7 @@ msgstr ""
 "het bladeren enige tijd kan vergen. Klik dan op :guilabel:`Wijzigingen "
 "yoepassen`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:159
+#: ../../docs/user_manual/introduction/project_files.rst:160
 msgid ""
 "Ignore the message and open your project with the broken path(s) by clicking"
 " :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the "
@@ -377,11 +378,11 @@ msgstr ""
 "beschikbare laag!` ernaast in het paneel :guilabel:`Lagen`, of "
 ":guilabel:`Databron repareren…` in he contextmenu van de laag."
 
-#: ../../docs/user_manual/introduction/project_files.rst:232
+#: ../../docs/user_manual/introduction/project_files.rst:234
 msgid "indicatorBadLayer"
 msgstr "indicatorBadLayer"
 
-#: ../../docs/user_manual/introduction/project_files.rst:166
+#: ../../docs/user_manual/introduction/project_files.rst:167
 msgid ""
 "With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
 "fixed, QGIS scans through all other broken paths and tries to auto-fix those"
@@ -391,18 +392,18 @@ msgstr ""
 "laag eenmaal is gerepareerd, scant QGIS door alle foutieve paden en probeert"
 " automatisch die te repareren die hetzelfde foutieve pad hebben."
 
-#: ../../docs/user_manual/introduction/project_files.rst:169
+#: ../../docs/user_manual/introduction/project_files.rst:170
 msgid ""
 "|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
 msgstr ""
 "|deleteSelected| :guilabel:`Niet beschikbare lagen verwijderen` uit het "
 "project."
 
-#: ../../docs/user_manual/introduction/project_files.rst:222
+#: ../../docs/user_manual/introduction/project_files.rst:224
 msgid "deleteSelected"
 msgstr "deleteSelected"
 
-#: ../../docs/user_manual/introduction/project_files.rst:171
+#: ../../docs/user_manual/introduction/project_files.rst:172
 msgid ""
 "Launching QGIS from command line using the :ref:`skipbadlayers` option can "
 "help you skip the :guilabel:`Handle Unavailable Layers` dialog at startup."
@@ -411,11 +412,11 @@ msgstr ""
 "helpen het dialoogvenster :guilabel:`Niet beschikbare lagen afhandelen` bij "
 "het opstarten over te slaan."
 
-#: ../../docs/user_manual/introduction/project_files.rst:177
+#: ../../docs/user_manual/introduction/project_files.rst:178
 msgid "Generating output"
 msgstr "Uitvoer maken"
 
-#: ../../docs/user_manual/introduction/project_files.rst:182
+#: ../../docs/user_manual/introduction/project_files.rst:183
 msgid ""
 "There are several ways to generate output from your QGIS session. We have "
 "already discussed saving as a project file in :ref:`sec_projects`. Other "
@@ -425,26 +426,29 @@ msgstr ""
 "QGIS. We hebben het opslaan als een projectbestand al besproken in "
 ":ref:`sec_projects`. Andere manieren om uitvoerbestanden te maken zijn:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:187
+#: ../../docs/user_manual/introduction/project_files.rst:188
 msgid ""
 "Creating images: :menuselection:`Project --> Import/Export -->` "
 "|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
 "canvas rendering to an image format (PNG, JPG, TIFF...) at custom scale, "
-"resolution, size, ... Georeferencing the image is possible. See "
-":ref:`exportingmapcanvas` for more details."
+"resolution and size. Including georeference information in the exported "
+"image is possible, simply enable |checkbox| :guilabel:`Append georeference "
+"information (embedded or via world file)`. See :ref:`exportingmapcanvas` for"
+" more details."
 msgstr ""
 "Afbeeldingen maken: :menuselection:`Project --> Importeren/Exporteren -->` "
 "|saveMapAsImage| :menuselection:`Kaart als afbeelding exporteren…` voert het"
 " kaartvenster uit en rendert het naar een indeling voor afbeeldingen (PNG, "
-"JPG, TIFF...) met aangepaste schaal, resolutie, grootte, … De afbeelding "
-"voorzien van geoverwijzingen is mogelijk. Bekijk :ref:`exportingmapcanvas` "
-"voor meer details."
+"JPG, TIFF...) met aangepaste schaal, resolutie en grootte. De geëxporteerde "
+"afbeelding voorzien van geoverwijzingen is mogelijk, schakel eenvoudigweg "
+"|checkbox| :guilabel:`Informatie voor geoverwijzingen toevoegen (ingebed of "
+"via world file)` in. Bekijk :ref:`exportingmapcanvas` voor meer details."
 
-#: ../../docs/user_manual/introduction/project_files.rst:236
+#: ../../docs/user_manual/introduction/project_files.rst:238
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
 
-#: ../../docs/user_manual/introduction/project_files.rst:194
+#: ../../docs/user_manual/introduction/project_files.rst:196
 msgid ""
 "Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
 " Map to PDF...` outputs the map canvas rendering to PDF at custom scale, "
@@ -457,7 +461,7 @@ msgstr ""
 "gevorderde instellingen (vereenvoudiging, geoverwijzingen, …). Bekijk "
 ":ref:`exportingmapcanvas` voor meer details."
 
-#: ../../docs/user_manual/introduction/project_files.rst:200
+#: ../../docs/user_manual/introduction/project_files.rst:202
 msgid ""
 "Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export"
 " Project to DXF...` opens a dialog where you can define the 'Symbology "
@@ -473,7 +477,7 @@ msgstr ""
 "geëxporteerd met hoge precisie (bekijk het gedeelte "
 ":ref:`create_dxf_files`)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:207
+#: ../../docs/user_manual/introduction/project_files.rst:209
 msgid ""
 "Designing maps: :menuselection:`Project -->` |newLayout| :menuselection:`New"
 " Print Layout...` opens a dialog where you can layout and print the current "
@@ -484,6 +488,6 @@ msgstr ""
 "huidige kaartvenster kunt opmaken en afdrukken (bekijk het gedeelte "
 ":ref:`label_printlayout`)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:234
+#: ../../docs/user_manual/introduction/project_files.rst:236
 msgid "newLayout"
 msgstr ""
