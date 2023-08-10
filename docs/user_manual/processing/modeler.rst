@@ -26,7 +26,7 @@ The model designer interface
 
 .. _figure_modeler:
 
-.. figure:: img/modeler_canvas.png
+.. figure:: img/model_designer_1.png
    :align: center
 
    Model designer
@@ -329,7 +329,7 @@ default value and the range of valid values.
 
 .. _figure_model_parameter:
 
-.. figure:: img/models_parameters.png
+.. figure:: img/number_parameter_definition.png
    :align: center
 
    Model Parameters Definition
@@ -374,7 +374,7 @@ much in the same way as they are in the Processing toolbox.
 
 .. _figure_model_parameter_inputs:
 
-.. figure:: img/models_parameters3.png
+.. figure:: img/model_inputs.png
    :align: center
 
    Model Inputs
@@ -389,7 +389,7 @@ and the ``Climb along line`` algorithm dialogs.
 
 .. _figure_model_parameter_alg:
 
-.. figure:: img/models_parameters4.png
+.. figure:: img/model_parameters_6.png
    :align: center
 
    Model Algorithm parameters
@@ -431,7 +431,7 @@ how it will be served during the workflow:
   In the following picture you can see the two input parameters defined as
   ``Model Input`` and the temporary output layer:
 
-  .. figure:: img/models_parameters5.png
+  .. figure:: img/algorithm_input_and_output_parameters.png
      :align: center
 
      Algorithm Input and Output parameters
@@ -474,7 +474,7 @@ all the inputs and outputs of the algorithm so you can have a quick overview.
 
 .. _figure_model_model:
 
-.. figure:: img/models_model.png
+.. figure:: img/complete_model.png
    :align: center
 
    A complete model
@@ -485,7 +485,7 @@ useful in big models to group related elements in the modeler canvas and to keep
 workflow clean. For example we might group together all the inputs of the
 example:
 
-.. figure:: img/model_group_box.png
+.. figure:: img/model_group_box_3.png
    :align: center
 
    Model Group Box
@@ -500,7 +500,7 @@ main model dialog. At the bottom of the ``Input`` panel you will find the
 ``Reorder Model Inputs...`` button and by clicking on it a new dialog pops up
 allowing you to change the order of the inputs:
 
-.. figure:: img/model_reorder_inputs.png
+.. figure:: img/reorder_model_inputs.png
    :align: center
 
    Reorder Model Inputs
@@ -548,7 +548,7 @@ dialog like the one shown next will appear.
 
 .. _figure_help_edition:
 
-.. figure:: img/help_edition.png
+.. figure:: img/edit_model_help.png
    :align: center
 
    Editing Help
@@ -556,7 +556,8 @@ dialog like the one shown next will appear.
 On the right-hand side, you will see a simple HTML page, created using
 the description of the input parameters and outputs of the algorithm,
 along with some additional items like a general description of the
-model or its author.
+model or its author. Also, there is an Example section where you can
+input your own custom examples to help explain the usage of the model.
 The first time you open the help editor, all these descriptions are
 empty, but you can edit them using the elements on the left-hand side
 of the dialog.
