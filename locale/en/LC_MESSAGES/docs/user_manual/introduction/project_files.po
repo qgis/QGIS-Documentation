@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-08-10 09:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -39,11 +39,11 @@ msgid ""
 "|fileSaveAs| :menuselection:`Save As...`."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:228
+#: ../../docs/user_manual/introduction/project_files.rst:230
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:230
+#: ../../docs/user_manual/introduction/project_files.rst:232
 msgid "fileSaveAs"
 msgstr ""
 
@@ -56,7 +56,7 @@ msgid ""
 "setting under :menuselection:`Settings --> Options --> General`."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:220
+#: ../../docs/user_manual/introduction/project_files.rst:222
 msgid "checkbox"
 msgstr ""
 
@@ -68,7 +68,7 @@ msgid ""
 ":menuselection:`Project --> Open Recent -->`."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:226
+#: ../../docs/user_manual/introduction/project_files.rst:228
 msgid "fileOpen"
 msgstr ""
 
@@ -92,7 +92,7 @@ msgid ""
 "it was opened or last saved."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:224
+#: ../../docs/user_manual/introduction/project_files.rst:226
 msgid "fileNew"
 msgstr ""
 
@@ -207,7 +207,7 @@ msgid ""
 "The extension for QGIS projects is ``.qgs`` but when saving from QGIS, "
 "the default is to save using a compressed format with the ``.qgz`` "
 "extension. The ``.qgs`` file is embedded in the ``.qgz`` file (a zip "
-"archive), together with its associated sqlite database (``.qgd``) for "
+"archive), together with its associated SQLite database (``.qgd``) for "
 ":ref:`auxiliary data <vector_auxiliary_storage>`. You can get to these "
 "files by unzipping the ``.qgz`` file."
 msgstr ""
@@ -220,8 +220,8 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/project_files.rst:125
 msgid ""
-"Projects can also be saved/loaded to/from a PostgreSQL database using the"
-" following Project menu items:"
+"Projects can also be saved/loaded to/from a PostgreSQL, GeoPackage or "
+"Oracle database using the following Project menu items:"
 msgstr ""
 
 #: ../../docs/user_manual/introduction/project_files.rst:128
@@ -235,23 +235,24 @@ msgstr ""
 #: ../../docs/user_manual/introduction/project_files.rst:131
 msgid ""
 "Both menu items have a sub-menu with a list of extra project storage "
-"implementations (PostgreSQL and GeoPackage). Clicking the action will "
-"open a dialog to pick a GeoPackage connection and project or a PostgreSQL"
-" connection, schema and project."
+"implementations (PostgreSQL, GeoPackage and Oracle). Clicking the action "
+"will open a dialog to pick a GeoPackage connection and project, a "
+"PostgreSQL connection, schema and project or Oracle connection, owner and"
+" project."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:136
+#: ../../docs/user_manual/introduction/project_files.rst:137
 msgid ""
-"Projects stored in Geopackage or PostgreSQL can also be loaded through "
-"the QGIS browser panel, either by double-clicking them or by dragging "
-"them to the map canvas."
+"Projects stored in GeoPackage, PostgreSQL or Oracle can also be loaded "
+"through the QGIS browser panel, either by double-clicking them or by "
+"dragging them to the map canvas."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:144
+#: ../../docs/user_manual/introduction/project_files.rst:145
 msgid "Handling broken file paths"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:146
+#: ../../docs/user_manual/introduction/project_files.rst:147
 msgid ""
 "When opening a project, QGIS may fail to reach some data sources due to "
 "unavailable service/database, or to a renamed or moved file. QGIS then "
@@ -259,26 +260,26 @@ msgid ""
 "unfound layers. You can:"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:152
+#: ../../docs/user_manual/introduction/project_files.rst:153
 msgid ""
 "Double-click in the :guilabel:`Datasource` field, adjust the path of each"
 " layer and click :guilabel:`Apply changes`;"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:154
+#: ../../docs/user_manual/introduction/project_files.rst:155
 msgid ""
 "Select a row, press :guilabel:`Browse` to indicate the correct location "
 "and click :guilabel:`Apply changes`;"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:156
+#: ../../docs/user_manual/introduction/project_files.rst:157
 msgid ""
 "Press :guilabel:`Auto-Find` to browse the folders and try to "
 "automatically fix all or selected broken path(s). Be aware that the "
 "browsing may take some time. Then click :guilabel:`Apply changes`."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:159
+#: ../../docs/user_manual/introduction/project_files.rst:160
 msgid ""
 "Ignore the message and open your project with the broken path(s) by "
 "clicking :guilabel:`Keep Unavailable Layers`. Your layer is then "
@@ -288,57 +289,59 @@ msgid ""
 "Data Source...` in the layer contextual menu."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:232
+#: ../../docs/user_manual/introduction/project_files.rst:234
 msgid "indicatorBadLayer"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:166
+#: ../../docs/user_manual/introduction/project_files.rst:167
 msgid ""
 "With the :guilabel:`Repair Data Source...` tool, once a layer path has "
 "been fixed, QGIS scans through all other broken paths and tries to auto-"
 "fix those that have the same broken file path."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:169
+#: ../../docs/user_manual/introduction/project_files.rst:170
 msgid "|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:222
+#: ../../docs/user_manual/introduction/project_files.rst:224
 msgid "deleteSelected"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:171
+#: ../../docs/user_manual/introduction/project_files.rst:172
 msgid ""
 "Launching QGIS from command line using the :ref:`skipbadlayers` option "
 "can help you skip the :guilabel:`Handle Unavailable Layers` dialog at "
 "startup."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:177
+#: ../../docs/user_manual/introduction/project_files.rst:178
 msgid "Generating output"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:182
+#: ../../docs/user_manual/introduction/project_files.rst:183
 msgid ""
 "There are several ways to generate output from your QGIS session. We have"
 " already discussed saving as a project file in :ref:`sec_projects`. Other"
 " ways to produce output files are:"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:187
+#: ../../docs/user_manual/introduction/project_files.rst:188
 msgid ""
 "Creating images: :menuselection:`Project --> Import/Export -->` "
 "|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
 "canvas rendering to an image format (PNG, JPG, TIFF...) at custom scale, "
-"resolution, size, ... Georeferencing the image is possible. See "
+"resolution and size. Including georeference information in the exported "
+"image is possible, simply enable |checkbox| :guilabel:`Append "
+"georeference information (embedded or via world file)`. See "
 ":ref:`exportingmapcanvas` for more details."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:236
+#: ../../docs/user_manual/introduction/project_files.rst:238
 msgid "saveMapAsImage"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:194
+#: ../../docs/user_manual/introduction/project_files.rst:196
 msgid ""
 "Exporting to PDF files: :menuselection:`Project --> Import/Export --> "
 "Export Map to PDF...` outputs the map canvas rendering to PDF at custom "
@@ -346,7 +349,7 @@ msgid ""
 "georeferencing, ...). See :ref:`exportingmapcanvas` for more details."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:200
+#: ../../docs/user_manual/introduction/project_files.rst:202
 msgid ""
 "Exporting to DXF files: :menuselection:`Project --> Import/Export --> "
 "Export Project to DXF...` opens a dialog where you can define the "
@@ -356,14 +359,14 @@ msgid ""
 ":ref:`create_dxf_files`)."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:207
+#: ../../docs/user_manual/introduction/project_files.rst:209
 msgid ""
 "Designing maps: :menuselection:`Project -->` |newLayout| "
 ":menuselection:`New Print Layout...` opens a dialog where you can layout "
 "and print the current map canvas (see section :ref:`label_printlayout`)."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:234
+#: ../../docs/user_manual/introduction/project_files.rst:236
 msgid "newLayout"
 msgstr ""
 
