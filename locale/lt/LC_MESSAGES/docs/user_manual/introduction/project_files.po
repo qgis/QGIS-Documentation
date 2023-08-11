@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-08-10 09:49+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Tomas Straupis, 2023\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -51,11 +51,11 @@ msgstr ""
 "|fileSave| :menuselection:`Įrašyti` arba :menuselection:`Projektas -->` "
 "|fileSaveAs| :menuselection:`Įrašyti kaip...`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:228
+#: ../../docs/user_manual/introduction/project_files.rst:230
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/project_files.rst:230
+#: ../../docs/user_manual/introduction/project_files.rst:232
 msgid "fileSaveAs"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgstr ""
 "duomenų šaltinio pakeitimus`, kurį rasite :menuselection:`Nustatymai --> "
 "Parinktys --> Bendra`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:220
+#: ../../docs/user_manual/introduction/project_files.rst:222
 msgid "checkbox"
 msgstr ""
 
@@ -89,7 +89,7 @@ msgstr ""
 ":menuselection:`Projektas --> Naujas pagal šabloną` arba "
 ":menuselection:`Projektas --> Atverti ankstesnius -->`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:226
+#: ../../docs/user_manual/introduction/project_files.rst:228
 msgid "fileOpen"
 msgstr ""
 
@@ -126,7 +126,7 @@ msgstr ""
 "paklausta, ar norite įrašyti dabartinį projektą, jei buvo padaryti "
 "pakeitimai po jo paskutinio įrašymo."
 
-#: ../../docs/user_manual/introduction/project_files.rst:224
+#: ../../docs/user_manual/introduction/project_files.rst:226
 msgid "fileNew"
 msgstr ""
 
@@ -253,13 +253,13 @@ msgid ""
 "The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the "
 "default is to save using a compressed format with the ``.qgz`` extension. "
 "The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together"
-" with its associated sqlite database (``.qgd``) for :ref:`auxiliary data "
+" with its associated SQLite database (``.qgd``) for :ref:`auxiliary data "
 "<vector_auxiliary_storage>`. You can get to these files by unzipping the "
 "``.qgz`` file."
 msgstr ""
 "QGIS projektų plėtinys yra ``.qgs``, bet įrašant iš QGIS, numatytas įrašymo "
 "būdas yra suspaustas formatas su plėtiniu ``.qgz``. ``.qgs`` failas yra "
-"``.qgz`` failo (zip archyvo) viduje, kartu su susijusia sqlite duombaze "
+"``.qgz`` failo (zip archyvo) viduje, kartu su susijusia SQLite duombaze "
 "(``.qgd``) :ref:`papildomiems duomenims <vector_auxiliary_storage>`. Šiuos "
 "failus galite pasiekti išpakavę ``.qgz`` failą."
 
@@ -273,11 +273,11 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/project_files.rst:125
 msgid ""
-"Projects can also be saved/loaded to/from a PostgreSQL database using the "
-"following Project menu items:"
+"Projects can also be saved/loaded to/from a PostgreSQL, GeoPackage or Oracle"
+" database using the following Project menu items:"
 msgstr ""
-"Projektus taipogi galima įrašyti/įkelti į/iš PostgreSQL duomenų bazės "
-"naudojant šiuos Projekto meniu elementus:"
+"Projektus taipogi galima įrašyti/įkelti į/iš PostgreSQL, GeoPackage ar "
+"Oracle duomenų bazės naudojant šiuos Projekto meniu elementus:"
 
 #: ../../docs/user_manual/introduction/project_files.rst:128
 msgid ":menuselection:`Project --> Open from`"
@@ -290,29 +290,30 @@ msgstr ":menuselection:`Proktas --> Įrašyti į`"
 #: ../../docs/user_manual/introduction/project_files.rst:131
 msgid ""
 "Both menu items have a sub-menu with a list of extra project storage "
-"implementations (PostgreSQL and GeoPackage). Clicking the action will open a"
-" dialog to pick a GeoPackage connection and project or a PostgreSQL "
-"connection, schema and project."
+"implementations (PostgreSQL, GeoPackage and Oracle). Clicking the action "
+"will open a dialog to pick a GeoPackage connection and project, a PostgreSQL"
+" connection, schema and project or Oracle connection, owner and project."
 msgstr ""
 "Abu meniu elementai turi submeniu su keliomis projekto saugojimo parinktimis"
-" (PostgreSQL ir GeoPackage). Paspaudus veiksmą atsidarys dialogas, kuriame "
-"galima bus parinkti GeoPackage jungtį ir projektą arba PostgreSQL jungtį, "
-"schemą ir projektą."
+" (PostgreSQL, GeoPackage ir Oracle). Paspaudus veiksmą atsidarys dialogas, "
+"kuriame galima bus parinkti GeoPackage jungtį ir projektą, PostgreSQL "
+"jungtį, schemą ir projektą, arba Oracle jungtį, savininką ir projektą."
 
-#: ../../docs/user_manual/introduction/project_files.rst:136
+#: ../../docs/user_manual/introduction/project_files.rst:137
 msgid ""
-"Projects stored in Geopackage or PostgreSQL can also be loaded through the "
-"QGIS browser panel, either by double-clicking them or by dragging them to "
-"the map canvas."
+"Projects stored in GeoPackage, PostgreSQL or Oracle can also be loaded "
+"through the QGIS browser panel, either by double-clicking them or by "
+"dragging them to the map canvas."
 msgstr ""
-"Geopackage ar PostgreSQL įrašytą projektą galima įkelti per QGIS naršyklės "
-"skydelį, arba du kartus ant jo paspaudus, arba pertempus į žemėlapio drobę."
+"Geopackage, PostgreSQL ar Oracle įrašytą projektą galima įkelti per QGIS "
+"naršyklės skydelį, arba du kartus ant jo paspaudus, arba pertempus į "
+"žemėlapio drobę."
 
-#: ../../docs/user_manual/introduction/project_files.rst:144
+#: ../../docs/user_manual/introduction/project_files.rst:145
 msgid "Handling broken file paths"
 msgstr "Neteisingų kelių iki failų tvarkymas"
 
-#: ../../docs/user_manual/introduction/project_files.rst:146
+#: ../../docs/user_manual/introduction/project_files.rst:147
 msgid ""
 "When opening a project, QGIS may fail to reach some data sources due to "
 "unavailable service/database, or to a renamed or moved file. QGIS then opens"
@@ -324,7 +325,7 @@ msgstr ""
 "kitą vietą. QGIS tada atveria dialogą :guilabel:`Tvarkyti nepasiekiamus "
 "sluoksnius`, kuriame surašyti nerasti sluoksniai. Jūs galite:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:152
+#: ../../docs/user_manual/introduction/project_files.rst:153
 msgid ""
 "Double-click in the :guilabel:`Datasource` field, adjust the path of each "
 "layer and click :guilabel:`Apply changes`;"
@@ -332,7 +333,7 @@ msgstr ""
 "Du kartus spausti lauke :guilabel:`Duomenų šaltinis`, pataisyti kiekvieno "
 "sluoksnio kelią ir spausti :guilabel:`Pritaikyti pakeitimus`;"
 
-#: ../../docs/user_manual/introduction/project_files.rst:154
+#: ../../docs/user_manual/introduction/project_files.rst:155
 msgid ""
 "Select a row, press :guilabel:`Browse` to indicate the correct location and "
 "click :guilabel:`Apply changes`;"
@@ -340,7 +341,7 @@ msgstr ""
 "Pažymėti eilutę, spausti :guilabel:`Naršyti`, nurodyti teisingą vietą ir "
 "spausti :guilabel:`Pritaikyti pakeitimus`;"
 
-#: ../../docs/user_manual/introduction/project_files.rst:156
+#: ../../docs/user_manual/introduction/project_files.rst:157
 msgid ""
 "Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
 "fix all or selected broken path(s). Be aware that the browsing may take some"
@@ -351,7 +352,7 @@ msgstr ""
 "omenyje, kad naršymas gali užtrukti daug laiko. Tada spauskite "
 ":guilabel:`Pritaikyti pakeitimus`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:159
+#: ../../docs/user_manual/introduction/project_files.rst:160
 msgid ""
 "Ignore the message and open your project with the broken path(s) by clicking"
 " :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the "
@@ -367,11 +368,11 @@ msgstr ""
 "piktogramoje, kuri bus rodoma greta :guilabel:`Sluoksnių` skydelyje arba "
 ":guilabel:`Taisyti duomenų šaltinį...` sluoksnio kontekstiniame meniu."
 
-#: ../../docs/user_manual/introduction/project_files.rst:232
+#: ../../docs/user_manual/introduction/project_files.rst:234
 msgid "indicatorBadLayer"
 msgstr "indicatorBadLayer"
 
-#: ../../docs/user_manual/introduction/project_files.rst:166
+#: ../../docs/user_manual/introduction/project_files.rst:167
 msgid ""
 "With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
 "fixed, QGIS scans through all other broken paths and tries to auto-fix those"
@@ -381,17 +382,17 @@ msgstr ""
 "šaltinį...` skenuoja kitus sugadintus kelius ir bando automatiškai pataisyti"
 " juos naudojant tokį patį kelią."
 
-#: ../../docs/user_manual/introduction/project_files.rst:169
+#: ../../docs/user_manual/introduction/project_files.rst:170
 msgid ""
 "|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
 msgstr ""
 "|deleteSelected| :guilabel:`Išimti neprieinamus sluoksnius` iš projekto."
 
-#: ../../docs/user_manual/introduction/project_files.rst:222
+#: ../../docs/user_manual/introduction/project_files.rst:224
 msgid "deleteSelected"
 msgstr "deleteSelected"
 
-#: ../../docs/user_manual/introduction/project_files.rst:171
+#: ../../docs/user_manual/introduction/project_files.rst:172
 msgid ""
 "Launching QGIS from command line using the :ref:`skipbadlayers` option can "
 "help you skip the :guilabel:`Handle Unavailable Layers` dialog at startup."
@@ -400,11 +401,11 @@ msgstr ""
 "padės jums praleisti pradžioje rodomą dialogą :guilabel:`Tvarkyti "
 "neprieinamus sluoksnius`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:177
+#: ../../docs/user_manual/introduction/project_files.rst:178
 msgid "Generating output"
 msgstr "Išvesties kūrimas"
 
-#: ../../docs/user_manual/introduction/project_files.rst:182
+#: ../../docs/user_manual/introduction/project_files.rst:183
 msgid ""
 "There are several ways to generate output from your QGIS session. We have "
 "already discussed saving as a project file in :ref:`sec_projects`. Other "
@@ -414,25 +415,29 @@ msgstr ""
 "įrašymą kaip projekto failą skyriuje :ref:`sec_projects`. Kiti būdai sukurti"
 " išvesti yra:"
 
-#: ../../docs/user_manual/introduction/project_files.rst:187
+#: ../../docs/user_manual/introduction/project_files.rst:188
 msgid ""
 "Creating images: :menuselection:`Project --> Import/Export -->` "
 "|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
 "canvas rendering to an image format (PNG, JPG, TIFF...) at custom scale, "
-"resolution, size, ... Georeferencing the image is possible. See "
-":ref:`exportingmapcanvas` for more details."
+"resolution and size. Including georeference information in the exported "
+"image is possible, simply enable |checkbox| :guilabel:`Append georeference "
+"information (embedded or via world file)`. See :ref:`exportingmapcanvas` for"
+" more details."
 msgstr ""
-"Kurti priešinius: :menuselection:`Projektas --> Importuoti/Eksportuoti -->` "
+"Kurti piešinius: :menuselection:`Projektas --> Importuoti/Eksportuoti -->` "
 "|saveMapAsImage| :menuselection:`Eksportuoti žemėlapį į piešinį...` įrašo "
 "žemėlapio drobę kaip piešinį (PNG, JPG, TIFF...) nurodytu masteliu, "
-"rezoliucija ir dydžiu... Galima piešiniui įrašyti ir geopririšimo "
-"informaciją. Daugiau informacijos rasite :ref:`exportingmapcanvas`."
+"rezoliucija ir dydžiu. Galima piešiniui įrašyti geopririšimo informaciją, "
+"tiesiog įjunkite varnelę |checkbox| :guilabel:`Pridėti geopririšimo "
+"informaciją (pridedama per pasaulio failą)`. Daugiau informacijos rasite "
+":ref:`exportingmapcanvas`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:236
+#: ../../docs/user_manual/introduction/project_files.rst:238
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
 
-#: ../../docs/user_manual/introduction/project_files.rst:194
+#: ../../docs/user_manual/introduction/project_files.rst:196
 msgid ""
 "Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
 " Map to PDF...` outputs the map canvas rendering to PDF at custom scale, "
@@ -445,7 +450,7 @@ msgstr ""
 "nustatymais (paprastinimas, geopririšimas, ...). Daugiau informacijos rasite"
 " :ref:`exportingmapcanvas`."
 
-#: ../../docs/user_manual/introduction/project_files.rst:200
+#: ../../docs/user_manual/introduction/project_files.rst:202
 msgid ""
 "Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export"
 " Project to DXF...` opens a dialog where you can define the 'Symbology "
@@ -461,7 +466,7 @@ msgstr ""
 "aukštos kokybė srežimu (daugiau informacijos rasite skyriuje "
 ":ref:`create_dxf_files`)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:207
+#: ../../docs/user_manual/introduction/project_files.rst:209
 msgid ""
 "Designing maps: :menuselection:`Project -->` |newLayout| :menuselection:`New"
 " Print Layout...` opens a dialog where you can layout and print the current "
@@ -472,6 +477,6 @@ msgstr ""
 "galite išdėstyti ir spausdinti dabartinę žemėlapio drobę (daugiau "
 "informacijos skyriuje :ref:`label_printlayout`)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:234
+#: ../../docs/user_manual/introduction/project_files.rst:236
 msgid "newLayout"
 msgstr ""
