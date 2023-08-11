@@ -1,52 +1,45 @@
 .. index:: Joins, Relations
 .. _sec_joins_relations:
 
-**********************************
- Joins and relations
-**********************************
-
-Joins and relations are technical concepts used in databases to get the most out of
-data stored in tables by combining their contents. The concept is that
-features (rows) of different layers (tables) can belong to each other. One of the
-most simple example is the value list where one attribute (foreign key) of a table 
-is used to create a link to another table which is composed of values.Relations are 
-usually used to link objects (features) from two layers (tables) together.
+*******************************************
+ Connecting and Editing Data Across Layers
+*******************************************
 
 .. only:: html
 
    .. contents::
       :local:
 
+Ability to connect data from different layers is one of the duties of a GIS software.
+Such a connection can be based on the spatial relationship between the features,
+or on their shared attributes.
+QGIS provides tools to handle any of these associations, such as:
 
+* Processing algorithms that can create a new layer as a result of the connection,
+  namely :ref:`qgisjoinattributesbylocation`, :ref:`qgisjoinbynearest`,
+  :ref:`qgisjoinattributestable`, ...
+* SQL queries to create a new layer from the :ref:`DB Manager <dbmanager>`
+  or as a :ref:`virtual layer <vector_virtual_layers>`
+* :ref:`Joins properties <sec_joins>` or :ref:`relations settings <vector_relations>`
+  that temporarily extend attributes of features in a given layer,
+  with those of features in another layer based on some matching attribute(s).
 
+  Joins and relations are technical concepts borrowed from databases
+  to get the most out of data stored in tables by combining their contents.
+  The idea is that features (rows) of different layers (tables) can belong to each other.
+  The links between the features can be of one-to-one type (joins) or one/many to many (relations).
 
-QGIS allows you to create and manage joins between tables (spatial or non spatial).
-This is done on the layer level (properties). Joins enable you to define
-links between an attribute of a table and a value stored in another table.
 
 .. index:: Joins, Foreign key
 .. _`sec_joins`:
-The most simple example is not even a real join but the possibility offered by QGIS
-to set a value list directly in the attribute form using the Value Map widget
-(TODO : ADD link to /working_with_vector/vector_properties.html#edit-widgets) 
-to define mapping values manually or using a CSV or layer import.
 
 Joining features between two layers
 ====================================
-The second example is to use the Value Relation widget
-(TODO : ADD link to /working_with_vector/vector_properties.html#edit-widgets) 
-to define a relation between an attribute and an other attribute contained in another layer.
 
 **Joins** allow you to associate features of the current layer
 to features from another loaded vector layer.
 Whether they are spatially enabled and their geometry type does not matter.
 The join is based on an attribute that is shared by the layers, in a one-to-one relationship.
-The third example is to use the Joins tab 
-(TODO : add link /working_with_vector/vector_properties.html#joins-properties)
-to associate features of the current layer
-to features from another loaded layer. The join is based on an attribute 
-that is shared by the layers. This enable to add one or more attribute from a table 
-to the other.
 
 To create a join on a layer (identified below as ``target layer``):
 
@@ -152,10 +145,6 @@ From there, you can:
    Relations tab
 
 .. TODO: Update and fill the dialog with examples of the different types of relations
-Once a relation is created in the project properties, it can be used in the
-layers forms widget Relation Reference
-/working_with_vector/vector_properties.html#edit-widgets
-or used in the field expression calculator to design some powerful queries and features.
 
 
 .. _one_to_many_relation:
