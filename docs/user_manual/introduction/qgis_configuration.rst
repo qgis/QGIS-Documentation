@@ -1952,13 +1952,13 @@ In the |openTable| :guilabel:`Data Sources` tab, you can:
 Relations Properties
 --------------------
 
-The |relations| :guilabel:`Relations` tab is used to define 1:n relations and
-polymorphic relations. The relations
-are defined in the project properties dialog. Once relations exist for a layer,
-a new user interface element in the form view (e.g. when identifying a feature
-and opening its form) will list the related entities. This provides a powerful
-way to express e.g. the inspection history on a length of pipeline or road segment.
-You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+The |relations| :guilabel:`Relations` tab is used to define relations between layers.
+The relations can be of one to one, many to many or polymorphic type.
+They are defined in the project properties dialog.
+Once relations exist for a layer, a new user interface element in the form view
+(e.g. when identifying a feature and opening its form) will list the related entities.
+This provides a powerful way to express e.g. the inspection history on a length of pipeline or road segment.
+You can find out more about relations support in section :ref:`vector_relations`.
 
 .. _figure_relations_tab:
 
