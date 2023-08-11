@@ -127,15 +127,31 @@ Unlike joins that define a one-to-one link between features across two layers,
 relations help you build interconnections between multiple features across two or more layers.
 As such, relations are project level settings
 and are set in :menuselection:`Project --> Properties -->` |relations| :guilabel:`Relations` tab.
+From there, you can:
 
-TODO : ADD a screen of the the relations interface
+* |symbologyAdd| :guilabel:`Add relation` whose type can be:
 
- .. note:: There is no simple way to edit a relation once it is created yet.
-   To edit a relation you will have then to remove and create it from scratch.
+  * :ref:`one to many relation <one_to_many_relation>`
+  * :ref:`many to many relation <many_to_many_relation>`
+  * :ref:`polymorphic relation <polymorphic_relation>` that you can add or edit
+    with the dedicated tools in the action drop-down menu.
 
- .. note:: QGIS is able to discover existing relations from supported databases formats.
+  .. note:: There is no simple way yet to edit a non-polymorphic relation once it has been created.
+   To modify a relation you will have to remove and recreate it from scratch.
+
+* |symbologyAdd| :guilabel:`Discover relations`: QGIS is able to discover existing relations
+  from supported database formats (PostgreSQL, GeoPackage, ESRI File Geodatabase, ...).
   This can be a good way to ease the relations definition.
+* |symbologyRemove| :guilabel:`Remove relation`
 
+.. _figure_relations:
+
+.. figure:: ../introduction/img/project_relations.png
+   :align: center
+
+   Relations tab
+
+.. TODO: Update and fill the dialog with examples of the different types of relations
 Once a relation is created in the project properties, it can be used in the
 layers forms widget Relation Reference
 /working_with_vector/vector_properties.html#edit-widgets
@@ -696,6 +712,8 @@ The example above uses the following database schema:
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
