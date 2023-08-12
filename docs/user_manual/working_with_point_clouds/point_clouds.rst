@@ -582,6 +582,81 @@ abundance.
    The point cloud statistics tab
 
 
+.. _`virtual_point_cloud`:
+
+Virtual point cloud
+====================
+
+Lidar surveys of larger areas are often multi-terabyte datasets with many billions of points.
+Having such large datasets represented as a single point cloud file is not practical
+due to the difficulties of storage, transfer, display and analysis.
+Point cloud data are therefore typically stored and distributed split into square tiles (e.g. ``1km x 1km``),
+each tile having a more manageable file size (e.g. ~200 MB when compressed).
+
+Tiling of data solves the problems with size of data,
+but it introduces issues when processing or viewing an area of interest
+that does not fit entirely into a single tile.
+Users need to develop workflows that take into account multiple tiles
+and special care needs to be taken to deal with data near edges of tiles
+to avoid unwanted artefacts in outputs.
+Similarly, when viewing point cloud data, it becomes cumbersome to load many individual files
+and apply the same symbology.
+
+Here is an example of several point cloud tiles loaded in QGIS.
+Each tile is styled based on min/max Z values of the tile, creating visible artefacts on tile edges.
+The styling has to be adjusted for each layer separately:
+
+.. _figure_point_cloud_tiles:
+
+.. figure:: img/point_cloud_individual_tiles.png
+   :align: center
+
+   Individual point cloud tiles loaded, with artefacts on edges
+
+In the GIS world, many users are familiar with the concept of virtual rasters.
+A virtual raster is a file that simply references other raster files with actual data.
+In this way, GIS software then treats the whole dataset comprising many files as a single raster layer,
+making the display and analysis of all the rasters listed in the virtual file much easier.
+
+Borrowing the concept of virtual rasters from GDAL,
+**virtual point cloud (VPC)** is a file format that references other point cloud files.
+Software supporting virtual point clouds handles the whole tiled dataset as a single data source.
+
+.. _figure_point_cloud_vpc:
+
+.. figure:: img/point_cloud_vpc.png
+   :align: center
+
+   The virtual point cloud
+
+Displaying and manipulating virtual point cloud is much more fluent and easy.
+
+.. only:: html
+
+  .. _figure_point_cloud_vpc2d:
+
+  .. figure:: img/point_cloud_vpc_2d.gif
+     :align: center
+
+     The virtual point cloud output on 2D: displaying details when zooming in
+
+
+At the core, a virtual point cloud file is a simple JSON file with :file:`.vpc` extension,
+containing references to actual data files (e.g. :file:`.LAS`, :file:`.LAZ` or :file:`.COPC` files)
+and additional metadata extracted from the files.
+Even though it is possible to write VPC files by hand,
+it is strongly recommended to create them using an automated tool, such as:
+
+* The Processing **Build virtual point cloud** algorithm
+
+.. todo: Replace the above with URL to the alg when available
+
+* The ``build_vpc`` command of `PDAL wrench <https://github.com/PDAL/wrench>`_ tool
+
+For more details, please refer to the `VPC specification <https://github.com/PDAL/wrench/blob/main/vpc-spec.md>`_
+that also contains best practices and optional extensions (such as overviews).
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
