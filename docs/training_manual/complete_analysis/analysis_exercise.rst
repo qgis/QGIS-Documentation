@@ -59,8 +59,6 @@ The solution will involve:
    ``32733``). 
 #. Click :guilabel:`OK`
 
-      .. _figure_crs:
-
    .. figure:: img/crs.png
       :align: center
 
@@ -189,8 +187,6 @@ districts to the following ones:
    #. Repeat the previous step for the remaining districts
    #. Close the brackets
 
-         .. _figure_query_builder:
-
    .. figure:: img/query_builder.png
       :align: center
 
@@ -251,9 +247,7 @@ this area.
    the :guilabel:`Clip Raster by Mask Layer` dialog
 #. Save the map
 
-      .. _figure_map_raster_vector_layers:
-
-   .. figure:: img/map_with_clipped_raster_filterd_vector_reorderd_layers.png
+   .. figure:: img/clipped_r_filtered_v_reordered_l.png
       :align: center
 
       Map view with filtered vector, clipped raster and reordered layers 
@@ -278,8 +272,6 @@ First we change the resolution of our rainfall data to 30 meters
    :file:`rainfall/reprojected` directory as :file:`Rainfall30.tif`.
 #. Make sure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked
-
-     .. _figure_wrap_rainfall:
 
    .. figure:: img/wrap_rainfall.png
       :align: center
@@ -345,8 +337,6 @@ Raster layer symbology is somewhat different.
    :guilabel:`White to Black`
 #. Click :guilabel:`OK`
 
-     .. _figure_raster_symbology:
-
    .. figure:: img/raster_symbology.png
       :align: center
 
@@ -392,8 +382,6 @@ that was written for this purpose.
 #. Click :guilabel:`Run`
 #. Wait for it to finish processing.
 
-     .. _figure_hillshade:
-
    .. figure:: img/hillshade.png
       :align: center
 
@@ -429,8 +417,6 @@ Slope
 #. Make sure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
-
-     .. _figure_slope:
 
    .. figure:: img/slope.png
       :align: center
@@ -488,8 +474,6 @@ Reclassifying rasters
    and file name.
 #. Click :guilabel:`Run`.
 
-     .. _figure_raster_calculator_slope:
-
    .. figure:: img/raster_calculator_slope.png
       :align: center
 
@@ -543,12 +527,10 @@ are satisfied.
 
 Save the project.
 
-     .. _figure_aspect_slope_rainfall:
+.. figure:: img/aspect_slope_rainfall.png
+   :align: center
 
-   .. figure:: img/aspect_slope_rainfall.png
-      :align: center
-
-      Map view where all three criteria are satisfied  
+   Map view where all three criteria are satisfied  
 
 The next criterion that needs to be satisfied is that the area must be 
 ``250`` m away from urban areas.
@@ -575,12 +557,10 @@ Finding rural areas
 #. Click :guilabel:`OK` to close the :guilabel:`Query Builder` dialog.
    The query should return one feature.
 
-        .. _figure_query_builder_zoning:
-
    .. figure:: img/query_builder_zoning.png
-      :align: center
+    :align: center
 
-      Query builder Zoning
+   Query builder Zoning
 
 You should see the rural polygons from the ``Zoning`` layer.
 You will need to save these.
@@ -623,8 +603,6 @@ Creating a negative buffer
 #. Remove the ``rural`` layer
 #. Save the project
 
-     .. _figure_rural_buffer:
-
    .. figure:: img/rural_buffer.png
       :align: center
 
@@ -654,8 +632,6 @@ Vectorizing the raster
    :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
 #. Close the dialog when processing is complete
-
-     .. _figure_vectorized:
 
    .. figure:: img/vectorized.png
       :align: center
@@ -758,8 +734,6 @@ Calculating the area for each polygon
    each polygon in the vector layer and will then populate a new
    integer column (called ``area``) with the computed value.
 
-        .. _figure_field_calculator_area:
-
    .. figure:: img/field_calculator_area.png
       :align: center
 
@@ -775,8 +749,6 @@ Calculating the area for each polygon
    purposes.
 #. Click |toggleEditing| :sup:`Toggle editing` again, and save your
    edits if prompted to do so
-
-        .. _figure_attribute_table:
 
    .. figure:: img/attribute_table.png
       :align: center
