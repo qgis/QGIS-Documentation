@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
-# Miyoshi Tomoya, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +36,7 @@ msgid ""
 "Default data sets are provided with the Training Manual, but you may follow "
 "these instructions if you wish to replace the default data sets."
 msgstr ""
-"このプロセスはコース召集者、または、それらのコースのためにローカライズされたサンプル・データセットをつくりたいより経験あるQGISユーザー向けにしました。デフォルトのデータセットはトレーニングマニュアルとともに提供されていますが、デフォルトのデータセットを置き換えたい場合は、これらの指示に従うことができます。"
+"このプロセスは講座の召集者、または、その講座のためにローカライズしたサンプル・データセットを作りたい経験豊富なQGISユーザ向けにしました。デフォルトのデータセットはトレーニングマニュアルとともに提供されていますが、この手順に従ってそれを置き換えることができます。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:11
 msgid ""
@@ -58,7 +58,7 @@ msgid ""
 "Later modules use more complex data sources which may or may not be "
 "available for your region."
 msgstr ""
-"誰で無理なくこのデータセットを使用できますが、自分の国や故郷からのデータを使用することを好む方もいるかもしれません。そうすることを選択した場合は、ローカライズされたデータが、モジュール3からモジュール7.2のすべてのレッスンで使用されます。それ以降のモジュールはより複雑なデータソースを使用しており、お住まいの地域ではご使用になれない場合があります。"
+"このデータセットは誰でも問題なく使うことができますが、自分の国や故郷のデータを使うことを好む方もいるかもしれません。それを選択した場合は、ローカライズされたデータが、モジュール3からモジュール7.2のすべてのレッスンで使用されます。それ以降のモジュールはより複雑なデータソースを使用しているので、あなたの地域で利用できる場合もできない場合もあります。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:21
 msgid ""
@@ -140,7 +140,7 @@ msgid ""
 "Execute the new plugin from :menuselection:`Vector --> QuickOSM --> "
 "QuickOSM...` menu"
 msgstr ""
-":menuselection:`Vector --> QuickOSM --> QuickOSM...`メニューから、新しいプラグインを実行します"
+":menuselection:`ベクタ --> QuickOSM --> QuickOSM...` メニューから、新しいプラグインを実行します"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:64
 msgid ""
@@ -170,13 +170,50 @@ msgstr ""
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:71
 msgid "Press :guilabel:`Run query`"
-msgstr ":guilabel:`クエリ実行` を押します"
+msgstr ":guilabel:`Run query` を押します"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:76
 msgid ""
 "A new ``building`` layer is added to the :guilabel:`Layers` panel, showing "
 "buildings in the selected extent."
 msgstr "新しい ``building`` レイヤが :guilabel:`レイヤ` パネルに追加され、選択した範囲の建物が表示されます。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:78
+msgid "Proceed as above to extract other data:"
+msgstr "他のデータを抽出するため、上記と同様に行います："
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:80
+msgid "``Key = landuse`` and ``Multipolygons`` geometry type."
+msgstr "``Key = landuse`` とジオメトリ型 ``Multipolygons``。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:81
+msgid ""
+"``Key = boundary``, ``Value = protected_area`` and ``Multipolygons`` "
+"geometry type."
+msgstr ""
+"``Key = boundary``、 ``Value = protected_area`` とジオメトリ型 ``Multipolygons``。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:83
+msgid ""
+"``Key = natural``, ``Value = water`` and ``Multipolygons`` geometry type."
+msgstr "``Key = natural``, ``Value = water`` とジオメトリ型 ``Multipolygons`` 。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:84
+msgid ""
+"``Key = highway`` and check ``Lines`` and ``Multilines`` geometry types."
+msgstr "``Key = highway`` とジオメトリ型  ``Lines`` と ``Multilines`` をチェックする。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:85
+msgid ""
+"``Key = waterway``, ``Value = river`` and check ``Lines`` and ``Multilines``"
+" geometry types."
+msgstr ""
+"``Key = waterway``、 ``Value = river`` とジオメトリ型 ``Lines`` と ``Multilines`` "
+"をチェックする。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:87
+msgid "``Key = place`` and ``Points`` geometry type."
+msgstr "``Key = place`` とジオメトリ型 ``Points`` 。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:89
 msgid ""
@@ -192,7 +229,7 @@ msgstr ""
 msgid ""
 "You can sample the data your region contains in order to see what kind of "
 "results your region will yield."
-msgstr "お住まいの地域に含まれるデータをサンプリングして、お住まいの地域でどのような結果が得られるかを確認できます。"
+msgstr "あなたの地域に含まれるデータをサンプリングして、あなたの地域でどのような結果が得られるかを確認できます。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:98
 msgid ""
@@ -200,7 +237,11 @@ msgid ""
 "using ESRI Shapefile, GeoPackage and SpatiaLite formats depending on the "
 "data."
 msgstr ""
-"コース中に使用するために、結果のデータを保存する必要があります。データに応じて、ESRIシェープファイル、GeoPackage、SpatiaLite形式を使用します。"
+"講座で使用するために、結果のデータを保存する必要があります。データに応じて、ESRIシェープファイル、GeoPackage、SpatiaLite形式を使用します。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:102
+msgid "To convert the :guilabel:`place` temporary layer to another format:"
+msgstr ":guilabel:`place` 一時レイヤを他の形式に変換するには:"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:104
 msgid ""
@@ -274,20 +315,64 @@ msgstr "``waterway_river`` を ``rivers``"
 msgid "``boundary_protected_area`` into ``protected_areas``"
 msgstr "``boundary_protected_area`` を ``protected_areas``"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:134
+msgid ""
+"Each resulting data set should be saved in the "
+":file:`exercise_data/shapefile/` directory."
+msgstr "各結果データセットは、 :file:`exercise_data/shapefile/` ディレクトリに保存する必要があります。"
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:137
 msgid ""
 "The next step is to create a GeoPackage file from the :guilabel:`building` "
 "layer to use during the course:"
 msgstr "次のステップは、コース中に使用する :guilabel:`建物` レイヤーからGeoPackageファイルを作成することです。"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:140
+msgid ""
+"Click the |indicatorMemory| icon next to the :guilabel:`building` layer"
+msgstr ":guilabel:`building` レイヤの隣にある |indicatorMemory| アイコンをクリックします"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:141
+msgid "Select the :guilabel:`GeoPackage` format"
+msgstr ":guilabel:`GeoPackage` 形式を選びます"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:142
+msgid ""
+"Save the file as :file:`training_data.gpkg` under the :file:`exercise_data/`"
+" folder"
+msgstr ""
+"ファイルを :file:`training_data.gpkg` として :file:`exercise_data/` フォルダの下に保存します"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:144
+msgid ""
+"By default, the :guilabel:`Layer name` is filled as the file name. Replace "
+"it with ``buildings``."
+msgstr ":guilabel:`レイヤ名` がデフォルトのファイル名として記入されます。それを ``buildings`` に置き換えます。"
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:151
 msgid "Rename the layer in its properties dialog"
 msgstr "レイヤのプロパティダイアログで名前を変更します"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:152
+msgid ""
+"Repeat the process with the :guilabel:`highway` layer, saving it as "
+"``roads`` in the same GeoPackage database."
+msgstr ""
+"このプロセスを :guilabel:`highway` レイヤで繰り返し、それを ``roads`` "
+"として同じGeoPackageデータベースに保存します。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:155
 msgid ""
 "The last step is to save the remaining temporary file as a SpatiaLite file."
 msgstr "最後のステップは、残りの一時ファイルをSpatiaLiteファイルとして保存することです。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:157
+msgid "Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer"
+msgstr ":guilabel:`landuse` レイヤの隣にある |indicatorMemory| アイコンをクリックします"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:158
+msgid "Select the :guilabel:`SpatiaLite` format"
+msgstr ":guilabel:`SpatiaLite` 形式を選択します"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:159
 msgid ""
@@ -312,6 +397,10 @@ msgid ""
 "above and that all those layers have some data."
 msgstr "重要なことは、上に示したものと一致する7つのベクターレイヤーがあり、それらすべてのレイヤーにいくつかのデータがあることです。"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:179
+msgid "|hard| |TY| Create SRTM DEM tiff files"
+msgstr "|hard| |TY| SRTM DEM tiffファイルを作る"
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:181
 msgid ""
 "For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also "
@@ -319,7 +408,7 @@ msgid ""
 "your course."
 msgstr ""
 "モジュール :ref:`tm_create_vector_data` および :ref:`tm_rasters` "
-"の場合、コース用に選択した領域をカバーするラスターイメージ（SRTM DEM）も必要です。"
+"の場合、講座用に選択した地域をカバーするラスターイメージ（SRTM DEM）も必要です。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:185
 msgid ""
@@ -359,6 +448,10 @@ msgstr ""
 "必要なファイルをダウンロードしたら、それらを :file:`raster/SRTM` サブフォルダの下の :file:`exercise_data` "
 "ディレクトリに保存する必要があります。"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:199
+msgid "|hard| |TY| Create imagery tiff files"
+msgstr "|hard| |TY| 画像のTIFFファイルを作成する"
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:202
 msgid ""
 "In Module :ref:`tm_create_vector_data`, :ref:`tm_datasources` lesson shows "
@@ -369,11 +462,28 @@ msgid ""
 "buildings, playgrounds or car parks)."
 msgstr ""
 "モジュール :ref:`tm_create_vector_data` で、 :ref:`tm_datasources` "
-"レッスンは、生徒がデジタル化するように求められる3つの学校のスポーツフィールドのクローズアップ画像を示します。したがって、新しいSRTMDEMtiffファイルを使用してこれらの画像を再現する必要があります。学校のスポーツフィールドを使用する義務はありません。3つの学校の土地利用タイプを使用できます（たとえば、異なる学校の建物、遊び場、駐車場）。"
+"レッスンは、生徒がデジタイズするように求められる3つの学校の運動場のクローズアップ画像を示します。したがって、新しいSRTMDEMtiffファイルを使用してこれらの画像を再現する必要があります。学校の運動場を使用する義務はありません。3つの学校の土地利用タイプを使用できます（たとえば、異なる学校の建物、遊び場、駐車場）。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:209
+msgid "For reference, the image in the example data is:"
+msgstr "参考までに、その例題データの画像はこれです:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:216
+msgid "|basic| |TY| Replace tokens"
+msgstr "|basic| |TY| トークンの置き換え"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:243
 msgid "basic"
 msgstr ""
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:218
+msgid ""
+"Having created your localized dataset, the final step is to replace the "
+"tokens in the :file:`substitutions.txt` file so that the appropriate names "
+"will appear in your localized version of the Training Manual."
+msgstr ""
+"ローカライズされたデータセットを作成したら、最後に :file:`substitutions.txt` "
+"ファイル内のトークンを置き換えて、ローカライズ版トレーニングマニュアルに適切な名前が表示されるようにします。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:222
 msgid "The tokens you need to replace are as follows:"
