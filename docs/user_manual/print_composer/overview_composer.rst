@@ -458,6 +458,8 @@ layout:
 * :guilabel:`Layout Paths`: to manage list of custom paths to search print
   templates.
 
+The :menuselection:`Settings --> Keyboard Shortcuts...` menu allows you to 
+use shortcuts manager in the Print Layout interface.
 
 Contextual menus
 ................
