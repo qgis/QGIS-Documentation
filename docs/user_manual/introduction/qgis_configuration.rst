@@ -785,6 +785,8 @@ These options can be overridden at the :ref:`project level <coordinate_and_beari
 **Panning and zooming**
 
 * Define a :guilabel:`Zoom factor` for zoom tools or wheel mouse
+* |checkbox| :guilabel:`Reverse wheel zoom` allows you to adjust
+  mouse wheel scrolling direction. 
 
 .. _predefinedscales:
 
