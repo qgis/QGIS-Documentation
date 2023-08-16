@@ -334,6 +334,7 @@ To create a bookmark:
 #. Enter or select a group name in which to store related bookmarks
 #. Select the extent of the area you wish to save, using the :ref:`extent selector
    <extent_selector>` widget
+#. Change the map :guilabel:`Rotation`   
 #. Indicate the :guilabel:`CRS` to use for the extent
 #. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
    Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list
@@ -404,8 +405,9 @@ You can perform the following tasks:
        You can also drag and drop the bookmark between folders (user and
        project) and subfolders (groups).
 
-You can also zoom to bookmarks by typing the bookmark name in the
-:ref:`locator <label_statusbar>`.
+You can manage bookmark actions by right-click on the desired bookmark in the 
+:guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by typing the 
+bookmark name in the :ref:`locator <label_statusbar>`.
 
 .. index:: Decorations
 .. _decorations:
