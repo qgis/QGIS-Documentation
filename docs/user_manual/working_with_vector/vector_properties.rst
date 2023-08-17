@@ -2380,6 +2380,14 @@ Default values
   could be handy to save values like last user that modifies data, last time it
   was changed...
 
+.. _policies:
+
+Policies
+^^^^^^^^
+
+:guilabel:`Policies` allows you to easily determine the current policy when splitting 
+features, you can change it as desired. 
+
 .. _constraints:
 
 Constraints
