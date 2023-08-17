@@ -54,7 +54,7 @@ using functions, layer fields and values. It contains the following widgets:
 
 .. _figure_expression_tab:
 
-.. figure:: img/function_list.png
+.. figure:: img/Field_Calculator.png
    :align: center
    :width: 100%
 
