@@ -2199,6 +2199,8 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |addGrid| image:: /static/common/add_grid.png
    :width: 1.5em
+.. |addHanaLayer| image:: /static/common/mActionAddHanaLayer.png
+   :width: 1.5em
 .. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png

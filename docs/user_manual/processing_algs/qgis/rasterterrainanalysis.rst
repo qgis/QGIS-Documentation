@@ -59,12 +59,13 @@ Parameters
    * - **Aspect**
      - ``OUTPUT``
      - [raster]
+
+       Default: ``[Save to temporary file]``
      - Specify the output aspect raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -173,12 +174,13 @@ Parameters
    * - **Hillshade**
      - ``OUTPUT``
      - [raster]
+
+       Default: ``Save to temporary file``
      - Specify the output hillshade raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -261,10 +263,9 @@ Parameters
      - Specify the output folder for the hypsometric curves.
        One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
 
 Outputs
 .......
@@ -379,11 +380,13 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output relief raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
    * - **Frequency distribution**
+
+       Optional
      - ``FREQUENCY_DISTRIBUTION``
      - [table]
        
@@ -391,11 +394,9 @@ Parameters
      - Specify the CSV table for the output frequency distribution.
        One of:
 
-       * Skip Output
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......
@@ -478,10 +479,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output ruggedness raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -555,10 +555,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output slope raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
