@@ -947,6 +947,7 @@ options. This dialog is almost the same for all the annotation types:
 * :guilabel:`Frame style`: sets the frame background color, transparency,
   stroke color or width of the balloon using QGIS symbols.
 * :guilabel:`Contents margins`: sets interior margins of the annotation frame.
+* |checkbox| :guilabel:`Live update` allows you to live preview your changes.
 
 .. _figure_annotation:
 
