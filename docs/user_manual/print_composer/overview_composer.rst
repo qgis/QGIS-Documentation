@@ -459,7 +459,7 @@ layout:
   templates.
 
 The :menuselection:`Settings --> Keyboard Shortcuts...` menu allows you to 
-use shortcuts manager in the Print Layout interface.
+use the :ref:`shortcuts manager <shortcuts>` in the Print Layout interface.
 
 Contextual menus
 ................
