@@ -298,20 +298,20 @@ the left side of the modeler window:
      - :class:`Multiple Input <qgis.core.QgsProcessingParameterMultipleLayers>`
      - :class:`Number <qgis.core.QgsProcessingParameterNumber>`
      - :class:`Point <qgis.core.QgsProcessingParameterPoint>`
-     - :class:`Point Cloud Layer <qgis.core.QgsProcessingParameterPointCloudLayer>`
-   * - :class:`Print Layout <qgis.core.QgsProcessingParameterLayout>`
+     - :class:`Point Cloud Attribute <qgis.core.QgsProcessingParameterPointCloudAttribute>`
+   * - :class:`Point Cloud Layer <qgis.core.QgsProcessingParameterPointCloudLayer>`
+     - :class:`Print Layout <qgis.core.QgsProcessingParameterLayout>`
      - :class:`Print Layout Item <qgis.core.QgsProcessingParameterLayoutItem>`
      - :class:`Range <qgis.core.QgsProcessingParameterRange>`
      - :class:`Raster Band <qgis.core.QgsProcessingParameterBand>`
-     - :class:`Raster Layer <qgis.core.QgsProcessingParameterRasterLayer>`
-   * - :class:`Scale <qgis.core.QgsProcessingParameterScale>`
+   * - :class:`Raster Layer <qgis.core.QgsProcessingParameterRasterLayer>`
+     - :class:`Scale <qgis.core.QgsProcessingParameterScale>`
      - :class:`String <qgis.core.QgsProcessingParameterString>`
      - :class:`TIN Creation Layers <qgis.core.QgsProcessingParameterTinInputLayers>`
      - :class:`Vector Features <qgis.core.QgsProcessingParameterFeatureSource>`
-     - :class:`Vector Field <qgis.core.QgsProcessingParameterField>`
-   * - :class:`Vector Layer <qgis.core.QgsProcessingParameterVectorLayer>`
+   * - :class:`Vector Field <qgis.core.QgsProcessingParameterField>`
+     - :class:`Vector Layer <qgis.core.QgsProcessingParameterVectorLayer>`
      - :class:`Vector Tile Writer Layers <qgis.core.QgsProcessingParameterVectorTileWriterLayers>`
-     -
      -
      -
 

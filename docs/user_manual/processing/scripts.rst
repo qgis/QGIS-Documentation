@@ -548,6 +548,10 @@ Input types
      - ``alg.VECTOR_LAYER_DEST``
      - A vector layer destination parameter, for specifying the destination path
        for a vector layer created by the algorithm
+   * - :class:`QgsProcessingParameterVectorTileDestination <qgis.core.QgsProcessingParameterVectorTileDestination>`
+     -
+     - A vector tile layer destination parameter, for specifying the destination path
+       for a vector tile layer created by the algorithm
 
 
 Output types
@@ -603,6 +607,10 @@ Output types
    * - :class:`QgsProcessingOutputVectorLayer <qgis.core.QgsProcessingOutputVectorLayer>`
      - ``alg.VECTOR_LAYER``
      - A vector layer
+   * - :class:`QgsProcessingOutputVectorTileLayer <qgis.core.QgsProcessingOutputVectorTileLayer>`
+     -
+     - A vector tile layer
+
 
 Handing algorithm output
 ------------------------
