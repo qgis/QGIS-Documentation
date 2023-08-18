@@ -6,14 +6,7 @@ OGC API Features
 OGC API Features (OAPIF) is the first implementation of the new generation of OGC
 protocols.
 It is described by the `OGC API - Features - Part 1: Core
-<http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ document.
-
-Layers of servers implementing `OGC API - Features - Part 4: Create, Replace,
-Update and Delete <https://docs.ogc.org/DRAFTS/20-002.html>`_ can be turned into 
-editing mode to allow creating, modifying and deleting features. Note that each 
-created/modified/deleted feature requires a dedicated network request, so 
-performance might suffer in case of simultaneous modification of hundreds or 
-more features at a time. 
+<http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ document. 
 
 The API can be reached on typical installations via `http://localhost/qgisserver/wfs3`
 
