@@ -6,6 +6,7 @@ Cartography
    .. contents::
       :local:
       :depth: 1
+      :class: toc_columns
 
 .. _qgisangletonearest:
 
