@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-11 08:42+0000\n"
+"POT-Creation-Date: 2023-08-06 06:24+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -1286,9 +1286,21 @@ msgstr "|showAllLayers| :guilabel:`全アイテム表示`"
 msgid "|hideAllLayers| :guilabel:`Hide All Items`"
 msgstr "|hideAllLayers| :guilabel:`全アイテム非表示`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:427
+msgid ""
+"With vector layer, the contextual menu of a class leaf entry also gives "
+"access to:"
+msgstr "ベクタレイヤでは、クラスリーフエントリのコンテクストメニューからも次にアクセスできます："
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2293
 msgid "selectAll"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:430
+msgid ""
+"|openTable| :guilabel:`Show in attribute table`: opens an attribute table "
+"filtered to only the features matching that class"
+msgstr "|openTable|:guilabel:`属性テーブルに表示`: そのクラスにマッチした地物でフィルタした属性テーブルを開きます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:432
 msgid ""
@@ -1298,6 +1310,14 @@ msgid ""
 msgstr ""
 ":ref:`シンボルの色 <color-selector>` を **カラーホイール** を使って更新します。 "
 "最近使用した色は、カラーホイールの下部からも選べて便利です。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:434
+msgid ""
+":guilabel:`Edit Symbol...`: opens the :ref:`Symbol Selector <symbol-"
+"selector>` dialog to change feature symbol (symbol, size, color...)."
+msgstr ""
+":guilabel:`シンボルを編集...`: 地物シンボル（シンボル、大きさ、色...）を変更する :ref:`シンボルセレクタ <symbol-"
+"selector>` ダイアログを開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:436
 msgid ":guilabel:`Copy Symbol`"
@@ -1311,7 +1331,7 @@ msgstr ":guilabel:`シンボルを貼り付ける`"
 msgid ""
 "Double-clicking a class leaf entry also opens the :guilabel:`Symbol "
 "Selector` dialog."
-msgstr "クラスの葉エントリをダブルクリックすることでも :guilabel:`シンボルセレクタ` ダイアログが開きます。"
+msgstr "クラスリーフエントリをダブルクリックしても :guilabel:`シンボルセレクタ` ダイアログが開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:448
 msgid "Layer Styling Panel"
@@ -1348,6 +1368,11 @@ msgstr "レイヤパネルの現在のレイヤのドロップダウンリスト
 #: ../../docs/user_manual/introduction/general_tools.rst:465
 msgid "Depending on the active item, set:"
 msgstr "アクティブな項目に応じて、次を設定します:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:467
+msgid ""
+"|symbology| :guilabel:`Symbology` for groups (see :ref:`render_as_group`)"
+msgstr "グループの |symbology| :guilabel:`シンボロジ` （:ref:`render_as_group` を参照）"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:468
 msgid ""
@@ -1594,6 +1619,10 @@ msgid ""
 "available statistics are:"
 msgstr ""
 "返される統計量はダイアログ右下にあるドロップダウンボタンを使って選択できます。フィールド（あるいは式の値）の型に応じて、利用可能な統計量は以下のとおりです："
+
+#: ../../docs/user_manual/introduction/general_tools.rst:600
+msgid "Statistics available for each field type"
+msgstr "各フィールド型で利用できる統計量"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:603
 msgid "Statistics"
@@ -3254,7 +3283,7 @@ msgstr "データのドキュメント作成"
 msgid ""
 "In addition to displaying and symbolizing the data in the layers, QGIS "
 "allows you to fill:"
-msgstr "レイヤでデータを表示したり、シンボル作成するだけでなく、QGISではレイヤに以下の情報を入力することができます："
+msgstr "レイヤでデータを表示したり、シンボルを作成するだけでなく、QGISではレイヤに以下の情報を入力することができます："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1361
 msgid ""
@@ -3342,6 +3371,69 @@ msgid ""
 msgstr ""
 "入力された情報の概要は :guilabel:`検証` "
 "タブに表示され、フォームに関連した潜在的な問題を特定するのに役立ちます。問題を修正してもよいですが、無視することもできます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1394
+msgid ""
+"Metadata are saved in the project file by default, the :guilabel:`Metadata` "
+"drop-down offers options for loading/saving metadata from :file:`.qmd` file "
+"and for loading/saving metadata in the \"Default\" location."
+msgstr ""
+"メタデータはデフォルトでプロジェクトファイルに保存されます。 :guilabel:`メタデータ` ドロップダウンには :file:`.qmd` "
+"ファイルからメタデータを読み込む/保存するオプションと、「デフォルト」の場所からメタデータを読み込む/保存するオプションがあります。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1403
+msgid "Metadata load/save options"
+msgstr "メタデータ読み込み／保存オプション"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1406
+msgid ""
+"The \"Default\" location used by :guilabel:`Save as Default` and "
+":guilabel:`Restore Default` changes depending on the underlying data source "
+"and on its configuration:"
+msgstr ""
+":guilabel:`デフォルトとして保存` と :guilabel:`デフォルトに戻す` "
+"で使用される「デフォルト」の場所は、元となっているデータソースとその設定によって変わります："
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1411
+msgid ""
+"For PostgreSQL data sources if the configuration option :guilabel:`Allow "
+"saving/loading QGIS layer metadata in the database` is checked the metadata "
+"are stored inside a dedicated table in the database."
+msgstr ""
+"PostgreSQL データソースの場合、設定オプション :guilabel:`QGISレイヤメタデータをデータベースに保存/読み込みを許可する` "
+"がチェックされていると、メタデータはデータベース内の専用テーブル内に保存されます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1416
+msgid ""
+"For GeoPackage data sources :guilabel:`Save as Default` always saves the "
+"metadata in the internal metadata tables of the GeoPackage."
+msgstr ""
+"GeoPackage データソースの場合、:guilabel:`デフォルトとして保存` は常に GeoPackage "
+"の内部メタデータテーブルにメタデータを保存します。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1419
+msgid ""
+"When metadata are saved into the internal tables of PostgreSQL or GeoPackage"
+" they become available for search and filtering in the browser and in the "
+":ref:`layer metadata search panel <layer_metadata_search_panel>`."
+msgstr ""
+"メタデータがPostgreSQLやGeoPackageの内部テーブルに保存されると、ブラウザや "
+":ref:`レイヤ<layer_metadata_search_panel>メタデータ検索パネル ` で検索やフィルタリングが可能になります。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1423
+msgid ""
+"For all other file based data sources :guilabel:`Save as Default` saves the "
+"metadata in a :file:`.qmd` file alongside the file."
+msgstr ""
+"他のすべてのファイル型のデータソースでは :guilabel:`デフォルトとして保存` はメタデータをファイルと一緒に :file:`.qmd` "
+"ファイルに保存します。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1426
+msgid ""
+"In all other cases :guilabel:`Save as Default` saves the metadata in a local"
+" :file:`.sqlite` database."
+msgstr ""
+"他のすべての場合 :guilabel:`デフォルトとして保存` はメタデータをローカルの :file:`.sqlite` データベースに保存します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1433
 msgid "Layer notes"
@@ -3469,7 +3561,7 @@ msgid ""
 "You can manage:"
 msgstr ""
 ":ref:`プリセットの読み取り専用変数 <expression_variables>` "
-"の他に、上記のどのレベルに対しても独自のカスタム変数を定義することができます。以下の場所で変数を管理できます。"
+"の他に、上記のどのレベルに対しても独自のカスタム変数を定義することができます。以下の場所で変数を管理できます："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1503
 msgid ""
@@ -3493,11 +3585,9 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1508
 msgid ""
-"**modeler variables** from the :guilabel:`Graphical Modeler` dialog (see "
+"**modeler variables** from the :guilabel:`Model Designer` dialog (see "
 ":ref:`processing.modeler`);"
-msgstr ""
-"**グラフィカルモデラー変数** :guilabel:`グラフィカルモデラー` ダイアログ（ :ref:`processing.modeler` "
-"参照）から"
+msgstr "**モデル変数** :guilabel:`モデルデザイナー` ダイアログから（:ref:`processing.modeler`を参照）；"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1510
 msgid ""
@@ -3779,6 +3869,12 @@ msgid ""
 "drag-and-drop the color from one widget to another for quick modification"
 msgstr "色をあるウィジェットから別のウィジェットにドラッグ＆ドロップして、素早く色を変更する"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1655
+msgid ""
+"Scroll the mouse wheel over a color selector widget to quickly modify the "
+"opacity of the associated color."
+msgstr "色選択ウィジェット上でマウスホイールをスクロールすると、関連する色の不透明度をすばやく変更できます。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1658
 msgid ""
 "When the color widget is set to a :ref:`project color <project_colors>` "
@@ -3826,6 +3922,12 @@ msgstr "ボタンの右側にあるドロップダウンメニューを使用す
 #: ../../docs/user_manual/introduction/general_tools.rst:1691
 msgid ":guilabel:`Invert Color Ramp`"
 msgstr ":guilabel:`カラーランプを反転`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1692
+msgid ""
+":guilabel:`Clear Current Ramp` to unset any assigned color ramp to the "
+"widget (available only in some contexts)"
+msgstr ":guilabel:`現在のランプをクリア` ウィジェットに割り当てられているカラーランプを解除します（特定の箇所で利用可能）"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1694
 msgid ""
@@ -3907,6 +4009,18 @@ msgstr ":guilabel:`シンボルをコピーする` は、現在のアイテム�
 #: ../../docs/user_manual/introduction/general_tools.rst:1730
 msgid ":guilabel:`Paste Symbol` to the current item, speeding configuration"
 msgstr ":guilabel:`シンボルを貼り付ける` は、現在のアイテムにシンボルを貼り付けます。素早くシンボル設定ができます"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1731
+msgid ""
+":guilabel:`Clear Current Symbol` to unset any assigned symbol to the widget "
+"(available only in some contexts)"
+msgstr ":guilabel:`現在のシンボルをクリア` ウィジェットに割り当てられているシンボルを解除します（特定の箇所で利用可能）"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1734
+msgid ""
+"Scroll the mouse wheel over a marker or line symbol widget to quickly modify"
+" the size of the associated symbol."
+msgstr "マーカー又はラインシンボルウィジェット上でマウスホイールをスクロールすると、関連するシンボルの大きさをすばやく変更できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1741
 msgid "Remote or embedded file selector"
@@ -4001,6 +4115,13 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:1835
 msgid "Font selector drop-down menu"
 msgstr "フォントセレクタのドロップダウンメニュー"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1837
+msgid ""
+":guilabel:`Clear Current Text Format` to unset any assigned text format to "
+"the widget (available only in some contexts)"
+msgstr ""
+":guilabel:`現在のテキストフォーマットをクリア` ウィジェットに割り当てられているテキストフォーマットを解除します（特定の箇所で利用可能）"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1839
 msgid ":guilabel:`Font Size` in the associated unit"

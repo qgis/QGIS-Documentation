@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# 徐保才 <1302638819@qq.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: 徐保才 <1302638819@qq.com>, 2023\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,45 +25,550 @@ msgstr ""
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:5
+msgid "Creating Layers"
+msgstr "创建图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:13
+msgid "Layers can be created in many ways, including:"
+msgstr "可以通过多种方式创建图层，包括："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:15
+msgid "empty layers from scratch"
+msgstr "从头创建空图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:16
+msgid "layers from existing layers"
+msgstr "从现有图层创建图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:17
+msgid "layers from the clipboard"
+msgstr "从剪贴板创建图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:18
+msgid ""
+"layers as a result of an SQL-like query based on one or many layers "
+"(:ref:`virtual layers <vector_virtual_layers>`)"
+msgstr "图层作为基于一个或多个图层的类似SQL查询的结果 (:ref:`虚拟图层 <vector_virtual_layers>`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:21
+msgid "QGIS also provides tools to import/export from/to different formats."
+msgstr "QGIS还提供了从/到不同格式导入/导出的工具。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:29
+msgid "Creating new vector layers"
+msgstr "新建矢量图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:31
+msgid ""
+"QGIS allows you to create new layers in different formats. It provides tools"
+" for creating GeoPackage, Shapefile, SpatiaLite, GPX format and Temporary "
+"Scratch layers (aka memory layers). Creation of a :ref:`new GRASS layer "
+"<creating_new_grass_vectors>` is supported within the GRASS plugin."
+msgstr ""
+"QGIS允许您创建不同格式的新图层。提供了用于创建地理包、形状文件、SpatiaLite、GPX格式和临时图层 (也称为内存图层) "
+"的工具。GRASS插件支持创建 :ref:`新的GRASS图层 <creating_new_grass_vectors>` 。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:42
+msgid "Creating a new GeoPackage layer"
+msgstr "新建地理包图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:44
+msgid ""
+"To create a new GeoPackage layer, press the |newGeoPackageLayer| "
+":menuselection:`New GeoPackage Layer...` button in the :menuselection:`Layer"
+" --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New GeoPackage Layer` dialog will be displayed as "
+"shown in :numref:`figure_create_geopackage`."
+msgstr ""
+"要新建地理包图层，请在 :menuselection:`图层 --> 创建图层 -->` 菜单或从 :guilabel:`数据源管理器` 工具栏点击 "
+"|newGeoPackageLayer| :menuselection:`新建地理包图层...` 按钮。将显示 :guilabel:`新建地理包图层` "
+"对话框，如 :numref:`figure_create_geopackage` 所示。"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:771
 msgid "newGeoPackageLayer"
 msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:56
+msgid "Creating a New GeoPackage layer dialog"
+msgstr "新建地理包图层对话框"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:58
+msgid ""
+"The first step is to indicate the database file location. This can be done "
+"by pressing the :guilabel:`...` button to the right of the "
+":guilabel:`Database` field and select an existing GeoPackage file or create "
+"a new one. QGIS will automatically add the right extension to the name you "
+"provide."
+msgstr ""
+"第一步是选择数据库文件的位置。可以通过点击 :guilabel:`数据库` 字段右侧的 :guilabel:`...` "
+"按钮，然后选择现有或新建地理包文件。QGIS将自动为您提供的名称添加正确的扩展名。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:63
+msgid "Give the new layer / table a name (:guilabel:`Table name`)"
+msgstr "为新图层/表命名 (:guilabel:`表名称`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:64
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:168
+msgid ""
+"Define the :guilabel:`Geometry type`. If not a geometryless layer, you can "
+"specify whether it should :guilabel:`Include Z dimension` and/or "
+":guilabel:`Include M values`."
+msgstr ""
+"定义 :guilabel:`几何图形类型` 。如果不是无几何图形图层，可以指定是否应 :guilabel:`包括Z维度` 和/或 "
+":guilabel:`包括M值` 。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:67
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:117
+msgid ""
+"Specify the coordinate reference system using the |setProjection| button"
+msgstr "使用 |setProjection| 按钮指定坐标参照系"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:779
 msgid "setProjection"
 msgstr ""
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:69
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:126
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:173
+msgid "To add fields to the layer you are creating:"
+msgstr "要将字段添加到正在创建的图层，请执行以下操作："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:71
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:128
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:175
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:292
+msgid "Enter the :guilabel:`Name` of the field"
+msgstr "输入字段的 :guilabel:`名称`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:72
+msgid ""
+"Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,"
+" :guilabel:`Whole number` (both integer and integer64), :guilabel:`Decimal "
+"number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Binary "
+"(BLOB)` and :guilabel:`Boolean`."
+msgstr ""
+"选择数据 :guilabel:`类型` 。支持的类型有 :guilabel:`文本数据`, :guilabel:`非负整数` (整数和64位整数), "
+":guilabel:`小数`, :guilabel:`日期` 和 :guilabel:`日期和时间`, :guilabel:`二进制 (BLOB)` 和"
+" :guilabel:`布尔型` 。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:76
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Maximum length` "
+"of values."
+msgstr "根据选中的数据格式，输入值的 :guilabel:`最大长度` 。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:78
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:134
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:179
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:299
+msgid "Click on the |newAttribute| :guilabel:`Add to Fields List` button"
+msgstr "单击 |newAttribute| :guilabel:`添加到字段列表` 按钮"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:769
 msgid "newAttribute"
 msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:79
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:135
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:180
+msgid "Reproduce the steps above for each field you need to add"
+msgstr "为需要添加的每个字段重复上述步骤"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:80
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:136
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:181
+msgid ""
+"Once you are happy with the attributes, click :guilabel:`OK`. QGIS will add "
+"the new layer to the legend, and you can edit it as described in section "
+":ref:`sec_edit_existing_layer`."
+msgstr ""
+"设置满意的属性后，请单击 :guilabel:`确定` 按钮。QGIS将向图例添加新图层，您可以按照 "
+":ref:`sec_edit_existing_layer` 中的说明对其进行编辑。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:84
+msgid ""
+"By default, when creating a GeoPackage layer, QGIS generates a "
+":guilabel:`Feature id column` called ``fid`` which acts as the primary key "
+"of the layer. The name can be changed. The geometry field, if availabe, is "
+"named ``geometry``, and you can choose to :guilabel:`Create a spatial index`"
+" on it. These options can be found under the :guilabel:`Advanced Options` "
+"together with the :guilabel:`Layer identifier` (short human readable name of"
+" the layer) and the :guilabel:`Layer description`."
+msgstr ""
+"默认情况下，在创建地理包图层时，QGIS会生成一个名为 ``fid`` 的 :guilabel:`要素ID列` "
+"，该列充当该图层的主键。名称可以更改。几何图形字段 (如果可用) 被命名为 ``几何图形`` ，您可以选择在其上 :guilabel:`创建空间索引` "
+"。这些选项与 :guilabel:`图层标识符` (图层的简短人类可读名称）和 :guilabel:`图层描述` 都位于 "
+":guilabel:`高级选项` 。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:93
+msgid ""
+"Further management of GeoPackage layers can be done with the :ref:`DB "
+"Manager <dbmanager>`."
+msgstr "可以使用 :ref:`数据库管理器 <dbmanager>` 对地理包图层进一步管理。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:100
+msgid "Creating a new Shapefile layer"
+msgstr "新建形状文件图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:102
+msgid ""
+"To create a new ESRI Shapefile format layer, press the |newVectorLayer| "
+":menuselection:`New Shapefile Layer...` button in the :menuselection:`Layer "
+"--> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New Shapefile Layer` dialog will be displayed as "
+"shown in :numref:`figure_create_shapefile`."
+msgstr ""
+"要新建ESRI形状文件格式图层，请在 :menuselection:`图层 --> 创建图层 -->` 菜单或从 :guilabel:`数据源管理器` "
+"工具栏点击 |newVectorLayer| :menuselection:`新建形状文件图层...` 按钮。将显示 "
+":guilabel:`新建形状文件图层` 对话框，如 :numref:`figure_create_shapefile` 所示。"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:777
 msgid "newVectorLayer"
 msgstr ""
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:109
+msgid ""
+"Provide a path and file name using the :guilabel:`...` button next to "
+":guilabel:`File name`. QGIS will automatically add the right extension to "
+"the name you provide."
+msgstr ""
+"使用 :guilabel:`文件名` 旁边的 :guilabel:`...` 按钮选择路径和文件名。QGIS将自动为您提供的名称添加正确的扩展名。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:112
+msgid "Next, indicate the :guilabel:`File encoding` of the data"
+msgstr "接下来，选择数据的 :guilabel:`文件编码` "
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:113
+msgid ""
+"Choose the :guilabel:`Geometry type` of the layer: No Geometry (resulting in"
+" a :file:`.DBF` format file), point, multipoint, line or polygon"
+msgstr "选择图层的 :guilabel:`几何图形类型` ：无几何图形 (生成 :file:`.DBF` 格式文件)、点、点集、线或多边形"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:115
+msgid ""
+"Specify whether the geometry should have additional dimensions: "
+":guilabel:`None`, :guilabel:`Z (+ M values)` or :guilabel:`M values`"
+msgstr ""
+"指定几何图形是否应具有附加尺寸: :guilabel:`无`, :guilabel:`Z (+ M 值)` 或 :guilabel:`M值`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:124
+msgid "Creating a new Shapefile layer dialog"
+msgstr "新建形状文件图层对话框"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:129
+msgid ""
+"Select the data :guilabel:`Type`. Only :guilabel:`Decimal number`, "
+":guilabel:`Whole number`, :guilabel:`Text data` and :guilabel:`Date` "
+"attributes are supported."
+msgstr ""
+"选择数据 :guilabel:`类型` 。仅支持 :guilabel:`小数`, :guilabel:`整数`, :guilabel:`文本数据` 和 "
+":guilabel:`日期` 属性。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:132
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Length` and "
+":guilabel:`Precision`."
+msgstr "根据选中的数据格式，输入:guilabel:`长度` 和 :guilabel:`精度` 。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:140
+msgid "By default, a first integer ``id`` column is added but can be removed."
+msgstr "默认将添加第一个整数 ``id`` 列，但可以将其移除。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:147
+msgid "Creating a new SpatiaLite layer"
+msgstr "新建SpatiaLite图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:149
+msgid ""
+"To create a new SpatiaLite layer, press the |newSpatiaLiteLayer| "
+":menuselection:`New SpatiaLite Layer...` button in the :menuselection:`Layer"
+" --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New SpatiaLite Layer` dialog will be displayed as "
+"shown in :numref:`Figure_create_spatialite`."
+msgstr ""
+"要新建SpatiaLite图层，请在 :menuselection:`图层 --> 创建图层 -->` 菜单或从 :guilabel:`数据源管理器` "
+"工具栏点击 |newSpatiaLiteLayer| :menuselection:`新建SpatiaLite图层...` 按钮。将显示 "
+":guilabel:`新建SpatiaLite图层` 对话框，如 :numref:`Figure_create_spatialite` 所示。"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:775
 msgid "newSpatiaLiteLayer"
 msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:160
+msgid "Creating a New SpatiaLite layer dialog"
+msgstr "新建SpatiaLite图层对话框"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:162
+msgid ""
+"The first step is to indicate the database file location. This can be done "
+"by pressing the :guilabel:`...` button to the right of the "
+":guilabel:`Database` field and select an existing SpatiaLite file or create "
+"a new one. QGIS will automatically add the right extension to the name you "
+"provide."
+msgstr ""
+"第一步是选择数据库文件的位置。可以通过点击 :guilabel:`数据库` 字段右侧的 :guilabel:`...` "
+"按钮，然后选择现有或新建SpatiaLite文件。QGIS将自动为您提供的名称添加正确的扩展名。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:167
+msgid "Provide a name (:guilabel:`Layer name`) for the new layer"
+msgstr "为新建图层提供名称 (:guilabel:`图层名`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:171
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:288
+msgid ""
+"Specify the coordinate reference system using the |setProjection| button."
+msgstr "使用 |setProjection| 按钮指定坐标参照系。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:176
+msgid ""
+"Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,"
+" :guilabel:`Whole number`, :guilabel:`Decimal number`, :guilabel:`Date` and "
+":guilabel:`Date time`."
+msgstr ""
+"选择数据 :guilabel:`类型` 。支持的类型有 :guilabel:`文本数据`, :guilabel:`整数`, "
+":guilabel:`小数`, :guilabel:`日期` 和 :guilabel:`日期时间` 。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:185
+msgid ""
+"If desired, you can select |checkbox| :guilabel:`Create an autoincrementing "
+"primary key` under the guilabel:`Advanced Options` section. You can also "
+"rename the :guilabel:`Geometry column` (``geometry`` by default)."
+msgstr ""
+"如果需要，可以在 guilabel:`高级选项` 部分选择 |checkbox| :guilabel:`创建自增主键` 。也可以重命名 "
+":guilabel:`几何图形列` (默认为 ``geometry``) 。"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:761
 msgid "checkbox"
 msgstr ""
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:189
+msgid ""
+"Further management of SpatiaLite layers can be done with :ref:`DB Manager "
+"<dbmanager>`."
+msgstr "可以使用 :ref:`数据库管理器 <dbmanager>` 对SpatiaLite图层进一步管理。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:197
+msgid "Creating a new Mesh layer"
+msgstr "新建网孔图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:199
+msgid ""
+"To create a new Mesh layer, press the |newMeshLayer| :menuselection:`New "
+"Mesh Layer...` button in the :menuselection:`Layer --> Create Layer -->` "
+"menu or from the :guilabel:`Data Source Manager` toolbar. The :guilabel:`New"
+" Mesh Layer` dialog will be displayed as shown in "
+":numref:`figure_create_mesh`."
+msgstr ""
+"要新建网孔图层，请在 :menuselection:`图层 --> 创建图层 -->` 菜单或从 :guilabel:`数据源管理器` 工具栏点击 "
+"|newMeshLayer| :menuselection:`新建网孔图层...` 按钮。将显示 :guilabel:`新建网孔图层` 对话框，如 "
+":numref:`figure_create_mesh` 所示。"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:773
 msgid "newMeshLayer"
 msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:211
+msgid "Creating a New Mesh layer dialog"
+msgstr "新建网孔图层对话框"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:213
+msgid ""
+"The first step is to indicate the mesh file location. This can be done by "
+"pressing the :guilabel:`...` button to the right of the :guilabel:`File "
+"name` field and select an existing mesh file or create a new one."
+msgstr ""
+"第一步是选择网孔文件的位置。可以通过点击 :guilabel:`文件名` 字段右侧的 :guilabel:`...` 按钮，然后选择现有或新建网孔文件。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:217
+msgid ""
+"Provide a name (:guilabel:`Layer name`), i.e. the name the layer is "
+"displayed with in the :guilabel:`Layers` panel"
+msgstr "提供名称 (:guilabel:`文件名`), 即图层在 :guilabel:`图层` 面板显示的名称"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:219
+msgid ""
+"Select the :guilabel:`File format`: currently supported mesh file formats "
+"are ``2DM Mesh File (*.2dm)``, ``Selafin File (*.slf)`` and ``UGRID "
+"(*.nc)``."
+msgstr ""
+"选择 :guilabel:`文件格式`: 目前支持的网孔文件格式有 ``2DM网孔文件 (*.2dm)``, ``Selafin文件 (*.slf)``"
+" 和 ``UGRID (*.nc)`` 。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:221
+msgid ""
+"Indicate the :ref:`Coordinate Reference System <crs_selector>` to assign to "
+"the dataset"
+msgstr "选择指定给数据集的 :ref:`坐标参照系 <crs_selector>`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:223
+msgid ""
+"The above steps will generate an empty layer that you can afterwards "
+"digitize vertices and add dataset groups to. It's however also possible to "
+"initialize the layer with an existing mesh layer, i.e. populate the new "
+"layer with vertices or faces from the other. To do so:"
+msgstr ""
+"上述步骤将生成一个空图层，随后可以数字化顶点并向其添加数据集组。但是，也可以使用现有网孔图层初始化该图层，即使用其他网孔图层的顶点或面填充新图层。为此："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:229
+msgid "Check |checkbox| :guilabel:`Initialize Mesh using`"
+msgstr "勾选 |checkbox| :guilabel:`使用如下数据初始化网孔`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:230
+msgid ""
+"and select either a :guilabel:`Mesh from the current project` or "
+":guilabel:`Mesh from a file`. Informations on the selected mesh file are "
+"displayed for checkup."
+msgstr "然后选择 :guilabel:`来自当前工程的网孔` 或 :guilabel:`来自文件的网孔` 。将显示选中网孔文件的信息以进行检查。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:234
+msgid ""
+"Note that only the frame of the mesh layer is transferred to the new layer; "
+"their datasets are not copied."
+msgstr "请注意，只有网孔图层的框架被转移到新图层，不会复制其数据集。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:242
+msgid "Creating a new GPX layer"
+msgstr "新建GPX图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:244
+msgid "To create a new GPX file:"
+msgstr "要创建新的GPX文件，请执行以下操作："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:246
+msgid ""
+"Select :menuselection:`Create Layer -->` |createGPX| :menuselection:`New GPX"
+" Layer...` from the :menuselection:`Layer` menu."
+msgstr ""
+"从 :menuselection:`图层` 菜单选择 :menuselection:`创建图层 -->` |createGPX| "
+":menuselection:`新建GPX图层...`"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:763
 msgid "createGPX"
 msgstr ""
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:248
+msgid ""
+"In the dialog, choose where to save the new file, name it and press "
+":guilabel:`Save`."
+msgstr "在对话框中，选择保存新文件的位置，为其命名并点击 :guilabel:`保存` 按钮。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:249
+msgid "Three new layers are added to the :guilabel:`Layers Panel`:"
+msgstr ":guilabel:`图层面板` 添加了三个新图层："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:251
+msgid ""
+"a point layer to digitize locations (``waypoints``) with fields storing the "
+"name, elevation, comment, description, source, url and url name"
+msgstr "用于数字化位置 (``waypoints``) 的点图层，其字段存储名称、高程、注释、描述、源、URL和URL名称"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:253
+msgid ""
+"a line layer to digitize sequences of locations that make up a planned route"
+" (``routes``) with fields storing the name, symbol, number, comment, "
+"description, source, url, url name"
+msgstr "用于数字化构成计划路径 (``routes``) 的位置序列的线图层，其字段存储名称、符号、数字、注释、描述、源、URL、URL名称"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:256
+msgid ""
+"and a line layer to track the receiver’s movement over time (``tracks``) "
+"with fields storing the name, symbol, number, comment, description, source, "
+"url, url name."
+msgstr "用于跟踪接收器随时间的移动 (``tracks``) 的线图层，其中字段存储名称、符号、数字、注释、描述、源、URL、URL名称"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:259
+msgid ""
+"You can now edit any of them as described in section "
+":ref:`sec_edit_existing_layer`."
+msgstr "现在，可以按照 :ref:`sec_edit_existing_layer` 所述编辑其中任一图层。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:265
+msgid "Creating a new Temporary Scratch Layer"
+msgstr "新建临时图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:267
+msgid ""
+"Temporary Scratch Layers are in-memory layers, meaning that they are not "
+"saved on disk and will be discarded when QGIS is closed. They can be handy "
+"for storing features you temporarily need or as intermediate layers during "
+"geoprocessing operations."
+msgstr "临时图层是内存中的图层，其数据不会保存在磁盘上，并且QGIS关闭时将被丢弃。可用于存储临时需要的要素，或者在地理处理操作期间作为中间图层。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:272
+msgid ""
+"To create a new Temporary Scratch layer, choose the |createMemory| "
+":menuselection:`New Temporary Scratch Layer...` entry in the "
+":menuselection:`Layer --> Create Layer -->` menu or in the :guilabel:`Data "
+"Source Manager` toolbar. The :guilabel:`New Temporary Scratch Layer` dialog "
+"will be displayed as shown in :numref:`figure_create_temporary`. Then:"
+msgstr ""
+"要新建临时图层，请在 :menuselection:`图层 --> 创建图层 -->` 菜单或在 :guilabel:`数据源管理器` 工具栏选择 "
+"|createMemory| :menuselection:`新建临时图层...` 按钮。将显示 :guilabel:`新建临时图层` 对话框，如 "
+":numref:`figure_create_temporary` 所示。然后："
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:765
 msgid "createMemory"
 msgstr ""
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:279
+msgid "Provide the :guilabel:`Layer name`"
+msgstr "提供 :guilabel:`图层名`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:280
+msgid "Select the :guilabel:`Geometry type`. Here you can create a:"
+msgstr "选择 :guilabel:`几何图形类型` 。在此您可以创建："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:282
+msgid "``No geometry`` type layer, served as simple table,"
+msgstr "``没有几何图形`` 类型图层，作为简单表"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:283
+msgid "``Point`` or ``MultiPoint`` layer,"
+msgstr "``点`` 或 ``点集`` 图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:284
+msgid "``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,"
+msgstr "``线串/复合曲线`` 或 ``线串集/曲线集`` 图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:285
+msgid "``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer."
+msgstr "``多边形/曲线多边形`` 或 ``多边形集/表面集`` 图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:286
+msgid ""
+"For geometric types, specify the dimensions of the dataset: check whether it"
+" should :guilabel:`Include Z dimension` and/or :guilabel:`Include M values`"
+msgstr "对于几何类型，指定数据集的维度：检查是否应 :guilabel:`包括Z维度` 和/或 :guilabel:`包括M值` "
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:289
+msgid ""
+"Add fields to the layer. Note that unlike many formats, temporary layers can"
+" be created without any fields. This step is thus optional."
+msgstr "将字段添加到图层。请注意，与许多其他格式不同，可以在不使用任何字段的情况下创建临时图层。因此，此步骤是可选的。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:293
+msgid ""
+"Select the data :guilabel:`Type`: :guilabel:`Text`, :guilabel:`Whole "
+"number`, :guilabel:`Decimal number`, :guilabel:`Boolean`, :guilabel:`Date`, "
+":guilabel:`Time`, :guilabel:`Date & Time` and :guilabel:`Binary (BLOB)` are "
+"supported."
+msgstr ""
+"选择数据 :guilabel:`类型`: :guilabel:`文本`, :guilabel:`整数`, :guilabel:`小数`, "
+":guilabel:`布尔`, :guilabel:`日期`, :guilabel:`时间`, :guilabel:`日期和时间` 和 "
+":guilabel:`二进制 (BLOB)`"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:767
 msgid "indicatorMemory"
 msgstr "indicatorMemory"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:343
+msgid ":menuselection:`Export --> Save As...` for raster layers"
+msgstr ":menuselection:`导出 --> 另存为...` 用于栅格图层"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:352
+msgid "Common parameters"
+msgstr "常用参数"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:757
 msgid "addPart"
