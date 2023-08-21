@@ -178,6 +178,9 @@ information about the point cloud layer:
   The :guilabel:`Test` button helps you check the syntax of your query.
   Use the :guilabel:`Clear` button to wipe the query
   and revert the layer to its original state (i.e., fully load all the points in the layer).
+  It is possible to :guilabel:`Save...` the query as a :file:`.QQF` file,
+  or :guilabel:`Load...` the query from a file into the dialog.
+
   When a filter is applied, QGIS treats the resulting subset as if it were the entire layer.
   For example if you applied the :ref:`filter above <figure_point_cloud_querybuilder>` for filtering buildings,
   you can not e.g. display, query, save or edit points that are of vegetation classification
@@ -189,6 +192,7 @@ information about the point cloud layer:
   with a |indicatorFilter| :sup:`Filter` icon next to it
   indicating the query used when the mouse hovers over the button.
   Double-click the icon opens the :guilabel:`Query Builder` dialog for edit.
+  This can also be achieved through the :menuselection:`Layer --> Filter...` menu.
 
 
 .. _point_clouds_symbology:
