@@ -25,6 +25,9 @@ algorithms.
      modelertools
      networkanalysis
      plots
+     pointcloudconversion
+     pointclouddatamanagement
+     pointcloudextraction
      rasteranalysis
      rastercreation
      rasterterrainanalysis
