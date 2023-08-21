@@ -216,6 +216,7 @@ each level of the dataset tree.
 |               |                                            +--------------+--------------+------------+------------+---------------+------------+
 |               |                                            | |geoPackage| | |spatialite| | |postgis|  | |hana|     | |mssql|       | |oracle|   |
 |               |                                            | GeoPackage   | SpatiaLite   | PostGIS    | SAP HANA   | MS SQL Server | Oracle     |
+|               |                                            | ([1]_)       |              |            |            |               |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 | Top menu      | Create a :guilabel:`New Connection…`       | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    | |checkbox| |
 |               | to an existing database                    |              |              |            |            |               |            |
@@ -288,6 +289,10 @@ each level of the dataset tree.
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 | Field         | :guilabel:`Delete Field…`                  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| |               |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
+
+
+.. [1] The different entries may also be available for some GDAL supported `vector file formats <https://gdal.org/drivers/vector/index.html>`_
+ such as ESRI File Geodatabase, FlatGeobuf, GeoParquet, NetCDF, ... when compatible.
 
 
 Tiles and Web Services
