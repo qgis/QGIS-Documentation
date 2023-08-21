@@ -564,7 +564,8 @@ and can be manually changed if necessary.
 
 The following field types are supported:
 
-* ``Boolean`` case-insensitive literal couples that are interpreted as boolean values are ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``
+* ``Boolean`` case-insensitive literal couples that are interpreted as boolean values are
+  ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``
 * ``Whole Number (integer)``
 * ``Whole Number (integer - 64 bit)``
 * ``Decimal Number``: double precision floating point number
@@ -1222,17 +1223,18 @@ To load a layer from a database, you can perform the following steps:
 The Layer Metadata Search Panel
 ===============================
 
-The layer metadata search panel allows to browse layers metadata
-from registered metadata providers and add them to the project.
+By default, QGIS can retrieve layers metadata from the connections or data providers that allow metadata storage 
+(more details on :ref:`saving metadata to the database <savemetadatatodb>`).
+The :guilabel:`Metadata search` panel allows to browse the layers by their metadata
+and add them to the project (either with a double-click or the :guilabel:`Add` button).
+The list can be filtered:
 
-The list can be filtered by text, by current project and by map canvas extent.
+* by text, watching a set of metadata properties (identifier, title, abstract)
+* by spatial extent, using the current :ref:`project extent <project_full_extent>` or the map canvas extent
+* by the layer (geometry) type
 
-The sources of metadata are implemented through a layer metadata provider
-system that can be extended by plugins. 
-
-QGIS provides out of the box the layer metadata providers that retrieve 
-the metadata from the connections that allow for metadata storage 
-(for more details :ref:`save metadata to the database <savemetadatatodb>`).
+.. note:: The sources of metadata are implemented through a layer metadata provider system
+ that can be extended by plugins. 
 
 .. figure:: img/layer_metadata_search_panel.png
    :align: center
