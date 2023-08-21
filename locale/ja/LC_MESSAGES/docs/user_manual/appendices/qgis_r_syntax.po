@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,6 +27,28 @@ msgstr ""
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:7
 msgid "Appendix D: QGIS R script syntax"
 msgstr "付録D：QGIS Rスクリプト構文"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:9
+msgid ""
+"Contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/en/istituto/scienze-della-vita/istituto-di-"
+"scienze-della-vita>`_"
+msgstr ""
+"Matteo Ghettaの寄稿 - `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/en/istituto/scienze-della-vita/istituto-di-"
+"scienze-della-vita>`_ による資金提供"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:12
+msgid ""
+"Writing R scripts in Processing is a bit tricky because of the special "
+"syntax."
+msgstr "プロセシングでRスクリプトを書くのは、特殊な構文のため、少しコツがいります。"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:15
+msgid ""
+"A Processing R script starts with defining its **Inputs** and **Outputs**, "
+"each preceded with double hash characters (``##``)."
+msgstr "プロセシングのRスクリプトは、まず **入力** と **出力** を定義し、それぞれの前に二重のハッシュ文字(``##``)を付けます。"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:18
 msgid ""
@@ -53,34 +76,42 @@ msgstr "すべての入力データとパラメータは指定する必要があ
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:33
 msgid "vector: ``##Layer = vector``"
-msgstr "vector: ``##Layer = vector``"
+msgstr "ベクタ: ``##Layer = vector``"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:34
 msgid ""
 "vector field: ``##F = Field Layer`` (where `Layer` is the name of an input "
 "vector layer the field belongs to)"
 msgstr ""
-"vector field: ``##F = Field Layer`` （ここで、 `Layer` は、フィールドが属する入力ベクタレイヤの名前です。）"
+"ベクタのフィールド: ``##F = Field Layer`` （ここで `Layer` はフィールドが属する入力ベクタレイヤの名前です）"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:36
 msgid "raster: ``##r = raster``"
-msgstr "raster: ``##r = raster``"
+msgstr "ラスタ: ``##r = raster``"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:37
 msgid "table: ``##t = table``"
-msgstr "table: ``##t = table``"
+msgstr "表: ``##t = table``"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:38
 msgid "number: ``##Num = number``"
-msgstr "number: ``##Num = number``"
+msgstr "数値: ``##Num = number``"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:39
 msgid "string: ``##Str = string``"
-msgstr "string: ``##Str = string``"
+msgstr "文字列: ``##Str = string``"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:40
 msgid "boolean: ``##Bol = boolean``"
-msgstr "boolean: ``##Bol = boolean``"
+msgstr "ブール値: ``##Bol = boolean``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:42
+msgid ""
+"elements in a dropdown menu. The items must be separated with semicolons "
+"``;``: ``##type=selection point;lines;point+lines``"
+msgstr ""
+"ドロップダウンメニューの要素。項目はセミコロン ``;`` で区切らなければなりません: ``##type=selection "
+"point;lines;point+lines``"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:47
 msgid "Outputs"
@@ -90,12 +121,46 @@ msgstr "出力"
 msgid ""
 "As for the inputs, each output has to be defined at the beginning of the "
 "script:"
-msgstr "入力のように、各出力は、スクリプトの先頭で定義する必要があります。"
+msgstr "入力と同じように、各出力は、スクリプトの先頭で定義する必要があります。"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:52
+msgid "vector: ``##output= output vector``"
+msgstr "ベクタ: ``##output= output vector``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:53
+msgid "raster: ``##output= output raster``"
+msgstr "ラスタ: ``##output= output raster``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:54
+msgid "table: ``##output= output table``"
+msgstr "表: ``##output= output table``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:55
+msgid "plots: ``##output_plots_to_html`` (##showplots in earlier versions)"
+msgstr "プロット: ``##output_plots_to_html`` （以前の版では##showplots）"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:56
+msgid ""
+"To show R output in the *Result Viewer*, put ``>`` in front of the command "
+"whose output you would like to show."
+msgstr "R の出力を *結果ビューアー* に表示するには、出力を表示したいコマンドの前に ``>`` を置きます。"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:65
+msgid "Syntax Summary for QGIS R scripts"
+msgstr "QGIS Rスクリプトの構文の概要"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:70
+msgid "A number of input and output parameter types are offered."
+msgstr "たくさんの入出力パラメータ型が用意されています。"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:73
+msgid "Input parameter types"
+msgstr "入力パラメータの型"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
 msgid "Parameter"
-msgstr "パラメーター"
+msgstr "パラメータ"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
@@ -114,6 +179,15 @@ msgstr "vector"
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
 msgid "Layer = vector"
 msgstr "Layer = vector"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
+msgid ""
+"sf object (or SpatialDataFrame object, if ##load_vector_using_rgdal is "
+"specified)"
+msgstr ""
+"sfオブジェクト（または、##load_vector_using_rgdalが指定されたときはSpatialDataFrameオブジェクト）"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
 msgid "vector point"
@@ -139,6 +213,13 @@ msgstr "vector polygon"
 msgid "Layer = vector polygon"
 msgstr "Layer = vector polygon"
 
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
+msgid ""
+"sf object (or SpatialPolygonsDataFrame object, if ##load_vector_using_rgdal "
+"is used)"
+msgstr ""
+"sfオブジェクト（または、##load_vector_using_rgdalが指定されたときはSpatialPolygonsDataFrameオブジェクト）"
+
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
 msgid "multiple vector"
 msgstr "multiple vector"
@@ -147,10 +228,17 @@ msgstr "multiple vector"
 msgid "Layer = multiple vector"
 msgstr "Layer = multiple vector"
 
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
+msgid ""
+"sf object (or SpatialDataFrame objects if ##load_vector_using_rgdal is "
+"specified)"
+msgstr ""
+"sfオブジェクト（または、##load_vector_using_rgdalが指定されたときはSpatialDataFrameオブジェクト）"
+
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:135
 msgid "table"
-msgstr "表"
+msgstr "table"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
 msgid "Layer = table"
@@ -253,6 +341,10 @@ msgstr "crs"
 msgid "C = crs"
 msgstr "C = crs"
 
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "string of the resulting CRS chosen, in the format: ``\"EPSG:4326\"``"
+msgstr "結果として選ばれたCRSの文字列。形式は ``\"EPSG:4326\"``"
+
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
 msgid "extent"
 msgstr "extent"
@@ -334,6 +426,14 @@ msgstr "Output = output table"
 msgid "Output = output file"
 msgstr "Output = output file"
 
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:140
+msgid ""
+"You can save plots as ``png`` from the *Processing Result Viewer*, or you "
+"can choose to save the plot directly from the algorithm interface."
+msgstr ""
+"*プロセシング結果ビューア* からプロットを ``png`` "
+"として保存することも、アルゴリズムインターフェースから直接プロットを保存することもできます。"
+
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:147
 msgid "Script body"
 msgstr "スクリプト本体"
@@ -344,32 +444,71 @@ msgid ""
 " is something wrong with your script."
 msgstr "スクリプト本体はR構文に従い、 **Log** パネルはスクリプトに問題がある場合に役立ちます。"
 
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:152
+msgid ""
+"**Remember** that you have to load all additional libraries in the script::"
+msgstr "スクリプトですべての追加ライブラリを読み込む必要があることを **覚えてください**::"
+
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:161
 msgid "Examples"
 msgstr "例"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:164
 msgid "Example with vector output"
-msgstr "ベクター出力の例"
+msgstr "ベクタ出力の例"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:166
 msgid ""
 "Let's take an algorithm from the online collection that creates random "
 "points from the extent of an input layer::"
-msgstr "入力レイヤーの範囲からランダムな点を作成するオンラインコレクションからのアルゴリズムを見てみましょう::"
+msgstr "入力レイヤの範囲からランダムな点を作成するオンラインコレクションからのアルゴリズムを見てみましょう::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:179
+msgid "Explanation (per line in the script):"
+msgstr "説明（スクリプトの行ごと）:"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:181
 msgid "``Point pattern analysis`` is the group of the algorithm"
-msgstr "``ポイントパターン分析`` は、アルゴリズムのグループ"
+msgstr "``Point pattern analysis（ポイントパターン分析）`` はアルゴリズムのグループ"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:182
 msgid "``Layer`` is the input **vector** layer"
-msgstr "``Layer`` は入力 **ベクター** レイヤー"
+msgstr "``Layer`` は入力 **ベクタ** レイヤ"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:183
+msgid "``Size`` is a **numerical** parameter with a default value of 10"
+msgstr "``Size`` は、**numerical（数値）** パラメタであり、デフォルト値は10"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:184
 msgid ""
 "``Output`` is the **vector** layer that will be created by the algorithm"
-msgstr "``Output`` はアルゴリズムによって作成される **ベクター** レイヤー、"
+msgstr "``Output`` はアルゴリズムによって作成される **ベクタ** レイヤ"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:186
+msgid "``library(sp)`` loads the **sp** library"
+msgstr "``library(sp)`` は、**sp** ライブラリを読み込む"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:187
+msgid "``spatpoly = as(Layer, \"Spatial\")`` translate to an sp object"
+msgstr "``spatpoly = as(Layer, \"Spatial\")`` は、spオブジェクトに翻訳する"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:188
+msgid ""
+"Call the ``spsample`` function of the ``sp`` library and run it using the "
+"input defined above (``Layer`` and ``Size``)"
+msgstr ""
+"``sp`` ライブラリの ``spsample`` 関数を呼び出し、上で定義した入力（``Layer`` と ``Size``）を使って実行する"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:190
+msgid ""
+"Create a *SpatialPointsDataFrame* object using the "
+"``SpatialPointsDataFrame`` function"
+msgstr ""
+"``SpatialPointsDataFrame`` 関数を使って *SpatialPointsDataFrame* オブジェクトを生成する"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:192
+msgid "Create the output vector layer using the ``st_as_sf`` function"
+msgstr "``st_as_sf`` 関数を使って出力ベクタレイヤを生成する"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:195
 msgid ""
@@ -393,6 +532,15 @@ msgid ""
 msgstr ""
 "次のスクリプトでは、「automap」Rパッケージの「autoKrige」関数を使用して入力ポイントベクタレイヤの指定されたフィールドから補間値のラスタマップを作成するために、基本的な通常のクリギングを実行します。最初にクリギングモデルを計算し、次にラスタを作成します。ラスターはラスタRパッケージの"
 " ``raster`` 関数で作成されます::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:227
+msgid ""
+"By using ``##load_vector_using_rgdal``, the input vector layer will be made "
+"available as a ``SpatialDataFrame`` objects, so we avoid having to translate"
+" it from an ``sf`` object."
+msgstr ""
+"``##load_vector_using_rgdal`` を使うと、入力ベクタレイヤは ``SpatialDataFrame`` "
+"オブジェクトとして使用できるようになり、``sf`` オブジェクトから変換する必要がなくなります。"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:232
 msgid "Example with table output"
@@ -430,6 +578,38 @@ msgid ""
 "result in the **Result Viewer**::"
 msgstr "前の例を使用して、テーブルを作成する代わりに、 **結果ビューア** で結果を印刷できます::"
 
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:287
+msgid "The script is exactly the same as the one above except for two edits:"
+msgstr "スクリプトは、2つの編集を除いて、上のものとまったく同じです："
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:289
+msgid "no output specified (the fourth line has been removed)"
+msgstr "出力は指定されていません（４行目は取り除かれています）"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:290
+msgid ""
+"the last line begins with ``>``, telling Processing to make the object "
+"available through the result viewer"
+msgstr "最後の行は ``>`` で始まるので、プロセシングに結果ビューアからオブジェクトを利用できるようにするよう指示しています"
+
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:295
 msgid "Example with plot"
 msgstr "プロットと例"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:296
+msgid ""
+"To create plots, you have to use the ``##output_plots_to_html`` parameter as"
+" in the following script::"
+msgstr ""
+"プロットを作成するには、次のスクリプトのように ``##output_plots_to_html`` パラメータを使用する必要があります::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:307
+msgid ""
+"The script uses a field (``Field``) of a vector layer (``Layer``) as input, "
+"and creates a *QQ Plot* (to test the normality of the distribution)."
+msgstr ""
+"このスクリプトは、ベクタレイヤ（``Layer``）のフィールド（``Field``）を入力として使用し、*QQプロット*（分布の正規性をテストする）を作成します。"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:311
+msgid "The plot is automatically added to the Processing *Result Viewer*."
+msgstr "プロットは自動的にプロセシング *結果ビューア* に追加されます。"
