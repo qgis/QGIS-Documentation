@@ -1292,6 +1292,12 @@ msgid ""
 "access to:"
 msgstr "ベクタレイヤでは、クラスリーフエントリのコンテクストメニューからも次にアクセスできます："
 
+#: ../../docs/user_manual/introduction/general_tools.rst:429
+msgid ""
+"|selectAll| :guilabel:`Select features`: selects in the layer all the "
+"features matching that class"
+msgstr "|selectAll| :guilabel:`地物を選択`: そのクラスにマッチしたすべての地物をレイヤで選択します"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2293
 msgid "selectAll"
 msgstr ""
@@ -2395,6 +2401,10 @@ msgid ""
 "search behaviour:"
 msgstr "各フィールドの横には、検索動作を制御するためのオプションを選べるドロップダウンリストがあります："
 
+#: ../../docs/user_manual/introduction/general_tools.rst:950
+msgid "Query operators per data type"
+msgstr "データ型毎のクエリ操作"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:953
 msgid "Field search option"
 msgstr "フィールド検索オプション"
@@ -2939,6 +2949,12 @@ msgstr "属性値のコピー: クリックした属性値のみをコピーし�
 #: ../../docs/user_manual/introduction/general_tools.rst:1164
 msgid "Copy feature attributes: Copy the attributes of the feature"
 msgstr "地物属性のコピー：地物属性をコピーします"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1165
+msgid ""
+"Select features by attribute value: Select all features in the layer that "
+"match the selected attribute"
+msgstr "属性で地物を選択：レイヤにある選択した属性にマッチするすべての地物を選択します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1167
 msgid "Clear result: Remove results in the window"
@@ -4073,9 +4089,57 @@ msgstr ""
 msgid "extract the embedded file from the widget and save it on disk."
 msgstr "埋め込みファイルを抽出：ウィジェットを通じて埋め込みファイルを抽出し、ディスク上に保存します"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1766
+msgid "Visibility Scale Selector"
+msgstr "表示縮尺セレクタ"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1768
+msgid ""
+"The visibility scale selector provides options to control the scales at "
+"which an element will be made visible in the map canvas. Out of the "
+"specified range of scales, the elements are not displayed. It can be applied"
+" e.g. to layers, labels or diagrams, from their :guilabel:`Rendering` "
+"properties tab."
+msgstr ""
+"表示縮尺セレクタは、要素をマップキャンバスに表示する縮尺を制御するオプションを提供します。指定した縮尺の範囲の外では、要素は表示されません。:guilabel:`レンダリング`"
+" プロパティタブから、レイヤ、ラベル、ダイアグラムなどに適用できます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1774
+msgid "Tick the |checkbox| :guilabel:`Scale dependent visibility` box"
+msgstr "|checkbox| :guilabel:`縮尺に応じた表示設定` ボックスをチェックします"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1775
+msgid ""
+"Fill the :guilabel:`Minimum (exclusive)` box with the most zoomed out "
+"desired scale, typing the value or selecting it from the :ref:`predefined "
+"scales <predefinedscales>`"
+msgstr ""
+":guilabel:`最小（それを含まない）` ボックスに、値を入力するか :ref:`定義済み縮尺 "
+"<predefinedscales>`から選択して、要求する最も小さい縮尺を入れます"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1777
+msgid ""
+"and/or fill the :guilabel:`Maximum (inclusive)` box with the most zoomed in "
+"desired scale"
+msgstr "そして／または :guilabel:最大（それを含む）' ボックスに、要求する最も大きい縮尺を入れます"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1779
+msgid ""
+"The |mapIdentification| :sup:`Set to current canvas scale` button next to "
+"the scale boxes sets the current map canvas scale as boundary of the range "
+"visibility. Press the arrow next to the button to access scales from "
+"layouts' maps and reuse them to fill the box."
+msgstr ""
+"縮尺ボックスの隣にある |mapIdentification| :sup:`現在キャンバスが表示している縮尺を設定` "
+"ボタンは、現在のマップキャンバスの縮尺を　表示範囲の境界として設定します。ボタンの横の矢印を押すと、レイアウトのマップから縮尺にアクセスし、ボックスを埋めるのに再利用できます。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2269
 msgid "mapIdentification"
 msgstr "mapIdentification"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1789
+msgid "Visibility scale selector widget"
+msgstr "表示縮尺セレクタウィジェット"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1796
 msgid "Spatial Extent Selector"
@@ -4089,6 +4153,38 @@ msgid ""
 msgstr ""
 ":guilabel:`範囲` "
 "セレクタウィジェットは、空間的な範囲を選択して、レイヤに割り当てたり実行するアクションの範囲を制限したい場合に便利なショートカットです。使用される状況にもよりますが、以下の中から範囲を選択できます:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1802
+msgid ":guilabel:`Current Layer Extent`: e.g. when exporting a layer"
+msgstr ":guilabel:`現在のレイヤの領域`: 例 レイヤをエクスポートする場合"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1803
+msgid ""
+":menuselection:`Calculate from Layer -->`: uses extent of a layer loaded in "
+"the current project"
+msgstr ":menuselection:`レイヤから計算 -->`: 現在のプロジェクトに読み込まれたレイヤの範囲を使います"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1805
+msgid "Use current :guilabel:`Map Canvas Extent`"
+msgstr "現在の :guilabel:`キャンバスの領域` を使います"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1806
+msgid ""
+":guilabel:`Draw on Canvas`: a rectangle whose coordinates are then used"
+msgstr ":guilabel:`キャンバスに描画`: 矩形を描画してその座標を使います"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1807
+msgid ""
+":guilabel:`Calculate from Bookmark`: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+":guilabel:`ブックマークから計算`: 保存されている :ref:`ブックマーク <sec_bookmarks>` の範囲を使います"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1808
+msgid ""
+":guilabel:`Calculate from Layout Map`: uses extent of a :ref:`layout map "
+"<layout_map_item>`"
+msgstr ":guilabel:`レイアウトマップから計算`: :ref:`レイアウトマップ <layout_map_item>` の範囲を使います"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1809
 msgid "Enter or edit the coordinates as ``xmin, xmax, ymin, ymax``"
@@ -4199,6 +4295,17 @@ msgstr ":guilabel:`ピクセル（Pixels）`"
 #: ../../docs/user_manual/introduction/general_tools.rst:1868
 msgid ":guilabel:`Inches`"
 msgstr ":guilabel:`インチ（Inches）`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1869
+msgid ""
+":guilabel:`Percentage`: allows you to set some properties as a percent of "
+"another one. For example, this is useful for creation of text formats where "
+"the components (buffer size, shadow radius...) nicely scale as the text size"
+" is changed, instead of having constant buffer/shadow sizes. So you don't "
+"need to adjust those sizes, when the text size changes."
+msgstr ""
+":guilabel:`パーセント`: "
+"あるプロパティを別のプロパティのパーセントとして設定することができます。例えば、バッファ／影の大きさを一定にする代わりに、テキストの大きさの変更に応じて構成要素（バッファの大きさ、影の半径...）をうまく拡大縮小するテキストフォーマットを作成するのに便利です。そのため、テキストの大きさが変わっても、それらの大きさを調節する必要がありません。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1874
 msgid ""
@@ -4527,6 +4634,60 @@ msgid ""
 msgstr ""
 "レイヤが :ref:`グループとしてレイヤを描画 <render_as_group>` "
 "グループの一部である場合、レンダリングに追加の混合モードが利用できます。これらは、あるレイヤの内容のレンダリングを、2つ目の「マスク」レイヤの内容でクリップする方法を提供します。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2021
+msgid ""
+":guilabel:`Masked By Below`: The output is the top pixel, where the opacity "
+"is reduced by that of the bottom pixel."
+msgstr ":guilabel:`以下でマスク`： 上のピクセルが出力され、その不透明度は下のピクセルにより減じられます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2022
+msgid ""
+":guilabel:`Mask Below`: The output is the bottom pixel, where the opacity is"
+" reduced by that of the top pixel."
+msgstr ":guilabel:`以下をマスク`： 下のピクセルが出力され、その不透明度は上のピクセルにより減じられます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2023
+msgid ""
+":guilabel:`Inverse Masked By Below`: The output is the top pixel, where the "
+"opacity is reduced by the inverse of the bottom pixel."
+msgstr ":guilabel:`以下で反転マスク`: 上のピクセルが出力され、不透明度は下のピクセルの反転によって減じられます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2024
+msgid ""
+":guilabel:`Inverse Mask Below`: The output is the bottom pixel, where the "
+"opacity is reduced by the inverse of the top pixel."
+msgstr ":guilabel:`以下を反転マスク`: 下のピクセルが出力され、その不透明度は上のピクセルの反転によって減じられます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2025
+msgid ""
+":guilabel:`Paint Inside Below`: The top pixel is blended on top of the "
+"bottom pixel, with the opacity of the top pixel reduced by the opacity of "
+"the bottom pixel."
+msgstr ""
+":guilabel:`以下の内部部分を描画`:  "
+"上のピクセルは下のピクセルの上に混合され、上のピクセルの不透明度は下のピクセルの不透明度によって減じられます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2027
+msgid ""
+":guilabel:`Paint Below Inside`: The bottom pixel is blended on top of the "
+"top pixel, with the opacity of the bottom pixel reduced by the opacity of "
+"the top pixel."
+msgstr ""
+":guilabel:`以下の内側を描画`: "
+"下のピクセルは上のピクセルの上に混合され、下のピクセルの不透明度は上のピクセルの不透明度によって減じられます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2035
+msgid "Examples of blend clipping mode applied to top green layer in a group"
+msgstr "グループ内の上の緑のレイヤに適用された混合切り抜きモードの例"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2037
+msgid ""
+"**A**: Mask Below **B**: Masked By Below **C**: Paint Below Inside **D**: "
+"Inverse Mask Below **E**: Inverse Masked By Below **F**: Paint Inside Below"
+msgstr ""
+"**A**: 以下をマスク **B**: 以下でマスク **C**: 以下の内側を描画 **D**: 以下を反転マスク **E**: 以下で反転マスク "
+"**F**: 以下の内部部分を描画"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2045
 msgid "Data defined override setup"
