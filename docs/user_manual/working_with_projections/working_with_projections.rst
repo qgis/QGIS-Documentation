@@ -202,6 +202,21 @@ default.
    coordinates display are updated accordingly and all the layers in
    the project are on-the-fly translated to the new project CRS.
 
+.. _figure_clear_used_crs:
+
+.. figure:: img/clear_used_crs.png
+   :align: center
+
+   Clear recently used CRS 
+
+If you want to clear recently used CRS that can be done in several ways:
+
+   * Go to :guilabel:`Remove from recently used CRS` button on the right side.
+   * Right-click on used CRS to open context menu, choose
+     :guilabel:`Remove selected CRS from recently used CRS` to remove selected CRS
+     or choose :guilabel:`Clear all recently used CRS` to remove all used CRS.
+   * Press :kbd:`Del` after selecting CRS that you want to remove.
+   
 
 .. index:: CRS Selection
 .. _crs_selector:
