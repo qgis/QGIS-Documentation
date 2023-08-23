@@ -913,7 +913,7 @@ menu or from the :guilabel:`Annotations Toolbar`:
 
 .. raw:: html
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="Working with annotations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 * |annotation| :sup:`Move Annotation` to adjust annotation element size or position
   (using click and drag)
