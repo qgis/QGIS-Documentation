@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,34 +29,398 @@ msgstr ""
 msgid "Geometry Checker Plugin"
 msgstr "ジオメトリチェッカープラグイン"
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:9
+msgid ""
+"Geometry Checker is a powerful core plugin to check and fix the geometry "
+"validity of a layer. It is available from the :menuselection:`Vector` menu "
+"(|geometryChecker| :menuselection:`Check Geometries...`)."
+msgstr ""
+"ジオメトリチェッカーは、レイヤのジオメトリの妥当性をチェックして修正するための強力なコアプラグインです。これは :menuselection:`ベクタ`"
+" メニューから利用できます（|geometryChecker| :menuselection:`ジオメトリをチェック...`）。"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:168
 msgid "geometryChecker"
 msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:14
+msgid "Configuring the checks"
+msgstr "チェックを設定する"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:16
+msgid ""
+"The :guilabel:`Check Geometries` dialog shows different grouped settings in "
+"the first tab (:guilabel:`Setup`):"
+msgstr ""
+":guilabel:`ジオメトリをチェック` "
+"ダイアログでは、最初のタブ（:guilabel:`セットアップ`）にさまざまな設定がグループで表示されます:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:19
+msgid ""
+":guilabel:`Input vector layers`: to select the layers to check. A |checkbox|"
+" :guilabel:`Only selected features` checkbox can be used to restrict the "
+"checking to the geometries of the selected features."
+msgstr ""
+":guilabel:`入力ベクタレイヤ`: チェックするレイヤを選択します。|checkbox| :guilabel:`選択した地物のみ` "
+"チェックボックスを使うと、選択された地物のジオメトリにチェックを制限することができます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:164
 msgid "checkbox"
 msgstr ""
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:22
+msgid ""
+":guilabel:`Allowed geometry types` gives the chance to restrict the geometry"
+" type of the input layer(s) to:"
+msgstr ":guilabel:`許容されるジオメトリ型` は入力レイヤのジオメトリ型を制限することができます："
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:25
+msgid "|checkbox| Point"
+msgstr "|checkbox| 点"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:26
+msgid "|checkbox| Multipoint"
+msgstr "|checkbox| マルチポイント"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:27
+msgid "|checkbox| Line"
+msgstr "|checkbox| ライン"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:28
+msgid "|checkbox| Multiline"
+msgstr "|checkbox| マルチライン"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:29
+msgid "|checkbox| Polygon"
+msgstr "|checkbox| ポリゴン"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:30
+msgid "|checkbox| Multipolygon"
+msgstr "|checkbox| マルチポリゴン"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:32
+msgid ""
+":guilabel:`Geometry validity`. Depending on geometry types you can choose "
+"between:"
+msgstr ":guilabel:`ジオメトリの有効性`。ジオメトリ型によって次が選べます:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:35
+msgid "|checkbox| :guilabel:`Self intersections`"
+msgstr "|checkbox| :guilabel:`自己交差`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:36
+msgid "|checkbox| :guilabel:`Duplicate nodes`"
+msgstr "|checkbox| :guilabel:`重複頂点`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:37
+msgid "|checkbox| :guilabel:`Self contacts`"
+msgstr "|checkbox| :guilabel:`自己接触`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:38
+msgid "|checkbox| :guilabel:`Polygon with less than 3 nodes`."
+msgstr "|checkbox| :guilabel:`頂点が3つより少ないポリゴン`。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:40
+msgid ""
+":guilabel:`Geometry properties`. Depending on geometry types, different "
+"options are available:"
+msgstr ":guilabel:`ジオメトリプロパティ`。ジオメトリ型によって、利用できるオプションが異なります："
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:43
+msgid ""
+"|checkbox| :guilabel:`Polygons and multipolygons may not contain any holes`"
+msgstr "|checkbox| :guilabel:`ポリゴンに穴がない`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:44
+msgid ""
+"|checkbox| :guilabel:`Multipart objects must consist of more than one part`"
+msgstr "|checkbox| :guilabel:`マルチパートの地物は必ず複数のジオメトリ`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:45
+msgid "|checkbox| :guilabel:`Lines must not have dangles`"
+msgstr "|checkbox| :guilabel:`線にダングル（懸垂線）があってはならない`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:47
+msgid ""
+":guilabel:`Geometry conditions`. Allows you to add some condition to "
+"validate the geometries with:"
+msgstr ":guilabel:`ジオメトリの条件`。ジオメトリを検証するための条件を追加できます："
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:50
+msgid ""
+"|checkbox| :guilabel:`Minimal segment length (map units)` |selectNumber|"
+msgstr "|checkbox| :guilabel:`最短セグメント長（地図単位）` |selectNumber|"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:176
 msgid "selectNumber"
 msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:51
+msgid ""
+"|checkbox| :guilabel:`Minimum angle between segment (deg)` |selectNumber|"
+msgstr "|checkbox| :guilabel:`セグメント間の最小角度（度）` |selectNumber|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:52
+msgid ""
+"|checkbox| :guilabel:`Minimal polygon area (map units sqr.)` |selectNumber|"
+msgstr "|checkbox| :guilabel:`最小ポリゴン領域（地図単位）` |selectNumber|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:53
+msgid ""
+"|checkbox| :guilabel:`No sliver polygons` with a :guilabel:`Maximum "
+"thinness` |selectNumber| and a |checkbox| :guilabel:`Max. area (map units "
+"sqr.)` |selectNumber|"
+msgstr ""
+":guilabel:`最大の細さ` |selectNumber| と |checkbox| :guilabel:`最大面積（地図単位）` "
+"|selectNumber| を持った |checkbox| :guilabel:`極細ポリゴン(sliver)がない`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:57
+msgid ""
+":guilabel:`Topology checks`. Depending on geometry types, many different "
+"options are available:"
+msgstr ":guilabel:`トポロジチェック`。ジオメトリ型によって異なる、たくさんのオプションが利用できます:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:60
+msgid "|checkbox| :guilabel:`Checks for duplicates`"
+msgstr "|checkbox| :guilabel:`重複ジオメトリ`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:61
+msgid "|checkbox| :guilabel:`Checks for features within other features`"
+msgstr "|checkbox| :guilabel:`地物の内部に他の地物がない`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:62
+msgid "|checkbox| :guilabel:`Checks for overlaps smaller than` |selectNumber|"
+msgstr "|checkbox| :guilabel:`重なりがこの値より小さい（地図単位）` |selectNumber|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:63
+msgid "|checkbox| :guilabel:`Checks for gaps smaller than` |selectNumber|"
+msgstr "|checkbox| :guilabel:`隙間がこの値より小さい（地図単位）` |selectNumber|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:64
+msgid "|checkbox| :guilabel:`Points must be covered by lines`"
+msgstr "|checkbox| :guilabel:`点は線のノードに重ならなければならない`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:65
+msgid "|checkbox| :guilabel:`Points must properly lie inside a polygon`"
+msgstr "|checkbox| :guilabel:`点はポリゴンの内側になければならない`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:66
+msgid "|checkbox| :guilabel:`Lines must not intersect any other lines`"
+msgstr "|checkbox| :guilabel:`線は他の線と交差してはならない`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:67
+msgid ""
+"|checkbox| :guilabel:`Lines must not intersect with features of layer` "
+"|selectString|"
+msgstr "|checkbox| :guilabel:`線は右のレイヤの地物と交差してはならない` |selectString|"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:178
 msgid "selectString"
 msgstr ""
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:69
+msgid ""
+"|checkbox| :guilabel:`Polygons must follow boundaries of layer` "
+"|selectString|"
+msgstr "|checkbox| :guilabel:`ポリゴンは右のレイヤの範囲内になければならない` |selectString|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:71
+msgid ""
+":guilabel:`Tolerance`. You can define the tolerance of the check in map "
+"layer units."
+msgstr ":guilabel:`許容範囲`。マップレイヤの単位でチェックの許容範囲を定義できます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:73
+msgid ":guilabel:`Output vector layer` gives the choice to:"
+msgstr ":guilabel:`出力ベクタレイヤ` には次の選択肢があります:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:75
+msgid "|radioButtonOn| :guilabel:`Modify input layer`"
+msgstr "|radioButtonOn| :guilabel:`入力レイヤを変更`"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:174
 msgid "radioButtonOn"
 msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:76
+msgid "|radioButtonOn| :guilabel:`Create new layers`"
+msgstr "|radioButtonOn| :guilabel:`新規レイヤを作成`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:78
+msgid ""
+"When you are happy with the configuration, you can click on the "
+":guilabel:`Run` button."
+msgstr "設定に満足したら :guilabel:`実行` ボタンをクリックします。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:87
+msgid "The Geometry Checker Plugin"
+msgstr "ジオメトリチェッカープラグイン"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:90
+msgid "The *Geometry Checker Plugin* can find the following errors:"
+msgstr "*ジオメトリチェッカープラグイン* は次のエラーを見つけることができます:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:92
+msgid "Self intersections: a polygon with a self intersection"
+msgstr "自己交差: 自己交差しているポリゴン"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:93
+msgid "Duplicate nodes: two duplicates nodes in a segment"
+msgstr "重複頂点: ひとつのセグメントに二つの重複した頂点"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:94
+msgid "Holes: hole in a polygon"
+msgstr "穴: ポリゴンの穴"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:95
+msgid "Segment length: a segment length lower than a threshold"
+msgstr "セグメント長: しきい値よりも短いセグメント長"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:96
+msgid "Minimum angle: two segments with an angle lower than a threshold"
+msgstr "最小角度: しきい値よりも浅い角度を持った二つのセグメント"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:97
+msgid "Minimum area: polygon area lower than a threshold"
+msgstr "最小面積: しきい値よりも狭いポリゴンの面積"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:98
+msgid ""
+"Silver polygon: this error come from very small polygon (with small area) "
+"with a large perimeter"
+msgstr "スライバポリゴン: このエラーは、長い周長を持った非常に小さな（面積が小さな）ポリゴンの場合に発生します"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:100
+msgid "Duplicates features"
+msgstr "重複した地物"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:101
+msgid "Feature within feature"
+msgstr "地物の内部にある地物"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:102
+msgid "Overlaps: polygon overlapping"
+msgstr "重なり: ポリゴンの重なり合い"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:103
+msgid "Gaps: gaps between polygons"
+msgstr "隙間: ポリゴンの間の隙間"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:105
+msgid "The following figure shows the different checks made by the plugin."
+msgstr "次の図は、プラグインが行うさまざまなチェックを示しています。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:112
+msgid "Some checks supported by the plugin"
+msgstr "プラグインがサポートするチェックの一部"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:115
+msgid "Analysing the results"
+msgstr "結果を分析する"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:117
+msgid ""
+"The results appear in the second tab (:guilabel:`Result`) and as an overview"
+" layer of the errors in the canvas (its name has the default prefix "
+":file:`checked_`). A table lists the :guilabel:`Geometry check result` with "
+"one error per row and columns containing: the layer name, an ID, the error "
+"type, then the coordinates of the error, a value (depending on the type of "
+"the error) and finally the resolution column which indicates the resolution "
+"of the error. At the bottom of this table, you can :guilabel:`Export` the "
+"error into different file formats. You also have a counter with the number "
+"of total errors and fixed ones."
+msgstr ""
+"結果は2番目のタブ(:guilabel:`出力`)に表示され、キャンバスにエラーの概要レイヤとして表示されます(その名前はデフォルトの接頭辞 "
+":file:`checked_` を持ちます)。テーブルには :guilabel:`ジオメトリチェックの結果` "
+"が一覧表示され、1行に1つのエラー、列にはレイヤ名、ID、エラータイプ、エラーの座標、値（エラーのタイプによる）、そして最後にエラーの解決方法を示す解決列が表示されます。このテーブルの下部には、エラーをさまざまなファイル形式に"
+" :guilabel:`エクスポート` することができます。また、総エラー数と修正済みエラー数のカウンタもあります。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:127
+msgid ""
+"You can select a row to see the location of the error. You can change this "
+"behavior by selecting another action between |radioButtonOn| "
+":guilabel:`Error` (default), |radioButtonOff| :guilabel:`Feature`, "
+"|radioButtonOff| :guilabel:`Don't move`, and |checkbox| :guilabel:`Highlight"
+" selected features`."
+msgstr ""
+"行を選択してエラーの場所を見ることができます。この動作は |radioButtonOn| :guilabel:`エラー` （デフォルト）、 "
+"|radioButtonOff| :guilabel:`地物` 、 |radioButtonOff| :guilabel:`移動しない` 、 "
+"|checkbox| :guilabel:`選択地物を強調` の中から別の動作を選択することで変更できます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:172
 msgid "radioButtonOff"
 msgstr ""
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:132
+msgid "Below the zoom action when clicking on the table row, you can:"
+msgstr "テーブル行をクリックしたときのズーム操作の下では、次をすることができます："
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:134
+msgid ""
+"|fromSelectedFeature| :guilabel:`Show selected features in attribute table`"
+msgstr "|fromSelectedFeature| :guilabel:`選択した地物を属性テーブルで表示`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:166
+msgid "fromSelectedFeature"
+msgstr "fromSelectedFeature"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:135
+msgid "|success| :guilabel:`Fix selected errors using default resolution`"
+msgstr "|success| :guilabel:`選択したエラーをデフォルトの解決方法で修正する`"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:180
 msgid "success"
 msgstr ""
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:136
+msgid ""
+"|success| :guilabel:`Fix selected errors, prompt for resolution method` You "
+"will see a window to choose the resolution's method among which:"
+msgstr "|success| :guilabel:`選択したエラーを修正し、解決方法を尋ねる` 解決の方法を選択するウィンドウが表示されます:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:139
+msgid "Merge with neighboring polygon with longest shared edge"
+msgstr "最も長い共有エッジの隣接ポリゴンをマージする"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:140
+msgid "Merge with neighboring polygon with largest area"
+msgstr "最大面積の隣接ポリゴンをマージする"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:141
+msgid ""
+"Merge with neighboring polygon with identical attribute value, if any, or "
+"leave as is"
+msgstr "同一の属性値を持つ隣接ポリゴンをマージする。もしなければそのままにする"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:143
+msgid "Delete feature"
+msgstr "地物を削除"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:144
+msgid "No action"
+msgstr "何もしない"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:146
+msgid ""
+"|options| :guilabel:`Error resolution settings` allows you to change the "
+"default resolution method depending on the error type"
+msgstr "|options| :guilabel:`エラーの解決方法の設定` では、エラーの種類に応じてデフォルトの解決方法を変更することができます"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:170
 msgid "options"
 msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:149
+msgid "**Fix multiple errors**"
+msgstr "**複数のエラーの修正**"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:151
+msgid ""
+"You can fix multiple errors by selecting more than one row in the table with"
+" the *CTRL + click* action."
+msgstr "*CTRL+クリック* アクションでテーブル内の複数の行を選択し、複数のエラーを修正することができます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:154
+msgid ""
+"Finally, you can choose which :guilabel:`Attribute to use when merging "
+"features by attribute value`."
+msgstr "最後に、:guilabel:`属性値で地物をマージする際に使用する属性` を選択することができます。"
