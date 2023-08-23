@@ -556,7 +556,8 @@ dialog like the one shown next will appear.
 On the right-hand side, you will see a simple HTML page, created using
 the description of the input parameters and outputs of the algorithm,
 along with some additional items like a general description of the
-model or its author.
+model or its author. Also, there is an Example section where you can
+input your own custom examples to help explain the usage of the model.
 The first time you open the help editor, all these descriptions are
 empty, but you can edit them using the elements on the left-hand side
 of the dialog.
