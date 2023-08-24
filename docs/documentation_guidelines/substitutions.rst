@@ -348,6 +348,7 @@ Icon                            Substitution                        Icon        
 |codeEditor|                    ``|codeEditor|``                    |add|                           ``|add|``
 |relations|                     ``|relations|``                     |layoutItem3DMap|               ``|layoutItem3DMap|``
 |stopwatch|                     ``|stopwatch|``                     |sensor|                        ``|sensor|``
+|clearItem|                     ``|clearItem|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -757,6 +758,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
+.. |clearItem| image:: /static/common/mIconClearItem.png
+   :width: 1.5em   
 .. |clip| image:: /static/common/mAlgorithmClip.png
    :width: 1.5em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
