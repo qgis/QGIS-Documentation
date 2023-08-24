@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-06-22 13:01+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -31,13 +31,31 @@ msgstr "ラスタ投影"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:14
 msgid "Assign projection"
-msgstr "投影法の割り当て"
+msgstr "投影法を設定"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:15
+msgid "Applies a coordinate system to a raster dataset."
+msgstr "ラスタデータセットに座標系を適用します。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:17
+msgid ""
+"This algorithm is derived from the `GDAL edit utility "
+"<https://gdal.org/programs/gdal_edit.html>`_."
+msgstr ""
+"このアルゴリズムは、`GDAL edit utility <https://gdal.org/programs/gdal_edit.html>`_ "
+"から派生したものです。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:20
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:78
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:151
+msgid "**Default menu**: :menuselection:`Raster --> Projections`"
+msgstr "**デフォルトメニュー**: :menuselection:`ラスタ --> 投影法`"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:23
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:81
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:154
 msgid "Parameters"
-msgstr "パラメーター"
+msgstr "パラメータ"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:29
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:49
@@ -102,6 +120,10 @@ msgstr "[ラスタ]"
 msgid "Input raster layer"
 msgstr "入力ラスタレイヤ"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:37
+msgid "**Desired CRS**"
+msgstr "**設定する座標参照系(CRS)**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:38
 msgid "``CRS``"
 msgstr ""
@@ -113,11 +135,19 @@ msgstr ""
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:40
+msgid "The projection (CRS) of the output layer"
+msgstr "出力レイヤの投影法 (CRS)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:43
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:108
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:319
 msgid "Outputs"
 msgstr "出力"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:53
+msgid "**Layer with projection**"
+msgstr "**投影法を持ったレイヤ**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:54
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:225
@@ -125,11 +155,19 @@ msgstr "出力"
 msgid "``OUTPUT``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:56
+msgid "The output raster layer (with the new projection information)"
+msgstr "（新しい投影法の情報を持った）出力ラスタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:59
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:131
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:337
 msgid "Python code"
 msgstr "Python コード"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:61
+msgid "**Algorithm ID**: ``gdal:assignprojection``"
+msgstr "**アルゴリズムID**: ``gdal:assignprojection``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -141,6 +179,41 @@ msgstr ""
 "*algorithm id* は、プロセシングツールボックス内でアルゴリズムにマウスカーソルを乗せた際に表示されるIDです。 *parameter "
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:71
+msgid "Extract projection"
+msgstr "投影法を抽出"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:72
+msgid ""
+"Extracts the projection of a raster file and writes it into a *world* file "
+"with extension :file:`.wld`."
+msgstr "ラスタファイルの投影法を抽出し、拡張子 :file:`.wld` の *world* ファイルに書き込みます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:75
+msgid ""
+"This algorithm is derived from the `GDAL srsinfo utility "
+"<https://gdal.org/programs/gdalsrsinfo.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL srsinfo utility "
+"<https://gdal.org/programs/gdalsrsinfo.html>`_ から派生したものです。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:91
+msgid "**Input file**"
+msgstr "**入力ファイル**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:94
+msgid ""
+"Input raster The raster layer has to be file based, as the algorithm uses "
+"the path to the raster file as the location of the generated :file:`.wld` "
+"file. Using a non-file raster layer will lead to an error."
+msgstr ""
+"入力ラスタ　アルゴリズムは生成される :file:`.wld` "
+"ファイルの場所としてラスタファイルへのパスを使用するため、ラスタレイヤはファイル型でなければなりません。ファイル以外のラスタレイヤを使うとエラーになります。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:99
+msgid "**Create also .prj file**"
+msgstr "**.prjファイルも作成する**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:100
 msgid "``PRJ_FILE_CREATE``"
@@ -156,6 +229,16 @@ msgstr "[ブール値]"
 msgid "Default: False"
 msgstr "デフォルト： False"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:104
+msgid ""
+"If this is activated a :file:`.prj` file containing the projection "
+"information is also created."
+msgstr "これを有効にすると、投影法情報を含んだ :file:`.prj` ファイルも作成されます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:118
+msgid "**World file**"
+msgstr "**World file**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:119
 msgid "``WORLD_FILE``"
 msgstr ""
@@ -165,9 +248,49 @@ msgstr ""
 msgid "[file]"
 msgstr "[ファイル]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:121
+msgid ""
+"Text file with extension :file:`.wld` containing transformation parameters "
+"for the raster file."
+msgstr "ラスタファイルの変換パラメータを含んだ、拡張子 :file:`.wld` のテキストファイル。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:123
+msgid "**ESRI Shapefile prj file**"
+msgstr "**ESRIシェープファイルprjファイル**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:124
 msgid "``PRJ_FILE``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:126
+msgid ""
+"Text file with :file:`.prj` extension that describes the CRS. Will be "
+"``None`` if :guilabel:`Create also .prj file` is False."
+msgstr ""
+"CRS を記述する :file:`.prj` 拡張子のテキストファイル。:guilabel:`.prjファイルも作成する` が False "
+"の場合、``None`` になります。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:133
+msgid "**Algorithm ID**: ``gdal:extractprojection``"
+msgstr "**アルゴリズムID**: ``gdal:extractprojection``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:143
+msgid "Warp (reproject)"
+msgstr "再投影 (Warp)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:144
+msgid ""
+"Reprojects a raster layer into another Coordinate Reference System (CRS). "
+"The output file resolution and the resampling method can be chosen."
+msgstr "ラスタレイヤを別の座標参照系(CRS)に再投影します。出力ファイルの解像度とリサンプリング方法を選択できます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:148
+msgid ""
+"This algorithm is derived from the `GDAL warp utility "
+"<https://gdal.org/programs/gdalwarp.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL warp utility <https://gdal.org/programs/gdalwarp.html>`_ "
+"から派生したものです。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:157
 msgid "Basic parameters"
@@ -176,6 +299,14 @@ msgstr "基本パラメータ"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:169
 msgid "``INPUT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:171
+msgid "Input raster layer to reproject"
+msgstr "再投影したい入力ラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:172
+msgid "**Source CRS**"
+msgstr "**変換元CRS**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:174
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:180
@@ -191,6 +322,10 @@ msgstr "オプション"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:175
 msgid "``SOURCE_CRS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:177
+msgid "Defines the CRS of the input raster layer"
+msgstr "入力ラスタレイヤのCRSを定義します"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:178
 msgid "**Target CRS**"
@@ -208,6 +343,10 @@ msgstr "デフォルト： ``EPSG:4326``"
 msgid "The CRS of the output layer"
 msgstr "出力レイヤのCRS"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:186
+msgid "**Resampling method to use**"
+msgstr "**リサンプリング法**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:187
 msgid "``RESAMPLING``"
 msgstr ""
@@ -222,9 +361,61 @@ msgstr "[列挙型]"
 msgid "Default: 0"
 msgstr "デフォルト： 0"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:191
+msgid "Pixel value resampling method to use. Options:"
+msgstr "使用するピクセル値のリサンプリング方法。オプション:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:194
+msgid "0 --- Nearest neighbour"
+msgstr "0 -- 最近傍"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:195
+msgid "1 --- Bilinear"
+msgstr "1 -- バイリニア"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:196
+msgid "2 --- Cubic"
+msgstr "2 -- キュービック"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:197
+msgid "3 --- Cubic spline"
+msgstr "3 -- キュービックスプライン"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:198
+msgid "4 --- Lanczos windowed sinc"
+msgstr "4 -- ランチョス窓関数"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:199
+msgid "5 --- Average"
+msgstr "5 -- 平均"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:200
+msgid "6 --- Mode"
+msgstr "6 -- モード"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:201
 msgid "7 --- Maximum"
 msgstr "7 --- 最大"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:202
+msgid "8 --- Minimum"
+msgstr "8 -- 最小値"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:203
+msgid "9 --- Median"
+msgstr "9 -- 中央値"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:204
+msgid "10 --- First quartile"
+msgstr "10 -- 第1四分位 (Q1)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:205
+msgid "11 --- Third quartile"
+msgstr "11 --- 第3四分位 (Q3)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:206
+msgid "**Nodata value for output bands**"
+msgstr "**出力バンドのnodata値**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:209
 msgid "``NODATA``"
@@ -241,9 +432,23 @@ msgstr "[数値]"
 msgid "Default: None"
 msgstr "デフォルト： なし"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:213
+msgid ""
+"Sets nodata value for output bands. If not provided, then nodata values will"
+" be copied from the source dataset."
+msgstr "出力バンドのnodata値を設定します。指定しない場合、nodata値はソースデータセットからコピーされます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:216
+msgid "**Output file resolution in target georeferenced units**"
+msgstr "**変換先CRSの単位での解像度**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:219
 msgid "``TARGET_RESOLUTION``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:223
+msgid "Defines the output file resolution of reprojection result"
+msgstr "再投影結果の出力ファイルの解像度を定義します"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:224
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:329
@@ -271,6 +476,10 @@ msgstr "ファイルに保存..."
 msgid "Advanced parameters"
 msgstr "詳細パラメータ"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:248
+msgid "**Additional creation options**"
+msgstr "**追加の生成オプション**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:251
 msgid "``OPTIONS``"
 msgstr ""
@@ -284,6 +493,22 @@ msgstr "[文字列]"
 msgid "Default: ''"
 msgstr "デフォルト： ''"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:255
+msgid ""
+"For adding one or more creation options that control the raster to be "
+"created (colors, block size, file compression...). For convenience, you can "
+"rely on predefined profiles (see :ref:`GDAL driver options section "
+"<gdal_createoptions>`)."
+msgstr ""
+"作成するラスタを制御する1つ以上の作成オプションを追加します（色、ブロックサイズ、ファイル圧縮...）。便利なことに、定義済みのプロファイルを利用することができます"
+" (:ref:`GDAL ドライバのオプションセクション <gdal_createoptions>` を参照)。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:261
+msgid ""
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
+msgstr "バッチプロセスとモデルデザイナー: 複数のオプションをパイプ文字 (``|``) で区切ります。"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:263
 msgid "**Output data type**"
 msgstr "**出力のデータ型**"
@@ -292,6 +517,70 @@ msgstr "**出力のデータ型**"
 msgid "``DATA_TYPE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:268
+msgid "Defines the format of the output raster file. Options:"
+msgstr "出力ラスタファイルの形式を定義します。オプションは以下のとおり:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "0 --- Use Input Layer Data Type"
+msgstr "0 -- 入力レイヤのデータ型を使う"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "1 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "1 --- Byte        （8ビット符号なし整数 (quint8)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "2 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "2 --- Int16       （16ビット符号あり整数 (qint16)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "3 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "3 --- UInt16      （16ビット符号なし整数 (quint16)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr "4 --- UInt32      （32ビット符号なし整数 (quint32)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "5 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "5 -- Int32 （符号あり32ビット整数 (qint32)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "6 --- Float32     (Thirty two bit floating point (float))"
+msgstr "6 -- Float32 （32ビット浮動小数点数 (float)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+msgid "7 --- Float64     (Sixty four bit floating point (double))"
+msgstr "7 -- Float64 （64ビット浮動小数点数 (double)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "8 --- CInt16      (Complex Int16)"
+msgstr "8 -- CInt16 （複素数 Int16）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "9 --- CInt32      (Complex Int32)"
+msgstr "9 -- CInt32 （複素数 Int32）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "10 --- CFloat32   (Complex Float32)"
+msgstr "10 -- CFloat32 （複素数 Float32）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "11 --- CFloat64   (Complex Float64)"
+msgstr "11 -- CFloat64 （複素数 Float64）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:21
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"利用可能なオプションは、QGISと一緒にビルドされたGDALのバージョンによって異なります（ :menuselection:`ヘルプ --> "
+"QGISについて` メニューを参照）"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:275
+msgid "**Georeferenced extents of output file to be created**"
+msgstr "**出力ファイルの矩形範囲**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:278
 msgid "``TARGET_EXTENT``"
 msgstr ""
@@ -299,6 +588,15 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:279
 msgid "[extent]"
 msgstr "[範囲]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:280
+msgid ""
+"Sets the georeferenced extent of the output file to be created (in the "
+":guilabel:`Target CRS` by default. In the :guilabel:`CRS of the target "
+"raster extent`, if specified)."
+msgstr ""
+"作成する出力ファイルのジオリファレンス範囲を設定します（デフォルトでは :guilabel:`変換先CRS` 内。指定された場合は "
+":guilabel:`出力ファイルの矩形範囲のCRS` になります)。"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -337,14 +635,56 @@ msgstr "キャンバスに描画: 考慮する領域を区切る矩形をクリ�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "``xmin, xmax, ymin, ymax`` として座標を入力"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:289
+msgid "**CRS of the target raster extent**"
+msgstr "**出力ファイルの矩形範囲のCRS**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:292
 msgid "``TARGET_EXTENT_CRS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:294
+msgid ""
+"Specifies the CRS in which to interpret the coordinates given for the extent"
+" of the output file. This must not be confused with the target CRS of the "
+"output dataset. It is instead a convenience e.g. when knowing the output "
+"coordinates in a geodetic long/lat CRS, but wanting a result in a projected "
+"coordinate system."
+msgstr ""
+"出力ファイルの範囲に与えられた座標を解釈する CRS "
+"を指定します。これは出力データセットのターゲットCRSと混同しないでください。これは、例えば測地経度/緯度のCRSで出力座標を知っているが、投影座標系での結果が欲しいときなどの便宜のためです。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:301
+msgid "**Use multithreaded warping implementation**"
+msgstr "**マルチスレッド実装を使用する**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:302
 msgid "``MULTITHREADING``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:306
+msgid ""
+"Two threads will be used to process chunks of the image and perform "
+"input/output operations simultaneously. Note that the computation itself is "
+"not multithreaded."
+msgstr "2つのスレッドが画像のチャンクを処理し、入出力操作を同時に実行するために使用されます。なお、計算自体はマルチスレッド化されません。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:309
+msgid "**Additional command-line parameters**"
+msgstr "**追加のコマンドラインパラメータ**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:312
 msgid "``EXTRA``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:316
+msgid "Add extra GDAL command line options."
+msgstr "追加のGDALコマンドラインオプションを加えます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:334
+msgid "Reprojected output raster layer"
+msgstr "再投影された出力ラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:339
+msgid "**Algorithm ID**: ``gdal:warpreproject``"
+msgstr "**アルゴリズムID**: ``gdal:warpreproject``"
