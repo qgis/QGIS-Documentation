@@ -2242,6 +2242,8 @@ Basic parameters
    * - **Convert curved geometries to straight segments**
 
        |332|
+
+       Optional
      - ``CONVERT_CURVED_GEOMETRIES``
      - [boolean]
 
