@@ -58,9 +58,8 @@ Parameters
        One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
-
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 ..........
@@ -133,13 +132,9 @@ Parameters
      - Specify the output layer containing only the geocoded addresses.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to Database Table...
-       * Append to Layer...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 ..........
@@ -282,7 +277,6 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 ..........
@@ -728,34 +722,40 @@ Parameters
          considered equal
 
    * - **Unchanged features**
+
+       Optional
      - ``UNCHANGED``
      - [vector: same as Original layer]
      - Specify the output vector layer containing the unchanged
        features. One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
    * - **Added features**
+
+       Optional
      - ``ADDED``
      - [vector: same as Original layer]
      - Specify the output vector layer containing the added features.
        One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
    * - **Deleted features**
+
+       Optional
      - ``DELETED``
      - [vector: same as Original layer]
      - Specify the output vector layer containing the deleted
        features. One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
 Outputs
 ..........
@@ -842,8 +842,8 @@ Parameters
      - Specify the output geometryless layer. One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 ..........
@@ -1459,6 +1459,8 @@ Parameters
      - Add a prefix to joined fields in order to easily identify
        them and avoid field name collision
    * - **Joined layer**
+
+       Optional
      - ``OUTPUT``
      - [same as input]
 
@@ -1467,10 +1469,12 @@ Parameters
        One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
    * - **Unjoinable features from first layer**
+
+       Optional
      - ``NON_MATCHING``
      - [same as input]
 
@@ -1505,6 +1509,8 @@ Outputs
      - [same as input]
      - Vector layer with the non-matched features
    * - **Joined layer**
+
+       Optional
      - ``OUTPUT``
      - [same as input]
      - Output vector layer with added attributes from the join
@@ -1626,6 +1632,8 @@ Parameters
      - Add a prefix to joined fields in order to easily identify
        them and avoid field name collision
    * - **Joined layer**
+
+       Optional
      - ``OUTPUT``
      - [same as input]
 
@@ -1634,10 +1642,12 @@ Parameters
        One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
    * - **Unjoinable features from first layer**
+
+       Optional
      - ``NON_MATCHING``
      - [same as input]
 
@@ -1903,6 +1913,8 @@ Parameters
      - [number]
      - Maximum search distance
    * - **Joined layer**
+
+       Optional
      - ``OUTPUT``
      - [same as input]
 
@@ -1911,8 +1923,8 @@ Parameters
        One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
    * - **Unjoinable features from first layer**
      - ``NON_MATCHING``
@@ -2243,8 +2255,8 @@ Basic parameters
      - Specify the output vector layer. One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
@@ -2515,8 +2527,8 @@ Parameters
      - Specify output vector layer. One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 ..........
