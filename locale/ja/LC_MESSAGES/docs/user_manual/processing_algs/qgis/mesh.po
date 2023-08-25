@@ -563,6 +563,12 @@ msgid ""
 "Extracts a mesh dataset's values from lines contained in a vector layer."
 msgstr "ベクタレイヤに含まれている線からメッシュデータセットの値を抽出します"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:147
+msgid ""
+"Each line is discretized with a resolution distance parameter for extraction"
+" of values on its vertices."
+msgstr "各線は、その頂点の値を抽出するための解像度距離パラメータで離散化されます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:178
 msgid "**Lines for data export**"
 msgstr "**線レイヤ**"
@@ -570,6 +576,10 @@ msgstr "**線レイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:179
 msgid "``INPUT_LINES``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:181
+msgid "Lines where the data will be extracted from the dataset mesh"
+msgstr "データセットメッシュからデータを抽出する行"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:182
 msgid "**Line segmentation resolution**"
@@ -583,6 +593,12 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:466
 msgid "Default: 10.0"
 msgstr "デフォルト： 10.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:187
+msgid ""
+"The distance between points on the lines where the data will be extracted "
+"from the dataset mesh."
+msgstr "データセットメッシュからデータを抽出するライン上の点間の距離。"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:189
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:674
@@ -599,6 +615,11 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:678
 msgid "Default: 2"
 msgstr "デフォルト： 2"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:679
+msgid "Number of digits to round dataset values"
+msgstr "データセット値の丸め桁数"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:195
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:217
@@ -661,6 +682,12 @@ msgstr "**アルゴリズムID**: ``native:meshexportcrosssection``"
 msgid "Export mesh edges"
 msgstr "メッシュの辺を出力"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:237
+msgid ""
+"Exports a mesh layer's edges to a line vector layer, with the dataset values"
+" on edges as attribute values."
+msgstr "メッシュレイヤの辺を、ラインベクタレイヤに出力します。辺のデータセット値は属性値となります。"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:274
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:362
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:474
@@ -722,6 +749,12 @@ msgstr "2 -- デカルト座標と極座標"
 msgid "**Output vector layer**"
 msgstr "**出力ベクタレイヤ**"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:307
+msgid ""
+"Output vector line layer containing the edges of the input mesh layer with "
+"associated dataset values"
+msgstr "入力メッシュレイヤの辺と関連するデータセット値を含んだ出力ラインベクタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:313
 msgid "**Algorithm ID**: ``native:exportmeshedges``"
 msgstr "**アルゴリズムID**: ``native:exportmeshedges``"
@@ -730,6 +763,18 @@ msgstr "**アルゴリズムID**: ``native:exportmeshedges``"
 msgid "Export mesh faces"
 msgstr "メッシュの面を出力"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:325
+msgid ""
+"Exports a mesh layer's faces to a polygon vector layer, with the dataset "
+"values on faces as attribute values."
+msgstr "メッシュレイヤの平面を、ポリゴンベクタレイヤに出力します。平面のデータセット値は属性値となります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:395
+msgid ""
+"Output vector polygon layer containing the faces of the input mesh layer "
+"with associated dataset values"
+msgstr "入力メッシュレイヤの平面と関連するデータセット値を含んだ出力ポリゴンベクタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:401
 msgid "**Algorithm ID**: ``native:exportmeshfaces``"
 msgstr "**アルゴリズムID**: ``native:exportmeshfaces``"
@@ -737,6 +782,24 @@ msgstr "**アルゴリズムID**: ``native:exportmeshfaces``"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:411
 msgid "Export mesh on grid"
 msgstr "グリッドメッシュを出力"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:413
+msgid ""
+"Exports a mesh layer's dataset values to a gridded point vector layer, with "
+"the dataset values on this point as attribute values."
+msgstr "メッシュレイヤのデータセット値を、グリッド点ベクタレイヤに出力します。点のデータセット値は属性値になります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:416
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:725
+msgid ""
+"For data on volume (3D stacked dataset values), the exported dataset values "
+"are averaged on faces using the method defined in :ref:`the mesh layer "
+"properties <mesh_stacked_averaging>` (default is Multi level averaging "
+"method). 1D meshes are not supported."
+msgstr ""
+"ボリューム上のデータ（3Dスタックデータセット値）の場合、出力されたデータセット値は :ref:`メッシュレイヤのプロパティ "
+"<mesh_stacked_averaging>` で定義された方法（デフォルトはMulti level averaging "
+"method）を用いて面上で平均化されます。1Dメッシュはサポートされていません。"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:449
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:758
@@ -752,6 +815,11 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:762
 msgid "[extent]"
 msgstr "[範囲]"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:763
+msgid "Specify the spatial extent on which to process the data."
+msgstr "データを処理する空間範囲を指定します。"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -798,6 +866,10 @@ msgstr "**グリッド間隔**"
 msgid "``GRID_SPACING``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:467
+msgid "Spacing between the sample points to use"
+msgstr "使用するサンプル点の間隔"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:484
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:506
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:572
@@ -805,6 +877,12 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:665
 msgid "[vector: point]"
 msgstr "[ベクタ：ポイント]"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:507
+msgid ""
+"Output vector point layer with dataset values computed from the overlaid "
+"face."
+msgstr "オーバーレイ平面から計算されたデータセット値を持つ出力点ベクタレイヤ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:513
 msgid "**Algorithm ID**: ``native:exportmeshongrid``"
@@ -814,6 +892,18 @@ msgstr "**アルゴリズムID**: ``native:exportmeshongrid``"
 msgid "Export mesh vertices"
 msgstr "メッシュの頂点を出力"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:525
+msgid ""
+"Exports a mesh layer's vertices to a point vector layer, with the dataset "
+"values on vertices as attribute values."
+msgstr "メッシュレイヤの頂点を、点ベクタレイヤに出力します。頂点のデータセット値は属性値となります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:595
+msgid ""
+"Output vector point layer containing the vertices of the input mesh layer "
+"with associated dataset values"
+msgstr "入力メッシュレイヤの頂点と関連するデータセット値を含む、出力点ベクタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:601
 msgid "**Algorithm ID**: ``native:exportmeshvertices``"
 msgstr "**アルゴリズムID**: ``native:exportmeshvertices``"
@@ -821,6 +911,23 @@ msgstr "**アルゴリズムID**: ``native:exportmeshvertices``"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:611
 msgid "Export time series values from points of a mesh dataset"
 msgstr "メッシュの時系列データ値を出力"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:613
+msgid ""
+"Extracts a mesh dataset's time series values from points contained in a "
+"vector layer."
+msgstr "ベクタレイヤに含まれる点からメッシュデータセットの時系列値を抽出します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:615
+msgid ""
+"If the time step is kept to its default value (0 hours), the time step used "
+"is the one of the two first datasets of the first selected dataset group."
+msgstr ""
+"時間間隔をデフォルト値（0時間）のままにしておくと、最初に選択されたデータセット・グループの最初の2つのデータセットの時間間隔が使われます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:633
+msgid "The mesh layer to extract data from"
+msgstr "データを抽出するメッシュレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:638
 msgid "**Starting time**"
@@ -830,6 +937,10 @@ msgstr "**開始時刻**"
 msgid "``STARTING_TIME``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:641
+msgid "The start of the time range to take into account"
+msgstr "考慮する時間範囲の開始位置"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:646
 msgid "**Finishing time**"
 msgstr "**終了時刻**"
@@ -837,6 +948,10 @@ msgstr "**終了時刻**"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:647
 msgid "``FINISHING_TIME``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:649
+msgid "The end of the time range to take into account"
+msgstr "考慮する時間範囲の終了位置"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:654
 msgid "**Time step (hours)**"
@@ -850,6 +965,12 @@ msgstr ""
 msgid "Default: 0"
 msgstr "デフォルト： 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:661
+msgid ""
+"Time between two consecutive steps to extract. Keep ``0`` to use time step "
+"of the first selected dataset group."
+msgstr "抽出する2つの連続したステップ間の時間。最初に選択したデータセットグループの時間間隔を使用する場合は ``0`` のままにします。"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:663
 msgid "**Points for data export**"
 msgstr "**データを出力する点**"
@@ -857,6 +978,12 @@ msgstr "**データを出力する点**"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:664
 msgid "``INPUT_POINTS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:667
+msgid ""
+"Vector layer containing points where the data will be extracted from the "
+"dataset mesh"
+msgstr "データセットメッシュからデータを抽出する点を含むベクタレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:668
 msgid "**Digits count for coordinates**"
@@ -866,6 +993,16 @@ msgstr "**座標値の桁数**"
 msgid "``COORDINATES_DIGITS``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:671
+msgid "Number of digits to round coordinate values"
+msgstr "座標値の丸め桁数"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:705
+msgid ""
+":file:`.CSV` file containing the mesh dataset time series values at the "
+"overlaying point features"
+msgstr "オーバーレイする点地物のメッシュデータセットの時系列値を含む :file:`.CSV` ファイル"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:711
 msgid "**Algorithm ID**: ``native:meshexporttimeseries``"
 msgstr "**アルゴリズムID**: ``native:meshexporttimeseries``"
@@ -873,6 +1010,10 @@ msgstr "**アルゴリズムID**: ``native:meshexporttimeseries``"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:721
 msgid "Rasterize mesh dataset"
 msgstr "メッシュデータをラスタライズ"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:723
+msgid "Creates a raster layer from a mesh dataset."
+msgstr "メッシュデータセットからラスタレイヤを作ります。"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:769
 msgid "**Pixel size**"
@@ -886,10 +1027,23 @@ msgstr ""
 msgid "Default: 1.0"
 msgstr "デフォルト： 1.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:774
+msgid "Pixel size of the output raster layer."
+msgstr "出力ラスタレイヤのピクセルのサイズ。"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:781
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:803
+msgid "**Output raster layer**"
+msgstr "**出力ラスタレイヤ**"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:783
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:805
 msgid "[raster]"
 msgstr "[ラスタ]"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:806
+msgid "Output raster layer with dataset values computed from the mesh layer."
+msgstr "メッシュレイヤから計算されたデータセット値を持つ出力ラスタレイヤ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:812
 msgid "**Algorithm ID**: ``native:meshrasterize``"
@@ -924,13 +1078,17 @@ msgstr "メッシュレイヤを生成するために結合するベクタレイ
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:843
 msgid "**Vector layer**"
-msgstr "**入力ベクタ**"
+msgstr "**ベクタレイヤ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:844
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:848
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:853
 msgid "GUI ONLY"
 msgstr "GUIのみ"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:846
+msgid "A selector for the vector layers to combine to generate the mesh layer"
+msgstr "メッシュレイヤを生成するために結合するベクタレイヤのセレクタ"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:847
 msgid "**Value on vertex**"
@@ -939,6 +1097,12 @@ msgstr "**点の値**"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:849
 msgid "[tablefield: any]"
 msgstr "[テーブルのフィールド：任意]"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:850
+msgid ""
+"A selector of the field to use from the selected layer. Each vertex is "
+"assigned the corresponding value of its original feature."
+msgstr "選択されたレイヤから使用するフィールドのセレクタ。各頂点には、元の地物の対応する値が割り当てられます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:852
 msgid "**Use Z-coordinate for value on vertex**"
@@ -951,6 +1115,14 @@ msgstr "[ブール値]"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:856
 msgid "Default: False"
 msgstr "デフォルト： False"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:857
+msgid ""
+"If checked, the Z value of vector layer points or polygons/lines vertices "
+"will be used to assign the Z value of the vertex mesh layer. Only available "
+"if the input layers are 3D."
+msgstr ""
+"チェックした場合、ベクタレイヤの点またはポリゴン/ラインの頂点のZ値が、頂点メッシュレイヤのZ値の割り当てに使用されます。入力レイヤが3Dの場合のみ有効です。"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:860
 msgid "**Output format**"
@@ -993,6 +1165,10 @@ msgstr "**出力ファイル**"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:900
 msgid "``OUTPUT_MESH``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:902
+msgid "Output mesh layer with dataset values computed from the vector layers."
+msgstr "ベクタレイヤから計算されたデータセット値を持つ出力メッシュレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:908
 msgid "**Algorithm ID**: ``native:tinmeshcreation``"
