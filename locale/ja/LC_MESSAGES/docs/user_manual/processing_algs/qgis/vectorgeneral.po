@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Transifex Bot <>, 2023
-# tomoya miyoshi, 2023
 # Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-24 12:01+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -739,6 +739,19 @@ msgstr ""
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:93
+msgid "Batch Nominatim geocoder"
+msgstr "Nominatimジオコーディング"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:95
+msgid ""
+"Performs batch geocoding using the Nominatim service against an input layer "
+"string field. The output layer will have a point geometry reflecting the "
+"geocoded location as well as a number of attributes associated to the "
+"geocoded location."
+msgstr ""
+"入力レイヤの文字列フィールドに対して、Nominatimサービスを使ったバッチジオコーディングを実行します。出力レイヤは、ジオコーディングされた場所を反映したポイントジオメトリと、ジオコーディングされた場所に関連するいくつかの属性を持ちます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:100
 msgid ""
 "|checkbox| Allows :ref:`features in-place modification "
@@ -749,6 +762,23 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2712
 msgid "checkbox"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:104
+msgid ""
+"This algorithm is compliant with the `usage policy "
+"<https://operations.osmfoundation.org/policies/nominatim/>`_ of the "
+"Nominatim geocoding service provided by the OpenStreetMap Foundation."
+msgstr ""
+"このアルゴリズムは、OpenStreetMap財団が提供するNominatimジオコーディングサービスの `使用ポリシー "
+"<https://operations.osmfoundation.org/policies/nominatim/>`_ に準拠しています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:122
+msgid "Vector layer to geocode the features"
+msgstr "地物をジオコーディングするベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:123
+msgid "**Address field**"
+msgstr "**住所フィールド**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:124
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:335
@@ -762,10 +792,33 @@ msgstr ""
 msgid "[tablefield: string]"
 msgstr "[テーブルのフィールド：文字列]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:126
+msgid "Field containing the addresses to geocode"
+msgstr "ジオコーディングする住所を格納しているフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:127
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:150
+msgid "**Geocoded**"
+msgstr "**出力**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:129
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:152
 msgid "[vector: point]"
 msgstr "[ベクタ：ポイント]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:132
+msgid ""
+"Specify the output layer containing only the geocoded addresses. One of:"
+msgstr "ジオコーディングされた住所のみを含む出力レイヤを指定します。以下のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:153
+msgid ""
+"Vector layer with point features corresponding to the geocoded addresses"
+msgstr "ジオコーディングされた住所に対応する点地物を持つベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:158
+msgid "**Algorithm ID**: ``native:batchnominatimgeocoder``"
+msgstr "**Algorithm ID**: ``native:batchnominatimgeocoder``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:168
 msgid "Convert layer to spatial bookmarks"
@@ -1713,6 +1766,19 @@ msgstr "クエリによって作成されるベクタレイヤ"
 msgid "**Algorithm ID**: ``qgis:executesql``"
 msgstr "**アルゴリズムID**: ``qgis:executesql``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:998
+msgid "Export layers to DXF"
+msgstr "レイヤをDXFにエクスポート"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1000
+msgid ""
+"Exports layers to DXF file. For each layer, you can choose a field whose "
+"values are used to split features in generated destination layers in DXF "
+"output."
+msgstr ""
+"レイヤを DXF ファイルにエクスポートします。各レイヤについてフィールドを選択し、その値によってDXF "
+"出力の生成された出力先レイヤに地物を分けることができます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1003
 msgid ":ref:`create_dxf_files`"
 msgstr ""
@@ -1726,9 +1792,37 @@ msgstr "**入力レイヤ**"
 msgid "``LAYERS``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1019
+msgid "Input vector layers to export"
+msgstr "エクスポートしたい入力ベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1020
+msgid "**Symbology mode**"
+msgstr "**シンボロジーモード**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1021
 msgid "``SYMBOLOGY_MODE``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1025
+msgid "Type of symbology to apply to output layers. You can choose between:"
+msgstr "出力レイヤに適用するシンボロジの種類。次から選ぶことができます:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1027
+msgid "0 --- No Symbology"
+msgstr "0 -- シンボロジなし"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1028
+msgid "1 --- Feature Symbology"
+msgstr "1 -- 地物シンボロジ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1029
+msgid "2 --- Symbol Layer Symbology"
+msgstr "2 -- シンボルレイヤシンボロジ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1031
+msgid "**Symbology scale**"
+msgstr "**シンボルのスケール**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1032
 msgid "``SYMBOLOGY_SCALE``"
@@ -1737,6 +1831,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1033
 msgid "[scale]"
 msgstr "[縮尺]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1035
+msgid "Default: 1:1 000 000"
+msgstr "デフォルト: 1:1 000 000"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1036
+msgid "Default scale of data export."
+msgstr "デフォルトのエクスポートするデータの縮尺"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1037
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2434
@@ -1748,6 +1850,18 @@ msgstr "**文字コード**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2435
 msgid "``ENCODING``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1040
+msgid "Encoding to apply to layers."
+msgstr "レイヤに適用する文字コード"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1044
+msgid "Choose the CRS for the output layer."
+msgstr "出力レイヤのCRSを選びます"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1045
+msgid "**Use layer title as name**"
+msgstr "**レイヤ名を名前に使用**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1046
 msgid "``USE_LAYER_TITLE``"
@@ -1777,13 +1891,36 @@ msgstr "[ブール値]"
 msgid "Default: False"
 msgstr "デフォルト： False"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1050
+msgid ""
+"Name the output layer with the layer title (as set in QGIS) instead of the "
+"layer name."
+msgstr "レイヤ名の代わりに（QGISで付けられた）レイヤタイトルを使って出力レイヤに名前を付けます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1052
+msgid "**Force 2D**"
+msgstr "**二次元出力を強制**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1053
 msgid "``FORCE_2D``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1058
+msgid "**Export labels as MTEXT elements**"
+msgstr "**ラベルをMTEXT要素としてエクスポートする**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1059
 msgid "``MTEXT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1063
+msgid "Exports labels as MTEXT or TEXT elements"
+msgstr "ラベルをMTEXTまたはTEXT要素としてエクスポートします"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1064
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1087
+msgid "**DXF**"
+msgstr "**DXF**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1066
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1089
@@ -1796,9 +1933,21 @@ msgstr "[ファイル]"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1069
+msgid "Specification of the output DXF file. One of:"
+msgstr "DXF出力ファイルを指定します。次のいずれかです："
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "一時レイヤを作成"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1090
+msgid ":file:`.DXF` file containing the input layers"
+msgstr ":file:`.DXF` ファイルは入力レイヤを持ちます"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1095
+msgid "**Algorithm ID**: ``native:dxfexport``"
+msgstr "**Algorithm ID**: ``native:dxfexport``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1105
 msgid "Extract selected features"
@@ -1940,6 +2089,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1262
 msgid "[extent]"
 msgstr "[範囲]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1263
+msgid "The area that the layer covers."
+msgstr "レイヤがカバーする領域"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -2270,7 +2423,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1527
 msgid "**Algorithm ID**: ``native:joinattributestable``"
-msgstr "**アルゴリズムID**: ``native:joinattributestable``"
+msgstr "**Algorithm ID**: ``native:joinattributestable``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1537
 msgid "Join attributes by location"
@@ -2421,6 +2574,16 @@ msgstr ""
 "(true)を返します。例えば、ポリゴンを横切るラインは、ラインとして交差します (true)。交差する2本のラインは、ポイントとして交差します "
 "(true)。2つのポリゴンはポリゴンとして交差します (false)。図では、どの円は返されません。"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1571
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1737
+msgid "**Join to features in**"
+msgstr "**地物を結合するレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1577
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1743
+msgid "**Where the features**"
+msgstr "**空間的関係**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1578
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1744
 msgid "``PREDICATE``"
@@ -2430,6 +2593,13 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1747
 msgid "Default: [0]"
 msgstr "デフォルト： [0]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1582
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1748
+msgid ""
+"Type of spatial relation the source feature should have with the target "
+"feature so that they could be joined. One or more of:"
+msgstr "ソース地物がターゲット地物との間に持っている場合に結合される、空間関係の種類。次の1つ以上："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1585
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1751
@@ -2441,6 +2611,31 @@ msgstr "0 -- 交差する(intersect)"
 msgid "1 --- contain"
 msgstr "1 -- 含む(contain)"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1587
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1753
+msgid "2 --- equal"
+msgstr "2 -- 等しい(equal)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1588
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1754
+msgid "3 --- touch"
+msgstr "3 -- 接触する (touch)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1589
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1755
+msgid "4 --- overlap"
+msgstr "4 -- 重なる (overlap)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1590
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1756
+msgid "5 --- are within"
+msgstr "5 -- 含まれる (within)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1591
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1757
+msgid "6 --- cross"
+msgstr "6 -- 交差する (cross)"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1593
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1759
 msgid ""
@@ -2448,10 +2643,22 @@ msgid ""
 "has to be met for a feature to be extracted."
 msgstr "複数の条件が選択された場合、そのうちの少なくとも1つ（OR演算）を満たさなければ地物は抽出されません。"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1596
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1762
+msgid "**By comparing to**"
+msgstr "**比較対象**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1597
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1763
 msgid "``JOIN``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1599
+msgid ""
+"The join layer. Features of this vector layer will **add** their attributes "
+"to the source layer attribute table if they satisfy the spatial "
+"relationship."
+msgstr "結合レイヤ。このベクタレイヤの地物の空間的関係が満たされるとき、その属性がソースレイヤの属性テーブルに **追加** されます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1601
 msgid "**Fields to add (leave empty to use all fields)**"
@@ -2462,10 +2669,23 @@ msgstr "**結合するフィールド（すべてのフィールドを結合す�
 msgid "``JOIN_FIELDS``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1606
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1773
+msgid ""
+"Select the specific fields you want to add from the join layer. By default "
+"all the fields are added."
+msgstr "結合レイヤから追加したい特定のフィールドを選択します。デフォルトでは、すべてのフィールドが追加されます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1617
 msgid ""
 "2 --- Take attributes of the feature with largest overlap only (one-to-one)"
 msgstr "2 --- もっとも重なる地物の属性のみ（１対１）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1625
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1810
+msgid ""
+"Remove from the output the input layer's features which could not be joined"
+msgstr "結合できなかった入力レイヤの地物を出力結果では削除します"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1683
 msgid "Vector layer of the non-matched features"
@@ -2489,6 +2709,13 @@ msgstr "このアルゴリズムは、マッチングする第２のレイヤの
 msgid ":ref:`qgisjoinattributesbylocation`"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1765
+msgid ""
+"The join layer. Features of this vector layer will **add** summaries of "
+"their attributes to the source layer attribute table if they satisfy the "
+"spatial relationship."
+msgstr "結合レイヤ。このベクタレイヤの地物の空間的関係が満たされるとき、その属性の集計がソースレイヤの属性テーブルに **追加** されます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1768
 msgid "**Fields to summarize (leave empty to use all fields)**"
 msgstr "**集計する属性（全属性の場合は空のまま）**"
@@ -2504,6 +2731,12 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1781
 msgid "Default: []"
 msgstr "デフォルト： []"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1782
+msgid ""
+"For each input feature, statistics are calculated on joined fields of their "
+"matching features. One or more of:"
+msgstr "各入力地物について、マッチする地物の結合フィールドの統計が計算されます。次のひとつ以上です："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1785
 msgid "0 --- count"
@@ -2551,15 +2784,15 @@ msgstr "10 --- 最頻値"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1796
 msgid "11 --- q1"
-msgstr "11 --- q1"
+msgstr "11 --- 第１四分位（Q1）"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1797
 msgid "12 --- q3"
-msgstr "12 --- q3"
+msgstr "12 --- 第３四分位（Q3）"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1798
 msgid "13 --- iqr"
-msgstr "13 --- iqr"
+msgstr "13 --- 四分位範囲（iQR）"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1799
 msgid "14 --- empty"
@@ -2587,7 +2820,7 @@ msgstr "結合レイヤの属性の統計量を持つ出力レイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1842
 msgid "**Algorithm ID**: ``qgis:joinbylocationsummary``"
-msgstr "**アルゴリズムID**: ``qgis:joinbylocationsummary``"
+msgstr "**Algorithm ID**: ``qgis:joinbylocationsummary``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1852
 msgid "Join attributes by nearest"
@@ -3175,7 +3408,7 @@ msgstr "**アルゴリズムID**: ``native:splitfeaturesbycharacter``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2553
 msgid "Split vector layer"
-msgstr "属性でレイヤ分割"
+msgstr "属性でレイヤを分割"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2554
 msgid ""
@@ -3230,9 +3463,25 @@ msgstr "一時ディレクトリに保存"
 msgid "Save to Directory"
 msgstr "ディレクトリに保存します"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2613
+msgid "**Output file type**"
+msgstr "**出力ファイル型**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2616
 msgid "``FILE_TYPE``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2619
+msgid "Default: ``gpkg`` in the dialog window"
+msgstr "デフォルト：ダイアログウィンドウで ``gpkg``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2620
+msgid ""
+"Select the extension of the output files. If not specified or invalid, the "
+"output files format will be the one set in the \"Default output vector layer"
+" extension\" Processing setting."
+msgstr ""
+"出力ファイルの拡張子を選択します。未指定または無効の場合、出力ファイル形式はプロセシング設定の「デフォルトのベクタレイヤ拡張子」で設定されたものになります。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2639
 msgid "The directory for the output layers"
