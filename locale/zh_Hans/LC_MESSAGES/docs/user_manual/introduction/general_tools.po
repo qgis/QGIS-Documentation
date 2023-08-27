@@ -40,32 +40,111 @@ msgid ""
 "in most dialogs --- please note that third-party plugins can point to "
 "dedicated web pages."
 msgstr ""
-"每当您需要具体主题帮助时，可以通过多数对话框中的 :guilabel:`Help` 按钮访问当前用户手册中的相应页面 --- "
-"请注意，第三方插件可以指向专用网页。"
+"每当您需要详细的主题帮助时，可以通过许多对话框中的 :guilabel:`帮助` 按钮访问当前用户手册中的相应页面 --- "
+"请注意，第三方插件指向专用Web页面。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:32
 msgid "Panels"
 msgstr "面板"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:33
+msgid ""
+"By default, QGIS provides many panels to work with. Some of these panels are"
+" described below while others may be found in different parts of the "
+"document. A complete list of default panels provided by QGIS is available "
+"via the :menuselection:`View --> Panels -->` menu and mentioned at "
+":ref:`panels_tools`."
+msgstr ""
+"QGIS默认提供了许多面板供您使用。下文对其中部分面板进行了描述，而其他面板可在文档的不同部分找到。QGIS提供的默认面板的完整列表可通过 "
+":menuselection:`视图 --> 面板 -->` 菜单访问，在 :ref:`panels_tools` 中对提到的面板进行了详细介绍。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:43
 msgid "Layers Panel"
 msgstr "图层面板"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:48
+msgid ""
+"The :guilabel:`Layers` panel (also called the ``map legend``) lists all the "
+"layers in the project and helps you manage their visibility and shape the "
+"map. You can show or hide the panel by pressing :kbd:`Ctrl+1`."
+msgstr ""
+":guilabel:`图层` 面板 (也称为 ``地图图例``) 列出了该工程的所有图层，并帮助您管理其可见性和设计地图。按 :kbd:`Ctrl+1`"
+" 可以显示或隐藏面板。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:52
+msgid "At the top of the :guilabel:`Layers` panel, a toolbar allows you to:"
+msgstr "在 :guilabel:`图层` 面板的顶部，有一个工具栏可用于："
+
+#: ../../docs/user_manual/introduction/general_tools.rst:54
+msgid ""
+"|symbology| :sup:`Open the layer styling dock (F7)`: toggle the :ref:`Layer "
+"Styling <layer_styling_panel>` panel on and off."
+msgstr ""
+"|symbology| :sup:`打开图层样式停靠栏 (F7)`: 切换 :ref:`图层样式 <layer_styling_panel>` "
+"面板的打开和关闭。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2319
 msgid "symbology"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:56
+msgid "|addGroup| :sup:`Add new group`: see :ref:`group_layers_interact`"
+msgstr "|addGroup| :sup:`添加组`: 请参阅 :ref:`group_layers_interact`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2153
 msgid "addGroup"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:57
+msgid ""
+"|showPresets| :sup:`Manage Map Themes`: control visibility of layers and "
+"arrange them in different :ref:`map themes <map_themes>`."
+msgstr ""
+"|showPresets| :sup:`管理地图主题`: 控制图层的可见性，并将其排列在不同的 :ref:`地图主题 <map_themes>` 中。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2311
 msgid "showPresets"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:59
+msgid "|filterMap| filter layers in the legend tree:"
+msgstr "|filterMap| 在图例树中的过滤图层："
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2215
 msgid "filterMap"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:61
+msgid ""
+":guilabel:`Filter Legend by Map Content`: only the layers that are set "
+"visible and whose features intersect the current map canvas have their style"
+" rendered in the layers panel. Otherwise, a generic NULL symbol is applied "
+"to the layer. Based on the layer symbology, this is a convenient way to "
+"identify which kind of features from which layers cover your area of "
+"interest."
+msgstr ""
+":guilabel:`按地图内容过滤图例`: "
+"只有设置为可见并且其要素与当前地图画布相交的图层，其样式才会在图层面板中渲染。否则，将对图层应用通用的NULL符号。基于图层符号，这是一种便捷的方式来识别哪些图层覆盖了关注区的要素。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:66
+msgid ""
+":guilabel:`Show Private Layers`: a convenient shortcut to display and "
+"interact with :ref:`private layers <project_layer_capabilities>` in the "
+":guilabel:`Layers` panel without modifying the project settings."
+msgstr ""
+":guilabel:`显示私有图层`: 一个方便的快捷方式，用于在 :guilabel:`图层` 面板显示 :ref:`私有图层 "
+"<project_layer_capabilities>` 并与之交互，而无需修改工程设置。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:69
+msgid ""
+"|expressionFilter| :sup:`Filter Legend by Expression`: apply an expression "
+"to remove styles from the selected layer tree that have no feature "
+"satisfying the condition. This can be used to highlight features that are "
+"within a given area/feature of another layer. From the drop-down list, you "
+"can edit and clear the expression currently applied."
+msgstr ""
+"|expressionFilter| :sup:`按表达式过滤图例`: "
+"应用表达式从所选图层树中移除没有满足条件的要素样式。这可用于突出显示另一图层给定区域/要素内的要素。从下拉列表可以编辑和清除当前应用的表达式。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2207
 msgid "expressionFilter"
@@ -410,6 +489,10 @@ msgstr ":guilabel:`缩放到可见比例`"
 msgid ":menuselection:`Layer CRS -->`"
 msgstr ":menuselection:`图层CRS -->`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:217
+msgid ":menuselection:`--> Set to..` (recent CRSs)"
+msgstr ":menuselection:`--> 设为..` (最近使用的CRS)"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:218
 msgid ":menuselection:`--> Set Layer CRS...`"
 msgstr ":menuselection:`--> 设置图层CRS...`"
@@ -553,6 +636,15 @@ msgstr "messageLog"
 #: ../../docs/user_manual/introduction/general_tools.rst:2205
 msgid "expression"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:603
+msgid "Integer"
+msgstr "整型"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:603
+#: ../../docs/user_manual/introduction/general_tools.rst:953
+msgid "Date"
+msgstr "日期"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:605
 msgid "Count"
