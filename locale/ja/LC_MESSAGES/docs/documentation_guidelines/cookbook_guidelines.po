@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -193,6 +194,50 @@ msgstr ""
 msgid "How to test snippets on your local machine"
 msgstr "ローカルマシンでスニペットをテストする方法"
 
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:138
+msgid "Instructions are valid for Linux system."
+msgstr "インストラクションはLinuxシステムで有効です。"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:140
+msgid ""
+"To test Python code snippets, you need a *QGIS* installation. For this, "
+"there are many options. You can:"
+msgstr "Pythonのコードスニペットをテストするには、*QGIS* のインストールが必要です。これには多くのオプションがあります。次が可能です："
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:143
+msgid ""
+"Use your system *QGIS* installation with *Sphinx* from a Python virtual "
+"environment::"
+msgstr "Pythonの仮想環境から自分のシステムにインストールした *QGIS* を *Sphinx* と一緒に使用します："
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:148
+msgid "Use a manually built installation of *QGIS*. You'd need to:"
+msgstr "手動でビルドした *QGIS* を使います。次を行う必要があります:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:150
+msgid ""
+"Create a custom ``Makefile`` extension on top of the :file:`venv.mk` file, "
+"for example a :file:`user.mk` file with the following content::"
+msgstr ""
+":file:`venv.mk` ファイルをカスタムした ``Makefile`` 拡張を作ります。例えば :file:`user.mk` "
+"ファイルを以下のような内容で作成します："
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:158
+msgid "Or ::"
+msgstr "または::"
+
 #: ../../docs/documentation_guidelines/cookbook_guidelines.rst:165
 msgid "Then, use it to run target ``doctest``::"
 msgstr "それから、それを使ってtarget ``doctest`` を実行します。"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:169
+msgid "Run target ``doctest`` inside the official *QGIS* docker image::"
+msgstr "公式の *QGIS* docker イメージ内で ``doctest`` ターゲットを実行します::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:173
+msgid ""
+"You have to install `Docker <https://www.docker.com/>`_ first because this "
+"uses a docker image with QGIS in it."
+msgstr ""
+"QGISの中にあるdockerイメージを使用するため、最初に `Docker <https://www.docker.com/>`_ "
+"をインストールする必要があります。"
