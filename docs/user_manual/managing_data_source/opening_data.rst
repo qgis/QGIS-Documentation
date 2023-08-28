@@ -659,13 +659,13 @@ contents:
    overwritten.
 #. Choose how to import ``blocks`` with the dedicated combobox:
 
-   * ``Expand Block Geometries``: import the blocks in the drawing file as normal elements.
-   * ``Expand Block Geometries and Add Insert Points``: import the blocks in the drawing file as normal elements and add the insertion point as a point layer.
-   * ``Add Only Insert Points``: add the blocks insertion point as a point layer.
+   * :guilabel:`Expand Block Geometries`: imports the blocks in the drawing file as normal elements.
+   * :guilabel:`Expand Block Geometries and Add Insert Points`: imports the blocks in the drawing file as normal elements and adds the insertion point as a point layer.
+   * :guilabel:`Add Only Insert Points`: adds the blocks insertion point as a point layer.
 
 #. Check |checkbox| :guilabel:`Use curves` to promote the imported layers
    to a ``curved`` geometry type.
-#. Use the :guilabel:`Import` button import the drawing into the destination
+#. Use the :guilabel:`Import` button to import the drawing into the destination
    GeoPackage file.
    The GeoPackage database will be automatically populated with the
    drawing file content.
