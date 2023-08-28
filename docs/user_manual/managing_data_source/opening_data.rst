@@ -651,16 +651,22 @@ tool which allows you to:
 In the :guilabel:`DWG/DXF Import` dialog, to import the drawing file
 contents:
 
-#. Input the location of the :guilabel:`Target package`, i.e. the new
-   GeoPackage file that will store the data.
-   If an existing file is provided, then it will be overwritten.
+#. Input the location of the :guilabel:`Source drawing`, i.e. the DWG/DXF drawing
+   file to import.
 #. Specify the coordinate reference system of the data in the drawing file.
-#. Check |checkbox| :guilabel:`Expand block references` to import the
-   blocks in the drawing file as normal elements.
+#. Input the location of the :guilabel:`Target package`, i.e. the GeoPackage file
+   that will store the data. If an existing file is provided, then it will be 
+   overwritten.
+#. Choose how to import ``blocks`` with the dedicated combobox:
+
+   * :guilabel:`Expand Block Geometries`: imports the blocks in the drawing file as normal elements.
+   * :guilabel:`Expand Block Geometries and Add Insert Points`: imports the blocks in the drawing file as normal elements and adds the insertion point as a point layer.
+   * :guilabel:`Add Only Insert Points`: adds the blocks insertion point as a point layer.
+
 #. Check |checkbox| :guilabel:`Use curves` to promote the imported layers
    to a ``curved`` geometry type.
-#. Use the :guilabel:`Import` button to select the DWG/DXF file to use
-   (one per geopackage).
+#. Use the :guilabel:`Import` button to import the drawing into the destination
+   GeoPackage file.
    The GeoPackage database will be automatically populated with the
    drawing file content.
    Depending on the size of the file, this can take some time.
@@ -671,7 +677,7 @@ populated with the list of layers from the imported file.
 There you can select which layers to add to the QGIS project:
 
 #. At the top, set a :guilabel:`Group name` to group the drawing files
-   in the project.
+   in the project. By default this is set to the filename of the source drawing file.
 #. Check layers to show: Each selected layer is added to an ad hoc group which
    contains vector layers for the point, line, label and area features of the
    drawing layer.
