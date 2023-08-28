@@ -157,9 +157,7 @@ hierarchically, and there are several top level entries:
    * |xyz| :guilabel:`XYZ Tiles`
    * |wcs| :guilabel:`WCS`
    * |wfs| :guilabel:`WFS/OGC API-Features`
-   * |ows| :guilabel:`OWS`
-   * |ams| :guilabel:`ArcGIS Map Service`
-   * |afs| :guilabel:`ArcGIS Feature Service`
+   * |afs| :guilabel:`ArcGIS REST Server`
 
 Interacting with the Browser items
 ----------------------------------
@@ -1529,8 +1527,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |afs| image:: /static/common/mIconAfs.png
    :width: 1.5em
-.. |ams| image:: /static/common/mIconAms.png
-   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
@@ -1557,8 +1553,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
-.. |ows| image:: /static/common/mIconOws.png
-   :width: 1.5em
 .. |postgis| image:: /static/common/mIconPostgis.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
