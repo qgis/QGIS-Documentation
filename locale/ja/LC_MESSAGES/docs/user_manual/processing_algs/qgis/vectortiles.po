@@ -25,6 +25,29 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:2
+msgid "Vector Tiles"
+msgstr "ベクタタイル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:13
+msgid "Write vector tiles (MBTiles)"
+msgstr "ベクタタイルを書き出し (WMBTiles)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:15
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:139
+msgid ""
+"Exports one or more vector layers to vector tiles, a data format optimized "
+"for fast map rendering and small data size."
+msgstr ""
+"1つまたは複数のベクタレイヤを、高速なマップレンダリングと小さなデータサイズに最適化されたデータ形式であるベクタタイルにエクスポートします。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:18
+msgid ""
+"MBTiles is a specification for storing tiled map data in SQLite databases "
+"for immediate usage and for transfer. MBTiles files are known as tilesets."
+msgstr ""
+"MBTilesは、タイル化された地図データをSQLiteデータベースに保存し、すぐに利用したり転送したりするための仕様です。MBTilesファイルはタイルセットとして知られています。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:22
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:143
 msgid "Parameters"
@@ -73,6 +96,16 @@ msgstr ""
 msgid "[vector: any] [list]"
 msgstr "[ベクタ：任意] [リスト]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:35
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:162
+msgid "A list of layers to combine to generate the vector tiles"
+msgstr "ベクタタイルを生成するために結合するレイヤのリスト"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:163
+msgid "**Minimum zoom level**"
+msgstr "**最小ズーム値**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:37
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:164
 msgid "``MIN_ZOOM``"
@@ -90,6 +123,18 @@ msgstr "[数値]"
 msgid "Default: 0"
 msgstr "デフォルト： 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:168
+msgid ""
+"The lowest zoom level for which the tileset provides data. Set between 0 and"
+" 24."
+msgstr "タイルセットがデータを提供する最も低いズームレベル。0から24の間で設定します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:43
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:170
+msgid "**Maximum zoom level**"
+msgstr "**最大ズーム値**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:44
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:171
 msgid "``MAX_ZOOM``"
@@ -99,6 +144,13 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:174
 msgid "Default: 3"
 msgstr "デフォルト： 3"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:175
+msgid ""
+"The highest zoom level for which the tileset provides data. Set between 0 "
+"and 24."
+msgstr "タイルセットがデータを提供する最も高いズームレベル。0から24の間で設定します。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:50
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:177
@@ -131,6 +183,17 @@ msgstr "[範囲]"
 msgid "Default: Not set"
 msgstr "デフォルト：未設定"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:184
+msgid ""
+"The maximum extent of the rendered map area. Bounds must define an area "
+"covered by all zoom levels."
+msgstr "レンダリングされた地図領域の最大範囲。範囲はすべてのズームレベルでカバーされる領域を定義する必要があります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:59
+msgid "**Metadata: Name**"
+msgstr "**メタデータ: 名前**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:62
 msgid "``META_NAME``"
 msgstr ""
@@ -145,34 +208,99 @@ msgstr ""
 msgid "[string]"
 msgstr "[文字列]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:64
+msgid "Name of the tileset"
+msgstr "タイルセットの名前"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:65
+msgid "**Metadata: Description**"
+msgstr "**メタデータ: 説明**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:68
 msgid "``META_DESCRIPTION``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:70
+msgid "A description of the tileset's contents"
+msgstr "タイルセットの内容の説明"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:71
+msgid "**Metadata: Attribution**"
+msgstr "**メタデータ: 出典**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:74
 msgid "``META_ATTRIBUTION``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:76
+msgid ""
+"An attribution string, which explains the sources of data and/or style for "
+"the map."
+msgstr "マップのデータソースおよび/またはスタイルを説明する文字列。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:77
+msgid "**Metadata: Version**"
+msgstr "**メタデータ: バージョン**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:80
 msgid "``META_VERSION``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:82
+msgid ""
+"The version of the tileset. This refers to a revision of the tileset itself,"
+" not of the MBTiles specification."
+msgstr "タイルセットのバージョン。これはMBTilesの仕様ではなく、タイルセット自身のリビジョンを指します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:84
+msgid "**Metadata: Type**"
+msgstr "**メタデータ: 形式**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:87
 msgid "``META_TYPE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:89
+msgid "Type of tileset. Possible values are ``overlay`` or ``baselayer``."
+msgstr "タイルセットの形式。値は ``overlay`` または ``baselayer`` のいずれかです。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:90
+msgid "**Metadata: Center**"
+msgstr "**メタデータ: 中央**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:93
 msgid "``META_CENTER``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:95
+msgid ""
+"The center (string of comma-separated numbers: the longitude, latitude, and "
+"zoom level) of the default view of the map. Example: "
+"``-122.1906,37.7599,11``"
+msgstr ""
+"地図のデフォルトビューの中心（コンマで区切られた数値の文字列：経度、緯度、ズームレベル）。例: ``-122.1906,37.7599,11``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:97
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:119
+msgid "**Destination MBTiles**"
+msgstr "**出力先タイル**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:98
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:120
 msgid "``OUTPUT``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:99
+msgid "[vector tiles]"
+msgstr "[ベクタタイル}"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:101
 msgid "Default: [Save to temporary file]"
 msgstr "デフォルト： [一時ファイルに保存]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:102
+msgid "Specification of the output MBTiles file. One of:"
+msgstr "出力MBTilesファイルを指定します。次のいずれかです:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -191,10 +319,18 @@ msgstr "出力"
 msgid "[file]"
 msgstr "[ファイル]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:122
+msgid "Output vector tiles :file:`.mbtiles` file."
+msgstr "出力ベクタタイル :file:`.mbtiles` ファイル。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:125
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:215
 msgid "Python code"
 msgstr "Python コード"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:127
+msgid "**Algorithm ID**: ``native:writevectortiles_mbtiles``"
+msgstr "**Algorithm ID**: ``native:writevectortiles_mbtiles``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -207,9 +343,25 @@ msgstr ""
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:137
+msgid "Write vector tiles (XYZ)"
+msgstr "ベクタタイルを書き出し (XYZ)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:153
+msgid "**File template**"
+msgstr "**ファイルのテンプレート**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:154
 msgid "``XYZ_TEMPLATE``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:157
+msgid "Default: '{z}/{x}/{y}.pbf'"
+msgstr "デフォルト: '{z}/{x}/{y}.pbf'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:158
+msgid "Template to generate the vector tiles url"
+msgstr "ベクタタイルurlを生成するためのテンプレート"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:186
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:208
@@ -226,6 +378,14 @@ msgstr ""
 msgid "[folder]"
 msgstr "[フォルダ]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:190
+msgid "Default: [Save to temporary folder]"
+msgstr "デフォルト: [一時フォルダに保存]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:191
+msgid "Specification of the output vector tiles folder. One of:"
+msgstr "出力ベクタタイルのフォルダを指定します。次のいずれかです:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary Directory"
 msgstr "一時ディレクトリに保存"
@@ -233,3 +393,13 @@ msgstr "一時ディレクトリに保存"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to Directory"
 msgstr "ディレクトリに保存します"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:211
+msgid ""
+"A folder containing different subsets of the vector tiles files "
+"(:file:`.pbf`) stored in subfolders corresponding to the zoom levels."
+msgstr "ズームレベルに対応するサブフォルダに格納されたベクタタイルファイル（:file:`.pbf`）の異なるサブセットを含むフォルダ。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:217
+msgid "**Algorithm ID**: ``native:writevectortiles_xyz``"
+msgstr "**Algorithm ID**: ``native:writevectortiles_xyz``"
