@@ -43,14 +43,12 @@ More than 80 vector and 140 raster formats are supported by
 
 .. note::
 
-   Not all of the listed formats may work in QGIS for various reasons. For
-   example, some require external proprietary libraries, or the GDAL/OGR
+   Not all of the listed formats may work in QGIS for various reasons.
+   For example, some require external proprietary libraries, or the GDAL/OGR
    installation of your OS may not have been built to support the format you
    want to use. To see the list of available formats, run the command line
    ``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster),
    or check the :menuselection:`Settings --> Options --> GDAL` menu in QGIS.
-
-.. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
 .. _datasourcemanager:
 
@@ -148,10 +146,10 @@ hierarchically, and there are several top level entries:
 
    * |geoPackage| :guilabel:`GeoPackage`
    * |spatialite| :guilabel:`SpatiaLite`
-   * |postgis| :guilabel:`PostGIS`
+   * |postgis| :guilabel:`PostgreSQL`
+   * |hana| :guilabel:`SAP HANA`
    * |mssql| :guilabel:`MS SQL Server`
    * |oracle| :guilabel:`Oracle`
-   * |hana| :guilabel:`SAP HANA`
    * |wms| :guilabel:`WMS/WMTS`
    * |vectorTileLayer| :guilabel:`Vector Tiles`
    * |xyz| :guilabel:`XYZ Tiles`

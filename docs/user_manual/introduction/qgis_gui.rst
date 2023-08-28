@@ -1005,16 +1005,16 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Manage Layers`
      - :ref:`db_tools`
-   * - :menuselection:`-->` |addVirtualLayer|
-       :guilabel:`Add/Edit Virtual Layer...`
-     -
-     - :guilabel:`Manage Layers`
-     - :ref:`vector_virtual_layers`
    * - :menuselection:`-->` |addHanaLayer|
        :guilabel:`Add SAP HANA Spatial Layer...`
      -
      - :guilabel:`Manage Layers`
      - :ref:`db_tools`
+   * - :menuselection:`-->` |addVirtualLayer|
+       :guilabel:`Add/Edit Virtual Layer...`
+     -
+     - :guilabel:`Manage Layers`
+     - :ref:`vector_virtual_layers`
    * - :menuselection:`-->` |addWmsLayer|
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
