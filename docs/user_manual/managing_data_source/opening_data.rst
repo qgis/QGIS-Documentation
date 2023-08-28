@@ -160,7 +160,6 @@ hierarchically, and there are several top level entries:
    * |ows| :guilabel:`OWS`
    * |ams| :guilabel:`ArcGIS Map Service`
    * |afs| :guilabel:`ArcGIS Feature Service`
-   * |geonode| :guilabel:`GeoNode`
 
 Interacting with the Browser items
 ----------------------------------
@@ -1543,8 +1542,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
-   :width: 1.5em
-.. |geonode| image:: /static/common/mIconGeonode.png
    :width: 1.5em
 .. |hana| image:: /static/common/mIconHana.png
    :width: 1.5em
