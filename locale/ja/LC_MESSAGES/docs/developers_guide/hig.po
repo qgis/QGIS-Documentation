@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +28,14 @@ msgstr ""
 msgid "HIG (Human Interface Guidelines)"
 msgstr "HIG（ヒューマンインターフェイスガイドライン）"
 
+#: ../../docs/developers_guide/hig.rst:6
+msgid ""
+"In order for all graphical user interface elements to appear consistent and "
+"to all the user to instinctively use dialogs, it is important that the "
+"following guidelines are followed in layout and design of GUIs."
+msgstr ""
+"すべてのグラフィカル・ユーザー・インタフェース要素が一貫して見えるように、そしてすべてのユーザーがダイアログを本能的に使えるように、GUIのレイアウトとデザインにおいて以下のガイドラインに従うことが重要です。"
+
 #: ../../docs/developers_guide/hig.rst:10
 msgid ""
 "Group related elements using group boxes: Try to identify elements that can "
@@ -35,6 +44,29 @@ msgid ""
 "item inside."
 msgstr ""
 "関連要素はグループボックスを使用してグループ化：一緒にグループ化できる要素を識別するようにし、そのグループのトピックを識別するためラベル付きのグループボックスを使用してください。内部にウィジェット/アイテムが1つのみのグループボックスを使用しないでください。"
+
+#: ../../docs/developers_guide/hig.rst:14
+msgid ""
+"Capitalise first letter only in labels, tool tips, descriptive text, and "
+"other non-heading or title text: These should be written as a phrase with "
+"leading capital letter, and all remaining words written with lower case "
+"first letters, unless they are nouns"
+msgstr ""
+"ラベル、ツールヒント、説明文、その他見出しやタイトル以外のテキスト：  "
+"これらは先頭の文字だけを大文字にした成句として書き、残りの単語は名詞でない限りすべて先頭を小文字で書きます"
+
+#: ../../docs/developers_guide/hig.rst:18
+msgid ""
+"Capitalize all words in Titles (group box, tab, list view columns, and so "
+"on), Functions (menu items, buttons), and other selectable items (combobox "
+"items, listbox items, tree list items, and so on): Capitalize all words, "
+"except prepositions that are shorter than five letters (for example, 'with' "
+"but 'Without'), conjunctions (for example, and, or, but), and articles (a, "
+"an, the). However, always capitalize the first and last word."
+msgstr ""
+"タイトル（グループボックス、タブ、リストビューのカラムなど）、機能（メニューアイテム、ボタン）、その他の選択可能なアイテム（コンボボックスアイテム、リストボックスアイテム、ツリーリストアイテムなど）：すべての単語を大文字にしますが、5文字より短い前置詞（例：'with'"
+" は該当するが 'Without' は該当しない）、接続詞（例：and, or, but）、冠詞（a, an, "
+"the）は除きます。ただし、最初と最後の単語は必ず大文字にします。"
 
 #: ../../docs/developers_guide/hig.rst:24
 msgid ""
@@ -45,6 +77,16 @@ msgid ""
 msgstr ""
 "ウィジェットやグループボックスのラベルの最後にコロンを付けないでください：コロンを追加しても、視覚的なノイズを引き起こすだけで追加の意味を付与しないので、コロンは使用しないでください。この規則の例外は隣同士に2つのラベルを持っている場合です、例えば："
 " Label1 Plugin (Path:) Label2 [/path/to/plugins]"
+
+#: ../../docs/developers_guide/hig.rst:28
+msgid ""
+"Keep harmful actions away from harmless ones: If you have actions for "
+"'delete', 'remove' etc, try to impose adequate space between the harmful "
+"action and innocuous actions so that the users is less likely to "
+"inadvertently click on the harmful action."
+msgstr ""
+"有害なアクションを無害なアクションから遠ざける： 削除'、'取り除く' "
+"などのアクションがある場合、有害なアクションと無害なアクションの間に適切なスペースを設け、ユーザーが不用意に有害なアクションをクリックしにくくなるようにします。"
 
 #: ../../docs/developers_guide/hig.rst:32
 msgid ""
@@ -72,6 +114,14 @@ msgid ""
 msgstr ""
 "ウィジェットのスタックは、可能であれば避けるべきです。それらはレイアウトの問題と、見えないウィジェットに対応するための（ユーザーにとって）不可解なダイアログのサイズ変更を引き起こします。"
 " "
+
+#: ../../docs/developers_guide/hig.rst:42
+msgid ""
+"Try to avoid technical terms and rather use a laymans equivalent e.g. use "
+"the word 'Opacity' rather than 'Alpha Channel' (contrived example), 'Text' "
+"instead of 'String' and so on."
+msgstr ""
+"専門用語はなるべく避け、一般的な用語で説明します。例えば、「アルファチャンネル」ではなく「不透明度」（作為的な例）、「文字列」ではなく「テキスト」など。"
 
 #: ../../docs/developers_guide/hig.rst:45
 msgid ""
@@ -103,6 +153,15 @@ msgid ""
 " user interface minimalistic and use sensible defaults."
 msgstr ""
 "多くのオプションを持つの目的でオプションを追加しないでください。ユーザーインターフェイスは最小限にし、適切なデフォルト値を使用するように努めてください。"
+
+#: ../../docs/developers_guide/hig.rst:55
+msgid ""
+"If clicking a button will spawn a new dialog, an ellipsis char (…) should be"
+" suffixed to the button text. Note, make sure to use the U+2026 Horizontal "
+"Ellipsis char instead of three periods."
+msgstr ""
+"ボタンをクリックすると新しいダイアログが表示される場合は、ボタンのテキストにリーダー（...）を付加してください。3つのピリオドの代わりにU+2026 "
+"三点リーダー文字を使ってください。"
 
 #: ../../docs/developers_guide/hig.rst:61
 msgid "Authors"
