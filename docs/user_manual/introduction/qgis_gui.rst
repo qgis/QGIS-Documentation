@@ -1005,16 +1005,16 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Manage Layers`
      - :ref:`db_tools`
-   * - :menuselection:`-->` |addVirtualLayer|
-       :guilabel:`Add/Edit Virtual Layer...`
-     -
-     - :guilabel:`Manage Layers`
-     - :ref:`vector_virtual_layers`
    * - :menuselection:`-->` |addHanaLayer|
        :guilabel:`Add SAP HANA Spatial Layer...`
      -
      - :guilabel:`Manage Layers`
      - :ref:`db_tools`
+   * - :menuselection:`-->` |addVirtualLayer|
+       :guilabel:`Add/Edit Virtual Layer...`
+     -
+     - :guilabel:`Manage Layers`
+     - :ref:`vector_virtual_layers`
    * - :menuselection:`-->` |addWmsLayer|
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
@@ -1025,11 +1025,6 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`xyz_tile`
-   * - :menuselection:`-->` |addAmsLayer|
-       :guilabel:`Add ArcGIS REST Service Layer...`
-     -
-     - :guilabel:`Manage Layers`
-     -
    * - :menuselection:`-->` |addWcsLayer|
        :guilabel:`Add WCS Layer...`
      -
@@ -1040,6 +1035,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Manage Layers`
      - :ref:`ogc-wfs`
+   * - :menuselection:`-->` |addAfsLayer|
+       :guilabel:`Add ArcGIS REST Server Layer...`
+     -
+     - :guilabel:`Manage Layers`
+     - :ref:`arcgis_rest`
    * - :menuselection:`-->` |addVectorTileLayer|
        :guilabel:`Add Vector Tile Layer...`
      -
@@ -2196,9 +2196,9 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |8To24Bits| image:: /static/common/8-to-24-bits.png
    :width: 1.5em
-.. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
+.. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
    :width: 1.5em
-.. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
+.. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em

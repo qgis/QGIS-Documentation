@@ -428,6 +428,10 @@ to the current project only.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |clearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
+.. |clearItem| image:: /static/common/mIconClearItem.png
+   :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
@@ -448,7 +452,3 @@ to the current project only.
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
-.. |clearItem| image:: /static/common/mIconClearItem.png
-   :width: 1.5em
-.. |clearConsole| image:: /static/common/iconClearConsole.png
-   :width: 1.5em
