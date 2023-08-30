@@ -54,7 +54,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output layer containing only the duplicates.
+     - Specify the output vector layer.
        One of:
 
        .. include:: ../algs_include.rst
