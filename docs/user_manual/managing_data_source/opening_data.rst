@@ -43,14 +43,12 @@ More than 80 vector and 140 raster formats are supported by
 
 .. note::
 
-   Not all of the listed formats may work in QGIS for various reasons. For
-   example, some require external proprietary libraries, or the GDAL/OGR
+   Not all of the listed formats may work in QGIS for various reasons.
+   For example, some require external proprietary libraries, or the GDAL/OGR
    installation of your OS may not have been built to support the format you
    want to use. To see the list of available formats, run the command line
    ``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster),
    or check the :menuselection:`Settings --> Options --> GDAL` menu in QGIS.
-
-.. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
 .. _datasourcemanager:
 
@@ -148,18 +146,16 @@ hierarchically, and there are several top level entries:
 
    * |geoPackage| :guilabel:`GeoPackage`
    * |spatialite| :guilabel:`SpatiaLite`
-   * |postgis| :guilabel:`PostGIS`
+   * |postgis| :guilabel:`PostgreSQL`
+   * |hana| :guilabel:`SAP HANA`
    * |mssql| :guilabel:`MS SQL Server`
    * |oracle| :guilabel:`Oracle`
-   * |hana| :guilabel:`SAP HANA`
    * |wms| :guilabel:`WMS/WMTS`
    * |vectorTileLayer| :guilabel:`Vector Tiles`
    * |xyz| :guilabel:`XYZ Tiles`
    * |wcs| :guilabel:`WCS`
    * |wfs| :guilabel:`WFS/OGC API-Features`
-   * |ows| :guilabel:`OWS`
-   * |ams| :guilabel:`ArcGIS Map Service`
-   * |afs| :guilabel:`ArcGIS Feature Service`
+   * |afs| :guilabel:`ArcGIS REST Server`
    * |geonode| :guilabel:`GeoNode`
 
 Interacting with the Browser items
@@ -1530,8 +1526,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |afs| image:: /static/common/mIconAfs.png
    :width: 1.5em
-.. |ams| image:: /static/common/mIconAms.png
-   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
@@ -1560,8 +1554,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
-.. |ows| image:: /static/common/mIconOws.png
-   :width: 1.5em
 .. |postgis| image:: /static/common/mIconPostgis.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png

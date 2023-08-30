@@ -364,7 +364,7 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer
     Area (m2): 389267821381.6008
     Area (km2): 389267.8213816008
 
-Alternatively, you may want to know the distance and bearing between two points.
+Alternatively, you may want to know the distance between two points.
 
 .. testcode:: geometry
 
