@@ -174,12 +174,14 @@ Select a result and:
   associated access links.
   Clicking a link opens the link in the user's web browser.
 * If the record is a supported web service (WMS/WMTS, WFS, WCS,
-  ArcGIS REST Service, etc.), the
+  ArcGIS REST Service, etc.) or a GIS File, the
   :guilabel:`Add Data` button will be enabled.
   When clicking this button, MetaSearch will verify if this is a
   valid OWS.
   The service will then be added to the appropriate QGIS connection
-  list, and the appropriate connection dialog will appear.
+  list, and the appropriate connection dialog will appear. If you 
+  choose :guilabel:`Add GIS File` the linked GIS file will be 
+  added to the current project.
 
 .. _figure_metasearch_metadata:
 
