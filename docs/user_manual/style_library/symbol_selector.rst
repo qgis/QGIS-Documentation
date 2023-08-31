@@ -704,30 +704,94 @@ more control over the generated output.
 
 Some examples:
 
-::
 
-  -- render the centroid of a feature
-  centroid( $geometry ) 
+* Render symbol as the centroid of a feature
 
-  -- visually overlap features within a 100 map units distance from a point
-  -- feature, i.e generate a 100m buffer around the point
-  buffer( $geometry, 100 )
+  ::
 
-  -- Given polygon layer1( id1, layer2_id, ...) and layer2( id2, fieldn...)
-  -- render layer1 with a line joining centroids of both where layer2_id = id2
-  make_line( centroid( $geometry ),
-             centroid( geometry( get_feature( 'layer2', 'id2', attribute(
-                 $currentfeature, 'layer2_id') ) )
-           ) 
+   centroid( $geometry ) 
 
-  -- Create a nice radial effect of points surrounding the central feature
-  -- point when used as a MultiPoint geometry generator
-  collect_geometries(
-    array_foreach(
-      generate_series( 0, 330, 30 ),
-        project( $geometry, .2, radians( @element ) )
-    )
-  )
+* Visually overlap features within a 100 map units distance from a point feature,
+  i.e generate a 100m buffer around the point
+
+  ::
+
+    buffer( $geometry, 100 )
+
+* Create a radial effect of points surrounding the central feature point
+  when used as a MultiPoint geometry generator
+
+  .. list-table::
+     :widths: 15 85
+
+     * - ::
+
+          collect_geometries(
+           array_foreach(
+            generate_series( 0, 330, 30 ),
+            project( $geometry, 3, radians( @element ) )
+           )
+          )
+       - .. figure:: img/radial_symbols.png
+            :align: center
+            :width: 100%
+
+* Create a radial effect of points surrounding the central feature point.
+  The number of points varies based on a field.
+
+  .. list-table::
+     :widths: 15 85
+
+     * - ::
+
+          with_variable(
+           'symbol_numbers',
+           ceil(fid/10),
+           collect_geometries(
+            array_foreach(
+             generate_series( 0, 360, 360/@symbol_numbers ),
+             project( $geometry, 2, radians( @element ) )
+            )
+           )
+          )
+       - .. figure:: img/radial_symbols_datadefined.png
+            :align: center
+            :width: 100%
+
+* Create a curved arrow line connecting features of two layers based on their :ref:`relation <project_relations>`
+
+  .. list-table::
+     :widths: 15 85
+
+     * - ::
+
+          collect_geometries(
+           with_variable(
+            'destination_points',
+            relation_aggregate(
+             'the_relation_id',
+             'array_agg',
+             centroid( $geometry )
+            ),
+            array_foreach(
+             @destination_points,
+             make_line(
+              centroid( @geometry ),
+              project(
+               centroid(
+                make_line( centroid( @geometry ), @element )
+               ),
+               10, 50
+              ),
+              @element
+             )
+            )
+           )
+          )
+       - .. figure:: img/arrow_relations.png
+            :align: center
+            :width: 100%
+
 
 .. _vector_field_marker:
 
