@@ -250,6 +250,7 @@ Now that we have the data, let's use them to render the ``landuse`` layer.
    :guilabel:`Save`.
    You will now be able to select the same colour ramp easily under
    :guilabel:`All Color Ramps`.
+#. Under :guilabel:`Mode` choose |equalCount| :sup:`Equal Count (Quantile)` .
 #. Click :guilabel:`Classify`
 
    Now you will have something like this:
@@ -419,4 +420,6 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |equalCount| image:: /static/common/mClassificationEqualCount.png
    :width: 1.5em
