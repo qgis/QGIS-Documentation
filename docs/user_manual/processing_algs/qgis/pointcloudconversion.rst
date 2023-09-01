@@ -203,7 +203,7 @@ Export raster (using triangulation)
 Exports point cloud data to a 2D raster grid using a triangulation of points
 and then interpolating cell values from triangles.
 
-.. note:: Note that this can be slower if you are dealing with a large dataset.
+.. note:: Using this algorithm can be slower if you are dealing with a large dataset.
    If your point cloud is dense, you can export your ground points as a raster using the :ref:`pdalexportraster` algorithm.
 
 .. figure:: img/point_cloud_exportrastertin.png

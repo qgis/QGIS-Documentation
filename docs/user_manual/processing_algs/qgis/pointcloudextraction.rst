@@ -40,7 +40,7 @@ Basic parameters
    * - **Input layer**
      - ``INPUT``
      - [point cloud]
-     - Input point cloud layer to calculte boundary for
+     - Input point cloud layer to calculate boundary for
    * - **Resolution of cells used to calculate boundary**
 
        Optional
