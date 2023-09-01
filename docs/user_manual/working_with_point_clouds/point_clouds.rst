@@ -694,10 +694,7 @@ and additional metadata extracted from the files.
 Even though it is possible to write VPC files by hand,
 it is strongly recommended to create them using an automated tool, such as:
 
-* The Processing **Build virtual point cloud** algorithm
-
-.. todo: Replace the above with URL to the alg when available
-
+* The Processing :ref:`pdalvirtualpointcloud` algorithm
 * The ``build_vpc`` command of `PDAL wrench <https://github.com/PDAL/wrench>`_ tool
 
 For more details, please refer to the `VPC specification <https://github.com/PDAL/wrench/blob/main/vpc-spec.md>`_
