@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-23 10:17+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -82,18 +83,34 @@ msgstr ""
 msgid "|setToCanvasExtent| :sup:`Set map canvas to match main canvas extent`"
 msgstr "|setToCanvasExtent| :sup:`キャンバスの範囲に地図の範囲を合わせる`"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:481
+msgid "setToCanvasExtent"
+msgstr "setToCanvasExtent"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:41
 msgid "|viewExtentInCanvas| :sup:`View current map extent in main canvas`"
 msgstr "|viewExtentInCanvas| :sup:`キャンバスの地図の範囲を表示`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:495
+msgid "viewExtentInCanvas"
+msgstr "viewExtentInCanvas"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:42
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:210
 msgid "|setToCanvasScale| :sup:`Set map scale to match main canvas scale`"
 msgstr "|setToCanvasScale| :sup:`地図の倍率をキャンバスの倍率に合わせる`"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:483
+msgid "setToCanvasScale"
+msgstr "setToCanvasScale"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:43
 msgid "|viewScaleInCanvas| :sup:`Set main canvas to match current map scale`"
 msgstr "|viewScaleInCanvas| :sup:`キャンバスを地図の倍率に合わせる`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:497
+msgid "viewScaleInCanvas"
+msgstr "viewScaleInCanvas"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:44
 msgid ""
@@ -185,13 +202,17 @@ msgid ""
 "feature and to shape and polygon items:"
 msgstr "|clip| :sup:`クリッピング設定` ：地図アイテムを地図帳地物やシェープアイテム、ポリゴンアイテムで切り取ることができます。"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:467
+msgid "clip"
+msgstr "clip"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:74
 msgid ""
 "|checkbox| :guilabel:`Clip to atlas feature`: you can determine that the "
 "layout map item will be clipped automatically to the current :ref:`atlas "
 "feature <atlas_generation>`."
 msgstr ""
-"|checkbox| :guilabel:`地物 地図帳 に切り抜く` ：レイアウト地図アイテムを現在の :ref:`地図帳地物 "
+"|checkbox| :guilabel:`地物 atlas に切り抜く` ：レイアウト地図アイテムを現在の :ref:`地図帳地物 "
 "<atlas_generation>` で自動的に切り抜くかどうかを決定できます。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:465
@@ -228,6 +249,17 @@ msgid ""
 msgstr ""
 ":guilabel:`交差地物をそのまま出力` ：現在の地図帳地物と交差する全ての地物を、そのジオメトリをクリッピングせずにレンダリングします。"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:90
+msgid ""
+"You can |checkbox| :guilabel:`Force labels inside atlas feature`. If you "
+"don't want to |radioButtonOff| :guilabel:`Clip all layers` to the atlas "
+"feature you can use the |radioButtonOn| :guilabel:`Clip selected layers` "
+"option."
+msgstr ""
+"|checkbox| :guilabel:`地物atlasの中にラベルを強制移動する` ことができます。atlas地物で "
+"|radioButtonOff| :guilabel:`すべてのレイヤを切り抜く` ことがしたくないなら、|checkButtonOn| "
+":guilabel:`選択レイヤを切り抜く` オプションを使うことができます。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:475
 msgid "radioButtonOff"
 msgstr ""
@@ -249,6 +281,10 @@ msgstr ""
 "|checkbox| :guilabel:`切り抜くアイテム` ：印刷レイアウトの :ref:`shape "
 "<layout_basic_shape_item>` アイテムや :ref:`ポリゴン <layout_node_based_shape_item>` "
 "アイテムを使用して、地図アイテムの形状を変更することができます。このオプションを有効にすると、地図はコンボボックス内で選択された形状で自動的に切り抜かれます。ここでも上記のクリッピングモードが利用でき、ラベルはクリッピング形状の内側にのみ表示するよう強制させることができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:106
+msgid "Clipping a layout map item to shapes"
+msgstr "レイアウトの地図アイテムをシェイプで切り抜く"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:111
 msgid "Main properties"
@@ -412,12 +448,22 @@ msgid ""
 "The :guilabel:`Extents` group of the map item properties panel provides the "
 "following functionalities (see :numref:`figure_layout_map_extents`):"
 msgstr ""
-"地図アイテムプロパティパネルの :guilabel:`範囲` グループには、下記の機能があります（ "
+"地図アイテムプロパティパネルの :guilabel:`領域` グループには、下記の機能があります（ "
 ":numref:`figure_layout_map_extents` 参照）："
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:201
 msgid "Map Extents group"
 msgstr "地図領域グループ"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:203
+msgid ""
+"The **Extents** area displays ``X`` and ``Y`` coordinates of the area shown "
+"in the map item. Each of these values can be manually replaced, modifying "
+"the map canvas area displayed and/or map item size. The extent can also be "
+"modified using tools at the top of the map item panel such as:"
+msgstr ""
+"**領域** エリアは地図アイテムに表示されているエリアの ``X`` と ``Y`` "
+"座標を表示します。これらの値はそれぞれ手動で置き換えることができ、マップキャンバスの表示範囲や地図アイテムのサイズを変更することができます。領域は地図アイテムパネルの上部にある以下のようなツールを使って変更することもできます："
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:212
 msgid ""
@@ -431,6 +477,35 @@ msgstr ""
 "ツールを使用しても変更することができます。地図アイテム内をクリックしてドラッグすれば、縮尺はそのままで現在のビューを修正できます。この "
 "|moveItemContent| ツールが有効なときにマウスホイールを使用して拡大・縮小を行うと、表示された地図の縮尺を変更します。 "
 ":kbd:`Ctrl` キーを押しながら操作を行うと、小刻みな拡大・縮小ができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:222
+msgid "Temporal range"
+msgstr "時系列範囲"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:224
+msgid ""
+"The :guilabel:`Temporal range` group of the map item properties panel "
+"provides the options to control layers rendering in the map item based on a "
+"temporal range. Only layers whose temporal properties overlap with the time "
+"range set by the :guilabel:`Start` and :guilabel:`End` dates are displayed "
+"in the map item."
+msgstr ""
+"地図アイテムのプロパティパネルの :guilabel:`時系列範囲` "
+"グループは、時間的な範囲に基づいて地図アイテム内のレイヤのレンダリングを制御するオプションを提供します。時系列プロパティが :guilabel:`開始`"
+" と :guilabel:`終了` の日付で設定された時間範囲と重なるレイヤのみが地図アイテムに表示されます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:229
+msgid ""
+"The associated data-defined widgets help make the time range dynamic, and "
+"allow outputting temporal :ref:`atlases <atlas_generation>`, i.e. automated "
+"maps with fixed spatial extent and whose contents vary based on time. For "
+"example, using as coverage layer a csv file with a start and end pair of "
+"fields and a number of rows representing date ranges, enable both the "
+"temporal range and control by atlas in the map item properties and hit atlas"
+" export."
+msgstr ""
+"関連するデータ定義ウィジェットは、時間範囲を動的にするのに役立ち、時間的な :ref:`atlases "
+"<atlas_generation>`、すなわち、固定された空間範囲を持ち、その内容が時間に基づいて変化する自動化されたマップを出力することを可能にします。例えば、カバレッジレイヤとして、ひとつの開始と終了のフィールドペアと、たくさんの日付範囲を表す行を持つcsvファイルを使用し、地図アイテムプロパティで時系列範囲と地図帳による制御の両方を有効にし、地図帳のエクスポートを実行します。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:240
 msgid "Controlled by atlas"
