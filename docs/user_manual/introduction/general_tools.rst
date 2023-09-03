@@ -1044,6 +1044,66 @@ on features in a pop-up window. To identify features, use:
 * :kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),
 * |identify| :sup:`Identify Features` icon on the Attributes toolbar
 
+The Identify Results dialog
+...........................
+
+.. _figure_identify:
+
+.. figure:: img/identify_features.png
+   :align: center
+
+   Identify Results dialog
+
+At the top of the window, you have a handful of tools:
+
+* |formView| :sup:`Open Form` of the current feature
+* |expandTree| :sup:`Expand tree`
+* |collapseTree| :sup:`Collapse tree`
+* |expandNewTree| :sup:`Expand New Results by Default` to define whether the next
+  identified feature's information should be collapsed or expanded
+* |deselectAll| :sup:`Clear Results`
+* |editCopy| :sup:`Copy selected feature to clipboard`
+* |filePrint| :sup:`Print selected HTML response`
+
+.. _identify_selection:
+
+* selection tools to use to fetch features to identify:
+
+  * |identifyByRectangle| :sup:`Identify Features by area or single click`
+  * |identifyByMouseOver| :sup:`Identify Features on Mouse Over`
+  * |identifyByPolygon| :sup:`Identify Features by Polygon`
+  * |identifyByFreehand| :sup:`Identify Features by Freehand`
+  * |identifyByRadius| :sup:`Identify Features by Radius`
+
+  .. note::
+     When using |identifyByPolygon| :sup:`Identify Features by Polygon`, you can
+     right-click any existing polygon and use it to identify overlapping
+     features in another layer.
+
+.. _identify_mode:
+
+At the bottom of the window are the :guilabel:`Mode` and :guilabel:`View` combo boxes.
+:guilabel:`Mode` defines from which layers features should be identified:
+
+* **Current layer**: only features from the selected layers are identified.
+  If a group is selected, features from its visible layers are identified. If there is no
+  selection then only the current layer is identified.
+* **Top down, stop at first**: only features from the upper visible layer.
+* **Top down**: all features from the visible layers. The results are shown in
+  the panel.
+* **Layer selection**: opens a context menu where the user selects the layer to
+  identify features from, similar to a right-click. Only the chosen features
+  will be shown in the result panel.
+
+The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
+'Table' and 'Graph' views can only be set for raster layers.
+
+The identify tool allows you to |checkbox|
+:guilabel:`Auto open form for single feature results`, found under |options|
+:sup:`Identify Settings`.
+If checked, each time a single feature is identified, a form opens
+showing its attributes. This is a handy way to quickly edit a feature's attributes.
+
 Using the Identify Features tool
 ................................
 
@@ -1052,7 +1112,7 @@ QGIS offers several ways to identify features with the |identify|
 
 * **left click** identifies features according to the
   :ref:`selection mode <identify_mode>` and the
-  :ref:`selection mask <identify_selection>` set in the
+  :ref:`selection tool <identify_selection>` active in the
   :guilabel:`Identify Results` panel
 * **right click** with :guilabel:`Identify Feature(s)` as
   :ref:`selection mode <identify_mode>` set in the :guilabel:`Identify Results`
@@ -1060,10 +1120,10 @@ QGIS offers several ways to identify features with the |identify|
   This opens a context menu, allowing the user to choose more precisely the
   features to identify or the action to execute on them.
 * **right click** with :guilabel:`Identify Features by Polygon` as
-  :ref:`selection mode <identify_mode>` in the :guilabel:`Identify Results`
-  panel identifies the features that overlap with the chosen existing
-  polygon, according to the :ref:`selection mask <identify_selection>` set in
-  the :guilabel:`Identify Results` panel
+  :ref:`selection mode <identify_mode>` in the :guilabel:`Identify Results` panel
+  identifies the features that overlap with the chosen existing polygon,
+  according to the :ref:`selection tool <identify_selection>`
+  set in the :guilabel:`Identify Results` panel
 
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
@@ -1136,66 +1196,9 @@ default it will display the following information:
 .. note:: Links in the feature's attributes are clickable from the :guilabel:`Identify
    Results` panel and will open in your default web browser.
 
-.. _figure_identify:
 
-.. figure:: img/identify_features.png
-   :align: center
-
-   Identify Results dialog
-
-The Identify Results dialog
-...........................
-
-At the top of the window, you have a handful of tools:
-
-* |formView| :sup:`Open Form` of the current feature
-* |expandTree| :sup:`Expand tree`
-* |collapseTree| :sup:`Collapse tree`
-* |expandNewTree| :sup:`Expand New Results by Default` to define whether the next
-  identified feature's information should be collapsed or expanded
-* |deselectAll| :sup:`Clear Results`
-* |editCopy| :sup:`Copy selected feature to clipboard`
-* |filePrint| :sup:`Print selected HTML response`
-
-.. _identify_selection:
-
-* selection mode to use to fetch features to identify:
-
-  * |identifyByRectangle| :sup:`Identify Features by area or single click`
-  * |identifyByMouseOver| :sup:`Identify Features on Mouse Over`
-  * |identifyByPolygon| :sup:`Identify Features by Polygon`
-  * |identifyByFreehand| :sup:`Identify Features by Freehand`
-  * |identifyByRadius| :sup:`Identify Features by Radius`
-
-  .. note::
-     When using |identifyByPolygon| :sup:`Identify Features by Polygon`, you can
-     right-click any existing polygon and use it to identify overlapping
-     features in another layer.
-
-.. _identify_mode:
-
-At the bottom of the window are the :guilabel:`Mode` and :guilabel:`View`
-combo boxes.
-:guilabel:`Mode` defines from which layers features should be identified:
-
-* **Current layer**: only features from the selected layers are identified.
-  If a group is selected, features from its visible layers are identified. If there is no
-  selection then only the current layer is identified.
-* **Top down, stop at first**: only features from the upper visible layer.
-* **Top down**: all features from the visible layers. The results are shown in
-  the panel.
-* **Layer selection**: opens a context menu where the user selects the layer to
-  identify features from, similar to a right-click. Only the chosen features
-  will be shown in the result panel.
-
-The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
-'Table' and 'Graph' views can only be set for raster layers.
-
-The identify tool allows you to |checkbox|
-:guilabel:`Auto open form for single feature results`, found under |options|
-:sup:`Identify Settings`.
-If checked, each time a single feature is identified, a form opens
-showing its attributes. This is a handy way to quickly edit a feature's attributes.
+Results contextual menu
+.......................
 
 Other functions can be found in the context menu of the identified item. For
 example, from the context menu you can:
