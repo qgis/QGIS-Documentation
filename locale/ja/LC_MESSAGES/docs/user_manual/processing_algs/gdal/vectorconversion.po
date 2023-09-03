@@ -29,12 +29,29 @@ msgstr ""
 msgid "Vector conversion"
 msgstr "ベクタ変換"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:14
+msgid "Convert format"
+msgstr "フォーマット変換"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:15
+msgid ""
+"Converts any OGR-supported vector layer into another OGR-supported format."
+msgstr "OGRでサポートされているベクタレイヤをOGRでサポートされている別の形式に変換します。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:18
+msgid ""
+"This algorithm is derived from the `ogr2ogr utility "
+"<https://gdal.org/programs/ogr2ogr.html>`_."
+msgstr ""
+"このアルゴリズムは `ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_ "
+"から派生したものです。"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:22
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:121
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:216
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:312
 msgid "Parameters"
-msgstr "パラメーター"
+msgstr "パラメータ"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:25
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:124
@@ -131,6 +148,10 @@ msgstr "[ベクタ：任意]"
 msgid "Input vector layer"
 msgstr "入力ベクタレイヤ"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:39
+msgid "**Convert all layers from dataset**"
+msgstr "**データセットの全レイヤを変換**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:41
 msgid "|324|"
 msgstr "|324|"
@@ -154,6 +175,12 @@ msgstr "[ブール値]"
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:471
 msgid "Default: False"
 msgstr "デフォルト： False"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:46
+msgid ""
+"Converts the whole dataset. Supported output formats for this option are "
+":file:`GPKG` and :file:`GML`."
+msgstr "データセット全体を変換します。このオプションでサポートされている出力形式は :file:`GPKG` と :file:`GML` です。"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:48
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:94
@@ -185,6 +212,15 @@ msgstr "一時ファイルに保存"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to File…"
 msgstr "ファイルに保存..."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:58
+msgid ""
+"For ``Save to File``, the output format has to be specified. All GDAL vector"
+" formats are supported. For ``Save to a Temporary File`` the QGIS default "
+"vector format will be used."
+msgstr ""
+"``ファイルに保存`` では、出力形式を指定する必要があります。すべてのGDALベクタ形式に対応しています。``一時ファイルに保存`` "
+"では、QGISのデフォルトベクタ形式が使われます。"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:64
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:151
@@ -252,6 +288,10 @@ msgstr "出力ベクタレイヤ"
 msgid "Python code"
 msgstr "Python コード"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:102
+msgid "**Algorithm ID**: ``gdal:convertformat``"
+msgstr "**Algorithm ID**: ``gdal:convertformat``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -262,6 +302,31 @@ msgstr ""
 "*algorithm id* は、プロセシングツールボックス内でアルゴリズムにマウスカーソルを乗せた際に表示されるIDです。 *parameter "
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:112
+msgid "Rasterize (overwrite with attribute)"
+msgstr "ラスタ化（属性で上書き）"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:113
+msgid ""
+"Overwrites a raster layer with values from a vector layer. New values are "
+"assigned based on the attribute value of the overlapping vector feature."
+msgstr "ラスタレイヤをベクタレイヤの値で上書きします。新しい値は、重なるベクトル地物の属性値に基づいて割り当てられます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:117
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:212
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:306
+msgid ""
+"This algorithm is derived from the `GDAL rasterize utility "
+"<https://gdal.org/programs/gdal_rasterize.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL rasterize utility "
+"<https://gdal.org/programs/gdal_rasterize.html>`_ から派生したものです。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:139
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:234
+msgid "**Input raster layer**"
+msgstr "**入力ラスタレイヤ**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:140
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:235
@@ -282,6 +347,11 @@ msgstr "[ラスタ]"
 msgid "Input raster layer"
 msgstr "入力ラスタレイヤ"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:143
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:330
+msgid "**Field to use for a burn-in value**"
+msgstr "**焼き込む値の属性**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:146
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:333
 msgid "``FIELD``"
@@ -292,10 +362,26 @@ msgstr ""
 msgid "[tablefield: numeric]"
 msgstr "[テーブルのフィールド：数値]"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:148
+msgid "Defines the attribute field to use to set the pixels values"
+msgstr "ピクセル値の設定に使用する属性フィールドを定義します"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:161
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:256
+msgid "**Add burn in values to existing raster values**"
+msgstr "**ラスタの既存値に焼き込み値を加算**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:162
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:257
 msgid "``ADD``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:166
+msgid ""
+"If False, pixels are assigned the selected field's value. If True, the "
+"selected field's value is added to the value of the input raster layer."
+msgstr ""
+"False の場合、ピクセルは選択されたフィールドの値が割り当てられます。Trueの場合、選択されたフィールドの値が入力ラスタレイヤの値に追加されます。"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:169
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:264
@@ -322,6 +408,37 @@ msgstr "デフォルト： ''"
 msgid "Add extra GDAL command line options"
 msgstr "GDALコマンドラインオプションを追加します"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:189
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:284
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:403
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:495
+msgid "**Rasterized**"
+msgstr "**Rasterized**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:192
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:287
+msgid "The overwritten input raster layer"
+msgstr "上書きされる入力ラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:197
+msgid "**Algorithm ID**: ``gdal:rasterize_over``"
+msgstr "**Algorithm ID**: ``gdal:rasterize_over``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:207
+msgid "Rasterize (overwrite with fixed value)"
+msgstr "ラスタ化（固定値で上書き）"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:208
+msgid ""
+"Overwrites parts of a raster layer with a fixed value. The pixels to "
+"overwrite are chosen based on the supplied (overlapping) vector layer."
+msgstr "ラスタレイヤの一部を固定値で上書きします。上書きするピクセルは、提供された（重なる）ベクタレイヤを基に選択されます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:238
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:337
+msgid "**A fixed value to burn**"
+msgstr "**固定焼き込み値**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:239
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:340
 msgid "``BURN``"
@@ -344,13 +461,64 @@ msgstr "[数値]"
 msgid "Default: 0.0"
 msgstr "デフォルト： 0.0"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:243
+msgid "The value to burn"
+msgstr "焼き込み値"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:261
+msgid ""
+"If False, pixels are assigned the fixed value. If True, the fixed value is "
+"added to the value of the input raster layer."
+msgstr "False の場合、ピクセルには固定値が割り当てられます。Trueの場合、固定値は入力ラスタレイヤの値に追加されます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:292
+msgid "**Algorithm ID**: ``gdal:rasterize_over_fixed_value``"
+msgstr "**Algorithm ID**: ``gdal:rasterize_over_fixed_value``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:302
+msgid "Rasterize (vector to raster)"
+msgstr "ベクタをラスタ化"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:303
+msgid ""
+"Converts vector geometries (points, lines and polygons) into a raster image."
+msgstr "ベクトルジオメトリ（点、ライン、ポリゴン）をラスタ画像に変換します。"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:309
 msgid "**Default menu**: :menuselection:`Raster --> Conversion`"
 msgstr "**デフォルトメニュー**: :menuselection:`ラスタ --> 変換`"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:335
+msgid ""
+"Defines the attribute field from which the attributes for the pixels should "
+"be chosen"
+msgstr "ピクセルの属性を選択する属性フィールドを定義します"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:344
+msgid "A fixed value to burn into a band for all features."
+msgstr "すべての地物について、バンドに書き込む固定値。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:345
+msgid "**Burn value extracted from the \"Z\" values of the feature**"
+msgstr "**地物のZ値をラスタ値に焼き込む**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:348
 msgid "``USE_Z``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:352
+msgid ""
+"Indicates that a burn value should be extracted from the \"Z\" values of the"
+" feature. Works with points and lines (linear interpolation along each "
+"segment). For polygons, works properly only if they are flat (same Z value "
+"for all vertices)"
+msgstr ""
+"地物の\"Z\"値から焼き込み値を抽出することを示します。点とライン（各セグメントに沿った線形補間）で機能します。ポリゴンの場合は、平らな場合（すべての頂点で同じ"
+" Z 値）にのみ正しく機能します。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:355
+msgid "**Output raster size units**"
+msgstr "**出力ラスタサイズの単位**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:356
 msgid "``UNITS``"
@@ -365,13 +533,46 @@ msgstr "[列挙型]"
 msgid "Default: 0"
 msgstr "デフォルト： 0"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:360
+msgid "Units to use when defining the output raster size/resolution. One of:"
+msgstr "出力ラスタのサイズ／解像度を定義するときに使用する単位。次のいずれかです:"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:363
+msgid "0 --- Pixels"
+msgstr "0 -- ピクセル"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:364
+msgid "1 --- Georeferenced units"
+msgstr "1 -- 地理単位"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:366
+msgid "**Width/Horizontal resolution**"
+msgstr "**水平方向の解像度**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:367
 msgid "``WIDTH``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:371
+msgid ""
+"Sets the width (if size units is \"Pixels\") or horizontal resolution (if "
+"size units is \"Georeferenced units\") of the output raster. Minimum value: "
+"0.0."
+msgstr "出力ラスタの幅（サイズの単位が「ピクセル」の場合）または水平解像度（サイズの単位が「地理単位」の場合）を設定します。最小値：0.0。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:374
+msgid "**Height/Vertical resolution**"
+msgstr "**鉛直方向の解像度**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:375
 msgid "``HEIGHT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:379
+msgid ""
+"Sets the height (if size units is \"Pixels\") or vertical resolution (if "
+"size units is \"Georeferenced units\") of the output raster."
+msgstr "出力ラスタの高さ（サイズの単位が「ピクセル」の場合）または垂直解像度（サイズの単位が「地理単位」の場合）を設定します。"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:382
 msgid "**Output extent**"
@@ -384,6 +585,12 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:386
 msgid "[extent]"
 msgstr "[範囲]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:387
+msgid ""
+"Extent of the output raster layer. If the extent is not specified, the "
+"minimum extent that covers the selected reference layer(s) will be used."
+msgstr "出力ラスタ レイヤの範囲。範囲が指定されていない場合は、選択された参照レイヤをカバーする最小範囲が使用されます。"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -430,6 +637,10 @@ msgstr "**指定したnodata値を出力バンドに割り当てる**"
 msgid "``NODATA``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:402
+msgid "Assigns a specified nodata value to output bands"
+msgstr "指定したnodata値を出力バンドに割り当てます"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:407
 msgid "Default: ``[Save to temporary file]``"
 msgstr "デフォルト： ``[一時ファイルに保存]``"
@@ -437,6 +648,15 @@ msgstr "デフォルト： ``[一時ファイルに保存]``"
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:408
 msgid "Specification of the output raster layer. One of:"
 msgstr "出力ラスタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:415
+msgid ""
+"For ``Save to File``, the output format has to be specified. All GDAL raster"
+" formats are supported. For ``Save to a Temporary File`` the QGIS default "
+"raster format will be used."
+msgstr ""
+"``ファイルに保存`` では、出力形式を指定する必要があります。すべてのGDALラスタ形式に対応しています。``一時ファイルに保存`` "
+"では、QGISのデフォルトラスタ形式が使われます。"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:438
 msgid ""
@@ -526,14 +746,38 @@ msgstr ""
 "利用可能なオプションは、QGISと一緒にビルドされたGDALのバージョンによって異なります（ :menuselection:`ヘルプ --> "
 "QGISについて` メニューを参照）"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:459
+msgid "**Pre-initialize the output image with value**"
+msgstr "**指定値で事前に初期化する**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:462
 msgid "``INIT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:464
+msgid ""
+"Pre-initializes the output image bands with this value. Not marked as the "
+"nodata value in the output file. The same value is used in all the bands."
+msgstr "この値で出力画像バンドを事前に初期化します。出力ファイルのnodata値としてマークされません。すべてのバンドで同じ値が使用されます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:467
+msgid "**Invert rasterization**"
+msgstr "**逆ラスタ化**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:468
 msgid "``INVERT``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:472
+msgid ""
+"Burns the fixed burn value, or the burn value associated with the first "
+"feature into all parts of the image not inside the provided polygon."
+msgstr "固定焼き込み値、または最初の地物に関連付けられた焼き込み値を、指定されたポリゴンの内側でない画像のすべての部分に焼き付けます。"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:498
 msgid "Output raster layer"
 msgstr "出力ラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:503
+msgid "**Algorithm ID**: ``gdal:rasterize``"
+msgstr "**Algorithm ID**: ``gdal:rasterize``"
