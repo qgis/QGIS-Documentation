@@ -1728,61 +1728,794 @@ msgstr ""
 " ar **Taškais (pikseliais)**, arba galite nurodyti žemėlapio drobės pločio "
 "ar aukščio **Procentus**."
 
+#: ../../docs/user_manual/map_views/map_view.rst:665
+msgid "Layout Extents"
+msgstr "Išdėstymų apimtys"
+
+#: ../../docs/user_manual/map_views/map_view.rst:667
+msgid ""
+"|addMap| :guilabel:`Layout Extents` adds the extents of :ref:`map item(s) "
+"<layout_map_item>` in print layout(s) to the canvas. When enabled, the "
+"extents of all map items within all print layouts are shown using a lightly "
+"dotted border labeled with the name of the print layout and map item. You "
+"can control the style and labeling of the displayed layout extents. This "
+"decoration is useful when you are tweaking the positioning of map elements "
+"such as labels, and need to know the actual visible region of print layouts."
+msgstr ""
+"|addMap| :guilabel:`Išdėstymo apimtys` prideda į drobę spausdinimo maketo "
+":ref:`žemėlapio elementų <layout_map_item>` apimtis. Įjungus šią parinktį, "
+"visų spausdinimo maketų, visų išdėstymų žemėlapių elementų apimtys bus "
+"rodomi lengvai taškuotu kontūru su spausdinimo maketo žemėlapio elemento "
+"pavadinimu. Galite valdyti rodomų išdėstymo elementų užrašų stilių. Ši "
+"dekoracija naudinga, kai tvarkote pozicijas žemėlapio elementų, tokių kaip "
+"užrašai, kai jums reikia suprasti realias spausdinimo išdėstymuose matomų "
+"elementų apimtis."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1277
 msgid "addMap"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:679
+msgid ""
+"Example of layout extents displayed in a QGIS project with two print "
+"layouts. The print layout named 'Sights' contains two map items, while the "
+"other print layout contains one map item."
+msgstr ""
+"Išdėstymo apimčių, rodomų QGIS projekte su dviem spausdinimo išdėstymais, "
+"pavyzdys. Spausdinimo išdėstymas vardu „Vaizdai“ turi du žemėlapio "
+"elementus, o kitame spausdinimo išdėstyme yra tik vienas žemėlapio "
+"elementas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:683
+msgid "To add layout extent(s):"
+msgstr "Norėdami pridėti išdėstymo apimtį(is):"
+
+#: ../../docs/user_manual/map_views/map_view.rst:685
+msgid ""
+"Select :menuselection:`View --> Decorations --> Layout Extents` to open the "
+"dialog"
+msgstr ""
+"Parinkite :menuselection:`Rodymas --> Dekoracijos --> Išdėstymų apimtys`, "
+"kad atvertumėte dialogą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:693
+msgid "The Layout Extents Dialog"
+msgstr "Išdėstymo apimčių dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:695
+msgid "Make sure |checkbox| :guilabel:`Show layout extents` is checked."
+msgstr ""
+"Įsitikinkite, kad įjungta varnelė |checkbox| :guilabel:`Rodyti išdėstymo "
+"apimtis`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:696
+msgid "Optionally change the symbol and labeling of the extents."
+msgstr "Pasirinktinai galite keisti apimčių simbolį ir užrašus."
+
+#: ../../docs/user_manual/map_views/map_view.rst:703
+msgid "**Decorations Settings**"
+msgstr "**Dekoracijų nustatymai**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:705
+msgid ""
+"When you save a QGIS project file, any changes you have made to Grid, North "
+"Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project "
+"and restored the next time you load the project."
+msgstr ""
+"Kai įrašote QGIS projekto failą, bet kokie jūsų padaryti Tinklelio, Šiaurės "
+"rodyklės, Mastelio juostos, Autorių teisių ar Išdėstymų apimčių pakeitimai "
+"bus įrašyti į projektą ir atstatyti kitą kartą įkėlus projektą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:716
+msgid "Annotation Tools"
+msgstr "Anotacijų įrankiai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:718
+msgid ""
+"Annotations are another type of elements added onto the map canvas to "
+"provide additional information that can not be depicted by the rendered "
+"layers. Unlike :ref:`labels <vector_labels_tab>` that rely on attribute "
+"values stored in vector layers, annotations are independent details, stored "
+"within the project file itself."
+msgstr ""
+"Anotacijos - tai dar vienas tipas elementų, kuriuos galima pridėti į "
+"žemėlapio drobę norint suteikti papildomą informaciją, kurios negali "
+"atvaizduoti braižomi sluoksniai. Priešingai nei :ref:`užrašai "
+"<vector_labels_tab>`, kuriems reikia vektoriniuose sluoksniuose esančių "
+"atributų reikšmių, anotacijos yra nepriklausomos detalės, saugomos pačiame "
+"projekto faile."
+
+#: ../../docs/user_manual/map_views/map_view.rst:724
+msgid "Two families of annotations are available in QGIS:"
+msgstr "QGIS turi dvi anotacijų šeimas:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:726
+msgid ""
+"**Feature annotations**: they are actual georeferenced features of text, "
+"marker, line or polygon type stored within a special layer type called "
+"\"annotation layer\". They are tied to a particular geographic location, "
+"meaning that moving your map, changing the scale or changing projection "
+"won’t cause your annotations to jump around the map. Rather, they’ll be "
+"locked in place to the location you’ve drawn them."
+msgstr ""
+"**Geoobjektų anotacijos**: tai tikri teksto, žymeklių, linijų ar poligonų "
+"geoobjektai su geografinėmis pozicijomis, saugomi specialiame sluoksnyje, "
+"pavadintame „anotacijų sluoksnis“. Jie pririšti prie konkrečios geografinės "
+"vietos, tai reiškia, kad paslinkus jūsų žemėlapį, pakeitus mastelį ar "
+"projekciją, anotacijos nešokinės po jūsų žemėlapį. Jos visada bus fiksuotos "
+"konkrečioje vietoje, kurioje jas nubraižėte."
+
+#: ../../docs/user_manual/map_views/map_view.rst:731
+msgid ""
+"**Balloon annotations**: these are individuals annotations of text, form or "
+"image type placed inside a bubble. They can be associated to any layer for "
+"their visibility, are drawn on top of the map canvas. The size is dependent "
+"from the map canvas scale, and its position can be anchored."
+msgstr ""
+"**Balionų anotacijos**: tai individualios teksto, formos ar piešinių "
+"anotacijos, kurias padedate burbulo viduje. Jas galima susieti su bet kuriuo"
+" sluoksniu matomumui. Jos braižomos virš žemėlapio drobės. Dydis priklauso "
+"nuo žemėlapio drobės mastelio, o poziciją galima fiksuoti."
+
+#: ../../docs/user_manual/map_views/map_view.rst:736
+msgid "**Layout the map with annotations**"
+msgstr "**Žemėlapio išdėstymas su anotacijomis**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:738
+msgid ""
+"You can print or export annotations with your map to various formats using:"
+msgstr ""
+"Jūs galite spausdinti ar eksportuoti anotacijas kartu su jūsų žemėlapiu į "
+"skirtingus formatus naudojant:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:740
+msgid "map canvas export tools available in the :menuselection:`Project` menu"
+msgstr ""
+"žemėlapio drobės eksportavimo įrankius, kuriuos rasite meniu "
+":menuselection:`Projektas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:741
+msgid ""
+":ref:`print layout <create-output>`, in which case you need to check "
+":guilabel:`Draw map canvas items` in the corresponding map item properties"
+msgstr ""
+":ref:`spausdinimo išdėstymą <create-output>`, kur jums gali tekti atitinkamo"
+" žemėlapio elemento savybėse įjungti parinktį :guilabel:`Braižyti žemėlapio "
+"drobės elementus`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:745
+msgid ""
+"The :guilabel:`Annotations Toolbar` provides a set of tools to create and "
+"interact with both families of annotations."
+msgstr ""
+":guilabel:`Anotacijų įrankinė` teikia aibę įrankių, leidžiančių kurti ir "
+"valdyti abi anotacijų šeimas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:748
+msgid "The Annotations Toolbar actions"
+msgstr "Anotacijų įrankinės veiksmai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:751
+msgid "Scope"
+msgstr "Sritis"
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "|createAnnotationLayer| :sup:`New Annotation Layer`"
+msgstr "|createAnnotationLayer| :sup:`Naujas anotacijų sluoksnis`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1293
 msgid "createAnnotationLayer"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "Create a new layer to store annotations"
+msgstr "Kurti naują sluoksnį anotacijų saugojimui"
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "Feature annotations"
+msgstr "Geoobjektų anotacijos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:755
+msgid ":sup:`Main Annotation Layer Properties`"
+msgstr ":sup:`Pagrindinio anotacijų sluoksnio savybės`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:755
+msgid "Control settings of the Main Annotation Layer"
+msgstr "Valdo pagrindinio anotacijų sluoksnio savybes"
+
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid "|select| :sup:`Modify Annotations`"
+msgstr "|select| :sup:`Keisti anotacijas`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1343
 msgid "select"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid "Select, move, resize and modify symbology properties of annotations"
+msgstr ""
+"Parinkti, perkelti, keisti dydį ar keisti anotacijų simbolizavimo savybes"
+
+#: ../../docs/user_manual/map_views/map_view.rst:759
+#: ../../docs/user_manual/map_views/map_view.rst:811
+msgid "|addPolygon| :sup:`Create Polygon Annotation`"
+msgstr "|addPolygon| :sup:`Kurti poligono anotaciją`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1281
 msgid "addPolygon"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:759
+msgid "Create an annotation as a polygon feature"
+msgstr "Kurti anotaciją kaip poligono geoobjektą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:761
+#: ../../docs/user_manual/map_views/map_view.rst:812
+msgid "|addPolyline| :sup:`Create Line Annotation`"
+msgstr "|addPolyline| :sup:`Kurti linijos anotaciją`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1283
 msgid "addPolyline"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:761
+msgid "Create an annotation as a polyline feature"
+msgstr "Kurti anotaciją kaip poli-linijos geoobjektą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:763
+#: ../../docs/user_manual/map_views/map_view.rst:813
+msgid "|addMarker| :sup:`Create Marker Annotation`"
+msgstr "|addMarker| :sup:`Kurti žymeklio anotaciją`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1279
 msgid "addMarker"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:763
+msgid "Create an annotation as a point feature"
+msgstr "Kurti anotaciją kaip taško geoobjektą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:765
+#: ../../docs/user_manual/map_views/map_view.rst:814
+msgid "|actionText| :sup:`Create Text Annotation at Point`"
+msgstr "|actionText| :sup:`Kurti teksto anotaciją taške`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1271
 msgid "actionText"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:765
+msgid "Create an annotation as a text label"
+msgstr "Kurti anotaciją kaip tekstinį užrašą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+msgid "|textAnnotation| :sup:`Text Annotation`"
+msgstr "|textAnnotation| :sup:`Teksto anotacija`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1374
 msgid "textAnnotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:767
+msgid "Select and create a text formatted annotation"
+msgstr "Parinkti ir kurti formatuoto teksto anotaciją"
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+#: ../../docs/user_manual/map_views/map_view.rst:899
+msgid "Balloon annotations"
+msgstr "Balionų anotacijos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "|htmlAnnotation| :sup:`HTML Annotation`"
+msgstr "|htmlAnnotation| :sup:`HTML anotacija`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1303
 msgid "htmlAnnotation"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "Select and create annotation with an :file:`HTML` file's content"
+msgstr "Pažymėti ir kurti anotaciją su :file:`HTML` failo turiniu"
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "|svgAnnotation| :sup:`SVG Annotation`"
+msgstr "|svgAnnotation| :sup:`SVG anotacija`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1364
 msgid "svgAnnotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "Select and create annotation showing an :file:`SVG` file"
+msgstr "Pažymėti ir kurti anotaciją, rodančią :file:`SVG` failą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid "|formAnnotation| :sup:`Form Annotation`"
+msgstr "|formAnnotation| :sup:`Formos anotacija`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1301
 msgid "formAnnotation"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid ""
+"Select and create annotation showing attributes of a vector layer in a "
+"custom form file"
+msgstr ""
+"Pažymėti ir kurti anotaciją, rodančią savo formos failo vektorinio sluoksnio"
+" atributus"
+
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "|annotation| :sup:`Move Annotation`"
+msgstr "|annotation| :sup:`Perkelti anotaciją`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1285
 msgid "annotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "Adjust size and position of annotation element"
+msgstr "Keisti anotacijos elemento dydį ir poziciją"
+
+#: ../../docs/user_manual/map_views/map_view.rst:782
+msgid "Feature Annotations"
+msgstr "Geoobjektų anotacijos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:784
+msgid ""
+"Feature annotations are stored in **annotation layers**. Unlike conventional"
+" layers, an annotation layer is available only in the current project and "
+"can contain features of different types (text, marker, line, polygon). The "
+"layer has no attributes and no symbology associated, but instead each "
+"feature can be symbolized on an item-by-item basis, through :guilabel:`Layer"
+" Styling` panel."
+msgstr ""
+"Geoobjektų anotacijos saugomos **anotacijų sluoksniuose**. Priešingai nei "
+"standartiniai sluoksniai, anotacijų sluoksnis prieinamas tik dabartiniame "
+"projekte ir jame gali būti skirtingų tipų geoobjektai (tekstas, žymekliai, "
+"linijos, poligonai). Sluoksnis neturi atributų ir susijusios simbologijos, "
+"vietoje to kiekvienas geoobjektas gali būti simbolizuojamas atskirai per "
+"skydelį :guilabel:`Sluoksnio stilius`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:790
+msgid "Two types of annotation layer are available in QGIS:"
+msgstr "QGIS turi du anotacijų sluoksnių tipus:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:792
+msgid ""
+"A common :guilabel:`Annotation Layer`: you can create one using the "
+"|createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed in "
+"the :guilabel:`Layers` panel, allowing you to control its features' "
+"visibility, move it to show above or below particular layers in your map, "
+"like any common layer. Double-click the layer and you can access its "
+"properties."
+msgstr ""
+"Bendras :guilabel:`Anotacijų sluoksnis`: jūs galite jį sukurti su įrankiu "
+"|createAnnotationLayer| :sup:`Naujas anotacijų sluoksnis`. Sukurtą sluoksnį "
+"rasite :guilabel:`Sluoksnių` skydelyje, kur galėsite valdyti jo geoobjektų "
+"matomumą, perkelti jo matomumą virš ar po kitų jūsų žemėlapio sluoksnių, "
+"kaip bet kuriam kitam sluoksniui. Du kartus paspaudus ant sluoksnio "
+"pasieksite jo savybes."
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid ""
+"The :guilabel:`Main Annotation Layer`: By default, this is where annotations"
+" are stored when no annotation layer is available in the project or is "
+"selected at creation time. This layer is always drawn on the very top of "
+"your map and you won't see it listed in the :guilabel:`Layers` panel "
+"alongside the other layers in your project, meaning that its features are "
+"always visible. The :guilabel:`Main Annotation Layer Properties` entry on "
+"the :guilabel:`Annotations` toolbar helps you open its properties dialog."
+msgstr ""
+":guilabel:`Pagrindinis anotacijų sluoksnis`: Pagal nutylėjimą anotacijos "
+"laikomos šiame sluoksnyje, kai projekte nėra anotacijų sluoksnio anotacijos "
+"sukūrimo metu nepažymėtas nei vienas anotacijų sluoksnis. Šis sluoksnis "
+"visada rodomas pačiame žemėlapio viršuje ir jūs nepamatysite jo skydelyje "
+":guilabel:`Sluoksniai` su kitais projekto sluoksniais, tai reiškia, kad jo "
+"geoobjektai visada matomi. :guilabel:`Anotacijų`  įrankinės mygtukas "
+":guilabel:`Pagrindinio anotacijų sluoksnio savybės` padeda jums atverti jo "
+"savybių dialogą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:807
+msgid "Interaction"
+msgstr "Sąveika"
+
+#: ../../docs/user_manual/map_views/map_view.rst:809
+msgid ""
+"The Feature annotations have dedicated tools for creation depending on their"
+" type:"
+msgstr ""
+"Kiekvienas anotacijų tipas turi specialiai jam skirtą sukūrimo įrankį:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:816
+msgid ""
+"All the usual QGIS shortcuts for creating features apply when creating "
+"annotation items. A line or polygon annotation is drawn by left-clicking "
+"once for each vertex, with a final right mouse click to complete the shape. "
+"Snapping can be enabled while you draw, you can use the :guilabel:`Advanced "
+"Digitizing Tools` to precisely place vertices, and even switch the "
+":ref:`drawing tools <drawing_methods>` to the streaming mode for completely "
+"free-form shapes."
+msgstr ""
+"Kuriant anotacijų elementus veikia visos įprastos QGIS klavišų kombinacijos."
+" Linijos ar poligono anotacijos braižomos kairiu pelės paspaudimu kiekvienos"
+" viršūnės vietoje, braižymą baigiant dešiniu pelės paspaudimu. Galima "
+"įjungti pritraukimą braižant, tikslioms viršūnių pozicijoms galite naudoti "
+":guilabel:`Sudėtingesnio skaitmenizavimo įrankinę`, be to galite perjungti "
+":ref:`braižymo įrankius <drawing_methods>` į tęstinį režimą visiškai "
+"laisvoms formoms."
+
+#: ../../docs/user_manual/map_views/map_view.rst:823
+msgid ""
+"Unlike common layers, an annotation layer does not need to be active before "
+"you select its features. Simply grab the |select| :sup:`Modify Annotations` "
+"tool and you will be able to interact with any feature annotation:"
+msgstr ""
+"Priešingai nei bendri sluoksniai, anotacijų sluoksnio nereikia aktyvuoti, "
+"kad galėtumėte pažymėti jo geoobjektus. Tiesiog čiupkite įrankį |select| "
+":sup:`Keisti anotacijas` ir galėsite sąveikauti su bet kuria anotacija:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:827
+msgid "**Selection**: simply left-click on the annotation"
+msgstr ""
+"**Pažymėjimas**: tiesiog spauskite kairiu mygtuku ant bet kokios anotacijos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:828
+msgid ""
+"**Moving**: Left click on a selected annotation item to start moving it. A "
+"right-click or pressing :kbd:`Esc` key cancels the move, while a second left"
+" click will confirm the move. The displacement can also be controlled "
+"pressing the cursor keys:"
+msgstr ""
+"**Perkelimas**: Spauskite kairę mygtuką ant pažymėtos anotacijos, kad "
+"pradėtumėte jos perkėlimą. Dešinys paspaudimas arba mygtukas :kbd:`Esc` "
+"nutraukia perkėlimą, o antras kairys paspaudimas patvirtina perkėlimą. "
+"Perkėlimą taipogi galima valdyti ir rodyklių klavišais:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:833
+msgid ":kbd:`Shift+key` for big movement"
+msgstr ":kbd:`Shift+key` dideliam perkėlimui"
+
+#: ../../docs/user_manual/map_views/map_view.rst:834
+msgid ":kbd:`Alt+key` for ``1 px`` movement"
+msgstr ":kbd:`Alt+key` for ``1 tšk`` perkėlimui"
+
+#: ../../docs/user_manual/map_views/map_view.rst:835
+msgid ""
+"**Geometry modification**: for line or polygon annotations, left-click on a "
+"vertex of the geometry, move and click again. Double-click a segment to add "
+"a new vertex."
+msgstr ""
+"**Geometrijos modifikavimas**: linijų ar poligonų anotacijoms, spauskite "
+"kairį mygtuką ant geometrijos viršūnės, tada spauskite dar kartą, kad "
+"perkeltumėte. Du kartus paspauskite ant atkarpos, kad pridėtumėte naują "
+"viršūnę."
+
+#: ../../docs/user_manual/map_views/map_view.rst:838
+msgid ""
+"**Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while an "
+"annotation is selected will delete that annotation"
+msgstr ""
+"**Ištrynimas**: Paspaudus :kbd:`Del` ar :kbd:`Backspace` mygtuką, kai "
+"anotacija pažymėta, ji bus ištrinta"
+
+#: ../../docs/user_manual/map_views/map_view.rst:840
+msgid ":ref:`Change feature symbology <annotation_feature_symbology>`"
+msgstr ":ref:`Keisti geoobjekto simbologiją <annotation_feature_symbology>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:845
+msgid "Feature symbology"
+msgstr "Geoobjekto simbologija"
+
+#: ../../docs/user_manual/map_views/map_view.rst:847
+msgid ""
+"A selected annotation will display its :guilabel:`Symbology` properties in "
+"the :guilabel:`Layer styling` panel. You can:"
+msgstr ""
+"Pažymėtos anotacijos :guilabel:`Simbologijos` savybės bus rodomos skydelyje "
+":guilabel:`Sluoksnio stilius`. Jūs galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:850
+msgid ""
+"modify the appearance using full capabilities of the :ref:`symbol <symbol-"
+"selector>` or the :ref:`text format <text_format>` (including the text "
+"itself), depending on the type."
+msgstr ""
+"keisti išvaizdą naudodami pilną :ref:`simbolių <symbol-selector>` ar the "
+":ref:`teksto formato <text_format>` funkcionalumą (įskaitant patį tekstą), "
+"priklausomai nuo tipo."
+
+#: ../../docs/user_manual/map_views/map_view.rst:853
+msgid "configure a :guilabel:`Reference scale`"
+msgstr "konfigūruoti :guilabel:`Atskaitos mastelį`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:854
+msgid "set a :guilabel:`Z index`"
+msgstr "nustatyti :guilabel:`Z indeksą`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:855
+msgid "modify some of the :guilabel:`Layer rendering` settings"
+msgstr "keisti kai kuriuos :guilabel:`Sluoksnio braižymo` nustatymus"
+
+#: ../../docs/user_manual/map_views/map_view.rst:858
+msgid "Layer Properties"
+msgstr "Sluoksnio savybės"
+
+#: ../../docs/user_manual/map_views/map_view.rst:860
+msgid ""
+"The properties dialog of an annotation layer provides the following tabs:"
+msgstr "Anotacijų sluoksnio savybių dialoge yra šios kortelės:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:862
+msgid ""
+":guilabel:`Information`: a read-only dialog representing an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer."
+msgstr ""
+":guilabel:`Informacija`: tik skaitymo greita informacija apie dabartinio "
+"sluoksnio meta-informaciją."
+
+#: ../../docs/user_manual/map_views/map_view.rst:864
+msgid ""
+":guilabel:`Source`: defines general settings for the annotation layer. You "
+"can:"
+msgstr ""
+":guilabel:`Šaltinis`: apibrėžia bendrus anotacijos sluoksnio nustatymus. Jūs"
+" galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:866
+msgid ""
+"Set a :guilabel:`Layer name` that will be used to identify the layer in the "
+"project (in the :guilabel:`Layers Panel`, with expressions, ...)"
+msgstr ""
+"Nustatyti :guilabel:`Sluoksnio pavadinimą` kuris bus naudojamas sluoksnio "
+"identifikavimui projekte (:guilabel:`Sluoksnių skydelyje`, išraiškose, ...)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:868
+msgid ""
+"Display the layer's :ref:`Assigned Coordinate Reference System (CRS) "
+"<layer_crs>`: you can change the layer's CRS, selecting a recently used one "
+"in the drop-down list or clicking on |setProjection| :sup:`Select CRS` "
+"button (see :ref:`crs_selector`). Use this process only if the CRS applied "
+"to the layer is a wrong one or if none was applied."
+msgstr ""
+"Rodyti sluoksnio :ref:`Priskirtą koordinačių atskaitos sistemą (CRS) "
+"<layer_crs>`: jūs galite pakeisti sluoksnio CRS, pažymėdami neseniai naudotą"
+" iškrentantčiame sąraše arba paspaudę mygtuką |setProjection| :sup:`Parinkti"
+" CRS` (žr. :ref:`crs_selector`). Naudokite šį procesą tik jei sluoksniui "
+"taikoma CRS yra netinkama arba nėra nurodyta apskritai."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1350
 msgid "setProjection"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:874
+msgid ":guilabel:`Rendering`:"
+msgstr ":guilabel:`Braižymas`:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:876
+msgid ""
+"You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum "
+"(exclusive)` scale, defining a range of scale in which features will be "
+"visible. Out of this range, they are hidden. The |mapIdentification| "
+":sup:`Set to current canvas scale` button helps you use the current map "
+"canvas scale as boundary of the range visibility. See "
+":ref:`label_scaledepend` for more information."
+msgstr ""
+"Galite nurodyti :guilabel:`Maksimalų (imtinai)` ir :guilabel:`Minimalų "
+"(išskirtinai)` mastelį, taip nurodydami, kuriuose masteliuose bus rodomi "
+"geoobjektai. Nepatekę į šį diapazoną objektai paslepiami. Mygtukas "
+"|mapIdentification| :sup:`Nustatyti pagal dabartinį drobės mastelį` padeda "
+"jums panaudoti dabartinį žemėlapio drobės mastelį kaip matomumo ribą. "
+"Daugiau informacijos rasite :ref:`label_scaledepend`."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1307
 msgid "mapIdentification"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:882
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your "
+"vector layer to your needs. You can also make a precise definition of the "
+"percentage of visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`Nepermatomumas`: Naudodami šį įrankį jūs galite žemiau esantį "
+"sluoksnį matomu. Naudokite slankiklį, kad pritaikytumėte jūsų vektorinio "
+"sluoksnio matomumą pagal poreikius. Jūs taipogi galite tiksliai nurodyti "
+"matomumo procentą laukelyje greta slankiklio."
+
+#: ../../docs/user_manual/map_views/map_view.rst:886
+msgid ""
+":guilabel:`Blending mode` at the :guilabel:`Layer` level: You can achieve "
+"special rendering effects with these tools that you may previously only know"
+" from graphics programs. The pixels of your overlaying and underlying layers"
+" are mixed through the settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Suliejimo režimas` :guilabel:`Sluoksnio` lygyje: Naudodami šiuos "
+"įrankius jūs galite pasiekti specialius braižymo efektus, kuriuos anksčiau "
+"žinojote tik grafikos programose. Aukščiau ir žemiau esančių sluoksnių "
+"taškai maišomi pagal nustatymus, aprašytus :ref:`blend-modes`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:890
+msgid ""
+"Apply :ref:`paint effects <draw_effects>` on all the layer features with the"
+" :guilabel:`Draw Effects` button."
+msgstr ""
+"Pritaikyti :ref:`paišymo efektus <draw_effects>` visiems sluoksnio "
+"geoobjektams mygtuku :guilabel:`Paišyti efektus`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid ""
+"Some of these options are accessible from the feature annotation "
+":guilabel:`Symbology` properties."
+msgstr ""
+"Kai kurios iš šių parinkčių prieinamos iš geoobjektų anotacijų "
+":guilabel:`Simbologijos` savybių."
+
+#: ../../docs/user_manual/map_views/map_view.rst:901
+msgid ""
+"You can add balloon annotations through :menuselection:`Edit --> Add "
+"Annotation -->` menu or from the :guilabel:`Annotations Toolbar`:"
+msgstr ""
+"Balionų anotacijas galite pridėti per meniu :menuselection:`Keisti --> "
+"Pridėti anotaciją -->` arba naudojant :guilabel:`Anotacijų įrankinė`:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:904
+msgid "|textAnnotation| :sup:`Text Annotation` for custom formatted text"
+msgstr "|textAnnotation| :sup:`Tekstinė anotacija` formatuotam tekstui"
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid ""
+"|htmlAnnotation| :sup:`HTML Annotation` to place the content of an "
+":file:`html` file"
+msgstr ""
+"|htmlAnnotation| :sup:`HTML anotacija`, kad pridėtumėte :file:`html` failo "
+"turinį"
+
+#: ../../docs/user_manual/map_views/map_view.rst:906
+msgid "|svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol"
+msgstr ""
+"|svgAnnotation| :sup:`SVG anotacija`, kad pridėtumėte :file:`SVG` simbolį"
+
+#: ../../docs/user_manual/map_views/map_view.rst:907
+msgid ""
+"|formAnnotation| :sup:`Form Annotation`: useful to display attributes of a "
+"vector layer in a customized :file:`ui` file (see "
+":numref:`figure_custom_annotation`). This is similar to the :ref:`custom "
+"attribute forms <provide_ui_file>`, but displayed in an annotation item. "
+"Also see this video "
+"https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s from "
+"Tim Sutton for more information."
+msgstr ""
+"|formAnnotation| :sup:`Formos anotacija`: naudinga rodant vektorinio "
+"sluoksnio atributus tinkintame :file:`ui` faile (žr. "
+":numref:`figure_custom_annotation`). Tai panašu į :ref:`tinkintas atributų "
+"formas <provide_ui_file>`, tik rodomas anotacijos elemente. Daugiau "
+"informacijos galite rasti šiame Tim Sutton video "
+"https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s."
+
+#: ../../docs/user_manual/map_views/map_view.rst:913
+msgid ""
+"|annotation| :sup:`Move Annotation` to adjust annotation element size or "
+"position (using click and drag)"
+msgstr ""
+"|annotation| :sup:`Perkelti anotaciją`, jei norite keisti anotacijos "
+"elemento dydį ar poziciją (naudojant paspaudimą ir tempimą)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:921
+msgid "Examples of balloon annotations"
+msgstr "Balionų anotacijų pavyzdžiai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:924
+msgid ""
+"To add a balloon annotation, select the corresponding tool and click on the "
+"map canvas. An empty balloon is added. Double-click on it and a dialog opens"
+" with various options. This dialog is almost the same for all the annotation"
+" types:"
+msgstr ""
+"Kad pridėtumėte balionų anotaciją, parinkite atitinkamą įrankį ir spauskite "
+"žemėlapio drobėje. Pridedamas tuščias balionas. Du kartus jį paspauskite - "
+"atsivers dialogas su įvairiomis parinktimis. Šis dialogas beveik toks pat "
+"visiems anotacijų tipams:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:928
+msgid ""
+"At the top, a file selector to fill with the path to an :file:`html`, "
+":file:`svg` or :file:`ui` file depending on the type of annotation. For text"
+" annotation, you can enter your message in a text box and set its rendering "
+"with the normal font tools."
+msgstr ""
+"Viršuje yra failų parinkiklis, kuriame galima įrašyti kelia iki "
+":file:`html`, :file:`svg` ar :file:`ui` failo, priklausomai nuo anotacijos "
+"tipo. Teksto anotacijai jūs galite įvesti savo pranešimą teksto langelyje ir"
+" nustatyti jo įprastas braižymo šrifto savybes."
+
+#: ../../docs/user_manual/map_views/map_view.rst:932
+msgid ""
+"|checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon "
+"placement is based on a screen position (instead of the map), meaning that "
+"it's always shown regardless the map canvas extent."
+msgstr ""
+"|checkbox| :guilabel:`Fiksuota vieta žemėlapyje`: išjungus šią parinktį "
+"baliono pozicija priklauso nuo ekrano pozicijos (o ne žemėlapio), t.y. ji "
+"visada romo nepriklausomai nuo žemėlapio drobės apimties."
+
+#: ../../docs/user_manual/map_views/map_view.rst:935
+msgid ""
+":guilabel:`Linked layer`: associates the annotation with a map layer, making"
+" it visible only when that layer is visible."
+msgstr ""
+":guilabel:`Susijęs sluoksnis`: susieja anotaciją su žemėlapio sluoksniu, "
+"todėl anotacija matoma tik tada, kai rodomas susietas sluoksnis."
+
+#: ../../docs/user_manual/map_views/map_view.rst:937
+msgid ""
+":guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, sets "
+"the symbol to display at the balloon anchor position (shown only when "
+":guilabel:`Fixed map position` is checked)."
+msgstr ""
+":guilabel:`Simbolis`: naudojant :ref:`QGIS simbolius <symbol-selector>`, "
+"nustato baliono susiejimo pozicijoje rodomą simbolį (rodomą tik kai įjungta "
+"parinktis :guilabel:`Fiksuota vieta žemėlapyje`)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:940
+msgid ""
+":guilabel:`Frame style`: sets the frame background color, transparency, "
+"stroke color or width of the balloon using QGIS symbols."
+msgstr ""
+":guilabel:`Rėmo stilius`: nustato baliono rėmo fono spalvą, permatomumą, "
+"brėžimo spalvą ar plotį naudojant QGIS simbolius."
+
+#: ../../docs/user_manual/map_views/map_view.rst:942
+msgid ""
+":guilabel:`Contents margins`: sets interior margins of the annotation frame."
+msgstr ""
+":guilabel:`Turinio paraštės`: nustato vidines anotacijos rėmo paraštes."
+
+#: ../../docs/user_manual/map_views/map_view.rst:949
+msgid "A ballon annotation text dialog"
+msgstr "Baliono anotacijų teksto dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:951
+msgid ""
+"Annotations can be selected when an annotation tool is enabled. They can "
+"then be moved by map position (by dragging the map marker) or by moving only"
+" the balloon. The |annotation| :sup:`Move Annotation` tool also allows you "
+"to move the balloon on the map canvas."
+msgstr ""
+"Anotacijas galima pažymėti įjungus anotacijų įrankį. Tada jas galima "
+"perkelti pagal žemėlapio poziciją (pertempiant žemėlapio žymeklį) arba "
+"perkeliant tik balioną. |annotation| :sup:`Žemėlapio anotacijų` įrankis "
+"taipogi leidžia jums perkelti balioną žemėlapio drobėje."
+
+#: ../../docs/user_manual/map_views/map_view.rst:956
+msgid ""
+"To delete an annotation, select it and either press the :kbd:`Del` or "
+":kbd:`Backspace` button, or double-click it and press the :guilabel:`Delete`"
+" button in the properties dialog."
+msgstr ""
+"Norėdami ištrinti anotaciją, pažymėkite ją ir arba spauskite :kbd:`Del` ar "
+":kbd:`Backspace` mygtuką, arba du kartus spauskite ant jo ir spauskite "
+"savybių dialoge mygtuką :guilabel:`Naikinti`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:960
+msgid ""
+"If you press :kbd:`Ctrl+T` while a balloon :guilabel:`Annotation` tool (move"
+" annotation, text annotation, form annotation) is active, the visibility "
+"states of the items are inverted."
+msgstr ""
+"Jei tuo metu, kai balionų :guilabel:`Anotacijos` įrankis (perkelti "
+"anotaciją, teksto anotacija, formos anotacija) yra aktyvus, paspausite "
+":kbd:`Ctrl+T`, bus perjungtas elementų matomumas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:970
+msgid "Measuring"
+msgstr "Matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:973
+msgid "General information"
+msgstr "Bendra informacija"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1309
 msgid "measure"

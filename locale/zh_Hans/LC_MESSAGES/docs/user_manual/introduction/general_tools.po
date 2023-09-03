@@ -40,7 +40,7 @@ msgid ""
 "in most dialogs --- please note that third-party plugins can point to "
 "dedicated web pages."
 msgstr ""
-"每当您需要详细的主题帮助时，可以通过许多对话框中的 :guilabel:`帮助` 按钮访问当前用户手册中的相应页面 --- "
+"每当您需要详细的主题帮助时，可以通过对话框中的 :guilabel:`帮助` 按钮访问当前用户手册中的相应页面 --- "
 "请注意，第三方插件指向专用Web页面。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:32
@@ -150,6 +150,12 @@ msgstr ""
 msgid "expressionFilter"
 msgstr "expressionFilter"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:74
+msgid ""
+"|expandTree| :sup:`Expand All` or |collapseTree| :sup:`Collapse All` layers "
+"and groups in the layers panel."
+msgstr "在图层面板 |expandTree| :sup:`全部展开` 或 |collapseTree| :sup:`全部折叠` 图层和组。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2203
 msgid "expandTree"
 msgstr "expandTree"
@@ -158,6 +164,10 @@ msgstr "expandTree"
 msgid "collapseTree"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:76
+msgid "|removeLayer| :sup:`Remove Layer/Group` currently selected."
+msgstr "从当前所选 |removeLayer| :sup:`移除图层/组` 。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2287
 msgid "removeLayer"
 msgstr ""
@@ -165,6 +175,24 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:83
 msgid "Layer Toolbar in Layers Panel"
 msgstr "图层面板中的图层工具栏"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:86
+msgid ""
+"Tools to manage the layers panel are also available for map and legend items"
+" in print layouts"
+msgstr "用于管理图层面板的工具也可用于打印布局中的地图和图例项"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:93
+msgid "Configuring map themes"
+msgstr "配置地图主题"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:95
+msgid ""
+"The |showPresets| :sup:`Manage Map Themes` drop-down button provides access "
+"to convenient shortcuts to manipulate visibility of the layers in the "
+":guilabel:`Layers` panel:"
+msgstr ""
+"通过 |showPresets| :sup:`管理地图主题` 下拉按钮，可以使用方便的快捷方式来控制 :guilabel:`图层` 面板中图层的可见性："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:99
 msgid "|showAllLayers| :guilabel:`Show All Layers`"
@@ -198,9 +226,24 @@ msgstr "|hideSelectedLayers| :guilabel:`隐藏选中的图层`"
 msgid "hideSelectedLayers"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:103
+msgid ""
+"|toggleSelectedLayers| :guilabel:`Toggle Selected Layers`: changes the "
+"visibility of the first selected layer in the panel, and applies that state "
+"to the other selected layers. Also accesible through :kbd:`Space` shortcut."
+msgstr ""
+"|toggleSelectedLayers| :guilabel:`切换选中图层`: "
+"更改面板中首个选中图层的可见性，并将该状态应用于其他选中图层。也可以通过 :kbd:`空格键` 快捷方式访问。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2329
 msgid "toggleSelectedLayers"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:106
+msgid ""
+":guilabel:`Toggle Selected Layers Independently`: changes the visibility "
+"status of each selected layer"
+msgstr ":guilabel:`独自切换选中图层`: 更改每个选中图层的可见状态。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:108
 msgid "|hideDeselectedLayers| :guilabel:`Hide Deselected Layers`"
@@ -209,6 +252,163 @@ msgstr "|hideDeselectedLayers| :guilabel:`隐藏未选中的图层`"
 #: ../../docs/user_manual/introduction/general_tools.rst:2225
 msgid "hideDeselectedLayers"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:110
+msgid ""
+"Beyond the simple control of layer visibility, the |showPresets| "
+":sup:`Manage Map Themes` menu allows you to configure **Map Themes** in the "
+"legend and switch from one map theme to another. A map theme is a "
+"**snapshot** of the current map legend that records:"
+msgstr ""
+"除了简单地控制图层可见性之外， |showPresets| :sup:`管理地图主题` 菜单还允许在图例中配置 **地图主题** "
+"，并可以切换地图主题。地图主题是当前地图图例的 **快照** ，其中记录："
+
+#: ../../docs/user_manual/introduction/general_tools.rst:115
+msgid "the layers set as visible in the :guilabel:`Layers` panel"
+msgstr "在 :guilabel:`图层` 面板设置为可见的图层"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:116
+msgid "**and** for each visible layer:"
+msgstr "**并且** 对于每个可见图层："
+
+#: ../../docs/user_manual/introduction/general_tools.rst:118
+msgid ""
+"the reference to the :ref:`style <save_layer_property>` applied to the layer"
+msgstr "对应用于图层 :ref:`样式 <save_layer_property>` 的引用"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:119
+msgid ""
+"the visible classes of the style, ie the layer checked node items in the "
+":guilabel:`Layers panel`. This applies to :ref:`symbologies "
+"<vector_style_menu>` other than the single symbol rendering"
+msgstr ""
+"样式的可见类别，即 :guilabel:`图层面板` 中的图层选中节点项。这适用于单个符号渲染之外的 :ref:`符号化 "
+"<vector_style_menu>`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:122
+msgid ""
+"the collapsed/expanded state of the layer node(s) and the group(s) it's "
+"placed inside"
+msgstr "图层节点及其所在组的折叠/展开状态"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:125
+msgid "To create a map theme:"
+msgstr "要创建地图主题，请执行以下操作："
+
+#: ../../docs/user_manual/introduction/general_tools.rst:127
+msgid "Check a layer you want to show"
+msgstr "选中要显示的图层"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:128
+msgid ""
+"Configure the layer properties (symbology, diagram, labels...) as usual"
+msgstr "像往常一样配置图层属性 (符号化、图表、标注等)"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:129
+msgid ""
+"Expand the :menuselection:`Style -->` menu at the bottom and click on "
+":guilabel:`Add...` to store the settings as :ref:`a new style embedded in "
+"the project <manage_custom_style>`"
+msgstr ""
+"展开 :menuselection:`样式 -->` 菜单，然后单击 :guilabel:`添加...` 按钮，将设置储存为 "
+":ref:`嵌入工程中的新样式 <manage_custom_style>`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:132
+msgid ""
+"A map theme does not remember the current details of the properties: only a "
+"reference to the style name is saved, so whenever you apply modifications to"
+" the layer while this style is enabled (eg change the symbology rendering), "
+"the map theme is updated with new information."
+msgstr ""
+"地图主题不记录当前属性的详细信息，只保存对样式名称的引用。因此，当启用此样式时，无论何时对图层应用修改 "
+"(例如更改符号化渲染)，地图主题都会更新为新信息。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:137
+msgid "Repeat the previous steps as necessary for the other layers"
+msgstr "根据需要对其他图层重复上述步骤"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:138
+msgid ""
+"If applicable, expand or collapse groups or visible layer nodes in the "
+":guilabel:`Layers` panel"
+msgstr "若适用，请在 :guilabel:`图层` 面板展开或折叠组与可见图层节点"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:140
+msgid ""
+"Click on the |showPresets| :sup:`Manage Map Themes` button on top of the "
+"panel, and :guilabel:`Add Theme...`"
+msgstr "单击面板顶部的 |showPresets| :sup:`管理地图主题` 按钮，然后 :guilabel:`添加主题...`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:142
+msgid "Enter the map theme's name and click :guilabel:`OK`"
+msgstr "输入地图主题的名称，然后单击 :guilabel:`确定`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:144
+msgid ""
+"The new theme is listed in the lower part of the |showPresets| drop-down "
+"menu."
+msgstr "新主题排列在 |showPresets| 下拉菜单的中下部。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:146
+msgid ""
+"You can create as many map themes as you need: whenever the current "
+"combination in the map legend (visible layers, their active style, the map "
+"legend nodes) does not match any existing map theme contents as defined "
+"above, click on :guilabel:`Add Theme...` to create a new map theme, or use "
+":menuselection:`Replace Theme -->` to update a map theme. You can rename the"
+" active map theme with :guilabel:`Rename Current Theme...` or use the "
+":guilabel:`Remove Current Theme` button to delete it."
+msgstr ""
+"您可以根据需要创建任意数量的地图主题：每当地图图例 (可见图层、其有效样式、地图图例节点) 中的当前组合与上面定义的任何现有地图主题内容不匹配时，单击 "
+":guilabel:`添加主题...` 创建新的地图主题，或使用 :menuselection:`更换主题 -->` 更新地图主题。可以使用 "
+":guilabel:`重命名当前主题...` 重命名活动地图主题，或者使用 :guilabel:`移除当前主题` 按钮将其删除。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:154
+msgid ""
+"Map themes are helpful to switch quickly between different preconfigured "
+"combinations: select a map theme in the list to restore its combination. All"
+" configured themes are also accessible in the print layout, allowing you to "
+"create different map items based on specific themes and independent of the "
+"current main canvas rendering (see :ref:`Map item layers <layout_layers>`)."
+msgstr ""
+"地图主题有助于在不同预配置组合之间快速切换：在列表中选择一个地图主题恢复其组合。所有配置的主题也可以在打印布局中访问，允许您基于特定主题创建不同的地图项，并且独立于当前主画布渲染"
+" (请参阅 :ref:`地图项图层 <layout_layers>`) 。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:162
+msgid "Overview of the context menu of the Layers panel"
+msgstr "图层面板上下文菜单概览"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:164
+msgid ""
+"At the bottom of the toolbar, the main component of the Layers panel is the "
+"frame listing all the layers added to the project, optionally organized in "
+"groups. A layer with a checked box next to it displays its contents "
+"overlapping the map canvas extent, unless a :ref:`scale-based visibility "
+"<label_scaledepend>` is set. A layer can be selected and dragged up or down "
+"in the legend to change the Z-ordering. Z-ordering means that layers listed "
+"nearer the top of the legend are drawn over layers listed lower down in the "
+"legend. Also a layer or a group of layers can be dragged across several QGIS"
+" instances."
+msgstr ""
+"在工具栏的下面，图层面板的主要部分是列出添加到工程中的所有图层的框架，并可以按组进行组织。除非设置了 :ref:`基于可见比例 "
+"<label_scaledepend>` ，否则旁边带有复选框的图层显示的内容与地图画布范围重叠。为更改Z-"
+"排序，可以选择图层并在图例中向上或向下拖动。Z-排序表示靠近图例上部列出的图层绘制在图例下部列出的图层之上。此外，可以在多个QGIS实例中拖动图层或图层组。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:173
+msgid ""
+"The Z-ordering behavior can be overridden by the :ref:`Layer Order "
+"<layer_order>` panel."
+msgstr "Z-排序行为可以由 :ref:`图层顺序 <layer_order>` 面板覆写。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:176
+msgid ""
+"Depending on the item selected in the panel, a right-click shows a dedicated"
+" set of options presented below."
+msgstr "根据在面板中所选项不同，右键单击将呈现下面显示的专用选项设置。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:180
+msgid "Contextual menus from :guilabel:`Layers` panel items"
+msgstr ":guilabel:`图层` 面板项的上下文菜单"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:183
 msgid "Option"
@@ -429,6 +629,10 @@ msgstr ":guilabel:`移到顶层`"
 msgid ":guilabel:`Move to Bottom`"
 msgstr ":guilabel:`移到底层`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:202
+msgid ":guilabel:`Check and all its Parents`"
+msgstr ":guilabel:`勾选及所有父项`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:203
 msgid ":guilabel:`Group Selected`"
 msgstr ":guilabel:`将所选成组`"
@@ -469,6 +673,10 @@ msgstr ":guilabel:`更换数据源...`"
 msgid ":guilabel:`Repair Data Source...`"
 msgstr ":guilabel:`修复数据源...`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:210
+msgid ":menuselection:`Actions on selections -->` (in edit mode)"
+msgstr ":menuselection:`在所选要素上执行操作 -->` (编辑模式)"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:211
 msgid ":menuselection:`--> Duplicate Feature`"
 msgstr ":menuselection:`--> 创建要素副本`"
@@ -488,6 +696,10 @@ msgstr ":guilabel:`缩放到可见比例`"
 #: ../../docs/user_manual/introduction/general_tools.rst:215
 msgid ":menuselection:`Layer CRS -->`"
 msgstr ":menuselection:`图层CRS -->`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:216
+msgid ":menuselection:`--> Set Project CRS from Layer`"
+msgstr ":menuselection:`--> 将图层的CRS设置为工程的CRS`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:217
 msgid ":menuselection:`--> Set to..` (recent CRSs)"
@@ -512,6 +724,14 @@ msgstr "|unchecked| :guilabel:`互斥组`"
 #: ../../docs/user_manual/introduction/general_tools.rst:2333
 msgid "unchecked"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:222
+msgid ":guilabel:`Check and all its children (Ctrl-click)`"
+msgstr ":guilabel:`勾选及所有子项 (Ctrl-单击)`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:223
+msgid ":guilabel:`Uncheck and all its children (Ctrl-click)`"
+msgstr ":guilabel:`取消勾选及所有子项 (Ctrl-单击)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:224
 msgid ":guilabel:`Make Permanent`"
@@ -577,13 +797,82 @@ msgstr ":menuselection:`--> 粘贴符号`"
 msgid ":guilabel:`Add Layer Notes...`"
 msgstr ":guilabel:`添加图层注释...`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:240
+msgid ":guilabel:`Edit Layer Notes...`"
+msgstr ":guilabel:`编辑图层注释...`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:241
+msgid ":guilabel:`Remove Layer Notes`"
+msgstr ":guilabel:`移除图层注释`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:242
 msgid ":guilabel:`Properties...`"
 msgstr ":guilabel:`工程属性...`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:246
+msgid ""
+"For GRASS vector layers, |toggleEditing| :sup:`Toggle editing` is not "
+"available. See section :ref:`grass_digitizing` for information on editing "
+"GRASS vector layers."
+msgstr ""
+"对于GRASS矢量图层, |toggleEditing| :sup:`切换编辑` 不可用。有关编辑GRASS矢量图层的信息，请参阅 "
+":ref:`grass_digitizing` 一节。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:254
+msgid "Interact with groups and layers"
+msgstr "与组和图层交互"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:256
+msgid ""
+"Layers in the legend window can be organized into groups. There are "
+"different ways to do this:"
+msgstr "图例窗口中的图层可以组织成组。有如下不同的方式可以实现："
+
+#: ../../docs/user_manual/introduction/general_tools.rst:259
+msgid ""
+"Press the |folder| icon to add a new group. Type in a name for the group and"
+" press :kbd:`Enter`. Now click on an existing layer and drag it onto the "
+"group."
+msgstr "点击 |folder| 图标添加新组。键入组的名称，然后按 :kbd:`Enter` 键。现在，单击现有图层并将其拖动到组。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2217
 msgid "folder"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:262
+msgid ""
+"Select more than one layer, then press the |folder| icon. The selected "
+"layers are automatically inserted into the new group."
+msgstr "选择要成组的图层，然后点击 |folder| 图标。选中的图层将自动嵌入到新组。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:264
+msgid ""
+"Select some layers, right-click in the legend window and choose "
+":guilabel:`Group Selected`. The selected layers will automatically be placed"
+" in a new group."
+msgstr "在图例窗口右键单击所选的多个图层，然后选择 :guilabel:`将所选成组` 。选中的图层将自动放置在新组中。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:268
+msgid ""
+"To move a layer out of a group, drag it out, or right-click on it and choose"
+" :guilabel:`Move Out of Group`: the layer is moved from the group and placed"
+" above it. Groups can also be nested inside other groups. If a layer is "
+"placed in a nested group, :guilabel:`Move Out of Group` will move the layer "
+"out of all nested groups."
+msgstr ""
+"若要将图层移出组，请将其拖出，或右键单击并选择 :guilabel:`从组中移出`: "
+"将图层从组中移出并放在其上方。组也可以嵌套在其他组中。如果某个图层放在嵌套组中， :guilabel:`从组中移出` 会将该图层从所有嵌套组中移出。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:274
+msgid ""
+"To move a group or layer to the top of the layer panel, either drag it to "
+"the top, or choose :guilabel:`Move to Top`. If you use this option on a "
+"layer nested in a group, the layer is moved to the top in its current group."
+" The :guilabel:`Move to Bottom` option follows the same logic to move layers"
+" and groups down."
+msgstr ""
+"若要将组或图层移到图层面板的顶部，请将其拖动到顶部，或选择 :guilabel:`移到顶层` "
+"。如果在嵌套组中的图层上使用此选项，该图层将移到其当前组的顶部。 :guilabel:`移到底层` 选项遵循相同的逻辑向下移动图层和组。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2197
 msgid "editableEdits"
