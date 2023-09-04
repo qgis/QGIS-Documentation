@@ -4151,12 +4151,12 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Number of segment in circles**
+   * - **Number of segments in circles**
      - ``SEGMENTS``
      - [number]
 
        Default: 72
-     - The number of segment used to approximate a circle.
+     - The number of segments used to approximate a circle.
        Minimum 8, maximum 100000.
    * - **Minimum enclosing circles**
      - ``OUTPUT``
@@ -5329,7 +5329,7 @@ Parameters
 
        Default: None
      - Rotation of the buffer shape
-   * - **Number of segment**
+   * - **Number of segments**
      - ``SEGMENTS``
      - [number]
 
