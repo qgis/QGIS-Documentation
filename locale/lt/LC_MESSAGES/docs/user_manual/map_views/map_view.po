@@ -2517,13 +2517,105 @@ msgstr "Matavimas"
 msgid "General information"
 msgstr "Bendra informacija"
 
+#: ../../docs/user_manual/map_views/map_view.rst:975
+msgid "QGIS provides four means of measuring geometries:"
+msgstr "QGIS teikia keturis geometrijų matavimo būdus:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:977
+msgid "interactive measurement tools |measure|"
+msgstr "Interaktyvius matavimo įrankius |measure|"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1309
 msgid "measure"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:978
+msgid "measuring in the |calculateField| :sup:`Field Calculator`"
+msgstr "matavimą naudojant |calculateField| :sup:`Laukų skaičiuotuvą`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1287
 msgid "calculateField"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:979
+msgid "derived measurements in the :ref:`identify` tool"
+msgstr "išvestinius matavimus :ref:`identifikavimo` įrankyje"
+
+#: ../../docs/user_manual/map_views/map_view.rst:980
+msgid ""
+"the vector analysis tool: :menuselection:`Vector --> Geometry Tools --> "
+"Export/Add Geometry Columns`"
+msgstr ""
+"vektorinės analizės įrankius: :menuselection:`Vektorius --> Geometrijos "
+"įrankiai --> Pridėti geometrijos stulpelius`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:983
+msgid ""
+"Measuring works within projected coordinate systems (e.g., UTM) and "
+"unprojected data. The first three measuring tools behave equally to global "
+"project settings:"
+msgstr ""
+"Matavimas veikia tiek projektuotose koordinačių sistemose (pvz. UTM), tiek "
+"ir neprojektuotuose duomenyse. Pirmi trys matavimo įrankiai elgiasi pagal "
+"globalius projekto nustatymus:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:986
+msgid ""
+"Unlike most other GIS, the default measurement metric is ellipsoidal, using "
+"the ellipsoid defined in :menuselection:`Project --> Properties... --> "
+"General`. This is true both when geographic and projected coordinate systems"
+" are defined for the project."
+msgstr ""
+"Kitaip nei dauguma GIS, numatytoji matavimo metrika yra elipsoidinė, "
+"naudojant elipsoidą, apibrėžtą :menuselection:`Projektas --> Savybės... --> "
+"Bendra`. Tai galioja tiek geografinėms, tiek ir projektuotoms sistemoms, "
+"apibrėžtoms projekte."
+
+#: ../../docs/user_manual/map_views/map_view.rst:990
+msgid ""
+"If you want to calculate the projected/planimetric area or distance using "
+"cartesian maths, the measurement ellipsoid has to be set to "
+"\"None/Planimetric\" (:menuselection:`Project --> Properties... --> "
+"General`). However, with a geographic (ie unprojected) CRS defined for the "
+"data and project, area and distance measurement will be ellipsoidal."
+msgstr ""
+"Jei norite skaičiuoti projektuotą/planimetrinį plotą ar atstumą naudojant "
+"dekarto matematiką, matavimo elipsoidą reikia nurodyti „Jokio/Planimetrinis“"
+" (:menuselection:`Projektas --> Savybės... --> Bendra`). Kaip ten bebūtų, "
+"nustačius duomenims ir projektui geografinę (t.y. neprojektuotą) CRS, ploto "
+"ir atstumo matavimai bus elipsoidiniai."
+
+#: ../../docs/user_manual/map_views/map_view.rst:996
+msgid ""
+"However, neither the identify tool nor the field calculator will transform "
+"your data to the project CRS before measuring. If you want to achieve this, "
+"you have to use the vector analysis tool: :menuselection:`Vector --> "
+"Geometry Tools --> Add Geometry Attributes...`. Here, measurement is "
+"planimetric, unless you choose the ellipsoidal measurement."
+msgstr ""
+"Nei identifikavimo įrankis, nei laukų skaičiuotuvas netransformuos jūsų "
+"duomenų į projekto CRS prieš matavimą. Jei norite tai pasiekti, jums reikės "
+"vektorinės analizės įrankio: :menuselection:`Vektorius --> Geometrijos "
+"įrankiai --> Pridėti geometrijos atributus...`. Čia matavimai bus "
+"planimetriniai, nebent pasirinksite elipsoidinį matavimą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1003
+msgid "Measure length, areas, bearings and angles interactively"
+msgstr "Interaktyvus ilgio, ploto, krypties ir kampo matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1005
+msgid ""
+"Click the |measure| icon in the Attribute toolbar to begin measurements. The"
+" down arrow near the icon switches between |measure| length, |measureArea| "
+"area, |measureBearing| bearing or |measureAngle| angle. The default unit "
+"used in the dialog is the one set in :menuselection:`Project --> "
+"Properties... --> General` menu."
+msgstr ""
+"Norėdami pradėti matavimą spauskite Atributų įrankinės piktogramą |measure|."
+" Rodyklė žemyn greta piktogramos leidžia persijungti tarp |measure| ilgio, "
+"|measureArea| ploto, |measureBearing| krypties ar |measureAngle| kampo "
+"matavimo. Pagal nutylėjimą dialoge naudojamas vienetas, nurodytas meniu "
+":menuselection:`Projektas --> Savybės... --> Bendra`."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1313
 msgid "measureArea"
@@ -2537,13 +2629,175 @@ msgstr ""
 msgid "measureAngle"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:1011
+msgid ""
+"For the :guilabel:`Measure Line` and the :guilabel:`Measure Area` the "
+"measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or "
+"|radioButtonOn| :guilabel:`Ellipsoidal` measure."
+msgstr ""
+":guilabel:`Matuoti liniją` ir the :guilabel:`Matuoti plotą` matavimai gali "
+"būti atliekami |radioButtonOn| :guilabel:`Dekarto` arba |radioButtonOn| "
+":guilabel:`Elipsoidiniais` matavimais."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1333
 msgid "radioButtonOn"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:1015
+msgid "**Configuring the measure tool**"
+msgstr "**Matavimo įrankio konfigūravimas**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1017
+msgid ""
+"While measuring length or area, clicking the :guilabel:`Configuration` "
+"button at the bottom of the widget opens the :menuselection:`Settings --> "
+"Options --> Map Tools` menu, where you can select the rubberband color, the "
+"precision of the measurements and the unit behavior. You can also choose "
+"your preferred measurement or angle units, but keep in mind that those "
+"values are overridden in the current project by the selection made in the "
+":menuselection:`Project --> Properties... --> General` menu, and by the "
+"selection made in the measurement widget."
+msgstr ""
+"Matuojant ilgį arba plotą, paspaudus dialogo apačioje mygtuką "
+":guilabel:`Nustatymai`, atidaromas meniu :menuselection:`Nustatymai --> "
+"Parinktys --> Žemėlapio įrankiai`, kur jūs galite parinkti gumelės spalvą, "
+"matavimų tikslumą bei vienetų elgseną. Taipogi galite parinkti norimus "
+"matavimo ar kampo vienetus, bet turėkite omenyje, kad šios reikšmės yra "
+"permušamos dabartinio projekto parinkime :menuselection:`Projektas --> "
+"Savybės... --> Bendra`, taip pat ir matavimo valdiklio valdiklio "
+"parinkimuose."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1026
+msgid ""
+"All measuring modules use the snapping settings from the digitizing module "
+"(see section :ref:`snapping_tolerance`). So, if you want to measure exactly "
+"along a line feature, or around a polygon feature, first set its layer "
+"snapping tolerance. Now, when using the measuring tools, each mouse click "
+"(within the tolerance setting) will snap to that layer."
+msgstr ""
+"Visi matavimo moduliai naudoja skaitmeninimo modulio pritraukimo nustatymus "
+"(žr. skiltį :ref:`snapping_tolerance`). Taigi jei norite tiksliai matuoti "
+"palei linijos geoobjektą arba aplink poligono geoobektą, visų pirma "
+"nustatykite to sluoksnio pritraukimo toleranciją. Tada, naudojant matavimo "
+"įrankius, kiekvienas pelės paspaudimas (tolerancijos nustatymo ribose) bus "
+"pritrauktas prie sluoksnio."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1037
+msgid ""
+"The |measure| :sup:`Measure Line` measures distances between given points. "
+"The tool then allows you to click points on the map. Each segment length, as"
+" well as the total, shows up in the measure window. To stop measuring, click"
+" the right mouse button. Now it is possible to copy all your line "
+"measurements at once to the clipboard using the :guilabel:`Copy All` button."
+msgstr ""
+"|measure| :sup:`Matuoti liniją` matuoja atstumus tarp nurodytų taškų. "
+"Įrankis tada leidžia jums spausti taškus žemėlapyje. Kiekvieno segmento "
+"ilgis, kartu su suminiu ilgiu, rodomas matavimo lange. Kad sustabdytumėte "
+"matavimą, spauskite dešinį pelės mygtuką. Dabar galite nukopijuoti visus "
+"savo matavimus vienu metu į iškarpinę, naudojant mygtuką "
+":guilabel:`Kopijuoti`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1044
+msgid ""
+"Note that you can use the drop-down list near the total to change the "
+"measurement units interactively while working with the measure tool "
+"('Meters', 'Kilometers', 'Feet', 'Yards', 'Miles', 'Nautical miles', "
+"'Centimeters', 'Millimeters', 'Degrees', 'Map units'). This unit is retained"
+" for the widget until a new project is created or another project is opened."
+msgstr ""
+"Pastebėtina, kad jūs galite naudoti iškrentantį sąrašą greta „iš viso“, jei "
+"norite interaktyviai pakeisti matavimo vienetus kol dirbate su matavimo "
+"įrankiu ('Metrai', 'Kilometrai', 'Pėdos', 'Jardai', 'Mylios', 'Jūrmylės', "
+"'Centimetrai', 'Milimetrai', 'Laipsniai', 'Žemėlapio vienetai'). Šie "
+"vienetai išlieka valdiklyje kol sukuriamas naujas arba atveriamas kitas "
+"projektas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1050
+msgid ""
+"The :guilabel:`Info` section in the dialog explains how calculations are "
+"made according to the CRS settings available."
+msgstr ""
+"Dialogo skiltis :guilabel:`Informacija` paaiškina kaip vykdomi skaičiavimai "
+"pagal turimus CRS nustatymus."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1062
+msgid "Measure Distance"
+msgstr "Atstumo matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1064
+msgid ""
+"|measureArea| :sup:`Measure Area`: Areas can also be measured. In the "
+"measure window, the accumulated area size appears. Right-click to stop "
+"drawing. The Info section is also available as well as the ability to switch"
+" between different area units ('Square meters', 'Square kilometers', 'Square"
+" feet', 'Square yards', 'Square miles', 'Hectares', 'Acres', 'Square "
+"centimeters', 'Square millimeters', 'Square nautical miles', 'Square "
+"degrees', 'Map units')."
+msgstr ""
+"|measureArea| :sup:`Matuoti plotą`: galima matuoti ir plotą. Matavimo lange "
+"pasirodo suminis plotas. Spauskite dešinį mygtuką, kad baigtumėte braižymą. "
+"Taipogi yra ir informacijos skiltis, kaip ir galimybė persijungti tarp "
+"skirtingų ploto vienetų ('Kvadratiniai metrai', 'Kvadratiniai kilometrai', "
+"'Kvadratinės pėdos', 'Kvadratiniai jardai', 'Kvadratinės mylios', "
+"'Hektarai', 'Arai', 'Kvadratiniai centimetrai', 'Kvadratiniai milimetrai', "
+"'Kvadratinės jūrmylės', 'Kvadratiniai laipsniai, 'Žemėlapio vienetai')."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1076
+msgid "Measure Area"
+msgstr "Ploto matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1078
+msgid ""
+"|measureBearing| :sup:`Measure Bearing`: You can also measure bearings. The "
+"cursor becomes cross-shaped. Click to draw the first point of the bearing, "
+"then move the cursor to draw the second point. The measurement is displayed "
+"in a pop-up dialog."
+msgstr ""
+"|measureBearing| :sup:`Matuoti kryptį`: Jūs galite matuoti kryptis. Žymeklio"
+" forma pasikeičia į kryžių. Spauskite, kad nubrėžtumėte pirmą krypties "
+"tašką, tada perkelkite žymeklį, kad nubrėžtumėte antrą tašką. Matavimas "
+"rodomas iššokančiame dialoge."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1088
+msgid "Measure Bearing"
+msgstr "Krypties matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1090
+msgid ""
+"|measureAngle| :sup:`Measure Angle`: You can also measure angles. The cursor"
+" becomes cross-shaped. Click to draw the first segment of the angle you wish"
+" to measure, then move the cursor to draw the desired angle. The measurement"
+" is displayed in a pop-up dialog."
+msgstr ""
+"|measureAngle| :sup:`Matuoti kampą`: Jūs taip pat galite matuoti kampus. "
+"Žymeklis tampa kryžiuku. Spauskite, kad nubrėžtumėte pirmą matuojamo kampo "
+"segmentą, tada tempkite žymeklį, kad nubraižytumėte norimą kampą. Matavimai "
+"rodomi iššokančiame dialoge."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1100
+msgid "Measure Angle"
+msgstr "Kampo matavimas"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1106
 msgid "Setting additional map views"
 msgstr "Papildomų žemėlapio vaizdų kūrimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1108
+msgid ""
+"It is also possible to open additional map views whose content could diverge"
+" from the :guilabel:`Layers` panel current state. To add a new map view, go "
+"to :menuselection:`View -->` |newMap| :menuselection:`New Map View`. A new "
+"floating widget, mimicking the main map view's rendering, is added to QGIS. "
+"You can add as many map views as you need. They can be kept floating, placed"
+" side by side or stacked on top of each other."
+msgstr ""
+"Taipogi galima pridėti papildomus žemėlapio vaizdus, kurių turinys gali "
+"nukrypti nuo :guilabel:`Sluoksnių` skydelio esamos būsenos. Kad pridėtumėte "
+"naują žemėlapio vaizdą, eikite į :menuselection:`Rodymas -->` |newMap| "
+":menuselection:`Naujas žemėlapio vaizdas`. Į QGIS bus pridėtas naujas "
+"plaukiojantis valdiklis, atkartojantis pagrindinio žemėlapio vaizdą. Jūs "
+"galite pridėti tiek vaizdų, kiek tik norite. Juos galima palikti plaukioti, "
+"pridėti vieną greta kito ar vieną virš kito."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1319
 msgid "newMap"
@@ -2813,6 +3067,16 @@ msgstr ""
 "|checkbox| :guilabel:`Eksportuoti RDF metaduomenis` - pridedami dokumento "
 "duomenys, tokie kaip pavadinimas, autorius, data, aprašymas..."
 
+#: ../../docs/user_manual/map_views/map_view.rst:1221
+msgid ""
+"|unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`: Generate a "
+"`georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_. You "
+"can:"
+msgstr ""
+"|unchecked| :guilabel:`Kurti geoerdvinį PDF (GeoPDF)`: Sukuria `geografiškai"
+" pririštą PDF failą <https://gdal.org/drivers/raster/pdf.html>`_. Jūs "
+"galite:"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1225
 msgid "Choose the GeoPDF :guilabel:`Format`"
 msgstr "Parinkti GeoPDF :guilabel:`Formatą`"
@@ -2827,9 +3091,34 @@ msgstr ""
 "faile: įtrauks visus geometrijų atributus iš geoobjektų, matomų išvesties "
 "GeoPDF faile."
 
+#: ../../docs/user_manual/map_views/map_view.rst:1233
+msgid ""
+"A GeoPDF file can also be used as a data source. For more on GeoPDF support "
+"in QGIS, see https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/."
+msgstr ""
+"GeoPDF failą taipogi galima naudoti kaip duomenų šaltinį. Daugiau "
+"informacijos apie GeoPDF palaikymą QGIS'e, žiūrėkite https://north-"
+"road.com/2019/09/03/qgis-3-10-loves-geopdf/."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1237
 msgid ":guilabel:`Rasterize map`"
 msgstr ":guilabel:`Rastrizuoti žemėlapį`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1238
+msgid ""
+"|checkbox| :guilabel:`Simplify geometries to reduce output file size`: "
+"Geometries will be simplified while exporting the map by removing vertices "
+"that are not discernibly different at the export resolution (e.g. if the "
+"export resolution is ``300 dpi``, vertices that are less than ``1/600 inch``"
+" apart will be removed). This can reduce the size and complexity of the "
+"export file (very large files can fail to load in other applications)."
+msgstr ""
+"|checkbox| :guilabel:`Paprastinti geometrijas failo dydžio sumažinimui`: "
+"Geometrijos bus supaprastintos pašalinant viršūnes, kurios nekeičia vaizdo "
+"eksporto rezoliucijoje (pvz. jei eksporto rezoliucija yra ``300 dpi``, "
+"viršūnės, kurios yra arčiau viena kitos nei ``1/600 colio``, bus "
+"pašalintos). Tai gali sumažinti eksportuojamo failo dydį ir sudėtingumą "
+"(labai didelių failų kai kurios programos gali nesugebėti atidaryti)."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1246
 msgid ""
