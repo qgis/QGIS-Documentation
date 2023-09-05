@@ -368,7 +368,7 @@ Create a file :file:`deployments.yaml` with this content:
   kind: Deployment
   metadata:
     name: qgis-server
-    namespace: qgis-server
+    namespace: default
   spec:
     replicas: 1
     selector:
@@ -407,7 +407,7 @@ Create a file :file:`deployments.yaml` with this content:
   kind: Deployment
   metadata:
     name: qgis-nginx
-    namespace: qgis-server
+    namespace: default
   spec:
     replicas: 1
     selector:
@@ -543,7 +543,7 @@ To clean up, type:
 
 .. code-block:: bash
 
-  kubectl delete -n default service/qgis-server service/qgis-nginx deployment/qgis-nginx deployment/qgis-server
+  kubectl delete service/qgis-server service/qgis-nginx deployment/qgis-nginx deployment/qgis-server configmap/nginx-configuration
 
 Cloud deployment
 ================
