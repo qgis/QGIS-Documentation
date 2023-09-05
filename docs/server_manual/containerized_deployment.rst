@@ -247,21 +247,21 @@ Now that you have Swarm working, create the service file (see
       # Should use version with utf-8 locale support:
       image: qgis-server:latest
       volumes:
-      - REPLACE_WITH_FULL_PATH/data:/data:ro
+        - REPLACE_WITH_FULL_PATH/data:/data:ro
       environment:
-      - LANG=en_EN.UTF-8
-      - QGIS_PROJECT_FILE=/data/osm.qgs
-      - QGIS_SERVER_LOG_LEVEL=0  # INFO (log all requests)
-      - DEBUG=1                  # display env before spawning QGIS Server
+        - LANG=en_EN.UTF-8
+        - QGIS_PROJECT_FILE=/data/osm.qgs
+        - QGIS_SERVER_LOG_LEVEL=0  # INFO (log all requests)
+        - DEBUG=1                  # display env before spawning QGIS Server
   
     nginx:
       image: nginx:1.13
       ports:
-      - 8080:80
+        - 8080:80
       volumes:
-      - REPLACE_WITH_FULL_PATH/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+        - REPLACE_WITH_FULL_PATH/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       depends_on:
-      - qgis-server
+        - qgis-server
   
 
 To deploy (or update) the stack, type:
@@ -382,7 +382,7 @@ Create a file :file:`deployments.yaml` with this content:
         containers:
           - name: qgis-server
             image: localhost:32000/qgis-server:latest
-            imagePullPolicy: IfNotPresent
+            imagePullPolicy: Always
             env:
               - name: LANG
                 value: en_EN.UTF-8
@@ -425,11 +425,35 @@ Create a file :file:`deployments.yaml` with this content:
               - containerPort: 80
             volumeMounts:
               - name: nginx-conf
-                mountPath: /etc/nginx/conf.d/default.conf
+                mountPath: /etc/nginx/conf.d/
         volumes:
           - name: nginx-conf
-            hostPath:
-              path: REPLACE_WITH_FULL_PATH/nginx.conf
+            configMap:
+              name: nginx-configuration
+  
+  ---
+  kind: ConfigMap 
+  apiVersion: v1 
+  metadata: 
+    name: nginx-configuration
+  data: 
+    nginx.conf: |
+      server {
+        listen 80;
+        server_name _;
+        location / {
+          root  /usr/share/nginx/html;
+          index index.html index.htm;
+        }
+        location /qgis-server {
+          proxy_buffers 16 16k;
+          proxy_buffer_size 16k;
+          gzip off;
+          include fastcgi_params;
+          fastcgi_pass qgis-server:5555;
+          }
+        }
+
 
 Service manifests
 """""""""""""""""
@@ -479,7 +503,7 @@ To deploy or update your manifests:
 
 .. code-block:: bash
 
-  kubectl apply -k ./
+  kubectl apply -f ./
 
 To check what is currently deployed:
 
@@ -519,7 +543,7 @@ To clean up, type:
 
 .. code-block:: bash
 
-  kubectl delete -n default service/qgis-server service/qgis-nginx deployment/qgis-nginx deployment/qgis-server
+  kubectl delete service/qgis-server service/qgis-nginx deployment/qgis-nginx deployment/qgis-server configmap/nginx-configuration
 
 Cloud deployment
 ================
