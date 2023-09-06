@@ -2319,6 +2319,17 @@ Common settings
 Regardless the type of widget applied to the field, there are some common
 properties you can set to control whether and how a field can be edited.
 
+Widget display
+^^^^^^^^^^^^^^
+
+Only available for the :ref:`Drag and drop <drag_drop_designer>` designer mode,
+this group helps you configure the look of the widget assigned to the field:
+
+* :guilabel:`Show label`: indicates whether the field name should be displayed in the form
+* :guilabel:`Override label color`: applies specific color to the field's label
+* :guilabel:`Override label font`: applies specific font properties (bold, italic, underline,
+  strikethrough, or font family) to the field's label
+
 General options
 ^^^^^^^^^^^^^^^
 
@@ -2342,16 +2353,7 @@ General options
 * |checkbox| :guilabel:`Label on top`: places the field name above or beside
   the widget in the feature form.
 
-Widget display
-^^^^^^^^^^^^^^
-
-Only available for the :ref:`Drag and drop <drag_drop_designer>` designer mode,
-this group helps you configure the look of the widget assigned to the field:
-
-* :guilabel:`Show label`: indicates whether the field name should be displayed in the form
-* :guilabel:`Override label color`: applies specific color to the field's label
-* :guilabel:`Override label font`: applies specific font properties (bold, italic, underline,
-  strikethrough, or font family) to the field's label
+.. _constraints:
 
 Constraints
 ^^^^^^^^^^^
@@ -2380,6 +2382,8 @@ constraints and:
   * An orange cross can not be ignored and does not allow you to save your
     modifications until they meet the constraints. It appears when the
     |checkbox| :guilabel:`Enforce constraint` option is checked (``hard constraint``).
+
+.. _default_values:
 
 Default values
 ^^^^^^^^^^^^^^
@@ -2411,17 +2415,17 @@ Default values
 Policies
 ^^^^^^^^
 
-* :guilabel:`Policies` allows you to easily determine the current policy when splitting
-  features, you can change it as desired:
+:guilabel:`Policies` allows you to easily determine the current policy when splitting
+features, you can change it as desired:
 
-  * :guilabel:`Duplicate Values`: Copies the current field value without change.
-  * :guilabel:`Use Default Value`: Resets the field by recalculating its defaults values.
-  * :guilabel:`Remove Value`: Clears the field to an unset state.
-  * :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions
-    by multiplying the existing value by ratio of the split parts lengths or areas.
+* :guilabel:`Duplicate Values`: Keeps the existing value of the field for the 
+  resulting split features.
+* :guilabel:`Use Default Value`: Resets the field by recalculating its defaults values.
+* :guilabel:`Remove Value`: Clears the field to an unset state.
+* :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions 
+  by multiplying the existing value by ratio of the split parts lengths or areas.
 
 
-.. _constraints:
 
 .. _edit_widgets:
 
