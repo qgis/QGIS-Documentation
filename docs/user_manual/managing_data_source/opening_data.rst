@@ -43,14 +43,12 @@ More than 80 vector and 140 raster formats are supported by
 
 .. note::
 
-   Not all of the listed formats may work in QGIS for various reasons. For
-   example, some require external proprietary libraries, or the GDAL/OGR
+   Not all of the listed formats may work in QGIS for various reasons.
+   For example, some require external proprietary libraries, or the GDAL/OGR
    installation of your OS may not have been built to support the format you
    want to use. To see the list of available formats, run the command line
    ``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster),
    or check the :menuselection:`Settings --> Options --> GDAL` menu in QGIS.
-
-.. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
 .. _datasourcemanager:
 
@@ -148,19 +146,16 @@ hierarchically, and there are several top level entries:
 
    * |geoPackage| :guilabel:`GeoPackage`
    * |spatialite| :guilabel:`SpatiaLite`
-   * |postgis| :guilabel:`PostGIS`
+   * |postgis| :guilabel:`PostgreSQL`
+   * |hana| :guilabel:`SAP HANA`
    * |mssql| :guilabel:`MS SQL Server`
    * |oracle| :guilabel:`Oracle`
-   * |hana| :guilabel:`SAP HANA`
    * |wms| :guilabel:`WMS/WMTS`
    * |vectorTileLayer| :guilabel:`Vector Tiles`
    * |xyz| :guilabel:`XYZ Tiles`
    * |wcs| :guilabel:`WCS`
    * |wfs| :guilabel:`WFS/OGC API-Features`
-   * |ows| :guilabel:`OWS`
-   * |ams| :guilabel:`ArcGIS Map Service`
-   * |afs| :guilabel:`ArcGIS Feature Service`
-   * |geonode| :guilabel:`GeoNode`
+   * |afs| :guilabel:`ArcGIS REST Server`
 
 Interacting with the Browser items
 ----------------------------------
@@ -651,16 +646,22 @@ tool which allows you to:
 In the :guilabel:`DWG/DXF Import` dialog, to import the drawing file
 contents:
 
-#. Input the location of the :guilabel:`Target package`, i.e. the new
-   GeoPackage file that will store the data.
-   If an existing file is provided, then it will be overwritten.
+#. Input the location of the :guilabel:`Source drawing`, i.e. the DWG/DXF drawing
+   file to import.
 #. Specify the coordinate reference system of the data in the drawing file.
-#. Check |checkbox| :guilabel:`Expand block references` to import the
-   blocks in the drawing file as normal elements.
+#. Input the location of the :guilabel:`Target package`, i.e. the GeoPackage file
+   that will store the data. If an existing file is provided, then it will be 
+   overwritten.
+#. Choose how to import ``blocks`` with the dedicated combobox:
+
+   * :guilabel:`Expand Block Geometries`: imports the blocks in the drawing file as normal elements.
+   * :guilabel:`Expand Block Geometries and Add Insert Points`: imports the blocks in the drawing file as normal elements and adds the insertion point as a point layer.
+   * :guilabel:`Add Only Insert Points`: adds the blocks insertion point as a point layer.
+
 #. Check |checkbox| :guilabel:`Use curves` to promote the imported layers
    to a ``curved`` geometry type.
-#. Use the :guilabel:`Import` button to select the DWG/DXF file to use
-   (one per geopackage).
+#. Use the :guilabel:`Import` button to import the drawing into the destination
+   GeoPackage file.
    The GeoPackage database will be automatically populated with the
    drawing file content.
    Depending on the size of the file, this can take some time.
@@ -671,7 +672,7 @@ populated with the list of layers from the imported file.
 There you can select which layers to add to the QGIS project:
 
 #. At the top, set a :guilabel:`Group name` to group the drawing files
-   in the project.
+   in the project. By default this is set to the filename of the source drawing file.
 #. Check layers to show: Each selected layer is added to an ad hoc group which
    contains vector layers for the point, line, label and area features of the
    drawing layer.
@@ -1530,8 +1531,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |afs| image:: /static/common/mIconAfs.png
    :width: 1.5em
-.. |ams| image:: /static/common/mIconAms.png
-   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
@@ -1543,8 +1542,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
-   :width: 1.5em
-.. |geonode| image:: /static/common/mIconGeonode.png
    :width: 1.5em
 .. |hana| image:: /static/common/mIconHana.png
    :width: 1.5em
@@ -1560,8 +1557,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
-.. |ows| image:: /static/common/mIconOws.png
-   :width: 1.5em
 .. |postgis| image:: /static/common/mIconPostgis.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png

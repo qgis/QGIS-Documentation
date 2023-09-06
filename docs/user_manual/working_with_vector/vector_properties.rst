@@ -3123,7 +3123,8 @@ feature identification:
 
 * The :guilabel:`HTML Map Tip` is specifically created for the map tips: it's
   a more complex and full HTML text mixing fields, expressions and html tags
-  (multiline, fonts, images, hyperlink...).
+  (multiline, fonts, images, hyperlink...). You can use 
+  :guilabel:`HTML Map Tip Preview` for easier design of map tips. 
 
 .. _figure_display_code:
 

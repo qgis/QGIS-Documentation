@@ -94,8 +94,7 @@ Icon                            Substitution                        Icon        
 |addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
 |addDelimitedTextLayer|         ``|addDelimitedTextLayer|``         |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
 |addPostgisLayer|               ``|addPostgisLayer|``               |addOracleLayer|                ``|addOracleLayer|``
-|addAfsLayer|                   ``|addAfsLayer|``                   |addAmsLayer|                   ``|addAmsLayer|``
-|addMeshLayer|                  ``|addMeshLayer|``
+|addAfsLayer|                   ``|addAfsLayer|``                   |addMeshLayer|                  ``|addMeshLayer|``
 |addVectorTileLayer|            ``|addVectorTileLayer|``            |addXyzLayer|                   ``|addXyzLayer|``
 |addVirtualLayer|               ``|addVirtualLayer|``               |addWmsLayer|                   ``|addWmsLayer|``
 |addWcsLayer|                   ``|addWcsLayer|``                   |addWfsLayer|                   ``|addWfsLayer|``
@@ -348,6 +347,7 @@ Icon                            Substitution                        Icon        
 |codeEditor|                    ``|codeEditor|``                    |add|                           ``|add|``
 |relations|                     ``|relations|``                     |layoutItem3DMap|               ``|layoutItem3DMap|``
 |stopwatch|                     ``|stopwatch|``                     |sensor|                        ``|sensor|``
+|clearItem|                     ``|clearItem|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -587,8 +587,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
-.. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
-   :width: 1.5em
 .. |addArrow| image:: /static/common/mActionAddArrow.png
    :width: 1.5em
 .. |addBasicCircle| image:: /static/common/mActionAddBasicCircle.png
@@ -757,6 +755,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
+.. |clearItem| image:: /static/common/mIconClearItem.png
+   :width: 1.5em   
 .. |clip| image:: /static/common/mAlgorithmClip.png
    :width: 1.5em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png

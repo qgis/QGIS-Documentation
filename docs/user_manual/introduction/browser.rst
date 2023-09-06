@@ -216,6 +216,7 @@ each level of the dataset tree.
 |               |                                            +--------------+--------------+------------+------------+---------------+------------+
 |               |                                            | |geoPackage| | |spatialite| | |postgis|  | |hana|     | |mssql|       | |oracle|   |
 |               |                                            | GeoPackage   | SpatiaLite   | PostGIS    | SAP HANA   | MS SQL Server | Oracle     |
+|               |                                            | ([1]_)       |              |            |            |               |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 | Top menu      | Create a :guilabel:`New Connection…`       | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    | |checkbox| |
 |               | to an existing database                    |              |              |            |            |               |            |
@@ -286,48 +287,56 @@ each level of the dataset tree.
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 | Fields        | :guilabel:`Add New Field…`                 | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| |               |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
-| Field         | :guilabel:`Delete Field…`                  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| |               |            |
+| Field         | :guilabel:`Set Alias…`                     | |checkbox|   |              |            |            |               |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
+|               | :guilabel:`Set Comment…`                   | |checkbox|   |              | |checkbox| |            |               |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
+|               | :guilabel:`Delete Field…`                  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| |               |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
+
+
+.. [1] The different entries may also be available for some GDAL supported `vector file formats <https://gdal.org/drivers/vector/index.html>`_
+ such as ESRI File Geodatabase, FlatGeobuf, GeoParquet, NetCDF, ... when compatible.
 
 
 Tiles and Web Services
 ......................
 
-+---------------+----------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Level         | Context menu                                 |                                               Type of services                                       |
-|               |                                              +------------+-------------------+------------+------------+----------------+-------------+------------+
-|               |                                              | |wms|      | |vectorTileLayer| | |xyz|      | |wcs|      | |wfs|          | |afs|       | |geonode|  |
-|               |                                              | WMS / WMTS | Vector Tiles      | XYZ Tiles  | WCS        | WFS / OGC      | ArcGIS REST | GeoNode    |
-|               |                                              |            |                   |            |            | API - Features | Servers     |            |
-+===============+==============================================+============+===================+============+============+================+=============+============+
-| Top menu      | Create a :guilabel:`New Connection…`         | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | Create a :guilabel:`New Generic Connection…` |            | |checkbox|        |            |            |                |             |            |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | Create a :guilabel:`New ArcGIS Vector Tile   |            | |checkbox|        |            |            |                |             |            |
-|               | Service Connection…`                         |            |                   |            |            |                |             |            |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`Save Connections…` details        | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
-|               | to a file                                    |            |                   |            |            |                |             |            |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`Load Connections…`                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
-+---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-| Connection    | :guilabel:`Refresh` connection               | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`Edit…` connection settings        | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`Delete` connection                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`View Service Info` in Web browser |            |                   |            |            |                | |checkbox|  |            |
-+---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-| Table / Layer | :menuselection:`Export Layer --> To File...` | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`Add layer to Project`             | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | Open :guilabel:`Layer properties…` dialog    | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
-|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`View Service Info` in Web browser |            |                   |            |            |                | |checkbox|  |            |
-+---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
++---------------+----------------------------------------------+-----------------------------------------------------------------------------------------+
+| Level         | Context menu                                 |                                               Type of services                          |
+|               |                                              +------------+-------------------+------------+------------+----------------+-------------+
+|               |                                              | |wms|      | |vectorTileLayer| | |xyz|      | |wcs|      | |wfs|          | |afs|       |
+|               |                                              | WMS / WMTS | Vector Tiles      | XYZ Tiles  | WCS        | WFS / OGC      | ArcGIS REST |
+|               |                                              |            |                   |            |            | API - Features | Servers     |
++===============+==============================================+============+===================+============+============+================+=============+
+| Top menu      | Create a :guilabel:`New Connection…`         | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | Create a :guilabel:`New Generic Connection…` |            | |checkbox|        |            |            |                |             |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | Create a :guilabel:`New ArcGIS Vector Tile   |            | |checkbox|        |            |            |                |             |
+|               | Service Connection…`                         |            |                   |            |            |                |             |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | :guilabel:`Save Connections…` details        | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  |
+|               | to a file                                    |            |                   |            |            |                |             |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | :guilabel:`Load Connections…`                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  |
++---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+| Connection    | :guilabel:`Refresh` connection               | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | :guilabel:`Edit…` connection settings        | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | :guilabel:`Delete` connection                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | :guilabel:`View Service Info` in Web browser |            |                   |            |            |                | |checkbox|  |
++---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+| Table / Layer | :menuselection:`Export Layer --> To File...` | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | :guilabel:`Add layer to Project`             | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | Open :guilabel:`Layer properties…` dialog    | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
+|               | :guilabel:`View Service Info` in Web browser |            |                   |            |            |                | |checkbox|  |
++---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+
 
 
 
@@ -415,8 +424,6 @@ Resources
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
-   :width: 1.5em
-.. |geonode| image:: /static/common/mIconGeonode.png
    :width: 1.5em
 .. |hana| image:: /static/common/mIconHana.png
    :width: 1.5em

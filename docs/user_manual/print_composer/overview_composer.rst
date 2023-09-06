@@ -411,7 +411,7 @@ in :ref:`layout_items` chapter.
  |addBasicRectangle| :menuselection:`--> Add Rectangle`    :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
  |addBasicCircle| :menuselection:`--> Add Ellipse`         :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
  |addBasicTriangle| :menuselection:`--> Add Triangle`      :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
- |addMarker| :guilabel:`Add Marker`                        :guilabel:`Toolbox`
+ |addMarker| :guilabel:`Add Marker`                        :guilabel:`Toolbox`        :ref:`layout_marker_item`
  |addArrow| :guilabel:`Add Arrow`                          :guilabel:`Toolbox`        :ref:`layout_arrow_item`
  |addNodesShape| :menuselection:`Add Node Item -->`        :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
  |addPolygon| :menuselection:`--> Add Polygon`             :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
@@ -458,6 +458,8 @@ layout:
 * :guilabel:`Layout Paths`: to manage list of custom paths to search print
   templates.
 
+The :menuselection:`Settings --> Keyboard Shortcuts...` menu allows you to 
+use the :ref:`shortcuts manager <shortcuts>` in the Print Layout interface.
 
 Contextual menus
 ................

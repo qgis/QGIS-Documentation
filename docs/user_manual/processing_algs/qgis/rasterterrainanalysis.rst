@@ -59,12 +59,13 @@ Parameters
    * - **Aspect**
      - ``OUTPUT``
      - [raster]
+
+       Default: ``[Save to temporary file]``
      - Specify the output aspect raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -86,6 +87,141 @@ Python code
 ...........
 
 **Algorithm ID**: ``qgis:aspect``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisdtmslopebasedfilter:
+
+DTM filter (slope-based)
+------------------------
+
+|334|
+
+Can be used to filter a digital elevation model in order to classify its cells into ground and object (non-ground) cells.
+
+The tool uses concepts as described by Vosselman (2000)
+and is based on the assumption that a large height difference between two nearby cells is unlikely to be caused by a steep slope in the terrain.
+The probability that the higher cell might be non-ground increases when the distance between the two cells decreases.
+Therefore the filter defines a maximum height difference (``dz_max``) between two cells as a function of the distance (``d``) between the cells (``dz_max( d ) = d``).
+A cell is classified as terrain if there is no cell within the kernel radius
+to which the height difference is larger than the allowed maximum height difference at the distance between these two cells.
+
+The approximate terrain slope (``s``) parameter is used to modify the filter function
+to match the overall slope in the study area (``dz_max( d ) = d * s``).
+A 5 % confidence interval (``ci = 1.65 * sqrt( 2 * stddev )``) may be used to modify the filter function even further
+by either relaxing (``dz_max( d ) = d * s + ci``) or amplifying (``dz_max( d ) = d * s - ci``) the filter criterium.
+
+*References: Vosselman, G. (2000): Slope based filtering of laser altimetry data. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942*
+
+.. seealso:: This tool is a port of the SAGA `DTM Filter (slope-based) <https://saga-gis.sourceforge.io/saga_tool_doc/9.1.1/grid_filter_7.html>`_
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Band number**
+     - ``BAND``
+     - [number] [list]
+     - The band of the DEM to consider
+   * - **Kernel radius (pixels)**
+     - ``RADIUS``
+     - [number]
+
+       Default: 5
+     - The radius of the filter kernel (in pixels).
+       Must be large enough to reach ground cells next to non-ground objects.
+   * - **Terrain slope (%, pixel size/vertical units)**
+     - ``TERRAIN_SLOPE``
+     - [number]
+
+       Default: 30
+     - The approximate terrain slope in ``%``.
+       The terrain slope must be adjusted to account for the ratio of height units vs raster pixel dimensions.
+       Used to relax the filter criterium in steeper terrain.
+   * - **Filter modification**
+     - ``FILTER_MODIFICATION``
+     - [list]
+
+       Default: 0
+     - Choose whether to apply the filter kernel without modification
+       or to use a confidence interval to relax or amplify the height criterium.
+
+       * 0 - None
+       * 1 - Relax filter
+       * 2 - Amplify
+   * - **Standard deviation**
+     - ``STANDARD_DEVIATION``
+     - [number]
+
+       Default: 0.1
+     - The standard deviation used to calculate a 5% confidence interval applied to the height threshold.
+   * - **Output layer (ground)**
+
+       Optional
+     - ``OUTPUT_GROUND``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the filtered DEM containing only cells classified as ground.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+
+   * - **Output layer (non-ground objects)**
+
+       Optional
+     - ``OUTPUT_NONGROUND``
+     - [raster]
+
+       Default: ``[Skip output]``
+     - Specify the non-ground objects removed by the filter.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer (ground)**
+     - ``OUTPUT_GROUND``
+     - [raster]
+     - The filtered DEM containing only cells classified as ground.
+   * - **Output layer (non-ground objects)**
+     - ``OUTPUT_NONGROUND``
+     - [raster]
+     - The non-ground objects removed by the filter.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:dtmslopebasedfilter``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -173,12 +309,13 @@ Parameters
    * - **Hillshade**
      - ``OUTPUT``
      - [raster]
+
+       Default: ``Save to temporary file``
      - Specify the output hillshade raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -261,10 +398,9 @@ Parameters
      - Specify the output folder for the hypsometric curves.
        One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
 
 Outputs
 .......
@@ -379,11 +515,13 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output relief raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
    * - **Frequency distribution**
+
+       Optional
      - ``FREQUENCY_DISTRIBUTION``
      - [table]
        
@@ -391,11 +529,9 @@ Parameters
      - Specify the CSV table for the output frequency distribution.
        One of:
 
-       * Skip Output
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......
@@ -478,10 +614,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output ruggedness raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -555,10 +690,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output slope raster layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -584,3 +718,12 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |334| replace:: ``NEW in 3.34``

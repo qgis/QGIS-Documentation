@@ -334,6 +334,7 @@ To create a bookmark:
 #. Enter or select a group name in which to store related bookmarks
 #. Select the extent of the area you wish to save, using the :ref:`extent selector
    <extent_selector>` widget
+#. Change the map :guilabel:`Rotation`   
 #. Indicate the :guilabel:`CRS` to use for the extent
 #. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
    Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list
@@ -404,8 +405,9 @@ You can perform the following tasks:
        You can also drag and drop the bookmark between folders (user and
        project) and subfolders (groups).
 
-You can also zoom to bookmarks by typing the bookmark name in the
-:ref:`locator <label_statusbar>`.
+You can manage bookmark actions by right-click on the desired bookmark in the 
+:guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by typing the 
+bookmark name in the :ref:`locator <label_statusbar>`.
 
 .. index:: Decorations
 .. _decorations:
@@ -913,7 +915,7 @@ menu or from the :guilabel:`Annotations Toolbar`:
 
 .. raw:: html
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="Working with annotations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 * |annotation| :sup:`Move Annotation` to adjust annotation element size or position
   (using click and drag)
@@ -945,6 +947,7 @@ options. This dialog is almost the same for all the annotation types:
 * :guilabel:`Frame style`: sets the frame background color, transparency,
   stroke color or width of the balloon using QGIS symbols.
 * :guilabel:`Contents margins`: sets interior margins of the annotation frame.
+* |checkbox| :guilabel:`Live update` allows you to live preview your changes.
 
 .. _figure_annotation:
 

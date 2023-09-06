@@ -523,18 +523,18 @@ input and output. Below is an alphabetically sorted list:
      - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
      - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
      - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
-   * - :class:`QgsProcessingParameterPointCloudLayer <qgis.core.QgsProcessingParameterPointCloudLayer>`
+   * - :class:`QgsProcessingParameterPointCloudAttribute <qgis.core.QgsProcessingParameterPointCloudAttribute>`
+     - :class:`QgsProcessingParameterPointCloudLayer <qgis.core.QgsProcessingParameterPointCloudLayer>`
      - :class:`QgsProcessingParameterProviderConnection <qgis.core.QgsProcessingParameterProviderConnection>`
      - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
-     - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
-   * - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
+   * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
+     - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
      - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
      - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
-     - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
-   * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
+   * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
+     - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
+     - :class:`QgsProcessingParameterVectorTileDestination <qgis.core.QgsProcessingParameterVectorTileDestination>`
      - :class:`QgsProcessingParameterVectorTileWriterLayers <qgis.core.QgsProcessingParameterVectorTileWriterLayers>`
-     -
-     -
 
 
 The first parameter to the constructors is the name of the parameter,
