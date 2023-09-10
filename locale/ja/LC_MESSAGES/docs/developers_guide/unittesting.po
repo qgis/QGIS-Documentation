@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,6 +42,27 @@ msgstr ""
 #: ../../docs/developers_guide/unittesting.rst:19
 msgid "The QGIS testing framework - an overview"
 msgstr "QGISのテストフレームワーク - 概要"
+
+#: ../../docs/developers_guide/unittesting.rst:21
+msgid ""
+"Unit testing is carried out using a combination of QTestLib (the Qt testing "
+"library) and CTest (a framework for compiling and running tests as part of "
+"the CMake build process). Lets take an overview of the process before we "
+"delve into the details:"
+msgstr ""
+"ユニットテストは、QTestLib（Qtのテストライブラリ）とCTest（CMakeのビルドプロセスの一部としてテストをコンパイルして実行するためのフレームワーク）の組み合わせを使って行われます。詳細に入る前に、プロセスの概要を説明しましょう："
+
+#: ../../docs/developers_guide/unittesting.rst:26
+msgid ""
+"There is some code you want to test, e.g. a class or function. Extreme "
+"programming advocates suggest that the code should not even be written yet "
+"when you start building your tests, and then as you implement your code you "
+"can immediately validate each new functional part you add with your test. In"
+" practice you will probably need to write tests for pre-existing code in "
+"QGIS since we are starting with a testing framework well after much "
+"application logic has already been implemented."
+msgstr ""
+"テストしたいコード、たとえばクラスや関数があるとします。エクストリーム・プログラミングの提唱者たちは、コードは、テストを作る前に書いてはならない、そうすればコードを実装したときに、追加した新しい機能の箇所をテストを使ってすぐに検証することができる、と提唱しています。実際には、多くのアプリケーションロジックが実装された後にテストフレームワークを開始するため、QGISの既存のコードに対してテストを記述する必要があるでしょう。"
 
 #: ../../docs/developers_guide/unittesting.rst:34
 msgid ""
@@ -75,6 +97,18 @@ msgstr ""
 "``ENABLE_TESTING`` "
 "がccmake/cmakesetupで有効になっていることを確認します。これは、makeと入力すると、テストが実際にコンパイルされることを保証します。"
 
+#: ../../docs/developers_guide/unittesting.rst:50
+msgid ""
+"You optionally add test data to ``<QGIS Source Dir>/tests/testdata`` if your"
+" test is data driven (e.g. needs to load a shapefile). These test data "
+"should be as small as possible and wherever possible you should use the "
+"existing datasets already there. Your tests should never modify this data in"
+" situ, but rather make a temporary copy somewhere if needed."
+msgstr ""
+"テストがデータ駆動型の場合（シェープファイルを読み込む必要があるなど）、オプションで ``<QGIS Source Dir> "
+"/tests/testdata`` "
+"にテストデータを追加することもできます。これらのテストデータはできるだけ小さくし、可能な限り既存のデータセットを使用します。テストは決してその場でこのデータを変更してはならず、必要な場合は一時的なコピーをどこかに作るべきです。"
+
 #: ../../docs/developers_guide/unittesting.rst:56
 msgid ""
 "You compile your sources and install. Do this using normal ``make && (sudo)"
@@ -82,9 +116,50 @@ msgid ""
 msgstr ""
 "ソースをコンパイルしてインストールします。これは通常の ``make && (sudo) make install`` 手順を使用して実行します。"
 
+#: ../../docs/developers_guide/unittesting.rst:59
+msgid ""
+"You run your tests. This is normally done simply by doing ``make test`` "
+"after the ``make install`` step, though we will explain other approaches "
+"that offer more fine grained control over running tests."
+msgstr ""
+"テストを実行します。通常は ``make install`` の後に ``make test`` "
+"を実行するだけですが、テストの実行をより細かく制御する他の方法についても説明します。"
+
+#: ../../docs/developers_guide/unittesting.rst:64
+msgid ""
+"Right with that overview in mind, we will delve into a bit of detail. We've "
+"already done much of the configuration for you in CMake and other places in "
+"the source tree so all you need to do are the easy bits - writing unit "
+"tests!"
+msgstr ""
+"概要を理解した上で、もう少し詳しく説明します。すでにCMakeやソースツリーの他の場所で、あなたのために多くの設定を行っているので、あなたがする必要があるのは簡単なこと、つまりユニットテストを書くことだけです！"
+
 #: ../../docs/developers_guide/unittesting.rst:70
 msgid "Creating a unit test"
 msgstr "ユニットテストの作成"
+
+#: ../../docs/developers_guide/unittesting.rst:72
+msgid ""
+"Creating a unit test is easy - typically you will do this by just creating a"
+" single :file:`.cpp` file (no :file:`.h` file is used) and implement all "
+"your test methods as public methods that return void. We'll use a simple "
+"test class for ``QgsRasterLayer`` throughout the section that follows to "
+"illustrate. By convention we will name our test with the same name as the "
+"class they are testing but prefixed with 'Test'. So our test implementation "
+"goes in a file called :file:`testqgsrasterlayer.cpp` and the class itself "
+"will be ``TestQgsRasterLayer``. First we add our standard copyright banner:"
+msgstr ""
+"ユニットテストの作成は簡単で、通常は :file:`.cpp` ファイルを1つ作成し（ :file:`.h` "
+"ファイルは使用しない）、すべてのテストメソッドを void を返す public メソッドとして実装するだけです。この後のセクションで "
+"``QgsRasterLayer`` の簡単なテストクラスを使って説明します。テストの名前は、慣例として、テストするクラスと同じ名前にプレフィックス "
+"'Test' を付けます。ですから、テストの実装は :file:`testqgsrasterlayer.cpp` というファイルに記述し、クラス名は "
+"``TestQgsRasterLayer`` となります。最初に標準的なコピーライトのバナーを追加します："
+
+#: ../../docs/developers_guide/unittesting.rst:98
+msgid ""
+"Next we start our includes needed for the tests we plan to run. There is one"
+" special include all tests should have:"
+msgstr "次に、実行予定のテストに必要なインクルードを開始します。すべてのテストが持つべき特別なインクルードがひとつあります："
 
 #: ../../docs/developers_guide/unittesting.rst:105
 msgid ""
@@ -135,9 +210,53 @@ msgid ""
 msgstr ""
 "Qtではまた、テストをデータ駆動するためのいくつかの他の興味深いメカニズムを提供していますので、この話題に関してもっと知りたいと興味をお持ちの方は、Qtのドキュメントを参照してください。"
 
+#: ../../docs/developers_guide/unittesting.rst:313
+msgid "QCOMPARE ( *actual, expected* )"
+msgstr "QCOMPARE ( *actual, expected* )"
+
+#: ../../docs/developers_guide/unittesting.rst:314
+msgid "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
+msgstr "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
+
+#: ../../docs/developers_guide/unittesting.rst:315
+msgid "QFAIL ( *message* )"
+msgstr "QFAIL ( *message* )"
+
 #: ../../docs/developers_guide/unittesting.rst:316
 msgid "QFETCH ( *type, name* )"
 msgstr ""
+
+#: ../../docs/developers_guide/unittesting.rst:317
+msgid "QSKIP ( *description, mode* )"
+msgstr "QSKIP ( *description, mode* )"
+
+#: ../../docs/developers_guide/unittesting.rst:318
+msgid "QTEST ( *actual, testElement* )"
+msgstr "QTEST ( *actual, testElement* )"
+
+#: ../../docs/developers_guide/unittesting.rst:319
+msgid "QTEST_APPLESS_MAIN ( *TestClass* )"
+msgstr "QTEST_APPLESS_MAIN ( *TestClass* )"
+
+#: ../../docs/developers_guide/unittesting.rst:320
+msgid "QTEST_MAIN ( *TestClass* )"
+msgstr "QTEST_MAIN ( *TestClass* )"
+
+#: ../../docs/developers_guide/unittesting.rst:321
+msgid "QTEST_NOOP_MAIN ()"
+msgstr "QTEST_NOOP_MAIN ()"
+
+#: ../../docs/developers_guide/unittesting.rst:322
+msgid "QVERIFY2 ( *condition, message* )"
+msgstr "QVERIFY2 ( *condition, message* )"
+
+#: ../../docs/developers_guide/unittesting.rst:323
+msgid "QVERIFY ( *condition* )"
+msgstr "QVERIFY ( *condition* )"
+
+#: ../../docs/developers_guide/unittesting.rst:324
+msgid "QWARN ( *message* )"
+msgstr "QWARN ( *message* )"
 
 #: ../../docs/developers_guide/unittesting.rst:326
 msgid ""
