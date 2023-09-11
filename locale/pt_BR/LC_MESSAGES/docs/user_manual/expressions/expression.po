@@ -8,6 +8,7 @@
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
 # Fernanda Martins, 2023
+# Kyle Felipe Vieira Roberto <kylefelipe@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:53+0000\n"
-"Last-Translator: Fernanda Martins, 2023\n"
+"Last-Translator: Kyle Felipe Vieira Roberto <kylefelipe@gmail.com>, 2023\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -233,6 +234,11 @@ msgstr "|fileNew|:sup:`Limpar o editor de expressão`"
 msgid "fileNew"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression.rst:112
+msgid "Create and manage :ref:`user expressions <user_expressions_functions>`"
+msgstr ""
+"Criar e gerenciar :ref:`expressões do usuário <user_expressions_functions>`"
+
 #: ../../docs/user_manual/expressions/expression.rst:114
 msgid "Under the expression editor, you find:"
 msgstr "No editor de expressões, você encontra:"
@@ -242,9 +248,45 @@ msgid "A set of basic operators to help you build the expression"
 msgstr ""
 "Um conjunto de operadores básicos para ajudá-lo a construir a expressão"
 
+#: ../../docs/user_manual/expressions/expression.rst:117
+msgid ""
+"An indication of the expected format of output when you are data-defining "
+"feature properties"
+msgstr ""
+"Uma indicação do formato esperado quando você está definindo propriedades de"
+" uma feição."
+
+#: ../../docs/user_manual/expressions/expression.rst:119
+msgid ""
+"A live :guilabel:`Output preview` of the expression (up to 60 characters), "
+"evaluated on the first feature of the Layer by default. To view output "
+"preview text exceeding 60 characters, you can hover your cursor over the "
+"text to display a tooltip pop-up containing the entire output preview. To "
+"copy the output preview text onto your clipboard, right-click on the output "
+"preview text and select |editCopy| :guilabel:`Copy Expression Value`."
+msgstr ""
+"Uma :guilabel:`Pré visualização de saída` ao vido da expressão (até 60 "
+"caracteres), abaliada na primeira feição da camada por padrão. Para "
+"visualizar o texto de visualização de saída com mais de 60 caracteres, você "
+"pode passar o cursor sobre o texto para exibir um pop-up de dica de "
+"ferramenta contendo toda a visualização de saída Para copiar o texto de "
+"visualização de saída para sua área de transferência, clique com o botão "
+"direito no texto de visualização de saída e selecione |editCopy| "
+":guilabel:`Copiar valor da expressão`."
+
 #: ../../docs/user_manual/expressions/expression.rst:440
 msgid "editCopy"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:126
+msgid ""
+"You can browse and evaluate other features of the layer using the "
+":guilabel:`Feature` combobox (the values are taken from the :ref:`display "
+"name <maptips>` property of the layer)."
+msgstr ""
+"Você pode navegar e avaliar outras feições da camada utilizando a "
+":guilabel:`Feature` combobox (os valores serão a partir do :ref:`nome "
+"exibido <maptips>` da propriedade da camada)."
 
 #: ../../docs/user_manual/expressions/expression.rst:130
 msgid ""
@@ -757,6 +799,31 @@ msgstr ""
 "Aqui está um pequeno exemplo de como criar sua própria função ``my_sum`` que"
 " irá operar com dois valores."
 
+#: ../../docs/user_manual/expressions/expression.rst:385
+msgid "The ``@qgsfunction`` decorator accepts the following arguments:"
+msgstr "O decorador ``@qgsfunction`` aceita os seguintes argumentos:"
+
+#: ../../docs/user_manual/expressions/expression.rst:387
+msgid ""
+"``args``: the number of arguments. When using the ``args='auto'`` argument "
+"the number of function arguments required will be calculated by the number "
+"of arguments the function has been defined with in Python (minus 2 - "
+"``feature``, and ``parent``). With ``args = -1``, any number of arguments "
+"are accepted."
+msgstr ""
+"``args``: Número de argumentos. Quando utilizar o argumento ``args='auto'`` "
+"o número de argumentos necessários será calculado pelo número de argumentos "
+"com os quais a função foi definida em Python (menos 2 - ``feature``, and "
+"``parent``). Com ``args = -1``, qualquer número de argumentos será aceito."
+
+#: ../../docs/user_manual/expressions/expression.rst:391
+msgid ""
+"The ``group`` argument indicates the group in which the function should be "
+"listed in the Expression dialog."
+msgstr ""
+"O argumento ``group`` indica em qual grupo a função deverá ser listada no "
+"Diálogo de expressões."
+
 #: ../../docs/user_manual/expressions/expression.rst:393
 msgid ""
 "``usesgeometry=True`` if the expression requires access to the features "
@@ -783,6 +850,41 @@ msgstr ""
 "``referenced_columns=[list]```: Uma array de nomes de atributos que são "
 "necessários para a função. O padrão é "
 "``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
+
+#: ../../docs/user_manual/expressions/expression.rst:401
+msgid "The function itself allows following arguments:"
+msgstr "A função em si permite os seguintes argumentos:"
+
+#: ../../docs/user_manual/expressions/expression.rst:403
+msgid ""
+"any number and type of parameters you want to pass to your function, set "
+"before the following arguments."
+msgstr ""
+"qualquer número e tipo de parâmetros que você desejar passar para a função, "
+"configurados  antes dos seguintes argumentos."
+
+#: ../../docs/user_manual/expressions/expression.rst:405
+msgid "``feature``: the current feature"
+msgstr "``feature``: a feição atual"
+
+#: ../../docs/user_manual/expressions/expression.rst:406
+msgid ""
+"``parent``: the :class:`QgsExpression <qgis.core.QgsExpression>` object"
+msgstr "``parent``: o objeto :class:`QgsExpression <qgis.core.QgsExpression>`"
+
+#: ../../docs/user_manual/expressions/expression.rst:407
+msgid ""
+"``context``: If there is an argument called ``context`` found at the last "
+"position, this variable will contain a :class:`QgsExpressionContext "
+"<qgis.core.QgsExpressionContext>` object, that gives access to various "
+"additional information like expression variables. E.g. ``context.variable( "
+"'layer_id' )``"
+msgstr ""
+"``context``: se houver um argumento chamado ``context`` na última posição, "
+"esta variável irá conter um objeto :class:`QgsExpressionContext "
+"<qgis.core.QgsExpressionContext>` , que fornecerá acesso a várias "
+"informações adicionais como variáveis de expressões. E.g. "
+"``context.variable( 'layer_id' )``"
 
 #: ../../docs/user_manual/expressions/expression.rst:412
 msgid "The previous example function can then be used in expressions:"
