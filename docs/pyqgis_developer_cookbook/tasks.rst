@@ -420,6 +420,11 @@ added to the project in a safe way.
 
   alg = QgsApplication.processingRegistry().algorithmById(
                                         'qgis:randompointsinextent')
+  # `context` and `feedback` need to 
+  # live for as least as long as `task`,
+  # otherwise the program will crash.
+  # Initializing them globally is a sure way
+  # of avoiding this unfortunate situation.
   context = QgsProcessingContext()
   feedback = QgsProcessingFeedback()
   params = {
