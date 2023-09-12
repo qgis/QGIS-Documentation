@@ -36,6 +36,9 @@ msgid ""
 "<https://devguide.python.org/documenting/>`_. For convenience, we provide a "
 "set of general rules we rely on for writing QGIS documentation below."
 msgstr ""
+"総じて、QGISプロジェクトのためにreSTドキュメントを作成するときには、 `Python documentation style "
+"guidelines <https://devguide.python.org/documenting/>`_ "
+"に従ってください。簡便のために以下に、QGISドキュメントを書く際に依拠すべき一般的なルールを、一通り示します。"
 
 #: ../../docs/documentation_guidelines/writing.rst:17
 msgid "Writing Documentation"
@@ -47,7 +50,7 @@ msgstr "見出し"
 
 #: ../../docs/documentation_guidelines/writing.rst:22
 msgid "To each webpage of the documentation corresponds a ``.rst`` file."
-msgstr ""
+msgstr "ドキュメントのそれぞれのウェブページには、ひとつの ``.rst`` ファイルが対応しています。"
 
 #: ../../docs/documentation_guidelines/writing.rst:24
 msgid ""
@@ -56,36 +59,37 @@ msgid ""
 "use same character for underline adornment. In QGIS Documentation, you "
 "should use following styles for chapter, section, subsection and minisec."
 msgstr ""
+"本文を構成するセクションは、そのタイトルに下線（及び第1レベルは上線）を引いて識別します。同じレベルのタイトルには下線の装飾に同じ文字を使う必要があります。QGISドキュメントでは、chapter、section、subsectionとminisecに対して以下のスタイルを使用します。"
 
 #: ../../docs/documentation_guidelines/writing.rst:49
 msgid "Lists"
-msgstr ""
+msgstr "リスト"
 
 #: ../../docs/documentation_guidelines/writing.rst:51
 msgid ""
 "Lists are useful for structuring the text.  Here are some simple rules "
 "common to all lists:"
-msgstr ""
+msgstr "リストはテキストを構造化するのに便利です。ここではすべてのリストに共通する簡単な規則を紹介します:"
 
 #: ../../docs/documentation_guidelines/writing.rst:54
 msgid "Start all list items with a capital letter"
-msgstr ""
+msgstr "すべての項目は大文字で始めてください"
 
 #: ../../docs/documentation_guidelines/writing.rst:56
 msgid ""
 "Do not use punctuation after list items that only contain a single simple "
 "sentence"
-msgstr ""
+msgstr "単独の簡単な文のみを含むリスト項目の後には句読点を使わないでください"
 
 #: ../../docs/documentation_guidelines/writing.rst:59
 msgid ""
 "Use period ( ``.`` ) as punctuation for list items that consist of several "
 "sentences or a single compound sentence"
-msgstr ""
+msgstr "複数の文または1つの複合文からなるリスト項目の句読点としてピリオド（ ``.`` ）を使ってください"
 
 #: ../../docs/documentation_guidelines/writing.rst:63
 msgid "Indentation"
-msgstr ""
+msgstr "字下げ"
 
 #: ../../docs/documentation_guidelines/writing.rst:65
 msgid ""
@@ -94,14 +98,18 @@ msgid ""
 "the `Specification "
 "<https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#indentation>`__"
 msgstr ""
+"ReStructuredTextの字下げは、リストまたはマークアップの *マーカー* "
+"に合わせます。また、字下げト付きのブロック引用符を作成することも可能です。`仕様 "
+"<https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#indentation>`_"
+" を参照してください"
 
 #: ../../docs/documentation_guidelines/writing.rst:89
 msgid "Inline Tags"
-msgstr ""
+msgstr "行内タグ"
 
 #: ../../docs/documentation_guidelines/writing.rst:91
 msgid "You can use tags to emphasize items."
-msgstr ""
+msgstr "項目を強調するためにタグを使うことができます。"
 
 #: ../../docs/documentation_guidelines/writing.rst:93
 msgid ""
@@ -109,107 +117,111 @@ msgid ""
 "selecting submenus and choosing a specific operation, or any subsequence of "
 "such a sequence."
 msgstr ""
+"**メニューGUI** "
+"：サブメニューを選択したり、特定の操作、またはこのような配列の何らかの部分配列を選択するなど、メニュー選択の完全な配列をマークします。"
 
 #: ../../docs/documentation_guidelines/writing.rst:101
 msgid ""
 "**Dialogs and Tab titles**: Labels presented as part of an interactive user "
 "interface including window titles, tab titles, button and option labels."
 msgstr ""
+"**ダイアログとタブのタイトル**： "
+"ウィンドウタイトル、タブのタイトル、ボタンやオプションのラベルなど、対話的なユーザーインタフェースの一部として表示されるラベル。"
 
 #: ../../docs/documentation_guidelines/writing.rst:108
 msgid "**Filenames and directories**"
-msgstr ""
+msgstr "**ファイル名とディレクトリ**"
 
 #: ../../docs/documentation_guidelines/writing.rst:114
 msgid "**Icons with popup text**"
-msgstr ""
+msgstr "**ポップアップテキスト付きアイコン**"
 
 #: ../../docs/documentation_guidelines/writing.rst:120
 msgid "(see `image`_ below)."
-msgstr ""
+msgstr "（ 以下の `画像`_ を参照してください）。"
 
 #: ../../docs/documentation_guidelines/writing.rst:122
 msgid "**Keyboard shortcuts**"
-msgstr ""
+msgstr "**キーボードショートカット**"
 
 #: ../../docs/documentation_guidelines/writing.rst:128
 msgid "will show :kbd:`Ctrl+B`"
-msgstr ""
+msgstr ":kbd:`Ctrl+B` が現れます"
 
 #: ../../docs/documentation_guidelines/writing.rst:130
 msgid ""
 "When describing keyboard shortcuts, the following conventions should be "
 "used:"
-msgstr ""
+msgstr "キーボードショートカットを説明するときは、次の規則を使用してください："
 
 #: ../../docs/documentation_guidelines/writing.rst:133
 msgid "Letter keys are displayed using uppercase: :kbd:`S`"
-msgstr ""
+msgstr "文字キーは大文字を使って表示します: :kbd:`S`"
 
 #: ../../docs/documentation_guidelines/writing.rst:134
 msgid "Special keys are displayed with an uppercase first letter: :kbd:`Esc`"
-msgstr ""
+msgstr "特殊キーは最初の文字を大文字にして表示します: :kbd:`Esc`"
 
 #: ../../docs/documentation_guidelines/writing.rst:135
 msgid ""
 "Key combinations are displayed with a ``+`` sign between keys, without "
 "spaces: :kbd:`Shift+R`"
-msgstr ""
+msgstr "キーの組み合わせはキー同士の間に空白を入れずに ``+`` 記号を表示します: :kbd:`Shift+R`"
 
 #: ../../docs/documentation_guidelines/writing.rst:138
 msgid "**User text**"
-msgstr ""
+msgstr "**ユーザーテキスト**"
 
 #: ../../docs/documentation_guidelines/writing.rst:148
 msgid "Labels/references"
-msgstr ""
+msgstr "ラベル／参照"
 
 #: ../../docs/documentation_guidelines/writing.rst:150
 msgid ""
 "Anchors inside the text can be used to create hyperlinks to sections or "
 "pages."
-msgstr ""
+msgstr "セクションやページへのハイパーリンクを作るのにテキスト内のアンカーを使うことができます。"
 
 #: ../../docs/documentation_guidelines/writing.rst:153
 msgid ""
 "The example below creates the anchor of a section (e.g., Label/reference "
 "title)"
-msgstr ""
+msgstr "次の例は、セクションのアンカー（ラベル/参照タイトルなど）を作成します"
 
 #: ../../docs/documentation_guidelines/writing.rst:162
 msgid "To call the reference in the **same page**, use"
-msgstr ""
+msgstr "**同じページ** 内の参照を呼び出すには次を使います"
 
 #: ../../docs/documentation_guidelines/writing.rst:168
 msgid "which will return:"
-msgstr ""
+msgstr "こうなります："
 
 #: ../../docs/documentation_guidelines/writing.rst:170
 msgid "see my_anchor_ for more information."
-msgstr ""
+msgstr "see my_anchor_ for more information."
 
 #: ../../docs/documentation_guidelines/writing.rst:172
 msgid ""
 "Notice that it will jump to the line/thing following the 'anchor'. You do "
 "not need to use apostrophes, but you do need to have empty lines after the "
 "anchor."
-msgstr ""
+msgstr "「アンカー」に従って行/物にジャンプすることに注目してください。アポストロフィを使う必要はありませんが、アンカーの後に空行が必要です。"
 
 #: ../../docs/documentation_guidelines/writing.rst:176
 msgid ""
 "Another way to jump to the same place **from anywhere in the documentation**"
 " is to use the ``:ref:`` role."
-msgstr ""
+msgstr "**ドキュメント内のどこからでも** 同じ場所にジャンプする別の方法は、 ``:ref:`` 役割を使うことです。"
 
 #: ../../docs/documentation_guidelines/writing.rst:183
 msgid ""
 "which will create a link with the caption instead (in this case the title of"
 " this section!):"
-msgstr ""
+msgstr "これはキャプション（この場合はこのセクションのタイトル！）を含むリンクが作成されます："
 
 #: ../../docs/documentation_guidelines/writing.rst:186
 msgid "see :ref:`my_anchor` for more information."
-msgstr ""
+msgstr "see :ref:`my_anchor` for more information."
 
 #: ../../docs/documentation_guidelines/writing.rst:188
 msgid ""
@@ -218,34 +230,36 @@ msgid ""
 "the word *section*. Note that you can also use a custom caption to describe "
 "the reference:"
 msgstr ""
+"つまり、参照1（my_anchor_）と参照2（:ref:`my_anchor`）です。参照はしばしば完全なキャプションを表示するため、*section*"
+" という単語を使う必要はあまりありません。参照を説明するためにカスタムキャプションを使うこともできることに注意してください:"
 
 #: ../../docs/documentation_guidelines/writing.rst:197
 msgid "which returns:"
-msgstr ""
+msgstr "こうなります:"
 
 #: ../../docs/documentation_guidelines/writing.rst:199
 msgid "see :ref:`Label and reference <my_anchor>` for more information."
-msgstr ""
+msgstr "see :ref:`Label and reference <my_anchor>` for more information."
 
 #: ../../docs/documentation_guidelines/writing.rst:205
 msgid "Figures and Images"
-msgstr ""
+msgstr "図と画像"
 
 #: ../../docs/documentation_guidelines/writing.rst:209
 msgid "Pictures"
-msgstr ""
+msgstr "画像"
 
 #: ../../docs/documentation_guidelines/writing.rst:211
 msgid "To insert an image, use"
-msgstr ""
+msgstr "画像を挿入するには、次を使います"
 
 #: ../../docs/documentation_guidelines/writing.rst:218
 msgid "which returns"
-msgstr ""
+msgstr "こうなります"
 
 #: ../../docs/documentation_guidelines/writing.rst:224
 msgid "Replacement"
-msgstr ""
+msgstr "置換"
 
 #: ../../docs/documentation_guidelines/writing.rst:226
 msgid ""
@@ -253,14 +267,16 @@ msgid ""
 "an image inside a paragraph, first create an alias in the "
 ":file:`source/substitutions.txt` file:"
 msgstr ""
+"テキスト内には画像を置くか、どこでも使用される別名を追加できます。段落内で画像を使用するには、 最初に "
+":file:`source/substitutions.txt` ファイル中に別名を作成します："
 
 #: ../../docs/documentation_guidelines/writing.rst:236
 msgid "and then call it in your paragraph:"
-msgstr ""
+msgstr "次に段落内でそれを呼び出します:"
 
 #: ../../docs/documentation_guidelines/writing.rst:242
 msgid "This is how the example will be displayed:"
-msgstr ""
+msgstr "これは例がどのように表示されるかを示します:"
 
 #: ../../docs/documentation_guidelines/writing.rst:244
 msgid "nice_logo"
@@ -268,7 +284,7 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/writing.rst:247
 msgid "My paragraph begins here with a nice logo |nice_logo|."
-msgstr ""
+msgstr "My paragraph begins here with a nice logo |nice_logo|."
 
 #: ../../docs/documentation_guidelines/writing.rst:249
 msgid ""
@@ -278,24 +294,29 @@ msgid ""
 ":file:`substitutions.txt` or by executing the "
 ":file:`scripts/find_set_subst.py` script."
 msgstr ""
+"GitHub で HTML レンダリングに近いプレビュー表示を行うには、変更したファイルの末尾に画像置換の呼び出しを追加することも必要です。これは "
+":file:`substitutions.txt` からコピーペーストするか、 :file:`scripts/find_set_subst.py` "
+"スクリプトを実行することで行うことができます。"
 
 #: ../../docs/documentation_guidelines/writing.rst:258
 msgid ""
 "Currently, to ensure consistency and help in the use of QGIS icons, a list "
 "of aliases is built and available in the :ref:`substitutions` chapter."
 msgstr ""
+"現在、一貫性を確保し、QGISのアイコンの使用を助けるために、別名のリストが構築され、 :ref:`substitutions` "
+"の章で利用できるようになっています。"
 
 #: ../../docs/documentation_guidelines/writing.rst:262
 msgid "Figure"
-msgstr ""
+msgstr "図"
 
 #: ../../docs/documentation_guidelines/writing.rst:275
 msgid "The result looks like this:"
-msgstr ""
+msgstr "結果は以下のようになります:"
 
 #: ../../docs/documentation_guidelines/writing.rst:283
 msgid "A caption: A logo I like"
-msgstr ""
+msgstr "A caption: A logo I like"
 
 #: ../../docs/documentation_guidelines/writing.rst:285
 msgid ""
@@ -305,107 +326,110 @@ msgid ""
 " other options for figures (such as ``width``, ``height``, ``scale``...) if "
 "needed."
 msgstr ""
+"他の参照との衝突を避けるため、図のアンカーは常に ``_figure_`` "
+"で始め、図のキャプションにつながりやすい用語を使用してください。画像は中央揃えのみが必須ですが、図には必要に応じて他のオプション（``width``、``height``、``scale``"
+" など）を自由に使ってください。"
 
 #: ../../docs/documentation_guidelines/writing.rst:291
 msgid ""
 "The scripts will insert an automatically generated number before the caption"
 " of the figure in the generated HTML and PDF versions of the documentation."
-msgstr ""
+msgstr "スクリプトは、ドキュメントから生成されるHTML版とPDF版の図のキャプションの前に、自動的に生成された番号を挿入します。"
 
 #: ../../docs/documentation_guidelines/writing.rst:294
 msgid ""
 "To use a caption (*see My caption*) just insert indented text after a blank "
 "line in the figure block."
-msgstr ""
+msgstr "キャプションを使用するには（ *My caption* を参照）、図ブロックに空白行の後ろに字下げテキストを挿入します。"
 
 #: ../../docs/documentation_guidelines/writing.rst:297
 msgid "A figure can be referenced using the reference label like this:"
-msgstr ""
+msgstr "図はこのような参照ラベルを使って参照付けできます:"
 
 #: ../../docs/documentation_guidelines/writing.rst:303
 #: ../../docs/documentation_guidelines/writing.rst:320
 msgid "renders like this:"
-msgstr ""
+msgstr "こう表示されます:"
 
 #: ../../docs/documentation_guidelines/writing.rst:305
 msgid "see :numref:`figure_logo`"
-msgstr ""
+msgstr "see :numref:`figure_logo`"
 
 #: ../../docs/documentation_guidelines/writing.rst:307
 msgid "This is the preferred way of referencing figures."
-msgstr ""
+msgstr "これが図を参照する好ましい方法です。"
 
 #: ../../docs/documentation_guidelines/writing.rst:311
 msgid "For ``:numref:`` to work, the figure **must have a caption**."
-msgstr ""
+msgstr "``:numref:`` を機能させるには、 図に **キャプションが必要です** 。"
 
 #: ../../docs/documentation_guidelines/writing.rst:313
 msgid ""
 "It is possible to use ``:ref:`` instead of ``:numref:`` for reference, but "
 "this returns the full caption of the image."
-msgstr ""
+msgstr "参照には ``:numref:`` の代わりに ``:ref:`` を使うことができますが、それは画像の完全なキャプションを返します。"
 
 #: ../../docs/documentation_guidelines/writing.rst:322
 msgid "see :ref:`figure_logo`"
-msgstr ""
+msgstr ":ref:`figure_logo` 参照"
 
 #: ../../docs/documentation_guidelines/writing.rst:326
 msgid "Tables"
-msgstr ""
+msgstr "表"
 
 #: ../../docs/documentation_guidelines/writing.rst:328
 msgid "A simple table can be coded like this"
-msgstr ""
+msgstr "簡単な表は次のように符号化できます"
 
 #: ../../docs/documentation_guidelines/writing.rst:339
 msgid "It will render like this:"
-msgstr ""
+msgstr "このように表示されます:"
 
 #: ../../docs/documentation_guidelines/writing.rst:342
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../../docs/documentation_guidelines/writing.rst:342
 msgid "y"
-msgstr ""
+msgstr "y"
 
 #: ../../docs/documentation_guidelines/writing.rst:342
 msgid "z"
-msgstr ""
+msgstr "z"
 
 #: ../../docs/documentation_guidelines/writing.rst:344
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../../docs/documentation_guidelines/writing.rst:344
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../../docs/documentation_guidelines/writing.rst:344
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: ../../docs/documentation_guidelines/writing.rst:345
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../../docs/documentation_guidelines/writing.rst:345
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../../docs/documentation_guidelines/writing.rst:348
 msgid ""
 "Use a ``\\`` (backslash) followed by an empty space to leave an empty space."
-msgstr ""
+msgstr "空を作るには ``\\`` （バックスラッシュ）にひとつの空白を続けます。"
 
 #: ../../docs/documentation_guidelines/writing.rst:350
 msgid "You can also make more complicated tables and reference them:"
-msgstr ""
+msgstr "また、より複雑な表を作成して参照することもできます："
 
 #: ../../docs/documentation_guidelines/writing.rst:368
 #: ../../docs/documentation_guidelines/writing.rst:404
 msgid "The result:"
-msgstr ""
+msgstr "結果："
 
 #: ../../docs/documentation_guidelines/writing.rst:373
 msgid "Windows"
@@ -861,7 +885,7 @@ msgid ""
 "Avoid adding information about the vector geometry type in the algorithm or "
 "parameter description, as this information is already available in the "
 "parameter descriptions."
-msgstr "ベクタジオメトリのタイプに関する情報は、アルゴリズムやパラメータの説明ですでに利用できるため、追加することは避けてください。"
+msgstr "アルゴリズムやパラメータの説明にベクタジオメトリの型に関する情報を追加することは避けてください。その情報はパラメータの説明で利用できます。"
 
 #: ../../docs/documentation_guidelines/writing.rst:626
 msgid "Add the default value of the parameter, e.g.::"
@@ -876,6 +900,10 @@ msgstr "サポートされている入力の *型* を説明してください�
 #: ../../docs/documentation_guidelines/writing.rst:639
 msgid "Parameter/Output type"
 msgstr "パラメータ／出力型"
+
+#: ../../docs/documentation_guidelines/writing.rst:639
+msgid "Visual indicator"
+msgstr "視覚的な表示"
 
 #: ../../docs/documentation_guidelines/writing.rst:641
 msgid "Point vector layer"
@@ -926,8 +954,16 @@ msgid "polygonLayer"
 msgstr ""
 
 #: ../../docs/documentation_guidelines/writing.rst:644
+msgid "Generic vector layer"
+msgstr "一般的なベクタレイヤ"
+
+#: ../../docs/documentation_guidelines/writing.rst:644
 msgid "``vector: any``"
 msgstr "``ベクタ: 任意``"
+
+#: ../../docs/documentation_guidelines/writing.rst:645
+msgid "Vector field numeric"
+msgstr "ベクタフィールド数値"
 
 #: ../../docs/documentation_guidelines/writing.rst:645
 msgid "``tablefield: numeric``"
@@ -942,6 +978,10 @@ msgid "fieldFloat"
 msgstr ""
 
 #: ../../docs/documentation_guidelines/writing.rst:646
+msgid "Vector field string"
+msgstr "ベクタフィールド文字列"
+
+#: ../../docs/documentation_guidelines/writing.rst:646
 msgid "``tablefield: string``"
 msgstr "``tablefield: string``"
 
@@ -952,6 +992,10 @@ msgstr ""
 #: ../../docs/documentation_guidelines/writing.rst:792
 msgid "fieldText"
 msgstr ""
+
+#: ../../docs/documentation_guidelines/writing.rst:647
+msgid "Vector field generic"
+msgstr "ベクタフィールド一般"
 
 #: ../../docs/documentation_guidelines/writing.rst:647
 msgid "``tablefield: any``"
@@ -988,6 +1032,10 @@ msgstr "HTMLファイル"
 #: ../../docs/documentation_guidelines/writing.rst:650
 msgid "``html``"
 msgstr "``html``"
+
+#: ../../docs/documentation_guidelines/writing.rst:651
+msgid "Table layer"
+msgstr "テーブルレイヤ"
 
 #: ../../docs/documentation_guidelines/writing.rst:651
 msgid "``table``"
@@ -1031,7 +1079,7 @@ msgstr "領域"
 
 #: ../../docs/documentation_guidelines/writing.rst:654
 msgid "``extent``"
-msgstr "``範囲``"
+msgstr "``extent``"
 
 #: ../../docs/documentation_guidelines/writing.rst:655
 msgid "CRS"
@@ -1212,6 +1260,10 @@ msgstr "レイアウト"
 #: ../../docs/documentation_guidelines/writing.rst:672
 msgid "``layout``"
 msgstr "``layout``"
+
+#: ../../docs/documentation_guidelines/writing.rst:673
+msgid "LayoutItem"
+msgstr "LayoutItem"
 
 #: ../../docs/documentation_guidelines/writing.rst:673
 msgid "``layoutitem``"
