@@ -72,8 +72,9 @@ Also, the date of creation will adapt dynamically.
    Insert a grid by clicking the |symbologyAdd| button.
    Click on :guilabel:`Modify grid ...` and set the
    :guilabel:`Interval` for :guilabel:`X`, :guilabel:`Y` and
-   :guilabel:`Offset` according to the map scale you chose in the
-   QGIS main canvas.
+   :guilabel:`Offset` according to the map scale you chose (for example, at 
+   a 1:100 000 meters scale, an X and Y interval of 1cm represents 1km in 
+   the real world) in the QGIS main canvas.
    The :guilabel:`Grid type` :guilabel:`Cross` is very well suited
    for our purposes.
 
