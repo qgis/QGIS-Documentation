@@ -1183,7 +1183,7 @@ To use these variables in an expression, they should be preceded by the
    "item_uuid", "The layout item unique ID"
    "layer", "The current layer"
    "layer_crs", "The Coordinate Reference System Authority ID of the current layer"
-   "layer_crs_ellipsoid", "The ellipsoid Authority ID of the the current layer CRS"
+   "layer_crs_ellipsoid", "The ellipsoid Authority ID of the current layer CRS"
    "layer_id", "The ID of current layer"
    "layer_ids", "The IDs of all the map layers in the current project as a list"
    "layer_name", "The name of current layer"
