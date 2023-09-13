@@ -650,7 +650,14 @@ Available tools are organized under following tabs:
 
 * |networkAndProxy| :guilabel:`Network Logger`
 * |dbManager| :guilabel:`Query Logger`
-* |stopwatch| :guilabel:`Profiler`
+* |stopwatch| :guilabel:`Profiler` - under this tab you can choose one out
+  of three categories:
+  
+    * :guilabel:`Startup`
+    * :guilabel:`Project Load`
+    * :guilabel:`Map Render` tool allows you to identify pain points in your
+      map rendering and track down exactly which layers are causing long map 
+      redraws.
 
 .. note:: Plugin authors can extend the panel with custom tabs
  for debugging and developping their own plugins.
