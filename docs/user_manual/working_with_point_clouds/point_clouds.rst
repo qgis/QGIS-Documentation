@@ -162,8 +162,7 @@ information about the point cloud layer:
   .. _pdal_expressions:
 
   In the bottom part of the dialog, you can type a :guilabel:`Provider specific filter expression`.
-  Such expression should comply with the `PDAL expression specifications <https://pdal.io/en/latest/stages/expression.html>`_
-  and can be built thanks to :
+  Such an expression can be built thanks to:
 
   * :guilabel:`Fields`: the list contains all the attributes of the point cloud layer.
     To add an attribute to the expression, double-click its name or just type it into the text box.
