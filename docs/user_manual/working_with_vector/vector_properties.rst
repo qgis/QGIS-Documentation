@@ -2412,20 +2412,19 @@ Default values
   could be handy to save values like last user that modifies data, last time it
   was changed...
 
+.. _policies:
+
 Policies
 ^^^^^^^^
 
-:guilabel:`Policies` allows you to easily determine the current policy when splitting
-features, you can change it as desired:
+:guilabel:`Policies` allows you to determine how values are assigned to the field when :guilabel:`Splitting features`:
 
-* :guilabel:`Duplicate Values`: Keeps the existing value of the field for the 
-  resulting split features.
-* :guilabel:`Use Default Value`: Resets the field by recalculating its defaults values.
+* :guilabel:`Duplicate Values`: Keeps the existing value of the field for the resulting split features.
+* :guilabel:`Use Default Value`: Resets the field by recalculating its :ref:`default value <default_values>`.
+  If no default value clause exists, the existing value is kept for the resulting split features.
 * :guilabel:`Remove Value`: Clears the field to an unset state.
-* :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions 
+* :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions
   by multiplying the existing value by ratio of the split parts lengths or areas.
-
-
 
 .. _edit_widgets:
 
