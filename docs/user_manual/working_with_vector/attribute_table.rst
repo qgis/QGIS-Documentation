@@ -535,9 +535,9 @@ When you click on the field calculator icon the dialog opens (see
 displayed and using the field calculator will cause the layer to be put in
 edit mode before the calculation is made.
 
-Based on the :ref:`Expression Builder <functions_list>` dialog, the field
-calculator dialog offers a complete interface to define an expression and apply
-it to an existing or a newly created field.
+Based on the :ref:`Expression Builder <expression_builder>` dialog,
+the field calculator dialog offers a complete interface to define an expression
+and apply it to an existing or a newly created field.
 To use the field calculator dialog, you must select whether you want to:
 
 #. apply calculation on the whole layer or on selected features only
@@ -568,14 +568,13 @@ A short example illustrates how field calculator works when using the
    calculations into a new field.
 #. Set :guilabel:`Output field name` to  ``length_km``
 #. Select ``Decimal number (real)`` as :guilabel:`Output field type`
-#. Set the :guilabel:`Output field length` to ``10`` and the :guilabel:`Precision`
-   to ``3``
+#. Set the :guilabel:`Output field length` to ``10`` and the :guilabel:`Precision` to ``3``
 #. Double click on ``$length`` in the :guilabel:`Geometry` group to add the length
    of the geometry into the Field calculator expression box (you will begin to see
    a preview of the output, up to 60 characters, below the expression box updating 
    in real-time as the expression is assembled).
-#. Complete the expression by typing ``/ 1000`` in the Field calculator
-   expression box and click :guilabel:`OK`.
+#. Complete the expression by typing ``/ 1000`` in the Field calculator expression box
+   and click :guilabel:`OK`.
 #. You can now find a new :guilabel:`length_km` field in the attribute table.
 
 .. _virtual_field:
