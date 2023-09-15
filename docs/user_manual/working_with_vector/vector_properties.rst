@@ -2320,7 +2320,7 @@ Regardless the type of widget applied to the field, there are some common
 properties you can set to control whether and how a field can be edited.
 
 Widget display
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 Only available for the :ref:`Drag and drop <drag_drop_designer>` designer mode,
 this group helps you configure the look of the widget assigned to the field:
@@ -2353,33 +2353,6 @@ General options
 * |checkbox| :guilabel:`Label on top`: places the field name above or beside
   the widget in the feature form.
 
-Default values
-^^^^^^^^^^^^^^
-
-* :guilabel:`Default value`: for new features, automatically populates by default
-  the field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
-  For example, you can:
-
-  * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
-    feature's X coordinate, length, area or any geometric information at its creation;
-  * increment a field by 1 for each new feature using ``maximum("field")+1``;
-  * save the feature creation datetime using ``now()``;
-  * use :ref:`variables <general_tools_variables>` in expressions, making it
-    easier to e.g. insert the operator name (``@user_full_name``), the project
-    file path (``@project_path``), ...
-
-  A preview of the resulting default value is displayed at the bottom of the widget.
-
-  .. note:: The ``Default value`` option is not aware of the values in any other
-    field of the feature being created so it won't be possible to use an expression
-    combining any of those values i.e using an expression like ``concat(field1, field2)``
-    may not work.
-
-* |checkbox| :guilabel:`Apply default value on update`: whenever the feature
-  attribute or geometry is changed, the default value is recalculated. This
-  could be handy to save values like last user that modifies data, last time it
-  was changed...
-
 .. _constraints:
 
 Constraints
@@ -2410,6 +2383,48 @@ constraints and:
     modifications until they meet the constraints. It appears when the
     |checkbox| :guilabel:`Enforce constraint` option is checked (``hard constraint``).
 
+.. _default_values:
+
+Default values
+^^^^^^^^^^^^^^
+
+* :guilabel:`Default value`: for new features, automatically populates by default
+  the field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
+  For example, you can:
+
+  * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
+    feature's X coordinate, length, area or any geometric information at its creation;
+  * increment a field by 1 for each new feature using ``maximum("field")+1``;
+  * save the feature creation datetime using ``now()``;
+  * use :ref:`variables <general_tools_variables>` in expressions, making it
+    easier to e.g. insert the operator name (``@user_full_name``), the project
+    file path (``@project_path``), ...
+
+  A preview of the resulting default value is displayed at the bottom of the widget.
+
+  .. note:: The ``Default value`` option is not aware of the values in any other
+    field of the feature being created so it won't be possible to use an expression
+    combining any of those values i.e using an expression like ``concat(field1, field2)``
+    may not work.
+
+* |checkbox| :guilabel:`Apply default value on update`: whenever the feature
+  attribute or geometry is changed, the default value is recalculated. This
+  could be handy to save values like last user that modifies data, last time it
+  was changed...
+
+.. _policies:
+
+Policies
+^^^^^^^^
+
+:guilabel:`Policies` allows you to determine how values are assigned to the field when :guilabel:`Splitting features`:
+
+* :guilabel:`Duplicate Values`: Keeps the existing value of the field for the resulting split features.
+* :guilabel:`Use Default Value`: Resets the field by recalculating its :ref:`default value <default_values>`.
+  If no default value clause exists, the existing value is kept for the resulting split features.
+* :guilabel:`Remove Value`: Clears the field to an unset state.
+* :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions
+  by multiplying the existing value by ratio of the split parts lengths or areas.
 
 .. _edit_widgets:
 

@@ -652,7 +652,7 @@ layer out of an attribute-only layer can be done with a query similar to:
    SELECT id, MakePoint(x, y, 4326) as geometry
    FROM coordinates
 
-:ref:`Functions of QGIS expressions<functions_list>` can also be used in a
+:ref:`Functions of QGIS expressions <functions_list>` can also be used in a
 virtual layer query.
 
 To refer the geometry column of a layer, use the name ``geometry``.
