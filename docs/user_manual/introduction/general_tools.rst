@@ -651,10 +651,13 @@ Available tools are organized under following tabs:
 * |networkAndProxy| :guilabel:`Network Logger`
 * |dbManager| :guilabel:`Query Logger`
 * |stopwatch| :guilabel:`Profiler` - under this tab you can choose one out
-  of three categories:
+  of these categories:
   
-    * :guilabel:`Startup`
-    * :guilabel:`Project Load`
+    * :guilabel:`Startup` helps you diagnose (and fix) occasional long startup 
+      times of QGIS.
+    * :guilabel:`Project Load` allows you to get a breakdown of the various 
+      stages of project load, in order to identify the causes of slow project 
+      load times.
     * :guilabel:`Map Render` tool allows you to identify pain points in your
       map rendering and track down exactly which layers are causing long map 
       redraws.
