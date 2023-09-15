@@ -2420,6 +2420,9 @@ Based on the field type, QGIS automatically determines and assigns a default
 widget type to it. You can then replace the widget with any other compatible
 with the field type. The available widgets are:
 
+* **Binary (BLOB)**: Available only for binary fields, it offers a lable showing
+  whether the BLOB field is empty or not. If filed is not empty the content size
+  will be displayed.
 * **Checkbox**: Displays a checkbox whose state defines the value to insert.
 * **Classification**: Only available when a :ref:`categorized symbology
   <categorized_renderer>` is applied to the layer, displays a combo box with
@@ -2489,6 +2492,21 @@ with the field type. The available widgets are:
    directory as the :file:`.qgs` project file or below, paths are converted to
    relative paths. This increases portability of a :file:`.qgs` project with
    multimedia information attached.
+
+.. tip:: **Display photo stored as a BLOB**
+
+   To display photo stored as BLOB in GeoPackage or PostgreSQL use 
+   :guilabel:`HTML Widget`. Go to :menuselection:`Layer
+   properties --> Attributes Form`, than switch to ``Drag-and-drop designer``
+   and add an :guilabel:`HTML Widget` to your :guilabel:`Form Layout`. Double-click
+   on the :guilabel:`HTML Widget` to configure it. Change the default Title (or choose
+   to hide it), than select BLOB filed from the drop-down menu and press the 
+   |symbologyAdd| button and you will get default HTML to display your field:
+   ``<script>document.write(expression.evaluate("\"photo\""));</script>``, now you
+   have to replace this default expression with this one:
+   ``<script>document.write(expression.evaluate(" '<img src=' || 
+   '\"data:image/png;base64,' || to_base64(\"photo\") || '\">' "))</script>``. Ensure
+   that you replace *photo* with your own BLOB field name.
 
 
 .. index:: Jointure, Join layers
