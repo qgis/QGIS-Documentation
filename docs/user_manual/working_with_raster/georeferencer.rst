@@ -224,7 +224,7 @@ raster.
 * For all other transformation types, you have to define an :guilabel:`Output
   raster`. As default, a new file ([filename]_modified) will be created in the
   same folder together with the original raster image.
-* As a next step, you have to define the :guilabel:`Target SRS` (Spatial Reference
+* As a next step, you have to define the :guilabel:`Target CRS` (Coordinate Reference
   System) for the georeferenced raster (see :ref:`label_projections`).
 * If you like, you can **generate a pdf map** and also **a pdf report**.
   The report includes information about the used transformation parameters,
@@ -235,7 +235,9 @@ raster.
 * The |checkbox| :guilabel:`Use 0 for transparency when needed` can be activated,
   if pixels with the value 0 shall be visualized transparent. In our example
   toposheet, all white areas would be transparent.
-* Finally, |checkbox| :guilabel:`Load in QGIS when done` loads the output raster
+* The |checkbox| :guilabel:`Save GCP Points` will store GCP Points in a file next 
+  to the output raster.
+* Finally, |checkbox| :guilabel:`Load in project when done` loads the output raster
   automatically into the QGIS map canvas when the transformation is done.
 
 Show and adapt raster properties
