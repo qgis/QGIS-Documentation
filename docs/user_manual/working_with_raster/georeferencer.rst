@@ -235,8 +235,8 @@ raster.
 * The |checkbox| :guilabel:`Use 0 for transparency when needed` can be activated,
   if pixels with the value 0 shall be visualized transparent. In our example
   toposheet, all white areas would be transparent.
-* The |checkbox| :guilabel:`Save GCP Points` automatically save GCP Points in the
-  raster-modified path.
+* The |checkbox| :guilabel:`Save GCP Points` will store GCP Points in a file next 
+  to the output raster.
 * Finally, |checkbox| :guilabel:`Load in project when done` loads the output raster
   automatically into the QGIS map canvas when the transformation is done.
 
