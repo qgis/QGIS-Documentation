@@ -1745,24 +1745,20 @@ This parameter can be used to specify options for the selected format.
 Only for ``FORMAT=application/pdf`` in GetPrint requests.
 Takes a list of key:value pairs separated by semicolon:
 
-.. keys picked at https://github.com/qgis/QGIS/pull/52799/files#diff-f2b6ac14970527d38f8137233a258cbde7733fac3b6578022a45ef4d33374669
- but descriptions and their default values need deep review
-
-* RASTERIZE_WHOLE_IMAGE: whether the whole pdf should be exported as an image. Default: false.
-* FORCE_VECTOR_OUTPUT: whether pdf should be exported as vector. Default: false.
-* APPEND_GEOREFERENCE: whether georeference info shall be added to the pdf. Default: true.
-* EXPORT_METADATA: whether metadata shall be added to the pdf. Default: true.
-* TEXT_RENDER_FORMAT: sets the text render format for pdf export.
+* ``RASTERIZE_WHOLE_IMAGE``: whether the whole pdf should be exported as an image. Default: false.
+* ``FORCE_VECTOR_OUTPUT``: whether pdf should be exported as vector. Default: false.
+* ``APPEND_GEOREFERENCE``: whether georeference info shall be added to the pdf. Default: true.
+* ``EXPORT_METADATA``: whether metadata shall be added to the pdf. Default: true.
+* ``TEXT_RENDER_FORMAT``: sets the text render format for pdf export.
   It can be ``AlwaysOutlines`` (default) or ``AlwaysText``.
-* SIMPLIFY_GEOMETRY: whether features geometries shall be simplified. Default: true.
-* WRITE_GEO_PDF: whether a GeoPDF shall be exported. Default: false.
-* USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING: whether Iso32000 georeferencing shall be used. Default: false.
-* USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING: whether OGC best practice georeferencing shall be used. Default: false.
-* INCLUDE_GEO_PDF_FEATURES: .... ???
-* EXPORT_THEMES: a comma separated list of map themes to use for a GeoPDF export
-* PREDEFINED_MAP_SCALES: a list of map scales ... ???
-* LOSSLESS_IMAGE_COMPRESSION: whether images embedded in pdf must be compressed using a lossless algorithm. Default: false.
-* DISABLE_TILED_RASTER_RENDERING: whether rasters shall be untiled in the pdf. Default: false.
+* ``SIMPLIFY_GEOMETRY``: whether features geometries shall be simplified. Default: true.
+* ``WRITE_GEO_PDF``: whether a GeoPDF shall be exported. Default: false.
+* ``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: whether Iso32000 georeferencing shall be used. Default: false.
+* ``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: whether OGC best practice georeferencing shall be used. Default: false.
+* ``EXPORT_THEMES``: a comma separated list of map themes to use for a GeoPDF export
+* ``PREDEFINED_MAP_SCALES``: a comma separated list of map scales to render the map
+* ``LOSSLESS_IMAGE_COMPRESSION``: whether images embedded in pdf must be compressed using a lossless algorithm. Default: false.
+* ``DISABLE_TILED_RASTER_RENDERING``: whether rasters shall be untiled in the pdf. Default: false.
 
 
 URL example:
