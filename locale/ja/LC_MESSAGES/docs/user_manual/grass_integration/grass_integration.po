@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,11 +40,10 @@ msgid ""
 " In this section, we'll introduce the provider and plugin functionalities "
 "and give some examples of managing and working with GRASS data."
 msgstr ""
-":index:`GRASS` 統合は、GRASSのGISデータベースと機能へのアクセスを提供します（ :ref:`literature_and_web`"
-" 中のGRASS-"
-"PROJECTを参照）。統合は二つの部分から構成されています：プロバイダーとプラグイン。プロバイダーでは、GRASSラスターおよびベクターレイヤーを閲覧、管理、視覚化できます。プラグインを使用すると、新しいGRASS場所と地図セットを作成し、GRASS領域を変更し、ベクターレイヤーを作成および編集し、400の以上のGRASSモジュールでGRASS"
-" "
-"2-D及び3-Dデータを分析できます。このセクションではプロバイダーやプラグイン機能を導入し、GRASSデータを管理したりそれで作業するいくつかの例をあげます。"
+"GRASS統合は、GRASS GISデータベースと機能へのアクセスを提供します（ :ref:`literature_and_web` 中のGRASS-"
+"PROJECTを参照）。統合は、プロバイダとプラグインの二つの部分から構成されています。プロバイダでは、GRASSラスタおよびベクタレイヤを閲覧、管理、視覚化できます。プラグインを使用すると、新しいGRASS"
+" locationとmapsetを作成し、GRASS領域を変更し、ベクタレイヤを作成・編集し、400の以上のGRASSモジュールでGRASS "
+"2-Dと3-Dデータを分析できます。このセクションではプロバイダやプラグイン機能を導入し、GRASSデータを管理したりそれで作業するいくつかの例をあげます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:21
 msgid ""
@@ -53,17 +53,51 @@ msgid ""
 "(binaries have different file names). Only one version of the "
 "provider/plugin may be loaded on runtime however."
 msgstr ""
-"プロバイダーはGRASSバージョン6および7をサポートする、プラグインは、GRASS 6,7（QGIS "
-"2.12から開始）をサポートしています。QGIS分布はいずれかGRASS 6またはGRASS "
-"7、または同時に（バイナリは異なるファイル名を有する）で両方のバージョンのプロバイダー/プラグインを含んでいてもよいです。プロバイダー/プラグインのバージョンは実行時に1つだけロードできます。"
+"プロバイダーはGRASSバージョン6および7をサポートし、プラグインはGRASS 6および7をサポートしています（QGIS "
+"2.12以降）。QGISの配布には、GRASS 6またはGRASS "
+"7、若しくは同時に両方のバージョン（バイナリは異なるファイル名を持ちます）のプロバイダー/プラグインを含んでいる場合があります。ただし、プロバイダー/プラグインのバージョンは実行時に1つだけロードできます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:28
 msgid "Demo dataset"
 msgstr "デモデータセット"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:30
+msgid ""
+"As an example, we will use the QGIS Alaska dataset (see section "
+":ref:`label_sampledata`). It includes a small sample GRASS :file:`LOCATION` "
+"with three vector layers and one raster elevation map. Create a new folder "
+"called :file:`grassdata`, download the QGIS 'Alaska' dataset "
+":file:`qgis\\_sample\\_data.zip` from https://qgis.org/downloads/data/ and "
+"unzip the file into :file:`grassdata`."
+msgstr ""
+"例として、QGIS のアラスカデータセット（セクション :ref:`label_sampledata` "
+"を参照）を使用します。このデータセットには、3つのベクターレイヤーと1つのラスター標高マップを含んだ、小さなサンプルGRASS "
+":file:`LOCATION` が含まれています。:file:`grassdata` "
+"という新しいフォルダを作成し、https://qgis.org/downloads/data/ から QGIS 'Alaska' データセット "
+":file:`qgis_sample_data.zip` をダウンロードし、そのファイルを :file:`grassdata` に展開します。 "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:36
+msgid ""
+"More sample GRASS :file:`LOCATIONs` are available at the GRASS website at "
+"https://grass.osgeo.org/download/data/."
+msgstr ""
+"より多くのサンプルGRASS :file:`LOCATION` "
+"は、GRASSのウェブサイトhttps://grass.osgeo.org/download/data/ で利用できます。"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:42
 msgid "Loading GRASS raster and vector layers"
-msgstr "GRASSラスターおよびベクターレイヤーをロードする"
+msgstr "GRASSラスタおよびベクタレイヤを読み込む"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:44
+msgid ""
+"If the provider is loaded in QGIS, the location item with GRASS |grassLogo| "
+"icon is added in the browser tree under each folder item which contains "
+"GRASS location. Go to the folder :file:`grassdata` and expand location "
+":file:`alaska` and mapset :file:`demo`."
+msgstr ""
+"プロバイダが QGIS に読み込まれている場合、GRASS |grassLogo| アイコンの付いたロケーションアイテムが、GRASS "
+"ロケーションを含む各フォルダアイテムの下のブラウザツリーに追加されます。フォルダ :file:`grassdata` に移動し、ロケーション "
+":file:`alaska` と mapset :file:`demo` を展開します。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:910
 msgid "grassLogo"
@@ -75,7 +109,7 @@ msgid ""
 "browser either by double click on layer item or by dragging and dropping to "
 "map canvas or legend."
 msgstr ""
-"レイヤーの項目をダブルクリックするか地図キャンバスや凡例にドラッグ＆ドロップするかのどちらかによって、ブラウザからの任意の他のレイヤーと同様に、GRASSラスターおよびベクターレイヤーを読み込みできます。"
+"他のレイヤーと同様に、ブラウザからレイヤー項目をダブルクリックするか、マップキャンバスや凡例にドラッグ＆ドロップするかによって、任意のGRASSラスターおよびベクターレイヤーを読み込めます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:52
 msgid "**GRASS Data Loading**"
@@ -86,22 +120,22 @@ msgid ""
 "If you don't see GRASS location item, verify in :menuselection:`Help --> "
 "About --> Providers` if GRASS vector provider is loaded."
 msgstr ""
-"GRASSの場所の項目が表示されない場合は、GRASSベクタープロバイダーがロードされているかどうか、 :menuselection:`ヘルプ --> "
-"について --> プロバイダー` を検証してください。"
+"GRASSロケーションアイテムが表示されない場合は、GRASSベクタープロバイダーが読み込まれているかどうか、 :menuselection:`ヘルプ "
+"--> QGISについて --> プロバイダ` を検証してください。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:61
 msgid "Importing data into a GRASS LOCATION via drag and drop"
-msgstr "ドラッグ＆ドロップでGRASS[場所]へデータをインポートする"
+msgstr "ドラッグ＆ドロップでGRASSロケーションへデータをインポートする"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:63
 msgid ""
 "This section gives an example of how to import raster and vector data into a"
 " GRASS mapset."
-msgstr "このセクションでは、GRASS地図セットにラスターおよびベクターデータをインポートする方法の例を与えます。"
+msgstr "このセクションでは、GRASS mapsetにラスターおよびベクターデータをインポートする方法の例を示します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:65
 msgid "In QGIS browser navigate to the mapset you want to import data into."
-msgstr "QGISのブラウザで、データをインポートしたい地図セットに移動します。"
+msgstr "QGISのブラウザで、データをインポートしたいmapsetに移動します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:66
 msgid ""
@@ -109,8 +143,8 @@ msgid ""
 "open another instance of the browser (:guilabel:`Browser Panel (2)`) if "
 "source data are too far from the mapset in the tree."
 msgstr ""
-"QGISのブラウザで、GRASSにインポートするレイヤーを見つけ、ブラウザの別のインスタンス開くことができることに注意してください（ "
-":guilabel:`ブラウザパネル（2）` ）ソースデータがツリー内の地図セットから離れすぎている場合。"
+"QGISのブラウザで、GRASSにインポートするレイヤーを探します。ソースデータがツリー内のmapsetから離れすぎている場合は、ブラウザの別のインスタンス（"
+" :guilabel:`ブラウザパネル（2）` ）を開くことができることを覚えておいてください。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:69
 msgid ""
@@ -118,8 +152,12 @@ msgid ""
 " for larger layers, you will see animated icon |import| in front of new "
 "layer item until the import finishes."
 msgstr ""
-"レイヤーをドラッグし、インポート先の地図セットにドロップします。インポートは、大きなレイヤーではいくらか時間がかかることがありますが、インポートが完了するまで、新たなレイヤーの項目の前にアニメーションアイコン"
+"レイヤをドラッグし、インポート先のmapsetにドロップします。大きなレイヤのインポートには時間がかかることがあり、インポートが完了するまで、新たなレイヤ項目の前にアニメーションアイコン"
 " |import| が表示されます。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:920
+msgid "import"
+msgstr "import"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:73
 msgid ""
@@ -144,6 +182,14 @@ msgstr ""
 "元ラスターがより多くのバンドを持っている場合、 **.<band number>** "
 "接尾辞を持つ新しいGRASS地図が各レイヤーについて作成されます、すべての地図のグループ |rasterGroup| アイコンが作成されます。 "
 "|rasterLink| 外部ラスターは別のアイコンを持っています。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:930
+msgid "rasterGroup"
+msgstr "rasterGroup"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:932
+msgid "rasterLink"
+msgstr "rasterLink"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:86
 msgid "Managing GRASS data in QGIS Browser"
@@ -178,12 +224,25 @@ msgid ""
 "then choosing :guilabel:`GRASS Options`."
 msgstr ""
 "GRASSオプションは :guilabel:`GRASS オプション` "
-"ダイアログ中で設定できます。このダイアログはブラウザで場所または地図セットの項目を右クリックした後、 :guilabel:`GRASS オプション` "
-"を選択すると開きます 。"
+"ダイアログ中で設定できます。このダイアログはブラウザでlocationまたはmapsetの項目を右クリックした後、 :guilabel:`GRASS "
+"オプション` を選択すると開きます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:103
 msgid "Starting the GRASS plugin"
 msgstr "GRASSプラグインを起動する"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:105
+msgid ""
+"To use GRASS functionalities in QGIS, you must select and load the GRASS "
+"plugin using the Plugin Manager. To do this, go to the menu "
+":menuselection:`Plugins -->` |showPluginManager| :menuselection:`Manage and "
+"Install Plugins...`, select |checkbox| :guilabel:`GRASS` and click "
+":guilabel:`OK`."
+msgstr ""
+"QGISでGRASSの機能を使用するには、プラグインマネージャを使ってGRASSプラグインを選択し、読み込む必要があります。これをするには、 "
+":menuselection:`プラグイン -->` |showPluginManager| "
+":menuselection:`プラグインの管理とインストール...` メニューに行き、 |checkbox| :guilabel:`GRASS` "
+"を選択し、 :guilabel:`OK`をクリックします。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:938
 msgid "showPluginManager"
@@ -198,12 +257,12 @@ msgid ""
 "The following main features are provided with the GRASS menu "
 "(:menuselection:`Plugins --> GRASS`) when you start the GRASS plugin:"
 msgstr ""
-"GRASSプラグインを起動すると（ :menuselection:`プラグイン --> GRASS` ）、以下の主な機能、 "
-"GRASSメニューで提供されています："
+"GRASSプラグインを起動すると、以下の主な機能がGRASSメニュー（ :menuselection:`プラグイン --> GRASS` "
+"）で提供されています："
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:113
 msgid "|grassOpenMapset| :sup:`Open Mapset`"
-msgstr "|grassOpenMapset| :sup:`地図セットを開く`"
+msgstr "|grassOpenMapset| :sup:`Mapsetを開く`"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:914
 msgid "grassOpenMapset"
@@ -211,7 +270,7 @@ msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:114
 msgid "|grassNewMapset| :sup:`New Mapset`"
-msgstr "|grassNewMapset| :sup:`新しい地図セット`"
+msgstr "|grassNewMapset| :sup:`新規Mapset`"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:912
 msgid "grassNewMapset"
@@ -219,7 +278,7 @@ msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:115
 msgid "|grassCloseMapset| :sup:`Close Mapset`"
-msgstr "|grassCloseMapset| :sup:`地図セットを閉じる`"
+msgstr "|grassCloseMapset| :sup:`Mapsetを閉じる`"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:908
 msgid "grassCloseMapset"
@@ -235,7 +294,7 @@ msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:117
 msgid "|grassRegion| :sup:`Display Current GRASS Region`"
-msgstr "|grassRegion| :sup:`現在のGRASS Regionを表示`"
+msgstr "|grassRegion| :sup:`現在のGRASS領域を表示`"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:916
 msgid "grassRegion"
@@ -251,7 +310,7 @@ msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:121
 msgid "Opening GRASS mapset"
-msgstr "GRASS地図セットを開く"
+msgstr "GRASS mapsetを開く"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:123
 msgid ""
@@ -260,20 +319,53 @@ msgid ""
 "the browser: right click on mapset item and then choose :guilabel:`Open "
 "mapset` from context menu."
 msgstr ""
-"GRASSの地図セットは（地図セットが何も開かれていない場合はツールが無効になっている）のプラグインでGRASSツールへのアクセスを取得するために開く必要があります。地図セットはブラウザから開くことができます：地図​​セットの項目を右クリックして、"
-" :guilabel:`地図セットを開く` をコンテキストメニューから選択します。"
+"プラグインでGRASSツールへのアクセスを取得するためにGRASS "
+"mapsetを開く必要があります（mapsetが何も開かれていない場合はツールが無効になっています）。mapsetはブラウザから開くことができます：mapset項目を右クリックして、"
+" :guilabel:`Mapsetを開く` をコンテキストメニューから選択します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:130
 msgid "GRASS LOCATION and MAPSET"
 msgstr "GRASS[場所]と[地図セット]"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:132
+msgid ""
+"GRASS data are stored in a directory referred to as GISDBASE. This "
+"directory, often called :file:`grassdata`, must be created before you start "
+"working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS "
+"data are organized by projects stored in subdirectories called "
+":file:`LOCATIONs`. Each :file:`LOCATION` is defined by its coordinate "
+"system, map projection and geographical boundaries. Each :file:`LOCATION` "
+"can have several :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) "
+"that are used to subdivide the project into different topics or sub-regions,"
+" or as workspaces for individual team members (see Neteler & Mitasova 2008 "
+"in :ref:`literature_and_web`). In order to analyze vector and raster layers "
+"with GRASS modules, you generally have to import them into a GRASS "
+":file:`LOCATION`. (This is not strictly true -- with the GRASS modules "
+":file:`r.external` and :file:`v.external` you can create read-only links to "
+"external GDAL-supported datasets without importing them. This is not the "
+"usual way for beginners to work with GRASS, therefore this functionality "
+"will not be described here.)"
+msgstr ""
+"GRASSのデータはGISDBASEと呼ばれるディレクトリに保存されます。このディレクトリは :file:`grassdata` "
+"と呼ばれることが多く、QGISでGRASSプラグインを使用する前に作成する必要があります。このディレクトリの中で、GRASS GISデータは "
+":file:`LOCATIONs` と呼ばれるサブディレクトリに格納されているプロジェクトごとに整理されています。各 :file:`LOCATION` "
+"は座標系、地図投影法、地理的境界によって定義されます。各 :file:`LOCATION` は複数の :file:`MAPSETs` "
+"(:file:`LOCATION` のサブディレクトリ) "
+"を持つことができ、それらはプロジェクトを異なるトピックやサブ領域に細分化したり、個々のチームメンバーのワークスペースとして使用されます "
+"(ref:`literature_and_web` の Neteler & Mitasova 2008 "
+"を参照)。GRASSモジュールでベクターやラスターのレイヤーを分析するには、一般的にGRASSの :file:`LOCATION` "
+"にインポートする必要があります。(これは厳密には正しくありません。GRASSモジュールの :file:`r.external` と "
+":file:`v.external` "
+"を使えば、インポートせずに外部のGDALサポートデータセットへの読み取り専用リンクを作成することができます。これは初心者がGRASSを使うときの一般的な方法ではないので、ここでは説明しません)。"
+" "
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:152
 msgid "GRASS data in the alaska LOCATION"
-msgstr "アラスカ[場所]のGRASSデータ"
+msgstr "アラスカLOCATIONのGRASSデータ"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:157
 msgid "Importing data into a GRASS LOCATION"
-msgstr "GRASS[場所]へデータをインポートする"
+msgstr "GRASS LOCATIONへデータをインポートする"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:159
 msgid ""
@@ -293,8 +385,9 @@ msgid ""
 ":ref:`label_sampledata`)."
 msgstr ""
 "このセクションでは、標準GRASSモジュールを使用して、伝統的な方法でQGIS「アラスカ」データセットによって提供される「アラスカ」GRASS "
-":file:`場所` に、ラスターおよびベクターデータをインポートする方法の例を示します。したがって、「アラスカ」データセットから土地被覆ラスター地図 "
-":file:`landcover.img` とベクターGMLファイル :file:`lakes.gml` QGISを使用します（ "
+":file:`LOCATION` "
+"に、ラスターおよびベクターデータをインポートする方法の例を示します。したがって、QGIS「アラスカ」データセットから土地被覆ラスター地図 "
+":file:`landcover.img` とベクターGMLファイル :file:`lakes.gml` を使用します（ "
 ":ref:`label_sampledata` を参照）。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:168
@@ -308,16 +401,25 @@ msgid ""
 "In the GRASS toolbar, click the |grassOpenMapset| :sup:`Open MAPSET` icon to"
 " bring up the :guilabel:`MAPSET` wizard."
 msgstr ""
-"GRASSツールバーで、|grassOpenMapset| :sup:`地図セットを開く` アイコンをクリックして、 :guilabel:`地図セット`"
-" ウィザードを起動します。"
+"GRASSツールバーで、|grassOpenMapset| :sup:`Mapsetを開く` アイコンをクリックして、 "
+":guilabel:`Mapset` ウィザードを起動します。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:171
+msgid ""
+"Select as GRASS database the folder :file:`grassdata` in the QGIS Alaska "
+"dataset, as :file:`LOCATION` 'alaska', as :file:`MAPSET` 'demo' and click "
+":guilabel:`OK`."
+msgstr ""
+"GRASSデータベースとして、QGISアラスカデータセットの :file:`grassdata` フォルダを、 :file:`LOCATION` として"
+" 'alaska'、 :file:`MAPSET` として 'demo' を選択し、 :guilabel:`OK` をクリックします。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:174
 msgid ""
 "Now click the |grassTools| :sup:`Open GRASS tools` icon. The GRASS Toolbox "
 "(see section :ref:`subsec_grass_toolbox`) dialog appears."
 msgstr ""
-"今 |grassTools| :sup:`GRASSツールを開く` "
-"アイコンをクリックしてください。GRASSツールボックスダイアログが表示されます（セクション :ref:`subsec_grass_toolbox` "
+"ここで |grassTools| :sup:`GRASSツールを開く` "
+"アイコンをクリックします。GRASSツールボックスダイアログが表示されます（セクション :ref:`subsec_grass_toolbox` "
 "を参照）。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:176
@@ -327,9 +429,9 @@ msgid ""
 "allows you to import GDAL-supported raster files into a GRASS "
 ":file:`LOCATION`. The module dialog for :file:`r.in.gdal` appears."
 msgstr ""
-"ラスター地図 :file:`landcover.img` をインポートする場合 :guilabel:`モジュールツリー` タブの "
-":file:`r.in.gdal` モジュールをクリックして下さい。この GRASSモジュールは GDAL がサポートしているファイルをGRASS "
-":file:`場所` にインポートします。 :file:`r.in.gdal` モジュールダイアログが表示されます。"
+"ラスター地図 :file:`landcover.img` をインポートするには、 :guilabel:`モジュール` タブの "
+":file:`r.in.gdal` モジュールをクリックして下さい。この GRASSモジュールは GDAL がサポートしているラスタファイルをGRASS"
+" :file:`LOCATION` にインポートします。 :file:`r.in.gdal` モジュールダイアログが表示されます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:180
 msgid ""
@@ -339,6 +441,26 @@ msgstr ""
 "QGIS「アラスカ」データセット内の :file:`raster` フォルダを参照して、ファイル :file:`landcover.img` "
 "を選択します。"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:182
+msgid ""
+"As raster output name, define :file:`landcover_grass` and click "
+":guilabel:`Run`. In the :guilabel:`Output` tab, you see the currently "
+"running GRASS command ``r.in.gdal -o input=/path/to/landcover.img "
+"output=landcover_grass``."
+msgstr ""
+"出力ラスターマップ名として :file:`landcover_grass` を定義し、 :guilabel:`実行` "
+"をクリックします。guilabel:`Output`タブに、現在実行中のGRASSコマンド ``r.in.gdal -o "
+"input=/path/to/landcover.img output=landcover_grass`` が表示されます。 "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:186
+msgid ""
+"When it says **Successfully finished**, click :guilabel:`View Output`. The "
+":file:`landcover_grass` raster layer is now imported into GRASS and will be "
+"visualized in the QGIS canvas."
+msgstr ""
+"**成功しました** と表示されたら、 :guilabel:`出力を見る` をクリックします。これで :file:`landcover_grass` "
+"ラスターレイヤーがGRASSにインポートされ、QGISキャンバスに表示されます。 "
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:189
 msgid ""
 "To import the vector GML file :file:`lakes.gml`, click the module "
@@ -347,7 +469,7 @@ msgid ""
 ":file:`LOCATION`. The module dialog for :file:`v.in.ogr` appears."
 msgstr ""
 "ベクターGMLファイル :file:`lakes.gml` をインポートするには :guilabel:`モジュールツリー` タブのモジュール "
-":file:`v.in.ogr` をクリックします。このGRASSモジュールを使用すると、GRASS :file:`場所` "
+":file:`v.in.ogr` をクリックします。このGRASSモジュールを使用すると、GRASS :file:`LOCATION` "
 "にOGRサポートのベクターファイルをインポートできます。 :file:`v.in.ogr` のモジュールダイアログが表示されます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:193
@@ -357,6 +479,26 @@ msgid ""
 msgstr ""
 "QGIS「アラスカ」データセット内の :file:`gml` フォルダを参照し、OGRファイルとして :file:`lakes.gml` "
 "ファイルを選択します。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:195
+msgid ""
+"As vector output name, define :file:`lakes_grass` and click :guilabel:`Run`."
+" You don't have to care about the other options in this example. In the "
+":guilabel:`Output` tab you see the currently running GRASS command "
+"``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\\_grass``."
+msgstr ""
+"ベクタ出力名として :file:`lakes_grass` を定義し、 :guilabel:`実行` "
+"をクリックします。この例では他のオプションを気にする必要はありません。:guilabel:`出力` タブには、現在実行中のGRASSコマンド "
+"``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes_grass`` が表示されます。 "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:199
+msgid ""
+"When it says **Succesfully finished**, click :guilabel:`View Output`. The "
+":file:`lakes_grass` vector layer is now imported into GRASS and will be "
+"visualized in the QGIS canvas."
+msgstr ""
+"**成功しました** と表示されたら、:guilabel:`出力を見る` をクリックします。:file:`lakes_grass` "
+"ベクタレイヤがGRASSにインポートされ、QGISキャンバスに表示されます。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:206
 msgid "Creating a new GRASS LOCATION"
@@ -370,10 +512,10 @@ msgid ""
 "exercises in the following GRASS-related sections. It is useful to download "
 "and install the dataset on your computer (see :ref:`label_sampledata`)."
 msgstr ""
-"例として、これはサンプルのGRASS :file:`[場所]アラスカ` "
-"、単位としてフィートを使用して、アルバース等積投影に投影され、です。このサンプルGRASS :file:`[場所]アラスカ` "
-"は、以下のGRASS関連のセクションのすべての例と演習のために使用されます。（ :ref:`label_sampledata` "
-"を参照）、コンピュータ上のデータセットをダウンロードしてインストールするのに便利です。"
+"例として、単位としてフィートを使い、アルバース等積投影で投影された、サンプルGRASS :file:`[場所]アラスカ`  です。このサンプルGRASS"
+" :file:`[場所]アラスカ` "
+"は、以下のGRASS関連のセクションのすべての例と演習のために使用されます。コンピュータ上のデータセットをダウンロードしてインストールすると便利です（ "
+":ref:`label_sampledata` を参照）。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:215
 msgid ""
@@ -392,15 +534,44 @@ msgstr ""
 "GRASSツールバーで、 |grassNewMapset| :sup:`地図セット` アイコンをクリックして :guilabel:`新しい地図セット` "
 "ウィザードを起動してください。"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:219
+msgid ""
+"Select an existing GRASS database (GISDBASE) folder :file:`grassdata`, or "
+"create one for the new :file:`LOCATION` using a file manager on your "
+"computer. Then click :guilabel:`Next`."
+msgstr ""
+"既存のGRASSデータベース(GISDBASE)フォルダ :file:`grassdata` "
+"を選択するか、コンピュータのファイルマネージャを使って新しい :file:`LOCATION` 用のフォルダを作成します。そして "
+":guilabel:`次へ` をクリックします。 "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:222
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create a new "
+":file:`LOCATION` altogether. Select |radioButtonOn| :guilabel:`Create new "
+"location` (see :numref:`figure_grass_new_location`)."
+msgstr ""
+"このウィザードを使用して、既存の :file:`LOCATION` の中に新しい :file:`MAPSET` "
+"を作成したり（:ref:`sec_add_mapset` のセクションを参照）、完全に新しい :file:`LOCATION` "
+"を作成することができます。|radioButtonOn| :guilabel:`新規ロケーションを作成` を選択します（参照 "
+":numref:`figure_grass_new_location`）。 "
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:928
 msgid "radioButtonOn"
 msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:226
+msgid ""
+"Enter a name for the :file:`LOCATION` -- we used 'alaska' -- and click "
+":guilabel:`Next`."
+msgstr ""
+":file:`LOCATION` の名前 - ここでは'alaska'とした - を入力し、:guilabel:`次へ`をクリックします。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:227
 msgid ""
 "Define the projection by clicking on the radio button |radioButtonOn| "
 ":guilabel:`Projection` to enable the projection list."
-msgstr "投影リストを有効にするラジオボタン |radioButtonOn| :guilabel:`投影` をクリックして投影を定義します。"
+msgstr "投影リストを有効にするラジオボタン |radioButtonOn| :guilabel:`投影法` をクリックして投影を定義します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:229
 msgid ""
@@ -411,10 +582,10 @@ msgid ""
 "|projectionEnabled| :sup:`CRS Status` icon in the lower right-hand corner of"
 " the status bar (see section :ref:`label_projections`))."
 msgstr ""
-"私たちはアルバース等積アラスカ（フィート）投影を使用しています。それはEPSGのID "
-"2964によって表されていることを知ることが起こるので、検索ボックスに入力します。（注意：別のために、このプロセスを繰り返したい場合は、次の "
-":file:`場所` と投影とEPSG IDを記憶していないが、ステータスバーの右下隅にある |projectionEnabled| :sup:`CRS"
-" Status` アイコンをクリック ）（ :ref:`label_projections` セクションを参照）。"
+"私たちはアルバース等積アラスカ（フィート）投影を使用しています。それはEPSG ID "
+"2964によって表されることを知っているので、検索ボックスに入力します。（注意：このプロセスを別の :file:`場所` "
+"と投影法で繰り返したいが、EPSG IDを記憶していない場合は、ステータスバーの右下隅にある |projectionEnabled| :sup:`CRS"
+" Status` アイコンをクリックしてください（ :ref:`label_projections` セクションを参照））。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:926
 msgid "projectionEnabled"
@@ -430,6 +601,17 @@ msgstr ":guilabel:`フィルタ` に 2964 と入力して投影法を選択し�
 msgid "Click :guilabel:`Next`."
 msgstr ":guilabel:`次へ` をクリックします。"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:237
+msgid ""
+"To define the default region, we have to enter the :file:`LOCATION` bounds "
+"in the north, south, east, and west directions. Here, we simply click on the"
+" button :guilabel:`Set Current QGIS Extent`, to apply the extent of the "
+"loaded layer :file:`alaska.shp` as the GRASS default region extent."
+msgstr ""
+"デフォルト区域を定義するために、東西南北の :file:`LOCATION` の境界を入力しなければなりません。ここで、ボタン "
+":guilabel:`現在のQGISの範囲を設定` をクリックすると、読み込まれたレイヤ :file:`alaska.shp` の範囲が GRASS "
+"のデフォルト領域として適用されます。"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:242
 msgid ""
 "We also need to define a :file:`MAPSET` within our new :file:`LOCATION` "
@@ -439,11 +621,17 @@ msgid ""
 " the project, its default spatial extent and coordinate system definitions "
 "(see Neteler & Mitasova 2008 in :ref:`literature_and_web`)."
 msgstr ""
-"私たちの新しい :file:`場所` 内に :file:`地図セット` を定義する必要もあります（ :file:`場所` "
-"新しいを作成するときに、これが必要です）。それには好き名前を付けられます - ここでは「デモ」を使用しました。GRASSは "
-":file:`PERMANENT` と呼ばれる特別な :file:`地図セット` "
-"を自動的に作成します。それにはプロジェクトのコアデータ、そのデフォルトの空間的範囲および座標系定義を格納するように設計されています（ "
+"新しい :file:‘LOCATION` 内に :file:`MAPSET` を定義する必要もあります（新しい :file:`LOCATION` "
+"を作成するときはこれが必要です）。それには好きに名前を付けられます - ここでは'demo'を使いました。GRASSは "
+":file:`PERMANENT` と呼ばれる特別な :file:`MAPSET` "
+"を自動的に作成します。それはプロジェクトのコアデータ、そのデフォルトの空間的範囲および座標系の定義を格納するように設計されています（ "
 ":ref:`literature_and_web` 中のNeteler＆Mitasova 2008を参照）。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:248
+msgid ""
+"Check out the summary to make sure it's correct and click "
+":guilabel:`Finish`."
+msgstr "要約が正しいことを確認し、:guilabel:`完了` をクリックします。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:249
 msgid ""
@@ -451,7 +639,7 @@ msgid ""
 "'PERMANENT', are created. The currently opened working set is 'demo', as you"
 " defined."
 msgstr ""
-"新しい :file:`場所` 「アラスカ」 と２つの :file:`地図セット` 「demo」と「PERMANENT」が作られました. "
+"新しい :file:`LOCATION` 「アラスカ」 と２つの :file:`MAPSET` 'demo'と'PERMANENT'が作られました. "
 "現在開かれているワーキングセットはあなたが定義した 'demo' です。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:251
@@ -473,11 +661,11 @@ msgid ""
 ":file:`LOCATION` 'alaska', included in the QGIS 'Alaska' dataset "
 ":ref:`label_sampledata`, and move on to section :ref:`label_vectmodel`."
 msgstr ""
-"それが多くのステップのように思えたならば、それは本当はすべてでない悪い :file:`場所` を作成するための非常に簡単な方法はありません。 "
-":file:`場所` 「アラスカ」は、データのインポートのための準備ができました（ :ref:`sec_import_loc_data` "
-"セクションを参照）。QGIS「アラスカ」データセット :ref:`label_sampledata` に含まれるサンプルのGRASS "
-":file:`場所` 「アラスカ」中の既存のベクターおよびラスターデータも使用できます、そしてセクション :ref:`label_vectmodel` "
-"に移動します。"
+"手順が多いように感じたかもしれませんが、実際はそれほど悪くなく、:file:`LOCATION` を素早く作成することができます。これで "
+":file:`LOCATION` 'alaska' はデータをインポートする準備が整いました（:ref:`sec_import_loc_data` "
+"セクションを参照）。また、QGIS 'Alaska' データセット :ref:`label_sampledata` に含まれるサンプルのGRASS "
+":file:`LOCATION` 'alaska'に既に存在するベクタデータとラスタデータを使って、セクション "
+":ref:`label_vectmodel` に進むこともできます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:272
 msgid "Adding a new MAPSET"
@@ -490,9 +678,9 @@ msgid ""
 "read maps in other users' :file:`MAPSETs` (and they can read yours), but you"
 " can modify or remove only the maps in your own :file:`MAPSET`."
 msgstr ""
-"ユーザーはご自身で作成したGRASS :file:`地図セット` への書き込みアクセス権を持ちます。これは、ご自身の :file:`地図セット` "
-"へのアクセス以外にも他のユーザーの :file:`地図セット` "
-"中の地図を読める（そして他のユーザーはご自身のを読むことができる）ことを意味しますが、変更したり削除できるのはご自身の :file:`地図セット` "
+"ユーザーは、自分で作成したGRASS :file:`MAPSET` への書き込みアクセス権を持ちます。これは、自分の :file:`MAPSET` "
+"へのアクセス以外にも、他のユーザーの :file:`MAPSET` "
+"中の地図を（そして他のユーザーはあなたのものを）読むことができることを意味しますが、変更したり削除できるの自分の :file:`MAPSET` "
 "中の地図だけです。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:279
@@ -512,8 +700,33 @@ msgid ""
 ":file:`LOCATION` 'alaska', where we want to add a further :file:`MAPSET` "
 "called 'test'."
 msgstr ""
-"さらに :file:`地図セット`　の「テスト」をするため :file:`場所` 「アラスカ」の GRASS データベース (GISDBASE) "
-"フォルダ :file:`grassdata` を選択して下さい."
+"さらに「テスト」という :file:`地図セット` を追加するため、 :file:`場所` 「アラスカ」の GRASS データベース "
+"(GISDBASE) フォルダ :file:`grassdata` を選択して下さい."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:290
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on "
+"the radio button |radioButtonOn| :guilabel:`Select location` (see "
+":numref:`figure_grass_new_location`) and click :guilabel:`Next`."
+msgstr ""
+"このウィザードを使用して、既存の :file:`LOCATION` 内に新しい :file:`MAPSET` を作成したり、全く新しい "
+":file:`LOCATION` を作成することができます。ラジオボタン |radioButtonOn| :guilabel:`場所を選択` "
+"をクリックし（ :numref:`figure_grass_new_location` を参照）、 :guilabel:`次へ` をクリックします。 "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:294
+msgid ""
+"Enter the name :file:`test` for the new :file:`MAPSET`. Below in the wizard,"
+" you see a list of existing :file:`MAPSETs` and corresponding owners."
+msgstr ""
+"新しい :file:`MAPSET` に :file:`test` という名前を入力します。ウィザードの下の方に、既存の :file:`MAPSET` "
+"とそれに対応する所有者のリストが表示されます。 "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:296
+msgid ""
+"Click :guilabel:`Next`, check out the summary to make sure it's all correct "
+"and click :guilabel:`Finish`."
+msgstr ":guilabel:`次へ` をクリックし、要約が正しいことを確認し、:guilabel:`完了` をクリックします。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:303
 msgid "The GRASS vector data model"
@@ -529,8 +742,8 @@ msgid ""
 "without gaps. An area is identified (and labelled) by the **centroid** of "
 "the area."
 msgstr ""
-"デジタル化に先立って :index:`GRASSベクターデータモデル` "
-"を理解することが重要です。一般的には、GRASSは、トポロジ的ベクターモデルを使用しています。これは、領域が閉じられた多角形としてではなく、一つ以上の境界で表現されることを意味します。二つの隣接する領域間の境界は一度だけデジタル化され、それは、両方の領域によって共有されています。境界は隙間なく接続され閉じている必要があります。領域は、領域の"
+"デジタイズに先立って :index:`GRASSベクターデータモデル` "
+"を理解することが重要です。一般的には、GRASSは、トポロジ的ベクターモデルを使用しています。これは、領域が閉じたポリゴンとしてではなく、一つ以上の境界で表現されることを意味します。二つの隣接する領域間の境界は一度だけデジタイズされ、それは、両方の領域によって共有されています。境界は隙間なく接続され閉じている必要があります。領域は、領域の"
 " **重心** によって識別（およびラベル付け）されます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:312
@@ -544,7 +757,7 @@ msgid ""
 "special cases such as vector network analysis. Normally, you should prefer "
 "to store different geometry elements in different layers.)"
 msgstr ""
-"境界と重心のほかに、ベクター地図には点と線も含めることができます。これらのすべてのジオメトリ要素は、一つのベクターで混合できる一つのGRASSベクター地図内の異なるいわゆる「レイヤー」で表されます。だからGRASSにおいては、レイヤーはベクターまたはラスター地図ではなく、ベクターレイヤー内部の１つのレベルです。これは慎重に区別することが重要です。（ジオメトリ要素を混合することは可能ですが、それは異常なことであり、GRASSにおいてさえベクターネットワーク解析などの特別な場合に使用されるだけです。通常は、異なるジオメトリ要素は異なるレイヤーに格納することをお勧めします。）"
+"境界と重心のほかに、ベクター地図にはポイントとラインも含めることができます。これらのすべてのジオメトリ要素は、一つのベクターで混合できる一つのGRASSベクター地図内の異なるいわゆる「レイヤー」で表されます。だからGRASSにおいては、レイヤーはベクターまたはラスター地図ではなく、ベクターレイヤー内部の１つのレベルです。これは慎重に区別することが重要です。（ジオメトリ要素を混合することは可能ですが、それは異常なことであり、GRASSにおいてさえベクターネットワーク解析などの特別な場合に使用されるだけです。通常は、異なるジオメトリ要素は異なるレイヤーに格納することをお勧めします。）"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:321
 msgid ""
@@ -555,7 +768,7 @@ msgid ""
 "might be the case where the boundary between a lake and a forest is a road, "
 "so it can have a different attribute table."
 msgstr ""
-"1つのベクターデータセット内には複数の「レイヤー」を格納できます。例えば、田畑、森林、湖沼は、一つのベクターに格納できます。隣接する森林と湖沼には同じ境界を共有できますが、それらは別々の属性テーブルを持っています。境界に属性を付けることも可能です。例では、湖沼と森林との境界が道路である場合がありますので、異なる属性テーブルを持つことができます。"
+"1つのベクターデータセット内には複数の「レイヤー」を格納できます。例えば、田畑、森林、湖沼は、一つのベクターに格納できます。隣接する森林と湖沼には同じ境界を共有できますが、それらは別々の属性テーブルを持っています。境界に属性を付けることも可能です。例として、湖沼と森林の境界が道路なので、異なる属性テーブルを持つ場合があります。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:327
 msgid ""
@@ -565,7 +778,7 @@ msgid ""
 " number. In the future, GRASS will also support names as fields in the user "
 "interface."
 msgstr ""
-"地物の「レイヤー」GRASS内部「レイヤー」によって定義されます。「レイヤー」は（ジオメトリが森や湖であれば、例えば）データセット内の複数のレイヤーがある場合に定義する数値です。今のところ、それは数にだけできます。将来的には、GRASSは、ユーザーインターフェイス内のフィールドとして名前をサポートします。"
+"地物の「レイヤー」はGRASS内部で「レイヤー」によって示されます。「レイヤー」は（そのジオメトリが森か湖かなど）データセット内に複数のレイヤーがあるかどうかを示す数値です。今のところ、それは数にだけできます。将来的には、GRASSは、ユーザーインターフェイス内のフィールドとして名前をサポートします。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:332
 msgid ""
@@ -587,11 +800,21 @@ msgid ""
 "'Category' (key, ID) is an integer attached to geometry primitives, and it "
 "is used as the link to one key column in the database table."
 msgstr ""
-"「カテゴリ」（キーID）はジオメトリプリミティブに取り付けられた整数であり、そしてそれは、データベーステーブル内の1つのキー列へのリンクとして使用されます。"
+"「カテゴリ」（キーID）はジオメトリプリミティブに付随した整数であり、それはデータベーステーブル内の1つのキー列へのリンクとして使用されます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:347
 msgid "**Learning the GRASS Vector Model**"
 msgstr "**GRASSベクターモデルについて調べる**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:349
+msgid ""
+"The best way to learn the GRASS vector model and its capabilities is to "
+"download one of the many GRASS tutorials where the vector model is described"
+" more deeply. See https://grass.osgeo.org/learn/manuals/ for more "
+"information, books and tutorials in several languages."
+msgstr ""
+"GRASSのベクタモデルとその機能を学ぶ最良の方法は、ベクタモデルがより深く説明されている多くのGRASSチュートリアルの一つをダウンロードすることです。より詳しい情報、書籍、チュートリアルは"
+" https://grass.osgeo.org/learn/manuals/ をご覧ください。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:360
 msgid "Creating a new GRASS vector layer"
@@ -601,19 +824,19 @@ msgstr "新しいGRASSベクターレイヤーを作成する"
 msgid ""
 "To create a new GRASS vector layer, select one of following items from "
 "mapset context menu in the browser:"
-msgstr "新しいGRASSベクターレイヤーを作成するには、ブラウザで地図セットコンテキストメニューから次の項目のいずれかを選択します。"
+msgstr "新しいGRASSベクターレイヤーを作るには、ブラウザで地図セットコンテキストメニューから次の項目のいずれかを選択します："
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:365
 msgid "New Point Layer"
-msgstr "新しいポイントレイヤー"
+msgstr "点レイヤの新規作成"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:366
 msgid "New Line Layer"
-msgstr "新しいラインレイヤー"
+msgstr "線レイヤの新規作成"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:367
 msgid "New Polygon Layer"
-msgstr "新しいポリゴンレイヤー"
+msgstr "ポリゴンレイヤの新規作成"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:369
 msgid ""
@@ -624,7 +847,7 @@ msgid ""
 "line and polygon) in one vector map. The type is only used to add the layer "
 "to the canvas, because QGIS requires a layer to have a specific type."
 msgstr ""
-"そして、ダイアログに名前を入力します。新しいベクター地図が作成され、レイヤーはキャンバスに追加され、編集が開始されます。レイヤーの種類を選択することは、ベクター地図にデジタル化できるジオメトリタイプを制限するものではありません。GRASSでは、1つのベクター地図のジオメトリタイプ（点、線、多角形）のすべての種類を整理することが可能です。QGISは特定のタイプを持っているレイヤーを必要とするので、タイプはレイヤーをキャンバスに追加するために使用されるだけです。"
+"そして、ダイアログに名前を入力します。新しいベクター地図が作成され、レイヤーはキャンバスに追加され、編集が開始されます。レイヤーの種類を選択することは、ベクター地図にデジタイズできるジオメトリタイプを制限するものではありません。GRASSでは、1つのベクター地図のジオメトリタイプ（点、線、ポリゴン）のすべての種類を整理することが可能です。QGISは特定のタイプを持っているレイヤーを必要とするので、タイプはレイヤーをキャンバスに追加するために使用されるだけです。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:375
 msgid ""
@@ -697,11 +920,11 @@ msgid ""
 "changes is used, original state is rewritten in vector map and attribute "
 "tables."
 msgstr ""
-"変更は、各操作の後に書かれている、取り消し/やり直しや編集を閉じるときにすべての変更を破棄しないために、しかし可能です。取り消しまたは変更を破棄が使用される場合、元の状態がベクター地図と属性テーブルに再び書き込まれます。"
+"変更は、各操作の後に書き込まれますが、編集を終了するときに、元に戻す/やり直す、すべての変更を破棄することができます。元に戻すまたは変更を破棄する場合、元の状態がベクター地図と属性テーブルに再び書き込まれます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:411
 msgid "There are two main reasons for this behaviour:"
-msgstr "この動作のための2つの主な理由があります："
+msgstr "この動作には主な理由が2つあります："
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:413
 msgid ""
@@ -717,7 +940,7 @@ msgid ""
 "information about topological correctness, such information can only be "
 "acquired from GRASS vector map if changes are written to the map."
 msgstr ""
-"トポロジ的データの効果的な編集のための必要性がトポロジ的正しさについての情報を可視化する変更が地図に書き込まれている場合、そのような情報は、GRASSベクター地図から取得できます。"
+"トポロジ的なデータを効果的に編集するために必要なのは、トポロジ的に正しいかどうかの情報を視覚化することであり、そのような情報は、地図に変更が書き込まれた場合にのみ、GRASSのベクタ地図から得ることができます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:420
 msgid "**Toolbar**"
@@ -727,7 +950,7 @@ msgstr "**ツールバー**"
 msgid ""
 "The 'Digitizing Toolbar' has some specific tools when a GRASS layer is "
 "edited:"
-msgstr "GRASSレイヤーが編集されるときに「デジタル化ツールバー」にはいくつかの特定のツールがあります："
+msgstr "GRASSレイヤーが編集されるときに「デジタイジングツールバー」にはいくつかの特定のツールがあります："
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:427
 msgid "Icon"
@@ -751,11 +974,11 @@ msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:429
 msgid "New Point"
-msgstr "新しい点"
+msgstr "点を追加"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:429
 msgid "Digitize new point"
-msgstr "新しい点をデジタイズ"
+msgstr "新しい点をデジタイズする"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "|captureLine|"
@@ -767,35 +990,43 @@ msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "New Line"
-msgstr "新しいライン"
+msgstr "線を追加"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "Digitize new line"
-msgstr "新しいラインをデジタイズ"
+msgstr "新しいラインをデジタイズする"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:433
 msgid "|captureBoundary|"
 msgstr "|captureBoundary|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:894
+msgid "captureBoundary"
+msgstr "captureBoundary"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:433
 msgid "New Boundary"
-msgstr "新しい境界"
+msgstr "境界線を追加"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:433
 msgid "Digitize new boundary"
-msgstr "新しい境界をデジタル化"
+msgstr "新しい境界線をデジタイズする"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:435
 msgid "|captureCentroid|"
 msgstr "|captureCentroid|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:896
+msgid "captureCentroid"
+msgstr "captureCentroid"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:435
 msgid "New Centroid"
-msgstr "重心の新規作成"
+msgstr "重心を追加"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:435
 msgid "Digitize new centroid (label existing area)"
-msgstr "新しい重心をデジタイズ (ラベルのあるエリア)"
+msgstr "新しい重心をデジタイズする (ラベルのあるエリア)"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "|capturePolygon|"
@@ -807,11 +1038,11 @@ msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "New Closed Boundary"
-msgstr "新しい閉境界"
+msgstr "閉じた境界線を追加"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "Digitize new closed boundary"
-msgstr "新しい閉境界をデジタル化"
+msgstr "新しい閉境界をデジタイズする"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:441
 msgid "Table GRASS Digitizing: GRASS Digitizing Tools"
@@ -819,7 +1050,7 @@ msgstr "表 GRASS デジタイジング : GRASS デジタイジングツール"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:443
 msgid "**Digitizing polygons in GRASS**"
-msgstr "**GRASSでポリゴンをデジタル化する**"
+msgstr "**GRASSでポリゴンをデジタイズする**"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:445
 msgid ""
@@ -829,7 +1060,7 @@ msgid ""
 "attribute information of a polygon always to the centroid and not to the "
 "boundary."
 msgstr ""
-"GRASSでポリゴンを作成する場合は、最初にポリゴンの境界をデジタル化します。その後、閉じた境界に重心（ラベルポイント）を追加します。この理由は、トポロジ的ベクターモデルはポリゴンの属性情報を、境界に対してではなく、常に重心に対してリンクしていることです。"
+"GRASSでポリゴンを作成する場合は、最初にポリゴンの境界線をデジタイズします。その後、閉じた境界線に重心（ラベルポイント）を追加します。この理由は、トポロジ的ベクターモデルはポリゴンの属性情報を、境界に対してではなく、常に重心に対してリンクしているためです。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:451
 msgid "**Category**"
@@ -847,7 +1078,7 @@ msgid ""
 "linear features, it is however possible to define attributes for a boundary "
 "later, for example in different layer."
 msgstr ""
-"カテゴリ、しばしばcatと呼ばれる、はIDの一種です。名前はGRASSベクターのみが単独で「カテゴリ」属性持っていた時代から来ています。カテゴリは、ジオメトリと属性の間のリンクとして使用されています。単一の幾何学的形状は、複数のカテゴリを有し、したがって異なるレイヤーに複数の地物を表すことができます。現在はQGIS編集ツールを使用してレイヤーごとに1つだけのカテゴリを割り当てることが可能です。新しい地物は、自動的に境界を除いて、新しいユニークなカテゴリが割り当てられます。境界は通常は領域を形成し、線形の地物を表すものではありません。しかし、後で境界レイヤーに対する属性を定義することは可能です、たとえば異なるレイヤーで。"
+"しばしばcatと呼ばれるカテゴリは、IDの一種です。その名前はGRASSベクターのみが単独で「カテゴリ」属性持っていた時代から来ています。カテゴリは、ジオメトリと属性の間のリンクとして使用されています。単一のジオメトリは、複数のカテゴリを持ち、したがって異なるレイヤーに複数の地物を表すことができます。現在はQGIS編集ツールを使ってレイヤーごとに1つのカテゴリだけを割り当てることができます。新しい地物は、境界線を除き、自動的に新しいユニークなカテゴリを割り当てます。境界線は通常は領域を形成し、線形の地物を表すものではありません。しかし、たとえば異なるレイヤーで、後から境界線の属性を定義することができます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:461
 msgid ""
@@ -860,11 +1091,11 @@ msgid ""
 " such data are properly represented as multiple features, and individual "
 "features, even from different layers, may be deleted."
 msgstr ""
-"QGIS編集を使用してジオメトリに複数のカテゴリを割り当てることができません、そのようなデータは複数の地物つぃて適切に表され、個々の地物は、異なるレイヤーからであっても、削除できる。"
+"QGIS編集を使ってジオメトリに複数のカテゴリを割り当てることはできません。そのようなデータは複数の地物として適切に表され、個々の地物は、異なるレイヤーからであっても、削除できます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:467
 msgid "**Attributes**"
-msgstr "**Attributes**"
+msgstr "**属性**"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:469
 msgid ""
@@ -875,9 +1106,9 @@ msgid ""
 "different set of fields while QGIS only supports one fixed set of fields per"
 " layer."
 msgstr ""
-"現在編集中のレイヤーの属性のみを変更できます。ベクター地図はより多くのレイヤーが含まれている場合は、他のレイヤーの地物は「<not editable "
-"(layer "
-"#)>」に設定されているすべての属性を持っています「そのような属性が編集できないことを警告します。その理由は、他のレイヤーを有し、通常QGISのみレイヤーあたりのフィールドのいずれかが固定セットをサポートしながら、フィールドの異なるセットを有することができること、です。"
+"現在編集中のレイヤーの属性のみが変更できます。ベクター地図により多くのレイヤーが含まれている場合、他のレイヤーの地物は、その属性が編集できないことを警告するため、すべての属性が"
+" '<not editable (layer #)>' "
+"に設定されます。その理由は、QGISがレイヤー毎に１つの固定されたフィールドセットしかサポートしないのに対して、他のレイヤーが、異なるフィールドセットを持っことができ、通常は持っているからです。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:474
 msgid ""
@@ -894,9 +1125,9 @@ msgid ""
 "without category which you don't want to update (typically boundaries), you "
 "can filter them out by setting 'Advanced Filter' to ``cat is not null``."
 msgstr ""
-"（ :ref:`vector_field_calculator` "
-"）「フィールド計算機」を使用して、たとえば、テーブル内の属性の一括更新を行いたい場合は、（通常は境界）を更新したくないカテゴリのない地物がありますが、「高度なフィルタ」"
-" ``cat is not null`` を設定することによりフィルタで除外できます、。"
+"テーブル内の属性の一括更新を、たとえば「フィールド計算機」（ :ref:`vector_field_calculator` "
+"）を使って、行いたい場合で、更新したくないカテゴリを持たない地物（通常は境界線）がある場合、「高度なフィルタ」 ``cat is not null`` "
+"を設定することによりフィルタで除外できます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:484
 msgid "**Editing style**"
@@ -965,7 +1196,7 @@ msgid ""
 "time is not supported. This is mainly due to the impossibility of handling "
 "multiple undo stacks for a single data source."
 msgstr ""
-"同時に同じベクター内の複数のレイヤーを同時編集することはサポートされていません。これは、単一のデータソースのスタックを元に戻す主に複数の処理が不可能であることに起因します。"
+"同時に同じベクター内の複数のレイヤーを同時編集することはサポートされていません。これは主に、単一のデータソースのスタックを元に戻す複数の処理が不可能であることに起因します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:522
 msgid ""
@@ -974,7 +1205,7 @@ msgid ""
 " in random order. This is being solved with GRASS developers."
 msgstr ""
 "|nix| |osx| LinuxおよびMac "
-"OS上でだけGRASSレイヤーを一度に一つだけ編集できます。これは、ランダムな順序でデータベースドライバを閉じられないというGRASSのバグによるものです。これは、GRASSの開発者によって解決されています。"
+"OS上でだけGRASSレイヤーを一度に一つだけ編集できます。これは、ランダムな順序でデータベースドライバを閉じられないというGRASSのバグによるものです。これは、GRASSの開発者によって解決されてようとしています。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:922
 msgid "nix"
@@ -1012,9 +1243,9 @@ msgid ""
 "and it defines north, south, east and west bounds, number of columns and "
 "rows, horizontal and vertical spatial resolution."
 msgstr ""
-"GRASSの領域定義（空間的な作業ウィンドウを設定）は、ラスターレイヤーを操作するために重要です。ベクター分析は、任意の定義された領域の定義に限定されるものではなく、デフォルトです。しかし、すべての新しく作成されたラスターは、元の拡張および解像度にかかわらず、現在定義されてGRASS領域の空間的な拡張と解像度を持つことになります。現在のGRASS領域に格納されている"
+"GRASSの領域定義（空間的な作業ウィンドウを設定）は、ラスターレイヤーを操作するために重要です。ベクター分析はデフォルトで任意の定義された領域の定義に限定されていません。しかし、すべての新しく作成されたラスターは、元の範囲と解像度にかかわらず、現在定義されているGRASS領域の空間的な範囲と解像度を持つことになります。現在のGRASS領域は"
 " :file:`$LOCATION/$MAPSET/WIND` "
-"ファイルを、それが列と行、水平方向および垂直方向の空間分解能の南、北、東と西の境界、数を定義します。"
+"ファイルに格納されており、それが北、南、東と西の境界、列と行の数、水平方向と垂直方向の空間解像度を定義します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:550
 msgid ""
@@ -1024,6 +1255,18 @@ msgid ""
 msgstr ""
 "|grassRegion| 使用してスイッチを入れるとQGISキャンバスでGRASS領域の可視化をオフすることが可能です "
 ":sup:`現在のGRASSのregion` ボタンを表示します。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:556
+msgid ""
+"The region can be modified in 'Region' tab in 'GRASS Tolls' dock widget. "
+"Type in the new region bounds and resolution, and click :guilabel:`Apply`. "
+"If you click on :guilabel:`Select the extent by dragging on canvas` you can "
+"select a new region interactively with your mouse on the QGIS canvas "
+"dragging a rectangle."
+msgstr ""
+"領域は「GRASSツール」ドックウィジェットの「領域」タブで変更できます。新しい領域の境界と解像度を入力し、:guilabel:`適用` "
+"をクリックします。:guilabel:`キャンバス上のドラッグで領域を指定する` "
+"をクリックすると、QGISキャンバス上でマウスを使って矩形をドラッグし、対話的に新しい領域を選択することができます。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:562
 msgid ""
@@ -1049,11 +1292,12 @@ msgid ""
 "because new raster or vector layers created during analysis need to be "
 "written to the currently selected :file:`LOCATION` and :file:`MAPSET`."
 msgstr ""
-"|grassTools| :sup:`GRASSツールを開く` ボックスは、選択されたGRASS :file:`場所` と :file:`MAPSET`"
-" 内部のデータを操作するためのGRASSモジュールの機能を提供します。GRASSツールボックスを使用するには、書き込み権限を持っている "
-":file:`場所` と :file:`地図セット` を開く必要があります（ :file:`地図セット` "
-"を作成した場合、通常は権限が付与されています）。分析中に作成された新しいラスターまたはベクターレイヤーは、現在選択されている :file:`場所` と "
-":file:`地図セット` に書き込む必要があるため、これは必要です。"
+"|grassTools| :sup:`GRASSツールを開く` ボックスは、選択されたGRASS :file:`LOCATION` と "
+":file:`MAPSET` "
+"内部のデータを操作するためのGRASSモジュールの機能を提供します。GRASSツールボックスを使用するには、書き込み権限を持っている "
+":file:`LOCATION` と :file:`MAPSET` を開く必要があります（ :file:`MAPSET` "
+"を作成した場合、通常は権限が付与されています）。分析中に作成された新しいラスターまたはベクターレイヤーは、現在選択されている "
+":file:`LOCATION` と :file:`MAPSET` に書き込む必要があるため、これは必要です。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:585
 msgid "GRASS Toolbox and Module Tree"
@@ -1073,13 +1317,32 @@ msgid ""
 msgstr ""
 "GRASSツールボックスのGRASSシェルではほとんどすべての(300以上)GRASSモジュールをコマンドラインインターフェイスで提供しています。もっとユーザーフレンドリな作業環境としてグラフィカルダイアログでは約200のGRASSモジュールと機能が提供されています。"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:597
+msgid ""
+"A complete list of GRASS modules available in the graphical Toolbox in QGIS "
+"version |CURRENT| is available in the GRASS wiki at "
+"https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list."
+msgstr ""
+"QGISバージョン |CURRENT| のグラフィカルツールボックスで利用可能なGRASSモジュールの完全な一覧は、GRASS "
+"wikiのhttps://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list "
+"で利用できます。 "
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:601
 msgid ""
 "It is also possible to customize the GRASS Toolbox content. This procedure "
 "is described in section :ref:`sec_toolbox-customizing`."
 msgstr ""
-"GRASS ツールボックスの内容をカスタマイズできます. この機能は セクション :ref:`sec_toolbox-customizing` "
+"GRASSツールボックスの内容をカスタマイズすることもできます. この手順は セクション :ref:`sec_toolbox-customizing` "
 "に記述されています."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:604
+msgid ""
+"As shown in :numref:`figure_grass_toolbox`, you can look for the appropriate"
+" GRASS module using the thematically grouped :guilabel:`Modules Tree` or the"
+" searchable :guilabel:`Modules List` tab."
+msgstr ""
+":numref:`figure_grass_toolbox` に示すように、テーマごとにグループ化された :guilabel:`モジュールツリー` "
+"や検索可能な :guilabel:`モジュールリスト` タブを使用して、適切なGRASSモジュールを探すことができます。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:608
 msgid ""
@@ -1087,8 +1350,8 @@ msgid ""
 "Toolbox dialog, providing three new sub-tabs: :guilabel:`Options`, "
 ":guilabel:`Output` and :guilabel:`Manual`."
 msgstr ""
-":guilabel:`オプション` 、:guilabel:`出力` と :guilabel:`マニュアル` "
-"グラフィカルモジュールアイコンをクリックすると、新しいタブが3つの新しいサブタブを提供し、ツールボックス]ダイアログボックスに追加されます。"
+"グラフィカルモジュールアイコンをクリックすると、新しいタブがツールボックス]ダイアログボックスに追加され、:guilabel:`オプション` "
+"、:guilabel:`出力` と :guilabel:`マニュアル` の3つの新しいサブタブを提供します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:612
 msgid "**Options**"
@@ -1113,7 +1376,7 @@ msgid ""
 "simple. If you want to use further module parameters and flags, you need to "
 "start the GRASS shell and run the module in the command line."
 msgstr ""
-"提供モジュールパラメーターは、多くの場合、ダイアログシンプルに保つために完全ではありません。さらにモジュールパラメーターとフラグを使用する場合は、GRASSのシェルを起動し、コマンドラインでモジュールを実行する必要があります。"
+"提供されているモジュールパラメータは、ダイアログをシンプルに保つために完全でないことがよくあります。さらにモジュールパラメータとフラグを使いたい場合は、GRASSシェルを起動し、コマンドラインでモジュールを実行する必要があります。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:629
 msgid ""
@@ -1125,9 +1388,9 @@ msgid ""
 "allows you to use the complete GRASS module options without the need to "
 "switch to the GRASS shell."
 msgstr ""
-"QGIS 1.8以降の新機能は、次のサポートです :guilabel:`オプション` タブで単純化されたモジュール]ダイアログ以下の "
-":guilabel:`高度なオプションを表示` ボタン。使用例として :file:`v.in.ascii` "
-"が、それはおそらくよりの一部またはQGISの将来のバージョンでGRASSツールボックス内のすべてのモジュールになります。現時点では、それが唯一のモジュールに追加されます。これはGRASSのシェルに切り替える必要がなく、完全なGRASSモジュールオプションを使用できます。"
+"QGIS 1.8以降の新機能は、:guilabel:`オプション` タブの単純化されたモジュール]ダイアログの下にある "
+":guilabel:`詳細オプションを表示します` ボタンです 。現時点では、使用例としてモジュール :file:`v.in.ascii` "
+"にのみ追加されていますが、QGISの将来のバージョンではそれはおそらくより多くの、またはすべての、GRASSツールボックス内のモジュールの一部になります。これはGRASSシェルに切り替える必要なく、完全なGRASSモジュールオプションを使用できます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:636
 msgid "**Output**"
@@ -1136,6 +1399,18 @@ msgstr "**出力**"
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:643
 msgid "GRASS Toolbox Module Output"
 msgstr "GRASSツールボックスモジュール出力"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:645
+msgid ""
+"The :guilabel:`Output` tab provides information about the output status of "
+"the module. When you click the :guilabel:`Run` button, the module switches "
+"to the :guilabel:`Output` tab and you see information about the analysis "
+"process. If all works well, you will finally see a ``Successfully finished``"
+" message."
+msgstr ""
+":guilabel:`出力` タブは、モジュールの出力状況に関する情報を提供します。:guilabel:`実行` ボタンをクリックすると、モジュールは "
+":guilabel:`出力` タブに切り替わり、解析プロセスに関する情報が表示されます。すべてがうまくいくと、最後に ``成功しました`` "
+"というメッセージが表示されます。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:650
 msgid "**Manual**"
@@ -1155,10 +1430,9 @@ msgid ""
 "same information as the module :file:`g.manual`."
 msgstr ""
 ":guilabel:`マニュアル` "
-"タブがGRASSモジュールのHTMLヘルプページを示しています。さらにモジュールパラメーターとフラグをチェックしたり、モジュールの目的についてのより深い知識を得るためにそれを使用できます。"
-" :file:`メインヘルプ索引` 、 :file:`テーマ別索引` と :file:`全索引` "
-"各モジュールのマニュアルページの最後に、へのさらなるリンクを参照してください。 :file:`g.manual` "
-"これらのリンクは、モジュールと同じ情報を提供します。"
+"タブはGRASSモジュールのHTMLヘルプページを示しています。それを使って他のモジュールパラメーターとフラグを調べたり、モジュールの目的についてのより深い知識を得ることができます。各モジュールのマニュアルページの最後には、:file:`メインヘルプ索引`"
+" 、 :file:`テーマ別索引` と :file:`全索引` 、へのさらなるリンクがあります。これらのリンクは、モジュール "
+":file:`g.manual` と同じ情報を提供します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:669
 msgid "**Display results immediately**"
@@ -1169,7 +1443,7 @@ msgid ""
 "If you want to display your calculation results immediately in your map "
 "canvas, you can use the 'View Output' button at the bottom of the module "
 "tab."
-msgstr "計算結果をすぐに地図キャンバスに表示したい場合、モジュールタブの一番下にある '出力を表示' ボタンを利用できます."
+msgstr "計算結果をすぐにマップキャンバスに表示したい場合、モジュールタブの一番下にある '出力を見る' ボタンを利用できます."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:675
 msgid "GRASS module examples"
@@ -1192,14 +1466,15 @@ msgid ""
 "as explained in section :ref:`sec_import_loc_data`."
 msgstr ""
 "最初の例では、標高ラスター（DEM）からベクター等高線地図を作成します。 セクション :ref:`sec_import_loc_data` "
-"で説明したように、ここでアラスカ :file:`場所` 設定を持っていることを想定しています。"
+"で説明したように、ここでアラスカ :file:`LOCATION` を設定していることを想定しています。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:686
 msgid ""
 "First, open the location by clicking the |grassOpenMapset| :sup:`Open "
 "mapset` button and choosing the Alaska location."
 msgstr ""
-"まず、 |grassOpenMapset|  :sup:`地図セットを開く` ボタンをクリックしてアラスカの場所を選択することで場所を開きます。"
+"まず、 |grassOpenMapset|  :sup:`Mapsetを開く` "
+"ボタンをクリックし、アラスカlocationを選択してlocationを開きます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:688
 msgid ""
@@ -1211,19 +1486,20 @@ msgid ""
 "In the list of tool categories, double-click :menuselection:`Raster --> "
 "Surface Management --> Generate vector contour lines`."
 msgstr ""
-"ツールカテゴリのリストで、 :menuselection:`ラスター --> サーフェス管理 --> ベクター等高線を生成` をダブルクリックします。"
+"ツールカテゴリのリストで、 :menuselection:`Raster（ラスタ） --> Surface management（表面管理） --> "
+"Generate vector contour lines（ベクタ等高線を生成）` をダブルクリックします。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:691
 msgid ""
 "Now a single click on the tool **r.contour** will open the tool dialog as "
 "explained above (see :ref:`grass_modules`)."
 msgstr ""
-"今ツール **r.contour** をシングルクリックすると、上述したように、[ツール]ダイアログが開きます（ "
-":ref:`grass_modules` を参照）。"
+"ツール **r.contour** をシングルクリックすると、上述したように、ツールダイアログが開きます（ :ref:`grass_modules` "
+"を参照）。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:693
 msgid "In the :guilabel:`Name of input raster map` enter ``gtopo30``."
-msgstr ":guilabel:`入力ラスター地図の名前` に ``gtopo30`` を入力します。"
+msgstr ":guilabel:`入力ラスタマップ名` に ``gtopo30`` を入力します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:694
 msgid ""
@@ -1240,7 +1516,16 @@ msgstr ""
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:696
 msgid ""
 "Type into the :guilabel:`Name for output vector map` the name ``ctour_100``."
-msgstr ":guilabel:`出力するベクター地図の名前` に ``ctour_100`` と入力して下さい。"
+msgstr ":guilabel:`出力するベクタマップ名` に ``ctour_100`` と入力します。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:697
+msgid ""
+"Click :guilabel:`Run` to start the process. Wait for several moments until "
+"the message ``Successfully finished`` appears in the output window. Then "
+"click :guilabel:`View Output` and :guilabel:`Close`."
+msgstr ""
+":guilabel:`実行`をクリックして処理を開始します。出力ウィンドウに ``成功しました`` "
+"というメッセージが表示されるまでしばらく待ちます。そして :guilabel:`出力を見る` と :guilabel:`閉じる` をクリックします。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:701
 msgid ""
@@ -1249,7 +1534,7 @@ msgid ""
 "line color so that the contours appear clearly over the elevation raster, as"
 " in :ref:`vector_properties_dialog`."
 msgstr ""
-"これは大きな領域ですので、表示されるまでに数分かかるでしょう。それはレンダリングを完了したら、レイヤーのプロパティウィンドウを開き、 "
+"これは大きな領域ですので、表示されるまでに数分かかるでしょう。それはレンダリングを完了したら、レイヤのプロパティウィンドウを開き、 "
 ":ref:`vector_properties_dialog` のように、等高線が標高ラスターの上に明確に表示されるように線の色を変更できます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:705
@@ -1279,7 +1564,7 @@ msgid ""
 "Peuker algorithm."
 msgstr ""
 "QGISにはちょうどGRASS **v.generalize** ダグラス・Peukerアルゴリズムのように動作する "
-":menuselection:`ベクター --> ジオメトリツール --> ジオメトリを単純化` ツールがあることに注意してください。"
+":menuselection:`ベクタ --> ジオメトリツール --> ジオメトリを簡素化` ツールがあることに注意してください。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:720
 msgid ""
@@ -1291,8 +1576,8 @@ msgid ""
 msgstr ""
 "しかし、この例の目的は異なっています。 ``r.contour`` によって作成された等高線には鋭い角があって滑らかにする必要があります。 "
 "**v.generalize** "
-"アルゴリズムの中で、Chaikenがあり、ちょうどそれをします（エルミートスプラインも）。これらのアルゴリズムはそれがさらに緩やかにロードさせ、ベクターに追加の頂点を"
-" **追加** できることに注意してください。"
+"アルゴリズムの中には、ちょうどそれをするChaikenのもの（エルミートスプラインも）があります。これらのアルゴリズムはベクターに追加の頂点を "
+"**追加** し、読み込みがさらに遅くなることに注意してください。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:726
 msgid ""
@@ -1300,14 +1585,35 @@ msgid ""
 ":menuselection:`Vector --> Develop map --> Generalization`, then click on "
 "the **v.generalize** module to open its options window."
 msgstr ""
-"GRASSツールボックスを開き、カテゴリ :menuselection:`ベクター --> 地図を展開 --> 簡素化` をダブルクリックし、それから "
-"**v.generalize** モジュールをクリックしてそのオプションウィンドウを開いてください。"
+"GRASSツールボックスを開き、カテゴリ :menuselection:`Vector（ベクタ） --> Develop map（地図を展開） --> "
+"Generalization（簡素化）` をダブルクリックし、それから **v.generalize** "
+"モジュールをクリックしてそのオプションウィンドウを開いてください。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:729
 msgid ""
 "Check that the 'ctour_100' vector appears as the :guilabel:`Name of input "
 "vector`."
-msgstr ":guilabel:`入力ベクターの名前` として「ctour_100」ベクターが表示されていることを確認してください。"
+msgstr ":guilabel:`入力ベクタの名前` として「ctour_100」ベクターが表示されていることを確認してください。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:730
+msgid ""
+"From the list of algorithms, choose Chaiken's. Leave all other options at "
+"their default, and scroll down to the last row to enter in the field "
+":guilabel:`Name for output vector map` 'ctour_100_smooth', and click "
+":guilabel:`Run`."
+msgstr ""
+"アルゴリズムのリストからChaiken'sを選択します。他のオプションはデフォルトのままにしておき、最後の行までスクロールして "
+":guilabel:`出力ベクタマップ名` フィールドに 'ctour_100_smooth' と入力し、 :guilabel:`実行` "
+"をクリックします。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:733
+msgid ""
+"The process takes several moments. Once ``Successfully finished`` appears in"
+" the output windows, click :guilabel:`View Output` and then "
+":guilabel:`Close`."
+msgstr ""
+"処理にはしばらくかかります。出力ウィンドウに ``成功しました`` が表示されたら、 :guilabel:`出力を見る` をクリックし、それから "
+":guilabel:`閉じる` をクリックします。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:735
 msgid ""
@@ -1370,11 +1676,17 @@ msgstr "それからモジュールをオープンするために **r.shaded.rel
 msgid "Change the :guilabel:`azimuth angle` |selectNumber| 270 to 315."
 msgstr ":guilabel:`方位角` を |selectNumber| 270から315に変更します 。"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:770
+msgid ""
+"Enter ``gtopo30_shade`` for the new hillshade raster, and click "
+":guilabel:`Run`."
+msgstr "新しい陰影ラスタのために ``gtopo30_shade``と入力し、:guilabel:`実行` をクリックします。 "
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:771
 msgid ""
 "When the process completes, add the hillshade raster to the map. You should "
 "see it displayed in grayscale."
-msgstr "プロセスが完了すると陰影ラスターが地図に追加されます。これはグレースケールで表示されます。"
+msgstr "プロセスが完了すると陰影ラスタが地図に追加されます。これはグレースケールで表示されます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:773
 msgid ""
@@ -1384,9 +1696,9 @@ msgid ""
 "the :guilabel:`Transparency` tab and set its transparency level to about "
 "25%."
 msgstr ""
-"hillshadingと ``gtopo30`` の陰影起伏と色の両方を一緒に表示するには、目次中の ``gtopo30`` "
-"地図下に陰影起伏図を移動し、次に :menuselection:`gtopo30` の `プロパティ` ウィンドウを開き、 "
-":guilabel:`透明度` タブに切り替えて約25％の透明度レベルを設定`します。"
+"``gtopo30`` の陰影起伏と色の両方を一緒に表示するには、目次中の ``gtopo30`` 地図の下に陰影起伏図を移動し、次に "
+":menuselection:`gtopo30` の `プロパティ` ウィンドウを開き、 :guilabel:`透明度` "
+"タブに切り替えて約25％の透明度レベルを設定`します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:778
 msgid ""
@@ -1395,8 +1707,8 @@ msgid ""
 "order to see the visual effects of the hillshading, turn off the "
 "``gtopo30_shade`` map, then turn it back on."
 msgstr ""
-"これで、グレースケール陰影起伏地図 **上記の** 表示される設定のカラー地図と透明性を持つ ``gtopo30`` "
-"上昇を持っている必要があります。陰影の視覚効果を見るため、 ``gtopo30_shade`` 地図をオフにして、それから再びオンにします。"
+"これでカラーマップと透明度を設定した `gtopo30`` 標高がグレースケール陰影起伏図の **上に** "
+"表示されるはずです。陰影の視覚効果を見るには、 ``gtopo30_shade`` マップをオフにして、それから再びオンにしてください。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:783
 msgid "**Using the GRASS shell**"
@@ -1413,8 +1725,8 @@ msgid ""
 "simplest default parameters. This example demonstrates the use of an "
 "additional option in the **r.shaded.relief** module that was shown above."
 msgstr ""
-"QGISでGRASSプラグインは、GRASSに新しく、すべてのモジュールとオプションに慣れていないユーザーのために設計されています。そのため、ツールボックス内のいくつかのモジュールが利用できるすべてのオプションを示していない、といくつかのモジュールは、まったく表示されません。GRASSのシェル（またはコンソール）は、最も簡単なデフォルトパラメーターをツールボックスにあるモジュールにツールボックスのツリーで、また、いくつかの追加オプションには表示されません。これらの追加のGRASSモジュールへのアクセスをユーザーに提供します。この例では、上記示した"
-" **r.shaded.relief** モジュールで追加のオプションの使用方法を示します。"
+"QGISのGRASSプラグインは、GRASSを初めて使い、すべてのモジュールやオプションに精通していないユーザ向けに設計されています。そのため、ツールボックスに表示されるモジュールの中には、オプションのすべてが表示されていないものや、まったく表示されていないものがあります。GRASSシェル（またはコンソール）は、ツールボックスのツリーに表示されない追加のGRASSモジュールへのアクセスをユーザーに提供し、また、ツールボックスにあるモジュールで最も簡単なデフォルトパラメーターを持つものに追加のオプションを提供します。この例では、上に出てきた"
+" **r.shaded.relief** モジュールの追加オプションの使い方を示します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:799
 msgid "The GRASS shell, r.shaded.relief module"
@@ -1426,8 +1738,20 @@ msgid ""
 "multiplies the elevation values relative to the X-Y coordinate units so that"
 " the hillshade effect is even more pronounced."
 msgstr ""
-"モジュール **r.shaded.relief** は、陰影起伏効果がより顕著になるようにXYに対する標高値は、座標単位乗算パラメーター "
-"``zmult`` をとることができます。"
+"モジュール **r.shaded.relief** "
+"は、陰影起伏効果がより顕著になるように、X-Y座標単位に対して標高値に乗算するパラメータ、``zmult`` を取ることができます。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:805
+msgid ""
+"Load the ``gtopo30`` elevation raster as above, then start the GRASS Toolbox"
+" and click on the GRASS shell. In the shell window, type the command "
+"``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` and"
+" press :kbd:`Enter`."
+msgstr ""
+"上述したように ``gtopo30`` "
+"標高ラスタを読み込んでからGRASSツールボックスを起動し、GRASSシェルをクリックします。シェルウィンドウでコマンド "
+"``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` "
+"を入力し、 :kbd:`Enter` を押します。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:809
 msgid ""
@@ -1435,7 +1759,7 @@ msgid ""
 "click on the new ``gtopo30_shade2`` raster to display it in QGIS."
 msgstr ""
 "プロセスが終了した後、 :guilabel:`ブラウズ` タブにシフトし、新しい ``gtopo30_shade2`` "
-"ラスターをダブルクリックしてQGISでそれを表示します。"
+"ラスタをダブルクリックしてQGISでそれを表示します。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:811
 msgid ""
@@ -1444,8 +1768,8 @@ msgid ""
 "``gtopo30`` layer. You should see that the 3-D effect stands out more "
 "strongly compared with the first shaded relief map."
 msgstr ""
-"以上説明したように、その後、着色された ``gtopo30`` レイヤーの透明性を確認し、コンテンツのテーブルで ``gtopo30`` "
-"ラスター以下陰影起伏ラスターを移動させます。3-D効果がより強く最初の陰影起伏図と比べて際立っていることがわかります。"
+"上で説明したように、目次で陰影起伏ラスタを ``gtopo30`` ラスタの下に移動し、それから、着色された ``gtopo30`` "
+"レイヤの透明性を確認します。3-D効果がより強く最初の陰影起伏図と比べて際立っていることがわかります。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:822
 msgid "Displaying shaded relief created with the GRASS module r.shaded.relief"
@@ -1453,13 +1777,21 @@ msgstr "GRASSモジュールr.shaded.reliefで作成した陰影を表示しま�
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:826
 msgid "Raster statistics in a vector map"
-msgstr "ベクター地図によるラスター統計"
+msgstr "ベクタマップによるラスタ統計"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:828
 msgid ""
 "The next example shows how a GRASS module can aggregate raster data and add "
 "columns of statistics for each polygon in a vector map."
-msgstr "次の例はGRASS モジュールがラスターデータを集計してベクター地図のそれぞれのポリゴンの列に統計値を追加するものです."
+msgstr "次の例はGRASS モジュールがラスタデータを集計してベクタマップのそれぞれのポリゴンの列に統計値を追加するものです。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:831
+msgid ""
+"Again using the Alaska data, refer to :ref:`sec_import_loc_data` to import "
+"the :file:`shapefiles/trees.shp` file into GRASS."
+msgstr ""
+"再びアラスカのデータを使って、 :ref:`sec_import_loc_data` を参照して、 "
+":file:`shapefiles/trees.shp` ファイルをGRASSにインポートします。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:833
 msgid ""
@@ -1467,20 +1799,21 @@ msgid ""
 "imported trees map to make it a complete GRASS area vector (including both "
 "boundaries and centroids)."
 msgstr ""
-"今、中間のステップが必要です：重心をインポートされた樹木図に追加して（境界と重心の両方を含む）完全なGRASSエリアベクターを作る必要があります。"
+"ここで、中間のステップが必要です：重心をインポートされた樹木図に追加して（境界と重心の両方を含む）完全なGRASSエリアベクタを作る必要があります。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:836
 msgid ""
 "From the Toolbox, choose :menuselection:`Vector --> Manage features`, and "
 "open the module **v.centroids**."
 msgstr ""
-"ツールボックスで :menuselection:`ベクター --> 地物を管理` を選択して **v.centroids** モジュールを開いて下さい."
+"ツールボックスで :menuselection:`Vector（ベクタ） --> Manage features（地物を管理）` を選択して "
+"**v.centroids** モジュールを開きます。"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:838
 msgid ""
 "Enter as the :guilabel:`output vector map` 'forest_areas' and run the "
 "module."
-msgstr ":guilabel:`出力ベクター地図` として 'forest_areas' と入力してモジュールを実行して下さい."
+msgstr ":guilabel:`出力するベクトルマップ名` として 'forest_areas' と入力してモジュールを実行して下さい."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:839
 msgid ""
@@ -1491,10 +1824,10 @@ msgid ""
 ":guilabel:`Classification field` to 'VEGDESC'. (Refer to the explanation of "
 "the symbology tab in :ref:`vector_style_menu` of the vector section.)"
 msgstr ""
-"さて、 ``forest_areas`` ベクターをロードし、森林のタイプを表示 - 落葉、常緑、混合 - 異なる色で：レイヤー "
-":guilabel:`プロパティ` ウィンドウ、:guilabel:`シンボル体系` タブの中で、 :guilabel:`凡例タイプ` から "
-"|selectString| 「ユニークな値」選び、 :guilabel:`分類フィールド` に「VEGDESC」を設定します。（ベクターセクションの "
-":ref:`vector_style_menu` 中の記号体系タブの説明を参照してください。 ）"
+"次に、 ``forest_areas`` ベクタを読み込んで、森林の種類 - 落葉、常緑、混合 - を異なる色で表示します：レイヤの "
+":guilabel:`プロパティ` ウィンドウの :guilabel:`シンボロジ` タブの中で、 :guilabel:`凡例タイプ` から "
+"|selectString| 「ユニークな値」選び、 :guilabel:`分類フィールド` に「VEGDESC」を設定します。（ベクタセクションの "
+":ref:`vector_style_menu` 中のシンボロジタブの説明を参照してください。 ）"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:936
 msgid "selectString"
@@ -1512,6 +1845,15 @@ msgid ""
 "``forest_areas``."
 msgstr ""
 "**v.rast.stats** モジュールをクリックして ``gtopo30`` と ``forest_areas`` と入力して下さい."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:848
+msgid ""
+"Only one additional parameter is needed: Enter :guilabel:`column prefix` "
+"``elev``, and click :guilabel:`Run`. This is a computationally heavy "
+"operation, which will run for a long time (probably up to two hours)."
+msgstr ""
+"追加で必要なパラメータは1つだけです： :guilabel:`column prefix` ``elev`` と入力し、 :guilabel:`実行` "
+"をクリックします。これは計算量が多く、長時間（おそらく2時間程度）実行される。 "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:851
 msgid ""
@@ -1539,3 +1881,13 @@ msgid ""
 "A sample XML file for generating the module ``v.buffer`` (v.buffer.qgm) "
 "looks like this:"
 msgstr "モジュール ``v.buffer`` （v.buffer.qgm）を生成するためのサンプルXMLファイルは次のようになります。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:881
+msgid ""
+"The parser reads this definition and creates a new tab inside the Toolbox "
+"when you select the module. A more detailed description for adding new "
+"modules, changing a module's group, etc., can be found at "
+"https://qgis.org/en/site/getinvolved/development/addinggrasstools.html."
+msgstr ""
+"モジュールを選択するとパーサーはこの定義を読み取り、ツールボックス内に新しいタブを作成します。新しいモジュールの追加、モジュールのグループの変更など、より詳しい説明はhttps://qgis.org/en/site/getinvolved/development/addinggrasstools.html"
+" にあります。"
