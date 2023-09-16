@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:53+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +27,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:5
 msgid "Exploring Data Formats and Fields"
-msgstr "データ形式とフィールドの探究"
+msgstr "データ形式とフィールドを探究する"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:20
 msgid "Raster data"
@@ -74,6 +75,23 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:49
 msgid "Vector Data"
 msgstr "ベクタデータ"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:51
+msgid ""
+"Many of the features and tools available in QGIS work the same, regardless "
+"the vector data source. However, because of the differences in format "
+"specifications (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file "
+"formats, AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server, "
+"SAP HANA Spatial databases and many more), QGIS may handle some of their "
+"properties differently. Support is provided by the `GDAL vector drivers "
+"<https://gdal.org/drivers/vector/index.html>`_. This section describes how "
+"to work with these specifics."
+msgstr ""
+"QGISで利用できる機能やツールの多くは、ベクタデータのソースに関係なく同じように動作します。ただし、フォーマット（GeoPackage、ESRIシェープファイル、MapInfoやMicroStationファイル形式、AutoCAD"
+" DXF、PostGIS、SpatiaLite、DB2、Oracle Spatial、MS SQL Server、SAP "
+"HANA空間データベース、その他多数）の仕様が異なるため、QGISでは一部のプロパティの扱いが異なる場合があります。フォーマットのサポートは `GDAL"
+" vector drivers <https://gdal.org/drivers/vector/index.html>`_ "
+"によって提供されています。このセクションでは、この差異をどのように扱うかについて説明します。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:63
 msgid ""
@@ -166,6 +184,27 @@ msgstr ":file:`.dbf` ファイルはdBase形式で属性を保持します。"
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:108
 msgid ":file:`.shx` index file"
 msgstr ":file:`.shx` インデックスファイル"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:110
+msgid ""
+"An ESRI Shapefile format dataset can also include a file with a :file:`.prj`"
+" suffix, which contains projection information. While it is very useful to "
+"have a projection file, it is not mandatory. A Shapefile format dataset can "
+"contain additional files. For further details, see the the ESRI `technical "
+"specification <https://www.esri.com/content/dam/esrisites/sitecore-"
+"archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>`_."
+msgstr ""
+"ESRIシェープファイル形式のデータセットは、投影法に関する情報を持った :file:`.prj` "
+"拡張子を持つファイルを含めることもできます。投影法ファイルがあると便利ですが、これは必須ではありません。シェープファイル形式のデータセットには追加のファイルを含めることもできます。詳細については、ESRIの"
+" `技術仕様 <https://www.esri.com/content/dam/esrisites/sitecore-"
+"archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>`_ を参照してください。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:118
+msgid ""
+"GDAL has read-write support for compressed ESRI Shapefile format "
+"(:file:`shz` and :file:`shp.zip`)."
+msgstr ""
+"GDALでは圧縮されたESRIシェープファイル形式（ :file:`shz` や :file:`shp.zip` ）の読み書きをサポートしています。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:121
 msgid "**Improving Performance for ESRI Shapefile format datasets**"
@@ -287,6 +326,14 @@ msgid ""
 "be specified as numbers. The coordinate system is not important."
 msgstr "（ジオメトリが座標で定義されている場合は）XとYの座標フィールドは数値で指定する必要があります。座標系は重要ではありません。"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:186
+msgid ""
+"If you have a CSV file with non-string columns, you can have an accompanying"
+" CSVT file (see section :ref:`csvt_files`)."
+msgstr ""
+"文字列以外の列を持つCSVファイルがある場合、付随するCSVTファイルを持つことができます（ :ref:`csvt_files` "
+"のセクションを参照してください）。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:189
 msgid ""
 "The elevation point data file :file:`elevp.csv` in the QGIS sample dataset "
@@ -361,6 +408,14 @@ msgstr "区切りテキストファイルはジオメトリの Z 座標や M 座
 msgid "Using CSVT file to control field formatting"
 msgstr "CSVTファイルを使用したフィールドの書式制御"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:247
+msgid ""
+"When loading CSV files, the GDAL driver assumes all fields are strings (i.e."
+" text) unless it is told otherwise. You can create a CSVT file to tell GDAL "
+"(and QGIS) the data type of the different columns:"
+msgstr ""
+"CSVファイルを読み込む際GDALドライバは、別の指定がない限り、全てのフィールドを文字列（テキスト）と仮定します。CSVTファイルを作成することで、さまざまな列のデータ型をGDAL（そしてQGIS）に伝えることができます。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Type"
 msgstr "タイプ"
@@ -387,7 +442,15 @@ msgstr "4"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Boolean"
-msgstr "真偽値"
+msgstr "ブール値"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Integer(Boolean)"
+msgstr "Integer(Boolean)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "true"
+msgstr "true"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Decimal number"
@@ -437,6 +500,38 @@ msgstr "DateTime (YYYY-MM-DD HH:MM:SS+nn)"
 msgid "2016-07-28 18:33:12+00"
 msgstr "2016-07-28 18:33:12+00"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "CoordX"
+msgstr "CoordX"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "8.8249"
+msgstr "8.8249"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "CoordY"
+msgstr "CoordY"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "47.2274"
+msgstr "47.2274"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Point(X)"
+msgstr "Point(X)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Point(Y)"
+msgstr "Point(Y)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "WKT"
+msgstr "WKT"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "POINT(15 20)"
+msgstr "POINT(15 20)"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:267
 msgid ""
 "The CSVT file is a **ONE line** plain text file with the data types in "
@@ -461,9 +556,31 @@ msgstr ""
 "*更なる情報については* `GDAL CSV Driver <https://gdal.org/drivers/vector/csv.html>`_ "
 "を参照してください。"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:284
+msgid "**Detect Field Types**"
+msgstr "**フィールド型を検知する**"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:286
+msgid ""
+"Instead of using a CSVT file to tell the data types, QGIS provides the "
+"possibility to automatically detect the field types and to change the "
+"assumed field types."
+msgstr ""
+"CSVTファイルを使用してデータ型を伝える代わりに、QGISはフィールド型を自動的に検出し、想定されるフィールド型を変更する可能性を提供します。 "
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:295
 msgid "PostGIS Layers"
 msgstr "PostGISレイヤ"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:297
+msgid ""
+"PostGIS layers are stored in a PostgreSQL database. The advantages of "
+"PostGIS are spatial indexing, filtering and querying capabilities. Using "
+"PostGIS, vector functions such as select and identify work more accurately "
+"than they do with GDAL layers in QGIS."
+msgstr ""
+"PostGISレイヤはPostgreSQLデータベースに保存されます。PostGISの利点は、空間インデックス、フィルタリング、クエリする能力です。PostGISを使用すると、selectやidentifyなどのベクタ関数は、QGISのGDALレイヤを使用した場合よりも正確に動作します。"
+" "
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:306
 msgid "**PostGIS Layers**"
@@ -571,6 +688,28 @@ msgstr ""
 ":file:`pg_dump` コマンドと :file:`pg_restore` "
 "コマンドを使用してPostGISデータベースのバックアップを作成したい場合、QGISで保存されたデフォルトのレイヤスタイルがその後のリストアに失敗する場合には、リストアコマンドの前にXML"
 " オプションを :file:`DOCUMENT` に設定する必要があります。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:372
+msgid "Make a PLAIN backup of the ``layer_style`` table"
+msgstr "``layer_style`` テーブルのPLAINバックアップを作ります"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:373
+msgid "Open the file within a text editor"
+msgstr "そのファイルをテキストエディタで開きます"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:374
+msgid ""
+"Change the line ``SET xmloption = content;`` into ``SET XML OPTION "
+"DOCUMENT;``"
+msgstr "``SET xmloption = context;`` の行を ``SET XML OPTION DOCUMENT;`` に変えます"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:375
+msgid "Save the file"
+msgstr "ファイルを保存します"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:376
+msgid "Use psql to restore the table in the new database"
+msgstr "psqlを使ってテーブルを新しいデータベースにリストアします"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:380
 msgid "Filter database side"
@@ -700,6 +839,13 @@ msgid ""
 msgstr ""
 "このコマンドは、シェープファイル形式のデータセット :file:`alaska.shp` をホストサーバー *myhost.de* "
 "上のPostGISデータベース *postgis* にユーザー *postgres* 、パスワード *topsecret* を使用してインポートします。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:460
+msgid ""
+"Note that GDAL must be built with PostgreSQL to support PostGIS. You can "
+"verify this by typing (in |nix|)::"
+msgstr ""
+"GDALはPostGISをサポートするためにPostgreSQLと一緒にビルドされなければならないことに注意してください。(|nix|で)入力することでこれを確認できます::"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:716
 msgid "nix"
@@ -995,6 +1141,51 @@ msgstr ""
 " カラムで選択することで指定できます。ベストな性能を得たい場合には、 :guilabel:`地物ID` の値は単一の ``INTEGER`` "
 "型のカラムとしてください。"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:655
+msgid "Layers crossing 180° longitude"
+msgstr "経度 180° をまたぐレイヤ"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+msgid ""
+"Many GIS packages don't wrap layers with a geographic reference system "
+"(lat/lon) crossing the 180 degrees longitude line. As result, if we open "
+"such a layer in QGIS, we could see two widely separated locations, that "
+"should appear near each other. In :numref:`Figure_vector_crossing`, the tiny"
+" point on the far left of the map canvas (Chatham Islands) should be within "
+"the grid, to the right of the New Zealand main islands."
+msgstr ""
+"多くのGISパッケージは、地理参照系（緯度経度）が180度の経線を越えるレイヤをラップしません。その結果、このようなレイヤをQGISで開くと、近くに表示されるはずの2つの場所が大きく離れて表示されることがあります。:numref:`Figure_vector_crossing`"
+" では、マップキャンバスの左端にある小さな点（チャタム諸島）は、ニュージーランド本島の右側のグリッド内にあるはずです。 "
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:670
+msgid "Map in lat/lon crossing the 180° longitude line"
+msgstr "180° 経線をまたぐ緯度経度による地図"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:673
+msgid "Solving in PostGIS"
+msgstr "PostGISで解決する"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:675
+msgid ""
+"A work-around is to transform the longitude values using PostGIS and the "
+"`ST_ShiftLongitude <https://postgis.net/docs/ST_Shift_Longitude.html>`_ "
+"function. This function reads every point/vertex in every component of every"
+" feature in a geometry, and shifts its longitude coordinate from -180..0° to"
+" 180..360° and vice versa if between these ranges. This function is "
+"symmetrical so the result is a 0..360° representation of a -180..180° data "
+"and a -180..180° representation of a 0..360° data."
+msgstr ""
+"回避策として、PostGIS と `ST_ShiftLongitude "
+"<https://postgis.net/docs/ST_Shift_Longitude.html>`_ "
+"関数を使用して経度値を変換する方法があります。この関数は、ジオメトリ内のすべての地物のすべてのコンポーネントのすべての点/頂点を読み取り、その経度座標を"
+" "
+"-180...0°から180...360°に、そしてその逆にシフトします。この関数は対称であるため、結果は-180...180°のデータを0...360°で表現し、0...360°のデータを-180...180°で表現します。"
+" "
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:688
+msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
+msgstr "**ST_ShiftLongitude** 関数を適用した経度180°越え"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:691
 msgid ""
 "Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using, for "
@@ -1002,6 +1193,10 @@ msgid ""
 msgstr ""
 "例えばDBマネージャプラグインを使用して、データをPostGISにインポートします（ "
 ":ref:`vector_import_data_in_postgis` 参照）。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
+msgid "Use the PostGIS command line interface to issue the following command:"
+msgstr "PostGISのコマンドラインインターフェイスを使って、以下のコマンドを実行します： "
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:700
 msgid ""
