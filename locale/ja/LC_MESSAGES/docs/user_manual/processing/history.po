@@ -6,7 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
-# Miyoshi Tomoya, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,9 +32,43 @@ msgstr "履歴マネージャ"
 msgid "The processing history"
 msgstr "プロセシングの履歴"
 
+#: ../../docs/user_manual/processing/history.rst:14
+msgid ""
+"Every time you execute an algorithm, information about the process is stored"
+" in the history manager. The date and time of the execution are saved, along"
+" with the parameters used, making it is easy to track and control all the "
+"work that has been developed using the Processing framework, and to "
+"reproduce it."
+msgstr ""
+"アルゴリズムを実行するたびに、そのプロセスに関する情報が履歴マネージャに保存されます。実行された日付と時刻が、使用されたパラメータとともに保存されるため、プロセシングフレームワークを使って開発されたすべての作業を追跡・管理し、再現することが容易です。"
+" "
+
 #: ../../docs/user_manual/processing/history.rst:26
 msgid "History"
 msgstr "履歴"
+
+#: ../../docs/user_manual/processing/history.rst:28
+msgid ""
+"Process information is kept as a command-line expression, even if the "
+"algorithm was launched from the toolbox. This makes it useful for those "
+"learning how to use the command-line interface, since they can call an "
+"algorithm using the toolbox and then check the history manager to see how it"
+" could be called from the command line."
+msgstr ""
+"プロセス情報は、アルゴリズムがツールボックスから起動されたとしても、コマンドライン式として保持されます。ツールボックスを使ってアルゴリズムを呼び出し、履歴マネージャーをチェックして、コマンドラインからどのように呼び出されたかを確認することができるので、コマンドラインインタフェースの使い方を学んでいる人にとって便利です。"
+
+#: ../../docs/user_manual/processing/history.rst:35
+msgid "Right-click on a row and you should be able to:"
+msgstr "行で右クリックすると次のことができます:"
+
+#: ../../docs/user_manual/processing/history.rst:37
+msgid ""
+":guilabel:`Copy as Python Command`: allows for easy copying of the "
+"equivalent :ref:`PyQGIS command <processing_console>` run from the dialog. "
+"Same as the code displayed below the commands list."
+msgstr ""
+":guilabel:`Pythonコマンドとしてコピー`: ダイアログから実行した :ref:`PyQGISコマンド "
+"<processing_console>` と同等のものを簡単にコピーできるようにします。コマンドリストの下に表示されるコードと同じです。"
 
 #: ../../docs/user_manual/processing/history.rst:40
 msgid ""
@@ -47,6 +81,74 @@ msgstr ""
 "距離単位、面積単位、楕円体などの環境設定や、特定のレイヤを持つGeoPackage出力などの厄介なパラメーター値を持った、:ref:`qgis_process"
 " command <processing_standalone>`を簡単に生成することができます"
 
+#: ../../docs/user_manual/processing/history.rst:44
+msgid ""
+":guilabel:`Copy as JSON`: all the settings of the command are copied in a "
+":file:`JSON` format, ready to be consumed by qgis_process. This is a "
+"convenient way to see the expected format of the commands, even for complex "
+"parameters (like TIN interpolation parameters). You can store these easily "
+"and then restore them later by pasting the values over an algorithm dialog."
+msgstr ""
+":guilabel:`JSONとしてコピー`: コマンドのすべての設定が :file:`JSON` フォーマットでコピーされ、qgis_process "
+"で消費できるようになります。これは、複雑なパラメータ（TIN補間パラメータのような）であっても、コマンドの期待されるフォーマットを確認するのに便利な方法です。これらを簡単に保存し、後でアルゴリズムダイアログに値を貼り付けて復元することができます。"
+
+#: ../../docs/user_manual/processing/history.rst:50
+msgid ""
+":guilabel:`Create Test...` using the concerned algorithm and parameters, "
+"following instructions at :source:`Processing README file "
+"<python/plugins/processing/tests/README.md>`."
+msgstr ""
+":guilabel:`テストを作成...` は、:source:`Processing READMEファイル "
+"<python/plugins/processing/tests/README.md>`の指示に従って、該当するアルゴリズムとパラメータを使って行われます。"
+
+#: ../../docs/user_manual/processing/history.rst:54
+msgid ""
+"Apart from browsing the entries in the registry, you can also re-execute "
+"processes by simply double-clicking on the entry. The algorithm dialog then "
+"opens with parameters already set, and you can change any of them to fit "
+"your needs and re-run the algorithm."
+msgstr ""
+"レジストリのエントリをブラウズする以外に、エントリをダブルクリックするだけで、プロセスを再実行することもできます。アルゴリズムダイアログが開き、すでにパラメータが設定されているので、必要なパラメータに変更してアルゴリズムを再実行できます。"
+
+#: ../../docs/user_manual/processing/history.rst:59
+msgid ""
+"The :guilabel:`History` dialog also provides a convenient way to contribute "
+"to the consolidation of the testing infrastructure of QGIS Processing "
+"algorithms and scripts."
+msgstr ""
+":guilabel:`履歴`ダイアログは、QGISプロセシングアルゴリズムとスクリプトのテスト基盤の統合に貢献する便利な方法も提供します。 "
+
 #: ../../docs/user_manual/processing/history.rst:65
 msgid "The processing log"
 msgstr "プロセシングのログ"
+
+#: ../../docs/user_manual/processing/history.rst:67
+msgid ""
+"The history dialog only contains the execution calls, but not the "
+"information produced by the algorithm when executed. That information is "
+"written to the QGIS log (:menuselection:`View --> Panels --> Log Messages "
+"Panel`)."
+msgstr ""
+"履歴ダイアログには、実行呼び出しのみが含まれますが、実行時にアルゴリズムによって生成された情報は含まれません。その情報はQGISログに書き込まれます(:menuselection:`ビュー"
+" --> パネル --> ログメッセージパネル`)。 "
+
+#: ../../docs/user_manual/processing/history.rst:72
+msgid ""
+"Third-party algorithms are usually executed by using their command-line "
+"interfaces, which communicate with the user via the console. Although that "
+"console is not shown, usually a full dump of it is written to the log each "
+"time you run one of those algorithms. To avoid cluttering the log with that "
+"information, you can disable it for each provider in the settings dialog."
+msgstr ""
+"サードパーティーのアルゴリズムは通常、コンソールを介してユーザーと通信するコマンドラインインタフェースを使用して実行されます。このコンソールは表示されませんが、通常、これらのアルゴリズムの1つを実行するたびに、そのコンソールの完全なダンプがログに書き込まれます。その情報でログが乱雑になるのを避けるために、設定ダイアログでプロバイダごとにそれを無効にすることができます。"
+" "
+
+#: ../../docs/user_manual/processing/history.rst:80
+msgid ""
+"Some algorithms, even if they can produce a result with the given input "
+"data, output comments or additional information to log when they detect "
+"potential problems with the data, in order to warn you. Make sure you check "
+"those messages in the log if you get unexpected results."
+msgstr ""
+"アルゴリズムによっては、たとえ与えられた入力データで結果を出すことができても、データの潜在的な問題を検出すると、警告のためにコメントや追加情報をログに出力します。予期せぬ結果が出た場合は、ログのそれらのメッセージを確認してください。"
+" "
