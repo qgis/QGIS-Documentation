@@ -31,7 +31,16 @@ msgstr "GPS"
 
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:15
 msgid "Convert GPS data"
-msgstr "GPSデータを変換する"
+msgstr "GPSデータを変換"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:17
+msgid ""
+"Uses the `GPSBabel tool <https://www.gpsbabel.org/index.html>`_ to convert a"
+" GPS data file from a range of formats to the GPX standard format."
+msgstr ""
+"GPSBabelツール "
+"<https://www.gpsbabel.org/index.html>`_を使って、GPSデータファイルをさまざまなフォーマットからGPX標準フォーマットに変換します。"
+" "
 
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:21
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:99
@@ -97,6 +106,11 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:267
 msgid "[file]"
 msgstr "[ファイル]"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:35
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:113
+msgid "File containing the data to convert"
+msgstr "変換するデータを格納しているファイル"
 
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:36
 msgid "**Format**"
@@ -253,7 +267,16 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:93
 msgid "Convert GPX feature type"
-msgstr "GPX地物型を変換する"
+msgstr "GPX地物型を変換"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:95
+msgid ""
+"Uses the `GPSBabel tool <https://www.gpsbabel.org/index.html>`_ to convert "
+"GPX features from one type to another (e.g. converting all waypoint features"
+" to a route)."
+msgstr ""
+"GPSBabelツール <https://www.gpsbabel.org/index.html>`_ "
+"を使って、GPX地物をある型から別の型に変換します（例えば、すべてのウェイポイント地物をルートに変換します）。 "
 
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:114
 msgid "**Conversion**"
@@ -302,7 +325,15 @@ msgstr "**アルゴリズムID**: ``native:convertgpxfeaturetype``"
 
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:167
 msgid "Download GPS data from device"
-msgstr "デバイスからGPSデータをダウンロードする"
+msgstr "GPSデータをデバイスからダウンロード"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:169
+msgid ""
+"Uses the `GPSBabel tool <https://www.gpsbabel.org/index.html>`_ to download "
+"data from a GPS device into the GPX standard format."
+msgstr ""
+"GPSBabelツール <https://www.gpsbabel.org/index.html>`_ "
+"を使って、GPSデバイスからGPX標準フォーマットにデータをダウンロードします。"
 
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:184
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:269
@@ -314,6 +345,18 @@ msgstr "**デバイス**"
 msgid "``DEVICE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:273
+msgid "Default:`Garmin serial`"
+msgstr "デフォルト: `Garmin serial`"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:189
+msgid ""
+"The GPS device used to create the data. Must be declared in :ref:`GPS "
+"Settings <defining_new_device>` dialog."
+msgstr ""
+"データを作成するために使ったGPSデバイス。:ref:`GPS設定 <defining_new_device>` ダイアログで宣言する必要があります。 "
+
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:191
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:276
 msgid "**Port**"
@@ -323,3 +366,47 @@ msgstr "**ポート**"
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:277
 msgid "``PORT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:279
+msgid "The port the device is connected to. Available ports depend on the OS."
+msgstr "デバイスが接続されているポート。使用可能なポートはOSによって異なります。 "
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:238
+msgid "**Algorithm ID**: ``native:downloadgpsdata``"
+msgstr "**Algorithm ID**: ``native:downloadgpsdata``"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:248
+msgid "Upload GPS data to device"
+msgstr "GPSデータをデバイスにアップロード"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:250
+msgid ""
+"Uses the `GPSBabel tool <https://www.gpsbabel.org/index.html>`_ to upload "
+"data to a GPS device from the GPX standard format."
+msgstr ""
+"GPSBabelツール <https://www.gpsbabel.org/index.html>`_ "
+"を使って、GPX標準フォーマットからGPSデバイスにデータをアップロードします。"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:268
+msgid ":file:`.GPX` file containing the data to upload"
+msgstr "アップロードするデータを格納している :file:`.GPX` ファイル"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:274
+msgid ""
+"The GPS device you would like to upload the data to. Must be declared in "
+":ref:`GPS Settings <defining_new_device>` dialog."
+msgstr ""
+"データをアップロードしたいGPSデバイス。:ref:`GPS設定 <defining_new_device>` ダイアログで宣言する必要があります。 "
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:286
+msgid "The type of data to upload"
+msgstr "アップロードするデータの型"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:295
+msgid "No output is provided. If successful, data are loaded to the device."
+msgstr "出力はありません。成功するとデータはデバイスに読み込まれます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:300
+msgid "**Algorithm ID**: ``native:uploadgpsdata``"
+msgstr "**Algorithm ID**: ``native:uploadgpsdata``"
