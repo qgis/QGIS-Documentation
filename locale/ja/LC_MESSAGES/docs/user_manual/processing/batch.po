@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +50,7 @@ msgid ""
 "pop-up menu that will appear."
 msgstr ""
 "アルゴリズムをバッチ処理として実行する場合は、ツールボックスの名前を右クリックして表示されるポップアップメニューで、 "
-":guilabel:`バッチ処理として実行` を選択して下さい。"
+":guilabel:`バッチプロセスで実行` を選択して下さい。"
 
 #: ../../docs/user_manual/processing/batch.rst:29
 msgid "Batch Processing from right-click"
@@ -61,7 +62,7 @@ msgid ""
 "the batch processing interface from there, clicking on the :guilabel:`Run as"
 " batch process...` button."
 msgstr ""
-"そのアルゴリズムの実行ダイアログボックスが開いている場合は、:guilabel:`バッチ処理として実行...` "
+"そのアルゴリズムの実行ダイアログボックスが開いている場合は、:guilabel:`バッチプロセスで実行...` "
 "ボタンをクリックすると、そこからもバッチ処理インターフェイスを起動できます。"
 
 #: ../../docs/user_manual/processing/batch.rst:40
@@ -70,27 +71,97 @@ msgstr "アルゴリズムダイアログからバッチ処理"
 
 #: ../../docs/user_manual/processing/batch.rst:43
 msgid "The parameters table"
-msgstr "パラメーターテーブル"
+msgstr "パラメータテーブル"
+
+#: ../../docs/user_manual/processing/batch.rst:45
+msgid ""
+"Executing a batch process is similar to performing a single execution of an "
+"algorithm. Parameter values have to be defined, but in this case we need not"
+" just a single value for each parameter, but a set of them instead, one for "
+"each time the algorithm has to be executed. Values are introduced using a "
+"table like the one shown next, where each row is an iteration and columns "
+"are the parameters of the algorithm."
+msgstr ""
+"バッチ処理の実行は、アルゴリズムの一回の実行に似ています。パラメータ値を定義しなければなりませんが、この場合は各パラメータにひとつの値ではなく、アルゴリズムが実行されるたびに一組ずつ使われる、パラメータのセットが必要になります。値は次に示すように、行が反復であり、列がアルゴリズムのパラメータである表を使います。"
 
 #: ../../docs/user_manual/processing/batch.rst:57
 msgid "Batch Processing"
 msgstr "バッチ処理"
 
+#: ../../docs/user_manual/processing/batch.rst:60
+msgid "From the top toolbar, you can:"
+msgstr "トップツールバーから："
+
+#: ../../docs/user_manual/processing/batch.rst:62
+msgid ""
+"|symbologyAdd| :sup:`Add row`: adds a new processing entry for configuration"
+msgstr "|symbologyAdd|:sup:`行を追加`: 設定に新しい処理項目を追加します"
+
 #: ../../docs/user_manual/processing/batch.rst:204
 msgid "symbologyAdd"
 msgstr ""
+
+#: ../../docs/user_manual/processing/batch.rst:63
+msgid ""
+"|symbologyRemove| :sup:`Remove row(s)`: remove selected rows from the table."
+" Row selection is done by clicking the number at the left and allows "
+":ref:`keyboard combination <interacting_features_table>` for multi "
+"selection."
+msgstr ""
+"|symbologyRemove| :sup:`行を削除`: "
+"テーブルから選択した行を削除します。行の選択は左側の数字をクリックすることで行われ、:ref:`キーボードとの組み合わせ "
+"<interacting_features_table>` で複数選択することができます。 "
 
 #: ../../docs/user_manual/processing/batch.rst:206
 msgid "symbologyRemove"
 msgstr ""
 
+#: ../../docs/user_manual/processing/batch.rst:66
+msgid "|fileOpen| :sup:`Open` a batch processing configuration file"
+msgstr "バッチ処理設定ファイルを |fileOpen| :sup:`開く`"
+
 #: ../../docs/user_manual/processing/batch.rst:200
 msgid "fileOpen"
 msgstr ""
 
+#: ../../docs/user_manual/processing/batch.rst:67
+msgid ""
+"|fileSave| :sup:`Save` the batch processing configuration to a :file:`.JSON`"
+" file that can be run afterwards"
+msgstr "バッチ処理の設定を :file:`.JSON` ファイルに |fileSave| :sup:`保存` して後で実行できるようにします"
+
 #: ../../docs/user_manual/processing/batch.rst:202
 msgid "fileSave"
 msgstr ""
+
+#: ../../docs/user_manual/processing/batch.rst:70
+msgid "By default, the table contains just two rows:"
+msgstr "表はデフォルトで２行だけを含みます:"
+
+#: ../../docs/user_manual/processing/batch.rst:72
+msgid ""
+"The first row displays in each cell an :menuselection:`Autofill... -->` "
+"drop-down menu with :ref:`options <batch_parameters>` to quickly fill the "
+"cells below. Available options depend on the parameter type."
+msgstr ""
+"最初の行には、各セルに :menuselection:`オートフィル... -->` ドロップダウンメニューが表示され、 :ref:`オプション "
+"<batch_parameters>` を使って下のセルを素早く埋めることができます。利用可能なオプションはパラメータの種類によって異なります。 "
+
+#: ../../docs/user_manual/processing/batch.rst:75
+msgid ""
+"The second row (as well as each subsequent one) represents a single "
+"execution of the algorithm, and each cell contains the value of one of the "
+"parameters. It is similar to the parameters dialog that you see when "
+"executing an algorithm from the toolbox, but with a different arrangement."
+msgstr ""
+"2行目（およびそれ以降の各行）はアルゴリズムの1回の実行を表し、各セルはパラメータの1つの値を格納します。これは、ツールボックスからアルゴリズムを実行するときに表示されるパラメータダイアログに似ていますが、配置が異なります。"
+" "
+
+#: ../../docs/user_manual/processing/batch.rst:80
+msgid ""
+"At the bottom of the table, you can set whether to |checkbox| "
+":guilabel:`Load layers on completion`."
+msgstr "テーブルの下部では、|checkbox| :guilabel:`完了時にレイヤを読み込む` かどうかを設定できます。 "
 
 #: ../../docs/user_manual/processing/batch.rst:198
 msgid "checkbox"
@@ -104,7 +175,18 @@ msgstr "テーブルのサイズが設定されると適切な値で埋められ
 
 #: ../../docs/user_manual/processing/batch.rst:89
 msgid "Filling the parameters table"
-msgstr "パラメーターテーブルの入力"
+msgstr "パラメータテーブルの入力"
+
+#: ../../docs/user_manual/processing/batch.rst:91
+msgid ""
+"For most parameters, setting the value is trivial. The appropriate widget, "
+"same as in the :ref:`single process dialog <algorithm_widgets>`, is "
+"provided, allowing to just type the value, or select it from a list of "
+"possible values, depending on the parameter type. This also includes data-"
+"define widget, when compatible."
+msgstr ""
+"ほとんどのパラメータでは値の設定は簡単です。:ref:`単独のプロセスダイアログ <algorithm_widgets>` "
+"と同じ適切なウィジェットが提供され、パラメータタイプに応じて、単に値を打ち込むか、可能な値のリストから選択することができます。互換性がある場合には、データ定義ウィジェットも含まれます。"
 
 #: ../../docs/user_manual/processing/batch.rst:196
 msgid "calculateField"
