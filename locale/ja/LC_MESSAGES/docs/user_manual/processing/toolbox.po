@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
-# tomoya miyoshi, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-13 15:24+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -212,13 +212,123 @@ msgid ""
 msgstr ""
 "パラメータの数とタイプはアルゴリズムの特性に依存しますが、その構造はすべてのアルゴリズムで似通っています。ここで示されるパラメータは次のいずれかのタイプのみが可能です。"
 
+#: ../../docs/user_manual/processing/toolbox.rst:103
+msgid ""
+"A **vector layer**, to select from a list of all vector layers available "
+"(currently opened) in QGIS. You can also use unloaded layers: press the "
+":guilabel:`...` button on the widget right-hand side, and select:"
+msgstr ""
+"**ベクタレイヤ** "
+"は、QGISで利用可能な（現在開かれている）すべてのベクタレイヤのリストから選択します。読み込まれていないレイヤを使用することもできます: "
+"ウィジェット右側の :guilabel:`...` ボタンを押して選択してください： "
+
+#: ../../docs/user_manual/processing/toolbox.rst:107
+msgid ""
+":guilabel:`Select file...`: selects file on disk using the Operating System "
+"file explorer"
+msgstr ""
+":guilabel:`Select file...`: オペレーティングシステムのファイルエクスプローラーを使ってディスク上のファイルを選択します"
+
+#: ../../docs/user_manual/processing/toolbox.rst:108
+msgid ""
+":guilabel:`Browse for layer...`: opens the :ref:`Browser panel "
+"<label_browserpanel>`, allowing to take the layers directly from database "
+"sources (PostgreSQL, SQL Server, Oracle, ...), web services (WFS, AFS, ...) "
+"or files on disk."
+msgstr ""
+":guilabel:`レイヤを閲覧... `: :ref:`ブラウザパネル <label_browserpanel>` "
+"を開き、データベースソース(PostgreSQL, SQL Server, Oracle, ...)、ウェブサービス(WFS, AFS, "
+"...)、ディスク上のファイルから直接レイヤを取得することができます。 "
+
 #: ../../docs/user_manual/processing/toolbox.rst:117
 msgid "Vector input widget"
-msgstr "ベクタ入力ウィジット"
+msgstr "ベクタ入力ウィジェット"
+
+#: ../../docs/user_manual/processing/toolbox.rst:121
+msgid ""
+"By default, the layer widget shows the CRS of the layer along with its name."
+" If you do not want to see this additional information, you can disable this"
+" functionality in the Processing Settings dialog, unchecking the "
+":menuselection:`General --> Show layer CRS definition in selection boxes` "
+"option."
+msgstr ""
+"デフォルトでは、レイヤウィジェットはレイヤのCRSをその名前とともに表示します。この追加情報を表示したくない場合は、設定ダイアログの "
+":menuselection:`一般情報 --> 選択ボックス内にレイヤCRS定義を表示` "
+"オプションのチェックを外して、この機能を無効にすることができます。 "
+
+#: ../../docs/user_manual/processing/toolbox.rst:126
+msgid "The vector input widget also has following features:"
+msgstr "ベクタ入力ウィジェットには次の機能もあります:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:128
+msgid ""
+"an iterator |iterate| button: If toggled, the algorithm will be executed "
+"iteratively on each one of its features, instead of just once for the whole "
+"layer, producing as many outputs as times the algorithm is executed. This "
+"allows for automating the process when all features in a layer have to be "
+"processed separately. If the algorithm contains several input vectors you "
+"can iterate over, the iteration will be processed only on the first toggled "
+"parameter, in the order parameters are declared in the algorithm."
+msgstr ""
+"反復 |iterate| ボタン： "
+"ボタンを切り替えると、アルゴリズムはレイヤ全体に対して1回だけ実行されるのではなく、各地物に対して繰り返し実行され、アルゴリズムが実行された回数だけ出力が生成されます。これにより、レイヤ内のすべての地物を個別に処理する必要がある場合に、処理を自動化することができます。アルゴリズムに反復処理できる複数の入力ベクタが含まれている場合、アルゴリズムでパラメータが宣言されている順番で、最初に切り替えられたパラメータに対してのみ反復処理が行われます。"
+" "
 
 #: ../../docs/user_manual/processing/toolbox.rst:444
 msgid "iterate"
 msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:136
+msgid ""
+"|options| :sup:`Advanced options` button to adjust settings to use for that "
+"specific parameter. These settings concern:"
+msgstr ""
+"|options| :sup:`詳細オプション` "
+"ボタンをクリックすると、特定のパラメータに使用する設定を調整できます。これらの設定は以下のことに関係します： "
+
+#: ../../docs/user_manual/processing/toolbox.rst:139
+msgid ""
+":guilabel:`Invalid feature filtering`: allows the :ref:`default method "
+"<processing_general_settings>` for handling features with invalid geometries"
+" to be overridden"
+msgstr ""
+":guilabel:`無効地物フィルタ`: 無効なジオメトリの地物を扱う :ref:`デフォルトの方法 "
+"<processing_general_settings>` を上書きします"
+
+#: ../../docs/user_manual/processing/toolbox.rst:141
+msgid ""
+":guilabel:`Limit features processed`: optional limit on number of features "
+"processed from the source"
+msgstr ":guilabel:`処理地物を制限`: ソースから処理される地物の数をオプションで制限"
+
+#: ../../docs/user_manual/processing/toolbox.rst:143
+msgid ""
+"It is also possible to limit the algorithm execution on the vector layer to "
+"its :guilabel:`Selected features only`."
+msgstr "また、ベクタレイヤでのアルゴリズム実行を :guilabel:`選択した地物のみ` に限ることもできます。 "
+
+#: ../../docs/user_manual/processing/toolbox.rst:145
+msgid ""
+"A **table**, to select from a list of all available in QGIS. Non-spatial "
+"tables are loaded into QGIS like vector layers, and use the :ref:`same "
+"widget <vector_widget>`."
+msgstr ""
+"**テーブル**、QGISで利用可能なすべてのリストから選択します。非空間テーブルはベクタレイヤのようにQGISに読み込まれ、:ref:`同じウィジェット"
+" <vector_widget>`を使います。"
+
+#: ../../docs/user_manual/processing/toolbox.rst:147
+msgid ""
+"A **raster layer**, to select from a list of all raster layers available in "
+"QGIS. The selector contains as well a :guilabel:`...` button on its right-"
+"hand side, to let you select filenames that represent layers currently not "
+"loaded in QGIS."
+msgstr ""
+"**ラスタレイヤ**、QGIS で利用可能なすべてのラスタレイヤのリストから選択します。セレクタの右側には :guilabel:`...` "
+"ボタンがあり、QGIS に読み込まれていないレイヤのファイル名を選択することができます。 "
+
+#: ../../docs/user_manual/processing/toolbox.rst:156
+msgid "Raster input widget"
+msgstr "ラスタ入力ウィジェット"
 
 #: ../../docs/user_manual/processing/toolbox.rst:158
 msgid "An **option**, to choose from a selection list of possible options."
