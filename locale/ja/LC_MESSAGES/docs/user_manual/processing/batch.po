@@ -188,14 +188,174 @@ msgstr ""
 "ほとんどのパラメータでは値の設定は簡単です。:ref:`単独のプロセスダイアログ <algorithm_widgets>` "
 "と同じ適切なウィジェットが提供され、パラメータタイプに応じて、単に値を打ち込むか、可能な値のリストから選択することができます。互換性がある場合には、データ定義ウィジェットも含まれます。"
 
+#: ../../docs/user_manual/processing/batch.rst:97
+msgid ""
+"To automate the batch process definition and avoid filling the table cell by"
+" cell, you may want to press down the :guilabel:`Autofill...` menu of a "
+"parameter and select any of the following options to replace values in the "
+"column:"
+msgstr ""
+"バッチ処理の定義を自動化し、表をセルごとに埋めるのを避けるために、パラメータの :guilabel:`オートフィル...` "
+"メニューをドロップして以下のオプションのいずれかを選択し、列の値を置き換えることができます： "
+
+#: ../../docs/user_manual/processing/batch.rst:102
+msgid ""
+":guilabel:`Fill Down` will take the input for the first process and enter it"
+" for all other processes."
+msgstr ":guilabel:`フィルダウン` は最初のプロセスの入力を受け取り、他の全てのプロセスに入力します。 "
+
+#: ../../docs/user_manual/processing/batch.rst:104
+msgid ""
+"|calculateField| :guilabel:`Calculate by Expression...` will allow you to "
+"create a new QGIS expression to use to update all existing values within "
+"that column. Existing parameter values (including those from other columns) "
+"are available for use inside the expression via :ref:`variables "
+"<general_tools_variables>`. E.g. setting the number of segments based on the"
+" buffer distance of each layer:"
+msgstr ""
+"|calculateField|:guilabel:`式による計算...` "
+"を使うと、その列内のすべての既存の値を更新するために使用する新しいQGIS式を作成することができます。既存のパラメータ値(他の列のものも含む)は "
+":ref:`variables <general_tools_variables>` "
+"によって式の内部で使用することができます。例．各レイヤのバッファ距離に基づいてセグメント数を設定する： "
+
 #: ../../docs/user_manual/processing/batch.rst:196
 msgid "calculateField"
 msgstr ""
+
+#: ../../docs/user_manual/processing/batch.rst:115
+msgid ""
+":guilabel:`Add Values by Expression...` will add new rows using the values "
+"from an expression which returns an array (as opposed to "
+":guilabel:`Calculate by Expression...`, which works only on existing rows). "
+"The intended use case is to allow populating the batch dialog using complex "
+"numeric series. For example adding rows for a batch buffer using the "
+"expression ``generate_series(100, 1000, 50)`` for distance parameter results"
+" in new rows with values 100, 150, 200, .... 1000."
+msgstr ""
+":guilabel:`式で値を追加...` は、配列を返す式の値を使って新しい行を追加します（既存の行に対してのみ動作する "
+":guilabel:`式による計算...` "
+"とは対照的です）。使用例としては、バッチダイアログに複雑な数値列を入力することを想定しています。例えば、距離パラメータに "
+"``generate_series(100, 1000, 50)`` という式を使ってバッチバッファに行を追加すると、値100, 150, 200, "
+".... 1000を持った新しい行になります。"
+
+#: ../../docs/user_manual/processing/batch.rst:123
+msgid "When setting a file or layer parameter, more options are provided:"
+msgstr "ファイルやレイヤのパラメータを設定する場合、より多くのオプションが提供されます： "
+
+#: ../../docs/user_manual/processing/batch.rst:125
+msgid ""
+":guilabel:`Add Files by Pattern...`: adds new rows to the table for files "
+"matching a :guilabel:`File pattern` in a folder to :guilabel:`Look in`. E.g."
+" ``*.shp`` will add to the list all the :file:`SHP` files in the folder. "
+"Check |checkbox| :guilabel:`Search recursively` to also browse sub-folders."
+msgstr ""
+":guilabel:`パターンによるファイル追加...`: :guilabel:`対象` フォルダ内の :guilabel:`ファイルパターン` "
+"にマッチするファイルのためにテーブルに新しい行を追加します。例えば、``*.shp`` はフォルダ内の全ての :file:`SHP` "
+"ファイルをリストに追加します。|checkbox| :guilabel:`下位フォルダも検索` をチェックすると、サブフォルダも参照することができます。"
+" "
+
+#: ../../docs/user_manual/processing/batch.rst:129
+msgid ":guilabel:`Select Files...` individually on disk"
+msgstr "個別にディスク上の :guilabel:`ファイル選択...` "
+
+#: ../../docs/user_manual/processing/batch.rst:130
+msgid ":guilabel:`Add All Files from a Directory...`"
+msgstr ":guilabel:`ディレクトリの全ファイルを追加...`"
+
+#: ../../docs/user_manual/processing/batch.rst:131
+msgid ":guilabel:`Select from Open Layers...` in the active project"
+msgstr "アクティブなプロジェクトの :guilabel:`レイヤから選択...`"
+
+#: ../../docs/user_manual/processing/batch.rst:133
+msgid ""
+"Output data parameter exposes the same capabilities as when executing the "
+"algorithm as a single process. Depending on the algorithm, the output can "
+"be:"
+msgstr ""
+"出力データパラメータは、アルゴリズムを単一プロセスとして実行するときと同じ機能を公開します。アルゴリズムによって、出力は以下のようになります： "
+
+#: ../../docs/user_manual/processing/batch.rst:136
+msgid "skipped, if the cell is left empty"
+msgstr "セルが空のままならスキップされます"
+
+#: ../../docs/user_manual/processing/batch.rst:137
+msgid ""
+"saved as a temporary layer: fill the cell with ``TEMPORARY_OUTPUT`` and "
+"remember to tick the |checkbox| :guilabel:`Load layers on completion` "
+"checkbox."
+msgstr ""
+"一時的なレイヤーとして保存されます: セルを ``TEMPORARY_OUTPUT`` で埋め、 |checkbox| "
+":guilabel:`完了時にレイヤを読み込む` チェックボックスにチェックを入れることを忘れないでください。 "
+
+#: ../../docs/user_manual/processing/batch.rst:139
+msgid ""
+"saved as a plain file (:file:`.SHP`, :file:`.GPKG`, :file:`.XML`, "
+":file:`.PDF`, :file:`.JPG`,...) whose path could be set with the "
+":guilabel:`Autofill` options exposed beforehand. E.g. use "
+":guilabel:`Calculate by Expression...` to set output file names to complex "
+"expressions like:"
+msgstr ""
+"プレインファイル（:file:`.SHP`, :file:`.GPKG`, :file:`.XML`, :file:`.PDF`, "
+":file:`.JPG`,...）として保存され、そのパスはあらかじめ公開されている :guilabel:`オートフィル` "
+"オプションで設定することができます。例えば、:guilabel:`式による計算...` "
+"を使用して、出力ファイル名を次のような複雑な式に設定することができます： "
+
+#: ../../docs/user_manual/processing/batch.rst:148
+msgid ""
+"You can also type the file path directly or use the file chooser dialog that"
+" appears when clicking on the accompanying :guilabel:`...` button. Once you "
+"select the file, a new dialog is shown to allow for auto-completion of other"
+" cells in the same column (same parameter)."
+msgstr ""
+"ファイルパスを直接入力することもできますし、付属の :guilabel:`...` "
+"ボタンをクリックすると表示されるファイル選択ダイアログを使うこともできます。ファイルを選択すると、新しいダイアログが表示され、同じ列（同じパラメータ）の他のセルを自動入力することができます。"
+" "
 
 #: ../../docs/user_manual/processing/batch.rst:158
 msgid "Batch Processing Save"
 msgstr "バッチ処理を保存"
 
+#: ../../docs/user_manual/processing/batch.rst:160
+msgid ""
+"If the default value (:guilabel:`Do not autofill`) is selected, it will just"
+" put the selected filename in the selected cell from the parameters table. "
+"If any of the other options is selected, all the cells **below** the "
+"selected one will be automatically filled based on a defined criteria:"
+msgstr ""
+"もしデフォルトの値（:guilabel:`オートフィルしない`）が選ばれた場合は、パラメータテーブルから選択されたセルの中の選択されたファイル名が選ばれます。もし、その他のオプションが選ばれた場合は、**以下**"
+" の選択された全てのセルは定義された条件に基づいて自動的に入力されます。"
+
+#: ../../docs/user_manual/processing/batch.rst:165
+msgid ""
+":guilabel:`Fill with numbers`: incrementally appends a number to the file "
+"name"
+msgstr ":guilabel:`Fill with numbers`: ファイル名に数値を加算します"
+
+#: ../../docs/user_manual/processing/batch.rst:166
+msgid ""
+":guilabel:`Fill with parameter values`: you can select a parameter whose "
+"value in the same row is appended to the file name. This is particularly "
+"useful for naming output data objects according to input ones."
+msgstr ""
+":guilabel:`Fill with parameter values`: "
+"パラメータを選択して同じ行の値をファイル名に付加することができます。これは特に入力データオブジェクトに応じて出力データオブジェクトの名前を付けるのに便利です。"
+" "
+
+#: ../../docs/user_manual/processing/batch.rst:170
+msgid "saved as a layer within a database container:"
+msgstr "データベースコンテナ内のレイヤとして保存する： "
+
 #: ../../docs/user_manual/processing/batch.rst:182
 msgid "Executing the batch process"
 msgstr "バッチ処理を実行する"
+
+#: ../../docs/user_manual/processing/batch.rst:184
+msgid ""
+"To execute the batch process once you have introduced all the necessary "
+"values, just click on :guilabel:`Run`. The :guilabel:`Log` panel is "
+"activated and displays details and steps of the execution process. Progress "
+"of the global batch task will be shown in the progress bar in the lower part"
+" of the dialog."
+msgstr ""
+"必要な値をすべて導入したら、バッチ処理を実行するには :guilabel:`実行` をクリックするだけです。:guilabel:`ログ` "
+"パネルがアクティブになり、実行プロセスの詳細とステップが表示されます。グローバルバッチタスクの進行状況は、ダイアログ下部のプログレスバーに表示されます。"
