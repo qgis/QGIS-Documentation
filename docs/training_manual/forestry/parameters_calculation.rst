@@ -23,7 +23,7 @@ you probably named it :file:`forest_inventory.qgs`.
 
 First, add the sample plots measurements to your QGIS project:
 
-#. Go to :menuselection:`Layer --> Add Delimited Text Layer...`.
+#. Go to :menuselection:`Layer --> Add Layer --> Add Delimited Text Layer...`.
 #. Browse to the file :file:`systematic_inventory_results.csv` located in
    :file:`exercise_data/forestry/results/`.
 #. Make sure that the :guilabel:`Point coordinates` option is checked.

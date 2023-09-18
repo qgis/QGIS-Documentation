@@ -590,7 +590,7 @@ only the areas that have a value of ``1`` in the ``suitable`` field.
 #. After you are sure the query is complete (and only the areas that
    meet all three criteria, i.e. with a value of ``1`` are visible),
    create a new vector file from the results, using the
-   :guilabel:`Export --> Save Features As...` in the layer's
+   :menuselection:`Export --> Save Features As...` in the layer's
    right-click menu
 #. Save the file in the :file:`Rasterprac` directory
 #. Name the file :file:`aspect_slope_rainfall_1.shp`

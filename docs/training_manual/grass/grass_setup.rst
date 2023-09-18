@@ -59,7 +59,7 @@ information visit the `GRASS website <https://grass.osgeo.org/grass82/manuals/gr
 |basic| |FA| Start a New GRASS Project
 -------------------------------------------------------------------------------
 
-#. Click on the :guilabel:`Plugins --> GRASS --> New Mapset` menu:
+#. Click on the :menuselection:`Plugins --> GRASS --> New Mapset` menu:
 
    .. figure:: img/grass_menu.png
       :align: center
