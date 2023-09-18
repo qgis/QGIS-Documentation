@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,6 +80,24 @@ msgid ""
 "the following line:"
 msgstr "最初にやるべきことは、次のコードでプロセシングの機能をインポートすることです。"
 
+#: ../../docs/user_manual/processing/console.rst:44
+msgid ""
+"Now, there is basically just one (interesting) thing you can do with that "
+"from the console: execute an algorithm. That is done using the :meth:`run() "
+"<qgis.core.QgsProcessingAlgorithm.run>` method, which takes the name of the "
+"algorithm to execute as its first parameter, and then a variable number of "
+"additional parameters depending on the requirements of the algorithm. So the"
+" first thing you need to know is the name of the algorithm to execute. That "
+"is not the name you see in the toolbox, but rather a unique command–line "
+"name. To find the right name for your algorithm, you can use the "
+":class:`processingRegistry <qgis.core.QgsProcessingRegistry>`. Type the "
+"following line in your console:"
+msgstr ""
+"さて、基本的にコンソールからできる（興味深い）ことはただ一つ、アルゴリズムの実行です。これは :meth:`run() "
+"<qgis.core.QgsProcessingAlgorithm.run>` "
+"メソッドを使って実行します。このメソッドは最初のパラメータとして実行するアルゴリズムの名前を取り、アルゴリズムの要求に応じて追加のパラメータを可変個数取ります。つまり、最初に知る必要があるのは、実行するアルゴリズムの名前です。これはツールボックスに表示される名前ではなく、一意のコマンドライン名です。あなたのアルゴリズムに適した名前を見つけるには、:class:`processingRegistry"
+" <qgis.core.QgsProcessingRegistry>` を使います。コンソールに以下の行を入力してください："
+
 #: ../../docs/user_manual/processing/console.rst:61
 msgid ""
 "You will see something like this (with some extra dashes added to improve "
@@ -126,7 +145,7 @@ msgid ""
 "mentioned, algorithms can be run using: ``run()``. Its syntax is as follows:"
 msgstr ""
 "これでアルゴリズムの実行に必要なことはすべて分かりました。すでに触れたように、アルゴリズムは ``run()`` "
-"を使って実行することができます。シンタックスは以下のようになります。"
+"を使って実行することができます。シンタックスは次のとおりです:"
 
 #: ../../docs/user_manual/processing/console.rst:230
 msgid ""
@@ -164,6 +183,18 @@ msgid ""
 msgstr ""
 "ラスタレイヤ、ベクタレイヤ、テーブル。これらは単純に、使いたいデータオブジェクトの識別名（QGIS "
 "TOCが保持している名前）か、もしくはファイル名を文字列で指定してください。ファイル名を指定した場合、対応するレイヤがまだ読み込まれていない場合はファイルを開いて読み込みますが、マップキャンバスには追加されません。レイヤのQGISオブジェクトインスタンスをすでに取得している場合は、これをパラメータとして渡すこともできます。"
+
+#: ../../docs/user_manual/processing/console.rst:260
+msgid ""
+"Enumeration. If an algorithm has an enumeration parameter, the value of that"
+" parameter should be entered using an integer value. To know the available "
+"options, you can use the ``algorithmHelp()`` command, as above. For "
+"instance, the ``native:buffer`` algorithm has an enumeration called "
+"JOIN_STYLE:"
+msgstr ""
+"列挙。アルゴリズムに列挙パラメータがある場合、そのパラメータの値は整数値で入力する必要があります。利用可能なオプションを知るには、上記のように "
+"``algorithmHelp()`` コマンドを使用することができます。例えば、 ``native:buffer`` アルゴリズムには "
+"JOIN_STYLE という列挙があります："
 
 #: ../../docs/user_manual/processing/console.rst:281
 msgid ""
@@ -237,6 +268,52 @@ msgid ""
 msgstr ""
 "出力データオブジェクトには、ツールボックスから実行される時と同様に、それを保存するために使うファイルパスを入力してください。出力オブジェクトが指定されない時は、結果は一時ファイルに保存されます（もしくは出力が任意の時はスキップされます）。ファイルの拡張子はファイルフォーマットから決定されます。アルゴリズムでサポートされていないファイル拡張子を入力した場合は、その出力タイプのデフォルトファイルフォーマットが使われ、それに対応する拡張子が与えられたファイルパスに付加されます。"
 
+#: ../../docs/user_manual/processing/console.rst:310
+msgid ""
+"Unlike when an algorithm is executed from the toolbox, outputs are not added"
+" to the map canvas if you execute that same algorithm from the Python "
+"console using :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>`, but "
+"``runAndLoadResults()`` will do that."
+msgstr ""
+"ツールボックスからアルゴリズムを実行した場合とは異なり、:meth:`run() "
+"<qgis.core.QgsProcessingAlgorithm.run>` "
+"を使ってPythonコンソールから同じアルゴリズムを実行した場合、マップキャンバスに出力は追加されませんが、``runAndLoadResults()``"
+" はそれをします。"
+
+#: ../../docs/user_manual/processing/console.rst:315
+msgid ""
+"The :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method returns a "
+"dictionary with one or more output names (the ones shown in the algorithm "
+"description) as keys and the file paths of those outputs as values:"
+msgstr ""
+":meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` "
+"メソッドは、1つ以上の出力名（アルゴリズムの説明に示されているもの）をキーとし、それらの出力のファイルパスを値とする辞書を返します："
+
+#: ../../docs/user_manual/processing/console.rst:334
+msgid ""
+"You can load feature output by passing the corresponding file paths to the "
+"``load()`` method. Or you could use ``runAndLoadResults()`` instead of "
+":meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` to load them "
+"immediately."
+msgstr ""
+"``load()`` メソッドに対応するファイルパスを渡すことで、地物の出力を読み込むことができます。あるいは、 :meth:`run() "
+"<qgis.core.QgsProcessingAlgorithm.run>` の代わりに ``runAndLoadResults()`` "
+"を使用すると、すぐに読み込むことができます。"
+
+#: ../../docs/user_manual/processing/console.rst:340
+msgid ""
+"If you want to open an algorithm dialog from the console you can use the "
+"``createAlgorithmDialog`` method. The only mandatory parameter is the "
+"algorithm name, but you can also define the dictionary of parameters so that"
+" the dialog will be filled automatically:"
+msgstr ""
+"コンソールからアルゴリズムダイアログを開きたい場合は、 ``createAlgorithmDialog`` "
+"メソッドを使います。必須パラメータはアルゴリズム名だけですが、パラメータの辞書を定義することで、ダイアログを自動的に埋めることもできます："
+
+#: ../../docs/user_manual/processing/console.rst:359
+msgid "The ``execAlgorithmDialog`` method opens the dialog immediately:"
+msgstr "``execAlgorithmDialog`` メソッドはダイアログをすぐに開きます:"
+
 #: ../../docs/user_manual/processing/console.rst:376
 msgid "Creating scripts and running them from the toolbox"
 msgstr "スクリプトを作成してツールボックスから実行する"
@@ -256,13 +333,13 @@ msgid ""
 "default folder when you open the save file dialog) with a :file:`.py` "
 "extension should create the corresponding algorithm."
 msgstr ""
-"Pythonコードを書くことによって自分独自のアルゴリズムを書くことができます。プロセッシングスクリプトは "
+"Pythonコードを書くことによって自分独自のアルゴリズムを書くことができます。プロセシングスクリプトは "
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` "
-"クラスを拡張します。そのため必要な機能を実装するためにはそこにさらにコードを追加する必要があります。プロセッシングツールボックス最上部の:guilabel:`スクリプト`"
+"クラスを拡張します。そのため必要な機能を実装するためにはそこにさらにコードを追加する必要があります。プロセシングツールボックス最上部の:guilabel:`スクリプト`"
 " ドロップダウンメニューから :guilabel:`新しいスクリプトを作成...` （白紙）と "
 ":guilabel:`テンプレートから新しいスクリプトを作成...` （必須の関数 :class:`QgsProcessingAlgorithm "
 "<qgis.core.QgsProcessingAlgorithm>` "
-"のコードを含むテンプレート）を選ぶことができます。するとコードを入力するためのプロセッシングスクリプトエディタが開きます。ここでスクリプトを保存すると "
+"のコードを含むテンプレート）を選ぶことができます。するとコードを入力するためのプロセシングスクリプトエディタが開きます。ここでスクリプトを保存すると "
 ":file:`scripts` フォルダ（スクリプトを保存ダイアログを開いたときのデフォルトフォルダ）に :file:`.py` "
 "拡張子でアルゴリズムとして保存されます。"
 
@@ -279,7 +356,7 @@ msgid ""
 "distance on a vector layer that is specified by the user, after first "
 "smoothing the layer."
 msgstr ""
-"プロセッシングアルゴリズムを定義する次のコード例を見てみましょう。このアルゴリズムは、最初のレイヤ平滑化の後に、ユーザによって指定されたベクタレイヤに対する、ユーザ定義のバッファ距離によるバッファ操作を行うアルゴリズムとして機能するものです。"
+"プロセシングアルゴリズムを定義する次のコード例を見てみましょう。このアルゴリズムは、最初のレイヤ平滑化の後に、ユーザによって指定されたベクタレイヤに対する、ユーザ定義のバッファ距離によるバッファ操作を行うアルゴリズムとして機能するものです。"
 
 #: ../../docs/user_manual/processing/console.rst:461
 msgid ""
@@ -290,6 +367,37 @@ msgstr ""
 "必要なインポートを行った後に、続いて :class:`QgsProcessingAlgorithm "
 "<qgis.core.QgsProcessingAlgorithm>` の諸関数が定義されます。"
 
+#: ../../docs/user_manual/processing/console.rst:465
+msgid ""
+":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: The id of the "
+"algorithm (lowercase)."
+msgstr ""
+":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: アルゴリズムのid（小文字）。"
+
+#: ../../docs/user_manual/processing/console.rst:467
+msgid ""
+":meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`: A "
+"human readable name for the algorithm."
+msgstr ""
+":meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`: "
+"アルゴリズムの人が読む名前。"
+
+#: ../../docs/user_manual/processing/console.rst:469
+msgid ""
+":meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
+"Create a new instance of the algorithm class."
+msgstr ""
+":meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
+"アルゴリズムクラスの新しいインスタンスを作る。"
+
+#: ../../docs/user_manual/processing/console.rst:471
+msgid ""
+":meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
+"Configure the parameterDefinitions and outputDefinitions."
+msgstr ""
+":meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
+"parameterDefinitionsと outputDefinitionsを設定する。"
+
 #: ../../docs/user_manual/processing/console.rst:474
 msgid ""
 "Here you describe the parameters and output of the algorithm.  In this case,"
@@ -299,11 +407,37 @@ msgstr ""
 "ここでアルゴリズムのパラメータと出力を記述します。この例では、入力のためには feature source を、出力結果のためには feature "
 "sink とバッファ距離用の数値を定義しています。"
 
+#: ../../docs/user_manual/processing/console.rst:477
+msgid ""
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: Do the work."
+msgstr ""
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: 処理を行う。"
+
+#: ../../docs/user_manual/processing/console.rst:480
+msgid ""
+"Here we first run the ``smoothgeometry`` algorithm to smooth the geometry, "
+"and then we run the ``buffer`` algorithm on the smoothed output. To be able "
+"to run algorithms from within another algorithm we have to set the "
+"``is_child_algorithm`` argument to :const:`True`. You can see how input and "
+"output parameters are used as parameters to the ``smoothgeometry`` and "
+"``buffer`` algorithms."
+msgstr ""
+"ここでは、まず ``smoothgeometry`` アルゴリズムを実行してジオメトリを平滑化し、次に平滑化された出力に対して ``buffer`` "
+"アルゴリズムを実行します。他のアルゴリズムからアルゴリズムを実行するには、 ``is_child_algorithm`` 引数を "
+":const:`True` に設定する必要があります。入力パラメータと出力パラメータが ``smoothgeometry`` と ``buffer`` "
+"アルゴリズムのパラメータとしてどのように使用されているかを見ることができます。"
+
 #: ../../docs/user_manual/processing/console.rst:488
 msgid ""
 "There are a number of different parameter types available for input and "
 "output. Below is an alphabetically sorted list:"
 msgstr "入力と出力のために多くの種類のパラメータが使用可能です。以下はアルファベット順にソートされたリストです。"
+
+#: ../../docs/user_manual/processing/console.rst:491
+msgid "List of input and output algorithm parameter types"
+msgstr "入出力アルゴリズムパラメータ型の一覧"
 
 #: ../../docs/user_manual/processing/console.rst:494
 msgid ""
@@ -594,17 +728,132 @@ msgstr ""
 msgid "Feedback"
 msgstr "フィードバック"
 
+#: ../../docs/user_manual/processing/console.rst:568
+msgid ""
+"The :class:`feedback <qgis.core.QgsProcessingFeedback>` object passed to "
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>` should be used for user"
+" feedback / interaction. You can use the :meth:`setProgress() "
+"<qgis.core.QgsFeedback.setProgress>` function of the :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` object to update the progress bar (0 to "
+"100) to inform the user about the progress of the algorithm. This is very "
+"useful if your algorithm takes a long time to complete."
+msgstr ""
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>` に渡される :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` "
+"オブジェクトは、ユーザーからのフィードバックや対話に使用されます。:class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` オブジェクトの :meth:`setProgress() "
+"<qgis.core.QgsFeedback.setProgress>` "
+"関数を使うことで、プログレスバー(0から100)を更新してアルゴリズムの進捗をユーザに知らせることができます。これはアルゴリズムが完了するまでに時間がかかる場合にとても便利です。"
+
+#: ../../docs/user_manual/processing/console.rst:576
+msgid ""
+"The :class:`feedback <qgis.core.QgsProcessingFeedback>` object provides an "
+":meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` method that should "
+"be monitored to enable cancelation of the algorithm by the user. The "
+":meth:`pushInfo() <qgis.core.QgsProcessingFeedback.pushInfo>` method of "
+":class:`feedback <qgis.core.QgsProcessingFeedback>` can be used to send "
+"information to the user, and :meth:`reportError() "
+"<qgis.core.QgsProcessingFeedback.reportError>` is handy for pushing non-"
+"fatal errors to users."
+msgstr ""
+":class:`feedback <qgis.core.QgsProcessingFeedback>` オブジェクトは "
+":meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` "
+"メソッドを提供し、ユーザによるアルゴリズムのキャンセルを可能にするために監視する必要があります。:class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` の :meth:`pushInfo() "
+"<qgis.core.QgsProcessingFeedback.pushInfo>` メソッドはユーザに情報を送信するために使うことができます。また、"
+" :meth:`reportError() <qgis.core.QgsProcessingFeedback.reportError>` "
+"は致命的でないエラーをユーザにプッシュするのに便利です。"
+
+#: ../../docs/user_manual/processing/console.rst:584
+msgid ""
+"Algorithms should avoid using other forms of providing feedback to users, "
+"such as print statements or logging to :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>`, and should always use the feedback object "
+"instead. This allows verbose logging for the algorithm, and is also thread-"
+"safe (which is important, given that algorithms are typically run in a "
+"background thread)."
+msgstr ""
+"アルゴリズムは、ユーザにフィードバックを提供するprint文や :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>` "
+"へのロギングのような、他の形式の使用を避け、常にフィードバックオブジェクトを使うべきです。これはアルゴリズムに対する冗長なロギングを可能にし、スレッドセーフでもあります(これはアルゴリズムが通常バックグラウンドスレッドで実行されることを考えると重要です)。"
+
 #: ../../docs/user_manual/processing/console.rst:593
 msgid "Handling errors"
 msgstr "エラーハンドリング"
+
+#: ../../docs/user_manual/processing/console.rst:595
+msgid ""
+"If your algorithm encounters an error which prevents it from executing, such"
+" as invalid input values or some other condition from which it cannot or "
+"should not recover, then you should raise a :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>`. E.g.::"
+msgstr ""
+"もしアルゴリズムが無効な入力値や回復できない、あるいは回復できないような状態など、実行を妨げるようなエラーに遭遇した場合、 "
+":class:`QgsProcessingException <qgis.core.QgsProcessingException>` "
+"を発生させるべきです。例．::"
+
+#: ../../docs/user_manual/processing/console.rst:604
+msgid ""
+"Try to avoid raising :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>` for non-fatal errors (e.g. when a "
+"feature has a null geometry), and instead just report these errors via "
+"``feedback.reportError()`` and skip the feature. This helps make your "
+"algorithm \"model-friendly\", as it avoids halting the execution of an "
+"entire algorithm when a non-fatal error is encountered."
+msgstr ""
+":class:`QgsProcessingException <qgis.core.QgsProcessingException>` "
+"を致命的でないエラー(例えば、地物のジオメトリがNULLの場合など)に対して発生させないようにし、代わりに "
+"``feedback.reportError()`` "
+"によってこれらのエラーを報告し、その地物をスキップするようにして下さい。これにより、致命的でないエラーに遭遇した際にアルゴリズム全体の実行を停止する必要がなくなるため、アルゴリズムを「モデルフレンドリ」にすることができます。"
 
 #: ../../docs/user_manual/processing/console.rst:614
 msgid "Documenting your scripts"
 msgstr "スクリプトのドキュメントを作成する"
 
+#: ../../docs/user_manual/processing/console.rst:616
+msgid ""
+"As in the case of models, you can create additional documentation for your "
+"scripts, to explain what they do and how to use them."
+msgstr "モデルの場合と同様に、スクリプトの追加ドキュメントを作成して、スクリプトの動作や使用方法を説明することができます。 "
+
+#: ../../docs/user_manual/processing/console.rst:619
+msgid ""
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` provides "
+"the :meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>`, "
+":meth:`shortHelpString() <qgis.core.QgsProcessingAlgorithm.shortHelpString>`"
+" and :meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` functions "
+"for that purpose. Specify / override these to provide more help to the user."
+msgstr ""
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` は、そのために "
+":meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>`, "
+":meth:`shortHelpString() <qgis. "
+"core.QgsProcessingAlgorithm.shortHelpString>`と :meth:`helpUrl() "
+"<qgis.core.QgsProcessingAlgorithm.helpUrl>` "
+"関数を使います。ユーザにより多くのヘルプを提供するために、これらを指定/オーバーライドして下さい。"
+
+#: ../../docs/user_manual/processing/console.rst:625
+msgid ""
+":meth:`shortDescription() "
+"<qgis.core.QgsProcessingAlgorithm.shortDescription>` is used in the tooltip "
+"when hovering over the algorithm in the toolbox."
+msgstr ""
+":meth:`shortDescription() "
+"<qgis.core.QgsProcessingAlgorithm.shortDescription>`は、ツールボックスでアルゴリズムにカーソルを合わせた時のツールチップで使用されます。"
+
 #: ../../docs/user_manual/processing/console.rst:629
 msgid "Pre- and post-execution script hooks"
 msgstr "実行前後のスクリプトのフック"
+
+#: ../../docs/user_manual/processing/console.rst:631
+msgid ""
+"Scripts can also be used as pre- and post-execution hooks that are run "
+"before and after an algorithm is run, respectively. This can be used to "
+"automate tasks that should be performed whenever an algorithm is executed."
+msgstr ""
+"スクリプトは、アルゴリズムが実行される前と後にそれぞれ実行される実行前フックと実行後フックとしても使用できます。これは、アルゴリズムが実行されるたびに実行されるべきタスクを自動化するために使用できます。"
+" "
 
 #: ../../docs/user_manual/processing/console.rst:635
 msgid ""
@@ -614,3 +863,13 @@ msgid ""
 msgstr ""
 "文法は上述のものと同様ですが、 ``alg`` "
 "という名前のグローバル変数を追加で使用でき、これはたった今(あるいはまさにこれから)実行されるアルゴリズムを表します。"
+
+#: ../../docs/user_manual/processing/console.rst:639
+msgid ""
+"In the :guilabel:`General` group of the processing options dialog, you will "
+"find two entries named :guilabel:`Pre-execution script` and :guilabel:`Post-"
+"execution script` where the filenames of the scripts to be run in each case "
+"can be entered."
+msgstr ""
+"プロセシングオプションダイアログの :guilabel:`一般情報` グループには :guilabel:`事前実行スクリプト` と "
+":guilabel:`事後実行スクリプト` という2つの項目があり、それぞれのケースで実行するスクリプトのファイル名を入力することができます。"
