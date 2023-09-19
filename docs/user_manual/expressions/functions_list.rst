@@ -1184,6 +1184,7 @@ To use these variables in an expression, they should be preceded by the
    "layer", "The current layer"
    "layer_crs", "The Coordinate Reference System Authority ID of the current layer"
    "layer_crs_ellipsoid", "The ellipsoid Authority ID of the current layer CRS"
+   "layer_cursor_point", "Point geometry under the mouse position in map canvas, in active layer's CRS"
    "layer_id", "The ID of current layer"
    "layer_ids", "The IDs of all the map layers in the current project as a list"
    "layer_name", "The name of current layer"
