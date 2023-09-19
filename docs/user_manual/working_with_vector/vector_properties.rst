@@ -2192,7 +2192,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
         and vice versa
       * in case of a group box, set whether at the form opening,
         it should show as :guilabel:`Collapsed` for every features,
-        or only for those matching an expression` (:guilabel:`Control collapsed by expression`).
+        or only for those matching an expression (:guilabel:`Control collapsed by expression`).
       * configure the :guilabel:`Style` look of the container, with custom :guilabel:`Background color`,
         label color and font properties
    #. You can create and embed as many containers as you want by pressing again
