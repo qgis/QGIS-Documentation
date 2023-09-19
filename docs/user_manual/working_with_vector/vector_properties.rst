@@ -76,7 +76,7 @@ dialog. Those are not presented in this document. Refer to their documentation.
 Information Properties
 ======================
 
-|metadata| The :guilabel:`Information` tab is read-only and represents an interesting
+The |metadata| :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
 Provided information are:
 
@@ -224,7 +224,7 @@ you can not display, query, save or edit ``Anchorage``, because that is a
 Symbology Properties
 ====================
 
-|symbology| The Symbology tab provides you with a comprehensive tool for
+The |symbology| :guilabel:`Symbology` tab provides you with a comprehensive tool for
 rendering and symbolizing your vector data. You can use tools that are
 common to all vector data, as well as special symbolizing tools that were
 designed for the different kinds of vector data. However all types share the
@@ -1727,7 +1727,7 @@ We now describe an example using the data-defined override function for the
 Diagrams Properties
 ===================
 
-|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to
+The |diagram| :guilabel:`Diagrams` tab allows you to add a graphic overlay to
 a vector layer (see :numref:`figure_diagrams_attributes`).
 
 The current core implementation of diagrams provides support for:
@@ -1948,7 +1948,7 @@ are also displayed in the print layout legend, next to the layer symbology.
 Masks Properties
 ================
 
-|labelmask| The :guilabel:`Masks` tab helps you configure the current layer
+The |labelmask| :guilabel:`Masks` tab helps you configure the current layer
 symbols overlay with other symbol layers or labels, from any layer.
 This is meant to improve the readability of symbols and labels whose colors
 are close and can be hard to decipher when overlapping; it adds a custom and
@@ -1981,7 +1981,7 @@ either :ref:`mask symbol layers <mask_marker_symbol>` or :ref:`mask labels
 3D View Properties
 =======================
 
-|3d| The :guilabel:`3D View` tab provides settings for vector layers that should
+The |3d| :guilabel:`3D View` tab provides settings for vector layers that should
 be depicted in the :ref:`3D Map view <label_3dmapview>` tool.
 
 To display a layer in 3D, select from the combobox at the top of the tab, either:
@@ -2025,7 +2025,7 @@ the :guilabel:`Layer rendering` section of the tab:
 Fields Properties
 =================
 
-|sourceFields| The :guilabel:`Fields` tab provides information on
+The |sourceFields| :guilabel:`Fields` tab provides information on
 fields related to the layer and helps you organize them.
 
 The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
@@ -2079,7 +2079,7 @@ behave in certain circumstances:
 Attributes Form Properties
 ==========================
 
-|formView| The :guilabel:`Attributes Form` tab helps you set up the form to
+The |formView| :guilabel:`Attributes Form` tab helps you set up the form to
 display when creating new features or querying existing one. You can define:
 
 * the look and the behavior of each field in the feature form or the attribute
@@ -2512,7 +2512,7 @@ with the field type. The available widgets are:
 Joins Properties
 ================
 
-|join| The :guilabel:`Joins` tab allows you to associate features
+The |join| :guilabel:`Joins` tab allows you to associate features
 of the current layer (called ``Target layer``) to features from another
 loaded vector layer (or table). The join is based on an attribute that is shared by the
 layers. The layers can be geometryless (tables) or not but their join attribute
@@ -2795,10 +2795,11 @@ In this case, ``.qgd`` and  ``.qgs`` files are both embedded in the archive.
 Actions Properties
 ==================
 
-|action| QGIS provides the ability to perform an action based on the attributes
-of a feature. This can be used to perform any number of actions, for example,
-running a program with arguments built from the attributes of a feature or
-passing parameters to a web reporting tool.
+The |action| :guilabel:`Actions` tab provides the ability to perform an action
+based on the attributes of a feature.
+This can be used to perform any number of actions, for example,
+running a program with arguments built from the attributes of a feature
+or passing parameters to a web reporting tool.
 
 .. _figure_actions:
 
@@ -2807,8 +2808,8 @@ passing parameters to a web reporting tool.
 
    Overview action dialog with some sample actions
 
-Actions are useful when you frequently want to run an external application or
-view a web page based on one or more values in your vector layer.
+Actions are useful when you frequently want to run an external application
+or view a web page based on one or more values in your vector layer.
 They are of different types and can be used like this:
 
 * :guilabel:`Generic`, :guilabel:`macOS`, :guilabel:`Windows`
@@ -3106,7 +3107,7 @@ To add a raster (a TIF image in this example), it becomes:
 Display Properties
 ==================
 
-|display| The :guilabel:`Display` tab helps you configure fields to use for
+The |display| :guilabel:`Display` tab helps you configure fields to use for
 feature identification:
 
 * The :guilabel:`Display name`: based on a field or an :ref:`expression
@@ -3289,7 +3290,7 @@ It is also possible to set the :guilabel:`Limits` of the features time range as:
 Variables Properties
 ====================
 
-|expression| The :guilabel:`Variables` tab lists all the variables available at
+The |expression| :guilabel:`Variables` tab lists all the variables available at
 the layer's level (which includes all global and project's variables).
 
 It also allows the user to manage layer-level variables. Click the |symbologyAdd|
@@ -3407,7 +3408,7 @@ See :ref:`metadatamenu` for more information.
 Dependencies Properties
 =======================
 
-|dependencies| The :guilabel:`Dependencies` tab allows to declare data
+The |dependencies| :guilabel:`Dependencies` tab allows to declare data
 dependencies between layers. A data dependency occurs when a data modification
 in a layer, not by direct user manipulation, may modify data of other layers.
 This is the case for instance when geometry of a layer is updated by a
@@ -3426,7 +3427,7 @@ altered.
 Legend Properties
 =================
 
-|legend| The :guilabel:`Legend` properties tab provides you with advanced
+The |legend| :guilabel:`Legend` properties tab provides you with advanced
 settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
 layout legend <layout_legend_item>`. These options include:
 
@@ -3471,7 +3472,7 @@ layout legend <layout_legend_item>`. These options include:
 QGIS Server Properties
 ======================
 
-|overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
+The |overlay| :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`Metadata URL`, and :guilabel:`Legend URL`
 sections.
 
@@ -3507,7 +3508,7 @@ To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
 Digitizing Properties
 =====================
 
-|digitizing| The :guilabel:`Digitizing` tab gives access to options that help
+The |digitizing| :guilabel:`Digitizing` tab gives access to options that help
 to ensure the quality of digitized geometries.
 
 .. _figure_digitizing_vector:
