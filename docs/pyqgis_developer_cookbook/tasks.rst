@@ -99,6 +99,17 @@ There are several ways to create a QGIS task:
    Attempting to use them from background threads will result in
    crashes.
 
+   Moreover always make sure that `context` and `feedback` live for at
+   least as long as any `QgsTask` using them. Qgis will crash should a task
+   resolve and `QgsTaskManager` fail to access the `context` or `feedback`
+   against which the task was scheduled.
+
+.. info::
+   It is a common pattern to call `context.setProject(QgsProject.instance())` shortly
+   after calling `QgsProcessingContext()`. This allows the task as well as its callback
+   function to use most of the project-wide settings. This is especially valuable when working
+   with spatial layers in the callback function.
+
 Dependencies between tasks can be described using the :meth:`addSubTask() <qgis.core.QgsTask.addSubTask>`
 function of :class:`QgsTask <qgis.core.QgsTask>`.
 When a dependency is stated, the task manager will automatically
