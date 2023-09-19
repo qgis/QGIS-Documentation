@@ -404,6 +404,8 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |equalCount| image:: /static/common/mClassificationEqualCount.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
@@ -420,6 +422,4 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
-   :width: 1.5em
-.. |equalCount| image:: /static/common/mClassificationEqualCount.png
    :width: 1.5em
