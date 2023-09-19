@@ -3148,25 +3148,25 @@ Display Properties
 The |display| :guilabel:`Display` tab helps you configure fields to use for
 feature identification:
 
-* The :guilabel:`Display name`: based on a field or an :ref:`expression
-  <vector_expressions>`. This is:
+* The :guilabel:`Display name`: based on a field or an :ref:`expression <vector_expressions>`.
+  By default, this is set to the first field in the layer if no field with ``<name>`` component exists.
+  This is used as:
 
-  * the label shown on top of the feature information in the :ref:`Identify
-    tool <identify>` results
+  * the label shown on top of the feature information in the :ref:`Identify tool <identify>` results
   * the field used in the :ref:`locator bar <locator_options>` when looking for
     features in all layers
-  * the feature identifier in the attribute table :ref:`form view
-    <attribute_table_view>`
+  * the feature identifier in the attribute table :ref:`form view <attribute_table_view>`
   * the feature identifier when the map or layout is exported to a layered
     output format such as GeoPDF
-  * the map tip information, i.e. the message displayed in the map canvas when
-    hovering over a feature of the active layer with the |mapTips| :sup:`Show
-    Map Tips` icon pressed. Applicable when no :guilabel:`HTML Map Tip` is set.
-
-* The :guilabel:`HTML Map Tip` is specifically created for the map tips: it's
-  a more complex and full HTML text mixing fields, expressions and html tags
-  (multiline, fonts, images, hyperlink...). You can use 
-  :guilabel:`HTML Map Tip Preview` for easier design of map tips. 
+  * the map tip information, i.e. the message displayed in the map canvas
+    when hovering over a feature of the active layer with the |mapTips| :sup:`Show Map Tips` icon pressed.
+    Applicable when |checkbox| :guilabel:`Enable Map Tips` is active
+    and no :guilabel:`HTML Map Tip` is set.
+* |checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips for the layer
+* The :guilabel:`HTML Map Tip` is specifically created for the map tips:
+  it's a more complex and full HTML text mixing fields, expressions and html tags
+  (multiline, fonts, images, hyperlink...).
+  You can use :guilabel:`HTML Map Tip Preview` for easier design of map tips.
 
 .. _figure_display_code:
 
@@ -3176,11 +3176,15 @@ feature identification:
    HTML code for map tip
 
 
-To activate map tips, select the menu option :menuselection:`View --> Show Map
-Tips` or click on the |mapTips| :sup:`Show Map Tips` icon of the
-:guilabel:`Attributes Toolbar`. Map tip is a cross-session feature meaning that
-once activated, it stays on and apply to any layer in any project, even in
-future QGIS sessions until it's toggled off.
+To display map tips:
+
+#. Select the menu option :menuselection:`View --> Show Map Tips`
+   or click on the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes Toolbar`.
+#. Make sure that the layer you target is active and has the |checkbox| :guilabel:`Enable Map Tips` property checked.
+#. Move over a feature, and the corresponding information will be displayed over.
+
+Map tip is a cross-layer feature meaning that once activated,
+it stays on and applies to any map tip enabled layer in the project until it's toggled off.
 
 .. _figure_display_mapped:
 
