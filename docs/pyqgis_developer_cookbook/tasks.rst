@@ -100,8 +100,8 @@ There are several ways to create a QGIS task:
    crashes.
 
    Moreover always make sure that `context` and `feedback` live for at
-   least as long as any `QgsTask` using them. Qgis will crash should a task
-   resolve and `QgsTaskManager` fail to access the `context` or `feedback`
+   least as long as the `QgsTask`s that use them. For QGIS will crash if, 
+   upon completion of a task, `QgsTaskManager` fails to access the `context` or `feedback`
    against which the task was scheduled.
 
 .. note::
