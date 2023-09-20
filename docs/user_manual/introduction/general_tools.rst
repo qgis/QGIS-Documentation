@@ -1058,6 +1058,10 @@ All the other information about the feature follows.
 Feature information
 ...................
 
+The feature information displayed by the identify tool will depend on the type 
+of layer you have selected, whether it is a vector layer (including vector tiles 
+or point cloud data) or raster layer. If your layer is raster, clicking on a location
+on the map canvas with identify tool will highlight the identified raster pixel. 
 The Identify Results dialog can be customized to display custom fields, but by
 default it will display the following information:
 
