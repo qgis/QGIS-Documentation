@@ -521,7 +521,9 @@ Outputs
    * - **Bounds**
      - ``OUTPUT``
      - [vector: polygon]
-     - Bounding boxes of input layer
+     - Bounding boxes of input layer.
+       Other than the input attributes, the output layer also contains following fields:
+       ``width``, ``height``, ``area`` and ``perimeter`` of the generated polygon.
 
 Python code
 ...........
