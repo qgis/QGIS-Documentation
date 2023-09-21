@@ -262,15 +262,13 @@ feature following:
 Grids
 -----
 
-With grids, you can add, over your map, information relative to its extent or
-coordinates, either in the map item projection or a different one. The
-:guilabel:`Grids` group provides the possibility to add several grids to a
-map item.
+With grids, you can add, over your map, information relative to its extent
+or coordinates, either in the map item projection or a different one.
+The :guilabel:`Grids` group provides the possibility to add several grids to a map item.
 
-* With the |symbologyAdd| and |symbologyRemove| buttons you can add or remove a selected
-  grid;
-* With the |arrowUp| and |arrowDown| buttons you can move up and down a grid in
-  the list, hence move it on top or bottom of another one, over the map item.
+* With the |symbologyAdd| and |symbologyRemove| buttons you can add or remove a selected grid;
+* With the |arrowUp| and |arrowDown| buttons you can move up and down a grid in the list,
+  hence move it on top or bottom of another one, over the map item.
 
 Double-click the added grid to rename it.
 
@@ -282,8 +280,7 @@ Double-click the added grid to rename it.
    Map Grids Dialog
 
 To modify a grid, select it and press the :guilabel:`Modify Grid...` button
-to open the :guilabel:`Map Grid Properties` panel and access its
-configuration options.
+to open the :guilabel:`Map Grid Properties` panel and access its configuration options.
 
 Grid Appearance
 ...............
@@ -293,14 +290,13 @@ In the :guilabel:`Map Grid Properties` panel, check |checkbox|
 
 As grid type, you can specify to use a:
 
-* *Solid*: shows a line across the grid frame. The :guilabel:`Line style` can
-  be customized using :ref:`color <color-selector>` and :ref:`symbol
-  <symbol-selector>` selector widget;
-* *Cross*: displays segment at the grid lines intersection for which you can
+* **Solid**: shows a line across the grid frame.
+  The :guilabel:`Line style` can be customized using :ref:`color <color-selector>`
+  and :ref:`symbol <symbol-selector>` selector widget;
+* **Cross**: displays segment at the grid lines intersection for which you can
   set the :guilabel:`Line style` and the :guilabel:`Cross width`;
-* *Markers*: only displays customizable markers symbol at grid lines
-  intersection;
-* or *Frame and annotations only*.
+* **Markers**: only displays customizable markers symbol at grid lines intersection;
+* or **Frame and annotations only**.
 
 Other than the grid type, you can define: 
 
@@ -319,10 +315,9 @@ Other than the grid type, you can define:
     between consecutive grid references in the :guilabel:`X` and :guilabel:`Y` directions.
     The number of grid ticks will be the same whatever the map scale.
 
-* the :guilabel:`Offset` from the map item edges, in the ``X`` and/or the ``Y``
-  direction
-* and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when
-  compatible.
+* the :guilabel:`Offset` from the map item edges, in the :guilabel:`X`
+  and/or the :guilabel:`Y` direction
+* and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when compatible.
 
 .. _Figure_layout_map_grid_draw:
 
