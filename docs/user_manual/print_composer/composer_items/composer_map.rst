@@ -304,20 +304,20 @@ As grid type, you can specify to use a:
 
 Other than the grid type, you can define: 
 
-* the :guilabel:`CRS` of the grid. If not changed, it will follow the Map CRS.
-  The :guilabel:`Change` button lets you set it to a different CRS.
-  Once set, it can be changed back to default by selecting any group heading
-  (e.g **Geographic Coordinate System**) under
-  :guilabel:`Predefined Coordinate Reference Systems` in the CRS
-  selection dialog.
-* the :guilabel:`Interval` type to use for the grid references. Available
-  options are ``Map Unit``, ``Fit Segment Width``, ``Millimeter`` or ``Centimeter``:
+* the :guilabel:`CRS` of the grid: by default, it will follow the map item CRS.
+  Press |setProjection| :sup:`Select CRS` button to set it to a different CRS.
+* the :guilabel:`Interval` type to use for the grid references:
 
-  * choosing ``Fit Segment Width`` will dynamically select the grid interval based 
-    on the map extent to a "pretty" interval. When selected, the ``Minimum`` and 
-    ``Maximum`` intervals can be set.
-  * the other options allow you to set the distance between two consecutive grid
-    references in the ``X`` and ``Y`` directions.
+  * **Map Units**: you set a distance within the map (in the unit of the grid CRS)
+    between consecutive grid references in the :guilabel:`X` and :guilabel:`Y` directions.
+    The number of grid ticks will vary depending on the map scale.
+  * choosing **Fit Segment Width** will dynamically select the grid interval based
+    on the map extent to a "pretty" interval.
+    That optimal interval is calculated within a range of distances
+    whose :guilabel:`Minimum` and :guilabel:`Maximum` values can be customized.
+  * With **Millimeters** or **Centimeters**, you set a distance on the paper
+    between consecutive grid references in the :guilabel:`X` and :guilabel:`Y` directions.
+    The number of grid ticks will be the same whatever the map scale.
 
 * the :guilabel:`Offset` from the map item edges, in the ``X`` and/or the ``Y``
   direction
@@ -477,6 +477,8 @@ of the overview on the selected map frame. You can customize it with:
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |setToCanvasExtent| image:: /static/common/mActionSetToCanvasExtent.png
    :width: 1.5em
