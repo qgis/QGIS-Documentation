@@ -2436,8 +2436,8 @@ widget type to it. You can then replace the widget with any other compatible
 with the field type. The available widgets are:
 
 * **Binary (BLOB)**: Available only for binary fields, it offers a lable showing
-  whether the BLOB field is empty or not. If filed is not empty the content size
-  will be displayed.
+  whether the BLOB field is empty or not. If the filed is not empty the content 
+  size will be displayed.
 * **Checkbox**: Displays a checkbox whose state defines the value to insert.
 * **Classification**: Only available when a :ref:`categorized symbology
   <categorized_renderer>` is applied to the layer, displays a combo box with
