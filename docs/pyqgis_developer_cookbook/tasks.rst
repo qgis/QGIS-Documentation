@@ -108,7 +108,7 @@ There are several ways to create a QGIS task:
 
 .. note::
    It is a common pattern to call :meth:`setProject() <qgis.core.QgsProcessingContext.setProject>` shortly
-   after calling :meth:`QgsProcessingContext() <qgis.core.QgsProcessingContext>`. This allows the task as well as its callback
+   after calling ``QgsProcessingContext``. This allows the task as well as its callback
    function to use most of the project-wide settings. This is especially valuable when working
    with spatial layers in the callback function.
 
