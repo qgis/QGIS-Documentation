@@ -19,14 +19,15 @@ Tasks - doing heavy work in the background
   .. testcode:: tasks
 
     from qgis.core import (
-      QgsProcessingContext,
-      QgsTaskManager,
-      QgsTask,
-      QgsProcessingAlgRunnerTask,
       Qgis,
-      QgsProcessingFeedback,
       QgsApplication,
       QgsMessageLog,
+      QgsProcessingAlgRunnerTask,
+      QgsProcessingContext,
+      QgsProcessingFeedback,
+      QgsProject,
+      QgsTask,
+      QgsTaskManager,
     )
 
 .. only:: html
@@ -83,6 +84,7 @@ There are several ways to create a QGIS task:
 
     params = dict()
     context = QgsProcessingContext()
+    context.setProject(QgsProject.instance())
     feedback = QgsProcessingFeedback()
 
     buffer_alg = QgsApplication.instance().processingRegistry().algorithmById('native:buffer')
@@ -98,6 +100,18 @@ There are several ways to create a QGIS task:
    Data that is used in a task must be copied before the task is started.
    Attempting to use them from background threads will result in
    crashes.
+
+   Moreover always make sure that :class:`context <qgis.core.QgsProcessingContext>`
+   and :class:`feedback <qgis.core.QgsProcessingFeedback>` live for at
+   least as long as the *QgsTask*s that use them. For QGIS will crash if, 
+   upon completion of a task, *QgsTaskManager* fails to access the *context* and *feedback*
+   against which the task was scheduled.
+
+.. note::
+   It is a common pattern to call :meth:`setProject() <qgis.core.QgsProcessingContext.setProject>` shortly
+   after calling ``QgsProcessingContext``. This allows the task as well as its callback
+   function to use most of the project-wide settings. This is especially valuable when working
+   with spatial layers in the callback function.
 
 Dependencies between tasks can be described using the :meth:`addSubTask() <qgis.core.QgsTask.addSubTask>`
 function of :class:`QgsTask <qgis.core.QgsTask>`.
