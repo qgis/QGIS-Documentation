@@ -90,15 +90,6 @@ These options can be found under the :guilabel:`Advanced Options`
 together with the :guilabel:`Layer identifier` (short human readable
 name of the layer) and the :guilabel:`Layer description`.
 
-.. tip:: **Binary (BLOB) fields**
-
-  If you choose :guilabel:`Binary (BLOB)` data :guilabel:`Type` a drop down
-  menu will allow you to save current binary contents of the field out to a 
-  disk based file, clear contents of a BLOB filed or embed binary contents 
-  by picking a file from your system. QGIS stores binary fields contents as
-  QByteArray values, so this allows for plugins and scripts to utilise binary
-  fields, such as extracting their contents.  
-
 Further management of GeoPackage layers can be done with the
 :ref:`DB Manager <dbmanager>`.
 
