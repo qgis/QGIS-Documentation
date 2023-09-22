@@ -2487,6 +2487,14 @@ with the field type. The available widgets are:
   relative or absolute mode. It can be used to display a hyperlink (to
   document path), a picture or a web page. User can also configure an
   :ref:`external storage system <external_storage>` to fetch/store resources.
+
+  .. tip:: **Relative Path in Attachment widget**
+
+   If the path which is selected with the file browser is located in the same
+   directory as the :file:`.qgs` project file or below, paths are converted to
+   relative paths. This increases portability of a :file:`.qgs` project with
+   multimedia information attached.
+
 * **Hidden**: A hidden attribute column is invisible. The user is not able
   to see its contents.
 * **Key/Value**: Displays a two-columns table to store sets of key/value
@@ -2532,14 +2540,6 @@ with the field type. The available widgets are:
   configured to use a value relation widget, but the required layer is
   not already loaded into the project, QGIS will automatically search for
   the layer in the same database/connection.
-
-
-.. tip:: **Relative Path in Attachment widget**
-
-   If the path which is selected with the file browser is located in the same
-   directory as the :file:`.qgs` project file or below, paths are converted to
-   relative paths. This increases portability of a :file:`.qgs` project with
-   multimedia information attached.
 
 
 .. index:: Jointure, Join layers
