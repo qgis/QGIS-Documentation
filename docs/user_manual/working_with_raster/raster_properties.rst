@@ -685,9 +685,8 @@ Rendering Properties
 In the |rendering| :guilabel:`Rendering` tab, it's possible to:
 
 * set :guilabel:`Scale dependent visibility` for the layer:
-  You can set the :guilabel:`Maximum (inclusive)` and
-  :guilabel:`Minimum (exclusive)` scale, defining a range of scales in
-  which the layer will be visible.
+  You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales,
+  defining a range of scales in which the layer will be visible.
   It will be hidden outside this range.
   The |mapIdentification| :sup:`Set to current canvas scale` button
   helps you use the current map canvas scale as a boundary.
@@ -699,11 +698,20 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
    the :guilabel:`Layers` panel: right-click on the layer and in the contextual menu,
    select :guilabel:`Set Layer Scale Visibility`.
 
+* |checkbox| :guilabel:`Refresh layer at interval`: controls whether and how regular a layer can be refreshed.
+  Available :guilabel:`Configuration` options are:
 
-* :guilabel:`Refresh layer at interval (seconds)`: set a timer to
-  automatically refresh individual layers.
-  Canvas updates are deferred in order to avoid refreshing multiple
-  times if more than one layer has an auto update interval set.
+  * :guilabel:`Reload data`: the layer will be completely refreshed.
+    Any cached data will be discarded and refetched from the provider.
+    This mode may result in slower map refreshes.
+  * :guilabel:`Redraw layer only`: this mode is useful for animation
+    or when the layer's style will be updated at regular intervals.
+    Canvas updates are deferred in order to avoid refreshing multiple times
+    if more than one layer has an auto update interval set.
+
+    .. todo: Add a link to animation styling when available
+
+  It is also possible to set the :guilabel:`Interval (seconds)` between consecutive refreshments.
 
 .. _figure_raster_rendering:
 

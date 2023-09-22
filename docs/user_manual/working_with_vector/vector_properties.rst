@@ -3160,7 +3160,7 @@ Rendering Properties
 
 .. _figure_rendering:
 
-.. figure:: img/simplify_rendering.png
+.. figure:: img/vector_rendering.png
    :align: center
 
    Layer Rendering Properties dialog
@@ -3202,6 +3202,20 @@ of nodes), this can cause layout exports in PDF/SVG format to be huge as all
 nodes are included in the exported file. This can also make the resultant file
 very slow to work with/open in other programs.
 
+* The :guilabel:`Selections` group allows you to control whether a specific color or symbol should be used
+  in place of the defaults (:menuselection:`Project properties --> General --> Selection color`)
+  for a particular layer.
+  This is useful to improve the visibility of selected features with certain symbology:
+
+  * :guilabel:`Use default selection color`
+  * :guilabel:`Override color for selected features`: e.g. if the layer uses a yellow color by default
+    and the standard yellow selection is not visible.
+  * :guilabel:`Override symbol for selected features`: e.g. if a line layer uses a thin symbol,
+    and coloring the lines might not make them visible enough, overriding the symbol with a thicker line can help.
+    Also, if the layer uses raster symbology or gradient fills/lines/shapeburst with color ramp symbology,
+    then the default selection color is not applied at all;
+    being able to set a specific simpler symbol to use for selected features in the layer can help.
+
 Checking |checkbox| :guilabel:`Force layer to render as raster` forces these
 layers to be rasterised so that the exported files won't have to include all
 the nodes contained in these layers and the rendering is therefore sped up.
@@ -3210,10 +3224,20 @@ You can also do this by forcing the layout to export as a raster,
 but that is an all-or-nothing solution, given that the rasterisation
 is applied to all layers.
 
-:guilabel:`Refresh layer at interval (seconds)`: set a timer to automatically
-refresh individual layers at a matching interval. Canvas updates are
-deferred in order to avoid refreshing multiple times if more than one layer
-has an auto update interval set.
+* |unchecked| :guilabel:`Refresh layer at interval`: controls whether and how regular a layer can be refreshed.
+  Available :guilabel:`Configuration` options are:
+
+  * :guilabel:`Reload data`: the layer will be completely refreshed.
+    Any cached data will be discarded and refetched from the provider.
+    This mode may result in slower map refreshes.
+  * :guilabel:`Redraw layer only`: this mode is useful for animation
+    or when the layer's style will be updated at regular intervals.
+    Canvas updates are deferred in order to avoid refreshing multiple times
+    if more than one layer has an auto update interval set.
+
+    .. todo: Add a link to animation styling when available
+
+  It is also possible to set the :guilabel:`Interval (seconds)` between consecutive refreshments.
 
 Depending on the data provider (e.g. PostgreSQL), notifications can be sent to
 QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox|
