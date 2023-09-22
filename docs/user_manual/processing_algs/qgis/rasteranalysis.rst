@@ -27,7 +27,7 @@ There are two methods for percentile calculation:
 * Inclusive linear interpolation (PERCENTRANK.INC)
 * Exclusive linear interpolation (PERCENTRANK.EXC)
 
-The linear interpolation method return the unique percent rank for different values.
+The linear interpolation methods return the unique percent rank for different values.
 Both interpolation methods follow their counterpart methods implemented
 by `LibreOffice <https://help.libreoffice.org/latest/en-US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_
 or Microsoft Excel.

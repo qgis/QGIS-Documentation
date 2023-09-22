@@ -693,7 +693,7 @@ The Geometry Generator
 ......................
 
 Available with all types of symbols, the :guilabel:`geometry generator` symbol
-layer allows to use :ref:`expression syntax <functions_list>` to generate a
+layer allows to use :ref:`expression syntax <expression_builder>` to generate a
 geometry on the fly during the rendering process. The resulting geometry does
 not have to match with the original :guilabel:`Geometry type` and you can add
 several differently modified symbol layers on top of each other.

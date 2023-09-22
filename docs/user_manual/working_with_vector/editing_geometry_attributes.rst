@@ -1349,17 +1349,14 @@ To split line or polygon features:
 
 #. Select the |splitFeatures| :sup:`Split Features` tool.
 #. Draw a line across the feature(s) you want to split.
-   If a selection is active, only selected features are split. When set,
-   :ref:`default values or clauses <configure_field>` are applied to corresponding
-   fields and other attributes of the parent feature are by default copied to the
-   new features.
-#. You can then as usually modify any of the attributes of any resulting feature.
+   If a selection is active, only selected features are split.
+   Fields of resulting features are filled according to their :ref:`splitting policy <policies>`.
+#. You can then as usual modify any of the attributes of any resulting feature.
 
 .. tip:: **Split a polyline into new features in one-click**
 
    Using the |splitFeatures| :sup:`Split Features` tool, snap and click on an
-   existing vertex of a polyline feature to split that feature into two new
-   features.
+   existing vertex of a polyline feature to split that feature into two new features.
 
 
 .. index::
