@@ -2231,6 +2231,32 @@ The drag and drop designer offers a number of widgets that are not connected to 
 They can be used to enhance the appearance of the form or to display dynamically calculated values.
 
 * :guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain the result of dynamically calculated expressions.
+
+  HTML widgets can be used for example to display images stored as BLOB in a field
+  (let's call it ``photo``):
+
+  #. In the ``Drag-and-drop designer`` mode, add a :guilabel:`HTML Widget`
+     to your :guilabel:`Form Layout`.
+  #. Double-click on the :guilabel:`HTML Widget` to configure it.
+  #. Change the default :guilabel:`Title` or hide it.
+  #. Press the |expression| button and enter the following QGIS expression:
+
+     .. code-block::
+
+       '<img src= "data:image/png;base64,' || to_base64("photo") || '">'
+
+     Ensure that you replace *photo* with your own BLOB field name.
+     The above expression creates a string with HTML image tag in which the BLOB file is encoded.
+  #. Apply the dialog and then press the |symbologyAdd| button.
+  #. QGIS automatically applies HTML formatting and functions to evaluate your expression,
+     resulting in following code:
+
+     .. code-block:: HTML
+
+       <script>document.write(expression.evaluate("'<img src=\"data:image/png;base64,' || to_base64(\"photo\") || '\">'"));</script>
+
+     A preview of your image is displayed on the right.
+
 * :guilabel:`QML Widget`: embeds a QML page, the QML source may contain the result of dynamically calculated expressions.
 * :guilabel:`Text Widget`: displays a text widget which supports basic HTML markup
   and may contain the result of dynamically calculated expressions.
@@ -2435,6 +2461,16 @@ Based on the field type, QGIS automatically determines and assigns a default
 widget type to it. You can then replace the widget with any other compatible
 with the field type. The available widgets are:
 
+* **Binary (BLOB)**: Available only for binary fields, it displays by default a label
+  with the size of the embedded data, if not empty.
+  A drop-down button next to the label allows to:
+
+  * :guilabel:`Embed file`, replacing or filling the field
+  * :guilabel:`Clear contents`, removing any data in the field
+  * :guilabel:`Save contents to file`, exporting the data as a file on disk
+
+  It is also possible to preview the embedded binary file in the field,
+  if combined in a drag-and-drop form with e.g. a :ref:`QML or HTML widget <other_widgets>`.
 * **Checkbox**: Displays a checkbox whose state defines the value to insert.
 * **Classification**: Only available when a :ref:`categorized symbology
   <categorized_renderer>` is applied to the layer, displays a combo box with
