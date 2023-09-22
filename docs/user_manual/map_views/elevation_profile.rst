@@ -42,6 +42,9 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
    * - Tool
      - Shorcut
      - Description
+   * - |addLayer| :sup:`Add Layers`
+     - hold :kbd:`Ctrl` while drag-and-drop
+     - Allows you to add new layers to a plot. 
    * - |layerTree| :sup:`Show Layer Tree`
      -
      - Shows or hides a list of project layers to configure rendering in the profile view.
@@ -270,4 +273,6 @@ For more details, give a look to `QGIS elevation profile/cross section tool -- a
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomInXAxis| image:: /static/common/mActionZoomInXAxis.png
+   :width: 1.5em
+.. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
