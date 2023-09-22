@@ -83,6 +83,7 @@ There are several ways to create a QGIS task:
 
     params = dict()
     context = QgsProcessingContext()
+    context.setProject(QgsProject.instance())
     feedback = QgsProcessingFeedback()
 
     buffer_alg = QgsApplication.instance().processingRegistry().algorithmById('native:buffer')
