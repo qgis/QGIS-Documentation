@@ -99,7 +99,8 @@ There are several ways to create a QGIS task:
    Attempting to use them from background threads will result in
    crashes.
 
-   Moreover always make sure that `context` and `feedback` live for at
+   Moreover always make sure that :class:`context <qgis.core.QgsProcessingContext>`
+   and :class:`feedback <qgis.core.QgsProcessingFeedback>` live for at
    least as long as the `QgsTask`s that use them. For QGIS will crash if, 
    upon completion of a task, `QgsTaskManager` fails to access the `context` or `feedback`
    against which the task was scheduled.
