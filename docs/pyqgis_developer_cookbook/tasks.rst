@@ -107,8 +107,8 @@ There are several ways to create a QGIS task:
    against which the task was scheduled.
 
 .. note::
-   It is a common pattern to call :function:`context.setProject` shortly
-   after calling :function:`QgsProcessingContext`. This allows the task as well as its callback
+   It is a common pattern to call :meth:`setProject() <qgis.core.QgsProcessingContext.setProject>` shortly
+   after calling :meth:`QgsProcessingContext() <qgis.core.QgsProcessingContext.QgsProcessingContext>`. This allows the task as well as its callback
    function to use most of the project-wide settings. This is especially valuable when working
    with spatial layers in the callback function.
 
