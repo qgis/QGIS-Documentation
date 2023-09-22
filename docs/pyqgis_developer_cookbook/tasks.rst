@@ -19,14 +19,15 @@ Tasks - doing heavy work in the background
   .. testcode:: tasks
 
     from qgis.core import (
-      QgsProcessingContext,
-      QgsTaskManager,
-      QgsTask,
-      QgsProcessingAlgRunnerTask,
       Qgis,
-      QgsProcessingFeedback,
       QgsApplication,
       QgsMessageLog,
+      QgsProcessingAlgRunnerTask,
+      QgsProcessingContext,
+      QgsProcessingFeedback,
+      QgsProject,
+      QgsTask,
+      QgsTaskManager,
     )
 
 .. only:: html
