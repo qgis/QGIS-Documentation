@@ -92,6 +92,11 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
    * - |saveMapAsImage| :sup:`Export As Image`
      -
      - Exports plots to several image formats
+   * - |fileSaveAs| :sup:`Export Results`
+     -
+     - Exports plots as 3D features, 2D Profile and Distance/Elevation Table.
+       (The results can be saved as DXF files, CSV files or any of the standard
+       writable vector spatial formats)
    * - |options| :sup:`Options`
      -
      - Provides access to configuration settings of the profile elevation line.
@@ -271,3 +276,5 @@ For more details, give a look to `QGIS elevation profile/cross section tool -- a
    :width: 1.5em
 .. |zoomInXAxis| image:: /static/common/mActionZoomInXAxis.png
    :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em  
