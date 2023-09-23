@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-17 05:05+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -946,6 +946,14 @@ msgstr ""
 "utilisées pour le calcul d'agrégation. Les champs et la géométrie "
 "proviennent des entités de la couche jointe. L'entité source peut être "
 "accédée avec la variable @parent."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:55
+msgid ""
+"**concatenator** - optional string to use to join values for 'concatenate' "
+"and 'concatenate_unique' aggregates"
+msgstr ""
+"**concatenator** - chaîne de caractères optionnelle utilisée pour joindre "
+"les valeurs pour les agrégats 'concatenate' et 'concatenate_unique'"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:56
 msgid ""
@@ -2031,6 +2039,12 @@ msgstr "``array(2,10)[0]`` → 2"
 msgid "array_all"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:35
+msgid "Returns TRUE if an array contains all the values of a given array."
+msgstr ""
+"Renvoie TRUE (vrai) si une liste contient toutes les valeurs d'une liste "
+"donnée."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:41
 msgid "array_all(array_a, array_b)"
 msgstr "array_all(array_a, array_b)"
@@ -2123,6 +2137,10 @@ msgstr "``array_cat(array(1,2),array(2,3))`` → [ 1, 2, 2, 3 ]"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:96
 msgid "array_contains"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:98
+msgid "Returns TRUE if an array contains the given value."
+msgstr "Renvoie TRUE (vrai) si une liste contient la valeur donnée."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:104
 msgid "array_contains(array, value)"
@@ -2337,6 +2355,12 @@ msgstr "``array_insert(array(1,2,3),1,100)`` → [ 1, 100, 2, 3 ]"
 msgid "array_intersect"
 msgstr "array_intersect"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:30
+msgid "Returns TRUE if at least one element of array1 exists in array2."
+msgstr ""
+"Renvoie TRUE (vrai) si au moins un élément de array1 est présent dans "
+"array2."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:36
 msgid "array_intersect(array1, array2)"
 msgstr "array_intersect(array1, array2)"
@@ -2480,6 +2504,14 @@ msgstr "``array_max(array(0,42,4,2))`` → 42"
 msgid "array_mean"
 msgstr "array_mean"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:149
+msgid ""
+"Returns the mean of arithmetic values in an array. Non numeric values in the"
+" array are ignored."
+msgstr ""
+"Renvoie la moyenne des valeurs arithmétiques d'une liste. Les valeurs non "
+"numériques de la liste sont ignorées."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:155
 msgid "array_mean(array)"
 msgstr "array_mean(array)"
@@ -2495,6 +2527,14 @@ msgstr "``array_mean(array(0,84,'a','b','c'))`` → 42"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:168
 msgid "array_median"
 msgstr "array_median"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:170
+msgid ""
+"Returns the median of arithmetic values in an array. Non arithmetic values "
+"in the array are ignored."
+msgstr ""
+"Renvoie la médiane des valeurs arithmétiques d'une liste. Les valeurs non "
+"numériques de la liste sont ignorées."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:176
 msgid "array_median(array)"
@@ -2512,6 +2552,10 @@ msgstr "``array_median(array(0,1,2,42,'a','b'))`` → 1.5"
 msgid "array_min"
 msgstr "array_min"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:191
+msgid "Returns the minimum value of an array."
+msgstr "Renvoie la valeur minimale d'une liste."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:197
 msgid "array_min(array)"
 msgstr "array_min(array)"
@@ -2524,9 +2568,39 @@ msgstr "``array_min(array(43,42,54))`` → 42"
 msgid "array_minority"
 msgstr "array_minority"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:211
+msgid "Returns the less common values in an array."
+msgstr "Renvoie les valeurs les moins courantes d'un tableau."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:217
 msgid "array_minority(array, [option='all'])"
 msgstr "array_minority(array, [option='all'])"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:226
+msgid "all: Default, all less common values are returned in an array."
+msgstr ""
+"all: par défaut, toutes les valeurs les moins courantes sont renvoyées dans "
+"un tableau."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:227
+msgid "any: Returns one of the less common values."
+msgstr "any: renvoie l'une des valeurs les moins courantes."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:228
+msgid ""
+"median: Returns the median of the less common values. Non arithmetic values "
+"are ignored."
+msgstr ""
+"median: renvoie la médiane des valeurs les moins courantes. Les valeurs non "
+"arithmétiques sont ignorées."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:229
+msgid ""
+"real_minority: Returns values which occur less than half the size of the "
+"array."
+msgstr ""
+"real_majority: renvoie les valeurs qui apparaissent moins de fois que la "
+"moitié de la taille du tableau."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:233
 msgid "``array_minority(array(0,42,42), 'all')`` → [ 0 ]"
@@ -2586,9 +2660,25 @@ msgstr "``array_prepend(array(1,2,3),0)`` → [ 0, 1, 2, 3 ]"
 msgid "array_prioritize"
 msgstr "array_prioritize"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:270
+msgid ""
+"Returns an array sorted using the ordering specified in another array. "
+"Values which are present in the first array but are missing from the second "
+"array will be added to the end of the result."
+msgstr ""
+"Renvoie une liste triée selon un ordre spécifié dans une autre liste. Les "
+"valeurs présentes dans la première liste mais pas dans la seconde sont "
+"ajoutées à la fin du résultat."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:276
 msgid "array_prioritize(array, array_prioritize)"
 msgstr "array_prioritize(array, array_prioritize)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:279
+msgid "**array_prioritize** - an array with values ordered by priority"
+msgstr ""
+"**array_prioritize** - une liste avec les valeurs classées par ordre de "
+"priorité"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:281
 msgid ""
@@ -2652,6 +2742,25 @@ msgstr "``array_remove_at(array(1, 2, 3), -1)`` → [1, 2 ]"
 msgid "array_replace"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:335
+msgid ""
+"Returns an array with the supplied value, array, or map of values replaced."
+msgstr ""
+"Renvoie une liste en en ayant modifié la valeur, la liste de valeurs ou le "
+"tableau de valeurs indiqué."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:337
+msgid "**Value & array variant**"
+msgstr "**Variante valeur & liste**"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:339
+msgid ""
+"Returns an array with the supplied value or array of values replaced by "
+"another value or an array of values."
+msgstr ""
+"Renvoie une liste dont une valeur ou liste de valeurs a été remplacée par "
+"une autre valeur ou liste de valeurs."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:345
 msgid "array_replace(array, before, after)"
 msgstr "array_replace(array, before, after)"
@@ -2661,6 +2770,14 @@ msgstr "array_replace(array, before, after)"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:481
 msgid "**array** - the input array"
 msgstr "**array** - la liste en entrée"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:348
+msgid "**before** - the value or array of values to replace"
+msgstr "**before** - la valeur ou liste de valeurs à remplacer"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:349
+msgid "**after** - the value or array of values to use as a replacement"
+msgstr "**after** - la valeur ou liste de valeurs à utiliser en remplacement"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:351
 msgid ""
@@ -2919,9 +3036,27 @@ msgstr "``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]"
 msgid "geometries_to_array"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:522
+msgid "Splits a geometry into simpler geometries in an array."
+msgstr "Explose une géométrie en une liste de géométries plus simples."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:528
 msgid "geometries_to_array(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:530
+msgid "**geometry** - the input geometry"
+msgstr "**geometry** - géométrie en entrée"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:532
+msgid ""
+"``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1,"
+" 3 2, 5 8)),LineString (3 2, 4 2))'))`` → an array of a polygon and a line "
+"geometries"
+msgstr ""
+"``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1,"
+" 3 2, 5 8)),LineString (3 2, 4 2))'))`` → une liste composée de la géométrie"
+" d'un polygone et celle d'une ligne"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:533
 msgid ""
@@ -2929,6 +3064,14 @@ msgid ""
 " ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
 "1, 3 2, 5 8))'"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:534
+msgid ""
+"``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
+"5,10 10,10 0,5 5))'))`` → an array of two polygon geometries"
+msgstr ""
+"``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
+"5,10 10,10 0,5 5))'))`` → une liste composée de deux géométries polygonales"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:542
 msgid "regexp_matches"
@@ -4249,6 +4392,22 @@ msgstr ""
 msgid "to_date"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:128
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:498
+msgid ""
+"Converts a string into a date object. An optional format string can be "
+"provided to parse the string; see `QDate::fromString "
+"<https://doc.qt.io/qt-5/qdate.html#fromString-2>`_ or the documentation of "
+"the format_date function for additional documentation on the format. By "
+"default the current QGIS user locale is used."
+msgstr ""
+"Convertit une chaîne de caractères en objet date. Une chaîne de format "
+"optionnelle peut être fournie pour analyser la chaîne ; voir "
+"`QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_  ou la"
+" fonction ref:`format_date <expression_function_Date_and_Time_format_date>` "
+"pour des informations additionnelles sur le format. Par défaut, QGIS utilise"
+" les paramètres de langue définis par l'utilisateur."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:134
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:504
 msgid "to_date(string, [format], [language])"
@@ -4265,10 +4424,31 @@ msgid "**format** - format used to convert the string into a date"
 msgstr ""
 "**format** - format utilisé pour convertir la chaîne de caractères en date"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:140
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:510
+msgid ""
+"**language** - language (lowercase, two- or three-letter, ISO 639 language "
+"code) used to convert the string into a date. By default the current QGIS "
+"user locale is used."
+msgstr ""
+"**language** - langue (minuscule, deux ou trois lettres, code de langue ISO "
+"639) utilisée pour convertir la chaîne de caractères en date. Par défaut, "
+"QGIS utilise les paramètres de langue définis par l'utilisateur."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:142
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:512
 msgid "``to_date('2012-05-04')`` → 2012-05-04"
 msgstr "``to_date('2012-05-04')`` → 2012-05-04"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:143
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:513
+msgid ""
+"``to_date('June 29, 2019','MMMM d, yyyy')`` → 2019-06-29, if the current "
+"locale uses the name 'June' for the sixth month, otherwise an error occurs"
+msgstr ""
+"``to_date('Juin 29, 2019','MMMM d, yyyy')`` → 2019-06-29, si 'Juin' est le "
+"terme utilisé pour définir le sixième mois dans la langue paramétrée dans "
+"QGIS. Sinon, une erreur se produit."
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:144
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:514
@@ -7110,6 +7290,11 @@ msgstr ""
 "186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 "
 "28, 22 64, 30 112))'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:364
+msgid "Further reading: :ref:`expression_function_GeometryGroup_convex_hull`"
+msgstr ""
+"Plus de détails : :ref:`expression_function_GeometryGroup_convex_hull`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "contains"
 msgstr ""
@@ -7164,6 +7349,14 @@ msgstr ""
 "``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) "
 ")`` → 'POLYGON((3 3, 4 10, 4 4, 3 3))'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:376
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_concave_hull`, "
+":ref:`qgisconvexhull` algorithm"
+msgstr ""
+"Plus de détails : :ref:`expression_function_GeometryGroup_concave_hull`, "
+"l'algorithme :ref:`qgisconvexhull`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "crosses"
 msgstr ""
@@ -7209,6 +7402,10 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(densify_by_count(geom_from_wkt('LINESTRING(1 1, 10 1)'), 3))``"
 " → LineString (1 1, 3.25 1, 5.5 1, 7.75 1, 10 1)"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:389
+msgid "Further reading: :ref:`qgisdensifygeometries` algorithm"
+msgstr "Plus de détails : l'algorithme :ref:`qgisdensifygeometries`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "densify_by_distance"
@@ -7555,6 +7752,14 @@ msgid ""
 "2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/functions_list.rst:431
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_force_polygon_cw`, "
+":ref:`expression_function_GeometryGroup_force_rhr`"
+msgstr ""
+"Plus de détails : :ref:`expression_function_GeometryGroup_force_polygon_cw`,"
+" :ref:`expression_function_GeometryGroup_force_rhr`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "force_polygon_cw"
 msgstr ""
@@ -7571,6 +7776,15 @@ msgstr ""
 "``geom_to_wkt(force_polygon_cw(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0,"
 " 4 2, 0 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:438
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_force_polygon_ccw`,"
+" :ref:`expression_function_GeometryGroup_force_rhr`"
+msgstr ""
+"Plus de détails : "
+":ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
+":ref:`expression_function_GeometryGroup_force_rhr`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "force_rhr"
 msgstr ""
@@ -7586,6 +7800,16 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(force_rhr(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0"
 " 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:445
+msgid ""
+"Further reading: :ref:`qgisforcerhr` algorithm, "
+":ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
+":ref:`expression_function_GeometryGroup_force_polygon_cw`"
+msgstr ""
+"Plus de détails : l'algorithme :ref:`qgisforcerhr`, "
+":ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
+":ref:`expression_function_GeometryGroup_force_polygon_cw`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "geom_from_gml"
@@ -9081,6 +9305,18 @@ msgid ""
 "method:='linework'))`` → 'Polygon ((3 2, 4 1, 5 8, 3 2))'"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:371
+msgid "``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → An empty geometry"
+msgstr "``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → Une géométrie vide"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:503
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_is_valid`, "
+":ref:`qgisfixgeometries` algorithm"
+msgstr ""
+"Plus de détails : :ref:`expression_function_GeometryGroup_is_valid`, "
+"l'algorithme :ref:`qgisfixgeometries`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "minimal_circle"
 msgstr ""
@@ -9817,6 +10053,10 @@ msgstr ""
 " décrit dans la fonction PostGIS `ST_Intersects "
 "<https://postgis.net/docs/ST_Intersects.html>`_."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+msgid "This argument requires GEOS >= 3.9."
+msgstr "Cet argument requiert GEOS >=3.9."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
 msgid ""
 "``overlay_intersects('regions', name)`` → an array of names, for the regions"
@@ -10454,6 +10694,10 @@ msgstr ""
 "``rotate($geometry, 45)`` → géométrie tournée de 45 degrés dans le sens des "
 "aiguilles d'une montre autour du centre de sa boîte englobante"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+msgid "Rotating features"
+msgstr "Pivoter des entités"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 msgid "roundness"
 msgstr ""
@@ -10461,6 +10705,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
 msgid "roundness(geometry)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
+msgid "**geometry** - a polygon"
+msgstr "**geometry** - un polygone"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
 msgid ""
@@ -10477,6 +10725,10 @@ msgid ""
 msgstr ""
 "``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 0.1, 1 0.1, 1 0, 0 0))')),"
 " 3)`` → 0.260"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:626
+msgid "Further reading: :ref:`qgisroundness` algorithm"
+msgstr "Plus de détails : l'algorithme :ref:`qgisroundness`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "scale"
@@ -10521,6 +10773,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "shared_paths(geometry1, geometry2)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**geometry1** - a LineString/MultiLineString geometry"
+msgstr "**geometry1** - une géométrie (multi)linéaire"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+msgid "**geometry2** - a LineString/MultiLineString geometry"
+msgstr "**geometry2** - une géométrie (multi)linéaire"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid ""
@@ -11587,8 +11847,8 @@ msgid ""
 "**part** - The part of the uri to return. If unspecified, a map with all uri"
 " parts will be returned."
 msgstr ""
-"**part** - La partie de l'uri à retourner. Si elle n'est pas spécifiée, une "
-"carte avec toutes les parties de l'uri sera retournée."
+"**part** - La partie de l'uri à retourner. Si elle n'est pas spécifiée, un "
+"tableau avec toutes les parties de l'uri sera retourné."
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:27
 msgid ""
@@ -11799,7 +12059,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:35
 msgid "Creates a map from a hstore-formatted string."
-msgstr "Crée une carte à partir d'une chaîne formatée hstore."
+msgstr "Crée un tableau à partir d'une chaîne formatée hstore."
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:41
 msgid "hstore_to_map(string)"
@@ -11818,8 +12078,8 @@ msgid ""
 "Returns a map containing all the keys and values passed as pair of "
 "parameters."
 msgstr ""
-"Retourne une carte contenant toutes les clés et valeurs passées en tant que "
-"paire de paramètres."
+"Retourne un tableau contenant toutes les clés et valeurs passées en tant que"
+" paire de paramètres."
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:61
 msgid "map(key1, value1, key2, value2, ...)"
@@ -11843,7 +12103,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:77
 msgid "Returns all the keys of a map as an array."
-msgstr "Retourne toutes les clés d'une carte sous forme de tableau."
+msgstr "Retourne toutes les clés d'un tableau sous forme de liste."
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:83
 msgid "map_akeys(map)"
@@ -11858,7 +12118,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:166
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:187
 msgid "**map** - a map"
-msgstr "**map** - une carte"
+msgstr "**map** - un tableau"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:87
 msgid "``map_akeys(map('1','one','2','two'))`` → [ '1', '2' ]"
@@ -11870,7 +12130,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:97
 msgid "Returns all the values of a map as an array."
-msgstr "Retourne toutes les valeurs d'une carte sous forme de tableau."
+msgstr "Retourne toutes les valeurs d'un tableau sous forme de liste."
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:103
 msgid "map_avals(map)"
@@ -11889,8 +12149,8 @@ msgid ""
 "Returns a map containing all the entries of the given maps. If two maps "
 "contain the same key, the value of the second map is taken."
 msgstr ""
-"Renvoie une carte contenant toutes les entrées des cartes données. Si deux "
-"cartes contiennent la même clé, la valeur de la deuxième carte est prise."
+"Renvoie un tableau contenant toutes les entrées des tableaux donnés. Si deux"
+" tableaux contiennent la même clé, la valeur du deuxième tableau est prise."
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:123
 msgid "map_concat(map1, map2, ...)"
@@ -11911,7 +12171,8 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:137
 msgid "Returns a map with the given key and its corresponding value deleted."
 msgstr ""
-"Retourne une carte avec la clé donnée et sa valeur correspondante supprimée."
+"Retourne un tableau dont sont supprimées la clé donnée et sa valeur "
+"correspondante."
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:143
 msgid "map_delete(map, key)"
@@ -12008,9 +12269,25 @@ msgstr ""
 msgid "map_prefix_keys"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:31
+msgid "Returns a map with all keys prefixed by a given string."
+msgstr "Renvoie un tableau avec toutes les clés précédées du texte indiqué."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:37
 msgid "map_prefix_keys(map, prefix)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:40
+msgid "**prefix** - a string"
+msgstr "**prefix** - un texte"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:42
+msgid ""
+"``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
+"'one', 'prefix-2': 'two' }"
+msgstr ""
+"``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
+"'one', 'prefix-2': 'two' }"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:50
 msgid "map_to_hstore"
@@ -12018,7 +12295,9 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:52
 msgid "Merge map elements into a hstore-formatted string."
-msgstr "Fusionner les éléments de la carte en une chaîne au format hstore."
+msgstr ""
+"Fusionner les éléments d'un tableau en une chaîne de caractères au format "
+"hstore."
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:58
 msgid "map_to_hstore(map)"
@@ -12026,7 +12305,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:60
 msgid "**map** - the input map"
-msgstr "**map** - la carte d'entrée"
+msgstr "**map** - le tableau en entrée"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:62
 msgid "``map_to_hstore(map('qgis','rocks'))`` → '\"qgis\"=>\"rocks\"'"
@@ -12039,8 +12318,8 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:72
 msgid "Create a JSON formatted string from a map, array or other value."
 msgstr ""
-"Créer une chaîne formatée en JSON à partir d'une carte, d'une table ou d'une"
-" autre valeur."
+"Créer une chaîne formatée en JSON à partir d'un tableau, d'une liste ou "
+"d'une autre valeur."
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:78
 msgid "to_json(value)"
@@ -12062,9 +12341,26 @@ msgstr "``to_json(array(1,2,3))`` → [1,2,3]"
 msgid "url_encode"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:95
+msgid "Note that the plus sign '+' is not converted."
+msgstr "A noter que le signe plus '+' n'est pas converti."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:101
 msgid "url_encode(map)"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:103
+msgid "**map** - a map."
+msgstr "**map** - un tableau."
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:105
+#, python-format
+msgid ""
+"``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → "
+"'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'"
+msgstr ""
+"``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → "
+"'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:806
 msgid "Mathematical Functions"
@@ -13254,6 +13550,15 @@ msgstr "``4 = 2+2 AND 1 = 2`` → FALSE"
 msgid "BETWEEN"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:223
+msgid "value BETWEEN lower_bound AND higher_bound"
+msgstr "value BETWEEN lower_bound AND higher_bound"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:174
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:226
+msgid "**lower_bound AND higher_bound** - range bounds"
+msgstr "**lower_bound AND higher_bound** - les limites de la plage"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:228
 msgid "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
 msgstr "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
@@ -13277,6 +13582,10 @@ msgstr "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "ILIKE"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:16
+msgid "**string/number** - string to search"
+msgstr "**string/number** - le texte à rechercher"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
 msgid "``'A' ILIKE 'A'`` → TRUE"
@@ -13342,6 +13651,12 @@ msgstr "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
 msgid "IN"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
+msgid "Returns TRUE if value is found within a list of values."
+msgstr ""
+"Renvoie TRUE (vrai) si une valeur donnée se trouve dans une liste de "
+"valeurs."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:49
 msgid "a IN b"
 msgstr "a IN b"
@@ -13361,6 +13676,10 @@ msgstr "``'A' IN ('C','B')`` → FALSE"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:63
 msgid "IS"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
+msgid "Returns TRUE if a is the same as b."
+msgstr "Renvoie TRUE (vrai) si a est identique à b."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:71
 msgid "a IS b"
@@ -13402,6 +13721,10 @@ msgstr "``$geometry IS NULL`` → 0, si la géométrie n'est pas NULL"
 msgid "IS NOT"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:91
+msgid "Returns TRUE if a is not the same as b."
+msgstr "Renvoie TRUE (vrai) si a est différent de b."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "a IS NOT b"
 msgstr "a IS NOT b"
@@ -13421,6 +13744,10 @@ msgstr "``4 IS NOT 2+2`` → FALSE"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
 msgid "LIKE"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:122
+msgid "**string/number** - value"
+msgstr "**string/number** - une valeur"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:125
 msgid "``'A' LIKE 'A'`` → TRUE"
@@ -13465,6 +13792,10 @@ msgstr "``'1_' LIKE '1\\\\%'`` → FALSE"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:142
 msgid "NOT"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:144
+msgid "Negates a condition."
+msgstr "Inverse une condition."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:150
 msgid "NOT a"
@@ -13538,6 +13869,10 @@ msgstr "Index operator. Returns an element from an array or map value."
 msgid "[index]"
 msgstr "[index]"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:39
+msgid "**index** - array index or map key value"
+msgstr "**index** - index de liste ou clé d'un tableau"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
 msgid "``array(1,2,3)[0]`` → 1"
 msgstr "``array(1,2,3)[0]`` → 1"
@@ -13569,6 +13904,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "^"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:8
+msgid "Power of two values."
+msgstr "Puissance de deux valeurs."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "a ^ b"
@@ -14173,8 +14512,8 @@ msgid ""
 "If called with no parameters, the function will evaluate the maptip of the "
 "current feature in the current layer."
 msgstr ""
-"Si elle est appelée sans paramètres, la fonction évaluera l'extrémité de la "
-"carte de l'élément actuel dans la couche en cours."
+"Si elle est appelée sans paramètres, la fonction évaluera l'infobulle de "
+"l'entité actuelle de la couche courante."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:92
 msgid "maptip()"
@@ -14280,6 +14619,18 @@ msgstr ""
 msgid "represent_attributes(layer, feature)"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:202
+msgid "**layer** - The layer (or its ID or name)."
+msgstr "**layer** - La couche (ou son ID ou son nom)."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:947
+msgid ""
+"Further reading: "
+":ref:`expression_function_Record_and_Attributes_represent_value`"
+msgstr ""
+"Plus de détails : "
+":ref:`expression_function_Record_and_Attributes_represent_value`"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "represent_value"
 msgstr ""
@@ -14291,7 +14642,7 @@ msgid ""
 msgstr ""
 "Retourne la valeur de représentation configurée pour une valeur de champ. "
 "Cela dépend du type de widget configuré. Souvent, cela est utile pour les "
-"widgets de type \"Carte des valeurs\"."
+"widgets de type \"Liste de valeurs\"."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
 msgid "represent_value(value, [fieldName])"
@@ -14301,6 +14652,14 @@ msgstr ""
 msgid "**value** - The value which should be resolved. Most likely a field."
 msgstr ""
 "**value** - La valeur qui doit être résolue. Très probablement un champ."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+msgid ""
+"**fieldName** - The field name for which the widget configuration should be "
+"loaded."
+msgstr ""
+"**fieldName** - Le nom du champ pour lequel la configuration du widget doit "
+"être chargée."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:21
 msgid "``represent_value(\"field_with_value_map\")`` → Description for value"
@@ -14313,6 +14672,14 @@ msgid ""
 msgstr ""
 "``represent_value('static value', 'field_name')`` → Description de la valeur"
 " statique"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:953
+msgid ""
+"Further reading: :ref:`widget types <edit_widgets>`, "
+":ref:`expression_function_Record_and_Attributes_represent_attributes`"
+msgstr ""
+"Plus de détails : :ref:`Types de widget <edit_widgets>`, "
+":ref:`expression_function_Record_and_Attributes_represent_attributes`"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "sqlite_fetch_and_increment"
@@ -14375,8 +14742,8 @@ msgid ""
 "If additional columns require values to be specified, the default_values map"
 " can be used for this purpose."
 msgstr ""
-"Si des colonnes supplémentaires nécessitent de spécifier des valeurs, la "
-"carte default_values peut être utilisée à cet effet."
+"Si des colonnes supplémentaires nécessitent de spécifier des valeurs, le "
+"tableau de données default_values peut être utilisé à cet effet."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:28
 msgid "**Note**"
@@ -14676,6 +15043,14 @@ msgid ""
 "the string to."
 msgstr ""
 "**places** - entier représentant le nombre de décimales auquel arrondir."
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:113
+msgid ""
+"``format_number(10000000.332,2)`` → '10,000,000.33' if e.g. the current "
+"locale is an English variant"
+msgstr ""
+"``format_number(10000000.332,2)`` → '10 000 000.33' si la langue actuelle "
+"est paramétrée sur une variante du Français"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:114
 msgid "``format_number(10000000.332,2,'fr')`` → '10 000 000,33'"
@@ -15127,6 +15502,10 @@ msgstr ""
 msgid "**string** - string to trim"
 msgstr "**string** - la chaîne de caractères à nettoyer"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:484
+msgid "``trim('   hello world  ')`` → 'hello world'"
+msgstr "``trim('   bonjour monde  ')`` → 'bonjour monde'"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:492
 msgid "upper"
 msgstr ""
@@ -15470,6 +15849,15 @@ msgid "feature |328|"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The current feature being evaluated. This can be used with the 'attribute' "
+"function to evaluate attribute values from the current feature."
+msgstr ""
+"L'entité courante évaluée. Cette fonction peut être utilisée en combinaison "
+"avec la fonction 'attribute' pour renvoyer les valeurs d'attribut de "
+"l'entité courante."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "frame_duration"
 msgstr ""
 
@@ -15540,6 +15928,10 @@ msgid "geometry |328|"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The geometry of the current feature being evaluated"
+msgstr "La géométrie de l'entité actuellement en cours d'évaluation "
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "geometry_part_count"
 msgstr ""
 
@@ -15601,6 +15993,10 @@ msgid "id |328|"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The ID of the current feature being evaluated"
+msgstr "L'ID de l'entité actuellement en cours d'évaluation "
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "item_id"
 msgstr ""
 
@@ -15628,6 +16024,12 @@ msgstr "La couche actuelle"
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_crs"
 msgstr ""
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The Coordinate Reference System Authority ID of the current layer"
+msgstr ""
+"L'ID de l'autorité du Système de Coordonnées de Référence de la couche "
+"actuelle"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_id"

@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-11 09:28+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -221,6 +221,18 @@ msgstr ":guilabel:`Tampon`"
 msgid ":guilabel:`Mask`"
 msgstr ":guilabel:`Masque`"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:99
+msgid ":guilabel:`Shadow`"
+msgstr ":guilabel:`Ombre`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:102
+msgid ":guilabel:`Callout`"
+msgstr ":guilabel:`Connecteur`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:105
+msgid ":guilabel:`Placement`"
+msgstr ":guilabel:`Placement`"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:108
 msgid ":guilabel:`Rendering`"
 msgstr ":guilabel:`Rendu`"
@@ -266,6 +278,53 @@ msgstr "la :guilabel:`Couleur`"
 #: ../../docs/user_manual/style_library/label_settings.rst:132
 msgid "the :guilabel:`Opacity`"
 msgstr "l':guilabel:`Opacité`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:133
+msgid ""
+"and :guilabel:`Allow HTML Formatting`: The HTML formatting option enables "
+"the proper rendering of some HTML tags to customize the label. The supported"
+" HTML tags are:"
+msgstr ""
+"et :guilabel:`Permettre le formatage HTML`: L'option de formatage HTML "
+"permet d'exploiter ce langage et de personnaliser les étiquettes à l'aide de"
+" tags HTML. Les tags HTML actuellement utilisables concernent :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:137
+msgid "Color, applicable to text, underline, strikethrough, and overline"
+msgstr ""
+"La couleur, applicable au texte, au soulignement, à la barre en travers et "
+"au surlignement"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:138
+msgid "Font properties (font family, font size, bold and italic)"
+msgstr "Les propriétés de police (famille de police, taille, gras, italique)"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:140
+msgid ""
+"In order to use the HTML formatting, you need to provide the HTML code in "
+"the :guilabel:`Value` field. The expression is parsed and any supported HTML"
+" tag overrides its corresponding setting in the labels properties. They also"
+" combine well with other background, shadow, buffer... properties of labels."
+msgstr ""
+"Afin d'utiliser le formatage HTML, il vous faut indiquer du code HTML dans "
+"le champ :guilabel:`Valeur`. Par praticité, le bouton d'expression à côté "
+"peut être utilisé. L'expression est analysée et traitée, et la valeur de "
+"chaque tag HTML remplace la valeur de la propriété correspondante, telle que"
+" définie dans les propriétés de l'étiquette. Ces tags fonctionnent également"
+" bien avec les propriétés d'arrière-plan, d'ombre, de tampon, ou autres... "
+"des étiquettes."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:144
+msgid ""
+"Below an example of a HTML-based expression and rendering (applies different"
+" colors and underline to the same label):"
+msgstr ""
+"Ci-dessous un exemple d'expression combinant du HTML et son rendu (applique "
+"différentes couleurs et soulignement aux composantes d'une même étiquette) :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:160
+msgid "Labeling with HTML formatting enabled"
+msgstr "Étiquetage avec du formatage HTML"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:163
 msgid ""
@@ -943,6 +1002,10 @@ msgstr ":guilabel:`Style Manhattan`: une ligne brisée à 90 °"
 msgid ":guilabel:`Curved lines`: a curved line"
 msgstr ":guilabel:`Lignes courbes`: une ligne courbe"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:467
+msgid "For a line-based callout:"
+msgstr "Pour un connecteur linéaire :"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:469
 msgid ""
 "Select the :guilabel:`Line style` with full capabilities of a :ref:`line "
@@ -952,6 +1015,25 @@ msgstr ""
 "Sélectionnez :guilabel:`Style de ligne` avec toutes les fonctionnalités d'un"
 " :ref:`symbole de ligne <vector_line_symbols>`, y compris les effets de "
 "couche et les paramètres définis par les données"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:472
+msgid "If curved, you also define:"
+msgstr "Pour un connecteur courbe, vous définissez également :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:474
+msgid "the percentage of :guilabel:`Curvature` of the connection line"
+msgstr "le pourcentage de :guilabel:`Courbure` de la ligne de connexion"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:475
+msgid ""
+"and its :guilabel:`Orientation`: starting from the label to the feature, it "
+"can be :guilabel:`Clockwise` or :guilabel:`Counter-clockwise`, or "
+":guilabel:`Automatic` (determining an optimal orientation for each label)"
+msgstr ""
+"et son :guilabel:`Orientation` : depuis l'étiquette vers l'entité, elle peut"
+" être :guilabel:`Horaire` ou :guilabel:`Antihoraire`, ou "
+":guilabel:`Automatique` (une orientation optimale est déterminée pour chaque"
+" étiquette)"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:478
 msgid "Set the :guilabel:`Minimum length` of callout lines"
@@ -998,6 +1080,10 @@ msgstr ""
 "se termine). Cela permet d'éviter de tracer des lignes directement contre le"
 " texte."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:493
+msgid "For a balloon callout, you'd need to set:"
+msgstr "Pour un connecteur de type infobulle, il vous faut définir :"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:503
 msgid ""
 "Set the :guilabel:`Offset from feature` option: controls the distance from "
@@ -1020,6 +1106,14 @@ msgstr ":guilabel:`Point sur l'extérieur`"
 #: ../../docs/user_manual/style_library/label_settings.rst:511
 msgid ":guilabel:`Point on surface`"
 msgstr ":guilabel:`Point sur la surface`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:513
+msgid ""
+"Set the :guilabel:`Blend mode`: controls the :ref:`blending <blend-modes>` "
+"of the callout."
+msgstr ""
+"Définissez le :guilabel:`Mode de fusion`: contrôle le :ref:`rendu de "
+"couleurs fusionnées <blend-modes>` du connecteur."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:960
 msgid "moveLabel"
@@ -1492,6 +1586,22 @@ msgstr ""
 #: ../../docs/user_manual/style_library/label_settings.rst:729
 msgid "Geometry Generator"
 msgstr "Générateur de géométries"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:736
+msgid "In order to use the geometry generator:"
+msgstr "Afin d'utiliser le générateur de géométrie :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:738
+msgid "Check the |checkbox| :guilabel:`Geometry generator` option"
+msgstr "Cochez la case |checkbox| :guilabel:`Générateur de géométrie`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:739
+msgid "Enter the expression generating the geometry to rely on"
+msgstr "Entrez l'expression de génération de la géométrie"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:744
+msgid "Some use cases include:"
+msgstr "Quelques cas d'utilisation :"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:761
 msgid "Data Defined"
