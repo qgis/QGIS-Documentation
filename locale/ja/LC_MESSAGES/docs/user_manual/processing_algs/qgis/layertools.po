@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +28,23 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:2
 msgid "Layer tools"
 msgstr "レイヤツール"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:14
+msgid "Export layer(s) information"
+msgstr "レイヤ情報を出力"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:16
+msgid ""
+"Creates a polygon layer with features corresponding to the extent of "
+"selected layer(s)."
+msgstr "選択したレイヤの範囲に対応した地物を持つポリゴンレイヤを作ります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:18
+msgid ""
+"Additional layer details (CRS, provider name, file path, layer name, subset "
+"filter, abstract and attribution) are attached as attributes to each "
+"feature."
+msgstr "レイヤの詳細（CRS、提供者名、ファイルパス、レイヤ名、サブセットフィルタ、要約、属性）は、各地物の属性として添付されます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:22
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:83
@@ -85,6 +103,10 @@ msgstr ""
 msgid "[vector: any] [list]"
 msgstr "[ベクタ：任意] [リスト]"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:35
+msgid "Input vector layers to get information on."
+msgstr "情報を得たい入力ベクタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:36
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:58
 msgid "**Output**"
@@ -110,6 +132,10 @@ msgstr "[ベクタ：ポリゴン]"
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:197
 msgid "Default: ``[Create temporary layer]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:41
+msgid "Specification of the output layer with information. One of:"
+msgstr "情報を伴った出力レイヤの指定。次のいずれかです:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -137,11 +163,21 @@ msgstr "ここでファイルの文字コードを変更することもできま
 msgid "Outputs"
 msgstr "出力"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:61
+msgid ""
+"Polygon vector layer showing extent of input layers and associated "
+"information in attributes."
+msgstr "入力レイヤの範囲と関連情報を属性で示すポリゴンベクタレイヤ。"
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:151
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:222
 msgid "Python code"
 msgstr "Python コード"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:67
+msgid "**Algorithm ID**: ``native:exportlayersinformation``"
+msgstr "**Algorithm ID**: ``native:exportlayersinformation``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -153,6 +189,27 @@ msgstr ""
 "*algorithm id* は、プロセシングツールボックス内でアルゴリズムにマウスカーソルを乗せた際に表示されるIDです。 *parameter "
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:77
+msgid "Export to spreadsheet"
+msgstr "スプレッドシートへ出力"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:79
+msgid ""
+"Exports the attributes of a selection of vector layers into a spreadsheet "
+"document or optionally appends them to an existing spreadsheet as additional"
+" sheets."
+msgstr "選択したベクタレイヤの属性をスプレッドシート文書にエクスポートしたり、オプションで既存のスプレッドシートに追加シートとして加えたりします。"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:96
+msgid ""
+"Input vector layers. The output spreadsheet will consist of a sheet, for "
+"each layer, that contains the attributes of this layer."
+msgstr "入力ベクタレイヤ。出力スプレッドシートは、レイヤごとに、このレイヤの属性を含むシートで構成されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:98
+msgid "**Use field aliases as column headings**"
+msgstr "**属性名をカラム名に使用**"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:99
 msgid "``USE_ALIAS``"
@@ -169,9 +226,29 @@ msgstr "[ブール値]"
 msgid "Default: False"
 msgstr "デフォルト： False"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:103
+msgid "Use the field aliases from the attribute table for the spreadsheet."
+msgstr "スプレッドシートに属性テーブルのフィールドの別名を使用する。"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:104
+msgid "**Export formatted values instead of raw values**"
+msgstr "**フォーマットした値を出力**"
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:105
 msgid "``FORMATTED_VALUES``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:109
+msgid ""
+"If ``True``, exports the formatted, human readable values (e.g., from a "
+":ref:`value map or value relation <edit_widgets>`) to the spreadsheet."
+msgstr ""
+"もし ``True`` なら、整形された人間が読める値 (例えば :ref:`value mapやvalue relation "
+"<edit_widgets>` から) をスプレッドシートにエクスポートする。"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:111
+msgid "**Overwrite existing spreadsheet**"
+msgstr "**上書きする**"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:112
 msgid "``OVERWRITE``"
@@ -180,6 +257,20 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:115
 msgid "Default: True"
 msgstr "デフォルト： True"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:116
+msgid ""
+"If the specified spreadsheet exists, setting this option to ``True`` will "
+"overwrite the existing spreadsheet. If this option is ``False`` and the "
+"spreadsheet exists, the layers will be appended as additional sheets."
+msgstr ""
+"指定したスプレッドシートが存在する場合、このオプションを ``True`` に設定すると、その既存のスプレッドシートが上書きされます。このオプションが "
+"``False`` でスプレッドシートが存在する場合、レイヤは追加シートとして加えられます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:141
+msgid "**Destination spreadsheet**"
+msgstr "**出力先**"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:121
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:143
@@ -190,9 +281,21 @@ msgstr "[ファイル]"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "デフォルト： ``[一時ファイルに保存]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:124
+msgid "Output spreadsheet with a sheet for every layer. One of:"
+msgstr "各レイヤのシートを持った出力スプレッドシート。次のいずれかです："
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "一時ファイルに保存"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:144
+msgid "Spreadsheet with a sheet for every layer."
+msgstr "各レイヤのシートを持ったスプレッドシート。"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:145
+msgid "**Layers within spreadsheet**"
+msgstr "**スプレッドシート内のレイヤ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:146
 msgid "``OUTPUT_LAYERS``"
@@ -202,9 +305,17 @@ msgstr ""
 msgid "[list]"
 msgstr "[リスト]"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:148
+msgid "The list of sheets added to the spreadsheet."
+msgstr "スプレッドシートに加えられたシートの一覧。"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:153
+msgid "**Algorithm ID**: ``native:exporttospreadsheet``"
+msgstr "**Algorithm ID**: ``native:exporttospreadsheet``"
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:163
 msgid "Extract layer extent"
-msgstr "レイヤ範囲の抽出"
+msgstr "レイヤ範囲を抽出"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:165
 msgid ""
