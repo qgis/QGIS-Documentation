@@ -1761,16 +1761,16 @@ show a drop-down arrow. This is usually available when using:
 
 Pressing the arrow will provide you with a menu to:
 
-* load the file from the file system: the file is identified through the file path and
+* :guilabel:`Select File…`, to load the file from the file system. The file is identified through the file path and
   QGIS needs to resolve the path in order to display the corresponding image
-* load the file from a remote URL: as above, the image will only be loaded on
+* :guilabel:`From URL…`, to load the file from a remote URL. As above, the image will only be loaded on
   successful retrieval of the remote resource
-* embed the file into the item: the file is embedded inside
+* :guilabel:`Embed File…`, to embed the file inside
   the current project, style database, or print layout template.
   The file is then always rendered as part of the item.
   This is a convenient way to create self-contained projects with custom symbols
   which can be easily shared amongst different users and installations of QGIS.
-* extract the embedded file from the widget and save it on disk.
+* :guilabel:`Extract Embedded File…`, to extract the embedded file from the widget and save it on disk.
 
 .. index:: Rendering; Scale dependent visibility
 .. _label_scaledepend:
