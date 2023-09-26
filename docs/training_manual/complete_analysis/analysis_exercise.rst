@@ -58,6 +58,12 @@ The solution will involve:
    Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with EPSG code
    ``32733``). 
 #. Click :guilabel:`OK`
+
+   .. figure:: img/crs.png
+      :align: center
+
+      Setting up the CRS
+
 #. Save the project file by clicking on the |fileSave|
    :sup:`Save Project` toolbar button, or use the
    :menuselection:`Project --> Save As...` menu item.
@@ -181,6 +187,12 @@ districts to the following ones:
    #. Repeat the previous step for the remaining districts
    #. Close the brackets
 
+   .. figure:: img/query_builder.png
+      :align: center
+
+      Query builder
+
+
       The final query should be (the order of the districts in the brackets
       does not matter)::
 
@@ -235,6 +247,11 @@ this area.
    the :guilabel:`Clip Raster by Mask Layer` dialog
 #. Save the map
 
+   .. figure:: img/clipped_r_filtered_v_reordered_l.png
+      :align: center
+
+      Map view with filtered vector, clipped raster and reordered layers 
+
 Align the rasters
 ......................................................................
 
@@ -255,6 +272,11 @@ First we change the resolution of our rainfall data to 30 meters
    :file:`rainfall/reprojected` directory as :file:`Rainfall30.tif`.
 #. Make sure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked
+
+   .. figure:: img/wrap_rainfall.png
+      :align: center
+
+      Wrap (Reproject) Rainfall_clipped
 
 
 Then we align the DEM:
@@ -315,6 +337,11 @@ Raster layer symbology is somewhat different.
    :guilabel:`White to Black`
 #. Click :guilabel:`OK`
 
+   .. figure:: img/raster_symbology.png
+      :align: center
+
+      Raster symbology 
+
    The ``Rainfall30`` raster, if visible, should change colors,
    allowing you to see different brightness values for each pixel
 #. Repeat this process for the ``DEM30`` layer, but set the standard
@@ -355,6 +382,11 @@ that was written for this purpose.
 #. Click :guilabel:`Run`
 #. Wait for it to finish processing.
 
+   .. figure:: img/hillshade.png
+      :align: center
+
+      Raster analysis Hillshade 
+
 The new ``hillshade`` layer has appeared in the
 :guilabel:`Layers` panel.
 
@@ -385,6 +417,11 @@ Slope
 #. Make sure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
+
+   .. figure:: img/slope.png
+      :align: center
+
+      Raster analysis Slope 
 
 The slope image has been calculated and added to the map.
 As usual, it is rendered in grayscale.
@@ -437,6 +474,11 @@ Reclassifying rasters
    and file name.
 #. Click :guilabel:`Run`.
 
+   .. figure:: img/raster_calculator_slope.png
+      :align: center
+
+      Raster calculator Slope 
+
 Now find the correct aspect (east-facing: between ``45`` and ``135``
 degrees) using the same approach.
 
@@ -485,6 +527,11 @@ are satisfied.
 
 Save the project.
 
+.. figure:: img/aspect_slope_rainfall.png
+   :align: center
+
+   Map view where all three criteria are satisfied  
+
 The next criterion that needs to be satisfied is that the area must be 
 ``250`` m away from urban areas.
 We will satisfy this requirement by ensuring that the areas we compute
@@ -509,6 +556,11 @@ Finding rural areas
    See the earlier instructions if you get stuck.
 #. Click :guilabel:`OK` to close the :guilabel:`Query Builder` dialog.
    The query should return one feature.
+
+   .. figure:: img/query_builder_zoning.png
+    :align: center
+
+   Query builder Zoning
 
 You should see the rural polygons from the ``Zoning`` layer.
 You will need to save these.
@@ -551,6 +603,11 @@ Creating a negative buffer
 #. Remove the ``rural`` layer
 #. Save the project
 
+   .. figure:: img/rural_buffer.png
+      :align: center
+
+      Map view with rural buffer 
+
 
 Now you need to combine your ``rural_buffer`` vector layer with the
 ``aspect_slope_rainfall`` raster.
@@ -576,6 +633,11 @@ Vectorizing the raster
 #. Click :guilabel:`Run`
 #. Close the dialog when processing is complete
 
+   .. figure:: img/vectorized.png
+      :align: center
+
+      Raster to Vector 
+
 All areas of the raster have been vectorized, so you need to select
 only the areas that have a value of ``1`` in the ``suitable`` field.
 (Digital Number.
@@ -590,7 +652,7 @@ only the areas that have a value of ``1`` in the ``suitable`` field.
 #. After you are sure the query is complete (and only the areas that
    meet all three criteria, i.e. with a value of ``1`` are visible),
    create a new vector file from the results, using the
-   :guilabel:`Export --> Save Features As...` in the layer's
+   :menuselection:`Export --> Save Features As...` in the layer's
    right-click menu
 #. Save the file in the :file:`Rasterprac` directory
 #. Name the file :file:`aspect_slope_rainfall_1.shp`
@@ -672,6 +734,11 @@ Calculating the area for each polygon
    each polygon in the vector layer and will then populate a new
    integer column (called ``area``) with the computed value.
 
+   .. figure:: img/field_calculator_area.png
+      :align: center
+
+      Field Calculator  
+
 #. Click :guilabel:`OK`
 #. Do the same thing for another new field called ``id``.
    In :guilabel:`Field calculator expression`, type::
@@ -682,6 +749,11 @@ Calculating the area for each polygon
    purposes.
 #. Click |toggleEditing| :sup:`Toggle editing` again, and save your
    edits if prompted to do so
+
+   .. figure:: img/attribute_table.png
+      :align: center
+
+      Attribute table with area and id columns 
 
 Selecting areas of a given size
 ----------------------------------------------------------------------

@@ -6,6 +6,7 @@ Vector analysis
    .. contents::
       :local:
       :depth: 1
+      :class: toc-columns
 
 
 .. _qgisbasicstatisticsforfields:

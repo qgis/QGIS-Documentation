@@ -192,7 +192,7 @@ Python code
 
 Export to PostgreSQL (available connections)
 --------------------------------------------
-Imports vector layers inside a PostgreSqL database on the basis of
+Imports vector layers inside a PostgreSQL database on the basis of
 an available connection.
 The connection has to
 :ref:`be defined properly <vector_create_stored_connection>`
@@ -501,7 +501,7 @@ Python code
 
 Export to PostgreSQL (new connection)
 -------------------------------------
-Imports vector layers inside a PostGreSQL database. A new connection
+Imports vector layers inside a PostgreSQL database. A new connection
 to the PostGIS database must be created.
 
 This algorithm is derived from the
@@ -681,7 +681,7 @@ Parameters
        Default: ''
      - Defines a distance tolerance for the simplification of the
        vector geometries to be imported.
-       By default no simplification there is no simplification.
+       By default there is no simplification.
    * - **Maximum distance between 2 nodes (densification)**
 
        Optional

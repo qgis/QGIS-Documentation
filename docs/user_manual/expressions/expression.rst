@@ -41,8 +41,8 @@ is available from many parts in QGIS and, can particularly be accessed when:
 
 The Expression builder dialog offers access to the:
 
-* :ref:`Expression tab <functions_list>` which, thanks to a list of predefined
-  functions, helps to write and check the expression to use;
+* :guilabel:`Expression` tab which, thanks to a list of :ref:`predefined functions <functions_list>`,
+  helps to write and check the expression to use;
 * :ref:`Function Editor tab <function_editor>` which helps to extend the list of
   functions by creating custom ones.
 

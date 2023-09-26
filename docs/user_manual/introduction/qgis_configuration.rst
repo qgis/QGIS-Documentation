@@ -310,7 +310,7 @@ This is designed for use in engineering, BIM, asset management, and other fields
 of meter/submeter level are potentially very dangerous or expensive!
 
 |unchecked| :guilabel:`Planimetric measurements`: sets the default for the
-"planimetric measurements" property for newly created projects.
+:ref:`planimetric measurements <measurements_ellipsoid>` property for newly created projects.
 
 
 .. index:: CRS, Datum transformation, Reprojection
@@ -1580,14 +1580,18 @@ In the |general| :guilabel:`General` tab, the :guilabel:`General settings` let y
   set of attribute table configurations for your requirements, and re-setting up
   these attribute tables is a hassle.
 
+.. _measurements_ellipsoid:
+
 Calculating areas and distances is a common need in GIS. However, these values
 are really tied to the underlying projection settings. The :guilabel:`Measurements`
 frame lets you control these parameters. You can indeed choose:
 
-* the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely
-  based; it can be:
+* the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely based;
+  it can be:
 
   * **None/Planimetric**: returned values are in this case cartesian measurements.
+    This option can be set as default for new projects from the :menuselection:`Settings -->`
+    |options| :menuselection:`Options -->` |crs| :menuselection:`CRS Handling` menu
   * a **Custom** one: you'll need to set values of the semi-major and semi-minor axes.
   * or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN,
     New International 1967, WGS 84...).

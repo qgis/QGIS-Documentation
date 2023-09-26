@@ -26,8 +26,8 @@ There are several tabs in the dialog:
     - |rasterHistogram| :ref:`Histogram <raster_histogram>`:sup:`[1]`
     - |rendering| :ref:`Rendering <raster_rendering>`
   * - |temporal| :ref:`Temporal <raster_temporal>`
-    - |elevationscale| :ref:`Elevation <raster_elevation>`
     - |pyramids| :ref:`Pyramids <raster_pyramids>`
+    - |elevationscale| :ref:`Elevation <raster_elevation>`
   * - |editMetadata| :ref:`Metadata <raster_metadata>`
     - |legend| :ref:`Legend <raster_server>`
     - |overlay| :ref:`QGIS Server <raster_server>`
@@ -585,7 +585,7 @@ Really convenient for tile rasters loaded using an :ref:`interpretation method
 Transparency Properties
 =======================
 
-|transparency| QGIS provides capabilities to set the transparency level
+QGIS provides capabilities to set the |transparency| :guilabel:`Transparency` level
 of a raster layer.
 
 Use the :guilabel:`Global opacity` slider to set to what extent the
@@ -748,39 +748,6 @@ set whether the layer redraw should be:
   a raster layer).
 
 
-.. index:: Elevation, Terrain
-.. _raster_elevation:
-
-Elevation Properties
-====================
-
-The |elevationscale| :guilabel:`Elevation` tab provides options to control
-the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
-and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
-Specifically, you can set:
-
-.. _figure_raster_elevation:
-
-.. figure:: img/rasterElevation.png
-   :align: center
-
-   Raster Elevation Properties
-
-* |unchecked| :guilabel:`Represents Elevation Surface`:
-  whether the raster layer represents a height surface (e.g DEM) and the pixel
-  values should be interpreted as elevations.
-  Check this option if you want to display a raster in an :ref:`elevation profile view <label_elevation_profile_view>`.
-  You will also need to fill in the :guilabel:`Band` to pick values from
-  and can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
-* :guilabel:`Profile Chart Appearance`: controls the rendering
-  :guilabel:`Style` the raster elevation will use when drawing a profile chart.
-  It can be set as:
-
-  * a profile :guilabel:`Line` with a :ref:`line style <vector_line_symbols>` applied
-  * a surface with :guilabel:`Fill below` and a corresponding
-    :ref:`fill style <vector_fill_symbols>`
-
-
 .. index:: Pyramids
 .. _raster_pyramids:
 
@@ -833,6 +800,39 @@ Finally, click :guilabel:`Build Pyramids` to start the process.
    :align: center
 
    Raster Pyramids
+
+
+.. index:: Elevation, Terrain
+.. _raster_elevation:
+
+Elevation Properties
+====================
+
+The |elevationscale| :guilabel:`Elevation` tab provides options to control
+the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
+and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
+Specifically, you can set:
+
+.. _figure_raster_elevation:
+
+.. figure:: img/rasterElevation.png
+   :align: center
+
+   Raster Elevation Properties
+
+* |unchecked| :guilabel:`Represents Elevation Surface`:
+  whether the raster layer represents a height surface (e.g DEM) and the pixel
+  values should be interpreted as elevations.
+  Check this option if you want to display a raster in an :ref:`elevation profile view <label_elevation_profile_view>`.
+  You will also need to fill in the :guilabel:`Band` to pick values from
+  and can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
+* :guilabel:`Profile Chart Appearance`: controls the rendering
+  :guilabel:`Style` the raster elevation will use when drawing a profile chart.
+  It can be set as:
+
+  * a profile :guilabel:`Line` with a :ref:`line style <vector_line_symbols>` applied
+  * a surface with :guilabel:`Fill below` and a corresponding
+    :ref:`fill style <vector_fill_symbols>`
 
 
 .. index:: Metadata, Metadata editor, Keyword

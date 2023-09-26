@@ -201,13 +201,20 @@ default.
    The project's CRS is redefined using the layer's CRS. Map canvas extent,
    coordinates display are updated accordingly and all the layers in
    the project are on-the-fly translated to the new project CRS.
-
+   
 
 .. index:: CRS Selection
 .. _crs_selector:
 
 Coordinate Reference System Selector
 =====================================
+
+.. _figure_crs_selector:
+
+.. figure:: img/crs_selector.png
+   :align: center
+
+   CRS Selector 
 
 This dialog helps you assign a Coordinate Reference System to a project or a
 layer, provided a set of projection databases. Items in the dialog are:
@@ -224,6 +231,19 @@ layer, provided a set of projection databases. Items in the dialog are:
   the appropriate node and selecting the CRS. The active CRS is preselected.
 * **PROJ text**: This is the CRS string used by the PROJ projection
   engine. This text is read-only and provided for informational purposes.
+
+
+If you want to remove a recently used CRS from the list that can be done in 
+several ways:
+
+* Press |clearItem| :sup:`Remove from recently used CRS` button on the right 
+  side.
+* Press :kbd:`Del` after selecting CRS that you want to remove.
+* Right-click on used CRS and choose
+  |clearItem| :guilabel:`Remove selected CRS from recently used CRS` to remove 
+  selected CRS
+  or |clearConsole| :guilabel:`Clear all recently used CRS` to remove all used 
+  CRS.
 
 The CRS selector also shows a rough preview of the geographic
 area for which a selected CRS is valid for use. Many CRSs are designed only
@@ -408,6 +428,10 @@ to the current project only.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |clearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
+.. |clearItem| image:: /static/common/mIconClearItem.png
+   :width: 1.5em   
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png

@@ -6,6 +6,8 @@ Vector geometry
    .. contents::
       :local:
       :depth: 1
+      :class: toc-columns
+
 
 .. _qgisexportaddgeometrycolumns:
 
@@ -519,7 +521,9 @@ Outputs
    * - **Bounds**
      - ``OUTPUT``
      - [vector: polygon]
-     - Bounding boxes of input layer
+     - Bounding boxes of input layer.
+       Other than the input attributes, the output layer also contains following fields:
+       ``width``, ``height``, ``area`` and ``perimeter`` of the generated polygon.
 
 Python code
 ...........
@@ -4151,12 +4155,12 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Number of segment in circles**
+   * - **Number of segments in circles**
      - ``SEGMENTS``
      - [number]
 
        Default: 72
-     - The number of segment used to approximate a circle.
+     - The number of segments used to approximate a circle.
        Minimum 8, maximum 100000.
    * - **Minimum enclosing circles**
      - ``OUTPUT``
@@ -5329,7 +5333,7 @@ Parameters
 
        Default: None
      - Rotation of the buffer shape
-   * - **Number of segment**
+   * - **Number of segments**
      - ``SEGMENTS``
      - [number]
 

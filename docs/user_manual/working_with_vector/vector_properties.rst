@@ -76,7 +76,7 @@ dialog. Those are not presented in this document. Refer to their documentation.
 Information Properties
 ======================
 
-|metadata| The :guilabel:`Information` tab is read-only and represents an interesting
+The |metadata| :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
 Provided information are:
 
@@ -224,7 +224,7 @@ you can not display, query, save or edit ``Anchorage``, because that is a
 Symbology Properties
 ====================
 
-|symbology| The Symbology tab provides you with a comprehensive tool for
+The |symbology| :guilabel:`Symbology` tab provides you with a comprehensive tool for
 rendering and symbolizing your vector data. You can use tools that are
 common to all vector data, as well as special symbolizing tools that were
 designed for the different kinds of vector data. However all types share the
@@ -1727,7 +1727,7 @@ We now describe an example using the data-defined override function for the
 Diagrams Properties
 ===================
 
-|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to
+The |diagram| :guilabel:`Diagrams` tab allows you to add a graphic overlay to
 a vector layer (see :numref:`figure_diagrams_attributes`).
 
 The current core implementation of diagrams provides support for:
@@ -1948,7 +1948,7 @@ are also displayed in the print layout legend, next to the layer symbology.
 Masks Properties
 ================
 
-|labelmask| The :guilabel:`Masks` tab helps you configure the current layer
+The |labelmask| :guilabel:`Masks` tab helps you configure the current layer
 symbols overlay with other symbol layers or labels, from any layer.
 This is meant to improve the readability of symbols and labels whose colors
 are close and can be hard to decipher when overlapping; it adds a custom and
@@ -1981,7 +1981,7 @@ either :ref:`mask symbol layers <mask_marker_symbol>` or :ref:`mask labels
 3D View Properties
 =======================
 
-|3d| The :guilabel:`3D View` tab provides settings for vector layers that should
+The |3d| :guilabel:`3D View` tab provides settings for vector layers that should
 be depicted in the :ref:`3D Map view <label_3dmapview>` tool.
 
 To display a layer in 3D, select from the combobox at the top of the tab, either:
@@ -2025,7 +2025,7 @@ the :guilabel:`Layer rendering` section of the tab:
 Fields Properties
 =================
 
-|sourceFields| The :guilabel:`Fields` tab provides information on
+The |sourceFields| :guilabel:`Fields` tab provides information on
 fields related to the layer and helps you organize them.
 
 The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
@@ -2079,7 +2079,7 @@ behave in certain circumstances:
 Attributes Form Properties
 ==========================
 
-|formView| The :guilabel:`Attributes Form` tab helps you set up the form to
+The |formView| :guilabel:`Attributes Form` tab helps you set up the form to
 display when creating new features or querying existing one. You can define:
 
 * the look and the behavior of each field in the feature form or the attribute
@@ -2192,7 +2192,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
         and vice versa
       * in case of a group box, set whether at the form opening,
         it should show as :guilabel:`Collapsed` for every features,
-        or only for those matching an expression` (:guilabel:`Control collapsed by expression`).
+        or only for those matching an expression (:guilabel:`Control collapsed by expression`).
       * configure the :guilabel:`Style` look of the container, with custom :guilabel:`Background color`,
         label color and font properties
    #. You can create and embed as many containers as you want by pressing again
@@ -2231,6 +2231,32 @@ The drag and drop designer offers a number of widgets that are not connected to 
 They can be used to enhance the appearance of the form or to display dynamically calculated values.
 
 * :guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain the result of dynamically calculated expressions.
+
+  HTML widgets can be used for example to display images stored as BLOB in a field
+  (let's call it ``photo``):
+
+  #. In the ``Drag-and-drop designer`` mode, add a :guilabel:`HTML Widget`
+     to your :guilabel:`Form Layout`.
+  #. Double-click on the :guilabel:`HTML Widget` to configure it.
+  #. Change the default :guilabel:`Title` or hide it.
+  #. Press the |expression| button and enter the following QGIS expression:
+
+     .. code-block::
+
+       '<img src= "data:image/png;base64,' || to_base64("photo") || '">'
+
+     Ensure that you replace *photo* with your own BLOB field name.
+     The above expression creates a string with HTML image tag in which the BLOB file is encoded.
+  #. Apply the dialog and then press the |symbologyAdd| button.
+  #. QGIS automatically applies HTML formatting and functions to evaluate your expression,
+     resulting in following code:
+
+     .. code-block:: HTML
+
+       <script>document.write(expression.evaluate("'<img src=\"data:image/png;base64,' || to_base64(\"photo\") || '\">'"));</script>
+
+     A preview of your image is displayed on the right.
+
 * :guilabel:`QML Widget`: embeds a QML page, the QML source may contain the result of dynamically calculated expressions.
 * :guilabel:`Text Widget`: displays a text widget which supports basic HTML markup
   and may contain the result of dynamically calculated expressions.
@@ -2320,7 +2346,7 @@ Regardless the type of widget applied to the field, there are some common
 properties you can set to control whether and how a field can be edited.
 
 Widget display
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 Only available for the :ref:`Drag and drop <drag_drop_designer>` designer mode,
 this group helps you configure the look of the widget assigned to the field:
@@ -2353,33 +2379,6 @@ General options
 * |checkbox| :guilabel:`Label on top`: places the field name above or beside
   the widget in the feature form.
 
-Default values
-^^^^^^^^^^^^^^
-
-* :guilabel:`Default value`: for new features, automatically populates by default
-  the field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
-  For example, you can:
-
-  * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
-    feature's X coordinate, length, area or any geometric information at its creation;
-  * increment a field by 1 for each new feature using ``maximum("field")+1``;
-  * save the feature creation datetime using ``now()``;
-  * use :ref:`variables <general_tools_variables>` in expressions, making it
-    easier to e.g. insert the operator name (``@user_full_name``), the project
-    file path (``@project_path``), ...
-
-  A preview of the resulting default value is displayed at the bottom of the widget.
-
-  .. note:: The ``Default value`` option is not aware of the values in any other
-    field of the feature being created so it won't be possible to use an expression
-    combining any of those values i.e using an expression like ``concat(field1, field2)``
-    may not work.
-
-* |checkbox| :guilabel:`Apply default value on update`: whenever the feature
-  attribute or geometry is changed, the default value is recalculated. This
-  could be handy to save values like last user that modifies data, last time it
-  was changed...
-
 .. _constraints:
 
 Constraints
@@ -2410,6 +2409,48 @@ constraints and:
     modifications until they meet the constraints. It appears when the
     |checkbox| :guilabel:`Enforce constraint` option is checked (``hard constraint``).
 
+.. _default_values:
+
+Default values
+^^^^^^^^^^^^^^
+
+* :guilabel:`Default value`: for new features, automatically populates by default
+  the field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
+  For example, you can:
+
+  * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
+    feature's X coordinate, length, area or any geometric information at its creation;
+  * increment a field by 1 for each new feature using ``maximum("field")+1``;
+  * save the feature creation datetime using ``now()``;
+  * use :ref:`variables <general_tools_variables>` in expressions, making it
+    easier to e.g. insert the operator name (``@user_full_name``), the project
+    file path (``@project_path``), ...
+
+  A preview of the resulting default value is displayed at the bottom of the widget.
+
+  .. note:: The ``Default value`` option is not aware of the values in any other
+    field of the feature being created so it won't be possible to use an expression
+    combining any of those values i.e using an expression like ``concat(field1, field2)``
+    may not work.
+
+* |checkbox| :guilabel:`Apply default value on update`: whenever the feature
+  attribute or geometry is changed, the default value is recalculated. This
+  could be handy to save values like last user that modifies data, last time it
+  was changed...
+
+.. _policies:
+
+Policies
+^^^^^^^^
+
+:guilabel:`Policies` allows you to determine how values are assigned to the field when :guilabel:`Splitting features`:
+
+* :guilabel:`Duplicate Values`: Keeps the existing value of the field for the resulting split features.
+* :guilabel:`Use Default Value`: Resets the field by recalculating its :ref:`default value <default_values>`.
+  If no default value clause exists, the existing value is kept for the resulting split features.
+* :guilabel:`Remove Value`: Clears the field to an unset state.
+* :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions
+  by multiplying the existing value by ratio of the split parts lengths or areas.
 
 .. _edit_widgets:
 
@@ -2420,6 +2461,16 @@ Based on the field type, QGIS automatically determines and assigns a default
 widget type to it. You can then replace the widget with any other compatible
 with the field type. The available widgets are:
 
+* **Binary (BLOB)**: Available only for binary fields, it displays by default a label
+  with the size of the embedded data, if not empty.
+  A drop-down button next to the label allows to:
+
+  * :guilabel:`Embed file`, replacing or filling the field
+  * :guilabel:`Clear contents`, removing any data in the field
+  * :guilabel:`Save contents to file`, exporting the data as a file on disk
+
+  It is also possible to preview the embedded binary file in the field,
+  if combined in a drag-and-drop form with e.g. a :ref:`QML or HTML widget <other_widgets>`.
 * **Checkbox**: Displays a checkbox whose state defines the value to insert.
 * **Classification**: Only available when a :ref:`categorized symbology
   <categorized_renderer>` is applied to the layer, displays a combo box with
@@ -2436,6 +2487,14 @@ with the field type. The available widgets are:
   relative or absolute mode. It can be used to display a hyperlink (to
   document path), a picture or a web page. User can also configure an
   :ref:`external storage system <external_storage>` to fetch/store resources.
+
+  .. tip:: **Relative Path in Attachment widget**
+
+   If the path which is selected with the file browser is located in the same
+   directory as the :file:`.qgs` project file or below, paths are converted to
+   relative paths. This increases portability of a :file:`.qgs` project with
+   multimedia information attached.
+
 * **Hidden**: A hidden attribute column is invisible. The user is not able
   to see its contents.
 * **Key/Value**: Displays a two-columns table to store sets of key/value
@@ -2483,21 +2542,13 @@ with the field type. The available widgets are:
   the layer in the same database/connection.
 
 
-.. tip:: **Relative Path in Attachment widget**
-
-   If the path which is selected with the file browser is located in the same
-   directory as the :file:`.qgs` project file or below, paths are converted to
-   relative paths. This increases portability of a :file:`.qgs` project with
-   multimedia information attached.
-
-
 .. index:: Jointure, Join layers
 .. _`sec_joins`:
 
 Joins Properties
 ================
 
-|join| The :guilabel:`Joins` tab allows you to associate features
+The |join| :guilabel:`Joins` tab allows you to associate features
 of the current layer (called ``Target layer``) to features from another
 loaded vector layer (or table). The join is based on an attribute that is shared by the
 layers. The layers can be geometryless (tables) or not but their join attribute
@@ -2780,10 +2831,11 @@ In this case, ``.qgd`` and  ``.qgs`` files are both embedded in the archive.
 Actions Properties
 ==================
 
-|action| QGIS provides the ability to perform an action based on the attributes
-of a feature. This can be used to perform any number of actions, for example,
-running a program with arguments built from the attributes of a feature or
-passing parameters to a web reporting tool.
+The |action| :guilabel:`Actions` tab provides the ability to perform an action
+based on the attributes of a feature.
+This can be used to perform any number of actions, for example,
+running a program with arguments built from the attributes of a feature
+or passing parameters to a web reporting tool.
 
 .. _figure_actions:
 
@@ -2792,8 +2844,8 @@ passing parameters to a web reporting tool.
 
    Overview action dialog with some sample actions
 
-Actions are useful when you frequently want to run an external application or
-view a web page based on one or more values in your vector layer.
+Actions are useful when you frequently want to run an external application
+or view a web page based on one or more values in your vector layer.
 They are of different types and can be used like this:
 
 * :guilabel:`Generic`, :guilabel:`macOS`, :guilabel:`Windows`
@@ -3091,7 +3143,7 @@ To add a raster (a TIF image in this example), it becomes:
 Display Properties
 ==================
 
-|display| The :guilabel:`Display` tab helps you configure fields to use for
+The |display| :guilabel:`Display` tab helps you configure fields to use for
 feature identification:
 
 * The :guilabel:`Display name`: based on a field or an :ref:`expression
@@ -3111,7 +3163,8 @@ feature identification:
 
 * The :guilabel:`HTML Map Tip` is specifically created for the map tips: it's
   a more complex and full HTML text mixing fields, expressions and html tags
-  (multiline, fonts, images, hyperlink...).
+  (multiline, fonts, images, hyperlink...). You can use 
+  :guilabel:`HTML Map Tip Preview` for easier design of map tips. 
 
 .. _figure_display_code:
 
@@ -3273,7 +3326,7 @@ It is also possible to set the :guilabel:`Limits` of the features time range as:
 Variables Properties
 ====================
 
-|expression| The :guilabel:`Variables` tab lists all the variables available at
+The |expression| :guilabel:`Variables` tab lists all the variables available at
 the layer's level (which includes all global and project's variables).
 
 It also allows the user to manage layer-level variables. Click the |symbologyAdd|
@@ -3391,7 +3444,7 @@ See :ref:`metadatamenu` for more information.
 Dependencies Properties
 =======================
 
-|dependencies| The :guilabel:`Dependencies` tab allows to declare data
+The |dependencies| :guilabel:`Dependencies` tab allows to declare data
 dependencies between layers. A data dependency occurs when a data modification
 in a layer, not by direct user manipulation, may modify data of other layers.
 This is the case for instance when geometry of a layer is updated by a
@@ -3410,7 +3463,7 @@ altered.
 Legend Properties
 =================
 
-|legend| The :guilabel:`Legend` properties tab provides you with advanced
+The |legend| :guilabel:`Legend` properties tab provides you with advanced
 settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
 layout legend <layout_legend_item>`. These options include:
 
@@ -3455,7 +3508,7 @@ layout legend <layout_legend_item>`. These options include:
 QGIS Server Properties
 ======================
 
-|overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
+The |overlay| :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`Metadata URL`, and :guilabel:`Legend URL`
 sections.
 
@@ -3491,7 +3544,7 @@ To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
 Digitizing Properties
 =====================
 
-|digitizing| The :guilabel:`Digitizing` tab gives access to options that help
+The |digitizing| :guilabel:`Digitizing` tab gives access to options that help
 to ensure the quality of digitized geometries.
 
 .. _figure_digitizing_vector:

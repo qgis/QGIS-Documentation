@@ -43,14 +43,12 @@ More than 80 vector and 140 raster formats are supported by
 
 .. note::
 
-   Not all of the listed formats may work in QGIS for various reasons. For
-   example, some require external proprietary libraries, or the GDAL/OGR
+   Not all of the listed formats may work in QGIS for various reasons.
+   For example, some require external proprietary libraries, or the GDAL/OGR
    installation of your OS may not have been built to support the format you
    want to use. To see the list of available formats, run the command line
    ``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster),
    or check the :menuselection:`Settings --> Options --> GDAL` menu in QGIS.
-
-.. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
 .. _datasourcemanager:
 
@@ -148,19 +146,16 @@ hierarchically, and there are several top level entries:
 
    * |geoPackage| :guilabel:`GeoPackage`
    * |spatialite| :guilabel:`SpatiaLite`
-   * |postgis| :guilabel:`PostGIS`
+   * |postgis| :guilabel:`PostgreSQL`
+   * |hana| :guilabel:`SAP HANA`
    * |mssql| :guilabel:`MS SQL Server`
    * |oracle| :guilabel:`Oracle`
-   * |hana| :guilabel:`SAP HANA`
    * |wms| :guilabel:`WMS/WMTS`
    * |vectorTileLayer| :guilabel:`Vector Tiles`
    * |xyz| :guilabel:`XYZ Tiles`
    * |wcs| :guilabel:`WCS`
    * |wfs| :guilabel:`WFS/OGC API-Features`
-   * |ows| :guilabel:`OWS`
-   * |ams| :guilabel:`ArcGIS Map Service`
-   * |afs| :guilabel:`ArcGIS Feature Service`
-   * |geonode| :guilabel:`GeoNode`
+   * |afs| :guilabel:`ArcGIS REST Server`
 
 Interacting with the Browser items
 ----------------------------------
@@ -564,7 +559,8 @@ and can be manually changed if necessary.
 
 The following field types are supported:
 
-* ``Boolean`` case-insensitive literal couples that are interpreted as boolean values are ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``
+* ``Boolean`` case-insensitive literal couples that are interpreted as boolean values are
+  ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``
 * ``Whole Number (integer)``
 * ``Whole Number (integer - 64 bit)``
 * ``Decimal Number``: double precision floating point number
@@ -651,16 +647,22 @@ tool which allows you to:
 In the :guilabel:`DWG/DXF Import` dialog, to import the drawing file
 contents:
 
-#. Input the location of the :guilabel:`Target package`, i.e. the new
-   GeoPackage file that will store the data.
-   If an existing file is provided, then it will be overwritten.
+#. Input the location of the :guilabel:`Source drawing`, i.e. the DWG/DXF drawing
+   file to import.
 #. Specify the coordinate reference system of the data in the drawing file.
-#. Check |checkbox| :guilabel:`Expand block references` to import the
-   blocks in the drawing file as normal elements.
+#. Input the location of the :guilabel:`Target package`, i.e. the GeoPackage file
+   that will store the data. If an existing file is provided, then it will be 
+   overwritten.
+#. Choose how to import ``blocks`` with the dedicated combobox:
+
+   * :guilabel:`Expand Block Geometries`: imports the blocks in the drawing file as normal elements.
+   * :guilabel:`Expand Block Geometries and Add Insert Points`: imports the blocks in the drawing file as normal elements and adds the insertion point as a point layer.
+   * :guilabel:`Add Only Insert Points`: adds the blocks insertion point as a point layer.
+
 #. Check |checkbox| :guilabel:`Use curves` to promote the imported layers
    to a ``curved`` geometry type.
-#. Use the :guilabel:`Import` button to select the DWG/DXF file to use
-   (one per geopackage).
+#. Use the :guilabel:`Import` button to import the drawing into the destination
+   GeoPackage file.
    The GeoPackage database will be automatically populated with the
    drawing file content.
    Depending on the size of the file, this can take some time.
@@ -671,7 +673,7 @@ populated with the list of layers from the imported file.
 There you can select which layers to add to the QGIS project:
 
 #. At the top, set a :guilabel:`Group name` to group the drawing files
-   in the project.
+   in the project. By default this is set to the filename of the source drawing file.
 #. Check layers to show: Each selected layer is added to an ad hoc group which
    contains vector layers for the point, line, label and area features of the
    drawing layer.
@@ -1222,17 +1224,18 @@ To load a layer from a database, you can perform the following steps:
 The Layer Metadata Search Panel
 ===============================
 
-The layer metadata search panel allows to browse layers metadata
-from registered metadata providers and add them to the project.
+By default, QGIS can retrieve layers metadata from the connections or data providers that allow metadata storage 
+(more details on :ref:`saving metadata to the database <savemetadatatodb>`).
+The :guilabel:`Metadata search` panel allows to browse the layers by their metadata
+and add them to the project (either with a double-click or the :guilabel:`Add` button).
+The list can be filtered:
 
-The list can be filtered by text, by current project and by map canvas extent.
+* by text, watching a set of metadata properties (identifier, title, abstract)
+* by spatial extent, using the current :ref:`project extent <project_full_extent>` or the map canvas extent
+* by the layer (geometry) type
 
-The sources of metadata are implemented through a layer metadata provider
-system that can be extended by plugins. 
-
-QGIS provides out of the box the layer metadata providers that retrieve 
-the metadata from the connections that allow for metadata storage 
-(for more details :ref:`save metadata to the database <savemetadatatodb>`).
+.. note:: The sources of metadata are implemented through a layer metadata provider system
+ that can be extended by plugins. 
 
 .. figure:: img/layer_metadata_search_panel.png
    :align: center
@@ -1530,8 +1533,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |afs| image:: /static/common/mIconAfs.png
    :width: 1.5em
-.. |ams| image:: /static/common/mIconAms.png
-   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
@@ -1543,8 +1544,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
-   :width: 1.5em
-.. |geonode| image:: /static/common/mIconGeonode.png
    :width: 1.5em
 .. |hana| image:: /static/common/mIconHana.png
    :width: 1.5em
@@ -1560,8 +1559,6 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
-.. |ows| image:: /static/common/mIconOws.png
-   :width: 1.5em
 .. |postgis| image:: /static/common/mIconPostgis.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
