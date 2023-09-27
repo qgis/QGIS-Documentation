@@ -1045,9 +1045,13 @@ tools, each mouse click (within the tolerance setting) will snap to that layer.
 The |measure| :sup:`Measure Line` measures distances between given points.
 The tool then allows you to click points on the map. Each segment length,
 as well as the total, shows up in the measure window.
-To stop measuring, click the right mouse button. Now it is possible
-to copy all your line measurements at once to the clipboard using the
-:guilabel:`Copy All` button.
+To stop measuring, click the right mouse button. In the measure window, you 
+will see coordinates for all your points and distances. Keep in mind that the 
+first row will contain only coordinates, as it represents your starting point. 
+Now it is possible to copy all your line measurements at once to the clipboard 
+using the :guilabel:`Copy` button. Clicking the :guilabel:`Configuration` button
+you will access to :guilabel:`Measure Tool Copy Settings` where you can set up
+copy options. 
 
 Note that you can use the drop-down list near the total to change
 the measurement units interactively while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',

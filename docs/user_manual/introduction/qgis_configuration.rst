@@ -769,6 +769,13 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
   'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions',
   milliradians (SI definition) or mil (NATO/military definition)
 
+**Measure Tool Copy Settings**
+
+These settings allow you to control the behavior of the :guilabel:`Copy` button 
+in the |measure| :sup:`Measure Line` window. You can choose to 
+|checkbox| :guilabel:`Include header` to keep columns names, and you can also 
+select :guilabel:`Separator` of your choice.
+
 **Coordinate and Bearing Display**
 
 This section provides ways to :guilabel:`Configure`:
@@ -2524,6 +2531,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
+.. |measure| image:: /static/common/mActionMeasure.png
+   :width: 1.5em  
 .. |nix| image:: /static/common/nix.png
    :width: 1em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
