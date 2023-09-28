@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,3 +52,88 @@ msgstr ""
 "これらの変数は保存され、QtとQGIS APIの助けを借りて取得できます。各変数について、変数にアクセスするために使用されるキーを選択する必要があります"
 "---"
 "ユーザの好みの色のためにキー「favourite_color」またはその他の意味のある文字列を使用できます。キーの名前をつけるときは何らかの構造を持たせることをお勧めします。"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:41
+msgid "We can differentiate between several types of settings:"
+msgstr "セッティングにはいくつかの種類があります："
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:45
+msgid ""
+"**global settings** --- they are bound to the user at a particular machine. "
+"QGIS itself stores a lot of global settings, for example, main window size "
+"or default snapping tolerance. Settings are handled using the "
+":class:`QgsSettings <qgis.core.QgsSettings>` class, through for example the "
+":meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() "
+"<qgis.core.QgsSettings.value>` methods."
+msgstr ""
+"**グローバル設定** --- "
+"特定のマシンのユーザーにバインドされます。QGIS自身、多くのグローバル設定を格納しており、例えば、メインウィンドウのサイズやデフォルトのスナップ許容範囲などです。設定は"
+" :class:`QgsSettings <qgis.core.QgsSettings>` クラスを使って、例えば :meth:`setValue() "
+"<qgis.core.QgsSettings.setValue>` や :meth:`value() "
+"<qgis.core.QgsSettings.value>` メソッドで処理されます。"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:52
+msgid "Here you can see an example of how these methods are used."
+msgstr "ここでは、これらの方法がどのように使われるかの例を見ることができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:73
+msgid ""
+"The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>` "
+"method is optional and specifies the default value that is returned if there"
+" is no previous value set for the passed setting name."
+msgstr ""
+":meth:`value() <qgis.core.QgsSettings.value>` "
+"メソッドの2番目のパラメータはオプションで、渡された設定名に対して以前の値が設定されていない場合に返されるデフォルト値を指定します。"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:77
+msgid ""
+"For a method to pre-configure the default values of the global settings "
+"through the  :file:`global_settings.ini` file, see "
+":ref:`deploying_organization` for further details."
+msgstr ""
+"グローバル設定のデフォルト値を :file:`global_settings.ini` ファイルによって事前に設定する方法の詳細については、 "
+":ref:`deploying_organization` を参照してください。"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:83
+msgid ""
+"**project settings** --- vary between different projects and therefore they "
+"are connected with a project file. Map canvas background color or "
+"destination coordinate reference system (CRS) are examples --- white "
+"background and WGS84 might be suitable for one project, while yellow "
+"background and UTM projection are better for another one."
+msgstr ""
+"**プロジェクト設定** --- プロジェクト間で異なるため、プロジェクトファイルと関連付けられます。マップキャンバスの背景色や、目的の座標参照系 "
+"(CRS) "
+"などはその一例です。あるプロジェクトでは白い背景とWGS84が適しているかもしれませんが、別のプロジェクトでは黄色い背景とUTM投影法が適しているかもしれません。"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:89
+msgid "An example of usage follows."
+msgstr "使用例を以下に示します。"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:119
+msgid ""
+"As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` "
+"method is used for many data types (integer, string, list), but several "
+"methods exist for reading the setting value back, and the corresponding one "
+"has to be selected for each data type."
+msgstr ""
+"ご覧の通り、:meth:`writeEntry())<qgis.core.QgsProject.writeEntry>` "
+"メソッドは多くのデータ型（整数、文字列、リスト）で使用されますが、設定値を読み出すためのメソッドは複数存在し、データ型ごとに対応するメソッドを選択する必要があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:126
+msgid ""
+"**map layer settings** --- these settings are related to a particular "
+"instance of a map layer with a project. They are *not* connected with "
+"underlying data source of a layer, so if you create two map layer instances "
+"of one shapefile, they will not share the settings. The settings are stored "
+"inside the project file, so if the user opens the project again, the layer-"
+"related settings will be there again. The value for a given setting is "
+"retrieved using the :meth:`customProperty() "
+"<qgis.core.QgsMapLayer.customProperty>` method, and can be set using the "
+":meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one."
+msgstr ""
+"**マップレイヤ設定** --- "
+"これらの設定は、あるプロジェクトのマップレイヤの特定のインスタンスに関連しています。そのため、1つのシェープファイルで2つのマップレイヤインスタンスを作成した場合、それらの設定は共有されません。設定はプロジェクトファイル内に保存されるため、ユーザーがプロジェクトを再度開くと、レイヤ関連の設定は再びそこに存在します。設定値は"
+" :meth:`customProperty() <qgis.core.QgsMapLayer.customProperty>` メソッドで取得し、 "
+":meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` "
+"メソッドで設定します。"
