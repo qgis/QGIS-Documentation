@@ -1555,10 +1555,21 @@ In order to trim or extend existing geometries:
 Shape digitizing
 ================
 
-The :guilabel:`Shape Digitizing` toolbar is synchronized with the
-|digitizeShape| :sup:`Digitize Shape` :ref:`geometry drawing method
-<drawing_methods>` you can select on the :guilabel:`Advanced Digitizing Toolbar`.
-It offers a set of tools to draw lines or polygons features of regular shape.
+The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw lines
+or polygons features of regular shape.
+It is synchronized with the |digitizeShape| :sup:`Digitize Shape`
+:ref:`geometry drawing method <drawing_methods>` you can select on the :guilabel:`Digitizing Toolbar`.
+To use it:
+
+#. Display the toolbar: :menuselection:`View --> Toolbars --> Shape Digitizing`
+#. Select a tool that creates or modifies the shape of a geometry,
+   e.g. |captureLine| :sup:`Add line feature`, |capturePolygon| :sup:`Add polygon feature`,
+   |addPart| :sup:`Add part`, |addRing| :sup:`Add ring`, |reshape| :sup:`Reshape Features`, ...
+#. The |digitizeWithSegment| :sup:`Digitize with segment` button
+   on the :guilabel:`Digitizing Toolbar` is enabled.
+   The first time, you may need to switch it to the |digitizeShape| :sup:`Digitize Shape`
+   in order to enable tools on the :guilabel:`Shape Digitizing` toolbar.
+#. Pick a shape digitizing tool and draw.
 
 .. index:: Circular string
 .. _add_circular_string:
