@@ -59,8 +59,7 @@ jobs:
           Translation
           backport ${{ env.BACKPORT_BRANCH }}
 
-# Temporarily disable automerge to check why tests do not start
-#    - name: Enable Pull Request Automerge
-#      run: gh pr merge --rebase --auto "${{ steps.create_pr.outputs.pull-request-number }}"
-#      env:
-#        GH_TOKEN: ${{ env.GH_TOKEN }}
+    - name: Enable Pull Request Automerge
+      run: gh pr merge --rebase --auto "${{ steps.create_pr.outputs.pull-request-number }}"
+      env:
+        GH_TOKEN: ${{ secrets.GH_PAT }}
