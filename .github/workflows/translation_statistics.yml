@@ -7,8 +7,10 @@ on:
     - cron: '0 6 * * 2'
   workflow_dispatch:
 
-permissions:  # added using https://github.com/step-security/secure-repo
-  contents: read
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
 
 jobs:
   ReportTranslationStats:
@@ -62,6 +64,6 @@ jobs:
     - name: Enable Pull Request Automerge
       uses: peter-evans/enable-pull-request-automerge@v3
       with:
-        token: ${{ secrets.GH_PAT }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
         merge-method: rebase
