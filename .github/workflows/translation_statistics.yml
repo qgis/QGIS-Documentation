@@ -60,6 +60,8 @@ jobs:
           backport ${{ env.BACKPORT_BRANCH }}
 
     - name: Enable Pull Request Automerge
-      run: gh pr merge --rebase --auto "${{ steps.create_pr.outputs.pull-request-number }}"
-      env:
-        GH_TOKEN: ${{ secrets.GH_PAT }}
+      uses: peter-evans/enable-pull-request-automerge@v3
+      with:
+        token: ${{ secrets.GH_PAT }}
+        pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
+        merge-method: rebase
