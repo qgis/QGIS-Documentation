@@ -130,6 +130,10 @@ The :menuselection:`Project` menu provides access and exit points for
      - :kbd:`Alt+J` + :kbd:`R`
      -
      - :ref:`sec_projects`
+   * - :menuselection:`--> Clear List`
+     -
+     -
+     - :ref:`sec_projects` 
    * - :guilabel:`Close`
      -
      -
