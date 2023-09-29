@@ -36,6 +36,14 @@ msgstr "Liste d'extensions"
 msgid "Plugins can also be installed on QGIS Server."
 msgstr "Les extensions peuvent également être installées sur QGIS Server."
 
+#: ../../docs/server_manual/plugins.rst:15
+msgid ""
+"Some plugins designed for server can be found on the official `QGIS "
+"repository <https://plugins.qgis.org/plugins/server/>`_."
+msgstr ""
+"Certaines extensions, destinées à un usage sur serveur, sont disponibles sur"
+" le `dépôt officiel de QGIS <https://plugins.qgis.org/plugins/server/>`_."
+
 #: ../../docs/server_manual/plugins.rst:24
 msgid "Location of plugins"
 msgstr "Emplacement des extensions"
@@ -52,9 +60,48 @@ msgstr "Manuellement depuis un fichier ZIP"
 msgid "With a command line tool"
 msgstr "Avec un outil en ligne de commandes"
 
+#: ../../docs/server_manual/plugins.rst:58
+msgid ""
+"If you need to install and regularly upgrade plugins which are stored in the"
+" QGIS plugin repository, you may use the `QGIS-Plugin-Manager "
+"<https://github.com/3liz/qgis-plugin-manager>`_. It's a tool to help you "
+"manage plugins from the command line."
+msgstr ""
+"Si vous devez régulièrement installer et mettre à jour des extensions à "
+"partir du dépôt de QGIS, vous pourriez utiliser `QGIS-Plugin-Manager "
+"<https://github.com/3liz/qgis-plugin-manager>`_ qui est un outil d'aide à la"
+" gestion d'extensions en ligne de commande."
+
+#: ../../docs/server_manual/plugins.rst:62
+msgid ""
+"The installation is using pip. Installing in a virtual environment is a good"
+" practice but not required:"
+msgstr ""
+"L'installation se fait via pip. Installer dans un environnement virtuel est "
+"une bonne pratique mais elle n'est pas obligatoire :"
+
 #: ../../docs/server_manual/plugins.rst:68
 msgid "To upgrade the tool:"
 msgstr "Pour mettre à niveau l'outil :"
+
+#: ../../docs/server_manual/plugins.rst:74
+msgid ""
+"Then, you can use the ``qgis-plugin-manager`` executable from the command "
+"line:"
+msgstr ""
+"Ensuite, vous pouvez utiliser l'exécutable ``qgis-plugin-manager`` depuis la"
+" ligne de commande :"
+
+#: ../../docs/server_manual/plugins.rst:92
+msgid ""
+"We suggest you to read the full documentation in the `readme file "
+"<https://github.com/3liz/qgis-plugin-manager/blob/master/README.md>`_ to "
+"know how to install or upgrade plugins with this tool."
+msgstr ""
+"Nous vous suggérons de lire la `documentation complète "
+"<https://github.com/3liz/qgis-plugin-manager/blob/master/README.md>`_ afin "
+"de mieux cerner comment installer et mettre à jour les extensions avec cet "
+"outil."
 
 #: ../../docs/server_manual/plugins.rst:97
 msgid "HTTP Server configuration"
@@ -63,6 +110,16 @@ msgstr "Configuration d'un serveur HTTP"
 #: ../../docs/server_manual/plugins.rst:100
 msgid "Apache"
 msgstr ""
+
+#: ../../docs/server_manual/plugins.rst:102
+msgid ""
+"To be able to use server plugins, FastCGI needs to know where to look. So, "
+"we have to modify the Apache configuration file to indicate the "
+"``QGIS_PLUGINPATH`` environment variable to FastCGI:"
+msgstr ""
+"Pour être en mesure d'utiliser une extension serveur, FastCGI doit savoir où"
+" chercher. Donc, nous devons modifier le fichier de configuration Apache "
+"pour renseigner la variable d'environnement ``QGIS_PLUGINPATH`` à FastCGI :"
 
 #: ../../docs/server_manual/plugins.rst:110
 msgid ""

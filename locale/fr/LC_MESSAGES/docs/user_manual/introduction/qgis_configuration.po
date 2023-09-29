@@ -221,7 +221,7 @@ msgid ""
 "can be 'default', 'Night Mapping', or 'Blend of Gray'"
 msgstr ""
 "Définir le :guilabel:`Thème UI (Redémarrage de QGIS nécessaire)` "
-"|selectString|. Les choix possibles sont : 'default', 'Night Mapping', ou "
+"|selectString|. Les choix possibles sont : 'défaul', 'Night Mapping', ou "
 "'Blend of Gray'"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2483
@@ -774,6 +774,31 @@ msgstr ""
 "d'actifs ou autres champs d'application où les imprécisions "
 "métriques/submétriques sont potentiellement très dangereuses ou coûteuses !"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:306
+msgid ""
+"|unchecked| :guilabel:`Planimetric measurements`: sets the default for the "
+":ref:`planimetric measurements <measurements_ellipsoid>` property for newly "
+"created projects."
+msgstr ""
+"|unchecked| :guilabel:`Mesures planimétriques` : établit par défaut des "
+":ref:`mesures planimétriques<measurements_ellipsoid>` pour tout nouveau "
+"projet créé."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:314
+msgid "Coordinate Transforms"
+msgstr "Transformation de coordonnées"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:316
+msgid ""
+"The |transformation| :guilabel:`Coordinate Transforms` tab helps you set "
+"coordinate transformations and operations to apply when loading a layer to a"
+" project or reprojecting a layer."
+msgstr ""
+"L'onglet |transformation| :guilabel:`Transformations de coordonnées` vous "
+"aide à définir les transformations de coordonnées et les opérations à "
+"appliquer lors du chargement d'une couche dans un projet ou de la "
+"reprojection d'une couche."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2501
 msgid "transformation"
 msgstr ""
@@ -781,6 +806,17 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:325
 msgid "Transformations settings"
 msgstr "Paramètres de transformation"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:327
+msgid "**Default Datum Transformations**"
+msgstr "**Transformations géodésiques par défaut**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:329
+msgid ""
+"Here you can control whether reprojecting layers to another CRS should be:"
+msgstr ""
+"Ici, vous pouvez contrôler si la reprojection des couches vers un autre SCR "
+"doit être effectuée :"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:331
 msgid "automatically processed using QGIS default transformations settings;"
@@ -808,9 +844,24 @@ msgstr ""
 "une liste prédéfinie de transformations de système géodésique à appliquer "
 "par défaut. Voir :ref:`datum_transformation` pour plus de détails."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:339
+msgid ""
+"You can |symbologyAdd| :sup:`Add`, |symbologyRemove| :sup:`Remove` or "
+"|toggleEditing| :sup:`Edit` transformations, which will be used in any newly"
+" created project."
+msgstr ""
+"Vous pouvez |symbologyAdd| :sup:`Ajouter`, |symbologyRemove| "
+":sup:`Supprimer` ou |toggleEditing| :sup:`Éditer` les transformations, qui "
+"seront utilisées dans tout nouveau projet."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2499
 msgid "toggleEditing"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:345
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:355
+msgid "User Defined CRS"
+msgstr "SCR défini par l'utilisateur"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:360
 msgid "**Definition**"
@@ -836,13 +887,28 @@ msgstr "|editCopy| Copier les paramètres d'un SCR existant."
 msgid "editCopy"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:368
+msgid ":guilabel:`Validate` tests if your expression is correct."
+msgstr ":guilabel:`Valider` teste si votre expression est correcte."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:370
 msgid "**Test**"
 msgstr "**Test**"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:379
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:386
+msgid "Data Sources settings"
+msgstr "Sources de données"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:389
 msgid "**Feature attributes and table**"
 msgstr "**Attributs et tables**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:391
+msgid "|checkbox| :guilabel:`Open attribute table as docked window`"
+msgstr ""
+"|checkbox| :guilabel:`Ouvrir la table attributaire dans une fenêtre "
+"intégrée`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:392
 msgid ""
@@ -959,6 +1025,22 @@ msgstr ""
 "sélection du fichier. Les options sont  : 'Nom', 'Scan Basique' et  'Scan "
 "complet'."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:431
+msgid ""
+":guilabel:`Prompt for sublayers when opening`. Some rasters support "
+"sublayers --- they are called subdatasets in GDAL. An example is netCDF "
+"files --- if there are many netCDF variables, GDAL sees every variable as a "
+"subdataset. The option allows you to control how to deal with sublayers when"
+" a file with sublayers is opened. You have the following choices:"
+msgstr ""
+":guilabel:`Demander à l'ouverture s'il y a des sous-couches`. Certains "
+"rasters comportent des sous-couches - appelées sous-jeux de données dans "
+"GDAL. Par exemple les fichiers netCDF - s'il y a de nombreuses variables "
+"netCDF, GDAL considérera chaque variable comme un sous-jeu de données. "
+"L'option vous permet de choisir comment traiter les sous-jeux de données "
+"quand un fichier avec des sous-couches est ouvert. Vous avez les choix "
+"suivants :"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:437
 msgid "‘Always’: Always ask (if there are existing sublayers)"
 msgstr "'Toujours' : Demande toujours (s'il existe des sous-couches)"
@@ -977,6 +1059,10 @@ msgstr "'Jamais' : Ne demande jamais, mais ne charge rien"
 msgid "‘Load all’: Never prompt, but load all sublayers"
 msgstr ""
 "'Charger tout' : Ne demande jamais, mais charge toutes les sous-couches"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:446
+msgid "**Localized data paths**"
+msgstr "**Chemin de données traduites**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:448
 msgid ""
@@ -1002,6 +1088,10 @@ msgid ""
 msgstr ""
 "Les chemins sont listés par ordre de préférence, en d'autres termes, QGIS "
 "cherchera un fichier d'abord dans le premier chemin puis le second, etc."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:457
+msgid "**Hidden browser paths**"
+msgstr "**Dossiers cachés de l'explorateur**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:459
 msgid ""
@@ -1030,6 +1120,14 @@ msgstr ""
 "pour lire et (souvent) écrire des données dans ces différents formats. "
 "L'onglet :guilabel:`GDAL` liste les pilotes pour les formats raster et "
 "vecteurs avec leurs capacités."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:476
+msgid "**GDAL raster and vector drivers**"
+msgstr "**Pilotes rasters et vecteurs de GDAL**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:487
+msgid "GDAL Settings - Raster drivers"
+msgstr "Paramètres de GDAL - Pilotes Raster"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:489
 msgid ""
@@ -1122,6 +1220,10 @@ msgstr ""
 msgid ":guilabel:`Edit Pyramids Options`"
 msgstr ":guilabel:`Modifier les options de pyramides`"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:537
+msgid "Sample of pyramids profile"
+msgstr "Exemple de profil de pyramides"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:544
 msgid "Rendering Settings"
 msgstr "Rendu"
@@ -1129,6 +1231,14 @@ msgstr "Rendu"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2471
 msgid "rendering"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:554
+msgid "Rendering settings"
+msgstr "Rendu"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:556
+msgid "**Rendering Behavior**"
+msgstr "**Comportement du rendu**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:558
 msgid ""
@@ -1141,6 +1251,25 @@ msgstr ""
 " : Décocher cette option peut être pratique lors du chargement de plusieurs "
 "couches pour éviter que chaque nouvelle couche ne soit restituée sur la "
 "carte et ralentisse le processus."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:562
+msgid ""
+"The map canvas renders in the background onto a separate image and at each "
+":guilabel:`Map update interval` (defaults to 250 ms), the content from this "
+"(off-screen) image will be taken to update the visible screen "
+"representation. However, if rendering finishes faster than this duration, it"
+" will be shown instantaneously."
+msgstr ""
+"Le rendu cartographique est calculé en arrière-plan sur une image distincte "
+"et à chaque |checkbox| :guilabel:`Délai de rafraîchissement de la carte` "
+"(par défaut, 250 ms), le contenu (hors écran) de l'image est utilisé pour "
+"mettre à jour la représentation visible. Si le rendu se termine plus "
+"rapidement que cette durée, il sera affiché instantanément."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:567
+msgid ":guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)"
+msgstr ""
+":guilabel:`Niveau d'agrandissement` (voir :ref:`agrandissement <magnifier>`)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:569
 msgid "**Rendering Quality**"
@@ -1194,6 +1323,14 @@ msgstr ""
 "fournisseur (PostGIS, Oracle...) et contrairement à la simplification "
 "locale, les calculs basés sur la géométrie peuvent être affectés."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:605
+msgid ""
+":guilabel:`Maximum scale at which the layer should be simplified (1:1 always"
+" simplifies)`"
+msgstr ""
+":guilabel:`Échelle maximale à partir de laquelle la couche doit être "
+"simplifiée (1:1 simplifie toujours)`"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:608
 msgid ""
 "Besides the global setting, feature simplification can be set for any "
@@ -1203,6 +1340,10 @@ msgstr ""
 "En plus des Options de configuration de QGIS, les entités peuvent être "
 "simplifiées pour chaque couche depuis l'onglet :menuselection:`Propriétés de"
 " la couche --> Rendu` ."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:611
+msgid ":guilabel:`Curve Segmentation`"
+msgstr ":guilabel:`Segmentation de courbe`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:613
 msgid ""
@@ -1236,6 +1377,10 @@ msgstr "Rendu de raster"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2467
 msgid "raster"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:635
+msgid "Under :guilabel:`Bands and Resampling`:"
+msgstr "Dans :guilabel:`Bandes et Rééchantillonnage` :"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:637
 msgid ""
@@ -1324,6 +1469,17 @@ msgstr ""
 ":guilabel:`Double click dans la légende` |selectString|. Vous pouvez soit "
 "'Ouvrir les propriétés de la couche' soit 'Ouvrir la table attributaire' ou "
 "'Ouvrir le panneau de style de couche' ."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:696
+msgid ""
+"|unchecked| :guilabel:`Display classification attribute names` in the Layers"
+" panel, e.g. when applying a categorized or rule-based renderer (see "
+":ref:`vector_style_menu` for more information)."
+msgstr ""
+"|unchecked| :guilabel:`Afficher les attributs de classification dans le "
+"titre des couches` dans le panneau des couches , notamment pour la "
+"symbologie catégorisée ou basée sur des règles (voir "
+":ref:`vector_style_menu` pour plus d'informations)."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:699
 msgid "the :guilabel:`WMS getLegendGraphic Resolution`"
@@ -1453,6 +1609,10 @@ msgstr ""
 msgid "**Coordinate and Bearing Display**"
 msgstr "**Affichage des coordonnées et des angles**"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:768
+msgid "This section provides ways to :guilabel:`Configure`:"
+msgstr "Cette section offre des moyens de :guilabel:`Configurer` :"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2433
 msgid "identify"
 msgstr ""
@@ -1573,6 +1733,15 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`Activer l'accrochage par défaut` active l'accrochage "
 "lors de l'ouverture d'un projet"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:841
+msgid ""
+"Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Segment', "
+"'Centroid', 'Middle of segments', Line endpoints', 'Area')"
+msgstr ""
+"Définir le :guilabel:`Mode d'accrochage par défaut` |selectString| "
+"('Sommet', 'Segment', 'Centroïde', 'Milieu de segments', 'Extrémités de "
+"ligne', 'Surface')"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:843
 msgid "Define :guilabel:`Default snapping tolerance` in map units or pixels"
@@ -1696,6 +1865,16 @@ msgstr "Paramètres 3D"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2405
 msgid "3d"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:895
+msgid ":guilabel:`Projection type`: allowing to view the 3D scene in a:"
+msgstr ""
+":guilabel:`Type de projection type`: permettant de visualiser la scène 3D "
+"dans :"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:909
+msgid ":guilabel:`Walk mode (first person)`"
+msgstr ":guilabel:`Mode marche (première personne)`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:911
 msgid ""
@@ -1857,6 +2036,11 @@ msgstr ""
 msgid "**Grid appearance**"
 msgstr "**Apparence de la grille**"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1017
+msgid "Define the :guilabel:`Grid style` ('Solid', 'Dots', 'Crosses')"
+msgstr ""
+"Définir le :guilabel:`Style de la grille` ('Continu', 'Pointillés', 'Croix')"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1018
 msgid "Define the :guilabel:`Grid color`"
 msgstr "Définir la :guilabel:`Couleur de la grille`"
@@ -1864,6 +2048,18 @@ msgstr "Définir la :guilabel:`Couleur de la grille`"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1020
 msgid "**Grid and guide defaults**"
 msgstr "**Grille et guide par défaut**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1022
+msgid "Define the :guilabel:`Grid spacing`"
+msgstr "Définir l':guilabel:`Espacement de la grille`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1023
+msgid "Define the :guilabel:`Grid offset` for X and Y"
+msgstr "Définir le :guilabel:`Décalage de la grille` en X et Y"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1024
+msgid "Define the :guilabel:`Snap tolerance`"
+msgstr "Définir la :guilabel:`Tolérance d'accrochage`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1027
 msgid "**Layout Paths**"
@@ -1877,6 +2073,11 @@ msgstr ""
 "Définit le(s) :guilabel:`Chemin(s) de recherche des modèles d'impression "
 "supplémentaires` : la liste des dossiers contenant des modèles à utiliser "
 "lors de la création de nouvelles mises en page ."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1037
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1056
+msgid "Variables settings"
+msgstr "Les Variables"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1039
 msgid ""
@@ -2093,6 +2294,22 @@ msgstr "Pour chaque appareil :"
 msgid "you provide a :guilabel:`Device name`"
 msgstr "vous indiquez un :guilabel:`Nom de l'appareil`"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1199
+msgid ""
+"Read the GPSBabel manual for the command line options that may be specific "
+"to your use case."
+msgstr ""
+"Pensez à consulter le manuel de GPSBabel sur les options de ligne de "
+"commande qui pourraient être spécifiques à votre cas."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1201
+msgid ""
+"Once you have created a new device type, it will appear in the device lists "
+"for the GPS download and upload algorithms."
+msgstr ""
+"Une fois le nouveau type de périphérique créé, celui-ci apparaîtra dans les "
+"listes de périphériques des outils de téléchargement et d'upload GPS."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1207
 msgid "GPS Babel settings"
 msgstr "GPS Babel"
@@ -2119,6 +2336,19 @@ msgstr ""
 msgid "search"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1229
+msgid ""
+":guilabel:`Project Layers` (``l``): finds and selects a layer in the "
+":guilabel:`Layers` panel."
+msgstr ""
+":guilabel:`Couches du projet` (``l``) : trouve et sélectionne une couche "
+"dans le panneau :guilabel:`Couches`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1231
+msgid ":guilabel:`Project Layouts` (``pl``): finds and opens a print layout."
+msgstr ""
+":guilabel:`Mises en pages` (``pl``) : trouve et ouvre une mise en page."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1232
 msgid ""
 "Actions (``.``): finds and executes a QGIS action; actions can be any tool "
@@ -2127,9 +2357,100 @@ msgstr ""
 "Actions (``.``) : trouve et exécute une action QGIS ; les actions peuvent "
 "représenter tout outil ou menu de QGIS, ouvrir un panneau..."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1234
+msgid ""
+":guilabel:`Active Layer Features` (``f``): searches for matching attributes "
+"in any field from the current active layer and zooms to the selected "
+"feature. Press |settings| to configure the maximum number of results."
+msgstr ""
+":guilabel:`Entités de la couche active` (``f``) : recherche les attributs "
+"correspondants dans n'importe quel champ de la couche active et effectue un "
+"zoom sur l'élément sélectionné. Cliquez sur |settings| pour configurer le "
+"nombre maximal de résultats."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2485
 msgid "settings"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1237
+msgid ""
+":guilabel:`Features in All Layers` (``af``): searches for matching "
+"attributes in the :ref:`display name <maptips>` of each :ref:`searchable "
+"layers <project_layer_capabilities>` and zooms to the selected feature. "
+"Press |settings| to configure the maximum number of results and the maximum "
+"number of results per layer."
+msgstr ""
+":guilabel:`Entités de toutes les couches` (``af``) : recherche l'information"
+" dans les attributs définis comme :ref:`nom d'affichage <maptips>` pour "
+"chacune des :ref:`couches interrogeables <project_layer_capabilities>` et "
+"zoome sur l'entité sélectionnée. Cliquez sur |settings| pour configurer le "
+"nombre maximal de résultats et le nombre maximal de résultats par couche."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1242
+msgid ""
+":guilabel:`Calculator` (``=``): allows evaluation of any QGIS expression "
+"and, if valid, gives an option to copy the result to the clipboard."
+msgstr ""
+":guilabel:`Calculatrice` (``=``) : permet d'évaluer n'importe quelle "
+"expression QGIS et si elle est valide, le résultat peut être copié dans le "
+"presse-papier."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1244
+msgid ""
+":guilabel:`Spatial Bookmarks` (``b``): finds and zooms to the bookmark "
+"extent."
+msgstr ""
+":guilabel:`Signets spatiaux` (``b``) : trouve et zoome sur l'étendue du "
+"signet."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1245
+msgid ""
+":guilabel:`Settings` (``set``): browses and opens project and application-"
+"wide properties dialogs."
+msgstr ""
+":guilabel:`Options` (``set``) : affiche et ouvre des fenêtres de propriétés "
+"pour l'ensemble du projet et des options de QGIS."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1247
+msgid ""
+":guilabel:`Go to Coordinate` (``go``): pans the map canvas to a location "
+"defined by a comma or space separated pair of x and y coordinates or a "
+"formatted URL (e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...). "
+"The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS."
+msgstr ""
+":guilabel:`Aller aux coordonnées` (``go``) : déplace le canevas de la carte "
+"vers un emplacement défini par une paire de coordonnées x et y séparées par "
+"des virgules ou des espaces, ou par une URL formatée (par exemple, "
+"OpenStreetMap, Leaflet, OpenLayer, Google Maps ...). Les coordonnées doivent"
+" être exprimées en WGS 84 (``epsg:4326``) ou dans le SCR du canevas de "
+"carte."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1251
+msgid ""
+":guilabel:`Nominatim Geocoder` (``>``): geocodes using the `Nominatim "
+"<https://nominatim.org>`_ geocoding service of the OpenStreetMap Foundation."
+msgstr ""
+":guilabel:`Géocodeur Nominatim` (``>``): geocode à l'aide du service de "
+"géocodage `Nominatim <https://nominatim.org>`_ de la Fondation "
+"OpenStreetMap."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1253
+msgid ""
+"Processing Algorithms (``a``): searches and opens a Processing algorithm "
+"dialog."
+msgstr ""
+"Algorithmes de traitements (``a``) : cherche et ouvre la fenêtre d'un "
+"algorithme de traitements."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1254
+msgid ""
+":guilabel:`Edit Selected Features` (``ef``): gives quick access and runs a "
+"compatible :ref:`modify-in-place <processing_inplace_edit>` Processing "
+"algorithm on the active layer."
+msgstr ""
+":guilabel:`Modifier les entités sélectionnées` (``ef``) : vous donne un "
+"accès rapide et lance un algorithme de traitement compatible avec la "
+":ref:`modification sur place <processing_inplace_edit>` de la couche active."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1258
 msgid "In the dialog, you can:"
@@ -2196,6 +2517,11 @@ msgstr ""
 "avoir besoin d'installer des bibliothèques complémentaires pour activer "
 "l'accélération OpenCL?"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1294
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1305
+msgid "Code Editor settings"
+msgstr "Éditeur de code"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1296
 msgid ""
 "In the |codeEditor| :guilabel:`Code Editor` tab, you can control the "
@@ -2222,6 +2548,15 @@ msgstr ""
 "expression, HTML, SQL, JavaScript). Un moyen pratique d'ajuster les "
 "paramètres."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1311
+msgid ""
+"Check |unchecked| :guilabel:`Override Code Editor Font` to modify the "
+"default :guilabel:`Font` family and :guilabel:`Size`."
+msgstr ""
+"Cochez |unchecked| :guilabel:`Forcer la police de l'éditeur de code` pour "
+"modifier la famille de :guilabel:`Police` et la :guilabel:`Taille` par "
+"défaut."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1314
 msgid "Under the :guilabel:`Colors` group, you can:"
 msgstr "Dans les paramètres de :guilabel:`Couleurs` vous pouvez :"
@@ -2246,6 +2581,11 @@ msgstr ""
 "changer la :ref:`color <color_widget>` de chaque élément dans l'écriture du "
 "code, comme les couleurs à utiliser pour les commentaires, les guillemets, "
 "les fonctions, le fond, ..."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1327
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1344
+msgid "Python Console settings"
+msgstr "Console Python"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1329
 msgid ""
@@ -2324,6 +2664,14 @@ msgstr ""
 msgid "under :guilabel:`Run and Debug`"
 msgstr "dans :guilabel:`Exécuter et débugger`"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1363
+msgid ""
+"|unchecked| :guilabel:`Enable Object Inspector (switching between tabs may "
+"be slow)`"
+msgstr ""
+"|unchecked| :guilabel:`Activer l'inspecteur d'objets (le passage d'un onglet"
+" à l'autre peut être lent)`"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1365
 msgid ""
 "|unchecked| :guilabel:`Auto-save script before running`: Saves the script "
@@ -2365,6 +2713,11 @@ msgstr ""
 "un fichier API préparé, vous devez charger au moins un fichier ``* .api`` "
 "puis le compiler en cliquant sur le bouton :guilabel:`Compiler les APIs...`."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1387
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1403
+msgid "Processing settings"
+msgstr "Traitement"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1389
 msgid ""
 "The |processingAlgorithm| :guilabel:`Processing` tab provides you with "
@@ -2379,6 +2732,11 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2461
 msgid "processingAlgorithm"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1409
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1416
+msgid "Advanced settings"
+msgstr "Paramètres avancés"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1418
 msgid ""
@@ -2745,6 +3103,26 @@ msgstr ""
 msgid "Default unit shown in measure dialog"
 msgstr "Unité par défaut affichée dans la fenêtre de mesure"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1577
+msgid "Available parameters are:"
+msgstr "Les paramètres disponibles sont :"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1579
+msgid ":guilabel:`Display coordinates using` either:"
+msgstr ":guilabel:`Afficher les coordonnées en utilisant` soit :"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1581
+msgid "``Map Units``, based on the project CRS"
+msgstr "les ``Unités de carte``, basées sur le SCR du projet"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1584
+msgid ""
+"or ``Custom Projection Units``: allows to rely on any CRS you desire for "
+"coordinates display"
+msgstr ""
+"ou les ``Unités de projection personnalisée`` : permet de s'appuyer sur "
+"n'importe quel SCR pour l'affichage des coordonnées"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1594
 msgid "|unchecked| :guilabel:`Show trailing zeros`"
 msgstr "|unchecked| :guilabel:`Montrer les zéros de fin`."
@@ -2760,6 +3138,14 @@ msgstr "Onglet Metadonnées"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2419
 msgid "editMetadata"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1626
+msgid "View Settings"
+msgstr "Paramètres de vue"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1633
+msgid "View Settings tab of the Project Properties dialog"
+msgstr "Onglet Vue de la fenêtre Propriétés du projet"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2457
 msgid "overlay"
@@ -2827,9 +3213,17 @@ msgstr ""
 "Comme toujours, ces paramètres remplacent tous les paramètres globaux "
 "correspondants. Voir :ref:`datum_transformation` pour plus de détails."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1678
+msgid "Styles Properties"
+msgstr "Propriétés de style"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2489
 msgid "symbology"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1692
+msgid "In the :guilabel:`Options` group, you can:"
+msgstr "Dans le groupe :guilabel:`Options`, vous pouvez :"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1694
 msgid "Apply a default :guilabel:`Opacity` to new layers"
@@ -2924,9 +3318,30 @@ msgstr ""
 msgid "Data Sources Properties"
 msgstr "Onglet sources de données"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1744
+msgid "In the |openTable| :guilabel:`Data Sources` tab, you can:"
+msgstr ""
+"Dans l'onglet |openTable| :guilabel:`Sources de données`, vous pouvez :"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2451
 msgid "openTable"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1746
+msgid ""
+":guilabel:`Transaction mode`: define how edits are sent to the data "
+"provider```"
+msgstr ""
+":guilabel:`Mode de transaction` définit comment les modifications sont "
+"envoyées au fournisseur de données:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1761
+msgid ""
+"Note that you can change this option only if no layer is being edited in the"
+" project."
+msgstr ""
+"A noter que vous ne pouvez modifier ce paramètre que si aucune couche n'est "
+"en édition dans le projet."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1763
 msgid ""
@@ -3076,9 +3491,17 @@ msgstr "Onglet Macros"
 msgid "action"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1868
+msgid "Macro settings"
+msgstr "Macros"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1871
 msgid "QGIS Server Properties"
 msgstr "Onglet QGIS Server"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1884
+msgid "QGIS Server settings"
+msgstr "QGIS Server"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1890
 msgid "Temporal Properties"
@@ -3088,9 +3511,43 @@ msgstr "Onglet Temporel"
 msgid "temporal"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1910
+msgid "Terrain Properties"
+msgstr "Propriétés de terrain"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2443
 msgid "layoutItem3DMap"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1927
+msgid "Terrain and elevation options are available for:"
+msgstr "Les options de terrain et d'élévation sont disponibles pour :"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1929
+msgid ":guilabel:`Flat terrain` with :guilabel:`Terrain height` setting"
+msgstr ""
+":guilabel:`Terrain plat`, avec le paramètre de :guilabel:`Hauteur de "
+"terrain`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1930
+msgid ""
+":guilabel:`DEM (Raster Layer)`: with setting for defining the "
+":guilabel:`Raster layer`, a :guilabel:`Vertical scale` factor to apply to "
+"band values and a vertical :guilabel:`Offset`"
+msgstr ""
+":guilabel:`MNT (Couche raster)`: avec un paramètre pour indiquer la "
+":guilabel:`Couche raster`, un facteur d':guilabel:`Échelle verticale` à "
+"appliquer aux valeurs de bandes et un :guilabel:`Décalage` vertical"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1933
+msgid ""
+":guilabel:`Mesh`: with setting for defining the :guilabel:`Mesh layer`, a "
+":guilabel:`Vertical scale` factor to apply to vertices Z value and a "
+"vertical :guilabel:`Offset`"
+msgstr ""
+":guilabel:`Maillage`: avec un paramètre pour indiquer la :guilabel:`Couche "
+"de maillage`, un facteur d':guilabel:`Échelle verticale` à appliquer aux "
+"valeurs Z des sommets et un :guilabel:`Décalage` vertical"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1945
 msgid "Customization"
@@ -3536,6 +3993,14 @@ msgstr ""
 "La variable d'environnement correspondante est "
 "``QGIS_GLOBAL_SETTINGS_FILE``."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2221
+msgid "path specified by the commandline parameter"
+msgstr "chemin spécifié par le paramètre en ligne de commande"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2222
+msgid "path defined by the environment variable"
+msgstr "chemin défini par la variable d'environnement"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2228
 msgid "|nix| :file:`$HOME/.local/share/QGIS/QGIS3/`"
 msgstr ""
@@ -3547,6 +4012,14 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2230
 msgid "|osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2231
+msgid ""
+"the installation directory, i.e. "
+":file:`your_QGIS_package_path/resources/qgis_global_settings.ini`."
+msgstr ""
+"le dossier d'installation, c'est-à-dire. "
+":file:`chemin_du_paquet_QGIS/resources/qgis_global_settings.ini`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2233
 msgid ""

@@ -29,6 +29,12 @@ msgstr ""
 msgid "Modeler tools"
 msgstr "モデラーツール"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:6
+msgid ""
+"These tools are only available in the model designer. They are not available"
+" in the Processing Toolbox."
+msgstr "これらのツールは、モデルデザイナーでのみ利用可能です。プロセシングツールボックスでは使用できません。"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:19
 msgid "Conditional branch"
 msgstr "条件分け"
@@ -239,7 +245,7 @@ msgstr "Python コード"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:53
 msgid "**Algorithm ID**: ``native:condition``"
-msgstr "**アルゴリズムID**: ``native:condition``"
+msgstr "**Algorithm ID**: ``native:condition``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -348,6 +354,10 @@ msgstr "**出力とフィルタ**"
 msgid "(one or more)"
 msgstr "（ひとつ以上）"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:139
+msgid "``OUTPUT_<name of the filter>``"
+msgstr "``OUTPUT_<name of the filter>``"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:140
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:158
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:269
@@ -412,6 +422,10 @@ msgstr ""
 msgid "[vector]"
 msgstr "[ベクタ]"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:212
+msgid "A Vector Layer of the input, if compatible"
+msgstr "互換性のある、入力のベクタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:213
 msgid "**Raster layer**"
 msgstr "**ラスタレイヤ**"
@@ -423,6 +437,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:217
 msgid "[raster]"
 msgstr "[ラスタ]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:218
+msgid "A Raster Layer of the input, if compatible"
+msgstr "互換性のある、入力のラスタレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:223
 msgid "**Algorithm ID**: ``native:filterlayersbytype``"
@@ -522,7 +540,7 @@ msgstr "ログパネルのメッセージ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:322
 msgid "**Algorithm ID**: ``native:raiseexception``"
-msgstr "**アルゴリズムID**: ``native:raiseexception``"
+msgstr "**Algorithm ID**: ``native:raiseexception``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:332
 msgid "Raise message"
@@ -567,7 +585,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:418
 msgid "**Algorithm ID**: ``native:raisewarning``"
-msgstr "**アルゴリズムID**: ``native:raisewarning``"
+msgstr "**Algorithm ID**: ``native:raisewarning``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:428
 msgid "Rename layer"
@@ -595,7 +613,7 @@ msgstr "（名前を変更された）結果のレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:470
 msgid "**Algorithm ID**: ``native:renamelayer``"
-msgstr "**アルゴリズムID**: ``native:renamelayer``"
+msgstr "**Algorithm ID**: ``native:renamelayer``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:480
 msgid "Save log to file"
@@ -637,7 +655,7 @@ msgstr "ログの保存先"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:521
 msgid "**Algorithm ID**: ``native:savelog``"
-msgstr "**アルゴリズムID**: ``native:savelog``"
+msgstr "**Algorithm ID**: ``native:savelog``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:530
 msgid "Set project variable"
@@ -669,7 +687,7 @@ msgstr "格納される値"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:561
 msgid "**Algorithm ID**: ``native:setprojectvariable``"
-msgstr "**アルゴリズムID**: ``native:setprojectvariable``"
+msgstr "**Algorithm ID**: ``native:setprojectvariable``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:571
 msgid "String concatenation"
@@ -719,6 +737,22 @@ msgstr "連結された文字列"
 msgid "**Algorithm ID**: ``native:stringconcatenation``"
 msgstr "**Algorithm ID**: ``native:stringconcatenation``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:625
+msgid ""
+"This algorithm is deprecated and can be removed anytime. Prefer using "
+":ref:`qgisbuffer` algorithm instead."
+msgstr "このアルゴリズムは非推奨です。代わりに :ref:`qgisbuffer` アルゴリズムを使用してください。"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:628
+msgid "Computes a buffer area for all the features in an input layer."
+msgstr "入力レイヤにある全ての地物のバッファ領域を計算します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:630
+msgid ""
+"The size of the buffer for a given feature is defined by an attribute, so it"
+" allows different features to have different buffer sizes."
+msgstr "与えられた地物のバッファサイズは属性で定義されるため、異なる地物が異なるバッファサイズを持つことができます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:634
 msgid ":ref:`qgisbuffer`"
 msgstr ""
@@ -748,6 +782,10 @@ msgstr ""
 msgid "[number]"
 msgstr "[数値]"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:660
+msgid "Default: *5*"
+msgstr "デフォルト: *5*"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:661
 msgid ""
 "Controls the number of line segments to use to approximate a quarter circle "
@@ -766,6 +804,10 @@ msgstr ""
 msgid "[boolean]"
 msgstr "[ブール値]"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:667
+msgid "Default: *False*"
+msgstr "デフォルト: *False*"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:675
 msgid "**End cap style**"
 msgstr "**線端スタイル**"
@@ -779,6 +821,11 @@ msgstr ""
 msgid "[enumeration]"
 msgstr "[列挙型]"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:679
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:690
+msgid "Default: Round"
+msgstr "デフォルト: Round"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:685
 msgid "Round, flat and square cap styles"
 msgstr "Round、flat、squareの線端スタイル"
@@ -790,6 +837,12 @@ msgstr "**継ぎ目スタイル**"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:687
 msgid "``JOIN_STYLE``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:691
+msgid ""
+"Specifies whether round, miter or beveled joins should be used when "
+"offsetting corners in a line."
+msgstr "ライン内の角をオフセットする際に、Round、Miter、Beveledのいずれの結合を使用するかを指定します。"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:693
 msgid "**Miter limit**"
@@ -816,6 +869,10 @@ msgstr "**出力レイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:715
 msgid "[vector: polygon]"
 msgstr "[ベクタ：ポリゴン]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:716
+msgid "Buffer polygon vector layer."
+msgstr "バッファポリゴンベクタレイヤ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:721
 msgid "**Algorithm ID**: ``qgis:variabledistancebuffer``"
