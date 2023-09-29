@@ -149,6 +149,16 @@ To create a profile view, you can:
 #. The next step is to configure the elevation properties of the layers you want to visualize.
 
    #. Push on the |layerTree| :sup:`Show Layer Tree` button to display the list of layers.
+      By default, not all the layers of the project are loaded and referenced in the profile tool;
+      e.g., raster layers which are not marked as having elevation data in their properties are ignored.
+      Clicking the |addLayer| :sup:`Add layers` button will show a filtered list of possible layers
+      which can be added to the plot, but which currently aren't in the plot.
+      Applying the dialog with selected layers will automatically mark them as having elevation data
+      and immediately add them to the plot.
+
+      .. tip:: Holding :kbd:`Ctrl` key, it is possible to drag and drop additional layers
+        from the main layer tree to one in the elevation profile tool.
+
    #. Toggle visibility of the layers you are interested in.
       These are the only ones rendered in the profile view
       and selected layers can be different from the main :guilabel:`Layers` panel's.
@@ -236,6 +246,8 @@ For more details, give a look to `QGIS elevation profile/cross section tool -- a
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addLayer| image:: /static/common/mActionAddLayer.png
+   :width: 1.5em
 .. |arrowLeft| image:: /static/common/mActionArrowLeft.png
    :width: 1.2em
 .. |arrowRight| image:: /static/common/mActionArrowRight.png
@@ -273,6 +285,4 @@ For more details, give a look to `QGIS elevation profile/cross section tool -- a
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomInXAxis| image:: /static/common/mActionZoomInXAxis.png
-   :width: 1.5em
-.. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
