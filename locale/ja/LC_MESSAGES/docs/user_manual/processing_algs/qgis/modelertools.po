@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-06 06:24+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +27,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:2
 msgid "Modeler tools"
-msgstr "モデラツール"
+msgstr "モデラーツール"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:19
 msgid "Conditional branch"
@@ -264,6 +265,10 @@ msgid ""
 msgstr ""
 "ファイルシステム上に新しいディレクトリを作成します。ディレクトリは再帰的に作成され、指定された完全なディレクトリパスを構築するために、必要なすべての親ディレクトリを作成します。ディレクトリがすでに存在する場合は、エラーは発生しません。"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:80
+msgid "**Directory path**"
+msgstr "**ディレクトリパス**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:81
 msgid "``PATH``"
 msgstr ""
@@ -289,6 +294,28 @@ msgstr ""
 msgid "[folder]"
 msgstr "[フォルダ]"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:99
+msgid "Created folder"
+msgstr "作成されたフォルダ"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:104
+msgid "**Algorithm ID**: ``native:createdirectory``"
+msgstr "**Algorithm ID**: ``native:createdirectory``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:114
+msgid "Feature filter"
+msgstr "地物フィルタ"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:115
+msgid ""
+"Filters features from the input layer and redirects them to one or several "
+"outputs. If you do not know about any attribute names that are common to all"
+" possible input layers, filtering is only possible on the feature geometry "
+"and general record mechanisms, such as ``$id`` and ``uuid``."
+msgstr ""
+"入力レイヤの地物をフィルタし、ひとつ又は複数の出力にリダイレクトします。すべての入力レイヤに共通する属性名を知らない場合は、地物ジオメトリと "
+"``$id`` や ``uuid`` などの一般的なレコードメカニズムでのみフィルタリングが可能です。"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:132
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:190
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:648
@@ -312,6 +339,15 @@ msgstr "[ベクタ：任意]"
 msgid "The input layer."
 msgstr "入力レイヤ"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:136
+msgid "**Outputs and filters**"
+msgstr "**出力とフィルタ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:138
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:156
+msgid "(one or more)"
+msgstr "（ひとつ以上）"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:140
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:158
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:269
@@ -319,11 +355,42 @@ msgstr "入力レイヤ"
 msgid "[same as input]"
 msgstr "[入力レイヤと同じ]"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:141
+msgid "The output layers with filters (as many as there are filters)."
+msgstr "フィルタと出力レイヤと（フィルタの数だけ）。"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:157
+msgid "``native:filter_1:OUTPUT_<name of filter>``"
+msgstr "``native:filter_1:OUTPUT_<name of filter>``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:159
+msgid ""
+"The output layers with filtered features (as many as there are filters)."
+msgstr "フィルタリングされた地物を持つ出力レイヤ（フィルタの数だけ）。"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:165
+msgid "**Algorithm ID**: ``native:filter``"
+msgstr "**Algorithm ID**: ``native:filter``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:175
+msgid "Filter layers by type"
+msgstr "型によるフィルタ"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:176
+msgid ""
+"Filters layers by their type. Incoming layers will be directed to different "
+"outputs based on whether they are a vector or raster layer."
+msgstr "レイヤを型によってフィルタします。入力されたレイヤーは、ベクタレイヤかラスタレイヤかによって異なる出力に向けられます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:192
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:249
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:444
 msgid "[layer]"
 msgstr "[レイヤ]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:193
+msgid "Generic Map Layer"
+msgstr "汎用マップレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:207
 msgid "**Vector features**"
@@ -356,6 +423,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:217
 msgid "[raster]"
 msgstr "[ラスタ]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:223
+msgid "**Algorithm ID**: ``native:filterlayersbytype``"
+msgstr "**Algorithm ID**: ``native:filterlayersbytype``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:233
 msgid "Load layer into project"
@@ -394,6 +465,10 @@ msgstr "読み込んだレイヤの名前"
 msgid "The (renamed) loaded layer"
 msgstr "読み込まれ（て名前を変更され）たレイヤ"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:275
+msgid "**Algorithm ID**: ``native:loadlayer``"
+msgstr "**Algorithm ID**: ``native:loadlayer``"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:285
 msgid "Raise exception"
 msgstr "例外発生"
@@ -407,13 +482,13 @@ msgid ""
 " exception will be raised, and the model execution can continue "
 "uninterrupted."
 msgstr ""
-"例外を発生させ、モデルの実行を中止します。例外メッセージはカスタマイズ可能で、オプションとして式による条件も指定できます。条件式を指定する場合、条件式がTrue"
+"例外を発生させ、モデルの実行を中止します。例外メッセージはカスタマイズ可能で、オプションとして式による条件も指定できます。条件式を指定する場合、式の結果がTrue"
 " である場合にのみ、例外を発生させます。False の場合には例外は発生せず、モデルの実行が継続します。"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:303
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:399
 msgid "**Message**"
-msgstr "**メッセージ**"
+msgstr "**エラーメッセージ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:304
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:353
@@ -439,9 +514,41 @@ msgstr "**条件式**"
 msgid "Expression to evaluate if true"
 msgstr "評価する式"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:317
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:366
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:413
+msgid "A message in the log panel."
+msgstr "ログパネルのメッセージ。"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:322
 msgid "**Algorithm ID**: ``native:raiseexception``"
 msgstr "**アルゴリズムID**: ``native:raiseexception``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:332
+msgid "Raise message"
+msgstr "メッセージを表示"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:333
+msgid "|326|"
+msgstr "|326|"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:335
+msgid ""
+"Raises an information message in the log. The message can be customized, and"
+" optionally an expression based condition can be specified. If an expression"
+" condition is used, then the message will only be logged if the expression "
+"result is true. A false result indicates that no message will be logged."
+msgstr ""
+"ログに情報メッセージを発生します。メッセージはカスタマイズ可能で、オプションとして式による条件も指定できます。条件式を指定する場合、式の結果がtrueである場合にのみメッセージがログに記録されます。結果がfalse"
+" の場合、メッセージは記録されません。"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:352
+msgid "**Information message**"
+msgstr "**情報メッセージ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:371
+msgid "**Algorithm ID**: ``native:raisemessage``"
+msgstr "**Algorithm ID**: ``native:raisemessage``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:381
 msgid "Raise warning"
@@ -608,6 +715,10 @@ msgstr ""
 msgid "The concatenated string"
 msgstr "連結された文字列"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:613
+msgid "**Algorithm ID**: ``native:stringconcatenation``"
+msgstr "**Algorithm ID**: ``native:stringconcatenation``"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:634
 msgid ":ref:`qgisbuffer`"
 msgstr ""
@@ -705,3 +816,7 @@ msgstr "**出力レイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:715
 msgid "[vector: polygon]"
 msgstr "[ベクタ：ポリゴン]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:721
+msgid "**Algorithm ID**: ``qgis:variabledistancebuffer``"
+msgstr "**Algorithm ID**: ``qgis:variabledistancebuffer``"
