@@ -144,6 +144,18 @@ msgstr ""
 "これで、様々な要素（マップ、ラベル、...）をレイアウトに追加できるようになりました。これらのオブジェクトはすべて "
 ":class:`QgsLayoutItem <qgis.core.QgsLayoutItem>` クラスを継承したクラスで表現されます。"
 
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:168
+msgid ""
+"Here's a description of some of the main layout items that can be added to a"
+" layout."
+msgstr "以下は、レイアウトに追加できる主なレイアウト項目の説明です。"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:170
+msgid ""
+"map --- Here we create a map of a custom size and render the current map "
+"canvas"
+msgstr "map --- ここにカスタムサイズのマップを作成し、現在のマップキャンバスをレンダリングします。"
+
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:182
 msgid ""
 "label --- allows displaying labels. It is possible to modify its font, "
@@ -161,3 +173,108 @@ msgstr "スケールバー"
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:210
 msgid "nodes based shape"
 msgstr "ノードに基づく図形"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:241
+msgid "Once an item is added to the layout, it can be moved and resized:"
+msgstr "レイアウトに項目を追加したら、移動やサイズの変更ができます:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:248
+msgid ""
+"A frame is drawn around each item by default. You can remove it as follows:"
+msgstr "各項目の周囲にはデフォルトで枠が描かれます。それを取り除くには次のようにします:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:255
+msgid ""
+"Besides creating the layout items by hand, QGIS has support for layout "
+"templates which are essentially compositions with all their items saved to a"
+" .qpt file (with XML syntax)."
+msgstr ""
+"レイアウト項目を手作業で作成する以外に、QGISはレイアウトテンプレートをサポートしています。これは基本的に、すべての項目を.qptファイル（XML構文）に保存した組版です。"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:259
+msgid ""
+"Once the composition is ready (the layout items have been created and added "
+"to the composition), we can proceed to produce a raster and/or vector "
+"output."
+msgstr "その組版の準備ができたら（レイアウト項目が作られ、組版に追加されたら）、ラスタ出力やベクタ出力に進むことができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:263
+msgid "Checking layout validity"
+msgstr "レイアウトの有効性をチェックする"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:265
+msgid ""
+"A layout is a made of a set of interconnected items and it can happen that "
+"these connections are broken during modifications (a legend connected to a "
+"removed map, an image item with missing source file,...) or you may want to "
+"apply custom constraints to the layout items. The "
+":class:`QgsAbstractValidityCheck <qgis.core.QgsAbstractValidityCheck>` helps"
+" you achieve this."
+msgstr ""
+"レイアウトは相互に接続された項目の集合で構成され、修正中にこれらの接続が壊れてしまったり（削除されたマップに接続された凡例、ソースファイルが見つからない画像アイテムなど）、レイアウト項目にカスタム制約を適用したい場合があります。"
+" :class:`QgsAbstractValidityCheck <qgis.core.QgsAbstractValidityCheck>` "
+"は、これを実現するのに役立ちます。"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:270
+msgid "A basic check looks like:"
+msgstr "基本的なチェックはこのようなものです："
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:279
+msgid ""
+"Here's a check which throws a warning whenever a layout map item is set to "
+"the web mercator projection:"
+msgstr "レイアウトマップ項目がウェブメルカトル図法に設定されるたびに警告を投げるチェックです："
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:297
+msgid ""
+"And here's a more complex example, which throws a warning if any layout map "
+"items are set to a CRS which is only valid outside of the extent shown in "
+"that map item:"
+msgstr ""
+"さらに複雑な例を挙げます。レイアウトマップ項目に、そのマップ項目に表示されている範囲の外でしか有効でないCRSが設定された場合、警告が投げられます："
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:324
+msgid "Exporting the layout"
+msgstr "レイアウトをエクスポートする"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:326
+msgid ""
+"To export a layout, the :class:`QgsLayoutExporter "
+"<qgis.core.QgsLayoutExporter>` class must be used."
+msgstr ""
+"レイアウトをエクスポートするには、:class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>` "
+"クラスを使わなければなりません。"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:336
+msgid ""
+"Use :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>` or "
+":meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case "
+"you want to export to respectively an SVG or image file instead of a PDF "
+"file."
+msgstr ""
+"PDFファイルの代わりに、個々のSVG又は画像ファイルにエクスポートしたいときは、:meth:`exportToSvg() "
+"<qgis.core.QgsLayoutExporter.exportToSvg>` 又は :meth:`exportToImage() "
+"<qgis.core.QgsLayoutExporter.exportToImage>` を使います。"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:340
+msgid "Exporting a layout atlas"
+msgstr "地図帳をエクスポートする"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:342
+msgid ""
+"If you want to export all pages from a layout that has the atlas option "
+"configured and enabled, you need to use the :meth:`atlas() "
+"<qgis.core.QgsPrintLayout.atlas>` method in the exporter "
+"(:class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`) with small "
+"adjustments. In the following example, the pages are exported to PNG images:"
+msgstr ""
+"地図帳オプションが設定され、有効になっているレイアウトから全てのページをエクスポートしたい場合、エクスポータ(:class:`QgsLayoutExporter"
+" <qgis.core.QgsLayoutExporter>`)の :meth:`atlas() "
+"<qgis.core.QgsPrintLayout.atlas>` "
+"メソッドを少し調整して使用する必要があります。以下の例では、ページをPNG画像にエクスポートしています："
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:352
+msgid ""
+"Notice that the outputs will be saved in the base path folder, using the "
+"output filename expression configured on atlas."
+msgstr "出力は、地図帳で設定された出力ファイル名式を使用して、ベースパスのフォルダに保存されることに注意してください。"
