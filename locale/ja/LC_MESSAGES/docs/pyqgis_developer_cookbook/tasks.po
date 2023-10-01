@@ -88,6 +88,58 @@ msgstr "関数からタスクを作成"
 msgid "Create a task from a processing algorithm"
 msgstr "プロセシングアルゴリズムからタスクを作成する"
 
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:93
+msgid ""
+"Any background task (regardless of how it is created) must NEVER use any "
+"QObject that lives on the main thread, such as accessing QgsVectorLayer, "
+"QgsProject or perform any GUI based operations like creating new widgets or "
+"interacting with existing widgets. Qt widgets must only be accessed or "
+"modified from the main thread. Data that is used in a task must be copied "
+"before the task is started. Attempting to use them from background threads "
+"will result in crashes."
+msgstr ""
+"どのバックグラウンドタスクも（どのように作成されたかに関わらず）、QgsVectorLayerやQgsProjectへのアクセスや、新しいウィジェットの作成や既存のウィジェットとのインタラクションのようなGUIベースの操作のように、メインスレッドに存在するQObjectを決して使ってはいけません。Qtウィジェットへのアクセスや変更はメインスレッドからのみ行ってください。タスクで使用されるデータは、タスクが開始される前にコピーされなければなりません。バックグラウンドのスレッドからそれらを使用しようとするとクラッシュします。"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:102
+msgid ""
+"Dependencies between tasks can be described using the :meth:`addSubTask() "
+"<qgis.core.QgsTask.addSubTask>` function of :class:`QgsTask "
+"<qgis.core.QgsTask>`. When a dependency is stated, the task manager will "
+"automatically determine how these dependencies will be executed. Wherever "
+"possible dependencies will be executed in parallel in order to satisfy them "
+"as quickly as possible. If a task on which another task depends is canceled,"
+" the dependent task will also be canceled. Circular dependencies can make "
+"deadlocks possible, so be careful."
+msgstr ""
+"タスク間の依存関係は :class:`QgsTask <qgis.core.QgsTask>` の :meth:`addSubTask() "
+"<qgis.core.QgsTask.addSubTask>` "
+"関数を使って記述することができます。依存関係が指定されると、タスクマネージャはこれらの依存関係がどのように実行されるかを自動的に決定します。可能な限り、依存関係はできるだけ早く満たすために並列に実行されます。他のタスクが依存するタスクがキャンセルされると、依存するタスクもキャンセルされます。循環依存関係はデッドロックを引き起こす可能性があるので、注意が必要です。"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:112
+msgid ""
+"If a task depends on a layer being available, this can be stated using the "
+":meth:`setDependentLayers() <qgis.core.QgsTask.setDependentLayers>` function"
+" of :class:`QgsTask <qgis.core.QgsTask>`. If a layer on which a task depends"
+" is not available, the task will be canceled."
+msgstr ""
+"タスクが利用可能なレイヤに依存している場合、 :class:`QgsTask <qgis.core.QgsTask>` の "
+":meth:`setDependentLayers() <qgis.core.QgsTask.setDependentLayers>` "
+"関数を用いてそのことを指定することができます。タスクが依存するレイヤが利用できない場合、そのタスクはキャンセルされます。"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:118
+msgid ""
+"Once the task has been created it can be scheduled for running using the "
+":meth:`addTask() <qgis.core.QgsTaskManager.addTask>` function of the task "
+"manager. Adding a task to the manager automatically transfers ownership of "
+"that task to the manager, and the manager will cleanup and delete tasks "
+"after they have executed. The scheduling of the tasks is influenced by the "
+"task priority, which is set in :meth:`addTask() "
+"<qgis.core.QgsTaskManager.addTask>`."
+msgstr ""
+"タスクが作成されると、タスクマネージャの :meth:`addTask() <qgis.core.QgsTaskManager.addTask>` "
+"関数を使用して実行をスケジュールすることができます。タスクをマネージャに追加すると、そのタスクの所有権は自動的にマネージャに移り、マネージャは実行後のタスクをクリーンアップして削除します。タスクのスケジューリングはタスクの優先度に影響されます。この優先度は"
+" :meth:`addTask() <qgis.core.QgsTaskManager.addTask>` で設定します。"
+
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:126
 msgid ""
 "The status of tasks can be monitored using :class:`QgsTask "
@@ -140,3 +192,16 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:389
 msgid "Task from a processing algorithm"
 msgstr "プロセッシングアルゴリズムからのタスク"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:391
+msgid ""
+"Create a task that uses the algorithm :ref:`qgis:randompointsinextent "
+"<qgisrandompointsinextent>` to generate 50000 random points inside a "
+"specified extent.  The result is added to the project in a safe way."
+msgstr ""
+":ref:`qgis:randompointsinextent <qgisrandompointsinextent>` "
+"アルゴリズムを使って、指定された範囲内に50000個のランダムな点を生成するタスクを作成します。 結果は安全な方法でプロジェクトに追加されます。"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:437
+msgid "See also: https://www.opengis.ch/2018/06/22/threads-in-pyqgis3/."
+msgstr "次も参照すること：https://www.opengis.ch/2018/06/22/threads-in-pyqgis3/。"
