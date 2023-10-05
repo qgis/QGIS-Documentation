@@ -543,6 +543,10 @@ msgstr "1 --- Miter"
 msgid "2 --- Bevel"
 msgstr "2 --- Bevel"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:109
+msgid "Round, miter, and bevel join styles"
+msgstr "round、miter、bevelの継ぎ目スタイル"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:110
 msgid "**Miter limit**"
 msgstr "**miter制限**"
@@ -1391,9 +1395,25 @@ msgstr "ジオタグ付き写真のポイントベクタレイヤ。レイヤの
 msgid "Table of unreadable or non-geotagged photos can also be created."
 msgstr "読み込めない、またはジオタグが付いていない写真のテーブルを作成できます"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:715
+msgid "**Algorithm ID**: ``native:importphotos``"
+msgstr "**Algorithm ID**: ``native:importphotos``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:725
 msgid "Points to path"
-msgstr "点をつないで線に"
+msgstr "点を線に変換"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:727
+msgid ""
+"Converts a point layer to a line layer, by joining points in an order "
+"defined by an expression or a field in the input point layer."
+msgstr "入力ポイントレイヤの式またはフィールドで定義された順序で点を結合することにより、ポイントレイヤをラインレイヤに変換します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:730
+msgid ""
+"Points can be grouped by a field or an expression to distinguish line "
+"features."
+msgstr "ライン地物を区別するため、ポイントをフィールドまたは式でグループ化できます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:732
 msgid ""
@@ -1406,11 +1426,15 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:749
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:885
 msgid "**Input point layer**"
-msgstr "**入力点のレイヤ**"
+msgstr "**入力レイヤ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:752
 msgid "Input point vector layer"
 msgstr "入力ポイントベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:753
+msgid "**Create closed paths**"
+msgstr "**閉じたパスを作る**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:754
 msgid "``CLOSE_PATH``"
@@ -1422,6 +1446,10 @@ msgid ""
 "close the generated path"
 msgstr "チェックされた場合、最初と最後のポイントをつないで、閉じた経路を作成します"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:760
+msgid "**Order expression**"
+msgstr "**式による並べ替え**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:763
 msgid "``ORDER_EXPRESSION``"
 msgstr ""
@@ -1431,13 +1459,41 @@ msgstr ""
 msgid "[expression]"
 msgstr "[式]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:765
+msgid ""
+"Field or expression providing the order to connect the points in the path. "
+"If not set, the feature ID (``$id``) is used."
+msgstr "パス内のポイントの接続順序を指定するフィールドまたは式。設定されていない場合は、地物ID (``$id``) が使われます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:767
+msgid "**Sort text containing numbers naturally**"
+msgstr "**文字列の自然なソート**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:770
 msgid "``NATURAL_SORT``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:774
+msgid ""
+"If checked, naturally sorts the features based on the provided expression "
+"(i.e., 'a9' < 'a10')."
+msgstr "チェックされた場合、地物は指定された式に基づいて自然にソートされる（すなわち、'a9' < 'a10'）。 "
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:776
+msgid "**Path group expression**"
+msgstr "**グループを示す式**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:779
 msgid "``GROUP_EXPRESSION``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:781
+msgid ""
+"Point features of the same value in the field or expression will be grouped "
+"in the same line. If not set, a single path is drawn with all the input "
+"points."
+msgstr ""
+"フィールドまたは式で同じ値を持つポイント地物は、同じラインにグループ化されます。設定されていない場合は、すべての入力ポイントで1つのパスが描かれます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:784
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:820
@@ -1446,7 +1502,7 @@ msgstr "**出力レイヤ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:789
 msgid "Specify the line vector layer of the path. One of:"
-msgstr "経路のラインベクタレイヤを指定します。次のいずれかです："
+msgstr "パスのラインベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:795
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:824
@@ -1462,7 +1518,7 @@ msgstr ""
 msgid ""
 "Specify the directory that will contain the description files of points and "
 "paths. One of:"
-msgstr "ポイントと経路の説明ファイルの出力先ディレクトリを指定します。次のいずれかです："
+msgstr "ポイントとパスの説明ファイルの出力先ディレクトリを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to a Temporary Directory"
@@ -1474,11 +1530,15 @@ msgstr "ディレクトリに保存します"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:823
 msgid "Line vector layer of the path"
-msgstr "経路のラインベクタレイヤ"
+msgstr "パスのラインベクタレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:827
 msgid "Directory containing description files of points and paths"
-msgstr "ポイントと経路の説明ファイルの出力先ディレクトリ"
+msgstr "ポイントとパスの説明ファイルの出力先ディレクトリ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:832
+msgid "**Algorithm ID**: ``native:pointstopath``"
+msgstr "**Algorithm ID**: ``native:pointstopath``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:842
 msgid "Random points along line"
@@ -1928,6 +1988,10 @@ msgstr ""
 msgid "Not including features with empty or no geometry"
 msgstr "ポイントを作成できなかったか、ポリゴンのジオメトリが無いために、内部にポイントが含まれないポリゴン地物の数"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1300
+msgid "**Algorithm ID**: ``native:randompointsinpolygons``"
+msgstr "**Algorithm ID**: ``native:randompointsinpolygons``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1310
 msgid "Random points inside polygons"
 msgstr "ポリゴン内部にランダム点群"
@@ -2066,6 +2130,10 @@ msgstr ""
 msgid "``POINTS_GENERATED``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1577
+msgid "**Algorithm ID**: ``native:randompointsonlines``"
+msgstr "**Algorithm ID**: ``native:randompointsonlines``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1587
 msgid "Raster pixels to points"
 msgstr "ラスタのベクタ化（pixels to points）"
@@ -2142,6 +2210,10 @@ msgstr "結果のピクセル中心のポイントレイヤを指定します。
 msgid "Resulting point layer with pixels centroids"
 msgstr "結果のピクセル中心のポイントレイヤ"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1651
+msgid "**Algorithm ID**: ``native:pixelstopoints``"
+msgstr "**Algorithm ID**: ``native:pixelstopoints``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1661
 msgid "Raster pixels to polygons"
 msgstr "ラスタのベクタ化（pixels to polygons）"
@@ -2172,6 +2244,10 @@ msgstr "結果のピクセル範囲のポリゴンレイヤを指定します。
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1720
 msgid "Resulting polygon layer of pixel extents"
 msgstr "結果のピクセル範囲のポリゴンレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1725
+msgid "**Algorithm ID**: ``native:pixelstopolygons``"
+msgstr "**Algorithm ID**: ``native:pixelstopolygons``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1735
 msgid "Regular points"
