@@ -874,6 +874,14 @@ msgid ""
 msgstr ""
 "オプションの重み属性を使用すると、各ポイントに重みを割り当てることができます。また、ユニークな分類属性を指定することもできます。両方のオプションが使用された場合、重み属性が優先され、ユニークな分類属性は無視されます。"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:278
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1828
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>` of polygon features"
+msgstr ""
+"|checkbox| ポリゴン地物の :ref:`地物のIn-place編集 <processing_inplace_edit>` が可能です"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1912
 msgid "checkbox"
 msgstr ""
@@ -1018,6 +1026,10 @@ msgid ""
 "Resulting layer with the attribute table containing the new column with the "
 "points count"
 msgstr "ポイントの個数の新しい列を含む属性テーブルを持つ結果レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:361
+msgid "**Algorithm ID**: ``native:countpointsinpolygon``"
+msgstr "**Algorithm ID**: ``native:countpointsinpolygon``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:371
 msgid "DBSCAN clustering"
@@ -1180,6 +1192,12 @@ msgstr "デフォルト： 'CLUSTER_ID'"
 msgid "Name of the field where the associated cluster number shall be stored"
 msgstr "クラスタ番号を保存するフィールドの名前"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:453
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1008
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1617
+msgid "**Cluster size field name**"
+msgstr "**クラスタサイズを示す属性名**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:454
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1009
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1618
@@ -1220,6 +1238,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1643
 msgid "The number of clusters discovered"
 msgstr "検出されたクラスタ数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:484
+msgid "**Algorithm ID**: ``native:dbscanclustering``"
+msgstr "**Algorithm ID**: ``native:dbscanclustering``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:494
 msgid "Distance matrix"
@@ -1476,6 +1498,11 @@ msgstr "4 --- レイヤの単位"
 msgid "**Hub distance**"
 msgstr "**出力レイヤ**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:663
+msgid ""
+"Specify the output line vector layer connecting the matching points. One of:"
+msgstr "合致した点を結んだ出力ラインベクタレイヤを指定します。次のいずれかです："
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:684
 msgid ""
 "Line vector layer with the attributes of the input features, the identifier "
@@ -1503,6 +1530,17 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:708
 msgid ":ref:`qgisdistancetonearesthublinetohub`, :ref:`qgisjoinbynearest`"
 msgstr ":ref:`qgisdistancetonearesthublinetohub` 、 :ref:`qgisjoinbynearest`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:755
+msgid "Specify the output point vector layer with the nearest hub. One of:"
+msgstr "最寄りのハブを持った出力ポイントベクタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:776
+msgid ""
+"Point vector layer representing the center of the source features with their"
+" attributes, the identifier of their closest feature and the calculated "
+"distance."
+msgstr "ソース地物の属性、最近傍の地物のID、計算された距離を持った、ソース地物の中心を表すポイントベクタレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:783
 msgid "**Algorithm ID**: ``qgis:distancetonearesthubpoints``"
@@ -1642,6 +1680,10 @@ msgstr "測地線（回転楕円体上の最短経路）を作成します"
 msgid "**Hub lines**"
 msgstr "**出力レイヤ**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:875
+msgid "Specify the output hub line vector layer. One of:"
+msgstr "出力ハブラインベクタレイヤを指定します。次のいずれかです："
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:893
 msgid "**Distance between vertices (geodesic lines only)**"
 msgstr "**頂点間の距離（測地線のみ）**"
@@ -1672,6 +1714,14 @@ msgstr ""
 msgid ""
 "Split lines at ±180 degrees longitude (to improve rendering of the lines)"
 msgstr "経度 ±180度で線を切断する（ラインのレンダリングが崩れないようにするため）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:922
+msgid "The resulting line layer connecting matching points in input layers"
+msgstr "入力レイヤの適合した点を接続した、結果ラインレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:927
+msgid "**Algorithm ID**: ``native:hublines``"
+msgstr "**Algorithm ID**: ``native:hublines``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:937
 msgid "K-means clustering"
@@ -1713,14 +1763,34 @@ msgstr ""
 msgid "Number of clusters to create with the features"
 msgstr "作成したい地物クラスタ数"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:981
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1076
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1185
+msgid "Default:``[Create temporary layer]``"
+msgstr "デフォルト： ``[一時レイヤを作成]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:982
+msgid "Specify the output vector layer for generated the clusters. One of:"
+msgstr "生成されたクラスタの出力ベクタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1029
+msgid ""
+"Vector layer containing the original features with fields specifying the "
+"cluster they belong to and their number in it"
+msgstr "地物が属するクラスタとその番号を指定するフィールドを持つ、オリジナルの地物を格納しているベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1035
+msgid "**Algorithm ID**: ``native:kmeansclustering``"
+msgstr "**Algorithm ID**: ``native:kmeansclustering``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1045
 msgid "List unique values"
-msgstr "ユニークな値のリスト"
+msgstr "ユニーク値のリスト"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1046
 msgid ""
 "Lists unique values of an attribute table field and counts their number."
-msgstr "属性テーブルフィールドの一意な値をリストし、その数を数えます。"
+msgstr "属性テーブルフィールドのユニーク値をリストし、その数を数えます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1066
 msgid "**Target field(s)**"
@@ -1746,10 +1816,25 @@ msgstr "**出力レイヤ**"
 msgid "[table]"
 msgstr "[テーブル]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1077
+msgid "Specify the summary table layer with unique values. One of:"
+msgstr "ユニーク値のサマリテーブルレイヤを指定します。次のいずれかです："
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1083
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1112
 msgid "**HTML report**"
 msgstr "**HTMLレポートの出力**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1089
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1267
+msgid "Default:``[Save to temporary file]``"
+msgstr "デフォルト： ``[一時ファイルに保存]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1090
+msgid ""
+"HTML report of unique values in the :menuselection:`Processing --> Results "
+"viewer`. One of:"
+msgstr ":menuselection:`プロセシング --> 結果ビューア` のユニーク値のHTMLレポート。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1111
 msgid "Summary table layer with unique values"
@@ -1769,6 +1854,14 @@ msgstr "**ユニークな値の総数**"
 msgid "``TOTAL_VALUES``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1120
+msgid "The number of unique values in the input field"
+msgstr "入力フィールドにあるユニーク値の数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1121
+msgid "**Unique values concatenated**"
+msgstr "**連結したユニーク値**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1122
 msgid "``UNIQUE_VALUES``"
 msgstr ""
@@ -1777,7 +1870,7 @@ msgstr ""
 msgid ""
 "A string with the comma separated list of unique values found in the input "
 "field"
-msgstr "入力フィールド内で見つかった一意な値リストをコンマ区切りで繋げた文字列"
+msgstr "入力フィールドで見つかったユニーク値のリストをコンマ区切りで繋げた文字列"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1130
 msgid "**Algorithm ID**: ``qgis:listuniquevalues``"
@@ -1838,9 +1931,17 @@ msgstr "グループ化した平均の計算を行う上でのユニークフィ
 msgid "**Mean coordinates**"
 msgstr "**出力レイヤ**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1186
+msgid "Specify the (point vector) layer for the result. One of:"
+msgstr "結果の（ポイントベクタ）レイヤを指定します。次のいずれかです："
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1206
 msgid "Resulting point(s) layer"
 msgstr "結果のポイントレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1211
+msgid "**Algorithm ID**: ``native:meancoordinates``"
+msgstr "**Algorithm ID**: ``native:meancoordinates``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1221
 msgid "Nearest neighbour analysis"
@@ -1949,6 +2050,10 @@ msgstr ""
 msgid "Z-Score"
 msgstr "Z-スコア"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1314
+msgid "**Algorithm ID**: ``native:nearestneighbouranalysis``"
+msgstr "**Algorithm ID**: ``native:nearestneighbouranalysis``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1324
 msgid "Overlap analysis"
 msgstr "重なり分析"
@@ -1987,6 +2092,11 @@ msgstr "[ベクタ：任意] [リスト]"
 msgid "The overlay layers."
 msgstr "オーバーレイレイヤ"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1355
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1401
+msgid "**Overlap**"
+msgstr "**重なり**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1360
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1487
 msgid "Specify the output vector layer. One of:"
@@ -2024,17 +2134,72 @@ msgid ""
 "layers."
 msgstr "入力地物と選択された各オーバーレイレイヤとの重なり（地図単位の面積およびパーセンテージ）のフィールドが追加された出力レイヤ"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1411
+msgid "**Algorithm ID**: ``native:calculatevectoroverlaps``"
+msgstr "**Algorithm ID**: ``native:calculatevectoroverlaps``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1421
+msgid "Shortest line between features"
+msgstr "地物間の最短線"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1422
 msgid "|324|"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1424
+msgid ""
+"Creates a line layer as the shortest line between the source and the "
+"destination layer. By default only the first nearest feature of the "
+"destination layer is taken into account. The n-nearest neighboring features "
+"number can be specified. If a maximum distance is specified, then only "
+"features which are closer than this distance will be considered."
+msgstr ""
+"起点レイヤと出力レイヤ間の最短線としてラインレイヤを作成します。デフォルトでは、出力レイヤの最初の最近傍地物のみが考慮されます。n番目に近い地物の数を指定できます。最大距離を指定すると、その距離より近い地物のみが考慮されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1427
+msgid ""
+"The output features will contain all the source layer attributes, all the "
+"attributes from the n-nearest feature and the additional field of the "
+"distance."
+msgstr "出力地物は、起点レイヤの全ての属性、n最近傍地物の全ての属性、及び距離の追加フィールドを格納します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1429
+msgid ""
+"This algorithm uses purely Cartesian calculations for distance, and does not"
+" consider geodetic or ellipsoid properties when determining feature "
+"proximity. The measurement and output coordinate system is based on the "
+"coordinate system of the source layer."
+msgstr ""
+"このアルゴリズムでは、距離については純粋にデカルト計算を使用し、地物の近接度を決定する際に測地線や楕円体の特性は考慮しません。測定及び出力の座標系は、 "
+"起点レイヤの座標系に基づいてい ます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1437
+msgid "Shortest line from point features to lines"
+msgstr "ポイント地物からラインへの最短線"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1450
+msgid "**Source layer**"
+msgstr "**起点レイヤ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1451
 msgid "``SOURCE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1453
+msgid "Origin layer for which to search for nearest neighbors"
+msgstr "その最近傍を検索する起点レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1454
+msgid "**Destination layer**"
+msgstr "**出力レイヤ**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1455
 msgid "``DESTINATION``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1457
+msgid "Target Layer in which to search for nearest neighbors"
+msgstr "その中にある最近傍を検索する対象レイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1458
 msgid "**Method**"
@@ -2044,6 +2209,22 @@ msgstr "**方法**"
 msgid "``METHOD``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1463
+msgid "Shortest distance calculation method Possible values are:"
+msgstr "最短距離の計算法。可能な値は次のとおりです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1466
+msgid "0 --- Distance to nearest point on feature"
+msgstr "0 -- 地物の最も近い点までの距離"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1467
+msgid "1 --- Distance to feature centroid"
+msgstr "1 -- 地物の重心までの距離"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1469
+msgid "**Maximum number of neighbors**"
+msgstr "**考慮する隣接地物の数**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1470
 msgid "``NEIGHBORS``"
 msgstr ""
@@ -2051,6 +2232,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1473
 msgid "Default: 1"
 msgstr "デフォルト： 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1474
+msgid "Maximum number of neighbors to look for"
+msgstr "探索する近隣地物の最大数"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1475
 msgid "**Maximum distance**"
@@ -2060,17 +2245,85 @@ msgstr "**最大距離**"
 msgid "``DISTANCE``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1480
+msgid ""
+"Only destination features which are closer than this distance will be "
+"considered."
+msgstr "この距離より近い地物だけが考慮されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1482
+msgid "**Shortest lines**"
+msgstr "**最短線**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1504
 msgid "**Output layer**"
-msgstr "**オーバーラップ**"
+msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1507
+msgid ""
+"Line vector layer joining source features to their nearest neighbor(s) in "
+"the destination layer. Contains all attributes for both source and "
+"destination features, and the computed distance."
+msgstr "起点地物と出力レイヤの最近傍地物を結ぶラインベクタレイヤ。起点地物と目標地物の全ての属性と、計算された距離が含まれます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1514
+msgid "**Algorithm ID**: ``native:shortestline``"
+msgstr "**Algorithm ID**: ``native:shortestline``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1524
+msgid "ST-DBSCAN clustering"
+msgstr "ST-DBSCANクラスタリング"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1526
+msgid ""
+"Clusters point features based on a 2D implementation of spatiotemporal "
+"Density-based clustering of applications with noise (ST-DBSCAN) algorithm."
+msgstr ""
+"Density-based clustering of applications with noise (ST-"
+"DBSCAN)アルゴリズムの2次元実装に基づくポイント地物のクラスタリング。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1529
+msgid ":ref:`qgisdbscanclustering`, :ref:`qgiskmeansclustering`"
+msgstr ":ref:`qgisdbscanclustering`, :ref:`qgiskmeansclustering`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1550
+msgid "**Date/time field**"
+msgstr "**日付・時間フィールド**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1551
 msgid "``DATETIME_FIELD``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1552
+msgid "[tablefield: date]"
+msgstr "[tablefield: 日付]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1553
+msgid "Field containing the temporal information"
+msgstr "時間情報を格納しているフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1567
+msgid "**Maximum time duration between clustered points**"
+msgstr "**クラスタ化された点の最大継続時間**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1568
 msgid "``EPS2``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1571
+msgid "Default: 0.0 (days)"
+msgstr "デフォルト: 0.0（日）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1572
+msgid ""
+"Time duration beyond which two features can not belong to the same cluster "
+"(eps2). Available time units are milliseconds, seconds, minutes, hours, days"
+" and weeks."
+msgstr "2つの地物が同じクラスターに属することができない時間(eps2)。利用可能な時間単位はミリ秒、秒、分、時、日、週です。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1648
+msgid "**Algorithm ID**: ``native:stdbscanclustering``"
+msgstr "**Algorithm ID**: ``native:stdbscanclustering``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1658
 msgid "Statistics by categories"
@@ -2119,6 +2372,10 @@ msgstr "カテゴリを定義するフィールド（組み合わせ可）"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1709
 msgid "**Statistics by category**"
 msgstr "**カテゴリ別の統計量**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1692
+msgid "Specify the output table for the generated statistics. One of:"
+msgstr "生成した統計量の出力テーブルを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1712
 msgid "Table containing the statistics"
@@ -2332,6 +2589,14 @@ msgstr "線の数のフィールド名"
 msgid "**Line length**"
 msgstr "**ポリゴンと交差する線の総延長**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1871
+msgid "Specify the output polygon layer with generated statistics. One of:"
+msgstr "生成した統計量を持った出力ポリゴンレイヤを指定します。次のいずれかです："
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1891
 msgid "Polygon output layer with fields of lines length and line count"
 msgstr "ライン長とライン数のフィールドを持つ出力ポリゴンレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1897
+msgid "**Algorithm ID**: ``native:sumlinelengths``"
+msgstr "**Algorithm ID**: ``native:sumlinelengths``"
