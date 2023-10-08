@@ -609,7 +609,7 @@ msgstr ""
 msgid ""
 "Layer containing (parts of) features from the input layer not overlapping "
 "the overlay layer."
-msgstr "オーバーレイレイヤに重ならない、入力レイヤの地物（の一部）を含むレイヤ。 "
+msgstr "オーバーレイレイヤに重ならない、入力レイヤの地物（の一部）を格納するレイヤ。 "
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:218
 msgid "**Algorithm ID**: ``qgis:difference``"
@@ -695,7 +695,7 @@ msgstr "入力レイヤの地物（の一部）のうち、オーバーレイレ
 msgid ""
 "Layer containing (parts of) features from the input layer not overlapping "
 "features from the overlay layers."
-msgstr "入力レイヤの地物（の一部）のうち、オーバーレイレイヤの地物と重ならないものを格納しているレイヤ。"
+msgstr "入力レイヤの地物（の一部）のうち、オーバーレイレイヤの地物と重ならないものを格納するレイヤ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:308
 msgid "**Algorithm ID**: ``qgis:multidifference``"
@@ -737,6 +737,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:349
 msgid "[extent]"
 msgstr "[範囲]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:350
+msgid "Extent for clipping."
+msgstr "切り抜く範囲"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -950,6 +954,12 @@ msgid ""
 msgstr ""
 "オーバーレイレイヤのフィールドを識別するための接頭辞を追加します。重複するフィールド名には、衝突を避けるためにカウントサフィックスが付加されます。"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:541
+msgid ""
+"Layer containing (parts of) features from the input layer that overlap the "
+"overlay layer."
+msgstr "オーバーレイレイヤと重なる、入力レイヤの地物（の部分）を格納するレイヤ。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:547
 msgid "**Algorithm ID**: ``qgis:intersection``"
 msgstr "**Algorithm ID**: ``qgis:intersection``"
@@ -958,9 +968,53 @@ msgstr "**Algorithm ID**: ``qgis:intersection``"
 msgid "Intersection (multiple)"
 msgstr "交差（複数レイヤ）"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:560
+msgid ""
+"Extracts the overlapping portions of features in the input and all overlay "
+"layers."
+msgstr "入力レイヤ及び全てのオーバーレイレイヤの地物のうち、重なっている部分を抽出します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:562
+msgid ""
+"Features in the output layer are assigned the attributes of the overlapping "
+"features from both the input and overlay layers."
+msgstr "出力レイヤの地物には、入力レイヤとオーバーレイレイヤの両方から重なる地物の属性が割り当てられます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:572
+msgid ""
+"Intersection operation between a two-feature input layer 'a' and single "
+"feature overlay layers 'b' and 'c' (left) - overlapping areas become a new "
+"two-feature layer with all layers' attributes (right)"
+msgstr ""
+"2つの地物を持つ入力レイヤ'a'とひとつの地物を持つオーバーレイレイヤ'b'と'c'の交差演算（左） - "
+"重なり合った領域は、全てのレイヤの属性を持った、2つの地物を持つ新しいレイヤとなる（右）"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:576
 msgid ":ref:`qgisintersection`, :ref:`qgisclip`, :ref:`qgisdifference`"
 msgstr ":ref:`qgisintersection`, :ref:`qgisclip`, :ref:`qgisdifference`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:600
+msgid ""
+"Layers containing the features to check for overlap. The features' geometry "
+"is expected to have at least as many dimensions (point: 0D, line: 1D, "
+"polygon: 2D, volume: 3D) as the input layer's."
+msgstr ""
+"重なりをチェックする地物を格納しているレイヤ。その地物のジオメトリは、少なくとも入力レイヤと同じ次元（ポイント: 0D、ライン: 1D、ポリゴン: "
+"2D、ボリューム: 3D）であることが期待されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:622
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1200
+msgid ""
+"Add a prefix to identify fields of the overlay layers. Duplicate field names"
+" will be appended a count suffix to avoid collision."
+msgstr ""
+"オーバーレイレイヤのフィールドを識別するための接頭辞を追加します。重複するフィールド名には、衝突を避けるためにカウントサフィックスが付加されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:640
+msgid ""
+"Layer containing (parts of) features from the input layer that overlap all "
+"the overlay layers."
+msgstr "全てのオーバーレイレイヤと重なる、入力レイヤの地物（の部分）を格納するレイヤ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:646
 msgid "**Algorithm ID**: ``qgis:multiintersection``"
@@ -1003,14 +1057,32 @@ msgstr ""
 msgid "Layer to use to find line intersections."
 msgstr "線の交差を見つけるために使うレイヤ。"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:698
+msgid "**Intersect fields to keep (leave empty to keep all fields)**"
+msgstr "**交差レイヤからコピーする属性（全属性を保持する場合は空白のまま）**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:701
 msgid "``INTERSECT_FIELDS``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:705
+msgid ""
+"Field(s) of the intersect layer to keep in the output. If no fields are "
+"chosen all fields are taken. Duplicate field names will be appended a count "
+"suffix to avoid collision."
+msgstr ""
+"出力に残す交差レイヤのフィールド。フィールドが選択されないときは、全てのフィールドが出力されます。重複するフィールド名には、衝突を避けるためにカウントサフィックスが付加されます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:710
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:753
 msgid "[vector: point]"
 msgstr "[ベクタ：ポイント]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:713
+msgid ""
+"Specify the layer to contain the intersection points of the lines from the "
+"input and overlay layers. One of:"
+msgstr "入力レイヤとオーバーレイレイヤのラインの交差ポイントを格納するレイヤを指定します。以下のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:733
 msgid "**Intersect fields prefix**"
@@ -1020,9 +1092,18 @@ msgstr "**交差のフィールド名接頭辞**"
 msgid "``INTERSECT_FIELDS_PREFIX``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:738
+msgid "Add a prefix to identify fields of the intersect layer."
+msgstr "交差レイヤのフィールドを識別するための接頭辞を追加します。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:751
 msgid "**Intersections**"
 msgstr "**交差部分**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:754
+msgid ""
+"Point vector layer of the lines intersections, with both layers' attributes."
+msgstr "両方のレイヤの属性を持った、線の交差のポイントベクタレイヤ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:760
 msgid "**Algorithm ID**: ``qgis:lineintersections``"
@@ -1032,19 +1113,58 @@ msgstr "**Algorithm ID**: ``qgis:lineintersections``"
 msgid "Split with lines"
 msgstr "線で分割"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:771
+msgid ""
+"Splits the lines or polygons in one layer using the lines or polygon rings "
+"in another layer to define the breaking points. Intersection between "
+"geometries in both layers are considered as split points."
+msgstr ""
+"あるレイヤのライン又はポリゴンを、別のレイヤのライン又はポリゴンリングを使って分割し、分割点を定義します。両方のレイヤのジオメトリ間の交点が分割点とみなされます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:776
+msgid "Output will contain multi geometries for split features."
+msgstr "出力は、分割された地物のマルチジオメトリを格納します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:781
+msgid "Split lines"
+msgstr "分割されたライン"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:799
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:803
 msgid "[vector: line, polygon]"
 msgstr "[ベクタ：ライン、ポリゴン]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:800
+msgid "Layer containing the lines or polygons to split."
+msgstr "分割されるライン又はポリゴンを格納しているレイヤ。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:801
+msgid "**Split layer**"
+msgstr "**切断線のレイヤ**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:802
 msgid "``LINES``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:804
+msgid "Layer whose lines or rings are used to define the breaking points."
+msgstr "分割点を定義するのに使われるライン又はポリゴンを持つレイヤ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:805
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:830
 msgid "**Split**"
 msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:810
+msgid ""
+"Specify the layer to contain the splitted (in case they are intersected by a"
+" line in the split layer) line/polygon features from the input layer. One "
+"of:"
+msgstr "入力レイヤから分割された（分割レイヤにあるラインと交差した）ライン／ポリゴン地物を格納するレイヤを指定します。以下のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:833
+msgid "Output vector layer with split lines or polygons from input layer."
+msgstr "入力レイヤから分割されたライン又はポリゴンを持つ出力ベクタレイヤ　　　"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:839
 msgid "**Algorithm ID**: ``qgis:splitwithlines``"
@@ -1058,21 +1178,62 @@ msgstr "対称差"
 msgid ""
 "Creates a layer containing features from both the input and overlay layers "
 "but with the overlapping areas between the two layers removed."
-msgstr "入力レイヤとオーバーレイレイヤの両方からの地物を含むが、2つのレイヤ間の重なっている領域は削除されているレイヤを作成します。"
+msgstr "入力レイヤとオーバーレイレイヤの両方からの地物を含み、2つのレイヤ間の重なっている領域が取り除かれたレイヤを作成します。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:853
 msgid ""
 "The attribute table of the symmetrical difference layer contains attributes "
 "and fields from both the input and overlay layers."
-msgstr "対称差分レイヤの属性テーブルには、入力レイヤとオーバーレイレイヤの両方の属性とフィールドが含まれています。"
+msgstr "対称差レイヤの属性テーブルには、入力レイヤとオーバーレイレイヤの両方の属性とフィールドが含まれています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:863
+msgid ""
+"Symmetrical difference operation between a two-features input layer 'a' and "
+"a single feature overlay layer 'b' (left) - resulting three-feature layer "
+"with both layers' attributes (right)"
+msgstr ""
+"2つの地物を持つ入力レイヤ'a'とひとつの地物を持つオーバーレイレイヤ'b'の対称差演算（左） - "
+"両方のレイヤの属性を持った、3つの地物を持つレイヤとなる（右）"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:869
 msgid ":ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`"
 msgstr ":ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:889
+msgid "First layer to extract (parts of) features from."
+msgstr "地物（の部分）を抽出する最初のレイヤ。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:893
+msgid ""
+"Second layer to extract (parts of) features from. Ideally the geometry type "
+"should be the same as input layer."
+msgstr "地物（の部分）を抽出する二番目のレイヤ。ジオメトリの型は入力レイヤと同じであることが理想的です。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:895
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:951
+msgid "**Symmetrical difference**"
+msgstr "**対象差**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:900
+msgid ""
+"Specify the layer to contain (the parts of) the features from the input and "
+"overlay layers that do not overlap features from the other layer. One of:"
+msgstr ""
+"入力レイヤとオーバーレイレイヤからの地物（の部分）であって、他のレイヤの地物と重ならないものを格納するレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:954
+msgid ""
+"Layer containing (parts of) features from each layer not overlapping the "
+"other layer, with both layers' attributes."
+msgstr "各レイヤからの地物（の部分）であり、他のレイヤと重ならず、両方のレイヤの属性を持つものを格納するレイヤ。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:960
 msgid "**Algorithm ID**: ``qgis:symmetricaldifference``"
 msgstr "**Algorithm ID**: ``qgis:symmetricaldifference``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:970
+msgid "Union"
+msgstr "和集合"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:971
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1110
@@ -1087,6 +1248,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1097
 msgid "**Algorithm ID**: ``qgis:union``"
 msgstr "**Algorithm ID**: ``qgis:union``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1107
+msgid "Union (multiple)"
+msgstr "和集合（複数レイヤ）"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1142
 msgid ""
