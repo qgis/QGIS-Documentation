@@ -68,11 +68,22 @@ msgstr ""
 msgid ""
 "QGIS supports also GNSS receivers. But we keep using the term GPS in this "
 "documentation."
-msgstr "QGISはGNSS受信機もサポートしています。しかし、このドキュメントではGPSという用語を使い続けています。"
+msgstr "QGISはGNSS受信機もサポートしています。しかし、この文書の作成ではGPSという用語を使っています。"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:33
 msgid "Defining GPS device types"
 msgstr "GPSのデバイス型を決める"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:35
+msgid ""
+"There are lots of different types of GPS devices. QGIS allows you to define "
+"your own device type and set parameters of use under "
+":menuselection:`Settings --> Options --> GPS --> GPSBabel` tab. Read "
+":ref:`defining_new_device` for more details."
+msgstr ""
+"GPSデバイスには様々な種類があります。QGISでは :menuselection:`設定 --> オプション --> GPS --> "
+"GPSBabel` タブで独自のデバイス型を定義し、使用するパラメータを設定することができます。詳しくは "
+":ref:`defining_new_device` を参照してください。"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:40
 msgid ""
@@ -101,16 +112,77 @@ msgstr ":file:`GPX` ファイルを読み込むには："
 msgid ""
 "Open the :guilabel:`GPS` tab in the :guilabel:`Data Source Manager` dialog, "
 "i.e.:"
-msgstr ":guilabel:`データソースマネージャ` ダイアログの :guilabel:`GPS` タブを開きます："
+msgstr ":guilabel:`データソースマネージャ` ダイアログの :guilabel:`GPS` タブを開きます、つまり："
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:57
+msgid ""
+"Click the |dataSourceManager| :sup:`Open Data Source Manager` button on the "
+"toolbar (or press :kbd:`Ctrl+L`) and enable the target tab"
+msgstr ""
+"ツールバーの |dataSourceManager| :sup:`データソースマネージャを開く` ボタンをクリックし（または :kbd:`Ctrl+L`"
+" を押し）、目標のタブを有効にします"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:95
 msgid "dataSourceManager"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:59
+msgid ""
+"Or select :menuselection:`Layer --> Add Layer -->` |addGpsLayer| "
+":menuselection:`Add GPX Layer...`"
+msgstr ""
+"又は、:menuselection:`レイヤ --> レイヤを追加 -->` |addGpsLayer| "
+":menuselection:`GPXレイヤを追加...` を選択します"
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:93
 msgid "addGpsLayer"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:61
+msgid ""
+"Use the :guilabel:`...` :sup:`Browse` button next to the :guilabel:`GPX "
+"dataset` option to select the GPX file"
+msgstr ""
+":guilabel:`GPXデータセット` オプションの隣にある :guilabel:`...` :sup:`ブラウズ` "
+"ボタンを使ってGPXファイルを選びます"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:63
+msgid ""
+"Use the check boxes to select the :guilabel:`Feature types` you want to load"
+" from the file. Each feature type (:guilabel:`Waypoints`, :guilabel:`Tracks`"
+" or :guilabel:`Routes`) will be loaded in a separate layer."
+msgstr ""
+"ファイルから読み込む :guilabel:`地物の型` "
+"を選ぶにはチェックボックスを使います。それぞれの地物の型（:guilabel:`ウェイポイント`、:guilabel:`トラック` 又は "
+":guilabel:`ルート`）は別々のレイヤに読み込まれます。"
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:70
 msgid "Loading GPS Data dialog"
 msgstr "GPSデータの読み込みダイアログ"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:73
+msgid ""
+"Since QGIS uses GPX files, you need a way to convert other GPS file formats "
+"to GPX. This can be done for many formats using the free program `GPSBabel "
+"<https://www.gpsbabel.org>`_. This program can also transfer GPS data "
+"between your computer and a GPS device. QGIS relies on GPSBabel to do these "
+"things and provides you with convenient Processing algorithms available "
+"under the :ref:`GPS group <gps_algorithms>`."
+msgstr ""
+"QGISはGPXファイルを使うので、他のGPSファイル形式をGPXに変換する方法が必要です。多くの形式はフリーのプログラム`GPSBabel "
+"<https://www.gpsbabel.org>`_ "
+"を使ってこれを行うことができます。このプログラムはコンピュータとGPSデバイス間でGPSデータを転送することもできます。QGISはこれらの処理をGPSBabelに依存し、:ref:`GPSグループ"
+" <gps_algorithms>` から利用できる便利なプロセシングアルゴリズムを提供しています。"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:80
+msgid ""
+"GPS units allow you to store data in different coordinate systems. When "
+"downloading a GPX file (from your GPS unit or a web site) and then loading "
+"it in QGIS, be sure that the data stored in the GPX file uses WGS 84 "
+"(latitude/longitude). QGIS expects this, and it is the official GPX "
+"specification. See `GPX 1.1 Schema Documentation "
+"<https://www.topografix.com/GPX/1/1/>`_."
+msgstr ""
+"GPSユニットでは、異なる座標系でデータを保存できます。GPXファイルを（GPSユニットまたはウェブサイトから）ダウンロードし、QGISで読み込む場合は、GPXファイルに保存されているデータがWGS"
+" 84（緯度経度）を使用していることを確認してください。QGISはこれを期待しており、公式なGPX仕様です。GPX 1.1 Schema "
+"Documentation <https://www.topografix.com/GPX/1/1/>`_ を参照してください。"
