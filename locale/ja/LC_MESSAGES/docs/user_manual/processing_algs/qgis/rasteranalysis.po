@@ -65,6 +65,19 @@ msgstr "線形内挿 (PERCENTRANK.INC)"
 msgid "Exclusive linear interpolation (PERCENTRANK.EXC)"
 msgstr "線形内挿 (PERCENTRANK.EXC)"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:30
+msgid ""
+"The linear interpolation methods return the unique percent rank for "
+"different values. Both interpolation methods follow their counterpart "
+"methods implemented by `LibreOffice <https://help.libreoffice.org/latest/en-"
+"US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_ or Microsoft "
+"Excel."
+msgstr ""
+"線形補間法は、異なる値にユニークなパーセントランクを返します。どちらの補間法も、`LibreOffice "
+"<https://help.libreoffice.org/latest/en-"
+"US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_ やMicrosoft "
+"Excelで実装されている同様の方法に準じています。"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:35
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:196
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:360
@@ -1507,6 +1520,10 @@ msgstr "出力ラスタレイヤのピクセル数"
 msgid "Python code"
 msgstr "Python コード"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:167
+msgid "**Algorithm ID**: ``native:cellstackpercentrankfromvalue``"
+msgstr "**Algorithm ID**: ``native:cellstackpercentrankfromvalue``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -1581,17 +1598,61 @@ msgstr "**百分位数**"
 msgid "Default: 0.25"
 msgstr "デフォルト： 0.25"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:247
+msgid ""
+"Value to rank among the respective values in the stack of all overlaid and "
+"sorted cell values from the input rasters. Between 0 and 1."
+msgstr "入力ラスタのセル値を重ね、ソートしてできたスタックのそれぞれの数値群の中で順位付けした数値。0と1の間。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:330
+msgid "**Algorithm ID**: ``native:cellstackpercentile``"
+msgstr "**Algorithm ID**: ``native:cellstackpercentile``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:340
+msgid "Cell stack percentrank from raster layer"
+msgstr "セルスタック：ラスタ値のパーセントランク"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:342
+msgid ""
+"Calculates the cell-wise percentrank value of a stack of rasters based on an"
+" input value raster and writes them to an output raster."
+msgstr "ラスタのスタックのセル単位のパーセントランク値を、入力値ラスタに基づいて計算し、出力ラスタに書き出します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:345
+msgid ""
+"At each cell location, the current value of the value raster is ranked among"
+" the respective values in the stack of all overlaid and sorted cell values "
+"of the input rasters. For values outside of the the stack value "
+"distribution, the algorithm returns NoData because the value cannot be "
+"ranked among the cell values."
+msgstr ""
+"各セル位置において、値ラスタの現在の値は、入力ラスタの全てのセル値を重ねてソートしたスタックのそれぞれの数値群の中で順位付けされます。スタック値の分布から外れた値は、セル値の中で順位付けできないので、"
+" アルゴリズムは NoData を返します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:370
+msgid ""
+"Ranking the value raster layer cells. ``NoData`` cells (grey) are ignored."
+msgstr "値ラスタレイヤセルを順位付けします。``NoData`` セル（灰色）は無視されます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:372
 msgid ""
 ":ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromvalue`"
 msgstr ""
 ":ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromvalue`"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:395
+msgid "**Value raster layer**"
+msgstr "**入力ラスタ**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:396
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:716
 msgid "``INPUT_VALUE_RASTER``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:398
+msgid "The layer to rank the values among the stack of all overlaid layers"
+msgstr "重ねられたレイヤのスタックの中で値を順位付けするレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:23
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:399
@@ -1611,6 +1672,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3246
 msgid "Default: 1"
 msgstr "デフォルト： 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:404
+msgid "Band of the \"value raster layer\" to compare to"
+msgstr "比較する「入力ラスタ」のバンド"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:495
+msgid "**Algorithm ID**: ``native:cellstackpercentrankfromrasterlayer``"
+msgstr "**Algorithm ID**: ``native:cellstackpercentrankfromrasterlayer``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:505
 msgid "Cell statistics"
@@ -1812,6 +1881,10 @@ msgstr "[crs]"
 msgid "**Output raster**"
 msgstr "**出力レイヤ**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:666
+msgid "**Algorithm ID**: ``native:cellstatistics``"
+msgstr "**Algorithm ID**: ``native:cellstatistics``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:676
 msgid "Equal to frequency"
 msgstr "ラスタスタックの値の一致頻度"
@@ -1971,7 +2044,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:823
 msgid "**Algorithm ID**: ``native:equaltofrequency``"
-msgstr "**アルゴリズムID**: ``native:equaltofrequency``"
+msgstr "**Algorithm ID**: ``native:equaltofrequency``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:833
 msgid "Fuzzify raster (gaussian membership)"
@@ -1988,6 +2061,10 @@ msgid ""
 msgstr ""
 "ガウシアンメンバーシップ関数を使用して入力ラスタの各ピクセルにメンバーシップ値を割り当てることにより、入力ラスタをファジー化されたラスタに変換します。メンバーシップ値は0から1の範囲の値です。ファジー化されたラスタにおいて、値0はメンバーではないこと、値1は完全にメンバーであることを意味しています。ガウシアンメンバーシップ関数は、"
 " |gaussian_formula| で定義されます。ここで、 *f1* は拡がり、 *f2* は中点を表します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3574
+msgid "gaussian_formula"
+msgstr "gaussian_formula"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:846
 msgid ""
@@ -2126,6 +2203,10 @@ msgstr "ガウス関数の拡がり"
 msgid "**Fuzzified raster**"
 msgstr "**出力ラスタ**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:940
+msgid "**Algorithm ID**: ``native:fuzzifyrastergaussianmembership``"
+msgstr "**Algorithm ID**: ``native:fuzzifyrastergaussianmembership``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:950
 msgid "Fuzzify raster (large membership)"
 msgstr "ラスタのファジー化（large membership）"
@@ -2141,6 +2222,10 @@ msgid ""
 msgstr ""
 "largeメンバーシップ関数を使用して入力ラスタの各ピクセルにメンバーシップ値を割り当てることにより、入力ラスタをファジー化されたラスタに変換します。メンバーシップ値は0から1の範囲の値です。ファジー化されたラスタにおいて、値0はメンバーではないこと、値1は完全にメンバーであることを意味しています。largeメンバーシップ関数は、"
 " |fuzzy_large_formula| で定義されます。ここで、 *f1* は拡がり、 *f2* は中点を表します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3576
+msgid "fuzzy_large_formula"
+msgstr "fuzzy_large_formula"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:960
 msgid ""
@@ -2179,6 +2264,10 @@ msgstr "デフォルト： 5"
 msgid "Spread of the large function"
 msgstr "large関数の拡がり"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1051
+msgid "**Algorithm ID**: ``native:fuzzifyrasterlargemembership``"
+msgstr "**Algorithm ID**: ``native:fuzzifyrasterlargemembership``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1061
 msgid "Fuzzify raster (linear membership)"
 msgstr "ラスタのファジー化（linear membership）"
@@ -2199,6 +2288,10 @@ msgstr ""
 "線形メンバーシップ関数を使用して入力ラスタの各ピクセルにメンバーシップ値を割り当てることにより、入力ラスタをファジー化されたラスタに変換します。メンバーシップ値は0から1の範囲の値です。ファジー化されたラスタにおいて、値0はメンバーではないこと、値1は完全にメンバーであることを意味しています。線形メンバーシップ関数は、"
 " |fuzzy_linear_formula| で定義されます。ここで、 *a* は下限、 *b* "
 "は上限を表します。この式は、上下限の間でピクセル値を線形変換してメンバーシップ値を割り当てます。下限よりも小さなピクセル値はメンバーシップ値0、上限よりも大きなピクセル値はメンバーシップ値1となります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3578
+msgid "fuzzy_linear_formula"
+msgstr "fuzzy_linear_formula"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1076
 msgid ""
@@ -2243,6 +2336,10 @@ msgstr ""
 msgid "High bound of the linear function"
 msgstr "線形関数の上限"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1166
+msgid "**Algorithm ID**: ``native:fuzzifyrasterlinearmembership``"
+msgstr "**Algorithm ID**: ``native:fuzzifyrasterlinearmembership``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1176
 msgid "Fuzzify raster (near membership)"
 msgstr "ラスタのファジー化（near membership）"
@@ -2258,6 +2355,10 @@ msgid ""
 msgstr ""
 "nearメンバーシップ関数を使用して入力ラスタの各ピクセルにメンバーシップ値を割り当てることにより、入力ラスタをファジー化されたラスタに変換します。メンバーシップ値は0から1の範囲の値です。ファジー化されたラスタにおいて、値0はメンバーではないこと、値1は完全にメンバーであることを意味しています。nearメンバーシップ関数は、"
 " |near_formula| で定義されます。ここで、 *f1* は拡がり、 *f2* は中点を表します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3580
+msgid "near_formula"
+msgstr "near_formula"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1186
 msgid ""
@@ -2281,6 +2382,10 @@ msgstr "near関数の中点"
 msgid "Spread of the near function"
 msgstr "near関数の拡がり"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1276
+msgid "**Algorithm ID**: ``native:fuzzifyrasternearmembership``"
+msgstr "**Algorithm ID**: ``native:fuzzifyrasternearmembership``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1286
 msgid "Fuzzify raster (power membership)"
 msgstr "ラスタのファジー化（power membership）"
@@ -2301,6 +2406,10 @@ msgstr ""
 "べき乗メンバーシップ関数を使用して入力ラスタの各ピクセルにメンバーシップ値を割り当てることにより、入力ラスタをファジー化されたラスタに変換します。メンバーシップ値は0から1の範囲の値です。ファジー化されたラスタにおいて、値0はメンバーではないこと、値1は完全にメンバーであることを意味しています。べき乗メンバーシップ関数は、"
 " |power_formula| で定義されます。ここで、 *a* は下限、 *b* は上限、 *f1* "
 "は指数を表します。この式は、上下限の間でピクセル値をべき乗変換してメンバーシップ値を割り当てます。下限よりも小さなピクセル値はメンバーシップ値0、上限よりも大きなピクセル値はメンバーシップ値1となります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3582
+msgid "power_formula"
+msgstr "power_formula"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1301
 msgid ""
@@ -2337,6 +2446,10 @@ msgstr "デフォルト： 2"
 msgid "Exponent of the power function"
 msgstr "べき乗関数の指数"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1395
+msgid "**Algorithm ID**: ``native:fuzzifyrasterpowermembership``"
+msgstr "**Algorithm ID**: ``native:fuzzifyrasterpowermembership``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1405
 msgid "Fuzzify raster (small membership)"
 msgstr "ラスタのファジー化（small membership）"
@@ -2352,6 +2465,10 @@ msgid ""
 msgstr ""
 "smallメンバーシップ関数を使用して入力ラスタの各ピクセルにメンバーシップ値を割り当てることにより、入力ラスタをファジー化されたラスタに変換します。メンバーシップ値は0から1の範囲の値です。ファジー化されたラスタにおいて、値0はメンバーではないこと、値1は完全にメンバーであることを意味しています。smallメンバーシップ関数は、"
 " |small_formula| で定義されます。ここで、 *f1* は拡がり、 *f2* は中点を表します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3584
+msgid "small_formula"
+msgstr "small_formula"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1415
 msgid ""
@@ -2374,6 +2491,10 @@ msgstr "small関数の中点"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1454
 msgid "Spread of the small function"
 msgstr "small関数の拡がり"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1505
+msgid "**Algorithm ID**: ``native:fuzzifyrastersmallmembership``"
+msgstr "**Algorithm ID**: ``native:fuzzifyrastersmallmembership``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1515
 msgid "Greater than frequency"
@@ -2404,7 +2525,7 @@ msgstr ":ref:`qgisequaltofrequency` 、 :ref:`qgislessthanfrequency`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1545
 msgid "**Algorithm ID**: ``native:greaterthanfrequency``"
-msgstr "**アルゴリズムID**: ``native:greaterthanfrequency``"
+msgstr "**Algorithm ID**: ``native:greaterthanfrequency``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1555
 msgid "Highest position in raster stack"
@@ -2461,7 +2582,7 @@ msgstr "結果の出力レイヤを指定します。つぎのいずれかです
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1681
 msgid "**Algorithm ID**: ``native:highestpositioninrasterstack``"
-msgstr "**アルゴリズムID**: ``native:highestpositioninrasterstack``"
+msgstr "**Algorithm ID**: ``native:highestpositioninrasterstack``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1691
 msgid "Less than frequency"
@@ -2492,7 +2613,7 @@ msgstr ":ref:`qgisequaltofrequency` 、 :ref:`qgisgreaterthanfrequency`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1721
 msgid "**Algorithm ID**: ``native:lessthanfrequency``"
-msgstr "**アルゴリズムID**: ``native:lessthanfrequency``"
+msgstr "**Algorithm ID**: ``native:lessthanfrequency``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1731
 msgid "Lowest position in raster stack"
@@ -2553,7 +2674,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1788
 msgid ":ref:`qgisrasterbooleanor`"
-msgstr ":ref:`qgisrasterbooleanor`"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1808
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1962
@@ -2613,6 +2734,10 @@ msgstr "1 -- Int16 （符号付き16ビット整数 (qint16)）"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
 msgstr "2 -- UInt16 （符号なし16ビット整数 (quint16)）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "3 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "3 --- Int32"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:11
 msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
@@ -2699,6 +2824,10 @@ msgstr ""
 msgid "The count of False pixels (value = 0) in the output raster layer"
 msgstr "出力ラスタレイヤのFalseピクセル（value=0）の数"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1915
+msgid "**Algorithm ID**: ``native:rasterbooleanand``"
+msgstr "**Algorithm ID**: ``native:rasterbooleanand``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1925
 msgid "Raster boolean OR"
 msgstr "複数ラスタのOR論理値"
@@ -2715,7 +2844,11 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1942
 msgid ":ref:`qgisrasterbooleanand`"
-msgstr ":ref:`qgisrasterbooleanand`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2068
+msgid "**Algorithm ID**: ``native:rasterbooleanor``"
+msgstr "**Algorithm ID**: ``native:rasterbooleanor``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2078
 msgid "Raster calculator"
@@ -2855,6 +2988,13 @@ msgstr "**出力領域**"
 msgid "[extent]"
 msgstr "[範囲]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2165
+msgid ""
+"Specify the spatial extent of the output raster layer. If the extent is not "
+"specified, the minimum extent that covers all the selected reference layers "
+"will be used."
+msgstr "出力ラスタレイヤの空間範囲を指定します。範囲が指定されていない場合は、選択された参照レイヤを全てカバーする最小範囲が使用されます。"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
 msgstr "利用できる方法:"
@@ -2917,7 +3057,27 @@ msgstr "計算した値の出力ラスタファイル。"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2211
 msgid "**Algorithm ID**: ``qgis:rastercalculator``"
-msgstr "**アルゴリズムID**: ``qgis:rastercalculator``"
+msgstr "**Algorithm ID**: ``qgis:rastercalculator``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2221
+msgid "Raster layer properties"
+msgstr "ラスタレイヤのプロパティ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2223
+msgid ""
+"Returns basic properties of the given raster layer, including the extent, "
+"size in pixels and dimensions of pixels (in map units), number of bands, and"
+" no data value."
+msgstr "指定されたラスタレイヤの基本プロパティ（範囲、ピクセル単位の大きさ、（地図単位での）ピクセルの寸法、バンド数、データなし値）を返します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2227
+msgid ""
+"This algorithm is intended for use as a means of extracting these useful "
+"properties to use as the input values to other algorithms in a model - e.g. "
+"to allow to pass an existing raster's pixel sizes over to a GDAL raster "
+"algorithm."
+msgstr ""
+"このアルゴリズムは、モデル内の他のアルゴリズムへの入力値として使用するために、これらの有用なプロパティを抽出する手段として使用することを意図しています。例えば、存在するラスタのピクセルの大きさをGDALラスタアルゴリズムに渡すことができます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2242
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2351
@@ -2943,9 +3103,31 @@ msgstr "**バンド番号**"
 msgid "Default: Not set"
 msgstr "デフォルト：未設定"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2253
+msgid ""
+"Whether to also return properties of a specific band. If a band is "
+"specified, the noData value for the selected band is also returned."
+msgstr "特定のバンドのプロパティも返すかどうか。バンドが指定された場合、選択されたバンドのnoData値も返されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2267
+msgid "**Number of bands in raster**"
+msgstr "**ラスタにあるバンドの数**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2268
 msgid "``BAND_COUNT``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2270
+msgid "The number of bands in the raster"
+msgstr "ラスタにあるバンドの数"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2278
+msgid "The raster layer extent in the CRS"
+msgstr "CRSによるラスタレイヤの範囲"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2279
+msgid "**Band has a NoData value set**"
+msgstr "**バンドは設定されたNoData値を持っている**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2280
 msgid "``HAS_NODATA_VALUE``"
@@ -2955,33 +3137,91 @@ msgstr ""
 msgid "[Boolean]"
 msgstr "[ブール値]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2282
+msgid ""
+"Indicates whether the raster layer has a value set for NODATA pixels in the "
+"selected band"
+msgstr "ラスタレイヤが選択されたバンドにNODATAピクセル用に設定された値を持っているかどうかを示す"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2287
+msgid "The number of columns in the raster layer"
+msgstr "ラスタレイヤにあるカラムの数"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2288
+msgid "**Band NoData value**"
+msgstr "**バンドのNoData値**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2289
 msgid "``NODATA_VALUE``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2291
+msgid "The value (if set) of the NoData pixels in the selected band"
+msgstr "（設定されていれば、）選択したバンドにおける、NoDataピクセルの値"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2292
+msgid "**Pixel size (height) in map units**"
+msgstr "**マップの単位によるピクセルの大きさ（高さ）**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2293
 msgid "``PIXEL_HEIGHT``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2295
+msgid "Vertical size in map units of the pixel"
+msgstr "ピクセルのマップの単位による垂直方向の大きさ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2296
+msgid "**Pixel size (width) in map units**"
+msgstr "**マップの単位によるピクセルの大きさ（幅）**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2297
 msgid "``PIXEL_WIDTH``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2299
+msgid "Horizontal size in map units of the pixel"
+msgstr "ピクセルのマップの単位による水平方向の大きさ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2303
+msgid "The number of rows in the raster layer"
+msgstr "ラスタレイヤにある行の数"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2304
+msgid "**Maximum x-coordinate**"
+msgstr "**x座標の最大**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2305
 msgid "``X_MAX``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2308
+msgid "**Minimum x-coordinate**"
+msgstr "**x座標の最小**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2309
 msgid "``X_MIN``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2312
+msgid "**Maximum y-coordinate**"
+msgstr "**y座標の最大**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2313
 msgid "``Y_MAX``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2316
+msgid "**Minimum y-coordinate**"
+msgstr "**y座標の最小**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2317
 msgid "``Y_MIN``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2324
+msgid "**Algorithm ID**: ``native:rasterlayerproperties``"
+msgstr "**Algorithm ID**: ``native:rasterlayerproperties``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2334
 msgid "Raster layer statistics"
@@ -3137,6 +3377,10 @@ msgstr "**平方和**"
 msgid "``SUM_OF_SQUARES``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2432
+msgid "**Algorithm ID**: ``native:rasterlayerstatistics``"
+msgstr "**Algorithm ID**: ``native:rasterlayerstatistics``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2442
 msgid "Raster layer unique values report"
 msgstr "ラスタレイヤのユニーク値"
@@ -3208,6 +3452,11 @@ msgstr "データベーステーブルに保存..."
 msgid "The file encoding can also be changed here."
 msgstr "ここでファイルの文字コードを変更することもできます。"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2517
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2673
+msgid "The number of NODATA pixels in the output raster layer"
+msgstr "出力ラスタレイヤのNODATAピクセルの数"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2525
 msgid "The output HTML file contains the following information:"
 msgstr "出力HTMLファイルには以下の情報が含まれます："
@@ -3255,6 +3504,10 @@ msgstr "*count*: その値のピクセル数"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2541
 msgid "*m*\\ :sup:`2`: total area in square meters of pixels with this value."
 msgstr "*m*\\ :sup:`2`: その値のピクセルの総面積（平方メートル単位）"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2552
+msgid "**Algorithm ID**: ``native:rasterlayeruniquevaluesreport``"
+msgstr "**Algorithm ID**: ``native:rasterlayeruniquevaluesreport``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2562
 msgid "Raster layer zonal statistics"
@@ -3314,11 +3567,27 @@ msgstr "ラスタがマルチバンドの場合には、ゾーンを定義する
 msgid "Default: ``[Create temporary layer]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2612
+msgid "Specification of the output report. One of:"
+msgstr "出力レポートを指定します。次のいずれかです："
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2637
 msgid ""
 "Raster layer used to calculate the centroids that will be used as reference "
 "when determining the zones in the output layer. One of:"
 msgstr "出力レイヤのゾーンの判定時に参照点として用いる重心の計算に使用するラスタレイヤ。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2641
+msgid ""
+"0 --- Input layer: zones are determined by sampling the zone raster layer "
+"value at the centroid of each pixel from the source raster layer"
+msgstr "0 --- 入力レイヤ：ゾーンは、ソースラスタレイヤから各ピクセルの重心でゾーンラスタレイヤの値をサンプリングすることによって決定されます"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2643
+msgid ""
+"1 --- Zones layer: the input raster layer will be sampled at the centroid of"
+" each pixel from the zones raster layer"
+msgstr "1 --- ゾーンレイヤ：入力ラスタレイヤは、ゾーンラスタレイヤの各ピクセルの重心でサンプリングされます"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2677
 msgid "The output layer contains the following information **for each zone**:"
@@ -3347,6 +3616,10 @@ msgstr "max: ゾーン内のピクセル値の最大値"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2685
 msgid "Mean: the mean of the pixel values in the zone;"
 msgstr "mean: ゾーン内のピクセル値の平均値"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2698
+msgid "**Algorithm ID**: ``native:rasterlayerzonalstats``"
+msgstr "**Algorithm ID**: ``native:rasterlayerzonalstats``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2708
 msgid "Raster surface volume"
@@ -3486,6 +3759,10 @@ msgstr "HTML形式の出力レポート（体積、面積、ピクセル数を�
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2818
 msgid "The output table (containing volume, area and pixel count)"
 msgstr "出力テーブル（体積、面積、ピクセル数を含む）"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2824
+msgid "**Algorithm ID**: ``native:rastersurfacevolume``"
+msgstr "**Algorithm ID**: ``native:rastersurfacevolume``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2834
 msgid "Reclassify by layer"
@@ -3661,6 +3938,10 @@ msgstr "出力ラスタファイルの形式を定義します。オプション
 msgid "Output raster layer with reclassified band values"
 msgstr "再分類されたバンド値を持つ出力ラスタレイヤ"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2962
+msgid "**Algorithm ID**: ``native:reclassifybylayer``"
+msgstr "**Algorithm ID**: ``native:reclassifybylayer``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2972
 msgid "Reclassify by table"
 msgstr "区分表（テーブル）で再分類"
@@ -3696,6 +3977,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3160
 msgid "Specification of the output raster layer. One of:"
 msgstr "出力ラスタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3088
+msgid "**Algorithm ID**: ``native:reclassifybytable``"
+msgstr "**Algorithm ID**: ``native:reclassifybytable``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3098
 msgid "Rescale raster"
@@ -3794,7 +4079,7 @@ msgstr "**アルゴリズムID**: ``native:rescaleraster``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3196
 msgid "Round raster"
-msgstr "ラスタを丸める"
+msgstr "ラスタ値を四捨五入"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3198
 msgid ""
@@ -3856,6 +4141,18 @@ msgstr "[リスト]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3247
 msgid "How to choose the target rounded value. Options are:"
 msgstr "値を丸める方法。オプションは次のとおり："
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3249
+msgid "0 --- Round up"
+msgstr "0 -- 繰り上げ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3250
+msgid "1 --- Round to nearest"
+msgstr "1 -- 四捨五入"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3251
+msgid "2 --- Round down"
+msgstr "2 -- 切り下げ"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3252
 msgid "**Number of decimals places**"
@@ -3923,6 +4220,10 @@ msgstr "[ベクタ：ポイント]"
 msgid "Point vector layer to use for  sampling"
 msgstr "サンプリングに使用するポイントベクタレイヤ"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3341
+msgid "**Raster Layer**"
+msgstr "**ラスタレイヤ**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3342
 msgid "``RASTERCOPY``"
 msgstr ""
@@ -3943,9 +4244,18 @@ msgstr "**ラスタ値を収納するカラム名の接頭辞**"
 msgid "``COLUMN_PREFIX``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3349
+msgid "Default: 'SAMPLE\\_'"
+msgstr "デフォルト：'SAMPLE\\_'"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3350
 msgid "Prefix for the names of the added columns."
 msgstr "追加されるカラム名の接頭辞"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3351
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3376
+msgid "**Sampled**"
+msgstr "**サンプリングした出力**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3358
 msgid "Specify the output layer containing the sampled values. One of:"
@@ -3954,6 +4264,10 @@ msgstr "サンプリングされた値の出力レイヤを指定します。次
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3379
 msgid "The output layer containing the sampled values."
 msgstr "サンプリングされた値の出力レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3384
+msgid "**Algorithm ID**: ``native:rastersampling``"
+msgstr "**Algorithm ID**: ``native:rastersampling``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3394
 msgid "Zonal histogram"
@@ -4023,6 +4337,10 @@ msgstr "出力ベクタポリゴンレイヤを指定します。次のいずれ
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3465
 msgid "The output vector polygon layer."
 msgstr "出力ベクタポリゴンレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3470
+msgid "**Algorithm ID**: ``native:zonalhistogram``"
+msgstr "**Algorithm ID**: ``native:zonalhistogram``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3480
 msgid "Zonal statistics"
@@ -4110,6 +4428,11 @@ msgstr "10 --- 種類（Variety）"
 msgid "11 --- Variance"
 msgstr "11 --- 分散（Variance）"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3536
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3559
+msgid "**Zonal Statistics**"
+msgstr "**ゾーン統計量出力**"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:7
 msgid "Append to Layer…"
 msgstr "レイヤに追加..."
@@ -4117,3 +4440,7 @@ msgstr "レイヤに追加..."
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3562
 msgid "The zone vector layer with added statistics."
 msgstr "統計量が追加されたゾーンのベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3567
+msgid "**Algorithm ID**: ``native:zonalstatisticsfb``"
+msgstr "**Algorithm ID**: ``native:zonalstatisticsfb``"
