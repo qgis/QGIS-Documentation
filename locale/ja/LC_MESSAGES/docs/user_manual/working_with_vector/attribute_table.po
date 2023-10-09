@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-23 09:53+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,6 +42,19 @@ msgstr ""
 msgid "Foreword: Spatial and non-spatial tables"
 msgstr "序文: 空間情報のあるテーブル、空間情報のないテーブル"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:24
+msgid ""
+"QGIS allows you to load spatial and non-spatial layers. This currently "
+"includes tables supported by GDAL and delimited text, as well as the "
+"PostgreSQL, MS SQL Server, SpatiaLite and Oracle providers. All loaded "
+"layers are listed in the :guilabel:`Layers` panel. Whether a layer is "
+"spatially enabled or not determines whether you can interact with it on the "
+"map."
+msgstr ""
+"QGISでは、空間レイヤと非空間レイヤを読み込むことができます。これには現在、GDALや区切りテキストでサポートされているテーブル、PostgreSQL、MS"
+" SQL Server、SpatiaLite、Oracleプロバイダが含まれます。読み込まれたすべてのレイヤは :guilabel:`レイヤ` "
+"パネルに一覧表示されます。レイヤが空間的に有効かどうかによって、マップ上でそのレイヤを操作できるかどうかが決まります。"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:30
 msgid ""
 "Non-spatial tables can be browsed and edited using the attribute table view."
@@ -50,12 +64,12 @@ msgid ""
 "digitizing. Have a closer look at the edit widget in section "
 ":ref:`vector_attributes_menu` to find out more."
 msgstr ""
-"空間情報を持たないテーブルは、属性テーブルビューを使用して閲覧や編集ができます。さらに、これをフィールドの参照値に使用することも可能です。例えば、空間情報を持たないテーブルの列を使用して、編集モード中の特定のベクタレイヤに追加される属性値に許容される値や範囲を定義することができます。詳しくは、"
+"空間情報を持たないテーブルは、属性テーブルビューを使用して閲覧や編集ができます。さらに、これをフィールドの参照値に使用することも可能です。例えば、空間情報を持たないテーブルの列を使用して、編集モード中の特定のベクタレイヤに追加される属性値や許容される値の範囲を定義することができます。詳しくは、"
 " :ref:`vector_attributes_menu` セクションの編集ウィジェットを参考にしてください。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:40
 msgid "Introducing the attribute table interface"
-msgstr "属性テーブルのインターフェイスの紹介"
+msgstr "属性テーブルのインタフェースの紹介"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:42
 msgid ""
@@ -530,6 +544,12 @@ msgstr "アクション"
 msgid "Lists the actions related to the layer"
 msgstr "レイヤに関連したアクションをリストします"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:104
+msgid ""
+"Depending on the format of the data and the GDAL library built with your "
+"QGIS version, some tools may not be available."
+msgstr "データの形式やお使いのQGISのバージョンでビルドされたGDALライブラリによっては、利用できないツールがあります。"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:107
 msgid ""
 "Below these buttons is the Quick Field Calculation bar (enabled only in "
@@ -542,6 +562,12 @@ msgstr ""
 "でのみ有効）があり、レイヤ内の地物のすべてまたは一部に計算結果を素早く適用できます。このバーは |calculateField| "
 ":sup:`フィールド計算機` と同様の :ref:`式 <vector_expressions>` を使用します（ "
 ":ref:`calculate_fields_values` 参照）。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:113
+msgid ""
+"The attribute table support :kbd:`Shift+Mouse Wheel` scrolling in attribute "
+"table to switch to a horizontal scrolling action instead of vertical."
+msgstr "属性テーブルは、:kbd:`Shift+マウスホイール` スクロールに対応しており、縦スクロールから横スクロールに切り替わります。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:118
 msgid "Table view vs Form view"
@@ -1300,6 +1326,23 @@ msgstr ""
 msgid "Saving selected features as new layer"
 msgstr "選択地物を新規レイヤとして保存する"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:488
+msgid ""
+"The selected features can be saved as any OGR-supported vector format and "
+"also transformed into another coordinate reference system (CRS). In the "
+"contextual menu of the layer, from the :guilabel:`Layers` panel, click on "
+":menuselection:`Export --> Save selected features as...` to define the name "
+"of the output dataset, its format and CRS (see section "
+":ref:`general_saveas`). You'll notice that |checkbox| :menuselection:`Save "
+"only selected features` is checked. It is also possible to specify GDAL "
+"creation options within the dialog."
+msgstr ""
+"選択された地物は、OGR がサポートする任意のベクトル形式として保存でき、別の座標参照系 (CRS) "
+"に変換することもできます。:guilabel:`レイヤ` パネルでレイヤのコンテキストメニューから :menuselection:`エクスポート -->"
+" 新規ファイルに選択地物を保存...` をクリックし、出力データセットの名前、形式、CRSを定義します（セクション "
+":ref:`general_saveas` を参照）。|checkbox| :menuselection:`選択地物のみ保存` "
+"がチェックされていることが分かります。ダイアログ内でGDALの作成オプションを指定することも可能です。"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:500
 msgid "Editing attribute values"
 msgstr "属性値の編集"
@@ -1444,6 +1487,16 @@ msgid ""
 "Set the :guilabel:`Output field length` to ``10`` and the "
 ":guilabel:`Precision` to ``3``"
 msgstr ":guilabel:`フィールド長` を ``10`` に、 :guilabel:`精度` を ``3`` に設定します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:566
+msgid ""
+"Double click on ``$length`` in the :guilabel:`Geometry` group to add the "
+"length of the geometry into the Field calculator expression box (you will "
+"begin to see a preview of the output, up to 60 characters, below the "
+"expression box updating in real-time as the expression is assembled)."
+msgstr ""
+":guilabel:`ジオメトリ` グループにある ``$length`` "
+"をダブルクリックして、ジオメトリの長さをフィールド計算機の式ボックスに追加します（式ボックスの下に最大60文字までの出力のプレビューが表示され、式が組み立てられるとリアルタイムに更新されます）。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:570
 msgid ""
@@ -1697,7 +1750,7 @@ msgid ""
 "provides some attributes about its name and region type and a unique id "
 "(which acts as primary key)."
 msgstr ""
-"例として、アラスカのすべての地域（ポリゴン）を有するレイヤがあり、名前、領域タイプ、（主キーとして機能する）ユニークなIDといった属性を持っているとします。"
+"例として、アラスカのすべての地域（ポリゴン）を有するレイヤがあり、名前、地域タイプ、（主キーとして機能する）ユニークIDといった属性を持っているとします。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:707
 msgid ""
@@ -1728,7 +1781,7 @@ msgid ""
 "number of airports (a typical one to many relation)."
 msgstr ""
 "QGISでは、テーブルとベクタレイヤの間に違いはありません。基本的には、ベクタレイヤとはジオメトリを持っているテーブルのことです。このため、テーブルはベクタレイヤとして追加することができます。"
-" 1対Nリレーションのデモンストレーションとして、 :file:`regions` シェープファイルと、regionsレイヤへの外部キーフィールド（ "
+" 1対Nリレーションのデモンストレーションとして、 :file:`regions` シェープファイルと、地域レイヤへの外部キーフィールド（ "
 "``fk_region`` ）を持つ :file:`airports` "
 "シェープファイルを読み込んでみましょう。これは、各空港はそれぞれただ1つの地域に属し、各地域は空港をいくつでも持つことができることを意味します（典型的な1対多関係です）。"
 
@@ -1743,7 +1796,7 @@ msgid ""
 "(if you have a database, you will probably want to define a constraint on "
 "it)."
 msgstr ""
-"空港属性テーブルの既存の属性に加えて、外部キーとして動作する別のフィールド ``fk_region`` "
+"空港の属性テーブルに既にある属性に加えて、外部キーとして動作する別のフィールド ``fk_region`` "
 "が必要です（データベースを持っている場合には、このフィールドに制約を定義することになるでしょう）。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:737
@@ -1755,7 +1808,7 @@ msgid ""
 " to do is to tell QGIS the relations between your tables."
 msgstr ""
 "このフィールド fk_region "
-"には、必ず地域のIDが入ります。これは、空港が属する地域へのポインタのように見ることができます。また、編集用のカスタム編集フォームを設計でき、QGISはその設定についての処理をします。これはさまざまなプロバイダに対応しており（シェープファイルやCSVファイルも使用可）、しなければならないのは、QGISにテーブル間の関係を伝えることだけです。"
+"には、必ず地域のIDが入ります。これは、空港が属する地域へのポインタのように見ることができます。また、編集用のカスタム編集フォームを設計でき、QGISはその設定を処理します。これはさまざまなプロバイダに対応しており（シェープファイルやCSVファイルでも使うことができます）、しなければならないのは、QGISにテーブル間の関係を伝えることだけです。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:744
 msgid "Defining 1-N relations"
@@ -1793,7 +1846,7 @@ msgid ""
 "need to define the primary key of the referenced layer, so it is ``ID``."
 msgstr ""
 "**被参照レイヤ（親）** 親レイヤとも呼ばれ、プライマリキーを持っており、参照されるレイヤです。この例では、 ``regions`` "
-"レイヤです。参照レイヤのプライマリキーを定義する必要があり、ここでは ``ID`` を指定します。"
+"レイヤです。参照レイヤの主キーを定義する必要があり、ここでは ``ID`` を指定します。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:756
 msgid ""
@@ -2510,6 +2563,20 @@ msgid ""
 msgstr ""
 ":guilabel:`単純コピー` "
 "：リソースのコピーをファイルディスクの指定位置（ローカル、ネットワーク共有ファイルシステムどちらも可）に保存し、属性値はコピーへのパスで更新されます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1238
+msgid ""
+":guilabel:`WebDAV Storage`: The resource is pushed to a HTTP server "
+"supporting the `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol and"
+" the attribute is updated with its URL. `Nextcloud "
+"<https://nextcloud.com/>`_, `Pydio <https://pydio.com>`_ or other file "
+"hosting software support this protocol."
+msgstr ""
+":guilabel:`WebDAV Storage`： リソースは `WebDAV "
+"<https://en.wikipedia.org/wiki/WebDAV>`_ "
+"プロトコルをサポートするHTTPサーバーにプッシュされ、属性はそのURLで更新されます。`Nextcloud "
+"<https://nextcloud.com/>`_ や `Pydio <https://pydio.com>`_ "
+"などのファイルホスティングソフトウェアがこのプロトコルをサポートしています。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1243
 msgid ""
