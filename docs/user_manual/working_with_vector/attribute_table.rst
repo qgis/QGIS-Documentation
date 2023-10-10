@@ -254,20 +254,19 @@ conditions on feature's:
 
 * geometry (e.g., identifying multi-parts features, small area ones or in a
   defined map extent...);
-* or field value (e.g., comparing values to a threshold, identifying empty
-  cells...).
+* or field value (e.g., comparing values to a threshold, identifying empty cells,
+  duplicates, ...).
 
 You can enable the conditional formatting panel clicking on
-|conditionalFormatting| at the top right of the attributes window in table
-view (not available in form view).
+|conditionalFormatting| :sup:`Conditional formatting` button at the top right
+of the attributes window in table view (not triggered in form view).
 
 The new panel allows user to add new rules to format rendering of
 |radioButtonOn|:guilabel:`Field` or |radioButtonOff|:guilabel:`Full row`.
 Adding new rule opens a form to define:
 
 * the name of the rule;
-* a condition using any of the :ref:`expression builder <vector_expressions>`
-  functions;
+* a condition using any of the :ref:`expression builder <vector_expressions>` functions;
 * the formatting: it can be choosen from a list of predefined formats or created
   based on properties like:
 
