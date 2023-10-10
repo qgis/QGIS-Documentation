@@ -14,6 +14,58 @@ Modeler tools
       :class: toc_columns
 
 
+.. _qgiscalculateexpression:
+
+Calculate expression 
+--------------------
+Calculate the results of a QGIS expression and make 
+the result available for use in other parts of the model.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Field**
+     - ``INPUT``
+     - [expression]
+     - Expression to calculate 
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``Value``
+     - [Result Value]
+     - Calculated result value, the data type of the
+       output will vary based on the specific expression used 
+       in the algorithm.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:calculateexpression``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+
 .. _qgiscondition:
 
 Conditional branch
