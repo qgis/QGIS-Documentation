@@ -658,14 +658,15 @@ Parametrizable SVG
 ..................
 
 You have the possibility to change the colors of a :guilabel:`SVG marker`.
-You have to add the placeholders ``param(fill)`` for fill color,
-``param(outline)`` for stroke color and ``param(outline-width)`` for stroke
-width. These placeholders can optionally be followed by a default value, e.g.:
+You have to add the placeholders ``param(fill)`` for fill color, ``param(fill-opacity)`` for
+fill opacity, ``param(outline)`` and ``param(outline-opacity)`` for stroke color and opacity respectively,
+and ``param(outline-width)`` for stroke width. These placeholders can optionally
+be followed by a default value, e.g.:
 
 .. code-block:: xml
 
     <svg width="100%" height="100%">
-    <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(outline-width) 10" width="100" height="100">
+    <rect fill="param(fill) #ff0000" fill-opacity="param(fill-opacity) 1" stroke="param(outline) #00ff00" stroke-opacity="param(outline-opacity) 1" stroke-width="param(outline-width) 10" width="100" height="100">
     </rect>
     </svg>
 
