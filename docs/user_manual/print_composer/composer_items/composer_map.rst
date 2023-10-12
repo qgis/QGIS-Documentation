@@ -262,15 +262,13 @@ feature following:
 Grids
 -----
 
-With grids, you can add, over your map, information relative to its extent or
-coordinates, either in the map item projection or a different one. The
-:guilabel:`Grids` group provides the possibility to add several grids to a
-map item.
+With grids, you can add, over your map, information relative to its extent
+or coordinates, either in the map item projection or a different one.
+The :guilabel:`Grids` group provides the possibility to add several grids to a map item.
 
-* With the |symbologyAdd| and |symbologyRemove| buttons you can add or remove a selected
-  grid;
-* With the |arrowUp| and |arrowDown| buttons you can move up and down a grid in
-  the list, hence move it on top or bottom of another one, over the map item.
+* With the |symbologyAdd| and |symbologyRemove| buttons you can add or remove a selected grid;
+* With the |arrowUp| and |arrowDown| buttons you can move up and down a grid in the list,
+  hence move it on top or bottom of another one, over the map item.
 
 Double-click the added grid to rename it.
 
@@ -282,8 +280,7 @@ Double-click the added grid to rename it.
    Map Grids Dialog
 
 To modify a grid, select it and press the :guilabel:`Modify Grid...` button
-to open the :guilabel:`Map Grid Properties` panel and access its
-configuration options.
+to open the :guilabel:`Map Grid Properties` panel and access its configuration options.
 
 Grid Appearance
 ...............
@@ -293,36 +290,34 @@ In the :guilabel:`Map Grid Properties` panel, check |checkbox|
 
 As grid type, you can specify to use a:
 
-* *Solid*: shows a line across the grid frame. The :guilabel:`Line style` can
-  be customized using :ref:`color <color-selector>` and :ref:`symbol
-  <symbol-selector>` selector widget;
-* *Cross*: displays segment at the grid lines intersection for which you can
+* **Solid**: shows a line across the grid frame.
+  The :guilabel:`Line style` can be customized using :ref:`color <color-selector>`
+  and :ref:`symbol <symbol-selector>` selector widget;
+* **Cross**: displays segment at the grid lines intersection for which you can
   set the :guilabel:`Line style` and the :guilabel:`Cross width`;
-* *Markers*: only displays customizable markers symbol at grid lines
-  intersection;
-* or *Frame and annotations only*.
+* **Markers**: only displays customizable markers symbol at grid lines intersection;
+* or **Frame and annotations only**.
 
 Other than the grid type, you can define: 
 
-* the :guilabel:`CRS` of the grid. If not changed, it will follow the Map CRS.
-  The :guilabel:`Change` button lets you set it to a different CRS.
-  Once set, it can be changed back to default by selecting any group heading
-  (e.g **Geographic Coordinate System**) under
-  :guilabel:`Predefined Coordinate Reference Systems` in the CRS
-  selection dialog.
-* the :guilabel:`Interval` type to use for the grid references. Available
-  options are ``Map Unit``, ``Fit Segment Width``, ``Millimeter`` or ``Centimeter``:
+* the :guilabel:`CRS` of the grid: by default, it will follow the map item CRS.
+  Press |setProjection| :sup:`Select CRS` button to set it to a different CRS.
+* the :guilabel:`Interval` type to use for the grid references:
 
-  * choosing ``Fit Segment Width`` will dynamically select the grid interval based 
-    on the map extent to a "pretty" interval. When selected, the ``Minimum`` and 
-    ``Maximum`` intervals can be set.
-  * the other options allow you to set the distance between two consecutive grid
-    references in the ``X`` and ``Y`` directions.
+  * **Map Units**: you set a distance within the map (in the unit of the grid CRS)
+    between consecutive grid references in the :guilabel:`X` and :guilabel:`Y` directions.
+    The number of grid ticks will vary depending on the map scale.
+  * choosing **Fit Segment Width** will dynamically select the grid interval based
+    on the map extent to a "pretty" interval.
+    That optimal interval is calculated within a range of distances
+    whose :guilabel:`Minimum` and :guilabel:`Maximum` values can be customized.
+  * With **Millimeters** or **Centimeters**, you set a distance on the paper
+    between consecutive grid references in the :guilabel:`X` and :guilabel:`Y` directions.
+    The number of grid ticks will be the same whatever the map scale.
 
-* the :guilabel:`Offset` from the map item edges, in the ``X`` and/or the ``Y``
-  direction
-* and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when
-  compatible.
+* the :guilabel:`Offset` from the map item edges, in the :guilabel:`X`
+  and/or the :guilabel:`Y` direction
+* and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when compatible.
 
 .. _Figure_layout_map_grid_draw:
 
@@ -477,6 +472,8 @@ of the overview on the selected map frame. You can customize it with:
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |setToCanvasExtent| image:: /static/common/mActionSetToCanvasExtent.png
    :width: 1.5em
