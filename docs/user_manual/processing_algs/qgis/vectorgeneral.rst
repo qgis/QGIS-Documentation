@@ -877,8 +877,8 @@ Python code
 
 Execute SQL
 -----------
-Runs a simple or complex query with ``SQL`` syntax on the source
-layer.
+Runs a simple or complex query based only on SELECT with ``SQL`` syntax 
+on the source layer.
 
 Input datasources are identified with ``input1``, ``input2``... ``inputN`` and
 a simple query will look like ``SELECT * FROM input1``.
