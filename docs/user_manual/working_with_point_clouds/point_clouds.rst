@@ -128,6 +128,13 @@ Source Properties
 In the |system| :guilabel:`Source` tab you can see and edit basic
 information about the point cloud layer:  
 
+.. _figure_point_cloud_source:
+
+.. figure:: img/point_cloud_source.png
+   :align: center
+
+   Point cloud source tab
+
 * :guilabel:`Settings`: Set a Layer name different from the layer
   filename that will be used to identify the layer in the project
   (in the Layers Panel, with expressions, in print layout legend,...)
@@ -139,12 +146,52 @@ information about the point cloud layer:
   this process only if the CRS applied to the layer is a wrong
   one or if none was applied.
 
-.. _figure_point_cloud_source:
+.. _pdal_querybuilder:
 
-.. figure:: img/point_cloud_source.png
-   :align: center
+* :guilabel:`Provider Feature Filter`: allows to restrict data to use in the current project to a subset,
+  using functions and expression at the PDAL data provider level.
+  Press the :guilabel:`Query Builder` button at the bottom to start setting the filter.
 
-   Point cloud source tab
+  .. _figure_point_cloud_querybuilder:
+
+  .. figure:: img/point_cloud_querybuilder.png
+     :align: center
+
+     Filtering point cloud layer to buildings at specific altitude
+
+  .. _pdal_expressions:
+
+  In the bottom part of the dialog, you can type a :guilabel:`Provider specific filter expression`.
+  Such an expression can be built thanks to:
+
+  * :guilabel:`Fields`: the list contains all the attributes of the point cloud layer.
+    To add an attribute to the expression, double-click its name or just type it into the text box.
+  * :guilabel:`Values`: frame lists values or statistics of the currently selected attribute, as a ``key:value`` pair.
+    To add a value to the expression field, double click its name in the list:
+    depending on the type of attribute, either the key or the value will be added to the expression.
+    Or type the value in the expression text box.
+  * :guilabel:`Operators`: this toolbar contains all usable operators.
+    To add an operator to the expression field, click the appropriate button.
+    Relational operators ( ``=`` , ``>`` , ...) and logical operators (``AND``, ``OR``, ...) are available.
+
+  The :guilabel:`Test` button helps you check the syntax of your query.
+  Use the :guilabel:`Clear` button to wipe the query
+  and revert the layer to its original state (i.e., fully load all the points in the layer).
+  It is possible to :guilabel:`Save...` the query as a :file:`.QQF` file,
+  or :guilabel:`Load...` the query from a file into the dialog.
+
+  When a filter is applied, QGIS treats the resulting subset as if it were the entire layer.
+  For example if you applied the :ref:`filter above <figure_point_cloud_querybuilder>` for filtering buildings,
+  you can not e.g. display, query, save or edit points that are of vegetation classification
+  because they are not part of the subset.
+
+  .. tip:: **Filtered layers are indicated in the Layers Panel**
+
+  In the :guilabel:`Layers` panel, a filtered layer is listed
+  with a |indicatorFilter| :sup:`Filter` icon next to it
+  indicating the query used when the mouse hovers over the button.
+  Double-click the icon opens the :guilabel:`Query Builder` dialog for edit.
+  This can also be achieved through the :menuselection:`Layer --> Filter...` menu.
 
 
 .. _point_clouds_symbology:
@@ -678,6 +725,8 @@ that also contains best practices and optional extensions (such as overviews).
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em

@@ -203,6 +203,8 @@ The :guilabel:`Test` button helps you check your query and displays a message bo
 the number of features satisfying the current query.
 Use the :guilabel:`Clear` button to wipe the SQL query and revert the layer to its
 original state (ie, fully load all the features).
+It is possible to :guilabel:`Save...` the query as a :file:`.QQF` file,
+or :guilabel:`Load...` the query from a file into the dialog.
 
 When a filter is applied,
 QGIS treats the resulting subset acts as if it were the entire layer. For
@@ -213,9 +215,9 @@ you can not display, query, save or edit ``Anchorage``, because that is a
 .. tip:: **Filtered layers are indicated in the Layers Panel**
 
   In the :guilabel:`Layers` panel, filtered layer is listed with a |indicatorFilter|
-  :sup:`Filter` icon next to it indicating the query used when the mouse hovers
-  over the button. Double-click the icon opens the :guilabel:`Query Builder` dialog
-  for edit.
+  :sup:`Filter` icon next to it indicating the query used when the mouse hovers over the button.
+  Double-click the icon opens the :guilabel:`Query Builder` dialog for edit.
+  This can also be achieved through the :menuselection:`Layer --> Filter...` menu.
 
 
 .. index:: Style, Symbology, Renderer
