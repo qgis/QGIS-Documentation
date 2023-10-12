@@ -835,12 +835,17 @@ Specifically, you can set:
   You will also need to fill in the :guilabel:`Band` to pick values from
   and can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
 * :guilabel:`Profile Chart Appearance`: controls the rendering
-  :guilabel:`Style` the raster elevation will use when drawing a profile chart.
-  It can be set as:
+  of the raster elevation data in the profile chart.
+  The profile :guilabel:`Style` can be set as:
 
-  * a profile :guilabel:`Line` with a :ref:`line style <vector_line_symbols>` applied
-  * a surface with :guilabel:`Fill below` and a corresponding
-    :ref:`fill style <vector_fill_symbols>`
+  * a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`
+  * an elevation surface rendered using a fill symbol either above (:guilabel:`Fill above`)
+    or below (:guilabel:`Fill below`) the elevation curve line.
+    The surface symbology is represented using:
+
+    * a :ref:`Fill style <vector_fill_symbols>`
+    * and a :guilabel:`Limit`: the maximum (respectively minimum) altitude
+      determining how high the fill surface will be
 
 
 .. index:: Metadata, Metadata editor, Keyword

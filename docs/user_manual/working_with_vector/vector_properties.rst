@@ -3438,12 +3438,17 @@ Specifically, you can set:
     will be rendered as a surface instead of separate features by joining
     the sampled elevation results into a continuous line. This can enhance
     visualisation and is designed for vector layers which represent a
-    continuous elevation surface, e.g contour lines or surveyed elevation points.
-    The line :guilabel:`Style` can be set as:
+    continuous elevation surface, e.g. contour lines or surveyed elevation points.
+    The profile :guilabel:`Style` can be set as:
 
-    * a profile :guilabel:`Line` with a :guilabel:`Line style` applied
-    * a surface with :guilabel:`Fill below` and a corresponding
-      :guilabel:`Fill style`
+    * a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`
+    * an elevation surface rendered using a fill symbol either above (:guilabel:`Fill above`)
+      or below (:guilabel:`Fill below`) the elevation curve line.
+      The surface symbology is represented using:
+
+      * a :ref:`Fill style <vector_fill_symbols>`
+      * and a :guilabel:`Limit`: the maximum (respectively minimum) altitude
+        determining how high the fill surface will be
 
     Moreover, you can check |unchecked| :guilabel:`Show markers at sampled points`
     to make them visible over the interpretation line and assign them
