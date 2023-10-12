@@ -3201,42 +3201,41 @@ Rendering Properties
 
    Layer Rendering Properties dialog
 
-Scale dependent visibility
---------------------------
+The |rendering| :guilabel:`Rendering` tab offers following properties:
 
-You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
-(exclusive)` scale, defining a range of scale in which features will be
-visible. Out of this range, they are hidden. The |mapIdentification|
-:sup:`Set to current canvas scale` button helps you use the current map
-canvas scale as boundary of the range visibility.
-See :ref:`label_scaledepend` for more information.
+* Under |unchecked| :guilabel:`Scale dependent visibility`,
+  you can set the :guilabel:`Maximum (inclusive)`
+  and :guilabel:`Minimum (exclusive)` scales,
+  defining a range of scales in which features will be visible.
+  Out of this range, they are hidden.
+  The |mapIdentification| :sup:`Set to current canvas scale` button helps you
+  use the current map canvas scale as boundary of the range visibility.
+  See :ref:`label_scaledepend` for more information.
 
-.. note::
+  .. note::
 
    You can also activate scale dependent visibility on a layer from within
    the :guilabel:`Layers` panel: right-click on the layer and in the contextual menu,
    select :guilabel:`Set Layer Scale Visibility`.
 
+* QGIS offers support for on-the-fly feature generalisation.
+  This can improve rendering times when drawing many complex features at small scales.
+  This feature can be enabled or disabled in the layer settings
+  using the |checkbox| :guilabel:`Simplify geometry` option.
+  There is also a global setting that enables generalisation by default for newly added layers
+  (see :ref:`global simplification <global_simplification>` for more information).
 
-Simplify geometry
------------------
+  .. note::
+   Feature generalisation may introduce artefacts into your rendered output in some cases.
+   These may include slivers between polygons
+   and inaccurate rendering when using offset-based symbol layers.
 
-QGIS offers support for on-the-fly feature generalisation. This can
-improve rendering times when drawing many complex features at small scales.
-This feature can be enabled or disabled in the layer settings using the
-|checkbox| :guilabel:`Simplify geometry` option. There is also a global
-setting that enables generalisation by default for newly added layers (see
-:ref:`global simplification <global_simplification>` for more information).
+* The |unchecked| :guilabel:`Fixed reference scale` indicates the map scale
+  at which symbology and labeling sizes which uses paper-based units (such as millimeters or points) relate to.
+  The sizes will be scaled accordingly whenever the map is viewed at a different scale.
 
-.. note::
-  Feature generalisation may introduce artefacts into your rendered
-  output in some cases. These may include slivers between polygons and
-  inaccurate rendering when using offset-based symbol layers.
-
-While rendering extremely detailed layers (e.g. polygon layers with a huge number
-of nodes), this can cause layout exports in PDF/SVG format to be huge as all
-nodes are included in the exported file. This can also make the resultant file
-very slow to work with/open in other programs.
+  For instance, a line layer using a 2mm wide line with a 1:2000 :guilabel:`Reference scale` set
+  will be rendered using 4mm wide lines when the map is viewed at 1:1000.
 
 * The :guilabel:`Selections` group allows you to control whether a specific color or symbol should be used
   in place of the defaults (:menuselection:`Project properties --> General --> Selection color`)
@@ -3252,13 +3251,17 @@ very slow to work with/open in other programs.
     then the default selection color is not applied at all;
     being able to set a specific simpler symbol to use for selected features in the layer can help.
 
-Checking |checkbox| :guilabel:`Force layer to render as raster` forces these
-layers to be rasterised so that the exported files won't have to include all
-the nodes contained in these layers and the rendering is therefore sped up.
+* Rendering extremely detailed layers (e.g. polygon layers with a huge number of nodes),
+  can cause layout exports in PDF/SVG format to be huge as all nodes are included in the exported file.
+  This can also make the resultant file very slow to work with/open in other programs.
 
-You can also do this by forcing the layout to export as a raster,
-but that is an all-or-nothing solution, given that the rasterisation
-is applied to all layers.
+  Checking |checkbox| :guilabel:`Force layer to render as raster` forces these layers
+  to be rasterised so that the exported files won't have to include all the nodes
+  contained in these layers and the rendering is therefore sped up.
+
+  You can also do this by forcing the layout to export as a raster,
+  but that is an all-or-nothing solution, given that the rasterisation is applied to all layers.
+  Alternatively, you can rely on geometry simplification in :ref:`layout export settings <create-output>`.
 
 * |unchecked| :guilabel:`Refresh layer at interval`: controls whether and how regular a layer can be refreshed.
   Available :guilabel:`Configuration` options are:
@@ -3275,22 +3278,12 @@ is applied to all layers.
 
   It is also possible to set the :guilabel:`Interval (seconds)` between consecutive refreshments.
 
-Depending on the data provider (e.g. PostgreSQL), notifications can be sent to
-QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox|
-:guilabel:`Refresh layer on notification` option to trigger an update.
-You can also limit the layer refresh to a specific message set in the |checkbox|
-:guilabel:`Only if message is` text box.
+* Depending on the data provider (e.g. PostgreSQL), notifications can be sent to
+  QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox|
+  :guilabel:`Refresh layer on notification` option to trigger an update.
+  You can also limit the layer refresh to a specific message set in the |checkbox|
+  :guilabel:`Only if message is` text box.
 
-Use Scale Reference
--------------------
-
-If set, the reference scale indicates the map scale at which symbology and
-labeling sizes which uses paper-based units (such as millimeters or points)
-relate to. The sizes will be scaled accordingly whenever the map is viewed at
-a different scale.
-
-For instance, a line layer using a 2mm wide line with a 1:2000 reference scale
-set will be rendered using 4mm wide lines when the map is viewed at 1:1000.
 
 .. index:: Temporal
 .. _vectortemporalmenu:
