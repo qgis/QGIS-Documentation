@@ -18,8 +18,16 @@ Modeler tools
 
 Calculate expression 
 --------------------
-Calculate the results of a QGIS expression and make 
-the result available for use in other parts of the model.
+|334|
+
+It calculates the result of a QGIS expression and eliminates 
+the need to use the same expression multiple times throughout 
+a model when the same result is required more than once. 
+Additionally, it enables use cases that would otherwise not be
+possible. For instance, you can generate a timestamp value once
+and use it multiple times within the model, if the timestamp 
+were recalculated every time, the values would vary during the
+model's runtime.
 
 Parameters
 ..........
@@ -32,7 +40,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Field**
+   * - **Input**
      - ``INPUT``
      - [expression]
      - Expression to calculate 
@@ -48,8 +56,8 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Output**
-     - ``Value``
+   * - **Value**
+     - ``OUTPUT``
      - [Result Value]
      - Calculated result value, the data type of the
        output will vary based on the specific expression used 
@@ -775,3 +783,13 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |334| replace:: ``NEW in 3.34``
+  
