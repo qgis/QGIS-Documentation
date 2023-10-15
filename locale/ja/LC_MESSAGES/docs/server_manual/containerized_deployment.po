@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +26,7 @@ msgstr ""
 
 #: ../../docs/server_manual/containerized_deployment.rst:3
 msgid "Containerized deployment"
-msgstr "コンテナ化された配備"
+msgstr "コンテナによる展開"
 
 #: ../../docs/server_manual/containerized_deployment.rst:11
 msgid ""
@@ -52,6 +53,21 @@ msgid ""
 msgstr ""
 "Dockerは、パッケージ化されたアプリケーション（別名イメージ）を実行します。これは、ビルドするソース（Dockerfileおよびリソース）として取得するか、レジストリ（プライベートまたはパブリック）から既にビルドできます。"
 
+#: ../../docs/server_manual/containerized_deployment.rst:23
+msgid ""
+"QGIS Debian-Ubuntu package downloads need a valid gpg authentication key. "
+"Please refer to the `installation pages "
+"<https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu>`_ to"
+" update the following Dockerfile."
+msgstr ""
+"QGIS Debian-Ubuntuパッケージのダウンロードには有効なgpg認証キーが必要です。`インストールページ "
+"<https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu>`_ "
+"を参照して、以下のDockerfileを更新してください。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:30
+msgid "Simple docker images"
+msgstr "シンプルなdockerイメージ"
+
 #: ../../docs/server_manual/containerized_deployment.rst:32
 msgid ""
 "As the docker image does not exist in a public registry. you will need to "
@@ -61,6 +77,34 @@ msgstr ""
 "Dockerイメージがパブリックレジストリに存在しないため。ビルドする必要があります。そのためには、ディレクトリ :file:`qgis-server`"
 " をそのディレクトリ内に作成します。"
 
+#: ../../docs/server_manual/containerized_deployment.rst:35
+msgid "create a file :file:`Dockerfile` with this content:"
+msgstr "この内容で :file:`Dockerfile` ファイルを作ります："
+
+#: ../../docs/server_manual/containerized_deployment.rst:90
+msgid "create a file :file:`cmd.sh` with this content:"
+msgstr "この内容で :file:`cmd.sh` ファイルを作ります："
+
+#: ../../docs/server_manual/containerized_deployment.rst:101
+msgid "build the image with:"
+msgstr "イメージを組み立てます："
+
+#: ../../docs/server_manual/containerized_deployment.rst:109
+msgid "First run"
+msgstr "最初の実行"
+
+#: ../../docs/server_manual/containerized_deployment.rst:111
+msgid ""
+"To run the server you will need a QGIS project file. You can use one of "
+"yours or pick `this sample <https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_."
+msgstr ""
+"サーバーを実行するにはQGISプロジェクトファイルが必要です。自分のものを使うことも、`このサンプル "
+"<https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_ を使うこともできます。"
+
 #: ../../docs/server_manual/containerized_deployment.rst:114
 msgid ""
 "To do so, create a directory :file:`data` within the directory :file:`qgis-"
@@ -69,6 +113,118 @@ msgid ""
 msgstr ""
 "これを行うには、ディレクトリ :file:`qgis-server` 内にディレクトリ :file:`data` "
 "を作成し、その中にファイルをコピーします。以下の説明に準拠するため、名前を :file:`osm.qgs` に変更します。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:120
+msgid ""
+"You may need to add advertised URLs under the :guilabel:`QGIS Server` tab of"
+" the :menuselection:`Project --> Properties` if the GetCapabilites are "
+"broken. For example if your server is exposed on port 8080, you will put "
+"this for advertised URL ``http://localhost:8080/qgis-server/``. More "
+"information available in section :ref:`Creatingwmsfromproject` and "
+"subsequent."
+msgstr ""
+"GetCapabilitesが壊れている場合、 :menuselection:`プロジェクト --> プロパティ` の :guilabel:`QGIS "
+"Server` タブの下に通知URLを追加する必要があるかもしれません。例えば、サーバーが8080番ポートで公開されている場合、通知URLとして "
+"``http://localhost:8080/qgis-server/`` を指定します。詳しくは "
+":ref:`Creatingwmsfromproject` セクション以降を参照してください。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:127
+msgid "Now, you can run the server with:"
+msgstr "これでサーバーを走らせることができます："
+
+#: ../../docs/server_manual/containerized_deployment.rst:137
+msgid "Options used:"
+msgstr "使われたオプション:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:139
+msgid "**-d**: run in the background"
+msgstr "**-d**: バックグラウンドで動かします"
+
+#: ../../docs/server_manual/containerized_deployment.rst:140
+msgid "**--rm**: remove the container when it is stopped"
+msgstr "**--rm**: 停止させられたとき、コンテナを削除します"
+
+#: ../../docs/server_manual/containerized_deployment.rst:141
+msgid "**--name**: name of the container to be created"
+msgstr "**--name**: 作成されるコンテナの名前"
+
+#: ../../docs/server_manual/containerized_deployment.rst:142
+msgid "**--net**: (previously created) sub network"
+msgstr "**--net**: （前回作成された）サブネットワーク"
+
+#: ../../docs/server_manual/containerized_deployment.rst:143
+msgid "**--hostname**: container hostname, for later referencing"
+msgstr "**--hostname**: 後で参照するための、コンテナのホスト名"
+
+#: ../../docs/server_manual/containerized_deployment.rst:144
+msgid "**-v**: local data directory to be mounted in the container"
+msgstr "**-v**: コンテナ内でマウントされるローカルのデータディレクトリ"
+
+#: ../../docs/server_manual/containerized_deployment.rst:145
+msgid "**-p**: host/container port mapping"
+msgstr "**-p**: ホスト／コンテナ・ポートマッピング"
+
+#: ../../docs/server_manual/containerized_deployment.rst:146
+msgid "**-e**: environment variable to be used in the container"
+msgstr "**-e**: コンテナ内で使われる環境変数"
+
+#: ../../docs/server_manual/containerized_deployment.rst:149
+msgid ""
+"To check, type ``docker ps | grep qgis-server`` and you should see a line "
+"with **qgis-server**::"
+msgstr ""
+"確認するには、``docker ps | grep qgis-server`` と入力すると、**qgis-server** "
+"という1行が表示されます::"
+
+#: ../../docs/server_manual/containerized_deployment.rst:157
+msgid "Usable sample"
+msgstr "使用可能なサンプル"
+
+#: ../../docs/server_manual/containerized_deployment.rst:159
+msgid ""
+"As the server is only accepting fastcgi connections, you need an HTTP server"
+" that handles this protocol. To do so we have to create a simple Nginx "
+"configuration file and start a Nginx image."
+msgstr ""
+"サーバはfastcgi接続しか受け付けないので、このプロトコルを扱うHTTPサーバが必要です。そのためには、簡単なNginx設定ファイルを作成し、Nginxイメージを起動する必要があります。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:164
+msgid ""
+"Create a file :file:`nginx.conf` in the current directory with this content:"
+msgstr "この内容でカレントディレクトリにファイル :file:`nginx.conf` を作成します："
+
+#: ../../docs/server_manual/containerized_deployment.rst:185
+msgid "And type this command:"
+msgstr "そしてこのコマンドを入力します:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:193
+msgid ""
+"To check capabilities availability, type in a browser "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"能力の有無を確認するには、ブラウザで http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities と入力してください"
+
+#: ../../docs/server_manual/containerized_deployment.rst:197
+#: ../../docs/server_manual/containerized_deployment.rst:293
+#: ../../docs/server_manual/containerized_deployment.rst:516
+msgid "Cleanup"
+msgstr "クリーンアップ"
+
+#: ../../docs/server_manual/containerized_deployment.rst:199
+msgid "To cleanup the running images, type:"
+msgstr "動作中のイメージをクリーンアップするには次を入力します:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:208
+msgid "Docker stacks"
+msgstr "Dockerスタック"
+
+#: ../../docs/server_manual/containerized_deployment.rst:210
+msgid ""
+"The previous method is scriptable, but not easily packageable nor "
+"standardized or easily manageable."
+msgstr "これまでの方法は、スクリプトを書くことはできますが、簡単にパッケージ化したり、標準化したり、簡単に管理したりすることはできません。"
 
 #: ../../docs/server_manual/containerized_deployment.rst:213
 msgid ""
@@ -90,6 +246,10 @@ msgstr ""
 "Dockerに独自のオーケストレーターSwarmが追加されました（docker-composeファイルと互換性があります）。 "
 "`有効にする<https://docs.docker.com/get-started/orchestration/#enable-docker-"
 "swarm>`_ 必要があります（MacバージョンはLinuxでも動作します）。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:235
+msgid "Stack description"
+msgstr "スタックの説明"
 
 #: ../../docs/server_manual/containerized_deployment.rst:305
 msgid "Installation"
