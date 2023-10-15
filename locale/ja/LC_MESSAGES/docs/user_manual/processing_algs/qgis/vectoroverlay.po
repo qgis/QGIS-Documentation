@@ -720,7 +720,7 @@ msgstr "範囲と交差する地物は全て含まれます。"
 msgid ""
 "Extract operation between a three-feature input layer 'a' and a dashed "
 "extent (left) - resulting features with dashed extent for reference (right)"
-msgstr "3つの地物を持つ入力レイヤ'a'と破線の範囲との間の抽出演算（左） - 結果の地物と参考の破線の範囲（右）。"
+msgstr "3つの地物を持つ入力レイヤ'a'と破線の範囲との間の抽出演算（左） - 結果の地物と参考の破線の範囲（右）"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:330
 msgid ":ref:`qgisclip`"
@@ -1129,6 +1129,13 @@ msgstr "出力は、分割された地物のマルチジオメトリを格納し
 msgid "Split lines"
 msgstr "分割されたライン"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:783
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>` of line and polygon features"
+msgstr ""
+"|checkbox| ライン及びポリゴン地物の :ref:`地物のIn-place編集 <processing_inplace_edit>` が可能です"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:799
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:803
 msgid "[vector: line, polygon]"
@@ -1265,6 +1272,23 @@ msgid ""
 msgstr ""
 "オーバーレイレイヤを使うこともでき、この場合、各レイヤの地物は、もう一方のレイヤの地物と重なる部分で分割され、入力レイヤとオーバーレイレイヤの全ての部分を含むレイヤが作成されます。同じレイヤの地物は互いに分割されません。和集合レイヤの属性テーブルには、重複していない地物の場合はそれぞれの元のレイヤの属性値が、重複している地物の場合は両方のレイヤの属性値が入力されます。"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:993
+msgid ""
+"Union operation between a two-feature input layer 'a' and a single feature "
+"overlay layer 'b' (left) - resulting five-feature layer with attributes from"
+" both layers (right)"
+msgstr "2地物の入力レイヤ「a」と1地物のオーバーレイレイヤ「b」の和集合演算（左） - 両レイヤの属性を持つ5地物のレイヤとなる（右）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:998
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1137
+msgid ""
+"With an overlay layer, features on the same layer will not split each other."
+" If you want to split overlaps on the same layer as well as other layers, "
+"first run the algorithm with multiple layers then run the algorithm again "
+"with only the previous output."
+msgstr ""
+"オーバーレイレイヤでは、同じレイヤ上の地物は互いに分割されません。他のレイヤとの重なりだけでなく同じレイヤの重なりを分割したい場合は、まず複数のレイヤでアルゴリズムを実行し、前回の出力のみで再度アルゴリズムを実行してください。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1005
 msgid ""
 ":ref:`qgismultiunion`, :ref:`qgisclip`, :ref:`qgisdifference`, "
@@ -1273,12 +1297,35 @@ msgstr ""
 ":ref:`qgismultiunion`, :ref:`qgisclip`, :ref:`qgisdifference`, "
 ":ref:`qgisintersection`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1025
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1162
+msgid "Input vector layer to split at any intersections."
+msgstr "全ての交差で分割する入力ベクタレイヤ。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1031
+msgid ""
+"Layer that will be combined to the first one. Ideally the geometry type "
+"should be the same as input layer."
+msgstr "最初のレイヤと結合されるレイヤ。ジオメトリタイプは入力レイヤと同じであることが理想的です。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1033
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1088
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1170
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1215
 msgid "**Union**"
 msgstr "**和集合**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1038
+msgid ""
+"Specify the layer to contain the (split and duplicated) features from the "
+"input layer and the overlay layer. One of:"
+msgstr "入力レイヤおよびオーバーレイレイヤの（分割および複製された）地物を格納するレイヤを指定します。以下のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1091
+msgid ""
+"Layer containing all the overlapping and non-overlapping parts from the "
+"processed layer(s)."
+msgstr "処理されたレイヤの重複している部分と重複していない部分を全て格納するレイヤ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1097
 msgid "**Algorithm ID**: ``qgis:union``"
@@ -1288,6 +1335,27 @@ msgstr "**Algorithm ID**: ``qgis:union``"
 msgid "Union (multiple)"
 msgstr "和集合（複数レイヤ）"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1121
+msgid ""
+"Multiple overlay layers can also be used, in which case features from each "
+"layer are split at their overlap with features from all other layers, "
+"creating a layer containing all the portions from both input and overlay "
+"layers. Features on the same layer will not split each other. The attribute "
+"table of the Union layer is filled with attribute values from the respective"
+" original layer for non-overlapping features, and attribute values from "
+"overlay layers for overlapping features."
+msgstr ""
+"複数のオーバーレイレイヤを使うこともできます、 "
+"この場合、各レイヤの地物は、他の全てのレイヤの地物と重なる部分で分割され、入力レイヤとオーバーレイレイヤの全ての部分を含むレイヤが作成されます。同じレイヤの地物は互いに分割されません。和集合レイヤの属性テーブルには、重複していない地物の場合はそれぞれの元のレイヤの属性値が、重複している地物の場合はオーバーレイレイヤの属性値が入力されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1132
+msgid ""
+"Union operation between a two-feature input layer 'a' and single feature "
+"overlay layers 'b' and 'c' (left) - resulting eleven-feature layer with "
+"attributes from all layers (right)"
+msgstr ""
+"2地物の入力レイヤ「a」と1地物のオーバーレイレイヤ「b」及び「c」の和集合演算（左） - 全レイヤの属性を持つ11地物のレイヤとなる（右）"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1142
 msgid ""
 ":ref:`qgisunion`, :ref:`qgisclip`, :ref:`qgisdifference`, "
@@ -1295,6 +1363,24 @@ msgid ""
 msgstr ""
 ":ref:`qgisunion`, :ref:`qgisclip`, :ref:`qgisdifference`, "
 ":ref:`qgisintersection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1168
+msgid ""
+"Layers that will be combined to the first one. Ideally the geometry type "
+"should be the same as input layer."
+msgstr "最初のレイヤと結合されるレイヤ。ジオメトリタイプは入力レイヤと同じであることが理想的です。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1175
+msgid ""
+"Specify the layer to contain the (split and duplicated) features from the "
+"input layer and the overlay layers. One of:"
+msgstr "入力レイヤおよびオーバーレイレイヤの（分割および複製された）地物を格納するレイヤを指定します。以下のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1218
+msgid ""
+"Layer containing all the overlapping and non-overlapping parts from the "
+"processed layer(s), with all layers' attributes."
+msgstr "処理されたレイヤの重複している部分と重複していない部分の全てを、全てのレイヤの属性と共に、格納するレイヤ。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1225
 msgid "**Algorithm ID**: ``qgis:multiunion``"
