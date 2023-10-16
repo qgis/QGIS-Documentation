@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../../docs/server_manual/containerized_deployment.rst:3
 msgid "Containerized deployment"
-msgstr "コンテナによる展開"
+msgstr "コンテナによるデプロイメント"
 
 #: ../../docs/server_manual/containerized_deployment.rst:11
 msgid ""
@@ -41,7 +41,7 @@ msgid ""
 "<https://www.docker.com>`_ to be installed and running. Check this `tutorial"
 " <https://www.docker.com/101-tutorial>`_."
 msgstr ""
-"この種類の配備では、 `dockerアプリケーション <https://www.docker.com>`_ "
+"この種類のデプロイメントでは、 `dockerアプリケーション <https://www.docker.com>`_ "
 "をインストールして実行する必要があります。この `チュートリアル <https://www.docker.com/101-tutorial>`_ "
 "を確認してください。"
 
@@ -234,7 +234,17 @@ msgid ""
 "other workers. There are many orchestrators, for example Swarm, Kubernetes "
 "and Mesos."
 msgstr ""
-"Dockerイメージセットを操作するには、オーケストレーターが管理するDockerスタックを使用できます。スタックでは、イメージは同じプライベートネットワークで動作しており、スタック全体を開始/停止したり、スタックを他のワーカーに配備したりできます。たとえば、Swarm、Kubernetes、Mesosなど、多くのオーケストレーターがいます。"
+"Dockerイメージセットを操作するには、オーケストレーターが管理するDockerスタックを使用できます。スタックでは、イメージは同じプライベートネットワークで動作しており、スタック全体を開始/停止したり、スタックを他のワーカーにデプロイしたりできます。たとえば、Swarm、Kubernetes、Mesosなど、多くのオーケストレーターがいます。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:220
+msgid ""
+"In the following, we will present simple configurations for testing "
+"purposes. They are not suitable for production."
+msgstr "以下では、テスト用の簡単な設定を紹介します。本番用には適していません。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:225
+msgid "Swarm/docker-compose"
+msgstr "Swarm/docker-compose"
 
 #: ../../docs/server_manual/containerized_deployment.rst:227
 msgid ""
@@ -251,9 +261,83 @@ msgstr ""
 msgid "Stack description"
 msgstr "スタックの説明"
 
+#: ../../docs/server_manual/containerized_deployment.rst:237
+msgid ""
+"Now that you have Swarm working, create the service file (see `Deploy to "
+"Swarm <https://docs.docker.com/get-started/swarm-deploy/>`_) :file:`qgis-"
+"stack.yaml`:"
+msgstr ""
+"Swarmが動作するようになったので、サービスファイルを作成します（`Deploy to Swarm "
+"<https://docs.docker.com/get-started/swarm-deploy/>`_ を参照） :file:`qgis-"
+"stack.yaml`："
+
+#: ../../docs/server_manual/containerized_deployment.rst:267
+msgid "To deploy (or update) the stack, type:"
+msgstr "スタックをデプロイ（または更新）するには、次を入力します："
+
+#: ../../docs/server_manual/containerized_deployment.rst:273
+msgid ""
+"Check the stack deployment status until you obtain **1/1** in the "
+"**replicas** column:"
+msgstr "**replicas** 列に **1/1** が表示されるまで、スタックのデプロイメント状態を確認してください："
+
+#: ../../docs/server_manual/containerized_deployment.rst:280
+msgid "Something like:"
+msgstr "次のようになります:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:289
+msgid ""
+"To check WMS capabilities, type in a web browser http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"WMS の機能を確認するには、ウェブブラウザに http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities を入力します"
+
+#: ../../docs/server_manual/containerized_deployment.rst:295
+msgid "To cleanup, type:"
+msgstr "クリーンアップには、次を入力します:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:302
+msgid "Kubernetes"
+msgstr "Kubernetes"
+
 #: ../../docs/server_manual/containerized_deployment.rst:305
 msgid "Installation"
 msgstr "インストール"
+
+#: ../../docs/server_manual/containerized_deployment.rst:307
+msgid ""
+"If you have a **Docker Desktop** installation, using Kubernetes (aka k8s) is"
+" pretty straight forward: `enable k8s <https://docs.docker.com/get-"
+"started/orchestration/#enable-kubernetes>`_."
+msgstr ""
+"もしあなたが **Docker Desktop** をインストールしているなら、Kubernetes (別名k8s)を使うのはとても簡単です: "
+"`enable k8s <https://docs.docker.com/get-started/orchestration/#enable-"
+"kubernetes>`_。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:311
+msgid ""
+"If not, follow the `minikube tutorial "
+"<https://kubernetes.io/docs/tutorials/hello-minikube/>`_ or `microk8s for "
+"Ubuntu <https://ubuntu.com/tutorials/install-a-local-kubernetes-with-"
+"microk8s>`_."
+msgstr ""
+"そうでない場合は、`minikube tutorial <https://kubernetes.io/docs/tutorials/hello-"
+"minikube/>`_ または `microk8s for Ubuntu <https://ubuntu.com/tutorials/install-"
+"a-local-kubernetes-with-microk8s>`_ に従ってください。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:316
+msgid ""
+"As Kubernetes installation can be really complex, we will only focus on "
+"aspects used by this demo. For further / deeper information, check the "
+"`official documentation <https://kubernetes.io/docs/home/>`_."
+msgstr ""
+"Kubernetesのインストールは本当に複雑なので、このデモで使用される側面にのみ焦点を当てます。さらに詳しい情報については、`公式ドキュメント "
+"<https://kubernetes.io/docs/home/>`_ を参照してください。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:322
+msgid "microk8s"
+msgstr "microk8s"
 
 #: ../../docs/server_manual/containerized_deployment.rst:324
 msgid ""
@@ -263,6 +347,26 @@ msgstr ""
 "microk8sでは追加の手順が必要です。Kubernetesで作成されたイメージを検出するには、レジストリを有効にしてqgis-"
 "serverイメージにタグを付ける必要があります。"
 
+#: ../../docs/server_manual/containerized_deployment.rst:328
+msgid "First, enable the registry:"
+msgstr "まずレジストリを有効にします:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:334
+msgid "Then, tag and push the image to your newly created registry:"
+msgstr "そして、タグを付け、新しく作成したレジストリにイメージをプッシュします："
+
+#: ../../docs/server_manual/containerized_deployment.rst:340
+msgid ""
+"Finally, add or complete the :file:`/etc/docker/daemon.json` to have your "
+"registry **127.0.0.1:32000** listed in the **insecure-registries** field:"
+msgstr ""
+"最後に、レジストリ **127.0.0.1:32000** が **insecure-registries** "
+"フィールドにリストされるように、:file:`/etc/docker/daemon.json` を追加または補完します："
+
+#: ../../docs/server_manual/containerized_deployment.rst:353
+msgid "Creating manifests"
+msgstr "マニフェストを作る"
+
 #: ../../docs/server_manual/containerized_deployment.rst:355
 msgid ""
 "Kubernetes describes the objects to deploy in yaml manifests. There are many"
@@ -271,3 +375,138 @@ msgid ""
 "purposes."
 msgstr ""
 "Kubernetesは、yamlマニフェストにデプロイするオブジェクトを記述します。さまざまな種類がありますが、デプロイメント（ポッドを処理する、つまりDockerイメージ）とサービスのみを使用して、デプロイメントを内部または外部の目的に公開します。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:361
+msgid "Deployment manifests"
+msgstr "デプロイメントマニフェスト"
+
+#: ../../docs/server_manual/containerized_deployment.rst:363
+msgid "Create a file :file:`deployments.yaml` with this content:"
+msgstr "ファイル :file:`deployments.yaml` を次の内容で作成します:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:435
+msgid "Service manifests"
+msgstr "サービスマニフェスト"
+
+#: ../../docs/server_manual/containerized_deployment.rst:437
+msgid "Create a file :file:`services.yaml` with this content:"
+msgstr "ファイル :file:`services.yaml` を次の内容で作成します:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:469
+msgid "Deploying manifests"
+msgstr "マニフェストをデプロイする"
+
+#: ../../docs/server_manual/containerized_deployment.rst:471
+msgid ""
+"To deploy the images and services in Kubernetes, one can use the dashboard "
+"(click on the **+** on the upper right) or the command line."
+msgstr ""
+"Kubernetesにイメージとサービスをデプロイするには、ダッシュボード（右上の **+** をクリック）またはコマンドラインを使用します。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:475
+msgid ""
+"When using the command line with microk8s you will have to prefix each "
+"command with `microk8s`."
+msgstr "microk8sでコマンドラインを使う場合、各コマンドの前に `microk8s` を付ける必要があります。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:478
+msgid "To deploy or update your manifests:"
+msgstr "マニフェストをデプロイまたは更新する:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:484
+msgid "To check what is currently deployed:"
+msgstr "現在デプロイされているものを確認する:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:490
+msgid "You should obtain something like::"
+msgstr "このようになる筈です::"
+
+#: ../../docs/server_manual/containerized_deployment.rst:506
+msgid "To read nginx/qgis logs, type:"
+msgstr "nginx/qgisログを読むには次を入力します:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:512
+msgid ""
+"To check WMS capabilities, type in a web browser "
+"http://localhost:30080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"WMS の機能を確認するには、ウェブブラウザに次のように入力します http://localhost:30080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/server_manual/containerized_deployment.rst:518
+msgid "To clean up, type:"
+msgstr "クリーンアップには、次を入力します:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:525
+msgid "Cloud deployment"
+msgstr "クラウドデプロイメント"
+
+#: ../../docs/server_manual/containerized_deployment.rst:527
+msgid ""
+"Managing your own cluster of servers to handle the deployment of "
+"containerized applications, is a complex job. You have to handle multiple "
+"issues, such as hardware, bandwidth and security at different levels."
+msgstr ""
+"コンテナ化されたアプリケーションのデプロイを処理するために、独自のサーバークラスタを管理するのは複雑な仕事です。ハードウェア、帯域幅、セキュリティなど、さまざまな問題をさまざまなレベルで処理しなければなりません。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:532
+msgid ""
+"Cloud deployment solutions can be a good alternative when you do not want to"
+" focus on infrastructure management."
+msgstr "クラウド・デプロイメント・ソリューションは、インフラの管理に注力したくない場合に有効な選択肢となります。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:535
+msgid ""
+"A cloud deployment may use proprietary mechanisms, but they are also "
+"compatible with the stages explained previously (:ref:`docker images "
+"<simple-docker-images>` and :ref:`stack management <docker-stacks>`)."
+msgstr ""
+"クラウドデプロイメントでは独自のメカニズムを使用することができますが、先に説明した段階（:ref:`docker images <simple-"
+"docker-images>` と :ref:`stack management <docker-stacks>`）と互換性があります。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:541
+msgid "AWS usecase"
+msgstr "AWSユースケース"
+
+#: ../../docs/server_manual/containerized_deployment.rst:543
+msgid ""
+"With Amazon AWS, through `ECS (Elastic Container Service) "
+"<https://console.aws.amazon.com/ecs/home>`_ functionalities, you can use "
+"docker-compose or Kubernetes compatible wrappers to manage your stack. You "
+"will have to create an `image registry "
+"<https://console.aws.amazon.com/ecr/home>`_ for your custom images to be "
+"accessible."
+msgstr ""
+"Amazon AWSでは、`ECS (Elastic Container Service) "
+"<https://console.aws.amazon.com/ecs/home>`_ の機能により、docker-"
+"composeやKubernetes互換のラッパーを使ってスタックを管理することができます。カスタムイメージにアクセスするためには `image "
+"registry <https://console.aws.amazon.com/ecr/home>`_ を作成する必要があります。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:551
+msgid ""
+"To use docker-compose alike functionalities, you need to install the **ecs-"
+"cli** client and have `proper permissions / roles "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_."
+" Then, with the help of the `ecs-cli compose <https://github.com/aws/amazon-"
+"ecs-cli>`_ commands, you can reuse the :ref:`stack description <docker-"
+"compose-file>`."
+msgstr ""
+"docker-compose 同様の機能を使うには、**ecs-cli** クライアントをインストールし、 `適切なパーミッション/ロール "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_"
+" を持っている必要があります。その後、`ecs-cli compose <https://github.com/aws/amazon-ecs-"
+"cli>`_ コマンドの助けを借りて、 :ref:`stack description <docker-compose-file>` "
+"を再利用することができます。"
+
+#: ../../docs/server_manual/containerized_deployment.rst:557
+msgid ""
+"To use Kubernetes, you can use the AWS web console or the command line tool "
+"`eksctl <https://docs.aws.amazon.com/eks/latest/userguide/getting-"
+"started.html>`_ and have the proper permissions / roles. Then with a well "
+"configured kubectl environment, you can reuse the :ref:`Kubernetes manifests"
+" <k8s-manifests>`."
+msgstr ""
+"Kubernetesを使うには、AWSのWebコンソールかコマンドラインツール `eksctl "
+"<https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ "
+"を使い、適切なパーミッション/ロールを設定します。その後、うまく設定された kubectl 環境で、 :ref:`Kubernetes "
+"manifests ` を再利用することができます。"
