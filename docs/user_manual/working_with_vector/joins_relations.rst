@@ -26,8 +26,8 @@ QGIS provides tools to handle any of these associations, such as:
 
   Joins and relations are technical concepts borrowed from databases
   to get the most out of data stored in tables by combining their contents.
-  The idea is that features (rows) of different layers (tables) can belong to each other.
-  The links between the features can be of one-to-one type (joins) or one/many to many (relations).
+  The idea is that features (rows) of different layers (tables) can be associated to each other.
+  The number of rows which are matching each other can be of any value (zero, one, many).
 
 
 .. index:: Joins, Foreign key
@@ -36,9 +36,9 @@ QGIS provides tools to handle any of these associations, such as:
 Joining features between two layers
 ====================================
 
-**Joins** allow you to associate features of the current layer
+**Joins** in QGIS allow you to associate features of the current layer
 to features from another loaded vector layer.
-Whether they are spatially enabled and their geometry type does not matter.
+Whether they are spatially enabled and the type of geometry do not matter.
 The join is based on an attribute that is shared by the layers, in a one-to-one relationship.
 
 To create a join on a layer (identified below as ``target layer``):
@@ -61,7 +61,7 @@ To create a join on a layer (identified below as ``target layer``):
    Join an attribute table to an existing vector layer
 
 The steps above will create a join,
-where **ALL** the attributes of the first matching feature in the join layer
+where **ALL** the attributes of the **first matching feature** in the join layer
 is added to the target layer's feature.
 The following logic is used to pair features during a join process:
 
@@ -103,12 +103,6 @@ QGIS provides some more options to tweak the join:
 * |unchecked| :guilabel:`Custom field name prefix` for joined fields,
   in order to avoid name collision
 
-QGIS currently has support for joining non-spatial table formats supported by GDAL
-(e.g., CSV, DBF and Excel), delimited text and the PostgreSQL providers.
-
-.. is the above still true? No more supported formats (oracle, mssql, ...)???
-
-
 
 .. index:: Relations, Foreign key
 .. _vector_relations:
@@ -130,7 +124,8 @@ From there, you can:
     with the dedicated tools in the action drop-down menu.
 
   .. note:: There is no simple way yet to edit a non-polymorphic relation once it has been created.
-   To modify a relation you will have to remove and recreate it from scratch.
+   Only the name can be edited with a double-click.
+   For any other parameters of such a relation you will have to remove and recreate it.
 
 * |symbologyAdd| :guilabel:`Discover relations`: QGIS is able to discover existing relations
   from supported database formats (PostgreSQL, GeoPackage, ESRI File Geodatabase, ...).
