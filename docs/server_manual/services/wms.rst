@@ -818,7 +818,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetLegendGraphic**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`LAYERS <wms_layers>` ", "Yes", "Layers to display"
+   ":ref:`LAYER / LAYERS <wms_layers>` ", "Yes", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "No", "Coordinate reference system"
    ":ref:`BBOX <wms_getlegendgraphic_bbox>`", "No", "Map extent"
