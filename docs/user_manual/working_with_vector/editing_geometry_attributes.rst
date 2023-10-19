@@ -1614,7 +1614,7 @@ curved geometry, if not, QGIS will segmentize the circular arcs.
   and the orientation of  the circle. (Left-click, right-click)
 - |circle3Points| :sup:`Circle from 3 points`: Draws a circle from three
   known points on the circle. (Left-click, left-click, right-click)
-- |circleCenterPoint| :sup:`Circle from center and a point`: Draws a circle
+- |circleCenterPoint| :sup:`Circle by a center point and another point`: Draws a circle
   with a given center and a point on the circle (Left-click, right-click).
   When used with the :ref:`advanced_digitizing_panel` this tool can become a
   "Add circle from center and radius" tool by setting and locking the distance
