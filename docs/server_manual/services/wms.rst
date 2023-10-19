@@ -1016,7 +1016,8 @@ RULE
 
 This parameter is available on layers with :guilabel:`Rule-based` rendering and
 allows to build a legend with only the named rule symbol. It cannot be combined
-with ``BBOX`` parameter nor the JSON format.
+with ``BBOX`` parameter nor the JSON format. ``HEIGHT`` and ``WIDTH`` must be
+specified.
 
 URL example:
 
@@ -1026,7 +1027,9 @@ URL example:
   SERVICE=WMS
   &REQUEST=GetLegendGraphic
   &LAYERS=mylayer,
-  &RULE=myrulename
+  &RULE=myrulename,
+  &WIDTH=20,
+  &HEIGHT=20
 
 
 .. _wms_getlegendgraphic_rulelabel:
