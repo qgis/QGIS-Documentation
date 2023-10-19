@@ -542,10 +542,11 @@ msgid ""
 "method to use, among which:"
 msgstr ""
 "Selezionando |checkbox| :guilabel:`Usa variabili utente (necessario il "
-"riavvio - includi i separatori)` puoi aggiungere :sup:`Aggiungi nuova "
-"variabile` e rimuovere :sup:`Rimuovi variabile` variabili di ambiente. Per "
-"ogni nuova voce, puoi configurare un nome :guilabel:`Variabile`, il suo "
-":guilabel:`Valore` e il metodo :guilabel:`Applica` da utilizzare, tra cui:"
+"riavvio - includi i separatori)` puoi aggiungere |symbologyAdd| "
+":sup:`Aggiungi nuova variabile` e rimuovere |symbologyRemove| :sup:`Rimuovi "
+"variabile` variabili di ambiente. Per ogni nuova voce, puoi configurare un "
+"nome :guilabel:`Variabile`, il suo :guilabel:`Valore` e il metodo "
+":guilabel:`Applica` da utilizzare, tra cui:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2491
 msgid "symbologyAdd"
@@ -767,6 +768,16 @@ msgstr ""
 "È stato progettato per l'uso in ingegneria, BIM, gestione degli asset e "
 "altri campi in cui le inaccuratezze a livello di metro/sottometro sono "
 "potenzialmente molto pericolose o dannose!"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:306
+msgid ""
+"|unchecked| :guilabel:`Planimetric measurements`: sets the default for the "
+":ref:`planimetric measurements <measurements_ellipsoid>` property for newly "
+"created projects."
+msgstr ""
+"|unchecked| :guilabel:`Misure planimetriche`: imposta il valore predefinito "
+"per la proprietà :ref:`planimetric measurements <measurements_ellipsoid>` "
+"per le nuove creazioni di progetti."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:314
 msgid "Coordinate Transforms"
@@ -2699,6 +2710,34 @@ msgstr ""
 msgid "GPS settings"
 msgstr "Impostazioni GPS"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1150
+msgid "GPS Visualisation Options"
+msgstr "Opzioni Visualizzazione GPS"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1157
+msgid ""
+"This dialog helps you configure GPS devices display when :ref:`connected to "
+"QGIS <sec_gpstracking>`:"
+msgstr ""
+"Questa finestra di dialogo ti aiuta a configurare la visualizzazione dei "
+"dispositivi GPS quando :ref:`connected to QGIS <sec_gpstracking>`:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1159
+msgid ""
+":guilabel:`GPS location marker` for controlling the marker symbol used for "
+"the current GPS location"
+msgstr ""
+":guilabel:`Marcatore di posizione GPS` per controllare il simbolo del "
+"marcatore utilizzato per la posizione corrente del GPS."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1160
+msgid ""
+":guilabel:`Rotate to match GPS bearing`: whether the marker symbol should be"
+" rotated to match the GPS direction"
+msgstr ""
+":guilabel:`Ruota nella stessa direzione del GPS`: se il simbolo del "
+"marcatore deve essere ruotato per adattarsi alla direzione del GPS."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1165
 msgid "GPSBabel"
 msgstr ""
@@ -3609,6 +3648,18 @@ msgstr ""
 "l' :guilabel:`Ellissoide`, su cui si basano interamente i calcoli di "
 "distanza e superficie; può essere:"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1550
+msgid ""
+"**None/Planimetric**: returned values are in this case cartesian "
+"measurements. This option can be set as default for new projects from the "
+":menuselection:`Settings -->` |options| :menuselection:`Options -->` |crs| "
+":menuselection:`CRS Handling` menu"
+msgstr ""
+"**Nessuno/Planimetrico**: i valori restituiti sono in questo caso misure "
+"cartesiane. Questa opzione può essere impostata come predefinita per i nuovi"
+" progetti dal menu :menuselection: `Impostazioni -->` |options| "
+":menuselection: `Opzioni -->` |crs| :menuselection: `Gestione del SR`."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1553
 msgid ""
 "a **Custom** one: you'll need to set values of the semi-major and semi-minor"
@@ -3685,6 +3736,40 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1577
 msgid "Available parameters are:"
 msgstr "I parametri disponibili sono:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1579
+msgid ":guilabel:`Display coordinates using` either:"
+msgstr "::guilabel:`Visualizza le coordinate utilizzando` o:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1581
+msgid "``Map Units``, based on the project CRS"
+msgstr "``Unità Mappa``, basate sul SR del progetto"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1582
+msgid ""
+"``Map Geographic (degrees)``: based on the project CRS if it is of "
+"geographic type, otherwise uses its associated geographic CRS. This is "
+"helpful e.g. for non-earth celestial bodies."
+msgstr ""
+"``Mappa Geografica (gradi)``: si basa sul SR del progetto se è di tipo "
+"geografico, altrimenti utilizza il SR geografico associato. Questo è utile, "
+"ad esempio, per i corpi celesti non terrestri."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1584
+msgid ""
+"or ``Custom Projection Units``: allows to rely on any CRS you desire for "
+"coordinates display"
+msgstr ""
+"o ``Unità di Proiezione Personalizzate``: consente di utilizzare qualsiasi "
+"SR per la visualizzazione delle coordinate."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1586
+msgid ""
+"In the :guilabel:`Coordinate CRS` option, you can view or define the CRS to "
+"use depending on your display mode."
+msgstr ""
+"Nell'opzione :guilabel:`SR coordinate`, puoi visualizzare o definire il SR "
+"da utilizzare in base alla tua modalità di visualizzazione."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1588
 msgid ""
