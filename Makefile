@@ -2,9 +2,9 @@
 #
 
 # You can set these variables from the command line.
-LANG            = en
+LANG            = ru
 # currently we are building for the following languages, if you want yours to be build: ask!
-LANGUAGES       = en # bg cs de es fi fr id it ja ko nl pt_BR pt_PT ro ru tr zh_Hant zh_Hans
+LANGUAGES       = ru # bg cs de es fi fr id it ja ko nl pt_BR pt_PT ro ru tr zh_Hant zh_Hans
 SPHINXOPTS      =
 # Use the tag i18n to filter text based on whether we are translating or not
 SPHINXINTLOPTS  = $(SPHINXOPTS) -D language=$(LANG) -t i18n
