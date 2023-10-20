@@ -1093,6 +1093,26 @@ updated as you set the parameters.
   applied to point layer using single, categorized or graduated symbology.
 
 
+.. index:: Animation Settings
+.. _animation_settings:
+
+Animation settings
+..................
+
+To allow any symbol to become an animated symbol, you can utilize
+:guilabel:`Animation settings` panel. In this panel, you can enable animation
+for the symbol and set a specific frame rate for the symbol's redrawing.
+Start by going to the :guilabel:`Advanced` menu, within this menu you will
+find the :guilabel:`Animation settings` option. Select 
+|checkbox| :guilabel:`Is Animated` and you will activate animation for 
+the symbol. Once animation is activated you can use expressions to control 
+symbol properties. For example, setting the symbol's rotation to the data 
+defined expression ``@symbol_frame % 369`` will cause the symbol to rotate 
+over time, with rotation speed dictated by the symbol's frame rate. 
+
+
+
+
 .. index:: Paint effects
 .. _draw_effects:
 
