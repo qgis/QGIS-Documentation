@@ -200,6 +200,7 @@ Appropriate for point geometry features, marker symbols have several
   * :guilabel:`Anchor point`: defining the quadrant point on the symbol to settle
     as placement origin. This is the point the :guilabel:`Offset` is applied on.
 
+* **Animated marker** (see :ref:`animated_marker`)
 * **Ellipse marker**: a simple marker symbol layer, with customizable width and
   height
 * **Filled marker**: similar to the simple marker symbol layer, except that it
@@ -818,6 +819,38 @@ field either by:
 
 The magnitude of field can be scaled up or down to an appropriate size for
 viewing the field.
+
+
+.. _animated_marker:
+
+Animated marker
+...............
+
+Animated marker symbol type allows you to use animated markers, which can be
+GIFs, WebP, or MNG animations, to represent points on your map. You 
+can specify marker ``file``, ``size``, ``angle``, and ``frame rate``.
+
+There are two ways in which animated symbols are handled:
+
+* **Animated marker in a standard map** 
+
+When your map is not configured as an animation (i.e. it's a standard QGIS 
+project without animations), the frame for the animated markers will be 
+determined solely by the current timestamp. Animated markers will activate
+when the corresponding layer is in temporal mode and a temporal animation is 
+running. 
+
+* **Animated marker when used with temporal controller in animation mode**
+
+When your map is configured as an animation (usually when using the temporal
+controller), the animated markers will sync with the animation's timeline.
+This means that animated markers will pause when the animation is paused,
+progress with the animation, and so forth. The map will also be redrawn 
+according to the frame rate established for temporal animation. This mode 
+is also applied when exporting an animation using the temporal controller.
+It's also the mode used when a plugin (e.g. QGIS Animation Workbench) 
+specifically sets the frame rate and current frame for the marker animation. 
+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
