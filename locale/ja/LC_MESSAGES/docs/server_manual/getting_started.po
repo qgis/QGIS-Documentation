@@ -151,37 +151,651 @@ msgstr ""
 ":file:`/etc/apache2/sites-available` ディレクトリに、次の内容の :file:`qgis.demo.conf` "
 "というファイルを作ります："
 
+#: ../../docs/server_manual/getting_started.rst:170
+msgid ""
+"Some of the above configuration options are explained in the Server "
+":ref:`environment variables <server_env_variables>` and :ref:`pg_service "
+"file <pg-service-file>` sections."
+msgstr ""
+"上記の設定オプションのいくつかは、サーバの :ref:`環境変数 <server_env_variables>` と :ref:`pg_service "
+"ファイル <pg-service-file>` のセクションで説明しています。"
+
+#: ../../docs/server_manual/getting_started.rst:174
+msgid ""
+"Let's now create the directories that will store the QGIS Server logs and "
+"the authentication database:"
+msgstr "ではQGIS Server のログと認証データベースを格納するディレクトリを作成しましょう："
+
+#: ../../docs/server_manual/getting_started.rst:186
+msgid ""
+"``www-data`` is the Apache user on Debian based systems and we need Apache "
+"to have access to those locations or files. The ``chown www-data...`` "
+"commands change the owner of the respective directories and files to ``www-"
+"data``."
+msgstr ""
+"``www-data`` "
+"はDebianベースのシステムではApacheのユーザーで、Apacheがこれらの場所やファイルにアクセスできる必要があります。``chown www-"
+"data...`` コマンドはそれぞれのディレクトリとファイルの所有者を ``www-data`` に変更します。"
+
+#: ../../docs/server_manual/getting_started.rst:191
+msgid ""
+"We can now enable the virtual host and the ``fcgid`` mod if it's not already"
+" done:"
+msgstr "これで、まだ有効になっていなければ、仮想ホストと``fcgid`` mod を有効にすることができます："
+
+#: ../../docs/server_manual/getting_started.rst:198
+msgid "Now restart Apache for the new configuration to be taken into account:"
+msgstr "新しい設定が反映されるようにApacheを再起動してください："
+
+#: ../../docs/server_manual/getting_started.rst:204
+#, python-format
+msgid ""
+"Now that Apache knows that he should answer requests to http://qgis.demo we "
+"also need to setup the client system so that it knows who ``qgis.demo`` is. "
+"We do that by adding ``127.0.0.1 qgis.demo`` in the `hosts "
+"<https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file."
+msgstr ""
+"これでApacheは、http://qgis.demo へのリクエストに応答する必要があることがわかります。`qgis.demo`` "
+"が誰かわかるようにクライアントシステムをセットアップする必要もあります。そのためには、`hosts "
+"<https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ ファイルに ``127.0.0.1 "
+"qgis.demo`` を追加します。"
+
+#: ../../docs/server_manual/getting_started.rst:216
+msgid ""
+"Remember that both the :file:`qgis.demo.conf` and :file:`/etc/hosts` files "
+"should be configured for your setup to work. You can also test the access to"
+" your QGIS Server from other clients on the network (e.g. Windows or macos "
+"machines) by going to their :file:`/etc/hosts` file and point the "
+"``qgis.demo`` name to whatever IP the server machine has on the network (not"
+" ``127.0.0.1`` as it is the local IP, only accessible from the local "
+"machine).  On ``*nix`` machines the :file:`hosts` file is located in "
+":file:`/etc`, while on Windows it's under the "
+":file:`C:\\\\Windows\\\\System32\\\\drivers\\\\etc` directory. Under Windows"
+" you need to start your text editor with administrator privileges before "
+"opening the hosts file."
+msgstr ""
+":file:`qgis.demo.conf` と :file:`/etc/hosts` "
+"ファイルの両方が、セットアップが機能するように設定されている必要があることを忘れないでください。:file:`/etc/hosts` "
+"ファイルにアクセスし、``qgis.demo`` の名前をサーバーマシンがネットワーク上に持つIP（ローカルマシンからのみアクセスできるローカルIP "
+"``127.0.0.1`` "
+"は指定しないでください）に指定することで、ネットワーク上の他のクライアント（Windowsやmacosマシンなど）からQGIS "
+"Serverへのアクセスをテストすることもできます。。``*nix`` マシンでは :file:`hosts` ファイルは :file:`/etc` "
+"にあり、Windowsでは :file:`C:`\\\\Windows\\\\System32\\\\drivers\\\\etc` "
+"ディレクトリの下にあります。Windowsではhostsファイルを開く前に管理者権限でテキストエディタを起動する必要があります。"
+
+#: ../../docs/server_manual/getting_started.rst:228
+msgid ""
+"QGIS Server is now available at http://qgis.demo. To check, type in a "
+"browser, as in the simple case:"
+msgstr "これでQGIS Serverが http://qgis.demo で利用できます。確認するには、簡単には次をブラウザで入力します："
+
+#: ../../docs/server_manual/getting_started.rst:237
+msgid "NGINX HTTP Server"
+msgstr "NGINX HTTP Server"
+
+#: ../../docs/server_manual/getting_started.rst:241
+msgid ""
+"You can also use QGIS Server with `NGINX <https://nginx.org/en/docs/>`__. "
+"Unlike Apache, NGINX does not automatically spawn FastCGI processes. The "
+"FastCGI processes are to be started by something else."
+msgstr ""
+"`NGINX <https://nginx.org/en/docs/>`__ を使用して QGIS Server を使用することもできます。Apache"
+" とは異なり、NGINX は FastCGI プロセスを自動的に起動しません。FastCGI プロセスは他の何かによって起動されます。"
+
+#: ../../docs/server_manual/getting_started.rst:245
+msgid "Install NGINX:"
+msgstr "NGINXをインストールする:"
+
+#: ../../docs/server_manual/getting_started.rst:252
+msgid ""
+"As a first option, you can use **spawn-fcgi** or **fcgiwrap** to start and "
+"manage the QGIS Server processes. Official Debian packages exist for both. "
+"When you have no X server running and you need, for example, printing, you "
+"can use :ref:`xvfb <xvfb>`."
+msgstr ""
+"最初の選択肢として、**spawn-fcgi** または **fcgiwrap** を使って QGIS Server "
+"プロセスを起動し、管理することができます。どちらも公式の Debian パッケージがあります。X サーバーが動作しておらず、例えば印刷が必要な場合には、"
+" :ref:`xvfb <xvfb>` を使用することができます。"
+
+#: ../../docs/server_manual/getting_started.rst:258
+msgid ""
+"Another option is to rely on **Systemd**, the init system for GNU/Linux that"
+" most Linux distributions use today. One of the advantages of this method is"
+" that it requires no other components or processes. It’s meant to be simple,"
+" yet robust and efficient for production deployments."
+msgstr ""
+"もう一つの選択肢は、今日ほとんどのLinuxディストリビューションが使用しているGNU/Linuxのinitシステムである **Systemd** "
+"に依存することです。この方法の利点の1つは、他のコンポーネントやプロセスを必要としないことです。これは、シンプルでありながら堅牢で、本番環境でのデプロイメントに効率的であることを意図しています。"
+
+#: ../../docs/server_manual/getting_started.rst:265
+msgid "NGINX Configuration"
+msgstr "NGINXの設定"
+
+#: ../../docs/server_manual/getting_started.rst:267
+msgid ""
+"The **include fastcgi_params;** used in the previous configuration is "
+"important, as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:"
+msgstr ""
+"前の設定で使った **include fastcgi_params;** は、 :file:`/etc/nginx/fastcgi_params` "
+"からパラメータを追加するために重要です:"
+
+#: ../../docs/server_manual/getting_started.rst:297
+msgid ""
+"Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS "
+"Server. In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you "
+"have to use ``fastcgi_param`` instruction to define these variables as shown"
+" below:"
+msgstr ""
+"さらに、いくつかの :ref:`qgis-server-envar` を使用して QGIS Server "
+"を設定することができます。NGINXの設定ファイル :file:`/etc/nginx/nginx.conf` では、以下のように "
+"``fastcgi_param`` 命令を使ってこれらの変数を定義する必要があります："
+
+#: ../../docs/server_manual/getting_started.rst:312
+msgid "FastCGI wrappers"
+msgstr "FastCGIラッパー"
+
+#: ../../docs/server_manual/getting_started.rst:316
+msgid ""
+"**fcgiwrap** is easier to set up than **spawn-fcgi**, because it's already "
+"wrapped in a Systemd service. But it also leads to a solution that is much "
+"slower than using spawn-fcgi. With fcgiwrap, a new QGIS Server process is "
+"created on each request, meaning that the QGIS Server initialization "
+"process, which includes reading and parsing the QGIS project file, is done "
+"on each request. With spawn-fcgi, the QGIS Server process remains alive "
+"between requests, resulting in much better performance. For that reason, "
+"spawn-fcgi is recommended for production use."
+msgstr ""
+"**fcgiwrap** はすでにSystemdサービスにラップされているので、**spawn-fcgi** "
+"よりもセットアップが簡単です。しかし、spawn-"
+"fcgiを使用するよりもはるかに遅いソリューションになります。fcgiwrapでは、リクエストごとに新しいQGIS "
+"Serverプロセスが作成されるため、QGISプロジェクトファイルの読み込みや解析を含むQGIS "
+"Serverの初期化処理がリクエストごとに行われます。spawn-fcgiを使用すると、QGIS "
+"Serverプロセスはリクエストの間中存続するため、パフォーマンスが大幅に向上します。そのため、spawn-fcgiは実運用での使用を推奨します。"
+
 #: ../../docs/server_manual/getting_started.rst:326
 msgid "spawn-fcgi"
 msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:328
+msgid ""
+"If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
+"fcgi/wiki>`_:"
+msgstr ""
+"`spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-fcgi/wiki>`_ "
+"を使いたい場合は:"
+
+#: ../../docs/server_manual/getting_started.rst:330
+msgid "The first step is to install the package:"
+msgstr "最初のステップはパッケージをインストールすることです:"
+
+#: ../../docs/server_manual/getting_started.rst:337
+#: ../../docs/server_manual/getting_started.rst:418
+msgid ""
+"Then, introduce the following block in your NGINX server configuration:"
+msgstr "次に以下のブロックをNGINXサーバー設定に導入します:"
+
+#: ../../docs/server_manual/getting_started.rst:347
+msgid "And restart NGINX to take into account the new configuration:"
+msgstr "そしてNGINXを再起動して新しい設定を有効にします:"
+
+#: ../../docs/server_manual/getting_started.rst:353
+msgid ""
+"Finally, considering that there is no default service file for spawn-fcgi, "
+"you have to manually start QGIS Server in your terminal:"
+msgstr "最後に、spawn-fcgi用のデフォルトのサービスファイルがないので、ターミナルでQGIS Serverを手動で起動する必要があります："
+
+#: ../../docs/server_manual/getting_started.rst:362
+#: ../../docs/server_manual/getting_started.rst:437
+msgid "QGIS Server is now available at http://qgis.demo/qgisserver."
+msgstr "これでQGIS Serverが http://qgis.demo/qgisserver から利用できます。"
+
+#: ../../docs/server_manual/getting_started.rst:366
+msgid ""
+"When using spawn-fcgi, you may directly define environment variables before "
+"running the server. For example: ``export QGIS_SERVER_LOG_STDERR=1``"
+msgstr ""
+"spawn-fcgiを使用する場合、サーバを実行する前に環境変数を直接定義することができます。例: ``export "
+"QGIS_SERVER_LOG_STDERR=1``"
+
+#: ../../docs/server_manual/getting_started.rst:370
+msgid ""
+"Of course, you can add an init script to start QGIS Server at boot time or "
+"whenever you want. For example with **systemd**:"
+msgstr ""
+"もちろん、起動時や好きな時にQGIS Serverを起動するinitスクリプトを追加することもできます。例えば、**systemd** を使用して："
+
+#: ../../docs/server_manual/getting_started.rst:373
+msgid ""
+"Edit the file :file:`/etc/systemd/system/qgis-server.service` with this "
+"content:"
+msgstr "この内容でファイル :file:`/etc/systemd/system/qgis-server.service` を編集します:"
+
+#: ../../docs/server_manual/getting_started.rst:396
+msgid "Then enable and start the service:"
+msgstr "次にこのサービスを有効にして起動します:"
+
+#: ../../docs/server_manual/getting_started.rst:404
+msgid ""
+"With the above commands spawn-fcgi spawns only one QGIS Server process."
+msgstr "spawn-fcgiは、上のコマンドでQGIS Serverプロセスをひとつだけ起動します。"
 
 #: ../../docs/server_manual/getting_started.rst:407
 msgid "fcgiwrap"
 msgstr ""
 
+#: ../../docs/server_manual/getting_started.rst:409
+msgid ""
+"Using `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ is "
+"much easier to setup than **spawn-fcgi** but it's much slower."
+msgstr ""
+"`fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ "
+"を使うのは **spawn-fcgi** を設定するよりとても簡単ですが、ずっと遅いです。"
+
+#: ../../docs/server_manual/getting_started.rst:412
+msgid "You first have to install the corresponding package:"
+msgstr "まず、対応するパッケージをインストールする必要があります:"
+
+#: ../../docs/server_manual/getting_started.rst:430
+msgid ""
+"Finally, restart NGINX and **fcgiwrap** to take into account the new "
+"configuration:"
+msgstr "最後に NGINX と **fcgiwrap** を再起動し、新しい設定を反映させます:"
+
 #: ../../docs/server_manual/getting_started.rst:441
 msgid "Systemd"
 msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:443
+msgid ""
+"QGIS Server needs a running X Server to be fully usable, in particular for "
+"printing. In the case you already have a running X Server, you can use "
+"systemd services."
+msgstr ""
+"QGIS Serverを完全に使うには、特に印刷のために、X Serverが動作している必要があります。すでにX "
+"Serverが動作している場合は、systemdサービスを使うことができます。"
+
+#: ../../docs/server_manual/getting_started.rst:446
+msgid ""
+"This method, to deploy QGIS Server, relies on two Systemd units to "
+"configure: a `Socket unit "
+"<https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ and"
+" a `Service unit "
+"<https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_."
+msgstr ""
+"この方法はQGIS Server をデプロイするために 2 つの Systemd ユニットに依存しています: `Socket ユニット "
+"<https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ と "
+"`Service ユニット "
+"<https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_ 。"
+
+#: ../../docs/server_manual/getting_started.rst:450
+msgid ""
+"The **QGIS Server Socket unit** defines and creates a file system socket, "
+"used by NGINX to start and communicate with QGIS Server. The Socket unit has"
+" to be configured with ``Accept=false``, meaning that the calls to the "
+"``accept()`` system call are delegated to the process created by the Service"
+" unit. It is located in :file:`/etc/systemd/system/qgis-server@.socket`, "
+"which is actually a template:"
+msgstr ""
+"**QGIS Server Socketユニット** は、NGINXがQGIS "
+"Serverを起動して通信するために使用するファイルシステムソケットを定義して作成します。ソケットユニットは ``Accept=false`` "
+"で設定する必要があります。これは ``accept()`` "
+"システムコールの呼び出しがサービスユニットによって作成されたプロセスに委譲されることを意味します。ソケットユニットは "
+":file:`/etc/systemd/system/qgis-server@.socket` にあり、これは実際にはテンプレートです："
+
+#: ../../docs/server_manual/getting_started.rst:473
+msgid "Now enable and start sockets:"
+msgstr "ソケットを有効にして起動します："
+
+#: ../../docs/server_manual/getting_started.rst:479
+msgid ""
+"The **QGIS Server Service unit** defines and starts the QGIS Server process."
+" The important part is that the Service process’ standard input is connected"
+" to the socket defined by the Socket unit. This has to be configured using "
+"``StandardInput=socket`` in the Service unit configuration located in "
+":file:`/etc/systemd/system/qgis-server@.service`:"
+msgstr ""
+"**QGIS Server Serviceユニット** はQGIS "
+"Serverプロセスを定義し、起動します。重要なのは、Serviceプロセスの標準入力がSocketユニットによって定義されたソケットに接続されていることです。これは"
+" :file:`/etc/systemd/system/qgis-server@.service` にあるサービスユニットの設定で "
+"``StandardInput=socket`` を使用して設定する必要があります:"
+
+#: ../../docs/server_manual/getting_started.rst:503
+msgid ""
+"The QGIS Server :ref:`environment variables <qgis-server-envvar>` are "
+"defined in a separate file, :file:`/etc/qgis-server/env`. It could look like"
+" this:"
+msgstr ""
+"QGIS Server :ref:`環境変数 <qgis-server-envvar>` は別のファイル :file:`/etc/qgis-"
+"server/env` で定義されます。以下のようになります："
+
+#: ../../docs/server_manual/getting_started.rst:513
+msgid "Now start socket service:"
+msgstr "ソケットサービスを開始します："
+
+#: ../../docs/server_manual/getting_started.rst:519
+msgid ""
+"Finally, for the NGINX HTTP server, let's introduce the configuration for "
+"this setup:"
+msgstr "最後に、NGINX HTTPサーバーの設定を紹介します："
+
+#: ../../docs/server_manual/getting_started.rst:540
+msgid "Now restart NGINX for the new configuration to be taken into account:"
+msgstr "新しい設定が反映されるようにNGINXを再起動します："
+
+#: ../../docs/server_manual/getting_started.rst:546
+msgid ""
+"Thanks to Oslandia for sharing `their tutorial "
+"<https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_."
+msgstr ""
+"`チュートリアル <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-"
+"systemd/>`_ を共有してくれたOslandiaに感謝します。"
 
 #: ../../docs/server_manual/getting_started.rst:551
 msgid "Xvfb"
 msgstr ""
 
+#: ../../docs/server_manual/getting_started.rst:552
+msgid ""
+"QGIS Server needs a running X Server to be fully usable, in particular for "
+"printing. On servers it is usually recommended not to install it, so you may"
+" use ``xvfb`` to have a virtual X environment."
+msgstr ""
+"QGIS Serverを完全に使用するためには、特に印刷のためにX "
+"Serverが動作している必要があります。サーバー上では通常インストールしないことを推奨しますので、 ``xvfb`` を使って仮想 X "
+"環境を構築してください。"
+
+#: ../../docs/server_manual/getting_started.rst:556
+msgid ""
+"If you're running the Server in graphic/X11 environment then there is no "
+"need to install xvfb. More info at https://www.itopen.it/qgis-server-setup-"
+"notes/."
+msgstr ""
+"サーバをグラフィック/X11環境で動作させている場合は、xvfbをインストールする必要はありません。詳細はhttps://www.itopen.it/qgis-"
+"server-setup-notes/ 。"
+
+#: ../../docs/server_manual/getting_started.rst:559
+msgid "To install the package:"
+msgstr "パッケージをインストールする:"
+
+#: ../../docs/server_manual/getting_started.rst:565
+msgid ""
+"Create the service file, :file:`/etc/systemd/system/xvfb.service`, with this"
+" content:"
+msgstr "この内容でサービスファイル :file:`/etc/systemd/system/xvfb.service` を作ります:"
+
 #: ../../docs/server_manual/getting_started.rst:579
 msgid "Enable, start and check the status of the ``xvfb.service``:"
 msgstr "``xvfb.service`` の状態を有効にし、開始し、チェックします："
+
+#: ../../docs/server_manual/getting_started.rst:586
+msgid ""
+"Then, according to your HTTP server, you should configure the **DISPLAY** "
+"parameter or directly use **xvfb-run**."
+msgstr "その後、HTTPサーバーに応じて、**DISPLAY** パラメーターを設定するか、直接 **xvfb-run** を使います。"
+
+#: ../../docs/server_manual/getting_started.rst:589
+msgid "Using Apache:"
+msgstr "Apacheを使う:"
+
+#: ../../docs/server_manual/getting_started.rst:591
+msgid "Add to your *Fcgid* configuration (see :ref:`httpserver`):"
+msgstr "*Fcgid* 設定に追加します (:ref:`httpserver` を参照)："
+
+#: ../../docs/server_manual/getting_started.rst:597
+msgid "Restart Apache for the new configuration to be taken into account:"
+msgstr "新しい設定が反映されるように Apache を再起動します："
+
+#: ../../docs/server_manual/getting_started.rst:603
+msgid "Using NGINX"
+msgstr "NGINXを使う"
+
+#: ../../docs/server_manual/getting_started.rst:605
+msgid "With spawn-fcgi using ``xvfb-run``:"
+msgstr "``xvfb-run`` を使った spawn-fcgi を実行する："
+
+#: ../../docs/server_manual/getting_started.rst:613
+msgid ""
+"With the **DISPLAY** environment variable in the HTTP server configuration."
+msgstr "HTTPサーバー設定の **DISPLAY** 環境変数を使用します。"
+
+#: ../../docs/server_manual/getting_started.rst:620
+msgid "Installation on Windows"
+msgstr "Windowsへのインストール"
+
+#: ../../docs/server_manual/getting_started.rst:624
+msgid ""
+"QGIS Server can also be installed on Windows systems using the 64 bit "
+"version of the OSGeo4W network installer "
+"(https://qgis.org/en/site/forusers/download.html)."
+msgstr ""
+"QGIS Server は、OSGeo4W ネットワークインストーラー "
+"(https://qgis.org/en/site/forusers/download.html) の 64 ビット版を使用して Windows "
+"システムにインストールすることもできます。"
+
+#: ../../docs/server_manual/getting_started.rst:627
+msgid "A simple procedure is the following:"
+msgstr "簡単な手順は以下の通りです："
+
+#: ../../docs/server_manual/getting_started.rst:629
+msgid "Download and run the OSGeo4W installer"
+msgstr "OSGeo4Wインストーラーをダウンロードして実行する"
+
+#: ../../docs/server_manual/getting_started.rst:630
+msgid ""
+"Follow the \"Advanced Install\" and install the **QGIS Desktop**, **QGIS "
+"Server** **apache** and **mod_fcgid** packages."
+msgstr ""
+"\"Advanced Install\"に従い、**QGIS Desktop**, **QGIS Server** **apache**, "
+"**mod_fcgid** パッケージをインストールします。"
+
+#: ../../docs/server_manual/getting_started.rst:636
+msgid "Apache is not directly installed as a service on Windows. You need to:"
+msgstr "Apache は Windows ではサービスとして直接インストールされません。次が必要です："
+
+#: ../../docs/server_manual/getting_started.rst:638
+msgid ""
+"Right-click the :file:`OSGeo4W.bat` file at the root of the "
+":file:`C:\\\\OSGeo4W64\\\\` folder (if the default installation paths have "
+"been used) and select :guilabel:`Run as administrator`"
+msgstr ""
+":file:`C:\\\\OSGeo4W64\\\\` フォルダー（デフォルトのインストールパスが使用されている場合）のルートにある "
+":file:`OSGeo4W.bat` ファイルを右クリックし、 :guilabel:`管理者として実行` を選択します"
+
+#: ../../docs/server_manual/getting_started.rst:641
+msgid "In the console, run ``apache-install.bat``, which will output"
+msgstr "コンソールで、``apache-install.bat`` を実行し、次が出力されます"
+
+#: ../../docs/server_manual/getting_started.rst:652
+msgid ""
+"The service is started as you can notice in the report. But the server may "
+"fail to run due to missing custom configuration."
+msgstr "レポートにあるようにサービスは開始されています。しかし、カスタム設定がないため、サーバーの実行に失敗する可能性があります。"
+
+#: ../../docs/server_manual/getting_started.rst:654
+msgid ""
+"Edit the :file:`C:\\\\OSGeo4w64\\\\apps\\\\apache\\\\conf\\\\httpd.conf` "
+"file with the following changes (various other combinations are possible):"
+msgstr ""
+"次の変更で :file:`C:\\\\OSGeo4w64\\\\apps\\\\apache\\\\conf\\\\httpd.conf` "
+"ファイルを編集します（他にも様々な組み合わせがあります）："
 
 #: ../../docs/server_manual/getting_started.rst:661
 msgid "Purpose"
 msgstr "目的"
 
+#: ../../docs/server_manual/getting_started.rst:662
+msgid "Existing config"
+msgstr "既存のconfig"
+
 #: ../../docs/server_manual/getting_started.rst:663
 msgid "Replacement"
 msgstr "置換"
 
+#: ../../docs/server_manual/getting_started.rst:664
+msgid ""
+"(Optional) Customize the address to listen to using an IP and/or port, You "
+"can and add as many entries as you wish."
+msgstr "(オプション）IPやポートを使ってリッスンするアドレスをカスタマイズします。エントリーはいくつでも追加できます。"
+
+#: ../../docs/server_manual/getting_started.rst:675
+msgid "Indicate where to find the script files"
+msgstr "スクリプトファイルのある場所を示します"
+
+#: ../../docs/server_manual/getting_started.rst:684
+msgid "Provide permissions on the script folder"
+msgstr "スクリプトフォルダーに許可を与えます"
+
+#: ../../docs/server_manual/getting_started.rst:701
+msgid "Enable file extensions to use for script files. Uncomment and complete"
+msgstr "スクリプトファイルに使うために拡張を有効にします。アンコメントして完成させます"
+
+#: ../../docs/server_manual/getting_started.rst:709
+msgid "Add more OSGeo4W custom configuration variables"
+msgstr "さらにOSGeo4Wカスタム設定変数を加えます"
+
+#: ../../docs/server_manual/getting_started.rst:722
+msgid "Restart the Apache web server"
+msgstr "Apacheウェブサーバーを再起動します"
+
+#: ../../docs/server_manual/getting_started.rst:728
+msgid ""
+"Open browser window to testing a GetCapabilities request to QGIS Server. "
+"Replace ``localhost:8080`` with the IP and port you set to listen."
+msgstr ""
+"ブラウザウィンドウを開き、QGIS ServerへのGetCapabilitiesリクエストをテストします。``localhost:8080`` "
+"をリッスンするように設定したIPとポートに置き換えてください。"
+
+#: ../../docs/server_manual/getting_started.rst:735
+msgid ""
+"A :file:`XML` file with the capabilities should be returned. Your server is "
+"ready to use."
+msgstr "機能が :file:`XML`ファイルで返されるはずです。これでサーバを使用する準備が整いました。"
+
+#: ../../docs/server_manual/getting_started.rst:743
+msgid "Serve a project"
+msgstr "プロジェクトを供給する"
+
+#: ../../docs/server_manual/getting_started.rst:745
+msgid "Now that QGIS Server is installed and running, we just have to use it."
+msgstr "これでQGIS Serverがインストールされ、稼働しているので、あとは使うだけです。"
+
+#: ../../docs/server_manual/getting_started.rst:747
+msgid ""
+"Obviously, we need a QGIS project to work on. Of course, you can fully "
+"customize your project by defining contact information, precise some "
+"restrictions on CRS or even exclude some layers. Everything you need to know"
+" about that is described later in :ref:`Creatingwmsfromproject`."
+msgstr ""
+"言うまでもありませんが、作業にはQGISプロジェクトが必要です。もちろん、連絡先情報を定義したり、CRSに正確な制限を加えたり、あるいはいくつかのレイヤを除外したりして、プロジェクトを完全にカスタマイズすることもできます。これについては"
+" :ref:`Creatingwmsfromproject` で後述します。"
+
+#: ../../docs/server_manual/getting_started.rst:752
+msgid ""
+"But for now, we are going to use a simple project already configured and "
+"previously downloaded in :file:`/home/qgis/projects/world.qgs`, as described"
+" above."
+msgstr ""
+"ただしここでは、上で説明したように、既に設定され、ダウンロードされている :file:`/home/qgis/projects/world.qgs` "
+"にある簡単なプロジェクトを使うことにします。"
+
+#: ../../docs/server_manual/getting_started.rst:755
+msgid ""
+"By opening the project and taking a quick look on layers, we know that 4 "
+"layers are currently available:"
+msgstr "プロジェクトを開き、レイヤをざっと見てみると、4つのレイヤが利用できることが分かります："
+
+#: ../../docs/server_manual/getting_started.rst:758
+msgid "airports"
+msgstr "airports"
+
+#: ../../docs/server_manual/getting_started.rst:759
+msgid "places"
+msgstr "places"
+
+#: ../../docs/server_manual/getting_started.rst:760
+msgid "countries"
+msgstr "countries"
+
+#: ../../docs/server_manual/getting_started.rst:761
+msgid "countries_shapeburst"
+msgstr "countries_shapeburst"
+
+#: ../../docs/server_manual/getting_started.rst:763
+msgid ""
+"You don't have to understand the full request for now but you may retrieve a"
+" map with some of the previous layers thanks to QGIS Server by doing "
+"something like this in your web browser to retrieve the *countries* layer:"
+msgstr ""
+"今のところ、完全なリクエストを理解する必要はありませんが、ウェブブラウザで次のように *countries* レイヤを取得することで、QGIS "
+"Serverのおかげで前のレイヤのいくつかを含むマップを取得することができます："
+
+#: ../../docs/server_manual/getting_started.rst:767
+msgid ""
+"If you followed the above instructions to install an Apache HTTP Server:"
+msgstr "上記の手順に従ってApache HTTP Serverをインストールした場合："
+
+#: ../../docs/server_manual/getting_started.rst:782
+msgid ""
+"If you followed the above instructions to install an NGINX HTTP Server:"
+msgstr "上記の手順に従ってNGINX HTTPサーバーをインストールした場合："
+
+#: ../../docs/server_manual/getting_started.rst:797
+msgid "If you obtain the next image, then QGIS Server is running correctly:"
+msgstr "次の画像が表示されれば、QGIS Serverは正しく動作しています："
+
+#: ../../docs/server_manual/getting_started.rst:802
+msgid "Server response to a basic GetMap request"
+msgstr "基本 GetMap リクエストに対するサーバーの応答"
+
+#: ../../docs/server_manual/getting_started.rst:804
+msgid ""
+"Note that you may define **QGIS_PROJECT_FILE** environment variable to use a"
+" project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
+"server-envvar`)."
+msgstr ""
+"なお、**MAP** パラメータを与える代わりに、**QGIS_PROJECT_FILE** "
+"環境変数を定義して、デフォルトでプロジェクトを使用することもできます (:ref:`qgis-server-envar` を参照)。"
+
+#: ../../docs/server_manual/getting_started.rst:807
+msgid "For example with spawn-fcgi:"
+msgstr "spawn-fcgi を使う例："
+
+#: ../../docs/server_manual/getting_started.rst:819
+msgid "Configure your project"
+msgstr "プロジェクトを設定する"
+
+#: ../../docs/server_manual/getting_started.rst:821
+msgid ""
+"To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a "
+"QGIS project file with some data or use one of your current project. Define "
+"the colors and styles of the layers in QGIS and the project CRS, if not "
+"already defined. Then, go to the :guilabel:`QGIS Server` menu of the "
+":menuselection:`Project --> Properties...` dialog and provide some "
+"information about the OWS in the :guilabel:`Service Capabilities` tab."
+msgstr ""
+"新しい QGIS Server WMS、WFS、OAPIF、または WCS を提供するには、いくつかのデータを含む QGIS "
+"プロジェクトファイルを作成するか、現在のプロジェクトの 1 つを使用する必要があります。QGISのレイヤの色とスタイルを定義し、プロジェクトの CRS "
+"を定義します。次に、:menuselection:`プロジェクト --> プロパティ...` ダイアログの :guilabel:`QGISサーバー` "
+"メニューを開き、:guilabel:`Service Capabilities` タブに OWS に関する情報を入力します。"
+
 #: ../../docs/server_manual/getting_started.rst:833
 msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
 msgstr "QGISサーバーのWMS / WFS / WCSプロジェクトの定義"
+
+#: ../../docs/server_manual/getting_started.rst:835
+msgid ""
+"You have to :guilabel:`Enable Service Capabilities` first, if it is "
+"deactivated. This will appear in the GetCapabilities response of the WMS, "
+"WFS or WCS. If you don't check |checkbox| :guilabel:`Enable Service "
+"capabilities`, QGIS Server will use the information given in the "
+":file:`wms_metadata.xml` file located in the :file:`cgi-bin` folder."
+msgstr ""
+"サービス機能が無効になっている場合は、最初に :guilabel:`Service Capabilitiesを有効化` "
+"する必要があります。これはWMS、WFS、WCSのGetCapabilitiesレスポンスに表示されます。|checkbox| "
+":guilabel:`Service Capabilitiesを有効化` にチェックを入れない場合、QGIS Serverは :file:`cgi-"
+"bin` フォルダにある :file:`wms_metadata.xml` ファイルにある情報を使用します。"
 
 #: ../../docs/server_manual/getting_started.rst:1052
 msgid "checkbox"
@@ -191,9 +805,173 @@ msgstr ""
 msgid "WMS capabilities"
 msgstr "WMS機能"
 
+#: ../../docs/server_manual/getting_started.rst:844
+msgid ""
+"In the :guilabel:`WMS capabilities` tab, you can define the extent "
+"advertised in the WMS GetCapabilities response by entering the minimum and "
+"maximum X and Y values in the fields under :guilabel:`Advertised extent`."
+msgstr ""
+":guilabel:`WMS capabilities` タブでは、:guilabel:`Advertise範囲` の下のフィールドに X と Y "
+"の最小値と最大値を入力して、WMS GetCapabilities 応答で広告される範囲を定義できます。"
+
+#: ../../docs/server_manual/getting_started.rst:854
+msgid "Definitions in the WMS tab"
+msgstr "WMSタブにある定義"
+
+#: ../../docs/server_manual/getting_started.rst:856
+msgid ""
+"Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
+"extent currently displayed in the QGIS map canvas. By checking |checkbox| "
+":guilabel:`CRS restrictions`, you can restrict in which coordinate reference"
+" systems (CRS) QGIS Server will offer to render maps. It is recommended that"
+" you restrict the offered CRS as this reduces the size of the WMS "
+"GetCapabilities response. Use the |symbologyAdd| button below to select "
+"those CRSs from the Coordinate Reference System Selector, or click "
+":guilabel:`Used` to add the CRSs used in the QGIS project to the list."
+msgstr ""
+":guilabel:`現在のキャンバス領域を利用` をクリックすると、これらの値がQGIS "
+"マップキャンバスに現在表示されている範囲に設定されます。|checkbox| :guilabel:`CRS制限` をオンにすると、QGIS Server"
+" がマップをレンダリングする際に提供する座標参照系 (CRS) を制限することができます。これにより、WMS GetCapabilities "
+"レスポンスのサイズが小さくなるため、提供する CRS を制限することをお勧めします。下の |symbologyAdd| "
+"ボタンを使用して、座標参照系セレクタからそのCRSを選択するか、:guilabel:`使用中` "
+"をクリックしてQGISプロジェクトで使用されているCRSをリストに追加します。"
+
 #: ../../docs/server_manual/getting_started.rst:1054
 msgid "symbologyAdd"
 msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:866
+msgid ""
+"If you have print layouts defined in your project, they will be listed in "
+"the ``GetProjectSettings`` response, and they can be used by the GetPrint "
+"request to create prints, using one of the print layouts as a template. This"
+" is a QGIS-specific extension to the WMS 1.3.0 specification. If you want to"
+" exclude any print layout from being published by the WMS, check |checkbox| "
+":guilabel:`Exclude layouts` and click the |symbologyAdd| button below. Then,"
+" select a print layout from the :guilabel:`Select print layout` dialog in "
+"order to add it to the excluded layouts list."
+msgstr ""
+"プロジェクトで印刷レイアウトが定義されている場合、それらは ``GetProjectSettings`` レスポンスにリストされ、GetPrint "
+"リクエストで印刷レイアウトのいずれかをテンプレートとして使用して印刷を作成することができます。これはWMS "
+"1.3.0仕様に対するQGIS固有の拡張です。WMSによって公開される印刷レイアウトを除外したい場合は、チェックボックス| "
+":guilabel:`レイアウトの除外` をチェックし、下の |symbologyAdd| "
+"ボタンをクリックします。次に、除外レイアウトリストに追加するために、 :guilabel:`印刷レイアウトの選択` "
+"ダイアログから印刷レイアウトを選択します。"
+
+#: ../../docs/server_manual/getting_started.rst:876
+msgid ""
+"If you want to exclude any layer or layer group from being published by the "
+"WMS, check |checkbox| :guilabel:`Exclude Layers` and click the "
+"|symbologyAdd| button below. This opens the :guilabel:`Select restricted "
+"layers and groups` dialog, which allows you to choose the layers and groups "
+"that you don't want to be published. Use the :kbd:`Shift` or :kbd:`Ctrl` key"
+" if you want to select multiple entries. It is recommended that you exclude "
+"from publishing the layers that you don't need as this reduces the size of "
+"the WMS GetCapabilities response which leads to faster loading times on the "
+"client side."
+msgstr ""
+"WMSからレイヤまたはレイヤーグループを除外したい場合は、|checkbox| :guilabel:`レイヤの除外` をチェックし、下の "
+"|symbologyAdd| ボタンをクリックします。これにより :guilabel:`制限されたレイヤとグループを選択する` "
+"ダイアログが開き、公開したくないレイヤとグループを選択することができます。複数のエントリを選択したい場合は :kbd:`Shift` キーまたは "
+":kbd:`Ctrl` "
+"キーを使用してください。WMSのGetCapabilitiesレスポンスのサイズが小さくなり、クライアント側のロード時間が短縮されるため、不要なレイヤは公開しないことをお勧めします。"
+
+#: ../../docs/server_manual/getting_started.rst:886
+msgid ""
+"If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
+" used to reference layers in the ``GetCapabilities`` response or ``GetMap "
+"LAYERS`` parameter. If not, layer name or short name if defined (see "
+":ref:`vectorservermenu`) is used."
+msgstr ""
+"|checkbox| :guilabel:`レイヤIDを名前に使う` をチェックすると、 ``GetCapabilities`` レスポンスや "
+"``GetMap LAYERS`` パラメータでレイヤを参照する際にレイヤ ID "
+"が使用されます。そうでない場合は、レイヤの名前、または定義されている場合は、短い名前 (ref:`vectorservermenu` を参照) "
+"が使用されます。"
+
+#: ../../docs/server_manual/getting_started.rst:891
+msgid ""
+"You can receive requested GetFeatureInfo as plain text, XML and GML. The "
+"default is XML."
+msgstr "要求された GetFeatureInfo は、平文テキスト、XML、および GML で受け取ることができます。デフォルトは XML です。"
+
+#: ../../docs/server_manual/getting_started.rst:895
+msgid ""
+"If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
+"response`. This will include the bounding box for each feature in the "
+"GetFeatureInfo response. See also the :ref:`WITH_GEOMETRY "
+"<wms_getfeatureinfo>` parameter."
+msgstr ""
+"必要であれば、|checkbox| :guilabel:`地物情報の応答にWKTジオメトリを加える` "
+"をチェックします。これにより、各地物のバウンディングボックスが GetFeatureInfo "
+"レスポンスに含まれます。ref:`WITH_GEOMETRY ` パラメータも参照してください。"
+
+#: ../../docs/server_manual/getting_started.rst:899
+msgid ""
+"As many web clients can’t display circular arcs in geometries you have the "
+"option to segmentize the geometry before sending it to the client in a "
+"GetFeatureInfo response. This allows such clients to still display a "
+"feature’s geometry (e.g. for highlighting the feature). You need to check "
+"the |checkbox| :guilabel:`Segmentize feature info geometry` to activate the "
+"option."
+msgstr ""
+"多くの Web クライアントはジオメトリの円弧を表示できないため、GetFeatureInfo "
+"レスポンスでクライアントに送信する前にジオメトリをセグメント化するオプションがあります。これにより、そのようなクライアントでも地物のジオメトリを表示することができます（例"
+" 地物のハイライト表示）。このオプションを有効にするには、 |checkbox| :guilabel:`地物情報ジオメトリをセグメント化` "
+"をチェックする必要があります。"
+
+#: ../../docs/server_manual/getting_started.rst:905
+msgid ""
+"You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
+" set the precision of the GetFeatureInfo geometry. This enables you to save "
+"bandwidth when you don't need the full precision."
+msgstr ""
+"また、:guilabel:`GetFeatureInfoジオメトリ精度` オプションを使用して、GetFeatureInfo "
+"ジオメトリの精度を設定することもできます。これにより、完全な精度を必要としない場合に帯域幅を節約することができます。"
+
+#: ../../docs/server_manual/getting_started.rst:909
+msgid ""
+"If you want QGIS Server to advertise specific request URLs in the WMS "
+"GetCapabilities response, enter the corresponding URL in the "
+":guilabel:`Advertised URL` field."
+msgstr ""
+"WMS GetCapabilitiesレスポンスでQGIS Serverに特定のリクエストURLを広告させたい場合は、:guilabel:`公開URL`"
+" フィールドに対応するURLを入力します。"
+
+#: ../../docs/server_manual/getting_started.rst:913
+msgid ""
+"Furthermore, you can restrict the maximum size of the maps returned by the "
+"GetMap request by entering the maximum width and height into the respective "
+"fields under :guilabel:`Maximums for GetMap request`."
+msgstr ""
+"さらに、:guilabel:`Maximums for GetMap "
+"request`の下にあるそれぞれのフィールドに最大幅と最大高さを入力することで、GetMapリクエストによって返されるマップの最大サイズを制限することができます。"
+
+#: ../../docs/server_manual/getting_started.rst:917
+msgid ""
+"You can change the :guilabel:`Quality for JPEG images` factor. The quality "
+"factor must be in the range 0 to 100. Specify 0 for maximum compression, 100"
+" for no compression."
+msgstr ""
+":guilabel:`JPEGイメージの品質` "
+"の係数を変更することができます。品質係数は0から100の範囲でなければなりません。0を指定すると最大圧縮、100を指定すると非圧縮になります。"
+
+#: ../../docs/server_manual/getting_started.rst:920
+msgid ""
+"You can change the limit for atlas features to be printed in one request by "
+"setting the :guilabel:`Maximum features for Atlas print requests` field."
+msgstr ""
+":guilabel:`地図帳印刷する地物数の上限` フィールドを設定することで、1回のリクエストで印刷する地図帳地物の上限を変更することができます。"
+
+#: ../../docs/server_manual/getting_started.rst:923
+msgid ""
+"When QGIS Server is used in tiled mode (see :ref:`TILED parameter "
+"<wms_tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The "
+"recommended value is the size of the largest symbol or line width in your "
+"QGIS project."
+msgstr ""
+"QGIS Serverをタイルモードで使用する場合（:ref:`TILEDパラメータ <wms_tiled>` "
+"を参照）、:guilabel:`タイルのバッファ（ピクセル）` "
+"を設定することができます。推奨値は、QGISプロジェクトで最大のシンボルまたは線幅の大きさです。"
 
 #: ../../docs/server_manual/getting_started.rst:927
 msgid ""
@@ -205,10 +983,183 @@ msgstr ""
 "レイヤーの一つが :ref:`地図ヒントディスプレイ <maptips>` "
 "を使用している場合（つまり式を使ってテキストを表示するために）これはGetFeatureInfo出力内で表示されます。レイヤーは、その属性のいずれかの値マップを使用している場合は、この情報には、GetFeatureInfo出力に表示されます。"
 
+#: ../../docs/server_manual/getting_started.rst:933
+msgid "WMTS capabilities"
+msgstr "WMTS機能"
+
+#: ../../docs/server_manual/getting_started.rst:935
+msgid ""
+"In the :guilabel:`WMTS capabilities` tab you can select the layers you want "
+"to publish as WMTS and specify if you want to publish as PNG or JPEG."
+msgstr ""
+":guilabel:`WMTS機能` タブでは、WMTSとして公開したいレイヤを選択し、PNGまたはJPEGとして公開するかどうかを指定できます。"
+
+#: ../../docs/server_manual/getting_started.rst:943
+msgid "Definitions in the WMTS tab"
+msgstr "WMTSタブにある定義"
+
+#: ../../docs/server_manual/getting_started.rst:945
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WMTS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WMTS GetCapabilities response."
+msgstr ""
+":guilabel:`WMTS機能` セクションの :guilabel:`公開URL` フィールドにURLを入力すると、QGIS ServerはWMTS"
+" GetCapabilitiesレスポンスでこの特定のURLを広告します。"
+
+#: ../../docs/server_manual/getting_started.rst:950
+msgid "WFS/OAPIF capabilities"
+msgstr "WFS/OAPIF機能"
+
+#: ../../docs/server_manual/getting_started.rst:952
+msgid ""
+"In the :guilabel:`WFS/OAPIF capabilities` tab, you can select the layers you"
+" want to publish as WFS or OAPIF, and specify if they will allow update, "
+"insert and delete operations."
+msgstr ""
+":guilabel:`WFS/OAPIF機能` "
+"タブでは、WFSまたはOAPIFとして公開したいレイヤを選択し、更新、挿入、削除操作を許可するかどうかを指定することができます。"
+
+#: ../../docs/server_manual/getting_started.rst:961
+msgid "Definitions in the WFS/OAPIF tab"
+msgstr "WFS/OAPIFタブにある定義"
+
+#: ../../docs/server_manual/getting_started.rst:963
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WFS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WFS GetCapabilities response."
+msgstr ""
+":guilabel:`WFS機能` セクションの :guilabel:`公開URL` フィールドに URL を入力すると、QGIS Server は "
+"WFS GetCapabilities レスポンスでこの特定の URL を広告します。"
+
 #: ../../docs/server_manual/getting_started.rst:968
 msgid "WCS capabilities"
 msgstr "WCS機能"
 
+#: ../../docs/server_manual/getting_started.rst:970
+msgid ""
+"In the :guilabel:`WCS capabilities` tab, you can select the layers that you "
+"want to publish as WCS."
+msgstr ":guilabel:`WCS機能` タブでは、WCSとして公開したいレイヤを選択することができます。"
+
+#: ../../docs/server_manual/getting_started.rst:978
+msgid "Definitions in the WCS tab"
+msgstr "WCSタブにある定義"
+
+#: ../../docs/server_manual/getting_started.rst:980
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WCS GetCapabilities response."
+msgstr ""
+":guilabel:`WCS機能` セクションの :guilabel:`公開URL` フィールドにURLを入力すると、QGIS ServerはWCS "
+"GetCapabilitiesレスポンスでこの特定のURLを広告します。"
+
 #: ../../docs/server_manual/getting_started.rst:985
 msgid "Fine tuning your OWS"
 msgstr "OWSを微調整する"
+
+#: ../../docs/server_manual/getting_started.rst:987
+msgid ""
+"For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer "
+"--> Layer Properties` dialog allows you to define for each attribute if it "
+"will be published or not. By default, all the attributes are published by "
+"your WMS and WFS. If you don't want a specific attribute to be published, "
+"uncheck the corresponding checkbox in the :guilabel:`WMS` or :guilabel:`WFS`"
+" column."
+msgstr ""
+"ベクタレイヤの場合、 :menuselection:`レイヤ --> レイヤのプロパティ` ダイアログの :guilabel:`属性` "
+"メニューで、各属性を公開するかどうかを定義することができます。デフォルトでは、すべての属性がWMSとWFSによって公開されます。特定の属性を公開したくない場合は、"
+" :guilabel:`WMS` または :guilabel:`WFS` 列の対応するチェックボックスのチェックを外してください。"
+
+#: ../../docs/server_manual/getting_started.rst:994
+msgid ""
+"You can overlay watermarks over the maps produced by your WMS by adding text"
+" annotations or SVG annotations to the project file. See the "
+":ref:`sec_annotations` section for instructions on creating annotations. For"
+" annotations to be displayed as watermarks on the WMS output, the "
+":guilabel:`Fixed map position` checkbox in the :guilabel:`Annotation text` "
+"dialog must be unchecked. This can be accessed by double clicking the "
+"annotation while one of the annotation tools is active. For SVG annotations,"
+" you will need either to set the project to save absolute paths (in the "
+":guilabel:`General` menu of the :menuselection:`Project --> Properties...` "
+"dialog) or to manually modify the path to the SVG image so that it "
+"represents a valid relative path."
+msgstr ""
+"プロジェクトファイルにテキスト注記または SVG注記を追加することで、WMS が作成したマップに透かしを重ねることができます。注記の作成方法については "
+":ref:`sec_annotations` セクションを参照してください。注記をWMSの出力に透かしとして表示するには、 "
+":guilabel:`注記テキスト` ダイアログの :guilabel:`地図の位置固定` "
+"チェックボックスのチェックを外す必要があります。このチェックボックスには、注記ツールがアクティブな状態で注記をダブルクリックすることでアクセスできます。SVG注記の場合、（"
+" :menuselection:`プロジェクト --> プロパティ...` ダイアログの :guilabel:`一般情報` "
+"メニューで）プロジェクトを絶対パスで保存するように設定するか、SVG画像へのパスを有効な相対パスになるように手動で修正する必要があります。"
+
+#: ../../docs/server_manual/getting_started.rst:1009
+msgid "Integration with third parties"
+msgstr "サードパーティとの統合"
+
+#: ../../docs/server_manual/getting_started.rst:1011
+msgid ""
+"QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
+"<https://www.ogc.org/docs/is>`_ thus it can be used by a wide variety of end"
+" user tools."
+msgstr ""
+"QGIS Serverは、`WMS、WFSなど <https://www.ogc.org/docs/is>`_ "
+"の標準的なOGCウェブサービスを提供します。 したがって、さまざまなエンドユーザーツールで使用することができます。"
+
+#: ../../docs/server_manual/getting_started.rst:1015
+msgid "Integration with QGIS Desktop"
+msgstr "QGIS Desktopとの統合"
+
+#: ../../docs/server_manual/getting_started.rst:1017
+msgid ""
+"QGIS Desktop is the map designer where QGIS Server is the map server. The "
+"maps or QGIS projects will be served by the QGIS Server to provide OGC "
+"standards. These QGIS projects can either be files or entries in a database "
+"(by using :menuselection:`Project --> Save to --> PostgreSQL` in QGIS "
+"Desktop)."
+msgstr ""
+"QGIS Desktopはマップデザイナーであり、QGIS Server はマップサーバーです。マップまたは QGIS プロジェクトは、OGC "
+"標準を提供するために QGIS Server "
+"によって提供されます。これらのQGISプロジェクトは、ファイルでもデータベース内のエントリでもかまいません（QGIS Desktopの "
+":menuselection:`プロジェクト --> 保存 --> PostgreSQL` を使用します）。"
+
+#: ../../docs/server_manual/getting_started.rst:1022
+msgid ""
+"Furthermore, dedicated update workflow must be established to refresh a "
+"project used by a QGIS Server (ie. copy project files into server location "
+"and restart QGIS Server). For now, automated processes (as server reloading "
+"over message queue service) are not implemented yet."
+msgstr ""
+"さらに、QGIS "
+"Serverで使用されているプロジェクトを更新するには、専用の更新ワークフローを確立する必要があります（プロジェクトファイルをサーバーの場所にコピーし、QGIS"
+" Serverを再起動するなど）。今のところ、自動化された処理（メッセージキューサービスを介したサーバーのリロード）は実装されていません。"
+
+#: ../../docs/server_manual/getting_started.rst:1029
+msgid "Integration with MapProxy"
+msgstr "MapProxyとの統合"
+
+#: ../../docs/server_manual/getting_started.rst:1031
+msgid ""
+"`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can "
+"read and serve any WMS/WMTS map server, it can be directly connected to QGIS"
+" server web services and improve end user experience."
+msgstr ""
+"`MapProxy <https://mapproxy.org/>`_ "
+"は、タイルキャッシュサーバーで、あらゆるWMS/WMTSマップサーバーを読み込んで提供することができるため、QGISサーバーのウェブサービスに直接接続することができ、エンドユーザーエクスペリエンスを向上させることができます。"
+
+#: ../../docs/server_manual/getting_started.rst:1037
+msgid "Integration with QWC2"
+msgstr "QWC2との統合"
+
+#: ../../docs/server_manual/getting_started.rst:1039
+msgid ""
+"`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
+"dedicated to QGIS Server. It helps you to build a highly customized map "
+"viewer with layer selection, feature info, etc.. Also many plugins are "
+"available like authentication or print service, the full list is available "
+"in this `repository <https://github.com/qwc-services>`_."
+msgstr ""
+"`QWC2 <https://github.com/qgis/qwc2>`_ は QGIS Server 専用のレスポンシブ Web "
+"アプリケーションです。レイヤ選択、地物情報など、高度にカスタマイズされたマップビューアを構築するのに役立ちます。また、認証や印刷サービスのような多くのプラグインが利用可能で、完全なリストはこの"
+" `リポジトリ <https://github.com/qwc-services>`_ にあります。"
