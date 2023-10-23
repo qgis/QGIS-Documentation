@@ -9,12 +9,12 @@
    .. contents::
       :local:
 
-The print layout provides growing layout and printing capabilities. It allows
-you to add elements such as the QGIS map canvas, text labels, images, legends,
-scale bars, basic shapes, arrows, attribute tables and HTML frames. You can size,
-group, align, position and rotate each element and adjust their properties to
-create your layout. The layout can be printed or exported to image formats,
-PostScript, PDF or to SVG.
+The print layout provides growing layout and printing capabilities.
+It allows you to add elements such as the QGIS 2D or 3D map canvas, text labels, images, legends,
+scale bars, basic shapes, arrows, attribute and simple tables, elevation profiles and HTML frames...
+You can size, group, align, position and rotate each element
+and adjust their properties to create your layout.
+The layout can be printed or exported to image formats, PostScript, PDF or to SVG.
 You can save the layout as a template and load it again in another session.
 Finally, generating several maps based on a template can be done through the atlas generator.
 
@@ -113,14 +113,14 @@ or reports in the project with tools to:
   you'll be prompted to choose a new title for the layout;
 * remove the layout: the selected print layout(s) will be deleted from the project.
 
-In the lower part, it's possible to create new print layouts or reports from
-scratch or a template. By default, QGIS will look for templates in the user
-profile and the application template directories (accessible with the two
-buttons at the bottom of the frame) but also in any folder declared
-as :guilabel:`Path(s) to search for extra print templates` in
-:menuselection:`Settings --> Options --> Layouts`. Found templates are listed
-in the combobox. Select an item and press the :guilabel:`Create` button to generate
-a new report or print layout.
+In the lower part, it's possible to create new print layouts or reports from scratch or a template.
+By default, QGIS will look for templates in the :ref:`user profile <user_profiles>` folder
+and the application template directories (accessible with the two buttons at the bottom of the frame)
+but also in any folder declared as :guilabel:`Path(s) to search for extra print templates`
+in :menuselection:`Settings --> Options --> Layouts`.
+Found templates are listed in the combobox.
+Select an item and press the :guilabel:`Create` button
+to generate a new report or print layout.
 
 You can also use layout templates from a custom folder;
 in that case, select *specific* in the templates drop-down list,
@@ -132,20 +132,20 @@ browse to the template and press :guilabel:`Create`.
   onto the map canvas or double-click it in the :ref:`Browser panel <browser_panel>`
   generates a new print layout from the template.
 
-.. Todo: Add a link to User profile section when it's ready
 
 .. _print_composer_menus:
 
 Menus, tools and panels of the print layout
 =============================================
 
-Opening the print layout provides you with a blank canvas that represents the
-paper surface when using the print option. Initially you find buttons on the
-left beside the canvas to add print layout items: the current QGIS map canvas,
-text labels, images, legends, scale bars, basic shapes, arrows, attribute tables
-and HTML frames. In this toolbar you also find buttons to navigate,
-zoom in on an area and pan the view on the layout a well as buttons to
-select any layout item and to move the contents of the map item.
+Opening the print layout provides you with a blank canvas
+that represents the paper surface when using the print option.
+Initially you find buttons on the left beside the canvas to add print layout items:
+2D or 3D map canvases, text labels, images, legends, scale bars, basic shapes,
+arrows, attribute or simple tables, HTML frames, elevation profiles,...
+In this toolbar you also find buttons to navigate,
+zoom in on an area and pan the view on the layout
+as well as buttons to select any layout item and to move the extents of the map items.
 
 
 :numref:`figure_layout_overview` shows the initial view of the print layout
@@ -728,8 +728,10 @@ are shown in a list and selecting an item makes the corresponding row selected i
 as well as selecting a row does select the corresponding item in the print layout canvas.
 This is thus a handy way to select an item placed behind another one.
 Note that a selected row is shown as bold.
+Multiple items selection is also possible holding :kbd:`Shift` for contiguous items,
+and :kbd:`Ctrl` key for non-contiguous ones.
 
-For any selected item, you can :
+For any available item, you can:
 
 * |showAllLayers| set it visible or not;
 * |locked| lock or unlock its position;
