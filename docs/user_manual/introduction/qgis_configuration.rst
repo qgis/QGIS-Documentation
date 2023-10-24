@@ -847,7 +847,7 @@ This tab helps you configure general settings when :ref:`editing vector layer
 * |checkbox| :guilabel:`Enable snapping by default` activates snapping when
   a project is opened
 * Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Segment', 'Centroid',
-  'Middle of segments', Line endpoints', 'Area')
+  'Middle of segments', 'Line endpoints', 'Area')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
 * Define the :guilabel:`Search radius for vertex edits` in map units or pixels
 * :guilabel:`Display main dialog as (restart required)`: set whether the
@@ -1785,7 +1785,7 @@ Data Sources Properties
 
 In the |openTable| :guilabel:`Data Sources` tab, you can:
 
-* :guilabel:`Transaction mode`: define how edits are sent to the data provider```
+* :guilabel:`Transaction mode`, defines how edits are sent to the data provider:
 
   * :guilabel:`Local Edit Buffer`: edits are buffered locally and sent to the provider 
     when toggling layer editing mode or clicking :guilabel:`Save edits`.
