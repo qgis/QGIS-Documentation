@@ -821,35 +821,48 @@ The magnitude of field can be scaled up or down to an appropriate size for
 viewing the field.
 
 
+.. index:: Animation
 .. _animated_marker:
 
 Animated marker
 ...............
 
-Animated marker symbol type allows you to use animated markers, which can be
-GIFs, WebP, or MNG animations, to represent points on your map. You 
-can specify marker ``file``, ``size``, ``angle``, and ``frame rate``.
+Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,
+:file:`.MNG`, etc. animation file to represent points on your map. 
+You can specify:
 
-There are two ways in which animated symbols are handled:
+* :guilabel:`File` path,
+* :guilabel:`Frame rate`: number of steps that are shown per second,
+  indicating how fast the animation is played,
+* :guilabel:`Size` in any :ref:`supported unit <supported_units>`,
+* :guilabel:`Opacity`,
+* :guilabel:`Rotation`,
+* :guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions 
+  from the marker position,
+* :guilabel:`Anchor point`   
 
-* **Animated marker in a standard map** 
-
-When your map is not configured as an animation (i.e. it's a standard QGIS 
+**When your map is not configured as an animation** (i.e. it's a standard QGIS 
 project without animations), the frame for the animated markers will be 
-determined solely by the current timestamp. Animated markers will activate
-when the corresponding layer is in temporal mode and a temporal animation is 
-running. 
+determined solely by the current timestamp. 
 
-* **Animated marker when used with temporal controller in animation mode**
+.. figure:: /docs/user_manual/style_library/img/animated_marker_map.*
+   :align: center
+   :width: 100%
 
-When your map is configured as an animation (usually when using the temporal
-controller), the animated markers will sync with the animation's timeline.
+   Animated marker when map is not configured as animation
+
+**When your map is** :ref:`configured as an animation <maptimecontrol>`, 
+the animated markers will sync with the animation's timeline.
 This means that animated markers will pause when the animation is paused,
 progress with the animation, and so forth. The map will also be redrawn 
 according to the frame rate established for temporal animation. This mode 
 is also applied when exporting an animation using the temporal controller.
-It's also the mode used when a plugin (e.g. QGIS Animation Workbench) 
-specifically sets the frame rate and current frame for the marker animation. 
+
+.. figure:: /docs/user_manual/style_library/img/animated_marker_animation.*
+   :align: center
+   :width: 100%
+
+   Animated marker when map is configured as animation
 
 
 
