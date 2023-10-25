@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,6 +113,20 @@ msgid ""
 "radius`"
 msgstr ":guilabel:`トーラス` ： :guilabel:`半径` と :guilabel:`短半径` によって定義"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:46
+msgid ""
+":guilabel:`3D Model`, using a 3D model file: supported formats include "
+"wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`. Models can be a file"
+" on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. Community-created models are shared on the QGIS "
+"Hub at https://plugins.qgis.org/wavefronts."
+msgstr ""
+":guilabel:`3Dモデル`、使用する3Dモデルファイル: サポートされているフォーマットは、wavefront "
+":file:`.obj`、:file:`.glTF`、:file:`.fbx` "
+"です。モデルはディスク上のファイル、リモートのURL、:ref:`プロジェクトの埋め込み <embedded_file_selector>` "
+"のいずれでも構いません。コミュニティが作成したモデルはQGIS Hubのhttps://plugins.qgis.org/wavefronts "
+"で共有されています。"
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:51
 msgid ""
 ":guilabel:`Billboard`, defined by the :guilabel:`Billboard height` and the "
@@ -135,6 +150,12 @@ msgstr ""
 ":guilabel:`地表標高との相対値（Relative）` または :guilabel:`地表標高（Terrain）` を設定できます。 "
 ":guilabel:`絶対値` 設定は、3次元ベクタレイヤの標高値が高さ0 から測った絶対値で与えられている場合に使用します。 "
 ":guilabel:`相対値` や :guilabel:`地表標高` は、与えられた高さの値を地形の標高値に加えます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:60
+#: ../../docs/user_manual/style_library/3d_symbols.rst:91
+#: ../../docs/user_manual/style_library/3d_symbols.rst:136
+msgid "The :ref:`shading <shading_texture>` properties can be defined."
+msgstr ":ref:`シェーディング <shading_texture>` プロパティを定義することができます。"
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:61
 msgid ""
@@ -330,6 +351,38 @@ msgid ""
 "depends on the geometry type of the symbol:"
 msgstr "QGISではさまざまなシェーディング手法を使用できますが、手法が利用できるかどうかはシンボルのジオメトリタイプに依存します："
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:163
+msgid ""
+":guilabel:`Realistic (Phong)`: describes the way a surface reflects light as"
+" a combination of the :guilabel:`Diffuse` reflection of rough surfaces with "
+"the :guilabel:`Specular` reflection of shiny surfaces "
+"(:guilabel:`Shininess`). It also includes an :guilabel:`Ambient` option to "
+"account for the small amount of light that is scattered about the entire "
+"scene. Use the :guilabel:`Opacity` slider to render semi-transparent objects"
+" in 3D. Read more at "
+"https://en.wikipedia.org/wiki/Phong_reflection_model#Description"
+msgstr ""
+":guilabel:`Phongシェーダ` ：これは、表面が光を反射する方法を、粗い表面の :guilabel:`拡散光` の反射と、光沢のある表面の "
+":guilabel:`鏡面光` の反射（ :guilabel:`シャイネス（輝き）` "
+"）の組み合わせとして記述します。また、シーン全体に散乱する弱い光を考慮するための :guilabel:`環境光` "
+"のオプションもあります。:guilabel:`不透明度` スライダーを使って、半透明のオブジェクトを3Dでレンダリングします。詳細は "
+"https://en.wikipedia.org/wiki/Phong_reflection_model#Description を参照してください。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:170
+msgid ""
+":guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic "
+"(Phong)` except that an image is used as :guilabel:`Diffuse Texture`. The "
+"image can be a file on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. The :guilabel:`Texture scale` and "
+":guilabel:`Texture rotation` are required. Use the :guilabel:`Opacity` "
+"slider to render semi-transparent objects in 3D."
+msgstr ""
+":guilabel:`Phongシェーダ（テキスチャ）`: :guilabel:`Diffuseテキスチャ` として画像が使用される以外は "
+":guilabel:`Phongシェーダ` と同じです。画像はディスク上のファイル、リモートのURL、または :ref:`埋め込みファイルを抽出 "
+"<embedded_file_selector>` を使用できます。:guilabel:`テキスチャのスケール` と "
+":guilabel:`テキスチャの回転` が必要です。3Dで半透明のオブジェクトをレンダリングするには :guilabel:`不透明度` "
+"スライダーを使用します。"
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:176
 msgid ""
 ":guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-"
@@ -355,3 +408,11 @@ msgstr ":guilabel:`埋め込みテキスチャ` ：3Dモデルの場合に利用
 #: ../../docs/user_manual/style_library/3d_symbols.rst:188
 msgid "Application example"
 msgstr "適用例"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:190
+msgid ""
+"To go through the settings explained above you can have a look at "
+"https://app.merginmaps.com/projects/saber/luxembourg/tree."
+msgstr ""
+"上記で説明した設定を確認するには、https://app.merginmaps.com/projects/saber/luxembourg/tree "
+"を見てみましょう。"
