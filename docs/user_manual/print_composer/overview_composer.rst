@@ -650,6 +650,8 @@ To access a page's properties, left-click on an empty section of the page
 or right-click on a page and select :guilabel:`Page Properties...`.
 The :guilabel:`Item Properties` panel opens with settings such as:
 
+* for layouts with several pages, it displays the active page number
+  and the count of available pages
 * the :guilabel:`Page size` frame described above.
   You can modify each property using the data defined override options
   (see :ref:`atlas_data_defined_override` for a use case); 
