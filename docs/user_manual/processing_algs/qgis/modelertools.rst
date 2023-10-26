@@ -792,4 +792,3 @@ Python code
    source folder.
 
 .. |334| replace:: ``NEW in 3.34``
-  

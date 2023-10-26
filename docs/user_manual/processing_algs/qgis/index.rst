@@ -14,6 +14,7 @@ algorithms.
 .. toctree::
      :maxdepth: 2
 
+     3dtiles
      cartography
      database
      filetools
