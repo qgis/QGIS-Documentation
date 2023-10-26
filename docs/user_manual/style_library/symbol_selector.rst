@@ -834,16 +834,20 @@ You can specify:
 * :guilabel:`File` path,
 * :guilabel:`Frame rate`: number of steps that are shown per second,
   indicating how fast the animation is played,
-* :guilabel:`Size` in any :ref:`supported unit <supported_units>`,
+* :guilabel:`Size` in any :ref:`supported unit <unit_selector>`,
 * :guilabel:`Opacity`,
 * :guilabel:`Rotation`,
 * :guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions 
   from the marker position,
 * :guilabel:`Anchor point`   
 
+There are two ways to handle animated symbols:
+
 **When your map is not configured as an animation** (i.e. it's a standard QGIS 
 project without animations), the frame for the animated markers will be 
 determined solely by the current timestamp. 
+
+.. only:: html
 
 .. figure:: /docs/user_manual/style_library/img/animated_marker_map.*
    :align: center
@@ -857,6 +861,8 @@ This means that animated markers will pause when the animation is paused,
 progress with the animation, and so forth. The map will also be redrawn 
 according to the frame rate established for temporal animation. This mode 
 is also applied when exporting an animation using the temporal controller.
+
+.. only:: html
 
 .. figure:: /docs/user_manual/style_library/img/animated_marker_animation.*
    :align: center
