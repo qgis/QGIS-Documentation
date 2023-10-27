@@ -849,7 +849,7 @@ determined solely by the current timestamp.
 
 .. only:: html
 
-.. figure:: /docs/user_manual/style_library/img/animated_marker_map.gif
+  .. figure:: img/animated_marker_map.gif
    :align: center
    :width: 100%
 
@@ -864,7 +864,7 @@ is also applied when exporting an animation using the temporal controller.
 
 .. only:: html
 
-.. figure:: /docs/user_manual/style_library/img/animated_marker_animation.gif
+  .. figure:: img/animated_marker_animation.gif
    :align: center
    :width: 100%
 
