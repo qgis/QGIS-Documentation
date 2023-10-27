@@ -843,33 +843,32 @@ You can specify:
 
 There are two ways to handle animated symbols:
 
-**When your map is not configured as an animation** (i.e. it's a standard QGIS 
-project without animations), the frame for the animated markers will be 
-determined solely by the current timestamp. 
+* **When your map is not configured as an animation** (i.e. it's a standard QGIS 
+  project without animations), the frame for the animated markers will be 
+  determined solely by the current timestamp. 
 
-.. only:: html
+  .. only:: html
 
-  .. figure:: img/animated_marker_map.gif
-   :align: center
-   :width: 100%
+    .. figure:: img/animated_marker_map.gif
+       :align: center
+       :width: 100%
 
-   Animated marker when map is not configured as animation
+       Animated marker when map is not configured as animation
 
-**When your map is** :ref:`configured as an animation <maptimecontrol>`, 
-the animated markers will sync with the animation's timeline.
-This means that animated markers will pause when the animation is paused,
-progress with the animation, and so forth. The map will also be redrawn 
-according to the frame rate established for temporal animation. This mode 
-is also applied when exporting an animation using the temporal controller.
+* **When your map is** :ref:`configured as an animation <maptimecontrol>`, 
+  the animated markers will sync with the animation's timeline.
+  This means that animated markers will pause when the animation is paused,
+  progress with the animation, and so forth. The map will also be redrawn 
+  according to the frame rate established for temporal animation. This mode
+  is also applied when exporting an animation using the temporal controller.
 
-.. only:: html
+  .. only:: html
 
-  .. figure:: img/animated_marker_animation.gif
-   :align: center
-   :width: 100%
+    .. figure:: img/animated_marker_animation.gif
+       :align: center
+       :width: 100%
 
-   Animated marker when map is configured as animation
-
+       Animated marker when map is configured as animation
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
