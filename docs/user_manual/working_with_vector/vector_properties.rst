@@ -1093,23 +1093,38 @@ updated as you set the parameters.
   applied to point layer using single, categorized or graduated symbology.
 
 
-.. index:: Animation Settings
+.. index:: Animation
 .. _animation_settings:
 
 Animation settings
 ..................
 
-To allow any symbol to become an animated symbol, you can utilize
-:guilabel:`Animation settings` panel. In this panel, you can enable animation
-for the symbol and set a specific frame rate for the symbol's redrawing.
-Start by going to the :guilabel:`Advanced` menu, within this menu you will
-find the :guilabel:`Animation settings` option. Select 
-|checkbox| :guilabel:`Is Animated` and you will activate animation for 
-the symbol. Once animation is activated you can use expressions to control 
-symbol properties. For example, setting the symbol's rotation to the data 
-defined expression ``@symbol_frame % 369`` will cause the symbol to rotate 
-over time, with rotation speed dictated by the symbol's frame rate. 
+To allow any symbol to become an :ref:`animated symbol <animated_marker>`, 
+you can utilize :guilabel:`Animation settings` panel. In this panel, 
+you can enable animation for the symbol and set a specific frame rate for 
+the symbol's redrawing.
 
+#. Start by going to the top symbol level and select :guilabel:`Advanced`
+   menu in the bottom right of the dialog
+#. Find :guilabel:`Animation settings` option
+#. Check |checkbox| :guilabel:`Is Animated` to enable animation for the symbol
+#. Configure the :guilabel:`Frame rate`, i.e. how fast the animation would
+   be played
+#. You can now use ``@symbol_frame`` variable in any sub-symbol data defined 
+   property in order to animate that property. 
+
+Fow example, setting the symbol's rotation to data 
+defined expression ``@symbol_frame % 360`` 
+will cause the symbol to rotate over time, with rotation speed dictated by
+the symbol's frame rate:
+
+ .. only:: html
+
+   .. figure:: img/animated_symbol.gif
+      :align: center
+      :width: 100%
+
+      Setting the symbol's rotation to data defined expression
 
 
 
