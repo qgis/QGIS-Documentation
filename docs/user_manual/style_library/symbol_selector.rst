@@ -124,6 +124,7 @@ You can setup some parameters that apply to the global symbol:
     * :ref:`Data-defined Size Legend <data_defined_size_legend>`
     * :guilabel:`Match to Saved Symbols...` and :guilabel:`Match to Symbols from File...`
       to automatically :ref:`assign symbols to classes <categorized_advanced_menu>`
+    * :ref:`Animation settings <animation_settings>` 
 
 .. _symbol_layer:
 
