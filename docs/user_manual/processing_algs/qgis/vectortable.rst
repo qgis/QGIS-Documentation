@@ -190,15 +190,11 @@ Parameters
      - Precision of the field. Useful with Float field type.
    * - **Field alias**
 
-       |332|
-
        Optional
      - ``FIELD_ALIAS``
      - [string]
      - Set a name to use as alias for the field. Not supported by all format types.
    * - **Field comment**
-
-       |332|
 
        Optional
      - ``FIELD_COMMENT``
@@ -942,11 +938,11 @@ Parameters
          When using a template layer, indicates whether there are constraints
          applied to the template field. Hover over the cell to display the constraints.
 
-       :guilabel:`Field alias` (``field_alias``) [string] |332|
+       :guilabel:`Field alias` (``field_alias``) [string]
          Set a name to use as alias for the field. Not supported by all format types.
          Existing aliases are displayed and will be copied to the destination layer if supported.
 
-       :guilabel:`Field comment` (``field_comment``) [string] |332|
+       :guilabel:`Field comment` (``field_comment``) [string]
          Store a comment describing the field. Not supported by all format types.
          Existing comments are displayed and will be copied to the destination layer if supported.
 
@@ -1212,7 +1208,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |332| replace:: ``NEW in 3.32``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png

@@ -2241,8 +2241,6 @@ Basic parameters
      - Destination coordinate reference system
    * - **Convert curved geometries to straight segments**
 
-       |332|
-
        Optional
      - ``CONVERT_CURVED_GEOMETRIES``
      - [boolean]
@@ -2721,6 +2719,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |332| replace:: ``NEW in 3.32``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

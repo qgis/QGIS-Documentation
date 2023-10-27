@@ -68,5 +68,5 @@ https://qgis.org/en/site/forusers/visualchangelogs.html.
 
   We recommend that you use this version over previous releases.
 
-.. |QGIS_CURRENT| replace:: QGIS 3.28
-.. _QGIS_CURRENT: https://docs.qgis.org/3.28/en/docs/
+.. |QGIS_CURRENT| replace:: QGIS 3.34
+.. _QGIS_CURRENT: https://docs.qgis.org/3.34/en/docs/
