@@ -200,6 +200,7 @@ Appropriate for point geometry features, marker symbols have several
   * :guilabel:`Anchor point`: defining the quadrant point on the symbol to settle
     as placement origin. This is the point the :guilabel:`Offset` is applied on.
 
+* **Animated marker** (see :ref:`animated_marker`)
 * **Ellipse marker**: a simple marker symbol layer, with customizable width and
   height
 * **Filled marker**: similar to the simple marker symbol layer, except that it
@@ -818,6 +819,56 @@ field either by:
 
 The magnitude of field can be scaled up or down to an appropriate size for
 viewing the field.
+
+
+.. index:: Animation
+.. _animated_marker:
+
+Animated marker
+...............
+
+Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,
+:file:`.MNG`, etc. animation file to represent points on your map. 
+You can specify:
+
+* :guilabel:`File` path,
+* :guilabel:`Frame rate`: number of steps that are shown per second,
+  indicating how fast the animation is played,
+* :guilabel:`Size` in any :ref:`supported unit <unit_selector>`,
+* :guilabel:`Opacity`,
+* :guilabel:`Rotation`,
+* :guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions 
+  from the marker position,
+* :guilabel:`Anchor point`   
+
+There are two ways to handle animated symbols:
+
+* **When your map is not configured as an animation** (i.e. it's a standard QGIS 
+  project without animations), the frame for the animated markers will be 
+  determined solely by the current timestamp. 
+
+  .. only:: html
+
+    .. figure:: img/animated_marker_map.gif
+       :align: center
+       :width: 100%
+
+       Animated marker when map is not configured as animation
+
+* **When your map is** :ref:`configured as an animation <maptimecontrol>`, 
+  the animated markers will sync with the animation's timeline.
+  This means that animated markers will pause when the animation is paused,
+  progress with the animation, and so forth. The map will also be redrawn 
+  according to the frame rate established for temporal animation. This mode
+  is also applied when exporting an animation using the temporal controller.
+
+  .. only:: html
+
+    .. figure:: img/animated_marker_animation.gif
+       :align: center
+       :width: 100%
+
+       Animated marker when map is configured as animation
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
