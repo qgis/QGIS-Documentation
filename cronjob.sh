@@ -23,9 +23,9 @@ git pull
 
 # NOTE: docker builds and rsync's the build/zip/pdf to the local mounted /site dir
 # AFTER the build, we are going to rsync everything to www2.qgis.org
-docker run -v $PWD:/build -v /var/www/qgisdata/QGIS-Documentation/live/html:/site -w="/build" --rm=true --name="qgis_docs_master_build" qgis/sphinx_pdf_3 make all
+docker run -v $PWD:/build -v /var/www/qgisdata/QGIS-Documentation-3.34/live/html:/site -w="/build" --rm=true --name="qgis_docs_3.34_build" qgis/sphinx_pdf_3 make all
 # in one go: ALL languages, the zip's AND the pdf's:
-rsync -hrzc --delete --progress  /var/www/qgisdata/QGIS-Documentation/live/html www2.qgis.org:/var/www/qgisdata/QGIS-Documentation/live/;
+rsync -hrzc --delete --progress  /var/www/qgisdata/QGIS-Documentation-3.34/live/html www2.qgis.org:/var/www/qgisdata/QGIS-Documentation-3.34/live/;
 
 now=`date`
 echo "Finished: $now"

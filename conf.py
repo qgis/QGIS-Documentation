@@ -48,7 +48,7 @@ html_last_updated_fmt = '%Y %b %d, %H:%M %z'
 # built documents.
 #
 # The short X.Y version.
-version = 'testing'
+version = '3.34'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -150,7 +150,7 @@ html_context = {
     'outdated': False,
     # When a new QGIS version is released, set this to False to remove the disclaimer
     # information message on the top of the page.
-    'isTesting': True
+    'isTesting': False
 }
 
 # Add custom CSS when a top bar is needed to be shown (for testing or outdated versions)

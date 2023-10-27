@@ -1,8 +1,8 @@
 <img src="https://github.com/qgis/QGIS/blob/master/images/README-md/main_logo.png" width="300" alt="Our full logo">
 
-[![Docs Builds](https://github.com/qgis/QGIS-Documentation/workflows/Docs%20builds/badge.svg?branch=master)](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml?query=branch%3Amaster+event%3Apush)
-[![Doctest Build](https://github.com/qgis/QGIS-Documentation/workflows/Doctest%20build/badge.svg?branch=master)](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml?query=branch%3Amaster+event%3Apush)
-[![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/testing/)
+[![Docs Builds](https://github.com/qgis/QGIS-Documentation/workflows/Docs%20builds/badge.svg?branch=release_3.34)](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml?query=branch%3Arelease_3.34+event%3Apush)
+[![Doctest Build](https://github.com/qgis/QGIS-Documentation/workflows/Doctest%20build/badge.svg?branch=release_3.34)](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml?query=branch%3Arelease_3.34+event%3Apush)
+[![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/3.34/)
 
 
 This repository is meant to write and manage the Official Documentation of [QGIS](https://qgis.org),

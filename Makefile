@@ -16,7 +16,7 @@ BUILDDIR        = build
 #SITEDIR         = /var/www/qgisdata/QGIS-Documentation/live/html
 # to be able to run the Makefile in a docker you have to mount (with -v) your site dir on /site
 SITEDIR         = /site
-VERSION         = testing
+VERSION         = 3.34
 
 
 # Put it first so that "make" without argument is like "make help".

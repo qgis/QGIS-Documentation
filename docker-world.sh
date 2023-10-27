@@ -42,9 +42,9 @@ for l in $langs
       #time rsync -hvrzc --delete --progress build/pdf /var/www/qgisdata/QGIS-Documentation/live/html
       #time rsync -hvrzc --delete --progress build/zip /var/www/qgisdata/QGIS-Documentation/live/html
       # 20220317: local sync to new www2
-      time rsync -hvrzc --delete --progress build/html/$l root@195.201.96.242:/var/www/qgisdata/QGIS-Documentation/live/html
-      time rsync -hvrzc --delete --progress build/pdf root@195.201.96.242:/var/www/qgisdata/QGIS-Documentation/live/html
-      time rsync -hvrzc --delete --progress build/zip root@195.201.96.242:/var/www/qgisdata/QGIS-Documentation/live/html
+      time rsync -hvrzc --delete --progress build/html/$l root@195.201.96.242:/var/www/qgisdata/QGIS-Documentation-3.34/live/html
+      time rsync -hvrzc --delete --progress build/pdf root@195.201.96.242:/var/www/qgisdata/QGIS-Documentation-3.34/live/html
+      time rsync -hvrzc --delete --progress build/zip root@195.201.96.242:/var/www/qgisdata/QGIS-Documentation-3.34/live/html
     else
       echo "Build FAILED: not syncing to web";
     fi
