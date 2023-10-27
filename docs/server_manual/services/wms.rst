@@ -88,7 +88,8 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`VERSION <wms_version>`", "Yes", "Version of the service"
-   ":ref:`LAYERS <wms_layers>` ", "No", "Layers to display"
+   ":ref:`LAYER <wms_layers>`", "No", "A single layer to display"
+   ":ref:`LAYERS <wms_layers>`", "No", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
    ":ref:`BBOX <wms_bbox>`", "Yes", "Map extent"
@@ -165,21 +166,20 @@ as explained later for the next parameters:
 
 .. _wms_layers:
 
-LAYERS
-^^^^^^
+LAYER / LAYERS
+^^^^^^^^^^^^^^
 
-This parameter allows to specify the layers to display on the map.
+The ``LAYER`` parameter allows to specify a single layer to display on the map.
+
+The ``LAYERS`` parameter allows to specify the layers to display on the map.
 Names have to be separated by a comma.
 
 In addition, QGIS Server introduced some options to select layers by:
 
+* the layer id: the project option allowing to select layers by their id
+  is in :menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project --> Properties...` dialog.
+  Check the :guilabel:`Use layer ids as names` checkbox to activate this option.
 * a :ref:`short name <services_basics_short_name>`
-* the layer id
-
-The project option allowing to select layers by their
-id is in :menuselection:`QGIS Server --> WMS` tab of the
-:menuselection:`Project --> Properties...` dialog.
-Check the :guilabel:`Use layer ids as names` checkbox to activate this option.
 
 .. code-block:: bash
 
@@ -602,6 +602,7 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
    ":ref:`QUERY_LAYERS <wms_querylayers>`", "Yes", "Layers to query"
+   ":ref:`LAYER <wms_layers>`", "Yes", "A single layer to display"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to display (identical to `QUERY_LAYERS`)"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -818,7 +819,8 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetLegendGraphic**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`LAYER / LAYERS <wms_layers>` ", "Yes", "Layer(s) to display"
+   ":ref:`LAYER <wms_layers>`", "Yes", "A single layer to display"
+   ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "No", "Coordinate reference system"
    ":ref:`BBOX <wms_getlegendgraphic_bbox>`", "No", "Map extent"
@@ -1539,6 +1541,7 @@ to the OGC WMS 1.1.1 specifications:
 
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
+   ":ref:`LAYER <wms_layers>`", "Yes", "A single layer to query"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to query"
 
 The **GetStyle** request supports as well the following vendor parameters:
