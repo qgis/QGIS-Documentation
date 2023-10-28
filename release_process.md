@@ -46,7 +46,6 @@ Otherwise, you will have to do the changes twice: in master and in the new branc
   - [ ] Add substitutions for the versions of the next LTR cycle that starts
         (e.g. if you just create the release_3.22 branch, you should add
         to the master branch substitutions for 3.24, 3.26 and 3.28)
-- [ ] In [auto-label.yml](.github/workflows/auto-label.yml) file: update list of versions labels to listen to
 </details>
 
 ### Current LTR branch
@@ -73,17 +72,22 @@ New releases are branched off the `master` branch and thus require a set of chan
 - [ ] In main [index.rst](docs/index.rst) file: replace `testing` with `x.y` in the Table Of Contents
 </details>
 
-### Repository and project configuration
-- [ ] ⚠️ Make sure that the [C++ API documentation](https://api.qgis.org/api) of the new version is available,
-  or at least add it to the [index](https://github.com/qgis/QGIS/blob/master/doc/index.dox) page.
+### Repositories and project configuration
+- [ ] ⚠️ Make sure that the [C++ API documentation](https://api.qgis.org/api) of the new version is available
+  (normally done automatically during release steps)
 - [ ] ⚠️ Make sure that the [PyQGIS documentation](https://qgis.org/pyqgis) of the new version is available.
   - [ ] Update [build-docker.yml](https://github.com/qgis/QGIS/blob/master/.github/workflows/build-docker.yml)
     with the latest release
   - [ ] Update [pyqgis_conf.yml](https://github.com/qgis/pyqgis/blob/master/pyqgis_conf.yml)
     with the latest version
-  - [ ] Add the new docs to the [index](https://github.com/qgis/pyqgis/blob/gh-pages/index.html) page
 - [ ] Add new labels to triage issues and pull requests: `backport <new_branch>`, new target versions
 - [ ] Create a new milestone for the new cycle of LTR that starts
+- [ ] Reference the new version in the [docs index page](https:// docs.qgis.org) of QGIS main website
+  source file is available at [docs_index.html](https://github.com/qgis/QGIS-Website/blob/master/themes/qgis-theme/docs_index.html)
+  - [ ] Replace references of the 2 years old LTR with the new release (e.g. 3.22 --> 3.34)
+  - [ ] Mention the 2 years old lTR in the old versions list at the bottom of the page 
+  - [ ] Create appropriate version image using [doc.xcf](https://github.com/qgis/QGIS-Website/blob/master/themes/qgis-theme/static/images/doc.xcf) file.
+  You can find a how-to at [qgis/QGIS-Website#948 (comment)](https://github.com/qgis/QGIS-Website/issues/948#issuecomment-968113301)
 
 ### Server
 - [ ] Update commands to publish the new version (in English, as html, zip and pdf)
@@ -143,6 +147,15 @@ is being translated. So when a new LTR is published, we disconnect the old one a
   to the new LTR branch in which to pull translations from Transifex
 - [ ] In [translation_statistics.yml](.github/workflows/translation_statistics.yml): update target_branch
   to the branch(es) in which to generate translation statistics
+</details>
+
+### Repository and project configuration
+<details>
+  
+- [ ] Make the new LTR the topmost version in the [docs page index](https:// docs.qgis.org) of QGIS main website
+  source file is available at [docs_index.html](https://github.com/qgis/QGIS-Website/blob/master/themes/qgis-theme/docs_index.html)
+  - [ ] You might want to switch versions references between the 2 latest LTR (e.g. 3.28 <--> 3.34)
+
 </details>
 
 ### Server
