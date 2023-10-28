@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-11 09:28+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -263,6 +264,23 @@ msgstr ":guilabel:`色`"
 msgid "the :guilabel:`Opacity`"
 msgstr ":guilabel:`不透明度`"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:133
+msgid ""
+"and :guilabel:`Allow HTML Formatting`: The HTML formatting option enables "
+"the proper rendering of some HTML tags to customize the label. The supported"
+" HTML tags are:"
+msgstr ""
+"そして :guilabel:`HTMLフォーマットを使う` ： HTML フォーマットオプションはラベルをカスタマイズするためにいくつかの HTML "
+"タグを適切にレンダリングすることを可能にします。サポートされているHTMLタグは以下の通りです："
+
+#: ../../docs/user_manual/style_library/label_settings.rst:137
+msgid "Color, applicable to text, underline, strikethrough, and overline"
+msgstr "テキスト、下線、取り消し線、上線に適用される色"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:138
+msgid "Font properties (font family, font size, bold and italic)"
+msgstr "フォントのプロパティ（フォントファミリ、フォントサイズ、太字、斜体）"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:140
 msgid ""
 "In order to use the HTML formatting, you need to provide the HTML code in "
@@ -364,6 +382,15 @@ msgid ""
 "individual letters."
 msgstr ":guilabel:`間隔` は、単語間および個々の文字間のスペースを変更します。"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:204
+msgid ""
+":guilabel:`Stretch` ratio: allows text to be horizontally stretched or "
+"condensed by a factor. Handy for tweaking the widths of fonts to fit a bit "
+"of extra text into labels."
+msgstr ""
+":guilabel:`Stretch` 率: "
+"テキストの水平方向の伸縮率を指定します。ラベルに余分なテキストを入れるためにフォントの幅を調整するのに便利です。"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:207
 msgid "|checkbox| :guilabel:`Enable kerning` of the text font"
 msgstr "テキストフォントの |checkbox| :guilabel:`カーニングを有効にする`"
@@ -420,6 +447,18 @@ msgid ""
 msgstr ""
 ":guilabel:`ラップ処理基準` オプションを使用して、理想的な自動改行サイズを指定します。このサイズは :guilabel:`最長行に合わせる`"
 " または :guilabel:`最短行に合わせる` とすることができます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:226
+msgid ""
+"Decide the :guilabel:`Line Height`: values can be set to be in "
+":guilabel:`Millimeters`, :guilabel:`Points`, :guilabel:`Pixels`, "
+":guilabel:`Percentage`, or :guilabel:`Inches`. When line height is set to "
+"percentage it is the percentage of the default text line spacing of that "
+"font family. Typically 1.2 to 1.5 times the text size."
+msgstr ""
+":guilabel:`行の高さ`: :guilabel:`ミリメートル`、 :guilabel:`ポイント`、 :guilabel:`ピクセル`、 "
+":guilabel:`パーセント`、 :guilabel:`インチ` "
+"の値を設定することができます。行の高さがパーセントに設定されている場合、そのフォントファミリのデフォルトのテキスト行間隔のパーセントになります。通常、テキストサイズの1.2倍から1.5倍です。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:231
 msgid ""
@@ -789,6 +828,12 @@ msgstr ""
 #: ../../docs/user_manual/style_library/label_settings.rst:954
 msgid "labelmask"
 msgstr ""
+
+#: ../../docs/user_manual/style_library/label_settings.rst:420
+msgid ""
+"Labels settings - Mask tab (with the text sample showing a green background "
+"representing another layer being excluded)"
+msgstr "ラベルの設定 - マスクグリッドタブ (テキストサンプルでは、別のレイヤが除外されていることを表す緑色の背景が表示されています) "
 
 #: ../../docs/user_manual/style_library/label_settings.rst:423
 msgid "To create masking effects on labels:"
@@ -1249,14 +1294,14 @@ msgid ""
 ":guilabel:`Label Anchoring`: controls the placement of the labels along the "
 "line feature they refer to. Click on :guilabel:`Settings ...` to choose:"
 msgstr ""
-":guilabel:`アンカー` ：ラベルが参照するライン地物に沿ったラベルの配置を制御します。 :guilabel:`設定...` "
+":guilabel:`ラベルのアンカー` ：ラベルが参照するライン地物に沿ったラベルの配置を制御します。 :guilabel:`設定...` "
 "をクリックして、以下を選択します："
 
 #: ../../docs/user_manual/style_library/label_settings.rst:631
 msgid ""
 "the position along the line (as a ratio) which labels will be placed close "
 "to. It can be data-defined and possible values are:"
-msgstr "ラベルを近くに配置する線分のラインに沿った位置（の比率）。データで定義することもでき、可能な値は以下のとおりです。"
+msgstr "ラベルを近くに配置する、ラインに沿った位置（の比率）。データで定義することもでき、可能な値は以下のとおりです："
 
 #: ../../docs/user_manual/style_library/label_settings.rst:634
 msgid "|labelAnchorCenter| :guilabel:`Center of Line`"
@@ -1297,7 +1342,35 @@ msgid ""
 "whole extent can be used to have more consistent results."
 msgstr ""
 ":guilabel:`切り抜き（Clipping）` "
-"：ラインへのラベルの配置をどのように計算するかを決定します。デフォルトではラインの可視範囲のみを使用しますが、可視範囲が変わってもより一貫した配置を得るために、ライン全体を使用することもできます。"
+"：ラインへのラベルの配置をどのように計算するかを決定します。デフォルトではラインの可視範囲のみを使用しますが、より一貫した結果を得るために、ライン全体を使用することもできます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:642
+msgid ""
+":guilabel:`Anchor text`: controls which part of the text (start, center or "
+"end) will line up with the anchor point. Using :guilabel:`Automatic` "
+"anchoring means that:"
+msgstr ""
+":guilabel:`アンカーポイント`: "
+"テキストのどの部分(開始、中央、終了)をアンカーポイントに合わせるかを制御します。:guilabel:`自動` "
+"アンカーを使用すると、以下のようになります："
+
+#: ../../docs/user_manual/style_library/label_settings.rst:646
+msgid ""
+"For labels anchored near the start of the line (0-25%), the anchor placement"
+" will be the **start** of the label text"
+msgstr "ラインの始点付近（0-25%）にアンカーしたラベルの場合、アンカー位置はラベルテキストの **冒頭** となります"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:648
+msgid ""
+"For labels anchored near the end of the line (75-100%), the anchor placement"
+" will be the **end** of the label text"
+msgstr "ラインの終点付近 (75-100%) にアンカーしたラベルの場合、アンカー位置はラベルテキストの **末尾** となります"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:650
+msgid ""
+"For labels anchored near the center of the line (25-75%), the anchor "
+"placement will be the **center** of the label text"
+msgstr "ラインの中央付近 (25-75%) にアンカーしたラベルの場合、アンカー位置はラベルテキストの **中央** になります"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:652
 msgid ""
@@ -1355,7 +1428,7 @@ msgid ""
 "makes possible to either allow outside labels, prevent outside labels, or "
 "force outside labels on a feature-by-feature basis."
 msgstr ""
-":guilabel:`ポリゴンの外側にラベルを配置してもよい` "
+":guilabel:`ポリゴンの外側にラベルを配置することを許可` "
 "にチェックを入れると、ラベルをポリゴン内部に配置できない場合には外側に配置します。データ定義のプロパティを使用すると、ラベルの外側配置の許可、不許可、強制を地物ごとに設定することが可能になります。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:686
@@ -1379,7 +1452,7 @@ msgid ""
 "polygons`."
 msgstr ""
 ":guilabel:`水平` ：ポリゴン内部の最適な場所に水平なラベルを配置します。ポリゴンの端からより遠い場所が優先されます。 "
-":guilabel:`ポリゴンの外側にラベルを配置してもよい` とすることもできます。"
+":guilabel:`ポリゴンの外側にラベルを配置することを許可` することもできます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:696
 msgid ""
@@ -1390,7 +1463,7 @@ msgid ""
 msgstr ""
 ":guilabel:`自由（回転）` "
 "：ポリゴン内部の最適な場所に回転させたラベルを配置します。ラベルの回転はポリゴンの向きに応じて決められ、ポリゴンの端からより遠い場所への配置が優先されます。"
-" :guilabel:`ポリゴンの外側にラベルを配置してもよい` とすることもできます。"
+" :guilabel:`ポリゴンの外側にラベルを配置することを許可` することもできます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:701
 msgid ""
@@ -1438,7 +1511,7 @@ msgstr ""
 msgid ""
 ":guilabel:`Outside Polygons`: always places labels outside the polygons, at "
 "a set :guilabel:`Distance`"
-msgstr ":guilabel:`ポリゴンの外側` ：常にポリゴンの外側の :guilabel:`距離` 分離れた位置にラベルを配置します。"
+msgstr ":guilabel:`ポリゴンの外側` ：常にポリゴンの外側の :guilabel:`距離` 分離れた位置にラベルを配置します"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:724
 msgid "Common placement settings"
@@ -1447,7 +1520,7 @@ msgstr "共通の配置設定"
 #: ../../docs/user_manual/style_library/label_settings.rst:726
 msgid ""
 "Some label placement settings are available for all layer geometry types:"
-msgstr "ラベル配置の設定の一部は、すべてのレイヤジオメトリタイプで利用可能です。"
+msgstr "ラベル配置の設定の一部は、すべてのレイヤジオメトリタイプで利用できます:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:729
 msgid "Geometry Generator"
@@ -1475,7 +1548,7 @@ msgstr "|checkbox| :guilabel:`ジオメトリジェネレータ` のオプショ
 
 #: ../../docs/user_manual/style_library/label_settings.rst:739
 msgid "Enter the expression generating the geometry to rely on"
-msgstr "依存するためのジオメトリを生成する式を入力します"
+msgstr "依拠するジオメトリを生成する式を入力します"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:740
 msgid ""
@@ -1764,6 +1837,18 @@ msgid ""
 "the layers' features."
 msgstr "この設定は、ラベルを他のレイヤの地物の下に描画するのではありません。すべてのレイヤの地物の上にラベルを描画する順序を制御するだけです。"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:878
+msgid ""
+":guilabel:`Allow inferior fallback placements`: By default QGIS tries to "
+"render labels at their best placement, following your settings. Check this "
+"mode to allow features to fallback to worse placement options when there's "
+"no other choice, e.g. when a line is too short to fit a curved label text "
+"then the label may be placed horizontally just over the feature's center "
+"point."
+msgstr ""
+":guilabel:`内部配置を許可`： デフォルトでは、QGISは設定に従って最適な配置でラベルをレンダリングしようとします。 "
+"このモードにチェックを入れると、他に選択肢がない場合に、機能がより悪い配置オプションにフォールバックすることを許します。例えば、線が短すぎてカーブしたラベルテキストが入らない場合、ラベルを地物の中心点のすぐ上に水平に配置することができます。"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:884
 msgid ""
 "With data-defined expressions in :guilabel:`Show label` and "
@@ -1777,6 +1862,52 @@ msgid ""
 "Allow to :guilabel:`Show upside-down labels`: alternatives are **Never**, "
 "**when rotation defined** or **always**."
 msgstr ":guilabel:`逆さま表示` を許可するか：選択肢は **禁止** 、 **回転を定義した場合のみ** 、 **常に** です。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:888
+msgid ""
+"The :guilabel:`Overlapping labels` group allows you to control whether "
+"overlapping labels are permitted for features in the layer and how each of "
+"them should be handled:"
+msgstr ""
+":guilabel:`重なったラベル` "
+"グループでは、レイヤにある地物のラベルに重なりを許すかどうか、またそれぞれのラベルをどのように扱うかを制御できます："
+
+#: ../../docs/user_manual/style_library/label_settings.rst:892
+msgid ""
+":guilabel:`Never overlap`: never ever place overlapping labels for the "
+"layer, even if it means some labels will be missing"
+msgstr ":guilabel:`重なりを禁止する`: いくつかのラベルが無くなっても、決してレイヤに重なったラベルを配置しません"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:894
+msgid ""
+":guilabel:`Allow overlaps if required`: if the label can't otherwise be "
+"placed, draw an overlapping label. This mode will cause the label to be "
+"moved to a less ideal placement if possible, e.g. moving the label further "
+"from the center of a line or polygon, IF doing so will avoid overlapping "
+"labels. But if there's no other positions possible, then draw the label "
+"overlapping."
+msgstr ""
+":guilabel:`必要ならば重なりを許可する`: "
+"ラベルを配置できない場合、重なったラベルを描画します。このモードでは、可能であればラベルをあまり理想的でない配置に移動します。例えば、ラベルをラインやポリゴンの中心から遠くに移動させるなど、そうすることでラベルの重なりを避けることができる場合です。しかし、他に可能な位置がなければ、ラベルは重なって描画されます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:899
+msgid ""
+":guilabel:`Allow overlaps without penalty`: It doesn't matter at all if the "
+"label overlaps other labels or obstacles, that's fine to do and the best "
+"placement (e.g most central placement) should always be used even if an "
+"alternate further placement is possible which avoids overlaps entirely."
+msgstr ""
+":guilabel:`重なりを許容する`: "
+"ラベルが他のラベルや障害物に重なっても全く構わずに行われ、重なりを完全に避ける別の配置が可能であっても、常に最良の配置（例えば最も中央の配置）が使われます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:904
+msgid ""
+"Allowing both overlapping labels and fallback placements options will "
+"guarantee that all features in the layer are labeled... not necessarily at "
+"their best rendering!"
+msgstr ""
+"重なったラベルとフォールバック配置オプションの両方を許可することで、レイヤ内のすべての地物がラベル付けされることが保証されます... "
+"必ずしも最高のレンダリングとは限りませんが！"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:909
 msgid "Feature options"
