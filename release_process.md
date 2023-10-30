@@ -74,7 +74,7 @@ New releases are branched off the `master` branch and thus require a set of chan
 
 ### Repositories and project configuration
 - [ ] ⚠️ Make sure that the [C++ API documentation](https://api.qgis.org/api) of the new version is available
-  (normally done automatically during release steps)
+  (normally done automatically during software release steps)
 - [ ] ⚠️ Make sure that the [PyQGIS documentation](https://qgis.org/pyqgis) of the new version is available.
   - [ ] Update [build-docker.yml](https://github.com/qgis/QGIS/blob/master/.github/workflows/build-docker.yml)
     with the latest release
@@ -82,7 +82,7 @@ New releases are branched off the `master` branch and thus require a set of chan
     with the latest version
 - [ ] Add new labels to triage issues and pull requests: `backport <new_branch>`, new target versions
 - [ ] Create a new milestone for the new cycle of LTR that starts
-- [ ] Reference the new version in the [docs index page](https:// docs.qgis.org) of QGIS main website
+- [ ] Reference the new version in the [docs index page](https://docs.qgis.org) of QGIS main website
   source file is available at [docs_index.html](https://github.com/qgis/QGIS-Website/blob/master/themes/qgis-theme/docs_index.html)
   - [ ] Replace references of the 2 years old LTR with the new release (e.g. 3.22 --> 3.34)
   - [ ] Mention the 2 years old lTR in the old versions list at the bottom of the page 
