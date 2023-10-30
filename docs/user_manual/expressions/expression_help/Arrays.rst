@@ -233,10 +233,11 @@ Returns an array with the given expression evaluated on each item.
      - array_foreach(array, expression)
    * - Arguments
      - * **array** - an array
-       * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
+       * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value and the variable `@counter` by the current index (starting with 0).
    * - Examples
      - * ``array_foreach(array('a','b','c'),upper(@element))`` → [ 'A', 'B', 'C' ]
        * ``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]
+       * ``array_foreach(array(1,2,3),@element + @counter)`` → [ 1, 3, 5 ]
 
 
 .. end_array_foreach_section
