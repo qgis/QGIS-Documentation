@@ -88,7 +88,6 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`VERSION <wms_version>`", "Yes", "Version of the service"
-   ":ref:`LAYER <wms_layers>`", "No", "A single layer to display"
    ":ref:`LAYERS <wms_layers>`", "No", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -114,6 +113,7 @@ as well as the following extra parameters:
    ":ref:`BGCOLOR <wms_bgcolor>`", "No", "Specify the background color"
    ":ref:`DPI <wms_dpi>`", "No", "Specify the output resolution"
    ":ref:`IMAGE_QUALITY <wms_imagequality>`", "No", "JPEG compression"
+   ":ref:`LAYER <wms_layers>`", "No", "A single layer to display"
    ":ref:`OPACITIES <wms_opacities>`", "No", "Opacity for layer or group"
    ":ref:`FILTER <wms_filter>`", "No", "Subset of features"
    ":ref:`SELECTION <wms_selection>`", "No", "Highlight features"
@@ -602,7 +602,6 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
    ":ref:`QUERY_LAYERS <wms_querylayers>`", "Yes", "Layers to query"
-   ":ref:`LAYER <wms_layers>`", "Yes", "A single layer to display"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to display (identical to `QUERY_LAYERS`)"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -635,6 +634,7 @@ extra parameters:
    ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`", "No", "Tolerance in pixels for line layers"
    ":ref:`FI_POLYGON_TOLERANCE <wms_fipolygontolerance>`", "No", "Tolerance in pixels for polygon layers"
    ":ref:`FILTER_GEOM <wms_filtergeom>`", "No", "Geometry filtering"
+   ":ref:`LAYER <wms_layers>`", "Yes", "A single layer to display"
    ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`", "No", "Add the feature display name to the output"
    ":ref:`WITH_MAPTIP <wms_withmaptip>`", "No", "Add map tips to the output"
    ":ref:`WITH_GEOMETRY <wms_withgeometry>`", "No", "Add geometry to the output"
@@ -819,7 +819,6 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetLegendGraphic**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`LAYER <wms_layers>`", "Yes", "A single layer to display"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "No", "Coordinate reference system"
@@ -850,6 +849,7 @@ and item labels:
    ":ref:`ICONLABELSPACE <wms_getlegendgraphic-iconlabelspace>`", "No", "Horizontal space between symbol and label (mm)"
    ":ref:`SYMBOLWIDTH <wms_getlegendgraphic_symbolwidth>`", "No", "Width of the symbol preview (mm)"
    ":ref:`SYMBOLHEIGHT <wms_getlegendgraphic_symbolheight>`", "No", "Height of the symbol preview (mm)"
+   ":ref:`LAYER <wms_layers>`", "No", "A single layer to display"
    ":ref:`LAYERTITLE <wms_getlegendgraphic_layertitle>`", "No", "Layer title rendering"
    ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`", "No", "Layer font family"
    ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`", "No", "Layer title bold rendering"
@@ -1541,7 +1541,6 @@ to the OGC WMS 1.1.1 specifications:
 
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
-   ":ref:`LAYER <wms_layers>`", "Yes", "A single layer to query"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to query"
 
 The **GetStyle** request supports as well the following vendor parameters:
@@ -1551,6 +1550,7 @@ The **GetStyle** request supports as well the following vendor parameters:
    :widths: auto
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`LAYER <wms_layers>`", "Yes", "A single layer to query"
 
 URL example:
 
