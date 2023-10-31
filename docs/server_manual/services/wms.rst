@@ -619,7 +619,6 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
    when returning geometry (see :ref:`how to add geometry to feature response <addGeometryToFeatureResponse>`).
    The default value is ``-1`` meaning that the precision defined in the project is used."
 
-
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
 
@@ -827,6 +826,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`FORMAT <wms_getlegendgraphic_format>`", "No", "Legend format"
    ":ref:`TRANSPARENT <wms_transparent>`", "No", "Transparent background"
 
+
 In addition to the standard ones, QGIS Server supports extra parameters to
 change the size of the legend elements or the font properties for layer titles
 and item labels:
@@ -859,6 +859,7 @@ and item labels:
    ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`", "No", "Item label font size (pt)"
    ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`", "No", "Item label italic rendering"
    ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`", "No", "Item label color"
+   ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`", "No", "Adds the rule text to JSON output"
 
 
 .. _wms_getlegendgraphic_bbox:
@@ -1016,8 +1017,7 @@ RULE
 
 This parameter is available on layers with :guilabel:`Rule-based` rendering and
 allows to build a legend with only the named rule symbol. It cannot be combined
-with ``BBOX`` parameter nor the JSON format. ``HEIGHT`` and ``WIDTH`` must be
-specified.
+with ``BBOX`` parameter. ``HEIGHT`` and ``WIDTH`` must be specified.
 
 URL example:
 
@@ -1526,6 +1526,44 @@ URL example:
    :align: center
 
    Legend with ``ITEMFONTCOLOR=0x5f9930``
+
+
+.. _wms_getlegendgraphic_showruledetails:
+
+SHOWRULEDETAILS
+^^^^^^^^^^^^^^^
+
+This parameter specifies if the JSON output will also
+contain the details about the rule that generated the 
+legend entry. This parameter only has effect when the
+renderer is rule-based or categorized.
+
+URL example with the corresponding JSON output:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS&
+  REQUEST=GetLegendGraphic&
+  LAYERS=airports&
+  FORMAT=application/json&
+  SHOWRULEDETAILS=YES
+
+And the corresponding JSON output:
+
+.. code-block:: json
+
+  {
+    "nodes":[
+      {
+        "icon":"<base64 icon>",
+        "title":"airports",
+        "type":"layer",
+        "rule": "type = 'airport'"
+      }
+    ],
+    "title":""
+  }
 
 
 .. _wms_getstyle:
