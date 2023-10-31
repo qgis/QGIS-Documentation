@@ -8,6 +8,7 @@
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
 # tomoyuki arai <tarai.3367@gmail.com>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -919,6 +920,36 @@ msgstr ":guilabel:`ハッシュ線の回転`"
 msgid "Examples of hashed lines"
 msgstr "ハッシュ線の例"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:436
+msgid ""
+"**Raster line**: renders and repeats a raster image following the length of "
+"a line feature shape. The :guilabel:`Stroke width`, :guilabel:`Offset`, "
+":guilabel:`Join style`, :guilabel:`Cap style` and :guilabel:`Opacity` can be"
+" adjusted."
+msgstr ""
+"**ラスタ線**: ライン地物の形状の長さに従ってラスタ画像をレンダリングし、繰り返します。guilabel:`ストローク幅`, "
+":guilabel:`オフセット`, :guilabel:`継ぎ目スタイル`, :guilabel:`両端スタイル`, :guilabel:`不透明度`"
+" を調整することができます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:447
+msgid "Examples of raster lines"
+msgstr "ラスタ線の例"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:451
+msgid ""
+"**Lineburst**: renders a gradient along the width of a line. You can choose "
+"between :guilabel:`Two color` or :guilabel:`Color ramp` and the "
+":guilabel:`Stroke width`, :guilabel:`Offset`, :guilabel:`Join style`, "
+":guilabel:`Cap style` can be adjusted."
+msgstr ""
+"**線バースト**: 線の幅に沿ってグラデーションを描画します。:guilabel:`2つの色` または :guilabel:`カラーランプ` "
+"を選択することができ、:guilabel:`ストローク幅`, :guilabel:`オフセット`, :guilabel:`継ぎ目スタイル`, "
+":guilabel:`両端スタイル` を調整することができます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:462
+msgid "Examples of lineburst lines"
+msgstr "線バーストの例"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:468
 msgid "Fill Symbols"
 msgstr "塗りつぶしシンボル"
@@ -946,7 +977,7 @@ msgid ""
 "holes. Use the :ref:`geometry generator symbol <geometry_generator_symbol>` "
 "if you want the exact centroid."
 msgstr ""
-"**中心点塗りつぶし** ：表示されている地物の重心位置に :ref:`マーカーシンボル <vector_marker_symbols>` "
+"**重心塗りつぶし** ：表示されている地物の重心位置に :ref:`マーカーシンボル <vector_marker_symbols>` "
 "を配置します。重心位置の計算はマップキャンバスで表示されている領域にクリップされたポリゴンに対して行われ、穴は無視されているため、マーカーの位置は地物の実際の重心位置ではないかもしれません。正確な重心位置が必要な場合には、"
 " :ref:`ジオメトリジェネレータシンボル <geometry_generator_symbol>` を使用してください。"
 
@@ -975,6 +1006,19 @@ msgstr ""
 ":guilabel:`ポリゴンでマーカーを切り抜く` ）か、シンボルが属するジオメトリパートと重複する部分を残す （ "
 ":guilabel:`現在の地物の部分でマーカーを切り抜く` ）かを設定できます。"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:501
+msgid ""
+"**Gradient fill**: uses a radial, linear or conical gradient, based on "
+"either simple two color gradients or a predefined :ref:`gradient color ramp "
+"<color-ramp>` to fill polygons. The gradient can be rotated and applied on a"
+" single feature basis or across the whole map extent. Also start and end "
+"points can be set via coordinates or using the centroid (of feature or map)."
+" A data-defined offset can be defined."
+msgstr ""
+"**グラデーション塗りつぶし**: 単純な 2 色のグラデーション、または事前に定義された :ref:`グラデーションカラーランプ <color-"
+"ramp>` に基づく、放射状、線形、または円錐状のグラデーションを使用してポリゴンを塗りつぶします。グラデーションは回転させることができ、1 "
+"つの地物ごとに適用することも、マップの範囲全体に適用することもできます。また、始点と終点は座標または（地物またはマップの）重心を使用して設定できます。データ定義のオフセットも定義できます。"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:507
 msgid ""
 "**Line pattern fill**: fills the polygon with a hatching pattern of "
@@ -983,17 +1027,67 @@ msgstr ""
 "**ラインパターン塗りつぶし** ：ポリゴンを :ref:`ラインシンボルレイヤ <vector_line_symbols>` "
 "によるハッチングパターンで塗りつぶします。次の設定ができます："
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:510
+#: ../../docs/user_manual/style_library/symbol_selector.rst:536
+msgid ""
+":guilabel:`Alignment`: defines how the pattern is positioned relative to the"
+" feature(s):"
+msgstr ":guilabel:`整列`: パターンと地物の位置関係を定義します："
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:513
+msgid ""
+":guilabel:`Align pattern to feature`: lines are rendered within each feature"
+msgstr ":guilabel:`パターンを地物に揃える`: 各地物内にラインが描画されます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:515
+msgid ""
+":guilabel:`Align pattern to map extent`: a pattern is rendered over the "
+"whole map extent, allowing lines to align nicely across features"
+msgstr ""
+":guilabel:`パターンを地図領域に揃える`: パターンがマップの範囲全体にレンダリングされ、ラインが地物を横切ってきれいに整列します"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:517
 msgid ":guilabel:`Rotation` of the lines, counter-clockwise"
-msgstr "時計回りに測ったラインの :guilabel:`回転`"
+msgstr "ラインを反時計回りに :guilabel:`回転` します"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:518
 msgid ":guilabel:`Spacing`: distance between consecutive lines"
-msgstr "2つの隣り合うラインどうしの :guilabel:`間隔`"
+msgstr ":guilabel:`間隔`: 2つの隣り合うラインの距離"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:519
 msgid ":guilabel:`Offset` distance of the lines from the feature boundary"
 msgstr "地物の境界線からの :guilabel:`オフセット` 距離"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:520
+msgid ""
+":guilabel:`Clipping`: allows to control how lines in the fill should be "
+"clipped to the polygon shape. Options are:"
+msgstr ":guilabel:`切り抜き`: 塗りつぶす線をどのようにポリゴンの形に切り抜くかを制御できます。オプションは以下の通りです："
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:523
+msgid ""
+":guilabel:`Clip During Render Only`: lines are created covering the whole "
+"bounding box of the feature and then clipped while drawing. Line extremities"
+" (beginning and end) will not be visible."
+msgstr ""
+":guilabel:`レンダリング中のみクリッピング`: "
+"地物のバウンディングボックス全体を覆うラインが生成され、描画中にクリップされます。線の両端（始点と終点）は表示されません。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:526
+msgid ""
+":guilabel:`Clip Lines Before Render`: lines are clipped to the exact shape "
+"of the polygon prior to rendering. Line extremities (including cap styles, "
+"start/end marker line objects, ...) will be visible, and may sometimes "
+"extend outside of the polygon (depending on the line symbol settings)."
+msgstr ""
+":guilabel:`レンダリング前に線をクリッピング`: "
+"線はレンダリング前にポリゴンの正確な形に切り抜かれます。線の両端（両端スタイル、始点/終点マーカーラインオブジェクトなどを含む）は表示され、（ラインシンボルの設定によっては）ポリゴンの外にはみ出ることもあります。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:530
+msgid ""
+":guilabel:`No Clipping`: no clipping at all is done - lines will cover the "
+"whole bounding box of the feature"
+msgstr ":guilabel:`クリッピングしない`: クリッピングは全く行われません。ラインは地物のバウンディングボックス全体を覆います"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:533
 msgid ""
@@ -1002,6 +1096,23 @@ msgid ""
 msgstr ""
 "**ポイントパターン塗りつぶし** ：ポリゴンを :ref:`マーカーシンボル <vector_marker_symbols>` "
 "によるグリッドパターンで塗りつぶします。次の設定ができます："
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:539
+msgid ""
+":guilabel:`Align pattern to feature`: marker lines are rendered within each "
+"feature"
+msgstr ":guilabel:`パターンを地物に揃える`: マーカーラインが各地物の中にレンダリングされます"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:541
+msgid ""
+":guilabel:`Align pattern to map extent`: a pattern is rendered over the "
+"whole map extent, allowing markers to align nicely across features"
+msgstr ""
+":guilabel:`パターンを地図領域に揃える`: パターンがマップ範囲全体にレンダリングされ、マーカーが地物をまたいできれいに配置されます"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:549
+msgid "Aligning point pattern to feature (left) and to map extent (right)"
+msgstr "地物（左）とマップ範囲（右）へのポイントパターンの整列"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:551
 msgid ""
@@ -1023,6 +1134,90 @@ msgid ""
 ":guilabel:`Offset`: :guilabel:`Horizontal` and :guilabel:`Vertical` "
 "distances from the feature boundary"
 msgstr ":guilabel:`オフセット` ：地物の境界線からの :guilabel:`水平` 距離および :guilabel:`垂直` 距離"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:557
+msgid ""
+":guilabel:`Clipping`: allows to control how markers in the fill should be "
+"clipped to the polygon shape. Options are:"
+msgstr ":guilabel:`切り抜き`: 塗りつぶすマーカーをどのようにポリゴンの形に切り抜くかを制御できます。オプションは以下の通りです："
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:560
+msgid ""
+":guilabel:`Clip to shape`: markers are clipped so that only the portions "
+"inside the polygon are visible"
+msgstr ":guilabel:`切り抜くシェープ`:  ポリゴンの内側の部分だけが見えるようマーカーを切り抜きます"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:562
+msgid ""
+":guilabel:`Marker centroid within shape`: only markers where the center of "
+"the marker falls inside the polygon are drawn, but these markers won't be "
+"clipped to the outside of the polygon"
+msgstr ""
+":guilabel:`シェープ内のマーカー重心`: "
+"マーカーの重心がポリゴンの内側にあるマーカーだけが描画されますが、これらのマーカーはポリゴンの外に出ないよう切り抜かれません"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:565
+msgid ""
+":guilabel:`Marker completely within shape`: only markers which fall "
+"completely within the polygon are shown"
+msgstr ":guilabel:`シェープ内のマーカー`: ポリゴンの中に完全に入るマーカーだけが表示されます"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:567
+msgid ""
+":guilabel:`No clipping`: any marker which intersects at all with the polygon"
+" will be completely rendered (strictly speaking its the \"intersects with "
+"the bounding box of the marker\")"
+msgstr ""
+":guilabel:`クリッピングしない`: "
+"ポリゴンと交差するマーカーは完全にレンダリングされます（厳密には「マーカーのバウンディングボックスと交差する」です）"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:576
+msgid ""
+"Clipping markers in fill - From left to right: Clip to shape, Marker "
+"centroid within shape, Marker completely within shape, No clipping"
+msgstr ""
+"塗りつぶしにおけるマーカーの切り抜き - 左から右へ： 切り抜くシェープ、シェープ内のマーカー重心、シェープ内のマーカー、クリッピングしない"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:579
+msgid ":guilabel:`Rotation` of the whole pattern, clockwise"
+msgstr "パターン全体を時計回りに :guilabel:`回転` します"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:580
+msgid ""
+"The :guilabel:`Randomize pattern` group setting allows each point in a point"
+" pattern fill to be randomly shifted up to the specified maximum distance "
+":guilabel:`Horizontally` or :guilabel:`Vertically`. You can specify the "
+"maximum offset in any supported units, such as millimeters, points, map "
+"units, or even \"percentage\" (where percentage is relative to the pattern "
+"width or height)."
+msgstr ""
+":guilabel:`パターンをランダム化` グループ設定では、ポイントパターン塗りつぶしの各ポイントを、指定した最大距離 "
+":guilabel:`水平方向` または :guilabel:`垂直方向` "
+"までランダムにずらすことができます。最大オフセットは、ミリメートル、ポイント、地図単位、あるいは 「パーセント」 "
+"(パーセントはパターンの幅や高さに対する相対値) など、サポートされている任意の単位で指定できます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:587
+msgid ""
+"You can set an optional random number seed to avoid the symbol patterns "
+"\"jumping\" around between map refreshes. Data defined overrides are also "
+"supported."
+msgstr ""
+"オプションで乱数シードを設定することで、マップの更新時にシンボルパターンが「飛び跳ねる」のを防ぐことができます。データによる定義の上書きにも対応しています。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:590
+msgid ""
+"The main difference between the :guilabel:`Randomize pattern` and the "
+":ref:`random marker fill <random_marker_fill>` symbol type is that the "
+"random offset with a point pattern allows for quasi-\"regular\" placement of"
+" markers – because the points in the pattern are effectively constrained to "
+"a grid, this allows creation of semi-random fills which don’t have empty "
+"areas or overlapping markers. (As opposed to the random marker fill, which "
+"will always place points completely randomly… sometimes resulting in visual "
+"clusters of points or unwanted empty areas)."
+msgstr ""
+":guilabel:`パターンをランダム化` と :ref:`ランダム塗りつぶし <random_marker_fill>` "
+"シンボルタイプの主な違いは、ポイントパターンによるランダムオフセットでは、マーカーを準「規則的」に配置できることです － "
+"パターン内の点が効果的にグリッドに拘束されるため、空の領域やマーカーの重なりがないセミランダムな塗りつぶしを作成できます。(ランダム塗りつぶしとは対照的に、ポイントは常に完全にランダムに配置されます...その結果、点の視覚的なクラスタや不要な空白領域が生じることがあります)。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:601
 msgid ""
@@ -1080,6 +1275,23 @@ msgstr ""
 "<embedded_file_selector>` "
 "）が利用できます。オプション（データ定義可）には、不透明度、画像の幅、座標モード（オブジェクトまたはビューポート）、回転およびオフセットがあります。画像の幅は任意の"
 " :ref:`共通の単位 <unit_selector>` を使用するか、画像のオリジナルサイズに対するパーセントで設定できます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:622
+msgid ""
+"**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>` of a "
+"given size (:guilabel:`Texture width`)."
+msgstr ""
+"**SVG塗りつぶし**: 与えられた大きさ（:guilabel:`テクスチャ幅`）の :ref:`SVGマーカー` を用いてポリゴンを塗りつぶします。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:624
+msgid ""
+"**Shapeburst fill**: buffers a gradient fill, where a gradient is drawn from"
+" the boundary of a polygon towards the polygon's centre. Configurable "
+"parameters include distance from the boundary to shade, use of color ramps "
+"or simple two color gradients, optional blurring of the fill and offsets."
+msgstr ""
+"**Shapeburst塗りつぶし**: "
+"ポリゴンの境界からポリゴンの中心に向かってグラデーションが描かれるグラデーション塗りつぶしをバッファリングします。設定可能なパラメータには、境界からシェードまでの距離、カラーランプまたは単純な2つの色のグラデーションの使用、オプションで塗りつぶしのぼかし、オフセットなどがあります。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:629
 msgid ""
