@@ -2071,6 +2071,9 @@ by the :ref:`elevation profile <label_elevation_profile_view>` tool.
     * :guilabel:`Azimuth`: The azimuth of the light source
     * :guilabel:`Altitude`: The elevation angle of the light source
 
+  .. note:: A shortcut to :guilabel:`Global map shading` properties is available
+    through the :guilabel:`Layer Styling` panel.
+
 
 .. index:: Sensors; Readings
 .. _project_sensors:
