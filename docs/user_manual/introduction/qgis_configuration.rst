@@ -2014,12 +2014,12 @@ Terrain Properties
 ------------------
 
 The |layoutItem3DMap| :guilabel:`Terrain` tab helps you configure default settings
-for the terrain and elevation. When any new :ref:`3d map <label_3dmapview>`
-is created in the project, the map will default to using the same terrain
-settings as are defined for the project.
-The project elevation settings will also be respected by the Profile tool.
+for the terrain and elevation.
+When any new :ref:`3d map <label_3dmapview>` is created in the project,
+the map will default to using the same terrain settings as are defined for the project.
+The project elevation settings will also be respected
+by the :ref:`elevation profile <label_elevation_profile_view>` tool.
 
-.. todo: Add link to the profile tool when available
 
 .. _figure_terrain_tab:
 
@@ -2028,18 +2028,19 @@ The project elevation settings will also be respected by the Profile tool.
 
    Project Terrain tab
 
-Terrain and elevation options are available for:
+* :guilabel:`Terrain` and elevation options are available for:
 
-* :guilabel:`Flat terrain` with :guilabel:`Terrain height` setting
-* :guilabel:`DEM (Raster Layer)`: with setting for defining the :guilabel:`Raster layer`,
-  a :guilabel:`Vertical scale` factor to apply to band values and
-  a vertical :guilabel:`Offset`
-* :guilabel:`Mesh`: with setting for defining the :guilabel:`Mesh layer`,
-  a :guilabel:`Vertical scale` factor to apply to vertices Z value and
-  a vertical :guilabel:`Offset`
+  * :guilabel:`Flat terrain` with :guilabel:`Terrain height` setting
+  * :guilabel:`DEM (Raster Layer)`: with setting for defining the :guilabel:`Raster layer`,
+    a :guilabel:`Vertical scale` factor to apply to band values and
+    a vertical :guilabel:`Offset`
+  * :guilabel:`Mesh`: with setting for defining the :guilabel:`Mesh layer`,
+    a :guilabel:`Vertical scale` factor to apply to vertices Z value and
+    a vertical :guilabel:`Offset`
 
-These settings can be overwritten from the 3D map :ref:`configuration
-dialog <scene_configuration>`.
+  These settings can be overwritten from the 3D map :ref:`configuration dialog <scene_configuration>`.
+
+
 
 
 .. index:: Sensors; Readings
