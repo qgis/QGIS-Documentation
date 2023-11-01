@@ -478,6 +478,7 @@ From a drop-down list of current layers in the layer panel, select an item and:
   * |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View`
     and |elevationscale| :guilabel:`Elevation` properties for point cloud layer.
     These options are the same as in the :ref:`point_clouds_properties`.
+* Enable and configure :ref:`global map shading <global_map_shading>` properties
 * Manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
   (more details at :ref:`manage_custom_style`).
 * See the |history| :guilabel:`History` of changes you applied to the
