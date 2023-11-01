@@ -1978,7 +1978,36 @@ by the :ref:`elevation profile <label_elevation_profile_view>` tool.
 
   These settings can be overwritten from the 3D map :ref:`configuration dialog <scene_configuration>`.
 
+.. _global_map_shading:
 
+* With |unchecked| :guilabel:`Global map shading` settings, you apply a global shading effect to the map,
+  based on the elevation of all the active layers that have elevation properties enabled, including:
+
+  * :ref:`raster layers <raster_elevation>`
+  * :ref:`mesh layers <meshelevation>`
+  * :ref:`point cloud layers <point_clouds_elevation>`
+
+  :guilabel:`Method to combine`: the elevation value at any particular position for all the relevant layers are combined,
+  and the considered elevation is chosen depending on one of these methods:
+
+  * :guilabel:`Highest elevation` value
+  * :guilabel:`Based on layer's order`: the elevation on the topmost layer in the layer tree is considered.
+
+  Supported shading options are:
+
+  * |checkbox| :guilabel:`Eye-dome lighting`: applies shading effects to the map canvas for a better depth rendering.
+    Following parameters can be controlled:
+
+    * :guilabel:`Strength`: increases the contrast, allowing for better depth perception
+    * :guilabel:`Distance`: represents the distance of the used pixels off the center pixel
+      and has the effect of making edges thicker.
+
+  * |unchecked| :guilabel:`Hillshading`, shaping some reliefs on the map using shading (levels of gray):
+
+    * :guilabel:`Z Factor`: Scaling factor for the elevation value
+    * |unchecked| :guilabel:`Multidirectional`: Specify if multidirectional hillshading is to be used
+    * :guilabel:`Azimuth`: The azimuth of the light source
+    * :guilabel:`Altitude`: The elevation angle of the light source
 
 
 .. index:: Sensors; Readings
