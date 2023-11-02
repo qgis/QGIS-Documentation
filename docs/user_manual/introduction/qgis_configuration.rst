@@ -891,6 +891,26 @@ create curve segments while digitizing. Keep in mind that your data provider
 must support this feature.
 
 
+.. index:: Elevation
+.. _elevation_options:
+
+Elevation settings
+------------------
+
+.. _figure_elevation_options:
+
+.. figure:: img/options_3d.png
+   :align: center
+
+   Elevation settings
+
+In |elevationProfile| :guilabel:`Elevation` menu, you can set a specific color
+to use as the :guilabel:`Background color` for :ref:`elevation profiles <label_elevation_profile_view>`.
+This can make the chart more readable for certain datasets, e.g. point clouds with RGB coloring,
+where the default background color is too similar to point colors to be easily discernable.
+If unchanged, the elevation profiles will continue to display using the standard system background color.
+
+
 .. index:: 3D
 .. _3d_options:
 
@@ -2506,6 +2526,8 @@ in the QGIS user profile.
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |elevationProfile| image:: /static/common/mActionElevationProfile.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
