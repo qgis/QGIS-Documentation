@@ -49,6 +49,31 @@ The :guilabel:`Layers` panel (also called the ``map legend``) lists all
 the layers in the project and helps you manage their visibility and shape the map.
 You can show or hide the panel by pressing :kbd:`Ctrl+1`.
 
+QGIS provides a variety of ways to add layers to a project:
+
+* using the :guilabel:`Add` button from the dedicated data provider tab
+  in the :ref:`Data source manager <opening_data>` dialog
+* from QGIS :ref:`Browser panel <label_browserpanel>` or :ref:`DB Manager <dbmanager>`:
+  double-click, drag-and-drop files and layers onto QGIS or use the contextual menu
+* drag-and-drop files from the Operating System files explorer onto QGIS
+
+In all these scenarios, you can open one or many layers at a time.
+New layers are added to the :guilabel:`Layers` panel:
+
+#. if dropped over the :guilabel:`Layers` panel, at the exact location they are released
+#. in the other cases, at a location that respects the global :ref:`behavior used when adding new layers
+   <layer_tree_insertion_methods>` setting
+#. and in case of multiple layers, they are sorted in a way
+   that increases the chance of their stacking being logical
+   and features being visible as most as possible, using the following logic (top to bottom):
+
+   * vector point layers
+   * vector line layers
+   * vector polygon layers
+   * point cloud layers
+   * mesh layers
+   * raster layers
+
 At the top of the :guilabel:`Layers` panel, a toolbar allows you to:
 
 * |symbology| :sup:`Open the layer styling dock (F7)`: toggle the
