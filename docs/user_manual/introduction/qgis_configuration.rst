@@ -692,11 +692,27 @@ These properties let you set:
 
 * **Layer legend** interaction:
 
-  * :guilabel:`Double click action in legend` |selectString|. You can either
-    'Open layer properties', 'Open attribute table' or 'Open layer styling dock'
-    with the double click.
-  * |unchecked| :guilabel:`Show feature count for newly added layers`: displays
-    in the :guilabel:`Layers` panel the number of features next to the layer name.
+  * :guilabel:`Double click action in legend`: whether a double-click on a layer should either
+    :guilabel:`Open layer properties` (default), :guilabel:`Open attribute table`
+    or :guilabel:`Open layer styling dock`.
+
+  .. _layer_tree_insertion_methods:
+
+  * :guilabel:`Behavior used when adding new layers`: determines where layers are placed
+    in the :guilabel:`Layers` panel when loaded into QGIS. It can be:
+
+    * :guilabel:`Above currently selected layer`
+    * :guilabel:`Always on top of the layer tree`
+    * :guilabel:`Optimal index within current layer tree group`:
+      Unlike the other options that sort the new layers among them
+      and place them as a stack at the desired location,
+      this option extents the sorting logic to the whole layer tree (or the active group)
+      and inserts new layers in an "optimal" fashion
+      by insuring that point layers sit on top of point layers,
+      followed by line layers on top of lines, followed by polygon layers, etc.
+
+  * |unchecked| :guilabel:`Show feature count for newly added layers`:
+    displays in the :guilabel:`Layers` panel the number of features next to the layer name.
     Feature count of classes, if any, is as well displayed.
     You can right-click on a layer to turn on/off its feature count.
   * |unchecked| :guilabel:`Display classification attribute names` in the Layers
