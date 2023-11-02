@@ -1399,10 +1399,31 @@ You can specify:
 
 * under :guilabel:`Typing`
 
-  * |unchecked| :guilabel:`Automatic parentheses insertion`: Enables autoclosing
-    for parentheses
-  * |checkbox| :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
+  * |checkbox| :guilabel:`Automatic parentheses insertion`:
+    When no text is selected, if an opening character (parentheses, quotes, brackets, ...) is entered,
+    inserts the matching closing character just after the cursor.
+    Note that this behavior is disabled if the current cursor is inside a string or comment.
+  * |checkbox| :guilabel:`Automatically surround selection when typing quotes or brackets`:
+    When an opening character is entered, the selected text is enclosed in the opening/closing pair.
+    Selection remains the same, so it is possible to quote a selected word
+    and enclose it in parentheses just by typing ``"`` then ``(``.
+
+    Special case for multiline selection with quotes and double quotes:
+    selection is enclosed in triple single/double quotes.
+  * |unchecked| :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
     Enables insertion of 'import' when specifying imports
+
+* under :guilabel:`Formatting`, you can add automated tools to reformat the code you are writing:
+
+  * |unchecked| :guilabel:`Reformat on save`: formatting is applied just before saving the script
+  * |checkbox| :guilabel:`Sort imports`: sorts 'import' statements using the `isort library
+    <https://pycqa.github.io/isort/>`_
+  * :guilabel:`Maximum line length`: controls how the formatter will wrap the lines, and controls the editor ruler
+  * :guilabel:`Formatter` - supported tools are :guilabel:`autopep8` and :guilabel:`black`, with dedicated option:
+
+    * :guilabel:`Autopep8 level` - more details at `autopep8 advanced usage
+      <https://pypi.org/project/autopep8/#more-advanced-usage>`_
+    * |unchecked| :guilabel:`Normalize quotes`: replaces all single quotes with double quotes if possible
 
 * under :guilabel:`Run and Debug`
 
