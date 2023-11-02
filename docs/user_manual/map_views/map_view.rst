@@ -626,11 +626,8 @@ Scale Bar
 
 |scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas.
 You can control the style and placement, as well as the labelling of the bar.
-
-QGIS only supports displaying the scale in the same units as your map frame.
-So, if the units of your project's CRS are meters, you can't create a scale bar in
-feet. Likewise, if you are using decimal degrees, you can't create a scale
-bar to display distance in meters.
+The scale bar respects the active :ref:`project's distance unit <measurements_ellipsoid>`
+as defined in :menuselection:`Project properties --> General --> Units for distance measurement`.
 
 To add a scale bar:
 
@@ -651,9 +648,9 @@ To add a scale bar:
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
 #. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
-#. Set the :guilabel:`Size of bar` |selectNumber|
-#. Optionally check |checkbox| :guilabel:`Automatically snap to round number
-   on resize` to display easy-to-read values
+#. Set the :guilabel:`Size of bar` in the active unit
+#. Optionally check |checkbox| :guilabel:`Automatically snap to round number on resize`
+   to display easy-to-read values
 #. Choose the placement from the :guilabel:`Placement` |selectString| combo box
 #. You can refine the placement of the item by setting a horizontal and/or vertical
    `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
