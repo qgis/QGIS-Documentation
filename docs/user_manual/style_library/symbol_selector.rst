@@ -689,6 +689,13 @@ The parameters can then be defined as expressions in the :guilabel:`Dynamic SVG 
 
    Dynamic SVG parameters table
 
+.. note::
+
+ QGIS is looking for a complete SVG node. So if your parameter is within a more complex node, 
+ you need to inject the complete node with the expression. 
+ For instance, ``transform="rotate(param(angle)"`` will not work.
+ Instead, you need to do ``transform="param(rotation)"`` and ``rotation`` parameter will be defined 
+ with the expression ``'rotate(' || coalesce(my_field, 0) || ')'``.
 
 .. _geometry_generator_symbol: 
  
