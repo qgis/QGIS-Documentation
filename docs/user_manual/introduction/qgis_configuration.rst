@@ -752,6 +752,8 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 * :guilabel:`Minimum width` determines how thick should
   the outline of a highlighted object be.
 
+.. _global_measure_tool:
+
 **Measure tool**
 
 * Define :guilabel:`Rubberband color` for measure tools
@@ -760,32 +762,33 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
   numbers (e.g., meters to kilometers)
 * :guilabel:`Preferred distance units`: options are 'Meters', 'Kilometers',
   'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', 'Millimeters',
-  'Degrees' or 'Map Units'
+  'Inches', 'Degrees' or 'Map Units'
 * :guilabel:`Preferred area units`: options are 'Square meters', 'Square
   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
   'Acres', 'Square nautical miles', 'Square centimeters', 'Square millimeters',
-  'Square degrees' or 'Map Units'
+  'Square inches', 'Square degrees' or 'Map Units'
 * :guilabel:`Preferred angle units`: options are 'Degrees', 'Radians',
   'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions',
   milliradians (SI definition) or mil (NATO/military definition)
 
+Some of these options can be overridden at the :ref:`project level <measurements_ellipsoid>`.
+
 **Measure Tool Copy Settings**
 
-These settings allow you to control the behavior of the :guilabel:`Copy` button 
-in the |measure| :sup:`Measure Line` window. You can choose to 
-|checkbox| :guilabel:`Include header` to keep columns names, and you can also 
+These settings allow you to control the behavior of the :guilabel:`Copy` button
+in the |measure| :sup:`Measure Line` window. You can choose to
+|checkbox| :guilabel:`Include header` to keep columns names, and you can also
 select :guilabel:`Separator` of your choice.
 
 **Coordinate and Bearing Display**
 
 This section provides ways to :guilabel:`Configure`:
 
-* :guilabel:`Default coordinate format for new projects`, as displayed in
-  the :guilabel:`Coordinates` box on QGIS status bar and in the :guilabel:`Derived`
-  section of the |identify| :sup:`Identify features` tool's results
-* :guilabel:`Default bearing format for new projects`, as displayed in
-  the status bar for the map canvas panning direction and by the |measureBearing|
-  :sup:`Measure bearing` tool.
+* :guilabel:`Default coordinate format for new projects`,
+  as displayed in the :guilabel:`Coordinates` box on QGIS status bar
+  and in the :guilabel:`Derived` section of the |identify| :sup:`Identify features` tool's results
+* :guilabel:`Default bearing format for new projects`, as displayed in the status bar
+  for the map canvas panning direction and by the |measureBearing| :sup:`Measure bearing` tool.
 
 These options can be overridden at the :ref:`project level <coordinate_and_bearing>`.
 
@@ -793,7 +796,7 @@ These options can be overridden at the :ref:`project level <coordinate_and_beari
 
 * Define a :guilabel:`Zoom factor` for zoom tools or wheel mouse
 * |checkbox| :guilabel:`Reverse wheel zoom` allows you to adjust
-  mouse wheel scrolling direction. 
+  mouse wheel scrolling direction.
 
 .. _predefinedscales:
 
@@ -1589,9 +1592,10 @@ In the |general| :guilabel:`General` tab, the :guilabel:`General settings` let y
 
 .. _measurements_ellipsoid:
 
-Calculating areas and distances is a common need in GIS. However, these values
-are really tied to the underlying projection settings. The :guilabel:`Measurements`
-frame lets you control these parameters. You can indeed choose:
+Calculating areas and distances is a common need in GIS.
+However, these values are really tied to the underlying projection settings.
+The :guilabel:`Measurements` frame lets you control these parameters.
+You can indeed choose:
 
 * the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely based;
   it can be:
@@ -1602,15 +1606,17 @@ frame lets you control these parameters. You can indeed choose:
   * a **Custom** one: you'll need to set values of the semi-major and semi-minor axes.
   * or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN,
     New International 1967, WGS 84...).
-* the :guilabel:`units for distance measurements` for length and perimeter and
-  the :guilabel:`units for area measurements`. These settings, which default
-  to the units set in QGIS options but then overrides it for the current project,
-  are used in:
+* the :guilabel:`Units for distance measurements` for length and perimeter,
+  and the :guilabel:`Units for area measurements`.
+  These settings which default to their corresponding :ref:`global options <global_measure_tool>`
+  override them in the current project.
+  They are used in:
 
   * Attribute table field update bar
   * Field calculator calculations
-  * Identify tool derived length, perimeter and area values
-  * Default unit shown in measure dialog
+  * :ref:`Identify tool <identify>` derived length, perimeter and area values
+  * :ref:`measure dialog <sec_measure>`
+  * :ref:`scale bar decoration <scalebar_decoration>`
 
 .. _coordinate_and_bearing:
 
