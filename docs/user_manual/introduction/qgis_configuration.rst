@@ -894,6 +894,26 @@ create curve segments while digitizing. Keep in mind that your data provider
 must support this feature.
 
 
+.. index:: Elevation
+.. _elevation_options:
+
+Elevation settings
+------------------
+
+.. _figure_elevation_options:
+
+.. figure:: img/options_3d.png
+   :align: center
+
+   Elevation settings
+
+In |elevationProfile| :guilabel:`Elevation` menu, you can set a specific color
+to use as the :guilabel:`Background color` for :ref:`elevation profiles <label_elevation_profile_view>`.
+This can make the chart more readable for certain datasets, e.g. point clouds with RGB coloring,
+where the default background color is too similar to point colors to be easily discernable.
+If unchanged, the elevation profiles will continue to display using the standard system background color.
+
+
 .. index:: 3D
 .. _3d_options:
 
@@ -908,36 +928,44 @@ must support this feature.
    3D settings
 
 The |3d| :guilabel:`3D` menu helps you configure some default settings to use
-for any :guilabel:`3D Map view`. These can refer to :guilabel:`Default Camera Settings`:
+for any :guilabel:`3D Map view`. These can refer to:
 
-* :guilabel:`Projection type`: allowing to view the 3D scene in a:
+* :guilabel:`Default Camera Settings`:
 
-  * :guilabel:`Perspective projection` (default): Parallel lines appear to meet
-    in the distance. Objects appear to shrink the farther they are from the camera.
-  * or an :guilabel:`Orthogonal projection`: Parallel lines appear parallel.
-    Objects appear the same size regardless of distance.
-* Camera's :guilabel:`Field of view`: only relevant in perspective projection,
-  specifies the current vertical field of view in degrees and determines how much
-  of the scene is visible to the camera. Default value is 45\°.
-* :guilabel:`Navigation mode`: provides different means to interact with the 3D scene.
-  Available modes are:
+  * :guilabel:`Projection type`: allowing to view the 3D scene in a:
 
-  * :guilabel:`Terrain based`: the camera follows around a fixed position on
-    the surface of the terrain as the scene is navigated.
-  * :guilabel:`Walk mode (first person)`
+    * :guilabel:`Perspective projection` (default): Parallel lines appear to meet
+      in the distance. Objects appear to shrink the farther they are from the camera.
+    * or an :guilabel:`Orthogonal projection`: Parallel lines appear parallel.
+      Objects appear the same size regardless of distance.
+  * Camera's :guilabel:`Field of view`: only relevant in perspective projection,
+    specifies the current vertical field of view in degrees and determines how much
+    of the scene is visible to the camera. Default value is 45\°.
+  * :guilabel:`Navigation mode`: provides different means to interact with the 3D scene.
+    Available modes are:
 
-  Depending on the selected mode, :ref:`navigation commands <3d_navigation>` differ.
-* :guilabel:`Movement speed`
-* :guilabel:`Invert vertical axis`: Controls whether vertical axis movements
-  should be inverted from their normal behaviour. Only affects movement in the
-  :guilabel:`Walk mode`. It can be set to:
+    * :guilabel:`Terrain based`: the camera follows around a fixed position on
+      the surface of the terrain as the scene is navigated.
+    * :guilabel:`Walk mode (first person)`
 
-  * :guilabel:`Never`
-  * :guilabel:`Only when dragging`: causes the vertical motion to inverted only
-    when performing a click-and-drag camera rotation
-  * and :guilabel:`Always`: causes the motions to be inverted when both
-    click-and-dragging and when the camera movement is locked to the cursor
-    (via a :kbd:`~` key press)
+    Depending on the selected mode, :ref:`navigation commands <3d_navigation>` differ.
+  * :guilabel:`Movement speed`
+  * :guilabel:`Invert vertical axis`: Controls whether vertical axis movements
+    should be inverted from their normal behaviour. Only affects movement in the
+    :guilabel:`Walk mode`. It can be set to:
+
+    * :guilabel:`Never`
+    * :guilabel:`Only when dragging`: causes the vertical motion to inverted only
+      when performing a click-and-drag camera rotation
+    * and :guilabel:`Always`: causes the motions to be inverted when both
+      click-and-dragging and when the camera movement is locked to the cursor
+      (via a :kbd:`~` key press)
+
+* Under :guilabel:`Graphics memory`, the  :guilabel:`Allowed memory per layer` option
+  lets you set the GPU memory limit configuration on each layer.
+  This is useful for users utilizing large 3D scenes which exhaust the available GPU memory resources.
+  When a limit is hit, a warning is also displayed, which should assist in troubleshooting large scenes.
+
 
 .. index:: Colors
 .. _colors_options:
@@ -2512,6 +2540,8 @@ in the QGIS user profile.
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |elevationProfile| image:: /static/common/mActionElevationProfile.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
