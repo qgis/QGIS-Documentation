@@ -46,13 +46,13 @@ Basic parameters
        Optional
      - ``RESOLUTION``
      - [number]
-     -
+     - Resolution of cells used to calculate boundary
    * - **Minimal number of points in a cell to consider cell occupied**
 
        Optional
      - ``THRESHOLD``
      - [number]
-     - 
+     - Minimal number of points in a cell to consider cell occupied
    * - **Boundary**
      - ``OUTPUT``
      - [vector: polygon]
@@ -161,7 +161,7 @@ Basic parameters
      - [number]
 
        Default: 1000
-     -
+     - Size of the tiles to split the data into for parallel runs
    * - **Density**
      - ``OUTPUT``
      - [raster]
@@ -309,7 +309,7 @@ Outputs
    * - **Filtered**
      - ``OUTPUT``
      - [point cloud]
-     - Output point cloud layer the features of the input point cloud layer are exported to.
+     - Output point cloud layer with the filtered features of the input point cloud layer.
        Currently supported formats are :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` and :file:`.VPC`.
 
 Python code

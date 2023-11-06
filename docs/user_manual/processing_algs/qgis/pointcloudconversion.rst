@@ -103,7 +103,7 @@ Basic parameters
      - Input point cloud layer to export
    * - **Attribute**
      - ``ATTRIBUTE``
-     - [field] [list]
+     - [field] [enumeration]
      - A Field of the point cloud layer to extract the values from
    * - **Resolution of the density raster**
      - ``RESOLUTION``
@@ -331,10 +331,7 @@ optionally with extra attributes.
 .. figure:: img/point_cloud_exportvector.png
    :align: center
 
-   Exporting point cloud (ground points) to Shapefile styled based on the elevation
-
-.. Only GPKG seems to be allowed output format so I do not understand this caption.
- Neither do I see relation between this screenshot and the others...
+   Exporting point cloud (ground points) to a vector layer styled based on the elevation
 
 Parameters
 ..........

@@ -109,7 +109,7 @@ Parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [point cloud] [multipleLayers]
+     - [point cloud] [list]
      - Input point cloud layers to combine inside a virtual point cloud layer
    * - **Calculate boundary polygon**
      - ``BOUNDARY``
@@ -128,7 +128,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - Generates a single “thinned” point cloud of all the input data (using only every 1000th point from original data).
+     - Generates a single “thinned” point cloud of all the input data
+       (using only every 1000th point from original data).
 
        The overview point cloud will be created next to the VPC file -
        for example, for :file:`mydata.vpc`, the overview point cloud would be named :file:`mydata-overview.copc.laz`.
@@ -173,7 +174,8 @@ Python code
 Clip
 ----
 
-Clips a point cloud layer by a polygon layer so that the resulting point cloud contains only points within the polygons.
+Clips a point cloud layer by a polygon layer
+so that the resulting point cloud contains only points within the polygons.
 
 .. figure:: img/point_cloud_clip.png
    :align: center
@@ -274,8 +276,6 @@ Create COPC
 
 Creates the index for all the input point cloud files in a batch mode.
 
-.. what is COPC??
-
 Parameters
 ..........
 
@@ -289,7 +289,7 @@ Parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [point cloud] [multipleLayers]
+     - [point cloud] [list]
      - Input point cloud layers to create an index for
    * - **Output directory**
 
@@ -442,7 +442,7 @@ Basic parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [point cloud] [multipleLayers]
+     - [point cloud] [list]
      - Input point cloud layers to merge into a single one
    * - **Merged**
      - ``OUTPUT``
@@ -564,7 +564,8 @@ Advanced parameters
        Optional
      - ``OPERATION``
      - [datum]
-     - The :ref:`datum transformation <datum_transformation>` to use to reproject the data between the origin and target systems.
+     - The :ref:`datum transformation <datum_transformation>` to use to reproject the data
+       between the origin and target systems.
 
 Outputs
 .......
@@ -579,7 +580,7 @@ Outputs
      - Description
    * - **REPROJECTED**
      - ``OUTPUT``
-     - [vector]
+     - [point cloud]
      - Output point cloud layer in the target CRS.
 
 Python code
@@ -600,10 +601,12 @@ Thin (by sampling radius)
 Creates a thinned version of the point cloud by performing sampling by distance point
 (reduces the number of points within a certain radius).
 
-.. figure:: img/point_cloud_thin.gif
-   :align: center
+.. only:: html
 
-   Thining point cloud (by sampling radius)
+  .. figure:: img/point_cloud_thin.gif
+     :align: center
+
+     Thining point cloud (by sampling radius)
 
 .. seealso:: :ref:`pdalthinbydecimate`
 
@@ -702,9 +705,7 @@ Thin (by skipping points)
 -------------------------
 
 Creates a thinned version of the point cloud by keeping only every N-th point
-(reduces he number of points by skipping nearby points).
-
-.. not sure I fully understand: is it **keeping** or **skipping** - see POINTS_NUMBER parameter label !???!!!
+(reduces the number of points by skipping nearby points).
 
 .. seealso:: :ref:`pdalthinbyradius`
 
@@ -731,7 +732,7 @@ Basic parameters
      - [number]
 
        Default: 1
-     -
+     - Keep only every N-th point in the input layer
    * - **Thinned (by decimation)**
      - ``OUTPUT``
      - [point cloud]
@@ -823,7 +824,7 @@ Basic parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [point cloud] [multipleLayers]
+     - [point cloud] [list]
      - Input point cloud layers to create tiles from
    * - **Tile length**
      - ``LENGTH``
@@ -831,7 +832,7 @@ Basic parameters
 
        Default: 1000.0
      - Size of the edge of each generated tile
-   * - **Output directry**
+   * - **Output directory**
      - ``OUTPUT``
      - [folder]
 
