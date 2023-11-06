@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-11-05 07:34+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.13.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -50,19 +50,25 @@ msgstr ""
 "インストールされたプラグインのうち、 :file:`metadata.txt` ファイルに ``hasProcessingProvider=yes`` "
 "と記述されているものだけが認識され、qgis_process ツールで起動または読み込まれます。 "
 
-#: ../../docs/user_manual/processing/standalone.rst:53
+#: ../../docs/user_manual/processing/standalone.rst:52
+msgid ""
+"Before calling qgis_process on a system without window manager (e.g. a "
+"headless server), you should set::"
+msgstr "ウィンドウマネージャのないシステム（ヘッドレスサーバなど）でqgis_processを呼び出す前に、以下を設定する必要があります::"
+
+#: ../../docs/user_manual/processing/standalone.rst:58
 msgid ""
 "The command ``list`` can be used to get a list of all available providers "
 "and algorithms."
 msgstr "コマンド ``list`` を使うと、利用可能なすべてのプロバイダとアルゴリズムのリストを得ることができます。 "
 
-#: ../../docs/user_manual/processing/standalone.rst:60
+#: ../../docs/user_manual/processing/standalone.rst:65
 msgid ""
 "The command ``help`` can be used to get further information about commands "
 "or algorithms."
 msgstr "コマンド ``help`` を使うと、コマンドやアルゴリズムに関する詳しい情報を得ることができます。"
 
-#: ../../docs/user_manual/processing/standalone.rst:66
+#: ../../docs/user_manual/processing/standalone.rst:71
 msgid ""
 "The command ``run`` can be used to run an algorithm or model. Specify the "
 "name of the algorithm or a path to a model as first parameter."
@@ -70,45 +76,45 @@ msgstr ""
 "コマンド ``run`` "
 "を使用して、アルゴリズムまたはモデルを実行できます。最初のパラメータとして、アルゴリズムの名前またはモデルへのパスを指定します。"
 
-#: ../../docs/user_manual/processing/standalone.rst:73
+#: ../../docs/user_manual/processing/standalone.rst:78
 msgid ""
 "Where a parameter accepts a list of values, set the same variable multiple "
 "times."
 msgstr "パラメータが値のリストを受け取る場合、同じ変数を複数回設定します。 "
 
-#: ../../docs/user_manual/processing/standalone.rst:79
+#: ../../docs/user_manual/processing/standalone.rst:84
 msgid ""
 "While running an algorithm a text-based feedback bar is shown, and the "
 "operation can be cancelled via :kbd:`CTRL+C`."
 msgstr "アルゴリズム実行中はテキスト型のフィードバックバーが表示され、また、 :kbd:`CTRL+C` で操作をキャンセルできます。 "
 
-#: ../../docs/user_manual/processing/standalone.rst:82
+#: ../../docs/user_manual/processing/standalone.rst:87
 msgid "The ``run`` command also supports further parameters."
 msgstr "``run`` コマンドはもっと多くのパラメータをサポートしています。"
 
-#: ../../docs/user_manual/processing/standalone.rst:84
+#: ../../docs/user_manual/processing/standalone.rst:89
 msgid "``--json`` will format stdout output in a JSON structured way."
 msgstr "``--json`` は、stdout出力をJSON構造でフォーマットします。"
 
-#: ../../docs/user_manual/processing/standalone.rst:85
+#: ../../docs/user_manual/processing/standalone.rst:90
 msgid "``--ellipsoid`` will set the ellipsoid to the specified one."
 msgstr "``--ellipsoid`` は、指定したものを楕円体に設定します。"
 
-#: ../../docs/user_manual/processing/standalone.rst:86
+#: ../../docs/user_manual/processing/standalone.rst:91
 msgid "``--distance_units`` will use the specified distance units."
 msgstr "``--distance_units`` は、指定した距離単位を使います。"
 
-#: ../../docs/user_manual/processing/standalone.rst:87
+#: ../../docs/user_manual/processing/standalone.rst:92
 msgid "``--area_units`` will use the specified area units."
 msgstr "``--area_units`` は、指定した面積単位を使います。"
 
-#: ../../docs/user_manual/processing/standalone.rst:88
+#: ../../docs/user_manual/processing/standalone.rst:93
 msgid ""
 "``--project_path`` will load the specified project for running the "
 "algorithm."
 msgstr "``--project_path`` は、アルゴリズムを実行するために指定したプロジェクトを読み込みます。"
 
-#: ../../docs/user_manual/processing/standalone.rst:90
+#: ../../docs/user_manual/processing/standalone.rst:95
 msgid ""
 "Complex input parameters, i.e. parameter types which are themselves "
 "specified as a dictionary type object for algorithms, are supported by "
@@ -119,19 +125,19 @@ msgstr ""
 "複雑な入力パラメータ、すなわちそれ自体がアルゴリズム用の辞書型オブジェクトとして指定されるパラメータ型は、qgis_processによってサポートされています。パラメータがstdinを介して指定されることを示すために、qgis_processコマンドは書式に従わなければなりません（通常の引数リストの代わりに末尾に``-``を付けます）。"
 " "
 
-#: ../../docs/user_manual/processing/standalone.rst:101
+#: ../../docs/user_manual/processing/standalone.rst:106
 msgid ""
 "The JSON object must contain an \"inputs\" key, which is a map of the input "
 "parameter values. E.g."
 msgstr "JSONオブジェクトは、入力パラメータ値のマップである \"inputs\" キーを含んでいなければなりません。例．"
 
-#: ../../docs/user_manual/processing/standalone.rst:108
+#: ../../docs/user_manual/processing/standalone.rst:113
 msgid ""
 "Additionally, extra settings like the distance units, area units, ellipsoid "
 "and project path can be included in this JSON object:"
 msgstr "さらに、距離単位、面積単位、楕円体、プロジェクトパスなどの追加設定をこのJSONオブジェクトに含めることができます： "
 
-#: ../../docs/user_manual/processing/standalone.rst:121
+#: ../../docs/user_manual/processing/standalone.rst:126
 msgid ""
 "Specifying input parameters via stdin implies automatically the :file:`JSON`"
 " output format for results."
