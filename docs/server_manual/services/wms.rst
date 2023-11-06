@@ -88,7 +88,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`VERSION <wms_version>`", "Yes", "Version of the service"
-   ":ref:`LAYERS <wms_layers>` ", "No", "Layers to display"
+   ":ref:`LAYERS <wms_layers>`", "No", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
    ":ref:`BBOX <wms_bbox>`", "Yes", "Map extent"
@@ -173,13 +173,10 @@ Names have to be separated by a comma.
 
 In addition, QGIS Server introduced some options to select layers by:
 
+* the layer id: the project option allowing to select layers by their id
+  is in :menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project --> Properties...` dialog.
+  Check the :guilabel:`Use layer ids as names` checkbox to activate this option.
 * a :ref:`short name <services_basics_short_name>`
-* the layer id
-
-The project option allowing to select layers by their
-id is in :menuselection:`QGIS Server --> WMS` tab of the
-:menuselection:`Project --> Properties...` dialog.
-Check the :guilabel:`Use layer ids as names` checkbox to activate this option.
 
 .. code-block:: bash
 
@@ -818,7 +815,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetLegendGraphic**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`LAYERS <wms_layers>` ", "Yes", "Layers to display"
+   ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "No", "Coordinate reference system"
    ":ref:`BBOX <wms_getlegendgraphic_bbox>`", "No", "Map extent"
