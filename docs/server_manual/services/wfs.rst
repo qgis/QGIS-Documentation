@@ -375,6 +375,32 @@ In case of multiple typenames, filters have to be enclosed in parentheses:
   &TYPENAME=places,countries
   &FILTER=(<Filter><PropertyIsEqualTo><PropertyName>name</PropertyName><Literal>Paris</Literal></PropertyIsEqualTo></Filter>)(<Filter><PropertyIsEqualTo><PropertyName>name</PropertyName><Literal>France</Literal></PropertyIsEqualTo></Filter>)
 
+Filter features that intersect with a polygon:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &REQUEST=GetFeature
+  &VERSION=1.1.0
+  &TYPENAME=places
+  &FILTER=<Filter xmlns="http://www.opengis.net/ogc">
+             <Intersects>
+                 <PropertyName>geometry</PropertyName>
+                 <Polygon xmlns="http://www.opengis.net/gml" srsName="EPSG:4326">
+                     <exterior>
+                         <LinearRing>
+                             <posList>
+                                 -0.6389 42.5922
+                                 10.2683 51.9106
+                                 14.5196 41.0320
+                                 -0.6389 42.5922
+                             </posList>
+                         </LinearRing>
+                     </exterior>
+                 </Polygon>
+             </Intersects>
+         </Filter>
 
 .. _wfs_getfeature_bbox:
 
