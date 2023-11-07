@@ -23,7 +23,7 @@ jobs:
     env:
       TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      BACKPORT_BRANCH: "release_3.28"
+      LABELS: "Translation, backport release_3.28, backport release_3.34"
 
     steps:
     - name: Harden Runner
@@ -56,13 +56,4 @@ jobs:
         commit-message: Update statistics of translation
         title: Update statistics of translation
         delete-branch: true
-        labels: |
-          Translation
-          backport ${{ env.BACKPORT_BRANCH }}
-
-    - name: Enable Pull Request Automerge
-      uses: peter-evans/enable-pull-request-automerge@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
-        merge-method: rebase
+        labels: ${{ env.LABELS }}
