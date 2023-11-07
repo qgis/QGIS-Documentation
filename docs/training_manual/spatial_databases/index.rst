@@ -17,9 +17,9 @@ documentation.
 There are also some more extensive tutorials on PostGIS and Spatial Databases
 available from Boundless Geo:
 
-* `Introduction to PostGIS <http://workshops.boundlessgeo.com/postgis-intro/>`_
+* `Introduction to PostGIS <https://web.archive.org/web/20171221050136/http://workshops.boundlessgeo.com/postgis-intro/>`_
 * `Spatial Database Tips and Tricks
-  <http://workshops.boundlessgeo.com/postgis-spatialdbtips/>`_
+  <https://web.archive.org/web/20180921013715/http://workshops.boundlessgeo.com/postgis-spatialdbtips/>`_
 
 See also `PostGIS In Action <https://www.postgis.us>`_.
 
