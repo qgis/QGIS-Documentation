@@ -2586,10 +2586,10 @@ in the QGIS user profile.
    :width: 1.5em
 .. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
+.. |measure| image:: /static/common/mActionMeasure.png
+   :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
-.. |measure| image:: /static/common/mActionMeasure.png
-   :width: 1.5em  
 .. |nix| image:: /static/common/nix.png
    :width: 1em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
