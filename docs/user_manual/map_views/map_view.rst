@@ -1028,11 +1028,12 @@ measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or
    :menuselection:`Project --> Properties... --> General` menu, and by the
    selection made in the measurement widget.
 
-All measuring modules use the snapping settings from the digitizing module (see
-section :ref:`snapping_tolerance`). So, if you want
-to measure exactly along a line feature, or around a polygon feature, first set
-its layer snapping tolerance. Now, when using the measuring
-tools, each mouse click (within the tolerance setting) will snap to that layer.
+All measuring modules use the snapping settings from the digitizing module
+(see section :ref:`snapping_tolerance`).
+So, if you want to measure exactly along a line feature, or around a polygon feature,
+first set its layer snapping tolerance.
+Now, when using the measuring tools, each mouse click (within the tolerance setting)
+will snap to that layer.
 
 .. index::
    single: Measure; Distances
@@ -1043,24 +1044,21 @@ The |measure| :sup:`Measure Line` measures distances between given points.
 The tool then allows you to click points on the map.
 Each segment length, as well as the total, shows up in the measure window.
 In the measure window, you will see coordinates for all your points and distances.
-Keep in mind that the first row will contain only coordinates, as it represents your starting point. 
-Now it is possible to copy all your line measurements at once to the clipboard 
+Keep in mind that the first row will contain only coordinates, as it represents your starting point.
+Now it is possible to copy all your line measurements at once to the clipboard
 using the :guilabel:`Copy` button. Clicking the :guilabel:`Configuration` button
 you will access to :guilabel:`Measure Tool Copy Settings` where you can set up copy options.
 To stop measuring, click the right mouse button.
 
-Note that you can use the drop-down list near the total to change
-the measurement units interactively while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
-'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees', 'Map units').
-This unit is retained for the widget until a new project is created or another project
-is opened.
+Note that you can use the drop-down list near the total
+to change the :ref:`measurement units <measurements_ellipsoid>`
+interactively while working with the measure tool.
+This unit is retained for the widget until a new project is created
+or another project is opened.
 
 The :guilabel:`Info` section in the dialog explains how calculations are made
 according to the CRS settings available.
 
-.. %FixMe: currently, validating the Settings --> Options dialog revert any change
-   made on units in the measurement dialog (see https://issues.qgis.org/issues/15436
-   bug or not? should it be documented?)
 
 .. _figure_measure_length:
 
@@ -1072,9 +1070,7 @@ according to the CRS settings available.
 |measureArea| :sup:`Measure Area`: Areas can also be measured. In the
 measure window, the accumulated area size appears. Right-click to stop drawing.
 The Info section is also available as well as the ability to switch between
-different area units ('Square meters', 'Square kilometers', 'Square feet', 'Square yards',
-'Square miles', 'Hectares', 'Acres', 'Square centimeters',
-'Square millimeters', 'Square nautical miles', 'Square degrees', 'Map units').
+different :ref:`area units <measurements_ellipsoid>`.
 
 .. _figure_measure_area:
 
@@ -1083,10 +1079,11 @@ different area units ('Square meters', 'Square kilometers', 'Square feet', 'Squa
 
    Measure Area
 
-|measureBearing| :sup:`Measure Bearing`: You can also measure bearings. The
-cursor becomes cross-shaped. Click to draw the first point of the bearing,
-then move the cursor to draw the second point. The measurement
-is displayed in a pop-up dialog.
+|measureBearing| :sup:`Measure Bearing`: You can also measure bearings.
+The cursor becomes cross-shaped.
+Click to draw the first point of the bearing,
+then move the cursor to draw the second point.
+The measurement is displayed in a pop-up dialog.
 
 .. _figure_measure_bearing:
 
@@ -1095,10 +1092,11 @@ is displayed in a pop-up dialog.
 
    Measure Bearing
 
-|measureAngle| :sup:`Measure Angle`: You can also measure angles. The
-cursor becomes cross-shaped. Click to draw the first segment of the angle you
-wish to measure, then move the cursor to draw the desired angle. The measurement
-is displayed in a pop-up dialog.
+|measureAngle| :sup:`Measure Angle`: You can also measure angles.
+The cursor becomes cross-shaped.
+Click to draw the first segment of the angle you wish to measure,
+then move the cursor to draw the desired angle.
+The measurement is displayed in a pop-up dialog.
 
 .. _figure_measure_angle:
 
