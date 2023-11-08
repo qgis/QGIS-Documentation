@@ -71,7 +71,7 @@ Creating a unit test
 
 Creating a unit test is easy - typically you will do this by just creating a
 single :file:`.cpp` file (no :file:`.h` file is used) and implement all your
-test methods as public methods that return void. We'll use a simple test class for
+test methods as private methods that return void. We'll use a simple test class for
 ``QgsRasterLayer`` throughout the section that follows to illustrate. By convention
 we will name our test with the same name as the class they are testing but
 prefixed with 'Test'. So our test implementation goes in a file called
