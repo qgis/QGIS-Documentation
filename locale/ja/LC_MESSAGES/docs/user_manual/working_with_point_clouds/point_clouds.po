@@ -64,7 +64,7 @@ msgid ""
 "tile.html>`_"
 msgstr ""
 "QGISは、Entwine Point Tile "
-"(EPT)とLAS/LAZのデータ形式をサポートしています。点群データを扱う場合、QGISは常にEPTでデータを保存します。EPTは、共通のフォルダに保存された複数のファイルで構成される保存形式です。データに素早くアクセスできるように、EPTはインデックスを使っています。EPT形式の詳細については、`entwine"
+"(EPT)とLAS/LAZのデータ形式をサポートしています。点群データを扱う場合、QGISは常にEPTでデータを保存します。EPTは、共通のフォルダーに保存される複数のファイルで構成された保存形式です。データに素早くアクセスできるように、EPTはインデックスを使います。EPT形式の詳細については、`entwine"
 " homepage <https://entwine.io/entwine-point-tile.html>`_ を参照してください。"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:37
@@ -78,7 +78,7 @@ msgid ""
 msgstr ""
 "データがLASまたはLAZ形式の場合、QGISは初回に読み込む時にEPTに変換します。ファイルの大きさによっては、これに時間がかかる場合があります。この処理では、LAS/LAZファイルがあるフォルダに、"
 " :file:`ept_` + :file:`name_LAS/LAZ_file` "
-"というスキームでサブフォルダが作られます。そのようなサブフォルダがすでに存在する場合、QGISはEPTをすぐに読み込みます（読み込み時間の短縮につながります）。"
+"というスキームでサブフォルダーが作られます。そのようなサブフォルダーがすでに存在する場合、QGISはEPTをすぐに読み込みます（読み込み時間の短縮につながります）。"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:44
 msgid "**Worth Knowing**"
@@ -303,7 +303,7 @@ msgid ""
 "Use this process only if the CRS applied to the layer is a wrong one or if "
 "none was applied."
 msgstr ""
-":guilabel:`割り当てられた座標参照系(CRS)`： ここではレイヤに割り当てられている :ref:`座標参照系 <layer_crs>` "
+":guilabel:`設定されたCRS`： ここではレイヤに割り当てられている :ref:`座標参照系 <layer_crs>` "
 "を変更することができます。ドロップダウンリストで最近使用したものを選択するか、|setProjection| set Projection Select"
 " CRS ボタンをクリックします(参照 :ref:`crs_selector`)。この処理は、レイヤに適用されている CRS "
 "が誤っている場合や、何も適用されていない場合にのみ使用します。"
@@ -314,7 +314,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:147
 msgid "Point cloud source tab"
-msgstr "点群ソースタブ"
+msgstr "点群のソースタブ"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:153
 msgid "Symbology Properties"
@@ -782,13 +782,117 @@ msgstr ""
 msgid "Layer Rendering"
 msgstr "レイヤレンダリング"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:375
+msgid ""
+"In the :guilabel:`Layer Rendering` section you have the following options to"
+" modify the rendering of the layer:"
+msgstr ":guilabel:`レイヤレンダリング` セクションには、レイヤのレンダリングを変更するための以下のオプションがあります："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:380
+msgid ""
+":guilabel:`Draw order`: allows to control whether point clouds rendering "
+"order on 2d map canvas should rely on their Z value. It is possible to "
+"render :"
+msgstr ""
+":guilabel:`描画順`: "
+"2次元マップキャンバス上の点群のレンダリング順をZ値に依存するかどうかを制御できます。次でレンダリングすることができます:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:384
+msgid ""
+"with the :guilabel:`Default` order in which the points are stored in the "
+"layer,"
+msgstr "点がレイヤに格納されている :guilabel:`デフォルト` 順、"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:385
+msgid ""
+"from :guilabel:`Bottom to top` (points with larger Z values cover lower "
+"points giving the looks of a true ortho photo),"
+msgstr ":guilabel:`下から上`（Z値が大きい点は低い点を覆い、真のオルソ写真のように見える）、"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:387
+msgid ""
+"or from :guilabel:`Top to bottom` where the scene appears as viewed from "
+"below."
+msgstr "または、情景を下から見ているように見える :guilabel:`上から下`。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:391
+msgid ""
+":guilabel:`Maximum error`: Point clouds usually contains more points than "
+"are needed for the display. By this option you set how dense or sparse the "
+"display of the point cloud will be (this can also be understood as 'maximum "
+"allowed gap between points'). If you set a large number (e.g. 5 mm), there "
+"will be visible gaps between points. Low value (e.g. 0.1 mm) could force "
+"rendering of unnecessary amount of points, making rendering slower "
+"(different units can be selected)."
+msgstr ""
+":guilabel:`最大エラー`: "
+"点群には通常、表示に必要な以上の点が含まれています。このオプションで、点群の表示をどの程度密にするか、または疎にするかを設定します（これは「点間の最大許容ギャップ」とも理解できます）。大きな数値（例：5"
+" "
+"mm）を設定すると、点と点の間に目に見える隙間ができます。低い値（例：0.1mm）を設定すると、不必要な量の点をレンダリングすることになり、レンダリングが遅くなります（異なる単位を選択することができます）。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:398
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your layer"
+" to your needs. You can also make a precise definition of the percentage of "
+"visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`不透明度`： "
+"このツールでマップキャンバスの下にあるレイヤを表示させることができます。スライダーを使ってレイヤの可視性をニーズに合わせて調整します。また、スライダーの横のメニューで可視性のパーセンテージを正確に定義することもできます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:403
+msgid ""
+":guilabel:`Blending mode`: You can achieve special rendering effects with "
+"this tool. The pixels of your overlaying and underlying layers are mixed "
+"through the settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`混合モード`： "
+"このツールで特殊なレンダリング効果を得ることができます。オーバーレイレイヤとその下のレイヤのピクセルは、:ref:`blend-modes` "
+"で説明されている設定によって混合されます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:407
+msgid ""
+":guilabel:`Eye dome lighting`: this applies shading effects to the map "
+"canvas for a better depth rendering. Rendering quality depends on the "
+":ref:`draw order <point_cloud_draw_order>` property; the :guilabel:`Default`"
+" draw order may give sub-optimal results. Following parameters can be "
+"controlled:"
+msgstr ""
+":guilabel:`アイドーム照明`: これはマップキャンバスにシェーディング効果を適用し、より良い深度レンダリングを行います。レンダリングの品質は "
+":ref:`draw order <point_cloud_draw_order>` プロパティに依存します。:guilabel:`デフォルト` "
+"の描画順では最適な結果が得られないかもしれません。以下のパラメータを制御することができます:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:412
+msgid ""
+":guilabel:`Strength`: increases the contrast, allowing for better depth "
+"perception"
+msgstr ":guilabel:`強度`: コントラストを増加し、奥行き感を与えます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:413
+msgid ""
+":guilabel:`Distance`: represents the distance of the used pixels off the "
+"center pixel and has the effect of making edges thicker."
+msgstr ":guilabel:`距離`: 中心ピクセルからの使用ピクセルの距離を表し、エッジを太くする効果があります。"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:420
 msgid "3D View Properties"
 msgstr "3Dビュープロパティ"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:422
+msgid ""
+"In the |3d| :guilabel:`3D View` tab you can make the settings for the "
+"rendering of the point cloud in 3D maps."
+msgstr "|3d| :guilabel:`3Dビュー` タブでは、3Dマップでの点群のレンダリングの設定を行うことができます。"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:426
 msgid "3D Rendering modes"
 msgstr "3Dレンダリングモード"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:428
+msgid ""
+"Following options can be selected from the drop down menu at the top of the "
+"tab:"
+msgstr "タブ上部のドロップダウンメニューから以下のオプションが選択できます："
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:430
 msgid ":guilabel:`No Rendering`: Data are not displayed"
@@ -813,6 +917,40 @@ msgstr ""
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:623
 msgid "singleColor"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:435
+msgid ""
+"|singlebandPseudocolor| :guilabel:`Attribute by Ramp`: Interpolates a given "
+"attribute over a color ramp and assigns to features their matching color. "
+"See :ref:`point_cloud_ramp`."
+msgstr ""
+"|singlebandPseudocolor| :guilabel:`ランプによる属性`： "
+"指定された属性をカラーランプで補間し、それにマッチする色を地物に割り当てます。:ref:`point_cloud_ramp` を参照。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:438
+msgid ""
+"|multibandColor| :guilabel:`RGB`: Use different attributes of the features "
+"to set the Red, Green and Blue color components to assign to them. See "
+":ref:`point_cloud_rgb`."
+msgstr ""
+"|multibandColor| :guilabel:`RGB`： "
+"地物に割り当てる赤、緑、青の色成分を設定するために、地物の異なる属性を使います。:ref:`point_cloud_rgb` を参照。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:441
+msgid ""
+"|paletted| :guilabel:`Classification`: differentiates points by color on the"
+" basis of an attribute. See :ref:`point_cloud_classification`."
+msgstr ""
+"|paletted| :guilabel:`分類`: "
+"属性に基づいてポイントを色で区別します。:ref:`point_cloud_classification` を参照。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:449
+msgid "The point cloud 3D view tab with the classification renderer"
+msgstr "点群3Dビュータブと分類レンダラー"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:452
+msgid "3D Point Symbol"
+msgstr "3D点シンボル"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:484
 msgid "Rendering Properties"
