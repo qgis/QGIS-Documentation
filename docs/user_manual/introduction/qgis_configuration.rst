@@ -902,7 +902,7 @@ Elevation settings
 
 .. _figure_elevation_options:
 
-.. figure:: img/options_3d.png
+.. figure:: img/options_elevation.png
    :align: center
 
    Elevation settings
