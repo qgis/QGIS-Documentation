@@ -11,7 +11,7 @@ into the database and make use of the geographic functions that PostGIS offers.
 While working through this section, you may want to keep a copy of the **PostGIS
 cheat sheet**  available
 from `Boston GIS user group <https://www.bostongis.com/postgis_quickguide.bqg>`_.
-Another useful resource is the `online <https://postgis.net/docs/>`_ PostGIS
+Another useful resource is the `online <https://postgis.net/documentation/>`_ PostGIS
 documentation.
 
 There are also some more extensive tutorials on PostGIS and Spatial Databases
