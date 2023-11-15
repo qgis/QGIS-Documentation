@@ -331,6 +331,7 @@ Available values are:
 * ``image/png; mode=1bit``
 * ``image/png; mode=8bit``
 * ``image/png; mode=16bit``
+* ``image/webp``
 * ``application/dxf``: only layers that have read access in the WFS service are
   exported in the DXF format
 
