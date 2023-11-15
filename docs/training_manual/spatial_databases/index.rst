@@ -15,7 +15,7 @@ Another useful resource is the `online <https://postgis.net/docs/>`_ PostGIS
 documentation.
 
 There are also some more extensive tutorials on PostGIS and Spatial Databases
-created by Boundless Geo that are now hosted on the PostGIS's website:
+created by Boundless that are now hosted on the PostGIS's website:
 
 * `Introduction to PostGIS <https://postgis.net/workshops/postgis-intro/>`_
 * `PostGIS Database Tips and Tricks
