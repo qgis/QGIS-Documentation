@@ -68,6 +68,31 @@ Provided information are:
 * picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access,
   extents, links, contacts, history...
 
+Source Properties
+-----------------
+
+The |system| :guilabel:`Source` tab displays basic information about
+the selected vector tile, including:
+
+* the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;
+* the :guilabel:`Coordinate Reference System`:
+  Displays the layer's
+  :ref:`Coordinate Reference System (CRS) <layer_crs>`.
+  You can change the layer's CRS, by selecting a recently used one in
+  the drop-down list or clicking on the |setProjection|
+  :sup:`Select CRS` button (see :ref:`crs_selector`).
+  Use this process only if the layer CRS is a wrong or not specified.
+  If you wish to reproject your data, use a reprojection algorithm
+  from Processing or
+  :ref:`Save it as new dataset <general_saveas>`.
+
+.. _figure_vector_tile_source:
+
+.. figure:: img/vector_tiles_source.png
+   :align: center
+
+   Vector Tiles Properties - Source Dialog
+
 Symbology and Label Properties
 ------------------------------
 
@@ -104,6 +129,25 @@ There is also the option to import styles. Those styles can be supplied as:
 .. index:: Metadata, Metadata editor, Keyword
 .. _vectortilesmetadatamenu:
 
+Rendering Properties
+--------------------
+
+Under |unchecked| :guilabel:`Scale dependent visibility`,
+you can set the :guilabel:`Maximum (inclusive)`
+and :guilabel:`Minimum (exclusive)` scales,
+defining a range of scales in which features will be visible.
+Out of this range, they are hidden.
+The |mapIdentification| :sup:`Set to current canvas scale` button helps you
+use the current map canvas scale as boundary of the range visibility.
+See :ref:`label_scaledepend` for more information.
+
+.. _figure_vector_tile_rendering:
+
+.. figure:: img/vector_tiles_rendering.png
+   :align: center
+
+   Vector Tiles Properties - Rendering Dialog
+
 Metadata Properties
 -------------------
 
@@ -122,5 +166,13 @@ See :ref:`metadatamenu` for more information.
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
+.. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
