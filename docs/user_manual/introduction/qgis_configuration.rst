@@ -244,6 +244,8 @@ CRS and Transforms Settings
 .. note:: For more information on how QGIS handles layer projection, please
   read the dedicated section at :ref:`label_projections`.
 
+.. _crs_handling_options:
+
 CRS Handling
 ............
 
@@ -346,6 +348,7 @@ You can |symbologyAdd| :sup:`Add`, |symbologyRemove| :sup:`Remove`
 or |toggleEditing| :sup:`Edit` transformations,
 which will be used in any newly created project.
 
+.. _user_defined_crs:
 
 User Defined CRS
 ................
@@ -577,6 +580,8 @@ layers rendering in the map canvas.
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some
   drawing performance`
 
+.. _vector_rendering_options:
+
 Vector rendering settings
 .........................
 
@@ -623,6 +628,8 @@ for rendering vector layers.
     straight line** segments will be used during rendering.
   * :guilabel:`Tolerance type`: it can be *Maximum angle* or *Maximum difference*
     between approximation and curve.
+
+.. _raster_rendering_options:
 
 Raster rendering settings
 .........................
@@ -1330,6 +1337,7 @@ In the dialog, you can:
 The set of default locator filters can be extended by plugins, eg for OSM
 nominatim searches, direct database searching, layer catalog searches, ...
 
+.. _acceleration_options:
 
 Acceleration settings
 ---------------------
@@ -2464,10 +2472,10 @@ This option will restore the panels and toolbars visibility, position, and size.
 Unless it's changed again, the default UI settings will be used in the following
 sessions.
 
-Notice that this option doesn't have any effect on :ref:`GUI
-customization<sec_customization>`. Items hidden by GUI customization (e.g. the
-status bar) will remain hidden even using the ``--defaultui`` option. See also
-the ``--nocustomization`` option.
+Notice that this option doesn't have any effect on :ref:`GUI customization <sec_customization>`.
+Items hidden by GUI customization (e.g. the status bar) will remain hidden
+even using the ``--defaultui`` option.
+See also the ``--nocustomization`` option.
 
 ``--hide-browser``
 ..................
