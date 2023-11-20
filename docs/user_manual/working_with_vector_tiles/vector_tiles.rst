@@ -111,39 +111,81 @@ the selected vector tile, including:
 
 .. _vectortilesstylesmenu:
 
-Symbology and Label Properties
-------------------------------
+Symbology and Labels Properties
+-------------------------------
 
 .. _figure_vector_tile_symbology:
 
 .. figure:: img/vector_tiles_symbology.png
    :align: center
+   :width: 100%
 
    Vector Tile Layer Symbology
 
-As vector tiles consist of point, line and polygon geometries, the respective symbols are available. 
-To apply a cartographic style you need to use a :guilabel:`Style URL` when
-creating the :guilabel:`Vector Tiles Connection`. The symbology will be
-shown immediately in the |symbology| :guilabel:`Symbology` tab after clicking the
-:guilabel:`OK` button.
+Setting rules
+.............
 
-To create your own cartographic style you can define a set of :ref:`rules <rule_based_rendering>` for features and
-apply style and label. In :numref:`figure_vector_tile_symbology` we set up style and
-labeling for the OpenStreetMap ``landuse`` layer.
-The settings are made for the class ``suburb`` here. For better visibility most of
-the rules are deselected. 
+As vector tiles consist of point, line and polygon geometries, the respective symbols are available.
+To apply a cartographic style (with symbology and/or labels), you can either:
 
-At the bottom the :guilabel:`Current Zoom` is shown. Check the :guilabel:`Visible
-rules only` option to filter the list of rules to only those that are visible
-at the given zoom level. This makes it easier to work with complex vector styling
-and to locate troublesome rules. Style and labelling can be dependent on the
-zoom level.
+* Use a :guilabel:`Style URL` when creating the :ref:`Vector Tiles Connection <vector_tiles>`.
+  The symbology will be shown immediately in the |symbology| :guilabel:`Symbology` tab
+  after the layer is loaded in QGIS.
+* Or build your own symbology and labeling in the corresponding tabs of the layer properties.
+  By default, QGIS assigns an identical symbol to the features based on their geometry type.
 
-There is also the option to import styles. Those styles can be supplied as:
+In both cases, setting a style for a vector tile relies on a set of :ref:`rules <rule_based_rendering>`
+applied to the features, indicating:
+
+* a vector :ref:`symbol <symbol-selector>` or :ref:`label <showlabels>`
+* a :guilabel:`Label`, a title for comprehensive identification of the rule
+* the name of a particular :guilabel:`Layer` the rule should apply to, if not applied to ``(all layers)``
+* a :guilabel:`Min. Zoom` and a :guilabel:`Max. Zoom`, for the range of display.
+  symbology and labelling can be dependent on the zoom level.
+* a :guilabel:`Filter`, a QGIS expression to identify the features to apply the style to
+
+Each rule is added pressing the |symbologyAdd| :sup:`Add rule` button
+and selecting the type of symbols (:guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill`)
+corresponding to the features geometry type.
+You can as well |symbologyRemove| :sup:`Remove selected rules` or |symbologyEdit| :sup:`Edit current rule`.
+
+At the bottom the :guilabel:`Current Zoom` is shown.
+Check the |unchecked| :guilabel:`Visible rules only` option at the top of the dialog
+to filter the list of rules to only those that are visible at the current zoom level.
+This makes it easier to work with complex vector styling and to locate troublesome rules.
+The |search| :guilabel:`Filter rules` text box also helps you easily find a rule,
+by searching the :guilabel:`Label`, :guilabel:`Layer` and :guilabel:`Filter` fields.
+
+In :numref:`figure_vector_tile_symbology` we set up style for the OpenStreetMap ``landuse`` layer.
+The settings are made for the class ``suburb`` here.
+For better visibility most of the rules are deselected.
+
+Layer rendering
+...............
+
+From the :guilabel:`Symbology` tab, you can also set some options that invariably act
+on all features of the layer:
+
+* :guilabel:`Opacity`: You can make the underlying layer in the map canvas visible with this tool.
+  Use the slider to adapt the visibility of your vector layer to your needs.
+  You can also make a precise definition of the percentage of visibility in the menu beside the slider.
+* :guilabel:`Blending mode`: You can achieve special rendering effects with these tools
+  that you may previously only know from graphics programs.
+  The pixels of your overlaying and underlaying layers are mixed through the settings
+  described in :ref:`blend-modes`.
+
+Styles
+......
+
+Available at the bottom of most of the tabs, the :menuselection:`Styles -->` menu provides shortcuts
+to save, load, create, switch styles to apply to the vector tiles.
+Vector tiles can have their style saved from QGIS as :guilabel:`QML` files
+and they can be imported as:
 
 * :guilabel:`QML` files (:ref:`qgisstylefile`)
 * :guilabel:`MapBox GL Json` style configuration files
 
+More details at :ref:`save_layer_property`.
 
 .. _vectortilesrenderingmenu:
 
@@ -165,6 +207,7 @@ See :ref:`label_scaledepend` for more information.
    :align: center
 
    Vector Tiles Properties - Rendering Dialog
+
 
 .. index:: Metadata, Metadata editor, Keyword
 .. _vectortilesmetadatamenu:
@@ -195,10 +238,18 @@ See :ref:`metadatamenu` for more information.
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
+.. |search| image:: /static/common/search.png
+   :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
