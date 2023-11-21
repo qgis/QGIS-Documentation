@@ -46,13 +46,29 @@ There is support for vector tiles through:
 * local MBTiles database - e.g. ``type=mbtiles&url=file:///path/to/file.mbtiles``
 
 To load a vector tiles dataset into QGIS, use the |addVectorTileLayer| :guilabel:`Vector Tile` tab
-in the :guilabel:`Data Source Manager` dialog. Read :ref:`vector_tiles` for
-more details.
+in the :guilabel:`Data Source Manager` dialog.
+Read :ref:`vector_tiles` for more details.
 
 .. _vectortiles_properties:
 
 Vector Tiles Dataset Properties
 ===============================
+
+The vector tiles :guilabel:`Layer Properties` dialog provides the following sections:
+
+.. list-table::
+
+   * - |metadata| :ref:`Information <vectortilesinformationmenu>`
+     - |system| :ref:`Source <vectortilessourcemenu>`
+     - |symbology| :ref:`Symbology <vectortilesstylesmenu>`:sup:`[1]`
+   * - |labelingSingle| :ref:`Labels <vectortilesstylesmenu>`:sup:`[1]`
+     - |rendering| :ref:`Rendering <vectortilesrenderingmenu>`
+     - |editMetadata| :ref:`Metadata <vectortilesmetadatamenu>`
+
+:sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
+
+
+.. _vectortilesinformationmenu:
 
 Information Properties
 ----------------------
@@ -67,6 +83,33 @@ Provided information are:
   (i.e. whether it's static or dynamic)
 * picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access,
   extents, links, contacts, history...
+
+.. _vectortilessourcemenu:
+
+Source Properties
+-----------------
+
+The |system| :guilabel:`Source` tab displays basic information about
+the selected vector tile, including:
+
+* the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;
+* the :guilabel:`Coordinate Reference System`:
+  Displays the layer's
+  :ref:`Coordinate Reference System (CRS) <layer_crs>`.
+  You can change the layer's CRS, by selecting a recently used one in
+  the drop-down list or clicking on the |setProjection|
+  :sup:`Select CRS` button (see :ref:`crs_selector`).
+  Use this process only if the layer CRS is wrong or not specified.
+
+.. _figure_vector_tile_source:
+
+.. figure:: img/vector_tiles_source.png
+   :align: center
+
+   Vector Tiles Properties - Source Dialog
+
+
+.. _vectortilesstylesmenu:
 
 Symbology and Label Properties
 ------------------------------
@@ -101,6 +144,28 @@ There is also the option to import styles. Those styles can be supplied as:
 * :guilabel:`QML` files (:ref:`qgisstylefile`)
 * :guilabel:`MapBox GL Json` style configuration files
 
+
+.. _vectortilesrenderingmenu:
+
+Rendering Properties
+--------------------
+
+Under |unchecked| :guilabel:`Scale dependent visibility`,
+you can set the :guilabel:`Maximum (inclusive)`
+and :guilabel:`Minimum (exclusive)` scales,
+defining a range of scales in which features will be visible.
+Out of this range, they are hidden.
+The |mapIdentification| :sup:`Set to current canvas scale` button helps you
+use the current map canvas scale as boundary of the range visibility.
+See :ref:`label_scaledepend` for more information.
+
+.. _figure_vector_tile_rendering:
+
+.. figure:: img/vector_tiles_rendering.png
+   :align: center
+
+   Vector Tiles Properties - Rendering Dialog
+
 .. index:: Metadata, Metadata editor, Keyword
 .. _vectortilesmetadatamenu:
 
@@ -122,5 +187,19 @@ See :ref:`metadatamenu` for more information.
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
+.. |labelingSingle| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
