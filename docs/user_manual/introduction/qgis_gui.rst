@@ -1514,10 +1514,10 @@ are enabled.
      -
      -
      - :ref:`label_raster_calc`
-   * - :guilabel:`Align Raster...`
+   * - :guilabel:`Align Rasters...`
      -
      -
-     - :ref:`label_raster_align`
+     - :ref:`qgisalignrasters`
    * - :menuselection:`Analysis -->`
      -
      -
