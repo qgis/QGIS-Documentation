@@ -331,6 +331,7 @@ Available values are:
 * ``image/webp``
 * ``application/dxf``: only layers that have read access in the WFS service are
   exported in the DXF format
+* ``application/pdf``
 
   URL example:
 
