@@ -99,10 +99,7 @@ the selected vector tile, including:
   You can change the layer's CRS, by selecting a recently used one in
   the drop-down list or clicking on the |setProjection|
   :sup:`Select CRS` button (see :ref:`crs_selector`).
-  Use this process only if the layer CRS is a wrong or not specified.
-  If you wish to reproject your data, use a reprojection algorithm
-  from Processing or
-  :ref:`Save it as new dataset <general_saveas>`.
+  Use this process only if the layer CRS is wrong or not specified.
 
 .. _figure_vector_tile_source:
 
