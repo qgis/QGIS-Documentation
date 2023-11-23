@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
-# tomoya miyoshi, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-19 16:06+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3319,7 +3319,7 @@ msgid ""
 " when designing your diagram, you can easily change the diagram type and "
 "check which one is more appropriate to your data without any loss."
 msgstr ""
-"さまざまなダイアグラムで設定がほぼ共通していることから、ダイアグラムを設計する際には設定を失うことなくダイアグラムの種類を気軽に変更でき、どれがよりデータに適しているかを確認することができます。"
+"様々なダイアグラムで設定がほぼ共通していることから、ダイアグラムを設計するときには、設定を失うことなくダイアグラムの種類を気軽に変更して、どれがよりデータに適しているかを確認することができます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1758
 msgid ""
@@ -3497,11 +3497,11 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1845
 msgid ""
 "or :guilabel:`Scaled size`, based on an expression using layer attributes:"
-msgstr ":guilabel:`可変サイズ` ：レイヤの属性を使用した式に基づいたサイズを使用します。"
+msgstr ":guilabel:`可変サイズ` ：レイヤの属性を使用した式に基づいたサイズを使用します:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1847
 msgid "In :guilabel:`Attribute`, select a field or build an expression"
-msgstr ":guilabel:`属性` で、フィールドを選択するか式を構築します。"
+msgstr ":guilabel:`属性` で、フィールドを選択するか式を構築します"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1848
 msgid ""
@@ -3509,6 +3509,15 @@ msgid ""
 "attribute or enter a custom value in the widget."
 msgstr ""
 ":guilabel:`検索` ボタンを押して属性値の :guilabel:`最大値` を求めるか、このウィジェットにカスタム値を入力します。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1850
+msgid ""
+"For histogram and stacked bars, enter a :guilabel:`Bar length` value, used "
+"to represent the :guilabel:`Maximum value` of the attributes. For each "
+"feature, the bar length will then be scaled linearly to keep this matching."
+msgstr ""
+"ヒストグラムと積み上げ棒グラフでは、属性の :guilabel:`最大値` に対応する :guilabel:`バーの長さ` "
+"の値を入力します。各地物について、バーの長さはこの対応関係を維持するために線形にスケーリングされます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1854
 msgid ""
@@ -3754,6 +3763,24 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2001
 msgid "3D properties of a point layer"
 msgstr "ポイントレイヤの3Dプロパティ"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2003
+msgid ""
+"**Prefer the** :guilabel:`Elevation` **tab for symbol elevation and terrain "
+"settings**"
+msgstr "**シンボルの標高と地形の設定** は、:guilabel:`標高` タブが望ましい**"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2005
+msgid ""
+"Features' elevation and altitude related properties (:guilabel:`Altitude "
+"clamping`, :guilabel:`Altitude binding`, :guilabel:`Extrusion` or "
+":guilabel:`Height`) in the :guilabel:`3D View` tab inherit their default "
+"values from the layer's :ref:`Elevation properties <vectorelevationmenu>` "
+"and should preferably be set from within the :guilabel:`Elevation` tab."
+msgstr ""
+":guilabel:`3Dビュー` タブにある地物の標高と高度に関連するプロパティ（:guilabel:`標高の制約`、 "
+":guilabel:`標高の拘束`、 :guilabel:`押し出し` または :guilabel:`高さ`）は、レイヤの :ref:`標高プロパティ "
+"<vectorelevationmenu>` からデフォルト値を継承するので、 :guilabel:`標高` タブ内で設定することが望ましい。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2011
 msgid ""
@@ -4088,7 +4115,7 @@ msgid ""
 "The first step is to use the |symbologyAdd| :sup:`Add a new tab or group to "
 "the form layout` icon. Fields and other groups will be displayed in it."
 msgstr ""
-"最初に|symbologyAdd| :sup:`フォームレイアウトに新しいタブまたはグループを追加します` "
+"最初に |symbologyAdd| :sup:`フォームレイアウトに新しいタブまたはグループを追加します` "
 "アイコンを使います。フィールドや他のグループがその中に表示されます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2168
@@ -4150,6 +4177,15 @@ msgid ""
 "group box and vice versa"
 msgstr "|checkbox|:guilabel:`グループボックスとして表示`: タブをトップレベルのグループボックスに変換します"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2193
+msgid ""
+"in case of a group box, set whether at the form opening, it should show as "
+":guilabel:`Collapsed` for every features, or only for those matching an "
+"expression (:guilabel:`Control collapsed by expression`)."
+msgstr ""
+"グループボックスの場合、フォームを開いたときに、すべての地物に対して :guilabel:`Collapsed` "
+"して表示するか、式にマッチする地物に対してのみ表示（:guilabel:`式によって折り畳みを制御`）するかを設定します。"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2196
 msgid ""
 "configure the :guilabel:`Style` look of the container, with custom "
@@ -4162,8 +4198,15 @@ msgid ""
 "You can create and embed as many containers as you want by pressing again "
 "the |symbologyAdd| :sup:`Add a new tab or group to the form layout` icon."
 msgstr ""
-"|symbologyAdd|: sup:`フォームレイアウトに新しいタブまたはグループを追加します` "
+"|symbologyAdd| :sup:`フォームレイアウトに新しいタブまたはグループを追加します` "
 "アイコンをもう一度押すと、好きなだけコンテナを作成し、埋め込むことができます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2201
+msgid ""
+"The next step is to assign the relevant fields to each container, by simple "
+"drag and drop. Group boxes and tabs can also be moved the same way."
+msgstr ""
+"次のステップとして、単純なドラッグ・アンド・ドロップで、関連するフィールドを各コンテナに割り当てます。グループボックスやタブも同じ方法で移動できます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2203
 msgid ":ref:`Customize the widget <configure_field>` of the fields in use"
@@ -4206,6 +4249,14 @@ msgstr ""
 ":guilabel:`アクション` "
 "の下にアクションが表示され、その他のフィールドと同様にドラッグ＆ドロップできます。関連付けられたアクションは、現在のレイヤのフォームの指定した場所に埋め込まれます。"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2219
+msgid ""
+"Further customize the form by adding one or more widgets from "
+":guilabel:`Other Widgets` (see :ref:`other_widgets`)"
+msgstr ""
+"さらに :guilabel:`他のウィジェット` "
+"から一つ以上のウィジェットを追加してフォームをカスタマイズします（:ref:`other_widgets` を参照）"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2221
 msgid "Apply the layer's properties dialog"
 msgstr "レイヤのプロパティダイアログの適用ボタンを押します。"
@@ -4215,6 +4266,32 @@ msgid ""
 "Open a feature attribute form (eg, using the |identify| :sup:`Identify "
 "features` tool) and it should display the new form."
 msgstr "地物属性フォームを開く（例えば |identify| :sup:`地物情報表示` ツール）と、新しいフォームが表示されます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2228
+msgid "Other Widgets"
+msgstr "他のウィジェット"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2230
+msgid ""
+"The drag and drop designer offers a number of widgets that are not connected"
+" to a particular field. They can be used to enhance the appearance of the "
+"form or to display dynamically calculated values."
+msgstr ""
+"ドラッグ＆ドロップデザイナーには、特定のフィールドに接続されていないウィジェットが多数用意されています。これらはフォームの外観を向上させたり、動的に計算された値を表示するために使用できます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2233
+msgid ""
+":guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain "
+"the result of dynamically calculated expressions."
+msgstr ""
+":guilabel:`HTMLウィジェット`: HTMLページを埋め込みます。そのHTMLソースは、動的に計算された式の結果を含めることができます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2234
+msgid ""
+":guilabel:`QML Widget`: embeds a QML page, the QML source may contain the "
+"result of dynamically calculated expressions."
+msgstr ""
+":guilabel:`QMLウィジェット`: QMLページを埋め込みます。そのQMLソースは動的に計算された式の結果を含めることができます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2239
 msgid "Using custom ui-file"
@@ -4332,6 +4409,35 @@ msgstr "フィールドに適用するウィジェットの種類に関係なく
 msgid "Widget display"
 msgstr "ウィジェットの表示"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2314
+msgid ""
+"Only available for the :ref:`Drag and drop <drag_drop_designer>` designer "
+"mode, this group helps you configure the look of the widget assigned to the "
+"field:"
+msgstr ""
+":ref:`ドラッグ＆ドロップ <drag_drop_designer>` "
+"デザイナーモードでのみ利用でき、このグループはフィールドに割り当てられたウィジェットの外観を設定するのに役立ちます:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2317
+msgid ""
+":guilabel:`Show label`: indicates whether the field name should be displayed"
+" in the form"
+msgstr ":guilabel:`表示`: フィールド名をフォームに表示するかどうかを指定します"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2318
+msgid ""
+":guilabel:`Override label color`: applies specific color to the field's "
+"label"
+msgstr ":guilabel:`ラベルの色を上書き`: フィールドのラベルに特定の色を適用します"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2319
+msgid ""
+":guilabel:`Override label font`: applies specific font properties (bold, "
+"italic, underline, strikethrough, or font family) to the field's label"
+msgstr ""
+":guilabel:`ラベルのフォントを上書き`: "
+"フィールドのラベルに特定のフォントプロパティ（太字、斜体、下線、取り消し線、フォントファミリー）を適用します"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2323
 msgid "General options"
 msgstr "一般情報"
@@ -4394,7 +4500,7 @@ msgid ""
 "<vector_expressions>`. For example, you can:"
 msgstr ""
 ":guilabel:`デフォルト値` ：新しい地物に対して、デフォルトでフィールドを定義済みの値または :ref:`式ベースの値 "
-"<vector_expressions>` で自動的に入力します。例を挙げると、以下のような値を定義できます。"
+"<vector_expressions>` で自動的に入力します。例を挙げると、以下のような値を定義できます:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2350
 msgid ""
@@ -5269,6 +5375,30 @@ msgstr ""
 msgid ":guilabel:`Open URL`: Uses a HTTP GET request to open a provided URL."
 msgstr ":guilabel:`URLを開く`: 与えられたURLを開くHTTP GETリクエストを使います。"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2795
+msgid ""
+":guilabel:`Submit URL (urlencoded or JSON)`: Same as the :guilabel:`Open "
+"URL` action but using a HTTP POST request. Data are posted to a URL, using "
+"\"application/x-www-form-urlencoded\" or \"application/json\" if the body is"
+" a valid JSON."
+msgstr ""
+":guilabel:`URL送信 (urlencoded/JSON)`： :guilabel:`URLを開く` アクションと同じですが、HTTP "
+"POSTリクエストを使います。データは、\"application/x-www-form-urlencoded\"、またはボディが有効なJSONの場合は"
+" \"application/json \"を使って、URLにポストされます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2800
+msgid "An example of action call could be::"
+msgstr "アクションの呼び出しの例は次のようなものになります::"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2804
+msgid ""
+":guilabel:`Submit URL (multipart)`: Same as the :guilabel:`Open URL` action "
+"but using a HTTP POST request. Data are posted to a URL, using "
+"\"multipart/form-data\"."
+msgstr ""
+":guilabel:`URL送信 (multipart)`：:guilabel:`URLを開く` アクションと同じですが、HTTP "
+"POSTリクエストを使います。データは\"multipart/form-data\"を使ってURLに投稿されます。"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2808
 msgid ""
 "There are several examples included in the dialog. You can load them by "
@@ -5320,11 +5450,11 @@ msgid ""
 " script or command. Double quotes will be ignored if preceded by a "
 "backslash."
 msgstr ""
-"アクションの :guilabel:`データ型` "
-"を選択し、アクションのわかりやすい名前を指定します。アクション自体には、アクションが呼び出されたときに実行されるアプリケーションの名前が含まれている必要があります。アプリケーションへの引数として、1つ以上の属性フィールドの値を追加できます。アクションが呼び出されると、"
+"アクションの :guilabel:`型` "
+"を選択し、アクションにわかりやすい名前を与えます。アクション自体には、アクションが呼び出されたときに実行されるアプリケーションの名前が含まれている必要があります。アプリケーションへの引数として、1つ以上の属性フィールドの値を追加できます。アクションが呼び出されると、"
 " ``%`` で始まるフィールド名の文字列は、そのフィールドの値に置き換えられます。特別な文字列 ``%%`` "
 "は、地物情報表示結果や属性テーブルから選択されたフィールドの値に置き換えられます（:ref:`using_actions` "
-"を参照）。二重引用符は、テキストをプログラムやスクリプト、コマンドの単一引数にまとめるために使用することができます。二重引用符の前にバックスラッシュを付けた場合、二重引用符は無視されます。"
+"を参照）。二重引用符は、テキストをプログラムやスクリプト、コマンドの単一引数にまとめるために使用することができます。バックスラッシュが前置された二重引用符は無視されます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2841
 msgid ""
@@ -5562,6 +5692,10 @@ msgstr ":guilabel:`アクション` タブをクリックします。"
 msgid "Click |symbologyAdd| :sup:`Add a new action`."
 msgstr "|symbologyAdd| :sup:`アクションを追加` ボタンをクリックします。"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2952
+msgid "Choose the :guilabel:`Open URL` action type,"
+msgstr "アクション型に :guilabel:`URLを開く` を選択し、"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2953
 msgid "Enter a name for the action, for example ``Google Search``."
 msgstr "アクションの名前を入力します。例えば ``Google 検索`` など。"
@@ -5570,7 +5704,7 @@ msgstr "アクションの名前を入力します。例えば ``Google 検索``
 msgid ""
 "Additionally you can add a :guilabel:`Short Name` or even an "
 ":guilabel:`Icon`."
-msgstr "さらに :guilabel:`短い名前` や :guilabel:`アイコン` も追加することができます。"
+msgstr "さらに :guilabel:`短いタイトル` や :guilabel:`アイコン` も追加することができます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2955
 msgid ""
@@ -6108,6 +6242,28 @@ msgstr ""
 ":guilabel:`地形の高さ`: 地形の高さから直接標高を取得し、地物内の既存のZ値を無視します。データ定義の地形からの "
 ":guilabel:`オフセット` 値を入力することもできます。"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3300
+msgid ""
+":guilabel:`Relative to terrain`: any existing Z values in the features are "
+"added to the terrain height. A :guilabel:`Scale` factor followed by a data-"
+"defined :guilabel:`Offset` can be used to adjust the elevation. This option "
+"is not available for 2D geometry layers."
+msgstr ""
+":guilabel:`地形に相対的`: 地物にあるZ値が地形の高さに加算されます。:guilabel:`スケール` 係数とデータ定義の "
+":guilabel:`オフセット` を使って標高を調整することができます。このオプションは2Dジオメトリレイヤでは利用できません。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3304
+msgid ""
+":guilabel:`Absolute`: ignores the terrain height and directly takes Z values"
+" from the features for the elevation. A :guilabel:`Scale` factor followed by"
+" a data-defined :guilabel:`Offset` can be used to adjust the elevation. For "
+"2D geometry layers (with no Z values), a data-defined :guilabel:`Base "
+"height` can instead be set."
+msgstr ""
+":guilabel:`地物の絶対位置`: 地形の高さを無視し、地物のZ値を直接標高に使います。:guilabel:`スケール` 係数とデータ定義の "
+":guilabel:`オフセット` を使って標高を調整することができます。2Dジオメトリレイヤ（Z値を持たない）の場合、代わりにデータ定義の "
+":guilabel:`基準高` を設定することができます。"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3309
 msgid ""
 "|unchecked| :guilabel:`Enable extrusion`: you can set a :guilabel:`Height` "
@@ -6118,6 +6274,28 @@ msgstr ""
 "|unchecked|:guilabel:`押し出しを有効化`: :guilabel:`高さ` "
 "を設定することで、地物がベースから垂直方向にどれだけ高く伸びるかを制御することができます。これは、2Dジオメトリレイヤ、例えばポリゴンの建物の足跡レイヤが、実際には3Dオブジェクトを表していることを示すのに便利です。"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3313
+msgid ""
+":guilabel:`Elevation Binding`: only relevant when combining an "
+":guilabel:`Elevation clamping` relying on the terrain with a line or polygon"
+" layer, this option controls how feature elevation is set relative to the "
+"terrain height. The terrain can be sampled:"
+msgstr ""
+":guilabel:`標高バインディング`: :guilabel:`標高クランピング` "
+"に依存する地形をラインレイヤまたはポリゴンレイヤと組み合わせる場合にのみ関係するオプションで、地形の高さに対する地物の標高の設定方法を制御します。地形は次の位置からサンプリングすることができます:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3318
+msgid ""
+"at the feature's :guilabel:`Centroid`, with the centroid height being added "
+"to each vertex's z value"
+msgstr "地物の :guilabel:`重心` では、各頂点のz値に重心の高さが加えられます"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3320
+msgid ""
+"at every individual :guilabel:`Vertex` before being added to the vertex's z "
+"value"
+msgstr "個々の :guilabel:`頂点` では、その頂点のz値に加えられる前に"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3323
 msgid ""
 ":guilabel:`Profile Chart Appearance`: controls how features are rendered "
@@ -6126,6 +6304,86 @@ msgid ""
 msgstr ""
 ":guilabel:`断面図の外観`: 断面図を描画する際に、地物をどのように表示するかを制御します。主に2つの :guilabel:`解釈` "
 "モードが利用できます："
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3327
+msgid ""
+"as :guilabel:`Individual features`: samples discrete positions where the "
+"cross section profile line intersects the vector features. That intersection"
+" can be represented as point, line or surface depending on the layer type "
+"and whether an extrusion is applied."
+msgstr ""
+":guilabel:`各地物`: "
+"断面図線がベクタ地物と交差する離散的な位置をサンプリングします。この交差はレイヤの種類や押し出しの有無によって、点、線、面として表現されます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3332
+msgid ""
+"With checking |checkbox| :guilabel:`Respect layer symbology`, features will "
+"be rendered on the profile chart with their corresponding :ref:`layer "
+"styling <vector_style_menu>` (allowing e.g. categorized classes to be "
+"visible on the profile chart). If the profile symbol type does not match the"
+" layer's renderer symbol types, only the symbol color from the renderer is "
+"applied to the profile symbol."
+msgstr ""
+"|checkbox| :guilabel:`レイヤのシンボルに従う` をチェックすると、地物は対応する :ref:`レイヤのスタイル "
+"<vector_style_menu>` "
+"で断面図上にレンダリングされます（例えば、カテゴリ値の分類が断面図上で見えるようになります）。断面図のシンボルの型がレイヤのレンダラのシンボルの型と一致しない場合、レンダラのシンボルの色のみが断面図シンボルに適用されます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3339
+msgid ""
+"Depending on the layer settings, profile symbols can be represented with a "
+"custom style, using:"
+msgstr "レイヤの設定によっては、断面図のシンボルをカスタム・スタイルで表現することができます："
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3342
+msgid ""
+":ref:`Marker style <vector_marker_symbols>`: for non-extruded point and line"
+" features, and for non-extruded polygon features touched by the profile line"
+msgstr ""
+":ref:`マーカースタイル <vector_marker_symbols>`: "
+"押し出しのないポイント地物とライン地物、および断面図線に接する押し出しのないポリゴン地物用"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3344
+msgid ""
+":ref:`Line style <vector_line_symbols>`: for extruded point and line "
+"features, and for non-extruded polygon features intersected by the profile "
+"line"
+msgstr ":ref:`線のスタイル `: 押し出しのあるポイント地物とライン地物、および断面図線と交差する押し出しのないポリゴン地物用"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3346
+msgid ":ref:`Fill style <vector_fill_symbols>`: for extruded polygon features"
+msgstr ":ref:`塗りつぶしスタイル <vector_fill_symbols>`: 押し出しのあるポリゴン地物用"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3348
+msgid ""
+"as :guilabel:`Continuous Surface (e.g. contours)`: the elevation chart will "
+"be rendered as a surface instead of separate features by joining the sampled"
+" elevation results into a continuous line. This can enhance visualisation "
+"and is designed for vector layers which represent a continuous elevation "
+"surface, e.g contour lines or surveyed elevation points. The line "
+":guilabel:`Style` can be set as:"
+msgstr ""
+":guilabel:`連続的サーフェス（等高線など）`: "
+"標高チャートは、サンプリングされた標高の結果を連続した線に結合し、別々の地物ではなくサーフェスとしてレンダリングされます。これは視覚化を向上させることができ、等高線や測量された標高点など、連続した標高面を表すベクタレイヤ用に設計されています。線の"
+" :guilabel:`スタイル` は次のように設定できます："
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3355
+msgid "a profile :guilabel:`Line` with a :guilabel:`Line style` applied"
+msgstr ":guilabel:`線のスタイル` が適用された、断面 :guilabel:`線`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3356
+msgid ""
+"a surface with :guilabel:`Fill below` and a corresponding :guilabel:`Fill "
+"style`"
+msgstr "対応する:guilabel:`塗りつぶしスタイル`で :guilabel:`下を塗りつぶす` されたサーフェス"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3359
+msgid ""
+"Moreover, you can check |unchecked| :guilabel:`Show markers at sampled "
+"points` to make them visible over the interpretation line and assign them a "
+":guilabel:`Marker style`."
+msgstr ""
+"さらに、|unchecked| :guilabel:`マーカーをサンプリング表示` をチェックすることで、判読線上にマーカーを表示し、それらに "
+":guilabel:`マーカースタイル` を割り当てることができます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3368
 msgid "Metadata Properties"
