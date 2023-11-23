@@ -187,11 +187,11 @@ information about the point cloud layer:
 
   .. tip:: **Filtered layers are indicated in the Layers Panel**
 
-  In the :guilabel:`Layers` panel, a filtered layer is listed
-  with a |indicatorFilter| :sup:`Filter` icon next to it
-  indicating the query used when the mouse hovers over the button.
-  Double-click the icon opens the :guilabel:`Query Builder` dialog for edit.
-  This can also be achieved through the :menuselection:`Layer --> Filter...` menu.
+    In the :guilabel:`Layers` panel, a filtered layer is listed
+    with a |indicatorFilter| :sup:`Filter` icon next to it
+    indicating the query used when the mouse hovers over the icon.
+    Double-click the icon to open the :guilabel:`Query Builder` dialog for edit.
+    This can also be achieved through the :menuselection:`Layer --> Filter...` menu.
 
 
 .. _point_clouds_symbology:
