@@ -245,8 +245,8 @@ The parameters found in the table can be of one of the following types.
 .. _reference_layer_param:
 
 .. note:: Some algorithms require many parameters to run, e.g. in the
-  :ref:`qgisrastercalculator` you have to specify manually the cell size, the
-  extent and the CRS. You can avoid to choose all the parameters manually when
+  :ref:`qgisrastercalc` you have to specify manually the cell size, the extent and the CRS.
+  You can avoid to choose all the parameters manually when
   the algorithm has the ``Reference layers`` parameter. With this parameter you
   can choose the reference layer and all its properties (cell size, extent, CRS)
   will be used.
