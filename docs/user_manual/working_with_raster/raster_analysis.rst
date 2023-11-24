@@ -67,7 +67,7 @@ calculations (``+``, ``-``, ``*``, ... ) and trigonometric functions (``sin``,
 used with other operators and functions.
 
 
-.. hint:: See also the :ref:`qgisrastercalculator` algorithm.
+.. seealso:: :ref:`qgisrastercalc` and :ref:`qgisvirtualrastercalc` algorithms
 
 Examples
 --------
@@ -106,8 +106,8 @@ in one step.
 
   ("elevation@1" < 50) * 1 + ("elevation@1" >= 50) * 2
 
-In other words, for every cell less than 50 set its value to 1. For every cell
-greater than or equal 50 set its value to 2.
+In other words, for every cell less than 50 set its value to 1.
+For every cell greater than or equal 50 set its value to 2.
 
 Or you can use the ``IF`` operator. 
 
