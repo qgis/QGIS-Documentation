@@ -2367,7 +2367,7 @@ Parameters
 
        Default: 1
      - The raster band to take the Z values from
-   * - **Value for nodata or non-intersecting vertices**
+   * - **Value for NoData or non-intersecting vertices**
      - ``NODATA``
      - [number |dataDefine|]
 
@@ -6073,7 +6073,7 @@ Parameters
 
        Default: 1
      - The raster band from which the M values are taken
-   * - **Value for nodata or non-intersecting vertices**
+   * - **Value for NoData or non-intersecting vertices**
      - ``NODATA``
      - [number |dataDefine|]
        Default: 0.0

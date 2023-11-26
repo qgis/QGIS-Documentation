@@ -390,14 +390,14 @@ Basic parameters
           :start-after: **extent_options**
           :end-before: **end_extent_options**
 
-   * - **Assign a specified nodata value to output bands**
+   * - **Assign a specified NoData value to output bands**
 
        Optional
      - ``NODATA``
      - [number]
 
        Default: 0.0
-     - Assigns a specified nodata value to output bands
+     - Assigns a specified NoData value to output bands
    * - **Rasterized**
      - ``OUTPUT``
      - [raster]
@@ -460,7 +460,7 @@ Advanced parameters
      - ``INIT``
      - [number]
      - Pre-initializes the output image bands with this value.
-       Not marked as the nodata value in the output file.
+       Not marked as the NoData value in the output file.
        The same value is used in all the bands.
    * - **Invert rasterization**
      - ``INVERT``
