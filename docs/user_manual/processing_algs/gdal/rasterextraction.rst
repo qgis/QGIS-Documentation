@@ -55,14 +55,14 @@ Basic parameters
 
        Default: False
      - If checked, the output file is assigned the input layer CRS.
-   * - **Assign a specified nodata value to output bands**
+   * - **Assign a specified NoData value to output bands**
 
        Optional
      - ``NODATA``
      - [number]
 
        Default: None
-     - Defines a value that should be inserted for the nodata
+     - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Clipped (extent)**
      - ``OUTPUT``
@@ -203,14 +203,14 @@ Basic parameters
           :start-after: **extent_options**
           :end-before: **end_extent_options**
 
-   * - **Assign a specified nodata value to output bands**
+   * - **Assign a specified NoData value to output bands**
 
        Optional
      - ``NODATA``
      - [number]
 
        Default: None
-     - Defines a value that should be inserted for the nodata
+     - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Create an output alpha band**
      - ``ALPHA_BAND``
@@ -442,15 +442,15 @@ Advanced parameters
      - [boolean]
 
        Default: False
-     - Ignores any nodata values in the dataset.
-   * - **Input pixel value to treat as "nodata"**
+     - Ignores any NoData values in the dataset.
+   * - **Input pixel value to treat as "NoData"**
 
        Optional
      - ``NODATA``
      - [number]
 
        Default: None
-     - Defines a value that should be inserted for the nodata
+     - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Additional command-line parameters**
 
@@ -593,15 +593,15 @@ Advanced parameters
      - [boolean]
 
        Default: False
-     - Ignores any nodata values in the dataset.
-   * - **Input pixel value to treat as "nodata"**
+     - Ignores any NoData values in the dataset.
+   * - **Input pixel value to treat as "NoData"**
 
        Optional
      - ``NODATA``
      - [number]
 
        Default: None
-     - Defines a value that should be inserted for the nodata
+     - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Additional command-line parameters**
 

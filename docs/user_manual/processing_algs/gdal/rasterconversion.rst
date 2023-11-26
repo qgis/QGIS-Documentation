@@ -38,28 +38,28 @@ Parameters
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to
        convert
-   * - **Source nodata**
+   * - **Source NoData**
 
        Optional
      - ``NODATA_INPUT``
      - [number]
 
        Default: None
-     - Input pixel value to treat as "nodata" (GDAL >= 3.7).
-   * - **Destination nodata**
+     - Input pixel value to treat as "NoData" (GDAL >= 3.7).
+   * - **Destination NoData**
 
        Optional
      - ``NODATA_OUTPUT``
      - [number]
 
        Default: None
-     - Assign specified "nodata" value to output (GDAL >= 3.7).
-   * - **Do not output nodata values**
+     - Assign specified "NoData" value to output (GDAL >= 3.7).
+   * - **Do not output NoData values**
      - ``SKIP_NODATA``
      - [boolean]
 
        Default: False
-     - Do not output "nodata" values (GDAL >= 3.3).
+     - Do not output "NoData" values (GDAL >= 3.3).
    * - **Output comma-separated values**
      - ``CSV``
      - [boolean]
@@ -525,14 +525,14 @@ Basic parameters
      - ``TARGET_CRS``
      - [crs]
      - Specify a projection for the output file
-   * - **Assign a specified nodata value to output bands**
+   * - **Assign a specified NoData value to output bands**
 
        Optional
      - ``NODATA``
      - [number]
 
        Default: Not set
-     - Defines the value to use for nodata in the output raster
+     - Defines the value to use for NoData in the output raster
    * - **Copy all subdatasets of this file to individual output files**
      - ``COPY_SUBDATASETS``
      - [boolean]
