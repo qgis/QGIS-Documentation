@@ -268,10 +268,10 @@ Python code
 
 .. _gdalfillnodata:
 
-Fill nodata
+Fill NoData
 -----------
-Fill raster regions with no data values by interpolation from edges.
-The values for the no-data regions are calculated by the surrounding
+Fill raster regions with NoData values by interpolation from edges.
+The values for the NoData regions are calculated by the surrounding
 pixel values using inverse distance weighting.
 After the interpolation a smoothing of the results takes place.
 Input can be any GDAL-supported raster layer. This algorithm is
@@ -316,7 +316,7 @@ Basic parameters
      - [raster band]
 
        Default: 1
-     - The band to operate on. Nodata values must be
+     - The band to operate on. NoData values must be
        represented by the value 0.
    * - **Maximum distance (in pixels) to search out for values to interpolate**
      - ``DISTANCE``
@@ -501,13 +501,13 @@ Basic parameters
      - Minimum number of data points to average.
        If less amount of points found the grid node
        considered empty and will be filled with
-       NODATA marker.
-   * - **Nodata**
+       NoData marker.
+   * - **NoData**
      - ``NODATA``
      - [number]
 
        Default: 0.0
-     - No data marker to fill empty points
+     - NoData marker to fill empty points
    * - **Interpolated (data metrics)**
      - ``OUTPUT``
      - [raster]
@@ -661,13 +661,13 @@ Parameters
      - Minimum number of data points to average.
        If less amount of points found the grid node
        considered empty and will be filled with
-       NODATA marker.
-   * - **Nodata**
+       NoData marker.
+   * - **NoData**
      - ``NODATA``
      - [number]
 
        Default: 0.0
-     - No data marker to fill empty points
+     - NoData marker to fill empty points
    * - **Interpolated (IDW with NN search)**
      - ``OUTPUT``
      - [raster]
@@ -844,13 +844,13 @@ Basic parameters
      - Minimum number of data points to average.
        If less amount of points found the grid node
        considered empty and will be filled with
-       NODATA marker.
-   * - **Nodata**
+       NoData marker.
+   * - **NoData**
      - ``NODATA``
      - [number]
 
        Default: 0.0
-     - No data marker to fill empty points
+     - NoData marker to fill empty points
    * - **Interpolated (IDW)**
      - ``OUTPUT``
      - [raster]
@@ -951,7 +951,7 @@ triangulation of the point cloud, finding in which triangle of the
 triangulation the point is, and by doing linear interpolation from its
 barycentric coordinates within the triangle.
 If the point is not in any triangle, depending on the radius, the
-algorithm will use the value of the nearest point or the NODATA value.
+algorithm will use the value of the nearest point or the NoData value.
 
 This algorithm is derived from the
 `GDAL grid utility <https://gdal.org/programs/gdal_grid.html>`_.
@@ -982,16 +982,16 @@ Basic parameters
        Default: -1.0
      - In case the point to be interpolated does not fit into a 
        triangle of the Delaunay triangulation, use that maximum
-       distance to search a nearest neighbour, or use nodata
+       distance to search a nearest neighbour, or use NoData
        otherwise.
        If set to ``-1``, the search distance is infinite.
-       If set to ``0``, no data value will be used.
-   * - **Nodata**
+       If set to ``0``, NoData value will be used.
+   * - **NoData**
      - ``NODATA``
      - [number]
 
        Default: 0.0
-     - No data marker to fill empty points
+     - NoData marker to fill empty points
    * - **Interpolated (Linear)**
      - ``OUTPUT``
      - [raster]
@@ -1094,7 +1094,7 @@ Search ellipse can be rotated by specified angle, the center of
 ellipse located at the grid node.
 Also the minimum number of data points to average can be set, if there
 are not enough points in window, the grid node considered empty and
-will be filled with specified NODATA value.
+will be filled with specified NoData value.
 
 This algorithm is derived from the
 `GDAL grid utility <https://gdal.org/programs/gdal_grid.html>`_.
@@ -1151,13 +1151,13 @@ Basic parameters
      - Minimum number of data points to average.
        If less amount of points found the grid node
        considered empty and will be filled with
-       NODATA marker.
-   * - **Nodata**
+       NoData marker.
+   * - **NoData**
      - ``NODATA``
      - [number]
 
        Default: 0.0
-     - No data marker to fill empty points
+     - NoData marker to fill empty points
    * - **Interpolated (moving average)**
      - ``OUTPUT``
      - [raster]
@@ -1255,7 +1255,7 @@ Grid (Nearest neighbor)
 The Nearest Neighbor method doesn't perform any interpolation or
 smoothing, it just takes the value of nearest point found in grid node
 search ellipse and returns it as a result.
-If there are no points found, the specified NODATA value will be
+If there are no points found, the specified NoData value will be
 returned.
 
 This algorithm is derived from the
@@ -1305,12 +1305,12 @@ Basic parameters
        Default: 0.0
      - Angle of ellipse rotation in degrees.
        Ellipse rotated counter clockwise.
-   * - **Nodata**
+   * - **NoData**
      - ``NODATA``
      - [number]
 
        Default: 0.0
-     - No data marker to fill empty points
+     - NoData marker to fill empty points
    * - **Interpolated (Nearest neighbour)**
      - ``OUTPUT``
      - [raster]
@@ -1764,11 +1764,11 @@ Basic parameters
 
        Default: 0.0
      - The maximum distance to be generated.
-       The nodata value will be used for pixels beyond
+       The NoData value will be used for pixels beyond
        this distance.
-       If a nodata value is not provided, the output
-       band will be queried for its nodata value.
-       If the output band does not have a nodata value,
+       If a NoData value is not provided, the output
+       band will be queried for its NoData value.
+       If the output band does not have a NoData value,
        then the value 65535 will be used.
        Distance is interpreted according to the value of
        *Distance units*.
@@ -1783,14 +1783,14 @@ Basic parameters
        are closer than the maximum distance from target
        pixels (including the target pixels) instead of
        a distance value.
-   * - **Nodata value to use for the destination proximity raster**
+   * - **NoData value to use for the destination proximity raster**
 
        Optional
      - ``NODATA``
      - [number]
 
        Default: 0.0
-     - Specify the nodata value to use for the output raster
+     - Specify the NoData value to use for the output raster
    * - **Proximity map**
      - ``OUTPUT``
      - [raster]
@@ -1977,7 +1977,7 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Single-band output roughness raster.
-       The value -9999 is used as nodata value.
+       The value -9999 is used as NoData value.
 
 Python code
 ...........
@@ -2342,7 +2342,7 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output ruggedness raster.
-       The value -9999 is used as nodata value.
+       The value -9999 is used as NoData value.
 
 Python code
 ...........

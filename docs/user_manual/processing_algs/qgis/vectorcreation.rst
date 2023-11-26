@@ -1591,7 +1591,7 @@ raster layer.
 
 Converts a raster layer to a vector layer, by creating point features
 for each individual pixel's center in the raster layer.
-Any nodata pixels are skipped in the output.
+Any NoData  pixels are skipped in the output.
 
 Parameters
 ..........
@@ -1665,7 +1665,7 @@ raster layer.
 
 Converts a raster layer to a vector layer, by creating polygon
 features for each individual pixel's extent in the raster layer.
-Any nodata pixels are skipped in the output.
+Any NoData  pixels are skipped in the output.
 
 Parameters
 ..........

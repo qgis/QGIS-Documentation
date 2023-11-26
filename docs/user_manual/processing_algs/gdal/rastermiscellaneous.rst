@@ -250,14 +250,14 @@ Advanced parameters
        * 4 --- Lanczos Windowed Sinc (``lanczos``)
        * 5 --- Average (``average``)
        * 6 --- Mode (``mode``)
-   * - **Nodata value(s) for input bands (space separated)**
+   * - **NoData value(s) for input bands (space separated)**
 
        Optional
      - ``SRC_NODATA``
      - [string]
 
        Default: None
-     - Space separated Nodata value(s) for input band(s)
+     - Space separated NoData value(s) for input band(s)
    * - **Additional command-line parameters**
      - ``EXTRA``
      - [string]
@@ -587,7 +587,7 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Input pixel value to treat as "nodata"**
+   * - **Input pixel value to treat as "NoData"**
 
        Optional
      - ``NODATA_INPUT``
@@ -595,14 +595,14 @@ Advanced parameters
 
        Default: None
      - Ignores pixels from files being merged in with this pixel value
-   * - **Assign specified "nodata" value to output**
+   * - **Assign specified "NoData" value to output**
 
        Optional
      - ``NODATA_OUTPUT``
      - [number]
 
        Default: None
-     - Assigns the specified nodata value to output bands.
+     - Assigns the specified NoData value to output bands.
    * - **Additional creation options**
 
        Optional
@@ -900,14 +900,14 @@ Basic parameters
        * ``sqrt(A*A+B*B)`` --- Outputs the square root of the sum of
          the value of A squared and the value of B squared.
 
-   * - **Set output nodata value**
+   * - **Set output NoData value**
 
        Optional
      - ``NO_DATA``
      - [number]
 
        Default: None
-     - Value to use for nodata
+     - Value to use for NoData
    * - **Output extent**
 
        Optional

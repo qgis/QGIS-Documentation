@@ -118,12 +118,12 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
      - ``OUTPUT_NODATA_VALUE``
      - [number]
 
        Default: -9999.0
-     - Value to use for nodata in the output layer
+     - Value to use for NoData in the output layer
 
 Outputs
 .......
@@ -281,12 +281,12 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
      - ``OUTPUT_NODATA_VALUE``
      - [number]
 
        Default: -9999.0
-     - Value to use for nodata in the output layer
+     - Value to use for NoData in the output layer
 
 Outputs
 .......
@@ -446,12 +446,12 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
      - ``OUTPUT_NODATA_VALUE``
      - [number]
 
        Default: -9999.0
-     - Value to use for nodata in the output layer
+     - Value to use for NoData in the output layer
 
 Outputs
 .......
@@ -615,14 +615,14 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
 
        Optional
      - ``OUTPUT_NO_DATA_VALUE``
      - [number]
 
        Default: -9999.0
-     - Value to use for nodata in the output layer
+     - Value to use for NoData in the output layer
 
 Outputs
 .......
@@ -758,14 +758,14 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
 
        Optional
      - ``OUTPUT_NO_DATA_VALUE``
      - [number]
 
        Default: -9999.0
-     - Value to use for nodata in the output layer
+     - Value to use for NoData in the output layer
 
 Outputs
 .......
@@ -1630,12 +1630,12 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
      - ``OUTPUT_NODATA_VALUE``
      - [number]
 
        Default: -9999.0
-     - Value to use for nodata in the output layer
+     - Value to use for NoData in the output layer
 
 Outputs
 .......
@@ -1780,10 +1780,10 @@ use as a reference when creating the output raster.
 The output raster will have the same extent, CRS, and pixel dimensions
 as this layer.
 
-By default, a nodata pixel in ANY of the input layers will result in a
-nodata pixel in the output raster.
-If the :guilabel:`Treat nodata values as false` option is checked,
-then nodata inputs will be treated the same as a ``0`` input value.
+By default, a NoData pixel in ANY of the input layers will result in a
+NoData pixel in the output raster.
+If the :guilabel:`Treat NoData values as false` option is checked,
+then NoData inputs will be treated the same as a ``0`` input value.
 
 .. seealso:: :ref:`qgisrasterbooleanor`
 
@@ -1811,12 +1811,12 @@ Basic parameters
      - [raster]
      - The reference layer to create the output layer
        from (extent, CRS, pixel dimensions)
-   * - **Treat nodata values as false**
+   * - **Treat NoData values as false**
      - ``NODATA_AS_FALSE``
      - [boolean]
 
        Default: False
-     - Treat nodata values in the input files as 0 when performing the
+     - Treat NoData values in the input files as 0 when performing the
        operation
    * - **Output layer**
      - ``OUTPUT``
@@ -1842,12 +1842,12 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
      - ``NO_DATA``
      - [number]
 
        Default: -9999.0
-     - Value to use for nodata in the output layer
+     - Value to use for NoData in the output layer
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
@@ -1891,10 +1891,10 @@ Outputs
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
      - The count of pixels in the output raster layer
-   * - **NODATA pixel count**
+   * - **NoData pixel count**
      - ``NODATA_PIXEL_COUNT``
      - [integer]
-     - The count of nodata pixels in the output raster layer
+     - The count of NoData pixels in the output raster layer
    * - **True pixel count**
      - ``TRUE_PIXEL_COUNT``
      - [integer]
@@ -1934,10 +1934,10 @@ use as a reference when creating the output raster.
 The output raster will have the same extent, CRS, and pixel dimensions
 as this layer.
 
-By default, a nodata pixel in ANY of the input layers will result in a
-nodata pixel in the output raster.
-If the :guilabel:`Treat nodata values as false` option is checked,
-then nodata inputs will be treated the same as a ``0`` input value.
+By default, a NoData pixel in ANY of the input layers will result in a
+NoData pixel in the output raster.
+If the :guilabel:`Treat NoData values as false` option is checked,
+then NoData inputs will be treated the same as a ``0`` input value.
 
 .. seealso:: :ref:`qgisrasterbooleanand`
 
@@ -1965,12 +1965,12 @@ Basic parameters
      - [raster]
      - The reference layer to create the output layer
        from (extent, CRS, pixel dimensions)
-   * - **Treat nodata values as false**
+   * - **Treat NoData values as false**
      - ``NODATA_AS_FALSE``
      - [boolean]
 
        Default: False
-     - Treat nodata values in the input files as 0 when performing the
+     - Treat NoData values in the input files as 0 when performing the
        operation
    * - **Output layer**
      - ``OUTPUT``
@@ -1996,12 +1996,12 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
      - ``NO_DATA``
      - [number]
 
        Default: -9999.0
-     - Value to use for nodata in the output layer
+     - Value to use for NoData in the output layer
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
@@ -2045,10 +2045,10 @@ Outputs
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
      - The count of pixels in the output raster layer
-   * - **NODATA pixel count**
+   * - **NoData pixel count**
      - ``NODATA_PIXEL_COUNT``
      - [integer]
-     - The count of nodata pixels in the output raster layer
+     - The count of NoData pixels in the output raster layer
    * - **True pixel count**
      - ``TRUE_PIXEL_COUNT``
      - [integer]
@@ -2222,7 +2222,7 @@ Raster layer properties
 
 Returns basic properties of the given raster layer, including the extent,
 size in pixels and dimensions of pixels (in map units), number of bands,
-and no data value.
+and NoData value.
 
 This algorithm is intended for use as a means of extracting these useful properties
 to use as the input values to other algorithms in a model - e.g. to allow to pass
@@ -2279,7 +2279,7 @@ Outputs
    * - **Band has a NoData value set**
      - ``HAS_NODATA_VALUE``
      - [Boolean]
-     - Indicates whether the raster layer has a value set for NODATA pixels
+     - Indicates whether the raster layer has a value set for NoData pixels
        in the selected band
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
@@ -2511,10 +2511,10 @@ Outputs
      - ``HEIGHT_IN_PIXELS``
      - [integer]
      - The number of rows in the output raster layer
-   * - **NODATA pixel count**
+   * - **NoData pixel count**
      - ``NODATA_PIXEL_COUNT``
      - [number]
-     - The number of NODATA pixels in the output raster layer
+     - The number of NoData pixels in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -2530,7 +2530,7 @@ Outputs
        * Width in pixels: number of columns and pixel width size
        * Height in pixels: number of rows and pixel width size
        * Total pixel count: count of all the pixels
-       * NODATA pixel count: count of pixels with NODATA value
+       * NoData pixel count: count of pixels with NoData value
    * - **Unique values table**
      - ``OUTPUT_TABLE``
      - [table]
@@ -2667,10 +2667,10 @@ Outputs
      - ``HEIGHT_IN_PIXELS``
      - [integer]
      - The number of rows in the output raster layer
-   * - **NODATA pixel count**
+   * - **NoData pixel count**
      - ``NODATA_PIXEL_COUNT``
      - [number]
-     - The number of NODATA pixels in the output raster layer
+     - The number of NoData pixels in the output raster layer
    * - **Statistics**
      - ``OUTPUT_TABLE``
      - [table]
@@ -2904,12 +2904,12 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
      - ``NO_DATA``
      - [number]
 
        Default: -9999.0
-     - Value to apply to no data values.
+     - Value to apply to NoData values.
    * - **Range boundaries**
      - ``RANGE_BOUNDARIES``
      - [enumeration]
@@ -2922,12 +2922,12 @@ Advanced parameters
        * 1 --- min <= value < max
        * 2 --- min <= value <= max
        * 3 --- min < value < max
-   * - **Use no data when no range matches value**
+   * - **Use NoData when no range matches value**
      - ``NODATA_FOR_MISSING``
      - [boolean]
 
        Default: False
-     - Applies the no data value to band values that do not fall in
+     - Applies the NoData value to band values that do not fall in
        any class.
        If False, the original value is kept.
    * - **Output data type**
@@ -3032,12 +3032,12 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Output no data value**
+   * - **Output NoData value**
      - ``NO_DATA``
      - [number]
 
        Default: -9999.0
-     - Value to apply to no data values.
+     - Value to apply to NoData values.
    * - **Range boundaries**
      - ``RANGE_BOUNDARIES``
      - [enumeration]
@@ -3050,12 +3050,12 @@ Advanced parameters
        * 1 --- min <= value < max
        * 2 --- min <= value <= max
        * 3 --- min < value < max
-   * - **Use no data when no range matches value**
+   * - **Use NoData when no range matches value**
      - ``NODATA_FOR_MISSING``
      - [boolean]
 
        Default: False
-     - Applies the no data value to band values that do not fall in
+     - Applies the NoData value to band values that do not fall in
        any class.
        If False, the original value is kept.
    * - **Output data type**
@@ -3106,7 +3106,7 @@ are mapped using a linear interpolation from the source raster's
 minimum and maximum pixel values to the destination minimum and miximum 
 pixel range.
 
-By default the algorithm preserves the original NODATA value, but there 
+By default the algorithm preserves the original NoData value, but there 
 is an option to override it.
 
 .. figure:: img/rescale_raster.png
@@ -3147,15 +3147,15 @@ Parameters
 
        Default value: 255.0
      - Maximum pixel value to use in the rescaled layer
-   * - **New NODATA value**
+   * - **New NoData value**
    
        Optional
      - ``NODATA``
      - [number]
      
        Default value: Not set
-     - Value to assign to the NODATA pixels.
-       If unset, original NODATA values are preserved.
+     - Value to assign to the NoData pixels.
+       If unset, original NoData values are preserved.
    * - **Rescaled**
      - ``OUTPUT``
      - [raster]
