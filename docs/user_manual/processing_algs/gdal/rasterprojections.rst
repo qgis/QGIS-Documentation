@@ -203,15 +203,15 @@ Basic parameters
        * 9 --- Median
        * 10 --- First quartile
        * 11 --- Third quartile
-   * - **Nodata value for output bands**
+   * - **NoData value for output bands**
 
        Optional
      - ``NODATA``
      - [number]
 
        Default: None
-     - Sets nodata value for output bands.
-       If not provided, then nodata values will be copied from
+     - Sets NoData value for output bands.
+       If not provided, then NoData values will be copied from
        the source dataset.
    * - **Output file resolution in target georeferenced units**
 
