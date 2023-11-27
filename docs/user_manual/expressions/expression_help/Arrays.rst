@@ -793,7 +793,8 @@ Splits a geometry into simpler geometries in an array.
    * - Arguments
      - * **geometry** - the input geometry
    * - Examples
-     - * ``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))`` → an array of a polygon and a line geometries
+     - * ``geometries_to_array(geom_from_wkt('MultiPoint (1 2, 5 21)'))`` → An array containing 'Point (1 2)' and 'Point (5 21)'
+       * ``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))`` → an array of a polygon and a line geometries
        * ``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 1, 3 2, 5 8))'
        * ``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 5,10 10,10 0,5 5))'))`` → an array of two polygon geometries
 
