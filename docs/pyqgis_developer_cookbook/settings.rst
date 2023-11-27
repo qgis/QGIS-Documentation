@@ -75,7 +75,7 @@ We can differentiate between several types of settings:
   if there is no previous value set for the passed setting name.
 
   For a method to pre-configure the default values of the global settings
-  through the  :file:`global_settings.ini` file, see :ref:`deploying_organization`
+  through the  :file:`qgis_global_settings.ini` file, see :ref:`deploying_organization`
   for further details.
 
 .. index:: Settings; Project
