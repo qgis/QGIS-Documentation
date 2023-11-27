@@ -2880,7 +2880,7 @@ Basic parameters
      - [tablefield: numeric]
      - Field with the value that will be assigned to the pixels that
        fall in the class (between the corresponding min and max
-       values). Use ``nan`` to set the value of the range to no data. 
+       values). Use ``nan`` to set the value of the range to NoData. 
    * - **Reclassified raster**
      - ``OUTPUT``
      - [raster]
@@ -3007,7 +3007,7 @@ Basic parameters
        of each class (``Minimum`` and ``Maximum``) and the new
        ``Value`` to assign to the band values that fall in the class.
        The value ``-inf`` can be used as minimum, ``inf`` as maximum,
-       and ``nan`` can be used to set the output value to no data.
+       and ``nan`` can be used to set the output value to NoData.
    * - **Reclassified raster**
      - ``OUTPUT``
      - [raster]
