@@ -205,10 +205,10 @@ you might want to choose 'Nearest neighbour'. In contrast,
 It is possible to choose between five different resampling methods:
 
 #. Nearest neighbour
-#. Linear
-#. Cubic
-#. Cubic Spline
-#. Lanczos
+#. Bilinear (2x2 kernel)
+#. Cubic (4x4 kernel)
+#. Cubic B-Spline (4x4 kernel)
+#. Lanczos (6x6 kernel)
 
 Define the transformation settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -221,8 +221,8 @@ raster.
   raster image actually won't be transformed. In this case, the
   :guilabel:`Output raster` field is not activated, because only a new world file will
   be created.
-* For all other transformation types, you have to define an :guilabel:`Output
-  raster`. As default, a new file ([filename]_modified) will be created in the
+* For all other transformation types, you have to define an :guilabel:`Output raster`.
+  As default, a new file ([filename]_modified) will be created in the
   same folder together with the original raster image.
 * As a next step, you have to define the :guilabel:`Target CRS` (Coordinate Reference
   System) for the georeferenced raster (see :ref:`label_projections`).
