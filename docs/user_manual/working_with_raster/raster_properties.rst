@@ -566,11 +566,10 @@ transformation.
 
 When applying the 'Nearest neighbour' method, the map can get a
 pixelated structure when zooming in.
-This appearance can be improved by using the 'Bilinear' or 'Cubic'
-method, which cause sharp edges to be blurred.
+This appearance can be improved by using the 'Bilinear (2x2 kernel)'
+or 'Cubic (4x4 kernel)' method, which cause sharp edges to be blurred.
 The effect is a smoother image.
-This method can be applied to for instance digital topographic
-raster maps.
+This method can be applied to for instance digital topographic raster maps.
 
 |checkbox| :guilabel:`Early resampling`: allows to calculate the raster
 rendering at the provider level where the resolution of the source is known,

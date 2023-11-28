@@ -652,7 +652,7 @@ Under :guilabel:`Bands and Resampling`:
 * The :guilabel:`Zoomed in resampling`
   and the :guilabel:`Zoomed out resampling` methods can be defined.
   For :guilabel:`Zoomed in resampling` you can choose between three
-  resampling methods: 'Nearest Neighbour', 'Bilinear' and 'Cubic'.
+  resampling methods: 'Nearest neighbour', 'Bilinear (2x2 kernel)' and 'Cubic (4x4 kernel)'.
   For :guilabel:`Zoomed out resampling` you can choose between 'Nearest Neighbour'
   and 'Average'.
   You can also set the :guilabel:`Oversampling` value (between 0.0 and 99.99 - a large
