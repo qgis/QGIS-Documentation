@@ -322,9 +322,9 @@ Resampling methods
   qgisalignrasters, qgisalignraster
 
 * 0 --- Nearest Neighbour
-* 1 --- Bilinear (2x2 Kernel)
-* 2 --- Cubic (4x4 Kernel)
-* 3 --- Cubic B-Spline (4x4 Kernel)
+* 1 --- Bilinear (2x2 kernel)
+* 2 --- Cubic (4x4 kernel)
+* 3 --- Cubic B-Spline (4x4 kernel)
 * 4 --- Lanczos (6x6 kernel)
 * 5 --- Average
 * 6 --- Mode
