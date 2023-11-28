@@ -266,7 +266,8 @@ First we change the resolution of our rainfall data to 30 meters
    having been clicked on)
 #. Click on the :menuselection:`Raster --> Projections --> Warp (Reproject)...`
    menu item to open the :guilabel:`Warp (Reproject)` dialog
-#. Under :guilabel:`Resampling method to use`, select :guilabel:`Bilinear` from the drop down menu
+#. Under :guilabel:`Resampling method to use`, select :guilabel:`Bilinear (2x2 kernel)`
+   from the drop down menu
 #. Set :guilabel:`Output file resolution in target georeferenced units` to ``30`` 
 #. Scroll down to :guilabel:`Reprojected` and save the output in your
    :file:`rainfall/reprojected` directory as :file:`Rainfall30.tif`.
@@ -287,7 +288,8 @@ Then we align the DEM:
 #. Click on the :menuselection:`Raster --> Projections --> Warp (Reproject)...`
    menu item to open the :guilabel:`Warp (Reproject)` dialog
 #. Under :guilabel:`Target CRS`, select :guilabel:`Project CRS: EPSG:32733 - WGS 84 / UTM zone 33S` from the drop down menu
-#. Under :guilabel:`Resampling method to use`, select :guilabel:`Bilinear` from the drop down menu
+#. Under :guilabel:`Resampling method to use`, select :guilabel:`Bilinear (2x2 kernel)`
+   from the drop down menu
 #. Set :guilabel:`Output file resolution in target georeferenced units` to ``30``
 #. Scroll down to :guilabel:`Georeferenced extents of output file to be created`. Use the button to the right of the text box to select :menuselection:`Calculate from Layer --> Rainfall30`.
 #. Scroll down to :guilabel:`Reprojected` and save the output in your
