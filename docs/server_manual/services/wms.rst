@@ -1546,7 +1546,7 @@ URL example with the corresponding JSON output:
   REQUEST=GetLegendGraphic&
   LAYERS=airports&
   FORMAT=application/json&
-  SHOWRULEDETAILS=YES
+  SHOWRULEDETAILS=TRUE
 
 And the corresponding JSON output:
 
