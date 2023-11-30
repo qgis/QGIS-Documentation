@@ -1349,8 +1349,6 @@ In the dialog that opens:
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
-.. |selectNumber| image:: /static/common/selectnumber.png
-   :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
