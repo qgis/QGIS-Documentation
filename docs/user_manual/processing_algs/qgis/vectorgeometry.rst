@@ -1185,9 +1185,9 @@ Python code
 
 .. _qgisconcavehull:
 
-Concave hull (alpha shapes)
----------------------------
-Computes the concave hull of the features in an input point layer.
+Concave hull
+------------
+Computes the concave hull of the features from an input point layer.
 
 .. figure:: img/concave_hull_threshold.png
     :align: center
@@ -1229,7 +1229,7 @@ Parameters
      - ``NO_MULTIGEOMETRY``
      - [boolean]
 
-       Default: True
+       Default: False
      - Check if you want to have singlepart geometries
        instead of multipart ones.
    * - **Concave hull**
@@ -1263,7 +1263,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:concavehull``
+**Algorithm ID**: ``native:concavehull``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1889,6 +1889,21 @@ Parameters
      - ``INPUT``
      - [vector: point]
      - Input point vector layer
+   * - **Tolerance**
+
+       Optional
+     - ``TOLERANCE``
+     - [number]
+
+       Default: 0.0
+     - Specifies an optional snapping tolerance which can be used to improve the robustness of the triangulation.
+   * - **Add point IDs to output**
+     - ``ADD_ATTRIBUTES``
+     - [boolean]
+
+       Default: True
+     - Specifies whether fields storing involved point features ID should be added to the output.
+       If False, an ``id`` field is used to identify the polygons.
    * - **Delaunay triangulation**
      - ``OUTPUT``
      - [vector: polygon]
@@ -1920,7 +1935,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:delaunaytriangulation``
+**Algorithm ID**: ``native:delaunaytriangulation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -7502,6 +7517,21 @@ Parameters
        Default: 0.0
      - The extent of the output layer will be this much
        bigger than the extent of the input layer
+   * - **Tolerance**
+
+       Optional
+     - ``TOLERANCE``
+     - [number]
+
+       Default: 0.0
+     - Specifies an optional snapping tolerance which can be used to improve the robustness of the voronoi.
+   * - **Copy attributes from input features**
+     - ``COPY_ATTRIBUTES``
+     - [boolean]
+
+       Default: True
+     - Specifies whether fields storing involved point features ID should be added to the output.
+       If False, an ``id`` field is created to identify the polygons.
    * - **Voronoi polygons**
      - ``OUTPUT``
      - [vector: polygon]
@@ -7533,7 +7563,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:voronoipolygons``
+**Algorithm ID**: ``native:voronoipolygons``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
