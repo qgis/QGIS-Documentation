@@ -17,12 +17,10 @@ What are 3D Tiles?
 geospatial datasets. They use a hierarchical structure to efficiently manage 
 and display 3D content, optimising performance by dynamically loading
 appropriate levels of detail. This technology is widely used in urban 
-planning, architecture, simulation, gaming, ans virtual reality, providing
+planning, architecture, simulation, gaming, and virtual reality, providing
 a standardised and interoperable solution for visualising complex geographical
 data.
 
-To be able to use 3D tiles in QGIS, 
-you need to have QGIS 3.34 version or later.
 
 .. _figure_3d_tiles_example:
 
@@ -32,78 +30,14 @@ you need to have QGIS 3.34 version or later.
    Example of 3D tiles
 
 
-Scene
-=====
-
-To load a 3D tiles into QGIS, use the |tiledSceneLayer| :guilabel:`Scene` tab
-in the :guilabel:`Data Source Manager` dialog. 
-
-.. _figure_scene:
-
-.. figure:: img/scene.png
-   :align: center
-
-   Data Source Manager - Scene
-
-Create a :guilabel:`New Cesium 3D Tiles Connection` by clicking on 
-:guilabel:`New`. Add :guilabel:`Name` and :guilabel:`URL` or add
-local tileset file.
+Data Sources
+============
 
 Support for 3D tiles:
 
 * Remote source - ``http://example.com/tileset.json``
 * Local files - ``file:///path/to/tiles/tileset.json``
 
-.. _figure_tiled_scene_connection:
-
-.. figure:: img/tiled_scene_connection.png
-   :align: center
-
-   Tiled Scene Connection 
-
-You can also add the service from :guilabel:`Browser Panel`.
-
-.. _figure_browser_scene:
-
-.. figure:: img/browser_scene.png
-   :align: center
-
-   Browser Panel - Scenes
-
-After creating new connection you are able to :guilabel:`Add` the new layer
-to your map. 
-
-.. _figure_3d_tiles_layer:
-
-.. figure:: img/3d_tiles_layer.png
-   :align: center
-
-   3D Tiles Layer - Textured
-
-By default, the layer is styled using texture, but you can change it 
-to see the wireframe mesh behind the scene by choosing :guilabel:`Wireframe` 
-in the drop-down menu. You can also, change the mesh fill and line symbols 
-similar to the vector polygons. 
-By clicking |checkbox| :guilabel:`Use texture colors` you can use texture 
-colors, this will render each mesh element with the average value of the full 
-texture. This is a good option to try when dealing with a large dataset and
-want to get a quick overview of the data.
-
-.. _figure_3d_tiles_texture_mesh:
-
-.. figure:: img/3d_tiles_texture_mesh.png
-   :align: center
-
-   3D Tiles with texture colors for mesh
-
-To view the data you can open |new3DMap| :guilabel:`New 3D map view`.
-
-.. _figure_3d_tiles_map_view:
-
-.. figure:: img/3d_tiles_map_view.png
-   :align: center
-
-   3D Map View
 
 Using data from Cesium ion 
 --------------------------
@@ -111,11 +45,7 @@ Using data from Cesium ion
 *Cesium ion* is a cloud-based platform for managing and streaming 3D geospatial
 data. It simplifies data management, visualisation and sharing. To add 3D tiles
 from Cesium ion, you need to first sign up to their service 
-here: https://ion.cesium.com/tokens. Under *Asset Depot* you will see a 
-catalogue of publicly available datasets. You can also upload your 
-own 3D models (such as OBJ or PLY), georefernce then and get them converted to
-3D tiles. You can also add one of existing tile service under *Asset Depot* 
-menu and select the tile service and click on *Add to my assets*.
+here: https://ion.cesium.com.
 
 You can also use Cesium ion plugin from the QGIS repository 
 to add the data to QGIS.
@@ -146,9 +76,9 @@ The 3D tiles :guilabel:`Layer Properties` dialog provides the following sections
    * - |metadata| :ref:`Information <3dtilesinformationmenu>`
      - |system| :ref:`Source <3dtilessourcemenu>`
      - |symbology| :ref:`Symbology <3dtilessymbologymenu>`:sup:`[1]`
-   * - |3d| :ref:`3D View <3dtiles3dviewmenu>`
+   * - |3d| :ref:`3D View <3dtiles3dviewmenu>`:sup:`[1]`
      - |rendering| :ref:`Rendering <3dtilesrenderingmenu>`
-     - |elevationscale| :ref:`Elevation <3dtileselevationmenu>`
+     - |elevationscale| :ref:`Elevation <3dtileselevationmenu>`:sup:`[1]`
    * - |editMetadata| :ref:`Metadata <3dtilesmetadatamenu>`
      -
      -
@@ -179,7 +109,7 @@ Source Properties
 -----------------
 
 The |system| :guilabel:`Source` tab displays basic information about
-the selected raster, including:
+the selected 3D tile, including:
 
 * the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;
 * the :guilabel:`Coordinate Reference System`:
@@ -189,14 +119,11 @@ the selected raster, including:
   the drop-down list or clicking on the |setProjection|
   :sup:`Select CRS` button (see :ref:`crs_selector`).
   Use this process only if the layer CRS is wrong or not specified.
-  If you wish to reproject your data, use a reprojection algorithm
-  from Processing or
-  :ref:`Save it as new dataset <general_saveas>`.
 
 .. _3dtilessymbologymenu:
 
-Symbology Properties
-------------------------------
+3D tiles layer symbology
+------------------------
 
 .. _figure_3d_tiles_symbology:
 
@@ -205,10 +132,31 @@ Symbology Properties
 
    3D Tile Layer Symbology
 
-.. _3dtiles3dviewmenu:
+By default, the layer is styled using texture, but you can change it 
+to see the wireframe mesh behind the scene by choosing :guilabel:`Wireframe` 
+in the drop-down menu. You can also, change the mesh fill and line symbols 
+similar to the vector polygons. 
+Checking |checkbox| :guilabel:`Use texture colors` will render each mesh element 
+with the average value of the full texture. 
+This is a good option to try when dealing with a large dataset and
+want to get a quick overview of the data.
 
-3D View Properties
-------------------
+.. _figure_3d_tiles_texture_mesh:
+
+.. figure:: img/3d_tiles_texture_mesh.png
+   :align: center
+
+   3D Tiles with texture colors for mesh
+
+To view the data you can open |new3DMap| :guilabel:`New 3D map view`.
+
+.. _figure_3d_tiles_map_view:
+
+.. figure:: img/3d_tiles_map_view.png
+   :align: center
+
+   3D Map View  
+
 
 .. _3dtilesrenderingmenu:
 
@@ -229,6 +177,14 @@ See :ref:`label_scaledepend` for more information.
 Elevation Properties
 --------------------
 
+The |elevationscale| :guilabel:`Elevation` tab provides options to control
+the layer elevation properties within a :ref:`3D map view <label_3dmapview>`.
+Specifically, you can set:
+
+* :guilabel:`Elevation Surface`: how the 3D layer vertices Z values
+  should be interpreted as terrain elevation.
+  You can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
+
 .. index:: Metadata, Metadata editor, Keyword
 .. _3dtilesmetadatamenu:
 
@@ -246,6 +202,8 @@ See :ref:`metadatamenu` for more information.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addTiledSceneLayer| image:: /static/common/mActionAddTiledSceneLayer.png
+   :width: 1.5em 
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |symbology| image:: /static/common/symbology.png
