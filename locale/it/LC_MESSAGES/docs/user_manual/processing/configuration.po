@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-11 08:42+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,9 +29,39 @@ msgstr ""
 msgid "Configuring the Processing Framework"
 msgstr "Configurare l'ambiente Processing"
 
+#: ../../docs/user_manual/processing/configuration.rst:12
+msgid ""
+"The Processing Options menu (:menuselection:`Settings--> Options -->` "
+"|processingAlgorithm| :guilabel:`Processing` tab) allows you to configure "
+"how algorithms work. Configuration parameters are structured in separate "
+"blocks that you can select on the left-hand side of the dialog."
+msgstr ""
+"Il menu Opzioni - Processing (scheda :menuselection:`Impostazioni--> Opzioni"
+" -->` |processingAlgorithm| :guilabel:`Processing`) ti consente di "
+"configurare il funzionamento degli algoritmi. I parametri di configurazione "
+"sono strutturati in blocchi separati che si possono selezionare sul lato "
+"sinistro della finestra di dialogo."
+
 #: ../../docs/user_manual/processing/configuration.rst:165
 msgid "processingAlgorithm"
 msgstr "processingAlgorithm"
+
+#: ../../docs/user_manual/processing/configuration.rst:18
+msgid "General"
+msgstr "Generale"
+
+#: ../../docs/user_manual/processing/configuration.rst:20
+msgid ""
+"The :guilabel:`General` block contains the default settings to control how "
+"the algorithm dialog as well as input or output parameters should behave. "
+"Some of the settings can however be overridden at the algorithm runtime, for"
+" :ref:`individual parameters <alg_parameter_types>`."
+msgstr ""
+"Il blocco :guilabel:`Generale` contiene le impostazioni predefinite per "
+"controllare il comportamento della finestra di dialogo dell'algoritmo e dei "
+"parametri di input e output. Alcune impostazioni possono tuttavia essere "
+"sovrascritte durante l'esecuzione dell'algoritmo, ad esempio per "
+":ref:`individual parameters <alg_parameter_types>`."
 
 #: ../../docs/user_manual/processing/configuration.rst:25
 msgid ""
@@ -270,8 +300,27 @@ msgid ""
 "Select the style file (:file:`.qml`) that you want for each output and press"
 " :guilabel:`OK`."
 msgstr ""
-"Seleziona il file di stile (:file:`.qml`) che vuoi per ogni livello in "
-"uscita e clicca :guilabel:`OK`."
+"Seleziona il file di stile (:file:`.qml`) che vuoi per ogni risultato e "
+"clicca :guilabel:`OK`."
+
+#: ../../docs/user_manual/processing/configuration.rst:116
+msgid ""
+":guilabel:`Warn before executing if parameter CRS's do not match`: By "
+"default, QGIS native algorithms (i.e. the ones listed under the |menu| "
+":menuselection:`Menus --> QGIS (native C++)` group) transparently reproject "
+"the input layers to the first one's CRS before execution. Check this option "
+"to get a notification from the other tools that do not suppport "
+"reprojection, when the inputs CRS are not identical. Third-party providers "
+"are not concerned."
+msgstr ""
+":guilabel:`Avverte prima di eseguire se i parametri dei SR non "
+"corrispondono`: Per impostazione predefinita, gli algoritmi nativi di QGIS "
+"(cioè quelli elencati nel gruppo |menu| :menuselection:`Menu --> QGIS "
+"(native C++)`) riproiettano in modo trasparente i layer in ingresso al primo"
+" CRS prima dell'esecuzione. Seleziona questa opzione per ottenere una "
+"notifica dagli altri strumenti che non supportano la riproiezione, quando i "
+"SR in ingresso non sono identici. I fornitori di terze parti non sono "
+"coinvolti."
 
 #: ../../docs/user_manual/processing/configuration.rst:163
 msgid "menu"
@@ -280,6 +329,18 @@ msgstr ""
 #: ../../docs/user_manual/processing/configuration.rst:124
 msgid "Menus"
 msgstr "Menu"
+
+#: ../../docs/user_manual/processing/configuration.rst:126
+msgid ""
+"The |menu| :guilabel:`Menus` block controls whether an algorithm, script or "
+"model (built-in or provided by plugins) should be made available through a "
+"dedicated menu or toolbar (along with the Processing Toolbox). For each item"
+" of each provider, you can:"
+msgstr ""
+"Il blocco |menu| :guilabel:`Menu` controlla se un algoritmo, uno script o un"
+" modello (incorporato o fornito da plugin) deve essere reso disponibile "
+"attraverso un menu o una barra degli strumenti dedicata (insieme al "
+"Processing Toolbox). Per ogni voce di ciascun fornitore, puoi:"
 
 #: ../../docs/user_manual/processing/configuration.rst:131
 msgid ""
@@ -310,6 +371,20 @@ msgstr ""
 "Riavvia QGIS per applicare le impostazioni. In qualsiasi momento, puoi "
 "attivare :guilabel:`Ripristina ai valori predefiniti` alle tue modifiche."
 
+#: ../../docs/user_manual/processing/configuration.rst:141
+msgid "Models and Scripts"
+msgstr "Modelli e Script"
+
+#: ../../docs/user_manual/processing/configuration.rst:143
+msgid ""
+"In the |processingModel| :guilabel:`Models` and |pythonFile| "
+":guilabel:`Scripts` blocks, you can set a default folder to store, and look "
+"for models and scripts respectively."
+msgstr ""
+"Nei blocchi |processingModel| :guilabel: 'Modelli' e |pythonFile| :guilabel:"
+" 'Script', puoi impostare una cartella predefinita in cui memorizzare e "
+"cercare rispettivamente i modelli e gli script."
+
 #: ../../docs/user_manual/processing/configuration.rst:167
 msgid "processingModel"
 msgstr "processingModel"
@@ -317,3 +392,25 @@ msgstr "processingModel"
 #: ../../docs/user_manual/processing/configuration.rst:169
 msgid "pythonFile"
 msgstr "pythonFile"
+
+#: ../../docs/user_manual/processing/configuration.rst:147
+msgid "Providers"
+msgstr "Sorgenti dati"
+
+#: ../../docs/user_manual/processing/configuration.rst:149
+msgid ""
+"You will also find a block for algorithm |processingAlgorithm| "
+":guilabel:`Providers`. This is the place where installed providers expose "
+"their settings. For example, built-in providers contain an "
+":guilabel:`Activate` item that you can use to make their algorithms appear "
+"or not in the toolbox. Some algorithm providers have their own configuration"
+" items, which will be explained when covering particular algorithm "
+"providers."
+msgstr ""
+"Trovi anche un blocco per gli algoritmi delle |processingAlgorithm| "
+":guilabel:`Sorgenti dati`. Questo è il luogo in cui i provider installati "
+"espongono le loro impostazioni. Ad esempio, i provider integrati contengono "
+"una voce :guilabel:`Attiva` che puoi usare per far apparire o meno i loro "
+"algoritmi nella casella degli strumenti. Alcuni fornitori di algoritmi hanno"
+" le proprie voci di configurazione, che verranno spiegate quando si tratterà"
+" di fornitori di algoritmi particolari."
