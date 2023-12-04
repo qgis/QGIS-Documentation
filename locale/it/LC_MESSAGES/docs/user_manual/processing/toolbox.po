@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # Transifex Bot <>, 2023
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-13 15:24+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -224,11 +224,11 @@ msgid ""
 "depending on the requirements of the algorithm to be executed, and is "
 "created automatically based on those requirements."
 msgstr ""
-"La scheda :guilabel:`Parametri` è usata per impostare i valori in igresso di"
-" cui l'algoritmo ha bisogno per essere eseguito. Mostra un elenco di valori "
-"in ingresso e parametri di configurazione da impostare. Naturalmente ha un "
-"contenuto diverso, a seconda dei requisiti dell'algoritmo da eseguire, e "
-"viene creato automaticamente in base a tali requisiti."
+"La scheda :guilabel:`Parametri` è usata per impostare i valori in ingresso "
+"di cui l'algoritmo ha bisogno per essere eseguito. Mostra un elenco di "
+"valori in ingresso e parametri di configurazione da impostare. Naturalmente "
+"ha un contenuto diverso, a seconda dei requisiti dell'algoritmo da eseguire,"
+" e viene creato automaticamente in base a tali requisiti."
 
 #: ../../docs/user_manual/processing/toolbox.rst:97
 msgid ""
@@ -240,13 +240,141 @@ msgstr ""
 "struttura di base è simile per tutti. I parametri che si trovano nella "
 "tabella possono essere di uno dei seguenti tipi."
 
+#: ../../docs/user_manual/processing/toolbox.rst:103
+msgid ""
+"A **vector layer**, to select from a list of all vector layers available "
+"(currently opened) in QGIS. You can also use unloaded layers: press the "
+":guilabel:`...` button on the widget right-hand side, and select:"
+msgstr ""
+"Un **layer vettoriale**, per selezionare da un elenco di tutti i layer "
+"vettoriali disponibili (attualmente aperti) in QGIS. Puoi anche utilizzare "
+"layer non caricati: premi il pulsante :guilabel:`...` sul lato destro del "
+"widget e seleziona:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:107
+msgid ""
+":guilabel:`Select file...`: selects file on disk using the Operating System "
+"file explorer"
+msgstr ""
+":guilabel:`Seleziona file...`: seleziona il file sul disco utilizzando "
+"l'esploratore dei file del sistema operativo"
+
+#: ../../docs/user_manual/processing/toolbox.rst:108
+msgid ""
+":guilabel:`Browse for layer...`: opens the :ref:`Browser panel "
+"<label_browserpanel>`, allowing to take the layers directly from database "
+"sources (PostgreSQL, SQL Server, Oracle, ...), web services (WFS, AFS, ...) "
+"or files on disk."
+msgstr ""
+":guilabel:`Sfoglia per layer...`: apre il pannello :ref:`Browser panel "
+"<label_browserpanel>`, che permette di caricare i layer direttamente dalle "
+"fonti di database (PostgreSQL, SQL Server, Oracle, ...), servizi web (WFS, "
+"AFS, ...) o file su disco."
+
 #: ../../docs/user_manual/processing/toolbox.rst:117
 msgid "Vector input widget"
 msgstr "Widget in ingresso per un vettore"
 
+#: ../../docs/user_manual/processing/toolbox.rst:121
+msgid ""
+"By default, the layer widget shows the CRS of the layer along with its name."
+" If you do not want to see this additional information, you can disable this"
+" functionality in the Processing Settings dialog, unchecking the "
+":menuselection:`General --> Show layer CRS definition in selection boxes` "
+"option."
+msgstr ""
+"Per impostazione predefinita, il widget del layer mostra il SR del layer "
+"insieme al suo nome. Se non desideri vedere queste informazioni aggiuntive, "
+"puoi disabilitare questa funzionalità nella finestra di impostazioni "
+"processing, deselezionando l'opzione `Generale --> Mostra SR del layer nelle"
+" caselle di selezione`."
+
+#: ../../docs/user_manual/processing/toolbox.rst:126
+msgid "The vector input widget also has following features:"
+msgstr "Il widget di input vettoriale ha anche le seguenti opzioni:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:128
+msgid ""
+"an iterator |iterate| button: If toggled, the algorithm will be executed "
+"iteratively on each one of its features, instead of just once for the whole "
+"layer, producing as many outputs as times the algorithm is executed. This "
+"allows for automating the process when all features in a layer have to be "
+"processed separately. If the algorithm contains several input vectors you "
+"can iterate over, the iteration will be processed only on the first toggled "
+"parameter, in the order parameters are declared in the algorithm."
+msgstr ""
+"un pulsante di iterazione: se attivato, l'algoritmo verrà eseguito in modo "
+"iterativo su ciascuno dei suoi elementi, anziché solo una volta per l'intero"
+" layer, producendo tanti risultati quante sono le volte in cui viene "
+"eseguito l'algoritmo. Ciò consente di automatizzare il processo quando tutti"
+" gli elementi di un layer devono essere elaborati separatamente. Se "
+"l'algoritmo contiene più vettori in ingresso su cui è possibile iterare, "
+"l'iterazione verrà elaborata solo sul primo parametro attivato, nell'ordine "
+"in cui i parametri sono dichiarati nell'algoritmo."
+
 #: ../../docs/user_manual/processing/toolbox.rst:444
 msgid "iterate"
 msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:136
+msgid ""
+"|options| :sup:`Advanced options` button to adjust settings to use for that "
+"specific parameter. These settings concern:"
+msgstr ""
+"|options| pulsante :sup:`Opzioni avanzate` per regolare le impostazioni da "
+"utilizzare per quel parametro specifico. Queste impostazioni riguardano:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:139
+msgid ""
+":guilabel:`Invalid feature filtering`: allows the :ref:`default method "
+"<processing_general_settings>` for handling features with invalid geometries"
+" to be overridden"
+msgstr ""
+":guilabel:`Filtri di funzionalità non validi`: permette di annullare il "
+":ref:`default method <processing_general_settings>` per la gestione delle "
+"funzionalità con geometrie non valide"
+
+#: ../../docs/user_manual/processing/toolbox.rst:141
+msgid ""
+":guilabel:`Limit features processed`: optional limit on number of features "
+"processed from the source"
+msgstr ""
+":guilabel:`Limita elementi processati`: limite opzionale sul numero di "
+"elementi elaborati dalla fonte"
+
+#: ../../docs/user_manual/processing/toolbox.rst:143
+msgid ""
+"It is also possible to limit the algorithm execution on the vector layer to "
+"its :guilabel:`Selected features only`."
+msgstr ""
+"È anche possibile limitare l'esecuzione dell'algoritmo sul layer vettoriale "
+"per :guilabel:`Solo elementi selezionati`."
+
+#: ../../docs/user_manual/processing/toolbox.rst:145
+msgid ""
+"A **table**, to select from a list of all available in QGIS. Non-spatial "
+"tables are loaded into QGIS like vector layers, and use the :ref:`same "
+"widget <vector_widget>`."
+msgstr ""
+"Una **tabella**, da selezionare da un elenco di tutte quelle disponibili in "
+"QGIS. Le tabelle non spaziali vengono caricate in QGIS come layer vettoriali"
+" e utilizzano il :ref:`same widget <vector_widget>`."
+
+#: ../../docs/user_manual/processing/toolbox.rst:147
+msgid ""
+"A **raster layer**, to select from a list of all raster layers available in "
+"QGIS. The selector contains as well a :guilabel:`...` button on its right-"
+"hand side, to let you select filenames that represent layers currently not "
+"loaded in QGIS."
+msgstr ""
+"Un **layer raster**, da selezionare da un elenco di tutti i layer raster "
+"disponibili in QGIS. Il selettore contiene anche un pulsante :guilabel:`...`"
+" sul lato destro, per consentirti di selezionare nomi file che rappresentano"
+" layer attualmente non caricati in QGIS."
+
+#: ../../docs/user_manual/processing/toolbox.rst:156
+msgid "Raster input widget"
+msgstr "Widget raster in ingresso"
 
 #: ../../docs/user_manual/processing/toolbox.rst:158
 msgid "An **option**, to choose from a selection list of possible options."
