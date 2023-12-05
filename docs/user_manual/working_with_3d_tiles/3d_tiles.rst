@@ -19,7 +19,7 @@ and display 3D content, optimising performance by dynamically loading
 appropriate levels of detail. This technology is widely used in urban 
 planning, architecture, simulation, gaming, and virtual reality, providing
 a standardised and interoperable solution for visualising complex geographical
-data.
+data. Read :ref:`3d_tiles` for more details.
 
 
 .. _figure_3d_tiles_example:
@@ -141,12 +141,12 @@ with the average value of the full texture.
 This is a good option to try when dealing with a large dataset and
 want to get a quick overview of the data.
 
-.. _figure_3d_tiles_texture_mesh:
+.. _figure_3d_tiles_textured_and_wireframe:
 
-.. figure:: img/3d_tiles_texture_mesh.png
+.. figure:: img/3d_tiles_textured_and_wireframe.png
    :align: center
 
-   3D Tiles with texture colors for mesh
+   3D Tiles - textured and wireframe 
 
 To view the data you can open |new3DMap| :guilabel:`New 3D map view`.
 
@@ -156,6 +156,20 @@ To view the data you can open |new3DMap| :guilabel:`New 3D map view`.
    :align: center
 
    3D Map View  
+
+
+.. _3dtiles3dviewmenu:
+
+3D View Properties
+------------------
+
+* :guilabel:`Maximum screen space error` determines the threshold for swapping
+  terrain tiles with more detailed ones (and vice versa) - i.e. how soon the 3D 
+  view will use higher quality tiles. Lower numbers mean more details in the 
+  scene at the expenses of increased rendering complexity.
+
+* |unchecked| :guilabel:`Show bounding boxes` Show 3D bounding boxes of the 
+  terrain tiles (useful for troubleshooting terrain issues).
 
 
 .. _3dtilesrenderingmenu:
