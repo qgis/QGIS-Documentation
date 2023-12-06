@@ -1162,6 +1162,7 @@ At the top of the window, you have a handful of tools:
 * selection mode to use to fetch features to identify:
 
   * |identifyByRectangle| :sup:`Identify Features by area or single click`
+  * |identifyByMouseOver| :sup:`Identify Features on Mouse Over`
   * |identifyByPolygon| :sup:`Identify Features by Polygon`
   * |identifyByFreehand| :sup:`Identify Features by Freehand`
   * |identifyByRadius| :sup:`Identify Features by Radius`
@@ -2274,6 +2275,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |identifyByFreehand| image:: /static/common/mActionIdentifyByFreehand.png
    :width: 1.5em
+.. |identifyByMouseOver| image:: /static/common/mActionIdentifyByMouseOver.png
+   :width: 1.5em   
 .. |identifyByPolygon| image:: /static/common/mActionIdentifyByPolygon.png
    :width: 1.5em
 .. |identifyByRadius| image:: /static/common/mActionIdentifyByRadius.png
