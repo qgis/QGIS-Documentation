@@ -6,15 +6,16 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# Febriani Ayuningsih, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-08-30 19:51+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: Febriani Ayuningsih, 2023\n"
 "Language-Team: Indonesian (https://app.transifex.com/qgis/teams/6144/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,3 +27,303 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:25
 msgid "Geometry Handling"
 msgstr "Penanganan Geometri"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:27
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"Jika anda berada di luar konsol pyqgis, maka potongan kode pada halaman "
+"membutuhkan import hal hal sebagai berikut:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:51
+msgid ""
+"Points, linestrings and polygons that represent a spatial feature are "
+"commonly referred to as geometries. In QGIS they are represented with the "
+":class:`QgsGeometry <qgis.core.QgsGeometry>` class."
+msgstr ""
+"Titik, garis dan poligon yang merepresentasikan sebuah fitur spasial "
+"seringkali disebut sebagai geometri. Di QGIS geometri direpresentasikan "
+"dengan :class:`QgsGeometry <qgis.core.QgsGeometry>` class."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:55
+msgid ""
+"Sometimes one geometry is actually a collection of simple (single-part) "
+"geometries. Such a geometry is called a multi-part geometry. If it contains "
+"just one type of simple geometry, we call it multi-point, multi-linestring "
+"or multi-polygon. For example, a country consisting of multiple islands can "
+"be represented as a multi-polygon."
+msgstr ""
+"Kadang sebuah geometri merupakan kumpulan dari geometri sederhana (single-"
+"part). Geometri seperti itu disebut ssebagai multi-part geometry. Jika "
+"terdiri dari satu jenis geometri sederhana maka disebut sebagai multi-point,"
+" multi-linestring, atau multi-polygon. Sebagai contoh, negara yang terdiri "
+"dari banyak pulau dapat disajikan sebagai multi-polygon."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:61
+msgid ""
+"The coordinates of geometries can be in any coordinate reference system "
+"(CRS). When fetching features from a layer, associated geometries will have "
+"coordinates in CRS of the layer."
+msgstr ""
+"Koordinat geometri bisa dalam berbagai sistem referensi koordinat (CRS). "
+"Ketika mengambil fitur dari sebuah layer, maka geometri tersebut akan "
+"mempunyai koordinat pada CRS layer tersebut. "
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:65
+msgid ""
+"Description and specifications of all possible geometries construction and "
+"relationships are available in the `OGC Simple Feature Access Standards "
+"<https://www.ogc.org/standards/sfa>`_ for advanced details."
+msgstr ""
+"Deskripsi dan spesifikasi dari seluruh kemungkinan bentuk geometri dan "
+"relasinya tersedia di `OGC Simple Feature Access Standards "
+"<https://www.ogc.org/standards/sfa>`_ for advanced details."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:72
+msgid "Geometry Construction"
+msgstr "Pembentukan Geometri"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:74
+msgid "PyQGIS provides several options for creating a geometry:"
+msgstr "PyQGIS menyediakan banyak pilihan untuk membuat geometri:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:76
+msgid "from coordinates"
+msgstr "dari koordinat"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:95
+msgid ""
+"Coordinates are given using :class:`QgsPoint <qgis.core.QgsPoint>` class or "
+":class:`QgsPointXY <qgis.core.QgsPointXY>` class. The difference between "
+"these classes is that :class:`QgsPoint <qgis.core.QgsPoint>` supports M and "
+"Z dimensions."
+msgstr ""
+"Koordinat diberikan menggunakan :class:`QgsPoint <qgis.core.QgsPoint>` class"
+" or :class:`QgsPointXY <qgis.core.QgsPointXY>` class. Perbedaan antar kelas "
+"tersebut :class:`QgsPoint <qgis.core.QgsPoint>` mendukung dimensi M dan Z."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:99
+msgid "A Polyline (Linestring) is represented by a list of points."
+msgstr "Sebuah polyline (Garis) disajikan dalam sebuah daftar titik-titik"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:101
+msgid ""
+"A Polygon is represented by a list of linear rings (i.e. closed "
+"linestrings). The first ring is the outer ring (boundary), optional "
+"subsequent rings are holes in the polygon. Note that unlike some programs, "
+"QGIS will close the ring for you so there is no need to duplicate the first "
+"point as the last."
+msgstr ""
+"Sebuah poligon disajikan berupa daftar cincir linear (cth. garis tertutup). "
+"Cincin pertama adalah cincin luar (batas), dan cincin opsional selanjutnya "
+"adalah lubang pada poligon. Sebagai catatan, tidak seperti pada beberapa "
+"program lain, QGIS akan menutup cincin untuk anda sehingga tidak perlu untuk"
+" menduplikasi titik pertama sebagai titik akhir. "
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:107
+msgid ""
+"Multi-part geometries go one level further: multi-point is a list of points,"
+" multi-linestring is a list of linestrings and multi-polygon is a list of "
+"polygons."
+msgstr ""
+"Geometri multi-part setingkat lebih jauh: multi-point adalah sebuah kumpulan"
+" daftar titik-titik, multi-linestring adalah sebuah kumpulan garis dan "
+"multi-polygon adalah sebuah kumpulan poligon."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:111
+msgid "from well-known text (WKT)"
+msgstr "dari well-known text (WKT)"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:123
+msgid "from well-known binary (WKB)"
+msgstr "dari well-known binary (WKB)"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:142
+msgid "Access to Geometry"
+msgstr "Akses ke geometri"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:144
+msgid ""
+"First, you should find out the geometry type. The :meth:`wkbType() "
+"<qgis.core.QgsGeometry.wkbType>` method is the one to use. It returns a "
+"value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>` "
+"enumeration."
+msgstr ""
+"Pertama, anda harus mengetahui tipe geometrinya. :meth:`wkbType() "
+"<qgis.core.QgsGeometry.wkbType>` adalah metode yang digunakan. Metode "
+"tersebut menghasilkan nilai dari enumerasi :class:`QgsWkbTypes.Type "
+"<qgis.core.QgsWkbTypes>`."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:167
+msgid ""
+"As an alternative, one can use the :meth:`type() "
+"<qgis.core.QgsGeometry.type>` method which returns a value from the "
+":class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` enumeration."
+msgstr ""
+"Sebagai alternatif, dapat menggunakan metode :meth:`type() "
+"<qgis.core.QgsGeometry.type>` yang menghasilkan nilai dari enumerasi "
+":class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` ."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:171
+msgid ""
+"You can use the :meth:`displayString() "
+"<qgis.core.QgsWkbTypes.displayString>` function to get a human readable "
+"geometry type."
+msgstr ""
+"Anda dapat menggunakan fungsi :meth:`displayString() "
+"<qgis.core.QgsWkbTypes.displayString>` untuk mendapatkan tipe geometri yang "
+"mudah dibaca oleh manusia."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:189
+msgid ""
+"There is also a helper function :meth:`isMultipart() "
+"<qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is "
+"multipart or not."
+msgstr ""
+"Tersedia juga fungsi bantuan :meth:`isMultipart() "
+"<qgis.core.QgsGeometry.isMultipart>` untuk mengetahui apakah sebuah geometri"
+" multi-part atau tidak."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:192
+msgid ""
+"To extract information from a geometry there are accessor functions for "
+"every vector type. Here's an example on how to use these accessors:"
+msgstr ""
+"Untuk mengekstrak informasi dari sebuah geometri, tersedia fungsi aksesor "
+"untuk setiap tipe vektor. Berikut contoh bagaimana menggunakan aksesor:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:212
+msgid ""
+"The tuples (x,y) are not real tuples, they are :class:`QgsPoint "
+"<qgis.core.QgsPoint>` objects, the values are accessible with :meth:`x() "
+"<qgis.core.QgsPoint.x>` and :meth:`y() <qgis.core.QgsPoint.y>` methods."
+msgstr ""
+"tuple (x,y) bukan tuple sebenernya, tuple ini adalah object :class:`QgsPoint"
+" <qgis.core.QgsPoint>` , nilainya dapat diakses dengan metode :meth:`x() "
+"<qgis.core.QgsPoint.x>` and :meth:`y() <qgis.core.QgsPoint.y>`."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:216
+msgid ""
+"For multipart geometries there are similar accessor functions: "
+":meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, "
+":meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>` and "
+":meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`."
+msgstr ""
+"Ada fungsi aksesor yang sama untuk geometri multipart meth:`asMultiPoint() "
+"<qgis.core.QgsGeometry.asMultiPoint>`, :meth:`asMultiPolyline() "
+"<qgis.core.QgsGeometry.asMultiPolyline>` dan :meth:`asMultiPolygon() "
+"<qgis.core.QgsGeometry.asMultiPolygon>`."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:222
+msgid ""
+"It is possible to iterate over all the parts of a geometry, regardless of "
+"the geometry's type. E.g."
+msgstr ""
+"Dimungkinkan untuk melakukan iterasi terhadap semua bagian dari sebuah "
+"geometry, apapun tipe geometrinya. Contohnya."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:257
+msgid ""
+"It's also possible to modify each part of the geometry using "
+":meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` method."
+msgstr ""
+"Dimungkinkan juga untuk memodifikasi setiap bagian dari geometri dengan "
+"metode :meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` ."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:279
+msgid "Geometry Predicates and Operations"
+msgstr "Operasi dan Predikat Geometri"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:281
+msgid ""
+"QGIS uses GEOS library for advanced geometry operations such as geometry "
+"predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, "
+":meth:`intersects() <qgis.core.QgsGeometry.intersects>`, …) and set "
+"operations (:meth:`combine() <qgis.core.QgsGeometry.combine>`, "
+":meth:`difference() <qgis.core.QgsGeometry.difference>`, …). It can also "
+"compute geometric properties of geometries, such as area (in the case of "
+"polygons) or lengths (for polygons and lines)."
+msgstr ""
+"QGIS menggunakan librari GEOS untuk operasi geometri lebih lanjut sseperti "
+"predikat geometri (:meth:`contains() <qgis.core.QgsGeometry.contains>`, "
+":meth:`intersects() <qgis.core.QgsGeometry.intersects>`, …) dan set operasi "
+"(:meth:`combine() <qgis.core.QgsGeometry.combine>`, :meth:`difference() "
+"<qgis.core.QgsGeometry.difference>`, …). Librari tersebut juga dapat "
+"menghitung sifat geometris dari geometri, seperti luasan (dalam kasus "
+"poligon) atau panjang (pada poligon dan garis)."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:287
+msgid ""
+"Let's see an example that combines iterating over the features in a given "
+"layer and performing some geometric computations based on their geometries. "
+"The below code will compute and print the area and perimeter of each country"
+" in the ``countries`` layer within our tutorial QGIS project."
+msgstr ""
+"Mari kita lihat sebuah contoh yang mengkombinasikan iterasi pada fitur pada "
+"layer yang telah ditentukan dan menampilkan beberapa perhitungan geometris "
+"berdasarkan geometrinya. Berikut merupakan kode yang akan menghitung dan "
+"menampilkan area dan perimeter dari setiap negara pada layer \"countries\" "
+"pada project tutorial QGIS."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:292
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:331
+msgid ""
+"The following code assumes ``layer`` is a :class:`QgsVectorLayer "
+"<qgis.core.QgsVectorLayer>` object that has Polygon feature type."
+msgstr ""
+"Kode berikut mengasumsikan \"layer\" sebagai sebuah objek "
+":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`  yang berupa poligon."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:322
+msgid ""
+"Now you have calculated and printed the areas and perimeters of the "
+"geometries. You may however quickly notice that the values are strange. That"
+" is because areas and perimeters don't take CRS into account when computed "
+"using the :meth:`area() <qgis.core.QgsGeometry.area>` and :meth:`length() "
+"<qgis.core.QgsGeometry.length>` methods from the :class:`QgsGeometry "
+"<qgis.core.QgsGeometry>` class. For a more powerful area and distance "
+"calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class "
+"can be used, which can perform ellipsoid based calculations:"
+msgstr ""
+"Sekarang anda telah menghitung dan mencetak area dan perimeter dari "
+"geometri. Anda mungkin menyadari bahwa nilainya aneh. Hal tersebut "
+"dikarenakan area dan perimeter tidak memperhitungkan CRS pada saat "
+"perhitungan dengan metode :meth:`area() <qgis.core.QgsGeometry.area>` dan "
+":meth:`length() <qgis.core.QgsGeometry.length>` dari kelas  "
+":class:`QgsGeometry <qgis.core.QgsGeometry>` . Untuk perhitungan area dan "
+"jarak yang lebih baik, kelas  :class:`QgsDistanceArea "
+"<qgis.core.QgsDistanceArea>` dapat digunakan, yang dapat menunjukkan "
+"perhitungan berdasarkan elipsoid: "
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:367
+msgid "Alternatively, you may want to know the distance between two points."
+msgstr "Di sisi lain, anda mungkin ingin mengetahui jarak antara dua titik."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:387
+msgid ""
+"You can find many example of algorithms that are included in QGIS and use "
+"these methods to analyze and transform vector data. Here are some links to "
+"the code of a few of them."
+msgstr ""
+"Anda dapat menemukan banyak contoh algoritma di QGIS dan menggunakan metode "
+"tersebut untuk menganalisa dan mentransformasi data vektor. Berikut "
+"merupakan beberapa tautan ke kode tersebut."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:391
+msgid ""
+"Distance and area using the :class:`QgsDistanceArea "
+"<qgis.core.QgsDistanceArea>` class: :source:`Distance matrix algorithm "
+"<python/plugins/processing/algs/qgis/PointDistance.py>`"
+msgstr ""
+"Jarak dan luasan menggunakan :class:`QgsDistanceArea "
+"<qgis.core.QgsDistanceArea>` class: :source:`Distance matrix algorithm "
+"<python/plugins/processing/algs/qgis/PointDistance.py>`"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:393
+msgid ""
+":source:`Lines to polygons algorithm "
+"<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"
+msgstr ""
+":source:`Algoritma garis ke poligon "
+"<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"
