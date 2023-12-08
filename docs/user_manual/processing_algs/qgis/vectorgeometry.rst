@@ -1185,9 +1185,9 @@ Python code
 
 .. _qgisconcavehull:
 
-Concave hull (alpha shapes)
----------------------------
-Computes the concave hull of the features in an input point layer.
+Concave hull
+------------
+Computes the concave hull of the features from an input point layer.
 
 .. figure:: img/concave_hull_threshold.png
     :align: center
@@ -1195,7 +1195,7 @@ Computes the concave hull of the features in an input point layer.
     Concave hulls with different thresholds (0.3, 0.6, 0.9)
 
 
-.. seealso:: :ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
+.. seealso:: :ref:`qgisconvexhull`
 
 Parameters
 ..........
@@ -1229,7 +1229,7 @@ Parameters
      - ``NO_MULTIGEOMETRY``
      - [boolean]
 
-       Default: True
+       Default: False
      - Check if you want to have singlepart geometries
        instead of multipart ones.
    * - **Concave hull**
@@ -1263,104 +1263,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:concavehull``
-
-.. include:: ../algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
-
-.. _qgisknearestconcavehull:
-
-Concave hull (k-nearest neighbor)
----------------------------------
-Generates a concave hull polygon from a set of points.
-If the input layer is a line or polygon layer, it will use the
-vertices.
-
-The number of neighbors to consider determines the concaveness of the
-output polygon.
-A lower number will result in a concave hull that follows the points
-very closely, while a higher number will have a smoother shape.
-The minimum number of neighbor points to consider is 3.
-A value equal to or greater than the number of points will result in
-a convex hull.
-
-If a field is selected, the algorithm will group the features in the
-input layer using unique values in that field and generate individual
-polygons in the output layer for each group.
-
-.. seealso:: :ref:`qgisconcavehull`
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input layer**
-     - ``INPUT``
-     - [vector: any]
-     - Input vector layer
-   * - **Number of neighboring points to consider (a lower number is more concave, a higher number is smoother)**
-     - ``KNEIGHBORS``
-     - [number]
-
-       Default: 3
-     - Determines the concaveness of the output polygon.
-       A small number will result in a concave hull that follows the
-       points very closely, while a high number will make the polygon
-       look more like the convex hull (if the number is equal to or
-       larger than the number of features, the result will be the
-       convex hull).
-       Minimum value: 3.
-   * - **Field**
-
-       Optional
-     - ``FIELD``
-     - [tablefield: any]
-
-       Default: None
-     - If specified, one concave hull polygon is generated for each
-       unique value of the field (by selecting features using this
-       value).
-   * - **Concave hull**
-     - ``OUTPUT``
-     - [vector: polygon]
-
-       Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
-
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Concave hull**
-     - ``OUTPUT``
-     - [vector: polygon]
-     - The output vector layer
-
-Python code
-...........
-
-**Algorithm ID**: ``qgis:knearestconcavehull``
+**Algorithm ID**: ``native:concavehull``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1889,6 +1792,21 @@ Parameters
      - ``INPUT``
      - [vector: point]
      - Input point vector layer
+   * - **Tolerance**
+
+       Optional
+     - ``TOLERANCE``
+     - [number]
+
+       Default: 0.0
+     - Specifies an optional snapping tolerance which can be used to improve the robustness of the triangulation.
+   * - **Add point IDs to output**
+     - ``ADD_ATTRIBUTES``
+     - [boolean]
+
+       Default: True
+     - Specifies whether fields storing involved point features ID should be added to the output.
+       If False, an ``id`` field is used to identify the polygons.
    * - **Delaunay triangulation**
      - ``OUTPUT``
      - [vector: polygon]
@@ -1920,7 +1838,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:delaunaytriangulation``
+**Algorithm ID**: ``native:delaunaytriangulation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -7502,6 +7420,21 @@ Parameters
        Default: 0.0
      - The extent of the output layer will be this much
        bigger than the extent of the input layer
+   * - **Tolerance**
+
+       Optional
+     - ``TOLERANCE``
+     - [number]
+
+       Default: 0.0
+     - Specifies an optional snapping tolerance which can be used to improve the robustness of the voronoi.
+   * - **Copy attributes from input features**
+     - ``COPY_ATTRIBUTES``
+     - [boolean]
+
+       Default: True
+     - Specifies whether fields storing involved point features ID should be added to the output.
+       If False, an ``id`` field is created to identify the polygons.
    * - **Voronoi polygons**
      - ``OUTPUT``
      - [vector: polygon]
@@ -7533,7 +7466,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:voronoipolygons``
+**Algorithm ID**: ``native:voronoipolygons``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
