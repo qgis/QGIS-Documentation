@@ -157,7 +157,6 @@ The |search| :guilabel:`Filter rules` text box also helps you easily find a rule
 by searching the :guilabel:`Label`, :guilabel:`Layer` and :guilabel:`Filter` fields.
 
 In :numref:`figure_vector_tile_symbology` we set up style for the OpenStreetMap ``landuse`` layer.
-The settings are made for the class ``suburb`` here.
 For better visibility most of the rules are deselected.
 
 Layer rendering
