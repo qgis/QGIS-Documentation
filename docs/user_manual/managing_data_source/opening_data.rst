@@ -969,9 +969,9 @@ The service file can look like this::
   `.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_
   option.
 
-.. note:: **QGIS server and service**
+.. note:: **QGIS Server and service**
 
-  When using a service file and QGIS server, you must configure the service on the server side as well.
+  When using a service file and QGIS Server, you must configure the service on the server side as well.
   You can follow the :ref:`QGIS Server <QGIS-Server-manual>` documentation.
 
 On \*nix operating systems (GNU/Linux, macOS etc.) you can save the
