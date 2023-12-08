@@ -122,8 +122,8 @@ the selected 3D tile, including:
 
 .. _3dtilessymbologymenu:
 
-3D tiles layer symbology
-------------------------
+Symbology Properties
+--------------------
 
 .. _figure_3d_tiles_symbology:
 
