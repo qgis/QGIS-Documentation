@@ -959,8 +959,7 @@ The service file can look like this::
   and ``wastewater_service``. You can use these to connect from QGIS,
   pgAdmin, etc. by specifying only the name of the service you want to
   connect to (without the enclosing brackets).
-  If you want to use the service with ``psql`` you need to do something
-  like ``export PGSERVICE=water_service`` before doing your psql commands.
+  If you want to use the service with ``psql``, you can do ``psql service=water_service``.
 
   You can find all the PostgreSQL parameters
   `here <https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
@@ -970,6 +969,10 @@ The service file can look like this::
   `.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_
   option.
 
+.. note:: **QGIS Server and service**
+
+  When using a service file and QGIS Server, you must configure the service on the server side as well.
+  You can follow the :ref:`QGIS Server <QGIS-Server-manual>` documentation.
 
 On \*nix operating systems (GNU/Linux, macOS etc.) you can save the
 :file:`.pg_service.conf` file in the user's home directory and
