@@ -1502,6 +1502,51 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
     project.
 
 
+.. index:: 3D Tiles services
+.. _3d_tiles:
+
+Using 3D tiles services
+-----------------------
+
+To load a 3D tiles into QGIS, use the |addTiledSceneLayer| :guilabel:`Scene` tab
+in the :guilabel:`Data Source Manager` dialog. 
+
+.. _figure_scene:
+
+.. figure:: img/scene.png
+   :align: center
+
+   Data Source Manager - Scene
+
+Create a :guilabel:`New Cesium 3D Tiles Connection` by clicking on 
+:guilabel:`New`. Add :guilabel:`Name` and :guilabel:`URL` or add
+local tileset file.
+
+Support for 3D tiles:
+
+* Remote source - ``http://example.com/tileset.json``
+* Local files - ``file:///path/to/tiles/tileset.json``
+
+.. _figure_tiled_scene_connection:
+
+.. figure:: img/tiled_scene_connection.png
+   :align: center
+
+   Tiled Scene Connection 
+
+You can also add the service from :guilabel:`Browser Panel`.
+
+After creating new connection you are able to :guilabel:`Add` the new layer
+to your map. 
+
+.. _figure_3d_tiles_layer:
+
+.. figure:: img/3d_tiles_layer.png
+   :align: center
+
+   3D Tiles Layer - Textured
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -1530,6 +1575,8 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
+.. |addTiledSceneLayer| image:: /static/common/mActionAddTiledSceneLayer.png
+   :width: 1.5em 
 .. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
    :width: 1.5em
 .. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
