@@ -48,9 +48,15 @@ At startup, a list of :guilabel:`Project Templates` and
 names and file paths (for up to ten projects).
 The :guilabel:`Recent Projects` list is handy to access recently used
 projects.
-Double-click an entry to open the project or project template. Right-click
-an entry to :guilabel:`Pin to List`, :guilabel:`Open Directory...` or
-:guilabel:`Remove from List`.
+Double-click an entry to open the project or project template. 
+Right-click an entry to :guilabel:`Pin to List`, :guilabel:`Open Directory...` 
+or :guilabel:`Remove from List`. If you see your project on the 
+:guilabel:`Recent Projects` list but can't find it in your file manager use 
+the :guilabel:`Open Directory...` option to help you locate projects that may 
+be missing, moved or renamed. You can also go to :guilabel:`Clear List` if 
+you want to remove all projects from the :guilabel:`Recent Projects` list. 
+If you have pinned projects, the :guilabel:`Clear List` action will be followed 
+by message box asking whether the pinned projects should also be removed.
 You can also add a layer to create a new project automatically.
 The lists will then disappear, giving way to the map canvas.
 
