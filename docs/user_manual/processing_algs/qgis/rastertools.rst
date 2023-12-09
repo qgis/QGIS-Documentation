@@ -12,11 +12,12 @@ Raster tools
 
 Align raster
 ------------
+|334|
 
 Aligns raster by resampling it to the same cell size
 and reprojecting to the same CRS as a reference raster.
 
-.. warning:: **This algorithm is ONLY available in the** :ref:`Model Designer <processing.modeler>` context.
+.. warning:: This algorithm is ONLY available in the :ref:`Model Designer <processing.modeler>` context.
 
 Parameters
 ..........
@@ -133,11 +134,12 @@ Python code
 
 Align rasters
 -------------
+|334|
 
 Aligns rasters by resampling them to the same cell size
 and reprojecting to the same CRS as a reference raster.
 
-.. warning:: **This algorithm is NOT available in the** :ref:`Model Designer <processing.modeler>` context.
+.. warning:: This algorithm is NOT available in the :ref:`Model Designer <processing.modeler>` context.
 
 Parameters
 ..........
@@ -790,3 +792,4 @@ Python code
    source folder.
 
 .. |330| replace:: ``NEW in 3.30``
+.. |334| replace:: ``NEW in 3.34``
