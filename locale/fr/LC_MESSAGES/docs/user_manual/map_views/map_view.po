@@ -7,8 +7,8 @@
 # Translators:
 # Transifex Bot <>, 2023
 # _ __ <td_safemail-linux@yahoo.fr>, 2023
-# Harrissou Sant-anna, 2023
 # MarieSilvestre, 2023
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-13 12:32+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: MarieSilvestre, 2023\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,7 +79,7 @@ msgstr "Usage"
 
 #: ../../docs/user_manual/map_views/map_view.rst:58
 msgid "|pan| :sup:`Pan Map`"
-msgstr "Déplacement de la carte :sup:`Pan Map`"
+msgstr "|pan| :sup:`Déplacer la carte`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1325
 msgid "pan"
@@ -250,6 +250,14 @@ msgstr ""
 "Zoomer sur la carte à un niveau où un pixel de la couche raster active "
 "couvre un pixel d'écran."
 
+#: ../../docs/user_manual/map_views/map_view.rst:101
+msgid "Mouse wheel"
+msgstr "Molette de souris"
+
+#: ../../docs/user_manual/map_views/map_view.rst:107
+msgid "Keyboard"
+msgstr "Clavier"
+
 #: ../../docs/user_manual/map_views/map_view.rst:116
 msgid ""
 "Right-click over the map and you should be able to |editCopy| "
@@ -275,6 +283,14 @@ msgstr ""
 "fois que l'affichage de la carte est mis à jour. Les évènements qui "
 "déclenchent ce rafraîchissement incluent :"
 
+#: ../../docs/user_manual/map_views/map_view.rst:132
+msgid "changing the visibility of a layer"
+msgstr "la modification de la visibilité d'une couche"
+
+#: ../../docs/user_manual/map_views/map_view.rst:133
+msgid "modifying symbology of a visible layer"
+msgstr "la modification de la symbologie d'une couche visible"
+
 #: ../../docs/user_manual/map_views/map_view.rst:134
 msgid "adding a layer"
 msgstr "l'ajout de couche"
@@ -291,6 +307,30 @@ msgstr "le redimensionnement de la fenêtre de QGIS"
 msgid "QGIS allows you to control the rendering process in a number of ways."
 msgstr ""
 "QGIS vous laisse contrôler le processus de rendu de plusieurs manières."
+
+#: ../../docs/user_manual/map_views/map_view.rst:140
+msgid "at the :ref:`global level <rendering_options>`"
+msgstr "à :ref:`l'échelle globale <rendering_options>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:141
+msgid ""
+"per layer, using e.g. the :ref:`scale dependent rendering "
+"<label_scaledepend>`"
+msgstr ""
+"par couche, en utilisant par exemple le :ref:`rendu dépendant de l'échelle "
+"<label_scaledepend>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:144
+msgid ""
+"To stop the map drawing, press the :kbd:`Esc` key. This will halt the "
+"refresh of the map canvas and leave the map partially drawn. It may however "
+"take a bit of time after pressing :kbd:`Esc` for the map drawing to halt."
+msgstr ""
+"Pour arrêter le rendu de la carte, appuyez sur la touche :kbd:`ESC`. Ceci "
+"stoppera le rafraîchissement du canevas de la carte et laissera la carte "
+"partiellement dessinée. Il est possible qu'il y ait un délai entre le moment"
+" où la touche :kbd:`ESC` est pressée et le moment où le rendu de la carte "
+"est effectivement arrêté."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1289
 msgid "checkbox"
@@ -367,6 +407,10 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:1299
 msgid "fileSave"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:287
+msgid "redefine the :ref:`spatial extent <extent_selector>` to use"
+msgstr "redéfinir :ref:`l'emprise spatiale <extent_selector>` à utiliser"
 
 #: ../../docs/user_manual/map_views/map_view.rst:306
 msgid ""
@@ -647,6 +691,10 @@ msgid ""
 msgstr ""
 "Vous pouvez aussi zoomer sur des signets en tapant le nom du signet dans le "
 ":ref:`Localisateur <label_statusbar>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:414
+msgid "Decorating the map"
+msgstr "Décorer la carte"
 
 #: ../../docs/user_manual/map_views/map_view.rst:416
 msgid ""
@@ -1364,9 +1412,17 @@ msgstr ""
 ":guilabel:`Dessiner les objets du canevas de la carte` dans les propriétés "
 "de l'élément carte correspondant."
 
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "|createAnnotationLayer| :sup:`New Annotation Layer`"
+msgstr "|createAnnotationLayer| :sup:`Nouvelle couche d'annotation`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1293
 msgid "createAnnotationLayer"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "Create a new layer to store annotations"
+msgstr "Créer une nouvelle couche pour stocker les annotations"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1343
 msgid "select"
@@ -1392,9 +1448,17 @@ msgstr ""
 msgid "textAnnotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "|htmlAnnotation| :sup:`HTML Annotation`"
+msgstr "|htmlAnnotation| :sup:`Annotation HTML`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1303
 msgid "htmlAnnotation"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "|svgAnnotation| :sup:`SVG Annotation`"
+msgstr "|svgAnnotation| :sup:`Annotation SVG`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1364
 msgid "svgAnnotation"
@@ -1408,6 +1472,14 @@ msgstr ""
 msgid "annotation"
 msgstr ""
 
+#: ../../docs/user_manual/map_views/map_view.rst:807
+msgid "Interaction"
+msgstr "Interaction"
+
+#: ../../docs/user_manual/map_views/map_view.rst:834
+msgid ":kbd:`Alt+key` for ``1 px`` movement"
+msgstr ":kbd:`Alt+key` pour un mouvement de ``1 px``"
+
 #: ../../docs/user_manual/map_views/map_view.rst:858
 msgid "Layer Properties"
 msgstr "Propriétés des couches"
@@ -1415,6 +1487,10 @@ msgstr "Propriétés des couches"
 #: ../../docs/user_manual/map_views/map_view.rst:1350
 msgid "setProjection"
 msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:874
+msgid ":guilabel:`Rendering`:"
+msgstr ":guilabel:`Rendu` :"
 
 #: ../../docs/user_manual/map_views/map_view.rst:876
 msgid ""
@@ -1592,7 +1668,7 @@ msgstr ""
 
 #: ../../docs/user_manual/map_views/map_view.rst:979
 msgid "derived measurements in the :ref:`identify` tool"
-msgstr "les mesures dérivées de l'outil :ref:`identify` "
+msgstr "les mesures dérivées de l'outil :ref:`identify`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:980
 msgid ""
