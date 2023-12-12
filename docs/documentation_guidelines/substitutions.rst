@@ -180,6 +180,9 @@ Icon                             Substitution                          Icon     
 |floater|                        ``|floater|``
 |toggleEditing|                  ``|toggleEditing|``                   |allEdits|                        ``|allEdits|``
 |tracing|                        ``|tracing|``                         |snapping|                        ``|snapping|``
+|snappingVertex|                 ``|snappingVertex|``                  |snappingSegment|                 ``|snappingSegment|``
+|snappingArea|                   ``|snappingArea|``                    |snappingCentroid|                ``|snappingCentroid|``
+|snappingMiddle|                 ``|snappingMiddle|``                  |snappingEndpoint|                ``|snappingEndpoint|``
 |capturePoint|                   ``|capturePoint|``                    |capturePolygon|                  ``|capturePolygon|``
 |captureLine|                    ``|captureLine|``                     |captureCurveFromFeature|         ``|captureCurveFromFeature|``
 |deleteSelectedFeatures|         ``|deleteSelectedFeatures|``
@@ -1525,7 +1528,19 @@ Icon                            Substitution                        Icon        
 .. |slider| image:: /static/common/slider.png
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
+.. |snappingArea| image:: /static/common/mIconSnappingArea.png
+   :width: 1.5em
+.. |snappingCentroid| image:: /static/common/mIconSnappingCentroid.png
+   :width: 1.5em
+.. |snappingEndpoint| image:: /static/common/mIconSnappingEndpoint.png
+   :width: 1.5em
+.. |snappingMiddle| image:: /static/common/mIconSnappingMiddle.png
+   :width: 1.5em
+.. |snappingSegment| image:: /static/common/mIconSnappingSegment.png
+   :width: 1.5em
 .. |snappingSelf| image:: /static/common/mIconSnappingSelf.png
+   :width: 1.5em
+.. |snappingVertex| image:: /static/common/mIconSnappingVertex.png
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em

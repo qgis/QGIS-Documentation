@@ -115,8 +115,18 @@ There are three options to select the layer(s) to snap to:
   Snapping will not occur to a layer that is not checked in the
   snapping options dialog.
 
-As for snapping mode, you can choose between ``Vertex``, ``Segment``,
-``Area``, ``Centroid``, ``Middle of Segments`` and ``Line Endpoints``.
+When moving or creating vertex, you can opt for the following snapping modes:
+
+* |snappingVertex| :guilabel:`Vertex`
+* |snappingSegment| :guilabel:`Segment`: snaps along a line or a polygon perimeter.
+  If topological editing is enabled, then a new vertex is added at the snapping location.
+* |snappingArea| :guilabel:`Area`: guarantees that the snap point lies anywhere on a polygon's area,
+  not necessarily on its boundary
+* |snappingCentroid| :guilabel:`Centroid`: snaps to the centroid of the geometry of a feature.
+  In case of a multipart geometry, the target point may be distinct from the existing parts.
+* |snappingMiddle| :guilabel:`Middle of Segments` on line or polygon feature
+* |snappingEndpoint| :guilabel:`Line Endpoints`: snaps to the first or last vertex of every part
+  of a line or polygon feature.
 
 .. index:: Snapping icons
 
@@ -2257,9 +2267,21 @@ To edit features in-place:
    :width: 1.5em
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
+.. |snappingArea| image:: /static/common/mIconSnappingArea.png
+   :width: 1.5em
+.. |snappingCentroid| image:: /static/common/mIconSnappingCentroid.png
+   :width: 1.5em
+.. |snappingEndpoint| image:: /static/common/mIconSnappingEndpoint.png
+   :width: 1.5em
 .. |snappingIntersection| image:: /static/common/mIconSnappingIntersection.png
    :width: 1.5em
+.. |snappingMiddle| image:: /static/common/mIconSnappingMiddle.png
+   :width: 1.5em
+.. |snappingSegment| image:: /static/common/mIconSnappingSegment.png
+   :width: 1.5em
 .. |snappingSelf| image:: /static/common/mIconSnappingSelf.png
+   :width: 1.5em
+.. |snappingVertex| image:: /static/common/mIconSnappingVertex.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
