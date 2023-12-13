@@ -2392,7 +2392,7 @@ Advanced parameters
 
        0 --- Create or overwrite file
        1 --- Create or overwrite layer
-       2 --- Append features to existing layer, but do not create new fileds
+       2 --- Append features to existing layer, but do not create new fields
        3 --- Append features to existing layer, and create new fields if needed  
 
 Outputs
