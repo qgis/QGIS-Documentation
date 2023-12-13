@@ -2382,6 +2382,18 @@ Advanced parameters
      - [string]
      - GDAL layer creation options of the output format.
        Separate individual options with semicolons.
+   * - **Action to take on pre-existing file**
+
+     - ``ACTION_ON_EXISTING_FILE``
+     - [enumeration]
+
+       Default: 0
+     - How to manage existing features. Valid methods are:
+
+       0 --- Create or overwrite file
+       1 --- Create or overwrite layer
+       2 --- Append features to existing layer, but do not create new fields
+       3 --- Append features to existing layer, and create new fields if needed  
 
 Outputs
 .......
