@@ -26,13 +26,15 @@ QGIS has a built-in topological editing feature, which is great for creating
 new features without errors. But existing data errors and user-induced errors
 are hard to find. This plugin helps you find such errors through a list of rules.
 
-It is very simple to create topology rules with the Topology Checker plugin:
+To enable the :guilabel:`Topology checker` plugin:
 
-* Go to :guilabel:`Plugins` menu
-* Open |showPluginManager| :guilabel:`Manage and Install plugins` and choose 
-  |pluginInstalled| :guilabel:`Installed`
-* Enable |checkbox| |topologyChecker| :guilabel:`Topology checker`
-* Close |plugin| :guilabel:`Plugin` manager
+#. Go to :guilabel:`Plugins` menu
+#. Open |showPluginManager| :guilabel:`Manage and Install plugins` and choose 
+   |pluginInstalled| :guilabel:`Installed`
+#. Enable |checkbox| |topologyChecker| :guilabel:`Topology checker`
+#. Close the :guilabel:`Plugin manager` dialog.
+   A |topologyChecker| :guilabel:`Topology checker` entry is added to the 
+   :guilabel:`Vector` menu.
 
 After you enabled |topologyChecker| :guilabel:`Topology checker` 
 open it and choose |options| :guilabel:`Configure` to create your topology rules.
@@ -93,12 +95,17 @@ On **polygon layers**, the following rules are available:
 * :guilabel:`Must not overlap with`: Adjacent polygons from one layer should not share
   common area with polygons from another layer.
 
-When you create a :guilabel:`New rule` click on the |add| to include
-it to the :guilabel:`Current rules`. You can enable or disable individual
-rules by clicking on the |checkbox|. To remove one or more rules, select them 
-and click on the |symbologyRemove|.
-To filter errors choose specific error type from the :guilabel:`Show` 
-drop-down menu.
+When you create a :guilabel:`New rule` click on the |add| :sup:`Add rule` to 
+include it to the :guilabel:`Current rules`. You can enable or disable individual
+rules by clicking on the checkbox. To remove one or more rules, select them 
+and click on the |symbologyRemove| :sup:`Delete selected rules`.
+Press OK and then choose from the :guilabel:`Topology checker` panel 
+|validateAll| :sup:`Validate All` or
+|validateExtent| :sup:`Validate Extant` set of rules. Errors will show
+up in the table of results containing type of error, layer and feature ID.
+Check |checkbox|:guilabel:`Show errors on the canvas` to show error 
+location on the canvas. To filter errors choose specific error type from the 
+:guilabel:`Show` menu.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -121,6 +128,10 @@ drop-down menu.
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
+   :width: 1.5em
+.. |validateAll| image:: /static/common/mActionValidateAll.png
+   :width: 1.5em
+.. |validateExtent| image:: /static/common/mActionValidateExtent.png
    :width: 1.5em
 
 
