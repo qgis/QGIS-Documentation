@@ -95,17 +95,32 @@ On **polygon layers**, the following rules are available:
 * :guilabel:`Must not overlap with`: Adjacent polygons from one layer should not share
   common area with polygons from another layer.
 
-When you create a :guilabel:`New rule` click on the |add| :sup:`Add rule` to 
-include it to the :guilabel:`Current rules`. You can enable or disable individual
-rules by clicking on the checkbox. To remove one or more rules, select them 
-and click on the |symbologyRemove| :sup:`Delete selected rules`.
-Press OK and then choose from the :guilabel:`Topology checker` panel 
-|validateAll| :sup:`Validate All` or
-|validateExtent| :sup:`Validate Extant` set of rules. Errors will show
-up in the table of results containing type of error, layer and feature ID.
-Check |checkbox|:guilabel:`Show errors on the canvas` to show error 
-location on the canvas. To filter errors choose specific error type from the 
-:guilabel:`Show` menu.
+When you create a :guilabel:`New rule` click on the |symbologyAdd| :sup:`Add rule`
+to include it to the :guilabel:`Current rules`.
+You can enable or disable individual rules by clicking on the checkbox.
+Right-clicking over a rule provides the following options:
+
+* :guilabel:`Select All` the rules
+* :guilabel:`Activate` or :guilabel:`Deactivate` the selected rules
+* :guilabel:`Toggle activation` of selected rules
+* :guilabel:`Delete` selected rules.
+  This can also be achieved with the |symbologyRemove| :sup:`Delete selected rules` button.
+
+Press :guilabel:`OK` and then choose from the :guilabel:`Topology checker` panel:
+
+* |validateAll| :sup:`Validate All`: applies the active rules to all the features
+  of the involved layer(s)
+* or |validateExtent| :sup:`Validate Extent`: applies the active rules to the features
+  of the involved layer(s), within the current map canvas.
+  The button is kept pushed and the results will update as the map canvas extent changes.
+
+Errors will show up in the table of results containing type of error, layer and feature ID.
+Use :guilabel:`Filter errors by rule` menu to filter the errors to a specific error type.
+
+Check |checkbox|:guilabel:`Show errors on the canvas` to show error location on the canvas.
+Clicking a row in the table will zoom the map canvas to the concerned feature,
+where you can use :ref:`QGIS digitizing tools <editingvector>` to fix the error.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -113,17 +128,15 @@ location on the canvas. To filter errors choose specific error type from the
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |add| image:: /static/common/mActionAdd.png
-   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em 
+   :width: 1.3em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-.. |plugin| image:: /static/common/plugin.png
-   :width: 1.5em
 .. |pluginInstalled| image:: /static/common/plugin-installed.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
@@ -133,7 +146,3 @@ location on the canvas. To filter errors choose specific error type from the
    :width: 1.5em
 .. |validateExtent| image:: /static/common/mActionValidateExtent.png
    :width: 1.5em
-
-
-
-
