@@ -157,6 +157,26 @@ To view the data you can open |new3DMap| :guilabel:`New 3D map view`.
 
    3D Map View  
 
+From the :guilabel:`Symbology` tab, you can also set some options that 
+invariably act on all features of the layer:
+
+* :guilabel:`Maximum error`: This parameter determines the level of detail 
+  displayed in the 3D model. Similar to point clouds, 3D tiles 
+  often contain more information than necessary for visual representation.
+  By adjusting this setting, you control the balance between display density 
+  and rendering speed. A larger value (e.g., 5 mm) may introduce noticeable
+  gaps between elements, while a smaller value (e.g., 0.1 mm) could lead to
+  the rendering of an excessive number of details, potentially slowing down
+  the rendering process. Different units can be selected to tailor the setting
+  to your specific needs.
+* :guilabel:`Opacity`: Adjust the visibility of the underlying layer on the 
+  map canvas using this tool. Use slider to tailor the visibility 
+  of your scene layer according to your preferences. Alternatively, specify the 
+  exact percentage of visibility through the menu next to the slider.
+* :guilabel:`Blending mode`: You can achieve special rendering effects with these tools
+  that you may previously only know from graphics programs.
+  The pixels of your overlaying and underlaying layers are mixed through the settings
+  described in :ref:`blend-modes`.
 
 .. _3dtiles3dviewmenu:
 
