@@ -153,7 +153,7 @@ Statistics of translation
 
 .. list of substitutions for the statistics:
 
-.. |today| replace:: *2023-12-12*
+.. |today| replace:: *2023-12-19*
 .. |total_strings| replace:: **29210**
 .. |nb_languages| replace:: **58**
 .. |global_percentage| replace:: **14.9%**
@@ -185,7 +185,7 @@ Statistics of translation
 .. |stats_ka| replace:: 0.98
 .. |stats_kab| replace:: 0.97
 .. |stats_ko| replace:: 86.8
-.. |stats_lt| replace:: 11.18
+.. |stats_lt| replace:: 11.25
 .. |stats_mk| replace:: 0.99
 .. |stats_ml| replace:: 0.97
 .. |stats_mn| replace:: 0.98
