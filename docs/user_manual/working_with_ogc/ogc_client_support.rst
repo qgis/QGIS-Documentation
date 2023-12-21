@@ -257,6 +257,8 @@ Since this is a network operation, the speed of the response depends on the
 quality of your network connection to the WMS server.
 While downloading data from the WMS server, the download progress is
 visualized in the lower left corner of the main QGIS dialog.
+Connection can be loaded from :file:`.XML` file (:guilabel:`Load`) or saved to
+:file:`.XML` file (:guilabel:`Save`). 
 
 Your screen should now look a bit like :numref:`figure_OGC_add_wms`,
 which shows the response provided by a WMS server.
@@ -764,6 +766,9 @@ Now we are ready to load WFS layers from the above connection.
    :align: center
 
    Adding a WFS layer
+
+Connection can be loaded from :file:`.XML` file (:guilabel:`Load`) or saved to
+:file:`.XML` file (:guilabel:`Save`).
 
 You'll notice the download progress is visualized in the lower left of the QGIS
 main window. Once the layer is loaded, you can identify and select a couple of
