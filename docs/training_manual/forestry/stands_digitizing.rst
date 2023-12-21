@@ -67,20 +67,18 @@ original scanned map:
 #. Once you are done with the selection you need to copy this selection as a new
    layer and then save it as separate image file:
 
-   #. Copy (:kbd:`Ctr+C`) the selected pixels.
-   #. And paste the pixels directly (:kbd:`Ctr+V`), GIMP will display the pasted
-      pixels as a new temporary layer in the :guilabel:`Layers - Brushes` panel as a
-      :guilabel:`Floating Selection (Pasted Layer)`.
-   #. Right click that temporary layer and select :guilabel:`To New Layer`.
-   #. Click the "eye" icon next to the original image layer to switch it off, so that
-      only the :guilabel:`Pasted Layer` is visible:
+   #. Copy (:kbd:`Ctrl+C` or :menuselection:`Edit --> Copy`) the selected pixels.
+   #. And paste the pixels directly as a new layer (:menuselection:`Edit --> Paste as --> New Layer`).
+      GIMP will display the pasted pixels as a new layer (``Pasted Layer``) in the :guilabel:`Layers` panel.
+   #. Click the "eye" icon next to the original image layer to switch it off,
+      so that only the :guilabel:`Pasted Layer` is visible:
 
    .. figure:: img/saving_green_px.png
       :align: center
 
    |
 
-#. Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select
+#. Finally, select :menuselection:`File --> Export As...`, set :guilabel:`Select
    File Type (By Extension)` as a :guilabel:`TIFF image`, select the
    :file:`digitizing` folder and name it :file:`rautjarvi_map_green.tif`.
    Select no compression when asked.
