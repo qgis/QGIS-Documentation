@@ -1048,7 +1048,19 @@ Keep in mind that the first row will contain only coordinates, as it represents 
 Now it is possible to copy all your line measurements at once to the clipboard
 using the :guilabel:`Copy` button. Clicking the :guilabel:`Configuration` button
 you will access to :guilabel:`Measure Tool Copy Settings` where you can set up copy options.
+When you have the :guilabel:`Always use decimal point` option checked, the 
+coordinates copied to the clipboard will use a dot as the decimal separator.
+This happens even if your computer's language settings normally use a comma for
+decimals. In this case if you don't have the :guilabel:`Always use decimal point` 
+option checked you will be unable to select comma as a field separator.
 To stop measuring, click the right mouse button.
+
+.. _figure_measure_tool_copy_settings:
+
+.. figure:: img/measure_copy_settings.png
+   :align: center
+
+   Measure Tool Copy Settings
 
 Note that you can use the drop-down list near the total
 to change the :ref:`measurement units <measurements_ellipsoid>`
