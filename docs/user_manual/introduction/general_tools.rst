@@ -2276,7 +2276,7 @@ The values presented in the varying size assistant above will set the size
 .. |identifyByFreehand| image:: /static/common/mActionIdentifyByFreehand.png
    :width: 1.5em
 .. |identifyByMouseOver| image:: /static/common/mActionIdentifyByMouseOver.png
-   :width: 1.5em   
+   :width: 1.5em
 .. |identifyByPolygon| image:: /static/common/mActionIdentifyByPolygon.png
    :width: 1.5em
 .. |identifyByRadius| image:: /static/common/mActionIdentifyByRadius.png
