@@ -440,7 +440,7 @@ Resources
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
 .. |tiledSceneLayer| image:: /static/common/mIconTiledSceneLayer.png
-   :width: 1.5em  
+   :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |vectorTileLayer| image:: /static/common/mIconVectorTileLayer.png

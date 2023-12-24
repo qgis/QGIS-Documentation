@@ -1576,7 +1576,7 @@ to your map.
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
 .. |addTiledSceneLayer| image:: /static/common/mActionAddTiledSceneLayer.png
-   :width: 1.5em 
+   :width: 1.5em
 .. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
    :width: 1.5em
 .. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png

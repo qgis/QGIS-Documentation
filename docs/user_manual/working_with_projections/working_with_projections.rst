@@ -431,7 +431,7 @@ to the current project only.
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |clearItem| image:: /static/common/mIconClearItem.png
-   :width: 1.5em   
+   :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
