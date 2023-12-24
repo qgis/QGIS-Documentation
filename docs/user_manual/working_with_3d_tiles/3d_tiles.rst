@@ -236,31 +236,27 @@ See :ref:`metadatamenu` for more information.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |addTiledSceneLayer| image:: /static/common/mActionAddTiledSceneLayer.png
-   :width: 1.5em 
-.. |editMetadata| image:: /static/common/editmetadata.png
-   :width: 1.2em
-.. |symbology| image:: /static/common/symbology.png
-   :width: 2em
-.. |tiledSceneLayer| image:: /static/common/mIconTiledSceneLayer.png
-   :width: 1.5em 
-.. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em
-.. |new3DMap| image:: /static/common/mActionNew3DMap.png
-   :width: 1.5em
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.2em
 .. |elevationscale| image:: /static/common/elevationscale.png
    :width: 1.5em
-.. |system| image:: /static/common/system.png
-   :width: 1.5em
-.. |setProjection| image:: /static/common/mActionSetProjection.png
-   :width: 1.5em
-.. |unchecked| image:: /static/common/unchecked.png
-   :width: 1.3em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
+.. |new3DMap| image:: /static/common/mActionNew3DMap.png
+   :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
