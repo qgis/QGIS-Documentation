@@ -99,6 +99,7 @@ Icon                            Substitution                        Icon        
 |addVirtualLayer|               ``|addVirtualLayer|``               |addWmsLayer|                   ``|addWmsLayer|``
 |addWcsLayer|                   ``|addWcsLayer|``                   |addWfsLayer|                   ``|addWfsLayer|``
 |addPointCloudLayer|            ``|addPointCloudLayer|``            |addGpsLayer|                   ``|addGpsLayer|``
+|addTiledSceneLayer|            ``|addTiledSceneLayer|``            |addHanaLayer|                  ``|addHanaLayer|``
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
 |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
 |newVirtualLayer|               ``|newVirtualLayer|``               |newMeshLayer|                  ``|newMeshLayer|``
@@ -107,6 +108,7 @@ Icon                            Substitution                        Icon        
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
 |wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
 |pointCloudLayer|               ``|pointCloudLayer|``               |gps|                           ``|gps|``
+|tiledSceneLayer|               ``|tiledSceneLayer|``               |hana|                          ``|hana|``
 |dbSchema|                      ``|dbSchema|``
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
 |removeAllFromOverview|         ``|removeAllFromOverview|``         |removeLayer|                   ``|removeLayer|``
@@ -607,6 +609,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addGrid| image:: /static/common/add_grid.png
    :width: 1.5em
+.. |addHanaLayer| image:: /static/common/mActionAddHanaLayer.png
+   :width: 1.5em
 .. |addHtml| image:: /static/common/mActionAddHtml.png
    :width: 1.5em
 .. |addImage| image:: /static/common/mActionAddImage.png
@@ -648,6 +652,8 @@ Icon                            Substitution                        Icon        
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
 .. |addTable| image:: /static/common/mActionAddTable.png
+   :width: 1.5em
+.. |addTiledSceneLayer| image:: /static/common/mActionAddTiledSceneLayer.png
    :width: 1.5em
 .. |addToProject| image:: /static/common/mAddToProject.png
    :width: 1.5em
@@ -756,7 +762,7 @@ Icon                            Substitution                        Icon        
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |clearItem| image:: /static/common/mIconClearItem.png
-   :width: 1.5em   
+   :width: 1.5em
 .. |clip| image:: /static/common/mAlgorithmClip.png
    :width: 1.5em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
@@ -994,6 +1000,8 @@ Icon                            Substitution                        Icon        
 .. |groupItems| image:: /static/common/mActionGroupItems.png
    :width: 1.5em
 .. |hamburgerMenu| image:: /static/common/mIconHamburgerMenu.png
+   :width: 1.5em
+.. |hana| image:: /static/common/mIconHana.png
    :width: 1.5em
 .. |handleStoreFilterExpressionChecked| image:: /static/common/mActionHandleStoreFilterExpressionChecked.png
    :width: 1.5em
@@ -1590,6 +1598,8 @@ Icon                            Substitution                        Icon        
 .. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
+   :width: 1.5em
+.. |tiledSceneLayer| image:: /static/common/mIconTiledSceneLayer.png
    :width: 1.5em
 .. |tiles| image:: /static/common/tiles.png
    :width: 1.5em
