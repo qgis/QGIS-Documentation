@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-19 15:17+0000\n"
+"POT-Creation-Date: 2023-11-15 15:33+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
 "Last-Translator: Tomas Straupis, 2023\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.13.1\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -28,24 +28,49 @@ msgstr ""
 msgid "Web Map Service (WMS)"
 msgstr "Žiniatinklio žemėlapio paslauga (WMS)"
 
+#: ../../docs/server_manual/services/wms.rst:4
+msgid ""
+"The **1.1.1** and **1.3.0** WMS standards implemented in QGIS Server provide"
+" a HTTP interface to request map or legend images generated from a QGIS "
+"project. A typical WMS request defines the QGIS project to use, the layers "
+"to render as well as the image format to generate. Basic support is also "
+"available for **Styled Layer Descriptor (SLD)**."
+msgstr ""
+"QGIS Serveris palaiko **1.1.1** ir **1.3.0** WMS standartus, kurie teikia "
+"HTTP sąsają užklausoms žemėlapiui ar legendos piešiniams, sukurtiems pagal "
+"QGIS projektą. Tipinė WMS užklausa nurodo, kokį reikia naudoti QGIS "
+"projektą, kokius braižyti sluoksnius bei kokiu formatu pateikti piešinį. "
+"Taipogi yra bazinis **Stilizuoto sluoksnio aprašymo (SLD)** palaikymas."
+
 #: ../../docs/server_manual/services/wms.rst:10
 msgid "Specifications:"
+msgstr "Specifikacijos"
+
+#: ../../docs/server_manual/services/wms.rst:12
+msgid ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
 msgstr ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
 
 #: ../../docs/server_manual/services/wms.rst:13
 msgid ""
 "`WMS 1.3.0 <https://portal.ogc.org/files/?artifact_id=14416&format=pdf>`_"
 msgstr ""
+"`WMS 1.3.0 <https://portal.ogc.org/files/?artifact_id=14416&format=pdf>`_"
 
 #: ../../docs/server_manual/services/wms.rst:14
 msgid ""
 "`SLD 1.1.0 WMS profile "
 "<https://portal.ogc.org/files/?artifact_id=22364&format=pdf>`_"
 msgstr ""
+"`SLD 1.1.0 WMS profile "
+"<https://portal.ogc.org/files/?artifact_id=22364&format=pdf>`_"
 
 #: ../../docs/server_manual/services/wms.rst:16
 msgid "Standard requests provided by QGIS Server:"
-msgstr ""
+msgstr "Standartinės QGIS Serverio teikiamos užklausos:"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Request"
@@ -64,32 +89,88 @@ msgid "Returns XML metadata with information about the server"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetMap <wms_getmap>`"
+msgstr ":ref:`GetMap <wms_getmap>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a map"
+msgstr "Grąžina žemėlapį"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetFeatureInfo <wms_getfeatureinfo>`"
 msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "Grąžina duomenis (geometriją ir reikšmes) pikselio vietai"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
+msgstr ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns legend symbols"
+msgstr "Grąžina legendos simbolius"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetStyle(s) <wms_getstyle>`"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML document with style description in SLD"
+msgstr "Grąžina XML dokumentą su SLD stiliaus aprašymu"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`DescribeLayer <wms_describelayer>`"
 msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"Returns information about WFS and WCS availability respectively for vector "
+"and raster layers"
+msgstr ""
+"Grąžina informaciją apie WFS ir WCS prieinamumą atitinkamai vektoriniam ir "
+"rastro sluoksniams"
+
+#: ../../docs/server_manual/services/wms.rst:30
+msgid "Vendor requests provided by QGIS Server:"
+msgstr "Tiekėjo užklausos, kurias teikia QGIS Serveris:"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetPrint <wms_getprint>`"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a QGIS layout"
+msgstr "Grąžina QGIS išdėstymą"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetProjectSettings <wms_getprojectsettings>`"
 msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns specific information about QGIS Server"
+msgstr "Grąžina specifinę informaciją apie QGIS Serverį"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetSchemaExtension <wms_getschemaextension>`"
 msgstr ""
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata about optional extended capabilities"
+msgstr "Grąžina XML metaduomenis apie neprivalomas išplėstines galimybes"
+
 #: ../../docs/server_manual/services/wms.rst:44
 msgid "GetCapabilities"
 msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:46
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standartiniai **GetCapabilities** užklausos parametrai pagal OGC WMS 1.1.1 "
+"ir 1.3.0 specifikacijas:"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Parameter"
@@ -108,12 +189,20 @@ msgid "Yes"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the service (**WMS**)"
+msgstr "Paslaugos pavadinimas (**WMS**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`REQUEST <services_basics_request>`"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Name of the request (**GetCapabilities**)"
 msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`VERSION <wms_version>`"
+msgstr ":ref:`VERSION <wms_version>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "No"
@@ -133,32 +222,32 @@ msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:66
 #: ../../docs/server_manual/services/wms.rst:127
-#: ../../docs/server_manual/services/wms.rst:337
-#: ../../docs/server_manual/services/wms.rst:434
-#: ../../docs/server_manual/services/wms.rst:477
-#: ../../docs/server_manual/services/wms.rst:641
-#: ../../docs/server_manual/services/wms.rst:861
-#: ../../docs/server_manual/services/wms.rst:1008
-#: ../../docs/server_manual/services/wms.rst:1031
-#: ../../docs/server_manual/services/wms.rst:1060
-#: ../../docs/server_manual/services/wms.rst:1088
-#: ../../docs/server_manual/services/wms.rst:1115
-#: ../../docs/server_manual/services/wms.rst:1142
-#: ../../docs/server_manual/services/wms.rst:1169
-#: ../../docs/server_manual/services/wms.rst:1196
-#: ../../docs/server_manual/services/wms.rst:1223
-#: ../../docs/server_manual/services/wms.rst:1282
-#: ../../docs/server_manual/services/wms.rst:1308
-#: ../../docs/server_manual/services/wms.rst:1338
-#: ../../docs/server_manual/services/wms.rst:1366
-#: ../../docs/server_manual/services/wms.rst:1412
-#: ../../docs/server_manual/services/wms.rst:1438
-#: ../../docs/server_manual/services/wms.rst:1468
-#: ../../docs/server_manual/services/wms.rst:1496
-#: ../../docs/server_manual/services/wms.rst:1539
-#: ../../docs/server_manual/services/wms.rst:1575
-#: ../../docs/server_manual/services/wms.rst:1657
-#: ../../docs/server_manual/services/wms.rst:1842
+#: ../../docs/server_manual/services/wms.rst:338
+#: ../../docs/server_manual/services/wms.rst:435
+#: ../../docs/server_manual/services/wms.rst:478
+#: ../../docs/server_manual/services/wms.rst:642
+#: ../../docs/server_manual/services/wms.rst:862
+#: ../../docs/server_manual/services/wms.rst:1009
+#: ../../docs/server_manual/services/wms.rst:1032
+#: ../../docs/server_manual/services/wms.rst:1061
+#: ../../docs/server_manual/services/wms.rst:1089
+#: ../../docs/server_manual/services/wms.rst:1116
+#: ../../docs/server_manual/services/wms.rst:1143
+#: ../../docs/server_manual/services/wms.rst:1170
+#: ../../docs/server_manual/services/wms.rst:1197
+#: ../../docs/server_manual/services/wms.rst:1224
+#: ../../docs/server_manual/services/wms.rst:1283
+#: ../../docs/server_manual/services/wms.rst:1309
+#: ../../docs/server_manual/services/wms.rst:1339
+#: ../../docs/server_manual/services/wms.rst:1367
+#: ../../docs/server_manual/services/wms.rst:1413
+#: ../../docs/server_manual/services/wms.rst:1439
+#: ../../docs/server_manual/services/wms.rst:1469
+#: ../../docs/server_manual/services/wms.rst:1497
+#: ../../docs/server_manual/services/wms.rst:1540
+#: ../../docs/server_manual/services/wms.rst:1576
+#: ../../docs/server_manual/services/wms.rst:1658
+#: ../../docs/server_manual/services/wms.rst:1843
 msgid "URL example:"
 msgstr ""
 
@@ -275,45 +364,45 @@ msgid "SRS / CRS"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:262
-#: ../../docs/server_manual/services/wms.rst:854
+#: ../../docs/server_manual/services/wms.rst:855
 msgid "BBOX"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:304
-#: ../../docs/server_manual/services/wms.rst:881
+#: ../../docs/server_manual/services/wms.rst:882
 msgid "WIDTH"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:313
-#: ../../docs/server_manual/services/wms.rst:901
+#: ../../docs/server_manual/services/wms.rst:902
 msgid "HEIGHT"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:322
-#: ../../docs/server_manual/services/wms.rst:921
-#: ../../docs/server_manual/services/wms.rst:1705
+#: ../../docs/server_manual/services/wms.rst:922
+#: ../../docs/server_manual/services/wms.rst:1706
 msgid "FORMAT"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:327
-#: ../../docs/server_manual/services/wms.rst:1711
+#: ../../docs/server_manual/services/wms.rst:1712
 msgid "``jpg``"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:328
-#: ../../docs/server_manual/services/wms.rst:1712
+#: ../../docs/server_manual/services/wms.rst:1713
 msgid "``jpeg``"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:329
-#: ../../docs/server_manual/services/wms.rst:926
-#: ../../docs/server_manual/services/wms.rst:1713
+#: ../../docs/server_manual/services/wms.rst:927
+#: ../../docs/server_manual/services/wms.rst:1714
 msgid "``image/jpeg``"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:330
-#: ../../docs/server_manual/services/wms.rst:927
-#: ../../docs/server_manual/services/wms.rst:1710
+#: ../../docs/server_manual/services/wms.rst:928
+#: ../../docs/server_manual/services/wms.rst:1711
 msgid "``image/png``"
 msgstr ""
 
@@ -329,66 +418,66 @@ msgstr ""
 msgid "``image/png; mode=16bit``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:356
+#: ../../docs/server_manual/services/wms.rst:357
 msgid "TRANSPARENT"
-msgstr ""
-
-#: ../../docs/server_manual/services/wms.rst:362
-#: ../../docs/server_manual/services/wms.rst:774
-#: ../../docs/server_manual/services/wms.rst:788
-#: ../../docs/server_manual/services/wms.rst:990
-#: ../../docs/server_manual/services/wms.rst:1279
-#: ../../docs/server_manual/services/wms.rst:1335
-#: ../../docs/server_manual/services/wms.rst:1409
-#: ../../docs/server_manual/services/wms.rst:1465
-msgid "``TRUE``"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:363
 #: ../../docs/server_manual/services/wms.rst:775
 #: ../../docs/server_manual/services/wms.rst:789
 #: ../../docs/server_manual/services/wms.rst:991
-#: ../../docs/server_manual/services/wms.rst:1252
 #: ../../docs/server_manual/services/wms.rst:1280
 #: ../../docs/server_manual/services/wms.rst:1336
 #: ../../docs/server_manual/services/wms.rst:1410
 #: ../../docs/server_manual/services/wms.rst:1466
+msgid "``TRUE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:364
+#: ../../docs/server_manual/services/wms.rst:776
+#: ../../docs/server_manual/services/wms.rst:790
+#: ../../docs/server_manual/services/wms.rst:992
+#: ../../docs/server_manual/services/wms.rst:1253
+#: ../../docs/server_manual/services/wms.rst:1281
+#: ../../docs/server_manual/services/wms.rst:1337
+#: ../../docs/server_manual/services/wms.rst:1411
+#: ../../docs/server_manual/services/wms.rst:1467
 msgid "``FALSE``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:372
+#: ../../docs/server_manual/services/wms.rst:373
 msgid "BGCOLOR"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:405
+#: ../../docs/server_manual/services/wms.rst:406
 msgid "DPI"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:413
+#: ../../docs/server_manual/services/wms.rst:414
 msgid "IMAGE_QUALITY"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:428
+#: ../../docs/server_manual/services/wms.rst:429
 msgid "OPACITIES"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:458
+#: ../../docs/server_manual/services/wms.rst:459
 msgid "FILTER"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:514
+#: ../../docs/server_manual/services/wms.rst:515
 msgid "SELECTION"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:547
+#: ../../docs/server_manual/services/wms.rst:548
 msgid "FORMAT_OPTIONS"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:570
+#: ../../docs/server_manual/services/wms.rst:571
 msgid "TILED"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:592
+#: ../../docs/server_manual/services/wms.rst:593
 msgid "GetFeatureInfo"
 msgstr ""
 
@@ -424,7 +513,7 @@ msgstr ""
 msgid "WMS_PRECISION"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:623
+#: ../../docs/server_manual/services/wms.rst:624
 msgid ""
 "In addition to the standard ones, QGIS Server supports the following extra "
 "parameters:"
@@ -454,176 +543,176 @@ msgstr ""
 msgid ":ref:`WITH_GEOMETRY <wms_withgeometry>`"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:665
+#: ../../docs/server_manual/services/wms.rst:666
 msgid "INFO_FORMAT"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:670
+#: ../../docs/server_manual/services/wms.rst:671
 msgid "``text/xml``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:671
+#: ../../docs/server_manual/services/wms.rst:672
 msgid "``text/html``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:672
+#: ../../docs/server_manual/services/wms.rst:673
 msgid "``text/plain``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:673
+#: ../../docs/server_manual/services/wms.rst:674
 msgid "``application/vnd.ogc.gml``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:674
-#: ../../docs/server_manual/services/wms.rst:928
+#: ../../docs/server_manual/services/wms.rst:675
+#: ../../docs/server_manual/services/wms.rst:929
 msgid "``application/json``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:679
+#: ../../docs/server_manual/services/wms.rst:680
 msgid "QUERY_LAYERS"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:695
+#: ../../docs/server_manual/services/wms.rst:696
 msgid "FEATURE_COUNT"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:709
+#: ../../docs/server_manual/services/wms.rst:710
 msgid "I"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:717
+#: ../../docs/server_manual/services/wms.rst:718
 msgid "X"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:724
+#: ../../docs/server_manual/services/wms.rst:725
 msgid "J"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:732
+#: ../../docs/server_manual/services/wms.rst:733
 msgid "Y"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:739
+#: ../../docs/server_manual/services/wms.rst:740
 msgid "FI_POINT_TOLERANCE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:746
+#: ../../docs/server_manual/services/wms.rst:747
 msgid "FI_LINE_TOLERANCE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:753
+#: ../../docs/server_manual/services/wms.rst:754
 msgid "FI_POLYGON_TOLERANCE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:760
+#: ../../docs/server_manual/services/wms.rst:761
 msgid "FILTER_GEOM"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:768
+#: ../../docs/server_manual/services/wms.rst:769
 msgid "WITH_MAPTIP"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:780
+#: ../../docs/server_manual/services/wms.rst:781
 msgid "WITH_GEOMETRY"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:963
+#: ../../docs/server_manual/services/wms.rst:964
 msgid "SRCWIDTH"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:974
+#: ../../docs/server_manual/services/wms.rst:975
 msgid "SRCHEIGHT"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:985
+#: ../../docs/server_manual/services/wms.rst:986
 msgid "SHOWFEATURECOUNT"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1002
+#: ../../docs/server_manual/services/wms.rst:1003
 msgid "RULE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1022
+#: ../../docs/server_manual/services/wms.rst:1023
 msgid "RULELABEL"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1055
+#: ../../docs/server_manual/services/wms.rst:1056
 msgid "BOXSPACE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1083
+#: ../../docs/server_manual/services/wms.rst:1084
 msgid "LAYERSPACE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1110
+#: ../../docs/server_manual/services/wms.rst:1111
 msgid "LAYERTITLESPACE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1137
+#: ../../docs/server_manual/services/wms.rst:1138
 msgid "SYMBOLSPACE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1164
+#: ../../docs/server_manual/services/wms.rst:1165
 msgid "ICONLABELSPACE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1191
+#: ../../docs/server_manual/services/wms.rst:1192
 msgid "SYMBOLWIDTH"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1218
+#: ../../docs/server_manual/services/wms.rst:1219
 msgid "SYMBOLHEIGHT"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1245
+#: ../../docs/server_manual/services/wms.rst:1246
 msgid "LAYERTITLE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1258
+#: ../../docs/server_manual/services/wms.rst:1259
 msgid "LAYERFONTFAMILY"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1274
+#: ../../docs/server_manual/services/wms.rst:1275
 msgid "LAYERFONTBOLD"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1304
+#: ../../docs/server_manual/services/wms.rst:1305
 msgid "LAYERFONTSIZE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1330
+#: ../../docs/server_manual/services/wms.rst:1331
 msgid "LAYERFONTITALIC"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1360
+#: ../../docs/server_manual/services/wms.rst:1361
 msgid "LAYERFONTCOLOR"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1388
+#: ../../docs/server_manual/services/wms.rst:1389
 msgid "ITEMFONTFAMILY"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1404
+#: ../../docs/server_manual/services/wms.rst:1405
 msgid "ITEMFONTBOLD"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1434
+#: ../../docs/server_manual/services/wms.rst:1435
 msgid "ITEMFONTSIZE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1460
+#: ../../docs/server_manual/services/wms.rst:1461
 msgid "ITEMFONTITALIC"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1490
+#: ../../docs/server_manual/services/wms.rst:1491
 msgid "ITEMFONTCOLOR"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1518
+#: ../../docs/server_manual/services/wms.rst:1519
 msgid "GetStyle(s)"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1552
+#: ../../docs/server_manual/services/wms.rst:1553
 msgid "DescribeLayer"
 msgstr ""
 
@@ -631,11 +720,11 @@ msgstr ""
 msgid ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1611
+#: ../../docs/server_manual/services/wms.rst:1612
 msgid "SLD_VERSION"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1620
+#: ../../docs/server_manual/services/wms.rst:1621
 msgid "GetPrint"
 msgstr ""
 
@@ -679,62 +768,62 @@ msgstr ""
 msgid ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1697
+#: ../../docs/server_manual/services/wms.rst:1698
 msgid "TEMPLATE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1714
+#: ../../docs/server_manual/services/wms.rst:1715
 msgid "``svg``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1715
+#: ../../docs/server_manual/services/wms.rst:1716
 msgid "``image/svg``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1716
+#: ../../docs/server_manual/services/wms.rst:1717
 msgid "``image/svg+xml``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1717
+#: ../../docs/server_manual/services/wms.rst:1718
 msgid "``pdf``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1718
+#: ../../docs/server_manual/services/wms.rst:1719
 msgid "``application/pdf``"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1726
+#: ../../docs/server_manual/services/wms.rst:1727
 msgid "ATLAS_PK"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1741
+#: ../../docs/server_manual/services/wms.rst:1742
 msgid "mapX:EXTENT"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1749
+#: ../../docs/server_manual/services/wms.rst:1750
 msgid "mapX:ROTATION"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1756
+#: ../../docs/server_manual/services/wms.rst:1757
 msgid "mapX:GRID_INTERVAL_X"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1763
+#: ../../docs/server_manual/services/wms.rst:1764
 msgid "mapX:GRID_INTERVAL_Y"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1770
+#: ../../docs/server_manual/services/wms.rst:1771
 msgid "mapX:SCALE"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1780
+#: ../../docs/server_manual/services/wms.rst:1781
 msgid "mapX:LAYERS"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1800
+#: ../../docs/server_manual/services/wms.rst:1801
 msgid "GetProjectSettings"
 msgstr ""
 
-#: ../../docs/server_manual/services/wms.rst:1827
+#: ../../docs/server_manual/services/wms.rst:1828
 msgid "GetSchemaExtension"
 msgstr ""

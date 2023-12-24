@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Transifex Bot <>, 2023
+# Nathan Marie, 2023
 # Harrissou Sant-anna, 2023
 # 
 #, fuzzy
@@ -48,6 +49,20 @@ msgstr ""
 msgid "Location of plugins"
 msgstr "Emplacement des extensions"
 
+#: ../../docs/server_manual/plugins.rst:26
+msgid ""
+"By default, on Debian based systems, QGIS Server will look for plugins "
+"located in :file:`/usr/lib/qgis/plugins`. The default value is displayed "
+"when QGIS Server is starting, in the logs. It's possible to set a custom "
+"path by defining the environment variable ``QGIS_PLUGINPATH`` in the web "
+"server configuration."
+msgstr ""
+"Par défaut, sur les systèmes basés sur Debian, QGIS Server va rechercher les"
+" plugins situés dans :file:`/usr/lib/qgis/plugins`. La valeur par défaut est"
+" affichée au démarrage de QGIS Server, dans les logs. Il est possible de "
+"définir un chemin personnalisé en définissant la variable d'environnement "
+"``QGIS_PLUGINPATH`` dans la configuration du serveur web."
+
 #: ../../docs/server_manual/plugins.rst:32
 msgid "Installation"
 msgstr "Installation"
@@ -55,6 +70,30 @@ msgstr "Installation"
 #: ../../docs/server_manual/plugins.rst:35
 msgid "Manually with a ZIP"
 msgstr "Manuellement depuis un fichier ZIP"
+
+#: ../../docs/server_manual/plugins.rst:37
+msgid ""
+"As an example, to install the **HelloWorld** plugin for testing the server, "
+"using a specific folder, you first have to create a directory to hold server"
+" plugins. This will be specified in the virtual host configuration and "
+"passed on to the server through an environment variable:"
+msgstr ""
+"Par exemple, pour installer le plugin  **HelloWorld** pour tester le "
+"serveur, à l'aide un dossier spécifique, vous devez d'abord créer un "
+"répertoire pour accueillir les plugins du serveur. Ceci sera spécifié dans "
+"la configuration de l'hôte virtuel et passé au serveur via une variable "
+"d'environnement. "
+
+#: ../../docs/server_manual/plugins.rst:52
+msgid ""
+"According to its `description "
+"<https://plugins.qgis.org/plugins/HelloServer/>`_, HelloServer plugin is "
+"designed for development and demonstration purposes. Do not keep this plugin"
+" for production if you don't need it."
+msgstr ""
+"D'après sa `description <https://plugins.qgis.org/plugins/HelloServer/>`_, "
+"l'extension HelloServer est à des fins de développement et de démonstration."
+" Ne la conservez pas en production si vous n'en avez pas besoin."
 
 #: ../../docs/server_manual/plugins.rst:56
 msgid "With a command line tool"
@@ -147,4 +186,4 @@ msgstr "Testez le serveur avec l'extension HelloWorld :"
 msgid ""
 "You can have a look at the default GetCapabilities of the QGIS server at:"
 msgstr ""
-"Vous pouvez consulter les GetCapabilities par défaut du serveur QGIS sur:"
+"Vous pouvez consulter les GetCapabilities par défaut du serveur QGIS sur :"

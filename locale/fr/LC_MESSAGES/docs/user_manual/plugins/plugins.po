@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,6 +61,28 @@ msgstr ""
 "distribution de QGIS. Elles sont écrites soit en **C++** , soit en "
 "**Python**."
 
+#: ../../docs/user_manual/plugins/plugins.rst:29
+msgid ""
+"Most of External Plugins are currently written in Python. They are stored "
+"either in the 'Official' QGIS Repository at "
+"https://plugins.qgis.org/plugins/ or in external repositories and are "
+"maintained by the individual authors. Detailed documentation about the "
+"usage, minimum QGIS version, home page, authors, and other important "
+"information are provided for the plugins in the Official repository. For "
+"other external repositories, documentation might be available with the "
+"external plugins themselves. External plugins documentation is not included "
+"in this manual."
+msgstr ""
+"Actuellement, la plupart des extensions externes sont écrites en Python. "
+"Elles sont stockées soit dans le Dépôt QGIS \"Officiel\" à "
+"https://plugins.qgis.org/plugins/ soit dans des dépôts externes maintenus "
+"individuellement par leurs auteurs. Des informations détaillées sur "
+"l'utilisation, la version minimale de QGIS, la page principale, les auteurs "
+"et d'autres informations importantes sont disponibles pour les extensions du"
+" dépôt Officiel. Pour les dépôts externes, la documentation peut être "
+"disponible via les extensions elles-mêmes. De manière générale, cette "
+"documentation n'est pas incluse dans ce manuel d'utilisation."
+
 #: ../../docs/user_manual/plugins/plugins.rst:38
 msgid ""
 "To install or activate a plugin, go to :menuselection:`Plugins` menu and "
@@ -95,9 +117,33 @@ msgstr "La fenêtre des Extensions"
 msgid "The Settings tab"
 msgstr "L'onglet Paramètres"
 
+#: ../../docs/user_manual/plugins/plugins.rst:60
+msgid ""
+"At the bottom of the left panel, the |transformSettings| "
+":guilabel:`Settings` tab is the main place you can configure which plugins "
+"can be displayed in your application. You can use the following options:"
+msgstr ""
+"Dans le bas du panneau de gauche, l'onglet |transformSettings| "
+":guilabel:`Paramètres` est l'endroit principal où vous pouvez configurer "
+"quelles extensions peuvent être affichées dans votre application. Vous "
+"pouvez utiliser les options suivantes :"
+
 #: ../../docs/user_manual/plugins/plugins.rst:233
 msgid "transformSettings"
 msgstr "transformSettings"
+
+#: ../../docs/user_manual/plugins/plugins.rst:64
+msgid ""
+"|checkbox| :guilabel:`Check for Updates on Startup`. Whenever an installed "
+"plugin has update available, QGIS will inform you :guilabel:`Every Time QGIS"
+" starts`, :guilabel:`Once a Day`, :guilabel:`Every 3 Days`, :guilabel:`Every"
+" Week`, :guilabel:`Every 2 Weeks` or :guilabel:`Every month`."
+msgstr ""
+"|checkbox| :guilabel:`Chercher des mises à jour au démarrage`: lorsqu'une "
+"extension installée a une mise à jour de disponible, QGIS vous en informera "
+":guilabel:`A chaque démarrage de QGIS`, :guilabel:`Une fois par jour`, "
+":guilabel:`Tous les trois jours`, :guilabel:`Toutes les semaines`, "
+":guilabel:`Toutes les deux semaines` ou :guilabel:`Tous les mois`."
 
 #: ../../docs/user_manual/plugins/plugins.rst:211
 msgid "checkbox"
@@ -135,11 +181,11 @@ msgstr "L'onglet |transformSettings| :guilabel:`Paramètres`"
 
 #: ../../docs/user_manual/plugins/plugins.rst:223
 msgid "pluginInstalled"
-msgstr "pluginInstalled"
+msgstr ""
 
 #: ../../docs/user_manual/plugins/plugins.rst:215
 msgid "plugin"
-msgstr "plugin"
+msgstr ""
 
 #: ../../docs/user_manual/plugins/plugins.rst:217
 msgid "plugin-new"
@@ -147,11 +193,11 @@ msgstr ""
 
 #: ../../docs/user_manual/plugins/plugins.rst:219
 msgid "plugin-upgrade"
-msgstr "plugin-upgrade"
+msgstr ""
 
 #: ../../docs/user_manual/plugins/plugins.rst:221
 msgid "pluginIncompatible"
-msgstr "pluginIncompatible"
+msgstr ""
 
 #: ../../docs/user_manual/plugins/plugins.rst:144
 msgid "rating vote(s) (you can vote for your preferred plugin!)"
@@ -171,9 +217,44 @@ msgstr ""
 msgid "author(s)"
 msgstr "le ou les auteurs"
 
+#: ../../docs/user_manual/plugins/plugins.rst:183
+msgid ":guilabel:`Sort by Name`"
+msgstr ":guilabel:`Trier par nom`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:184
+msgid ":guilabel:`Sort by Downloads`"
+msgstr ":guilabel:`Trier par nombre de téléchargements`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:185
+msgid ":guilabel:`Sort by Vote`"
+msgstr ":guilabel:`Trier par nombre de votes`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:186
+msgid ":guilabel:`Sort by Status`"
+msgstr ":guilabel:`Trier par statut`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:187
+msgid ":guilabel:`Sort by Date Created`"
+msgstr ":guilabel:`Trier par date de création`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:188
+msgid ":guilabel:`Sort by Date Updated`"
+msgstr ":guilabel:`Trier par date de mise à jour`"
+
 #: ../../docs/user_manual/plugins/plugins.rst:192
 msgid "The Install from ZIP tab"
 msgstr "L'onglet Installer depuis un ZIP"
+
+#: ../../docs/user_manual/plugins/plugins.rst:194
+msgid ""
+"The |installPluginFromZip| :guilabel:`Install from ZIP` tab provides a file "
+"selector widget to import plugins in a zipped format, e.g. plugins "
+"downloaded directly from their repository. Encrypted files are supported."
+msgstr ""
+"L'onglet |installPluginFromZip| :guilabel:`Installer depuis un ZIP` propose "
+"un outil pour sélectionner un fichier au format zippé pour importer une "
+"extension, par exemple des extensions téléchargées directement depuis leur "
+"dépôt. Les fichiers cryptés sont pris en charge."
 
 #: ../../docs/user_manual/plugins/plugins.rst:213
 msgid "installPluginFromZip"

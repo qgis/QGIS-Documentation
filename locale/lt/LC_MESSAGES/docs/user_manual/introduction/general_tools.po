@@ -1635,29 +1635,353 @@ msgstr "Sluoksnio simbologijos nustatymas stilių skydelyje"
 msgid "Layer Order Panel"
 msgstr "Sluoksnių rikiuotės skydelis"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:505
+msgid ""
+"By default, layers shown on the QGIS map canvas are drawn following their "
+"order in the :guilabel:`Layers` panel: the higher a layer is in the panel, "
+"the higher (hence, more visible) it'll be in the map view."
+msgstr ""
+"Pagal nutylėjimą QGIS žemėlapio drobėje sluoksniai rodomi pagal skydelyje "
+":guilabel:`Sluoksniai` matomą seką: kuo aukščiau šiame skydelyje yra "
+"sluoksnis, tuo aukščiau (taigi matomiau) sluoksnis bus ir žemėlapio vaizde."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:509
+msgid ""
+"You can define a drawing order for the layers independent of the order in "
+"the layers panel with the :guilabel:`Layer Order` panel enabled in "
+":menuselection:`View --> Panels -->` menu or with :kbd:`Ctrl+9`. Check "
+"|checkbox| :guilabel:`Control rendering order` underneath the list of layers"
+" and reorganize the layers in the panel as you want. This order becomes the "
+"one applied to the map canvas. For example, in :numref:`figure_layer_order`,"
+" you can see that the ``airports`` features are displayed over the "
+"``alaska`` polygon despite those layers' respective placement in the Layers "
+"panel."
+msgstr ""
+"Galite nustatyti sluoksnių braižymo tvarką, kuri nepriklausytų nuo sluoksnių"
+" skydelio, naudodami skydelį :guilabel:`Sluoksnių eiliškumas`, kurį galite "
+"įjungti :menuselection:`Vaizdas --> Skydeliai -->` meniu arba kombinacija "
+":kbd:`Ctrl+9`. Įjunkite varnelę |checkbox| :guilabel:`Valdyti braižymo "
+"eiliškumą`, esančia sąrašo apačioje, kad surikiuotumėte sluoksnius taip, "
+"kaip jums reikia. Ši rikiuotė taikoma žemėlapio drobei. Pavyzdžiui "
+":numref:`figure_layer_order`, jūs matote, kaip geoobjektai ``oro uostai`` "
+"yra rodomi virš ``alaska`` poligono, nepriklausomai nuo to, kaip tie "
+"sluoksniai išdėstyti sluoksnių skydelyje."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:519
+msgid ""
+"Unchecking |checkbox| :guilabel:`Control rendering order` will revert to "
+"default behavior."
+msgstr ""
+"Išjungus varnelę |checkbox| :guilabel:`Valdyti braižymo eiliškumą` bus "
+"atstatyta numatytoji elgsena."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:527
+msgid "Define a layer order independent of the legend"
+msgstr "Nuo legendos nepriklausančio sluoksnių eiliškumo nustatymas"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:535
+msgid "Overview Panel"
+msgstr "Apžvalgos skydelis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:537
+msgid ""
+"The :guilabel:`Overview` panel (:kbd:`Ctrl+8`) displays a map with a full "
+"extent view of some of the layers. The Overview map is filled with layers "
+"using the :guilabel:`Show in Overview` option from the "
+":menuselection:`Layer` menu or in the layer contextual menu. Within the "
+"view, a red rectangle shows the current map canvas extent, helping you "
+"quickly to determine which area of the whole map you are currently viewing. "
+"If you click-and-drag the red rectangle in the overview frame, the main map "
+"view extent will update accordingly."
+msgstr ""
+"Skydelis :guilabel:`Peržiūra` (:kbd:`Ctrl+8`) rodo žemėlapį su kai kurių "
+"sluoksnių pilna apimtimi. Peržiūros žemėlapis užpildomas sluoksniais "
+"naudojant meniu :menuselection:`Sluoksniai` ar sluoksnių kontekstiniame "
+"meniu esančią parinktį :guilabel:`Rodyti peržiūroje`. Šiame vaizde raudonas "
+"stačiakampis rodo dabartinės žemėlapio drobės apimtį, taip padedant jums "
+"greitai susiorientuoti, kurią žemėlapio vietą šiuo metu žiūrite. Jei "
+"paspausite ir tempsite raudoną stačiakampį peržiūros ribose, atitinkamai "
+"keisis ir pagrindinio žemėlapio vaizdo apimtis."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:546
+msgid ""
+"Note that labels are not rendered to the map overview even if the layers "
+"used in the map overview have been set up for labeling."
+msgstr ""
+"Pastebėtina, kad peržiūros žemėlapyje nebraižomi užrašai, net jei žemėlapyje"
+" sluoksniams yra sukonfigūruotas užrašų rodymas."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:556
+msgid "Log Messages Panel"
+msgstr "Pranešimų žurnalo skydelis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:558
+msgid ""
+"When loading or processing some operations, you can track and follow "
+"messages that appear in different tabs using the |messageLog| :guilabel:`Log"
+" Messages Panel`. It can be activated using the most right icon in the "
+"bottom status bar."
+msgstr ""
+"Įkeliant ar vykdant kai kuriuos apdorojimo veiksmus jūs galite sekti "
+"pranešimus, kurie pasirodo skirtingose |messageLog| :guilabel:`Pranešimų "
+"žurnalo skydelio` kortelėse. Jį galima įjungti naudojant patį dešiniausia "
+"būsenos juostos mygtuką."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2271
 msgid "messageLog"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:570
+msgid "Undo/Redo Panel"
+msgstr "Atšaukimo/pakartojimo skydelis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:572
+msgid ""
+"For each layer being edited, the :guilabel:`Undo/Redo` (:kbd:`Ctrl+5`) panel"
+" shows the list of actions carried out, allowing you quickly to undo a set "
+"of actions by selecting the action listed above. More details at :ref:`Undo "
+"and Redo edits <undoredo_edits>`."
+msgstr ""
+"Kiekvienam keičiamam sluoksniui skydelis :guilabel:`Atšaukimas/pakartojimas`"
+" (:kbd:`Ctrl+5`) rodo visų įvykdytų veiksmų sąrašą, leidžia jums greitai "
+"atšaukti kelis veiksmus parenkant aukščiau esantį veiksmą. Daugiau "
+"informacijos rasite skyriuje apie :ref:`pakeitimų atšaukimą ir pakartojimą "
+"<undoredo_edits>`."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:584
+msgid "Statistical Summary Panel"
+msgstr "Statistinės suvestinės skydelis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:586
+msgid ""
+"The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized "
+"information on any vector layer. This panel allows you to select:"
+msgstr ""
+"Skydelis :guilabel:`Statistika` (:kbd:`Ctrl+6`) teikia apibendrintą bet "
+"kokio vektorinio sluoksnio informaciją. Šiame skydelyje jūs galite parinkti:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:589
+msgid ""
+"the vector layer to compute the statistics on: it can be selected from the "
+"top drop-down menu, or synced with the active layer in the "
+":guilabel:`Layers` panel using the :guilabel:`Follow selected layer` "
+"checkbox at the bottom of the statistics drop-down list"
+msgstr ""
+"vektorinį sluoksnį, kuriam reikia skaičiuoti statistiką: jį galima parinkti "
+"iš viršutinio iškrentančio meniu arba susieta su aktyviu sluoksniu skydelyje"
+" :guilabel:`Sluoksniai`, naudojant varnelę :guilabel:`Sekti pažymėtą "
+"sluoksnį`, statistikos apačioje esančiame iškrentančiame meniu"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:593
+msgid ""
+"the field or |expression| :ref:`expression <vector_expressions>` to use: for"
+" each layer, the last entry is remembered and automatically computed upon "
+"layer reselection."
+msgstr ""
+"lauką ar |expression| :ref:`išraišką <vector_expressions>`, kurią reikia "
+"naudoti kiekvienam sluoksniui, paskutinis parinkimas atsimenamas ir "
+"automatiškai skaičiuojamas vėl pažymėjus sluoksnį."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2205
 msgid "expression"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:596
+msgid ""
+"the statistics to return using the drop-down button at the bottom-right of "
+"the dialog. Depending on the field's (or expression's values) type, "
+"available statistics are:"
+msgstr ""
+"grąžinamą statistiką naudojant iškrentantį mygtuką dialogo apatiniame "
+"dešiniame kampe. Priklausomai nuo laukų (ar išraiškos reikšmių) tipo, "
+"galimos statistikos yra:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:600
+msgid "Statistics available for each field type"
+msgstr "Kiekvienam lauko tipui galimos statistikos"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:603
+msgid "Statistics"
+msgstr "Statistika"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:603
+#: ../../docs/user_manual/introduction/general_tools.rst:953
+msgid "String"
+msgstr "Tekstas"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:603
+msgid "Integer"
+msgstr "Sveikas skaičius"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:603
+msgid "Float"
+msgstr "Realus skaičius"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:603
+#: ../../docs/user_manual/introduction/general_tools.rst:953
+msgid "Date"
+msgstr "Data"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:605
+msgid "Count"
+msgstr "Skaičius"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:606
+msgid "Count Distinct Value"
+msgstr "Unikalių reikšmių skaičius"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:607
+msgid "Count Missing value"
+msgstr "Trūkstamų reikšmių skaičius"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:608
+msgid "Sum"
+msgstr "Suma"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:609
+msgid "Mean"
+msgstr "Vidurkis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:610
+msgid "Standard Deviation"
+msgstr "Standartinė deviacija"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:611
+msgid "Standard Deviation on Sample"
+msgstr "Standartinė deviacija pagal mėginį"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:612
+msgid "Minimal value"
+msgstr "Minimali reikšmė"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:613
+msgid "Maximal value"
+msgstr "Maksimali reikšmė"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:614
+msgid "Range"
+msgstr "Diapazonas"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:615
+msgid "Minority"
+msgstr "Mažuma"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:616
+msgid "Majority"
+msgstr "Dauguma"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:617
+msgid "Variety"
+msgstr "Variacija"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:618
+msgid "First Quartile"
+msgstr "Pirmas kvartilis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:619
+msgid "Third Quartile"
+msgstr "Trečias kvartilis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:620
+msgid "Inter Quartile Range"
+msgstr "Tarpkvartilinis diapazonas"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:621
+msgid "Minimum Length"
+msgstr "Minimalus ilgis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:622
+msgid "Maximum Length"
+msgstr "Maksimalus ilgis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:623
+msgid "Mean Length"
+msgstr "Vidutinis ilgis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:626
+msgid "The statistical summary can be:"
+msgstr "Statistikos sumos gali būti:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:628
+msgid ""
+"returned for the whole layer or |checkbox| :guilabel:`Selected features "
+"only`"
+msgstr ""
+"grąžinamos visam sluoksniui arba |checkbox| :guilabel:`Tik pažymėtiems "
+"geoobjektams`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:629
+msgid ""
+"|editCopy| copied to the clipboard and pasted as a table in another "
+"application"
+msgstr ""
+"|editCopy| nukopijuotos į iškarpinę ir įkeltos į lentelę kitoje aplikacijoje"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2193
 msgid "editCopy"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:630
+msgid ""
+"recalculated using the |refresh| button when the underlying data source "
+"changes (eg, new or removed features/fields, attribute modification)"
+msgstr ""
+"perskaičiuotos naudojant mygtuką |refresh| kai pasikeičia duomenys (pvz. "
+"sukurti nauji ar pašalinti esami geoobjektai, pakeisti atributai)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2285
 msgid "refresh"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:638
+msgid "Show statistics on a field"
+msgstr "Rodyti lauko statistiką"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:645
+msgid "Debugging/Development Tools Panel"
+msgstr "Tinkinimo/kūrimo įrankių skydelis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:647
+msgid ""
+"The :guilabel:`Debugging/Development Tools` panel (:kbd:`F12`) provides a "
+"unified place for handling and debugging actions within QGIS. Available "
+"tools are organized under following tabs:"
+msgstr ""
+"Skydelis :guilabel:`Tinkinimo/kūrimo įrankiai` (:kbd:`F12`) vienoje vietoje "
+"suteikia galimybę valdyti QGIS tinkinimo veiksmus. Teikiami įrankiai "
+"organizuojami tokiose kortelėse:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:651
+msgid "|networkAndProxy| :guilabel:`Network Logger`"
+msgstr "|networkAndProxy| :guilabel:`Tinklo žurnalizavimas`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2273
 msgid "networkAndProxy"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/general_tools.rst:652
+msgid "|dbManager| :guilabel:`Query Logger`"
+msgstr "|dbManager| :guilabel:`Užklausų žurnalas`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:653
+msgid "|stopwatch| :guilabel:`Profiler`"
+msgstr "|stopwatch| :guilabel:`Profiliuotojas`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2315
 msgid "stopwatch"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/general_tools.rst:655
+msgid ""
+"Plugin authors can extend the panel with custom tabs for debugging and "
+"developping their own plugins. This is done using "
+":meth:`registerDevToolWidgetFactory "
+"<qgis.gui.QgisInterface.registerDevToolWidgetFactory>` method."
+msgstr ""
+"Priedų autoriai gali praplėsti šį skydelį savo kortelėmis, skirtomis jų "
+"pačių priedų tinkinimui ar kūrimui. Tai daroma naudojant metodą "
+":meth:`registerDevToolWidgetFactory "
+"<qgis.gui.QgisInterface.registerDevToolWidgetFactory>`."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2283
 msgid "record"
