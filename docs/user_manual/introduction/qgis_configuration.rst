@@ -796,12 +796,19 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 
 Some of these options can be overridden at the :ref:`project level <measurements_ellipsoid>`.
 
+.. _measure_copy_settings:
+
 **Measure Tool Copy Settings**
 
 These settings allow you to control the behavior of the :guilabel:`Copy` button
 in the |measure| :sup:`Measure Line` window. You can choose to
 |checkbox| :guilabel:`Include header` to keep columns names, and you can also
-select :guilabel:`Separator` of your choice.
+select :guilabel:`Separator` of your choice. You can also choose
+|checkbox| :guilabel:`Always use decimal point` to keep your coordinates copied
+to the clipboard with a dot as a decimal separator, even if your language settings
+in QGIS options are set up to use a comma. In this case, if you don't have the 
+:guilabel:`Always use decimal point` 
+option checked, you will be unable to select comma as a field separator.
 
 **Coordinate and Bearing Display**
 
