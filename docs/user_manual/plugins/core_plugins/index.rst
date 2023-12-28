@@ -30,7 +30,6 @@ Icon                    Plugin                        Description               
 |grassLogo|                 GRASS GIS provider            GRASS GIS Processing functionality                      :ref:`sec_grass`
 |metasearch|            MetaSearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
-|otb|                   OrfeoToolbox provider         OrfeoToolbox Processing provider                        :ref:`otb_provider`
 |geoprocessing|         Processing                    Spatial data processing framework                       :ref:`label_processing`
 |saga|                  SAGA GIS provider             SAGA GIS Processing provider                            :ref:`saga_configure`
 |topologyChecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
@@ -61,8 +60,6 @@ Icon                    Plugin                        Description               
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
-   :width: 1.5em
-.. |otb| image:: /static/common/otb.png
    :width: 1.5em
 .. |saga| image:: /static/common/providerSaga.png
    :width: 1.5em
