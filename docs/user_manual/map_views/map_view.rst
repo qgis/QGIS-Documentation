@@ -1047,8 +1047,9 @@ In the measure window, you will see coordinates for all your points and distance
 Keep in mind that the first row will contain only coordinates, as it represents your starting point.
 Now it is possible to copy all your line measurements at once to the clipboard
 using the :guilabel:`Copy` button. Clicking the :guilabel:`Configuration` button
-you will access to :guilabel:`Measure Tool Copy Settings` where you can set up copy options.
-To stop measuring, click the right mouse button.
+you will access to :guilabel:`Measure Tool Copy Settings` where you can set up 
+:ref:`copy options <measure_copy_settings>`. To stop measuring, click the right
+mouse button.
 
 Note that you can use the drop-down list near the total
 to change the :ref:`measurement units <measurements_ellipsoid>`
