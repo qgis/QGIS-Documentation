@@ -279,7 +279,7 @@ Icon                     Substitution                 Icon                     S
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
 |stackedBar|             ``|stackedBar|``
 |createAnnotationLayer|  ``|createAnnotationLayer|``  |annotationLayer|        ``|annotationLayer|``
-|annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
+|textAnnotation|         ``|textAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
 |svgAnnotation|          ``|svgAnnotation|``          |actionText|             ``|actionText|``
 |labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
@@ -684,8 +684,6 @@ Icon                            Substitution                        Icon        
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
 .. |allowIntersections| image:: /static/common/mActionAllowIntersections.png
-   :width: 1.5em
-.. |annotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
 .. |annotationLayer| image:: /static/common/mIconAnnotationLayer.png
    :width: 1.5em

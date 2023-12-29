@@ -771,8 +771,6 @@ with both families of annotations.
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |formAnnotation| :sup:`Form Annotation`             | Select and create annotation showing attributes of a vector layer   |                     |
  |                                                     | in a custom form file                                               |                     |
- +-----------------------------------------------------+---------------------------------------------------------------------+                     +
- | |annotation| :sup:`Move Annotation`                 | Adjust size and position of annotation element                      |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
 
 .. _annotation_layer:
@@ -914,9 +912,6 @@ menu or from the :guilabel:`Annotations Toolbar`:
 
   <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="Working with annotations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-* |annotation| :sup:`Move Annotation` to adjust annotation element size or position
-  (using click and drag)
-
 .. _figure_custom_annotation:
 
 .. figure:: img/custom_annotation.png
@@ -953,8 +948,6 @@ options. This dialog is almost the same for all the annotation types:
 
    A ballon annotation text dialog
 
-The |annotation| :sup:`Move Annotation` tool also allows you to move the
-balloon on the map canvas.
 When a balloon annotation tool is active, you can also:
 
 * Select an annotation
@@ -1290,8 +1283,6 @@ In the dialog that opens:
 .. |addPolygon| image:: /static/common/mActionAddPolygon.png
    :width: 1.5em
 .. |addPolyline| image:: /static/common/mActionAddPolyline.png
-   :width: 1.5em
-.. |annotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
