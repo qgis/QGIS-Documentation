@@ -235,6 +235,8 @@ You then need to create connections to the server you are targeting:
 
 Once the new WMS/WMTS server connection has been created, it will be preserved for
 future QGIS sessions.
+Note that it is also possible to :guilabel:`Load` the connection parameters
+from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
 
 .. index:: Proxy, Proxy server
 
@@ -257,8 +259,6 @@ Since this is a network operation, the speed of the response depends on the
 quality of your network connection to the WMS server.
 While downloading data from the WMS server, the download progress is
 visualized in the lower left corner of the main QGIS dialog.
-Connection can be loaded from :file:`.XML` file (:guilabel:`Load`) or saved to
-:file:`.XML` file (:guilabel:`Save`). 
 
 Your screen should now look a bit like :numref:`figure_OGC_add_wms`,
 which shows the response provided by a WMS server.
@@ -734,6 +734,8 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
 #. Press :guilabel:`OK` to create the connection.
 
 Note that any proxy settings you may have set in your preferences are also recognized.
+Also note that it is possible to :guilabel:`Load` the connection parameters
+from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
 
 Now we are ready to load WFS layers from the above connection.
 
@@ -766,9 +768,6 @@ Now we are ready to load WFS layers from the above connection.
    :align: center
 
    Adding a WFS layer
-
-Connection can be loaded from :file:`.XML` file (:guilabel:`Load`) or saved to
-:file:`.XML` file (:guilabel:`Save`).
 
 You'll notice the download progress is visualized in the lower left of the QGIS
 main window. Once the layer is loaded, you can identify and select a couple of
