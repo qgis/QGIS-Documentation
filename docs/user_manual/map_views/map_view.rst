@@ -762,6 +762,9 @@ with both families of annotations.
  | |addMarker| :sup:`Create Marker Annotation`         | Create an annotation as a point feature                             |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |actionText| :sup:`Create Text Annotation at Point` | Create an annotation as a text label                                |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |textAlongLine| :sup:`Create Text Annotation along  | Create an annotation as a curved text along a linestring            |                     |
+ | Line`                                               |                                                                     |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
  | |textAnnotation| :sup:`Text Annotation`             | Select and create a text formatted annotation                       | Balloon annotations |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
@@ -848,6 +851,7 @@ The Feature annotations have dedicated tools for creation depending on their typ
 * |addPolyline| :sup:`Create Line Annotation`
 * |addMarker| :sup:`Create Marker Annotation`
 * |actionText| :sup:`Create Text Annotation at Point`
+* |textAlongLine| :sup:`Create Text Annotation along Line`
 
 All the usual QGIS shortcuts for creating features apply when creating annotation
 items. A line or polygon annotation is drawn by left-clicking once for each vertex,
@@ -1368,6 +1372,8 @@ In the dialog that opens:
 .. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
    :width: 1.5em
 .. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
+   :width: 1.5em
+.. |textAlongLine| image:: /static/common/mActionTextAlongLine.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
