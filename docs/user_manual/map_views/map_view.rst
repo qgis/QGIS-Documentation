@@ -802,8 +802,47 @@ Two types of annotation layer are available in QGIS:
   The :guilabel:`Main Annotation Layer Properties` entry on
   the :guilabel:`Annotations` toolbar helps you open its properties dialog.
 
-Interaction
-...........
+Layer Properties
+................
+
+The properties dialog of an annotation layer provides the following tabs:
+
+* :guilabel:`Information`: a read-only dialog representing an interesting
+  place to quickly grab summarized information and metadata on the current layer.
+* :guilabel:`Source`: defines general settings for the annotation layer. You can:
+
+  * Set a :guilabel:`Layer name` that will be used to identify the layer
+    in the project (in the :guilabel:`Layers Panel`, with expressions, ...)
+  * Display the layer's :ref:`Assigned Coordinate Reference System (CRS) <layer_crs>`:
+    you can change the layer's CRS, selecting a recently used one
+    in the drop-down list or clicking on |setProjection| :sup:`Select CRS` button
+    (see :ref:`crs_selector`). Use this process only if the CRS applied to the
+    layer is a wrong one or if none was applied.
+
+* :guilabel:`Rendering`:
+
+  * You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
+    (exclusive)` scale, defining a range of scale in which features will be
+    visible. Out of this range, they are hidden. The |mapIdentification|
+    :sup:`Set to current canvas scale` button helps you use the current map
+    canvas scale as boundary of the range visibility.
+    See :ref:`label_scaledepend` for more information.
+  * :guilabel:`Opacity`: You can make the underlying layer in
+    the map canvas visible with this tool. Use the slider to adapt the visibility
+    of your vector layer to your needs. You can also make a precise definition of
+    the percentage of visibility in the menu beside the slider.
+  * :guilabel:`Blending mode` at the :guilabel:`Layer` level: You can achieve
+    special rendering effects with these tools that you may previously only
+    know from graphics programs. The pixels of your overlaying and underlying
+    layers are mixed through the settings described in :ref:`blend-modes`.
+  * Apply :ref:`paint effects <draw_effects>` on all the layer features with the
+    :guilabel:`Draw Effects` button.
+
+  Some of these options are accessible from the feature annotation
+  :guilabel:`Symbology` properties.
+
+Interacting with features
+.........................
 
 The Feature annotations have dedicated tools for creation depending on their type:
 
@@ -852,45 +891,6 @@ in the :guilabel:`Layer styling` panel. You can:
 * configure a :guilabel:`Reference scale`
 * set a :guilabel:`Z index`
 * modify some of the :guilabel:`Layer rendering` settings
-
-Layer Properties
-................
-
-The properties dialog of an annotation layer provides the following tabs:
-
-* :guilabel:`Information`: a read-only dialog representing an interesting
-  place to quickly grab summarized information and metadata on the current layer.
-* :guilabel:`Source`: defines general settings for the annotation layer. You can:
-
-  * Set a :guilabel:`Layer name` that will be used to identify the layer
-    in the project (in the :guilabel:`Layers Panel`, with expressions, ...)
-  * Display the layer's :ref:`Assigned Coordinate Reference System (CRS) <layer_crs>`:
-    you can change the layer's CRS, selecting a recently used one
-    in the drop-down list or clicking on |setProjection| :sup:`Select CRS` button
-    (see :ref:`crs_selector`). Use this process only if the CRS applied to the
-    layer is a wrong one or if none was applied.
-
-* :guilabel:`Rendering`:
-
-  * You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
-    (exclusive)` scale, defining a range of scale in which features will be
-    visible. Out of this range, they are hidden. The |mapIdentification|
-    :sup:`Set to current canvas scale` button helps you use the current map
-    canvas scale as boundary of the range visibility.
-    See :ref:`label_scaledepend` for more information.
-  * :guilabel:`Opacity`: You can make the underlying layer in
-    the map canvas visible with this tool. Use the slider to adapt the visibility
-    of your vector layer to your needs. You can also make a precise definition of
-    the percentage of visibility in the menu beside the slider.
-  * :guilabel:`Blending mode` at the :guilabel:`Layer` level: You can achieve
-    special rendering effects with these tools that you may previously only
-    know from graphics programs. The pixels of your overlaying and underlying
-    layers are mixed through the settings described in :ref:`blend-modes`.
-  * Apply :ref:`paint effects <draw_effects>` on all the layer features with the
-    :guilabel:`Draw Effects` button.
-
-  Some of these options are accessible from the feature annotation
-  :guilabel:`Symbology` properties.
 
 .. _balloon_annotations:
 
