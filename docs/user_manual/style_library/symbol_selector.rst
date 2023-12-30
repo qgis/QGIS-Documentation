@@ -463,6 +463,21 @@ layer types:
 
      Examples of lineburst lines
 
+.. _filled_line_symbol:
+
+* **Filled line**: renders the interior of the lines using a fill symbol
+  allowing for lines filled with gradients, line hatches, etc.
+  The :guilabel:`Stroke width`, :guilabel:`Offset`,
+  :guilabel:`Join style`, :guilabel:`Cap style` can be adjusted.
+
+  .. _figure_filled_line_symbol:
+
+  .. figure:: img/filledLineSymbol.png
+     :align: center
+     :width: 100%
+
+     Examples of filled lines
+
 
 .. _vector_fill_symbols:
 
