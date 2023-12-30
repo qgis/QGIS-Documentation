@@ -345,6 +345,9 @@ Icon                            Substitution                        Icon        
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
 |scaleBar|                      ``|scaleBar|``                      |tracking|                      ``|tracking|``
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
+|gpsConnect|                    ``|gpsConnect|``                    |gpsDisconnect|                 ``|gpsDisconnect|``
+|gpsDestinationLayer|           ``|gpsDestinationLayer|``           |addTrackPoint|                 ``|addTrackPoint|``
+|recenter|                      ``|recenter|``                      |reset|                         ``|reset|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
 |settings|                      ``|settings|``                      |start|                         ``|start|``
 |properties|                    ``|properties|``                    |deleteSelected|                ``|deleteSelected|``
@@ -659,6 +662,8 @@ Icon                            Substitution                        Icon        
 .. |addTiledSceneLayer| image:: /static/common/mActionAddTiledSceneLayer.png
    :width: 1.5em
 .. |addToProject| image:: /static/common/mAddToProject.png
+   :width: 1.5em
+.. |addTrackPoint| image:: /static/common/mActionAddTrackPoint.png
    :width: 1.5em
 .. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
    :width: 1.5em
@@ -979,6 +984,12 @@ Icon                            Substitution                        Icon        
 .. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
 .. |gps| image:: /static/common/mIconGps.png
+   :width: 1.5em
+.. |gpsConnect| image:: /static/common/mIconGpsConnect.png
+   :width: 1.5em
+.. |gpsDestinationLayer| image:: /static/common/mIconGpsDestinationLayer.png
+   :width: 1.5em
+.. |gpsDisconnect| image:: /static/common/mIconGpsDisconnect.png
    :width: 1.5em
 .. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
@@ -1383,6 +1394,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |rasterize| image:: /static/common/rasterize.png
    :width: 1.5em
+.. |recenter| image:: /static/common/mActionRecenter.png
+   :width: 1.5em
 .. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
    :width: 1.5em
 .. |rectangle3PointsProjected| image:: /static/common/mActionRectangle3PointsProjected.png
@@ -1412,6 +1425,8 @@ Icon                            Substitution                        Icon        
 .. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |reset| image:: /static/common/mActionReset.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
    :width: 1.5em
