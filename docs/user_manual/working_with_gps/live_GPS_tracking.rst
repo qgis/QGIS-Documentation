@@ -15,8 +15,6 @@ Some :ref:`device configuration <gps_options>` may be needed before
 connecting QGIS and the GPS receiver.
 
 
-
-
 .. _gps_toolbar:
 
 GPS toolbar
@@ -53,11 +51,8 @@ Once a device is detected by QGIS, you will be able to interact with it:
   * |capturePoint| :sup:`Create a new point feature at current GPS location`
   * |reset| :sup:`Reset track`
 
-* |metadata| :sup:`Show GPS information`: opens the :guilabel:`GPS Information` panel
-
-  .. todo: replace guilabel with a ref to the section when available, i.e
-     * |metadata| :sup:`Show GPS information`: opens the :ref:`GPS Information``
-     <gps_information_panel>` panel
+* |metadata| :sup:`Show GPS information`: opens the :ref:`GPS Information
+  <gps_information_panel>` panel
 
 * a display box for quick access to some GPS information components you may need:
 
@@ -121,6 +116,83 @@ Once a device is detected by QGIS, you will be able to interact with it:
   a live status bar message displays the distance and bearing from the cursor to the GPS position.
   Project distance and bearing settings are respected in this display.
   On a touch screen device, use a tap-and-hold event to trigger the live status bar message.
+
+
+.. _gps_information_panel:
+
+GPS Information Panel
+---------------------
+
+For full monitoring of a live GPS tracking in QGIS, you may need to enable
+the :guilabel:`GPS Information Panel`
+(:menuselection:`View --> Panels -->` or press :kbd:`Ctrl+0`).
+
+In the top right corner of the :guilabel:`GPS Information Panel`,
+you press :guilabel:`Connect` to initiate connection between QGIS
+and a plugged-in GPS receiver, or :guilabel:`Disconnect` them.
+
+In the top left of the panel, following buttons are accessible:
+
+* |metadata| :sup:`Position`: live details on the GPS position and sensors
+* |gpsTrackBarChart| :sup:`Signal`: signal strength of satellite connections
+* |options| :sup:`Settings`: drop-down menu to :ref:`live tracking options <tracking_settings>`
+  you may need to modify during a session
+
+
+Position and additional attributes
+..................................
+
+In the |metadata| :sup:`Position` tab, if the GPS is receiving signals from satellites,
+you will see your position in latitude, longitude and altitude
+together with additional attributes.
+
+.. _figure_gps_position:
+
+.. figure:: img/gpstrack_main.png
+   :align: center
+
+   GPS tracking position and additional attributes
+
+
+* :guilabel:`Latitude`
+* :guilabel:`Longitude`
+* :guilabel:`Altitude (Geoid)`: Altitude/elevation above or below the mean sea level
+* :guilabel:`Altitude (WGS 84 ellipsoid)`: Altitude/elevation above or below
+  the WGS-84 Earth ellipsoid
+* :guilabel:`Geoidal separation`: Difference between the WGS-84 Earth ellipsoid
+  and mean sea level (geoid), ``-`` means mean sea level is below ellipsoid
+* :guilabel:`Time of fix`
+* :guilabel:`Speed`: Ground speed
+* :guilabel:`Direction`: Bearing measured in degrees clockwise from true north
+  to the direction of travel
+* :guilabel:`HDOP`: Horizontal dilution of precision
+* :guilabel:`VDOP`: Vertical dilution of precision
+* :guilabel:`PDOP`: Dilution of precision
+* :guilabel:`H accuracy`: Horizontal accuracy in meters
+* :guilabel:`V accuracy`: Vertical accuracy in meters
+* :guilabel:`3D accuracy`: 3D Root Mean Square (RMS) in meters
+* :guilabel:`Mode`: GPS receiver configuration 2D/3D mode, can be ``automatic`` or ``manual``
+* :guilabel:`Dimensions`: Position fix dimension, can be ``2D``, ``3D`` or ``No fix``
+* :guilabel:`Quality`: Positioning quality indicator
+* :guilabel:`Status`: Position fix status, can be ``Valid`` or ``Invalid``
+* :guilabel:`Satellites`: Count of satellites used in obtaining the fix
+* :guilabel:`Total track length`: Total distance of current GPS track
+* :guilabel:`Distance from start of track`: Direct distance from first vertex
+  in current GPS track to latest vertex
+
+
+Signal
+......
+
+With |gpsTrackBarChart| :sup:`Signal` tab, you can see the signal strength of the satellites
+you are receiving signals from.
+
+.. _figure_gps_strength:
+
+.. figure:: img/gpstrack_strength.png
+   :align: center
+
+   GPS tracking signal strength
 
 
 Connect to a Bluetooth GPS for live tracking
