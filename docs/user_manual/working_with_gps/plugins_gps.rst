@@ -29,21 +29,14 @@ QGIS displays waypoints in point layers, while routes and tracks are displayed i
 
 .. note:: QGIS supports also GNSS receivers. But we keep using the term GPS in this documentation.
 
-Defining GPS device types
--------------------------
-
-There are lots of different types of GPS devices.
-QGIS allows you to define your own device type and set parameters of use
-under :menuselection:`Settings --> Options --> GPS --> GPSBabel` tab.
-Read :ref:`defining_new_device` for more details.
-
-Once you have created a new device type, it will appear in the device lists for
-the download and upload tools.
 
 .. _`label_loadgps`:
 
 Transferring or loading GPS data
 --------------------------------
+
+Loading a GPX file
+..................
 
 There are dozens of different file formats for storing GPS data.
 The format that QGIS uses is called GPX (GPS eXchange format),
@@ -70,11 +63,59 @@ To load a :file:`GPX` file:
    Loading GPS Data dialog
 
 
+.. _load_from_device:
+
+Loading to or from a device
+...........................
+
+There are lots of different types of GPS devices and formats.
 Since QGIS uses GPX files, you need a way to convert other GPS file formats to GPX.
-This can be done for many formats using the free program `GPSBabel <https://www.gpsbabel.org>`_.
-This program can also transfer GPS data between your computer and a GPS device.
-QGIS relies on GPSBabel to do these things and provides you with convenient Processing algorithms
-available under the :ref:`GPS group <gps_algorithms>`.
+QGIS can do that using the free program `GPSBabel <https://www.gpsbabel.org>`_.
+GPSBabel can help you convert waypoints, tracks, and routes between popular GPS receivers
+such as Garmin or Magellan and mapping programs like Google Earth or Basecamp.
+Literally hundreds of GPS receivers and programs are supported.
+It can also transfer GPS data between your computer and a GPS device.
+
+Under :menuselection:`Settings -->` |options| :menuselection:`Options -->`
+|gps| :menuselection:`GPS -->` |gps| :menuselection:`GPSBabel`,
+QGIS allows you to define your own device type and set parameters of conversion
+that could later be used by the :ref:`Processing GPS algorithms <gps_algorithms>`.
+
+.. figure:: ../introduction/img/options_gpsbabel.png
+   :align: center
+
+   GPS Babel settings
+
+#. First you have to define the :guilabel:`Path to GPSBabel` binaries.
+#. Then you may want to add your device.
+   You can update devices list using |symbologyAdd| :sup:`Add new device`
+   or |symbologyRemove| :sup:`Remove device` button.
+#. For each device:
+
+   * you provide a :guilabel:`Device name`
+   * you configure different :guilabel:`Commands` QGIS will use while interacting with it,
+     such as:
+
+     * :guilabel:`Waypoint download` from the device
+     * :guilabel:`Waypoint upload` to the device
+     * :guilabel:`Route download` from the device
+     * :guilabel:`Route upload` to the device
+     * :guilabel:`Track download` from the device
+     * :guilabel:`Track upload` to the device
+
+     While the commands are usually GPSBabel commands, you can also use any other command line program that can create a GPX file.
+     QGIS will replace the keywords ``%type``, ``%in``, and ``%out`` when it runs the command.
+
+     As an example, if you create a device type with the download command
+     ``gpsbabel %type -i garmin -o gpx %in %out``
+     and then use it to download waypoints from port ``/dev/ttyS0`` to the file :file:`output.gpx`,
+     QGIS will replace the keywords and run the command
+     ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``.
+
+     Read the GPSBabel manual for the command line options that may be specific to your use case.
+
+Once you have created a new device type, it will appear in the device lists for
+the GPS download and upload algorithms.
 
 .. note::
    GPS units allow you to store data in different coordinate systems.
@@ -93,4 +134,12 @@ available under the :ref:`GPS group <gps_algorithms>`.
 .. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
+.. |gps| image:: /static/common/mIconGps.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
