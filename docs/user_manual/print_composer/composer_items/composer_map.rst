@@ -398,7 +398,7 @@ and :guilabel:`Bottom` sides of the grid frame, you can indicate:
   * **Boundary direction**
   * **Above tick**, **On tick**, **Under tick** when a tick-based frame is used
 
-You can also define the :guilabel:`Font` properties (font, size, color, buffer,...)
+You can also define the :guilabel:`Font` :ref:`properties <text_format>` (font, size, color, buffer,...)
 the :guilabel:`Distance to the map frame` and the :guilabel:`Coordinate precision`
 (number of decimals) for the drawn annotations.
 
