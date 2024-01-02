@@ -133,13 +133,13 @@ If you want to set a feature manually, you have to go back to |metadata|
 Connect to a Bluetooth GPS for live tracking
 --------------------------------------------
 
-With QGIS you can connect a Bluetooth GPS for field data collection. To perform
-this task you need a GPS Bluetooth device and a Bluetooth receiver on your
-computer.
+With QGIS you can connect a Bluetooth GPS for field data collection.
+To perform this task you need a GPS Bluetooth device and a Bluetooth receiver
+on your computer.
 
 At first you must let your GPS device be recognized and paired to the computer.
-Turn on the GPS, go to the Bluetooth icon on your notification area and search
-for a New Device.
+Turn on the GPS, go to the Bluetooth icon on your notification area
+and search for a New Device.
 
 On the right side of the Device selection mask make sure that all devices are
 selected so your GPS unit will probably appear among those available. In the
@@ -162,62 +162,72 @@ If QGIS can't receive GPS data, then you should restart your GPS device, wait
 receive again a connection error make sure you don't have another Bluetooth
 receiver near you, paired with the same GPS unit.
 
+Examples of GPS devices connection in QGIS
+------------------------------------------
+
 Using GPSMAP 60cs
------------------
+.................
 
 MS Windows
-..........
+^^^^^^^^^^
 
 Easiest way to make it work is to use a middleware (freeware, not open) called
 `GPSGate <https://gpsgate.com/gpsgate-splitter>`_.
 
-Launch the program, make it scan for GPS devices (works for both USB and BT
-ones) and then in QGIS just click :guilabel:`Connect` in the Live tracking panel
-using the |radioButtonOn| :guilabel:`Autodetect` mode.
+Launch the program, make it scan for GPS devices (works for both USB and BT ones)
+and then in QGIS:
+
+#. In :menuselection:`Settings --> Options --> GPS`, detect the plugged-in device.
+   You can use the |radioButtonOn| :guilabel:`Autodetect` mode.
+#. Press :guilabel:`Connect` in the :guilabel:`GPS Information` panel
 
 Ubuntu/Mint GNU/Linux
-.....................
+^^^^^^^^^^^^^^^^^^^^^
 
-As for Windows the easiest way is to use a server in the middle, in this case
-GPSD, so
+As for Windows the easiest way is to use a server in the middle,
+in this case GPSD, so
 
-::
+#. Install the program
 
-  sudo apt install gpsd
+   ::
 
-Then load the ``garmin_gps`` kernel module
+    sudo apt install gpsd
 
-::
+#. Then load the ``garmin_gps`` kernel module
 
-  sudo modprobe garmin_gps
+   ::
 
-And then connect the unit. Then check with ``dmesg`` the actual device being
-used bu the unit, for example ``/dev/ttyUSB0``. Now you can launch gpsd
+    sudo modprobe garmin_gps
 
-::
+#. And then connect the unit. Then check with ``dmesg`` the actual device being
+used by the unit, for example ``/dev/ttyUSB0``.
 
-  gpsd /dev/ttyUSB0
+#. Now you can launch gpsd
 
-And finally connect with the QGIS live tracking tool.
+   ::
+
+    gpsd /dev/ttyUSB0
+
+#. And finally connect with the QGIS live tracking tool.
 
 Using BTGP-38KM datalogger (only Bluetooth)
--------------------------------------------
+...........................................
 
 Using GPSD (under Linux) or GPSGate (under Windows) is effortless.
 
 Using BlueMax GPS-4044 datalogger (both BT and USB)
----------------------------------------------------
+...................................................
 
 MS Windows
-..........
+^^^^^^^^^^
 
 The live tracking works for both USB and BT modes, by using GPSGate or even
 without it, just use the |radioButtonOn| :guilabel:`Autodetect` mode, or point
-the tool the right port.
+the tool to the right port.
 
 
 Ubuntu/Mint GNU/Linux
-.....................
+^^^^^^^^^^^^^^^^^^^^^
 
 **For USB**
 
