@@ -81,14 +81,6 @@ To do so, expand the |options| :sup:`Options` menu at the top of
 the 3D canvas panel and press the |options| :menuselection:`Configure` button
 to open the :guilabel:`3D configuration` window.
 
-.. _figure_3dmap_config:
-
-.. figure:: img/3dmapconfiguration.png
-   :align: center
-
-   The 3D Map Configuration dialog
-
-
 In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
 
@@ -96,6 +88,13 @@ fine-tune the 3D scene:
 
 General
 -------
+
+.. _figure_3dmap_configgeneral:
+
+.. figure:: img/3dmapconfiguration_general.png
+   :align: center
+
+   The 3D Map General Configuration dialog
 
 Under the |general| :guilabel:`General` tab, you can:
 
@@ -114,6 +113,13 @@ Under the |general| :guilabel:`General` tab, you can:
 
 Terrain
 -------
+
+.. _figure_3dmap_configterrain:
+
+.. figure:: img/3dmapconfiguration_terrain.png
+   :align: center
+
+   The 3D Map Terrain Configuration dialog
 
 * :guilabel:`Terrain`: Before diving into the details, it is worth
   noting that the terrain in a 3D view is represented by a hierarchy of
