@@ -210,7 +210,7 @@ Available Authentication methods
 authentication manager init. Available authentication methods are:
 
 #. ``Basic`` User and password authentication
-#. ``Esri-Token`` ESRI token based authentication
+#. ``EsriToken`` ESRI token based authentication
 #. ``Identity-Cert`` Identity certificate authentication
 #. ``OAuth2`` OAuth2 authentication
 #. ``PKI-Paths`` PKI paths authentication
