@@ -1835,6 +1835,9 @@ Under |symbology| :guilabel:`Styles` tab, you can configure symbols and colors
 inherent to the project, allowing to safely share the project among different
 machines.
 
+Default symbols
+...............
+
 The :guilabel:`Default Symbols` group lets you control how new layers will
 be drawn in the project when they do not have an existing :file:`.qml` style
 defined. You can set :guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill` to
@@ -1842,6 +1845,9 @@ apply depending on the layer geometry type as well as default :guilabel:`Color
 Ramp` and :guilabel:`Text Format` (e.g. when enabling labeling).
 Any of these items can be reset using the :guilabel:`Clear` entry from
 the corresponding drop-down widget.
+
+Options
+.......
 
 In the :guilabel:`Options` group, you can:
 
@@ -1857,6 +1863,9 @@ In the :guilabel:`Options` group, you can:
    Styles tab
 
 .. _project_colors:
+
+Project Colors
+..............
 
 There is also an additional section where you can define specific colors for the
 running project. Like the :ref:`global colors <colors_options>`, you can:
@@ -1889,6 +1898,20 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
   #. Repeat steps 2 and 3 as much as needed
   #. Update the project color once and the change is reflected EVERYWHERE
      it's in use.
+
+.. _style_database: 
+
+Style Database
+..............
+
+QGIS enables you to link projects to multiple style databases. When project
+is loaded, symbol and lable style selectors display all symbols from linked
+styles, and each project has its own sytle database to store project specific 
+symbols and text formats.
+In the :guilabel:`Style Database` section you can choose to 
+|symbologyAdd| :guilabel:`Add` or |symbologyRemove| :guilabel:`Remove` 
+style database or you can |newPage| :guilabel:`Create new style database`.
+
 
 .. _project_data_source_properties:
 
@@ -2686,6 +2709,8 @@ in the QGIS user profile.
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
+   :width: 1.5em
+.. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
