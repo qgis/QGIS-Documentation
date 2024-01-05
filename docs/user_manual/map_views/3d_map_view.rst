@@ -68,6 +68,9 @@ The following tools are provided at the top of the 3D map view panel:
   * Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or
     :guilabel:`3D camera follows 2D Map view`)
   * :guilabel:`Show visible camera area in 2D map view`
+  * :guilabel:`Set 3D scene on 2D map view`: allows to clip the 3D scene
+    and display only the terrain and features intersecting an extent drawn on the 2D map canvas.
+    More options are available in the :ref:`General configuration <scene_extent>` tab.
   * |options| :sup:`Configure` the 3D map view :ref:`settings <scene_configuration>`.
 * |dock| :sup:`Dock 3D Map View`: switch from docked widget to top level window
 
