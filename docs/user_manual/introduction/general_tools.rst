@@ -510,6 +510,9 @@ From a drop-down list of current layers in the layer panel, select an item and:
   layer style in the current project: you can therefore cancel or restore to any
   state by selecting it in the list and clicking :guilabel:`Apply`.
 
+In the :guilabel:`Layer Styling` panel you can also choose to press the 
+:guilabel:`Save Symbol` button to add the symbol being edited to the :ref:`style_database`.
+
 Another powerful feature of this panel is the |checkbox| :guilabel:`Live update` checkbox.
 Tick it to render your changes immediately on the map canvas:
 you no longer need to click the :guilabel:`Apply` button.
