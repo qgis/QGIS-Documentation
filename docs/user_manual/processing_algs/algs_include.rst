@@ -312,3 +312,26 @@ Available options depend on the GDAL version built with QGIS
 
 .. **end_raster_data_types_extended**
 
+
+Resampling methods
+------------------
+
+.. **raster_resampling_methods**
+
+.. The following section is included in raster based algorithms such as
+  qgisalignrasters, qgisalignraster
+
+* 0 --- Nearest Neighbour
+* 1 --- Bilinear (2x2 kernel)
+* 2 --- Cubic (4x4 kernel)
+* 3 --- Cubic B-Spline (4x4 kernel)
+* 4 --- Lanczos (6x6 kernel)
+* 5 --- Average
+* 6 --- Mode
+* 7 --- Maximum
+* 8 --- Minimum
+* 9 --- Median
+* 10 --- First quartile (Q1)
+* 11 --- Third quartile (Q3)
+
+.. **end_raster_resampling_methods**

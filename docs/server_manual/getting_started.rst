@@ -635,7 +635,7 @@ A simple procedure is the following:
 
 #. Apache is not directly installed as a service on Windows. You need to:
 
-   #. Right-click the :file:`OSGeo4W.bat` file at the root of the :file:`C:\\OSGeo4W64\\`
+   #. Right-click the :file:`OSGeo4W.bat` file at the root of the :file:`C:\\OSGeo4W\\`
       folder (if the default installation paths have been used) and select
       :guilabel:`Run as administrator`
    #. In the console, run ``apache-install.bat``, which will output
@@ -651,7 +651,7 @@ A simple procedure is the following:
 
       The service is started as you can notice in the report.
       But the server may fail to run due to missing custom configuration.
-#. Edit the :file:`C:\\OSGeo4w64\\apps\\apache\\conf\\httpd.conf` file
+#. Edit the :file:`C:\\OSGeo4w\\apps\\apache\\conf\\httpd.conf` file
    with the following changes (various other combinations are possible):
 
 
@@ -679,7 +679,7 @@ A simple procedure is the following:
 
         - .. code-block:: apache
 
-            ScriptAlias /cgi-bin/ "C:/OSGeo4W64/apps/qgis/bin/"
+            ScriptAlias /cgi-bin/ "C:/OSGeo4W/apps/qgis/bin/"
 
       * - Provide permissions on the script folder
         - .. code-block:: apache
@@ -692,7 +692,7 @@ A simple procedure is the following:
 
         - .. code-block:: apache
 
-            <Directory "C:/OSGeo4W64/apps/qgis/bin">
+            <Directory "C:/OSGeo4W/apps/qgis/bin">
                 SetHandler cgi-script
                 AllowOverride None
                 Options ExecCGI
@@ -710,14 +710,14 @@ A simple procedure is the following:
         - .. code-block:: apache
 
             # parse OSGeo4W apache conf files
-            IncludeOptional "C:/OSGeo4W64/httpd.d/httpd_*.conf"
+            IncludeOptional "C:/OSGeo4W/httpd.d/httpd_*.conf"
 
         - .. code-block:: apache
 
             # parse OSGeo4W apache conf files
-            IncludeOptional "C:/OSGeo4W64/httpd.d/httpd_*.conf"
-            SetEnv GDAL_DATA "C:/OSGeo4W64/share/gdal"
-            SetEnv QGIS_AUTH_DB_DIR_PATH "C:/OSGeo4W64/apps/qgis/resources"
+            IncludeOptional "C:/OSGeo4W/httpd.d/httpd_*.conf"
+            SetEnv GDAL_DATA "C:/OSGeo4W/share/gdal"
+            SetEnv QGIS_AUTH_DB_DIR_PATH "C:/OSGeo4W/apps/qgis/resources"
 
 #. Restart the Apache web server
 

@@ -191,27 +191,19 @@ Basic parameters
      - Pixel value resampling method to use.
        Options:
 
-       * 0 --- Nearest neighbour
-       * 1 --- Bilinear
-       * 2 --- Cubic
-       * 3 --- Cubic spline
-       * 4 --- Lanczos windowed sinc
-       * 5 --- Average
-       * 6 --- Mode
-       * 7 --- Maximum
-       * 8 --- Minimum
-       * 9 --- Median
-       * 10 --- First quartile
-       * 11 --- Third quartile
-   * - **Nodata value for output bands**
+       .. include:: ../algs_include.rst
+          :start-after: **raster_resampling_methods**
+          :end-before: **end_raster_resampling_methods**
+
+   * - **NoData value for output bands**
 
        Optional
      - ``NODATA``
      - [number]
 
        Default: None
-     - Sets nodata value for output bands.
-       If not provided, then nodata values will be copied from
+     - Sets NoData value for output bands.
+       If not provided, then NoData values will be copied from
        the source dataset.
    * - **Output file resolution in target georeferenced units**
 

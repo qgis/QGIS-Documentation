@@ -137,4 +137,4 @@ The current translations are made possible thanks to:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.28
+.. |CURRENT| replace:: 3.34

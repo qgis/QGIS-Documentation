@@ -8,6 +8,245 @@ Raster tools
       :depth: 1
 
 
+.. _qgisalignraster:
+
+Align raster
+------------
+
+Aligns raster by resampling it to the same cell size
+and reprojecting to the same CRS as a reference raster.
+
+.. warning:: **This algorithm is ONLY available in the** :ref:`Model Designer <processing.modeler>` context.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer to align
+   * - **Resampling method**
+     - ``RESAMPLING_METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Method to use for input layer resampling.
+       :class:`Available options <qgis.analysis.Qgis.GdalResampleAlgorithm>` are:
+
+       .. include:: ../algs_include.rst
+          :start-after: **raster_resampling_methods**
+          :end-before: **end_raster_resampling_methods**
+
+   * - **Rescale values according to the cell size**
+     - ``RESCALE``
+     - [boolean]
+
+       Default: No
+     -
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - A raster layer that will be used to fetch extent, cell size and CRS
+       that will be applied to input layers.
+   * - **Override reference CRS**
+
+       Optional
+     - ``CRS``
+     - [crs]
+     - CRS to be used instead of the reference layer's
+   * - **Override reference cell size X**
+
+       Optional
+     - ``CELL_SIZE_X``
+     - [number]
+     - Cell size in X direction to be used instead of the reference layer's
+   * - **Override reference cell size Y**
+
+       Optional
+     - ``CELL_SIZE_Y``
+     - [number]
+     -  Cell size in Y direction to be used instead of the reference layer's
+   * - **Override reference grid offset X**
+
+       Optional
+     - ``GRID_OFFSET_X``
+     - [number]
+     -  Offset in X direction to apply to cells grid
+   * - **Override reference grid offset Y**
+
+       Optional
+     - ``GRID_OFFSET_Y``
+     - [number]
+     - Offset in Y direction to apply to cells grid
+   * - **Clip to extent**
+
+       Optional
+     - ``EXTENT``
+     - [extent]
+     - Specify the extent of the output raster layer.
+       It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+   * - **Aligned raster**
+     - ``OUTPUT``
+     - [raster]
+     - output raster with pixels resampled
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Aligned raster**
+     - ``OUTPUT``
+     - [raster]
+     - output raster with pixels resampled
+
+Python code
+...........
+
+**Algorithm ID**: ``native:alignraster``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisalignrasters:
+
+Align rasters
+-------------
+
+Aligns rasters by resampling them to the same cell size
+and reprojecting to the same CRS as a reference raster.
+
+.. warning:: **This algorithm is NOT available in the** :ref:`Model Designer <processing.modeler>` context.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - List of input raster layers with resampling options associated
+       (filled as a :class:`QgsProcessingParameterAlignRasterLayers
+       <qgis.core.QgsProcessingParameterAlignRasterLayers>` item):
+
+       **Input layer** [string] (``inputFile``)
+         Full path of the input layer to align
+
+       **Output file** [string] (``outputFile``)
+         Full path of the corresponding aligned output layer
+
+       **Resampling method** [enumeration] (``resampleMethod``)
+         Method to use for input layer resampling.
+         :class:`Available options <qgis.analysis.Qgis.GdalResampleAlgorithm>` are:
+
+         .. include:: ../algs_include.rst
+            :start-after: **raster_resampling_methods**
+            :end-before: **end_raster_resampling_methods**
+
+       **Rescale values according to the cell size** [boolean] (``rescale``)
+
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - A raster layer that will be used to fetch extent, cell size and CRS
+       that will be applied to input layers.
+   * - **Override reference CRS**
+
+       Optional
+     - ``CRS``
+     - [crs]
+     - CRS to be used instead of the reference layer's
+   * - **Override reference cell size X**
+
+       Optional
+     - ``CELL_SIZE_X``
+     - [number]
+     - Cell size in X direction to be used instead of the reference layer's
+   * - **Override reference cell size Y**
+
+       Optional
+     - ``CELL_SIZE_Y``
+     - [number]
+     -  Cell size in Y direction to be used instead of the reference layer's
+   * - **Override reference grid offset X**
+
+       Optional
+     - ``GRID_OFFSET_X``
+     - [number]
+     -  Offset in X direction to apply to cells grid
+   * - **Override reference grid offset Y**
+
+       Optional
+     - ``GRID_OFFSET_Y``
+     - [number]
+     - Offset in Y direction to apply to cells grid
+   * - **Clip to extent**
+
+       Optional
+     - ``EXTENT``
+     - [extent]
+     - Specify the extent of the output raster layer.
+       It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Aligned rasters**
+     - ``OUTPUT_LAYERS``
+     - [raster] [list]
+     - output rasters with pixels resampled
+
+Python code
+...........
+
+**Algorithm ID**: ``native:alignrasters``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisrasterize:
 
 Convert map to raster
@@ -345,7 +584,6 @@ Basic parameters
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
-|330|
 
 .. list-table::
    :header-rows: 1
@@ -542,12 +780,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |330| replace:: ``NEW in 3.30``

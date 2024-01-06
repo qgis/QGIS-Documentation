@@ -13,11 +13,11 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       BODY: "${{ github.event.issue.body }}"
-      MILESTONE: 17 # See https://api.github.com/repos/qgis/QGIS-Documentation/milestones
+      MILESTONE: 18 # See https://api.github.com/repos/qgis/QGIS-Documentation/milestones
     runs-on: ubuntu-latest
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@55d479fb1c5bcad5a4f9099a5d9f37c8857b2845 # v2.4.1
+        uses: step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895 # v2.6.1
         with:
           egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
 
@@ -35,7 +35,7 @@ jobs:
       - id: assign_version
         name: Assign version Label
         if: ${{ steps.find_version_label.outputs.label }}
-        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410 # v6.4.1
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
           script: |
               github.rest.issues.addLabels({
@@ -48,7 +48,7 @@ jobs:
       - id: assign_milestone
         name: Assign milestone
         if: ${{ steps.find_version_label.outputs.label }}
-        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410 # v6.4.1
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
           script: |
             github.rest.issues.update({

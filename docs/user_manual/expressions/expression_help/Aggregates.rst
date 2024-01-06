@@ -29,8 +29,8 @@ Returns an aggregate value calculated using features from another layer.
          * count
          * count_distinct
          * count_missing
-         * min
-         * max
+         * minimum or min
+         * maximum or max
          * sum
          * mean
          * median
@@ -551,8 +551,8 @@ Returns an aggregate value calculated using all matching child features from a l
          * count
          * count_distinct
          * count_missing
-         * min
-         * max
+         * minimum or min
+         * maximum or max
          * sum
          * mean
          * median

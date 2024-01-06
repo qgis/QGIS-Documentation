@@ -35,7 +35,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
    * - |diagram| :ref:`Diagrams <sec_diagram>`
      - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
-   * - |join| :ref:`Joins <sec_joins>`
+   * - |join| :ref:`Joins <vector_joins>`
      - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
      - |action| :ref:`Actions <actions_menu>`
    * - |display| :ref:`Display <maptips>`
@@ -76,7 +76,7 @@ dialog. Those are not presented in this document. Refer to their documentation.
 Information Properties
 ======================
 
-|metadata| The :guilabel:`Information` tab is read-only and represents an interesting
+The |metadata| :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
 Provided information are:
 
@@ -203,6 +203,8 @@ The :guilabel:`Test` button helps you check your query and displays a message bo
 the number of features satisfying the current query.
 Use the :guilabel:`Clear` button to wipe the SQL query and revert the layer to its
 original state (ie, fully load all the features).
+It is possible to :guilabel:`Save...` the query as a :file:`.QQF` file,
+or :guilabel:`Load...` the query from a file into the dialog.
 
 When a filter is applied,
 QGIS treats the resulting subset acts as if it were the entire layer. For
@@ -213,9 +215,9 @@ you can not display, query, save or edit ``Anchorage``, because that is a
 .. tip:: **Filtered layers are indicated in the Layers Panel**
 
   In the :guilabel:`Layers` panel, filtered layer is listed with a |indicatorFilter|
-  :sup:`Filter` icon next to it indicating the query used when the mouse hovers
-  over the button. Double-click the icon opens the :guilabel:`Query Builder` dialog
-  for edit.
+  :sup:`Filter` icon next to it indicating the query used when the mouse hovers over the button.
+  Double-click the icon opens the :guilabel:`Query Builder` dialog for edit.
+  This can also be achieved through the :menuselection:`Layer --> Filter...` menu.
 
 
 .. index:: Style, Symbology, Renderer
@@ -224,7 +226,7 @@ you can not display, query, save or edit ``Anchorage``, because that is a
 Symbology Properties
 ====================
 
-|symbology| The Symbology tab provides you with a comprehensive tool for
+The |symbology| :guilabel:`Symbology` tab provides you with a comprehensive tool for
 rendering and symbolizing your vector data. You can use tools that are
 common to all vector data, as well as special symbolizing tools that were
 designed for the different kinds of vector data. However all types share the
@@ -339,10 +341,10 @@ discrete values of a field or an expression.
 To use categorized symbology for a layer:
 
 #. Select the :guilabel:`Value` of classification: it can be an existing field
-   or an :ref:`expression <vector_expressions>` you can type in the box or build
-   using the associated |expression| button. Using expressions for categorizing
-   avoids the need to create an ad hoc field for symbology purposes (eg, if your
-   classification criteria are derived from one or more attributes).
+   or an :ref:`expression <vector_expressions>` you can type in the box
+   or build using the associated |expression| button.
+   Using expressions for categorizing avoids the need to create a field for symbology purposes only
+   (eg, if your classification criteria are derived from one or more attributes).
 
    The expression used to classify features can be of any type; eg, it can:
 
@@ -440,6 +442,10 @@ Right-clicking over selected item(s) shows a contextual menu to:
 
 * :guilabel:`Unmerge Categories` that were previously merged
 
+The created classes also appear in a tree hierarchy in the :guilabel:`Layers` panel.
+Double-click an entry in the map legend to edit the assigned symbol.
+Right-click and you will get some :ref:`more options <editing_style_layer>`.
+
 .. _categorized_advanced_menu:
 
 The :guilabel:`Advanced` menu gives access to options to speed classification
@@ -452,23 +458,6 @@ or fine-tune the symbols rendering:
   assigns to each category a symbol whose name represents the classification
   value of the category
 * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering.
-
-.. tip:: **Edit categories directly from the** :guilabel:`Layers` **panel**
-
-   When a layer symbology is based on a :ref:`categorized <categorized_renderer>`,
-   :ref:`graduated <graduated_renderer>` or :ref:`rule-based <rule_based_rendering>`
-   symbology mode, you can edit each of the categories from the :guilabel:`Layers`
-   Panel. Right-click on a sub-item of the layer and you will:
-
-   * |toggleAllLayers| :guilabel:`Toggle items` visibility
-   * |showAllLayers| :guilabel:`Show all items`
-   * |hideAllLayers| :guilabel:`Hide all items`
-   * Modify the symbol color thanks to the :ref:`color selector
-     <color-selector>` wheel
-   * :guilabel:`Edit symbol...` from the :ref:`symbol selector
-     <symbol-selector>` dialog
-   * :guilabel:`Copy symbol`
-   * :guilabel:`Paste symbol`
 
 
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
@@ -487,8 +476,11 @@ to define rotation and size scale from specified columns.
 
 Also, analogous to the Categorized Renderer, it allows you to select:
 
-* The value (using the fields listbox or the |expression|
-  :sup:`Set value expression` function)
+* The :guilabel:`Value` of classification: it can be an existing field
+  or an :ref:`expression <vector_expressions>` you can type in the box
+  or build using the associated |expression| button.
+  Using expressions for graduating avoids the need to create a field for symbology purposes only
+  (eg, if your classification criteria are derived from one or more attributes).
 * The symbol (using the Symbol selector dialog)
 * The legend format and the precision
 * The method to use to change the symbol: color or size
@@ -555,14 +547,10 @@ the major_rivers layer of the QGIS sample dataset.
 
    Graduated Symbolizing options
 
-.. tip:: **Thematic maps using an expression**
+The created classes also appear in a tree hierarchy in the :guilabel:`Layers` panel.
+Double-click an entry in the map legend to edit the assigned symbol.
+Right-click and you will get some :ref:`more options <editing_style_layer>`.
 
-   Categorized and graduated thematic maps can be created using the result
-   of an expression. In the properties dialog for vector layers, the attribute
-   chooser is extended with a |expression| :sup:`Set column expression` function.
-   So you don't need to write the classification attribute
-   to a new column in your attribute table if you want the classification
-   attribute to be a composite of multiple fields, or a formula of some sort.
 
 .. index:: Proportional symbol, Multivariate analysis, Size assistant
 .. _proportional_symbols:
@@ -730,6 +718,7 @@ the features of the specific rule and the nested ones.
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click an entry in the map legend to edit the assigned symbol.
+Right-click and you will get some :ref:`more options <editing_style_layer>`.
 
 The example in :numref:`figure_rule_based_symbology` shows the rule-based rendering
 dialog for the rivers layer of the QGIS sample dataset.
@@ -1102,6 +1091,41 @@ updated as you set the parameters.
 
 .. note:: Currently, data-defined size legend for layer symbology can only be
   applied to point layer using single, categorized or graduated symbology.
+
+
+.. index:: Animation
+.. _animation_settings:
+
+Animation settings
+..................
+
+To allow any symbol to become an :ref:`animated symbol <animated_marker>`, 
+you can utilize :guilabel:`Animation settings` panel. In this panel, 
+you can enable animation for the symbol and set a specific frame rate for 
+the symbol's redrawing.
+
+#. Start by going to the top symbol level and select :guilabel:`Advanced`
+   menu in the bottom right of the dialog
+#. Find :guilabel:`Animation settings` option
+#. Check |checkbox| :guilabel:`Is Animated` to enable animation for the symbol
+#. Configure the :guilabel:`Frame rate`, i.e. how fast the animation would
+   be played
+#. You can now use ``@symbol_frame`` variable in any sub-symbol data defined 
+   property in order to animate that property. 
+
+Fow example, setting the symbol's rotation to data 
+defined expression ``@symbol_frame % 360`` 
+will cause the symbol to rotate over time, with rotation speed dictated by
+the symbol's frame rate:
+
+ .. only:: html
+
+   .. figure:: img/animated_symbol.gif
+      :align: center
+      :width: 100%
+
+      Setting the symbol's rotation to data defined expression
+
 
 
 .. index:: Paint effects
@@ -1740,7 +1764,7 @@ We now describe an example using the data-defined override function for the
 Diagrams Properties
 ===================
 
-|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to
+The |diagram| :guilabel:`Diagrams` tab allows you to add a graphic overlay to
 a vector layer (see :numref:`figure_diagrams_attributes`).
 
 The current core implementation of diagrams provides support for:
@@ -1961,7 +1985,7 @@ are also displayed in the print layout legend, next to the layer symbology.
 Masks Properties
 ================
 
-|labelmask| The :guilabel:`Masks` tab helps you configure the current layer
+The |labelmask| :guilabel:`Masks` tab helps you configure the current layer
 symbols overlay with other symbol layers or labels, from any layer.
 This is meant to improve the readability of symbols and labels whose colors
 are close and can be hard to decipher when overlapping; it adds a custom and
@@ -1994,7 +2018,7 @@ either :ref:`mask symbol layers <mask_marker_symbol>` or :ref:`mask labels
 3D View Properties
 =======================
 
-|3d| The :guilabel:`3D View` tab provides settings for vector layers that should
+The |3d| :guilabel:`3D View` tab provides settings for vector layers that should
 be depicted in the :ref:`3D Map view <label_3dmapview>` tool.
 
 To display a layer in 3D, select from the combobox at the top of the tab, either:
@@ -2038,7 +2062,7 @@ the :guilabel:`Layer rendering` section of the tab:
 Fields Properties
 =================
 
-|sourceFields| The :guilabel:`Fields` tab provides information on
+The |sourceFields| :guilabel:`Fields` tab provides information on
 fields related to the layer and helps you organize them.
 
 The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
@@ -2092,7 +2116,7 @@ behave in certain circumstances:
 Attributes Form Properties
 ==========================
 
-|formView| The :guilabel:`Attributes Form` tab helps you set up the form to
+The |formView| :guilabel:`Attributes Form` tab helps you set up the form to
 display when creating new features or querying existing one. You can define:
 
 * the look and the behavior of each field in the feature form or the attribute
@@ -2163,30 +2187,27 @@ directly linked to a particular field (like the HTML/QML widgets or the
 
    Resulting built-in form with tabs and named groups
 
-#. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout
-   editor` combobox. This enables the :guilabel:`Form Layout` panel next to the
-   :guilabel:`Available widgets` panel, filled with existing fields.
-   The selected field displays its :ref:`properties <configure_field>` in a third
-   panel.
+#. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout editor` combobox.
+   This enables the :guilabel:`Form Layout` panel next to the :guilabel:`Available widgets` panel,
+   filled with existing fields.
+   The selected field displays its :ref:`properties <configure_field>` in a third panel.
 #. Select fields you do not want to use in your :guilabel:`Form Layout`
-   panel and hit the |symbologyRemove| button to remove them. You can also toggle the
-   selection with the |invertSelection| :sup:`Invert selection` button
-#. Drag and drop fields from the first panel to the :guilabel`Form Layout` one
-   to re-add them. The same field can be added multiple times.
-#. Drag and drop fields within the :guilabel:`Form Layout` panel to reorder
-   their position.
-#. Add containers (tab or group frames) to associate fields that belong to
-   the same category and better structure the form.
+   panel and hit the |symbologyRemove| button to remove them.
+   You can also toggle the selection with the |invertSelection| :sup:`Invert selection` button.
+#. Drag and drop fields from the first panel to the :guilabel`Form Layout` one to re-add them.
+   The same field can be added multiple times.
+#. Drag and drop fields within the :guilabel:`Form Layout` panel to reorder their position.
+#. Add containers to associate fields that belong to  the same category
+   and better structure the form.
 
-   #. The first step is to use the |symbologyAdd| icon to create a tab in which
-      fields and groups will be displayed
+   #. The first step is to use the |symbologyAdd| :sup:`Add a new tab or group to the form layout` icon.
+      Fields and other groups will be displayed in it.
    #. Then set the properties of the container, ie:
 
-      * the name
-      * the type, ie a :guilabel:`tab` or a :guilabel:`group in container`
-        (a group inside a tab or another group)
-      * and the :guilabel:`number of columns` the embedded fields
-        should be distributed over
+      * the :guilabel:`Label`: the title that will be used for the container
+      * the :guilabel:`Container Type`: it can be a :guilabel:`Tab`
+        or a :guilabel:`Group box in container` (a collapsible group box inside a tab or another group)
+      * and the :guilabel:`Number of columns` the embedded fields should be distributed over
 
       .. _figure_fields_layout:
 
@@ -2199,19 +2220,23 @@ directly linked to a particular field (like the HTML/QML widgets or the
       from the third panel:
 
       * hide or show the container's label
-      * display the container as a group box (only available for tabs).
       * rename the container
       * set the number of columns
       * enter an expression to control the container's visibility.
         The expression will be re-evaluated every time values in the form change,
         and the tab or group box shown/hidden accordingly
-      * add a background color
-   #. You can create as many containers as you want; press
-      the |symbologyAdd| icon again to create another tab or a group frame under
-      an existing tab.
+      * |checkbox| :guilabel:`Show as Group Box`: converts a tab into a top-level group box
+        and vice versa
+      * in case of a group box, set whether at the form opening,
+        it should show as :guilabel:`Collapsed` for every features,
+        or only for those matching an expression (:guilabel:`Control collapsed by expression`).
+      * configure the :guilabel:`Style` look of the container, with custom :guilabel:`Background color`,
+        label color and font properties
+   #. You can create and embed as many containers as you want by pressing again
+      the |symbologyAdd| :sup:`Add a new tab or group to the form layout` icon.
 
 #. The next step is to assign the relevant fields to each container,
-   by simple drag and drop. Groups and tabs can also be moved in the same way.
+   by simple drag and drop. Group boxes and tabs can also be moved the same way.
 #. :ref:`Customize the widget <configure_field>` of the fields in use
 #. In case the layer is involved in a :ref:`one or many to many relation
    <vector_relations>`, drag-and-drop the relation name from the
@@ -2231,8 +2256,8 @@ directly linked to a particular field (like the HTML/QML widgets or the
 #. Further customize the form by adding one or more widgets from :guilabel:`Other Widgets`
    (see :ref:`other_widgets`)
 #. Apply the layer's properties dialog
-#. Open a feature attribute form (eg, using the |identify| :sup:`Identify features`
-   tool) and it should display the new form.
+#. Open a feature attribute form (eg, using the |identify| :sup:`Identify features` tool)
+   and it should display the new form.
 
 .. _other_widgets:
 
@@ -2243,6 +2268,32 @@ The drag and drop designer offers a number of widgets that are not connected to 
 They can be used to enhance the appearance of the form or to display dynamically calculated values.
 
 * :guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain the result of dynamically calculated expressions.
+
+  HTML widgets can be used for example to display images stored as BLOB in a field
+  (let's call it ``photo``):
+
+  #. In the ``Drag-and-drop designer`` mode, add a :guilabel:`HTML Widget`
+     to your :guilabel:`Form Layout`.
+  #. Double-click on the :guilabel:`HTML Widget` to configure it.
+  #. Change the default :guilabel:`Title` or hide it.
+  #. Press the |expression| button and enter the following QGIS expression:
+
+     .. code-block::
+
+       '<img src= "data:image/png;base64,' || to_base64("photo") || '">'
+
+     Ensure that you replace *photo* with your own BLOB field name.
+     The above expression creates a string with HTML image tag in which the BLOB file is encoded.
+  #. Apply the dialog and then press the |symbologyAdd| button.
+  #. QGIS automatically applies HTML formatting and functions to evaluate your expression,
+     resulting in following code:
+
+     .. code-block:: HTML
+
+       <script>document.write(expression.evaluate("'<img src=\"data:image/png;base64,' || to_base64(\"photo\") || '\">'"));</script>
+
+     A preview of your image is displayed on the right.
+
 * :guilabel:`QML Widget`: embeds a QML page, the QML source may contain the result of dynamically calculated expressions.
 * :guilabel:`Text Widget`: displays a text widget which supports basic HTML markup
   and may contain the result of dynamically calculated expressions.
@@ -2332,10 +2383,15 @@ Regardless the type of widget applied to the field, there are some common
 properties you can set to control whether and how a field can be edited.
 
 Widget display
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
-:guilabel:`Show label`: indicates whether the field name should be displayed
-in the form (only in the :ref:`Drag and drop <drag_drop_designer>` designer mode).
+Only available for the :ref:`Drag and drop <drag_drop_designer>` designer mode,
+this group helps you configure the look of the widget assigned to the field:
+
+* :guilabel:`Show label`: indicates whether the field name should be displayed in the form
+* :guilabel:`Override label color`: applies specific color to the field's label
+* :guilabel:`Override label font`: applies specific font properties (bold, italic, underline,
+  strikethrough, or font family) to the field's label
 
 General options
 ^^^^^^^^^^^^^^^
@@ -2359,33 +2415,6 @@ General options
   in the layer.
 * |checkbox| :guilabel:`Label on top`: places the field name above or beside
   the widget in the feature form.
-
-Default values
-^^^^^^^^^^^^^^
-
-* :guilabel:`Default value`: for new features, automatically populates by default
-  the field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
-  For example, you can:
-
-  * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
-    feature's X coordinate, length, area or any geometric information at its creation;
-  * increment a field by 1 for each new feature using ``maximum("field")+1``;
-  * save the feature creation datetime using ``now()``;
-  * use :ref:`variables <general_tools_variables>` in expressions, making it
-    easier to e.g. insert the operator name (``@user_full_name``), the project
-    file path (``@project_path``), ...
-
-  A preview of the resulting default value is displayed at the bottom of the widget.
-
-  .. note:: The ``Default value`` option is not aware of the values in any other
-    field of the feature being created so it won't be possible to use an expression
-    combining any of those values i.e using an expression like ``concat(field1, field2)``
-    may not work.
-
-* |checkbox| :guilabel:`Apply default value on update`: whenever the feature
-  attribute or geometry is changed, the default value is recalculated. This
-  could be handy to save values like last user that modifies data, last time it
-  was changed...
 
 .. _constraints:
 
@@ -2417,6 +2446,48 @@ constraints and:
     modifications until they meet the constraints. It appears when the
     |checkbox| :guilabel:`Enforce constraint` option is checked (``hard constraint``).
 
+.. _default_values:
+
+Default values
+^^^^^^^^^^^^^^
+
+* :guilabel:`Default value`: for new features, automatically populates by default
+  the field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
+  For example, you can:
+
+  * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
+    feature's X coordinate, length, area or any geometric information at its creation;
+  * increment a field by 1 for each new feature using ``maximum("field")+1``;
+  * save the feature creation datetime using ``now()``;
+  * use :ref:`variables <general_tools_variables>` in expressions, making it
+    easier to e.g. insert the operator name (``@user_full_name``), the project
+    file path (``@project_path``), ...
+
+  A preview of the resulting default value is displayed at the bottom of the widget.
+
+  .. note:: The ``Default value`` option is not aware of the values in any other
+    field of the feature being created so it won't be possible to use an expression
+    combining any of those values i.e using an expression like ``concat(field1, field2)``
+    may not work.
+
+* |checkbox| :guilabel:`Apply default value on update`: whenever the feature
+  attribute or geometry is changed, the default value is recalculated. This
+  could be handy to save values like last user that modifies data, last time it
+  was changed...
+
+.. _policies:
+
+Policies
+^^^^^^^^
+
+:guilabel:`Policies` allows you to determine how values are assigned to the field when :guilabel:`Splitting features`:
+
+* :guilabel:`Duplicate Values`: Keeps the existing value of the field for the resulting split features.
+* :guilabel:`Use Default Value`: Resets the field by recalculating its :ref:`default value <default_values>`.
+  If no default value clause exists, the existing value is kept for the resulting split features.
+* :guilabel:`Remove Value`: Clears the field to an unset state.
+* :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions
+  by multiplying the existing value by ratio of the split parts lengths or areas.
 
 .. _edit_widgets:
 
@@ -2427,6 +2498,16 @@ Based on the field type, QGIS automatically determines and assigns a default
 widget type to it. You can then replace the widget with any other compatible
 with the field type. The available widgets are:
 
+* **Binary (BLOB)**: Available only for binary fields, it displays by default a label
+  with the size of the embedded data, if not empty.
+  A drop-down button next to the label allows to:
+
+  * :guilabel:`Embed file`, replacing or filling the field
+  * :guilabel:`Clear contents`, removing any data in the field
+  * :guilabel:`Save contents to file`, exporting the data as a file on disk
+
+  It is also possible to preview the embedded binary file in the field,
+  if combined in a drag-and-drop form with e.g. a :ref:`QML or HTML widget <other_widgets>`.
 * **Checkbox**: Displays a checkbox whose state defines the value to insert.
 * **Classification**: Only available when a :ref:`categorized symbology
   <categorized_renderer>` is applied to the layer, displays a combo box with
@@ -2443,6 +2524,14 @@ with the field type. The available widgets are:
   relative or absolute mode. It can be used to display a hyperlink (to
   document path), a picture or a web page. User can also configure an
   :ref:`external storage system <external_storage>` to fetch/store resources.
+
+  .. tip:: **Relative Path in Attachment widget**
+
+   If the path which is selected with the file browser is located in the same
+   directory as the :file:`.qgs` project file or below, paths are converted to
+   relative paths. This increases portability of a :file:`.qgs` project with
+   multimedia information attached.
+
 * **Hidden**: A hidden attribute column is invisible. The user is not able
   to see its contents.
 * **Key/Value**: Displays a two-columns table to store sets of key/value
@@ -2490,79 +2579,17 @@ with the field type. The available widgets are:
   the layer in the same database/connection.
 
 
-.. tip:: **Relative Path in Attachment widget**
-
-   If the path which is selected with the file browser is located in the same
-   directory as the :file:`.qgs` project file or below, paths are converted to
-   relative paths. This increases portability of a :file:`.qgs` project with
-   multimedia information attached.
-
-
 .. index:: Jointure, Join layers
-.. _`sec_joins`:
+.. _vector_joins:
 
 Joins Properties
 ================
 
-|join| The :guilabel:`Joins` tab allows you to associate features
-of the current layer (called ``Target layer``) to features from another
-loaded vector layer (or table). The join is based on an attribute that is shared by the
-layers. The layers can be geometryless (tables) or not but their join attribute
-should be of the same type.
-
-To create a join:
-
-#. Click the |symbologyAdd| :sup:`Add new join` button. The :guilabel:`Add vector
-   join` dialog appears.
-#. Select the :guilabel:`Join layer` you want to connect with the target vector
-   layer
-#. Specify the :guilabel:`Join field` and the :guilabel:`Target field` that are
-   common to both the join layer and the target layer
-#. Press :guilabel:`OK` and a summary of selected parameters is added to the
-   :guilabel:`Join` panel.
-
-.. _figure_joins:
-
-.. figure:: img/join_attributes.png
-   :align: center
-
-   Join an attribute table to an existing vector layer
-
-The steps above will create a join, where **ALL** the attributes of the
-first matching feature in the join layer is added to the target layer's feature.
-QGIS provides more options to tweak the join:
-
-* |checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to cache
-  values in memory (without geometries) from the joined layer in order to speed
-  up lookups.
-* |unchecked| :guilabel:`Create attribute index on the join field`
-* |unchecked| :guilabel:`Dynamic form`: helps to synchronize join fields on the
-  fly, according to the :guilabel:`Target field`. This way, constraints for
-  join fields are also correctly updated. Note that it's deactivated by default
-  because it may be very time consuming if you have a lot of features or a
-  myriad of joins.
-* If the target layer is editable, then some icons will be displayed in the
-  attribute table next to fields, in order to inform about their status:
-
-  * |joinNotEditable|: the join layer is not configured to be
-    editable. If you want to be able to edit join features from the target
-    attribute table, then you have to check the option
-    |checkbox| :guilabel:`Editable join layer`.
-  * |joinedLayerNotEditable|: the join layer is well configured to be
-    editable, but its current status is read only.
-  * |joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization
-    mechanisms are not activated. If you want to automatically add a feature in
-    the join layer when a feature is created in the target layer, then you have
-    to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically,
-    the option |checkbox| :guilabel:`Delete cascade` may be activated if you
-    want to automatically delete join features.
-* |unchecked| :guilabel:`Joined fields`: instead of adding all the fields from
-  the joined layer, you can specify a subset.
-* |unchecked| :guilabel:`Custom field name prefix` for joined fields, in order
-  to avoid name collision
-
-QGIS currently has support for joining non-spatial table formats supported by
-GDAL (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL providers.
+The |join| :guilabel:`Joins` tab allows you to associate features
+of the current layer to features from another loaded vector layer (or table).
+The join is based on an attribute that is shared by the layers,
+in a one-to-one relationship.
+For more details on joins, please read :ref:`sec_joins`.
 
 
 .. _vector_auxiliary_storage:
@@ -2787,10 +2814,11 @@ In this case, ``.qgd`` and  ``.qgs`` files are both embedded in the archive.
 Actions Properties
 ==================
 
-|action| QGIS provides the ability to perform an action based on the attributes
-of a feature. This can be used to perform any number of actions, for example,
-running a program with arguments built from the attributes of a feature or
-passing parameters to a web reporting tool.
+The |action| :guilabel:`Actions` tab provides the ability to perform an action
+based on the attributes of a feature.
+This can be used to perform any number of actions, for example,
+running a program with arguments built from the attributes of a feature
+or passing parameters to a web reporting tool.
 
 .. _figure_actions:
 
@@ -2799,8 +2827,8 @@ passing parameters to a web reporting tool.
 
    Overview action dialog with some sample actions
 
-Actions are useful when you frequently want to run an external application or
-view a web page based on one or more values in your vector layer.
+Actions are useful when you frequently want to run an external application
+or view a web page based on one or more values in your vector layer.
 They are of different types and can be used like this:
 
 * :guilabel:`Generic`, :guilabel:`macOS`, :guilabel:`Windows`
@@ -3098,27 +3126,28 @@ To add a raster (a TIF image in this example), it becomes:
 Display Properties
 ==================
 
-|display| The :guilabel:`Display` tab helps you configure fields to use for
+The |display| :guilabel:`Display` tab helps you configure fields to use for
 feature identification:
 
-* The :guilabel:`Display name`: based on a field or an :ref:`expression
-  <vector_expressions>`. This is:
+* The :guilabel:`Display name`: based on a field or an :ref:`expression <vector_expressions>`.
+  By default, this is set to the first field in the layer if no field with ``<name>`` component exists.
+  This is used as:
 
-  * the label shown on top of the feature information in the :ref:`Identify
-    tool <identify>` results
+  * the label shown on top of the feature information in the :ref:`Identify tool <identify>` results
   * the field used in the :ref:`locator bar <locator_options>` when looking for
     features in all layers
-  * the feature identifier in the attribute table :ref:`form view
-    <attribute_table_view>`
+  * the feature identifier in the attribute table :ref:`form view <attribute_table_view>`
   * the feature identifier when the map or layout is exported to a layered
     output format such as GeoPDF
-  * the map tip information, i.e. the message displayed in the map canvas when
-    hovering over a feature of the active layer with the |mapTips| :sup:`Show
-    Map Tips` icon pressed. Applicable when no :guilabel:`HTML Map Tip` is set.
-
-* The :guilabel:`HTML Map Tip` is specifically created for the map tips: it's
-  a more complex and full HTML text mixing fields, expressions and html tags
+  * the map tip information, i.e. the message displayed in the map canvas
+    when hovering over a feature of the active layer with the |mapTips| :sup:`Show Map Tips` icon pressed.
+    Applicable when |checkbox| :guilabel:`Enable Map Tips` is active
+    and no :guilabel:`HTML Map Tip` is set.
+* |checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips for the layer
+* The :guilabel:`HTML Map Tip` is specifically created for the map tips:
+  it's a more complex and full HTML text mixing fields, expressions and html tags
   (multiline, fonts, images, hyperlink...).
+  You can use :guilabel:`HTML Map Tip Preview` for easier design of map tips.
 
 .. _figure_display_code:
 
@@ -3128,11 +3157,15 @@ feature identification:
    HTML code for map tip
 
 
-To activate map tips, select the menu option :menuselection:`View --> Show Map
-Tips` or click on the |mapTips| :sup:`Show Map Tips` icon of the
-:guilabel:`Attributes Toolbar`. Map tip is a cross-session feature meaning that
-once activated, it stays on and apply to any layer in any project, even in
-future QGIS sessions until it's toggled off.
+To display map tips:
+
+#. Select the menu option :menuselection:`View --> Show Map Tips`
+   or click on the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes Toolbar`.
+#. Make sure that the layer you target is active and has the |checkbox| :guilabel:`Enable Map Tips` property checked.
+#. Move over a feature, and the corresponding information will be displayed over.
+
+Map tip is a cross-layer feature meaning that once activated,
+it stays on and applies to any map tip enabled layer in the project until it's toggled off.
 
 .. _figure_display_mapped:
 
@@ -3150,77 +3183,94 @@ Rendering Properties
 
 .. _figure_rendering:
 
-.. figure:: img/simplify_rendering.png
+.. figure:: img/vector_rendering.png
    :align: center
 
    Layer Rendering Properties dialog
 
-Scale dependent visibility
---------------------------
+The |rendering| :guilabel:`Rendering` tab offers following properties:
 
-You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
-(exclusive)` scale, defining a range of scale in which features will be
-visible. Out of this range, they are hidden. The |mapIdentification|
-:sup:`Set to current canvas scale` button helps you use the current map
-canvas scale as boundary of the range visibility.
-See :ref:`label_scaledepend` for more information.
+* Under |unchecked| :guilabel:`Scale dependent visibility`,
+  you can set the :guilabel:`Maximum (inclusive)`
+  and :guilabel:`Minimum (exclusive)` scales,
+  defining a range of scales in which features will be visible.
+  Out of this range, they are hidden.
+  The |mapIdentification| :sup:`Set to current canvas scale` button helps you
+  use the current map canvas scale as boundary of the range visibility.
+  See :ref:`label_scaledepend` for more information.
 
-.. note::
+  .. note::
 
    You can also activate scale dependent visibility on a layer from within
    the :guilabel:`Layers` panel: right-click on the layer and in the contextual menu,
    select :guilabel:`Set Layer Scale Visibility`.
 
+* QGIS offers support for on-the-fly feature generalisation.
+  This can improve rendering times when drawing many complex features at small scales.
+  This feature can be enabled or disabled in the layer settings
+  using the |checkbox| :guilabel:`Simplify geometry` option.
+  There is also a global setting that enables generalisation by default for newly added layers
+  (see :ref:`global simplification <global_simplification>` for more information).
 
-Simplify geometry
------------------
+  .. note::
+   Feature generalisation may introduce artefacts into your rendered output in some cases.
+   These may include slivers between polygons
+   and inaccurate rendering when using offset-based symbol layers.
 
-QGIS offers support for on-the-fly feature generalisation. This can
-improve rendering times when drawing many complex features at small scales.
-This feature can be enabled or disabled in the layer settings using the
-|checkbox| :guilabel:`Simplify geometry` option. There is also a global
-setting that enables generalisation by default for newly added layers (see
-:ref:`global simplification <global_simplification>` for more information).
+* The |unchecked| :guilabel:`Fixed reference scale` indicates the map scale
+  at which symbology and labeling sizes which uses paper-based units (such as millimeters or points) relate to.
+  The sizes will be scaled accordingly whenever the map is viewed at a different scale.
 
-.. note::
-  Feature generalisation may introduce artefacts into your rendered
-  output in some cases. These may include slivers between polygons and
-  inaccurate rendering when using offset-based symbol layers.
+  For instance, a line layer using a 2mm wide line with a 1:2000 :guilabel:`Reference scale` set
+  will be rendered using 4mm wide lines when the map is viewed at 1:1000.
 
-While rendering extremely detailed layers (e.g. polygon layers with a huge number
-of nodes), this can cause layout exports in PDF/SVG format to be huge as all
-nodes are included in the exported file. This can also make the resultant file
-very slow to work with/open in other programs.
+* The :guilabel:`Selections` group allows you to control whether a specific color or symbol should be used
+  in place of the defaults (:menuselection:`Project properties --> General --> Selection color`)
+  for a particular layer.
+  This is useful to improve the visibility of selected features with certain symbology:
 
-Checking |checkbox| :guilabel:`Force layer to render as raster` forces these
-layers to be rasterised so that the exported files won't have to include all
-the nodes contained in these layers and the rendering is therefore sped up.
+  * :guilabel:`Use default selection color`
+  * :guilabel:`Override color for selected features`: e.g. if the layer uses a yellow color by default
+    and the standard yellow selection is not visible.
+  * :guilabel:`Override symbol for selected features`: e.g. if a line layer uses a thin symbol,
+    and coloring the lines might not make them visible enough, overriding the symbol with a thicker line can help.
+    Also, if the layer uses raster symbology or gradient fills/lines/shapeburst with color ramp symbology,
+    then the default selection color is not applied at all;
+    being able to set a specific simpler symbol to use for selected features in the layer can help.
 
-You can also do this by forcing the layout to export as a raster,
-but that is an all-or-nothing solution, given that the rasterisation
-is applied to all layers.
+* Rendering extremely detailed layers (e.g. polygon layers with a huge number of nodes),
+  can cause layout exports in PDF/SVG format to be huge as all nodes are included in the exported file.
+  This can also make the resultant file very slow to work with/open in other programs.
 
-:guilabel:`Refresh layer at interval (seconds)`: set a timer to automatically
-refresh individual layers at a matching interval. Canvas updates are
-deferred in order to avoid refreshing multiple times if more than one layer
-has an auto update interval set.
+  Checking |checkbox| :guilabel:`Force layer to render as raster` forces these layers
+  to be rasterised so that the exported files won't have to include all the nodes
+  contained in these layers and the rendering is therefore sped up.
 
-Depending on the data provider (e.g. PostgreSQL), notifications can be sent to
-QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox|
-:guilabel:`Refresh layer on notification` option to trigger an update.
-You can also limit the layer refresh to a specific message set in the |checkbox|
-:guilabel:`Only if message is` text box.
+  You can also do this by forcing the layout to export as a raster,
+  but that is an all-or-nothing solution, given that the rasterisation is applied to all layers.
+  Alternatively, you can rely on geometry simplification in :ref:`layout export settings <create-output>`.
 
-Use Scale Reference
--------------------
+* |unchecked| :guilabel:`Refresh layer at interval`: controls whether and how regular a layer can be refreshed.
+  Available :guilabel:`Configuration` options are:
 
-If set, the reference scale indicates the map scale at which symbology and
-labeling sizes which uses paper-based units (such as millimeters or points)
-relate to. The sizes will be scaled accordingly whenever the map is viewed at
-a different scale.
+  * :guilabel:`Reload data`: the layer will be completely refreshed.
+    Any cached data will be discarded and refetched from the provider.
+    This mode may result in slower map refreshes.
+  * :guilabel:`Redraw layer only`: this mode is useful for animation
+    or when the layer's style will be updated at regular intervals.
+    Canvas updates are deferred in order to avoid refreshing multiple times
+    if more than one layer has an auto update interval set.
 
-For instance, a line layer using a 2mm wide line with a 1:2000 reference scale
-set will be rendered using 4mm wide lines when the map is viewed at 1:1000.
+    .. todo: Add a link to animation styling when available
+
+  It is also possible to set the :guilabel:`Interval (seconds)` between consecutive refreshments.
+
+* Depending on the data provider (e.g. PostgreSQL), notifications can be sent to
+  QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox|
+  :guilabel:`Refresh layer on notification` option to trigger an update.
+  You can also limit the layer refresh to a specific message set in the |checkbox|
+  :guilabel:`Only if message is` text box.
+
 
 .. index:: Temporal
 .. _vectortemporalmenu:
@@ -3280,7 +3330,7 @@ It is also possible to set the :guilabel:`Limits` of the features time range as:
 Variables Properties
 ====================
 
-|expression| The :guilabel:`Variables` tab lists all the variables available at
+The |expression| :guilabel:`Variables` tab lists all the variables available at
 the layer's level (which includes all global and project's variables).
 
 It also allows the user to manage layer-level variables. Click the |symbologyAdd|
@@ -3369,12 +3419,17 @@ Specifically, you can set:
     will be rendered as a surface instead of separate features by joining
     the sampled elevation results into a continuous line. This can enhance
     visualisation and is designed for vector layers which represent a
-    continuous elevation surface, e.g contour lines or surveyed elevation points.
-    The line :guilabel:`Style` can be set as:
+    continuous elevation surface, e.g. contour lines or surveyed elevation points.
+    The profile :guilabel:`Style` can be set as:
 
-    * a profile :guilabel:`Line` with a :guilabel:`Line style` applied
-    * a surface with :guilabel:`Fill below` and a corresponding
-      :guilabel:`Fill style`
+    * a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`
+    * an elevation surface rendered using a fill symbol either above (:guilabel:`Fill above`)
+      or below (:guilabel:`Fill below`) the elevation curve line.
+      The surface symbology is represented using:
+
+      * a :ref:`Fill style <vector_fill_symbols>`
+      * and a :guilabel:`Limit`: the maximum (respectively minimum) altitude
+        determining how high the fill surface will be
 
     Moreover, you can check |unchecked| :guilabel:`Show markers at sampled points`
     to make them visible over the interpretation line and assign them
@@ -3398,7 +3453,7 @@ See :ref:`metadatamenu` for more information.
 Dependencies Properties
 =======================
 
-|dependencies| The :guilabel:`Dependencies` tab allows to declare data
+The |dependencies| :guilabel:`Dependencies` tab allows to declare data
 dependencies between layers. A data dependency occurs when a data modification
 in a layer, not by direct user manipulation, may modify data of other layers.
 This is the case for instance when geometry of a layer is updated by a
@@ -3417,7 +3472,7 @@ altered.
 Legend Properties
 =================
 
-|legend| The :guilabel:`Legend` properties tab provides you with advanced
+The |legend| :guilabel:`Legend` properties tab provides you with advanced
 settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
 layout legend <layout_legend_item>`. These options include:
 
@@ -3462,7 +3517,7 @@ layout legend <layout_legend_item>`. These options include:
 QGIS Server Properties
 ======================
 
-|overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
+The |overlay| :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`Metadata URL`, and :guilabel:`Legend URL`
 sections.
 
@@ -3498,7 +3553,7 @@ To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
 Digitizing Properties
 =====================
 
-|digitizing| The :guilabel:`Digitizing` tab gives access to options that help
+The |digitizing| :guilabel:`Digitizing` tab gives access to options that help
 to ensure the quality of digitized geometries.
 
 .. _figure_digitizing_vector:
@@ -3676,8 +3731,6 @@ To do so:
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
    :width: 1.5em
-.. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
-   :width: 1.5em
 .. |histogram| image:: /static/common/histogram.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
@@ -3690,12 +3743,6 @@ To do so:
    :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
-.. |joinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
-   :width: 1.5em
-.. |joinNotEditable| image:: /static/common/mIconJoinNotEditable.png
-   :width: 1.5em
-.. |joinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
-   :width: 1.5em
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em
 .. |labelbuffer| image:: /static/common/labelbuffer.png
@@ -3766,8 +3813,6 @@ To do so:
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
-   :width: 1.5em
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
    :width: 1.5em
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
@@ -3796,8 +3841,6 @@ To do so:
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
-   :width: 1.5em
-.. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

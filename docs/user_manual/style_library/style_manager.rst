@@ -290,16 +290,36 @@ To create a custom color ramp, activate the Color ramp tab and click the
 |symbologyAdd| :sup:`Add item` button. The button reveals a drop-down list to
 choose the ramp type:
 
-* :guilabel:`Gradient`: given a start and end colors, generate a color ramp which
-  can be **continuous** or **discrete**. With double-clicking the ramp preview, you
-  can add as many intermediate color stops as you want.
+* :guilabel:`Gradient`: given a start and end colors, generates a color ramp
+  which can be **continuous** or **discrete**.
+  With double-clicking the ramp preview, you can add as many intermediate color stops as you want.
+  Click on the color stop indicator and under :guilabel:`Gradient stop` you can:
 
-.. _figure_color_custom_ramp:
+  * adjust its :guilabel:`Relative position` from the color ramp start.
+    Also possible dragging the indicator with the mouse, or pressing the arrow keys
+    (combine with :kbd:`Shift` key for a larger move)
+  * specify the color model to use when interpolating between colors:
+    it can be :guilabel:`RGB`, :guilabel:`HSL` or :guilabel:`HSV`.
+    In some circumstances, this option can help avoid desaturated mid tones,
+    resulting in more visually pleasing gradients.
+  * set the direction which the interpolation should follow for the **Hue** component
+    of a :guilabel:`HSL` or :guilabel:`HSV` color specification.
+    It can be :guilabel:`Clockwise` or :guilabel:`Counterclockwise`.
+  * set the :ref:`color properties <color-selector>`
+  * remove the color stop pressing :guilabel:`Delete stop` or :kbd:`DEL`
 
-.. figure:: img/customColorRampGradient.png
-   :align: center
+  The :guilabel:`Plots` group provides another graphical way to design the color ramp,
+  changing the position or the opacity and HSL components of the color stops.
 
-   Example of custom gradient color ramp with multiple stops
+  .. _figure_color_custom_ramp:
+
+  .. figure:: img/customColorRampGradient.png
+     :align: center
+
+     Example of custom gradient color ramp with multiple stops
+
+  .. hint:: Drag-and-drop a color from a color spot onto the gradient ramp preview
+    adds a new color stop.
 
 * :guilabel:`Color presets`: allows to create a color ramp consisting of a list of
   colors selected by the user;
@@ -318,15 +338,6 @@ choose the ramp type:
    :align: center
 
    cpt-city dialog with hundreds of color ramps
-
-.. tip:: **Easily adjust the color stops of the gradient color ramp**
-
- Double-clicking the ramp preview or drag-and-drop a color from the color spot onto
- the ramp preview adds a new color stop. Each color stop can be tweaked using the
- :ref:`color-selector` widgets or by plotting each of its parameters. You can also 
- reposition it using the mouse, the arrow keys (combine with :kbd:`Shift` key for
- a larger move) or the :guilabel:`Relative position` spinbox. Pressing :guilabel:`Delete
- stop` as well as :kbd:`DEL` key removes the selected color stop. 
 
 
 .. _legend_patch:

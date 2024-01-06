@@ -64,6 +64,7 @@ Returns a matching layer property or metadata value.
          * crs: layer CRS
          * crs_definition: layer CRS full definition
          * crs_description: layer CRS description
+         * crs_ellipsoid: acronym of the layer CRS ellipsoid
          * extent: layer extent (as a geometry object)
          * distance_units: layer distance units
          * type: layer type, e.g., Vector or Raster

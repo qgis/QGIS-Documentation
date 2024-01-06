@@ -14,6 +14,7 @@ algorithms.
 .. toctree::
      :maxdepth: 2
 
+     3dtiles
      cartography
      database
      filetools
@@ -24,6 +25,9 @@ algorithms.
      modelertools
      networkanalysis
      plots
+     pointcloudconversion
+     pointclouddatamanagement
+     pointcloudextraction
      rasteranalysis
      rastercreation
      rasterterrainanalysis

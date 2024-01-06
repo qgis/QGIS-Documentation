@@ -244,6 +244,8 @@ CRS and Transforms Settings
 .. note:: For more information on how QGIS handles layer projection, please
   read the dedicated section at :ref:`label_projections`.
 
+.. _crs_handling_options:
+
 CRS Handling
 ............
 
@@ -310,7 +312,7 @@ This is designed for use in engineering, BIM, asset management, and other fields
 of meter/submeter level are potentially very dangerous or expensive!
 
 |unchecked| :guilabel:`Planimetric measurements`: sets the default for the
-"planimetric measurements" property for newly created projects.
+:ref:`planimetric measurements <measurements_ellipsoid>` property for newly created projects.
 
 
 .. index:: CRS, Datum transformation, Reprojection
@@ -346,6 +348,7 @@ You can |symbologyAdd| :sup:`Add`, |symbologyRemove| :sup:`Remove`
 or |toggleEditing| :sup:`Edit` transformations,
 which will be used in any newly created project.
 
+.. _user_defined_crs:
 
 User Defined CRS
 ................
@@ -577,6 +580,8 @@ layers rendering in the map canvas.
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some
   drawing performance`
 
+.. _vector_rendering_options:
+
 Vector rendering settings
 .........................
 
@@ -624,6 +629,8 @@ for rendering vector layers.
   * :guilabel:`Tolerance type`: it can be *Maximum angle* or *Maximum difference*
     between approximation and curve.
 
+.. _raster_rendering_options:
+
 Raster rendering settings
 .........................
 
@@ -645,7 +652,7 @@ Under :guilabel:`Bands and Resampling`:
 * The :guilabel:`Zoomed in resampling`
   and the :guilabel:`Zoomed out resampling` methods can be defined.
   For :guilabel:`Zoomed in resampling` you can choose between three
-  resampling methods: 'Nearest Neighbour', 'Bilinear' and 'Cubic'.
+  resampling methods: 'Nearest neighbour', 'Bilinear (2x2 kernel)' and 'Cubic (4x4 kernel)'.
   For :guilabel:`Zoomed out resampling` you can choose between 'Nearest Neighbour'
   and 'Average'.
   You can also set the :guilabel:`Oversampling` value (between 0.0 and 99.99 - a large
@@ -692,11 +699,27 @@ These properties let you set:
 
 * **Layer legend** interaction:
 
-  * :guilabel:`Double click action in legend` |selectString|. You can either
-    'Open layer properties', 'Open attribute table' or 'Open layer styling dock'
-    with the double click.
-  * |unchecked| :guilabel:`Show feature count for newly added layers`: displays
-    in the :guilabel:`Layers` panel the number of features next to the layer name.
+  * :guilabel:`Double click action in legend`: whether a double-click on a layer should either
+    :guilabel:`Open layer properties` (default), :guilabel:`Open attribute table`
+    or :guilabel:`Open layer styling dock`.
+
+  .. _layer_tree_insertion_methods:
+
+  * :guilabel:`Behavior used when adding new layers`: determines where layers are placed
+    in the :guilabel:`Layers` panel when loaded into QGIS. It can be:
+
+    * :guilabel:`Above currently selected layer`
+    * :guilabel:`Always on top of the layer tree`
+    * :guilabel:`Optimal index within current layer tree group`:
+      Unlike the other options that sort the new layers among them
+      and place them as a stack at the desired location,
+      this option extents the sorting logic to the whole layer tree (or the active group)
+      and inserts new layers in an "optimal" fashion
+      by insuring that point layers sit on top of point layers,
+      followed by line layers on top of lines, followed by polygon layers, etc.
+
+  * |unchecked| :guilabel:`Show feature count for newly added layers`:
+    displays in the :guilabel:`Layers` panel the number of features next to the layer name.
     Feature count of classes, if any, is as well displayed.
     You can right-click on a layer to turn on/off its feature count.
   * |unchecked| :guilabel:`Display classification attribute names` in the Layers
@@ -752,6 +775,8 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 * :guilabel:`Minimum width` determines how thick should
   the outline of a highlighted object be.
 
+.. _global_measure_tool:
+
 **Measure tool**
 
 * Define :guilabel:`Rubberband color` for measure tools
@@ -760,31 +785,48 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
   numbers (e.g., meters to kilometers)
 * :guilabel:`Preferred distance units`: options are 'Meters', 'Kilometers',
   'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', 'Millimeters',
-  'Degrees' or 'Map Units'
+  'Inches', 'Degrees' or 'Map Units'
 * :guilabel:`Preferred area units`: options are 'Square meters', 'Square
   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
   'Acres', 'Square nautical miles', 'Square centimeters', 'Square millimeters',
-  'Square degrees' or 'Map Units'
+  'Square inches', 'Square degrees' or 'Map Units'
 * :guilabel:`Preferred angle units`: options are 'Degrees', 'Radians',
   'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions',
   milliradians (SI definition) or mil (NATO/military definition)
+
+Some of these options can be overridden at the :ref:`project level <measurements_ellipsoid>`.
+
+.. _measure_copy_settings:
+
+**Measure Tool Copy Settings**
+
+These settings allow you to control the behavior of the :guilabel:`Copy` button
+in the |measure| :sup:`Measure Line` window. You can choose to
+|checkbox| :guilabel:`Include header` to keep columns names, and you can also
+select :guilabel:`Separator` of your choice. You can also choose
+|checkbox| :guilabel:`Always use decimal point` to keep your coordinates copied
+to the clipboard with a dot as a decimal separator, even if your language settings
+in QGIS options are set up to use a comma. In this case, if you don't have the 
+:guilabel:`Always use decimal point` 
+option checked, you will be unable to select comma as a field separator.
 
 **Coordinate and Bearing Display**
 
 This section provides ways to :guilabel:`Configure`:
 
-* :guilabel:`Default coordinate format for new projects`, as displayed in
-  the :guilabel:`Coordinates` box on QGIS status bar and in the :guilabel:`Derived`
-  section of the |identify| :sup:`Identify features` tool's results
-* :guilabel:`Default bearing format for new projects`, as displayed in
-  the status bar for the map canvas panning direction and by the |measureBearing|
-  :sup:`Measure bearing` tool.
+* :guilabel:`Default coordinate format for new projects`,
+  as displayed in the :guilabel:`Coordinates` box on QGIS status bar
+  and in the :guilabel:`Derived` section of the |identify| :sup:`Identify features` tool's results
+* :guilabel:`Default bearing format for new projects`, as displayed in the status bar
+  for the map canvas panning direction and by the |measureBearing| :sup:`Measure bearing` tool.
 
 These options can be overridden at the :ref:`project level <coordinate_and_bearing>`.
 
 **Panning and zooming**
 
 * Define a :guilabel:`Zoom factor` for zoom tools or wheel mouse
+* |checkbox| :guilabel:`Reverse wheel zoom` allows you to adjust
+  mouse wheel scrolling direction.
 
 .. _predefinedscales:
 
@@ -845,7 +887,7 @@ This tab helps you configure general settings when :ref:`editing vector layer
 * |checkbox| :guilabel:`Enable snapping by default` activates snapping when
   a project is opened
 * Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Segment', 'Centroid',
-  'Middle of segments', Line endpoints', 'Area')
+  'Middle of segments', 'Line endpoints', 'Area')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
 * Define the :guilabel:`Search radius for vertex edits` in map units or pixels
 * :guilabel:`Display main dialog as (restart required)`: set whether the
@@ -882,6 +924,26 @@ create curve segments while digitizing. Keep in mind that your data provider
 must support this feature.
 
 
+.. index:: Elevation
+.. _elevation_options:
+
+Elevation settings
+------------------
+
+.. _figure_elevation_options:
+
+.. figure:: img/options_elevation.png
+   :align: center
+
+   Elevation settings
+
+In |elevationProfile| :guilabel:`Elevation` menu, you can set a specific color
+to use as the :guilabel:`Background color` for :ref:`elevation profiles <label_elevation_profile_view>`.
+This can make the chart more readable for certain datasets, e.g. point clouds with RGB coloring,
+where the default background color is too similar to point colors to be easily discernable.
+If unchanged, the elevation profiles will continue to display using the standard system background color.
+
+
 .. index:: 3D
 .. _3d_options:
 
@@ -896,36 +958,44 @@ must support this feature.
    3D settings
 
 The |3d| :guilabel:`3D` menu helps you configure some default settings to use
-for any :guilabel:`3D Map view`. These can refer to :guilabel:`Default Camera Settings`:
+for any :guilabel:`3D Map view`. These can refer to:
 
-* :guilabel:`Projection type`: allowing to view the 3D scene in a:
+* :guilabel:`Default Camera Settings`:
 
-  * :guilabel:`Perspective projection` (default): Parallel lines appear to meet
-    in the distance. Objects appear to shrink the farther they are from the camera.
-  * or an :guilabel:`Orthogonal projection`: Parallel lines appear parallel.
-    Objects appear the same size regardless of distance.
-* Camera's :guilabel:`Field of view`: only relevant in perspective projection,
-  specifies the current vertical field of view in degrees and determines how much
-  of the scene is visible to the camera. Default value is 45\°.
-* :guilabel:`Navigation mode`: provides different means to interact with the 3D scene.
-  Available modes are:
+  * :guilabel:`Projection type`: allowing to view the 3D scene in a:
 
-  * :guilabel:`Terrain based`: the camera follows around a fixed position on
-    the surface of the terrain as the scene is navigated.
-  * :guilabel:`Walk mode (first person)`
+    * :guilabel:`Perspective projection` (default): Parallel lines appear to meet
+      in the distance. Objects appear to shrink the farther they are from the camera.
+    * or an :guilabel:`Orthogonal projection`: Parallel lines appear parallel.
+      Objects appear the same size regardless of distance.
+  * Camera's :guilabel:`Field of view`: only relevant in perspective projection,
+    specifies the current vertical field of view in degrees and determines how much
+    of the scene is visible to the camera. Default value is 45\°.
+  * :guilabel:`Navigation mode`: provides different means to interact with the 3D scene.
+    Available modes are:
 
-  Depending on the selected mode, :ref:`navigation commands <3d_navigation>` differ.
-* :guilabel:`Movement speed`
-* :guilabel:`Invert vertical axis`: Controls whether vertical axis movements
-  should be inverted from their normal behaviour. Only affects movement in the
-  :guilabel:`Walk mode`. It can be set to:
+    * :guilabel:`Terrain based`: the camera follows around a fixed position on
+      the surface of the terrain as the scene is navigated.
+    * :guilabel:`Walk mode (first person)`
 
-  * :guilabel:`Never`
-  * :guilabel:`Only when dragging`: causes the vertical motion to inverted only
-    when performing a click-and-drag camera rotation
-  * and :guilabel:`Always`: causes the motions to be inverted when both
-    click-and-dragging and when the camera movement is locked to the cursor
-    (via a :kbd:`~` key press)
+    Depending on the selected mode, :ref:`navigation commands <3d_navigation>` differ.
+  * :guilabel:`Movement speed`
+  * :guilabel:`Invert vertical axis`: Controls whether vertical axis movements
+    should be inverted from their normal behaviour. Only affects movement in the
+    :guilabel:`Walk mode`. It can be set to:
+
+    * :guilabel:`Never`
+    * :guilabel:`Only when dragging`: causes the vertical motion to inverted only
+      when performing a click-and-drag camera rotation
+    * and :guilabel:`Always`: causes the motions to be inverted when both
+      click-and-dragging and when the camera movement is locked to the cursor
+      (via a :kbd:`~` key press)
+
+* Under :guilabel:`Graphics memory`, the  :guilabel:`Allowed memory per layer` option
+  lets you set the GPU memory limit configuration on each layer.
+  This is useful for users utilizing large 3D scenes which exhaust the available GPU memory resources.
+  When a limit is hit, a warning is also displayed, which should assist in troubleshooting large scenes.
+
 
 .. index:: Colors
 .. _colors_options:
@@ -1274,6 +1344,7 @@ In the dialog, you can:
 The set of default locator filters can be extended by plugins, eg for OSM
 nominatim searches, direct database searching, layer catalog searches, ...
 
+.. _acceleration_options:
 
 Acceleration settings
 ---------------------
@@ -1359,10 +1430,31 @@ You can specify:
 
 * under :guilabel:`Typing`
 
-  * |unchecked| :guilabel:`Automatic parentheses insertion`: Enables autoclosing
-    for parentheses
-  * |checkbox| :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
+  * |checkbox| :guilabel:`Automatic parentheses insertion`:
+    When no text is selected, if an opening character (parentheses, quotes, brackets, ...) is entered,
+    inserts the matching closing character just after the cursor.
+    Note that this behavior is disabled if the current cursor is inside a string or comment.
+  * |checkbox| :guilabel:`Automatically surround selection when typing quotes or brackets`:
+    When an opening character is entered, the selected text is enclosed in the opening/closing pair.
+    Selection remains the same, so it is possible to quote a selected word
+    and enclose it in parentheses just by typing ``"`` then ``(``.
+
+    Special case for multiline selection with quotes and double quotes:
+    selection is enclosed in triple single/double quotes.
+  * |unchecked| :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
     Enables insertion of 'import' when specifying imports
+
+* under :guilabel:`Formatting`, you can add automated tools to reformat the code you are writing:
+
+  * |unchecked| :guilabel:`Reformat on save`: formatting is applied just before saving the script
+  * |checkbox| :guilabel:`Sort imports`: sorts 'import' statements using the `isort library
+    <https://pycqa.github.io/isort/>`_
+  * :guilabel:`Maximum line length`: controls how the formatter will wrap the lines, and controls the editor ruler
+  * :guilabel:`Formatter` - supported tools are :guilabel:`autopep8` and :guilabel:`black`, with dedicated option:
+
+    * :guilabel:`Autopep8 level` - more details at `autopep8 advanced usage
+      <https://pypi.org/project/autopep8/#more-advanced-usage>`_
+    * |unchecked| :guilabel:`Normalize quotes`: replaces all single quotes with double quotes if possible
 
 * under :guilabel:`Run and Debug`
 
@@ -1578,26 +1670,33 @@ In the |general| :guilabel:`General` tab, the :guilabel:`General settings` let y
   set of attribute table configurations for your requirements, and re-setting up
   these attribute tables is a hassle.
 
-Calculating areas and distances is a common need in GIS. However, these values
-are really tied to the underlying projection settings. The :guilabel:`Measurements`
-frame lets you control these parameters. You can indeed choose:
+.. _measurements_ellipsoid:
 
-* the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely
-  based; it can be:
+Calculating areas and distances is a common need in GIS.
+However, these values are really tied to the underlying projection settings.
+The :guilabel:`Measurements` frame lets you control these parameters.
+You can indeed choose:
+
+* the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely based;
+  it can be:
 
   * **None/Planimetric**: returned values are in this case cartesian measurements.
+    This option can be set as default for new projects from the :menuselection:`Settings -->`
+    |options| :menuselection:`Options -->` |crs| :menuselection:`CRS Handling` menu
   * a **Custom** one: you'll need to set values of the semi-major and semi-minor axes.
   * or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN,
     New International 1967, WGS 84...).
-* the :guilabel:`units for distance measurements` for length and perimeter and
-  the :guilabel:`units for area measurements`. These settings, which default
-  to the units set in QGIS options but then overrides it for the current project,
-  are used in:
+* the :guilabel:`Units for distance measurements` for length and perimeter,
+  and the :guilabel:`Units for area measurements`.
+  These settings which default to their corresponding :ref:`global options <global_measure_tool>`
+  override them in the current project.
+  They are used in:
 
   * Attribute table field update bar
   * Field calculator calculations
-  * Identify tool derived length, perimeter and area values
-  * Default unit shown in measure dialog
+  * :ref:`Identify tool <identify>` derived length, perimeter and area values
+  * :ref:`measure dialog <sec_measure>`
+  * :ref:`scale bar decoration <scalebar_decoration>`
 
 .. _coordinate_and_bearing:
 
@@ -1779,7 +1878,7 @@ Data Sources Properties
 
 In the |openTable| :guilabel:`Data Sources` tab, you can:
 
-* :guilabel:`Transaction mode`: define how edits are sent to the data provider```
+* :guilabel:`Transaction mode`, defines how edits are sent to the data provider:
 
   * :guilabel:`Local Edit Buffer`: edits are buffered locally and sent to the provider 
     when toggling layer editing mode or clicking :guilabel:`Save edits`.
@@ -1860,13 +1959,13 @@ In the |openTable| :guilabel:`Data Sources` tab, you can:
 Relations Properties
 --------------------
 
-The |relations| :guilabel:`Relations` tab is used to define 1:n relations and
-polymorphic relations. The relations
-are defined in the project properties dialog. Once relations exist for a layer,
-a new user interface element in the form view (e.g. when identifying a feature
-and opening its form) will list the related entities. This provides a powerful
-way to express e.g. the inspection history on a length of pipeline or road segment.
-You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+The |relations| :guilabel:`Relations` tab is used to define relations between layers.
+The relations can be of one to one, many to many or polymorphic type.
+They are defined in the project properties dialog.
+Once relations exist for a layer, a new user interface element in the form view
+(e.g. when identifying a feature and opening its form) will list the related entities.
+This provides a powerful way to express e.g. the inspection history on a length of pipeline or road segment.
+You can find out more about relations support in section :ref:`vector_relations`.
 
 .. _figure_relations_tab:
 
@@ -1946,12 +2045,12 @@ Terrain Properties
 ------------------
 
 The |layoutItem3DMap| :guilabel:`Terrain` tab helps you configure default settings
-for the terrain and elevation. When any new :ref:`3d map <label_3dmapview>`
-is created in the project, the map will default to using the same terrain
-settings as are defined for the project.
-The project elevation settings will also be respected by the Profile tool.
+for the terrain and elevation.
+When any new :ref:`3d map <label_3dmapview>` is created in the project,
+the map will default to using the same terrain settings as are defined for the project.
+The project elevation settings will also be respected
+by the :ref:`elevation profile <label_elevation_profile_view>` tool.
 
-.. todo: Add link to the profile tool when available
 
 .. _figure_terrain_tab:
 
@@ -1960,18 +2059,51 @@ The project elevation settings will also be respected by the Profile tool.
 
    Project Terrain tab
 
-Terrain and elevation options are available for:
+* :guilabel:`Terrain` and elevation options are available for:
 
-* :guilabel:`Flat terrain` with :guilabel:`Terrain height` setting
-* :guilabel:`DEM (Raster Layer)`: with setting for defining the :guilabel:`Raster layer`,
-  a :guilabel:`Vertical scale` factor to apply to band values and
-  a vertical :guilabel:`Offset`
-* :guilabel:`Mesh`: with setting for defining the :guilabel:`Mesh layer`,
-  a :guilabel:`Vertical scale` factor to apply to vertices Z value and
-  a vertical :guilabel:`Offset`
+  * :guilabel:`Flat terrain` with :guilabel:`Terrain height` setting
+  * :guilabel:`DEM (Raster Layer)`: with setting for defining the :guilabel:`Raster layer`,
+    a :guilabel:`Vertical scale` factor to apply to band values and
+    a vertical :guilabel:`Offset`
+  * :guilabel:`Mesh`: with setting for defining the :guilabel:`Mesh layer`,
+    a :guilabel:`Vertical scale` factor to apply to vertices Z value and
+    a vertical :guilabel:`Offset`
 
-These settings can be overwritten from the 3D map :ref:`configuration
-dialog <scene_configuration>`.
+  These settings can be overwritten from the 3D map :ref:`configuration dialog <scene_configuration>`.
+
+.. _global_map_shading:
+
+* With |unchecked| :guilabel:`Global map shading` settings, you apply a global shading effect to the map,
+  based on the elevation of all the active layers that have elevation properties enabled, including:
+
+  * :ref:`raster layers <raster_elevation>`
+  * :ref:`mesh layers <meshelevation>`
+  * :ref:`point cloud layers <point_clouds_elevation>`
+
+  :guilabel:`Method to combine`: the elevation value at any particular position for all the relevant layers are combined,
+  and the considered elevation is chosen depending on one of these methods:
+
+  * :guilabel:`Highest elevation` value
+  * :guilabel:`Based on layer's order`: the elevation on the topmost layer in the layer tree is considered.
+
+  Supported shading options are:
+
+  * |checkbox| :guilabel:`Eye-dome lighting`: applies shading effects to the map canvas for a better depth rendering.
+    Following parameters can be controlled:
+
+    * :guilabel:`Strength`: increases the contrast, allowing for better depth perception
+    * :guilabel:`Distance`: represents the distance of the used pixels off the center pixel
+      and has the effect of making edges thicker.
+
+  * |unchecked| :guilabel:`Hillshading`, shaping some reliefs on the map using shading (levels of gray):
+
+    * :guilabel:`Z Factor`: Scaling factor for the elevation value
+    * |unchecked| :guilabel:`Multidirectional`: Specify if multidirectional hillshading is to be used
+    * :guilabel:`Azimuth`: The azimuth of the light source
+    * :guilabel:`Altitude`: The elevation angle of the light source
+
+  .. note:: A shortcut to :guilabel:`Global map shading` properties is available
+    through the :guilabel:`Layer Styling` panel.
 
 
 .. index:: Sensors; Readings
@@ -2347,10 +2479,10 @@ This option will restore the panels and toolbars visibility, position, and size.
 Unless it's changed again, the default UI settings will be used in the following
 sessions.
 
-Notice that this option doesn't have any effect on :ref:`GUI
-customization<sec_customization>`. Items hidden by GUI customization (e.g. the
-status bar) will remain hidden even using the ``--defaultui`` option. See also
-the ``--nocustomization`` option.
+Notice that this option doesn't have any effect on :ref:`GUI customization <sec_customization>`.
+Items hidden by GUI customization (e.g. the status bar) will remain hidden
+even using the ``--defaultui`` option.
+See also the ``--nocustomization`` option.
 
 ``--hide-browser``
 ..................
@@ -2494,6 +2626,8 @@ in the QGIS user profile.
    :width: 1.2em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
+.. |elevationProfile| image:: /static/common/mActionElevationProfile.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
@@ -2515,6 +2649,8 @@ in the QGIS user profile.
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
 .. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
+   :width: 1.5em
+.. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em

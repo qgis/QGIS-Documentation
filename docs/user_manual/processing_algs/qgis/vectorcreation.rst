@@ -6,6 +6,7 @@ Vector creation
    .. contents::
       :local:
       :depth: 1
+      :class: toc-columns
 
 
 .. _qgisarrayoffsetlines:
@@ -270,13 +271,11 @@ Grid cells can have different shapes:
 .. figure:: img/create_grid.png
   :align: center
 
-  Different grid cell shapes
+  Different grid cell shapes applied to the same extent, without overlaps
 
-The size of each element in the grid is defined using a horizontal and
+The size and/or placement of each element in the grid is defined using a horizontal and
 vertical spacing.
-
 The CRS of the output layer must be defined.
-
 The grid extent and the spacing values must be expressed in the
 coordinates and units of this CRS.
 
@@ -375,6 +374,13 @@ Outputs
      - [vector: any]
      - Resulting vector grid layer. The output geometry type (point,
        line or polygon) depends on the :guilabel:`Grid type`.
+       Features are created from top to bottom, left to right.
+       The attribute table is filled with:
+       
+       * an ``id``
+       * coordinates on the ``left``, ``right``, ``top`` and ``bottom`` sides
+       * and their placement in the grid: ``row_index`` and ``column_index``
+         (available for point, rectangle and hexagon grid types)
 
 Python code
 ...........
@@ -1590,7 +1596,7 @@ raster layer.
 
 Converts a raster layer to a vector layer, by creating point features
 for each individual pixel's center in the raster layer.
-Any nodata pixels are skipped in the output.
+Any NoData  pixels are skipped in the output.
 
 Parameters
 ..........
@@ -1664,7 +1670,7 @@ raster layer.
 
 Converts a raster layer to a vector layer, by creating polygon
 features for each individual pixel's extent in the raster layer.
-Any nodata pixels are skipped in the output.
+Any NoData  pixels are skipped in the output.
 
 Parameters
 ..........

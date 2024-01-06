@@ -5,16 +5,16 @@
    :width: 1.5em
 .. |25dSymbol| image:: /static/common/renderer25dSymbol.png
    :width: 1.5em
-.. |330| replace:: ``NEW in 3.30``
-.. |332| replace:: ``NEW in 3.32``
-.. |334| replace:: ``NEW in 3.34``
+.. |336| replace:: ``NEW in 3.36``
+.. |338| replace:: ``NEW in 3.38``
+.. |340| replace:: ``NEW in 3.40``
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
 .. |8To24Bits| image:: /static/common/8-to-24-bits.png
    :width: 1.5em
-.. |CURRENT| replace:: 3.28
+.. |CURRENT| replace:: 3.34
 .. |FA| replace:: Follow Along:
 .. |FR| replace:: Further Reading
 .. |IC| replace:: In Conclusion
@@ -37,8 +37,6 @@
 .. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
    :width: 1.5em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
-   :width: 1.5em
-.. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
    :width: 1.5em
 .. |addArrow| image:: /static/common/mActionAddArrow.png
    :width: 1.5em
@@ -108,6 +106,8 @@
    :width: 1.5em
 .. |addTable| image:: /static/common/mActionAddTable.png
    :width: 1.5em
+.. |addTiledSceneLayer| image:: /static/common/mActionAddTiledSceneLayer.png
+   :width: 1.5em
 .. |addToProject| image:: /static/common/mAddToProject.png
    :width: 1.5em
 .. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
@@ -139,8 +139,6 @@
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
 .. |allowIntersections| image:: /static/common/mActionAllowIntersections.png
-   :width: 1.5em
-.. |ams| image:: /static/common/mIconAms.png
    :width: 1.5em
 .. |annotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
@@ -232,6 +230,8 @@
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
+.. |clearItem| image:: /static/common/mIconClearItem.png
    :width: 1.5em
 .. |clearText| image:: /static/common/mIconClearText.png
    :width: 1.5em
@@ -464,8 +464,6 @@
 .. |geographic| image:: /static/common/geographic.png
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
-.. |geonode| image:: /static/common/mIconGeonode.png
-   :width: 1.5em
 .. |geoprocessing| image:: /static/common/geoprocessing.png
    :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
@@ -549,6 +547,8 @@
    :width: 1.5em
 .. |identifyByFreehand| image:: /static/common/mActionIdentifyByFreehand.png
    :width: 1.5em
+.. |identifyByMouseOver| image:: /static/common/mActionIdentifyByMouseOver.png
+   :width: 1.5em
 .. |identifyByPolygon| image:: /static/common/mActionIdentifyByPolygon.png
    :width: 1.5em
 .. |identifyByRadius| image:: /static/common/mActionIdentifyByRadius.png
@@ -593,6 +593,8 @@
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
+   :width: 1.5em
+.. |iterate| image:: /static/common/mIconIterate.png
    :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
@@ -705,6 +707,10 @@
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
+.. |menu| image:: /static/common/menu.png
+   :width: 1.5em
+.. |equalCount| image:: /static/common/mClassificationEqualCount.png
+   :width: 1.5em
 .. |merge| image:: /static/common/merge.png
    :width: 1.5em
 .. |mergeFeatureAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
@@ -796,6 +802,8 @@
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
+.. |newElevationProfile| image:: /static/common/mActionNewElevationProfile.png
+   :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
@@ -851,8 +859,6 @@
 .. |otto| image:: img/otto_dassau.png
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
 .. |overlay| image:: /static/common/overlay.png
-   :width: 1.5em
-.. |ows| image:: /static/common/mIconOws.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
@@ -1137,9 +1143,21 @@
 .. |slider| image:: /static/common/slider.png
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
+.. |snappingArea| image:: /static/common/mIconSnappingArea.png
+   :width: 1.5em
+.. |snappingCentroid| image:: /static/common/mIconSnappingCentroid.png
+   :width: 1.5em
 .. |snappingIntersection| image:: /static/common/mIconSnappingIntersection.png
    :width: 1.5em
+.. |snappingEndpoint| image:: /static/common/mIconSnappingEndpoint.png
+   :width: 1.5em
+.. |snappingMiddle| image:: /static/common/mIconSnappingMiddle.png
+   :width: 1.5em
+.. |snappingSegment| image:: /static/common/mIconSnappingSegment.png
+   :width: 1.5em
 .. |snappingSelf| image:: /static/common/mIconSnappingSelf.png
+   :width: 1.5em
+.. |snappingVertex| image:: /static/common/mIconSnappingVertex.png
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
@@ -1204,9 +1222,13 @@
    :width: 1.5em
 .. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
    :width: 1.5em
+.. |terminal| image:: /static/common/mActionTerminal.png
+   :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
+   :width: 1.5em
+.. |tiledSceneLayer| image:: /static/common/mIconTiledSceneLayer.png
    :width: 1.5em
 .. |tiles| image:: /static/common/tiles.png
    :width: 1.5em
@@ -1261,6 +1283,10 @@
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
 .. |user| image:: /static/common/user.png
+   :width: 1.5em
+.. |validateAll| image:: /static/common/mActionValidateAll.png
+   :width: 1.5em
+.. |validateExtent| image:: /static/common/mActionValidateExtent.png
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
    :width: 1.5em

@@ -80,9 +80,9 @@ Advanced parameters
        * 0 -- Nearest Neighbour (``nearest``)
        * 1 -- Average (``average``)
        * 2 -- Gaussian (``gauss``)
-       * 3 -- Cubic Convolution (``cubic``)
-       * 4 -- B-Spline Convolution (``cubicspline``)
-       * 5 -- Lanczos Windowed Sinc (``lanczos``)
+       * 3 -- Cubic (4x4 kernel) (``cubic``)
+       * 4 -- Cubic B-Spline (4x4 kernel) (``cubicspline``)
+       * 5 -- Lanczos (6x6 kernel) (``lanczos``)
        * 6 -- Average MP (``average_mp``)
        * 7 -- Average in Mag/Phase Space (``average_magphase``)
        * 8 -- Mode (``mode``)
@@ -240,24 +240,24 @@ Advanced parameters
      - [enumeration]
 
        Default: 0
-     - The resampling algorithm to be used
+     - The `resampling algorithm <https://gdal.org/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use.
        Options:
 
        * 0 --- Nearest Neighbour (``nearest``)
-       * 1 --- Bilinear (``bilinear``)
-       * 2 --- Cubic Convolution (``cubic``)
-       * 3 --- B-Spline Convolution (``cubicspline``)
-       * 4 --- Lanczos Windowed Sinc (``lanczos``)
+       * 1 --- Bilinear (2x2 kernel) (``bilinear``)
+       * 2 --- Cubic (4x4 kernel) (``cubic``)
+       * 3 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)
+       * 4 --- Lanczos (6x6 kernel) (``lanczos``)
        * 5 --- Average (``average``)
        * 6 --- Mode (``mode``)
-   * - **Nodata value(s) for input bands (space separated)**
+   * - **NoData value(s) for input bands (space separated)**
 
        Optional
      - ``SRC_NODATA``
      - [string]
 
        Default: None
-     - Space separated Nodata value(s) for input band(s)
+     - Space separated NoData value(s) for input band(s)
    * - **Additional command-line parameters**
      - ``EXTRA``
      - [string]
@@ -411,15 +411,15 @@ Advanced parameters
      - [enumeration]
 
        Default: 0
-     - The resampling algorithm to be used
+     - The resampling algorithm to use.
        Options:
 
        * 0 --- Average (``average``)
-       * 1 --- Nearest neighbour (``near``)
-       * 2 --- Bilinear (``bilinear``)
-       * 3 --- Cubic (``cubic``)
-       * 4 --- Cubic spline (``cubicspline``)
-       * 5 --- Lanczos Windowed sinc (``lanczos``)
+       * 1 --- Nearest Neighbour (``near``)
+       * 2 --- Bilinear (2x2 kernel) (``bilinear``)
+       * 3 --- Cubic (4x4 kernel) (``cubic``)
+       * 4 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)
+       * 5 --- Lanczos (6x6 kernel) (``lanczos``)
        * 6 --- Antialias (``antialias``)
 
    * - **The spatial reference system used for the source input data**
@@ -587,7 +587,7 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Input pixel value to treat as "nodata"**
+   * - **Input pixel value to treat as "NoData"**
 
        Optional
      - ``NODATA_INPUT``
@@ -595,14 +595,14 @@ Advanced parameters
 
        Default: None
      - Ignores pixels from files being merged in with this pixel value
-   * - **Assign specified "nodata" value to output**
+   * - **Assign specified "NoData" value to output**
 
        Optional
      - ``NODATA_OUTPUT``
      - [number]
 
        Default: None
-     - Assigns the specified nodata value to output bands.
+     - Assigns the specified NoData value to output bands.
    * - **Additional creation options**
 
        Optional
@@ -711,14 +711,14 @@ Advanced parameters
      - [enumeration]
 
        Default: 2
-     - The resampling algorithm to be used
+     - The `resampling algorithm <https://gdal.org/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use.
        Options:
 
        * 0 --- Nearest Neighbour (``nearest``)
-       * 1 --- Bilinear (``bilinear``)
-       * 2 --- Cubic (``cubic``)
-       * 3 --- Cubic Spline (``cubicspline``)
-       * 4 --- Lanczos Windowed Sinc (``lanczos``)
+       * 1 --- Bilinear (2x2 kernel) (``bilinear``)
+       * 2 --- Cubic (4x4 kernel) (``cubic``)
+       * 3 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)
+       * 4 --- Lanczos (6x6 kernel) (``lanczos``)
        * 5 --- Average (``average``)
 
    * - **Additional creation options**
@@ -900,14 +900,26 @@ Basic parameters
        * ``sqrt(A*A+B*B)`` --- Outputs the square root of the sum of
          the value of A squared and the value of B squared.
 
-   * - **Set output nodata value**
+   * - **Set output NoData value**
 
        Optional
      - ``NO_DATA``
      - [number]
 
        Default: None
-     - Value to use for nodata
+     - Value to use for NoData
+   * - **Handling of extent differences**
+     - ``EXTENT_OPT``
+     - [enumeration]
+
+       Default: 0
+     - Determines how to handle rasters with different extents. Only available with GDAL 3.3+.
+       `Supported options <https://gdal.org/programs/gdal_calc.html#cmdoption-extent>`_ are:
+
+       * 0 --- Ignore
+       * 1 --- Fail
+       * 2 --- Union
+       * 3 --- Intersect
    * - **Output extent**
 
        Optional
@@ -1228,14 +1240,14 @@ Advanced parameters
      - [enumeration]
 
        Default: 0
-     - The resampling algorithm to be used
+     - The `resampling algorithm <https://gdal.org/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use.
        Options:
 
        * 0 --- Nearest Neighbour (``nearest``)
-       * 1 --- Bilinear (``bilinear``)
-       * 2 --- Cubic (``cubic``)
-       * 3 --- Cubic Spline (``cubicspline``)
-       * 4 --- Lanczos Windowed Sinc (``lanczos``)
+       * 1 --- Bilinear (2x2 kernel) (``bilinear``)
+       * 2 --- Cubic (4x4 kernel) (``cubic``)
+       * 3 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)
+       * 4 --- Lanczos (6x6 kernel) (``lanczos``)
 
    * - **Column delimiter used in the CSV file**
 

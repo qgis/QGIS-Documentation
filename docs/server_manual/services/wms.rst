@@ -88,7 +88,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`VERSION <wms_version>`", "Yes", "Version of the service"
-   ":ref:`LAYERS <wms_layers>` ", "No", "Layers to display"
+   ":ref:`LAYERS <wms_layers>`", "No", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
    ":ref:`BBOX <wms_bbox>`", "Yes", "Map extent"
@@ -119,7 +119,7 @@ as well as the following extra parameters:
    "FILE_NAME", "No", "File name of the downloaded file
 
    Only for ``FORMAT=application/dxf``"
-   ":ref:`FORMAT_OPTIONS <wms_formatoptions>`", "No", "Options of the specified file format
+   ":ref:`FORMAT_OPTIONS <wms_getmap_formatoptions>`", "No", "Options of the specified file format
 
    Only for ``FORMAT=application/dxf``"
    ":ref:`TILED <wms_tiled>`", "No", "Working in *tiled mode*"
@@ -173,13 +173,10 @@ Names have to be separated by a comma.
 
 In addition, QGIS Server introduced some options to select layers by:
 
+* the layer id: the project option allowing to select layers by their id
+  is in :menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project --> Properties...` dialog.
+  Check the :guilabel:`Use layer ids as names` checkbox to activate this option.
 * a :ref:`short name <services_basics_short_name>`
-* the layer id
-
-The project option allowing to select layers by their
-id is in :menuselection:`QGIS Server --> WMS` tab of the
-:menuselection:`Project --> Properties...` dialog.
-Check the :guilabel:`Use layer ids as names` checkbox to activate this option.
 
 .. code-block:: bash
 
@@ -331,8 +328,10 @@ Available values are:
 * ``image/png; mode=1bit``
 * ``image/png; mode=8bit``
 * ``image/png; mode=16bit``
+* ``image/webp``
 * ``application/dxf``: only layers that have read access in the WFS service are
   exported in the DXF format
+* ``application/pdf``
 
   URL example:
 
@@ -541,14 +540,14 @@ and **Romania** they're highlighted in yellow.
 
   Server response to a GetMap request with SELECTION parameter
 
-.. _wms_formatoptions:
+.. _wms_getmap_formatoptions:
 
 FORMAT_OPTIONS
 ^^^^^^^^^^^^^^
 
 This parameter can be used to specify options for the selected format.
-Only for ``FORMAT=application/dxf``.
-A list of key:value pairs separated by semicolon:
+Only for ``FORMAT=application/dxf`` in GetMap request.
+Takes a list of key:value pairs separated by semicolon:
 
 * SCALE: to be used for symbology rules, filters and styles (not
   actual scaling of the data - data remains in the original scale).
@@ -618,7 +617,6 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
    "WMS_PRECISION", "No", "The precision (number of digits) to be used
    when returning geometry (see :ref:`how to add geometry to feature response <addGeometryToFeatureResponse>`).
    The default value is ``-1`` meaning that the precision defined in the project is used."
-
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -818,7 +816,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetLegendGraphic**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`LAYERS <wms_layers>` ", "Yes", "Layers to display"
+   ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "No", "Coordinate reference system"
    ":ref:`BBOX <wms_getlegendgraphic_bbox>`", "No", "Map extent"
@@ -826,6 +824,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`HEIGHT <wms_getlegendgraphic_height>`", "No", "Height of the image in pixels"
    ":ref:`FORMAT <wms_getlegendgraphic_format>`", "No", "Legend format"
    ":ref:`TRANSPARENT <wms_transparent>`", "No", "Transparent background"
+
 
 In addition to the standard ones, QGIS Server supports extra parameters to
 change the size of the legend elements or the font properties for layer titles
@@ -859,6 +858,7 @@ and item labels:
    ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`", "No", "Item label font size (pt)"
    ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`", "No", "Item label italic rendering"
    ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`", "No", "Item label color"
+   ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`", "No", "Adds the rule text to JSON output"
 
 
 .. _wms_getlegendgraphic_bbox:
@@ -1016,7 +1016,7 @@ RULE
 
 This parameter is available on layers with :guilabel:`Rule-based` rendering and
 allows to build a legend with only the named rule symbol. It cannot be combined
-with ``BBOX`` parameter nor the JSON format.
+with ``BBOX`` parameter. ``HEIGHT`` and ``WIDTH`` must be specified.
 
 URL example:
 
@@ -1026,7 +1026,9 @@ URL example:
   SERVICE=WMS
   &REQUEST=GetLegendGraphic
   &LAYERS=mylayer,
-  &RULE=myrulename
+  &RULE=myrulename,
+  &WIDTH=20,
+  &HEIGHT=20
 
 
 .. _wms_getlegendgraphic_rulelabel:
@@ -1525,6 +1527,44 @@ URL example:
    Legend with ``ITEMFONTCOLOR=0x5f9930``
 
 
+.. _wms_getlegendgraphic_showruledetails:
+
+SHOWRULEDETAILS
+^^^^^^^^^^^^^^^
+
+This parameter specifies if the JSON output will also
+contain the details about the rule that generated the 
+legend entry. This parameter only has effect when the
+renderer is rule-based or categorized.
+
+URL example with the corresponding JSON output:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS&
+  REQUEST=GetLegendGraphic&
+  LAYERS=airports&
+  FORMAT=application/json&
+  SHOWRULEDETAILS=TRUE
+
+And the corresponding JSON output:
+
+.. code-block:: json
+
+  {
+    "nodes":[
+      {
+        "icon":"<base64 icon>",
+        "title":"airports",
+        "type":"layer",
+        "rule": "type = 'airport'"
+      }
+    ],
+    "title":""
+  }
+
+
 .. _wms_getstyle:
 
 GetStyle(s)
@@ -1632,8 +1672,8 @@ is available.
 GetPrint
 --------
 
-QGIS Server has the capability to create print layout output in pdf or pixel
-format. Print layout windows in the published project are used as templates.
+QGIS Server has the capability to create print layout output in pdf or pixel format.
+Print layout windows in the published project are used as templates.
 In the **GetPrint** request, the client has the possibility to specify
 parameters of the contained layout maps and labels.
 
@@ -1653,6 +1693,9 @@ parameters:
    ":ref:`TEMPLATE <wms_template>`", "Yes", "Layout template to use"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
    ":ref:`FORMAT <wms_getprint_format>`", "No", "Output format"
+   ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`", "No", "Options of the specified file format
+
+   Only for ``FORMAT=application/pdf``"
    ":ref:`ATLAS_PK <wms_atlaspk>`", "No", "Atlas features"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`TRANSPARENT <wms_transparent>`", "No", "Transparent background"
@@ -1732,6 +1775,46 @@ This parameter specifies the format of map image. Available values are:
 
 If the ``FORMAT`` parameter is different from one of these values,
 then an exception is returned.
+
+.. _wms_getprint_formatoptions:
+
+FORMAT_OPTIONS
+^^^^^^^^^^^^^^
+
+This parameter can be used to specify options for the selected format.
+Only for ``FORMAT=application/pdf`` in GetPrint requests.
+Takes a list of key:value pairs separated by semicolon:
+
+* ``RASTERIZE_WHOLE_IMAGE``: whether the whole pdf should be exported as an image. Default: false.
+* ``FORCE_VECTOR_OUTPUT``: whether pdf should be exported as vector. Default: false.
+* ``APPEND_GEOREFERENCE``: whether georeference info shall be added to the pdf. Default: true.
+* ``EXPORT_METADATA``: whether metadata shall be added to the pdf. Default: true.
+* ``TEXT_RENDER_FORMAT``: sets the text render format for pdf export.
+  It can be ``AlwaysOutlines`` (default) or ``AlwaysText``.
+* ``SIMPLIFY_GEOMETRY``: whether features geometries shall be simplified. Default: true.
+* ``WRITE_GEO_PDF``: whether a GeoPDF shall be exported. Default: false.
+* ``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: whether Iso32000 georeferencing shall be used. Default: false.
+* ``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: whether OGC best practice georeferencing shall be used. Default: false.
+* ``EXPORT_THEMES``: a comma separated list of map themes to use for a GeoPDF export
+* ``PREDEFINED_MAP_SCALES``: a comma separated list of map scales to render the map
+* ``LOSSLESS_IMAGE_COMPRESSION``: whether images embedded in pdf must be compressed using a lossless algorithm. Default: false.
+* ``DISABLE_TILED_RASTER_RENDERING``: whether rasters shall be untiled in the pdf. Default: false.
+
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &VERSION=1.3.0
+  &REQUEST=GetPrint
+  &MAP=/home/qgis/projects/world.qgs
+  &CRS=EPSG:4326
+  &FORMAT=pdf
+  &TEMPLATE=Layout%201
+  &FORMAT_OPTIONS=FORCE_VECTOR_OUTPUT:TRUE;TEXT_RENDER_FORMAT:AlwaysOutlines;PREDEFINED_MAP_SCALES:250
+
 
 .. _wms_atlaspk:
 

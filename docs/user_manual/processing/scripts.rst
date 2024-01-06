@@ -390,7 +390,7 @@ difficult to understand if you have read the previous chapter.
 The first lines, however, need some additional explanation.
 They provide the information that is needed to turn your code into
 an algorithm that can be run from any of the GUI components, like
-the toolbox or the graphical modeler.
+the toolbox or the model designer.
 
 These lines are all calls to the ``@alg`` decorator functions that
 help simplify the coding of the algorithm.
@@ -548,6 +548,10 @@ Input types
      - ``alg.VECTOR_LAYER_DEST``
      - A vector layer destination parameter, for specifying the destination path
        for a vector layer created by the algorithm
+   * - :class:`QgsProcessingParameterVectorTileDestination <qgis.core.QgsProcessingParameterVectorTileDestination>`
+     -
+     - A vector tile layer destination parameter, for specifying the destination path
+       for a vector tile layer created by the algorithm
 
 
 Output types
@@ -603,6 +607,10 @@ Output types
    * - :class:`QgsProcessingOutputVectorLayer <qgis.core.QgsProcessingOutputVectorLayer>`
      - ``alg.VECTOR_LAYER``
      - A vector layer
+   * - :class:`QgsProcessingOutputVectorTileLayer <qgis.core.QgsProcessingOutputVectorTileLayer>`
+     -
+     - A vector tile layer
+
 
 Handing algorithm output
 ------------------------

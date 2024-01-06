@@ -114,13 +114,16 @@ To export a layout as an image:
 
      The :guilabel:`Crop to content` dialog also lets you add margins around
      the cropped bounds.
+  
+   * By checking |checkbox| :guilabel:`Open file after exporting` the exported 
+     file will automatically open in the default image viewer. 
 
 .. _figure_layout_output_image:
 
 .. figure:: img/image_export_options.png
    :align: center
 
-   Image Export Options, output is resized to items extent
+   Image Export Options
 
 .. tip::
    **Use image formats that support transparency when items extend
@@ -186,6 +189,8 @@ To export a layout as SVG:
      Sometimes, this can cause visible "seams" in the rasters
      for generated files. Checking this option would fix that, at the cost of a
      higher memory usage during exports.
+   * By checking |checkbox| :guilabel:`Open file after exporting` the exported 
+     file will automatically open in the default SVG viewer. 
 
 .. _figure_layout_output_svg:
 
@@ -253,6 +258,8 @@ To export a layout as PDF:
      than ``1/600 inch`` apart will be removed).
      This can reduce the size and complexity of the export file (very large
      files can fail to load in other applications).
+   * By checking |checkbox| :guilabel:`Open file after exporting` the exported 
+     file will automatically open in the default PDF viewer.
 
 
 .. _figure_layout_output_pdf:

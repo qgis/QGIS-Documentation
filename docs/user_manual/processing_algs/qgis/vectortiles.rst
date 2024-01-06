@@ -7,6 +7,88 @@ Vector Tiles
       :local:
       :depth: 1
 
+
+.. _qgisdownloadvectortiles:
+
+Download vector tiles
+---------------------
+
+Downloads vector tiles of an input vector tile layer and saves them in a local vector tile file.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector tiles]
+     - A vector tile layer to extract some tiles from
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - Specify the spatial extent of the downloaded area.
+       It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
+   * - **Maximum zoom level to download**
+     - ``MAX_ZOOM``
+     - [number]
+
+       Default: 10
+     - Defines how far to zoom in and fetch data from the tiles
+   * - **Tile limit**
+     - ``TILE_LIMIT``
+     - [number]
+
+       Default: 100
+     - Maximum number of tiles to download, considering the zoom levels and the extent.
+   * - **Output**
+     - ``OUTPUT``
+     - [vector tiles]
+
+       Default: [Save to temporary file]
+     - Specification of the output vector tile file. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [vector tiles]
+     - A local vector tile file storing the downloaded tiles.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:downloadvectortiles``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgiswritevectortiles_mbtiles:
 
 Write vector tiles (MBTiles)

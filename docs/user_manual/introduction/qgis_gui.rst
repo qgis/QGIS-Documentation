@@ -80,12 +80,12 @@ The :menuselection:`Project` menu provides access and exit points for
   project file as a template (see
   :ref:`Project files options <projectfiles_options>` for template
   configuration)
-* :guilabel:`Open...` a project from a file, a GeoPackage or a
-  PostgreSQL database
+* :guilabel:`Open...` a project from a file, a GeoPackage, PostgreSQL
+  or Oracle database
 * :guilabel:`Close` a project or revert it to its last saved state
 * :guilabel:`Save` a project in :file:`.qgs` or :file:`.qgz` file
-  format, either as a file or within a GeoPackage or PostgreSQL
-  database
+  format, either as a file or within a GeoPackage, PostgreSQL or
+  Oracle database
 * Export the map canvas to different formats or use a
   :ref:`print layout <label_printlayout>` for more complex output
 * Set project properties and snapping options for geometry editing.
@@ -122,10 +122,18 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      -
      - :ref:`sec_projects`
+   * - :menuselection:`--> Oracle...`
+     -
+     -
+     - :ref:`sec_projects`
    * - :menuselection:`Open Recent -->`
      - :kbd:`Alt+J` + :kbd:`R`
      -
      - :ref:`sec_projects`
+   * - :menuselection:`--> Clear List`
+     -
+     -
+     - :ref:`sec_projects` 
    * - :guilabel:`Close`
      -
      -
@@ -221,8 +229,9 @@ Edit
 ----
 
 The :menuselection:`Edit` menu provides most of the native tools needed
-to edit layer attributes or geometry (see :ref:`editingvector` for
-details).
+to edit layer attributes or geometry. To enable :menuselection:`Edit`
+menu options you need to switch to editing mode by clicking on |toggleEditing|
+:sup:`Toggle editing` (see :ref:`editingvector` for details).
 
 .. list-table:: The Edit menu items
    :header-rows: 1
@@ -615,7 +624,7 @@ views using the :menuselection:`View` tools. For example, you can:
 
 * Create new 2D or 3D map views next to the main map canvas
 * :ref:`Zoom or pan <zoom_pan>` to any place
-* Query displayed features' attributes or geometry
+* Query the attributes or geometry of the displayed features 
 * Enhance the map view with preview modes, annotations or decorations
 * Access any panel or toolbar
 
@@ -627,7 +636,7 @@ actions like:
 * :guilabel:`Toggle Panel Visibility`: shows or hides enabled
   :ref:`panels <panels_tools>` - useful when digitizing features (for
   maximum canvas visibility) as well as for (projected/recorded)
-  presentations using QGIS' main canvas
+  presentations using QGIS main canvas
 * :guilabel:`Toggle Map Only`: hides panels, toolbars, menus and status
   bar and only shows the map canvas. Combined with the full screen
   option, it makes your screen display only the map
@@ -691,6 +700,11 @@ actions like:
      - :kbd:`Ctrl+Shift+J`
      - :guilabel:`Attributes`
      - :ref:`sec_measure`
+   * - :menuselection:`-->` |measureBearing|
+       :guilabel:`Measure Bearing`
+     -
+     - :guilabel:`Attributes`
+     - :ref:`sec_measure`   
    * - :menuselection:`-->` |measureAngle|
        :guilabel:`Measure Angle`
      -
@@ -700,7 +714,7 @@ actions like:
      -
      - :guilabel:`Attributes`
      - :ref:`statistical_summary`
-   * - |layoutItem3DMap| :guilabel:`Elevation Profile`
+   * - |newElevationProfile| :guilabel:`Elevation Profile`
      -
      -
      - :ref:`label_elevation_profile_view`
@@ -995,6 +1009,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Manage Layers`
      - :ref:`db_tools`
+   * - :menuselection:`-->` |addHanaLayer|
+       :guilabel:`Add SAP HANA Spatial Layer...`
+     -
+     - :guilabel:`Manage Layers`
+     - :ref:`db_tools`
    * - :menuselection:`-->` |addVirtualLayer|
        :guilabel:`Add/Edit Virtual Layer...`
      -
@@ -1010,11 +1029,6 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`xyz_tile`
-   * - :menuselection:`-->` |addAmsLayer|
-       :guilabel:`Add ArcGIS REST Service Layer...`
-     -
-     - :guilabel:`Manage Layers`
-     -
    * - :menuselection:`-->` |addWcsLayer|
        :guilabel:`Add WCS Layer...`
      -
@@ -1025,6 +1039,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Manage Layers`
      - :ref:`ogc-wfs`
+   * - :menuselection:`-->` |addAfsLayer|
+       :guilabel:`Add ArcGIS REST Server Layer...`
+     -
+     - :guilabel:`Manage Layers`
+     - :ref:`arcgis_rest`
    * - :menuselection:`-->` |addVectorTileLayer|
        :guilabel:`Add Vector Tile Layer...`
      -
@@ -1499,10 +1518,10 @@ are enabled.
      -
      -
      - :ref:`label_raster_calc`
-   * - :guilabel:`Align Raster...`
+   * - :guilabel:`Align Rasters...`
      -
      -
-     - :ref:`label_raster_align`
+     - :ref:`qgisalignrasters`
    * - :menuselection:`Analysis -->`
      -
      -
@@ -1771,7 +1790,7 @@ Processing
      - :kbd:`Ctrl+Alt+T`
      -
      - :ref:`processing.toolbox`
-   * - |processingModel| :guilabel:`Graphical Modeler...`
+   * - |processingModel| :guilabel:`Model Designer...`
      - :kbd:`Ctrl+Alt+G`
      -
      - :ref:`processing.modeler`
@@ -2181,9 +2200,9 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |8To24Bits| image:: /static/common/8-to-24-bits.png
    :width: 1.5em
-.. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
+.. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
    :width: 1.5em
-.. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
+.. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
@@ -2192,6 +2211,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
    :width: 1.5em
 .. |addGrid| image:: /static/common/add_grid.png
+   :width: 1.5em
+.. |addHanaLayer| image:: /static/common/mActionAddHanaLayer.png
    :width: 1.5em
 .. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
@@ -2374,8 +2395,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
-.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
-   :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
 .. |lineIntersections| image:: /static/common/mAlgorithmLineIntersections.png
@@ -2395,6 +2414,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |measureAngle| image:: /static/common/mActionMeasureAngle.png
    :width: 1.5em
 .. |measureArea| image:: /static/common/mActionMeasureArea.png
+   :width: 1.5em
+.. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
 .. |merge| image:: /static/common/merge.png
    :width: 1.5em
@@ -2433,6 +2454,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
+   :width: 1.5em
+.. |newElevationProfile| image:: /static/common/mActionNewElevationProfile.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em

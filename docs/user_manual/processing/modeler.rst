@@ -1,6 +1,6 @@
 .. _`processing.modeler`:
 
-The graphical modeler
+The model designer
 =====================
 
 .. only:: html
@@ -8,20 +8,20 @@ The graphical modeler
    .. contents::
       :local:
 
-The *graphical modeler* allows you to create complex models using
+The *model designer* allows you to create complex models using
 a simple and easy-to-use interface.
 When working with a GIS, most analysis operations are not
 isolated, rather part of a chain of operations.
-Using the graphical modeler, that chain of operations can be wrapped
+Using the model designer, that chain of operations can be wrapped
 into a single process, making it convenient to execute later with a
 different set of inputs.
 No matter how many steps and different algorithms it involves, a
 model is executed as a single algorithm, saving time and effort.
 
-The graphical modeler can be opened from the Processing menu
-(:menuselection:`Processing --> Graphical Modeler`).
+The model designer can be opened from the Processing menu
+(:menuselection:`Processing --> Model Designer`).
 
-The graphical modeler interface
+The model designer interface
 -------------------------------
 
 .. _figure_modeler:
@@ -29,7 +29,7 @@ The graphical modeler interface
 .. figure:: img/modeler_canvas.png
    :align: center
 
-   Modeler
+   Model designer
 
 In its main part, the modeler has a working canvas where the structure
 of the model and the workflow it represents can be constructed.
@@ -193,7 +193,7 @@ View menu
    * - |checkbox| :guilabel:`Show Comments`
      -
      -
-     - Displays comments associated to every algorithm or input in the graphical designer
+     - Displays comments associated to every algorithm or input in the model designer
    * - |unchecked| :guilabel:`Enable Snapping`
      -
      -
@@ -298,20 +298,20 @@ the left side of the modeler window:
      - :class:`Multiple Input <qgis.core.QgsProcessingParameterMultipleLayers>`
      - :class:`Number <qgis.core.QgsProcessingParameterNumber>`
      - :class:`Point <qgis.core.QgsProcessingParameterPoint>`
-     - :class:`Point Cloud Layer <qgis.core.QgsProcessingParameterPointCloudLayer>`
-   * - :class:`Print Layout <qgis.core.QgsProcessingParameterLayout>`
+     - :class:`Point Cloud Attribute <qgis.core.QgsProcessingParameterPointCloudAttribute>`
+   * - :class:`Point Cloud Layer <qgis.core.QgsProcessingParameterPointCloudLayer>`
+     - :class:`Print Layout <qgis.core.QgsProcessingParameterLayout>`
      - :class:`Print Layout Item <qgis.core.QgsProcessingParameterLayoutItem>`
      - :class:`Range <qgis.core.QgsProcessingParameterRange>`
      - :class:`Raster Band <qgis.core.QgsProcessingParameterBand>`
-     - :class:`Raster Layer <qgis.core.QgsProcessingParameterRasterLayer>`
-   * - :class:`Scale <qgis.core.QgsProcessingParameterScale>`
+   * - :class:`Raster Layer <qgis.core.QgsProcessingParameterRasterLayer>`
+     - :class:`Scale <qgis.core.QgsProcessingParameterScale>`
      - :class:`String <qgis.core.QgsProcessingParameterString>`
      - :class:`TIN Creation Layers <qgis.core.QgsProcessingParameterTinInputLayers>`
      - :class:`Vector Features <qgis.core.QgsProcessingParameterFeatureSource>`
-     - :class:`Vector Field <qgis.core.QgsProcessingParameterField>`
-   * - :class:`Vector Layer <qgis.core.QgsProcessingParameterVectorLayer>`
+   * - :class:`Vector Field <qgis.core.QgsProcessingParameterField>`
+     - :class:`Vector Layer <qgis.core.QgsProcessingParameterVectorLayer>`
      - :class:`Vector Tile Writer Layers <qgis.core.QgsProcessingParameterVectorTileWriterLayers>`
-     -
      -
      -
 
@@ -556,7 +556,8 @@ dialog like the one shown next will appear.
 On the right-hand side, you will see a simple HTML page, created using
 the description of the input parameters and outputs of the algorithm,
 along with some additional items like a general description of the
-model or its author.
+model or its author. Also, there is an Example section where you can
+input your own custom examples to help explain the usage of the model.
 The first time you open the help editor, all these descriptions are
 empty, but you can edit them using the elements on the left-hand side
 of the dialog.

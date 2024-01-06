@@ -1,7 +1,7 @@
 More complex models
 ============================================================
 
-.. note:: In this lesson we will work with a more complex model in the graphical modeler.
+.. note:: In this lesson we will work with a more complex model in the model designer.
 
 The first model that we created in the previous chapter was a very simple one, with just one input and three algorithms. More complex models can be created, with different types of inputs and containing more steps. For this chapter we will work with a model that creates a vector layer with watersheds, based on a DEM and a threshold value. That will be very useful for calculating several vector layers corresponding to different thresholds, without having to repeat each single step each time.
 

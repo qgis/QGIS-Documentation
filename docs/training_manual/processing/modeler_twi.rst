@@ -1,13 +1,13 @@
 .. _tm_start_modeler:
 
-Starting with the graphical modeler
+Starting with the model designer
 ============================================================
 
-.. note:: In this lesson we will use the graphical modeler, a powerful component that we can use to define a workflow and run a chain of algorithms.
+.. note:: In this lesson we will use the model designer, a powerful component that we can use to define a workflow and run a chain of algorithms.
 
 A normal session with the processing tools includes more than running a single algorithm. Usually several of them are run to obtain a result, and the outputs of some of those algorithms are used as input for some of the other ones.
 
-Using the graphical modeler, that workflow can be put into a model, which will run all the necessary algorithms in a single run, thus simplifying the whole process and automating it.
+Using the model designer, that workflow can be put into a model, which will run all the necessary algorithms in a single run, thus simplifying the whole process and automating it.
 
 To start this lesson, we are going to calculate a parameter named Topographic Wetness Index. The algorithm that computes it is called :guilabel:`Topographic wetness index (twi)`.
 
@@ -33,7 +33,7 @@ This is the result that you will obtain (the default singleband pseudocolor inve
 
 .. figure:: img/modeler_twi/twi_layer.png
 
-What we will try to do now is to create an algorithm that calculates the TWI from a DEM in just one single step. That will save us work in case we later have to compute a TWI layer from another DEM, since we will need just one single step to do it instead of the three above. All the processes that we need are found in the  toolbox, so what we have to do is to define the workflow to wrap them. This is where the graphical modeler comes in.
+What we will try to do now is to create an algorithm that calculates the TWI from a DEM in just one single step. That will save us work in case we later have to compute a TWI layer from another DEM, since we will need just one single step to do it instead of the three above. All the processes that we need are found in the  toolbox, so what we have to do is to define the workflow to wrap them. This is where the model designer comes in.
 
 #. Open the modeler by selecting its menu entry in the processing menu.
 

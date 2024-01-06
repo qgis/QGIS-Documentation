@@ -115,8 +115,18 @@ There are three options to select the layer(s) to snap to:
   Snapping will not occur to a layer that is not checked in the
   snapping options dialog.
 
-As for snapping mode, you can choose between ``Vertex``, ``Segment``,
-``Area``, ``Centroid``, ``Middle of Segments`` and ``Line Endpoints``.
+When moving or creating vertex, you can opt for the following snapping modes:
+
+* |snappingVertex| :guilabel:`Vertex`
+* |snappingSegment| :guilabel:`Segment`: snaps along a line or a polygon perimeter.
+  If topological editing is enabled, then a new vertex is added at the snapping location.
+* |snappingArea| :guilabel:`Area`: guarantees that the snap point lies anywhere on a polygon's area,
+  not necessarily on its boundary
+* |snappingCentroid| :guilabel:`Centroid`: snaps to the centroid of the geometry of a feature.
+  In case of a multipart geometry, the target point may be distinct from the existing parts.
+* |snappingMiddle| :guilabel:`Middle of Segments` on line or polygon feature
+* |snappingEndpoint| :guilabel:`Line Endpoints`: snaps to the first or last vertex of every part
+  of a line or polygon feature.
 
 .. index:: Snapping icons
 
@@ -710,6 +720,20 @@ Red circles will appear when hovering vertices.
      :align: center
 
      Moving the top vertex snaps all the vertices to the grid
+
+* **Converting adjacent segments to/from curve**: Select the center vertex of the segment you want
+  to convert, hit the :kbd:`O` letter key.
+  If the vertex was in a curve, the curve is converted into straight lines.
+  If the vertex was between two straight lines, they are converted into a curve.
+  A first or a last vertex of a line can't be converted to a center vertex curve.
+  The layer must be compatible with curve geometry type.
+
+  .. _figure_vertex_convert_curve:
+
+  .. figure:: img/vertex_convert_curve.png
+     :align: center
+
+     Switch from curve to straight lines with :kbd:`O` letter
 
 Each change made with the vertex tool is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support
@@ -1335,17 +1359,14 @@ To split line or polygon features:
 
 #. Select the |splitFeatures| :sup:`Split Features` tool.
 #. Draw a line across the feature(s) you want to split.
-   If a selection is active, only selected features are split. When set,
-   :ref:`default values or clauses <configure_field>` are applied to corresponding
-   fields and other attributes of the parent feature are by default copied to the
-   new features.
-#. You can then as usually modify any of the attributes of any resulting feature.
+   If a selection is active, only selected features are split.
+   Fields of resulting features are filled according to their :ref:`splitting policy <policies>`.
+#. You can then as usual modify any of the attributes of any resulting feature.
 
 .. tip:: **Split a polyline into new features in one-click**
 
    Using the |splitFeatures| :sup:`Split Features` tool, snap and click on an
-   existing vertex of a polyline feature to split that feature into two new
-   features.
+   existing vertex of a polyline feature to split that feature into two new features.
 
 
 .. index::
@@ -1544,10 +1565,21 @@ In order to trim or extend existing geometries:
 Shape digitizing
 ================
 
-The :guilabel:`Shape Digitizing` toolbar is synchronized with the
-|digitizeShape| :sup:`Digitize Shape` :ref:`geometry drawing method
-<drawing_methods>` you can select on the :guilabel:`Advanced Digitizing Toolbar`.
-It offers a set of tools to draw lines or polygons features of regular shape.
+The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw lines
+or polygons features of regular shape.
+It is synchronized with the |digitizeShape| :sup:`Digitize Shape`
+:ref:`geometry drawing method <drawing_methods>` you can select on the :guilabel:`Digitizing Toolbar`.
+To use it:
+
+#. Display the toolbar: :menuselection:`View --> Toolbars --> Shape Digitizing`
+#. Select a tool that creates or modifies the shape of a geometry,
+   e.g. |captureLine| :sup:`Add line feature`, |capturePolygon| :sup:`Add polygon feature`,
+   |addPart| :sup:`Add part`, |addRing| :sup:`Add ring`, |reshape| :sup:`Reshape Features`, ...
+#. The |digitizeWithSegment| :sup:`Digitize with segment` button
+   on the :guilabel:`Digitizing Toolbar` is enabled.
+   The first time, you may need to switch it to the |digitizeShape| :sup:`Digitize Shape`
+   in order to enable tools on the :guilabel:`Shape Digitizing` toolbar.
+#. Pick a shape digitizing tool and draw.
 
 .. index:: Circular string
 .. _add_circular_string:
@@ -1592,7 +1624,7 @@ curved geometry, if not, QGIS will segmentize the circular arcs.
   and the orientation of  the circle. (Left-click, right-click)
 - |circle3Points| :sup:`Circle from 3 points`: Draws a circle from three
   known points on the circle. (Left-click, left-click, right-click)
-- |circleCenterPoint| :sup:`Circle from center and a point`: Draws a circle
+- |circleCenterPoint| :sup:`Circle by a center point and another point`: Draws a circle
   with a given center and a point on the circle (Left-click, right-click).
   When used with the :ref:`advanced_digitizing_panel` this tool can become a
   "Add circle from center and radius" tool by setting and locking the distance
@@ -1730,14 +1762,34 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   existing one (more at :ref:`parallel_or_perpendicular`)
 * |settings| :sup:`Snap to common angles`: when moving the cursor,
   displays a virtual line that you can snap to to add the next vertex.
-  The snapping line is defined by the last added vertex and an (absolute or
-  relative to previous segment) angle from a preset list
-  (following steps of 5°, 10°, 15°, 18°, 22.5°, 30°, 45° or 90°).
+  The snapping line is defined by the last added vertex
+  and an (absolute or relative to previous segment) angle from a preset list
+  (following steps of 0.1°, 0.5°, 1°, 5°, 10°, 15°, 18°, 22.5°, 30°, 45° or 90°).
   Choose :guilabel:`Do not snap to common angles` to disable this feature.
-* |floater| :sup:`Toggle Floater`: displays a live preview of the coordinates
-  right next to the cursor, allowing quick digitizing. The values can be accessed
-  using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`, edited and
-  |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`).
+
+  :ref:`Snapping to features <snapping_options>` can be used along with
+  snapping to common angles for accurate digitizing.
+  For a fine-grained control on how the target element to snap to is retained,
+  you can indicate whether to prioritize snapping to features over common angles,
+  and vice-versa under the :guilabel:`Snapping priority` entry.
+  You can switch from one method to the other during the digitizing operation,
+  and this avoids disabling any of the snapping options in the meantime.
+  Press :kbd:`N` (or :kbd:`Shift+N`) during a digitizing operation to cycle through the angles list.
+  
+* |floater| :sup:`Floater settings`: if the :guilabel:`Show floater` item is checked,
+  a contextual menu with digitizing information follows the cursor during digitizing.
+  The values can be accessed using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`,
+  edited and |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`).
+  The type of information to display can be selected in the bottom part of the menu:
+
+  * :guilabel:`Show distance`
+  * :guilabel:`Show angle`
+  * :guilabel:`Show XY coordinates`
+  * :guilabel:`Show Z value`
+  * :guilabel:`Show M value`
+  * :guilabel:`Show bearing/azimuth`
+  * :guilabel:`Show common snapping angle`
+
 * |extractVertices| :sup:`Construction Tools` provides a couple of options that
   constrain the vertices placement based on extrapolated coordinates of
   existing elements:
@@ -2215,9 +2267,21 @@ To edit features in-place:
    :width: 1.5em
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
+.. |snappingArea| image:: /static/common/mIconSnappingArea.png
+   :width: 1.5em
+.. |snappingCentroid| image:: /static/common/mIconSnappingCentroid.png
+   :width: 1.5em
+.. |snappingEndpoint| image:: /static/common/mIconSnappingEndpoint.png
+   :width: 1.5em
 .. |snappingIntersection| image:: /static/common/mIconSnappingIntersection.png
    :width: 1.5em
+.. |snappingMiddle| image:: /static/common/mIconSnappingMiddle.png
+   :width: 1.5em
+.. |snappingSegment| image:: /static/common/mIconSnappingSegment.png
+   :width: 1.5em
 .. |snappingSelf| image:: /static/common/mIconSnappingSelf.png
+   :width: 1.5em
+.. |snappingVertex| image:: /static/common/mIconSnappingVertex.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em

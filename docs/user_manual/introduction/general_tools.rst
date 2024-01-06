@@ -49,6 +49,31 @@ The :guilabel:`Layers` panel (also called the ``map legend``) lists all
 the layers in the project and helps you manage their visibility and shape the map.
 You can show or hide the panel by pressing :kbd:`Ctrl+1`.
 
+QGIS provides a variety of ways to add layers to a project:
+
+* using the :guilabel:`Add` button from the dedicated data provider tab
+  in the :ref:`Data source manager <opening_data>` dialog
+* from QGIS :ref:`Browser panel <label_browserpanel>` or :ref:`DB Manager <dbmanager>`:
+  double-click, drag-and-drop files and layers onto QGIS or use the contextual menu
+* drag-and-drop files from the Operating System files explorer onto QGIS
+
+In all these scenarios, you can open one or many layers at a time.
+New layers are added to the :guilabel:`Layers` panel:
+
+#. if dropped over the :guilabel:`Layers` panel, at the exact location they are released
+#. in the other cases, at a location that respects the global :ref:`behavior used when adding new layers
+   <layer_tree_insertion_methods>` setting
+#. and in case of multiple layers, they are sorted in a way
+   that increases the chance of their stacking being logical
+   and features being visible as most as possible, using the following logic (top to bottom):
+
+   * vector point layers
+   * vector line layers
+   * vector polygon layers
+   * point cloud layers
+   * mesh layers
+   * raster layers
+
 At the top of the :guilabel:`Layers` panel, a toolbar allows you to:
 
 * |symbology| :sup:`Open the layer styling dock (F7)`: toggle the
@@ -179,23 +204,23 @@ a right-click shows a dedicated set of options presented below.
 .. table updated with https://tableconvert.com/excel-to-restructuredtext
 .. table:: Contextual menus from :guilabel:`Layers` panel items
 
- ============================================================ ============= =============== =============== ============= ====================
-  Option                                                       Group         Vector Layer    Raster Layer    Mesh Layer    Point Cloud Layer
- ============================================================ ============= =============== =============== ============= ====================
-  |zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+ ============================================================ ============= =============== =============== ============= ==================== =============
+  Option                                                       Group         Vector Layer    Raster Layer    Mesh Layer    Point Cloud Layer    3D Layer
+ ============================================================ ============= =============== =============== ============= ==================== =============
+  |zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   |zoomToLayer| :guilabel:`Zoom to Selection`                                |checkbox|
-  |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|  
   :guilabel:`Show Feature Count`                                             |checkbox|
   |labelingSingle| :guilabel:`Show Label`                                    |checkbox|
-  :guilabel:`Copy Layer/Group`                                 |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :guilabel:`Rename Layer/Group`                               |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Copy Layer/Group`                                 |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :guilabel:`Rename Layer/Group`                               |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                  |checkbox|
   :guilabel:`Stretch Using Current Extent`                                                   |checkbox|
   |dbManager| :guilabel:`Update SQL Layer...`                                |checkbox|
   |addVirtualLayer| :guilabel:`Edit Virtual Layer...`                        |checkbox|
   |addGroup| :guilabel:`Add Group`                             |checkbox|
-  |duplicateLayer| :guilabel:`Duplicate Layer`                               |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  |removeLayer| :guilabel:`Remove Layer/Group...`              |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  |duplicateLayer| :guilabel:`Duplicate Layer`                               |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  |removeLayer| :guilabel:`Remove Layer/Group...`              |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox| 
   :guilabel:`Move Out of Group`                                              |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Move to Top`                                      |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Move to Bottom`                                   |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
@@ -210,37 +235,37 @@ a right-click shows a dedicated set of options presented below.
   :menuselection:`Actions on selections -->` (in edit mode)                  |checkbox|
   :menuselection:`--> Duplicate Feature`                                     |checkbox|
   :menuselection:`--> Duplicate Feature and Digitize`                        |checkbox|
-  :guilabel:`Set Layer Scale Visibility...`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Set Layer Scale Visibility...`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox| 
   :guilabel:`Zoom to Visible Scale`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :menuselection:`Layer CRS -->`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :menuselection:`--> Set Project CRS from Layer`                            |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :menuselection:`--> Set to..` (recent CRSs)                                                                |checkbox|    |checkbox|
-  :menuselection:`--> Set Layer CRS...`                                      |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`Layer CRS -->`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Set Project CRS from Layer`                            |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Set to..` (recent CRSs)                                                                |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Set Layer CRS...`                                      |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`Set Group CRS...`                            |checkbox|
   :guilabel:`Set Group WMS Data...`                            |checkbox|
   |unchecked| :guilabel:`Mutually Exclusive Group`             |checkbox|
   :guilabel:`Check and all its children (Ctrl-click)`          |checkbox|
   :guilabel:`Uncheck and all its children (Ctrl-click)`        |checkbox|
   :guilabel:`Make Permanent`                                                 |checkbox|
-  :menuselection:`Export -->`                                  |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`Export -->`                                  |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Save As...`                                                            |checkbox|
   :menuselection:`--> Save Features As...`                                   |checkbox|
   :menuselection:`--> Save Selected Features As...`                          |checkbox|
-  :menuselection:`--> Save As Layer Definition File...`        |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :menuselection:`--> Save As QGIS Layer Style File...`                      |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :menuselection:`Styles -->`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :menuselection:`--> Copy Style`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Save As Layer Definition File...`        |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Save As QGIS Layer Style File...`                      |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`Styles -->`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Copy Style`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Paste Style`                             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :menuselection:`--> Add...`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :menuselection:`--> Rename Current...`                                     |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Add...`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Rename Current...`                                     |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Edit symbol...`                                        |checkbox|
   :menuselection:`--> Copy Symbol`                                           |checkbox|
   :menuselection:`--> Paste Symbol`                                          |checkbox|
-  :guilabel:`Add Layer Notes...`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Add Layer Notes...`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Edit Layer Notes...`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Remove Layer Notes`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :guilabel:`Properties...`                                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|
- ============================================================ ============= =============== =============== ============= ====================
+  :guilabel:`Properties...`                                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+ ============================================================ ============= =============== =============== ============= ==================== =============
 
 
 For GRASS vector layers, |toggleEditing| :sup:`Toggle editing` is not available.
@@ -390,49 +415,53 @@ as their ordering is determined by the placement of the group layer.
 
 .. _editing_style_layer:
 
-Editing vector layer style
-...........................
+Editing layer style
+....................
 
-From the Layers panel, you have shortcuts to change the layer rendering quickly
-and easily. Right-click on a vector layer and select :menuselection:`Styles -->`
-in the list in order to:
+From the :guilabel:`Layers` panel, you have shortcuts to change the layer rendering quickly and easily.
 
-* see the :ref:`styles <manage_custom_style>` currently applied to the layer.
+Right-click on a layer and select :menuselection:`Styles -->` in the list in order to:
+
+* see the :ref:`styles <manage_custom_style>` currently available for the layer.
   If you defined many styles for the layer, you can switch from one to another
   and your layer rendering will automatically be updated on the map canvas.
 * copy part or all of the current style, and when applicable, paste a copied
   style from another layer
+* :guilabel:`Rename current...` style
+* :guilabel:`Add` a new style (which is actually a copy of the current one)
+* or :guilabel:`Remove current` style (only when multiple styles are available).
 
   .. tip:: **Quickly share a layer style**
 
     From the context menu, copy the style of a layer and paste it to a group
     or a selection of layers: the style is applied to all the layers that
-    are of the same type (vector/raster) as the original layer and,
+    are of the same type (vector, raster, mesh, point cloud, ...) as the original layer and,
     for vector layers, have the same geometry type (point, line or polygon).
 
-* rename the current style, add a new style (which is actually a copy of
-  the current one) or delete the current style (when multiple styles are
-  available).
+When using a symbology based on features classification
+(e.g. :ref:`categorized <categorized_renderer>`, :ref:`graduated <graduated_renderer>`
+or :ref:`rule-based <rule_based_rendering>` for vector layers,
+or :ref:`classification <point_cloud_classification>` for point clouds),
+right-clicking a class entry in the :guilabel:`Layers` panels makes it possible
+to edit the visibility of the classes (and their features) and avoid (un)checking them one by one:
 
-.. note:: The previous options are also available for raster or mesh layers.
+* |toggleAllLayers| :guilabel:`Toggle Items`
+* |showAllLayers| :guilabel:`Show All Items`
+* |hideAllLayers| :guilabel:`Hide All Items`
 
+With vector layer, the contextual menu of a class leaf entry also gives access to:
+
+* |selectAll| :guilabel:`Select features`: selects in the layer all the features matching that class
+* |openTable| :guilabel:`Show in attribute table`: opens an attribute table
+  filtered to only the features matching that class
 * update the :ref:`symbol color <color-selector>` using a **Color Wheel**.
-  For convenience, the recently used colors are also available at the bottom
-  of the color wheel.
-* :guilabel:`Edit Symbol...`: open the :ref:`Symbol Selector <symbol-selector>`
-  dialog and change feature symbol (symbol, size, color...).
+  For convenience, the recently used colors are also available at the bottom of the color wheel.
+* :guilabel:`Edit Symbol...`: opens the :ref:`Symbol Selector <symbol-selector>`
+  dialog to change feature symbol (symbol, size, color...).
+* :guilabel:`Copy Symbol`
+* :guilabel:`Paste Symbol`
 
-When using a classification symbology type (based on :ref:`categorized
-<categorized_renderer>`, :ref:`graduated <graduated_renderer>` or
-:ref:`rule-based <rule_based_rendering>`), the aforementioned symbol-level
-options are available from the class entry context menu. Also provided are the
-|toggleAllLayers| :guilabel:`Toggle Items`, |showAllLayers| :guilabel:`Show All
-Items` and |hideAllLayers| :guilabel:`Hide All Items` entries to switch the
-visibility of all the classes of features. These avoid (un)checking items
-one by one.
-
-.. tip:: Double-clicking a class leaf entry also opens the
- :guilabel:`Symbol Selector` dialog.
+.. tip:: Double-clicking a class leaf entry also opens the :guilabel:`Symbol Selector` dialog.
 
 
 .. index::
@@ -474,6 +503,7 @@ From a drop-down list of current layers in the layer panel, select an item and:
   * |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View`
     and |elevationscale| :guilabel:`Elevation` properties for point cloud layer.
     These options are the same as in the :ref:`point_clouds_properties`.
+* Enable and configure :ref:`global map shading <global_map_shading>` properties
 * Manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
   (more details at :ref:`manage_custom_style`).
 * See the |history| :guilabel:`History` of changes you applied to the
@@ -646,7 +676,17 @@ Available tools are organized under following tabs:
 
 * |networkAndProxy| :guilabel:`Network Logger`
 * |dbManager| :guilabel:`Query Logger`
-* |stopwatch| :guilabel:`Profiler`
+* |stopwatch| :guilabel:`Profiler` - under this tab you can choose one out
+  of these categories:
+  
+    * :guilabel:`Startup` helps you diagnose (and fix) occasional long startup 
+      times of QGIS.
+    * :guilabel:`Project Load` allows you to get a breakdown of the various 
+      stages of project load, in order to identify the causes of slow project 
+      load times.
+    * :guilabel:`Map Render` tool allows you to identify pain points in your
+      map rendering and track down exactly which layers are causing long map 
+      redraws.
 
 .. note:: Plugin authors can extend the panel with custom tabs
  for debugging and developping their own plugins.
@@ -1044,6 +1084,10 @@ All the other information about the feature follows.
 Feature information
 ...................
 
+The feature information displayed by the identify tool will depend on the type 
+of layer you have selected, whether it is a vector layer (including vector tiles 
+or point cloud data) or raster layer. If your layer is raster, clicking on a location
+on the map canvas with identify tool will highlight the identified raster pixel. 
 The Identify Results dialog can be customized to display custom fields, but by
 default it will display the following information:
 
@@ -1118,6 +1162,7 @@ At the top of the window, you have a handful of tools:
 * selection mode to use to fetch features to identify:
 
   * |identifyByRectangle| :sup:`Identify Features by area or single click`
+  * |identifyByMouseOver| :sup:`Identify Features on Mouse Over`
   * |identifyByPolygon| :sup:`Identify Features by Polygon`
   * |identifyByFreehand| :sup:`Identify Features by Freehand`
   * |identifyByRadius| :sup:`Identify Features by Radius`
@@ -1504,7 +1549,7 @@ manage:
   :ref:`project_properties`)
 * **vector layer variables** from the :guilabel:`Layer Properties` dialog
   (see :ref:`vector_properties_dialog`);
-* **modeler variables** from the :guilabel:`Graphical Modeler` dialog
+* **modeler variables** from the :guilabel:`Model Designer` dialog
   (see :ref:`processing.modeler`);
 * **layout variables** from the :guilabel:`Layout` panel in the
   Print layout (see :ref:`layout_panel`);
@@ -1747,16 +1792,16 @@ show a drop-down arrow. This is usually available when using:
 
 Pressing the arrow will provide you with a menu to:
 
-* load the file from the file system: the file is identified through the file path and
+* :guilabel:`Select File…`, to load the file from the file system. The file is identified through the file path and
   QGIS needs to resolve the path in order to display the corresponding image
-* load the file from a remote URL: as above, the image will only be loaded on
+* :guilabel:`From URL…`, to load the file from a remote URL. As above, the image will only be loaded on
   successful retrieval of the remote resource
-* embed the file into the item: the file is embedded inside
+* :guilabel:`Embed File…`, to embed the file inside
   the current project, style database, or print layout template.
   The file is then always rendered as part of the item.
   This is a convenient way to create self-contained projects with custom symbols
   which can be easily shared amongst different users and installations of QGIS.
-* extract the embedded file from the widget and save it on disk.
+* :guilabel:`Extract Embedded File…`, to extract the embedded file from the widget and save it on disk.
 
 .. index:: Rendering; Scale dependent visibility
 .. _label_scaledepend:
@@ -2229,6 +2274,8 @@ The values presented in the varying size assistant above will set the size
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |identifyByFreehand| image:: /static/common/mActionIdentifyByFreehand.png
+   :width: 1.5em
+.. |identifyByMouseOver| image:: /static/common/mActionIdentifyByMouseOver.png
    :width: 1.5em
 .. |identifyByPolygon| image:: /static/common/mActionIdentifyByPolygon.png
    :width: 1.5em

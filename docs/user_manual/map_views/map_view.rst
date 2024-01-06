@@ -334,6 +334,7 @@ To create a bookmark:
 #. Enter or select a group name in which to store related bookmarks
 #. Select the extent of the area you wish to save, using the :ref:`extent selector
    <extent_selector>` widget
+#. Change the map :guilabel:`Rotation`   
 #. Indicate the :guilabel:`CRS` to use for the extent
 #. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
    Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list
@@ -404,8 +405,9 @@ You can perform the following tasks:
        You can also drag and drop the bookmark between folders (user and
        project) and subfolders (groups).
 
-You can also zoom to bookmarks by typing the bookmark name in the
-:ref:`locator <label_statusbar>`.
+You can manage bookmark actions by right-click on the desired bookmark in the 
+:guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by typing the 
+bookmark name in the :ref:`locator <label_statusbar>`.
 
 .. index:: Decorations
 .. _decorations:
@@ -624,11 +626,8 @@ Scale Bar
 
 |scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas.
 You can control the style and placement, as well as the labelling of the bar.
-
-QGIS only supports displaying the scale in the same units as your map frame.
-So, if the units of your project's CRS are meters, you can't create a scale bar in
-feet. Likewise, if you are using decimal degrees, you can't create a scale
-bar to display distance in meters.
+The scale bar respects the active :ref:`project's distance unit <measurements_ellipsoid>`
+as defined in :menuselection:`Project properties --> General --> Units for distance measurement`.
 
 To add a scale bar:
 
@@ -649,9 +648,9 @@ To add a scale bar:
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
 #. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
-#. Set the :guilabel:`Size of bar` |selectNumber|
-#. Optionally check |checkbox| :guilabel:`Automatically snap to round number
-   on resize` to display easy-to-read values
+#. Set the :guilabel:`Size of bar` in the active unit
+#. Optionally check |checkbox| :guilabel:`Automatically snap to round number on resize`
+   to display easy-to-read values
 #. Choose the placement from the :guilabel:`Placement` |selectString| combo box
 #. You can refine the placement of the item by setting a horizontal and/or vertical
    `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
@@ -910,6 +909,11 @@ menu or from the :guilabel:`Annotations Toolbar`:
   but displayed in an annotation item. Also see this video
   https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s
   from Tim Sutton for more information.
+
+.. raw:: html
+
+  <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="Working with annotations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
 * |annotation| :sup:`Move Annotation` to adjust annotation element size or position
   (using click and drag)
 
@@ -940,6 +944,7 @@ options. This dialog is almost the same for all the annotation types:
 * :guilabel:`Frame style`: sets the frame background color, transparency,
   stroke color or width of the balloon using QGIS symbols.
 * :guilabel:`Contents margins`: sets interior margins of the annotation frame.
+* |checkbox| :guilabel:`Live update` allows you to live preview your changes.
 
 .. _figure_annotation:
 
@@ -1023,11 +1028,12 @@ measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or
    :menuselection:`Project --> Properties... --> General` menu, and by the
    selection made in the measurement widget.
 
-All measuring modules use the snapping settings from the digitizing module (see
-section :ref:`snapping_tolerance`). So, if you want
-to measure exactly along a line feature, or around a polygon feature, first set
-its layer snapping tolerance. Now, when using the measuring
-tools, each mouse click (within the tolerance setting) will snap to that layer.
+All measuring modules use the snapping settings from the digitizing module
+(see section :ref:`snapping_tolerance`).
+So, if you want to measure exactly along a line feature, or around a polygon feature,
+first set its layer snapping tolerance.
+Now, when using the measuring tools, each mouse click (within the tolerance setting)
+will snap to that layer.
 
 .. index::
    single: Measure; Distances
@@ -1035,24 +1041,25 @@ tools, each mouse click (within the tolerance setting) will snap to that layer.
    single: Measure; Angles
 
 The |measure| :sup:`Measure Line` measures distances between given points.
-The tool then allows you to click points on the map. Each segment length,
-as well as the total, shows up in the measure window.
-To stop measuring, click the right mouse button. Now it is possible
-to copy all your line measurements at once to the clipboard using the
-:guilabel:`Copy All` button.
+The tool then allows you to click points on the map.
+Each segment length, as well as the total, shows up in the measure window.
+In the measure window, you will see coordinates for all your points and distances.
+Keep in mind that the first row will contain only coordinates, as it represents your starting point.
+Now it is possible to copy all your line measurements at once to the clipboard
+using the :guilabel:`Copy` button. Clicking the :guilabel:`Configuration` button
+you will access to :guilabel:`Measure Tool Copy Settings` where you can set up 
+:ref:`copy options <measure_copy_settings>`. To stop measuring, click the right
+mouse button.
 
-Note that you can use the drop-down list near the total to change
-the measurement units interactively while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
-'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees', 'Map units').
-This unit is retained for the widget until a new project is created or another project
-is opened.
+Note that you can use the drop-down list near the total
+to change the :ref:`measurement units <measurements_ellipsoid>`
+interactively while working with the measure tool.
+This unit is retained for the widget until a new project is created
+or another project is opened.
 
 The :guilabel:`Info` section in the dialog explains how calculations are made
 according to the CRS settings available.
 
-.. %FixMe: currently, validating the Settings --> Options dialog revert any change
-   made on units in the measurement dialog (see https://issues.qgis.org/issues/15436
-   bug or not? should it be documented?)
 
 .. _figure_measure_length:
 
@@ -1064,9 +1071,7 @@ according to the CRS settings available.
 |measureArea| :sup:`Measure Area`: Areas can also be measured. In the
 measure window, the accumulated area size appears. Right-click to stop drawing.
 The Info section is also available as well as the ability to switch between
-different area units ('Square meters', 'Square kilometers', 'Square feet', 'Square yards',
-'Square miles', 'Hectares', 'Acres', 'Square centimeters',
-'Square millimeters', 'Square nautical miles', 'Square degrees', 'Map units').
+different :ref:`area units <measurements_ellipsoid>`.
 
 .. _figure_measure_area:
 
@@ -1075,10 +1080,11 @@ different area units ('Square meters', 'Square kilometers', 'Square feet', 'Squa
 
    Measure Area
 
-|measureBearing| :sup:`Measure Bearing`: You can also measure bearings. The
-cursor becomes cross-shaped. Click to draw the first point of the bearing,
-then move the cursor to draw the second point. The measurement
-is displayed in a pop-up dialog.
+|measureBearing| :sup:`Measure Bearing`: You can also measure bearings.
+The cursor becomes cross-shaped.
+Click to draw the first point of the bearing,
+then move the cursor to draw the second point.
+The measurement is displayed in a pop-up dialog.
 
 .. _figure_measure_bearing:
 
@@ -1087,10 +1093,11 @@ is displayed in a pop-up dialog.
 
    Measure Bearing
 
-|measureAngle| :sup:`Measure Angle`: You can also measure angles. The
-cursor becomes cross-shaped. Click to draw the first segment of the angle you
-wish to measure, then move the cursor to draw the desired angle. The measurement
-is displayed in a pop-up dialog.
+|measureAngle| :sup:`Measure Angle`: You can also measure angles.
+The cursor becomes cross-shaped.
+Click to draw the first segment of the angle you wish to measure,
+then move the cursor to draw the desired angle.
+The measurement is displayed in a pop-up dialog.
 
 .. _figure_measure_angle:
 
@@ -1343,8 +1350,6 @@ In the dialog that opens:
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
-.. |selectNumber| image:: /static/common/selectnumber.png
-   :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png

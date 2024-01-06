@@ -26,8 +26,8 @@ There are several tabs in the dialog:
     - |rasterHistogram| :ref:`Histogram <raster_histogram>`:sup:`[1]`
     - |rendering| :ref:`Rendering <raster_rendering>`
   * - |temporal| :ref:`Temporal <raster_temporal>`
-    - |elevationscale| :ref:`Elevation <raster_elevation>`
     - |pyramids| :ref:`Pyramids <raster_pyramids>`
+    - |elevationscale| :ref:`Elevation <raster_elevation>`
   * - |editMetadata| :ref:`Metadata <raster_metadata>`
     - |legend| :ref:`Legend <raster_server>`
     - |overlay| :ref:`QGIS Server <raster_server>`
@@ -566,11 +566,10 @@ transformation.
 
 When applying the 'Nearest neighbour' method, the map can get a
 pixelated structure when zooming in.
-This appearance can be improved by using the 'Bilinear' or 'Cubic'
-method, which cause sharp edges to be blurred.
+This appearance can be improved by using the 'Bilinear (2x2 kernel)'
+or 'Cubic (4x4 kernel)' method, which cause sharp edges to be blurred.
 The effect is a smoother image.
-This method can be applied to for instance digital topographic
-raster maps.
+This method can be applied to for instance digital topographic raster maps.
 
 |checkbox| :guilabel:`Early resampling`: allows to calculate the raster
 rendering at the provider level where the resolution of the source is known,
@@ -585,7 +584,7 @@ Really convenient for tile rasters loaded using an :ref:`interpretation method
 Transparency Properties
 =======================
 
-|transparency| QGIS provides capabilities to set the transparency level
+QGIS provides capabilities to set the |transparency| :guilabel:`Transparency` level
 of a raster layer.
 
 Use the :guilabel:`Global opacity` slider to set to what extent the
@@ -685,9 +684,8 @@ Rendering Properties
 In the |rendering| :guilabel:`Rendering` tab, it's possible to:
 
 * set :guilabel:`Scale dependent visibility` for the layer:
-  You can set the :guilabel:`Maximum (inclusive)` and
-  :guilabel:`Minimum (exclusive)` scale, defining a range of scales in
-  which the layer will be visible.
+  You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales,
+  defining a range of scales in which the layer will be visible.
   It will be hidden outside this range.
   The |mapIdentification| :sup:`Set to current canvas scale` button
   helps you use the current map canvas scale as a boundary.
@@ -699,11 +697,20 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
    the :guilabel:`Layers` panel: right-click on the layer and in the contextual menu,
    select :guilabel:`Set Layer Scale Visibility`.
 
+* |checkbox| :guilabel:`Refresh layer at interval`: controls whether and how regular a layer can be refreshed.
+  Available :guilabel:`Configuration` options are:
 
-* :guilabel:`Refresh layer at interval (seconds)`: set a timer to
-  automatically refresh individual layers.
-  Canvas updates are deferred in order to avoid refreshing multiple
-  times if more than one layer has an auto update interval set.
+  * :guilabel:`Reload data`: the layer will be completely refreshed.
+    Any cached data will be discarded and refetched from the provider.
+    This mode may result in slower map refreshes.
+  * :guilabel:`Redraw layer only`: this mode is useful for animation
+    or when the layer's style will be updated at regular intervals.
+    Canvas updates are deferred in order to avoid refreshing multiple times
+    if more than one layer has an auto update interval set.
+
+    .. todo: Add a link to animation styling when available
+
+  It is also possible to set the :guilabel:`Interval (seconds)` between consecutive refreshments.
 
 .. _figure_raster_rendering:
 
@@ -746,39 +753,6 @@ set whether the layer redraw should be:
   frame. It's useful when the layer uses time-based expression values for
   renderer settings (e.g. data-defined renderer opacity, to fade in/out
   a raster layer).
-
-
-.. index:: Elevation, Terrain
-.. _raster_elevation:
-
-Elevation Properties
-====================
-
-The |elevationscale| :guilabel:`Elevation` tab provides options to control
-the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
-and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
-Specifically, you can set:
-
-.. _figure_raster_elevation:
-
-.. figure:: img/rasterElevation.png
-   :align: center
-
-   Raster Elevation Properties
-
-* |unchecked| :guilabel:`Represents Elevation Surface`:
-  whether the raster layer represents a height surface (e.g DEM) and the pixel
-  values should be interpreted as elevations.
-  Check this option if you want to display a raster in an :ref:`elevation profile view <label_elevation_profile_view>`.
-  You will also need to fill in the :guilabel:`Band` to pick values from
-  and can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
-* :guilabel:`Profile Chart Appearance`: controls the rendering
-  :guilabel:`Style` the raster elevation will use when drawing a profile chart.
-  It can be set as:
-
-  * a profile :guilabel:`Line` with a :ref:`line style <vector_line_symbols>` applied
-  * a surface with :guilabel:`Fill below` and a corresponding
-    :ref:`fill style <vector_fill_symbols>`
 
 
 .. index:: Pyramids
@@ -833,6 +807,44 @@ Finally, click :guilabel:`Build Pyramids` to start the process.
    :align: center
 
    Raster Pyramids
+
+
+.. index:: Elevation, Terrain
+.. _raster_elevation:
+
+Elevation Properties
+====================
+
+The |elevationscale| :guilabel:`Elevation` tab provides options to control
+the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
+and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
+Specifically, you can set:
+
+.. _figure_raster_elevation:
+
+.. figure:: img/rasterElevation.png
+   :align: center
+
+   Raster Elevation Properties
+
+* |unchecked| :guilabel:`Represents Elevation Surface`:
+  whether the raster layer represents a height surface (e.g DEM) and the pixel
+  values should be interpreted as elevations.
+  Check this option if you want to display a raster in an :ref:`elevation profile view <label_elevation_profile_view>`.
+  You will also need to fill in the :guilabel:`Band` to pick values from
+  and can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
+* :guilabel:`Profile Chart Appearance`: controls the rendering
+  of the raster elevation data in the profile chart.
+  The profile :guilabel:`Style` can be set as:
+
+  * a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`
+  * an elevation surface rendered using a fill symbol either above (:guilabel:`Fill above`)
+    or below (:guilabel:`Fill below`) the elevation curve line.
+    The surface symbology is represented using:
+
+    * a :ref:`Fill style <vector_fill_symbols>`
+    * and a :guilabel:`Limit`: the maximum (respectively minimum) altitude
+      determining how high the fill surface will be
 
 
 .. index:: Metadata, Metadata editor, Keyword

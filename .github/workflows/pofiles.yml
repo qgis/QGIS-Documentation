@@ -7,9 +7,6 @@ on:
     paths:
       - 'docs/**'
 
-  schedule: #run at 02:00 UTC on Wednesday
-    - cron:  '00 02 * * 03'
-
   workflow_dispatch:
 
 permissions:  # added using https://github.com/step-security/secure-repo
@@ -25,17 +22,17 @@ jobs:
 
     steps:
     - name: Harden Runner
-      uses: step-security/harden-runner@55d479fb1c5bcad5a4f9099a5d9f37c8857b2845 # v2.4.1
+      uses: step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895 # v2.6.1
       with:
         egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
 
     - name: checkout
-      uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       with:
         ref: release_3.28
 
     - name: Set up Python 3.9
-      uses: actions/setup-python@bd6b4b6205c4dbad673328db7b31b7fab9e241c0 # v4.6.1
+      uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
       with:
         python-version: 3.9
 
@@ -54,7 +51,7 @@ jobs:
 
     - name: Commit the changes in the PO files      
       id: "auto-commit-action"
-      uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a # v4.16.0
+      uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d # v5.0.0
       with:
         commit_message: Update English PO files
 

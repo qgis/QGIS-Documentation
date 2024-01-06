@@ -48,9 +48,15 @@ At startup, a list of :guilabel:`Project Templates` and
 names and file paths (for up to ten projects).
 The :guilabel:`Recent Projects` list is handy to access recently used
 projects.
-Double-click an entry to open the project or project template. Right-click
-an entry to :guilabel:`Pin to List`, :guilabel:`Open Directory...` or
-:guilabel:`Remove from List`.
+Double-click an entry to open the project or project template. 
+Right-click an entry to :guilabel:`Pin to List`, :guilabel:`Open Directory...` 
+or :guilabel:`Remove from List`. If you see your project on the 
+:guilabel:`Recent Projects` list but can't find it in your file manager use 
+the :guilabel:`Open Directory...` option to help you locate projects that may 
+be missing, moved or renamed. You can also go to :guilabel:`Clear List` if 
+you want to remove all projects from the :guilabel:`Recent Projects` list. 
+If you have pinned projects, the :guilabel:`Clear List` action will be followed 
+by message box asking whether the pinned projects should also be removed.
 You can also add a layer to create a new project automatically.
 The lists will then disappear, giving way to the map canvas.
 
@@ -111,7 +117,7 @@ The extension for QGIS projects is ``.qgs`` but when saving from QGIS,
 the default is to save using a compressed format with the ``.qgz``
 extension.
 The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive),
-together with its associated sqlite database (``.qgd``) for
+together with its associated SQLite database (``.qgd``) for
 :ref:`auxiliary data <vector_auxiliary_storage>`.
 You can get to these files by unzipping the ``.qgz`` file.
 
@@ -122,18 +128,19 @@ You can get to these files by unzipping the ``.qgz`` file.
 
 .. _`saveprojecttodb`:
 
-Projects can also be saved/loaded to/from a PostgreSQL database using the
-following Project menu items:
+Projects can also be saved/loaded to/from a PostgreSQL, GeoPackage or 
+Oracle database using the following Project menu items:
 
 * :menuselection:`Project --> Open from`
 * :menuselection:`Project --> Save to`
 
 Both menu items have a sub-menu with a list of extra project storage
-implementations (PostgreSQL and GeoPackage).
+implementations (PostgreSQL, GeoPackage and Oracle).
 Clicking the action will open a dialog to pick a GeoPackage connection
-and project or a PostgreSQL connection, schema and project.
+and project, a PostgreSQL connection, schema and project or Oracle
+connection, owner and project.
 
-Projects stored in Geopackage or PostgreSQL can also be loaded
+Projects stored in GeoPackage, PostgreSQL or Oracle can also be loaded
 through the QGIS browser panel, either by double-clicking them or by
 dragging them to the map canvas.
 
@@ -188,8 +195,9 @@ Other ways to produce output files are:
   :menuselection:`Project --> Import/Export -->` |saveMapAsImage|
   :menuselection:`Export Map to Image...` outputs the map canvas
   rendering to an image format (PNG, JPG, TIFF...) at custom scale,
-  resolution, size, ...
-  Georeferencing the image is possible.
+  resolution and size. Including georeference information in the
+  exported image is possible, simply enable
+  |checkbox| :guilabel:`Append georeference information (embedded or via world file)`. 
   See :ref:`exportingmapcanvas` for more details.
 * Exporting to PDF files:
   :menuselection:`Project --> Import/Export --> Export Map to PDF...`

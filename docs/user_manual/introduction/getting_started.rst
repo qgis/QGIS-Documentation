@@ -252,6 +252,13 @@ Let's do some customization on the lakes layer.
    #. Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties`
       dialog and apply the changes.
 
+      .. _figure_buffer_around_labels:
+
+      .. figure:: img/buffer_around_labels.png
+         :align: center
+
+         Showing Buffers around Labels
+
 Let's now add some decorations in order to shape the map and export it out of
 QGIS:
 
@@ -268,6 +275,13 @@ QGIS:
    again.
 #. Press :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to
    store your changes as a :file:`.qgz` project file.
+
+      .. _figure_map_with_decorations:
+
+      .. figure:: img/map_with_decorations.png
+         :align: center
+
+         Showing Exported Map with Decorations
 
 That's it! You can see how easy it is to visualize raster and vector layers in
 QGIS, configure them and generate your map in an image format you can use in

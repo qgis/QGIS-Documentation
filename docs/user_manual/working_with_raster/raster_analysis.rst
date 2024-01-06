@@ -115,65 +115,6 @@ Or you can use the ``IF`` operator.
 
   if ( elevation@1 < 50 , 1 , 2 )
 
-.. index::
-   single: Raster; Align Raster
-.. _label_raster_align:
-
-Raster Alignment
-=================
-
-This tool is able to take several rasters as input and to align them perfectly,
-that means:
-
-* reproject to the same CRS,
-* resample to the same cell size and offset in the grid,
-* clip to a region of interest,
-* rescale values when required.
-
-All rasters will be saved in another files.
-
-First, open the tools from :menuselection:`Raster --> Align Raster...` and click
-on the |symbologyAdd| :sup:`Add new raster` button to choose one existing raster in
-QGIS. Select an output file to save the raster after the alignment, the
-resampling method and if the tools need to :guilabel:`Rescale values according
-to the cell size`. The resampling method can be (see :numref:`figure_raster_align_edit`):
-
-* **Nearest Neighbor**
-* **Bilinear (2x2 kernel)**
-* **Cubic (4x4 kernel)**: Cubic Convolution Approximation
-* **Cubic B-Spline (4x4 kernel)**: Cubic B-Spline Approximation
-* **Lanczos (6x6 kernel)**: Lanczos windowed sinc interpolation
-* **Average**: computes the average of all non-NODATA contributing pixels
-* **Mode**: selects the value which appears most often of all the sampled points
-* **Maximum**, **Minimum**, **Mediane**, **First Quartile (Q1)** or
-  **Third Quartile (Q3)** of all non-NODATA contributing pixels
-
-.. _figure_raster_align_edit:
-
-.. figure:: img/raster_align_edit.png
-   :align: center
-
-   Select Raster Resampling Options
-
-In the main :guilabel:`Align raster` dialog, you can still |symbologyEdit| :sup:`Edit
-file settings` or |symbologyRemove| :sup:`Remove an existing file` from the list of raster
-layers. You can also choose one or more other options (see :numref:`figure_raster_align`):
-
-* Select the :guilabel:`Reference Layer`,
-* Transform into a new :guilabel:`CRS`,
-* Setup a different :guilabel:`Cell size`,
-* Setup a different :guilabel:`Grid Offset`,
-* :guilabel:`Clip to Extent`: it can be user-defined, bound to a layer or to the map canvas
-* :guilabel:`Output Size`,
-* :guilabel:`Add aligned raster to the map canvas`.
-
-.. _figure_raster_align:
-
-.. figure:: img/raster_align.png
-   :align: center
-
-   Raster Alignment
-
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -183,9 +124,3 @@ layers. You can also choose one or more other options (see :numref:`figure_raste
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |symbologyAdd| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
-.. |symbologyEdit| image:: /static/common/symbologyEdit.png
-   :width: 1.5em
-.. |symbologyRemove| image:: /static/common/symbologyRemove.png
-   :width: 1.5em

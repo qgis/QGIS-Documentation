@@ -3,7 +3,7 @@ Modeler tools
 
 .. warning::
 
- These tools are only available in the Graphical Modeler.
+ These tools are only available in the model designer.
  They are not available in the Processing Toolbox.
 
 .. only:: html
@@ -11,6 +11,66 @@ Modeler tools
    .. contents::
       :local:
       :depth: 1
+      :class: toc_columns
+
+
+.. _qgiscalculateexpression:
+
+Calculate expression 
+--------------------
+
+It calculates the result of a QGIS expression and eliminates 
+the need to use the same expression multiple times throughout 
+a model when the same result is required more than once. 
+Additionally, it enables use cases that would otherwise not be
+possible. For instance, you can generate a timestamp value once
+and use it multiple times within the model, if the timestamp 
+were recalculated every time, the values would vary during the
+model's runtime.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input**
+     - ``INPUT``
+     - [expression]
+     - Expression to calculate 
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Value**
+     - ``OUTPUT``
+     - [Result Value]
+     - Calculated result value, the data type of the
+       output will vary based on the specific expression used 
+       in the algorithm.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:calculateexpression``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 
 .. _qgiscondition:

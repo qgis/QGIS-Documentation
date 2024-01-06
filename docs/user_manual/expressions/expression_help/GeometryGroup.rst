@@ -148,6 +148,32 @@ Returns the north-based azimuth as the angle in radians measured clockwise from 
 
 .. end_azimuth_section
 
+.. _expression_function_GeometryGroup_bearing:
+
+bearing
+.......
+
+Returns the north-based bearing as the angle in radians measured clockwise on the ellipsoid from the vertical on point_a to point_b.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - bearing(point_a, point_b, [source_crs], [ellipsoid])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **point_a** - point geometry
+       * **point_b** - point geometry
+       * **source_crs** - an optional string representing the source CRS of the points. By default the current layer's CRS is used.
+       * **ellipsoid** - an optional string representing the acronym or the authority:ID (eg 'EPSG:7030') of the ellipsoid on which the bearing should be measured. By default the current project's ellipsoid setting is used.
+   * - Examples
+     - * ``degrees( bearing( make_point(16198544, -4534850), make_point(18736872, -1877769), 'EPSG:3857', 'EPSG:7030') )`` → 49.980071
+       * ``degrees( bearing( make_point(18736872, -1877769), make_point(16198544, -4534850), 'EPSG:3857', 'WGS84') )`` → 219.282386
+
+
+.. end_bearing_section
+
 .. _expression_function_GeometryGroup_boundary:
 
 boundary

@@ -235,6 +235,8 @@ You then need to create connections to the server you are targeting:
 
 Once the new WMS/WMTS server connection has been created, it will be preserved for
 future QGIS sessions.
+Note that it is also possible to :guilabel:`Load` the connection parameters
+from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
 
 .. index:: Proxy, Proxy server
 
@@ -661,6 +663,13 @@ including editing (through WFS-T).
 QGIS also supports background download and progressive rendering,
 on-disk caching of downloaded features and version autodetection.
 
+Layers of servers implementing `OGC API - Features - Part 4: Create, Replace,
+Update and Delete <https://docs.ogc.org/DRAFTS/20-002.html>`_ can be turned into 
+editing mode to allow creating, modifying and deleting features. Note that each 
+created/modified/deleted feature requires a dedicated network request, so 
+performance might suffer in case of simultaneous modification of hundreds or 
+more features at a time.
+
 In general, adding a WFS layer is very similar to the procedure used with WMS.
 There are no default servers defined, so you have to add your own.
 You can find WFS servers by using the :ref:`MetaSearch plugin <metasearch>`
@@ -725,6 +734,8 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
 #. Press :guilabel:`OK` to create the connection.
 
 Note that any proxy settings you may have set in your preferences are also recognized.
+Also note that it is possible to :guilabel:`Load` the connection parameters
+from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
 
 Now we are ready to load WFS layers from the above connection.
 

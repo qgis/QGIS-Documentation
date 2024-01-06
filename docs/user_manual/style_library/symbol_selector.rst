@@ -124,6 +124,7 @@ You can setup some parameters that apply to the global symbol:
     * :ref:`Data-defined Size Legend <data_defined_size_legend>`
     * :guilabel:`Match to Saved Symbols...` and :guilabel:`Match to Symbols from File...`
       to automatically :ref:`assign symbols to classes <categorized_advanced_menu>`
+    * :ref:`Animation settings <animation_settings>` 
 
 .. _symbol_layer:
 
@@ -200,6 +201,7 @@ Appropriate for point geometry features, marker symbols have several
   * :guilabel:`Anchor point`: defining the quadrant point on the symbol to settle
     as placement origin. This is the point the :guilabel:`Offset` is applied on.
 
+* **Animated marker** (see :ref:`animated_marker`)
 * **Ellipse marker**: a simple marker symbol layer, with customizable width and
   height
 * **Filled marker**: similar to the simple marker symbol layer, except that it
@@ -461,6 +463,21 @@ layer types:
 
      Examples of lineburst lines
 
+.. _filled_line_symbol:
+
+* **Filled line**: renders the interior of the lines using a fill symbol
+  allowing for lines filled with gradients, line hatches, etc.
+  The :guilabel:`Stroke width`, :guilabel:`Offset`,
+  :guilabel:`Join style`, :guilabel:`Cap style` can be adjusted.
+
+  .. _figure_filled_line_symbol:
+
+  .. figure:: img/filledLineSymbol.png
+     :align: center
+     :width: 100%
+
+     Examples of filled lines
+
 
 .. _vector_fill_symbols:
 
@@ -658,14 +675,15 @@ Parametrizable SVG
 ..................
 
 You have the possibility to change the colors of a :guilabel:`SVG marker`.
-You have to add the placeholders ``param(fill)`` for fill color,
-``param(outline)`` for stroke color and ``param(outline-width)`` for stroke
-width. These placeholders can optionally be followed by a default value, e.g.:
+You have to add the placeholders ``param(fill)`` for fill color, ``param(fill-opacity)`` for
+fill opacity, ``param(outline)`` and ``param(outline-opacity)`` for stroke color and opacity respectively,
+and ``param(outline-width)`` for stroke width. These placeholders can optionally
+be followed by a default value, e.g.:
 
 .. code-block:: xml
 
     <svg width="100%" height="100%">
-    <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(outline-width) 10" width="100" height="100">
+    <rect fill="param(fill) #ff0000" fill-opacity="param(fill-opacity) 1" stroke="param(outline) #00ff00" stroke-opacity="param(outline-opacity) 1" stroke-width="param(outline-width) 10" width="100" height="100">
     </rect>
     </svg>
 
@@ -686,6 +704,13 @@ The parameters can then be defined as expressions in the :guilabel:`Dynamic SVG 
 
    Dynamic SVG parameters table
 
+.. note::
+
+ QGIS is looking for a complete SVG node. So if your parameter is within a more complex node, 
+ you need to inject the complete node with the expression. 
+ For instance, ``transform="rotate(param(angle)"`` will not work.
+ Instead, you need to do ``transform="param(rotation)"`` and ``rotation`` parameter will be defined 
+ with the expression ``'rotate(' || coalesce(my_field, 0) || ')'``.
 
 .. _geometry_generator_symbol: 
  
@@ -693,7 +718,7 @@ The Geometry Generator
 ......................
 
 Available with all types of symbols, the :guilabel:`geometry generator` symbol
-layer allows to use :ref:`expression syntax <functions_list>` to generate a
+layer allows to use :ref:`expression syntax <expression_builder>` to generate a
 geometry on the fly during the rendering process. The resulting geometry does
 not have to match with the original :guilabel:`Geometry type` and you can add
 several differently modified symbol layers on top of each other.
@@ -704,30 +729,94 @@ more control over the generated output.
 
 Some examples:
 
-::
 
-  -- render the centroid of a feature
-  centroid( $geometry ) 
+* Render symbol as the centroid of a feature
 
-  -- visually overlap features within a 100 map units distance from a point
-  -- feature, i.e generate a 100m buffer around the point
-  buffer( $geometry, 100 )
+  ::
 
-  -- Given polygon layer1( id1, layer2_id, ...) and layer2( id2, fieldn...)
-  -- render layer1 with a line joining centroids of both where layer2_id = id2
-  make_line( centroid( $geometry ),
-             centroid( geometry( get_feature( 'layer2', 'id2', attribute(
-                 $currentfeature, 'layer2_id') ) )
-           ) 
+   centroid( $geometry ) 
 
-  -- Create a nice radial effect of points surrounding the central feature
-  -- point when used as a MultiPoint geometry generator
-  collect_geometries(
-    array_foreach(
-      generate_series( 0, 330, 30 ),
-        project( $geometry, .2, radians( @element ) )
-    )
-  )
+* Visually overlap features within a 100 map units distance from a point feature,
+  i.e generate a 100m buffer around the point
+
+  ::
+
+    buffer( $geometry, 100 )
+
+* Create a radial effect of points surrounding the central feature point
+  when used as a MultiPoint geometry generator
+
+  .. list-table::
+     :widths: 15 85
+
+     * - ::
+
+          collect_geometries(
+           array_foreach(
+            generate_series( 0, 330, 30 ),
+            project( $geometry, 3, radians( @element ) )
+           )
+          )
+       - .. figure:: img/radial_symbols.png
+            :align: center
+            :width: 100%
+
+* Create a radial effect of points surrounding the central feature point.
+  The number of points varies based on a field.
+
+  .. list-table::
+     :widths: 15 85
+
+     * - ::
+
+          with_variable(
+           'symbol_numbers',
+           ceil(fid/10),
+           collect_geometries(
+            array_foreach(
+             generate_series( 0, 360, 360/@symbol_numbers ),
+             project( $geometry, 2, radians( @element ) )
+            )
+           )
+          )
+       - .. figure:: img/radial_symbols_datadefined.png
+            :align: center
+            :width: 100%
+
+* Create a curved arrow line connecting features of two layers based on their :ref:`relation <project_relations>`
+
+  .. list-table::
+     :widths: 15 85
+
+     * - ::
+
+          collect_geometries(
+           with_variable(
+            'destination_points',
+            relation_aggregate(
+             'the_relation_id',
+             'array_agg',
+             centroid( $geometry )
+            ),
+            array_foreach(
+             @destination_points,
+             make_line(
+              centroid( @geometry ),
+              project(
+               centroid(
+                make_line( centroid( @geometry ), @element )
+               ),
+               10, 50
+              ),
+              @element
+             )
+            )
+           )
+          )
+       - .. figure:: img/arrow_relations.png
+            :align: center
+            :width: 100%
+
 
 .. _vector_field_marker:
 
@@ -753,6 +842,56 @@ field either by:
 
 The magnitude of field can be scaled up or down to an appropriate size for
 viewing the field.
+
+
+.. index:: Animation
+.. _animated_marker:
+
+Animated marker
+...............
+
+Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,
+:file:`.MNG`, etc. animation file to represent points on your map. 
+You can specify:
+
+* :guilabel:`File` path,
+* :guilabel:`Frame rate`: number of steps that are shown per second,
+  indicating how fast the animation is played,
+* :guilabel:`Size` in any :ref:`supported unit <unit_selector>`,
+* :guilabel:`Opacity`,
+* :guilabel:`Rotation`,
+* :guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions 
+  from the marker position,
+* :guilabel:`Anchor point`   
+
+There are two ways to handle animated symbols:
+
+* **When your map is not configured as an animation** (i.e. it's a standard QGIS 
+  project without animations), the frame for the animated markers will be 
+  determined solely by the current timestamp. 
+
+  .. only:: html
+
+    .. figure:: img/animated_marker_map.gif
+       :align: center
+       :width: 100%
+
+       Animated marker when map is not configured as animation
+
+* **When your map is** :ref:`configured as an animation <maptimecontrol>`, 
+  the animated markers will sync with the animation's timeline.
+  This means that animated markers will pause when the animation is paused,
+  progress with the animation, and so forth. The map will also be redrawn 
+  according to the frame rate established for temporal animation. This mode
+  is also applied when exporting an animation using the temporal controller.
+
+  .. only:: html
+
+    .. figure:: img/animated_marker_animation.gif
+       :align: center
+       :width: 100%
+
+       Animated marker when map is configured as animation
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
