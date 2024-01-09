@@ -27,20 +27,17 @@ Icon                    Plugin                        Description               
 |dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
 |grassTools|            GRASS 7                       GRASS functionality                                     :ref:`sec_grass`
-|grassLogo|                 GRASS GIS provider            GRASS GIS Processing functionality                      :ref:`sec_grass`
+|grassLogo|             GRASS GIS provider            GRASS GIS Processing functionality                      :ref:`sec_grass`
 |metasearch|            MetaSearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
-|otb|                   OrfeoToolbox provider         OrfeoToolbox Processing provider                        :ref:`otb_provider`
 |geoprocessing|         Processing                    Spatial data processing framework                       :ref:`label_processing`
-|saga|                  SAGA GIS provider             SAGA GIS Processing provider                            :ref:`saga_configure`
 |topologyChecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
 ======================  ============================  ======================================================  ===============================
 
 .. note::
 
    To use the Core Plugins |grassTools| GRASS 7, |grassLogo| GRASS GIS provider,
-   |otb| OrfeoToolbox provider or |saga| SAGA GIS provider they have to be 
-   configured. Informations can be found :ref:`here <processing.results>`.
+   they have to be configured. Informations can be found :ref:`here <processing.results>`.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -61,10 +58,6 @@ Icon                    Plugin                        Description               
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
-   :width: 1.5em
-.. |otb| image:: /static/common/otb.png
-   :width: 1.5em
-.. |saga| image:: /static/common/providerSaga.png
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em

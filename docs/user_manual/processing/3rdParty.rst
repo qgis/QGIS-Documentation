@@ -1,8 +1,9 @@
 .. index:: External applications
 .. _`processing.results`:
 
+*********************************
 Configuring external applications
-=================================
+*********************************
 
 .. only:: html
 
@@ -29,7 +30,7 @@ installed on your system.
 
 
 A note for Windows users
-------------------------
+========================
 
 If you are not an advanced user and you are running QGIS on Windows,
 you might not be interested in reading the rest of this chapter.
@@ -44,7 +45,7 @@ select SAGA and GRASS for installation.
 
 
 A note on file formats
-----------------------
+======================
 
 When using external software, opening a file in QGIS does not mean
 that it can be opened and processed in that other software.
@@ -82,7 +83,7 @@ the processing time.
 
 
 A note on vector layer selections
----------------------------------
+=================================
 
 External applications may also be made aware of the selections that
 exist in vector layers within QGIS.
@@ -96,6 +97,9 @@ layer be directly passed to an external application.
 In other cases, exporting only selected features is needed, which
 causes longer execution times.
 
+
+Using third-party Providers
+===========================
 
 .. index:: SAGA
 .. _saga_configure:
@@ -197,8 +201,8 @@ as well in other places in the processing settings list.
 .. index:: R scripts
 .. _r_scripts:
 
-R scripts
----------
+R scripts and libraries
+-----------------------
 
 To enable R in Processing you need to install the
 **Processing R Provider** plugin and configure R for QGIS.
@@ -261,7 +265,7 @@ Perform the following steps to load and enable them using the
 #. Add the *QGIS Resource Sharing* plugin (you may have to
    enable :guilabel:`Show also experimental plugins` in the Plugin
    Manager :guilabel:`Settings`)
-#. Open it (Plugins --> Resource Sharing --> Resource Sharing)
+#. Open it (:menuselection:`Plugins --> Resource Sharing --> Resource Sharing`)
 #. Choose the :guilabel:`Settings` tab
 #. Click :guilabel:`Reload repositories`
 #. Choose the :guilabel:`All` tab
@@ -498,7 +502,7 @@ processing results manager.
 
 For more information, please check the R scripts in the official
 QGIS collection (you download and install them using the *QGIS
-Resource Sharing* plugin, as explained elsewhere).
+Resource Sharing* plugin, as explained in :ref:`adding_r_scripts`).
 Most of them are rather simple and will greatly help you understand
 how to create your own scripts.
 
@@ -516,19 +520,15 @@ how to create your own scripts.
 
 .. index:: R libraries
 
-R libraries
------------
-
-The R script ``sp_test`` tries to load the R packages ``sp`` and
-``raster``.
-
 
 R libraries installed when running sf_test
 ..........................................
 
+The R script ``sp_test`` tries to load the R packages ``sp`` and ``raster``.
+
 The R script *sf_test* tries to load ``sf`` and ``raster``.
-If these two packages are not installed, R may try to load and install
-them (and all the libraries that they depend on).
+If these two packages are not installed, R may try to load and install them
+(and all the libraries that they depend on).
 
 The following R libraries end up in
 :file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts`
@@ -554,29 +554,27 @@ version 2.0 of the *Processing R Provider* plugin and a fresh install of
 GRASS
 -----
 
-Configuring GRASS is not much different from configuring SAGA. First,
-the path to the GRASS folder has to be defined, but only if you are
-running Windows.
+Configuring GRASS is not much different from configuring SAGA.
+First, the path to the GRASS folder has to be defined,
+but only if you are running Windows.
 
 By default, the Processing framework tries to configure its GRASS
 connector to use the GRASS distribution that ships along with QGIS.
-This should work without problems for most systems, but if you
-experience problems, you might have to configure the GRASS connector
-manually.
+This should work without problems for most systems, but if you experience problems,
+you might have to configure the GRASS connector manually.
 Also, if you want to use a different GRASS installation, you can
 change the setting to point to the folder where the other version
 is installed.
 GRASS 7 is needed for algorithms to work correctly.
 
 If you are running Linux, you just have to make sure that GRASS is
-correctly installed, and that it can be run without problem from a
-terminal window.
+correctly installed, and that it can be run without problem
+from a terminal window.
 
 GRASS algorithms use a region for calculations.
 This region can be defined manually using values similar to the ones
-found in the SAGA configuration, or automatically, taking the minimum
-extent that covers all the input layers used to execute the algorithm
-each time.
+found in the SAGA configuration, or automatically, taking the minimum extent
+that covers all the input layers used to execute the algorithm each time.
 If the latter approach is the behavior you prefer, just check the
 :guilabel:`Use min covering region` option in the GRASS configuration
 parameters.
@@ -588,11 +586,11 @@ parameters.
 LAStools
 --------
 
-To use `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS, you
-need to download and install LAStools on your computer and install
-the LAStools plugin (available from the official repository) in QGIS.
+To use `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS,
+you need to download and install LAStools on your computer and
+install the LAStools plugin (available from the official repository) in QGIS.
 
-On Linux platforms, you will need `Wine <https://www.winehq.org/>`_ 
+On Linux platforms, you will need `Wine <https://www.winehq.org/>`_
 to be able to run some of the tools.
 
 LAStools is activated and configured in the Processing options
@@ -608,37 +606,35 @@ On Ubuntu, the default Wine folder is :file:`/usr/bin`.
 OTB Applications
 -----------------
 
-OTB applications are fully supported within the QGIS Processing framework. 
+OTB applications are fully supported within the QGIS Processing framework.
 
 
-`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) is an image  
+`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) is an image
 processing library for remote sensing data. It also provides
-applications that provide image processing functionalities. 
+applications that provide image processing functionalities.
 The list of applications and their documentation are available in
-`OTB CookBook <https://www.orfeo-toolbox.org/CookBook/Applications.html>`_
+`OTB CookBook <https://www.orfeo-toolbox.org/CookBook/Applications.html>`__
 
 .. note::
-   Note that OTB is not distributed with QGIS and needs to be installed 
-   separately. Binary packages for OTB can be found on the 
+   Note that OTB is not distributed with QGIS and needs to be installed
+   separately. Binary packages for OTB can be found on the
    `download page <https://www.orfeo-toolbox.org/download>`_.
 
 To configure QGIS processing to find the OTB library:
 
-#. Open the processing settings: :menuselection:`Settings --> Options --> Processing` (left panel)*
-#. You can see OTB under "Providers":
+#. Open the processing settings: :menuselection:`Settings --> Options --> Processing`
+#. You can see ``OTB`` under :menuselection:`Providers` menu:
 
-   #. Expand the :guilabel:`OTB` tab
+   #. Expand the :guilabel:`OTB` entry
    #. Set the :guilabel:`OTB folder`. This is the location of your OTB installation.
    #. Set the :guilabel:`OTB application folder`. This is the location of your OTB
       applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)
-   #. Click "ok" to save the settings and close the dialog. 
+   #. Click :guilabel:`OK` to save the settings and close the dialog.
    
-If settings are correct, OTB algorithms will be available in the
-:guilabel:`Processing Toolbox`.
+If settings are correct, OTB algorithms will be available in the :guilabel:`Processing Toolbox`.
 
 Documentation of OTB settings available in QGIS Processing
 ...........................................................
-
 
 * **OTB folder**: This is the directory where OTB is available. 
 
@@ -650,8 +646,8 @@ Documentation of OTB settings available in QGIS Processing
 
   The level of logging controls the amount of detail printed during
   algorithm execution. Possible values for logger level are ``INFO``,
-  ``WARNING``, ``CRITICAL``, ``DEBUG``. This value is ``INFO`` by default. This is an
-  advanced user configuration.
+  ``WARNING``, ``CRITICAL``, ``DEBUG``. This value is ``INFO`` by default.
+  This is an advanced user configuration.
 
 * **Maximum RAM to use** (optional): by default, OTB applications use
   all available system RAM.
@@ -667,8 +663,7 @@ Documentation of OTB settings available in QGIS Processing
   Setting this value globally enables users to share it across multiple
   processing algorithms. Empty by default.
 
-* **SRTM tiles folder** (optional): Directory where SRTM tiles are
-  available. 
+* **SRTM tiles folder** (optional): Directory where SRTM tiles are available.
 
   SRTM data can be stored locally to avoid downloading of
   files during processing. This option sets the value of elev.dem.path
@@ -676,18 +671,16 @@ Documentation of OTB settings available in QGIS Processing
   globally enables users to share it across multiple processing algorithms.
   Empty by default.
 
-Compatibility between QGIS and OTB versions
-...........................................
 
-All OTB versions (from OTB 6.6.1) are compatible with the latest QGIS version.
+Compatibility and Troubleshoot
+..............................
 
-Troubleshoot
-............
+Starting from OTB 6.6.1, new releases of OTB are made compatible
+with at least the latest QGIS version available at that time.
+
 If you have issues with OTB applications in QGIS Processing, please open an issue
 on the `OTB bug tracker <https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues>`_, 
 using the ``qgis`` label.
 
-Additional information about OTB and QGIS can be found 
-`here <https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_
-
-.. the previous link will be modify to be coherent with this page cf. https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/merge_requests/722
+Additional information about OTB and QGIS can be found in
+`OTB Cookbook <https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`__.
