@@ -762,6 +762,9 @@ with both families of annotations.
  | |addMarker| :sup:`Create Marker Annotation`         | Create an annotation as a point feature                             |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |actionText| :sup:`Create Text Annotation at Point` | Create an annotation as a text label                                |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |textAlongLine| :sup:`Create Text Annotation along  | Create an annotation as a curved text along a linestring            |                     |
+ | Line`                                               |                                                                     |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
  | |textAnnotation| :sup:`Text Annotation`             | Select and create a text formatted annotation                       | Balloon annotations |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
@@ -807,6 +810,8 @@ The properties dialog of an annotation layer provides the following tabs:
 
 * :guilabel:`Information`: a read-only dialog representing an interesting
   place to quickly grab summarized information and metadata on the current layer.
+  This may include the layer extent, count of items per annotation type and total count,
+  CRS details, ...
 * :guilabel:`Source`: defines general settings for the annotation layer. You can:
 
   * Set a :guilabel:`Layer name` that will be used to identify the layer
@@ -816,6 +821,8 @@ The properties dialog of an annotation layer provides the following tabs:
     in the drop-down list or clicking on |setProjection| :sup:`Select CRS` button
     (see :ref:`crs_selector`). Use this process only if the CRS applied to the
     layer is a wrong one or if none was applied.
+
+.. _annotationslayer_rendering:
 
 * :guilabel:`Rendering`:
 
@@ -848,6 +855,7 @@ The Feature annotations have dedicated tools for creation depending on their typ
 * |addPolyline| :sup:`Create Line Annotation`
 * |addMarker| :sup:`Create Marker Annotation`
 * |actionText| :sup:`Create Text Annotation at Point`
+* |textAlongLine| :sup:`Create Text Annotation along Line`
 
 All the usual QGIS shortcuts for creating features apply when creating annotation
 items. A line or polygon annotation is drawn by left-clicking once for each vertex,
@@ -860,7 +868,11 @@ Unlike common layers, an annotation layer does not need to be active before you
 select its features. Simply grab the |select| :sup:`Modify Annotations` tool and
 you will be able to interact with any feature annotation:
 
-* **Selection**: simply left-click on the annotation
+* **Selection**: left-click on the annotation.
+  By default, annotations are rendered in the order of creation,
+  meaning that recent annotations will be placed on top of older.
+  You may need to play with the Z-index property of features in order to select
+  ones they would sit above.
 * **Moving**: Left click on a selected annotation item to start moving it.
   A right-click or pressing :kbd:`Esc` key cancels the move, while a second
   left click will confirm the move.
@@ -883,12 +895,27 @@ Feature symbology
 A selected annotation will display its :guilabel:`Symbology` properties
 in the :guilabel:`Layer styling` panel. You can:
 
-* modify the appearance using full capabilities of the :ref:`symbol
-  <symbol-selector>` or the :ref:`text format <text_format>` (including the text
-  itself), depending on the type.
-* configure a :guilabel:`Reference scale`
-* set a :guilabel:`Z index`
-* modify some of the :guilabel:`Layer rendering` settings
+* Modify the appearance using full capabilities of:
+
+  * the :ref:`symbol properties <symbol-selector>` for polygon, polyline and marker annotations
+  * the :ref:`text format properties <text_format>` for text-based annotations.
+    A text area allows you to construct the string to display using QGIS expression functions.
+    It is also possible to set the :guilabel:`Alignment` for text annotation at point
+    (left, center or right of the text point).
+* For text annotation at point, also configure whether it should :guilabel:`Ignore map rotation`
+  or :guilabel:`Rotate with map`.
+  In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
+* For text annotation along a line, configure an :guilabel:`Offset from line` in the unit
+  of your choice
+* Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale
+  at which symbol or text sizes which uses paper-based units (such as millimeters or points) relate to.
+  The sizes will be scaled accordingly whenever the map is viewed at a different scale.
+  For instance, a line feature wide of 2mm at 1:2000 :guilabel:`Reference scale`
+  will be rendered using 4mm when the map is viewed at 1:1000.
+* Set a :guilabel:`Z-index`: a feature with a higher index is placed on top of
+  features with lower index.
+  A convenient setting for both feature display and selection.
+* Modify some of the :ref:`Layer rendering <annotationslayer_rendering>` settings
 
 .. _balloon_annotations:
 
@@ -1368,6 +1395,8 @@ In the dialog that opens:
 .. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
    :width: 1.5em
 .. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
+   :width: 1.5em
+.. |textAlongLine| image:: /static/common/mActionTextAlongLine.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
