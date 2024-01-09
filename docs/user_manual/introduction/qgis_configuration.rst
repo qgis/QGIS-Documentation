@@ -2567,8 +2567,7 @@ We recommend that you keep these defaults values and add your own sections at th
 of the file. If a section is duplicated in the file, QGIS will take the last
 one from top to bottom.
 
-You can change ``allowVersionCheck=false`` to disable
-the QGIS version check.
+You can change ``allowVersionCheck=false`` to disable the QGIS version check.
 
 If you do not want to display the migration window after a fresh install, you need
 the following section:
@@ -2586,10 +2585,23 @@ If you want to add a custom variable in the global scope:
    [variables]
    organisation="Your organization"
 
-To discover the possibilities of the settings ``INI`` file, we suggest that you set
-the config you would like in QGIS Desktop and then search for it in your ``INI``
-file located in your profile using a text editor. A lot of settings can be set
-using the ``INI`` file such as WMS/WMTS, PostGIS connections, proxy settings, maptips…
+A lot of settings can be set using the :file:`.INI` file such as WMS/WMTS, PostGIS connections,
+proxy settings, maptips, default values for algorithms parameters…
+For example, if you want to configure organization wide default values for some algorithms
+it would be handy if you could configure it in the prepared ini-file for all users.
+If the users then open the toolbox to execute an algorithm, the default values will be there.
+To set the default value e.g. for ``GRID_SIZE`` parameter for the ``native:intersection`` algorithm,
+you could write the following into the :file:`.INI` file:
+
+.. code-block:: ini
+
+   [Processing]
+   DefaultGuiParam\native%3Aintersection\GRID_SIZE=0.01
+
+Not all settings can be prepared from QGIS GUI,
+but to discover the possibilities of the settings :file:`.INI` file,
+we suggest that you set the config you would like in QGIS Desktop
+and then search for it in your :file:`.INI` file located in your profile using a text editor.
 
 Finally, you need to set the environment variable ``QGIS_GLOBAL_SETTINGS_FILE``
 to the path of your customized file.
