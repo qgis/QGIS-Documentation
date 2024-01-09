@@ -771,8 +771,6 @@ with both families of annotations.
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |formAnnotation| :sup:`Form Annotation`             | Select and create annotation showing attributes of a vector layer   |                     |
  |                                                     | in a custom form file                                               |                     |
- +-----------------------------------------------------+---------------------------------------------------------------------+                     +
- | |annotation| :sup:`Move Annotation`                 | Adjust size and position of annotation element                      |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
 
 .. _annotation_layer:
@@ -914,9 +912,6 @@ menu or from the :guilabel:`Annotations Toolbar`:
 
   <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="Working with annotations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-* |annotation| :sup:`Move Annotation` to adjust annotation element size or position
-  (using click and drag)
-
 .. _figure_custom_annotation:
 
 .. figure:: img/custom_annotation.png
@@ -953,18 +948,18 @@ options. This dialog is almost the same for all the annotation types:
 
    A ballon annotation text dialog
 
-Annotations can be selected when an annotation tool is enabled. They can then be
-moved by map position (by dragging the map marker) or by moving only the balloon.
-The |annotation| :sup:`Move Annotation` tool also allows you to move the
-balloon on the map canvas.
+When a balloon annotation tool is active, you can also:
 
-To delete an annotation, select it and either press the :kbd:`Del` or :kbd:`Backspace`
-button, or double-click it and press the :guilabel:`Delete` button in the properties dialog.
+* Select an annotation
+* Resize an annotation
+* Move an annotation by map position (by dragging the map marker) or by moving only the balloon.
+* Delete an annotation: select it and either press the :kbd:`Del` or :kbd:`Backspace` button,
+  or double-click it and press the :guilabel:`Delete` button in the properties dialog.
+* Right-click and in the contextual menu:
 
-.. note::
-   If you press :kbd:`Ctrl+T` while a balloon :guilabel:`Annotation` tool (move annotation,
-   text annotation, form annotation) is active, the visibility states of the items
-   are inverted.
+  * |editCopy| :guilabel:`Copy coordinate` of the annotation's map marker in various CRS
+  * |toggleEditing| :guilabel:`Edit` properties of the annotation. Same as double-clicking the annotation.
+  * |deleteSelected| :guilabel:`Delete` the annotation
 
 
 .. index::
@@ -1289,8 +1284,6 @@ In the dialog that opens:
    :width: 1.5em
 .. |addPolyline| image:: /static/common/mActionAddPolyline.png
    :width: 1.5em
-.. |annotation| image:: /static/common/mActionAnnotation.png
-   :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
@@ -1379,6 +1372,8 @@ In the dialog that opens:
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
