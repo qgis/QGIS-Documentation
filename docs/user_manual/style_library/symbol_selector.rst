@@ -633,8 +633,11 @@ symbol layer types:
 * **Raster image fill**: fills the polygon with tiles from a raster image (:file:`PNG`
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
   or an embedded file encoded as a string (:ref:`more details <embedded_file_selector>`).
-  Options include (data defined) opacity, image width, coordinate mode (object
-  or viewport), rotation and offset. The image width can be set using any of the
+  Options include (data defined) opacity, size, coordinate mode (object
+  or viewport), rotation and offset. Under the option Size you can 
+  independently adjust the width and height of the fill pattern, enabling 
+  stretched raster fills in either the horizontal or vertical directions. 
+  The image width and height can be set using any of the
   :ref:`common units <unit_selector>` or as a percentage of the original size.
 * **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`
   of a given size (:guilabel:`Texture width`).
