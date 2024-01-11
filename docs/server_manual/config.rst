@@ -73,7 +73,7 @@ several ways to define these variables. This is fully described in
        example by using ``mod_rewrite`` Apache module).
 
        Note that you may also indicate a project stored in PostgreSQL, e.g.
-       ``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``.
+       ``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject`` or inside a geopackage file, e.g. ``geopackage:/path/to/geopackage/file.gpkg?projectName=myProjectName``.
      - ''
      - All
 
