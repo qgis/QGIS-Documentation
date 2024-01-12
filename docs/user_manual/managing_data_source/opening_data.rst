@@ -1071,9 +1071,48 @@ Optionally, you can activate the following checkboxes:
 Connecting to MS SQL Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In addition to some of the options in :ref:`vector_create_stored_connection`,
-creating a new MS SQL Server connection dialog proposes you to fill a **Provider/DSN**
-name. You can also display available databases.
+As mentioned in :ref:`vector_create_stored_connection` QGIS allows you to
+create MS SQL Server connection through :guilabel:`Data Source Manager`.
+
+.. _figure_new_mssql_connection:
+
+.. figure:: img/mssql_connection_dialog.png
+   :align: center
+
+   MS SQL Server Connection
+
+To create a new MS SQL Server connection, you need to provide some of the 
+following information in the :guilabel:`Connection Details` dialog:
+
+* :guilabel:`Connection name`
+* :guilabel:`Provider/DNS`
+* :guilabel:`Host`
+* :guilabel:`Login` information
+
+After you connect to MS SQL Server, in the :guilabel:`Database Details` 
+you are able to display databases by clicking on the :guilabel:`List Databases`.
+
+Optionally, you can activate the following checkboxes:
+
+* |checkbox| :guilabel:`Only look in the geometry_columns metadata table`.
+* |checkbox| :guilabel:`Use layer extent from geometry_columns table`, 
+  this checkbox is dependent on the first one; it remains disabled unless 
+  the first option is checked.
+* |checkbox| :guilabel:`Use primary key from geometry_columns table`
+* |checkbox| :guilabel:`Also list table with no geometry` tables without a 
+  geometry column attached will also be shown in the available table list.
+* |checkbox| :guilabel:`Use estimated table parameters` only estimated table 
+  metadata will be used. This avoids a slow table scan, but may result in 
+  incorrect layer properties such as layer extant. 
+* |checkbox| :guilabel:`Skip invalid geometry handling` all handling of records 
+  with invalid geometry will be disabled. This speeds up the provider, however,
+  if any invalid geometries are present in table then the result is unpredictable
+  and may include missing records. Only check this option if you are certain that
+  all geometries present in the database are valid, and any newly added geometries
+  or tables will also be valid.
+* |checkbox| :guilabel:`Use only a Subset of Schemas` will alow you to filter 
+  schemas for MS SQL connection. If checked, only selected schemas will be displayed.
+  You can check or uncheck al schemas in the MS SQL connection widget.
 
 .. _create_hana_connection:
 
