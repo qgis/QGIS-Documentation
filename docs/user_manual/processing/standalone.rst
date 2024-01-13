@@ -20,13 +20,16 @@ From a command line tool, run ``qgis_process`` and you should get:
   Usage: C:\OSGeo4W\apps\qgis-dev\bin\qgis_process.exe [--help] [--version] [--json] [--verbose] [--no-python] [--skip-loading-plugins] [command] [algorithm id, path to model file, or path to Python script] [parameters]
 
   Options:
+
     --help or -h            Output the help
     --version or -v         Output all versions related to QGIS Process
     --json                  Output results as JSON objects
     --verbose               Output verbose logs
     --no-python             Disable Python support (results in faster startup)
     --skip-loading-plugins  Avoid loading enabled plugins (results in faster startup)
+
   Available commands:
+
     plugins         list available and active plugins
     plugins enable  enables an installed plugin. The plugin name must be specified, e.g. "plugins enable cartography_tools"
     plugins disable disables an installed plugin. The plugin name must be specified, e.g. "plugins disable cartography_tools"
