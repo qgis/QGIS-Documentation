@@ -45,6 +45,7 @@ jobs:
 
     - name: Build English ${{ matrix.format }} documentation
       run: |
+          export LC_ALL=C.UTF-8
           make ${{ matrix.format }}
     - name: Upload ${{ matrix.format }} build artifact
       uses: actions/upload-artifact@c7d193f32edcb7bfad88892161225aeda64e9392 # v4.0.0
