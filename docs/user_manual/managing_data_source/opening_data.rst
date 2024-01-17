@@ -441,6 +441,16 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * For all vector source types it is possible to define the :guilabel:`Encoding` or
     to use the :menuselection:`Automatic -->` setting.
 
+When adding vector datasets containing multiple layers, the 
+:guilabel:`Select Items to Add` dialog will appear. In this dialog, you can 
+choose the specific layers from your dataset that you want to add. 
+Also, under :guilabel:`Options` you can choose to:
+
+* |checkbox|:guilabel:`Add layers to a group`
+* |checkbox|:guilabel:`Show system and internal tables`
+* |checkbox|:guilabel:`Show empty vector layers`.
+
+
 .. _mesh_loading:
 
 Loading a mesh layer
