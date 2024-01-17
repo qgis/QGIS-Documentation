@@ -154,7 +154,7 @@ Frequently Asked Question
   as they are requested, in effect acting as a proxy between client (such as
   OpenLayers or Google Maps) and server (any WMS-compliant server). As new maps and
   tiles are requested, QGIS server intercepts these calls and returns pre-rendered
-  tiles if stored, or calls the QGIs engine to render new tiles as necessary. Thus,
+  tiles if stored, or calls the QGIS engine to render new tiles as necessary. Thus,
   once tiles are stored, the speed of map rendering increases by many times, creating
   a much improved user experience.
 
@@ -168,5 +168,3 @@ Frequently Asked Question
   `PostGIS <https://postgis.net/>`_ is a spatial database extender for PostgreSQL
   object-relational database. It adds support for geographic objects allowing location
   queries to be run in SQL.
-
-* To be continued...
