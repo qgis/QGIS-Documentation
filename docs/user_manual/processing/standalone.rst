@@ -30,21 +30,21 @@ From a command line tool, run ``qgis_process`` and you should get:
 
   Available commands:
 
-    plugins         list available and active plugins
-    plugins enable  enables an installed plugin. The plugin name must be specified, e.g. "plugins enable cartography_tools"
-    plugins disable disables an installed plugin. The plugin name must be specified, e.g. "plugins disable cartography_tools"
-    list            list all available processing algorithms
-    help            show help for an algorithm. The algorithm id or a path to a model file must be specified.
-    run             runs an algorithm. The algorithm id or a path to a model file and parameter values must be specified.
-                    Parameter values are specified after -- with PARAMETER=VALUE syntax.
-                    Ordered list values for a parameter can be created by specifying the parameter multiple times,
-                    e.g. --LAYERS=layer1.shp --LAYERS=layer2.shp
-                    Alternatively, a '-' character in place of the parameters argument indicates that the parameters should be read from STDIN as a JSON object.
-                    The JSON should be structured as a map containing at least the "inputs" key specifying a map of input parameter values.
-                    This implies the --json option for output as a JSON object.
-                    If required, the ellipsoid to use for distance and area calculations can be specified via the "--ELLIPSOID=name" argument.
-                    If required, an existing QGIS project to use during the algorithm execution can be specified via the "--PROJECT_PATH=path" argument.
-                    When passing parameters as a JSON object from STDIN, these extra arguments can be provided as an "ellipsoid" and a "project_path" key respectively.
+    plugins            list available and active plugins
+    plugins enable     enables an installed plugin. The plugin name must be specified, e.g. "plugins enable cartography_tools"
+    plugins disable    disables an installed plugin. The plugin name must be specified, e.g. "plugins disable cartography_tools"
+    list               list all available processing algorithms
+    help               show help for an algorithm. The algorithm id or a path to a model file must be specified.
+    run                runs an algorithm. The algorithm id or a path to a model file and parameter values must be specified.
+                       Parameter values are specified after -- with PARAMETER=VALUE syntax.
+                       Ordered list values for a parameter can be created by specifying the parameter multiple times,
+                       e.g. --LAYERS=layer1.shp --LAYERS=layer2.shp
+                       Alternatively, a '-' character in place of the parameters argument indicates that the parameters should be read from STDIN as a JSON object.
+                       The JSON should be structured as a map containing at least the "inputs" key specifying a map of input parameter values.
+                       This implies the --json option for output as a JSON object.
+                       If required, the ellipsoid to use for distance and area calculations can be specified via the "--ELLIPSOID=name" argument.
+                       If required, an existing QGIS project to use during the algorithm execution can be specified via the "--PROJECT_PATH=path" argument.
+                       When passing parameters as a JSON object from STDIN, these extra arguments can be provided as an "ellipsoid" and a "project_path" key respectively.
 
 
 .. note::
