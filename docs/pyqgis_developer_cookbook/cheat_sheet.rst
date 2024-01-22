@@ -247,7 +247,7 @@ Otherwise
     # Set seconds (5 seconds)
     layer.setAutoRefreshInterval(5000)
     # Enable data reloading
-    layer.setAutoRefreshMode(Qgis.ReloadData)
+    layer.setAutoRefreshMode(Qgis.AutoRefreshMode.ReloadData)
 
 **Show methods**
 
