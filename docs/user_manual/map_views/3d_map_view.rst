@@ -36,7 +36,7 @@ The following tools are provided at the top of the 3D map view panel:
 * |pan| :sup:`Camera Control`: moves the view, keeping the same angle
   and direction of the camera
 * |zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole
-  layers' extent
+  layers' extent, or the :ref:`reference extent <scene_extent>` if set
 * |3dNavigation| :sup:`Toggle On-Screen Notification`: shows/hides the
   navigation widget (that is meant to ease controlling of the map view)
 * |identify| :sup:`Identify`: returns information on the clicked point
@@ -81,19 +81,45 @@ To do so, expand the |options| :sup:`Options` menu at the top of
 the 3D canvas panel and press the |options| :menuselection:`Configure` button
 to open the :guilabel:`3D configuration` window.
 
-.. _figure_3dmap_config:
-
-.. figure:: img/3dmapconfiguration.png
-   :align: center
-
-   The 3D Map Configuration dialog
-
-
 In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
 
+.. _scene_extent:
+
+General
+-------
+
+.. _figure_3dmap_configgeneral:
+
+.. figure:: img/3dmapconfiguration_general.png
+   :align: center
+
+   The 3D Map General Configuration dialog
+
+Under the |general| :guilabel:`General` tab, you can:
+
+* Limit the 3D scene's contents to a 2D map extent,
+  using the :ref:`spatial extent selector <extent_selector>`:
+  terrain and features are clipped at the specified extent
+  and only the parts falling within the extent are loaded in the scene.
+  Elevation range of the terrain, mesh and pointcloud layers is also taken into account
+  so that the camera is not positioned below the scene's contents,
+  particularly when using the terrain's vertical scale setting to exaggerate the elevation differences.
+
+  The set extent is also used as reference extent
+  when pressing the |zoomFullExtent| :sup:`Zoom full` button in 3D map view.
+* Press |checkbox| :guilabel:`Show in 2D map view` to display in the main map canvas
+  a rubberband corresponding to the current extent of the 3D scene.
+
 Terrain
 -------
+
+.. _figure_3dmap_configterrain:
+
+.. figure:: img/3dmapconfiguration_terrain.png
+   :align: center
+
+   The 3D Map Terrain Configuration dialog
 
 * :guilabel:`Terrain`: Before diving into the details, it is worth
   noting that the terrain in a 3D view is represented by a hierarchy of
@@ -431,6 +457,8 @@ the 3D vector layer.
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
