@@ -245,8 +245,8 @@ Otherwise
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     # Set seconds (5 seconds)
     layer.setAutoRefreshInterval(5000)
-    # Enable auto refresh
-    layer.setAutoRefreshEnabled(True)
+    # Enable data reloading
+    layer.setAutoRefreshMode(Qgis.ReloadData)
 
 **Show methods**
 
