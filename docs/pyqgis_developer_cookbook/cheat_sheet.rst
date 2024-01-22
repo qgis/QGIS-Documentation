@@ -32,6 +32,7 @@ Cheat sheet for PyQGIS
     )
 
     from qgis.core import (
+        Qgis,
         QgsProject,
         QgsLayerTreeModel,
     )
