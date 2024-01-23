@@ -10,12 +10,11 @@ Live GPS tracking
       :local:
 
 QGIS can help you do field mapping with a GPS receiver.
-Such a live tracking operation is done using the :guilabel:`GPS` toolbar.
+Such a live tracking operation is done using the :guilabel:`GPS Toolbar <gps_toolbar>`.
 Some :ref:`device configuration <gps_options>` may be needed before
 connecting QGIS and the GPS receiver.
 
 
-.. Anything else people need to know here for starting with live tracking ???????
 
 
 .. _gps_toolbar:
@@ -25,20 +24,20 @@ GPS toolbar
 
 The :guilabel:`GPS Toolbar` provides the main tools to control a live tracking session.
 It can be activated from :menuselection:`View --> Toolbars --> GPS`.
-It follows the state of the project, GPS, and current GPS track, and enable the actions
+It follows the state of the project, GPS, and current GPS track, and enables actions
 only when they make sense.
 Once a device is detected by QGIS, you will be able to interact with it:
 
 * |gpsConnect| :sup:`Connect to GPS`
 * |gpsDisconnect| :sup:`Disconnect from GPS`
-* |recenter| :sup:`Recenter map on GPS location`: the map will jump to the current GPS position
+* |recenter| :sup:`Recenter map on GPS location`: the map will immediately recenter on the current GPS position
   regardless of the :ref:`automatic recentering parameter <gps_recenter>`.
 
 * |gpsDestinationLayer| :sup:`Set destination layer for GPS digitized features`:
   By default, QGIS will :guilabel:`Follow active layer` for feature digitizing,
   meaning that GPS digitizing tools will adapt to the layer selected in :guilabel:`Layers` panel
   and created features will be stored in it accordingly.
-  While this may be comfortable in some contexts, it also implies careful interaction
+  While this may be useful in some contexts, it also implies careful interaction
   with other layers to avoid storing inadvertently features in undesired layers.
   This option allows you to explicitly indicate a layer for the data storage
   during the live tracking session, and you could switch depending on your needs.
@@ -72,7 +71,7 @@ Once a device is detected by QGIS, you will be able to interact with it:
 
 .. _tracking_settings:
 
-* The |options| :sup:`Settings` button opens a drop-down menu with settings
+* The |options| :sup:`Settings` button opens a drop-down menu with common settings
   which are expected to be modified mid-session:
 
   * |unchecked| :guilabel:`Show location marker`
@@ -110,7 +109,8 @@ Once a device is detected by QGIS, you will be able to interact with it:
     will be added to the ``gps_tracks`` table
     (along with some calculated information like track length, start and end times).
 
-  * |unchecked| :guilabel:`Log NMEA sentences...`
+  * |unchecked| :guilabel:`Log NMEA sentences...`: enables logging all raw NMEA strings
+    from the device to a text file
   * |options| :guilabel:`GPS settings...` to access the GPS :ref:`global options
     <gps_options>` dialog
 
