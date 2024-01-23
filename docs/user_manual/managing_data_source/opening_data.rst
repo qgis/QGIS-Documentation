@@ -1436,6 +1436,10 @@ Examples of XYZ Tile services:
   :guilabel:`URL`: ``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``
   :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
 
+You can also add local XYZ tiles using :guilabel:`Data Source Manager` dialog
+or :guilabel:`Browser` panel. Choose :guilabel:`Custom` from the 
+:guilabel:`XYZ Connection` drop-down menu and add 
+``file:///local_path/{z}/{x}/{y}.png`` URL in the :guilabel:`Connection Details`.
 
 .. index:: ArcGIS REST Servers
 .. _arcgis_rest:
