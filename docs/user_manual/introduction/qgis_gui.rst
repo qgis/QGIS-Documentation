@@ -1922,6 +1922,7 @@ Available toolbars are:
    ":guilabel:`Data Source Manager`", ":ref:`manage_data_source`"
    ":guilabel:`Database`", ":ref:`dbmanager`"
    ":guilabel:`Digitizing`", ":ref:`sec_edit_existing_layer`"
+   ":guilabel:`GPS`", ":ref:`sec_gpstracking`"
    ":guilabel:`GRASS`", ":ref:`sec_grass`"
    ":guilabel:`Help`"
    ":guilabel:`Label`", ":ref:`label_toolbar`"
