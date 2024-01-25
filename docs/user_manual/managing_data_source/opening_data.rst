@@ -1359,7 +1359,8 @@ of the :guilabel:`Data Source Manager` dialog or the contextual menu of the
 Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
 * a :guilabel:`Name`
-* the :guilabel:`URL`
+* the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or 
+  ``file:///local_path/{z}/{x}/{y}.png``
 * the :ref:`authentication <authentication_index>` configuration if necessary
 * the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`
 * a :guilabel:`Referer`
@@ -1436,10 +1437,6 @@ Examples of XYZ Tile services:
   :guilabel:`URL`: ``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``
   :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
 
-You can also add local XYZ tiles using :guilabel:`Data Source Manager` dialog
-or :guilabel:`Browser` panel. Choose :guilabel:`Custom` from the 
-:guilabel:`XYZ Connection` drop-down menu and add 
-``file:///local_path/{z}/{x}/{y}.png`` URL in the :guilabel:`Connection Details`.
 
 .. index:: ArcGIS REST Servers
 .. _arcgis_rest:
