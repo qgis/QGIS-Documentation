@@ -1248,12 +1248,9 @@ You can specify:
 * Under :guilabel:`Geometry Options`, the :guilabel:`Store in M values` option
   allows to create geometries with M values from the inbuilt GPS logging tools.
   This applies to both features digitized from GPS logs
-  and from the :guilabel:`Log to Geopackage/SpatiaLite` functionality.
+  and from the :ref:`Log to Geopackage/SpatiaLite <gps_logging>` functionality..
   Options include storing timestamps (as ms since epoch), ground speed, altitudes,
   bearings, and accuracy components as m values.
-
-  .. todo: replace guilabel with a ref to the section when available, i.e
-     and from the :ref:`Log to Geopackage/SpatiaLite <gps_logging>` functionality.
 
 * :guilabel:`GPS Location Marker`
 
@@ -1274,11 +1271,7 @@ You can specify:
 
   * :guilabel:`Threshold for automatic map centering`: defines the minimal offset
     of the GPS position from the map canvas center to trigger an automatic
-    map recentering if enabled.
-
-    .. todo: replace guilabel with a ref to the section when available, i.e
-       :ref:`map recentering <gps_recenter>` if enabled.
-
+    :ref:`map recentering <gps_recenter>` if enabled.
   * :guilabel:`Automatic map rotation frequency`: defines how often the map rotation
     to match the GPS bearing could happen;
     it can be on a custom duration or :guilabel:`On GPS signal`.
