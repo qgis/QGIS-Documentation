@@ -103,6 +103,7 @@ Icon                            Substitution                        Icon        
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
 |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
 |newVirtualLayer|               ``|newVirtualLayer|``               |newMeshLayer|                  ``|newMeshLayer|``
+|newGpx|                        ``|newGpx|``
 |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
 |geoPackage|                    ``|geoPackage|``                    |spatialite|                    ``|spatialite|``
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
@@ -344,7 +345,7 @@ Icon                            Substitution                        Icon        
 |interfaceCustomization|        ``|interfaceCustomization|``        |keyboardShortcuts|             ``|keyboardShortcuts|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
 |scaleBar|                      ``|scaleBar|``                      |tracking|                      ``|tracking|``
-|gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
+|gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |gpsConnect|                    ``|gpsConnect|``                    |gpsDisconnect|                 ``|gpsDisconnect|``
 |gpsDestinationLayer|           ``|gpsDestinationLayer|``           |addTrackPoint|                 ``|addTrackPoint|``
 |recenter|                      ``|recenter|``                      |reset|                         ``|reset|``
@@ -989,8 +990,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |gpsDisconnect| image:: /static/common/mIconGpsDisconnect.png
    :width: 1.5em
-.. |gpsImporter| image:: /static/common/gps_importer.png
-   :width: 1.5em
 .. |gpsTrackBarChart| image:: /static/common/gpstrack_barchart.png
    :width: 1.5em
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
@@ -1257,6 +1256,8 @@ Icon                            Substitution                        Icon        
 .. |newElevationProfile| image:: /static/common/mActionNewElevationProfile.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
+.. |newGpx| image:: /static/common/mActionNewGpx.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em

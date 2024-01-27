@@ -951,7 +951,7 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Data Source Manager`
      - :ref:`vector_create_mesh`
-   * - :menuselection:`-->` |createGPX|
+   * - :menuselection:`-->` |newGpx|
        :guilabel:`New GPX Layer...`
      -
      - :guilabel:`Data Source Manager`
@@ -2289,8 +2289,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |copyrightLabel| image:: /static/common/copyright_label.png
    :width: 1.5em
-.. |createGPX| image:: /static/common/create_gpx.png
-   :width: 1.5em
 .. |createGrid| image:: /static/common/mAlgorithmCreateGrid.png
    :width: 1.5em
 .. |createMemory| image:: /static/common/mActionCreateMemory.png
@@ -2455,6 +2453,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |newElevationProfile| image:: /static/common/mActionNewElevationProfile.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
+.. |newGpx| image:: /static/common/mActionNewGpx.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em

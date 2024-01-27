@@ -243,7 +243,7 @@ Creating a new GPX layer
 
 To create a new GPX file:
 
-#. Select :menuselection:`Create Layer -->` |createGPX|
+#. Select :menuselection:`Create Layer -->` |newGpx|
    :menuselection:`New GPX Layer...` from the :menuselection:`Layer` menu.
 #. In the dialog, choose where to save the new file, name it and press :guilabel:`Save`.
 #. Three new layers are added to the :guilabel:`Layers Panel`:
@@ -760,8 +760,6 @@ when used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |createGPX| image:: /static/common/create_gpx.png
-   :width: 1.5em
 .. |createMemory| image:: /static/common/mActionCreateMemory.png
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
@@ -769,6 +767,8 @@ when used in conjunction with this spatial index syntax.
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
+.. |newGpx| image:: /static/common/mActionNewGpx.png
    :width: 1.5em
 .. |newMeshLayer| image:: /static/common/mActionNewMeshLayer.png
    :width: 1.5em
