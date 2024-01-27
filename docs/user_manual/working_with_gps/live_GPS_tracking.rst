@@ -10,7 +10,7 @@ Live GPS tracking
       :local:
 
 QGIS can help you do field mapping with a GPS receiver.
-Such a live tracking operation is done using the :guilabel:`GPS Toolbar <gps_toolbar>`.
+Such a live tracking operation is done using the :ref:`GPS Toolbar <gps_toolbar>`.
 Some :ref:`device configuration <gps_options>` may be needed before
 connecting QGIS and the GPS receiver.
 
