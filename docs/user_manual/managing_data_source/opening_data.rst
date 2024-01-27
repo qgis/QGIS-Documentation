@@ -1359,7 +1359,8 @@ of the :guilabel:`Data Source Manager` dialog or the contextual menu of the
 Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
 * a :guilabel:`Name`
-* the :guilabel:`URL`
+* the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or 
+  ``file:///local_path/{z}/{x}/{y}.png``
 * the :ref:`authentication <authentication_index>` configuration if necessary
 * the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`
 * a :guilabel:`Referer`
