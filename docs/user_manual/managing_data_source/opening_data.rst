@@ -1395,7 +1395,23 @@ Using XYZ Tile services
 XYZ Tile services can be added via the |addXyzLayer| :guilabel:`XYZ` tab
 of the :guilabel:`Data Source Manager` dialog or the contextual menu of the
 :guilabel:`XYZ Tiles` entry in the :guilabel:`Browser` panel.
-Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
+By default, QGIS provides some default and ready-to-use XYZ Tiles services:
+
+* |xyz| :guilabel:`Mapzen Global Terrain`, allowing an immediate
+  access to global DEM source for the projects.
+  More details and resources at https://registry.opendata.aws/terrain-tiles/
+* |xyz| :guilabel:`OpenStreetMap` to access the world 2D map.
+  :numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
+  XYZ Tile service configuration.
+
+To add a new service, press :guilabel:`New` (respectively :guilabel:`New Connection`
+from the Browser panel) and provide:
+
+  .. _figure_xyz_tiles_openstreetmap:
+  .. figure:: img/xyz_tiles_dialog_osm.png
+     :align: center
+
+     XYZ Tiles - OpenStreetMap configuration
 
 * a :guilabel:`Name`
 * the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or 
@@ -1418,24 +1434,25 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
   floating point raster layer, ready for styling using QGIS usual
   :ref:`raster renderers <raster_rendering>`.
 
-By default, QGIS provides some default and ready-to-use XYZ Tiles services:
+Press :guilabel:`OK` to establish the connection.
+It will then be possible to:
 
-* |xyz| :guilabel:`Mapzen Global Terrain`, allowing an immediate
-  access to global DEM source for the projects.
-  More details and resources at https://registry.opendata.aws/terrain-tiles/
-* |xyz| :guilabel:`OpenStreetMap` to access the world 2D map.
-  :numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
-  XYZ Tile service configuration.
+* :guilabel:`Add` the new layer to the project; it is loaded with the name given in the settings.
+* :guilabel:`Edit` the XYZ connection settings
+* :guilabel:`Remove` the connection
+* From the :guilabel:`Browser` panel, right-click over the entry
+  and you can also:
 
-  .. _figure_xyz_tiles_openstreetmap:
-  .. figure:: img/xyz_tiles_dialog_osm.png
-     :align: center
-
-     XYZ Tiles - OpenStreetMap configuration
+  * :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
+    <general_saveas>`
+  * :guilabel:`Add layer to project`: a double-click also adds the layer
+  * View the :guilabel:`Layer Properties...` and get access to metadata and
+    a preview of the data provided by the service.
+    More settings are available when the layer has been loaded into the project.
 
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
-through the :guilabel:`XYZ Tiles` entry in :guilabel:`Data Source Manager`
-dialog or its context menu in the :guilabel:`Browser` panel.
+through the :guilabel:`XYZ` entry in :guilabel:`Data Source Manager` dialog
+or its contextual menu in the :guilabel:`Browser` panel.
 Likewise, they can be added from a file (:guilabel:`Load Connections`).
 
 The XML file for OpenStreetMap looks like this:
@@ -1449,20 +1466,15 @@ The XML file for OpenStreetMap looks like this:
      username="" authcfg="" referer=""/>
   </qgsXYZTilesConnections>
 
-Once a connection to a XYZ tile service is set, it's possible to:
+.. tip:: **Loading XYZ tiles without creating a connection**
 
-* :guilabel:`Edit` the XYZ connection settings
-* :guilabel:`Remove` the connection
-* From the :guilabel:`Browser` panel, right-click over the entry
-  and you can also:
-
-  * :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
-    <general_saveas>`
-  * :guilabel:`Add layer to project`: a double-click also adds the layer
-  * View the :guilabel:`Layer Properties...` and get access to metadata and
-    a preview of the data provided by the service.
-    More settings are available when the layer has been loaded into the project.
-
+  It is also possible to add XYZ tiles to a project without necessarily storing
+  its connection settings in you user profile (e.g. for a dataset you may need once).
+  In the :menuselection:`Data Source Manager --> XYZ` tab, edit any properties
+  in the :guilabel:`Connection Details` group.
+  The :guilabel:`Name` field above should turn into ``Custom``.
+  Press :guilabel:`Add` to load the layer in the project.
+  It will be named by default ``XYZ Layer``.
 
 Examples of XYZ Tile services:
 
