@@ -180,7 +180,7 @@ Available options are:
   or *user-defined*. A preview of the CRS extent on earth is displayed to
   help you select the appropriate one.
   Layers added to the project are translated on-the-fly to this CRS in order
-  to overlay them regardless their original CRS. Use of units and ellipsoid setting
+  to overlay them regardless of their original CRS. Use of units and ellipsoid setting
   are available and make sense and you can perform calculations accordingly.
 
 Whenever you select a new CRS for your QGIS project, the measurement units will automatically be
