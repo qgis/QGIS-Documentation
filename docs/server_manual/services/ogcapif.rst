@@ -118,7 +118,7 @@ The **Landing Page** must provide links to
 
 .. _figure_server_oapif_landing_page:
 
-.. figure:: ../img/server_wfs3_landing_page.png
+.. figure:: img/server_wfs3_landing_page.png
    :align: center
 
    Server OAPIF landing page
@@ -155,7 +155,7 @@ The path of this endpoint is ``/collections/``.
 
 .. _figure_server_oapif_collections:
 
-.. figure:: ../img/server_wfs3_collections.png
+.. figure:: img/server_wfs3_collections.png
    :align: center
 
    Server OAPIF collections list page
@@ -176,7 +176,7 @@ available features.
 
 .. _figure_server_oapif_collection:
 
-.. figure:: ../img/server_wfs3_collection.png
+.. figure:: img/server_wfs3_collection.png
    :align: center
 
    Server OAPIF collection detail page
@@ -202,7 +202,7 @@ available features.
 
 .. _figure_server_oapif_features:
 
-.. figure:: ../img/server_wfs3_features.png
+.. figure:: img/server_wfs3_features.png
    :align: center
 
    Server OAPIF features list page
@@ -222,7 +222,7 @@ feature geometry.
 
 .. _figure_server_oapif_feature:
 
-.. figure:: ../img/server_wfs3_feature.png
+.. figure:: img/server_wfs3_feature.png
    :align: center
 
    Server OAPIF feature detail page
