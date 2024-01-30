@@ -6,10 +6,12 @@
 
 
 This repository is meant to write and manage the Official Documentation of [QGIS](https://qgis.org),
-a free and Open Source Geographic Information System (GIS) Software, under the
-[Open Source Geospatial (OSGeo)](https://www.osgeo.org) foundation umbrella.
+a free and Open Source Geographic Information System (GIS) Software
+whose source code can be found in [this repository](https://github.com/qgis/QGIS).
+QGIS is part of the [Open Source Geospatial (OSGeo)](https://www.osgeo.org) foundation,
+offering a range of complementary open-source GIS software projects.
 
-The latest documentation is available at <https://docs.qgis.org/latest>
+The latest documentation of QGIS is available at <https://docs.qgis.org/latest>
 
 * [Building the documentation](#building-the-documentation)
    * [Build on Linux](#build-on-linux)
@@ -24,7 +26,7 @@ The latest documentation is available at <https://docs.qgis.org/latest>
 1. If not provided by your OS, you need to install:
 
    - [git](https://git-scm.com/download/)
-   - and [Python3](https://www.python.org/downloads/)
+   - and [Python](https://www.python.org/downloads/) (>=3.9)
 
    You can install both in default places and with default options.
 1. [Clone the repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -37,7 +39,7 @@ The best way to build the documentation is within a Python Virtual Environment (
 You can use your own virtual env by creating it first:
 
 ```
-# you NEED python >3.6. Depending on distro either use `python3` or `python`
+# you NEED python >=3.9. Depending on distro either use `python3` or `python`
 # common name is 'venv' but call it whatever you like
 
 python3 -m venv venv  # using the venv module, create a venv named 'venv'
