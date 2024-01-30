@@ -1447,8 +1447,9 @@ and for loading/saving metadata in the "Default" location.
    Metadata load/save options
 
 
-The "Default" location used by :guilabel:`Save as Default` and :guilabel:`Restore Default`
-changes depending on the underlying data source and on its configuration:
+The "Default" location used by :guilabel:`Save to Default Location` and 
+:guilabel:`Restore from Default Location` changes depending on the underlying 
+data source and on its configuration:
 
 .. _`savemetadatatodb`:
 
@@ -1457,17 +1458,17 @@ changes depending on the underlying data source and on its configuration:
   is checked the metadata are stored inside a dedicated table in the
   database.
 
-* For GeoPackage data sources :guilabel:`Save as Default` always saves the metadata
-  in the internal metadata tables of the GeoPackage.
+* For GeoPackage data sources :guilabel:`Save to Default Location` always saves
+  the metadata in the internal metadata tables of the GeoPackage.
 
   When metadata are saved into the internal tables of PostgreSQL or GeoPackage they
   become available for search and filtering in the browser and in
   the :ref:`layer metadata search panel <layer_metadata_search_panel>`.
 
-* For all other file based data sources :guilabel:`Save as Default` saves the metadata
-  in a :file:`.qmd` file alongside the file.
+* For all other file based data sources :guilabel:`Save to Default Location` 
+  saves the metadata in a :file:`.qmd` file alongside the file.
 
-* In all other cases :guilabel:`Save as Default` saves the metadata
+* In all other cases :guilabel:`Save to Default Location` saves the metadata
   in a local :file:`.sqlite` database.
 
 
