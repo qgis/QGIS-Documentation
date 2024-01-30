@@ -446,7 +446,7 @@ URL example:
   &OPACITIES=255,0
 
 
-.. figure:: ../img/wms_getmap_opacities.png
+.. figure:: img/wms_getmap_opacities.png
   :align: center
 
   To the left ``OPACITIES=255,0`` and to the right ``OPACITIES=255,255``
@@ -489,7 +489,7 @@ URL example:
   &FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
 
 
-.. figure:: ../img/wms_getmap_filter.png
+.. figure:: img/wms_getmap_filter.png
   :align: center
 
   Server response to a GetMap request with FILTER parameter
@@ -535,7 +535,7 @@ and **Romania** they're highlighted in yellow.
 
 .. _figure_server_selection:
 
-.. figure:: ../img/server_selection_parameter.png
+.. figure:: img/server_selection_parameter.png
   :align: center
 
   Server response to a GetMap request with SELECTION parameter
@@ -1009,7 +1009,7 @@ values are (not case sensitive):
 
 For example:
 
-.. figure:: ../img/getfeaturecount_legend.png
+.. figure:: img/getfeaturecount_legend.png
    :align: center
 
 
@@ -1061,7 +1061,7 @@ URL example:
   &RULELABEL=AUTO
 
 
-.. figure:: ../img/wms_getlegendgraphic_rulelabel.png
+.. figure:: img/wms_getlegendgraphic_rulelabel.png
    :align: center
 
    Legend rendering without label for single symbol layers
@@ -1089,7 +1089,7 @@ URL example:
   &TRANSPARENT=TRUE
   &BOXSPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_boxspace.png
+.. figure:: img/wms_getlegendgraphic_boxspace.png
    :align: center
 
    To the left ``BOXSPACE=0`` and to the right ``BOXSPACE=15``
@@ -1117,7 +1117,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERSPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_layerspace.png
+.. figure:: img/wms_getlegendgraphic_layerspace.png
    :align: center
 
    To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``
@@ -1144,7 +1144,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERTITLESPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_layertitlespace.png
+.. figure:: img/wms_getlegendgraphic_layertitlespace.png
    :align: center
 
    To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``
@@ -1171,7 +1171,7 @@ URL example:
   &TRANSPARENT=TRUE
   &SYMBOLSPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_symbolspace.png
+.. figure:: img/wms_getlegendgraphic_symbolspace.png
    :align: center
 
    To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``
@@ -1198,7 +1198,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ICONLABELSPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_iconlabelspace.png
+.. figure:: img/wms_getlegendgraphic_iconlabelspace.png
    :align: center
 
    To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``
@@ -1225,7 +1225,7 @@ URL example:
   &TRANSPARENT=TRUE
   &SYMBOLWIDTH=2
 
-.. figure:: ../img/wms_getlegendgraphic_symbolwidth.png
+.. figure:: img/wms_getlegendgraphic_symbolwidth.png
    :align: center
 
    To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``
@@ -1252,7 +1252,7 @@ URL example:
   &TRANSPARENT=TRUE
   &SYMBOLHEIGHT=2
 
-.. figure:: ../img/wms_getlegendgraphic_symbolheight.png
+.. figure:: img/wms_getlegendgraphic_symbolheight.png
    :align: center
 
    To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``
@@ -1311,7 +1311,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERFONTBOLD=TRUE
 
-.. figure:: ../img/wms_getlegendgraphic_layerfontbold.png
+.. figure:: img/wms_getlegendgraphic_layerfontbold.png
    :align: center
 
    Legend with ``LAYERFONTBOLD=TRUE``
@@ -1337,7 +1337,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERFONTSIZE=20
 
-.. figure:: ../img/wms_getlegendgraphic_layerfontsize.png
+.. figure:: img/wms_getlegendgraphic_layerfontsize.png
    :align: center
 
    Legend with ``LAYERFONTSIZE=20``
@@ -1367,7 +1367,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERFONTITALIC=TRUE
 
-.. figure:: ../img/wms_getlegendgraphic_layerfontitalic.png
+.. figure:: img/wms_getlegendgraphic_layerfontitalic.png
    :align: center
 
    Legend with ``LAYERFONTITALIC=TRUE``
@@ -1395,7 +1395,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERFONTCOLOR=0x5f9930
 
-.. figure:: ../img/wms_getlegendgraphic_layerfontcolor.png
+.. figure:: img/wms_getlegendgraphic_layerfontcolor.png
    :align: center
 
    Legend with ``LAYERFONTCOLOR=0x5f9930``
@@ -1441,7 +1441,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ITEMFONTBOLD=TRUE
 
-.. figure:: ../img/wms_getlegendgraphic_itemfontbold.png
+.. figure:: img/wms_getlegendgraphic_itemfontbold.png
    :align: center
 
    Legend with ``ITEMFONTBOLD=TRUE``
@@ -1467,7 +1467,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ITEMFONTSIZE=20
 
-.. figure:: ../img/wms_getlegendgraphic_itemfontsize.png
+.. figure:: img/wms_getlegendgraphic_itemfontsize.png
    :align: center
 
    Legend with ``ITEMFONTSIZE=30``
@@ -1497,7 +1497,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ITEMFONTITALIC=TRUE
 
-.. figure:: ../img/wms_getlegendgraphic_itemfontitalic.png
+.. figure:: img/wms_getlegendgraphic_itemfontitalic.png
    :align: center
 
    Legend with ``ITEMFONTITALIC=TRUE``
@@ -1525,7 +1525,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ITEMFONTCOLOR=0x5f9930
 
-.. figure:: ../img/wms_getlegendgraphic_itemfontcolor.png
+.. figure:: img/wms_getlegendgraphic_itemfontcolor.png
    :align: center
 
    Legend with ``ITEMFONTCOLOR=0x5f9930``
@@ -1580,7 +1580,7 @@ Possible values are:
 - ``TRUE``: display the groups labels
 - ``FALSE`` (default): hide the groups labels
 
-.. figure:: ../img/wms_getlegendgraphic_addlayergroups.png
+.. figure:: img/wms_getlegendgraphic_addlayergroups.png
    :align: center
 
    Legend without (left) and with (right) layer groups labels display
@@ -2109,7 +2109,7 @@ a label are drawn on top of the normal map:
 
 .. _figure_server_redlining:
 
-.. figure:: ../img/server_redlining.png
+.. figure:: img/server_redlining.png
    :align: center
 
    Server response to a GetMap request with redlining parameters
