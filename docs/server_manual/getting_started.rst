@@ -900,6 +900,12 @@ response. This allows such clients to still display a feature’s geometry
 (e.g. for highlighting the feature). You need to check the
 |checkbox| :guilabel:`Segmentize feature info geometry` to activate the option.
 
+When a layer group is passed to ``GetLegendGraphic`` request,
+all of its leaf layers are added to the legend picture (however without the groups' labels).
+Check the |checkbox| :guilabel:`Add layer groups in GetLegendGraphic` option
+if you want to also insert the layer groups (and subgroups) names
+into the layer tree, just like in QGIS Desktop legend.
+
 You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
 set the precision of the GetFeatureInfo geometry. This enables you to save
 bandwidth when you don't need the full precision.
