@@ -2072,18 +2072,20 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisrastercalculator:
+.. _qgisrastercalc:
 
 Raster calculator
 -----------------
+
 Performs algebraic operations using raster layers.
 
-The resulting layer will have its values computed according to an
-expression.
+The resulting layer will have its values computed according to an expression.
 The expression can contain numerical values, operators and references
 to any of the layers in the current project.
 
-.. note:: When using the calculator in :ref:`processing_batch` or from
+.. Is this still true?
+
+  .. note:: When using the calculator in :ref:`processing_batch` or from
   the :ref:`console` the files to use have to be specified.
   The corresponding layers are referred using the base name of the
   file (without the full path).
@@ -2091,7 +2093,7 @@ to any of the layers in the current project.
   the first band of that layer will be referred as
   ``rasterfile.tif@1``.
 
-.. seealso:: :ref:`label_raster_calc`
+.. seealso:: :ref:`qgisvirtualrastercalc`, :ref:`gdalrastercalculator`, :ref:`label_raster_calc`
 
 Parameters
 ..........
@@ -2105,58 +2107,14 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Layers**
-     -  GUI only
-     -
-     - Shows the list of all raster layers loaded in the legend.
-       These can be used to fill the expression box (double click to
-       add).
-       Raster layers are referred by their name and the number of the
-       band: ``layer_name@band_number``.
-       For instance, the first band from a layer named ``DEM`` will
-       be referred as ``DEM@1``.
-   * - **Operators**
-     -  GUI only
-     -
-     - Contains some calculator like buttons that can be used to fill
-       the expression box.
-   * - **Expression**
-     -  ``EXPRESSION``
-     - [string]
-     - Expression that will be used to calculate the output raster
-       layer.
-       You can use the operator buttons provided to type directly the
-       expression in this box.
-   * - **Predefined expressions**
-     - GUI only
-     -
-     - You can use the predefined ``NDVI`` expression or you can
-       define new expressions for calculations.
-       The :guilabel:`Add...` button loads a defined expression (and
-       lets you set the parameters).
-       The :guilabel:`Save...` button lets you define a new
-       expression.
-   * - **Reference layer(s) (used for automated extent, cellsize, and CRS)**
-
-       Optional
-     - ``LAYERS``
+   * - **Input layers**
+     - ``INPUT``
      - [raster] [list]
-     - Layer(s) that will be used to fetch extent, cell size and CRS.
-       By choosing the layer in this box you avoid filling in all the
-       other parameters by hand.
-       Raster layers are referred by their name and the number of
-       the band: ``layer_name@band_number``.
-       For instance, the first band from a layer named ``DEM`` will be
-       referred as ``DEM@1``.
-   * - **Cell size (use 0 or empty to set it automatically)**
-
-       Optional
-     - ``CELLSIZE``
-     - [number]
-     - Cell size of the output raster layer.
-       If the cell size is not specified, the minimum cell size of
-       the selected reference layer(s) will be used.
-       The cell size will be the same for the X and Y axes.
+     - List of input raster layers
+   * - **Expression**
+     - ``EXPRESSION``
+     - [expression]
+     - :ref:`Raster-based expression <raster_expression>` that will be used to calculate the output raster layer.
    * - **Output extent**
 
        Optional
@@ -2170,6 +2128,15 @@ Parameters
           :start-after: **extent_options**
           :end-before: **end_extent_options**
 
+   * - **Output cell size (leave empty to set automatically)**
+
+       Optional
+     - ``CELLSIZE``
+     - [number]
+     - Cell size of the output raster layer.
+       If the cell size is not specified, the minimum cell size of
+       the selected reference layer(s) will be used.
+       The cell size will be the same for the X and Y axes.
    * - **Output CRS**
 
        Optional
@@ -2178,7 +2145,7 @@ Parameters
      - CRS of the output raster layer.
        If the output CRS is not specified, the CRS of the first
        reference layer will be used.
-   * - **Output**
+   * - **Calculated**
      - ``OUTPUT``
      - [raster]
 
@@ -2200,7 +2167,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Output**
+   * - **Calculated**
      - ``OUTPUT``
      - [raster]
      - Output raster file with the calculated values.
@@ -2208,7 +2175,111 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rastercalculator``
+**Algorithm ID**: ``native:rastercalc``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisvirtualrastercalc:
+
+Raster calculator (virtual)
+---------------------------
+
+Performs algebraic operations using raster layers and generates in-memory result.
+
+The resulting layer will have its values computed according to an expression.
+The expression can contain numerical values, operators and references
+to any of the layers in the current project.
+
+A virtual raster layer is a raster layer defined by its URI and whose pixels are calculated on-the-fly.
+It's not a new file on disk; the virtual layer is still connected to the rasters used in the calculation
+meaning that deleting or moving these rasters would break it.
+A :guilabel:`Layer name` can be provided, otherwise the calculation expression is used as such.
+Removing the virtual layer from the project deletes it, and it can be made persistent in file using the layer
+:menuselection:`Export --> Save as...` contextual menu.
+
+.. seealso:: :ref:`qgisrastercalc`, :ref:`gdalrastercalculator`, :ref:`label_raster_calc`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - List of input raster layers
+   * - **Expression**
+     - ``EXPRESSION``
+     - [expression]
+     - :ref:`Raster-based expression <raster_expression>` that will be used to calculate the output raster layer.
+   * - **Output extent**
+
+       Optional
+     - ``EXTENT``
+     - [extent]
+     - Specify the spatial extent of the output raster layer.
+       If the extent is not specified, the minimum extent that covers
+       all the selected reference layers will be used.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
+   * - **Output cell size (leave empty to set automatically)**
+
+       Optional
+     - ``CELLSIZE``
+     - [number]
+     - Cell size of the output raster layer.
+       If the cell size is not specified, the minimum cell size of
+       the selected reference layer(s) will be used.
+       The cell size will be the same for the X and Y axes.
+   * - **Output CRS**
+
+       Optional
+     - ``CRS``
+     - [crs]
+     - CRS of the output raster layer.
+       If the output CRS is not specified, the CRS of the first
+       reference layer will be used.
+   * - **Output layer name**
+
+       Optional
+     - ``LAYER_NAME``
+     - [string]
+     - The name to assign to the generated layer.
+       If not set, the text of the calculation expression is used.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Calculated**
+     - ``OUTPUT``
+     - [raster]
+     - Output virtual raster layer with the calculated values.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:virtualrastercalc``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

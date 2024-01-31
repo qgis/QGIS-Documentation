@@ -67,10 +67,45 @@ calculations (``+``, ``-``, ``*``, ... ) and trigonometric functions (``sin``,
 used with other operators and functions.
 
 
-.. hint:: See also the :ref:`qgisrastercalculator` algorithm.
+.. seealso:: :ref:`qgisrastercalc` and :ref:`qgisvirtualrastercalc` algorithms
+
+
+.. _raster_expression:
+
+Raster calculator expression
+-----------------------------
+
+The dialog
+..........
+
+The :guilabel:`Raster calculator expression` dialog provides means to write expressions
+for pixels calculations between a set of raster layers.
+
+.. _figure_raster_expression_calculator:
+
+.. figure:: img/raster_calculator_expression.png
+   :align: center
+
+   Raster Expression Calculator
+
+
+* :guilabel:`Layers`: Shows the list of all raster layers loaded in the legend.
+  These can be used to fill the expression box (double click to add).
+  Raster layers are referred by their name and the number of the band: ``layer_name@band_number``.
+  For instance, the first band from a layer named ``DEM`` will be referred as ``DEM@1``.
+* :guilabel:`Operators`: contains a number of calculation operators for pixels manipulation:
+
+  * Arithmetical: ``+``, ``-``, ``*``, ``sqrt``, ``abs``, ``ln``, ...
+  * Trigonometric: ``sin``, ``cos``, ``tan``, ...
+  * Comparison: ``=``, ``!=``, ``<``, ``>=``, ...
+  * Logical: ``IF``, ``AND``, ``OR``, ``(``, ``)``
+  * Statistical: ``min``, ``max``
+
+  To add an operator to the raster calculator expression box, click the appropriate button.
+* :guilabel:`Raster calculator expression` is the area in which the expression is composed
 
 Examples
---------
+........
 
 **Convert elevation values from meters to feet**
 
@@ -106,8 +141,8 @@ in one step.
 
   ("elevation@1" < 50) * 1 + ("elevation@1" >= 50) * 2
 
-In other words, for every cell less than 50 set its value to 1. For every cell
-greater than or equal 50 set its value to 2.
+In other words, for every cell less than 50 set its value to 1.
+For every cell greater than or equal 50 set its value to 2.
 
 Or you can use the ``IF`` operator. 
 
