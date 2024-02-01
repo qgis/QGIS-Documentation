@@ -784,6 +784,9 @@ Available values are (not case sensitive):
 
 - ``TRUE``
 - ``FALSE``
+- ``HTML_FI_ONLY_MAPTIP``: like ``TRUE``, with the difference that the HTML response
+  to the feature info request only contains the maptip.
+  This gives full control over the HTML response using e.g. the built-in layer maptip editor.
 
 .. _wms_withgeometry:
 
