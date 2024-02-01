@@ -30,10 +30,11 @@ There are several tabs in the dialog:
     - |elevationscale| :ref:`Elevation <raster_elevation>`
   * - |editMetadata| :ref:`Metadata <raster_metadata>`
     - |legend| :ref:`Legend <raster_server>`
-    - |overlay| :ref:`QGIS Server <raster_server>`
-  * - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+    - |display| :ref:`Display <raster_display>`
+  * - |overlay| :ref:`QGIS Server <raster_server>`
+    - :ref:`External plugins <plugins>`:sup:`[2]` tabs
     -
-    -
+
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
@@ -899,6 +900,40 @@ layout legend <layout_legend_item>`. These options include:
    Raster Legend
 
 
+.. index:: Map tips
+.. _raster_display:
+
+Display Properties
+==================
+
+The |display| :guilabel:`Display` tab helps you configure HTML map tips to use for
+pixels identification:
+
+* |checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips for the layer
+* The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor for map tips,
+  mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
+  You can check the result of your code sample in the :guilabel:`Preview` frame.
+
+.. _figure_raster_display:
+
+.. figure:: img/rasterDisplay.png
+   :align: center
+
+   Map tips with raster layer
+
+
+To display map tips:
+
+#. Select the menu option :menuselection:`View --> Show Map Tips`
+   or click on the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes Toolbar`.
+#. Make sure that the layer you target is active
+   and has the |checkbox| :guilabel:`Enable Map Tips` property checked.
+#. Move over a pixel, and the corresponding information will be displayed over.
+
+Map tip is a cross-layer feature meaning that once activated,
+it stays on and applies to any map tip enabled layer in the project until it is toggled off.
+
+
 .. index:: QGIS Server
 .. _raster_server:
 
@@ -945,6 +980,8 @@ The configuration concerns:
    :width: 1.3em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
+.. |display| image:: /static/common/display.png
+   :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |elevationscale| image:: /static/common/elevationscale.png
@@ -958,6 +995,8 @@ The configuration concerns:
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
