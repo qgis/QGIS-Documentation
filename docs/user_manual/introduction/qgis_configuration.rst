@@ -1248,7 +1248,7 @@ You can specify:
 * Under :guilabel:`Geometry Options`, the :guilabel:`Store in M values` option
   allows to create geometries with M values from the inbuilt GPS logging tools.
   This applies to both features digitized from GPS logs
-  and from the :ref:`Log to Geopackage/SpatiaLite <gps_logging>` functionality..
+  and from the :ref:`Log to Geopackage/SpatiaLite <gps_logging>` functionality...
   Options include storing timestamps (as ms since epoch), ground speed, altitudes,
   bearings, and accuracy components as m values.
 
