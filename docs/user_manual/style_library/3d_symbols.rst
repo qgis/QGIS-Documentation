@@ -166,7 +166,7 @@ on the geometry type of the symbol:
   It also includes an :guilabel:`Ambient` option to account for the small amount
   of light that is scattered about the entire scene.
   Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
-  Read more at https://en.wikipedia.org/wiki/Phong_reflection_model#Description
+  Read more at `Phong reflection description <https://en.wikipedia.org/wiki/Phong_reflection_model#Description>`_.
 * :guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic (Phong)`
   except that an image is used as :guilabel:`Diffuse Texture`.
   The image can be a file on disk, a remote URL or :ref:`embedded in the project
@@ -180,7 +180,11 @@ on the geometry type of the symbol:
   and a :guilabel:`Cool` color (for the ones facing away).
   Also, the relative contributions to the cool and warm colors by the diffuse color
   are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties respectively.
-  See also https://en.wikipedia.org/wiki/Gooch_shading
+  See also `Gooch shading <https://en.wikipedia.org/wiki/Gooch_shading>`_.
+* :guilabel:`Metal Roughness`: a physically based rendering material
+  that provides an accurate representation of how light interacts with surfaces.
+  Options are available for setting the material :guilabel:`Base color`,
+  :guilabel:`Metalness` and :guilabel:`Roughness`.
 * :guilabel:`Embedded Textures` with 3D models shape
 
 
