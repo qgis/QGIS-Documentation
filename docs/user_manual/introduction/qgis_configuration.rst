@@ -1222,18 +1222,71 @@ https://doc.qt.io/archives/qt-5.9/qnetworkproxy.html#ProxyType-enum
 GPS settings
 ------------
 
-GPS Visualisation Options
-.........................
+The |gps| :guilabel:`GPS` dialog helps you configure GPS devices connections and properties in QGIS.
+It also provides settings for GPS tracking and data digitizing.
 
 .. figure:: img/options_gps.png
    :align: center
 
    GPS settings
 
-This dialog helps you configure GPS devices display when :ref:`connected to QGIS <sec_gpstracking>`:
+You can specify:
 
-* :guilabel:`GPS location marker` for controlling the marker symbol used for the current GPS location
-* :guilabel:`Rotate to match GPS bearing`: whether the marker symbol should be rotated to match the GPS direction
+* :guilabel:`GPS Connection`: provides different means to connect the device to QGIS
+
+  * |radioButtonOn| :guilabel:`Autodetect`
+  * |radioButtonOff| :guilabel:`Serial device` (reload required if a new GPS Device is connected)
+  * |radioButtonOff| :guilabel:`gpsd` (selecting the :guilabel:`Host` and :guilabel:`Port`
+    your GPS is connected to, and providing a :guilabel:`Device` name)
+
+  In case of connection problems, you can try to switch from one to another.
+
+* :guilabel:`Filtering`: You can set an :guilabel:`Acquisition interval (seconds)`
+  and/or a :guilabel:`Distance threshold (meters)` parameters to keep the cursor still active
+  when the receiver is in static conditions.
+
+* Under :guilabel:`Geometry Options`, the :guilabel:`Store in M values` option
+  allows to create geometries with M values from the inbuilt GPS logging tools.
+  This applies to both features digitized from GPS logs
+  and from the :ref:`Log to Geopackage/SpatiaLite <gps_logging>` functionality...
+  Options include storing timestamps (as ms since epoch), ground speed, altitudes,
+  bearings, and accuracy components as m values.
+
+* :guilabel:`GPS Location Marker`
+
+  * Configure a symbol for the :guilabel:`GPS location marker`, indicating the current GPS position
+  * |checkbox| :guilabel:`Rotate location marker to match GPS bearing`:
+    whether the marker symbol should be rotated to match the GPS direction
+
+* :guilabel:`GPS Bearing`:
+
+  * configure a :guilabel:`Bearing line style` using QGIS line symbol properties
+  * set whether to |unchecked| :guilabel:`Calculate Bearings from travel direction`:
+    If checked, the bearing reported by the GPS device will be ignored
+    and the bearing will instead be calculated by the angle between the previous two GPS locations.
+
+* :guilabel:`GPS Track`: set symbol to use for the :guilabel:`Track line style`
+* :guilabel:`Map Centering and Rotation`: defines when the map canvas is updated
+  according to the user displacement on the field:
+
+  * :guilabel:`Threshold for automatic map centering`: defines the minimal offset
+    of the GPS position from the map canvas center to trigger an automatic
+    :ref:`map recentering <gps_recenter>` if enabled.
+  * :guilabel:`Automatic map rotation frequency`: defines how often the map rotation
+    to match the GPS bearing could happen;
+    it can be on a custom duration or :guilabel:`On GPS signal`.
+
+* :guilabel:`Timestamp Properties` to configure how time values are displayed
+  and stored in the data.
+  Parameters include the :guilabel:`Format` which can be:
+
+  * :guilabel:`Local time`
+  * :guilabel:`UTC`
+  * :guilabel:`UTC with offset`, to account for daylight savings offsets
+    or other complex time zone issues
+  * a specific :guilabel:`Time zone`
+
+  Moreover, :guilabel:`Leap seconds` correction can be applied, by adding the seconds to GPS timestamp.
 
 .. _defining_new_device:
 
@@ -2649,6 +2702,8 @@ in the QGIS user profile.
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |general| image:: /static/common/general.png
+   :width: 1.5em
+.. |gps| image:: /static/common/mIconGps.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
