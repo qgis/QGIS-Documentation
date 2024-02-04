@@ -1037,12 +1037,21 @@ Once the conditions are set, you can also either:
 Identifying Features
 --------------------
 
-The Identify tool allows you to interact with the map canvas and get information
-on features in a pop-up window. To identify features, use:
+The |identify| :sup:`Identify Features` tool allows you to interact with the map canvas
+and get information on features or pixels in a pop-up window.
+It can be used to query most of the layer types supported by QGIS
+(vector, raster, mesh, point cloud, wms, wfs, ...).
+To identify an element, use either:
 
 * :menuselection:`View --> Identify Features`
 * :kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),
-* |identify| :sup:`Identify Features` icon on the Attributes toolbar
+* |identify| :sup:`Identify Features` button on the :guilabel:`Attributes` toolbar
+
+Then click on a feature or pixel of the active layer.
+The identified item gets highlighted in the map canvas
+while the :guilabel:`Identify Results` dialog opens with detailed information on it.
+The dialog also shows a set of buttons for advanced configuration.
+
 
 The Identify Results dialog
 ...........................
@@ -1168,15 +1177,19 @@ may greatly improve identification operations:
    to avoid it being queried when using the |identify| :sup:`Identify Features` tool.
    This is a handy way to return features from only layers that are of interest to you.
 
-If you click on feature(s), the :guilabel:`Identify Results` dialog will list
-information about the feature(s) clicked. The default view is a tree view in which
-the first item is the name of the layer and its children are its identified feature(s).
-Each feature is described by the name of a field along with its value.
-This field is the one set in :menuselection:`Layer Properties --> Display`.
-All the other information about the feature follows.
+
+.. _`identified_information`:
 
 Feature information
 ...................
+
+When you identify a data in the map canvas, the :guilabel:`Identify Results` dialog will list
+information about the items clicked (or hovered over, depending on the tool in use).
+The default view is a tree view in which the first item is the name of the layer
+and its children are its identified feature(s).
+Each feature is described by the name of a field along with its value.
+This field is the one set in :menuselection:`Layer Properties --> Display`.
+All the other information about the feature follows.
 
 The feature information displayed by the identify tool will depend on the type 
 of layer you have selected, whether it is a vector layer (including vector tiles 
@@ -1234,8 +1247,8 @@ default it will display the following information:
 Results contextual menu
 .......................
 
-Other functions can be found in the context menu of the identified item. For
-example, from the context menu you can:
+Other functions can be found in the context menu of the identified item.
+For example, from the context menu you can:
 
 * View the feature form
 * Zoom to feature
