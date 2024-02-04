@@ -1054,16 +1054,63 @@ The Identify Results dialog
 
    Identify Results dialog
 
-At the top of the window, you have a handful of tools:
+From bottom to top:
 
-* |formView| :sup:`Open Form` of the current feature
-* |expandTree| :sup:`Expand tree`
-* |collapseTree| :sup:`Collapse tree`
-* |expandNewTree| :sup:`Expand New Results by Default` to define whether the next
-  identified feature's information should be collapsed or expanded
-* |deselectAll| :sup:`Clear Results`
-* |editCopy| :sup:`Copy selected feature to clipboard`
-* |filePrint| :sup:`Print selected HTML response`
+.. _identify_view:
+
+* The :guilabel:`View` controls the general aspect of the dialog
+  and the formatting of the results; it can be set as:
+
+  * **Tree**: this is the default view, and returns the results in a tree-structure
+  * **Table**: available only for raster-based layers, it allows to display the results
+    as a table whose columns are ``Layer``, ``FID``, ``Attribute`` and ``Value``
+  * or **Graph**: available only for raster-based layers
+
+  .. Todo: If ever someone has experience with the graph view...
+
+  .. _identify_mode:
+
+* The :guilabel:`Mode` helps you select the layers from which results could be returned.
+  These layers should be set visible, displaying data in the map canvas,
+  and set :ref:`identifiable <project_layer_capabilities>`
+  from the :menuselection:`Project properties --> Data Sources --> Layers capabilities`.
+  Available modes are:
+
+  * **Current layer**: only the layer(s) selected in the :guilabel:`Layers` panel
+    return results.
+    If a group is selected, then results are picked from its leaf layers.
+  * **Top down, stop at first**: results are from the layer of the top most feature or pixel
+    under the mouse.
+  * **Top down**: results are from the layers with feature or pixel under the mouse.
+  * **Layer selection**: opens a contextual menu where the user selects the layer
+    to identify features from.
+    If only a single feature is under the mouse, then the results are automatically displayed.
+
+* In the upper part of the :guilabel:`Identify Results` dialog,
+  a frame shows the :ref:`information <identified_information>` returned by features
+  as a table, a graph or a tree, depending on the :ref:`selected view <identify_view>`.
+  When in a tree view, you have a handful of tools above the results:
+
+  * |formView| :sup:`Open Form` of the current feature
+  * |expandTree| :sup:`Expand tree`
+  * |collapseTree| :sup:`Collapse tree`
+  * |expandNewTree| :sup:`Expand New Results by Default` to define whether the next
+    identified feature's information should be collapsed or expanded
+  * |deselectAll| :sup:`Clear Results`
+  * |editCopy| :sup:`Copy the identified feature to clipboard`, suitable for pasting in a spreadsheet.
+  * |filePrint| :sup:`Print selected HTML response`: a text-based formatting of the results
+    to print on paper or save as a :file:`.PDF` file
+  * drop-down menu with :ref:`tools for selecting <identify_selection>` features to identify
+  * Under |options| :sup:`Identify Settings`, you can activate whether to:
+
+    * |checkbox| :guilabel:`Auto open form for single feature results`:
+      If checked, each time a single feature is identified, a form opens showing its attributes.
+      This is a handy way to quickly edit a feature's attributes.
+    * |unchecked| :guilabel:`Hide derived attributes from results`
+      to only show fields actually defined in the layer
+    * |unchecked| :guilabel:`Hide NULL values from results`
+
+  * |helpContents|:sup:`Help` to access the current documentation
 
 .. _identify_selection:
 
@@ -1080,29 +1127,6 @@ At the top of the window, you have a handful of tools:
      right-click any existing polygon and use it to identify overlapping
      features in another layer.
 
-.. _identify_mode:
-
-At the bottom of the window are the :guilabel:`Mode` and :guilabel:`View` combo boxes.
-:guilabel:`Mode` defines from which layers features should be identified:
-
-* **Current layer**: only features from the selected layers are identified.
-  If a group is selected, features from its visible layers are identified. If there is no
-  selection then only the current layer is identified.
-* **Top down, stop at first**: only features from the upper visible layer.
-* **Top down**: all features from the visible layers. The results are shown in
-  the panel.
-* **Layer selection**: opens a context menu where the user selects the layer to
-  identify features from, similar to a right-click. Only the chosen features
-  will be shown in the result panel.
-
-The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
-'Table' and 'Graph' views can only be set for raster layers.
-
-The identify tool allows you to |checkbox|
-:guilabel:`Auto open form for single feature results`, found under |options|
-:sup:`Identify Settings`.
-If checked, each time a single feature is identified, a form opens
-showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
 Using the Identify Features tool
 ................................
@@ -2267,6 +2291,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.2em
+.. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
 .. |hideDeselectedLayers| image:: /static/common/mActionHideDeselectedLayers.png
