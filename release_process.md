@@ -39,6 +39,7 @@ Otherwise, you will have to do the changes twice: in master and in the new branc
 
 - [ ] In [substitutions.txt](substitutions.txt) file, replace |CURRENT| value with the new version number
 - [ ] In [docs_conf.yml](docs_conf.yml) file: add the new release number to the `version_list` parameter
+- [ ] In [dependabot.yml](.github/dependabot.yml) file: Add label for backporting dependencies update to the new branch
 
 #### After the new branch is created
 - [ ] In [substitutions.txt](substitutions.txt) file:
@@ -147,6 +148,7 @@ is being translated. So when a new LTR is published, we disconnect the old one a
   to the new LTR branch in which to pull translations from Transifex
 - [ ] In [translation_statistics.yml](.github/workflows/translation_statistics.yml): update target_branch
   to the branch(es) in which to generate translation statistics
+- [ ] In [dependabot.yml](.github/dependabot.yml) file: Remove label for backporting dependencies update to the old LTR version
 </details>
 
 ### Repository and project configuration
