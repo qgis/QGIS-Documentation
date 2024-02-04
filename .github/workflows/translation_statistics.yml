@@ -23,21 +23,21 @@ jobs:
     env:
       TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      BACKPORT_BRANCH: "release_3.28"
+      LABELS: "Translation, backport release_3.28, backport release_3.34"
 
     steps:
     - name: Harden Runner
-      uses: step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09 # v2.5.1
+      uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
       with:
         egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
 
     - name: Check out repository
-      uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.1.0
+      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       with:
         fetch-depth: 1
 
     - name: Set up Python 3.9
-      uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1 # v4.7.0
+      uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
       with:
         python-version: 3.9
 
@@ -56,13 +56,4 @@ jobs:
         commit-message: Update statistics of translation
         title: Update statistics of translation
         delete-branch: true
-        labels: |
-          Translation
-          backport ${{ env.BACKPORT_BRANCH }}
-
-    - name: Enable Pull Request Automerge
-      uses: peter-evans/enable-pull-request-automerge@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
-        merge-method: rebase
+        labels: ${{ env.LABELS }}
