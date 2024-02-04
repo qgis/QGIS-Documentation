@@ -1100,7 +1100,8 @@ From bottom to top:
   * |editCopy| :sup:`Copy the identified feature to clipboard`, suitable for pasting in a spreadsheet.
   * |filePrint| :sup:`Print selected HTML response`: a text-based formatting of the results
     to print on paper or save as a :file:`.PDF` file
-  * drop-down menu with :ref:`tools for selecting <identify_selection>` features to identify
+  * the :ref:`interactive identifying tools <identify_selection>`: a drop-down menu
+    with tools for selecting on the map canvas features or pixels to identify
   * Under |options| :sup:`Identify Settings`, you can activate whether to:
 
     * |checkbox| :guilabel:`Auto open form for single feature results`:
@@ -1114,49 +1115,58 @@ From bottom to top:
 
 .. _identify_selection:
 
-* selection tools to use to fetch features to identify:
-
-  * |identifyByRectangle| :sup:`Identify Features by area or single click`
-  * |identifyByMouseOver| :sup:`Identify Features on Mouse Over`
-  * |identifyByPolygon| :sup:`Identify Features by Polygon`
-  * |identifyByFreehand| :sup:`Identify Features by Freehand`
-  * |identifyByRadius| :sup:`Identify Features by Radius`
-
-  .. note::
-     When using |identifyByPolygon| :sup:`Identify Features by Polygon`, you can
-     right-click any existing polygon and use it to identify overlapping
-     features in another layer.
-
-
 Using the Identify Features tool
 ................................
 
-QGIS offers several ways to identify features with the |identify|
-:sup:`Identify Features` tool:
+In its default display (:guilabel:`View: Tree`), the :guilabel:`Identify Results` panel
+offers several tools to interact with the layers to query.
+A smart combination of these tools with the :ref:`target layers selector <identify_mode>`
+may greatly improve identification operations:
 
-* **left click** identifies features according to the
-  :ref:`selection mode <identify_mode>` and the
-  :ref:`selection tool <identify_selection>` active in the
-  :guilabel:`Identify Results` panel
-* **right click** with :guilabel:`Identify Feature(s)` as
-  :ref:`selection mode <identify_mode>` set in the :guilabel:`Identify Results`
-  panel fetches all snapped features from all visible layers.
-  This opens a context menu, allowing the user to choose more precisely the
-  features to identify or the action to execute on them.
-* **right click** with :guilabel:`Identify Features by Polygon` as
-  :ref:`selection mode <identify_mode>` in the :guilabel:`Identify Results` panel
-  identifies the features that overlap with the chosen existing polygon,
-  according to the :ref:`selection tool <identify_selection>`
-  set in the :guilabel:`Identify Results` panel
+* |identifyByRectangle| :sup:`Identify Feature(s)` by single click or click-and-drag
+
+  * single click or click-and-drag: overlaying features in the target layers are returned
+  * right-click: overlaying features from target layers are listed in the contextual menu,
+    grouped by layers. You can then choose to:
+
+    * display the result for a specific feature,
+    * display the result for all the features of a specific layer,
+    * for vector layers, it is also possible to open its attribute table
+      filtered to the returned features
+    * or show all of the returned features.
+* |identifyByMouseOver| :sup:`Identify Features on Mouse over`:
+  move over the map canvas and hovered items in the target layers get highlighted
+  and returned in the results panel.
+* |identifyByPolygon| :sup:`Identify Features by Polygon`:
+  returns items overlapping a drawn or selected polygon.
+
+  * Draw a polygon (left click to add point, right click to close the polygon)
+    and all the overlaying features from target layers are highlighted
+    and returned in the results panel.
+  * Right-click and you get the list of all visible polygon features
+    in the project under the click.
+    Pick an entry and QGIS will return all the features from the target layers
+    that overlap the selected polygon.
+* |identifyByFreehand| :sup:`Identify Features by Freehand`:
+  returns items overlapping a polygon drawn by freehand.
+  Draw a polygon (left-click to start, move the pointer to shape the area
+  and right-click to close the polygon).
+  All the overlaying features from target layers are highlighted
+  and returned in the results panel.
+* |identifyByRadius| :sup:`Identify Features by Radius`
+  returns items overlapping a drawn circle.
+  Draw a cercle (left-click to indicate the center point,
+  move the pointer to shape the area or enter the radius in the pop-up text box
+  and left-click or press :kbd:`Enter` to validate the circle).
+  All the overlaying features from target layers are highlighted
+  and returned in the results panel.
 
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
-   Under :guilabel:`Layer Capabilities` in :menuselection:`Project --> Properties...
-   --> Data Sources`, uncheck the :guilabel:`Identifiable` column next to a
-   layer to avoid it
-   being queried when using the |identify| :sup:`Identify Features` tool in a mode
-   other than **Current Layer**. This is a handy way to return features from
-   only layers that are of interest for you.
+   Under :menuselection:`Project --> Properties... --> Data Sources --> Layer Capabilities`,
+   uncheck the :guilabel:`Identifiable` column next to a layer
+   to avoid it being queried when using the |identify| :sup:`Identify Features` tool.
+   This is a handy way to return features from only layers that are of interest to you.
 
 If you click on feature(s), the :guilabel:`Identify Results` dialog will list
 information about the feature(s) clicked. The default view is a tree view in which
