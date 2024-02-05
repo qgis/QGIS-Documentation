@@ -841,11 +841,6 @@ located in the :file:`cgi-bin` folder.
 WMS capabilities
 ----------------
 
-In the :guilabel:`WMS capabilities` tab, you can define
-the extent advertised in the WMS GetCapabilities response by entering
-the minimum and maximum X and Y values in the fields under
-:guilabel:`Advertised extent`.
-
 .. _figure_wms_definitions:
 
 .. figure:: img/ows_server_wms.png
@@ -853,8 +848,11 @@ the minimum and maximum X and Y values in the fields under
 
    Definitions in the WMS tab
 
-Clicking :guilabel:`Use Current Canvas Extent` sets these values to the
-extent currently displayed in the QGIS map canvas.
+In the :guilabel:`WMS capabilities` tab, check :guilabel:`Advertised extent`
+to define the extent advertised in the WMS GetCapabilities response.
+The :ref:`spatial extent selector <extent_selector>` widget helps you enter the extent
+as a ``xmin, xmax, ymin, ymax`` text or pick it from the map canvas, layers, bookmarks...
+
 By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
 in which coordinate reference systems (CRS) QGIS Server will offer
 to render maps. It is recommended that you restrict the offered CRS as this
@@ -901,6 +899,12 @@ to segmentize the geometry before sending it to the client in a GetFeatureInfo
 response. This allows such clients to still display a feature’s geometry
 (e.g. for highlighting the feature). You need to check the
 |checkbox| :guilabel:`Segmentize feature info geometry` to activate the option.
+
+When a layer group is passed to ``GetLegendGraphic`` request,
+all of its leaf layers are added to the legend picture (however without the groups' labels).
+Check the |checkbox| :guilabel:`Add layer groups in GetLegendGraphic` option
+if you want to also insert the layer groups (and subgroups) names
+into the layer tree, just like in QGIS Desktop legend.
 
 You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
 set the precision of the GetFeatureInfo geometry. This enables you to save
