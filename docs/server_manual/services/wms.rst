@@ -862,6 +862,7 @@ and item labels:
    ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`", "No", "Item label italic rendering"
    ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`", "No", "Item label color"
    ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`", "No", "Adds the rule text to JSON output"
+   ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`", "No", "Adds the layer groups to JSON output"
 
 
 .. _wms_getlegendgraphic_bbox:
@@ -1564,6 +1565,49 @@ And the corresponding JSON output:
         "rule": "type = 'airport'"
       }
     ],
+    "title":""
+  }
+
+.. _wms_getlegendgraphic_addlayergroups:
+
+ADDLAYERGROUPS
+^^^^^^^^^^^^^^
+
+This parameter specifies if the JSON output will also
+display the names of the layers groups (and subgroups) in the legend entry.
+Possible values are:
+
+- ``TRUE``: display the groups labels
+- ``FALSE`` (default): hide the groups labels
+
+.. figure:: ../img/wms_getlegendgraphic_addlayergroups.png
+   :align: center
+
+   Legend without (left) and with (right) layer groups labels display
+
+The corresponding JSON output showing groups name would look like:
+
+.. code-block:: json
+
+  { "nodes":
+    [{ "nodes":
+       [{ "icon":"iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAUklEQVQ4jWNgGAXDHzASUqCsrPwfmX/37l28evBKKisr/0+a7IMiNi93C15DcUpgM4wYQ5nwuZAcMIQNvHv3LuO83C0kG0hysoFZRrJNo2AYAQC87BpkGQj1fwAAAABJRU5ErkJggg==",
+          "title":"layer_a", "type":"layer"
+       },
+       { "nodes":
+         [{ "icon":"iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAHUlEQVQ4jWNgGAWjYCQDxh887r8G2hGjYBQMGAAA1x0CR0FzIkYAAAAASUVORK5CYII=",
+            "title":"layer_b", "type":"layer"
+          },
+          { "icon":"iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAHUlEQVQ4jWNgGAWjYCQDxtmzZ/8aaEeMglEwYAAAaIoCzTtn5XoAAAAASUVORK5CYII=",
+            "title":"layer_c", "type":"layer"
+         }],
+         "title":"lines", "type":"group"
+       },
+       { "icon":"iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAKklEQVQ4jWNUVlX/z0AlwMLAwMDAnXmQKoYxUcWUUcNGDRs1bNSwYWYYACXDAsvQaTuVAAAAAElFTkSuQmCC",
+         "title":"layer_d", "type":"layer"
+       }],
+       "title":"top-level-group", "type":"group"
+    }],
     "title":""
   }
 
