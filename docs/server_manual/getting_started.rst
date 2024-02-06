@@ -906,6 +906,14 @@ Check the |checkbox| :guilabel:`Add layer groups in GetLegendGraphic` option
 if you want to also insert the layer groups (and subgroups) names
 into the layer tree, just like in QGIS Desktop legend.
 
+When QGIS project contains layer groups, they are listed in WMS capabilities document alongside with layers.
+If a group (its name as listed in capabilities) is included in WMS GetMap ``LAYERS`` parameter
+alongside with names of layers in that group, QGIS would duplicate the layers:
+once for the group and once for specific layer.
+If you check the |checkbox| :guilabel:`Skip name attribute for groups` option,
+GetCapabilities will only return title attribute for the group but not its name attribute,
+making it impossible to include groups in list of layers of GetMap request.
+
 You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
 set the precision of the GetFeatureInfo geometry. This enables you to save
 bandwidth when you don't need the full precision.
