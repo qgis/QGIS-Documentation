@@ -2068,7 +2068,20 @@ fields related to the layer and helps you organize them.
 The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
 :sup:`Toggle editing mode`. At this moment, you can modify its structure using
 the |newAttribute| :sup:`New field` and |deleteAttribute| :sup:`Delete field`
-buttons.  
+buttons.
+
+When creating |newAttribute| :sup:`New field`, the :guilabel:`Comment` option is
+available only for data sources that allow editing comments (currently PostgreSQL),
+preventing QGIS from silently discarding information. You can also set aliases within 
+:guilabel:`Add Field` dialog, for supported OGR formats
+(GeoPackage and ESRI File Database).
+
+.. _figure_add_field:
+
+.. figure:: img/add_field_comments_aliases.png
+   :align: center
+
+   Add Field Dialog
 
 You can also rename fields by double-clicking its name. This is only supported
 for data providers like PostgreSQL, Oracle, Memory layer and some GDAL layers
@@ -2077,8 +2090,7 @@ depending on the GDAL version.
 If set in the underlying data source or in the :ref:`forms properties
 <configure_field>`, the field's alias is also displayed. An alias is a human
 readable field name you can use in the feature form or the attribute table.
-Aliases are saved in the project file. Currently supported for OGR formats
-with field comment capabilities such as GeoPackage or ESRI File Geodatabase.
+Aliases are saved in the project file. 
 
 Other than the fields contained in the dataset, :ref:`virtual fields <virtual_field>`
 and :ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
@@ -2092,9 +2104,7 @@ its :guilabel:`Type`, :guilabel:`Type name`, :guilabel:`Length` and
 Depending on the data provider, you can associate a comment with a field, for
 example at its creation. This information is retrieved and shown in the
 :guilabel:`Comment` column and is later displayed when hovering over the
-field label in a feature form. Currently supported for OGR formats with field 
-comment capabilities such as GeoPackage, ESRI File Geodatabase, NetCDF, 
-or Geoparquet, as well as PostgreSQL data sources.
+field label in a feature form. 
 
 Under the :guilabel:`Configuration` column, you can set how the field should
 behave in certain circumstances:
