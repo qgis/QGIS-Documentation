@@ -422,7 +422,13 @@ Mask tab
 
 The |labelmask| :guilabel:`Mask` tab allows you to define a mask area around
 the labels. This feature is very useful when you have overlapping symbols and
-labels with similar colors, and you want to make the labels visible.
+labels with similar colors, and you want to make the labels visible. A label mask 
+prevents specified features from drawing within the boundary set for the mask. 
+For example, you could set a label mask so that a specified layer does not draw 
+within 2mm of the label, but allow features from another layer to still show. 
+Label masks are similar to label buffers in that they allow control of the legibility 
+of labels that cover other features. The label buffer draws on top of any underlying
+features, while the label mask selectively stops other layers from drawing. 
 
 .. _figure_label_mask:
 
