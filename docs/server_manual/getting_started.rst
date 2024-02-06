@@ -910,9 +910,9 @@ When QGIS project contains layer groups, they are listed in WMS capabilities doc
 If a group (its name as listed in capabilities) is included in WMS GetMap ``LAYERS`` parameter
 alongside with names of layers in that group, QGIS would duplicate the layers:
 once for the group and once for specific layer.
-Check the |checkbox| :guilabel:`Skip name attribute for groups` option
-to avoid the duplication: group names are not returned in GetCapabilities
-and only the leaf layers can be requested in GetMap.
+If you check the |checkbox| :guilabel:`Skip name attribute for groups` option,
+GetCapabilities will only return title attribute for the group but not its name attribute,
+making it impossible to include groups in list of layers of GetMap request.
 
 You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
 set the precision of the GetFeatureInfo geometry. This enables you to save
