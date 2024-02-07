@@ -554,7 +554,7 @@ Takes a list of key:value pairs separated by semicolon:
 * MODE: corresponds to the export options offered in the QGIS
   Desktop DXF export dialog. Possible values are ``NOSYMBOLOGY``,
   ``FEATURESYMBOLOGY`` and ``SYMBOLLAYERSYMBOLOGY``.
-* LAYERSATTRIBUTES: specify a field that contains values for DXF
+* LAYERSATTRIBUTES: specify a field or in case of many layers a comma separated list of fields that contains values for DXF
   layer names - if not specified, the original QGIS layer names are used.
 * USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will
   be used as layer name.
