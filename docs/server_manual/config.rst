@@ -222,7 +222,7 @@ several ways to define these variables. This is fully described in
 
    * - QGIS_SERVER_PROJECT_CACHE_CHECK_INTERVAL
      - Controls the periodic strategy interval for cache invalidation, in milliseconds.
-       Default to 0 which select the legacy File system watcher.
+       Defaults to 0 which selects the legacy File system watcher.
      -
      - All
 
