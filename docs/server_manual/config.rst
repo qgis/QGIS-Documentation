@@ -221,7 +221,8 @@ several ways to define these variables. This is fully described in
      - WMS
 
    * - QGIS_SERVER_PROJECT_CACHE_CHECK_INTERVAL
-     - Controls the periodic strategy interval for cache invalidation
+     - Controls the periodic strategy interval for cache invalidation, in milliseconds.
+       Default to 0 which select the legacy File system watcher.
      -
      - All
 
