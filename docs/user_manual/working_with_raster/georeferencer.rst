@@ -255,17 +255,11 @@ You can customise the behaviour of the georeferencer in
 :menuselection:`Settings --> Configure Georeferencer` (or use keyboard shortcut 
 :kbd:`Ctrl+P`). 
 
-* Under :guilabel:`Point Tip` you can use the checkboxes to toggle displaying 
-GCP IDs and X/Y coordinates to show in both the Georeferencer window and the 
-main map canvas. 
-* :guilabel:`Residual Units` controls whether residual units are given in pixels
-or map units.
-* :guilabel:`PDF Report` allows you to set margin size in mm for the report 
-export.
+* Under :guilabel:`Point Tip` you can use the checkboxes to toggle displaying GCP IDs and X/Y coordinates to show in both the Georeferencer window and the main map canvas. 
+* :guilabel:`Residual Units` controls whether residual units are given in pixels or map units.
+* :guilabel:`PDF Report` allows you to set margin size in mm for the report export.
 * :guilabel:`PDF Map` allows you to choose a paper size for the map export.
-* Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window docked`. 
-This will dock the Georeferencer window in the main QGIS window rather than 
-showing it as a separate window that can be minimised. 
+* Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window docked`. This will dock the Georeferencer window in the main QGIS window rather than showing it s a separate window that can be minimised. 
 
 
 .. _`georeferencer_running`:
