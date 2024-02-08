@@ -2183,7 +2183,7 @@ will open and allow you to configure:
 * the :guilabel:`Sensor name`: used to retrieve sensor values in expressions and
   python scripts;
 * the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and
-* additional type-specific details (e.g. host name and port)
+* additional type-specific details (e.g. host name and port). For serial port sensors, comboboxes with the system's available serial ports and connection baudrate are available for their selection.
 
 .. _figure_sensors_configuration:
 
