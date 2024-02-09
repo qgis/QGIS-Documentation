@@ -108,6 +108,15 @@ Entering ground control points (GCPs)
      :sup:`From map canvas` button to add the X and Y coordinates with the help of a
      georeferenced map already loaded in the QGIS map canvas. The CRS will be set
      automatically.
+   - When entering GCPs from the main map canvas, users have the option to hide 
+     the Georeferencer window wile selecting points from the main canvas. If the
+     |checkbox| :guilabel:`Automatically hide georeferencer windows` checkbox is 
+     ticked, after clicking |pencil| :guilabel:`From Map Canvas`, the main 
+     georeferencer window will be hidden until a point is added on the map canvas. 
+     The :guilabel:`Enter Map Coordinates` dialog will remain open. If the box is 
+     unchecked, both windows will remain open while selecting a point on the map 
+     canvas. This option only takes effect when the georeferencer window is not 
+     docked in the main interface. 
 
 #. Continue entering points. You should have at least four points, and the more
    coordinates you can provide, the better the result will be. There are
@@ -251,14 +260,19 @@ raster file that you want to georeference.
 
 Configure the georeferencer
 ...........................
-You can customise the behaviour of the georeferencer in :menuselection:`Settings --> Configure Georeferencer` 
-(or use keyboard shortcut :kbd:`Ctrl+P`). 
+You can customise the behaviour of the georeferencer in :menuselection:`Settings 
+--> Configure Georeferencer` (or use keyboard shortcut :kbd:`Ctrl+P`). 
 
-* Under :guilabel:`Point Tip` you can use the checkboxes to toggle displaying GCP IDs and X/Y coordinates to show in both the Georeferencer window and the main map canvas. 
-* :guilabel:`Residual Units` controls whether residual units are given in pixels or map units
+* Under :guilabel:`Point Tip` you can use the checkboxes to toggle displaying GCP 
+  IDs and X/Y coordinates to show in both the Georeferencer window and the main 
+  map canvas. 
+* :guilabel:`Residual Units` controls whether residual units are given in pixels 
+  or map units
 * :guilabel:`PDF Report` allows you to set margin size in mm for the report export
 * :guilabel:`PDF Map` allows you to choose a paper size for the map export
-* Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window docked`. This will dock the Georeferencer window in the main QGIS window rather than showing it as a separate window that can be minimised. 
+* Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window 
+  docked`. This will dock the Georeferencer window in the main QGIS window rather 
+  than showing it as a separate window that can be minimised. 
 
 .. _`georeferencer_running`:
 
