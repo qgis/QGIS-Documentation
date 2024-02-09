@@ -100,7 +100,7 @@ You can setup some parameters that apply to the global symbol:
   * or as icon preview using the |iconView| :sup:`Icon View` button.
 
 * Press the :guilabel:`Save Symbol` button to add the symbol being edited to the
-  symbols library. 
+  symbols library or style database.
 * With the :guilabel:`Advanced` |selectString| option, you can:
 
   * for line and fill symbols, :guilabel:`Clip features to canvas extent`.
