@@ -1102,19 +1102,19 @@ following information in the :guilabel:`Connection Details` dialog:
 * :guilabel:`Login` information. You can choose
   to |checkbox| :guilabel:`Save` your credentials.
 
-In the :guilabel:`Database Details` section, press the 
-:guilabel:`List Databases` button to display available datasets. 
-Select datasets that you want, then press :guilabel:`OK`. You can also
-choose to :guilabel:`Test Connection`, it is optional. After you press 
-:guilabel:`OK` the :guilabel:`Create a New MS SQL Server Connection` dialog
-will be closed and in the :guilabel:`Data Source Manager` press :guilabel:`Connect`,
-choose a layer and click :guilabel:`Add`. 
+Navigate to the :guilabel:`Database Details` section and click the
+:guilabel:`List Databases` button to view the available datasets.
+Select datasets that you want, then press :guilabel:`OK`.
+Optionally, you can also perform a :guilabel:`Test Connection`.
+Once you click :guilabel:`OK` the :guilabel:`Create a New MS SQL Server Connection` dialog
+will close and in the :guilabel:`Data Source Manager` press :guilabel:`Connect`,
+select a layer and then click :guilabel:`Add`.
 
 Optionally, you can activate the following options:
 
 * |checkbox| :guilabel:`Only look in the geometry_columns metadata table`.
 * |checkbox| :guilabel:`Use layer extent from geometry_columns table`, 
-  this checkbox is dependent on the first one; it remains disabled unless 
+  this checkbox is dependent on the first one; it remains disabled unless
   the first option is checked.
 * |checkbox| :guilabel:`Use primary key from geometry_columns table`
 * |checkbox| :guilabel:`Also list table with no geometry`: tables without a 
