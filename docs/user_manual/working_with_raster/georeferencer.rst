@@ -108,9 +108,9 @@ Entering ground control points (GCPs)
      :sup:`From map canvas` button to add the X and Y coordinates with the help of a
      georeferenced map already loaded in the QGIS map canvas. The CRS will be set
      automatically.
-   - When entering GCPs from the main map canvas, users have the option to hide 
-     the Georeferencer window wile selecting points from the main canvas. 
-     If the |checkbox| :guilabel:`Automatically hide georeferencer windows` 
+   - When entering GCPs from the main map canvas, you have the option to hide 
+     the georeferencer window while selecting points from the main canvas. 
+     If the |checkbox| :guilabel:`Automatically hide georeferencer window` 
      checkbox is ticked, after clicking |pencil| :guilabel:`From Map Canvas`, 
      the main georeferencer window will be hidden until a point is added on the 
      map canvas. 
@@ -262,6 +262,7 @@ raster file that you want to georeference.
 
 Configure the georeferencer
 ...........................
+
 You can customize the behavior of the georeferencer in :menuselection:`Settings 
 --> Configure Georeferencer` (or use keyboard shortcut :kbd:`Ctrl+P`). 
 
