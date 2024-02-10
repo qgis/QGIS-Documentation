@@ -1174,11 +1174,11 @@ copy or paste layer properties (style, scale, CRS...).
    * - :guilabel:`Layer Properties...`
      -
      -
-     - :ref:`vector_properties_dialog`,
-       :ref:`raster_properties_dialog`,
-       :ref:`label_meshproperties`,
-       :ref:`point_clouds_properties`,
-       :ref:`vectortiles_properties`
+     - * :ref:`vector <vector_properties_dialog>`
+       * :ref:`raster <raster_properties_dialog>`
+       * :ref:`mesh <label_meshproperties>`
+       * :ref:`point cloud <point_clouds_properties>`
+       * :ref:`vector tiles <vectortiles_properties>`
    * - :guilabel:`Filter...`
      - :kbd:`Ctrl+F`
      -
