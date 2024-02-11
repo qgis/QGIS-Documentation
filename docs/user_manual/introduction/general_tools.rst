@@ -2104,8 +2104,8 @@ Clicking the |dataDefine| :sup:`Data defined override` icon shows the following 
 * :guilabel:`Description...` that indicates if the option is enabled, which input is
   expected, the valid input type and the current definition. Hovering over the
   widget also pops up this information.
-* :guilabel:`Store data in the project`: a button allowing  the property to be stored
-  using to the :ref:`vector_auxiliary_storage` mechanism.
+* :guilabel:`Store data in the project`: a button allowing the property to be stored
+  using the :ref:`vector_auxiliary_storage` mechanism.
 * :guilabel:`Field type`: an entry to select from the layer's fields that match the
   valid input type.
 * :guilabel:`Color`: when the widget is linked to a color property, this menu
