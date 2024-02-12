@@ -378,6 +378,15 @@ To load a layer from a file:
       Loading a Shapefile with open options
 
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
+   When adding vector datasets containing multiple layers, the 
+   :guilabel:`Select Items to Add` dialog will appear. In this dialog, you can 
+   choose the specific layers from your dataset that you want to add. 
+   Also, under :guilabel:`Options` you can choose to:
+
+   * |checkbox|:guilabel:`Add layers to a group`
+   * |checkbox|:guilabel:`Show system and internal tables`
+   * |checkbox|:guilabel:`Show empty vector layers`.
+   
    :numref:`figure_vector_loaded` shows QGIS after loading the :file:`alaska.shp` file.
 
    .. _figure_vector_loaded:
@@ -440,6 +449,9 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
     A :guilabel:`URI` is required, with optional :ref:`authentication <authentication_index>`.
   * For all vector source types it is possible to define the :guilabel:`Encoding` or
     to use the :menuselection:`Automatic -->` setting.
+
+
+
 
 .. _mesh_loading:
 
