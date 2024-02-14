@@ -66,10 +66,10 @@ To make a catalog we will use the
    next to the :guilabel:`Input layers` parameter and check all the
    layers or use the :guilabel:`Select All` button;
 #. Uncheck :guilabel:`Place each input file into a separate band`.
-   Notice the text field below.
-   What this dialog is actually doing is that it is writing that text
-   for you.
-   It is a long command that QGIS is going to run.
+   Notice the code that is generated at the bottom of the dialog under 
+   :guilabel:`GDAL/OGR console call`. This is the command that will be executed 
+   when you click :guidelabel:`OK`. The text updates as you change different 
+   options in the dialog.
 
    .. note:: Keep in mind that you can copy and paste the text in the
        ``OSGeo Shell`` (Windows user) or ``Terminal`` (Linux and OSX
@@ -84,7 +84,8 @@ To make a catalog we will use the
 
 .. note:: As you know from the previous modules,
    :guilabel:`Processing` creates temporary layers by default. 
-   To save the file click on the :guilabel:`...` button.
+   To save the file, click on the :guilabel:`...` button under 
+   :guilabel:`Virtual`.
 
 .. figure:: img/build_virtual_raster.png
    :align: center
