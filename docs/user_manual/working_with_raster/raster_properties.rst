@@ -1,6 +1,33 @@
 .. index:: Raster, Layer properties
 .. _raster_properties_dialog:
 
+***************************
+Introduction to Raster Data
+***************************
+
+Raster data is made up of pixels (or cells), and each pixel has a value.
+Raster data is commonly used to store imagery, such as satellite images,
+digital aerial photos, and scanned maps. It is also used to store elevation data,
+such as digital elevation models, or DEMs. Raster data is also used to store other
+types of data, such as land cover, soils, and other types of information.
+Supported formats include GeoTIFF, Erdas Imagine, ArcInfo ASCII Grid, and many others.
+See more at :ref:`opening_data`.
+
+**Worth knowing**
+
+The |identify|:guilabel:`Identify features` tool allows you to get information about
+specific points in a raster layer. 
+
+To use the |identify|:guilabel:`Identify features` tool:
+
+* Select the raster layer in the Layers panel.
+* Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
+* Click on the point in the raster layer that you want to identify.
+
+The Identify Results panel will open and display information about the clicked point.
+For raster layers, this includes the row and column of the clicked point.
+
+
 ************************
 Raster Properties Dialog
 ************************
@@ -991,6 +1018,8 @@ The configuration concerns:
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
