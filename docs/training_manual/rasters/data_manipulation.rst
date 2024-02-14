@@ -68,7 +68,7 @@ To make a catalog we will use the
 #. Uncheck :guilabel:`Place each input file into a separate band`.
    Notice the code that is generated at the bottom of the dialog under 
    :guilabel:`GDAL/OGR console call`. This is the command that will be executed 
-   when you click :guidelabel:`OK`. The text updates as you change different 
+   when you click :guilabel:`OK`. The text updates as you change different 
    options in the dialog.
 
    .. note:: Keep in mind that you can copy and paste the text in the
