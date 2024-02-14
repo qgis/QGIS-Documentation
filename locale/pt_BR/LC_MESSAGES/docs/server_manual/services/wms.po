@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Gabriel, 2023
-# Transifex Bot <>, 2023
+# Transifex Bot <>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-15 15:33+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Transifex Bot <>, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -87,7 +87,7 @@ msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Returns XML metadata with information about the server"
-msgstr ""
+msgstr "Retorna metadados XML com informações sobre o servidor"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetMap <wms_getmap>`"
@@ -104,6 +104,10 @@ msgstr ""
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Retrieves data (geometry and values) for a pixel location"
 msgstr "Recupera dados (geometria e valores) para uma localização de pixel"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Returns legend symbols"
@@ -696,6 +700,10 @@ msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:333
 msgid "``image/png; mode=16bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:334
+msgid "``image/webp``"
 msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:335
@@ -1345,6 +1353,26 @@ msgstr ""
 "adicionar a geometria à resposta do recurso. Veja :ref:`Configure your "
 "project <Creatingwmsfromproject>`."
 
+#: ../../docs/server_manual/services/wms.rst:797
+msgid "GetLegendGraphic"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BBOX <wms_getlegendgraphic_bbox>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WIDTH <wms_getlegendgraphic_width>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`HEIGHT <wms_getlegendgraphic_height>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getlegendgraphic_format>`"
+msgstr ""
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Legend format"
 msgstr "Formato da legenda"
@@ -1360,92 +1388,184 @@ msgstr ""
 "título de camada e rótulos de itens:"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRCWIDTH <wms_getlegendgraphic_srcwidth>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Map width"
 msgstr "Largura do mapa"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRCHEIGHT <wms_getlegendgraphic_srcheight>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Map height"
 msgstr "Altura do mapa"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphic_showfeaturecount>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Add feature count of features"
 msgstr "Adicionar recurso de contador de recursos "
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`RULE <wms_getlegendgraphic_rule>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Rule symbol to render"
 msgstr "Regra símbolo para renderizar."
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`RULELABEL <wms_getlegendgraphic_rulelabel>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Item labels rendering"
 msgstr "Renderização do item \"rótulos\" "
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BOXSPACE <wms_getlegendgraphic_boxspace>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Space between legend frame and content (mm)"
 msgstr "Espaço entre o quadro da legenda e o conteúdo (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERSPACE <wms_getlegendgraphic_layerspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Vertical space between layers (mm)"
 msgstr "Espaço vertical entre camadas (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERTITLESPACE <wms_getlegendgraphic_layertitlespace>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Vertical space between layer title and items (mm)"
 msgstr "Espaço vertical entre o título da camada e os itens (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLSPACE <wms_getlegendgraphic_symbolspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Vertical space between symbol and items (mm)"
 msgstr "Espaço vertical entre o símbolo e os itens (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ICONLABELSPACE <wms_getlegendgraphic-iconlabelspace>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Horizontal space between symbol and label (mm)"
 msgstr "Espaço horizontal entre o símbolo e o rótulo (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLWIDTH <wms_getlegendgraphic_symbolwidth>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Width of the symbol preview (mm)"
 msgstr "Largura da pré-visualização do símbolo (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLHEIGHT <wms_getlegendgraphic_symbolheight>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Height of the symbol preview (mm)"
 msgstr "Altura da visualização do símbolo (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERTITLE <wms_getlegendgraphic_layertitle>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Layer title rendering"
 msgstr "Renderização da camada \"título\""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Layer font family"
 msgstr "Família de fontes da camada"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Layer title bold rendering"
 msgstr "Renderização em negrito do título da camada "
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTSIZE <wms_getlegendgraphic_layerfontsize>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Layer title font size (pt)"
 msgstr "Tamanho da fonte do título da camada (pt)"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTITALIC <wms_getlegendgraphic_layerfontitalic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Layer title italic rendering"
 msgstr "Renderização em itálico do título da camada"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTCOLOR <wms_getlegendgraphic_layerfontcolor>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Layer title color"
 msgstr "Cor do título da camada"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTFAMILY <wms_getlegendgraphic_itemfontfamily>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Item font family"
 msgstr "Família de fontes do item"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTBOLD <wms_getlegendgraphic_itemfontbold>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Item label bold rendering"
 msgstr "Renderização em negrito do rótulo do item"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Item label font size (pt)"
 msgstr "Tamanho da fonte do rótulo do item (pt)"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Item label italic rendering"
 msgstr "Renderização em itálico do item \"rótulo\""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Item label color"
