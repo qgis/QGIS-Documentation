@@ -111,6 +111,23 @@ calculations to all or part of the features in the layer. This bar uses the same
 Calculator` (see :ref:`calculate_fields_values`).
 
 
+Using the Identify Tool with Attribute Table
+--------------------------------------------
+
+The |identify| :guilabel:`Identify features` tool can be used to display all attributes
+of a feature from the attribute table in the :guilabel:`Identify Results` dialog.
+
+To use the :guilabel:`Identify features` tool for vector layers, follow these steps:
+
+* Select the vector layer in the Layers panel.
+* Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
+* Click on a feature in the map view.
+
+:guilabel:`Identify Results` dialog will open and display information about
+the clicked feature. This tool allows you to quickly view and verify all data
+that the vector layer stores in its attribute table for specific features,
+without having to search for them in the attribute table.
+
 .. _attribute_table_view:
 
 Table view vs Form view
@@ -832,6 +849,8 @@ from the external storage system. In that case, more details might appear in the
 .. |handleStoreFilterExpressionUnchecked| image:: /static/common/mActionHandleStoreFilterExpressionUnchecked.png
    :width: 1.5em
 .. |highlightFeature| image:: /static/common/mActionHighlightFeature.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
