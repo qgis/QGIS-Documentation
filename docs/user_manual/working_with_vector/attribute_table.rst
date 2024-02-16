@@ -34,6 +34,57 @@ values, or a range of values that are allowed, to be added to a specific vector
 layer during digitizing. Have a closer look at the edit widget in section
 :ref:`vector_attributes_menu` to find out more.
 
+.. _identify_features_vector:
+
+Using the Identify Tool with Attribute Table
+============================================
+
+The |identify| :guilabel:`Identify features` tool can be used to display all attributes
+of a feature in the map canvas. It is a quick way to view and verify all data without
+having to search for it in the attribute table.
+
+To use the :guilabel:`Identify features` tool for vector layers, follow these steps:
+
+#. Select the vector layer in the Layers panel.
+#. Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
+#. Click on a feature in the map view.
+
+The :guilabel:`Identify results` panel will display different features information
+depending on the layer type. There are two columns in the panel, on the left side
+you can see :guilabel:`Feature` and on the right side :guilabel:`Value`.
+Under the :guilabel:`Feature` column, panel will display following information:
+
+* **Derived** section - those are the information calculated or derived from other
+  information in the layer. For example, the area of a polygon or the length of a line.
+  General information that can be found in this section:
+
+  * Depending on the geometry type, cartesian measurements of length, perimeter, or area
+    in the layer's CRS units. For 3D line vectors, the cartesian line length is available.
+  * Depending on the geometry type and if an ellipsoid is set in the :guilabel:`Project Properties`
+    dialog (:guilabel:`General` --> :guilabel:`Measurements`), ellipsoidal values
+    of length, perimeter, or area using the specified units.
+  * The count of geometry parts in the feature and the number of the part clicked.
+  * The count of vertices in the feature.
+
+  Coordinate information that can be found in this section:
+  
+  * X and Y coordinate values of the clicked point.
+  * The number of the closest vertex to the clicked point.
+  * X and Y coordinate values of the closest vertex.
+  * If you click on a curved segment, the radius of that section is also displayed.
+
+* **Data attributes**: This is the list of attribute fields and values for the
+  feature that has been clicked.
+* information about the related child feature if you defined a :ref:`relation <vector_relations>`:
+
+  * the name of the relation
+  * the entry in reference field, e.g. the name of the related child feature
+  * **Actions**: lists actions defined in the layer's properties dialog (see :ref:`actions_menu`)
+    and the default action is ``View feature form``.
+  * **Data attributes**: This is the list of attributes fields and values of the
+    related child feature.
+
+
 .. _attribute_table_overview:
 
 Introducing the attribute table interface
@@ -110,23 +161,6 @@ calculations to all or part of the features in the layer. This bar uses the same
 :ref:`expressions <vector_expressions>` as the |calculateField| :sup:`Field
 Calculator` (see :ref:`calculate_fields_values`).
 
-
-Using the Identify Tool with Attribute Table
---------------------------------------------
-
-The |identify| :guilabel:`Identify features` tool can be used to display all attributes
-of a feature from the attribute table in the :guilabel:`Identify Results` dialog.
-
-To use the :guilabel:`Identify features` tool for vector layers, follow these steps:
-
-* Select the vector layer in the Layers panel.
-* Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
-* Click on a feature in the map view.
-
-:guilabel:`Identify Results` dialog will open and display information about
-the clicked feature. This tool allows you to quickly view and verify all data
-that the vector layer stores in its attribute table for specific features,
-without having to search for them in the attribute table.
 
 .. _attribute_table_view:
 
