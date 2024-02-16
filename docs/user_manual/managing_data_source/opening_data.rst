@@ -1099,32 +1099,39 @@ following information in the :guilabel:`Connection Details` dialog:
 * :guilabel:`Connection name`
 * :guilabel:`Provider/DNS`
 * :guilabel:`Host`
-* :guilabel:`Login` information
+* :guilabel:`Login` information. You can choose
+  to |checkbox| :guilabel:`Save` your credentials.
 
-After you connect to MS SQL Server, in the :guilabel:`Database Details` 
-you are able to display databases by clicking on the :guilabel:`List Databases`.
+Navigate to the :guilabel:`Database Details` section and click the
+:guilabel:`List Databases` button to view the available datasets.
+Select datasets that you want, then press :guilabel:`OK`.
+Optionally, you can also perform a :guilabel:`Test Connection`.
+Once you click :guilabel:`OK` the :guilabel:`Create a New MS SQL Server Connection` dialog
+will close and in the :guilabel:`Data Source Manager` press :guilabel:`Connect`,
+select a layer and then click :guilabel:`Add`.
 
-Optionally, you can activate the following checkboxes:
+Optionally, you can activate the following options:
 
 * |checkbox| :guilabel:`Only look in the geometry_columns metadata table`.
 * |checkbox| :guilabel:`Use layer extent from geometry_columns table`, 
-  this checkbox is dependent on the first one; it remains disabled unless 
+  this checkbox is dependent on the first one; it remains disabled unless
   the first option is checked.
 * |checkbox| :guilabel:`Use primary key from geometry_columns table`
-* |checkbox| :guilabel:`Also list table with no geometry` tables without a 
+* |checkbox| :guilabel:`Also list table with no geometry`: tables without a 
   geometry column attached will also be shown in the available table list.
-* |checkbox| :guilabel:`Use estimated table parameters` only estimated table 
+* |checkbox| :guilabel:`Use estimated table parameters`: only estimated table 
   metadata will be used. This avoids a slow table scan, but may result in 
-  incorrect layer properties such as layer extant. 
-* |checkbox| :guilabel:`Skip invalid geometry handling` all handling of records 
+  incorrect layer properties such as layer extent. 
+* |checkbox| :guilabel:`Skip invalid geometry handling`: all handling of records 
   with invalid geometry will be disabled. This speeds up the provider, however,
-  if any invalid geometries are present in table then the result is unpredictable
+  if any invalid geometries are present in a table then the result is unpredictable
   and may include missing records. Only check this option if you are certain that
   all geometries present in the database are valid, and any newly added geometries
   or tables will also be valid.
 * |checkbox| :guilabel:`Use only a Subset of Schemas` will alow you to filter 
-  schemas for MS SQL connection. If checked, only selected schemas will be displayed.
-  You can check or uncheck al schemas in the MS SQL connection widget.
+  schemas for MS SQL connection. If enabled, only checked schemas will be displayed.
+  You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema 
+  in the list. 
 
 .. _create_hana_connection:
 
