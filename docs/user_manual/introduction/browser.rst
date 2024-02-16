@@ -200,6 +200,7 @@ From the contextual menu of each of these folders or drives, you can:
 * inspect the :guilabel:`Properties...` or the parent :guilabel:`Directory
   Properties...`
 
+.. _database_entries:
 
 Database entries
 .................

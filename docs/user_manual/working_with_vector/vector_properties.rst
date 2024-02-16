@@ -2070,6 +2070,19 @@ The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
 the |newAttribute| :sup:`New field` and |deleteAttribute| :sup:`Delete field`
 buttons.
 
+When creating |newAttribute| :sup:`New field`, the :guilabel:`Comment` option is
+available only for data sources that allow editing comments
+(See :ref:`database_entries` for more details).
+You can also set aliases within :guilabel:`Add Field` dialog, for supported
+OGR formats (GeoPackage and ESRI File Geodatabase).
+
+.. _figure_add_field:
+
+.. figure:: img/add_field_comments_aliases.png
+   :align: center
+
+   Add Field Dialog
+
 You can also rename fields by double-clicking its name. This is only supported
 for data providers like PostgreSQL, Oracle, Memory layer and some GDAL layers
 depending on the GDAL version.
