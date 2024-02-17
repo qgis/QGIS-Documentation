@@ -26,8 +26,6 @@ From :menuselection:`Plugins --> Manage and Install plugins…`, install:
   to inspect variables when an exception is raised from a plugin.
 
 
-.. warning:: |outofdate|
-
 A note on configuring your IDE on Linux and Windows
 ====================================================
 
@@ -337,4 +335,3 @@ following these steps.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
