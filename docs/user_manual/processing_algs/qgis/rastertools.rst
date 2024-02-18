@@ -648,7 +648,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:tilesxyzdirectory``
+**Algorithm ID**: ``native:tilesxyzdirectory``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -778,7 +778,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:tilesxyzmbtiles``
+**Algorithm ID**: ``native:tilesxyzmbtiles``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
