@@ -204,23 +204,67 @@ From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add
 
    The 3D Map Lights Configuration dialog
 
+.. _scene_effects:
+
+Effects
+-------
+
+.. _figure_3dmap_configeffects:
+
+.. figure:: img/3dmapconfiguration_effects.png
+   :align: center
+
+   The 3D Map Effects Configuration dialog
+
 .. _shadows:
 
-Shadow
-------
+* Check |unchecked| :guilabel:`Show shadows` to display shadows within your scene,
+  given:
 
-Check |unchecked| :guilabel:`Show shadows` to display shadows within your scene,
-given:
+  * a :guilabel:`Directional light`
+  * a :guilabel:`Shadow rendering maximum distance`: to avoid rendering shadow
+    of too distant objects, particularly when the camera looks up along the horizon
+  * a :guilabel:`Shadow bias`: to avoid self-shadowing effects that could make
+    some areas darker than others, due to differences between map sizes.
+    The lower the better
+  * a :guilabel:`Shadow map resolution`: to make shadows look sharper.
+    It may result in less performance if the resolution parameter is too high.
 
-* a :guilabel:`Directional light`
-* a :guilabel:`Shadow rendering maximum distance`: to avoid rendering shadow
-  of too distant objects, particularly when the camera looks up along the
-  horizon
-* a :guilabel:`Shadow bias`: to avoid self-shadowing effects that could make
-  some areas darker than others, due to differences between map sizes.
-  The lower the better
-* a :guilabel:`Shadow map resolution`: to make shadows look sharper.
-  It may result in less performance if the resolution parameter is too high.
+.. _eye_dome_lighting:
+
+* |unchecked| :guilabel:`Show Eye Dome Lighting` (EDL):
+  a post processing effect which enhances depth perception.
+  Each pixel's depth (distance off the camera) is compared to its neighboring pixels' depth
+  and gets highlighted according to that depth difference, making the edges stand out.
+  Affects the whole scene and can be combined with :ref:`Screen Space Ambient Occlusion <ambient_occlusion>`.
+  Following parameters can be controlled:
+
+  * :guilabel:`Lighting strength`: increases the contrast, allowing for better depth perception
+  * :guilabel:`Lighting distance`: represents the distance of the used pixels off the center pixel
+    and has the effect of making edges thicker.
+
+.. _ambient_occlusion:
+
+* Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO):
+  a post processing effect which also enhances depth perception
+  by applying a darker shading to areas which are less exposed to ambient lighting.
+  Affects the whole scene and can be combined with :ref:`Eye dome Lighting <eye_dome_lighting>`.
+  Following parameters can be controlled:
+
+  * :guilabel:`Radius`: how far we will reach to calculate ambient occlusion
+  * :guilabel:`Intensity`: how strong the effect should be (higher values make things darker)
+  * :guilabel:`Occlusion threshold`: how many neighboring points need to be occluded for the effect to appear
+    (lower values than 50% will make the output darker, but possibly providing greater range of occlusion)
+
+.. _figure_3dmaps_edl_ssao:
+
+.. figure:: img/3dmap_edl_ssao.png
+   :align: center
+
+   Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or Screen-Space Ambient Occlusion (SSAO)
+
+   From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL
+
 
 Camera & Skybox
 ---------------
@@ -274,6 +318,13 @@ synchronization and skybox.
 Advanced
 --------
 
+.. _figure_3dmap_configadvanced:
+
+.. figure:: img/3dmapconfiguration_advanced.png
+   :align: center
+
+   The 3D Map Advanced Configuration dialog
+
 * :guilabel:`Map tile resolution`: Width and height of the 2D map
   images used as textures for the terrain tiles.
   256px means that each tile will be rendered into an image of
@@ -305,42 +356,6 @@ Advanced
 * |unchecked| :guilabel:`Show debug overlay`: visual overlay which displays
   some useful debugging and profiling information.
   This allows in particular to quickly see the frame graph and the scene graph.
-
-.. _eye_dome_lighting:
-
-* |unchecked| :guilabel:`Show Eye Dome Lighting` (EDL):
-  a post processing effect which enhances depth perception.
-  Each pixel's depth (distance off the camera) is compared to its neighboring pixels' depth
-  and gets highlighted according to that depth difference, making the edges stand out.
-  Affects the whole scene and can be combined with :ref:`Screen Space Ambient Occlusion <ambient_occlusion>`.
-  Following parameters can be controlled:
-
-  * :guilabel:`Lighting strength`: increases the contrast, allowing for better depth perception
-  * :guilabel:`Lighting distance`: represents the distance of the used pixels off the center pixel
-    and has the effect of making edges thicker.
-
-.. _ambient_occlusion:
-
-* Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO):
-  a post processing effect which also enhances depth perception
-  by applying a darker shading to areas which are less exposed to ambient lighting.
-  Affects the whole scene and can be combined with :ref:`Eye dome Lighting <eye_dome_lighting>`.
-  Following parameters can be controlled:
-
-  * :guilabel:`Radius`: how far we will reach to calculate ambient occlusion
-  * :guilabel:`Intensity`: how strong the effect should be (higher values make things darker)
-  * :guilabel:`Occlusion threshold`: how many neighboring points need to be occluded for the effect to appear
-    (lower values than 50% will make the output darker, but possibly providing greater range of occlusion)
-
-.. _figure_3dmaps_edl_ssao:
-
-.. figure:: img/3dmap_edl_ssao.png
-   :align: center
-
-   Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or Screen-Space Ambient Occlusion (SSAO)
-
-   From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL
-
 * |unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black image
   from the point of view of the light used for shadows (for troubleshooting). 
   The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
