@@ -21,7 +21,8 @@ You can create, manage and open 3D map views via :menuselection:`View --> 3D Map
 #. By clicking on :menuselection:`Manage 3D Map Views` you get in the 3D Map Views Manager.
    Here you get the ability to open, duplicate, remove and rename 3D map views.
 #. If you created one or more 3D map views, you see them listed in :menuselection:`3D Map Views`.
-   You can turn them on and off by clicking on. They will be saved by saving the project, even if they are turned off.  
+   You can turn them on and off by clicking on.
+   They will be saved by saving the project, even if they are turned off.
 
 
 .. _figure_3dmapview:
@@ -44,34 +45,38 @@ The following tools are provided at the top of the 3D map view panel:
 * |measure| :sup:`Measurement Line`: measures the horizontal distance between points
 * |play| :sup:`Animations`: shows/hides the :ref:`animation player
   <create_animation>` widget
-* |saveMapAsImage| :sup:`Save as Image...`: exports the current view to
-  an image file format
-* |3d| :sup:`Export 3D Scene`: exports the current view as a 3D scene
-  (:file:`.obj` file), allowing post-processing in applications like Blender...
-  The terrain and vector features are exported as 3D objects.
-  The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
-  or map view :ref:`configuration <scene_configuration>`, include:
+* |sharingExport| :sup:`Export` menu allows to export the scene to various formats:
 
-  * :guilabel:`Scene name` and destination :guilabel:`Folder`
-  * :guilabel:`Terrain resolution`
-  * :guilabel:`Terrain texture resolution`
-  * :guilabel:`Model scale`
-  * |checkbox| :guilabel:`Smooth edges`
-  * |checkbox| :guilabel:`Export normals`
-  * |checkbox| :guilabel:`Export textures`
+  * |saveMapAsImage| :sup:`Save as Image...`: exports the current view to
+    an image file format
+  * |3d| :sup:`Export 3D Scene`: exports the current view as a 3D scene
+    (:file:`.obj` file), allowing post-processing in applications like Blender...
+    The terrain and vector features are exported as 3D objects.
+    The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
+    or map view :ref:`configuration <scene_configuration>`, include:
+
+    * :guilabel:`Scene name` and destination :guilabel:`Folder`
+    * :guilabel:`Terrain resolution`
+    * :guilabel:`Terrain texture resolution`
+    * :guilabel:`Model scale`
+    * |checkbox| :guilabel:`Smooth edges`
+    * |checkbox| :guilabel:`Export normals`
+    * |checkbox| :guilabel:`Export textures`
 * |showPresets| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
-* The |options| :sup:`Options` menu provides shortcuts to:
+* The |camera| :sup:`Camera` menu helps you control relation between the 2D and 3D views:
 
-  * Add visual effects to the 3D rendering, such as showing :ref:`shadows <shadows>`,
-    :ref:`eye dome lighting <eye_dome_lighting>` or :ref:`ambient occlusion <ambient_occlusion>`
   * Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or
     :guilabel:`3D camera follows 2D Map view`)
   * :guilabel:`Show visible camera area in 2D map view`
   * :guilabel:`Set 3D scene on 2D map view`: allows to clip the 3D scene
     and display only the terrain and features intersecting an extent drawn on the 2D map canvas.
     More options are available in the :ref:`General configuration <scene_extent>` tab.
-  * |options| :sup:`Configure` the 3D map view :ref:`settings <scene_configuration>`.
+* |shadow| :sup:`Effects` adds visual effects to the 3D rendering,
+  such as showing :ref:`shadows <shadows>`, :ref:`eye dome lighting <eye_dome_lighting>`
+  or :ref:`ambient occlusion <ambient_occlusion>`.
+* The |options| :sup:`Options` button opens the dialog to configure
+  the 3D map view :ref:`settings <scene_configuration>`.
 * |dock| :sup:`Dock 3D Map View`: switch from docked widget to top level window
 
 .. _`scene_configuration`:
@@ -470,6 +475,8 @@ the 3D vector layer.
    :width: 1.5em
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
+.. |camera| image:: /static/common/mIconCamera.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dock| image:: /static/common/dock.png
@@ -491,6 +498,10 @@ the 3D vector layer.
 .. |play| image:: /static/common/mActionPlay.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |shadow| image:: /static/common/mIconShadow.png
+   :width: 1.5em
+.. |sharingExport| image:: /static/common/mActionSharingExport.png
    :width: 1.5em
 .. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em

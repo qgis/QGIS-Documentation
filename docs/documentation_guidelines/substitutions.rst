@@ -243,6 +243,7 @@ Icon                            Substitution                        Icon        
 |newMap|                        ``|newMap|``                        |new3DMap|                      ``|new3DMap|``
 |tiltUp|                        ``|tiltUp|``                        |tiltDown|                      ``|tiltDown|``
 |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
+|camera|                        ``|camera|``                        |shadow|                        ``|shadow|``
 |temporal|                      ``|temporal``                       |temporalNavigationOff|         ``|temporalNavigationOff|``
 |temporalNavigationFixedRange|  ``|temporalNavigationFixedRange|``  |temporalNavigationAnimated|    ``|temporalNavigationAnimated|``
 |newElevationProfile|           ``|newElevationProfile|``
@@ -733,6 +734,8 @@ Icon                            Substitution                        Icon        
 .. |cadPerpendicular| image:: /static/common/cad_perpendicular.png
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |camera| image:: /static/common/mIconCamera.png
    :width: 1.5em
 .. |captureCurveFromFeature| image:: /static/common/mActionCaptureCurveFromFeature.png
    :width: 1.5em
@@ -1508,6 +1511,8 @@ Icon                            Substitution                        Icon        
 .. |setToCanvasScale| image:: /static/common/mActionSetToCanvasScale.png
    :width: 1.5em
 .. |settings| image:: /static/common/settings.png
+   :width: 1.5em
+.. |shadow| image:: /static/common/mIconShadow.png
    :width: 1.5em
 .. |sharingExport| image:: /static/common/mActionSharingExport.png
    :width: 1.5em
