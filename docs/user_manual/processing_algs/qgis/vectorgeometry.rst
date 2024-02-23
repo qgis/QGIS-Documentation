@@ -3055,7 +3055,7 @@ the minimum value is tested.
    
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of line and polygon features with M enabled
+of point, line and polygon features with M enabled
 
 .. note:: Depending on the input geometry attributes and the filters
    used, the resultant geometries created by this algorithm may no
@@ -3155,7 +3155,7 @@ the minimum value is tested.
    
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of line and polygon features with Z enabled
+of point, line and polygon features with Z enabled
 
 .. note:: Depending on the input geometry attributes and the filters
    used, the resultant geometries created by this algorithm may no
