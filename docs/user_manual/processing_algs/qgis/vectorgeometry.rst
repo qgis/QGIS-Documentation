@@ -3078,7 +3078,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: any]
-     - Input line or polygon vector layer
+     - Input vector layer
        to remove vertices from
    * - **Minimum**
 
@@ -3180,7 +3180,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: any]
-     - Input line or polygon vector layer
+     - Input vector layer
        to remove vertices from
    * - **Minimum**
 
