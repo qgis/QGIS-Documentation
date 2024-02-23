@@ -1,36 +1,43 @@
 .. index:: Raster, Layer properties
-.. _raster_properties_dialog:
 
-***************************
-Introduction to Raster Data
-***************************
+**************************
+Intoduction to Raster Data
+**************************
 
 Raster data is made up of pixels (or cells), and each pixel has a value.
-Raster data is commonly used to store imagery, such as satellite images,
-digital aerial photos, and scanned maps. It is also used to store elevation data,
-such as digital elevation models, or DEMs. Raster data is also used to store other
-types of data, such as land cover, soils, and other types of information.
-Supported formats include GeoTIFF, Erdas Imagine, ArcInfo ASCII Grid, and many others.
+Raster data is commonly used to store various types od data, including:
+
+* Imagery, such as:
+
+  * Satellite images
+  * Digital areal photographs
+  * Scanned maps
+
+* Elevation data, such as:
+
+  * Digital elevation models (DEMs)
+  * Digital terrain models (DTMs)
+
+* Other types of data, such as:
+
+  * Land cover
+  * Soil types
+  * Rainfall and many others.
+
+Raster data can be stored in serval supported formats, including:
+
+* GeoTIFF
+* ERDAS Imagine
+* ArcInfo ASCII Grid
+* PostGIS Raster and others.
+
 See more at :ref:`opening_data`.
 
-**Worth knowing**
 
-The |identify|:guilabel:`Identify features` tool allows you to get information about
-specific points in a raster layer. 
+.. _raster_properties_dialog:
 
-To use the |identify|:guilabel:`Identify features` tool:
-
-* Select the raster layer in the Layers panel.
-* Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
-* Click on the point in the raster layer that you want to identify.
-
-The Identify Results panel will open and display information about the clicked point.
-For raster layers, this includes the row and column of the clicked point.
-
-
-************************
 Raster Properties Dialog
-************************
+========================
 
 .. only:: html
 
@@ -86,7 +93,7 @@ dialog. Those are not presented in this document. Refer to their documentation.
 .. _raster_information:
 
 Information Properties
-======================
+----------------------
 
 The |metadata| :guilabel:`Information` tab is read-only and represents
 an interesting place to quickly grab summarized information and
@@ -108,7 +115,7 @@ Provided information are:
 .. _raster_sourcetab:
 
 Source Properties
-=================
+-----------------
 
 The |system| :guilabel:`Source` tab displays basic information about
 the selected raster, including:
@@ -139,7 +146,7 @@ the selected raster, including:
 .. _raster_symbology:
 
 Symbology Properties
-====================
+--------------------
 
 The raster layer symbology tab is made of three different sections:
 
@@ -148,7 +155,7 @@ The raster layer symbology tab is made of three different sections:
 * The :guilabel:`Resampling` methods to optimize rendering on map
 
 Band rendering
---------------
+..............
 
 QGIS offers many different :guilabel:`Render types`.
 The choice of renderer depends on the data type and the
@@ -175,7 +182,7 @@ information you'd like to highlight.
 .. _multiband_color:
 
 Multiband color
-...............
+^^^^^^^^^^^^^^^
 
 With the multiband color renderer, three selected bands from the image
 will be used as the red, green or blue component of the color image.
@@ -217,7 +224,7 @@ and 'Clip to min max'.
 .. _paletted:
 
 Paletted/Unique values
-......................
+^^^^^^^^^^^^^^^^^^^^^^
 
 This is the standard render option for singleband files that include
 a color table, where a certain color is assigned to each pixel value.
@@ -256,7 +263,7 @@ right, offers color map loading
 .. _singleband_gray:
 
 Singleband gray
-...............
+^^^^^^^^^^^^^^^
 
 This renderer allows you to render a layer using only one band with a
 :guilabel:`Color gradient`: 'Black to white' or 'White to black'.
@@ -286,7 +293,7 @@ More details at :ref:`raster_legend_settings`.
 .. _label_colormaptab:
 
 Singleband pseudocolor
-......................
+^^^^^^^^^^^^^^^^^^^^^^
 
 This is a render option for single-band files that include a
 continuous palette.
@@ -315,7 +322,7 @@ More details at :ref:`raster_legend_settings`.
 .. _hillshade_renderer:
 
 Hillshade
-.........
+^^^^^^^^^
 
 Render a band of the raster layer using hillshading.
 
@@ -341,7 +348,7 @@ Options:
 .. _raster_contours:
 
 Contours
-........
+^^^^^^^^
 
 This renderer draws contour lines that are calculated on the fly from
 the source raster band.
@@ -379,7 +386,7 @@ Options:
 .. _minmaxvalues:
 
 Setting the min and max values
-..............................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, QGIS reports the :guilabel:`Min` and :guilabel:`Max`
 values of the band(s) of the raster.
@@ -430,7 +437,7 @@ on the:
 .. _color_ramp_shader:
 
 Color ramp shader classification
-................................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method can be used to classify and represent scalar dataset (raster or
 mesh contour) based on their values.
@@ -513,7 +520,7 @@ The scalar dataset elements are then assigned their color based on their class.
 .. _raster_legend_settings:
 
 Customize raster legend
-.......................
+^^^^^^^^^^^^^^^^^^^^^^^
 
 When applying a color ramp to a raster or a mesh layer, you may want to display
 a legend showing the classification. By default, QGIS displays a continuous
@@ -556,7 +563,7 @@ the labels and layout properties of the legend.
 
 
 Layer rendering
----------------
+...............
 
 Over the symbology type applied to the layer band(s), you can
 achieve special rendering effects for the whole raster file(s):
@@ -583,7 +590,7 @@ Press :guilabel:`Reset` to remove any custom changes to the layer rendering.
 
 
 Resampling
-----------
+...........
 
 The :guilabel:`Resampling` option has effect when you zoom in and out
 of an image.
@@ -609,7 +616,7 @@ Really convenient for tile rasters loaded using an :ref:`interpretation method
 .. _raster_transparency:
 
 Transparency Properties
-=======================
+-----------------------
 
 QGIS provides capabilities to set the |transparency| :guilabel:`Transparency` level
 of a raster layer.
@@ -669,7 +676,7 @@ in the :guilabel:`Custom transparency options` section:
 .. _raster_histogram:
 
 Histogram Properties
-====================
+--------------------
 
 The |rasterHistogram| :guilabel:`Histogram` tab allows you to view
 the distribution of the values in your raster.
@@ -706,7 +713,7 @@ advanced options to customize the histogram:
 .. _raster_rendering:
 
 Rendering Properties
-====================
+--------------------
 
 In the |rendering| :guilabel:`Rendering` tab, it's possible to:
 
@@ -751,7 +758,7 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
 .. _raster_temporal:
 
 Temporal Properties
-===================
+-------------------
 
 The |temporal| :guilabel:`Temporal` tab provides options to control
 the rendering of the layer over time. Such dynamic rendering requires the
@@ -786,7 +793,7 @@ set whether the layer redraw should be:
 .. _raster_pyramids:
 
 Pyramids Properties
-===================
+-------------------
 
 High resolution raster layers can slow navigation in QGIS.
 By creating lower resolution copies of the data (pyramids),
@@ -840,7 +847,7 @@ Finally, click :guilabel:`Build Pyramids` to start the process.
 .. _raster_elevation:
 
 Elevation Properties
-====================
+--------------------
 
 The |elevationscale| :guilabel:`Elevation` tab provides options to control
 the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
@@ -878,7 +885,7 @@ Specifically, you can set:
 .. _raster_metadata:
 
 Metadata Properties
-===================
+-------------------
 
 The |editMetadata| :guilabel:`Metadata` tab provides you with options
 to create and edit a metadata report on your layer.
@@ -896,7 +903,7 @@ See :ref:`metadatamenu` for more information.
 .. _raster_legend:
 
 Legend Properties
-=================
+-----------------
 
 The |legend| :guilabel:`Legend` tab provides you with advanced
 settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
@@ -930,7 +937,7 @@ layout legend <layout_legend_item>`. These options include:
 .. _raster_server:
 
 QGIS Server Properties
-======================
+----------------------
 
 The |overlay| :guilabel:`QGIS Server` tab helps you configure
 settings of the data when published by :ref:`QGIS Server <QGIS-Server-manual>`.
@@ -958,6 +965,24 @@ The configuration concerns:
    :align: center
 
    QGIS Server in Raster Properties
+
+Identify raster cells
+=====================
+
+The |identify|:ref:`identify` tool allows you to get information about
+specific points in a raster layer. 
+
+To use the |identify|:guilabel:`Identify features` tool:
+
+#. Select the raster layer in the Layers panel.
+#. Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
+#. Click on the point in the raster layer that you want to identify.
+
+The Identify Results panel will open and display information about the clicked point.
+For raster layers, this includes the derived informations, including:
+
+* ``X`` and ``Y`` coordinate values of the point clicked
+* Column and row of the point clicked (pixel)
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
