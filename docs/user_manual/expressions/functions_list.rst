@@ -21,11 +21,14 @@ Aggregates Functions
 
 This group contains functions which aggregate values over layers and fields.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Aggregates.rst
    :start-after: :orphan:
@@ -48,11 +51,14 @@ list data structures). The order of values within the array matters, unlike the
 :ref:`'map' data structure <maps_functions>`, where the order of key-value pairs
 is irrelevant and values are identified by their keys.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Arrays.rst
    :start-after: :orphan:
@@ -70,11 +76,14 @@ Color Functions
 
 This group contains functions for manipulating colors.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Color.rst
    :start-after: :orphan:
@@ -109,11 +118,14 @@ Conditional Functions
 
 This group contains functions to handle conditional checks in expressions.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Conditionals.rst
    :start-after: :orphan:
@@ -127,11 +139,14 @@ Conversions Functions
 This group contains functions to convert one data type to another
 (e.g., string from/to integer, binary from/to string, string to date, ...).
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Conversions.rst
    :start-after: :orphan:
@@ -167,11 +182,14 @@ This group shares several functions with the :ref:`conversion_functions`
      one of the date extraction functions (e.g., :ref:`day() <expression_function_Date_and_Time_day>`
      to get the interval expressed in days)
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Date_and_Time.rst
    :start-after: :orphan:
@@ -230,11 +248,14 @@ To add a value to the expression you are writing, double-click on it in the list
 If the value is of a string type, it should be simple quoted, otherwise no quote
 is needed.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Fields_and_Values.rst
    :start-after: :orphan:
@@ -245,11 +266,14 @@ Files and Paths Functions
 
 This group contains functions which manipulate file and path names.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Files_and_Paths.rst
    :start-after: :orphan:
@@ -261,11 +285,14 @@ Form Functions
 This group contains functions that operate exclusively under the attribute form
 context. For example, in :ref:`field's widgets <vector_attributes_menu>` settings.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Form.rst
    :start-after: :orphan:
@@ -276,11 +303,14 @@ Fuzzy Matching Functions
 
 This group contains functions for fuzzy comparisons between values.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Fuzzy_Matching.rst
    :start-after: :orphan:
@@ -291,11 +321,14 @@ General Functions
 
 This group contains general assorted functions.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/General.rst
    :start-after: :orphan:
@@ -315,11 +348,14 @@ Geometry Functions
 This group contains functions that operate on geometry objects
 (e.g. buffer, transform, $area).
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: :orphan:
@@ -449,7 +485,7 @@ Further reading: :ref:`qgisforcerhr` algorithm,
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_force_rhr_section
    :end-before: .. end_intersection_section
-   
+
 Further reading: :ref:`qgisintersection` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
@@ -741,11 +777,14 @@ Layout Functions
 
 This group contains functions to manipulate print layout items properties.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Layout.rst
    :start-after: :orphan:
@@ -779,11 +818,14 @@ such as when performing :ref:`aggregates <aggregates_function>`, :ref:`attribute
 
 It also provides some convenient functions to manipulate layers.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Map_Layers.rst
    :start-after: :orphan:
@@ -808,11 +850,14 @@ arrays). Unlike the :ref:`list data structure <array_functions>` where values
 order matters, the order of the key-value pairs in the map object is not relevant
 and values are identified by their keys.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Maps.rst
    :start-after: :orphan:
@@ -830,11 +875,14 @@ Mathematical Functions
 
 This group contains math functions (e.g., square root, sin and cos).
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Math.rst
    :start-after: :orphan:
@@ -846,11 +894,14 @@ Meshes Functions
 
 This group contains functions which calculate or return mesh related values.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Meshes.rst
    :start-after: :orphan:
@@ -863,11 +914,14 @@ This group contains operators (e.g., +, -, \*).
 Note that for most of the mathematical functions below,
 if one of the inputs is NULL then the result is NULL.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Operators.rst
    :start-after: :orphan:
@@ -919,7 +973,14 @@ Processing Functions
 
 This group contains functions that operate on processing algorithms.
 
-.. contents:: :local:
+.. admonition:: Show/hide list of functions
+   :class: dropdown
+
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Processing.rst
    :start-after: :orphan:
@@ -932,7 +993,14 @@ Rasters Functions
 
 This group contains functions to operate on raster layer.
 
-.. contents:: :local:
+.. admonition:: Show/hide list of functions
+   :class: dropdown
+
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Rasters.rst
    :start-after: :orphan:
@@ -945,11 +1013,14 @@ Record and Attributes Functions
 
 This group contains functions that operate on record identifiers.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: :orphan:
@@ -1030,11 +1101,14 @@ Sensors Functions
 
 This group contains functions to interact with sensors.
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/Sensors.rst
    :start-after: :orphan:
@@ -1048,11 +1122,14 @@ String Functions
 This group contains functions that operate on strings
 (e.g., that replace, convert to upper case).
 
-.. only:: html
+.. admonition:: Show/hide list of functions
+   :class: dropdown
 
-   .. contents::
-      :local:
-      :class: toc_columns
+   .. only:: html
+
+      .. contents::
+         :local:
+         :class: toc_columns
 
 .. include:: expression_help/String.rst
    :start-after: :orphan:
