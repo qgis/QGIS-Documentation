@@ -23,7 +23,7 @@ jobs:
     env:
       TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      LABELS: "Translation, backport release_3.28, backport release_3.34"
+      LABELS: "Translation, backport release_3.34"
 
     steps:
     - name: Harden Runner
@@ -36,10 +36,10 @@ jobs:
       with:
         fetch-depth: 1
 
-    - name: Set up Python 3.9
+    - name: Set up Python 3.11
       uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
       with:
-        python-version: 3.9
+        python-version: '3.11'
 
     - name: Install dependencies
       run: python3 -m pip install requests
