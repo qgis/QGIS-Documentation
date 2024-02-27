@@ -59,6 +59,9 @@ of the algorithm.
 
 From the top toolbar, you can:
 
+* |processingAlgorithm| :sup:`Toggle advanced mode`:
+  Available only when the algorithm has parameters that are marked as advanced,
+  this button allows to show or hide such parameters in the batch dialog.
 * |symbologyAdd| :sup:`Add row`: adds a new processing entry for configuration
 * |symbologyRemove| :sup:`Remove row(s)`: remove selected rows from the table.
   Row selection is done by clicking the number at the left and allows
@@ -200,6 +203,8 @@ batch task will be shown in the progress bar in the lower part of the dialog.
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
