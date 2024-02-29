@@ -7,7 +7,7 @@
 # Translators:
 # Transifex Bot <>, 2023
 # Thomas Szczurek, 2023
-# Harrissou Sant-anna, 2023
+# Harrissou Sant-anna, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-24 12:01+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,9 +43,9 @@ msgid ""
 "input one, but assigned to a new CRS. The geometries are **not** "
 "reprojected, they are just assigned to a different CRS."
 msgstr ""
-"Il crée une nouvelle couche avec exactement les mêmes caractéristiques et "
-"géométries que l'entrée, mais affectée à un nouveau SCR. Les géométries ne "
-"sont **pas** reprojetées, elles sont juste affectées à un SCR différent."
+"Il crée une nouvelle couche avec exactement les mêmes entités et géométries "
+"que celle en entrée, mais affectée à un nouveau SCR. Les géométries ne sont "
+"**pas** reprojetées, elles sont juste affectées à un SCR différent."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:21
 msgid ""
@@ -1821,6 +1821,10 @@ msgstr "**Codage**"
 msgid "``ENCODING``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1040
+msgid "Encoding to apply to layers."
+msgstr "Encodage à appliquer aux couches."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1046
 msgid "``USE_LAYER_TITLE``"
 msgstr ""
@@ -1925,19 +1929,49 @@ msgstr "**ID de l'algorithme** : ``native:saveselectedfeatures``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1168
 msgid "Extract Shapefile encoding"
-msgstr "**Extraire l'encodage du Shapefile**"
+msgstr "Extraire l'encodage du Shapefile"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1189
+msgid ""
+"ESRI Shapefile (:file:`.SHP`) Layer to extract the encoding information."
+msgstr ""
+"Couche ESRI Shapefile (:file:`.SHP`) dont on veut extraire l'information "
+"d'encodage."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1202
 msgid "**Shapefile encoding**"
 msgstr "**Encodage du Shapefile**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1205
+msgid "Encoding information specified in the input file"
+msgstr "Information d'encodage spécifiée dans le fichier d'entrée"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1206
+msgid "**CPG encoding**"
+msgstr "**Encodage CPG**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1207
 msgid "``CPG_ENCODING``"
 msgstr ""
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1209
+msgid "Encoding information specified in any optional :file:`.CPG` file"
+msgstr ""
+"Information d'encodage spécifiée dans un potentiel fichier :file:`CPG`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1210
+msgid "**LDID encoding**"
+msgstr "**Encodage LDID**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1211
 msgid "``LDID_ENCODING``"
 msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1213
+msgid "Encoding information specified in :file:`.dbf` LDID header block"
+msgstr ""
+"Information d'encodage spécifiée dans le bloc d'entête LDID du fichier "
+"`.dbf`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1218
 msgid "**Algorithm ID**: ``native:shpencodinginfo``"
@@ -3171,6 +3205,10 @@ msgstr "Nom de la couche, si fourni."
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2401
 msgid "**Algorithm ID**: ``native:savefeatures``"
 msgstr "**ID de l'algorithme** : ``native:savefeatures``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2411
+msgid "Set layer encoding"
+msgstr "Définir l'encodage d'une couche"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2450
 msgid "**Output layer**"
