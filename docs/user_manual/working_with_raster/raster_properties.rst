@@ -980,6 +980,8 @@ The configuration concerns:
 
    QGIS Server in Raster Properties
 
+.. _raster_identify:
+
 Identify raster cells
 =====================
 
@@ -992,23 +994,22 @@ To use the |identify|:guilabel:`Identify features` tool:
 #. Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
 #. Click on the point in the raster layer that you want to identify.
 
-The Identify Results panel will open and display information about the clicked point.
-On the left side (features) you can find the name of the raster layer and the band clicked.
-This panel also includes the derived information:
+The Identify Results panel will open in its default ``Tree`` view
+and display information about the clicked point.
+Below the name of the raster layer, you have on the left the band(s) of the clicked pixel,
+and on the right their respective value.
+These values can also be rendered (from the :guilabel:`View` menu located at the bottom of the panel) in:
+
+* a ``Table`` view - organizes the information about the identified features
+  and their values in a table.
+* a ``Graph`` view - organizes the information about the identified features
+  and their values in a graph.
+
+Under the pixel attributes, you will find the :guilabel:`Derived` information,
+such as:
 
 * ``X`` and ``Y`` coordinate values of the point clicked
 * Column and row of the point clicked (pixel)
-
-On the right side you can find the value of the pixel clicked.
-For the raster layer, you can choose the type of view from the drop-down
-:guilabel:`View` menu located at the bottom of the panel. The available options are:
-
-* Tree view - the default view. This view organizes the information about about
-  the identified features and their values in a hierarchical, tree-like structure.
-* Table view - organizes the information about the identified features
-  and their values in a table.
-* Graph view - organizes the information about the identified features
-  and their values in a graph.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
