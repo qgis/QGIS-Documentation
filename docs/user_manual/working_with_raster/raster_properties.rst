@@ -10,6 +10,17 @@ Raster Properties Dialog
    .. contents::
       :local:
 
+Raster data is made up of pixels (or cells), and each pixel has a value.
+It is commonly used to store various types of data, including:
+
+* Imagery, such as satellite images, digital aerial photographs, scanned maps
+* Elevation data, such as digital elevation models (DEMs), digital terrain models (DTMs)
+* Other types of data, such as land cover, soil types, rainfall and many others.
+
+Raster data can be stored in several supported formats, including GeoTIFF,
+ERDAS Imagine, ArcInfo ASCII GRID, PostGIS Raster and others.
+See more at :ref:`opening_data`.
+
 To view and set the properties for a raster layer, double click on
 the layer name in the map legend, or right click on the layer name and
 choose :guilabel:`Properties` from the context menu. This will open the
@@ -967,6 +978,37 @@ The configuration concerns:
 
    QGIS Server in Raster Properties
 
+.. _raster_identify:
+
+Identify raster cells
+=====================
+
+The |identify| :ref:`identify features <identify>` tool allows you to get information about
+specific points in a raster layer. 
+
+To use the |identify|:guilabel:`Identify features` tool:
+
+#. Select the raster layer in the Layers panel.
+#. Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
+#. Click on the point in the raster layer that you want to identify.
+
+The Identify Results panel will open in its default ``Tree`` view
+and display information about the clicked point.
+Below the name of the raster layer, you have on the left the band(s) of the clicked pixel,
+and on the right their respective value.
+These values can also be rendered (from the :guilabel:`View` menu located at the bottom of the panel) in:
+
+* a ``Table`` view - organizes the information about the identified features
+  and their values in a table.
+* a ``Graph`` view - organizes the information about the identified features
+  and their values in a graph.
+
+Under the pixel attributes, you will find the :guilabel:`Derived` information,
+such as:
+
+* ``X`` and ``Y`` coordinate values of the point clicked
+* Column and row of the point clicked (pixel)
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -991,6 +1033,8 @@ The configuration concerns:
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
