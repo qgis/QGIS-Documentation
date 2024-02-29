@@ -1,0 +1,965 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:53+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:2
+msgid "Interpolation"
+msgstr "内挿"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:14
+msgid "Heatmap (kernel density estimation)"
+msgstr "ヒートマップ（カーネル密度推定）"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:15
+msgid ""
+"Creates a density (heatmap) raster of an input point vector layer using "
+"kernel density estimation."
+msgstr "カーネル密度推定を使用して、入力ポイントベクタレイヤの密度（ヒートマップ）ラスタを生成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:18
+msgid ""
+"The density is calculated based on the number of points in a location, with "
+"larger numbers of clustered points resulting in larger values. Heatmaps "
+"allow easy identification of *hotspots* and clustering of points."
+msgstr ""
+"密度はその場所にあるポイントの数に基づいて計算され、集まっているポイントの数が多ければ多いほど、値は大きくなります。ヒートマップを用いれば、 "
+"*ホットスポット* や点のクラスター化を簡単に確認できます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:24
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:270
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:403
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:493
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:31
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:160
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:277
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:365
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:410
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:500
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:601
+msgid "Label"
+msgstr "ラベル"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:32
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:161
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:278
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:366
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:411
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:457
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:501
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:602
+msgid "Name"
+msgstr "名前"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:162
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:279
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:367
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:412
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:458
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:502
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:603
+msgid "Type"
+msgstr "データ型"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:163
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:280
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:368
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:413
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:459
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:503
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:604
+msgid "Description"
+msgstr "説明"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:35
+msgid "**Point layer**"
+msgstr "**入力レイヤ（点）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:415
+msgid "``INPUT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:37
+msgid "[vector: point]"
+msgstr "[ベクタ：ポイント]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:38
+msgid "Point vector layer to use for the heatmap"
+msgstr "ヒートマップに使用するポイントベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:39
+msgid "**Radius**"
+msgstr "**半径**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:424
+msgid "``RADIUS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:109
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:313
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:329
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:420
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:425
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:432
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:555
+msgid "[number]"
+msgstr "[数値]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:43
+msgid "Default: 100.0"
+msgstr "デフォルト： 100.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:44
+msgid ""
+"Heatmap search radius (or kernel bandwidth) in map units. The radius "
+"specifies the distance around a point at which the influence of the point "
+"will be felt. Larger values result in greater smoothing, but smaller values "
+"may show finer details and variation in point density."
+msgstr ""
+"地図単位のヒートマップの検索半径（またはカーネルのバンド幅）。この半径は、ある点の周りで影響を受ける点の距離を指定します。大きな値を指定するほどヒートマップは滑らかになり、小さな値を指定すると、細部や点の密度のばらつきが表されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:327
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:553
+msgid "**Output raster size**"
+msgstr "**出力ラスタサイズ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:328
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:431
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:554
+msgid "``PIXEL_SIZE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:331
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:557
+msgid "Default: 0.1"
+msgstr "デフォルト： 0.1"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:332
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:558
+msgid "Pixel size of the output raster layer in layer units."
+msgstr "レイヤの単位で表した、出力ラスタレイヤのピクセルサイズ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:334
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:560
+msgid ""
+"In the GUI, the size can be specified by the number of rows (``Number of "
+"rows``) / columns (``Number of columns``) **or** the pixel size( ``Pixel "
+"Size X`` / ``Pixel Size Y``). Increasing the number of rows or columns will "
+"decrease the cell size and increase the file size of the output raster. The "
+"values in ``Rows``, ``Columns``, ``Pixel Size X`` and ``Pixel Size Y`` will "
+"be updated simultaneously - doubling the number of rows will double the "
+"number of columns, and the cell size will be halved. The extent of the "
+"output raster will remain the same (approximately)."
+msgstr ""
+"GUIでは、出力ラスタサイズは行数（ ``行`` ）/ 列数 （ ``カラム`` ）で指定するか、 **または** ピクセルサイズ（ "
+"``ピクセルサイズX`` / ``ピクセルサイズY`` "
+"）で指定します。行数や列数が大きくなると、ピクセルサイズは小さくなり、出力ラスタのファイルサイズは増加します。 ``行`` 、 ``カラム`` 、 "
+"``ピクセルサイズX`` 、 ``ピクセルサイズY`` "
+"の値は同時に更新されます。つまり、行数を2倍にすれば列数も2倍になり、ピクセルサイズは半分になります。出力ラスタの範囲は（ほぼ）変わりません。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:67
+msgid "**Radius from field**"
+msgstr "**半径を示す属性（フィールド）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:69
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:76
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:107
+msgid "Optional"
+msgstr "オプション"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:70
+msgid "``RADIUS_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:78
+msgid "[tablefield: numeric]"
+msgstr "[テーブルのフィールド：数値]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:72
+msgid ""
+"Sets the search radius for each feature from an attribute field in the input"
+" layer."
+msgstr "入力レイヤの属性フィールドから、各地物の検索半径を設定します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:74
+msgid "**Weight from field**"
+msgstr "**重みに使う属性**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:77
+msgid "``WEIGHT_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:79
+msgid ""
+"Allows input features to be weighted by an attribute field. This can be used"
+" to increase the influence certain features have on the resultant heatmap."
+msgstr "入力地物を属性フィールドの値で重みづけします。結果のヒートマップにおいて、特定の地物の影響を増加させるために使用します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:82
+msgid "**Kernel shape**"
+msgstr "**カーネル関数**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:83
+msgid "``KERNEL``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:84
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:131
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:536
+msgid "[enumeration]"
+msgstr "[列挙型]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:86
+msgid "Default: *0*"
+msgstr "デフォルト： *0*"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:87
+msgid ""
+"Controls the rate at which the influence of a point decreases as the "
+"distance from the point increases. Different kernels decay at different "
+"rates, so a triweight kernel gives features greater weight for distances "
+"closer to the point then the Epanechnikov kernel does. Consequently, "
+"triweight results in “sharper” hotspots and Epanechnikov results in "
+"“smoother” hotspots."
+msgstr ""
+"ポイントからの距離が長くなるにつれてポイントの影響力が減少する割合を制御します。カーネルによって減衰の速度は異なり、TriweightカーネルはEpanechnikovカーネルよりもポイントに近い距離の地物に大きな重みを与えます。このため、Triweightカーネルは「よりシャープな」、Epanechnikovカーネルは「よりスムーズな」ホットスポットになります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:95
+msgid ""
+"There are many shapes available (please see the `Wikipedia page "
+"<https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_"
+" for further information):"
+msgstr ""
+"さまざまなカーネル関数が利用可能です（詳細については `Wikipedia "
+"<https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_"
+" を参照してください）："
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:99
+msgid "0 --- Quartic"
+msgstr "0 --- Quartic"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:100
+msgid "1 --- Triangular"
+msgstr "1 --- Triangular"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:101
+msgid "2 --- Uniform"
+msgstr "2 --- Uniform"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:102
+msgid "3 --- Triweight"
+msgstr "3 --- Triweight"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:103
+msgid "4 --- Epanechnikov"
+msgstr "4 --- Epanechnikov"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:105
+msgid "**Decay ratio (Triangular kernels only)**"
+msgstr "**減衰比（Triangularのみ）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:108
+msgid "``DECAY``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:111
+msgid "Default: *0.0*"
+msgstr "デフォルト： *0.0*"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:112
+msgid ""
+"Can be used with Triangular kernels to further control how heat from a "
+"feature decreases with distance from the feature."
+msgstr "Triangularカーネルで使用します。 ある地物からの熱が距離に従ってどのように減少するかをさらに制御できます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:116
+msgid ""
+"A value of 0 (=minimum) indicates that the heat will be concentrated in the "
+"center of the given radius and completely extinguished at the edge."
+msgstr "値 0（=最小値）の場合は、与えられたの半径の中心に熱が集中し、端では完全に消滅すること意味します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:119
+msgid ""
+"A value of 0.5 indicates that pixels at the edge of the radius will be given"
+" half the heat as pixels at the center of the search radius."
+msgstr "値0.5の場合は、半径の端のピクセルは、検索半径の中心のピクセルの半分の熱を持っていることを意味します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:122
+msgid ""
+"A value of 1 means the heat is spread evenly over the whole search radius "
+"circle. (This is equivalent to the ‘Uniform’ kernel.)"
+msgstr "値 1 の場合は、熱が検索半径の円全体に均等に分散していることを意味します（これは「Uniform」カーネルと同等です）。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:125
+msgid ""
+"A value greater than 1 indicates that the heat is higher towards the edge of"
+" the search radius than at the center."
+msgstr "値が 1よりも大きい場合は、中心よりも検索半径の端の熱が高く、端に行くにつれて熱が高くなることを意味します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:129
+msgid "**Output value scaling**"
+msgstr "**スケーリングするか**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:130
+msgid "``OUTPUT_VALUE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:133
+msgid "Default: *Raw*"
+msgstr "デフォルト： *そのまま*"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:134
+msgid "Allow to change the values of the output heatmap raster. One of:"
+msgstr "出力ヒートマップラスタの値を変更できます。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:137
+msgid "0 --- Raw"
+msgstr "0 --- そのまま"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:138
+msgid "1 --- Scaled"
+msgstr "1 --- スケールする"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:140
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:164
+msgid "**Heatmap**"
+msgstr "**ヒートマップ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:141
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:165
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:346
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:370
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:438
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:461
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:572
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:606
+msgid "``OUTPUT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:142
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:166
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:347
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:371
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:439
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:462
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:573
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:607
+msgid "[raster]"
+msgstr "[ラスタ]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:144
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:349
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:441
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:575
+msgid "Default: ``[Save to temporary file]``"
+msgstr "デフォルト： ``[一時ファイルに保存]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:145
+msgid "Specify the output raster layer with kernel density values. One of:"
+msgstr "カーネル密度値の出力ラスタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary File"
+msgstr "一時ファイルに保存"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid "Save to File…"
+msgstr "ファイルに保存..."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:153
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:358
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:594
+msgid "Outputs"
+msgstr "出力"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:167
+msgid "Raster layer with kernel density values"
+msgstr "カーネル密度値のラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:170
+msgid "Example: Creating a Heatmap"
+msgstr "例：ヒートマップの作成"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:171
+msgid ""
+"For the following example, we will use the ``airports`` vector point layer "
+"from the QGIS sample dataset (see :ref:`label_sampledata`). Another "
+"excellent QGIS tutorial on making heatmaps can be found at "
+"`http://qgistutorials.com "
+"<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_."
+msgstr ""
+"以下の例では、QGISサンプルデータセット（ :ref:`label_sampledata` 参照）の ``airports`` "
+"ベクタポイントレイヤを使用します。ヒートマップ作成に関する素晴らしいQGISチュートリアルは、 `http://qgistutorials.com "
+"<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_ にもあります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:177
+msgid ""
+"In :numref:`Figure_Heatmap_data_processing`, the airports of Alaska are "
+"shown."
+msgstr ":numref:`Figure_Heatmap_data_processing` では、アラスカの空港が表示されています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:184
+msgid "Airports of Alaska"
+msgstr "アラスカの空港"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:187
+msgid ""
+"Open the :guilabel:`Heatmap (Kernel Density Estimation)` algorithm from the "
+"QGIS :guilabel:`Interpolation` group"
+msgstr ""
+"QGISアルゴリズムの :guilabel:`内挿` グループから :guilabel:`ヒートマップ（カーネル密度推定）` アルゴリズム開きます"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:189
+msgid ""
+"In the :guilabel:`Point layer` |selectString| field, select ``airports`` "
+"from the list of point layers loaded in the current project."
+msgstr ""
+":guilabel:`入力レイヤ（点）` |selectString| フィールドで、現在のプロジェクトにロードされたポイントレイヤのリストの中から "
+"``airports`` レイヤを選択します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:630
+msgid "selectString"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:192
+msgid "Change the :guilabel:`Radius` to ``1000000`` meters."
+msgstr ":guilabel:`半径` を ``1000000`` メートルに変更します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:193
+msgid ""
+"Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size "
+"Y`, :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated."
+msgstr ""
+":guilabel:`ピクセルサイズX` を ``1000`` に変更します。 :guilabel:`ピクセルサイズY` 、 :guilabel:`行`"
+" 、 :guilabel:`カラム` は自動的に更新されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:196
+msgid ""
+"Click on :guilabel:`Run` to create and load the airports heatmap (see "
+":numref:`Figure_Heatmap_created_processing`)."
+msgstr ""
+":guilabel:`実行` をクリックして、airportsのヒートマップを作成し読み込みます（ "
+":numref:`Figure_Heatmap_created_processing` 参照）。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:204
+msgid "The Heatmap Dialog"
+msgstr "ヒートマップダイアログ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:206
+msgid ""
+"QGIS will generate the heatmap and add it to your map window. By default, "
+"the heatmap is shaded in greyscale, with lighter areas showing higher "
+"concentrations of airports. The heatmap can now be styled in QGIS to improve"
+" its appearance."
+msgstr ""
+"QGISはヒートマップを生成し、マップウィンドウに追加します。デフォルトでは、ヒートマップはグレースケールで表示され、色が明るい領域は空港が集中していることを示しています。QGISでこのヒートマップのスタイルを設定し、見た目を改善しましょう。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:216
+msgid "The heatmap after loading looks like a grey surface"
+msgstr "グレーの面に見える読み込み直後のヒートマップ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:219
+msgid ""
+"Open the properties dialog of the ``heatmap_airports`` layer (select the "
+"layer ``heatmap_airports``, open the context menu with the right mouse "
+"button and select :guilabel:`Properties`)."
+msgstr ""
+"``heatmap_airports`` レイヤのプロパティダイアログを開きます（ ``heatmap_airports`` "
+"レイヤを選択し、マウス右ボタンでコンテキストメニューを開いて、 :guilabel:`プロパティ` を選択します）。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:222
+msgid "Select the :guilabel:`Symbology` tab."
+msgstr ":guilabel:`シンボロジ` タブを選択します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:223
+msgid ""
+"Change the :guilabel:`Render type` |selectString| to 'Singleband "
+"pseudocolor'."
+msgstr ":guilabel:`レンダリングタイプ` |selectString| を「単バンド疑似カラー」に変更します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:225
+msgid ""
+"Select a suitable :guilabel:`Color ramp` |selectString|, for instance "
+"``YlOrRd``."
+msgstr "適切な :guilabel:`カラーランプ` |selectString| 、例えば ``YlOrRd`` を選択します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:227
+msgid "Click the :guilabel:`Classify` button."
+msgstr ":guilabel:`分類` ボタンをクリックします。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:228
+msgid "Press :guilabel:`OK` to update the layer."
+msgstr ":guilabel:`OK` ボタンを押して、レイヤを更新します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:230
+msgid ""
+"The final result is shown in :numref:`Figure_Heatmap_styled_processing`."
+msgstr "最終的な結果を :numref:`Figure_Heatmap_styled_processing` に示します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:237
+msgid "Styled heatmap of airports of Alaska"
+msgstr "スタイルが設定されたアラスカの空港のヒートマップ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:242
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:375
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:466
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:615
+msgid "Python code"
+msgstr "Python コード"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:244
+msgid "**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``"
+msgstr "**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"*algorithm id* は、プロセシングツールボックス内でアルゴリズムにマウスカーソルを乗せた際に表示されるIDです。 *parameter "
+"dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
+"コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:254
+msgid "IDW Interpolation"
+msgstr "IDW内挿（逆距離加重法）"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:255
+msgid ""
+"Generates an Inverse Distance Weighted (IDW) interpolation of a point vector"
+" layer."
+msgstr "ポイントベクタレイヤの逆距離加重法（IDW）内挿ラスタを生成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:258
+msgid ""
+"Sample points are weighted during interpolation such that the influence of "
+"one point relative to another declines with distance from the unknown point "
+"you want to create."
+msgstr "作成したい未知の点からの距離に応じてサンプル点からの影響が減少するように、サンプル点は内挿時に重み付けされます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:262
+msgid ""
+"The IDW interpolation method also has some disadvantages: the quality of the"
+" interpolation result can decrease, if the distribution of sample data "
+"points is uneven."
+msgstr "IDW内挿法には、サンプルデータ点の分布が不均一な場合、内挿結果の質が低下するといった、いくつかの欠点もあります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:266
+msgid ""
+"Furthermore, maximum and minimum values in the interpolated surface can only"
+" occur at sample data points."
+msgstr "その上、内挿面の最大値と最小値はサンプルデータ点上でしか起こりえません。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:282
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:505
+msgid "**Input layer(s)**"
+msgstr "**入力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:283
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:506
+msgid "``INTERPOLATION_DATA``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:284
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:507
+msgid "[string]"
+msgstr "[文字列]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:285
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:508
+msgid ""
+"Vector layer(s) and field(s) to use for the interpolation, coded in a string"
+" (see the ``ParameterInterpolationData`` class in "
+":source:`InterpolationWidgets "
+"<python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>` for more "
+"details)."
+msgstr ""
+"内挿に使用するベクタレイヤとフィールド。コードでは文字列で指定します（詳細については :source:`InterpolationWidgets "
+"<python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>` の "
+"``ParameterInterpolationData`` クラスを参照）。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:291
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:514
+msgid ""
+"The following GUI elements are provided to compose the interpolation data "
+"string:"
+msgstr "内挿データの文字列を構成するために、以下のGUI要素が用意されています："
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:294
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:517
+msgid "**Vector layer** [vector: any]"
+msgstr "**入力ベクタ** [ベクタ：任意]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:295
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:518
+msgid ""
+"**Interpolation attribute** [tablefield: numeric]: Attribute to use in the "
+"interpolation"
+msgstr "**内挿対象の属性** [テーブルのフィールド：数値] ：内挿に使用する属性"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:297
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:520
+msgid ""
+"**Use Z-coordinate for interpolation** [boolean]: Uses the layer's stored Z "
+"values (Default: False)"
+msgstr "**内挿にZ座標を使用する** [ブール値] ：レイヤに保存されているZ値を使用します（デフォルト：False）"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:300
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:523
+msgid "For each of the added layer-field combinations, a type can be chosen:"
+msgstr "追加されたレイヤとフィールドの組み合わせごとに、タイプを選択します："
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:303
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:526
+msgid ":guilabel:`Points`"
+msgstr ":guilabel:`ポイント（Points）`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:304
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:527
+msgid ":guilabel:`Structured lines`"
+msgstr ":guilabel:`ストラクチャーライン`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:305
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:528
+msgid ":guilabel:`Break lines`"
+msgstr ":guilabel:`ブレークライン（改行）`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:307
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:530
+msgid ""
+"In the string, the layer-field elements are separated by ``'::|::'``. The "
+"sub-elements of the layer-field elements are separated by ``'::~::'``."
+msgstr ""
+"文字列では、複数のレイヤ・フィールド要素は ``'::|::'`` で区切られます。レイヤ・フィールド要素のサブ要素は ``'::~::'`` "
+"で区切られます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:311
+msgid "**Distance coefficient P**"
+msgstr "**距離係数（P）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:312
+msgid "``DISTANCE_COEFFICIENT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:315
+msgid "Default: 2.0"
+msgstr "デフォルト： 2.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:316
+msgid ""
+"Sets the distance coefficient for the interpolation. Minimum: 0.0, maximum: "
+"100.0."
+msgstr "内挿の距離係数を設定します。最小値は 0.0、最大値は 100.0 です。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:318
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:544
+msgid "**Extent (xmin, xmax, ymin, ymax)**"
+msgstr "**領域 (xmin, xmax, ymin, ymax)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:319
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:545
+msgid "``EXTENT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:320
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:546
+msgid "[extent]"
+msgstr "[範囲]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:321
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:547
+msgid "Extent of the output raster layer."
+msgstr "出力ラスタレイヤの範囲。"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "利用できる方法:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr "レイヤーから計算...: 現在のプロジェクトに読み込まれたレイヤの範囲を使用します。"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"レイアウトマップから計算...: アクティブなプロジェクト内の :ref:`レイアウト地図アイテム <layout_map_item>` "
+"の範囲を使用します。"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr "ブックマークから計算...：保存された :ref:`ブックマーク <sec_bookmarks>` の範囲を使用します。"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "現在のキャンバス領域を使用"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr "キャンバスに描画: 考慮する領域を区切る矩形をクリック＆ドラッグします。"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "``xmin, xmax, ymin, ymax`` として座標を入力"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:345
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:369
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:571
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:605
+msgid "**Interpolated**"
+msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:350
+msgid "Raster layer of interpolated values. One of:"
+msgstr "内挿された値のラスタレイヤ。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:372
+msgid "Raster layer of interpolated values"
+msgstr "内挿された値のラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:377
+msgid "**Algorithm ID**: ``qgis:idwinterpolation``"
+msgstr "**Algorithm ID**: ``qgis:idwinterpolation``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:387
+msgid "Line Density"
+msgstr "線の密度"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:389
+msgid ""
+"Calculates for each raster cell, the density measure of linear features "
+"within a circular neighbourhood. This measure is obtained by summing all the"
+" line segments intersecting the circular neighbourhood and dividing this sum"
+" by the area of such neighbourhood. A weighting factor can be applied to the"
+" line segments."
+msgstr ""
+"ラスタの各セルについて、円形状の近傍領域内の線の密度を計算します。この指標は、円形の近傍領域と交差する線分の数をすべて足し合わせ、この合計値をその近傍領域の面積で割ることで得られます。ラインセグメントには、重みづけの係数を適用することができます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:398
+msgid ""
+"Line density example. Input layer source: Roads Overijssel - The Netherlands"
+" (OSM)."
+msgstr "線の密度の例。ソース入力レイヤ：Roads Overijssel - The Netherlands (OSM)"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:414
+msgid "**Input line layer**"
+msgstr "**入力線レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:416
+msgid "[vector: any]"
+msgstr "[ベクタ：任意]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:417
+msgid "Input vector layer containing line features"
+msgstr "ライン地物を含んでいる入力ベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:418
+msgid "**Weight field**"
+msgstr "**重み属性（フィールド）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:419
+msgid "``WEIGHT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:421
+msgid ""
+"Field of the layer containing the weight factor to use during the "
+"calculation"
+msgstr "線の密度の計算の際に使用する重み係数が含まれるレイヤのフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:423
+msgid "**Search Radius**"
+msgstr "**検索半径**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:427
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:434
+msgid "Default: 10"
+msgstr "デフォルト： 10"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:428
+msgid "Radius of the circular neighbourhood. Units can be specified here."
+msgstr "円形近傍の検索半径。単位を指定できます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:430
+msgid "**Pixel size**"
+msgstr "**ピクセルサイズ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:435
+msgid ""
+"Pixel size of the output raster layer in layer units. The raster has square "
+"pixels."
+msgstr "レイヤの単位で表した、出力ラスタレイヤのピクセルサイズ。ラスタのピクセルは正方形です。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:437
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:460
+msgid "**Line density raster**"
+msgstr "**線密度ラスタ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:442
+msgid "The output as a raster layer. One of:"
+msgstr "出力結果のラスタレイヤ。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:463
+msgid "The output line density raster layer."
+msgstr "線密度の計算結果のラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:468
+msgid "**Algorithm ID**: ``native:linedensity``"
+msgstr "**Algorithm ID**: ``native:linedensity``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:478
+msgid "TIN Interpolation"
+msgstr "TIN内挿（不規則三角網）"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:479
+msgid ""
+"Generates a Triangulated Irregular Network (TIN) interpolation of a point "
+"vector layer."
+msgstr "ポイントベクタレイヤの不規則三角網（TIN）内挿ラスタを生成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:482
+msgid ""
+"With the TIN method you can create a surface formed by triangles of nearest "
+"neighbor points. To do this, circumcircles around selected sample points are"
+" created and their intersections are connected to a network of non "
+"overlapping and as compact as possible triangles. The resulting surfaces are"
+" not smooth."
+msgstr ""
+"TIN内挿法を使用して、最近傍点の三角形で形成されるサーフェスを作成できます。このサーフェスを作成するために、選択されたサンプル点の周りの外接円を作成し、その交点を、重ならない、できるだけコンパクトな三角形のネットワークに連結します。結果として得られるサーフェスは滑らかではありません。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:489
+msgid ""
+"The algorithm creates both the raster layer of the interpolated values and "
+"the vector line layer with the triangulation boundaries."
+msgstr "このアルゴリズムは、内挿値のラスタレイヤと三角網のベクタラインレイヤの両方を作成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:534
+msgid "**Interpolation method**"
+msgstr "**内挿方法**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:535
+msgid "``METHOD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:538
+msgid "Default: 0"
+msgstr "デフォルト： 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:539
+msgid "Set the interpolation method to be used. One of:"
+msgstr "使用する内挿方法を設定します。以下のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:541
+msgid ":guilabel:`Linear`"
+msgstr ":guilabel:`線形`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:542
+msgid ":guilabel:`Clough-Toucher (cubic)`"
+msgstr ":guilabel:`Clough-Toucher （キュービック法）`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:576
+msgid "The output TIN interpolation as a raster layer. One of:"
+msgstr "TIN内挿結果のラスタレイヤ。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:582
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:609
+msgid "**Triangulation**"
+msgstr "**TIN内挿出力**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:583
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:610
+msgid "``TRIANGULATION``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:584
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:611
+msgid "[vector: line]"
+msgstr "[ベクタ：ライン]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:586
+msgid "Default: ``[Skip output]``"
+msgstr "デフォルト： ``[出力をスキップ]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:587
+msgid "The output TIN as a vector layer. One of:"
+msgstr "TIN生成結果のベクタレイヤ。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Skip Output"
+msgstr "出力をスキップ"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "一時レイヤを作成（ ``TEMPORARY_OUTPUT`` ）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "Save to Geopackage…"
+msgstr "GeoPackageに保存..."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Save to Database Table…"
+msgstr "データベーステーブルに保存..."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "The file encoding can also be changed here."
+msgstr "ここでファイルの文字コードを変更することもできます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:608
+msgid "The output TIN interpolation as a raster layer"
+msgstr "TIN内挿結果のラスタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:612
+msgid "The output TIN as a vector layer."
+msgstr "TIN生成結果のベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:617
+msgid "**Algorithm ID**: ``qgis:tininterpolation``"
+msgstr "**Algorithm ID**: ``qgis:tininterpolation``"

@@ -1,0 +1,733 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/developers_guide/git.rst:5
+msgid "Development Process"
+msgstr "Processo di sviluppo"
+
+#: ../../docs/developers_guide/git.rst:10
+msgid ""
+"As common in open source projects, contributions of code and documentation "
+"to the project are highly appreciated. The QGIS community is very "
+"supportive. This section describes the procedure for developing and merging "
+"your contributions in the QGIS project."
+msgstr ""
+"Come comune nei progetti open source, i contributi di codice e "
+"documentazione al progetto sono molto apprezzati. La comunità di QGIS è "
+"molto solidale. Questa sezione descrive la procedura per sviluppare e "
+"inserire i vostri contributi nel progetto QGIS."
+
+#: ../../docs/developers_guide/git.rst:16
+msgid "A git based project"
+msgstr "Un progetto basato su git"
+
+#: ../../docs/developers_guide/git.rst:18
+msgid ""
+"The complexity of the QGIS source code has increased considerably during the"
+" last years. Therefore it is hard to anticipate the side effects that the "
+"addition of a feature will have. In the past, the QGIS project had very long"
+" release cycles because it was a lot of work to reestablish the stability of"
+" the software system after new features were added. To overcome these "
+"problems, QGIS switched to a development model using the `git <https://git-"
+"scm.com>`_ version control system: new features are coded in the contributor"
+" branches first and merged to the QGIS master (the main branch) when they "
+"are finished and stable."
+msgstr ""
+"La complessità del codice sorgente di QGIS è aumentata considerevolmente "
+"negli ultimi anni. Quindi è difficile anticipare gli effetti collaterali che"
+" l'aggiunta di una funzionalità avrà. In passato, il progetto QGIS aveva "
+"cicli di rilascio molto lunghi perché richiedeva molto lavoro per "
+"ristabilire la stabilità del sistema software dopo l'aggiunta di nuove "
+"funzionalità. Per superare questi problemi, QGIS è passato ad un modello di "
+"sviluppo che utilizza il sistema di controllo di versione `git <https://git-"
+"scm.com>`_: le nuove funzionalità sono codificate prima nei rami dei "
+"contributori e unite al master di QGIS (il ramo principale) quando sono "
+"finite e stabili."
+
+#: ../../docs/developers_guide/git.rst:27
+msgid "QGIS source code is hosted at https://github.com/qgis/QGIS."
+msgstr ""
+"Il codice sorgente di QGIS è ospitato su https://github.com/qgis/QGIS."
+
+#: ../../docs/developers_guide/git.rst:31
+msgid "Roles"
+msgstr "Ruoli"
+
+#: ../../docs/developers_guide/git.rst:33
+msgid ""
+"There exist various roles on GitHub. When having an account on GitHub you "
+"are already allowed to contribute by forking the repository and have the "
+"role 'contributor'. Core developers are 'collaborators' and can merge "
+"branches into the upstream and official repository."
+msgstr ""
+"Esistono vari ruoli su GitHub. Quando hai un account su GitHub sei già "
+"autorizzato a contribuire tramite un ramo del repository e hai il ruolo di "
+"'contributor'. Gli sviluppatori del nucleo sono \"collaboratori\" e possono "
+"fondere rami nel repository upstream e ufficiale."
+
+#: ../../docs/developers_guide/git.rst:40
+msgid "Environment"
+msgstr "Ambiente"
+
+#: ../../docs/developers_guide/git.rst:42
+msgid ""
+"To get started using and contributing to the QGIS repository, you need to:"
+msgstr "Per iniziare a usare e contribuire al repository di QGIS, devi:"
+
+#: ../../docs/developers_guide/git.rst:44
+msgid "have a `GitHub account <https://github.com/join>`_"
+msgstr "avere un `GitHub account <https://github.com/join>`_"
+
+#: ../../docs/developers_guide/git.rst:45
+msgid ""
+"make your own copy of the `QGIS repository <https://github.com/qgis/QGIS>`_ "
+"(see `fork <https://docs.github.com/en/get-started/quickstart/fork-a-"
+"repo>`_)"
+msgstr ""
+"fare la tua copia del `QGIS repository <https://github.com/qgis/QGIS>`_ "
+"(vedere `fork <https://docs.github.com/en/get-started/quickstart/fork-a-"
+"repo>`_)"
+
+#: ../../docs/developers_guide/git.rst:47
+msgid "have a :ref:`git client installed <installing_git>` on your system"
+msgstr "avere sul tuo sistema un :ref:`git client installed <installing_git>`"
+
+#: ../../docs/developers_guide/git.rst:48
+msgid ""
+"set up your `git environment <https://docs.github.com/en/get-"
+"started/quickstart/set-up-git#setting-up-git>`_"
+msgstr ""
+"impostare il tuo `git environment <https://docs.github.com/en/get-"
+"started/quickstart/set-up-git#setting-up-git>`_"
+
+#: ../../docs/developers_guide/git.rst:49
+msgid "and have fun!"
+msgstr "e divertiti!"
+
+#: ../../docs/developers_guide/git.rst:55
+msgid "Installing git"
+msgstr "Installare git"
+
+#: ../../docs/developers_guide/git.rst:57
+msgid ""
+"The git project provides recent versions of the software for most platforms."
+" Follow the instructions at https://git-scm.com/downloads to get and install"
+" the copy corresponding to your OS and architecture. There, it's also "
+"possible to install a git GUI client to browse and manage your repositories "
+"(most of the time, it will install git if not yet available)."
+msgstr ""
+"Il progetto git fornisce versioni recenti del software per la maggior parte "
+"delle piattaforme. Segui le istruzioni su https://git-scm.com/downloads per "
+"ottenere e installare la copia corrispondente al tuo sistema operativo e "
+"alla tua architettura. È anche possibile installare un client git GUI per "
+"sfogliare e gestire i tuoi repository (la maggior parte delle volte, "
+"installerà git se non è ancora disponibile)."
+
+#: ../../docs/developers_guide/git.rst:64
+msgid "Development in branches"
+msgstr "Sviluppo in rami"
+
+#: ../../docs/developers_guide/git.rst:67
+msgid "Contributions to development"
+msgstr "Contributi allo sviluppo"
+
+#: ../../docs/developers_guide/git.rst:69
+msgid ""
+"Once signed up on GitHub and having forked the repository, you can engage as"
+" a contributor."
+msgstr ""
+"Una volta iscritto su GitHub e avendo aperto un ramo del repository, puoi "
+"impegnarti come collaboratore."
+
+#: ../../docs/developers_guide/git.rst:72
+msgid ""
+"Contributions to QGIS code can be done from your forked repository on the "
+"GitHub website. The new code will automatically be built by the test "
+"environment. But this workflow can quickly reveal its limits when you want "
+"to provide complex changes. Instructions below will assume a local clone."
+msgstr ""
+"I contributi al codice QGIS possono essere fatti dal tuo repository "
+"ramificato sul sito web GitHub. Il nuovo codice sarà automaticamente "
+"costruito dall'ambiente di test. Ma questo flusso di lavoro può rivelare "
+"rapidamente i suoi limiti quando si vogliono fornire modifiche complesse. Le"
+" istruzioni qui sotto presuppongono un clone locale."
+
+#: ../../docs/developers_guide/git.rst:77
+msgid ""
+"You can contribute by initiating a pull request. To do that follow these "
+"generic steps:"
+msgstr ""
+"Puoi contribuire avviando una richiesta di pull. Per farlo segui questi "
+"passi generici:"
+
+#: ../../docs/developers_guide/git.rst:79
+msgid ""
+":ref:`Clone your repository <access_repository>` onto your local computer "
+"and set up the build environment"
+msgstr ""
+":ref:`Clone your repository <access_repository>` sul tuo computer locale e "
+"imposta l'ambiente di sviluppo"
+
+#: ../../docs/developers_guide/git.rst:81
+msgid "Create a new branch and do the edits for development"
+msgstr "Crea un nuovo ramo e fai le modifiche per lo sviluppo"
+
+#: ../../docs/developers_guide/git.rst:82
+msgid ""
+"Commit your changes and push your branch back to the remote fork on GitHub. "
+"A pull request is then offered as web link (URL) right after."
+msgstr ""
+"Esegui il commit delle modifiche e invia il ramo al fork remoto su GitHub. "
+"Una richiesta di pull viene offerta come link web (URL) subito dopo."
+
+#: ../../docs/developers_guide/git.rst:84
+msgid ""
+"Open a pull request (PR) asking to pull the commit(s) from your branch into "
+"the master branch into the upstream repository."
+msgstr ""
+"Apri una richiesta di pull (PR) chiedendo di estrarre i commit dal tuo ramo "
+"nel ramo master nel repository upstream."
+
+#: ../../docs/developers_guide/git.rst:86
+msgid ""
+"A review process is being started informing other contributors and "
+"collaborators about your pull request. You should be reactive to their "
+"comments and suggestions."
+msgstr ""
+"Viene avviato un processo di revisione che informa gli altri contributori e "
+"collaboratori della richiesta di pull. Dovresti essere reattivi ai loro "
+"commenti e suggerimenti."
+
+#: ../../docs/developers_guide/git.rst:90
+msgid ""
+"A more detailed Github's Fork & Pull Workflow is available at "
+"https://reflectoring.io/github-fork-and-pull/"
+msgstr ""
+"Un flusso di lavoro di Github più dettagliato è disponibile all'indirizzo "
+"https://reflectoring.io/github-fork-and-pull/."
+
+#: ../../docs/developers_guide/git.rst:93
+msgid ""
+"Most of the QGIS projects (website, documentation, pyQGIS API, plugins...) "
+"are available in the `project GitHub page <https://github.com/qgis>`_ and "
+"can get contributions, following the same process."
+msgstr ""
+"La maggior parte dei progetti QGIS (sito web, documentazione, pyQGIS API, "
+"plugin...) sono disponibili nella pagina GitHub del `progetto "
+"<https://github.com/qgis>`_ e possono ricevere contributi, seguendo lo "
+"stesso processo."
+
+#: ../../docs/developers_guide/git.rst:100
+msgid "Accessing the Repository"
+msgstr "Accessing the Repository"
+
+#: ../../docs/developers_guide/git.rst:102
+msgid ""
+"To be able to interact from your local disk with both your remote fork and "
+"the QGIS upstream repositories, you need to:"
+msgstr ""
+"Per poter interagire dal disco locale sia con il fork remoto che con i "
+"repository upstream di QGIS, devi:"
+
+#: ../../docs/developers_guide/git.rst:105
+msgid "Make a clone of your copy on your local disk"
+msgstr "Fai un duplicato della tua copia sul tuo disco locale"
+
+#: ../../docs/developers_guide/git.rst:112
+msgid ""
+"Connect the QGIS main repository (we will name it ``upstream``) to yours"
+msgstr ""
+"Collega il repository principale di QGIS (lo chiameremo ``upstream``) al tuo"
+
+#: ../../docs/developers_guide/git.rst:118
+msgid "Check connected remote repositories"
+msgstr "Controlla i repository remoti collegati"
+
+#: ../../docs/developers_guide/git.rst:128
+msgid ""
+"Your online repository is now accessible from your local drive and you can "
+"interact with it using the name ``origin``. Whenever you'd like to fetch "
+"changes from the qgis/QGIS repository, use ``upstream``."
+msgstr ""
+"Il tuo repository online è ora accessibile dal disco locale e si può "
+"interagire con esso usando il nome ``origin``. Ogni volta che vuoi "
+"recuperare le modifiche dal repository qgis/QGIS, usa ``upstream``."
+
+#: ../../docs/developers_guide/git.rst:133
+msgid ""
+"In QGIS we keep our most stable code in the current release branch. "
+"``master`` branch contains code for the so called 'unstable' release series."
+" Periodically we will branch a release off master, and then continue "
+"stabilisation and selective incorporation of new features into master."
+msgstr ""
+"In QGIS manteniamo il codice più stabile nel ramo di rilascio corrente. Il "
+"ramo ``master'' contiene il codice per la cosiddetta serie di release "
+"'instabili'. Periodicamente si crea un ramo di release fuori da master, per "
+"poi continuare la stabilizzazione e l'incorporazione selettiva di nuove "
+"funzionalità in master."
+
+#: ../../docs/developers_guide/git.rst:138
+msgid ""
+"See the :source:`INSTALL <INSTALL.md>` file in the source tree for specific "
+"instructions on building development versions."
+msgstr ""
+"Vedi il file :source:`INSTALL <INSTALL.md>` nell'albero dei sorgenti per "
+"istruzioni specifiche sulla creazione di versioni di sviluppo."
+
+#: ../../docs/developers_guide/git.rst:142
+msgid "Procedure"
+msgstr "Procedura"
+
+#: ../../docs/developers_guide/git.rst:150
+msgid "Initial announcement on mailing list or issues repo:"
+msgstr "Annuncio iniziale su mailing list o issue repo:"
+
+#: ../../docs/developers_guide/git.rst:145
+msgid ""
+"Before starting, make an announcement on the developer mailing list to see "
+"if another developer is already working on the same feature. You can also "
+"mention your interest as a comment in the issue report if one exists in the "
+"repo. If the new feature requires any changes to the QGIS architecture, a "
+"`QGIS Enhancement Proposal (QEP) <https://github.com/qgis/QGIS-Enhancement-"
+"Proposals/>`_ is needed."
+msgstr ""
+"Prima di iniziare, fai un annuncio sulla mailing list degli sviluppatori per"
+" vedere se un altro sviluppatore sta già lavorando alla stessa funzionalità."
+" Puoi anche menzionare il tuo interesse come commento nella segnalazione del"
+" problema, se ne esiste una nel repo. Se la nuova funzionalità richiede "
+"modifiche all'architettura di QGIS, è necessaria una `QGIS Enhancement "
+"Proposal (QEP) <https://github.com/qgis/QGIS-Enhancement-Proposals/>`_."
+
+#: ../../docs/developers_guide/git.rst:159
+msgid "Create a branch in your local repository:"
+msgstr "Crea un ramo nel tuo repository locale:"
+
+#: ../../docs/developers_guide/git.rst:153
+msgid ""
+"Create a new git branch for the development of the new feature, based on "
+"latest state of the master branch."
+msgstr ""
+"Crea un nuovo ramo git per lo sviluppo della nuova funzionalità, basato "
+"sullo stato più recente del ramo master."
+
+#: ../../docs/developers_guide/git.rst:163
+msgid "Now you can start developing:"
+msgstr "Ora puoi iniziare a sviluppare:"
+
+#: ../../docs/developers_guide/git.rst:162
+msgid ""
+"Code your changes in your local disk with your usual IDE. Remember to write "
+"tests suite for your modifications, when appropriate."
+msgstr ""
+"Codifica le modifiche nel disco locale con il tuo solito IDE. Ricordarti di "
+"scrivere una suite di test per le modifiche, quando appropriato."
+
+#: ../../docs/developers_guide/git.rst:173
+msgid "Commit your changes to the git repo:"
+msgstr "Commit le tue modifiche nel repo git:"
+
+#: ../../docs/developers_guide/git.rst:166
+msgid ""
+"When making a commit, put a descriptive comment and rather do several small "
+"commits if the changes across a number of files are unrelated. Conversely we"
+" prefer you to group related changes into a single commit."
+msgstr ""
+"Quando effettui un commit, inserisci un commento descrittivo e fai piuttosto"
+" diversi piccoli commit se le modifiche in un certo numero di file non sono "
+"correlate. Al contrario, preferiamo raggruppare le modifiche correlate in un"
+" unico commit."
+
+#: ../../docs/developers_guide/git.rst:175
+msgid ""
+"Now, you may want to share your work with QGIS community members. Push your "
+"new feature up to your online fork repository by doing:"
+msgstr ""
+"A questo punto, potresti voler condividere il tuo lavoro con i membri della "
+"comunità di QGIS. Inserisci la tua nuova funzione nel tuo repository fork "
+"online:"
+
+#: ../../docs/developers_guide/git.rst:182
+msgid ""
+"If the branch already exists, your changes will be pushed into it, "
+"otherwise, it is created."
+msgstr ""
+"Se il ramo esiste già, le modifiche vengono inserite in esso, altrimenti "
+"viene creato."
+
+#: ../../docs/developers_guide/git.rst:195
+msgid ":ref:`Submit your changes <submit_patch>` with a pull-request"
+msgstr ":ref:`Submit your changes <submit_patch>` con una richiesta di pull"
+
+#: ../../docs/developers_guide/git.rst:186
+msgid ""
+"With opening the pull-request, the automated test suite is triggered and "
+"checks whether your changes follow the coding guidelines of QGIS and do not "
+"break any existing feature. You'd need to fix any reported issues before "
+"your branch is merged upstream."
+msgstr ""
+"Con l'apertura della richiesta di pull, viene attivata la suite di test "
+"automatici che verifica se le modifiche seguono le linee guida di codifica "
+"di QGIS e non interrompono alcuna funzionalità esistente. Devi risolvere "
+"eventuali problemi segnalati prima che il ramo venga incorporato "
+"nell'\"upstream\"."
+
+#: ../../docs/developers_guide/git.rst:191
+msgid ""
+"We use `GitHub actions <https://docs.github.com/en/actions>`_ to manage the "
+"tests to be run on the repository. For convenience, you can enable the "
+"actions on your repository so that the tests are run when you push the "
+"changes. You'd then open the pull request after they all passed, making the "
+"review process more efficient."
+msgstr ""
+"Usiamo le azioni di `GitHub <https://docs.github.com/en/actions>`_ per "
+"gestire i test da eseguire sul repository. Per comodità, puoi abilitare le "
+"azioni sul tuo repository, in modo che i test vengano eseguiti quando invii "
+"le modifiche. Puoi quindi aprire la richiesta di pull dopo che tutti i test "
+"sono stati superati, rendendo il processo di revisione più efficiente."
+
+#: ../../docs/developers_guide/git.rst:206
+msgid "Rebase to upstream master regularly:"
+msgstr "Effettuare regolarmente il rebase al master upstream:"
+
+#: ../../docs/developers_guide/git.rst:198
+msgid ""
+"It is recommended to rebase to incorporate the changes in master to the "
+"branch on a regular basis. This makes it easier to merge the branch back to "
+"master later. After a rebase you need to ``git push -f`` to your forked "
+"repo."
+msgstr ""
+"Si consiglia di eseguire il rebase per incorporare le modifiche in master "
+"nel ramo su base regolare. In questo modo è più facile unire il ramo a "
+"master in un secondo momento. Dopo un rebase è necessario fare ``git push "
+"-f`` al tuo forked repo."
+
+#: ../../docs/developers_guide/git.rst:208
+msgid "See the following sites for information on becoming a GIT master."
+msgstr ""
+"Vedi i seguenti siti per informazioni su come diventare un master GIT."
+
+#: ../../docs/developers_guide/git.rst:210
+msgid "https://git-scm.com/book/en/v2"
+msgstr "https://git-scm.com/book/en/v2"
+
+#: ../../docs/developers_guide/git.rst:211
+msgid "https://gitready.com"
+msgstr "https://gitready.com"
+
+#: ../../docs/developers_guide/git.rst:212
+msgid "https://support.github.com/"
+msgstr "https://support.github.com/"
+
+#: ../../docs/developers_guide/git.rst:215
+msgid "Testing before merging back to master"
+msgstr "Test prima della fusione in master"
+
+#: ../../docs/developers_guide/git.rst:217
+msgid ""
+"When you are finished with the new feature and happy with the stability, "
+"make an announcement on the developer list. Before merging back, the changes"
+" will be tested by developers and users."
+msgstr ""
+"Quando hai completato la nuova funzionalità e sei soddisfatto della "
+"stabilità, fai un annuncio nella lista degli sviluppatori. Prima di unire il"
+" tutto, le modifiche saranno testate dagli sviluppatori e dagli utenti."
+
+#: ../../docs/developers_guide/git.rst:224
+msgid "Submitting Pull Requests"
+msgstr "Inviare richieste di pull"
+
+#: ../../docs/developers_guide/git.rst:226
+msgid ""
+"There are a few guidelines that will help you to get your patches and pull "
+"requests into QGIS easily, and help us deal with the patches that are sent "
+"to use easily."
+msgstr ""
+"Ci sono alcune linee guida che ti aiuteranno a inserire facilmente le tue "
+"patch e le tue richieste di pull in QGIS e ci aiuteranno a gestire "
+"facilmente le patch che ci vengono inviate."
+
+#: ../../docs/developers_guide/git.rst:230
+msgid ""
+"In general it is easier for developers if you submit GitHub pull requests. "
+"We do not describe Pull Requests here, but rather refer you to the `GitHub "
+"pull request documentation <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/proposing-changes-to-your-work-"
+"with-pull-requests/about-pull-requests>`_."
+msgstr ""
+"In generale è più facile per gli sviluppatori inviare richieste di pull su "
+"GitHub. Non descriviamo qui le richieste di pull, ma rimandiamo alla "
+"documentazione sulle richieste di pull di GitHub "
+"<https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/proposing-changes-to-your-work-with-pull-requests/about-pull-"
+"requests>`_."
+
+#: ../../docs/developers_guide/git.rst:234
+msgid ""
+"If you make a pull request we ask that you please merge master to your PR "
+"branch regularly so that your PR is always mergeable to the upstream master "
+"branch."
+msgstr ""
+"Se fai una richiesta di pull, vi chiediamo di unire regolarmente il master "
+"al tuo ramo PR, in modo che il tuo PR sia sempre unificabile al ramo master "
+"upstream."
+
+#: ../../docs/developers_guide/git.rst:238
+msgid ""
+"If you are a developer and wish to evaluate the pull request queue, there is"
+" a very nice `tool that lets you do this from the command line "
+"<https://changelog.com/posts/git-pulls-command-line-tool-for-github-pull-"
+"requests>`_"
+msgstr ""
+"Se sei uno sviluppatore e vuoi valutare la coda delle richieste di pull, c'è"
+" un ottimo `tool' che ti permette di farlo dalla linea di comando "
+"<https://changelog.com/posts/git-pulls-command-line-tool-for-github-pull-"
+"requests>`_"
+
+#: ../../docs/developers_guide/git.rst:242
+msgid ""
+"In general when you submit a PR you should take the responsibility to follow"
+" it through to completion - respond to queries posted by other developers, "
+"seek out a 'champion' for your feature and give them a gentle reminder "
+"occasionally if you see that your PR is not being acted on. Please bear in "
+"mind that the QGIS project is driven by volunteer effort and people may not "
+"be able to attend to your PR instantaneously. We do scan the incoming pull "
+"requests but sometimes we miss things. Don't be offended or alarmed. Try to "
+"identify a developer to help you and contact them asking them if they can "
+"look at your patch. If you feel the PR is not receiving the attention it "
+"deserves your options to accelerate it should be (in order of priority):"
+msgstr ""
+"In generale, quando invii una PR, ti devi assumere la responsabilità di "
+"seguirla fino al suo completamento: rispondi alle domande inviate da altri "
+"sviluppatori, cerca un \"campione\" per la tua funzionalità e ogni tanto "
+"ricordaglielo gentilmente se vedi che la tua PR non viene seguita. Tieni "
+"presente che il progetto QGIS è guidato da volontari e le persone potrebbero"
+" non essere in grado di occuparsi istantaneamente della tua PR. Analizziamo "
+"le richieste di pull in arrivo, ma a volte ci sfuggono delle cose. Non "
+"offendetevi o allarmatevi. Cercate di individuare uno sviluppatore che vi "
+"aiuti e contattatelo chiedendo se può esaminare la tua patch. Se ritieni che"
+" la PR non riceva l'attenzione che merita, puoi scegliere di accelerarla (in"
+" ordine di priorità):"
+
+#: ../../docs/developers_guide/git.rst:253
+msgid "Help review others pull requests to free the person assigned to yours."
+msgstr ""
+"Aiuta a rivedere le richieste di pull degli altri per liberare la persona "
+"assegnata alla tua."
+
+#: ../../docs/developers_guide/git.rst:254
+msgid ""
+"Send a message to the mailing list 'marketing' your PR and how wonderful it "
+"will be to have it included in the code base."
+msgstr ""
+"Invia un messaggio alla mailing list per \"pubblicizzare\" la tua PR e per "
+"far capire quanto sarebbe bello includerla nel codice di base."
+
+#: ../../docs/developers_guide/git.rst:256
+msgid ""
+"Send a message to the person your PR has been assigned to in the PR queue."
+msgstr ""
+"Invia un messaggio alla persona a cui è stata assegnata la PR nella coda PR."
+
+#: ../../docs/developers_guide/git.rst:257
+msgid ""
+"Send a message to the project steering committee asking them to help see "
+"your PR incorporated into the code base."
+msgstr ""
+"Invia un messaggio al comitato direttivo del progetto chiedendo di "
+"contribuire all'inserimento della tua PR nel codice di base."
+
+#: ../../docs/developers_guide/git.rst:262
+msgid "Best practice for creating a pull request"
+msgstr "Le migliori modalità per creare una richiesta di pull"
+
+#: ../../docs/developers_guide/git.rst:264
+msgid "Always start a feature branch from current master."
+msgstr "Avvia sempre un ramo di feature dal master corrente."
+
+#: ../../docs/developers_guide/git.rst:265
+msgid ""
+"If you are coding a feature branch, don't \"merge\" anything into that "
+"branch, rather rebase as described in the next point to keep your history "
+"clean."
+msgstr ""
+"Se stai codificando un ramo di funzionalità, non \"unire\" nulla in quel "
+"ramo, piuttosto rebase come descritto nel punto successivo per mantenere "
+"pulita la cronologia."
+
+#: ../../docs/developers_guide/git.rst:267
+msgid ""
+"Before you create a pull request do ``git fetch upstream`` and ``git rebase "
+"upstream/master`` (given upstream is the remote for qgis user and not your "
+"own remote, check your ``.git/config`` or do ``git remote -v | grep "
+"github.com/qgis``)."
+msgstr ""
+"Prima di creare una richiesta di pull, fai ``git fetch upstream`` e ``git "
+"rebase upstream/master`` (dato che upstream è il remote per l'utente qgis e "
+"non il tuo remote, controlla il tuo ``.git/config`` o fai ``git remote -v | "
+"grep github.com/qgis``)."
+
+#: ../../docs/developers_guide/git.rst:271
+msgid ""
+"You may do a git rebase like in the last line repeatedly without doing any "
+"damage (as long as the only purpose of your branch is to get merged into "
+"master)."
+msgstr ""
+"Puoi fare ripetutamente un git rebase come nell'ultima linea senza fare "
+"alcun danno (purché l'unico scopo del tuo ramo è quello di essere unito a "
+"master)."
+
+#: ../../docs/developers_guide/git.rst:274
+msgid ""
+"Attention: After a rebase you need to ``git push -f`` to your forked repo. "
+"**CORE DEVS: DO NOT DO THIS ON THE QGIS PUBLIC REPOSITORY!**"
+msgstr ""
+"Attenzione: Dopo un rebase devi fare ``git push -f`` al tuo forked repo. "
+"**SVILUPPATORI DEL CORE: NON FATE QUESTO SUL REPOSITORY PUBBLICO DI QGIS!**"
+
+#: ../../docs/developers_guide/git.rst:279
+msgid "Special labels to notify documentors"
+msgstr "Etichette speciali di notifica per i documentatori"
+
+#: ../../docs/developers_guide/git.rst:281
+msgid ""
+"There is a special label (``Needs Documentation``) that can be assigned by "
+"reviewers to your pull request to automatically generate issue reports in "
+"QGIS-Documentation repository as soon as your pull request is merged. "
+"Remember to mention whether your feature deserves such a label."
+msgstr ""
+"Esiste un'etichetta speciale (``Needs Documentation``) che può essere "
+"assegnata dai revisori alla tua richiesta di pull per generare "
+"automaticamente dei rapporti sui problemi nel repository QGIS-Documentation "
+"non appena la richiesta di pull viene aggiunta. Ricordati di indicare se la "
+"tua funzionalità merita tale etichetta."
+
+#: ../../docs/developers_guide/git.rst:286
+msgid ""
+"Moreover, you can add special tags to your commit messages to provide more "
+"information to documenters. The commit message is then added to the "
+"generated issue report:"
+msgstr ""
+"Inoltre, puoi aggiungere tag speciali ai messaggi di commit per fornire "
+"maggiori informazioni ai documentatori. Il messaggio di commit viene quindi "
+"aggiunto al rapporto sul problema generato:"
+
+#: ../../docs/developers_guide/git.rst:289
+msgid ""
+"``[needs-docs]`` to instruct doc writers to please add some extra "
+"documentation after a fix or addition to an already existing functionality."
+msgstr ""
+"``[needs-docs]`` per indicare a chi scrive i documenti di aggiungere "
+"documentazione supplementare dopo una correzione o un'aggiunta a una "
+"funzionalità già esistente."
+
+#: ../../docs/developers_guide/git.rst:291
+msgid ""
+"``[feature]`` in case of new functionality. Filling a good description in "
+"your PR will be a good start."
+msgstr ""
+"``[feature]`` in caso di nuove funzionalità. Inserire una buona descrizione "
+"nella PR è un buon inizio."
+
+#: ../../docs/developers_guide/git.rst:294
+msgid ""
+"Please devs use these labels (case insensitive) so doc writers have issues "
+"to work on and have an overview of things to do. BUT please also take time "
+"to add some text: either in the commit OR in the docs itself."
+msgstr ""
+"Gli sviluppatori sono pregati di usare queste etichette (senza distinzione "
+"tra maiuscole e minuscole), in modo che chi scrive i documenti abbia "
+"problemi su cui lavorare e una panoramica delle cose da fare. MA per favore "
+"prendetevi anche il tempo di aggiungere del testo: o nel commit O nella "
+"documentazione stessa."
+
+#: ../../docs/developers_guide/git.rst:300
+msgid "Due Diligence"
+msgstr "La dovuta professionalità"
+
+#: ../../docs/developers_guide/git.rst:302
+msgid ""
+"QGIS is licensed under the GPL. You should make every effort to ensure you "
+"only submit patches which are unencumbered by conflicting intellectual "
+"property rights. Also do not submit code that you are not happy to have made"
+" available under the GPL."
+msgstr ""
+"QGIS è rilasciato sotto licenza GPL. Devi fare il possibile per assicurarti "
+"di inviare solo patch che non siano gravate da diritti di proprietà "
+"intellettuale in conflitto. Inoltre, non inviare codice che non sei disposto"
+" a rendere disponibile sotto licenza GPL."
+
+#: ../../docs/developers_guide/git.rst:309
+msgid "Obtaining GIT Write Access"
+msgstr "Ottenere l'accesso in scrittura a GIT"
+
+#: ../../docs/developers_guide/git.rst:311
+msgid ""
+"Write access to QGIS source tree is by invitation. Typically when a person "
+"submits several (there is no fixed number here) substantial patches that "
+"demonstrate basic competence and understanding of C++ and QGIS coding "
+"conventions, one of the PSC members or other existing developers can "
+"nominate that person to the PSC for granting of write access. The nominator "
+"should give a basic promotional paragraph of why they think that person "
+"should gain write access. In some cases we will grant write access to non "
+"C++ developers e.g. for translators and documentors. In these cases, the "
+"person should still have demonstrated ability to submit patches and should "
+"ideally have submitted several substantial patches that demonstrate their "
+"understanding of modifying the code base without breaking things, etc."
+msgstr ""
+"L'accesso in scrittura all'albero dei sorgenti di QGIS è su invito. In "
+"genere, quando una persona invia diverse (non c'è un numero fisso) patch "
+"sostanziali che dimostrano una competenza e una comprensione di base del C++"
+" e delle convenzioni di codifica di QGIS, uno dei membri del PSC o altri "
+"sviluppatori esistenti possono nominare quella persona al PSC per la "
+"concessione dell'accesso in scrittura. Il nominatore deve fornire un "
+"paragrafo promozionale di base sul motivo per cui ritiene che la persona in "
+"questione debba ottenere l'accesso in scrittura. In alcuni casi concederemo "
+"l'accesso in scrittura a sviluppatori non C++, ad esempio a traduttori e "
+"documentatori. In questi casi, la persona deve comunque dimostrare di essere"
+" in grado di inviare patch e, idealmente, deve aver inviato diverse patch "
+"sostanziali che dimostrino la sua comprensione della modifica della base del"
+" codice senza provocare malfunzionamenti, ecc."
+
+#: ../../docs/developers_guide/git.rst:323
+msgid ""
+"Since moving to GIT, we are less likely to grant write access to new "
+"developers since it is trivial to share code within github by forking QGIS "
+"and then issuing pull requests."
+msgstr ""
+"Da quando siamo passati a GIT, è meno probabile che concediamo l'accesso in "
+"scrittura ai nuovi sviluppatori, poiché è semplice condividere il codice "
+"all'interno di github creando un fork di QGIS e inviando richieste di pull."
+
+#: ../../docs/developers_guide/git.rst:327
+msgid ""
+"Always check that everything compiles before making any commits / pull "
+"requests. Try to be aware of possible breakages your commits may cause for "
+"people building on other platforms and with older / newer versions of "
+"libraries."
+msgstr ""
+"Controlla sempre che tutto sia compilato prima di fare qualsiasi "
+"commit/richiesta di pull. Cerca di essere consapevole dei possibili problemi"
+" che i tuoi commit possono causare a chi costruisce su altre piattaforme e "
+"con versioni vecchie o nuove delle librerie."

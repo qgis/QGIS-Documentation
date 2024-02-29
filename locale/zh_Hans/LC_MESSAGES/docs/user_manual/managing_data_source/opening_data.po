@@ -1,0 +1,2999 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 徐保才 <1302638819@qq.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-30 19:51+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: 徐保才 <1302638819@qq.com>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:9
+msgid "Opening Data"
+msgstr "打开数据"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:16
+msgid ""
+"As part of an Open Source Software ecosystem, QGIS is built upon different "
+"libraries that, combined with its own providers, offer capabilities to read "
+"and often write a lot of formats:"
+msgstr "作为开源软件生态系统的一部分，QGIS构建在不同的库基础之上，这些库与自己的提供程序相结合，提供读取和编辑多种格式的功能："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:20
+msgid ""
+"Vector data formats include GeoPackage, GML, GeoJSON, GPX, KML, Comma "
+"Separated Values, ESRI formats (Shapefile, Geodatabase...), MapInfo and "
+"MicroStation file formats, AutoCAD DWG/DXF, GRASS and many more... Read the "
+"complete list of `supported vector formats "
+"<https://gdal.org/drivers/vector/index.html>`_."
+msgstr ""
+"矢量数据格式包括地理包、GML、GeoJSON、GPX、KML、逗号分隔值、ESRI格式 "
+"(形状文件、地理数据库…)、MapInfo和MicroStation文件格式、AutoCAD DWG/DXF、GRASS等。请参阅 `支持矢量格式 "
+"<https://gdal.org/drivers/vector/index.html>`_ 的完整列表。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:26
+msgid ""
+"Raster data formats include GeoTIFF, JPEG, ASCII Gridded XYZ, MBTiles, R or "
+"Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data, ERDAS IMAGINE, ArcInfo "
+"Binary Grid, ArcInfo ASCII Grid, and many more... Read the complete list of "
+"`supported raster formats <https://gdal.org/drivers/raster/index.html>`_."
+msgstr ""
+"栅格数据格式包括GeoTIFF、JPEG、ASCII Gridded XYZ、MBTiles、R或Idrisi栅格、GDAL "
+"Virtual、SRTM、Sentinel数据、ERDAS IMAGINE、ArcInfo二进制网格、ArcInfo ASCII 网格等。请参阅 "
+"`支持栅格格式 <https://gdal.org/drivers/raster/index.html>`_ 的完整列表。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:32
+msgid ""
+"Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, MS "
+"SQL Server, SAP HANA, MySQL..."
+msgstr ""
+"数据库格式包括PostgreSQL/PostGIS、SQLite/SpatiaLite、Oracle、MS SQL Server、SAP "
+"HANA、MySQL等。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:34
+msgid ""
+"Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS "
+"services, ...) are also handled by QGIS providers. See "
+":ref:`working_with_ogc` for more information about some of these."
+msgstr ""
+"Web地图和数据服务 (WM(T)S、WFS、WCS、CSW、XYZ瓦片、ArcGIS服务等) 也由QGIS提供程序处理。有关内容的更多信息，请参阅 "
+":ref:`working_with_ogc` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:37
+msgid ""
+"You can read supported files from archived folders and use QGIS native "
+"formats such as QML files (:ref:`qgisstylefile`) and virtual and memory "
+"layers."
+msgstr "您可以从存档文件夹读取支持的文件，并使用QGIS本地格式，如QML文件 (:ref:`qgisstylefile`) 以及虚拟和存储图层。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:41
+msgid ""
+"More than 80 vector and 140 raster formats are supported by `GDAL "
+"<https://gdal.org/>`_ and QGIS native providers."
+msgstr "`GDAL <https://gdal.org/>`_ 和QGIS本地提供程序支持80多种矢量和140多种栅格格式。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:46
+msgid ""
+"Not all of the listed formats may work in QGIS for various reasons. For "
+"example, some require external proprietary libraries, or the GDAL/OGR "
+"installation of your OS may not have been built to support the format you "
+"want to use. To see the list of available formats, run the command line "
+"``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster), "
+"or check the :menuselection:`Settings --> Options --> GDAL` menu in QGIS."
+msgstr ""
+"由于各种原因，并非所有列出的格式都可以在QGIS中使用。例如，有些需要外部专有库，或者您的操作系统的GDAL/OGR安装程序可能无法支持想要使用的格式。要查看可用格式的列表，请在命令行运行"
+" ``ogrinfo --formats`` (矢量) 和 ``gdalinfo --formats`` (栅格) ，或在QGIS菜单 "
+":menuselection:`设置 --> 选项 --> GDAL` 中查验。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:55
+msgid ""
+"In QGIS, depending on the data format, there are different tools to open a "
+"dataset, mainly available in the :menuselection:`Layer --> Add Layer -->` "
+"menu or from the :guilabel:`Manage Layers` toolbar (enabled through "
+":menuselection:`View --> Toolbars` menu). However, all these tools point to "
+"a unique dialog, the :guilabel:`Data Source Manager` dialog, that you can "
+"open with the |dataSourceManager| :sup:`Open Data Source Manager` button, "
+"available on the :guilabel:`Data Source Manager Toolbar`, or by pressing "
+":kbd:`Ctrl+L`. The :guilabel:`Data Source Manager` dialog "
+"(:numref:`figure_datasource_manager`) offers a unified interface to open "
+"file-based data as well as databases or web services supported by QGIS."
+msgstr ""
+"在QGIS中，不同的数据格式使用不同的工具打开数据集，主要在 :menuselection:`图层 --> 添加图层 -->` 菜单或从 "
+":guilabel:`图层管理` 工具栏 (通过 :menuselection:`视图 --> 工具栏` 菜单激活) "
+"中获取。但是，所有这些工具都指向同一对话框，即 :guilabel:`数据源管理器` 对话框，您可以使用 :guilabel:`数据源管理器工具栏` "
+"上的 |dataSourceManager| :sup:`打开数据源管理器` 按钮或按 :kbd:`Ctrl+L` 打开该对话框。 "
+":guilabel:`数据源管理器` 对话框 (:numref:`figure_datasource_manager`) "
+"提供了统一的界面来打开基于文件的数据以及QGIS支持的数据库或Web服务。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1533
+msgid "dataSourceManager"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:73
+msgid "QGIS Data Source Manager dialog"
+msgstr "QGIS数据源管理器对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:76
+msgid ""
+"Beside this main entry point, you also have the |dbManager| :guilabel:`DB "
+"Manager` plugin that offers advanced capabilities to analyze and manipulate "
+"connected databases. More information on DB Manager capabilities can be "
+"found in :ref:`dbmanager`."
+msgstr ""
+"除了这个主要入口点之外，还可以使用 |dbManager| :guilabel:`数据库管理器` "
+"插件，它提供了分析和操作连接数据库的高级功能。有关数据库管理器功能的更多信息，请参阅 :ref:`dbmanager` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1535
+msgid "dbManager"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:81
+msgid ""
+"There are many other tools, native or third-party plugins, that help you "
+"open various data formats."
+msgstr "还有许多其他工具 (本地或第三方插件)，可以帮助您打开各种数据格式。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:84
+msgid ""
+"This chapter will describe only the tools provided by default in QGIS for "
+"loading data. It will mainly focus on the :guilabel:`Data Source Manager` "
+"dialog but more than describing each tab, it will also explore the tools "
+"based on the data provider or format specificities."
+msgstr ""
+"本章仅介绍QGIS中默认提供的用于加载数据的工具。主要聚焦 :guilabel:`数据源管理器` "
+"对话框，但除了介绍每个选项卡之外，还将探索基于数据提供程序或格式特性的工具。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:95
+msgid "The Browser Panel"
+msgstr "浏览器面板"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:97
+msgid ""
+"The :guilabel:`Browser` is one of the main ways to quickly and easily add "
+"your data to projects. It's available as:"
+msgstr ":guilabel:`浏览器` 是快速方便地将数据添加到工程中的主要方式之一。它有以下几种途径："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:100
+msgid ""
+"a :guilabel:`Data Source Manager` tab, enabled pressing the "
+"|dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);"
+msgstr ""
+":guilabel:`数据源管理器` 选项卡，可按 |dataSourceManager| :sup:`打开数据源管理器` 按钮 "
+"(:kbd:`Ctrl+L`) 激活;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:102
+msgid ""
+"as a QGIS panel you can open from the menu :menuselection:`View --> Panels` "
+"(or |kde| :menuselection:`Settings --> Panels`) or by pressing "
+":kbd:`Ctrl+2`."
+msgstr ""
+"作为QGIS面板，可以从菜单 :menuselection:`视图 --> 面板` (或 |kde| :menuselection:`设置 --> "
+"面板`) 或按 :kbd:`Ctrl+2` 打开。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1545
+msgid "kde"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:105
+msgid ""
+"In both cases, the :guilabel:`Browser` helps you navigate in your file "
+"system and manage geodata, regardless the type of layer (raster, vector, "
+"table), or the datasource format (plain or compressed files, databases, web "
+"services)."
+msgstr ""
+"在这两种情况下，无论图层类型 (栅格、矢量、表) 或数据源格式 (普通或压缩文件、数据库、Web服务) 如何， :guilabel:`浏览器` "
+"都可以帮助您在文件系统中导航并管理地理数据。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:110
+msgid "Exploring the Interface"
+msgstr "探索界面"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:112
+msgid ""
+"At the top of the Browser panel, you find some buttons that help you to:"
+msgstr "在浏览器面板的顶部，可以找到一些按钮来帮助您执行以下操作："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:114
+msgid ""
+"|addLayer| :sup:`Add Selected Layers`: you can also add data to the map "
+"canvas by selecting **Add selected layer(s)** from the layer's context menu;"
+msgstr "|addLayer| :sup:`添加选中的图层`: 可以通过从图层的上下文菜单选择 **添加选中的图层** ，将数据添加到地图画布；"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1507
+msgid "addLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:116
+msgid "|refresh| :sup:`Refresh` the browser tree;"
+msgstr "|refresh| :sup:`刷新` 浏览器树;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1563
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:117
+msgid ""
+"|filterMap| :sup:`Filter Browser` to search for specific data. Enter a "
+"search word or wildcard and the browser will filter the tree to only show "
+"paths to matching DB tables, filenames or folders -- other data or folders "
+"won't be displayed. See the Browser Panel(2) example in "
+":numref:`figure_browser_panels`. The comparison can be case-sensitive or "
+"not. It can also be set to:"
+msgstr ""
+"|filterMap| :sup:`过滤浏览器` 搜索指定数据。输入搜索关键词或通配符，浏览器将过滤树，只显示匹配数据库表、文件名或文件夹的路径 -- "
+"其他数据或文件夹不会显示。请参阅 :numref:`figure_browser_panels` 中的浏览器面板 (2) "
+"示例。可以区分或不区分大小写，也可以设置为："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1537
+msgid "filterMap"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:123
+msgid ":guilabel:`Normal`: show items containing the search text"
+msgstr ":guilabel:`正常`: 显示包含搜索文本的项"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:124
+msgid ""
+":guilabel:`Wildcard(s)`: fine tune the search using the ``?`` and/or ``*`` "
+"characters to specify the position of the search text"
+msgstr ":guilabel:`通配符`: 使用 ``?`` 和/或 ``*`` 字符精确搜索指定搜索文本的位置"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:126
+msgid ":guilabel:`Regular expression`"
+msgstr ":guilabel:`正则表达式`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:128
+msgid "|collapseTree| :sup:`Collapse All` the whole tree;"
+msgstr "|collapseTree| :sup:`全部折叠` 整个树;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1531
+msgid "collapseTree"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:129
+msgid ""
+"|metadata| :sup:`Enable/disable properties widget`: when toggled on, a new "
+"widget is added at the bottom of the panel showing, if applicable, metadata "
+"for the selected item."
+msgstr "|metadata| :sup:`启用/禁用属性控件`: 打开后，将在面板底部添加一个新控件，显示所选项的元数据 (如果可用)。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1547
+msgid "metadata"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:133
+msgid ""
+"The entries in the :guilabel:`Browser` panel are organised hierarchically, "
+"and there are several top level entries:"
+msgstr ":guilabel:`浏览器` 面板中的条目是按层级结构组织的，并有几个顶级条目："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:136
+msgid ""
+":guilabel:`Favorites` where you can place shortcuts to often used locations"
+msgstr ":guilabel:`收藏夹` 可以在其中放置指向常用位置的快捷方式"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:137
+msgid ""
+":guilabel:`Spatial Bookmarks` where you can store often used map extents "
+"(see :ref:`sec_bookmarks`)"
+msgstr ":guilabel:`空间书签` 可以在其中储存常用的地图范围 (请参阅 :ref:`sec_bookmarks`)"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:139
+msgid ""
+":guilabel:`Project Home`: for a quick access to the folder in which (most "
+"of) the data related to your project are stored. The default value is the "
+"directory where your project file resides."
+msgstr ":guilabel:`工程主目录`: 快速访问存储与工程相关 (大部分) 数据的文件夹。默认值是工程文件所在的目录。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:142
+msgid ""
+":guilabel:`Home` directory in the file system and the filesystem root "
+"directory."
+msgstr "文件系统和文件系统根目录中的 :guilabel:`主` 目录。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:143
+msgid "Connected local or network drives"
+msgstr "连接本地或网络驱动器"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:144
+msgid ""
+"Then comes a number of container / database types and service protocols, "
+"depending on your platform and underlying libraries:"
+msgstr "之后是容器/数据库类型和服务协议，具体取决于您的平台和底层库："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:147
+msgid "|geoPackage| :guilabel:`GeoPackage`"
+msgstr "|geoPackage| :guilabel:`地理包`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1539
+msgid "geoPackage"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:148
+msgid "|spatialite| :guilabel:`SpatiaLite`"
+msgstr "|spatialite| :guilabel:`SpatiaLite`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1567
+msgid "spatialite"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:149
+msgid "|postgis| :guilabel:`PostgreSQL`"
+msgstr "|postgis| :guilabel:`PostgreSQL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1557
+msgid "postgis"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:150
+msgid "|hana| :guilabel:`SAP HANA`"
+msgstr "|hana| :guilabel:`SAP HANA`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1543
+msgid "hana"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:151
+msgid "|mssql| :guilabel:`MS SQL Server`"
+msgstr "|mssql| :guilabel:`MS SQL 服务器`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1549
+msgid "mssql"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:152
+msgid "|oracle| :guilabel:`Oracle`"
+msgstr "|oracle| :guilabel:`Oracle`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1553
+msgid "oracle"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:153
+msgid "|wms| :guilabel:`WMS/WMTS`"
+msgstr "|wms| :guilabel:`WMS/WMTS`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1579
+msgid "wms"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:154
+msgid "|vectorTileLayer| :guilabel:`Vector Tiles`"
+msgstr "|vectorTileLayer| :guilabel:`矢量瓦片`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1571
+msgid "vectorTileLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:155
+msgid "|xyz| :guilabel:`XYZ Tiles`"
+msgstr "|xyz| :guilabel:`XYZ瓦片`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1581
+msgid "xyz"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:156
+msgid "|wcs| :guilabel:`WCS`"
+msgstr "|wcs| :guilabel:`WCS`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1573
+msgid "wcs"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:157
+msgid "|wfs| :guilabel:`WFS/OGC API-Features`"
+msgstr "|wfs| :guilabel:`WFS/OGC API-Features`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1575
+msgid "wfs"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:158
+msgid "|afs| :guilabel:`ArcGIS REST Server`"
+msgstr "|afs| :guilabel:`ArcGIS REST Server`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1527
+msgid "afs"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:159
+msgid "|geonode| :guilabel:`GeoNode`"
+msgstr "|geonode| :guilabel:`GeoNode`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1541
+msgid "geonode"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:162
+msgid "Interacting with the Browser items"
+msgstr "与浏览器项交互"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:164
+msgid ""
+"The browser supports drag and drop within the browser, from the browser to "
+"the canvas and :guilabel:`Layers` panel, and from the :guilabel:`Layers` "
+"panel to layer containers (e.g. GeoPackage) in the browser."
+msgstr ""
+"浏览器支持在浏览器中拖放，从浏览器拖放到画布和 :guilabel:`图层` 面板，从 :guilabel:`图层` 面板拖放到浏览器中的图层容器 "
+"(例如地理包)。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:168
+msgid ""
+"Project file items inside the browser can be expanded, showing the full "
+"layer tree (including groups) contained within that project. Project items "
+"are treated the same way as any other item in the browser, so they can be "
+"dragged and dropped within the browser (for example to copy a layer item to "
+"a geopackage file) or added to the current project through drag and drop or "
+"double click."
+msgstr ""
+"可以展开浏览器中的工程文件项，显示该工程中包含的完整图层树 (包括组)。工程项的处理方式与浏览器中的任何其他项相同，因此可以在浏览器中拖放 "
+"(例如，将图层项复制到地理包文件中)，也可以通过拖放或双击将其添加到当前工程中。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:175
+msgid ""
+"The context menu for an element in the :guilabel:`Browser` panel is opened "
+"by right-clicking on it."
+msgstr "在 :guilabel:`浏览器` 面板中的某个元素上单击鼠标右键，即可打开该元素的上下文菜单。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:178
+msgid ""
+"For file system directory entries, the context menu offers the following:"
+msgstr "对于文件系统目录条目，上下文菜单提供以下内容："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:180
+msgid ":menuselection:`New -->` to create in the selected entry a:"
+msgstr ":menuselection:`新建 -->` 要在所选条目中创建:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:182
+msgid ":guilabel:`Directory...`"
+msgstr ":guilabel:`目录...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:183
+msgid ":guilabel:`GeoPackage...`"
+msgstr ":guilabel:`地理包...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:184
+msgid ":guilabel:`ShapeFile...`"
+msgstr ":guilabel:`形状文件...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:185
+msgid ""
+":guilabel:`Add as a Favorite`: favorite folders can be renamed "
+"(:guilabel:`Rename favorite...`) or removed (:guilabel:`Remove favorite`) "
+"any time."
+msgstr ""
+":guilabel:`添加到收藏夹`: 收藏夹文件夹可以随时重命名 (:guilabel:`重命名收藏条目...`) 或移除 "
+"(:guilabel:`移除收藏条目`) 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:187
+msgid ""
+":guilabel:`Hide from Browser`: hidden folders can be toggled to visible from"
+" the :menuselection:`Settings --> Options --> Data Sources --> Hidden "
+"browser paths` setting"
+msgstr ""
+":guilabel:`从浏览器中隐藏`: 隐藏文件夹可以从 :menuselection:`设置 --> 选项 --> 数据源 --> 隐藏浏览器路径`"
+" 设置切换为可见"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:190
+msgid ":guilabel:`Fast Scan this Directory`"
+msgstr ":guilabel:`快速扫描此目录`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:191
+msgid ":guilabel:`Open Directory`"
+msgstr ":guilabel:`打开目录`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:192
+msgid ":guilabel:`Open in Terminal`"
+msgstr ":guilabel:`在终端打开`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:193
+msgid ":guilabel:`Properties...`"
+msgstr ":guilabel:`工程属性...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:194
+msgid ":guilabel:`Directory Properties...`"
+msgstr ":guilabel:`目录属性...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:196
+msgid ""
+"For leaf entries that can act as layers in the project, the context menu "
+"will have supporting entries. For example, for non-database, non-service-"
+"based vector, raster and mesh data sources:"
+msgstr "对于可以在工程中充当图层的子条目，上下文菜单将支持条目。例如，对于非数据库、非基于服务的矢量、栅格和网孔数据源："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:201
+msgid ":menuselection:`Export Layer --> To File...`"
+msgstr ":menuselection:`导出图层 --> 到文件...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:202
+msgid ":guilabel:`Add Layer to Project`"
+msgstr ":guilabel:`添加图层到工程`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:203
+msgid ":guilabel:`Layer Properties`"
+msgstr ":guilabel:`图层属性`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:204
+msgid ""
+":menuselection:`Manage --> Rename \"<name of file>\"...` or "
+":guilabel:`Delete \"<name of file>\"...`"
+msgstr ""
+":menuselection:`管理 --> 重命名 \"<name of file>\"...` 或 :guilabel:`删除 \"<name of"
+" file>\"...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:206
+msgid ":guilabel:`Show in Files`"
+msgstr ":guilabel:`在文件资源管理器中显示`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:207
+msgid ":guilabel:`File Properties`"
+msgstr ":guilabel:`文件属性`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:209
+msgid ""
+"In the :guilabel:`Layer properties` entry, you will find (similar to what "
+"you will find in the :ref:`vector <vector_properties_dialog>` and "
+":ref:`raster <raster_properties_dialog>` layer properties once the layers "
+"have been added to the project):"
+msgstr ""
+"在 :guilabel:`图层属性` 条目中，您将发现 (类似于将图层添加到工程后在 :ref:`矢量 "
+"<vector_properties_dialog>` 和 :ref:`栅格 <raster_properties_dialog>` "
+"图层属性中发现的内容)："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:215
+msgid ""
+":guilabel:`Metadata` for the layer. Metadata groups: :guilabel:`Information "
+"from provider` (if possible, :guilabel:`Path` will be a hyperlink to the "
+"source), :guilabel:`Identification`, :guilabel:`Extent`, :guilabel:`Access`,"
+" :guilabel:`Fields` (for vector layers), :guilabel:`Bands` (for raster "
+"layers), :guilabel:`Contacts`, :guilabel:`Links` (for vector layers), "
+":guilabel:`References` (for raster layers), :guilabel:`History`."
+msgstr ""
+"图层的 :guilabel:`元数据` 。元数据组: :guilabel:`来自数据源的信息` (如果可以， :guilabel:`路径` "
+"将是到源的超链接)、 :guilabel:`识别` 、 :guilabel:`范围` 、 :guilabel:`访问` 、 :guilabel:`字段`"
+" (用于矢量图层) 、 :guilabel:`波段` (用于栅格图层) 、 :guilabel:`联系人` 、 :guilabel:`链接` "
+"(用于矢量图层) 、 :guilabel:`参考` (用于栅格图层) 、 :guilabel:`历史` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:222
+msgid "A :guilabel:`Preview` panel"
+msgstr ":guilabel:`预览` 面板"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:223
+msgid ""
+"The attribute table for vector sources (in the :guilabel:`Attributes` "
+"panel)."
+msgstr "矢量源的属性表 (在 :guilabel:`属性` 面板中)。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:226
+msgid "To add a layer to the project using the :guilabel:`Browser`:"
+msgstr "要使用 :guilabel:`浏览器` 将图层添加到工程中，请执行以下操作："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:228
+msgid ""
+"Enable the :guilabel:`Browser` as described above. A browser tree with your "
+"file system, databases and web services is displayed. You may need to "
+"connect databases and web services before they appear (see dedicated "
+"sections)."
+msgstr ""
+"如上所述启用 :guilabel:`浏览器` 后，将显示包含文件系统、数据库和Web服务的浏览器树。在数据库和Web服务呈现之前，您可能需要进行连接 "
+"(请参阅专用章节)。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:233
+msgid "Find the layer in the list."
+msgstr "在列表中查找图层。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:234
+msgid ""
+"Use the context menu, double-click its name, or drag-and-drop it into the "
+":ref:`map canvas <label_mapview>`. Your layer is now added to the "
+":ref:`Layers panel <label_legend>` and can be viewed on the map canvas."
+msgstr ""
+"使用上下文菜单、双击其名称，或将其拖放到 :ref:`地图画布 <label_mapview>` 中。您的图层现在已添加到 :ref:`图层面板 "
+"<label_legend>` ，并且可以在地图画布上查看。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:239
+msgid "**Open a QGIS project directly from the browser**"
+msgstr "**直接从浏览器打开QGIS工程**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:241
+msgid ""
+"You can also open a QGIS project directly from the Browser panel by double-"
+"clicking its name or by drag-and-drop into the map canvas."
+msgstr "也可以双击其名称或拖放到地图画布，直接从浏览器面板打开QGIS工程。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:244
+msgid ""
+"Once a file is loaded, you can zoom around it using the map navigation "
+"tools. To change the style of a layer, open the :guilabel:`Layer Properties`"
+" dialog by double-clicking on the layer name or by right-clicking on the "
+"name in the legend and choosing :menuselection:`Properties` from the context"
+" menu. See section :ref:`vector_style_menu` for more information on setting "
+"symbology for vector layers."
+msgstr ""
+"加载文件后，可以使用地图导航工具对其进行缩放。要更改图层的样式，请双击图层名称或右键单击图例中的名称，然后从上下文菜单选择 "
+":menuselection:`属性` ，打开 :guilabel:`图层属性` 对话框。有关为矢量图层设置符号的详细信息，请参阅 "
+":ref:`vector_style_menu` 章节。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:252
+msgid "Right-clicking an item in the browser tree helps you to:"
+msgstr "右键单击浏览器树中的项可以帮助您："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:254
+msgid ""
+"for a file or a table, display its metadata or open it in your project. "
+"Tables can even be renamed, deleted or truncated."
+msgstr "对于文件或表，显示其元数据或在您的工程中打开。表甚至可以被重命名、删除或清空。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:256
+msgid ""
+"for a folder, bookmark it into your favourites or hide it from the browser "
+"tree. Hidden folders can be managed from the :menuselection:`Settings --> "
+"Options --> Data Sources` tab."
+msgstr ""
+"对于文件夹，可以将其标记到您的收藏夹，或从浏览器树中隐藏。隐藏文件夹可以在 :menuselection:`设置 --> 选项 --> 数据源` "
+"选项卡进行管理。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:259
+msgid ""
+"manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be "
+"created, exported and imported as ``XML`` files."
+msgstr "管理 :ref:`空间书签 <sec_bookmarks>`: 书签可以作为 ``XML`` 文件创建、导出和导入。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:261
+msgid "create a connection to a database or a web service."
+msgstr "创建与数据库或Web服务的连接。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:262
+msgid "refresh, rename or delete a schema."
+msgstr "刷新、重命名或删除架构。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:264
+msgid ""
+"You can also import files into databases or copy tables from one "
+"schema/database to another with a simple drag-and-drop. There is a second "
+"browser panel available to avoid long scrolling while dragging. Just select "
+"the file and drag-and-drop from one panel to the other."
+msgstr ""
+"还可以通过简单拖放将文件导入数据库，或将表从一个架构/数据库复制到另一个。第二个浏览器面板可用于避免拖动时长时间滚动，只需选择文件并从一个面板拖放到另一个面板即可。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:274
+msgid "QGIS Browser panels side-by-side"
+msgstr "QGIS浏览器面板并排显示"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:277
+msgid ""
+"**Add layers to QGIS by simple drag-and-drop from your OS file browser**"
+msgstr "**从操作系统文件浏览器中通过简单拖放将图层添加到QGIS**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:279
+msgid ""
+"You can also add file(s) to the project by drag-and-dropping them from your "
+"operating system file browser to the :guilabel:`Layers Panel` or the map "
+"canvas."
+msgstr "您还可以通过将文件从操作系统文件浏览器拖放到 :guilabel:`图层面板` 或地图画布来将文件添加到工程中。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:286
+msgid "The DB Manager"
+msgstr "数据库管理器"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:288
+msgid ""
+"The :guilabel:`DB Manager` Plugin is another tool for integrating and "
+"managing spatial database formats supported by QGIS (PostGIS, SpatiaLite, "
+"GeoPackage, Oracle Spatial, MS SQL Server, Virtual layers). It can be "
+"activated from the :menuselection:`Plugins --> Manage and Install "
+"Plugins...` menu."
+msgstr ""
+":guilabel:`数据库管理器` 插件是另一个用于集成和管理QGIS支持的空间数据库格式 "
+"(PostGIS、SpatiaLite、地理包、Oracle Spatial、MS SQL Server、Virtual图层) 的工具。通过 "
+":menuselection:`插件 --> 管理并安装插件...` 菜单激活。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:294
+msgid "The |dbManager| :sup:`DB Manager` Plugin provides several features:"
+msgstr "|dbManager| :sup:`数据库管理器` 插件提供了几个功能："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:296
+msgid "connect to databases and display their structure and contents"
+msgstr "连接到数据库并显示其结构和内容"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:297
+msgid "preview tables of databases"
+msgstr "预览数据库表"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:298
+msgid ""
+"add layers to the map canvas, either by double-clicking or drag-and-drop."
+msgstr "通过双击或拖放将图层添加到地图画布"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:299
+msgid ""
+"add layers to a database from the QGIS Browser or from another database"
+msgstr "从QGIS浏览器或其他数据库向数据库添加图层"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:300
+msgid "create SQL queries and add their output to the map canvas"
+msgstr "创建SQL查询并将其输出添加到地图画布"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:301
+msgid "create :ref:`virtual layers <vector_virtual_layers>`"
+msgstr "创建 :ref:`虚拟图层 <vector_virtual_layers>`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:303
+msgid ""
+"More information on DB Manager capabilities is found in :ref:`dbmanager`."
+msgstr "有关数据库管理器功能的更多信息，请参阅 :ref:`dbmanager` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:310
+msgid "DB Manager dialog"
+msgstr "数据库管理器对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:314
+msgid "Provider-based loading tools"
+msgstr "基于提供程序加载工具"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:316
+msgid ""
+"Beside the Browser Panel and the DB Manager, the main tools provided by QGIS"
+" to add layers, you'll also find tools that are specific to data providers."
+msgstr "除了浏览器面板和数据库管理器 (QGIS提供的用于添加图层的主要工具) 之外，您还可以找到特定于数据提供程序的工具。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:321
+msgid ""
+"Some :ref:`external plugins <plugins>` also provide tools to open specific "
+"format files in QGIS."
+msgstr "一些 :ref:`外部插件 <plugins>` 还提供了在QGIS中打开特定文件格式的工具。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:329
+msgid "Loading a layer from a file"
+msgstr "从文件加载图层"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:331
+msgid "To load a layer from a file:"
+msgstr "要从文件加载图层，请执行以下操作："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:333
+msgid ""
+"Open the layer type tab in the :guilabel:`Data Source Manager` dialog, ie "
+"click the |dataSourceManager| :sup:`Open Data Source Manager` button (or "
+"press :kbd:`Ctrl+L`) and enable the target tab or:"
+msgstr ""
+"在 :guilabel:`数据源管理器` 对话框中打开图层类型选项卡，即单击 |dataSourceManager| :sup:`打开数据源管理器` "
+"按钮 (或按 :kbd:`Ctrl+L`) 并启动目标选项卡或："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:337
+msgid ""
+"for vector data (like GML, ESRI Shapefile, Mapinfo and DXF layers): press "
+":kbd:`Ctrl+Shift+V`, select the :menuselection:`Layer --> Add Layer -->` "
+"|addOgrLayer| :guilabel:`Add Vector Layer` menu option or click on the "
+"|addOgrLayer| :sup:`Add Vector Layer` toolbar button."
+msgstr ""
+"对于矢量数据 (如GML、ESRI形状文件、Mapinfo和DXF图层): 按 :kbd:`Ctrl+Shift+V`, 或选择 "
+":menuselection:`图层 --> 添加图层 -->` |addOgrLayer| :guilabel:`添加矢量图层` 菜单选项，或单击 "
+"|addOgrLayer| :sup:`添加矢量图层` 工具栏按钮。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1513
+msgid "addOgrLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:347
+msgid "Add Vector Layer Dialog"
+msgstr "添加矢量图层对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:349
+msgid ""
+"for raster data (like GeoTiff, MBTiles, GRIdded Binary and DWG layers): "
+"press :kbd:`Ctrl+Shift+R`, select the :menuselection:`Layer --> Add Layer "
+"-->` |addRasterLayer| :guilabel:`Add Raster Layer` menu option or click on "
+"the |addRasterLayer| :sup:`Add Raster Layer` toolbar button."
+msgstr ""
+"对于栅格数据 (如GeoTiff、MBTiles、GRIded二进制和DWG图层): 按 :kbd:`Ctrl+Shift+R`, 或选择 "
+":menuselection:`图层 --> 添加图层 -->` |addRasterLayer| :guilabel:`添加栅格图层` "
+"菜单选项，或单击 |addRasterLayer| :sup:`添加栅格图层` 工具栏按钮。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1519
+msgid "addRasterLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:359
+msgid "Add Raster Layer Dialog"
+msgstr "添加栅格图层对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:361
+msgid "Check |radioButtonOn| :guilabel:`File` source type"
+msgstr "勾选 |radioButtonOn| :guilabel:`文件` 源类型"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1561
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:362
+msgid "Click on the :guilabel:`...` :sup:`Browse` button"
+msgstr "单击 :guilabel:`...` :sup:`浏览` 按钮"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:363
+msgid ""
+"Navigate the file system and load a supported data source. More than one "
+"layer can be loaded at the same time by holding down the :kbd:`Ctrl` key and"
+" clicking on multiple items in the dialog or holding down the :kbd:`Shift` "
+"key to select a range of items by clicking on the first and last items in "
+"the range. Only formats that have been well tested appear in the formats "
+"filter. Other formats can be loaded by selecting ``All files`` (the top item"
+" in the pull-down menu)."
+msgstr ""
+"导航到文件系统并加载支持的数据源。按住 :kbd:`Ctrl` 键并单击对话框中的多个项目，或者按住 :kbd:`Shift` "
+"键单击范围中的第一个和最后一个项目来选择项目范围，这样可以同时加载多个图层。只有受支持的格式才会显示在格式过滤器中。可以通过选择 ``所有文件`` "
+"(下拉菜单中的顶级项) 加载其他格式。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:371
+msgid ""
+"Press :guilabel:`Open` to load the selected file into :guilabel:`Data Source"
+" Manager` dialog"
+msgstr "点击 :guilabel:`打开` 将选中的文件加载到 :guilabel:`数据源管理器` 对话框中"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:379
+msgid "Loading a Shapefile with open options"
+msgstr "加载具有打开选项的形状文件"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:381
+msgid ""
+"Press :guilabel:`Add` to load the file in QGIS and display them in the map "
+"view. :numref:`figure_vector_loaded` shows QGIS after loading the "
+":file:`alaska.shp` file."
+msgstr ""
+"点击 :guilabel:`添加` 将文件加载到QGIS，并将其显示在地图视图中。 :numref:`figure_vector_loaded` "
+"显示了加载 :file:`alaska.shp` 文件后的QGIS。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:389
+msgid "QGIS with Shapefile of Alaska loaded"
+msgstr "加载Alaska形状文件的QGIS"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:393
+msgid ""
+"For loading vector and raster files the GDAL driver offers to define open "
+"actions. These will be shown when a file is selected. Options are described "
+"in detail on https://gdal.org/drivers/vector/, "
+"https://gdal.org/drivers/raster and if a file is selected in QGIS, a text "
+"with hyperlink will directly lead to the documentation of the selected file "
+"type."
+msgstr ""
+"为了加载矢量和栅格文件，GDAL驱动程序提供了定义打开操作的功能。当选择文件时，将显示这些内容。有关选项的详细说明，请参阅 "
+"https://gdal.org/drivers/vector/ 、 https://gdal.org/drivers/raster "
+"。如果在QGIS中选择了文件，带有超链接的文本将直接指向所选文件类型的文档。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:400
+msgid ""
+"Because some formats like MapInfo (e.g., :file:`.tab`) or Autocad "
+"(:file:`.dxf`) allow mixing different types of geometry in a single file, "
+"loading such datasets opens a dialog to select geometries to use in order to"
+" have one geometry per layer."
+msgstr ""
+"由于某些格式如 MapInfo (:file:`.tab`) 或 Autocad (:file:`.dxf`) "
+"允许在单个文件中混合不同类型的几何图形，因此在加载此类数据集会打开一个对话框，选择要使用的几何图形，以便每个图层有一个几何图形类型。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:408
+msgid ""
+"The |addOgrLayer| :sup:`Add Vector Layer` and |addRasterLayer| :sup:`Add "
+"Raster Layer` tabs allow loading of layers from source types other than "
+":guilabel:`File`:"
+msgstr ""
+"|addOgrLayer| :sup:`添加矢量图层` 和 |addRasterLayer| :sup:`添加栅格图层` 选项卡允许从 "
+":guilabel:`文件` 其他源类型加载图层："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:411
+msgid ""
+"You can load specific vector formats like ``ArcInfo Binary Coverage``, ``UK."
+" National Transfer Format``, as well as the raw TIGER format of the ``US "
+"Census Bureau`` or ``OpenfileGDB``. To do that, you select |radioButtonOn| "
+":guilabel:`Directory` as :guilabel:`Source type`. In this case, a directory "
+"can be selected in the dialog after pressing :guilabel:`...` :sup:`Browse`."
+msgstr ""
+"您可以加载特定的矢量格式，如 ``ArcInfo Binary Coverage`` 、 ``UK. National Transfer "
+"Format``, 以及 ``US Census Bureau`` 或 ``OpenfileGDB`` 的原始TIGER格式。要执行此操作，请选择 "
+"|radioButtonOn| :guilabel:`目录` 作为 :guilabel:`源类型` 。在这种情况下，点击 :guilabel:`...`"
+" :sup:`浏览` 后可以在对话框中选择目录。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:417
+msgid ""
+"With the |radioButtonOn| :guilabel:`Database` source type you can select an "
+"existing database connection or create one to the selected database type. "
+"Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``, "
+"``MS SQL Server`` as well as ``PostgreSQL`` or ``MySQL`` ."
+msgstr ""
+"使用 |radioButtonOn| :guilabel:`数据库` "
+"源类型，可以选择现有的数据库连接或创建一个所选数据库类型的连接。一些支持的数据库类型是 ``ODBC``, ``Esri个人地理数据库``, ``MS "
+"SQL Server`` 以及 ``PostgreSQL`` 或 ``MySQL`` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:422
+msgid ""
+"Pressing the :guilabel:`New` button opens the :guilabel:`Create a New OGR "
+"Database Connection` dialog whose parameters are among the ones you can find"
+" in :ref:`vector_create_stored_connection`. Pressing :guilabel:`Open` lets "
+"you select from the available tables, for example of PostGIS enabled "
+"databases."
+msgstr ""
+"点击 :guilabel:`新建` 按钮将打开 :guilabel:`创建新OGR数据库连接` 对话框，该对话框的参数可以在 "
+":ref:`vector_create_stored_connection` 中查找。点击 :guilabel:`打开` "
+"从可用的表中进行选择，例如启用PostGIS数据库。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:427
+msgid ""
+"The |radioButtonOn| :guilabel:`Protocol: HTTP(S), cloud, etc.` source type "
+"opens data stored locally or on the network, either publicly accessible, or "
+"in private buckets of commercial cloud storage services. Supported protocol "
+"types are:"
+msgstr ""
+"|radioButtonOn| :guilabel:`协议: HTTP、云及其他` "
+"源类型可以打开存储在本地或网络的数据，可以是公共访问或商业云存储服务的私有存储桶中的数据。支持的协议类型包括："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:432
+msgid ""
+"``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required, an "
+":ref:`authentication <authentication_index>`."
+msgstr ""
+"``HTTP/HTTPS/FTP``, 带有 :guilabel:`URI` ，如果需要，还可以进行 :ref:`认证 "
+"<authentication_index>` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:434
+msgid ""
+"Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft "
+"Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``. You need "
+"to fill in the :guilabel:`Bucket or container` and the :guilabel:`Object "
+"key`."
+msgstr ""
+"云存储，如 ``AWS S3``, ``Google Cloud Storage``, ``Microsoft Azure Blob``, "
+"``Alibaba OSS Cloud``, ``Open Stack Swift Storage`` 。您需要填写 "
+":guilabel:`存储桶或容器` 和 :guilabel:`对象键` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:438
+msgid ""
+"service supporting OGC ``WFS 3`` (still experimental), using ``GeoJSON`` or "
+"``GEOJSON - Newline Delimited`` format or based on ``CouchDB`` database. A "
+":guilabel:`URI` is required, with optional :ref:`authentication "
+"<authentication_index>`."
+msgstr ""
+"支持 OGC ``WFS 3`` 服务 (仍处于实验阶段)，使用 ``GeoJSON`` 或 ``GEOJSON - Newline "
+"Delimited`` 格式或基于 ``CouchDB`` 数据库。 :guilabel:`URI` 必需填写，可选 :ref:`认证 "
+"<authentication_index>` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:442
+msgid ""
+"For all vector source types it is possible to define the "
+":guilabel:`Encoding` or to use the :menuselection:`Automatic -->` setting."
+msgstr "对于所有矢量源类型，可以定义 :guilabel:`编码` 或使用 :menuselection:`自动 -->` 设置。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:448
+msgid "Loading a mesh layer"
+msgstr "加载网孔图层"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:450
+msgid ""
+"A mesh is an unstructured grid usually with temporal and other components. "
+"The spatial component contains a collection of vertices, edges and faces in "
+"2D or 3D space. More information on mesh layers at :ref:`label_meshdata`."
+msgstr ""
+"网孔是一种具有时态和其他构件的非结构化网格。空间构件包含2D或3D空间中的顶点、边和面的集合。有关网孔图层的详细信息，请参阅 "
+":ref:`label_meshdata` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:454
+msgid "To add a mesh layer to QGIS:"
+msgstr "要将网孔图层添加到QGIS，请执行以下操作："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:456
+msgid ""
+"Open the :menuselection:`Data Source Manager` dialog, either by selecting it"
+" from the :menuselection:`Layer -->` menu or clicking the "
+"|dataSourceManager| :sup:`Open Data Source Manager` button."
+msgstr ""
+"打开 :menuselection:`数据源管理器` 对话框，方法是从 :menuselection:`图层 -->` 菜单或单击 "
+"|dataSourceManager| :sup:`打开数据源管理器` 按钮。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:459
+msgid "Enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel"
+msgstr "启用左侧面板上的 |addMeshLayer| :guilabel:`网孔` 选项卡"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1509
+msgid "addMeshLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:460
+msgid ""
+"Press the :guilabel:`...` :sup:`Browse` button to select the file. "
+":ref:`Various formats <mesh_supported_formats>` are supported."
+msgstr ""
+"点击 :guilabel:`...` :sup:`浏览` 按钮选择文件。请查看支持的 :ref:`各种格式 "
+"<mesh_supported_formats>` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:462
+msgid ""
+"Select the file and press :guilabel:`Add`. The layer will be added using the"
+" native mesh rendering."
+msgstr "选择文件，然后点击 :guilabel:`添加` 按钮。图层添加将使用本地网孔渲染。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:464
+msgid ""
+"If the selected file contains many mesh layers, then you'll be prompted with"
+" a dialog to choose the sublayers to load. Do your selection and press "
+":guilabel:`OK` and the layers are loaded with the native mesh rendering. "
+"It's also possible to load them within a group."
+msgstr ""
+"如果选中的文件包含多个网孔图层，将显示一个对话框，提示您选择要加载的子图层。进行选择并点击 :guilabel:`确定` "
+"按钮，图层将使用本地网孔渲染加载。也可以将其加载到群组中。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:474
+msgid "Mesh tab in Data Source Manager"
+msgstr "数据源管理器中的网孔选项卡"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:482
+msgid "Importing a delimited text file"
+msgstr "导入分隔文本文件"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:484
+msgid ""
+"Delimited text files (e.g. :file:`.txt`, :file:`.csv`, :file:`.dat`, "
+":file:`.wkt`) can be loaded using the tools described above. This way, they "
+"will show up as simple tables. Sometimes, delimited text files can contain "
+"coordinates / geometries that you could want to visualize. This is what "
+"|addDelimitedTextLayer|:guilabel:`Add Delimited Text Layer` is designed for."
+msgstr ""
+"可以使用上述工具加载分隔文本文件 (例如 :file:`.txt`, :file:`.csv`, :file:`.dat`, "
+":file:`.wkt`)。这样，它们将显示为简单的表格。有时，分隔文本文件可能包含您想要可视化的坐标/几何图形。这就是 "
+"|addDelimitedTextLayer|:guilabel:`添加分隔文本图层` 的设计目的。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1503
+msgid "addDelimitedTextLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:492
+msgid ""
+"Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open "
+"the :guilabel:`Data Source Manager` dialog"
+msgstr "单击 |dataSourceManager| :sup:`打开数据源管理器` 图标打开 :guilabel:`数据源管理器` 对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:494
+msgid "Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab"
+msgstr "启用 |addDelimitedTextLayer| :guilabel:`分隔文本` 选项卡"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:495
+msgid ""
+"Select the delimited text file to import (e.g., "
+":file:`qgis_sample_data/csv/elevp.csv`) by clicking on the :guilabel:`...` "
+":sup:`Browse` button."
+msgstr ""
+"单击 :guilabel:`...` :sup:`浏览` 按钮选择要导入的分隔文本文件 (例如 "
+":file:`qgis_sample_data/csv/elevp.csv`) 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:497
+msgid ""
+"In the :guilabel:`Layer name` field, provide the name to use for the layer "
+"in the project (e.g. :file:`Elevation`)."
+msgstr "在 :guilabel:`图层名` 字段中，提供用于工程中图层的名称 (例如 :file:`高程`) 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:499
+msgid ""
+"Configure the settings to meet your dataset and needs, as explained below."
+msgstr "配置设置以满足您的数据集和需求，如下所述。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:506
+msgid "Delimited Text Dialog"
+msgstr "分隔文本对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:509
+msgid "File format"
+msgstr "文件格式"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:511
+msgid ""
+"Once the file is selected, QGIS attempts to parse the file with the most "
+"recently used delimiter, identifying fields and rows. To enable QGIS to "
+"correctly parse the file, it is important to select the right delimiter. You"
+" can specify a delimiter by choosing between:"
+msgstr ""
+"选择文件后，QGIS就会尝试用最近使用的分隔符解析文件，识别字段和行。为了使QGIS能够正确解析文件，选择正确的分隔符非常重要。您可以通过以下选项指定分隔符："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:516
+msgid ""
+"|radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma "
+"character."
+msgstr "|radioButtonOn|:guilabel:`CSV (逗号分隔值)` 以使用逗号字符。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:518
+msgid ""
+"|radioButtonOff|:guilabel:`Regular expression delimiter` and enter text into"
+" the :guilabel:`Expression` field. For example, to change the delimiter to "
+"tab, use ``\\t`` (this is used in regular expressions for the tab "
+"character)."
+msgstr ""
+"|radioButtonOff|:guilabel:`正则表达式分隔符` ，在 :guilabel:`表达式` "
+"字段输入文本。例如，要将分隔符更改为制表符，请使用 ``\\t`` (这在正则表达式中用于制表字符)。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1559
+msgid "radioButtonOff"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:522
+msgid ""
+"|radioButtonOff|:guilabel:`Custom delimiters`, choosing among some "
+"predefined delimiters like ``comma``, ``space``, ``tab``, ``semicolon``, ..."
+" ."
+msgstr ""
+"|radioButtonOff|:guilabel:`自定义分隔符`, 在一些预定义分隔符中进行选择，如 ``逗号``, ``空格``, "
+"``制表符``, ``分号`` 等。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:527
+msgid "Records and fields"
+msgstr "记录和字段"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:529
+msgid "Some other convenient options can be used for data recognition:"
+msgstr "其他一些合适的选项可用于数据识别："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:531
+msgid ""
+":guilabel:`Number of header lines to discard`: convenient when you want to "
+"avoid the first lines in the file in the import, either because those are "
+"blank lines or with another formatting."
+msgstr ":guilabel:`从文件开头起忽略的行数`: 当您想要避免导入文件中的第一行时非常方便，因为这些可能是空行或其他格式。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:534
+msgid ""
+"|checkbox|:guilabel:`First record has field names`: values in the first line"
+" are used as field names, otherwise QGIS uses the field names ``field_1``, "
+"``field_2``..."
+msgstr ""
+"|checkbox|:guilabel:`首行包含字段名称`: 第一行中的值用作字段名称，否则QGIS将使用字段名 ``field_1``, "
+"``field_2`` 等。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1529
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:537
+msgid ""
+"|checkbox|:guilabel:`Detect field types`: automatically recognizes the field"
+" type. If unchecked then all attributes are treated as text fields."
+msgstr "|checkbox|:guilabel:`检测字段类型`: 自动识别字段类型。如果不勾选，所有属性都将被视为文本字段。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:539
+msgid ""
+"|checkbox|:guilabel:`Decimal separator is comma`: you can force decimal "
+"separator to be a comma."
+msgstr "|checkbox|:guilabel:`小数点为逗号`: 可以强制小数分隔符为逗号。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:541
+msgid ""
+"|checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing "
+"spaces from fields."
+msgstr "|checkbox|:guilabel:`裁剪字段前后的空格`: 允许从字段中裁剪前导空格和尾随空格。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:543
+msgid "|checkbox|:guilabel:`Discard empty fields`."
+msgstr "|checkbox|:guilabel:`忽略空字段` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:544
+msgid ""
+":guilabel:`Custom boolean literals`: allows you to add a custom couple of "
+"string that will be detected as boolean values."
+msgstr ":guilabel:`自定义布尔常量`: 允许添加一对将被检测为布尔值的自定义字符串。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:549
+msgid "Field type detection"
+msgstr "字段类型检测"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:551
+msgid ""
+"QGIS tries to detect the field types automatically (unless "
+"|checkbox|:guilabel:`Detect field types` is not checked) by examining the "
+"content of an optional sidecar CSVT file (see: `GeoCSV specification "
+"<https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_) and by "
+"scanning the whole file to make sure that all values can actually be "
+"converted without errors, the fall-back field type is text."
+msgstr ""
+"QGIS尝试检查可选附属CSVT文件的内容 (请参阅: `GeoCSV specification "
+"<https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_) "
+"并扫描整个文件，以确保所有值都可以正确转换而自动检测字段类型 (除非未勾选 |checkbox|:guilabel:`检测字段类型` "
+")，回退字段类型为文本。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:558
+msgid ""
+"The detected field type appears under the field name in sample data preview "
+"table and can be manually changed if necessary."
+msgstr "检测到的字段类型显示在数据样例预览表中的字段名称下，如有必要可以手动更改。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:561
+msgid "The following field types are supported:"
+msgstr "支持以下字段类型："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:563
+msgid ""
+"``Boolean`` case-insensitive literal couples that are interpreted as boolean"
+" values are ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``"
+msgstr ""
+"``布尔型`` 被解析为布尔值的不区分大小写的文字对是 ``1``/``0``, ``true``/``false``, ``t``/``f``, "
+"``yes``/``no``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:564
+msgid "``Whole Number (integer)``"
+msgstr "``非负整数 (整数)``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:565
+msgid "``Whole Number (integer - 64 bit)``"
+msgstr "``非负整数 (整数 - 64位)``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:566
+msgid "``Decimal Number``: double precision floating point number"
+msgstr "``小数``: 双精度浮点数"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:567
+msgid "``Date``"
+msgstr "``日期``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:568
+msgid "``Time``"
+msgstr "``时间``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:569
+msgid "``Date and Time``"
+msgstr "``日期和时间``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:570
+msgid "``Text``"
+msgstr "``文本``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:574
+msgid "Geometry definition"
+msgstr "几何图形定义"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:576
+msgid "Once the file is parsed, set :guilabel:`Geometry definition` to"
+msgstr "解析文件后，将 :guilabel:`几何图形定义` 设置为"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:578
+msgid ""
+"|radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X "
+"field`, :guilabel:`Y field`, :guilabel:`Z field` (for 3-dimensional data) "
+"and :guilabel:`M field` (for the measurement dimension) if the layer is of "
+"point geometry type and contains such fields. If the coordinates are defined"
+" as degrees/minutes/seconds, activate the |checkbox|:guilabel:`DMS "
+"coordinates` checkbox. Provide the appropriate :guilabel:`Geometry CRS` "
+"using the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"|radioButtonOn|:guilabel:`点坐标` 图层为点几何图形类型并包含此类字段: :guilabel:`X字段`, "
+":guilabel:`Y字段`, :guilabel:`Z字段` (3D数据) 和 :guilabel:`M字段` "
+"(测量尺寸)。如果坐标定义为度/分/秒，则激活 |checkbox|:guilabel:`度分秒格式坐标` 复选框。使用 |setProjection|"
+" :sup:`选择CRS` 控件选择恰当的 :guilabel:`几何图形CRS` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1565
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:586
+msgid ""
+"|radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial "
+"information is represented as WKT: select the :guilabel:`Geometry field` "
+"containing the WKT geometry and choose the approriate :guilabel:`Geometry "
+"field` or let QGIS auto-detect it. Provide the appropriate "
+":guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"如果空间信息表示为WKT，则 |radioButtonOn|:guilabel:`熟知文本 (WKT)` 选项是：选择包含WKT几何图形的 "
+":guilabel:`几何图形字段` ，选择适当的 :guilabel:`几何图形类型` 或让QGIS自动检测。使用 |setProjection| "
+":sup:`选择CRS` 控件选择恰当的 :guilabel:`几何图形CRS` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:592
+msgid ""
+"If the file contains non-spatial data, activate |radioButtonOn| "
+":guilabel:`No geometry (attribute only table)` and it will be loaded as an "
+"ordinary table."
+msgstr "如果文件包含非空间数据，请激活 |radioButtonOn| :guilabel:`无几何图形 (仅属性表)` ，将作为普通表加载。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:596
+msgid "Layer settings"
+msgstr "图层设置"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:598
+msgid "Additionally, you can enable:"
+msgstr "此外，您还可以启用："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:600
+msgid ""
+"|checkbox|:guilabel:`Use spatial index` to improve the performance of "
+"displaying and spatially selecting features."
+msgstr "|checkbox|:guilabel:`使用空间索引` 可以提高显示和空间选择要素的性能。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:602
+msgid ""
+"|checkbox|:guilabel:`Use subset index` to improve performance of "
+":ref:`subset filters <vector_query_builder>` (when defined in the layer "
+"properties)."
+msgstr ""
+"|checkbox|:guilabel:`使用子集索引` 可以提高 :ref:`子集筛选 <vector_query_builder>` 的性能 "
+"(在图层属性中定义时)。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:604
+msgid ""
+"|checkbox|:guilabel:`Watch file` to watch for changes to the file by other "
+"applications while QGIS is running."
+msgstr "|checkbox|:guilabel:`追踪文件` 在QGIS运行时追踪其他应用程序对文件的更改。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:608
+msgid ""
+"At the end, click :guilabel:`Add` to add the layer to the map. In our "
+"example, a point layer named ``Elevation`` is added to the project and "
+"behaves like any other map layer in QGIS. This layer is the result of a "
+"query on the :file:`.csv` source file (hence, linked to it) and would "
+"require :ref:`to be saved <general_saveas>` in order to get a spatial layer "
+"on disk."
+msgstr ""
+"最后，单击 :guilabel:`添加` 将图层添加到地图。在我们的示例中，名称为 ``Elevation`` "
+"的点图层被添加到工程中，其行为与QGIS中的任何其他地图图层类似。该图层是对 :file:`.csv` 源文件 (因此链接到该文件) "
+"进行查询的结果，需要 :ref:`保存 <general_saveas>` 才能在磁盘上获得空间图层。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:616
+msgid "Sample Data"
+msgstr "示例数据"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:618
+msgid ""
+"As you set the parser properties, the sample data preview updates regarding "
+"to the applied settings."
+msgstr "在设置解析属性时，示例数据预览会根据应用的设置进行更新。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:621
+msgid ""
+"Also in the Sample Data Table it is possible to override the automatically "
+"determined column types."
+msgstr "此外，在示例数据表中，可以覆盖自动确定的列类型。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:628
+msgid "Importing a DXF or DWG file"
+msgstr "导入DXF或DWG文件"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:630
+msgid ""
+":file:`DXF` and :file:`DWG` files can be added to QGIS by simple drag-and-"
+"drop from the Browser Panel. You will be prompted to select the sublayers "
+"you would like to add to the project. Layers are added with random style "
+"properties."
+msgstr ""
+":file:`DXF` 和 :file:`DWG` "
+"文件可以通过浏览器面板的简单拖放添加到QGIS中。系统将提示您选择要添加到工程中的子图层。添加的图层具有随机样式属性。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:635
+msgid ""
+"For DXF files containing several geometry types (point, line and/or "
+"polygon), the name of the layers will be generated as *<filename.dxf> "
+"entities <geometry type>*."
+msgstr ""
+"对于包含多种几何图形类型 (点、线和/或多边形) 的DXF文件，图层名称将生成为 *<filename.dxf> entities <geometry "
+"type>* 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:639
+msgid ""
+"To keep the dxf/dwg file structure and its symbology in QGIS, you may want "
+"to use the dedicated :menuselection:`Project --> Import/Export --> Import "
+"Layers from DWG/DXF...` tool which allows you to:"
+msgstr ""
+"为了在QGIS中保留dxf/dwg文件结构及其符号，您可能需要使用专用的 :menuselection:`工程 --> 导入/导出 --> "
+"从DWG/DXF文件导入图层...` 工具，并允许："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:644
+msgid "import elements from the drawing file into a GeoPackage database."
+msgstr "将元素从图形文件导入到地理包数据库。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:645
+msgid "add imported elements to the project."
+msgstr "将导入的元素添加到工程中。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:647
+msgid ""
+"In the :guilabel:`DWG/DXF Import` dialog, to import the drawing file "
+"contents:"
+msgstr "在 :guilabel:`DWG/DXF导入` 对话框，要导入图形文件内容，请执行以下操作："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:650
+msgid ""
+"Input the location of the :guilabel:`Target package`, i.e. the new "
+"GeoPackage file that will store the data. If an existing file is provided, "
+"then it will be overwritten."
+msgstr "输入 :guilabel:`目标包` 的位置，即储存数据的新地理包文件。如果提供了现有文件，则会盖写该文件。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:653
+msgid ""
+"Specify the coordinate reference system of the data in the drawing file."
+msgstr "指定图形文件中数据的坐标参照系。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:654
+msgid ""
+"Check |checkbox| :guilabel:`Expand block references` to import the blocks in"
+" the drawing file as normal elements."
+msgstr "选中 |checkbox| :guilabel:`打散块参照` 将图形文件中的块作为普通元素导入。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:656
+msgid ""
+"Check |checkbox| :guilabel:`Use curves` to promote the imported layers to a "
+"``curved`` geometry type."
+msgstr "选中 |checkbox| :guilabel:`使用曲线` 将导入的图层提升为 ``曲线`` 几何图形类型。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:658
+msgid ""
+"Use the :guilabel:`Import` button to select the DWG/DXF file to use (one per"
+" geopackage). The GeoPackage database will be automatically populated with "
+"the drawing file content. Depending on the size of the file, this can take "
+"some time."
+msgstr ""
+"使用 :guilabel:`导入` 按钮选择要使用的DWG/DXF文件 "
+"(每个地理包一个)。地理包数据库将自动填充图形文件内容。根据文件的大小，这可能需要一些时间。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:664
+msgid ""
+"After the :file:`.dwg` or :file:`.dxf` data has been imported into the "
+"GeoPackage database, the frame in the lower half of the dialog is populated "
+"with the list of layers from the imported file. There you can select which "
+"layers to add to the QGIS project:"
+msgstr ""
+"将 :file:`.dwg` 或 :file:`.dxf` "
+"数据导入地理包数据库后，对话框下半部分的框架将填充导入文件的图层列表。在此，可以选择要添加到QGIS工程的图层："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:669
+msgid ""
+"At the top, set a :guilabel:`Group name` to group the drawing files in the "
+"project."
+msgstr "在顶部，设置 :guilabel:`组名` 以编组工程中的图形文件。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:671
+msgid ""
+"Check layers to show: Each selected layer is added to an ad hoc group which "
+"contains vector layers for the point, line, label and area features of the "
+"drawing layer. The style of the layers will resemble the look they "
+"originally had in \\*CAD."
+msgstr ""
+"检查要显示的图层：每个选中图层都添加到特设组中，该组包含图形图层的点、线、标注和面积要素的矢量图层。图层的样式类似于它们最初在  \\*CAD "
+"中的外观。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:676
+msgid "Choose if the layer should be visible at opening."
+msgstr "选择图层是否应在打开时可见。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:677
+msgid ""
+"Checking the |checkbox| :guilabel:`Merge layers` option places all layers in"
+" a single group."
+msgstr "选中 |checkbox| :guilabel:`合并图层` 选项可将所有图层放置在单个组中。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:679
+msgid "Press :guilabel:`OK` to open the layers in QGIS."
+msgstr "点击 :guilabel:`确定` 在QGIS中打开图层。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:687
+msgid "Import dialog for DWG/DXF files"
+msgstr "DWG/DXF文件的导入对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:694
+msgid "Importing OpenStreetMap Vectors"
+msgstr "导入开放街道地图矢量"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:696
+msgid ""
+"The OpenStreetMap project is popular because in many countries no free "
+"geodata such as digital road maps are available. The objective of the OSM "
+"project is to create a free editable map of the world from GPS data, aerial "
+"photography and local knowledge. To support this objective, QGIS provides "
+"support for OSM data."
+msgstr ""
+"开放街道地图项目之所以受欢迎，是因为许多国家没有免费的地理数据，比如数字路线图。OSM项目的目标是根据GPS数据、航空摄影和当地知识创建免费可编辑的世界地图。为了支持这一目标，QGIS提供了对OSM数据的支持。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:703
+msgid ""
+"Using the :guilabel:`Browser Panel`, you can load an :file:`.osm` file to "
+"the map canvas, in which case you'll get a dialog to select sublayers based "
+"on the geometry type. The loaded layers will contain all the data of that "
+"geometry type in the :file:`.osm` file, and keep the :file:`osm` file data "
+"structure."
+msgstr ""
+"使用 :guilabel:`浏览器面板`, 可以将 :file:`.osm` "
+"文件加载到地图画布，在此情况下，您将看到一个对话框，用于根据几何图形类型选择子图层。加载的图层将包含 :file:`.osm` "
+"文件中几何图形类型的所有数据，并保留 :file:`osm` 文件的数据结构。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:715
+msgid "SpatiaLite Layers"
+msgstr "SpatiaLite图层"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:717
+msgid ""
+"|addSpatiaLiteLayer| The first time you load data from a SpatiaLite "
+"database, begin by:"
+msgstr "|addSpatiaLiteLayer| 第一次从SpatiaLite数据库加载数据时，首先执行以下操作："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1521
+msgid "addSpatiaLiteLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:720
+msgid ""
+"clicking on the |addSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` toolbar "
+"button"
+msgstr "单击 |addSpatiaLiteLayer| :sup:`添加SpatiaLite图层` 工具栏按钮"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:722
+msgid ""
+"selecting the |addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` "
+"option from the :menuselection:`Layer --> Add Layer` menu"
+msgstr ""
+"从 :menuselection:`图层 --> 添加图层` 菜单选择 |addSpatiaLiteLayer| "
+":menuselection:`添加SpatiaLite图层...` 选项"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:724
+msgid "or by typing :kbd:`Ctrl+Shift+L`"
+msgstr "或按 :kbd:`Ctrl+Shift+L`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:726
+msgid ""
+"This will bring up a window that will allow you either to connect to a "
+"SpatiaLite database already known to QGIS (which you choose from the drop-"
+"down menu) or to define a new connection to a new database. To define a new "
+"connection, click on :guilabel:`New` and use the file browser to point to "
+"your SpatiaLite database, which is a file with a :file:`.sqlite` extension."
+msgstr ""
+"这将打开一个窗口，允许您连接到QGIS已知的SpatiaLite数据库 (从下拉菜单中选择)，或者定义与新数据库的新连接。要定义新连接，请单击 "
+":guilabel:`新建` ，然后使用文件浏览器指向SpatiaLite数据库，该数据库是扩展名为 :file:`.sqlite` 的文件。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:732
+msgid "QGIS also supports editable views in SpatiaLite."
+msgstr "QGIS还支持SpatiaLite中的可编辑视图。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:736
+msgid "GPS"
+msgstr "GPS"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:738
+msgid ""
+"There are dozens of different file formats for storing GPS data. The format "
+"that QGIS uses is called GPX (GPS eXchange format), which is a standard "
+"interchange format that can contain any number of waypoints, routes and "
+"tracks in the same file."
+msgstr ""
+"有几十种不同的文件格式用于存储GPS数据。QGIS使用的格式称为GPX "
+"(GPS交换格式)，这是一种标准的交换格式，可以在同一文件中包含任意数量的航点、路径和轨迹。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:743
+msgid ""
+"Use the :guilabel:`...` :sup:`Browse` button to select the GPX file, then "
+"use the check boxes to select the feature types you want to load from that "
+"GPX file. Each feature type will be loaded in a separate layer."
+msgstr ""
+"使用 :guilabel:`...` :sup:`浏览` "
+"按钮选择GPX文件，然后使用复选框选择要从该GPX文件加载的要素类型。每个要素类型都将加载在一个单独的图层中。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:747
+msgid "More on GPS data manipulation at :ref:`working_gps`."
+msgstr "有关GPS数据操作的更多信息，请访问 :ref:`working_gps` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:754
+msgid "Loading GPS Data dialog"
+msgstr "加载GPS数据对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:757
+msgid "GRASS"
+msgstr "GRASS"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:759
+msgid ""
+"Working with GRASS vector data is described in section :ref:`sec_grass`."
+msgstr ":ref:`sec_grass` 章节介绍了使用GRASS矢量数据的方法。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:766
+msgid "Database related tools"
+msgstr "数据库相关工具"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:772
+msgid "Creating a stored Connection"
+msgstr "创建存储的连接"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:774
+msgid ""
+"In order to read and write tables from a database format QGIS supports you "
+"have to create a connection to that database. While :ref:`QGIS Browser Panel"
+" <browser_panel>` is the simplest and recommanded way to connect to and use "
+"databases, QGIS provides other tools to connect to each of them and load "
+"their tables:"
+msgstr ""
+"为了从QGIS支持的数据库格式读取和写入表，必须创建与该数据库的连接。虽然 :ref:`QGIS浏览器面板 <browser_panel>` "
+"是连接和使用数据库的最简单和推荐的方式，但QGIS提供了其他工具与每个数据库连接并加载其表："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:780
+msgid ""
+"|addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing "
+":kbd:`Ctrl+Shift+D`"
+msgstr ""
+"|addPostgisLayer| :menuselection:`添加PostGIS图层...` 或按 :kbd:`Ctrl+Shift+D`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1517
+msgid "addPostgisLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:782
+msgid "|addMssqlLayer| :menuselection:`Add MS SQL Server Layer`"
+msgstr "|addMssqlLayer| :menuselection:`添加 MS SQL Server 图层`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1511
+msgid "addMssqlLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:783
+msgid ""
+"|addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing "
+":kbd:`Ctrl+Shift+O`"
+msgstr ""
+"|addOracleLayer| :menuselection:`添加 Oracle Spatial 图层...` 或按 "
+":kbd:`Ctrl+Shift+O`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1515
+msgid "addOracleLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:785
+msgid ""
+"|addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing "
+":kbd:`Ctrl+Shift+G`"
+msgstr ""
+"|addHanaLayer| :menuselection:`添加 SAP HANA Spatial 图层...` 或按 "
+":kbd:`Ctrl+Shift+G`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1505
+msgid "addHanaLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:788
+msgid ""
+"These tools are accessible either from the :guilabel:`Manage Layers Toolbar`"
+" and the :menuselection:`Layer --> Add Layer -->` menu. Connecting to "
+"SpatiaLite database is described at :ref:`label_spatialite`."
+msgstr ""
+"这些工具可从 :guilabel:`图层管理工具栏` 和 :menuselection:`图层 --> 添加图层 -->` 菜单访问。 "
+":ref:`label_spatialite` 介绍了连接到SpatiaLite数据库的方法。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:792
+msgid "**Create connection to database from the QGIS Browser Panel**"
+msgstr "**从QGIS浏览器面板创建与数据库的连接**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:794
+msgid ""
+"Selecting the corresponding database format in the Browser tree, right-"
+"clicking and choosing connect will provide you with the database connection "
+"dialog."
+msgstr "在浏览器树中选择相应的数据库格式，右键单击并选择连接，将提供数据库连接对话框。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:798
+msgid ""
+"Most of the connection dialogs follow a common basis that will be described "
+"below using the PostgreSQL database tool as an example. For additional "
+"settings specific to other providers, you can find corresponding "
+"descriptions at:"
+msgstr "多数连接对话框界面类似，下面将以PostgreSQL数据库工具为例进行阐述。有关特定于其他提供程序的相关设置，可以在以下找到相应的说明："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:803
+msgid ":ref:`create_ms_sql_server_connection`;"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:804
+msgid ":ref:`create_oracle_connection`;"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:805
+msgid ":ref:`create_hana_connection`."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:807
+msgid ""
+"The first time you use a PostGIS data source, you must create a connection "
+"to a database that contains the data. Begin by clicking the appropriate "
+"button as exposed above, opening an :guilabel:`Add PostGIS Table(s)` dialog "
+"(see :numref:`figure_add_postgis_tables`). To access the connection manager,"
+" click on the :guilabel:`New` button to display the :guilabel:`Create a New "
+"PostGIS Connection` dialog."
+msgstr ""
+"首次使用PostGIS数据源时，必须创建与包含数据的数据库的连接。首先单击上面显示的相应按钮，打开 :guilabel:`添加PostGIS表` 对话框"
+" (参见 :numref:`figure_add_postgis_tables`) 。要访问连接管理器，请单击:guilabel:`新建` 按钮以显示 "
+":guilabel:`新建PostGIS连接` 对话框。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:820
+msgid "Create a New PostGIS Connection Dialog"
+msgstr "新建PostGIS连接对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:823
+msgid ""
+"The parameters required for a PostGIS connection are explained below. For "
+"the other database types, see their differences at :ref:`db_requirements`."
+msgstr "PostGIS连接所需参数如下所述。对于其他数据库类型，请参阅 :ref:`db_requirements` 的差异。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:827
+msgid ""
+":guilabel:`Name`: A name for this connection. It can be the same as "
+":guilabel:`Database`."
+msgstr ":guilabel:`名称`: 此连接的名称。可以与 :guilabel:`数据库` 相同。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:828
+msgid ""
+":guilabel:`Service`: Service parameter to be used alternatively to "
+"hostname/port (and potentially database). This can be defined in "
+":file:`pg_service.conf`. Check the :ref:`pg-service-file` section for more "
+"details."
+msgstr ""
+":guilabel:`服务`: 要替代主机名/端口 (以及可能的数据库) 使用的服务参数。可以在 :file:`pg_service.conf` "
+"中定义。有关更多信息，请查看 :ref:`pg-service-file` 章节。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:831
+msgid ""
+":guilabel:`Host`: Name of the database host. This must be a resolvable host "
+"name such as would be used to open a TCP/IP connection or ping the host. If "
+"the database is on the same computer as QGIS, simply enter *localhost* here."
+msgstr ""
+":guilabel:`主机`: "
+"数据库主机的名称。必须是可解析的主机名，例如用于打开TCP/IP连接或Ping主机的名称。如果数据库与QGIS处于同一台计算机，只需在此处输入 "
+"*localhost* 即可。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:834
+msgid ""
+":guilabel:`Port`: Port number the PostgreSQL database server listens on. The"
+" default port for PostGIS is ``5432``."
+msgstr ":guilabel:`端口`: PostgreSQL数据库服务器侦听的端口号。PostGIS的默认端口为 ``5432`` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:836
+msgid ":guilabel:`Database`: Name of the database."
+msgstr ":guilabel:`数据库`: 数据库的名称。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:837
+msgid ""
+":guilabel:`SSL mode`: SSL encryption setup The following options are "
+"available:"
+msgstr ":guilabel:`SSL模式`: SSL加密设置以下选项可用："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:840
+msgid ""
+":guilabel:`Prefer` (the default): I don't care about encryption, but I wish "
+"to pay the overhead of encryption if the server supports it."
+msgstr ":guilabel:`优先` (默认): 我不关心加密，但如果服务器支持，希望支付加密的开销。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:842
+msgid ""
+":guilabel:`Require`: I want my data to be encrypted, and I accept the "
+"overhead. I trust that the network will make sure I always connect to the "
+"server I want."
+msgstr ":guilabel:`需要`: 我希望我的数据被加密并接受开销。相信网络会确保始终连接到我想要的服务器。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:844
+msgid ""
+":guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead. "
+"I want to be sure that I connect to a server that I trust."
+msgstr ":guilabel:`检验证书颁发机构`: 我希望我的数据加密并接受开销。希望确保连接到我信任的服务器。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:846
+msgid ""
+":guilabel:`Verify Full`: I want my data encrypted, and I accept the "
+"overhead. I want to be sure that I connect to a server I trust, and that "
+"it's the one I specify."
+msgstr ":guilabel:`完全检验`: 我希望我的数据加密并接受开销。我想确保连接到我信任的服务器，并且是由我指定的服务器。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:848
+msgid ""
+":guilabel:`Allow`: I don't care about security, but I will pay the overhead "
+"of encryption if the server insists on it."
+msgstr ":guilabel:`允许`: 我不关心安全性，但如果服务器坚持加密，我会支付加密的开销。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:850
+msgid ""
+":guilabel:`Disable`: I don't care about security, and I don't want to pay "
+"the overhead of encryption."
+msgstr ":guilabel:`禁用`: 我不关心安全性，也不想为加密支付开销。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:853
+msgid ":guilabel:`Authentication`, basic."
+msgstr ":guilabel:`认证`, 基本："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:855
+msgid ":guilabel:`User name`: User name used to log in to the database."
+msgstr ":guilabel:`用户名`: 用于登录数据库的用户名。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:856
+msgid ""
+":guilabel:`Password`: Password used with *Username* to connect to the "
+"database."
+msgstr ":guilabel:`密码`: 与 *用户名* 一起使用的用于连接到数据库的密码。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:858
+msgid ""
+"You can save any or both of the ``User name`` and ``Password`` parameters, "
+"in which case they will be used by default each time you need to connect to "
+"this database. If not saved, you'll be prompted to supply the credentials to"
+" connect to the database in next QGIS sessions. The connection parameters "
+"you entered are stored in a temporary internal cache and returned whenever a"
+" username/password for the same database is requested, until you end the "
+"current QGIS session."
+msgstr ""
+"您可以保存 ``用户名`` 和 ``密码`` "
+"参数中的任何一个或两个，在这种情况下，每次需要连接到此数据库时，默认都会使用它们。如果未保存，系统将提示您提供凭据，以便在接下来的QGIS会话中连接到数据库。您输入的连接参数存储在临时内部缓存中，并在请求同一数据库时返回用户名/密码，直到结束当前QGIS会话。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:866
+msgid "**QGIS User Settings and Security**"
+msgstr "**QGIS用户设置和安全性**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:868
+msgid ""
+"In the :guilabel:`Authentication` tab, saving **username** and **password** "
+"will keep unprotected credentials in the connection configuration. Those "
+"**credentials will be visible** if, for instance, you share the project file"
+" with someone. Therefore, it is advisable to save your credentials in an "
+"*Authentication configuration* instead (:guilabel:`Configurations` tab - See"
+" :ref:`authentication_index` for more details) or in a service connection "
+"file (see :ref:`pg-service-file` for example)."
+msgstr ""
+"在 :guilabel:`认证` 选项卡，保存 **用户名** 和 **密码** 将在连接配置中保留未受保护的凭据。例如，如果您与某人共享工程文件，这些"
+" **凭据将可见** 。因此，建议将凭据保存在 *认证配置* (:guilabel:`配置` 选项卡 - 更多信息请参阅 "
+":ref:`authentication_index` ) 或服务连接文件中 (请参阅 :ref:`pg-service-file` ) 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:876
+msgid ""
+":guilabel:`Authentication`, configurations. Choose an authentication "
+"configuration. You can add configurations using the |symbologyAdd| button. "
+"Choices are:"
+msgstr ":guilabel:`认证`, 配置。选择认证配置。可以使用 |symbologyAdd| 按钮添加配置。可选配置包括："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1569
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:880
+msgid "Basic authentication"
+msgstr "基本认证"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:881
+msgid "PKI PKCS#12 authentication"
+msgstr "PKI PKCS#12 认证"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:882
+msgid "PKI paths authentication"
+msgstr "PKI路径认证"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:883
+msgid "PKI stored identity certificate"
+msgstr "PKI存储身份证书"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:885
+msgid ""
+"Optionally, depending on the type of database, you can activate the "
+"following checkboxes:"
+msgstr "根据数据库的类型，可以选择激活以下复选框："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:888
+msgid "|checkbox| :guilabel:`Only show layers in the layer registries`"
+msgstr "|checkbox| :guilabel:`只显示图层注册表中的图层`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:889
+msgid ""
+"|checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`"
+msgstr "|checkbox| :guilabel:`不解析无限制的列类型 (几何图形)`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:890
+msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
+msgstr "|checkbox| :guilabel:`仅查找 '公共' 架构`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:891
+msgid "|checkbox| :guilabel:`Also list tables with no geometry`"
+msgstr "|checkbox| :guilabel:`同时列出没有几何图形的表`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:892
+msgid "|checkbox| :guilabel:`Use estimated table metadata`"
+msgstr "|checkbox| :guilabel:`使用预估表元数据`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:893
+msgid ""
+"|checkbox| :guilabel:`Allow saving/loading QGIS projects in the database` - "
+"more details :ref:`here <saveprojecttodb>`"
+msgstr ""
+"|checkbox| :guilabel:`允许在数据库中保存/加载QGIS工程` - 更多信息 :ref:`在此 <saveprojecttodb>`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:895
+msgid ""
+"|checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the "
+"database` - more details :ref:`here <savemetadatatodb>`"
+msgstr ""
+"|checkbox| :guilabel:`允许在数据库中保存/加载QGIS图层元数据` - 更多信息 :ref:`在此 "
+"<savemetadatatodb>`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:898
+msgid "**Use estimated table metadata to speed up operations**"
+msgstr "**使用预估表元数据加快操作速度**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:900
+msgid ""
+"When initializing layers, various queries may be needed to establish the "
+"characteristics of the geometries stored in the database table. When the "
+":guilabel:`Use estimated table metadata` option is checked, these queries "
+"examine only a sample of the rows and use the table statistics, rather than "
+"the entire table. This can drastically speed up operations on large "
+"datasets, but may result in incorrect characterization of layers (e.g. the "
+"feature count of filtered layers will not be accurately determined) and may "
+"even cause strange behaviour if columns that are supposed to be unique "
+"actually are not."
+msgstr ""
+"初始化图层时，可能需要各种查询来建立存储在数据库表中的几何图形的特性。勾选 :guilabel:`使用预估表元数据` "
+"选项时，这些查询只检查一行样本，并使用表统计信息，而不是整个表。这样可以极大地加快大型数据集的操作，但可能导致图层的错误特性描述 "
+"(例如，过滤图层的特性计数将无法准确确定)，如果本应是唯一的列实际上不是，甚至可能导致奇怪的行为。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:910
+msgid ""
+"Once all parameters and options are set, you can test the connection by "
+"clicking the :guilabel:`Test Connection` button or apply it by clicking the "
+":guilabel:`OK` button. From :guilabel:`Add PostGIS Table(s)`, click now on "
+":guilabel:`Connect`, and the dialog is filled with tables from the selected "
+"database (as shown in :numref:`figure_add_postgis_tables`)."
+msgstr ""
+"设置了所有参数和选项后，就可以单击 :guilabel:`测试连接` 按钮进行测试，或单击 :guilabel:`确定` 按钮应用连接。在 "
+":guilabel:`添加PostGIS表` 中，现在单击 :guilabel:`连接` ，对话框将填充所选数据库中的表 (如图 "
+":numref:`figure_add_postgis_tables` 所示) 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:921
+msgid "Particular Connection requirements"
+msgstr "特殊连接要求"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:923
+msgid ""
+"Because of database type particularities, provided options are not the same."
+" Database specific options are described below."
+msgstr "由于数据库类型的特殊性，提供的选项不尽相同。数据库特定选项如下所述。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:929
+msgid "PostgreSQL Service connection file"
+msgstr "PostgreSQL服务连接文件"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:931
+msgid ""
+"The service connection file allows PostgreSQL connection parameters to be "
+"associated with a single service name. That service name can then be "
+"specified by a client and the associated settings will be used."
+msgstr "服务连接文件允许PostgreSQL连接参数与单个服务名称相关联。然后，客户端可以指定该服务名称，并将使用相关的设置。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:935
+msgid ""
+"It's called :file:`.pg_service.conf` under \\*nix systems (GNU/Linux, macOS "
+"etc.) and :file:`pg_service.conf` on Windows."
+msgstr ""
+"在 \\*nix 系统 (GNU/Linux、macOS等) 称为 :file:`.pg_service.conf` ，在Windows称为 "
+":file:`pg_service.conf` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:938
+msgid "The service file can look like this::"
+msgstr "服务文件可能如下所示::"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:952
+msgid ""
+"There are two services in the above example: ``water_service`` and "
+"``wastewater_service``. You can use these to connect from QGIS, pgAdmin, "
+"etc. by specifying only the name of the service you want to connect to "
+"(without the enclosing brackets). If you want to use the service with "
+"``psql`` you need to do something like ``export PGSERVICE=water_service`` "
+"before doing your psql commands."
+msgstr ""
+"上例有两个服务: ``water_service`` 和 ``wastewater_service`` "
+"。可以使用它们从QGIS、pgAdmin等进行连接，只需指定要连接服务的名称 (不带方括号)。如果想在 ``psql`` "
+"中使用该服务，执行psql命令之前，需要执行类似 ``export PGSERVICE=water_service`` 的操作。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:959
+msgid ""
+"You can find all the PostgreSQL parameters `here "
+"<https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
+"PARAMKEYWORDS>`_"
+msgstr ""
+"可以 `在此 <https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
+"PARAMKEYWORDS>`_ 查找所有PostgreSQL参数"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:962
+msgid ""
+"If you don't want to save the passwords in the service file you can use the "
+"`.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ "
+"option."
+msgstr ""
+"如果不想将密码保存在服务文件中，可以使用 `.pg_pass "
+"<https://www.postgresql.org/docs/current/libpq-pgpass.html>`_  选项。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:968
+msgid ""
+"On \\*nix operating systems (GNU/Linux, macOS etc.) you can save the "
+":file:`.pg_service.conf` file in the user's home directory and PostgreSQL "
+"clients will automatically be aware of it. For example, if the logged user "
+"is ``web``, :file:`.pg_service.conf` should be saved in the "
+":file:`/home/web/` directory in order to directly work (without specifying "
+"any other environment variables)."
+msgstr ""
+"在 \\*nix 操作系统 (GNU/Linux、macOS等) ，可以将 :file:`.pg_service.conf` "
+"文件保存在用户的主目录，PostgreSQL客户端在此自动查找。例如，如果登录的用户是 ``web``, 应将 "
+":file:`.pg_service.conf` 保存在 :file:`/home/web/` 目录中，以便直接工作 (无需指定任何其他环境变量)。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:975
+msgid ""
+"You can specify the location of the service file by creating a "
+"``PGSERVICEFILE`` environment variable (e.g. run the ``export "
+"PGSERVICEFILE=/home/web/.pg_service.conf`` command under your \\*nix OS to "
+"temporarily set the ``PGSERVICEFILE`` variable)"
+msgstr ""
+"可以通过创建 ``PGSERVICEFILE`` 环境变量来指定服务文件的位置 (例如，在 \\*nix OS 操作系统运行 ``export "
+"PGSERVICEFILE=/home/web/.pg_service.conf`` 命令可以临时设置 ``PGSERVICEFILE`` 变量)"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:981
+msgid ""
+"You can also make the service file available system-wide (all users) either "
+"by placing the :file:`.pg_service.conf` file in ``pg_config --sysconfdir`` "
+"or by adding the ``PGSYSCONFDIR`` environment variable to specify the "
+"directory containing the service file. If service definitions with the same "
+"name exist in the user and the system file, the user file takes precedence."
+msgstr ""
+"还可以将 :file:`.pg_service.conf` 文件放在 ``pg_config --sysconfdir`` 或添加 "
+"``PGSYSCONFDIR`` 环境变量来指定包含服务文件的目录，从而使服务文件在系统范围内 (所有用户) "
+"可用。如果用户和系统文件中存在相同名称的服务定义，则优先用户文件。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:989
+msgid "There are some caveats under Windows:"
+msgstr "Windows的注意事项："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:991
+msgid ""
+"The service file should be saved as :file:`pg_service.conf` and not as "
+":file:`.pg_service.conf`."
+msgstr "服务文件应保存为 :file:`pg_service.conf` ，而不是 :file:`.pg_service.conf` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:993
+msgid ""
+"The service file should be saved in Unix format in order to work. One way to"
+" do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_ and "
+":menuselection:`Edit --> EOL Conversion --> UNIX Format --> File save`."
+msgstr ""
+"服务文件应该以Unix格式保存才能工作。一种方法是用 `Notepad++ <https://notepad-plus-plus.org/>`_  "
+"打开并 :menuselection:`编辑 --> EOL转换 --> UNIX格式 --> 文件保存` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:998
+msgid ""
+"You can add environmental variables in various ways; a tested one, known to "
+"work reliably, is :menuselection:`Control Panel --> System and Security --> "
+"System --> Advanced system settings --> Environment Variables` adding "
+"``PGSERVICEFILE`` with the path - e.g. "
+":file:`C:\\\\Users\\\\John\\\\pg_service.conf`"
+msgstr ""
+"可以通过各种方式添加环境变量。一个经过测试而可靠的方式是通过 :menuselection:`控制面板 --> 系统和安全 --> 系统 --> "
+"高级系统设置 --> 环境变量` 添加 ``PGSERVICEFILE`` 的路径 - 例如 "
+":file:`C:\\\\Users\\\\John\\\\pg_service.conf`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1003
+msgid ""
+"After adding an environment variable you may also need to restart the "
+"computer."
+msgstr "添加环境变量后，可能还需要重新启动计算机。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1010
+msgid "Connecting to Oracle Spatial"
+msgstr "连接到 Oracle Spatial"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1012
+msgid ""
+"The spatial features in Oracle Spatial aid users in managing geographic and "
+"location data in a native type within an Oracle database. In addition to "
+"some of the options in :ref:`vector_create_stored_connection`, the "
+"connection dialog proposes:"
+msgstr ""
+"Oracle spatial 中的空间要素有助于用户在Oracle数据库管理本地类型的地理和位置数据。除了 "
+":ref:`vector_create_stored_connection` 中的一些选项外，连接对话框还提供："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1017
+msgid "**Database**: SID or SERVICE_NAME of the Oracle instance;"
+msgstr "**数据库**: Oracle实例的SID或 SERVICE_NAME"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1018
+msgid ""
+"**Port**: Port number the Oracle database server listens on. The default "
+"port is ``1521``;"
+msgstr "**端口**: Oracle数据库服务器侦听的端口号。默认端口为 ``1521``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1020
+msgid ""
+"**Options**: Oracle connection specific options (e.g. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). The format of the options"
+" string is a semicolon separated list of option names or option=value pairs;"
+msgstr ""
+"**选项**: Oracle连接特定选项 (例如 "
+"OCI_ATTR_PREFETCH_ROWS、OCI_ATTR_PREFETCH_MEMORY)。选项字符串的格式是以分号分隔的选项名称或选项=值对列表"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1023
+msgid "**Workspace**: Workspace to switch to;"
+msgstr "**工作区**: 要切换到的工作区"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1024
+msgid "**Schema**: Schema in which the data are stored"
+msgstr "**架构**: 存储数据的架构"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1026
+msgid "Optionally, you can activate the following checkboxes:"
+msgstr "您可以激活以下复选框 (可选)："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1028
+msgid ""
+"|checkbox| :guilabel:`Only look in metadata table`: restricts the displayed "
+"tables to those that are in the ``all_sdo_geom_metadata`` view. This can "
+"speed up the initial display of spatial tables."
+msgstr ""
+"|checkbox| :guilabel:`仅在元数据表中查找`: 将显示的表限制为 ``all_sdo_geom_metadata`` "
+"视图中的表。这可以加快空间表的初始显示。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1031
+msgid ""
+"|checkbox| :guilabel:`Only look for user's tables`: when searching for "
+"spatial tables, restricts the search to tables that are owned by the user."
+msgstr "|checkbox| :guilabel:`仅查找用户表`: 在搜索空间表时，将搜索限制为用户拥有的表。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1033
+msgid ""
+"|checkbox| :guilabel:`Also list tables with no geometry`: indicates that "
+"tables without geometry should also be listed by default."
+msgstr "|checkbox| :guilabel:`同时列出没有几何图形的表`: 表示默认也应列出没有几何图形的表。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1035
+msgid ""
+"|checkbox| :guilabel:`Use estimated table statistics for the layer "
+"metadata`: when the layer is set up, various metadata are required for the "
+"Oracle table. This includes information such as the table row count, "
+"geometry type and spatial extents of the data in the geometry column. If the"
+" table contains a large number of rows, determining this metadata can be "
+"time-consuming. By activating this option, the following fast table metadata"
+" operations are done: Row count is determined from ``all_tables.num_rows``. "
+"Table extents are always determined with the SDO_TUNE.EXTENTS_OF function, "
+"even if a layer filter is applied. Table geometry is determined from the "
+"first 100 non-null geometry rows in the table."
+msgstr ""
+"|checkbox| :guilabel:`对图层元数据使用预估表统计`: "
+"设置图层时，Oracle表需要各种元数据，包括表行数、几何图形类型和几何图形列中数据的空间范围等信息。如果表包含大量行，准确算出此表元数据可能非常耗时。通过激活此选项，将完成以下快速表元数据操作：行计数由"
+" ``all_tables.num_rows`` 确定。表范围始终由 SDO_TUNE.EXTENTS_OF "
+"函数确定，即使应用了图层过滤也是如此。表几何图形是根据表中的前100个非空几何图形行确定的。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1045
+msgid ""
+"|checkbox| :guilabel:`Only existing geometry types`: only lists the existing"
+" geometry types and don't offer to add others."
+msgstr "|checkbox| :guilabel:`仅既有几何图形类型`: 仅列出现有而不提供添加其他几何图形类型。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1047
+msgid "|checkbox| :guilabel:`Include additional geometry attributes`."
+msgstr "|checkbox| :guilabel:`包含附加几何图形属性` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1051
+msgid "**Oracle Spatial Layers**"
+msgstr "**Oracle Spatial 图层**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1053
+msgid ""
+"Normally, an Oracle Spatial layer is defined by an entry in the "
+"**USER_SDO_METADATA** table."
+msgstr "通常，Oracle Spatial 图层由 **USER_SDO_METADATA** 表中的条目定义。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1056
+msgid ""
+"To ensure that selection tools work correctly, it is recommended that your "
+"tables have a **primary key**."
+msgstr "为确保选择工具正常工作，建议您的表设置 **主键** 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1063
+msgid "Connecting to MS SQL Server"
+msgstr "连接到 MS SQL Server"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1065
+msgid ""
+"In addition to some of the options in "
+":ref:`vector_create_stored_connection`, creating a new MS SQL Server "
+"connection dialog proposes you to fill a **Provider/DSN** name. You can also"
+" display available databases."
+msgstr ""
+"除了 :ref:`vector_create_stored_connection` 中的一些选项外，新建 MS SQL Server "
+"连接对话框还建议您填写 **提供程序/DSN** 名称。还可以显示可用的数据库。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1072
+msgid "Connecting to SAP HANA"
+msgstr "连接到 SAP HANA"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1074
+msgid ""
+"You require the SAP HANA Client to connect to a SAP HANA database. You can "
+"download the SAP HANA Client for your platform at the `SAP Development Tools"
+" website <https://tools.hana.ondemand.com/#hanatools>`_."
+msgstr ""
+"需要 SAP HANA 客户端连接到 SAP HANA 数据库。可以在 `SAP Development 工具网站 "
+"<https://tools.hana.ondemand.com/#hanatools>`_ 下载适用于您平台的 SAP HANA 客户端。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1083
+msgid "Create a New SAP HANA Connection Dialog"
+msgstr "新建 SAP HANA 连接对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1085
+msgid "The following parameters can be entered:"
+msgstr "可以输入以下参数："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1087
+msgid ":guilabel:`Name`: A name for this connection."
+msgstr ":guilabel:`名称`: 此连接的名称。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1089
+msgid ""
+":guilabel:`Driver` |win|: The name of the HANA ODBC driver. It is "
+"``HDBODBC`` if you are using 64-bit QGIS, ``HDBODBC32`` if you are using "
+"32-bit QGIS. The appropriate driver name is entered automatically."
+msgstr ""
+":guilabel:`驱动` |win|: HANA ODBC 驱动程序的名称。如果使用64位QGIS则为 ``HDBODBC`` "
+"，如果使用32位QGIS则为 ``HDBODBC32`` 。将自动输入相应的驱动程序名称。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1577
+msgid "win"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1093
+msgid ""
+":guilabel:`Driver` |nix| |osx|: Either the name under which the SAP HANA "
+"ODBC driver has been registered in :file:`/etc/odbcinst.ini` or the full "
+"path to the SAP HANA ODBC driver. The SAP HANA Client installer will install"
+" the ODBC driver to :file:`/usr/sap/hdbclient/libodbcHDB.so` by default."
+msgstr ""
+":guilabel:`驱动` |nix| |osx|: 在 :file:`/etc/odbcinst.ini` 中注册 SAP HANA ODBC "
+"驱动程序时使用的名称，或 SAP HANA ODBC 驱动程序的完整路径。默认 SAP HANA 客户端安装程序会将ODBC驱动程序安装到 "
+":file:`/usr/sap/hdbclient/libodbcHDB.so` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1551
+msgid "nix"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1555
+msgid "osx"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1098
+msgid ":guilabel:`Host`: The name of the database host."
+msgstr ":guilabel:`主机`: 数据库主机的名称。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1100
+msgid ""
+":guilabel:`Identifier`: Identifies the instance to connect to on the host. "
+"This can be either :guilabel:`Instance Number` or :guilabel:`Port Number`. "
+"Instance numbers consist of two digits, port numbers are in the range from 1"
+" to 65,535."
+msgstr ""
+":guilabel:`标识符`: 标识主机上要连接到的实例。可以是 :guilabel:`实例号` 或 :guilabel:`端口号` "
+"。实例号由两位数字组成，端口号在 1 到 65,535 之间。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1105
+msgid ""
+":guilabel:`Mode`: Specifies the mode in which the SAP HANA instance runs. "
+"This setting is only taken into account if :guilabel:`Identifier` is set to "
+":guilabel:`Instance Number`. If the database hosts multiple containers, you "
+"can either connect to a tenant with the name given at :guilabel:`Tenant "
+"database` or you can connect to the system database."
+msgstr ""
+":guilabel:`模式`: 指定 SAP HANA 实例运行的模式。只有当 :guilabel:`标识符` 设置为 :guilabel:`实例号` "
+"时，才会考虑此设置。如果数据库托管多个容器，可以使用 :guilabel:`Tenant数据库` 中给定的名称连接到租用者，也可以连接到系统数据库。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1111
+msgid ""
+":guilabel:`Schema`: This parameter is optional. If a schema name is given, "
+"QGIS will only search for data in that schema. If this field is left blank, "
+"QGIS will search for data in all schemas."
+msgstr ""
+":guilabel:`架构`: 此参数可选。如果给定了架构名称，QGIS只搜索该架构中的数据。如果此字段为空，QGIS将搜索所有架构中的数据。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1115
+msgid ":menuselection:`Authentication --> Basic`."
+msgstr ":menuselection:`认证 --> 基本` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1117
+msgid ":guilabel:`User name`: User name used to connect to the database."
+msgstr ":guilabel:`用户名`: 用于连接到数据库的用户名。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1118
+msgid ":guilabel:`Password`: Password used to connect to the database."
+msgstr ":guilabel:`密码`: 用于连接到数据库的密码。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1120
+msgid ":guilabel:`SSL Settings`"
+msgstr ":guilabel:`SSL设置`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1122
+msgid ""
+"|checkbox| :guilabel:`Enable TLS/SSL encryption`: Enables TLS 1.1 - TLS1.2 "
+"encryption. The server will choose the highest available."
+msgstr ""
+"|checkbox| :guilabel:`启用 TLS/SSL 加密`: 启用 TLS 1.1 - TLS1.2 加密。服务器将选择可用的最高级。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1124
+msgid ""
+":guilabel:`Provider`: Specifies the cryptographic library provider used for "
+"SSL communication. :guilabel:`sapcrypto` should work on all platforms, "
+":guilabel:`openssl` should work on |nix| |osx|, :guilabel:`mscrypto` should "
+"work on |win| and :guilabel:`commoncrypto` requires CommonCryptoLib to be "
+"installed."
+msgstr ""
+":guilabel:`提供程序`: 指定用于SSL通信的加密库提供程序。 :guilabel:`sapcrypto` 适用于所有平台, "
+":guilabel:`openssl` 适用于 |nix| |osx|, :guilabel:`mscrypto` 适用于 |win| ， "
+":guilabel:`commoncrypto` 需要安装CommonCryptoLib。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1129
+msgid ""
+"|checkbox| :guilabel:`Validate SSL certificate`: If checked, the SSL "
+"certificate will be validated using the truststore given in :guilabel:`Trust"
+" store file with public key`."
+msgstr ""
+"|checkbox| :guilabel:`验证SSL证书`: 如果勾选，SSL证书将使用 :guilabel:`带公钥的信任储存文件` "
+"中给定的信任存储库进行验证。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1132
+msgid ""
+":guilabel:`Override hostname in certificate`: Specifies the host name used "
+"to verify server’s identity. The host name specified here verifies the "
+"identity of the server instead of the host name with which the connection "
+"was established. If you specify ``*`` as the host name, then the server's "
+"host name is not validated. Other wildcards are not permitted."
+msgstr ""
+":guilabel:`替换证书中的主机名`: 指定用于检验服务器标识的主机名。此处指定的主机名验证服务器的标识，而不是与之建立连接的主机名。如果将 "
+"``*`` 指定为主机名，则不会验证服务器的主机名。不允许使用其他通配符。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1137
+msgid ""
+":guilabel:`Keystore file with private key`: Currently ignored. This "
+"parameter might allow to authenticate via certificate instead via user and "
+"password in future."
+msgstr ":guilabel:`含私钥的密钥库文件`: 当前已忽略。此参数允许将来通过证书进行身份验证，而不是使用用户名和密码。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1140
+msgid ""
+":guilabel:`Trust store file with public key`: Specifies the path to a trust "
+"store file that contains the server’s public certificates if using OpenSSL. "
+"Typically, the trust store contains the root certificate or the certificate "
+"of the certification authority that signed the server’s public certificates."
+" If you are using the cryptographic library CommonCryptoLib or msCrypto, "
+"then leave this property empty."
+msgstr ""
+":guilabel:`带公钥的信任储存文件`: "
+"如果使用OpenSSL，则指定包含服务器公共证书的信任储存文件的路径。通常，信任储存包含根证书或对服务器的公共证书进行签名的证书颁发机构的证书。如果您正在使用加密库CommonCryptoLib或msCrypto，请将此属性留空。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1147
+msgid ""
+"|checkbox| :guilabel:`Only look for user's tables`: If checked, QGIS "
+"searches only for tables and views that are owned by the user that connects "
+"to the database."
+msgstr "|checkbox| :guilabel:`仅查找用户表`: 如果勾选，QGIS只搜索连接到数据库的用户所拥有的表和视图。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1151
+msgid ""
+"|checkbox| :guilabel:`Also list tables with no geometries`: If checked, QGIS"
+" searches also for tables and views that do not contain a spatial column."
+msgstr "|checkbox| :guilabel:`同时列出没有几何图形的表`: 如果勾选，QGIS还会搜索不包含空间列的表和视图。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1154
+msgid "**Connecting to SAP HANA Cloud**"
+msgstr "**连接到 SAP HANA 云**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1156
+msgid ""
+"If you'd like to connect to an SAP HANA Cloud instance, you usually must set"
+" :guilabel:`Port Number` to ``443`` and check :guilabel:`Enable TLS/SSL "
+"encryption`."
+msgstr ""
+"如果要连接到 SAP HANA 云实例，必须将 :guilabel:`端口号` 设置为 ``443`` 并勾选 :guilabel:`启用 "
+"TLS/SSL 加密` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1163
+msgid "Loading a Database Layer"
+msgstr "加载数据库图层"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1165
+msgid ""
+"Once you have one or more connections defined to a database (see section "
+":ref:`vector_create_stored_connection`), you can load layers from it. Of "
+"course, this requires that data are available. See section "
+":ref:`vector_import_data_in_postgis` for a discussion on importing data into"
+" a PostGIS database."
+msgstr ""
+"定义到数据库的一个或多个连接后 (请参阅 :ref:`vector_create_stored_connection`), "
+"就可以从中加载图层。当然，这是指数据可用。有关将数据导入PostGIS数据库的讨论，请参阅 "
+":ref:`vector_import_data_in_postgis` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1171
+msgid "To load a layer from a database, you can perform the following steps:"
+msgstr "要从数据库加载图层，可以执行以下步骤："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1173
+msgid ""
+"Open the \"Add <database> table(s)\" dialog (see "
+":ref:`vector_create_stored_connection`)."
+msgstr "打开 \"添加表\" 对话框 (请参阅 :ref:`vector_create_stored_connection`) 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1175
+msgid ""
+"Choose the connection from the drop-down list and click :guilabel:`Connect`."
+msgstr "从下拉列表中选择连接，然后单击 :guilabel:`连接` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1176
+msgid ""
+"Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`."
+msgstr "选择或取消选择 |checkbox| :guilabel:`同时列出没有几何图形的表` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1177
+msgid ""
+"Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the "
+"list of tables to those matching your search. You can also set this option "
+"before you hit the :guilabel:`Connect` button, speeding up the database "
+"fetching."
+msgstr ""
+"可选，使用某些 |checkbox| :guilabel:`搜索选项` 将表列表缩减为与搜索匹配的表。也可以在点击 :guilabel:`连接` "
+"按钮之前设置此选项，从而加快数据库获取速度。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1181
+msgid "Find the layer(s) you wish to add in the list of available layers."
+msgstr "在可用图层列表中查找要添加的图层。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1182
+msgid ""
+"Select it by clicking on it. You can select multiple layers by holding down "
+"the :kbd:`Shift` or :kbd:`Ctrl` key while clicking."
+msgstr "单击即可选择。单击时按住 :kbd:`Shift` 或 :kbd:`Ctrl` 键可以选择多个图层。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1184
+msgid ""
+"If applicable, use the :guilabel:`Set Filter` button (or double-click the "
+"layer) to start the :guilabel:`Query Builder` dialog (see section "
+":ref:`vector_query_builder`) and define which features to load from the "
+"selected layer. The filter expression appears in the ``sql`` column. This "
+"restriction can be removed or edited in the :menuselection:`Layer Properties"
+" --> General --> Provider Feature Filter` frame."
+msgstr ""
+"如果适用，请使用 :guilabel:`设置过滤` 按钮 (或双击图层) 启动 :guilabel:`查询构建器` 对话框 (请参阅 "
+":ref:`vector_query_builder`) ，并定义从所选图层加载的要素。过滤表达式显示在 ``sql`` 列。可以在 "
+":menuselection:`图层属性 --> 常规 --> 提供程序的要素过滤` 框架中移除或编辑此限制。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1190
+msgid ""
+"The checkbox in the ``Select at id`` column that is activated by default "
+"gets the feature ids without the attributes and generally speeds up the data"
+" loading."
+msgstr "默认激活的 ``按ID选择`` 列中的复选框将获取不带属性的要素ID，通常会加快数据加载速度。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1193
+msgid "Click on the :guilabel:`Add` button to add the layer to the map."
+msgstr "单击 :guilabel:`添加` 按钮将图层添加到地图。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1201
+msgid "Add PostGIS Table(s) Dialog"
+msgstr "添加PostGIS表对话框"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1204
+msgid "**Use the Browser Panel to speed up loading of database table(s)**"
+msgstr "**使用浏览器面板加速数据库表的加载**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1206
+msgid ""
+"Adding DB tables from the :guilabel:`Data Source Manager` may sometimes be "
+"time consuming as QGIS fetches statistics and properties (e.g. geometry type"
+" and field, CRS, number of features) for each table beforehand. To avoid "
+"this, once :ref:`the connection is set <vector_create_stored_connection>`, "
+"it is better to use the :ref:`Browser Panel <browser_panel>` or the :ref:`DB"
+" Manager <dbmanager>` to drag and drop the database tables into the map "
+"canvas."
+msgstr ""
+"从 :guilabel:`数据源管理器` 添加数据库表有时很耗时，这是因为QGIS会事先获取每个表的统计信息和属性 "
+"(例如几何图形类型和字段、CRS、要素数量)。为了避免这种情况， :ref:`设置连接 "
+"<vector_create_stored_connection>` 后，最好使用 :ref:`浏览器面板 <browser_panel>` 或 "
+":ref:`数据库管理器 <dbmanager>` 将数据库表拖放到地图画布。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1219
+msgid "The Layer Metadata Search Panel"
+msgstr "图层元数据搜索面板"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1221
+msgid ""
+"The layer metadata search panel allows to browse layers metadata from "
+"registered metadata providers and add them to the project."
+msgstr "图层元数据搜索面板允许浏览已注册元数据提供程序中的图层元数据，并将其添加到工程。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1224
+msgid ""
+"The list can be filtered by text, by current project and by map canvas "
+"extent."
+msgstr "列表可以按文本、当前工程和地图画布范围进行过滤。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1226
+msgid ""
+"The sources of metadata are implemented through a layer metadata provider "
+"system that can be extended by plugins."
+msgstr "元数据的来源是通过图层元数据提供程序系统实现的，该系统可以通过插件进行扩展。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1229
+msgid ""
+"QGIS provides out of the box the layer metadata providers that retrieve the "
+"metadata from the connections that allow for metadata storage (for more "
+"details :ref:`save metadata to the database <savemetadatatodb>`)."
+msgstr ""
+"QGIS提供了开箱即用的图层元数据提供程序，用于从允许元数据存储的连接中检索元数据 (更多信息请参阅 :ref:`将元数据保存到数据库 "
+"<savemetadatatodb>`) 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1236
+msgid "Layer Metadata Search Panel"
+msgstr "图层元数据搜索面板"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1239
+msgid "QGIS Custom formats"
+msgstr "QGIS自定义格式"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1241
+msgid "QGIS proposes two custom formats:"
+msgstr "QGIS提供了两种自定义格式："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1243
+msgid ""
+"Temporary Scratch Layer: a memory layer that is bound to the project (see "
+":ref:`vector_new_scratch_layer` for more information)"
+msgstr "临时图层: 绑定到工程的内存图层 (更多信息请参阅 :ref:`vector_new_scratch_layer` )"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1245
+msgid ""
+"Virtual Layers: a layer resulting from a query on other layer(s) (see "
+":ref:`vector_virtual_layers` for more information)"
+msgstr "虚拟图层: 由对其他图层的查询而产生的图层 (更多信息请参阅 :ref:`vector_virtual_layers` )"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1252
+msgid "QLR - QGIS Layer Definition File"
+msgstr "QLR - QGIS图层定义文件"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1254
+msgid ""
+"Layer definitions can be saved as a :ref:`Layer Definition File "
+"<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) using :menuselection:`Export"
+" --> Save As Layer Definition File...` in the layer context menu."
+msgstr ""
+"可以在图层上下文菜单使用 :menuselection:`导出 --> 另存为图层定义文件...` 将图层定义保存为 :ref:`图层定义文件 "
+"<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1260
+msgid ""
+"The QLR format makes it possible to share \"complete\" QGIS layers with "
+"other QGIS users. QLR files contain links to the data sources and all the "
+"QGIS style information necessary to style the layer."
+msgstr "QLR格式可以与其他QGIS用户共享 \"完整\" 的QGIS图层。QLR文件包含指向数据源的链接，以及为图层设置样式所需的所有QGIS样式信息。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1265
+msgid ""
+"QLR files are shown in the Browser Panel and can be used to add layers (with"
+" their saved styles) to the Layers Panel. You can also drag and drop QLR "
+"files from the system file manager into the map canvas."
+msgstr "QLR文件显示在浏览器面板中，可用于将图层 (及其保存的样式) 添加到图层面板。还可以将QLR文件从系统文件管理器拖放到地图画布。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1271
+msgid "Connecting to web services"
+msgstr "连接到Web服务"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1273
+msgid ""
+"With QGIS you can get access to different types of OGC web services (WM(T)S,"
+" WFS(-T), WCS, CSW, ...). Thanks to QGIS Server, you can also publish such "
+"services. :ref:`QGIS-Server-manual` contains descriptions of these "
+"capabilities."
+msgstr ""
+"使用QGIS，可以访问不同类型的 OGC Web 服务 (WM(T)S, WFS(-T), WCS, CSW 等)。借助 QGIS Server "
+"还可以发布此类服务。 :ref:`QGIS-Server-manual` 包含对这些功能的描述。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1282
+msgid "Using Vector Tiles services"
+msgstr "使用矢量瓦片服务"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1284
+msgid ""
+"Vector Tile services can be added via the |addVectorTileLayer| "
+":guilabel:`Vector Tiles` tab of the :guilabel:`Data Source Manager` dialog "
+"or the contextual menu of the :guilabel:`Vector Tiles` entry in the "
+":guilabel:`Browser` panel. Services can be either a :guilabel:`New Generic "
+"Connection...` or a :guilabel:`New ArcGIS Vector Tile Service "
+"Connection...`."
+msgstr ""
+"可以通过 :guilabel:`数据源管理器` 对话框的 |addVectorTileLayer| :guilabel:`矢量瓦片` 选项卡或 "
+":guilabel:`浏览器` 面板中 :guilabel:`矢量瓦片` 条目的上下文菜单添加矢量瓦片服务。服务可以是 "
+":guilabel:`新建通用连接...` 或 :guilabel:`新建ArcGIS矢量瓦片服务连接...` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1523
+msgid "addVectorTileLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1290
+msgid "You set up a service by adding:"
+msgstr "您可以通过添加以下内容来设置服务："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1292
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1351
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1442
+msgid "a :guilabel:`Name`"
+msgstr ":guilabel:`名称`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1293
+msgid ""
+"the :guilabel:`URL`: of the type ``http://example.com/{z}/{x}/{y}.pbf`` for "
+"generic services and "
+"``http://example.com/arcgis/rest/services/Layer/VectorTileServer`` for "
+"ArcGIS based services. The service must provide tiles in :file:`.pbf` "
+"format."
+msgstr ""
+":guilabel:`URL`: 通用服务的类型为 ``http://example.com/{z}/{x}/{y}.pbf`` "
+"，基于ArcGIS的服务类型是 "
+"``http://example.com/arcgis/rest/services/Layer/VectorTileServer`` 。该服务必须提供 "
+":file:`.pbf` 格式的瓦片。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1297
+msgid ""
+"the |checkbox|:guilabel:`Min. Zoom Level` and the |checkbox|:guilabel:`Max. "
+"Zoom Level`. Vector Tiles have a pyramid structure. By using these options "
+"you have the opportunity to individually generate layers from the tile "
+"pyramid. These layers will then be used to render the Vector Tile in QGIS."
+msgstr ""
+"|checkbox|:guilabel:`最小缩放级别` 和 |checkbox|:guilabel:`最大缩放级别`: "
+"矢量瓦片具有金字塔结构。通过使用这些选项，可以从瓦片金字塔单独生成图层。然后，这些图层将用于在QGIS中渲染矢量瓦片。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1302
+msgid ""
+"For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0 "
+"represents the whole world at a scale of 1:500.000.000. Zoom Level 14 "
+"represents the scale 1:35.000."
+msgstr ""
+"对于墨卡托投影 (OpenStreetMap矢量瓦片使用)，缩放级别 0 以 1:500.000.000 的比例表示整个世界。缩放级别 14 "
+"表示的比例为 1:35.000。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1305
+msgid ""
+"a :guilabel:`Style URL`: a URL to a MapBox GL JSON style configuration. If "
+"provided, then that style will be applied whenever the layers from the "
+"connection are added to QGIS. In the case of Arcgis vector tile service "
+"connections, the URL overrides the default style configuration specified in "
+"the server configuration."
+msgstr ""
+":guilabel:`样式URL`: 指向 MapBox GL JSON "
+"样式配置的URL。如果提供，那么每当将连接中的图层添加到QGIS时，就会应用该样式。对于Arcgis矢量瓦片服务连接，URL会覆盖服务器配置中指定的默认样式配置。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1310
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1353
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1446
+msgid ""
+"the :ref:`authentication <authentication_index>` configuration if necessary"
+msgstr ":ref:`认证 <authentication_index>` 配置 (如有必要)"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1311
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1355
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1447
+msgid "a :guilabel:`Referer`"
+msgstr ":guilabel:`引用`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1313
+msgid ""
+":numref:`figure_vector_tiles_maptilerplanet` shows the dialog with the "
+"MapTiler planet Vector Tiles service configuration."
+msgstr ""
+":numref:`figure_vector_tiles_maptilerplanet` 显示了带有MapTiler行星矢量瓦片服务配置的对话框。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1321
+msgid "Vector Tiles - Maptiler Planet configuration"
+msgstr "矢量瓦片 - Maptiler行星配置"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1323
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`Vector Tiles` entry in :guilabel:`Data "
+"Source Manager` dialog or its context menu in the :guilabel:`Browser` panel."
+" Likewise, they can be added from a file (:guilabel:`Load Connections`)."
+msgstr ""
+"可以通过 :guilabel:`数据源管理器` 对话框中的 :guilabel:`矢量瓦片` 条目或 :guilabel:`浏览器` "
+"面板中的上下文菜单将配置保存到 :file:`.XML` 文件 (:guilabel:`保存连接`) 。同样，也可以从文件 "
+"(:guilabel:`加载连接`) 添加配置。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1328
+msgid "Once a connection to a vector tile service is set, it's possible to:"
+msgstr "设置与矢量瓦片服务的连接后，可以："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1330
+msgid ":guilabel:`Edit` the vector tile connection settings"
+msgstr ":guilabel:`编辑` 矢量瓦片连接设置"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1331
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1405
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1468
+msgid ":guilabel:`Remove` the connection"
+msgstr ":guilabel:`移除` 连接"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1332
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1406
+msgid ""
+"From the :guilabel:`Browser` panel, right-click over the entry and you can "
+"also:"
+msgstr "在 :guilabel:`浏览器` 面板的条目上右键单击，还可以："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1335
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1411
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1488
+msgid ":guilabel:`Add layer to project`: a double-click also adds the layer"
+msgstr ":guilabel:`添加图层到工程`: 双击也可以添加图层"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1336
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1412
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1489
+msgid ""
+"View the :guilabel:`Layer Properties...` and get access to metadata and a "
+"preview of the data provided by the service. More settings are available "
+"when the layer has been loaded into the project."
+msgstr "查看 :guilabel:`图层属性...` 并访问元数据以及由服务提供的数据预览。将图层加载到工程后，可以使用更多设置。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1344
+msgid "Using XYZ Tile services"
+msgstr "使用XYZ瓦片服务"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1346
+msgid ""
+"XYZ Tile services can be added via the |addXyzLayer| :guilabel:`XYZ` tab of "
+"the :guilabel:`Data Source Manager` dialog or the contextual menu of the "
+":guilabel:`XYZ Tiles` entry in the :guilabel:`Browser` panel. Press "
+":guilabel:`New` (respectively :guilabel:`New Connection`) and provide:"
+msgstr ""
+"可以通过 :guilabel:`数据源管理器` 对话框的 |addXyzLayer| :guilabel:`XYZ` 选项卡或 "
+":guilabel:`浏览器` 面板中 :guilabel:`XYZ瓦片` 条目的上下文菜单添加XYZ服务。点击 :guilabel:`新建` (分别 "
+":guilabel:`新建连接`) 并提供："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1525
+msgid "addXyzLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1352
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1443
+msgid "the :guilabel:`URL`"
+msgstr ":guilabel:`URL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1354
+msgid "the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`"
+msgstr ":guilabel:`最小缩放级别` 和 :guilabel:`最大缩放级别`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1356
+msgid ""
+"the :guilabel:`Tile Resolution`: possible values are :guilabel:`Unknown (not"
+" scaled)`, :guilabel:`Standard (256x256 / 96DPI)` and :guilabel:`High "
+"(512x512 / 192DPI)`"
+msgstr ""
+":guilabel:`瓦片分辨率`: 可接受的值为 :guilabel:`未知 (无缩放)`, :guilabel:`标准 (256x256 / "
+"96DPI)` 和 :guilabel:`高 (512x512 / 192DPI)`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1362
+msgid ""
+":guilabel:`Interpretation`: converts WMTS/XYZ raster datasets to a raster "
+"layer of single band float type following a predefined encoding scheme. "
+"Supported schemes are :guilabel:`Default` (no conversion is done), "
+":guilabel:`MapTiler Terrain RGB` and :guilabel:`Terrarium Terrain RGB`. The "
+"selected converter will translate the RGB source values to float values for "
+"each pixel. Once loaded, the layer will be presented as a single band "
+"floating point raster layer, ready for styling using QGIS usual :ref:`raster"
+" renderers <raster_rendering>`."
+msgstr ""
+":guilabel:`插值`: 按照预定义的编码方案将WMTS/XXYZ栅格数据集转换为单波段浮点类型的栅格图层。支持的方案有 "
+":guilabel:`默认` (不进行转换), :guilabel:`MapTiler地形RGB` 和 "
+":guilabel:`Terrarium地形RGB` "
+"。所选转换器将把RGB源值转换为每个像素的浮点值。加载后，该图层将显示为单波段浮点栅格图层，可以使用QGIS常见的 :ref:`栅格渲染器 "
+"<raster_rendering>` 进行样式设置。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1371
+msgid ""
+"By default, QGIS provides some default and ready-to-use XYZ Tiles services:"
+msgstr "默认情况下，QGIS提供一些默认可随时使用的XYZ瓦片服务："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1373
+msgid ""
+"|xyz| :guilabel:`Mapzen Global Terrain`, allowing an immediate access to "
+"global DEM source for the projects. More details and resources at "
+"https://registry.opendata.aws/terrain-tiles/"
+msgstr ""
+"|xyz| :guilabel:`Mapzen Global Terrain`: 允许直接访问工程的全球DEM源。更多信息和资源，请访问 "
+"https://registry.opendata.aws/terrain-tiles/"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1376
+msgid ""
+"|xyz| :guilabel:`OpenStreetMap` to access the world 2D map. "
+":numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the "
+"OpenStreetMap XYZ Tile service configuration."
+msgstr ""
+"|xyz| :guilabel:`OpenStreetMap`: 访问世界2D地图。 "
+":numref:`figure_xyz_tiles_openstreetmap` 显示了具有 OpenStreetMap XYZ 瓦片服务配置的对话框。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1384
+msgid "XYZ Tiles - OpenStreetMap configuration"
+msgstr "XYZ瓦片 - 开放街道地图配置"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1386
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`XYZ Tiles` entry in :guilabel:`Data "
+"Source Manager` dialog or its context menu in the :guilabel:`Browser` panel."
+" Likewise, they can be added from a file (:guilabel:`Load Connections`)."
+msgstr ""
+"可以通过 :guilabel:`数据源管理器` 对话框中的 :guilabel:`XYZ瓦片` 条目或 :guilabel:`浏览器` "
+"面板中的上下文菜单将配置保存到 :file:`.XML` 文件 (:guilabel:`保存连接`) 。同样，也可以从文件 "
+"(:guilabel:`加载连接`) 添加配置。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1391
+msgid "The XML file for OpenStreetMap looks like this:"
+msgstr "开放街道地图的XML文件如下所示："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1402
+msgid "Once a connection to a XYZ tile service is set, it's possible to:"
+msgstr "设置与XYZ瓦片服务的连接后，可以："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1404
+msgid ":guilabel:`Edit` the XYZ connection settings"
+msgstr ":guilabel:`编辑` XYZ连接设置"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1409
+msgid ""
+":menuselection:`Export layer... --> To File`, :ref:`saving it as a raster "
+"<general_saveas>`"
+msgstr ":menuselection:`导出图层... --> 到文件`, :ref:`将其另存为栅格 <general_saveas>`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1417
+msgid "Examples of XYZ Tile services:"
+msgstr "XYZ瓦片服务示例："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1419
+msgid ""
+"OpenStreetMap Monochrome: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
+"mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. "
+"Zoom Level`: 19."
+msgstr ""
+"OpenStreetMap单色: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
+"mapnik/{z}/{x}/{y}.png``, :guilabel:`最小缩放级别`: 0, :guilabel:`最大缩放级别`: 19。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1422
+msgid ""
+"Google Maps: :guilabel:`URL`: "
+"``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. Zoom"
+" Level`: 0, :guilabel:`Max. Zoom Level`: 19."
+msgstr ""
+"谷歌地图: :guilabel:`URL`: "
+"``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`最小缩放级别`: "
+"0, :guilabel:`最大缩放级别`: 19。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1425
+msgid ""
+"Open Weather Map Temperature: :guilabel:`URL`: "
+"``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
+" :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19."
+msgstr ""
+"Open Weather Map Temperature: :guilabel:`URL`: "
+"``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
+" :guilabel:`最小缩放级别`: 0, :guilabel:`最大缩放级别`: 19。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1434
+msgid "Using ArcGIS REST Servers"
+msgstr "使用 ArcGIS REST 服务器"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1436
+msgid ""
+"ArcGIS REST Servers can be added via the |addAfsLayer| :guilabel:`ArcGIS "
+"REST Server` tab of the :guilabel:`Data Source Manager` dialog or the "
+"contextual menu of the :guilabel:`ArcGIS REST Servers` entry in the "
+":guilabel:`Browser` panel. Press :guilabel:`New` (respectively "
+":guilabel:`New Connection`) and provide:"
+msgstr ""
+"可以通过 :guilabel:`数据源管理器` 对话框的 |addAfsLayer| :guilabel:`ArcGIS REST Server` "
+"选项卡或 :guilabel:`浏览器` 面板中 :guilabel:`ArcGIS REST 服务器` 条目的上下文菜单添加 ArcGIS REST "
+"服务器。点击 :guilabel:`新建` (分别 :guilabel:`新建连接`) 并提供："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1501
+msgid "addAfsLayer"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1444
+msgid "a :guilabel:`Community endpoint URL`"
+msgstr ":guilabel:`共享终端URL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1445
+msgid "a :guilabel:`Content endpoint URL`"
+msgstr ":guilabel:`内容终端URL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1451
+msgid ""
+"ArcGIS Feature Service connections which have their corresponding Portal "
+"endpoint URLS set can be explored by content groups in the browser panel."
+msgstr "设置相应Portal终端URLS集的 ArcGIS Feature Service 连接后，可由浏览器面板中的内容组进行浏览。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1454
+msgid ""
+"If a connection has the Portal endpoints set, then expanding out the "
+"connection in the browser will show a “Groups” and “Services” folder, "
+"instead of the full list of services usually shown. Expanding out the groups"
+" folder will show a list of all content groups that the user is a member of,"
+" each of which can be expanded to show the service items belonging to that "
+"group."
+msgstr ""
+"如果连接设置了Portal终端，在浏览器展开连接将显示 “组” 和 “服务” "
+"文件夹，而不是通常显示服务的完整列表。展开组文件夹将显示用户所属的所有内容组的列表，每个内容组都可以展开以显示属于该组的服务条目。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1460
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`ArcGIS REST Server` entry in "
+":guilabel:`Data Source Manager` dialog. Likewise, they can be added from a "
+"file (:guilabel:`Load Connections`)."
+msgstr ""
+"可以通过 :guilabel:`数据源管理器` 对话框中的 :guilabel:`ArcGIS REST Server` 条目将配置保存到 "
+":file:`.XML` 文件 (:guilabel:`保存连接`) 。同样，也可以从文件 (:guilabel:`加载连接`) 添加配置。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1465
+msgid "Once a connection to an ArcGIS REST Server is set, it's possible to:"
+msgstr "设置与 ArcGIS REST Server 的连接后，可以："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1467
+msgid ":guilabel:`Edit` the ArcGIS REST Server connection settings"
+msgstr ":guilabel:`编辑` ArcGIS REST Server 连接设置"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1469
+msgid ":guilabel:`Refresh` the connection"
+msgstr ":guilabel:`刷新` 连接"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1470
+msgid "use a filter for the available layers"
+msgstr "对可用图层使用过滤"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1471
+msgid ""
+"choose from a list of available layers with the option to "
+"|checkbox|:guilabel:`Only request features overlapping the current view "
+"extent`"
+msgstr "从可用列表中选择具有 |checkbox|:guilabel:`仅请求与当前视图范围重叠的要素` 选项的图层"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1474
+msgid ""
+"From the :guilabel:`Browser` panel, right-click over the connection entry "
+"and you can:"
+msgstr "在 :guilabel:`浏览器` 面板的连接条目上右键单击，可以："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1477
+msgid ":guilabel:`Refresh`"
+msgstr ":guilabel:`刷新`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1478
+msgid ":guilabel:`Edit connection...`"
+msgstr ":guilabel:`编辑连接...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1479
+msgid ":guilabel:`Remove connection...`"
+msgstr ":guilabel:`移除连接...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1480
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1485
+msgid ""
+":guilabel:`View Service Info` which will open the default web browser and "
+"display the Service Info."
+msgstr ":guilabel:`显示服务信息` ，将打开默认的Web浏览器并显示服务信息。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1483
+msgid "Right-click over the layer entry and you can also:"
+msgstr "在图层条目上右键单击，还可以："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1487
+msgid ":menuselection:`Export layer... --> To File`"
+msgstr ":menuselection:`导出图层... --> 到文件`"

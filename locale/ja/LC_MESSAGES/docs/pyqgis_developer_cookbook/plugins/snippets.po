@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:26
+msgid "Code Snippets"
+msgstr "コードスニペット"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:28
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "pyqgisコンソールを使わない場合、このページにあるコードスニペットは次のインポートが必要です:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:60
+msgid "This section features code snippets to facilitate plugin development."
+msgstr "このセクションでは、プラグイン開発を容易にするコードスニペットを紹介します。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:65
+msgid "How to call a method by a key shortcut"
+msgstr "ショートカットキーでメソッドを呼び出す方法"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:67
+msgid "In the plug-in add to the :func:`initGui()`"
+msgstr "プラグインに :func:`initGui()` に追加します"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:76
+msgid "To :func:`unload()` add"
+msgstr ":func:`unload()` に追加します"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:82
+msgid "The method that is called when CTRL+I is pressed"
+msgstr "CTRL+Iが押されたときに呼び出されるメソッド"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:89
+msgid ""
+"It is also possible to allow users to customize key shortcuts for the "
+"provided actions. This is done by adding:"
+msgstr "また、提供されたアクションのショートカットキーをユーザーがカスタマイズできるようにすることも可能です。これをするには次を加えます:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:102
+msgid "How to reuse QGIS icons"
+msgstr "QGISアイコンを再利用する方法"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:104
+msgid ""
+"Because they are well-known and convey a clear message to the users, you may"
+" want sometimes to reuse QGIS icons in your plugin instead of drawing and "
+"setting a new one. Use the :meth:`getThemeIcon() "
+"<qgis.core.QgsApplication.getThemeIcon>` method."
+msgstr ""
+"QGISのアイコンはよく知られており、ユーザーに明確なメッセージを伝えることができるため、新しいアイコンを描画して設定する代わりに、プラグイン内でQGISのアイコンを再利用したい場合があります。その場合は"
+" :meth:`getThemeIcon() <qgis.core.QgsApplication.getThemeIcon>` "
+"メソッドを使用してください。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:108
+msgid ""
+"For example, to reuse the |fileOpen| :source:`mActionFileOpen.svg "
+"<images/themes/default/mActionFileOpen.svg>` icon available in the QGIS code"
+" repository:"
+msgstr ""
+"例えば、QGISコードリポジトリで入手できる |fileOpen| "
+":source:`mActionFileOpen.svg<images/themes/default/mActionFileOpen.svg>` "
+"アイコンを再利用するには："
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:284
+msgid "fileOpen"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:122
+msgid ""
+":meth:`iconPath() <qgis.core.QgsApplication.iconPath>` is another method to "
+"call QGIS icons. Find examples of calls to theme icons at `QGIS embedded "
+"images - Cheatsheet "
+"<https://static.geotribu.fr/toc_nav_ignored/qgis_resources_preview_table/>`_."
+msgstr ""
+":meth:`iconPath() <qgis.core.QgsApplication.iconPath>` "
+"はQGISアイコンを呼び出すもう一つの方法です。テーマアイコンの呼び出しの例は `QGIS embedded images - Cheatsheet "
+"<https://static.geotribu.fr/toc_nav_ignored/qgis_resources_preview_table/>`_"
+" にあります。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:130
+msgid "Interface for plugin in the options dialog"
+msgstr "オプションダイアログのプラグインのインタフェース"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:132
+msgid ""
+"You can add a custom plugin options tab to :menuselection:`Settings --> "
+"Options`. This is preferable over adding a specific main menu entry for your"
+" plugin's options, as it keeps all of the QGIS application settings and "
+"plugin settings in a single place which is easy for users to discover and "
+"navigate."
+msgstr ""
+":menuselection:`設定 --> オプション` "
+"にカスタムプラグインオプションタブを追加することができます。QGISアプリケーションの設定とプラグインの設定を1つの場所にまとめておくことで、ユーザーが発見しやすく誘導しやすくなるので、プラグインのオプションのために特定のメインメニュー項目を追加するよりも望ましい方法です。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:137
+msgid ""
+"The following snippet will just add a new blank tab for the plugin's "
+"settings, ready for you to populate with all the options and settings "
+"specific to your plugin. You can split the following classes into different "
+"files. In this example, we are adding two classes into the main "
+":file:`mainPlugin.py` file."
+msgstr ""
+"以下のスニペットは、プラグインの設定のための新しい空白のタブを追加し、あなたのプラグインに固有のすべてのオプションと設定を入力できるようにします。以下のクラスを別のファイルに分割することができます。この例では、2つのクラスをメインの"
+" :file:`mainPlugin.py` ファイルに追加しています。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:165
+msgid ""
+"Finally we are adding the imports and modifying the ``__init__`` function:"
+msgstr "最後に、インポートを追加して ``__init__`` 関数を修正します："
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:196
+msgid "**Add custom tabs to layer properties dialog**"
+msgstr "**レイヤプロパティダイアログにカスタムタブを追加する**"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:198
+msgid ""
+"You can apply a similar logic to add the plugin custom option to the layer "
+"properties dialog using the classes :class:`QgsMapLayerConfigWidgetFactory "
+"<qgis.gui.QgsMapLayerConfigWidgetFactory>` and "
+":class:`QgsMapLayerConfigWidget <qgis.gui.QgsMapLayerConfigWidget>`."
+msgstr ""
+"レイヤプロパティダイアログにプラグインのカスタムオプションを追加するには、同様のロジックを適用して、クラス "
+":class:`QgsMapLayerConfigWidgetFactory "
+"<qgis.gui.QgsMapLayerConfigWidgetFactory>` と :class:`QgsMapLayerConfigWidget"
+" <qgis.gui.QgsMapLayerConfigWidget>` を使うことができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:207
+msgid "Embed custom widgets for layers in the layer tree"
+msgstr "レイヤツリーにレイヤのカスタムウィジェットを埋め込む"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:209
+msgid ""
+"Beside usual layer symbology elements displayed next or below the layer "
+"entry in the :guilabel:`Layers` panel, you can add your own widgets, "
+"allowing for quick access to some actions that are often used with a layer "
+"(setup filtering, selection, style, refreshing a layer with a button widget,"
+" create a layer based time slider or just show extra layer information in a "
+"Label there, or ...). These so-called **Layer tree embedded widgets** are "
+"made available through the layer's properties :guilabel:`Legend` tab for "
+"individual layers."
+msgstr ""
+":guilabel:`レイヤ` "
+"パネルでレイヤエントリの隣や下に表示される通常のレイヤシンボロジの要素の他に、独自のウィジェットを追加することができ、レイヤでよく使用されるいくつかのアクションに素早くアクセスすることができます(フィルタリング、選択、スタイルの設定、ボタンウィジェットによるレイヤの更新、レイヤ型のタイムスライダーの作成、ラベルでの追加のレイヤ情報の表示...など)。これらの"
+" **レイヤツリー埋め込みウィジェット** は、個々のレイヤのプロパティ :guilabel:`凡例` タブから利用できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:217
+msgid ""
+"The following code snippet creates a drop-down in the legend which shows you"
+" the layer-styles available for the layer, allowing to quickly switch "
+"between the different layer styles."
+msgstr ""
+"次のコードスニペットは、レイヤに利用可能なレイヤスタイルを表示するドロップダウンを凡例に作成し、異なるレイヤースタイルを素早く切り替えられるようにします。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:258
+msgid ""
+"Then from a given layer's :guilabel:`Legend` properties tab, drag the "
+"``Layer style chooser`` from the :guilabel:`Available widgets` to "
+":guilabel:`Used widgets` to enable the widget in the layer tree. Embedded "
+"widgets are ALWAYS displayed at the top of their associated layer node "
+"subitems."
+msgstr ""
+"レイヤの :guilabel:`凡例` プロパティタブから、``レイヤスタイルチューザー`` を :guilabel:`使用可能なウィジェット`` から"
+" :guilabel:`使用するウィジェット`` "
+"にドラッグして、レイヤツリーでウィジェットを有効にします。埋め込まれたウィジェットは、関連するレイヤノードのサブアイテムの一番上に常に表示されます。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:264
+msgid ""
+"If you want to use the widgets from within e.g. a plugin, you can add them "
+"like this:"
+msgstr "プラグインなどからウィジェットを使用したい場合は、次のように追加します："

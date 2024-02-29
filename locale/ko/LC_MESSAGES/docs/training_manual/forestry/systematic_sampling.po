@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:2
+msgid "|LS| Systematic Sampling Design"
+msgstr "|LS|: 체계적인 표본 설계"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:4
+msgid ""
+"You have already digitized a set of polygons that represent the forest "
+"stands, but you don't have information about the forest just yet. For that "
+"purpose you can design a survey to inventory the whole forest area and then "
+"estimate its parameters. In this lesson you will create a systematic set of "
+"sampling plots."
+msgstr ""
+"여러분은 이미 삼림의 수종경계를 나타내는 폴리곤 셋을 디지타이징했지만 아직 삼림에 대한 정보를 갖고 있지는 못합니다. 이를 위해 여러분은"
+" 전체 삼림 지역을 목록화하기 위한 조사 방법을 설계한 다음 그 파라미터를 산정할 수 있습니다. 이번 강의에서 여러분은 체계적인 표본 "
+"조사구 셋을 만들 것입니다."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:9
+msgid ""
+"When you start planning your forest inventory it is important to clearly "
+"define the objectives, the types of sample plots that will be used, and the "
+"data that will be collected to achieve the objectives. For each individual "
+"case, those will depend on the type of forest and the management purpose; "
+"and should be carefully planned by someone with forestry knowledge. In this "
+"lesson, you will implement a theoretical inventory based on a systematic "
+"sampling plot design."
+msgstr ""
+"삼림의 목록화를 시작했을 때 그 목적, 사용될 표본 조사구의 유형 그리고 목적을 달성하기 위해 수집될 데이터를 명확히 정의하는 것이 "
+"중요합니다. 이러한 것들은 각각의 사례에서 삼림의 유형과 관리 목적에 따라 달라지며, 삼림 관리의 지식을 가진 전문가가 신중히 계획해야 "
+"합니다. 이번 강의에서 여러분은 체계적인 표본 조사구 설계에 기초한 이론적인 목록화를 시행하게 될 것입니다. "
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:16
+msgid ""
+"**The goal for this lesson:** To create a systematic sampling plot design to"
+" survey the forest area."
+msgstr "**이 강의의 목표:** 삼림 지역을 조사하기 위한 체계적인 표본 조사구 설계하기."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:20
+msgid "Inventorying the Forest"
+msgstr "삼림의 목록화"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:22
+msgid ""
+"There are several methods to inventory forests, each of them suiting "
+"different purposes and conditions. For example, one very accurate way to "
+"inventory a forest (if you consider only tree species) would be to visit the"
+" forest and make a list of every tree and their characteristics. As you can "
+"imagine this is not commonly applicable except for some small areas or some "
+"special situations."
+msgstr ""
+"삼림을 목록화하기 위한 여러 방법들이 있습니다. 각각 다른 목적과 상태에 적합한 방법들입니다. 예를 들어, (수종만을 고려할 경우) "
+"삼림을 목록화하는 아주 정확한 방법 가운데 하나는 삼림에 직접 들어가서 모든 나무의 수종과 그 특성을 목록화하는 것입니다. 이것은 면적이"
+" 작은 지역이나 특별한 상황을 제외하면 일반적으로 적용할 수 있는 방법이 아니라는 것을 쉽게 알 수 있겠죠."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:28
+msgid ""
+"The most common way to find out about a forest is by sampling it, that is, "
+"taking measurements in different locations at the forest and generalizing "
+"that information to the whole forest. These measurements are often made in "
+"*sample plots* that are smaller forest areas that can be easily measured. "
+"The sample plots can be of any size (for ex. 50 m2, 0.5 ha) and form (for "
+"ex. circular, rectangular, variable size), and can be located in the forest "
+"in different ways (for ex. randomly, systematically, along lines). The size,"
+" form and location of the sample plots are usually decided following "
+"statistical, economical and practical considerations. If you have no "
+"forestry knowledge, you might be interested in reading `this Wikipedia "
+"article <https://en.wikipedia.org/wiki/Forest_inventory>`_."
+msgstr ""
+"삼림의 정보를 알아내는 가장 일반적인 방법은 삼림 곳곳에서 측정한 표본을 만들어 전체 삼림으로 정보를 일반화하는 것입니다. 대부분의 경우"
+" 이러한 측정은 손쉽게 측정할 수 있는 작은 삼림 지역인 *표본 조사구* 에서 이뤄집니다. 표본 조사구는 어떤 크기(예를 들어 50 "
+"제곱미터, 0.5 헥타르 등)도 될 수 있고 어떤 형태(다양한 크기의 원형, 사각형 등)도 될 수 있으며, 그 위치도 다양한 "
+"방법(임의적, 체계적, 선형 등)으로 선정할 수 있습니다.  표본 조사구의 크기, 형태 그리고 위치는 일반적으로 통계적, 경제적 그리고 "
+"실질적인 사항을 고려하여 결정됩니다. 만약 여러분들이 삼림관리에 대한 지식이 없다면 `이 위키피디아 내용 "
+"<https://en.wikipedia.org/wiki/Forest_inventory>`_ 을 읽어보시기 바랍니다."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:40
+msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
+msgstr "|basic| |FA| 체계적인 표본 조사구 설계 시행"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:213
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:42
+msgid ""
+"For the forest you are working with, the manager has decided that a "
+"systematic sampling design is the most appropriate for this forest and has "
+"decided that a fixed distance of 80 meters between the sample plots and "
+"sampling lines will yield reliable results (for this case, +- 5% average "
+"error at a probability of 68%). Variable size plots has been decided to be "
+"the most effective method for this inventory, for growing and mature stands,"
+" but a 4 meters fixed radius plots will be used for seedling stands."
+msgstr ""
+"여러분이 작업할 삼림에서, 관리자가 이 삼림에 체계적인 표본 설계가 가장 적절하다고 결정했고, 직선을 따라 80m 간격으로 표본을 "
+"선정하는 방법이 신뢰할 수 있는 결과(이 경우 68%의 신뢰도에서 표준오차 ±5%)를 얻을 수 있다고 생각합니다. 이 수목의 생장 및 "
+"성숙 수종경계 목록화 작업에 가장 효율적인 방법은 다양한 크기의 조사구를 선정하는 것이지만, 묘목 수종경계에 대해서는 4m 반경의 "
+"조사구를 이용할 것입니다."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:50
+msgid ""
+"In practice, you simply need to represented the sample plots as points that "
+"will be used by the field teams later:"
+msgstr "실습 시 여러분은 표본 조사구를 단순히 포인트로 표현하면 되는데, 나중에 현장 조사팀이 이 포인트들을 사용할 것입니다. "
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:57
+msgid ""
+"Now you need to create a rectangular grid of points separated 80 meters from"
+" each other:"
+msgstr "지금부터 포인트 사이의 간격이 80m인 정사각형 포인트 그리드를 만들어야 합니다."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:222
+msgid "regularPoints"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:77
+msgid ""
+"You notice that the tool has used the whole extent of your stands layer to "
+"generate a rectangular grid of points. But you are only interested on those "
+"points that are actually inside your forest area (see the images below):"
+msgstr ""
+"이 도구가 수종경계 레이어의 전체 범위에 정사각형 포인트 그리드를 생성했다는 것을 알 수 있습니다. 하지만 실제로는 삼림 지역 내부에 "
+"있는 포인트만 사용해야 합니다. (다음 이미지들을 참조하십시오)"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:216
+msgid "gdal"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:93
+msgid ""
+"You have now the points that the field teams will use to navigate to the "
+"designed sample plots locations. You can still prepare these points so that "
+"they are more useful for the field work. At the least you will have to add "
+"meaningful names for the points and export them to a format that can be used"
+" in their GPS devices."
+msgstr ""
+"이제 현장 조사팀이 지정된 표본 조사구의 위치를 찾아가는데 사용할 수 있는 포인트들을 생성했습니다. 그런데 현장 조사에 더욱 유용하도록 "
+"이 포인트들을 손볼 수 있습니다. 최소한, 포인트에 의미있는 이름을 부여해서 현장 조사팀의 GPS 기기에서 사용할 수 있는 형식으로 "
+"내보낼 수 있을 것입니다."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:220
+msgid "labelingSingle"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:218
+msgid "labelbuffer"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:110
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:135
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:172
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:112
+msgid ""
+"Now look at the labels on your map. You can see that the points have been "
+"created and numbered first West to East and then North to South. If you look"
+" at the attribute table again, you will notice that the order in the table "
+"is following also that pattern. Unless you would have a reason to name the "
+"sample plots in a different way, naming them in a West-East/North-South "
+"fashion follows a logical order and is a good option."
+msgstr ""
+"이제 지도의 라벨을 확인해보십시오. 먼저 서쪽에서 동쪽으로 그리고 북쪽에서 남쪽으로 포인트들이 생성되고 번호가 부여된 것을 볼 수 "
+"있습니다. 다시 속성 테이블을 살펴보면, 테이블 안의 포인트 순서도 이 패턴을 따른다는 사실을 알 수 있을 것입니다. 표본 조사구에 다른"
+" 방식으로 명칭을 부여할 이유가 없다면, 논리적 순서를 따라 서-동/북-남 방향으로 명명하는 것은 훌륭한 옵션이 되겠습니다."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:224
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:214
+msgid "calculateField"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:136
+msgid "Disable the edit mode and save your changes."
+msgstr "편집 모드를 해제하고 변경 사항을 저장하십시오."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:146
+msgid "|basic| |FA| Exporting Sample Plots as GPX format"
+msgstr "|basic| |FA| 표본 조사구를 GPX 형식으로 내보내기"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:162
+msgid "In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`."
+msgstr ":guilabel:`Format` 에서 :guilabel:`GPS eXchange Format [GPX]` 를 선택합니다."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:165
+msgid "In :guilabel:`CRS` select :guilabel:`Selected CRS`."
+msgstr ":guilabel:`CRS` 에서 :guilabel:`Selected CRS` 를 선택합니다."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:185
+msgid "Save your QGIS project now."
+msgstr "이제 QGiS 프로젝트를 저장하십시오."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:188
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:190
+msgid ""
+"You just saw how easily you can create a systematic sampling design to be "
+"used in a forest inventory. Creating other types of sampling designs will "
+"involve the use of different tools within QGIS, spreadsheets or scripting to"
+" calculate the coordinates of the sample plots, but the general idea remains"
+" the same."
+msgstr ""
+"삼림 목록화에서 사용되는 체계적인 표본 설계를 얼마나 쉽게 생성할 수 있는지 확인했습니다. 다른 표본 설계 형식을 생성하려면, QGIS의"
+" 다른 도구들을 사용하거나, 스프레드시트를 이용하거나, 표본 조사구의 좌표를 계산하기 위한 스크립트를 사용해야 하지만, 기본적인 발상은 "
+"똑같습니다."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:196
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:198
+msgid ""
+"In the next lesson you will see how to use the Atlas capabilities in QGIS to"
+" automatically generate detailed maps that the field teams will be using to "
+"navigate to the sample plots assigned to them."
+msgstr ""
+"다음 강의에서는 현장 조사팀이 표본 조사구를 찾는 데 사용할 상세 지도를 자동적으로 생성하기 위해 QGIS의 아틀라스 기능(Atlas "
+"capabilities)을 어떻게 사용하는지 배울 것입니다."

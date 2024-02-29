@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:4
+msgid "Introducing GNSS/GPS Data"
+msgstr "GNSS/GPS 데이터 소개"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:14
+msgid "What is GPS?"
+msgstr "GPS란?"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:16
+msgid ""
+"GPS, the **Global Positioning System**, is a satellite-based system that "
+"allows anyone with a GPS receiver to find their exact position anywhere in "
+"the world. GPS is used as an aid in navigation, for example in airplanes, in"
+" boats and by hikers. The GPS receiver uses the signals from the satellites "
+"to calculate its latitude, longitude and (sometimes) elevation. Most "
+"receivers also have the capability to store:"
+msgstr ""
+"**범지구 위치결정 시스템(Global Positioning System)** 의 약어인 GPS는 누구나 세계 어디에 있든 GPS "
+"수신기를 가지고 있다면 자신의 정확한 위치를 찾을 수 있게 해주는 위성 기반 시스템입니다. GPS는 예를 들어 비행기, 선박, 또는 도보"
+" 여행자의 항법(navigation) 도우미로 사용됩니다.  GPS 수신기는 위성이 발신하는 신호를 이용해서 자기 위치의 위도, 경도, "
+"그리고 (때때로) 표고를 계산합니다. 수신기 대부분은 다음을 저장할 수 있는 기능도 가지고 있습니다:"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:23
+msgid "locations (known as **waypoints**)"
+msgstr "위치 (또는 **웨이포인트(waypoint)**)"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:24
+msgid "sequences of locations that make up a planned **route**"
+msgstr "계획된 **루트(route)** 를 구성하는 일련의 위치들"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:25
+msgid "and a **track** log of the receiver's movement over time."
+msgstr "시간에 걸쳐 수신기의 이동을 기록하는 **트랙(track)** 로그"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:27
+msgid ""
+"Waypoints, routes and tracks are the three basic feature types in GPS data. "
+"QGIS displays waypoints in point layers, while routes and tracks are "
+"displayed in linestring layers."
+msgstr ""
+"웨이포인트, 루트 및 트랙은 GPS 데이터의 세 가지 기본 피처 유형들입니다. QGIS는 포인트 레이어에 웨이포인트를 표시하고, "
+"라인스트링 레이어에 루트와 트랙을 표시합니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:30
+msgid ""
+"QGIS supports also GNSS receivers. But we keep using the term GPS in this "
+"documentation."
+msgstr ""
+"QGIS는 범지구 위성 항법 시스템(Global Navigation Satellite System; GNSS) 수신기도 지원하고 "
+"있습니다. 그러나 이 문서에서는 계속 GPS라는 용어를 사용할 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:33
+msgid "Defining GPS device types"
+msgstr "GPS 기기 유형 정의하기"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:35
+msgid ""
+"There are lots of different types of GPS devices. QGIS allows you to define "
+"your own device type and set parameters of use under "
+":menuselection:`Settings --> Options --> GPS --> GPSBabel` tab. Read "
+":ref:`defining_new_device` for more details."
+msgstr ""
+"수많은 유형의 GPS 기기들이 존재합니다. QGIS는 :menuselection:`Settings --> Options --> GPS "
+"--> GPSBabel`  탭에서 사용자가 자신의 기기 유형을 정의하고 사용할 파라미터를 설정할 수 있게 해줍니다. 더 자세한 내용은 "
+":ref:`defining_new_device` 을 참조하세요."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:40
+msgid ""
+"Once you have created a new device type, it will appear in the device lists "
+"for the download and upload tools."
+msgstr ""
+"새 기기 유형을 생성하고 나면, :guilabel:`Download from GPS` 및 :guilabel:`Upload to GPS` "
+"탭에 있는 기기 유형 목록에 추가될 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:46
+msgid "Transferring or loading GPS data"
+msgstr "GPS 데이터 전송 및 불러오기"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:48
+msgid ""
+"There are dozens of different file formats for storing GPS data. The format "
+"that QGIS uses is called GPX (GPS eXchange format), which is a standard "
+"interchange format that can contain any number of waypoints, routes and "
+"tracks in the same file."
+msgstr ""
+"GPS 데이터를 저장하기 위한 수십 개의 서로 다른 파일 포맷이 있습니다. QGIS가 이용하는 포맷은 GPX(GPS eXchange "
+"format)라고 불리는데, 동일 파일 내에 웨이포인트, 루트 및 트랙을 얼마든지 담을 수 있는 표준 교환(interchange) "
+"포맷입니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:53
+msgid "To load a :file:`GPX` file:"
+msgstr ":file:`GPX` 파일을 불러오려면:"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:55
+msgid ""
+"Open the :guilabel:`GPS` tab in the :guilabel:`Data Source Manager` dialog, "
+"i.e.:"
+msgstr ""
+"다음과 같이 :guilabel:`Data Source Manager` 대화창에 있는 :guilabel:`GPS` 탭을 여십시오:"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:57
+msgid ""
+"Click the |dataSourceManager| :sup:`Open Data Source Manager` button on the "
+"toolbar (or press :kbd:`Ctrl+L`) and enable the target tab"
+msgstr ""
+"툴바에 있는 |dataSourceManager| :sup:`Open Data Source Manager` 버튼(또는 "
+":kbd:`Ctrl+L` 키)을 누른 다음 :guilabel:`GPS` 탭을 활성화합니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:95
+msgid "dataSourceManager"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:59
+msgid ""
+"Or select :menuselection:`Layer --> Add Layer -->` |addGpsLayer| "
+":menuselection:`Add GPX Layer...`"
+msgstr ""
+"또는 :menuselection:`Layer --> Add Layer -->` |addGpsLayer| "
+":menuselection:`Add GPX Layer...` 메뉴를 선택합니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:93
+msgid "addGpsLayer"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:61
+msgid ""
+"Use the :guilabel:`...` :sup:`Browse` button next to the :guilabel:`GPX "
+"dataset` option to select the GPX file"
+msgstr ""
+":guilabel:`GPX dataset` 옵션 옆에 있는 :guilabel:`...` :sup:`Browse` 버튼을 눌러 GPX "
+"파일을 선택합니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:63
+msgid ""
+"Use the check boxes to select the :guilabel:`Feature types` you want to load"
+" from the file. Each feature type (:guilabel:`Waypoints`, :guilabel:`Tracks`"
+" or :guilabel:`Routes`) will be loaded in a separate layer."
+msgstr ""
+":guilabel:`Feature types`: 체크 상자를 이용해서 파일에서 불러오고자 하는 피처 유형을 선택하십시오. 각 피처 유형을"
+" (:guilabel:`Waypoints`, :guilabel:`Tracks` 또는 :guilabel:`Routes`) 개별 레이어로 "
+"불러올 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:70
+msgid "Loading GPS Data dialog"
+msgstr "GPS 데이터 불러오기 대화창"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:73
+msgid ""
+"Since QGIS uses GPX files, you need a way to convert other GPS file formats "
+"to GPX. This can be done for many formats using the free program `GPSBabel "
+"<https://www.gpsbabel.org>`_. This program can also transfer GPS data "
+"between your computer and a GPS device. QGIS relies on GPSBabel to do these "
+"things and provides you with convenient Processing algorithms available "
+"under the :ref:`GPS group <gps_algorithms>`."
+msgstr ""
+"QGIS가 GPX 파일을 사용하기 때문에, 다른 GPS 파일 포맷을 GPX로 변환할 방법이 필요합니다. 자유 소프트웨어 `GPSBabel"
+" <https://www.gpsbabel.org>`_ 을 이용하면 많은 포맷들을 변환할 수 있습니다. 이 프로그램은 사용자 컴퓨터와 "
+"GPS 기기 간에 GPS 데이터를 전송할 수도 있습니다. QGIS는 이런 작업에 GPSBabel을 사용하기 때문에 :ref:`GPS 그룹"
+" <gps_algorithms>` 에서 사용할 수 있는 편리한 공간 처리 알고리즘을 제공하고 있습니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:80
+msgid ""
+"GPS units allow you to store data in different coordinate systems. When "
+"downloading a GPX file (from your GPS unit or a web site) and then loading "
+"it in QGIS, be sure that the data stored in the GPX file uses WGS 84 "
+"(latitude/longitude). QGIS expects this, and it is the official GPX "
+"specification. See `GPX 1.1 Schema Documentation "
+"<https://www.topografix.com/GPX/1/1/>`_."
+msgstr ""
+"GPS 장치는 데이터를 서로 다른 좌표계로 저장할 수 있습니다. 사용자의 GPS 기기 또는 웹사이트에서 GPX 파일을 다운로드해서 "
+"QGIS로 불러올 때, GPX 파일에 저장된 데이터가 WGS 84(위도/경도) 좌표계를 사용하고 있는지 확인해야 합니다. QGIS가 이 "
+"좌표계를 기대하고 있고, 또 WGS 84가 공식 GPX 사양이기도 합니다. `GPX 1.1 스키마 문서 "
+"<https://www.topografix.com/GPX/1/1/>`_ 를 참조하세요."

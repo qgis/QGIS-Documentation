@@ -1,0 +1,732 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-28 06:22+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/services/wfs.rst:2
+msgid "Web Feature Service (WFS)"
+msgstr "Web Feature Service (WFS)"
+
+#: ../../docs/server_manual/services/wfs.rst:4
+msgid ""
+"The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server provide"
+" a HTTP interface to query geographic features from a QGIS project. A "
+"typical WFS request defines the QGIS project to use and the layer to query."
+msgstr ""
+"QGIS Server に実装されている **1.0.0** 及び **1.1.0** WFS 標準は、QGIS "
+"プロジェクトから地理的な地物を照会するための HTTP "
+"インターフェイスを提供します。典型的なWFSリクエストは、使用するQGISプロジェクトとクエリするレイヤを定義します。"
+
+#: ../../docs/server_manual/services/wfs.rst:10
+msgid ""
+"Specifications document according to the version number of the service:"
+msgstr "サービスのバージョン番号に応じた仕様書:"
+
+#: ../../docs/server_manual/services/wfs.rst:12
+msgid "`WFS 1.0.0 <https://portal.ogc.org/files/?artifact_id=7176>`_"
+msgstr "`WFS 1.0.0 <https://portal.ogc.org/files/?artifact_id=7176>`_"
+
+#: ../../docs/server_manual/services/wfs.rst:13
+msgid "`WFS 1.1.0 <https://portal.ogc.org/files/?artifact_id=8339>`_"
+msgstr "`WFS 1.1.0 <https://portal.ogc.org/files/?artifact_id=8339>`_"
+
+#: ../../docs/server_manual/services/wfs.rst:15
+msgid "Standard requests provided by QGIS Server:"
+msgstr "QGIS Serverが提供する標準リクエスト"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Request"
+msgstr "リクエスト"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GetCapabilities <wfs_getcapabilities>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "サーバーに関する情報を含むXMLメタデータを返します"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GetFeature <wfs_getfeature>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Returns a selection of features"
+msgstr "選択された地物を返します"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`DescribeFeatureType <wfs_describefeaturetype>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Returns a description of feature types and properties"
+msgstr "地物の型とプロパティの説明を返します"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`Transaction <wfs_transaction>`"
+msgstr ":ref:`Transaction <wfs_transaction>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Allows features to be inserted, updated or deleted"
+msgstr "地物の挿入、更新または削除を可能にします"
+
+#: ../../docs/server_manual/services/wfs.rst:30
+msgid "GetCapabilities"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:32
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WFS 1.0.0 and 1.1.0 specifications:"
+msgstr "OGC WFS 1.0.0及び1.1.0仕様に従った、**GetCapabilities** リクエストの標準パラメータ"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Parameter"
+msgstr "パラメーター"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Required"
+msgstr "必須"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Yes"
+msgstr "はい"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the service (**WFS**)"
+msgstr "サービスの名称 (**WFS**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "リクエストの名称 (**GetCapabilities**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`VERSION <wfs_version>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "No"
+msgstr "いいえ"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Version of the service"
+msgstr "サービスのバージョン"
+
+#: ../../docs/server_manual/services/wfs.rst:43
+#: ../../docs/server_manual/services/wfs.rst:105
+#: ../../docs/server_manual/services/wfs.rst:585
+#: ../../docs/server_manual/services/wfs.rst:654
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr "標準のものに加えて、QGISサーバーでは以下の追加パラメータをサポートしています："
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "QGIS project file"
+msgstr "QGISプロジェクトファイル"
+
+#: ../../docs/server_manual/services/wfs.rst:57
+msgid "VERSION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:59
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"このパラメータでは、使用するサービスのバージョンを指定することができます。``VERSION`` パラメータに指定できる値は以下の通りです:"
+
+#: ../../docs/server_manual/services/wfs.rst:62
+msgid "``1.0.0``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:63
+msgid "``1.1.0``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:65
+msgid ""
+"If no version is indicated in the request, then ``1.1.0`` is used by "
+"default."
+msgstr "リクエストにバージョンが示されなかった場合、``1.1.0`` がデフォルトとして使われます。"
+
+#: ../../docs/server_manual/services/wfs.rst:68
+#: ../../docs/server_manual/services/wfs.rst:127
+#: ../../docs/server_manual/services/wfs.rst:146
+#: ../../docs/server_manual/services/wfs.rst:201
+#: ../../docs/server_manual/services/wfs.rst:260
+#: ../../docs/server_manual/services/wfs.rst:314
+#: ../../docs/server_manual/services/wfs.rst:338
+#: ../../docs/server_manual/services/wfs.rst:416
+#: ../../docs/server_manual/services/wfs.rst:461
+#: ../../docs/server_manual/services/wfs.rst:511
+#: ../../docs/server_manual/services/wfs.rst:535
+#: ../../docs/server_manual/services/wfs.rst:555
+#: ../../docs/server_manual/services/wfs.rst:595
+#: ../../docs/server_manual/services/wfs.rst:675
+msgid "URL example:"
+msgstr "URLの例:"
+
+#: ../../docs/server_manual/services/wfs.rst:81
+msgid "GetFeature"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:83
+msgid ""
+"Standard parameters for the **GetFeature** request according to the OGC WFS "
+"1.0.0 and 1.1.0 specifications:"
+msgstr "OGC WFS 1.0.0及び1.1.0仕様に従った、**GetFeature** リクエストの標準パラメータ:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**GetFeature**)"
+msgstr "リクエストの名称 (**GetFeature**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`TYPENAME <wfs_getfeature_typename>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of layers"
+msgstr "レイヤの名前"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`FEATUREID <wfs_getfeature_featureid>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Filter the features by ids"
+msgstr "idで地物をフィルタする"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Output Format"
+msgstr "出力形式"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`RESULTTYPE <wfs_getfeature_resulttype>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Type of the result"
+msgstr "結果の型"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`PROPERTYNAME <wfs_getfeature_propertyname>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of properties to return"
+msgstr "返すプロパティの名前"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`MAXFEATURES <wfs_getfeature_maxfeatures>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Maximum number of features to return"
+msgstr "返す地物の最大数"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SRSNAME <wfs_getfeature_srsname>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Coordinate reference system"
+msgstr "座標参照系"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`FILTER <wfs_getfeature_filter>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "OGC Filter Encoding"
+msgstr "OGCフィルターエンコーディング"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`BBOX <wfs_getfeature_bbox>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Map Extent"
+msgstr "マップの範囲"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SORTBY <wfs_getfeature_sortby>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Sort the results"
+msgstr "結果を並び替える"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`STARTINDEX <wfs_getfeature_startindex>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Paging"
+msgstr "ページング"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GEOMETRYNAME <wfs_getfeature_geometryname>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Type of geometry to return"
+msgstr "返すジオメトリの型"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Expression filtering"
+msgstr "式フィルタ"
+
+#: ../../docs/server_manual/services/wfs.rst:122
+msgid "TYPENAME"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:124
+msgid ""
+"This parameter allows to specify layer names and is mandatory if "
+"``FEATUREID`` is not set."
+msgstr "このパラメータでは、レイヤ名を指定することができ、``FEATUREID`` がセットされていないときは必須です。"
+
+#: ../../docs/server_manual/services/wfs.rst:141
+msgid "FEATUREID"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:143
+msgid ""
+"This parameter allows to specify the ID of a specific feature and is formed "
+"like ``typename.fid,typename.fid,...``."
+msgstr ""
+"このパラメータでは、特定の地物のIDを指定することができ、``typename.fid,typename.fid,...`` のように形成されます。"
+
+#: ../../docs/server_manual/services/wfs.rst:156
+msgid "XML response:"
+msgstr "XMLレスポンス:"
+
+#: ../../docs/server_manual/services/wfs.rst:180
+msgid "OUTPUTFORMAT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:183
+msgid ""
+"This parameter may be used to specify the format of the response. If "
+"``VERSION`` is greater or equal than ``1.1.0``, GML3 is the default format. "
+"Otherwise GML2 is used."
+msgstr ""
+"このパラメータを使って、レスポンスの形式を指定することができます。``VERSION`` が ``1.1.0`` "
+"より大きいか等しい場合、GML3がデフォルトの形式です。それ以外の場合はGML2が使われます。"
+
+#: ../../docs/server_manual/services/wfs.rst:187
+msgid "Available values are:"
+msgstr "利用可能な値は次の通り:"
+
+#: ../../docs/server_manual/services/wfs.rst:189
+msgid "``gml2``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:190
+msgid "``text/xml; subtype=gml/2.1.2``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:191
+msgid "``gml3``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:192
+msgid "``text/xml; subtype=gml/3.1.1``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:193
+msgid "``geojson``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:194
+msgid "``application/vnd.geo+json``,"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:195
+msgid "``application/vnd.geo json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:196
+msgid "``application/geo+json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:197
+msgid "``application/geo json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:198
+msgid "``application/json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:212
+msgid "GeoJSON response:"
+msgstr "GeoJSONレスポンス:"
+
+#: ../../docs/server_manual/services/wfs.rst:252
+msgid "RESULTTYPE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:254
+msgid ""
+"This parameter may be used to specify the kind of result to return. "
+"Available values are:"
+msgstr "このパラメータを使って、返す結果の種類を指定することができます。利用可能な値は以下の通りです:"
+
+#: ../../docs/server_manual/services/wfs.rst:257
+msgid "``results``: the default behavior"
+msgstr "``results``: デフォルトの動作"
+
+#: ../../docs/server_manual/services/wfs.rst:258
+msgid "``hits``: returns only a feature count"
+msgstr "``hits``: 地物の数だけを返します"
+
+#: ../../docs/server_manual/services/wfs.rst:275
+msgid "PROPERTYNAME"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:277
+msgid ""
+"This parameter may be used to specify a specific property to return. A "
+"property needs to be mapped with a ``TYPENAME`` or a ``FEATUREID``:"
+msgstr ""
+"このパラメータを使って、特定のプロパティを返すよう指定することができます。プロパティは ``TYPENAME`` または ``FEATUREID`` "
+"と共にマッピングされている必要があります:"
+
+#: ../../docs/server_manual/services/wfs.rst:280
+msgid "Valid URL example:"
+msgstr "有効なURLの例:"
+
+#: ../../docs/server_manual/services/wfs.rst:290
+msgid "On the contrary, the next URL will return an exception:"
+msgstr "対して、次のURLでは例外が返されます:"
+
+#: ../../docs/server_manual/services/wfs.rst:310
+msgid "MAXFEATURES"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:312
+msgid ""
+"This parameter allows to limit the number of features returned by the "
+"request."
+msgstr "このパラメータは、リクエストによって返される地物の数を制限することができます。"
+
+#: ../../docs/server_manual/services/wfs.rst:326
+msgid ""
+"This parameter may be useful to improve performances when underlying vector "
+"layers are heavy."
+msgstr "このパラメータは、下層のベクタレイヤが重い場合にパフォーマンスを向上させるのに有効な場合があります。"
+
+#: ../../docs/server_manual/services/wfs.rst:333
+msgid "SRSNAME"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:335
+msgid ""
+"This parameter allows to indicate the response output Spatial Reference "
+"System as well as the ``BBOX`` CRS and has to be formed like ``EPSG:XXXX``."
+msgstr ""
+"このパラメータは、``BBOX`` CRSと同様にレスポンス出力の空間参照系を指定することができます。パラメータは ``EPSG:XXXX`` "
+"のように形成する必要があります。"
+
+#: ../../docs/server_manual/services/wfs.rst:352
+msgid "FILTER"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:354
+msgid ""
+"This parameter allows to filter the response with the **Filter Encoding** "
+"language defined by the `OGC Filter Encoding standard "
+"<https://www.ogc.org/standards/filter>`_. For example:"
+msgstr ""
+"このパラメータは、`OGC Filter Encoding standard "
+"<https://www.ogc.org/standards/filter>`_ で定義されている **Filter Encoding** "
+"言語を使ってレスポンスをフィルタすることができます。例えば、以下のようになります:"
+
+#: ../../docs/server_manual/services/wfs.rst:368
+msgid ""
+"In case of multiple typenames, filters have to be enclosed in parentheses:"
+msgstr "型名が複数ある場合、フィルターは括弧で囲む必要があります:"
+
+#: ../../docs/server_manual/services/wfs.rst:378
+msgid "Filter features that intersect with a polygon:"
+msgstr "ポリゴンと交差する地物をフィルタする:"
+
+#: ../../docs/server_manual/services/wfs.rst:408
+msgid "BBOX"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:410
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr "このパラメータを使用すると、現在のCRSに従った単位でマップの範囲を指定することができます。座標はカンマで区切る必要があります。"
+
+#: ../../docs/server_manual/services/wfs.rst:413
+msgid ""
+"The ``SRSNAME`` parameter may specify the CRS of the extent. If not "
+"specified, the CRS of the layer is used."
+msgstr "``SRSNAME`` パラメータは、範囲のCRSを指定することができます。指定しない場合、レイヤのCRSが使用されます。"
+
+#: ../../docs/server_manual/services/wfs.rst:427
+msgid ""
+"The ``FEATUREID`` parameter cannot be used with the ``BBOX``. Any attempt "
+"will result in an exception:"
+msgstr "``FEATUREID`` パラメータは ``BBOX`` と共に使用することはできません。使用しようとすると、例外が発生します:"
+
+#: ../../docs/server_manual/services/wfs.rst:440
+msgid "SORTBY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:442
+msgid ""
+"This parameter allows to sort resulting features according to property "
+"values and has to be formed like ``propertyname SORTRULE``."
+msgstr ""
+"このパラメータは、プロパティ値に従って結果の地物をソートすることができます。パラメータは ``propertyname SORTRULE`` "
+"のように形成する必要があります。"
+
+#: ../../docs/server_manual/services/wfs.rst:445
+msgid "Available values for ``SORTRULE`` in case of descending sorting:"
+msgstr "降順にソートする場合に ``SORTRULE`` に指定できる値は次の通りです:"
+
+#: ../../docs/server_manual/services/wfs.rst:447
+msgid "``D``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:448
+msgid "``+D``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:449
+msgid "``DESC``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:450
+msgid "``+DESC``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:453
+msgid "Available values for ``SORTRULE`` in case of ascending sorting:"
+msgstr "昇順にソートする場合に、``SORTRULE`` に指定できる値は次の通りです:"
+
+#: ../../docs/server_manual/services/wfs.rst:455
+msgid "``A``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:456
+msgid "``+A``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:457
+msgid "``ASC``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:458
+msgid "``+ASC``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:473
+msgid "The corresponding result:"
+msgstr "対応する結果です:"
+
+#: ../../docs/server_manual/services/wfs.rst:502
+msgid "GEOMETRYNAME"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:504
+msgid ""
+"This parameter can be used to specify the kind of geometry to return for "
+"features. Available values are:"
+msgstr "このパラメータは、返す地物のジオメトリの種類を指定するために使用できます。利用可能な値は以下のとおりです："
+
+#: ../../docs/server_manual/services/wfs.rst:507
+msgid "``extent``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:508
+msgid "``centroid``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:509
+msgid "``none``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:526
+msgid "STARTINDEX"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:528
+msgid ""
+"This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0."
+msgstr "このパラメータはWFS 2.0では標準ですが、WFS 1.0.0では拡張です。"
+
+#: ../../docs/server_manual/services/wfs.rst:531
+msgid ""
+"Actually, it can be used to skip some features in the result set and in "
+"combination with ``MAXFEATURES``, it provides the ability to page through "
+"results."
+msgstr ""
+"実際には、結果セットの一部の地物をスキップするために使用することができ、``MAXFEATURES`` "
+"と組み合わせることで、結果をページ送りする機能を提供します。"
+
+#: ../../docs/server_manual/services/wfs.rst:550
+msgid "EXP_FILTER"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:552
+msgid ""
+"This parameter allows to filter the response with QGIS expressions. The "
+"``;`` character is used to separate filters in case of multiple typenames."
+msgstr ""
+"このパラメータを使用すると、QGIS式でレスポンスをフィルタすることができます。型名が複数ある場合、``;`` 文字でフィルタを区切ることができます。"
+
+#: ../../docs/server_manual/services/wfs.rst:569
+msgid "DescribeFeatureType"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:571
+msgid ""
+"Standard parameters for the **DescribeFeatureType** request according to the"
+" OGC WFS 1.0.0 and 1.1.0 specifications:"
+msgstr "OGC WFS 1.0.0 及び 1.1.0 仕様に準拠した **DescribeFeatureType** リクエストの標準パラメータ:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**DescribeFeatureType**)"
+msgstr "リクエストの名称 (**DescribeFeatureType**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Format of the response"
+msgstr "レスポンスの形式"
+
+#: ../../docs/server_manual/services/wfs.rst:605
+msgid "Output response:"
+msgstr "出力レスポンス:"
+
+#: ../../docs/server_manual/services/wfs.rst:629
+msgid "Transaction"
+msgstr "Transaction"
+
+#: ../../docs/server_manual/services/wfs.rst:631
+msgid ""
+"This request allows to update, delete or add one or several features thanks "
+"to a XML document. The :ref:`delete <wfs_transaction_delete>` action may be "
+"achieved with a POST request as well as with the :ref:`OPERATION "
+"<wfs_transaction_operation>` parameter while the :ref:`add "
+"<wfs_transaction_add>` and the :ref:`update <wfs_transaction_update>` "
+"operations may be achieved through POST request only."
+msgstr ""
+"このリクエストでは、XML 文書を使用して、1 つまたは複数の地物を更新、削除、または追加することができます。:ref:`削除 "
+"<wfs_transaction_delete>` の操作は POST リクエストと :ref:`OPERATION "
+"<wfs_transaction_operation>` パラメータで行うことができ、 :ref:`追加 <wfs_transaction_add>` "
+"と :ref:`更新 <wfs_transaction_update>` の操作は POST リクエストでのみ行うことができます。"
+
+#: ../../docs/server_manual/services/wfs.rst:639
+msgid ""
+"Standard parameters for the **Transaction** request according to the OGC WFS"
+" 1.0.0 and 1.1.0 specifications:"
+msgstr "OGC WFS 1.0.0 及び 1.1.0 仕様に準拠した **Transaction** リクエストの標準パラメータ:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**Transaction**)"
+msgstr "リクエストの名称 (**Transaction**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`OPERATION <wfs_transaction_operation>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Specify the operation"
+msgstr "操作を指定します"
+
+#: ../../docs/server_manual/services/wfs.rst:670
+msgid "OPERATION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:672
+msgid ""
+"This parameter allows to delete a feature without using a POST request with "
+"a dedicated XML document."
+msgstr "このパラメータを使用すると、専用の XML 文書を使用した POST リクエストを使用せずに、地物を削除することができます。"
+
+#: ../../docs/server_manual/services/wfs.rst:688
+msgid ""
+"``FEATUREID``, ``BBOX`` and ``FILTER`` parameters are mutually exclusive and"
+" prioritized in this order."
+msgstr "``FEATUREID``、``BBOX``、``FILTER`` の各パラメータは相互に排他的で、この順番で優先されます。"
+
+#: ../../docs/server_manual/services/wfs.rst:694
+msgid "Add features"
+msgstr "地物を追加する"
+
+#: ../../docs/server_manual/services/wfs.rst:696
+#: ../../docs/server_manual/services/wfs.rst:728
+#: ../../docs/server_manual/services/wfs.rst:758
+msgid "POST request example:"
+msgstr "POSTリクエストの例:"
+
+#: ../../docs/server_manual/services/wfs.rst:703
+msgid "with the *add.xml* document:"
+msgstr "使用する *add.xml* 文書:"
+
+#: ../../docs/server_manual/services/wfs.rst:726
+msgid "Update features"
+msgstr "地物を更新する"
+
+#: ../../docs/server_manual/services/wfs.rst:735
+msgid "with the *update.xml* document:"
+msgstr "使用する *update.xml* 文書:"
+
+#: ../../docs/server_manual/services/wfs.rst:756
+msgid "Delete features"
+msgstr "地物を削除する"
+
+#: ../../docs/server_manual/services/wfs.rst:765
+msgid "with the *delete.xml* document:"
+msgstr "使用する *delete.xml* 文書"

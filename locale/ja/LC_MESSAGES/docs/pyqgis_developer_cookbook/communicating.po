@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:13
+msgid "Communicating with the user"
+msgstr "ユーザーとコミュニケーションする"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:15
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "pyqgisコンソールを使わない場合、このページにあるコードスニペットは次のインポートが必要です:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:41
+msgid ""
+"This section shows some methods and elements that should be used to "
+"communicate with the user, in order to keep consistency in the User "
+"Interface."
+msgstr ""
+"このセクションでは、ユーザーインターフェイスにおいて一貫性を維持するためにユーザーとのコミュニケーション時に使うべき方法と要素をいくつか示します。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:45
+msgid "Showing messages. The QgsMessageBar class"
+msgstr "メッセージを表示する。QgsMessageBarクラス"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:47
+msgid ""
+"Using message boxes can be a bad idea from a user experience point of view. "
+"For showing a small info line or a warning/error messages, the QGIS message "
+"bar is usually a better option."
+msgstr ""
+"メッセージボックスを使用するのはユーザー体験の見地からは良いアイデアではありません。警告/エラー用に小さな情報行を表示するには、たいていQGIS "
+"メッセージバーが良い選択肢です。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:51
+msgid ""
+"Using the reference to the QGIS interface object, you can show a message in "
+"the message bar with the following code"
+msgstr "QGIS インターフェイスオブジェクトへの参照を利用すると、次のようなコードでメッセージバー内にメッセージを表示できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:68
+msgid "QGIS Message bar"
+msgstr "QGIS メッセージバー"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:70
+msgid "You can set a duration to show it for a limited time"
+msgstr "表示期間を設定して時間を限定することができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:84
+msgid "QGIS Message bar with timer"
+msgstr "タイマー付きQGIS メッセージバー"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:86
+msgid ""
+"The examples above show an error bar, but the ``level`` parameter can be "
+"used to creating warning messages or info messages, using the "
+":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You "
+"can use up to 4 different levels:"
+msgstr ""
+"上の例ではエラーバーを表示していますが、``level`` パラメータは :class:`Qgis.MessageLevel "
+"<qgis.core.Qgis.MessageLevel>` "
+"列挙型を使って警告メッセージや情報メッセージを作成することができます。最大4つのレベルを使用することができます："
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:90
+msgid "Info"
+msgstr "Info"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:91
+msgid "Warning"
+msgstr "Warning"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:92
+msgid "Critical"
+msgstr "Critical"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:93
+msgid "Success"
+msgstr "Success"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:99
+msgid "QGIS Message bar (info)"
+msgstr "QGIS メッセージバー (お知らせ)"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:101
+msgid ""
+"Widgets can be added to the message bar, like for instance a button to show "
+"more info"
+msgstr "ウィジェットは、例えば詳細情報の表示用ボタンのように、メッセージバーに追加することができます"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:124
+msgid "QGIS Message bar with a button"
+msgstr "ボタン付きのQGIS メッセージバー"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:126
+msgid ""
+"You can even use a message bar in your own dialog so you don't have to show "
+"a message box, or if it doesn't make sense to show it in the main QGIS "
+"window"
+msgstr ""
+"メッセージバーは自分のダイアログの中でも使えるため、メッセージボックスを表示する必要はありませんし、メインのQGISウィンドウ内に表示する意味がない時にも使えます。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:152
+msgid "QGIS Message bar in custom dialog"
+msgstr "カスタムダイアログ内のQGIS メッセージバー"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:156
+msgid "Showing progress"
+msgstr "プロセスを表示する"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:158
+msgid ""
+"Progress bars can also be put in the QGIS message bar, since, as we have "
+"seen, it accepts widgets. Here is an example that you can try in the "
+"console."
+msgstr ""
+"プログレスバーはご覧のとおりウィジェットを受け入れるので、QGISメッセージバーに置くこともできます。コンソール内で試すことができる例はこちらです。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:184
+msgid ""
+"Also, you can use the built-in status bar to report progress, as in the next"
+" example:"
+msgstr "また、次の例のように、内蔵のステータスバーを使って進捗状況を報告することもできます："
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:212
+msgid "Logging"
+msgstr "ログを作成する"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:214
+msgid ""
+"There are three different types of logging available in QGIS to log and save"
+" all the information about the execution of your code. Each has its specific"
+" output location. Please consider to use the correct way of logging for your"
+" purpose:"
+msgstr ""
+"QGISでは、コードの実行に関するすべての情報をログに記録して保存するために、3つの異なるタイプのロギングが利用できます。それぞれ特定の出力場所があります。あなたの目的に合ったロギングの方法を使用することを検討してください："
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:218
+msgid ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to "
+"communicate issues to the user. The output of the QgsMessageLog is shown in "
+"the Log Messages Panel."
+msgstr ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` "
+"はユーザに問題を伝えるメッセージ向けです。QgsMessageLogの出力はログメッセージパネルに表示されます。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:221
+msgid ""
+"The python built in **logging** module is for debugging on the level of the "
+"QGIS Python API (PyQGIS). It is recommended for Python script developers "
+"that need to debug their python code, e.g. feature ids or geometries"
+msgstr ""
+"pythonに組み込まれた **logging** モジュールは、QGIS Python API "
+"(PyQGIS)レベルでのデバッグ用です。Pythonスクリプト開発者が、地物IDやジオメトリなどのPythonコードをデバッグする必要がある場合にお勧めします。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:224
+msgid ""
+":class:`QgsLogger <qgis.core.QgsLogger>` is for messages for *QGIS internal*"
+" debugging / developers (i.e. you suspect something is triggered by some "
+"broken code). Messages are only visible with developer versions of QGIS."
+msgstr ""
+":class:`QgsLogger <qgis.core.QgsLogger>` は、*QGIS内部* "
+"のデバッグ/開発者向けのメッセージです（壊れたコードによって何かが引き起こされた疑いがある）。メッセージはQGISの開発者バージョンでのみ表示されます。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:228
+msgid ""
+"Examples for the different logging types are shown in the following sections"
+" below."
+msgstr "異なるロギングタイプの例を以下のセクションに示します。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:232
+msgid ""
+"Use of the Python ``print`` statement is unsafe to do in any code which may "
+"be multithreaded and **extremely slows down the algorithm**. This includes "
+"**expression functions**, **renderers**, **symbol layers** and **Processing "
+"algorithms** (amongst others). In these cases you should always use the "
+"python **logging** module or thread safe classes (:class:`QgsLogger "
+"<qgis.core.QgsLogger>` or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) "
+"instead."
+msgstr ""
+"Python の ``print`` "
+"文を使用することは、マルチスレッドされるコードでは安全ではなく、**アルゴリズムが極端に遅くなります**。これには、**式関数**、**レンダラー**、*シンボルレイヤ**、**プロセシングアルゴリズム**"
+" (特にその他) が含まれます。このような場合、代わりにpythonの **logging** "
+"モジュールかスレッドセーフなクラス（:class:`QgsLogger <qgis.core.QgsLogger>` または "
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>`）を使うべきです。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:241
+msgid "QgsMessageLog"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:258
+msgid ""
+"You can see the output of the :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
+msgstr ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` "
+"の出力は、:ref:`log_message_panel` で見ることができます"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:262
+msgid "The python built in logging module"
+msgstr "python内蔵のログモジュール"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:273
+msgid ""
+"The basicConfig method configures the basic setup of the logging. In the "
+"above code the filename, logging level and the format are defined. The "
+"filename refers to where to write the logfile to, the logging level defines "
+"what levels to output and the format defines the format in which each "
+"message is output."
+msgstr ""
+"basicConfigメソッドは、ロギングの基本的な設定を行います。上記のコードでは、ファイル名、ロギングレベル、フォーマットが定義されています。ファイル名はログファイルを書き込む場所を指し、ロギングレベルは出力するレベルを定義し、フォーマットは各メッセージが出力されるフォーマットを定義します。"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:283
+msgid ""
+"If you want to erase the log file every time you execute your script you can"
+" do something like:"
+msgstr "スクリプトを実行する度にログファイルを消去したいときは次のようにします："
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:291
+msgid ""
+"Further resources on how to use the python logging facility are available "
+"at:"
+msgstr "pythonのロギング機能の使い方に関する更なるリソースは、以下を参照してください："
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:293
+msgid "https://docs.python.org/3/library/logging.html"
+msgstr "https://docs.python.org/3/library/logging.html"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:294
+msgid "https://docs.python.org/3/howto/logging.html"
+msgstr "https://docs.python.org/3/howto/logging.html"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:295
+msgid "https://docs.python.org/3/howto/logging-cookbook.html"
+msgstr "https://docs.python.org/3/howto/logging-cookbook.html"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:299
+msgid ""
+"Please note that without logging to a file by setting a filename the logging"
+" may be multithreaded which heavily slows down the output."
+msgstr "ファイル名を設定してファイルにロギングしないと、ロギングがマルチスレッドになり、出力が著しく遅くなる可能性があることに注意してください。"

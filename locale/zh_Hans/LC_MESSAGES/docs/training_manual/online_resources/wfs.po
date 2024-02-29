@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:2
+msgid "|LS| Web Feature Services"
+msgstr "课: Web要素服务"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:4
+msgid ""
+"A Web Feature Service (WFS) provides its users with GIS data in formats that"
+" can be loaded directly in QGIS. Unlike a WMS, which provides you only with "
+"a map which you can't edit, a WFS gives you access to the features "
+"themselves."
+msgstr ""
+"Web要素服务 (WFS) "
+"为用户提供可以直接在QGIS中加载的格式的GIS数据。与WMS不同，WMS只为您提供无法编辑的地图，而WFS则为您提供对要素本身的访问。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:8
+msgid ""
+"**The goal for this lesson:** To use a WFS and understand how it differs "
+"from a WMS."
+msgstr "**本课目标:** 使用WFS并了解与WMS的区别。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:12
+msgid "|basic| |FA| Loading a WFS Layer"
+msgstr "|basic| 跟我做: 加载WFS图层"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:176
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:14
+msgid "Start a new map. This is for demo purposes and won't be saved."
+msgstr "新建地图。这仅用于演示目的，不会被保存。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:15
+msgid "Click the |dataSourceManager| :sup:`Open Data Source Manager` button."
+msgstr "单击 |dataSourceManager| :sup:`打开数据源管理器` 按钮。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:177
+msgid "dataSourceManager"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:16
+msgid "Enable the |wfs| :guilabel:`WFS / OGC API - Features` tab."
+msgstr "开启 |wfs| :guilabel:`WFS / OGC API - 要素` 选项卡。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:182
+msgid "wfs"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:17
+msgid "Click the :guilabel:`New` button."
+msgstr "单击 :guilabel:`新建` 按钮。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:18
+msgid ""
+"In the dialog that appears, enter the :guilabel:`Name` as ``nsidc.org`` and "
+"the :guilabel:`URL` as ``https://nsidc.org/cgi-"
+"bin/atlas_south?version=1.1.0``."
+msgstr ""
+"在出现的对话框中，输入 :guilabel:`名称` 为 ``nsidc.org`` ， :guilabel:`URL` 为 "
+"``https://nsidc.org/cgi-bin/atlas_south?version=1.1.0`` 。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:25
+msgid ""
+"Click :guilabel:`OK`, and the new connection will appear in your "
+":guilabel:`Server connections`."
+msgstr "单击 :guilabel:`确定` ，新建连接将显示在 :guilabel:`服务器连接` 中。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:27
+msgid ""
+"Click the :guilabel:`Connect`. A list of the available layers will appear:"
+msgstr "单击 :guilabel:`连接` 。将显示可用图层的列表："
+
+#: ../../docs/training_manual/online_resources/wfs.rst:32
+msgid ""
+"Uncheck the :guilabel:`Only request features overlapping the view extent` "
+"option below the layers list, since your current map canvas may not cover "
+"our area of interest: Antarctica."
+msgstr "取消勾选图层列表下方的 :guilabel:`仅请求与视图范围重叠的要素` 选项，因为您当前的地图画布可能无法涵盖我们关注区：南极洲。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:35
+msgid ""
+"Find the layer :guilabel:`antarctica_country_border`. You can use the "
+":guilabel:`Filter` box at the top."
+msgstr ""
+"查找 :guilabel:`antarctica_country_border` 图层。您可以使用顶部的 :guilabel:`过滤器` 栏。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:37
+msgid "Click on the layer to select it:"
+msgstr "单击图层将其选中。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:38
+msgid ""
+"Find and select also the layer :guilabel:`south_poles_wfs`. You might need "
+"to hold :kbd:`Ctrl`."
+msgstr "查找并选择 :guilabel:`south_poles_wfs` 图层。您可能需要按住 :kbd:`Ctrl` 键。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:44
+msgid "Click :guilabel:`Add`."
+msgstr "单击 :guilabel:`添加` 。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:46
+msgid ""
+"It may take a while to load the layers. When they are loaded, they will "
+"appear in the map, showing the outlines of Antarctica and a few points over."
+msgstr "加载图层可能需要一段时间。加载后它们将出现在地图上，显示南极洲的轮廓和几个点。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:52
+msgid "How is this different from having a WMS layer?"
+msgstr "这与使用WMS图层有什么不同呢？"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:54
+msgid ""
+"Select any of the layers and you'll notice that feature selection and "
+"attribute table tools are enabled. These are vector layers."
+msgstr "选择任意图层，您都会注意到要素选择和属性表工具已启用。这些是矢量图层。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:56
+msgid ""
+"Select the :guilabel:`south_poles_wfs` layer and open its attribute table. "
+"You should see this:"
+msgstr "选择 :guilabel:`south_poles_wfs` 图层并打开其属性表。您应该看到以下内容："
+
+#: ../../docs/training_manual/online_resources/wfs.rst:62
+msgid ""
+"Since the points have attributes, we are able to label them, as well as "
+"change their symbology. Here's an example:"
+msgstr "由于这些点具有属性，我们可以为其添加标注，并更改符号。下面是一个例子："
+
+#: ../../docs/training_manual/online_resources/wfs.rst:70
+msgid "Differences from WMS layers"
+msgstr "与WMS图层的差异"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:72
+msgid ""
+"A Web Feature Service returns the layer itself, not just a map rendered from"
+" it. This gives you direct access to the data, meaning that you can change "
+"its symbology and run analysis functions on it. However, this is at the cost"
+" of much more data being transmitted. This will be especially obvious if the"
+" layers you're loading have complicated shapes, a lot of attributes, or many"
+" features; or even if you're just loading a lot of layers. WFS layers "
+"typically take a very long time to load because of this."
+msgstr ""
+"Web要素服务返回图层本身，而不仅仅是从图层渲染的地图。这使您可以直接访问数据，并可以更改其符号并运行分析功能。然而，这是以传输大量数据为代价的。如果正在加载的图层具有复杂的形状、大量属性或许多要素，这一点尤其明显；或者即使只是加载了很多图层。因此，WFS图层通常需要很长时间才能加载完毕。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:81
+msgid "|moderate| |FA| Querying a WFS Layer"
+msgstr "|moderate| 跟我做: 查询WFS图层"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:181
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:83
+msgid ""
+"Although it is of possible to query a WFS layer after having loaded it, it's"
+" often more efficient to query it before you load it. That way, you're only "
+"requesting the features you want, meaning that you use far less bandwidth."
+msgstr "虽然可以在加载WFS图层后进行查询，但在加载之前对其查询通常更有效。这样，只需请求所需的要素，这意味着您使用的带宽要少得多。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:87
+msgid ""
+"For example, on the WFS server we're currently using, there is a layer "
+"called :guilabel:`countries (excluding Antarctica)`. Let's say that we want "
+"to know where South Africa is relative to the :guilabel:`south_poles_wfs` "
+"layer (and perhaps also the :guilabel:`antarctica_country_border` layer) "
+"that's already been loaded."
+msgstr ""
+"例如，在我们目前使用的WFS服务器中，有一个名为 :guilabel:`countries (不包括南极洲)` "
+"的图层。比如，我们想知道南非相对于已经加载的 :guilabel:`south_poles_wfs` 图层 (可能还有 "
+":guilabel:`antarctica_country_border` 图层) 的位置。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:93
+msgid ""
+"There are two ways to do this. You can load the whole :guilabel:`countries "
+"...` layer, and then build a query as usual once it's loaded. However, "
+"transmitting the data for all the countries in the world and then only using"
+" the data for South Africa seems a bit wasteful of bandwidth. Depending on "
+"your connection, this dataset can take several minutes to load."
+msgstr ""
+"有两种方法可以做到。加载整个 :guilabel:`countries ...` "
+"图层，然后在加载后像往常一样构建查询。然而，传输世界上所有国家的数据，然后只使用南非的，似乎有点浪费带宽。根据您的连接，加载此数据集可能需要几分钟。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:99
+msgid ""
+"The alternative is to build the query as a filter before even loading the "
+"layer from the server."
+msgstr "另一种方法是从服务器加载图层之前将查询构建为过滤器。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:102
+msgid ""
+"Enable the :guilabel:`WFS / OGC API Features` tab in the :guilabel:`Data "
+"Source Manager` dialog"
+msgstr ""
+"在 :guilabel:`Data Source Manager` 对话框中启用 :guilabel:`WFS / OGC API 要素` 选项卡"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:104
+msgid ""
+"Connect to the server we used before and you should see the list of "
+"available layers."
+msgstr "连接到我们之前使用的服务器，您应该会看到可用图层的列表。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:105
+msgid ""
+"Find and double-click the :guilabel:`countries (excluding Antarctica)` "
+"layer. The layer name is ``country_borders_excluding_antarctica``. You can "
+"also select the layer and press :guilabel:`Build query` button at the bottom"
+" of the dialog:"
+msgstr ""
+"查找并双击 :guilabel:`countries (不包括南极洲)` 图层。图层名为 "
+"``country_borders_excluding_antarctica`` 。也可以选择图层，然后按对话框底部的 :guilabel:`构建查询`"
+" 按钮："
+
+#: ../../docs/training_manual/online_resources/wfs.rst:113
+msgid ""
+"In the dialog that appears, type the following ``SELECT * FROM "
+"country_borders_excluding_antarctica WHERE \"Countryeng\" = 'South Africa'``"
+" query in the :guilabel:`SQL Statement` box."
+msgstr ""
+"在出现的对话框的 :guilabel:`SQL语句` 框中键入以下 ``SELECT * FROM "
+"country_borders_excluding_antarctica WHERE \"Countryeng\" = 'South Africa'``"
+" 查询内容。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:120
+msgid "Press :guilabel:`OK`."
+msgstr "按 :guilabel:`确定` 。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:121
+msgid ""
+"The expression used will appear as the :guilabel:`Sql` value of the target "
+"layer:"
+msgstr "使用的表达式将显示为目标图层的 :guilabel:`Sql` 值："
+
+#: ../../docs/training_manual/online_resources/wfs.rst:126
+msgid ""
+"Click :guilabel:`Add` with the layer selected as above. Only the country "
+"with the ``Countryeng`` value of ``South Africa`` will load from that layer:"
+msgstr ""
+"单击 :guilabel:`添加` 选中的如上所示图层。只有 ``Countryeng`` 值为 ``South Africa`` "
+"的国家才能从该图层加载："
+
+#: ../../docs/training_manual/online_resources/wfs.rst:133
+msgid ""
+"Did you notice the |indicatorFilter| icon next to the "
+"``country_borders_excluding_antarctica`` layer? It indicates that the loaded"
+" layer is filtered and does not display in the project all of its features."
+msgstr ""
+"您注意到 ``country_borders_excluding_antarctica`` 图层旁边的 |indicatorFilter| "
+"图标了吗？它表示加载的图层已过滤，不会在工程中显示其所有要素。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:179
+msgid "indicatorFilter"
+msgstr "indicatorFilter"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:136
+msgid ""
+"You don't have to, but if you tried both methods, you'll notice that this is"
+" a lot faster than loading all the countries before filtering them!"
+msgstr "您不必这么做，但是如果尝试了这两种方法，会注意到这比在过滤所有国家之前加载数据要快得多！"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:140
+msgid "Notes on WFS availability"
+msgstr "关于WFS有效性的说明"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:142
+msgid ""
+"It is rare to find a WFS hosting features you need, if your needs are very "
+"specific. The reason why Web Feature Services are relatively rare is because"
+" of the large amounts of data that must be transmitted to describe a whole "
+"feature. It is therefore not very cost-effective to host a WFS rather than a"
+" WMS, which sends only images."
+msgstr ""
+"如果需求非常具体，那么很难找到您需要的WFS托管要素。Web要素服务相对较少的原因是：为了描述整个要素，必须传输大量数据。因此，相对于WMS仅发送图像而言，托管WFS并不是很划算。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:148
+msgid ""
+"The most common type of WFS you'll encounter will therefore probably be on a"
+" local network or even on your own computer, rather than on the Internet."
+msgstr "所以，您遇到最常见的WFS类型可能是在本地网络，甚至是在您自己的计算机中，而不是在互联网上。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:152
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:154
+msgid ""
+"WFS layers are preferable over WMS layers if you need direct access to the "
+"attributes and geometries of the layers. However, considering the amount of "
+"data that needs to be downloaded (which leads to speed problems and also a "
+"lack of easily available public WFS servers) it's not always possible to use"
+" a WFS instead of a WMS."
+msgstr ""
+"如果需要直接访问图层的属性和几何图形，WFS图层优于WMS图层。然而，考虑到需要下载的数据量 "
+"(这会导致速度问题，也会缺乏易于使用的公共WFS服务器)，并不总是可以使用WFS而不是WMS。"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:161
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:163
+msgid "Next, you'll see how to use QGIS Server to provide OGC services."
+msgstr "接下来，您将看到如何使用QGIS服务器提供OGC服务。"

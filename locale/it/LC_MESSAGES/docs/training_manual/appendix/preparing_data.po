@@ -1,0 +1,600 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:4
+msgid "Preparing Exercise Data"
+msgstr "Preparazione dei dati per le esercitazioni"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:6
+msgid ""
+"This process is intended for course conveners, or more experienced QGIS "
+"users who wish to create localised sample data sets for their course. "
+"Default data sets are provided with the Training Manual, but you may follow "
+"these instructions if you wish to replace the default data sets."
+msgstr ""
+"Questa procedura è destinata agli organizzatori dei corsi o agli utenti più "
+"esperti di QGIS che desiderano creare set di dati campione locali per il "
+"loro corso. I set di dati predefiniti sono forniti con il Manuale di "
+"formazione, ma si possono seguire queste istruzioni se si desidera "
+"sostituire i set di dati predefiniti."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:11
+msgid ""
+"The :ref:`sample data provided <data_downloadlink>` with the Training Manual"
+" refers to the town of |majorUrbanName| and its surroundings. "
+"|majorUrbanName| is located about 2 hours' east of Cape Town in the Western "
+"Cape of South Africa. The dataset contains feature names in both English and"
+" Afrikaans."
+msgstr ""
+"Il :ref:`sample data provided <data_downloadlink>` con il Manuale di "
+"Formazione si riferisce alla città di Swellendam e ai suoi dintorni. "
+"Swellendam si trova a circa 2 ore a est di Cape Town, nel Cape Western del "
+"Sudafrica. Il set di dati contiene nomi di elementi sia in Inglese che in "
+"Afrikaans."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:16
+msgid ""
+"Anyone can use this dataset without difficulty, but you may prefer to use "
+"data from your own country or home town. If you choose to do so, your "
+"localised data will be used in all lessons from Module 3 to Module 7.2. "
+"Later modules use more complex data sources which may or may not be "
+"available for your region."
+msgstr ""
+"Chiunque può usare questo dataset senza difficoltà, ma potresti preferire "
+"usare dati del tuo paese o della tua città. Se tu scegli di fare così, i "
+"tuoi dati georeferenziati verranno usati in tutte le lezioni dal Modulo 3 al"
+" Modulo 7.2. I moduli successivi usano sorgenti di dati più complessi che "
+"potrebbero essere o non essere disponibili per la tua regione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:21
+msgid ""
+"These instructions assume you have a good knowledge of QGIS and are not "
+"intended to be used as teaching material."
+msgstr ""
+"Queste istruzioni presuppongono che tu abbia una buona conoscenza di QGIS e "
+"non sono finalizzate ad essere usate come materiale di insegnamento."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:25
+msgid "|hard| |TY|  Create OSM based vector files"
+msgstr "|hard| |TY|  Creare file vettoriali basati su OSM"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:246
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:27
+msgid ""
+"If you wish to replace the default data set with localised data for your "
+"course, this can easily be done with tools built into QGIS. The region you "
+"choose to use should have a good mix of urban and rural areas, containing "
+"roads of differing significance, area boundaries (such as nature reserves or"
+" farms) and surface water, such as streams and rivers."
+msgstr ""
+"Se desideri sostituire i dati predefiniti con i dati georeferenziati del tuo"
+" corso, questo può essere facilmente fatto con gli strumenti disponibili in "
+"QGIS. La regione che tu scegli di usare dovrebbe avere un buon insieme di "
+"aree rurali ed urbane, contenere strade di livello diverso, aree con confini"
+" (quali riserve naturali o fattorie) e superfici con acqua, quali corsi "
+"d'acqua e fiumi."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:33
+msgid "Open a new QGIS project"
+msgstr "Apri un nuovo progetto QGIS"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:34
+msgid ""
+"Select :menuselection:`Layer --> Data Source Manager` to open the "
+":guilabel:`Data Source Manager` dialog"
+msgstr ""
+"Seleziona :menuselection:`Layer --> Gestore delle Sorgenti Dati` per aprire "
+"la finestra di dialogo :guilabel:`Data Source Manager`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:36
+msgid ""
+"In the :guilabel:`Browser` tab, expand the :guilabel:`XYZ Tiles` drop-down "
+"menu and double-click the :guilabel:`OpenStreetMap` item."
+msgstr ""
+"Nella scheda :guilabel:`Browser`, espandi il menu a discesa :guilabel:`XYZ "
+"Tiles` e fai doppio clic sulla voce :guilabel:`OpenStreetMap`."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:43
+msgid "A map of the world is now visible on the map canvas."
+msgstr ""
+"Una mappa del mondo è ora visibile sull'area di visualizzazione della mappa."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:44
+msgid "Close the :guilabel:`Data Source Manager` dialog"
+msgstr "Chiudi la finestra di dialogo :guilabel:`Data Source Manager`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:45
+msgid "Move to the area you'd like to use as study area"
+msgstr "Spostati nell'area che vorresti usare come area di studio"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:51
+msgid ""
+"Now that we have the area we'll extract the data from, let's enable the "
+"extraction tools."
+msgstr ""
+"Ora che abbiamo l'area da cui estrarre i dati, abilitiamo gli strumenti di "
+"estrazione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:54
+msgid "Go to :menuselection:`Plugins --> Manage/Install Plugins...`"
+msgstr "Vai a :menuselection:`Plugins --> Gestisci ed Installa Plugin...`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:55
+msgid "In the :guilabel:`All` tab, type ``QuickOSM`` in the search box"
+msgstr ""
+"Nella scheda :guilabel:`Tutto`, digita ``QuickOSM`` nella casella di ricerca"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:56
+msgid ""
+"Select the QuickOSM plugin, press :guilabel:`Install Plugin` and then "
+":guilabel:`Close` the dialog."
+msgstr ""
+"Seleziona il plugin QuickOSM, premi :guilabel:`Installa Plugin` e poi "
+":guilabel:`Chidi` la finestra di dialogo."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:62
+msgid ""
+"Execute the new plugin from :menuselection:`Vector --> QuickOSM --> "
+"QuickOSM...` menu"
+msgstr ""
+"Esegui il nuovo plugin dal menu :menuselection:`Vettore --> QuickOSM --> "
+"QuickOSM...`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:64
+msgid ""
+"In the :guilabel:`Quick query` tab, select ``building`` in the "
+":guilabel:`Key` drop-down menu"
+msgstr ""
+"Nella scheda :guilabel:`Richiesta rapida`, seleziona ``building`` nel menu a"
+" discesa :guilabel:`Key`."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:66
+msgid ""
+"Leave the :guilabel:`Value` field empty, meaning that you are querying all "
+"buildings."
+msgstr ""
+"Lascia il campo :guilabel:`Value` vuoto, significa che stai cercando tutti "
+"gli edifici."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:68
+msgid "Select :guilabel:`Canvas Extent` in the next drop-down menu"
+msgstr "Seleziona :guilabel:`Canvas Extent` nel menu a discesa successivo"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:69
+msgid ""
+"Expand the :guilabel:`Advanced` group below and uncheck all geometry types "
+"on the right except :guilabel:`Multipolygons`."
+msgstr ""
+"Espandi il gruppo :guilabel:`Advanced` in basso e deseleziona tutti i tipi "
+"di geometria sulla destra tranne :guilabel:`Multipolygons`."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:71
+msgid "Press :guilabel:`Run query`"
+msgstr "Premi :guilabel:`Run query`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:76
+msgid ""
+"A new ``building`` layer is added to the :guilabel:`Layers` panel, showing "
+"buildings in the selected extent."
+msgstr ""
+"Un nuovo layer ``building`` viene aggiunto al pannello :guilabel:`Layer`, "
+"mostrando gli edifici nell'estensione selezionata."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:78
+msgid "Proceed as above to extract other data:"
+msgstr "Procedi come sopra per estrarre altri dati:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:80
+msgid "``Key = landuse`` and ``Multipolygons`` geometry type."
+msgstr "``Key = landuse`` e tipo geometria ``Multipolygons``."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:81
+msgid ""
+"``Key = boundary``, ``Value = protected_area`` and ``Multipolygons`` "
+"geometry type."
+msgstr ""
+"``Key = boundary``, ``Value = protected_area`` e tipo geometria "
+"``Multipolygons``."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:83
+msgid ""
+"``Key = natural``, ``Value = water`` and ``Multipolygons`` geometry type."
+msgstr ""
+"``Key = natural``, ``Value = water`` e tipo geometria ``Multipolygons``."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:84
+msgid ""
+"``Key = highway`` and check ``Lines`` and ``Multilines`` geometry types."
+msgstr "``Key = highway`` e scelta tipi geometria ``Lines`` e ``Multilines``."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:85
+msgid ""
+"``Key = waterway``, ``Value = river`` and check ``Lines`` and ``Multilines``"
+" geometry types."
+msgstr ""
+"``Key = waterway``, ``Value = river`` e scelta tipi geometria ``Lines`` e "
+"``Multilines``."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:87
+msgid "``Key = place`` and ``Points`` geometry type."
+msgstr "``Key = place`` e tipo geometria ``Points``."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:89
+msgid ""
+"This process adds the layers as temporary files (indicated by the "
+"|indicatorMemory| icon next to their name)."
+msgstr ""
+"Questo processo aggiunge i layer come file temporanei (indicati dall'icona "
+"|indicatorMemory| accanto al loro nome)."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:247
+msgid "indicatorMemory"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:95
+msgid ""
+"You can sample the data your region contains in order to see what kind of "
+"results your region will yield."
+msgstr ""
+"Puoi esaminare i dati che la tua regione contiene per vedere che tipo di "
+"risultati offre la tua regione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:98
+msgid ""
+"We now need to save the resulting data to use during your course. We'll be "
+"using ESRI Shapefile, GeoPackage and SpatiaLite formats depending on the "
+"data."
+msgstr ""
+"Ora abbiamo bisogno di salvare i dati risultanti da utilizzare durante il "
+"corso. Useremo i formati ESRI Shapefile, GeoPackage e SpatiaLite a seconda "
+"dei dati."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:102
+msgid "To convert the :guilabel:`place` temporary layer to another format:"
+msgstr ""
+"Per convertire il layer temporaneo :guilabel:`place` in un altro formato:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:104
+msgid ""
+"Click the |indicatorMemory| icon next to the :guilabel:`place` layer to open"
+" the :guilabel:`Save Scratch Layer` dialog."
+msgstr ""
+"Fai clic sull'icona |indicatorMemory| accanto al layer :guilabel:`place` per"
+" aprire la finestra di dialogo :guilabel:`Salva Layer Temporaneo`."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:107
+msgid ""
+"If you need to change any of the temporary layer's properties (CRS, extent, "
+"fields...), use the :menuselection:`Export --> Save Features as...` "
+"contextual menu instead, and ensure the :guilabel:`Add saved file to map` "
+"option is checked. This adds a new layer."
+msgstr ""
+"Se hai bisogno di cambiare qualsiasi proprietà del layer temporaneo (SR, "
+"estensione, campi...), usa invece il menu contestuale "
+":menuselection:`Esporta --> Salva con Nome...` e assicurati che l'opzione "
+":guilabel:`Aggiungi il file salvato alla mappa` sia selezionata. Questo "
+"aggiunge un nuovo layer."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:112
+msgid "Select the :guilabel:`ESRI Shapefile` format"
+msgstr "Seleziona il formato :guilabel:`ESRI Shapefile`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:113
+msgid ""
+"Use the :guilabel:`...` button to browse to the "
+":file:`exercise_data/shapefile/` folder and save the file as "
+":file:`places.shp`."
+msgstr ""
+"Usa il pulsante :guilabel:`...` per navigare nella cartella "
+":file:`exercise_data/shapefile/` e salva il file come :file:`places.shp`."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:119
+#: ../../docs/training_manual/appendix/preparing_data.rst:150
+#: ../../docs/training_manual/appendix/preparing_data.rst:166
+msgid "Press :guilabel:`OK`"
+msgstr "Premi :guilabel:`OK`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:121
+msgid ""
+"In the :guilabel:`Layers` panel, the temporary :guilabel:`place` layer is "
+"replaced with the saved :guilabel:`places` shapefile layer and the temporary"
+" icon next to it removed."
+msgstr ""
+"Nel pannello :guilabel:`Layer`, il layer temporaneo :guilabel:`place` viene "
+"sostituito con il layer shapefile salvato :guilabel:`places` e l'icona "
+"temporanea accanto ad esso viene rimossa."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:124
+msgid ""
+"Double-click the layer to open its :menuselection:`Layer Properties --> "
+"Source` tab and update the :guilabel:`Layer name` property to match the file"
+" name."
+msgstr ""
+"Fai doppio clic sul layer per aprire la sua scheda :menuselection: "
+"`Proprietà Layer --> Sorgente` e aggiorna la proprietà :guilabel:`Nome "
+"layer` per farla corrispondere al nome del file."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:128
+msgid "Repeat the process for other layers, renaming them as follows:"
+msgstr "Ripeti il processo per gli altri layer, rinominandali come segue:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:130
+msgid "``natural_water`` into ``water``"
+msgstr "``natural_water`` in ``water``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:131
+msgid "``waterway_river`` into ``rivers``"
+msgstr "``waterway_river`` in ``rivers``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:132
+msgid "``boundary_protected_area`` into ``protected_areas``"
+msgstr "``boundary_protected_area`` in ``protected_areas``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:134
+msgid ""
+"Each resulting data set should be saved in the "
+":file:`exercise_data/shapefile/` directory."
+msgstr ""
+"Tutti i data set risultati devono essere salvati nella cartella  "
+":file:`exercise_data/shapefile/`."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:137
+msgid ""
+"The next step is to create a GeoPackage file from the :guilabel:`building` "
+"layer to use during the course:"
+msgstr ""
+" Il prossimo passo è creare un file GeoPackage dal layer "
+":guilabel:`building` da usare durante il corso:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:140
+msgid ""
+"Click the |indicatorMemory| icon next to the :guilabel:`building` layer"
+msgstr ""
+"Clicca sull'icona |indicatorMemory| accanto al layer :guilabel:`building`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:141
+msgid "Select the :guilabel:`GeoPackage` format"
+msgstr "Seleziona il formato :guilabel:`GeoPackage` "
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:142
+msgid ""
+"Save the file as :file:`training_data.gpkg` under the :file:`exercise_data/`"
+" folder"
+msgstr ""
+"Salva il file come :file:`training_data.gpkg` nella cartella "
+":file:`exercise_data/`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:144
+msgid ""
+"By default, the :guilabel:`Layer name` is filled as the file name. Replace "
+"it with ``buildings``."
+msgstr ""
+"Per impostazione predefinita, il :guilabel:`Layer name` è  riempito con il "
+"nome del file.  Sostituiscilo con ``buildings``."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:151
+msgid "Rename the layer in its properties dialog"
+msgstr "Rinomina il layer nella sua finestra di dialogo Proprietà "
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:152
+msgid ""
+"Repeat the process with the :guilabel:`highway` layer, saving it as "
+"``roads`` in the same GeoPackage database."
+msgstr ""
+"Ripeti il processo con il layer :guilabel:`highway`, salvandolo come "
+"``roads`` nello stesso database GeoPackage."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:155
+msgid ""
+"The last step is to save the remaining temporary file as a SpatiaLite file."
+msgstr ""
+"L'ultimo punto è salvare il file temporaneo ancora rimasto come file "
+"SpatiaLite."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:157
+msgid "Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer"
+msgstr ""
+"Fai clic sull'icona |indicatorMemory| vicina al layer :guilabel:`landuse` "
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:158
+msgid "Select the :guilabel:`SpatiaLite` format"
+msgstr "Seleziona il formato :guilabel:`SpatiaLite` "
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:159
+msgid ""
+"Save the file as :file:`landuse.sqlite` under the :file:`exercise_data/` "
+"folder. By default, the :guilabel:`Layer name` is filled as the file name. "
+"Do not change it."
+msgstr ""
+"Salva il file come :file:`landuse.sqlite` nella cartella  "
+":file:`exercise_data/`. Per opzione predefinita, il :guilabel:`Layer name` "
+"viene definito com il nome del file . Non cambiarlo."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:168
+msgid ""
+"You should now have a map which looks something like this (the symbology "
+"will certainly be very different, because QGIS randomly assigns colors when "
+"layers are added to the map):"
+msgstr ""
+"Ora dovresti avere una mappa che assomiglia a questa (la simbologia sarà "
+"certamente molto diversa, perché QGIS assegna casualmente i colori quando i "
+"layer vengono aggiunti alla mappa):"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:175
+msgid ""
+"The important thing is that you have 7 vector layers matching those shown "
+"above and that all those layers have some data."
+msgstr ""
+"L'importante è che tu abbia 7 layer vettoriali corrispondenti a quelli "
+"mostrati sopra e che tutti questi layer abbiano dei dati."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:179
+msgid "|hard| |TY| Create SRTM DEM tiff files"
+msgstr "|hard| |TY| Creare file tiff SRTM DEM"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:181
+msgid ""
+"For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also "
+"need raster images (SRTM DEM) which cover the region you have selected for "
+"your course."
+msgstr ""
+"Il programma successivo Per i moduli :ref:`tm_create_vector_data` e "
+":ref:`tm_rasters`, avrai anche bisogno di immagini raster (SRTM DEM) che "
+"coprano la regione che hai selezionato per il tuo corso."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:185
+msgid ""
+"The `CGIAR-CGI <https://srtm.csi.cgiar.org/>`_ provides some SRTM DEM you "
+"can download from https://srtm.csi.cgiar.org/srtmdata/."
+msgstr ""
+"Il `CGIAR-CGI <https://srtm.csi.cgiar.org/>`_ fornisce alcuni DEM SRTM che "
+"puoi scaricare da https://srtm.csi.cgiar.org/srtmdata/."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:188
+msgid ""
+"You'll need images which cover the entire region you have chosen to use. To "
+"find the extent coordinates, in QGIS , |zoomToLayer| zoom to the extent of "
+"the largest layer and pick the values in the |extents| :guilabel:`Extents` "
+"box of the status bar. Keep the :file:`GeoTiff` format. Once the form is "
+"filled, click on the :guilabel:`Click here to Begin Search >>` button and "
+"download the file(s)."
+msgstr ""
+"Avrai bisogno di immagini che coprano l'intera regione che hai scelto di "
+"utilizzare. Per trovare le coordinate di estensione, in QGIS , |zoomToLayer|"
+" zooma sull'estensione del layer più grande e prendi i valori nella casella "
+"|extents| :guilabel:`Estensione` della barra di stato. Mantieni il formato "
+":file:`GeoTiff`. Una volta compilato il modulo, clicca sul pulsante "
+":guilabel:`Clicca qui per iniziare la ricerca >>` e scarica il file(i)."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:250
+msgid "zoomToLayer"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:244
+msgid "extents"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:195
+msgid ""
+"Once you have downloaded the required file(s), they should be saved in the "
+":file:`exercise_data` directory, under :file:`raster/SRTM` subfolders."
+msgstr ""
+"Una volta che hai scaricato il file (i files) richiesto, dovranno essere "
+"salvati nella cartella :file:`exercise_data`, all'interno delle "
+"sottocartelle :file:`raster/SRTM`."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:199
+msgid "|hard| |TY| Create imagery tiff files"
+msgstr "|hard| |TY| Creare file di immagini tiff"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:202
+msgid ""
+"In Module :ref:`tm_create_vector_data`, :ref:`tm_datasources` lesson shows "
+"close-up images of three school sports fields which students are asked to "
+"digitize. You'll therefore need to reproduce these images using your new "
+"SRTM DEM tiff file(s). There is no obligation to use school sports fields: "
+"any three school land-use types can be used (e.g. different school "
+"buildings, playgrounds or car parks)."
+msgstr ""
+"Nel modulo :ref:`tm_create_vector_data`, la lezione :ref:`tm_datasources` "
+"mostra immagini ravvicinate di tre campi sportivi scolastici che gli "
+"studenti devono digitalizzare. Avrai quindi bisogno di riprodurre queste "
+"immagini usando il tuo nuovo file(i) tiff SRTM DEM. Non c'è l'obbligo di "
+"usare i campi sportivi scolastici: qualsiasi tipo di uso del suolo "
+"scolastico può essere usato (per esempio diversi edifici scolastici, campi "
+"da gioco o parcheggi)."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:209
+msgid "For reference, the image in the example data is:"
+msgstr "Per riferimento, l'immagine nei dati di esempio è:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:216
+msgid "|basic| |TY| Replace tokens"
+msgstr "|basic| |TY| Sostituire i token"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:243
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:218
+msgid ""
+"Having created your localized dataset, the final step is to replace the "
+"tokens in the :file:`substitutions.txt` file so that the appropriate names "
+"will appear in your localized version of the Training Manual."
+msgstr ""
+"Dopo aver creato il set di dati in italiano, il passo finale consiste nel "
+"sostituire i token nel file :file:`substitutions.txt` in modo che i nomi "
+"appropriati appaiano nella versione tradotta del Manuale di formazione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:222
+msgid "The tokens you need to replace are as follows:"
+msgstr "I token che devi sostituire sono i seguenti:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:224
+msgid ""
+"``majorUrbanName``: this defaults to \"Swellendam\". Replace with the name "
+"of the major town in your region."
+msgstr ""
+"``majorUrbanName``: il valore predefinito è \"Swellendam\". Sostituiscilo "
+"con il nome della città principale della tua regione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:226
+msgid ""
+"``schoolAreaType1``: this defaults to \"athletics field\". Replace with the "
+"name of the largest school area type in your region."
+msgstr ""
+"``schoolAreaType1``: questo è di default \"campo di atletica\". "
+"Sostituiscilo con il nome del tipo di area scolastica più grande della tua "
+"regione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:228
+msgid ""
+"``largeLandUseArea``: this defaults to \"Bontebok National Park\". Replace "
+"with the name of a large landuse polygon in your region."
+msgstr ""
+"``largeLandUseArea``: il valore predefinito è \"Bontebok National Park\". "
+"Sostituiscilo con il nome di un grande poligono uso del suolo nella tua "
+"regione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:230
+msgid ""
+"``srtmFileName``: this defaults to :file:`srtm_41_19.tif`. Replace this with"
+" the filename of your SRTM DEM file."
+msgstr ""
+"``srtmFileName``: questo è di default :file:`srtm_41_19.tif`. Sostituiscilo "
+"con il nome del tuo file SRTM DEM."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:232
+msgid ""
+"``localCRS``: this defaults to ``WGS 84 / UTM 34S``. You should replace this"
+" with the correct CRS for your region."
+msgstr ""
+"``localCRS``: questo è predefinito in ``WGS 84 / UTM 34S``. Dovresti "
+"sostituirlo con il SR corretto per la tua regione."

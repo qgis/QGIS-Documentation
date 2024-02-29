@@ -1,0 +1,351 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/developers_guide/processingtesting.rst:5
+msgid "Processing Algorithms Testing"
+msgstr "Test degli Algoritmi di Processing"
+
+#: ../../docs/developers_guide/processingtesting.rst:11
+msgid "Algorithm tests"
+msgstr "Test degli algoritmi"
+
+#: ../../docs/developers_guide/processingtesting.rst:13
+msgid ""
+"The original version of these instructions is available at "
+":source:`python/plugins/processing/tests/README.md`"
+msgstr ""
+"La versione originale di queste istruzioni é disponibile presso "
+":source:`python/plugins/processing/tests/README.md`"
+
+#: ../../docs/developers_guide/processingtesting.rst:16
+msgid ""
+"QGIS provides several algorithms under the Processing framework. You can "
+"extend this list with algorithms of your own and, like any new feature, "
+"adding tests is required."
+msgstr ""
+"QGIS fornisce numerosi algoritmi nel Processing framework. È possibile "
+"estendere questo elenco con algoritmi propri e, come ogni nuova "
+"funzionalità, è richiesta l'aggiunta di test."
+
+#: ../../docs/developers_guide/processingtesting.rst:20
+msgid ""
+"To test algorithms you can add entries into "
+":file:`testdata/qgis_algorithm_tests.yaml` or "
+":file:`testdata/gdal_algorithm_tests.yaml` as appropriate."
+msgstr ""
+"Per testare gli algoritmi è possibile aggiungere voci in "
+":file:`testdata/qgis_algorithm_tests.yaml` oppure "
+":file:testdata/gdal_algorithm_tests.yaml` come piú opportuno."
+
+#: ../../docs/developers_guide/processingtesting.rst:23
+msgid "This file is structured with `yaml syntax <https://yaml.org/>`_."
+msgstr "Questo file è realizzato con la sintassi `yaml <https://yaml.org/>`_."
+
+#: ../../docs/developers_guide/processingtesting.rst:25
+msgid ""
+"A basic test appears under the top level key ``tests`` and looks like this:"
+msgstr ""
+"Un test di base appare sotto la voce chiave primaria ``tests`` e si presenta"
+" come segue:"
+
+#: ../../docs/developers_guide/processingtesting.rst:42
+msgid "How To"
+msgstr "Come fare"
+
+#: ../../docs/developers_guide/processingtesting.rst:44
+msgid "To add a new test please follow these steps:"
+msgstr "Per aggiungere un nuovo test, segui questi passi:"
+
+#: ../../docs/developers_guide/processingtesting.rst:46
+msgid ""
+"Run the :ref:`algorithm <processing_algs>` you want to test in QGIS from the"
+" :ref:`processing toolbox <processing.toolbox>`. If the result is a vector "
+"layer prefer GML, with its XSD, as output for its support of mixed geometry "
+"types and good readability. Redirect output to "
+":file:`python/plugins/processing/tests/testdata/expected`. For input layers "
+"prefer to use what's already there in the folder :file:`testdata`. If you "
+"need extra data, put it into :file:`testdata/custom`."
+msgstr ""
+"Esegui il :ref:`algoritmo <processing_algs>` che vuoi testare in QGIS dal "
+":ref:`processing toolbox <processing.toolbox>`. Se il risultato è un layer "
+"vettoriale preferisci GML, con il suo XSD, come output per il suo supporto "
+"di tipi di geometria misti e buona leggibilità. Reindirizza l'output a "
+":file:`python/plugins/processing/tests/testdata/expected`. Per i layer di "
+"input preferisci usare ciò che è già presente nella cartella "
+":file:`testdata`. Se hai bisogno di dati extra, mettili in "
+":file:`testdata/custom`."
+
+#: ../../docs/developers_guide/processingtesting.rst:53
+msgid ""
+"When you have run the algorithm, go to :menuselection:`Processing --> "
+"History` and find the algorithm which you have just run."
+msgstr ""
+"Quando hai eseguito l'algoritmo, vai a :menuselection:`Processing --> "
+"History` e trova l'algoritmo che hai appena eseguito."
+
+#: ../../docs/developers_guide/processingtesting.rst:55
+msgid ""
+"Right click the algorithm and click :guilabel:`Create Test`. A new window "
+"will open with a text definition."
+msgstr ""
+"Clicca con il tasto destro sull'algoritmo e clicca su :guilabel:`Create "
+"Test`. Si aprirà una nuova finestra con una definizione testuale."
+
+#: ../../docs/developers_guide/processingtesting.rst:57
+msgid ""
+"Open the file "
+":file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml`, copy "
+"the text definition there."
+msgstr ""
+"Apri il file "
+":file:`python/plugins/processing/test/testdata/algorithm_tests.yaml`, copia "
+"lì la definizione del testo."
+
+#: ../../docs/developers_guide/processingtesting.rst:60
+msgid ""
+"The first string from the command goes to the key ``algorithm``, the "
+"subsequent ones to ``params`` and the last one(s) to ``results``."
+msgstr ""
+"La prima stringa del comando va alla chiave ``algoritmo``, le successive a "
+"``params`` e le ultime a ``results``."
+
+#: ../../docs/developers_guide/processingtesting.rst:63
+msgid "The above translates to"
+msgstr "Quanto sopra si traduce in"
+
+#: ../../docs/developers_guide/processingtesting.rst:79
+msgid ""
+"It is also possible to create tests for Processing scripts. Scripts should "
+"be placed in the :file:`scripts` subdirectory in the test data directory "
+":file:`python/plugins/processing/tests/testdata/`. The script file name "
+"should match the script algorithm name."
+msgstr ""
+"È anche possibile creare dei test per gli script di Processing. Gli script "
+"dovrebbero essere collocati nella sottocartella :file:`scripts` all'interno "
+"della cartella dei dati di test "
+":file:python/plugins/processing/tests/testdata/`. Il nome del file di script"
+" deve corrispondere al nome dell'algoritmo di script."
+
+#: ../../docs/developers_guide/processingtesting.rst:85
+msgid "Parameters and results"
+msgstr "Parametri e risultati"
+
+#: ../../docs/developers_guide/processingtesting.rst:88
+msgid "Trivial type parameters"
+msgstr "Parametri di tipo semplice"
+
+#: ../../docs/developers_guide/processingtesting.rst:90
+msgid "Parameters and results are specified as lists or dictionaries:"
+msgstr "I parametri e i risultati sono specificati come liste o cartelle:"
+
+#: ../../docs/developers_guide/processingtesting.rst:99
+msgid "or"
+msgstr "o"
+
+#: ../../docs/developers_guide/processingtesting.rst:109
+msgid "Layer type parameters"
+msgstr "Parametri tipo layer"
+
+#: ../../docs/developers_guide/processingtesting.rst:111
+msgid ""
+"You will often need to specify layers as parameters. To specify a layer you "
+"will need to specify:"
+msgstr ""
+"Avrai spesso bisogno di specificare i layer nei parametri. Per specificare "
+"un layer dovrai specificare:"
+
+#: ../../docs/developers_guide/processingtesting.rst:114
+msgid "the type, ie ``vector`` or ``raster``"
+msgstr "il tipo, ad esempio `vettore`` o ``raster``"
+
+#: ../../docs/developers_guide/processingtesting.rst:115
+msgid "a name, with a relative path like :file:`expected/polys_centroid.gml`"
+msgstr ""
+"un nome, con un percorso relativo come :file:`expected/polys_centroid.gml`."
+
+#: ../../docs/developers_guide/processingtesting.rst:117
+msgid "This is what it looks like in action:"
+msgstr "Ecco come appare in pratica:"
+
+#: ../../docs/developers_guide/processingtesting.rst:131
+msgid "File type parameters"
+msgstr "Parametri per il tipo di file"
+
+#: ../../docs/developers_guide/processingtesting.rst:133
+msgid ""
+"If you need an external file for the algorithm test, you need to specify the"
+" 'file' type and the (relative) path to the file in its 'name':"
+msgstr ""
+"Se hai bisogno di un file esterno per il test dell'algoritmo, devi "
+"specificare il tipo di 'file' e il percorso (relativo) del file col suo "
+"'nome':"
+
+#: ../../docs/developers_guide/processingtesting.rst:148
+msgid "Results"
+msgstr "Risultati"
+
+#: ../../docs/developers_guide/processingtesting.rst:150
+msgid "Results are specified very similarly."
+msgstr "I risultati vanno specificati in modo molto simile."
+
+#: ../../docs/developers_guide/processingtesting.rst:153
+msgid "Basic vector files"
+msgstr "Base per file vettoriali"
+
+#: ../../docs/developers_guide/processingtesting.rst:155
+msgid "It couldn't be more trivial"
+msgstr "Non potrebbe essere più banale"
+
+#: ../../docs/developers_guide/processingtesting.rst:164
+msgid "Add the expected GML and XSD files in the folder."
+msgstr "Aggiunge i file GML e XSD previsti nella cartella."
+
+#: ../../docs/developers_guide/processingtesting.rst:167
+msgid "Vector with tolerance"
+msgstr "Vettore con tolleranza"
+
+#: ../../docs/developers_guide/processingtesting.rst:169
+msgid ""
+"Sometimes different platforms create slightly different results which are "
+"still acceptable. In this case (but only then) you may also use additional "
+"properties to define how a layer is compared."
+msgstr ""
+"A volte piattaforme diverse creano risultati leggermente diversi che sono "
+"ancora accettabili. In questo caso (ma solo in questo caso) puoi anche usare"
+" proprietà aggiuntive per definire come un layer viene valutato."
+
+#: ../../docs/developers_guide/processingtesting.rst:173
+msgid ""
+"To deal with a certain tolerance for output values you can specify a "
+"``compare`` property for an output. The compare property can contain sub-"
+"properties for ``fields``. This contains information about how precisely a "
+"certain field is compared (``precision``) or a field can even entirely be "
+"``skip``ed. There is a special field name ``__all__`` which will apply a "
+"certain tolerance to all fields. There is another property ``geometry`` "
+"which also accepts a ``precision`` which is applied to each vertex."
+msgstr ""
+"Per gestire con una determinata tolleranza i valori dell'output puoi "
+"specificare una proprietà ``compare`` per un output. La proprietà compare "
+"può contenere sotto-proprietà per i ``campi``. Questo contiene informazioni "
+"su quanto precisamente un certo campo è confrontato (``precision``) o un "
+"campo può anche essere completamente ``skip``. C'è un nome di campo speciale"
+" ``__all__`` che applicherà una certa tolleranza a tutti i campi. C'è "
+"un'altra proprietà ``geometry`` che accetta anche una ``precision`` che "
+"viene applicata ad ogni vertice."
+
+#: ../../docs/developers_guide/processingtesting.rst:196
+msgid "Raster files"
+msgstr "File raster"
+
+#: ../../docs/developers_guide/processingtesting.rst:198
+msgid ""
+"Raster files are compared with a hash checksum. This is calculated when you "
+"create a test from the processing history."
+msgstr ""
+"I file raster vengono testati con un checksum hash. Questo viene calcolato "
+"quando si crea un test dal processing history."
+
+#: ../../docs/developers_guide/processingtesting.rst:208
+msgid "Files"
+msgstr "File"
+
+#: ../../docs/developers_guide/processingtesting.rst:210
+msgid ""
+"You can compare the content of an output file to an expected result "
+"reference file"
+msgstr ""
+"Puoi confrontare il contenuto di un file di output con un file di "
+"riferimento dei risultati attesi"
+
+#: ../../docs/developers_guide/processingtesting.rst:219
+msgid ""
+"Or you can use one or more regular expressions that will be `matched "
+"<https://docs.python.org/3/library/re.html#re.search>`_ against the file "
+"content"
+msgstr ""
+"Oppure puoi usare una o più espressioni regolari che saranno abbinate "
+"`<https://docs.python.org/3/library/re.html#re.search>`_ al contenuto del "
+"file"
+
+#: ../../docs/developers_guide/processingtesting.rst:233
+msgid "Directories"
+msgstr "Cartelle"
+
+#: ../../docs/developers_guide/processingtesting.rst:235
+msgid ""
+"You can compare the content of an output directory with an expected result "
+"reference directory"
+msgstr ""
+"Puoi confrontare il contenuto di una cartella di output con una cartella di "
+"riferimento dei risultati attesi"
+
+#: ../../docs/developers_guide/processingtesting.rst:245
+msgid "Algorithm Context"
+msgstr "Contesto dell'algoritmo"
+
+#: ../../docs/developers_guide/processingtesting.rst:247
+msgid ""
+"There are a few more definitions that can modify the context of the "
+"algorithm - these can be specified at the top level of test:"
+msgstr ""
+"Ci sono alcune altre definizioni che possono modificare il contesto "
+"dell'algoritmo - queste possono essere specificate al livello superiore del "
+"test:"
+
+#: ../../docs/developers_guide/processingtesting.rst:250
+msgid ""
+"``project`` - will load a specified QGIS project file before running the "
+"algorithm. If not specified, the algorithm will run with an empty project"
+msgstr ""
+"``project`` - caricherà un file di progetto QGIS specificato prima di "
+"eseguire l'algoritmo. Se non specificato, l'algoritmo verrà eseguito in un "
+"progetto vuoto"
+
+#: ../../docs/developers_guide/processingtesting.rst:252
+msgid ""
+"``project_crs`` - overrides the default project CRS - e.g. ``EPSG:27700``"
+msgstr ""
+"``project_crs`` - sovrascrive il SR di default del progetto - ad esempio "
+"``EPSG:27700``."
+
+#: ../../docs/developers_guide/processingtesting.rst:253
+msgid ""
+"``ellipsoid`` - overrides the default project ellipsoid used for "
+"measurements, e.g. ``GRS80``"
+msgstr ""
+"``ellipsoid`` - sovrascrive l'ellissoide di default del progetto usato per "
+"le misure, ad esempio ``GRS80``."
+
+#: ../../docs/developers_guide/processingtesting.rst:258
+msgid "Running tests locally"
+msgstr "Esecuzione dei test in locale"
+
+#: ../../docs/developers_guide/processingtesting.rst:264
+msgid ""
+"or one of the following values listed in the :source:`CMakelists.txt "
+"<python/plugins/processing/tests/CMakeLists.txt>`"
+msgstr ""
+"o uno dei seguenti valori elencati nel file :source:`CMakelists.txt "
+"<python/plugins/processing/tests/CMakeLists.txt>`"

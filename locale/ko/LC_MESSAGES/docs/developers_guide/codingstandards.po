@@ -1,0 +1,368 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/developers_guide/codingstandards.rst:5
+msgid "QGIS Coding Standards"
+msgstr "QGIS 코드 작업 표준"
+
+#: ../../docs/developers_guide/codingstandards.rst:10
+msgid "These standards should be followed by all QGIS developers."
+msgstr "모든 QGIS 개발자는 이 표준을 준수해야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:13
+msgid "Classes"
+msgstr "클래스"
+
+#: ../../docs/developers_guide/codingstandards.rst:17
+#: ../../docs/developers_guide/codingstandards.rst:213
+msgid "Names"
+msgstr "이름"
+
+#: ../../docs/developers_guide/codingstandards.rst:19
+msgid "Class in QGIS begin with Qgs and are formed using camel case."
+msgstr "QGIS 안의 클래스는 Qgs 로 시작하며 낙타 대문자 형식입니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:21
+#: ../../docs/developers_guide/codingstandards.rst:192
+#: ../../docs/developers_guide/codingstandards.rst:265
+msgid "Examples:"
+msgstr "예시:"
+
+#: ../../docs/developers_guide/codingstandards.rst:23
+msgid "``QgsPoint``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:24
+msgid "``QgsMapCanvas``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:25
+msgid "``QgsRasterLayer``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:29
+msgid "Members"
+msgstr "멤버"
+
+#: ../../docs/developers_guide/codingstandards.rst:32
+msgid ""
+"Class member names begin with a lower case m and are formed using mixed "
+"case."
+msgstr "클래스 멤버 이름은 소문자 ``m`` 으로 시작하며 대소문자를 혼합해서 형성됩니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:35
+msgid "``mMapCanvas``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:36
+msgid "``mCurrentExtent``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:38
+msgid ""
+"All class members should be private. Public class members are STRONGLY "
+"discouraged. Protected members should be avoided when the member may need to"
+" be accessed from Python subclasses, since protected members cannot be used "
+"from the Python bindings."
+msgstr ""
+"모든 클래스 멤버는 프라이빗(private)이어야 합니다. 퍼블릭(public) 클래스 멤버는 절대 권장하지 않습니다. 파이썬 하위 "
+"클래스가 접근해야 할 수도 있는 멤버인 경우 프로텍티드(protected) 멤버로 지정하지 말아야 합니다. 파이썬 바인딩이 프로텍티드 "
+"멤버를 사용할 수 없기 때문입니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:43
+msgid ""
+"Mutable static class member names should begin with a lower case ``s``, but "
+"constant static class member names should be all caps:"
+msgstr ""
+"뮤터블(mutable) 정적 클래스 멤버 이름은 소문자 ``s`` 로 시작해야 하지만, 콘스턴트(constant) 정적 클래스 멤버 "
+"이름은 모두 대문자여야 합니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:46
+msgid "``sRefCounter``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:47
+msgid "``DEFAULT_QUEUE_SIZE``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:51
+msgid "Accessor Functions"
+msgstr "접근자 함수"
+
+#: ../../docs/developers_guide/codingstandards.rst:54
+msgid ""
+"Class member values should be obtained through accesssor functions. The "
+"function should be named without a get prefix. Accessor functions for the "
+"two private members above would be:"
+msgstr ""
+"접근자(accesssor) 함수를 통해 클래스 멤버 값을 얻어야 합니다. 이 함수의 이름에는 접두어 ``get`` 이 없어야 합니다. "
+"앞에 예를 든 프라이빗 멤버 2개에 대한 접근자 함수는 다음과 같을 것입니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:58
+msgid "``mapCanvas()``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:59
+msgid "``currentExtent()``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:61
+msgid ""
+"Ensure that accessors are correctly marked with ``const``. Where "
+"appropriate, this may require that cached value type member variables are "
+"marked with ``mutable``."
+msgstr ""
+"접근자가 ``const`` 로 정확히 표시되도록 신경을 쓰십시오. 그렇게 하는 것이 적절한 경우, 캐시된 값 유형인 멤버 변수를 "
+"``mutable`` 로 표시해야 할 수도 있습니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:66
+msgid "Functions"
+msgstr "함수"
+
+#: ../../docs/developers_guide/codingstandards.rst:69
+msgid ""
+"Function names begin with a lowercase letter and are formed using mixed "
+"case. The function name should convey something about the purpose of the "
+"function."
+msgstr "함수 이름은 소문자로 시작해서 대소문자를 혼합해 형성됩니다. 함수 이름은 해당 함수의 목적을 반영해야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:72
+msgid "``updateMapExtent()``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:73
+msgid "``setUserOptions()``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:75
+msgid ""
+"For consistency with the existing QGIS API and with the Qt API, "
+"abbreviations should be avoided. E.g. ``setDestinationSize`` instead of "
+"``setDestSize``, ``setMaximumValue`` instead of ``setMaxVal``."
+msgstr ""
+"기존 QGIS API 및 Qt API와 일관성을 지키기 위해, 단어를 축약해서는 안 됩니다. 예를 들어 ``setDestSize`` 가 "
+"아니라 ``setDestinationSize`` 를, ``setMaxVal`` 이 아니라 ``setMaximumValue`` 를 이름으로"
+" 써야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:79
+msgid ""
+"Acronyms should also be camel cased for consistency. E.g. ``setXml`` instead"
+" of ``setXML``."
+msgstr ""
+"일관성을 위해 두문자어(acronym)도 낙타 대문자 형식을 따라야 합니다. 예를 들면 ``setXML`` 이 아니라 ``setXml``"
+" 을 써야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:84
+msgid "Function Arguments"
+msgstr "함수 인자"
+
+#: ../../docs/developers_guide/codingstandards.rst:87
+msgid ""
+"Function arguments should use descriptive names. Do not use single letter "
+"arguments (e.g. ``setColor( const QColor& color )`` instead of ``setColor( "
+"const QColor& c )``)."
+msgstr ""
+"함수 인자(argument)는 해당 인자를 설명하는 이름이어야 합니다. 문자 하나짜리 인자를 쓰지 마십시오. (예를 들어 "
+"``setColor( const QColor& c )`` 가 아니라 ``setColor( const QColor& color )`` 를 "
+"써야 합니다.)"
+
+#: ../../docs/developers_guide/codingstandards.rst:91
+msgid ""
+"Pay careful attention to when arguments should be passed by reference. "
+"Unless argument objects are small and trivially copied (such as QPoint "
+"objects), they should be passed by const reference. For consistency with the"
+" Qt API, even implicitly shared objects are passed by const reference (e.g. "
+"``setTitle( const QString& title )`` instead of ``setTitle( QString title "
+")``."
+msgstr ""
+"참조를 통해 인자를 전달해야 하는 경우 특히 신경을 써야 합니다. 인자 객체가 (QPoint 객체처럼) 소용량이고 평범하게 복사되는 "
+"경우가 아니라면, 콘스턴트 참조로 전달해야 합니다. Qt API와 일관성을 지키기 위해, 내재적으로 공유된 객체일지라도 콘스턴트 참조로 "
+"전달됩니다. (예를 들어 ``setTitle( QString title )`` 이 아니라 ``setTitle( const QString&"
+" title )`` 을 써야 합니다.)"
+
+#: ../../docs/developers_guide/codingstandards.rst:100
+msgid "Function Return Values"
+msgstr "함수 반환값"
+
+#: ../../docs/developers_guide/codingstandards.rst:102
+msgid ""
+"Return small and trivially copied objects as values. Larger objects should "
+"be returned by const reference. The one exception to this is implicitly "
+"shared objects, which are always returned by value. Return ``QObject`` or "
+"subclassed objects as pointers."
+msgstr ""
+"소용량이고 평범하게 복사된 객체를 값으로 반환합니다. 대용량 객체는 콘스턴트 참조로 반환되어야 합니다. 이 규칙의 단 한 가지 예외는 "
+"내재적으로 공유된 객체로, 언제나 값으로 반환됩니다. ``QObject`` 또는 하위 클래스 객체는 포인터로 반환합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:107
+msgid "``int maximumValue() const``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:108
+msgid "``const LayerSet& layers() const``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:109
+msgid "``QString title() const`` (``QString`` is implicitly shared)"
+msgstr "``QString title() const`` (``QString`` 은 내재적으로 공유되었습니다)"
+
+#: ../../docs/developers_guide/codingstandards.rst:110
+msgid ""
+"``QList< QgsMapLayer* > layers() const`` (``QList`` is implicitly shared)"
+msgstr "``QList< QgsMapLayer* > layers() const`` (``QList`` 는 내재적으로 공유되었습니다)"
+
+#: ../../docs/developers_guide/codingstandards.rst:111
+msgid ""
+"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` inherits ``QObject``)"
+msgstr ""
+"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` 는 ``QObject`` 를 "
+"상속합니다)"
+
+#: ../../docs/developers_guide/codingstandards.rst:112
+msgid ""
+"``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` is "
+"abstract and will probably need to be casted)"
+msgstr ""
+"``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` 는 축약된 "
+"이름이기 때문에 이름을 바꿔야 할 겁니다)"
+
+#: ../../docs/developers_guide/codingstandards.rst:117
+msgid "API Documentation"
+msgstr "API 문서"
+
+#: ../../docs/developers_guide/codingstandards.rst:119
+msgid ""
+"It is required to write API documentation for every class, method, enum and "
+"other code that is available in the public API."
+msgstr ""
+"퍼블릭 API에서 사용할 수 있는 모든 클래스, 메소드, 목록(enum), 기타 코드에 대해 API 문서를 작성해야만 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:129
+msgid "Methods"
+msgstr "메소드"
+
+#: ../../docs/developers_guide/codingstandards.rst:131
+msgid ""
+"Method descriptions should be written in a descriptive form, using the 3rd "
+"person. Methods require a ``\\since`` tag that defines when they have been "
+"introduced. You should add additional ``\\since`` tags for important changes"
+" that were introduced later on."
+msgstr ""
+"메소드에 대한 설명은 3인칭을 사용하는 서술 형식으로 작성되어야 합니다. 메소드를 소개하는 경우 메소드를 정의하는 ``\\since`` "
+"태그를 사용해야 합니다. 향후 도입되는 중요한 변경 사항에 대해서도 또다른 ``\\since`` 태그를 추가해야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:152
+msgid "Members Variables"
+msgstr "멤버 변수"
+
+#: ../../docs/developers_guide/codingstandards.rst:194
+msgid "``QgsPluginManagerBase``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:195
+msgid "``QgsUserOptionsBase``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:210
+msgid "C++ Files"
+msgstr "C++ 파일"
+
+#: ../../docs/developers_guide/codingstandards.rst:267
+msgid "``mapCanvas``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:268
+msgid "``currentExtent``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:327
+msgid "Editing"
+msgstr "편집 작업"
+
+#: ../../docs/developers_guide/codingstandards.rst:341
+msgid "Indentation"
+msgstr "들여쓰"
+
+#: ../../docs/developers_guide/codingstandards.rst:435
+msgid "``SIP_FACTORY``: ``/Factory/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:436
+msgid "``SIP_OUT``: ``/Out/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:437
+msgid "``SIP_INOUT``: ``/In,Out/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:438
+msgid "``SIP_TRANSFER``: ``/Transfer/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:440
+msgid "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:441
+msgid "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:442
+msgid "``SIP_TRANSFERBACK``: ``/TransferBack/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:489
+msgid "Settings"
+msgstr "설정"
+
+#: ../../docs/developers_guide/codingstandards.rst:503
+msgid "Coding Style"
+msgstr "코딩 스타일"
+
+#: ../../docs/developers_guide/codingstandards.rst:529
+msgid "``0 == value`` instead of ``value == 0``"
+msgstr "``value == 0`` 대신 ``0 == value`` "
+
+#: ../../docs/developers_guide/codingstandards.rst:542
+msgid "Which is easier to read, this:"
+msgstr "읽기 쉬운 것:"
+
+#: ../../docs/developers_guide/codingstandards.rst:566
+msgid "Consider:"
+msgstr "고려할 것:"
+
+#: ../../docs/developers_guide/codingstandards.rst:605
+msgid "Book recommendations"
+msgstr "권장 도서"
+
+#: ../../docs/developers_guide/codingstandards.rst:633
+msgid ":source:`doc/CONTRIBUTORS`"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:634
+msgid ":source:`doc/AUTHORS`"
+msgstr ""

@@ -1,0 +1,1112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# DiGro, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 17:53+0000\n"
+"Last-Translator: DiGro, 2023\n"
+"Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:2
+msgid "|LS| Digitizing Forest Stands"
+msgstr "|LS| Bosopstanden digitaliseren"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:4
+msgid ""
+"Unless you are going to use your georeferenced map as a simple background "
+"image, the next natural step is to digitize elements from it. You have "
+"already done so in the exercises about creating vector data in "
+":doc:`../create_vector_data/create_new_vector`, when you digitized the "
+"school fields. In this lesson, you are going to digitize the forest stands' "
+"borders that appear in the map as green lines but instead of doing it using "
+"an aerial image, you will use your georeferenced map."
+msgstr ""
+"Tenzij u uw kaart met geoverwijzingen gaat gebruiken als een eenvoudige "
+"afbeelding voor de achtergrond, is de volgende logische stap om de elementen"
+" erin te digitaliseren. U heeft dat al gedaan in de oefeningen over het "
+"maken van vectorgegevens in :doc:`../create_vector_data/create_new_vector`, "
+"toen u de velden van de school digitaliseerde. In deze les gaat u de grenzen"
+" van de bosopstanden digitaliseren die als groene lijnen op de kaart staan, "
+"maar in plaats van het te doen met behulp van een luchtfoto, zult u uw kaart"
+" met geoverwijzingen gebruiken."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:11
+msgid ""
+"**The goal for this lesson:** Learn a technique to help the digitizing task,"
+" digitizing forest stands and finally adding the inventory data to them."
+msgstr ""
+"**Het doel voor deze les:** Een techniek leren om te helpen bij de taak van "
+"het digitaliseren, bosopstanden digitaliseren en tenslotte de gegevens van "
+"de inventarisatie er aan toevoegen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:15
+msgid "|basic| |FA| Extracting the Forest Stands Borders"
+msgstr "|basic| |FA| De grenzen van de bosopstanden uitnemen"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:424
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:17
+msgid ""
+"Open your :file:`map_digitizing.qgs` project in QGIS, that you saved from "
+"the previous lesson."
+msgstr ""
+"Open uw project :file:`map_digitizing.qgs`, dat u in de vorige les heeft "
+"opgeslagen, in QGIS."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:20
+msgid ""
+"Once you have scanned and georeferenced your map you could start to digitize"
+" directly by looking at the image as a guide. That would most likely be the "
+"way to go if the image you are going to digitize from is, for example, an "
+"aerial photograph."
+msgstr ""
+"Als u eenmaal uw kaart heeft gescand en voorzien van geoverwijzingen zou u "
+"direct kunnen beginnen met digitaliseren door naar de kaart te kijken als "
+"een hulpmiddel. Dat zou, zeer waarschijnlijk, de manier om te doen als de "
+"afbeelding van waaruit u gaat digitaliseren, bijvoorbeeld, een luchtfoto is."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:25
+msgid ""
+"If what you are using to digitize is a good map, as it is in our case, it is"
+" likely that the information is clearly displayed as lines with different "
+"colors for each type of element. Those colors can be relatively easy "
+"extracted as individual images using an image processing software like `GIMP"
+" <https://www.gimp.org/>`_. Such separate images can be used to assist the "
+"digitizing, as you will see below."
+msgstr ""
+"Als wat u gaat gebruiken voor het digitaliseren een goede kaart is, zoals in"
+" ons geval, is het aannemelijk dat de informatie duidelijk wordt weergegeven"
+" als lijnen met verschillende kleuren voor elk type element. Deze kleuren "
+"kunnen relatief eenvoudig worden uitgenomen als individuele afbeeldingen met"
+" behulp van een software voor het bewerken van afbeeldingen, zoals `GIMP "
+"<https://www.gimp.org/>`_. Dergelijke afzonderlijke afbeeldingen kunnen "
+"worden gebruikt om te assisteren bij het digitaliseren, zoals u hieronder "
+"zult zien."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:31
+msgid ""
+"The first step will be to use GIMP to obtain an image that contains only the"
+" forest stands, that is, all those greenish lines that you could see in the "
+"original scanned map:"
+msgstr ""
+"De eerste stap zal zijn om GIMP te gebruiken om een afbeelding te verkrijgen"
+" die alleen de bosopstanden bevat, dat is, alle groene lijnen die u zou "
+"kunnen zien in de originele gescande kaart:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:35
+msgid ""
+"Open GIMP (if you don't have it installed yet, download it from the internet"
+" or ask your teacher)."
+msgstr ""
+"Open GIMP (als u het nog niet geïnstalleerd heeft, download het vanaf het "
+"internet of vraag uw leraar)."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:37
+msgid ""
+"Open the original map image, :menuselection:`File --> Open`, "
+":file:`rautjarvi_map.tif` in the :file:`exercise_data/forestry` folder. Note"
+" that the forest stands are represented as green lines (with the number of "
+"the stand also in green inside each polygon)."
+msgstr ""
+"Open de originele kaartafbeelding, :menuselection:`Bestand --> Openen`, "
+":file:`rautjarvi_map.tif` in de map :file:`exercise_data/forestry`. Onthoud "
+"dat de bosopstanden als groene lijnen worden weergegeven (met het nummer van"
+" de bosopstand ook in groen binnen elke polygoon)."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:47
+msgid ""
+"Now you can select the pixels in the image that are making up the forest "
+"stands' borders (the greenish pixels):"
+msgstr ""
+"Nu kunt u de pixels in de afbeelding selecteren die de grenzen van de "
+"bosopstanden vormen (de groenachtige pixels):"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:50
+msgid "Open the tool :menuselection:`Select --> By color`."
+msgstr "Open het gereedschap :menuselection:`Selecteren --> Op kleur`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:51
+msgid ""
+"With the tool active, zoom into the image (:kbd:`Ctrl` + mouse wheel) so "
+"that a forest stand line is close enough to differentiate the pixels forming"
+" the line. See the left image below."
+msgstr ""
+"Zoom, met het gereedschap actief, in op de afbeelding (:kbd:`Ctrl` + "
+"muiswiel) zodat een lijn van een bosopstand dicht bij genoeg is om de pixels"
+" die de lijn vormen te onderscheiden. Zie de linker afbeelding hieronder."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:54
+msgid ""
+"Click and drag the mouse cursor in the middle of the line so that the tool "
+"will collect several pixel color values."
+msgstr ""
+"Klik en sleep de muiscursor in het midden van de lijn zodat het gereedschap "
+"verscheidene kleurwaarden van de pixels zal verzamelen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:56
+msgid ""
+"Release the mouse click and wait a few seconds. The pixels matching the "
+"colors collected by the tool will be selected through the whole image."
+msgstr ""
+"Laat de muisknop los en wacht enkele seconden. De pixels die overeenkomen "
+"met de kleuren die zijn verzameld door het gereedschap zullen vanuit de "
+"gehele afbeelding worden geselecteerd."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:58
+msgid ""
+"Zoom out to see how the greenish pixels have been selected throughout the "
+"image."
+msgstr ""
+"Zoom uit om te zien hoe de groenachtige pixels zijn geselecteerd in de "
+"gehele afbeelding."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:59
+msgid ""
+"If you are not happy with the result, repeat the click and drag operation."
+msgstr ""
+"Als u niet tevreden bent met het resultaat, herhaal dan de bewerking klikken"
+" en slepen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:60
+msgid "Your pixel selection should look something like the right image below."
+msgstr ""
+"Uw selectie van pixels zou er ongeveer uit moeten zien als op de rechter "
+"afbeelding hieronder."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:67
+msgid ""
+"Once you are done with the selection you need to copy this selection as a "
+"new layer and then save it as separate image file:"
+msgstr ""
+"Als u eenmaal klaar bent met het selecteren moet u deze selectie als een "
+"nieuwe laag kopiëren en die dan opslaan als een afzonderlijk "
+"afbeeldingsbestand:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:70
+msgid "Copy (:kbd:`Ctr+C`) the selected pixels."
+msgstr "Kopieer (:kbd:`Ctr+C`) de geselecteerde pixels."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:71
+msgid ""
+"And paste the pixels directly (:kbd:`Ctr+V`), GIMP will display the pasted "
+"pixels as a new temporary layer in the :guilabel:`Layers - Brushes` panel as"
+" a :guilabel:`Floating Selection (Pasted Layer)`."
+msgstr ""
+"En plak de pixels direct (:kbd:`Ctr+V`), GIMP zal de geplakte pixels "
+"weergeven als een nieuwe tijdelijke laag in het paneel :guilabel:`Lagen - "
+"Penselen` als een :guilabel:`Zwevende Selectie (Geplakte laag)`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:74
+msgid "Right click that temporary layer and select :guilabel:`To New Layer`."
+msgstr ""
+"Klik met rechts op die tijdelijke laag en selecteer :guilabel:`Naar nieuwe "
+"laag`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:75
+msgid ""
+"Click the \"eye\" icon next to the original image layer to switch it off, so"
+" that only the :guilabel:`Pasted Layer` is visible:"
+msgstr ""
+"Klik op het pictogram \"oog\" naast de originele afbeeldingslaag om die uit "
+"te schakelen, zodat alleen de :guilabel:`Geplakte laag` zichtbaar is:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:83
+msgid ""
+"Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select "
+"File Type (By Extension)` as a :guilabel:`TIFF image`, select the "
+":file:`digitizing` folder and name it :file:`rautjarvi_map_green.tif`. "
+"Select no compression when asked."
+msgstr ""
+"Selecteer tenslotte :menuselection:`Bestand --> Exporteren als...`, stel "
+":guilabel:`Selecteer bestandstype (Volgens extensie)` in als een "
+":guilabel:`TIFF-afbeelding`, selecteer de map :file:`digitizing` en noem het"
+" :file:`rautjarvi_map_green.tif`. Selecteer Geen compressie indien daarnaar "
+"gevraagd wordt."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:88
+msgid ""
+"You could do the same process with other elements in the image, for example "
+"extracting the black lines that represent roads or the brown ones that "
+"represent the terrain' contour lines. But for us, the forest stands is "
+"enough."
+msgstr ""
+"U zou hetzelfde proces kunnen uitvoeren met andere elementen in de "
+"afbeelding, bijvoorbeeld de zwarte lijnen uitnemen die wegen weergeven of de"
+" bruine die de contourlijnen van het terrein weergeven. Maar voor ons zijn "
+"de bosopstanden voldoende."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:93
+msgid "|basic| |TY| Georeference the Green Pixels Image"
+msgstr ""
+"|basic| |TY| De afbeelding met groene pixels voorzien van geoverwijzingen"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:95
+msgid ""
+"As you did in the previous lesson, you need to georeference this new image "
+"to be able to use it with the rest of your data."
+msgstr ""
+"Zoals u al in de vorige les deed dient u deze nieuwe afbeelding te voorzien "
+"van geoverwijzingen om in staat te zijn om hem te kunnen gebruiken met de "
+"rest van uw gegevens."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:98
+msgid ""
+"Note that you don't need to digitize the ground control points anymore "
+"because this image is basically the same image as the original map image, as"
+" far as the Georeferencer tool is concerned. Here are some things you should"
+" remember:"
+msgstr ""
+"Onthoud dat u de grondcontrolepunten niet meer hoeft te digitaliseren omdat "
+"deze afbeelding nagenoeg hetzelfde is als de originele afbeelding, voor "
+"zover het het gereedschap Georeferencer betreft. Hier zijn enkele dingen die"
+" u zou moeten onthouden:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:102
+msgid "This image is also, of course, in ``KKJ / Finland zone 2`` CRS."
+msgstr "Deze afbeelding is, natuurlijk, ook in het CRS KKJ / Finland zone 2."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:103
+msgid ""
+"You should use the ground control points you saved, :menuselection:`File -->"
+" Load GCP points`."
+msgstr ""
+"U zou de grondcontrolepunten moeten gebruiken die u heeft opgeslagen, "
+":menuselection:`Bestand --> GCP-punten laden`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:105
+msgid "Remember to review the :guilabel:`Transformation settings`."
+msgstr ""
+"Onthoud om de :guilabel:`Transformatie instellingen` opnieuw te bekijken."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:106
+msgid ""
+"Name the output raster as :file:`rautjarvi_green_georef.tif` in the "
+":file:`digitizing` folder."
+msgstr ""
+"Noem het uitvoerraster :file:`rautjarvi_green_georef.tif` in de map "
+":file:`digitizing`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:109
+msgid "Check that the new raster is fitting nicely with the original map."
+msgstr "Controleer of het nieuwe raster netjes past op de originele kaart."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:113
+msgid "|basic| |FA| Creating Supporting Points for Digitizing"
+msgstr "|basic| |FA| Ondersteunende punten voor digitaliseren maken"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:115
+msgid ""
+"Having in mind the digitizing tools in QGIS, you might already be thinking "
+"that it would be helpful to snap to those green pixels while digitizing. "
+"That is precisely what you are going to do next create points from those "
+"pixels to use them later to help you follow the forest stands' borders when "
+"digitizing, by using the snapping tools available in QGIS."
+msgstr ""
+"Met de gereedschappen voor digitaliseren in QGIS in gedachten, zou u "
+"misschien al kunnen denken dat het handig zou zijn aan die groene pixels te "
+"'snappen' tijdens het digitaliseren. Dat is precies wat u als volgende gaat "
+"doen, punten maken uit die pixels om ze later te kunnen gebruiken om de "
+"grenzen van de bosopstanden te volgen tijdens het digitaliseren, met behulp "
+"van de beschikbare gereedschappen voor snappen  in QGIS."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:121
+msgid ""
+"Use the :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
+"Vector)` tool to vectorize your green lines to polygons. If you don't "
+"remember how, you can review it in "
+":doc:`../complete_analysis/raster_to_vector`."
+msgstr ""
+"Gebruik het gereedschap :menuselection:`Raster --> Conversie --> "
+"Polygoniseren (Raster naar vector)` om uw groene lijnen naar polygonen te "
+"vectoriseren. Als u niet meer weet hoe, kunt u het nog eens bekijken in "
+":doc:`../complete_analysis/raster_to_vector`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:124
+msgid ""
+"Save as :file:`rautjarvi_green_polygon.shp` inside the :file:`digitizing` "
+"folder."
+msgstr ""
+"Sla op als :file:`rautjarvi_green_polygon.shp` in de map :file:`digitizing`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:126
+msgid ""
+"Zoom in and see what the polygons look like. You will get something like "
+"this:"
+msgstr ""
+"Zoom in en zie hoe de polygonen eruit zien. U zult iets hebben zoals dit:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:133
+msgid ""
+"Next option to get points out of those polygons is to get their centroids:"
+msgstr ""
+"De volgende optie is om punten van deze polygonen te maken om hun "
+"zwaartepunten te vinden:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:135
+msgid "Open :menuselection:`Vector --> Geometry Tools --> Centroids...`."
+msgstr ""
+"Open :menuselection:`Vector --> Geometrie-gereedschappen --> Centroïdes…`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:136
+msgid ""
+"Set :guilabel:`Input Layer` to |polygonLayer| "
+":guilabel:`rautjarvi_green_polygon` (the polygon layer you have just "
+"created)"
+msgstr ""
+"Stel :guilabel:`Invoerlaag` in op |polygonLayer| "
+":guilabel:`rautjarvi_green_polygon` (de polygonenlaag die u zojuist hebt "
+"gemaakt)"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:433
+msgid "polygonLayer"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:138
+msgid ""
+"Set :guilabel:`Centroids` output to :file:`green_centroids.shp` file within "
+"the folder :file:`digitizing`"
+msgstr ""
+"Stel de uitvoer :guilabel:`Centroïdes` in op het bestand "
+":file:`green_centroids.shp` in de map :file:`digitizing`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:140
+msgid ""
+"Check |checkbox| :menuselection:`Open output file after running algorithm`"
+msgstr ""
+"Selecteer |checkbox| :menuselection:`Uitvoerbestand openen na uitvoeren van "
+"algoritme`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:427
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:141
+msgid ""
+"Press :guilabel:`Run`. This will calculate the centroids for the polygons as"
+" a new layer and add it to the project."
+msgstr ""
+"Druk op :guilabel:`Uitvoeren`. Dit zal de zwaartepunten berekenen voor de "
+"polygonen als een nieuwe laag en die toevoegen aan het project."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:149
+msgid ""
+"Now you can remove the |polygonLayer| ``rautjarvi_green_polygon`` layer from"
+" the TOC."
+msgstr ""
+"Nu kunt u de laag |polygonLayer| ``rautjarvi_green_polygon`` uit de "
+"lagenlijst verwijderen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:151
+msgid "Change the symbology of the centroids layer as follows:"
+msgstr "Wijzig de symbologie van de laag met zwaartepunten als volgt:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:153
+msgid ""
+"Open the :guilabel:`Layer Properties` for |pointLayer| ``green_centroids``."
+msgstr ""
+"Open de :guilabel:`Laageigenschappen` voor |pointLayer| `green_centroids`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:431
+msgid "pointLayer"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:154
+msgid "Go to the :guilabel:`Symbology` tab."
+msgstr "Ga naar de tab :guilabel:`Symbologie`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:155
+msgid "Set :guilabel:`Size` to ``1.00`` and choose :menuselection:`Map Units`"
+msgstr ""
+"Stel :guilabel:`Grootte` in op ``1.00`` en kies "
+":menuselection:`Kaarteenheden`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:158
+msgid ""
+"It is not necessary to differentiate points from each other, you just need "
+"them to be there for the snapping tools to use them. You can use those "
+"points now to follow the original lines much easily than without them."
+msgstr ""
+"Het is niet nodig om de verschillende punten van elkaar te differentiëren, u"
+" heeft ze daar alleen maar nodig om ze te laten gebruiken door de "
+"gereedschappen voor 'snappen\". U kunt deze punten nu gebruiken om de "
+"originele lijnen veel makkelijker te volgen dan zonder ze."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:163
+msgid "|basic| |FA| Digitize the Forest Stands"
+msgstr "|basic| |FA| De bosopstanden digitaliseren"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:165
+msgid ""
+"Now you are ready to start with the actual digitizing work. You would start "
+"by creating a vector file of :guilabel:`polygon type`, but for this "
+"exercise, there is a shapefile with part of the area of interest already "
+"digitized. You will just finish digitizing the half of the forest stands "
+"that are left between the main roads (wide pink lines) and the lake:"
+msgstr ""
+"Nu bent u klaar om met het eigenlijke werk van digitaliseren te beginnen. U "
+"zou moeten beginnen met het maken van een vectorbestand van het "
+":guilabel:`type polygoon`, maar, voor deze oefening, is er een shapefile met"
+" daarin een gedeelte van het interessegebied dat al is gedigitaliseerd. U "
+"zult het digitaliseren voltooien voor de helft van de bosopstanden die zijn "
+"overgelaten tussen de belangrijke wegen (brede roze lijnen) en het meer:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:176
+msgid "Go to the :file:`digitizing` folder using your file manager browser."
+msgstr ""
+"Ga naar de map :file:`digitizing` met behulp van uw browser voor "
+"bestandsbeheer."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:177
+msgid "Drag and drop the :file:`forest_stands.shp` vector file to your map."
+msgstr ""
+"Sleep en zet het vectorbestand :file:`forest_stands.shp` op uw kaart neer."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:179
+msgid ""
+"Change the new layer's symbology so that it will be easier to see the "
+"polygons that have already been digitized."
+msgstr ""
+"Wijzig de symbologie van de nieuwe laag, zodat de polygonen die al "
+"gedigitaliseerd zijn, gemakkelijker te zien zijn:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:182
+msgid ""
+"Set :guilabel:`Fill color` to green - and change the :guilabel:`Opacity` to "
+"``50%``."
+msgstr ""
+"Stel :guilabel:`Vulkleur` in op groen - en wijzig de :guilabel:`Opaciteit` "
+"naar ``50%``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:183
+msgid ""
+"Select :guilabel:`Simple Fill` and set :guilabel:`Stroke width` to ``1.00 "
+"mm``."
+msgstr ""
+"Selecteer :guilabel:`Standaard vulling` en stel :guilabel:`Lijndikte` in op "
+"``1.00 mm``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:185
+msgid ""
+"Now, if you remember past modules, we have to set up and activate the "
+"snapping options:"
+msgstr ""
+"Nu, als u de voorgaande modules heeft onthouden, moeten we de opties voor "
+"\"snappen\" instellen en activeren:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:187
+msgid "Go to :menuselection:`Project --> Snapping options...`"
+msgstr "Ga naar :menuselection:`Project --> 'Opties voor snappen…'`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:188
+msgid ""
+"Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced "
+"Configuration`"
+msgstr ""
+"Druk op |snapping| :sup:`Snappen inschakelen` en selecteer "
+":guilabel:`Gevorderde configuratie`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:435
+msgid "snapping"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:189
+msgid ""
+"Check the :guilabel:`green_centroids` and :guilabel:`forest_stands` layers"
+msgstr ""
+"Selecteer de lagen :guilabel:`green_centroids` en :guilabel:`forest_stands`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:190
+msgid "Set :guilabel:`Type` for each layer to :guilabel:`Vertex`"
+msgstr "Stel het :guilabel:`Type` voor elke laag in op :guilabel:`Hoekpunt`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:191
+msgid "Set :guilabel:`Tolerance` for each layer to ``10``"
+msgstr "Stel :guilabel:`Tolerantie` voor elke laag in op ``10``"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:192
+msgid "Set :guilabel:`Units` for each layer to :guilabel:`pixels`"
+msgstr "Stel :guilabel:`Eenheden` voor elke laag in op :guilabel:`pixels`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:193
+msgid ""
+"Check |checkbox| :guilabel:`Avoid Overlap` for the :guilabel:`forest_stands`"
+" layer"
+msgstr ""
+"Selecteer |checkbox| :guilabel:`Kruisingen vermijden` voor de laag "
+":guilabel:`forest_stands`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:194
+msgid "Press |topologicalEditing| :guilabel:`Topological editing`"
+msgstr ""
+"Druk op |topologicalEditing| :guilabel:`Topologisch bewerken aan-/uitzetten`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:441
+msgid "topologicalEditing"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:195
+msgid ""
+"Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`"
+msgstr ""
+"Kies |avoidIntersectionsLayers| :guilabel:`Gevorderde configuratie volgen`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:422
+msgid "avoidIntersectionsLayers"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:196
+msgid "Close the pop-up"
+msgstr "Sluit de pop-up"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:203
+msgid ""
+"With these snapping settings, whenever you are digitizing and get close "
+"enough to one of the points in the centroids layer or any vertex of your "
+"digitized polygons, a pink square will appear on the point that will be "
+"snapped to."
+msgstr ""
+"Met deze instellingen voor snappen, altijd wanneer u aan het digitaliseren "
+"bent en dicht genoeg bij een van de punten in de laag met zwaartepunten of "
+"een punt van uw gedigitaliseerde polygonen komt, zal een roze vierkant "
+"verschijnen op het punt waaraan zal worden gesnapt."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:207
+msgid ""
+"Finally, turn off the visibility of all the layers except "
+":guilabel:`forest_stands` and :guilabel:`rautjarvi_georef`. Make sure that "
+"the map image has not transparency any more."
+msgstr ""
+"Schakel tenslotte de zichtbaarheid van alle lagen, met uitzondering van "
+":guilabel:`forest_stands` en :guilabel:`rautjarvi_georef` uit. Zorg er voor "
+"dat de kaartafbeelding geen transparantie meer heeft."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:210
+msgid "A few important things to note before you start digitizing:"
+msgstr ""
+"Een paar belangrijke dingen om te onthouden vóórdat u begint met "
+"digitaliseren:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:212
+msgid "Don't try to be too accurate with the digitizing of the borders."
+msgstr ""
+"Probeer niet te nauwkeurig te zijn bij het digitaliseren van de randen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:213
+msgid ""
+"If a border is a straight line, digitize it with just two nodes. In general,"
+" digitize using as few nodes as possible."
+msgstr ""
+"Als een rand een rechte lijn is, digitaliseer die dan met slechts twee "
+"knopen. In het algemeen: gebruik bij het digitaliseren zo min mogelijk "
+"knopen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:215
+msgid ""
+"Zoom in to close ranges only if you feel that you need to be accurate, for "
+"example, at some corners or when you want a polygon to connect with another "
+"polygon at a certain node."
+msgstr ""
+"Zoom alleen in om gebieden te sluiten als u denkt dat u nauwkeurig moet "
+"zijn, bijvoorbeeld, op sommige hoeken of wanneer u een polygoon wilt "
+"verbinden met een andere polygoon op een bepaalde knoop."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:218
+msgid ""
+"Use the mouse's middle button to zoom in/out and to pan as you digitize."
+msgstr ""
+"Gebruik de middelste knop van de muis om in of uit te zoomen en te "
+"verschuiven als u digitaliseert."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:219
+msgid "Digitize only one polygon at a time."
+msgstr "Digitaliseer slechts één polygoon per keer."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:220
+msgid ""
+"After digitizing one polygon, write the forest stand id that you can see "
+"from the map."
+msgstr ""
+"Na het digitaliseren van een polygoon, schrijf dan het ID van de bosopstand "
+"die u kunt zien in de kaart."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:222
+msgid "Now you can start digitizing:"
+msgstr "Nu kunt u beginnen met digitaliseren:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:224
+msgid "Locate the forest stand number ``357`` in the map window."
+msgstr "Lokaliseer de bosopstand ``357`` in het kaartvenster."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:225
+msgid "Select the ``forest_stands`` layer."
+msgstr "Selecteer de laag ``forest_stands``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:226
+msgid ""
+"Click the |toggleEditing| :sup:`Toggle Editing` button to enable editing"
+msgstr ""
+"Klik op de knop |toggleEditing| :sup:`Bewerken aan/uitzetten` om bewerken in"
+" te schakelen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:439
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:227
+msgid "Select |capturePolygon| :sup:`Add Polygon Feature` tool."
+msgstr ""
+"Selecteer het gereedschap |capturePolygon| :guilabel:`Object Polygoon "
+"toevoegen`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:425
+msgid "capturePolygon"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:228
+msgid ""
+"Start digitizing the stand ``357`` by connecting some of the dots. Note the "
+"pink crosses indicating the snapping."
+msgstr ""
+"Begin met het digitaliseren van de bosopstand ``357`` door enkele van de "
+"punten met elkaar te verbinden. Onthoud dat de roze vierkanten het snappen "
+"aangeven."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:236
+msgid "When you are done:"
+msgstr "Als u gereed bent:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:238
+msgid "Right click to end digitizing that polygon."
+msgstr "Klik met rechts om het digitaliseren voor die polygoon te beëindigen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:239
+msgid ""
+"Enter the forest stand :guilabel:`ID` within the form (in this case "
+"``357``)."
+msgstr ""
+"Voer de :guilabel:`ID` voor de bosopstand in het formulier in (in dit geval "
+"``357``)."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:240
+msgid "Click :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:242
+msgid ""
+"If a form did not appear when you finished digitizing the polygon, go to "
+":menuselection:`Settings --> Options --> Digitizing` and make sure that the "
+":guilabel:`Suppress attribute form pop-up after feature creation` is not "
+"checked."
+msgstr ""
+"Als u er geen formulier verscheen toen u het digitaliseren van de polygoon "
+"voltooide, ga naar :menuselection:`Extra --> Opties --> Digitaliseren` en "
+"zorg er voor dat :guilabel:`Voorkom tonen van attributenformulier na "
+"intekenen object` niet is geselecteerd."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:246
+msgid "Your digitized polygon will look like this:"
+msgstr "Uw gedigitaliseerde polygoon zal er ongeveer zo uitzien:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:253
+msgid ""
+"Now for the second polygon, pick up the stand number 358. Make sure that "
+"|checkbox| :guilabel:`Avoid Overlap` is checked for the "
+":guilabel:`forest_stands` layer (as shown above). This option ensures "
+"polygons do not overlap. So, if you digitize over an existing polygon, the "
+"new polygon will be trimmed to meet the border of the existing polygons. You"
+" can use this option to automatically obtain a common border."
+msgstr ""
+"Voor de tweede polygoon gebruiken we bosopstand 358. Zorg er voor dat "
+"|checkbox| :guilabel:`Kruisingen vermijden.` is geselecteerd voor de laag "
+":guilabel:`forest_stands` (zoals hierboven weergegeven). Deze optie zorgt er"
+" voor dat polygonen elkaar niet overlappen. Als u dus digitaliseert over een"
+" bestaande polygoon, zal de nieuwe polygoon worden afgebroken op de rand van"
+" de al bestaande polygonen. U kunt deze optie gebruiken om automatisch een "
+"gezamenlijke rand te krijgen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:260
+msgid ""
+"Begin digitizing the stand 358 at one of the common corners with the stand "
+"357."
+msgstr ""
+"Begin het digitaliseren van bosopstand 358 op één van de gemeenschappelijke "
+"knopen met de bosopstand 357."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:261
+msgid ""
+"Continue normally until you get to the other common corner for both stands."
+msgstr ""
+"Ga normaal door totdat u bij de volgende gemeenschappelijke knoop voor beide"
+" bosopstanden komt."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:262
+msgid ""
+"Finally, digitize a few points inside polygon 357 making sure that the "
+"common border is not intersected. See left image below."
+msgstr ""
+"Digitaliseer tenslotte een aantal punten binnen polygoon 357 er zorg voor "
+"dragend dat de gemeenschappelijk rand niet wordt gekruist. Zie de linker "
+"afbeelding hieronder."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:264
+msgid "Right click to finish editing the forest stand 358."
+msgstr "Klik met rechts om het bewerken van bosopstand 358 te voltooien."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:265
+msgid "Enter the :guilabel:`ID` as ``358``."
+msgstr "Stel de :guilabel:`ID` in als ``358``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:266
+msgid ""
+"Click :guilabel:`OK`. Your new polygon should have a common border with the "
+"stand 357 as you can see in the image below."
+msgstr ""
+"Klik op :guilabel:`OK`. Uw nieuwe polygoon zou nu een gemeenschappelijke "
+"rand moeten hebben met de bosopstand 357, zoals u kunt zien in de afbeelding"
+" aan de rechterkant."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:274
+msgid ""
+"The part of the polygon that was overlapping the existing polygon has been "
+"automatically trimmed and you are left with a common border - as you "
+"intended it to be."
+msgstr ""
+"Het gedeelte van de polygoon dat de bestaande polygoon overlapte is "
+"automatisch afgebroken en u blijft achter met een gemeenschappelijke rand - "
+"wat uw bedoeling was."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:280
+msgid "|basic| |TY| Finish Digitizing the Forest Stands"
+msgstr "|basic| |TY| Digitaliseren van de bosopstanden voltooien"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:282
+msgid ""
+"Now you have two forest stands ready. And a good idea on how to proceed. "
+"Continue digitizing on your own until you have digitized all the forest "
+"stands that are limited by the main road and the lake."
+msgstr ""
+"Nu heeft u twee bosopstanden voltooid. En een goed idee over hoe u verder "
+"moet gaan. Ga in uw eigen tempo door met digitaliseren totdat u alle "
+"bosopstanden, die worden begrensd door de hoofdweg en het meer, heeft "
+"gedigitaliseerd."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:286
+msgid ""
+"It might look like a lot of work, but you will soon get used to digitizing "
+"the forest stands. It should take you about 15 minutes."
+msgstr ""
+"Het lijkt heel veel werk te zijn, maar u zult er snel aan gewend raken om de"
+" bosopstanden te digitaliseren. Het zou u ongeveer 15 minuten moeten kosten."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:289
+msgid ""
+"During the digitizing you might need to edit or delete nodes, split or merge"
+" polygons. You learned about the necessary tools in "
+":doc:`../create_vector_data/topo_editing`, now is probably a good moment to "
+"go read about them again."
+msgstr ""
+"Gedurende het digitaliseren moet u misschien knopen bewerken of verwijderen,"
+" polygonen splitsen of samenvoegen. U heeft over de benodigde gereedschappen"
+" geleerd in :doc:`../create_vector_data/topo_editing`, nu is het "
+"waarschijnlijk een goed moment om het nog eens na te lezen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:293
+msgid ""
+"Remember that having :guilabel:`Enable topological editing` activated, "
+"allows you to move nodes common to two polygons so that the common border is"
+" edited at the same time for both polygons."
+msgstr ""
+"Onthoud dat met :guilabel:`Topologie bewerken activeren` geactiveerd, u in "
+"staat bent knopen te verplaatsen die gemeenschappelijk zijn voor twee "
+"polygonen zodat de gezamenlijke rand tegelijkertijd wordt bewerkt voor beide"
+" polygonen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:297
+msgid "Your result will look like this:"
+msgstr "Uw resultaat zal er uitzien zoals dit:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:305
+msgid "|basic| |FA| Joining the Forest Stand Data"
+msgstr "|basic| |FA| De gegevens voor de bosopstanden samenvoegen"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:307
+msgid ""
+"It is possible that the forest inventory data you have for you map is also "
+"written in paper. In that case, you would have to first write that data to a"
+" text file or a spreadsheet. For this exercise, the information from the "
+"inventory for 1994 (the same inventory as the map) is ready as a comma "
+"separated text (csv) file."
+msgstr ""
+"Het is mogelijk dat de gegevens van de inventarisatie van het bos die u voor"
+" uw kaart heeft ook op papier zijn geschreven. In dat geval zou u eerst de "
+"gegevens naar een tekstbestand of werkblad moeten wegschrijven. Voor deze "
+"oefening is de informatie van de inventarisatie voor 1994 (dezelfde "
+"inventarisatie als de kaart) al aanwezig als een komma-gescheiden "
+"tekstbestand (csv)."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:312
+msgid ""
+"Open the :file:`rautjarvi_1994.csv` file from the "
+":file:`exercise_data\\\\forestry` directory in a text editor and note that "
+"the inventory data file has an attribute called :guilabel:`ID` that has the "
+"numbers of the forest stands. Those numbers are the same as the forest "
+"stands ids you have entered for your polygons and can be used to link the "
+"data from the text file to your vector file. You can see the metadata for "
+"this inventory data in the file :file:`rautjarvi_1994_legend.txt` in the "
+"same folder."
+msgstr ""
+"Open het bestand :file:`rautjarvi_1994.csv` uit de map "
+":file:`exercise_data\\\\forestry` in een tekstbewerker en merk op dat het "
+"gegevensbestand van de inventarisatie een attribuut heeft, genaamd "
+":file:`ID` dat de nummers van de bosopstanden bevat. Deze nummers zijn "
+"hetzelfde als de ID's voor de bosopstanden die u voor uw polygonen heeft "
+"ingevoerd en kunnen worden gebruikt om de gegevens uit het tekstbestand te "
+"koppelen aan uw vectorbestand. U kunt de metadata voor deze gegevens van "
+"inventarisatie bekijken in het bestand :file:`rautjarvi_1994_legend.txt` in "
+"dezelfde map."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:320
+msgid "Now add this file into the project:"
+msgstr "Voeg nu dit bestand toe aan het project:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:322
+msgid ""
+"Use the |addDelimitedTextLayer| :sup:`Add Delimited Text Layer` tool. This "
+"is accessed via :menuselection:`Layer --> Add Layer --> Add Delimited Text "
+"Layer...`."
+msgstr ""
+"Gebruik het gereedschap |addDelimitedTextLayer| :sup:`Tekstgescheiden laag "
+"toevoegen`. Die is te bereiken via :menuselection:`Kaartlagen --> Laag "
+"toevoegen --> Tekstgescheiden laag toevoegen…`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:420
+msgid "addDelimitedTextLayer"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:324
+msgid "Set details in the dialog as follows:"
+msgstr "Stel de details in het dialoogvenster als volgt in:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:331
+msgid ""
+"Press :guilabel:`Add` to load the formatted :file:`csv` file in the project."
+msgstr ""
+"Druk op :guilabel:`Toevoegen` om het opgemaakte bestand :file:`csv` te laden"
+" in het project."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:333
+msgid ""
+"To link the data from the :file:`.csv` file with the digitized polygons, "
+"create a join between the two layers:"
+msgstr ""
+"Maak een samenvoeging tussen de twee lagen om de gegevens uit het bestand "
+":file:`.csv` te koppelen aan de gedigitaliseerde polygonen:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:336
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:351
+msgid "Open the Layer Properties for the ``forest_stands`` layer."
+msgstr "Open de Laageigenschappen voor de laag ``forest_stands``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:337
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:352
+msgid "Go to the :guilabel:`Joins` tab."
+msgstr "Ga naar de tab :guilabel:`Koppelingen`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:338
+msgid ""
+"Click |symbologyAdd| :sup:`Add new join` on the bottom of the dialog box."
+msgstr ""
+"Klik op de knop |symbologyAdd| :sup:`Nieuwe verbinding toevoegen` aan de "
+"onderzijde van het dialoogvenster."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:437
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:339
+msgid "Select :guilabel:`rautjarvi_1994.csv` as the :guilabel:`Join layer`"
+msgstr ""
+"Selecteer :guilabel:`rautjarvi_1994.csv` als de :guilabel:`Koppellaag`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:340
+msgid "Set the :guilabel:`Join` field to :guilabel:`ID`"
+msgstr "Stel :guilabel:`Koppelveld` in op :guilabel:`ID`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:341
+msgid "Set the :guilabel:`Target` field to :guilabel:`ID`"
+msgstr "Stel het veld :guilabel:`Doelveld` in op :guilabel:`ID`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:342
+msgid "Click :guilabel:`OK` two times."
+msgstr "Klik tweemaal op :guilabel:`OK`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:344
+msgid ""
+"The data from the text file should be now linked to your vector file. To see"
+" what has happened, select the ``forest_stands`` layer and use |openTable| "
+":sup:`Open Attribute Table`. You can see that all the attributes from the "
+"inventory data file are now linked to your digitized vector layer."
+msgstr ""
+"De gegevens uit het tekstbestand zouden nu moeten zijn gekoppeld aan uw "
+"vectorbestand. Selecteer de laag ``forest_stands`` en gebruik |openTable| "
+":sup:`Attributentabel openen`, om te zien wat er is gebeurd. U kunt zien dat"
+" alle attributen van het gegevensbestand voor de inventarisatie nu zijn "
+"gekoppeld aan uw gedigitaliseerde vectorlaag."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:429
+msgid "openTable"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:349
+msgid ""
+"You will see that the field names are prefixed with ``rautjarvi_1994_``. To "
+"change this:"
+msgstr ""
+"U zult zien dat de veldnamen worden voorafgegaan door ``rautjarvi_1994_``. "
+"Om dit te wijzigen:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:353
+msgid "Select :guilabel:`Join Layer` :guilabel:`rautjarvi_1994`"
+msgstr "Selecteer :guilabel:`Koppellaag` :guilabel:`rautjarvi_1994`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:354
+msgid ""
+"Click the |toggleEditing| :sup:`Edit selected join` button to enable editing"
+msgstr ""
+"Klik op de knop |toggleEditing| :sup:`Geselecteerde verbinding bewerken` om "
+"bewerken in te schakelen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:355
+msgid ""
+"Under |checkbox| :guilabel:`Custom field name prefix` remove the prefix name"
+msgstr ""
+"Onder |checkbox| :guilabel:`Voorvoegsel voor naam aangepast veld`, verwijder"
+" de naam van het voorvoegsel"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:362
+msgid ""
+"The data from the :file:`.csv` file is just linked to your vector file. To "
+"make this link permanent, so that the data is actually recorded to the "
+"vector file you need to save the ``forest_stands`` layer as a new vector "
+"file. To do this:"
+msgstr ""
+"De gegevens uit het :file:`.csv`-bestand zijn slechts gekoppeld aan uw "
+"vectorbestand. U moet de laag ``forest_stands`` als een nieuw vectorbestand "
+"opslaan om deze koppeling permanent te maken, zodat de gegevens feitelijk "
+"worden opgenomen in het vectorbestand. Om dit te doen:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:366
+msgid "Right click on ``forest_stands`` layer"
+msgstr "Klik met rechts op de laag ``forest_stands``"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:367
+msgid "Choose :menuselection:`Export --> Save Features As...`"
+msgstr "Kies :guilabel:`Exporteren --> Objecten opslaan als…`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:368
+msgid "Set :guilabel:`Format` to :guilabel:`ESRI Shapefile`"
+msgstr "Stel :guilabel:`Indeling` to :guilabel:`ESRI Shapefile`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:369
+msgid ""
+"Set file name to :file:`forest_stands_1994.shp` under the :file:`forestry` "
+"folder"
+msgstr ""
+"Stel de bestandsnaam in op :file:`forest_stands_1994.shp` in de map "
+":file:`forestry`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:370
+msgid ""
+"To include the new file as a layer in the project, check |checkbox| "
+":guilabel:`Add saved file to map`"
+msgstr ""
+"Selecteer |checkbox| :guilabel:`Voeg opgeslagen kaart toe aan project` om "
+"het nieuwe bestand als een laag op te nemen  in het project"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:379
+msgid "|basic| |TY| Adding Area and Perimeter"
+msgstr "|basic| |TY| Gebied en perimeter toevoegen"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:381
+msgid ""
+"To finish gathering the information related to these forest stands, you "
+"might calculate the area and the perimeter of the stands. You calculated "
+"areas for polygons in :doc:`../complete_analysis/analysis_exercise`. Go back"
+" to that lesson if you need to and calculate the areas for the forest "
+"stands. Name the new attribute ``Area`` and make sure that the values "
+"calculated are in hectares. You could also do the same for the perimeter."
+msgstr ""
+"U wilt misschien het gebied en de begrenzingen van de bosopstanden berekenen"
+" om het verzamelen van de informatie gerelateerd aan deze bosopstanden. U "
+"heeft gebieden voor polygonen al berekend in "
+":doc:`../complete_analysis/analysis_exercise`. Ga terug naar die les als dat"
+" nodig is en bereken de gebieden voor de bosopstanden. Noem het nieuwe "
+"attribuut ``Gebied`` en zorg er voor dat de waarden worden berekend in "
+"hectares. U zou hetzelfde kunnen doen voor de begrenzingen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:388
+msgid ""
+"Now your ``forest_stands_1994`` layer is ready and packed with all the "
+"available information."
+msgstr ""
+"Nu is uw laag ``forest_stands_1994`` gereed en verpakt met alle beschikbare "
+"informatie."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:391
+msgid ""
+"Save your project to keep the current map layers in case you need to come "
+"back later to it."
+msgstr ""
+"Sla uw project op om de huidige lagen van de kaart te behouden voor het "
+"geval u daar later terug moet komen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:395
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:397
+msgid ""
+"It has taken a few clicks of the mouse but you now have your old inventory "
+"data in digital format and ready for use in QGIS."
+msgstr ""
+"Het heeft een aantal muisklikken gekost maar u heeft nu uw oude gegevens van"
+" de inventarisatie in digitale indeling en gereed voor gebruik in QGIS."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:401
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:403
+msgid ""
+"You could start doing different analysis with your brand new dataset, but "
+"you might be more interested in performing analysis in a dataset more up to "
+"date. The topic of the next lesson will be the creation of forest stands "
+"using current aerial photos and the addition of some relevant information to"
+" your dataset."
+msgstr ""
+"U  zou nu kunnen beginnen met het uitvoeren van verschillende analyses met "
+"uw brandnieuwe gegevensset, maar u bent misschien meer geïnteresseerd in het"
+" uitvoeren van analyses op een meer up to date gegevensset. Het onderwerp "
+"van de volgende les zal het maken van bosopstanden zijn, met behulp van "
+"recente luchtfoto's en het toevoegen van enige relevante informatie aan uw "
+"gegevensset."

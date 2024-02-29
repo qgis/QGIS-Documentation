@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:2
+msgid "|LS| Reprojecting and Transforming Data"
+msgstr "|LS| 데이터 재투영 및 변환"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:4
+msgid ""
+"Let us talk about Coordinate Reference Systems (CRSs) again. We have touched"
+" on this briefly before, but haven't discussed what it means practically."
+msgstr ""
+"좌표계(CRS) 얘기를 다시 해봅시다. 이전에 간략하게 언급했지만, 실제로 어떤 의미를 가지고 있는지에 대해서는 설명하지 않았습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:8
+msgid ""
+"**The goal for this lesson:** To reproject and transform vector datasets."
+msgstr "**이 강의의 목표:** 벡터 데이터를 재투영하고 변환하기."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:11
+msgid "|basic| |FA| Projections"
+msgstr "|basic| |FA| 투영"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:250
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:13
+msgid ""
+"The CRS that all the data, as well as the map itself are in right now is "
+"called *WGS84*. This is a very common Geographic Coordinate System (GCS) for"
+" representing data. But there's a problem, as we will see."
+msgstr ""
+"맵 자체는 물론 모든 데이터는 현재 *WGS84* 라는 CRS를 사용하고 있습니다. WGS84는 데이터를 표현하는 데 쓰이는 매우 흔한 "
+"지리 좌표계(GCS)입니다. 그러나 이제 곧 설명할 문제점도 가지고 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:19
+msgid "Save your current map"
+msgstr "현재 맵을 저장하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:20
+msgid ""
+"Then open the map of the world which you will find under "
+":file:`exercise_data/world/world.qgs`"
+msgstr "그 다음 :file:`exercise_data/world/world.qgs` 경로에 있는 세계 지도를 여십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:22
+msgid "Zoom in to South Africa by using the :guilabel:`Zoom In` tool"
+msgstr ":guilabel:`Zoom In` 도구를 사용해서 남아프리카 공화국으로 확대하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:23
+msgid ""
+"Try setting a scale in the :guilabel:`Scale` field, which is in the "
+"*Statusbar* along the bottom of the screen. While over South Africa, set "
+"this value to ``1:5 000 000`` (one to five million)."
+msgstr ""
+"창 맨 아래의 *상태 바* 에 있는 :guilabel:`Scale` 항목으로 통해 축척을 설정해보십시오. 남아프리카 공화국이 보이는 "
+"상태에서 ``1:5,000,000`` (5백만 분의 1)로 값을 설정합니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:27
+msgid "Pan around the map while keeping an eye on the :guilabel:`Scale` field"
+msgstr ":guilabel:`Scale` 항목에 주의를 기울이면서 맵을 이리저리 이동해보십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:30
+msgid ""
+"Notice the scale changing? That's because you are moving away from the one "
+"point that you zoomed into at ``1:5 000 000``, which was at the center of "
+"your screen. All around that point, the scale is different."
+msgstr ""
+"축척이 변하는 것을 보셨습니까? 여러분이 ``1:5,000,000`` 축척으로 확대한, 화면 정중앙에 있던 포인트를 벗어났기 때문입니다."
+" 그 포인트를 벗어나면 축척이 달라집니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:35
+msgid ""
+"To understand why, think about a globe of the Earth. It has lines running "
+"along it from North to South. These longitude lines are far apart at the "
+"equator, but they meet at the poles."
+msgstr ""
+"그 이유를 이해하려면, 지구의를 생각해보십시오. 남북 방향으로 선이 뻗어 있습니다. 이 경도 선들은 적도에서는 멀리 떨어져 있지만 "
+"남극/북극에서 만납니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:40
+msgid ""
+"In a GCS, you are working on this sphere, but your screen is flat. When you "
+"try to represent the sphere on a flat surface, distortion occurs, similar to"
+" what would happen if you cut open a tennis ball and tried to flatten it "
+"out. What this means on a map is that the longitude lines stay equally far "
+"apart from each other, even at the poles (where they are supposed to meet). "
+"This means that, as you travel away from the equator on your map, the scale "
+"of the objects that you see gets larger and larger. What this means for us, "
+"practically, is that there is no constant scale on our map!"
+msgstr ""
+"GCS는 이 구체 상에서 정의되지만, 여러분의 모니터는 평면입니다. 평면에서 구체를 표현하려 할 때, 마치 테니스 공을 잘라서 평평하게 "
+"펼치려고 할 때처럼, 왜곡이 발생합니다. 즉 맵 상에서는 경도 선들이 (서로 만나야 할) 극지방에서도 평행하게 떨어져 있습니다. 다시 "
+"말해 맵 상에서 적도로부터 멀어질수록, 여러분이 보는 객체의 축척이 점점 커진다는 뜻입니다. 한 마디로 말하자면 맵 상의 위치에 따라 "
+"축척이 계속 변한다는 말이지요!"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:52
+msgid ""
+"To solve this, let's use a Projected Coordinate System (PCS) instead. A PCS "
+"\"projects\" or converts the data in a way that makes allowance for the "
+"scale change and corrects it. Therefore, to keep the scale constant, we "
+"should reproject our data to use a PCS."
+msgstr ""
+"이 문제를 해결하기 위해 투영좌표계(PCS)를 대신 사용해봅시다. PCS는 축척 변화를 감안하여 바로잡는 방식으로 데이터를 "
+"\"투영\"하거나 변환합니다. 따라서 축척을 일정하게 유지하려면 PCS를 이용해서 데이터를 재투영해야 합니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:59
+msgid "|basic| |FA| \"On the Fly\" Reprojection"
+msgstr "|basic| |FA| \"실시간\" 재투영"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:61
+msgid ""
+"By default, QGIS reprojects data \"on the fly\". What this means is that "
+"even if the data itself is in another CRS, QGIS can project it as if it were"
+" in a CRS of your choice."
+msgstr ""
+"QGIS는 기본적으로 \"실시간(on the fly)\" 으로 데이터를 재투영합니다. 데이터 자체가 다른 좌표계를 이용하고 있더라도, "
+"사용자가 바라는 좌표계로 데이터를 투영할 수 있다는 뜻입니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:65
+msgid ""
+"You can change the CRS of the project by clicking on the |projectionEnabled|"
+" :sup:`Current projection` button in the bottom right corner of QGIS."
+msgstr ""
+"QGIS 우하단에 있는 |projectionEnabled| :sup:`Current projection` 버튼을 클릭하면 프로젝트의 "
+"좌표계를 변경할 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:253
+msgid "projectionEnabled"
+msgstr "projectionEnabled"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:69
+msgid ""
+"In the dialog that appears, type the word ``global`` into the "
+":guilabel:`Filter` field. A few CRSs should appear in the "
+":guilabel:`Predefined Reference Systems` field below."
+msgstr ""
+"대화창이 뜨면, :guilabel:`Filter` 항목에 ``global`` 이라고 입력하십시오. 아래에 있는 "
+":guilabel:`Predefined Reference Systems` 항목에 좌표계 몇 개가 나타날 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:73
+msgid ""
+"Select :guilabel:`WGS 84 / NSIDC EASE-Grid 2.0 Global | EPSG:6933` entry by "
+"clicking on it, and then click :guilabel:`OK`."
+msgstr ""
+":guilabel:`WGS 84 / NSIDC EASE-Grid 2.0 Global | EPSG:6933` 항목을 클릭해서 선택한 다음 "
+":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:76
+msgid ""
+"Notice how the shape of South Africa changes. All projections work by "
+"changing the apparent shapes of objects on Earth."
+msgstr "남아프리카 공화국의 형태가 어떻게 변하는지 보셨습니까? 투영체를 바꾸면 지구 상의 객체의 형태가 바뀝니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:79
+msgid "Zoom to a scale of ``1:5 000 000`` again, as before."
+msgstr "이전과 마찬가지로 ``1:5,000,000`` 축척으로 확대하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:80
+msgid "Pan around the map."
+msgstr "맵을 이리저리 이동해보십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:82
+msgid "Notice how the scale stays the same!"
+msgstr "축척이 일정하게 유지됩니다!"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:84
+msgid ""
+"\"On the fly\" reprojection is also used for combining datasets that are in "
+"different CRSs."
+msgstr "서로 다른 CRS를 이용하는 데이터셋을 결합하는 데에도 \"실시간\" 재투영을 사용할 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:87
+msgid ""
+"Add another vector layer to your map which has the data for South Africa "
+"only. You will find it as :file:`exercise_data/world/RSA.shp`."
+msgstr ""
+"남아프리카 공화국의 데이터만을 가지고 있는 다른 벡터 레이어를 맵에 추가해보십시오. "
+":file:`exercise_data/world/RSA.shp` 경로에서 찾을 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:90
+msgid ""
+"Load it. A quick way to see its CRS is by hovering the mouse over the layer "
+"in the legend. It is ``EPSG:3410``."
+msgstr ""
+"해당 레이어를 불러오십시오. 범례에 있는 레이어 위에 마우스를 가져가면 레이어의 좌표계를 쉽게 알 수 있습니다. 해당 레이어의 좌표계는 "
+"``EPSG:3410`` 입니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:94
+msgid "What do you notice?"
+msgstr "보이십니까?"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:96
+msgid ""
+"The layer is visible even if it has a different CRS from the "
+":guilabel:`continents` one."
+msgstr "해당 레이어가 :guilabel:`continents` 레이어와는 다른 좌표계인데도 스크린에 가시화되었습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:101
+msgid "|moderate| |FA| Saving a Dataset to Another CRS"
+msgstr "|moderate| |FA| 다른 CRS로 데이터셋 저장"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:252
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:255
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:143
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:207
+msgid "Click :guilabel:`OK`"
+msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:150
+msgid "|hard| |FA| Creating Your Own Projection"
+msgstr "|hard| |FA| 사용자 지정 투영체 생성"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:251
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:152
+msgid ""
+"There are many more projections than just those included in QGIS by default."
+" You can also create your own projections."
+msgstr "QGIS에 기본으로 포함된 투영체 외에도 많은 투영체가 있습니다. 여러분 자신만의 투영체를 생성할 수도 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:257
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:168
+msgid ""
+"This projection represents the Earth on a circular field instead of a "
+"rectangular one, as most other projections do."
+msgstr "이 투영체는 다른 대부분 투영체와는 달리 사각 면이 아니라 원형 면에 지구를 표현합니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:212
+msgid "On applying this projection, the map will be reprojected thus:"
+msgstr "이 투영체를 적용하면 맵이 다음과 같이 재투영될 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:218
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:220
+msgid ""
+"Different projections are useful for different purposes. By choosing the "
+"correct projection, you can ensure that the features on your map are being "
+"represented accurately."
+msgstr ""
+"목적에 따라 유용한 투영체도 달라집니다. 올바른 투영체를 선택함으로써 사용자 맵 상에 피처를 정확하게 표현할 수 있게 됩니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:225
+msgid "|FR|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:233
+msgid "|WN|"
+msgstr ""

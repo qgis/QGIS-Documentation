@@ -1,0 +1,923 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Báthory Péter <bathory86p@gmail.com>, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:5
+msgid "Working with Projections"
+msgstr "Vetületek"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:14
+msgid ""
+"A Coordinate Reference System, or CRS, is a method of associating numerical "
+"coordinates with a position on the surface of the Earth. QGIS has support "
+"for approximately 7,000 standard CRSs, each with different use cases, pros "
+"and cons! Choosing an appropriate reference system for your QGIS projects "
+"and data can be a complex task, but fortunately QGIS helps guide you through"
+" this choice, and makes working with different CRSs as transparent and "
+"accurate as possible."
+msgstr ""
+"A koordináta-rendszer (Coordinate Reference System, röviden CRS) egy a "
+"számszerű koordinátákat a Föld felületéhez társító módszer. A QGIS nagyjából"
+" 7000 szabványos koordináta-rendszert támogat, mindegyiket más-más "
+"felhasználási területre, azok előnyeivel és hátrányaival. A megfelelő "
+"vonatkozási rendszer kiválasztása a projektjeihez és adataihoz bonyolult "
+"feladat lehet, de szerencsére a QGIS segít a választásban, és a lehető "
+"legátláthatóbbá és pontosabbá teszi a különböző koordináta-rendszerekkel "
+"való munkát."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:25
+msgid "Overview of Projection Support"
+msgstr "A vetületi támogatás áttekintése"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:27
+msgid ""
+"QGIS has support for approximately 7,000 known CRSs. These standard CRSs are"
+" based on those defined by the European Petroleum Search Group (EPSG) and "
+"the Institut Geographique National de France (IGNF), and are made available "
+"in QGIS through the underlying \"Proj\" projection library. Commonly, these "
+"standard projections are identified through use of an authority:code "
+"combination, where the authority is an organisation name such as \"EPSG\" or"
+" \"IGNF\", and the code is a unique number associated with a specific CRS. "
+"For instance, the common WGS 84 latitude/longitude CRS is known by the "
+"identifier ``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``."
+msgstr ""
+"A QGIS nagyjából 7000 ismert koordináta-rendszert támogat. A szabványos "
+"koordináta-rendszerek a European Petroleum Search Group (EPSG) és az "
+"Institut Geographique National de France (IGNF) által meghatározottakon "
+"alapulnak, és elérhetőek a QGIS-ben a háttérben működő \"Proj\" vetületi "
+"könyvtáron keresztül. Általában ezeket a szabványos vetületeket egy "
+"hatóság:kód kombináció azonosítja, ahol a hatóság egy szervezet neve, mint "
+"az \"EPSG\" vagy \"IGNF\", a kód pedig a koordináta-rendszerhez rendelt "
+"egyedi szám. Például a leggyakoribb WGS 84 szélesség/hosszúság koordináta-"
+"rendszer az ``EPSG:4326`` azonosító alatt ismert, míg szabványos webes "
+"térkép koordináta-rendszer az ``EPSG:3857``."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:37
+msgid ""
+"Custom, user-created CRSs are stored in a user CRS database. See section "
+":ref:`sec_custom_projections` for information on managing your custom "
+"coordinate reference systems."
+msgstr ""
+"Az egyéni, felhasználó által létrehozott koorináta-rendszerek a felhasználói"
+" koordináta-rendszer adatbázisban vannak tárolva. Az egyéni koordináta-"
+"rendszerek kezeléséről az :ref:`sec_custom_projections` fejezetben talál "
+"további információt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
+msgid "Layer Coordinate Reference Systems"
+msgstr "Réteg koordináta-rendszerek"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
+msgid ""
+"In order to correctly project data into a specific target CRS, either your "
+"data must contain information about its coordinate reference system or you "
+"will need to manually assign the correct CRS to the layer. For PostGIS "
+"layers, QGIS uses the spatial reference identifier that was specified when "
+"that PostGIS layer was created. For data supported by GDAL, QGIS relies on "
+"the presence of a recognized means of specifying the CRS. For instance, for "
+"the Shapefile format this is a file containing an ESRI Well-Known Text "
+"(:index:`WKT`) representation of the layer's CRS. This projection file has "
+"the same base name as the :file:`.shp` file and a :file:`.prj` extension. "
+"For example, :file:`alaska.shp` would have a corresponding projection file "
+"named :file:`alaska.prj`."
+msgstr ""
+"Az adatok helyes cél koordináta-rendszerbe vetítéséhez vagy az adatban kell "
+"tartalmazza az információt a koordináta-rendszerről, vagy Önnek kell a "
+"réteghez a helyes koordináta-rendszert hozzárendelnie. PostGIS rétegek "
+"esetében a QGIS a PostGIS réteg létrehozásakor megadott térbeli "
+"vonatkoztatási rendszert használja. A GDAL által támogatott formátumok "
+"esetében a QGIS a koordináta-rendszert meghatározó erőforrások meglétére "
+"támaszkodik. Például Shapefile formátumnál ez egy fájl, ami ESRI Well-Known "
+"Text (:index:`WKT`) ábrázolja a réteg koordináta-rendszerét. Ennek a "
+"vetületfájlnak a neve megegyezik az :file:`.shp` fájléval, csak a "
+"kiterjesztése :file:`.prj`. Például az :file:`alaska.shp` megfelelő "
+"vetületfájlja az :file:`alaska.prj`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
+msgid ""
+"Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
+"determine the correct CRS for that layer. In some cases this is not "
+"possible, e.g. when a layer has been provided without retaining this "
+"information. You can configure QGIS behavior whenever it cannot "
+"automatically determine the correct CRS for a layer:"
+msgstr ""
+"Amikor egy réteget betöltenek a QGIS-be, a QGIS megpróbálja automatikusan "
+"meghatározni az adott réteghez a megfelelő koordináta-rendszert. Bizonyos "
+"esetekben ez nem lehetséges, például ha egy réteget ezen információ "
+"megőrzése nélkül mentettek. Beállíthatja, hogy a QGIS hogyan viselkedjen, "
+"amikor nem tudja automatikusan meghatározni a megfelelő koordináta-rendszert"
+" egy réteghez:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
+msgid ""
+"Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
+"CRS`"
+msgstr ""
+"Nyissa meg a :menuselection:`Beállítások -->` |options| "
+":menuselection:`Beállítások --> Koordináta-rendszer` lapot"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:415
+msgid "options"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
+msgid "The CRS tab in the QGIS Options Dialog"
+msgstr "A koordináta-rendszer fül a QGIS Beállítások párbeszédablakában"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:73
+msgid ""
+"Under the :guilabel:`CRS for layers` group, set the action to do "
+":guilabel:`when a new layer is created, or when a layer is loaded that has "
+"no CRS`. One of:"
+msgstr ""
+"A :guilabel:`Vetület a rétegekhez` csoport alatt válasszon egyet az "
+":guilabel:`Amikor új réteget hoz létre vagy ha a betöltésnél ismeretlen a "
+"koordináta-rendszer`. lehetőségei közül:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
+msgid ""
+"|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`: there "
+"will be no prompt to select a CRS when a layer without CRS is loaded, "
+"defering CRS choice to a later time. Convenient when loading a lot of layers"
+" at once. Such layers will be identifiable in the :guilabel:`Layers` panel "
+"by the |indicatorNoCRS| icon next to them. They'll also be un-referenced, "
+"with coordinates from the layer treated as purely numerical, non-earth "
+"values, i.e. the same behavior as all layers get when :ref:`a project is set"
+" to have no CRS <project_crs>`."
+msgstr ""
+"|radioButtonOn| :guilabel:`Koordináta-rendszer meghagyása ismeretlennek (ne tegyen semmit)`: nem fog rákérdezni a koordináta-rendszer kiválasztására, ha egy koordináta-rendszer nélküli réteget tölt be, így azt későbbi időpontra halasztja. Kényelmes, ha több réteget tölt be egyszerre. Az ilyen rétegek mellett a :guilabel:`Rétegek` panelen |indicatorNoCRS| ikon látható. Ezek a rétegek nem lesznek hivatkozva, a \n"
+"koordinátáikat pusztán számnak, Földtől független értéknek tekintjük, ami hasonló viselkedés, mint ami minden réteggel történik, ha :ref:`a projekt koordináta-rendszer nélkülinek van beállítva <project_crs>`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:419
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:413
+msgid "indicatorNoCRS"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
+msgid ""
+"|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to manually "
+"select the CRS. Selecting the correct choice is crucial, as a wrong choice "
+"will place your layer in the wrong position on the Earth's surface! "
+"Sometimes, accompanying metadata will describe the correct CRS for a layer, "
+"in other cases you will need to contact the original author of the data to "
+"determine the correct CRS to use."
+msgstr ""
+"|radioButtonOff| :guilabel:`Kérdezzen rá a koordináta-rendszerre`: fel fogja"
+" kínálni, hogy kézzel válasszon koordináta-rendszert. A helyes koordináta-"
+"rendszer kiválasztása kritikus, mert egy hibás döntéssel a réteg a Föld "
+"rossz helyére kerül! Néha a kísérő metaadatok közt megtalálható a réteg "
+"valódi koordináta-rendszere, más esetekben viszont kapcsolatba kell lépnie "
+"az adatok eredeti szerzővel, hogy meghatározza a megfelelő koordináta-"
+"rendszert."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:417
+msgid "radioButtonOff"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
+msgid "|radioButtonOff| :guilabel:`Use project CRS`"
+msgstr ""
+"|radioButtonOff| :guilabel:`Használja a projekt koordináta-rendszerét`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
+msgid ""
+"|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
+":guilabel:`Default CRS for layers` combobox above."
+msgstr ""
+"|radioButtonOff| :guilabel:`Használja az alapértelmezett réteg koordináta-"
+"rendszert`, ami be lett állítva fentebb az :guilabel:`Alapértelmezett "
+"vetület a rétegekhez` legördülő listában."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
+msgid ""
+"To assign the same CRS to multiple layers that have no crs or have a wrong "
+"one in one operation:"
+msgstr ""
+"Ha egyszerre szeretné több réteghez hozzárendelni ugyanazt a koordináta-"
+"rendszert (mert nincs nekik, vagy rossz van beállítva):"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
+msgid "Select the layers in the :guilabel:`Layers` panel"
+msgstr "Válassza ki a rétegeket a :guilabel:`Rétegek` panelen"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
+msgid ""
+"Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
+"selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
+msgstr ""
+"Nyomjon :kbd:`Ctrl+Shift+C` billentyűkombinációt. Kattinthat az egyik "
+"rétegre is jobb egérgombbal, vagy használhatja a :menuselection:`Rétegek -->"
+" Réteg koordináta-rendszer beállítása` menüpontot"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
+msgid "Find and select the right CRS to use"
+msgstr "Keresse meg és válassza ki használandó helyes koordináta-rendszert"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
+msgid ""
+"And press :guilabel:`OK`. You can confirm that it has been set correctly in "
+"the :guilabel:`Source` tab of the layers' properties dialog."
+msgstr ""
+"Majd nyomjon :guilabel:`OK` gombot. A rétegek tulajdonságai párbeszédpanel "
+":guilabel:`Forrás` fülén ellenőrizheti, hogy megfelelően lett-e beállítva."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
+msgid ""
+"Note that changing the CRS in this setting does not alter the underlying "
+"data source in any way, rather it just changes how QGIS interprets the raw "
+"coordinates from the layer in the current QGIS project."
+msgstr ""
+"Vegye figyelembe, hogy a CRS módosítása ebben a beállításban semmilyen módon"
+" nem változtatja meg a mögöttes adatforrást, csak azt módosítja, hogy a QGIS"
+" hogyan értelmezze a réteg nyers koordinátáit az aktuális QGIS projekten "
+"belül."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
+msgid "Project Coordinate Reference Systems"
+msgstr "Projekt koordináta-rendszerek"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:119
+msgid ""
+"Every project in QGIS also has an associated Coordinate Reference System. "
+"The project CRS determines how data is projected from its underlying raw "
+"coordinates to the flat map rendered within your QGIS map canvas."
+msgstr ""
+"A QGIS-ben minden projekthez hozzá van rendelve koordináta-rendszer. Ez "
+"határozza meg azt, hogy az adatok nyers koordinátáit miként kell a QGIS "
+"térképvásznának lapos térképére vetítve megjeleníteni."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:123
+msgid ""
+"QGIS supports \"on the fly\" CRS transformation for both raster and vector "
+"data. This means that regardless of the underlying CRS of particular map "
+"layers in your project, they will always be automatically transformed into "
+"the common CRS defined for your project. Behind the scenes, QGIS "
+"transparently reprojects all layers contained within your project into the "
+"project's CRS, so that they will all be rendered in the correct position "
+"with respect to each other!"
+msgstr ""
+"A QGIS a vektoros és raszteres adatoknál is támogatja az úgynevezett  "
+"„röptében” transzformálást. Ez azt jelenti, hogy függetlenül a projektben "
+"lévő rétegek koordináta-rendszereitől mind automatikusan a projektben "
+"megadott közös koordináta-rendszerbe lesz transzformálva. A háttérben a QGIS"
+" láthatatlan módon újravetíti a projektben lévő összes réteget a projekt "
+"koordináta-rendszerébe, így azok megjelenítésnél egymáshoz képest a "
+"megfelelő pozícióba kerülnek."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
+msgid ""
+"It is important to make an appropriate choice of CRS for your QGIS projects."
+" Choosing an inappropriate CRS can cause your maps to look distorted, and "
+"poorly reflect the real-world relative sizes and positions of features. "
+"Usually, while working in smaller geographic areas, there will be a number "
+"of standard CRSs used within a particular country or administrative area. "
+"It's important to research which CRSs are appropriate or standard choices "
+"for the area you are mapping, and ensure that your QGIS project follows "
+"these standards."
+msgstr ""
+"Fontos, hogy a QGIS projektjeihez megfelelő koordináta-rendszert válasszon. "
+"Ha nem megfelelőt választ, a térképek torzultan fognak kinézni és rosszul "
+"fogják tükrözik az elemek valós, relatív méretét és helyzetét. A kisebb "
+"földrajzi területeken végzett munka során rendszerint számos szabványos "
+"koordináta-rendszer van használatban egy adott országon vagy közigazgatási "
+"területen belül. Fontos dolog utánajárni annak, hogy az adott területen mely"
+" koordináta-rendszerek az alkalmasak és szabványosak, és gondoskodjon róla, "
+"hogy a QGIS projektje megfeleljen ezeknek a szabványoknak."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:140
+msgid ""
+"By default, QGIS starts each new project using a global default projection. "
+"This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"), and it is a "
+"global latitude/longitude based reference system. This default CRS can be "
+"changed via the :guilabel:`CRS for New Projects` setting in the "
+":guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
+":menuselection:`Options...` (see :numref:`figure_projection_options`). There"
+" is an option to automatically set the project's CRS to match the CRS of the"
+" first layer loaded into a new project, or alternatively you can select a "
+"different default CRS to use for all newly created projects. This choice "
+"will be saved for use in subsequent QGIS sessions."
+msgstr ""
+"Alapértelmezés szerint a QGIS minden új projektet egy globális, "
+"alapértelmezett vetületben indít. Ez az alapértelmezett koordináta-rendszer "
+"az ``EPSG:4326`` (más néven \"WGS 84\"), ami egy globális "
+"szélesség/hosszúság alapú vonatkozási rendszer. Ez az alapértelmezés "
+"megváltoztatható a  :menuselection:`Beállítások -->` |options| "
+":menuselection:`Beállítások…` párbeszédablak :guilabel:`Koordináta-rendszer`"
+" fülén a :guilabel:`Vetület az új projektekhez` beállítás alatt (lásd még "
+":numref:`figure_projection_options`). Az egyik lehetőség, hogy a projekt "
+"koordináta-rendszerét automatikusan úgy állítsa be, hogy az megfeleljen az "
+"új projektbe betöltött első réteg koordináta-rendszerének, vagy választhat "
+"egy másik alapértelmezett koordináta-rendszert az összes újonnan létrehozott"
+" projekthez. Ez a választás mentésre kerül a következő QGIS munkamenetekben "
+"való használatra is."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
+msgid ""
+"The project CRS can also be set through the :guilabel:`CRS` tab of the "
+":menuselection:`Project --> Properties...` dialog. It will also be shown in "
+"the lower-right of the QGIS status bar."
+msgstr ""
+"A projekt koordináta-rendszere a :menuselection:`Projekt --> Tulajdonságok` "
+"párbeszédablakban is beállítható. Ez a QGIS állapotsorának jobb alsó "
+"sarkában is megjelenik."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
+msgid "Project Properties Dialog"
+msgstr "A projekt tulajdonságai párbeszédablak"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
+msgid "Available options are:"
+msgstr "A lehetőségek a következők:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:164
+msgid ""
+"|unchecked| :guilabel:`No CRS (or unknown/non-Earth projection)`: Checking "
+"this setting will disable ALL projection handling within the QGIS project, "
+"causing all layers and map coordinates to be treated as simple 2D Cartesian "
+"coordinates, with no relation to positions on the Earth's surface. It can be"
+" used to guess a layer CRS (based on its raw coordinates or when using QGIS "
+"for non earth uses like role-playing game maps, building mapping or "
+"microscopic stuff. In this case:"
+msgstr ""
+"|unchecked| :guilabel:`Nincs vetület (vagy ismeretlen/nem földi vetület)`: A"
+" kipipálása letilt minden vetületkezelést a projekten belül, így az összes "
+"réteg és térkép koordináta egyszerű 2D-s derékszögű koordinátákként lesz "
+"kezelve, amelyek nincsenek összefüggésben a Föld felszínén lévő pontokkal. "
+"Ez használható a réteg koordináta-rendszerének kitalálására (a nyers "
+"koordinátái alapján) vagy amikor a QGIS-t a Földtől független célra "
+"használják, mint amilyen a szerepjáték térképek, épületek, mikroszkopikus "
+"dolgok térképezése. Ez esetben:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
+msgid ""
+"No reprojection is done while rendering the layers: features are just drawn "
+"using their raw coordinates."
+msgstr ""
+"A réteg megjelenítésekor nem történik újravetítés: az elemek a nyers "
+"koordinátáik alapján lesznek kirajzolva."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
+msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
+msgstr ""
+"Az ellipszoid zárolva van és „Nincs/Planimetrikus” módba kényszerítve."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
+msgid ""
+"The distance and area units, and the coordinate display are locked out and "
+"forced to \"unknown units\"; all measurements are done in unknown map units,"
+" and no conversion is possible."
+msgstr ""
+"A távolság és terület mértékegységek, valamint a koordinátamegjelenítés "
+"zárolva vannak, és kényszerítve az „ismeretlen mértékegység”. Az összes "
+"mérés ismeretlen térképi egységben történik és nincs lehetőség konverzióra."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
+msgid ""
+"or an existing coordinate reference system that can be *geographic*, "
+"*projected* or *user-defined*. A preview of the CRS extent on earth is "
+"displayed to help you select the appropriate one. Layers added to the "
+"project are translated on-the-fly to this CRS in order to overlay them "
+"regardless their original CRS. Use of units and ellipsoid setting are "
+"available and make sense and you can perform calculations accordingly."
+msgstr ""
+"vagy egy meglévő koordináta-rendszer, ami lehet „földrajzi”, „vetített”, "
+"vagy „felhasználó által definiált”. A megfelelő kiválasztásában segít, hogy "
+"a koordináta-rendszer kiterjedésének előnézete megjelenik a Föld térképén. A"
+" projekthez adott rétegek röptében lesznek lefordítva erre a koordináta-"
+"rendszerre, hogy az eredeti koordináta-rendszerüktől függetlenül fedjék "
+"egymást. A mértékegységek használata és az ellipszoid beállítás elérhető és "
+"van is értelme, ezeknek megfelelően végezhet számításokat."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
+msgid ""
+"Whenever you select a new CRS for your QGIS project, the measurement units "
+"will automatically be changed in the :guilabel:`General` tab of the "
+":guilabel:`Project properties` dialog (:menuselection:`Project --> "
+"Properties...`) to match the selected CRS. For instance, some CRSs define "
+"their coordinates in feet instead of meters, so setting your QGIS project to"
+" one of these CRSs will also set your project to measure using feet by "
+"default."
+msgstr ""
+"Amikor egy QGIS projekthez új koordináta-rendszert választ, mérések "
+"mértékegységei automatikusan módosulnak a :guilabel:`Projekt tulajdonságok` "
+"párbeszédablak :guilabel:`Általános` lapján (:menuselection:`Projekt --> "
+"Tulajdonságok…`), hogy megfeleljenek a kiválasztott koordináta-rendszernek. "
+"Például egyes koordináta-rendszerek a koordinátáikat méter helyett lábban "
+"határozzák meg, így a QGIS projektben egy ilyen koordináta-rendszert "
+"kiválasztva a projektet is alapértelmezés szerint lábban mérésre állítja be."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
+msgid "**Setting the project CRS from a layer**"
+msgstr "**Projekt koordináta-rendszerének beállítása egy rétegből**"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
+msgid "You can assign a CRS to the project using a layer CRS:"
+msgstr ""
+"Hozzárendelhet a projekthez koordináta-rendszert egy réteg koordináta-"
+"rendszere alapján is:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
+msgid ""
+"In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
+"the CRS"
+msgstr ""
+"A :guilabel:`Rétegek` panelen kattintson jobb egérgombbal arra a rétegre, "
+"amiből a koordináta-rendszert venni szeretné"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
+msgid "Select :guilabel:`Set project CRS from Layer`."
+msgstr ""
+"Válassza a :guilabel:`Projekt vetület beállítása a rétegből` menüpontot."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:201
+msgid ""
+"The project's CRS is redefined using the layer's CRS. Map canvas extent, "
+"coordinates display are updated accordingly and all the layers in the "
+"project are on-the-fly translated to the new project CRS."
+msgstr ""
+"A projekt koordináta-rendszere módosul a rétegére. A térképvászon "
+"kiterjedése, a koordinátamegjelenítés ennek megfelelően frissül és a projekt"
+" összes rétege röptében át lesz számolva az új koordináta-rendszerbe."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
+msgid "Coordinate Reference System Selector"
+msgstr "Koordináta-rendszer választó"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:212
+msgid ""
+"This dialog helps you assign a Coordinate Reference System to a project or a"
+" layer, provided a set of projection databases. Items in the dialog are:"
+msgstr ""
+"Ez a párbeszédablak vetületi adatbázisokat biztosítva segít koordináta-"
+"rendszert rendelni egy projekthez vagy réteghez. A párbeszédablak elemei a "
+"következők:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:215
+msgid ""
+"**Filter**: If you know the EPSG code, the identifier, or the name for a "
+"Coordinate Reference System, you can use the search feature to find it. "
+"Enter the EPSG code, the identifier or the name."
+msgstr ""
+"**Szűrő**: Ha tudja a koordináta-rendszer EPSG-kódját, azonosítóját vagy "
+"nevét, kereshet ezekre. Adja meg az EPSG-kódot, azonosítót, vagy a nevet."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:218
+msgid ""
+"**Recently used coordinate reference systems**: If you have certain CRSs "
+"that you frequently use in your everyday GIS work, these will be displayed "
+"in this list. Click on one of these items to select the associated CRS."
+msgstr ""
+"**Korábban használt koordináta-rendszerek**: Ha vannak olyan koordináta-"
+"rendszerek, melyeket gyakran használ a mindennapos térinformatikai munkája "
+"során, azok meg fognak jelenni ebben a listában. Kattintson egy elemre a "
+"hozzárendelt koordináta-rendszer kiválasztásához."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:221
+msgid ""
+"**Coordinate reference systems of the world**: This is a list of all CRSs "
+"supported by QGIS, including Geographic, Projected and Custom coordinate "
+"reference systems. To define a CRS, select it from the list by expanding the"
+" appropriate node and selecting the CRS. The active CRS is preselected."
+msgstr ""
+"**A Világ koordináta-rendszerei**: Ez a QGIS által támogatott koordináta-"
+"rendszerek listája, beleértve a földrajziakat, vetítetteket és az "
+"egyénieket. Koordináta-rendszer megadásához válassza ki a listából lenyitva "
+"a megfelelő kategóriát. Az aktív koordináta-rendszer előre ki van választva."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:225
+msgid ""
+"**PROJ text**: This is the CRS string used by the PROJ projection engine. "
+"This text is read-only and provided for informational purposes."
+msgstr ""
+"**PROJ szöveg**: Ez a PROJ vetületi motor által használt koordináta-rendszer"
+" definíciós szöveg. Ez a szöveg csak olvasható, és tájékoztató jellegű."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:228
+msgid ""
+"The CRS selector also shows a rough preview of the geographic area for which"
+" a selected CRS is valid for use. Many CRSs are designed only for use in "
+"small geographic areas, and you should not use these outside of the area "
+"they were designed for. The preview map shades an approximate area of use "
+"whenever a CRS is selected from the list. In addition, this preview map also"
+" shows an indicator of the current main canvas map extent."
+msgstr ""
+"A koordináta-rendszer választó egy hozzávetőleges előnézetet is megjelenít "
+"arról a földrajzi területről, amelyen a kiválasztott koordináta-rendszer "
+"használható. Sok koordináta-rendszert csak kis földrajzi területeken való "
+"használatra terveztek, ezeket nem tanácsos azon a területen kívül használni."
+" Amikor kiválaszt egy CRS-t a listából, az előnézeti térkép kiemeli a "
+"hozzávetőleges használati területet. Ezenkívül ez az előnézeti térkép az "
+"aktuális fő térképvászon aktuális kiterjedését is megjelöli."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
+msgid "Custom Coordinate Reference System"
+msgstr "Egyéni koordináta-rendszer"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:243
+msgid ""
+"If QGIS does not provide the coordinate reference system you need, you can "
+"define a custom CRS. To define a CRS, select |customProjection| "
+":guilabel:`Custom CRS...` from the :menuselection:`Settings` menu. Custom "
+"CRSs are stored in your QGIS user database. In addition to your custom CRSs,"
+" this database also contains your spatial bookmarks and other custom data."
+msgstr ""
+"Ha a QGIS nem ismeri azt a koordináta-rendszert, amire szüksége lenne, "
+"definiálhat egy sajátot. Ehhez kattintson a :menuselection:`Beállítások` "
+"menü select |customProjection| :guilabel:`Egyéni vetületek…` menüpontjára. "
+"Az egyéni koordináta-rendszerek a QGIS felhasználói adatbázisában "
+"tárolódnak. Az egyéni koordináta-rendszereken kívül ez az adatbázis "
+"tartalmazza a térbeli könyvjelzőket és a többi egyéni adatot."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:411
+msgid "customProjection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:249
+msgid ""
+"Defining a custom CRS in QGIS requires a good understanding of the PROJ "
+"projection library. To begin, refer to \"Cartographic Projection Procedures "
+"for the UNIX Environment - A User's Manual\" by Gerald I. Evenden, U.S. "
+"Geological Survey Open-File Report 90-284, 1990 (available at "
+"https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
+msgstr ""
+"Egyéni CRS meghatározása a QGIS-ben megköveteli a PROJ vetületi könyvtár "
+"alapos ismeretét. Kezdésként tekintse meg a „Kartográfiai vetületi eljárások"
+" UNIX környezethez – Egy felhasználó kézikönyve” című írást Gerald I. "
+"Evendentől, U.S. Geological Survey Open-File Report 90-284, 1990 (elérhető "
+"itt: https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:255
+msgid ""
+"This manual describes the use of ``proj`` and related command line "
+"utilities. The cartographic parameters used with ``proj`` are described in "
+"the user manual and are the same as those used by QGIS."
+msgstr ""
+"Ez a kézikönyv a ``proj`` és a kapcsolódó parancssori segédprogramok "
+"használatát írja le. A ``proj``-hoz használt kartográfiai paraméterek "
+"leírása a felhasználói kézikönyvben található, és megegyeznek a QGIS által "
+"használtakkal."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:259
+msgid ""
+"The :guilabel:`Custom Coordinate Reference System Definition` dialog "
+"requires only two parameters to define a user CRS:"
+msgstr ""
+"Az :guilabel:`Egyéni koordináta-rendszer párbeszédablak` csak két paraméter "
+"megadását igényli a koordináta-rendszer definiálásához:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:262
+msgid "A descriptive name"
+msgstr "Egy beszédes név"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:263
+msgid "The cartographic parameters in PROJ or WKT format"
+msgstr "A kartográfiai paraméterek PROJ vagy WKT formátumban"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:265
+msgid "To create a new CRS:"
+msgstr "Új koordináta-rendszer készítéséhez:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
+msgid "Click the |symbologyAdd| :sup:`Add new CRS` button"
+msgstr ""
+"Kattintson az |symbologyAdd| :sup:`Új koordináta-rendszer hozzáadása` gombra"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:423
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:268
+msgid "Enter a descriptive name"
+msgstr "Adjon meg egy beszédes nevet"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:269
+msgid ""
+"Select the format: it can be :guilabel:`Proj String` or :guilabel:`WKT`"
+msgstr ""
+"Válassza ki a formátumot: ez lehet :guilabel:`Proj karakterlánc` vagy "
+":guilabel:`WKT`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:270
+msgid "Add the CRS :guilabel:`Parameters`."
+msgstr "Adja meg a koordináta-rendszer :guilabel:`Paramétereket`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:272
+msgid "**Prefer storing the CRS definition in WKT format**"
+msgstr "**Inkább WKT formátumban tárolja a CRS definíciót**"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:274
+msgid ""
+"Although both ``Proj String`` and ``WKT`` formats are supported, it's highly"
+" recommended to store projection definitions in the WKT format. Therefore, "
+"if the available definition is in the proj format, select that format, enter"
+" the parameters and then switch to WKT format. QGIS will convert the "
+"definition to the WKT format that you can later save."
+msgstr ""
+"Bár a ``Proj karakterlánc`` és a ``WKT`` formátumok is támogatottak, erősen "
+"ajánlott a vetületi definíciók WKT formátumban történő tárolása. Ezért, ha a"
+" definíció proj formátumban érhető el, válassza ki azt a formátumot, adja "
+"meg a paramétereket, majd váltson WKT formátumra. A QGIS átalakítja a "
+"definíciót WKT formátumba, amelyet később elmenthet."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:280
+msgid ""
+"Click :guilabel:`Validate` to test whether the CRS definition is an "
+"acceptable projection definition."
+msgstr ""
+"Kattintson az :guilabel:`Ellenőrzés` gombra, amivel ellenőrizheti, hogy a "
+"megadott koordináta-rendszer definíció elfogadható vetület definíció-e."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:288
+msgid "Custom CRS Dialog"
+msgstr "Egyéni koordináta-rendszer párbeszédablak"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:291
+msgid ""
+"You can test your CRS parameters to see if they give sane results. To do "
+"this, enter known WGS 84 latitude and longitude values in :guilabel:`North` "
+"and :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, "
+"and compare the results with the known values in your coordinate reference "
+"system."
+msgstr ""
+"A koordináta-rendszer paraméterek tesztelésével megbizonyosodhat arról, hogy"
+" azok értelmes eredményt adnak. Ehhez adja meg egy ismert hely WGS 84 "
+"szélesség és hosszúság koordinátát az :guilabel:`Észak` és :guilabel:`Kelet`"
+" mezőkben. Kattintson a :guilabel:`Számít` gombra, majd hasonlítsa össze az "
+"eredményt a koordináta-rendszerében lévő ismert értékekkel."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:297
+msgid "Integrate an NTv2-transformation in QGIS"
+msgstr "NTv2 transzformáció integrálása QGIS-be"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:299
+msgid ""
+"To integrate an NTv2 transformation file in QGIS you need one more step:"
+msgstr ""
+"Ahhoz, hogy a QGIS-t NTv2 transzformációs fájllal egészítse ki, egy további "
+"lépésre lesz szüksége:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:301
+msgid ""
+"Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
+":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
+msgstr ""
+"Helyezze el az NTv2 fájlt (.gsb) a QGIS által használt CRS/Proj könyvtárában"
+" (pl. :file:`C:\\\\OSGeo4W64\\\\share\\\\proj` Windows felhasználó esetében)"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:303
+msgid ""
+"Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition in"
+" the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate "
+"Reference System Definition` (:menuselection:`Settings --> Custom "
+"Projections...`)."
+msgstr ""
+"Adja hozzá a Proj definícióhoz a **nadgrids** (``+nadgrids=fájlneve.gsb``) "
+"paramétert az :guilabel:`Egyéni vetület` :guilabel:`Paraméterek` mezőjében "
+"(:menuselection:`Beállítások --> Egyéni vetületek…`)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:312
+msgid "Setting an NTv2 transformation"
+msgstr "Egy NTv2 transzformáció beállítása"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:319
+msgid "Datum Transformations"
+msgstr "Dátumtranszformációk"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:321
+msgid ""
+"In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that"
+" whenever you use layers with different coordinate systems QGIS "
+"transparently reprojects them to the project CRS. For some CRS, there are a "
+"number of possible transforms available to reproject to the project's CRS!"
+msgstr ""
+"A QGIS-ben alapértelmezés szerint engedélyezett a „röptében” transzformálás,"
+" ami azt jelenti, hogy amikor különböző koordinátarendszerben lévő rétegeket"
+" használ, a háttérben a QGIS újravetíti azokat a projekt koordináta-"
+"rendszerébe."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:326
+msgid ""
+"By default, QGIS will attempt to use the most accurate transformation "
+"available. However, in some cases this may not be possible, e.g. whenever "
+"additional support files are required to use a transformation. Whenever a "
+"more accurate transformation is available, but is not currently usable, QGIS"
+" will show an informative warning message advising you of the more accurate "
+"transformation and how to enable it on your system. Usually, this requires "
+"download of an external package of transformation support files, and "
+"extracting these to the :file:`proj` folder under your QGIS :ref:`user "
+"profile <user_profiles>` folder."
+msgstr ""
+"Alapértelmezésben a QGIS az elérhető legpontosabb transzformációt próbálja "
+"használni. Ez azonban bizonyos esetekben nem lehetséges, például amikor egy "
+"transzformáció használatához további támogatási fájlokra van szükség. Amikor"
+" elérhető pontosabb transzformáció, de jelenleg nem használható, a QGIS egy "
+"figyelmeztetést jelenít meg, amely tájékoztat a pontosabb átalakításról és "
+"az engedélyezésének módjáról. Ehhez általában le kell tölteni egy külső "
+"csomagot a transzformációt biztosító támogatási fájlokkal és kicsomagolni a "
+"QGIS :ref:`felhasználói profil <user_profiles>` könyvtár alatti :file:`proj`"
+" könyvtárba."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:336
+msgid ""
+"If desired, QGIS can also prompt you whenever multiple possible "
+"transformations can be made between two CRSs, and allow you to make an "
+"informed selection of which is the most appropriate transformation to use "
+"for your data."
+msgstr ""
+"Igény esetén a QGIS arra is tud figyelmeztetni, ha két koordináta-rendszer "
+"között több lehetséges átalakítás is létezik, és segít tudatos döntést hozni"
+" az adathoz legmegfelelőbb transzformáció kiválasztásában."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:340
+msgid ""
+"This customization is done in the :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> Transformations` tab menu under the "
+":guilabel:`Default datum transformations` group:"
+msgstr ""
+"A testreszabást a :menuselection:`Beállítások -->` |options| "
+":menuselection:`Beállítások… --> Transzformációk` lapon az "
+":guilabel:`Alapértelmezett dátumtranszformációk` alatt lehet elvégezni:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:344
+msgid ""
+"using |checkbox| :guilabel:`Ask for datum transformation if several are "
+"available`: when more than one appropriate datum transformation exist for a "
+"source/destination CRS combination, a dialog will automatically be opened "
+"prompting users to choose which of these datum transformations to use for "
+"the project. If the :guilabel:`Make default` checkbox is ticked when "
+"selecting a transformation from this dialog, then the choice is remembered "
+"and automatically applied to any newly created QGIS projects."
+msgstr ""
+"a |checkbox| :guilabel:`Rákérdezés a dátumtranszformációra, ha több is "
+"rendelkezésre áll` használatával: ha egy forrás–cél koordináta-rendszer "
+"pároshoz több dátumtranszformáció is megfelelő, automatikusan megnyílik egy "
+"párbeszédablak, amely megkérdezi, hogy a dátumtranszformációk közül melyik "
+"legyen használva a projektben. Ha a transzformáció kiválasztásakor ki van "
+"pipálva az :guilabel:`Alapértelmezetté tesz` lehetőség, a QGIS emlékezni fog"
+" a választásra és automatikusan alkalmazni fogja minden újonnan létrehozott "
+"projektben."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:351
+msgid ""
+"or defining a list of appropriate datum transformations to use as defaults "
+"when loading a layer to a project or reprojecting a layer."
+msgstr ""
+"vagy a megfelelő dátumtranszformációk listájának definiálásával, amelyek "
+"alapértelmezettként használhatók egy réteg projektbe való betöltésekor vagy "
+"egy réteg újravetítésekor."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:354
+msgid ""
+"Use the |symbologyAdd| button to open the :guilabel:`Select Datum "
+"Transformations` dialog. Then:"
+msgstr ""
+"Használja a |symbologyAdd| gombot a :guilabel:`Dátumtranszformációk "
+"választása` párbeszédablak megnyitásához. Ezután:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:357
+msgid ""
+"Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu or "
+"the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"Válassza ki a réteg :guilabel:`Forrás CRS`-ét a legördülőlistából, vagy a "
+"|setProjection| :sup:`Koordináta-rendszer kiválasztása` gombbal."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:421
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:359
+msgid "Provide the :guilabel:`Destination CRS` in the same way."
+msgstr "Adja meg hasonló módon a :guilabel:`Cél CRS`-t."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:360
+msgid ""
+"A list of available transformations from source to destination will be shown"
+" in the table. Clicking a row shows details on the settings applied and the "
+"corresponding accuracy and area of use of the transformation."
+msgstr ""
+"Az elérhető forrásból célba transzformálások listája látható lesz a "
+"táblázatban. Egy sorra kattintva megjelennek a transzformáció részletei az "
+"alkalmazott beállításokról, az elérhető pontosságról és a felhasználási "
+"területről."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:370
+msgid "Selecting a preferred default datum transformation"
+msgstr "Előnyben részesített alapértelmezett dátumtranszformáció kiválasztása"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:372
+msgid ""
+"In some cases a transformation may not be available for use on your system. "
+"In this case, the transformation will still be shown (greyed) in this list "
+"but can not be picked until you install the required package of "
+"transformation support. Usually, a button is provided to download and "
+"install the corresponding grid, which is then stored under the :file:`proj` "
+"folder in the active :ref:`user profile <user_profiles>` directory."
+msgstr ""
+"Egyes esetekben a előfordulhat, hogy a transzformáció nem végezhető el az Ön"
+" rendszerén. Ilyen esetekben a transzformáció megjelenik a listában "
+"(szürkén), de nem lehet kiválasztani, amíg a szükséges transzformációt "
+"támogató fájlok nincsenek telepítve. Általában található a felületen egy "
+"gomb a megfelelő rácsháló letöltéséhez, amely aztán az aktuális "
+":ref:`felhasználói profil <user_profiles>` :file:`proj` mappájában lesz "
+"eltárolva."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
+msgid "Find your preferred transformation and select it"
+msgstr "Keresse meg és válassza ki a kívánt transzformációt"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:380
+msgid ""
+"Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred"
+" operation fails`"
+msgstr ""
+"Igény szerint állítsa be a |checkbox| :guilabel:`Tartalék transzformációk "
+"engedélyezése` lehetőséget"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:382
+msgid "Click :guilabel:`OK`."
+msgstr "Kattintson az :guilabel:`OK` gombra."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:384
+msgid ""
+"A row is added to the table under :guilabel:`Default Datum Transformations` "
+"with information about the :guilabel:`Source CRS`, the "
+":guilabel:`Destination CRS`, the :guilabel:`Operation` applied for the "
+"transformation and whether :guilabel:`Allow fallback Transforms` is enabled."
+msgstr ""
+"Az :guilabel:`Alapértelmezett dátumtranszformációk` táblázatban új sor jön "
+"létre, mutatva :guilabel:`Forrás CRS` és :guilabel:`Cél CRS` azonosítójá, a "
+"transzformációban használt :guilabel:`Művelet`-et és hogy be van-e jelölve a"
+" :guilabel:`Tartalék transzformációk engedélyezése`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:389
+msgid ""
+"From now, QGIS automatically uses the selected datum transformations for "
+"further transformation between these two CRSs until you remove it "
+"(|symbologyRemove|) from the list or change the entry (|toggleEditing|) in "
+"the list."
+msgstr ""
+"Innentől a QGIS automatikusan tudja használni a kiválasztott "
+"dátumtranszformációkat a későbbi, a két koordináta-rendszer közötti "
+"transzformációk során. A lista elemeit törölheti (|symbologyRemove|) vagy "
+"szerkesztheti (|toggleEditing|)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:425
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:427
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:394
+msgid ""
+"Datum transformations set in the :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> Transformations` tab will be inherited by all "
+"new QGIS projects created on the system. Additionally, a particular project "
+"may have its own specific set of transformations specified via the "
+":guilabel:`CRS` tab of the :guilabel:`Project properties` dialog "
+"(:menuselection:`Project --> Properties...`). These settings apply to the "
+"current project only."
+msgstr ""
+"A :menuselection:`Beállítások -->` |options| :menuselection:`Beállítások… "
+"--> Transzformációk` lapon lévő transzformációkat az összes újonnan "
+"létrehozott QGIS projekt megörökli. Továbbá egy adott projektnek lehetnek "
+"saját transzformációi is, amiket a :guilabel:`Projekt tulajdonságok` "
+"párbeszédablak :guilabel:`Koordináta-rendszer` lapján lehet megadni "
+"(:menuselection:`Projekt --> Tulajdonságok…`). Ezek a beállítások csak az "
+"aktuális projektre érvényesek."

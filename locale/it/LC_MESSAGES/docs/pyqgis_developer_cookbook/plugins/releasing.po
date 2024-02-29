@@ -1,0 +1,326 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:5
+msgid "Releasing your plugin"
+msgstr "Rilasciare il tuo plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:12
+msgid ""
+"Once your plugin is ready and you think the plugin could be helpful for some"
+" people, do not hesitate to upload it to :ref:`official_pyqgis_repository`. "
+"On that page you can also find packaging guidelines about how to prepare the"
+" plugin to work well with the plugin installer. Or in case you would like to"
+" set up your own plugin repository, create a simple XML file that will list "
+"the plugins and their metadata."
+msgstr ""
+"Una volta che il tuo plugin è pronto e pensi che possa essere utile a "
+"qualcuno, non esitare a caricarlo su :ref:`official_pyqgis_repository`. In "
+"quella pagina puoi trovare anche le linee guida su come preparare il plugin "
+"per farlo funzionare bene con l'installatore di plugin. Oppure, nel caso in "
+"cui vuoi creare un tuo repository di plugin, crea un semplice file XML che "
+"elenchi i plugin e i relativi metadati."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:19
+msgid "Please take special care to the following suggestions:"
+msgstr "Presta particolare attenzione ai seguenti suggerimenti:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:22
+msgid "Metadata and names"
+msgstr "Metadati e nomi"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:24
+msgid "avoid using a name too similar to existing plugins"
+msgstr ""
+"evita di utilizzare un nome troppo simile a quello di plugin esistenti"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:25
+msgid ""
+"if your plugin has a similar functionality to an existing plugin, please "
+"explain the differences in the About field, so the user will know which one "
+"to use without the need to install and test it"
+msgstr ""
+"se il tuo plugin ha una funzionalità simile a quella di un plugin esistente,"
+" spiega le differenze nel campo About, in modo che l'utente sappia quale "
+"utilizzare senza doverlo installare e testare"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:26
+msgid "avoid repeating \"plugin\" in the name of the plugin itself"
+msgstr "evita di ripetere \"plugin\" nel nome del plugin stesso"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:27
+msgid ""
+"use the description field in metadata for a 1 line description, the About "
+"field for more detailed instructions"
+msgstr ""
+"utilizza il campo Descrizione nei metadati per una descrizione di 1 linea, "
+"il campo About per istruzioni più dettagliate"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:28
+msgid ""
+"include a code repository, a bug tracker, and a home page; this will greatly"
+" enhance the possibility of collaboration, and can be done very easily with "
+"one of the available web infrastructures (GitHub, GitLab, Bitbucket, etc.)"
+msgstr ""
+"includi un repository di codice, un bug tracker e una home page; questo "
+"aumenterà notevolmente le possibilità di collaborazione e può essere "
+"realizzato molto facilmente con una delle infrastrutture web disponibili "
+"(GitHub, GitLab, Bitbucket, ecc.)."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:29
+msgid ""
+"choose tags with care: avoid the uninformative ones (e.g. vector) and prefer"
+" the ones already used by others (see the plugin website)"
+msgstr ""
+"scegli con cura i tag: evita quelli poco informativi (ad es. vettoriali) e "
+"preferisci quelli già utilizzati da altri (vedi il sito web del plugin)"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:30
+msgid ""
+"add a proper icon, do not leave the default one; see QGIS interface for a "
+"suggestion of the style to be used"
+msgstr ""
+"aggiungi un'icona appropriata, non lasciare quella predefinita; vedi "
+"l'interfaccia di QGIS per un suggerimento sullo stile da usare"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:33
+msgid "Code and help"
+msgstr "Codice e guida"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:35
+msgid ""
+"do not include generated file (ui_*.py, resources_rc.py, generated help "
+"files…) and useless stuff (e.g. .gitignore) in repository"
+msgstr ""
+"non includere file generati (ui_*.py, resources_rc.py, file di aiuto "
+"generati...) e roba inutile (ad esempio .gitignore) nel repository"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:36
+msgid "add the plugin to the appropriate menu (Vector, Raster, Web, Database)"
+msgstr ""
+"aggiungi il plugin al menu appropriato (Vector, Raster, Web, Database)"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:37
+msgid ""
+"when appropriate (plugins performing analyses), consider adding the plugin "
+"as a subplugin of Processing framework: this will allow users to run it in "
+"batch, to integrate it in more complex workflows, and will free you from the"
+" burden of designing an interface"
+msgstr ""
+"quando è opportuno (plugin che eseguono analisi), valuta la possibilità di "
+"aggiungere il plugin come sottoplugin del framework Processing: ciò "
+"consentirà agli utenti di eseguirlo in batch, di integrarlo in flussi di "
+"lavoro più complessi e vi libererà dall'onere di progettare un'interfaccia"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:38
+msgid ""
+"include at least minimal documentation and, if useful for testing and "
+"understanding, sample data."
+msgstr ""
+"includi almeno una documentazione minima e, se utile per il test e la "
+"comprensione, dei dati di esempio."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:43
+msgid "Official Python plugin repository"
+msgstr "Repository ufficiale dei plugin Python"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:45
+msgid ""
+"You can find the *official* Python plugin repository at "
+"`<https://plugins.qgis.org/>`_."
+msgstr ""
+"Puoi trovare il repository *ufficiale* dei plugin Python all'indirizzo "
+"`<https://plugins.qgis.org/>`_."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:48
+msgid ""
+"In order to use the official repository you must obtain an OSGEO ID from the"
+" `OSGEO web portal <https://www.osgeo.org/community/getting-started-"
+"osgeo/osgeo_userid/>`_."
+msgstr ""
+"Per utilizzare il repository ufficiale devi ottenere un OSGEO ID dal portale"
+" web `OSGEO <https://www.osgeo.org/community/getting-started-"
+"osgeo/osgeo_userid/>`_."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:51
+msgid ""
+"Once you have uploaded your plugin it will be approved by a staff member and"
+" you will be notified."
+msgstr ""
+"Una volta che hai caricato il tuo plugin, questo verrà approvato da un "
+"membro dello staff e ti verrà notificato."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:55
+msgid "**TODO:**"
+msgstr "**DA FARE: **"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:55
+msgid "Insert a link to the governance document"
+msgstr "Inserisci un link al documento di governance"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:61
+msgid "Permissions"
+msgstr "Permessi"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:63
+msgid "These rules have been implemented in the official plugin repository:"
+msgstr ""
+"Queste regole sono state implementate nel repository ufficiale dei plugin:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:65
+msgid "every registered user can add a new plugin"
+msgstr "ogni utente registrato può aggiungere un nuovo plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:66
+msgid "*staff* users can approve or disapprove all plugin versions"
+msgstr ""
+"Gli utenti *staff* possono approvare o disapprovare tutte le versioni dei "
+"plugin."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:67
+msgid ""
+"users which have the special permission `plugins.can_approve` get the "
+"versions they upload automatically approved"
+msgstr ""
+"Gli utenti che hanno il permesso speciale `plugins.can_approve` fanno "
+"approvare automaticamente le versioni che caricano."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:69
+msgid ""
+"users which have the special permission `plugins.can_approve` can approve "
+"versions uploaded by others as long as they are in the list of the plugin "
+"*owners*"
+msgstr ""
+"Gli utenti che hanno il permesso speciale `plugins.can_approve` possono "
+"approvare le versioni caricate da altri, purché siano nell'elenco dei "
+"*proprietari* dei plugin."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:72
+msgid ""
+"a particular plugin can be deleted and edited only by *staff* users and "
+"plugin *owners*"
+msgstr ""
+"un determinato plugin può essere cancellato e modificato solo dagli utenti "
+"*staff* e dai *proprietari* di plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:74
+msgid ""
+"if a user without `plugins.can_approve` permission uploads a new version, "
+"the plugin version is automatically unapproved."
+msgstr ""
+"se un utente senza il permesso `plugins.can_approve` carica una nuova "
+"versione, la versione del plugin viene automaticamente non approvata."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:79
+msgid "Trust management"
+msgstr "Gestione del Trust"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:81
+msgid ""
+"Staff members can grant *trust* to selected plugin creators setting "
+"`plugins.can_approve` permission through the front-end application."
+msgstr ""
+"I membri dello staff possono concedere *trust* ai creatori di plugin "
+"selezionati impostando il permesso `plugins.can_approve` attraverso "
+"l'applicazione front-end."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:84
+msgid ""
+"The plugin details view offers direct links to grant trust to the plugin "
+"creator or the plugin *owners*."
+msgstr ""
+"La visualizzazione dei dettagli del plugin offre collegamenti diretti per "
+"concedere la fiducia al creatore del plugin o ai *proprietari* del plugin."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:90
+msgid "Validation"
+msgstr "Validazione"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:92
+msgid ""
+"Plugin's metadata are automatically imported and validated from the "
+"compressed package when the plugin is uploaded."
+msgstr ""
+"I metadati del plugin vengono importati e convalidati automaticamente dal "
+"pacchetto compresso quando il plugin viene caricato."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:95
+msgid ""
+"Here are some validation rules that you should aware of when you want to "
+"upload a plugin on the official repository:"
+msgstr ""
+"Ecco alcune regole di validazione che dovresti conoscere quando vuoi "
+"caricare un plugin sul repository ufficiale:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:98
+msgid ""
+"the name of the main folder containing your plugin must contain only ASCII "
+"characters (A-Z and a-z), digits and the characters underscore (_) and minus"
+" (-), also it cannot start with a digit"
+msgstr ""
+"il nome della cartella principale contenente il plugin deve contenere solo "
+"caratteri ASCII (A-Z e a-z), cifre e i caratteri underscore (_) e meno (-), "
+"inoltre non può iniziare con una cifra"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:101
+msgid ":file:`metadata.txt` is required"
+msgstr ":file:`metadata.txt` è richiesto"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:102
+msgid ""
+"all required metadata listed in :ref:`metadata table<plugin_metadata_table>`"
+" must be present"
+msgstr ""
+"tutti i metadati richiesti elencati in :ref:`metadata "
+"table<plugin_metadata_table>` devono essere presenti"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:104
+msgid "the `version` metadata field must be unique"
+msgstr "il campo di metadati `version` deve essere univoco"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:107
+msgid "Plugin structure"
+msgstr "Struttura Plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:109
+msgid ""
+"Following the validation rules the compressed (.zip) package of your plugin "
+"must have a specific structure to validate as a functional plugin. As the "
+"plugin will be unzipped inside the users plugins folder it must have it's "
+"own directory inside the .zip file to not interfere with other plugins. "
+"Mandatory files are: :file:`metadata.txt` and :file:`__init__.py`. But it "
+"would be nice to have a :file:`README` and of course an icon to represent "
+"the plugin (:file:`resources.qrc`). Following is an example of how a "
+"plugin.zip should look like."
+msgstr ""
+"In base alle regole di convalida, il pacchetto compresso (.zip) del plugin "
+"deve avere una struttura specifica per essere convalidato come plugin "
+"funzionale. Poiché il plugin verrà decompresso all'interno della cartella "
+"plugins dell'utente, deve avere una propria cartella all'interno del file "
+".zip per non interferire con altri plugin. I file obbligatori sono: "
+":file:`metadata.txt` e :file:`__init__.py`. Ma sarebbe bello avere un "
+":file:`README` e naturalmente un'icona per rappresentare il plugin "
+"(:file:`resources.qrc`). Di seguito è riportato un esempio di come dovrebbe "
+"apparire un plugin.zip."

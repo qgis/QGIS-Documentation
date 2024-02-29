@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:5
+msgid "DB Manager Plugin"
+msgstr "DBマネージャプラグイン"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:7
+msgid ""
+"The DB Manager Plugin is intended to be the main tool to integrate and "
+"manage spatial database formats supported by QGIS (PostGIS, SpatiaLite, "
+"GeoPackage, Oracle Spatial, Virtual layers) in one user interface. The "
+"|dbManager| :sup:`DB Manager` Plugin provides several features. You can drag"
+" layers from the QGIS Browser into the DB Manager, and it will import your "
+"layer into your spatial database. You can drag and drop tables between "
+"spatial databases and they will get imported."
+msgstr ""
+"DBマネージャプラグインは、QGISでサポートされている空間データベース形式（PostGIS、SpatiaLite、GeoPackage、Oracle "
+"Spatial、Virtual "
+"layers）を一つのユーザーインターフェースで統合し管理するメインツールとなることを意図しています。|dbManager| "
+":sup:`DBマネージャプラグイン` "
+"はいくつかの機能を提供します。QGISブラウザからDBマネージャにレイヤをドラッグすると、レイヤを空間データベースにインポートすることができます。空間データベース間でテーブルをドラッグ＆ドロップすることができ、それらはインポートされます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:110
+msgid "dbManager"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:21
+msgid "DB Manager dialog"
+msgstr "[DBマネージャ]ダイアログ"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:24
+msgid ""
+"The :menuselection:`Database` menu allows you to connect to an existing "
+"database, to start the SQL window and to exit the DB Manager Plugin. Once "
+"you are connected to an existing database, the menus :menuselection:`Schema`"
+" (relevant for DBMSs, such as PostGIS / PostgreSQL) and "
+":menuselection:`Table` will appear."
+msgstr ""
+":menuselection:`データベース` "
+"メニューでは、既存のデータベースへの接続、SQLウィンドウの起動、DBマネージャプラグインの終了を行うことができます。既存のデータベースに接続すると、 "
+":menuselection:`スキーマ` (PostGIS / PostgreSQL などの DBMS に関連) と "
+":menuselection:`テーブル` というメニューが表示されます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:31
+msgid ""
+"The :menuselection:`Schema` menu includes tools to create and delete (only "
+"if empty) schemas and, if topology is available (e.g. with PostGIS "
+"topology), to start a :guilabel:`TopoViewer`."
+msgstr ""
+":menuselection:`スキーマ` "
+"メニューにはスキーマの作成と削除（空の場合のみ）、そしてトポロジが利用可能な場合（PostGISトポロジなど）は、 "
+":guilabel:`TopoViewer` を起動するツールがあります。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:35
+msgid ""
+"The :menuselection:`Table` menu allows you to create and edit tables and to "
+"delete tables and views. It is also possible to empty tables and to move "
+"tables between schemas. You can :guilabel:`Run Vacuum Analyze` for the "
+"selected table. *Vacuum* reclaims space and makes it available for reuse, "
+"and *analyze* updates statistics that is used to determine the most "
+"efficient way to execute a query. :guilabel:`Change Logging...` allows you "
+"to add change logging support to a table. Finally, you can :guilabel:`Import"
+" Layer/File...` and :guilabel:`Export to File...`."
+msgstr ""
+":menuselection:`テーブル` "
+"メニューではテーブルの作成と編集、テーブルとビューの削除ができます。また、テーブルを空にしたり、スキーマ間でテーブルを移動することもできます。選択したテーブルに対して"
+" :guilabel:`バキューム解析の実行` をすることができます。バキュームはスペースを回収して最良できるようにし、*解析* "
+"はクエリの最も効率的な実行方法を決めるために使われる統計情報を更新します。*guilabel:`変更ログ...` "
+"では、テーブルに変更ログのサポートを追加することができます。最後に、 :guilabel:`レイヤ/ファイルのインポート...` と "
+":guilabel:`ファイルにエクスポート...` ができます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:49
+msgid ""
+"Using the DB Manager it is possible to add comments for tables and columns "
+"of a PostgreSQL Database."
+msgstr "DB Managerを使うと、PostgreSQLデータベースのテーブルやカラムにコメントを追加することができます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:52
+msgid ""
+"The :guilabel:`Providers` window lists all existing databases supported by "
+"QGIS. With a double-click, you can connect to the database. With the right "
+"mouse button, you can rename and delete existing schemas and tables. Tables "
+"can also be added to the QGIS canvas with the context menu."
+msgstr ""
+":guilabel:`プロバイダ` "
+"ウィンドウには、QGISでサポートされている既存のデータベースが一覧表示されます。ダブルクリックするとそのデータベースに接続できます。マウスの右ボタンで、既存のスキーマやテーブルの名前の変更と削除ができます。テーブルはコンテキストメニューでQGISキャンバスに追加することもできます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:59
+msgid ""
+"If connected to a database, the **main** window of the DB Manager offers "
+"four tabs. The :guilabel:`Info` tab provides information about the table and"
+" its geometry, as well as about existing fields, constraints and indexes. It"
+" allows you to create a spatial index on a the selected table. The "
+":guilabel:`Table` tab shows the table, and the :guilabel:`Preview` tab "
+"renders the geometries as preview. When you open an :guilabel:`SQL Window`, "
+"it will be placed in a new tab."
+msgstr ""
+"データベースに接続されている場合、DBマネージャの **メイン** ウィンドウには4つのタブが表示されます。:guilabel:`情報` "
+"タブはテーブルとそのジオメトリ、既存のフィールド、制約、インデックスに関する情報を提供します。選択したテーブルに空間インデックスを作成することができます。:guilabel:`テーブル`"
+" タブはテーブルを表示し、:guilabel:`プレビュー` "
+"タブはジオメトリをプレビューとしてレンダリングします。:guilabel:`SQLウィンドウ` を開くと、新しいタブが表示されます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:70
+msgid "Working with the SQL Window"
+msgstr "SQLウィンドウの操作"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:72
+msgid ""
+"You can use the DB Manager to execute SQL queries against your spatial "
+"database. Queries can be saved and loaded, and there the :guilabel:`SQL "
+"Query Builder` will help you formulate your queries. You can even view "
+"spatial output by checking :guilabel:`Load as new layer` and specifying "
+":guilabel:`Column(s) with unique values` (IDs), :guilabel:`Geometry column` "
+"and :guilabel:`Layer name (prefix)`. It is possible to highlight a portion "
+"of the SQL to only execute that portion when pressing :kbd:`Ctrl+R` or "
+"clicking the :guilabel:`Execute` button."
+msgstr ""
+"DBマネージャを使って空間データベースに対するSQL クエリが実行できます。クエリは保存と読み込みが可能で、 :guilabel:`SQLクエリビルダ`"
+" がクエリの作成を手助けしてくれます。:guilabel:`新規レイヤとして読み込む` にチェックを入れ、 :guilabel:`一意な値を持つカラム`"
+" (ID)、:guilabel:`ジオメトリカラム`、 :guilabel:`レイヤ名(接頭辞)` "
+"を指定することで、空間的な出力を表示することもできます。:kbd:`Ctrl+R` を押すか、:guilabel:`実行` "
+"ボタンをクリックすると、SQLの一部をハイライトしてその部分のみを実行することができます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:83
+msgid ""
+"The :guilabel:`Query History` button stores the last 20 queries of each "
+"database and provider."
+msgstr ":guilabel:`クエリ履歴` ボタンは、各データベースとプロバイダの直近20回のクエリを保存しています。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:86
+msgid "Double clicking on an entry will add the string to the SQL window."
+msgstr "エントリをダブルクリックすると、その文字列がSQLウィンドウに追加されます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:93
+msgid "Executing SQL queries in the DB Manager SQL window"
+msgstr "DBマネージャのSQL ウィンドウで SQL クエリを実行する"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:97
+msgid ""
+"The SQL Window can also be used to create Virtual Layers. In that case, "
+"instead of selecting a database, select **QGIS Layers** under **Virtual "
+"Layers** before opening the SQL Window. See :ref:`vector_virtual_layers` for"
+" instructions on the SQL syntax to use."
+msgstr ""
+"SQL ウィンドウから仮想レイヤを作ることもできます。その場合はデータベースを選択する代わりに、SQL ウィンドウを開く前に **仮想レイヤ** "
+"の下にある **QGISレイヤ** を選択します。使用する SQL 構文については :ref:`vector_virtual_layers` "
+"を参照してください。"

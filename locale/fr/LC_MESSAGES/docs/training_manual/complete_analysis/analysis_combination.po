@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Nicolas Boisteault <nboisteault@gmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Nicolas Boisteault <nboisteault@gmail.com>, 2024\n"
+"Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:2
+msgid "|LS| Combining the Analyses"
+msgstr "|LS| Combiner les analyses"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:4
+msgid ""
+"Using the vectorized results of the raster analysis will allow you to select"
+" only those buildings on suitable terrain."
+msgstr ""
+"Utiliser les résultats vectorisés de l'analyse raster vous permettra de "
+"sélectionner seulement ces bâtiments sur un terrain approprié."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:7
+msgid ""
+"**The goal for this lesson:** To use the vectorized terrain results to "
+"select suitable plots."
+msgstr ""
+"**Objectif de cette leçon :** Utiliser les résultats de la vectorisation du "
+"terrain pour sélectionner des parcelles appropriées."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:11
+msgid "|moderate| |TY|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:161
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
+msgid "Save your current map (:file:`raster_analysis.qgs`)."
+msgstr "Enregistrez votre carte actuelle (:file:`raster_analysis.qgs`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:14
+msgid ""
+"Open the map which you created during the vector analysis earlier (you "
+"should have saved the file as :file:`analysis.qgs`)."
+msgstr ""
+"Ouvrez la carte que vous avez créée lors de l'analyse vecteur précédente "
+"(vous devriez avoir enregistré le fichier sous le nom :file:`analysis.qgs`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:16
+msgid "In the :guilabel:`Layers` panel, enable these layers:"
+msgstr "Dans le panneau: guilabel: `Calques`, activez ces calques:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid ":guilabel:`hillshade`,"
+msgstr ":guilabel:`ombrage`,"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
+msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
+msgstr ":guilabel:`solution` (ou :guilabel:`buildings_over_100`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
+msgid ""
+"In addition to these layers, which should already be loaded in the map from "
+"when you worked on it before, also add the :file:`suitable_terrain.shp` "
+"dataset."
+msgstr ""
+"En plus de ces couches, qui devraient déjà être chargées dans la carte "
+"lorsque vous avez travaillé dessus auparavant, ajoutez également l'ensemble "
+"de données :file:`suitable_terrain.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:24
+msgid ""
+"If you are missing some layers, you should find them in "
+":file:`exercise_data/residential_development/`"
+msgstr ""
+"S'il vous manque certaines couches, vous devriez les trouver dans "
+":file:`exercise_data/residential_development/`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
+msgid ""
+"Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> "
+"Geoprocessing Tools`) to create a new vector layer called "
+":file:`new_solution.shp` which contains only those buildings which intersect"
+" the :guilabel:`suitable_terrain` layer."
+msgstr ""
+"Utilisez l'outil :guilabel:`Intersection` (:menuselection:`Vecteur --> "
+"Outils géoprocessing`) pour créer une nouvelle couche vecteur appelée "
+":file:`new_solution.shp` qui contient uniquement les bâtiments qui croisent "
+"la couche :guilabel:`suitable_terrain`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
+msgid ""
+"You should now have a layer showing certain buildings as your solution, for "
+"example:"
+msgstr ""
+"Vous devriez maintenant avoir une couche qui montre certains bâtiments comme"
+" votre solution, par exemple :"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:38
+msgid "|moderate| |TY| Inspecting the Results"
+msgstr "|moderate| |TY| Contrôler les résultats"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid ""
+"Look at each of the buildings in your :guilabel:`new_solution` layer. "
+"Compare them with the :guilabel:`suitable_terrain` layer by changing the "
+"symbology for the :guilabel:`new_solution` layer so that it has outlines "
+"only. What do you notice about some of the buildings? Are they all suitable "
+"just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
+" or why not? Which ones would you deem to be unsuitable?"
+msgstr ""
+"Regardez chacun des bâtiments de votre couche :guilabel:`new_solution`. "
+"Comparez-les avec la couche :guilabel:`suitable_terrain` en changeant la "
+"symbologie pour la couche :guilabel:`new_solution` afin qu'elle n'ait que "
+"des bordures. Que remarquez-vous à propos de certains de ces bâtiments ? "
+"Sont-ils tous appropriés juste parce qu'ils croisent la couche "
+":guilabel:`suitable_terrain` ? Pourquoi ou pourquoi pas ? Lesquels allez-"
+"vous estimer comme non appropriés ?"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid "Answer"
+msgstr "Réponse"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
+msgid "|moderate| |TY| Refining the Analysis"
+msgstr "|moderate| |TY| Affiner l'analyse"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
+msgid ""
+"You can see from the results that some buildings which were included were "
+"not really suitable, so we can now refine the analysis."
+msgstr ""
+"Vous pouvez voir dans les résultats que certains bâtiments qui ont été "
+"inclus ne sont pas vraiment appropriés, nous pouvons donc affiner l'analyse."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:63
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the :guilabel:`suitable_terrain` layer. How would you "
+"achieve this? Use one or more Vector Analysis tools and remember that our "
+"buildings are all over 100m squared in size."
+msgstr ""
+"Nous voulons nous assurer que notre analyse ne renvoie que les bâtiments qui"
+" se situent entièrement dans la couche :guilabel:`suitable_terrain`. Comment"
+" y parviendrez-vous ? Utilisez un ou plusieurs outils d'analyse vecteur et "
+"souvenez-vous que nos bâtiments ont tous une superficie supérieure à 100 "
+"mètres carrés."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
+msgid "At the moment, your analysis should look something like this:"
+msgstr "À l'heure actuelle, votre analyse devrait ressembler à ceci :"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:76
+msgid "Consider a circular area, continuous for 100 meters in all directions."
+msgstr ""
+"Considérez une zone circulaire, continue sur 100 mètres dans toutes les "
+"directions."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:81
+msgid ""
+"If it is greater than 100 meters in radius, then subtracting 100 meters from"
+" its size (from all directions) will result in a part of it being left in "
+"the middle."
+msgstr ""
+"Si elle est supérieure à 100 mètres de rayon, alors soustraire 100 mètres de"
+" sa taille (de toutes les directions) laissera une partie au milieu."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
+msgid "To demonstrate:"
+msgstr "Pour démontrer :"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:97
+msgid "Set it up like this:"
+msgstr "Définissez-le comme ceci:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
+msgid ""
+"Save the selection under :file:`exercise_data/residential_development/` as "
+":file:`final_answer.shp`."
+msgstr ""
+"Enregistrez le nouveau fichier dans le dossier "
+":file:`exercise_data/residential_development/` sous le nom "
+":file:`final_answer.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:139
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:141
+msgid ""
+"You have now answered the original research question, and can offer an "
+"opinion (with reasons, backed by analysis) for a recommendation regarding "
+"which property to develop."
+msgstr ""
+"Vous avez maintenant répondu à la question originale de recherche, et pouvez"
+" donner une opinion (avec raisons, soutenu par l'analyse) pour une "
+"recommandation concernant la propriété à développer."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:146
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:148
+msgid "Next you will present these results as part of your second assignment."
+msgstr ""
+"Vous présenterez ensuite ces résultats dans le cadre de votre deuxième "
+"travail."

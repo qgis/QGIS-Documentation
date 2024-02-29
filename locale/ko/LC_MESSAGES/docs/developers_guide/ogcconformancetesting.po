@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:8
+msgid "OGC Conformance Testing"
+msgstr "OGC 적합성 시험"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:21
+msgid "pyogctest"
+msgstr ""
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:23
+msgid ""
+"`pyogctest <https://github.com/pblottiere/pyogctest>`_ is a Python tool "
+"dedicated to run OGC tests easily. The installation may be done in a virtual"
+" environment:"
+msgstr ""
+"`pyogctest <https://github.com/pblottiere/pyogctest>`_ 는 OGC 테스트를 쉽게 실행하는 데 "
+"특화된 파이썬 도구입니다. 가상 환경에서 이 도구를 설치하려면:"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:36
+msgid "WMS 1.3.0 test suite"
+msgstr "WMS 1.3.0 테스트 스위트"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:45
+msgid ""
+"After the download, a ``teamengine_wms_130.qgs`` project is available in the"
+" new ``data`` directory. This project has to be registered as the default "
+"project for QGIS Server thanks to the **QGIS_SERVER_PROJECT_FILE** "
+"environment variable. This way, we don't need to explicitly set the ``MAP`` "
+"vendor-parameter of QGIS Server."
+msgstr ""
+"다운로드가 완료되면, 새 ``data`` 디렉터리 안에서 ``teamengine_wms_130.qgs`` 프로젝트를 찾을 수 있습니다. "
+"**QGIS_SERVER_PROJECT_FILE** 환경 변수를 통해 QGIS 서버에 이 프로젝트를 기본 프로젝트로 등록해야 합니다. "
+"이렇게 하면 QGIS 서버의 ``MAP`` 판매자 파라미터(vendor-parameter)를 명백히 설정할 필요가 없습니다."
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:51
+msgid ""
+"A specific configuration is also necessary to comply with metadata tests. "
+"Indeed, some metadata are available in the ``data/metadata`` directory and "
+"have to be available for the OGC testing framework thanks to an URL. The "
+"easiest option is to configure your web server to have an access through "
+"something like ``http://XXX.XXX.XXX.XXX/metadata/Autos.xml``. These metadata"
+" URLs are defined in the project and inserted in the WMS ``GetCapabilities``"
+" document. So the project needs to be updated according to your testing "
+"environment to let QGIS Server generate a valid XML document:"
+msgstr ""
+"메타데이터 테스트와 호환되려면 특정 환경설정도 설정해야 합니다. 실제로, ``data/metadata`` 디렉터리에 있는 일부 "
+"메타데이터를 URL을 통해 OGC 테스트 프레임워크가 사용할 수 있도록 해줘야 합니다. 가장 간편한 선택지는 사용자 웹 서버를 "
+"``http://XXX.XXX.XXX.XXX/metadata/Autos.xml`` 같은 URL을 통해 액세스할 수 있도록 환경설정하는 "
+"것입니다. 프로젝트에서 이런 메타데이터 URL을 정의해서, WMS ``GetCapabilities`` 문서에 삽입합니다. 따라서 QGIS"
+" 서버가 무결한 XML 문서를 생성하게 하려면 사용자 테스트 환경에 따라 프로젝트를 업데이트해주어야 합니다."
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:65
+msgid ""
+"Now that everything is properly configured, we can run the WMS 1.3.0 test "
+"suite:"
+msgstr "이제 모든 것을 적절하게 환경설정했으니, WMS 1.3.0 테스트 스위트를 다음과 같이 실행하면 됩니다:"

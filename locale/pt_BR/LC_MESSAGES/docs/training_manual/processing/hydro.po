@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/processing/hydro.rst:4
+msgid "Hydrological analysis"
+msgstr "Análise hidrológica"
+
+#: ../../docs/training_manual/processing/hydro.rst:7
+msgid ""
+"In this lesson we will perform some hydrological analysis. This analysis "
+"will be used in some of the following lessons, as it constitutes a very good"
+" example of an analysis workflow, and we will use it to demonstrate some "
+"advanced features."
+msgstr ""
+"En esta lección vamos a realizar algunos análisis hidrológicos. Este "
+"análisis será utilizado en algunas de las siguientes lecciones, como se "
+"constituye un muy buen ejemplo de un flujo de trabajo de análisis, y lo "
+"utilizaremos para mostrar algunas características avanzadas."
+
+#: ../../docs/training_manual/processing/hydro.rst:12
+msgid ""
+"Objectives: Starting with a DEM, we are going to extract a channel network, "
+"delineate watersheds and calculate some statistics."
+msgstr ""
+"Objetivos: Começando com um MDE, iremos extrair uma rede de canais, delinear"
+" bacias hidrográficas e calcular algumas estatísticas."
+
+#: ../../docs/training_manual/processing/hydro.rst:15
+msgid ""
+"The first thing is to load the project with the lesson data, which just "
+"contains a DEM."
+msgstr ""
+"Lo primero es cargar el proyecto con los datos de la lección, que solo "
+"contiene un MDT."
+
+#: ../../docs/training_manual/processing/hydro.rst:19
+msgid ""
+"The first module to execute is *Catchment area* (in some SAGA versions it is"
+" called *Flow accumulation (Top Down)*). You can use any of the others named"
+" *Catchment area*. They have different algorithms underneath, but the "
+"results are basically the same."
+msgstr ""
+"O primeiro módulo a ser executado é *Área de captação* (em algumas versões "
+"do SAGA é chamado de *Acumulação de vazão (Top Down)*). Você pode utilizar "
+"qualquer um dos outros nomeados *Área de captação*. Eles têm algoritmos "
+"diferentes por baixo, mas os resultados são basicamente os mesmos."
+
+#: ../../docs/training_manual/processing/hydro.rst:23
+msgid ""
+"Select the DEM in the :guilabel:`Elevation` field, and leave the default "
+"values for the rest of the parameters."
+msgstr ""
+"Selecione o MDE no campo :guilabel:`Elevação`, e deixe os valores padrão "
+"para o resto dos parâmetros."
+
+#: ../../docs/training_manual/processing/hydro.rst:28
+msgid ""
+"Some algorithms calculate many layers, but the *Catchment Area* layer is the"
+" only one we will be using. You can get rid of the other ones if you want."
+msgstr ""
+"Alguns algoritmos calculam muitas camadas, mas a camada *Área de captação* é"
+" a única que usaremos. Se quiser, você pode se livrar dos outros."
+
+#: ../../docs/training_manual/processing/hydro.rst:31
+msgid "The rendering of the layer is not very informative."
+msgstr "El renderizado de la capa no es muy informativa."
+
+#: ../../docs/training_manual/processing/hydro.rst:35
+msgid ""
+"To know why, you can have a look at the histogram and you will see that "
+"values are not evenly distributed (there are a few cells with very high "
+"value, those corresponding to the channel network). Use the "
+":guilabel:`Raster calculator` algorithm to calculate the logarithm of the "
+"catchment value area and you will get a layer with much more information"
+msgstr ""
+"Para saber o motivo, você pode dar uma olhada no histograma e verá que os "
+"valores não estão distribuídos uniformemente (existem algumas células com "
+"valor muito alto, aquelas correspondentes à rede de canais). Use o algoritmo"
+" :guilabel:`Raster calculator` para calcular o logaritmo da área de valor da"
+" bacia hidrográfica e você obterá uma camada com muito mais informações"
+
+#: ../../docs/training_manual/processing/hydro.rst:43
+msgid ""
+"The catchment area (also known as flow accumulation) can be used to set a "
+"threshold for channel initiation. This can be done using the "
+":guilabel:`Channel network` algorithm."
+msgstr ""
+"A área de captação (também conhecida como acúmulo de fluxo) pode ser usada "
+"para definir um limite para a iniciação do canal. Isso pode ser feito usando"
+" o algoritmo :guilabel:`Channel network`"
+
+#: ../../docs/training_manual/processing/hydro.rst:48
+msgid ":guilabel:`Initiation threshold`: ``10.000.000``"
+msgstr ":guilabel:`Limite inicial`: ``10.000.000``"
+
+#: ../../docs/training_manual/processing/hydro.rst:49
+msgid ":guilabel:`Initiation type`: *Greater than*"
+msgstr "Guilabel: \"Tipo de Inicialização\": *Maior do que*"
+
+#: ../../docs/training_manual/processing/hydro.rst:70
+msgid "And this is what you will get."
+msgstr "Y esto es lo que obtendrá."
+
+#: ../../docs/training_manual/processing/hydro.rst:82
+msgid ""
+"Now, let's try to compute statistics about the elevation values in one of "
+"the subbasins. The idea is to have a layer that just represents the "
+"elevation within that subbasin and then pass it to the module that "
+"calculates those statistics."
+msgstr ""
+"Ahora, vamos a tratar de calcular estadísticas sobre los valores de "
+"elevación en una de las subcuencas. La idea es tener una capa que "
+"simplemente represente la elevación dentro de esa subcuenca y luego pasarla "
+"al módulo que calcula estas estadísticas."
+
+#: ../../docs/training_manual/processing/hydro.rst:91
+msgid "Select a polygon"
+msgstr "Selecionar um polígono"
+
+#: ../../docs/training_manual/processing/hydro.rst:95
+msgid "Call the clipping algorithm with the following parameters:"
+msgstr "Chame o algoritmo de recorte com os seguintes parâmetros:"
+
+#: ../../docs/training_manual/processing/hydro.rst:101
+msgid "You will get something like this."
+msgstr "Obteremos algo como isto."
+
+#: ../../docs/training_manual/processing/hydro.rst:109
+msgid "The resulting statistics are the following ones."
+msgstr "As estatísticas resultantes são as seguintes."
+
+#: ../../docs/training_manual/processing/hydro.rst:113
+msgid ""
+"We will use both the basin calculations procedure and the statistics "
+"calculation in other lessons, to find out how other elements can help us "
+"automate both of them and work more effectively."
+msgstr ""
+"Vamos a utilizar tanto el procedimiento de cálculo de cuenca y el cálculo de"
+" las estadísticas en otras lecciones, para averiguar cómo otros elementos "
+"pueden ayudar a automatizar ambos y trabajar más eficazmente."

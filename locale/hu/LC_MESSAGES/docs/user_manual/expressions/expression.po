@@ -1,0 +1,901 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Báthory Péter <bathory86p@gmail.com>, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:53+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/expressions/expression.rst:7
+msgid "Expressions"
+msgstr "Kifejezések"
+
+#: ../../docs/user_manual/expressions/expression.rst:15
+msgid ""
+"Based on layer data and prebuilt or user defined functions, **Expressions** "
+"offer a powerful way to manipulate attribute value, geometry and variables "
+"in order to dynamically change the geometry style, the content or position "
+"of the label, the value for diagram, the height of a layout item, select "
+"some features, create virtual field, ..."
+msgstr ""
+"A rétegadatokon és az előre elkészített vagy felhasználó által definiált "
+"függvényeken alapuló **Kifejezések** hatékony módot kínálnak az "
+"attribútumértékek, a geometria és a változók manipulálására, a geometria "
+"stílusának, a címke tartalmának vagy pozíciójának, a diagram értékének, egy "
+"elrendezéselem magasságának dinamikus megváltoztatására, valamint elemek "
+"kiválasztására és virtuális mezők létrehozására, és így tovább…"
+
+#: ../../docs/user_manual/expressions/expression.rst:21
+msgid ""
+"A list of the default functions and variables for writing expressions can be"
+" found at :ref:`functions_list`, with detailed information and examples."
+msgstr ""
+"A kifejezések írásához használt alapértelmezett függvények és változók "
+"listája megtalálható :ref:`functions_list` címen, részletes információkkal "
+"és példákkal."
+
+#: ../../docs/user_manual/expressions/expression.rst:27
+msgid "The Expression string builder"
+msgstr "A kifejezésszerkesztő"
+
+#: ../../docs/user_manual/expressions/expression.rst:29
+msgid ""
+"Main dialog to build expressions, the :guilabel:`Expression string builder` "
+"is available from many parts in QGIS and, can particularly be accessed when:"
+msgstr ""
+"A kifejezések létrehozására szolgáló fő párbeszédablak, a "
+":guilabel:`Kifejezésszerkesztő` a QGIS számos részéből elérhető, első sorban"
+" az alábbi módokon:"
+
+#: ../../docs/user_manual/expressions/expression.rst:32
+msgid "clicking the |expression| button;"
+msgstr "a |expression| gombra kattintva;"
+
+#: ../../docs/user_manual/expressions/expression.rst:442
+msgid "expression"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:33
+msgid ""
+":ref:`selecting features <sec_selection>` with the |expressionSelect| "
+":sup:`Select By Expression...` tool;"
+msgstr ""
+":ref:`elemek kiválasztása <sec_selection>` a |expressionSelect| "
+":sup:`Kiválasztás kifejezéssel…` eszközzel;"
+
+#: ../../docs/user_manual/expressions/expression.rst:444
+msgid "expressionSelect"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:35
+msgid ""
+":ref:`editing attributes <calculate_fields_values>` with e.g. the "
+"|calculateField| :sup:`Field calculator` tool;"
+msgstr ""
+":ref:`attribútumok szerkesztése <calculate_fields_values>` például a "
+"|calculateField| :sup:`Mezőkalkulátor` eszközzel;"
+
+#: ../../docs/user_manual/expressions/expression.rst:432
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/user_manual/expressions/expression.rst:37
+msgid ""
+"manipulating symbology, label or layout item parameters with the "
+"|dataDefine| :sup:`Data defined override` tool (see :ref:`data_defined`);"
+msgstr ""
+"jelrendszer, címkék, elrendezéselemek paramétereinek manipulálása az "
+"|dataDefine| :sup:`Adatvezérelt felülbírálás` eszközzel (lásd "
+":ref:`data_defined`);"
+
+#: ../../docs/user_manual/expressions/expression.rst:436
+msgid "dataDefine"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:39
+msgid ""
+"building a :ref:`geometry generator <geometry_generator_symbol>` symbol "
+"layer;"
+msgstr ""
+"szimbólumréteg készítése :ref:`geometriagenerátorral "
+"<geometry_generator_symbol>`;"
+
+#: ../../docs/user_manual/expressions/expression.rst:40
+msgid "doing some :ref:`geoprocessing <label_processing>`."
+msgstr "valamilyen :ref:`geoprocessing <label_processing>` elvégzése."
+
+#: ../../docs/user_manual/expressions/expression.rst:42
+msgid "The Expression builder dialog offers access to the:"
+msgstr "A Kifejezésszerkesztő párbeszédablakból elérhető:"
+
+#: ../../docs/user_manual/expressions/expression.rst:44
+msgid ""
+":ref:`Expression tab <functions_list>` which, thanks to a list of predefined"
+" functions, helps to write and check the expression to use;"
+msgstr ""
+":ref:`Kifejezés fül <functions_list>`, amely az előre definiált "
+"függvényeknek köszönhetően segít megírni és ellenőrizni a kifejezést;"
+
+#: ../../docs/user_manual/expressions/expression.rst:46
+msgid ""
+":ref:`Function Editor tab <function_editor>` which helps to extend the list "
+"of functions by creating custom ones."
+msgstr ""
+":ref:`Függvényszerkesztő fül <function_editor>`, amely segítségével egyéni "
+"függvényekkel bővíthető a függvények listája."
+
+#: ../../docs/user_manual/expressions/expression.rst:50
+msgid "The Interface"
+msgstr "A felület"
+
+#: ../../docs/user_manual/expressions/expression.rst:52
+msgid ""
+"The :guilabel:`Expression` tab provides the main interface to write "
+"expressions using functions, layer fields and values. It contains the "
+"following widgets:"
+msgstr ""
+"A :guilabel:`Kifejezés` fül biztosítja a fő felületet a függvényeket, "
+"rétegek mezőit és értékeit használó kifejezések írásához. A következő "
+"részeket tartalmazza:"
+
+#: ../../docs/user_manual/expressions/expression.rst:61
+msgid "The Expression tab"
+msgstr "A Kifejezés fül"
+
+#: ../../docs/user_manual/expressions/expression.rst:63
+msgid ""
+"An expression editor area for typing or pasting expressions. Autocompletion "
+"is available to speed expression writing:"
+msgstr ""
+"Egy kifejezésszerkesztő terület kifejezések megadásához vagy "
+"beillesztéséhez. A kifejezések írásának felgyorsítása érdekében automatikus "
+"kitöltés áll rendelkezésre:"
+
+#: ../../docs/user_manual/expressions/expression.rst:66
+msgid ""
+"Corresponding variables, function names and field names to the input text "
+"are shown below: use the :kbd:`Up` and :kbd:`Down` arrows to browse the "
+"items and press :kbd:`Tab` to insert in the expression or simply click on "
+"the wished item."
+msgstr ""
+"A bevitt szövegnek megfelelő változók, függvénynevek és mezőnevek alatta "
+"jelennek meg: a :kbd:`Felfelé` és :kbd:`Lefelé` nyilakkal válogathat az "
+"elemek között, és a :kbd:`Tab` gomb megnyomásával vagy a kívánt elemre "
+"kattintva beillesztheti a kifejezésbe."
+
+#: ../../docs/user_manual/expressions/expression.rst:70
+msgid "Function parameters are shown while filling them."
+msgstr "A függvényparaméterek kitöltés közben jelennek meg."
+
+#: ../../docs/user_manual/expressions/expression.rst:72
+msgid ""
+"QGIS also checks the expression rightness and highlights all the errors "
+"using:"
+msgstr ""
+"A QGIS ellenőrzi a kifejezés helyességét is, és kiemeli az összes hibát:"
+
+#: ../../docs/user_manual/expressions/expression.rst:74
+msgid "*Underline*: for unknown functions, wrong or invalid arguments;"
+msgstr ""
+"*Aláhúzás*: ismeretlen függvények, rossz vagy érvénytelen argumentumok "
+"esetén;"
+
+#: ../../docs/user_manual/expressions/expression.rst:75
+msgid ""
+"*Marker*: for every other error (eg, missing parenthesis, unexpected "
+"character) at a single location."
+msgstr ""
+"*Jelölő*: minden más hiba (pl. hiányzó zárójel, váratlan karakter) esetén "
+"egyetlen helyen."
+
+#: ../../docs/user_manual/expressions/expression.rst:78
+msgid "**Document your expression with comments**"
+msgstr "**Dokumentálja a kifejezéseket megjegyzésekkel**"
+
+#: ../../docs/user_manual/expressions/expression.rst:80
+msgid ""
+"When using complex expression, it is good practice to add text either as a "
+"multiline comment or inline comments to help you remember."
+msgstr ""
+"Ha összetett kifejezések használatakor jó gyakorlat a szöveget emlékeztető "
+"jegyzetekkel ellátni, akár többsoros, akár soron belüli megjegyzésként."
+
+#: ../../docs/user_manual/expressions/expression.rst:109
+msgid "Above the expression editor, a set of tools helps you:"
+msgstr "A kifejezésszerkesztő felett egy eszköztár segít a következőkben:"
+
+#: ../../docs/user_manual/expressions/expression.rst:111
+msgid "|fileNew|:sup:`Clear the expression editor`"
+msgstr "|fileNew|:sup:`Kifejezésszerkesztő tartalmának törlése`"
+
+#: ../../docs/user_manual/expressions/expression.rst:446
+msgid "fileNew"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:112
+msgid "Create and manage :ref:`user expressions <user_expressions_functions>`"
+msgstr ""
+":ref:`Felhasználói kifejezések <user_expressions_functions>` szerkesztése és"
+" kezelése"
+
+#: ../../docs/user_manual/expressions/expression.rst:114
+msgid "Under the expression editor, you find:"
+msgstr "A kifejezésszerkesztő alatt találja:"
+
+#: ../../docs/user_manual/expressions/expression.rst:116
+msgid "A set of basic operators to help you build the expression"
+msgstr ""
+"Alapvető műveleti jelek készlete, amelyek segítenek a kifejezés "
+"felépítésében"
+
+#: ../../docs/user_manual/expressions/expression.rst:117
+msgid ""
+"An indication of the expected format of output when you are data-defining "
+"feature properties"
+msgstr ""
+"A kimenet elvárt formátumának jelzése, amikor adatvezérelt "
+"elemtulajdonságokat definiál"
+
+#: ../../docs/user_manual/expressions/expression.rst:119
+msgid ""
+"A live :guilabel:`Output preview` of the expression (up to 60 characters), "
+"evaluated on the first feature of the Layer by default. To view output "
+"preview text exceeding 60 characters, you can hover your cursor over the "
+"text to display a tooltip pop-up containing the entire output preview. To "
+"copy the output preview text onto your clipboard, right-click on the output "
+"preview text and select |editCopy| :guilabel:`Copy Expression Value`."
+msgstr ""
+"A kifejezés élő :guilabel:`Előnézetét` (legfeljebb 60 karakter), mely "
+"alapértelmezetten a réteg első eleme alapján lesz kiértékelve. A 60 "
+"karaktert meghaladó előnézeti szöveg megtekintéséhez a kurzort a szöveg fölé"
+" mozgatva megjelenik egy felugró eszköztipp, amely a teljes kimeneti "
+"előnézetet tartalmazza. A kimeneti előnézeti szöveg vágólapra másolásához "
+"kattintson a jobb gombbal az előnézeti szövegre, és válassza a |editCopy| "
+":guilabel:`Kifejezésérték másolása` lehetőséget."
+
+#: ../../docs/user_manual/expressions/expression.rst:440
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:126
+msgid ""
+"You can browse and evaluate other features of the layer using the "
+":guilabel:`Feature` combobox (the values are taken from the :ref:`display "
+"name <maptips>` property of the layer)."
+msgstr ""
+"A réteg többi elemét az :guilabel:`Elem` legördülő listából választhatja és "
+"értékeltetheti ki (az értékek a réteg :ref:`megjelenített név <maptips>` "
+"tulajdonságából származnak)."
+
+#: ../../docs/user_manual/expressions/expression.rst:130
+msgid ""
+"In case of error, it indicates it and you can access the details with the "
+"provided hyperlink."
+msgstr ""
+"Hiba esetén jelzi azt, és egy hivatkozáson keresztül elérhetővé teszi a "
+"részleteket."
+
+#: ../../docs/user_manual/expressions/expression.rst:133
+msgid ""
+"A function selector displays the list of functions, variables, fields... "
+"organized in groups. A search box is available to filter the list and "
+"quickly find a particular function or field. Double-clicking an item adds it"
+" to the expression editor."
+msgstr ""
+"A függvényválasztó megjeleníti a függvények, változók, mezők… listáját "
+"csoportokba rendezve. A lista szűrésére, és egy adott függvény vagy mező "
+"gyors megtalálására egy keresőmező áll rendelkezésre. Egy elemre duplán "
+"kattintva hozzáadja azt a kifejezésszerkesztőhöz."
+
+#: ../../docs/user_manual/expressions/expression.rst:137
+msgid ""
+"A help panel displays help for each selected item in the function selector."
+msgstr ""
+"A súgópanel egy súgót jelenít meg a függvényválasztó kiválasztott eleméhez."
+
+#: ../../docs/user_manual/expressions/expression.rst:141
+msgid ""
+"Press :kbd:`Ctrl+Click` when hovering a function name in an expression to "
+"automatically display its help in the dialog."
+msgstr ""
+"A kurzort a kifejezés egy függvényének neve fölött tartva "
+":kbd:`Ctrl+Kattintással` megjelenik annak súgója a párbeszédablakban."
+
+#: ../../docs/user_manual/expressions/expression.rst:144
+msgid ""
+"A field's values widget shown when a field is selected in the function "
+"selector helps to fetch features attributes:"
+msgstr ""
+"A mezőértékek vezérlő, amely akkor jelenik meg, amikor egy mezőt választ ki "
+"a függvényválasztóban, segít az elemek attribútumainak lekérésében:"
+
+#: ../../docs/user_manual/expressions/expression.rst:147
+msgid "Look for a particular field value"
+msgstr "Egy adott mezőérték keresése"
+
+#: ../../docs/user_manual/expressions/expression.rst:148
+msgid ""
+"Display the list of :guilabel:`All Unique` or :guilabel:`10 Samples` values."
+" Also available from right-click."
+msgstr ""
+"Az :guilabel:`Összes egyedi` vagy :guilabel:`10 minta` érték megjelenítése. "
+"Jobb gombbal is elérhető."
+
+#: ../../docs/user_manual/expressions/expression.rst:151
+msgid ""
+"When the field is mapped with another layer or a set of values, i.e. if the "
+":ref:`field widget <edit_widgets>` is of *RelationReference*, "
+"*ValueRelation* or *ValueMap* type, it's possible to list all the values of "
+"the mapped field (from the referenced layer, table or list). Moreover, you "
+"can filter this list to |checkbox| :guilabel:`Only show values in use` in "
+"the current field."
+msgstr ""
+"Ha a mező egy másik réteggel van összekapcsolva vagy értékkészletre "
+"leképezve, azaz ha a :ref:`mezőtípus <edit_widgets>` *RelationReference*, "
+"*ValueRelation* vagy *ValueMap* típusú, akkor lehetőség van a társított mező"
+" összes értékének felsorolására (a hivatkozott rétegből, táblázatból vagy "
+"listából). Ezenkívül szűrheti a listát a |checkbox| :guilabel:`Csak az "
+"aktuális mezőben használt értékek megjelenítése` bekapcsolásával."
+
+#: ../../docs/user_manual/expressions/expression.rst:434
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:157
+msgid ""
+"Double-clicking a field value in the widget adds it to the expression "
+"editor."
+msgstr ""
+"A vezérlőben lévő mezőértékre való dupla kattintás hozzáadja azt a "
+"kifejezésszerkesztőhöz."
+
+#: ../../docs/user_manual/expressions/expression.rst:161
+msgid ""
+"The right panel, showing functions help or field values, can be collapsed "
+"(invisible) in the dialog. Press the :guilabel:`Show Values` or "
+":guilabel:`Show Help` button to get it back."
+msgstr ""
+"A jobb oldali panel, amely a függvények súgóját vagy a mezőértékeket "
+"jeleníti meg, a párbeszédablakban összecsukható (rejtett). Nyomja meg az "
+":guilabel:`Értékek megjelenítése` vagy a :guilabel:`Súgó megjelenítése` "
+"gombot, hogy visszakapja."
+
+#: ../../docs/user_manual/expressions/expression.rst:167
+msgid "Writing an expression"
+msgstr "Kifejezés írása"
+
+#: ../../docs/user_manual/expressions/expression.rst:169
+msgid ""
+"QGIS expressions are used to select features or set values. Writing an "
+"expression in QGIS follows some rules:"
+msgstr ""
+"A QGIS-kifejezések az elemek kiválasztására vagy értékek beállítására "
+"szolgálnak. QGIS-ben a kifejezések írása követ néhány szabályt:"
+
+#: ../../docs/user_manual/expressions/expression.rst:172
+msgid ""
+"**The dialog defines the context**: if you are used to SQL, you probably "
+"know queries of the type *select features from layer where condition* or "
+"*update layer set field = new_value where condition*. A QGIS expression also"
+" needs all these information but the tool you use to open the expression "
+"builder dialog provides parts of them. For example, giving a layer "
+"(``buildings``) with a field (``height``):"
+msgstr ""
+"**A párbeszédablak határozza me a kontextust**: ha már használt SQL-t, "
+"biztosan ismeri a *select elemek from réteg where feltétel* vagy *update "
+"réteg set mező = új_érték where feltétel* jellegű lekérdezéseket. A QGIS-"
+"kifejezésekben ugyanígy szükség van mind ezen információkra, viszont az az "
+"eszköz, amiből megnyitotta a kifejezésszerkesztő párbeszédablakot, "
+"biztosítja ezek egy részét. Például adott egy (``épületek``) réteg egy "
+"(``magasság``) mezővel:"
+
+#: ../../docs/user_manual/expressions/expression.rst:179
+msgid ""
+"pressing the |expressionSelect|:sup:`Select by expression` tool means that "
+"you want to \"select features from buildings\". The **condition** is the "
+"only information you need to provide in the expression text widget, e.g. "
+"type ``\"height\" > 20`` to select buildings that are higher than 20."
+msgstr ""
+"a |expressionSelect|:sup:`Kiválasztás kifejezéssel` eszköz megnyomása azt "
+"jelenti, hogy az \"épületek réteg elemeit akarja kiválasztani\". A "
+"**feltétel** az egyetlen olyan információ, melyet a kifejezésszerkesztőben "
+"meg kell adnia. Például a ``\"magasság\" > 20`` megadásával kiválaszthatóak "
+"a 20-nál magasabb épületek."
+
+#: ../../docs/user_manual/expressions/expression.rst:183
+msgid ""
+"with this selection made, pressing the |calculateField| :sup:`Field "
+"calculator` button and choosing \"height\" as :guilabel:`Update existing "
+"field`, you already provide the command \"update buildings set height = ??? "
+"where height > 20\". The only remaining bits you have to provide in this "
+"case is the **new value**, e.g. just enter ``50`` in the expression editor "
+"textbox to set the height of the previously selected buildings."
+msgstr ""
+"ezt a kiválasztást elvégezve nyomja meg a |calculateField| "
+":sup:`Mezőkalkulátor` gombot, majd a :guilabel:`Meglévő mező frissítése` "
+"alatt a \"magasság\" mezőt kiválasztva máris készített egy \"update épületek"
+" set magasság = ??? where magasság > 20\" utasítást. Az egyetlen hiányzó "
+"láncszem ez esetben az **új érték** megadása. Például írja be a "
+"kifejezésszerkesztő szövegbeviteli mezőjébe, hogy ``50``, hogy beállítsa a "
+"korábban kiválasztott épületek magasságát."
+
+#: ../../docs/user_manual/expressions/expression.rst:190
+msgid ""
+"**Pay attention to quotes**: single quotes return a literal, so a text "
+"placed between single quotes (``'145'``) is interpreted as a string. Double "
+"quotes will give you the value of that text so use them for fields "
+"(``\"myfield\"``). Fields can also be used without quotes (``myfield``). No "
+"quotes for numbers (``3.16``)."
+msgstr ""
+"**Figyeljen az idézőjelekre**: a szimpla idézőjelek szó szerinti értéket "
+"adják vissza, így a szimpla idézőjelek közé helyezett szöveg (``'145'``) "
+"karakterláncként lesz értelmezve. A dupla idézőjelek a megadott szöveg "
+"értékét adják vissza, amit mezőkhöz használhat (``\"egyik_mezo\"``). A mezők"
+" idézőjelek nélkül is használhatók (``egyik_mezo``). A számokat nem kell "
+"idézőjelek közé helyezni (``3.16``)."
+
+#: ../../docs/user_manual/expressions/expression.rst:196
+msgid "Functions normally take as argument a string for field name. Do::"
+msgstr ""
+"A függvények argumentumként a mezőnevet általában karakterláncként várják. "
+"Vagyis csinálja így::"
+
+#: ../../docs/user_manual/expressions/expression.rst:201
+msgid "And not::"
+msgstr "És ne így::"
+
+#: ../../docs/user_manual/expressions/expression.rst:211
+msgid "**Use named parameters to ease expression reading**"
+msgstr ""
+"**Tegye olvashatóbbá a kifejezéseket megnevezett paraméterek használatával**"
+
+#: ../../docs/user_manual/expressions/expression.rst:213
+msgid ""
+"Some functions require many parameters to be set. The expression engine "
+"supports the use of named parameters. This means that instead of writing the"
+" cryptic expression ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, "
+"value:=2, max:=9)``. This also allows arguments to be switched, e.g. "
+"``clamp( value:=2, max:=9, min:=1)``. Using named parameters helps clarify "
+"what the arguments for an expression function refer to, which is helpful "
+"when you are trying to interpret an expression later!"
+msgstr ""
+"Egyes függvények sok paraméter megadását igénylik. A kifejezésmotor "
+"támogatja a megnevezett paraméterek használatát. Ez azt jelenti, hogy a "
+"rejtélyes ``clamp( 1, 2, 9)`` kifejezés helyett használható a ``clamp( "
+"min:=1, value:=2, max:=9)`` kifejezés. Ez lehetővé teszi az argumentumok "
+"felcserélését is, például ``clamp( value:=2, max:=9, min:=1)``. A "
+"megnevezett paraméterek használata egyértelműbbé teszi, hogy egy "
+"kifejezésfüggvény argumentumai mire vonatkoznak, ami hasznos, ha később "
+"megpróbálja értelmezni a kifejezést."
+
+#: ../../docs/user_manual/expressions/expression.rst:221
+msgid "Some use cases of expressions"
+msgstr "Pár példa a kifejezések használatára"
+
+#: ../../docs/user_manual/expressions/expression.rst:223
+msgid ""
+"From the Field Calculator, calculate a \"pop_density\" field using the "
+"existing \"total_pop\" and \"area_km2\" fields::"
+msgstr ""
+"A Mezőkalkulátorban a \"pop_density\" mező kiszámolása a meglévő "
+"\"total_pop\" és \"area_km2\" mezők használatával::"
+
+#: ../../docs/user_manual/expressions/expression.rst:228
+msgid "Label or categorize features based on their area::"
+msgstr "Elemek címkézése vagy kategorizálása a területük alapján::"
+
+#: ../../docs/user_manual/expressions/expression.rst:232
+msgid ""
+"Update the field \"density_level\" with categories according to the "
+"\"pop_density\" values::"
+msgstr ""
+"A \"density_level\" frissítése a \"pop_density\" értékének megfelelő "
+"kategóriákkal::"
+
+#: ../../docs/user_manual/expressions/expression.rst:239
+msgid ""
+"Apply a categorized style to all the features according to whether their "
+"average house price is smaller or higher than 10000€ per square metre::"
+msgstr ""
+"Kategorizált stílus alkalmazása az összes elemre aszerint, hogy az átlagos "
+"négyzetméterenkénti lakásáruk kisebb vagy nagyobb, mint 10000 €::"
+
+#: ../../docs/user_manual/expressions/expression.rst:244
+msgid ""
+"Using the \"Select By Expression...\" tool, select all the features "
+"representing areas of “High population density” and whose average house "
+"price is higher than 10000€ per square metre::"
+msgstr ""
+"A \"Kiválasztás kifejezéssel…\" eszközzel válassza ki az összes olyan "
+"elemet, amely \"nagy népsűrűségű\" területet képvisel, és amelynek átlagos "
+"négyzetméterenkénti lakásárai meghaladják a 10000 eurót::"
+
+#: ../../docs/user_manual/expressions/expression.rst:250
+msgid ""
+"The previous expression could also be used to define which features to label"
+" or show on the map."
+msgstr ""
+"Az előző kifejezés arra is használható, hogy meghatározzuk, hogy mely elemek"
+" legyenek címkézve vagy megjelenítve a térképen."
+
+#: ../../docs/user_manual/expressions/expression.rst:253
+msgid ""
+"Create a different symbol (type) for the layer, using the geometry "
+"generator::"
+msgstr ""
+"Hozzon létre egy eltérő szimbólumot (típust) a réteghez a geometriagenerátor"
+" segítségével::"
+
+#: ../../docs/user_manual/expressions/expression.rst:257
+msgid ""
+"Given a point feature, generate a closed line (using ``make_line``) around "
+"its geometry::"
+msgstr ""
+"Adott egy pontelem, hozzon létre egy zárt vonalat (a ``make_line`` "
+"segítségével) a geometriája körül::"
+
+#: ../../docs/user_manual/expressions/expression.rst:270
+msgid ""
+"In a print layout label, display the name of the \"airports\" features that "
+"are within the layout \"Map 1\" item::"
+msgstr ""
+"A nyomtatási elrendezés címkéjén jelenítse meg az \"airports\" elemeinek "
+"neveit, amelyek az elrendezés \"Térkép 1\" elemén belül vannak::"
+
+#: ../../docs/user_manual/expressions/expression.rst:285
+msgid "Saving Expressions"
+msgstr "Kifejezések mentése"
+
+#: ../../docs/user_manual/expressions/expression.rst:287
+msgid ""
+"Using the |fileSave| :sup:`Add current expression to user expressions` "
+"button above the expression editor frame, you can save important expressions"
+" you want to have quick access to. These are available from the **User "
+"expressions** group in the middle panel. They are saved under the :ref:`user"
+" profile <user_profiles>` (:file:`<userprofile>/QGIS/QGIS3.ini` file) and "
+"available in all expression dialogs inside all projects of the current user "
+"profile."
+msgstr ""
+"A kifejezésszerkesztő kerete feletti |fileSave| :sup:`Az aktuális kifejezés "
+"hozzáadása a felhasználói kifejezésekhez` gomb segítségével elmentheti "
+"azokat a fontos kifejezéseket, amelyekhez gyors hozzáférést szeretne. Ezek a"
+" középső panelen található **Felhasználói kifejezések** csoportból érhetők "
+"el. A :ref:`felhasználói profil <user_profiles>` "
+"(:file:`<userprofile>/QGIS/QGIS3.ini` fájl) alá kerülnek mentésre, és az "
+"aktuális felhasználói profil összes projektjén belül, az összes kifejezés "
+"párbeszédablakból elérhetőek."
+
+#: ../../docs/user_manual/expressions/expression.rst:448
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:294
+msgid ""
+"A set of tools available above the expression editor frame helps you manage "
+"the user expressions:"
+msgstr ""
+"A kifejezésszerkesztő feletti eszköztár segít a felhasználói kifejezések "
+"kezelésében:"
+
+#: ../../docs/user_manual/expressions/expression.rst:297
+msgid ""
+"|fileSave|:sup:`Add the current expression to user expressions`: store the "
+"expression in the user profile. A label and a help text can be added for "
+"easy identification."
+msgstr ""
+"|fileSave|:sup:`Az aktuális kifejezés hozzáadása a felhasználói "
+"kifejezésekhez`: eltárolja a kifejezést a felhasználói profilban. A könnyebb"
+" azonosítás érdekében címk és súgószöveg adható hozzá."
+
+#: ../../docs/user_manual/expressions/expression.rst:300
+msgid ""
+"|symbologyEdit| :sup:`Edit selected expression from user expressions`, as "
+"well as their help and label"
+msgstr ""
+"|symbologyEdit| :sup:`A felhasználói kifejezésekből kiválasztott kifejezés "
+"szerkesztése`, valamint a címkéje és súgója módosítása"
+
+#: ../../docs/user_manual/expressions/expression.rst:458
+msgid "symbologyEdit"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:302
+msgid ""
+"|deleteSelected| :sup:`Remove selected expression from user expressions`"
+msgstr ""
+"|deleteSelected| :sup:`A kiválasztott kifejezés eltávolítása a felhasználói "
+"kifejezések közül`"
+
+#: ../../docs/user_manual/expressions/expression.rst:438
+msgid "deleteSelected"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:303
+msgid ""
+"|sharingImport| :sup:`Import user expressions` from a ``.json`` file into "
+"the active user profile folder"
+msgstr ""
+"|sharingImport| :sup:`Felhasználói kifejezések importálása` egy ``.json`` "
+"fájlból az aktív felhasználó profilkönyvtárába"
+
+#: ../../docs/user_manual/expressions/expression.rst:452
+msgid "sharingImport"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:305
+msgid ""
+"|sharingExport| :sup:`Export user expressions` as a ``.json`` file; all the "
+"user expressions in the user profile :file:`QGIS3.ini` file are shared"
+msgstr ""
+"|sharingExport| :sup:`Felhasználói kifejezések exportálása` ``.json`` "
+"fájlba;  a  :file:`QGIS3.ini` felhasználói profilban lévő összes "
+"felhasználói kifejezés megosztásra kerül a fájlban"
+
+#: ../../docs/user_manual/expressions/expression.rst:450
+msgid "sharingExport"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:314
+msgid "Function Editor"
+msgstr "Függvényszerkesztő"
+
+#: ../../docs/user_manual/expressions/expression.rst:316
+msgid ""
+"With the :guilabel:`Function Editor` tab, you are able to write your own "
+"functions in Python language. This provides a handy and comfortable way to "
+"address particular needs that would not be covered by the predefined "
+"functions."
+msgstr ""
+"A :guilabel:`Függvényszerkesztő` fülön saját függvényeket írhat Python "
+"nyelven. Ez egy praktikus és kényelmes módja olyan különleges igények "
+"kielégítésének, amelyeket az előre definiált függvények nem fednek le."
+
+#: ../../docs/user_manual/expressions/expression.rst:325
+msgid "The Function Editor tab"
+msgstr "A Függvényszerkesztő fül"
+
+#: ../../docs/user_manual/expressions/expression.rst:327
+msgid "To create a new function:"
+msgstr "Új függvény készítéséhez:"
+
+#: ../../docs/user_manual/expressions/expression.rst:329
+msgid "Press the |symbologyAdd| :sup:`New File` button."
+msgstr "Nyomja meg az |symbologyAdd| :sup:`Új fájl` gombot."
+
+#: ../../docs/user_manual/expressions/expression.rst:456
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:330
+msgid "Enter a name to use in the form that pops up and press :guilabel:`OK`."
+msgstr ""
+"Adja meg a használni kívánt nevet a felugró űrlapon, és nyomja meg az "
+":guilabel:`OK` gombot."
+
+#: ../../docs/user_manual/expressions/expression.rst:332
+msgid ""
+"A new item of the name you provide is added in the left panel of the "
+":guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on "
+"QGIS template file and stored in the :file:`/python/expressions` folder "
+"under the active :ref:`user profile <user_profiles>` directory."
+msgstr ""
+"A :guilabel:`Függvényszerkesztő` lap bal oldali paneljén egy új elem kerül "
+"hozzáadásra az előbb megadott névvel; ez egy Python :file:`.py` fájl, amely "
+"a QGIS-sablonfájlon alapul, és az aktív :ref:`user profile <user_profiles>` "
+"könyvtár alatti :file:`/python/expressions` mappában van tárolva."
+
+#: ../../docs/user_manual/expressions/expression.rst:336
+msgid ""
+"The right panel displays the content of the file: a python script template. "
+"Update the code and its help according to your needs."
+msgstr ""
+"A jobb oldali panelen megjelenik a fájl tartalma: egy python script sablon. "
+"Frissítse a kódot és a súgóját az igényeinek megfelelően."
+
+#: ../../docs/user_manual/expressions/expression.rst:338
+msgid ""
+"Press the |start| :guilabel:`Save and Load Functions` button. The function "
+"you wrote is added to the functions tree in the :guilabel:`Expression` tab, "
+"by default under the ``Custom`` group."
+msgstr ""
+"Nyomja meg a |start| :guilabel:`Függvények mentése és betöltése` gombot. Az "
+"elkészített függvény hozzáadódik a :guilabel:`Kifejezés` fül függvényeihez, "
+"alapértelmezés szerint az ``Egyéni`` csoporthoz."
+
+#: ../../docs/user_manual/expressions/expression.rst:454
+msgid "start"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:341
+msgid "Enjoy your new function."
+msgstr "Most már használhatja az új függvényt!"
+
+#: ../../docs/user_manual/expressions/expression.rst:342
+msgid ""
+"If the function requires improvements, enable the :guilabel:`Function "
+"Editor` tab, do the changes and press again the |start| :guilabel:`Save and "
+"Load Functions` button to make them available in the file, hence in any "
+"expression tab."
+msgstr ""
+"Ha a függvény további fejlesztésre szorul, váltson a "
+":guilabel:`Függvényszerkesztő` fülre végezze el a módosításokat, majd "
+"kattintson ismét a |start| :guilabel:`Függvények mentése és betöltése` "
+"gombra, hogy azok bekerüljenek a fájlba, és vele együtt a kifejezések fülre."
+
+#: ../../docs/user_manual/expressions/expression.rst:347
+msgid ""
+"Custom Python functions are stored under the user profile directory, meaning"
+" that at each QGIS startup, it will auto load all the functions defined with"
+" the current user profile. Be aware that new functions are only saved in the"
+" :file:`/python/expressions` folder and not in the project file. If you "
+"share a project that uses one of your custom functions you will need to also"
+" share the :file:`.py` file in the :file:`/python/expressions` folder."
+msgstr ""
+"Az egyéni Python függvények a felhasználói profil könyvtárában tárolódnak, "
+"ami azt jelenti, hogy a QGIS minden egyes indításkor automatikusan betölti "
+"az aktuális felhasználói profilhoz megadott összes függvényt. Ne feledje, "
+"hogy az új függvények csak a :file:`/python/expressions` mappába kerülnek "
+"elmentésre, a projektfájlba nem. Ha megoszt egy olyan projektet, amely "
+"valamelyik egyéni függvényét használja, akkor a :file:`.py` fájlt is meg "
+"kell osztania a :file:`/python/expressions` mappában."
+
+#: ../../docs/user_manual/expressions/expression.rst:354
+msgid "To delete a custom function:"
+msgstr "Egyéni függvény törléséhez:"
+
+#: ../../docs/user_manual/expressions/expression.rst:356
+msgid "Enable the :guilabel:`Function Editor` tab"
+msgstr "Váltson a :guilabel:`Függvényszerkesztő` fülre"
+
+#: ../../docs/user_manual/expressions/expression.rst:357
+msgid "Select the function in the list"
+msgstr "Jelölje ki a függvényt a listában"
+
+#: ../../docs/user_manual/expressions/expression.rst:358
+msgid ""
+"Press the |symbologyRemove| :sup:`Remove selected function`. The function is"
+" removed from the list and the corresponding ``.py`` file deleted from the "
+"user profile folder."
+msgstr ""
+"Nyomja meg a |symbologyRemove| :sup:`Kiválasztott függvényfájlok "
+"eltávolítása` gombot. A függvény eltűnik a listából, valamint a hozzá "
+"tartozó ``.py`` törlődik a felhasználói profilkönyvtárból."
+
+#: ../../docs/user_manual/expressions/expression.rst:460
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:362
+msgid "**Example**"
+msgstr "**Példa**"
+
+#: ../../docs/user_manual/expressions/expression.rst:364
+msgid ""
+"Here's a short example on how to create your own ``my_sum`` function that "
+"will operate with two values."
+msgstr ""
+"Íme egy rövid példa arra, hogyan hozhatja létre saját ``my_sum`` függvényét,"
+" amely két értékkel dolgozik."
+
+#: ../../docs/user_manual/expressions/expression.rst:385
+msgid "The ``@qgsfunction`` decorator accepts the following arguments:"
+msgstr "A ``@qgsfunction`` a következő argumentumokat fogadja el:"
+
+#: ../../docs/user_manual/expressions/expression.rst:387
+msgid ""
+"``args``: the number of arguments. When using the ``args='auto'`` argument "
+"the number of function arguments required will be calculated by the number "
+"of arguments the function has been defined with in Python (minus 2 - "
+"``feature``, and ``parent``). With ``args = -1``, any number of arguments "
+"are accepted."
+msgstr ""
+"``args``: az argumentumok száma. Az ``args='auto'`` argumentum használata "
+"esetén a szükséges függvényargumentumok száma a Pythonban-függvény "
+"definíciójában lévő argumentumok száma alapján lesz kiszámítva (mínusz 2 – "
+"``feature`` és ``parent``). ``args = -1`` esetén bármennyi argumentumot "
+"elfogad."
+
+#: ../../docs/user_manual/expressions/expression.rst:391
+msgid ""
+"The ``group`` argument indicates the group in which the function should be "
+"listed in the Expression dialog."
+msgstr ""
+"A ``group='Custom'`` argumentum azt a csoportot jelöli, amelyben a "
+"függvénynek szerepelnie kell a Kifejezés párbeszédablakban."
+
+#: ../../docs/user_manual/expressions/expression.rst:393
+msgid ""
+"``usesgeometry=True`` if the expression requires access to the features "
+"geometry. By default :const:`False`."
+msgstr ""
+"``usesgeometry=True``, ha a kifejezésnek szüksége van az elemek "
+"geometriájához való hozzáférésre. Alapértelmezés szerint :const:`False`."
+
+#: ../../docs/user_manual/expressions/expression.rst:395
+msgid ""
+"``handlesnull=True`` if the expression has custom handling for NULL values. "
+"If :const:`False` (default), the result will always be NULL as soon as any "
+"parameter is NULL."
+msgstr ""
+"``handlesnull=True``, ha a kifejezés kezeli a NULL értékeket. Ha "
+":const:`False` (alapértelmezett), akkor az eredmény mindig NULL lesz, amint "
+"bármelyik paraméter NULL."
+
+#: ../../docs/user_manual/expressions/expression.rst:398
+msgid ""
+"``referenced_columns=[list]``: An array of attribute names that are required"
+" to the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
+msgstr ""
+"``referenced_columns=[list]``: A függvény számára szükséges attribútumnevek "
+"tömbje. Alapértelmezett értéke ``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
+
+#: ../../docs/user_manual/expressions/expression.rst:401
+msgid "The function itself allows following arguments:"
+msgstr "Maga a függvény a következő argumentumokat várja:"
+
+#: ../../docs/user_manual/expressions/expression.rst:403
+msgid ""
+"any number and type of parameters you want to pass to your function, set "
+"before the following arguments."
+msgstr ""
+"tetszőleges számú és típusú, a függvénynek átadni kívánt paraméter, a "
+"következő argumentumok előtt."
+
+#: ../../docs/user_manual/expressions/expression.rst:405
+msgid "``feature``: the current feature"
+msgstr "``feature``: az aktuális elem"
+
+#: ../../docs/user_manual/expressions/expression.rst:406
+msgid ""
+"``parent``: the :class:`QgsExpression <qgis.core.QgsExpression>` object"
+msgstr ""
+"``parent``: a :class:`QgsExpression <qgis.core.QgsExpression>` objektum"
+
+#: ../../docs/user_manual/expressions/expression.rst:407
+msgid ""
+"``context``: If there is an argument called ``context`` found at the last "
+"position, this variable will contain a :class:`QgsExpressionContext "
+"<qgis.core.QgsExpressionContext>` object, that gives access to various "
+"additional information like expression variables. E.g. ``context.variable( "
+"'layer_id' )``"
+msgstr ""
+"``context``: Ha van megadva az utolsó helyen egy ``context`` nevű "
+"argumentum, akkor az a :class:`QgsExpressionContext "
+"<qgis.core.QgsExpressionContext>` objektumot fogja tartalmazni, amely "
+"hozzáférést biztosít különböző kiegészítő információkhoz, például a "
+"kifejezésváltozókhoz. Pl. ``context.variable( 'layer_id' )``"
+
+#: ../../docs/user_manual/expressions/expression.rst:412
+msgid "The previous example function can then be used in expressions:"
+msgstr "Az előző példafüggvény ezután kifejezésekben használható:"
+
+#: ../../docs/user_manual/expressions/expression.rst:419
+msgid "Custom Function added to the Expression tab"
+msgstr "A Kifejezések fülhöz hozzáadott egyéni függvény"
+
+#: ../../docs/user_manual/expressions/expression.rst:422
+msgid ""
+"Further information about creating Python code can be found in the "
+":ref:`PyQGIS-Developer-Cookbook`."
+msgstr ""
+"Python kód létrehozásával kapcsolatos további információk a :ref:`PyQGIS-"
+"Developer-Cookbook` alatt találhatók."

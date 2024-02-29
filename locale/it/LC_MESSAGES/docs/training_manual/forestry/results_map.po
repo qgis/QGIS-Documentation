@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/forestry/results_map.rst:2
+msgid "|LS| Map Presentation"
+msgstr "|LS| Presentazione della mappa"
+
+#: ../../docs/training_manual/forestry/results_map.rst:4
+msgid ""
+"In the previous lessons you have imported an old forest inventor as a GIS "
+"project, updated it to the current situation, designed a forest inventory, "
+"created maps for the field work and calculated forest parameters from the "
+"field measurements."
+msgstr ""
+"Nelle lezioni precedenti hai importato un vecchio inventario forestale come "
+"progetto GIS, lo hai aggiornato alla situazione attuale, hai progettato un "
+"inventario forestale, hai creato mappe per il lavoro sul campo e hai "
+"calcolato i parametri forestali a partire dalle rilevazioni sul campo."
+
+#: ../../docs/training_manual/forestry/results_map.rst:8
+msgid ""
+"It is often important to create maps with the results of a GIS project. A "
+"map presenting the results of the forest inventory will make it easier for "
+"anyone to have a good idea of what the results are in a quick glance, "
+"without looking at the specific numbers."
+msgstr ""
+"Spesso è importante creare mappe con i risultati di un progetto GIS. Una "
+"mappa che presenti i risultati dell'inventario forestale renderà più facile "
+"per chiunque avere una buona idea dei risultati in un rapido sguardo, senza "
+"consultare i numeri specifici."
+
+#: ../../docs/training_manual/forestry/results_map.rst:13
+msgid ""
+"**The goal for this lesson:** Create a map to present the inventory results "
+"using a hillshade raster as background."
+msgstr ""
+"**Obiettivo di questa lezione:** Creare una mappa per presentare i risultati"
+" dell'inventario utilizzando un raster di ombreggiatura come sfondo."
+
+#: ../../docs/training_manual/forestry/results_map.rst:17
+msgid "|basic| |FA| Preparing the Map Data"
+msgstr "|basic| |FA| Preparazione dei dati mappa"
+
+#: ../../docs/training_manual/forestry/results_map.rst:113
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/results_map.rst:19
+msgid ""
+"Open the QGIS project from the parameters calculations lesson, "
+":kbd:`forest_inventory.qgs`. Keep at least the following layers:"
+msgstr ""
+"Apri il progetto QGIS della lezione sui calcoli dei parametri, "
+":kbd:`forest_inventory.qgs`. Lascia almeno i seguenti layer:"
+
+#: ../../docs/training_manual/forestry/results_map.rst:22
+msgid ":kbd:`forest_stands_2012_results`."
+msgstr ":kbd:`forest_stands_2012_results`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:23
+msgid ":kbd:`basic_map`."
+msgstr ""
+
+#: ../../docs/training_manual/forestry/results_map.rst:24
+msgid ":kbd:`rautjarvi_aerial`."
+msgstr ":kbd:`rautjarvi_aerial`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:25
+msgid ""
+":kbd:`lakes` (if you don't have it, add it from the "
+":kbd:`exercise_data\\\\forestry\\\\` folder)."
+msgstr ""
+":kbd:`lakes` (se non è presente, aggiungilo dalla cartella "
+":kbd:`exercise_data\\\\aforestry\\)."
+
+#: ../../docs/training_manual/forestry/results_map.rst:27
+msgid ""
+"You are going to present the average volumes of your forest stands in a map."
+" If you open the :guilabel:`Attribute table` for the "
+":kbd:`forest_stands_2012_results` layer, you can see the :kbd:`NULL` values "
+"for the stands without information. To be able to get also those stands into"
+" your symbology you should change the :kbd:`NULL` values to, for example, "
+":kbd:`-999`, knowing that those negative numbers mean there is no data for "
+"those polygons."
+msgstr ""
+"Vuoi rappresentare i volumi medi dei popolamenti forestali in una mappa. Se "
+"apri la :guilabel:`Tabella Attributi` per il layer "
+":kbd:`forest_stands_2012_results`, puoi vedere i valori :kbd:`NULL` per i "
+"popolamenti senza informazioni. Per poter inserire anche questi popolamenti "
+"nella simbologia, devi cambiare i valori :kbd:`NULL` in, ad esempio, "
+":kbd:`-999`, sapendo che questi numeri negativi significano che non ci sono "
+"dati per tali poligoni."
+
+#: ../../docs/training_manual/forestry/results_map.rst:34
+msgid "For the :kbd:`forest_stands_2012_results` layer:"
+msgstr "Per il layer :kbd:`forest_stands_2012_results`:"
+
+#: ../../docs/training_manual/forestry/results_map.rst:36
+msgid "Open the :guilabel:`Attribute table` and enable editing."
+msgstr "Apri la :guilabel:`Tabella Attributi` e abilita le modifiche."
+
+#: ../../docs/training_manual/forestry/results_map.rst:37
+msgid "Select the polygons with :kbd:`NULL` values."
+msgstr "Seleziona i poligoni con valori :kbd:`NULL`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:38
+msgid ""
+"Use the calculator to update the values of the :kbd:`MEANVol` field to "
+":kbd:`-999` only for the selected features."
+msgstr ""
+"Utilizza il calcolatore per aggiornare i valori del campo :kbd:`MEANVol` a "
+":kbd:`-999` solo per gli elementi selezionati."
+
+#: ../../docs/training_manual/forestry/results_map.rst:40
+msgid "Disable editing and save the changes."
+msgstr "Disattiva la modalità di modifica e salva."
+
+#: ../../docs/training_manual/forestry/results_map.rst:42
+msgid "Now you can use a saved style for this layer:"
+msgstr "Ora puoi usare uno stile salvato per questo layer:"
+
+#: ../../docs/training_manual/forestry/results_map.rst:44
+msgid "Go to the :guilabel:`Symbology` tab."
+msgstr "Vai alla scheda :guilabel:`Simbologia`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:45
+msgid "Click on :menuselection:`Style --> Load Style...`."
+msgstr "Fai clic su :menuselection:`Stile --> Carica stile...`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:46
+msgid ""
+"Select the :kbd:`forest_stands_2012_results.qml` from the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr ""
+"Seleziona :kbd:`forest_stands_2012_results.qml` dalla cartella "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:47
+msgid "Click :guilabel:`OK`."
+msgstr "Click :guilabel:`OK`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:52
+msgid "Your map will look something like this:"
+msgstr "La tua mappa dovrebbe apparire come questa:"
+
+#: ../../docs/training_manual/forestry/results_map.rst:59
+msgid "|basic| |TY| Try Different Blending Modes"
+msgstr "|basic| |TY| Provare diverse modalità di fusione"
+
+#: ../../docs/training_manual/forestry/results_map.rst:61
+msgid "The style you loaded:"
+msgstr "Lo stile che hai caricato:"
+
+#: ../../docs/training_manual/forestry/results_map.rst:66
+msgid ""
+"is using the :kbd:`Hard light` mode for the :guilabel:`Layer blending mode`."
+" Note that the different modes apply different filters combining the "
+"underlying and overlying layers, in this case the hillshade raster and your "
+"forest stands are used. You can read about these modes in the :ref:`User "
+"Guide <blend-modes>`."
+msgstr ""
+"sta usando la modalità :kbd:`Luce intensa` per la modalità "
+":guilabel:`Modalità di fusione` dei layer. Nota che le diverse modalità "
+"applicano filtri diversi combinando i livelli sottostanti e sovrastanti, in "
+"questo caso il raster ombreggiatura e i popolamenti forestali. Puoi "
+"approfondire queste modalità nella :ref:`User Guide <blend-modes>`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:71
+msgid ""
+"Try with different modes and see the differences in your map. Then choose "
+"the one you like better for your final map."
+msgstr ""
+"Prova diverse modalità e guarda le differenze nella tua mappa. Poi scegli "
+"quella che ti piace di più per la tua mappa finale."
+
+#: ../../docs/training_manual/forestry/results_map.rst:76
+msgid "|basic| |TY| Using a Layout Template to Create the Map result"
+msgstr ""
+"|basic| |TY| Utilizzare un modello di layout per generare la "
+"rappresentazione della mappa"
+
+#: ../../docs/training_manual/forestry/results_map.rst:78
+msgid ""
+"Use a template prepared in advanced to present the results. The template "
+":kbd:`forest_map.qpt` is located in the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder. Load it using the "
+":menuselection:`Project --> Layout Manager...` dialog."
+msgstr ""
+"Utilizza un modello preparato in anticipo per la presentazione dei "
+"risultati. Il modello :kbd:`forest_map.qpt` si trova nella cartella "
+":kbd:`exercise_data\\\\forestry\\results\\`. Caricalo utilizzando la "
+"finestra di dialogo :menuselection: `Progetto --> Gestione dei Layout...`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:85
+msgid ""
+"Open the print layout and edit the final map to get a result you are happy "
+"with."
+msgstr ""
+"Apri il layout di stampa e modifica la mappa finale per ottenere un "
+"risultato di cui sei soddisfatto."
+
+#: ../../docs/training_manual/forestry/results_map.rst:87
+msgid "The map template you are using will give a map similar to this one:"
+msgstr ""
+"Il modello di mappa che stai utilizzando produrrà una mappa simile a questa:"
+
+#: ../../docs/training_manual/forestry/results_map.rst:92
+msgid "Save your QGIS project for future references."
+msgstr "Salva il progetto QGIS per futuri utilizzi."
+
+#: ../../docs/training_manual/forestry/results_map.rst:95
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/results_map.rst:97
+msgid ""
+"Through this module you have seen how a basic forest inventory can be "
+"planned and presented with QGIS. Many more forest analysis are possible with"
+" the variety of tools that you can access, but hopefully this manual has "
+"given you a good starting point to explore how you could achieve the "
+"specific results you need."
+msgstr ""
+"In questo modulo hai visto come è possibile pianificare e presentare un "
+"inventario forestale di base con QGIS. Molte altre analisi forestali sono "
+"possibili grazie alla varietà di strumenti a cui è possibile accedere, ma si"
+" spera che questo manuale ti abbia fornito un buon punto di partenza per "
+"comprendere come ottenere i risultati specifici di cui hai bisogno."

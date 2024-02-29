@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:8
+msgid "OGC Conformance Testing"
+msgstr "Pruebas de conformidad OGC"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:13
+msgid ""
+"The Open Geospatial Consortium (OGC) provides tests which can be run free of"
+" charge to make sure a server is compliant with a certain specification.  "
+"This chapter provides a quick tutorial to setup the WMS and OGC API Features"
+" tests on an Ubuntu system. A detailed documentation can be found at the "
+"`OGC website <https://www.ogc.org/compliance>`_."
+msgstr ""
+"El Open Geospatial Consortium (OGC) proporciona pruebas que se pueden "
+"ejecutar gratis para asegurar que un servidor cumple con ciertas "
+"especificaciones.  Este capítulo proporciona un rápido tutorial para "
+"configurar las pruebas de las Funciones WMS y OGC API en un sistema Ubuntu. "
+"Se puede encontrar documentación detallada en la `Página web "
+"<https://www.ogc.org/compliance>`_."
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:21
+msgid "pyogctest"
+msgstr ""
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:23
+msgid ""
+"`pyogctest <https://github.com/pblottiere/pyogctest>`_ is a Python tool "
+"dedicated to run OGC tests easily. The installation may be done in a virtual"
+" environment:"
+msgstr ""
+"`pyogctest <https://github.com/pblottiere/pyogctest>`_ es una herramienta de"
+" Python dedicada a ejecutar pruebas OGC fácilmente. La instalación se puede "
+"realizar en un entorno virtual:"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:36
+msgid "WMS 1.3.0 test suite"
+msgstr "WMS 1.3.0 test suite"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:38
+msgid ""
+"To run the WMS 1.3.0 test suite with success, a specific test dataset is "
+"needed.  It can be downloaded using **pyogctest**:"
+msgstr ""
+"Para ejecutar el conjunto de pruebas de WMS 1.3.0 con éxito, se necesita un "
+"conjunto de datos de prueba específico. Se puede descargar usando "
+"**pyogctest**:"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:45
+msgid ""
+"After the download, a ``teamengine_wms_130.qgs`` project is available in the"
+" new ``data`` directory. This project has to be registered as the default "
+"project for QGIS Server thanks to the **QGIS_SERVER_PROJECT_FILE** "
+"environment variable. This way, we don't need to explicitly set the ``MAP`` "
+"vendor-parameter of QGIS Server."
+msgstr ""
+"Tras la descarga, un proyecto ``teamengine_wms_130.qgs`` está disponible en "
+"el nuevo directorio de ``datos``. Este proyecto debe registrarse como "
+"proyecto predeterminado para QGIS Server gracias a la variable de entorno "
+"**QGIS_SERVER_PROJECT_FILE**. De esta manera, no necesitamos establecer "
+"explícitamente el parámetro de proveedor ``MAP`` de QGIS Server."
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:51
+msgid ""
+"A specific configuration is also necessary to comply with metadata tests. "
+"Indeed, some metadata are available in the ``data/metadata`` directory and "
+"have to be available for the OGC testing framework thanks to an URL. The "
+"easiest option is to configure your web server to have an access through "
+"something like ``http://XXX.XXX.XXX.XXX/metadata/Autos.xml``. These metadata"
+" URLs are defined in the project and inserted in the WMS ``GetCapabilities``"
+" document. So the project needs to be updated according to your testing "
+"environment to let QGIS Server generate a valid XML document:"
+msgstr ""
+"También es necesaria una configuración específica para cumplir con las "
+"pruebas de metadatos. De hecho, algunos metadatos están disponibles en el "
+"directorio ``datos/metadatos`` y deben estar disponibles para el marco de "
+"pruebas OGC gracias a una URL. La opción más sencilla es configurar su "
+"servidor web para que tenga acceso a través de algo como "
+"``http://XXX.XXX.XXX.XXX/metadata/Autos.xml``. Estas URL de metadatos se "
+"definen en el proyecto y se insertan en el documento WMS "
+"``GetCapabilities``. Por lo tanto, el proyecto debe actualizarse de acuerdo "
+"con su entorno de prueba para permitir que QGIS Server genere un documento "
+"XML válido:"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:65
+msgid ""
+"Now that everything is properly configured, we can run the WMS 1.3.0 test "
+"suite:"
+msgstr ""
+"Ahora que todo está configurado correctamente, podemos ejecutar el conjunto "
+"de pruebas WMS 1.3.0:"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:86
+msgid "OGC API Features test suite"
+msgstr "Conjunto de pruebas de características de la API de OGC"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:88
+msgid ""
+"To run the OGC API Features 1.0 test suite, a test dataset is needed. "
+"Considering that the underlying QGIS project doesn't need specific "
+"configuration for this test suite, we can use the ``.qgs`` file provided in "
+"the training repository:"
+msgstr ""
+"Para ejecutar el conjunto de pruebas OGC API Features 1.0, se necesita un "
+"conjunto de datos de prueba. Teniendo en cuenta que el proyecto QGIS "
+"subyacente no necesita una configuración específica para este conjunto de "
+"pruebas, podemos usar el archivo ``.qgs`` proporcionado en el repositorio de"
+" capacitación:"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:98
+msgid ""
+"After the download, a ``world.qgs`` project is available in the ``qgis-"
+"server-tutorial`` sub directory. This project has to be registered as the "
+"default project for QGIS Server thanks to the **QGIS_SERVER_PROJECT_FILE** "
+"environment variable. This way, we don't need to explicitly set the ``MAP`` "
+"vendor-parameter of QGIS Server."
+msgstr ""
+"Después de la descarga, un proyecto ``world.qgs`` está disponible en el "
+"subdirectorio ``qgis-server-tutorial``. Este proyecto debe registrarse como "
+"proyecto predeterminado para QGIS Server gracias a la variable de entorno "
+"**QGIS_SERVER_PROJECT_FILE**. De esta manera, no necesitamos establecer "
+"explícitamente el parámetro de proveedor ``MAP`` del servidor QGIS."
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:104
+msgid ""
+"Now that everything is properly configured, we can run the OGC API Features "
+"1.0 test suite:"
+msgstr ""
+"Ahora que todo está configurado correctamente, podemos ejecutar el conjunto "
+"de pruebas OGC API Features 1.0:"

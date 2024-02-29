@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:4
+msgid "Vector Spatial Analysis (Buffers)"
+msgstr "Пространственный анализ векторных данных ( Буфер)"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:7
+msgid "|gentleLogo|"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:289
+msgid "gentleLogo"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:7
+msgid "Objectives:"
+msgstr "Цели:"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:7
+msgid "Understanding the use of buffering in vector spatial analysis."
+msgstr "Понимание того, как используется буфер для простанственного анализа."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:9
+msgid "Keywords:"
+msgstr "Основные понятия:"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:9
+msgid ""
+"Vector, buffer zone, spatial analysis, buffer distance, dissolve boundary, "
+"outward and inward buffer, multiple buffer"
+msgstr ""
+"Вектор, буферная зона, простанственный анализ, растояние буфера,  размытие "
+"границ, буфер наружу и внутрь, составные буферы."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:13
+msgid "Overview"
+msgstr "Обзор"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:15
+msgid ""
+"**Spatial analysis** uses spatial information to extract new and additional "
+"meaning from GIS data. Usually spatial analysis is carried out using a GIS "
+"Application. GIS Applications normally have spatial analysis tools for "
+"feature statistics (e.g. how many vertices make up this polyline?) or "
+"geoprocessing such as feature buffering. The types of spatial analysis that "
+"are used vary according to subject areas. People working in water management"
+" and research (hydrology) will most likely be interested in analysing "
+"terrain and modelling water as it moves across it. In wildlife management "
+"users are interested in analytical functions that deal with wildlife point "
+"locations and their relationship to the environment. In this topic we will "
+"discuss buffering as an example of a useful spatial analysis that can be "
+"carried out with vector data."
+msgstr ""
+"**Пространственный анализ**  использует пространственную составляющую данных"
+"  для того, чтобы извлечь новую дополнительную информацию из них. Обычно "
+"пространтвенный анализ выполняеся ГИС программой, в которой содержатся "
+"инструменты для пространственного анализа и статистики ( например, как много"
+" вершин в полигоне) или геопроцессинга, как, например,  создание буфера. "
+"Типы используемого пространнственного анализа засисят от области применения."
+"  Так, работая с управлением и исследованиями  водными ресурсами "
+"(Гидрология), вероятнее всего будут испльзоватся инстументы для  "
+"исследования поверхности моделирование поведения водных объектов. При "
+"управлении живой природы пользователи будут заинтересованы в аналитических "
+"функциях, которые  будут описывать отношения между положением  живой природы"
+" и окружающей среды. В этой теме мы будем обсуждать использование буфера как"
+" примера пространсвенного анализа векторных данных. "
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:28
+msgid "Buffering in detail"
+msgstr "Создание буфера в деталях"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:30
+msgid ""
+"**Buffering** usually creates two areas: one area that is **within** a "
+"specified distance to selected real world features and the other area that "
+"is **beyond**. The area that is within the specified distance is called the "
+"**buffer zone**."
+msgstr ""
+"**Буферизация** обычно создает две области: одна **в пределах**  указанного "
+"расстояния от выбранного объекта реального мира, другая  - **вне**. Область,"
+" которая находится в пределах указанного расстояния называется **буферная "
+"зона**."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:48
+msgid ""
+"The border between the United States of America and Mexico is separated by a"
+" buffer zone. (Photo taken by SGT Jim Greenhill 2006)."
+msgstr ""
+"Граница между США и Мексикой разделяется буферной зоной. ( Фото сделано SGT "
+"Джим Гринхил 2006)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:61
+msgid "A buffer zone around vector points."
+msgstr "Буферная зона и векторные точки."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:69
+msgid "A buffer zone around vector polylines."
+msgstr "Буферная зона и векторные линии."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:80
+msgid "Variations in buffering"
+msgstr "Виды буферов"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:97
+msgid "Buffering rivers with different buffer distances."
+msgstr "Создание буферов для реки с различным расстоянием."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:102
+msgid "River"
+msgstr "Река"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:102
+msgid "Adjacent land use"
+msgstr "Смежные участки земли"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:102
+msgid "Buffer distance (meters)"
+msgstr "Буферное расстояние (метры)"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:104
+msgid "Breede River"
+msgstr "Река Бриде"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:104
+msgid "Intensive vegetable cultivation"
+msgstr "Интенсивная культивация овощей"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:104
+msgid "100"
+msgstr "100"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:106
+msgid "Komati"
+msgstr "Комати"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:106
+msgid "Intensive cotton cultivation"
+msgstr "Интенсиваня культивация хлопка"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:108
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:110
+msgid "Organic farming"
+msgstr "Органическое фермество"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:108
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:110
+msgid "50"
+msgstr "50"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:110
+msgid "Telle river"
+msgstr "Река Телле"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:165
+msgid "Common problems / things to be aware of"
+msgstr "Основные ошибки / о чём стоит помнить"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:208
+msgid "What have we learned?"
+msgstr "Что мы узнали?"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:210
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Подведём итоги:"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:224
+msgid "Now you try!"
+msgstr "Попробуйте сами!"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:226
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Вот некоторые идеи для заданий:"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:254
+msgid "Something to think about"
+msgstr "Стоит учесть"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:261
+msgid "Further reading"
+msgstr "Дополнительная литература"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:263
+msgid "**Books**:"
+msgstr "**Книги**:"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:267
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:269
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:277
+msgid "What's next?"
+msgstr "Что дальше?"

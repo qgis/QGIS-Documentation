@@ -1,0 +1,2602 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-04 12:11+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:2
+msgid "Vector analysis"
+msgstr "ベクタ解析"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:14
+msgid "Basic statistics for fields"
+msgstr "属性の基本統計量"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:15
+msgid ""
+"Generates basic statistics for a field of the attribute table of a vector "
+"layer."
+msgstr "ベクタレイヤの属性テーブルのフィールドについて、基本統計量を計算します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:18
+msgid "Numeric, date, time and string fields are supported."
+msgstr "数値型、日付型、時間型、文字列型のフィールドを対象とします。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:20
+msgid "The statistics returned will depend on the field type."
+msgstr "フィールドの型によって、計算される統計量は異なります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:22
+msgid ""
+"Statistics are generated as an HTML file and are available in the "
+":menuselection:`Processing --> Results viewer`."
+msgstr ""
+"統計量の結果はHTMLファイルとして作成され、 :menuselection:`プロセシング --> 結果ビューア` からアクセスできます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:25
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:498
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1049
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1153
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1242
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1832
+msgid "**Default menu**: :menuselection:`Vector --> Analysis Tools`"
+msgstr "**デフォルトメニュー**: :menuselection:`ベクタ --> 解析ツール`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:28
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:285
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:381
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:503
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:621
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:712
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:819
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:957
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1052
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1156
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1247
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1334
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1440
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1532
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1663
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1835
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:191
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:217
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:292
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:348
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:391
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:431
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:467
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:510
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:579
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:627
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:677
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:719
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:769
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:829
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:889
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:915
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:963
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:997
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1022
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1058
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1104
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1162
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1199
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1253
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1282
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1343
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1374
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1397
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1446
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1500
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1542
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1595
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1631
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1669
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1705
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1842
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1884
+msgid "Label"
+msgstr "ラベル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:35
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:68
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:218
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:293
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:349
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:392
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:432
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:468
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:511
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:580
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:628
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:678
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:720
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:770
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:830
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:890
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:916
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:964
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:998
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1023
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1059
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1105
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1163
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1200
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1254
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1283
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1344
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1375
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1398
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1447
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1501
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1543
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1596
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1632
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1670
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1706
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1843
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1885
+msgid "Name"
+msgstr "名前"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:69
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:193
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:219
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:294
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:350
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:393
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:433
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:469
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:512
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:581
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:629
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:679
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:721
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:771
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:831
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:891
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:917
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:965
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:999
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1024
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1060
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1106
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1164
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1201
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1255
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1284
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1345
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1376
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1399
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1448
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1502
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1544
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1597
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1633
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1671
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1707
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1844
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1886
+msgid "Type"
+msgstr "データ型"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:220
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:295
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:351
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:394
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:434
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:470
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:513
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:582
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:630
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:680
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:722
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:772
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:832
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:892
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:918
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:966
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1000
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1025
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1061
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1107
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1165
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1202
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1256
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1285
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1346
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1377
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1400
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1449
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1503
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1545
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1598
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1634
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1672
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1708
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1845
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1887
+msgid "Description"
+msgstr "説明"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:38
+msgid "**Input vector**"
+msgstr "**入力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:39
+msgid "``INPUT_LAYER``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:633
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:637
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:725
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:729
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:835
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:850
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:969
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:979
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1028
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1064
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1168
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1349
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1452
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1456
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1675
+msgid "[vector: any]"
+msgstr "[ベクタ：任意]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:41
+msgid "Vector layer to calculate the statistics on"
+msgstr "統計量を計算するベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:42
+msgid "**Field to calculate statistics on**"
+msgstr "**統計量を計算する属性（フィールド）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:43
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:447
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1002
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1611
+msgid "``FIELD_NAME``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:309
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:318
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:521
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:531
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:641
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:733
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:839
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:854
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1068
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1681
+msgid "[tablefield: any]"
+msgstr "[テーブルのフィールド：任意]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:45
+msgid "Any supported table field to calculate the statistics"
+msgstr "統計量の計算に対応した任意のテーブルのフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:71
+msgid "**Statistics**"
+msgstr "**統計量の出力**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:307
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:316
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:437
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:843
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:858
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1072
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1085
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1172
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1263
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1382
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1477
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1601
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1679
+msgid "Optional"
+msgstr "オプション"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:72
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1086
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1113
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1264
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1287
+msgid "``OUTPUT_HTML_FILE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1087
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1114
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1265
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1288
+msgid "[html]"
+msgstr "[html]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:52
+msgid "Default: ``[Save to temporary file]``"
+msgstr "デフォルト： ``[一時ファイルに保存]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:53
+msgid "Specification of the file for the calculated statistics. One of:"
+msgstr "計算した統計を出力するファイルの指定。次のいずれかです:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Skip Output"
+msgstr "出力をスキップ"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to a Temporary File"
+msgstr "一時ファイルに保存"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid "Save to File…"
+msgstr "ファイルに保存..."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:211
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:342
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:461
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:573
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:671
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:763
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:909
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1016
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1098
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1193
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1276
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1391
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1494
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1625
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1699
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1878
+msgid "Outputs"
+msgstr "出力"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:74
+msgid "HTML file with the calculated statistics"
+msgstr "統計量の計算結果のHTMLファイル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:75
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:330
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:352
+msgid "**Count**"
+msgstr "**カウント（Count）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:76
+msgid "``COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:81
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:89
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:101
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:105
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:109
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:113
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:121
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:125
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:129
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:133
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:145
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:149
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:153
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:228
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:238
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:243
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:401
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:407
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:478
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:554
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:895
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:973
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1119
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1292
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1296
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1300
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1304
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1308
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1384
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1471
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1479
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1556
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1562
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1569
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1642
+msgid "[number]"
+msgstr "[数値]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:79
+msgid "**Number of unique values**"
+msgstr "**ユニークな値の種類**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:80
+msgid "``UNIQUE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:83
+msgid "**Number of empty (null) values**"
+msgstr "**空白値（null）の数**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:84
+msgid "``EMPTY``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:87
+msgid "**Number of non-empty values**"
+msgstr "**非空白値の数**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:88
+msgid "``FILLED``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:91
+msgid "**Minimum value**"
+msgstr "**最小値（Minimum）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:92
+msgid "``MIN``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:93
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:97
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:137
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:141
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1357
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1403
+msgid "[same as input]"
+msgstr "[入力レイヤと同じ]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:95
+msgid "**Maximum value**"
+msgstr "**最大値（Maximum）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:96
+msgid "``MAX``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:99
+msgid "**Minimum length**"
+msgstr "**最短長（Min Length）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:100
+msgid "``MIN_LENGTH``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:103
+msgid "**Maximum length**"
+msgstr "**最大長（Max Length）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:104
+msgid "``MAX_LENGTH``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:107
+msgid "**Mean length**"
+msgstr "**平均長（Mean Length）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:108
+msgid "``MEAN_LENGTH``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:111
+msgid "**Coefficient of Variation**"
+msgstr "**分散係数（Coef of Variance）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:112
+msgid "``CV``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:115
+msgid "**Sum**"
+msgstr "**合計（Sum）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:116
+msgid "``SUM``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:119
+msgid "**Mean value**"
+msgstr "**平均値（Mean）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:120
+msgid "``MEAN``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:123
+msgid "**Standard deviation**"
+msgstr "**標準偏差（Standard deviation）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:124
+msgid "``STD_DEV``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:127
+msgid "**Range**"
+msgstr "**範囲（Range）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:128
+msgid "``RANGE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:131
+msgid "**Median**"
+msgstr "**中央値（Median）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:132
+msgid "``MEDIAN``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:135
+msgid "**Minority (rarest occurring value)**"
+msgstr "**最稀値（rarest occurring value）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:136
+msgid "``MINORITY``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:139
+msgid "**Majority (most frequently occurring value)**"
+msgstr "**最頻値（most frequently occurring value）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:140
+msgid "``MAJORITY``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:143
+msgid "**First quartile**"
+msgstr "**第１四分位（Q1）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:144
+msgid "``FIRSTQUARTILE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:147
+msgid "**Third quartile**"
+msgstr "**第３四分位（Q3）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:148
+msgid "``THIRDQUARTILE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:151
+msgid "**Interquartile Range (IQR)**"
+msgstr "**四分位範囲（IQR）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:152
+msgid "``IQR``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:157
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:248
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:359
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:482
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:593
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:689
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:781
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:925
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1033
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1128
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1209
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1312
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1409
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1512
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1646
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1808
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1895
+msgid "Python code"
+msgstr "Python コード"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:159
+msgid "**Algorithm ID**: ``qgis:basicstatisticsforfields``"
+msgstr "**Algorithm ID**: ``qgis:basicstatisticsforfields``"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"*algorithm id* は、プロセシングツールボックス内でアルゴリズムにマウスカーソルを乗せた際に表示されるIDです。 *parameter "
+"dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
+"コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:169
+msgid "Climb along line"
+msgstr "線に沿った上昇下降量"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:171
+msgid ""
+"Calculates the total climb and descent along line geometries. The input "
+"layer must have Z values present. If Z values are not available, the  "
+":ref:`qgissetzfromraster` algorithm may be used to add Z values from a DEM "
+"layer."
+msgstr ""
+"ラインジオメトリに沿った総上昇量と総下降量を計算します。入力レイヤはZ値を持っていなければなりません。レイヤがZ値を持っていない場合には、 "
+":ref:`qgissetzfromraster` アルゴリズムを使用してDEMレイヤからZ値を付加できます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:176
+msgid ""
+"The output layer is a copy of the input layer with additional fields that "
+"contain the total climb (``climb``), total descent (``descent``), the "
+"minimum elevation (``minelev``) and the maximum elevation (``maxelev``) for "
+"each line geometry. If the input layer contains fields with the same names "
+"as these added fields, they will be renamed (field names will be altered to "
+"\"name_2\", \"name_3\", etc, finding the first non-duplicate name)."
+msgstr ""
+"出力レイヤは入力レイヤのコピーですが、各ラインジオメトリについて総上昇量 (``climb``) 、総下降量 (``descent``) 、最低標高 "
+"(``minelev``) 、最高標高 (``maxelev``) "
+"のフィールドが追加されたものです。もし入力レイヤがこれらの追加フィールドと同名のフィールドを持つ場合には、追加されるフィールドは（重複したものについて順に、"
+" \"name_2\"、 \"name_3\" 等に）変更されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:195
+msgid "**Line layer**"
+msgstr "**線レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:396
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:515
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:724
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:968
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1063
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1167
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1258
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1348
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1547
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1674
+msgid "``INPUT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:201
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:223
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:660
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:683
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:872
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:921
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1484
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1506
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1848
+msgid "[vector: line]"
+msgstr "[ベクタ：ライン]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:198
+msgid "Line layer to calculate the climb for. Must have Z values"
+msgstr "上昇下降量を計算するラインレイヤ。Z値を持っている必要があります"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:199
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:221
+msgid "**Climb layer**"
+msgstr "**上昇下降量の出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:200
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:222
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:331
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:353
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:413
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:472
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:562
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:584
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:659
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:682
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:751
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:774
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:871
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:920
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:978
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1027
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1073
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1109
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1182
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1204
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1356
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1402
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1483
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1505
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1577
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1636
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1688
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1710
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1867
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1889
+msgid "``OUTPUT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:203
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:334
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:416
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:565
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:662
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:754
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:874
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1359
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1486
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1580
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1691
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1870
+msgid "Default: ``[Create temporary layer]``"
+msgstr "デフォルト： ``[一時レイヤを作成]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:204
+msgid "Specification of the output (line) layer. One of:"
+msgstr "出力（ライン）レイヤの指定。次のいずれかです:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "一時レイヤを作成（ ``TEMPORARY_OUTPUT`` ）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "Save to Geopackage…"
+msgstr "GeoPackageに保存..."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Save to Database Table…"
+msgstr "データベーステーブルに保存..."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "The file encoding can also be changed here."
+msgstr "ここでファイルの文字コードを変更することもできます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:224
+msgid ""
+"Line layer containing new attributes with the results from climb "
+"calculations."
+msgstr "上昇下降量計算の結果の新しい属性を持ったラインレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:226
+msgid "**Total climb**"
+msgstr "**総上昇量**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:227
+msgid "``TOTALCLIMB``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:229
+msgid "The sum of the climb for all the line geometries in the input layer"
+msgstr "入力レイヤの全てのラインジオメトリの上昇量の合計"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:231
+msgid "**Total descent**"
+msgstr "**総下降量**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:232
+msgid "``TOTALDESCENT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:234
+msgid "The sum of the descent for all the line geometries in the input layer"
+msgstr "入力レイヤの全てのラインジオメトリの下降量の合計"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:236
+msgid "**Minimum elevation**"
+msgstr "**最低標高**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:237
+msgid "``MINELEVATION``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:239
+msgid "The minimum elevation for the geometries in the layer"
+msgstr "レイヤ内のジオメトリの最小標高値"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:241
+msgid "**Maximum elevation**"
+msgstr "**最高標高**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:242
+msgid "``MAXELEVATION``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:244
+msgid "The maximum elevation for the geometries in the layer"
+msgstr "レイヤ内のジオメトリの最高標高値"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:250
+msgid "**Algorithm ID**: ``qgis:climbalongline``"
+msgstr "**Algorithm ID**: ``qgis:climbalongline``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:260
+msgid "Count points in polygon"
+msgstr "ポリゴン内の点の数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:261
+msgid ""
+"Takes a point and a polygon layer and counts the number of points from the "
+"point layer in each of the polygons of the polygon layer."
+msgstr "ポイントレイヤとポリゴンレイヤを引数にとり、ポリゴンレイヤの各ポリゴン内にあるポイントレイヤのポイントの数を数えます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:264
+msgid ""
+"A new polygon layer is generated, with the exact same content as the input "
+"polygon layer, but containing an additional field with the points count "
+"corresponding to each polygon."
+msgstr ""
+"入力ポリゴンレイヤと同じ内容の新しいポリゴンレイヤが作成されますが、これに加えて、各ポリゴンに対応したポイントの個数のフィールドが追加されています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:271
+msgid "The labels in the polygons show the point count"
+msgstr "ポイントの数を表示したポリゴンのラベル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:273
+msgid ""
+"An optional weight field can be used to assign weights to each point. "
+"Alternatively, a unique class field can be specified. If both options are "
+"used, the weight field will take precedence and the unique class field will "
+"be ignored."
+msgstr ""
+"オプションの重み属性を使用すると、各ポイントに重みを割り当てることができます。また、ユニークな分類属性を指定することもできます。両方のオプションが使用された場合、重み属性が優先され、ユニークな分類属性は無視されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:278
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1828
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>` of polygon features"
+msgstr ""
+"|checkbox| ポリゴン地物の :ref:`地物のIn-place編集 <processing_inplace_edit>` が可能です"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1912
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:282
+msgid "``Default menu``: :menuselection:`Vector --> Analysis Tools`"
+msgstr "``デフォルトメニュー``: :menuselection:`ベクタ --> 解析ツール`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:296
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1850
+msgid "**Polygons**"
+msgstr "**ポリゴン（Polygons）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:297
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1851
+msgid "``POLYGONS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:332
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:354
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1852
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1868
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1890
+msgid "[vector: polygon]"
+msgstr "[ベクタ：ポリゴン]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:299
+msgid ""
+"Polygon layer whose features are associated with the count of points they "
+"contain"
+msgstr "地物内のポイントを数えるポリゴンレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:301
+msgid "**Points**"
+msgstr "**ポイント（Points）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:302
+msgid "``POINTS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:303
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:397
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:414
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:473
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:516
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:526
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:563
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:585
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:752
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:775
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1183
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1205
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1259
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1548
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1578
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1637
+msgid "[vector: point]"
+msgstr "[ベクタ：ポイント]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:304
+msgid "Point layer with features to count"
+msgstr "地物数を数えたいポイントレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:305
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1170
+msgid "**Weight field**"
+msgstr "**重み属性（フィールド）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:308
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1173
+msgid "``WEIGHT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:310
+msgid ""
+"A field from the point layer. The count generated will be the sum of the "
+"weight field of the points contained by the polygon. If the weight field is "
+"not numeric, the count will be ``0``."
+msgstr ""
+"ポイントレイヤのフィールド。生成されるカウントは、そのポリゴンに含まれるポイントの重み属性の合計になります。重み属性が数値でない場合、カウントは "
+"``0`` となります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:314
+msgid "**Class field**"
+msgstr "**分類属性**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:317
+msgid "``CLASSFIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:319
+msgid ""
+"Points are classified based on the selected attribute and if several points "
+"with the same attribute value are within the polygon, only one of them is "
+"counted. The final count of the points in a polygon is, therefore, the count"
+" of different classes that are found in it."
+msgstr ""
+"ポイントは選択された分類属性に基づいて分類され、同じ分類属性値を持つ複数のポイントがポリゴン内に存在する場合は、そのうちの1つだけをカウントします。従って、最終的なポリゴン内の点の個数は、ポリゴン内にある相異なるクラスの個数となります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:324
+msgid "**Count field name**"
+msgstr "**カウント属性名**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:325
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:640
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:732
+msgid "``FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:326
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:448
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:455
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1003
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1010
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1123
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1612
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1619
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1856
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1862
+msgid "[string]"
+msgstr "[文字列]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:328
+msgid "Default: 'NUMPOINTS'"
+msgstr "デフォルト： 'NUMPOINTS'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:329
+msgid "The name of the field to store the count of points"
+msgstr "ポイントの個数を格納するフィールドの名前"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:335
+msgid "Specification of the output layer. One of:"
+msgstr "出力レイヤの指定。次のいずれかです:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Append to Layer…"
+msgstr "レイヤに追加..."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:355
+msgid ""
+"Resulting layer with the attribute table containing the new column with the "
+"points count"
+msgstr "ポイントの個数の新しい列を含む属性テーブルを持つ結果レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:361
+msgid "**Algorithm ID**: ``native:countpointsinpolygon``"
+msgstr "**Algorithm ID**: ``native:countpointsinpolygon``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:371
+msgid "DBSCAN clustering"
+msgstr "DBSCANクラスタリング"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:372
+msgid ""
+"Clusters point features based on a 2D implementation of Density-based "
+"spatial clustering of applications with noise (DBSCAN) algorithm."
+msgstr ""
+"DBSCAN（Density-based spatial clustering of applications with "
+"noise）アルゴリズムの2次元版実装に基づいて、ポイント地物をクラスタリングします。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:375
+msgid ""
+"The algorithm requires two parameters, a minimum cluster size, and the "
+"maximum distance allowed between clustered points."
+msgstr "このアルゴリズムには、最小クラスタサイズと、クラスタ化されたポイント間で許容される最大距離の2つのパラメータが必要です。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:378
+msgid ":ref:`qgisstdbscanclustering`, :ref:`qgiskmeansclustering`"
+msgstr ":ref:`qgisstdbscanclustering`, :ref:`qgiskmeansclustering`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:384
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:822
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1337
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1535
+msgid "Basic parameters"
+msgstr "基本パラメータ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:395
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:967
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1062
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1166
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1257
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1347
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1546
+msgid "**Input layer**"
+msgstr "**入力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:398
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:970
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1065
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1549
+msgid "Layer to analyze"
+msgstr "解析したいレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:399
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1554
+msgid "**Minimum cluster size**"
+msgstr "**最小クラスタサイズ（minPts）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:400
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1555
+msgid "``MIN_SIZE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:403
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:975
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1558
+msgid "Default: 5"
+msgstr "デフォルト： 5"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:404
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1559
+msgid "Minimum number of features to generate a cluster"
+msgstr "クラスタを構成する最小の地物数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:405
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1560
+msgid "**Maximum distance between clustered points**"
+msgstr "**クラスタ化された点の最大距離（eps）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:406
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1561
+msgid "``EPS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:409
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1564
+msgid "Default: 1.0"
+msgstr "デフォルト： 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:410
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1565
+msgid ""
+"Distance beyond which two features can not belong to the same cluster (eps)"
+msgstr "2つの地物が同一クラスタとなることのない距離（eps）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:412
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:471
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:977
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1026
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1576
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1635
+msgid "**Clusters**"
+msgstr "**クラスタ（Clusters）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:417
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1581
+msgid "Specify the vector layer for the result of the clustering. One of:"
+msgstr "クラスタ化の結果を出力するベクタレイヤを指定します。次のいずれかです:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:424
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:882
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:990
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1367
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1588
+msgid "Advanced parameters"
+msgstr "詳細パラメータ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:435
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1599
+msgid "**Treat border points as noise (DBSCAN\\*)**"
+msgstr "**境界点をノイズとして扱う（DBSCAN\\*）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:438
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1602
+msgid "``DBSCAN*``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:439
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:865
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:902
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1603
+msgid "[boolean]"
+msgstr "[ブール値]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:441
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:867
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:904
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1605
+msgid "Default: False"
+msgstr "デフォルト： False"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:442
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1606
+msgid ""
+"If checked, points on the border of a cluster are themselves treated as "
+"unclustered points, and only points in the interior of a cluster are tagged "
+"as clustered."
+msgstr ""
+"チェックした場合、クラスタの境界上のポイント自体はクラスタ化されていないポイントとして扱われ、クラスタの内側のポイントのみがクラスタ化されるものとしてタグ付けされます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:446
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1001
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1610
+msgid "**Cluster field name**"
+msgstr "**クラスタを示す属性名**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:450
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1005
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1614
+msgid "Default: 'CLUSTER_ID'"
+msgstr "デフォルト： 'CLUSTER_ID'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:451
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1006
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1615
+msgid "Name of the field where the associated cluster number shall be stored"
+msgstr "クラスタ番号を保存するフィールドの名前"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:453
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1008
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1617
+msgid "**Cluster size field name**"
+msgstr "**クラスタサイズを示す属性名**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1009
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1618
+msgid "``SIZE_FIELD_NAME``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:457
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1012
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1621
+msgid "Default: 'CLUSTER_SIZE'"
+msgstr "デフォルト: 'CLUSTER_SIZE'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:458
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1013
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1622
+msgid "Name of the field with the count of features in the same cluster"
+msgstr "同じクラスタにある地物の数のフィールドの名前"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:474
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1638
+msgid ""
+"Vector layer containing the original features with a field setting the "
+"cluster they belong to"
+msgstr "そのポイントが属するクラスタを設定するフィールドを持つ、オリジナルの地物を含むベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:476
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:971
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1640
+msgid "**Number of clusters**"
+msgstr "**クラスタ数**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:477
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1641
+msgid "``NUM_CLUSTERS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:479
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1643
+msgid "The number of clusters discovered"
+msgstr "検出されたクラスタ数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:484
+msgid "**Algorithm ID**: ``native:dbscanclustering``"
+msgstr "**Algorithm ID**: ``native:dbscanclustering``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:494
+msgid "Distance matrix"
+msgstr "距離行列（distance matrix）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:495
+msgid ""
+"Calculates for point features distances to their nearest features in the "
+"same layer or in another layer."
+msgstr "ポイント地物について、同じレイヤ内または別のレイヤ内の最も近い地物までの距離を計算します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:500
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1244
+msgid ":ref:`qgisjoinbynearest`"
+msgstr ":ref:`qgisjoinbynearest`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:514
+msgid "**Input point layer**"
+msgstr "**入力点のレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:517
+msgid ""
+"Point layer for which the distance matrix is calculated (**from** points)"
+msgstr "（ポイント **からの** ）距離行列を計算するポイントレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:519
+msgid "**Input unique ID field**"
+msgstr "**入力点のIDを示す属性（フィールド）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:520
+msgid "``INPUT_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:522
+msgid ""
+"Field to use to uniquely identify features of the input layer. Used in the "
+"output attribute table."
+msgstr "入力レイヤの地物を一意に識別するために使用するフィールド。出力属性テーブルで使用します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:524
+msgid "**Target point layer**"
+msgstr "**ターゲット点のレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:525
+msgid "``TARGET``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:527
+msgid "Point layer containing the nearest point(s) to search (**to** points)"
+msgstr "（ポイント **への** ）最近傍点を検索するポイントレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:529
+msgid "**Target unique ID field**"
+msgstr "**ターゲット点のIDを示す属性（フィールド）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:530
+msgid "``TARGET_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:532
+msgid ""
+"Field to use to uniquely identify features of the target layer. Used in the "
+"output attribute table."
+msgstr "ターゲットレイヤの地物を一意に識別するために使用するフィールド。出力属性テーブルで使用します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:535
+msgid "**Output matrix type**"
+msgstr "**出力形式**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:536
+msgid "``MATRIX_TYPE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:537
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:647
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:739
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1460
+msgid "[enumeration]"
+msgstr "[列挙型]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:539
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:556
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:649
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:741
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1462
+msgid "Default: 0"
+msgstr "デフォルト： 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:540
+msgid "Different types of calculation are available:"
+msgstr "さまざまな計算タイプが利用できます："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:542
+msgid ""
+"0 --- Linear (N * *k* x 3) distance matrix: for each input point, reports "
+"the distance to each of the *k* nearest target points. The output matrix "
+"consists of up to *k* rows per input point, and each row has three columns: "
+"*InputID*, *TargetID* and *Distance*."
+msgstr ""
+"0 --- 線形距離行列（N * *k* x 3）：各入力点について、距離の近い *k* "
+"個のターゲット点までの距離を返します。出力行列は入力点ごとに最大 *k* 行からなり、各行について3つの列： *InputID* 、 "
+"*TargetID* 、 *Distance* を持ちます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:548
+msgid "1 --- Standard (N x T) distance matrix"
+msgstr "1 --- 標準距離行列（N x T）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:549
+msgid ""
+"2 --- Summary distance matrix (mean, std. dev., min, max): for each input "
+"point, reports statistics on the distances to its target points."
+msgstr "2 --- 距離統計行列（平均、標準偏差、最小、最大）：各入力点について、ターゲット点に対する距離の統計量を返します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:552
+msgid "**Use only the nearest (k) target points**"
+msgstr "**計算する近傍点の個数（0ならすべての点を計算）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:553
+msgid "``NEAREST_POINTS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:557
+msgid ""
+"You can choose to calculate the distance to all the points in the target "
+"layer (*0*) or limit to a number (*k*) of closest features."
+msgstr ""
+"距離を計算するポイントをターゲットレイヤ内のすべてのポイント（ *0* ）とするか、最近傍の一定数（ *k* ）に制限するかを選択できます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:561
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:583
+msgid "**Distance matrix**"
+msgstr "**距離行列（distance matrix）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:566
+msgid "Specification of the output vector layer. One of:"
+msgstr "出力するベクタレイヤの指定。次のいずれかです:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:586
+msgid ""
+"Point (or MultiPoint for the \"Linear (N * *k* x 3)\" case) vector layer "
+"containing the distance calculation for each input feature. Its features and"
+" attribute table depend on the selected output matrix type."
+msgstr ""
+"各入力地物の距離計算を含むポイント（または 「線形（N * *k* x "
+"3）」の場合はマルチポイント）ベクタレイヤ。その地物と属性テーブルは、選択した出力行列の種類によって異なります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:595
+msgid "**Algorithm ID**: ``qgis:distancematrix``"
+msgstr "**Algorithm ID**: ``qgis:distancematrix``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:605
+msgid "Distance to nearest hub (line to hub)"
+msgstr "最寄りのハブの距離（ハブへの線）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:606
+msgid ""
+"Creates lines that join each feature of an input vector to the nearest "
+"feature in a destination layer. Distances are calculated based on the "
+":ref:`center <qgispointonsurface>` of each feature."
+msgstr ""
+"入力ベクタの各地物をハブレイヤの最も近い地物に結合する線を作成します。距離は各地物の :ref:`中心 <qgispointonsurface>` "
+"に基づいて計算されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:615
+msgid "Display the nearest hub for the red input features"
+msgstr "赤色の入力地物に対する最近傍ハブの表示"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:617
+msgid ":ref:`qgisdistancetonearesthubpoints`, :ref:`qgisjoinbynearest`"
+msgstr ":ref:`qgisdistancetonearesthubpoints` 、 :ref:`qgisjoinbynearest`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:631
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:723
+msgid "**Source points layer**"
+msgstr "**入力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:634
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:726
+msgid "Vector layer for which the nearest feature is searched"
+msgstr "最近傍の地物を探すベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:635
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:727
+msgid "**Destination hubs layer**"
+msgstr "**ハブレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:636
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:728
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:834
+msgid "``HUBS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:638
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:730
+msgid "Vector layer containing the features to search for"
+msgstr "検索対象の地物を含むベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:639
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:731
+msgid "**Hub layer name attribute**"
+msgstr "**ハブレイヤからコピーされる属性（ハブのIDを想定）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:642
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:734
+msgid ""
+"Field to use to uniquely identify features of the destination layer. Used in"
+" the output attribute table"
+msgstr "ハブレイヤの地物を一意に識別するために使用するフィールド。出力属性テーブルで使用します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:645
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:737
+msgid "**Measurement unit**"
+msgstr "**計測単位**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:646
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:738
+msgid "``UNIT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:650
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:742
+msgid "Units in which to report the distance to the closest feature:"
+msgstr "最近傍の地物への距離の単位"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:653
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:745
+msgid "0 --- Meters"
+msgstr "0 --- メートル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:654
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:746
+msgid "1 --- Feet"
+msgstr "1 --- フィート"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:655
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:747
+msgid "2 --- Miles"
+msgstr "2 --- マイル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:656
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:748
+msgid "3 --- Kilometers"
+msgstr "3 --- キロメートル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:657
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:749
+msgid "4 --- Layer units"
+msgstr "4 --- レイヤの単位"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:658
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:681
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:750
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:773
+msgid "**Hub distance**"
+msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:663
+msgid ""
+"Specify the output line vector layer connecting the matching points. One of:"
+msgstr "合致した点を結んだ出力ラインベクタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:684
+msgid ""
+"Line vector layer with the attributes of the input features, the identifier "
+"of their closest feature and the calculated distance."
+msgstr "入力地物の属性、最近傍の地物のID、計算された距離の属性を持つラインベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:691
+msgid "**Algorithm ID**: ``qgis:distancetonearesthublinetohub``"
+msgstr "**Algorithm ID**: ``qgis:distancetonearesthublinetohub``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:701
+msgid "Distance to nearest hub (points)"
+msgstr "最寄りのハブの距離"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:702
+msgid ""
+"Creates a point layer representing the :ref:`center <qgispointonsurface>` of"
+" the input features with the addition of two fields containing the "
+"identifier of the nearest feature (based on its center point) and the "
+"distance between the points."
+msgstr ""
+"入力地物の :ref:`中心 <qgispointonsurface>` "
+"を表すポイントレイヤを作成します。これには、（中心点に基づく）最も近い地物のIDと、ポイント間の距離の2つのフィールドが追加されています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:708
+msgid ":ref:`qgisdistancetonearesthublinetohub`, :ref:`qgisjoinbynearest`"
+msgstr ":ref:`qgisdistancetonearesthublinetohub` 、 :ref:`qgisjoinbynearest`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:755
+msgid "Specify the output point vector layer with the nearest hub. One of:"
+msgstr "最寄りのハブを持った出力ポイントベクタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:776
+msgid ""
+"Point vector layer representing the center of the source features with their"
+" attributes, the identifier of their closest feature and the calculated "
+"distance."
+msgstr "ソース地物の属性、最近傍の地物のID、計算された距離を持った、ソース地物の中心を表すポイントベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:783
+msgid "**Algorithm ID**: ``qgis:distancetonearesthubpoints``"
+msgstr "**Algorithm ID**: ``qgis:distancetonearesthubpoints``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:793
+msgid "Join by lines (hub lines)"
+msgstr "ハブ＆スポーク図"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:794
+msgid ""
+"Creates hub and spoke diagrams by connecting lines from points on the Spoke "
+"layer to matching points in the Hub layer."
+msgstr "スポークレイヤのポイントから対応するハブレイヤのポイントへ線をつなぐことで、ハブ＆スポーク図を作成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:797
+msgid ""
+"Determination of which hub goes with each point is based on a match between "
+"the Hub ID field on the hub points and the Spoke ID field on the spoke "
+"points."
+msgstr ""
+"どのハブが各ポイントに対応するかは、ハブポイント上のハブIDフィールドとスポークポイント上のスポークIDフィールドの一致に基づいて決定されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:801
+msgid ""
+"If input layers are not point layers, a point on the surface of the "
+"geometries will be taken as the connecting location."
+msgstr "入力レイヤがポイントレイヤでない場合には、ジオメトリの内部保証点（point on surface）を接続する地点として使用します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:804
+msgid ""
+"Optionally, geodesic lines can be created, which represent the shortest path"
+" on the surface of an ellipsoid. When geodesic mode is used, it is possible "
+"to split the created lines at the antimeridian (±180 degrees longitude), "
+"which can improve rendering of the lines. Additionally, the distance between"
+" vertices can be specified. A smaller distance results in a denser, more "
+"accurate line."
+msgstr ""
+"オプションとして、測地線（回転楕円体上の最短経路）を作成することもできます。測地線モードを使用する場合、作成する線分を日付変更線（経度±180度）で分割することもできます。これにより、線分のレンダリングが向上します。また、頂点間の距離も指定できます。距離が短いほど線分は密になり、正確な線になります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:816
+msgid "Join points based on a common field / attribute"
+msgstr "共通のフィールド / 属性に基づくポイントの連結"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:833
+msgid "**Hub layer**"
+msgstr "**ハブレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:836
+msgid "Input layer"
+msgstr "入力レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:837
+msgid "**Hub ID field**"
+msgstr "**ハブID属性**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:838
+msgid "``HUB_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:840
+msgid "Field of the hub layer with ID to join"
+msgstr "連結に使用するハブレイヤのIDフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:841
+msgid "**Hub layer fields to copy (leave empty to copy all fields)**"
+msgstr "**コピーするハブレイヤの属性（すべての属性をコピーする場合は空のまま）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:844
+msgid "``HUB_FIELDS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:845
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:860
+msgid "[tablefield: any] [list]"
+msgstr "[テーブルのフィールド：任意] [リスト]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:846
+msgid ""
+"The field(s) of the hub layer to be copied. If no field(s) are chosen all "
+"fields are taken."
+msgstr "コピーするハブレイヤのフィールド（複数可）。フィールドが何も選択されない場合は、すべてのフィールドをコピーします。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:848
+msgid "**Spoke layer**"
+msgstr "**スポークレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:849
+msgid "``SPOKES``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:851
+msgid "Additional spoke point layer"
+msgstr "スポーク点のレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:852
+msgid "**Spoke ID field**"
+msgstr "**スポークID属性**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:853
+msgid "``SPOKE_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:855
+msgid "Field of the spoke layer with ID to join"
+msgstr "連結に使用するスポークレイヤのIDフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:856
+msgid "**Spoke layer fields to copy (leave empty to copy all fields)**"
+msgstr "**コピーするスポークレイヤの属性（すべての属性をコピーする場合は空のまま）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:859
+msgid "``SPOKE_FIELDS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:861
+msgid ""
+"Field(s) of the spoke layer to be copied. If no fields are chosen all fields"
+" are taken."
+msgstr "コピーするスポークレイヤのフィールド（複数可）。フィールドが何も選択されない場合は、すべてのフィールドをコピーします。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:863
+msgid "**Create geodesic lines**"
+msgstr "**測地線を作成**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:864
+msgid "``GEODESIC``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:868
+msgid ""
+"Create geodesic lines (the shortest path on the surface of an ellipsoid)"
+msgstr "測地線（回転楕円体上の最短経路）を作成します"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:870
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:919
+msgid "**Hub lines**"
+msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:875
+msgid "Specify the output hub line vector layer. One of:"
+msgstr "出力ハブラインベクタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:893
+msgid "**Distance between vertices (geodesic lines only)**"
+msgstr "**頂点間の距離（測地線のみ）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:894
+msgid "``GEODESIC_DISTANCE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:897
+msgid "Default: 1000.0 (kilometers)"
+msgstr "デフォルト： 1000.0 （キロメートル）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:898
+msgid ""
+"Distance between consecutive vertices (in kilometers). A smaller distance "
+"results in a denser, more accurate line"
+msgstr "連続する頂点間の距離（キロメートル単位）。距離が小さいほど線分は密になり、正確な線となる"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:900
+msgid "**Split lines at antimeridian (±180 degrees longitude)**"
+msgstr "**日付変更線（経度180度線）で線を切断**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:901
+msgid "``ANTIMERIDIAN_SPLIT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:905
+msgid ""
+"Split lines at ±180 degrees longitude (to improve rendering of the lines)"
+msgstr "経度 ±180度で線を切断する（ラインのレンダリングが崩れないようにするため）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:922
+msgid "The resulting line layer connecting matching points in input layers"
+msgstr "入力レイヤの適合した点を接続した、結果ラインレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:927
+msgid "**Algorithm ID**: ``native:hublines``"
+msgstr "**Algorithm ID**: ``native:hublines``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:937
+msgid "K-means clustering"
+msgstr "K平均クラスタリング"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:938
+msgid ""
+"Calculates the 2D distance based k-means cluster number for each input "
+"feature."
+msgstr "各入力地物について、2次元的な距離に基づくK平均法によるクラスタ番号を計算します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:941
+msgid ""
+"K-means clustering aims to partition the features into k clusters in which "
+"each feature belongs to the cluster with the nearest mean. The mean point is"
+" represented by the barycenter of the clustered features."
+msgstr ""
+"Ｋ平均クラスタリングは、地物をｋ個のクラスタに分割し、各地物が最も近い平均を持つクラスタに属するようにすることを目的とします。平均点は、クラスタ化された地物の重心によって表されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:946
+msgid ""
+"If input geometries are lines or polygons, the clustering is based on the "
+"centroid of the feature."
+msgstr "入力ジオメトリがラインやポリゴンの場合には、クラスタリングは地物の重心に基づいて行われます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:952
+msgid "A five class point clusters"
+msgstr "5クラスのポイントクラスタ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:954
+msgid ":ref:`qgisdbscanclustering`, :ref:`qgisstdbscanclustering`"
+msgstr ":ref:`qgisdbscanclustering`, :ref:`qgisstdbscanclustering`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:972
+msgid "``CLUSTERS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:976
+msgid "Number of clusters to create with the features"
+msgstr "作成したい地物クラスタ数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:981
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1076
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1185
+msgid "Default:``[Create temporary layer]``"
+msgstr "デフォルト： ``[一時レイヤを作成]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:982
+msgid "Specify the output vector layer for generated the clusters. One of:"
+msgstr "生成されたクラスタの出力ベクタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1029
+msgid ""
+"Vector layer containing the original features with fields specifying the "
+"cluster they belong to and their number in it"
+msgstr "地物が属するクラスタとその番号を指定するフィールドを持つ、オリジナルの地物を格納しているベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1035
+msgid "**Algorithm ID**: ``native:kmeansclustering``"
+msgstr "**Algorithm ID**: ``native:kmeansclustering``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1045
+msgid "List unique values"
+msgstr "ユニーク値のリスト"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1046
+msgid ""
+"Lists unique values of an attribute table field and counts their number."
+msgstr "属性テーブルフィールドのユニーク値をリストし、その数を数えます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1066
+msgid "**Target field(s)**"
+msgstr "**対象属性（フィールド）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1067
+msgid "``FIELDS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1069
+msgid "Field to analyze"
+msgstr "分析したいフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1070
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1108
+msgid "**Unique values**"
+msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1074
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1110
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1689
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1711
+msgid "[table]"
+msgstr "[テーブル]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1077
+msgid "Specify the summary table layer with unique values. One of:"
+msgstr "ユニーク値のサマリテーブルレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1083
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1112
+msgid "**HTML report**"
+msgstr "**HTMLレポートの出力**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1089
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1267
+msgid "Default:``[Save to temporary file]``"
+msgstr "デフォルト： ``[一時ファイルに保存]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1090
+msgid ""
+"HTML report of unique values in the :menuselection:`Processing --> Results "
+"viewer`. One of:"
+msgstr ":menuselection:`プロセシング --> 結果ビューア` のユニーク値のHTMLレポート。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1111
+msgid "Summary table layer with unique values"
+msgstr "ユニーク値の集計テーブルレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1115
+msgid ""
+"HTML report of unique values. Can be opened from the "
+":menuselection:`Processing --> Results viewer`"
+msgstr "ユニーク値のHTMLレポート。 :menuselection:`プロセシング --> 結果ビューア` からアクセスできます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1117
+msgid "**Total unique values**"
+msgstr "**ユニークな値の総数**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1118
+msgid "``TOTAL_VALUES``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1120
+msgid "The number of unique values in the input field"
+msgstr "入力フィールドにあるユニーク値の数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1121
+msgid "**Unique values concatenated**"
+msgstr "**連結したユニーク値**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1122
+msgid "``UNIQUE_VALUES``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1124
+msgid ""
+"A string with the comma separated list of unique values found in the input "
+"field"
+msgstr "入力フィールドで見つかったユニーク値のリストをコンマ区切りで繋げた文字列"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1130
+msgid "**Algorithm ID**: ``qgis:listuniquevalues``"
+msgstr "**Algorithm ID**: ``qgis:listuniquevalues``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1140
+msgid "Mean coordinate(s)"
+msgstr "加重平均座標（重心の平均）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1141
+msgid ""
+"Computes a point layer with the center of mass of geometries in an input "
+"layer."
+msgstr "入力レイヤのジオメトリの重心を計算したポイントレイヤを作成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1144
+msgid ""
+"An attribute can be specified as containing weights to be applied to each "
+"feature when computing the center of mass."
+msgstr "重心を計算する際に、各地物に適用される重み付けの属性を指定できます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1147
+msgid ""
+"If an attribute is selected in the parameter, features will be grouped "
+"according to values in this field. Instead of a single point with the center"
+" of mass of the whole layer, the output layer will contain a center of mass "
+"for the features in each category."
+msgstr ""
+"パラメータで属性を選択すると、地物はこのフィールドの値でグループ化されます。出力レイヤには、レイヤ全体の重心を示す単一の点ではなく、各カテゴリの地物の重心が含まれるようになります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1169
+msgid "Input vector layer"
+msgstr "入力ベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1174
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1178
+msgid "[tablefield: numeric]"
+msgstr "[テーブルのフィールド：数値]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1175
+msgid "Field to use if you want to perform a weighted mean"
+msgstr "重み付き平均を計算したい場合に使用するフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1176
+msgid "**Unique ID field**"
+msgstr "**ユニークID属性**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1177
+msgid "``UID``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1179
+msgid "Unique field on which the calculation of the mean will be made"
+msgstr "グループ化した平均の計算を行う上でのユニークフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1181
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1203
+msgid "**Mean coordinates**"
+msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1186
+msgid "Specify the (point vector) layer for the result. One of:"
+msgstr "結果の（ポイントベクタ）レイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1206
+msgid "Resulting point(s) layer"
+msgstr "結果のポイントレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1211
+msgid "**Algorithm ID**: ``native:meancoordinates``"
+msgstr "**Algorithm ID**: ``native:meancoordinates``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1221
+msgid "Nearest neighbour analysis"
+msgstr "最近傍解析"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1222
+msgid ""
+"Performs nearest neighbor analysis for a point layer. The output tells you "
+"how your data are distributed (clustered, randomly or distributed)."
+msgstr ""
+"ポイントレイヤの最近傍解析を実行します。出力結果は、データがどのように分布しているか（クラスター化しているか、ランダムに分布しているか等）を表します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1225
+msgid ""
+"Output is generated as an HTML file with the computed statistical values:"
+msgstr "出力結果は、計算された以下の統計値を含むHTMLファイルとして生成されます："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1228
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1293
+msgid "Observed mean distance"
+msgstr "観測平均距離"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1229
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1297
+msgid "Expected mean distance"
+msgstr "推定平均距離"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1230
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1301
+msgid "Nearest neighbour index"
+msgstr "最近傍インデックス"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1231
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1305
+msgid "Number of points"
+msgstr "頂点数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1232
+msgid ""
+"Z-Score: Comparing the Z-Score with the normal distribution tells you how "
+"your data are distributed. A low Z-Score means that the data are unlikely to"
+" be the result of a spatially random process, while a high Z-Score means "
+"that your data are likely to be a result of a spatially random process."
+msgstr ""
+"Z-スコア：Z-スコアを正規分布と比較すると、データがどのように分布しているかがわかります。Z-スコアが低いと、データは空間的にランダムなプロセスの結果である可能性が低いことを意味し、反対にZ-"
+"スコアが高いと、データは空間的にランダムなプロセスの結果である可能性が高いことを意味します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1260
+msgid "Point vector layer to calculate the statistics on"
+msgstr "統計値を計算したいポイントベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1261
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1286
+msgid "**Nearest neighbour**"
+msgstr "**最近傍（Nearest neighbor）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1268
+msgid "Specification of the HTML file for the computed statistics. One of:"
+msgstr "計算した統計を出力するHTMLファイルの指定。次のいずれかです:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1289
+msgid "HTML file with the computed statistics"
+msgstr "統計量の計算結果のHTMLファイル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1290
+msgid "**Observed mean distance**"
+msgstr "**観測平均距離**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1291
+msgid "``OBSERVED_MD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1294
+msgid "**Expected mean distance**"
+msgstr "**推定平均距離**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1295
+msgid "``EXPECTED_MD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1298
+msgid "**Nearest neighbour index**"
+msgstr "**最近傍インデックス**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1299
+msgid "``NN_INDEX``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1302
+msgid "**Number of points**"
+msgstr "**点の数**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1303
+msgid "``POINT_COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1306
+msgid "**Z-Score**"
+msgstr "**Z-スコア**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1307
+msgid "``Z_SCORE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1309
+msgid "Z-Score"
+msgstr "Z-スコア"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1314
+msgid "**Algorithm ID**: ``native:nearestneighbouranalysis``"
+msgstr "**Algorithm ID**: ``native:nearestneighbouranalysis``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1324
+msgid "Overlap analysis"
+msgstr "重なり分析"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1325
+msgid ""
+"Calculates the area and percentage cover by which features from an input "
+"layer are overlapped by features from a selection of overlay layers."
+msgstr "入力レイヤの地物が選択したオーバーレイレイヤの地物に対して重なる面積と割合を計算します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1329
+msgid ""
+"New attributes are added to the output layer reporting the total area of "
+"overlap and percentage of the input feature overlapped by each of the "
+"selected overlay layers."
+msgstr "入力地物が選択された各オーバーレイレイヤと重なる部分の面積と割合が、新しい属性として出力レイヤに追加されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1350
+msgid "The input layer."
+msgstr "入力レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1351
+msgid "**Overlap layers**"
+msgstr "**オーバーレイレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1352
+msgid "``LAYERS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1353
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1685
+msgid "[vector: any] [list]"
+msgstr "[ベクタ：任意] [リスト]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1354
+msgid "The overlay layers."
+msgstr "オーバーレイレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1355
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1401
+msgid "**Overlap**"
+msgstr "**重なり**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1360
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1487
+msgid "Specify the output vector layer. One of:"
+msgstr "出力ベクタレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1378
+msgid "**Grid size**"
+msgstr "**グリッドサイズ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1380
+msgid "|328|"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1383
+msgid "``GRID_SIZE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1386
+msgid "Default: Not set"
+msgstr "デフォルト：未設定"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1387
+msgid ""
+"If provided, the input geometries are snapped to a grid of the given size, "
+"and the result vertices are computed on that same grid. Requires GEOS 3.9.0 "
+"or higher."
+msgstr ""
+"指定された場合、入力ジオメトリは指定されたサイズのグリッドにスナップされ、結果の頂点は同じグリッド上で計算されます。GEOS 3.9.0以上が必要です。"
+" "
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1404
+msgid ""
+"The output layer with additional fields reporting the overlap (in map units "
+"and percentage) of the input feature overlapped by each of the selected "
+"layers."
+msgstr "入力地物と選択された各オーバーレイレイヤとの重なり（地図単位の面積およびパーセンテージ）のフィールドが追加された出力レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1411
+msgid "**Algorithm ID**: ``native:calculatevectoroverlaps``"
+msgstr "**Algorithm ID**: ``native:calculatevectoroverlaps``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1421
+msgid "Shortest line between features"
+msgstr "地物間の最短線"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1422
+msgid "|324|"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1424
+msgid ""
+"Creates a line layer as the shortest line between the source and the "
+"destination layer. By default only the first nearest feature of the "
+"destination layer is taken into account. The n-nearest neighboring features "
+"number can be specified. If a maximum distance is specified, then only "
+"features which are closer than this distance will be considered."
+msgstr ""
+"起点レイヤと出力レイヤ間の最短線としてラインレイヤを作成します。デフォルトでは、出力レイヤの最初の最近傍地物のみが考慮されます。n番目に近い地物の数を指定できます。最大距離を指定すると、その距離より近い地物のみが考慮されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1427
+msgid ""
+"The output features will contain all the source layer attributes, all the "
+"attributes from the n-nearest feature and the additional field of the "
+"distance."
+msgstr "出力地物は、起点レイヤの全ての属性、n最近傍地物の全ての属性、及び距離の追加フィールドを格納します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1429
+msgid ""
+"This algorithm uses purely Cartesian calculations for distance, and does not"
+" consider geodetic or ellipsoid properties when determining feature "
+"proximity. The measurement and output coordinate system is based on the "
+"coordinate system of the source layer."
+msgstr ""
+"このアルゴリズムでは、距離については純粋にデカルト計算を使用し、地物の近接度を決定する際に測地線や楕円体の特性は考慮しません。測定及び出力の座標系は、 "
+"起点レイヤの座標系に基づいてい ます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1437
+msgid "Shortest line from point features to lines"
+msgstr "ポイント地物からラインへの最短線"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1450
+msgid "**Source layer**"
+msgstr "**起点レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1451
+msgid "``SOURCE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1453
+msgid "Origin layer for which to search for nearest neighbors"
+msgstr "その最近傍を検索する起点レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1454
+msgid "**Destination layer**"
+msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1455
+msgid "``DESTINATION``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1457
+msgid "Target Layer in which to search for nearest neighbors"
+msgstr "その中にある最近傍を検索する対象レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1458
+msgid "**Method**"
+msgstr "**方法**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1459
+msgid "``METHOD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1463
+msgid "Shortest distance calculation method Possible values are:"
+msgstr "最短距離の計算法。可能な値は次のとおりです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1466
+msgid "0 --- Distance to nearest point on feature"
+msgstr "0 -- 地物の最も近い点までの距離"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1467
+msgid "1 --- Distance to feature centroid"
+msgstr "1 -- 地物の重心までの距離"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1469
+msgid "**Maximum number of neighbors**"
+msgstr "**考慮する隣接地物の数**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1470
+msgid "``NEIGHBORS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1473
+msgid "Default: 1"
+msgstr "デフォルト： 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1474
+msgid "Maximum number of neighbors to look for"
+msgstr "探索する近隣地物の最大数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1475
+msgid "**Maximum distance**"
+msgstr "**最大距離**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1478
+msgid "``DISTANCE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1480
+msgid ""
+"Only destination features which are closer than this distance will be "
+"considered."
+msgstr "この距離より近い地物だけが考慮されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1482
+msgid "**Shortest lines**"
+msgstr "**最短線**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1504
+msgid "**Output layer**"
+msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1507
+msgid ""
+"Line vector layer joining source features to their nearest neighbor(s) in "
+"the destination layer. Contains all attributes for both source and "
+"destination features, and the computed distance."
+msgstr "起点地物と出力レイヤの最近傍地物を結ぶラインベクタレイヤ。起点地物と目標地物の全ての属性と、計算された距離が含まれます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1514
+msgid "**Algorithm ID**: ``native:shortestline``"
+msgstr "**Algorithm ID**: ``native:shortestline``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1524
+msgid "ST-DBSCAN clustering"
+msgstr "ST-DBSCANクラスタリング"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1526
+msgid ""
+"Clusters point features based on a 2D implementation of spatiotemporal "
+"Density-based clustering of applications with noise (ST-DBSCAN) algorithm."
+msgstr ""
+"Density-based clustering of applications with noise (ST-"
+"DBSCAN)アルゴリズムの2次元実装に基づくポイント地物のクラスタリング。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1529
+msgid ":ref:`qgisdbscanclustering`, :ref:`qgiskmeansclustering`"
+msgstr ":ref:`qgisdbscanclustering`, :ref:`qgiskmeansclustering`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1550
+msgid "**Date/time field**"
+msgstr "**日付・時間フィールド**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1551
+msgid "``DATETIME_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1552
+msgid "[tablefield: date]"
+msgstr "[tablefield: 日付]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1553
+msgid "Field containing the temporal information"
+msgstr "時間情報を格納しているフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1567
+msgid "**Maximum time duration between clustered points**"
+msgstr "**クラスタ化された点の最大継続時間**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1568
+msgid "``EPS2``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1571
+msgid "Default: 0.0 (days)"
+msgstr "デフォルト: 0.0（日）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1572
+msgid ""
+"Time duration beyond which two features can not belong to the same cluster "
+"(eps2). Available time units are milliseconds, seconds, minutes, hours, days"
+" and weeks."
+msgstr "2つの地物が同じクラスターに属することができない時間(eps2)。利用可能な時間単位はミリ秒、秒、分、時、日、週です。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1648
+msgid "**Algorithm ID**: ``native:stdbscanclustering``"
+msgstr "**Algorithm ID**: ``native:stdbscanclustering``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1658
+msgid "Statistics by categories"
+msgstr "出力レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1659
+msgid ""
+"Calculates statistics of a field depending on a parent class. The parent "
+"class is a combination of values from other fields."
+msgstr "親クラスに応じたフィールドの統計量を計算します。親クラスは、他のフィールドの値の組み合わせです。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1673
+msgid "**Input vector layer**"
+msgstr "**入力ベクタレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1676
+msgid "Input vector layer with unique classes and values"
+msgstr "ユニークなカテゴリと値を持つ入力ベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1677
+msgid ""
+"**Field to calculate statistics on (if empty, only count is calculated)**"
+msgstr "**集計する属性（空の場合はカウントのみ）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1680
+msgid "``VALUES_FIELD_NAME``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1682
+msgid "If empty only the count will be calculated"
+msgstr "空の場合はカウントのみ計算します"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1683
+msgid "**Field(s) with categories**"
+msgstr "**カテゴリ分けする属性**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1684
+msgid "``CATEGORIES_FIELD_NAME``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1686
+msgid "The fields that (combined) define the categories"
+msgstr "カテゴリを定義するフィールド（組み合わせ可）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1687
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1709
+msgid "**Statistics by category**"
+msgstr "**カテゴリ別の統計量**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1692
+msgid "Specify the output table for the generated statistics. One of:"
+msgstr "生成した統計量の出力テーブルを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1712
+msgid "Table containing the statistics"
+msgstr "統計量のテーブル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1714
+msgid ""
+"Depending on the type of the field being analyzed, the following statistics "
+"are returned for each grouped value:"
+msgstr "集計する属性の型に応じて、各カテゴリについて以下の統計量が返されます："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1722
+msgid "Statistics"
+msgstr "統計"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1723
+msgid "String"
+msgstr "文字列"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1724
+msgid "Numeric"
+msgstr "数値"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1725
+msgid "Date"
+msgstr "日付"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1726
+msgid "Count (``COUNT``)"
+msgstr "個数（ ``COUNT`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1727
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1728
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1729
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1731
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1733
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1735
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1737
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1739
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1741
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1743
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1744
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1745
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1747
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1748
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1749
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1752
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1756
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1760
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1764
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1768
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1772
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1776
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1780
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1784
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1788
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1792
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1795
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1799
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1803
+msgid "|checkbox|"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1730
+msgid "Unique values (``UNIQUE``)"
+msgstr "ユニーク値（ ``UNIQUE`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1734
+msgid "Empty (null) values (``EMPTY``)"
+msgstr "空値（null）（ ``EMPTY`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1738
+msgid "Non-empty values (``FILLED``)"
+msgstr "非null値（ ``FILLED`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1742
+msgid "Minimal value (``MIN``)"
+msgstr "最小値（ ``MIN`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1746
+msgid "Maximal value (``MAX``)"
+msgstr "最大値（ ``MAX`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1750
+msgid "Range (``RANGE``)"
+msgstr "範囲（ ``RANGE`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1754
+msgid "Sum (``SUM``)"
+msgstr "合計（ ``SUM`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1758
+msgid "Mean value (``MEAN``)"
+msgstr "平均（ ``MEAN`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1762
+msgid "Median value (``MEDIAN``)"
+msgstr "中央値（ ``MEDIAN`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1766
+msgid "Standard Deviation (``STD_DEV``)"
+msgstr "標準偏差（ ``STD_DEV`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1770
+msgid "Coefficient of variation (``CV``)"
+msgstr "分散係数（ ``CV`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1774
+msgid "Minority (rarest occurring value - ``MINORITY``)"
+msgstr "最稀値（最も頻度の少ない値 - ``MINORITY`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1778
+msgid "Majority (most frequently occurring value - ``MAJORITY``)"
+msgstr "最頻値（最も頻度の多い値 - ``MAJORITY`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1782
+msgid "First Quartile (``FIRSTQUARTILE``)"
+msgstr "第１四分位（ ``FIRSTQUARTILE`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1786
+msgid "Third Quartile (``THIRDQUARTILE``)"
+msgstr "第３四分位（ ``THIRDQUARTILE`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1790
+msgid "Inter Quartile Range (``IQR``)"
+msgstr "四分位範囲（ ``IQR`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1794
+msgid "Minimum Length (``MIN_LENGTH``)"
+msgstr "最小長さ（ ``MIN_LENGTH`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1798
+msgid "Mean Length (``MEAN_LENGTH``)"
+msgstr "平均の長さ（ ``MEAN_LENGTH`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1802
+msgid "Maximum Length (``MAX_LENGTH``)"
+msgstr "最大長さ（ ``MAX_LENGTH`` ）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1810
+msgid "**Algorithm ID**: ``qgis:statisticsbycategories``"
+msgstr "**Algorithm ID**: ``qgis:statisticsbycategories``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1820
+msgid "Sum line lengths"
+msgstr "線長の合計"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1821
+msgid ""
+"Takes a polygon layer and a line layer and measures the total length of "
+"lines and the total number of them that cross each polygon."
+msgstr "ポリゴンレイヤとラインレイヤを使用して、各ポリゴンを横切るラインの合計長と合計数を計測します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1824
+msgid ""
+"The resulting layer has the same features as the input polygon layer, but "
+"with two additional attributes containing the length and count of the lines "
+"across each polygon."
+msgstr "結果として得られるレイヤは、入力ポリゴンレイヤと同じ地物ですが、各ポリゴンを横切るラインの長さと本数の2つ属性が追加されています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1846
+msgid "**Lines**"
+msgstr "**線レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1847
+msgid "``LINES``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1849
+msgid "Input vector line layer"
+msgstr "入力ベクタラインレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1853
+msgid "Polygon vector layer"
+msgstr "ポリゴンベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1854
+msgid "**Lines length field name**"
+msgstr "**交差する線の総延長を格納するフィールドの名前**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1855
+msgid "``LEN_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1858
+msgid "Default: 'LENGTH'"
+msgstr "デフォルト： 'LENGTH'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1859
+msgid "Name of the field for the lines length"
+msgstr "線の長さのフィールド名"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1860
+msgid "**Lines count field name**"
+msgstr "**交差する線の数を格納するフィールドの名前**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1861
+msgid "``COUNT_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1864
+msgid "Default: 'COUNT'"
+msgstr "デフォルト： 'COUNT'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1865
+msgid "Name of the field for the lines count"
+msgstr "線の数のフィールド名"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1866
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1888
+msgid "**Line length**"
+msgstr "**ポリゴンと交差する線の総延長**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1871
+msgid "Specify the output polygon layer with generated statistics. One of:"
+msgstr "生成した統計量を持った出力ポリゴンレイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1891
+msgid "Polygon output layer with fields of lines length and line count"
+msgstr "ライン長とライン数のフィールドを持つ出力ポリゴンレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1897
+msgid "**Algorithm ID**: ``native:sumlinelengths``"
+msgstr "**Algorithm ID**: ``native:sumlinelengths``"

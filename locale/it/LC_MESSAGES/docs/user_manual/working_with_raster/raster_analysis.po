@@ -1,0 +1,385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:6
+msgid "Raster Analysis"
+msgstr "Analisi raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:17
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:29
+msgid "Raster Calculator"
+msgstr "Calcolatore raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:19
+msgid ""
+"The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
+"allows you to perform calculations on the basis of existing raster pixel "
+"values (see :numref:`figure_raster_calculator`). The results are written to "
+"a new raster layer in a GDAL-supported format."
+msgstr ""
+"Il :menuselection:`Calcolatore Raster` nel menu :menuselection:`Raster` ti "
+"permette di eseguire calcoli sulla base dei valori dei pixel raster "
+"esistenti (vedi :numref:`figure_raster_calculator`). I risultati vengono "
+"scritti in un nuovo layer raster in un formato supportato da GDAL."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:32
+msgid ""
+"The :guilabel:`Raster bands` list contains all loaded raster layers that can"
+" be used. To add a raster to the raster calculator expression field, double "
+"click its name in the Fields list. You can then use the operators to "
+"construct calculation expressions, or you can just type them into the box."
+msgstr ""
+"L'elenco :guilabel:`Bande raster` contiene tutti i layer raster caricati che"
+" possono essere utilizzati. Per aggiungere un raster al campo di espressione"
+" del calcolatore raster, fai doppio clic sul suo nome nell'elenco. Puoi "
+"quindi utilizzare gli operatori per costruire le espressioni di calcolo, "
+"oppure digitarle semplicemente nella finestra."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:37
+msgid ""
+"In the :guilabel:`Result layer` section, you will need to define an output "
+"layer. You can:"
+msgstr ""
+"Nella sezione :guilabel:`Layer del Risultato`, devi indicare un layer in "
+"uscita. Puoi:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:40
+msgid ""
+"|checkbox| :guilabel:`Create on-the-fly raster instead of writing layer to "
+"disk`:"
+msgstr ""
+"|checkbox| :guilabel:`Crea un raster al volo invece di scrivere il layer su "
+"disco`:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:184
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:42
+msgid ""
+"If unchecked, the output is stored on the disk as a new plain file. An "
+":guilabel:`Output layer` path and an :guilabel:`Output format` are required."
+msgstr ""
+"Se non selezionata, il risultato viene memorizzato sul disco come un nuovo "
+"file semplice. Sono richiesti un percorso :guilabel:`Raster in uscita` e un "
+":guilabel:`Formato in uscita`."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:44
+msgid ""
+"If checked, a virtual raster layer, i.e. a raster layer defined by its URI "
+"and whose pixels are calculated on-the-fly, is created. It's not a new file "
+"on disk; the virtual layer is still connected to the rasters used in the "
+"calculation meaning that deleting or moving these rasters would break it. A "
+":guilabel:`Layer name` can be provided, otherwise the calculation expression"
+" is used as such. Removing the virtual layer from the project deletes it, "
+"and it can be made persistent in file using the layer :menuselection:`Export"
+" --> Save as...` contextual menu."
+msgstr ""
+"Se selezionata, viene creato un layer raster virtuale, cioè un layer raster "
+"definito dal suo URI e i cui pixel sono calcolati al volo. Non si tratta di "
+"un nuovo file su disco; il layer virtuale è ancora collegato ai raster usati"
+" nel calcolo, il che significa che l'eliminazione o lo spostamento di questi"
+" raster lo distruggerebbe. Puoi fornire un :guilabel:`Nome layer`, "
+"altrimenti l'espressione di calcolo viene utilizzata come tale. Se rimuovi "
+"il layer virtuale dal progetto, lo elimini e puoi renderlo persistente nel "
+"file usando il menu contestuale del layer :menuselection:`Esporta --> Salva "
+"come...`."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:53
+msgid ""
+"Define the :guilabel:`Spatial extent` of the calculation based on an input "
+"raster layer extent, or on custom X,Y coordinates"
+msgstr ""
+"Definisci l'estensione :guilabel:`Estensione Spaziale` del calcolo in base "
+"all'estensione di un layer raster in ingresso o a coordinate X,Y "
+"personalizzate."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:55
+msgid ""
+"Set the :guilabel:`Resolution` of the layer using columns and rows number. "
+"If the input layer has a different resolution, the values will be resampled "
+"with the nearest neighbor algorithm."
+msgstr ""
+"Imposta la :guilabel:`Risoluzione` del layer usando il numero di colonne e "
+"righe. Se il layer in ingresso ha una risoluzione diversa, i valori saranno "
+"ricampionati con l'algoritmo del vicino più prossimo."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:58
+msgid ""
+"With the |checkbox| :guilabel:`Add result to project` checkbox, the result "
+"layer will automatically be added to the legend area and can be visualized. "
+"Checked by default for virtual rasters."
+msgstr ""
+"Con la casella di controllo |checkbox| :guilabel:`Aggiungi al progetto`, il "
+"layer del risultato verrà automaticamente aggiunto all'area della legenda e "
+"potrà essere visualizzato. Selezionata per impostazione predefinita per i "
+"raster virtuali."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:62
+msgid ""
+"The :guilabel:`Operators` section contains all available operators. To add "
+"an operator to the raster calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"trigonometric functions (``sin``, ``cos``, ``tan``, ... ) are available. "
+"Conditional expressions (``=``, ``!=``, ``<``, ``>=``, ... ) return either 0"
+" for false or 1 for true, and therefore can be used with other operators and"
+" functions."
+msgstr ""
+"La sezione :guilabel:`Operatori` contiene tutti gli operatori disponibili. "
+"Per aggiungere un operatore alla casella di espressione del calcolatore "
+"raster, fai clic sul pulsante appropriato. Sono disponibili calcoli "
+"matematici (``+``, ``-``, ``*``, ... ) e funzioni trigonometriche (``sin``, "
+"``cos``, ``tan``, ... ). Le espressioni condizionali (``=``, ``!=``, ``<``, "
+"``>=``, ... ) restituiscono 0 per il falso o 1 per il vero e possono quindi "
+"essere utilizzate con altri operatori e funzioni."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:70
+msgid "See also the :ref:`qgisrastercalculator` algorithm."
+msgstr "Vedi anche l'algoritmo :ref:`qgisrastercalculator`."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:73
+msgid "Examples"
+msgstr "Esempi"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:75
+msgid "**Convert elevation values from meters to feet**"
+msgstr "**Convertire unità di misura dell’elevazione da metri a piedi**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:77
+msgid ""
+"Creating an elevation raster in feet from a raster in meters, you need to "
+"use the conversion factor for meters to feet: 3.28. The expression is:"
+msgstr ""
+"Per creare un raster con altimetria in piedi a partire da un raster con "
+"altimetria in metri devi utilizzare il fattore di conversione di 3,28 piedi "
+"per metro. L’espressione è:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:84
+msgid "**Using a mask**"
+msgstr "**Utilizzare una maschera**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:86
+msgid ""
+"If you want to mask out parts of a raster -- say, for instance, because you "
+"are only interested in elevations above 0 meters -- you can use the "
+"following expression to create a mask and apply the result to a raster in "
+"one step."
+msgstr ""
+"Se vuoi usare una maschera su parti di un raster - perché, per esempio, sei "
+"interessato solo ai valori di altezza superiori allo 0 - puoi usare "
+"l’espressione seguente per creare in un solo passaggio una maschera e "
+"applicare il risultato al raster:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:94
+msgid ""
+"In other words, for every cell greater than or equal to 0 the conditional "
+"expression evaluates to 1, which keeps the original value by multiplying it "
+"by 1. Otherwise the conditional expression evaluates to 0, which sets the "
+"raster value to 0. This creates the mask on the fly."
+msgstr ""
+"In altre parole, per ogni cella maggiore o uguale a 0 imposta il valore "
+"uguale a 1, in questo modo si mantiene il valore originario moltiplicandolo "
+"per 1. Altrimenti imposta 0, il che imposta il valore del raster a 0. In "
+"questo modo creerai la maschera al volo."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:99
+msgid "**Classify a Raster**"
+msgstr "**Classificare un Raster**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:101
+msgid ""
+"If you want to classify a raster -- say, for instance into two elevation "
+"classes, you can use the following expression to create a raster with two "
+"values 1 and 2 in one step."
+msgstr ""
+"Se vuoi classificare un raster, ad esempio, in due classi di elevazione, "
+"puoi utilizzare la seguente espressione per creare un raster con due valori "
+"1 e 2 in un solo passo:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:109
+msgid ""
+"In other words, for every cell less than 50 set its value to 1. For every "
+"cell greater than or equal 50 set its value to 2."
+msgstr ""
+"In altre parole, per ogni cella minore di 50 imposta il valore su 1. Per "
+"ogni cella maggiore o uguale a 50 imposta il valore su 2."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:112
+msgid "Or you can use the ``IF`` operator."
+msgstr "Oppure puoi usare l'operatore ``IF``."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:123
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:175
+msgid "Raster Alignment"
+msgstr "Allineamento Raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:125
+msgid ""
+"This tool is able to take several rasters as input and to align them "
+"perfectly, that means:"
+msgstr ""
+"Questo strumento è in grado di prendere diversi raster come input e di "
+"allinearli perfettamente, il che significa:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:128
+msgid "reproject to the same CRS,"
+msgstr "riproiettare allo stesso SR,"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
+msgid "resample to the same cell size and offset in the grid,"
+msgstr "ricampionare alla stessa dimensione di cella e offset nella griglia, "
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:130
+msgid "clip to a region of interest,"
+msgstr "ritagliare a una regione di interesse,"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:131
+msgid "rescale values when required."
+msgstr "ridimensionare i valori quando necessario."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:133
+msgid "All rasters will be saved in another files."
+msgstr "Tutti i raster saranno salvati in altri file."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:135
+msgid ""
+"First, open the tools from :menuselection:`Raster --> Align Raster...` and "
+"click on the |symbologyAdd| :sup:`Add new raster` button to choose one "
+"existing raster in QGIS. Select an output file to save the raster after the "
+"alignment, the resampling method and if the tools need to :guilabel:`Rescale"
+" values according to the cell size`. The resampling method can be (see "
+":numref:`figure_raster_align_edit`):"
+msgstr ""
+"Per prima cosa, apri gli strumenti da :menuselection:`Raster --> Allinea "
+"Raster...` e clicca sul pulsante |symbologyAdd| :sup:`Aggiungi raster` per "
+"scegliere un raster esistente in QGIS. Seleziona un file di output per "
+"salvare il raster dopo l'allineamento, il metodo di ricampionamento e se gli"
+" strumenti hanno bisogno di :guilabel:`Riscala i valori in base alla "
+"dimensione della cella`. Il metodo di ricampionamento può essere (vedi "
+":numref:`figure_raster_align_edit`):"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:186
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:141
+msgid "**Nearest Neighbor**"
+msgstr "**Vicino più prossimo (Nearest Neighbor)**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:142
+msgid "**Bilinear (2x2 kernel)**"
+msgstr "**Bilineare (2x2 kernel)**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:143
+msgid "**Cubic (4x4 kernel)**: Cubic Convolution Approximation"
+msgstr "**Cubica (4x4 kernel)**: Approssimazione Convoluzione Cubica"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
+msgid "**Cubic B-Spline (4x4 kernel)**: Cubic B-Spline Approximation"
+msgstr "**Cubica B-Spline (4x4 kernel)**: Approssimazione B-Spline Cubica"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:145
+msgid "**Lanczos (6x6 kernel)**: Lanczos windowed sinc interpolation"
+msgstr "**Lanczos (6x6 kernel)**: interpolazione limitata a bande di Lanczos"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:146
+msgid ""
+"**Average**: computes the average of all non-NODATA contributing pixels"
+msgstr ""
+"**Media**: calcola la media di tutti i pixel che non contengono NODATA"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:147
+msgid ""
+"**Mode**: selects the value which appears most often of all the sampled "
+"points"
+msgstr ""
+"**Moda**: seleziona il valore che appare più spesso tra tutti i punti "
+"campionati"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:148
+msgid ""
+"**Maximum**, **Minimum**, **Mediane**, **First Quartile (Q1)** or **Third "
+"Quartile (Q3)** of all non-NODATA contributing pixels"
+msgstr ""
+"**Massimo**, **Minimo**, **Mediana**, **Primo Quartile (Q1)** o **Terzo "
+"Quartile (Q3)** di tutti i pixel diversi da NODATA"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:156
+msgid "Select Raster Resampling Options"
+msgstr "Selezione Opzioni di ricampionamento raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:158
+msgid ""
+"In the main :guilabel:`Align raster` dialog, you can still |symbologyEdit| "
+":sup:`Edit file settings` or |symbologyRemove| :sup:`Remove an existing "
+"file` from the list of raster layers. You can also choose one or more other "
+"options (see :numref:`figure_raster_align`):"
+msgstr ""
+"Nella finestra di dialogo principale :guilabel:`Allinea raster`, puoi "
+"scegliere |symbologyEdit| :sup:`Modifica impostazioni file` o "
+"|symbologyRemove| :sup:`Rimuovi un file esistente` dalla lista dei layer "
+"raster. Puoi anche scegliere una o più opzioni (vedi "
+":numref:`figure_raster_align`):"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:188
+msgid "symbologyEdit"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:190
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:162
+msgid "Select the :guilabel:`Reference Layer`,"
+msgstr "Seleziona :guilabel:`Layer di riferimento`,"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:163
+msgid "Transform into a new :guilabel:`CRS`,"
+msgstr "Trasforma in un nuovo :guilabel:`SR`,"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:164
+msgid "Setup a different :guilabel:`Cell size`,"
+msgstr "Settaggio ad una diversa :guilabel:`Dimensione cella`,"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:165
+msgid "Setup a different :guilabel:`Grid Offset`,"
+msgstr "Settaggio ad un differente :guilabel:`Offset reticolo`,"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:166
+msgid ""
+":guilabel:`Clip to Extent`: it can be user-defined, bound to a layer or to "
+"the map canvas"
+msgstr ""
+":guilabel:`Ritaglia all'estensione`: può essere definito dall'utente, "
+"ritagliato a un layer o all'estensione della mappa"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:167
+msgid ":guilabel:`Output Size`,"
+msgstr ":guilabel:`Dimensioni in uscita`,"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:168
+msgid ":guilabel:`Add aligned raster to the map canvas`."
+msgstr ":guilabel:`Aggiungi i raster allineati alla mappa`."

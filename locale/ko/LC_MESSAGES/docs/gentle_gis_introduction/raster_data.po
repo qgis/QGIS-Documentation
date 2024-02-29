@@ -1,0 +1,675 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:4
+msgid "Raster Data"
+msgstr "래스터 데이터"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:7
+msgid "|gentleLogo|"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:369
+msgid "gentleLogo"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:7
+msgid "Objectives:"
+msgstr "목적:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:7
+msgid "Understand what raster data is and how it can be used in a GIS."
+msgstr "래스터 데이터란 무엇인지 그리고 GIS에서 어떻게 쓰이는지 이해하기"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:9
+msgid "Keywords:"
+msgstr "키워드:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:9
+msgid "Raster, Pixel, Remote Sensing, Satellite, Image, Georeference"
+msgstr "래스터, 픽셀, 원격 탐사, 위성, 이미지, 지리참조"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:13
+msgid "Overview"
+msgstr "개요"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:15
+msgid ""
+"In the previous topics we have taken a closer look at vector data. While "
+"vector features use geometry (points, polylines and polygons) to represent "
+"the real world, raster data takes a different approach. Rasters are made up "
+"of a matrix of pixels (also called cells), each containing a value that "
+"represents the conditions for the area covered by that cell (see "
+":numref:`figure_raster`). In this topic we are going to take a closer look "
+"at raster data, when it is useful and when it makes more sense to use vector"
+" data."
+msgstr ""
+"이전 단원에서는 벡터 데이터를 자세히 살펴보았습니다. 벡터 객체가 실세계를 표현하기 위해 도형(포인트, 폴리라인, 폴리곤)을 사용하는 "
+"반면, 래스터 데이터는 접근 방법부터 다릅니다. 래스터는 격자형의 (셀이라고도 하는) 픽셀들로 이루어지며, 각 셀은 해당 셀이 커버하는 "
+"영역의 상태를 나타내는 값을 담고 있습니다. (:numref:`figure_raster` 를 참조하세요.) 이번 단원에서는 언제 래스터 "
+"데이터를 사용하면 유용한지 그리고 언제 벡터 데이터를 사용하는 편이 더 나은지에 대해 래스터 데이터를 자세히 살펴보겠습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:29
+msgid ""
+"A raster dataset is composed of rows (running across) and columns (running "
+"down) of pixels (also know as cells). Each pixel represents a geographical "
+"region, and the value in that pixel represents some characteristic of that "
+"region."
+msgstr ""
+"래스터 데이터셋은 (셀이라고도 하는) 픽셀의 (가로) 열과 (세로) 행으로 이루어져 있습니다. 각 픽셀은 지리 영역을 나타내며, 픽셀이 "
+"가진 값은 해당 지역의 몇몇 특성을 나타냅니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:35
+msgid "Raster data in detail"
+msgstr "래스터 데이터를 더 자세히"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:37
+msgid ""
+"Raster data is used in a GIS application when we want to display information"
+" that is continuous across an area and cannot easily be divided into vector "
+"features. When we introduced you to vector data we showed you the image in "
+":numref:`figure_landscape`. Point, polyline and polygon features work well "
+"for representing some features on this landscape, such as trees, roads and "
+"building footprints. Other features on a landscape can be more difficult to "
+"represent using vector features. For example the grasslands shown have many "
+"variations in colour and density of cover. It would be easy enough to make a"
+" single polygon around each grassland area, but a lot of the information "
+"about the grassland would be lost in the process of simplifying the features"
+" to a single polygon. This is because when you give a vector feature "
+"attribute values, they apply to the whole feature, so vectors aren't very "
+"good at representing features that are not homogeneous (entirely the same) "
+"all over. Another approach you could take is to digitise every small "
+"variation of grass colour and cover as a separate polygon. The problem with "
+"that approach is that it will take a huge amount of work in order to create "
+"a good vector dataset."
+msgstr ""
+"래스터 데이터는 어떤 영역에 걸쳐 연속적이면서 쉽게 벡터 객체로 분할할 수 없는 정보를 표출하려 할 때 GIS 응용 프로그램이 사용하는 "
+"데이터입니다. 벡터 데이터를 소개하는 단원에서 :numref:`figure_landscape` 을 봤을 겁니다. 이 풍경에 있는 나무, "
+"도로 및 건축물의 평면 등과 같은 몇몇 객체를 표현하는 데 포인트, 폴리라인 및 폴리곤 객체가 유용하긴 하지만, 이 풍경에는 벡터 객체로"
+" 표현하기 어려운 다른 객체가 있을 수 있습니다. 예를 들어 이 풍경의 초지는 그 색상과 밀도면에서 수많은 변화를 보입니다. 물론 각 "
+"초지 영역을 감싸는 단일한 폴리곤을 생성하면 손쉽게 해결되지만, 이 객체들을 단일 폴리곤들로 단순화하는 과정에서 초지에 대한 여러 "
+"정보들이 소실되기도 할 것입니다. 왜냐하면 벡터 객체에 속성값을 부여하면 객체 전체에 해당 값이 적용되기 때문입니다. 즉 벡터는 전체가 "
+"균질하지 않은 (완전히 동일하지 않은) 객체를 표현하는 데 적합하지 않습니다. 이럴 때 달리 취할 수 있는 접근 방법은 초지의 색상 및 "
+"밀도가 변화하는 경우마다 모두 작은 개별 폴리곤으로 디지타이즈하는 겁니다. 이 방법의 문제는 괜찮은 벡터 데이터셋을 생성하기 위해 막대한"
+" 작업량을 소화해야 한다는 점입니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:60
+msgid ""
+"Some features on a landscape are easy to represent as points, polylines and "
+"polygons (e.g. trees, roads, houses). In other cases it can be difficult. "
+"For example how would you represent the grasslands? As polygons? What about "
+"the variations in colour you can see in the grass? When you are trying to "
+"represent large areas with continuously changing values, raster data can be "
+"a better choice."
+msgstr ""
+"경관(landscape)에 보이는 일부 객체들은 (예: 수목, 도로, 집을) 포인트, 폴리라인, 폴리곤으로 쉽게 표현할 수 있습니다. "
+"그러나 벡터 데이터로 표현하기 어려운 경우도 있습니다. 예를 들어 초지를 어떻게 표현하면 좋을까요? 폴리곤으로? 눈으로도 보이는 풀들의 "
+"다양한 색깔은 어떻게 할까요? 만약 넓은 지역에 걸쳐 연속적으로 변화하는 데이터 값들을 표현하려 한다면, 래스터 데이터가 훌륭한 선택일 "
+"수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:67
+msgid ""
+"Using raster data is a solution to these problems. Many people use raster "
+"data as a **backdrop** to be used behind vector layers in order to provide "
+"more meaning to the vector information. The human eye is very good at "
+"interpreting images and so using an image behind vector layers, results in "
+"maps with a lot more meaning. Raster data is not only good for images that "
+"depict the real world surface (e.g. satellite images and aerial "
+"photographs), they are also good for representing more abstract ideas. For "
+"example, rasters can be used to show rainfall trends over an area, or to "
+"depict the fire risk on a landscape. In these kinds of applications, each "
+"cell in the raster represents a different value e.g. risk of fire on a scale"
+" of one to ten."
+msgstr ""
+"래스터 데이터를 사용하면 이런 문제점들을 해결할 수 있습니다. 많은 사람들이 벡터 레이어 뒤에 래스터 데이터를 벡터 정보에 더 많은 "
+"의미를 부여하기 위한 **배경(backdrop)** 으로 사용하곤 합니다. 사람의 눈은 이미지를 해석하는 데 뛰어나기 때문에 벡터 레이어"
+" 뒤에 이미지를 사용하면 훨씬 더 많은 의미를 지닌 지도를 만들 수 있습니다. 래스터 데이터는 실세계의 (예: 위성 영상과 항공 사진) "
+"지표면을 묘사하는 데 뛰어날 뿐만 아니라, 좀 더 추상적인 아이디어를 표현하는 데에도 뛰어납니다. 예를 들면 래스터 데이터를 사용해서 "
+"어떤 지역 전체에 걸쳐 강우 경향을 나타내거나, 어떤 경관의 화재 위험성을 표사할 수도 있습니다. 이렇게 래스터 데이터를 응용하는 경우,"
+" 래스터의 각 셀은 서로 다른 값을 -- 예를 들어 화재 위험성을 1에서 10까지 구분해서 -- 표현합니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:78
+msgid ""
+"An example that shows the difference between an image obtained from a "
+"satellite and one that shows calculated values can be seen in "
+":numref:`figure_raster_types`."
+msgstr ""
+":numref:`figure_raster_types` 에서 위성으로 획득한 이미지와 연산을 통해 생성된 래스터 값의 차이를 보여주는 예를"
+" 볼 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:87
+msgid ""
+"True colour raster images (left) are useful as they provide a lot of detail "
+"that is hard to capture as vector features but easy to see when looking at "
+"the raster image. Raster data can also be non-photographic data such as the "
+"raster layer shown on the right which shows the calculated average minimum "
+"temperature in the Western Cape for the month of March."
+msgstr ""
+"`트루컬러 <https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%A3%A8%EC%BB%AC%EB%9F%AC>`_"
+" 래스터 이미지(왼쪽)는 벡터 객체로는 획득하기 어려운 상세한 정보를 제공하는 데 유용한 데에다, 보기에도 좋습니다. 래스터 데이터는 "
+"오른쪽처럼 남아프리카 공화국 웨스턴케이프주의 3월 평균 최저 기온을 계산한 값을 보여주는 래스터 레이어처럼 사진이 아닌 데이터일 수도 "
+"있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:94
+msgid "Georeferencing"
+msgstr "지리참조 작업"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:96
+msgid ""
+"Georeferencing is the process of defining exactly where on the earth's "
+"surface an image or raster dataset was created. This positional information "
+"is stored with the digital version of the aerial photo. When the GIS "
+"application opens the photo, it uses the positional information to ensure "
+"that the photo appears in the correct place on the map. Normally this "
+"positional information consists of a coordinate for the top left pixel in "
+"the image, the size of each pixel in the X direction, the size of each pixel"
+" in the Y direction, and the amount (if any) by which the image is rotated. "
+"With these few pieces of information, the GIS application can ensure that "
+"raster data are displayed in the correct place. The georeferencing "
+"information for a raster is often provided in a small text file accompanying"
+" the raster."
+msgstr ""
+"지리참조 작업이란 이미지 또는 래스터 데이터셋이 지구 표면 위 정확히 어디에서 생성되었는지를 정의하는 과정입니다. 이런 위치 정보는 항공"
+" 사진의 디지털 버전에 저장됩니다. GIS 응용 프로그램이 사진을 열 때, 이 위치 정보를 사용해서 사진이 맵 상의 정확한 위치에 "
+"나타나도록 합니다. 일반적으로 이런 위치 정보는 이미지의 좌상단 픽셀의 좌표, 각 픽셀의 X 방향 크기, 각 픽셀의 Y 방향 크기, "
+"그리고 (기울어진 경우) 이미지의 기울기 각도로 이루어져 있습니다. GIS 응용 프로그램은 이런 몇 안 되는 정보를 가지고 정확한 위치에"
+" 래스터 데이터를 표시하도록 합니다. 래스터 용 지리참조 정보는 래스터에 붙어다니는 경량의 텍스트 파일의 형태로 제공되는 경우가 "
+"많습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:109
+msgid "Sources of raster data"
+msgstr "래스터 데이터의 소스들"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:111
+msgid ""
+"Raster data can be obtained in a number of ways. Two of the most common ways"
+" are aerial photography and satellite imagery. In aerial photography, an "
+"aeroplane flies over an area with a camera mounted underneath it. The "
+"photographs are then imported into a computer and georeferenced. Satellite "
+"imagery is created when satellites orbiting the earth point special digital "
+"cameras towards the earth and then take an image of the area on earth they "
+"are passing over. Once the image has been taken it is sent back to earth "
+"using radio signals to special receiving stations such as the one shown in "
+":numref:`figure_csir_station`. The process of capturing raster data from an "
+"aeroplane or satellite is called **remote sensing**."
+msgstr ""
+"래스터 데이터를 취득하는 방법으로는 여러 가지가 있습니다. 가장 흔한 방법 두 가지는 항공 사진과 위성 영상입니다. 항공 사진의 경우 "
+"비행기가 어떤 지역을 날면서 기체 아래에 장착한 카메라로 촬영한 다음, 촬영한 사진들을 컴퓨터로 옮겨 지리참조 작업을 합니다. 위성 "
+"영상은 위성이 지구 궤도를 돌면서 특수 디지털 카메라를 지구를 향하게 한 다음, 위성이 지나가는 지역의 이미지를 촬영합니다. 이렇게 "
+"촬영한 이미지를 무선 신호를 통해 :numref:`figure_csir_station` 에 보이는 것과 같은 특수 안테나로 전송합니다. "
+"이렇게 비행기 또는 위성에서 래스터 데이터를 획득하는 과정을 **원격탐사(remote sensing)** 라 합니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:127
+msgid ""
+"The CSIR Satellite Applications Center at Hartebeeshoek near Johannesburg. "
+"Special antennae track satellites as they pass overhead and download images "
+"using radio waves."
+msgstr ""
+"남아프리카 공화국 요하네스버그 부근 하르테비에스툭(Hartebeesthoek)에 있는 CSIR 위성 응용 센터. 특수 안테나들이 위를 "
+"지나가는 위성을 추적하며 무선 전파를 통해 이미지를 다운로드받습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:131
+msgid ""
+"In other cases, raster data can be computed. For example an insurance "
+"company may take police crime incident reports and create a country wide "
+"raster map showing how high the incidence of crime is likely to be in each "
+"area. Meteorologists (people who study weather patterns) might generate a "
+"province level raster showing average temperature, rainfall and wind "
+"direction using data collected from weather stations (see "
+":numref:`figure_csir_station`). In these cases, they will often use raster "
+"analysis techniques such as interpolation (which we describe in Topic "
+":ref:`spatial_analysys`)."
+msgstr ""
+"다른 방법으로 래스터 데이터를 연산할 수도 있습니다. 예를 들어 보험 회사가 경찰의 범죄발생률 보고서를 가져다가 각 지역에서 범죄가 "
+"발생할 확률이 얼마나 높은지를 보여주는 전국 단위 래스터 맵을 생성할 수도 있습니다. 기상학자(날씨의 패턴을 연구하는 사람들)가 "
+"기상관측소에서 수집한 데이터를 이용해서 평균 기온, 강수량 및 풍향을 보여주는 시도 단위 래스터를 생성할 수도 있습니다. "
+"(:numref:`figure_csir_station` 참조) 이런 예시에서 (:ref:`spatial_analysys` 장에서 "
+"설명하는) 보간(interpolation) 같은 래스터 분석 기법을 사용하는 경우가 많습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:140
+msgid ""
+"Sometimes raster data are created from vector data because the data owners "
+"want to share the data in an easy to use format. For example, a company with"
+" road, rail, cadastral and other vector datasets may choose to generate a "
+"raster version of these datasets so that employees can view these datasets "
+"in a web browser. This is normally only useful if the attributes, that users"
+" need to be aware of, can be represented on the map with labels or "
+"symbology. If the user needs to look at the attribute table for the data, "
+"providing it in raster format could be a bad choice because raster layers do"
+" not usually have any attribute data associated with them."
+msgstr ""
+"데이터 소유자들이 데이터를 사용하기 쉬운 포맷으로 공유하려 하기 때문에 벡터 데이터로부터 래스터 데이터를 생성하는 경우도 있습니다. 예를"
+" 들어 도로, 철도, 지적(地籍) 및 기타 벡터 데이터셋을 가지고 있는 회사가 직원들이 이런 데이터셋들을 웹 브라우저를 통해 볼 수 "
+"있도록 하기 위해 데이터셋의 래스터 버전을 생성하도록 할 수도 있겠죠. 보통 이 방법은 속성, 즉 사용자가 알아야 하는 정보를 라벨 또는"
+" 심볼을 사용해서 맵 상에 표현할 수 있을 때에만 유용합니다. 사용자가 데이터를 이해하기 위해 속성 테이블을 찾아봐야 하는 경우라면 "
+"데이터를 래스터 포맷으로 제공하는 것은 실수일 수도 있습니다. 래스터 레이어가 관련 속성 데이터를 가지고 있는 경우는 거의 없기 "
+"때문입니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:151
+msgid "Spatial Resolution"
+msgstr "공간해상도"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:153
+msgid ""
+"Every raster layer in a GIS has pixels (cells) of a fixed size that "
+"determine its spatial resolution. This becomes apparent when you look at an "
+"image at a small scale (see :numref:`figure_raster_small_scale`) and then "
+"zoom in to a large scale (see :numref:`figure_raster_large_scale`)."
+msgstr ""
+"GIS에서 모든 래스터 레이어는 자신의 공간해상도(spatial resolution)를 결정하는 고정된 크기의 픽셀(셀)을 가집니다. "
+"여러분이 소축척에서 (:numref:`figure_raster_small_scale` 참조) 이미지를 본 다음 대축척으로 "
+"(:numref:`figure_raster_large_scale` 참조) 확대하면 이 사실이 명확해집니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:164
+msgid "This satellite image looks good when using a small scale..."
+msgstr "위성 영상은 소축척일 때 괜찮게 보입니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:172
+msgid ""
+"...but when viewed at a large scale you can see the individual pixels that "
+"the image is composed of."
+msgstr "하지만 대축척에서 보면 이미지를 이루고 있는 개별 픽셀들을 볼 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:175
+msgid ""
+"Several factors determine the spatial resolution of an image. For remote "
+"sensing data, spatial resolution is usually determined by the capabilities "
+"of the sensor used to take an image. For example SPOT5 satellites can take "
+"images where each pixel is 10 m x 10 m. Other satellites, for example MODIS "
+"take images only at 500 m x 500 m per pixel. In aerial photography, pixel "
+"sizes of 50 cm x 50 cm are not uncommon. Images with a pixel size covering a"
+" small area are called '**high resolution**' images because it is possible "
+"to make out a high degree of detail in the image. Images with a pixel size "
+"covering a large area are called '**low resolution**' images because the "
+"amount of detail the images show is low."
+msgstr ""
+"이미지의 공간해상도는 여러 요인에 의해 결정됩니다. 원격탐사 데이터의 경우, 보통 이미지를 촬영하는 데 사용된 센서의 사양이 공간해상도를"
+" 결정합니다. 예를 들어 SPOT5 위성은 각 픽셀이 10m x 10m인 이미지를 찍을 수 있습니다. 다른 위성, 예를 들면 MODIS는"
+" 픽셀 당 500m x 500m로만 이미지를 찍습니다. 항공사진의 경우, 픽셀 크기가 50cm x 50cm인 일도 흔합니다. 픽셀 하나의"
+" 크기가 작은 면적을 커버하는 이미지를 '**고해상도(high resolution)**'라고 합니다. 이미지에서 높은 수준의 세부 사항을"
+" 알아볼 수 있기 때문이죠. 픽셀 하나의 크기가 넓은 면적을 커버하는 이미지는 '**저해상도(low resolution)**'라고 "
+"합니다. 이미지가 보여주는 세부 사항의 양이 낮기 때문입니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:185
+msgid ""
+"In raster data that is computed by spatial analysis (such as the rainfall "
+"map we mentioned earlier), the spatial density of information used to create"
+" the raster will usually determine the spatial resolution. For example if "
+"you want to create a high resolution average rainfall map, you would ideally"
+" need many weather stations in close proximity to each other."
+msgstr ""
+"공간 분석을 통해 연산된 (앞에서 언급한 강우 지도 같은) 래스터 데이터에서, 일반적으로 래스터를 생성하기 위해 사용된 정보의 공간 "
+"밀도가 공간해상도를 결정합니다. 예를 들어 고해상도 평균 강우 지도를 생성하려면 이상적으로는 서로 가까이 있는 기상관측소 여러 곳이 "
+"필요할 것입니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:191
+msgid ""
+"One of the main things to be aware of with rasters captured at a high "
+"spatial resolution is storage requirements. Think of a raster that is 3 x 3 "
+"pixels, each of which contains a number representing average rainfall. To "
+"store all the information contained in the raster, you will need to store 9 "
+"numbers in the computer's memory. Now imagine you want to have a raster "
+"layer for the whole of South Africa with pixels of 1 km x 1 km. South Africa"
+" is around 1,219,090 km :sup:`2`. Which means your computer would need to "
+"store over a million numbers on its hard disk in order to hold all of the "
+"information. Making the pixel size smaller would greatly increase the amount"
+" of storage needed."
+msgstr ""
+"높은 공간해상도에서 획득한 래스터에 대해 알고 있어야 하는 주요 사항들 가운데 하나는, 요구되는 저장 용량입니다. 각 픽셀이 평균 "
+"강우량을 표현하는 숫자를 담고 있는 3 x 3픽셀 크기의 래스터를 생각해보세요. 래스터에 담겨 있는 모든 정보를 저장하려면 컴퓨터 "
+"메모리에 숫자 9개를 저장해야 합니다. 이제 남아프리카 전체를 커버하는 1km x 1km 픽셀 크기의 래스터를 상상해보세요. 남아프리카의"
+" 면적은 약 1,219,090km :sup:`2` 입니다. 즉 당신의 컴퓨터가 모든 정보를 담으려면 하드디스크에 120만 개가 넘는 "
+"숫자들을 저장해야 한다는 뜻입니다. 픽셀 크기를 줄일수록 필요한 저장 용량이 크게 증가할 것입니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:201
+msgid ""
+"Sometimes using a low spatial resolution is useful when you want to work "
+"with a large area and are not interested in looking at any one area in a lot"
+" of detail. The cloud maps you see on the weather report, are an example of "
+"this –-- it's useful to see the clouds across the whole country. Zooming in "
+"to one particular cloud in high resolution will not tell you very much about"
+" the upcoming weather!"
+msgstr ""
+"여러분이 넓은 지역을 작업하는데 어느 한 지역을 상세히 살펴볼 필요가 없는 경우엔 낮은 공간해상도를 사용하는 편이 유용할 수도 있습니다."
+" 일기예보에서 흔히 볼 수 있는 운량(雲量) 지도가 그 예입니다. 나라 전체를 가로지르는 구름을 보는 것이 유용하겠죠. 특정한 구름을 "
+"고해상도로 확대한다고 해도 일기예보에 도움이 되진 않으니까요!"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:207
+msgid ""
+"On the other hand, using low resolution raster data can be problematic if "
+"you are interested in a small region because you probably won't be able to "
+"make out any individual features from the image."
+msgstr ""
+"한편, 좁은 면적에 관심을 가지는 경우 저해상도 래스터 데이터를 사용하면 문제가 될 수 있습니다. 이미지에서 어떤 개별 객체도 식별하기 "
+"힘들 테니 말입니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:212
+msgid "Spectral resolution"
+msgstr "스펙트럼 해상도"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:214
+msgid ""
+"If you take a colour photograph with a digital camera or camera on a "
+"cellphone, the camera uses electronic sensors to detect red, green and blue "
+"light. When the picture is displayed on a screen or printed out, the red, "
+"green and blue (RGB) information is combined to show you an image that your "
+"eyes can interpret. While the information is still in digital format though,"
+" this RGB information is stored in separate colour **bands**."
+msgstr ""
+"디지털 카메라 또는 휴대폰 카메라로 컬러 사진을 찍으면, 카메라는 전자 센서를 사용해서 적광, 녹광, 그리고 청광을 감지합니다. 이렇게 "
+"찍은 사진을 스크린에 띄우거나 인쇄할 때 적, 녹, 청(RGB) 정보를 결합시켜 사람의 눈으로 해석할 수 있는 이미지를 보여줍니다. "
+"정보는 디지털 포맷 그대로이지만 이 RGB 정보는 개별 색상 **밴드(band)** 로 저장됩니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:221
+msgid ""
+"Whilst our eyes can only see RGB wavelengths, the electronic sensors in "
+"cameras are able to detect wavelengths that our eyes cannot. Of course in a "
+"hand held camera it probably doesn't make sense to record information from "
+"the **non-visible** parts of the spectrum since most people just want to "
+"look at pictures of their dog or what have you. Raster images that include "
+"data for non-visible parts of the light spectrum are often referred to as "
+"multi-spectral images. In GIS recording the non-visible parts of the "
+"spectrum can be very useful. For example, measuring infra-red light can be "
+"useful in identifying water bodies."
+msgstr ""
+"사람의 눈은 RGB 파장만 볼 수 있는데 반해 카메라에 있는 전자 센서는 사람의 눈으로는 볼 수 없는 파장도 감지할 수 있습니다. 물론 "
+"사람의 손으로 찍는 카메라야 광 스펙트럼 가운데 **볼 수 없는** 영역의 정보까지 기록할 필요는 없겠죠. 사람들 대부분은 자신의 반려견"
+" 또는 흥미가 있는 분야의 사진만 보려 할 뿐이니까요. 광 스펙트럼의 볼 수 없는 영역에 대한 데이터를 포함하는 래스터 이미지를 흔히 "
+"다중분광(multi-spectral) 이미지라고 합니다. GIS 분야에서 광 스펙트럼의 볼 수 없는 영역을 기록하는 일은 매우 유용할 수"
+" 있습니다. 예를 들면, 적외선을 측정하면 수역(水域)을 식별하는 데 유용합니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:230
+msgid ""
+"Because having images containing multiple bands of light is so useful in "
+"GIS, raster data are often provided as multi-band images. Each band in the "
+"image is like a separate layer. The GIS will combine three of the bands and "
+"show them as red, green and blue so that the human eye can see them. The "
+"number of bands in a raster image is referred to as its **spectral "
+"resolution**."
+msgstr ""
+"광 스페트럼의 다중 밴드들을 담고 있는 이미지를 가지고 있으면 GIS에서 매우 유용하기 때문에, 래스터 데이터는 다중 밴드 이미지로 "
+"제공되는 경우가 많습니다. 이미지 내부의 각 밴드는 개별 레이어와도 비슷합니다. GIS 응용 프로그램은 사람의 눈으로 이미지를 볼 수 "
+"있도록 밴드 3개를 결합해서 각각의 밴드를 적색, 녹색, 청색으로 표시합니다. 래스터 이미지에 담겨 있는 밴드의 개수를 래스터의 "
+"**스펙트럼 해상도(spectral resolution)** 라고 합니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:236
+msgid ""
+"If an image consists of only one band, it is often called a **grayscale** "
+"image. With grayscale images, you can apply false colouring to make the "
+"differences in values in the pixels more obvious. Images with false "
+"colouring applied are often referred to as **pseudocolour images**."
+msgstr ""
+"이미지가 밴드 1개만으로 이루어진 경우, 이를 **회색조(grayscale)** 이미지라고 부르는 경우가 많습니다. 회색조 이미지의 각 "
+"픽셀이 가진 값들의 차이를 더 분명하게 보여주기 위해 거짓 색상 렌더링(false coloring)을 적용할 수 있습니다. 거짓 색상을 "
+"적용한 이미지를 **의사색상(pseudocolor) 이미지** 라고 부르기도 합니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:242
+msgid "Raster to vector conversion"
+msgstr "래스터에서 벡터로 변환"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:244
+msgid ""
+"In our discussion of vector data, we explained that often raster data are "
+"used as a backdrop layer, which is then used as a base from which vector "
+"features can be digitised."
+msgstr ""
+"벡터 데이터에 대한 장에서, 래스터 데이터를 배경 레이어로 사용하는 일이 많다고 설명했습니다. 벡터 객체들을 디지타이즈할 수 있는 "
+"기준(base)으로 사용한다고 말이죠."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:248
+msgid ""
+"Another approach is to use advanced computer programs to automatically "
+"extract vector features from images. Some features such as roads show in an "
+"image as a sudden change of colour from neighbouring pixels. The computer "
+"program looks for such colour changes and creates vector features as a "
+"result. This kind of functionality is normally only available in very "
+"specialised (and often expensive) GIS software."
+msgstr ""
+"또는 이미지에서 벡터 객체를 자동으로 추출하는 고급 컴퓨터 프로그램을 사용할 수도 있습니다. 도로 같은 일부 객체들은 이미지에서 인접한 "
+"픽셀들과는 확연히 다른 색상을 보여주니까요. 컴퓨터 프로그램은 이와 같은 급격한 색상 변화를 찾아서 그 결과를 벡터 객체로 생성합니다. "
+"일반적으로 이런 유형의 기능은 매우 특화된 (그리고 종종 아주 비싼) GIS 소프트웨어에서만 사용할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:256
+msgid "Vector to raster conversion"
+msgstr "벡터에서 래스터로 변환"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:258
+msgid ""
+"Sometimes it is useful to convert vector data into raster data. One side "
+"effect of this is that attribute data (that is attributes associated with "
+"the original vector data) will be lost when the conversion takes place. "
+"Having vectors converted to raster format can be useful though when you want"
+" to give GIS data to non GIS users. With the simpler raster formats, the "
+"person you give the raster image to can simply view it as an image on their "
+"computer without needing any special GIS software."
+msgstr ""
+"벡터 데이터를 래스터 데이터로 변환하는 것이 유용한 경우도 있습니다. 물론 변환 과정에서 (원본 벡터 데이터 관련 속성인) 속성 데이터가"
+" 소실된다는 부작용도 있습니다. 그럼에도, GIS 비사용자에게 GIS 데이터를 제공하려는 경우 벡터를 래스터 포맷으로 변환하는 편이 "
+"유용합니다. 더 단순한 래스터 포맷이라면 래스터 이미지를 받은 사람이 그 어떤 특별한 GIS 소프트웨어 없이도 자신의 컴퓨터에서 그냥 "
+"이미지로 볼 수 있기 때문이죠."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:267
+msgid "Raster analysis"
+msgstr "래스터 분석"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:269
+msgid ""
+"There are a great many analytical tools that can be run on raster data which"
+" cannot be used with vector data. For example, rasters can be used to model "
+"water flow over the land surface. This information can be used to calculate "
+"where watersheds and stream networks exist, based on the terrain."
+msgstr ""
+"대단히 많은  분석 도구가 벡터 데이터와 함께 사용할 수 없는 래스터 데이터를 사용합니다. 예를 들면 지표면 위를 흐르는 유수(流水) "
+"모델을 래스터를 사용해서 만들 수 있습니다. 이 정보를 통해 지형을 토대로 집수구역(watershed) 및 하천망(stream "
+"network)의 위치를 연산할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:274
+msgid ""
+"Raster data are also often used in agriculture and forestry to manage crop "
+"production. For example with a satellite image of a farmer's lands, you can "
+"identify areas where the plants are growing poorly and then use that "
+"information to apply more fertilizer on the affected areas only. Foresters "
+"use raster data to estimate how much timber can be harvested from an area."
+msgstr ""
+"농업 및 삼림 분야에서도 래스터 데이터를 사용해서 농작물 생산을 관리하는 경우가 많습니다. 예를 들어 농장의 위성 영상을 가지고 어디에서"
+" 작물이 잘 자라지 않는지를 식별해서 해당 위치에만 비료를 더 줄 수도 있겠죠. 삼림 감독관은 래스터 데이터를 사용해서 특정 지역에서 "
+"얼마나 목재를 벌채할 것인지를 결정할 수도 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:280
+msgid ""
+"Raster data is also very important for disaster management. Analysis of "
+"Digital Elevation Models (a kind of raster where each pixel contains the "
+"height above sea level) can then be used to identify areas that are likely "
+"to be flooded. This can then be used to target rescue and relief efforts to "
+"areas where it is needed the most."
+msgstr ""
+"래스터 데이터는 재난 관리 분야에서도 매우 중요합니다. 수치 표고 모델 (각 픽셀이 해발고도 값을 담고 있는 래스터 유형) 분석을 "
+"사용해서 홍수 예상 지역을 식별할 수도 있겠죠. 이에 따라 가장 필요한 지역에 구조 및 구호 역량을 집중할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:287
+msgid "Common problems / things to be aware of"
+msgstr "공통적인 문제들"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:289
+msgid ""
+"As we have already mentioned, high resolution raster data can require large "
+"amounts of computer storage."
+msgstr "이미 언급했듯이, 고해상도 래스터 데이터는 컴퓨터의 대용량 저장소를 필요로 할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:293
+msgid "What have we learned?"
+msgstr "무엇을 배웠나요?"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:295
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "이제 이번 단원에서 배운 내용을 정리해볼까요:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:297
+msgid "Raster data are a grid of regularly sized **pixels.**"
+msgstr "래스터 데이터란 일정한 크기의 **픽셀들** 의 그리드(grid)입니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:298
+msgid "Raster data are good for showing **continually varying information.**"
+msgstr "래스터 데이터는 **연속적으로 변하는 정보** 를 보여주기에 좋습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:299
+msgid "The size of pixels in a raster determines its **spatial resolution.**"
+msgstr "래스터의 픽셀 크기가 래스터의 **공간해상도** 를 결정합니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:300
+msgid ""
+"Raster images can contain one or more **bands**, each covering the same "
+"spatial area, but containing different information."
+msgstr ""
+"래스터 이미지는 하나 이상의 **밴드** 를 담고 있을 수 있습니다. 각 밴드는 동일한 공간 영역을 커버하지만, 서로 다른 정보를 담고 "
+"있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:302
+msgid ""
+"When raster data contains bands from different parts of the electromagnetic "
+"spectrum, they are called **multi-spectral images**."
+msgstr ""
+"래스터 데이터가 전자기(electromagnetic) 스펙트럼의 서로 다른 영역에서 나온 밴드들을 담고 있는 경우, 이를 **다중분광 "
+"이미지** 라고 합니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:304
+msgid ""
+"Three of the bands of a multi-spectral image can be shown in the colours "
+"Red, Green and Blue so that we can see them."
+msgstr "다중분광 이미지의 밴드들 가운데 3개는 사람의 눈으로 볼 수 있도록 적색, 녹색, 청색으로 표시할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:306
+msgid "Images with a single band are called grayscale images."
+msgstr "단일 밴드를 가진 이미지는 회색조 이미지라고 합니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:307
+msgid "Single band, grayscale images can be shown in pseudocolour by the GIS."
+msgstr "GIS는 단일 밴드, 회색조 이미지를 의사색상으로 표시할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:308
+msgid "Raster images can consume a large amount of storage space."
+msgstr "래스터 이미지는 저장 공간을 많이 차지합니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:311
+msgid "Now you try!"
+msgstr "도전해봅시다!"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:313
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "강사와 학생들이 함께 시도해볼 만한 몇 가지 아이디어가 있습니다:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:315
+msgid ""
+"Discuss with your learners in which situations you would use raster data and"
+" in which you would use vector data."
+msgstr "강사와 학생들은 어떤 상황에서 래스터 데이터를 사용할지, 어떤 상황에서 벡터 데이터를 사용할지 토의해보십시오."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:317
+msgid ""
+"Get your learners to create a raster map of your school by using A4 "
+"transparency sheets with grid lines drawn on them. Overlay the "
+"transparencies onto a toposheet or aerial photograph of your school. Now let"
+" each learner or group of learners colour in cells that represent a certain "
+"type of feature e.g. building, playground, sports field, trees, footpaths "
+"etc. When they are all finished, overlay all the sheets together and see if "
+"it makes a good raster map representation of your school. Which types of "
+"features worked well when represented as rasters? How did your choice in "
+"cell size affect your ability to represent different feature types?"
+msgstr ""
+"학생들에게 격자선을 그린 A4 크기의 투명지를 사용해서 학교의 래스터 맵을 생성하는 실습을 시켜보십시오. 학교의 지적도 또는 항공 사진 "
+"위에 투명지를 겹친 다음 각 학생 또는 각 조에게 각각 건물, 놀이터, 운동장, 수목, 보행로 등의 특정 유형의 객체를 표현하는 셀에 "
+"색을 칠해보라고 하십시오. 실습이 모두 끝나면 모든 투명지를 겹쳐서 만들어진 래스터 맵이 학교를 잘 표현하는지 보십시오. 래스터로 "
+"표현했을 때 어떤 유형의 객체가 잘 표현되나요? 격자(셀)의 크기가 서로 다른 객체 유형을 표현하는 데 어떤 영향을 미치나요?"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:328
+msgid "Something to think about"
+msgstr "생각해볼 점"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:330
+msgid ""
+"If you don't have a computer available, you can understand raster data using"
+" pen and paper. Draw a grid of squares onto a sheet of paper to represent "
+"your soccer field. Fill the grid in with numbers representing values for "
+"grass cover on your soccer field. If a patch is bare give the cell a value "
+"of 0. If the patch is mixed bare and covered, give it a value of 1. If an "
+"area is completely covered with grass, give it a value of 2. Now use pencil "
+"crayons to colour the cells based on their values. Colour cells with value 2"
+" dark green. Value 1 should get coloured light green, and value 0 coloured "
+"in brown. When you finish, you should have a raster map of your soccer "
+"field!"
+msgstr ""
+"사용할 수 있는 컴퓨터가 없는 경우, 연필과 종이를 사용해서 래스터 데이터를 이해할 수 있습니다. 학교 축구장을 나타내는 종이에 정사각형"
+" 격자를 그리십시오. 각 격자에 축구장을 덮고 있는 잔디에 대한 값을 나타내는 숫자를 적으십시오. 해당 격자가 나타내는 땅에 잔디가 "
+"없다면 0이라는 값을 적으십시오. 해당 격자에 맨땅과 잔디가 섞여 있다면 1이라는 값을 적으십시오. 해당 격자 전체가 잔디로 덮여 있다면"
+" 2를 적으십시오. 이제 적은 값을 바탕으로 각 격자를 색칠해보십시오. 2라는 값을 가진 격자는 진녹색으로, 1이라는 값을 가진 격자는 "
+"연녹색으로, 0이라는 값을 가진 격자는 갈색으로 칠하십시오. 색칠이 끝났다면, 학교 축구장의 래스터 맵이 생긴 겁니다!"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:341
+msgid "Further reading"
+msgstr "더 읽어볼 거리"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:343
+msgid "**Book**:"
+msgstr "**서적**:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:345
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:347
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:350
+msgid "**Website:** https://en.wikipedia.org/wiki/GIS_file_formats#Raster"
+msgstr "**웹사이트:** https://en.wikipedia.org/wiki/GIS_file_formats#Raster"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:352
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"raster data in QGIS."
+msgstr "QGIS 사용자 지침서도 QGIS에서 어떻게 래스터 데이터를 작업하는지에 대한 보다 상세한 정보를 수록하고 있습니다."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:356
+msgid "What's next?"
+msgstr "다음 단원은?"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:358
+msgid ""
+"In the section that follows we will take a closer look at **topology** to "
+"see how the relationship between vector features can be used to ensure the "
+"best data quality."
+msgstr ""
+"다음 단원에서는 최적의 데이터 질을 보장하려면 벡터 객체들 사이의 관계를 어떻게 이용할 수 있는지를 확인하기 위해 "
+"**위상(topology)** 을 자세히 살펴볼 것입니다."

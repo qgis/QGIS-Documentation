@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-06 06:24+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:8
+msgid ""
+"A normal session with the processing tools includes more than running a "
+"single algorithm. Usually several of them are run to obtain a result, and "
+"the outputs of some of those algorithms are used as input for some of the "
+"other ones."
+msgstr ""
+"Uma sessão normal com as ferramentas de processamento incluem mais do que "
+"rodar um único algoritmo. Normalmente, vários deles são executados para se "
+"obter um resultado, e as saídas de alguns destes códigos são usados como "
+"entrada para outros."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:16
+msgid ""
+"As you can see, there are two mandatory inputs: *Slope* and *Catchment "
+"area*. There is also an optional input, but we will not be using it, so we "
+"can ignore it."
+msgstr ""
+"Como você pode ver, existem duas entradas obrigatórias: *Slope* e *Área de "
+"Captação*. Há também uma entrada opcional, porém você não poderá usá-la, "
+"então ignore-a."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:18
+msgid ""
+"The data for this lesson contains just a DEM, so we do not have any of the "
+"required inputs. However, we know how to calculate both of them from that "
+"DEM, since we have already seen the algorithms to compute slope and "
+"catchment area. So we can first compute those layers and then use them for "
+"the TWI algorithm."
+msgstr ""
+"Los datos para esta lección contienen sólo un MDT, así que no tenemos "
+"ninguna de las entradas requeridas. Sin embargo, conocemos cómo calcular "
+"ambos a partir de ese MDT, como ya hemos visto los algoritmos para calcular "
+"pendiente y zona de captación. Así que lo primero que podemos calcular son "
+"esas capas y entonces utilizarlos para el algoritmo TWI."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:20
+msgid ""
+"Here are the parameter dialogs that you should use to calculate the 2 "
+"intermediate layers."
+msgstr ""
+"Aquí esta el diálogo de parámetros que debería utilizar para calcular las "
+"capas intermedias."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:22
+msgid "Slope must be calculated in radians, not in degrees."
+msgstr "A declividade será calculada em radiano, não em graus."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:28
+msgid ""
+"And this is how you have to set the parameters dialog of the TWI algorithm."
+msgstr ""
+"Y esto es cómo tener que establecer el diálogo de parámetros del algoritmo "
+"TWI."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:38
+msgid "Open the modeler by selecting its menu entry in the processing menu."
+msgstr ""
+"Abra el modelador seleccionando su entrada de menú en el menú procesamiento."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:44
+msgid ""
+"Let's start with the inputs. In this case we do not have much to add. We "
+"just need a raster layer with the DEM, and that will be our only input data."
+msgstr ""
+"Vamos a empezar con las entradas. En este caso no tenemos mucho que añadir. "
+"Sólo necesitamos una capa ráster con el MDT y que serán nuestros únicos "
+"datos de entrada."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:50
+msgid "Here we will have to define the input we want:"
+msgstr "Aqui teremos que definir a entrada que queremos:"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:53
+msgid ""
+"Since we need that layer to work, we will define it as a mandatory layer."
+msgstr ""
+"Como precisamos que essa camada funcione, vamos defini-la como uma camada "
+"obrigatória."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:55
+msgid "Here is how the dialog should be configured."
+msgstr "Aquí esta cómo el diálogo debería ser configurado."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:73
+msgid ""
+"When layers are not a final result, you should just leave the corresponding "
+"field. Otherwise, you have to enter a name that will be used to identify the"
+" layer in the parameters dialog that will be shown when you run the model "
+"later."
+msgstr ""
+"Cuando las capas no son un resultado final, sólo debe dejar el campo "
+"correspondiente. De lo contrario, se tiene que introducir un nombre que se "
+"utilizará para identificar la capa en el diálogo de parámetros que se "
+"mostrará cuando ejecute el modelo posterior."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:79
+msgid ""
+"The second algorithm we have to add to our model is the catchment area "
+"algorithm. We will use the algorithm named *Catchment area (Paralell)*. We "
+"will use the DEM layer again as input, and none of the ouputs it produces "
+"are final, so here is how you have to fill the corresponding dialog."
+msgstr ""
+"El segundo algoritmo tenemos que añadir a nuestro modelo esta el algoritmo "
+"de zona de captación. Nosotros utilizamos el algoritmo llamado *Zona de "
+"captación (Paralelo)*. Utilizaremos la capa MDT de nuevo como entrada, y "
+"ninguno de los resultados producidos son finales, así que aquí es cómo se "
+"tiene que llenar el diálogo correspondiente."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:83
+msgid "Now your model should look like this."
+msgstr "Agora o seu modelo deve estar semelhante a este."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:91
+msgid ""
+"In this case, we will not be using the DEM as input, but instead, we will "
+"use the slope and catchment area layers that are calculated by the "
+"algorithms that we previously added. As you add new algorithms, the outputs "
+"they produce become available for other algorithms, and using them you link "
+"the algorithms, creating the workflow."
+msgstr ""
+"En este caso, estaremos utilizando el MDT como entrada, pero en su lugar, "
+"utilizaremos la capa de pendiente y zona de captación que están calculadas "
+"por el algoritmo que previamente añadimos. A medida que agrega nuevos "
+"algoritmos, las salidas que producen estén disponibles para otros "
+"algoritmos, y su uso se vincula a los algoritmos, creando el flujo de "
+"trabajo."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:95
+msgid "Now our model is finished and it should look like this."
+msgstr "Ahora nuestro modelo esta terminada y debería tener este aspecto."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:99
+msgid "Enter a name and a group name in the upper part of the model window."
+msgstr ""
+"Inserir um nome e um nome de grupo na parte superior da janela do modelo."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:109
+msgid "You can run it just like any normal algorithm, double-clicking on it."
+msgstr ""
+"Você pode executá-lo como qualquer algoritmo normal, clicando duas vezes "
+"nele."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:113
+msgid ""
+"As you can see, the parameters dialog, contain the input that you added to "
+"the model, along with the outputs that you set as final when adding the "
+"corresponding algorithms."
+msgstr ""
+"Como se puede ver, el diálogo de parámetros, contiene la entrada que se "
+"añadió al modelo, junto con las salidas que se establecieron como finales al"
+" agregar los algoritmos correspondientes."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:115
+msgid ""
+"Run it using the DEM as input and you will get the TWI layer in just one "
+"single step."
+msgstr ""
+"Ejecútelo utilizando el MDT como entrada y se obtendrá la capa TWI en solo "
+"un paso."

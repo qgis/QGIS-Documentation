@@ -1,0 +1,379 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:4
+msgid "The Marker, Picture and North Arrow Items"
+msgstr "マーカー、画像、方位記号アイテム"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:11
+msgid ""
+"Along with the map or legend items in the print layout, you may want to "
+"decorate your realization with images or annotations. QGIS provides "
+"different tools to achieve this:"
+msgstr ""
+"印刷レイアウトで地図や凡例アイテムと一緒に、画像や注釈で出力を装飾したい場合があります。QGISはこれを実現するための様々なツールを提供しています："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:15
+msgid ""
+"the :ref:`picture item <layout_picture_item>`: decorates the layout with an "
+"image raster or SVG file (e.g. logos, pictures, north arrows, ...)"
+msgstr ":ref:`画像アイテム`: 画像ラスタまたはSVGファイル（ロゴ、写真、方位記号など）でレイアウトを装飾します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:17
+msgid ""
+"the :ref:`north arrow item <layout_northarrow_item>`: a picture item "
+"predefined with a north arrow image"
+msgstr ":ref:`方位記号アイテム <layout_northarrow_item>`: 方位記号の画像で定義された画像（ピクチャ）アイテム"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:19
+msgid ""
+"the :ref:`marker item <layout_marker_item>`: decorates the layout with QGIS "
+"vector :ref:`symbols <symbol-selector>`. It can be used to place markers "
+"over a map item or for creation of advanced custom legends."
+msgstr ""
+":ref:`マーカーアイテム <layout_marker_item>`: QGISのベクタ :ref:`シンボル <symbol-selector>`"
+" でレイアウトを装飾します。これは、マップアイテムの上にマーカーを配置したり、高度なカスタム凡例を作成するために使うことができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:26
+msgid "The Picture Item"
+msgstr "画像アイテム"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:28
+msgid ""
+"You can add a picture by dragging it from your file manager onto the canvas,"
+" pasting it directly into the layout by using :kbd:`Ctrl+V` or "
+":menuselection:`Edit --> Paste` and by using the |addImage| :sup:`Add "
+"Picture`, following :ref:`items creation instructions <create_layout_item>`."
+" Then you can manipulate it, as explained in :ref:`interact_layout_item`."
+msgstr ""
+"画像を追加するには、ファイルマネージャからキャンバスにドラッグする、:kbd:`Ctrl+V` または :menuselection:`編集 --> "
+"貼り付け` を使ってレイアウトに直接貼り付けるか、|addImage| :sup:`画像を追加` を使う :ref:`items creation "
+"instructions <create_layout_item>` に従うことでできます。それから "
+":ref:`interact_layout_item` で説明されているように操作することができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:220
+msgid "addImage"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:37
+msgid ""
+"When using |addImage| :sup:`Add Picture`, the picture item will be a blank "
+"frame that you can customize using its :guilabel:`Item Properties` panel. "
+"Other than the :ref:`items common properties <item_common_properties>`, this"
+" feature has the following functionalities:"
+msgstr ""
+"|addImage| :sup:`画像を追加` を使用すると、画像アイテムは空白のフレームになり、 :guilabel:`アイテムのプロパティ` "
+"パネルを使用してカスタマイズすることができます。この機能には :ref:`items common properties "
+"<item_common_properties>` 以外に以下の機能があります："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:44
+msgid "Main properties"
+msgstr "メインプロパティ"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:51
+msgid "Picture Item Properties panel"
+msgstr "画像アイテムのアイテムプロパティパネル"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:53
+msgid "The picture item supports two types of images:"
+msgstr "画像アイテムは2種類の画像をサポートしています。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:55
+msgid ""
+":guilabel:`Raster Image`: a file selector widget can be used to fetch the "
+"data. Use the :guilabel:`...` :sup:`Browse` button to select a file on your "
+"computer or enter the path directly in the text field. You can even provide "
+"a remote URL that points to a picture. The associated image can also be "
+":ref:`embedded <embedded_file_selector>` in the layout."
+msgstr ""
+":guilabel:`ラスタ画像`: ファイルセレクタウィジェットを使用してデータを取得することができます。guilabel:`...` "
+":sup:`ブラウズ` "
+"ボタンを使ってコンピュータ上のファイルを選択するか、テキストフィールドに直接パスを入力してください。画像を指すリモートURLを指定することもできます。関連する画像はレイアウトに:ref:`埋め込む"
+" <embedded_file_selector>`こともできます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:62
+msgid ""
+"Use the |dataDefine| :sup:`data defined override` button to set the image "
+"source from a feature attribute or using a regular expression."
+msgstr ""
+"|dataDefine| :sup:`データによって定義された上書き` "
+"ボタンを使用して、地物の属性や正規表現を使用して画像のソースを設定することができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:226
+msgid "dataDefine"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:64
+msgid ""
+":guilabel:`SVG Image`: using by default the SVG libraries provided in "
+":menuselection:`Settings --> Options --> System --> SVG Paths`. You can "
+"however use any other file, and the file selection follows the same rules as"
+" for the raster image. The SVG parameters can as well be set dynamic."
+msgstr ""
+":guilabel:`SVGイメージ`: :menuselection:`設定 --> オプション --> システム --> SVGパス` "
+"で与えられているSVGライブラリをデフォルトで使用します。しかし、他のファイルを使用することもでき、ファイル選択はラスタ画像と同じルールに従います。SVGパラメータは動的に設定することもできます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:71
+msgid ""
+"The QGIS provided (default) :file:`.SVG` files are customizable, meaning "
+"that you can easily apply other :guilabel:`Fill color`, :guilabel:`Stroke "
+"color` (including opacity) and :guilabel:`Stroke width` than the original, "
+"using their corresponding feature in the :guilabel:`SVG Parameters` group. "
+"These properties can also be :ref:`data-defined <data_defined>`."
+msgstr ""
+"QGISが提供する（デフォルトの） :file:`.SVG` ファイルはカスタマイズが可能です。つまり、 :guilabel:`SVG パラメータ` "
+"グループ内の対応する機能を使用して、 :guilabel:`塗りつぶし色` や :guilabel:`ストローク色` （不透明度も含む）、 "
+":guilabel:`ストローク幅` にオリジナルとは別の値を簡単に適用させることができます。これらのプロパティは :ref:`データ定義 "
+"<data_defined>` とすることもできます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:78
+msgid ""
+"If you add an :file:`.SVG` file that does not enable these properties, you "
+"may need to add the following tags to the file in order to add support e.g. "
+"for transparency:"
+msgstr ""
+"追加した :file:`.SVG` "
+"ファイルでこれらのプロパティが有効でない場合には、不透明度などをサポートするために、以下のタグを追加する必要があります："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:82
+msgid "`fill-opacity=\"param(fill-opacity)\"`"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:83
+msgid "`stroke-opacity=\"param(outline-opacity)\"`"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:85
+msgid "More details at :ref:`svg_symbol`."
+msgstr "より詳細は次にあります："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:87
+msgid ""
+"Drag-and-drop an image file (raster or SVG) into the layout page will create"
+" a layout picture item with corresponding settings."
+msgstr "画像ファイル（ラスタまたはSVG）をレイアウトページにドラッグ＆ドロップすると、対応する設定のレイアウト画像アイテムが作成されます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:92
+msgid "Size and placement"
+msgstr "サイズと配置"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:99
+msgid "Layout pictures size and placement properties"
+msgstr "レイアウト画像のサイズと配置プロパティ"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:101
+msgid ""
+"With the :guilabel:`Resize mode` option, you can set how the image is "
+"displayed when the frame is resized:"
+msgstr ":guilabel:`リサイズモード` オプションでは、フレームの大きさを変更したときに画像がどのように表示されるかを設定できます："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:104
+msgid ""
+"``Zoom``: enlarges/reduces the image to the frame while maintaining the "
+"aspect ratio of picture"
+msgstr "``ズーム`` ：元のアスペクト比を保ったまま、フレームに合わせて画像を拡大／縮小します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:106
+msgid "``Stretch``: stretches the image to fit inside the frame"
+msgstr "``伸ばす`` ：フレーム内部に合わせるように画像を伸縮させます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:107
+msgid ""
+"``Clip``: use this mode for raster images only, it sets the size of the "
+"image to the original image size without scaling, and the frame is used to "
+"clip the image. So only the part of the image that is inside the frame will "
+"be visible."
+msgstr ""
+"``切り抜く（clip）`` "
+"：このモードはラスタ画像でのみ使用できます。このモードでは、画像サイズを拡大縮小なしのオリジナルの画像サイズとし、画像はフレームで切り取られます。従って、フレームの内側にある画像の一部のみが表示されます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:112
+msgid ""
+"``Zoom and resize frame``: enlarges the image to fit the frame, and then "
+"resizes frame to fit the resulting image dimensions"
+msgstr ""
+"``ズームしてフレームをリサイズ`` ：画像をフレームに合うように拡大し、それから拡大後の画像の大きさに合わせてフレームの大きさを変更します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:114
+msgid ""
+"``Resize frame to image size``: sets the size of the frame to match the "
+"original size of the image (no scaling)"
+msgstr "``フレームを画像サイズにリサイズ`` ：フレームのサイズを（拡大縮小なしの）元の画像サイズに合わせるよう設定します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:117
+msgid ""
+"Depending on the selected :guilabel:`Resize mode`, the :guilabel:`Placement`"
+" and :guilabel:`Image rotation` options may be disabled. "
+":guilabel:`Placement` lets you select the position of the image inside its "
+"frame (top/middle/bottom and left/center/right)."
+msgstr ""
+"選択した :guilabel:`リサイズモード` によっては、 :guilabel:`配置` と :guilabel:`画像の回転` "
+"オプションが無効になることがあります。 :guilabel:`配置` では、フレーム内の画像の位置（上/中/下、左/中央/右）が選択できます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:126
+msgid "Image rotation"
+msgstr "画像の回転"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:128
+msgid ""
+"Images can be rotated with the :guilabel:`Image rotation` field. Activating "
+"the |checkbox| :guilabel:`Sync with map` checkbox synchronizes the rotation "
+"of the image with the rotation applied to the selected map item. This is a "
+"convenient feature to make any picture behave as a north arrow. The "
+":guilabel:`North alignment` can be:"
+msgstr ""
+"画像は :guilabel:`画像の回転` フィールドで回転させることができます。|checkbox| :guilabel:`地図と同期する` "
+"チェックボックスを有効にすると、画像の回転が選択されている地図アイテムに適用されている回転と同期します。これはどんな画像でも方位記号として動作させることができる便利な機能です。:guilabel:`ノースアライメント`"
+" には次のような指定ができます:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:224
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:135
+msgid ""
+"**Grid north**: the direction of a grid line which is parallel to the "
+"central meridian of the national/local grid"
+msgstr "**グリッドの北** ：国単位／ローカルグリッドの中央子午線に平行なグリッド線の方向"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:137
+msgid "**True north**: direction of a meridian of longitude."
+msgstr "**真北** ：経度の子午線の方向"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:139
+msgid ""
+"You can also apply a declination :guilabel:`Offset` to the picture rotation."
+msgstr "画像の回転には、傾きの :guilabel:`オフセット` を適用することができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:146
+msgid "Layout pictures image rotation properties"
+msgstr "レイアウト画像の画像の回転プロパティ"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:153
+msgid "The North Arrow Item"
+msgstr "方位記号アイテム"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:155
+msgid ""
+"You can add a north arrow with the |northArrow| :sup:`Add North Arrow` "
+"button, following :ref:`items creation instructions <create_layout_item>` "
+"and manipulate it the same way as exposed in :ref:`interact_layout_item`."
+msgstr ""
+"|northArrow| :sup:`方位記号を追加` ボタンを使用して、 :ref:`アイテムの作成手順 <create_layout_item>` "
+"に従えば、方位記号を追加できます。これは、 :ref:`interact_layout_item` と同じ方法で操作できます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:228
+msgid "northArrow"
+msgstr "northArrow"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:160
+msgid ""
+"Since north arrows are images, the :guilabel:`North Arrow` item has the same"
+" properties as the :ref:`picture item <layout_picture_item>`. The main "
+"differences are:"
+msgstr ""
+"方位記号が画像であるため、 :guilabel:`方位記号` アイテムは :ref:`画像アイテム <layout_picture_item>` "
+"と同じプロパティを持っています。主な違いは、"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:164
+msgid ""
+"A default north arrow is used when adding the item, instead of a blank frame"
+msgstr "空のフレームの代わりに、デフォルトの北向き矢印記号が使用されます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:166
+msgid ""
+"The north arrow item is synced with a map item by default: the "
+":guilabel:`Sync with map` property is the map over which the north arrow "
+"item is drawn. If none, it falls back to the :ref:`reference map "
+"<reference_map>`."
+msgstr ""
+"方位記号アイテムは、デフォルトで地図アイテムと同期しています。 :guilabel:`地図と同期する` "
+"プロパティは、地図記号アイテムの下にある地図に設定されます。下に地図がない場合には、 :ref:`参照マップ <reference_map>` "
+"にフォールバックします。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:173
+msgid ""
+"Many of the north arrows do not have an 'N' added in the north arrow. This "
+"is done on purpose, since there are languages that do not use an 'N' for "
+"North."
+msgstr "方位記号の多くには、北を表す「N」という文字がありません。これは北に「N」を使用しない言語があるため、意図的にそのようになっています。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:183
+msgid "North arrows available for selection in provided SVG library"
+msgstr "SVGライブラリで提供されている方位記号"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:188
+msgid "The Marker Item"
+msgstr "マーカーアイテム"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:190
+msgid ""
+"To add a marker item, select the |addMarker| :sup:`Add Marker` button, and "
+"click on the page. A default point marker symbol is added. Then you can "
+"manipulate it, as explained in :ref:`interact_layout_item`. But note that "
+"unlike most of the other items, you resize the item given that its size is "
+"controlled by the embedded symbols properties."
+msgstr ""
+"マーカーアイテムを追加するには、|addMarker| :sup:`マーカーを追加` "
+"ボタンを選択し、ページ上でクリックします。デフォルトのポイントマーカーシンボルが追加されます。それから "
+":ref:`interact_layout_item` "
+"で説明したように操作することができます。しかし、他のほとんどのアイテムとは異なり、アイテムのサイズは埋め込まれたシンボルのプロパティによって制御されることに注意してください。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:222
+msgid "addMarker"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:196
+msgid ""
+"The marker item can be customized from the :guilabel:`Item Properties` "
+"panel. Other than the :ref:`items common properties "
+"<item_common_properties>`, you can also:"
+msgstr ""
+"マーカーアイテムは :guilabel:`アイテムプロパティ` パネルからカスタマイズすることができます。ref:`アイテムの共通プロパティ "
+"<item_common_properties>` 以外にも、以下のことができます："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:200
+msgid ""
+"modify the :guilabel:`Symbol`, relying on all the symbol :ref:`widget "
+"capabilities <symbol-selector>`"
+msgstr "シンボルの :ref:`ウィジェットの能力 <symbol-selector>` に依存して :guilabel:`シンボル` を変更する"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:202
+msgid ""
+"sync the marker item rotation with the map's (see "
+":ref:`layout_images_rotation`), acting as a north arrow. The map rotation is"
+" added to any existing marker symbol level rotation (so .e.g if you have to "
+"rotate the triangle marker 90° to get it pointing straight up, it will still"
+" work nicely in north arrow mode!)"
+msgstr ""
+"マーカーアイテムの回転を地図と同期させ (:ref:`layout_images_rotation` "
+"を参照)、方位記号として動作します。地図の回転は既存のマーカーシンボルレベルの回転に追加されます （例えば、三角形のマーカーを真上に向けるために 90°"
+" 回転させる必要があっても、北矢印モードではうまく機能します！）"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:212
+msgid "The marker item custom properties"
+msgstr "マーカーアイテムのカスタムプロパティ"

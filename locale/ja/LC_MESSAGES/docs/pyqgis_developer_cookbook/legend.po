@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:24
+msgid "Accessing the Table Of Contents (TOC)"
+msgstr "目次（TOC）へのアクセス"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:26
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "pyqgisコンソールの外部にいる場合、このページのコードスニペットでは以下のインポートが必要になります："
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:41
+msgid ""
+"You can use different classes to access all the loaded layers in the TOC and"
+" use them to retrieve information:"
+msgstr "さまざまなクラスを使用して、TOCにロードされているすべてのレイヤーにアクセスし、それらを使用して情報を取得できます："
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:44
+msgid ":class:`QgsProject <qgis.core.QgsProject>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:45
+msgid ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:48
+msgid "The QgsProject class"
+msgstr "QgsProject クラス"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:50
+msgid ""
+"You can use :class:`QgsProject <qgis.core.QgsProject>` to retrieve "
+"information about the TOC and all the layers loaded."
+msgstr ""
+":class:`QgsProject <qgis.core.QgsProject>` "
+"を使うと、TOCとロードされた全てのレイヤに関する情報を取得することができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:53
+msgid ""
+"You have to create an ``instance`` of :class:`QgsProject "
+"<qgis.core.QgsProject>` and use its methods to get the loaded layers."
+msgstr ""
+":class:`QgsProject <qgis.core.QgsProject>` "
+"の「インスタンス」を作成し、そのメソッドを使用してロードされたレイヤを取得する必要があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:56
+msgid ""
+"The main method is :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>`. It "
+"will return a dictionary of the loaded layers:"
+msgstr ""
+"メインメソッドは :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>` "
+"です。ロードされたレイヤの辞書を返します:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:69
+msgid ""
+"The dictionary ``keys`` are the unique layer ids while the ``values`` are "
+"the related objects."
+msgstr "辞書の ``keys`` はユニークなレイヤIDであり、 ``values`` は関連するオブジェクトです。"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:72
+msgid ""
+"It is now straightforward to obtain any other information about the layers:"
+msgstr "これで、レイヤに関するその他の情報を簡単に得ることができるようになりました:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:90
+msgid "You can also query the TOC using the name of the layer:"
+msgstr "また、レイヤの名前でTOCを照会することも可能です:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:96
+msgid ""
+"A list with all the matching layers is returned, so we index with ``[0]`` to"
+" get the first layer with this name."
+msgstr "一致するすべてのレイヤを含んだリストが返されるため、 ``[0]`` でインデックスを作成して、この名前の最初のレイヤを取得します。"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:101
+msgid "QgsLayerTreeGroup class"
+msgstr "QgsLayerTreeGroup クラス"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:103
+msgid ""
+"The layer tree is a classical tree structure built of nodes. There are "
+"currently two types of nodes: group nodes (:class:`QgsLayerTreeGroup "
+"<qgis.core.QgsLayerTreeGroup>`) and layer nodes (:class:`QgsLayerTreeLayer "
+"<qgis.core.QgsLayerTreeLayer>`)."
+msgstr ""
+"レイヤツリーは、ノードで構築された古典的なツリー構造です。現在、ノードには2つのタイプがあります：グループノード（ "
+":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` ）とレイヤノード（ "
+":class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` ）。"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:107
+msgid ""
+"for more information you can read these blog posts of Martin Dobias: `Part 1"
+" <https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-"
+"part-1/>`_ `Part 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-"
+"layer-tree-api-part-2/>`_ `Part 3 "
+"<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
+"part-3/>`_"
+msgstr ""
+"詳細については、MartinDobiasのこれらのブログ投稿を読むことができます： `Part 1 "
+"<https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-"
+"part-1/>`_ `Part 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-"
+"layer-tree-api-part-2/>`_ `Part 3 "
+"<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
+"part-3/>`_"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:112
+msgid ""
+"The project layer tree can be accessed easily with the method "
+":meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>` of the "
+":class:`QgsProject <qgis.core.QgsProject>` class:"
+msgstr ""
+"プロジェクトのレイヤツリーには :class:`QgsProject <qgis.core.QgsProject>` クラスの "
+":meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>` "
+"メソッドで容易にアクセスすることができます:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:119
+msgid "``root`` is a group node and has *children*:"
+msgstr "``root`` はグループノードであり、 *子* を持っています："
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:125
+msgid ""
+"A list of direct children is returned. Sub group children should be accessed"
+" from their own direct parent."
+msgstr "直接の子のリストが返されます。サブグループの子には、自分の直接の親からアクセスする必要があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:128
+msgid "We can retrieve one of the children:"
+msgstr "子の一人を検索することができます:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:139
+msgid "Layers can also be retrieved using their (unique) ``id``:"
+msgstr "レイヤは、その（ユニークな） ``id`` を使用して取得することもできます:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:147
+msgid "And groups can also be searched using their names:"
+msgstr "また、グループは名前を使用して検索することもできます："
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:154
+msgid ""
+":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` has many other "
+"useful methods that can be used to obtain more information about the TOC:"
+msgstr ""
+":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` "
+"はTOCに関するより多くの情報を得るために使用できる多くの便利なメソッドを備えています:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:167
+msgid ""
+"Now let’s add some layers to the project’s layer tree. There are two ways of"
+" doing that:"
+msgstr "では、プロジェクトのレイヤツリーにいくつかのレイヤを追加してみましょう。これには2つの方法があります:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:170
+msgid ""
+"**Explicit addition** using the :meth:`addLayer() "
+"<qgis.core.QgsLayerTreeGroup.addLayer>` or :meth:`insertLayer() "
+"<qgis.core.QgsLayerTreeGroup.insertLayer>` functions:"
+msgstr ""
+"**明示的な追加** をするには、:meth:`addLayer() <qgis.core.QgsLayerTreeGroup.addLayer>` "
+"または :meth:`insertLayer() <qgis.core.QgsLayerTreeGroup.insertLayer>` "
+"関数を使用します:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:183
+msgid ""
+"**Implicit addition**: since the project's layer tree is connected to the "
+"layer registry it is enough to add a layer to the map layer registry:"
+msgstr ""
+"**暗黙の追加**：プロジェクトのレイヤツリーはレイヤレジストリに接続されているので、マップレイヤレジストリにレイヤを追加するだけで十分です:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:191
+msgid ""
+"You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` "
+"and :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` easily:"
+msgstr ""
+":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` と "
+":class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` は簡単に切り替えて使うことができます:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:207
+msgid ""
+"Groups can be added with the :meth:`addGroup() "
+"<qgis.core.QgsLayerTreeGroup.addGroup>` method. In the example below, the "
+"former will add a group to the end of the TOC while for the latter you can "
+"add another group within an existing one:"
+msgstr ""
+"グループは :meth:`addGroup() <qgis.core.QgsLayerTreeGroup.addGroup>` "
+"メソッドで追加できます。以下の例では、前者はTOCの最後にグループを追加し、後者の場合は既存のグループ内に別のグループを追加できます："
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:218
+msgid "To moving nodes and groups there are many useful methods."
+msgstr "ノードとグループを移動するには、多くの便利な方法があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:220
+msgid "Moving an existing node is done in three steps:"
+msgstr "既存のノードの移動は、次の3つのステップで実行されます："
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:222
+msgid "cloning the existing node"
+msgstr "既存ノードをクローニングする"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:223
+msgid "moving the cloned node to the desired position"
+msgstr "クローンしたノードを動かしたい位置に移動する"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:224
+msgid "deleting the original node"
+msgstr "元のノードを削除する"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:235
+msgid ""
+"It is a little bit more *complicated* to move a layer around in the legend:"
+msgstr "レイヤを凡例の中で動かすのは少し *ややこしい** です:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:252
+msgid "or moving it to an existing group:"
+msgstr "または既存のグループへ移動させます:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:272
+msgid "Some other methods that can be used to modify the groups and layers:"
+msgstr "グループやレイヤの変更に使えるその他いくつかのメソッド:"

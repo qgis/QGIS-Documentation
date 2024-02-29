@@ -1,0 +1,712 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-12 01:40+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:2
+msgid "|LS| Feature Topology"
+msgstr "|LS| Topología de los Elementos"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:4
+msgid ""
+"Topology is a useful aspect of vector data layers, because it minimizes "
+"errors such as overlap or gaps."
+msgstr ""
+"La topología es un aspecto útil de las capas de datos vectoriales, ya que "
+"minimiza errores como la superposición o huecos."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:7
+msgid ""
+"For example: if two features share a border, and you edit the border using "
+"topology, then you won't need to edit first one feature, then another, and "
+"carefully line up the borders so that they match. Instead, you can edit "
+"their shared border and both features will change at the same time."
+msgstr ""
+"Por ejemplo: si dos elementos comparten un borde, y editas el borde "
+"utilizando la topología, no necesitarás editar primero un elemento y luego "
+"otro cuidadosamente para que luego coincidan. En lugar de eso puedes editar "
+"el borde compartido y los dos elementos cambiarán al mismo tiempo."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:12
+msgid "**The goal for this lesson:** To understand topology using examples."
+msgstr ""
+"**El objetivo de esta lección:** Entender la topología utilizando ejemplos."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:15
+msgid "|moderate| |FA| Snapping"
+msgstr "|moderate| |FA| Autoensamblado"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:365
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:17
+msgid ""
+"Snapping makes topological editing easier. This will allow your mouse cursor"
+" to snap to other objects while you digitize. To set snapping options:"
+msgstr ""
+"O ajuste facilita a edição topológica. Isso permitirá que o cursor do mouse "
+"se encaixe em outros objetos enquanto você digitaliza. Para definir opções "
+"de encaixe:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:22
+msgid ""
+"Navigate to the menu entry :menuselection:`Project --> Snapping Options...`."
+msgstr ""
+"Navegue até a entrada do menu :seleção de menus:`Projeto --> Opções de "
+"encaixe...`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:24
+msgid ""
+"Set up your :guilabel:`Snapping options` dialog to activate the ``landuse`` "
+"layer with :guilabel:`Type` *vertex* and tolerance ``12`` pixels:"
+msgstr ""
+"Configure sua caixa de diálogo :guilabel:`Opções de encaixe` para ativar a "
+"camada ``uso da terra`` com :guilabel:`Tipo` *vértice* e tolerância ``12`` "
+"pixels: "
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:31
+msgid ""
+"Make sure that the box in the :guilabel:`Avoid overlap` column is checked."
+msgstr ""
+"Certifique-se de que a caixa na coluna :guilabel:`Evitar sobreposição` "
+"esteja marcada."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:33
+msgid "Leave the dialog."
+msgstr "Deixe o diálogo."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:34
+msgid ""
+"Select the :guilabel:`landuse` layer and enter edit mode (|toggleEditing|)"
+msgstr ""
+"Selecione a camada :guilabel:`uso da terra` e ​​entre no modo de edição "
+"(|alternar edição|)"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:378
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:36
+msgid ""
+"Check (under :menuselection:`View --> Toolbars`) that the "
+":guilabel:`Advanced Digitizing` toolbar is enabled."
+msgstr ""
+"Verifique (em :seleção de menus:`Visualizar --> Barras de ferramentas`) se a"
+" barra de ferramentas :guilabel:`Digitalização avançada` está habilitada."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:38
+msgid "Zoom to this area (enable layers and labels if necessary):"
+msgstr "Amplía esa área (habilita capas y etiquetas si es necesario):"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:48
+msgid ""
+"When prompted, give it an *OGC_FID* of :kbd:`999`, but feel free to leave "
+"the other values unchanged."
+msgstr ""
+"Quando solicitado, dê um *OGC_FID* de :kbd:`999`, mas fique à vontade para "
+"deixar os outros valores inalterados."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:51
+msgid ""
+"If you are careful while digitizing, and allow the cursor to snap to the "
+"vertices of adjoining areas, you'll notice that there won't be any gaps "
+"between your new area and the existing adjacent areas."
+msgstr ""
+"Se você for cuidadoso ao digitalizar e permitir que o cursor se encaixe nos "
+"vértices das áreas adjacentes, notará que não haverá lacunas entre sua nova "
+"área e as áreas adjacentes existentes."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:55
+msgid ""
+"Note the |undo| :sup:`undo` and |redo| :sup:`redo` tools in the "
+":guilabel:`Advanced Digitizing` toolbar."
+msgstr ""
+"Observe o |desfazer| :sup:`desfazer` e |refazer| :sup:`refazer` na barra de "
+"ferramentas :guilabel:`Digitalização Avançada`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:380
+msgid "undo"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:366
+msgid "redo"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:61
+msgid "|moderate| |FA| Correct Topological Features"
+msgstr "|moderate| |FA| Corrección de Elementos Topológicos"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:63
+msgid ""
+"Topology features can sometimes need to be updated. In our study area, an "
+"area has been turned into forest, so the ``landuse`` layer need an update. "
+"We will therefore expand and join some forest features in this area:"
+msgstr ""
+"Às vezes, os recursos de topologia podem precisar ser atualizados. Em nossa "
+"área de estudo, uma área foi transformada em floresta, então a camada ``uso "
+"da terra`` precisa de uma atualização. Vamos, portanto, expandir e juntar "
+"alguns recursos florestais nesta área:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:72
+msgid ""
+"Instead of creating new polygons to join the forest areas, we are going to "
+"use the *Vertex Tool* to edit and join existing polygons."
+msgstr ""
+"Em vez de criar novos polígonos para unir as áreas florestais, vamos usar a "
+"*Ferramenta Vértice* para editar e unir os polígonos existentes."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:75
+msgid "Enter edit mode (if it is not active already)"
+msgstr "Entre no modo de edição (se ainda não estiver ativo)"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:76
+msgid "Select the |vertexToolActiveLayer| :sup:`Vertex Tool` tool."
+msgstr ""
+"Selecione o |Camada ativa da ferramenta de vértice| :sup:ferramenta "
+"`Ferramenta Vértice`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:382
+msgid "vertexToolActiveLayer"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:77
+msgid ""
+"Choose an area of forest, select a vertex, and move it to an adjoining "
+"vertex so that the two forest features meet:"
+msgstr ""
+"Escolha uma área de floresta, selecione um vértice e mova-o para um vértice "
+"adjacente para que as duas feições da floresta se encontrem:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:83
+msgid "Click on the other vertices and snap them into place."
+msgstr "Clique nos outros vértices e encaixe-os no lugar."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:85
+msgid "The topologically correct border looks like this:"
+msgstr "El borde topológicamente correcto tiene este aspecto:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:90
+msgid "Go ahead and join a few more areas using the *Vertex Tool*."
+msgstr ""
+"Vá em frente e junte mais algumas áreas usando a *Ferramenta de vértice*."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:92
+msgid ""
+"You can also use the |capturePolygon| :sup:`Add Polygon Feature` tool to "
+"fill the gap between the two forest polygons. If you have enabled *Avoid "
+"overlap*, you don't have to add every single vertex - they will be added "
+"automatically if your new polygon overlaps the existing ones."
+msgstr ""
+"Você também pode usar o |capturar polígono| :sup:'Adicionar recurso de "
+"polígono' ferramenta para preencher a lacuna entre os dois polígonos da "
+"floresta. Se você ativou *Evitar sobreposição*, você não precisa adicionar "
+"todos os vértices - eles serão adicionados automaticamente se o seu novo "
+"polígono se sobrepuser aos existentes."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:353
+msgid "capturePolygon"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:98
+msgid ""
+"If you are using our example data, you should have a forest area looking "
+"something like this:"
+msgstr ""
+"Se você estiver usando nossos dados de exemplo, você deve ter uma área de "
+"floresta parecida com esta:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:104
+msgid ""
+"Don't worry if you have joined more, less or different areas of forest."
+msgstr ""
+"No te preocupes si has unido más, menos o diferentes áreas forestales."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:108
+msgid "|moderate| |FA| Tool: Simplify Feature"
+msgstr "|moderate| |FA| Herramienta: Simplificar Objetos Espaciales"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:110
+msgid ""
+"Continuing on the same layer, we will test the |simplify| :sup:`Simplify "
+"Feature` tool:"
+msgstr ""
+"Continuando na mesma camada, testaremos o |simplificar| :sup:ferramenta "
+"`Simplificar Recurso`:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:372
+msgid "simplify"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:113
+msgid "Click on it to activate it."
+msgstr "Haz clic en ella para activarla."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:114
+msgid ""
+"Click on one of the areas which you joined using either the *Vertex Tool* or"
+" *Add Feature* tool. You will see this dialog:"
+msgstr ""
+"Clique em uma das áreas que você juntou usando a ferramenta *Ferramenta de "
+"vértice* ou *Adicionar recurso*. Você verá esta caixa de diálogo:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:121
+msgid "Modify the :guilabel:`Tolerance` and watch what happens:"
+msgstr "Modifique o :guilabel:`Tolerância` e veja o que acontece:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:126
+msgid "This allows you to reduce the number of vertices."
+msgstr "Isso permite reduzir o número de vértices."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:128
+msgid "Click :guilabel:`OK`"
+msgstr "Clique :guilabel:`OK`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:130
+msgid ""
+"The advantage of this tool is that it provides you with a simple and "
+"intuitive interface for generalization. But notice that the tool ruins "
+"topology. The simplified polygon no longer shares boundaries with its "
+"adjacent polygons, as it should. So this tool is better suited for stand-"
+"alone features."
+msgstr ""
+"A vantagem desta ferramenta é que ela fornece uma interface simples e "
+"intuitiva para generalização. Mas observe que a ferramenta estraga a "
+"topologia. O polígono simplificado não compartilha mais limites com seus "
+"polígonos adjacentes, como deveria. Portanto, esta ferramenta é mais "
+"adequada para recursos independentes."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:137
+msgid ""
+"Before you go on, set the polygon back to its original state by undoing the "
+"last change."
+msgstr ""
+"Antes de continuar, ajusta los polígonos a su estado original deshaciendo el"
+" último cambio."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:142
+msgid "|moderate| |TY| Tool: Add Ring"
+msgstr "|moderate| |TY| Herramienta: Añade un Anillo"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:144
+msgid ""
+"The |addRing| :sup:`Add Ring` tool allows you to add an interior ring to a "
+"polygon feature (cut a hole in the polygon), as long as the hole is "
+"completely contained within the polygon (touching the boundary is OK). For "
+"example, if you have digitized the outer boundaries of South Africa and you "
+"need to add a hole for Lesotho, you would use this tool."
+msgstr ""
+"O |adicionar Anel| A ferramenta :sup:`adicionar anel` permite que você "
+"adicione um anel interno a um polígono (corte um buraco no polígono), desde "
+"que o buraco esteja completamente contido dentro do polígono (tocar no "
+"limite está OK). Por exemplo, se você digitalizou os limites externos da "
+"África do Sul e precisa adicionar um buraco para o Lesoto, você usaria esta "
+"ferramenta."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:351
+msgid "addRing"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:152
+msgid ""
+"If you experiment with the tool, you may notice that the snapping options "
+"can prevent you from creating a ring inside a polygon. So you are advised to"
+" turn off snapping before cutting a hole."
+msgstr ""
+"Se você experimentar a ferramenta, poderá notar que as opções de encaixe "
+"podem impedir que você crie um anel dentro de um polígono. Portanto, é "
+"aconselhável desligar o encaixe antes de cortar um buraco."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:156
+msgid ""
+"Disable snapping for the ``landuse`` layer using the |snapping| :sup:`Enable"
+" Snapping` button (or use the shortcut :kbd:`s`)."
+msgstr ""
+"Desativar encaixe para a camada ``uso da terra`` usando o |encaixe| "
+":sup:`Habilitar encaixe` (ou use o atalho :kbd:`s`)."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:374
+msgid "snapping"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:158
+msgid ""
+"Use the |addRing| :sup:`Add Ring` tool to create a hole in the middle of a "
+"polygon geometry."
+msgstr ""
+"Use o |adicionar anel| :sup:`adicionar anel` para criar um buraco no meio de"
+" uma geometria de polígono."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:160
+msgid ""
+"Draw a polygon over the target feature, as if you were using the "
+"|capturePolygon| :sup:`Add polygon` tool."
+msgstr ""
+"Desenhe um polígono sobre o recurso de destino, como se estivesse usando o "
+"|capturar polígono| :sup:Ferramenta `Adicionar polígono`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:162
+msgid "When you right-click, the hole will be visible."
+msgstr ""
+"Quando você clicar com o botão direito do mouse, o buraco ficará visível."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:163
+msgid ""
+"Remove the hole you just created using the |deleteRing| :sup:`Delete Ring` "
+"tool. Click inside the hole to delete it."
+msgstr ""
+"Remova o buraco que você acabou de criar usando o |excluir anel| "
+":sup:Ferramenta `Excluir anel`. Clique dentro do buraco para excluí-lo."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:357
+msgid "deleteRing"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:167
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:197
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:302
+msgid "Answer"
+msgstr "Responda"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:170
+msgid ""
+"The exact shape doesn't matter, but you should be getting a hole in the "
+"middle of your feature, like this one:"
+msgstr ""
+"A forma exata não importa, mas você deve obter um buraco no meio do seu "
+"recurso, como este:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:176
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:210
+msgid "Undo your edit before continuing with the exercise for the next tool."
+msgstr ""
+"Desfaça sua edição antes de continuar com o exercício para a próxima "
+"ferramenta."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:180
+msgid "|moderate| |TY| Tool: Add Part"
+msgstr "|moderate| |TY| Herramienta: Añade una Parte"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:182
+msgid ""
+"The |addPart| :sup:`Add Part` tool allows you to add a new part to a "
+"feature, that is not directly connected to the main feature. For example, if"
+" you have digitized the boundaries of mainland South Africa, but you haven't"
+" yet added the Prince Edward Islands, you would use this tool to create "
+"them."
+msgstr ""
+"A |adicionar parte| A ferramenta :sup:`adicionar parte` permite que você "
+"adicione uma nova peça a um recurso, que não está diretamente conectado ao "
+"recurso principal. Por exemplo, se você digitalizou os limites da África do "
+"Sul continental, mas ainda não adicionou as Ilhas do Príncipe Eduardo, você "
+"usaria essa ferramenta para criá-las."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:349
+msgid "addPart"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:188
+msgid ""
+"Select the polygon to which you wish to add the part by using the "
+"|selectRectangle| :sup:`Select Features by area or single click` tool."
+msgstr ""
+"Selecione o polígono ao qual deseja adicionar a peça usando o |selecione "
+"retângulo| :sup:`Selecione recursos por área ou ferramenta de clique único`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:370
+msgid "selectRectangle"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:191
+msgid "Use the :guilabel:`Add Part` tool to add an outlying area."
+msgstr ""
+"Use a ferramenta :guilabel:`Adicionar Parte` para adicionar uma área "
+"externa."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:192
+msgid ""
+"Delete the part you just created using the |deletePart| :sup:`Delete Part` "
+"tool."
+msgstr ""
+"Exclua a parte que você acabou de criar usando |delete parte| "
+":sup:Ferramenta `Excluir parte`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:355
+msgid "deletePart"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:195
+msgid "Click inside the part to delete it."
+msgstr "Clique dentro da peça para excluí-la."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:200
+msgid "First select the |largeLandUseArea|:"
+msgstr "Primeiro selecione a |grande área de uso da terra|:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:205
+msgid "Now add your new part:"
+msgstr "Agora adicione sua nova parte:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:214
+msgid "|moderate| |FA| Tool: Reshape Features"
+msgstr "|moderate| |FA| Herramienta: Remodelar Elementos"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:216
+msgid ""
+"The |reshape| :sup:`Reshape Features` tool is used to extend a polygon "
+"feature or cut away a part of it (along the boundary)."
+msgstr ""
+"A |reforma| A ferramenta :sup:`Remodelar recursos` é usada para estender um "
+"polígono ou cortar uma parte dele (ao longo do limite)."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:368
+msgid "reshape"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:219
+msgid "Extending:"
+msgstr "Estendendo:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:221
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:238
+msgid ""
+"Select the polygon using the |selectRectangle| :sup:`Select Features by area"
+" or single click` tool."
+msgstr ""
+"Selecione o polígono usando o |selecione retângulo| :sup:`Selecione recursos"
+" por área ou ferramenta de clique único`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:223
+msgid "Left-click inside the polygon to start drawing."
+msgstr ""
+"Clique com o botão esquerdo dentro do polígono para começar a desenhar."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:224
+msgid ""
+"Draw a shape outside the polygon. The last vertex should be back inside the "
+"polygon."
+msgstr ""
+"Desenhe uma forma fora do polígono. O último vértice deve estar de volta "
+"dentro do polígono."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:226
+msgid "Right-click to finish the shape:"
+msgstr "Clique com o botão direito para finalizar a forma:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:231
+msgid "This will give a result similar to:"
+msgstr "Esto dará un resultado parecido a:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:236
+msgid "Cut away a part:"
+msgstr "Corte uma parte:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:240
+msgid "Click outside the polygon."
+msgstr "Haz clic fuera del polígono."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:241
+msgid ""
+"Draw a shape inside the polygon. The last vertex must be back outside the "
+"polygon."
+msgstr ""
+"Desenhe uma forma dentro do polígono. O último vértice deve estar de volta "
+"fora do polígono."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:243
+msgid "Right-click outside the polygon:"
+msgstr "Clique com o botão direito fora do polígono:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:248
+msgid "The result of the above:"
+msgstr "El resultado de lo anterior:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:255
+msgid "|moderate| |TY| Tool: Split Features"
+msgstr "|moderate| |TY| Herramienta: Dividir Objetos Espaciales"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:257
+msgid ""
+"The |splitFeatures| :sup:`Split Features` tool is similar to the |reshape| "
+":sup:`Reshape Features` tool, except that it does not delete either of the "
+"two parts. Instead, it keeps them both."
+msgstr ""
+"Os |recursos divididos| :sup:A ferramenta `Recursos de divisão` é semelhante"
+" à |remodelar| :sup:`Remodelar recursos`, exceto que não exclui nenhuma das "
+"duas partes. Em vez disso, mantém os dois."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:376
+msgid "splitFeatures"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:262
+msgid "We will use the tool to split a corner from a polygon."
+msgstr "Usaremos a ferramenta para dividir um canto de um polígono."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:264
+msgid "First, select the ``landuse`` layer and re-enable snapping for it."
+msgstr ""
+"Primeiro, selecione a camada ``uso da terra`` e reative o estalando para "
+"ela."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:266
+msgid ""
+"Select the |splitFeatures| :sup:`Split Features` tool and click on a vertex "
+"to begin drawing a line."
+msgstr ""
+"Selecione os |Recursos divididos| :sup:`Recursos divididos` e clique em um "
+"vértice para começar a desenhar uma linha."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:269
+msgid "Draw the bounding line."
+msgstr "Desenhe a linha delimitadora."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:271
+msgid ""
+"Click a vertex on the \"opposite\" side of the polygon you wish to split and"
+" right-click to complete the line:"
+msgstr ""
+"Clique em um vértice no lado \"oposto\" do polígono que você deseja dividir "
+"e clique com o botão direito do mouse para completar a linha:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:277
+msgid ""
+"At this point, it may seem as if nothing has happened. But remember that the"
+" ``landuse`` layer is rendered without border lines, so the new division "
+"line will not be shown."
+msgstr ""
+"Neste ponto, pode parecer que nada aconteceu. Mas lembre-se que a camada "
+"``uso da terra`` é renderizada sem linhas de borda, então a nova linha de "
+"divisão não será mostrada."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:280
+msgid ""
+"Use the |selectRectangle| :sup:`Select Features by area or single click` "
+"tool to select the part you just split out; the new feature will now be "
+"highlighted:"
+msgstr ""
+"Use o |selecione retângulo| :sup:Ferramenta `Selecionar Feições por área ou "
+"clique único` para selecionar a parte que você acabou de dividir; o novo "
+"recurso agora será destacado:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:291
+msgid "|hard| |TY| Tool: Merge Features"
+msgstr "|hard| |TY| Herramienta: Combinar Objetos Espaciales"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:359
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:293
+msgid ""
+"Now we will re-join the feature you just split out to the remaining part of "
+"the polygon:"
+msgstr ""
+"Agora vamos juntar novamente a feição que você acabou de dividir para a "
+"parte restante do polígono:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:296
+msgid ""
+"Experiment with  the |mergeFeatures|:sup:`Merge Selected Features` and "
+"|mergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tools."
+msgstr ""
+"Experimente com |mesclar recursos|:sup:`Mesclar recursos selecionados` e "
+"|mesclar atributos de recurso| :sup:`Mesclar atributos de recursos "
+"selecionados` ferramentas."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:363
+msgid "mergeFeatures"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:361
+msgid "mergeFeatureAttributes"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:299
+msgid "Note the differences."
+msgstr "Comprueba las diferencias."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:305
+msgid ""
+"Use the :guilabel:`Merge Selected Features` tool, making sure to first "
+"select both of the polygons you wish to merge."
+msgstr ""
+"Use a ferramenta :guilabel:`Mesclar recursos selecionados`, certificando-se "
+"de selecionar primeiro os dois polígonos que deseja mesclar."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:307
+msgid ""
+"Use the feature with the :guilabel:`OGC_FID` of ``1`` as the source of your "
+"attributes (click on its entry in the dialog, then click the :guilabel:`Take"
+" attributes from selected feature` button):"
+msgstr ""
+"Use o recurso com o :guilabel:`OGC_FID` de ``1`` como a fonte de seus "
+"atributos (clique em sua entrada na caixa de diálogo, em seguida, clique no "
+"botão :guilabel:`Pegar atributos do recurso selecionado`):"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:311
+msgid ""
+"If you're using a different dataset, it is highly likely that your original "
+"polygon's :guilabel:`OGC_FID` will not be ``1``. Just choose the feature "
+"which has an :guilabel:`OGC_FID`."
+msgstr ""
+"Se você estiver usando um conjunto de dados diferente, é muito provável que "
+"o :guilabel:`OGC_FID` do seu polígono original não seja ``1``. Basta "
+"escolher o recurso que tem um :guilabel:`OGC_FID`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:318
+msgid ""
+"Using the :guilabel:`Merge Attributes of Selected Features` tool will keep "
+"the geometries distinct, but give them the same attributes."
+msgstr ""
+"Usando a ferramenta :guilabel:`Mesclar atributos de recursos selecionados` "
+"manterá as geometrias distintas, mas dará a elas os mesmos atributos."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:322
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:324
+msgid ""
+"Topology editing is a powerful tool that allows you to create and modify "
+"objects quickly and easily, while ensuring that they remain topologically "
+"correct."
+msgstr ""
+"La edición de la topología es una herramienta potente que te permite crear y"
+" modificar objetos rápida y fácilmente, a la vez que asegurar que permanecen"
+" topológicamente correctos."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:330
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:332
+msgid ""
+"Now you know how to digitize the shape of the objects easily, but adding "
+"attributes is still a bit of a headache! Next we will show you how to use "
+"forms, making attribute editing simpler and more effective."
+msgstr ""
+"Agora você sabe como digitalizar a forma dos objetos facilmente, mas "
+"adicionar atributos ainda é uma dor de cabeça! A seguir, mostraremos como "
+"usar formulários, tornando a edição de atributos mais simples e eficaz."

@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:2
+msgid "|LS| Raster to Vector Conversion"
+msgstr "Занятие: Преобразование растрового в векторное"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:4
+msgid ""
+"Converting between raster and vector formats allows you to make use of both "
+"raster and vector data when solving a GIS problem, as well as using the "
+"various analysis methods unique to these two forms of geographic data. This "
+"increases the flexibility you have when considering data sources and "
+"processing methods for solving a GIS problem."
+msgstr ""
+"Преобразовав между растровыми и векторными форматами, вы сможете "
+"использовать как растровые, так и векторные данные при решении задач GIS, а "
+"также применить различные методы анализа, которые уникальны для этих двух "
+"форм географических данных. Таким образом вы сможете повысить гибкость при "
+"рассмотрении источников данных и методов обработки для решения задач GIS."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:10
+msgid ""
+"To combine a raster and vector analysis, you need to convert the one type of"
+" data to the other. Let's convert the raster result of the previous lesson "
+"to a vector."
+msgstr ""
+"Для объединения растрового и векторного анализ вам надо преобразовать один "
+"тип данных в другой. Давайте попробуем преобразовать результаты работы с "
+"растровыми данными предыдущего урока в векторную плоскость."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:14
+msgid ""
+"**The goal for this lesson:** To get the raster result into a vector that "
+"can be used to complete the analysis."
+msgstr ""
+"**Цель этого урока:** Перевести результаты работы с растровыми данными в "
+"векторный, которые можно использовать для завершения анализа."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:18
+msgid "|moderate| |FA| The :guilabel:`Raster to Vector` Tool"
+msgstr "|moderate| Идем дальше: Инструмент :guilabel:`Raster to Vector`"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:127
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:20
+msgid ""
+"Start with the map from the last module, :kbd:`raster_analysis.qgs`. There "
+"you should have the :kbd:`all_conditions_simple.tif` calculated during the "
+"previous exercises."
+msgstr ""
+"Начните работу с карты из предыдущего модуля, :kbd:`raster_analysis.qgs`. У "
+"вас там должен быть файл :kbd:`all_conditions_simple.tif`, вычисленный во "
+"время выполнения предыдущих упражнений."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:24
+msgid ""
+"Click on :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
+"Vector)`. The tool dialog will appear."
+msgstr ""
+"Кликните на :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
+"Vector)`. У вас появится диалоговое окно инструмента."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:26
+msgid "Set it up like this:"
+msgstr "Настройте его таким образом:"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:31
+msgid ""
+"Change the field name (describing the values of the raster) to "
+":guilabel:`suitable`."
+msgstr ""
+"Поменяйте название поля (описывающее значения растра) на "
+":guilabel:`suitable`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:33
+msgid ""
+"Save the layer under :file:`exercise_data/residential_development` as "
+":file:`all_terrain.shp`."
+msgstr ""
+"Сохраните слой внутри :file:`exercise_data/residential_development` как "
+":file:`all_terrain.shp`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:36
+msgid ""
+"Now you have a vector file which contains all the values of the raster, but "
+"the only areas you're interested in are those that are suitable; i.e., those"
+" polygons where the value of :guilabel:`suitable` is ``1``. You can change "
+"the style of this layer if you want to have a clearer visualization of it."
+msgstr ""
+"У вас теперь есть векторный файл, который имеет все значения растра, но вам "
+"нужны те местности, которые являются подходящими; т.е. те полигоны, где "
+"значение :guilabel:`suitable` является ``1``. Вы можете изменить стиль этого"
+" слоя, если хотите более четко его визуализировать."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:43
+msgid "|moderate| |TY|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:45
+msgid "Refer back to the module on vector analysis."
+msgstr "Вернитесь к модулю векторного анализа."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:47
+msgid ""
+"Create a new vector file that contains only the polygons where "
+":guilabel:`suitable` has the value of ``1``."
+msgstr ""
+"Создайте новый векторный файл, который содержит только полигоны, в которых "
+"значение :guilabel:`suitable` равно ``1``."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:49
+msgid ""
+"Save the new file under :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain.shp`."
+msgstr ""
+"Сохраните новый файл в :file:`exercise_data/residential_development/` как "
+":file:`suitable_terrain.shp`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:72
+msgid "|moderate| |FA| The :guilabel:`Vector to Raster` Tool"
+msgstr "|moderate| Идем дальше: Инструмент :guilabel:`Vector to Raster`"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:74
+msgid ""
+"Although unnecessary for our current problem, it's useful to know about the "
+"opposite conversion from the one performed above. Convert to raster the "
+":file:`suitable_terrain.shp` vector file you just created in previous step."
+msgstr ""
+"Хотя это и не является обязательным для нашей текущей задачи, было бы хорошо"
+" знать обратное преобразование. Преобразуйте в растровый предыдущий "
+"векторный файл :file:`suitable_terrain.shp`, который вы создали в предыдущем"
+" задании."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:78
+msgid ""
+"Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to "
+"Raster)` to start this tool, then set it up as in the screenshot below:"
+msgstr ""
+"Надо кликнуть на :menuselection:`Raster --> Conversion --> Rasterize (Vector"
+" to Raster)` чтобы запустить этот инструмент, затем надо настроить его, как "
+"показано ниже:"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:84
+msgid ":guilabel:`Input layer` is :guilabel:`all_terrain`."
+msgstr ":guilabel:`Input layer` это :guilabel:`all_terrain`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:85
+msgid "Field name is :guilabel:`suitable`."
+msgstr "Имя поля :guilabel:`suitable`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:86
+msgid ":guilabel:`Output raster size units` is :guilabel:`Pixels`."
+msgstr ":guilabel:`Output raster size units` это :guilabel:`Pixels`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:87
+msgid ""
+":guilabel:`Width` and :guilabel:`Height` are ``837`` and ``661``, "
+"respectively."
+msgstr ""
+":guilabel:`Width` и :guilabel:`Height` составляют ``837`` и ``661``, "
+"соответственно."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:89
+msgid ""
+"Get the :guilabel:`Output extent` from the :guilabel:`all_terrain` layer."
+msgstr "Возьмите :guilabel:`Output extent` из слоя :guilabel:`all_terrain`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:90
+msgid ""
+"Set output file :guilabel:`Rasterized` to "
+":file:`exercise_data/residential_development/raster_conversion.tif`."
+msgstr ""
+"Установите выходной файл :guilabel:`Rasterized` на "
+":file:`exercise_data/residential_development/raster_conversion.tif`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:93
+msgid ""
+"The size of the output image is specified here to be the same as the "
+"original raster which was vectorized. To view the dimensions of an image, "
+"open its metadata (:guilabel:`Metadata` tab in the :guilabel:`Layer "
+"Properties`)."
+msgstr ""
+"TРазмер выходного изображения, указанный здесь, является таким же, как "
+"исходный растр, который был преобразован в векторный. Для того, чтобы "
+"просмотреть параметры изображения, откройте его метаданные (Вкладка "
+":guilabel:`Metadata` в :guilabel:`Layer Properties`)."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:98
+msgid "Click :guilabel:`OK` on the dialog to begin the conversion process."
+msgstr ""
+"Надо кликнуть на кнопку :guilabel:`OK` в диалоговом окне для запуска "
+"процесса преобразования."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:99
+msgid ""
+"When it is complete, gauge its success by comparing the new raster with the "
+"original one.  They should match up exactly, pixel for pixel."
+msgstr ""
+"Когда процесс будет завершен, оцените его успех, сравнив новый растр с "
+"исходным. Они должны быть полностью одинаковыми, пиксель к пикселю."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:103
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:105
+msgid ""
+"Converting between raster and vector formats allows you to widen the "
+"applicability of data, and need not lead to data degradation."
+msgstr ""
+"Преобразование между растровыми и векторными форматами даст вам возможность "
+"более шире применять данные и это не должно приводить к ухудшению качества "
+"данных."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:109
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:111
+msgid ""
+"Now that we have the results of the terrain analysis available in vector "
+"format, they can be used to solve the problem of which buildings we should "
+"consider for the residential development."
+msgstr ""
+"У нас теперь есть результаты анализа местности в векторном формате и их "
+"можно использовать для решения задачи, какие здания следует рассматривать "
+"для жилой застройки."

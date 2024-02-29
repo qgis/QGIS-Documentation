@@ -1,0 +1,792 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:53+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/expressions/expression.rst:7
+msgid "Expressions"
+msgstr "표현식"
+
+#: ../../docs/user_manual/expressions/expression.rst:15
+msgid ""
+"Based on layer data and prebuilt or user defined functions, **Expressions** "
+"offer a powerful way to manipulate attribute value, geometry and variables "
+"in order to dynamically change the geometry style, the content or position "
+"of the label, the value for diagram, the height of a layout item, select "
+"some features, create virtual field, ..."
+msgstr ""
+"레이어 데이터 및 사전 생성된 또는 사용자가 정의한 함수를 기반으로, **표현식** 은 도형 스타일, 라벨의 내용 또는 위치, 도표의 "
+"값, 조판기 항목의 높이 등을 동적으로 변경하고, 피처를 선택하고, 가상 필드 등을 생성하기 위해 속성값, 도형 및 변수를 처리할 수 "
+"있는 강력한 방법을 제공합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:21
+msgid ""
+"A list of the default functions and variables for writing expressions can be"
+" found at :ref:`functions_list`, with detailed information and examples."
+msgstr ""
+":ref:`functions_list` 에서 표현식 작성을 위한 기본 함수와 변수 목록을 자세한 정보 및 예시와 함께 찾아볼 수 "
+"있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:27
+msgid "The Expression string builder"
+msgstr "표현식 문자열 작성기"
+
+#: ../../docs/user_manual/expressions/expression.rst:29
+msgid ""
+"Main dialog to build expressions, the :guilabel:`Expression string builder` "
+"is available from many parts in QGIS and, can particularly be accessed when:"
+msgstr ""
+":guilabel:`Expression string builder` 는 표현식을 생성하기 위한 주 대화창으로, QGIS의 여러 부분에서 "
+"이용할 수 있는데 특히 다음과 같은 경우에 접근할 수 있습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:32
+msgid "clicking the |expression| button;"
+msgstr "|expression| 버튼을 클릭하는 경우"
+
+#: ../../docs/user_manual/expressions/expression.rst:442
+msgid "expression"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:33
+msgid ""
+":ref:`selecting features <sec_selection>` with the |expressionSelect| "
+":sup:`Select By Expression...` tool;"
+msgstr ""
+"|expressionSelect| :sup:`Select By Expression...` 도구로 :ref:`피처를 선택 "
+"<sec_selection>` 하는 경우"
+
+#: ../../docs/user_manual/expressions/expression.rst:444
+msgid "expressionSelect"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:35
+msgid ""
+":ref:`editing attributes <calculate_fields_values>` with e.g. the "
+"|calculateField| :sup:`Field calculator` tool;"
+msgstr ""
+"|calculateField| :sup:`Field calculator` 도구 등으로 :ref:`속성을 편집 "
+"<calculate_fields_values>` 하는 경우"
+
+#: ../../docs/user_manual/expressions/expression.rst:432
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/user_manual/expressions/expression.rst:37
+msgid ""
+"manipulating symbology, label or layout item parameters with the "
+"|dataDefine| :sup:`Data defined override` tool (see :ref:`data_defined`);"
+msgstr ""
+"|dataDefine| :sup:`Data defined override` 도구로 심볼, 라벨 또는 조판기 항목 파라미터를 처리하는 경우"
+" (:ref:`data_defined` 참조)"
+
+#: ../../docs/user_manual/expressions/expression.rst:436
+msgid "dataDefine"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:39
+msgid ""
+"building a :ref:`geometry generator <geometry_generator_symbol>` symbol "
+"layer;"
+msgstr ":ref:`도형 생성기 <geometry_generator_symbol>` 심볼 레이어를 생성하는 경우"
+
+#: ../../docs/user_manual/expressions/expression.rst:40
+msgid "doing some :ref:`geoprocessing <label_processing>`."
+msgstr ":ref:`지리 정보를 처리 <label_processing>` 하는 경우"
+
+#: ../../docs/user_manual/expressions/expression.rst:42
+msgid "The Expression builder dialog offers access to the:"
+msgstr "표현식 작성기 대화창에서 다음 탭들을 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:44
+msgid ""
+":ref:`Expression tab <functions_list>` which, thanks to a list of predefined"
+" functions, helps to write and check the expression to use;"
+msgstr ""
+":ref:`표현식 탭 <functions_list>`: 사전 정의 함수 목록을 이용해서 사용할 표현식을 작성하고 확인할 수 있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:46
+msgid ""
+":ref:`Function Editor tab <function_editor>` which helps to extend the list "
+"of functions by creating custom ones."
+msgstr ":ref:`함수 편집기 탭 <function_editor>`: 사용자 지정 함수를 생성해서 함수 목록을 확장할 수 있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:50
+msgid "The Interface"
+msgstr "인터페이스"
+
+#: ../../docs/user_manual/expressions/expression.rst:52
+msgid ""
+"The :guilabel:`Expression` tab provides the main interface to write "
+"expressions using functions, layer fields and values. It contains the "
+"following widgets:"
+msgstr ""
+":guilabel:`Expression` 탭은 함수, 레이어 필드 및 값을 이용해서 표현식을 작성할 수 있는 주 인터페이스를 제공합니다."
+" 이 탭에 다음 작업을 할 수 있는 위젯들이 있습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:61
+msgid "The Expression tab"
+msgstr "표현식 탭"
+
+#: ../../docs/user_manual/expressions/expression.rst:63
+msgid ""
+"An expression editor area for typing or pasting expressions. Autocompletion "
+"is available to speed expression writing:"
+msgstr ""
+"표현식을 입력하거나 붙여넣을 수 있는 표현식 편집기 영역이 있습니다. 표현식 작성 속도를 향상시키기 위해 자동완성 기능을 사용할 수 "
+"있습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:66
+msgid ""
+"Corresponding variables, function names and field names to the input text "
+"are shown below: use the :kbd:`Up` and :kbd:`Down` arrows to browse the "
+"items and press :kbd:`Tab` to insert in the expression or simply click on "
+"the wished item."
+msgstr ""
+"입력 텍스트에 대응하는 변수, 함수명 및 필드명을 아래쪽에 표시합니다. :kbd:`Up` 및 :kbd:`Down` 화살표를 사용해서 "
+"항목을 탐색한 다음 :kbd:`Tab` 을 누르거나 원하는 항목을 클릭하기만 해도 표현식에 삽입할 수 있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:70
+msgid "Function parameters are shown while filling them."
+msgstr "파라미터 입력 시 함수 파라미터가 표시됩니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:72
+msgid ""
+"QGIS also checks the expression rightness and highlights all the errors "
+"using:"
+msgstr "또한 QGIS는 표현식이 올바른지 점검하고 다음을 사용해서 모든 오류를 강조합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:74
+msgid "*Underline*: for unknown functions, wrong or invalid arguments;"
+msgstr "*밑줄(Underline)*: 알 수 없는 함수, 틀렸거나 유효하지 않은 인수(argument)를 표시합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:75
+msgid ""
+"*Marker*: for every other error (eg, missing parenthesis, unexpected "
+"character) at a single location."
+msgstr "*마커(Marker)*: 단일 위치에 있는 다른 모든 오류를 (예를 들어 빠진 괄호, 예상 밖의 문자 등을) 표시합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:78
+msgid "**Document your expression with comments**"
+msgstr "**사용자 표현식을 주석으로 문서화**"
+
+#: ../../docs/user_manual/expressions/expression.rst:80
+msgid ""
+"When using complex expression, it is good practice to add text either as a "
+"multiline comment or inline comments to help you remember."
+msgstr ""
+"복잡 표현식을 사용할 때, 사용자가 기억하기 쉽도록 텍스트를 여러 줄 또는 인라인(inline) 주석 가운데 하나로 추가하는 편이 "
+"좋습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:109
+msgid "Above the expression editor, a set of tools helps you:"
+msgstr "표현식 편집기 위에 있는 도구 모음을 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:111
+msgid "|fileNew|:sup:`Clear the expression editor`"
+msgstr "|fileNew|:sup:`Clear the expression editor`: 표현식 편집기 초기화"
+
+#: ../../docs/user_manual/expressions/expression.rst:446
+msgid "fileNew"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:112
+msgid "Create and manage :ref:`user expressions <user_expressions_functions>`"
+msgstr ":ref:`사용자 표현식 <user_expressions_functions>` 생성 및 관리"
+
+#: ../../docs/user_manual/expressions/expression.rst:114
+msgid "Under the expression editor, you find:"
+msgstr "표현식 편집기 아래에는:"
+
+#: ../../docs/user_manual/expressions/expression.rst:116
+msgid "A set of basic operators to help you build the expression"
+msgstr "표현식 작성에 도움이 되는 기본 연산자 모음이 있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:117
+msgid ""
+"An indication of the expected format of output when you are data-defining "
+"feature properties"
+msgstr "피처 속성을 데이터로 정의하는 경우 산출물의 예상 포맷을 알려줍니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:119
+msgid ""
+"A live :guilabel:`Output preview` of the expression (up to 60 characters), "
+"evaluated on the first feature of the Layer by default. To view output "
+"preview text exceeding 60 characters, you can hover your cursor over the "
+"text to display a tooltip pop-up containing the entire output preview. To "
+"copy the output preview text onto your clipboard, right-click on the output "
+"preview text and select |editCopy| :guilabel:`Copy Expression Value`."
+msgstr ""
+":guilabel:`Output preview`: 기본적으로, 표현식이 레이어의 첫 번째 피처를 평가한 산출물의 미리보기를 (최대 "
+"60글자까지) 실시간으로 표시합니다. 60글자를 초과하는 산출물 미리보기 텍스트를 보려면 마우스 커서를 텍스트 위로 가져가십시오. 산출물"
+" 미리보기를 전부 담은 툴팁이 뜰 것입니다. 클립보드에 산출물 미리보기 텍스트를 복사하려면, 산출물 미리보기 텍스트를 오른쪽 클릭한 다음"
+" |editCopy| :guilabel:`Copy Expression Value` 를 선택하면 됩니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:440
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:126
+msgid ""
+"You can browse and evaluate other features of the layer using the "
+":guilabel:`Feature` combobox (the values are taken from the :ref:`display "
+"name <maptips>` property of the layer)."
+msgstr ""
+":guilabel:`Feature` 콤보박스를 이용하면 레이어의 다른 피처를 탐색해서 미리보기를 구할 수 있습니다. (콤보박스에 표시되는"
+" 값은 레이어의 :ref:`표시명 <maptips>` 속성에서 가져옵니다.)"
+
+#: ../../docs/user_manual/expressions/expression.rst:130
+msgid ""
+"In case of error, it indicates it and you can access the details with the "
+"provided hyperlink."
+msgstr "오류가 발생하는 경우, 이를 알려주는 하이퍼링크를 통해 오류의 자세한 내용을 볼 수 있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:133
+msgid ""
+"A function selector displays the list of functions, variables, fields... "
+"organized in groups. A search box is available to filter the list and "
+"quickly find a particular function or field. Double-clicking an item adds it"
+" to the expression editor."
+msgstr ""
+"함수 선택키는 그룹으로 정리된 함수, 변수, 필드 등등의 목록을 표시합니다. 목록을 필터링하는 검색란을 통해 특정 함수 또는 필드를 빨리"
+" 찾을 수 있습니다. 항목을 더블클릭하면 표현식 편집기에 해당 항목을 추가합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:137
+msgid ""
+"A help panel displays help for each selected item in the function selector."
+msgstr "도움말 패널이 함수 선택기에서 선택한 함수 별로 도움말을 표시합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:141
+msgid ""
+"Press :kbd:`Ctrl+Click` when hovering a function name in an expression to "
+"automatically display its help in the dialog."
+msgstr "표현식에 있는 함수명을 :kbd:`Ctrl+Click` 하면 자동적으로 대화창에 도움말을 표시합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:144
+msgid ""
+"A field's values widget shown when a field is selected in the function "
+"selector helps to fetch features attributes:"
+msgstr "함수 선택기에서 필드를 선택하면 나타나는 필드의 값 위젯을 통해 다음과 같은 피처 속성을 가져올 수 있습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:147
+msgid "Look for a particular field value"
+msgstr "특정 필드 값 탐색"
+
+#: ../../docs/user_manual/expressions/expression.rst:148
+msgid ""
+"Display the list of :guilabel:`All Unique` or :guilabel:`10 Samples` values."
+" Also available from right-click."
+msgstr ""
+":guilabel:`All Unique` 또는 :guilabel:`10 Samples` 값 목록을 표시. 오른쪽 클릭으로도 표시할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:151
+msgid ""
+"When the field is mapped with another layer or a set of values, i.e. if the "
+":ref:`field widget <edit_widgets>` is of *RelationReference*, "
+"*ValueRelation* or *ValueMap* type, it's possible to list all the values of "
+"the mapped field (from the referenced layer, table or list). Moreover, you "
+"can filter this list to |checkbox| :guilabel:`Only show values in use` in "
+"the current field."
+msgstr ""
+"필드가 또다른 레이어나 값 모음과 매핑된 경우, 예를 들어 :ref:`필드 위젯 <edit_widgets>` 이 "
+"*RelationReference*, *ValueRelation* 또는 *ValueMap* 유형인 경우 (참조된 레이어, 테이블 또는 "
+"목록으로부터) 매핑된 필드의 모든 값을 목록화할 수 있습니다. 여기에 더해, |checkbox| :guilabel:`Only show "
+"values in use` 옵션을 체크하면 이 목록을 현재 필드에서 사용중인 값만 표시하도록 필터링할 수 있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:434
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/expressions/expression.rst:157
+msgid ""
+"Double-clicking a field value in the widget adds it to the expression "
+"editor."
+msgstr "위젯에 있는 필드 값을 더블 클릭하면 표현식 편집기에 해당 값을 추가합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:161
+msgid ""
+"The right panel, showing functions help or field values, can be collapsed "
+"(invisible) in the dialog. Press the :guilabel:`Show Values` or "
+":guilabel:`Show Help` button to get it back."
+msgstr ""
+"대화창에서 함수 도움말이나 필드값을 표시하는 오른쪽 패널을 접을 수 (보이지 않게 할 수) 있습니다. 이 패널을 다시 펼치려면 "
+":guilabel:`Show Values` 또는 :guilabel:`Show Help` 버튼을 클릭하세요."
+
+#: ../../docs/user_manual/expressions/expression.rst:167
+msgid "Writing an expression"
+msgstr "표현식 작성하기"
+
+#: ../../docs/user_manual/expressions/expression.rst:169
+msgid ""
+"QGIS expressions are used to select features or set values. Writing an "
+"expression in QGIS follows some rules:"
+msgstr "QGIS 표현식은 피처를 선택하거나 값을 설정하는 데 쓰입니다. QGIS에서 표현식을 작성하려면 몇몇 규칙을 따라야 합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:172
+msgid ""
+"**The dialog defines the context**: if you are used to SQL, you probably "
+"know queries of the type *select features from layer where condition* or "
+"*update layer set field = new_value where condition*. A QGIS expression also"
+" needs all these information but the tool you use to open the expression "
+"builder dialog provides parts of them. For example, giving a layer "
+"(``buildings``) with a field (``height``):"
+msgstr ""
+"**대화창이 맥락을 정의한다**: 사용자가 SQL에 익숙하다면, *select features from layer where "
+"condition* 또는 *update layer set field = new_value where condition* 유형의 쿼리를 "
+"알고 있을 것입니다. QGIS 표현식도 이런 모든 정보를 필요로 하지만 사용자가 표현식 작성기 대화창을 열기 위해 사용하는 도구가 이 "
+"정보의 일부를 제공합니다. 예를 들어, ``height`` 필드를 가진 ``buildings`` 레이어를 지정한다고 할 때:"
+
+#: ../../docs/user_manual/expressions/expression.rst:179
+msgid ""
+"pressing the |expressionSelect|:sup:`Select by expression` tool means that "
+"you want to \"select features from buildings\". The **condition** is the "
+"only information you need to provide in the expression text widget, e.g. "
+"type ``\"height\" > 20`` to select buildings that are higher than 20."
+msgstr ""
+"|expressionSelect|:sup:`Select by expression` 도구를 클릭한다는 것은 \"건물 레이어에서 피처를 "
+"선택\" 하려 한다는 뜻입니다. 사용자가 표현식 텍스트 위젯에 입력해야 하는 정보는 **조건** 뿐입니다. 예를 들면 높이가 20을 "
+"초과하는 건물을 선택하려면 ``\"height\" > 20`` 이라고 입력하면 됩니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:183
+msgid ""
+"with this selection made, pressing the |calculateField| :sup:`Field "
+"calculator` button and choosing \"height\" as :guilabel:`Update existing "
+"field`, you already provide the command \"update buildings set height = ??? "
+"where height > 20\". The only remaining bits you have to provide in this "
+"case is the **new value**, e.g. just enter ``50`` in the expression editor "
+"textbox to set the height of the previously selected buildings."
+msgstr ""
+"이렇게 선택 집합을 만든 다음, |calculateField| :sup:`Field calculator` 버튼을 누르고 "
+":guilabel:`Update existing field` 에 \"height\"를 선택하면 이미 \"update buildings "
+"set height = ??? where height > 20\" 명령어를 지정한 것입니다. 이 경우 사용자가 지정해야 하는 나머지 "
+"부분은 **new value** 뿐입니다. 예를 들어 표현식 편집기 텍스트란에 ``50`` 을 입력해서 이전에 선택했던 건물의 높이를 "
+"설정하십시오."
+
+#: ../../docs/user_manual/expressions/expression.rst:190
+msgid ""
+"**Pay attention to quotes**: single quotes return a literal, so a text "
+"placed between single quotes (``'145'``) is interpreted as a string. Double "
+"quotes will give you the value of that text so use them for fields "
+"(``\"myfield\"``). Fields can also be used without quotes (``myfield``). No "
+"quotes for numbers (``3.16``)."
+msgstr ""
+"**따옴표에 주의하라**: 작은따옴표는 문자 그대로 반환하기 때문에, 작은따옴표 사이에 있는 텍스트는 문자열로 (``'145'``) "
+"해석됩니다. 큰따옴표는 해당 텍스트의 값을 반환하므로 필드 용으로 (``\"myfield\"``) 사용하십시오. 필드는 따옴표 없이도 "
+"(``myfield``) 사용할 수 있습니다. 숫자는 따옴표를 사용하지 않습니다(``3.16``)."
+
+#: ../../docs/user_manual/expressions/expression.rst:196
+msgid "Functions normally take as argument a string for field name. Do::"
+msgstr "필드명으로 보통 문자열을 인자로 받는 함수에서는 다음과 같이 입력하고:"
+
+#: ../../docs/user_manual/expressions/expression.rst:201
+msgid "And not::"
+msgstr "다음처럼 입력하면 안 됩니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:211
+msgid "**Use named parameters to ease expression reading**"
+msgstr "**표현식을 읽기 쉽게 하려면 명명된 파라미터를 이용**"
+
+#: ../../docs/user_manual/expressions/expression.rst:213
+msgid ""
+"Some functions require many parameters to be set. The expression engine "
+"supports the use of named parameters. This means that instead of writing the"
+" cryptic expression ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, "
+"value:=2, max:=9)``. This also allows arguments to be switched, e.g. "
+"``clamp( value:=2, max:=9, min:=1)``. Using named parameters helps clarify "
+"what the arguments for an expression function refer to, which is helpful "
+"when you are trying to interpret an expression later!"
+msgstr ""
+"어떤 함수들은 설정하는 데 여러 파라미터가 필요합니다. 표현식 엔진은 명명 파라미터를 지원하고 있습니다. 즉 암호 같은 표현식 "
+"``clamp(1, 2, 9)`` 을 작성하는 대신, ``clamp(min:=1, value:=2, max:=9)`` 같은 표현식을 "
+"사용할 수 있다는 뜻입니다. 이렇게 하면 인자들도 ``clamp(value:=2, max:=9, min:=1)`` 처럼 위치를 바꿀 수 "
+"있습니다. 명명 파라미터를 이용하면 표현식 함수의 인자들이 어떤 의미인지 명확해집니다. 시간이 지난 뒤에 표현식을 해석하려 할 때 "
+"유용하겠죠!"
+
+#: ../../docs/user_manual/expressions/expression.rst:221
+msgid "Some use cases of expressions"
+msgstr "몇몇 표현식 용례"
+
+#: ../../docs/user_manual/expressions/expression.rst:223
+msgid ""
+"From the Field Calculator, calculate a \"pop_density\" field using the "
+"existing \"total_pop\" and \"area_km2\" fields::"
+msgstr "필드 계산기에서 기존 \"total_pop\"과 \"area_km2\" 필드를 이용, \"pop_density\" 필드를 계산합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:228
+msgid "Label or categorize features based on their area::"
+msgstr "피처의 면적에 따라 피처에 라벨을 추가하거나 범주화합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:232
+msgid ""
+"Update the field \"density_level\" with categories according to the "
+"\"pop_density\" values::"
+msgstr "\"pop_density\" 값에 따른 범주로 \"density_level\" 필드를 업데이트합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:239
+msgid ""
+"Apply a categorized style to all the features according to whether their "
+"average house price is smaller or higher than 10000€ per square metre::"
+msgstr "평균 집값이 제곱미터 당 1만 유로 이하인지 초과인지를 기준으로 모든 피처에 범주 스타일을 적용합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:244
+msgid ""
+"Using the \"Select By Expression...\" tool, select all the features "
+"representing areas of “High population density” and whose average house "
+"price is higher than 10000€ per square metre::"
+msgstr ""
+":guilabel:`Select By Expression...` 도구를 통해 “High population density” 지역인 동시에"
+" 평균 집값이 제곱미터 당 1만 유로를 초과하는 지역을 나타내는 모든 피처를 선택합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:250
+msgid ""
+"The previous expression could also be used to define which features to label"
+" or show on the map."
+msgstr "이런 표현식을 이용해서 어떤 피처에 라벨을 적용할지 또는 맵에 표시할지 정의할 수도 있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:253
+msgid ""
+"Create a different symbol (type) for the layer, using the geometry "
+"generator::"
+msgstr "도형 생성기를 통해 레이어 별로 서로 다른 (유형의) 심볼을 생성합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:257
+msgid ""
+"Given a point feature, generate a closed line (using ``make_line``) around "
+"its geometry::"
+msgstr "포인트 피처를 지정, 포인트 도형 주위에 닫힌 라인을 (``make_line`` 을 이용해서) 생성합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:270
+msgid ""
+"In a print layout label, display the name of the \"airports\" features that "
+"are within the layout \"Map 1\" item::"
+msgstr "인쇄 조판기 라벨에, 조판 \"Map 1\" 항목 안에 있는 \"airports\" 피처들의 이름을 표시합니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:285
+msgid "Saving Expressions"
+msgstr "표현식 저장하기"
+
+#: ../../docs/user_manual/expressions/expression.rst:287
+msgid ""
+"Using the |fileSave| :sup:`Add current expression to user expressions` "
+"button above the expression editor frame, you can save important expressions"
+" you want to have quick access to. These are available from the **User "
+"expressions** group in the middle panel. They are saved under the :ref:`user"
+" profile <user_profiles>` (:file:`<userprofile>/QGIS/QGIS3.ini` file) and "
+"available in all expression dialogs inside all projects of the current user "
+"profile."
+msgstr ""
+"표현식 편집기 프레임 위에 있는 |fileSave| :sup:`Add current expression to user "
+"expressions` 버튼을 사용해서 사용자가 자주 사용하는 중요한 표현식을 저장할 수 있습니다. 가운데 패널에 있는 **사용자 "
+"표현식** 그룹에서 사용할 수 있습니다. 이 사용자 표현식은 :ref:`사용자 프로파일 <user_profiles>` "
+"(:file:`<userprofile>/QGIS/QGIS3.ini` 파일)에 저장되며 현재 사용자 프로파일의 모든 프로젝트 안에서의 모든"
+" 표현식 대화창에서 사용할 수 있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:448
+msgid "fileSave"
+msgstr "fileSave"
+
+#: ../../docs/user_manual/expressions/expression.rst:294
+msgid ""
+"A set of tools available above the expression editor frame helps you manage "
+"the user expressions:"
+msgstr "표현식 편집기 프레임 위에 있는 도구 모음을 통해 사용자 표현식을 관리할 수 있습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:297
+msgid ""
+"|fileSave|:sup:`Add the current expression to user expressions`: store the "
+"expression in the user profile. A label and a help text can be added for "
+"easy identification."
+msgstr ""
+"|fileSave|:sup:`Add the current expression to user expressions`: 사용자 프로파일에 "
+"표현식을 저장합니다. 더 쉽게 식별하기 위한 라벨과 도움말 텍스트도 추가할 수 있습니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:300
+msgid ""
+"|symbologyEdit| :sup:`Edit selected expression from user expressions`, as "
+"well as their help and label"
+msgstr ""
+"|symbologyEdit| :sup:`Edit selected expression from user expressions`: 사용자 "
+"표현식에서 선택한 표현식은 물론 그 라벨과 도움말을 편집합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:458
+msgid "symbologyEdit"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:302
+msgid ""
+"|deleteSelected| :sup:`Remove selected expression from user expressions`"
+msgstr ""
+"|deleteSelected| :sup:`Remove selected expression from user expressions`: "
+"사용자 표현식에서 선택한 표현식을 제거합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:438
+msgid "deleteSelected"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:303
+msgid ""
+"|sharingImport| :sup:`Import user expressions` from a ``.json`` file into "
+"the active user profile folder"
+msgstr ""
+"|sharingImport| :sup:`Import user expressions`: ``.json`` 파일에서 현재 사용자 프로파일 "
+"폴더로 사용자 표현식을 가져옵니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:452
+msgid "sharingImport"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:305
+msgid ""
+"|sharingExport| :sup:`Export user expressions` as a ``.json`` file; all the "
+"user expressions in the user profile :file:`QGIS3.ini` file are shared"
+msgstr ""
+"|sharingExport| :sup:`Export user expressions`: 사용자 프로파일 :file:`QGIS3.ini` "
+"파일에 있는 모든 사용자 표현식을 ``.json`` 파일로 공유합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:450
+msgid "sharingExport"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:314
+msgid "Function Editor"
+msgstr "함수 편집기"
+
+#: ../../docs/user_manual/expressions/expression.rst:316
+msgid ""
+"With the :guilabel:`Function Editor` tab, you are able to write your own "
+"functions in Python language. This provides a handy and comfortable way to "
+"address particular needs that would not be covered by the predefined "
+"functions."
+msgstr ""
+":guilabel:`Function Editor` 탭에서 사용자 고유의 함수를 파이썬 언어로 작성할 수 있습니다. 이 탭은 미리 정의된 "
+"함수로는 커버할 수 없는 특별한 요구 사항을 쉽고 편하게 처리할 수 있는 방법을 제공합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:325
+msgid "The Function Editor tab"
+msgstr "함수 편집기 탭"
+
+#: ../../docs/user_manual/expressions/expression.rst:327
+msgid "To create a new function:"
+msgstr "새 함수를 생성하려면:"
+
+#: ../../docs/user_manual/expressions/expression.rst:329
+msgid "Press the |symbologyAdd| :sup:`New File` button."
+msgstr "|symbologyAdd| :sup:`New File` 버튼을 누르십시오."
+
+#: ../../docs/user_manual/expressions/expression.rst:456
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/expressions/expression.rst:330
+msgid "Enter a name to use in the form that pops up and press :guilabel:`OK`."
+msgstr "팝업 양식에 사용할 이름을 입력하고 :guilabel:`OK` 를 누르십시오."
+
+#: ../../docs/user_manual/expressions/expression.rst:332
+msgid ""
+"A new item of the name you provide is added in the left panel of the "
+":guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on "
+"QGIS template file and stored in the :file:`/python/expressions` folder "
+"under the active :ref:`user profile <user_profiles>` directory."
+msgstr ""
+"사용자가 지정한 이름을 가진 새 항목이 :guilabel:`Function Editor` 탭의 왼쪽 패널에 추가됩니다. 이 항목은 "
+"QGIS 템플릿 파일 기반 파이썬 :file:`.py` 파일로, 활성화된 :ref:`사용자 프로파일 <user_profiles>` "
+"디렉터리 아래 있는 :file:`/python/expressions` 폴더에 저장됩니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:336
+msgid ""
+"The right panel displays the content of the file: a python script template. "
+"Update the code and its help according to your needs."
+msgstr ""
+"파일의 내용 ─ 파이썬 스크립트 템플릿 ─ 은 오른쪽 패널에 표시됩니다. 사용자의 필요에 따라 코드 및 도움말을 업데이트하십시오."
+
+#: ../../docs/user_manual/expressions/expression.rst:338
+msgid ""
+"Press the |start| :guilabel:`Save and Load Functions` button. The function "
+"you wrote is added to the functions tree in the :guilabel:`Expression` tab, "
+"by default under the ``Custom`` group."
+msgstr ""
+"|start| :guilabel:`Save and Load Functions` 버튼을 누르십시오. "
+":guilabel:`Expression` 탭의 함수 트리에 사용자가 작성한 함수를 추가합니다. 기본적으로 ``Custom`` 그룹 아래 "
+"추가될 것입니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:454
+msgid "start"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:341
+msgid "Enjoy your new function."
+msgstr "사용자의 새 함수를 즐겨보세요."
+
+#: ../../docs/user_manual/expressions/expression.rst:342
+msgid ""
+"If the function requires improvements, enable the :guilabel:`Function "
+"Editor` tab, do the changes and press again the |start| :guilabel:`Save and "
+"Load Functions` button to make them available in the file, hence in any "
+"expression tab."
+msgstr ""
+"함수를 향상시켜야 할 경우, :guilabel:`Function Editor` 탭을 선택해서 수정한 다음 |start| "
+":guilabel:`Save and Load Functions` 을 다시 누르면 파일에서 수정 사항을 사용할 수 있게 됩니다. 즉 어떤 "
+"표현식 탭에서도 사용할 수 있게 됩니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:347
+msgid ""
+"Custom Python functions are stored under the user profile directory, meaning"
+" that at each QGIS startup, it will auto load all the functions defined with"
+" the current user profile. Be aware that new functions are only saved in the"
+" :file:`/python/expressions` folder and not in the project file. If you "
+"share a project that uses one of your custom functions you will need to also"
+" share the :file:`.py` file in the :file:`/python/expressions` folder."
+msgstr ""
+"사용자 지정 파이썬 함수는 사용자 프로파일 디렉터리 아래 저장됩니다. 즉 QGIS를 시작할 때마다, 현재 사용자 프로파일에서 정의된 모든"
+" 함수를 자동적으로 불러올 것입니다. :file:`/python/expressions` 폴더에만 새 함수를 저장하고 프로젝트 파일에는 "
+"저장하지 않는다는 사실을 알아두십시오. 사용자 지정 함수를 이용하는 프로젝트를 공유하는 경우, "
+":file:`/python/expressions` 폴더에 있는 :file:`.py` 파일도 함께 공유해야 합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:354
+msgid "To delete a custom function:"
+msgstr "사용자 지정 함수를 삭제하려면:"
+
+#: ../../docs/user_manual/expressions/expression.rst:356
+msgid "Enable the :guilabel:`Function Editor` tab"
+msgstr ":guilabel:`Function Editor` 탭을 활성화하고"
+
+#: ../../docs/user_manual/expressions/expression.rst:357
+msgid "Select the function in the list"
+msgstr "목록에서 함수를 선택한 다음"
+
+#: ../../docs/user_manual/expressions/expression.rst:358
+msgid ""
+"Press the |symbologyRemove| :sup:`Remove selected function`. The function is"
+" removed from the list and the corresponding ``.py`` file deleted from the "
+"user profile folder."
+msgstr ""
+"|symbologyRemove| :sup:`Remove selected function` 버튼을 누르십시오. 목록에서 선택한 함수를 "
+"제거하고, 사용자 프로파일 폴더에서 해당 함수에 대응하는 ``.py`` 파일도 삭제합니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:460
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:362
+msgid "**Example**"
+msgstr "**예시**"
+
+#: ../../docs/user_manual/expressions/expression.rst:364
+msgid ""
+"Here's a short example on how to create your own ``my_sum`` function that "
+"will operate with two values."
+msgstr "다음은 값 2개를 받아 실행되는 사용자만의 ``my_sum`` 함수를 생성하는 방법에 대한 간단한 예시입니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:385
+msgid "The ``@qgsfunction`` decorator accepts the following arguments:"
+msgstr "``@qgsfunction`` 장식자(decorator)는 다음 인자들을 받습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:387
+msgid ""
+"``args``: the number of arguments. When using the ``args='auto'`` argument "
+"the number of function arguments required will be calculated by the number "
+"of arguments the function has been defined with in Python (minus 2 - "
+"``feature``, and ``parent``). With ``args = -1``, any number of arguments "
+"are accepted."
+msgstr ""
+"``args``: 인자의 개수. ``args='auto'`` 인자를 사용하는 경우 필수 함수 인자의 개수는 파이썬으로 정의된 함수의 인자"
+" 개수(에서 ``feature`` 와 ``parent`` 2를 뺀 개수)로 계산될 것입니다. ``group='Custom'`` 인자는 "
+"표현식 대화창에서 이 함수가 포함될 목록을 나타냅니다. ``args = -1`` 인자는 인자의 개수가 무한대라는 의미입니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:391
+msgid ""
+"The ``group`` argument indicates the group in which the function should be "
+"listed in the Expression dialog."
+msgstr "``group``: 이 인자는 표현식 대화창에서 이 함수가 목록화되어야 할 그룹을 나타냅니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:393
+msgid ""
+"``usesgeometry=True`` if the expression requires access to the features "
+"geometry. By default :const:`False`."
+msgstr ""
+"표현식이 피처 도형에 접근해야 하는 경우 ``usesgeometry=True`` 인자를 추가하면 됩니다. 기본값은 "
+":const:`False` 입니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:395
+msgid ""
+"``handlesnull=True`` if the expression has custom handling for NULL values. "
+"If :const:`False` (default), the result will always be NULL as soon as any "
+"parameter is NULL."
+msgstr ""
+"표현식이 NULL 값에 대해 사용자가 정의한 처리를 하는 경우 ``handlesnull=True`` 인자를 추가하면 됩니다. 기본값인 "
+":const:`False` 를 사용한다면, 파라미터 가운데 하나라도 NULL인 경우 항상 NULL을 산출할 것입니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:398
+msgid ""
+"``referenced_columns=[list]``: An array of attribute names that are required"
+" to the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
+msgstr ""
+"``referenced_columns=[list]``: 함수가 요구하는 속성명 배열입니다. 기본값은 "
+"``[QgsFeatureRequest.ALL_ATTRIBUTES]`` 입니다."
+
+#: ../../docs/user_manual/expressions/expression.rst:401
+msgid "The function itself allows following arguments:"
+msgstr "함수 자체는 다음 인자들을 받습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:403
+msgid ""
+"any number and type of parameters you want to pass to your function, set "
+"before the following arguments."
+msgstr "사용자가 함수에 전송하고자 하는 파라미터가 몇 개든 어떤 유형이든, 다음 인자들보다 먼저 설정하십시오."
+
+#: ../../docs/user_manual/expressions/expression.rst:405
+msgid "``feature``: the current feature"
+msgstr "``feature``: 현재 피처"
+
+#: ../../docs/user_manual/expressions/expression.rst:406
+msgid ""
+"``parent``: the :class:`QgsExpression <qgis.core.QgsExpression>` object"
+msgstr "``parent``: :class:`QgsExpression <qgis.core.QgsExpression>` 객체"
+
+#: ../../docs/user_manual/expressions/expression.rst:407
+msgid ""
+"``context``: If there is an argument called ``context`` found at the last "
+"position, this variable will contain a :class:`QgsExpressionContext "
+"<qgis.core.QgsExpressionContext>` object, that gives access to various "
+"additional information like expression variables. E.g. ``context.variable( "
+"'layer_id' )``"
+msgstr ""
+"``context``: 이 인자가 마지막 위치에 존재하는 경우 :class:`QgsExpressionContext "
+"<qgis.core.QgsExpressionContext>` 객체를 담고 있을 것입니다. 이 객체는 표현식 변수 같은 다양한 추가 정보에"
+" 접근할 수 있게 해줍니다. 예를 들어 ``context.variable( 'layer_id' )`` 와 같은 방식으로 말이죠."
+
+#: ../../docs/user_manual/expressions/expression.rst:412
+msgid "The previous example function can then be used in expressions:"
+msgstr "이제 이렇게 정의한 예시 함수를 표현식 탭에서 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/expressions/expression.rst:419
+msgid "Custom Function added to the Expression tab"
+msgstr "표현식 탭에 추가된 사용자 지정 함수"
+
+#: ../../docs/user_manual/expressions/expression.rst:422
+msgid ""
+"Further information about creating Python code can be found in the "
+":ref:`PyQGIS-Developer-Cookbook`."
+msgstr ":ref:`PyQGIS-Developer-Cookbook` 에서 파이썬 코드 생성 관련 심화 정보를 찾아볼 수 있습니다."

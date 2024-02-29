@@ -1,0 +1,695 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:2
+msgid "|LS| Creating a New Vector Dataset"
+msgstr "|LS| 新しいベクタデータセットを作成する"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:4
+msgid ""
+"The data that you use has to come from somewhere. For most common "
+"applications, the data exists already; but the more particular and "
+"specialized the project, the less likely it is that the data will already be"
+" available. In such cases, you'll need to create your own new data."
+msgstr ""
+"使用するデータはどこかから持ってこなければなりません。最も一般的なアプリケーションでは、データがすでに存在しています。しかしプロジェクトがより特化し専門的になるほど、データが既に利用可能であるという可能性が低くなります。このような場合は、自身の新しいデータを作成する必要があります。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:9
+msgid "**The goal for this lesson:** To create a new vector dataset."
+msgstr "**このレッスンの目標：** 新しいベクタデータセットを作成します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:12
+msgid "|basic| |FA| The Layer Creation Dialog"
+msgstr "|basic| |FA| レイヤ作成ダイアログ"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:382
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:14
+msgid ""
+"Before you can add new vector data, you need a vector dataset to add it to. "
+"In our case, you'll begin by creating new data entirely, rather than editing"
+" an existing dataset. Therefore, you'll need to define your own new dataset "
+"first."
+msgstr ""
+"新しいベクタデータを追加するには、まずそれを追加するためのベクタデータセットが必要です。現在の場合は、既存のデータセットを編集するのではなく、完全に新しいデータを作成して始めましょう。それゆえ、まず自分自身の新しいデータセットを定義する必要があります。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:18
+msgid "Open QGIS and create a new blank project."
+msgstr "QGISを開き新しい無地のプロジェクトを作ります。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:19
+msgid ""
+"Navigate to and click on the menu entry :menuselection:`Layer --> Create "
+"Layer --> New Shapefile Layer`. You'll be presented with the :guilabel:`New "
+"Shapefile Layer` dialog, which will allow you to define a new layer."
+msgstr ""
+"メニューから :menuselection:`レイヤ --> レイヤを作成 --> 新しいシェープファイルレイヤ` "
+"を選択し、クリックします。新しいレイヤを定義するための :guilabel:`新規シェープファイルレイヤ` ダイアログが表示されます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:27
+msgid ""
+"Click :guilabel:`...` for the :guilabel:`File name` field. A save dialog "
+"will appear."
+msgstr ":guilabel:`ファイル名` フィールドの :guilabel:`...` をクリックします。保存ダイアログが現れます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:29
+msgid "Navigate to the :file:`exercise_data` directory."
+msgstr ":file:`exercise_data` ディレクトリに移動します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:30
+msgid "Save your new layer as :file:`school_property.shp`."
+msgstr "新しいレイヤを :file:`school_property.shp` として保存します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:32
+msgid ""
+"It's important to decide which kind of dataset you want at this stage. Each "
+"different vector layer type is \"built differently\" in the background, so "
+"once you've created the layer, you can't change its type."
+msgstr ""
+"この段階で欲しいデータセットの種類を決定することが重要です。それぞれの異なるベクタレイヤタイプは、バックグラウンドで「別々に構築」されているので、一度レイヤを作成したらそのタイプは変更できません。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:36
+msgid ""
+"For the next exercise, we're going to create new features which describe "
+"areas. For such features, you'll need to create a polygon dataset."
+msgstr "次の練習では、区域を表す新しい地物を作成します。このような地物には、ポリゴンデータセットを作成する必要があります。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:39
+msgid ""
+"For :guilabel:`Geometry Type`, select :guilabel:`Polygon` from the drop down"
+" menu:"
+msgstr ":guilabel:`ジオメトリタイプ` ではドロップダウンメニューから :guilabel:`ポリゴン` を選びます："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:44
+msgid ""
+"This has no impact on the rest of the dialog, but it will cause the correct "
+"type of geometry to be used when the vector dataset is created."
+msgstr ""
+"これは、ダイアログの残りの部分には影響しませんが、それは、ベクタデータセットが作成されたときにジオメトリの正しいタイプが使用されるようになります。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:47
+msgid ""
+"The next field allows you to specify the Coordinate Reference System, or "
+"CRS. CRS is a method of associating numerical coordinates with a position on"
+" the surface of the Earth. See the User Manual on :ref:`Working with "
+"Projections <label_projections>` to learn more."
+msgstr ""
+"次のフィールドでは、座標参照系、またはCRS、を指定します。CRS は数値座標と地球表面の位置とを関連付ける方法です。詳しくはユーザーズマニュアルの "
+":ref:`投影法の利用方法` を参照してください。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:53
+msgid ""
+"For this example we will use the default CRS associated with this project, "
+"which is WGS84."
+msgstr "この例では、プロジェクトに関連付けられた既定のCRSであるWGS84を使います。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:59
+msgid ""
+"Next there is a collection of fields grouped under :guilabel:`New Field`. By"
+" default, a new layer has only one attribute, the ``id`` field (which you "
+"should see in the :guilabel:`Fields list`) below. However, in order for the "
+"data you create to be useful, you actually need to say something about the "
+"features you'll be creating in this new layer. For our current purposes, it "
+"will be enough to add one field called ``name`` that will hold ``Text data``"
+" and will be limited to text length of ``80`` characters."
+msgstr ""
+"次に、 :guilabel:`新規フィールド` の下にグループ化されたフィールドのコレクションがあります。既定では、新しいレイヤは1つの属性、 "
+"``id`` フィールド（下の :guilabel:`フィールドリスト` "
+"に表示されています）しか持ちません。しかし、作成したデータを有効に活用するためには、実際にこの新しいレイヤに作成する地物について、何か記述する必要があります。今のところ、"
+" ``name`` というフィールドをひとつ追加して、テキスト長を ``80`` 文字に制限された ``テキストデータ`` "
+"を格納することで十分でしょう。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:67
+msgid ""
+"Replicate the setup below, then click the :guilabel:`Add to Fields List` "
+"button:"
+msgstr "以下の設定を再現し、:guilabel:`フィールドリストに追加` ボタンをクリックします："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:72
+msgid "Check that your dialog now looks like this:"
+msgstr "ダイアログが次のようになることを確認します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:77
+msgid "Click :guilabel:`OK`"
+msgstr ":guilabel:`OK` をクリックします"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:79
+msgid "The new layer should appear in your :guilabel:`Layers` panel."
+msgstr "新しいレイヤが :guilabel:`レイヤ` パネルに表示されるはずです。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:84
+msgid "|basic| |FA| Data Sources"
+msgstr "|basic| |FA| データソース"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:86
+msgid ""
+"When you create new data, it obviously has to be about objects that really "
+"exist on the ground. Therefore, you'll need to get your information from "
+"somewhere."
+msgstr ""
+"新しいデータを作成するとき、それは明らかに地上に現実に存在するオブジェクトに関するものである必要があります。そのため、どこかから情報を取得する必要があります。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:90
+msgid ""
+"There are many different ways to obtain data about objects. For example, you"
+" could use a GPS to capture points in the real world, then import the data "
+"into QGIS afterwards. Or you could survey points using a theodolite, and "
+"enter the coordinates manually to create new features. Or you could use the "
+"digitizing process to trace objects from remote sensing data, such as "
+"satellite imagery or aerial photography."
+msgstr ""
+"オブジェクトに関するデータを取得するにはさまざまな方法があります。たとえば、GPSを使用して現実の世界でのポイントをキャプチャし、それからQGISにデータをインポートできます。あるいは、セオドライトを使用してポイントを調査し、新しい地物を作成するために、手動で座標を入力できます。あるいは、デジタル化プロセスを使用して、衛星画像や航空写真などのリモートセンシングデータからオブジェクトをトレースできます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:97
+msgid ""
+"For our example, you'll be using the digitizing approach. Sample raster "
+"datasets are provided, so you'll need to import them as necessary."
+msgstr ""
+"この例では、デジタイズのアプローチを使用します。サンプルラスタデータセットが提供されているので、必要に応じてそれらをインポートする必要があります。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:100
+msgid "Click on |dataSourceManager| :sup:`Data Source Manager` button."
+msgstr "|dataSourceManager| :sup:`データソースマネージャ` ボタンをクリックします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:387
+msgid "dataSourceManager"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:101
+msgid "Select |raster| :guilabel:`Raster` on the left side."
+msgstr "左にある |raster| :guilabel:`ラスタ` を選びます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:390
+msgid "raster"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:102
+msgid "In the :guilabel:`Source` panel, click on the :guilabel:`...` button:"
+msgstr ":guilabel:`ソース` パネルにある :guilabel:`...` ボタンをクリックします:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:103
+msgid "Navigate to :file:`exercise_data/raster/`."
+msgstr ":file:`exercise_data/raster/` に移動します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:104
+msgid "Select the file :file:`3420C_2010_327_RGB_LATLNG.tif`."
+msgstr "ファイル :file:`3420C_2010_327_RGB_LATLNG.tif` を選びます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:105
+msgid "Click :guilabel:`Open` to close the dialogue window."
+msgstr ":guilabel:`開く` をクリックしてダイアログウィンドウを閉じます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:110
+msgid ""
+"Click :guilabel:`Add` and :guilabel:`Close`. An image will load into your "
+"map."
+msgstr ":guilabel:`追加` と :guilabel:`閉じる` をクリックします。画像が地図に読み込まれます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:115
+msgid ""
+"If you don't see an aerial image appear, select the new layer, right click, "
+"and choose :guilabel:`Zoom to Layer` in the context menu."
+msgstr ""
+"航空写真が表示されない場合は、新規レイヤを選択して右クリックし、コンテキストメニューから :guilabel:`レイヤの領域にズーム` "
+"を選択してください。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:121
+msgid ""
+"Click on the |zoomIn| :sup:`Zoom In` button, and zoom to the area "
+"highlighted in blue below:"
+msgstr "|zoomIn| :sup:`拡大` ボタンをクリックし、下の青くハイライトされている部分にズームインします："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:401
+msgid "zoomIn"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:127
+msgid "Now you are ready to digitize these three fields:"
+msgstr "これでこの三つの運動場をデジタイズする準備ができました："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:132
+msgid ""
+"Before starting to digitize, let's move the ``school_property`` layer above "
+"the aerial image."
+msgstr "デジタイズする前に、 ``school_property`` レイヤを空中写真の上に移しましょう。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:134
+msgid ""
+"Select ``school_property`` layer in the :guilabel:`Layers` pane and drag it "
+"to the top."
+msgstr ":guilabel:`レイヤ` ペーンにある ``school_property`` レイヤを選び、一番上にドラッグします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:139
+msgid ""
+"In order to begin digitizing, you'll need to enter **edit mode**. GIS "
+"software commonly requires this to prevent you from accidentally editing or "
+"deleting important data. Edit mode is switched on or off individually for "
+"each layer."
+msgstr ""
+"デジタイズを開始するためには、 **編集モード** "
+"に入る必要があります。GISソフトウェアでは一般的に、重要なデータを誤って編集したり削除することを防ぐために、これが必要とされます。編集モードは、レイヤごとに個別にオンまたはオフに切り替えられます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:143
+msgid "To enter edit mode for the ``school_property`` layer:"
+msgstr "``school_property`` レイヤで編集モードに入るには:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:145
+msgid ""
+"Click on the ``school_property`` layer in the :guilabel:`Layers` panel to "
+"select it."
+msgstr ":guilabel:`レイヤ` パネルで ``school_property`` レイヤをクリックして選択します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:146
+msgid "Click on the |toggleEditing| :sup:`Toggle Editing` button."
+msgstr "|toggleEditing| :sup:`編集モード切替` ボタンをクリックします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:395
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:148
+msgid ""
+"If you can't find this button, check that the :guilabel:`Digitizing` toolbar"
+" is enabled. There should be a check mark next to the :menuselection:`View "
+"--> Toolbars --> Digitizing` menu entry."
+msgstr ""
+"このボタンを見つけることができない場合は、 :guilabel:`デジタイズ` ツールバーが有効になっているか確認してください。 "
+":menuselection:`ビュー --> ツールバー --> デジタイジング` メニューエントリ の横にチェックマークがあるはずです。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:152
+msgid ""
+"As soon as you are in edit mode, you'll see that some digitizing tools have "
+"become active:"
+msgstr "編集モードに入るとすぐに、いくつかのデジタイズツールが有効になっているのがわかります："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:155
+msgid "|capturePolygon| :sup:`Capture Polygon`"
+msgstr "|capturePolygon| :sup:`ポリゴン地物を追加`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:385
+msgid "capturePolygon"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:156
+msgid "|vertexToolActiveLayer| :sup:`Vertex Tool`"
+msgstr "|vertexToolActiveLayer| :sup:`頂点ツール`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:399
+msgid "vertexToolActiveLayer"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:158
+msgid ""
+"Other relevant buttons are still inactive, but will become active when we "
+"start interacting with our new data."
+msgstr "他の関連ボタンはまだ無効ですが、新しいデータに触れると有効になります。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:161
+msgid ""
+"Notice that the layer ``school_property`` in the :guilabel:`Layers` panel "
+"now has the pencil icon, indicating that it is in edit mode."
+msgstr ""
+":guilabel:`レイヤ` パネルの ``school_property`` レイヤ "
+"に鉛筆のアイコンが表示され、編集モードになっていることを示していることに注意してください。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:164
+msgid ""
+"Click on the |capturePolygon| :sup:`Capture Polygon` button to begin "
+"digitizing our school fields."
+msgstr "|capturePolygon| :sup:`ポリゴン地物を追加` ボタンをクリックし、学校の運動場のデジタイズを始めます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:167
+msgid ""
+"You'll notice that your mouse cursor has become a crosshair. This allows you"
+" to more accurately place the points you'll be digitizing. Remember that "
+"even when you're using the digitizing tool, you can zoom in and out on your "
+"map by rolling the mouse wheel, and you can pan around by holding down the "
+"mouse wheel and dragging around in the map."
+msgstr ""
+"マウスカーソルが十字になったのがわかると思います。これにより、デジタイズする点をより正確に配置することができます。デジタイズツールを使っているときでも、マウスホイールを回して地図を拡大・縮小したり、マウスホイールを押したまま地図内をドラッグしてパンできることを覚えておいてください。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:173
+msgid "The first feature you'll be digitizing is the |schoolAreaType1|:"
+msgstr "デジタイズしている第1の地物は |schoolAreaType1| です："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:178
+msgid ""
+"Start digitizing by clicking on a point somewhere along the edge of the "
+"field."
+msgstr "運動場の縁のどこかの点でクリックすることでデジタイズを開始します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:179
+msgid ""
+"Place more points by clicking further along the edge, until the shape you're"
+" drawing completely covers the field."
+msgstr "さらに縁に沿ってクリックして点を置いてゆき、描画している図形が運動場を完全に覆うようにします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:185
+msgid ""
+"After placing your last point, right click to finish drawing the polygon. "
+"This will finalize the feature and show you the :guilabel:`Attributes` "
+"dialog."
+msgstr ""
+"最後の点を配置した後、右クリックしてポリゴンの描画を終了します。これで地物が確定し、 :guilabel:`属性` ダイアログが表示されます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:187
+msgid "Fill in the values as below:"
+msgstr "値を以下のように埋めます:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:192
+msgid "Click :guilabel:`OK`, and you have created a new feature!"
+msgstr ":guilabel:`OK` をクリックすると、新しい地物が完成しました！"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:197
+msgid "In the :guilabel:`Layers` panel select the ``school_property`` layer."
+msgstr ":guilabel:`レイヤ` パネルで ``school_property`` レイヤを選択します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:198
+msgid ""
+"Right click and choose :guilabel:`Open Attribute Table` in the context menu."
+msgstr "右クリックしてコンテキストメニューから :guilabel:`属性テーブルを開く` を選びます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:203
+msgid ""
+"In the table you will see the feature you just added. While in edit mode you"
+" can update the attributes data by double click on the cell you want to "
+"update."
+msgstr "表には、追加したばかりの地物が表示されます。編集モードでは、更新したいセルをダブルクリックすることで、属性データを更新することができます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:210
+msgid "Close the attribute table."
+msgstr "属性テーブルを閉じます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:211
+msgid ""
+"To save the new feature we just created, click on |saveEdits| :sup:`Save "
+"Edits` button."
+msgstr "作成したばかりの新しい地物を保存するには、|saveEdits| :sup:`編集内容の保存` ボタンをクリックします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:392
+msgid "saveEdits"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:213
+msgid ""
+"Remember, if you've made a mistake while digitizing a feature, you can "
+"always edit it after you're done creating it. If you've made a mistake, "
+"continue digitizing until you're done creating the feature as above. Then:"
+msgstr ""
+"地物をデジタイズしているときに間違えた場合、作成が終わった後で常にそれを編集できることを覚えておいてください。間違えた場合は、前述のように地物を作成し終わるまで、デジタイズを継続します。その後："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:217
+msgid "Click on |vertexToolActiveLayer| :sup:`Vertex Tool` button."
+msgstr "|vertexToolActiveLayer| :sup:`頂点ツール` ボタンをクリックします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:218
+msgid ""
+"Hover the mouse over a vertex you want to move and left click on the vertex."
+msgstr "移動したい頂点の上にマウスを置き、左クリックします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:219
+msgid ""
+"Move the mouse to the correct location of the vertex, and left click. This "
+"will move the vertex to the new location."
+msgstr "頂点の正しい位置にマウスを移動し、左クリックします。これにより、頂点が新しい位置に移動します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:227
+msgid ""
+"The same procedure can be used to move a line segment, but you will need to "
+"hover over the midpoint of the line segment."
+msgstr "線分の移動も同じ要領で行えますが、線分の中点にカーソルを合わせる必要があります。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:230
+msgid ""
+"If you want to undo a change, you can press the |undo| :sup:`Undo` button or"
+" :kbd:`Ctrl+Z`."
+msgstr "変更を取り消す場合は、 |undo| :sup:`元に戻す` ボタンか :kbd:`Ctrl+Z` を押します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:397
+msgid "undo"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:232
+msgid ""
+"Remember to save your changes by clicking the |saveEdits| :sup:`Save Edits` "
+"button."
+msgstr "|saveEdits| :sup:`レイヤ編集内容を保存` ボタンをクリックして、変更内容を保存するのを忘れないようにしてください。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:233
+msgid ""
+"When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to"
+" get out of edit mode."
+msgstr "編集が終わったら、|toggleEditing| :sup:`編集モード切替` ボタンをクリックして、編集モードから出ます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:238
+msgid "|basic| |TY| Digitizing Polygons"
+msgstr "|basic| |TY| ポリゴンをデジタイズする"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:240
+msgid ""
+"Digitize the school itself and the upper field. Use this image to assist "
+"you:"
+msgstr "学校自体と上のフィールドをデジタイズします。デジタイズを支援するためにこの画像を使用します："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:245
+msgid "Remember that each new feature needs to have a unique ``id`` value!"
+msgstr "それぞれの新しい地物は、一意な ``id`` 値を持つ必要があることを覚えておきましょう!"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:247
+msgid ""
+"When you're done adding features to a layer, remember to save your edits and"
+" then exit edit mode."
+msgstr "レイヤーに地物を追加し終わったら、編集内容を保存して、編集モードを終了することを忘れないでください。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:250
+msgid ""
+"You can style the fill, outline and label placement and formatting of the "
+"``school_property`` using techniques learnt in earlier lessons."
+msgstr ""
+"以前のレッスンで学んだ技法を使って、``school_property`` の塗りつぶし、輪郭、ラベルの配置や形式の体裁を整えることができます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:256
+msgid "|moderate| |FA| Using Vertex Editor Table"
+msgstr "|moderate| |FA| 頂点編集テーブルを使う"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:389
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:258
+msgid ""
+"Another way to edit a feature is to manually enter the actual coordinate "
+"values for each vertex using the :guilabel:`Vertex Editor` table."
+msgstr "地物を編集するもう一つの方法は、 :guilabel:`頂点編集` テーブルを使って各頂点の実際の座標値を手動で入力することです。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:262
+msgid "Make sure you are in edit mode on layer ``school_property``."
+msgstr "``school_property`` レイヤの編集モードになっていることを確認してください。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:263
+msgid ""
+"If not already activated, click on |vertexToolActiveLayer| :sup:`Vertex "
+"Tool` button."
+msgstr "まだアクティブになっていない場合は、|vertexToolActiveLayer| :sup:`頂点ツール` ボタンをクリックします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:265
+msgid ""
+"Move the mouse over one of the polygon features you created in the "
+"``school_property`` layer and right click on it. This will select the "
+"feature and a :guilabel:`Vertex Editor` pane will appear."
+msgstr ""
+"``school_property`` レイヤに作成したポリゴン地物の上にマウスを移動し、右クリックをします。すると、その地物が選択され、 "
+":guilabel:`頂点エディタ` ペインが表示されます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:272
+msgid ""
+"This table contains the coordinates for the vertices of the feature. Notice "
+"there are seven vertices for this feature, but only six are visually "
+"identified in the map area. Upon closer inspection, one will notice that row"
+" 0 and 6 have identical coordinates. These are the start and end vertices of"
+" the feature geometry, and are required in order to create a closed polygon "
+"feature."
+msgstr ""
+"このテーブルは、その地物の頂点の座標を含んでいます。この地物には7つの頂点がありますが、地図上で確認できるのは6つだけであることに注意してください。よく見ると、0行目と6行目が同じ座標であることに気づくでしょう。これらは地物ジオメトリの始点と終点であり、閉じたポリゴン地物を作成するために必要です。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:280
+msgid ""
+"Click and drag a box over a vertex, or multiple vertices, of the selected "
+"feature."
+msgstr "選択した地物のひとつまたは複数の頂点のうえでボックスをクリック＆ドラッグします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:285
+msgid ""
+"The selected vertices will change to a color blue and the :guilabel:`Vertex "
+"Editor` table will have the corresponding rows highlighted, which contain "
+"the coordinates of the vertices."
+msgstr "選択された頂点の色が青に変わり、頂点の座標を含んでいる :guilabel:`頂点エディタ` テーブルの対応する行がハイライトされます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:292
+msgid ""
+"To update a coordinate, double left click on the cell in the table that you "
+"want to edit and enter the updated value. In this example, the x coordinate "
+"of row ``4`` is updated from ``20.4450`` to ``20.4444``."
+msgstr ""
+"座標を更新するには、編集したいテーブルのセルを左ダブルクリックし、更新した値を入力します。この例では、行 ``4`` の x 座標が "
+"``20.4450`` から ``20.4444`` に更新されます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:300
+msgid ""
+"After entering the updated value, hit the enter key to apply the change. You"
+" will see the vertex move to the new location in the map window."
+msgstr "更新した値を入力したら、エンターキーを押して変更を適用します。マップウィンドウで頂点が新しい位置に移動するのが確認できます。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:302
+msgid ""
+"When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to"
+" get out of edit mode, and save your edits."
+msgstr ""
+"編集が終わったら、 |toggleEditing| :sup:`編集モード切替` ボタンをクリックして編集モードを解除し、編集内容を保存します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:306
+msgid "|basic| |TY| Digitizing Lines"
+msgstr "|basic| |TY| 線をデジタイズする"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:307
+msgid ""
+"We are going to digitize two routes which are not already marked on the "
+"roads layer; one is a path, the other is a track. Our path runs along the "
+"southern edge of the suburb of Railton, starting and ending at marked roads:"
+msgstr ""
+"ここでは、道路レイヤにまだ記されていない2つのルートをデジタル化します。一つは細道、もう一つは小道です。細道はレイルトン郊外の南端を走り、印を付けた道路を起点と終点としています："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:315
+msgid "Our track is a little further to the south:"
+msgstr "小道はさらにもう少し南です:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:320
+msgid ""
+"If the *roads* layer is not yet in your map, then add the :file:`roads` "
+"layer from the GeoPackage file :file:`training-data.gpkg` included in the "
+":file:`exercise_data` folder of the training data you downloaded. You can "
+"read :ref:`load_geopackage` for a how-to."
+msgstr ""
+"*道路* レイヤがまだマップにない場合は、ダウンロードした訓練データの :file:`exercise_data` "
+"フォルダに含まれるGeoPackageファイル :file:`training-data.gpkg` から :file:`roads` "
+"レイヤを追加してください。やり方については :ref:`load_geopackage` を参照してください。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:324
+msgid ""
+"Create a new ESRI Shapefile line dataset called ``routes.shp`` in the "
+":file:`exercise_data` directory, with attributes ``id`` and ``type`` (use "
+"the approach above to guide you.)"
+msgstr ""
+":file:`exercise_data` ディレクトリに ``routes.shp`` という ESRI "
+"シェイプファイルのラインデータセットを新規に作成し、 ``id`` と ``type`` という属性を設定します（上記の方法を参考にしてください）"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:327
+msgid "Activate edit mode on the :guilabel:`routes` layer."
+msgstr ":guilabel:`routes` レイヤで編集モードを有効にします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:328
+msgid ""
+"Since you are working with a line feature, click on the |captureLine| "
+":sup:`Add Line` button to initiate line digitizing mode."
+msgstr ""
+"ライン機能を使用しているので、|captureLine| :sup:`線の地物を追加` ボタンをクリックし、ラインデジタイズモードを開始します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:383
+msgid "captureLine"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:331
+msgid ""
+"One at a time, digitize the path and the track on the ``routes`` layer. Try "
+"to follow the routes as accurately as possible, adding additional points "
+"along corners or turns."
+msgstr ""
+"一度に1つずつ、 ``routes`` "
+"レイヤにある細道と小道をデジタイズします。できるだけ正確にルートをたどるようにし、角やカーブに沿って点を追加します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:334
+msgid "Set the ``type`` attribute value to ``path`` or ``track``."
+msgstr "``type`` 属性の値を ``path`` または ``track`` に設定します。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:335
+msgid ""
+"Use the :guilabel:`Layer Properties` dialog to add styling to your routes. "
+"Feel free to use different styles for paths and tracks."
+msgstr ""
+":guilabel:`レイヤプロパティ` ダイアログを使って、ルートにスタイルを追加します。細道と小道で異なるスタイルを自由に使ってください。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:337
+msgid ""
+"Save your edits and toggle off editing mode by pressing the |toggleEditing| "
+":sup:`Toggle Editing` button."
+msgstr "編集内容を保存し、|toggleEditing| :sup:`編集モードを切り替え` ボタンを押して、編集モードをオフにします。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:340
+msgid "Answer"
+msgstr "答え"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:343
+msgid ""
+"The symbology doesn't matter, but the results should look more or less like "
+"this:"
+msgstr "シンボル体系は重要ではありませんが、結果は大体このようになるはずです："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:351
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:353
+msgid ""
+"Now you know how to create features! This course doesn't cover adding point "
+"features, because that's not really necessary once you've worked with more "
+"complicated features (lines and polygons). It works exactly the same, except"
+" that you only click once where you want the point to be, give it attributes"
+" as usual, and then the feature is created."
+msgstr ""
+"これで地物を作成する方法がわかりましたね！このコースではポイント地物の追加についてカバーしていませんが、より複雑な地物（ラインとポリゴン）で作業してきましたから実際に必要ありません。ポイントを置きたいところを1回クリックし、いつものように属性を与え、その後地物が作成されること以外、まったく同じ動作です。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:359
+msgid ""
+"Knowing how to digitize is important because it's a very common activity in "
+"GIS programs."
+msgstr "デジタイズはGISプログラムでは非常に一般的な活動ですので、方法を知ることは重要です。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:363
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:365
+msgid ""
+"Features in a GIS layer aren't just pictures, but objects in space. For "
+"example, adjacent polygons know where they are in relation to one another. "
+"This is called **topology**. In the next lesson you'll see an example of why"
+" this can be useful."
+msgstr ""
+"GISレイヤーの地物は、単なる画像ではなく、空間内のオブジェクトです。例えば、隣接するポリゴンは、互いの位置関係を知っています。これは、 "
+"**トポロジー** と呼ばれています。次のレッスンでは、これがなぜ便利なのか、その例を見てみましょう。"

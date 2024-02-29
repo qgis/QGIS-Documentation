@@ -1,0 +1,1120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-06 06:24+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:5
+msgid "Configuring external applications"
+msgstr "外部アプリケーションの設定"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:12
+msgid ""
+"The processing framework can be extended using additional applications. "
+"Algorithms that rely on external applications are managed by their own "
+"algorithm providers. Additional providers can be found as separate plugins, "
+"and installed using the QGIS Plugin Manager."
+msgstr ""
+"プロセシングフレームワークは、追加のアプリケーションを使って拡張できます。外部アプリケーションに依存するアルゴリズムは、独自のアルゴリズムプロバイダによって管理されます。追加のプロバイダは個別のプラグインとして見つけることができ、QGISプラグインマネージャを使ってインストールできます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:18
+msgid ""
+"This section will show you how to configure the Processing framework to "
+"include these additional applications, and it will explain some particular "
+"features of the algorithms based on them. Once you have correctly configured"
+" the system, you will be able to execute external algorithms from any "
+"component like the toolbox or the model designer, just like you do with any "
+"other algorithm."
+msgstr ""
+"このセクションでは、これらの追加アプリケーションを含むようにプロセシングフレームワークを設定する方法を示し、それらに基づいたアルゴリズムのいくつかの特別な機能について説明します。一度システムを正しく設定すれば、他のアルゴリズムと同じように、ツールボックスやモデルデザイナーなど、どのコンポーネントからでも外部アルゴリズムを実行することができるようになります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:25
+msgid ""
+"By default, algorithms that rely on an external application not shipped with"
+" QGIS are not enabled. You can enable them in the Processing settings dialog"
+" if they are installed on your system."
+msgstr ""
+"デフォルトでは、QGISに同梱されていない外部アプリケーションに依存するアルゴリズムは有効になっていません。システムにインストールされている場合は、プロセシング設定ダイアログで有効にすることができます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:32
+msgid "A note for Windows users"
+msgstr "Windowsユーザーへの注意点"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:34
+msgid ""
+"If you are not an advanced user and you are running QGIS on Windows, you "
+"might not be interested in reading the rest of this chapter. Make sure you "
+"install QGIS in your system using the standalone installer. That will "
+"automatically install SAGA and GRASS in your system and configure them so "
+"they can be run from QGIS. All the algorithms from these providers will be "
+"ready to be run without needing any further configuration. If installing "
+"with the OSGeo4W application, make sure that you also select SAGA and GRASS "
+"for installation."
+msgstr ""
+"あなたが上級ユーザーでなく、Windows上でQGISを実行している場合、この章の残りを読むことに興味がないかもしれません。スタンドアロンインストーラを使ってQGISをあなたのシステムにインストールしてください。これにより、SAGAとGRASSが自動的にインストールされ、QGISから実行できるように設定されます。これらのプロバイダから提供されるすべてのアルゴリズムは、それ以上の設定を必要とすることなく実行できるようになります。OSGeo4W"
+" アプリケーションを使ってインストールする場合は、SAGA と GRASS を選択してインストールするようにしてください。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:47
+msgid "A note on file formats"
+msgstr "ファイル形式に関する注意点"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:49
+msgid ""
+"When using external software, opening a file in QGIS does not mean that it "
+"can be opened and processed in that other software. In most cases, other "
+"software can read what you have opened in QGIS, but in some cases, that "
+"might not be true. When using databases or uncommon file formats, whether "
+"for raster or vector layers, problems might arise. If that happens, try to "
+"use well-known file formats that you are sure are understood by both "
+"programs, and check the console output (in the log panel) to find out what "
+"is going wrong."
+msgstr ""
+"外部ソフトウェアを使用する場合、QGISでファイルを開いたからといって、そのファイルをその外部ソフトウェアで開いて処理できるわけではありません。ほとんどの場合、QGISで開いたファイルを他のソフトウェアで読み込むことができますが、そうでない場合もあります。ラスタレイヤ、ベクタレイヤを問わず、データベースや一般的でないファイル形式を使用する場合、問題が発生する可能性があります。そのような場合は、両方のプログラムが確実に理解できる、よく知られたファイル形式を使用するようにし、コンソール出力（ログパネル）をチェックして、何が間違っているのかを調べてください。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:59
+msgid ""
+"You might for instance get trouble and not be able to complete your work if "
+"you call an external algorithm with a GRASS raster layers as input. For this"
+" reason, such layers will not appear as available to algorithms."
+msgstr ""
+"例えば、GRASSのラスタレイヤを入力として外部のアルゴリズムを呼び出すと、トラブルが発生し、作業が完了しない可能性があります。このため、そのようなレイヤはアルゴリズムに利用可能なレイヤとして表示されません。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:65
+msgid ""
+"You should, however, not have problems with vector layers, since QGIS "
+"automatically converts from the original file format to one accepted by the "
+"external application before passing the layer to it. This adds extra "
+"processing time, which might be significant for large layers, so do not be "
+"surprised if it takes more time to process a layer from a DB connection than"
+" a layer from a Shapefile format dataset of similar size."
+msgstr ""
+"しかしながら、ベクタレイヤについては問題が起きません。QGIS "
+"はベクタレイヤを外部アプリケーションに渡す前に、元のファイル形式から外部アプリケーションで受け入れられる形式に自動的に変換するためです。これには余分な処理時間が加わり、大きなレイヤで顕著でしょう。ですから、同じようなサイズのShapefile形式のデータセットからのレイヤよりも、DB接続からのレイヤの処理に時間がかかっても驚かないでください。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:73
+msgid ""
+"Providers not using external applications can process any layer that you can"
+" open in QGIS, since they open it for analysis through QGIS."
+msgstr ""
+"外部アプリケーションを使用していないプロバイダはQGISで開けるレイヤはどれも処理できます。なぜならそれらはQGISを通じて分析のためにそれを開いているので。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:76
+msgid ""
+"All raster and vector output formats produced by QGIS can be used as input "
+"layers. Some providers do not support certain formats, but all can export to"
+" common  formats that can later be transformed by QGIS automatically. As for"
+" input layers, if a conversion is needed, that might increase the processing"
+" time."
+msgstr ""
+"QGIS "
+"で生成されるすべてのラスタおよびベクタ出力形式は、入力レイヤとして使用できます。一部のプロバイダは特定の形式をサポートしていませんが、すべてのプロバイダは、後にQGISが自動的に変換できる一般的な形式にエクスポートできます。入力レイヤについては、変換が必要な場合、処理時間が長くなる可能性があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:85
+msgid "A note on vector layer selections"
+msgstr "ベクタレイヤの選択に関する注意点"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:87
+msgid ""
+"External applications may also be made aware of the selections that exist in"
+" vector layers within QGIS. However, that requires rewriting all input "
+"vector layers, just as if they were originally in a format not supported by "
+"the external application. Only when no selection exists, or the *Use only "
+"selected features* option is not enabled in the processing general "
+"configuration, can a layer be directly passed to an external application."
+msgstr ""
+"外部アプリケーションがQGIS内でベクタレイヤに存在する選択を知らされることもできます。しかし、それにはそれらが元から外部アプリケーションでサポートされていない形式であったかのように、すべての入力ベクタレイヤを書き換えることが必要です。選択が存在しないか、"
+" *選択された地物のみを使用* オプションがプロセシングの一般設定で有効になっていない場合にのみ、レイヤは外部アプリケーションに直接渡すことができます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:96
+msgid ""
+"In other cases, exporting only selected features is needed, which causes "
+"longer execution times."
+msgstr "また、選択した地物だけをエクスポートする必要がある場合もあり、その場合は実行時間が長くなります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:104
+msgid "SAGA"
+msgstr "SAGA: System for Automated Geoscientific Analyses、地球科学自動分析システム"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:106
+msgid ""
+"SAGA algorithms can be run from QGIS if SAGA is included with the QGIS "
+"installation."
+msgstr "SAGAがQGISのインストールに含まれている場合、SAGAアルゴリズムをQGISから実行することができます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:109
+msgid ""
+"If you are running Windows, both the stand-alone installer and the OSGeo4W "
+"installer include SAGA."
+msgstr "Windowsを使っているなら、スタンドアロンインストーラーとOSGeo4Wインストーラーの両方にSAGAが含まれています。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:113
+msgid "About SAGA grid system limitations"
+msgstr "SAGAグリッドシステムの制限について"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:115
+msgid ""
+"Most SAGA algorithms that require several input raster layers require them "
+"to have the same grid system. That is, they must cover the same geographic "
+"area and have the same cell size, so their corresponding grids match. When "
+"calling SAGA algorithms from QGIS, you can use any layer, regardless of its "
+"cell size and extent. When multiple raster layers are used as input for a "
+"SAGA algorithm, QGIS resamples them to a common grid system and then passes "
+"them to SAGA (unless the SAGA algorithm can operate with layers from "
+"different grid systems)."
+msgstr ""
+"複数の入力ラスターレイヤーを必要とするほとんどのSAGAアルゴリズムは、それらが同じグリッド系を持つことを必要としています。つまり、それらが同じ地理的領域をカバーして同じセルサイズを持ち、対応するグリッドが一致する必要があります。QGISからSAGAアルゴリズムを呼び出すときは、そのセルサイズと範囲に関係なく、どんなレイヤーも使用できます。複数のラスターレイヤーはSAGAアルゴリズムのための入力として使用される場合、QGISは（SAGAアルゴリズムが異なるグリッド系からのレイヤーで動作できない場合）共通のグリッド系にそれらをリサンプリングした後、SAGAに渡します。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:126
+msgid ""
+"The definition of that common grid system is controlled by the user, and you"
+" will find several parameters in the SAGA group of the settings window to do"
+" so. There are two ways of setting the target grid system:"
+msgstr ""
+"その一般的なグリッド系の定義は、ユーザーによって制御され、そうする設定ウィンドウのSAGAグループ内のいくつかのパラメーターがあります。ターゲットグリッド系を設定する2つの方法があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:131
+msgid ""
+"Setting it manually. You define the extent by setting the values of the "
+"following parameters:"
+msgstr "手動で設定する。次のパラメーターの値を設定することによって範囲を定義します。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:134
+msgid ":guilabel:`Resampling min X`"
+msgstr ":guilabel:`リサンプリング最小X`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:135
+msgid ":guilabel:`Resampling max X`"
+msgstr ":guilabel:`リサンプリング最大X`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:136
+msgid ":guilabel:`Resampling min Y`"
+msgstr ":guilabel:`リサンプリング最小Y`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:137
+msgid ":guilabel:`Resampling max Y`"
+msgstr ":guilabel:`リサンプリング最大Y`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:138
+msgid ":guilabel:`Resampling cellsize`"
+msgstr ":guilabel:`リサンプリングセルサイズ`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:140
+msgid ""
+"Notice that QGIS will resample input layers to that extent, even if they do "
+"not overlap with it."
+msgstr "QGISはその範囲に対して入力レイヤーを、それらがその範囲と重複していない場合でも、再サンプリングすることに注意してください。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:142
+msgid ""
+"Setting it automatically from input layers. To select this option, just "
+"check the :guilabel:`Use min covering grid system for resampling` option. "
+"All the other settings will be ignored and the minimum extent that covers "
+"all the input layers will be used. The cell size of the target layer is the "
+"maximum of all cell sizes of the input layers."
+msgstr ""
+"入力レイヤーから自動的に設定する。このオプションを選択するには、 :guilabel:`リサンプリングにグリッド系の最小カバーを使用` "
+"オプションチェックするだけです。他のすべての設定は無視され、すべての入力レイヤーを最小でカバーする範囲が使用されます。ターゲットレイヤーのセルサイズは、入力レイヤーの全てのセルサイズの最大値です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:150
+msgid ""
+"For algorithms that do not use multiple raster layers, or for those that do "
+"not need a unique input grid system, no resampling is performed before "
+"calling SAGA, and those parameters are not used."
+msgstr ""
+"多重ラスターレイヤーを使用しないあるいは固有の入力グリッドシステムを必要としないアルゴリズムでは、SAGAを呼び出す前にリサンプリングは実行されませんし、これらのパラメーターは使用されません。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:155
+msgid "Limitations for multi-band layers"
+msgstr "マルチバンドレイヤーに関する制限"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:157
+msgid ""
+"Unlike QGIS, SAGA has no support for multi-band layers. If you want to use a"
+" multiband layer (such as an RGB or multispectral image), you first have to "
+"split it into single-banded images. To do so, you can use the 'SAGA/Grid - "
+"Tools/Split RGB image' algorithm (which creates three images from an RGB "
+"image) or the 'SAGA/Grid - Tools/Extract band' algorithm (to extract a "
+"single band)."
+msgstr ""
+"QGISとは異なり、SAGAではマルチバンドレイヤーをサポートしていません。（例えばRGBまたはマルチスペクトル画像のような）マルチバンドレイヤーを使用する場合は、最初にシングルバンド化された画像に分割する必要があります。そうするためには、「SAGA/グリッドツール/RGB画像を分割」アルゴリズム（RGB画像から三つの画像を作成する）や「SAGA"
+" /グリッドツール/バンド抽出」アルゴリズム（単一バンドを抽出する）を使用できます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:165
+msgid "Limitations in cell size"
+msgstr "セルサイズの制限"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:167
+msgid ""
+"SAGA assumes that raster layers have the same cell size in the X and Y axis."
+" If you are working with a layer with different values for horizontal and "
+"vertical cell size, you might get unexpected results. In this case, a "
+"warning will be added to the processing log, indicating that an input layer "
+"might not be suitable to be processed by SAGA."
+msgstr ""
+"SAGAではラスターレイヤーがx軸とy軸において同じセルサイズであることを仮定しています。もし、水平方向と垂直方向でセルサイズが異なる値のレイヤーで作業するならば、予期せぬ結果を得ることになるでしょう。この場合、入力レイヤーがSAGAによって適切に処理されないであろうという警告がプロセスログに加えられることになります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:175
+msgid "Logging"
+msgstr "ログを記録する"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:177
+msgid ""
+"When QGIS calls SAGA, it does so using its command-line interface, thus "
+"passing a set of commands to perform all the required operations. SAGA shows"
+" its progress by writing information to the console, which includes the "
+"percentage of processing already done, along with additional content. This "
+"output is filtered and used to update the progress bar while the algorithm "
+"is running."
+msgstr ""
+"QGISはSAGAを呼び出すと、それはこれにより、すべての必要な操作を実行するためにコマンドのセットを通過する、そのコマンドラインインターフェイスを使用しません。SAGAは、追加のコンテンツと共に、既に行われる処理のパーセンテージを含むコンソールに情報を書き込むことにより、その進捗状況を示しています。この出力はフィルタがかけられ、アルゴリズムの実行中に、プログレスバーを更新するために使用されます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:185
+msgid ""
+"Both the commands sent by QGIS and the additional information printed by "
+"SAGA can be logged along with other processing log messages, and you might "
+"find them useful to track what is going on when QGIS runs a SAGA algorithm. "
+"You will find two settings, namely :guilabel:`Log console output` and "
+":guilabel:`Log execution commands`, to activate that logging mechanism."
+msgstr ""
+"QGISによって送信されたコマンドとSAGAによって出力された追加情報は、他のプロセシングログメッセージと一緒にログに記録することができ、QGISがSAGAアルゴリズムを実行するときに何が起こっているかを追跡するのに便利です。このロギングメカニズムを有効にするための2つの設定、すなわち"
+" :guilabel:`コンソール出力をログに記録する` と :guilabel:`実行コマンドをログに記録する` があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:193
+msgid ""
+"Most other providers that use external applications and call them through "
+"the command-line have similar options, so you will find them as well in "
+"other places in the processing settings list."
+msgstr ""
+"外部アプリケーションを使用し、コマンドラインから呼び出す他のほとんどのプロバイダにも同様のオプションがあるため、プロセシング設定リストの他の場所にも同様のオプションがあります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:201
+msgid "R scripts"
+msgstr "Rスクリプト"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:203
+msgid ""
+"To enable R in Processing you need to install the **Processing R Provider** "
+"plugin and configure R for QGIS."
+msgstr ""
+"プロセシングでRを有効にするには、**Processing R Provider** "
+"プラグインをインストールしてQGIS用にRを設定する必要があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:206
+msgid ""
+"Configuration is done in :menuselection:`Provider --> R` in the "
+":guilabel:`Processing` tab of :menuselection:`Settings --> Options`."
+msgstr ""
+"設定は :menuselection:`設定 --> オプション` の :guilabel:`プロセシング` タブにある "
+":menuselection:`プロバイダ --> R` で行ないます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:210
+msgid ""
+"Depending on your operating system, you may have to use :guilabel:`R folder`"
+" to specify where your R binaries are located."
+msgstr ""
+"オペレーティング・システムによっては、 :guilabel:`R folder` を使ってRバイナリの場所を指定する必要があるかもしれません。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:213
+msgid ""
+"On **Windows** the R executable file is normally in a folder "
+"(``R-<version>``) under :file:`C:\\\\Program Files\\\\R\\\\`. Specify the "
+"folder and **NOT** the binary!"
+msgstr ""
+"**Windows** の場合、Rの実行ファイルは通常 :file:`C:¥Program Files¥R¥` の下のフォルダ(``R- "
+"<version>``)にあります。バイナリ **ではなく** フォルダを指定してください！"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:217
+msgid ""
+"On **Linux** you just have to make sure that the R folder is in the PATH "
+"environment variable. If ``R`` in a terminal window starts R, then you are "
+"ready to go."
+msgstr ""
+"**Linux** では、RフォルダがPATH環境変数に入っていることを確認するだけです。ターミナル・ウィンドウで ``R`` が R "
+"を起動すれば、準備は完了です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:221
+msgid ""
+"After installing the **Processing R Provider** plugin, you will find some "
+"example scripts in the :guilabel:`Processing Toolbox`:"
+msgstr ""
+"**Processing R Provider** プラグインをインストールすると、いくつかのサンプルスクリプトが "
+":guilabel:`プロセシングツールボックス` に見つかります："
+
+#: ../../docs/user_manual/processing/3rdParty.rst:224
+msgid ""
+":guilabel:`Scatterplot` runs an R function that produces a scatter plot from"
+" two numerical fields of the provided vector layer."
+msgstr ":guilabel:`Scatterplot` は与えられたベクタレイヤの2つの数値フィールドから散布図を作成するR関数を実行します。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:226
+msgid ""
+":guilabel:`test_sf` does some operations that depend on the ``sf`` package "
+"and can be used to check if the R package ``sf`` is installed. If the "
+"package is not installed, R will try to install it (and all the packages it "
+"depends on) for you, using the :guilabel:`Package repository` specified in "
+":menuselection:`Provider --> R` in the Processing options. The default is "
+"https://cran.r-project.org/. Installing may take some time..."
+msgstr ""
+":guilabel:`test_sf` は ``sf`` パッケージに依存するいくつかの操作を行い、R パッケージ ``sf`` "
+"がインストールされているかどうかをチェックするために使うことができます。パッケージがインストールされていない場合、Rはプロセシングオプションの "
+":menuselection:`プロバイダ --> R` で指定された :guilabel:`Package repository` "
+"を使って、パッケージ（および依存するすべてのパッケージ）のインストールを試みます。デフォルトはhttps://cran.r-project.org/ "
+"です。インストールには時間がかかるかもしれません…"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:235
+msgid ""
+":guilabel:`test_sp` can be used to check if the R package ``sp`` is "
+"installed. If the package is not installed, R will try to install it for "
+"you."
+msgstr ""
+":guilabel:`test_sp` を使うと、Rパッケージ ``sp`` "
+"がインストールされているかどうかをチェックできます。このパッケージがインストールされていない場合、Rがインストールを試みます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:242
+msgid ""
+"If you have R configured correctly for QGIS, you should be able to run these"
+" scripts."
+msgstr "RがQGIS用に正しく設定されていれば、これらのスクリプトを実行できるはずです。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:251
+msgid "Adding R scripts from the QGIS collection"
+msgstr "QGISコレクションからRスクリプトを追加する"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:253
+msgid ""
+"R integration in QGIS is different from that of SAGA in that there is not a "
+"predefined set of algorithms you can run (except for some example script "
+"that come with the *Processing R Provider* plugin)."
+msgstr ""
+"QGISにおけるRの統合はSAGAとは異なり、あらかじめ定義された実行可能なアルゴリズムのセットはありません（*Processing R "
+"Provider* プラグインに付属するいくつかのスクリプト例を除く）。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:257
+msgid ""
+"A set of example R scripts is available in the QGIS Repository. Perform the "
+"following steps to load and enable them using the *QGIS Resource Sharing* "
+"plugin."
+msgstr ""
+"サンプル R スクリプトのセットは QGIS Repository で利用可能です。以下の手順を実行し、*QGIS Resource Sharing* "
+"プラグインを使用してそれらを読み込んで有効にします。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:261
+msgid ""
+"Add the *QGIS Resource Sharing* plugin (you may have to enable "
+":guilabel:`Show also experimental plugins` in the Plugin Manager "
+":guilabel:`Settings`)"
+msgstr ""
+"*QGIS Resource Sharing* プラグインを追加します（プラグインマネージャの :guilabel:`設定` で "
+":guilabel:`実験的プラグインも表示` を有効にする必要があるかもしれません）。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:264
+msgid "Open it (Plugins --> Resource Sharing --> Resource Sharing)"
+msgstr "それを開きます（プラグイン --> Resource Sharing --> Resource Sharing）"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:265
+msgid "Choose the :guilabel:`Settings` tab"
+msgstr ":guilabel:`Settings` タブを選びます"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:266
+msgid "Click :guilabel:`Reload repositories`"
+msgstr ":guilabel:`Reload repositories` をクリックします"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:267
+msgid "Choose the :guilabel:`All` tab"
+msgstr ":guilabel:`All` タブを選びます"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:268
+msgid ""
+"Select :guilabel:`QGIS R script collection` in the list and click on the "
+":guilabel:`Install` button"
+msgstr ""
+"リストから :guilabel:`QGIS R script collection` を選び、:guilabel:`Install` "
+"ボタンをクリックします"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:270
+msgid "The collection should now be listed in the :guilabel:`Installed` tab"
+msgstr "これでそのコレクションが :guilabel:`Installed` タブにリストされているはずです"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:272
+msgid "Close the plugin"
+msgstr "プラグインを閉じます"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:273
+msgid ""
+"Open the :guilabel:`Processing Toolbox`, and if everything is OK, the "
+"example scripts will be present under R, in various groups (only some of the"
+" groups are expanded in the screenshot below)."
+msgstr ""
+":guilabel:`プロセシングツールボックス` "
+"を開きます。問題がなければ、スクリプトの例がRの下に様々なグループで表示されます（下のスクリーンショットでは一部のグループのみが展開されています）。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:281
+msgid "The :guilabel:`Processing Toolbox` with some R scripts shown"
+msgstr "いくつかのRスクリプトが表示された :guilabel:`プロセシングツールボックス`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:283
+msgid ""
+"The scripts at the top are the example scripts from the *Processing R "
+"Provider* plugin."
+msgstr "一番上のスクリプトは、*Processing R Provider* プラグインのスクリプト例です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:286
+msgid ""
+"If, for some reason, the scripts are not available in the "
+":guilabel:`Processing Toolbox`, you can try to:"
+msgstr "もし何らかの理由でスクリプトが :guilabel:`プロセシングツールボックス` で利用できない場合は、次を試してみてください："
+
+#: ../../docs/user_manual/processing/3rdParty.rst:289
+msgid ""
+"Open the Processing settings (:menuselection:`Settings --> Options --> "
+"Processing` tab)"
+msgstr "プロセシング設定を開く（:menuselection:`設定 --> オプション --> プロセシング` タブ）"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:292
+msgid "Go to :menuselection:`Providers --> R --> R scripts folder`"
+msgstr ":menuselection:`プロバイダ --> R --> R scripts folder` に移動する"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:294
+msgid "On Ubuntu, set the path to (or, better, include in the path):"
+msgstr "Ubuntuではそのパスを次に設定する（またはそのパスに含めた方が良い）："
+
+#: ../../docs/user_manual/processing/3rdParty.rst:296
+msgid ""
+"/home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-"
+"Resources/collections/rscripts"
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:301
+msgid "On Windows, set the path to (or, better, include in the path):"
+msgstr "Windowsではそのパスを次に設定する（またはそのパスに含めた方が良い）："
+
+#: ../../docs/user_manual/processing/3rdParty.rst:303
+msgid ""
+"C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\default\\\\resource_sharing\\\\repositories\\\\github.com\\\\qgis\\\\QGIS-"
+"Resources\\\\collections\\\\rscripts"
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:305
+msgid ""
+"To edit, double-click. You can then choose to just paste / type the path, or"
+" you can navigate to the directory by using the :guilabel:`...` button and "
+"press the :guilabel:`Add` button in the dialog that opens. It is possible to"
+" provide several directories here. They will be separated by a semicolon "
+"(\";\")."
+msgstr ""
+"編集するにはダブルクリックします。その後、パスを貼り付けたり入力したりするか、:guilabel:`...` "
+"ボタンでディレクトリに移動し、開いたダイアログで :guilabel:`追加` "
+"ボタンを押します。ここでは複数のディレクトリを指定することができます。それらはセミコロン(\";\")で区切られます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:315
+msgid ""
+"If you would like to get all the R scrips from the QGIS 2 on-line "
+"collection, you can select *QGIS R script collection (from QGIS 2)* instead "
+"of *QGIS R script collection*. You will probably find that scripts that "
+"depend on vector data input or output will not work."
+msgstr ""
+"QGIS 2 オンラインコレクションからすべての R スクリプトを取得したい場合は、*QGIS R script collection* の代わりに "
+"*QGIS R script collection (from QGIS 2)* "
+"を選択してください。おそらく、ベクタデータの入出力に依存するスクリプトは動作しないことがわかります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:327
+msgid "Creating R scripts"
+msgstr "Rスクリプトを作る"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:329
+msgid ""
+"You can write scripts and call R commands, as you would do from R. This "
+"section shows you the syntax for using R commands in QGIS, and how to use "
+"QGIS objects (layers, tables) in them."
+msgstr ""
+"Rから行うのと同じように、スクリプトを書いたり、Rコマンドを呼び出したりすることができます。このセクションでは、QGISでRコマンドを使用するための構文と、その中でQGISオブジェクト（レイヤ、テーブル）を利用する方法について説明します。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:333
+msgid ""
+"To add an algorithm that calls an R function (or a more complex R script "
+"that you have developed and you would like to have available from QGIS), you"
+" have to create a script file that performs the R commands."
+msgstr ""
+"R関数を呼び出すアルゴリズム（または、開発したより複雑なRスクリプトをQGISから利用できるようにしたい場合）を追加するには、Rコマンドを実行するスクリプトファイルを作成する必要があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:338
+msgid ""
+"R script files have the extension :file:`.rsx`, and creating them is pretty "
+"easy if you just have a basic knowledge of R syntax and R scripting. They "
+"should be stored in the R scripts folder. You can specify the folder "
+"(:guilabel:`R scripts folder`) in the :guilabel:`R` settings group in "
+"Processing settings dialog)."
+msgstr ""
+"Rスクリプトファイルの拡張子は :file:`.rsx` "
+"で、R構文とRスクリプトの基本的な知識があれば、作成はとても簡単です。これらのファイルはRスクリプトフォルダに保存する必要があります。このフォルダ（:guilabel:`R"
+" scripts folder`）は、プロセシング設定ダイアログの :guilabel:`R` 設定グループで指定することができます）。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:345
+msgid ""
+"Let’s have a look at a very simple script file, which calls the R method "
+"``spsample`` to create a random grid within the boundary of the polygons in "
+"a given polygon layer. This method belongs to the ``maptools`` package. "
+"Since almost all the algorithms that you might like to incorporate into QGIS"
+" will use or generate spatial data, knowledge of spatial packages like "
+"``maptools`` and ``sp``/``sf``, is very useful."
+msgstr ""
+"Rのメソッド ``spsample`` "
+"を呼び出して、指定したポリゴンレイヤのポリゴンの境界内にランダムなグリッドを作成する、非常にシンプルなスクリプトファイルを見てみましょう。このメソッドは"
+" ``maptools`` "
+"パッケージに属しています。QGISに組み込みたいアルゴリズムのほとんどが空間データを使用または生成するため、``maptools`` や "
+"``sp``/``sf`` のような空間パッケージの知識は非常に役に立ちます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:366
+msgid ""
+"The first lines, which start with a double Python comment sign (``##``), "
+"define the display name and group of the script, and tell QGIS about its "
+"inputs and outputs."
+msgstr "Pythonの二重のコメント記号（`##`）で始まる最初の行は、スクリプトの表示名とグループを定義し、QGISに入力と出力を伝えます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:371
+msgid ""
+"To find out more about how to write your own R scripts, have a look at the "
+":ref:`R Intro <r-intro>` section in the training manual and consult the "
+":ref:`QGIS R Syntax <r-syntax>` section."
+msgstr ""
+"自分でRスクリプトを書く方法を詳しく知るには、トレーニングマニュアルの :ref:`R Intro <r-intro>` セクションを参照し、 "
+":ref:`QGIS R Syntax <r-syntax>` セクションを参照してください。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:375
+msgid ""
+"When you declare an input parameter, QGIS uses that information for two "
+"things: creating the user interface to ask the user for the value of that "
+"parameter, and creating a corresponding R variable that can be used as R "
+"function input."
+msgstr ""
+"入力パラメータを宣言すると、QGISはその情報を2つのことに使用します：そのパラメータの値をユーザに尋ねるユーザインタフェースを作成することと、R関数の入力として使用できる対応したR変数を作成することです。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:380
+msgid ""
+"In the above example, we have declared an input of type ``vector``, named "
+"``Vector_layer``. When executing the algorithm, QGIS will open the layer "
+"selected by the user and store it in a variable named ``Vector_layer``. So, "
+"the name of a parameter is the name of the variable that you use in R for "
+"accessing the value of that parameter (you should therefore avoid using "
+"reserved R words as parameter names)."
+msgstr ""
+"上記の例では、``Vector_layer`` という ``vector`` 型の入力を宣言しました。そのアルゴリズムを実行するとき、QGIS "
+"はユーザが選択したレイヤを開き、それを ``Vector_layer`` "
+"という変数に格納します。つまり、パラメータ名はそのパラメータの値にアクセスするために使用するRの変数名となります（そのため、Rの予約語をパラメータ名として使用することは避けるべきです）。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:388
+msgid ""
+"Spatial parameters such as vector and raster layers are read using the "
+"``st_read()`` (or ``readOGR``) and ``brick()`` (or ``readGDAL``) commands "
+"(you do not have to worry about adding those commands to your description "
+"file -- QGIS will do it), and they are stored as ``sf`` (or "
+"``Spatial*DataFrame``) objects."
+msgstr ""
+"ベクタレイヤやラスタレイヤなどの空間パラメータは ``st_read()`` (または ``readOGR``) や ``brick()`` (または "
+"``readGDAL``) コマンドを使って読み込まれ（これらのコマンドを記述ファイルに追加する必要はありません -- QGIS "
+"が行います）、``sf`` (または ``Spatial*DataFrame``) オブジェクトとして保存されます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:394
+msgid ""
+"Table fields are stored as strings containing the name of the selected "
+"field."
+msgstr "テーブルフィールドは、選択されたフィールド名を格納する文字列として保存されます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:397
+msgid ""
+"Vector files can be read using the ``readOGR()`` command instead of "
+"``st_read()`` by specifying ``##load_vector_using_rgdal``. This will produce"
+" a ``Spatial*DataFrame`` object instead of an ``sf`` object."
+msgstr ""
+"ベクタファイルは、``##load_vector_using_rgdal`` を指定すると、 ``st_read()`` の代わりに "
+"``readOGR()`` コマンドを使って読み込むことができます。これは ``sf`` オブジェクトの代わりに "
+"``Spatial*DataFrame`` オブジェクトを生成します。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:402
+msgid ""
+"Raster files can be read using the ``readGDAL()`` command instead of "
+"``brick()`` by specifying ``##load_raster_using_rgdal``."
+msgstr ""
+"ラスタファイルは、``##load_raster_using_rgdal`` を指定すると、``brick()`` の代わりに "
+"``readGDAL()`` コマンドを使って読み込むことができます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:405
+msgid ""
+"If you are an advanced user and do not want QGIS to create the object for "
+"the layer, you can use ``##pass_filenames`` to indicate that you prefer a "
+"string with the filename. In this case, it is up to you to open the file "
+"before performing any operation on the data it contains."
+msgstr ""
+"もしあなたが上級ユーザーで、QGISにレイヤのオブジェクトを作成させたくない場合、 ``##pass_filenames`` "
+"を使用することで、ファイル名を文字列で指定することができます。この場合、そのファイルに含まれるデータに対して操作を行う前に、ファイルを開く必要があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:411
+msgid ""
+"With the above information, it is possible to understand the first lines of "
+"the R script (the first line not starting with a Python comment character)."
+msgstr "以上の情報で、Rスクリプトの最初の行（Pythonのコメント文字で始まっていない最初の行）を理解することができます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:421
+msgid ""
+"The ``spsample`` function is provided by the *sp* library, so the first "
+"thing we do is to load that library. The variable ``Vector_layer`` contains "
+"an ``sf`` object. Since we are going to use a function (``spsample``) from "
+"the *sp* library, we must convert the ``sf`` object to a "
+"``SpatialPolygonsDataFrame`` object using the ``as`` function."
+msgstr ""
+"``spsample`` 関数は *sp* ライブラリで提供されているので、最初にすることはそのライブラリを読み込むことです。変数 "
+"``Vector_layer`` には ``sf`` オブジェクトが格納されています。ここでは *sp* "
+"ライブラリの関数（``spsample``）を使用するので、``as`` 関数を使用して ``sf`` オブジェクトを "
+"``SpatialPolygonsDataFrame`` オブジェクトに変換する必要があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:428
+msgid ""
+"Then we call the ``spsample`` function with this object and the "
+"``numpoints`` input parameter (which specifies the number of points to "
+"generate)."
+msgstr ""
+"次に、このオブジェクトと ``numpoints`` 入力パラメータ（生成するポイントの数を指定します）を使用して ``spsample`` "
+"関数を呼び出します。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:432
+msgid ""
+"Since we have declared a vector output named ``Output``, we have to create a"
+" variable named ``Output`` containing an ``sf`` object."
+msgstr ""
+"``Output`` という名前のベクタ出力を宣言したので、``sf`` オブジェクトを含む ``Output`` "
+"という名前の変数を作成しなければなりません。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:435
+msgid ""
+"We do this in two steps. First we create a ``SpatialPolygonsDataFrame`` "
+"object from the result of the function, using the *SpatialPointsDataFrame* "
+"function, and then we convert that object to an ``sf`` object using the "
+"``st_as_sf`` function (of the *sf* library)."
+msgstr ""
+"これを 2 つのステップで行います。まず、*SpatialPointsDataFrame* 関数を使用して、関数の結果から "
+"``SpatialPolygonsDataFrame`` オブジェクトを作成し、次に、(*sf* ライブラリの) ``st_as_sf`` "
+"関数を使用して、そのオブジェクトを ``sf`` オブジェクトに変換します。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:441
+msgid ""
+"You can use whatever names you like for your intermediate variables. Just "
+"make sure that the variable storing your final result has the defined name "
+"(in this case ``Output``), and that it contains a suitable value (an ``sf`` "
+"object for vector layer output)."
+msgstr ""
+"中間変数には好きな名前を使うことができます。ただ、最終的な結果を格納する変数が定義された名前（この場合は "
+"``Output``）を持ち、適切な値（ベクタレイヤの出力には ``sf`` オブジェクト）を含んでいることを確認してください。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:447
+msgid ""
+"In this case, the result obtained from the ``spsample`` method had to be "
+"converted explicitly into an ``sf`` object via a ``SpatialPointsDataFrame`` "
+"object, since it is itself an object of class ``ppp``, which can not be "
+"returned to QGIS."
+msgstr ""
+"この場合、``spsample`` メソッドから得られた結果は、``SpatialPointsDataFrame`` オブジェクトを介して、明示的に "
+"``sf`` オブジェクトに変換する必要がありました。なぜなら、それ自体がpppクラスのオブジェクトであり、QGISに返すことができないからです。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:452
+msgid ""
+"If your algorithm generates raster layers, the way they are saved will "
+"depend on whether or not you have used the ``##dontuserasterpackage`` "
+"option. If you have used it, layers are saved using the ``writeGDAL()`` "
+"method. If not, the ``writeRaster()`` method from the ``raster`` package "
+"will be used."
+msgstr ""
+"アルゴリズムは、ラスタレイヤを生成した場合、それらが保存されている方法は、 ``##dontuserasterpackage`` "
+"オプションを使用しているかどうかに依存します。それを使用している場合は、これらのレイヤは、 ``writeGDAL()`` "
+"メソッドを使用して保存されます。そうでない場合、 ``raster`` パッケージから ``writeRaster()`` メソッドが使用されます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:460
+msgid ""
+"If you have used the ``##pass_filenames`` option, outputs are generated "
+"using the ``raster`` package (with ``writeRaster()``)."
+msgstr ""
+"``##pass_filenames`` オプションを使用した場合、出力は ``raster`` パッケージを使用して生成されます（ "
+"``writeRaster()`` を使用）。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:463
+msgid ""
+"If your algorithm does not generate a layer, but a text result in the "
+"console instead, you have to indicate that you want the console to be shown "
+"once the execution is finished. To do so, just start the command lines that "
+"produce the results you want to print with the ``>`` ('greater than') sign. "
+"Only output from lines prefixed with ``>`` are shown. For instance, here is "
+"the description file of an algorithm that performs a normality test on a "
+"given field (column) of the attributes of a vector layer:"
+msgstr ""
+"アルゴリズムがレイヤを生成せず、代わりにコンソールにテキスト結果を表示する場合、実行が終了したらコンソールに表示させたいことを示す必要があります。そのためには、表示させたい結果を生成するコマンド行を"
+" ``>`` （「大なり」）記号で始めるだけです。行頭に ``>`` "
+"が付いた行の出力のみが表示されます。例えば、ベクタレイヤの属性の指定されたフィールド（カラム）に対して正規性テストを実行するアルゴリズムの記述ファイルを以下に示します："
+
+#: ../../docs/user_manual/processing/3rdParty.rst:481
+msgid ""
+"The output of the last line is printed, but the output of the first is not "
+"(and neither are the outputs from other command lines added automatically by"
+" QGIS)."
+msgstr ""
+"最後の行の出力が印刷されているが、第一の出力はない（そしていずれも、他のコマンドラインからの出力は、QGISによって自動的に追加されています）。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:485
+msgid ""
+"If your algorithm creates any kind of graphics (using the ``plot()`` "
+"method), add the following line (``output_plots_to_html`` used to be "
+"``showplots``):"
+msgstr ""
+"もしあなたのアルゴリズムが（``plot()``メソッドを使って）何らかのグラフィックを作成するのであれば、以下の行を追加してください（``output_plots_to_html``"
+" は以前は ``showplots`` でした）："
+
+#: ../../docs/user_manual/processing/3rdParty.rst:493
+msgid ""
+"This will cause QGIS to redirect all R graphical outputs to a temporary "
+"file, which will be opened once R execution has finished."
+msgstr "これは、QGISはRの実行が完了した後に開かれる一時ファイルにすべてのRのグラフィック出力をリダイレクトするようになります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:496
+msgid ""
+"Both graphics and console results will be available through the processing "
+"results manager."
+msgstr "グラフィックスとコンソールの両方の結果は、プロセシング結果マネージャから入手できます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:499
+msgid ""
+"For more information, please check the R scripts in the official QGIS "
+"collection (you download and install them using the *QGIS Resource Sharing* "
+"plugin, as explained elsewhere). Most of them are rather simple and will "
+"greatly help you understand how to create your own scripts."
+msgstr ""
+"詳しくは、QGISの公式コレクションにあるRスクリプトを見てください（別の場所で説明されているように、*QGIS Resource Sharing* "
+"プラグインを使ってダウンロードし、インストールします）。ほとんどのスクリプトは非常にシンプルで、独自のスクリプトを作成する方法を理解するのに非常に役立ちます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:506
+msgid ""
+"The ``sf``, ``rgdal`` and ``raster`` libraries are loaded by default, so you"
+" do not have to add the corresponding ``library()`` commands. However, other"
+" libraries that you might need have to be explicitly loaded by typing: "
+"``library(ggplot2)`` (to load the ``ggplot2`` library). If the package is "
+"not already installed on your machine, Processing will try to download and "
+"install it. In this way the package will also become available in R "
+"Standalone. **Be aware** that if the package has to be downloaded, the "
+"script may take a long time to run the first time."
+msgstr ""
+"``sf``、``rgdal``、``raster`` ライブラリはデフォルトで読み込まれるので、対応する ``library()`` "
+"コマンドを追加する必要はありません。しかし、その他の必要なライブラリは明示的に読み込む必要があります： library(ggplot2)`` "
+"（``ggplot2`` "
+"ライブラリを読み込む）。もしそのパッケージがあなたのマシンにまだインストールされていない場合、プロセシングはそのパッケージをダウンロードしてインストールしようとします。こうすることで、R"
+" "
+"Standaloneでもパッケージを利用できるようになります。パッケージのダウンロードが必要な場合、スクリプトの初回実行に時間がかかる可能性があることに"
+" **注意してください**。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:520
+msgid "R libraries"
+msgstr "Rライブラリ"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:522
+msgid ""
+"The R script ``sp_test`` tries to load the R packages ``sp`` and ``raster``."
+msgstr "Rスクリプト ``sp_test`` は、Rパッケージ ``sp`` と ``raster`` を読み込もうとします。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:527
+msgid "R libraries installed when running sf_test"
+msgstr "sf_testの実行時にインストールされるRライブラリ"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:529
+msgid ""
+"The R script *sf_test* tries to load ``sf`` and ``raster``. If these two "
+"packages are not installed, R may try to load and install them (and all the "
+"libraries that they depend on)."
+msgstr ""
+"Rスクリプト *sf_test* は、``sf`` と ``raster`` "
+"を読み込もうとします。これら二つのパッケージがインストールされていないとき、Rはそれら（とそれが依存する全てのライブラリ）を読み込んでインストールしようとするでしょう。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:533
+msgid ""
+"The following R libraries end up in "
+":file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts` after"
+" ``sf_test`` has been run from the Processing Toolbox on Ubuntu with version"
+" 2.0 of the *Processing R Provider* plugin and a fresh install of *R* 3.4.4 "
+"(*apt* package ``r-base-core`` only):"
+msgstr ""
+"以下のRライブラリは、UbuntuのProcessing Toolboxから *Processing R Provider* "
+"プラグインのバージョン2.0と *R* 3.4.4（*apt* パッケージの ``r-base-core`` のみ）を新規インストールして "
+"``sf_test`` "
+"を実行した後、:file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts``"
+" に格納されます："
+
+#: ../../docs/user_manual/processing/3rdParty.rst:555
+msgid "GRASS"
+msgstr "GRASS: Geographic Resources Analysis Support System、地理的資源分析支援システム"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:557
+msgid ""
+"Configuring GRASS is not much different from configuring SAGA. First, the "
+"path to the GRASS folder has to be defined, but only if you are running "
+"Windows."
+msgstr ""
+"GRASSを設定するのはSAGAを設定するのとあまり変わりません。Windowsをお使いの場合は、まずGRASSフォルダのパスを定義する必要があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:561
+msgid ""
+"By default, the Processing framework tries to configure its GRASS connector "
+"to use the GRASS distribution that ships along with QGIS. This should work "
+"without problems for most systems, but if you experience problems, you might"
+" have to configure the GRASS connector manually. Also, if you want to use a "
+"different GRASS installation, you can change the setting to point to the "
+"folder where the other version is installed. GRASS 7 is needed for "
+"algorithms to work correctly."
+msgstr ""
+"デフォルトでは、プロセシングフレームワークは、QGISに同梱されているGRASSディストリビューションを使用するようにGRASSコネクタを設定しようとします。ほとんどのシステムでは問題なく動作するはずですが、問題が発生した場合は、GRASSコネクタを手動で設定する必要があるかもしれません。また、別のGRASSを使用したい場合は、別のバージョンがインストールされているフォルダを指すように設定を変更することができます。アルゴリズムを正しく動作させるにはGRASS"
+" 7が必要です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:571
+msgid ""
+"If you are running Linux, you just have to make sure that GRASS is correctly"
+" installed, and that it can be run without problem from a terminal window."
+msgstr "Linuxをお使いの場合は、GRASSが正しくインストールされ、ターミナルウィンドウから問題なく実行できることを確認してください。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:575
+msgid ""
+"GRASS algorithms use a region for calculations. This region can be defined "
+"manually using values similar to the ones found in the SAGA configuration, "
+"or automatically, taking the minimum extent that covers all the input layers"
+" used to execute the algorithm each time. If the latter approach is the "
+"behavior you prefer, just check the :guilabel:`Use min covering region` "
+"option in the GRASS configuration parameters."
+msgstr ""
+"GRASSアルゴリズムは、計算するための領域を使用します。この領域は、アルゴリズムを毎回実行するために使用されるすべての入力レイヤーを覆う最小範囲をとる、自動的SAGA構成に見られるものと同様の値を用いて、または手動で定義できます。後者のアプローチが好む動作である場合、GRASSの設定パラメーターで"
+" :guilabel:`最小カバー領域を使用` オプションをチェックするだけです。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:589
+msgid "LAStools"
+msgstr "LAStools"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:591
+msgid ""
+"To use `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS, you need to "
+"download and install LAStools on your computer and install the LAStools "
+"plugin (available from the official repository) in QGIS."
+msgstr ""
+"QGISで `LAStools <https://rapidlasso.com/lastools/>`_ "
+"を使うには、LAStoolsをコンピュータにダウンロードしてインストールし、LAStoolsプラグイン（公式リポジトリから入手可能です）をQGISにインストールする必要があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:595
+msgid ""
+"On Linux platforms, you will need `Wine <https://www.winehq.org/>`_ to be "
+"able to run some of the tools."
+msgstr ""
+"Linuxプラットフォームでは、いくつかのツールを実行するために `Wine <https://www.winehq.org/>`_ が必要です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:598
+msgid ""
+"LAStools is activated and configured in the Processing options "
+"(:menuselection:`Settings --> Options`, :guilabel:`Processing` tab, "
+":menuselection:`Providers --> LAStools`), where you can specify the location"
+" of LAStools (:guilabel:`LAStools folder`) and Wine (:guilabel:`Wine "
+"folder`). On Ubuntu, the default Wine folder is :file:`/usr/bin`."
+msgstr ""
+"LAStoolsはProcessing options (:menuselection:`設定 --> オプション`, "
+":guilabel:`プロセシング` タブ, :menuselection:`プロバイダ --> "
+"LAStools`)で有効化され、設定されます。ここでLAStools (:guilabel:`LAStoolsフォルダ`)とWine "
+"(:guilabel:`Wineフォルダ`)の場所を指定できます。Ubuntuの場合、デフォルトのWineフォルダは :file:`/usr/bin` "
+"です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:609
+msgid "OTB Applications"
+msgstr "OTBアプリケーション"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:611
+msgid ""
+"OTB applications are fully supported within the QGIS Processing framework."
+msgstr "OTBアプリケーションはQGISプロセシングフレームワークで完全にサポートされています。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:614
+msgid ""
+"`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) is an image "
+"processing library for remote sensing data. It also provides applications "
+"that provide image processing functionalities. The list of applications and "
+"their documentation are available in `OTB CookBook <https://www.orfeo-"
+"toolbox.org/CookBook/Applications.html>`_"
+msgstr ""
+"`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) "
+"は、リモートセンシングデータ用の画像処理ライブラリです。また、画像処理機能を提供するアプリケーションも提供されています。アプリケーションの一覧とそのドキュメントは"
+" `OTB CookBook <https://www.orfeo-toolbox.org/CookBook/Applications.html>`_ "
+"に掲載されています"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:621
+msgid ""
+"Note that OTB is not distributed with QGIS and needs to be installed "
+"separately. Binary packages for OTB can be found on the `download page "
+"<https://www.orfeo-toolbox.org/download>`_."
+msgstr ""
+"OTBはQGISと一緒に配布されていないので、別途インストールする必要があることに注意してください。OTBのバイナリパッケージは `download "
+"page <https://www.orfeo-toolbox.org/download>`_ にあります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:625
+msgid "To configure QGIS processing to find the OTB library:"
+msgstr "OTBライブラリを見つけるようにQGISプロセシングを設定するには："
+
+#: ../../docs/user_manual/processing/3rdParty.rst:627
+msgid ""
+"Open the processing settings: :menuselection:`Settings --> Options --> "
+"Processing` (left panel)*"
+msgstr "プロセシングの設定を開きます: :menuselection:`設定 --> オプション --> プロセシング` （左のパネル）*"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:628
+msgid "You can see OTB under \"Providers\":"
+msgstr "\"プロバイダ\"の下にOTBが見つかります:"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:630
+msgid "Expand the :guilabel:`OTB` tab"
+msgstr ":guilabel:`OTB` タブを展開します"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:631
+msgid ""
+"Set the :guilabel:`OTB folder`. This is the location of your OTB "
+"installation."
+msgstr ":guilabel:`OTBフォルダ` を設定します。これはOTBがインストールされている場所です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:632
+msgid ""
+"Set the :guilabel:`OTB application folder`. This is the location of your OTB"
+" applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)"
+msgstr ""
+":guilabel:`OTBアプリケーションフォルダ` "
+"を設定します。これはOTBアプリケーションの場所です（:file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`）"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:634
+msgid "Click \"ok\" to save the settings and close the dialog."
+msgstr "\"ok\"をクリックして設定を保存しダイアログを閉じます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:636
+msgid ""
+"If settings are correct, OTB algorithms will be available in the "
+":guilabel:`Processing Toolbox`."
+msgstr "設定が正しければ :guilabel:`プロセシングツールボックス` でOTBアルゴリズムが利用可能になります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:640
+msgid "Documentation of OTB settings available in QGIS Processing"
+msgstr "QGISプロセシングで利用できるOTB設定のドキュメント"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:643
+msgid "**OTB folder**: This is the directory where OTB is available."
+msgstr "**OTBフォルダ**: これはOTBが利用可能なディレクトリです。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:645
+msgid ""
+"**OTB application folder**: This is the location(s) of OTB applications."
+msgstr "**OTBアプリケーションフォルダ**：これはOTBアプリケーションの場所です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:647
+msgid "Multiple paths are allowed."
+msgstr "複数のパスが許されます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:649
+msgid ""
+"**Logger level** (optional): Level of logger to use by OTB applications."
+msgstr "**ログのレベル** （オプション）：OTBアプリケーションが使うロガーのレベル。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:651
+msgid ""
+"The level of logging controls the amount of detail printed during algorithm "
+"execution. Possible values for logger level are ``INFO``, ``WARNING``, "
+"``CRITICAL``, ``DEBUG``. This value is ``INFO`` by default. This is an "
+"advanced user configuration."
+msgstr ""
+"ログのレベルはアルゴリズム実行中に表示される詳細の量を制御します。指定できるログのレベルの値は "
+"``INFO``、``WARNING``、``CRITICAL``、``DEBUG`` です。この値はデフォルトでは ``INFO`` "
+"です。これは上級者向けの設定です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:656
+msgid ""
+"**Maximum RAM to use** (optional): by default, OTB applications use all "
+"available system RAM."
+msgstr "**使用するRAMの最大値** （オプション）：OTBアプリケーションはデフォルトで利用可能なすべてのシステムRAMを使います。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:659
+msgid ""
+"You can, however, instruct OTB to use a specific amount of RAM (in MB) using"
+" this option. A value of 256 is ignored by the OTB processing provider. This"
+" is an advanced user configuration."
+msgstr ""
+"しかし、このオプションを使って、特定の量のRAM（MB単位）を使うようにOTBに指示することができます。256の値はOTBプロセシングプロバイダによって無視されます。これは上級者向けの設定です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:663
+msgid "**Geoid file** (optional): Path to the geoid file."
+msgstr "**ジオイドファイル**（オプション）：ジオイドファイルのパス。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:665
+msgid ""
+"This option sets the value of the elev.dem.geoid and elev.geoid parameters "
+"in OTB applications. Setting this value globally enables users to share it "
+"across multiple processing algorithms. Empty by default."
+msgstr ""
+"このオプションは、OTBアプリケーションのパラメータelev.dem.geoidとelev.geoidの値を設定します。この値をグローバルに設定することで、複数の処理アルゴリズムで値を共有することができます。デフォルトでは空。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:670
+msgid ""
+"**SRTM tiles folder** (optional): Directory where SRTM tiles are available."
+msgstr "**SRTMタイルフォルダ**（オプション）：SRTMタイルが利用できるディレクトリ。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:673
+msgid ""
+"SRTM data can be stored locally to avoid downloading of files during "
+"processing. This option sets the value of elev.dem.path and elev.dem "
+"parameters in OTB applications. Setting this value globally enables users to"
+" share it across multiple processing algorithms. Empty by default."
+msgstr ""
+"SRTM "
+"データをローカルに保存し、処理中にファイルをダウンロードすることを避けることができます。このオプションは、OTBアプリケーションのelev.dem.pathとelev.demパラメータの値を設定します。この値をグローバルに設定することで、複数の処理アルゴリズムで値を共有することができます。デフォルトでは空。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:680
+msgid "Compatibility between QGIS and OTB versions"
+msgstr "QGISとOTBバージョンの互換性"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:682
+msgid ""
+"All OTB versions (from OTB 6.6.1) are compatible with the latest QGIS "
+"version."
+msgstr "（OTB 6.6.1以降の）すべてのOTBバージョンは最新のQGISバージョンと互換があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:685
+msgid "Troubleshoot"
+msgstr "トラブルシューティング"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:686
+msgid ""
+"If you have issues with OTB applications in QGIS Processing, please open an "
+"issue on the `OTB bug tracker <https://gitlab.orfeo-"
+"toolbox.org/orfeotoolbox/otb/-/issues>`_, using the ``qgis`` label."
+msgstr ""
+"QGISプロセシングのOTBアプリケーションに問題がある場合は、`OTB bug tracker <https://gitlab.orfeo-"
+"toolbox.org/orfeotoolbox/otb/-/issues>`_ に ``qgis`` ラベルを付けてissueを登録してください。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:690
+msgid ""
+"Additional information about OTB and QGIS can be found `here "
+"<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"
+msgstr ""
+"OTBとQGISに関する追加情報は、`こちら<https://www.orfeo-toolbox.org/CookBook-"
+"develop/QGISInterface.html>`_ にあります。"

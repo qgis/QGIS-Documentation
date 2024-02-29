@@ -1,0 +1,476 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:2
+msgid "|LS| Systematic Sampling Design"
+msgstr "课: 系统抽样设计"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:4
+msgid ""
+"You have already digitized a set of polygons that represent the forest "
+"stands, but you don't have information about the forest just yet. For that "
+"purpose you can design a survey to inventory the whole forest area and then "
+"estimate its parameters. In this lesson you will create a systematic set of "
+"sampling plots."
+msgstr ""
+"您已经数字化了一组表示林分的多边形，但还没有关于森林的信息。为此，您可以设计一项调查，来清查整个森林面积，然后估算其参数。在本课程，您将创建一组系统取样地。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:9
+msgid ""
+"When you start planning your forest inventory it is important to clearly "
+"define the objectives, the types of sample plots that will be used, and the "
+"data that will be collected to achieve the objectives. For each individual "
+"case, those will depend on the type of forest and the management purpose; "
+"and should be carefully planned by someone with forestry knowledge. In this "
+"lesson, you will implement a theoretical inventory based on a systematic "
+"sampling plot design."
+msgstr ""
+"在开始规划森林资源清查时，必须明确定义目标、将使用的取样地类型以及为实现目标而收集的数据。对于每个个案，这些将取决于森林类型和管理目的，并应该由林业专业人员仔细规划。在本课程，您将实施基于系统取样地设计的理论清查。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:16
+msgid ""
+"**The goal for this lesson:** To create a systematic sampling plot design to"
+" survey the forest area."
+msgstr "**本课目标:** 创建系统取样地设计，以调查森林面积。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:20
+msgid "Inventorying the Forest"
+msgstr "清查森林"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:22
+msgid ""
+"There are several methods to inventory forests, each of them suiting "
+"different purposes and conditions. For example, one very accurate way to "
+"inventory a forest (if you consider only tree species) would be to visit the"
+" forest and make a list of every tree and their characteristics. As you can "
+"imagine this is not commonly applicable except for some small areas or some "
+"special situations."
+msgstr ""
+"森林清查有几种方法，每种方法适用于不同的目的和条件。例如，清查森林 (如果只考虑树种) "
+"的一种非常准确的方法是实地考察森林，列出每棵树及其特征。可以想象，除了一些小区域或某些特殊情况外，这并不普遍适用。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:28
+msgid ""
+"The most common way to find out about a forest is by sampling it, that is, "
+"taking measurements in different locations at the forest and generalizing "
+"that information to the whole forest. These measurements are often made in "
+"*sample plots* that are smaller forest areas that can be easily measured. "
+"The sample plots can be of any size (for ex. 50 m2, 0.5 ha) and form (for "
+"ex. circular, rectangular, variable size), and can be located in the forest "
+"in different ways (for ex. randomly, systematically, along lines). The size,"
+" form and location of the sample plots are usually decided following "
+"statistical, economical and practical considerations. If you have no "
+"forestry knowledge, you might be interested in reading `this Wikipedia "
+"article <https://en.wikipedia.org/wiki/Forest_inventory>`_."
+msgstr ""
+"调查森林最常见的方法是对其进行抽样，即在森林的不同位置进行测量，并将该信息普及到整个森林。这些测量通常是在较小的森林区域的取样地中进行的，这些森林面积很容易测量。取样地可以是任意大小"
+" (例如，50平方米、0.5公顷) 和形状 (例如，圆形、矩形、可变大小)，并且在森林中可以以不同的方式进行 "
+"(例如，随机、系统、沿路线)。取样地的大小、形状和位置通常是根据统计、经济和实际考虑确定的。如果您缺乏林业知识，可能有兴趣阅读这篇 `维基百科 "
+"<https://en.wikipedia.org/wiki/Forest_inventory>`_ 文章。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:40
+msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
+msgstr "|basic| 跟我做: 实施系统取样地设计"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:213
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:42
+msgid ""
+"For the forest you are working with, the manager has decided that a "
+"systematic sampling design is the most appropriate for this forest and has "
+"decided that a fixed distance of 80 meters between the sample plots and "
+"sampling lines will yield reliable results (for this case, +- 5% average "
+"error at a probability of 68%). Variable size plots has been decided to be "
+"the most effective method for this inventory, for growing and mature stands,"
+" but a 4 meters fixed radius plots will be used for seedling stands."
+msgstr ""
+"对于您正在使用的林区，管理人员已决定系统抽样设计最适合该森林，并决定取样地和抽样线之间80米的固定距离将产生可信的结果 (对于这种情况，平均误差为 +-"
+" 5% ，概率为 68% )。对于生长和成熟的林分，可变大小的地块被确定为本次最有效的清查方法，但对于苗木林分，将使用4米固定半径的地块。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:50
+msgid ""
+"In practice, you simply need to represented the sample plots as points that "
+"will be used by the field teams later:"
+msgstr "实际上，您只需将取样地表示为稍后将由现场团队使用的点："
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:53
+msgid ""
+"Open your :file:`digitizing_2012.qgs` project from the previous lesson."
+msgstr "打开上一课的 :file:`digitizing_2012.qgs` 工程。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:54
+msgid "Remove all the layers except for :guilabel:`forest_stands_2012`."
+msgstr "移除除 :guilabel:`forest_stands_2012` 之外的所有图层。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:55
+msgid "Save your project now as :file:`forest_inventory.qgs`"
+msgstr "现在将工程另存为 :file:`forest_inventory.qgs` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:57
+msgid ""
+"Now you need to create a rectangular grid of points separated 80 meters from"
+" each other:"
+msgstr "现在，您需要创建一个由相互间隔80米的点组成的矩形网格："
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:59
+msgid ""
+"Open :menuselection:`Vector --> Research Tools` |regularPoints| "
+":guilabel:`Regular points`."
+msgstr "打开 :menuselection:`矢量 --> 研究工具` |regularPoints| :guilabel:`生成规则点` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:222
+msgid "regularPoints"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:60
+msgid ""
+"Press the drop-down button next to the :guilabel:`Input extent` field and "
+"from the :guilabel:`Calculate from Layer` menu, select "
+":guilabel:`forest_stands_2012`."
+msgstr ""
+"按下 :guilabel:`输入范围` 字段旁边的下拉按钮，然后 :guilabel:`从图层计算` 菜单中，选择 "
+":guilabel:`forest_stands_2012` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:62
+msgid ""
+"In the :guilabel:`Point spacing/count` settings, enter ``80`` ``meters``."
+msgstr "在 :guilabel:`点间距或数目` 设置中，输入 ``80`` ``米`` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:63
+msgid ""
+"Check the :guilabel:`Use point spacing` box to indicate that the value "
+"represents the distance between the points."
+msgstr "勾选 :guilabel:`使用点间距` 框，指示该值表示点之间的距离。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:65
+msgid ""
+"Under :guilabel:`Regular points`, save the output as "
+":file:`systematic_plots.shp` in the :file:`forestry\\\\sampling\\\\` folder."
+msgstr ""
+"在 :guilabel:`生成规则点` 下，将输出保存在 :file:`forestry\\\\sampling\\\\` 文件夹为 "
+":file:`systematic_plots.shp` 文件。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:67
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:90
+msgid "Check :guilabel:`Open output file after running algorithm`."
+msgstr "勾选 :guilabel:`执行算法后打开输出文件` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:68
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:91
+msgid "Press :guilabel:`Run`."
+msgstr "按 :guilabel:`运行` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:70
+msgid ""
+"The suggested :guilabel:`Regular points` creates the systematic points "
+"starting in the upper-left corner of the extent of the selected polygon "
+"layer. If you want to add some randomness to this regular points, you could "
+"use a randomly calculated number between 0 and 80 (80 is the distance "
+"between our points), and then write it as the :guilabel:`Initial inset from "
+"corner (LH side)` parameter in the tool's dialog."
+msgstr ""
+"推荐的 :guilabel:`生成规则点` 从选中的多边形图层范围的左上角开始创建作物系点。如果要向此规则点添加一些随机性，可以使用 0 到 80 "
+"之间随机计算的数字 (80是点之间的距离)，然后将其作为 :guilabel:`从角落处开始插入 (左手边)` 的参数写入工具对话框。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:77
+msgid ""
+"You notice that the tool has used the whole extent of your stands layer to "
+"generate a rectangular grid of points. But you are only interested on those "
+"points that are actually inside your forest area (see the images below):"
+msgstr "您注意到，该工具使用了林分图层的整个范围生成点的矩形网格。但您只对实际位于森林区域内的那些点感兴趣 (请参见下图)："
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:84
+msgid ""
+"From the Processing toolbox, open |gdal| :menuselection:`GDAL --> Vector "
+"geoprocessing --> Clip vector by mask layer`."
+msgstr "从处理工具箱，打开 |gdal| :menuselection:`GDAL --> 矢量地理处理 --> 按掩膜图层裁剪矢量` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:216
+msgid "gdal"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:86
+msgid "Select :guilabel:`systematic_plots` as the :guilabel:`Input layer`."
+msgstr "选择 :guilabel:`systematic_plots` 作为 :guilabel:`输入图层` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:87
+msgid "Set :guilabel:`forest_stands_2012` as the :guilabel:`Mask layer`."
+msgstr "将 :guilabel:`forest_stands_2012` 设置为 :guilabel:`掩膜图层` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:88
+msgid ""
+"Save the :guilabel:`Clipped (mask)` result as "
+":file:`systematic_plots_clip.shp` in the :file:`forestry\\\\sampling\\\\` "
+"folder."
+msgstr ""
+"将 :guilabel:`已裁剪 (掩膜)` 的结果保存在 :file:`forestry\\\\sampling\\\\` 文件夹中的 "
+":file:`systematic_plots_clip.shp` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:93
+msgid ""
+"You have now the points that the field teams will use to navigate to the "
+"designed sample plots locations. You can still prepare these points so that "
+"they are more useful for the field work. At the least you will have to add "
+"meaningful names for the points and export them to a format that can be used"
+" in their GPS devices."
+msgstr ""
+"现在您有了现场团队将用于导航到设计的取样地位置的点。您仍然可以继续完善这些点，以便对现场作业发挥更大作用。至少您必须为这些点添加有意义的名称，并将其导出为可在GPS设备中使用的格式。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:98
+msgid ""
+"Let's start with the naming of the sample plots. If you check the "
+":guilabel:`Attribute table` for the plots inside the forest area, you can "
+"see that you have the default :guilabel:`id` field automatically generated "
+"by the :guilabel:`Regular points` tool. Label the points to see them in the "
+"map and consider if you could use those numbers as part of your sample plot "
+"naming:"
+msgstr ""
+"让我们从取样地的命名开始。如果检查林区内地块的 :guilabel:`属性表` ，可以看到 :guilabel:`生成规则点` 工具默认自动生成的 "
+":guilabel:`id` 字段。标注点以在地图中显示，并考虑是否可以将这些数字用作取样地命名的一部分："
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:104
+msgid ""
+"Open the :menuselection:`Layer Properties -->` |labelingSingle| "
+":guilabel:`Labels` for the ``systematic_plots_clip`` layer."
+msgstr ""
+"为 ``systematic_plots_clip`` 图层打开 :menuselection:`图层属性 -->` |labelingSingle| "
+":guilabel:`标注` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:220
+msgid "labelingSingle"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:106
+msgid "Turn the top menu into |labelingSingle| :guilabel:`Single Labels`."
+msgstr "将顶部菜单切换为 |labelingSingle| :guilabel:`单一标注` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:107
+msgid "For the :guilabel:`Value` entry, select the field ``id``."
+msgstr "对于 :guilabel:`值` 条目，选择字段 ``id`` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:108
+msgid ""
+"Go to the |labelbuffer| :guilabel:`Buffer` tab, check the :guilabel:`Draw "
+"text buffer` and set the buffer :guilabel:`Size` to ``1``."
+msgstr ""
+"转到 |labelbuffer| :guilabel:`描边` 选项卡，勾选 :guilabel:`绘制文本描边` 并将描边大小 "
+":guilabel:`大小` 设置为 ``1`` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:218
+msgid "labelbuffer"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:110
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:135
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:172
+msgid "Click :guilabel:`OK`."
+msgstr "单击 :guilabel:`确定` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:112
+msgid ""
+"Now look at the labels on your map. You can see that the points have been "
+"created and numbered first West to East and then North to South. If you look"
+" at the attribute table again, you will notice that the order in the table "
+"is following also that pattern. Unless you would have a reason to name the "
+"sample plots in a different way, naming them in a West-East/North-South "
+"fashion follows a logical order and is a good option."
+msgstr ""
+"现在查看地图上的标注。您可以看到，这些点已经创建并按先从西到东，然后从北到南的顺序编号。如果再次查看属性表，您将注意到表中的顺序也遵循该规律。除非您有理由以不同的方式命名取样地，否则以"
+" \"西-东/北-南\" 的方式命名取样地符合逻辑顺序，是一个不错的选项。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:119
+msgid ""
+"Nevertheless, the number values in the ``id`` field are not so good. It "
+"would be better if the naming would be something like ``p_1, p_2...``. You "
+"can create a new column for the ``systematic_plots_clip`` layer:"
+msgstr ""
+"然而， ``id`` 字段中的数值并不太理想，如果命名类似于 ``p_1, p_2...`` 应该是不错的选择。可以为 "
+"``systematic_plots_clip`` 图层创建新列："
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:123
+msgid "Go to the :guilabel:`Attribute table` for ``systematic_plots_clip``."
+msgstr "转到 ``systematic_plots_clip`` 的 :guilabel:`属性表` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:124
+msgid "Enable the |toggleEditing| edit mode."
+msgstr "启用 |toggleEditing| 编辑模式。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:224
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:125
+msgid "Open the |calculateField| :sup:`Field calculator`:"
+msgstr "打开 |calculateField| :sup:`字段计算器`:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:214
+msgid "calculateField"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:127
+msgid "Check :guilabel:`Create a new field`"
+msgstr "勾选 :guilabel:`新建字段`"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:128
+msgid "Enter ``Plot_id`` as :guilabel:`Output field name`"
+msgstr "输入 ``Plot_id`` 作为 :guilabel:`输出字段名称`"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:129
+msgid "Set the :guilabel:`Output field type` to :guilabel:`Text (string)`."
+msgstr "将 :guilabel:`输出字段类型` 设置为 :guilabel:`文本 (字符串)` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:130
+msgid ""
+"In the :guilabel:`Expression` field, write, copy or construct this formula "
+"``concat('P_', @rownum )``. Remember that you can also double click on the "
+"elements inside the :guilabel:`Function list`. The ``concat`` function can "
+"be found under :guilabel:`String` and ``@rownum`` is under the "
+":guilabel:`Variables and values` group."
+msgstr ""
+"在 :guilabel:`表达式` 字段中，写入、复制或构建此公式 ``concat('P_', @rownum )`` 。您还可以双击 "
+":guilabel:`函数列表` 中的元素。 ``concat`` 函数位于 :guilabel:`字符串` 组， ``@rownum`` 位于 "
+":guilabel:`变量和值` 组 (新版是 \"变量\" 组中的 \"@row_number\")。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:136
+msgid "Disable the edit mode and save your changes."
+msgstr "禁用编辑模式并保存更改。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:138
+msgid ""
+"Now you have a new column with plot names that are meaningful to you. For "
+"the ``systematic_plots_clip`` layer, change the field used for labeling to "
+"your new ``Plot_id`` field."
+msgstr ""
+"现在，您有了一个新列，其中包含对您有意义的地块名称。对于 ``systematic_plots_clip`` 图层，将用于标注的字段更改为新 "
+"``Plot_id`` 字段。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:146
+msgid "|basic| |FA| Exporting Sample Plots as GPX format"
+msgstr "|basic| 跟我做: 将取样地导出为GPX格式"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:148
+msgid ""
+"The field teams will be probably using a GPS device to locate the sample "
+"plots you planned. The next step is to export the points you created to a "
+"format that your GPS can read. QGIS allows you to save your point and line "
+"vector data in `GPS eXchange Format (GPX) "
+"<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`_, which is an standard "
+"GPS data format that can be read by most of the specialized software. You "
+"need to be careful with selecting the CRS when you save your data:"
+msgstr ""
+"现场团队可能会使用GPS设备定位您设计的取样地，下一步是将创建的点导出为GPS可以读取的格式。QGIS允许您以 `GPS交换格式 (GPX) "
+"<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`_ "
+"保存点和线矢量数据，这是一种标准的GPS数据格式，大多数专业软件都可以读取。保存数据时，您需要谨慎选择CRS："
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:156
+msgid ""
+"Right-click ``systematic_plots_clip`` layer and select "
+":menuselection:`Export --> Save features as...`."
+msgstr ""
+"右键单击 ``systematic_plots_clip`` 图层，选择 :menuselection:`导出 --> 要素另存为...` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:162
+msgid "In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`."
+msgstr "在 :guilabel:`格式` 中，选择 :guilabel:`GPS交换格式 [GPX]` ，新版为 \"GPS交换文件 [GPX]\"。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:163
+msgid ""
+"Save the output :guilabel:`File name` as :file:`plots_wgs84.gpx` in the "
+":file:`forestry\\\\sampling\\\\` folder."
+msgstr ""
+"在 :file:`forestry\\\\sampling\\\\` 文件夹将输出 :guilabel:`文件名` 保存为 "
+":file:`plots_wgs84.gpx` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:165
+msgid "In :guilabel:`CRS` select :guilabel:`Selected CRS`."
+msgstr "在 :guilabel:`CRS` 中点击 :guilabel:`选择CRS` 按钮。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:166
+msgid "Browse for :guilabel:`EPSG:4326 - WGS 84`."
+msgstr "浏览至 :guilabel:`EPSG:4326 - WGS 84` 。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:168
+msgid ""
+"The `GPX <https://gdal.org/drivers/vector/gpx.html>`_ format accepts only "
+"this CRS, if you select a different one, QGIS will give no error but you "
+"will get an empty file."
+msgstr ""
+"`GPX <https://gdal.org/drivers/vector/gpx.html>`_ "
+"格式只适配此CRS，如果选择其他CRS，QGIS不会给出错误提示，但会得到一个空文件。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:173
+msgid ""
+"In the dialog that opens, select only the ``waypoints`` layer (the rest of "
+"the layers are empty)."
+msgstr "在打开的对话框中，仅选择 ``waypoints`` 图层 (其余图层为空)。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:176
+msgid ""
+"The inventory sample plots are now in a standard format that can be managed "
+"by most of the GPS software. The field teams can now upload the locations of"
+" the sample plots to their devices. That would be done by using the specific"
+" devices own software and the :file:`plots_wgs84.gpx` file you just saved. "
+"Other option would be to use the :guilabel:`GPS Tools` plugin but it would "
+"most likely involve setting the tool to work with your specific GPS device. "
+"If you are working with your own data and want to see how the tool works you"
+" can find out information about it in the section :ref:`working_gps` in the "
+"**QGIS User Manual**."
+msgstr ""
+"清查取样地现在采用的标准格式，可由大多数GPS软件管理。现场团队现在可以将取样地的位置上传到他们的设备，这将通过使用特定设备自己的软件和您刚才保存的 "
+":file:`plots_wgs84.gpx` 文件来完成。另一种选项是使用 :guilabel:`GPS工具` "
+"插件，但很可能需要将该工具设置为与您的指定GPS设备一起使用。如果您正在使用自己的数据，并且希望了解该工具的工作原理，可以在 **QGIS用户手册** "
+"的 :ref:`working_gps` 章节中找到有关该工具的详细信息。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:185
+msgid "Save your QGIS project now."
+msgstr "现在保存QGIS工程。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:188
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:190
+msgid ""
+"You just saw how easily you can create a systematic sampling design to be "
+"used in a forest inventory. Creating other types of sampling designs will "
+"involve the use of different tools within QGIS, spreadsheets or scripting to"
+" calculate the coordinates of the sample plots, but the general idea remains"
+" the same."
+msgstr ""
+"您刚才看到了创建一个用于森林资源清查的系统抽样设计是多么容易。创建其他类型的抽样设计将涉及使用QGIS中的不同工具、电子表格或脚本来计算取样地的坐标，但总体思路保持不变。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:196
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:198
+msgid ""
+"In the next lesson you will see how to use the Atlas capabilities in QGIS to"
+" automatically generate detailed maps that the field teams will be using to "
+"navigate to the sample plots assigned to them."
+msgstr "在下一课，您将了解如何使用QGIS中的地图集功能自动生成详细地图，现场团队将使用这些地图导航至分配给他们的取样地。"

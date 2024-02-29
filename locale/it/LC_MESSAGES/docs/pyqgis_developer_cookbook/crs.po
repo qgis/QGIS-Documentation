@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:12
+msgid "Projections Support"
+msgstr "Supporto alle proiezioni"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:14
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"I frammenti di codice di questa pagina necessitano delle seguenti "
+"importazioni se sei è al di fuori della console pyqgis:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:33
+msgid "Coordinate reference systems"
+msgstr "Sistemi di riferimento delle coordinate"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:35
+msgid ""
+"Coordinate reference systems (CRS) are encapsulated by the "
+":class:`QgsCoordinateReferenceSystem "
+"<qgis.core.QgsCoordinateReferenceSystem>` class. Instances of this class can"
+" be created in several different ways:"
+msgstr ""
+"I sistemi di riferimento delle coordinate (SR) sono incapsulati dalla classe"
+" :class:`QgsCoordinateReferenceSystem "
+"<qgis.core.QgsCoordinateReferenceSystem>`. Le istanze di questa classe "
+"possono essere create in diversi modi:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:39
+msgid "specify CRS by its ID"
+msgstr "Specificare SR con il suo ID"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:51
+msgid "QGIS supports different CRS identifiers with the following formats:"
+msgstr "QGIS supporta diversi identificatori SR con i seguenti formati:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:53
+msgid ""
+"``EPSG:<code>`` --- ID assigned by the EPSG organization - handled with "
+":meth:`createFromOgcWms() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromOgcWmsCrs>`"
+msgstr ""
+"``EPSG:<code>`` --- ID assegnato dall'organizzazione EPSG - gestito con "
+":meth:`createFromOgcWms() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromOgcWmsCrs>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:54
+msgid ""
+"``POSTGIS:<srid>``--- ID used in PostGIS databases - handled with "
+":meth:`createFromSrid() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrid>`"
+msgstr ""
+"``POSTGIS:<srid>``--- ID utilizzato nei database PostGIS - gestito con "
+":meth:`createFromSrid() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrid>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:55
+msgid ""
+"``INTERNAL:<srsid>`` --- ID used in the internal QGIS database - handled "
+"with :meth:`createFromSrsId() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>`"
+msgstr ""
+"``INTERNAL:<srsid>`` --- ID utilizzato nel database interno di QGIS - "
+"gestito con :meth:`createFromSrsId() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:56
+msgid ""
+"``PROJ:<proj>`` - handled with :meth:`createFromProj() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromProj>`"
+msgstr ""
+"``PROJ:<proj>`` - gestito con :meth:`createFromProj() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromProj>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:57
+msgid ""
+"``WKT:<wkt>`` - handled with :meth:`createFromWkt() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromWkt>`"
+msgstr ""
+"``WKT:<wkt>`` - gestito con :meth:`createFromWkt() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromWkt>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:59
+msgid "If no prefix is specified, WKT definition is assumed."
+msgstr ""
+"Se non viene specificato alcun prefisso, viene assunta la definizione WKT."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:61
+msgid "specify CRS by its well-known text (WKT)"
+msgstr "specifica il SR con il suo well-known text (WKT)"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:75
+msgid ""
+"create an invalid CRS and then use one of the ``create*`` functions to "
+"initialize it. In the following example we use a Proj string to initialize "
+"the projection."
+msgstr ""
+"crea un SR non valido e poi utilizzare una delle funzioni ``create*`` per "
+"inizializzarlo. Nell'esempio seguente si utilizza una stringa Proj per "
+"inizializzare la proiezione."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:89
+msgid ""
+"It's wise to check whether creation (i.e. lookup in the database) of the CRS"
+" has been successful: :meth:`isValid() "
+"<qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`."
+msgstr ""
+"È opportuno verificare se la creazione (cioè la ricerca nel database) del SR"
+" è avvenuta con successo: :meth:`isValid() "
+"<qgis.core.QgsCoordinateReferenceSystem.isValid>` deve restituire "
+":const:`True`."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:93
+msgid ""
+"Note that for initialization of spatial reference systems QGIS needs to look"
+" up appropriate values in its internal database :file:`srs.db`. Thus in case"
+" you create an independent application you need to set paths correctly with "
+":meth:`QgsApplication.setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>`, otherwise it will fail to find "
+"the database. If you are running the commands from the QGIS Python console "
+"or developing a plugin you do not care: everything is already set up for "
+"you."
+msgstr ""
+"Si noti che per l'inizializzazione dei sistemi di riferimento spaziali QGIS "
+"deve cercare i valori appropriati nel suo database interno :file:`srs.db`. "
+"Pertanto, se creai un'applicazione indipendente, devi impostare "
+"correttamente i percorsi con :meth:`QgsApplication.setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>`, altrimenti non riuscirà a trovare"
+" il database. Se esegui i comandi dalla console QGIS Python o sviluppi un "
+"plugin, non è importante: tutto è già stato impostato."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:101
+msgid "Accessing spatial reference system information:"
+msgstr "Accesso alle informazioni del sistema di riferimento spaziale:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:118
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:160
+msgid "Output:"
+msgstr "In uscita:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:134
+msgid "CRS Transformation"
+msgstr "Trasformazione SR"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:136
+msgid ""
+"You can do transformation between different spatial reference systems by "
+"using the :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`"
+" class. The easiest way to use it is to create a source and destination CRS "
+"and construct a :class:`QgsCoordinateTransform "
+"<qgis.core.QgsCoordinateTransform>` instance with them and the current "
+"project. Then just repeatedly call :meth:`transform() "
+"<qgis.core.QgsCoordinateTransform.transform>` function to do the "
+"transformation. By default it does forward transformation, but it is capable"
+" to do also inverse transformation."
+msgstr ""
+"Puoi effettuare trasformazioni tra sistemi di riferimento spaziali diversi "
+"utilizzando la classe :class:`QgsCoordinateTransform "
+"<qgis.core.QgsCoordinateTransform>`. Il modo più semplice per usarla è "
+"creare un SR di origine e uno di destinazione e costruire un'istanza "
+":class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>` con essi "
+"e il progetto corrente. Quindi basta chiamare ripetutamente la funzione "
+":meth:`transform() <qgis.core.QgsCoordinateTransform.transform>` per "
+"eseguire la trasformazione. Per impostazione predefinita esegue la "
+"trasformazione in avanti, ma è in grado di eseguire anche la trasformazione "
+"inversa."

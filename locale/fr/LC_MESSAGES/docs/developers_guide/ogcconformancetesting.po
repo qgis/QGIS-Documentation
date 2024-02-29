@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:8
+msgid "OGC Conformance Testing"
+msgstr "Tests de conformité OGC"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:21
+msgid "pyogctest"
+msgstr ""
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:23
+msgid ""
+"`pyogctest <https://github.com/pblottiere/pyogctest>`_ is a Python tool "
+"dedicated to run OGC tests easily. The installation may be done in a virtual"
+" environment:"
+msgstr ""
+"`pyogctest <https://github.com/pblottiere/pyogctest>`_ est un outil Python "
+"dédié à l'exécution facile de tests OGC. L'installation peut se faire dans "
+"un environnement virtuel :"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:36
+msgid "WMS 1.3.0 test suite"
+msgstr "WMS 1.3.0 test suite"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:45
+msgid ""
+"After the download, a ``teamengine_wms_130.qgs`` project is available in the"
+" new ``data`` directory. This project has to be registered as the default "
+"project for QGIS Server thanks to the **QGIS_SERVER_PROJECT_FILE** "
+"environment variable. This way, we don't need to explicitly set the ``MAP`` "
+"vendor-parameter of QGIS Server."
+msgstr ""
+"Après le téléchargement, un projet ``teamengine_wms_130.qgs`` est disponible"
+" dans le nouveau répertoire ``data``. Ce projet doit être enregistré comme "
+"projet par défaut pour QGIS Server grâce à la variable d'environnement "
+"**QGIS_SERVER_PROJECT_FILE**. De cette façon, nous n'avons pas besoin de "
+"définir explicitement le paramètre ``MAP`` du fournisseur QGIS Server."
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:51
+msgid ""
+"A specific configuration is also necessary to comply with metadata tests. "
+"Indeed, some metadata are available in the ``data/metadata`` directory and "
+"have to be available for the OGC testing framework thanks to an URL. The "
+"easiest option is to configure your web server to have an access through "
+"something like ``http://XXX.XXX.XXX.XXX/metadata/Autos.xml``. These metadata"
+" URLs are defined in the project and inserted in the WMS ``GetCapabilities``"
+" document. So the project needs to be updated according to your testing "
+"environment to let QGIS Server generate a valid XML document:"
+msgstr ""
+"Une configuration spécifique est également nécessaire pour se conformer aux "
+"tests de métadonnées. En effet, certaines métadonnées sont disponibles dans "
+"le répertoire ``data/metadata`` et doivent être disponibles pour le cadre de"
+" test de OGC grâce à une URL. L'option la plus simple est de configurer "
+"votre serveur web pour qu'il puisse y accéder par le biais d'une adresse du "
+"type ``http://XXX.XXX.XXX.XXX/metadata/Autos.xml``. Ces URL de métadonnées "
+"sont définies dans le projet et insérées dans le document WMS "
+"``GetCapabilities``. Le projet doit donc être mis à jour en fonction de "
+"votre environnement de test pour permettre au logiciel QGIS Server de "
+"générer un document XML valide :"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:65
+msgid ""
+"Now that everything is properly configured, we can run the WMS 1.3.0 test "
+"suite:"
+msgstr ""
+"Maintenant que tout est correctement configuré, nous pouvons lancer la suite"
+" de tests WMS 1.3.0 :"

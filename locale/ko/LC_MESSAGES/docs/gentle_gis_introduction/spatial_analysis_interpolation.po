@@ -1,0 +1,476 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:6
+msgid "Spatial Analysis (Interpolation)"
+msgstr "공간 분석(보간)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:9
+msgid "|gentleLogo|"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:250
+msgid "gentleLogo"
+msgstr "gentleLogo"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:9
+msgid "Objectives:"
+msgstr "목적"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:9
+msgid "Understanding of interpolation as part of spatial analysis"
+msgstr "공간 분석의 일부분으로써의 보간(interpolation)을 이해하기"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:11
+msgid "Keywords:"
+msgstr "키워드"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:11
+msgid ""
+"Point data, interpolation method, Inverse Distance Weighted, Triangulated "
+"Irregular Network"
+msgstr ""
+"포인트 데이터, 보간법(interpolation method), 역거리 가중(Inverse Distance Weighted), 불규칙 "
+"삼각망(Triangulated Irregular Network)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:15
+msgid "Overview"
+msgstr "개요"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:17
+msgid ""
+"**Spatial analysis** is the process of manipulating spatial information to "
+"extract new information and meaning from the original data. Usually spatial "
+"analysis is carried out with a Geographic Information System (GIS). A GIS "
+"usually provides spatial analysis tools for calculating feature statistics "
+"and carrying out geoprocessing activities as data interpolation. In "
+"hydrology, users will likely emphasize the importance of terrain analysis "
+"and hydrological modelling (modelling the movement of water over and in the "
+"earth). In wildlife management, users are interested in analytical functions"
+" dealing with wildlife point locations and their relationship to the "
+"environment. Each user will have different things they are interested in "
+"depending on the kind of work they do."
+msgstr ""
+"**공간 분석(spatial analysis)** 이란 원본 데이터로부터 새로운 정보와 의미를 뽑아내기 위해 공간 정보를 처리하는 "
+"과정입니다. 일반적으로 GIS(Geographic Information System)를 통해 공간 분석을 수행합니다. GIS는 일반적으로"
+" 객체 통계를 계산하고 데이터 보간으로써의 지리 정보 처리를 수행하기 위한 공간 분석 도구들을 제공합니다. 수문학에서는 지형 분석 및 "
+"(지표 및 지하에서의 물의 이동을 모델화하는) 수문학 모델링을 강조하는 편입니다. 야생 동식물 관리에서는 야생 동식물의 점 "
+"위치(point location) 및 점 위치가 주변 환경과 맺는 관계를 다루는 분석 기능에 집중합니다. 각기 다른 분야에서도, 해야 "
+"하는 작업 유형에 따라 서로 다른 사항에 집중하게 될 것입니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:29
+msgid "Spatial interpolation in detail"
+msgstr "공간 보간을 더 자세히"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:31
+msgid ""
+"Spatial interpolation is the process of using points with known values to "
+"estimate values at other unknown points. For example, to make a "
+"precipitation (rainfall) map for your country, you will not find enough "
+"evenly spread weather stations to cover the entire region. Spatial "
+"interpolation can estimate the temperatures at locations without recorded "
+"data by using known temperature readings at nearby weather stations (see "
+":numref:`figure_temperature_map`). This type of interpolated surface is "
+"often called a **statistical surface**. Elevation data, precipitation, snow "
+"accumulation, water table and population density are other types of data "
+"that can be computed using interpolation."
+msgstr ""
+"공간 보간(spatial interpolation)이란 알려진 값을 가진 포인트들을 이용해서 다른 알려지지 않은 포인트의 값을 추정하는 "
+"과정입니다. 예를 들어, 어떤 나라의 기온 맵을 만든다고 할 때 전체 지역을 커버할 만큼 고르게 분포된 기상관측소를 충분히 찾기란 힘든 "
+"일입니다. 공간 보간을 이용하면 기록된 데이터가 없는 위치의 기온도 가까이 있는 기상관측소의 기록값을 통해 추정할 수 있습니다. "
+"(:numref:`figure_temperature_map` 을 참조하세요.) 이런 유형의 보간된 지표면을 보통 **통계 "
+"지표면(statistical surface)** 이라 합니다. 표고 데이터, 강수량, 적설량, 지하수위, 인구밀도 등등 다른 데이터 "
+"유형도 보간법으로 계산할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:47
+msgid "Temperature map interpolated from South African Weather Stations."
+msgstr "남아프리카 기상관측소에서 보간한 기온 "
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:49
+msgid ""
+"Because of high cost and limited resources, data collection is usually "
+"conducted only in a limited number of selected point locations. In GIS, "
+"spatial interpolation of these points can be applied to create a raster "
+"surface with estimates made for all raster cells."
+msgstr ""
+"높은 비용과 제한된 자원으로 인해, 제한된 개수의 선택된 점 위치에서만 데이터 수집이 이루어지는 경우가 많습니다. GIS에서 이런 "
+"포인트들을 보간하면 모든 래스터 셀에 대해 생성한 추정값으로 래스터 지표면을 생성하도록 할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:54
+msgid ""
+"In order to generate a continuous map, for example, a digital elevation map "
+"from elevation points measured with a GPS device, a suitable interpolation "
+"method has to be used to optimally estimate the values at those locations "
+"where no samples or measurements were taken. The results of the "
+"interpolation analysis can then be used for analyses that cover the whole "
+"area and for modelling."
+msgstr ""
+"단락 없는 맵을 --- 예를 들어 GPS 기기로 측정한 표고 포인트들로부터 수치 표고 맵을 재생하기 위해서는, 샘플이나 측정값이 없는 "
+"위치에서의 값을 최적으로 추정하기 위한 적절한 보간법(interpolation method)을 사용해야 합니다. 그 다음 모델링 및 전체"
+" 영역을 커버하는 분석을 위해 보간 분석을 사용할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:60
+msgid ""
+"There are many interpolation methods. In this introduction we will present "
+"two widely used interpolation methods called **Inverse Distance Weighting** "
+"(IDW) and **Triangulated Irregular Networks** (TIN). If you are looking for "
+"additional interpolation methods, please refer to the 'Further Reading' "
+"section at the end of this topic."
+msgstr ""
+"보간법은 여러 가지가 있습니다. 'GIS에 대한 친절한 소개' 에서는 널리 쓰이는 두 가지 보간법을 소개할 것입니다. 바로 **역거리 "
+"가중(Inverse Distance Weighting; IDW)** 과 **불규칙 삼각망(Triangulated Irregular "
+"Networks; TIN)** 입니다. 이외의 보간법을 찾고 있다면, 이번 단원 마지막에 있는 '더 읽어볼 거리' 부분을 참조하세요."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:67
+msgid "Inverse Distance Weighted (IDW)"
+msgstr "역거리 가중(IDW)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:69
+msgid ""
+"In the IDW interpolation method, the sample points are weighted during "
+"interpolation such that the influence of one point relative to another "
+"declines with distance from the unknown point you want to create (see "
+":numref:`figure_idw_interpolation`)."
+msgstr ""
+"IDW 보간법에서는, 보간 처리 과정에서 어떤 포인트가 사용자가 생성하고자 하는 알려지지 않은 포인트로부터 멀어질수록 해당 포인트의 "
+"영향력이 다른 포인트에 상대적으로 낮아지도록 샘플 포인트에 가중치를 부여합니다. "
+"(:numref:`figure_idw_interpolation` 을 참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:80
+msgid ""
+"Inverse Distance Weighted interpolation based on weighted sample point "
+"distance (left). Interpolated IDW surface from elevation vector points "
+"(right). Image Source: Mitas, L., Mitasova, H. (1999)."
+msgstr ""
+"가중치를 부여한 샘플 포인트 거리에 기반한 역거리 가중 보간(왼쪽). 표고 벡터 포인트로부터 보간한 IDW 지표면(오른쪽). 이미지 "
+"출처: Mitas, L., Mitasova, H. (1999)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:84
+msgid ""
+"Weighting is assigned to sample points through the use of a weighting "
+"coefficient that controls how the weighting influence will drop off as the "
+"distance from new point increases. The greater the weighting coefficient, "
+"the less the effect points will have if they are far from the unknown point "
+"during the interpolation process. As the coefficient increases, the value of"
+" the unknown point approaches the value of the nearest observational point."
+msgstr ""
+"가중 영향력이 새 포인트로부터의 거리가 증가할수록 얼마나 떨어지는지를 제어하는 가중치 계수(weighting coefficient)를 "
+"사용해서 샘플 포인트에 가중치를 부여합니다. 가중치 계수가 클수록, 보간 과정에서 알려지지 않은 포인트로부터 멀리 있는 경우, 포인트가 "
+"받는 영향도 줄어들 것입니다. 계수가 증가할수록, 알려지지 않은 포인트의 값이 최근접 관측 포인트의 값에 근접합니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:91
+msgid ""
+"It is important to notice that the IDW interpolation method also has some "
+"disadvantages: the quality of the interpolation result can decrease, if the "
+"distribution of sample data points is uneven. Furthermore, maximum and "
+"minimum values in the interpolated surface can only occur at sample data "
+"points. This often results in small peaks and pits around the sample data "
+"points as shown in :numref:`figure_idw_interpolation`."
+msgstr ""
+"IDW 보간법에도 단점이 있다는 사실을 아는 것이 중요합니다. 샘플 데이터의 분포가 고르지 않을 경우 보간 결과의 질이 떨어질 수 "
+"있습니다. 게다가 보간된 지표면에서 최대 및 최소값은 샘플 데이터 포인트에만 존재할 수 있습니다. 이런 단점들 때문에, "
+":numref:`figure_idw_interpolation` 에서 볼 수 있는 바와 같이 샘플 데이터 포인트 주변에 조그만 마루와 "
+"골(peaks and pits)이 생기는 경우가 많습니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:98
+msgid ""
+"In GIS, interpolation results are usually shown as a 2 dimensional raster "
+"layer. In :numref:`figure_idw_result`, you can see a typical IDW "
+"interpolation result, based on elevation sample points collected in the "
+"field with a GPS device."
+msgstr ""
+"GIS에서 보간 결과물은 보통 2차원 래스터 레이어로 표시됩니다. :numref:`figure_idw_result` 를 보면 현장에서 "
+"GPS 기기로 수집한 표고 샘플 포인트들을 기반으로 한 전형적인 IDW 보간 결과를 볼 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:108
+msgid ""
+"IDW interpolation result from irregularly collected elevation sample points "
+"(shown as black crosses)."
+msgstr "불규칙적으로 수집된 (검은 십자표로 표시된) 표고 샘플 포인트로부터 생성된 IDW 보간 결과"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:112
+msgid "Triangulated Irregular Network (TIN)"
+msgstr "TIN (불규칙 삼각망)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:114
+msgid ""
+"TIN interpolation is another popular tool in GIS. A common TIN algorithm is "
+"called **Delaunay triangulation**. It tries to create a surface formed by "
+"triangles of nearest neighbour points. To do this, circumcircles around "
+"selected sample points are created and their intersections are connected to "
+"a network of non overlapping and as compact as possible triangles (see "
+":numref:`figure_tin_interpolation`)."
+msgstr ""
+"TIN 보간법은 GIS에서 인기 있는 또다른 도구입니다. 보통 TIN 알고리즘을 **델로네 삼각분할(Delaunay "
+"triangulation)** 이라 합니다. 이 알고리즘은 최근접 이웃한 포인트로 이루어진 삼각형들로 형성된 면을 생성하려 합니다. 이를"
+" 위해 선택한 샘플 포인트들을 감싸는 외접원(circumcircle)을 생성하고 외접원들의 교차점을 중첩하지 않는 망으로 연결해서 가능한"
+" 한 촘촘한 삼각형들을 생성합니다. (:numref:`figure_tin_interpolation` 을 참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:126
+msgid ""
+"Delaunay triangulation with circumcircles around the red sample data. The "
+"resulting interpolated TIN surface created from elevation vector points is "
+"shown on the right. Image Source: Mitas, L., Mitasova, H. (1999)."
+msgstr ""
+"빨간색 샘플 데이터를 둘러싼 외접원들을 이용하는 델로네 삼각분할. 오른쪽은 표고 벡터 포인트들로부터 생성된 보간 TIN 표면 "
+"결과물입니다. 이미지 소재 : Mitas, L., Mitasova, H. (1999)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:130
+msgid ""
+"The main disadvantage of the TIN interpolation is that the surfaces are not "
+"smooth and may give a jagged appearance. This is caused by discontinuous "
+"slopes at the triangle edges and sample data points. In addition, "
+"triangulation is generally not suitable for extrapolation beyond the area "
+"with collected sample data points (see :numref:`figure_tin_result` )."
+msgstr ""
+"TIN 보간법의 주요 단점은 표면이 매끄럽지 못 해서 삐쭉삐쭉한 모양이 나올 수도 있다는 점입니다. 삼각형 경계와 샘플 데이터 포인트에서"
+" 나타나는 불연속적인 경사 때문이죠. 또 삼각분할이 일반적으로 샘플 데이터 포인트를 수집한 지역을 벗어나는 보외법(補外法, "
+"extrapolation)에 적합하지 않다는 점도 있습니다. (:numref:`figure_tin_result` 를 참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:142
+msgid ""
+"Delaunay TIN interpolation result from irregularly collected rainfall sample"
+" points (blue circles)"
+msgstr "불규칙적으로 수집된 (파란 원으로 표시된) 강우량 샘플 포인트로부터 생성된 델로네 TIN 보간 결과"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:146
+msgid "Common problems / things to be aware of"
+msgstr "공통적으로 조심해야 할 문제들/사항들"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:148
+msgid ""
+"It is important to remember that there is no single interpolation method "
+"that can be applied to all situations. Some are more exact and useful than "
+"others but take longer to calculate. They all have advantages and "
+"disadvantages. In practice, selection of a particular interpolation method "
+"should depend upon the sample data, the type of surfaces to be generated and"
+" tolerance of estimation errors. Generally, a three step procedure is "
+"recommended:"
+msgstr ""
+"어떤 보간법도 모든 상황에 적용할 수는 없다는 사실을 기억해야 합니다. 일부 보간법은 다른 보간법들보다 정확하고 유용하지만 계산에 시간이"
+" 더 걸립니다. 모든 보간법은 자신만의 장점과 단점을 가지고 있습니다. 실제 현장에서는 샘플 데이터, 생성될 표면의 유형, 그리고 추정 "
+"오류 허용오차에 따라 특정 보간법 집합을 결정해야 합니다. 일반적으로 다음과 같은 3단계를 따르는 것이 좋습니다:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:155
+msgid ""
+"Evaluate the sample data. Do this to get an idea on how data are distributed"
+" in the area, as this may provide hints on which interpolation method to "
+"use."
+msgstr ""
+"샘플 데이터를 평가하십시오. 데이터가 해당 지역에 어떻게 분포되어 있는지 알아보십시오. 어떤 보간법을 사용해야 할지에 대한 힌트를 얻을 "
+"수도 있습니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:157
+msgid ""
+"Apply an interpolation method which is most suitable to both the sample data"
+" and the study objectives. When you are in doubt, try several methods, if "
+"available."
+msgstr ""
+"샘플 데이터 및 연구 목적 모두에 가장 적합한 보간법을 적용하십시오. 확신이 서지 않는 경우, 가능하다면, 여러 보간법을 시도해보십시오."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:160
+msgid ""
+"Compare the results and find the best result and the most suitable method. "
+"This may look like a time consuming process at the beginning. However, as "
+"you gain experience and knowledge of different interpolation methods, the "
+"time required for generating the most suitable surface will be greatly "
+"reduced."
+msgstr ""
+"결과들을 비교해서 최선의 결과물과 최적의 보간법을 찾으십시오. 처음에는 시간만 걸리는 과정이라고 생각할 수도 있지만, 서로 다른 "
+"보간법들에 대한 경험과 지식이 쌓이면서 최적의 표면을 생성하는 데 필요한 시간이 크게 줄어들 것입니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:166
+msgid "Other interpolation methods"
+msgstr "다른 보간법들"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:168
+msgid ""
+"Although we concentrated on IDW and TIN interpolation methods in this "
+"worksheet, there are more spatial interpolation methods provided in GIS, "
+"such as Regularized Splines with Tension (RST), Kriging or Trend Surface "
+"interpolation. See the additional reading section below for a web link."
+msgstr ""
+"이 단원에서 IDW와 TIN 보간법에 집중하기는 했지만, 정규 장력 스플라인(Regularized Splines with Tension,"
+" RST), 크리깅(Kriging) 또는 추세 표면 보간(Trend Surface interpolation) 등, GIS에서 제공하는 "
+"공간 보간법들은 많습니다. 이 단원 마지막 부분의 더 읽어볼 거리 단락에서 웹 링크를 살펴보세요."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:174
+msgid "What have we learned?"
+msgstr "무엇을 배웠나요?"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:176
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "이제 이번 단원에서 배운 내용을 정리해볼까요:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:178
+msgid ""
+"**Interpolation** uses vector points with known values to estimate values at"
+" unknown locations to create a raster surface covering an entire area."
+msgstr ""
+"**보간** 은 알려진 값을 가진 벡터 포인트를 이용해서 알려지지 않은 위치의 값들을 추정하여 전체 영역을 커버하는 래스터 표면을 "
+"생성합니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:180
+msgid "The interpolation result is typically a **raster** layer."
+msgstr "보간 결과물은 전형적으로 **래스터** 레이어입니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:181
+msgid ""
+"It is important to **find a suitable interpolation method** to optimally "
+"estimate values for unknown locations."
+msgstr "알려지지 않은 위치의 값을 최적으로 추정하기 위해서는 **알맞는 보간법을 찾는 것** 이 중요합니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:183
+msgid ""
+"**IDW interpolation** gives weights to sample points, such that the "
+"influence of one point on another declines with distance from the new point "
+"being estimated."
+msgstr ""
+"**IDW 보간법** 은 어떤 포인트가 추정하고 있는 새 포인트로부터 멀어질수록 해당 포인트의 새 포인트에 대한 영향력이 낮아지도록 샘플"
+" 포인트에 가중치를 부여합니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:186
+msgid ""
+"**TIN interpolation** uses sample points to create a surface formed by "
+"triangles based on nearest neighbour point information."
+msgstr "**TIN 보간법** 은 샘플 포인트를 이용해서 최근접 이웃 포인트 정보를 기반으로 삼각형으로 형성된 표면을 생성합니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:190
+msgid "Now you try!"
+msgstr "도전해봅시다!"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:192
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "강사와 학생들이 함께 시도해볼 만한 몇 가지 아이디어가 있습니다:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:194
+msgid ""
+"The Department of Agriculture plans to cultivate new land in your area but "
+"apart from the character of the soils, they want to know if the rainfall is "
+"sufficient for a good harvest. All the information they have available comes"
+" from a few weather stations around the area. Create an interpolated surface"
+" with your learners that shows which areas are likely to receive the highest"
+" rainfall."
+msgstr ""
+"농무부가 여러분이 사는 지역에 새로운 농경지를 경작하려 합니다. 그러나 농무부는 토양의 특성 외에도 풍작을 위해 강우량이 충분한지도 알고"
+" 싶어 합니다. 그런데 여러분이 사는 지역에 있는 기상관측소 몇 군데에서 나온 정보가 다입니다. 학생들과 함께 보간된 표면을 생성해서 "
+"가장 강우량이 많을 것으로 추정되는 지역을 찾아보십시오."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:199
+msgid ""
+"The tourist office wants to publish information about the weather conditions"
+" in January and February. They have temperature, rainfall and wind strength "
+"data and ask you to interpolate their data to estimate places where tourists"
+" will probably have optimal weather conditions with mild temperatures, no "
+"rainfall and little wind strength. Can you identify the areas in your region"
+" that meet these criteria?"
+msgstr ""
+"관광국이 1월과 2월의 기상 상황에 대한 정보를 발표하려 합니다. 여러분에게 기온, 강우량 그리고 풍속 데이터를 주면서 데이터를 보간하여"
+" 적당한 기온과 맑은 하늘 그리고 잔잔한 바람이 부는, 다시 말해 관광객들이 최상의 기상 상황을 맞을 수 있는 위치를 추정해달라고 "
+"합니다. 여러분의 지역에서 이 기준에 맞는 장소를 찾을 수 있나요?"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:207
+msgid "Something to think about"
+msgstr "생각해볼 점"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:209
+msgid ""
+"If you don't have a computer available, you can use a toposheet and a ruler "
+"to estimate elevation values between contour lines or rainfall values "
+"between fictional weather stations. For example, if rainfall at weather "
+"station A is 50 mm per month and at weather station B it is 90 mm, you can "
+"estimate, that the rainfall at half the distance between weather station A "
+"and B is 70 mm."
+msgstr ""
+"사용할 수 있는 컴퓨터가 없다면, 지형도와 자를 이용해서 등고선 사이의 표고값들을 추정하거나 가상의 기상관측소 사이의 강우량을 추정해볼 "
+"수 있습니다. 예를 들어 1번 기상관측소 위치의 강우량이 월 50mm이고 2번 기상관측소 위치의 강우량은 월 90mm일 때, 1번과 2번"
+" 기상관측소 사이의 중간 거리 위치의 강우량은 70mm일 거라고 추정할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:216
+msgid "Further reading"
+msgstr "더 읽어볼 거리"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:218
+msgid "**Books**:"
+msgstr "**서적**:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:220
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:222
+msgid ""
+"DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+"DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:224
+msgid ""
+"Mitas, L., Mitasova, H. (1999). Spatial Interpolation. In: P.Longley, M.F. "
+"Goodchild, D.J. Maguire, D.W.Rhind (Eds.), Geographical Information Systems:"
+" Principles, Techniques, Management and Applications, Wiley."
+msgstr ""
+"Mitas, L., Mitasova, H. (1999). Spatial Interpolation. In: P.Longley, M.F. "
+"Goodchild, D.J. Maguire, D.W.Rhind (Eds.), Geographical Information Systems:"
+" Principles, Techniques, Management and Applications, Wiley."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:228
+msgid "**Websites**:"
+msgstr "**웹사이트**:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:230
+msgid "https://en.wikipedia.org/wiki/Interpolation"
+msgstr "https://ko.wikipedia.org/wiki/%EB%B3%B4%EA%B0%84%EB%B2%95"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:231
+msgid "https://en.wikipedia.org/wiki/Delaunay_triangulation"
+msgstr ""
+"https://ko.wikipedia.org/wiki/%EB%8D%B8%EB%A1%9C%EB%84%A4_%EC%82%BC%EA%B0%81%EB%B6%84%ED%95%A0"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:233
+msgid ""
+"The QGIS User Guide also has more detailed information on interpolation "
+"tools provided in QGIS."
+msgstr "QGIS 사용자 지침서도 QGIS에서 제공되는 보간 도구들에 대한 보다 상세한 정보를 수록하고 있습니다."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:237
+msgid "What's next?"
+msgstr "이 다음은?"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:239
+msgid ""
+"This is the final worksheet in this series. We encourage you to explore QGIS"
+" and use the accompanying QGIS manual to discover all the other things you "
+"can do with GIS software!"
+msgstr ""
+"이 교재의 마지막 단원이었습니다. QGIS를 탐구하고 그에 딸린 QGIS 사용자 지침서를 사용해서 GIS 소프트웨어로 해볼 수 있는 다른"
+" 모든 일들을 발견해보시길 권합니다!"

@@ -1,0 +1,717 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:2
+msgid "|LS| Spatial Statistics"
+msgstr "|LS| 空間統計"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:4
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr "LinfinitiとS Motala（ケープ半島工科大学）が開発したレッスン"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:7
+msgid ""
+"Spatial statistics allows you to analyze and understand what is going on in "
+"a given vector dataset. QGIS includes many useful tools for statistical "
+"analysis."
+msgstr ""
+"空間統計を使用すると、特定のベクトルデータセットで何が起こっているかを分析して理解できます。 "
+"QGISには統計分析のための多くの便利なツールが含まれています。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:11
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools within the :guilabel:`Processing Toolbox`."
+msgstr "**このレッスンの目標：** :guilabel:`プロセシングツールボックス` 内でQGISの空間統計ツールを使用する方法を知ること。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:15
+msgid "|basic| |FA| Create a Test Dataset"
+msgstr "|basic| |FA| テストデータセットの作成"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:391
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:17
+msgid "We will create a random set of points, to get a dataset to work with."
+msgstr "ランダムな点群を作成し、作業用のデータセットを取得します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:19
+msgid ""
+"To do so, you will need a polygon dataset to define the area you want to "
+"create the points in."
+msgstr "そのためには、ポイントを作成する領域を定義するポリゴンデータセットが必要になります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:22
+msgid "We will use the area covered by streets."
+msgstr "街路でカバーされるエリアを使用します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:24
+msgid "Start a new project"
+msgstr "新しいプロジェクトを開始します"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:25
+msgid ""
+"Add your ``roads`` dataset, as well as ``srtm_41_19`` (elevation data) found"
+" in :file:`exercise_data/raster/SRTM/`."
+msgstr ""
+"``roads`` データセットと、 :file:`exercise_data/raster/SRTM/` にある ``srtm_41_19`` "
+"（標高データ） を追加します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:28
+msgid ""
+"You might find that the SRTM DEM layer has a different CRS to that of the "
+"roads layer. QGIS is reprojecting both layers in a single CRS. For the "
+"following exercises this difference does not matter, but feel free to "
+"reproject (as shown earlier in this module)."
+msgstr ""
+"SRTM DEMレイヤのCRSは、道路レイヤのCRSとは異なる場合があります。 "
+"QGISは両方のレイヤを単一のCRSで再投影しています。次の演習では、この違いは重要ではありませんが、自由に再投影してください（このモジュールの前半で示したように）。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:34
+msgid "Open :guilabel:`Processing` toolbox"
+msgstr ":guilabel:`プロセシング` ツールボックスを開きます"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:35
+msgid ""
+"Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool "
+"to generate an area enclosing all the roads by selecting ``Convex Hull`` as "
+"the :guilabel:`Geometry Type`:"
+msgstr ""
+":menuselection:`ベクタジオメトリ --> 最小境界ジオメトリ` ツールを使用して :guilabel:`ジオメトリタイプ` として "
+"``凸包`` を選択し、すべての道路を囲むエリアを生成します:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:43
+msgid ""
+"As you know, if you don't specify the output, *Processing* creates temporary"
+" layers. It is up to you to save the layers immediately or at a later stage."
+msgstr ""
+"ご存知のように、出力を指定しない場合、 *プロセシング* は一時的なレイヤを作成します。レイヤをすぐに、または後の段階で保存するのはあなた次第です。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:48
+msgid "Creating random points"
+msgstr "ランダム点群の作成"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:50
+msgid ""
+"Create 100 random points in this area using the tool at "
+":menuselection:`Vector Creation --> Random points in layer bounds`, with a "
+"minimum distance of ``0.0``:"
+msgstr ""
+":menuselection:`ベクタ作成 --> レイヤ領域にランダム点群` にあるツールを使って、この領域に最小距離 ``0.0`` "
+"のランダムな点を100個作成します:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:57
+msgid ""
+"The yellow warning sign tells you that that parameter concerns distances. "
+"The :guilabel:`Bounding geometry` layer is in a Geographical Coordinate "
+"System and the algorithm is just reminding you this. For this example we "
+"won't use this parameter so you can ignore it."
+msgstr ""
+"黄色の警告サインは、そのパラメータが距離に関係していることを示しています。 :guilabel:`境界ジオメトリ` "
+"レイヤはある地理座標系にあり、アルゴリズムはこれを思い出させます。この例では、このパラメータを使用しないため、無視してかまいません。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:64
+msgid ""
+"If needed, move the generated random point to the top of the legend to see "
+"them better:"
+msgstr "必要に応じて、生成されたランダム点を凡例の一番上に移動させると見やすくなります:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:71
+msgid "Sampling the data"
+msgstr "データのサンプリング"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:73
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":menuselection:`Raster Analysis --> Sample raster values` algorithm. This "
+"tool samples the raster at the locations of the points and adds the raster "
+"values in new field(s) depending on the number of bands in the raster."
+msgstr ""
+"ラスタからサンプルデータセットを作成するには、 :menuselection:`ラスタ解析 --> サンプルラスター値` "
+"アルゴリズムを使用する必要があります。このツールは、ポイントの位置でラスタをサンプリングし、ラスタ内のバンドの数に応じて、新しいフィールドにラスタ値を追加します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:77
+msgid "Open the :guilabel:`Sample raster values` algorithm dialog"
+msgstr ":guilabel:`Sample raster values` アルゴリズムダイアログを開きます"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:78
+msgid ""
+"Select ``Random_points`` as the layer containing sampling points, and the "
+"SRTM raster as the band to get values from. The default name of the new "
+"field is ``rvalue_N``, where ``N`` is the number of the raster band. You can"
+" change the name of the prefix if you want."
+msgstr ""
+"サンプリングポイントを含むレイヤとして ``Random_points`` "
+"を選択し、値を取得するバンドとしてSRTMラスタを選択します。新しいフィールドのデフォルト名は ``rvalue_N`` です。ここで、 ``N`` "
+"はラスタバンドの番号です。必要に応じて、プレフィックスの名前を変更できます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:87
+msgid "Press :guilabel:`Run`"
+msgstr ":guilabel:`実行` を押します"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:89
+msgid ""
+"Now you can check the sampled data from the raster file in the attribute "
+"table of the ``Sampled Points`` layer. They will be in a new field with the "
+"name you have chosen."
+msgstr ""
+"これで、ラスタファイルからサンプリングされたデータを ``サンプリングした出力`` "
+"レイヤの属性テーブルで確認することができます。それらは、選択した名前の新しいフィールドに入ります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:93
+msgid "A possible sample layer is shown here:"
+msgstr "サンプルレイヤはここに示すとおりです:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:98
+msgid ""
+"The sample points are classified using the ``rvalue_1`` field such that red "
+"points are at a higher altitude."
+msgstr "サンプルポイントは、赤いポイントがより高い高度になるように、「rvalue_1」フィールドを使用して分類されます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:101
+msgid ""
+"You will be using this sample layer for the rest of the statistical "
+"exercises."
+msgstr "このサンプルレイヤは、残りの統計演習で使用します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:105
+msgid "|basic| |FA| Basic Statistics"
+msgstr "|basic| |FA| 基本統計"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:107
+msgid "Now get the basic statistics for this layer."
+msgstr "さて、このレイヤに対して基本統計を取得しましょう。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:109
+msgid ""
+"Click on the |sum| :sup:`Show statistical summary` icon in the "
+":guilabel:`Attributes Toolbar`. A new panel will pop up."
+msgstr ""
+":guilabel:`属性ツールバー` にある |sum| :sup:`統計の要約を表示` アイコンをクリックします。新しいパネルがポップアップします。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:399
+msgid "sum"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:112
+msgid ""
+"In the dialog that appears, specify the ``Sampled Points`` layer as the "
+"source."
+msgstr "表示されたダイアログで、``サンプリングした出力`` レイヤをソースとして指定します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:114
+msgid ""
+"Select the *rvalue_1* field in the field combo box. This is the field you "
+"will calculate statistics for."
+msgstr "フィールドコンボボックスで *rvalue_1* フィールドを選択します。このフィールドは、統計情報を計算するフィールドです。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:116
+msgid ""
+"The :guilabel:`Statistics` Panel will be automatically updated with the "
+"calculated statistics:"
+msgstr "算出された統計情報で :guilabel:`統計量の出力` パネルが自動的に更新されます:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:122
+msgid ""
+"You can copy the values by clicking on the |editCopy| :sup:`Copy Statistics "
+"To Clipboard` button and paste the results into a spreadsheet."
+msgstr ""
+"|editCopy|  :sup:`統計をクリップボードにコピー` ボタンをクリックして値をコピーし、結果をスプレッドシートに貼り付けることができます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:392
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:126
+msgid "Close the :guilabel:`Statistics` Panel when done"
+msgstr "終了したら :guilabel:`統計量の出力` パネルを閉じます"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:128
+msgid "Many different statistics are available:"
+msgstr "さまざまな統計が用意されています:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "Count"
+msgstr "カウント"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "The number of samples/values."
+msgstr "サンプル/値の個数"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "Sum"
+msgstr "合計"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "The values added together."
+msgstr "値を足したもの。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:138
+msgid "Mean"
+msgstr "平均"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:137
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"number of values."
+msgstr "平均（アベレージ）値は、単純に値の合計を値の個数で割ったものです。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:143
+msgid "Median"
+msgstr "中間値"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:141
+msgid ""
+"If you arrange all the values from smallest to greatest, the middle value "
+"(or the average of the two middle values, if N is an even number) is the "
+"median of the values."
+msgstr "すべての値を最小から最大に並べると、中央値（または、Nが偶数の場合は2つの中央値の平均）が値の中央値になります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:150
+msgid "St Dev (pop)"
+msgstr "標準偏差（母集団）"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:146
+msgid ""
+"The standard deviation. Gives an indication of how closely the values are "
+"clustered around the mean. The smaller the standard deviation, the closer "
+"values tend to be to the mean."
+msgstr "標準偏差。値が平均値の周りのどの程度近くに密集しているかの指標を与えます。標準偏差が小さいほど、値が平均値により近づく傾向があります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "Minimum"
+msgstr "最小値"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "The minimum value."
+msgstr "値の最小値です。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "Maximum"
+msgstr "最大"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "The maximum value."
+msgstr "値の最大値です。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
+msgid "Range"
+msgstr "範囲"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
+msgid "The difference between the minimum and maximum values."
+msgstr "最小および最大値間の差です。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "Q1"
+msgstr "第１四分位"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "First quartile of the data."
+msgstr "データの第１四分位。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Q3"
+msgstr "第３四分位"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Third quartile of the data."
+msgstr "データの第３四分位"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:169
+msgid "Missing (null) values"
+msgstr "欠落(NULL)値"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:168
+msgid "The number of missing values."
+msgstr "欠落値の個数。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:172
+msgid "|basic| |FA| Compute statistics on distances between points"
+msgstr "|basic| |FA| 点間の距離についての統計を計算"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:174
+msgid "Create a new temporary point layer."
+msgstr "新しい一時的な点レイヤを作成します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:175
+msgid ""
+"Enter edit mode, and digitize three points somewhere among the other points."
+msgstr "編集モードに入り、他の点のどこかにある3点をデジタイズします。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:178
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only **three** points."
+msgstr "または、先ほどと同じランダム点群生成方法で、**3** 点だけ指定します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:180
+msgid ""
+"Save your new layer as :guilabel:`distance_points` in the format you prefer."
+msgstr "新しいレイヤを :guilabel:`distance_points` という名前で、お好みのフォーマットで保存します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:183
+msgid ""
+"To generate statistics on the distances between points in the two layers:"
+msgstr "2つのレイヤのポイント間の距離の統計を作成するには:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:186
+msgid "Open the :menuselection:`Vector Analysis --> Distance matrix` tool."
+msgstr ":menuselection:`ベクタ解析 --> 距離行列` ツールを開きます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:187
+msgid ""
+"Select the ``distance_points`` layer as the input layer, and the ``Sampled "
+"Points`` layer as the target layer."
+msgstr "入力レイヤとして ``distance_points`` を、ターゲットレイヤとして ``Sampled Points`` を選択します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:189
+msgid "Set it up like this:"
+msgstr "このように設定します:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:194
+msgid ""
+"If you want you can save the output layer as a file or just run the "
+"algorithm and save the temporary output layer later."
+msgstr "必要に応じて、出力レイヤをファイルとして保存するか、アルゴリズムを実行して後で一時出力レイヤを保存することができます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:196
+msgid "Click :guilabel:`Run` to generate the distance matrix layer."
+msgstr ":guilabel:`実行` をクリックすると、距離行列レイヤが生成されます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:197
+msgid ""
+"Open the attribute table of the generated layer: values refer to the "
+"distances between the :guilabel:`distance_points` features and their two "
+"nearest points in the :guilabel:`Sampled Points` layer:"
+msgstr ""
+"生成されたレイヤの属性テーブルを開きます。値は、 :guilabel:`distance_points` 地物と "
+":guilabel:`SampledPoints` レイヤ内の2つの最も近いポイントの間の距離を参照します："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:204
+msgid ""
+"With these parameters, the *Distance Matrix* tool calculates distance "
+"statistics for each point of the input layer with respect to the nearest "
+"points of the target layer. The fields of the output layer contain the mean,"
+" standard deviation, minimum and maximum for the distances to the nearest "
+"neighbors of the points in the input layer."
+msgstr ""
+"*距離行列* ツールはこれらのパラメータを使って、 "
+"ターゲットレイヤの最も近いポイントを基準にした入力レイヤの各ポイントの距離統計を計算します。出力レイヤのフィールドには、入力レイヤのポイントの最近傍までの距離の平均、標準偏差、最小値、および最大値が含まれます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:213
+msgid "|basic| |FA| Nearest Neighbor Analysis (within layer)"
+msgstr "|basic| |FA| 最近傍解析（レイヤ内）"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:215
+msgid "To do a nearest neighbor analysis of a point layer:"
+msgstr "ポイントレイヤの再近傍解析をするには:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:217
+msgid "Choose :menuselection:`Vector analysis --> Nearest neighbor analysis`."
+msgstr ":menuselection:`ベクタ解析 --> 最近傍解析` を選びます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:219
+msgid ""
+"In the dialog that appears, select the :guilabel:`Random points` layer and "
+"click :guilabel:`Run`."
+msgstr "表示されたダイアログで :guilabel:`ランダム点群出力` レイヤを選択し、 :guilabel:`実行` をクリックします。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:221
+msgid ""
+"The results will appear in the Processing :guilabel:`Result Viewer` Panel."
+msgstr "結果は、プロセシング :guilabel:`結果ビューア` パネルに表示されます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:227
+msgid "Click on the blue link to open the ``html`` page with the results:"
+msgstr "青いリンクをクリックすると、結果の ``html`` ページが表示されます:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:233
+msgid "|basic| |FA| Mean Coordinates"
+msgstr "|basic| |FA| 平均座標"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:235
+msgid "To get the mean coordinates of a dataset:"
+msgstr "データセットの平均座標を取得するために:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:237
+msgid "Start :menuselection:`Vector analysis --> Mean coordinate(s)`"
+msgstr ":menuselection:`ベクタ解析 --> 加重平均座標（重心の平均）`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:238
+msgid ""
+"In the dialog that appears, specify :guilabel:`Random points` as "
+":guilabel:`Input layer`, and leave the optional choices unchanged."
+msgstr ""
+"表示されたダイアログで、 :guilabel:`入力レイヤ` に :guilabel:`ランダム点群出力` "
+"を指定し、オプションの選択はそのままにしておきます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:240
+msgid "Click :guilabel:`Run`."
+msgstr ":guilabel:`実行` をクリックします。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:242
+msgid ""
+"Let us compare this to the central coordinate of the polygon that was used "
+"to create the random sample."
+msgstr "ランダムサンプルを作成する際に使用したポリゴンの中心座標と比較してみましょう。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:245
+msgid "Start :menuselection:`Vector geometry --> Centroids`"
+msgstr ":menuselection:`ベクタジオメトリ --> 重心`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:246
+msgid ""
+"In the dialog that appears, select ``Bounding geometry`` as the input layer."
+msgstr "表示されたダイアログで、入力レイヤとして ``Bounding geometry`` を選択します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:249
+msgid ""
+"As you can see, the mean coordinates (pink point) and the center of the "
+"study area (in green) don't necessarily coincide."
+msgstr "ご覧のように、平均座標（ピンクの点）と調査地域の中心（緑の点）は必ずしも一致していません。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:252
+msgid ""
+"The centroid is the barycenter of the layer (the barycenter of a square is "
+"the center of the square) while the mean coordinates represent the average "
+"of all node coordinates."
+msgstr "図心はレイヤーの重心（正方形の重心は正方形の中心）であり、平均座標はすべてのノード座標の平均を表します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:260
+msgid "|basic| |FA| Image Histograms"
+msgstr "|basic| |FA| 画像ヒストグラム"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:262
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer "
+"(raster dataset)."
+msgstr ""
+"データセットのヒストグラムは、その値の分布を示しています。 "
+"QGISでこれを示す最も簡単な方法は、画像ヒストグラムを使用することです。これは、任意の画像レイヤ（ラスタデータセット）の "
+":guilabel:`レイヤプロパティ` ダイアログで利用できます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:267
+msgid ""
+"In your :guilabel:`Layers` panel, right-click on the ``srtm_41_19`` layer"
+msgstr ":guilabel:`レイヤ` パネルで ``srtm_41_19`` レイヤを右クリックします"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:269
+msgid "Select :menuselection:`Properties`"
+msgstr ":menuselection:`プロパティ` を選びます"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:270
+msgid ""
+"Choose the :guilabel:`Histogram` tab. You may need to click on the "
+":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
+" graph that shows the frequency distribution for the raster values."
+msgstr ""
+":guilabel:`ヒストグラム` タブを選択します。グラフィックを生成するには、 :guilabel:`ヒストグラムの計算` "
+"ボタンをクリックする必要がある場合があります。ラスタ値の度数分布を示すグラフが表示されます。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:279
+msgid ""
+"The graph can be exported as an image with the |fileSave| :sup:`Save plot` "
+"button"
+msgstr "グラフは |fileSave| :sup:`プロットの保存` ボタンで画像としてエクスポートすることができます"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:394
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:282
+msgid ""
+"You can see more detailed information about the layer in the "
+":guilabel:`Information` tab (the mean and max values are estimated, and may "
+"not be exact)."
+msgstr ""
+"レイヤに関するより詳細な情報は、 :guilabel:`情報` タブで見ることができます（平均値と最大値は推定値であり、正確でない可能性があります）。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:286
+msgid ""
+"The mean value is ``332.8`` (estimated to 324.3), and the maximum value is "
+"``1699`` (estimated to 1548)! You can zoom in the histogram. Since there are"
+" a lot of pixels with value ``0``, the histogram looks compressed "
+"vertically. By zooming in to cover everything but the peak at ``0``, you "
+"will see more details:"
+msgstr ""
+"平均値は「332.8」（推定324.3）、最大値は「1699」（推定1548）！ヒストグラムを拡大できます。値が「0」のピクセルがたくさんあるため、ヒストグラムは垂直方向に圧縮されたように見えます。ズームインして「0」のピーク以外のすべてをカバーすると、詳細が表示されます："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:297
+msgid ""
+"If the mean and maximum values are not the same as above, it can be due to "
+"the min/max value calculation. Open the :guilabel:`Symbology` tab and expand"
+" the :guilabel:`Min / Max Value Settings` menu. Choose "
+"|radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`."
+msgstr ""
+"平均値と最大値が上記と同じでない場合は、最小値/最大値の計算が原因である可能性があります。 :guilabel:`シンボロジ` タブを開き、 "
+":guilabel:`最小 / 最大値設定` メニューを展開します。 |radioButtonOn| :guilabel:`最小/最大` を選択し、 "
+":guilabel:`適用` をクリックします。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:397
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:304
+msgid ""
+"Keep in mind that a histogram shows you the distribution of values, and not "
+"all values are necessarily visible on the graph."
+msgstr "ヒストグラムは、値の分布を示すものであり、必ずしもすべての値がグラフ上に表示されるわけではないことに留意してください。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:309
+msgid "|basic| |FA| Spatial Interpolation"
+msgstr "|basic| |FA| 空間的補間"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:311
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`Sampled points` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr ""
+"データを推定したい標本点のコレクションがあるとしましょう。たとえば、前に作成した :guilabel:`Sampled points` "
+"データセットにアクセスでき、地形がどのように見えるかを知りたい場合があります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:317
+msgid ""
+"To start, launch the :menuselection:`GDAL --> Raster analysis --> Grid (IDW "
+"with nearest neighbor searching)` tool in the :guilabel:`Processing "
+"Toolbox`."
+msgstr ""
+"まず、 :guilabel:`プロセシングツールボックス` にある :menuselection:`GDAL --> ラスタ解析 --> "
+"グリッド（最近傍探索IDW）` ツールを起動します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:320
+msgid "For :guilabel:`Point layer` select ``Sampled points``"
+msgstr ":guilabel:`入力レイヤ（点）` に ``Sampled points`` を選びます"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:321
+msgid "Set :guilabel:`Weighting power` to ``5.0``"
+msgstr ":guilabel:`重み付けの累乗`を ``5.0`` に設定します"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:322
+msgid ""
+"In :guilabel:`Advanced parameters`, set :guilabel:`Z value from field` to "
+"``rvalue_1``"
+msgstr ""
+":guilabel:`詳細パラメータ` で、 :guilabel:`内挿するZ値の属性（フィールド）` を ``rvalue_1`` に設定します"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:324
+msgid "Finally click on :guilabel:`Run` and wait until the processing ends"
+msgstr "最後に :guilabel:`実行` をクリックし、処理が終了するまで待ちます"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:325
+msgid "Close the dialog"
+msgstr "ダイアログを閉じます"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:327
+msgid ""
+"Here is a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr ""
+"これは、元のデータセット（左）とサンプルポイントから構築されたデータセット（右）の比較です。サンプルポイントの位置がランダムであるため、見た目が異なる場合があります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:335
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well."
+msgstr ""
+"ご覧のとおり、地形の詳細な印象を得るには、100個のサンプルポイントでは十分ではありません。これは非常に一般的な考え方ですが、誤解を招く可能性もあります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:340
+msgid "|moderate| |TY| Different interpolation methods"
+msgstr "|moderate| |TY| 補間方法の違い"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:396
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:342
+msgid "Use the processes shown above to create a set of 10 000 random points"
+msgstr "上記の手順を使用して、10000個のランダムな点のセットを作成します"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:345
+msgid ""
+"If the number of points is really big, the processing time can take a long "
+"time."
+msgstr "点の個数が多い場合、処理に時間がかかることがあります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:348
+msgid "Use these points to sample the original DEM"
+msgstr "これらの点を利用して、オリジナルのDEMをサンプリングします"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:349
+msgid ""
+"Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this "
+"dataset."
+msgstr ""
+"このデータセットには :guilabel:`Grid (IDW with nearest neighbor searching)` ツールを使用します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:351
+msgid ""
+"Set :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``, "
+"respectively."
+msgstr ":guilabel:`累乗` と :guilabel:`スムージング` をそれぞれ ``5.0`` と ``2.0`` に設定します。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:354
+msgid ""
+"The results (depending on the positioning of your random points) will look "
+"more or less like this:"
+msgstr "結果（ランダムな点の位置に応じて）多かれ少なかれ、このようになります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:360
+msgid ""
+"This is a better representation of the terrain, due to the greater density "
+"of sample points. Remember, larger samples give better results."
+msgstr "これは、サンプルポイントの密度が高いため、地形をより適切に表現できます。サンプルが大きいほど良い結果が得られることを忘れないでください。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:366
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:368
+msgid ""
+"QGIS has a number of tools for analyzing the spatial statistical properties "
+"of datasets."
+msgstr "QGISには、データセットの空間統計プロパティを分析するためのツールがいくつかあります。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:373
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:375
+msgid ""
+"Now that we have covered vector analysis, why not see what can be done with "
+"rasters? That is what we will do in the next module!"
+msgstr "ベクタ解析について説明しましたが、次はラスタで何ができるかを見てみましょう。これが次のモジュールで行うことです！"

@@ -1,0 +1,418 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:5
+msgid "Creating 3D Symbols"
+msgstr "3Dシンボルの作成"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:12
+msgid ""
+"The :guilabel:`Style Manager` helps you create and store 3D symbols for "
+"every geometry type to render in the :ref:`3D map view <label_3dmapview>`."
+msgstr ""
+":guilabel:`スタイルマネージャ` では、 各ジオメトリタイプに対して、 :ref:`3Dマップビュー <label_3dmapview>` "
+"でレンダリングするための3Dシンボルの作成と保存ができます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:15
+msgid ""
+"As of the other items, enable the |3d| :guilabel:`3D Symbols` tab and expand"
+" the |symbologyAdd| button menu to create:"
+msgstr ""
+"他のスタイル設定と同様に、 |3d| :guilabel:`3Dシンボル` タブをクリックし、 |symbologyAdd| "
+"ボタンメニューを展開して、以下のそれぞれについて作成します："
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:200
+msgid "3d"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:206
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:18
+msgid ":ref:`3D point symbols <3d_pointlayers>`"
+msgstr ":ref:`3Dポイントシンボル <3d_pointlayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:19
+msgid ":ref:`3D line symbols <3d_linelayers>`"
+msgstr ":ref:`3Dラインシンボル <3d_linelayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:20
+msgid ":ref:`3D polygon symbols <3d_polygonlayers>`"
+msgstr ":ref:`3Dポリゴンシンボル <3d_polygonlayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:26
+msgid "Point Layers"
+msgstr "ポイントレイヤ"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:33
+msgid "Properties of a 3D point symbol"
+msgstr "3Dポイントシンボルのプロパティ"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:35
+msgid ""
+"You can define different types of 3D :guilabel:`Shape` to use for point "
+"symbols. They are mainly defined by their dimensions whose unit refers to "
+"the CRS of the project. Available types are:"
+msgstr ""
+"ポイントシンボルに使用するさまざまな種類の3D :guilabel:`Shape` "
+"を定義できます。これらのShapeでは主に寸法を定義し、その単位はプロジェクトのCRSを参照します。利用可能な種類は以下のとおりです："
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:39
+msgid ":guilabel:`Sphere` defined by a :guilabel:`Radius`"
+msgstr ":guilabel:`球` ： :guilabel:`半径` によって定義"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:40
+msgid ""
+":guilabel:`Cylinder` defined by a :guilabel:`Radius` and :guilabel:`Length`"
+msgstr ":guilabel:`円柱` ： :guilabel:`半径` と :guilabel:`長さ` によって定義"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:41
+msgid ":guilabel:`Cube` defined by a :guilabel:`Size`"
+msgstr ":guilabel:`立方体` ： :guilabel:`大きさ` によって定義"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:42
+msgid ""
+":guilabel:`Cone` defined by a :guilabel:`Top radius`, a :guilabel:`Bottom "
+"radius` and a :guilabel:`Length`"
+msgstr ""
+":guilabel:`円錐` ： :guilabel:`上部半径` 、 :guilabel:`下部半径` および :guilabel:`長さ` "
+"によって定義"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:44
+msgid ":guilabel:`Plane` defined by a :guilabel:`Size`"
+msgstr ":guilabel:`斜面の出力` ： :guilabel:`大きさ` によって定義"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:45
+msgid ""
+":guilabel:`Torus` defined by a :guilabel:`Radius` and a :guilabel:`Minor "
+"radius`"
+msgstr ":guilabel:`トーラス` ： :guilabel:`半径` と :guilabel:`短半径` によって定義"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:46
+msgid ""
+":guilabel:`3D Model`, using a 3D model file: supported formats include "
+"wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`. Models can be a file"
+" on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. Community-created models are shared on the QGIS "
+"Hub at https://plugins.qgis.org/wavefronts."
+msgstr ""
+":guilabel:`3Dモデル`、使用する3Dモデルファイル: サポートされているフォーマットは、wavefront "
+":file:`.obj`、:file:`.glTF`、:file:`.fbx` "
+"です。モデルはディスク上のファイル、リモートのURL、:ref:`プロジェクトの埋め込み <embedded_file_selector>` "
+"のいずれでも構いません。コミュニティが作成したモデルはQGIS Hubのhttps://plugins.qgis.org/wavefronts "
+"で共有されています。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:51
+msgid ""
+":guilabel:`Billboard`, defined by the :guilabel:`Billboard height` and the "
+":guilabel:`Billboard symbol` (usually based on a :ref:`marker symbol "
+"<vector_marker_symbols>`). The symbol will have a stable size. Convenient "
+"for visualizing 3D point clouds Shapes."
+msgstr ""
+":guilabel:`ビルボード` ： :guilabel:`ビルボードの高さ` と :guilabel:`ビルボードのシンボル` （通常は "
+":ref:`マーカーシンボル <vector_marker_symbols>` "
+"に基づく）によって定義。シンボルは一定のサイズとなる。3D点群形状の可視化に有用"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:55
+msgid ""
+"The :guilabel:`Altitude clamping` can be set to :guilabel:`Absolute`, "
+":guilabel:`Relative` or :guilabel:`Terrain`. The :guilabel:`Absolute` "
+"setting can be used when height values of the 3d vectors are provided as "
+"absolute measures from 0. :guilabel:`Relative` and :guilabel:`Terrain` add "
+"given elevation values to the underlying terrain elevation."
+msgstr ""
+":guilabel:`標高の制約` は、 :guilabel:`標高の絶対値（Absolute）` 、 "
+":guilabel:`地表標高との相対値（Relative）` または :guilabel:`地表標高を使う（Terrain）` を設定できます。 "
+":guilabel:`標高の絶対値` 設定は、3次元ベクタレイヤの高さの値が0 から測った絶対値で与えられている場合に使用します。 "
+":guilabel:`地表標高との相対値` や :guilabel:`地表標高を使う` は、与えられた高さの値を地形の標高値に加えます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:60
+#: ../../docs/user_manual/style_library/3d_symbols.rst:91
+#: ../../docs/user_manual/style_library/3d_symbols.rst:136
+msgid "The :ref:`shading <shading_texture>` properties can be defined."
+msgstr ":ref:`シェーディング <shading_texture>` プロパティを定義することができます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:61
+msgid ""
+"Under the :guilabel:`Transformations` frame, you can apply affine "
+"transformation to the symbol:"
+msgstr ":guilabel:`変換` フレームでは、シンボルにアフィン変換を適用できます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:64
+msgid ":guilabel:`Translation` to move objects in x, y and z axis."
+msgstr ":guilabel:`平行移動（Translation）` ：物体をx、y、z軸方向に移動"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:65
+msgid ":guilabel:`Scale` to resize the 3D shapes"
+msgstr ":guilabel:`縮尺` ：3D図形をリサイズ"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:66
+msgid ":guilabel:`Rotation` around the x-, y- and z-axis."
+msgstr ":guilabel:`回転` ：x、y、z軸まわりの回転"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:72
+msgid "Line layers"
+msgstr "ラインレイヤ"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:79
+msgid "Properties of a 3D line symbol"
+msgstr "3Dラインシンボルのプロパティ"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:81
+msgid ""
+"Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can define"
+" the :guilabel:`Extrusion` of the vector lines. If the lines do not have "
+"z-values, you can define the 3d volumes with this setting."
+msgstr ""
+":guilabel:`幅` と :guilabel:`高さ` の設定の下には、ベクタラインの :guilabel:`押出` "
+"の設定があります。ラインがz-値を持っていない場合には、この設定で3Dボリュームを定義することができます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:84
+msgid ""
+"With the :guilabel:`Altitude clamping` you define the position of the 3D "
+"lines relative to the underlying terrain surface, if you have included "
+"raster elevation data or other 3D vectors."
+msgstr ""
+"組み込みのラスタ標高データや他の3Dベクタレイヤがある場合に、 :guilabel:`標高の制約` "
+"を使用して地形表面に対する3Dラインの位置を定義することができます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:87
+msgid ""
+"The :guilabel:`Altitude binding` defines how the feature is clamped to the "
+"terrain. Either every :guilabel:`Vertex` of the feature will be clamped to "
+"the terrain or this will be done by the :guilabel:`Centroid`."
+msgstr ""
+":guilabel:`標高の拘束` は、地物がどのように地形に拘束されるのかを定義します。地物の各 :guilabel:`頂点` で拘束されるか、または"
+" :guilabel:`重心` のいずれかです。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:90
+msgid "It is possible to |checkbox|:guilabel:`Render as simple 3D lines`."
+msgstr "シンプルな |checkbox|:guilabel:`3D線として描画` することもできます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:202
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:96
+msgid "Polygon Layers"
+msgstr "ポリゴンレイヤ"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:103
+msgid "Properties of a 3D polygon symbol"
+msgstr "3Dポリゴンシンボルのプロパティ"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:105
+msgid ""
+"As for the other ones, :guilabel:`Height` can be defined in CRS units. You "
+"can also use the |dataDefine| button to overwrite the value with a custom "
+"expression, a variable or an entry of the attribute table"
+msgstr ""
+"他の3Dシンボル同様、 :guilabel:`高さ` をCRSの単位で定義できます。また、 |dataDefine| "
+"ボタンを使用して、カスタム式や変数、属性テーブルのエントリなどで値を上書きすることができます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:204
+msgid "dataDefine"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:109
+msgid ""
+"Again, :guilabel:`Extrusion` is possible for missing z-values. Also for the "
+"extrusion you can use the |dataDefine| button in order to use the values of "
+"the vector layer and have different results for each polygon:"
+msgstr ""
+"同様に、z-値の設定が無い場合の :guilabel:`押出` の設定もできます。また、押出にも |dataDefine| "
+"ボタンが使用でき、ベクタレイヤの値を使って各ポリゴンで異なる押し出し結果を得ることができます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:116
+msgid "Data Defined Extrusion"
+msgstr "データ定義の押出"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:118
+msgid ""
+"The :guilabel:`Altitude clamping`, :guilabel:`Altitude binding` can be "
+"defined as explained above."
+msgstr "上で説明したものと同様の :guilabel:`標高の制約` 、 :guilabel:`標高の拘束` を定義することができます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:120
+msgid "The :guilabel:`Culling mode` to apply to the symbol; it can be:"
+msgstr "シンボルに適用する :guilabel:`カリングモード` には、以下の選択肢があります："
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:122
+msgid ""
+":guilabel:`No Culling`: this can help to avoid seemingly missing surfaces "
+"when polygonZ/multipatch data do not have consistent ordering of vertices "
+"(e.g. all clock-wise or counter clock-wise)"
+msgstr ""
+":guilabel:`Cullingなし` ：この設定は、polygonZ/multipatch "
+"データの頂点の順序に一貫性（例：全て時計回りあるいは反時計回り）がない場合に、サーフェスが欠けて見えることを防ぎます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:125
+msgid ":guilabel:`Front`"
+msgstr ":guilabel:`前面カリング`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:126
+msgid "or :guilabel:`Back`"
+msgstr "または、 :guilabel:`背面カリング`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:127
+msgid ""
+"The :guilabel:`Rendered facade` determines the faces to display. Possible "
+"values are :guilabel:`No facades`, :guilabel:`Walls`, :guilabel:`Roofs`, or "
+":guilabel:`Walls and roofs`"
+msgstr ""
+":guilabel:`ファサード` は、表示される面を決定します。可能な値は、 :guilabel:`ファサードなし` 、 :guilabel:`壁` "
+"、 :guilabel:`屋根` 、 :guilabel:`壁と屋根` です。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:130
+msgid ""
+"|checkbox| :guilabel:`Add back faces`: for each triangle, creates both front"
+" and back face with correct normals - at the expense of increased number of "
+"vertex data. This option can be used to fix shading issues (e.g., due to "
+"data with inconsistent order of vertices)."
+msgstr ""
+"|checkbox| :guilabel:`背面を追加` "
+"：各三角形に背面を追加し、表面・裏面の両方に正しい法線を生成しますが、頂点データ数の増加という犠牲を伴います。このオプションは、シェーディングの問題（例えば頂点の順序が整合していないデータに起因する）を修正するために使用できます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:134
+msgid ""
+"|checkbox| :guilabel:`Invert normals (experimental)`: can be useful for "
+"fixing clockwise/counter-clockwise face vertex orders"
+msgstr "|checkbox| :guilabel:`法線の反転（試験的）` ：面の頂点の時計回り・反時計回りを修正するのに便利です。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:137
+msgid ""
+"Display of the |checkbox| :guilabel:`Edges` of the symbols can be enabled "
+"and assigned a :guilabel:`Width` and :guilabel:`Color`."
+msgstr ""
+"シンボルの |checkbox| :guilabel:`エッジの出力` を有効にすることができ、 :guilabel:`幅` と "
+":guilabel:`色` を指定できます。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:140
+msgid "**Combination for best rendering of 3D data**"
+msgstr "**3Dデータのレンダリングのベストな組み合わせ**"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:142
+msgid ""
+":guilabel:`Culling mode`, :guilabel:`Add back faces` and :guilabel:`Invert "
+"normals` are all meant to fix the look of 3D data if it does not look right."
+" Typically when loading some data, it is best to first try ``culling "
+"mode=back`` and ``add back faces=disabled`` - it is the most efficient. If "
+"the rendering does not look correct, try ``add back faces=enabled`` and keep"
+" ``culling mode=no culling``. Other combinations are more advanced and "
+"useful only in some scenarios based on how mixed up is the input dataset."
+msgstr ""
+":guilabel:`カリングモード` 、 :guilabel:`背面を追加` および :guilabel:`法線の反転` "
+"はすべて、3Dデータの見た目が正しくない場合に修正するためのオプションです。通常は、あるデータを読み込む場合にはまず ``カリングモード = 反転`` "
+"と ``背面を追加 = 無効`` を試してみるのが良いでしょう。これが最も効率的です。レンダリングが正しく表示されない場合には、 ``背面を追加 = "
+"有効`` と、 ``カリングモード = Cullingなし`` "
+"を試してみてください。他の組み合わせはより高度で、入力データセットの頂点順序の混ざり具合に応じた一部のシナリオのみで有用です。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:153
+msgid "Shading the texture"
+msgstr "テクスチャのシェーディング"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:155
+msgid ""
+"Shading helps you reveal 3d details of objects which may otherwise be hidden"
+" due to the scene's lighting. Ultimately, it's an easier material to work "
+"with as you don't need to worry about setting up appropriate scene lighting "
+"in order to visualise features."
+msgstr ""
+"シェーディングは、シーンの照明によって隠れてしまうオブジェクトの3Dディテールを明らかにするのに役立ちます。地物の可視化にとって適切なシーン照明の設定に悩む必要がないため、結局のところ、作業がより簡単になる設定項目です。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:160
+msgid ""
+"Various techniques of shading are used in QGIS and their availability "
+"depends on the geometry type of the symbol:"
+msgstr "QGISではさまざまなシェーディング手法を使用できますが、手法が利用できるかどうかはシンボルのジオメトリタイプに依存します："
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:163
+msgid ""
+":guilabel:`Realistic (Phong)`: describes the way a surface reflects light as"
+" a combination of the :guilabel:`Diffuse` reflection of rough surfaces with "
+"the :guilabel:`Specular` reflection of shiny surfaces "
+"(:guilabel:`Shininess`). It also includes an :guilabel:`Ambient` option to "
+"account for the small amount of light that is scattered about the entire "
+"scene. Use the :guilabel:`Opacity` slider to render semi-transparent objects"
+" in 3D. Read more at "
+"https://en.wikipedia.org/wiki/Phong_reflection_model#Description"
+msgstr ""
+":guilabel:`Phongシェーダ` ：これは、表面が光を反射する方法を、粗い表面の :guilabel:`拡散光` の反射と、光沢のある表面の "
+":guilabel:`鏡面光` の反射（ :guilabel:`シャイネス（輝き）` "
+"）の組み合わせとして記述します。また、シーン全体に散乱する弱い光を考慮するための :guilabel:`環境光` "
+"のオプションもあります。:guilabel:`不透明度` スライダーを使って、半透明のオブジェクトを3Dでレンダリングします。詳細は "
+"https://en.wikipedia.org/wiki/Phong_reflection_model#Description を参照してください。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:170
+msgid ""
+":guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic "
+"(Phong)` except that an image is used as :guilabel:`Diffuse Texture`. The "
+"image can be a file on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. The :guilabel:`Texture scale` and "
+":guilabel:`Texture rotation` are required. Use the :guilabel:`Opacity` "
+"slider to render semi-transparent objects in 3D."
+msgstr ""
+":guilabel:`Phongシェーダ（テキスチャ）`: :guilabel:`Diffuseテキスチャ` として画像が使用される以外は "
+":guilabel:`Phongシェーダ` と同じです。画像はディスク上のファイル、リモートのURL、または :ref:`埋め込みファイルを抽出 "
+"<embedded_file_selector>` を使用できます。:guilabel:`テキスチャのスケール` と "
+":guilabel:`テキスチャの回転` が必要です。3Dで半透明のオブジェクトをレンダリングするには :guilabel:`不透明度` "
+"スライダーを使用します。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:176
+msgid ""
+":guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-"
+"tones so that edge lines and highlights remain visually prominent. Along "
+"with the :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` "
+"options, you need to provide a :guilabel:`Warm` color (for surface facing "
+"toward the light) and a :guilabel:`Cool` color (for the ones facing away). "
+"Also, the relative contributions to the cool and warm colors by the diffuse "
+"color are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties "
+"respectively. See also https://en.wikipedia.org/wiki/Gooch_shading"
+msgstr ""
+":guilabel:`CAD（Gooch）` ：この手法は、エッジラインやハイライトが視覚的に目立つように、中間色のみでシェーディングを行います。 "
+":guilabel:`拡散光` 、 :guilabel:`鏡面光` 、 :guilabel:`シャイネス` オプションに加えて、 "
+":guilabel:`Warm` カラー（光源に向いている面の色）と :guilabel:`Cool` "
+"カラー（光源とは反対にある面の色）を指定する必要があります。また、拡散色による cool と warm の相対的な寄与は、 "
+":guilabel:`アルファ` と :guilabel:`Beta` のプロパティでそれぞれ制御されます。 "
+"https://en.wikipedia.org/wiki/Gooch_shading も参照してください。"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:184
+msgid ":guilabel:`Embedded Textures` with 3D models shape"
+msgstr ":guilabel:`埋め込みテキスチャ` ：3Dモデルの場合に利用可"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:188
+msgid "Application example"
+msgstr "適用例"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:190
+msgid ""
+"To go through the settings explained above you can have a look at "
+"https://app.merginmaps.com/projects/saber/luxembourg/tree."
+msgstr ""
+"上記で説明した設定を確認するには、https://app.merginmaps.com/projects/saber/luxembourg/tree "
+"を見てみましょう。"

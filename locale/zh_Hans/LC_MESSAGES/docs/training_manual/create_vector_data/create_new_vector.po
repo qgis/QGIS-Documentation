@@ -1,0 +1,676 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:2
+msgid "|LS| Creating a New Vector Dataset"
+msgstr "课: 创建新的矢量数据集"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:4
+msgid ""
+"The data that you use has to come from somewhere. For most common "
+"applications, the data exists already; but the more particular and "
+"specialized the project, the less likely it is that the data will already be"
+" available. In such cases, you'll need to create your own new data."
+msgstr ""
+"您使用的数据必然来自某处。对于大多数常见的应用程序，数据已经存在；但是，项目越具体、越专业，数据可用的可能性就越小。这种情况下，您需要创建自己的新数据。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:9
+msgid "**The goal for this lesson:** To create a new vector dataset."
+msgstr "**本课目标:** 创建新的矢量数据集。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:12
+msgid "|basic| |FA| The Layer Creation Dialog"
+msgstr "|basic| 跟我做: 图层创建对话框"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:382
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:14
+msgid ""
+"Before you can add new vector data, you need a vector dataset to add it to. "
+"In our case, you'll begin by creating new data entirely, rather than editing"
+" an existing dataset. Therefore, you'll need to define your own new dataset "
+"first."
+msgstr ""
+"在添加新的矢量数据之前，需要矢量数据集才能将其添加。在我们的示例中，您将从完全创建新数据开始，而不是编辑现有数据集。因此，首先需要定义自己的新数据集。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:18
+msgid "Open QGIS and create a new blank project."
+msgstr "打开QGIS并创建一个新的空白工程。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:19
+msgid ""
+"Navigate to and click on the menu entry :menuselection:`Layer --> Create "
+"Layer --> New Shapefile Layer`. You'll be presented with the :guilabel:`New "
+"Shapefile Layer` dialog, which will allow you to define a new layer."
+msgstr ""
+"导航至并单击菜单项 :menuselection:`图层 --> 创建图层 --> 新建Shapefile图层` 。您将看到 "
+":guilabel:`新建Shapefile图层` 对话框，该对话框允许您定义一个新图层。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:27
+msgid ""
+"Click :guilabel:`...` for the :guilabel:`File name` field. A save dialog "
+"will appear."
+msgstr "单击用于 :guilabel:`文件名` 字段的 :guilabel:`...` 按钮，将弹出保存对话框。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:29
+msgid "Navigate to the :file:`exercise_data` directory."
+msgstr "导航到 :file:`exercise_data` 目录。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:30
+msgid "Save your new layer as :file:`school_property.shp`."
+msgstr "将新图层另存为 :file:`school_property.shp` 。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:32
+msgid ""
+"It's important to decide which kind of dataset you want at this stage. Each "
+"different vector layer type is \"built differently\" in the background, so "
+"once you've created the layer, you can't change its type."
+msgstr "在此阶段，确定所需数据集的类型是非常重要的。每种不同的矢量图层类型在后台是以 \"不同方式构建\" 的，因此一旦创建了图层，就无法更改其类型。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:36
+msgid ""
+"For the next exercise, we're going to create new features which describe "
+"areas. For such features, you'll need to create a polygon dataset."
+msgstr "在下一个练习，我们将创建描述面积的新要素。对于此类要素，需要创建多边形数据集。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:39
+msgid ""
+"For :guilabel:`Geometry Type`, select :guilabel:`Polygon` from the drop down"
+" menu:"
+msgstr "对于 :guilabel:`几何图形类型` ，请从下拉菜单中选择 :guilabel:`多边形` ："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:44
+msgid ""
+"This has no impact on the rest of the dialog, but it will cause the correct "
+"type of geometry to be used when the vector dataset is created."
+msgstr "这对对话框的其余部分没有影响，但会影响在创建矢量数据集时使用正确类型的几何图形。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:47
+msgid ""
+"The next field allows you to specify the Coordinate Reference System, or "
+"CRS. CRS is a method of associating numerical coordinates with a position on"
+" the surface of the Earth. See the User Manual on :ref:`Working with "
+"Projections <label_projections>` to learn more."
+msgstr ""
+"下一个字段允许您指定坐标参照系或CRS。CRS是一种将数字坐标与地球表面位置相关联的方法。有关详细信息，请参阅用户手册中的 :ref:`使用投影 "
+"<label_projections>` 。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:53
+msgid ""
+"For this example we will use the default CRS associated with this project, "
+"which is WGS84."
+msgstr "在本例中，我们将使用与该工程相关联的默认CRS，即WGS84。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:59
+msgid ""
+"Next there is a collection of fields grouped under :guilabel:`New Field`. By"
+" default, a new layer has only one attribute, the ``id`` field (which you "
+"should see in the :guilabel:`Fields list`) below. However, in order for the "
+"data you create to be useful, you actually need to say something about the "
+"features you'll be creating in this new layer. For our current purposes, it "
+"will be enough to add one field called ``name`` that will hold ``Text data``"
+" and will be limited to text length of ``80`` characters."
+msgstr ""
+"接下来是字段集合，分组在 :guilabel:`新建字段` 下。默认情况下，新图层只有一个属性，即 ``id`` 字段 (您应该在 "
+":guilabel:`字段列表` "
+"中能看到)。然而，为了使您创建的数据具有实用性，需要说明您将在此新建图层中创建要素的属性。就我们目前的目标而言，添加一个名为 ``name`` "
+"的字段就足够了，该字段为 ``文本数据`` ，并且将文本长度限制为 ``80`` 个字符。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:67
+msgid ""
+"Replicate the setup below, then click the :guilabel:`Add to Fields List` "
+"button:"
+msgstr "如以下设置，然后单击 :guilabel:`添加到字段列表` 按钮："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:72
+msgid "Check that your dialog now looks like this:"
+msgstr "检查对话框是否如下所示："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:77
+msgid "Click :guilabel:`OK`"
+msgstr "单击 :guilabel:`确定`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:79
+msgid "The new layer should appear in your :guilabel:`Layers` panel."
+msgstr "新图层应该出现在 :guilabel:`图层` 面板。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:84
+msgid "|basic| |FA| Data Sources"
+msgstr "|basic| 跟我做: 数据源"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:86
+msgid ""
+"When you create new data, it obviously has to be about objects that really "
+"exist on the ground. Therefore, you'll need to get your information from "
+"somewhere."
+msgstr "当您创建新数据时，它显然必须与地面上存在的对象有关。因此，您需要从某处获取相关信息。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:90
+msgid ""
+"There are many different ways to obtain data about objects. For example, you"
+" could use a GPS to capture points in the real world, then import the data "
+"into QGIS afterwards. Or you could survey points using a theodolite, and "
+"enter the coordinates manually to create new features. Or you could use the "
+"digitizing process to trace objects from remote sensing data, such as "
+"satellite imagery or aerial photography."
+msgstr ""
+"获取有关对象的数据有许多不同的方法。例如，您可以使用GPS捕捉现实世界中的点，然后将数据导入QGIS；或者使用经纬仪测量点，然后手动输入坐标以创建新要素；或者使用数字化过程从遥感数据中追踪对象，比如卫星影像或航空摄影。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:97
+msgid ""
+"For our example, you'll be using the digitizing approach. Sample raster "
+"datasets are provided, so you'll need to import them as necessary."
+msgstr "在此示例，您将使用数字化方法。教程提供了示例栅格数据集，因此您需要根据实际导入相关数据集。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:100
+msgid "Click on |dataSourceManager| :sup:`Data Source Manager` button."
+msgstr "单击 |dataSourceManager| :sup:`数据源管理器` 按钮。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:387
+msgid "dataSourceManager"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:101
+msgid "Select |raster| :guilabel:`Raster` on the left side."
+msgstr "选择左侧的 |raster| :guilabel:`栅格` 。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:390
+msgid "raster"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:102
+msgid "In the :guilabel:`Source` panel, click on the :guilabel:`...` button:"
+msgstr "在 :guilabel:`源` 面板，单击 :guilabel:`...` 按钮："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:103
+msgid "Navigate to :file:`exercise_data/raster/`."
+msgstr "导航至 :file:`exercise_data/raster/` 。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:104
+msgid "Select the file :file:`3420C_2010_327_RGB_LATLNG.tif`."
+msgstr "选择文件 :file:`3420C_2010_327_RGB_LATLNG.tif` 。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:105
+msgid "Click :guilabel:`Open` to close the dialogue window."
+msgstr "单击 :guilabel:`打开` 关闭对话窗口。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:110
+msgid ""
+"Click :guilabel:`Add` and :guilabel:`Close`. An image will load into your "
+"map."
+msgstr "单击 :guilabel:`添加` 和 :guilabel:`关闭` 按钮，图像将加载到地图中。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:115
+msgid ""
+"If you don't see an aerial image appear, select the new layer, right click, "
+"and choose :guilabel:`Zoom to Layer` in the context menu."
+msgstr "如果没有看到航拍图像出现，请选择新图层，右键单击，然后在上下文菜单中选择 :guilabel:`缩放到图层` 。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:121
+msgid ""
+"Click on the |zoomIn| :sup:`Zoom In` button, and zoom to the area "
+"highlighted in blue below:"
+msgstr "单击 |zoomIn| :sup:`放大` 按钮，然后放大到下面以蓝色突出显示的区域："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:401
+msgid "zoomIn"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:127
+msgid "Now you are ready to digitize these three fields:"
+msgstr "现在，您可以数字化这三块场地："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:132
+msgid ""
+"Before starting to digitize, let's move the ``school_property`` layer above "
+"the aerial image."
+msgstr "在开始数字化之前，让我们将 ``school_property`` 图层移动到航拍图像上面。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:134
+msgid ""
+"Select ``school_property`` layer in the :guilabel:`Layers` pane and drag it "
+"to the top."
+msgstr "在 :guilabel:`图层` 窗格选择 ``school_property`` 图层，将其拖动到顶部。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:139
+msgid ""
+"In order to begin digitizing, you'll need to enter **edit mode**. GIS "
+"software commonly requires this to prevent you from accidentally editing or "
+"deleting important data. Edit mode is switched on or off individually for "
+"each layer."
+msgstr "要开始数字化，需要进入 **编辑模式** 。GIS软件通常都是这样做，防止意外编辑或删除重要数据。每个图层的编辑模式分别打开或关闭。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:143
+msgid "To enter edit mode for the ``school_property`` layer:"
+msgstr "要进入 ``school_property`` 图层的编辑模式："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:145
+msgid ""
+"Click on the ``school_property`` layer in the :guilabel:`Layers` panel to "
+"select it."
+msgstr "单击 :guilabel:`图层` 面板中的 ``school_property`` 图层，将其选中。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:146
+msgid "Click on the |toggleEditing| :sup:`Toggle Editing` button."
+msgstr "单击 |toggleEditing| :sup:`切换编辑模式` 按钮。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:395
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:148
+msgid ""
+"If you can't find this button, check that the :guilabel:`Digitizing` toolbar"
+" is enabled. There should be a check mark next to the :menuselection:`View "
+"--> Toolbars --> Digitizing` menu entry."
+msgstr ""
+"如果找不到此按钮，请检查 :guilabel:`数字化` 工具栏是否已启用。 :menuselection:`视图 --> 工具栏 --> 数字化` "
+"菜单项旁边应该有一个复选标记。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:152
+msgid ""
+"As soon as you are in edit mode, you'll see that some digitizing tools have "
+"become active:"
+msgstr "在编辑模式下，您将发现一些数字化工具已处于激活状态："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:155
+msgid "|capturePolygon| :sup:`Capture Polygon`"
+msgstr "|capturePolygon| :sup:`添加多边形要素`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:385
+msgid "capturePolygon"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:156
+msgid "|vertexToolActiveLayer| :sup:`Vertex Tool`"
+msgstr "|vertexToolActiveLayer| :sup:`顶点工具`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:399
+msgid "vertexToolActiveLayer"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:158
+msgid ""
+"Other relevant buttons are still inactive, but will become active when we "
+"start interacting with our new data."
+msgstr "其他相关按钮仍处于非激活状态，但在我们开始与新数据交互时将变为激活状态。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:161
+msgid ""
+"Notice that the layer ``school_property`` in the :guilabel:`Layers` panel "
+"now has the pencil icon, indicating that it is in edit mode."
+msgstr "请注意， :guilabel:`图层` 面板中的图层 ``school_property`` 现在有铅笔图标，表示它处于编辑模式。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:164
+msgid ""
+"Click on the |capturePolygon| :sup:`Capture Polygon` button to begin "
+"digitizing our school fields."
+msgstr "单击 |capturePolygon| :sup:`添加多边形要素` 按钮开始数字化我们的校园场地。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:167
+msgid ""
+"You'll notice that your mouse cursor has become a crosshair. This allows you"
+" to more accurately place the points you'll be digitizing. Remember that "
+"even when you're using the digitizing tool, you can zoom in and out on your "
+"map by rolling the mouse wheel, and you can pan around by holding down the "
+"mouse wheel and dragging around in the map."
+msgstr ""
+"您可能会注意到鼠标光标变成了十字形状，这样可以更准确地放置要数字化的点。请记住，即使在使用数字化工具时，也可以通过滚动鼠标滚轮来放大和缩小地图，或是按住鼠标滚轮并在地图中拖动进行平移操作。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:173
+msgid "The first feature you'll be digitizing is the |schoolAreaType1|:"
+msgstr "您将数字化的第一个要素是 |schoolAreaType1|:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:178
+msgid ""
+"Start digitizing by clicking on a point somewhere along the edge of the "
+"field."
+msgstr "通过单击沿着场地边缘某处的点开始数字化。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:179
+msgid ""
+"Place more points by clicking further along the edge, until the shape you're"
+" drawing completely covers the field."
+msgstr "通过沿边缘逐步单击来放置更多点，直到所绘制的形状完全覆盖该区域。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:185
+msgid ""
+"After placing your last point, right click to finish drawing the polygon. "
+"This will finalize the feature and show you the :guilabel:`Attributes` "
+"dialog."
+msgstr "放置最后一点后，右键单击以完成多边形的绘制。这将完成要素绘制并显示 :guilabel:`要素属性` 对话框。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:187
+msgid "Fill in the values as below:"
+msgstr "填写如下值："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:192
+msgid "Click :guilabel:`OK`, and you have created a new feature!"
+msgstr "单击 :guilabel:`确定` ，您已经创建了一个新要素！"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:197
+msgid "In the :guilabel:`Layers` panel select the ``school_property`` layer."
+msgstr "在 :guilabel:`图层` 面板，选择 ``school_property`` 图层。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:198
+msgid ""
+"Right click and choose :guilabel:`Open Attribute Table` in the context menu."
+msgstr "右键单击，然后在上下文菜单中选择 :guilabel:`打开属性表` 。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:203
+msgid ""
+"In the table you will see the feature you just added. While in edit mode you"
+" can update the attributes data by double click on the cell you want to "
+"update."
+msgstr "在属性表，您将看到刚才添加的要素。在编辑模式下，可以双击要更新的单元格来更新属性数据。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:210
+msgid "Close the attribute table."
+msgstr "关闭属性表。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:211
+msgid ""
+"To save the new feature we just created, click on |saveEdits| :sup:`Save "
+"Edits` button."
+msgstr "要保存我们刚刚创建的新要素，请单击 |saveEdits| :sup:`保存图层编辑` 按钮。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:392
+msgid "saveEdits"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:213
+msgid ""
+"Remember, if you've made a mistake while digitizing a feature, you can "
+"always edit it after you're done creating it. If you've made a mistake, "
+"continue digitizing until you're done creating the feature as above. Then:"
+msgstr "请记住，如果您在数字化要素时出错，则始终可以在完成创建后对其进行编辑。如果出现错误，请继续数字化，直到完成上述要素的创建。然后："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:217
+msgid "Click on |vertexToolActiveLayer| :sup:`Vertex Tool` button."
+msgstr "单击 |vertexToolActiveLayer| :sup:`顶点工具` 按钮。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:218
+msgid ""
+"Hover the mouse over a vertex you want to move and left click on the vertex."
+msgstr "将鼠标悬停在要移动的顶点上，然后左键单击该顶点。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:219
+msgid ""
+"Move the mouse to the correct location of the vertex, and left click. This "
+"will move the vertex to the new location."
+msgstr "将鼠标移动到顶点的正确位置，然后单击鼠标左键。这会将顶点移动到新位置。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:227
+msgid ""
+"The same procedure can be used to move a line segment, but you will need to "
+"hover over the midpoint of the line segment."
+msgstr "可以使用相同的步骤移动线段，但需要将鼠标悬停在线段的中点上。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:230
+msgid ""
+"If you want to undo a change, you can press the |undo| :sup:`Undo` button or"
+" :kbd:`Ctrl+Z`."
+msgstr "如果要撤消更改，可以按 |undo| :sup:`撤消` 按钮或 :kbd:`Ctrl+Z` 。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:397
+msgid "undo"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:232
+msgid ""
+"Remember to save your changes by clicking the |saveEdits| :sup:`Save Edits` "
+"button."
+msgstr "请记住通过单击 |saveEdits| :sup:`保存图层编辑` 按钮保存更改。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:233
+msgid ""
+"When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to"
+" get out of edit mode."
+msgstr "编辑完成后，单击 |toggleEditing| :sup:`切换编辑模式` 按钮退出编辑模式。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:238
+msgid "|basic| |TY| Digitizing Polygons"
+msgstr "|basic| 试一试 数字化多边形"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:240
+msgid ""
+"Digitize the school itself and the upper field. Use this image to assist "
+"you:"
+msgstr "使用此图像可以帮助您将学校和上面的场地数字化："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:245
+msgid "Remember that each new feature needs to have a unique ``id`` value!"
+msgstr "请记住，每个新要素都需要有一个唯一的 ``id`` 值！"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:247
+msgid ""
+"When you're done adding features to a layer, remember to save your edits and"
+" then exit edit mode."
+msgstr "向图层添加要素后，请记住保存编辑，然后退出编辑模式。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:250
+msgid ""
+"You can style the fill, outline and label placement and formatting of the "
+"``school_property`` using techniques learnt in earlier lessons."
+msgstr "您可以使用之前课程中学习的技术，设置 ``school_property`` 的填充、轮廓和标注位置及格式化的样式。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:256
+msgid "|moderate| |FA| Using Vertex Editor Table"
+msgstr "|moderate| 跟我做: 使用顶点编辑器表格"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:389
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:258
+msgid ""
+"Another way to edit a feature is to manually enter the actual coordinate "
+"values for each vertex using the :guilabel:`Vertex Editor` table."
+msgstr "编辑要素的另一种方法是使用 :guilabel:`顶点编辑器` 表格，手动输入每个顶点的实际坐标值。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:262
+msgid "Make sure you are in edit mode on layer ``school_property``."
+msgstr "确保图层 ``school_property`` 处于编辑模式。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:263
+msgid ""
+"If not already activated, click on |vertexToolActiveLayer| :sup:`Vertex "
+"Tool` button."
+msgstr "如果尚未激活，请单击 |vertexToolActiveLayer| :sup:`顶点工具` 按钮。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:265
+msgid ""
+"Move the mouse over one of the polygon features you created in the "
+"``school_property`` layer and right click on it. This will select the "
+"feature and a :guilabel:`Vertex Editor` pane will appear."
+msgstr ""
+"将鼠标移到在 ``school_property`` 图层创建的一个多边形要素上，然后右键单击。这将选择该要素，并显现 "
+":guilabel:`顶点编辑器` 窗格。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:272
+msgid ""
+"This table contains the coordinates for the vertices of the feature. Notice "
+"there are seven vertices for this feature, but only six are visually "
+"identified in the map area. Upon closer inspection, one will notice that row"
+" 0 and 6 have identical coordinates. These are the start and end vertices of"
+" the feature geometry, and are required in order to create a closed polygon "
+"feature."
+msgstr ""
+"此表包含要素顶点的坐标。请注意，此要素有七个顶点，但在地图区域只有六个是视觉识别的。仔细检查后，会发现第0行和第6行的坐标相同。这些是要素几何图形的起始和终止顶点，是创建闭合多边形要素所必需的。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:280
+msgid ""
+"Click and drag a box over a vertex, or multiple vertices, of the selected "
+"feature."
+msgstr "单击并拖动一个框，此框包含选中要素的一个顶点或多个顶点。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:285
+msgid ""
+"The selected vertices will change to a color blue and the :guilabel:`Vertex "
+"Editor` table will have the corresponding rows highlighted, which contain "
+"the coordinates of the vertices."
+msgstr "选中的顶点将变为蓝色， :guilabel:`顶点编辑器` 表格将高亮显示相应的行，其中包含顶点的坐标。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:292
+msgid ""
+"To update a coordinate, double left click on the cell in the table that you "
+"want to edit and enter the updated value. In this example, the x coordinate "
+"of row ``4`` is updated from ``20.4450`` to ``20.4444``."
+msgstr ""
+"要更新坐标，请双击表格中要编辑的单元格，然后输入待更新的值。在本例中，第 ``4`` 行的 x 坐标从 ``20.4450`` 更新为 "
+"``20.4444``  。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:300
+msgid ""
+"After entering the updated value, hit the enter key to apply the change. You"
+" will see the vertex move to the new location in the map window."
+msgstr "输入更新的值后，按 Enter 键应用更改。您将看到顶点在地图窗口中移动到新的位置。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:302
+msgid ""
+"When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to"
+" get out of edit mode, and save your edits."
+msgstr "编辑完成后，单击 |toggleEditing| :sup:`切换编辑模式` 按钮以退出编辑模式，并保存编辑内容。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:306
+msgid "|basic| |TY| Digitizing Lines"
+msgstr "|basic| 试一试 数字化线"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:307
+msgid ""
+"We are going to digitize two routes which are not already marked on the "
+"roads layer; one is a path, the other is a track. Our path runs along the "
+"southern edge of the suburb of Railton, starting and ending at marked roads:"
+msgstr ""
+"我们将数字化两条尚未在道路图层上标记的路线：一条是路径，另一条是轨迹。我们的路径沿着 Railton 郊区的南部边缘延伸，起点和终点为标记道路："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:315
+msgid "Our track is a little further to the south:"
+msgstr "我们的轨迹在更往南的地方："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:320
+msgid ""
+"If the *roads* layer is not yet in your map, then add the :file:`roads` "
+"layer from the GeoPackage file :file:`training-data.gpkg` included in the "
+":file:`exercise_data` folder of the training data you downloaded. You can "
+"read :ref:`load_geopackage` for a how-to."
+msgstr ""
+"如果 *roads* 图层未包含在地图中，请从您下载的训练数据 :file:`exercise_data` 文件夹中查找 GeoPackage "
+"文件，并在 :file:`training-data.gpkg` 里找到 :file:`roads` 图层，添加到地图。您可以阅读 "
+":ref:`load_geopackage` 章节以获取操作指南。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:324
+msgid ""
+"Create a new ESRI Shapefile line dataset called ``routes.shp`` in the "
+":file:`exercise_data` directory, with attributes ``id`` and ``type`` (use "
+"the approach above to guide you.)"
+msgstr ""
+"在 :file:`exercise_data` 目录创建一个名为 ``routes.shp`` 的新 ESRI Shapefile 线数据集，属性里包含"
+" ``id`` 和 ``type`` 两个字段 (请使用上述方法指导操作)。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:327
+msgid "Activate edit mode on the :guilabel:`routes` layer."
+msgstr "激活 :guilabel:`routes` 图层的编辑模式。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:328
+msgid ""
+"Since you are working with a line feature, click on the |captureLine| "
+":sup:`Add Line` button to initiate line digitizing mode."
+msgstr "由于您正在处理线要素，请单击 |captureLine| :sup:`添加线要素` 按钮以启动线数字化模式。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:383
+msgid "captureLine"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:331
+msgid ""
+"One at a time, digitize the path and the track on the ``routes`` layer. Try "
+"to follow the routes as accurately as possible, adding additional points "
+"along corners or turns."
+msgstr "每次一个，在 ``routes`` 图层上数字化路径和轨迹。尽量准确地沿着路线走，在拐角或转弯处多增加点。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:334
+msgid "Set the ``type`` attribute value to ``path`` or ``track``."
+msgstr "将 ``type`` 属性值设置为 ``path`` 或 ``track`` 。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:335
+msgid ""
+"Use the :guilabel:`Layer Properties` dialog to add styling to your routes. "
+"Feel free to use different styles for paths and tracks."
+msgstr "使用 :guilabel:`图层属性` 对话框为 routes 添加样式，可以随意使用不同的路径和轨迹样式。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:337
+msgid ""
+"Save your edits and toggle off editing mode by pressing the |toggleEditing| "
+":sup:`Toggle Editing` button."
+msgstr "保存编辑并按 |toggleEditing| :sup:`切换编辑模式` 按钮切换关闭编辑模式。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:340
+msgid "Answer"
+msgstr "回答"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:343
+msgid ""
+"The symbology doesn't matter, but the results should look more or less like "
+"this:"
+msgstr "符号并不重要，但结果应该大致如下："
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:351
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:353
+msgid ""
+"Now you know how to create features! This course doesn't cover adding point "
+"features, because that's not really necessary once you've worked with more "
+"complicated features (lines and polygons). It works exactly the same, except"
+" that you only click once where you want the point to be, give it attributes"
+" as usual, and then the feature is created."
+msgstr ""
+"现在您知道如何创建要素了！本课程不包括添加点要素，因为一旦您学会处理更复杂的要素 "
+"(线和多边形)，就没有必要了。它的工作原理完全相同，只需单击一次所需的点的位置，并为其赋予属性，然后就创建了要素。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:359
+msgid ""
+"Knowing how to digitize is important because it's a very common activity in "
+"GIS programs."
+msgstr "了解如何数字化非常重要，因为这是 GIS 程序中非常常见的操作。"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:363
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:365
+msgid ""
+"Features in a GIS layer aren't just pictures, but objects in space. For "
+"example, adjacent polygons know where they are in relation to one another. "
+"This is called **topology**. In the next lesson you'll see an example of why"
+" this can be useful."
+msgstr ""
+"GIS图层中的要素不仅仅是图片，而且还是空间中的对象。例如，邻接多边形知道它们彼此之间的关系，这称为 **拓扑** "
+"。在下一课，您将看到一个示例，说明为什么这会很有用。"

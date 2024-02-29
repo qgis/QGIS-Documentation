@@ -1,0 +1,446 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:2
+msgid "|LS| GRASS Tools"
+msgstr "|LS| GRASS-gereedschap"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:4
+msgid ""
+"In this lesson we will present a selection of tools to give you an idea of "
+"the capabilities of GRASS."
+msgstr ""
+"In deze les zullen we een selectie van gereedschappen presenteren om u een "
+"idee van de mogelijkheden van GRASS te geven."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:11
+msgid "|basic| |FA| Create an aspect map"
+msgstr "|basic| |FA| Een kaart van de ligging maken"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:200
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/grass/grass_tools.rst:13
+#: ../../docs/training_manual/grass/grass_tools.rst:36
+msgid "Open the :guilabel:`GRASS Tools` tab"
+msgstr "Open de tab :guilabel:`GRASS-gereedschap`"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:14
+#: ../../docs/training_manual/grass/grass_tools.rst:37
+msgid ""
+"Load the :file:`g_dem` raster layer from the :guilabel:`grass_mapset` Mapset"
+msgstr ""
+"Laad de rasterlaag :file:`g_dem` uit de mapset :guilabel:`grass_mapset`"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:15
+msgid ""
+"Look for the :guilabel:`r.aspect` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+"Zoek naar de module :guilabel:`r.aspect` door er naar te zoeken in het veld "
+":guilabel:`Filter` van de tab :guilabel:`Modules`"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:17
+msgid ""
+"Open the tool and set it up like this and click on the :guilabel:`Run` "
+"button:"
+msgstr ""
+"Open het gereedschap en stel het in zoals hier en klik op de knop "
+":guilabel:`Uitvoeren`:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:22
+msgid ""
+"When the process is finished click on :guilabel:`View Output` to load the "
+"resulting layer in the canvas:"
+msgstr ""
+"Als het proces is voltooid klik dan op :guilabel:`Uitvoer bekijken` om de "
+"resulterende laag in het kaartvenster te laden:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:28
+msgid ""
+"The :file:`g_aspect` layer is stored within the :guilabel:`grass_mapset` "
+"Mapset so you can remove the layer from the canvas and reload it whenever "
+"you want."
+msgstr ""
+"De laag :file:`g_aspect` is opgeslagen in de mapset :guilabel:`grass_mapset`"
+" dus u kunt de laag uit het kaartvenster verwijderen en opnieuw laden "
+"wanneer u wilt."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:32
+msgid "|basic| |FA| Get basic statistic of raster layer"
+msgstr "|basic| |FA| Basisstatistieken van de rasterlaag verkrijgen"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:34
+msgid ""
+"We want to know some basic statistics of the :file:`g_dem` raster layer."
+msgstr ""
+"We willen enkele basisstatistieken van de rasterlaag :file:`g_dem` weten."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:38
+msgid ""
+"Look for the :guilabel:`r.info` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+"Zoek naar de module :guilabel:`r.info` door er naar te zoeken in het veld "
+":guilabel:`Filter` van de tab :guilabel:`Modules`"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:40
+msgid "Set up the tool like this and click on :guilabel:`Run`:"
+msgstr "Stel het gereedschap in zoals hier en klik op :guilabel:`Uitvoeren`:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:45
+msgid ""
+"Within the Output tab you will see some raster information printed, like the"
+" path of the file, the number of rows and columns and other useful "
+"information:"
+msgstr ""
+"Op de tab Uitvoer zult u enige informatie over het raster zien afgedrukt, "
+"zoals het pad naar het bestand, het aantal rijen en kolommen en andere "
+"nuttige informatie:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:53
+msgid "|moderate| |FA| The Reclass Tool"
+msgstr "|moderate| |FA| Het gereedschap Reclass"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:201
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/grass/grass_tools.rst:55
+msgid ""
+"Reclassifying a raster layer is a very useful task. We just created the "
+":file:`g_aspect` layer from the :file:`g_dem` one. The value range gets from"
+" 0 (North) passing through 90 (East), 180 (South), 270 (West) and finally to"
+" 360 (North again). We can reclassify the :file:`g_aspect` layer to have "
+"just 4 **categories** following specific *rules* (North = 1, East = 2, South"
+" = 3 and West = 4)."
+msgstr ""
+"Opnieuw classificeren van een rasterlaag is een bijzonder nuttige taak. We "
+"hebben zojuist de laag :file:`g_aspect` gemaakt uit de :file:`g_dem`. Het "
+"bereik van de waarden gaat van 0 (Noord) langs 90 (Oost), 180 (Zuid), 270 "
+"(West) en tenslotte naar 360 (Noord opnieuw). We kunnen de laag "
+":file:`g_aspect` opnieuw classificeren om slechts 4 **categorieën** te "
+"hebben door specifieke *regels* te volgen (Noord = 1, Oost = 2, Zuid = 3 en "
+"West = 4)."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:62
+msgid ""
+"Grass reclassify tool accepts a ``txt`` file with the defined rules. Writing"
+" the rules is very simple and the GRASS Manual contains very good "
+"description."
+msgstr ""
+"Het gereedschap Reclassify van Grass accepteert een bestand ``txt`` met de "
+"gedefinieerde regels. Het schrijven van de regels is erg eenvoudig en de "
+"handleiding van GRASS bevat een hele goede beschrijving."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:65
+msgid ""
+"Each GRASS tool has its own Manual tab. Take the time to read the "
+"description of the tool you are using to don't miss some useful parameters"
+msgstr ""
+"Elk gereedschap van GRASS heeft zijn eigen tab Handleiding. Neem de tijd om "
+"de beschrijving van het gereedschap dat u gaat gebruiken door te lezen om "
+"nuttige parameters niet te missen"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:69
+msgid ""
+"Load the :file:`g_aspect` layer or, if you don't have create it, go back to "
+"the :ref:`grass_aspect` section."
+msgstr ""
+"Laad het bestand :file:`g_aspect` of, als u dat niet gemaakt hebt, ga terug "
+"naar het gedeelte :ref:`grass_aspect`."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:71
+msgid ""
+"Look for the :guilabel:`r.reclass` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+"Zoek naar de module :guilabel:`r.reclass` door er naar te zoeken in het veld"
+" :guilabel:`Filter` van de tab :guilabel:`Modules`"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:73
+msgid ""
+"Open the tool and set it up like the following picture. The file containing "
+"the rules is in the :file:`exercise_data/grass/` folder, named "
+":file:`reclass_aspect.txt`."
+msgstr ""
+"Open het gereedschap en stel het in zoals op de volgende afbeelding. Het "
+"bestand dat de regels bevat, in de map :file:`exercise_data/grass/`, is "
+"genaamd :file:`reclass_aspect.txt`."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:75
+msgid "Click on :guilabel:`Run` and wait until the process is finished:"
+msgstr "Klik op :guilabel:`Uitvoeren` en wacht tot het proces is voltooid:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:80
+msgid ""
+"Click on :guilabel:`View Output` to load the reclassified raster in the "
+"canvas"
+msgstr ""
+"Klik op :guilabel:`Uitvoer bekijken` om het opnieuw geclassificeerde raster "
+"in het kaartvenster te laden"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:82
+msgid ""
+"The new layer is made up by just 4 values (1, 2, 3, and 4) and it is easier "
+"to manage and to process."
+msgstr ""
+"De nieuwe laag is opgemaakt met slechts 4 waarden (1, 2, 3, en 4) en het is "
+"gemakkelijker te beheren en te verwerken."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:88
+msgid ""
+"Open the :file:`reclass_aspect.txt` with a text editor to see the rules and "
+"to start becoming used to them. Moreover, take a deep look at the GRASS "
+"manual: a lot of different examples are pointed out."
+msgstr ""
+"Open het bestand :file:`reclass_aspect.txt` met een tekstbewerker om de "
+"regels te bekijken en er aan te wennen. Meer nog, bekijk de handleiding van "
+"GRASS wat nader: veel verschillende voorbeelden zijn beschikbaar."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:94
+msgid "|moderate| |TY| Reclassify with your rules"
+msgstr "|moderate| |TY| Opnieuw classificeren met uw regels"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:96
+msgid "Try to reclassify the :file:`g_dem` layer into 3 new categories:"
+msgstr ""
+"Probeer de laag :file:`g_dem` opnieuw te classificeren in 3 nieuwe "
+"categorieën:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:98
+msgid "from 0 to 1000, new value = 1"
+msgstr "van 0 tot 1000, nieuwe waarde = 1"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:99
+msgid "from 1000 to 1400, new value = 2"
+msgstr "van 1000 tot 1400, nieuwe waarde = 2"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:100
+msgid "from 1400 to the maximum raster value, new value = 3"
+msgstr "vanaf 1400 tot de maximum rasterwaarde, nieuwe waarde = 3"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:102
+msgid "Answer"
+msgstr "Antwoord"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:105
+msgid ""
+"To discover the maximum value of the raster run the ``r.info`` tool: in the "
+"console you will see that the maximum value is 1699. You are now ready to "
+"write the rules."
+msgstr ""
+"Voer, om de maximale waarde van het raster te weten te komen, het "
+"gereedschap ``r.info`` uit: in de console zult u zien dat de maximumwaarde "
+"1699 is. U bent nu klaar om de regels te schrijven."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:109
+msgid "Open a text editor and add the following rules::"
+msgstr "Open een tekstbewerker en voeg de volgende regels toe::"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:115
+msgid "Save the file as ``my_rules.txt`` file and close the text editor."
+msgstr ""
+"Sla het bestand op als bestand ``my_rules.txt`` en sluit de tekstbewerker."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:116
+msgid ""
+"Run the ``r.reclass`` tool: choose the ``g_dem`` layer and load the file "
+"containing the rules you just have saved."
+msgstr ""
+"Voer het gereedschap ``r.reclass`` uit: kies de laag ``g_dem`` en laad het "
+"bestand dat de regels bevat die u zojuist hebt opgeslagen."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:118
+msgid ""
+"Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change"
+" the colors and the final result should look like the following picture:"
+msgstr ""
+"Klik op :guilabel:`Run` en dan op :guilabel:`View Output`. U kunt de kleuren"
+" wijzigen en het uiteindelijke resultaat zou eruit moeten zien als op de "
+"volgende afbeelding:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:126
+msgid "|moderate| |FA| The Mapcalc Tool"
+msgstr "|moderate| |FA| Het gereedschap Mapcalc"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:128
+msgid ""
+"The Mapcalc tools is similar to the Raster Calculator of QGIS. You can "
+"perform mathematical operation on one or more raster layers and the final "
+"result will be a new layer with the calculated values."
+msgstr ""
+"Het gereedschap Mapcalc is soortgelijk aan de Rasterberekeningen van QGIS. U"
+" kunt rekenkundige bewerkingen uitvoeren op een of meer rasterlagen en het "
+"uiteindelijke resultaat zal een nieuwe laag zijn met de berekende waarden."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:132
+msgid ""
+"The aim of the next exercise is to extract the values greater than 1000 from"
+" the :file:`g_dem` raster layer."
+msgstr ""
+"Het doel van de volgende oefening is om de waarden die groter zijn dan 1000 "
+"uit de rasterlaag :file:`g_dem` uit te nemen."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:135
+msgid ""
+"Look for the :guilabel:`r.mapcalc` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab."
+msgstr ""
+"Zoek naar de module :guilabel:`r.mapcalc` door er naar te zoeken in het veld"
+" :guilabel:`Filter` van de tab :guilabel:`Modules`"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:137
+msgid "Start the tool."
+msgstr "Start het gereedschap."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:139
+msgid ""
+"The :guilabel:`Mapcalc` dialog allows you to construct a sequence of "
+"analyses to be performed on a raster, or collection of rasters. You will use"
+" these tools to do so:"
+msgstr ""
+"Het dialoogvenster :guilabel:`Mapcalc` stelt u in staat een reeks analyses "
+"te construeren die moeten worden uitgevoerd op een raster, of collectie "
+"rasters. U zult deze gereedschappen gebruiken om dat te doen:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:146
+msgid "In order, they are:"
+msgstr "In volgorde zijn dat:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:148
+msgid ":guilabel:`Add map`: Add a raster file from your current GRASS mapset."
+msgstr ""
+":guilabel:`Kaart toevoegen`: Voeg een rasterbestand uit uw huidige mapset "
+"van GRASS toe."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:149
+msgid ""
+":guilabel:`Add constant value`: Add a constant value to be used in "
+"functions, 1000 in this case"
+msgstr ""
+":guilabel:`Constante toevoegen`: Een constante waarde toevoegen die moet "
+"worden gebruikt in functies, 1000 in dit geval."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:151
+msgid ""
+":guilabel:`Add operator or function`: Add an operator or function to be "
+"connected to inputs and outputs, we will use the operator ``greater equals "
+"than``"
+msgstr ""
+":guilabel:`Operator of functie toevoegen`: Een operator of functie toevoegen"
+" die moet worden verbonden met de invoer en uitvoer. We zullen de operator  "
+"``groter dan of is gelijk aan`` gebruiken."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:153
+msgid ""
+":guilabel:`Add connection`: Connect elements. Using this tool, click and "
+"drag from the red dot on one item to the red dot on another item. Dots that "
+"are correctly connected to a connector line will turn gray. If the line or "
+"dot is red, it is not properly connected!"
+msgstr ""
+":guilabel:`Verbinding toevoegen`: Verbindt elementen. Klik en sleep, met dit"
+" gereedschap, van de ene rode punt op het ene item naar de rode punt op een "
+"ander item. Punten die juist zijn verbonden met een verbindingslijn zullen "
+"grijs worden. Als de lijn of punt rood is, is die niet juist verbonden!"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:157
+msgid ":guilabel:`Select item`: Select an item and move selected items."
+msgstr ""
+":guilabel:`Item selecteren`: Selecteert een item en geselecteerde items "
+"verplaatsen."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:158
+msgid ""
+":guilabel:`Delete selected item`: Removes the selected item from the current"
+" mapcalc sheet, but not from the mapset (if it is an existing raster)"
+msgstr ""
+":guilabel:`Verwijder geselecteerde item`: Verwijdert het geselecteerde item "
+"uit het huidige blad voor mapcalc, maar niet uit de mapset (als het een "
+"bestaand raster is)"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:160
+msgid ":guilabel:`Open`: Open an existing file with the operation defined"
+msgstr ""
+":guilabel:`Openen`: Een bestaand bestand openen met de gedefinieerde "
+"bewerking"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:161
+msgid ":guilabel:`Save`: Save all the operation in a file"
+msgstr ":guilabel:`Opslaan`: Alle bewerkingen opslaan in een bestand"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:162
+msgid ""
+":guilabel:`Save as`: Save all the operations as a new file on the disk."
+msgstr ""
+":guilabel:`Opslaan als`: Alle bewerkingen opslaan in een nieuw bestand op de"
+" schijf."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:164
+msgid "Using these tools, construct the following algorithm:"
+msgstr "Construeer het volgende algoritme met deze gereedschappen:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:169
+msgid ""
+"Click on :guilabel:`Run` and then on :guilabel:`View output` to see the "
+"output displayed in your map:"
+msgstr ""
+"Klik op :guilabel:`Uitvoeren` en dan op :guilabel:`Uitvoer bekijken` om de "
+"uitvoer te zien weergegeven in uw kaart:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:175
+msgid "This shows all the areas where the terrain is higher than 1000 meters."
+msgstr ""
+"Dit geeft alle gebieden weer waar het terrein hoger is dan 1000 meter."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:177
+msgid ""
+"You can also save the formula you have created and load it in another QGIS "
+"project by clicking on the last button on the GRASS Mapcalc toolbar."
+msgstr ""
+"U kunt ook de formule die u hebt gemaakt opslaan en laden in een ander "
+"project van QGIS door te klikken op de laatste knop van de werkbalk van "
+"GRASS Mapcalc."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:181
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/grass/grass_tools.rst:183
+msgid ""
+"In this lesson, we have covered only a few of the many tools GRASS offers. "
+"To explore the capabilities of GRASS for yourself, open the :guilabel:`GRASS"
+" Tools` dialog and scroll down the :guilabel:`Modules List`. Or for a more "
+"structured approach, look under the :guilabel:`Modules Tree` tab, which "
+"organizes tools by type."
+msgstr ""
+"In deze les hebben we slechts een paar van de vele gereedschappen behandeld "
+"die GRASS te bieden heeft. Open het dialoogvenster :guilabel:`GRASS-"
+"gereedschap` en scroll door de :guilabel:`Modules` om de mogelijkheden van "
+"GRASS voor uzelf te verkennen. OF, voor een meer gestructureerde benadering,"
+" kijk onder de tab :guilabel:`Modules`, waar de gereedschappen op type zijn "
+"vermeld."

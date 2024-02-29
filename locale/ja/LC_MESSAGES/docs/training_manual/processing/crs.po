@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/processing/crs.rst:2
+msgid "CRSs. Reprojecting"
+msgstr "CRS・再投影"
+
+#: ../../docs/training_manual/processing/crs.rst:5
+msgid ""
+"In this lesson we will discuss how Processing uses CRSs. We will also see a "
+"very useful algorithm: reprojecting."
+msgstr ""
+"この課題で、私たちはプロセシングがどのようにCRSを使うかを説明します。私たちはまた、再投影というとても便利なアルゴリズムについて見てみます。"
+
+#: ../../docs/training_manual/processing/crs.rst:9
+msgid ""
+"CRS's are a great source of confusion for QGIS Processing users, so here are"
+" some general rules about how they are handled by geoalgorithms when "
+"creating a new layer."
+msgstr ""
+"CRSはQGISプロセシングのユーザーにとって大いなる混乱の源です。そこで、新しいレイヤを作成するときにジオアルゴリズムがそれをどのように扱うかについて、いくつかの一般的なルールを紹介します。"
+
+#: ../../docs/training_manual/processing/crs.rst:12
+msgid ""
+"If there are input layers, it will use the CRS of the first layer. This is "
+"assumed to be the CRS of all input layers, since they should have the same "
+"one. If you use layers with unmatching CRS's, QGIS will warn you about it. "
+"Notice that the CRS of input layers is shown along with its name in the "
+"parameters dialog."
+msgstr ""
+"入力レイヤが複数存在する場合は、最初のレイヤのCRSが使用されます。これは全ての入力レイヤのCRSである（それらは同じである必要があるため）と想定されます。CRSが一致していないレイヤを使う場合は、QGISがそれを警告します。入力レイヤのCRSはパラメータダイアログ中にその名前と一緒に表示されていることに注意してください。"
+
+#: ../../docs/training_manual/processing/crs.rst:19
+msgid ""
+"If there are no input layer, it will use the project CRS, unless the "
+"algorithm contains a specific CRS field (as it happened in the last lesson "
+"with the graticule algorithm)"
+msgstr ""
+"入力レイヤがない場合、アルゴリズムに特定のCRSフィールドが含まれていなければ、プロジェクトのCRSを使用します（前回のgraticuleアルゴリズムのレッスンで起こったように）"
+
+#: ../../docs/training_manual/processing/crs.rst:23
+msgid ""
+"Open the project corresponding to this lesson and you will see two layers "
+"named 23030 and 4326. They both contain the same points, but in different "
+"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
+"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
+"actually the same layer."
+msgstr ""
+"このレッスンに対応するプロジェクトを開いてください。23030と4326という名前の2つのレイヤが表示されるでしょう。それら両方には同じ点が含まれていますが、CRSは異なっています（EPSG：23030とEPSG：4326）。QGISによってその場でプロジェクトCRS（EPSG：4326）に再投影されたので、それらは同じ場所に表示されますが、それらは実際には同じレイヤではありません。"
+
+#: ../../docs/training_manual/processing/crs.rst:29
+msgid "Open the *Export/Add geometry columns* algorithm."
+msgstr "*ジオメトリ列の出力/追加* アルゴリズムを開きます。"
+
+#: ../../docs/training_manual/processing/crs.rst:33
+msgid ""
+"This algorithm add new columns to the attributes table of a vector layer. "
+"The content of the columns depend on the type of geometry of the layer. In "
+"the case of points, it adds new columns with the X and Y coordinates of each"
+" point."
+msgstr ""
+"このアルゴリズムは、ベクタレイヤの属性テーブルに新しい列を追加します。列の内容は、レイヤのジオメトリの種類によって異なります。ポイントの場合には、各点のX及びY座標で新しい列を追加します。"
+
+#: ../../docs/training_manual/processing/crs.rst:38
+msgid ""
+"In the list of available layers that you will find in the input layer field,"
+" you will see each one with its corresponding CRS. That means that, although"
+" they appear in the same place in your canvas, they will be treated "
+"differently. Select the 4326 layer."
+msgstr ""
+"入力レイヤのフィールドにある使用可能なレイヤのリストには、各レイヤとそれに対応するCRSが表示されています。それが意味するのは、それらはキャンバス内の同じ場所に表示されますが異なる方法で処理されているということです。4326レイヤを選択してください。"
+
+#: ../../docs/training_manual/processing/crs.rst:43
+msgid ""
+"The other parameter of the algorithm allows to set how the algorithm uses "
+"coordinates to calculate the new value that it will add to the resulting "
+"layers. Most algorithms do not have an option like that, and just use the "
+"coordinates directly. Select the *Layer CRS* option to just use coordinates "
+"as they are. This is how almost all geoalgorithms work."
+msgstr ""
+"アルゴリズムの他のパラメータは、アルゴリズムが結果のレイヤに追加する新たな値を計算するために、どのように座標を使用するかを設定できます。ほとんどのアルゴリズムはこのようなオプションがなく、単に座標を直接使用します。座標をそのまま使用する場合は、*レイヤCRS*"
+" オプションを選択します。これは、ほとんどすべての地理アルゴリズムの動作方法です。"
+
+#: ../../docs/training_manual/processing/crs.rst:49
+msgid ""
+"You should get a new layer with exactly the same points as the other two "
+"layers. If you right click on the name of the layer and open its properties,"
+" you will see that it shares the same CRS of the input layer, that is, "
+"EPSG:4326. When the layer is loaded into QGIS, you will not be asked to "
+"enter the CRS of the layer, since QGIS already knows about it."
+msgstr ""
+"他の2つのレイヤとまったく同じポイントを持つ新しいレイヤが作成されるはずです。レイヤの名前を右クリックしてプロパティを開くと、入力レイヤと同じCRS、つまりEPSG:4326を共有していることがわかります。このレイヤをQGISに読み込む際、レイヤのCRSはQGISがすでに知っているので、それを入力するよう求められることはありません。"
+
+#: ../../docs/training_manual/processing/crs.rst:55
+msgid ""
+"If you open the attributes table of the new layer you will see that it "
+"contains two new fields with the X and Y coordinates of each point."
+msgstr "新しいレイヤの属性テーブルを開くと、それが各ポイントのXとY座標を持つ2つの新しいフィールドが含まれていることがわかります。"
+
+#: ../../docs/training_manual/processing/crs.rst:60
+msgid ""
+"Those coordinate values are given in the layer CRS, since we chose that "
+"option. However, even if you choose another option, the output CRS of the "
+"layer would have been the same, since the input CRS is used to set the CRS "
+"of the output layer. Choosing another option will cause the values to be "
+"different, but not the resulting point to change or the CRS of the output "
+"layer to be different to the CRS of the input one."
+msgstr ""
+"それらの座標値は、そうするオプションを選んだので、そのレイヤの CRS "
+"で与えられています。しかし他のオプションを選んでも、入力CRSは出力レイヤのCRSを設定するのに使われるので、レイヤの出力CRSは同じであったはずです。他のオプションを選ぶと、値は異なりますが、結果の点が変わったり、出力レイヤのCRSが入力レイヤのCRSと異なったりすることはありません。"
+
+#: ../../docs/training_manual/processing/crs.rst:68
+msgid ""
+"Now do the same calculation using the other layer. You should find the "
+"resulting layer rendered exactly in the same place as the other ones, and it"
+" will have the EPSG:23030 CRS, since that was the one of the input layer."
+msgstr ""
+"もう一方のレイヤを使って、同じ計算をしてみてください。出来上がったレイヤは他のレイヤと全く同じ場所にレンダリングされ、入力レイヤのものなので "
+"EPSG:23030 CRS を持つことになるはずです。"
+
+#: ../../docs/training_manual/processing/crs.rst:72
+msgid ""
+"If you go to its attribute table, you will see values that are different to "
+"the ones in the first layer that we created."
+msgstr "その属性テーブルに行くと、最初に作成したレイヤのものとは異なる値が表示されるでしょう。"
+
+#: ../../docs/training_manual/processing/crs.rst:77
+msgid ""
+"This is because the original data is different (it uses a different CRS), "
+"and those coordinates are taken from it."
+msgstr "これは、元のデータが異なる（それは異なるCRSを使用する）ためであり、これらの座標はそれから取られます。"
+
+#: ../../docs/training_manual/processing/crs.rst:80
+msgid ""
+"What should you learn from this? The main idea behind these examples is that"
+" geoalgorithms use the layer as it is in its original data source, and "
+"completely ignore the reprojections that QGIS might be doing before "
+"rendering. In other words, do not trust what you see in the canvas, but "
+"always have in mind that the original data will be used. That is not so "
+"important in this case, since we are just using one single layer at a time, "
+"but in an algorithm that needs several of them (such as a clip algorithm), "
+"layers that appear to match or overlay might be very far one from each "
+"other, since they might have different CRSs."
+msgstr ""
+"このことから何を学ぶべきでしょうか？これらの例の背後にある主な考え方は、地理アルゴリズムは元のデータソースのレイヤをそのまま使用し、QGISでレンダリングする前に行われているかもしれない再投影は完全に無視するということです。言い換えれば、キャンバスに見えるものは信用せず、元のデータが使用されるだろうことを常に念頭に置いてください。この場合は一度に1つのレイヤを使用しているのでそれほど重要ではありませんが、複数のレイヤを必要とするアルゴリズム（例えばクリップアルゴリズムのような）では、一致したり重なったりするように見えるレイヤが、異なるCRSを持っているかもしれないため、互いに非常に離れていることがあります。"
+
+#: ../../docs/training_manual/processing/crs.rst:89
+msgid ""
+"Algorithms performs no reprojection (except in the reprojection algorithm "
+"that we will see next), so it is up to you to make sure that layers have "
+"matching CRS's."
+msgstr ""
+"アルゴリズムでは（次に見る再投影アルゴリズムを除いて）何も再投影を行わないので、レイヤのCRSが一致していることを確認することは自己責任です。"
+
+#: ../../docs/training_manual/processing/crs.rst:93
+msgid ""
+"An interesting module that deals with CRS's is the reprojection one. It "
+"represents a particular case, since it has an input layer (the one to "
+"reproject), but it will not use its CRS for the output one."
+msgstr ""
+"CRSを扱う興味深いモジュールに再投影があります。それは入力レイヤ（再投影するもの）を持っていますが、それは出力レイヤにはそのCRSを使わないので、特定の場合を表しています。"
+
+#: ../../docs/training_manual/processing/crs.rst:97
+msgid "Open the *Reproject layer* algorithm."
+msgstr "*レイヤを再投影* アルゴリズムを開く。"
+
+#: ../../docs/training_manual/processing/crs.rst:101
+msgid ""
+"Select any of the layers as input, and select EPSG:23029 as the destination "
+"CRS. Run the algorithm and you will get a new layer, identical to the input "
+"one, but with a different CRS. It will appear on the same region of the "
+"canvas, like the other ones, since QGIS will reproject it on the fly, but "
+"its original coordinates are different. You can see that by running the "
+"*Export/Add geometry columns* algorithm using this new layer as input, and "
+"veryfing that the added coordinates are different to the ones in the "
+"attribute tables of both of the two layers that we had computed before."
+msgstr ""
+"入力として、レイヤのいずれかを選択し、出力CRSとしてEPSG:23029を選択します。アルゴリズムを実行すると、入力レイヤと同じで、異なるCRSを持つ新しいレイヤが生成されます。QGISではそれをその場で再投影するのでキャンバスの同じ領域に表示されますが、元の座標は異なっています。この新しいレイヤを入力として"
+" *ジオメトリ列をエクスポート/追加* "
+"アルゴリズムを実行すると、追加された座標が前に計算した2つのレイヤの属性テーブルのものと異なっていることを確認することができます。"

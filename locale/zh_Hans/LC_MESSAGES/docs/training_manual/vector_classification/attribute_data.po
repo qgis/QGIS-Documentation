@@ -1,0 +1,321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-09 10:03+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:4
+msgid "|LS| Vector Attribute Data"
+msgstr "课: 矢量属性数据"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:6
+msgid ""
+"Vector data is arguably the most common kind of data in the daily use of "
+"GIS. The vector model represents the location and shape of geographic "
+"features using points, lines and polygons (and for 3D data also surfaces and"
+" volumes), while their other properties are included as attributes (often "
+"presented as a table in QGIS)."
+msgstr ""
+"矢量数据可以说是GIS日常使用中最常见的数据类型。矢量模型使用点、线和多边形 (对于3D数据，也包括表面和体积) "
+"表示地理要素的位置和形状，而其他属性则作为属性包含在内 (通常在QGIS中以表的形式显示)。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:12
+msgid ""
+"Up to now, none of the changes we have made to the map have been influenced "
+"by the objects that are being shown. In other words, all the land use areas "
+"look alike, and all the roads look alike. When looking at the map, the "
+"viewers don't know anything about the roads they are seeing; only that there"
+" is a road of a certain shape in a certain area."
+msgstr ""
+"到目前为止，我们对地图所做的任何更改都没有受到正在显示的对象的影响。换句话说，所有土地利用的区块、道路看起来都一样。当查看地图时，浏览者对他们看到的道路一无所知：只是在某个地区有一条特定形状的道路。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:18
+msgid ""
+"But the whole strength of GIS is that all the objects that are visible on "
+"the map also have attributes. Maps in a GIS aren't just pictures. They "
+"represent not only objects in locations, but also information about those "
+"objects."
+msgstr ""
+"但地理信息系统的全部优势在于，地图上所有可见的对象都具有属性。GIS中的地图不仅仅是图片，它们不仅表示位置中的对象，还表示关于这些对象的信息。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:23
+msgid ""
+"**The goal for this lesson:** To learn about the structure of vector data "
+"and explore the attribute data of an object"
+msgstr "**本课目标:** 了解矢量数据的构造，探索对象的属性数据"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:27
+msgid "|basic| |FA| Viewing Layer Attributes"
+msgstr "|basic| 跟我做: 查看图层属性"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:194
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:29
+msgid ""
+"It's important to know that the data you will be working with does not only "
+"represent **where** objects are in space, but also tells you **what** those "
+"objects are."
+msgstr "重要的是要知道，您将处理的数据不仅表示对象在空间中的 **位置** ，还告诉您这些对象是 **什么** 。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:33
+msgid ""
+"From the previous exercise, you should have the ``protected_areas`` layer "
+"loaded in your map. If it is not loaded, then you can find the "
+":file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory "
+":file:`exercise_data/shapefile`."
+msgstr ""
+"在上一个练习中，您应该在地图中已加载 ``protected_areas`` 图层。如果未加载，请在目录 "
+":file:`exercise_data/shapefile` 查找 :file:`protected_areas.shp` *ESRI "
+"Shapefile* 格式数据集。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:38
+msgid ""
+"The polygons representing the protected areas constitute the **spatial "
+"data**, but we can learn more about the protected areas by exploring the "
+"**attribute table**."
+msgstr "表示保护区的多边形构成了 **空间数据** ，但我们可以通过探索 **属性表** 来了解更多关于保护区的信息。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:42
+msgid ""
+"In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to "
+"select it."
+msgstr "在 :guilabel:`图层` 面板，单击 ``protected_areas`` 图层将其选中。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:197
+msgid "openTable"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:51
+msgid ""
+"A row is called a **record** and is associated with a **feature** in the "
+"Canvas Map, such as a polygon. A column is called a **field** (or an "
+"**attribute**), and has a name that helps describe it, such as ``name`` or "
+"``id``. Values in the cells are known as **attribute values**. These "
+"definitions are commonly used in GIS, so it is good to become familiar with "
+"them."
+msgstr ""
+"行被称为 **记录** ，并与画布地图中的某个 **要素** 相关联，如多边形。列被称为 **字段** (或 **属性** "
+")，并使用一个名称进行描述，例如 ``名称`` 或 ``ID`` 。单元格中的值称为 **属性值** "
+"。这些定义在地理信息系统中很常用，所以熟悉它们是件好事。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:59
+msgid ""
+"In the ``protected_areas`` layer, there are two **features**, which are "
+"represented by the two polygons we see on the Map Canvas."
+msgstr "在 ``protected_areas`` 图层，有两个 **要素** ，由我们在地图画布中看到的两个多边形进行表示。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:62
+msgid ""
+"In order to understand what the **fields** and **attribute values** "
+"represent, one may need to find documentation (or metadata) describing the "
+"meaning of the attribute values. This is usually available from the creator "
+"of the data set."
+msgstr "为了理解 **字段** 和 **属性值** 所表示的含义，可能需要找到描述属性值含义的文档 (或元数据)，这通常是从数据集的创建者处获得。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:67
+msgid ""
+"Next, let's see how a record in the attribute table is linked to a polygon "
+"feature that we see on the Map Canvas."
+msgstr "接下来，让我们看看属性表中的记录如何链接到地图画布上看到的多边形要素。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:70
+msgid "Go back to the main QGIS window."
+msgstr "返回QGIS主窗口。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:199
+msgid "selectRectangle"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:72
+msgid ""
+"Make sure the ``protected_areas`` layer is still selected in the "
+":guilabel:`Layers` panel."
+msgstr "确保 :guilabel:`图层` 面板中的 ``protected_areas`` 图层仍处于选中状态。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:86
+msgid "You can also select a feature using the Attribute Table."
+msgstr "您也可以使用属性表选择要素。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:88
+msgid ""
+"In the :guilabel:`Attribute Table` window, on the far left, click on the row"
+" number of the record that is currently not selected."
+msgstr "在 :guilabel:`属性表` 窗口最左侧，单击当前未选中记录的行号。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:94
+msgid ""
+"Go back to the main QGIS window and look at the Map Canvas. You should see "
+"the larger of the two polygons colored yellow."
+msgstr "返回QGIS主窗口，查看地图画布，您应该会看到两个多边形中较大的一个是黄色的。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:96
+msgid ""
+"To deselect the feature, go to the :guilabel:`Attribute Table` window and "
+"click on |deselectActiveLayer| :sup:`Deselect all features from the layer` "
+"button."
+msgstr ""
+"要取消选择要素，请转到 :guilabel:`属性表` 窗口，然后单击 |deselectActiveLayer| "
+":sup:`取消选择图层中的所有要素` 按钮。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:195
+msgid "deselectActiveLayer"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:99
+msgid ""
+"Sometimes there are many features shown on the Map Canvas and it might be "
+"difficult to see which feature is selected from the Attribute Table.  "
+"Another way to identify the location of a feature is to use the "
+":guilabel:`Flash Feature` tool."
+msgstr ""
+"有时，地图画布会显示许多要素，可能很难看到从属性表中选择了哪个要素。识别要素位置的另一种方法是使用 :guilabel:`闪烁要素` 工具。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:104
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on any cell in the row that "
+"has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr "在 :guilabel:`属性表` ，右键单击行中属性值为 ``r2855697`` 的单元格，以获取字段 ``full_id`` 。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:106
+msgid ""
+"In the context menu, click on :guilabel:`Flash Feature` and watch the Map "
+"Canvas."
+msgstr "在上下文菜单，单击 :guilabel:`闪烁要素` 并观察地图画布。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:112
+msgid ""
+"You should see the polygon flash red a few times.  If you missed it, try it "
+"again."
+msgstr "您应该会看到多边形闪烁红色几次。如果错过了，请再试一次。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:115
+msgid ""
+"Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS"
+" to zoom to the feature of interest."
+msgstr "另一个实用的工具是 :guilabel:`缩放到要素范围` 工具，它告诉QGIS缩放到感兴趣的要素。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:118
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on  any cell in the row that"
+" has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr "在 :guilabel:`属性表` ，右键单击行中属性值为 ``r2855697`` 的单元格，以获取字段 ``full_id`` 。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:120
+msgid "In the context menu, click on :guilabel:`Zoom to Feature`"
+msgstr "在上下文菜单，单击 :guilabel:`缩放到要素范围`"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:128
+msgid "You may now close the attribute table."
+msgstr "现在可以关闭属性表。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:133
+msgid "|basic| |TY| Exploring Vector Data Attributes"
+msgstr "|basic| 试一试 探索矢量数据属性"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:135
+msgid "How many fields are available in the :guilabel:`rivers` layer?"
+msgstr ":guilabel:`rivers` 图层有多少个可用字段？"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:136
+msgid "Tell us a bit about the ``town`` places in your dataset."
+msgstr "告诉我们一些关于您的数据集 ``town`` places 的信息。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:137
+msgid ""
+"Open the attribute table for the :guilabel:`places` layer. Which field would"
+" be the most useful to represent in label form, and why?"
+msgstr "打开 :guilabel:`places` 图层的属性表。哪个字段最适合以标注形式表示，为什么？"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:140
+msgid "Answer"
+msgstr "回答"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:143
+msgid "There should be 9 fields in the :guilabel:`rivers` layer:"
+msgstr ":guilabel:`rivers` 图层应该有 9 个字段："
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:145
+msgid "Select the layer in the :guilabel:`Layers` panel."
+msgstr "在 :guilabel:`图层` 面板选择图层。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:149
+msgid "Count the number of columns."
+msgstr "计算列数。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:151
+msgid ""
+"A quicker approach could be to double-click the :guilabel:`rivers` layer, "
+"open the :menuselection:`Layer properties --> Fields` tab, where you will "
+"find a numbered list of the table's fields."
+msgstr ""
+"一种更快的方法是双击 :guilabel:`rivers` 图层，打开 :menuselection:`图层属性 --> 字段` "
+"选项卡，在此找到表字段的编号。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:155
+msgid ""
+"Information about towns is available in the :guilabel:`places` layer. Open "
+"its attribute table as you did with the :guilabel:`rivers` layer: there are "
+"two features whose :guilabel:`place` attribute is set to ``town``: "
+"*Swellendam* and *Buffeljagsrivier*. You can add comment on other fields "
+"from these two records, if you like."
+msgstr ""
+"有关 towns 的信息可在 :guilabel:`places` 图层找到。像使用 :guilabel:`rivers` "
+"图层一样打开属性表：有两个要素的 :guilabel:`place` 属性设置为 ``town``: *Swellendam* 和 "
+"*Buffeljagsrivier* 。如果您愿意，可以在这两条记录的其他字段添加注释。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:161
+msgid ""
+"The ``name`` field is the most useful to show as labels. This is because all"
+" its values are unique for every object and are very unlikely to contain "
+"*NULL* values. If your data contains some *NULL* values, do not worry as "
+"long as most of your places have names."
+msgstr ""
+"``name`` 字段是最适合显示为标注。这是因为它的所有值对于每个对象都是唯一的，并且不太可能含有 *NULL* 值。如果您的数据包含一些 "
+"*NULL* 值，只要大多数 places 都有名称，就不用担心。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:167
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:169
+msgid ""
+"You now know how to use the attribute table to see what is actually in the "
+"data you're using. Any dataset will only be useful to you if it has the "
+"attributes that you care about. If you know which attributes you need, you "
+"can quickly decide if you're able to use a given dataset, or if you need to "
+"look for another one that has the required attribute data."
+msgstr ""
+"现在，您已经知道如何使用属性表来查看正在使用的数据中的实际内容。任何数据集只有您关心的属性时才会对您有用。如果知道需要哪些属性，可以快速决定是否能够使用给定的数据集，或者是否需要寻找另一个具有所需属性数据的数据集。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:176
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:178
+msgid ""
+"Different attributes are useful for different purposes. Some of them can be "
+"represented directly as text for the map user to see. You'll learn how to do"
+" this in the next lesson."
+msgstr "不同的属性用于不同的目的。其中一些可以直接表示为文本，供地图用户查看。您将在下一课学习如何执行此操作。"

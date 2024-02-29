@@ -1,0 +1,408 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:2
+msgid "|LS| Changing Raster Symbology"
+msgstr "Идем дальше: Измененяем символику растрового слоя"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:4
+msgid ""
+"Not all raster data are aerial photos. There are many other forms of raster "
+"data, and in many of those cases, it is essential to symbolize the them so "
+"that they becomes properly visible and useful."
+msgstr ""
+"Не все растровые данные являются аэрофотоснимками. Есть много других форм "
+"растровых данных, и во многих таких случаях необходимо обозначить их "
+"символами, чтобы их можно было потом соответствующим образом видеть и "
+"использовать."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:9
+msgid ""
+"**The goal for this lesson:** To change the symbology for a raster layer."
+msgstr "**Цель этого урока:** Изменение символов для растрового слоя"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:13
+msgid "|basic| |TY|"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:203
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:15
+msgid ""
+"Use the :guilabel:`Browser` Panel to load :file:`srtm_41_19.tif`, found "
+"under :file:`exercise_data/raster/SRTM/`"
+msgstr ""
+"Используйте панель :guilabel:`Browser` для загрузки :file:`srtm_41_19.tif`, "
+"который находится внутри :file:`exercise_data/raster/SRTM/`."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:17
+msgid ""
+"Zoom to the extent of this layer by right-clicking on it in the "
+":guilabel:`Layers panel` and selecting :guilabel:`Zoom to Layer`."
+msgstr ""
+"Увеличьте масштаб этого слоя, кликнув на него правой кнопкой мыши в "
+":guilabel:`Layers panel` и выбрав :guilabel:`Zoom to Layer`."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:20
+msgid ""
+"This dataset is a *Digital Elevation Model (DEM)*. It is a map of the "
+"elevation (altitude) of the terrain, allowing us to see where the mountains "
+"and valleys are, for example."
+msgstr ""
+"Этот набор данных представляет собой *Цифровую Модель Рельефа (ЦМР) / "
+"Digital Elevation Model (DEM)*. Это карта возвышенности (высота) местности, "
+"которая позволяет нам, к примеру, увидеть, где находятся горы и долины."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:24
+msgid ""
+"While each pixel of the dataset of the previous section contained color "
+"information, in a *DEM*, each pixel contains elevation values."
+msgstr ""
+"В то время как каждый пиксель набора данных предыдущего раздела содержал "
+"сведения о цвете, в *ЦРМ*, каждый пиксель содержит значения высоты."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:27
+msgid ""
+"Once the DEM is loaded, you will notice that it is a grayscale "
+"representation:"
+msgstr ""
+"Как загрузки ЦМР вы заметите, что картина представляется в оттенках серого:"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:33
+msgid ""
+"QGIS has automatically applied a stretch to the pixel values of the image "
+"for visualization purposes, and we will learn more about how this works as "
+"we continue."
+msgstr ""
+"QGIS автоматически растянул значения пикселей изображения для целей "
+"визуализации. Мы более подробно изучим как это работает, по мере продвижения"
+" дальше."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:38
+msgid "|basic| |FA| Changing Raster Layer Symbology"
+msgstr "|basic| Идем дальше: Меняем символику растрового слоя"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:40
+msgid "You have two different options to change the raster symbology:"
+msgstr "Есть два способа изменения символов растра:"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:42
+msgid ""
+"Within the :guilabel:`Layer Properties` dialog, by right-clicking on the "
+"layer in the Layer tree and selecting the :guilabel:`Properties` option. "
+"Then switch to the :guilabel:`Symbology` tab"
+msgstr ""
+"Внутри диалогового окна :guilabel:`Layer Properties` - кликнув правой "
+"кнопкой мыши на внутри древа слоев и выбрав опцию :guilabel:`Properties`. "
+"Затем надо переключиться на вкладку :guilabel:`Symbology`."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:46
+msgid ""
+"By clicking on the |symbology| :sup:`Open the Layer Styling panel` button "
+"right above the :guilabel:`Layers` panel (shortcut :kbd:`F7`). This will "
+"open the :guilabel:`Layer Styling` panel, where you can switch to the "
+"|symbology| :sup:`Symbology` tab."
+msgstr ""
+"Надо кликнуть на кнопку |symbology| :sup:`Open the Layer Styling panel` "
+"прямо над панелью :guilabel:`Layers` (ярлык :kbd:`F7`). Таким образом "
+"откроется панель :guilabel:`Layer Styling`, где вы можете переключиться на "
+"вкладку |symbology| :sup:`Symbology`."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:206
+msgid "symbology"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:52
+msgid "Choose the method you prefer to work with."
+msgstr "Выберите метод, которым вы захотите использовать."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:55
+msgid "|basic| |FA| Singleband gray"
+msgstr "|basic| Идем дальше: Однополосная серая"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:57
+msgid ""
+"When you load a raster file, if it is not a photo image like the ones of the"
+" previous section, the default style is set to a grayscale gradient."
+msgstr ""
+"Загруженный растровый файл не является фотоизображением подобно тем, которые"
+" были в предыдущем разделе. По умолчанию это градиент в оттенках серого."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:61
+msgid "Let's explore some of the features of this renderer."
+msgstr "Давайте изучим некоторые особенности данного средства визуализации."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:66
+msgid ""
+"The default :guilabel:`Color gradient` is set to ``Black to white``, meaning"
+" that low pixel values are black and while high values are white. Try to "
+"invert this setting to ``White to black`` and see the results."
+msgstr ""
+"По умолчанию :guilabel:`Color gradient` настроен на ``Black to white``, и "
+"это означает, что низкие значения пикселей являются черными, а высокие "
+"значения - белыми. Вам надо попробовать изменить этот параметр на ``White to"
+" black`` и посмотреть что получится."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:71
+msgid ""
+"Very important is the :guilabel:`Contrast enhancement` parameter: by default"
+" it is set to ``Stretch to MinMax`` meaning that the pixel values are "
+"stretched to the minimum and maximum values."
+msgstr ""
+"Надо отметить важность параметра :guilabel:`Contrast enhancement` parameter:"
+" по умолчанию он настроен на ``Stretch to MinMax``, и это означает, что "
+"значения пикселей растянуты до минимальных и максимальных значений."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:75
+msgid ""
+"Look at the difference with the enhancement (left) and without (right):"
+msgstr "Посмотрите на отличия с улучшением (слева) и без (справа):"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:80
+msgid ""
+"But what are the minimum and maximum values that should be used for the "
+"stretch? The ones that are currently under :guilabel:`Min / Max Value "
+"Settings`. There are many ways to calculate the minimum and maximum values "
+"and use them for the stretch:"
+msgstr ""
+"Но каковы минимальные и максимальные значения, которые следует использовать "
+"для растяжки? Те, которые в настоящее время охвачены :guilabel:`Min / Max "
+"Value Settings`. Есть много способов вычисления минимальных и максимальных "
+"значений и использования их для растяжки:"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:87
+msgid ""
+"**User Defined**: you enter the :guilabel:`Min` and :guilabel:`Max` values "
+"manually"
+msgstr ""
+"**Определяемые самим пользователем**: вам надо вручную внести значения "
+":guilabel:`Min` и :guilabel:`Max`."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:89
+msgid ""
+"**Cumulative count cut**: this is useful when you have some extreme low or "
+"high values. It *cuts* the ``2%`` (or the value you choose) of these values"
+msgstr ""
+"**Срез кумулятивного подсчета**: этот способ хорош, когда у вас имеются "
+"экстремально низкие или высокие значения. Этот способ *срезает* ``2%`` (или "
+"выбранное вами значение) этих значений."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:92
+msgid ""
+"**Min / max**: the *Real* or *Estimated* minimum and maximum values of the "
+"raster"
+msgstr ""
+"**Мин / Макс**: *Реальные* или *Расчетные* минимальное и максимальное "
+"значения растра."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:94
+msgid ""
+"**Mean +/- standard deviation**: the values will be calculated according to "
+"the mean value and the standard deviation"
+msgstr ""
+"**Среднее +/- стандартное отклонение**: значения рассчитываются в "
+"соответствии со средним значением и стандартным отклонением. "
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:99
+msgid "|basic| |FA| Singleband pseudocolor"
+msgstr "|basic| Идем дальше: Однополосная псевдо-цветная"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:101
+msgid ""
+"Grayscales are not always great styles for raster layers. Let's try to make "
+"the DEM more colorful."
+msgstr ""
+"Оттенки серого не всегда подходят для растровых слоев. Попробуем сделать ЦМР"
+" более красочной."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:104
+msgid ""
+"Change the :guilabel:`Render type` to :guilabel:`Singleband pseudocolor`. If"
+" you don't like the default colors loaded, select another :guilabel:`Color "
+"ramp`"
+msgstr ""
+"Надо изменить :guilabel:`Render type` на :guilabel:`Singleband pseudocolor`."
+" Если вам не нравятся загруженные цвета по умолчанию, вы можете выбрать "
+"другой :guilabel:`Color ramp`."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:108
+msgid ""
+"Click the :guilabel:`Classify` button to generate a new color classification"
+msgstr ""
+"Кликните на кнопку :guilabel:`Classify` для получения новой классификации "
+"цветов."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:110
+msgid ""
+"If it is not generated automatically click on the :guilabel:`OK` button to "
+"apply this classification to the DEM"
+msgstr ""
+"Если цвета автоматически не сгенерированы, кликните на кнопку  "
+":guilabel:`OK` для того, чтобы применить эту классификацию по отношению к "
+"ЦМР."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:116
+msgid "You'll see the raster looking like this:"
+msgstr "Вы увидите, что ваш растр будет выглядеть так:"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:121
+msgid ""
+"This is an interesting way of looking at the DEM. You will now see that the "
+"values of the raster are again properly displayed, going from blue for the "
+"lower areas to red for the higher ones."
+msgstr ""
+"Это интересный способ представления ЦМР. Вы видите теперь, что значения "
+"растра снова отображены соответствующим образом: от синего цвета, который "
+"показывает низменные местности, до красного цвета – места, расположенные на "
+"более высоких точках."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:128
+msgid "|FA| Changing the transparency"
+msgstr "Идем дальше: Меняем прозрачность"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:130
+msgid ""
+"Sometimes changing the transparency of the whole raster layer can help you "
+"to see other layers covered by the raster itself and better understand the "
+"study area."
+msgstr ""
+"Изменение прозрачности всего растрового слоя иногда позволяет вам увидеть "
+"другие слои, покрытые самим растром, и лучше понять исследуемую местность."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:134
+msgid ""
+"To change the transparency of the whole raster switch to the "
+":guilabel:`Transparency` tab and use the slider of the :guilabel:`Global "
+"Opacity` to lower the opacity:"
+msgstr ""
+"Чтобы изменить прозрачность всего растра, надо перейти на вкладку "
+":guilabel:`Transparency` и использовать ползунок  :guilabel:`Global "
+"Opacity`, для того чтобы уменьшить непрозрачность:"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:141
+msgid ""
+"More interesting is changing the transparency for some pixel values. For "
+"example in the raster we used you can see a homogeneous color at the "
+"corners. To set these pixels as transparent, go to :guilabel:`Custom "
+"Transparency Options` in the :guilabel:`Transparency` tab."
+msgstr ""
+"Изменение прозрачности для некоторых значений пикселей является также более "
+"интересным способом. Например, в используемом нами растре вы можете увидеть "
+"однородный цвет по углам. Чтобы настроить эти пиксели как прозрачные вам "
+"надо перейти на :guilabel:`Custom Transparency Options` во вкладке  "
+":guilabel:`Transparency`."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:148
+msgid ""
+"By clicking on the |symbologyAdd| :sup:`Add values manually` button, you can"
+" add a range of values and set their transparency percentage"
+msgstr ""
+"Нажав на кнопку |symbologyAdd| :sup:`Add values manually`, вы сможете "
+"добавить набор значений и настроить их процент прозрачности."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:208
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:150
+msgid ""
+"For single values the |contextHelp| :sup:`Add values from display` button is"
+" more useful"
+msgstr ""
+"Что касается единичных значений лучше использовать кнопку  |contextHelp| "
+":sup:`Add values from display`."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:152
+msgid ""
+"Click on the |contextHelp| :sup:`Add values from display` button. The dialog"
+" disappears, and you can interact with the map."
+msgstr ""
+"Надо кликнуть на кнопку |contextHelp| :sup:`Add values from display`. "
+"Диалоговое окно исчезнет ​​и вы сможете взаимодействовать с картой."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:154
+msgid "Click on the homogeneous color in a corner of the DEM"
+msgstr "Надо кликните на однородный цвет в углу ЦМР."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:155
+msgid ""
+"You will see that the transparency table will be filled with the clicked "
+"values:"
+msgstr ""
+"Вы увидите, что таблица прозрачности будет заполнена выбранными значениями:"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:161
+msgid "Click on :guilabel:`OK` to close the dialog and see the changes."
+msgstr ""
+"Надо кликнуть на кнопку :guilabel:`OK` для того, чтобы закрыть диалоговое "
+"окно и увидеть изменения."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:166
+msgid "See? The corners are now 100% transparent."
+msgstr "Видите? Углы теперь прозрачны на 100%."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:170
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:172
+msgid ""
+"These are some the basic functions to get you started with raster symbology."
+" QGIS also gives you many other options, such as symbolizing a layer using "
+"paletted/unique values, representing different bands with different colors "
+"in a multispectral image, or making an automatic hillshade effect (useful "
+"only with DEM raster files)."
+msgstr ""
+"Мы рассмотрели некоторые основные функции, которые помогут вам начать работу"
+" с растровыми символами. QGIS также может предложить вам множество других "
+"опций, таких как обозначение слоя с помощью палитры/уникальных значений, "
+"представление различных полос разными цветами на мультиспектральном "
+"изображении или создание автоматического эффекта оттенка холмов (только с "
+"растровыми файлами ЦМР)."
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:180
+msgid "Reference"
+msgstr "Ссылки"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:182
+msgid ""
+"The SRTM dataset was obtained from `http://srtm.csi.cgiar.org/ "
+"<http://srtm.csi.cgiar.org/>`_"
+msgstr "Набор данных SRTM был получен из `http://srtm.csi.cgiar.org/ `_"
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:186
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/changing_symbology.rst:188
+msgid ""
+"Now that we can see our data displayed properly, let's investigate how we "
+"can analyze it further."
+msgstr ""
+"Теперь мы можем видеть, что наши данные отображаются соответствующим "
+"образом. Давайте изучим, как мы сможем проанализировать их дальше."

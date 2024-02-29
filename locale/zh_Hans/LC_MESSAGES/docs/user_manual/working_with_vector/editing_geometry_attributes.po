@@ -1,0 +1,1183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 徐保才 <1302638819@qq.com>, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-19 14:57+0000\n"
+"PO-Revision-Date: 2023-03-19 14:53+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.0\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:5
+msgid "Editing"
+msgstr "编辑"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:12
+msgid ""
+"QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS, MS SQL "
+"Server and Oracle Spatial vector layers and tables. They can be of 2D or 3D "
+"geometry type."
+msgstr ""
+"QGIS具有编辑 OGR、SpatiaLite、PostGIS、MS SQL Server 和 Oracle "
+"空间矢量图层和表的各种功能，它们可以是2D或3D几何图形类型。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:17
+msgid ""
+"The procedure for editing GRASS layers is different - see section "
+":ref:`grass_digitizing` for details."
+msgstr "编辑GRASS图层具有不同的步骤 - 详细信息请参阅 :ref:`grass_digitizing` 。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:22
+msgid "**Concurrent Edits**"
+msgstr "**并发编辑**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:24
+msgid ""
+"QGIS does not track if somebody else is editing the same feature at the same"
+" time as you are. The last person to save the edits wins."
+msgstr "QGIS不会跟踪其他人是否与您同时编辑同一要素，最终结果取决于最后保存编辑的人。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:30
+msgid "**Validating Edits**"
+msgstr "**验证编辑**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:32
+msgid ""
+"Continuous validation can be activated on a layer basis in the "
+":menuselection:`Layer Properties --> Digitizing` tab. More at "
+":ref:`digitizingmenu`."
+msgstr ""
+"可以在 :menuselection:`图层属性 --> 数字化` 选项卡中基于图层激活连续验证。详细信息请参阅 "
+":ref:`digitizingmenu` 。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:42
+msgid "Setting the snapping tolerance and search radius"
+msgstr "设置捕捉容差和搜索半径"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:44
+msgid ""
+"Under the :menuselection:`Settings --> Options... --> Digitizing` menu, QGIS"
+" provides a number of parameters to configure default behaviour of editing "
+"tools. More information at :ref:`digitizing_options`."
+msgstr ""
+"在 :menuselection:`设置 --> 选项... --> 数字化` 菜单中，QGIS提供了许多参数来配置编辑工具的默认操作。更多信息请参阅 "
+":ref:`digitizing_options` 。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:48
+msgid ""
+"For optimal and accurate editing of vector layer geometries, we need to set "
+"an appropriate value of snapping tolerance and search radius for features "
+"vertices. The :guilabel:`Snapping` group provides related options, namely "
+"handling of the snapping tolerance and the search radius."
+msgstr ""
+"为了优化和准确编辑矢量图层几何图形，需要为要素顶点设置合适的捕捉容差和搜索半径的值。 :guilabel:`捕捉` "
+"组提供了相关选项，即捕捉容差和搜索半径的处理。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:53
+msgid ""
+"Snapping tolerance: When you add a new vertex or move an existing one, the "
+"snapping tolerance is the distance QGIS uses to search for the closest "
+"vertex or segment you are trying to connect to. If you are not within the "
+"snapping tolerance, QGIS will leave the vertex where you release the mouse "
+"button, instead of snapping it to an existing vertex or segment."
+msgstr ""
+"捕捉容差：当添加新顶点或移动现有顶点时，捕捉容差是QGIS用于搜索您试图连接到最近顶点或线段的距离。如果不在捕捉容差范围内，QGIS将把顶点放置在您松开鼠标按钮的位置，而不是将其捕捉到现有顶点或线段。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:60
+msgid ""
+"The tolerance setting affects all tools that work with snapping and applies "
+"by default to new layers and projets. It can however be overridden at layer "
+"level (see :ref:`snapping_options`)."
+msgstr ""
+"容差设置将影响所有使用捕捉的工具，并且默认会应用于新建图层和工程。但是，它可以在图层级别被覆写 (请参阅 "
+":ref:`snapping_options`) 。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:66
+msgid ""
+"Search radius: :guilabel:`Search radius for vertex edits` is the distance "
+"QGIS uses to ``search`` for the vertex to select when you click on the map. "
+"If you are not within the search radius, QGIS will not find and select any "
+"vertex for editing."
+msgstr ""
+"搜索半径: :guilabel:`顶点编辑的搜索半径` 是QGIS在单击地图时用于 ``搜索`` "
+"要选择的顶点的距离。如果不在搜索半径内，QGIS将无法找到并选择任何顶点进行编辑。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:72
+msgid ""
+"Snap tolerance and search radius are set in ``map units`` or ``pixels``. You"
+" may need to experiment to get them right. If you specify a too big "
+"tolerance, QGIS may snap to the wrong vertex, especially if you are dealing "
+"with a large number of vertices in close proximity. The smaller the search "
+"radius, the more difficult it will be to hit what you want to move."
+msgstr ""
+"捕捉容差和搜索半径是以 ``地图单位`` 或 ``像素`` "
+"进行设置的。您可能需要进行尝试才能最优设置。如果指定的容差太大，尤其是在处理大量非常邻近的顶点时，QGIS可能会捕捉到错误的顶点。搜索半径越小，就越难找到您想要移动的对象。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:83
+msgid "Snapping and Digitizing Options"
+msgstr "捕捉和数字化选项"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:85
+msgid ""
+"Global :ref:`snapping and digitizing settings <digitizing_options>` "
+"(snapping mode, tolerance value, and units...) can be overridden in the "
+"project from the :menuselection:`Project --> Snapping Options...` menu. In "
+"the :guilabel:`Snapping and Digitizing Options`, you can also configure some"
+" other properties (snapping layers, scale limit, topology...) The "
+":guilabel:`Snapping Toolbar` gives access to most of these features."
+msgstr ""
+"全局 :ref:`捕捉和数字化设置 <digitizing_options>` (捕捉模式、容差值和单位...) 优先于在工程中从 "
+":menuselection:`工程 --> 捕捉选项...` 菜单的设置。在 :guilabel:`捕捉和数字化选项` 中，还可以配置一些其他属性 "
+"(捕捉图层、比例限制、拓扑…)。 :guilabel:`捕捉工具栏` 可以访问其中大部分功能。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:92
+msgid ""
+"By default, snapping is disabled in a project until you press the |snapping|"
+" :sup:`Enable snapping` button or press :kbd:`S`. The snapping mode, "
+"tolerance value, and units can also be configured in this toolbar."
+msgstr ""
+"默认情况下，在点击 |snapping| :sup:`启用捕捉` 按钮或按 :kbd:`S` "
+"键之前，捕捉在工程中处于禁用状态。捕捉模式、容差值和单位也可以在此工具栏中进行配置。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2230
+msgid "snapping"
+msgstr "snapping"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:98
+msgid "Snapping properties"
+msgstr "捕捉属性"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:100
+msgid "There are three options to select the layer(s) to snap to:"
+msgstr "有三个选项可用于选择要捕捉到的图层："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:102
+msgid ""
+":guilabel:`All layers`: quick setting for all visible layers in the project "
+"so that the pointer snaps to all vertices and/or segments. In most cases, it"
+" is sufficient to use this snapping mode, but beware when using it for "
+"projects with many vector layers, as it may affect performance."
+msgstr ""
+":guilabel:`所有图层`: "
+"工程中所有可见图层的快速设置，以便指针捕捉到所有顶点和/或线段。在多数情况下，使用这种捕捉模式就足够了，但在将其用于具有许多矢量图层的工程时要小心，因为这可能会影响性能。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:107
+msgid ""
+":guilabel:`Current layer`: only the active layer is used, a convenient way "
+"to ensure topological consistency within the layer being edited."
+msgstr ":guilabel:`活动图层`: 只作用于活动图层，这是确保正在编辑的图层内拓扑一致性的一种便捷方式。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:109
+msgid ""
+":guilabel:`Advanced Configuration`: allows you to enable and adjust snapping"
+" mode, tolerance and units, overlaps and scales of snapping on a layer basis"
+" (see :numref:`figure_edit_snapping`). If you need to edit a layer and snap "
+"its vertices to another, make sure that the target layer is checked and "
+"increase the snapping tolerance to a higher value. Snapping will not occur "
+"to a layer that is not checked in the snapping options dialog."
+msgstr ""
+":guilabel:`高级配置`: 允许您在图层的基础上启用和调整捕捉模式、容差和单位、重叠和捕捉比例 (请参阅 "
+":numref:`figure_edit_snapping`) "
+"。如果需要编辑一个图层并将其顶点捕捉到另一个图层，请确保选中目标图层，并将捕捉容差增大到更高值。捕捉不会作用在捕捉选项对话框中未勾选的图层。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:118
+msgid ""
+"As for snapping mode, you can choose between ``Vertex``, ``Segment``, "
+"``Area``, ``Centroid``, ``Middle of Segments`` and ``Line Endpoints``."
+msgstr "至于捕捉模式，可以在 ``顶点``, ``线段``, ``面积``, ``质心``, ``线段中心`` 和 ``线终端`` 进行选择。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:123
+msgid "QGIS will show different *snap* icons depending on the kind of *snap*:"
+msgstr "QGIS将根据 *捕捉* 类型显示不同的 *捕捉* 图标："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:125
+msgid "Snapping icons"
+msgstr "捕捉图标"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:130
+msgid "Snapping to a vertex: box icon"
+msgstr "捕捉到顶点: 方框图标"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:131
+msgid "Snapping to a segment: hourglass icon"
+msgstr "捕捉到线段：沙漏图标"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:132
+msgid "Snapping to an intersection: cross icon"
+msgstr "捕捉到相交点：十字图标"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:135
+msgid ""
+"Note that it is possible to change the color of these icons in the "
+":guilabel:`Digitizing` part of the global settings."
+msgstr "请注意，可以在全局设置的 :guilabel:`数字化` 选项卡中更改这些图标的颜色。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:138
+msgid ""
+"The tolerance values can be set either in the project's ``map units`` or in "
+"``pixels``. The advantage of choosing ``pixels`` is that it keeps the "
+"snapping constant at different map scales. 10 to 12 pixels is normally a "
+"good value, but it depends on the DPI of your screen. Using map units allows"
+" the tolerance to be related to real ground distances. For example, if you "
+"have a minimum distance between elements, this option can be useful to "
+"ensure that you don’t add vertices too close to each other."
+msgstr ""
+"容差值可以使用工程的 ``地图单位`` 或 ``像素`` 。选择 ``像素`` "
+"的优点是在不同的地图比例下保持捕捉不变。10到12像素通常是一个不错的值，但这取决于屏幕的DPI。使用地图单位可以使容差与实际范围的距离相关。例如，如果元素之间的距离较近，此选项可用于确保添加的顶点不会彼此太近。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:155
+msgid "Snapping options (Advanced Configuration mode)"
+msgstr "捕捉选项 (高级配置模式)"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:159
+msgid ""
+"By default, only visible features (the features whose style is displayed, "
+"except for layers where the symbology is \"No symbols\") can be snapped. You"
+" can enable the snapping on invisible features by checking |unchecked| "
+":guilabel:`Enable snapping on invisible features` under the "
+":menuselection:`Settings --> Options --> Digitizing` tab."
+msgstr ""
+"默认仅捕捉可见要素 (显示样式的要素，符号化为 \"无符号\" 的图层除外)。可以通过勾选 :menuselection:`设置 --> 选项 --> "
+"数字化` 选项卡下的 |unchecked| :guilabel:`对不可见的要素 (未在地图画布中显示) 也启用捕捉` 来启用不可见要素的捕捉。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2250
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:165
+msgid "**Enable snapping by default**"
+msgstr "**默认启用捕捉**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:167
+msgid ""
+"You can set snapping to be enabled by default on all new projects in the "
+":menuselection:`Settings --> Options --> Digitizing` tab. You can also set "
+"the default snapping mode, tolerance value, and units, which will populate "
+"the :guilabel:`Snapping Options` dialog."
+msgstr ""
+"您可以在 :menuselection:`设置 --> 选项 --> 数字化` "
+"选项卡中将捕捉设置为默认在所有新建工程中启用。还可以设置默认捕捉模式、容差值和单位，这将填充 :guilabel:`捕捉选项` 对话框。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:175
+msgid "Enable snapping on intersections"
+msgstr "启用相交处捕捉"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:177
+msgid ""
+"Another available option is to use |snappingIntersection| "
+":guilabel:`snapping on intersection`, which allows you to snap to geometry "
+"intersections of snapping enabled layers, even if there are no vertices at "
+"the intersections."
+msgstr ""
+"另一个可用的选项是使用 |snappingIntersection| :guilabel:`相交处捕捉` "
+"，这使您可以捕捉到启用捕捉的图层的几何图形相交点，即使相交处没有顶点。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2232
+msgid "snappingIntersection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:185
+msgid "Limit snapping to a scale range"
+msgstr "将捕捉限制在比例范围内"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:187
+msgid ""
+"In some cases snapping can become very slow. This is often caused by the "
+"amount of features in some layers that require a heavy index to compute and "
+"maintain. Some parameters exist to enable snapping only when the map view is"
+" inside a relevant scale range. This allows to only do the costly index "
+"computation related to snapping at a scale where drawing is relevant."
+msgstr ""
+"在某些情况下，捕捉可能会变得非常迟钝。这通常是由某些图层中的要素数量引起的，这些要素需要大量索引来计算和维护。某些参数仅在地图视图处于相关比例范围内才启用捕捉。这允许仅执行与绘制比例捕捉相关的价值高的索引计算。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:193
+msgid ""
+"Scale limit to snapping is configured in :menuselection:`Project --> "
+"Snapping Options...`. Limiting snapping to scale is only available in "
+":guilabel:`Advanced Configuration` mode."
+msgstr ""
+"捕捉的比例限制在 :menuselection:`工程 --> 捕捉选项...` 中配置。将捕捉限制为缩放仅在 :guilabel:`高级配置` "
+"模式下可用。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:198
+msgid "To limit snapping to a scale range you have three modes available:"
+msgstr "要将捕捉限制在比例范围内，有三种可用模式："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:200
+msgid ""
+":guilabel:`Disabled`: Snapping is enabled whatever the current map scale is."
+" This is the default mode."
+msgstr ":guilabel:`禁用`: 无论当前地图比例是多少，都会启用捕捉。这是默认模式。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:202
+msgid ""
+":guilabel:`Global`: Snapping is limited and only enabled when the current "
+"scale of the map is between a global minimum and a global maximum value. "
+"When selecting this mode two widgets become available to configure the range"
+" of scales in which snapping is enabled."
+msgstr ""
+":guilabel:`全局`: "
+"捕捉是有限的，仅当地图的当前比例介于全局最小值和全局最大值之间时才会启用。选择此模式时，将有两个控件用于配置启用捕捉的比例范围。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:206
+msgid ""
+":guilabel:`Per layer`: The snapping scale range limit is defined for each "
+"layer. When selecting this mode two columns become available to configure "
+"the minimum and maximum scales for each layer."
+msgstr ":guilabel:`每个图层`: 捕捉比例范围限制是为每个图层定义的。选择此模式时，将有两列可用于配置每个图层的最小和最大比例。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:210
+msgid ""
+"Please note that the minimum and maximum scales follow the QGIS convention: "
+"minimum scale is the most \"zoomed out\" scale while maximum scale is the "
+"most \"zoomed in\". A minimum or maximum scale that is set to \"0\" or \"not"
+" set\" is considered not limiting."
+msgstr ""
+"请注意，最小和最大比例遵循QGIS约定：最小比例是 \"缩小\" 比例的最小值，而最大比例是 \"放大\" 比例的最大值。设置为 \"0\" 或 "
+"\"未设置\" 的最小或最大比例被视为非限制性。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:217
+msgid "Self-snapping"
+msgstr "自捕捉"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:219
+msgid ""
+"The |snappingSelf| :sup:`Self-snapping` option allows you to snap to the "
+"geometry that is being edited. Combined with the :ref:`advanced digitizing "
+"panel <advanced_digitizing_panel>`, this provides a handy way to digitize "
+"new edges relative to the previous edges or vertices. Self-snapping can "
+"cause invalid geometries, use with caution."
+msgstr ""
+"|snappingSelf| :sup:`自捕捉` 选项允许捕捉到正在编辑的几何图形。结合 :ref:`高级数字化面板 "
+"<advanced_digitizing_panel>` "
+"，提供了一种相对于之前边或顶点对新边进行数字化的便捷方式。自捕捉可能会导致无效的几何图形，请谨慎使用。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2234
+msgid "snappingSelf"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:232
+msgid "Drawing features with self-snapping"
+msgstr "使用自捕捉绘制要素"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:237
+msgid "Snapping on custom grid"
+msgstr "在自定义网格上捕捉"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:239
+msgid ""
+"A snapping distance can also be customized on a layer basis in the "
+":guilabel:`Digitizing` tab of the layer properties dialog. With setting the "
+":guilabel:`Geometry precision` distance, you enable a dotted grid visible "
+"when the map canvas is at a coherent scale for display. Snapping can then be"
+" performed on the dots of the grid: an added or modified geometry will have "
+"all of its vertices snapped automatically to the closest node of the grid. "
+"More information at :ref:`digitizingmenu`."
+msgstr ""
+"还可以在图层属性对话框的 :guilabel:`数字化` 选项卡中基于图层自定义捕捉距离。通过设置 :guilabel:`几何图形精度` "
+"距离，可以启用在地图画布处于相干比例时可见的点缀网格进行显示。然后对网格的点进行捕捉：添加或修改的几何图形的所有顶点将自动捕捉到网格的最近节点。更多信息，请参阅"
+" :ref:`digitizingmenu` 。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:252
+msgid "Topological editing"
+msgstr "拓扑编辑"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:254
+msgid ""
+"In addition to these snapping options, the :guilabel:`Snapping options...` "
+"dialog (:menuselection:`Project --> Snapping options`) and the "
+":guilabel:`Snapping` toolbar allow you to enable / disable some other "
+"topological functionalities."
+msgstr ""
+"除了这些捕捉选项之外， :guilabel:`捕捉选项...` 对话框 (:menuselection:`工程 --> 捕捉选项`) 和 "
+":guilabel:`捕捉` 工具栏允许您启用 / 禁用一些其他拓扑功能。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:264
+msgid "Enable topological editing"
+msgstr "启用拓扑编辑"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:266
+msgid ""
+"The |topologicalEditing| :sup:`Topological editing` button helps when "
+"editing and maintaining features with common boundaries. With this option "
+"enabled, QGIS 'detects' shared boundaries. When you move common "
+"vertices/segments, QGIS will also move them in the geometries of the "
+"neighboring features."
+msgstr ""
+"|topologicalEditing| :sup:`拓扑编辑` 按钮有助于编辑和维护具有公共边界的要素。启用此选项后，QGIS将 '检测' "
+"共享边界。移动公共顶点/线段时，QGIS也会在相邻要素的几何图形中移动它们。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2244
+msgid "topologicalEditing"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:272
+msgid ""
+"Topological editing works with features from different layers, as long as "
+"the layers are visible and in editing mode."
+msgstr "拓扑编辑适用于来自不同图层的要素，只要图层可见且处于编辑模式即可。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:275
+msgid ""
+"In layer with Z or M values, topological editing will interpolate the Z or M"
+" value of the vertex based on the value of the edge used for the connection."
+msgstr "在具有 Z 或 M 值的图层中，拓扑编辑将根据用于连接的边的值对顶点的 Z 或 M 值进行插值。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:282
+msgid "Overlapping control"
+msgstr "重叠控制"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:284
+msgid ""
+"Overlapping prevents you from drawing new features that overlap existing "
+"ones in the selected layer, speeding up digitizing of adjacent polygons. It "
+"can be controlled by the overlap tool. Three modes are available:"
+msgstr "重叠可防止绘制与选定图层中现有要素相重叠的新要素，从而加快邻接多边形的数字化。可以通过重叠工具进行控制，并有三种模式可用："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:288
+msgid "|allowIntersections| :guilabel:`Allow Overlap` (default)"
+msgstr "|allowIntersections| :guilabel:`允许重叠` (默认)"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2082
+msgid "allowIntersections"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:289
+msgid ""
+"|avoidIntersectionsCurrentLayer| :guilabel:`Avoid Overlap on Active Layer`: "
+"prevents any overlap with other features from the layer being edited. "
+"Digitize the new geometries so that they overlap their neighbours and QGIS "
+"will cut the overlapping part(s) of the new geometries and snap them to the "
+"boundary of the existing features. The advantage is that you don't have to "
+"digitize the common vertices on boundary."
+msgstr ""
+"|avoidIntersectionsCurrentLayer| :guilabel:`在活动图层避免重叠`: "
+"防止与正在编辑的图层中的其他要素发生重叠。数字化新几何图形，使其与相邻几何图形重叠，QGIS将剪切新几何图形的重叠部分，并将其捕捉到现有要素的边界。其优势是不必数字化边界上的公共顶点。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2084
+msgid "avoidIntersectionsCurrentLayer"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:295
+msgid ""
+"|avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`: allows"
+" the overlapping setting to be set on a layer basis in the "
+":guilabel:`Advanced configuration` view mode."
+msgstr ""
+"|avoidIntersectionsLayers| :guilabel:`遵循高级配置`: 允许在 :guilabel:`高级配置` "
+"视图模式中以图层为基础设置重叠的相关参数。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2086
+msgid "avoidIntersectionsLayers"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:299
+msgid ""
+"If the new geometry is totally covered by existing ones, it gets cleared, "
+"and QGIS will show an error message."
+msgstr "如果新几何图形完全被现有几何图形覆盖，会将其被清除，QGIS显示一条错误信息。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:302
+msgid "**Use cautiously the** :guilabel:`Avoid overlap` **option**"
+msgstr "**请谨慎使用** :guilabel:`避免重叠` **选项**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:304
+msgid ""
+"Since this option will cut new overlapping geometries of any polygon layer, "
+"you can get unexpected geometries if you forget to uncheck it when no longer"
+" needed."
+msgstr "由于此选项将剪切任何多边形图层的新重叠几何图形，因此如果您在不再需要时忘记取消勾选，可能会得到意外的几何图形。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:314
+msgid "Automatic Tracing"
+msgstr "自动追踪"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:316
+msgid ""
+"Usually, when using capturing map tools (add feature, add part, add ring, "
+"reshape and split), you need to click each vertex of the feature. With the "
+"automatic tracing mode, you can speed up the digitization process as you no "
+"longer need to manually place all the vertices during digitization:"
+msgstr ""
+"通常，使用捕捉地图工具 (添加要素、添加部件、添加环、重塑和分割) "
+"时，需要单击要素的每个顶点。使用自动追踪模式，可以加快数字化处理，因为在数字化过程中不再需要手动放置所有顶点："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:322
+msgid ""
+"Enable the |tracing| :sup:`Tracing` tool (in the :guilabel:`Snapping` "
+"toolbar) by pushing the icon or pressing :kbd:`T` key."
+msgstr ""
+"通过按下图标或按 :kbd:`T` 键启用 |tracing| :sup:`追踪` 工具 (在 :guilabel:`捕捉` 工具栏中) 。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2246
+msgid "tracing"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:325
+msgid ""
+":ref:`Snap to <snapping_tolerance>` a vertex or segment of a feature you "
+"want to trace along."
+msgstr ":ref:`捕捉到 <snapping_tolerance>` 沿其追踪要素的顶点或线段。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:327
+msgid ""
+"Move the mouse over another vertex or segment you'd like to snap and, "
+"instead of the usual straight line, the digitizing rubber band represents a "
+"path from the last point you snapped to the current position. The tool also "
+"works with curved geometries."
+msgstr "将鼠标移动到要捕捉的另一个顶点或线段上，数字化橡皮筋表示从捕捉的最后一个点到当前位置的路径，而不是通常的直线。该工具也适用于曲线几何图形。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:332
+msgid ""
+"QGIS actually uses the underlying features topology to build the shortest "
+"path between the two points. Tracing requires snapping to be activated in "
+"traceable layers to build the path. You should also snap to an existing "
+"vertex or segment while digitizing and ensure that the two nodes are "
+"topologically connectable through existing features edges, otherwise QGIS is"
+" unable to connect them and thus traces a single straight line."
+msgstr ""
+"QGIS实际是使用底层要素拓扑来构建两点之间的最短路径。追踪要求在可追踪图层中激活捕捉以构建路径。数字化时还应捕捉到现有顶点或线段，并确保两个节点可通过现有要素边进行拓扑连接，否则QGIS将无法进行连接，从而追踪单一直线。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:340
+msgid ""
+"Click and QGIS places the intermediate vertices following the displayed "
+"path."
+msgstr "单击，QGIS将中间顶点放置在显示的路径之后。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:343
+msgid ""
+"Unfold the |tracing| :sup:`Enable Tracing` icon and set the "
+":guilabel:`Offset` option to digitize a path parallel to the features "
+"instead of tracing along them. A positive value shifts the new drawing to "
+"the left side of the tracing direction and a negative value does the "
+"opposite."
+msgstr ""
+"展开 |tracing| :sup:`启用追踪` 图标，并设置 :guilabel:`偏移` "
+"选项以数字化平行于要素的路径，而不是沿着要素进行追踪。正值将新图形移动到追踪方向的左侧，负值则相反。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:349
+msgid "**Adjust map scale or snapping settings for an optimal tracing**"
+msgstr "**为实现最佳追踪请调整地图比例或捕捉设置**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:351
+msgid ""
+"If there are too many features in map display, tracing is disabled to avoid "
+"potentially long tracing structure preparation and large memory overhead. "
+"After zooming in or disabling some layers the tracing is enabled again."
+msgstr "如果地图显示的要素过多，将禁用追踪，避免可能过长的追踪结构准备和大量内存占用。放大或禁用某些图层后，将再次启用追踪。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:355
+msgid "**Does not add topological points**"
+msgstr "**不添加拓扑点**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:357
+msgid ""
+"This tool does not add points to existing polygon geometries even if "
+":guilabel:`Topological editing` is enabled. If geometry precision is "
+"activated on the edited layer, the resulting geometry might not exactly "
+"follow an existing geometry."
+msgstr ""
+"即使启用了 :guilabel:`拓扑编辑` "
+"，该工具也不会向现有多边形几何图形添加点。如果在编辑的图层激活了几何图形精度，则生成的几何图形可能不会完全遵循现有几何图形。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:362
+msgid ""
+"**Quickly enable or disable automatic tracing by pressing the** :kbd:`T` "
+"**key**"
+msgstr "**按 ** :kbd:`T` ** 键可快速启用或禁用自动追踪**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:365
+msgid ""
+"By pressing the :kbd:`T` key, tracing can be enabled/disabled anytime (even "
+"while digitizing a feature), so it is possible to digitize parts of the "
+"feature with tracing enabled and other parts with tracing disabled. Tools "
+"behave as usual when tracing is disabled."
+msgstr ""
+"通过按 :kbd:`T` 键，可以随时启用/禁用追踪 "
+"(即使在数字化要素时也是如此)，因此可以在启用追踪时数字化要素的某些部分，而在禁用追踪的情况下数字化其他部分。禁用跟踪时，工具的行为恢复到正常状态。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:371
+msgid "**Convert tracing to curved geometries**"
+msgstr "**将追踪转换为曲线几何图形**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:373
+msgid ""
+"By using :menuselection:`Settings --> Options --> Digitizing --> Tracing` "
+"you can create curved geometries while digitizing. See :ref:`digitizing "
+"options <digitizing_options>`."
+msgstr ""
+"通过使用 :menuselection:`设置 --> 选项 --> 数字化 --> 追踪` ，可以在数字化的同时创建曲线几何图形。请参阅 "
+":ref:`数字化选项 <digitizing_options>` 。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:385
+msgid "Digitizing an existing layer"
+msgstr "数字化现有图层"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:387
+msgid ""
+"By default, QGIS loads layers read-only. This is a safeguard to avoid "
+"accidentally editing a layer if there is a slip of the mouse. However, you "
+"can choose to edit any layer as long as the data provider supports it (see "
+":ref:`supported_format`), and the underlying data source is writable (i.e., "
+"its files are not read-only)."
+msgstr ""
+"默认情况下，QGIS以只读方式加载图层。这是一种保护措施，可以避免在鼠标滑动时意外编辑图层。但是，只要数据提供程序支持，并且基础数据源是可写的 "
+"(其文件不是只读属性)，就可以选择编辑任何图层 (请参阅 :ref:`supported_format`) 。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:393
+msgid "**Restrict edit permission on layers within a project**"
+msgstr "**约束工程中图层的编辑权限**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:412
+msgid "Vector layer basic editing toolbar"
+msgstr "矢量图层基本编辑工具栏"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:415
+msgid "Tool"
+msgstr "工具"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:415
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:986
+msgid "Purpose"
+msgstr "目标"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:417
+msgid "|allEdits|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2080
+msgid "allEdits"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:417
+msgid "|toggleEditing|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2242
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:420
+msgid "|saveEdits|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2218
+msgid "saveEdits"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:422
+msgid "|digitizeWithSegment|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2132
+msgid "digitizeWithSegment"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:422
+msgid "|digitizeWithCurve|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2130
+msgid "digitizeWithCurve"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
+msgid "|streamingDigitize|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2240
+msgid "streamingDigitize"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
+msgid "|digitizeShape|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2128
+msgid "digitizeShape"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:426
+msgid "|newTableRow|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2182
+msgid "newTableRow"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:426
+msgid "|capturePoint|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2100
+msgid "capturePoint"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:428
+msgid "|captureLine|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2098
+msgid "captureLine"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:428
+msgid "|capturePolygon|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2102
+msgid "capturePolygon"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:430
+msgid "|vertexTool|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2254
+msgid "vertexTool"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:430
+msgid "|vertexToolActiveLayer|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2256
+msgid "vertexToolActiveLayer"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2104
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:432
+msgid "|multiEdit|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2180
+msgid "multiEdit"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:435
+msgid "|deleteSelectedFeatures|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2124
+msgid "deleteSelectedFeatures"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:435
+msgid "|editCut|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2136
+msgid "editCut"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:437
+msgid "|editCopy|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2134
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:437
+msgid "|editPaste|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2138
+msgid "editPaste"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:439
+msgid "|undo|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2252
+msgid "undo"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:439
+msgid "|redo|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2200
+msgid "redo"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:579
+msgid "Vertex tool"
+msgstr "顶点工具"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2188
+msgid "options"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2222
+msgid "selectNumber"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2158
+msgid "hamburgerMenu"
+msgstr "hamburgerMenu"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2162
+msgid "locked"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2224
+msgid "selectRectangle"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2152
+msgid "fileSaveAs"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2212
+msgid "rollbackEdits"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2096
+msgid "cancelEdits"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:986
+msgid "Icon"
+msgstr " 图标"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:988
+msgid "|cad|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2088
+msgid "cad"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:990
+msgid "|moveFeature| |moveFeatureLine| |moveFeaturePoint|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2168
+msgid "moveFeature"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2176
+msgid "moveFeatureLine"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2178
+msgid "moveFeaturePoint"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:990
+msgid "|moveFeatureCopy| |moveFeatureCopyLine| |moveFeatureCopyPoint|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2170
+msgid "moveFeatureCopy"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2172
+msgid "moveFeatureCopyLine"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2174
+msgid "moveFeatureCopyPoint"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:994
+msgid "|rotateFeature|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2214
+msgid "rotateFeature"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:994
+msgid "|simplify|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2228
+msgid "simplify"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:996
+msgid "|scaleFeature|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2220
+msgid "scaleFeature"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:998
+msgid "|addRing|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2078
+msgid "addRing"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:998
+msgid "|addPart|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2076
+msgid "addPart"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1000
+msgid "|fillRing|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2154
+msgid "fillRing"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1000
+msgid "|reverseLine|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2210
+msgid "reverseLine"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1002
+msgid "|deleteRing|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2122
+msgid "deleteRing"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1002
+msgid "|deletePart|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2120
+msgid "deletePart"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1004
+msgid "|offsetCurve|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2184
+msgid "offsetCurve"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1004
+msgid "|reshape|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2208
+msgid "reshape"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1006
+msgid "|splitParts|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2238
+msgid "splitParts"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1006
+msgid "|splitFeatures|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2236
+msgid "splitFeatures"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1008
+msgid "|mergeFeatureAttributes|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2164
+msgid "mergeFeatureAttributes"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1008
+msgid "Merge Attributes of Selected Features"
+msgstr "合并（merge）选中要素的属性"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1008
+msgid "|mergeFeatures|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2166
+msgid "mergeFeatures"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1008
+msgid "Merge Selected Features"
+msgstr "合并（merge）选中的要素"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1010
+msgid "|rotatePointSymbols|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2216
+msgid "rotatePointSymbols"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1010
+msgid "|offsetPointSymbols|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2186
+msgid "offsetPointSymbols"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1012
+msgid "|trimExtend|"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2248
+msgid "trimExtend"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2118
+msgid "dataDefine"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2116
+msgid "circularStringRadius"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2106
+msgid "circle2Points"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2110
+msgid "circle3Points"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2114
+msgid "circleCenterPoint"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2112
+msgid "circle3Tangents"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2108
+msgid "circle2TangentsPoint"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2142
+msgid "ellipseCenter2Points"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2144
+msgid "ellipseCenterPoint"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2146
+msgid "ellipseExtent"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2148
+msgid "ellipseFoci"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2196
+msgid "rectangleCenter"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2198
+msgid "rectangleExtent"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2192
+msgid "rectangle3PointsDistance"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2194
+msgid "rectangle3PointsProjected"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2202
+msgid "regularPolygon2Points"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2206
+msgid "regularPolygonCenterPoint"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2204
+msgid "regularPolygonCenterCorner"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2090
+msgid "cadConstruction"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2092
+msgid "cadParallel"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2094
+msgid "cadPerpendicular"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2226
+msgid "settings"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2156
+msgid "floater"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2150
+msgid "extractVertices"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1797
+msgid "\\"
+msgstr "\\"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1805
+msgid ":kbd:`Z`"
+msgstr ":kbd:`Z`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1809
+msgid ":kbd:`C`"
+msgstr ":kbd:`C`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1811
+msgid ":kbd:`P`"
+msgstr ":kbd:`P`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2126
+msgid "delta"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2160
+msgid "lockRepeating"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2190
+msgid "processSelected"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2140
+msgid "editableEdits"
+msgstr ""

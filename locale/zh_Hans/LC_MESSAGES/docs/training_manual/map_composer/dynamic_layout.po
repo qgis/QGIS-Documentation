@@ -1,0 +1,458 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:2
+msgid "|LS| Creating a Dynamic Print Layout"
+msgstr "课: 创建动态打印布局"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:4
+msgid ""
+"Now that you have learned to create a basic map layout we go a step further "
+"and create a map layout that adapts dynamically to our map extent and to the"
+" page properties, e.g. when you change the size of the page. Also, the date "
+"of creation will adapt dynamically."
+msgstr ""
+"既然您已经学会了如何创建基本的地图布局，我们更进一步，创建一个地图布局，它可以动态地适应我们的地图范围和页面属性，例如当您更改页面大小时。此外，创建日期也将动态调整。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:11
+msgid "|moderate| |FA| Creating the dynamic map canvas"
+msgstr "|moderate| 跟我做: 创建动态地图画布"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:332
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:13
+msgid ""
+"Load the ESRI Shapefile format datasets :file:`protected_areas.shp`, "
+":file:`places.shp`, :file:`rivers.shp` and :file:`water.shp` into the map "
+"canvas and adapt its properties to suit your own convenience."
+msgstr ""
+"加载 ESRI Shapefile 格式数据集 :file:`protected_areas.shp`, :file:`places.shp`, "
+":file:`rivers.shp` 和 :file:`water.shp` 到地图画布，并调整其属性以适合自己的要求。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:333
+msgid "newLayout"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:21
+msgid ""
+"We want to create a map layout consisting of a header and a map of the "
+"region near Swellendam, South Africa. The layout should have a margin of 7.5"
+" mm and the header should be 36mm high."
+msgstr "我们想创建一幅地图布局，由标题和南非斯韦伦丹附近地区的地图组成。布局的边距应为 7.5 mm，标题的高度应为 36 mm。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:25
+msgid ""
+"Create a map item called ``main map`` on the canvas and go to the "
+":guilabel:`Layout` panel. Scroll down to the :guilabel:`Variables` section "
+"and find the :guilabel:`Layout` part. Here we set some variables you can use"
+" all over the dynamic print layout. Go to the :guilabel:`Layout` panel and "
+"scroll down to the :guilabel:`Variables` section. The first variable will "
+"define the margin. Press the |symbologyAdd| button and type in the name "
+"``sw_layout_margin``. Set the value to ``7.5``. Press the |symbologyAdd| "
+"button again and type in the name ``sw_layout_height_header``. Set the value"
+" to ``36``."
+msgstr ""
+"在画布中创建一个名为 ``main map`` 的地图项，然后转到 :guilabel:`布局` 面板，向下滚动到 :guilabel:`变量` "
+"区段，找到 :guilabel:`布局` 部分。在此，我们设置一些变量，您可以在整个动态打印布局中使用。第一个变量将定义边距。按 "
+"|symbologyAdd| 按钮并输入名称 ``sw_layout_margin`` 。将该值设置为 ``7.5`` 。再次按 "
+"|symbologyAdd| 按钮，并输入名称 ``sw_layout_height_header`` 。将该值设置为 ``36`` 。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:341
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:40
+msgid ""
+"Now you are ready to create the position and the size of the map canvas "
+"automatically by means of the variables. Make sure that your map item is "
+"selected, go to the :guilabel:`Item Properties` panel, scroll down to and "
+"open the :guilabel:`Position and Size` section. Click the "
+"|dataDefineExpressionOn| :sup:`Data defined override` for :guilabel:`X` and "
+"from the :guilabel:`Variables` entry, choose ``@sw_layout_margin``."
+msgstr ""
+"现在，您可以通过变量自动创建地图画布的位置和大小。确保已选中地图项，转到 :guilabel:`项属性` 面板，向下滚动至并打开 "
+":guilabel:`位置和大小` 区段。在 :guilabel:`X` 右侧单击 |dataDefineExpressionOn| "
+":sup:`数据定义重写` ，并从 :guilabel:`变量` 条目中选择 ``@sw_layout_margin`` 。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:328
+msgid "dataDefineExpressionOn"
+msgstr "dataDefineExpressionOn"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:48
+msgid ""
+"Click the |dataDefineExpressionOn| :sup:`Data defined override` for "
+":guilabel:`Y`, choose :guilabel:`Edit...` and type in the formula::"
+msgstr ""
+"在 :guilabel:`Y` 右侧单击 |dataDefineExpressionOn| :sup:`数据定义重写` ，选择 "
+":guilabel:`编辑...` ，然后输入公式 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:54
+msgid ""
+"You can create the size of the map item by using the variables for "
+":guilabel:`Width` and :guilabel:`Height`. Click the |dataDefineExpressionOn|"
+" :sup:`Data defined override` for :guilabel:`Width` and choose "
+":guilabel:`Edit ...` again. Fill in the formula::"
+msgstr ""
+"可以使用 :guilabel:`宽度` 和 :guilabel:`高度` 变量来创建地图项的大小。单击 :guilabel:`宽度` 右侧的 "
+"|dataDefineExpressionOn| :sup:`数据定义重写` ，然后选择 :guilabel:`编辑 ...` ，再一次填写以下公式 "
+"::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:62
+msgid ""
+"Click the |dataDefineExpressionOn| :sup:`Data defined override` for "
+":guilabel:`Height` and choose :guilabel:`Edit ...`. Here fill in the "
+"formula::"
+msgstr ""
+"单击 :guilabel:`高度` 右侧的 |dataDefineExpressionOn| :sup:`数据定义重写` ，然后选择 "
+":guilabel:`编辑 ...` ，输入如下公式 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:68
+msgid ""
+"We will also create a grid containing the coordinates of the main canvas map"
+" extent. Go to :guilabel:`Item Properties` again and choose the "
+":guilabel:`Grids` section. Insert a grid by clicking the |symbologyAdd| "
+"button. Click on :guilabel:`Modify grid ...` and set the "
+":guilabel:`Interval` for :guilabel:`X`, :guilabel:`Y` and :guilabel:`Offset`"
+" according to the map scale you chose in the QGIS main canvas. The "
+":guilabel:`Grid type` :guilabel:`Cross` is very well suited for our "
+"purposes."
+msgstr ""
+"我们还要创建一个包含主画布地图范围坐标的网格。再次转到 :guilabel:`项属性` 并选择 :guilabel:`网格` 区段。通过单击 "
+"|symbologyAdd| 按钮插入网格。单击 :guilabel:`修改网格...` ，并根据您在QGIS主画布中选择的地图比例设置 "
+":guilabel:`X`, :guilabel:`Y` 和 :guilabel:`偏移量` 的 :guilabel:`间隔` 。 "
+":guilabel:`网格类型` :guilabel:`十字` 非常适合我们的目标。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:81
+msgid "|moderate| |FA| Creating the dynamic header"
+msgstr "|moderate| 跟我做: 创建动态标题"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:83
+msgid ""
+"Insert a rectangle which will contain the header with the |addBasicShape| "
+":sup:`Add Shape` button. In the :guilabel:`Items` panel enter the name "
+"``header``."
+msgstr ""
+"使用 |addBasicShape| :sup:`添加形状` 按钮插入一个包含标题的矩形。在 :guilabel:`项` 面板输入名称 "
+"``header`` 。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:322
+msgid "addBasicShape"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:86
+msgid ""
+"Again, go to the :guilabel:`Item Properties` and open the "
+":guilabel:`Position and Size` section. Using |dataDefineExpressionOn| "
+":sup:`Data defined override`, choose the ``sw_layout_margin`` variable for "
+":guilabel:`X` as well as for :guilabel:`Y`. :guilabel:`Width` shall be "
+"defined by the expression::"
+msgstr ""
+"再次转到 :guilabel:`项属性` ，打开 :guilabel:`位置和大小` 区段。使用 |dataDefineExpressionOn| "
+":sup:`数据定义重写` ，为 :guilabel:`X` 和 :guilabel:`Y` 选择 ``sw_layout_margin`` 变量。 "
+":guilabel:`宽度` 应由以下表达式定义 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:95
+msgid "and :guilabel:`Height` by the ``sw_layout_height_header`` variable."
+msgstr "和使用 ``sw_layout_height_header`` 变量设置 :guilabel:`高度` 。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:96
+msgid ""
+"We will insert a horizontal line and two vertical lines to divide the header"
+" into different sections using the |addNodesShape| :sup:`Add Node Item`. "
+"Create a horizontal line and two vertical lines and name them ``Horizontal "
+"line``, ``Vertical line 1`` ``Vertical line 2``."
+msgstr ""
+"我们将插入一条水平线和两条垂直线，使用 |addNodesShape| :sup:`添加结点项` "
+"将标题分成不同的部分。创建一条水平线和两条垂直线，并将它们命名为 ``Horizontal line``, ``Vertical line 1`` "
+"``Vertical line 2`` 。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:326
+msgid "addNodesShape"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:102
+msgid "For the horizontal line:"
+msgstr "对于水平线："
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:104
+msgid "Set :guilabel:`X` to the variable ``sw_layout_margin``"
+msgstr "将 :guilabel:`X` 设置为变量 ``sw_layout_margin``"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:105
+msgid "Set the expression for :guilabel:`Y` to::"
+msgstr "将 :guilabel:`Y` 的表达式设置为 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:109
+msgid "Set the expression for :guilabel:`Width` to::"
+msgstr "将 :guilabel:`宽度` 的表达式设置为 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:113
+msgid "For the first vertical line:"
+msgstr "对于第一条垂直线："
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:115
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:127
+msgid "Set the expression for :guilabel:`X` to::"
+msgstr "将 :guilabel:`X` 的表达式设置为 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:119
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:131
+msgid "Set :guilabel:`Y` to the variable ``sw_layout_margin``"
+msgstr "将 :guilabel:`Y` 设置为变量 ``sw_layout_margin``"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:120
+msgid ""
+"The height must be the same as the header we created, so set "
+":guilabel:`Height` to the variable ``sw_layout_height_header``."
+msgstr "高度必须与我们创建的标题相同，因此将 :guilabel:`高度` 设置为变量 ``sw_layout_height_header`` 。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:124
+msgid "The second vertical line is placed to the left of the first one."
+msgstr "第二条垂直线位于第一条垂直线的左侧。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:132
+msgid ""
+"The height shall be the same as the other vertical line, so set "
+":guilabel:`Height` to the variable ``sw_layout_height_header``."
+msgstr "高度应与其他垂直线相同，因此将 :guilabel:`高度` 设置为变量 ``sw_layout_height_header`` 。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:136
+msgid ""
+"The figure below shows the structure of our dynamic layout. We will fill the"
+" areas created by the lines with some elements."
+msgstr "下图显示了动态布局的结构，我们将用一些元素填充由线创建的区域。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:143
+msgid "|moderate| |FA| Creating labels for the dynamic header"
+msgstr "|moderate| 跟我做: 为动态标题创建标注"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:145
+msgid ""
+"The title of your QGIS project can be included automatically. The title is "
+"set in the :guilabel:`Project Properties`. Insert a label with the |label| "
+":sup:`Add Label` button and enter the name ``project title (variable)``. In "
+"the :guilabel:`Main Properties` of the :guilabel:`Items Properties` Panel "
+"enter the expression::"
+msgstr ""
+"QGIS工程的标题可以自动包含在内。标题在 :guilabel:`工程属性` 中设置。使用 |label| :sup:`添加标注` "
+"按钮插入标注，并输入名称 ``project title (variable)`` 。在 :guilabel:`项属性` 面板的 "
+":guilabel:`主要属性` 中，输入以下表达式："
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:330
+msgid "label"
+msgstr "label"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:154
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:183
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:210
+msgid "Set the position of the label."
+msgstr "设置标注的位置。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:156
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:185
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:212
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:235
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:255
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:281
+msgid "For :guilabel:`X`, use the expression::"
+msgstr "对于 :guilabel:`X` ，使用以下表达式 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:160
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:189
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:216
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:239
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:259
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:285
+msgid "For :guilabel:`Y`, use the expression::"
+msgstr "对于 :guilabel:`Y` ，使用以下表达式 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:164
+msgid "For :guilabel:`Width`, use the expression::"
+msgstr "对于 :guilabel:`宽度` ，使用以下表达式 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:168
+msgid "Enter ``11.25`` for :guilabel:`Height`"
+msgstr "输入 ``11.25`` 作为 :guilabel:`高度`"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:170
+msgid "Under :guilabel:`Appearance` set the Font size to 16 pt."
+msgstr "在 :guilabel:`外观` 将字号设置为 16 点。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:172
+msgid ""
+"The second label will include a description of the map you created. Again, "
+"insert a label and name it ``map description``. In the :guilabel:`Main "
+"Properties` enter the text ``map description``. In the :guilabel:`Main "
+"Properties` we will also include::"
+msgstr ""
+"第二个标注将包含您创建的地图描述。同样，插入一个标注并将其命名为 ``map description`` 。在 :guilabel:`主要属性` "
+"输入文本 ``map description`` 。在 :guilabel:`主要属性` 中，我们还将包括 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:180
+msgid ""
+"Here we used two ``Date and Time`` functions (``now`` and ``format_date``)."
+msgstr "这里我们使用了两个 ``日期和时间`` 函数 (``now`` 和 ``format_date``)。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:193
+msgid ""
+"The third label will include information about your organisation. First we "
+"will create some variables in the :guilabel:`Variables` menu of the "
+":guilabel:`Item Properties`. Go to the :guilabel:`Layout` menu, click the "
+"|symbologyAdd| button each time and enter the names ``o_department``, "
+"``o_name`` , ``o_adress`` and ``o_postcode``. In the second row enter the "
+"information about your organisation. We will use these variables in the "
+":guilabel:`Main Properties` section."
+msgstr ""
+"第三个标注将包含有关您团队的信息。首先，我们将在 :guilabel:`项属性` 的 :guilabel:`变量` 菜单中创建一些变量。转到 "
+":guilabel:`布局` 菜单，单击 |symbologyAdd| 按钮，输入名称 ``o_department``, ``o_name`` , "
+"``o_adress`` and ``o_postcode`` 。在第二行输入有关团队的信息。我们将在 :guilabel:`主要属性` "
+"区段使用这些变量。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:203
+msgid "In :guilabel:`Main Properties` enter::"
+msgstr "在 :guilabel:`主要属性` 中输入 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:220
+msgid "For :guilabel:`Width`, use ``49.00``"
+msgstr "对于 :guilabel:`宽度` ，使用 ``49.00``"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:221
+msgid "For :guilabel:`Height`, use the expression::"
+msgstr "对于 :guilabel:`高度` ，使用以下表达式 ::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:228
+msgid "|moderate| |FA| Adding pictures to the dynamic header"
+msgstr "|moderate| 跟我做: 向动态标题添加图片"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:230
+msgid ""
+"Use the |addImage| :sup:`Add Picture` button to place a picture above your "
+"label ``organisation information``. After entering the name ``organisation "
+"logo`` define the position and size of the logo:"
+msgstr ""
+"使用 |addImage| :sup:`添加图片` 按钮将图片放置在标注 ``organisation information`` 上方。输入 "
+"``organisation logo`` 的名称后，定义标识的位置和大小："
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:324
+msgid "addImage"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:243
+msgid "For :guilabel:`Width`, use ``39.292``"
+msgstr "对于 :guilabel:`宽度` ，使用 ``39.292``"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:244
+msgid "For :guilabel:`Height`, use ``9.583``"
+msgstr "对于 :guilabel:`高度` ，使用 ``9.583``"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:246
+msgid ""
+"To include a logo of your organisation you have to save your logo under your"
+" home directory and enter the path under :menuselection:`Main Properties -->"
+" Image Source`."
+msgstr "如果想包含团队的标识，您必须将标识保存在主目录，并在 :menuselection:`主要属性 --> 图像源` 输入路径。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:249
+msgid ""
+"Our layout still needs a north arrow. This will also be inserted by using "
+"|northArrow| :sup:`Add North Arrow`. We will use the default north arrow. "
+"Define the position:"
+msgstr "我们的布局仍然需要指北针，这将使用 |northArrow| :sup:`添加指北针` 插入，在此使用默认设置的指北针。定义位置："
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:335
+msgid "northArrow"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:263
+msgid "For :guilabel:`Width`, use ``21.027``"
+msgstr "对于 :guilabel:`宽度` ，使用 ``21.027``"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:264
+msgid "For :guilabel:`Height`, use ``21.157``"
+msgstr "对于 :guilabel:`高度` ，使用 ``21.157``"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:267
+msgid "|moderate| |FA| Creating the scalebar of the dynamic header"
+msgstr "|moderate| 跟我做: 创建动态标题的比例尺"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:269
+msgid ""
+"To insert a scalebar in the header click on |scaleBar| :sup:`Add Scale Bar` "
+"and place it in the rectangle above the north arrow. In :guilabel:`Map` "
+"under the :guilabel:`Main Properties` choose your ``main map(Map 1)``. This "
+"means that the scale changes automatically according to the extent you "
+"choose in the QGIS main canvas. Choose the :guilabel:`Style` "
+":guilabel:`Numeric`. This means that we insert a simple scale without a "
+"scalebar. The scale still needs a position and size."
+msgstr ""
+"要在标题中插入比例尺，请单击 |scaleBar| :sup:`添加比例尺` 并将其放置在指北针上方的矩形中。在 :guilabel:`主要属性` 下的"
+" :guilabel:`地图` 中选择 ``main map(Map 1)`` 。这意味着比例会根据您在QGIS主画布中选择的范围自动更改。选择 "
+":guilabel:`样式` :guilabel:`数字` 。这意味着我们插入了一个没有比例尺的简单比例尺。比例尺仍然需要一个位置和大小。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:339
+msgid "scaleBar"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:289
+msgid "For :guilabel:`Width`, use ``25``"
+msgstr "对于 :guilabel:`宽度` ，使用 ``25``"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:290
+msgid "For :guilabel:`Height`, use ``8``"
+msgstr "对于 :guilabel:`高度` ，使用 ``8``"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:291
+msgid "Place the ``Reference point`` in the center."
+msgstr "将 ``参照点`` 放在中心。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:293
+msgid ""
+"Congratulations! You have created your first dynamic map layout. Take a look"
+" at the layout and check if everything looks the way you want it! The "
+"dynamic map layout reacts automatically when you change the :guilabel:`page "
+"properties`. For example, if you change the page size from DIN A4 to DIN A3,"
+" click the |refresh| :sup:`Refresh view` button and the page design is "
+"adapted."
+msgstr ""
+"祝贺！您已经创建了第一个动态地图布局。检查一下布局，看看是否一切都是您想要的样子！更改 :guilabel:`页面属性` "
+"时，动态地图布局会自动做出反应。例如，如果将页面大小从 DIN A4 更改为 DIN A3，请单击 |refresh| :sup:`刷新视图` "
+"按钮，页面制图将自动进行调整。"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:337
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:306
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:308
+msgid ""
+"On the next page, you will be given an assignment to complete. This will "
+"allow you to practice the techniques you have learned so far."
+msgstr "在下一页，您需要完成一份作业。这将允许您能够练习到目前为止所学到的技术。"

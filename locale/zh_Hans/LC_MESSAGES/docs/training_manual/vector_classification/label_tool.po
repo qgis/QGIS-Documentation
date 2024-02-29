@@ -1,0 +1,694 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:2
+msgid "|LS| Labels"
+msgstr "课: 标注"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:4
+msgid ""
+"Labels can be added to a map to show any information about an object. Any "
+"vector layer can have labels associated with it. These labels rely on the "
+"attribute data of a layer for their content."
+msgstr "标注可以添加到地图，以显示有关对象的信息。任何矢量图层都可以有与其关联的标注。这些标注的内容依赖于图层的属性数据。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:8
+msgid ""
+"**The goal for this lesson:** To apply useful and good-looking labels to a "
+"layer."
+msgstr "**本课目标:** 将有用且美观的标注应用于图层。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:13
+msgid "|basic| |FA| Using Labels"
+msgstr "|basic| 跟我做: 使用标注"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:398
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:15
+msgid "First, ensure that the |labelingSingle| button is visible in the GUI:"
+msgstr "首先，请确保 |labelingSingle| 按钮在GUI中可见："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:404
+msgid "labelingSingle"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:17
+msgid "Go to the menu item :menuselection:`View --> Toolbars`"
+msgstr "转到菜单项 :menuselection:`视图 --> 工具栏`"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:18
+msgid ""
+"Ensure that the :guilabel:`Label Toolbar` item has a check mark next to it. "
+"If it doesn't, click on the :guilabel:`Label Toolbar` item to activate it."
+msgstr "确保 :guilabel:`标注工具栏` 项旁边有复选标记。如果没有，请单击 :guilabel:`标注工具栏` 项将其激活。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:20
+msgid ""
+"Click on the ``places`` layer in the :guilabel:`Layers` panel so that it is "
+"highlighted"
+msgstr "单击 :guilabel:`图层` 面板中的 ``places`` 图层，使其高亮显示"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:22
+msgid ""
+"Click on the |labelingSingle| toolbar button to open the :guilabel:`Labels` "
+"tab of the :guilabel:`Layer Styling` panel"
+msgstr "单击 |labelingSingle| 工具栏按钮打开 :guilabel:`图层样式` 面板的 :guilabel:`标注` 选项卡"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:25
+msgid ""
+"Switch from :guilabel:`No Labels` to |labelingSingle| :guilabel:`Single "
+"Labels`"
+msgstr "从 :guilabel:`无标注` 切换到 |labelingSingle| :guilabel:`单一标注`"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:27
+msgid ""
+"You'll need to choose which field in the attributes will be used for the "
+"labels. In the previous lesson, you decided that the ``name`` field was the "
+"most suitable one for this purpose."
+msgstr "您需要选择属性中的哪个字段可用于标注。在上一课，您认为 ``name`` 字段最适用于此目的。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:31
+msgid "Select ``name`` from the Value list:"
+msgstr "从值列表中选择 ``name`` 字段："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:36
+#: ../../docs/training_manual/vector_classification/label_tool.rst:66
+#: ../../docs/training_manual/vector_classification/label_tool.rst:79
+#: ../../docs/training_manual/vector_classification/label_tool.rst:97
+msgid "Click :guilabel:`Apply`"
+msgstr "单击 :guilabel:`应用`"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:38
+msgid "The map should now have labels like this:"
+msgstr "地图现在应该有这样的标注："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:45
+msgid "|basic| |FA| Changing Label Options"
+msgstr "|basic| 跟我做: 更改标注选项"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:47
+msgid ""
+"Depending on the styles you chose for your map in earlier lessons, you might"
+" find that the labels are not appropriately formatted and either overlap or "
+"are too far away from their point markers."
+msgstr "根据在之前课程中为地图选择的样式，您可能会发现标注的格式不正确，或者重叠，或者距离其点标记太远。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:51
+msgid ""
+"Above, you used the |labelingSingle| button in the :guilabel:`Label Toolbar`"
+" to open the :guilabel:`Layer Styling` panel. As with :guilabel:`Symbology`,"
+" the same label options are available via both the :guilabel:`Layer Styling`"
+" panel and the :guilabel:`Layer Properties` dialog. Here, you'll use the "
+":guilabel:`Layer Properties` dialog."
+msgstr ""
+"以上，您使用 :guilabel:`标注工具栏` 中的 |labelingSingle| 按钮打开 :guilabel:`图层样式` 面板。与 "
+":guilabel:`符号化` 一样，通过 :guilabel:`图层样式` 面板和 :guilabel:`图层属性` "
+"对话框可以使用相同的标注选项。在此，您将使用 :guilabel:`图层属性` 对话框。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:57
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog by double-clicking on the "
+"``places`` layer"
+msgstr "双击 ``places`` 图层，打开 :guilabel:`图层属性` 对话框"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:59
+msgid "Select the |labelingSingle| :guilabel:`Labels` tab"
+msgstr "选择 |labelingSingle| :guilabel:`标注` 选项卡"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:60
+msgid ""
+"Make sure :guilabel:`Text` is selected in the left-hand options list, then "
+"update the text formatting options to match those shown here:"
+msgstr "确保在左侧选项列表中选择了 :guilabel:`文本` ，然后更新文本格式选项，使其与此处显示的选项相匹配："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:68
+msgid ""
+"That font may be larger and more familiar to users, but its readability is "
+"still dependent on what layers are rendered beneath it. To solve this, let's"
+" take a look at the :guilabel:`Buffer` option."
+msgstr "这种字体可能更大，用户也更熟悉，但它的可读性仍然依赖于它下面渲染的图层。为了解决这个问题，让我们看看 :guilabel:`描边` 选项。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:72
+msgid "Select :guilabel:`Buffer` from the left-hand options list"
+msgstr "从左侧选项列表中选择 :guilabel:`描边`"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:73
+msgid ""
+"Select the checkbox next to :guilabel:`Draw text buffer`, then choose "
+"options to match those shown here:"
+msgstr "勾选 :guilabel:`绘制文本描边` 旁边的复选框，然后选择与此处显示相匹配的选项："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:81
+msgid ""
+"You'll see that this adds a colored buffer or border to the place labels, "
+"making them easier to pick out on the map:"
+msgstr "您将看到，这为地点标注添加了彩色描边或边框，使它们更容易在地图中被识别："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:87
+msgid ""
+"Now we can address the positioning of the labels in relation to their point "
+"markers."
+msgstr "现在我们可以解决标注相对于其点标记的位置问题。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:90
+msgid "Select :guilabel:`Placement` from the left-hand options list"
+msgstr "从左侧选项列表中选择 :guilabel:`位置`"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:91
+msgid ""
+"Select :guilabel:`Around point` and change the value of :guilabel:`Distance`"
+" to ``2.0`` Millimeters:"
+msgstr "选择 :guilabel:`点周围` 模式，并将 :guilabel:`距离` 的值更改为 ``2.0`` 毫米："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:99
+msgid ""
+"You'll see that the labels are no longer overlapping their point markers."
+msgstr "您将看到标注不再与其点标记重叠。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:103
+msgid "|moderate| |FA| Using Labels Instead of Layer Symbology"
+msgstr "|moderate| 跟我做: 使用标注而不是图层符号"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:407
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:105
+msgid ""
+"In many cases, the location of a point doesn't need to be very specific. For"
+" example, most of the points in the ``places`` layer refer to entire towns "
+"or suburbs, and the specific point associated with such features is not that"
+" specific on a large scale. In fact, giving a point that is too specific is "
+"often confusing for someone reading a map."
+msgstr ""
+"在多数情况下，点的位置不需要非常具体。例如， ``places`` "
+"图层中的大多数点都是指整个城镇或郊区，而与这些要素相关联的指定点在很大程度上并不是那么具体。事实上，对于阅读地图的人来说，给出一个过于具体的点往往令人感到困惑。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:111
+msgid ""
+"To name an example: on a map of the world, the point given for the European "
+"Union may be somewhere in Poland, for instance. To someone reading the map, "
+"seeing a point labeled *European Union* in Poland, it may seem that the "
+"capital of the European Union is therefore in Poland."
+msgstr ""
+"举个例子：例如，在世界地图，为欧盟给出的点可能在波兰的某个地方。对于阅读地图的人来说，看到波兰有一个标有 *欧盟* 的点，感觉欧盟的总部似乎就在波兰。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:116
+msgid ""
+"So, to prevent this kind of misunderstanding, it's often useful to "
+"deactivate the point symbols and replace them completely with labels."
+msgstr "因此，为了防止产生这种误解，通常可以停用点符号，并使用标注完全替换它们。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:119
+msgid ""
+"In QGIS, you can do this by changing the position of the labels to be "
+"rendered directly over the points they refer to."
+msgstr "在QGIS中，可以通过更改标注的位置来实现，标注将直接渲染在它们所指的点上。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:122
+msgid ""
+"Open the |labelingSingle| :guilabel:`Labels` tab of the :guilabel:`Layer "
+"Properties` dialog for the ``places`` layer"
+msgstr ""
+"打开 ``places`` 图层的 :guilabel:`图层属性` 对话框的 |labelingSingle| :guilabel:`标注` 选项卡"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:124
+msgid "Select the :guilabel:`Placement` option from the options list"
+msgstr "从选项列表中选择 :guilabel:`位置` 选项"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:125
+msgid "Click on the :guilabel:`Offset from point` button"
+msgstr "单击 :guilabel:`离点偏移量` 按钮"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:127
+msgid ""
+"This will reveal the :guilabel:`Quadrant` options which you can use to set "
+"the position of the label in relation to the point marker. In this case, we "
+"want the label to be centered on the point, so choose the center quadrant:"
+msgstr "这将显示 :guilabel:`象限` 选项，可用于设置标注相对于点标记的位置。在这种情况下，我们希望标注以点为中心，因此选择中心象限："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:134
+msgid ""
+"Hide the point symbols by editing the layer :guilabel:`Symbology` as usual, "
+"and setting the size of the :guilabel:`Marker` size to ``0.0``:"
+msgstr "通过像之前一样编辑图层 :guilabel:`符号` 并将 :guilabel:`标记` 大小设置为 ``0.0`` 来隐藏点符号："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:140
+msgid "Click :guilabel:`Apply` and you'll see this result:"
+msgstr "单击 :guilabel:`应用` ，您将看到以下结果："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:145
+msgid ""
+"If you were to zoom out on the map, you would see that some of the labels "
+"disappear at larger scales to avoid overlapping. Sometimes this is what you "
+"want when dealing with datasets that have many points, but at other times "
+"you will lose useful information this way. There is another possibility for "
+"handling cases like this, which we'll cover in a later exercise in this "
+"lesson. For now, zoom out and click on the |showUnplacedLabel| button in the"
+" toolbar and see what happens."
+msgstr ""
+"如果缩小地图，您会看到一些标注在较大比例时消失，以避免重叠。有时，在处理具有多个点的数据集时，这或许是您想要的，但在其他时候，这样会丢失有用的信息。处理这种情况还有另一种可能性，我们将在本课后面的练习中介绍。现在，缩小并单击工具栏中的"
+" |showUnplacedLabel| 按钮，看看会有什么变化。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:422
+msgid "showUnplacedLabel"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:155
+msgid "|moderate| |TY| Customize the Labels"
+msgstr "|moderate| 试一试 自定义标注"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:157
+msgid ""
+"Reset the label and symbol settings to have a point marker and a label "
+"offset of ``2.0`` Millimeters."
+msgstr "重置标注和符号设置，使点标记和标注偏移 ``2.0`` 毫米。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:160
+#: ../../docs/training_manual/vector_classification/label_tool.rst:174
+#: ../../docs/training_manual/vector_classification/label_tool.rst:331
+msgid "Answer"
+msgstr "回答"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:163
+msgid ""
+"Your map should now show the marker points and the labels should be offset "
+"by 2mm. The style of the markers and labels should allow both to be clearly "
+"visible on the map:"
+msgstr "您的地图现在应该显示标记点，并且标注应该偏移2毫米。标记和标注的样式应允许两者在地图上清晰可见："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:170
+msgid ""
+"Set the map to the scale ``1:100000``. You can do this by typing it into the"
+" :guilabel:`Scale` box in the :guilabel:`Status Bar`. Modify your labels to "
+"be suitable for viewing at this scale."
+msgstr ""
+"将地图的比例设置为 ``1:100000`` 。您可以在 :guilabel:`状态栏` 的 :guilabel:`比例` "
+"框中输入来完成此操作，修改您的标注以适合在此比例下查看。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:177
+msgid "One possible solution has this final product:"
+msgstr "这是最终一种合理的解答方法："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:182
+msgid "To arrive at this result:"
+msgstr "要达到这个结果，请按如下操作："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:184
+msgid "Use a font size of ``10``"
+msgstr "使用的字号是 ``10``"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:185
+msgid "Use an around point placement distance of ``1.5 mm``"
+msgstr "使用 ``1.5 mm`` 的点周围位置距离"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:186
+msgid "Use a marker size of ``3.0 mm``"
+msgstr "使用的标记大小为 ``3.0 mm``"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:187
+msgid ""
+"In addition, this example uses the :guilabel:`Wrap on character` option:"
+msgstr "此外，本示例还使用了 :guilabel:`按该字符换行` 选项："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:192
+msgid ""
+"Enter a ``space`` in this field and click :guilabel:`Apply` to achieve the "
+"same effect. In our case, some of the place names are very long, resulting "
+"in names with multiple lines which is not very user friendly. You might find"
+" this setting to be more appropriate for your map."
+msgstr ""
+"在此字段输入 ``space`` ，然后单击 :guilabel:`应用` "
+"以达到相同的效果。在此示例，一些地名很长，导致名称换行，这对用户来说不是很友好。可能会发现此设置或许更适合您的地图。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:200
+msgid "|moderate| |FA| Labeling Lines"
+msgstr "|moderate| 跟我做: 标注线"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:202
+msgid ""
+"Now that you know how labeling works, there's an additional problem. Points "
+"and polygons are easy to label, but what about lines? If you label them the "
+"same way as the points, your results would look like this:"
+msgstr "既然您知道了标注是如何工作的，还有一个问题。点和多边形很容易标注，但是线呢？如果与点相同的方式进行标注，结果将如下所示："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:209
+msgid ""
+"We will now reformat the ``roads`` layer labels so that they are easy to "
+"understand."
+msgstr "我们现在将重新设置 ``roads`` 图层标注，使其易于理解。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:212
+msgid "Hide the ``places`` layer so that it doesn't distract you"
+msgstr "隐藏 ``places`` 图层，避免分散您的注意力"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:213
+msgid ""
+"Activate |labelingSingle| :guilabel:`Single Labels` for the ``roads`` layer "
+"as you did above for ``places``"
+msgstr ""
+"为 ``roads`` 图层激活 |labelingSingle| :guilabel:`单一标注`， 就像上面为 ``places`` 所做的那样"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:215
+msgid ""
+"Set the font :guilabel:`Size` to ``10`` so that you can see more labels"
+msgstr "将字体 :guilabel:`大小` 设置为 ``10`` ，便于看到更多标注"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:216
+msgid "Zoom in on the |majorUrbanName| town area"
+msgstr "放大 |majorUrbanName| 城镇范围"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:217
+msgid ""
+"In the :guilabel:`Labels` tab's :guilabel:`Placement` tab, choose the "
+"following settings:"
+msgstr "在 :guilabel:`标注` 选项卡的 :guilabel:`位置` 选项卡中，选择以下设置："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:223
+msgid ""
+"You'll probably find that the text styling has used default values and the "
+"labels are consequently very hard to read. Update the :guilabel:`Text` to "
+"use a dark-grey or black :guilabel:`Color` and the :guilabel:`Buffer` to use"
+" a light-yellow :guilabel:`Color`."
+msgstr ""
+"您可能会发现文本样式使用了默认值，因此标注很难阅读。将 :guilabel:`文本` 更新为深灰或黑 :guilabel:`色` ， "
+":guilabel:`描边` 使用浅黄 :guilabel:`色` 。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:228
+msgid "The map will look somewhat like this, depending on scale:"
+msgstr "根据比例设置，地图看起来有点像这样："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:233
+msgid ""
+"You'll see that some of the road names appear more than once and that's not "
+"always necessary. To prevent this from happening:"
+msgstr "您会看到某些道路名称出现了不止一次，这并不总是必要的。为了防止这种情况发生："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:236
+msgid ""
+"In the :guilabel:`Labels` tab of the :guilabel:`Layer Properties` dialog, "
+"choose the :guilabel:`Rendering` option and select :guilabel:`Merge "
+"connected lines to avoid duplicate labels` as shown:"
+msgstr ""
+"在 :guilabel:`图层属性` 对话框的 :guilabel:`标注` 选项卡中，选择 :guilabel:`渲染` 选项，然后选择 "
+":guilabel:`合并相连的线以防止重复标注` ，如图所示："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:243
+msgid "Click :guilabel:`OK`"
+msgstr "单击 :guilabel:`确定`"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:245
+msgid ""
+"Another useful function is to prevent labels being drawn for features too "
+"short to be of notice."
+msgstr "另一个实用的功能是防止要素太短而无法注意到的标注绘制。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:248
+msgid ""
+"In the same :guilabel:`Rendering` panel, set the value of "
+":guilabel:`Suppress labeling of features smaller than ...` to ``5.00 mm`` "
+"and note the results when you click :guilabel:`Apply`"
+msgstr ""
+"在同一 :guilabel:`渲染` 面板，设置 :guilabel:`小于如下尺寸的要素禁止标注...` 的值为 ``5.00 mm`` "
+"，并留意观察单击 :guilabel:`应用` 后的结果"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:252
+msgid ""
+"Try out different :guilabel:`Placement` settings as well. As we've seen "
+"before, the :guilabel:`Horizontal` option is not a good idea in this case, "
+"so let's try the :guilabel:`Curved` option instead."
+msgstr ""
+"还可以尝试不同的 :guilabel:`位置` 设置。正如我们之前看到的，在这种情况下， :guilabel:`水平` 选项并不是最优选，所以我们来试试"
+" :guilabel:`弯曲` 选项。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:256
+msgid ""
+"Select the :guilabel:`Curved` option in the :guilabel:`Placement` panel of "
+"the :guilabel:`Labels` tab"
+msgstr "在 :guilabel:`标注` 选项卡的 :guilabel:`位置` 面板中选择 :guilabel:`弯曲` 选项"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:259
+msgid "Here's the result:"
+msgstr "结果如下："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:264
+msgid ""
+"As you can see, this hides some labels that were previously visible, because"
+" of the difficulty of making some of them follow twisting street lines while"
+" still being legible. It makes other labels much more useful since they "
+"track the roads rather than float in space between them. You can decide "
+"which of these options to use, depending on what you think seems more useful"
+" or what looks better."
+msgstr ""
+"如您所见，这隐藏了一些之前可见的标注，因为很难让其中一些标注沿着曲折的街道线放置，并同时清晰可见。这使其他标注更加有用，因为它们跟踪道路，而不是漂浮在道路之间。您可以决定使用哪些选项，具体取决于您认为哪些更有用或者哪些看起来更好。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:273
+msgid "|hard| |FA| Data Defined Settings"
+msgstr "|hard| 跟我做: 数据定义的设置"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:403
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:275
+msgid "Deactivate labeling for the ``roads`` layer"
+msgstr "停用 ``roads`` 图层的标注"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:276
+msgid "Reactivate labeling for the ``places`` layer"
+msgstr "重新激活 ``places`` 图层的标注"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:277
+msgid "Open the attribute table for ``places`` via the |openTable| button"
+msgstr "通过 |openTable| 按钮打开 ``places`` 的属性表"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:412
+msgid "openTable"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:279
+msgid ""
+"It has one *field* which is of interest to us now: ``place`` which defines "
+"the type of urban area for each *record*. We can use this data to influence "
+"the label styles."
+msgstr "这里有一个我们现在感兴趣的 *字段* : ``place`` ，它定义了每条 *记录* 的市区类型。我们可以使用这些数据来设置标注样式。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:283
+msgid ""
+"Navigate to the :guilabel:`Text` panel in the ``places`` :guilabel:`Labels` "
+"panel"
+msgstr "导航到 ``places`` :guilabel:`标注` 面板中的 :guilabel:`文本` 面板"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:285
+msgid ""
+"Click the |dataDefine| button next to the Italic text button beneath "
+":guilabel:`Style` and select :menuselection:`Edit...` to open the "
+":guilabel:`Expression String Builder`:"
+msgstr ""
+"单击 :guilabel:`样式` 中的斜体文本按钮旁边的 |dataDefine| 按钮，然后选择 :menuselection:`编辑...` "
+"，并打开 :guilabel:`表达式字符串构建器` ："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:401
+msgid "dataDefine"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:292
+msgid ""
+"Under :menuselection:`Fields and Values`, double click on ``place`` and then"
+" click :guilabel:`All Unique`. This will list all unique values of the "
+"``place`` field of this layer. Add a ``=`` in the text editor and then "
+"double click on ``town``."
+msgstr ""
+"在 :menuselection:`字段和值` 中，双击 ``place`` ，然后单击 :guilabel:`所有唯一值` 按钮，这将列出该图层 "
+"``place`` 字段的所有唯一值。在文本编辑器中添加 a ``=`` ，然后双击 ``town`` 。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:297
+msgid ""
+"Alternatively, you can type: ``\"place\" = 'town'`` directly in the text "
+"editor."
+msgstr "或者，您可以直接在文本编辑器中输入: ``\"place\" = 'town'`` 。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:300
+msgid "Click :guilabel:`OK` twice:"
+msgstr "单击两次 :guilabel:`确定` 按钮："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:305
+msgid ""
+"Notice that the labels for all places whose ``place`` field matches ``town``"
+" are displayed in italics."
+msgstr "请注意， ``place`` 字段与 ``town`` 匹配的所有places的标注都以斜体显示。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:313
+msgid "|hard| |TY| Using Data Defined Settings"
+msgstr "|hard| 试一试 使用数据定义的设置"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:315
+msgid ""
+"We're jumping ahead a bit here to demonstrate some advanced labeling "
+"settings. At the advanced level, it's assumed that you'll know what the "
+"following means. If you don't, feel free to leave out this section and come "
+"back later when you've covered the requisite materials."
+msgstr ""
+"在这里我们跳转到前面来演示一些高级标注设置。在高级阶段，假设您了解以下内容的含义。如果不了解，请随意忽略这一部分，等您读完相关的资料后再回来。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:320
+msgid "Open the Attribute Table for ``places``"
+msgstr "打开 ``places`` 的属性表"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:321
+msgid "Enter edit mode by clicking the |toggleEditing| button"
+msgstr "单击 |toggleEditing| 按钮进入编辑模式"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:424
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:322
+msgid "Add a new column with the |newAttribute| button"
+msgstr "使用 |newAttribute| 按钮添加一个新列"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:410
+msgid "newAttribute"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:323
+msgid "Configure it like this:"
+msgstr "进行如下配置："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:328
+msgid ""
+"Use this to set custom font sizes for each different type of place (each key"
+" in the ``place`` field)"
+msgstr "使用此选项为每个不同place的类型 ( ``place`` 字段中的每个键) 设置自定义字号"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:334
+msgid ""
+"Still in edit mode, set the ``FONT_SIZE`` values to whatever you prefer. The"
+" example uses ``16`` for towns, ``14`` for suburbs, ``12`` for localities, "
+"and ``10`` for hamlets."
+msgstr ""
+"仍在编辑模式中，将 ``FONT_SIZE`` 值设置为您喜欢的任意值。该示例towns为 ``16`` ，suburbs为 ``14`` "
+"，localities为 ``12`` ，hamlets为 ``10`` 。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:337
+msgid "Remember to save changes and exit edit mode"
+msgstr "记得保存更改并退出编辑模式"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:338
+msgid ""
+"Return to the :guilabel:`Text` formatting options for the ``places`` layer "
+"and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the font size"
+" |dataDefine| data defined override dropdown:"
+msgstr ""
+"返回到 ``places`` 图层的 :guilabel:`文本` 格式选项，并在字号的属性字段 |dataDefine| 数据定义下拉列表中选择 "
+"``FONT_SIZE`` ："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:345
+msgid "Your results, if using the above values, should be this:"
+msgstr "如果使用上述值，结果应如下所示："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:352
+msgid "|hard| Further Possibilities With Labeling"
+msgstr "|hard| 标注的其它功能"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:354
+msgid ""
+"We can't cover every option in this course, but be aware that the "
+":guilabel:`Label` tab has many other useful functions. You can set scale-"
+"based rendering, alter the rendering priority for labels in a layer, and set"
+" every label option using layer attributes. You can even set the rotation, "
+"XY position, and other properties of a label (if you have attribute fields "
+"allocated for the purpose), then edit these properties using the tools "
+"adjacent to the main :guilabel:`Layer Labeling Options` button:"
+msgstr ""
+"我们无法在本课程中介绍所有选项，但请注意 :guilabel:`标注` "
+"选项卡还有许多其他实用的功能。您可以设置基于比例的渲染、更改图层中标注的渲染优先级，以及使用图层属性设置每个标注选项。甚至可以设置标注的旋转角度、XY位置和其他属性"
+" (如果为此目的分派了属性字段)，然后使用主 :guilabel:`图层标注选项` 按钮旁边的工具编辑这些属性："
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:362
+msgid ""
+"|labelingSingle| |showPinnedLabels| |pinLabels| |showHideLabels| |moveLabel|"
+" |rotateLabel| |changeLabelProperties|"
+msgstr ""
+"|labelingSingle| |showPinnedLabels| |pinLabels| |showHideLabels| |moveLabel|"
+" |rotateLabel| |changeLabelProperties|"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:420
+msgid "showPinnedLabels"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:414
+msgid "pinLabels"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:418
+msgid "showHideLabels"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:408
+msgid "moveLabel"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:416
+msgid "rotateLabel"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:399
+msgid "changeLabelProperties"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:366
+msgid ""
+"(These tools will be active if the required attribute fields exist and you "
+"are in edit mode.)"
+msgstr "(如果存在所需的属性字段并且处于编辑模式，则这些工具将处于激活状态。)"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:369
+msgid "Feel free to explore more possibilities of the labeling system."
+msgstr "欢迎探索标注系统的更多功能。"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:373
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:375
+msgid ""
+"You've learned how to use layer attributes to create dynamic labels. This "
+"can make your map a lot more informative and stylish!"
+msgstr "您已经学习了如何使用图层属性创建动态标注，这可以让您的地图更具信息性和时尚感！"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:380
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:382
+msgid ""
+"Now that you know how attributes can make a visual difference for your map, "
+"how about using them to change the symbology of objects themselves? That's "
+"the topic for the next lesson!"
+msgstr "既然您知道了属性如何对地图的视觉效果产生影响，那么使用它们来更改对象自身的符号会怎样呢？这就是下一课的主题！"

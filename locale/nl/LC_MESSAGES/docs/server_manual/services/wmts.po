@@ -1,0 +1,397 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# DiGro, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: DiGro, 2023\n"
+"Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/server_manual/services/wmts.rst:2
+msgid "Web Map Tile Service (WMTS)"
+msgstr "Web Map Tile Service (WMTS)"
+
+#: ../../docs/server_manual/services/wmts.rst:4
+msgid ""
+"The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP "
+"interface to request tiled map images generated from a QGIS project. A "
+"typical WMTS request defined the QGIS project to use, some WMS parameters "
+"like layers to render, as well as tile parameters."
+msgstr ""
+"De WMTS standaard **1.0.0**, geïmplementeerd in QGIS Server, verschaft een "
+"interface voor HTTP voor het verzoeken van getegelde kaartafbeeldingen uit "
+"een project van QGIS. Een typisch WMTS-verzoek definieert het te gebruiken "
+"project van QGIS, enkele parameters voor WMS zoals te renderen lagen en ook "
+"parameters voor de tegels."
+
+#: ../../docs/server_manual/services/wmts.rst:9
+msgid "Specifications document of the service:"
+msgstr "Specificatiedocument van de service:"
+
+#: ../../docs/server_manual/services/wmts.rst:11
+msgid "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
+msgstr "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
+
+#: ../../docs/server_manual/services/wmts.rst:13
+msgid "Standard requests provided by QGIS Server:"
+msgstr "Standaardverzoeken verschaft door QGIS Server:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Request"
+msgstr "Verzoek"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`GetCapabilities <wmts_getcapabilities>`"
+msgstr ":ref:`GetCapabilities <wmts_getcapabilities>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "Geeft XML-metadata terug met informatie over de server"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`GetTile <wmts_gettile>`"
+msgstr ":ref:`GetTile <wmts_gettile>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Returns a tile"
+msgstr "Geeft een tegel terug"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
+msgstr ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "Haal gegevens op (geometrie en waarden) voor de locatie van een pixel"
+
+#: ../../docs/server_manual/services/wmts.rst:27
+msgid "GetCapabilities"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:29
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMTS 1.0.0 specifications:"
+msgstr ""
+"Standaardparameters voor het verzoek **GetCapabilities** overeenkomstig de "
+"specificaties van OGC WMTS 1.0.0:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Parameter"
+msgstr "Parameter"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Required"
+msgstr "Vereist"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Yes"
+msgstr "Ja"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the service (**WMTS**)"
+msgstr "Naam van de service (**WMTS**)"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "Naam van het verzoek (**GetCapabilities**)"
+
+#: ../../docs/server_manual/services/wmts.rst:40
+#: ../../docs/server_manual/services/wmts.rst:83
+#: ../../docs/server_manual/services/wmts.rst:186
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr ""
+"In aanvulling op de standaard parameters ondersteunt QGIS Server de volgende"
+" extra parameters:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "QGIS project file"
+msgstr "QGIS projectbestand"
+
+#: ../../docs/server_manual/services/wmts.rst:51
+#: ../../docs/server_manual/services/wmts.rst:94
+#: ../../docs/server_manual/services/wmts.rst:197
+msgid "URL example:"
+msgstr "Voorbeeld URL:"
+
+#: ../../docs/server_manual/services/wmts.rst:64
+msgid "GetTile"
+msgstr "GetTile"
+
+#: ../../docs/server_manual/services/wmts.rst:66
+msgid ""
+"Standard parameters for the **GetTile** request according to the OGC WMTS "
+"1.0.0 specifications:"
+msgstr ""
+"Standaardparameters voor het verzoek **GetTile** overeenkomstig de "
+"specificaties van OGC WMTS 1.0.0:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the request (**GetTile**)"
+msgstr "Naam van het verzoek (**GetTile**)"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`LAYER <wms_layers>`"
+msgstr ":ref:`LAYER <wms_layers>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Layer identifier"
+msgstr "Identificatie laag"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`FORMAT <wmts_gettile_format>`"
+msgstr ":ref:`FORMAT <wmts_gettile_format>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Output format of the tile"
+msgstr "Indeling uitvoer van de tegel"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`"
+msgstr ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the pyramid"
+msgstr "Naam van de piramide"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
+msgstr ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Meshing"
+msgstr "Mazen"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILEROW <wmts_gettile_tilerow>`"
+msgstr ":ref:`TILEROW <wmts_gettile_tilerow>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Row coordinate in the mesh"
+msgstr "Rijcoördinaat in de mazen"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILECOL <wmts_gettile_tilecol>`"
+msgstr ":ref:`TILECOL <wmts_gettile_tilecol>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Column coordinate in the mesh"
+msgstr "Kolomcoördinaat in de mazen"
+
+#: ../../docs/server_manual/services/wmts.rst:112
+msgid "FORMAT"
+msgstr "FORMAT"
+
+#: ../../docs/server_manual/services/wmts.rst:114
+msgid ""
+"This parameter may be used to specify the format of tile image. Available "
+"values are:"
+msgstr ""
+"Deze parameter kan worden gebruikt om de indeling van de tegelafbeelding te "
+"specificeren. Beschikbare waarden zijn:"
+
+#: ../../docs/server_manual/services/wmts.rst:117
+msgid "``jpg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:118
+msgid "``jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:119
+msgid "``image/jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:120
+msgid "``image/png``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:122
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then the "
+"default format PNG is used instead."
+msgstr ""
+"Als de parameter ``FORMAT`` anders is dan een van deze waarden dan zal in "
+"plaats daarvan de standaard indeling PNG worden gebruikt."
+
+#: ../../docs/server_manual/services/wmts.rst:129
+msgid "TILEMATRIXSET"
+msgstr "TILEMATRIXSET"
+
+#: ../../docs/server_manual/services/wmts.rst:131
+msgid ""
+"This parameter defines the CRS to use when computing the underlying pyramid."
+" Format: ``EPSG:XXXX``."
+msgstr ""
+"Deze parameter definieert het te gebruiken CRS bij het berekenen van de "
+"onderliggende piramide. Indeling: ``EPSG:XXXX``."
+
+#: ../../docs/server_manual/services/wmts.rst:138
+msgid "TILEMATRIX"
+msgstr "TILEMATRIX"
+
+#: ../../docs/server_manual/services/wmts.rst:140
+msgid "This parameter allows to define the matrix to use for the output tile."
+msgstr ""
+"Deze parameter maakt het mogelijk de te gebruiken matrix voor het "
+"uitvoerbestand te specificeren."
+
+#: ../../docs/server_manual/services/wmts.rst:146
+msgid "TILEROW"
+msgstr "TILEROW"
+
+#: ../../docs/server_manual/services/wmts.rst:148
+msgid ""
+"This parameter allows to select the row of the tile to get within the "
+"matrix."
+msgstr ""
+"Deze parameter maakt het mogelijk de rij van de op te halen tegel in de "
+"matrix te selecteren."
+
+#: ../../docs/server_manual/services/wmts.rst:155
+msgid "TILECOL"
+msgstr "TILECOL"
+
+#: ../../docs/server_manual/services/wmts.rst:157
+msgid ""
+"This parameter allows to select the column of the tile to get within the "
+"matrix."
+msgstr ""
+"Deze parameter maakt het mogelijk de kolom van de op te halen tegel in de "
+"matrix te selecteren."
+
+#: ../../docs/server_manual/services/wmts.rst:165
+msgid "GetFeatureInfo"
+msgstr "GetFeatureInfo"
+
+#: ../../docs/server_manual/services/wmts.rst:167
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMTS 1.0.0 specification:"
+msgstr ""
+"Standaardparameters voor het verzoek **GetFeatureInfo** overeenkomstig de "
+"specificaties van OGC WMTS 1.0.0:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr "Naam van het verzoek (**GetFeatureInfo**)"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`"
+msgstr ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "No"
+msgstr "Nee"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Output format"
+msgstr "Indeling uitvoer"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`I <wmts_getfeatureinfo_i>`"
+msgstr ":ref:`I <wmts_getfeatureinfo_i>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "X coordinate of a pixel"
+msgstr "X-coördinaat van een pixel"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`J <wmts_getfeatureinfo_j>`"
+msgstr ":ref:`J <wmts_getfeatureinfo_j>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Y coordinate of a pixel"
+msgstr "Y-coördinaat van een pixel"
+
+#: ../../docs/server_manual/services/wmts.rst:214
+msgid "INFOFORMAT"
+msgstr "INFOFORMAT"
+
+#: ../../docs/server_manual/services/wmts.rst:216
+msgid ""
+"This parameter allows to define the output format of the result. Available "
+"values are:"
+msgstr ""
+"Deze parameter kan worden gebruikt om de indeling van de uitvoer van het "
+"resultaat te definiëren. Beschikbare waarden zijn:"
+
+#: ../../docs/server_manual/services/wmts.rst:219
+msgid "``text/xml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:220
+msgid "``text/html``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:221
+msgid "``text/plain``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:222
+msgid "``application/vnd.ogc.gml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:224
+msgid "The default value is ``text/plain``."
+msgstr "De standaardwaarde is ``text/plain``."
+
+#: ../../docs/server_manual/services/wmts.rst:230
+msgid "I"
+msgstr "I"
+
+#: ../../docs/server_manual/services/wmts.rst:232
+msgid ""
+"This parameter allows to define the X coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr ""
+"Deze parameter maakt het mogelijk de X-coördinaat van de pixel te definiëren"
+" waarvoor we de onderliggende informatie willen ophalen."
+
+#: ../../docs/server_manual/services/wmts.rst:239
+msgid "J"
+msgstr "J"
+
+#: ../../docs/server_manual/services/wmts.rst:241
+msgid ""
+"This parameter allows to define the Y coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr ""
+"Deze parameter maakt het mogelijk de Y-coördinaat van de pixel te definiëren"
+" waarvoor we de onderliggende informatie willen ophalen."

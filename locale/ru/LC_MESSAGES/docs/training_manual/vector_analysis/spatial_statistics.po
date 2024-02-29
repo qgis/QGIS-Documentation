@@ -1,0 +1,835 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:2
+msgid "|LS| Spatial Statistics"
+msgstr "Занятие: Пространственная статистика"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:4
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr ""
+"Урок подготовлен Linfiniti и S Motala (Технологический университет Кейп-"
+"Пенинсула)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:7
+msgid ""
+"Spatial statistics allows you to analyze and understand what is going on in "
+"a given vector dataset. QGIS includes many useful tools for statistical "
+"analysis."
+msgstr ""
+"Пространственная статистика позволяет вам сделать анализ и понять, что "
+"происходит в данном наборе векторных данных. QGIS имеет множество полезных "
+"инструментов для статистического анализа."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:11
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools within the :guilabel:`Processing Toolbox`."
+msgstr ""
+"**Цель этого урока:** Узнать, как использовать инструменты пространственной "
+"статистики QGIS внутри :guilabel:`Processing Toolbox`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:15
+msgid "|basic| |FA| Create a Test Dataset"
+msgstr "|basic| Идем дальше: Создаем тестовый набор данных"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:391
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:17
+msgid "We will create a random set of points, to get a dataset to work with."
+msgstr "Мы создадим случайный набор точек и получим набор данных для работы."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:19
+msgid ""
+"To do so, you will need a polygon dataset to define the area you want to "
+"create the points in."
+msgstr ""
+"Чтобы это сделать вам понадобится набор данных полигона, чтобы определить "
+"местность, в которой вы хотите создать точки."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:22
+msgid "We will use the area covered by streets."
+msgstr "Мы будем использовать площадь, покрытую улицами."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:24
+msgid "Start a new project"
+msgstr "Начните новый проект."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:25
+msgid ""
+"Add your ``roads`` dataset, as well as ``srtm_41_19`` (elevation data) found"
+" in :file:`exercise_data/raster/SRTM/`."
+msgstr ""
+"Добавьте свой набор данных ``roads``, а также ``srtm_41_19`` (данные о "
+"высоте) в :file:`exercise_data/raster/SRTM/`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:28
+msgid ""
+"You might find that the SRTM DEM layer has a different CRS to that of the "
+"roads layer. QGIS is reprojecting both layers in a single CRS. For the "
+"following exercises this difference does not matter, but feel free to "
+"reproject (as shown earlier in this module)."
+msgstr ""
+"Вы возможно обнаружите, что слой SRTM DEM имеет другую ССК, которая "
+"отличается от слоя дорог. QGIS пере-проецирует оба слоя в одной ССК. Для "
+"следующих упражнений эта разница не имеет значения, но вы можете пере-"
+"проецировать (как было показано ранее в этом модуле)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:34
+msgid "Open :guilabel:`Processing` toolbox"
+msgstr "Откройте ящик для инструментов :guilabel:`Processing`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:35
+msgid ""
+"Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool "
+"to generate an area enclosing all the roads by selecting ``Convex Hull`` as "
+"the :guilabel:`Geometry Type`:"
+msgstr ""
+"Используйте инструмент :menuselection:`Vector Geometry --> Minimum bounding "
+"geometry` для создания местности, привязав все дороги, выбрав ``Convex "
+"Hull`` в качестве :guilabel:`Geometry Type`:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:43
+msgid ""
+"As you know, if you don't specify the output, *Processing* creates temporary"
+" layers. It is up to you to save the layers immediately or at a later stage."
+msgstr ""
+"Как известно, если вы не укажете выход, *Обработка* создаст временные слои. "
+"Вы можете сразу сохранить слои или сделать это позже."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:48
+msgid "Creating random points"
+msgstr "Создание случайных точек"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:50
+msgid ""
+"Create 100 random points in this area using the tool at "
+":menuselection:`Vector Creation --> Random points in layer bounds`, with a "
+"minimum distance of ``0.0``:"
+msgstr ""
+"Создайте 100 случайных точек в этой местности, используя инструмент в "
+":menuselection:`Vector Creation --> Random points in layer bounds` с "
+"минимальным расстоянием ``0.0``:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:57
+msgid ""
+"The yellow warning sign tells you that that parameter concerns distances. "
+"The :guilabel:`Bounding geometry` layer is in a Geographical Coordinate "
+"System and the algorithm is just reminding you this. For this example we "
+"won't use this parameter so you can ignore it."
+msgstr ""
+"Желтый предупреждающий знак говорит вам, что этот параметр относится к "
+"расстояниям. Слой :guilabel:`Bounding geometry` находится в географической "
+"системе координат и алгоритм просто напоминает вам об этом. В этом примере "
+"мы не будем использовать этот параметр, поэтому вы можете его "
+"проигнорировать."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:64
+msgid ""
+"If needed, move the generated random point to the top of the legend to see "
+"them better:"
+msgstr ""
+"Если надо, переместите сгенерированные случайные точки в верхнюю часть "
+"условного обозначения, чтобы лучше их увидеть:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:71
+msgid "Sampling the data"
+msgstr "Выборка данных"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:73
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":menuselection:`Raster Analysis --> Sample raster values` algorithm. This "
+"tool samples the raster at the locations of the points and adds the raster "
+"values in new field(s) depending on the number of bands in the raster."
+msgstr ""
+"Для создания выборочного набора данных из растра, вам надо использовать "
+"алгоритм :menuselection:`Raster Analysis --> Sample raster values`. Этот "
+"инструмент производит выборку растра в местах расположения точек и добавляет"
+" значения растра в новое поле (поля) в зависимости от количества каналов в "
+"растре."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:77
+msgid "Open the :guilabel:`Sample raster values` algorithm dialog"
+msgstr "Откройте диалоговое окно алгоритма :guilabel:`Sample raster values`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:78
+msgid ""
+"Select ``Random_points`` as the layer containing sampling points, and the "
+"SRTM raster as the band to get values from. The default name of the new "
+"field is ``rvalue_N``, where ``N`` is the number of the raster band. You can"
+" change the name of the prefix if you want."
+msgstr ""
+"Выберите ``Random_points`` как слой, содержащий точки выборки, и растр SRTM "
+"как диапазон, из которого нужно получить значения. Название нового поля по "
+"умолчанию: ``rvalue_N``, где ``N`` - номер полосы растра. Вы можете изменить"
+" название приставки, если хотите."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:87
+msgid "Press :guilabel:`Run`"
+msgstr "Кликните на кнопку :guilabel:`Run`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:89
+msgid ""
+"Now you can check the sampled data from the raster file in the attribute "
+"table of the ``Sampled Points`` layer. They will be in a new field with the "
+"name you have chosen."
+msgstr ""
+"Вы теперь сможете проверить выборочные данные из растрового файла в таблице "
+"атрибутов слоя ``Sampled Points``. Они появятся в новом поле с названием, "
+"которое вы выбрали."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:93
+msgid "A possible sample layer is shown here:"
+msgstr "Возможный образец слоя показан здесь:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:98
+msgid ""
+"The sample points are classified using the ``rvalue_1`` field such that red "
+"points are at a higher altitude."
+msgstr ""
+"Выборочные точки классифицируются с использованием поля ``rvalue_1`` так, "
+"чтобы красные точки находились на большей высоте."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:101
+msgid ""
+"You will be using this sample layer for the rest of the statistical "
+"exercises."
+msgstr ""
+"Вы будете использовать этот слой для остальных статистических упражнений."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:105
+msgid "|basic| |FA| Basic Statistics"
+msgstr "|basic| Идем дальше: Базовая статистика"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:107
+msgid "Now get the basic statistics for this layer."
+msgstr "Вам теперь надо получить базовую статистику для этого слоя."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:109
+msgid ""
+"Click on the |sum| :sup:`Show statistical summary` icon in the "
+":guilabel:`Attributes Toolbar`. A new panel will pop up."
+msgstr ""
+"Кликни на значок Показать статистку |sum| :sup:`Show statistical summary` в "
+":guilabel:`Attributes Toolbar`. Появится новая панель."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:399
+msgid "sum"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:112
+msgid ""
+"In the dialog that appears, specify the ``Sampled Points`` layer as the "
+"source."
+msgstr ""
+"В появившемся диалоговом окне укажите слой ``Sampled Points`` в качестве "
+"источника."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:114
+msgid ""
+"Select the *rvalue_1* field in the field combo box. This is the field you "
+"will calculate statistics for."
+msgstr ""
+"Выберите поле *rvalue_1* в поле со списком полей. Это поле, для которого вы "
+"будете рассчитывать статистику."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:116
+msgid ""
+"The :guilabel:`Statistics` Panel will be automatically updated with the "
+"calculated statistics:"
+msgstr ""
+"Панель :guilabel:`Statistics` автоматически обновится с расчетными "
+"статданными:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:122
+msgid ""
+"You can copy the values by clicking on the |editCopy| :sup:`Copy Statistics "
+"To Clipboard` button and paste the results into a spreadsheet."
+msgstr ""
+"Вы можете скопировать значения, нажав на кнопку |editCopy| :sup:`Copy "
+"Statistics To Clipboard` и вставив результаты в таблицу."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:392
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:126
+msgid "Close the :guilabel:`Statistics` Panel when done"
+msgstr "Закройте панель :guilabel:`Statistics` когда закончите."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:128
+msgid "Many different statistics are available:"
+msgstr "Появятся много команд, связанных со статистикой:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "Count"
+msgstr "Count/Считать"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "The number of samples/values."
+msgstr "Количество выборок /значений."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "Sum"
+msgstr "Sum/Сумма"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "The values added together."
+msgstr "Сложение значений."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:138
+msgid "Mean"
+msgstr "Mean/Среднее значение"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:137
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"number of values."
+msgstr ""
+"Среднее (среднее) значение - это просто сумма значений, разделенная на "
+"количество значений."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:143
+msgid "Median"
+msgstr "Median/Медиана"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:141
+msgid ""
+"If you arrange all the values from smallest to greatest, the middle value "
+"(or the average of the two middle values, if N is an even number) is the "
+"median of the values."
+msgstr ""
+"Если вы расположите все значения от наименьшего к наибольшему, значение в "
+"середине (или среднее из двух средних значений, если N - четное число) будет"
+" медианным значением."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:150
+msgid "St Dev (pop)"
+msgstr "St Dev (pop)/Стандартное отклонение"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:146
+msgid ""
+"The standard deviation. Gives an indication of how closely the values are "
+"clustered around the mean. The smaller the standard deviation, the closer "
+"values tend to be to the mean."
+msgstr ""
+"Стандартное отклонение. Указывает, насколько близко значения сгруппированы "
+"вокруг среднего. Чем меньше стандартное отклонение, тем ближе значения к "
+"среднему."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "Minimum"
+msgstr "Minimum/Минимум"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "The minimum value."
+msgstr "Минимальное значение."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "Maximum"
+msgstr "Maximum/Максимум"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "The maximum value."
+msgstr "Максимальное значение."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
+msgid "Range"
+msgstr "Range/Диапазон"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
+msgid "The difference between the minimum and maximum values."
+msgstr "Разница между минимальным и максимальным значениями."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "Q1"
+msgstr "Q1"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "First quartile of the data."
+msgstr "Первый квартиль данных."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Q3"
+msgstr "Q3"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Third quartile of the data."
+msgstr "Третий квартиль данных."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:169
+msgid "Missing (null) values"
+msgstr "Missing (null) values/Пропущенные (нулевые) значения"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:168
+msgid "The number of missing values."
+msgstr "Количество пропущенных значений."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:172
+msgid "|basic| |FA| Compute statistics on distances between points"
+msgstr ""
+"|basic| Идем дальше: Вычисляем статистические данные относительно расстояний"
+" между точками"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:174
+msgid "Create a new temporary point layer."
+msgstr "Создайте новый временный точечный слой."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:175
+msgid ""
+"Enter edit mode, and digitize three points somewhere among the other points."
+msgstr ""
+"Зайдите в режим редактирования и оцифруйте три точки где-нибудь среди других"
+" точек."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:178
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only **three** points."
+msgstr ""
+"В качестве альтернативы вы можете использовать тот же метод генерации "
+"случайных точек, как ранее мы делали, но надо указать только **три** точки."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:180
+msgid ""
+"Save your new layer as :guilabel:`distance_points` in the format you prefer."
+msgstr ""
+"Сохраните ваш новый слой как :guilabel:`distance_points` в том формате, к "
+"котором вам хочется."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:183
+msgid ""
+"To generate statistics on the distances between points in the two layers:"
+msgstr ""
+"Чтобы получить статистику расстояний между точками в двух слоях необходимо "
+"сделать следующее:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:186
+msgid "Open the :menuselection:`Vector Analysis --> Distance matrix` tool."
+msgstr ""
+"Откройте инструмент :menuselection:`Vector Analysis --> Distance matrix`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:187
+msgid ""
+"Select the ``distance_points`` layer as the input layer, and the ``Sampled "
+"Points`` layer as the target layer."
+msgstr ""
+"Выберите слой ``distance_points`` в качестве входного слоя, а слой  "
+"``Sampled Points`` - в качестве целевого слоя."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:189
+msgid "Set it up like this:"
+msgstr "Сделайте это так:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:194
+msgid ""
+"If you want you can save the output layer as a file or just run the "
+"algorithm and save the temporary output layer later."
+msgstr ""
+"Если хотите, вы можете сохранить выходной слой как файл или просто можете "
+"запустить алгоритм и сохранить временный выходной слой позже."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:196
+msgid "Click :guilabel:`Run` to generate the distance matrix layer."
+msgstr ""
+"Кликните на кнопку :guilabel:`Run` чтобы получить слой матрицы расстояний."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:197
+msgid ""
+"Open the attribute table of the generated layer: values refer to the "
+"distances between the :guilabel:`distance_points` features and their two "
+"nearest points in the :guilabel:`Sampled Points` layer:"
+msgstr ""
+"Откройте таблицу с атрибутами сгенерированного слоя: значения относятся к "
+"расстояниям между объектами :guilabel:`distance_points` и их двумя "
+"ближайшими точками в слое :guilabel:`Sampled Points`:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:204
+msgid ""
+"With these parameters, the *Distance Matrix* tool calculates distance "
+"statistics for each point of the input layer with respect to the nearest "
+"points of the target layer. The fields of the output layer contain the mean,"
+" standard deviation, minimum and maximum for the distances to the nearest "
+"neighbors of the points in the input layer."
+msgstr ""
+"С помощью этих параметров инструмент *Матрица расстояний* рассчитает "
+"статистику расстояний для каждой точки входного слоя по отношению к "
+"ближайшим точкам целевого слоя. Поля выходного слоя содержат среднее "
+"значение, стандартное отклонение, минимальные и максимальные значения в "
+"отношении расстояний до ближайших соседних точек входного слоя."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:213
+msgid "|basic| |FA| Nearest Neighbor Analysis (within layer)"
+msgstr "|basic| Идем дальше: Анализ методом «ближайший сосед» (внутри слоя)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:215
+msgid "To do a nearest neighbor analysis of a point layer:"
+msgstr ""
+"Чтобы выполнить анализ методом «ближайший сосед» точечного слоя, необходимо "
+"сделать следующее:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:217
+msgid "Choose :menuselection:`Vector analysis --> Nearest neighbor analysis`."
+msgstr ""
+"Выберите :menuselection:`Vector analysis --> Nearest neighbor analysis`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:219
+msgid ""
+"In the dialog that appears, select the :guilabel:`Random points` layer and "
+"click :guilabel:`Run`."
+msgstr ""
+"В появившемся диалоговом окне выберите слой :guilabel:`Random points` и "
+"кликните :guilabel:`Run`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:221
+msgid ""
+"The results will appear in the Processing :guilabel:`Result Viewer` Panel."
+msgstr "Результаты появятся в панели \"Обработка\" :guilabel:`Result Viewer`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:227
+msgid "Click on the blue link to open the ``html`` page with the results:"
+msgstr ""
+"Кликните синюю ссылку, чтобы открыть страницу ``html`` с результатами:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:233
+msgid "|basic| |FA| Mean Coordinates"
+msgstr "|basic| Идем дальше: Средние координаты"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:235
+msgid "To get the mean coordinates of a dataset:"
+msgstr ""
+"Для того, чтобы получить средние координаты набора данных необходимо сделать"
+" следующее:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:237
+msgid "Start :menuselection:`Vector analysis --> Mean coordinate(s)`"
+msgstr "Запустите :menuselection:`Vector analysis --> Mean coordinate(s)`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:238
+msgid ""
+"In the dialog that appears, specify :guilabel:`Random points` as "
+":guilabel:`Input layer`, and leave the optional choices unchanged."
+msgstr ""
+"В появившемся диалоговом окне укажите :guilabel:`Random points` как "
+":guilabel:`Input layer`, и оставьте необязательные варианты без изменений."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:240
+msgid "Click :guilabel:`Run`."
+msgstr "Кликните на кнопку :guilabel:`Run`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:242
+msgid ""
+"Let us compare this to the central coordinate of the polygon that was used "
+"to create the random sample."
+msgstr ""
+"Давайте сравним это с центральной координатой полигона, который был "
+"использован для создания случайной выборки."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:245
+msgid "Start :menuselection:`Vector geometry --> Centroids`"
+msgstr "Запустите :menuselection:`Vector geometry --> Centroids`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:246
+msgid ""
+"In the dialog that appears, select ``Bounding geometry`` as the input layer."
+msgstr ""
+"В появившемся диалоговом окне выберите ``Bounding geometry`` в качестве "
+"входного слоя."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:249
+msgid ""
+"As you can see, the mean coordinates (pink point) and the center of the "
+"study area (in green) don't necessarily coincide."
+msgstr ""
+"Как видите, средние координаты (розовая точка) и центр исследуемой местности"
+" (зеленый) не обязательно совпадают."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:252
+msgid ""
+"The centroid is the barycenter of the layer (the barycenter of a square is "
+"the center of the square) while the mean coordinates represent the average "
+"of all node coordinates."
+msgstr ""
+"Центроид - это барицентр слоя (барицентр квадрата - это центр квадрата), а "
+"средние координаты представляют собой среднее значение всех координат узлов."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:260
+msgid "|basic| |FA| Image Histograms"
+msgstr "|basic| Идем дальше: Гистограммы изображений"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:262
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer "
+"(raster dataset)."
+msgstr ""
+"Гистограмма набора данных показывает распределение его значений. Самый "
+"простой способ показать это в QGIS – через использование гистограммы "
+"изображения, которая имеется в диалоговом окне :guilabel:`Layer Properties` "
+"любого слоя изображения (набор растровых данных)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:267
+msgid ""
+"In your :guilabel:`Layers` panel, right-click on the ``srtm_41_19`` layer"
+msgstr ""
+"В вашей панели :guilabel:`Layers` кликните правой кнопкой мыши на слой "
+"``srtm_41_19``."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:269
+msgid "Select :menuselection:`Properties`"
+msgstr "Выберите :menuselection:`Properties`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:270
+msgid ""
+"Choose the :guilabel:`Histogram` tab. You may need to click on the "
+":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
+" graph that shows the frequency distribution for the raster values."
+msgstr ""
+"Выберите :guilabel:`Histogram`. Вам надо кликнуть на кнопку "
+":guilabel:`Compute Histogram` для того, чтобы создать график. Вы увидите "
+"график, показывающий частотное распределение значений растра."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:279
+msgid ""
+"The graph can be exported as an image with the |fileSave| :sup:`Save plot` "
+"button"
+msgstr ""
+"График можно экспортировать как изображение с помощью кнопки с |fileSave| "
+":sup:`Save plot`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:394
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:282
+msgid ""
+"You can see more detailed information about the layer in the "
+":guilabel:`Information` tab (the mean and max values are estimated, and may "
+"not be exact)."
+msgstr ""
+"Более подробную информацию можно получить о слое нажав на вкладку "
+":guilabel:`Information` (среднее и максимальное значения являются расчетными"
+" и могут быть неточными)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:286
+msgid ""
+"The mean value is ``332.8`` (estimated to 324.3), and the maximum value is "
+"``1699`` (estimated to 1548)! You can zoom in the histogram. Since there are"
+" a lot of pixels with value ``0``, the histogram looks compressed "
+"vertically. By zooming in to cover everything but the peak at ``0``, you "
+"will see more details:"
+msgstr ""
+"Среднее значение ``332.8`` (расчетная 324,3), а максимальное значение равно "
+"``1699`` (расчетная 1548)! Вы можете увеличить гистограмму. Поскольку там "
+"много пикселей со значением ``0``, гистограмма выглядит сжатой по вертикали."
+" Увеличьте масштаб чтобы охватить все, кроме пика на ``0``, и вы увидите "
+"более подробную информацию:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:297
+msgid ""
+"If the mean and maximum values are not the same as above, it can be due to "
+"the min/max value calculation. Open the :guilabel:`Symbology` tab and expand"
+" the :guilabel:`Min / Max Value Settings` menu. Choose "
+"|radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`."
+msgstr ""
+"Если средние и максимальные значения не такие, как выше, это может быть из-"
+"за вычисления минимального/максимального значения. Откройте вкладку "
+":guilabel:`Symbology` и расширьте меню :guilabel:`Min / Max Value Settings`."
+" Выберите |radioButtonOn|:guilabel:`Min / max` и кликните на кнопку "
+":guilabel:`Apply`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:397
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:304
+msgid ""
+"Keep in mind that a histogram shows you the distribution of values, and not "
+"all values are necessarily visible on the graph."
+msgstr ""
+"Помните, что гистограмма показывает вам распределение значений и не все "
+"значения обязательно должны отображаться на графике."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:309
+msgid "|basic| |FA| Spatial Interpolation"
+msgstr "|basic| Идем дальше: Пространственная интерполяция"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:311
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`Sampled points` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr ""
+"Предположим, что у вас набор точек выборки, на базе которого вы хотите "
+"экстраполировать данные. Например, у вас может быть доступ к набору данных "
+":guilabel:`Sampled points`, который мы создали ранее, и вы хотели бы иметь "
+"некоторое представление о том, как выглядит местность."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:317
+msgid ""
+"To start, launch the :menuselection:`GDAL --> Raster analysis --> Grid (IDW "
+"with nearest neighbor searching)` tool in the :guilabel:`Processing "
+"Toolbox`."
+msgstr ""
+"Для начала вам надо запустить инструмент :menuselection:`GDAL --> Raster "
+"analysis --> Grid (IDW with nearest neighbor searching)`, который находится "
+"в :guilabel:`Processing Toolbox`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:320
+msgid "For :guilabel:`Point layer` select ``Sampled points``"
+msgstr "В качестве :guilabel:`Point layer` выберите ``Sampled points``."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:321
+msgid "Set :guilabel:`Weighting power` to ``5.0``"
+msgstr "Установите :guilabel:`Weighting power` на ``5.0``."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:322
+msgid ""
+"In :guilabel:`Advanced parameters`, set :guilabel:`Z value from field` to "
+"``rvalue_1``"
+msgstr ""
+"Внутри :guilabel:`Advanced parameters`, установите :guilabel:`Z value from "
+"field` на ``rvalue_1``."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:324
+msgid "Finally click on :guilabel:`Run` and wait until the processing ends"
+msgstr ""
+"И наконец, кликните на кнопку :guilabel:`Run` и подождите до окончания "
+"обработки."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:325
+msgid "Close the dialog"
+msgstr "Закройте диалоговое окно."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:327
+msgid ""
+"Here is a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr ""
+"Вы сможете сравнить исходный набор данных (слева) с тем, который был "
+"построен на базе наших точек выборки (справа). Ваш набор данных может "
+"выглядеть иначе из-за случайного расположения точек."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:335
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well."
+msgstr ""
+"Как вы можете видеть, 100 выборочных точек недостаточно, чтобы получить "
+"подробное представление о местности. Вы получите только очень общее "
+"представление, но оно может вводить в заблуждение."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:340
+msgid "|moderate| |TY| Different interpolation methods"
+msgstr "|moderate| Попробуйте сами: Различные методы интерполяции"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:396
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:342
+msgid "Use the processes shown above to create a set of 10 000 random points"
+msgstr ""
+"Следуйте описанному выше процессу для того, чтобы создать набор из 10 000 "
+"случайных точек."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:345
+msgid ""
+"If the number of points is really big, the processing time can take a long "
+"time."
+msgstr "Если точек действительно много, обработка может занять много времени."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:348
+msgid "Use these points to sample the original DEM"
+msgstr ""
+"Используйте эти точки для того сделать выборку исходной DEM /  Цифровой "
+"модели рельефа."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:349
+msgid ""
+"Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this "
+"dataset."
+msgstr ""
+"Используйте инструмент :guilabel:`Grid (IDW with nearest neighbor "
+"searching)` в этом наборе данных."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:351
+msgid ""
+"Set :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``, "
+"respectively."
+msgstr ""
+"Установите :guilabel:`Power` и :guilabel:`Smoothing` на ``5.0`` и ``2.0``, "
+"соответственно."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:354
+msgid ""
+"The results (depending on the positioning of your random points) will look "
+"more or less like this:"
+msgstr ""
+"Результаты (в зависимости от расположения ваших случайных точек) будут "
+"примерно такими:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:360
+msgid ""
+"This is a better representation of the terrain, due to the greater density "
+"of sample points. Remember, larger samples give better results."
+msgstr ""
+"Это более улучшенное представление ландшафта, так как плотность выборочных "
+"точек выше. Помните, что чем больше выборка, тем лучше результат."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:366
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:368
+msgid ""
+"QGIS has a number of tools for analyzing the spatial statistical properties "
+"of datasets."
+msgstr ""
+"У QGIS есть ряд инструментов для анализа пространственных статистических "
+"свойств набора данных."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:373
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:375
+msgid ""
+"Now that we have covered vector analysis, why not see what can be done with "
+"rasters? That is what we will do in the next module!"
+msgstr ""
+"Теперь, после того как мы рассмотрели векторный анализ, почему бы не "
+"посмотреть, что можно сделать с растрами? Этим мы и займемся в следующем "
+"модуле!"

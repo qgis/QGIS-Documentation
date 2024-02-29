@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-11 08:42+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/processing/configuration.rst:5
+msgid "Configuring the Processing Framework"
+msgstr "Configurer le Module de Traitements"
+
+#: ../../docs/user_manual/processing/configuration.rst:165
+msgid "processingAlgorithm"
+msgstr "processingAlgorithm"
+
+#: ../../docs/user_manual/processing/configuration.rst:18
+msgid "General"
+msgstr "Général"
+
+#: ../../docs/user_manual/processing/configuration.rst:25
+msgid ""
+":guilabel:`Default output raster layer extension` is by default ``tif``"
+msgstr ""
+":guilabel:`extension par défaut sortie raster` est par défaut ``tif``."
+
+#: ../../docs/user_manual/processing/configuration.rst:26
+msgid ""
+":guilabel:`Default output vector layer extension` is by default ``gpkg``"
+msgstr ""
+":guilabel:`Sortie par défaut des couches vecteur` est par défaut ``gpkg``."
+
+#: ../../docs/user_manual/processing/configuration.rst:42
+msgid ""
+":guilabel:`Keep dialog open after running algorithm`. Once an algorithm has "
+"finished execution and its output layers are loaded into the QGIS project, "
+"the algorithm dialog is closed. If you want to keep it open (to run the "
+"algorithm again with different parameters, or to better check the output "
+"that is written to the log tab), check this option."
+msgstr ""
+":guilabel:`Maintenir le dialogue ouvert après l'exécution de l'algorithme`. "
+"Une fois qu'un algorithme a terminé son exécution et que ses couches de "
+"sortie sont chargées dans le projet QGIS, le dialogue de l'algorithme est "
+"fermé. Si vous voulez le garder ouvert (pour exécuter à nouveau l'algorithme"
+" avec des paramètres différents, ou pour mieux vérifier la sortie qui est "
+"écrite dans l'onglet log), cochez cette option."
+
+#: ../../docs/user_manual/processing/configuration.rst:47
+msgid ":guilabel:`Max Threads`"
+msgstr ":guilabel:`Max Threads`"
+
+#: ../../docs/user_manual/processing/configuration.rst:55
+msgid ""
+":guilabel:`Pre-execution script` and :guilabel:`Post-execution script`. "
+"These parameters point to files that contain scripts written using the "
+"processing scripting functionality, explained in the section covering "
+"scripting and the console."
+msgstr ""
+":guilabel:`Script de pré-exécution` et :guilabel:`Script de post-exécution`."
+" Ces paramètres pointent vers les fichiers qui contiennent des scripts "
+"écrits en utilisant la fonctionnalité de script de traitement, expliquée "
+"dans la section couvrant le script et la console."
+
+#: ../../docs/user_manual/processing/configuration.rst:59
+msgid ""
+":guilabel:`Prefer output filename for layer names`. The name of each "
+"resulting layer created by an algorithm is defined by the algorithm itself. "
+"In some cases, a fixed name might be used, meaning that the same output name"
+" will be used, no matter which input layer is used. In other cases, the name"
+" might depend on the name of the input layer or some of the parameters used "
+"to run the algorithm. If this checkbox is checked, the name will be taken "
+"from the output filename instead. Notice that, if the output is saved to a "
+"temporary file, the filename of this temporary file is usually a long and "
+"meaningless one intended to avoid collision with other already existing "
+"filenames."
+msgstr ""
+":guilabel:`Préférer le nom de fichier de sortie pour les noms de couches`. "
+"Le nom de chaque couche résultante créée par un algorithme est défini par "
+"l'algorithme lui-même. Dans certains cas, un nom fixe peut être utilisé, ce "
+"qui signifie que le même nom de sortie sera utilisé, quelle que soit la "
+"couche d'entrée utilisée. Dans d'autres cas, le nom peut dépendre du nom de "
+"la couche d'entrée ou de certains des paramètres utilisés pour exécuter "
+"l'algorithme. Si cette case est cochée, le nom sera tiré du nom du fichier "
+"de sortie à la place. Notez que, si la sortie est enregistrée dans un "
+"fichier temporaire, le nom de ce fichier temporaire est généralement long et"
+" sans signification afin d'éviter toute collision avec d'autres noms de "
+"fichiers déjà existants."
+
+#: ../../docs/user_manual/processing/configuration.rst:88
+msgid ":guilabel:`Show layer CRS definition in selection boxes`"
+msgstr ""
+":guilabel:`Affichez la définition de la couche CRS dans les boîtes de "
+"sélection`."
+
+#: ../../docs/user_manual/processing/configuration.rst:89
+msgid ":guilabel:`Show tooltip when there are disabled providers`"
+msgstr ""
+":guilabel:`Affichez l'info-bulle lorsqu'il y a des fournisseurs non activés`"
+
+#: ../../docs/user_manual/processing/configuration.rst:90
+msgid ""
+":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
+":guilabel:`Style for polygons layers` and :guilabel:`Style for raster "
+"layers` are used for setting the default rendering style for output layers "
+"(that is, layers generated by processing algorithms). Just create the style "
+"you want using QGIS, save it to a file, and then enter the path to that file"
+" in the settings so the algorithms can use it. Whenever a layer is loaded by"
+" Processing and added to the QGIS canvas, it will be rendered with that "
+"style."
+msgstr ""
+":guilabel:`Style pour les couches lignes`, :guilabel:`Style pour les couches"
+" points`, :guilabel:`Style pour les couches polygones` et :guilabel:`Style "
+"pour les couches raster` sont utilisés pour définir le style de rendu par "
+"défaut pour les couches de sortie (c'est-à-dire les couches générées par les"
+" algorithmes de traitement). Il suffit de créer le style souhaité à l'aide "
+"de QGIS, de l'enregistrer dans un fichier, puis de saisir le chemin d'accès "
+"à ce fichier dans les paramètres afin que les algorithmes puissent "
+"l'utiliser. Chaque fois qu'une couche est chargée par Processing et ajoutée "
+"au canevas QGIS, elle sera rendue avec ce style."
+
+#: ../../docs/user_manual/processing/configuration.rst:101
+msgid ""
+"Rendering styles can be configured individually for each algorithm and each "
+"one of its outputs. Just right-click on the name of the algorithm in the "
+"toolbox and select :guilabel:`Edit rendering styles for outputs`. You will "
+"see a dialog like the one shown next."
+msgstr ""
+"Le rendu des styles peut être configuré pour chaque algorithme et pour "
+"chacune de ses sorties. Cliquez avec le bouton droit sur le nom de "
+"l'algorithme dans la boîte à outils et sélectionnez :guilabel:`Éditer les "
+"styles de rendu par défaut`. Une fenêtre comme celle-ci apparaîtra."
+
+#: ../../docs/user_manual/processing/configuration.rst:112
+msgid "Rendering Styles"
+msgstr "Styles de rendu"
+
+#: ../../docs/user_manual/processing/configuration.rst:114
+msgid ""
+"Select the style file (:file:`.qml`) that you want for each output and press"
+" :guilabel:`OK`."
+msgstr ""
+"Sélectionnez le fichier de style (:file:`.qml`) que vous souhaitez appliquer"
+" à chaque résultat et appuyez sur :guilabel:`OK`."
+
+#: ../../docs/user_manual/processing/configuration.rst:163
+msgid "menu"
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:124
+msgid "Menus"
+msgstr "Menus"
+
+#: ../../docs/user_manual/processing/configuration.rst:141
+msgid "Models and Scripts"
+msgstr "Modèles et scripts"
+
+#: ../../docs/user_manual/processing/configuration.rst:167
+msgid "processingModel"
+msgstr "processingModel"
+
+#: ../../docs/user_manual/processing/configuration.rst:169
+msgid "pythonFile"
+msgstr "pythonFile"
+
+#: ../../docs/user_manual/processing/configuration.rst:147
+msgid "Providers"
+msgstr "Fournisseurs"

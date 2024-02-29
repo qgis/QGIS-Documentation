@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/plugins.rst:3
+msgid "Plugins"
+msgstr "플러그인"
+
+#: ../../docs/server_manual/plugins.rst:11
+msgid "List of plugins"
+msgstr "플러그인 목록"
+
+#: ../../docs/server_manual/plugins.rst:13
+msgid "Plugins can also be installed on QGIS Server."
+msgstr "QGIS 서버 상에 플러그인도 설치할 수 있습니다."
+
+#: ../../docs/server_manual/plugins.rst:15
+msgid ""
+"Some plugins designed for server can be found on the official `QGIS "
+"repository <https://plugins.qgis.org/plugins/server/>`_."
+msgstr ""
+"공식 `QGIS 저장소 <https://plugins.qgis.org/plugins/server/>`_ 에서 서버 용으로 설계된 몇몇 "
+"플러그인을 찾아볼 수 있습니다."
+
+#: ../../docs/server_manual/plugins.rst:18
+msgid ""
+"Install only plugins you need for your own purpose. On QGIS server, plugins "
+"are like hooks into QGIS server, they can alter inputs or outputs of QGIS "
+"server. They can produce unexpected result if you don't know how the plugin "
+"works. Please refer to their respective documentation or the application "
+"that needs QGIS server plugins to know which plugin can be useful for you."
+msgstr ""
+"사용자 자신의 목적에 필요한 플러그인만 설치하십시오. QGIS 서버 상에서 플러그인이란 마치 QGIS 서버를 지배하는 것과 같아서 "
+"QGIS 서버의 입력물이나 산출물을 변경시킬 수 있습니다. 사용자가 플러그인의 작동 방식을 정확히 모르는 경우 예상하지 못 한 결과를 낼"
+" 수도 있습니다. 사용자에게 어떤 플러그인이 유용할지 알아보려면 각 플러그인의 문서 또는 QGIS 서버 플러그인을 필요로 하는 응용 "
+"프로그램을 참조하세요."
+
+#: ../../docs/server_manual/plugins.rst:24
+msgid "Location of plugins"
+msgstr "플러그인 위치"
+
+#: ../../docs/server_manual/plugins.rst:26
+msgid ""
+"By default, on Debian based systems, QGIS Server will look for plugins "
+"located in :file:`/usr/lib/qgis/plugins`. The default value is displayed "
+"when QGIS Server is starting, in the logs. It's possible to set a custom "
+"path by defining the environment variable ``QGIS_PLUGINPATH`` in the web "
+"server configuration."
+msgstr ""
+"기본적으로 데비안 기반 시스템 상에서 QGIS 서버는 :file:`/usr/lib/qgis/plugins` 에 있는 플러그인을 검색할 "
+"것입니다. QGIS 서버 구동 시 로그에 기본값을 출력합니다. 웹 서버 환경설정에서 ``QGIS_PLUGINPATH`` 환경 변수를 "
+"정의해서 사용자 지정 경로를 설정할 수도 있습니다."
+
+#: ../../docs/server_manual/plugins.rst:32
+msgid "Installation"
+msgstr "설치"
+
+#: ../../docs/server_manual/plugins.rst:35
+msgid "Manually with a ZIP"
+msgstr "ZIP 압축 파일로 직접 설치"
+
+#: ../../docs/server_manual/plugins.rst:37
+msgid ""
+"As an example, to install the **HelloWorld** plugin for testing the server, "
+"using a specific folder, you first have to create a directory to hold server"
+" plugins. This will be specified in the virtual host configuration and "
+"passed on to the server through an environment variable:"
+msgstr ""
+"예를 들어 서버 검증 용 **HelloWorld** 플러그인을 특정 폴더를 이용해서 설치하려면, 먼저 서버 플러그인을 담을 디렉터리를 "
+"생성해야 합니다. 다음과 같이 가상 호스트 환경 설정에 이 디렉터리를 지정하고 환경 변수를 통해 서버에 넘겨줄 것입니다:"
+
+#: ../../docs/server_manual/plugins.rst:52
+msgid ""
+"According to its `description "
+"<https://plugins.qgis.org/plugins/HelloServer/>`_, HelloServer plugin is "
+"designed for development and demonstration purposes. Do not keep this plugin"
+" for production if you don't need it."
+msgstr ""
+"HelloServer 플러그인의 `설명 <https://plugins.qgis.org/plugins/HelloServer/>`_ 에 "
+"따르면, 이 플러그인은 개발 및 데모 목적으로 설계되었습니다. 맵 제작에 필요하지 않다면 이 플러그인을 삭제하는 편이 좋습니다."
+
+#: ../../docs/server_manual/plugins.rst:56
+msgid "With a command line tool"
+msgstr "명령줄 도구로 설치"
+
+#: ../../docs/server_manual/plugins.rst:58
+msgid ""
+"If you need to install and regularly upgrade plugins which are stored in the"
+" QGIS plugin repository, you may use the `QGIS-Plugin-Manager "
+"<https://github.com/3liz/qgis-plugin-manager>`_. It's a tool to help you "
+"manage plugins from the command line."
+msgstr ""
+"QGIS 플러그인 저장소에 저장되어 있는 플러그인을 설치하고 정기적으로 업그레이드해야 하는 경우, `QGIS-Plugin-Manager "
+"<https://github.com/3liz/qgis-plugin-manager>`_ 를 이용할 수도 있습니다. QGIS 플러그인 "
+"관리자는 명령줄에서 플러그인을 관리할 수 있게 도와주는 도구입니다."
+
+#: ../../docs/server_manual/plugins.rst:62
+msgid ""
+"The installation is using pip. Installing in a virtual environment is a good"
+" practice but not required:"
+msgstr ""
+"`pip "
+"<https://ko.wikipedia.org/wiki/Pip_(%ED%8C%A8%ED%82%A4%EC%A7%80_%EA%B4%80%EB%A6%AC%EC%9E%90)>`_"
+" 을 이용해서 설치합니다. 가상 환경에 pip을 설치하는 것은 훌륭한 관습이지만 필수는 아닙니다:"
+
+#: ../../docs/server_manual/plugins.rst:68
+msgid "To upgrade the tool:"
+msgstr "이 도구를 업그레이드하려면:"
+
+#: ../../docs/server_manual/plugins.rst:74
+msgid ""
+"Then, you can use the ``qgis-plugin-manager`` executable from the command "
+"line:"
+msgstr "그 다음, 명령줄에서 ``qgis-plugin-manager`` 실행 파일을 이용할 수 있습니다:"
+
+#: ../../docs/server_manual/plugins.rst:92
+msgid ""
+"We suggest you to read the full documentation in the `readme file "
+"<https://github.com/3liz/qgis-plugin-manager/blob/master/README.md>`_ to "
+"know how to install or upgrade plugins with this tool."
+msgstr ""
+"이 도구로 플러그인을 설치하거나 업그레이드하는 방법을 알고 싶다면 `README 파일 "
+"<https://github.com/3liz/qgis-plugin-manager/blob/master/README.md>`_ 에 있는 "
+"완전한 문서를 읽어볼 것을 권장합니다."
+
+#: ../../docs/server_manual/plugins.rst:97
+msgid "HTTP Server configuration"
+msgstr "HTTP 서버 환경 설정"
+
+#: ../../docs/server_manual/plugins.rst:100
+msgid "Apache"
+msgstr ""
+
+#: ../../docs/server_manual/plugins.rst:102
+msgid ""
+"To be able to use server plugins, FastCGI needs to know where to look. So, "
+"we have to modify the Apache configuration file to indicate the "
+"``QGIS_PLUGINPATH`` environment variable to FastCGI:"
+msgstr ""
+"서버 플러그인을 사용하려면, FastCGI가 어디를 찾아야 하는지 알아야 합니다. 따라서, 아파치 환경 설정 파일을 다음과 같이 수정해서"
+" FastCGI에 ``QGIS_PLUGINPATH`` 환경 변수를 알려줘야 합니다."
+
+#: ../../docs/server_manual/plugins.rst:110
+msgid ""
+"Moreover, a basic HTTP authorization is necessary to play with the "
+"HelloWorld plugin previously introduced. So we have to update the Apache "
+"configuration file a last time:"
+msgstr ""
+"이에 더해, 앞에서 소개한 HelloWorld 플러그인을 여러모로 활용하려면 기본 HTTP 인증이 필요합니다. 따라서 마지막으로 아파치 "
+"환경 설정 파일을 업데이트해야 합니다:"
+
+#: ../../docs/server_manual/plugins.rst:123
+msgid "Then, restart Apache:"
+msgstr "그리고 아파치를 다음과 같이 재시작하십시오:"
+
+#: ../../docs/server_manual/plugins.rst:130
+msgid "How to use a plugin"
+msgstr "플러그인 사용법"
+
+#: ../../docs/server_manual/plugins.rst:132
+msgid "Test the server with the HelloWorld plugin:"
+msgstr "HelloWorld 플러그인을 통해 서버를 검증해보겠습니다:"
+
+#: ../../docs/server_manual/plugins.rst:139
+msgid ""
+"You can have a look at the default GetCapabilities of the QGIS server at:"
+msgstr "다음과 같은 주소에서 QGIS 서버의 기본 ``GetCapabilities`` 응답을 살펴볼 수 있습니다:"

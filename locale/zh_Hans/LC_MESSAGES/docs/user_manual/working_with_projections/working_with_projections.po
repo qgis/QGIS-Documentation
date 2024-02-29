@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:5
+msgid "Working with Projections"
+msgstr "使用投影"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:14
+msgid ""
+"A Coordinate Reference System, or CRS, is a method of associating numerical "
+"coordinates with a position on the surface of the Earth. QGIS has support "
+"for approximately 7,000 standard CRSs, each with different use cases, pros "
+"and cons! Choosing an appropriate reference system for your QGIS projects "
+"and data can be a complex task, but fortunately QGIS helps guide you through"
+" this choice, and makes working with different CRSs as transparent and "
+"accurate as possible."
+msgstr ""
+"坐标参照系统，或简称CRS， 是一种将数值坐标与地球表面上的位置相关联的方法。 QGIS 支持大约 7,000 个标准 "
+"坐标参照系统，每个都有不同的用例、优缺点！为您的 QGIS 项目和数据选择合适的坐标参照系统可能是一项复杂的任务，但幸运的是 QGIS "
+"可以帮助您完成选择，并让使用不同的 坐标参照系尽可能透明和准确。"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:25
+msgid "Overview of Projection Support"
+msgstr "投影支持概述"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:27
+msgid ""
+"QGIS has support for approximately 7,000 known CRSs. These standard CRSs are"
+" based on those defined by the European Petroleum Search Group (EPSG) and "
+"the Institut Geographique National de France (IGNF), and are made available "
+"in QGIS through the underlying \"Proj\" projection library. Commonly, these "
+"standard projections are identified through use of an authority:code "
+"combination, where the authority is an organisation name such as \"EPSG\" or"
+" \"IGNF\", and the code is a unique number associated with a specific CRS. "
+"For instance, the common WGS 84 latitude/longitude CRS is known by the "
+"identifier ``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``."
+msgstr ""
+"QGIS 支持大约 7,000 个已知的坐标参照系。这些标准坐标参照系基于欧洲石油调查组 (EPSG) 和法国国家地理研究所 (IGNF) "
+"定义的标准，并通过底层的“Proj”投影库在 QGIS "
+"中提供。通常，这些标准投影是通过使用“管理机构:代码”组合来识别的，其中管理机构是组织名称，例如“EPSG”或“IGNF”，代码是与特定 CRS "
+"关联的唯一编号。例如，常见的 WGS 84 经纬度坐标参照系 "
+"的标识符为``EPSG:4326``，而网络地图标准坐标参照系为``EPSG:3857``。"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:37
+msgid ""
+"Custom, user-created CRSs are stored in a user CRS database. See section "
+":ref:`sec_custom_projections` for information on managing your custom "
+"coordinate reference systems."
+msgstr ""
+"自定义的、用户创建的坐标参照系存储在用户坐标参照系数据库中。有关管理自定义坐标参照系统的信息，请参阅:ref:`sec_custom_projections`部分。"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
+msgid "Layer Coordinate Reference Systems"
+msgstr "图层坐标参照系"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
+msgid ""
+"Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
+"determine the correct CRS for that layer. In some cases this is not "
+"possible, e.g. when a layer has been provided without retaining this "
+"information. You can configure QGIS behavior whenever it cannot "
+"automatically determine the correct CRS for a layer:"
+msgstr ""
+"每当将图层加载到 QGIS 中时，QGIS "
+"都会尝试自动确定该图层的正确坐标参照系。在某些情况下可能无法成功，例如当提供了一个不包含坐标系信息的图层时。当 QGIS "
+"无法自动确定图层的正确坐标参照系时，您可以手动配置 QGIS ："
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
+msgid ""
+"Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
+"CRS`"
+msgstr "打开:menuselection:`设置 -->` |options| :menuselection:`选项... --> CRS`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:415
+msgid "options"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
+msgid "The CRS tab in the QGIS Options Dialog"
+msgstr "QGIS选项对话框中的CRS选项卡"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:73
+msgid ""
+"Under the :guilabel:`CRS for layers` group, set the action to do "
+":guilabel:`when a new layer is created, or when a layer is loaded that has "
+"no CRS`. One of:"
+msgstr "在:guilabel:`图层CRS` 选项组中，设置 :guilabel:`当创建新图层或加载没有CRS的图层时`的操作。从以下选择其一："
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
+msgid ""
+"|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`: there "
+"will be no prompt to select a CRS when a layer without CRS is loaded, "
+"defering CRS choice to a later time. Convenient when loading a lot of layers"
+" at once. Such layers will be identifiable in the :guilabel:`Layers` panel "
+"by the |indicatorNoCRS| icon next to them. They'll also be un-referenced, "
+"with coordinates from the layer treated as purely numerical, non-earth "
+"values, i.e. the same behavior as all layers get when :ref:`a project is set"
+" to have no CRS <project_crs>`."
+msgstr ""
+"|radioButtonOn| :guilabel:`保留未知CRS (无动作)`：加载没有 CRS 的图层时，将不会提示选择 CRS，将 CRS "
+"选择推迟到以后。一次加载很多图层时很方便。在:guilabel:`图层`面板中这些图层旁边将会显示 "
+"|indicatorNoCRS|图标。它们也将是无参照的，来自该图层的坐标被视为纯数字的、非地球的值，也就是说，当:ref:`一个项目被设置为没有CRS时<project_crs>"
+" `，所有图层的行为都是一样的。"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:419
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:413
+msgid "indicatorNoCRS"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
+msgid ""
+"|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to manually "
+"select the CRS. Selecting the correct choice is crucial, as a wrong choice "
+"will place your layer in the wrong position on the Earth's surface! "
+"Sometimes, accompanying metadata will describe the correct CRS for a layer, "
+"in other cases you will need to contact the original author of the data to "
+"determine the correct CRS to use."
+msgstr "|radioButtonOff| :guilabel:`提示选择CRS`:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:417
+msgid "radioButtonOff"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
+msgid "|radioButtonOff| :guilabel:`Use project CRS`"
+msgstr "|radioButtonOff| :guilabel:`使用工程CRS`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
+msgid ""
+"Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
+"selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
+msgstr ""
+"使用快捷键:kbd:`Ctrl+Shift+C`，或者右键单击选中图层以进入CRS选择选单:menuselection:`图层CRS --> "
+"设置图层CRS`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
+msgid "Find and select the right CRS to use"
+msgstr "找到并选择正确的CRS"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
+msgid ""
+"And press :guilabel:`OK`. You can confirm that it has been set correctly in "
+"the :guilabel:`Source` tab of the layers' properties dialog."
+msgstr "点击:guilabel:`OK`.现在检查图层属性对话框下的:guilabel:`源`标签页的信息，图层的CRS已被正确地设置"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
+msgid ""
+"Note that changing the CRS in this setting does not alter the underlying "
+"data source in any way, rather it just changes how QGIS interprets the raw "
+"coordinates from the layer in the current QGIS project."
+msgstr "请注意，在此设置中更改CRS并不会修改原始数据源，而只是改变了当前QGIS工程下QGIS对该图层原始坐标的解释。"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
+msgid "Project Coordinate Reference Systems"
+msgstr "投影坐标参照系"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:411
+msgid "customProjection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:423
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:421
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:382
+msgid "Click :guilabel:`OK`."
+msgstr "单击 :guilabel:`确定` 。"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:425
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:427
+msgid "toggleEditing"
+msgstr ""

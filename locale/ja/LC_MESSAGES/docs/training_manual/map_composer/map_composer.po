@@ -1,0 +1,681 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Miyoshi Tomoya, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:2
+msgid "|LS| Using Print Layout"
+msgstr "|LS| 印刷レイアウトを使用する"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:4
+msgid ""
+"Now that you've got a map, you need to be able to print it or to export it "
+"to a document. The reason is, a GIS map file is not an image. Rather, it "
+"saves the state of the GIS program, with references to all the layers, their"
+" labels,colors, etc. So for someone who doesn't have the data or the same "
+"GIS program (such as QGIS), the map file will be useless. Luckily, QGIS can "
+"export its map file to a format that anyone's computer can read, as well as "
+"printing out the map if you have a printer connected. Both exporting and "
+"printing is handled via the *Print Layout*."
+msgstr ""
+"さて、地図を手に入れたら、それを印刷したり、文書に書き出したりする必要があります。なぜなら、GIS地図ファイルは画像ではないからです。GIS地図ファイルは画像ではなく、GISプログラムの状態を保存したもので、すべてのレイヤの参照、ラベル、色などが含まれています。そのため、同じデータや同じGISプログラム（QGISなど）を持っていない人にとっては、地図ファイルは役に立たないことになります。幸いなことに、QGISは地図ファイルを誰でも読める形式にエクスポートすることができますし、プリンタを接続すれば地図をプリントアウトすることもできます。エクスポートも印刷も、"
+" *印刷レイアウト* で処理されます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:16
+msgid ""
+"**The goal for this lesson:** To use the QGIS *Print Layout* to create a "
+"basic map with all the required settings."
+msgstr "**このレッスンの目標：** QGIS *印刷レイアウト* を使用して、必要な設定をすべて行った基本的な地図を作成すること。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:20
+msgid "|basic| |FA| The Layout Manager"
+msgstr "|basic| |FA| レイアウトマネージャ"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:343
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:22
+msgid ""
+"QGIS allows you to create multiple maps using the same map file. For this "
+"reason, it has a tool called the *Layout Manager*."
+msgstr ""
+"QGISでは、同じマップファイルを使って複数の地図を作成することができます。そのため、*レイアウトマネージャ* と呼ばれるツールが用意されています。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:25
+msgid ""
+"Click on the :menuselection:`Project --> Layout Manager...` menu entry to "
+"open this tool. You'll see a blank :guilabel:`Layout manager` dialog appear."
+msgstr ""
+":menuselection:`プロジェクト--> レイアウトマネージャ...` メニューをクリックして、ツールを起動します。すると、空の "
+":guilabel:`レイアウトマネージャ` ダイアログが表示されます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:32
+msgid ""
+"Under :guilabel:`New from Template`, select :guilabel:`Empty layout` and "
+"press the :guilabel:`Create...` button."
+msgstr ""
+":guilabel:`テンプレートから新規作成` の下にある :guilabel:`空のレイアウト` を選び、 :guilabel:`作成...` "
+"ボタンを押します。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:34
+msgid ""
+"Give the new layout the name of |majorUrbanName| and click :guilabel:`OK`."
+msgstr "新しいレイアウトに |majorUrbanName| という名前を付けて、 :guilabel:`OK` をクリックします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:36
+msgid "You will now see the *Print Layout* window:"
+msgstr "これで、*印刷レイアウト* ウィンドウが表示されます:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:41
+msgid ""
+"You could also create this new layout via the :menuselection:`Project --> "
+"New Print Layout...` menu."
+msgstr ""
+"また、この新しいレイアウトは :menuselection:`プロジェクト--> 新規印刷レイアウト...` メニューで作成することもできます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:44
+msgid ""
+"Whichever route you take, the new print layout is now accessible from the "
+":menuselection:`Project --> Layouts -->` menu, as in the image below."
+msgstr ""
+"どちらの方法をとったとしても、新規印刷レイアウトは、下の画像のように :menuselection:`プロジェクト --> レイアウト -->` "
+"メニューからアクセスできるようになりました。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:52
+msgid "|basic| |FA| Basic Map Composition"
+msgstr "|basic| |FA| 基本地図の構図"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:54
+msgid ""
+"In this example, the composition was already the way we wanted it. Ensure "
+"that yours is as well."
+msgstr "この例では、構図はすでに望んだ形になりました。あなたのものが同様であることを確認してください。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:57
+msgid ""
+"Right-click on the sheet in the central part of the layout window and choose"
+" :guilabel:`Page properties...` in the context menu."
+msgstr ""
+"レイアウトウィンドウの中央でシートを右クリックし、コンテキストメニューから :guilabel:`ページのプロパティ...` を選択します。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:59
+msgid ""
+"Check that the values in the :guilabel:`Item Properties` tab are set to the "
+"following:"
+msgstr ":guilabel:`アイテムプロパティ` タブの値が、以下のように設定されていることを確認します:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:62
+msgid ":guilabel:`Size`: ``A4``"
+msgstr ":guilabel:`大きさ`: ``A4``"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:63
+msgid ":guilabel:`Orientation`: ``Landscape``"
+msgstr ":guilabel:`方向`: ``横``"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:65
+msgid ""
+"Now you've got the page layout the way you wanted it, but this page is still"
+" blank. It clearly lacks a map. Let's fix that!"
+msgstr ""
+"今、ページレイアウトは望んでいたようになっていますが、このページはまだ空白です。これは明らかに地図を欠いています。その問題を修正しましょう！"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:69
+msgid "Click on the |addMap| :sup:`Add Map` button."
+msgstr "|addMap| :sup:`地図を追加` ボタンをクリックします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:337
+msgid "addMap"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:71
+msgid "With this tool activated, you will be able to place a map on the page."
+msgstr "このツールを有効にすると、ページ上に地図を配置することができるようになります。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:74
+msgid "Click and drag a box on the blank page:"
+msgstr "クリックして、空白のページにボックスをドラッグします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:79
+msgid "The map will appear on the page."
+msgstr "地図がページに表示されます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:81
+msgid "Move the map by clicking and dragging it around:"
+msgstr "クリックしてドラッグすることで地図を移動します。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:86
+msgid "Resize it by clicking and dragging the boxes on the edges:"
+msgstr "端にあるボックスをクリックしてドラッグすることで、サイズを変更できます:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:91
+msgid ""
+"Your map may look a lot different, of course! This depends on how your own "
+"project is set up. But not to worry! These instructions are general, so they"
+" will work the same regardless of what the map itself looks like."
+msgstr ""
+"地図はもちろん全く違って見えてもよいです！これは、自身のプロジェクトが設定されている方法によって異なります。しかし、心配しないように！これらの命令は一般的なので、地図自体がどのように見えるかに関係なく、同じ動作をします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:96
+msgid ""
+"Be sure to leave margins along the edges, and a space along the top for the "
+"title."
+msgstr "縁に沿って余白、および上辺に沿ってタイトル用に空白を残すようにしてください。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:99
+msgid "Zoom in and out on the page (but not the map!) by using these buttons:"
+msgstr "これらのボタンを使って（地図でなく！）ページ上で拡大、縮小します："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:102
+msgid "|zoomFullExtent| |zoomIn| |zoomOut|"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:372
+msgid "zoomFullExtent"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:374
+msgid "zoomIn"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:376
+msgid "zoomOut"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:104
+msgid ""
+"Zoom and pan the map in the main QGIS window. You can also pan the map using"
+" the |moveItemContent| :sup:`Move item content` tool."
+msgstr ""
+"QGIS のメイン ウィンドウでマップをズームおよびパンします。また、 |moveItemContent| :sup:`アイテムのコンテンツを移動` "
+"ツールを使用してマップをパンすることができます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:354
+msgid "moveItemContent"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:108
+msgid "The map view updates as you zoom in or zoom out."
+msgstr "拡大または縮小に応じて地図ビューは更新されます"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:109
+msgid ""
+"If, for any reason, the map view does not refresh correctly, you can force "
+"the map to refresh by clicking the |refresh| :sup:`Refresh view` button."
+msgstr ""
+"何らかの理由で地図ビューが正しく更新されない場合、|refresh| :sup:`ビューを更新` "
+"ボタンをクリックすることで強制的にマップを更新することができます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:356
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:113
+msgid ""
+"Remember that the size and position you've given the map doesn't need to be "
+"final. You can always come back and change it later if you're not satisfied."
+" For now, you need to ensure that you've saved your work on this map. "
+"Because a *Print Layout* in QGIS is part of the main map file, you must save"
+" your project."
+msgstr ""
+"地図の大きさと位置は、最終的なものでなくてもかまいません。もし満足できなければ、いつでも後で戻って変更することができます。とりあえず、このマップに関する作業を確実に保存しておく必要があります。QGIS"
+" の *印刷レイアウト* はメイン マップ ファイルの一部であるため、プロジェクトを保存する必要があります。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:122
+msgid ""
+"Go to the :menuselection:`Layout -->` |fileSave| :menuselection:`Save "
+"Project`. This is a convenient shortcut to the one in the main dialog."
+msgstr ""
+":menuselection:`レイアウト-->` |fileSave| :menuselection:`プロジェクトを保存` "
+"に移動します。これは、メインダイアログにある便利なショートカットです。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:346
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:127
+msgid "|basic| |FA| Adding a Title"
+msgstr "|basic| |FA| タイトルを追加する"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:129
+msgid ""
+"Now your map is looking good on the page, but your readers/users are not "
+"being told what's going on yet. They need some context, which is what you'll"
+" provide for them by adding map elements. First, let us add a title."
+msgstr ""
+"さて、地図はページ上で見栄えがしますが、読者/ユーザーはまだ何が起こっているのか知らされていません。読者やユーザーには文脈が必要です。地図要素を追加することで、読者やユーザーに文脈を提供することができます。まず、タイトルを追加してみましょう。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:135
+msgid "Click on the |label| :sup:`Add Label` button"
+msgstr "|label| :sup:`ラベルを追加` ボタンをクリックします"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:348
+msgid "label"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:136
+msgid ""
+"Click on the page, above the map, accept the suggested values in the "
+":guilabel:`New Item Properties` dialog, and a label will appear at the top "
+"of the map."
+msgstr ""
+"地図の上でページをクリックし、 :guilabel:`新規アイテムのプロパティ` "
+"ダイアログで提案された値を受け入れると、地図の上にラベルが表示されます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:139
+msgid ""
+"Resize it and place it in the top center of the page. It can be resized and "
+"moved in the same way that you resized and moved the map."
+msgstr "サイズを変更し、ページの上部中央に配置します。それは地図の大きさを変更したり移動するのと同じ方法で大きさを変更したり移動できます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:143
+msgid ""
+"As you move the title, you'll notice that guidelines appear to help you "
+"position the title in the center of the page."
+msgstr "タイトルを移動すると、ページの中央にタイトルの配置を助けるガイドラインが現れることに気づくでしょう。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:146
+msgid ""
+"However, there is also a tool in the Actions Toolbar to help position the "
+"title relative to the map (not the page):"
+msgstr "ただし、アクションツールバーには、タイトルを（ページではなく）マップに相対的に配置するためのツールもあります:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:149
+msgid "|alignLeft|"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:341
+msgid "alignLeft"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:151
+msgid "Click the map to select it"
+msgstr "マップをクリックしてそれを選びます"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:152
+msgid ""
+"Hold in :kbd:`Shift` on your keyboard and click on the label so that both "
+"the map and the label are selected."
+msgstr "キーボードの :kbd:`Shift` を押したまま、地図とラベルの両方が選択されるようにラベルをクリックしてください。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:154
+msgid ""
+"Look for the |alignLeft| :sup:`Align selected items left` button and click "
+"on the dropdown arrow next to it to reveal the positioning options and click"
+" |alignHCenter| :guilabel:`Align center`:"
+msgstr ""
+"|alignLeft| :sup:`選択を左寄せ整列する` ボタンを探して、その横のドロップダウン矢印をクリックし、位置決めオプションを表示し、 "
+"|alignHCenter| :guilabel:`中央揃え` をクリックします:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:339
+msgid "alignHCenter"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:162
+msgid ""
+"Now the label frame is centered on the map, but not the contents. To center "
+"the contents of the label:"
+msgstr "これで、ラベルの内容ではなくフレームが地図の中央に配置されました。ラベルの内容を中央に表示するには："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:165
+msgid "Select the label by clicking on it."
+msgstr "クリックしてラベルを選択します。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:166
+msgid ""
+"Click on the :guilabel:`Item Properties` tab in the side panel of the layout"
+" window."
+msgstr "レイアウトウィンドウのサイドパネルにある :guilabel:`アイテムプロパティ` タブをクリックします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:168
+msgid "Change the text of the label to \"|majorUrbanName|\":"
+msgstr "ラベルの文字を\"|majorUrbanName|\"に変更します:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:173
+msgid ""
+"Use this interface to set the font and alignment options under the "
+":guilabel:`Appearance` section:"
+msgstr "このインターフェイスは :guilabel:`外観` セクションのフォントと配置のオプションを設定するために使用します："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:176
+msgid ""
+"Choose a large but sensible font (the example will use the default font with"
+" a size of ``36``)"
+msgstr "大きめの、しかし実用的なフォントを選びます (この例では、サイズ ``36`` のデフォルトフォントを使用します)"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:178
+msgid "Set the :guilabel:`Horizontal Alignment` to :guilabel:`Center`."
+msgstr ":guilabel:`水平方向配置` を :guilabel:`中央` に設定します。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:180
+msgid ""
+"You can also change the font color, but it's probably best to keep it black "
+"as per the default."
+msgstr "フォントの色も変更できますが、デフォルトのとおりに黒のままにしておくのがおそらく最善です。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:183
+msgid ""
+"The default setting is not to add a frame to the title's text box. However, "
+"if you wish to add a frame, you can do so:"
+msgstr "デフォルトの設定では、タイトルのテキストボックスにフレームを追加しません。フレームを追加したい場合は、そうすることができます："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:186
+msgid ""
+"In the :guilabel:`Item Properties` tab, scroll down until you see the "
+":guilabel:`Frame` option."
+msgstr ":guilabel:`アイテムプロパティ` タブで、:guilabel:`フレーム` オプションが表示されるまで、スクロールダウンします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:188
+msgid ""
+"Click the :guilabel:`Frame` checkbox to enable the frame. You can also "
+"change the frame's color and width."
+msgstr ":guilabel:`フレーム` チェックボックスをクリックしてフレームを有効にしてください。フレームの色や幅も変更できます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:191
+msgid ""
+"In this example, we won't enable the frame, so here is our page so far:"
+msgstr "この例ではフレームを有効にしていないので、これまでのところ私たちのページはこうなっています："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:197
+msgid ""
+"To make sure that you don't accidentally move these elements around now that"
+" you've aligned them, you can lock items into place:"
+msgstr "せっかく整列させたのに、間違って動かしてしまわないように、アイテムを固定することができます:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:200
+msgid "Select both the label and the map items"
+msgstr "ラベルと地図の両方を選択します"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:201
+msgid ""
+"Click the |lockItems| :sup:`Lock Selected Items` button in the *Actions* "
+"Toolbar."
+msgstr "*アクション* ツールバーの |lockItems| :sup:`選択アイテムを固定する` ボタンをクリックします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:350
+msgid "lockItems"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:204
+msgid ""
+"Click the |unlockAll| :sup:`Unlock All Items` button in the *Actions* "
+"Toolbar to be able to edit the items again."
+msgstr ""
+"*アクション* ツールバーの |unlockAll| :sup:`すべてのアイテムの固定を解除` "
+"ボタンをクリックすると、アイテムの編集が再び可能になります。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:370
+msgid "unlockAll"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:209
+msgid "|basic| |FA| Adding a Legend"
+msgstr "|basic| |FA| 凡例の追加"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:211
+msgid ""
+"The map reader also needs to be able to see what various things on the map "
+"actually mean. In some cases, like the place names, this is quite obvious. "
+"In other cases, it's more difficult to guess, like the colors of the "
+"forests. Let's add a new legend."
+msgstr ""
+"また、地図の読者は、地図上のさまざまな事柄が実際に何を意味しているのかを理解する必要があります。地名のように一目瞭然の場合もあれば、森の色のように推測が難しい場合もあります。では新しい凡例を追加してみましょう。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:218
+msgid "Click on the |addLegend| :sup:`Add Legend` button"
+msgstr "|addLegend| :sup:`凡例を追加` ボタンをクリックします"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:335
+msgid "addLegend"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:219
+msgid ""
+"Click on the page to place the legend, accept the suggested values in the "
+":guilabel:`New Item Properties` dialog,"
+msgstr "凡例を配置するページの上でクリックし、 :guilabel:`新規アイテムのプロパティ` ダイアログで提案された値を受け入れます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:221
+msgid ""
+"A legend is added to the layout page, showing layers symbology as set in the"
+" main dialog."
+msgstr "レイアウトページに凡例が追加され、メインダイアログで設定されたレイヤシンボル体系が表示されます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:223
+msgid "As usual, you can click and move the item to where you want it:"
+msgstr "いつものように、アイテムをクリックして好きな場所に移動させることができます:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:230
+msgid "|moderate| |FA| Customizing Legend Items"
+msgstr "|moderate| |FA| 凡例アイテムをカスタマイズする"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:353
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:232
+msgid ""
+"Not everything on the legend is necessary, so let's remove some unwanted "
+"items."
+msgstr "凡例上のすべてが必要ではありませんので、いくつかの不要な項目を削除しましょう。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:235
+msgid ""
+"In the :guilabel:`Item Properties` tab, you'll find the :guilabel:`Legend "
+"items` group."
+msgstr ":guilabel:`アイテムプロパティ` タブの中に、 :guilabel:`凡例アイテム` グループが表示されます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:237
+msgid ""
+"Uncheck the |unchecked| :guilabel:`Auto update` box, allowing you to "
+"directly modify the legend items"
+msgstr "|unchecked| :guilabel:`自動更新` ボックスをオフにすると、凡例の項目を直接変更できるようになります"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:368
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:239
+msgid "Select the entry with :guilabel:`buildings`"
+msgstr ":guilabel:`buildings` を持つエントリを選択します"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:240
+msgid "Delete it from the legend by clicking the |symbologyRemove| button"
+msgstr "|symbologyRemove| ボタンをクリックして、それを凡例から削除します"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:366
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:242
+msgid "You can also rename items."
+msgstr "また、アイテムの名前を変更できます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:244
+msgid "Select a layer from the same list."
+msgstr "同じリストからレイヤを選択します。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:245
+msgid "Click the |symbologyEdit| :sup:`Edit selected item properties` button."
+msgstr "|symbologyEdit| :sup:`アイテムのプロパティを編集` ボタンをクリックします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:364
+msgid "symbologyEdit"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:246
+msgid ""
+"Rename the layers to ``Places``, ``Roads and Streets``, ``Surface Water``, "
+"and ``Rivers``."
+msgstr ""
+"レイヤの名前を ``Places``, ``Roads and Streets``, ``Surface Water``, ``Rivers`` "
+"に変更します。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:249
+msgid "You can also reorder the items:"
+msgstr "また、アイテムを並び替えることもできます:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:255
+msgid ""
+"As the legend will likely be widened by the new layer names, you may wish to"
+" move and resize the legend and or map. This is the result:"
+msgstr "凡例はおそらく新しいレイヤ名によって広がることになるので、凡例または地図を移動したり大きさを変更したい場合があります。これがその結果です："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:264
+msgid "|basic| |FA| Exporting Your Map"
+msgstr "|basic| |FA| 地図を書き出す"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:266
+msgid "Did you remember to save your work often?"
+msgstr "しばしば作業を保存することを覚えていましたか？"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:268
+msgid ""
+"Finally the map is ready for export! You'll see the export buttons near the "
+"top left corner of the layout window:"
+msgstr "最後に、地図をエクスポートする準備ができました。レイアウトウィンドウの左上隅にエクスポートボタンが見えます:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:271
+msgid ""
+"|filePrint| :sup:`Print Layout`: interfaces with a printer. Since the "
+"printer options will differ depending on the model of printer that you're "
+"working with, it's probably better to consult the printer manual or a "
+"general guide to printing for more information on this topic."
+msgstr ""
+"|filePrint| :sup:`印刷レイアウト`: "
+"プリンタとのインタフェースを提供します。プリンタのオプションは、使用するプリンタのモデルによって異なるので、このトピックに関する詳細な情報は、プリンタのマニュアルや印刷に関する一般的なガイドを参照する方がよいでしょう。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:344
+msgid "filePrint"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:277
+msgid "The other buttons allow you to export the map page to a file."
+msgstr "そのほかのボタンは地図ページをファイルにエクスポートするのに使います。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:278
+msgid ""
+"|saveMapAsImage| :sup:`Export as Image`: gives you a selection of various "
+"common image formats to choose from. This is probably the simplest option, "
+"but the image it creates is \"dead\" and difficult to edit."
+msgstr ""
+"|saveMapAsImage| :sup:`画像としてエクスポート`: "
+"様々な一般的な画像フォーマットから選択することができます。これはおそらく最もシンプルなオプションですが、作成される画像は「死んで」おり、編集するのが困難です。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:362
+msgid "saveMapAsImage"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:282
+msgid ""
+"|saveAsSVG| :sup:`Export as SVG`: If you're sending the map to a "
+"cartographer (who may want to edit the map for publication), it's best to "
+"export as an SVG. SVG stands for \"Scalable Vector Graphic\", and can be "
+"imported to programs like `Inkscape <https://inkscape.org/>`_ or other "
+"vector image editing software."
+msgstr ""
+"|saveAsSVG| :sup:`SVGとしてエクスポート`: "
+"もしあなたが地図を地図製作者に送るなら(その人は出版用に地図を編集したいかもしれません)、SVGとしてエクスポートするのが一番よいでしょう。SVG は "
+"\"Scalable Vector Graphic\" の略で、`Inkscape <https://inkscape.org/>`_ "
+"やその他のベクター画像編集ソフトウェアにインポートすることができます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:360
+msgid "saveAsSVG"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:287
+msgid ""
+"|saveAsPDF| :sup:`Export as PDF`: If you need to send the map to a client, "
+"it's most common to use a PDF, because it's easier to set up printing "
+"options for a PDF. Some cartographers may prefer PDF as well, if they have a"
+" program that allows them to import and edit this format."
+msgstr ""
+"|saveAsPDF| :sup:`PDFとしてエクスポート`: "
+"クライアントに地図を送る必要がある場合、PDFを使うのが最も一般的です。なぜなら、PDFでは印刷オプションを設定するのが簡単だからです。地図製作者の中には、このフォーマットをインポートしたり編集したりできるプログラムを持っていれば、PDFを好む人もいるでしょう。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:358
+msgid "saveAsPDF"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:293
+msgid "For our purposes, we're going to use PDF."
+msgstr "ここではPDFを使用します。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:295
+msgid "Click the |saveAsPDF| :sup:`Export as PDF` button"
+msgstr "|saveAsPDF|:sup:`PDFとしてエクスポート’ ボタンをクリックします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:296
+msgid ""
+"Choose a save location and a file name as usual. The following dialog will "
+"show up."
+msgstr "通常通り、保存場所とファイル名を選択します。以下のようなダイアログが表示されます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:302
+msgid "You can safely use the default values now and click :guilabel:`Save`."
+msgstr "これで安全にデフォルト値を使用することができますので、 :guilabel:`保存` をクリックします。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:305
+msgid ""
+"QGIS will proceed to the map export and push a message on top of the print "
+"layout dialog as soon as it finishes."
+msgstr "QGISは地図のエクスポートを進め、終了すると同時に印刷レイアウトダイアログの上にメッセージを表示します。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:307
+msgid ""
+"Click the hyperlink in the message to open the folder in which the PDF has "
+"been saved in your system's file manager"
+msgstr "メッセージ内のハイパーリンクをクリックし、PDFが保存されているフォルダをシステムのファイルマネージャで開きます。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:309
+msgid "Open it and see how your layout looks."
+msgstr "開いてみて、レイアウトがどのように見えるかを確認してください。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:311
+msgid ""
+"Everything is OK? Congratulations on your first completed QGIS map project!"
+msgstr "すべてOKですか？初めての QGIS マッププロジェクト完成おめでとうございます！"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:314
+msgid ""
+"Anything unsatisfying? Go back to the QGIS window, do the appropriate "
+"modifications and export again."
+msgstr "何か不満がありますか？QGISのウィンドウに戻り、適切な修正を行って再度エクスポートしてください。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:316
+msgid "Remember to save your project file."
+msgstr "プロジェクトファイルを保存することを忘れないでください。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:320
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:321
+msgid ""
+"Now you know how to create a basic static map layout. We can go a step "
+"further and create a map layout that adapts dynamically, with more layout "
+"items."
+msgstr ""
+"これで、基本的な静的マップレイアウトを作成する方法はお分かりいただけたと思います。さらに一歩進んで、より多くのレイアウト項目を持つ、動的に適応するマップレイアウトを作成することができます。"

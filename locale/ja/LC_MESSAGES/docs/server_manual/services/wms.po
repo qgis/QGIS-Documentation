@@ -1,0 +1,2432 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
+# Transifex Bot <>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-15 15:33+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2024\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/services/wms.rst:2
+msgid "Web Map Service (WMS)"
+msgstr "Webマップサービス (WMS)"
+
+#: ../../docs/server_manual/services/wms.rst:4
+msgid ""
+"The **1.1.1** and **1.3.0** WMS standards implemented in QGIS Server provide"
+" a HTTP interface to request map or legend images generated from a QGIS "
+"project. A typical WMS request defines the QGIS project to use, the layers "
+"to render as well as the image format to generate. Basic support is also "
+"available for **Styled Layer Descriptor (SLD)**."
+msgstr ""
+"QGISサーバに実装された **1.1.1** と **1.3.0** "
+"のWMS標準は、QGISプロジェクトから作成された地図又は凡例画像を要求するためのHTTPインターフェースを提供します。典型的なWMSリクエストは、使用するQGISプロジェクト、レンダリングするレイヤ、生成する画像の形式を決定します。**Styled"
+" Layer Descriptor (SLD)** ではベーシックサポートも利用できます。"
+
+#: ../../docs/server_manual/services/wms.rst:10
+msgid "Specifications:"
+msgstr "仕様:"
+
+#: ../../docs/server_manual/services/wms.rst:12
+msgid ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
+msgstr ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
+
+#: ../../docs/server_manual/services/wms.rst:13
+msgid ""
+"`WMS 1.3.0 <https://portal.ogc.org/files/?artifact_id=14416&format=pdf>`_"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:14
+msgid ""
+"`SLD 1.1.0 WMS profile "
+"<https://portal.ogc.org/files/?artifact_id=22364&format=pdf>`_"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:16
+msgid "Standard requests provided by QGIS Server:"
+msgstr "QGIS Serverが提供する標準リクエスト"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Request"
+msgstr "リクエスト"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetCapabilities <wms_getcapabilities>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "サーバーに関する情報を含むXMLメタデータを返します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetMap <wms_getmap>`"
+msgstr ":ref:`GetMap <wms_getmap>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a map"
+msgstr "マップを返します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetFeatureInfo <wms_getfeatureinfo>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "ピクセル位置のデータ（ジオメトリと値）を取得します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns legend symbols"
+msgstr "凡例シンボルを返します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetStyle(s) <wms_getstyle>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML document with style description in SLD"
+msgstr "SLD によるスタイル記述の XML 文書を返します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`DescribeLayer <wms_describelayer>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"Returns information about WFS and WCS availability respectively for vector "
+"and raster layers"
+msgstr "ベクタレイヤとラスタレイヤについて、それぞれWFSとWCSの有無に関する情報を返します"
+
+#: ../../docs/server_manual/services/wms.rst:30
+msgid "Vendor requests provided by QGIS Server:"
+msgstr "QGIS Serverが提供するベンダーのリクエスト："
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetPrint <wms_getprint>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a QGIS layout"
+msgstr "QGISのレイアウトを返します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetProjectSettings <wms_getprojectsettings>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns specific information about QGIS Server"
+msgstr "QGIS Server に関する特定の情報を返します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetSchemaExtension <wms_getschemaextension>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata about optional extended capabilities"
+msgstr "オプションの拡張機能に関する XML メタデータを返します"
+
+#: ../../docs/server_manual/services/wms.rst:44
+msgid "GetCapabilities"
+msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wms.rst:46
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMS 1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 及び 1.3.0 仕様に従った **GetCapabilities** リクエストの標準パラメータ:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Parameter"
+msgstr "パラメータ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Required"
+msgstr "必須"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Yes"
+msgstr "Yes"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the service (**WMS**)"
+msgstr "サービスの名称 (**WMS**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "リクエストの名称 (**GetCapabilities**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`VERSION <wms_version>`"
+msgstr ":ref:`VERSION <wms_version>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "No"
+msgstr "No"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Version of the service"
+msgstr "サービスのバージョン"
+
+#: ../../docs/server_manual/services/wms.rst:57
+msgid ""
+"The **GetCapabilities** request supports as well the following vendor "
+"parameters:"
+msgstr "**GetCapabilities** リクエストは以下のベンダーパラメータもサポートしています:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "QGIS project file"
+msgstr "QGISプロジェクトファイル"
+
+#: ../../docs/server_manual/services/wms.rst:66
+#: ../../docs/server_manual/services/wms.rst:127
+#: ../../docs/server_manual/services/wms.rst:338
+#: ../../docs/server_manual/services/wms.rst:435
+#: ../../docs/server_manual/services/wms.rst:478
+#: ../../docs/server_manual/services/wms.rst:642
+#: ../../docs/server_manual/services/wms.rst:862
+#: ../../docs/server_manual/services/wms.rst:1009
+#: ../../docs/server_manual/services/wms.rst:1032
+#: ../../docs/server_manual/services/wms.rst:1061
+#: ../../docs/server_manual/services/wms.rst:1089
+#: ../../docs/server_manual/services/wms.rst:1116
+#: ../../docs/server_manual/services/wms.rst:1143
+#: ../../docs/server_manual/services/wms.rst:1170
+#: ../../docs/server_manual/services/wms.rst:1197
+#: ../../docs/server_manual/services/wms.rst:1224
+#: ../../docs/server_manual/services/wms.rst:1283
+#: ../../docs/server_manual/services/wms.rst:1309
+#: ../../docs/server_manual/services/wms.rst:1339
+#: ../../docs/server_manual/services/wms.rst:1367
+#: ../../docs/server_manual/services/wms.rst:1413
+#: ../../docs/server_manual/services/wms.rst:1439
+#: ../../docs/server_manual/services/wms.rst:1469
+#: ../../docs/server_manual/services/wms.rst:1497
+#: ../../docs/server_manual/services/wms.rst:1540
+#: ../../docs/server_manual/services/wms.rst:1576
+#: ../../docs/server_manual/services/wms.rst:1658
+#: ../../docs/server_manual/services/wms.rst:1843
+msgid "URL example:"
+msgstr "URLの例:"
+
+#: ../../docs/server_manual/services/wms.rst:79
+msgid "GetMap"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:81
+msgid ""
+"Standard parameters for the **GetMap** request according to the OGC WMS "
+"1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 及び 1.3.0 仕様に従った **GetMap** リクエストの標準パラメータ:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetMap**)"
+msgstr "リクエストの名称 (**GetMap**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERS <wms_layers>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display"
+msgstr "表示するレイヤ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`STYLES <wms_styles>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style"
+msgstr "レイヤのスタイル"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRS / CRS <wms_srs>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Coordinate reference system"
+msgstr "座標参照系"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BBOX <wms_bbox>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map extent"
+msgstr "マップの範囲"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WIDTH <wms_width>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the image in pixels"
+msgstr "ピクセル単位の画像の幅"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`HEIGHT <wms_height>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the image in pixels"
+msgstr "ピクセル単位の画像の高さ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getmap_format>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Image format"
+msgstr "画像の形式"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`TRANSPARENT <wms_transparent>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Transparent background"
+msgstr "透明な背景"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "URL of an SLD to be used for styling"
+msgstr "スタイリングに使用するSLDのURL"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD_BODY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "In-line SLD (XML) to be used for styling"
+msgstr "スタイリングに使用するインラインSLD(XML)"
+
+#: ../../docs/server_manual/services/wms.rst:103
+msgid ""
+"In addition to the standard ones, QGIS Server supports :ref:`redlining "
+"<wms_redlining>`, :ref:`external WMS layers <wms_external>` as well as the "
+"following extra parameters:"
+msgstr ""
+"QGIS Serverでは、標準的なものに加えて、 :ref:`redlining <wms_redlining>`、 :ref:`external "
+"WMS layers <wms_external>`、および以下の追加パラメータがサポートされています:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BGCOLOR <wms_bgcolor>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the background color"
+msgstr "背景色を指定します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`DPI <wms_dpi>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the output resolution"
+msgstr "出力解像度を指定します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`IMAGE_QUALITY <wms_imagequality>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "JPEG compression"
+msgstr "JPEG圧縮"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`OPACITIES <wms_opacities>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Opacity for layer or group"
+msgstr "レイヤまたはグループの不透明度"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FILTER <wms_filter>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Subset of features"
+msgstr "地物のサブセット"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SELECTION <wms_selection>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Highlight features"
+msgstr "地物を強調します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "FILE_NAME"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "File name of the downloaded file"
+msgstr "ダウンロードするファイルのファイル名"
+
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/dxf``"
+msgstr "``FORMAT=application/dxf`` の場合のみ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT_OPTIONS <wms_formatoptions>`"
+msgstr ":ref:`FORMAT_OPTIONS <wms_formatoptions>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Options of the specified file format"
+msgstr "指定されたファイル形式のオプション"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`TILED <wms_tiled>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Working in *tiled mode*"
+msgstr "*tiledモード* での作業"
+
+#: ../../docs/server_manual/services/wms.rst:151
+msgid "VERSION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:153
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"このパラメータでは、使用するサービスのバージョンを指定することができます。``VERSION`` パラメータに指定できる値は以下の通りです:"
+
+#: ../../docs/server_manual/services/wms.rst:156
+msgid "``1.1.1``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:157
+msgid "``1.3.0``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:159
+msgid ""
+"According to the version number, slight differences have to be expected as "
+"explained later for the next parameters:"
+msgstr "バージョン番号によって、次のパラメータで説明するように、若干の違いがあることが予想されます:"
+
+#: ../../docs/server_manual/services/wms.rst:162
+msgid "``CRS`` / ``SRS``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:163
+msgid "``BBOX``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:169
+msgid "LAYERS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:171
+msgid ""
+"This parameter allows to specify the layers to display on the map. Names "
+"have to be separated by a comma."
+msgstr "マップ上に表示するレイヤーを指定するパラメータです。名前はカンマで区切る必要があります。"
+
+#: ../../docs/server_manual/services/wms.rst:174
+msgid "In addition, QGIS Server introduced some options to select layers by:"
+msgstr "さらに、QGIS Serverでは、レイヤを選択するためのオプションがいくつか導入されています:"
+
+#: ../../docs/server_manual/services/wms.rst:176
+msgid "a :ref:`short name <services_basics_short_name>`"
+msgstr ":ref:`短い名前 <services_basics_short_name>`"
+
+#: ../../docs/server_manual/services/wms.rst:177
+msgid "the layer id"
+msgstr "レイヤid"
+
+#: ../../docs/server_manual/services/wms.rst:179
+msgid ""
+"The project option allowing to select layers by their id is in "
+":menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project --> "
+"Properties...` dialog. Check the :guilabel:`Use layer ids as names` checkbox"
+" to activate this option."
+msgstr ""
+"レイヤIDで選択できるようにするプロジェクトオプションは、 :menuselection:`プロジェクト --> プロパティ...` ダイアログの "
+":menuselection:`QGISサーバー --> WMS` タブにあります。このオプションを有効にするには、 "
+":guilabel:`レイヤIDを名前に使う` チェックボックスをチェックします。"
+
+#: ../../docs/server_manual/services/wms.rst:196
+msgid "STYLES"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:198
+msgid ""
+"This parameter can be used to specify a layer's style for the rendering "
+"step. Styles have to be separated by a comma. The name of the default style "
+"is ``default``."
+msgstr ""
+"このパラメータは、レンダリングステップのレイヤのスタイルを指定するために使用されます。スタイルはカンマで区切る必要があります。デフォルトのスタイル名は "
+"``default`` です。"
+
+#: ../../docs/server_manual/services/wms.rst:207
+msgid "SRS / CRS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:209
+msgid ""
+"This parameter allows to indicate the map output Spatial Reference System in"
+" WMS **1.1.1** and has to be formed like ``EPSG:XXXX``. Note that ``CRS`` is"
+" also supported if current version is **1.1.1**."
+msgstr ""
+"このパラメータは、WMS **1.1.1** におけるマップ出力の空間参照系を示すもので、``EPSG:XXXX`` "
+"のような形式で指定する必要があります。なお、現在のバージョンが **1.1.1** の場合は ``CRS`` もサポートされます。"
+
+#: ../../docs/server_manual/services/wms.rst:213
+msgid ""
+"For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also "
+"supported."
+msgstr "WMS **1.3.0** では、``CRS`` パラメータが望ましいですが、``SRS`` もサポートされています。"
+
+#: ../../docs/server_manual/services/wms.rst:216
+msgid ""
+"Note that if both ``CRS`` and ``SRS`` parameters are indicated in the "
+"request, then it's the current version indicated in ``VERSION`` parameter "
+"which is decisive."
+msgstr ""
+"もし ``CRS`` と ``SRS`` の両方のパラメータがリクエストに含まれていた場合、 ``VERSION`` "
+"パラメータで示される現在のバージョンが決定的に重要であることに注意してください。"
+
+#: ../../docs/server_manual/services/wms.rst:220
+msgid ""
+"In the next case, the ``SRS`` parameter is kept whatever the ``VERSION`` "
+"parameter because ``CRS`` is not indicated:"
+msgstr ""
+"次のケースでは、``CRS`` が指示されていないため、``SRS`` パラメータは ``VERSION`` パラメータが何であろうと保持されます:"
+
+#: ../../docs/server_manual/services/wms.rst:232
+msgid ""
+"In the next case, the ``SRS`` parameter is kept instead of ``CRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr "次のケースでは、``VERSION`` パラメータのため、``CRS`` の代わりに``SRS``パラメータが保持されます:"
+
+#: ../../docs/server_manual/services/wms.rst:245
+msgid ""
+"In the next case, the ``CRS`` parameter is kept instead of ``SRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr "次のケースでは、``VERSION`` パラメータのため、``SRS`` の代わりに ``CRS`` パラメータが保持されます："
+
+#: ../../docs/server_manual/services/wms.rst:262
+#: ../../docs/server_manual/services/wms.rst:855
+msgid "BBOX"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:264
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr "このパラメータを使用すると、現在のCRSに従った単位でマップの範囲を指定することができます。座標はカンマで区切る必要があります。"
+
+#: ../../docs/server_manual/services/wms.rst:267
+msgid ""
+"The ``BBOX`` parameter is formed like ``min_a,min_b,max_a,max_b`` but ``a`` "
+"and ``b`` axis definition is different according to the current ``VERSION`` "
+"parameter:"
+msgstr ""
+"``BBOX`` パラメータは ``min_a,min_b,max_a,max_b`` のように形成されますが、``a`` と ``b`` "
+"の軸の定義は、現在の ``VERSION`` パラメータによって異なります:"
+
+#: ../../docs/server_manual/services/wms.rst:271
+msgid "in WMS **1.1.1**, the axis ordering is always east/north"
+msgstr "WMS **1.1.1** において、軸の順序は常に東／北です"
+
+#: ../../docs/server_manual/services/wms.rst:272
+msgid "in WMS **1.3.0**, the axis ordering depends on the CRS authority"
+msgstr "WMS **1.3.0** において、軸の順序はCRSの権限に依存します"
+
+#: ../../docs/server_manual/services/wms.rst:274
+msgid ""
+"For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the "
+"longitude (east) and ``b`` the latitude (north), leading to a request like:"
+msgstr ""
+"例えば ``EPSG:4326`` と WMS **1.1.1** の場合、``a`` は経度（東）、``b`` "
+"は緯度（北）で、次のようなリクエストとなります:"
+
+#: ../../docs/server_manual/services/wms.rst:287
+msgid ""
+"But in case of WMS **1.3.0**, the axis ordering defined in the EPSG database"
+" is north/east so ``a`` is the latitude and ``b`` the longitude:"
+msgstr ""
+"しかし、WMS **1.3.0** の場合、EPSGデータベースで定義されている軸の順序は北/東なので、``a`` は緯度、``b`` は経度です："
+
+#: ../../docs/server_manual/services/wms.rst:304
+#: ../../docs/server_manual/services/wms.rst:882
+msgid "WIDTH"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:306
+msgid ""
+"This parameter allows to specify the width in pixels of the output image."
+msgstr "出力画像の幅をピクセル単位で指定することができるパラメータです。"
+
+#: ../../docs/server_manual/services/wms.rst:313
+#: ../../docs/server_manual/services/wms.rst:902
+msgid "HEIGHT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:315
+msgid ""
+"This parameter allows to specify the height in pixels of the output image."
+msgstr "出力画像の高さをピクセル単位で指定することができるパラメータです。"
+
+#: ../../docs/server_manual/services/wms.rst:322
+#: ../../docs/server_manual/services/wms.rst:922
+#: ../../docs/server_manual/services/wms.rst:1706
+msgid "FORMAT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:324
+msgid ""
+"This parameter may be used to specify the format of map image. Available "
+"values are:"
+msgstr "このパラメータは、マップ画像の形式を指定するために使うことができます。使用可能な値は次の通りです:"
+
+#: ../../docs/server_manual/services/wms.rst:327
+#: ../../docs/server_manual/services/wms.rst:1712
+msgid "``jpg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:328
+#: ../../docs/server_manual/services/wms.rst:1713
+msgid "``jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:329
+#: ../../docs/server_manual/services/wms.rst:927
+#: ../../docs/server_manual/services/wms.rst:1714
+msgid "``image/jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:330
+#: ../../docs/server_manual/services/wms.rst:928
+#: ../../docs/server_manual/services/wms.rst:1711
+msgid "``image/png``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:331
+msgid "``image/png; mode=1bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:332
+msgid "``image/png; mode=8bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:333
+msgid "``image/png; mode=16bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:334
+msgid "``image/webp``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:335
+msgid ""
+"``application/dxf``: only layers that have read access in the WFS service "
+"are exported in the DXF format"
+msgstr "``application/dxf``: WFSサービスで読み取り権限を持つレイヤーのみがDXF形式でエクスポートされます"
+
+#: ../../docs/server_manual/services/wms.rst:357
+msgid "TRANSPARENT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:359
+msgid ""
+"This boolean parameter can be used to specify the background transparency. "
+"Available values are (not case sensitive):"
+msgstr "この ブール型パラメータを使って、背景の不透明度を指定することができます。使用可能な値は以下の通りです（大文字と小文字は区別されません）:"
+
+#: ../../docs/server_manual/services/wms.rst:363
+#: ../../docs/server_manual/services/wms.rst:775
+#: ../../docs/server_manual/services/wms.rst:789
+#: ../../docs/server_manual/services/wms.rst:991
+#: ../../docs/server_manual/services/wms.rst:1280
+#: ../../docs/server_manual/services/wms.rst:1336
+#: ../../docs/server_manual/services/wms.rst:1410
+#: ../../docs/server_manual/services/wms.rst:1466
+msgid "``TRUE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:364
+#: ../../docs/server_manual/services/wms.rst:776
+#: ../../docs/server_manual/services/wms.rst:790
+#: ../../docs/server_manual/services/wms.rst:992
+#: ../../docs/server_manual/services/wms.rst:1253
+#: ../../docs/server_manual/services/wms.rst:1281
+#: ../../docs/server_manual/services/wms.rst:1337
+#: ../../docs/server_manual/services/wms.rst:1411
+#: ../../docs/server_manual/services/wms.rst:1467
+msgid "``FALSE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:366
+msgid ""
+"However, this parameter is ignored if the format of the image indicated with"
+" ``FORMAT`` is different from PNG."
+msgstr "ただし、``FORMAT`` で示される画像の形式がPNGと異なる場合、このパラメータは無視されます。"
+
+#: ../../docs/server_manual/services/wms.rst:373
+msgid "BGCOLOR"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:375
+msgid ""
+"This parameter allows to indicate a background color for the map image. "
+"However it cannot be combined with ``TRANSPARENT`` parameter in case of PNG "
+"images (transparency takes priority). The colour may be literal or in "
+"hexadecimal notation."
+msgstr ""
+"このパラメータはマップ画像の背景色を指定することができます。ただし、PNG画像の場合は ``TRANSPARENT`` "
+"パラメータと組み合わせることができません（透明度が優先されます）。色はリテラルでも16進数でもかまいません。"
+
+#: ../../docs/server_manual/services/wms.rst:380
+msgid "URL example with the literal notation:"
+msgstr "リテラル表記によるURLの例:"
+
+#: ../../docs/server_manual/services/wms.rst:391
+msgid "URL example with the hexadecimal notation:"
+msgstr "16進数表記によるURLの例:"
+
+#: ../../docs/server_manual/services/wms.rst:406
+msgid "DPI"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:408
+msgid "This parameter can be used to specify the requested output resolution."
+msgstr "このパラメータを使って、要求される出力分解能を指定することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:414
+msgid "IMAGE_QUALITY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:416
+msgid ""
+"This parameter is only used for JPEG images. By default, the JPEG "
+"compression is ``-1``."
+msgstr "このパラメータは、JPEG画像に対してのみ使用されます。デフォルトでは、JPEGの圧縮率は ``-1`` です。"
+
+#: ../../docs/server_manual/services/wms.rst:419
+msgid ""
+"You can change the default per QGIS project in the :menuselection:`OWS "
+"Server --> WMS capabilities` menu of the :menuselection:`Project --> "
+"Properties...` dialog. If you want to override it in a ``GetMap`` request "
+"you can do it using the ``IMAGE_QUALITY`` parameter."
+msgstr ""
+"QGISプロジェクトごとのデフォルトは、 :menuselection:`プロジェクト --> プロパティ...` ダイアログの "
+":menuselection:`OWS Server --> WMS capabilities` メニューで変更することができます。``GetMap``"
+" リクエストでオーバーライドしたい場合は、``IMAGE_QUALITY`` パラメータを使用することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:429
+msgid "OPACITIES"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:431
+msgid ""
+"Comma separated list of opacity values. Opacity can be set on layer or group"
+" level. Allowed values range from ``0`` (fully transparent) to ``255`` "
+"(fully opaque)."
+msgstr ""
+"不透明度の値をカンマで区切ったリストです。不透明度は、レイヤまたはグループレベルで設定することができます。設定可能な値は、``0`` （完全に透明）から"
+" ``255`` （完全に不透明）までの範囲です。"
+
+#: ../../docs/server_manual/services/wms.rst:454
+msgid "To the left ``OPACITIES=255,0`` and to the right ``OPACITIES=255,255``"
+msgstr "左は ``OPACITIES=255,0``、右は``OPACITIES=255,255``"
+
+#: ../../docs/server_manual/services/wms.rst:459
+msgid "FILTER"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:461
+msgid ""
+"A subset of layers can be selected with the ``FILTER`` parameter. The syntax"
+" is basically the same as for the QGIS subset string. However, there are "
+"some restrictions to avoid SQL injections into databases via QGIS Server. If"
+" a dangerous string is found in the parameter, QGIS Server will return the "
+"next error:"
+msgstr ""
+"``FILTER`` "
+"パラメータを使用すると、レイヤーのサブセットを選択することができます。構文は基本的にQGISのサブセット文字列と同じです。ただし、QGIS "
+"Serverを介したデータベースへのSQLインジェクションを避けるために、いくつかの制限があります。パラメータに危険な文字列が見つかった場合、QGIS "
+"Serverは次のエラーを返します："
+
+#: ../../docs/server_manual/services/wms.rst:497
+msgid "Server response to a GetMap request with FILTER parameter"
+msgstr "FILTERパラメータを指定したGetMapリクエストに対するサーバーの応答"
+
+#: ../../docs/server_manual/services/wms.rst:500
+msgid ""
+"In this example, the same filter ``\"name\" = 'France'`` is applied to "
+"layers ``countries`` and ``countries_shapeburst``, while the filter "
+"``\"name\" = 'Paris'`` is only applied to ``places``."
+msgstr ""
+"この例では、同じフィルター ``\"name\" = 'France'`` がレイヤ ``countries`` と "
+"``countries_shapeburst`` に適用され、フィルター ``\"name\" = 'Paris'`` が ``places`` "
+"にのみ適用されています。"
+
+#: ../../docs/server_manual/services/wms.rst:506
+msgid ""
+"It is possible to make attribute searches via GetFeatureInfo and omit the "
+"X/Y parameter if a FILTER is there. QGIS Server then returns info about the "
+"matching features and generates a combined bounding box in the XML output."
+msgstr ""
+"FILTERがある場合は、GetFeatureInfoで属性検索を行い、X/Yパラメータを省略することが可能です。QGIS "
+"Serverは、マッチした地物の情報を返し、XML出力に結合バウンディングボックスを生成します。"
+
+#: ../../docs/server_manual/services/wms.rst:515
+msgid "SELECTION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:517
+msgid ""
+"The ``SELECTION`` parameter can highlight features from one or more layers. "
+"Vector features can be selected by passing comma separated lists with "
+"feature ids."
+msgstr ""
+"``SELECTION`` "
+"パラメータは、1つまたは複数のレイヤから地物をハイライトすることができます。ベクタ地物は、地物IDをカンマで区切ったリストを渡すことで選択することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:531
+msgid ""
+"The following image presents the response from a GetMap request using the "
+"``SELECTION`` option e.g. "
+"``http://myserver.com/...&SELECTION=countries:171,65``."
+msgstr ""
+"次の画像は、``SELECTION`` オプションを使ったGetMapリクエストの応答を示しています　例 "
+"``http://myserver.com/...&SELECTION=countries:171,65``。"
+
+#: ../../docs/server_manual/services/wms.rst:535
+msgid ""
+"As those features id's correspond in the source dataset to **France** and "
+"**Romania** they're highlighted in yellow."
+msgstr ""
+"これらの地物IDは、ソースデータセットでは **France** と **Romania** に対応しているので、黄色でハイライトされています。"
+
+#: ../../docs/server_manual/services/wms.rst:543
+msgid "Server response to a GetMap request with SELECTION parameter"
+msgstr "SELECTIONパラメーターを指定したGetMapリクエストに対するサーバーの応答"
+
+#: ../../docs/server_manual/services/wms.rst:548
+msgid "FORMAT_OPTIONS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:550
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/dxf``. A list of key:value pairs separated by "
+"semicolon:"
+msgstr ""
+"このパラメータは、選択された形式に関するオプションを指定するために使うことができます。``FORMAT=application/dxf`` "
+"の場合のみです。セミコロンで区切られたキー:値のペアのリストです："
+
+#: ../../docs/server_manual/services/wms.rst:554
+msgid ""
+"SCALE: to be used for symbology rules, filters and styles (not actual "
+"scaling of the data - data remains in the original scale)."
+msgstr ""
+"SCALE: シンボロジルール、フィルター、スタイルに使用されます（データの実際のスケーリングではありません - データは元の縮尺のままです）。"
+
+#: ../../docs/server_manual/services/wms.rst:556
+msgid ""
+"MODE: corresponds to the export options offered in the QGIS Desktop DXF "
+"export dialog. Possible values are ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` and"
+" ``SYMBOLLAYERSYMBOLOGY``."
+msgstr ""
+"MODE: QGIS DesktopのDXFエクスポートダイアログで提供されるエクスポートオプションに対応します。可能な値は "
+"``NOSYMBOLOGY``、``FEATURESYMBOLOGY``、``SYMBOLLAYERSYMBOLOGY`` です。"
+
+#: ../../docs/server_manual/services/wms.rst:559
+msgid ""
+"LAYERSATTRIBUTES: specify a field that contains values for DXF layer names -"
+" if not specified, the original QGIS layer names are used."
+msgstr ""
+"LAYERSATTRIBUTES: DXFレイヤー名の値を含むフィールドを指定します - 指定しない場合、元のQGISレイヤー名が使用されます。"
+
+#: ../../docs/server_manual/services/wms.rst:561
+msgid ""
+"USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will be used as "
+"layer name."
+msgstr "USE_TITLE_AS_LAYERNAME: 有効にすると、レイヤのタイトルがレイヤ名として使用されるようになります。"
+
+#: ../../docs/server_manual/services/wms.rst:563
+msgid ""
+"CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1`` "
+"check the QGIS desktop DXF export dialog for valid values."
+msgstr ""
+"CODEC: "
+"エンコードに使用するコーデックを指定します。デフォルトはISO-8859-1です。有効な値については、QGISデスクトップのDXFエクスポートダイアログを確認してください。"
+
+#: ../../docs/server_manual/services/wms.rst:565
+msgid "NO_MTEXT: Use TEXT instead of MTEXT for labels."
+msgstr "NO_MTEXT: ラベルに MTEXT の代わりに TEXT を使用します。"
+
+#: ../../docs/server_manual/services/wms.rst:566
+msgid "FORCE_2D: Force 2D output. This is required for polyline width."
+msgstr "FORCE_2D：2D出力を強制します。ポリライン幅に必要です。"
+
+#: ../../docs/server_manual/services/wms.rst:571
+msgid "TILED"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:573
+msgid ""
+"For performance reasons, QGIS Server can be used in tiled mode. In this "
+"mode, the client requests several small fixed size tiles, and assembles them"
+" to form the whole map. Doing this, symbols at or near the boundary between "
+"two tiles may appeared cut, because they are only present in one of the "
+"tile."
+msgstr ""
+"パフォーマンス上の理由から、QGIS "
+"Serverはタイルモードで使用することができます。このモードでは、クライアントが複数の小さな固定サイズのタイルを要求し、それらを組み立ててマップ全体を形成します。この場合、2つのタイルの境界付近のシンボルは、どちらかのタイルにしか存在しないため、カットされて表示されることがあります。"
+
+#: ../../docs/server_manual/services/wms.rst:579
+msgid ""
+"Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in "
+"*tiled* mode, and to apply the *Tile buffer* configured in the QGIS project "
+"(see :ref:`Creatingwmsfromproject`)."
+msgstr ""
+"``TILED`` パラメータを ``TRUE`` に設定すると、QGIS Serverに *タイル* モードで動作し、QGISプロジェクトで設定された"
+" *タイルバッファ* を適用するように指示します（ :ref:`Creatingwmsfromproject` を参照）。"
+
+#: ../../docs/server_manual/services/wms.rst:583
+msgid ""
+"When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured in "
+"the QGIS project, features outside the tile extent are drawn to avoid cut "
+"symbols at tile boundaries."
+msgstr ""
+"``TILED`` が ``TRUE`` で、かつ QGIS "
+"プロジェクトで非ゼロのタイルバッファが設定されている場合、タイル境界でのカットシンボルを避けるために、タイル範囲外の地物が描画されます。"
+
+#: ../../docs/server_manual/services/wms.rst:587
+msgid "``TILED`` defaults to ``FALSE``."
+msgstr "``TILED`` のデフォルトは ``FALSE`` です。"
+
+#: ../../docs/server_manual/services/wms.rst:593
+msgid "GetFeatureInfo"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:595
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 および 1.3.0 仕様に従った **GetFeatureInfo** リクエストの標準パラメータ:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr "リクエストの名称 (**GetFeatureInfo**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`QUERY_LAYERS <wms_querylayers>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to query"
+msgstr "クエリするレイヤ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display (identical to `QUERY_LAYERS`)"
+msgstr "表示するレイヤ（`QUERY_LAYERS` と同じ）"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`INFO_FORMAT <wms_infoformat>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Output format"
+msgstr "出力形式"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FEATURE_COUNT <wms_featurecount>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Maximum number of features to return"
+msgstr "返す地物の最大数"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`I <wms_i>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel column of the point to query"
+msgstr "クエリする点のピクセル列"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`X <wms_x>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `I` parameter, but in WMS 1.1.1"
+msgstr "`I` パラメータと同じだが、WMS 1.1.1 の場合"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`J <wms_j>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel row of the point to query"
+msgstr "クエリする点のピクセル行"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`Y <wms_y>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `J` parameter, but in WMS 1.1.1"
+msgstr "`J` パラメータと同じだが、WMS 1.1.1 の場合"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "WMS_PRECISION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"The precision (number of digits) to be used when returning geometry (see "
+":ref:`how to add geometry to feature response "
+"<addGeometryToFeatureResponse>`). The default value is ``-1`` meaning that "
+"the precision defined in the project is used."
+msgstr ""
+"ジオメトリを返す際に使用する精度（桁数）（ :ref:`how to add geometry to feature response "
+"<addGeometryToFeatureResponse>` を参照してください）。デフォルト値は ``-1`` "
+"で、プロジェクトで定義された精度が使用されることを意味します。"
+
+#: ../../docs/server_manual/services/wms.rst:624
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr "QGIS Serverは、標準的なものに加えて、以下の追加パラメータをサポートしています:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FI_POINT_TOLERANCE <wms_fipointtolerance>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for point layers"
+msgstr "ポイントレイヤに対するピクセル単位の許容範囲"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for line layers"
+msgstr "ラインレイヤに対するピクセル単位の許容範囲"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FI_POLYGON_TOLERANCE <wms_fipolygontolerance>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for polygon layers"
+msgstr "ポリゴンレイヤに対するピクセル単位の許容範囲"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FILTER_GEOM <wms_filtergeom>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Geometry filtering"
+msgstr "ジオメトリのフィルタリング"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WITH_MAPTIP <wms_withmaptip>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add map tips to the output"
+msgstr "出力にマップチップを追加します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WITH_GEOMETRY <wms_withgeometry>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add geometry to the output"
+msgstr "出力にジオメトリを追加します"
+
+#: ../../docs/server_manual/services/wms.rst:666
+msgid "INFO_FORMAT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:668
+msgid ""
+"This parameter may be used to specify the format of the result. Available "
+"values are:"
+msgstr "このパラメータは結果のフォーマットを指定するために使用されます。利用可能な値は以下のとおりです："
+
+#: ../../docs/server_manual/services/wms.rst:671
+msgid "``text/xml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:672
+msgid "``text/html``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:673
+msgid "``text/plain``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:674
+msgid "``application/vnd.ogc.gml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:675
+#: ../../docs/server_manual/services/wms.rst:929
+msgid "``application/json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:680
+msgid "QUERY_LAYERS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:682
+msgid ""
+"This parameter specifies the layers to display on the map. Names are "
+"separated by a comma."
+msgstr "このパラメータは、マップ上に表示するレイヤを指定します。名前はカンマで区切られます。"
+
+#: ../../docs/server_manual/services/wms.rst:685
+msgid "In addition, QGIS Server introduces options to select layers by:"
+msgstr "さらに、QGIS Serverでは、レイヤーを選択する以下のオプションを導入しています:"
+
+#: ../../docs/server_manual/services/wms.rst:687
+msgid "short name"
+msgstr "短い名前"
+
+#: ../../docs/server_manual/services/wms.rst:688
+msgid "layer id"
+msgstr "レイヤid"
+
+#: ../../docs/server_manual/services/wms.rst:690
+msgid ""
+"See the ``LAYERS`` parameter defined in :ref:`GetMap <wms_layers>` for more "
+"information."
+msgstr "詳しくは :ref:`GetMap <wms_layers>` で定義されている ``LAYERS`` パラメータを参照してください。"
+
+#: ../../docs/server_manual/services/wms.rst:696
+msgid "FEATURE_COUNT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:698
+msgid ""
+"This parameter specifies the maximum number of features per layer to return."
+" For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
+"``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from layer1 "
+"will be returned. Likewise a maximum of 3 features from layer2 will be "
+"returned."
+msgstr ""
+"このパラメータは、レイヤーごとに返す地物の最大数を指定します。例えば、 ``QUERY_LAYERS`` が ``layer1,layer2`` で、 "
+"``FEATURE_COUNT`` が ``3`` "
+"の場合、レイヤ1から最大3つの地物が返されることになります。同様に、レイヤ2からは最大3つの地物が返されます。"
+
+#: ../../docs/server_manual/services/wms.rst:705
+msgid "By default, only 1 feature per layer is returned."
+msgstr "デフォルトでは１つの地物だけが返されます。"
+
+#: ../../docs/server_manual/services/wms.rst:710
+msgid "I"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:712
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel column"
+" of the query point."
+msgstr "WMS 1.3.0で定義されたパラメータで、クエリポイントのピクセル列を指定することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:718
+msgid "X"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:720
+msgid "Same parameter as ``I``, but defined in WMS 1.1.1."
+msgstr "``I`` と同じパラメータですが、WMS 1.1.1 で定義されています。"
+
+#: ../../docs/server_manual/services/wms.rst:725
+msgid "J"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:727
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel row of"
+" the query point."
+msgstr "WMS 1.3.0で定義されたパラメータで、クエリポイントのピクセル行を指定することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:733
+msgid "Y"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:735
+msgid "Same parameter as ``J``, but defined in WMS 1.1.1."
+msgstr "``J`` と同じパラメータですが、WMS 1.1.1 で定義されています。"
+
+#: ../../docs/server_manual/services/wms.rst:740
+msgid "FI_POINT_TOLERANCE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:742
+msgid "This parameter specifies the tolerance in pixels for point layers."
+msgstr "このパラメータではラインレイヤでの許容誤差（ピクセル）を指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:747
+msgid "FI_LINE_TOLERANCE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:749
+msgid "This parameter specifies the tolerance in pixels for line layers."
+msgstr "ラインレイヤの許容範囲をピクセル単位で指定するパラメータです。"
+
+#: ../../docs/server_manual/services/wms.rst:754
+msgid "FI_POLYGON_TOLERANCE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:756
+msgid "This parameter specifies the tolerance in pixels for polygon layers."
+msgstr "ポリゴンレイヤの許容範囲をピクセル単位で指定するパラメータです。"
+
+#: ../../docs/server_manual/services/wms.rst:761
+msgid "FILTER_GEOM"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:763
+msgid ""
+"This parameter specifies a WKT geometry with which features have to "
+"intersect."
+msgstr "このパラメータは、地物が交差しなければならないWKTジオメトリを指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:769
+msgid "WITH_MAPTIP"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:771
+msgid "This parameter specifies whether to add map tips to the output."
+msgstr "このパラメータは、出力にマップチップを加えるかどうかを指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:773
+#: ../../docs/server_manual/services/wms.rst:787
+#: ../../docs/server_manual/services/wms.rst:1250
+msgid "Available values are (not case sensitive):"
+msgstr "利用可能な値は次の通りです（大文字と小文字は区別されません）:"
+
+#: ../../docs/server_manual/services/wms.rst:781
+msgid "WITH_GEOMETRY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:783
+msgid ""
+"This parameter specifies whether to add geometries to the output. To use "
+"this feature you must first enable the :guilabel:`Add geometry to feature "
+"response` option in the QGIS project. See :ref:`Configure your project "
+"<Creatingwmsfromproject>`."
+msgstr ""
+"このパラメータは、出力にジオメトリを追加するかどうかを指定します。この機能を使用するには、まずQGISプロジェクトで :guilabel:`Add "
+"geometry to feature response` オプションを有効にする必要があります。:ref:`Configure your "
+"project <Creatingwmsfromproject>` を参照してください。"
+
+#: ../../docs/server_manual/services/wms.rst:797
+msgid "GetLegendGraphic"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:799
+msgid ""
+"Standard parameters for the **GetLegendGraphic** request according to the "
+"OGC WMS 1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1および1.3.0仕様に従った **GetLegendGraphic** リクエストの標準パラメータ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetLegendGraphic**)"
+msgstr "リクエストの名称 (**GetLegendGraphic**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BBOX <wms_getlegendgraphic_bbox>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WIDTH <wms_getlegendgraphic_width>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`HEIGHT <wms_getlegendgraphic_height>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getlegendgraphic_format>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Legend format"
+msgstr "凡例の形式"
+
+#: ../../docs/server_manual/services/wms.rst:818
+msgid ""
+"In addition to the standard ones, QGIS Server supports extra parameters to "
+"change the size of the legend elements or the font properties for layer "
+"titles and item labels:"
+msgstr ""
+"QGIS "
+"Serverでは、標準的なパラメータに加えて、凡例要素のサイズやレイヤタイトルやアイテムラベルのフォントプロパティを変更するための追加パラメータをサポートしています："
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRCWIDTH <wms_getlegendgraphic_srcwidth>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map width"
+msgstr "マップの幅"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRCHEIGHT <wms_getlegendgraphic_srcheight>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map height"
+msgstr "マップの高さ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphic_showfeaturecount>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add feature count of features"
+msgstr "地物の地物数を追加します"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`RULE <wms_getlegendgraphic_rule>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Rule symbol to render"
+msgstr "ルールシンボルをレンダリング"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`RULELABEL <wms_getlegendgraphic_rulelabel>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item labels rendering"
+msgstr "アイテムラベルをレンダリング"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BOXSPACE <wms_getlegendgraphic_boxspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Space between legend frame and content (mm)"
+msgstr "凡例フレームと内容の間隔 (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERSPACE <wms_getlegendgraphic_layerspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layers (mm)"
+msgstr "レイヤの垂直間隔 (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERTITLESPACE <wms_getlegendgraphic_layertitlespace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layer title and items (mm)"
+msgstr "レイヤタイトルとアイテムの垂直間隔 (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLSPACE <wms_getlegendgraphic_symbolspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between symbol and items (mm)"
+msgstr "シンボルとアイテムの垂直間隔 (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ICONLABELSPACE <wms_getlegendgraphic-iconlabelspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Horizontal space between symbol and label (mm)"
+msgstr "シンボルとラベルの水平間隔 (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLWIDTH <wms_getlegendgraphic_symbolwidth>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the symbol preview (mm)"
+msgstr "シンボルプレビューの幅 (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLHEIGHT <wms_getlegendgraphic_symbolheight>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the symbol preview (mm)"
+msgstr "シンボルプレビューの高さ (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERTITLE <wms_getlegendgraphic_layertitle>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title rendering"
+msgstr "レイヤタイトルをレンダリング"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer font family"
+msgstr "レイヤのフォントファミリー"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title bold rendering"
+msgstr "レイヤタイトルを太字でレンダリング"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTSIZE <wms_getlegendgraphic_layerfontsize>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title font size (pt)"
+msgstr "レイヤタイトルのフォントサイズ (pt)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTITALIC <wms_getlegendgraphic_layerfontitalic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title italic rendering"
+msgstr "レイヤタイトルを斜体でレンダリング"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTCOLOR <wms_getlegendgraphic_layerfontcolor>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title color"
+msgstr "レイヤタイトルの色"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTFAMILY <wms_getlegendgraphic_itemfontfamily>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item font family"
+msgstr "アイテムのフォントファミリー"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTBOLD <wms_getlegendgraphic_itemfontbold>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label bold rendering"
+msgstr "アイテムラベルを太字でレンダリング"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label font size (pt)"
+msgstr "アイテムラベルのフォントサイズ (pt)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label italic rendering"
+msgstr "アイテムラベルを斜体でレンダリング"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label color"
+msgstr "アイテムラベルの色"
+
+#: ../../docs/server_manual/services/wms.rst:857
+msgid ""
+"This parameter can be used to specify the geographical area for which the "
+"legend should be built (its format is described :ref:`here <wms_bbox>`) but "
+"cannot be combined with the ``RULE`` parameter. The ``SRS``/``CRS`` "
+"parameter becomes mandatory when using the ``BBOX`` parameter."
+msgstr ""
+"このパラメータは凡例が作成される地理的な区域を指定するために使用することができます（その形式の説明は :ref:`ここ <wms_bbox>` "
+"にあります）が、 ``RULE`` パラメータと組み合わせることはできません。``SRS``/``CRS`` パラメータは ``BBOX`` "
+"パラメータを使用する際に必須となります。"
+
+#: ../../docs/server_manual/services/wms.rst:875
+msgid ""
+"When the ``BBOX`` parameter is defined, the legend is referred to as a "
+"*content based legend*."
+msgstr "``BBOX`` パラメータが定義されている場合、凡例は *内容型の凡例* として参照されます。"
+
+#: ../../docs/server_manual/services/wms.rst:884
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the width in "
+"pixels of the output image."
+msgstr ""
+"このパラメータはデフォルトでは使用されませんが、 ``RULE`` "
+"パラメータが設定された場合には必須となります。この場合、出力画像の幅をピクセル単位で指定することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:904
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the height in "
+"pixels of the output image."
+msgstr ""
+"このパラメータはデフォルトでは使用されませんが、 ``RULE`` "
+"パラメータが設定されている場合は必須となります。この場合、出力画像の高さをピクセル単位で指定することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:924
+msgid ""
+"This parameter may be used to specify the format of legend image. Available "
+"values are:"
+msgstr "このパラメータを使用して、凡例画像の形式を指定することができます。使用可能な値は以下の通りです:"
+
+#: ../../docs/server_manual/services/wms.rst:931
+msgid ""
+"For JSON, symbols are encoded with Base64 and most other options related to "
+"layout or fonts are not taken into account because the legend must be built "
+"on the client side. The ``RULE`` parameter cannot be combined with this "
+"format."
+msgstr ""
+"JSONの場合、シンボルはBase64でエンコードされ、レイアウトやフォントに関するその他のオプションは、凡例がクライアント側で構築される必要があるため、考慮されません。``RULE``"
+" パラメータはこの形式と組み合わせることができません。"
+
+#: ../../docs/server_manual/services/wms.rst:935
+msgid "URL example with the corresponding JSON output:"
+msgstr "URLの例とそれに対応するJSONの出力:"
+
+#: ../../docs/server_manual/services/wms.rst:945
+msgid "And the corresponding JSON output:"
+msgstr "そして、それに対応するJSONの出力:"
+
+#: ../../docs/server_manual/services/wms.rst:964
+msgid "SRCWIDTH"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:966
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this "
+"case, the ``SRCWIDTH`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``WIDTH`` parameter while the ``WIDTH`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+"このパラメータは ``RULE`` パラメータが設定されているときに定義することができます。この場合、``SRCWIDTH`` の値は "
+"``WIDTH`` パラメータとして基となる ``GetMap`` リクエストに転送され、``WIDTH`` パラメータは "
+"``GetLegendGraphics`` の画像凡例の大きさに使われます。"
+
+#: ../../docs/server_manual/services/wms.rst:975
+msgid "SRCHEIGHT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:977
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this "
+"case, the ``SRCHEIGHT`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+"このパラメータは ``RULE`` パラメータが設定されているときに定義することができます。この場合、``SRCHEIGHT`` の値は "
+"``HEIGHT`` パラメータとして基となる ``GetMap`` リクエストに転送され、``HEIGHT`` パラメータは "
+"``GetLegendGraphics`` の画像凡例の大きさに使われます。"
+
+#: ../../docs/server_manual/services/wms.rst:986
+msgid "SHOWFEATURECOUNT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:988
+msgid ""
+"This parameter can be used to activate feature count in the legend. "
+"Available values are (not case sensitive):"
+msgstr ""
+"このパラメータは、凡例で地物カウントを有効にするために使用することができます。使用可能な値は以下の通りです（大文字と小文字は区別されません）:"
+
+#: ../../docs/server_manual/services/wms.rst:994
+#: ../../docs/server_manual/services/wms.rst:1680
+msgid "For example:"
+msgstr "例:"
+
+#: ../../docs/server_manual/services/wms.rst:1003
+msgid "RULE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1005
+msgid ""
+"This parameter is available on layers with :guilabel:`Rule-based` rendering "
+"and allows to build a legend with only the named rule symbol. It cannot be "
+"combined with ``BBOX`` parameter nor the JSON format."
+msgstr ""
+"このパラメータは :guilabel:`Rule-based` "
+"レンダリングを持つレイヤで使用でき、指定したルールシンボルだけで凡例を作成することができるようになります。このパラメータは ``BBOX`` "
+"パラメータや JSON形式と組み合わせることはできません。"
+
+#: ../../docs/server_manual/services/wms.rst:1023
+msgid "RULELABEL"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1025
+msgid ""
+"This parameter allows to control the item label rendering. Available values "
+"are (not case sensitive):"
+msgstr "このパラメータは、アイテムラベルの描画を制御することができます。使用可能な値は次の通りです（大文字と小文字は区別されません）:"
+
+#: ../../docs/server_manual/services/wms.rst:1028
+msgid "``TRUE``: display item label"
+msgstr "``TRUE``: アイテムラベルを表示します"
+
+#: ../../docs/server_manual/services/wms.rst:1029
+msgid "``FALSE``: hide item label"
+msgstr "``FALSE``: アイテムラベルを隠します"
+
+#: ../../docs/server_manual/services/wms.rst:1030
+msgid ""
+"``AUTO``: hide item label for layers with :guilabel:`Single symbol` "
+"rendering"
+msgstr "``AUTO``: :guilabel:`単一のシンボル` レンダリングのレイヤのアイテムラベルを隠します"
+
+#: ../../docs/server_manual/services/wms.rst:1049
+msgid "Legend rendering without label for single symbol layers"
+msgstr "単一シンボルのレイヤにはラベルを使わずに凡例をレンダリング"
+
+#: ../../docs/server_manual/services/wms.rst:1056
+msgid "BOXSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1058
+msgid ""
+"This parameter allows to specify the space between legend frame and content "
+"in millimeters. By default, the space value is ``2`` mm."
+msgstr "このパラメータでは、凡例フレームと内容の間隔をミリメートル単位で指定することができます。デフォルトの間隔は ``2`` mm です。"
+
+#: ../../docs/server_manual/services/wms.rst:1077
+msgid "To the left ``BOXSPACE=0`` and to the right ``BOXSPACE=15``"
+msgstr "左は ``BOXSPACE=0``、右は ``BOXSPACE=15``"
+
+#: ../../docs/server_manual/services/wms.rst:1084
+msgid "LAYERSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1086
+msgid ""
+"This parameter allows to specify the vertical space between layers in "
+"millimeters. By default, the space value is ``3`` mm."
+msgstr "このパラメータでは、レイヤ間の垂直間隔をミリメートル単位で指定することができます。デフォルトの間隔値は、``3`` mmです。"
+
+#: ../../docs/server_manual/services/wms.rst:1105
+msgid "To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``"
+msgstr "左は ``LAYERSPACE=0``、右は ``LAYERSPACE=10``"
+
+#: ../../docs/server_manual/services/wms.rst:1111
+msgid "LAYERTITLESPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1113
+msgid ""
+"This parameter allows to specify the vertical space between layer title and "
+"items following in millimeters. By default the space value is ``3`` mm."
+msgstr ""
+"このパラメータでは、レイヤのタイトルとそれに続くアイテムの間の垂直間隔をミリメートル単位で指定することができます。デフォルトの間隔は ``3`` mm "
+"です。"
+
+#: ../../docs/server_manual/services/wms.rst:1132
+msgid ""
+"To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``"
+msgstr "左は ``LAYERTITLESPACE=0``、右は ``LAYERTITLESPACE=10``"
+
+#: ../../docs/server_manual/services/wms.rst:1138
+msgid "SYMBOLSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1140
+msgid ""
+"This parameter allows to specify the vertical space between symbol and item "
+"following in millimeters. By default the space value is ``2`` mm."
+msgstr "このパラメータでは、シンボルとそれに続くアイテムの間の垂直間隔をミリメートル単位で指定します。デフォルトの間隔は ``2`` mm です。"
+
+#: ../../docs/server_manual/services/wms.rst:1159
+msgid "To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``"
+msgstr "左は ``SYMBOLSPACE=0``、右は ``SYMBOLSPACE=5``"
+
+#: ../../docs/server_manual/services/wms.rst:1165
+msgid "ICONLABELSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1167
+msgid ""
+"This parameter allows to specify the horizontal space between symbol and "
+"label text in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+"このパラメータでは、シンボルとラベルテキストの間の水平間隔をミリメートル単位で指定することができます。デフォルトの間隔は ``2`` mm です。"
+
+#: ../../docs/server_manual/services/wms.rst:1186
+msgid ""
+"To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``"
+msgstr "左は ``ICONLABELSPACE=0``、右は ``ICONLABELSPACE=10``"
+
+#: ../../docs/server_manual/services/wms.rst:1192
+msgid "SYMBOLWIDTH"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1194
+msgid ""
+"This parameter allows to specify the width of the symbol preview in "
+"millimeters. By default the width value is ``7`` mm."
+msgstr "このパラメータでは、シンボルプレビューの幅をミリメートル単位で指定することができます。デフォルトの幅は ``7`` mm です。"
+
+#: ../../docs/server_manual/services/wms.rst:1213
+msgid "To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``"
+msgstr "左は ``SYMBOLWIDTH=2``、右は ``SYMBOLWIDTH=20``"
+
+#: ../../docs/server_manual/services/wms.rst:1219
+msgid "SYMBOLHEIGHT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1221
+msgid ""
+"This parameter allows to specify the height of the symbol preview in "
+"millimeters. By default the height value is ``4`` mm."
+msgstr "このパラメータでは、シンボルプレビューの高さをミリメートル単位で指定することができます。デフォルトでは、高さは ``4`` mm です。"
+
+#: ../../docs/server_manual/services/wms.rst:1240
+msgid "To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``"
+msgstr "左は ``SYMBOLHEIGHT=2``、右は ``SYMBOLHEIGHT=6``"
+
+#: ../../docs/server_manual/services/wms.rst:1246
+msgid "LAYERTITLE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1248
+msgid "This parameter specifies whether to render layer title."
+msgstr "このパラメータは、レイヤのタイトルを描画するかどうかを指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:1252
+msgid "``TRUE`` (default value)"
+msgstr "``TRUE`` （デフォルト値）"
+
+#: ../../docs/server_manual/services/wms.rst:1259
+msgid "LAYERFONTFAMILY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1261
+msgid ""
+"This parameter specifies the font family to use for rendering layer title."
+msgstr "このパラメータは、レイヤタイトルの描画に使用するフォントファミリーを指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:1275
+msgid "LAYERFONTBOLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1277
+msgid ""
+"This parameter specifies whether the layer title is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr "このパラメータは、レイヤのタイトルを太字で描画するかどうかを指定します。使用可能な値は以下の通りです（大文字と小文字は区別されません）:"
+
+#: ../../docs/server_manual/services/wms.rst:1299
+msgid "Legend with ``LAYERFONTBOLD=TRUE``"
+msgstr "``LAYERFONTBOLD=TRUE`` の凡例"
+
+#: ../../docs/server_manual/services/wms.rst:1305
+msgid "LAYERFONTSIZE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1307
+#: ../../docs/server_manual/services/wms.rst:1437
+msgid ""
+"This parameter specifies the font size for rendering layer title in point."
+msgstr "このパラメータは、レイヤのタイトルを描画する際のフォントサイズをポイント単位で指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:1325
+msgid "Legend with ``LAYERFONTSIZE=20``"
+msgstr "``LAYERFONTSIZE=20`` の凡例"
+
+#: ../../docs/server_manual/services/wms.rst:1331
+msgid "LAYERFONTITALIC"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1333
+msgid ""
+"This parameter specifies whether the layer title is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr "このパラメータは、レイヤーのタイトルを斜体で描画するかどうかを指定します。使用可能な値は以下の通りです（大文字と小文字は区別されません）:"
+
+#: ../../docs/server_manual/services/wms.rst:1355
+msgid "Legend with ``LAYERFONTITALIC=TRUE``"
+msgstr "``LAYERFONTITALIC=TRUE`` の凡例"
+
+#: ../../docs/server_manual/services/wms.rst:1361
+msgid "LAYERFONTCOLOR"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1363
+msgid ""
+"This parameter specifies the layer title color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"このパラメータはレイヤタイトルの色を指定します。色はリテラル（``red``, ``green``, "
+"...）または16進数表記（``0xFF0000``, ``0x00FF00``, ...）で指定できます。"
+
+#: ../../docs/server_manual/services/wms.rst:1383
+msgid "Legend with ``LAYERFONTCOLOR=0x5f9930``"
+msgstr "``LAYERFONTCOLOR=0x5f9930`` の凡例"
+
+#: ../../docs/server_manual/services/wms.rst:1389
+msgid "ITEMFONTFAMILY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1391
+msgid ""
+"This parameter specifies the font family to use for rendering item label."
+msgstr "このパラメータは、アイテムラベルを描画するのに使うフォントファミリーを指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:1405
+msgid "ITEMFONTBOLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1407
+msgid ""
+"This parameter specifies whether the item label is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr "このパラメータは、アイテムラベルを太字で描画するかどうかを指定します。使用可能な値は次の通りです（大文字と小文字は区別されません）:"
+
+#: ../../docs/server_manual/services/wms.rst:1429
+msgid "Legend with ``ITEMFONTBOLD=TRUE``"
+msgstr "``ITEMFONTBOLD=TRUE`` の凡例"
+
+#: ../../docs/server_manual/services/wms.rst:1435
+msgid "ITEMFONTSIZE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1455
+msgid "Legend with ``ITEMFONTSIZE=30``"
+msgstr "``ITEMFONTSIZE=30`` の凡例"
+
+#: ../../docs/server_manual/services/wms.rst:1461
+msgid "ITEMFONTITALIC"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1463
+msgid ""
+"This parameter specifies whether the item label is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr "このパラメータは、アイテムラベルを斜体で描画するかどうかを指定します。利用可能な値は次の通りです（大文字と小文字は区別されません）:"
+
+#: ../../docs/server_manual/services/wms.rst:1485
+msgid "Legend with ``ITEMFONTITALIC=TRUE``"
+msgstr "``ITEMFONTITALIC=TRUE`` の凡例"
+
+#: ../../docs/server_manual/services/wms.rst:1491
+msgid "ITEMFONTCOLOR"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1493
+msgid ""
+"This parameter specifies the item label color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"このパラメータは、アイテムラベルの色を指定します。色はリテラル（``red``, ``green``, "
+"...）または16進数表記（``0xFF0000``, ``0x00FF00``, ...）で指定することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:1513
+msgid "Legend with ``ITEMFONTCOLOR=0x5f9930``"
+msgstr "``ITEMFONTCOLOR=0x5f9930`` の凡例"
+
+#: ../../docs/server_manual/services/wms.rst:1519
+msgid "GetStyle(s)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1521
+msgid ""
+"Standard parameters for the **GetStyle** (or **GetStyles**) request "
+"according to the OGC WMS 1.1.1 specifications:"
+msgstr "OGC WMS 1.1.1 仕様に準拠した **GetStyle** (または **GetStyles**) リクエストの標準パラメータ："
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetStyle** or **GetStyles**)"
+msgstr "リクエストの名称（**GetStyle** 又は **GetStyles**）"
+
+#: ../../docs/server_manual/services/wms.rst:1532
+msgid ""
+"The **GetStyle** request supports as well the following vendor parameters:"
+msgstr "**GetStyle** リクエストは、以下のベンダーパラメータもサポートしています:"
+
+#: ../../docs/server_manual/services/wms.rst:1553
+msgid "DescribeLayer"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1555
+msgid ""
+"Standard parameters for the **DescribeLayer** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 及び 1.3.0 仕様に従った **DescribeLayer** リクエストの標準パラメータ:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**DescribeLayer**)"
+msgstr "リクエストの名称 (**DescribeLayer**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to describe"
+msgstr "説明するレイヤ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD version"
+msgstr "SLDのバージョン"
+
+#: ../../docs/server_manual/services/wms.rst:1567
+msgid ""
+"The **DescribeLayer** request supports as well the following vendor "
+"parameters:"
+msgstr "**DescribeLayer** リクエストは次のベンダーパラメータもサポートしています:"
+
+#: ../../docs/server_manual/services/wms.rst:1586
+#: ../../docs/server_manual/services/wms.rst:1852
+msgid "The XML document looks like:"
+msgstr "XML文書は次のようになります:"
+
+#: ../../docs/server_manual/services/wms.rst:1612
+msgid "SLD_VERSION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1614
+msgid ""
+"This parameter allows to specify the version of SLD. Only the value "
+"``1.1.0`` is available."
+msgstr "このパラメータでは、SLDのバージョンを指定することができます。`値 `11.0`` のみが利用できます。"
+
+#: ../../docs/server_manual/services/wms.rst:1621
+msgid "GetPrint"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1623
+msgid ""
+"QGIS Server has the capability to create print layout output in pdf or pixel"
+" format. Print layout windows in the published project are used as "
+"templates. In the **GetPrint** request, the client has the possibility to "
+"specify parameters of the contained layout maps and labels."
+msgstr ""
+"QGISサーバには、PDFまたはピクセル形式のプリントレイアウト出力を作成する機能があります。公表されたプロジェクトでのプリントレイアウトがテンプレートとして使用されます。GETPRINT要求では、クライアントは含まれているレイアウト地図とラベルのパラメータを指定する可能性があります。"
+
+#: ../../docs/server_manual/services/wms.rst:1628
+msgid ""
+"The **GetPrint** request supports :ref:`redlining <wms_redlining>`, "
+":ref:`external WMS layers <wms_external>` as well as the following "
+"parameters:"
+msgstr ""
+"**GetPrint** リクエストは、 :ref:`redlining <wms_redlining>`、 :ref:`external WMS "
+"layers <wms_external>` のほか、次のパラメータをサポートします:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetPrint**)"
+msgstr "リクエストの名称 (**GetPrint**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`TEMPLATE <wms_template>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layout template to use"
+msgstr "使用するレイアウトのテンプレート"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getprint_format>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ATLAS_PK <wms_atlaspk>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Atlas features"
+msgstr "地図帳機能"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:EXTENT <wms_mapextent>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Extent of the map 'X'"
+msgstr "map `X` の範囲"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:LAYERS <wms_maplayers>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers of the map 'X'"
+msgstr "map `X` のレイヤ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:STYLES <wms_mapstyles>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style of the map 'X'"
+msgstr "map `X` のレイヤのスタイル"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:SCALE <wms_mapscale>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' scale of the map 'X'"
+msgstr "map `X` のレイヤの縮尺"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:ROTATION <wms_maprotation>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Rotation  of the map 'X'"
+msgstr "map `X` の角度"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on x axis of the map 'X'"
+msgstr "map `X` のx軸のグリッド間隔"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on y axis of the map 'X'"
+msgstr "map `X` のy軸のグリッド間隔"
+
+#: ../../docs/server_manual/services/wms.rst:1675
+msgid ""
+"Note that the layout template may contain more than one map. In this way, if"
+" you want to configure a specific map, you have to use ``mapX:`` parameters "
+"where ``X`` is a positive number that you can retrieve thanks to the "
+"**GetProjectSettings** request."
+msgstr ""
+"レイアウトテンプレートには複数のマップが含まれている可能性があることに注意してください。このとき、特定のマップを設定したい場合は、 ``mapX:`` "
+"パラメータを使う必要があります。ここで、 ``X`` は **GetProjectSettings** リクエストのおかげで取得できる正の数です。"
+
+#: ../../docs/server_manual/services/wms.rst:1698
+msgid "TEMPLATE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1700
+msgid ""
+"This parameter can be used to specify the name of a layout template to use "
+"for printing."
+msgstr "このパラメータを使って、印刷に使うレイアウトテンプレートの名前を指定することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:1708
+msgid ""
+"This parameter specifies the format of map image. Available values are:"
+msgstr "このパラメータは、マップ画像の形式を指定します。使用可能な値は以下の通りです:"
+
+#: ../../docs/server_manual/services/wms.rst:1710
+msgid "``png`` (default value)"
+msgstr "``png`` （デフォルト値）"
+
+#: ../../docs/server_manual/services/wms.rst:1715
+msgid "``svg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1716
+msgid "``image/svg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1717
+msgid "``image/svg+xml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1718
+msgid "``pdf``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1719
+msgid "``application/pdf``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1721
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then an "
+"exception is returned."
+msgstr "もし ``FORMAT`` パラメータがこれらの値のいずれとも異なる場合は、例外が返されます。"
+
+#: ../../docs/server_manual/services/wms.rst:1727
+msgid "ATLAS_PK"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1729
+msgid ""
+"This parameter allows activation of Atlas rendering by indicating which "
+"features we want to print. In order to retrieve an atlas with all features, "
+"the ``*`` symbol may be used (according to the maximum number of features "
+"allowed in the project configuration)."
+msgstr ""
+"このパラメータは、印刷したい地物を指定することで、地図帳レンダリングを有効化することができます。すべての地物を含む地図帳を取得するには、``*`` "
+"シンボルを使用することができます（プロジェクト設定で許されている地物の最大数に従います）。"
+
+#: ../../docs/server_manual/services/wms.rst:1735
+msgid ""
+"When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
+"pages is returned. For all other formats, a single page is returned."
+msgstr ""
+"``FORMAT`` が ``pdf`` "
+"の場合、地物ページを組み合わせた1つのPDFドキュメントが返されます。それ以外の形式の場合は、1つのページが返されます。"
+
+#: ../../docs/server_manual/services/wms.rst:1742
+msgid "mapX:EXTENT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1744
+msgid ""
+"This parameter specifies the extent for a layout map item as "
+"xmin,ymin,xmax,ymax."
+msgstr "このパラメータは、レイアウトマップアイテムの範囲をxmin,ymin,xmax,ymaxで指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:1750
+msgid "mapX:ROTATION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1752
+msgid "This parameter specifies the map rotation in degrees."
+msgstr "このパラメータは、マップの角度を度で指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:1757
+msgid "mapX:GRID_INTERVAL_X"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1759
+msgid "This parameter specifies the grid line density in the X direction."
+msgstr "このパラメータは、X 方向のグリッド線密度を指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:1764
+msgid "mapX:GRID_INTERVAL_Y"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1766
+msgid "This parameter specifies the grid line density in the Y direction."
+msgstr "このパラメータは、Y 方向のグリッド線密度を指定します。"
+
+#: ../../docs/server_manual/services/wms.rst:1771
+msgid "mapX:SCALE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1773
+msgid ""
+"This parameter specifies the map scale for a layout map item. This is useful"
+" to ensure scale based visibility of layers and labels even if client and "
+"server may have different algorithms to calculate the scale denominator."
+msgstr ""
+"このパラメータは、レイアウト地図アイテムの地図縮尺を指定します。これは、クライアントとサーバーで縮尺分母を計算するアルゴリズムが異なる場合でもレイヤとラベルの縮尺に基づく可視性を確保するのに役立ちます。"
+
+#: ../../docs/server_manual/services/wms.rst:1781
+msgid "mapX:LAYERS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1783
+msgid ""
+"This parameter specifies the layers for a layout map item. See :ref:`GetMap "
+"Layers <wms_layers>` for more information on this parameter."
+msgstr ""
+"このパラメータは、レイアウトマップアイテムのレイヤを指定します。このパラメータの詳細については :ref:`GetMap Layers "
+"<wms_layers>` を参照してください。"
+
+#: ../../docs/server_manual/services/wms.rst:1790
+msgid "mapX:STYLES"
+msgstr "mapX:STYLES"
+
+#: ../../docs/server_manual/services/wms.rst:1792
+msgid ""
+"This parameter specifies the layers' styles defined in a specific layout map"
+" item. See :ref:`GetMap Styles <wms_styles>` for more information on this "
+"parameter."
+msgstr ""
+"このパラメータは、特定のレイアウトマップアイテムに定義されているレイヤのスタイルを指定します。このパラメータの詳細については :ref:`GetMap "
+"Styles <wms_styles>` を参照してください。"
+
+#: ../../docs/server_manual/services/wms.rst:1801
+msgid "GetProjectSettings"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1803
+msgid ""
+"This request type works similar to :ref:`GetCapabilities "
+"<wms_getcapabilities>`, but it is more specific to QGIS Server and allows a "
+"client to read additional information which are not available in the "
+":ref:`GetCapabilities <wms_getcapabilities>` output:"
+msgstr ""
+"このリクエストタイプは :ref:`GetCapabilities <wms_getcapabilities>` と同様に動作しますが、よりQGIS "
+"Serverに特化しており、 :ref:`GetCapabilities <wms_getcapabilities>` "
+"の出力では得られない追加情報をクライアントが読み取ることができるようになっています："
+
+#: ../../docs/server_manual/services/wms.rst:1808
+msgid "initial visibility of layers"
+msgstr "レイヤーの初期可視性"
+
+#: ../../docs/server_manual/services/wms.rst:1809
+msgid "information about vector attributes and their edit types"
+msgstr "ベクターの属性とその編集タイプに関する情報"
+
+#: ../../docs/server_manual/services/wms.rst:1810
+msgid "information about layer order and drawing order"
+msgstr "レイヤーの順序と描画順序に関する情報"
+
+#: ../../docs/server_manual/services/wms.rst:1811
+msgid "list of layers published in WFS"
+msgstr "WFSに掲載されたレイヤのリスト"
+
+#: ../../docs/server_manual/services/wms.rst:1812
+msgid ""
+"show if a group in the layer tree is :ref:`mutually exclusive "
+"<group_layers_interact>`"
+msgstr ""
+"レイヤツリー内のグループが :ref:`mutually exclusive <group_layers_interact>` "
+"であるかどうかを表示します"
+
+#: ../../docs/server_manual/services/wms.rst:1814
+msgid "The **GetProjectSettings** request supports the following parameters:"
+msgstr "**GetProjectSettings** リクエストは次のパラメータをサポートしています:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetProjectSettings**)"
+msgstr "リクエストの名称 (**GetProjectSettings**)"
+
+#: ../../docs/server_manual/services/wms.rst:1828
+msgid "GetSchemaExtension"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1830
+msgid ""
+"The **GetSchemaExtension** request allows to retrieve optional extended "
+"capabilities and operations of the WMS service such as implemented by QGIS "
+"Server."
+msgstr ""
+"**GetSchemaExtension** リクエストは、QGIS "
+"Serverが実装するようなWMSサービスのオプションの拡張機能および操作を取得することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetSchemaExtension**)"
+msgstr "リクエストの名称 (**GetSchemaExtension**)"
+
+#: ../../docs/server_manual/services/wms.rst:1866
+msgid "External WMS layers"
+msgstr "外部WMSレイヤ"
+
+#: ../../docs/server_manual/services/wms.rst:1868
+msgid ""
+"QGIS Server allows including layers from external WMS servers in WMS "
+":ref:`GetMap <wms_getmap>` and WMS :ref:`GetPrint <wms_getprint>` requests. "
+"This is especially useful if a web client uses an external background layer "
+"in the web map. For performance reasons, such layers should be directly "
+"requested by the web client (not cascaded via QGIS server). For printing "
+"however, these layers should be cascaded via QGIS server in order to appear "
+"in the printed map."
+msgstr ""
+"QGIS Serverでは、WMS :ref:`GetMap <wms_getmap>` およびWMS :ref:`GetPrint "
+"<wms_getprint>` "
+"リクエストに外部のWMSサーバーからのレイヤを含めることができます。これは、ウェブクライアントがウェブマップで外部の背景レイヤを使用する場合に特に便利です。パフォーマンス上の理由から、このようなレイヤはWebクライアントから直接リクエストされるべきです（QGISサーバーを経由してカスケードせずに）。しかし、印刷では、これらのレイヤは、印刷されたマップに表示されるように、QGISサーバー経由でカスケードされるべきです。"
+
+#: ../../docs/server_manual/services/wms.rst:1876
+msgid ""
+"External layers can be added to the LAYERS parameter as "
+"EXTERNAL_WMS:<layername>. The parameters for the external WMS layers (e.g. "
+"url, format, dpiMode, crs, layers, styles) can later be given as service "
+"parameters <layername>:<parameter>. In a :ref:`GetMap <wms_getmap>` request,"
+" this might look like this:"
+msgstr ""
+"外部レイヤは、LAYERSパラメータにEXTERNAL_WMS: "
+"<layername>として追加することができます。外部WMSレイヤのパラメータ（url, format, dpiMode, crs, layers, "
+"stylesなど）は，後でサービスパラメータ <layername>: <parameter>として与えることができます。:ref:`GetMap "
+"<wms_getmap>` リクエストでは、次のようになります:"
+
+#: ../../docs/server_manual/services/wms.rst:1898
+msgid ""
+"Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>` "
+"requests:"
+msgstr "同様に、外部レイヤーは :ref:`GetPrint <wms_getprint>` リクエストで使用することができます："
+
+#: ../../docs/server_manual/services/wms.rst:1921
+msgid "Redlining"
+msgstr "赤線引き"
+
+#: ../../docs/server_manual/services/wms.rst:1923
+msgid ""
+"This feature is available and can be used with :ref:`GetMap <wms_getmap>` "
+"and :ref:`GetPrint <wms_getprint>` requests."
+msgstr ""
+"この機能は :ref:`GetMap <wms_getmap>` と :ref:`GetPrint <wms_getprint>` "
+"のリクエストで使用することができます。"
+
+#: ../../docs/server_manual/services/wms.rst:1926
+msgid ""
+"The redlining feature can be used to pass geometries and labels in the "
+"request which are overlapped by the server over the standard returned image "
+"(map). This permits the user to put emphasis or maybe add some comments "
+"(labels) to some areas, locations etc. that are not in the standard map."
+msgstr ""
+"赤線引き機能は、サーバーが返す標準的な画像（マップ）の上に重ねるジオメトリとラベルをリクエストに渡すために使用されます。ユーザーはこれにより、標準的なマップにはない領域や場所などを強調したり、コメント（ラベル）を追加したりすることができます。"
+
+#: ../../docs/server_manual/services/wms.rst:1931
+msgid "The :ref:`GetMap <wms_getmap>` request is in the format:"
+msgstr ":ref:`GetMap <wms_getmap>` リクエストは、以下の形式です："
+
+#: ../../docs/server_manual/services/wms.rst:1948
+msgid ""
+"The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that "
+"``mapX:`` parameter is added to tell which map has redlining):"
+msgstr ""
+":ref:`GetPrint <wms_getprint>`と同等の形式です（どのマップに赤線が引かれているかを知るために ``mapX:`` "
+"パラメータが追加されていることに注意してください）："
+
+#: ../../docs/server_manual/services/wms.rst:1965
+msgid ""
+"Here is the image outputed by the above request in which a polygon and a "
+"label are drawn on top of the normal map:"
+msgstr "上記のリクエストによって出力された画像は次のとおりです、ポリゴンとラベルが通常のマップの上に描かれています："
+
+#: ../../docs/server_manual/services/wms.rst:1973
+msgid "Server response to a GetMap request with redlining parameters"
+msgstr "赤線引きパラメータを含むGetMapリクエストに対するサーバーの応答"
+
+#: ../../docs/server_manual/services/wms.rst:1975
+msgid ""
+"You can see there are several parameters in this request to control the "
+"redlining feature. The full list includes:"
+msgstr "このリクエストには、赤線引き機能を制御するためのいくつかのパラメータがあることがわかります。その全リストは以下の通りです:"
+
+#: ../../docs/server_manual/services/wms.rst:1978
+msgid ""
+"**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
+"supports multipart geometries. Here is an example: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. The coordinates should "
+"be in the CRS of the GetMap/GetPrint request."
+msgstr ""
+"**highlight_geom**: "
+"POINT、MULTILINESTRING、POLYGONなどを追加することができます。マルチパートジオメトリをサポートしています。以下はその例です： "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. "
+"座標はGetMap/GetPrintリクエストのCRSにあるはずです。"
+
+#: ../../docs/server_manual/services/wms.rst:1982
+msgid ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
+"color."
+msgstr "**HIGHLIGHT_LABELBUFFERCOLOR**: このパラメーターは、ラベルバッファの色を制御します。"
+
+#: ../../docs/server_manual/services/wms.rst:1984
+msgid ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
+"size."
+msgstr "**HIGHLIGHT_LABELBUFFERSIZE**: このパラメーターは、ラベルバッファのサイズを制御します。"
+
+#: ../../docs/server_manual/services/wms.rst:1986
+msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
+msgstr "**HIGHLIGHT_LABELCOLOR**: このパラメーターは、ラベルの色を制御します。"
+
+#: ../../docs/server_manual/services/wms.rst:1987
+msgid ""
+"**HIGHLIGHT_LABEL_DISTANCE**: controls the distance between feature (e.g. "
+"point or line) and the label in mm"
+msgstr "**HIGHLIGHT_LABEL_DISTANCE**: 地物（例 point又はライン）とラベルの間の距離をmmで制御します"
+
+#: ../../docs/server_manual/services/wms.rst:1989
+msgid ""
+"**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label (e.g."
+" Arial)"
+msgstr "**highlight_labelfont**： このパラメータは、ラベルのフォントを制御します（例：Arial）。"
+
+#: ../../docs/server_manual/services/wms.rst:1991
+msgid ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally on a"
+" point using the specified alignment (e.g. 'left', 'center', 'right')"
+msgstr ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**： ラベルを水平方向に指定された整列（例：'left', "
+"'center', 'right' ）で配置します。"
+
+#: ../../docs/server_manual/services/wms.rst:1993
+msgid "**HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees"
+msgstr "**HIGHLIGHT_LABEL_ROTATION**: ラベルの角度を度で制御します"
+
+#: ../../docs/server_manual/services/wms.rst:1994
+msgid ""
+"**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
+msgstr "**HIGHLIGHT_LABELSIZE**: このパラメーターは、ラベルのサイズを制御します。"
+
+#: ../../docs/server_manual/services/wms.rst:1996
+msgid ""
+"**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
+"parameter."
+msgstr "**HIGHLIGHT_LABELSTRING** ：ラベルのテキストをこのパラメーターに渡すことができます。"
+
+#: ../../docs/server_manual/services/wms.rst:1998
+msgid ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: places the label vertically on a "
+"point using the specified alignment (e.g. 'top', 'half', 'bottom')"
+msgstr ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**： 指定された整列（例：'top', 'half', "
+"'bottom'）でラベルをポイント上に垂直に配置します。"
+
+#: ../../docs/server_manual/services/wms.rst:2000
+msgid ""
+"**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
+" change the stroke width, color and opacity."
+msgstr "**HIGHLIGHT_SYMBOL** ：ジオメトリの輪郭をどのように表示するかを制御し、ストロークの幅、色、不透明度を変更できます。"

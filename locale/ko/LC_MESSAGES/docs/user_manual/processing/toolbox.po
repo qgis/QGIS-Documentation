@@ -1,0 +1,902 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-13 15:24+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing/toolbox.rst:4
+msgid "The Toolbox"
+msgstr "툴박스"
+
+#: ../../docs/user_manual/processing/toolbox.rst:11
+msgid ""
+"The :guilabel:`Processing Toolbox` is the main element of the processing "
+"GUI, and the one that you are more likely to use in your daily work. It "
+"shows the list of all available **algorithms** grouped in different blocks "
+"called *Providers*, and custom **models** and **scripts** you can add to "
+"extend the set of tools. Hence the toolbox is the access point to run them, "
+"whether as a single process or as a batch process involving several "
+"executions of the same algorithm on different sets of inputs."
+msgstr ""
+":guilabel:`Processing Toolbox` 는 공간 처리 GUI 의 주요 항목으로, 사용자가 일상적으로 사용하게 될 가능성이"
+" 높습니다. 사용할 수 있는 모든 **알고리즘** 을 서로 다른 *제공자*, 도구 집합을 확장하기 위해 추가할 수 있는 **모델** "
+"그리고 **스크립트** 로 그룹화한 목록을 표시합니다. 단일 프로세스이든 동일 알고리즘을 서로 다른 입력물에 대해 여러 번 실행하는 배치"
+" 프로세스이든 바로 이 툴박스에서 알고리즘을 실행하게 됩니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:24
+msgid "Processing Toolbox"
+msgstr "공간 처리 툴박스"
+
+#: ../../docs/user_manual/processing/toolbox.rst:27
+msgid ""
+"Providers can be (de)activated in the :ref:`Processing settings dialog "
+"<processing.options>`. By default, only providers that do not rely on third-"
+"party applications (that is, those that only require QGIS elements to be "
+"run) are active. Algorithms requiring external applications might need "
+"additional configuration. Configuring providers is explained in a "
+":ref:`later chapter <processing.results>` in this manual."
+msgstr ""
+":ref:`공간 처리 설정 대화창 <processing.options>` 에서 이 제공자들을 (비)활성화할 수 있습니다. 기본적으로, 제"
+" 3자 응용 프로그램에 의존하지 않는 (즉 실행하는 데 QGIS 요소만 요구하는) 제공자만 활성화된 상태입니다. 외부 응용 프로그램이 "
+"필요한 알고리즘은 추가 환경 설정이 필요할 수도 있습니다. 제공자 환경 설정에 대해서는 이 사용자 지침서의 :ref:`이후 부분 "
+"<processing.results>` 에서 설명하겠습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:34
+msgid ""
+"In the upper part of the toolbox dialog, you will find a set of tools to:"
+msgstr "툴박스 대화창 상단에는 다음과 같은 작업을 하기 위한 도구들이 있습니다:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:36
+msgid ""
+"work with |processingModel| :sup:`Models`: :guilabel:`Create New Model...`, "
+":guilabel:`Open Existing Model...` and :guilabel:`Add Model to Toolbox...`;"
+msgstr ""
+"|processingModel| :sup:`Models` 작업: :guilabel:`Create New Model...`, "
+":guilabel:`Open Existing Model...` 및 :guilabel:`Add Model to Toolbox...`"
+
+#: ../../docs/user_manual/processing/toolbox.rst:454
+msgid "processingModel"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:38
+msgid ""
+"work with |pythonFile| :sup:`Scripts`: :guilabel:`Create New Script...`, "
+":guilabel:`Create New Script from Template...`, :guilabel:`Open Existing "
+"Script...` and :guilabel:`Add Script to Toolbox...`;"
+msgstr ""
+"|pythonFile| :sup:`Scripts` 작업: :guilabel:`Create New Script...`, "
+":guilabel:`Create New Script from Template...`, :guilabel:`Open Existing "
+"Script...` 및 :guilabel:`Add Script to Toolbox...`"
+
+#: ../../docs/user_manual/processing/toolbox.rst:458
+msgid "pythonFile"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:41
+msgid "open the |processingHistory| :sup:`History` panel;"
+msgstr "|processingHistory| :sup:`History`: 이력 패널 열기"
+
+#: ../../docs/user_manual/processing/toolbox.rst:452
+msgid "processingHistory"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:42
+msgid "open the |processingResult| :sup:`Results Viewer` panel;"
+msgstr "|processingResult| :sup:`Results Viewer`: 결과물 뷰어 패널 열기"
+
+#: ../../docs/user_manual/processing/toolbox.rst:456
+msgid "processingResult"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:43
+msgid ""
+"toggle the toolbox to the :ref:`in-place modification mode "
+"<processing_inplace_edit>` using the |processSelected| :sup:`Edit Features "
+"In-Place` button: only the algorithms that are suitable to be executed on "
+"the active layer without outputting a new layer are displayed;"
+msgstr ""
+"|processSelected| :sup:`Edit Features In-Place`: 툴박스의 :ref:`제자리(in-place) 수정"
+" 모드 <processing_inplace_edit>` 를 켜고 끕니다. 새 레이어를 산출하지 않고, 활성 레이어에 대해서 실행하는 데 "
+"적합한 알고리즘만 표시됩니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:450
+msgid "processSelected"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:47
+msgid "open the |options| :sup:`Options` dialog."
+msgstr "|options| :sup:`Options`: 옵션 대화창 열기"
+
+#: ../../docs/user_manual/processing/toolbox.rst:448
+msgid "options"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:49
+msgid ""
+"Below this toolbar is a |search| :guilabel:`Search...` box to help you "
+"easily find the tools you need. You can enter any word or phrase on the text"
+" box. Notice that, as you type, the number of algorithms, models or scripts "
+"in the toolbox is reduced to just those that contain the text you have "
+"entered in their names or keywords."
+msgstr ""
+"이 툴바 아래에는 필요한 도구를 쉽게 찾을 수 있게 해주는 |search| :guilabel:`Search...` 란이 있습니다. 이 "
+"텍스트란에 어떤 단어 또는 문구라도 입력할 수 있습니다. 사용자가 입력하는 동안, 사용자가 입력한 텍스트 또는 키워드가 포함된 알고리즘,"
+" 모델 및 스크립트만 필터링해서 툴박스에 표시된다는 사실을 알 수 있을 겁니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:460
+msgid "search"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:55
+msgid ""
+"At the top of the list of algorithms are displayed the most recent used "
+"tools; handy if you want to reexecute any."
+msgstr "알고리즘 목록 최상단에는 가장 최근에 사용한 도구를 표시합니다. 어떤 도구를 재실행하려는 경우 유용합니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:63
+msgid "Processing Toolbox showing search results"
+msgstr "검색 결과를 표시하는 공간 처리 툴박스"
+
+#: ../../docs/user_manual/processing/toolbox.rst:66
+msgid "To execute a tool, just double-click on its name in the toolbox."
+msgstr "어느 도구를 실행하려면, 툴박스에 있는 해당 이름을 더블클릭하기만 하면 됩니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:71
+msgid "The algorithm dialog"
+msgstr "알고리즘 대화창"
+
+#: ../../docs/user_manual/processing/toolbox.rst:73
+msgid ""
+"Once you double-click on the name of the algorithm that you want to execute,"
+" a dialog similar to that in the :numref:`figure_parameters_dialog` below is"
+" shown (in this case, the dialog corresponds to the ``Centroids`` "
+"algorithm)."
+msgstr ""
+"사용자가 실행하고자 하는 알고리즘의 이름을 더블클릭하고 나면, :numref:`figure_parameters_dialog` 과 비슷한 "
+"대화창이 열립니다. (이 그림은 ``Centroids`` 알고리즘에 대응하는 대화창입니다.)"
+
+#: ../../docs/user_manual/processing/toolbox.rst:82
+msgid "Algorithm Dialog - Parameters"
+msgstr "알고리즘 대화창 ─ 파라미터 탭"
+
+#: ../../docs/user_manual/processing/toolbox.rst:84
+msgid ""
+"The dialog shows two tabs (:guilabel:`Parameters` and :guilabel:`Log`) on "
+"the left part, the algorithm description on the right, and a set of buttons "
+"at the bottom."
+msgstr ""
+"이 대화창 왼쪽에는 탭이 2개 (:guilabel:`Parameters` 와 :guilabel:`Log`) 있으며, 오른쪽에는 알고리즘 "
+"설명이, 하단에는 몇몇 버튼들이 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:90
+msgid "Parameter types"
+msgstr "파라미터 유형"
+
+#: ../../docs/user_manual/processing/toolbox.rst:92
+msgid ""
+"The :guilabel:`Parameters` tab is used to set the input values that the "
+"algorithm needs to be executed. It shows a list of input values and "
+"configuration parameters to be set. It of course has a different content, "
+"depending on the requirements of the algorithm to be executed, and is "
+"created automatically based on those requirements."
+msgstr ""
+":guilabel:`Parameters` 탭에서 알고리즘을 실행하는 데 필요한 입력값들을 설정할 수 있습니다. 이 탭은 설정해야 할 "
+"입력값 및 환경 설정 파라미터 목록을 표시합니다. 물론 실행할 알고리즘의 요구 사항에 따라 목록 내용이 달라지며, 해당 요구 사항을 "
+"기반으로 자동적으로 생성됩니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:97
+msgid ""
+"Although the number and type of parameters depend on the characteristics of "
+"the algorithm, the structure is similar for all of them. The parameters "
+"found in the table can be of one of the following types."
+msgstr ""
+"알고리즘의 특성에 따라 파라미터의 개수 및 유형이 달라지긴 해도, 대화창의 구조는 모두 비슷합니다. 대화창에 있는 파라미터는 다음 유형들"
+" 가운데 하나일 것입니다:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:103
+msgid ""
+"A **vector layer**, to select from a list of all vector layers available "
+"(currently opened) in QGIS. You can also use unloaded layers: press the "
+":guilabel:`...` button on the widget right-hand side, and select:"
+msgstr ""
+"QGIS에서 사용할 수 있는 (현재 열려 있는) 모든 벡터 레이어들의 목록에서 선택할 수 있는 **벡터 레이어**. 아직 불러오지 않은 "
+"레이어도 사용할 수 있습니다: 위젯의 오른쪽에 있는 :guilabel:`...` 버튼을 누른 다음, 다음 가운데 하나를 선택하십시오:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:107
+msgid ""
+":guilabel:`Select file...`: selects file on disk using the Operating System "
+"file explorer"
+msgstr ":guilabel:`Select file...`: OS의 파일 탐색기를 이용해서 디스크 상에 있는 파일을 선택합니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:108
+msgid ""
+":guilabel:`Browse for layer...`: opens the :ref:`Browser panel "
+"<label_browserpanel>`, allowing to take the layers directly from database "
+"sources (PostgreSQL, SQL Server, Oracle, ...), web services (WFS, AFS, ...) "
+"or files on disk."
+msgstr ""
+":guilabel:`Browse for layer...`: 데이터베이스 소스(PostgreSQL, SQL Server, Oracle, "
+"...), 웹 서비스(WFS, AFS, ...), 또는 디스크 상의 파일로부터 레이어를 직접 가져올 수 있게 해주는 :ref:`탐색기 "
+"패널 <label_browserpanel>` 을 엽니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:117
+msgid "Vector input widget"
+msgstr "벡터 입력 위젯"
+
+#: ../../docs/user_manual/processing/toolbox.rst:121
+msgid ""
+"By default, the layer widget shows the CRS of the layer along with its name."
+" If you do not want to see this additional information, you can disable this"
+" functionality in the Processing Settings dialog, unchecking the "
+":menuselection:`General --> Show layer CRS definition in selection boxes` "
+"option."
+msgstr ""
+"레이어 위젯은 기본적으로 레이어 이름 옆에 레이어 좌표계를 표시합니다. 이런 추가 정보를 표시하고 싶지 않다면 공간 처리 설정 대화창에서"
+" :menuselection:`General --> Show layer CRS definition in selection boxes` "
+"옵션의 체크박스를 해제해서 이 기능을 비활성화시킬 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:126
+msgid "The vector input widget also has following features:"
+msgstr "벡터 입력 위젯에는 다음과 같은 기능들도 있습니다:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:128
+msgid ""
+"an iterator |iterate| button: If toggled, the algorithm will be executed "
+"iteratively on each one of its features, instead of just once for the whole "
+"layer, producing as many outputs as times the algorithm is executed. This "
+"allows for automating the process when all features in a layer have to be "
+"processed separately. If the algorithm contains several input vectors you "
+"can iterate over, the iteration will be processed only on the first toggled "
+"parameter, in the order parameters are declared in the algorithm."
+msgstr ""
+"반복 |iterate| 버튼: 이 버튼을 켜면, 알고리즘이 전체 레이어에 대해 한번만 실행되는 대신 레이어의 피처 하나마다 반복해서 "
+"실행되어 알고리즘이 실행되는 횟수만큼 산출물을 생성할 것입니다. 즉 레이어에 있는 모든 피처를 개별적으로 처리해야 하는 경우 그 과정을 "
+"자동화할 수 있습니다. 알고리즘이 반복해서 실행될 수 있는 입력 벡터를 여러 개 담고 있다면, 알고리즘 내에 선언된 파라미터들의 순서에서"
+" 가장 먼저 켜진 파라미터에 대해서만 반복될 것입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:444
+msgid "iterate"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:136
+msgid ""
+"|options| :sup:`Advanced options` button to adjust settings to use for that "
+"specific parameter. These settings concern:"
+msgstr ""
+"|options| :sup:`Advanced options` 버튼은 해당 특정 파라미터에 사용할 설정들을 조정합니다. 이 설정들의 "
+"대상은:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:139
+msgid ""
+":guilabel:`Invalid feature filtering`: allows the :ref:`default method "
+"<processing_general_settings>` for handling features with invalid geometries"
+" to be overridden"
+msgstr ""
+":guilabel:`Invalid feature filtering`: :ref:`기본 메소드 "
+"<processing_general_settings>` 를 이용해서 무시해야 할 무결하지 않은 도형을 가진 피처를 처리할 수 있게 "
+"합니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:141
+msgid ""
+":guilabel:`Limit features processed`: optional limit on number of features "
+"processed from the source"
+msgstr ""
+":guilabel:`Limit features processed`: 소스로부터 얼마 만큼의 개수의 피처들을 처리해야 할지를 결정하는 "
+"제한값을 지정할 수 있는 옵션입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:143
+msgid ""
+"It is also possible to limit the algorithm execution on the vector layer to "
+"its :guilabel:`Selected features only`."
+msgstr ""
+":guilabel:`Selected features only`: 알고리즘을 벡터 레이어에서 선택된 피처들에 대해서만 실행되도록 제한할 "
+"수도 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:145
+msgid ""
+"A **table**, to select from a list of all available in QGIS. Non-spatial "
+"tables are loaded into QGIS like vector layers, and use the :ref:`same "
+"widget <vector_widget>`."
+msgstr ""
+"QGIS에서 사용할 수 있는 모든 테이블들의 목록에서 선택할 수 있는 **테이블**. 비공간 테이블은 QGIS에 마치 벡터 레이어처럼 "
+"불려오며 :ref:`동일 위젯 <vector_widget>` 을 사용합니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:147
+msgid ""
+"A **raster layer**, to select from a list of all raster layers available in "
+"QGIS. The selector contains as well a :guilabel:`...` button on its right-"
+"hand side, to let you select filenames that represent layers currently not "
+"loaded in QGIS."
+msgstr ""
+"QGIS에서 사용할 수 있는 모든 래스터 레이어들의 목록에서 선택할 수 있는 **래스터 레이어**. 선택기 오른쪽에 "
+":guilabel:`...` 버튼이 있는데, 이 버튼을 통해 현재 QGIS에 불려오지 않은 레이어를 나타내는 파일명을 선택할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:156
+msgid "Raster input widget"
+msgstr "래스터 입력 위젯"
+
+#: ../../docs/user_manual/processing/toolbox.rst:158
+msgid "An **option**, to choose from a selection list of possible options."
+msgstr "**옵션**: 사용 가능한 옵션들의 목록 가운데 선택할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:159
+msgid ""
+"A **numerical value**, to be introduced in a spin box. In some contexts "
+"(when the parameter applies at the feature level and not at the layer's), "
+"you will find a |dataDefine| :sup:`Data-defined override` button by its "
+"side, allowing you to open the :ref:`expression builder "
+"<vector_expressions>` and enter a mathematical expression to generate "
+"variable values for the parameter. Some useful variables related to data "
+"loaded into QGIS can be added to your expression, so you can select a value "
+"derived from any of these variables, such as the cell size of a layer or the"
+" northernmost coordinate of another one."
+msgstr ""
+"**숫자 값**: 스핀박스에서 선택할 수 있습니다. 어떤 맥락에서는 (파라미터가 피처 수준에서 적용되고 레이어 수준에서는 적용되지 않는 "
+"경우) 스핀박스 옆에 있는 |dataDefine| :sup:`Data-defined override` 버튼을 누르면 수학 표현식을 "
+"입력해서 파라미터를 위한 여러 값을 생성할 수 있는 :ref:`표현식 작성기 <vector_expressions>` 가 열립니다. "
+"QGIS가 불러온 데이터에 관련된 몇몇 유용한 변수들을 표현식에 추가할 수 있습니다. 즉 어떤 레이어의 셀 크기 또는 다른 레이어의 "
+"최북단 좌표 같은, 이런 변수들에서 파생된 어떤 값이라도 선택할 수 있다는 뜻입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:438
+msgid "dataDefine"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:173
+msgid "Expression based input"
+msgstr "표현식 기반 입력"
+
+#: ../../docs/user_manual/processing/toolbox.rst:175
+msgid ""
+"A **range**, with min and max values to be introduced in two text boxes."
+msgstr "**범위(range)**: 텍스트란 2개에서 최소 및 최대 값을 설정할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:176
+msgid "A **text string**, to be introduced in a text box."
+msgstr "**텍스트 문자열**: 텍스트란에 문자열을 입력할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:177
+msgid ""
+"A **field**, to choose from the attributes table of a vector layer or a "
+"single table selected in another parameter."
+msgstr "**필드**: 벡터 레이어의 속성 테이블에서 또는 다른 파라미터를 통해 선택한 단일 테이블에서 필드를 선택할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:179
+msgid ""
+"A **coordinate reference system**. You can select it among the recently used"
+" ones from the drop-down list or from the :ref:`CRS selection "
+"<crs_selector>` dialog that appears when you click on the button on the "
+"right-hand side."
+msgstr ""
+"**좌표계**: 드롭다운 목록에서 최근 사용한 좌표계 가운데 선택하거나 또는 목록 오른쪽에 있는 탐색 버튼을 누르면 열리는 "
+":ref:`좌표계 선택기 <crs_selector>` 에서 선택할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:182
+msgid ""
+"An **extent**, a text box defining a rectangle through its corners "
+"coordinate in the format ``xmin, xmax, ymin, ymax``. Press the "
+"|mapIdentification| :sup:`Set to current map canvas extent` button to use "
+"the map canvas extent. Clicking the arrow on the right-hand side of the "
+"value selector, a pop-up menu will appear, giving you options to:"
+msgstr ""
+"**범위(extent)**: ``xmin``, ``xmax``, ``ymin``, ``ymax`` 서식으로 된 모서리 좌표를 통해 "
+"직사각형을 정의하는 텍스트란입니다. 맵 캔버스 범위를 사용하려면 |mapIdentification| :sup:`Set to current"
+" map canvas extent` 버튼을 누르십시오. 값 선택기 오른쪽에 있는 탐색 버튼을 클릭하면, 다음 세 가지 옵션을 제공하는 "
+"팝업 메뉴가 나타납니다:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:446
+msgid "mapIdentification"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:188
+msgid ""
+":menuselection:`Calculate from layer -->`: fills the text box with the "
+"coordinates of the bounding box of a layer to select among the loaded ones"
+msgstr ""
+":menuselection:`Calculate from layer -->`: 불러온 레이어들 가운데 선택한 레이어의 경계 상자 좌표로 "
+"텍스트란을 채웁니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:190
+msgid ""
+":menuselection:`Calculate from layout map -->`: fills the text box with the "
+"coordinates of a map item selected from a layout in the current project"
+msgstr ""
+":menuselection:`Calculate from layout map -->`: 현재 프로젝트에 있는 조판에서 선택한 맵 항목의 "
+"좌표로 텍스트란을 채웁니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:192
+msgid ""
+":menuselection:`Calculate from bookmark -->`: fills the text box with the "
+"coordinates of a saved bookmark"
+msgstr ""
+":menuselection:`Calculate from bookmark -->`: 저장한 북마크의 좌표로 텍스트란을 채웁니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:194
+msgid "|mapIdentification| :guilabel:`Use current map canvas extent`"
+msgstr ""
+"|mapIdentification| :guilabel:`Use current map canvas extent`: 현재 맵 캔버스 범위를 "
+"사용합니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:195
+msgid ""
+":guilabel:`Draw on canvas`: the parameters window will hide itself, so you "
+"can click and drag onto the canvas. Once you have defined the extent "
+"rectangle, the dialog will reappear, containing the values in the extent "
+"text box."
+msgstr ""
+":guilabel:`Draw on canvas`: 파라미터 대화창이 사라져서 캔버스 상에서 직사각형을 클릭&드래그할 수 있게 됩니다. "
+"직사각형 영역을 정의하고 나면, 대화창이 범위 텍스트란에 값을 담은 채 다시 나타납니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:205
+msgid "Extent selector"
+msgstr "범위 선택기"
+
+#: ../../docs/user_manual/processing/toolbox.rst:207
+msgid ""
+"A **list of elements** (whether raster or vector layers, tables, fields) to "
+"select from. Click on the :guilabel:`...` button at the left of the option "
+"to see a dialog like the following one. Multiple selection is allowed and "
+"when the dialog is closed, number of selected items is displayed in the "
+"parameter text box widget."
+msgstr ""
+"**항목 목록**: (래스터 레이어든 벡터 레이어든 또는 테이블이든 필드든) 해당 유형의 목록 가운데 선택할 수 있습니다. 옵션 왼쪽에 "
+"있는 탐색 버튼을 클릭하면 다음 그림과 같은 대화창이 열립니다. 다중 선택도 가능하며, 대화창이 닫혔을 때 선택한 항목의 개수가 파라미터"
+" 텍스트란 위젯에 표시됩니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:218
+msgid "Multiple Selection"
+msgstr "다중 선택"
+
+#: ../../docs/user_manual/processing/toolbox.rst:220
+msgid ""
+"A **small table** to be edited by the user. These are used to define "
+"parameters like lookup tables or convolution kernels, among others."
+msgstr ""
+"**간소 테이블**: 사용자가 테이블을 편집할 수 있습니다. 다른 목적도 있지만, 주로 색인(lookup) 테이블 또는 `합성곱 "
+"커널(convolution kernel) "
+"<https://ko.wikipedia.org/wiki/%ED%95%A9%EC%84%B1%EA%B3%B1>`_ 같은 파라미터를 정의하는 "
+"데 사용됩니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:223
+msgid ""
+"Click on the button on the right side to see the table and edit its values."
+msgstr "테이블을 살펴보고 우측에 있는 버튼을 클릭해서 그 값을 편집하십시오."
+
+#: ../../docs/user_manual/processing/toolbox.rst:230
+msgid "Fixed Table"
+msgstr "고정 테이블"
+
+#: ../../docs/user_manual/processing/toolbox.rst:232
+msgid ""
+"Depending on the algorithm, the number of rows can be modified or not by "
+"using the buttons on the right side of the window."
+msgstr "알고리즘에 따라, 대화창 우측에 있는 버튼들을 사용해서 여러 행들을 수정할 수도 있고 못 할 수도 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:237
+msgid ""
+"Some algorithms require many parameters to run, e.g. in the "
+":ref:`qgisrastercalculator` you have to specify manually the cell size, the "
+"extent and the CRS. You can avoid to choose all the parameters manually when"
+" the algorithm has the ``Reference layers`` parameter. With this parameter "
+"you can choose the reference layer and all its properties (cell size, "
+"extent, CRS) will be used."
+msgstr ""
+"일부 알고리즘은 실행하는 데 많은 파라미터를 필요로 합니다. 예를 들어 :ref:`qgisrastercalculator` 에서는 사용자가"
+" 직접 셀 크기, 범위 및 좌표계를 지정해야 합니다. 알고리즘이 ``Reference layers`` 파라미터를 가지고 있을 경우 모든 "
+"파라미터를 직접 지정하는 일을 피할 수 있습니다. 이 파라미터를 사용하면 참조 레이어와 사용할 모든 레이어 속성(셀 크기, 범위, "
+"좌표계)을 선택할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:245
+msgid "Logging the execution"
+msgstr "실행 로그 기록하기"
+
+#: ../../docs/user_manual/processing/toolbox.rst:247
+msgid ""
+"Along with the :guilabel:`Parameters` tab, there is another tab named "
+":guilabel:`Log` (see :numref:`figure_alg_dialog_log` below). Information "
+"provided by the algorithm during its execution is written in this tab, "
+"allowing you to track the execution as well as being aware and having more "
+"details about the algorithm as it runs. Information on algorithm execution "
+"is also output in the :menuselection:`View --> Panels --> Log Messages "
+"Panel`."
+msgstr ""
+":guilabel:`Log` 라는 또다른 탭이 :guilabel:`Parameters` 탭 옆에 있습니다. (다음 "
+":numref:`figure_alg_dialog_log` 를 참조하세요.) 이 탭은 알고리즘 실행 도중 알고리즘이 제공하는 정보를 "
+"표시해서 사용자가 그 과정을 추적하고 더 자세한 정보를 알 수 있게 해줍니다. 알고리즘 실행 정보는 :menuselection:`View"
+" --> Panels --> Log Messages Panel` 에도 산출됩니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:255
+msgid ""
+"Notice that not all algorithms write information to the :guilabel:`Log` tab,"
+" and many of them might run silently without producing any output other than"
+" the final files. Check the :guilabel:`Log Messages Panel` in that case."
+msgstr ""
+"하지만 모든 알고리즘이 :guilabel:`Log` 탭에 정보를 작성하지는 않습니다. 사실 최종 파일 이외에는 어떤 정보도 출력하지 않은"
+" 채 조용히 실행되는 알고리즘이 많습니다. 이 경우 :guilabel:`Log Messages Panel` 을 확인하십시오."
+
+#: ../../docs/user_manual/processing/toolbox.rst:265
+msgid "Algorithm Dialog - Log"
+msgstr "알고리즘 대화창 ─ 로그 탭"
+
+#: ../../docs/user_manual/processing/toolbox.rst:267
+msgid ""
+"At the bottom of the :guilabel:`Log` tab you will find buttons to |fileSave|"
+" :guilabel:`Save Log to File`, |editCopy| :guilabel:`Copy Log to Clipboard` "
+"and |clearConsole| :guilabel:`Clear Log`. These are particularly handy when "
+"you have checked the :guilabel:`Keep dialog open after running algorithm` in"
+" the :guilabel:`General` part of the Processing options."
+msgstr ""
+":guilabel:`Log` 탭 하단에 |fileSave| :guilabel:`Save Log to File`, |editCopy| "
+":guilabel:`Copy Log to Clipboard` 및 |clearConsole| :guilabel:`Clear Log` 버튼이"
+" 있습니다. 공간 처리 옵션 대화창의 :guilabel:`General` 그룹에서 :guilabel:`Keep dialog open "
+"after running algorithm` 옵션을 체크한 경우 이 도구들이 특히 유용합니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:442
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:440
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/user_manual/processing/toolbox.rst:436
+msgid "clearConsole"
+msgstr "clearConsole"
+
+#: ../../docs/user_manual/processing/toolbox.rst:275
+msgid "Other tools"
+msgstr "기타 도구"
+
+#: ../../docs/user_manual/processing/toolbox.rst:277
+msgid ""
+"On the right hand side of the dialog you will find a short description of "
+"the algorithm, which will help you understand its purpose and its basic "
+"ideas. If such a description is not available, the description panel will "
+"not be shown."
+msgstr ""
+"알고리즘 대화창 우측에 해당 알고리즘에 관한 간단한 설명을 표시해서 사용자가 알고리즘의 목적 및 기본 개념을 이해할 수 있도록 해주고 "
+"있습니다. 이런 설명이 존재하지 않는 경우, 설명 패널은 나타나지 않을 것입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:281
+msgid ""
+"For a more detailed help file, which might include description of every "
+"parameter it uses, or examples, you will find a :guilabel:`Help` button at "
+"the bottom of the dialog bringing you to the :ref:`Processing algorithms "
+"documentation <processing_algs>` or to the provider documentation (for some "
+"third-party providers)."
+msgstr ""
+"알고리즘이 사용하는 모든 파라미터에 대한 설명이나 예시를 포함할 수도 있는 더 자세한 도움말 파일이 필요한 경우, 대화창 하단에 있는 "
+":guilabel:`Help` 버튼을 클릭하면 :ref:`공간 처리 알고리즘 문서 <processing_algs>` 또는 (몇몇 제 3자"
+" 제공자의 경우) 제공자 문서를 볼 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:287
+msgid ""
+"The :menuselection:`Advanced -->` menu provides functions to reuse the "
+"configuration defined in the dialog without running the algorithm:"
+msgstr ""
+":menuselection:`Advanced -->` 메뉴는 알고리즘을 실행하지 않고서도 대화창에서 정의한 환경 설정을 재사용할 수 있는"
+" 기능을 제공합니다:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:290
+msgid ""
+":guilabel:`Copy as Python Command`: allows for easy copying of the "
+"equivalent :ref:`PyQGIS command <processing_console>` to run the tool using "
+"the parameters defined in the dialog"
+msgstr ""
+":guilabel:`Copy as Python Command`: 대화창에서 정의한 파라미터들을 사용해서 도구를 실행할 수 있는 동등한 "
+":ref:`PyQGIS 명령어 <processing_console>` 로 쉽게 복사할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:293
+msgid ""
+":guilabel:`Copy as qgis_process Command`: allows for easy generation of "
+":ref:`qgis_process command <processing_standalone>`, including its "
+"environment settings like the distance units, area units, ellipsoid, and any"
+" tricky parameter values like GeoPackage outputs with specific layers"
+msgstr ""
+":guilabel:`Copy as qgis_process Command`: 거리 단위, 면적 단위, 타원체, 그리고 특정 레이어를 가진 "
+"GeoPackage 산출물처럼 까다로운 파라미터 값 같은 환경 설정을 포함하는 :ref:`qgis_process 명령어 "
+"<processing_standalone>` 를 쉽게 생성할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:297
+msgid ""
+":guilabel:`Copy as JSON`: all the settings of the command are copied in a "
+":file:`JSON` format, ready to be consumed by qgis_process. This is a "
+"convenient way to see the expected format of the commands, even for complex "
+"parameters (like TIN interpolation parameters). You can store these easily "
+"and then restore them later by pasting the values."
+msgstr ""
+":guilabel:`Copy as JSON`: 명령어의 모든 설정을 qgis_process가 사용할 수 있도록 :file:`JSON` "
+"서식으로 복사합니다. (TIN 보간 파라미터 같은) 복잡 파라미터의 경우에도 명령어의 예상 서식을 볼 수 있는 편리한 방법입니다. "
+":file:`JSON` 서식으로 복사된 파라미터들을 쉽게 저장할 수 있고, 나중에 이 값들을 붙여넣기해서 복원할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:302
+msgid ":guilabel:`Paste Settings` in a :file:`JSON` format"
+msgstr ":guilabel:`Paste Settings`: 설정 파라미터들을 :file:`JSON` 서식으로 붙여넣습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:305
+msgid ""
+"The :guilabel:`Run as Batch Process...` button triggers the :ref:`batch "
+"processing mode <processing_batch>` allowing to configure and run multiple "
+"instances of the algorithm with a variety of parameters. A :guilabel:`Run as"
+" Single Process...` helps you switch back from the batch mode."
+msgstr ""
+":guilabel:`Run as Batch Process...` 버튼을 누르면 :ref:`배치 프로세스 모드 "
+"<processing_batch>` 를 촉발합니다. 이 모드에서 알고리즘의 중복된 인스턴스들을 서로 다른 파라미터로 환경 설정하고 실행할"
+" 수 있습니다.  :guilabel:`Run as Single Process...` 버튼을 누르면 배치 모드를 해제합니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:310
+msgid ""
+"When an algorithm execution finishes (either successfully or not), a new "
+"button :guilabel:`Change Parameters` is shown as long as the :guilabel:`Log`"
+" tab is active."
+msgstr ""
+"알고리즘 실행이 (성공적으로든 아니든) 완료되면, :guilabel:`Log` 탭이 활성화되어 있는 한 새로운 "
+":guilabel:`Change Parameters` 버튼이 나타납니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:314
+msgid "A note on projections"
+msgstr "투영체에 대한 소고(小考)"
+
+#: ../../docs/user_manual/processing/toolbox.rst:316
+msgid ""
+"Processing algorithm execution are always performed in the input layer "
+"coordinate reference system (CRS). Due to QGIS's on-the-fly reprojecting "
+"capabilities, although two layers might seem to overlap and match, that "
+"might not be true if their original coordinates are used without "
+"reprojecting them onto a common coordinate system. Whenever you use more "
+"than one layer as input to a :ref:`QGIS native algorithm <qgis_algorithms>`,"
+" whether vector or raster, the layers will all be reprojected to match the "
+"coordinate reference system of the first input layer."
+msgstr ""
+"공간 처리 알고리즘의 실행은 언제나 입력 레이어의 좌표계에서 수행됩니다. QGIS의 실시간(on-the-fly) 재투영 기능 때문에, 두"
+" 레이어가 중첩해서 일치하는 것처럼 보일 수도 있지만 공통 좌표계로 재투영하지 않고 원본 좌표를 사용하는 경우 일치하지 않을 수도 있다는"
+" 사실을 기억하십시오. :ref:`QGIS 내장 알고리즘 <qgis_algorithms>` 에 하나 이상의 레이어를 입력할 때마다, 모든"
+" 입력 레이어를 ─ 벡터이든 래스터이든 간에 ─ 첫 번째 입력 레이어의 좌표계와 일치하도록 재투영할 것입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:325
+msgid ""
+"This is however less true for most of the external applications whose "
+"algorithms are exposed through the processing framework as they assume that "
+"all of the layers are already in a common coordinate system and ready to be "
+"analyzed."
+msgstr ""
+"하지만 공간 처리 프레임워크를 통해 실행되는 외부 응용 프로그램 알고리즘 대부분은 모든 입력 레이어가 이미 동일한 좌표계를 사용하고 분석"
+" 준비가 끝났다고 가정하기 때문에, 재투영 작업을 하지 않습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:329
+msgid ""
+"By default, the parameters dialog will show a description of the CRS of each"
+" layer along with its name, making it easy to select layers that share the "
+"same CRS to be used as input layers. If you do not want to see this "
+"additional information, you can disable this functionality in the Processing"
+" settings dialog, unchecking the :guilabel:`Show layer CRS definition in "
+"selection boxes` option."
+msgstr ""
+"기본적으로 알고리즘 대화창의 파라미터 탭은 각 레이어의 이름과 함께 좌표계 설명도 표시하기 때문에 동일한 좌표계를 공유하는 레이어들을 "
+"쉽게 입력 레이어로 선택할 수 있습니다. 이 추가 정보를 보기 싫다면, 공간 처리 설정 대화창에서 "
+":menuselection:`General --> Show layer CRS definition in selection boxes` "
+"체크박스를 체크 해제해서 이 기능을 비활성화시킬 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:335
+msgid ""
+"If you try to execute an algorithm using as input two or more layers with "
+"unmatching CRSs, a warning dialog will be shown. This occurs thanks to the "
+":guilabel:`Warn before executing if layer CRS's do not match` option."
+msgstr ""
+"서로 일치하지 않는 좌표계가 적용된 2개 이상의 레이어를 입력해서 알고리즘을 실행하려는 경우, :guilabel:`Warn before "
+"executing if layer CRS's do not match` 옵션을 활성화한 상태라면 경고 메시지가 나타날 것입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:339
+msgid ""
+"You still can execute the algorithm, but be aware that in most cases that "
+"will produce wrong results, such as empty layers due to input layers not "
+"overlapping."
+msgstr ""
+"그래도 알고리즘을 실행시킬 수는 있지만, 대부분의 경우 입력 레이어들이 서로 중첩하지 않기 때문에 텅 빈 레이어 같은 잘못된 산출물을 "
+"생성할 것이라는 점을 유념하십시오."
+
+#: ../../docs/user_manual/processing/toolbox.rst:342
+msgid "**Use Processing algorithms to do intermediate reprojection**"
+msgstr "**공간 처리 알고리즘을 사용해서 중간 단계 재투영하기**"
+
+#: ../../docs/user_manual/processing/toolbox.rst:344
+msgid ""
+"When an algorithm can not successfully perform on multiple input layers due "
+"to unmatching CRSs, use QGIS internal algorithm such as "
+":ref:`qgisreprojectlayer` to perform layers' reprojection to the same CRS "
+"before executing the algorithm using these outputs."
+msgstr ""
+"좌표계가 일치하지 않아 여러 입력 레이어에 대해 알고리즘을 성공적으로 실행할 수 없는 경우, "
+":ref:`qgisreprojectlayer` 같은 QGIS 내장 알고리즘을 사용해서 레이어들을 동일한 좌표계로 재투영한 다음 그 "
+"산출물을 사용해서 알고리즘을 실행하십시오."
+
+#: ../../docs/user_manual/processing/toolbox.rst:351
+msgid "Data objects generated by algorithms"
+msgstr "알고리즘이 생성한 데이터 객체"
+
+#: ../../docs/user_manual/processing/toolbox.rst:353
+msgid ""
+"Data objects generated by an algorithm can be of any of the following types:"
+msgstr "알고리즘이 생성한 데이터 객체는 다음 유형들 가운데 하나가 될 것입니다:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:355
+msgid "A raster layer"
+msgstr "래스터 레이어"
+
+#: ../../docs/user_manual/processing/toolbox.rst:356
+msgid "A vector layer"
+msgstr "벡터 레이어"
+
+#: ../../docs/user_manual/processing/toolbox.rst:357
+msgid "A table"
+msgstr "테이블"
+
+#: ../../docs/user_manual/processing/toolbox.rst:358
+msgid "An HTML file (used for text and graphical outputs)"
+msgstr "HTML 파일 (텍스트 및 그래픽 산출물 용)"
+
+#: ../../docs/user_manual/processing/toolbox.rst:360
+msgid ""
+"These are all saved to disk, and the parameters table will contain a text "
+"box corresponding to each one of these outputs, where you can type the "
+"output channel to use for saving it. An output channel contains the "
+"information needed to save the resulting object somewhere. In the most usual"
+" case, you will save it to a file, but in the case of vector layers, and "
+"when they are generated by native algorithms (algorithms not using external "
+"applications) you can also save to a PostGIS, GeoPackage or SpatiaLite "
+"database, or a memory layer."
+msgstr ""
+"이런 데이터 객체들은 모두 디스크에 저장되며, 파라미터 탭에는 이런 각각의 산출물에 대응하는 텍스트란이 표시되어 사용자가 저장을 위한 "
+"산출물 채널을 입력할 수 있습니다. 산출물 채널은 산출되는 객체를 저장하기 위해 필요한 정보를 담고 있습니다. 거의 대부분은 파일로 "
+"저장되지만, 내장 알고리즘이 (외부 응용 프로그램을 사용하지 않는 알고리즘이) 생성한 벡터 레이어의 경우 PostGIS 또는 "
+"SpatiaLite 데이터베이스나 메모리 레이어로도 저장할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:368
+msgid ""
+"To select an output channel, just click on the button on the right side of "
+"the text box, and you will see a small context menu with the available "
+"options."
+msgstr ""
+"산출물 채널을 선택하려면, 텍스트란 오른쪽에 있는 탐색 버튼을 누르기만 하면 됩니다. 사용 가능한 옵션을 표시한 작은 컨텍스트 메뉴가 "
+"나타날 것입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:371
+msgid ""
+"In the most usual case, you will select saving to a file. If you select that"
+" option, you will be prompted with a save file dialog, where you can select "
+"the desired file path. Supported file extensions are shown in the file "
+"format selector of the dialog, depending on the kind of output and the "
+"algorithm."
+msgstr ""
+"거의 대부분의 경우, '파일로 저장하기' 를 선택하게 됩니다. 해당 옵션을 선택했다면, 원하는 파일 경로를 선택할 수 있는 파일 저장 "
+"대화창이 열릴 것입니다. 대화창의 파일 포맷 선택기에 산출물 유형 및 실행 알고리즘에 따라 지원되는 파일 확장자가 표시됩니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:376
+msgid ""
+"The format of the output is defined by the filename extension. The supported"
+" formats depend on what is supported by the algorithm itself. To select a "
+"format, just select the corresponding file extension (or add it, if you are "
+"directly typing the file path instead). If the extension of the file path "
+"you entered does not match any of the supported formats, a default extension"
+" will be appended to the file path, and the file format corresponding to "
+"that extension will be used to save the layer or table. Default extensions "
+"are :file:`.dbf` for tables, :file:`.tif` for raster layers and "
+":file:`.gpkg` for vector layers. These can be modified in the setting "
+"dialog, selecting any other of the formats supported by QGIS."
+msgstr ""
+"파일 확장자가 산출물의 포맷을 정의합니다. 지원 포맷은 알고리즘 자체가 어떤 포맷을 지원하느냐에 따라 달라집니다. 어떤 포맷을 "
+"선택하려면, 해당하는 파일 확장자를 선택하기만 하면 됩니다. (또는 파일 경로를 직접 입력하는 경우, 파일명에 추가하면 됩니다.) "
+"사용자가 입력한 파일 경로의 확장자가 지원 포맷 가운데 어느 것과도 일치하지 않을 경우, 파일 경로에 기본 확장자가 붙어서 레이어 또는 "
+"테이블을 해당 확장자의 포맷으로 저장할 것입니다. 테이블의 경우 :file:`.dbf`, 래스터 레이어의 경우 :file:`.tif`, "
+"벡터 레이어의 경우 :file:`.gpkg` 가 기본 확장자입니다. 알고리즘 설정 대화창에서 QGIS가 지원하는 다른 모든 포맷 가운데 "
+"하나를 선택해서 기본 확장자를 변경할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:387
+msgid ""
+"If you do not enter any filename in the output text box (or select the "
+"corresponding option in the context menu), the result will be saved as a "
+":ref:`temporary file <vector_new_scratch_layer>` in the corresponding "
+"default file format, and it will be deleted once you exit QGIS (take care "
+"with that, in case you save your project and it contains temporary layers)."
+msgstr ""
+"산출물 텍스트란에 어떤 파일명도 입력하지 않을 경우 (또는 컨텍스트 메뉴에 있는 해당 옵션을 선택하지 않는 경우) 산출물을 해당 기본 "
+"파일 포맷의 :ref:`임시 파일 <vector_new_scratch_layer>` 로 저장하고, QGIS 종료시 삭제할 것입니다. "
+"(임시 레이어를 담고 있는 프로젝트를 저장하는 경우 이를 처리하십시오.)"
+
+#: ../../docs/user_manual/processing/toolbox.rst:393
+msgid ""
+"You can set a default folder for output data objects. Go to the settings "
+"dialog (you can open it from the :menuselection:`Settings --> Options --> "
+"Processing` menu), and in the :guilabel:`General` group, you will find a "
+"parameter named :guilabel:`Output folder`. This output folder is used as the"
+" default path in case you type just a filename with no path (i.e., "
+":file:`myfile.shp`) when executing an algorithm."
+msgstr ""
+"산출 데이터 객체를 위한 기본 폴더를 설정할 수 있습니다. 공간 처리 설정 대화창에서 (:menuselection:`Settings "
+"--> Options --> Processing`) :guilabel:`General` 그룹을 살펴보면 :guilabel:`Output "
+"folder` 라는 파라미터가 있을 겁니다. 알고리즘 실행시 사용자가 파일 경로 없이 파일명만 (예: :file:`myfile.shp`)"
+" 입력하는 경우 이 산출물 폴더를 기본 경로로 사용합니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:400
+msgid ""
+"When running an algorithm that uses a vector layer in iterative mode, the "
+"entered file path is used as the base path for all generated files, which "
+"are named using the base name and appending a number representing the index "
+"of the iteration. The file extension (and format) is used for all such "
+"generated files."
+msgstr ""
+"벡터 레이어를 반복 모드로 사용하는 알고리즘 실행 시, 입력한 파일 경로를 모든 생성 파일을 저장하는 기본 경로로 사용합니다. 즉 파일 "
+"경로의 파일명을 기본 이름으로 삼아 반복 작업 차례대로 번호를 붙일 것이라는 뜻입니다. 이런 모든 생성 파일의 포맷도 파일 경로의 파일 "
+"확장자(포맷)를 따릅니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:405
+msgid ""
+"Apart from raster layers and tables, algorithms also generate graphics and "
+"text as HTML files. These results are shown at the end of the algorithm "
+"execution in a new dialog. This dialog will keep the results produced by any"
+" algorithm during the current session, and can be shown at any time by "
+"selecting :menuselection:`Processing --> Results Viewer` from the QGIS main "
+"menu."
+msgstr ""
+"일부 알고리즘은 래스터 레이어 및 테이블 말고도, 그래픽 및 텍스트를 HTML 파일 포맷으로 생성할 수 있습니다. 이런 산출물은 알고리즘"
+" 실행 완료시 새 대화창에 표시됩니다. 이 대화창은 현재 세션 동안은 어느 알고리즘이 생성한 산출물이든 계속 가지고 있기 때문에, "
+"언제든지 QGIS 메인 메뉴에서 :menuselection:`Processing --> Results Viewer` 메뉴 옵션을 선택하면"
+" 볼 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:411
+msgid ""
+"Some external applications might have files (with no particular extension "
+"restrictions) as output, but they do not belong to any of the categories "
+"above. Those output files will not be processed by QGIS (opened or included "
+"into the current QGIS project), since most of the time they correspond to "
+"file formats or elements not supported by QGIS. This is, for instance, the "
+"case with LAS files used for LiDAR data. The files get created, but you "
+"won't see anything new in your QGIS working session."
+msgstr ""
+"일부 외부 응용 프로그램이 (특정 확장자 제약 없이) 파일을 산출할 수도 있지만, 이런 파일들은 앞에서 설명한 어느 범주에도 속하지 "
+"않습니다. QGIS는 이런 산출물 파일을 처리하지 않는데 (현재 QGIS 프로젝트에 불러오거나 포함시키지 않는데) 왜냐하면 대부분의 경우"
+" 이런 산출물 파일의 포맷이 QGIS가 지원하는 포맷 또는 항목이 아니기 때문입니다. 예를 들면, LiDAR 데이터 용 LAS 파일이 "
+"그렇습니다. 해당 파일을 생성할 수는 있어도, 현재 실행 중인 QGIS 세션에 아무것도 새로 추가되지 않습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:419
+msgid ""
+"For all the other types of output, you will find a checkbox that you can use"
+" to tell the algorithm whether to load the file once it is generated by the "
+"algorithm or not. By default, all files are opened."
+msgstr ""
+"다른 모든 산출물 유형의 경우, 알고리즘에게 파일을 생성한 다음 해당 산출물을 불러올지 여부를 알려줄 수 있는 체크박스가 존재합니다. "
+"기본적으로, 모든 파일을 불러오도록 설정돼 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:423
+msgid ""
+"Optional outputs are not supported. That is, all outputs are created. "
+"However, you can uncheck the corresponding checkbox if you are not "
+"interested in a given output, which essentially makes it behave like an "
+"optional output (in other words, the layer is created anyway, but if you "
+"leave the text box empty, it will be saved to a temporary file and deleted "
+"once you exit QGIS)."
+msgstr ""
+"산출물 선택은 지원하지 않습니다. 즉 모든 산출물을 생성한다는 뜻입니다. 하지만, 어떤 산출물을 저장하는 데 관심이 없을 경우 해당하는 "
+"체크박스를 체크 해제할 수 있는데, 본질적으로 산출물을 선택한 것처럼 작동합니다. (즉, 어쨌든 레이어를 생성하긴 하지만 텍스트란을 "
+"비워놓을 경우 임시 파일로 저장해서 QGIS 종료 시 삭제할 것이라는 뜻입니다.)"

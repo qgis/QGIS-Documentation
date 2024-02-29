@@ -1,0 +1,325 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:2
+msgid "|LS| Combining the Analyses"
+msgstr "|LS| Combinare le analisi"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:4
+msgid ""
+"Using the vectorized results of the raster analysis will allow you to select"
+" only those buildings on suitable terrain."
+msgstr ""
+"Usando i risultati vettorializzati dell'analisi raster ci permette di "
+"selezionare solo gli edifici su terreni adatti."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:7
+msgid ""
+"**The goal for this lesson:** To use the vectorized terrain results to "
+"select suitable plots."
+msgstr ""
+"**Obiettivo della lezione:** Usare i risultati vettorializzati dei terreni "
+"per selezionare i lotti adatti."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:11
+msgid "|moderate| |TY|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:161
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
+msgid "Save your current map (:file:`raster_analysis.qgs`)."
+msgstr "Salva la tua mappa attuale (:file:`raster_analysis.qgs`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:14
+msgid ""
+"Open the map which you created during the vector analysis earlier (you "
+"should have saved the file as :file:`analysis.qgs`)."
+msgstr ""
+"Apri la mappa che hai creato prima durante l'analisi vettoriale (dovresti "
+"aver salvato il file come :file:`analysis.qgs`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:16
+msgid "In the :guilabel:`Layers` panel, enable these layers:"
+msgstr "Nel pannello :guilabel:`Layers`, abilita questi layer:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid ":guilabel:`hillshade`,"
+msgstr ":guilabel:`hillshade`,"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
+msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
+msgstr ":guilabel:`solution` (o :guilabel:`buildings_over_100`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
+msgid ""
+"In addition to these layers, which should already be loaded in the map from "
+"when you worked on it before, also add the :file:`suitable_terrain.shp` "
+"dataset."
+msgstr ""
+"Oltre a questi layer, che dovrebbero essere già caricati nella mappa da "
+"quando ci hai lavorato prima, aggiungi anche l'insieme dei dati "
+":file:`suitable_terrain.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:24
+msgid ""
+"If you are missing some layers, you should find them in "
+":file:`exercise_data/residential_development/`"
+msgstr ""
+"Se ti mancano alcuni layer, dovresti trovarli in "
+":file:`exercise_data/residential_development/`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
+msgid ""
+"Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> "
+"Geoprocessing Tools`) to create a new vector layer called "
+":file:`new_solution.shp` which contains only those buildings which intersect"
+" the :guilabel:`suitable_terrain` layer."
+msgstr ""
+"Usa lo strumento :guilabel:`Intersezione...` (:menuselection:`Vettore --> "
+"Strumenti di Geoprocessing`) per creare un nuovo layer vettoriale chiamato "
+":file:`new_solution.shp` che contiene solo gli edifici che intersecano il "
+"layer :guilabel:`suitable_terrain`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
+msgid ""
+"You should now have a layer showing certain buildings as your solution, for "
+"example:"
+msgstr ""
+"Dovresti ora avere un layer che mostra alcuni edifici come soluzione, per "
+"esempio:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:38
+msgid "|moderate| |TY| Inspecting the Results"
+msgstr "|moderate| |TY| Controllare i risultati"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid ""
+"Look at each of the buildings in your :guilabel:`new_solution` layer. "
+"Compare them with the :guilabel:`suitable_terrain` layer by changing the "
+"symbology for the :guilabel:`new_solution` layer so that it has outlines "
+"only. What do you notice about some of the buildings? Are they all suitable "
+"just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
+" or why not? Which ones would you deem to be unsuitable?"
+msgstr ""
+"Guarda ogni edificio nel layer :guilabel:`new_solution`. Confrontali con il "
+"layer :guilabel:`suitable_terrain` cambiando la simbologia del layer "
+":guilabel:`new_solution` in modo che abbiano solo i bordi. Che cosa noti per"
+" alcuni edifici? Sono tutti adatti perché intersecano il layer "
+":guilabel:`suitable_terrain`? Perché o perché no? Quali ritieni non siano "
+"adatti?"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid "Answer"
+msgstr "Soluzione"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:50
+msgid ""
+"You may notice that some of the buildings in your :file:`new_solution` layer"
+" have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
+"only part of the building - and therefore only part of the property - lies "
+"on suitable terrain. We can therefore sensibly eliminate those buildings "
+"from our dataset."
+msgstr ""
+"Potresti notare che alcuni degli edifici nel tuo layer :file:`new_solution` "
+"sono stati \"affettati\" dallo strumento :guilabel: `Intersezione`. Questo "
+"mostra che solo una parte dell'edificio - e quindi solo una parte della "
+"proprietà - si trova sul terreno adatto. Possiamo quindi ragionevolmente "
+"eliminare quegli edifici dal tuo insieme di dati."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
+msgid "|moderate| |TY| Refining the Analysis"
+msgstr "|moderate| |TY| Affinare l'analisi"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
+msgid ""
+"You can see from the results that some buildings which were included were "
+"not really suitable, so we can now refine the analysis."
+msgstr ""
+"Puoi vedere dai risultati che alcuni edifici sono stati inclusi ma non sono "
+"veramente adatti, quindi possiamo affinare l'analisi."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:63
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the :guilabel:`suitable_terrain` layer. How would you "
+"achieve this? Use one or more Vector Analysis tools and remember that our "
+"buildings are all over 100m squared in size."
+msgstr ""
+"Vogliamo assicurarci che la nostra analisi restituisca solo gli edifici che "
+"rientrano interamente nel layer :guilabel:`suitable_terrain`. Come si può "
+"ottenere questo risultato? Utilizza uno o più strumenti di Analisi "
+"Vettoriale e ricorda che i nostri edifici sono tutti di dimensioni superiori"
+" a 100m quadrati."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
+msgid "At the moment, your analysis should look something like this:"
+msgstr "Al momento, la tua analisi dovrebbe assomigliare a questa:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:76
+msgid "Consider a circular area, continuous for 100 meters in all directions."
+msgstr ""
+"Si consideri un'area circolare, continua per 100 metri in tutte le "
+"direzioni."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:81
+msgid ""
+"If it is greater than 100 meters in radius, then subtracting 100 meters from"
+" its size (from all directions) will result in a part of it being left in "
+"the middle."
+msgstr ""
+"Se è più grande di 100 metri di raggio, allora sottraendo 100 metri dalla "
+"sua estensione (da tutte le direzioni) si otterrà che una parte di essa sarà"
+" lasciata al centro."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid ""
+"Therefore, you can run an *interior buffer* of 100 meters on your existing "
+":guilabel:`suitable_terrain` vector layer. In the output of the buffer "
+"function, whatever remains of the original layer will represent areas where "
+"there is suitable terrain for 100 meters beyond."
+msgstr ""
+"Pertanto, puoi eseguire un *buffer interno* di 100 metri sul tuo layer "
+"vettoriale esistente :guilabel:`suitable_terrain`. Nel risultato della "
+"funzione buffer, qualsiasi cosa rimanga del layer originale rappresenterà le"
+" aree in cui c'è terreno adatto oltre i 100 metri."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
+msgid "To demonstrate:"
+msgstr "Per dimostrarlo:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:95
+msgid ""
+"Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open "
+"the Buffer(s) dialog."
+msgstr ""
+"Vai a :menuselection: `Vettore --> Strumenti di Geoprocessing --> Buffer` "
+"per aprire la finestra di dialogo Buffer."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:97
+msgid "Set it up like this:"
+msgstr "Imposta in questo modo:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:102
+msgid ""
+"Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a buffer"
+" distance of ``-100``. (The distance is automatically in meters because your"
+" map is using a projected CRS.)"
+msgstr ""
+"Usa il layer :guilabel:`suitable_terrain` con ``10`` segmenti e una distanza"
+" del buffer di ``-100``. (La distanza è automaticamente in metri perché la "
+"tua mappa sta usando un SR proiettato)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:105
+msgid ""
+"Save the output in :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"Salva il risultato in :file:`exercise_data/residential_development/` come "
+":file:`suitable_terrain_continuous100m.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:107
+msgid ""
+"If necessary, move the new layer above your original "
+":guilabel:`suitable_terrain` layer."
+msgstr ""
+"Se necessario, sposta il nuovo layer sopra il tuo layer originale "
+":guilabel:`suitable_terrain`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:110
+msgid "Your results will look like something like this:"
+msgstr "I tuoi risultati saranno qualcosa di simile a questo:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:115
+msgid ""
+"Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector --> "
+"Research Tools --> Select by location`)."
+msgstr ""
+"Ora usa lo strumento :guilabel:`Select by Location` (:menuselection: "
+"`Vettore --> Strumenti di ricerca --> Seleziona per posizione`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:117
+msgid "Set up like this:"
+msgstr "Imposta in questo modo:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:122
+msgid ""
+"Select features in :guilabel:`new_solution` that intersect features in "
+":guilabel:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"Seleziona gli elementi in :guilabel:`new_solution` che intersecano gli "
+"elementi in :guilabel:`suitable_terrain_continuous100m.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:125
+msgid "This is the result:"
+msgstr "Questo è il risultato:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:130
+msgid ""
+"The yellow buildings are selected. Although some of the buildings fall "
+"partly outside the new :guilabel:`suitable_terrain_continuous100m` layer, "
+"they lie well within the original :guilabel:`suitable_terrain` layer and "
+"therefore meet all of our requirements."
+msgstr ""
+"Gli edifici in giallo sono selezionati. Anche se alcuni degli edifici cadono"
+" in parte al di fuori del nuovo layer "
+":guilabel:`suitable_terrain_continuous100m`, essi stanno abbastanza "
+"all'interno del layer originale :guilabel:`suitable_terrain` e quindi "
+"soddisfano tutti i nostri requisiti."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
+msgid ""
+"Save the selection under :file:`exercise_data/residential_development/` as "
+":file:`final_answer.shp`."
+msgstr ""
+"Salva la selezione sotto :file:`exercise_data/residential_development/` come"
+" :file:`final_answer.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:139
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:141
+msgid ""
+"You have now answered the original research question, and can offer an "
+"opinion (with reasons, backed by analysis) for a recommendation regarding "
+"which property to develop."
+msgstr ""
+"Ora hai risposto alla domanda iniziale, e puoi dare un'opinione (con "
+"motivazioni supportate da un'analisi) per una raccomandazione su quale "
+"proprietà sviluppare."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:146
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:148
+msgid "Next you will present these results as part of your second assignment."
+msgstr ""
+"Di seguito esporrai questi risultati come parte del tuo secondo compito."

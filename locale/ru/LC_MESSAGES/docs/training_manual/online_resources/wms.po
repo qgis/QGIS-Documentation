@@ -1,0 +1,399 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-06 09:08+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/training_manual/online_resources/wms.rst:4
+msgid "|LS| Web Mapping Services"
+msgstr "Занятие: Сервисы веб-карт"
+
+#: ../../docs/training_manual/online_resources/wms.rst:6
+msgid ""
+"A Web Mapping Service (WMS) is a service hosted on a remote server. Similar "
+"to a website, you can access it as long as you have a connection to the "
+"server. Using QGIS, you can load a WMS directly into your existing map."
+msgstr ""
+"Сервисы веб-карт (WMS) - это сервис, размещенный на удаленном сервере. Как и"
+" в случае с веб-сайтом, вы можете получить к нему доступ, если у вас есть "
+"соединение с сервером. Используя QGIS, вы можете загрузить WMS прямо на свою"
+" существующую карту."
+
+#: ../../docs/training_manual/online_resources/wms.rst:10
+msgid ""
+"From the lesson on plugins, you will remember that it's possible to load a "
+"new raster image from Google, for example.  However, this is a once-off "
+"transaction: once you have downloaded the image, it doesn't change. A WMS is"
+" different in that it's a live service that will automatically refresh its "
+"view if you pan or zoom on the map."
+msgstr ""
+"Как вы помните из урока по плагинам, можно, например, загрузить новое "
+"растровое изображение из Google. Тем не менее, это разовая операция: после "
+"того, как вы загрузили изображение, оно не меняется. WMS отличается тем, что"
+" это интерактивный сервис, который автоматически обновляет свой вид при "
+"панорамировании или масштабировании карты."
+
+#: ../../docs/training_manual/online_resources/wms.rst:16
+msgid ""
+"**The goal for this lesson:** To use a WMS and understand its limitations."
+msgstr "**Цель этого урока:** Использовать WMS и понять ее ограничения."
+
+#: ../../docs/training_manual/online_resources/wms.rst:19
+msgid "|basic| |FA| Loading a WMS Layer"
+msgstr "|basic| Идем дальше: Загружаем слои WMS"
+
+#: ../../docs/training_manual/online_resources/wms.rst:282
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wms.rst:21
+msgid ""
+"For this exercise, you can either use the basic map you made at the start of"
+" the course, or just start a new map and load some existing layers into it. "
+"For this example, we used a new map and loaded the original "
+":guilabel:`places`, :guilabel:`landuse` and :guilabel:`protected_areas` "
+"layers and adjusted the symbology:"
+msgstr ""
+"Для выполнения данного упражнения вы можете использовать либо базовую карту,"
+" которую вы создали в начале курса, или же просто создать новую карту и "
+"загрузить в нее некоторые существующие слои. В приведенном примере мы "
+"использовали новую карту и загрузили исходные слои :guilabel:`places`, "
+":guilabel:`landuse` и :guilabel:`protected_areas` и скорректировали условные"
+" обозначения:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:31
+msgid ""
+"Load these layers into a new map, or use your original map with only these "
+"layers visible."
+msgstr ""
+"Загрузите эти слои на новую карту или используйте свою исходную карту с "
+"только этими слоями."
+
+#: ../../docs/training_manual/online_resources/wms.rst:33
+msgid ""
+"Before starting to add the WMS layer, deactivate \"on the fly\" projection "
+"(:menuselection:`Project --> Properties... --> CRS` tab, check :guilabel:`No"
+" CRS (or unknown/non-Earth projection)`. This may cause the layers to no "
+"longer overlap properly, but don't worry: we'll fix that later."
+msgstr ""
+"Перед тем, как добавить слой WMS, отключите проекцию \"на лету\" (вкладка "
+":menuselection:`Project --> Properties... --> CRS`, отметить :guilabel:`No "
+"CRS (or unknown/non-Earth projection)`. Это может привести к тому, что слои "
+"больше не будут правильно перекрываться, но не волнуйтесь: мы это исправим "
+"позже."
+
+#: ../../docs/training_manual/online_resources/wms.rst:38
+msgid ""
+"To add WMS layers, click on the |dataSourceManager| button to open the "
+":guilabel:`Data Source Manager` dialog and enable the |addWmsLayer| "
+":guilabel:`WMS/WMTS` tab."
+msgstr ""
+"Для того, чтобы добавить слои WMS, кликните на кнопку  |dataSourceManager| "
+"для того, чтобы открыть диалоговое окно :guilabel:`Data Source Manager` и "
+"включить вкладку |addWmsLayer| :guilabel:`WMS/WMTS`."
+
+#: ../../docs/training_manual/online_resources/wms.rst:283
+msgid "dataSourceManager"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wms.rst:280
+msgid "addWmsLayer"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wms.rst:45
+msgid ""
+"Remember how you connected to a SpatiaLite or GeoPackage database at the "
+"beginning of the course. The :guilabel:`landuse`, :guilabel:`buildings`, and"
+" :guilabel:`roads` layers are stored in a database. To use those layers, you"
+" first needed to connect to the database. Using a WMS is similar, with the "
+"exception that the layers are on a remote server."
+msgstr ""
+"Вспомните, как вы подключались к базе данных SpatiaLite или GeoPackage в "
+"начале курса. Слои :guilabel:`landuse`, :guilabel:`buildings` и "
+":guilabel:`roads` хранятся в базе данных. Для того, чтобы использовать эти "
+"слои, вам надо было сперва подключиться к базе данных. WMS используется "
+"аналогичным образом, за исключением того, что слои находятся на удаленном "
+"сервере."
+
+#: ../../docs/training_manual/online_resources/wms.rst:51
+msgid ""
+"To create a new connection to a WMS, click on the :guilabel:`New` button."
+msgstr ""
+"Для того, чтобы создать новое подключение к WMS, надо кликнуть на кнопку "
+":guilabel:`New`."
+
+#: ../../docs/training_manual/online_resources/wms.rst:53
+msgid ""
+"You'll need a WMS address to continue. There are several free WMS servers "
+"available on the Internet. One of these is `terrestris "
+"<https://ows.terrestris.de/osm/service>`_, which makes use of the "
+"`OpenStreetMap <https://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset."
+msgstr ""
+"Для продолжения работы вам нужен адрес WMS. Существует несколько бесплатных "
+"серверов WMS. Один из них `terrestris `_ , который использует набор данных "
+"`OpenStreetMap `_  ."
+
+#: ../../docs/training_manual/online_resources/wms.rst:58
+msgid "To make use of this WMS, set it up in your current dialog, like this:"
+msgstr ""
+"Для того, чтобы воспользоваться этим WMS, настройте ее в вашем текущем "
+"диалоговом окне следующим образом:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:63
+msgid "The value of the :guilabel:`Name` field should be ``terrestris``."
+msgstr "Значение поля :guilabel:`Name` должно быть ``terrestris``."
+
+#: ../../docs/training_manual/online_resources/wms.rst:64
+msgid ""
+"The value of the :guilabel:`URL` field should be "
+"``https://ows.terrestris.de/osm/service``."
+msgstr ""
+"Значение поля :guilabel:`URL` должно быть "
+"``https://ows.terrestris.de/osm/service``."
+
+#: ../../docs/training_manual/online_resources/wms.rst:66
+msgid "Click :guilabel:`OK`. You should see the new WMS server listed:"
+msgstr ""
+"Кликните на кнопку :guilabel:`OK`. Вы должны увидеть в списке новый WMS-"
+"сервер:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:71
+msgid ""
+"Click :guilabel:`Connect`. In the list below, you should now see these new "
+"entries loaded:"
+msgstr ""
+"Кликните на :guilabel:`Connect`. В списке ниже вы должны увидеть эти новые "
+"загруженные записи:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:77
+msgid "These are all the layers hosted by this WMS server."
+msgstr "Это все слои, размещенные на этом сервере WMS."
+
+#: ../../docs/training_manual/online_resources/wms.rst:98
+msgid ""
+"Click :guilabel:`OK`. The Coordinate Reference System associated with the "
+"entry has changed."
+msgstr ""
+"Кликните на кнопку :guilabel:`OK`. Система координат, связанная с записью, "
+"изменилась."
+
+#: ../../docs/training_manual/online_resources/wms.rst:103
+msgid ""
+"Close the :guilabel:`Data Source Manager` dialog if not done automatically"
+msgstr ""
+"Закройте диалоговое окно :guilabel:`Data Source Manager`, если оно не "
+"закрылась автоматически."
+
+#: ../../docs/training_manual/online_resources/wms.rst:104
+msgid ""
+"In the :guilabel:`Layers` panel, click and drag it to the bottom of the "
+"list."
+msgstr "На панели  :guilabel:`Layers` кликните и перетащите в конец списка."
+
+#: ../../docs/training_manual/online_resources/wms.rst:105
+msgid ""
+"Zoom out in order to get a global view of the layers. You will notice that "
+"your layers aren't located correctly (near west of Africa). This is because "
+"\"on the fly\" projection is disabled."
+msgstr ""
+"Уменьшите масштаб для того, чтобы получить общий вид слоев. Вы заметите, что"
+" ваши слои расположены неправильно (рядом с западной Африкой). Это произошло"
+" потому, что проецирование «на лету» отключено."
+
+#: ../../docs/training_manual/online_resources/wms.rst:113
+msgid ""
+"Let's enable the reprojection again, but using the same projection as the "
+":guilabel:`OpenStreetMap WMS` layer, which is :guilabel:`WGS 84 / Pseudo "
+"Mercator`."
+msgstr ""
+"Давайте снова включим пере-проецирование, но используя ту же проекцию, что и"
+" в слое :guilabel:`OpenStreetMap WMS` т.е.  :guilabel:`WGS 84 / Pseudo "
+"Mercator`."
+
+#: ../../docs/training_manual/online_resources/wms.rst:116
+msgid "Open the :menuselection:`Project --> Properties... --> CRS` tab"
+msgstr "Откройте вкладку :menuselection:`Project --> Properties... --> CRS`."
+
+#: ../../docs/training_manual/online_resources/wms.rst:117
+msgid "Uncheck :guilabel:`No CRS (or unknown/non-Earth projection)`"
+msgstr "Снимите флажок :guilabel:`No CRS (or unknown/non-Earth projection)`."
+
+#: ../../docs/training_manual/online_resources/wms.rst:118
+msgid "Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list."
+msgstr "Выберите :guilabel:`WGS 84 / Pseudo Mercator` из списка."
+
+#: ../../docs/training_manual/online_resources/wms.rst:123
+msgid "Click :guilabel:`OK`."
+msgstr "Кликните на кнопку :guilabel:`OK`."
+
+#: ../../docs/training_manual/online_resources/wms.rst:132
+msgid ""
+"Note how the WMS layer's streets and our own streets overlap. That's a good "
+"sign!"
+msgstr ""
+"Обратите внимание, как перекрываются улицы слоя WMS и наши улицы. Это "
+"хороший знак!"
+
+#: ../../docs/training_manual/online_resources/wms.rst:136
+msgid "The nature and limitations of WMS"
+msgstr "Сущность и ограничения WMS"
+
+#: ../../docs/training_manual/online_resources/wms.rst:138
+msgid ""
+"By now you may have noticed that this WMS layer actually has many features "
+"in it. It has streets, rivers, nature reserves, and so on. What's more, even"
+" though it looks like it's made up of vectors, it seems to be a raster, but "
+"you can't change its symbology. Why is that?"
+msgstr ""
+"К настоящему времени вы, возможно, заметили, что этот слой WMS на самом деле"
+" имеет много функций. Здесь есть улицы, реки, заповедники и так далее. Даже "
+"если он выглядит так, как будто он состоит из векторов, он больше смахивает "
+"на растр, но вы не можете изменить его условные обозначения. Почему?"
+
+#: ../../docs/training_manual/online_resources/wms.rst:143
+msgid ""
+"This is how a WMS works: it's a map, similar to a normal map on paper, that "
+"you receive as an image. What usually happens is that you have vector "
+"layers, which QGIS renders as a map. But using a WMS, those vector layers "
+"are on the WMS server, which renders it as a map and sends that map to you "
+"as an image.  QGIS can display this image, but can't change its symbology, "
+"because all that is handled on the server."
+msgstr ""
+"Так работает WMS: это карта, похожая на обычную бумажную карту, которую вы "
+"получаете в виде изображения. У вас есть векторные слои, которые QGIS "
+"отображает как карту. Но при использовании WMS эти векторные слои находятся "
+"на сервере WMS, который отображает их как карту и выдает эту карту вам как "
+"изображение. QGIS может показать это изображение, но не может изменять его "
+"условные обозначения, потому что все это обрабатывается на сервере."
+
+#: ../../docs/training_manual/online_resources/wms.rst:150
+msgid ""
+"This has several advantages, because you don't need to worry about the "
+"symbology. It's already worked out, and should be nice to look at on any "
+"competently designed WMS."
+msgstr ""
+"Это дает вам несколько преимуществ, вам не нужно беспокоиться об условных "
+"обозначениях. Они уже отработаны и на них можно посмотреть на любой грамотно"
+" спроектированной WMS."
+
+#: ../../docs/training_manual/online_resources/wms.rst:154
+msgid ""
+"On the other hand, you can't change the symbology if you don't like it, and "
+"if things change on the WMS server, then they'll change on your map as well."
+" This is why you sometimes want to use a Web Feature Service (WFS) instead, "
+"which gives you vector layers separately, and not as part of a WMS-style "
+"map."
+msgstr ""
+"С другой стороны, вы не сможете изменить условные обозначения, если они вам "
+"не нравятся, и если что-то меняется на сервере WMS, они также поменяются на "
+"вашей карте. Поэтому иногда вам захочется использовать вместо этого веб-"
+"сервисы объектов (WFS), которые предоставляют векторные слои отдельно, а не "
+"как часть карты в стиле WMS."
+
+#: ../../docs/training_manual/online_resources/wms.rst:164
+msgid "|basic| |TY|"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wms.rst:192
+#: ../../docs/training_manual/online_resources/wms.rst:223
+msgid "|hard| |TY|"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wms.rst:285
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wms.rst:194
+msgid "Part of the difficulty of using WMS is finding a good (free) server."
+msgstr ""
+"Сложность использования WMS заключается в том, чтобы найти хороший "
+"(бесплатный) сервер."
+
+#: ../../docs/training_manual/online_resources/wms.rst:196
+msgid ""
+"Find a new WMS at `directory.spatineo.com "
+"<https://directory.spatineo.com/>`_ (or elsewhere online). It must not have "
+"associated fees or restrictions, and must have coverage over the "
+"|majorUrbanName| study area."
+msgstr ""
+"Найдите новую WMS на `directory.spatineo.com `_   (или еще где-то в "
+"интернете) без надобности оплаты каких-либо услуг или без ограничений и он "
+"должен охватывать всю территорию исследования |majorUrbanName|."
+
+#: ../../docs/training_manual/online_resources/wms.rst:200
+msgid ""
+"Remember that what you need in order to use a WMS is only its URL (and "
+"preferably some sort of description)."
+msgstr ""
+"Помните, что для использования WMS вам нужен лишь адрес сайта (и желательно "
+"какое-то описание)."
+
+#: ../../docs/training_manual/online_resources/wms.rst:231
+msgid ""
+"Hide all other WMS layers to prevent them from rendering unnecessarily in "
+"the background."
+msgstr ""
+"Скройте все остальные слои WMS, чтобы они не отображались в фоновом режиме "
+"без надобности."
+
+#: ../../docs/training_manual/online_resources/wms.rst:248
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wms.rst:250
+msgid ""
+"Using a WMS, you can add inactive maps as backdrops for your existing map "
+"data."
+msgstr ""
+"Используя WMS, вы можете добавлять неактивные карты в качестве фона для "
+"ваших существующих картографических данных."
+
+#: ../../docs/training_manual/online_resources/wms.rst:253
+msgid "|FR|"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wms.rst:255
+msgid "`Spatineo Directory <https://directory.spatineo.com/>`_"
+msgstr "`Spatineo Directory `_"
+
+#: ../../docs/training_manual/online_resources/wms.rst:256
+msgid ""
+"`OpenStreetMap.org list of WMS servers "
+"<https://wiki.openstreetmap.org/wiki/WMS>`_"
+msgstr "`OpenStreetMap.org list of WMS servers `_"
+
+#: ../../docs/training_manual/online_resources/wms.rst:260
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wms.rst:262
+msgid ""
+"Now that you've added an inactive map as a backdrop, you'll be glad to know "
+"that it's also possible to add features (such as the other vector layers you"
+" added before). Adding features from remote servers is possible by using a "
+"Web Feature Service (WFS). That's the topic of the next lesson."
+msgstr ""
+"После того как вы добавили неактивную карту в качестве фона, вы будете рады "
+"узнать, что вы также можете добавлять объекты (например, другие векторные "
+"слои, которые вы добавляли ранее). Добавление объектов с удаленных серверов "
+"возможно с помощью веб-сервисов объектов (WFS). Это тема следующего урока."

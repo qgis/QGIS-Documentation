@@ -1,0 +1,513 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:2
+msgid "|LS| Creating a Dynamic Print Layout"
+msgstr "Занятие: Создание динамического макета печати"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:4
+msgid ""
+"Now that you have learned to create a basic map layout we go a step further "
+"and create a map layout that adapts dynamically to our map extent and to the"
+" page properties, e.g. when you change the size of the page. Also, the date "
+"of creation will adapt dynamically."
+msgstr ""
+"Теперь, когда вы научились создавать базовый макет карты, мы сделаем еще "
+"один шаг и создадим макет карты, который динамически адаптируется к размеру "
+"карты и свойствам страницы, например, при изменении размера страницы. Также "
+"дата создания будет динамически адаптироваться."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:11
+msgid "|moderate| |FA| Creating the dynamic map canvas"
+msgstr "|moderate| Идем дальше: Создаем динамическое Полотно Карты"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:332
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:13
+msgid ""
+"Load the ESRI Shapefile format datasets :file:`protected_areas.shp`, "
+":file:`places.shp`, :file:`rivers.shp` and :file:`water.shp` into the map "
+"canvas and adapt its properties to suit your own convenience."
+msgstr ""
+"Загрузите наборы данных формата ESRI Shapefile :file:`protected_areas.shp`, "
+":file:`places.shp`, :file:`rivers.shp` and :file:`water.shp` в Полотно Карты"
+" и настройте их свойства для вашего удобства."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:333
+msgid "newLayout"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:21
+msgid ""
+"We want to create a map layout consisting of a header and a map of the "
+"region near Swellendam, South Africa. The layout should have a margin of 7.5"
+" mm and the header should be 36mm high."
+msgstr ""
+"Мы хотим создать макет карты, состоящий из заголовка и карты региона возле "
+"Свеллендама, Южная Африка. У макета должны быть края 7,5 мм и высота "
+"заголовка - 36 мм."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:25
+msgid ""
+"Create a map item called ``main map`` on the canvas and go to the "
+":guilabel:`Layout` panel. Scroll down to the :guilabel:`Variables` section "
+"and find the :guilabel:`Layout` part. Here we set some variables you can use"
+" all over the dynamic print layout. Go to the :guilabel:`Layout` panel and "
+"scroll down to the :guilabel:`Variables` section. The first variable will "
+"define the margin. Press the |symbologyAdd| button and type in the name "
+"``sw_layout_margin``. Set the value to ``7.5``. Press the |symbologyAdd| "
+"button again and type in the name ``sw_layout_height_header``. Set the value"
+" to ``36``."
+msgstr ""
+"Создайте элемент карты называемый ``main map`` в полотне карты  и перейдите "
+"на панель :guilabel:`Layout`. Прокрутите вниз до раздела Переменные "
+":guilabel:`Variables` и найдите раздел :guilabel:`Layout`. Здесь мы "
+"установим некоторые переменные, которые вы можете использовать на всем "
+"динамическом макете для печати. Перейдите на панель :guilabel:`Layout` и "
+"прокрутите вниз до раздела :guilabel:`Variables`. Первая переменная будет "
+"определять края. Кликните на кнопку  |symbologyAdd| и введите в строке имени"
+" ``sw_layout_margin``. Установите значение ``7.5``. Снова кликните на "
+"|symbologyAdd| и введите имя ``sw_layout_height_header``. Установите "
+"значение ``36``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:341
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:40
+msgid ""
+"Now you are ready to create the position and the size of the map canvas "
+"automatically by means of the variables. Make sure that your map item is "
+"selected, go to the :guilabel:`Item Properties` panel, scroll down to and "
+"open the :guilabel:`Position and Size` section. Click the "
+"|dataDefineExpressionOn| :sup:`Data defined override` for :guilabel:`X` and "
+"from the :guilabel:`Variables` entry, choose ``@sw_layout_margin``."
+msgstr ""
+"Теперь вы готовы автоматически создать положение и размер полотна карты с "
+"помощью переменных. Убедитесь, что ваш элемент карты выбран, перейдите на "
+"панель :guilabel:`Item Properties` , прокрутите вниз и откройте раздел "
+"Положение и размер :guilabel:`Position and Size`. Кликните на "
+"|dataDefineExpressionOn| :sup:`Data defined override` для :guilabel:`X` и из"
+" :guilabel:`Variables` выберите ``@sw_layout_margin``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:48
+msgid ""
+"Click the |dataDefineExpressionOn| :sup:`Data defined override` for "
+":guilabel:`Y`, choose :guilabel:`Edit...` and type in the formula::"
+msgstr ""
+"Кликните на |dataDefineExpressionOn| :sup:`Data defined override` для "
+":guilabel:`Y`, и выберите :guilabel:`Edit...` и введите формулу::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:54
+msgid ""
+"You can create the size of the map item by using the variables for "
+":guilabel:`Width` and :guilabel:`Height`. Click the |dataDefineExpressionOn|"
+" :sup:`Data defined override` for :guilabel:`Width` and choose "
+":guilabel:`Edit ...` again. Fill in the formula::"
+msgstr ""
+"Вы можете задать размер элемента карты, используя переменные для ширины и "
+"высоты :guilabel:`Width` и :guilabel:`Height`. Клик на "
+"|dataDefineExpressionOn| :sup:`Data defined override` для :guilabel:`Width` "
+"и снова выберите :guilabel:`Edit ...`. Заполните формулу::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:62
+msgid ""
+"Click the |dataDefineExpressionOn| :sup:`Data defined override` for "
+":guilabel:`Height` and choose :guilabel:`Edit ...`. Here fill in the "
+"formula::"
+msgstr ""
+"Кликните на  |dataDefineExpressionOn| :sup:`Data defined override` для "
+":guilabel:`Height` и снова выберите   :guilabel:`Edit ...`. Заполните "
+"формулу::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:68
+msgid ""
+"We will also create a grid containing the coordinates of the main canvas map"
+" extent. Go to :guilabel:`Item Properties` again and choose the "
+":guilabel:`Grids` section. Insert a grid by clicking the |symbologyAdd| "
+"button. Click on :guilabel:`Modify grid ...` and set the "
+":guilabel:`Interval` for :guilabel:`X`, :guilabel:`Y` and :guilabel:`Offset`"
+" according to the map scale you chose in the QGIS main canvas. The "
+":guilabel:`Grid type` :guilabel:`Cross` is very well suited for our "
+"purposes."
+msgstr ""
+"Мы также создадим сетку, в которой содержатся координаты всей основной "
+"карты. Снова перейдите в :guilabel:`Item Properties` и выберите раздел "
+":guilabel:`Grids`. Вставьте сетку, кликнув на |symbologyAdd|. Кликните на "
+":guilabel:`Modify grid ...` и установите :guilabel:`Interval` для "
+":guilabel:`X`, :guilabel:`Y` и :guilabel:`Offset` в соответствии с масштабом"
+" карты, который вы выбрали на основном полотне QGIS. Перекрестный тип сетки "
+":guilabel:`Grid type` :guilabel:`Cross` очень хорошо подходит для наших "
+"целей."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:81
+msgid "|moderate| |FA| Creating the dynamic header"
+msgstr "|moderate| Идем дальше: Создаем динамический заголовок "
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:83
+msgid ""
+"Insert a rectangle which will contain the header with the |addBasicShape| "
+":sup:`Add Shape` button. In the :guilabel:`Items` panel enter the name "
+"``header``."
+msgstr ""
+"Вставьте прямоугольник, в котором будет заголовок, с помощью кнопки "
+"|addBasicShape| :sup:`Add Shape`. Введите имя заголовка ``header`` на панели"
+"  :guilabel:`Items`."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:322
+msgid "addBasicShape"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:86
+msgid ""
+"Again, go to the :guilabel:`Item Properties` and open the "
+":guilabel:`Position and Size` section. Using |dataDefineExpressionOn| "
+":sup:`Data defined override`, choose the ``sw_layout_margin`` variable for "
+":guilabel:`X` as well as for :guilabel:`Y`. :guilabel:`Width` shall be "
+"defined by the expression::"
+msgstr ""
+"Снова перейдите к :guilabel:`Item Properties` и откройте раздел "
+":guilabel:`Position and Size`. Используя |dataDefineExpressionOn| :sup:`Data"
+" defined override`, выберите переменную ``sw_layout_margin`` как для "
+":guilabel:`X`, так и для :guilabel:`Y`. Ширина :guilabel:`Width` должна "
+"определяться следующим выражением::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:95
+msgid "and :guilabel:`Height` by the ``sw_layout_height_header`` variable."
+msgstr "а Высота :guilabel:`Height` переменной ``sw_layout_height_header``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:96
+msgid ""
+"We will insert a horizontal line and two vertical lines to divide the header"
+" into different sections using the |addNodesShape| :sup:`Add Node Item`. "
+"Create a horizontal line and two vertical lines and name them ``Horizontal "
+"line``, ``Vertical line 1`` ``Vertical line 2``."
+msgstr ""
+"Мы вставим горизонтальную линию и две вертикальные линии, чтобы разделить "
+"заголовок на разные секции при помощи Добавить элемент узла |addNodesShape| "
+":sup:`Add Node Item`. Создайте горизонтальную линию две вертикальные линии "
+"назовите их ``Horizontal line``, ``Vertical line 1`` ``Vertical line 2``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:326
+msgid "addNodesShape"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:102
+msgid "For the horizontal line:"
+msgstr "Для горизонтальной линии:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:104
+msgid "Set :guilabel:`X` to the variable ``sw_layout_margin``"
+msgstr "Задайте :guilabel:`X` для переменной ``sw_layout_margin``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:105
+msgid "Set the expression for :guilabel:`Y` to::"
+msgstr "Задайте выражение для :guilabel:`Y`::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:109
+msgid "Set the expression for :guilabel:`Width` to::"
+msgstr "Задайте выражение для :guilabel:`Width`::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:113
+msgid "For the first vertical line:"
+msgstr "Для первой вертикальной линии:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:115
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:127
+msgid "Set the expression for :guilabel:`X` to::"
+msgstr "Задайте выражение для :guilabel:`X`::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:119
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:131
+msgid "Set :guilabel:`Y` to the variable ``sw_layout_margin``"
+msgstr "Задайте :guilabel:`Y` для переменной ``sw_layout_margin``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:120
+msgid ""
+"The height must be the same as the header we created, so set "
+":guilabel:`Height` to the variable ``sw_layout_height_header``."
+msgstr ""
+"Высота должна совпадать с созданным нами заголовком, поэтому задайте Высоту "
+":guilabel:`Height` для переменной ``sw_layout_height_header``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:124
+msgid "The second vertical line is placed to the left of the first one."
+msgstr "Вторая вертикальная линия, установлена слева от первой."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:132
+msgid ""
+"The height shall be the same as the other vertical line, so set "
+":guilabel:`Height` to the variable ``sw_layout_height_header``."
+msgstr ""
+"Высота должна совпадать с другой вертикальной линией, поэтому задайте "
+":guilabel:`Height` для переменной ``sw_layout_height_header``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:136
+msgid ""
+"The figure below shows the structure of our dynamic layout. We will fill the"
+" areas created by the lines with some elements."
+msgstr ""
+"На рисунке ниже показана структура нашего динамического макета. Мы заполним "
+"некоторыми элементами те области, которые созданы линиями."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:143
+msgid "|moderate| |FA| Creating labels for the dynamic header"
+msgstr "|moderate| Идем дальше: Создаем надписи для динамического заголовка"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:145
+msgid ""
+"The title of your QGIS project can be included automatically. The title is "
+"set in the :guilabel:`Project Properties`. Insert a label with the |label| "
+":sup:`Add Label` button and enter the name ``project title (variable)``. In "
+"the :guilabel:`Main Properties` of the :guilabel:`Items Properties` Panel "
+"enter the expression::"
+msgstr ""
+"Название вашего проекта QGIS может включаться автоматически. Название "
+"заголовка задается в Свойствах проекта :guilabel:`Project Properties`. "
+"Вставьте надпись с помощью кнопки |label| :sup:`Add Label` и введите имя "
+"``project title (variable)``. В Основных свойствах :guilabel:`Main "
+"Properties` на панели Свойств элементов :guilabel:`Items Properties` введите"
+" следующее выражение::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:154
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:183
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:210
+msgid "Set the position of the label."
+msgstr "Задайте положение надписи:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:156
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:185
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:212
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:235
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:255
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:281
+msgid "For :guilabel:`X`, use the expression::"
+msgstr "Для :guilabel:`X`, используйте выражение::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:160
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:189
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:216
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:239
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:259
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:285
+msgid "For :guilabel:`Y`, use the expression::"
+msgstr "Для :guilabel:`Y`, используйте выражение::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:164
+msgid "For :guilabel:`Width`, use the expression::"
+msgstr "Для :guilabel:`Width`, используйте выражение::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:168
+msgid "Enter ``11.25`` for :guilabel:`Height`"
+msgstr "Введите ``11.25`` для :guilabel:`Height`."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:170
+msgid "Under :guilabel:`Appearance` set the Font size to 16 pt."
+msgstr ""
+"В разделе Внешний вид :guilabel:`Appearance` установите размер шрифта 16 pt."
+" "
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:172
+msgid ""
+"The second label will include a description of the map you created. Again, "
+"insert a label and name it ``map description``. In the :guilabel:`Main "
+"Properties` enter the text ``map description``. In the :guilabel:`Main "
+"Properties` we will also include::"
+msgstr ""
+"Вторая надпись содержит описание созданной вами карты. Повторно введите "
+"надпись и назовите ее ``map description``. Описание карты. В :guilabel:`Main"
+" Properties` введите текст ``map description``. Мы также включим в "
+":guilabel:`Main Properties`::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:180
+msgid ""
+"Here we used two ``Date and Time`` functions (``now`` and ``format_date``)."
+msgstr ""
+"Здесь мы использовали две функции ``Date and Time`` functions (``now`` и "
+"``format_date``)."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:193
+msgid ""
+"The third label will include information about your organisation. First we "
+"will create some variables in the :guilabel:`Variables` menu of the "
+":guilabel:`Item Properties`. Go to the :guilabel:`Layout` menu, click the "
+"|symbologyAdd| button each time and enter the names ``o_department``, "
+"``o_name`` , ``o_adress`` and ``o_postcode``. In the second row enter the "
+"information about your organisation. We will use these variables in the "
+":guilabel:`Main Properties` section."
+msgstr ""
+"Третья надпись включает информацию о вашей организации. Сначала мы создадим "
+"несколько переменных в меню :guilabel:`Variables` из :guilabel:`Item "
+"Properties`. Перейдите в меню :guilabel:`Layout` каждый раз кликайте на "
+"кнопку |symbologyAdd| и вводите названия  ``o_department``, ``o_name`` , "
+"``o_adress`` и ``o_postcode``. Во второй строке введите информацию о вашей "
+"организации. Мы будем применять эти переменные в разделе :guilabel:`Main "
+"Properties`."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:203
+msgid "In :guilabel:`Main Properties` enter::"
+msgstr "В разделе :guilabel:`Main Properties` введите следующее::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:220
+msgid "For :guilabel:`Width`, use ``49.00``"
+msgstr "Для :guilabel:`Width` используйте ``49.00``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:221
+msgid "For :guilabel:`Height`, use the expression::"
+msgstr "Для :guilabel:`Height` используйте выражение::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:228
+msgid "|moderate| |FA| Adding pictures to the dynamic header"
+msgstr ""
+"|moderate| Идем дальше: Добавляем изображения к динамическому заголовку"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:230
+msgid ""
+"Use the |addImage| :sup:`Add Picture` button to place a picture above your "
+"label ``organisation information``. After entering the name ``organisation "
+"logo`` define the position and size of the logo:"
+msgstr ""
+"Используйте кнопку |addImage| :sup:`Add Picture`, чтобы разместить картинку "
+"над вашей надписью  ``organisation information``. После ввода названия "
+"``organisation logo``, определите положение и размер логотипа:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:324
+msgid "addImage"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:243
+msgid "For :guilabel:`Width`, use ``39.292``"
+msgstr "Для :guilabel:`Width` используйте ``39.292``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:244
+msgid "For :guilabel:`Height`, use ``9.583``"
+msgstr "Для :guilabel:`Height` используйте ``9.583``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:246
+msgid ""
+"To include a logo of your organisation you have to save your logo under your"
+" home directory and enter the path under :menuselection:`Main Properties -->"
+" Image Source`."
+msgstr ""
+"Чтобы добавить логотип вашей организации, вы должны сохранить его в своем "
+"домашнем каталоге и ввести путь в :menuselection:`Main Properties --> Image "
+"Source`."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:249
+msgid ""
+"Our layout still needs a north arrow. This will also be inserted by using "
+"|northArrow| :sup:`Add North Arrow`. We will use the default north arrow. "
+"Define the position:"
+msgstr ""
+"Нашему макету по-прежнему нужна стрелка, указывающая на север. Стрелку можно"
+" вставить также с помощью Добавить стрелку на север |northArrow| :sup:`Add "
+"North Arrow`. Мы будем использовать стрелку на север по умолчанию. "
+"Определите положение:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:335
+msgid "northArrow"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:263
+msgid "For :guilabel:`Width`, use ``21.027``"
+msgstr "Для :guilabel:`Width` используйте ``21.027``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:264
+msgid "For :guilabel:`Height`, use ``21.157``"
+msgstr "Для :guilabel:`Height` используйте ``21.157``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:267
+msgid "|moderate| |FA| Creating the scalebar of the dynamic header"
+msgstr "|moderate| Идем дальше: Создаем шкалу динамического заголовка"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:269
+msgid ""
+"To insert a scalebar in the header click on |scaleBar| :sup:`Add Scale Bar` "
+"and place it in the rectangle above the north arrow. In :guilabel:`Map` "
+"under the :guilabel:`Main Properties` choose your ``main map(Map 1)``. This "
+"means that the scale changes automatically according to the extent you "
+"choose in the QGIS main canvas. Choose the :guilabel:`Style` "
+":guilabel:`Numeric`. This means that we insert a simple scale without a "
+"scalebar. The scale still needs a position and size."
+msgstr ""
+"Чтобы вставить шкалу в заголовок, кликните на кнопку |scaleBar| :sup:`Add "
+"Scale Bar` и поместите ее в прямоугольник над стрелкой на север. В "
+":guilabel:`Map` в разделе Основные свойства :guilabel:`Main Properties` "
+"выберите ``main map(Map 1)``. Это означает, что масштаб изменяется "
+"автоматически согласно размеру \\протяженности, которую вы выбрали на "
+"основном полотне QGIS. Выберите :guilabel:`Style` :guilabel:`Numeric`. Это "
+"означает, что мы вводим простой масштаб без шкалы. Так как для шкалы нужно "
+"положение и размер."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:339
+msgid "scaleBar"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:289
+msgid "For :guilabel:`Width`, use ``25``"
+msgstr "Для :guilabel:`Width` используйте ``25``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:290
+msgid "For :guilabel:`Height`, use ``8``"
+msgstr "Для :guilabel:`Height` используйте ``8``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:291
+msgid "Place the ``Reference point`` in the center."
+msgstr "Разместите ``Reference point`` по центру."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:293
+msgid ""
+"Congratulations! You have created your first dynamic map layout. Take a look"
+" at the layout and check if everything looks the way you want it! The "
+"dynamic map layout reacts automatically when you change the :guilabel:`page "
+"properties`. For example, if you change the page size from DIN A4 to DIN A3,"
+" click the |refresh| :sup:`Refresh view` button and the page design is "
+"adapted."
+msgstr ""
+"Поздравляю! Вы создали свой первый динамический макет карты. Взгляните на "
+"макет и проверьте, все ли выглядит так, как вы хотели! Макет динамической "
+"карты автоматически реагирует на изменение Свойств страницы :guilabel:`page "
+"properties`. Например, если вы измените размер страницы с DIN A4 на DIN A3, "
+"кликните на Обновить просмотр :sup:`Refresh view`, и дизайн страницы будет "
+"адаптирован."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:337
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:306
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:308
+msgid ""
+"On the next page, you will be given an assignment to complete. This will "
+"allow you to practice the techniques you have learned so far."
+msgstr ""
+"На следующей странице вам будет предложено выполнить задание. Это позволит "
+"вам практиковать методы, которые вы уже изучили."

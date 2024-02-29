@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# DiGro, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-05 07:34+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: DiGro, 2023\n"
+"Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/processing/standalone.rst:4
+msgid "Using processing from the command line"
+msgstr "Processing gebruiken vanaf de opdrachtregel"
+
+#: ../../docs/user_manual/processing/standalone.rst:11
+msgid ""
+"QGIS comes with a tool called ``QGIS Processing Executor`` which allows you "
+"to run Processing algorithms and models (built-in or provided by plugins) "
+"directly from the command line without starting QGIS Desktop itself."
+msgstr ""
+"QGIS heeft een gereedschap, genaamd ``QGIS Processing Executor``, dat u in "
+"staat stelt algoritmes en modellen van Processing (ingebouwd of verschaft "
+"via plug-ins) direct vanaf de opdrachtregel uit te voeren, zonder QGIS "
+"Desktop zelf te moeten starten."
+
+#: ../../docs/user_manual/processing/standalone.rst:15
+msgid "From a command line tool, run ``qgis_process`` and you should get:"
+msgstr ""
+"Voer, vanuit een programma voor de opdrachtregel, ``qgis_process`` uit en u "
+"zou moeten krijgen:"
+
+#: ../../docs/user_manual/processing/standalone.rst:48
+msgid ""
+"Only installed plugins that advertise ``hasProcessingProvider=yes`` in their"
+" :file:`metadata.txt` file are recognized and can be activated or loaded by "
+"qgis_process tool."
+msgstr ""
+"Alleen geïnstalleerde plug-ins die in hun bestand :file:`metadata.txt` "
+"hebben opgenomen ``hasProcessingProvider=yes`` worden herkend en kunnen "
+"worden geactiveerd of geladen door het gereedschap qgis_process."
+
+#: ../../docs/user_manual/processing/standalone.rst:52
+msgid ""
+"Before calling qgis_process on a system without window manager (e.g. a "
+"headless server), you should set::"
+msgstr ""
+"Voordat u qgis_process aanroept op een systeem zonder vensterbeheer (bijv. "
+"een headless server),  zou u moeten instellen::"
+
+#: ../../docs/user_manual/processing/standalone.rst:58
+msgid ""
+"The command ``list`` can be used to get a list of all available providers "
+"and algorithms."
+msgstr ""
+"De opdracht ``list`` kan worden gebruikt om een lijst met alle beschikbare "
+"providers en algoritmes op te halen."
+
+#: ../../docs/user_manual/processing/standalone.rst:65
+msgid ""
+"The command ``help`` can be used to get further information about commands "
+"or algorithms."
+msgstr ""
+"De opdracht ``help`` kan worden gebruikt om meer informatie op te halen over"
+" opdrachten of algoritmes."
+
+#: ../../docs/user_manual/processing/standalone.rst:71
+msgid ""
+"The command ``run`` can be used to run an algorithm or model. Specify the "
+"name of the algorithm or a path to a model as first parameter."
+msgstr ""
+"De opdracht ``run`` kan worden gebruikt om een algoritme of model uit te "
+"voeren. Specificeer de naam van het algoritme of een pad naar een model als "
+"de eerste parameter."
+
+#: ../../docs/user_manual/processing/standalone.rst:78
+msgid ""
+"Where a parameter accepts a list of values, set the same variable multiple "
+"times."
+msgstr ""
+"Als een parameter een lijst met waarden accepteert, stel dan dezelfde "
+"variabele meerdere keren in."
+
+#: ../../docs/user_manual/processing/standalone.rst:84
+msgid ""
+"While running an algorithm a text-based feedback bar is shown, and the "
+"operation can be cancelled via :kbd:`CTRL+C`."
+msgstr ""
+"Bij het uitvoeren van een algoritme wordt een op tekst gebaseerde balk voor "
+"terugkoppeling weergegeven, en de bewerking kan worden geannuleerd met "
+":kbd:`CTRL+C`."
+
+#: ../../docs/user_manual/processing/standalone.rst:87
+msgid "The ``run`` command also supports further parameters."
+msgstr "De opdracht ``run`` ondersteunt ook meer parameters."
+
+#: ../../docs/user_manual/processing/standalone.rst:89
+msgid "``--json`` will format stdout output in a JSON structured way."
+msgstr ""
+"``--json`` zal uitvoer naar stdout opmaken in een JSON-gestructureerde "
+"manier."
+
+#: ../../docs/user_manual/processing/standalone.rst:90
+msgid "``--ellipsoid`` will set the ellipsoid to the specified one."
+msgstr "``--ellipsoid`` zal de ellipsoïde instellen naar de gespecificeerde."
+
+#: ../../docs/user_manual/processing/standalone.rst:91
+msgid "``--distance_units`` will use the specified distance units."
+msgstr ""
+"``--distance_units`` zal de gespecificeerde eenheden voor afstand gebruiken."
+
+#: ../../docs/user_manual/processing/standalone.rst:92
+msgid "``--area_units`` will use the specified area units."
+msgstr ""
+"``--area_units`` zal de gespecificeerde eenheden voor gebied gebruiken."
+
+#: ../../docs/user_manual/processing/standalone.rst:93
+msgid ""
+"``--project_path`` will load the specified project for running the "
+"algorithm."
+msgstr ""
+"``--project_path`` zal het gespecificeerde project laden om het algoritme "
+"uit te voeren."
+
+#: ../../docs/user_manual/processing/standalone.rst:95
+msgid ""
+"Complex input parameters, i.e. parameter types which are themselves "
+"specified as a dictionary type object for algorithms, are supported by "
+"qgis_process. To indicate that parameters will be specified via stdin, the "
+"qgis_process command must follow the format (with a trailing ``-`` in place "
+"of the usual arguments list)."
+msgstr ""
+"Complexe parameters voor de invoer, d.i. typen parameter die van zichzelf "
+"worden gespecificeerd als een dictionary type object voor algoritmes, worden"
+" ondersteund door qgis_process. De opdracht voor qgis_process moet de "
+"indeling ( met een achterliggende ``-`` in plaats van de normale lijst met "
+"argumenten) volgen om aan te geven dat parameters zullen worden "
+"gespecificeerd via stdin, "
+
+#: ../../docs/user_manual/processing/standalone.rst:106
+msgid ""
+"The JSON object must contain an \"inputs\" key, which is a map of the input "
+"parameter values. E.g."
+msgstr ""
+"Het object voor JSON moet een sleutel \"inputs\" bevatten, wat een kaart is "
+"van de waarden van de parameters voor de invoer. Bijv."
+
+#: ../../docs/user_manual/processing/standalone.rst:113
+msgid ""
+"Additionally, extra settings like the distance units, area units, ellipsoid "
+"and project path can be included in this JSON object:"
+msgstr ""
+"Aanvullend kunnen extra instellingen, zoals de eenheden voor afstand, "
+"eenheden voor gebied, ellipsoïde en projectpad worden opgenomen in dit "
+"object voor JSON:"
+
+#: ../../docs/user_manual/processing/standalone.rst:126
+msgid ""
+"Specifying input parameters via stdin implies automatically the :file:`JSON`"
+" output format for results."
+msgstr ""
+"Specificeren van parameters voor de invoer via stdin impliceert automatisch "
+"de indeling voor de uitvoer :file:`JSON` voor de resultaten."

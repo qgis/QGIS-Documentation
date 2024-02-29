@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-02 20:43+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Portuguese (Portugal) (https://app.transifex.com/qgis/teams/6144/pt_PT/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:2
+msgid "|LS| Network Analysis"
+msgstr "|LS| Análise de Rede"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:8
+msgid ""
+"**The goal for this lesson:** learn to use :guilabel:`Network analysis` "
+"algorithms."
+msgstr ""
+"**Objectivo deste módulo:** aprender a utilizar os algoritmos de "
+":guilabel:`Análise de Rede`."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:12
+msgid "|basic| |FA| The Tools and the Data"
+msgstr "|basic| |FA| As Ferramentas e os Dados"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:291
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:14
+msgid ""
+"You can find all the network analysis algorithms in the "
+":menuselection:`Processing --> Network Analysis` menu. You can see that "
+"there are many tools available:"
+msgstr ""
+"Pode encontrar todos os algoritmos de análise de rede no menu "
+":menuselection:`Processamento --> Análise de rede`. Existem várias "
+"ferramentas disponíveis:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:25
+msgid "``network_points``"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:26
+msgid "``network_lines``"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:35
+msgid ""
+"The shortest path tools provide ways to calculate either the shortest or the"
+" fastest path between two points of a network, given:"
+msgstr ""
+"Os algoritmos de caminho mais curto disponibilizam formas de calcular tanto "
+"o caminho mais curto, como o caminho mais rápido, entre dois pontos da rede,"
+" dados:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:39
+msgid ""
+"start point selected on the map and end points taken from a point layer"
+msgstr ""
+"um ponto de partida seleccionado no mapa e vários pontos de chegada "
+"seleccionados numa camada de pontos"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:41
+msgid ""
+"start points taken from a point layer and end point selected on the map"
+msgstr ""
+"vários pontos de partida seleccionados numa camada de pontos e um ponto de "
+"chegada seleccionado no mapa"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:44
+msgid "Let's start."
+msgstr "Mãos à obra."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:47
+msgid "|basic| Calculate the shortest path (point to point)"
+msgstr "|basic| Cálculo do caminho mais curto (entre pontos)"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:48
+msgid ""
+"The :menuselection:`Network analysis --> Shortest path (point to point)` "
+"allows you to calculate the shortest distance between two manually selected "
+"points on the map."
+msgstr ""
+":menuselection:`Análise da rede --> Caminho mais curto (ponto para ponto)` "
+"permite-lhe calcular o percurso mais curto entre dois pontos seleccionados "
+"manualmente no mapa."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:53
+msgid ""
+"In this example we will calculate the **shortest** (not fastest) path "
+"between two points."
+msgstr ""
+"Neste exemplo vamos calcular o caminho mais **curto** (e não mais rápido) "
+"entre dois pontos."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:57
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:146
+msgid "Open the :guilabel:`Shortest path (point to point)` algorithm"
+msgstr "Escolha o algoritmo :guilabel:`Caminho mais curto (ponto para ponto)`"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:58
+msgid ""
+"Select :guilabel:`network_lines` for :guilabel:`Vector layer representing "
+"network`"
+msgstr ""
+"Em :guilabel:`Camada vectorial representando a rede` seleccione "
+":guilabel:`network_lines`"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:76
+msgid "Click on the :guilabel:`Run` button:"
+msgstr "Clique no botão :guilabel:`Executar`:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:94
+msgid ""
+"We chose ``Shortest`` as :guilabel:`Path type to calculate`, so the **cost**"
+" represent the **distance**, in layer units, between the two locations."
+msgstr ""
+"Ao escolher para :guilabel:`Tipo de caminho a calcular`, o parâmetro ``Mais "
+"curto``, o campo **cost** irá conter a **distância** entre os dois pontos, "
+"nas unidades definidas para a camada."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:98
+msgid ""
+"In our case, the *shortest* distance between the chosen points is around "
+"``1000`` meters:"
+msgstr ""
+"Neste caso, a distância *mais curta* entre os pontos escolhidos é "
+"aproximadamente ``1000`` metros:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:111
+msgid "|moderate| |TY| Fastest path"
+msgstr "|moderate| |TY| Caminho mais rápido"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:295
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:113
+msgid ""
+"With the same data of the previous exercise, try to calculate the fastest "
+"path between the two points."
+msgstr ""
+"Com os mesmos dados do exercício anterior, tente calcular o caminho mais "
+"rápido entre os dois pontos."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:116
+msgid "How much time do you need to go from the start to the end point?"
+msgstr ""
+"De quanto tempo necessita para ir do ponto de partida até ao ponto de "
+"chegada?"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:136
+msgid "|moderate| |FA| Advanced options"
+msgstr "|moderate| |FA| Opções avançadas"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:147
+msgid ""
+"Fill the :guilabel:`Input layer`, :guilabel:`Start point (x, y)` and "
+":guilabel:`End point (x, y)` as we did before"
+msgstr ""
+"Preencha :guilabel:`Camada vectorial representando a rede`, :guilabel:`Ponto"
+" de partida (x, y)` e :guilabel:`Ponto de chegada (x, y)` conforme fez "
+"anteriormente."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:149
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:204
+msgid "Choose ``Fastest`` as the :guilabel:`Path type to calculate`"
+msgstr "Em :guilabel:`Tipo de caminho a calcular` escolha ``Mais rápido``"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:150
+msgid "Open the :guilabel:`Advanced parameter` menu"
+msgstr "Abra o menu :guilabel:`Parâmetros avançados`"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:151
+msgid ""
+"Change the :guilabel:`Default speed (km/h)` from the default ``50`` value to"
+" ``4``"
+msgstr ""
+"Em :guilabel:`Velocidade padrão (km/h)`, altere o valor predefinido (``50``)"
+" para ``4``"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:158
+msgid "Click on :guilabel:`Run`"
+msgstr "Clique em :guilabel:`Executar`"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:159
+msgid ""
+"Once the algorithm is finished, close the dialog and open the attribute "
+"table of the output layer."
+msgstr ""
+"Uma vez executado o algoritmo, feche a caixa de diálogo e abra a tabela de "
+"atributos da camada resultante."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:294
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:181
+msgid ""
+"The Network analysis toolbox has other interesting options. Looking at the "
+"following map:"
+msgstr ""
+"A ferramenta de processamento Análise de rede, possui outras opções "
+"interessantes. Olhando para o seguinte mapa:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:188
+msgid ""
+"we would like to know the **fastest** route considering the **speed limits**"
+" of each road (the labels represent the speed limits in km/h). The shortest "
+"path without considering speed limits would of course be the purple path. "
+"But in that road the speed limit is 20 km/h, while in the green road you can"
+" go at 100 km/h!"
+msgstr ""
+"gostaríamos de determinar o percurso **mais rápido**, tendo em consideração "
+"os **limites de velocidade** de cada estrada (as etiquetas indicam os "
+"limites, em km/h). Sem considerar esses limites, o caminho **mais curto** "
+"seria, como é óbvio, o de cor púrpura. Mas nessa estrada o limite de "
+"velocidade é de 20 km/h, enquanto que na estrada verde se pode circular a "
+"100 km/h!"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:195
+msgid ""
+"As we did in the first exercise, we will use the :menuselection:`Network "
+"analysis --> Shortest path (point to point)` and we will manually choose the"
+" start and end points."
+msgstr ""
+"Assim como fizemos no primeiro exercício, vamos seleccionar "
+":menuselection:`Análise de rede --> Caminho mais curto (ponto a ponto)`  e "
+"capturar os pontos de partida e chegada."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:199
+msgid ""
+"Open the :menuselection:`Network analysis --> Shortest path (point to "
+"point)` algorithm"
+msgstr ""
+"Abra o algoritmo :menuselection:`Análise de rede --> Caminho mais curto "
+"(ponto a ponto)`"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:202
+msgid ""
+"Select :guilabel:`network_lines` for the :guilabel:`Vector layer "
+"representing network` parameter"
+msgstr ""
+"Seleccione :guilabel:`network_lines` como parâmetro em :guilabel:`Camada "
+"vectorial representando a rede`"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:207
+msgid "Open the :guilabel:`Advanced parameters` menu"
+msgstr "Abra o menu :guilabel:`Parâmetros avançados`"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:216
+msgid "Click on the :guilabel:`Run` button"
+msgstr "Clique no botão :guilabel:`Executar`"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:223
+msgid ""
+"As you can see the fastest route does not correspond to the shortest one."
+msgstr ""
+"Como pode verificar, o caminho mais rápido não corresponde ao caminho mais "
+"curto."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:227
+msgid "|moderate| Service area (from layer)"
+msgstr "|moderate| Área de serviço (da camada)"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:228
+msgid ""
+"The :menuselection:`Network Analysis --> Service area (from layer)` "
+"algorithm can answer the question: given a point layer, what are all the "
+"reachable areas given a distance or a time value?"
+msgstr ""
+"O algoritmo :menuselection:`Análise de rede --> Área de serviço (da camada)`"
+" oferece resposta à questão: dada uma camada de pontos, quais são todas as "
+"áreas que se podem alcançar, dentro de uma determinada distância ou de um "
+"determinado tempo de percurso?"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:237
+msgid ""
+"Given a distance of ``250`` meters we want to know how far we can go on the "
+"network from each point of the :guilabel:`network_points` layer."
+msgstr ""
+"Dada uma distância de ``250`` metros, queremos saber, para cada ponto da "
+"camada :guilabel:`network_points`, quão longe nos é possível deslocar-nos "
+"através da rede."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:241
+msgid ""
+"Open the :menuselection:`Network Analysis --> Service area (from layer)` "
+"algorithm"
+msgstr ""
+"Abra o algoritmo :menuselection:`Análise de rede --> Área de serviço (da "
+"camada)`"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:248
+msgid "Choose ``Shortest`` in :guilabel:`Path type to calculate`"
+msgstr "Em :guilabel:`Tipo de caminho a calcular` escolha ``Mais curto``"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:256
+msgid ""
+"The output layer represents the maximum path you can reach from the point "
+"features given a distance of 250 meters:"
+msgstr ""
+"A camada resultante apresenta, para cada ponto, os percursos que se podem "
+"efectuar, sem exceder a distância máxima de 250 metros:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:263
+msgid "Cool isn't it?"
+msgstr "Porreiro, hã?"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:266
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:271
+msgid ""
+"We are now ready to perform some spatial statistic on vector layer data. "
+"Let's go!"
+msgstr ""
+"E está pronto para fazer um pouco de análise e estatística espacial em "
+"camadas de dados vectoriais. Vamos lá!"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:275
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:277
+msgid ""
+"Next you'll see how to run spatial statistics algorithms on vector datasets."
+msgstr ""
+"A seguir verá como executar algoritmos de estatística espacial sobre dados "
+"vectoriais."

@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/qgis_server/install.rst:6
+msgid "|LS| Install QGIS Server"
+msgstr "|LS| QGIS 서버 설치"
+
+#: ../../docs/training_manual/qgis_server/install.rst:8
+msgid ""
+"**The goal for this lesson:** To learn how to install **QGIS Server** on "
+"Debian Stretch. With negligible variations you can also follow it for any "
+"Debian based distribution like Ubuntu and its derivatives."
+msgstr ""
+"**이 강의의 목표:** 데비안 계열 리눅스에 **QGIS 서버** 를 설치하는 방법을 배웁니다. 우분투 및 우분투에서 파생된 리눅스 "
+"같은 모든 데비안 기반 배포판에서도 이 방법을 따르면 됩니다. 각 배포판에 따른 차이는 무시해도 될 정도입니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:12
+msgid ""
+"In Ubuntu you can use your regular user, prepending ``sudo`` to commands "
+"requiring admin permissions. In Debian you can work as admin (``root``), "
+"without using ``sudo``."
+msgstr ""
+"우분투에서는 운영자(admin) 권한이 필요한 명령어 앞에 ``sudo`` 를 추가하면 일반 사용자도 설치할 수 있습니다. 데비안에서는 "
+"``sudo`` 를 추가할 필요가 없는 운영자(``root``)로 작업하면 됩니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:17
+msgid "|moderate| |FA| Install from packages"
+msgstr "|moderate| |FA| 패키지 설치"
+
+#: ../../docs/training_manual/qgis_server/install.rst:149
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:19
+msgid ""
+"In this lesson we're going to do only the install from packages as shown "
+"`here <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ ."
+msgstr ""
+"이 강의에서는 `여기 <https://qgis.org/ko/site/forusers/alldownloads.html#linux>`_ 에 "
+"있는 배포판으로만 설치할 것입니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:22
+msgid "Install QGIS Server with:"
+msgstr "다음과 같이 QGIS 서버를 설치하십시오:"
+
+#: ../../docs/training_manual/qgis_server/install.rst:31
+msgid ""
+"QGIS Server should be used in production without QGIS Desktop (with the "
+"accompanying X Server) installed on the same machine."
+msgstr ""
+"QGIS 서버를 사용하려면 동일한 기기에 (X.Org 서버와 함께 설치되는) QGIS 데스크탑 소프트웨어를 함께 설치해서는 안 됩니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:35
+msgid "|moderate| |FA| QGIS Server Executable"
+msgstr "|moderate| |FA| QGIS 서버 실행 파일"
+
+#: ../../docs/training_manual/qgis_server/install.rst:37
+msgid ""
+"The QGIS Server executable is ``qgis_mapserv.fcgi``. You can check where it "
+"has been installed by running ``find / -name 'qgis_mapserv.fcgi'`` which "
+"should output something like ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``."
+msgstr ""
+"QGIS 서버 실행 파일은 ``qgis_mapserv.fcgi`` 입니다. ``find / -name "
+"'qgis_mapserv.fcgi'`` 명령어를 실행하면 이 파일이 어디에 설치됐는지 확인할 수 있는데, ``/usr/lib/cgi-"
+"bin/qgis_mapserv.fcgi`` 와 같은 디렉터리 위치를 출력할 것입니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:41
+msgid ""
+"Optionally, if you want to do a command line test at this time you can run "
+"the ``/usr/lib/cgi-bin/qgis_mapserv.fcgi --version`` command which should "
+"output something like:"
+msgstr ""
+"선택적으로, 지금 명령줄 테스트를 수행하려면 다음과 같은 명령을 출력하는 ``/usr/lib/cgi-"
+"bin/qgis_mapserv.fcgi --version`` 명령을 실행할 수 있습니다:"
+
+#: ../../docs/training_manual/qgis_server/install.rst:62
+msgid "|hard| HTTP Server Configuration"
+msgstr "|hard| HTTP 서버 환경설정"
+
+#: ../../docs/training_manual/qgis_server/install.rst:148
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:64
+msgid ""
+"In order to access on the installed QGIS server from an Internet Browser we "
+"need to use an HTTP server. The Apache HTTP Server installation process is "
+"detailed in :ref:`httpserver` section."
+msgstr ""
+"인터넷 브라우저에서 설치된 QGIS 서버에 접근하기 위해서는 HTTP 서버를 이용해야 합니다. 아파치 HTTP 서버 설치 과정은 "
+":ref:`httpserver` 절에서 자세히 설명하고 있습니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:69
+msgid ""
+"If you installed QGIS Server without running an X Server (included in Linux "
+"Desktop) and if you also want to use the ``GetPrint`` command then you "
+"should install a fake X Server and tell QGIS Server to use it. You can do "
+"that by following the :ref:`Xvfb installation process <xvfb>`."
+msgstr ""
+"QGIS 서버를 (리눅스 데스크탑에 포함돼 있는) X 서버를 실행하지 않고 설치했는데 ``GetPrint`` 명령어도 사용하고 싶다면, "
+"가상 X 서버를 설치해서 QGIS가 이 가상 X 서버를 사용하도록 해야 합니다. :ref:`Xvfb 설치 과정 <xvfb>` 을 따라 이"
+" 작업을 완료할 수 있습니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:76
+msgid "|moderate| |FA| Create another virtual host"
+msgstr "|moderate| |FA| 또다른 가상 호스트 생성"
+
+#: ../../docs/training_manual/qgis_server/install.rst:78
+msgid ""
+"Let's create another Apache virtual host pointing to QGIS Server. You can "
+"choose whatever name you like (``coco.bango``, ``super.duper.training``, "
+"``example.com``, etc.) but for simplicity sake we're going to use "
+"``myhost``."
+msgstr ""
+"QGIS 서버를 가리키는 또다른 아파치 가상 호스트를 생성해봅시다. 여러분이 원하는대로 (``coco.bango``, "
+"``super.duper.training``, ``example.com`` 등등) 어떤 이름이든 선택할 수 있습니다만, 단순화를 위해 "
+"``myhost`` 를 쓰도록 하겠습니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:82
+msgid ""
+"Let's set up the ``myhost`` name to point to the localhost IP by adding "
+"``127.0.0.1 x`` to the :file:`/etc/hosts` with the following command: ``sh "
+"-c \"echo '127.0.0.1 myhost' >> /etc/hosts\"`` or by manually editing the "
+"file with ``gedit /etc/hosts``."
+msgstr ""
+"``myhost`` 라는 이름이 로컬호스트(localhost) IP를 가리키도록 해봅시다. :file:`/etc/hosts` 파일에 "
+"``127.0.0.1 x`` 와 같이 로컬호스트 IP와 호스트 이름을 추가해보죠. ``sh -c \"echo '127.0.0.1 "
+"myhost' >> /etc/hosts\"`` 명령어를 실행하거나, ``gedit /etc/hosts`` 명령어로 해당 파일을 직접 "
+"편집하면 됩니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:86
+msgid ""
+"We can check that ``myhost`` points to the localhost by running in the "
+"terminal the  ``ping myhost`` command which should output:"
+msgstr ""
+"터미널에서 ``ping myhost`` 명령어를 실행하면 ``myhost`` 가 로컬호스트를 가리키는지 확인할 수 있습니다. 다음과 같은"
+" 내용을 출력할 것입니다:"
+
+#: ../../docs/training_manual/qgis_server/install.rst:96
+msgid ""
+"Let's try if we can access QGIS Server from the ``myhost`` site by doing: "
+"``curl http://myhost/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url "
+"from your Debian box browser. You will probably get:"
+msgstr ""
+"``myhost`` 사이트에서 QGIS 서버에 접근할 수 있는지 확인해볼까요? ``curl http://myhost/cgi-"
+"bin/qgis_mapserv.fcgi`` 명령어를 실행하거나, 데비안 기본 브라우저에서 해당 URL을 접근해보면 됩니다. 아마 다음과 "
+"같은 내용을 보게 될 겁니다:"
+
+#: ../../docs/training_manual/qgis_server/install.rst:112
+msgid ""
+"Apache doesn't know that he's supposed to answer requests pointing to the "
+"server named ``myhost``. In order to setup the virtual host the simplest way"
+" would be to make a ``myhost.conf`` file in the :file:`/etc/apache2/sites-"
+"available` directory that has the same content as :file:`qgis.demo.conf` "
+"except for the ``ServerName`` line that should be ``ServerName myhost``. You"
+" could also change where the logs go as otherwise the logs for the two "
+"virtual hosts would be shared but this is optional."
+msgstr ""
+"아파치는 자신이 ``myhost`` 라는 이름의 서버를 가리키는 요청에 답해야 한다는 사실을 모릅니다. 가상 호스트를 설정하기 위한 가장"
+" 간단한 방법은 :file:`/etc/apache2/sites-available` 디렉터리에 ``myhost.conf`` 파일을 만드는 "
+"것이겠죠. 이 파일의 내용은 :file:`qgis.demo.conf` 파일의 내용과 동일해야 합니다. 단 하나, "
+"``ServerName`` 줄이 ``ServerName myhost`` 가 되어야 한다는 것만 제외하면 말이죠. 로그를 저장할 위치도 "
+"바꿀 수 있는데, 바꾸지 않으면 두 가상 호스트의 로그들이 동일한 위치에 저장될 겁니다. 물론 바꾸지 않아도 됩니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:119
+msgid ""
+"Let's now enable the virtual host with ``a2ensite myhost.conf`` and then "
+"reload the Apache service with ``service apache2 reload``."
+msgstr ""
+"이제 ``a2ensite myhost.conf`` 명령어로 가상 호스트를 활성화시킨 다음 ``service apache2 reload``"
+" 명령어로 아파치 서비스를 다시 불러와봅시다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:121
+msgid ""
+"If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url "
+"you'll notice everything is working now!"
+msgstr ""
+"다시 http://myhost/cgi-bin/qgis_mapserv.fcgi URL을 접근해보면 모든 게 제대로 작동한다는 사실을 알 수"
+" 있을 겁니다!"
+
+#: ../../docs/training_manual/qgis_server/install.rst:125
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:127
+msgid ""
+"You learned how to install different QGIS Server versions from packages, how"
+" to configure Apache with QGIS Server, on Debian based Linux distros."
+msgstr ""
+"여러분은 데비안 기반 리눅스 배포판에 여러 버전의 QGIS 서버를 패키지로 설치하고 QGIS 서버와 아파치를 환경설정하는 방법을 "
+"배웠습니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:131
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:133
+msgid ""
+"Now that you've installed QGIS Server and it's accessible through the HTTP "
+"protocol, we need to learn how to access some of the services it can offer. "
+"The topic of the next lesson is to learn how to access QGIS Server WMS "
+"services."
+msgstr ""
+"이제 QGIS 서버를 설치했고 HTTP 프로토콜을 통해 서버에 접근할 수 있으니, 서버가 제공하는 몇몇 서비스에 접근하는 방법을 배워야 "
+"합니다. 다음 강의에서는 QGIS 서버 WMS 서비스에 어떻게 접근하는지를 배울 것입니다."

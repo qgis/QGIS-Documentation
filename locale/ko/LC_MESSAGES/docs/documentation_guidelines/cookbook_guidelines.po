@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:6
+msgid "Writing code in the PyQGIS Cookbook"
+msgstr "PyQGIS 쿡북 코드 작성"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:11
+msgid ""
+"If you are planning to add or update some chapters of the :ref:`PyQGIS-"
+"Developer-Cookbook`, then you should follow some rules to enable automatic "
+"testing of the code snippets."
+msgstr ""
+":ref:`PyQGIS-Developer-Cookbook` 의 일부를 업데이트하거나 추가하려 한다면, 코드 조각을 자동적으로 테스트할 수"
+" 있도록 해주는 규칙 몇 가지를 따라야 합니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:15
+msgid ""
+"Testing is really important because it allows automatic checking of the "
+"code. Code snippets with errors or code that uses outdated methods will fail"
+" and the notification will help you fix the problems."
+msgstr ""
+"테스트 작업은 매우 중요합니다. 코드를 자동 확인해주는 과정이기 때문입니다. 오류가 있는 코드 조각 또는 구식 메소드를 사용하는 코드는 "
+"테스트를 통과하지 못 하고, 작성자가 문제점을 수정하도록 도와줄 알림이 뜰 것입니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:19
+msgid ""
+"For testing, we use the `Sphinx doctest extension <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/doctest.html>`_. Refer to the extension "
+"documentation for more detailed information."
+msgstr ""
+"테스트 작업을 위해, `Sphinx 문서 테스트 확장 기능 <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/doctest.html>`_ 을 사용합니다. 더 자세한 내용을 알고 싶다면"
+" 확장 기능 문서를 참조하세요."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:25
+msgid "How to write testable code snippets"
+msgstr "테스트 가능한 코드 조각 작성 방법"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:27
+msgid ""
+"Writing testable code snippets is not so different from the *old* method. "
+"Basically, you need to use a different Sphinx `directive`."
+msgstr ""
+"테스트 가능한 코드 조각을 작성하는 것은 *구식* 방법과 크게 다르지 않습니다. 기본적으로, 다른 Sphinx "
+"*지시어(directive)* 를 이용해야 합니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:31
+msgid "Doctest sphinx directives"
+msgstr "문서 테스트 Sphinx 지시어"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:33
+msgid ""
+"Instead of embedding the code in a ``.. code-block:: python`` directive "
+"(which would highlight the code syntax automatically), you now need to embed"
+" it in a ``.. testcode::``. That is, instead of  this::"
+msgstr ""
+"(자동적으로 코드 문법을 강조해주는) ``.. code-block:: python`` 지시어에 코드를 내장하는 대신, 이제 ``.. "
+"testcode::`` 에 코드를 내장해야 합니다. 그러니까 다음 대신::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:42
+msgid "You now use this::"
+msgstr "이제 이렇게 해야 합니다::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:49
+msgid ""
+"After you wrote the example code, you should add some *assertion* that will "
+"evaluate the code and that will be run automatically."
+msgstr "예시 코드를 작성한 다음, 코드를 평가하고 자동으로 실행될 몇몇 *언명(assertion)* 을 추가해야 합니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:52
+msgid ""
+"In the above example, you are creating a crs and with ``assert "
+"crs.isValid()`` you **test** if it is valid. If the code has a wrong python "
+"syntax or the ``crs.isValid()`` returns ``False``, this code snippet will "
+"fail during testing."
+msgstr ""
+"앞의 예시에서, 작성자는 좌표계를 생성하고 ``assert crs.isValid()`` 로 좌표계가 무결한지 **테스트** 합니다. "
+"코드의 파이썬 문법이 틀렸거나 ``crs.isValid()`` 가 ``False`` 를 반환하는 경우, 테스트 작업 도중 이 코드는 "
+"통과하지 못 할 것입니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:56
+msgid ""
+"To successfully run the tests on snippets, you must import all the classes "
+"and declare any variables used in the code snippets. You can include those "
+"in the code snippet itself (visible in the HTML pages) or you can add them "
+"to a ``.. testsetup::`` directive (hidden in the HTML pages). The ``.. "
+"testsetup::`` needs to be placed before the ``.. testcode::``::"
+msgstr ""
+"코드 조각에 대한 테스트를 성공적으로 실행하려면, 모든 클래스를 가져와서 코드 조각에 사용된 모든 변수를 선언해야만 합니다. 코드 조각 "
+"자체에 이들을 포함시킬 수도 있고 (이 경우 HTML 페이지에 보이게 됩니다) ``.. testsetup::`` 지시어에 추가시킬 수도 "
+"있습니다(이 경우 HTML 페이지에 보이지 않습니다). ``.. testsetup::`` 지시어는 ``.. testcode::`` 앞에 "
+"와야 합니다::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:71
+msgid ""
+"If the code snippet doesn't create objects (and therefore you cannot use "
+"something like ``assert object.isValid()``), you can test the code using the"
+" ``print()`` method, then add the expected results within a ``.. "
+"testoutput::`` directive to compare the expected output::"
+msgstr ""
+"코드 조각이 객체를 생성하지 않는 (따라서 ``assert object.isValid()`` 같은 코드를 사용할 수 없는) 경우, "
+"``print()`` 메소드를 사용해서 코드를 테스트할 수 있습니다. 이때 기대 산출물과 비교하기 위해 ``.. "
+"testoutput::`` 지시어에 기대 결과를 추가하십시오::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:86
+msgid ""
+"By default, the content of ``.. testoutput::`` is shown in the HTML output. "
+"To hide it from the HTML use the `:hide:` option::"
+msgstr ""
+"``.. testoutput::`` 의 내용은 기본적으로 HTML 산출물에 보이게 됩니다. HTML에서 이를 숨기려면 ``:hide:``"
+" 옵션을 사용하십시오::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:97
+msgid ""
+"If the code snippet contains any print statements, you MUST add a "
+"``testoutput`` with the expected outputs; otherwise the test will fail."
+msgstr ""
+"코드 조각이 ``print()`` 선언을 하나라도 담고 있는 경우, 기대 산출물을 가진 ``.. testoutput::`` 을 추가해야만"
+" 합니다. 그렇지 않으면 테스트가 실패할 것입니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:101
+msgid "Grouping tests"
+msgstr "그룹화 테스트"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:103
+msgid ""
+"For each rst document, the code snippets are tested sequentially, which "
+"means you can use one ``.. testsetup::`` for all the following code snippets"
+" and that later snippets will have access to variables declared in earlier "
+"ones in the document."
+msgstr ""
+"각 reST 문서마다, 코드 조각들을 연속해서 테스트합니다. 즉 일련의 모든 코드 조각에 대해 하나의 ``.. testsetup::`` "
+"을 사용할 수 있고, 그후 코드 조각들이 문서 앞부분에 선언된 변수들에 접근할 것이라는 뜻입니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:107
+msgid ""
+"Alternatively, you can use groups to break down the examples on the same "
+"page in different tests."
+msgstr "아니면, 동일한 페이지에 있는 예시들을 그룹으로 분리해서 개별적으로 테스트를 실행할 수도 있습니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:110
+msgid ""
+"You add the code snippet to groups by adding one or more group names "
+"(separated by commas) in the respective directive::"
+msgstr "그룹에 코드 조각을 추가하려면 각각의 지시어에 (쉼표로 구분된) 하나 이상의 그룹명을 추가하면 됩니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:118
+msgid ""
+"The ``doctest`` will pick each group snippets and run them independently."
+msgstr "``doctest`` 가 각 코드 조각 그룹을 구분해서 개별적으로 테스트할 것입니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:122
+msgid ""
+"Use group names that make sense with the related content. Use something "
+"similar to <chapter>_<subchapter>, for example: crs_intro, crs_fromwkt. In "
+"case of failures, this will help identifying where the failures occur."
+msgstr ""
+"관련 내용과 어울리는 그룹명을 사용하십시오. <chapter>_<subchapter> 와 비슷한 이름을 사용하십시오. 예를 들어 "
+"crs_intro, crs_fromwkt 같은 이름 말이죠. 테스트에 통과하지 못 하는 경우, 이런 이름이 어디서 오류가 발생했는지 "
+"식별할 수 있게 해줄 것입니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:127
+msgid ""
+"If you don't declare any group, the code snippet will be added to a group "
+"named ``default``. If instead, you use ``*`` as a group name, the snippet "
+"will be used in all testing groups, something normally usefull to use in the"
+" test setup::"
+msgstr ""
+"어떤 그룹도 선언하지 않으면 코드 조각은 ``default`` 라는 그룹에 추가될 것입니다. 또는 그룹 이름으로 ``*`` 를 사용하는 "
+"경우, 그 코드 조각은 모든 그룹의 테스트에 포함될 것입니다. 이는 테스트 환경에서 사용하기에 일반적으로 유용한 방법입니다::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:136
+msgid "How to test snippets on your local machine"
+msgstr "사용자 로컬 환경에서 코드 조각을 테스트하는 방법"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:138
+msgid "Instructions are valid for Linux system."
+msgstr "다음은 리눅스 시스템에서 유효한 지침입니다."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:140
+msgid ""
+"To test Python code snippets, you need a *QGIS* installation. For this, "
+"there are many options. You can:"
+msgstr "파이썬 코드 조각을 테스트하려면, *QGIS* 가 설치되어 있어야 합니다. 다음과 같은 여러 가지 옵션이 있습니다:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:143
+msgid ""
+"Use your system *QGIS* installation with *Sphinx* from a Python virtual "
+"environment::"
+msgstr "파이썬 가상 환경에서 *Sphinx* 와 함께 설치된 사용자 시스템의 *QGIS* 를 사용할 수 있습니다::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:148
+msgid "Use a manually built installation of *QGIS*. You'd need to:"
+msgstr "직접 빌드한 *QGIS* 설치본을 사용할 수 있습니다. 다음을 해야 합니다:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:150
+msgid ""
+"Create a custom ``Makefile`` extension on top of the :file:`venv.mk` file, "
+"for example a :file:`user.mk` file with the following content::"
+msgstr ""
+":file:`venv.mk` 파일뿐만 아니라 사용자 지정 ``Makefile`` 확장자를 생성해야 합니다. 예를 들어 다음 내용을 가진 "
+":file:`user.mk` 파일처럼 말이죠::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:158
+msgid "Or ::"
+msgstr "또는::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:165
+msgid "Then, use it to run target ``doctest``::"
+msgstr "그 다음, 대상 ``doctest`` 를 실행하는 데 사용하십시오::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:169
+msgid "Run target ``doctest`` inside the official *QGIS* docker image::"
+msgstr "공식 *QGIS* 도커 이미지 내부에서 대상 ``doctest`` 를 실행할 수 있습니다::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:173
+msgid ""
+"You have to install `Docker <https://www.docker.com/>`_ first because this "
+"uses a docker image with QGIS in it."
+msgstr ""
+"먼저 `도커(docker) <https://www.docker.com/>`_ 를 설치해야 합니다. 이 방법은 QGIS를 내장한 도커 "
+"이미지를 사용하기 때문입니다."

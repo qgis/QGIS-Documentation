@@ -1,0 +1,316 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:2
+msgid "|LS| Queries"
+msgstr "|LS| Query"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:4
+msgid ""
+"When you write a :kbd:`SELECT ...` command it is commonly known as a query -"
+" you are interrogating the database for information."
+msgstr ""
+"Quando scrivi un comando :kbd:`SELECT ...` è comunemente conosciuto come una"
+" query - stai interrogando il database per informazioni."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:7
+msgid ""
+"**The goal of this lesson:** To learn how to create queries that will return"
+" useful information."
+msgstr ""
+"**Obiettivo di questa lezione:** Imparare a creare query che restituiscano "
+"informazioni utili."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:10
+msgid ""
+"If you did not do so in the previous lesson, add the following people "
+"objects to your :kbd:`people` table. If you receive any errors related to "
+"foreign key constraints, you will need to add the 'Main Road' object to your"
+" streets table first"
+msgstr ""
+"Se non l'hai fatto nella lezione precedente, aggiungi i seguenti oggetti "
+"people alla tua tabella :kbd:`people`. Se ricevi qualche errore relativo ai "
+"vincoli di chiave esterna, dovrai prima aggiungere l'oggetto 'Main Road' "
+"alla tua tabella streets"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:28
+msgid "Ordering Results"
+msgstr "Riordinare i risultati"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:30
+msgid "Let's retrieve a list of people ordered by their house numbers:"
+msgstr ""
+"Otteniamo una lista di persone ordinate in base al loro numero civico:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:36
+#: ../../docs/training_manual/database_concepts/queries.rst:54
+#: ../../docs/training_manual/database_concepts/queries.rst:192
+#: ../../docs/training_manual/database_concepts/queries.rst:217
+#: ../../docs/training_manual/database_concepts/queries.rst:242
+#: ../../docs/training_manual/database_concepts/queries.rst:259
+msgid "Result:"
+msgstr "Risultato:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:48
+msgid "You can sort the results by the values of more than one column:"
+msgstr "Puoi ordinare i risultati per i valori di più di una colonna:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:68
+msgid "Filtering"
+msgstr "Attivare filtri"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:70
+msgid ""
+"Often you won't want to see every single record in the database - especially"
+" if there are thousands of records and you are only interested in seeing one"
+" or two."
+msgstr ""
+"Spesso non vuoi vedere ogni singolo record nel database - specialmente se ci"
+" sono migliaia di record e sei interessato a vederne solo uno o due."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:74
+msgid ""
+"Here is an example of a numerical filter which only returns objects whose "
+"``house_no`` is less than 50:"
+msgstr ""
+"Ecco un esempio di un filtro numerico che restituisce solo gli oggetti il "
+"cui ``house_no`` è inferiore a 50:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:87
+msgid ""
+"You can combine filters (defined using the ``WHERE`` clause) with sorting "
+"(defined using the ``ORDER BY`` clause):"
+msgstr ""
+"Puoi combinare i filtri (definiti usando la clausola ``WHERE``) con "
+"l'ordinamento (definito usando la clausola ``ORDER BY``):"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:100
+msgid "You can also filter based on text data:"
+msgstr "Puoi anche filtrare in base ai dati di tipo testuale:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:112
+msgid ""
+"Here we used the :kbd:`LIKE` clause to find all names with an :kbd:`s` in "
+"them. You'll notice that this query is case-sensitive, so the :kbd:`Sally "
+"Norman` entry has not been returned."
+msgstr ""
+"Qui abbiamo usato la clausola :kbd:`LIKE` per trovare tutti i nomi che "
+"contengono una :kbd:`s`. Noterai che questa query è case-sensitive, quindi "
+"la voce :kbd:`Sally Norman` non è stata restituita."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:116
+msgid ""
+"If you want to search for a string of letters regardless of case, you can do"
+" a case in-sensitive search using the :kbd:`ILIKE` clause:"
+msgstr ""
+"Se vuoi cercare per una stringa di lettere indipendentemente dal "
+"maiuscolo/minuscolo, puoi fare una ricerca case in-sensitive usando la "
+"clausola :kbd:`ILIKE`:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:129
+msgid ""
+"That query returned every **people** object with an :kbd:`r` or :kbd:`R` in "
+"their name."
+msgstr ""
+"Questa query ha restituito ogni oggetto **people** con un :kbd:`r` o "
+":kbd:`R` nel loro nome."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:133
+msgid "Joins"
+msgstr "Join"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:135
+msgid ""
+"What if you want to see the person's details and their street's name instead"
+" of the ID? In order to do that, you need to join the two tables together in"
+" a single query. Lets look at an example:"
+msgstr ""
+"E se vuoi vedere i dettagli della persona e il nome della sua strada invece "
+"dell'ID? Per farlo, devi unire le due tabelle in un'unica query. Vediamo un "
+"esempio:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:145
+msgid ""
+"With joins, you will always state the two tables the information is coming "
+"from, in this case people and streets. You also need to specify which two "
+"keys must match (foreign key & primary key). If you don't specify that, you "
+"will get a list of all possible combinations of people and streets, but no "
+"way to know who actually lives on which street!"
+msgstr ""
+"Con i join, dovrai indicare sempre le due tabelle da cui provengono le "
+"informazioni, in questo caso people e streets. Devi anche specificare quali "
+"due chiavi devono corrispondere (chiave esterna e chiave primaria). Se non "
+"lo specifichi, otterrai una lista di tutte le possibili combinazioni di "
+"persone e strade, ma nessun modo di sapere chi vive effettivamente in quale "
+"strada!"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:151
+msgid "Here is what the correct output will look like:"
+msgstr "Ecco come sarà l'output corretto:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:163
+msgid ""
+"We will revisit joins as we create more complex queries later. Just remember"
+" they provide a simple way to combine the information from two or more "
+"tables."
+msgstr ""
+"Rivisiteremo le join quando creeremo query più complesse in seguito. Basta "
+"ricordare che forniscono un modo semplice per combinare le informazioni di "
+"due o più tabelle."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:167
+msgid "Sub-Select"
+msgstr "Sub-Select"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:169
+msgid ""
+"Sub-selections allow you to select objects from one table based on the data "
+"from another table which is linked via a foreign key relationship. In our "
+"case, we want to find people who live on a specific street."
+msgstr ""
+"Le sottoselezioni ti permettono di selezionare oggetti da una tabella in "
+"base ai dati di un'altra tabella che è collegata tramite una relazione di "
+"chiave esterna. Nel nostro caso, vogliamo trovare le persone che vivono in "
+"una specifica strada."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:173
+msgid "First, let's do a little tweaking of our data:"
+msgstr "Per prima cosa, facciamo una piccola modifica ai nostri dati:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:183
+msgid ""
+"Let's take a quick look at our data after those changes: we can reuse our "
+"query from the previous section:"
+msgstr ""
+"Diamo una rapida occhiata ai nostri dati dopo queste modifiche: possiamo "
+"riutilizzare la nostra query dalla sezione precedente:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:204
+msgid ""
+"Now let's show you a sub-selection on this data. We want to show only people"
+" who live in ``street_id`` number :kbd:`1`:"
+msgstr ""
+"Ora mostriamo una sotto-selezione su questi dati. Vogliamo mostrare solo le "
+"persone che vivono in ``street_id`` numero :kbd:`1`:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:227
+msgid ""
+"Although this is a very simple example and unnecessary with our small data-"
+"sets, it illustrates how useful and important sub-selections can be when "
+"querying large and complex data-sets."
+msgstr ""
+"Anche se questo è un esempio molto semplice e non necessario con i nostri "
+"piccoli insiemi di dati, illustra quanto utili e importanti possano essere "
+"le sotto-selezioni quando si interrogano insiemi di dati grandi e complessi."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:232
+msgid "Aggregate Queries"
+msgstr "Query di aggregazione"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:234
+msgid ""
+"One of the powerful features of a database is its ability to summarise the "
+"data in its tables. These summaries are called aggregate queries. Here is a "
+"typical example which tells us how many people objects are in our people "
+"table:"
+msgstr ""
+"Una delle potenti caratteristiche di un database è la sua capacità di "
+"riassumere i dati delle sue tabelle. Queste sintesi sono chiamate query "
+"aggregate. Ecco un tipico esempio che ci dice quanti oggetti persone ci sono"
+" nella nostra tabella persone:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:251
+msgid "If we want the counts to be summarised by street name we can do this:"
+msgstr ""
+"Se vuoi che i conteggi siano riepilogati per nome di strada, puoi fare così:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:270
+msgid ""
+"Because we have not used an :kbd:`ORDER BY` clause, the order of your "
+"results may not match what is shown here."
+msgstr ""
+"Poiché non abbiamo usato una clausola :kbd:`ORDER BY`, l'ordine dei tuoi "
+"risultati potrebbe non corrispondere a quello mostrato qui."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:274
+msgid "|TY| |moderate|"
+msgstr ""
+
+#: ../../docs/training_manual/database_concepts/queries.rst:325
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/database_concepts/queries.rst:276
+msgid ""
+"Summarise the people by street name and show the actual street names instead"
+" of the street_ids."
+msgstr ""
+"Riepiloga le persone per nome di strada e mostra i nomi reali delle strade "
+"invece degli street_id."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:279
+msgid "Answer"
+msgstr "Soluzione"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:282
+msgid "Here is the correct SQL statement you should use::"
+msgstr "Ecco l'istruzione SQL corretta che dovreste usare:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:289
+msgid "Result::"
+msgstr "Risultato:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:298
+msgid ""
+"You will notice that we have prefixed field names with table names (e.g. "
+"people.name and streets.name). This needs to be done whenever the field name"
+" is ambiguous (i.e. not unique across all tables in the database)."
+msgstr ""
+"Noterai che abbiamo anteposto i nomi dei campi ai nomi delle tabelle (per "
+"esempio people.name e streets.name). Questo deve essere fatto ogni volta che"
+" il nome del campo è ambiguo (cioè non è univoco in tutte le tabelle del "
+"database)."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:304
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/database_concepts/queries.rst:306
+msgid ""
+"You've seen how to use queries to return the data in your database in a way "
+"that allows you to extract useful information from it."
+msgstr ""
+"Hai visto come usare le query per restituire i dati nel tuo database in un "
+"modo che ti permette di estrarre informazioni utili da esso."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:310
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/database_concepts/queries.rst:312
+msgid ""
+"Next you'll see how to create views from the queries that you've written."
+msgstr "Poi vedrai come creare delle viste dalle query che hai scritto."

@@ -1,0 +1,457 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:5
+msgid "Topology"
+msgstr "위상(位相)"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:8
+msgid "|gentleLogo|"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/topology.rst:233
+msgid "gentleLogo"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/topology.rst:8
+msgid "Objectives:"
+msgstr "목적"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:8
+msgid "Understanding topology in vector data"
+msgstr "벡터 데이터에서 위상(topology)을 이해하기"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:10
+msgid "Keywords:"
+msgstr "키워드"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:10
+msgid ""
+"Vector, topology, topology rules, topology errors, search radius, snapping "
+"distance, simple feature"
+msgstr "벡터, 위상, 위상 규칙, 위상 오류, 검색 반경, 스냅 거리, 단순 객체"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:14
+msgid "Overview"
+msgstr "개요"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:16
+msgid ""
+"**Topology** expresses the spatial relationships between connecting or "
+"adjacent vector features (points, polylines and polygons) in a GIS. "
+"Topological or topology-based data are useful for detecting and correcting "
+"digitising errors (e.g. two lines in a roads vector layer that do not meet "
+"perfectly at an intersection). Topology is necessary for carrying out some "
+"types of spatial analysis, such as network analysis."
+msgstr ""
+"**위상(topology)** 은 GIS에서 서로 연결된 또는 인접한 벡터 객체들(포인트, 폴리라인, 폴리곤) 사이의 공간적 관계를 "
+"나타냅니다. 위상적인 또는 위상 기반의 데이터는 디지타이즈 작업의 (예를 들어 도로 벡터 레이어의 라인 2개가 교차점에서 완벽하게 접하지"
+" 않는다든지 하는) 오류를 탐지하고 수정하는 데 유용합니다. 망분석(network analysis) 같은 몇몇 유형의 공간 분석을 "
+"수행하는 데 위상이 필요합니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:23
+msgid ""
+"Imagine you travel to London. On a sightseeing tour you plan to visit St. "
+"Paul's Cathedral first and in the afternoon Covent Garden Market for some "
+"souvenirs. Looking at the Underground map of London (see "
+":numref:`figure_topology_london`) you have to find connecting trains to get "
+"from Covent Garden to St. Paul's. This requires topological information "
+"(data) about where it is possible to change trains. Looking at a map of the "
+"underground, the topological relationships are illustrated by circles that "
+"show connectivity."
+msgstr ""
+"런던으로 여행을 간다고 상상해보세요. 관광 도중에 세인트 폴 대성당을 먼저 들른 다음 오후에는 기념품을 사러 코번트 가든 시장에 갈 "
+"계획을 짭니다. 런던 지하철 지도를 (:numref:`figure_topology_london` 참조) 보면서 코번트 가든에서 세인트 폴"
+" 대성당으로 가는 환승 열차를 찾아야 합니다. 이 과정에서 여러분은 어디에서 열차를 환승할 수 있는지에 대한 위상적 정보(데이터)가 "
+"필요할 것입니다. 지하철 지도를 보면, 환승이 가능하다는 것을 나타내는 원으로 위상적 관계를 표현하고 있습니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:37
+msgid "Topology of London Underground Network."
+msgstr "런던 지하철망의 위상"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:40
+msgid "Topology errors"
+msgstr "위상 오류"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:42
+msgid ""
+"There are different types of topological errors and they can be grouped "
+"according to whether the vector feature types are polygons or polylines. "
+"Topological errors with **polygon** features can include unclosed polygons, "
+"gaps between polygon borders or overlapping polygon borders. A common "
+"topological error with **polyline** features is that they do not meet "
+"perfectly at a point (node). This type of error is called an **undershoot** "
+"if a gap exists between the lines, and an **overshoot** if a line ends "
+"beyond the line it should connect to (see :numref:`figure_topology_errors`)."
+msgstr ""
+"위상적 오류는 여러 유형이 있으며, 벡터 객체 유형이 폴리곤인지 또는 폴리라인인지에 따라 서로 다른 그룹으로 묶을 수 있습니다. "
+"**폴리곤** 객체의 위상적 오류는 닫히지 않은 폴리곤, 폴리곤 경계선(border) 사이의 틈(gap), 또는 폴리곤 경계선의 중첩 "
+"등을 포함합니다. **폴리라인** 객체의 공통적인 위상 오류 가운데 하나는 폴리라인 2개가 (또는 그 이상이) 어떤 포인트(노드)에서 "
+"완벽하게 접하지 않는 오류입니다. 라인 사이에 틈이 존재하는 경우 이런 유형의 오류를 **언더슛(undershoot)** 이라고 하며, "
+"라인이 접해야 할 다른 라인 너머에서 끝나는 경우 **오버슛(overshoot)** 이라고 합니다. "
+"(:numref:`figure_topology_errors` 을 참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:57
+msgid ""
+"Undershoots (1) occur when digitised vector lines that should connect to "
+"each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
+"the line it should connect to. Slivers (3) occur when the vertices of two "
+"polygons do not match up on their borders."
+msgstr ""
+"연결되어야 할 디지타이즈된 벡터 라인들이 제대로 접하지 않는 경우 언더슛(1)이 생겨납니다. 어떤 라인이 연결되어야 하는 라인 너머에서 "
+"끝나는 경우 오버슛(2)이 생겨납니다. 두 폴리곤의 꼭짓점들이 폴리곤 경계선 상에서 일치하지 않는 경우 조각(sliver)(3)이 "
+"생겨납니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:62
+msgid ""
+"The result of overshoot and undershoot errors are so-called 'dangling nodes'"
+" at the end of the lines. Dangling nodes are acceptable in special cases, "
+"for example if they are attached to dead-end streets."
+msgstr ""
+"오버슛 및 언더슛 오류의 결과는 라인 종단점 위치에 있는 소위 '매달린 노드들(dangling nodes)' 입니다. 특별한 경우 이 "
+"매달린 노드들을 받아들일 수도 있습니다. 예를 들면 해당 노드들이 막다른 길에 해당하는 경우 말입니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:66
+msgid ""
+"Topological errors break the relationship between features. These errors "
+"need to be fixed in order to be able to analyse vector data with procedures "
+"like network analysis (e.g. finding the best route across a road network) or"
+" measurement (e.g. finding out the length of a river). In addition to "
+"topology being useful for network analysis and measurement, there are other "
+"reasons why it is important and useful to create or have vector data with "
+"correct topology. Just imagine you digitise a municipal boundaries map for "
+"your province and the polygons overlap or show slivers. If such errors were "
+"present, you would be able to use the measurement tools, but the results you"
+" get will be incorrect. You will not know the correct area for any "
+"municipality and you will not be able to define exactly, where the borders "
+"between the municipalities are."
+msgstr ""
+"위상 오류는 객체들 사이의 관계를 무너뜨립니다. 벡터 데이터를 망분석(예: 도로망에 걸쳐 최적 경로 찾아내기) 또는 측정(예: 하천의 "
+"길이 계산하기) 같은 작업으로 분석할 수 있기 위해서는 이런 오류를 수정해야 합니다. 위상이 망분석 및 측정에 유용할 뿐만 아니라, "
+"정확한 위상을 가진 벡터 데이터를 생성 또는 보유하는 일이 중요하고 유용한 다른 이유들도 있습니다. 여러분이 살고 있는 지역의 "
+"행정구역도(municipal boundaries map)를 디지타이즈하고 있는데 폴리곤들이 중첩하거나 조각이 보인다고 상상해보십시오. "
+"그런 오류들이 존재한다면, 측정 도구를 사용할 수는 있겠지만 그 결과는 정확하지 않을 것입니다. 어떤 행정구역의 면적도 정확히 알 수 "
+"없을 것이고, 행정구역들 사이의 경계가 정확히 어디인지도 알 수 없을 겁니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:78
+msgid ""
+"It is not only important for your own analysis to create and have "
+"topologically correct data, but also for people who you pass data on to. "
+"They will be expecting your data and analysis results to be correct!"
+msgstr ""
+"위상적으로 정확한 데이터를 생성하고 보유하는 것은 여러분의 분석에만 중요한 것이 아니라, 여러분이 데이터를 전달하게 될 사람들에게도 "
+"중요합니다. 여러분의 데이터와 분석 결과가 정확할 것이라고 기대할 테니까요!"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:83
+msgid "Topology rules"
+msgstr "위상 규칙"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:85
+msgid ""
+"Fortunately, many common errors that can occur when digitising vector "
+"features can be prevented by topology rules that are implemented in many GIS"
+" applications."
+msgstr ""
+"다행하게도, 여러 GIS 응용 프로그램에 내재되어 있는 위상 규칙으로 벡터 객체를 디지타이즈하는 도중에 발생할 수 있는 공통된 많은 "
+"오류들을 방지할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:88
+msgid ""
+"Except for some special GIS data formats, topology is usually not enforced "
+"by default. Many common GIS, like QGIS, define topology as relationship "
+"rules and let the user choose the rules, if any, to be implemented in a "
+"vector layer."
+msgstr ""
+"몇몇 특수한 GIS 데이터 포맷을 제외하면, 보통 기본적으로 위상을 강제하지는 않습니다. QGIS 같은 여러 평범한 GIS는 위상을 관계"
+" 규칙으로 정의하고, 사용자가 벡터 레이어 내에서 시행할 규칙이 있다면 스스로 선택하도록 하고 있습니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:92
+msgid ""
+"The following list shows some examples of where topology rules can be "
+"defined for real world features in a vector map:"
+msgstr "다음 목록은 벡터 맵에 있는 실세계 객체에 대해 정의할 수 있는 위상 규칙들의 몇몇 예시입니다:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:95
+msgid "Area edges of a municipality map must not overlap."
+msgstr "행정구역도의 지역 경계들은 중첩해서는 안 된다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:96
+msgid "Area edges of a municipality map must not have gaps (slivers)."
+msgstr "행정구역도의 지역 경계들 사이에 틈(조각)이 있어서는 안 된다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:97
+msgid ""
+"Polygons showing property boundaries must be closed. Undershoots or "
+"overshoots of the border lines are not allowed."
+msgstr "토지 경계를 나타내는 폴리곤은 닫혀 있어야만 한다. 경계선의 언더슛 또는 오버슛은 허용되지 않는다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:99
+msgid ""
+"Contour lines in a vector line layer must not intersect (cross each other)."
+msgstr "벡터 라인 레이어의 등고선은 (서로를 넘어) 교차해서는 안 된다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:102
+msgid "Topological tools"
+msgstr "위상 도구"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:104
+msgid ""
+"Many GIS applications provide tools for topological editing. For example in "
+"QGIS you can **enable topological editing** to improve editing and "
+"maintaining common boundaries in polygon layers. A GIS such as QGIS "
+"'detects' a shared boundary in a polygon map so you only have to move the "
+"edge vertex of one polygon boundary and QGIS will ensure the updating of the"
+" other polygon boundaries as shown in :numref:`figure_topological_tools` "
+"(1)."
+msgstr ""
+"여러 GIS 응용 프로그램이 위상적 편집 작업을 위한 도구를 제공하고 있습니다. 예를 들어 QGIS에서는 폴리곤 레이어에 있는 공통 "
+"경계의 편집 및 유지보수를 향상시키기 위해 **위상 편집 작업을 활성화** 시킬 수 있습니다. QGIS와 같은 GIS는 폴리곤 맵에 있는"
+" 공유 경계를 '탐지(detect)' 할 수 있기 때문에, 한 폴리곤 경계의 가장자리 꼭짓점(edge vertex)을 움직이기만 해도 "
+"QGIS가 알아서 다른 폴리곤 경계들을 업데이트할 것입니다. :numref:`figure_topological_tools` 의 (1)을 "
+"참조하세요."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:111
+msgid ""
+"Another topological option allows you to prevent** polygon overlaps** during"
+" digitising (see :numref:`figure_topological_tools` (2)). If you already "
+"have one polygon, it is possible with this option to digitise a second "
+"adjacent polygon so that both polygons overlap and QGIS then clips the "
+"second polygon to the common boundary."
+msgstr ""
+"또다른 위상 옵션 가운데 하나는 디지타이즈 작업 도중에 **폴리곤 중첩(overlap)** 을 방지할 수 있게 해줍니다. "
+"(:numref:`figure_topological_tools` 의 (2) 참조) 기존 폴리곤이 있는 경우, 이 옵션을 활성화하고 두 "
+"번째 인접 폴리곤을 디지타이즈하면 두 폴리곤이 중첩하더라도 QGIS가 두 번째 폴리곤을 공통 경계로 자를 것입니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:123
+msgid ""
+"(1) Topological editing to detect shared boundaries, when moving vertices. "
+"When moving a vertex, all features that share that vertex are updated. (2) "
+"To avoid polygon overlaps, when a new polygon is digitised (shown in red) it"
+" is clipped to avoid overlapping neighbouring areas."
+msgstr ""
+"(1) 꼭짓점 이동 시 공유 경계를 탐지하는 위상 편집 작업. 한 꼭짓점을 움직이면, 해당 꼭짓점을 공유하는 모든 객체를 업데이트합니다."
+" (2) 폴리곤 중첩을 피하기 위해, (빨간색으로 표시된) 새 폴리곤을 디지타이즈하는 경우 인접하는 면과 중첩되는 일을 피하기 위해 새 "
+"폴리곤을 잘라냅니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:129
+msgid "Snapping distance"
+msgstr "스냅 거리"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:131
+msgid ""
+"Snapping distance is the distance a GIS uses to search for the closest "
+"vertex and / or segment you are trying to connect when you digitise. A "
+"**segment** is a straight line formed between two vertices in a polygon or "
+"polyline geometry. If you aren't within the snapping distance, a GIS such as"
+" QGIS will leave the vertex where you release the mouse button, instead of "
+"snapping it to an existing vertex and / or segment (see "
+":numref:`figure_snapping_distance`)."
+msgstr ""
+"스냅 거리란 여러분이 디지타이즈 작업 도중 연결하려 하는 가장 가까운 꼭짓점 그리고/또는 선분을 검색하기 위해 GIS가 사용하는 거리를 "
+"말합니다. **선분(segment)** 은 폴리곤 또는 폴리라인 도형에서 두 꼭짓점 사이에 형성된 직선입니다. 스냅 거리에 들어오지 않는"
+" 경우, QGIS 같은 GIS는 기존 꼭짓점 그리고/또는 선분에 스냅시키는 대신 여러분이 마우스 버튼을 놓은 위치에 꼭짓점을 생성할 "
+"것입니다. (:numref:`figure_snapping_distance` 을 참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:144
+msgid ""
+"The snapping distance (black circle) is defined in map units (e.g. decimal "
+"degrees) for snapping to either vertices or segments."
+msgstr ""
+"꼭짓점 또는 선분 가운데 하나에 스냅시키기 위한 스냅 거리(검은 원)는 (십진수도(decimal degree) 같은) 맵 단위로 "
+"정의됩니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:148
+msgid "Search Radius"
+msgstr "검색 반경"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:150
+msgid ""
+"Search radius is the distance a GIS uses to search for the closest vertex "
+"you are trying to move when you click on the map. If you aren't within the "
+"search radius, the GIS won't find and select any vertex of a feature for "
+"editing. In principle, it is quite similar to the snapping distance "
+"functionality."
+msgstr ""
+"검색 반경(search radius)이란 여러분이 맵 위를 클릭할 때 GIS가 여러분이 옮기려 하는 가장 가까운 꼭짓점을 검색하기 위해 "
+"사용하는 거리를 말합니다. 검색 반경에 들어오지 않는 경우, GIS는 편집 작업을 위해 어떤 객체의 꼭짓점도 찾아 선택하지 않을 "
+"것입니다. 원칙적으로, 검색 반경은 스냅 거리 기능과 아주 유사합니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:155
+msgid ""
+"Snapping distance and search radius are both set in map units so you may "
+"need to experiment to get the distance value set right. If you specify a "
+"value that is too big, the GIS may snap to a wrong vertex, especially if you"
+" are dealing with a large number of vertices close together. If you specify "
+"the search radius too small the GIS application won't find any feature or "
+"vertex to move or edit."
+msgstr ""
+"스냅 거리와 검색 반경 둘 다 맵 단위(map unit)로 설정되기 때문에, 알맞은 설정값을 찾기 위해 시행착오를 거쳐야 할 수도 "
+"있습니다. 값을 너무 길게 설정하면, GIS가 틀린 꼭짓점에 스냅할 수도 있습니다. 특히 대량의 인접 꼭짓점들을 다루고 있을 경우엔 "
+"말입니다. 검색 반경을 너무 짧게 지정한다면, GIS가 이동시키거나 편집할 객체 또는 꼭짓점을 하나도 찾지 못 할 것입니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:162
+msgid "Common problems / things to be aware of"
+msgstr "공통적으로 조심해야 할 문제들/사항들"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:164
+msgid ""
+"Mainly designed for simplicity and for fast rendering but not for data "
+"analysis that requires topology (such as finding routes across a network), "
+"many GIS applications are able to show topological and simple feature data "
+"together and some can also create, edit and analyse both."
+msgstr ""
+"위상을 필요로 하는 (어떤 망에 걸쳐 경로를 찾아내는 등의) 데이터 분석이 아니라 주로 단순성 및 빠른 렌더링을 위해 설계되었지만, 여러"
+" GIS 응용 프로그램들은 위상 및 단순 객체(simple feature) 데이터를 함께 보여줄 수 있으며, 몇몇 GIS는 둘 다를 "
+"생성, 편집 및 분석할 수도 있습니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:170
+msgid "What have we learned?"
+msgstr "무엇을 배웠나요?"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:172
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "이제 이번 단원에서 배운 내용을 정리해볼까요:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:174
+msgid ""
+"**Topology** shows the spatial relation of neighbouring vector features."
+msgstr "**위상** 은 서로 인접해 있는 벡터 객체들의 공간적 관계를 나타냅니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:175
+msgid "Topology in GIS is provided by **topological tools**."
+msgstr "GIS에서 위상은 **위상 도구** 가 제공합니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:176
+msgid "Topology can be used to **detect and correct digitizing errors**."
+msgstr "**디지타이즈 오류를 탐지하고 수정** 하는 데 위상을 사용할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:177
+msgid ""
+"For some tools, such as **network analysis**, topological data is essential."
+msgstr "**망분석** 과 같은 몇몇 도구는 위상 데이터가 필수입니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:178
+msgid ""
+"**Snapping distance** and **search radius** help us to digitise "
+"topologically correct vector data."
+msgstr "**스냅 거리** 와 **검색 반경** 은 위상적으로 정확한 벡터 데이터를 디지타이즈할 수 있도록 도와줍니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:180
+msgid ""
+"**Simple feature** data is not a true topological data format but it is "
+"commonly used by GIS applications."
+msgstr "**단순 객체** 데이터는 진정한 위상 데이터 포맷은 아니지만 GIS 응용 프로그램들이 공통적으로 사용하고 있습니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:184
+msgid "Now you try!"
+msgstr "도전해봅시다!"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:186
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "강사와 학생들이 함께 시도해볼 만한 몇 가지 아이디어가 있습니다:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:188
+msgid ""
+"Mark your local bus stops on a toposheet map and then task your learners to "
+"find the shortest route between two stops."
+msgstr "지형도 위에 여러분 지역의 버스 정류소를 표시한 다음 학생들에게 두 정류소 사이의 최단 경로를 찾아보라고 하십시오."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:190
+msgid ""
+"Think of how you would create vector features in a GIS to represent a "
+"topological road network of your town. What topological rules are important "
+"and what tools can your learners use in QGIS to make sure that the new road "
+"layer is topologically correct?"
+msgstr ""
+"GIS에 여러분이 사는 마을의 위상적 도로망을 표현할 수 있는 벡터 객체들을 어떻게 생성할지 생각해보십시오. 새 도로 레이어가 위상적으로"
+" 정확하도록 만들려면 어떤 위상 규칙이 중요할까요? 또 학생들이 QGIS에서 어떤 도구를 사용하면 될까요?"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:196
+msgid "Something to think about"
+msgstr "생각해볼 점"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:198
+msgid ""
+"If you don't have a computer available, you can use a map of a bus or "
+"railway network and discuss the spatial relationships and topology with your"
+" learners."
+msgstr ""
+"사용할 수 있는 컴퓨터가 없다면, 버스 노선 또는 철도망 지도를 활용해서 학생들과 공간적 관계와 위상에 대해 토론할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:202
+msgid "Further reading"
+msgstr "더 읽어볼 거리"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:204
+msgid "**Books**:"
+msgstr "**서적**:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:206
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:208
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:211
+msgid "**Websites**:"
+msgstr "**웹사이트**:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:213
+msgid "http://www.innovativegis.com/basis/"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/topology.rst:214
+msgid "https://en.wikipedia.org/wiki/Geospatial_topology"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/topology.rst:216
+msgid ""
+"The QGIS User Guide also has more detailed information on topological "
+"editing provided in QGIS."
+msgstr "QGIS 사용자 지침서도 QGIS에서 어떻게 위상적 편집 작업을 하는지에 대한 보다 상세한 정보를 수록하고 있습니다."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:220
+msgid "What's next?"
+msgstr "다음 단원은?"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:222
+msgid ""
+"In the section that follows we will take a closer look at **Coordinate "
+"Reference Systems** to understand how we relate data from our spherical "
+"earth onto flat maps!"
+msgstr ""
+"다음 단원에서는 공 모양인 지구의 데이터를 어떻게 평면 지도 위로 합치시킬 수 있는지를 이해하기 위해 **좌표계(Coordinate "
+"Reference System)** 에 대해 자세히 살펴볼 것입니다."

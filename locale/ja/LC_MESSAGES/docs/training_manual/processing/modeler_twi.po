@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-06 06:24+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:4
+msgid "Starting with the model designer"
+msgstr "モデルデザイナーから始める"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:6
+msgid ""
+"In this lesson we will use the model designer, a powerful component that we "
+"can use to define a workflow and run a chain of algorithms."
+msgstr ""
+"このレッスンでは、ワークフローを定義してアルゴリズムの連鎖を実行するために使用できる強力なコンポーネントである、モデルデザイナーを使います。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:8
+msgid ""
+"A normal session with the processing tools includes more than running a "
+"single algorithm. Usually several of them are run to obtain a result, and "
+"the outputs of some of those algorithms are used as input for some of the "
+"other ones."
+msgstr ""
+"処理ツールによる通常のセッションは、単一のアルゴリズムを実行する以上のものを含んでいます。通常、結果を得るためには複数のアルゴリズムが実行され、そしていくつかのアルゴリズムの出力は、他のいくつかのアルゴリズムの入力として使われます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:10
+msgid ""
+"Using the model designer, that workflow can be put into a model, which will "
+"run all the necessary algorithms in a single run, thus simplifying the whole"
+" process and automating it."
+msgstr ""
+"モデルデザイナーを使うと、ワークフローを１つのモデルに入れることができ、一回の実行で必要なすべてのアルゴリズムが実行されるので、全体のプロセスが簡素化され自動化されます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:12
+msgid ""
+"To start this lesson, we are going to calculate a parameter named "
+"Topographic Wetness Index. The algorithm that computes it is called "
+":guilabel:`Topographic wetness index (twi)`."
+msgstr ""
+"このレッスンの始めに、地形湿潤指数というパラメータを計算することにします。それを計算するアルゴリズムは :guilabel:`Topographic "
+"wetness index (twi)` と呼ばれています。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:16
+msgid ""
+"As you can see, there are two mandatory inputs: *Slope* and *Catchment "
+"area*. There is also an optional input, but we will not be using it, so we "
+"can ignore it."
+msgstr ""
+"ご覧のように、2つの必須入力があります： *傾斜* と *集水域面積* "
+"。オプションの入力もありますが、それは使用するつもりはありませんので無視できます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:18
+msgid ""
+"The data for this lesson contains just a DEM, so we do not have any of the "
+"required inputs. However, we know how to calculate both of them from that "
+"DEM, since we have already seen the algorithms to compute slope and "
+"catchment area. So we can first compute those layers and then use them for "
+"the TWI algorithm."
+msgstr ""
+"このレッスン用のデータにはDEMしか入っていませんから、必要な入力は何もありません。しかし、傾きと集水域面積を計算するアルゴリズムをすでに見ていますので、そのDEMからそれらの両方を計算する方法はわかっています。だから最初にこれらのレイヤを計算すると、それらをTWIアルゴリズムのために使用できます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:20
+msgid ""
+"Here are the parameter dialogs that you should use to calculate the 2 "
+"intermediate layers."
+msgstr "これが2つの中間レイヤを計算するために使用すべきパラメーターのダイアログです。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:22
+msgid "Slope must be calculated in radians, not in degrees."
+msgstr "傾斜はラジアンではなく度で計算しなければなりません。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:28
+msgid ""
+"And this is how you have to set the parameters dialog of the TWI algorithm."
+msgstr "そしてこれはTWIアルゴリズムのパラメータダイアログボックスをどのように設定する必要があるかです。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:32
+msgid ""
+"This is the result that you will obtain (the default singleband pseudocolor "
+"inverted palette has been used for rendering). You can use the "
+":file:`twi.qml` style provided."
+msgstr ""
+"このような結果が得られます（レンダリングにはデフォルトの単バンド疑似カラー反転パレットが使われています）。提供された :file:`twi.qml` "
+"スタイルを使用することができます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:36
+msgid ""
+"What we will try to do now is to create an algorithm that calculates the TWI"
+" from a DEM in just one single step. That will save us work in case we later"
+" have to compute a TWI layer from another DEM, since we will need just one "
+"single step to do it instead of the three above. All the processes that we "
+"need are found in the  toolbox, so what we have to do is to define the "
+"workflow to wrap them. This is where the model designer comes in."
+msgstr ""
+"ここでは、DEMからTWIを1ステップで計算するアルゴリズムを作成することを目指します。これにより、後で別のDEMからTWIレイヤを計算する必要が生じた場合、上記の3つのステップではなく、たった1つのステップで計算できるため、作業を軽減することができます。必要な処理はすべてツールボックスに用意されているので、あとはそれらを包むワークフローを定義するだけです。そこで登場するのがモデルデザイナーです。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:38
+msgid "Open the modeler by selecting its menu entry in the processing menu."
+msgstr "プロセシングメニューで、メニュー項目を選択することにより、モデラーを開きます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:42
+msgid ""
+"Two things are needed to create a model: setting the inputs that it will "
+"need, and defining the algorithm that it contains. Both of them are done by "
+"adding elements from the two tabs in the left-hand side of the modeler "
+"window: :guilabel:`Inputs` and :guilabel:`Algorithms`."
+msgstr ""
+"モデルを作成するには2つのことが必要です：必要な入力を設定することと、そのモデルに含まれるアルゴリズムを定義することです。この2つは、モデラーウィンドウの左側にある2つのタブ、"
+" :guilabel:`入力` と :guilabel:`アルゴリズム` から要素を追加することで実現できます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:44
+msgid ""
+"Let's start with the inputs. In this case we do not have much to add. We "
+"just need a raster layer with the DEM, and that will be our only input data."
+msgstr ""
+"入力から始めましょう。このケースでは追加することがあまりありません。DEMを持つラスタレイヤが必要なだけで、それが唯一の入力データとなります。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:46
+msgid ""
+"Double click on the :guilabel:`Raster layer` input and you will see the "
+"following dialog."
+msgstr ":guilabel:`ラスタレイヤ` 入力でダブルクリックすると次のダイアログが表示されます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:50
+msgid "Here we will have to define the input we want:"
+msgstr "ここでは、必要な入力を定義する必要があります："
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:52
+msgid ""
+"Since we expect this raster layer to be a DEM, we will call it ``DEM``. "
+"That's the name that the user of the model will see when running it."
+msgstr ""
+"このラスタレイヤはDEMであることが期待されるので、``DEM`` "
+"と呼ぶことにします。これは、モデルを実行する際に、モデルのユーザーが見ることができる名前です。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:53
+msgid ""
+"Since we need that layer to work, we will define it as a mandatory layer."
+msgstr "そのレイヤがないと動かないので、必須レイヤとして定義します。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:55
+msgid "Here is how the dialog should be configured."
+msgstr "これがダイアログを設定する方法です"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:59
+msgid ""
+"Click on :guilabel:`OK` and the input will appear in the modeler canvas."
+msgstr ":guilabel:`OK` をクリックするとモデラーキャンバスに入力が現れます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:63
+msgid "Now let's move to the :guilabel:`Algorithms` tab."
+msgstr "次に :guilabel:`アルゴリズム` タブに移りましょう。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:64
+msgid ""
+"The first algorithm we have to run is the :guilabel:`Slope, aspect, "
+"curvature` algorithm. Locate it in the algorithm list, double-click on it "
+"and you will see the dialog shown below."
+msgstr ""
+"最初に実行するアルゴリズムは、 :guilabel:`Slope, aspect, curvature` "
+"アルゴリズムです。アルゴリズムリストでこれを探し、ダブルクリックすると、以下のようなダイアログが表示されます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:69
+msgid ""
+"This dialog is very similar to the one that you can find when running the "
+"algorithm from the toolbox, but the element that you can use as parameter "
+"values are not taken from the current QGIS project, but from the model "
+"itself. That means that, in this case, we will not have all the raster "
+"layers of our project available for the *Elevation* field, but just the ones"
+" defined in our model. Since we have added just one single raster input "
+"named ``DEM``, that will be the only raster layer that we will see in the "
+"list corresponding to the :guilabel:`Elevation` parameter."
+msgstr ""
+"このダイアログは、ツールボックスからアルゴリズムを実行する際に表示されるダイアログと非常に似ていますが、パラメータ値として使用できる要素は、現在のQGISプロジェクトではなく、モデル自体から取得されます。つまり、この場合、*Elevation*"
+" フィールドで使用できるのは、プロジェクトのすべてのラスタレイヤではなく、モデルで定義されているものだけということになります。``DEM`` "
+"という名前のラスタ入力を1つだけ追加したので、 :guilabel:`Elevation` "
+"パラメータに対応するリストに表示されるラスタレイヤはこの1つだけとなります。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:71
+msgid ""
+"Output generated by an algorithm are handled a bit differently when the "
+"algorithm is used as a part of a model. Instead of selecting the filepath "
+"where you want to save each output, you just have to specify if that output "
+"is an intermediate layer (and you do not want it to be preserved after the "
+"model has been executed), or it is a final one. In this case, all layers "
+"produced by this algorithm are intermediate. We will only use one of them "
+"(the slope layer), but we do not want to keep it, since we just need it to "
+"calculate the TWI layer, which is the final result that we want to obtain."
+msgstr ""
+"アルゴリズムにより生成された出力は、アルゴリズムがモデルの一部として使用される場合、少し異なって処理されます。各出力を保存するファイルパスを選択する代わりに、その出力が中間層であるか（そしてモデルの実行後に保存しないようにするか）、または最終出力であるかを指定する必要があります。この場合、このアルゴリズムによって生成されるすべてのレイヤは中間です。そのうちの1つ（傾斜レイヤ）のみを使用しますが、取得したい最終結果であるTWIレイヤを計算するために必要なだけなので、それを保存する必要はありません。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:73
+msgid ""
+"When layers are not a final result, you should just leave the corresponding "
+"field. Otherwise, you have to enter a name that will be used to identify the"
+" layer in the parameters dialog that will be shown when you run the model "
+"later."
+msgstr ""
+"最終的な結果ではないレイヤの場合、対応するフィールドは残しておかなければなりません。そうしないと、後でモデルを実行したときに表示されるパラメータダイアログボックスでレイヤを識別するために使用される名前を入力する必要があります。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:75
+msgid ""
+"There is not much to select in this first dialog, since we do not have but "
+"just one layer in our model (The DEM input that we created). Actually, the "
+"default configuration of the dialog is the correct one in this case, so you "
+"just have to press :guilabel:`OK`. This is what you will now have in the "
+"modeler canvas."
+msgstr ""
+"この最初のダイアログで選択することはあまりありません。なぜなら、このモデルには1つのレイヤ（作成したDEM入力）しかありません。この場合、ダイアログのデフォルト設定が正しいので、"
+" :guilabel:`OK` を押すだけでよいのです。これがモデラーキャンバスに表示されるものです。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:79
+msgid ""
+"The second algorithm we have to add to our model is the catchment area "
+"algorithm. We will use the algorithm named *Catchment area (Paralell)*. We "
+"will use the DEM layer again as input, and none of the ouputs it produces "
+"are final, so here is how you have to fill the corresponding dialog."
+msgstr ""
+"モデルに追加する必要がある第2のアルゴリズムは、集水域面積のアルゴリズムです。 *Catchment area (Paralell)* "
+"という名前のアルゴリズムを使用します。再びDEMレイヤを入力として使用し、それが生成する出力はどれも最終的なものでないので、これが対応するダイアログをどう埋める必要があるかです。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:83
+msgid "Now your model should look like this."
+msgstr "今、モデルは、次のようになります。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:87
+msgid ""
+"The last step is to add the :guilabel:`Topographic wetness index` algorithm,"
+" with the following configuration."
+msgstr "最後に :guilabel:`Topographic wetness index` アルゴリズムを追加し、以下の構成とします。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:91
+msgid ""
+"In this case, we will not be using the DEM as input, but instead, we will "
+"use the slope and catchment area layers that are calculated by the "
+"algorithms that we previously added. As you add new algorithms, the outputs "
+"they produce become available for other algorithms, and using them you link "
+"the algorithms, creating the workflow."
+msgstr ""
+"この場合、入力としてDEMを使用しない代わりに、以前に追加アルゴリズムによって計算される傾斜および集水域レイヤーを使用します。新しいアルゴリズムを追加すると、それらが作り出す出力が他のアルゴリズムのために利用可能になり、それらを使用してアルゴリズムをリンクし、ワークフローを作成します。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:93
+msgid ""
+"In this case, the output ``TWI`` layer is a final layer, so we have to "
+"indicate so. In the corresponding textbox, enter the name that you want to "
+"be shown for this output."
+msgstr ""
+"この場合、出力される ``TWI`` "
+"レイヤは最終レイヤであるため、そのように表示する必要があります。対応するテキストボックスに、この出力に表示させたい名前を入力します。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:95
+msgid "Now our model is finished and it should look like this."
+msgstr "今、モデルが完成すると、それは次のようになります。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:99
+msgid "Enter a name and a group name in the upper part of the model window."
+msgstr "モデルウィンドウの上部に名前とグループ名を入力します。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:103
+msgid ""
+"Save it clicking on the :guilabel:`Save` button. You can save it anywhere "
+"you want and open it later, but if you save it in the models folder (which "
+"is the folder that you will see when the save file dialog appears), your "
+"model will also be available in the toolbox as well. So stay on that folder "
+"and save the model with the filename that you prefer."
+msgstr ""
+":guilabel:`モデルを保存` "
+"ボタンをクリックして保存します。好きな場所に保存して後で開くこともできますが、モデルフォルダ（ファイル保存ダイアログが表示されたときに表示されるフォルダです）に保存すると、あなたのモデルはツールボックスでも利用可能になります。ですから、そのフォルダにとどまって、お好みのファイル名でモデルを保存してください。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:105
+msgid ""
+"Now close the modeler dialog and go to the toolbox. In the "
+":guilabel:`Models` entry you will find your model."
+msgstr "モデラーダイアログを閉じ、ツールボックスに移動します。:guilabel:`モデル` 要素の中にあなたのモデルが見つかります。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:109
+msgid "You can run it just like any normal algorithm, double-clicking on it."
+msgstr "通常のアルゴリズムと同じように、ダブルクリックで実行することができます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:113
+msgid ""
+"As you can see, the parameters dialog, contain the input that you added to "
+"the model, along with the outputs that you set as final when adding the "
+"corresponding algorithms."
+msgstr ""
+"ご覧のように、パラメーターダイアログは、対応するアルゴリズムを追加するときに最終的な出力として設定した出力と共に、モデルに追加の入力を含みます。"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:115
+msgid ""
+"Run it using the DEM as input and you will get the TWI layer in just one "
+"single step."
+msgstr "入力としてDEMを使用して、それを実行すると、1つのステップだけでTWIレイヤが得られるでしょう。"

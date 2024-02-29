@@ -1,0 +1,486 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:5
+msgid "Working with Projections"
+msgstr "Trabalhando com Projeções"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:14
+msgid ""
+"A Coordinate Reference System, or CRS, is a method of associating numerical "
+"coordinates with a position on the surface of the Earth. QGIS has support "
+"for approximately 7,000 standard CRSs, each with different use cases, pros "
+"and cons! Choosing an appropriate reference system for your QGIS projects "
+"and data can be a complex task, but fortunately QGIS helps guide you through"
+" this choice, and makes working with different CRSs as transparent and "
+"accurate as possible."
+msgstr ""
+"Um Sistema de Referência de Coordenadas, ou SRC, é um método de associar "
+"coordenadas numéricas com uma posição na superfície da Terra. O QGIS tem "
+"suporte para aproximadamente 7.000 SRCs padrão, cada um com diferentes casos"
+" de uso, prós e contras! Escolher um sistema de referência apropriado para "
+"seus projetos e dados QGIS pode ser uma tarefa complexa, mas felizmente o "
+"QGIS ajuda a guiá-lo através desta escolha, e torna o trabalho com "
+"diferentes CRSs tão transparente e preciso quanto possível."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:25
+msgid "Overview of Projection Support"
+msgstr "Visão geral do Suporte a Projeções"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
+msgid "Layer Coordinate Reference Systems"
+msgstr "Sistemas de referência de coordenadas da camada"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
+msgid ""
+"Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
+"CRS`"
+msgstr ""
+"Abrir :menuseleção:`Configurações-->` |options| :menuselection:`Opções... "
+"--> SRC``"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:415
+msgid "options"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
+msgid "The CRS tab in the QGIS Options Dialog"
+msgstr "A guia SRC na Caixa de Diálogo de Opções QGIS"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:419
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:413
+msgid "indicatorNoCRS"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:417
+msgid "radioButtonOff"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
+msgid "|radioButtonOff| :guilabel:`Use project CRS`"
+msgstr "|radioButtonOff| :guilabel:`Usar SRC do projeto`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
+msgid ""
+"To assign the same CRS to multiple layers that have no crs or have a wrong "
+"one in one operation:"
+msgstr ""
+"Atribuir o mesmo SRC a várias camadas que não tenham SRC ou que tenham um "
+"SRC errado em uma única operação:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
+msgid "Select the layers in the :guilabel:`Layers` panel"
+msgstr "Selecione as camadas no painel :guilabel:`Camadas'."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
+msgid ""
+"Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
+"selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
+msgstr ""
+"Pressione :kbd:`Ctrl+Shift+C`. Você também pode clicar com o botão direito "
+"sobre uma das camadas selecionadas ou ir para :menuselection:`Camada --> "
+"Definir SRC da(s) camada(s)`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
+msgid "Find and select the right CRS to use"
+msgstr "Encontre e selecione o CRS adequado para usar"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
+msgid ""
+"And press :guilabel:`OK`. You can confirm that it has been set correctly in "
+"the :guilabel:`Source` tab of the layers' properties dialog."
+msgstr ""
+"E pressione :guilabel:`OK`. Você pode confirmar que ela foi definida "
+"corretamente na aba :guilabel:`Fonte` das propriedades das camadas."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
+msgid ""
+"Note that changing the CRS in this setting does not alter the underlying "
+"data source in any way, rather it just changes how QGIS interprets the raw "
+"coordinates from the layer in the current QGIS project."
+msgstr ""
+"Observe que mudar o SRC neste cenário não altera de forma alguma a fonte de "
+"dados subjacente, mas apenas muda a forma como o QGIS interpreta as "
+"coordenadas brutas da camada no projeto QGIS atual."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
+msgid "Project Coordinate Reference Systems"
+msgstr "Sistemas referência de coordenadas projetadas"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:119
+msgid ""
+"Every project in QGIS also has an associated Coordinate Reference System. "
+"The project CRS determines how data is projected from its underlying raw "
+"coordinates to the flat map rendered within your QGIS map canvas."
+msgstr ""
+"Cada projeto no QGIS também tem um Sistema de Referência de Coordenadas "
+"associado. O projeto SRC determina como os dados são projetados de suas "
+"coordenadas brutas subjacentes para o mapa plano renderizado em sua tela de "
+"mapa QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
+msgid ""
+"It is important to make an appropriate choice of CRS for your QGIS projects."
+" Choosing an inappropriate CRS can cause your maps to look distorted, and "
+"poorly reflect the real-world relative sizes and positions of features. "
+"Usually, while working in smaller geographic areas, there will be a number "
+"of standard CRSs used within a particular country or administrative area. "
+"It's important to research which CRSs are appropriate or standard choices "
+"for the area you are mapping, and ensure that your QGIS project follows "
+"these standards."
+msgstr ""
+"É importante fazer uma escolha apropriada de SRC para seus projetos QGIS. "
+"Escolher um SRC inadequado pode fazer com que seus mapas pareçam distorcidos"
+" e reflitam mal os tamanhos relativos do mundo real e as posições das "
+"feições. Normalmente, ao trabalhar em áreas geográficas menores, haverá "
+"vários SRCs padrão usados em um determinado país ou área administrativa. É "
+"importante pesquisar quais SRCs são escolhas apropriadas ou padrão para a "
+"área que você está mapeando e garantir que seu projeto QGIS siga esses "
+"padrões."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:140
+msgid ""
+"By default, QGIS starts each new project using a global default projection. "
+"This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"), and it is a "
+"global latitude/longitude based reference system. This default CRS can be "
+"changed via the :guilabel:`CRS for New Projects` setting in the "
+":guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
+":menuselection:`Options...` (see :numref:`figure_projection_options`). There"
+" is an option to automatically set the project's CRS to match the CRS of the"
+" first layer loaded into a new project, or alternatively you can select a "
+"different default CRS to use for all newly created projects. This choice "
+"will be saved for use in subsequent QGIS sessions."
+msgstr ""
+"Por padrão, o QGIS inicia cada novo projeto usando uma projeção padrão "
+"global. Este SRC padrão é ``EPSG:4326`` (também conhecido como \"WGS 84\"), "
+"e é um sistema de referência global baseado na latitude/longitude. Este SRC "
+"padrão pode ser alterado através da configuração :guilabel:`SRC para Novos "
+"Projetos` na guia :guilabel:`SRC` em :menuselection:`Configurações -->` "
+"|options| :menuselection:`Opções...` (veja "
+":numref:`figura_opções_de_projeção`). Há uma opção para definir "
+"automaticamente o SRC do projeto para corresponder ao SRC da primeira camada"
+" carregada em um novo projeto ou, alternativamente, você pode selecionar um "
+"SRC padrão diferente para utilizar em todos os projetos recém-criados. Esta "
+"escolha será salva para uso em sessões subseqüentes do QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
+msgid ""
+"The project CRS can also be set through the :guilabel:`CRS` tab of the "
+":menuselection:`Project --> Properties...` dialog. It will also be shown in "
+"the lower-right of the QGIS status bar."
+msgstr ""
+"O projeto SRC também pode ser definido através da guia :guilabel:`SRC` do "
+":menuselection:`Projeto --> Propriedades...`janela. Também será mostrado na "
+"parte inferior direita da barra de status QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
+msgid "Project Properties Dialog"
+msgstr "Caixa de Diálogo de Propriedades de Projeto"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
+msgid "Available options are:"
+msgstr "As opções disponíveis são:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
+msgid ""
+"No reprojection is done while rendering the layers: features are just drawn "
+"using their raw coordinates."
+msgstr ""
+"Nenhuma reprojeção é feita durante a renderização das camadas: as feições "
+"são apenas desenhadas usando suas coordenadas brutas."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
+msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
+msgstr "A elipsóide é bloqueada e forçada a \"Nenhum/Planimétrico\"."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
+msgid ""
+"The distance and area units, and the coordinate display are locked out and "
+"forced to \"unknown units\"; all measurements are done in unknown map units,"
+" and no conversion is possible."
+msgstr ""
+"As unidades de distância e área, e a exibição de coordenadas são bloqueadas "
+"e forçadas a \"unidades desconhecidas\"; todas as medições são feitas em "
+"unidades de mapa desconhecidas, e nenhuma conversão é possível."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
+msgid ""
+"Whenever you select a new CRS for your QGIS project, the measurement units "
+"will automatically be changed in the :guilabel:`General` tab of the "
+":guilabel:`Project properties` dialog (:menuselection:`Project --> "
+"Properties...`) to match the selected CRS. For instance, some CRSs define "
+"their coordinates in feet instead of meters, so setting your QGIS project to"
+" one of these CRSs will also set your project to measure using feet by "
+"default."
+msgstr ""
+"Sempre que você selecionar um novo SRC para seu projeto QGIS, as unidades de"
+" medida serão automaticamente alteradas na guia :guilabel:`Geral` da janela "
+":guilabel:`Propriedades do projeto` (:menuselection:`Projeto --> "
+"Propriedades...`) para combinar com o SRC selecionado. Por exemplo, alguns "
+"SRCs definem suas coordenadas em pés ao invés de metros, portanto, definir "
+"seu projeto QGIS para um desses SRCs também irá definir seu projeto para "
+"medir utilizando pés por padrão."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
+msgid "**Setting the project CRS from a layer**"
+msgstr "**Configurando a projeção SRC a partir de uma camada**"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
+msgid "You can assign a CRS to the project using a layer CRS:"
+msgstr "Você pode atribuir um SRC ao projeto usando um SRC de camada:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
+msgid ""
+"In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
+"the CRS"
+msgstr ""
+"No painel :guilabel:`Camadas`, clique com o botão direito do mouse sobre a "
+"camada que você quer escolher o SRC"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
+msgid "Select :guilabel:`Set project CRS from Layer`."
+msgstr "Selecione :guilabel:`Configurar SRC do projeto a partir da Camada`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
+msgid "Coordinate Reference System Selector"
+msgstr "Seletor do Sistemas de Referência de Coordenadas"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:212
+msgid ""
+"This dialog helps you assign a Coordinate Reference System to a project or a"
+" layer, provided a set of projection databases. Items in the dialog are:"
+msgstr ""
+"Este diálogo ajuda a atribuir um Sistema de Referência Coordenada a um "
+"projeto ou uma camada, desde que um conjunto de bancos de dados de projeção."
+" Os itens na janela são:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:215
+msgid ""
+"**Filter**: If you know the EPSG code, the identifier, or the name for a "
+"Coordinate Reference System, you can use the search feature to find it. "
+"Enter the EPSG code, the identifier or the name."
+msgstr ""
+"**Filtro**: Se você conhece o código EPSG, o identificador ou o nome de um "
+"Sistema de Referência de Coordenadas, você pode usar o recurso de busca para"
+" encontrá-lo. Digite o código EPSG, o identificador ou o nome."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:218
+msgid ""
+"**Recently used coordinate reference systems**: If you have certain CRSs "
+"that you frequently use in your everyday GIS work, these will be displayed "
+"in this list. Click on one of these items to select the associated CRS."
+msgstr ""
+"** Sistemas de referência de coordenadas recentemente utilizados**: Se você "
+"tiver certos SRCs que você usa freqüentemente em seu trabalho diário de SIG,"
+" estes serão exibidos nesta lista. Clique em um destes itens para selecionar"
+" o SRC associado."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:221
+msgid ""
+"**Coordinate reference systems of the world**: This is a list of all CRSs "
+"supported by QGIS, including Geographic, Projected and Custom coordinate "
+"reference systems. To define a CRS, select it from the list by expanding the"
+" appropriate node and selecting the CRS. The active CRS is preselected."
+msgstr ""
+"**Sistemas de referência coordenados do mundo**: Esta é uma lista de todos "
+"os SRCs suportados pelo QGIS, incluindo os sistemas de referência de "
+"coordenadas geográficas, projetadas e personalizadas. Para definir um SRC, "
+"selecione-o da lista expandindo o nó apropriado e selecionando o SRC. O SRC "
+"ativo é pré-selecionado."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
+msgid "Custom Coordinate Reference System"
+msgstr "Sistema de Referência de Coordenadas personalizado"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:243
+msgid ""
+"If QGIS does not provide the coordinate reference system you need, you can "
+"define a custom CRS. To define a CRS, select |customProjection| "
+":guilabel:`Custom CRS...` from the :menuselection:`Settings` menu. Custom "
+"CRSs are stored in your QGIS user database. In addition to your custom CRSs,"
+" this database also contains your spatial bookmarks and other custom data."
+msgstr ""
+"Se o QGIS não fornece o sistema de referência de coordenadas(SRC) que você "
+"precisa, você pode definir um SRC personalizado. Para definir um SRC, "
+"selecione |customProjection| :guilabel:`Customizar SRC...` no menu "
+":menuselection:`Configurações'. Os SRC personalizados são armazenados em seu"
+" banco de dados de usuários QGIS. Além de seus SRCs personalizados, este "
+"banco de dados também contém seus marcadores espaciais e outros dados "
+"personalizados."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:411
+msgid "customProjection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:255
+msgid ""
+"This manual describes the use of ``proj`` and related command line "
+"utilities. The cartographic parameters used with ``proj`` are described in "
+"the user manual and are the same as those used by QGIS."
+msgstr ""
+"Este manual descreve o uso de ``proj`` e utilitários de linha de comando "
+"relacionados. Os parâmetros cartográficos utilizados com o ``proj`` estão "
+"descritos no manual do usuário e são os mesmos que os utilizados pelo QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:259
+msgid ""
+"The :guilabel:`Custom Coordinate Reference System Definition` dialog "
+"requires only two parameters to define a user CRS:"
+msgstr ""
+"A janela :guilabel:`Definição de Sistema de Referência de Coordenadas "
+"personalizado` exige apenas dois parâmetros para definir um SRC ao usuário:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:262
+msgid "A descriptive name"
+msgstr "Um nome descritivo"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:263
+msgid "The cartographic parameters in PROJ or WKT format"
+msgstr "Os parâmetros cartográficos em formato PROJ ou WKT"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:265
+msgid "To create a new CRS:"
+msgstr "Para criar um novo SRC:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
+msgid "Click the |symbologyAdd| :sup:`Add new CRS` button"
+msgstr "Clique no botão |symbologyAdd| :sup:`Adicionar novo SRC`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:423
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:268
+msgid "Enter a descriptive name"
+msgstr "Insira um nome descritivo"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:270
+msgid "Add the CRS :guilabel:`Parameters`."
+msgstr "Adicionar ao SRC :guilabel:`Parâmetros`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:272
+msgid "**Prefer storing the CRS definition in WKT format**"
+msgstr "**Preferir o armazenamento da definição de SRC no formato WKT**"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:291
+msgid ""
+"You can test your CRS parameters to see if they give sane results. To do "
+"this, enter known WGS 84 latitude and longitude values in :guilabel:`North` "
+"and :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, "
+"and compare the results with the known values in your coordinate reference "
+"system."
+msgstr ""
+"Você pode testar seus parâmetros SRC para ver se eles dão resultados "
+"coerentes. Para fazer isso, digite os valores conhecidos de latitude e "
+"longitude WGS 84 nos campos :guilabel:`Norte` e :guilabel:`Leste`, "
+"respectivamente. Clique em :guilabel:`Calcular`, e compare os resultados com"
+" os valores conhecidos em seu sistema de referência de coordenadas."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:312
+msgid "Setting an NTv2 transformation"
+msgstr "Configurar uma transformação NTv2"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:319
+msgid "Datum Transformations"
+msgstr "Transformações de Datum"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:336
+msgid ""
+"If desired, QGIS can also prompt you whenever multiple possible "
+"transformations can be made between two CRSs, and allow you to make an "
+"informed selection of which is the most appropriate transformation to use "
+"for your data."
+msgstr ""
+"Se desejar, o QGIS também pode lhe solicitar sempre que várias "
+"transformações possíveis possam ser feitas entre dois CRSs, e permitir que "
+"você faça uma seleção informada de qual é a transformação mais apropriada "
+"para usar para seus dados."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:351
+msgid ""
+"or defining a list of appropriate datum transformations to use as defaults "
+"when loading a layer to a project or reprojecting a layer."
+msgstr ""
+"ou definir uma lista de transformações de dados apropriadas para usar como "
+"padrão ao carregar uma camada em um projeto ou ao reprojetar uma camada."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:421
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:359
+msgid "Provide the :guilabel:`Destination CRS` in the same way."
+msgstr "Fornecer o :guilabel:`Destino SRC` da mesma forma."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:360
+msgid ""
+"A list of available transformations from source to destination will be shown"
+" in the table. Clicking a row shows details on the settings applied and the "
+"corresponding accuracy and area of use of the transformation."
+msgstr ""
+"Uma lista das transformações disponíveis da origem ao destino será mostrada "
+"na tabela. Clicando em uma linha serão mostrados detalhes sobre as "
+"configurações aplicadas e a correspondente precisão e área de uso da "
+"transformação."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:370
+msgid "Selecting a preferred default datum transformation"
+msgstr "Selecionando uma transformação padrão de datum preferida"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
+msgid "Find your preferred transformation and select it"
+msgstr "Encontre a transformação de sua preferência e selecione"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:380
+msgid ""
+"Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred"
+" operation fails`"
+msgstr ""
+"Defina se você |checkbox| :guilabel:`Permitir transformações em caso de "
+"falha na operação preferida`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:382
+msgid "Click :guilabel:`OK`."
+msgstr "Clique :guilabel:`OK`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:425
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:427
+msgid "toggleEditing"
+msgstr ""

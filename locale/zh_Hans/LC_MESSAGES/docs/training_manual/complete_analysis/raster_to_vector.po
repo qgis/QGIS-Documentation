@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:2
+msgid "|LS| Raster to Vector Conversion"
+msgstr "课: 栅格转换为矢量"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:4
+msgid ""
+"Converting between raster and vector formats allows you to make use of both "
+"raster and vector data when solving a GIS problem, as well as using the "
+"various analysis methods unique to these two forms of geographic data. This "
+"increases the flexibility you have when considering data sources and "
+"processing methods for solving a GIS problem."
+msgstr ""
+"通过在栅格和矢量格式之间进行转换，允许您在解决GIS问题时同时使用栅格和矢量数据，以及使用这两种地理数据格式特有的不同分析方法。这增加了您在考虑解决GIS问题的数据源和处理方法时的灵活性。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:10
+msgid ""
+"To combine a raster and vector analysis, you need to convert the one type of"
+" data to the other. Let's convert the raster result of the previous lesson "
+"to a vector."
+msgstr "要组合栅格和矢量分析，需要将一种类型的数据转换为另一种类型。让我们将上一课的栅格成果转换为矢量。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:14
+msgid ""
+"**The goal for this lesson:** To get the raster result into a vector that "
+"can be used to complete the analysis."
+msgstr "**本课目标:** 将栅格结果转换为用于完成分析的矢量数据。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:18
+msgid "|moderate| |FA| The :guilabel:`Raster to Vector` Tool"
+msgstr "|moderate| 跟我做: :guilabel:`栅格转矢量` 工具"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:127
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:20
+msgid ""
+"Start with the map from the last module, :kbd:`raster_analysis.qgs`. There "
+"you should have the :kbd:`all_conditions_simple.tif` calculated during the "
+"previous exercises."
+msgstr ""
+"从上一单元 :kbd:`raster_analysis.qgs` 中的地图开始。您应该有在之前练习期间进行计算的 "
+":kbd:`all_conditions_simple.tif` 数据。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:24
+msgid ""
+"Click on :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
+"Vector)`. The tool dialog will appear."
+msgstr "单击菜单 :menuselection:`栅格 --> 转换 --> 栅格矢量化 (栅格转矢量)` ，此时将出现算法工具对话框。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:26
+msgid "Set it up like this:"
+msgstr "设置如下："
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:31
+msgid ""
+"Change the field name (describing the values of the raster) to "
+":guilabel:`suitable`."
+msgstr "将字段名 (描述栅格的值) 更改为 :guilabel:`suitable` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:33
+msgid ""
+"Save the layer under :file:`exercise_data/residential_development` as "
+":file:`all_terrain.shp`."
+msgstr ""
+"将图层保存在 :file:`exercise_data/residential_development` 为 "
+":file:`all_terrain.shp` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:36
+msgid ""
+"Now you have a vector file which contains all the values of the raster, but "
+"the only areas you're interested in are those that are suitable; i.e., those"
+" polygons where the value of :guilabel:`suitable` is ``1``. You can change "
+"the style of this layer if you want to have a clearer visualization of it."
+msgstr ""
+"现在有了一个包含栅格所有值的矢量文件，但您感兴趣的只有那些合适的区域，例如， :guilabel:`suitable` 的值为 ``1`` "
+"的那些多边形。如果想更清晰地可视化该图层，请更改其样式。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:43
+msgid "|moderate| |TY|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:45
+msgid "Refer back to the module on vector analysis."
+msgstr "请参阅矢量分析单元。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:47
+msgid ""
+"Create a new vector file that contains only the polygons where "
+":guilabel:`suitable` has the value of ``1``."
+msgstr "创建一个新的矢量文件，该文件仅包含 :guilabel:`suitable` 值为 ``1`` 的多边形。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:49
+msgid ""
+"Save the new file under :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain.shp`."
+msgstr ""
+"将新建文件保存在 :file:`exercise_data/residential_development/` 为 "
+":file:`suitable_terrain.shp` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:52
+msgid "Answer"
+msgstr "回答"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:56
+msgid ""
+"Open the :guilabel:`Query Builder` by right-clicking on the "
+":guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting"
+" the :menuselection:`Properties --> Source` tab."
+msgstr ""
+"右键单击 :guilabel:`图层` 面板中的 :guilabel:`all_terrain` 图层，然后选择 :menuselection:`属性 "
+"--> 源` 选项卡，在此打开 :guilabel:`查询构建器` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:59
+msgid "Then build the query ``\"suitable\" = 1``."
+msgstr "然后构建查询 ``\"suitable\" = 1`` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:60
+msgid ""
+"Click :guilabel:`OK` to filter out all the polygons where this condition "
+"isn't met. When viewed over the original raster, the areas should overlap "
+"perfectly:"
+msgstr "单击 :guilabel:`确定` 过滤掉未满足此条件的所有多边形。在原栅格上查看时，这些区域应完全重叠："
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:67
+msgid ""
+"You can save this layer by right-clicking on the :guilabel:`all_terrain` "
+"layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`, "
+"then continue as per the instructions."
+msgstr ""
+"您可以通过右键单击 :guilabel:`图层` 面板中的 :guilabel:`all_terrain` 图层并选择 "
+":guilabel:`另存为...` 来保存该图层，然后按照指令继续操作。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:72
+msgid "|moderate| |FA| The :guilabel:`Vector to Raster` Tool"
+msgstr "|moderate| 跟我做: :guilabel:`矢量转栅格` 工具"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:74
+msgid ""
+"Although unnecessary for our current problem, it's useful to know about the "
+"opposite conversion from the one performed above. Convert to raster the "
+":file:`suitable_terrain.shp` vector file you just created in previous step."
+msgstr ""
+"虽然对于我们当前的问题来说没有必要，但是了解与上面执行相反的转换是很有意义。将您刚刚在上一步创建的 "
+":file:`suitable_terrain.shp` 矢量文件转换为栅格。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:78
+msgid ""
+"Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to "
+"Raster)` to start this tool, then set it up as in the screenshot below:"
+msgstr "单击 :menuselection:`栅格 --> 转换 --> 矢量栅格化 (矢量转栅格)` 启动此工具，然后按照以下屏幕截图进行设置："
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:84
+msgid ":guilabel:`Input layer` is :guilabel:`all_terrain`."
+msgstr ":guilabel:`输入图层` 是 :guilabel:`all_terrain` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:85
+msgid "Field name is :guilabel:`suitable`."
+msgstr "字段名是 :guilabel:`suitable` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:86
+msgid ":guilabel:`Output raster size units` is :guilabel:`Pixels`."
+msgstr ":guilabel:`输出栅格尺寸的单位` 是 :guilabel:`像素` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:87
+msgid ""
+":guilabel:`Width` and :guilabel:`Height` are ``837`` and ``661``, "
+"respectively."
+msgstr ":guilabel:`宽度` 和 :guilabel:`高度` 分别是 ``837`` 和 ``661`` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:89
+msgid ""
+"Get the :guilabel:`Output extent` from the :guilabel:`all_terrain` layer."
+msgstr "从 :guilabel:`all_terrain` 图层获取 :guilabel:`输出范围` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:90
+msgid ""
+"Set output file :guilabel:`Rasterized` to "
+":file:`exercise_data/residential_development/raster_conversion.tif`."
+msgstr ""
+"设置输出文件 :guilabel:`栅格化` 为 "
+":file:`exercise_data/residential_development/raster_conversion.tif` 。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:93
+msgid ""
+"The size of the output image is specified here to be the same as the "
+"original raster which was vectorized. To view the dimensions of an image, "
+"open its metadata (:guilabel:`Metadata` tab in the :guilabel:`Layer "
+"Properties`)."
+msgstr ""
+"此处指定输出图像的大小与矢量化的原栅格相同。要查看图像的尺寸，请打开其元数据 ( :guilabel:`图层属性` 中的 :guilabel:`元数据`"
+" 选项卡)。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:98
+msgid "Click :guilabel:`OK` on the dialog to begin the conversion process."
+msgstr "单击对话框上的 :guilabel:`确定` 按钮开始转换处理。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:99
+msgid ""
+"When it is complete, gauge its success by comparing the new raster with the "
+"original one.  They should match up exactly, pixel for pixel."
+msgstr "完成后，通过对比新栅格和原栅格来判断其是否成功。它们应该像素到像素完全匹配。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:103
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:105
+msgid ""
+"Converting between raster and vector formats allows you to widen the "
+"applicability of data, and need not lead to data degradation."
+msgstr "在栅格和矢量格式之间进行转换可以扩大数据的适用性，并且不会导致数据退化。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:109
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:111
+msgid ""
+"Now that we have the results of the terrain analysis available in vector "
+"format, they can be used to solve the problem of which buildings we should "
+"consider for the residential development."
+msgstr "现在我们有了矢量格式的地形分析结果，可以用来解决住宅开发中应该考虑哪些建筑比较适合的问题。"

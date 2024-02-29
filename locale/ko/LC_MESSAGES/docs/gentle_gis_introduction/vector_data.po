@@ -1,0 +1,760 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:5
+msgid "Vector Data"
+msgstr "벡터 데이터"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "|gentleLogo|"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:449
+msgid "gentleLogo"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "Objectives:"
+msgstr "목적"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "Understanding of vector data models as used in GIS."
+msgstr "GIS에서 사용되는 벡터 데이터 모델 이해하기"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:10
+msgid "Keywords:"
+msgstr "키워드"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:10
+msgid ""
+"Vector, Point, Polyline, Polygon, Vertex, Geometry, Scale, Data Quality, "
+"Symbology, Data Sources"
+msgstr "벡터, 포인트, 폴리라인, 폴리곤, 꼭짓점, 도형, 축척, 데이터 품질, 심볼, 데이터소스"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:14
+msgid "Overview"
+msgstr "개요"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:16
+msgid ""
+"**Vector** data provide a way to represent real world **features** within "
+"the GIS environment. A feature is anything you can see on the landscape. "
+"Imagine you are standing on the top of a hill. Looking down you can see "
+"houses, roads, trees, rivers, and so on (see "
+":numref:`figure_vector_landscape`). Each one of these things would be a "
+"**feature** when we represent them in a GIS Application. Vector features "
+"have **attributes**, which consist of text or numerical information that "
+"**describe** the features."
+msgstr ""
+"**벡터** 데이터는 GIS 환경 내에서 실제 세계의 **객체(feature)** 를 표현하는 방법 가운데 하나입니다. 객체란 풍경에서 "
+"볼 수 있는 무언가를 말합니다. 언덕 꼭대기에 서 있다고 상상해보십시오. 아래를 바라보면 집, 도로, 나무, 하천 등등을 볼 수 있을 "
+"겁니다. (:numref:`figure_vector_landscape` 을 참조하세요.) GIS 응용 프로그램에 표현되는 경우 이런 "
+"사물들 하나하나가 **객체** 가 될 것입니다. 벡터 객체는 **속성(attribute)** 을 가지고 있는데, 이 속성은 객체를 "
+"**설명(describe)** 하는 텍스트 또는 숫자 정보로 이루어집니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:30
+msgid ""
+"Looking over a landscape you can see the main features, such as roads, "
+"houses and trees."
+msgstr "풍경을 바라보면 도로, 집, 나무 같은 주요 객체들을 볼 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:33
+msgid ""
+"A vector feature has its shape represented using **geometry**. The geometry "
+"is made up of one or more interconnected **vertices**. A vertex describes a "
+"position in space using an **X**, **Y** and optionally **Z** axis. "
+"Geometries which have vertices with a ``Z`` axis are often referred to as "
+"**2.5D** since they describe height or depth at each vertex, but not both."
+msgstr ""
+"벡터 객체는 **도형(geometry)** 을 사용해서 그 형태를 표현합니다. 도형은 하나 이상의 상호연결된 **꼭짓점(vertex)**"
+" 으로 이루어집니다. **X**, **Y** 및 선택적으로 **Z** 축을 사용해서 공간에서 꼭짓점의 위치를 설명합니다. ``Z`` 축을"
+" 가진 꼭짓점을 포함하는 도형은 **2.5D** 로 불리는 경우가 많습니다. 각 꼭짓점의 높이 또는 깊이를 설명하지만, 동시에 둘 다는 "
+"아니기 때문입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:39
+msgid ""
+"When a feature's geometry consists of only a single vertex, it is referred "
+"to as a **point** feature (see illustration "
+":numref:`figure_geometry_point`). Where the geometry consists of two or more"
+" vertices and the first and last vertex are not equal, a **polyline** "
+"feature is formed (see illustration :numref:`figure_geometry_polyline`). "
+"Where three or more vertices are present, and the last vertex is equal to "
+"the first, an enclosed **polygon** feature is formed (see illustration "
+":numref:`figure_geometry_polygon`)."
+msgstr ""
+"객체의 도형이 단일 꼭짓점만으로 이루어져 있는 경우, 이를 **포인트(point)** "
+"객체(:numref:`figure_geometry_point` 참조)라 합니다. 도형이 2개 이상의 꼭짓점으로 이루어져 있고 첫 번째와 "
+"마지막 꼭짓점이 동일하지 않은 경우, **폴리라인(polyline)** "
+"객체(:numref:`figure_geometry_polyline` 참조)가 형성됩니다. 꼭짓점이 3개 이상이고 첫 번째와 마지막 "
+"꼭짓점이 동일한 경우, 닫힌 **폴리곤(polygon)** 객체(:numref:`figure_geometry_polygon` 참조)가 "
+"형성됩니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:52
+msgid ""
+"A point feature is described by its X, Y and optionally Z coordinate. The "
+"point attributes describe the point e.g. if it is a tree or a lamp post."
+msgstr ""
+"X, Y 및 선택적으로 Z 좌표로 포인트 객체를 설명합니다. 포인트 속성은 포인트를, 예를 들어 나무인지 또는 가로등인지를 설명합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:61
+msgid ""
+"A polyline is a sequence of joined vertices. Each vertex has an X, Y (and "
+"optionally Z) coordinate. Attributes describe the polyline."
+msgstr ""
+"폴리라인은 일련의 결합된 꼭짓점들입니다. 각 꼭짓점은 X, Y (및 선택적으로 Z) 좌표를 가집니다. 속성은 폴리라인을 설명합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:70
+msgid ""
+"A polygon, like a polyline, is a sequence of vertices. However in a polygon,"
+" the first and last vertices are always at the same position."
+msgstr ""
+"폴리곤은 폴리라인과 마찬가지로 일련의 꼭짓점들입니다. 하지만 폴리곤의 경우 첫 번째와 마지막 꼭짓점이 언제나 동일한 위치에 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:73
+msgid ""
+"Looking back at the picture of a landscape we showed you further up, you "
+"should be able to see the different types of features in the way that a GIS "
+"represents them now (see illustration :numref:`figure_geometry_landscape`)."
+msgstr ""
+"앞에서 본 풍경 사진을 다시 보면, 이제 서로 다른 객체 유형을 GIS가 표현하는 대로 구분할 수 있을 겁니다. "
+"(:numref:`figure_geometry_landscape` 을 참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:83
+msgid ""
+"Landscape features as we would present them in a GIS. Rivers (blue) and "
+"roads (green) can be represented as lines, trees as points (red) and houses "
+"as polygons (white)."
+msgstr ""
+"GIS에 표현될 풍경 객체들. 하천(파란색)과 도로(초록색)는 라인으로, 나무는 포인트(빨간색)로, 집은 폴리곤(하얀색)으로 표현될 수 "
+"있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:88
+msgid "Point features in detail"
+msgstr "포인트 객체를 더 자세히"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:90
+msgid ""
+"The first thing we need to realise when talking about point features is that"
+" what we describe as a point in GIS is a matter of opinion, and often "
+"dependent on scale. let's look at cities for example. If you have a small "
+"scale map (which covers a large area), it may make sense to represent a city"
+" using a point feature. However as you zoom in to the map, moving towards a "
+"larger scale, it makes more sense to show the city limits as a polygon."
+msgstr ""
+"포인트 객체를 논할 때 가장 먼저 알아야 할 점은 GIS에서 포인트라고 묘사하는 것은 견해 상의 문제일 뿐이며, 축척에 따라 달라질 때가"
+" 많다는 사실입니다. 도시를 예로 들어봅시다. (넓은 지역을 보여주는) 소축척 맵의 경우 포인트 객체로 도시를 표현하는 것이 일리가 있을"
+" 수도 있습니다. 하지만 맵을 더 대축척으로 확대해 들어가면, 도시 경계를 폴리곤으로 표시하는 편이 더 말이 되겠죠."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:97
+msgid ""
+"When you choose to use points to represent a feature is mostly a matter of "
+"scale (how far away are you from the feature), convenience (it takes less "
+"time and effort to create point features than polygon features), and the "
+"type of feature (some things like telephone poles just don't make sense to "
+"be stored as polygons)."
+msgstr ""
+"객체를 표현하기 위해 포인트를 사용하도록 선택하는 것은 대부분의 경우 (객체를 얼마나 멀리서 보는가 하는) 축척, (폴리곤 객체를 "
+"생성하는 것보다 포인트 객체를 생성하는 편이 더 빠르기 때문에) 편의성 그리고 (전신주 같은 물체를 굳이 폴리곤으로 저장하는 건 말이 안"
+" 되기 때문에) 객체 유형의 문제입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:102
+msgid ""
+"As we show in illustration :numref:`figure_geometry_point`, a point feature "
+"has an X, Y and optionally, Z value. The X and Y values will depend on the "
+"**Coordinate Reference System** (CRS) being used. We are going to go into "
+"more detail about Coordinate Reference Systems in a later tutorial. For now "
+"let's simply say that a CRS is a way to accurately describe where a "
+"particular place is on the earth's surface. One of the most common reference"
+" systems is **Longitude and Latitude**. Lines of Longitude run from the "
+"North Pole to the South Pole. Lines of Latitude run from the East to West. "
+"You can describe precisely where you are at any place on the earth by giving"
+" someone your Longitude (X) and Latitude (Y). If you make a similar "
+"measurement for a tree or a telephone pole and marked it on a map, you will "
+"have created a point feature."
+msgstr ""
+":numref:`figure_geometry_point` 에서 볼 수 있듯이, 포인트 객체는 X, Y 및 선택적으로 Z 값을 가집니다. "
+"X와 Y 값은 사용 중인 **좌표계(CRS)** 에 따라 달라집니다. 좌표계에 대한 자세한 내용은 다음 기회에 다룰 것입니다. 지금은 "
+"그저 CRS가 지구 표면 상에 있는 특정 위치를 정확하게 설명할 수 있는 방법이라고만 해두죠. 가장 일반적인 좌표계 가운데 하나가 "
+"**경도 및 위도** 입니다. 경도(longitude) 선은 북극에서 남극까지 이어집니다.  위도(latitude) 선은 동쪽에서 "
+"서쪽으로 이어집니다. 다른 사람에게 자신의 경도(X)와 위도(Y)를 알려주면, 자신이 지구 상 어디에 있는지 정확히 설명할 수 있는 "
+"겁니다. 이와 같이 나무 또는 전신주의 위치를 측정해서 맵 상에 표시하면 포인트 객체를 생성하게 되는 것이죠."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:114
+msgid ""
+"Since we know the earth is not flat, it is often useful to add a Z value to "
+"a point feature. This describes how high above sea level you are."
+msgstr ""
+"우리는 지구가 평평하지 않다는 사실을 알고 있으므로, 포인트 객체에 Z 값을 추가하는 편이 더 유용할 경우가 많습니다. Z 값은 "
+"해수면에서 얼마나 떨어져 있는지를 설명해줍니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:118
+msgid "Polyline features in detail"
+msgstr "폴리라인 객체를 더 자세히"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:120
+msgid ""
+"Where a point feature is a single vertex, **a polyline has two or more "
+"vertices**. The polyline is a continuous path drawn through each vertex, as "
+"shown in :numref:`figure_geometry_polyline`. When two vertices are joined, a"
+" line is created. When more than two are joined, they form a 'line of "
+"lines', or **polyline**."
+msgstr ""
+"포인트 객체가 단일 꼭짓점이라면, **폴리라인은 2개 이상의 꼭짓점을 가집니다**. 폴리라인(polyline)은 "
+":numref:`figure_geometry_polyline` 에 나타난 바와 같이 각 꼭짓점을 이으면서 연결되는 경로입니다. 두 "
+"꼭짓점을 연결하면 라인이 생성됩니다. 2개 이상의 꼭짓점을 연결하면, '라인들의 라인' 즉 **폴리라인** 을 형성합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:125
+msgid ""
+"A polyline is used to show the geometry of **linear features** such as "
+"roads, rivers, contours, footpaths, flight paths and so on. Sometimes we "
+"have special rules for polylines in addition to their basic geometry. For "
+"example contour lines may touch (e.g. at a cliff face) but should never "
+"cross over each other. Similarly, polylines used to store a road network "
+"should be connected at intersections. In some GIS applications you can set "
+"these special rules for a feature type (e.g. roads) and the GIS will ensure "
+"that these polylines always comply to these rules."
+msgstr ""
+"폴리라인은 도로, 하천, 등고선, 보행로, 비행 경로 등등의 **선형 객체(linear feature)** 도형을 표시하는 데 쓰입니다."
+" 때때로 폴리라인 기본 도형에 추가되는 특수 규칙을 적용하는 경우도 있습니다. 예를 들면 등고선은 (예를 들어 절벽면의 경우처럼) 접할 "
+"수는 있지만 결코 서로 교차해서는 안 됩니다. 마찬가지로, 도로망을 저장하기 위해 쓰인 폴리라인은 교차로에서 연결되어야만 합니다. 몇몇 "
+"GIS 응용 프로그램에서는 사용자가 어떤 객체 유형(예: 도로)에 대해 이런 특수 규칙을 설정할 수 있으며, GIS가 이런 폴리라인이 "
+"항상 해당 규칙을 준수하도록 보증할 것입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:134
+msgid ""
+"If a curved polyline has very large distances between vertices, it may "
+"appear **angular** or jagged, depending on the scale at which it is viewed "
+"(see :numref:`figure_polyline_jagged`). Because of this it is important that"
+" polylines are digitised (captured into the computer) with distances between"
+" vertices that are small enough for the scale at which you want to use the "
+"data."
+msgstr ""
+"어떤 만곡 폴리라인의 꼭짓점 사이가 아주 멀리 떨어져 있는 경우, 보이는 축척에 따라 **각지거나** 뾰족하게 보일 수도 있습니다. "
+"(:numref:`figure_polyline_jagged` 참조) 이와 같은 이유 때문에, 꼭짓점 사이의 거리를 사용자가 데이터를 "
+"사용하고자 하는 축척에서 충분할 만큼 좁은 간격으로 디지타이즈(컴퓨터로 캡처)하는 것이 중요합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:146
+msgid ""
+"Polylines viewed at a smaller scale (1:20 000 to the left) may appear smooth"
+" and curved. When zoomed in to a larger scale (1:500 to the right) polylines"
+" may look very angular."
+msgstr ""
+"소축척(좌측 1:20,000)에서 본 폴리라인은 부드럽게 굽어지는 것으로 보일 수도 있습니다. 하지만 대축척(우측 1:500)으로 "
+"확장하면 폴리라인이 매우 각지게 보일 수도 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:150
+msgid ""
+"The **attributes** of a polyline describe its properties or characteristics."
+" For example a road polyline may have attributes that describe whether it is"
+" surfaced with gravel or tar, how many lanes it has, whether it is a one way"
+" street, and so on. The GIS can use these attributes to symbolise the "
+"polyline feature with a suitable colour or line style."
+msgstr ""
+"폴리라인의 **속성(attribute)** 은 해당 폴리라인의 속성(property) 또는 특성(characteristics)을 "
+"설명합니다. 예를 들면 도로 폴리라인은 해당 도로가 시멘트로 포장돼 있는지 아스팔트로 포장돼 있는지, 몇 차선인지, 일방통행인지 아닌지 "
+"등등을 설명하는 속성을 가질 수도 있습니다. GIS는 이런 속성을 활용해서 폴리라인 객체를 어울리는 색상 또는 선 스타일로 심볼화할 수 "
+"있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:157
+msgid "Polygon features in detail"
+msgstr "폴리곤 객체를 더 자세히"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:159
+msgid ""
+"Polygon features are **enclosed areas** like dams, islands, country "
+"boundaries and so on. Like polyline features, polygons are created from a "
+"series of vertices that are connected with a continuous line. However "
+"because a polygon always describes an enclosed area, the first and last "
+"vertices should always be at the same place! Polygons often have **shared "
+"geometry** –-- boundaries that are in common with a neighbouring polygon. "
+"Many GIS applications have the capability to ensure that the boundaries of "
+"neighbouring polygons exactly coincide. We will explore this in the "
+":ref:`gentle_gis_topology` topic later in this tutorial."
+msgstr ""
+"폴리곤 객체는 저수지, 섬,  국경 등등과 같이 **닫힌 영역(enclosed area)** 을 표현합니다. 폴리라인 객체와 마찬가지로,"
+" 폴리곤은 연속된 라인으로 연결된 일련의 꼭짓점들로 생성됩니다. 하지만 폴리곤은 항상 닫힌 영역을 표현하기 때문에, 첫 번째와 마지막 "
+"꼭짓점은 언제나 동일한 위치에 있어야만 합니다! 폴리곤은 **공유 도형(shared geometry)** – 인접하는 폴리곤과 공통된 "
+"경계선을 가지는 경우가 많습니다. 대부분의 GIS 응용 프로그램은 인접하는 폴리곤들의 경계선이 정확하게 일치하도록 보장하는 기능을 가지고"
+" 있습니다. 이 교재의 :ref:`gentle_gis_topology` 부분에서 이를 더 자세히 살펴볼 것입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:168
+msgid ""
+"As with points and polylines, polygons have **attributes**. The attributes "
+"describe each polygon. For example a dam may have attributes for depth and "
+"water quality."
+msgstr ""
+"포인트, 폴리라인과 마찬가지로 폴리곤도 **속성(attribute)** 을 가지고 있습니다. 이 속성이 각 폴리곤을 설명합니다. 예를 "
+"들면 저수지의 경우 수심 및 수질에 대한 속성을 가질 수도 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:173
+msgid "Vector data in layers"
+msgstr "레이어에서의 벡터 데이터"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:175
+msgid ""
+"Now that we have described what vector data is, let's look at how vector "
+"data is managed and used in a GIS environment. Most GIS applications group "
+"vector features into **layers**. Features in a layer have the same geometry "
+"type (e.g. they will all be points) and the same kinds of attributes (e.g. "
+"information about what species a tree is for a trees layer). For example if "
+"you have recorded the positions of all the footpaths in your school, they "
+"will usually be stored together on the computer hard disk and shown in the "
+"GIS as a single layer. This is convenient because it allows you to hide or "
+"show all of the features for that layer in your GIS application with a "
+"single mouse click."
+msgstr ""
+"벡터 데이터란 무엇인지에 대한 설명을 했으니, 이제 GIS 환경에서 벡터 데이터를 어떻게 관리하고 사용하는지를 살펴봅시다. GIS 응용 "
+"프로그램 대부분은 벡터 객체를 **레이어** 로 그룹화합니다. 어떤 레이어에 있는 객체들은 동일한 도형 유형이며 (예: 모든 객체가 "
+"포인트) 동일한 유형의 속성을 (예: 수목 레이어의 경우 어떤 나무가 무슨 종인지에 대한 정보) 가집니다. 예를 들어 당신 학교에 있는 "
+"모든 보행로의 위치를 기록했다고 가정한다면, 일반적으로 그 데이터는 컴퓨터 하드 디스크에 저장되어 GIS에 단일 레이어로 표시될 "
+"것입니다. 이렇게 하면 GIS 응용 프로그램에서 해당 레이어의 모든 객체를 마우스 클릭 한 번으로 숨기거나 표시할 수 있어 편리합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:186
+msgid "Editing vector data"
+msgstr "벡터 데이터 편집"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:188
+msgid ""
+"The GIS application will allow you to create and modify the geometry data in"
+" a layer --– a process called **digitising** –-- which we will look at more "
+"closely in a later tutorial. If a layer contains polygons (e.g. farm dams), "
+"the GIS application will only allow you to create new polygons in that "
+"layer. Similarly if you want to change the shape of a feature, the "
+"application will only allow you to do it if the changed shape is correct. "
+"For example it won't allow you to edit a line in such a way that it has only"
+" one vertex –-- remember in our discussion of lines above that all lines "
+"must have at least two vertices."
+msgstr ""
+"GIS 응용 프로그램을 통해 레이어에 도형 데이터를 생성하거나 레이어에 있는 도형 데이터를 수정 –– **디지타이즈 작업** 이라고 하는"
+" 과정입니다 –– 할 수 있습니다. 이 교재의 다른 부분에서 이에 대해 자세히 살펴볼 것입니다. 어떤 레이어가 폴리곤을 (예: 농장 "
+"저수지) 담고 있다면, GIS 응용 프로그램은 해당 레이어에 폴리곤만 생성할 수 있습니다. 마찬가지로 객체의 형태를 바꾸고자 한다면,  "
+"GIS 응용 프로그램은 변경된 형태가 올바른 경우에만 이를 허용합니다. 예를 들어 라인을 꼭짓점 하나만 가지도록 편집할 수는 없습니다 –"
+" 앞에서 라인에 대해 설명할 때 모든 라인은 적어도 꼭짓점 2개를 가져야만 한다고 했던 내용을 기억하세요."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:197
+msgid ""
+"Creating and editing vector data is an important function of a GIS since it "
+"is one of the main ways in which you can create personal data for things you"
+" are interested in. Say for example you are monitoring pollution in a river."
+" You could use the GIS to digitise all outfalls for storm water drains (as "
+"point features). You could also digitise the river itself (as a polyline "
+"feature). Finally you could take readings of pH levels along the course of "
+"the river and digitise the places where you made these readings (as a point "
+"layer)."
+msgstr ""
+"벡터 데이터를 생성하고 편집하는 것은 GIS의 중요한 기능 가운데 하나입니다. 당신이 흥미를 가진 것들에 대한 개인적인 데이터를 생성할 "
+"수 있는 주요 방법들 가운데 하나이기 때문입니다. 예를 들면 당신이 어떤 하천의 오염 정도를 모니터링하고 있다고 해봅시다. GIS를 "
+"이용해서 모든 빗물 배수구의 배출구들을 (포인트 객체로) 디지타이즈할 수 있을 겁니다. 또한 하천 자체를 (폴리라인 객체로) 디지타이즈할"
+" 수도 있겠죠. 마지막으로 하천의 흐름을 따라 페하(pH) 수치 판독 결과를 가져와 그 판독 위치들을 (포인트 레이어로) 디지타이즈할 "
+"수도 있을 겁니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:205
+msgid ""
+"As well as creating your own data, there is a lot of free vector data that "
+"you can obtain and use. For example, you can obtain vector data that appears"
+" on the 1:50 000 map sheets from the Chief Directorate: Surveys and Mapping."
+msgstr ""
+"당신만의 데이터를 생성하는 것은 물론, 당신이 가져와서 사용할 수 있는 무료 벡터 데이터도 많이 있습니다. 예를 들어 당신은 남아프리카 "
+"공화국 측량 및 지적 최고 관리국(Chief Directorate: Surveys and Mapping)으로부터 1:50,000 지도에 "
+"보이는 벡터 데이터를 가져올 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:210
+msgid "Scale and vector data"
+msgstr "축척과 벡터 데이터"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:212
+msgid ""
+"Map **scale** is an important issue to consider when working with vector "
+"data in a GIS. When data is captured, it is usually digitised from existing "
+"maps, or by taking information from surveyor records and global positioning "
+"system devices. Maps have different scales, so if you import vector data "
+"from a map into a GIS environment (for example by digitising paper maps), "
+"the digital vector data will have the same scale issues as the original map."
+" This effect can be seen in illustrations "
+":numref:`figure_vector_small_scale` and :numref:`figure_vector_large_scale`."
+" Many issues can arise from making a poor choice of map scale. For example "
+"using the vector data in illustration :numref:`figure_vector_small_scale` to"
+" plan a wetland conservation area could result in important parts of the "
+"wetland being left out of the reserve! On the other hand if you are trying "
+"to create a regional map, using data captured at 1:1000 000 might be just "
+"fine and will save you a lot of time and effort capturing the data."
+msgstr ""
+"지도 **축척** 은 GIS에서 벡터 데이터를 작업하는 경우 고려해야 할 중요한 문제입니다. 데이터를 획득한다는 것은 보통 기존 "
+"지도로부터 디지타이즈하거나 또는 측량 기록 및 GPS 기기에서 정보를 가져온다는 뜻입니다. 지도들은 서로 다른 축척이기 때문에, "
+"지도로부터 GIS 환경으로 벡터 데이터를 (예를 들면 종이 지도를 디지타이즈해서) 가져오는 경우 이 디지털 데이터는 원본 지도와 동일한 "
+"축척 문제를 가지게 될 것입니다. :numref:`figure_vector_small_scale` 와 "
+":numref:`figure_vector_large_scale` 에서 그 영향을 볼 수 있습니다. 지도 축척을 잘못 선택하는 경우 많은 "
+"문제가 발생할 수 있습니다. 예를 들어 :numref:`figure_vector_small_scale` 의 벡터 데이터를 습지 보전 "
+"영역을 계획하는 데 사용한다면 습지의 중요한 부분들이 보호 구역에서 빠지게 될 수도 있습니다! 다른 한편으로는 지세도(地勢圖, "
+"regional map)를 만들려고 하는 경우 1:1000,000 축척에서 획득한 데이터를 사용해도 됩니다. 오히려 데이터 획득에 필요한"
+" 시간과 노력을 줄여줄 겁니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:232
+msgid ""
+"Vector data (red lines) that was digitised from a small scale (1:1000 000) "
+"map."
+msgstr "소축척(1:1000,000) 지도로부터 디지타이즈된 벡터 데이터 (빨간색 라인)"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:240
+msgid ""
+"Vector data (green lines) that was digitised from a large scale (1:50 000) "
+"map."
+msgstr "대축척(1:50,000) 지도로부터 디지타이즈된 벡터 데이터 (초록색 라인)"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:243
+msgid "Symbology"
+msgstr "심볼"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:245
+msgid ""
+"When you add vector layers to the map view in a GIS application, they will "
+"be drawn with random colours and basic symbols. One of the great advantages "
+"of using a GIS is that you can create personalised maps very easily. The GIS"
+" program will let you choose colours to suite the feature type (e.g. you can"
+" tell it to draw a water bodies vector layer in blue). The GIS will also let"
+" you adjust the symbol used. So if you have a trees point layer, you can "
+"show each tree position with a small picture of a tree, rather than the "
+"basic circle marker that the GIS uses when you first load the layer (see "
+"illustrations :numref:`figure_vector_symbology`, "
+":numref:`figure_generic_symbology` and :numref:`figure_custom_symbology`)."
+msgstr ""
+"GIS 응용 프로그램에서 맵 뷰에 벡터 레이어를 추가하는 경우, 임의의 색상과 기본 심볼로 레이어를 그릴 것입니다. GIS를 사용하는 "
+"가장 큰 장점 가운데 하나는 개인화된 맵을 아주 쉽게 생성할 수 있다는 점입니다. GIS 프로그램을 사용하면 객체 유형에 어울리는 색상을"
+" 선택할 수 (예를 들면 수역(水域) 벡터 레이어를 파란색으로 그리도록 할 수) 있습니다. 또 사용된 심볼을 조정할 수도 있죠. 즉 "
+"수목(樹木) 포인트 레이어를 처음 불러올 때 GIS가 사용하는 기본 원형 마커 대신, 각 나무 위치를 작은 나무 이미지로 표시할 수 "
+"있다는 뜻입니다. (:numref:`figure_vector_symbology`, "
+":numref:`figure_generic_symbology`, 그리고 :numref:`figure_custom_symbology` 을 "
+"참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:261
+msgid ""
+"In the GIS, you can use a panel (like the one above) to adjust how features "
+"in your layer should be drawn."
+msgstr "GIS 프로그램에서는 레이어의 객체를 어떻게 그려야 할지 조정하기 위해 (위와 같은) 패널을 사용할 수 있다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:270
+msgid ""
+"When a layer (for example the trees layer above) is first loaded, a GIS "
+"application will give it a generic symbol."
+msgstr "처음 레이어를 (예를 들면 위와 같은 수목 레이어를) 불러올 때, GIS 응용 프로그램은 일반 심볼을 할당한다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:279
+msgid ""
+"After making our adjustments it is much easier to see that our points "
+"represent trees."
+msgstr "심볼을 조정하면 포인트가 나무 위치를 표현한다는 사실을 더 쉽게 알 수 있다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:282
+msgid ""
+"Symbology is a powerful feature, making maps come to life and the data in "
+"your GIS easier to understand. In the topic that follows "
+"(:ref:`gentle_gis_attributes`) we will explore more deeply how symbology can"
+" help the user to understand vector data."
+msgstr ""
+"심볼은 맵을 생생하게 만들고 GIS 데이터를 더 쉽게 이해할 수 있도록 해주는 강력한 기능입니다. 다음 "
+"장(:ref:`gentle_gis_attributes`)에서 심볼이 어떻게 벡터 데이터를 더 쉽게 이해할 수 있도록 해주는지 심도 있게 "
+"파헤쳐볼 것입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:288
+msgid "What can we do with vector data in a GIS?"
+msgstr "GIS에서 벡터 데이터로 어떤 일을 할 수 있을까요?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:290
+msgid ""
+"At the simplest level we can use vector data in a GIS Application in much "
+"the same way you would use a normal topographic map. The real power of GIS "
+"starts to show itself when you start to ask questions like 'which houses are"
+" within the 100 year flood level of a river?'; 'where is the best place to "
+"put a hospital so that it is easily accessible to as many people as "
+"possible?'; 'which learners live in a particular suburb?'. A GIS is a great "
+"tool for answering these types of questions with the help of vector data. "
+"Generally we refer to the process of answering these types of questions as "
+"**spatial analysis**. In later topics of this tutorial we will look at "
+"spatial analysis in more detail."
+msgstr ""
+"가장 단순한 수준에서는, GIS 응용 프로그램에서 벡터 데이터를 일반 지형도와 거의 동일한 방식으로 사용할 수 있습니다. GIS의 진정한"
+" 능력은 '어떤 집들이 하천의 100년 빈도 홍수 수위 안에 들어오는가?', '가능한 한 많은 사람들이 쉽게 접근할 수 있는 병원의 최적"
+" 위치는 어디인가?', '특정 지역에는 어떤 학생들이 살고 있는가?' 같은 질문을 던지기 시작할 때 드러납니다. GIS는 이런 유형의 "
+"질문에 답할 수 있는 훌륭한 도구입니다. 벡터 데이터를 사용해서 말이죠. 일반적으로, 이런 유형의 질문에 대한 답을 도출하는 과정을 "
+"**공간 분석(spatial analysis)** 이라 합니다. 이 문서의 후반부에서 공간 분석에 대해 더 자세히 다룰 것입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:301
+msgid "Common problems with vector data"
+msgstr "벡터 데이터의 공통적인 문제점들"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:303
+msgid ""
+"Working with vector data does have some problems. We already mentioned the "
+"issues that can arise with vectors captured at different scales. Vector data"
+" also needs a lot of work and maintenance to ensure that it is accurate and "
+"reliable. Inaccurate vector data can occur when the instruments used to "
+"capture the data are not properly set up, when the people capturing the data"
+" aren't being careful, when time or money don't allow for enough detail in "
+"the collection process, and so on."
+msgstr ""
+"벡터 데이터 작업이 몇 가지 문제점들을 안고 있긴 합니다. 서로 다른 축척에서 획득한 벡터들 때문에 일어날 수 있는 문제에 대해서는 이미"
+" 언급했죠. 벡터 데이터를 정확하고 신뢰할 수 있도록 보장하기 위해서는 아주 많은 유지보수 작업을 해야 합니다. 데이터 획득 장비가 "
+"제대로 설정되지 않았거나, 데이터를 획득하는 사람들이주의를 기울이지 않았거나, 짧은 기간과 부족한 예산으로 인해 데이터 수집 과정에서 "
+"세부 사항을 충분히 챙기지 못 하는 등으로 인해 부정확한 벡터 데이터가 생겨납니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:311
+msgid ""
+"If you have poor quality vector data, you can often detect this when viewing"
+" the data in a GIS. For example **slivers** can occur when the edges of two "
+"polygon areas don't meet properly (see :numref:`figure_vector_slivers`)."
+msgstr ""
+"벡터 데이터의 질이 낮은 경우, 대부분의 경우 GIS에서 데이터를 볼 때 그 점을 알아차릴 수 있습니다. 예를 들어 두 폴리곤 면의 "
+"경계가 제대로 접하지 않을 때 **조각(sliver)** 이 생겨납니다. (:numref:`figure_vector_slivers` "
+"참조)"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:321
+msgid ""
+"Slivers occur when the vertices of two polygons do not match up on their "
+"borders. At a small scale (e.g. 1 on left) you may not be able to see these "
+"errors. At a large scale they are visible as thin strips between two "
+"polygons (2 on right)."
+msgstr ""
+"두 폴리곤의 꼭짓점들이 경계선에서 일치하지 않는 경우 조각이 생겨납니다. 소축척에서는 (예: 왼쪽 그림의 1번) 이런 오류를 알아보지 못"
+" 할 수도 있습니다. 대축척에서는 (오른쪽 그림의 2번) 두 폴리곤 사이의 가느다란 조각을 볼 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:326
+msgid ""
+"**Overshoots** can occur when a line feature such as a road does not meet "
+"another road exactly at an intersection. **Undershoots** can occur when a "
+"line feature (e.g. a river) does not exactly meet another feature to which "
+"it should be connected. Figure :numref:`figure_vector_shoots` demonstrates "
+"what undershoots and overshoots look like."
+msgstr ""
+"도로 같은 라인 객체가 교차점에서 정확히 다른 도로와 접하지 않는 경우 **오버슛(overshoot)** 이 생겨납니다. 라인 객체가 "
+"(예를 들어 하천이) 연결되어야 할 또다른 객체와 정확히 접하지 않는 경우 **언더슛(undershoot)** 이 생겨납니다. 언더슛 및"
+" 오버슛이 어떤 모양인지 :numref:`figure_vector_shoots` 에서 볼 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:338
+msgid ""
+"Undershoots (1) occur when digitised vector lines that should connect to "
+"each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
+"the line it should connect to."
+msgstr ""
+"연결 되어야 할 디지타이즈된 벡터 라인들이 제대로 접하지 않는 경우 언더슛(1)이 생겨납니다. 어떤 라인이 연결되어야 하는 라인 너머에서"
+" 끝나는 경우 오버슛(2)이 생겨납니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:342
+msgid ""
+"Because of these types of errors, it is very important to digitise data "
+"carefully and accurately. In the upcoming topic on **topology**, we will "
+"examine some of these types of errors in more detail."
+msgstr ""
+"이런 유형의 오류들 때문에, 데이터를 주의해서 정확하게 디지타이즈하는 것이 매우 중요합니다. 다음에 나올 주제인 "
+"**위상(topology)** 장에서, 이런 유형의 오류들 가운데 일부를 더 자세히 살펴볼 것입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:347
+msgid "What have we learned?"
+msgstr "무엇을 배웠나요?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:349
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "이제 이번 단원에서 배운 내용을 정리해볼까요:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:351
+msgid "**Vector data** is used to represent real world **features** in a GIS."
+msgstr "GIS에서 현실에 존재하는 **객체(feature)** 를 표현하기 위해 **벡터 데이터** 를 사용합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:352
+msgid ""
+"A vector feature can have a **geometry** type of **point**, **line** or a "
+"**polygon**."
+msgstr "벡터 객체는 **포인트**, **라인**, 또는 **폴리곤** 이라는 **도형(geometry)** 유형이 될 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:354
+msgid "Each vector feature has **attribute data** that describes it."
+msgstr "각 벡터 객체는 자신을 설명하는 **속성 데이터(attribute data)** 를 가집니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:355
+msgid "Feature geometry is described in terms of **vertices.**"
+msgstr "객체 도형은 **꼭짓점(vertex)** 이라는 단위로 설명됩니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:356
+msgid ""
+"Point geometries are made up of a **single vertex** (X,Y and optionally Z)."
+msgstr "포인트 도형은 **단일 꼭짓점** 으로 (X, Y 그리고 선택적으로 Z으로) 이루어집니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:357
+msgid ""
+"Polyline geometries are made up of **two or more** vertices forming a "
+"connected line."
+msgstr "폴리라인 도형은 연결된 라인을 형성하는 **2개 이상** 의 꼭짓점으로 이루어집니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:359
+msgid ""
+"Polygon geometries are made up of **at least four vertices** forming an "
+"enclosed area. The first and last vertices are always in the same place."
+msgstr ""
+"폴리곤 도형은 닫힌 면을 형성하는 **최소한 4개 이상의 꼭짓점** 으로 이루어집니다. 첫 번째와 마지막 꼭짓점은 항상 동일한 "
+"위치입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:361
+msgid ""
+"Choosing which geometry type to use depends on scale, convenience and what "
+"you want to do with the data in the GIS."
+msgstr "축척, 편의성, 그리고 GIS에서 데이터로 어떤 작업을 할 것인지에 따라 어떤 도형 유형을 사용할 것인지 선택하십시오."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:363
+msgid ""
+"Most GIS applications do not allow you to mix more than one geometry type in"
+" a single layer."
+msgstr "GIS 응용 프로그램 대부분은 단일 레이어 안에 하나 이상의 도형 유형들이 섞이는 것을 허용하지 않습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:365
+msgid ""
+"Digitising is the process of creating digital vector data by drawing it in a"
+" GIS application."
+msgstr "디지타이즈 작업은 GIS 응용 프로그램에서 디지털 벡터 데이터를 그려서 생성하는 과정을 말합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:367
+msgid ""
+"Vector data can have quality issues such as **undershoots**, **overshoots** "
+"and **slivers** which you need to be aware of."
+msgstr ""
+"벡터 데이터는 **언더슛**, **오버슛**, 그리고 **조각** 같은 품질 문제를 가지고 있으며, 당신은 이에 주의를 기울이고 있어야 "
+"합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:369
+msgid ""
+"Vector data can be used for **spatial analysis** in a GIS application, for "
+"example to find the nearest hospital to a school."
+msgstr ""
+"GIS 응용 프로그램에서 벡터 데이터를 사용해서 **공간 분석(spatial analysis)** 을 할 수 있습니다. 예를 들면 "
+"학교에서 가장 가까운 병원을 찾는다든지요."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:372
+msgid ""
+"We have summarised the GIS Vector Data concept in Figure "
+":numref:`figure_vector_summary`."
+msgstr ":numref:`figure_vector_summary` 에 GIS 벡터 데이터 개념을 요약해놓았습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:380
+msgid "This diagram shows how GIS applications deal with vector data."
+msgstr "이 도표는 GIS 응용 프로그램이 벡터 데이터를 어떻게 다루는지 보여줍니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:383
+msgid "Now you try!"
+msgstr "도전해봅시다!"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:385
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "강사와 학생들이 함께 시도해볼 만한 몇 가지 아이디어가 있습니다:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:387
+msgid ""
+"Using a copy of a toposheet map for your local area (like the one shown in "
+":numref:`figure_sample_map`), see if your learners can identify examples of "
+"the different types of vector data by highlighting them on the map."
+msgstr ""
+"당신이 살고 있는 지역에 대한 (:numref:`figure_sample_map` 같은) 지형도를 사용해서, 학생들이 서로 다른 벡터 "
+"데이터 유형들을 식별할 수 있는지 알아보십시오. 지도 위에 유형별로 표시하게 시키면 됩니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:390
+msgid ""
+"Think of how you would create vector features in a GIS to represent real "
+"world features on your school grounds. Create a table of different features "
+"in and around your school and then task your learners to decide whether they"
+" would be best represented in the GIS as a point, line or polygon. See "
+"table_vector_1_ for an example."
+msgstr ""
+"학교 부지에 실재하는 객체들을 표현하려면 GIS에서 벡터 객체를 어떻게 생성할 것인지 생각해보십시오. 학교 내부와 주변에 있는 서로 다른"
+" 객체들의 표를 만든 다음 학생들에게 각 객체가 GIS에서 포인트, 라인, 또는 폴리곤 가운데 어떤 유형으로 가장 잘 표현될 수 있을지 "
+"선택하게 해보세요. :numref:`table_vector_1` 의 예시를 참조하세요."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:402
+msgid ""
+"Can you identify two point features and one polygon feature on this map?"
+msgstr "이 지도에 있는 포인트 객체 2개와 폴리곤 객체 1개를 식별할 수 있나요?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:408
+msgid "Real world feature"
+msgstr "실재 객체"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:408
+msgid "Suitable Geometry Type"
+msgstr "적합한 도형 유형"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:410
+msgid "The school flagpole"
+msgstr "국기 게양대"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:412
+msgid "The soccer field"
+msgstr "축구장"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:414
+msgid "The footpaths in and around the school"
+msgstr "학교 내부 및 주변의 보행로"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:416
+msgid "Places where taps are located"
+msgstr "수도꼭지가 있는 위치들"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:418
+msgid "Etc."
+msgstr "기타"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:421
+msgid ""
+"Table Vector 1: Create a table like this (leaving the geometry type column "
+"empty) and ask your learners to decide on suitable geometry types."
+msgstr "벡터 표1 : 이런 표를 (도형 유형 열은 비워둔 채로) 만든 다음 학생들에게 적합한 도형 유형을 결정해보라고 하십시오."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:425
+msgid "Something to think about"
+msgstr "생각해볼 점"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:427
+msgid ""
+"If you don't have a computer available, you can use a toposheet and "
+"transparency sheets to show your learners about vector data."
+msgstr "사용할 수 있는 컴퓨터가 없는 경우, 학생들에게 벡터 데이터를 지형도와 투명지를 사용해서 가르칠 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:431
+msgid "Further reading"
+msgstr "더 읽어볼 거리"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:433
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"vector data in QGIS."
+msgstr "QGIS 사용자 지침서도 QGIS에서 어떻게 벡터 데이터를 작업하는지에 대한 보다 상세한 정보를 수록하고 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:437
+msgid "What's next?"
+msgstr "다음 단원은?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:439
+msgid ""
+"In the section that follows we will take a closer look at **attribute data**"
+" to see how it can be used to describe vector features."
+msgstr ""
+"다음 단원에서는 **속성 데이터** 가 무엇인지 그리고 속성 데이터가 벡터 데이터를 어떻게 설명할 수 있는지에 대해 더 자세히 살펴볼 "
+"것입니다."

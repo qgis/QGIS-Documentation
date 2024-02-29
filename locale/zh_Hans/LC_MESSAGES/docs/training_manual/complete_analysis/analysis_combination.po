@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:2
+msgid "|LS| Combining the Analyses"
+msgstr "课: 组合分析"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:4
+msgid ""
+"Using the vectorized results of the raster analysis will allow you to select"
+" only those buildings on suitable terrain."
+msgstr "使用栅格分析的矢量化结果将允许您仅选择适合地形上的建筑。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:7
+msgid ""
+"**The goal for this lesson:** To use the vectorized terrain results to "
+"select suitable plots."
+msgstr "**本课目标:** 使用矢量化地形结果选择合适的地块。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:11
+msgid "|moderate| |TY|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:161
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
+msgid "Save your current map (:file:`raster_analysis.qgs`)."
+msgstr "保存当前地图 (:file:`raster_analysis.qgs`) 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:14
+msgid ""
+"Open the map which you created during the vector analysis earlier (you "
+"should have saved the file as :file:`analysis.qgs`)."
+msgstr "打开之前在矢量分析期间创建的地图 (您应该将文件保存为 :file:`analysis.qgs`) 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:16
+msgid "In the :guilabel:`Layers` panel, enable these layers:"
+msgstr "在 :guilabel:`图层` 面板，启用以下图层："
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid ":guilabel:`hillshade`,"
+msgstr ":guilabel:`hillshade`,"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
+msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
+msgstr ":guilabel:`solution` (或 :guilabel:`buildings_over_100`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
+msgid ""
+"In addition to these layers, which should already be loaded in the map from "
+"when you worked on it before, also add the :file:`suitable_terrain.shp` "
+"dataset."
+msgstr ""
+"除了这些图层之外 (应该在您之前处理地图时已经加载到地图中)，还需要添加 :file:`suitable_terrain.shp` 数据集。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:24
+msgid ""
+"If you are missing some layers, you should find them in "
+":file:`exercise_data/residential_development/`"
+msgstr "如果缺少某些图层，您应该在 :file:`exercise_data/residential_development/` 中找到它们。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
+msgid ""
+"Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> "
+"Geoprocessing Tools`) to create a new vector layer called "
+":file:`new_solution.shp` which contains only those buildings which intersect"
+" the :guilabel:`suitable_terrain` layer."
+msgstr ""
+"使用 :guilabel:`相交` 工具 (:menuselection:`矢量 --> 地理处理工具`) 来创建一个名为 "
+":file:`new_solution.shp` 新的矢量图层，其中仅包含与 :guilabel:`suitable_terrain` "
+"图层相交的建筑物。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
+msgid ""
+"You should now have a layer showing certain buildings as your solution, for "
+"example:"
+msgstr "现在，您应该有一个显示某些建筑的图层作为解决方案，例如："
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:38
+msgid "|moderate| |TY| Inspecting the Results"
+msgstr "|moderate| 试一试 检查结果"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid ""
+"Look at each of the buildings in your :guilabel:`new_solution` layer. "
+"Compare them with the :guilabel:`suitable_terrain` layer by changing the "
+"symbology for the :guilabel:`new_solution` layer so that it has outlines "
+"only. What do you notice about some of the buildings? Are they all suitable "
+"just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
+" or why not? Which ones would you deem to be unsuitable?"
+msgstr ""
+"查看 :guilabel:`new_solution` 图层中的每个建筑物。通过更改 :guilabel:`new_solution` "
+"图层的符号，将其与 :guilabel:`suitable_terrain` "
+"图层进行比较，使其仅具有轮廓。您注意到了一些建筑物的什么？它们都适合仅仅因为它们与 :guilabel:`suitable_terrain` "
+"图层相交吗？为什么？您认为哪些不合适？"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid "Answer"
+msgstr "回答"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:50
+msgid ""
+"You may notice that some of the buildings in your :file:`new_solution` layer"
+" have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
+"only part of the building - and therefore only part of the property - lies "
+"on suitable terrain. We can therefore sensibly eliminate those buildings "
+"from our dataset."
+msgstr ""
+"您可能会注意到， :file:`new_solution` 图层中的一些建筑物已被 :guilabel:`相交` 工具 \"切片\" "
+"。这表明，只有部分建筑物 - 因此只有部分房产 - 位于合适的地形上。所以，我们可以明智地从数据集中剔除这些建筑物。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
+msgid "|moderate| |TY| Refining the Analysis"
+msgstr "|moderate| 试一试 细化分析"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
+msgid ""
+"You can see from the results that some buildings which were included were "
+"not really suitable, so we can now refine the analysis."
+msgstr "从结果可以看出，其中一些建筑并不真正适合，因此我们现在可以细化分析。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:63
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the :guilabel:`suitable_terrain` layer. How would you "
+"achieve this? Use one or more Vector Analysis tools and remember that our "
+"buildings are all over 100m squared in size."
+msgstr ""
+"我们希望确保我们的分析只返回完全位于 :guilabel:`suitable_terrain` "
+"图层内的建筑。您将如何实现这一目标？使用一个或多个矢量分析工具，并记住我们的建筑面积都超过100平方米。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
+msgid "At the moment, your analysis should look something like this:"
+msgstr "目前，您的分析应该是这样的："
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:76
+msgid "Consider a circular area, continuous for 100 meters in all directions."
+msgstr "视为一个圆形区域，在所有方向上持续100米。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:81
+msgid ""
+"If it is greater than 100 meters in radius, then subtracting 100 meters from"
+" its size (from all directions) will result in a part of it being left in "
+"the middle."
+msgstr "如果它的半径大于100米，那么从它的尺寸 (从各个方向) 减去100米将导致它的一部分留在中间。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid ""
+"Therefore, you can run an *interior buffer* of 100 meters on your existing "
+":guilabel:`suitable_terrain` vector layer. In the output of the buffer "
+"function, whatever remains of the original layer will represent areas where "
+"there is suitable terrain for 100 meters beyond."
+msgstr ""
+"因此，您可以在现有的 :guilabel:`suitable_terrain` 矢量图层上运行100米的 *内部缓冲区* "
+"。在缓冲区函数的输出中，原图层的剩余部分将表示100米以外有适合地形的区域。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
+msgid "To demonstrate:"
+msgstr "例如："
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:95
+msgid ""
+"Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open "
+"the Buffer(s) dialog."
+msgstr "转到 :menuselection:`矢量 --> 地理处理工具 --> 缓冲区` 打开缓冲区对话框。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:97
+msgid "Set it up like this:"
+msgstr "设置如下："
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:102
+msgid ""
+"Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a buffer"
+" distance of ``-100``. (The distance is automatically in meters because your"
+" map is using a projected CRS.)"
+msgstr ""
+"使用 :guilabel:`suitable_terrain` 图层为输入图层，线段为 ``10`` ，缓冲距离为 ``-100`` "
+"。(距离自动以米为单位，因为您的地图使用的是投影CRS)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:105
+msgid ""
+"Save the output in :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"在 :file:`exercise_data/residential_development/` 保存输出为 "
+":file:`suitable_terrain_continuous100m.shp` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:107
+msgid ""
+"If necessary, move the new layer above your original "
+":guilabel:`suitable_terrain` layer."
+msgstr "如有必要，将新图层移到原 :guilabel:`suitable_terrain` 图层之上。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:110
+msgid "Your results will look like something like this:"
+msgstr "您的结果将如下所示："
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:115
+msgid ""
+"Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector --> "
+"Research Tools --> Select by location`)."
+msgstr "现在使用 :guilabel:`按位置选择` 工具 (:menuselection:`矢量 --> 研究工具 --> 按位置选择`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:117
+msgid "Set up like this:"
+msgstr "设置如下："
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:122
+msgid ""
+"Select features in :guilabel:`new_solution` that intersect features in "
+":guilabel:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"在 :guilabel:`new_solution` 选择与 "
+":guilabel:`suitable_terrain_continuous100m.shp` 中的要素相交的要素。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:125
+msgid "This is the result:"
+msgstr "结果是："
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:130
+msgid ""
+"The yellow buildings are selected. Although some of the buildings fall "
+"partly outside the new :guilabel:`suitable_terrain_continuous100m` layer, "
+"they lie well within the original :guilabel:`suitable_terrain` layer and "
+"therefore meet all of our requirements."
+msgstr ""
+"黄色建筑被选中。尽管某些建筑的一部分位于新 :guilabel:`suitable_terrain_continuous100m` "
+"图层之外，但它们位于原 :guilabel:`suitable_terrain` 图层内，因此满足了我们的所有要求。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
+msgid ""
+"Save the selection under :file:`exercise_data/residential_development/` as "
+":file:`final_answer.shp`."
+msgstr ""
+"将选择保存在 :file:`exercise_data/residential_development/` 为 "
+":file:`final_answer.shp` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:139
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:141
+msgid ""
+"You have now answered the original research question, and can offer an "
+"opinion (with reasons, backed by analysis) for a recommendation regarding "
+"which property to develop."
+msgstr "现在，您已经回答了最初的研究问题，并且可以就开发哪处房产提出建议 (有理由，有分析支持)。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:146
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:148
+msgid "Next you will present these results as part of your second assignment."
+msgstr "接下来，您将在第二次作业中展示这些结果。"

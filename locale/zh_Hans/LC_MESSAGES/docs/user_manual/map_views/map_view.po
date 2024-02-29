@@ -1,0 +1,688 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 徐保才 <1302638819@qq.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-13 12:32+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: 徐保才 <1302638819@qq.com>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/map_views/map_view.rst:26
+msgid "QGIS GUI"
+msgstr "QGIS图形用户界面"
+
+#: ../../docs/user_manual/map_views/map_view.rst:33
+msgid "Exploring the map view"
+msgstr "探索地图视图"
+
+#: ../../docs/user_manual/map_views/map_view.rst:35
+msgid ""
+"When you add a layer (see e.g. :ref:`opening_data`), QGIS automatically "
+"looks for its CRS. If a different CRS is set by default for the project (see"
+" :ref:`project_crs`) then the layer extent is \"on-the-fly\" translated to "
+"that CRS, and the map view is zoomed to that extent if you start with a "
+"blank QGIS project. If there are already layers in the project, no map "
+"canvas resize is performed, so only features falling within the current map "
+"canvas extent will be visible."
+msgstr ""
+"当您添加图层时 (例如，请参阅 :ref:`opening_data`)，QGIS自动查找其CRS。如果默认情况下为工程设置了不同的CRS (请参阅 "
+":ref:`project_crs`)，图层范围将 \"动态\" "
+"转换为该CRS，如果从空QGIS工程开始，地图视图将缩放到该范围。如果工程中已存在图层，则不会执行地图画布调整，因此只有位于当前地图画布范围内的要素可见。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:56
+#: ../../docs/user_manual/map_views/map_view.rst:751
+msgid "Tool"
+msgstr "工具"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1325
+msgid "pan"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1384
+msgid "zoomIn"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1390
+msgid "zoomOut"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1327
+msgid "panToSelected"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1396
+msgid "zoomToSelected"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1394
+msgid "zoomToLayer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1382
+msgid "zoomFullExtent"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1386
+msgid "zoomLast"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1388
+msgid "zoomNext"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1380
+msgid "zoomActual"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:116
+msgid ""
+"Right-click over the map and you should be able to |editCopy| "
+":guilabel:`Copy coordinates` of the clicked point in the map CRS, in WGS84 "
+"or in a custom CRS. The copied information can then be pasted in an "
+"expression, a script, text editor or spreadsheet..."
+msgstr ""
+"右键单击地图，您应该能够在地图的CRS、WGS84或自定义CRS中 |editCopy| :guilabel:`复制坐标` "
+"单击点的坐标，然后可以将复制的信息粘贴到表达式、脚本、文本编辑器或电子表格中..."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1297
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1289
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:166
+msgid "Time-based control on the map canvas"
+msgstr "地图画布上基于时间的控件"
+
+#: ../../docs/user_manual/map_views/map_view.rst:168
+msgid ""
+"QGIS can handle temporal control on loaded layers, i.e. modify the map "
+"canvas rendering based on a time variation. To achieve this, you need:"
+msgstr "QGIS可以处理加载图层中的时态控制，即根据时间变化修改地图画布渲染。为此，您需要："
+
+#: ../../docs/user_manual/map_views/map_view.rst:171
+msgid ""
+"Layers that have dynamic temporal properties set. QGIS supports temporal "
+"control for different data providers, with custom settings. It's mainly "
+"about setting the time range in which the layer would display:"
+msgstr "设置动态时态属性的图层。QGIS支持使用自定义设置对不同数据提供程序进行时态控制，主要是设置图层显示的时间范围："
+
+#: ../../docs/user_manual/map_views/map_view.rst:175
+msgid ""
+":ref:`raster layers <raster_temporal>`: controls whether to display or not "
+"the layer."
+msgstr ":ref:`栅格图层 <raster_temporal>`: 控制是否显示图层。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:179
+msgid ""
+":ref:`vector layers <vectortemporalmenu>`: features are filtered based on "
+"time values associated to their attributes"
+msgstr ":ref:`矢量图层 <vectortemporalmenu>`: 根据与其属性关联的时间值过滤要素。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:181
+msgid ""
+":ref:`mesh layers <meshtemporal>`: displays dynamically the active dataset "
+"groups values"
+msgstr ":ref:`网孔图层 <meshtemporal>`: 动态显示活动数据集组值。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:184
+msgid ""
+"When dynamic temporal options are enabled for a layer, an "
+"|indicatorTemporal| icon is displayed next to the layer in the "
+":guilabel:`Layers` panel to remind you that the layer is temporally "
+"controlled. Click the icon to update the temporal settings."
+msgstr ""
+"当为图层启用动态时态选项时， :guilabel:`图层` 面板中的图层旁边会显示一个 |indicatorTemporal| "
+"图标，提醒您该图层是受时态控制的。单击图标更新时态设置。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1305
+msgid "indicatorTemporal"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:189
+msgid ""
+"Enable the temporal navigation of the map canvas using the :ref:`Temporal "
+"controller panel <temporal_controller>`. The panel is activated:"
+msgstr "使用 :ref:`时态控制面板 <temporal_controller>` 启用地图画布的时态导航。面板已激活："
+
+#: ../../docs/user_manual/map_views/map_view.rst:192
+msgid ""
+"using the |temporal| :sup:`Temporal controller panel` icon located in the "
+":guilabel:`Map Navigation` toolbar"
+msgstr "使用位于 :guilabel:`地图导航` 工具栏中的 |temporal| :sup:`时态控制面板` 图标"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1366
+msgid "temporal"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:194
+msgid ""
+"or from the :menuselection:`View --> Panels --> Temporal controller panel` "
+"menu"
+msgstr "或是 :menuselection:`视图 --> 面板 --> 时态控制面板` 菜单"
+
+#: ../../docs/user_manual/map_views/map_view.rst:200
+msgid "The temporal controller panel"
+msgstr "时态控制面板"
+
+#: ../../docs/user_manual/map_views/map_view.rst:202
+msgid "The :guilabel:`Temporal controller` panel has the following modes:"
+msgstr ":guilabel:`时态控制` 面板具有以下几种状态:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:207
+msgid "Temporal Controller Panel in navigation mode"
+msgstr "导航状态下的时态控制面板"
+
+#: ../../docs/user_manual/map_views/map_view.rst:209
+msgid ""
+"|temporalNavigationOff| :sup:`Turn off temporal navigation`: all the "
+"temporal settings are disabled and visible layers are rendered as usual"
+msgstr "|temporalNavigationOff| :sup:`关闭时态导航`: 所有时态设置都被禁用，可见图层正常渲染"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1372
+msgid "temporalNavigationOff"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:211
+msgid ""
+"|temporalNavigationFixedRange| :sup:`Fixed range temporal navigation`: a "
+"time range is set and only layers (or features) whose temporal range "
+"overlaps with this range are displayed on the map."
+msgstr ""
+"|temporalNavigationFixedRange| :sup:`固定范围的时态导航`: "
+"设置时间范围，并且仅在地图上显示时态范围与该范围重叠的图层 (或要素)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1370
+msgid "temporalNavigationFixedRange"
+msgstr "temporalNavigationFixedRange"
+
+#: ../../docs/user_manual/map_views/map_view.rst:214
+msgid ""
+"|temporalNavigationAnimated| :sup:`Animated temporal navigation`: a time "
+"range is set, split into steps, and only layers (or features) whose temporal"
+" range overlaps with each frame are displayed on the map"
+msgstr ""
+"|temporalNavigationAnimated| :sup:`动画时态导航`: 设置时间范围，将其分为多个步幅，只有时态范围与每个帧重叠的图层 "
+"(或要素) 才会在地图上显示"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1368
+msgid "temporalNavigationAnimated"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:217
+msgid "|settings| :sup:`Settings` for general control of the animation"
+msgstr "|settings| :sup:`设置` 用于动画的常规控制"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1352
+msgid "settings"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:219
+msgid ":guilabel:`Frames rate`: number of steps that are shown per second"
+msgstr ":guilabel:`帧速率`: 每秒显示的步幅数"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1378
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1335
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1329
+msgid "play"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1299
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1317
+msgid "newBookmark"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1360
+msgid "showBookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1392
+msgid "zoomToBookmark"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1295
+msgid "deleteSelected"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1354
+msgid "sharing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1356
+msgid "sharingExport"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1358
+msgid "sharingImport"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1273
+msgid "addGrid"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1376
+msgid "titleLabel"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1291
+msgid "copyrightLabel"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1275
+msgid "addImage"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1321
+msgid "northArrow"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1341
+msgid "scaleBar"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1348
+msgid "selectString"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1345
+msgid "selectColor"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1346
+msgid "selectNumber"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1277
+msgid "addMap"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1293
+msgid "createAnnotationLayer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1343
+msgid "select"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1281
+msgid "addPolygon"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1283
+msgid "addPolyline"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1279
+msgid "addMarker"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1271
+msgid "actionText"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1374
+msgid "textAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1303
+msgid "htmlAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1364
+msgid "svgAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1301
+msgid "formAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1285
+msgid "annotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1350
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1307
+msgid "mapIdentification"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1309
+msgid "measure"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1287
+msgid "calculateField"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1313
+msgid "measureArea"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1315
+msgid "measureBearing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1311
+msgid "measureAngle"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1333
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1106
+msgid "Setting additional map views"
+msgstr "设置其他地图视图"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1319
+msgid "newMap"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1122
+msgid "Multiple map views with different settings"
+msgstr "具有不同设置的多个地图视图"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1124
+msgid ""
+"At the top of an additional map canvas, there's a toolbar with the following"
+" capabilities:"
+msgstr "在新建的地图画布顶部，有一个具有以下功能的工具栏："
+
+#: ../../docs/user_manual/map_views/map_view.rst:1127
+msgid ""
+"|zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to Selection`"
+" and |zoomToLayer| :sup:`Zoom to Layer(s)` to navigate within the view"
+msgstr ""
+"|zoomFullExtent| :sup:`全图显示`, |zoomToSelected| :sup:`缩放到选中要素的范围` 和 "
+"|zoomToLayer| :sup:`缩放到图层` 可在视图中导航"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1129
+msgid ""
+"|showPresets| :sup:`Set View Theme` to select the :ref:`map theme "
+"<map_themes>` to display in the map view. If set to ``(none)``, the view "
+"will follow the :guilabel:`Layers` panel changes."
+msgstr ""
+"|showPresets| :sup:`设置视图主题` 以选择要在地图视图中显示的:ref:`地图主题 <map_themes>`。如果设置为 "
+"``(无)``，视图将跟随 :guilabel:`图层` 面板的变化而变化。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1362
+msgid "showPresets"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1132
+msgid "|options| :sup:`View settings` to configure the map view:"
+msgstr "|options| :sup:`视图设置` 用来配置地图视图:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1323
+msgid "options"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1134
+msgid ""
+"|radioButtonOn| :guilabel:`Synchronize view center with main map`: syncs the"
+" center of the map views without changing the scale. This allows you to have"
+" an overview style or magnified map which follows the main canvas center."
+msgstr ""
+"|radioButtonOn| :guilabel:`视图中心与主地图同步`: "
+"在不更改比例的情况下同步地图视图的中心，这允许您在主画布中心有一个鹰眼图样式或放大的地图。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1138
+msgid ""
+"|radioButtonOff| :guilabel:`Synchronize view to selection`: same as zoom to "
+"selection"
+msgstr "|radioButtonOff| :guilabel:`将视图与所选内容同步`: 与 \"缩放到选中的区域\" 作用相同"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1331
+msgid "radioButtonOff"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1140
+msgid ":guilabel:`Scale`"
+msgstr ":guilabel:`比例`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1141
+msgid ":guilabel:`Rotation`"
+msgstr ":guilabel:`旋转角度`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1142
+msgid ":guilabel:`Magnification`"
+msgstr ":guilabel:`放大`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1143
+msgid ""
+"|unchecked| :guilabel:`Synchronize scale` with the main map scale. A "
+":guilabel:`Scale factor` can then be applied, allowing you to have a view "
+"which is e.g. always 2x the scale of the main canvas."
+msgstr ""
+"|unchecked| :guilabel:`同步比例` 与主地图比例一致。然后可以应用 "
+":guilabel:`比例因子`，使您可以拥有一个例如始终是主画布比例2倍的视图。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1146
+msgid "|checkbox| :guilabel:`Show annotations`"
+msgstr "|checkbox| :guilabel:`显示注记`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1147
+msgid "|checkbox| :guilabel:`Show cursor position`"
+msgstr "|checkbox| :guilabel:`显示指针位置`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1148
+msgid "|unchecked| :guilabel:`Show main canvas extent`"
+msgstr "|unchecked| :guilabel:`显示主要画布范围`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1149
+msgid ""
+"|checkbox| :guilabel:`Show labels`: allows to hide labels regardless they "
+"are set in the displayed layers' properties"
+msgstr "|checkbox| :guilabel:`显示标注`: 允许隐藏标注，无论它们在显示图层的属性中如何设置"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1151
+msgid ":guilabel:`Change map CRS...`"
+msgstr ":guilabel:`更改地图CRS...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1152
+msgid ":guilabel:`Rename view...`"
+msgstr ":guilabel:`重命名视图...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1158
+msgid "Exporting the map view"
+msgstr "导出地图视图"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1160
+msgid ""
+"Maps you make can be layout and exported to various formats using the "
+"advanced capabilities of the :ref:`print layout or report "
+"<label_printlayout>`. It's also possible to directly export the current "
+"rendering, without a layout. This quick \"screenshot\" of the map view has "
+"some convenient features."
+msgstr ""
+"使用 :ref:`打印布局或报告 <label_printlayout>` "
+"的高级功能，可以将您制作的地图布局导出为各种格式，也可以不使用布局直接导出当前渲染。这个地图视图的快速 \"截图\" 有一些方便的功能。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1167
+msgid "To export the map canvas with the current rendering:"
+msgstr "要使用当前渲染导出地图画布，请执行以下操作："
+
+#: ../../docs/user_manual/map_views/map_view.rst:1169
+msgid "Go to :menuselection:`Project --> Import/Export`"
+msgstr "转到 :menuselection:`工程 --> 导入/导出`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1170
+msgid "Depending on your output format, select either"
+msgstr "根据您的输出格式，选择"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1172
+msgid "|saveMapAsImage| :guilabel:`Export Map to Image...`"
+msgstr "|saveMapAsImage| :guilabel:`导出地图为图像...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1339
+msgid "saveMapAsImage"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1173
+msgid "or |saveAsPDF| :guilabel:`Export Map to PDF...`"
+msgstr "或 |saveAsPDF| :guilabel:`导出地图为PDF文件...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1337
+msgid "saveAsPDF"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1175
+msgid ""
+"The two tools provide you with a common set of options. In the dialog that "
+"opens:"
+msgstr "这两个工具为您提供了一组通用选项。在打开的对话框中："
+
+#: ../../docs/user_manual/map_views/map_view.rst:1183
+msgid "The Save Map as Image dialog"
+msgstr "地图另存为图像对话框"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1185
+msgid ""
+"Choose the :guilabel:`Extent` to export: it can be the current view extent "
+"(the default), the extent of a layer or a custom extent drawn over the map "
+"canvas. Coordinates of the selected area are displayed and manually "
+"editable."
+msgstr ""
+"选择要导出的 :guilabel:`范围`：可以是当前视图范围 (默认)、图层范围或在地图画布上绘制的自定义范围。将显示所选区域的坐标，并可手动编辑。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1189
+msgid ""
+"Enter the :guilabel:`Scale` of the map or select it from the "
+":ref:`predefined scales <predefinedscales>`: changing the scale will resize "
+"the extent to export (from the center)."
+msgstr ""
+"输入地图 :guilabel:`比例` 或从 :ref:`预定义比例 <predefinedscales>` 选择：更改比例将调整要导出范围的大小 "
+"(从中心开始)。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1192
+msgid "Set the :guilabel:`Resolution` of the output"
+msgstr "设置输出的 :guilabel:`分辨率`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1193
+msgid ""
+"Control the :guilabel:`Output width` and :guilabel:`Output height` in pixels"
+" of the image: based by default on the current resolution and extent, they "
+"can be customized and will resize the map extent (from the center). The size"
+" ratio can be locked, which may be particularly convenient when drawing the "
+"extent on the canvas."
+msgstr ""
+"以像素为单位控制图像的 :guilabel:`输出宽度` 和 :guilabel:`输出高度`: "
+"默认是基于当前分辨率和范围，可以自定义并将调整地图范围的大小 (从中心开始)。大小比值可以锁定，这在画布上绘制范围时可能特别方便。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1199
+msgid ""
+"|checkbox| :guilabel:`Draw active decorations`: in use :ref:`decorations "
+"<decorations>` (scale bar, title, grid, north arrow...) are exported with "
+"the map"
+msgstr ""
+"|checkbox| :guilabel:`绘制活动装饰`: 使用中的 :ref:`装饰 <decorations>` (比例尺、标题、网格、指北针等)"
+" 与地图一起导出"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1202
+msgid ""
+"|checkbox| :guilabel:`Draw annotations` to export any :ref:`annotation "
+"<sec_annotations>`"
+msgstr "|checkbox| :guilabel:`绘制注记` 导出全部 :ref:`注记 <sec_annotations>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1204
+msgid ""
+"|checkbox| :guilabel:`Append georeference information (embedded or via world"
+" file)`: depending on the output format, a world file of the same name (with"
+" extension ``PNGW`` for ``PNG`` images, ``JPGW`` for ``JPG``, ...) is saved "
+"in the same folder as your image. The ``PDF`` format embeds the information "
+"in the PDF file."
+msgstr ""
+"|checkbox| :guilabel:`附加配准信息 (嵌入或者借助于坐标信息文件)`: 根据输出格式，一个同名的坐标信息文件 (扩展名为 "
+"``PNGW`` 表示 ``PNG`` 图像，扩展名为 ``JPGW`` 表示 ``JPG``, ...) 与您的图像保存在同一文件夹中。``PDF``"
+" 格式将信息嵌入到PDF文件中。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1209
+msgid ""
+"When exporting to PDF, more options are available in the :guilabel:`Save map"
+" as PDF...` dialog:"
+msgstr "导出为PDF时，:guilabel:`地图另存为PDF...` 对话框提供了更多选项："
+
+#: ../../docs/user_manual/map_views/map_view.rst:1217
+msgid "The Save Map as PDF dialog"
+msgstr "地图另存为PDF的对话框"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1219
+msgid ""
+"|checkbox| :guilabel:`Export RDF metadata` of the document such as the "
+"title, author, date, description..."
+msgstr "文档的 |checkbox| :guilabel:`导出RDF元数据`，例如标题、作者、日期、描述..."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1225
+msgid "Choose the GeoPDF :guilabel:`Format`"
+msgstr "选择GeoPDF :guilabel:`格式`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1226
+msgid ""
+"|checkbox| :guilabel:`Include vector feature information` in the GeoPDF "
+"file: will include all the geometry and attribute information from features "
+"visible within the map in the output GeoPDF file."
+msgstr ""
+"在GeoPDF文件中 |checkbox| "
+":guilabel:`包含矢量要素信息`：将在输出GeoPDF文件中包含地图中可见要素的所有几何图形和属性的信息。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1237
+msgid ":guilabel:`Rasterize map`"
+msgstr ":guilabel:`地图栅格化`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1246
+msgid ""
+"Set the :guilabel:`Text export`: controls whether text labels are exported "
+"as proper text objects (:guilabel:`Always export texts as text objects`) or "
+"as paths only (:guilabel:`Always export texts as paths`). If they are "
+"exported as text objects then they can be edited in external applications "
+"(e.g. Inkscape) as normal text. BUT the side effect is that the rendering "
+"quality is decreased, AND there are issues with rendering when certain text "
+"settings like buffers are in place. That’s why exporting as paths is "
+"recommended."
+msgstr ""
+"设置 :guilabel:`文本导出`: 控制文本标注是作为正确的文本对象导出 (:guilabel:`始终将文本导出为文本对象`) 还是仅作为路径导出"
+" (:guilabel:`始终将文本导出为路径`)。如果作为文本对象导出，可以在外部应用程序 (例如Inkscape) "
+"中作为普通文本进行编辑。但其副作用是渲染质量降低，并且当设置某些文本如描边效果时，渲染会出现问题。这就是为什么建议导出为路径的原因。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1257
+msgid "Click :guilabel:`Save` to select file location, name and format."
+msgstr "单击 :guilabel:`保存` 后可以选择文件位置、名称和格式。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1259
+msgid ""
+"When exporting to image, it's also possible to :guilabel:`Copy to clipboard`"
+" the expected result of the above settings and paste the map in another "
+"application such as LibreOffice, GIMP..."
+msgstr ""
+"导出到图像时，还可以将上述设置的预期结果 :guilabel:`复制到剪贴板`，并将地图粘贴到另一应用程序中，如 LibreOffice、GIMP..."

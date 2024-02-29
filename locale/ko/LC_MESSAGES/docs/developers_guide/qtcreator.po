@@ -1,0 +1,314 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/developers_guide/qtcreator.rst:4
+msgid "Getting up and running with QtCreator and QGIS"
+msgstr "QtCreator와 QGIS 준비 및 실행"
+
+#: ../../docs/developers_guide/qtcreator.rst:10
+msgid ""
+"QtCreator is an IDE from the makers of the `Qt library "
+"<https://www.qt.io>`_. With QtCreator you can build any C++ project, but "
+"it's really optimised for people working on Qt based applications (including"
+" mobile apps)."
+msgstr ""
+"QtCreator는 `Qt 라이브러리 <https://www.qt.io>`_ 제작자들이 만든 통합 개발 환경(Integrated "
+"Development Environment; IDE)입니다. QtCreator를 사용하면 어떤 C++ 프로젝트라도 빌드할 수 있기는 "
+"하지만, 사실 Qt 기반 (모바일 앱을 포함하는) 응용 프로그램 개발에 특화되어 있습니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:16
+msgid "Installing QtCreator"
+msgstr "QtCreator 설치"
+
+#: ../../docs/developers_guide/qtcreator.rst:18
+msgid ""
+"Qt Creator is available on all major platforms and can be downloaded from "
+"https://www.qt.io/download (Go the open source route). The installation "
+"procedure depends on your platform."
+msgstr ""
+"QtCreator는 모든 주요 플랫폼에서 사용할 수 있으며 https://www.qt.io/download 에서 다운로드할 수 있습니다."
+" (오픈소스 링크로 가세요.) 설치 과정은 사용자 플랫폼에 따라 다릅니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:22
+msgid ""
+"If you are running a Unix-like platform, you can use the command line, eg on"
+" Debian:"
+msgstr "유닉스 계열 플랫폼을 실행하고 있다면, 명령 줄을 사용하면 됩니다. 예를 들어 데비안에서는:"
+
+#: ../../docs/developers_guide/qtcreator.rst:29
+msgid "After installing you should find it in your menu."
+msgstr "설치가 완료되었다면 사용자 메뉴에서 QtCreator를 볼 수 있을 겁니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:33
+msgid "Setting up your project"
+msgstr "사용자 프로젝트 설정"
+
+#: ../../docs/developers_guide/qtcreator.rst:40
+msgid ""
+"On our system we have checked out the code into ``$HOME/dev/cpp/QGIS`` and "
+"the rest of the article is written assuming that. You should update these "
+"paths as appropriate for your local system."
+msgstr ""
+"여기부터는 시스템의 ``$HOME/dev/cpp/QGIS`` 로 코드를 체크 아웃한 상태라고 가정하고 쓰였습니다. 사용자 로컬 "
+"시스템에서도 이 경로를 적절하게 업데이트해주어야 합니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:44
+msgid ""
+"After launching QtCreator do :menuselection:`File --> Open File or Project`"
+msgstr ""
+"QtCreator를 실행한 다음 :menuselection:`File --> Open File or Project` 메뉴를 여십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:46
+msgid ""
+"Then use the resulting file selection dialog to browse to and open this "
+"file:"
+msgstr "파일 선택 대화창이 뜨면 다음 파일을 찾아 여십시오:"
+
+#: ../../docs/developers_guide/qtcreator.rst:54
+msgid ""
+"QtCreator will parse the project and you will be prompted for a build "
+"location and options in the :guilabel:`Configure Project` dialog."
+msgstr ""
+"QtCreator가 프로젝트를 파싱해서 :guilabel:`Configure Project` 대화창이 뜨면 빌드 위치 및 옵션을 설정할 "
+"수 있습니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:57
+msgid ""
+"Since we want QGIS to have debugging capabilities we will only enable the "
+"debug entry and fill it with our build location:"
+msgstr "QGIS가 디버그 케이퍼빌리티를 가져야 하므로, 여기에서는 디버그 항목만 활성화하고 빌드 위치를 입력할 것입니다:"
+
+#: ../../docs/developers_guide/qtcreator.rst:60
+msgid ""
+"Check |checkbox| :guilabel:`Select all kits` enabling the "
+":guilabel:`Desktop` entry"
+msgstr ""
+":guilabel:`Desktop` 항목을 활성화하려면 |checkbox| :guilabel:`Select all kits` 체크박스를 "
+"체크하십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:255
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:62
+msgid "Uncheck all but the |checkbox| :guilabel:`Debug` sub item"
+msgstr "|checkbox| :guilabel:`Debug` 하위 항목을 제외한 모든 항목을 체크 해제하십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:63
+msgid ""
+"Fill the path with the build directory. For our purpose, we create a "
+"specific build dir for QtCreator:"
+msgstr "경로 항목에 빌드 디렉터리를 입력하십시오. 이 예제의 목적을 위해, QtCreator 특화 빌드 디렉터리를 생성합니다:"
+
+#: ../../docs/developers_guide/qtcreator.rst:70
+msgid ""
+"It's probably a good idea to create separate build directories for different"
+" branches if you can afford the disk space."
+msgstr "사용자 디스크 용량이 허락한다면 서로 다른 브랜치마다 개별 빌드 디렉터리를 생성하는 편이 좋을 것입니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:76
+msgid ""
+"That's the basics of it. Press the :guilabel:`Configure Project` button and "
+"QtCreator will start scanning the source tree for autocompletion support and"
+" do some other housekeeping stuff in the background."
+msgstr ""
+"기본 설정은 끝났습니다. :guilabel:`Configure Project` 버튼을 누르면 QtCreator가 자동 완성 지원을 위해 "
+"소스 트리를 검색하기 시작하고, 배경에서 몇몇 기타 필요한 작업을 수행할 것입니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:83
+msgid "We want to tweak a few things before we start to build."
+msgstr "빌드를 시작하기 전에 몇 가지 사항을 조정해야 합니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:87
+msgid "Setting up your build environment"
+msgstr "사용자 빌드 환경 설정"
+
+#: ../../docs/developers_guide/qtcreator.rst:89
+msgid ""
+"Click on the :guilabel:`Projects` icon on the left of the QtCreator window."
+msgstr "QtCreator 창 왼쪽에 있는 :guilabel:`Projects` 아이콘을 클릭하십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:93
+msgid ""
+"Select the :guilabel:`Build` settings tab (normally active by default)."
+msgstr ":guilabel:`Build` 설정 탭을 선택하세요. (일반적으로 기본 활성화되어 있을 겁니다.)"
+
+#: ../../docs/developers_guide/qtcreator.rst:97
+msgid ""
+"The dialog shows the ``Debug`` build configuration and allows you to edit "
+"settings under the :guilabel:`CMake` section. While the default "
+"configuration should be enough for a first pass, depending on your needs, "
+"you may want to enable more features such as:"
+msgstr ""
+"이 대화창에서는 ``Debug`` 빌드 환경설정을 볼 수 있으며 :guilabel:`CMake` 부분에서 설정을 편집할 수 있습니다. 첫"
+" 패스(pass)에 대해서는 기본 환경설정으로 충분할테지만, 사용자의 필요에 따라 다음과 같은 기능들을 더 활성화해야 할 수도 있습니다:"
+
+#: ../../docs/developers_guide/qtcreator.rst:102
+msgid "**WITH_3D = ON** for 3D rendering"
+msgstr "**WITH_3D = ON**: 3D 렌더링 용"
+
+#: ../../docs/developers_guide/qtcreator.rst:103
+msgid ""
+"**WITH_CUSTOM_WIDGETS = ON** to add QGIS custom widgets for interface design"
+msgstr "**WITH_CUSTOM_WIDGETS = ON**: 인터페이스 디자인을 위한 QGIS 사용자 지정 위젯 추가"
+
+#: ../../docs/developers_guide/qtcreator.rst:105
+msgid "Press :guilabel:`Apply Configuration Changes`."
+msgstr ":guilabel:`Apply Configuration Changes` 를 누르십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:107
+msgid ""
+"By default, Qt Creator uses all the CPU cores available to speed the build "
+"with maximum parallelization. To avoid that your computer freezes, you "
+"should specify a smaller number of cores. Under the :guilabel:`Build Steps` "
+"section:"
+msgstr ""
+"기본적으로, QtCreator는 빌드 속도를 최대 병렬화를 통해 향상시키기 위해 사용할 수 있는 모든 CPU 코어를 사용합니다. 사용자 "
+"컴퓨터가 멈추는 일을 피하려면, 더 적은 코어 개수를 지정해야 합니다. :guilabel:`Build Steps` 부분에서:"
+
+#: ../../docs/developers_guide/qtcreator.rst:111
+msgid ""
+"Press the :menuselection:`Add build step -->` menu and select "
+":guilabel:`Custom Process Step`"
+msgstr ""
+":menuselection:`Add build step -->` 메뉴를 클릭한 다음 :guilabel:`Custom Process "
+"Step` 을 선택하십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:113
+msgid "Fill the new form as follows:"
+msgstr "새 양식에 다음과 같이 입력하십시오:"
+
+#: ../../docs/developers_guide/qtcreator.rst:115
+msgid ":guilabel:`Command`: ``make``"
+msgstr ":guilabel:`Command`: ``make``"
+
+#: ../../docs/developers_guide/qtcreator.rst:116
+msgid ""
+":guilabel:`Arguments`: ``-j4`` to use 4 cores (setting depends on your "
+"device)"
+msgstr ":guilabel:`Arguments`: 코어 4개를 사용하려면 ``-j4`` (사용자 장치 사양에 따라 설정은 달라집니다)"
+
+#: ../../docs/developers_guide/qtcreator.rst:117
+msgid ":guilabel:`Working directory`: ``%{buildDir}``"
+msgstr ":guilabel:`Working directory`: ``%{buildDir}``"
+
+#: ../../docs/developers_guide/qtcreator.rst:123
+msgid ""
+"Also, if you want to reduce your build times, you can do it with ``ninja``, "
+"an alternative to ``make`` with similar build options. You'd need to set it "
+"as the :guilabel:`CMake generator`:"
+msgstr ""
+"또한, 빌드 시간을 줄이고 싶다면 ``make`` 대신 비슷한 빌드 옵션을 가지고 있는 ``ninja`` 를 사용하면 됩니다. "
+":guilabel:`CMake generator` 로 설정해야 합니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:127
+msgid "Open :menuselection:`Tools --> Options --> Build & Run --> Kits`"
+msgstr ":menuselection:`Tools --> Options --> Build & Run --> Kits` 를 여십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:128
+msgid ""
+"Select the :guilabel:`Desktop (default)` kit entry, displaying its "
+"properties"
+msgstr ":guilabel:`Desktop (default)` 킷 항목을 선택하면 그 속성을 표시합니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:129
+msgid "Press :guilabel:`Change...` next to :guilabel:`CMake generator`"
+msgstr ":guilabel:`CMake generator` 옆에 있는 :guilabel:`Change...` 를 클릭하십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:131
+msgid ""
+"You are now ready to build. Press the |build| :sup:`Build` button at the "
+"left bottom of the dialog (or :kbd:`Ctrl+B`) to launch the project build! Qt"
+" Creator will begin compiling and this may take some time the first time, "
+"depending on your device."
+msgstr ""
+"이제 빌드 준비가 끝났습니다. 대화창 좌하단에 있는 |build| :sup:`Build` 버튼을 (또는 :kbd:`Ctrl+B` "
+"단축키를) 누르면 프로젝트 빌드를 시작할 것입니다! QtCreator가 컴파일 작업을 시작하는데, 사용자 장치의 사양에 따라 처음에는 "
+"시간이 조금 걸릴 수도 있습니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:136
+msgid ""
+"At the end of the compilation, you can run QGIS by pressing the |runInstall|"
+" :sup:`Run` button."
+msgstr "컴파일 작업이 완료되면, |runInstall| :sup:`Run` 버튼을 눌러 QGIS를 실행할 수 있습니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:139
+msgid ""
+"The compilation of QGIS also generates binaries in the build directory. "
+"Hence you can execute QGIS from the command line using:"
+msgstr ""
+"QGIS 컴파일 작업은 빌드 디렉터리에 바이너리 파일도 생성합니다. 즉 명령 줄에서 다음과 같이 QGIS를 실행할 수 있습니다:"
+
+#: ../../docs/developers_guide/qtcreator.rst:147
+msgid ""
+"Sometimes you may want to install QGIS as an executable, outside the build "
+"directory."
+msgstr "빌드 디렉터리가 아닌 위치에 QGIS를 실행 가능한 파일로 설치해야 할 경우도 있을 것입니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:150
+msgid ""
+"Set the ``CMAKE_INSTALL_PREFIX`` to somewhere you have write access to (we "
+"use :file:`${HOME}/apps`). This would avoid overwriting an existing QGIS "
+"installs (by your package manager for example)."
+msgstr ""
+"``CMAKE_INSTALL_PREFIX`` 를 사용자가 쓰기 권한을 가지고 있는 위치로 (여기에서는 "
+":file:`${HOME}/apps` 로) 설정하십시오. 이렇게 하면 (예를 들어 사용자의 패키지 관리자로 설치한) 기존 QGIS "
+"설치본을 덮어쓰는 일을 피할 수 있을 겁니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:156
+msgid "Press :guilabel:`Apply Configuration Changes` to update the settings"
+msgstr ":guilabel:`Apply Configuration Changes` 를 눌러 설정을 업데이트하십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:157
+msgid "Press the |build| button"
+msgstr "|build| 버튼을 누르십시오."
+
+#: ../../docs/developers_guide/qtcreator.rst:158
+msgid ""
+"When the build is complete, you'll find the :file:`qgis` executable in the "
+":file:`${HOME}/apps/bin` folder."
+msgstr ""
+"빌드가 완료되면, :file:`qgis` 실행 가능 파일이 :file:`${HOME}/apps/bin` 폴더에 생성되었을 것입니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:233
+msgid "Running and debugging"
+msgstr "실행 및 디버그"
+
+#: ../../docs/developers_guide/qtcreator.rst:235
+msgid ""
+"Now you are ready to run and debug QGIS. To set a break point, simply open a"
+" source file and click in the left column."
+msgstr ""
+"이제 QGIS를 실행하고 디버그할 준비가 끝났습니다. `브레이크포인트 "
+"<https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC%ED%8F%AC%EC%9D%B8%ED%8A%B8>`_"
+" 를 설정하려면, 소스 파일을 열고 왼쪽 열을 클릭하기만 하면 됩니다."
+
+#: ../../docs/developers_guide/qtcreator.rst:240
+msgid ""
+"Now launch QGIS under the debugger by clicking the |runDebug| :sup:`Start "
+"Debugging` in the bottom left of the window."
+msgstr ""
+"이제 디버거 창의 좌하단에 있는 |runDebug| :sup:`Start Debugging` 을 클릭해서 QGIS를 실행하십시오."

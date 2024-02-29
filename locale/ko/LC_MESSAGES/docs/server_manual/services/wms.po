@@ -1,0 +1,2450 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# Transifex Bot <>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-15 15:33+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2024\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/services/wms.rst:2
+msgid "Web Map Service (WMS)"
+msgstr "WMS(웹 맵 서비스)"
+
+#: ../../docs/server_manual/services/wms.rst:4
+msgid ""
+"The **1.1.1** and **1.3.0** WMS standards implemented in QGIS Server provide"
+" a HTTP interface to request map or legend images generated from a QGIS "
+"project. A typical WMS request defines the QGIS project to use, the layers "
+"to render as well as the image format to generate. Basic support is also "
+"available for **Styled Layer Descriptor (SLD)**."
+msgstr ""
+"QGIS 서버에 구현된 WMS **1.1.1** 및 **1.3.0** 표준은 QGIS 프로젝트로부터 생성된 맵 또는 범례 이미지를 요청할"
+" 수 있는 HTTP 인터페이스를 제공합니다. 전형적인 WMS 요청은 사용할 QGIS 프로젝트, 렌더링할 레이어는 물론 생성할 이미지 "
+"포맷도 정의합니다. **SLD(Styled Layer Descriptor)** 사용도 기본으로 지원합니다."
+
+#: ../../docs/server_manual/services/wms.rst:10
+msgid "Specifications:"
+msgstr "사양:"
+
+#: ../../docs/server_manual/services/wms.rst:12
+msgid ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
+msgstr ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
+
+#: ../../docs/server_manual/services/wms.rst:13
+msgid ""
+"`WMS 1.3.0 <https://portal.ogc.org/files/?artifact_id=14416&format=pdf>`_"
+msgstr ""
+"`WMS 1.3.0 <https://portal.ogc.org/files/?artifact_id=14416&format=pdf>`_"
+
+#: ../../docs/server_manual/services/wms.rst:14
+msgid ""
+"`SLD 1.1.0 WMS profile "
+"<https://portal.ogc.org/files/?artifact_id=22364&format=pdf>`_"
+msgstr ""
+"`SLD 1.1.0 WMS profile "
+"<https://portal.ogc.org/files/?artifact_id=22364&format=pdf>`_"
+
+#: ../../docs/server_manual/services/wms.rst:16
+msgid "Standard requests provided by QGIS Server:"
+msgstr "QGIS 서버가 제공하는 표준 요청:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Request"
+msgstr "요청"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetCapabilities <wms_getcapabilities>`"
+msgstr ":ref:`GetCapabilities <wms_getcapabilities>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "서버에 대한 정보를 담은 XML 메타데이터를 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetMap <wms_getmap>`"
+msgstr ":ref:`GetMap <wms_getmap>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a map"
+msgstr "맵을 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetFeatureInfo <wms_getfeatureinfo>`"
+msgstr ":ref:`GetFeatureInfo <wms_getfeatureinfo>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "픽셀 위치에 대한 데이터(도형 및 값)를 검색합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns legend symbols"
+msgstr "범례 심볼을 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetStyle(s) <wms_getstyle>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML document with style description in SLD"
+msgstr "SLD로 된 스타일 설명을 가진 XML 문서를 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`DescribeLayer <wms_describelayer>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"Returns information about WFS and WCS availability respectively for vector "
+"and raster layers"
+msgstr "각각 벡터 레이어 및 래스터 레이어에 대한 WFS 및 WCS의 사용가능성에 관한 정보를 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:30
+msgid "Vendor requests provided by QGIS Server:"
+msgstr "QGIS 서버가 제공하는 상용 소프트웨어 요청:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetPrint <wms_getprint>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a QGIS layout"
+msgstr "QGIS 조판을 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetProjectSettings <wms_getprojectsettings>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns specific information about QGIS Server"
+msgstr "QGIS 서버에 대한 특정 정보를 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetSchemaExtension <wms_getschemaextension>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata about optional extended capabilities"
+msgstr "선택적인 확장 케이퍼빌리티에 관한 XML 메타데이터를 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:44
+msgid "GetCapabilities"
+msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wms.rst:46
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMS 1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 및 1.3.0 사양에 따른 **GetCapabilities** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Required"
+msgstr "필수 여부"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Yes"
+msgstr "Ο"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the service (**WMS**)"
+msgstr "서비스(**WMS**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "요청(**GetCapabilities**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`VERSION <wms_version>`"
+msgstr ":ref:`VERSION <wms_version>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "No"
+msgstr "Ｘ"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Version of the service"
+msgstr "서비스의 버전"
+
+#: ../../docs/server_manual/services/wms.rst:57
+msgid ""
+"The **GetCapabilities** request supports as well the following vendor "
+"parameters:"
+msgstr "**GetCapabilities** 요청은 다음 상용 소프트웨어의 파라미터도 지원합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "QGIS project file"
+msgstr "QGIS 프로젝트 파일"
+
+#: ../../docs/server_manual/services/wms.rst:66
+#: ../../docs/server_manual/services/wms.rst:127
+#: ../../docs/server_manual/services/wms.rst:338
+#: ../../docs/server_manual/services/wms.rst:435
+#: ../../docs/server_manual/services/wms.rst:478
+#: ../../docs/server_manual/services/wms.rst:642
+#: ../../docs/server_manual/services/wms.rst:862
+#: ../../docs/server_manual/services/wms.rst:1009
+#: ../../docs/server_manual/services/wms.rst:1032
+#: ../../docs/server_manual/services/wms.rst:1061
+#: ../../docs/server_manual/services/wms.rst:1089
+#: ../../docs/server_manual/services/wms.rst:1116
+#: ../../docs/server_manual/services/wms.rst:1143
+#: ../../docs/server_manual/services/wms.rst:1170
+#: ../../docs/server_manual/services/wms.rst:1197
+#: ../../docs/server_manual/services/wms.rst:1224
+#: ../../docs/server_manual/services/wms.rst:1283
+#: ../../docs/server_manual/services/wms.rst:1309
+#: ../../docs/server_manual/services/wms.rst:1339
+#: ../../docs/server_manual/services/wms.rst:1367
+#: ../../docs/server_manual/services/wms.rst:1413
+#: ../../docs/server_manual/services/wms.rst:1439
+#: ../../docs/server_manual/services/wms.rst:1469
+#: ../../docs/server_manual/services/wms.rst:1497
+#: ../../docs/server_manual/services/wms.rst:1540
+#: ../../docs/server_manual/services/wms.rst:1576
+#: ../../docs/server_manual/services/wms.rst:1658
+#: ../../docs/server_manual/services/wms.rst:1843
+msgid "URL example:"
+msgstr "URL 예시:"
+
+#: ../../docs/server_manual/services/wms.rst:79
+msgid "GetMap"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:81
+msgid ""
+"Standard parameters for the **GetMap** request according to the OGC WMS "
+"1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 및 1.3.0 사양에 따른 **GetMap** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetMap**)"
+msgstr "요청(**GetMap**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERS <wms_layers>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display"
+msgstr "표시할 레이어"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`STYLES <wms_styles>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style"
+msgstr "레이어의 스타일"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRS / CRS <wms_srs>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Coordinate reference system"
+msgstr "좌표계"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BBOX <wms_bbox>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map extent"
+msgstr "맵 범위"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WIDTH <wms_width>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the image in pixels"
+msgstr "이미지의 픽셀 단위 너비"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`HEIGHT <wms_height>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the image in pixels"
+msgstr "이미지의 픽셀 단위 높이"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getmap_format>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Image format"
+msgstr "이미지 포맷"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`TRANSPARENT <wms_transparent>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Transparent background"
+msgstr "투명한 배경"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "URL of an SLD to be used for styling"
+msgstr "스타일 작업에 쓰이는 SLD의 URL"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD_BODY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "In-line SLD (XML) to be used for styling"
+msgstr "스타일 작업에 사용될 인라인(In-line) SLD(XML)"
+
+#: ../../docs/server_manual/services/wms.rst:103
+msgid ""
+"In addition to the standard ones, QGIS Server supports :ref:`redlining "
+"<wms_redlining>`, :ref:`external WMS layers <wms_external>` as well as the "
+"following extra parameters:"
+msgstr ""
+"표준 파라미터에 더해, QGIS 서버는 :ref:`레드라이닝 <wms_redlining>`, :ref:`외부 WMS 레이어 "
+"<wms_external>` 는 물론 다음 추가 파라미터도 지원합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BGCOLOR <wms_bgcolor>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the background color"
+msgstr "배경 색상을 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`DPI <wms_dpi>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the output resolution"
+msgstr "출력물의 해상도를 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`IMAGE_QUALITY <wms_imagequality>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "JPEG compression"
+msgstr "JPEG 압축"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`OPACITIES <wms_opacities>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Opacity for layer or group"
+msgstr "레이어 또는 레이어 그룹의 투명도"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FILTER <wms_filter>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Subset of features"
+msgstr "피처의 하위집합"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SELECTION <wms_selection>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Highlight features"
+msgstr "피처를 강조합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "FILE_NAME"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "File name of the downloaded file"
+msgstr "다운로드한 파일의 파일명"
+
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/dxf``"
+msgstr "``FORMAT=application/dxf`` 파라미터 사용시에만 쓰입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT_OPTIONS <wms_formatoptions>`"
+msgstr ":ref:`FORMAT_OPTIONS <wms_formatoptions>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Options of the specified file format"
+msgstr "지정한 파일 포맷의 옵션들"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`TILED <wms_tiled>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Working in *tiled mode*"
+msgstr "*타일 모드* 로 작동합니다."
+
+#: ../../docs/server_manual/services/wms.rst:151
+msgid "VERSION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:153
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"이 파라미터는 사용할 서비스의 버전을 지정할 수 있습니다. ``VERSION`` 파라미터가 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:156
+msgid "``1.1.1``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:157
+msgid "``1.3.0``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:159
+msgid ""
+"According to the version number, slight differences have to be expected as "
+"explained later for the next parameters:"
+msgstr "버전 번호에 따라, 다음 파라미터의 사용 방법이 조금씩 달라집니다. 이에 대해서는 차후 설명하겠습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:162
+msgid "``CRS`` / ``SRS``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:163
+msgid "``BBOX``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:169
+msgid "LAYERS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:171
+msgid ""
+"This parameter allows to specify the layers to display on the map. Names "
+"have to be separated by a comma."
+msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정할 수 있습니다. 레이어명을 쉼표로 구분해야 합니다."
+
+#: ../../docs/server_manual/services/wms.rst:174
+msgid "In addition, QGIS Server introduced some options to select layers by:"
+msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 수 있는 옵션을 제공합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:176
+msgid "a :ref:`short name <services_basics_short_name>`"
+msgstr ":ref:`단축명 <services_basics_short_name>`"
+
+#: ../../docs/server_manual/services/wms.rst:177
+msgid "the layer id"
+msgstr "레이어 ID"
+
+#: ../../docs/server_manual/services/wms.rst:179
+msgid ""
+"The project option allowing to select layers by their id is in "
+":menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project --> "
+"Properties...` dialog. Check the :guilabel:`Use layer ids as names` checkbox"
+" to activate this option."
+msgstr ""
+":menuselection:`Project --> Properties...`  대화창의 :menuselection:`QGIS Server"
+" --> WMS` 탭에 레이어 ID로 레이어를 선택할 수 있는 프로젝트 수준 옵션이 있습니다. 이 옵션을 활성화하려면 "
+":guilabel:`Use layer ids as names` 체크박스를 체크하십시오."
+
+#: ../../docs/server_manual/services/wms.rst:196
+msgid "STYLES"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:198
+msgid ""
+"This parameter can be used to specify a layer's style for the rendering "
+"step. Styles have to be separated by a comma. The name of the default style "
+"is ``default``."
+msgstr ""
+"렌더링 단계에서 어떤 레이어 스타일을 사용할지 지정하는 데 이 파라미터를 사용할 수 있습니다. 스타일을 쉼표로 구분해야 합니다. 기본 "
+"스타일의 이름은 ``default`` 입니다."
+
+#: ../../docs/server_manual/services/wms.rst:207
+msgid "SRS / CRS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:209
+msgid ""
+"This parameter allows to indicate the map output Spatial Reference System in"
+" WMS **1.1.1** and has to be formed like ``EPSG:XXXX``. Note that ``CRS`` is"
+" also supported if current version is **1.1.1**."
+msgstr ""
+"``SRS`` 파라미터는 WMS **1.1.1** 에서 맵 출력물의 좌표계를 나타낼 수 있으며, ``EPSG:XXXX`` 같은 서식이어야"
+" 합니다. 현재 버전이 **1.1.1** 이라면 ``CRS`` 도 지원한다는 사실을 기억하십시오."
+
+#: ../../docs/server_manual/services/wms.rst:213
+msgid ""
+"For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also "
+"supported."
+msgstr "WMS **1.3.0** 의 경우, ``CRS`` 파라미터가 선호되지만 ``SRS`` 도 지원합니다."
+
+#: ../../docs/server_manual/services/wms.rst:216
+msgid ""
+"Note that if both ``CRS`` and ``SRS`` parameters are indicated in the "
+"request, then it's the current version indicated in ``VERSION`` parameter "
+"which is decisive."
+msgstr ""
+"요청에서 ``CRS`` 와 ``SRS`` 파라미터 둘 다 사용한 경우, ``VERSION`` 파라미터에서 지정한 현재 버전을 우선합니다."
+
+#: ../../docs/server_manual/services/wms.rst:220
+msgid ""
+"In the next case, the ``SRS`` parameter is kept whatever the ``VERSION`` "
+"parameter because ``CRS`` is not indicated:"
+msgstr ""
+"다음 예시에서는, ``VERSION`` 파라미터 값이 무엇이든 ``SRS`` 파라미터를 사용합니다. ``CRS`` 가 없기 때문입니다:"
+
+#: ../../docs/server_manual/services/wms.rst:232
+msgid ""
+"In the next case, the ``SRS`` parameter is kept instead of ``CRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr "다음 예시에서는, ``VERSION`` 파라미터 값 때문에 ``CRS`` 대신 ``SRS`` 파라미터를 사용합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:245
+msgid ""
+"In the next case, the ``CRS`` parameter is kept instead of ``SRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr "다음 예시에서는, ``VERSION`` 파라미터 값 때문에 ``SRS`` 대신 ``CRS`` 파라미터를 사용합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:262
+#: ../../docs/server_manual/services/wms.rst:855
+msgid "BBOX"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:264
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr "이 파라미터는 맵 범위를 현재 좌표계의 단위로 지정할 수 있습니다. 좌표를 쉼표로 구분해야 합니다."
+
+#: ../../docs/server_manual/services/wms.rst:267
+msgid ""
+"The ``BBOX`` parameter is formed like ``min_a,min_b,max_a,max_b`` but ``a`` "
+"and ``b`` axis definition is different according to the current ``VERSION`` "
+"parameter:"
+msgstr ""
+"``BBOX`` 파라미터는 ``min_a,min_b,max_a,max_b`` 와 같은 서식이지만 ``a`` 와 ``b`` 축의 정의는 "
+"현재 ``VERSION`` 파라미터에 따라 달라집니다:"
+
+#: ../../docs/server_manual/services/wms.rst:271
+msgid "in WMS **1.1.1**, the axis ordering is always east/north"
+msgstr "WMS **1.1.1** 에서는 축의 순서가 언제나 동/북입니다."
+
+#: ../../docs/server_manual/services/wms.rst:272
+msgid "in WMS **1.3.0**, the axis ordering depends on the CRS authority"
+msgstr "WMS **1.3.0** 에서는 축의 순서가 좌표계 기관(CRS authority)을 따릅니다."
+
+#: ../../docs/server_manual/services/wms.rst:274
+msgid ""
+"For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the "
+"longitude (east) and ``b`` the latitude (north), leading to a request like:"
+msgstr ""
+"예를 들면 ``EPSG:4326`` 과 WMS **1.1.1** 인 경우, ``a`` 가 경도(동)이고 ``b`` 는 위도(북)이기 "
+"때문에 요청이 다음과 같이 보입니다:"
+
+#: ../../docs/server_manual/services/wms.rst:287
+msgid ""
+"But in case of WMS **1.3.0**, the axis ordering defined in the EPSG database"
+" is north/east so ``a`` is the latitude and ``b`` the longitude:"
+msgstr ""
+"그러나 WMS **1.3.0** 인 경우, EPSG 데이터베이스에 정의된 축의 순서가 북/동이기 때문에 ``a`` 가 위도이고 ``b``"
+" 는 경도가 됩니다:"
+
+#: ../../docs/server_manual/services/wms.rst:304
+#: ../../docs/server_manual/services/wms.rst:882
+msgid "WIDTH"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:306
+msgid ""
+"This parameter allows to specify the width in pixels of the output image."
+msgstr "이 파라미터는 출력 이미지의 너비를 픽셀 단위로 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:313
+#: ../../docs/server_manual/services/wms.rst:902
+msgid "HEIGHT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:315
+msgid ""
+"This parameter allows to specify the height in pixels of the output image."
+msgstr "이 파라미터는 출력 이미지의 높이를 픽셀 단위로 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:322
+#: ../../docs/server_manual/services/wms.rst:922
+#: ../../docs/server_manual/services/wms.rst:1706
+msgid "FORMAT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:324
+msgid ""
+"This parameter may be used to specify the format of map image. Available "
+"values are:"
+msgstr "이 파라미터는 맵 이미지의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:327
+#: ../../docs/server_manual/services/wms.rst:1712
+msgid "``jpg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:328
+#: ../../docs/server_manual/services/wms.rst:1713
+msgid "``jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:329
+#: ../../docs/server_manual/services/wms.rst:927
+#: ../../docs/server_manual/services/wms.rst:1714
+msgid "``image/jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:330
+#: ../../docs/server_manual/services/wms.rst:928
+#: ../../docs/server_manual/services/wms.rst:1711
+msgid "``image/png``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:331
+msgid "``image/png; mode=1bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:332
+msgid "``image/png; mode=8bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:333
+msgid "``image/png; mode=16bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:334
+msgid "``image/webp``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:335
+msgid ""
+"``application/dxf``: only layers that have read access in the WFS service "
+"are exported in the DXF format"
+msgstr "``application/dxf``: WFS 서비스에서 읽기 접근이 가능한 레이어만 DXF 포맷으로 내보냅니다."
+
+#: ../../docs/server_manual/services/wms.rst:357
+msgid "TRANSPARENT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:359
+msgid ""
+"This boolean parameter can be used to specify the background transparency. "
+"Available values are (not case sensitive):"
+msgstr ""
+"이 불(boolean) 파라미터는 배경 투명도를 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다(대소문자 구분 안 함):"
+
+#: ../../docs/server_manual/services/wms.rst:363
+#: ../../docs/server_manual/services/wms.rst:775
+#: ../../docs/server_manual/services/wms.rst:789
+#: ../../docs/server_manual/services/wms.rst:991
+#: ../../docs/server_manual/services/wms.rst:1280
+#: ../../docs/server_manual/services/wms.rst:1336
+#: ../../docs/server_manual/services/wms.rst:1410
+#: ../../docs/server_manual/services/wms.rst:1466
+msgid "``TRUE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:364
+#: ../../docs/server_manual/services/wms.rst:776
+#: ../../docs/server_manual/services/wms.rst:790
+#: ../../docs/server_manual/services/wms.rst:992
+#: ../../docs/server_manual/services/wms.rst:1253
+#: ../../docs/server_manual/services/wms.rst:1281
+#: ../../docs/server_manual/services/wms.rst:1337
+#: ../../docs/server_manual/services/wms.rst:1411
+#: ../../docs/server_manual/services/wms.rst:1467
+msgid "``FALSE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:366
+msgid ""
+"However, this parameter is ignored if the format of the image indicated with"
+" ``FORMAT`` is different from PNG."
+msgstr "하지만 ``FORMAT`` 파라미터가 나타내는 이미지 포맷이 PNG가 아닌 경우 이 파라미터를 무시합니다."
+
+#: ../../docs/server_manual/services/wms.rst:373
+msgid "BGCOLOR"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:375
+msgid ""
+"This parameter allows to indicate a background color for the map image. "
+"However it cannot be combined with ``TRANSPARENT`` parameter in case of PNG "
+"images (transparency takes priority). The colour may be literal or in "
+"hexadecimal notation."
+msgstr ""
+"이 파라미터는 맵 이미지의 배경 색상을 지정할 수 있습니다. 하지만 PNG 이미지인 경우, ``TRANSPARENT`` 파라미터와 "
+"결합해서 사용할 수 없습니다. (투명을 더 우선하기 때문입니다.) 일반적인 색상명을 사용할 수도 있고, 십육진법으로 표기할 수도 "
+"있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:380
+msgid "URL example with the literal notation:"
+msgstr "일반적인 표기법을 사용한 URL 예시:"
+
+#: ../../docs/server_manual/services/wms.rst:391
+msgid "URL example with the hexadecimal notation:"
+msgstr "십육진법 표기법을 사용한 URL 예시:"
+
+#: ../../docs/server_manual/services/wms.rst:406
+msgid "DPI"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:408
+msgid "This parameter can be used to specify the requested output resolution."
+msgstr "이 파라미터는 요청한 출력물의 해상도를 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:414
+msgid "IMAGE_QUALITY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:416
+msgid ""
+"This parameter is only used for JPEG images. By default, the JPEG "
+"compression is ``-1``."
+msgstr "이 파라미터는 JPEG 이미지 전용입니다. JPEG 압축 기본값은 ``-1`` 입니다."
+
+#: ../../docs/server_manual/services/wms.rst:419
+msgid ""
+"You can change the default per QGIS project in the :menuselection:`OWS "
+"Server --> WMS capabilities` menu of the :menuselection:`Project --> "
+"Properties...` dialog. If you want to override it in a ``GetMap`` request "
+"you can do it using the ``IMAGE_QUALITY`` parameter."
+msgstr ""
+":menuselection:`Project --> Properties...` 대화창의 :menuselection:`OWS Server "
+"--> WMS capabilities` 메뉴에서 이 기본값을 QGIS 프로젝트 별로 변경할 수 있습니다. ``GetMap`` 요청에서 이"
+" 파라미터를 무시하고 싶은 경우 ``IMAGE_QUALITY`` 파라미터를 사용하면 됩니다."
+
+#: ../../docs/server_manual/services/wms.rst:429
+msgid "OPACITIES"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:431
+msgid ""
+"Comma separated list of opacity values. Opacity can be set on layer or group"
+" level. Allowed values range from ``0`` (fully transparent) to ``255`` "
+"(fully opaque)."
+msgstr ""
+"쉼표로 구분된 불투명도(opacity) 값 목록입니다. 레이어 또는 그룹 수준에서 불투명도를 설정할 수 있습니다. ``0`` (완전히 "
+"투명)에서 ``255`` (완전히 불투명) 범위의 값을 사용할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:454
+msgid "To the left ``OPACITIES=255,0`` and to the right ``OPACITIES=255,255``"
+msgstr "왼쪽은 ``OPACITIES=255,0`` 그리고 오른쪽은 ``OPACITIES=255,255``"
+
+#: ../../docs/server_manual/services/wms.rst:459
+msgid "FILTER"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:461
+msgid ""
+"A subset of layers can be selected with the ``FILTER`` parameter. The syntax"
+" is basically the same as for the QGIS subset string. However, there are "
+"some restrictions to avoid SQL injections into databases via QGIS Server. If"
+" a dangerous string is found in the parameter, QGIS Server will return the "
+"next error:"
+msgstr ""
+"``FILTER`` 파라미터를 통해 레이어의 하위 집합을 선택할 수 있습니다. 문법은 QGIS 하위 집합 문자열과 기본적으로 동일합니다."
+" 하지만, QGIS 서버를 통해 데이터베이스에 SQL 삽입(injection)이 일어나는 일을 막기 위한 몇몇 제약 조건이 있습니다. "
+"파라미터에서 위험한 문자열이 발견될 경우, QGIS 서버는 다음 오류를 반환할 것입니다:"
+
+#: ../../docs/server_manual/services/wms.rst:497
+msgid "Server response to a GetMap request with FILTER parameter"
+msgstr "FILTER 파라미터를 사용한 GetMap 요청에 대한 서버의 응답"
+
+#: ../../docs/server_manual/services/wms.rst:500
+msgid ""
+"In this example, the same filter ``\"name\" = 'France'`` is applied to "
+"layers ``countries`` and ``countries_shapeburst``, while the filter "
+"``\"name\" = 'Paris'`` is only applied to ``places``."
+msgstr ""
+"이 예시에서 ``countries`` 및 ``countries_shapeburst`` 레이어에 동일한 ``\"name\" = "
+"'France'`` 필터를 적용한 반면, ``\"name\" = 'Paris'`` 필터는 ``places`` 레이어에만 적용되었습니다."
+
+#: ../../docs/server_manual/services/wms.rst:506
+msgid ""
+"It is possible to make attribute searches via GetFeatureInfo and omit the "
+"X/Y parameter if a FILTER is there. QGIS Server then returns info about the "
+"matching features and generates a combined bounding box in the XML output."
+msgstr ""
+"``FILTER`` 파라미터가 존재하는 경우 ``GetFeatureInfo`` 를 통해 속성을 검색할 수 있고 X/Y 파라미터를 생략할 "
+"수도 있습니다. 그러면 QGIS 서버가 일치하는 피처에 관한 정보를 반환하고 결합된 경계 상자를 XML 출력물 형태로 생성할 것입니다."
+
+#: ../../docs/server_manual/services/wms.rst:515
+msgid "SELECTION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:517
+msgid ""
+"The ``SELECTION`` parameter can highlight features from one or more layers. "
+"Vector features can be selected by passing comma separated lists with "
+"feature ids."
+msgstr ""
+"``SELECTION`` 파라미터는 하나 이상의 레이어에서 피처를 강조시킬 수 있습니다. 피처 ID를 쉼표로 구분한 목록을 전송하면 벡터"
+" 피처를 선택할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:531
+msgid ""
+"The following image presents the response from a GetMap request using the "
+"``SELECTION`` option e.g. "
+"``http://myserver.com/...&SELECTION=countries:171,65``."
+msgstr ""
+"다음 그림은, 예를 들어 ``http://myserver.com/...&SELECTION=countries:171,65`` 처럼, "
+"``SELECTION`` 파라미터를 사용한 ``GetMap`` 요청이 반환한 응답의 예시입니다. "
+
+#: ../../docs/server_manual/services/wms.rst:535
+msgid ""
+"As those features id's correspond in the source dataset to **France** and "
+"**Romania** they're highlighted in yellow."
+msgstr "소스 데이터셋에서 파라미터의 피처 ID에 해당하는 **프랑스** 와 **루마니아** 가 노란색으로 강조돼 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:543
+msgid "Server response to a GetMap request with SELECTION parameter"
+msgstr "SELECTION 파라미터를 사용한 GetMap 요청에 대한 서버의 응답"
+
+#: ../../docs/server_manual/services/wms.rst:548
+msgid "FORMAT_OPTIONS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:550
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/dxf``. A list of key:value pairs separated by "
+"semicolon:"
+msgstr ""
+"선택한 포맷을 위한 옵션들을 지정하는 데 이 파라미터를 사용할 수 있습니다. ``FORMAT=application/dxf`` 전용입니다."
+" 쌍반점으로 구분한 키:값 쌍의 목록입니다:"
+
+#: ../../docs/server_manual/services/wms.rst:554
+msgid ""
+"SCALE: to be used for symbology rules, filters and styles (not actual "
+"scaling of the data - data remains in the original scale)."
+msgstr ""
+"SCALE: 심볼 규칙, 필터, 스타일용으로 사용됩니다. (데이터를 실제로 크기 조정하지는 않습니다. 데이터는 원본 척도로 유지됩니다.)"
+
+#: ../../docs/server_manual/services/wms.rst:556
+msgid ""
+"MODE: corresponds to the export options offered in the QGIS Desktop DXF "
+"export dialog. Possible values are ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` and"
+" ``SYMBOLLAYERSYMBOLOGY``."
+msgstr ""
+"MODE: QGIS 데스크탑 DXF 내보내기 대화창에서 지정하는 내보내기 옵션에 대응합니다. ``NOSYMBOLOGY``, "
+"``FEATURESYMBOLOGY`` 및 ``SYMBOLLAYERSYMBOLOGY`` 값을 사용할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:559
+msgid ""
+"LAYERSATTRIBUTES: specify a field that contains values for DXF layer names -"
+" if not specified, the original QGIS layer names are used."
+msgstr ""
+"LAYERSATTRIBUTES: DXF 레이어명을 위한 값을 담고 있는 필드를 지정합니다 ─ 지정하지 않을 경우, 원본 QGIS "
+"레이어명을 사용합니다."
+
+#: ../../docs/server_manual/services/wms.rst:561
+msgid ""
+"USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will be used as "
+"layer name."
+msgstr "USE_TITLE_AS_LAYERNAME: 이 파라미터를 사용하면, 레이어의 제목을 레이어명으로 사용할 것입니다."
+
+#: ../../docs/server_manual/services/wms.rst:563
+msgid ""
+"CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1`` "
+"check the QGIS desktop DXF export dialog for valid values."
+msgstr ""
+"CODEC: 인코딩에 사용할 코덱을 지정합니다. 기본값은 ``ISO-8859-1`` 입니다. QGIS 데스크탑 DXF 내보내기 대화창에서"
+" 사용할 수 있는 유효한 값을 찾아보십시오."
+
+#: ../../docs/server_manual/services/wms.rst:565
+msgid "NO_MTEXT: Use TEXT instead of MTEXT for labels."
+msgstr "NO_MTEXT: 라벨에 MTEXT 대신 TEXT를 사용합니다."
+
+#: ../../docs/server_manual/services/wms.rst:566
+msgid "FORCE_2D: Force 2D output. This is required for polyline width."
+msgstr "FORCE_2D: 산출물을 2D로 강제합니다. 폴리라인 너비를 지정하려면 이 옵션이 필수입니다."
+
+#: ../../docs/server_manual/services/wms.rst:571
+msgid "TILED"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:573
+msgid ""
+"For performance reasons, QGIS Server can be used in tiled mode. In this "
+"mode, the client requests several small fixed size tiles, and assembles them"
+" to form the whole map. Doing this, symbols at or near the boundary between "
+"two tiles may appeared cut, because they are only present in one of the "
+"tile."
+msgstr ""
+"성능 향상을 위해 QGIS 서버를 타일 모드로 사용할 수 있습니다. 이 모드에서, 클라이언트는 몇 개의 조그만 고정 크기 타일을 요청해서"
+" 조립하여 전체 맵을 만듭니다. 이 과정에서 두 타일 사이의 경계선 위 또는 가까이 있는 심볼이 잘린 것으로 보일 수도 있습니다. 심볼이"
+" 두 타일 가운데 하나에만 존재하기 때문입니다."
+
+#: ../../docs/server_manual/services/wms.rst:579
+msgid ""
+"Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in "
+"*tiled* mode, and to apply the *Tile buffer* configured in the QGIS project "
+"(see :ref:`Creatingwmsfromproject`)."
+msgstr ""
+"``TILED`` 파라미터를 ``TRUE`` 로 설정하면 QGIS 서버가 *타일* 모드로 작동해서, QGIS 프로젝트에서 환경 설정한 "
+"*타일 버퍼* 를 적용합니다. (:ref:`Creatingwmsfromproject` 를 참조하세요.)"
+
+#: ../../docs/server_manual/services/wms.rst:583
+msgid ""
+"When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured in "
+"the QGIS project, features outside the tile extent are drawn to avoid cut "
+"symbols at tile boundaries."
+msgstr ""
+"``TILED`` 가 ``TRUE`` 이고 QGIS 프로젝트에서 타일 버퍼를 0이 아닌 값으로 환경 설정했다면, 타일 경계선에서 심볼이 "
+"잘리는 일을 피하기 위해 타일 범위 바깥에 있는 피처를 렌더링합니다."
+
+#: ../../docs/server_manual/services/wms.rst:587
+msgid "``TILED`` defaults to ``FALSE``."
+msgstr "``TILED`` 파라미터의 기본값은 ``FALSE`` 입니다."
+
+#: ../../docs/server_manual/services/wms.rst:593
+msgid "GetFeatureInfo"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:595
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 및 1.3.0 사양에 따른 **GetFeatureInfo** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr "요청(**GetFeatureInfo**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`QUERY_LAYERS <wms_querylayers>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to query"
+msgstr "쿼리할 레이어"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display (identical to `QUERY_LAYERS`)"
+msgstr "표시할 레이어 (`QUERY_LAYERS` 와 동일)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`INFO_FORMAT <wms_infoformat>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Output format"
+msgstr "출력물 포맷"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FEATURE_COUNT <wms_featurecount>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Maximum number of features to return"
+msgstr "반환할 피처의 최대 개수"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`I <wms_i>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel column of the point to query"
+msgstr "쿼리할 포인트의 픽셀 열"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`X <wms_x>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `I` parameter, but in WMS 1.1.1"
+msgstr "``I`` 파라미터와 동일 (WMS 1.1.1 용)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`J <wms_j>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel row of the point to query"
+msgstr "쿼리할 포인트의 픽셀 행"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`Y <wms_y>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `J` parameter, but in WMS 1.1.1"
+msgstr "``J`` 파라미터와 동일 (WMS 1.1.1 용)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "WMS_PRECISION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"The precision (number of digits) to be used when returning geometry (see "
+":ref:`how to add geometry to feature response "
+"<addGeometryToFeatureResponse>`). The default value is ``-1`` meaning that "
+"the precision defined in the project is used."
+msgstr ""
+"도형 반환 시 사용할 정밀도(소수점 이하 자릿수). (:ref:`객체 요청에 도형을 추가하는 방법 "
+"<addGeometryToFeatureResponse>` 을 참조하세요.) 기본값은 ``-1`` 로, 프로젝트에서 정의한 정밀도를 "
+"사용한다는 뜻입니다."
+
+#: ../../docs/server_manual/services/wms.rst:624
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr "표준 파라미터 이외에도, QGIS 서버는 다음과 같은 추가 파라미터를 지원합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FI_POINT_TOLERANCE <wms_fipointtolerance>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for point layers"
+msgstr "포인트 레이어의 픽셀 단위 허용 오차"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for line layers"
+msgstr "라인 레이어의 픽셀 단위 허용 오차"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FI_POLYGON_TOLERANCE <wms_fipolygontolerance>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for polygon layers"
+msgstr "폴리곤 레이어의 픽셀 단위 허용 오차"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FILTER_GEOM <wms_filtergeom>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Geometry filtering"
+msgstr "도형 필터링"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WITH_MAPTIP <wms_withmaptip>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add map tips to the output"
+msgstr "출력물에 맵 도움말(map tip) 추가"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WITH_GEOMETRY <wms_withgeometry>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add geometry to the output"
+msgstr "출력물에 도형 추가"
+
+#: ../../docs/server_manual/services/wms.rst:666
+msgid "INFO_FORMAT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:668
+msgid ""
+"This parameter may be used to specify the format of the result. Available "
+"values are:"
+msgstr "이 파라미터는 산출물의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:671
+msgid "``text/xml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:672
+msgid "``text/html``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:673
+msgid "``text/plain``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:674
+msgid "``application/vnd.ogc.gml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:675
+#: ../../docs/server_manual/services/wms.rst:929
+msgid "``application/json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:680
+msgid "QUERY_LAYERS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:682
+msgid ""
+"This parameter specifies the layers to display on the map. Names are "
+"separated by a comma."
+msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정합니다. 레이어명을 쉼표로 구분해야 합니다."
+
+#: ../../docs/server_manual/services/wms.rst:685
+msgid "In addition, QGIS Server introduces options to select layers by:"
+msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 수 있는 옵션을 제공합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:687
+msgid "short name"
+msgstr "단축명(short name)"
+
+#: ../../docs/server_manual/services/wms.rst:688
+msgid "layer id"
+msgstr "레이어 ID"
+
+#: ../../docs/server_manual/services/wms.rst:690
+msgid ""
+"See the ``LAYERS`` parameter defined in :ref:`GetMap <wms_layers>` for more "
+"information."
+msgstr "더 자세한 정보는 :ref:`GetMap <wms_layers>` 에 정의된 ``LAYERS`` 파라미터를 참조하세요."
+
+#: ../../docs/server_manual/services/wms.rst:696
+msgid "FEATURE_COUNT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:698
+msgid ""
+"This parameter specifies the maximum number of features per layer to return."
+" For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
+"``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from layer1 "
+"will be returned. Likewise a maximum of 3 features from layer2 will be "
+"returned."
+msgstr ""
+"이 파라미터는 레이어별로 반환해야 할 피처의 최대 개수를 지정합니다. 예를 들어 ``QUERY_LAYERS`` 파라미터를 "
+"``layer1,layer2`` 로 설정하고 ``FEATURE_COUNT`` 를 ``3`` 으로 설정하면 'layer1' 로부터 피처를 "
+"최대 3개 반환할 것입니다. 'layer2' 도 마찬가지로 피처를 최대 3개 반환할 것입니다."
+
+#: ../../docs/server_manual/services/wms.rst:705
+msgid "By default, only 1 feature per layer is returned."
+msgstr "각 레이어별로 피처 1개만 반환하는 것이 기본값입니다."
+
+#: ../../docs/server_manual/services/wms.rst:710
+msgid "I"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:712
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel column"
+" of the query point."
+msgstr "WMS 1.3.0에서 정의된 이 파라미터는 쿼리 포인트의 픽셀 열을 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:718
+msgid "X"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:720
+msgid "Same parameter as ``I``, but defined in WMS 1.1.1."
+msgstr "``I`` 파라미터와 동일하지만, WMS 1.1.1에서 정의되었습니다."
+
+#: ../../docs/server_manual/services/wms.rst:725
+msgid "J"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:727
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel row of"
+" the query point."
+msgstr "WMS 1.3.0에서 정의된 이 파라미터는 쿼리 포인트의 픽셀 행을 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:733
+msgid "Y"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:735
+msgid "Same parameter as ``J``, but defined in WMS 1.1.1."
+msgstr "``J`` 파라미터와 동일하지만, WMS 1.1.1에서 정의되었습니다."
+
+#: ../../docs/server_manual/services/wms.rst:740
+msgid "FI_POINT_TOLERANCE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:742
+msgid "This parameter specifies the tolerance in pixels for point layers."
+msgstr "이 파라미터는 포인트 레이어의 허용 오차를 픽셀 단위로 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:747
+msgid "FI_LINE_TOLERANCE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:749
+msgid "This parameter specifies the tolerance in pixels for line layers."
+msgstr "이 파라미터는 라인 레이어의 허용 오차를 픽셀 단위로 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:754
+msgid "FI_POLYGON_TOLERANCE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:756
+msgid "This parameter specifies the tolerance in pixels for polygon layers."
+msgstr "이 파라미터는 폴리곤 레이어의 허용 오차를 픽셀 단위로 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:761
+msgid "FILTER_GEOM"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:763
+msgid ""
+"This parameter specifies a WKT geometry with which features have to "
+"intersect."
+msgstr "이 파라미터는 피처가 교차해야 하는 WKT 도형을 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:769
+msgid "WITH_MAPTIP"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:771
+msgid "This parameter specifies whether to add map tips to the output."
+msgstr "이 파라미터는 출력물에 맵 도움말(map tip)을 추가할지 여부를 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:773
+#: ../../docs/server_manual/services/wms.rst:787
+#: ../../docs/server_manual/services/wms.rst:1250
+msgid "Available values are (not case sensitive):"
+msgstr "다음 값을 사용할 수 있습니다(대소문자 구분 안 함):"
+
+#: ../../docs/server_manual/services/wms.rst:781
+msgid "WITH_GEOMETRY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:783
+msgid ""
+"This parameter specifies whether to add geometries to the output. To use "
+"this feature you must first enable the :guilabel:`Add geometry to feature "
+"response` option in the QGIS project. See :ref:`Configure your project "
+"<Creatingwmsfromproject>`."
+msgstr ""
+"이 파라미터는 산출물에 도형을 추가할지 여부를 지정합니다. 이 기능을 사용하려면 먼저 QGIS 프로젝트에서 :guilabel:`Add "
+"geometry to feature response` 옵션을 활성화해야만 합니다. :ref:`사용자 프로젝트 환경 설정 "
+"<Creatingwmsfromproject>` 을 참조하세요."
+
+#: ../../docs/server_manual/services/wms.rst:797
+msgid "GetLegendGraphic"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:799
+msgid ""
+"Standard parameters for the **GetLegendGraphic** request according to the "
+"OGC WMS 1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 및 1.3.0 사양에 따른 **GetLegendGraphic** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetLegendGraphic**)"
+msgstr "요청(**GetLegendGraphic**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BBOX <wms_getlegendgraphic_bbox>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WIDTH <wms_getlegendgraphic_width>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`HEIGHT <wms_getlegendgraphic_height>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getlegendgraphic_format>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Legend format"
+msgstr "범례 서식"
+
+#: ../../docs/server_manual/services/wms.rst:818
+msgid ""
+"In addition to the standard ones, QGIS Server supports extra parameters to "
+"change the size of the legend elements or the font properties for layer "
+"titles and item labels:"
+msgstr ""
+"표준 파라미터 이외에도, QGIS 서버는 범례 요소의 크기를 변경하거나 레이어 제목 및 항목 라벨의 글꼴 속성을 변경할 수 있는 추가 "
+"파라미터를 지원합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRCWIDTH <wms_getlegendgraphic_srcwidth>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map width"
+msgstr "맵 너비"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRCHEIGHT <wms_getlegendgraphic_srcheight>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map height"
+msgstr "맵 높이"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphic_showfeaturecount>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add feature count of features"
+msgstr "피처의 개수를 표시하는 요소를 추가"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`RULE <wms_getlegendgraphic_rule>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Rule symbol to render"
+msgstr "심볼 렌더링 규칙"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`RULELABEL <wms_getlegendgraphic_rulelabel>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item labels rendering"
+msgstr "항목 라벨 렌더링 규칙"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BOXSPACE <wms_getlegendgraphic_boxspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Space between legend frame and content (mm)"
+msgstr "범례 프레임과 내용 사이의 여백 (밀리미터 단위)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERSPACE <wms_getlegendgraphic_layerspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layers (mm)"
+msgstr "레이어들 사이의 수직 간격 (밀리미터 단위)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERTITLESPACE <wms_getlegendgraphic_layertitlespace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layer title and items (mm)"
+msgstr "레이어 제목과 항목들 사이의 수직 간격 (밀리미터 단위)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLSPACE <wms_getlegendgraphic_symbolspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between symbol and items (mm)"
+msgstr "심볼과 항목들 사이의 수직 간격 (밀리미터 단위)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ICONLABELSPACE <wms_getlegendgraphic-iconlabelspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Horizontal space between symbol and label (mm)"
+msgstr "심볼과 라벨 사이의 수평 간격 (밀리미터 단위)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLWIDTH <wms_getlegendgraphic_symbolwidth>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the symbol preview (mm)"
+msgstr "심볼 미리보기의 너비 (밀리미터 단위)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLHEIGHT <wms_getlegendgraphic_symbolheight>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the symbol preview (mm)"
+msgstr "심볼 미리보기의 높이 (밀리미터 단위)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERTITLE <wms_getlegendgraphic_layertitle>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title rendering"
+msgstr "레이어 제목 렌더링 규칙"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer font family"
+msgstr "레이어 글꼴 계열"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title bold rendering"
+msgstr "레이어 제목을 굵은 글꼴로 렌더링"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTSIZE <wms_getlegendgraphic_layerfontsize>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title font size (pt)"
+msgstr "레이어 제목 글꼴 크기 (포인트 단위)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTITALIC <wms_getlegendgraphic_layerfontitalic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title italic rendering"
+msgstr "레이어 제목을 기울인 글꼴로 렌더링"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTCOLOR <wms_getlegendgraphic_layerfontcolor>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title color"
+msgstr "레이어 제목 글꼴 색상"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTFAMILY <wms_getlegendgraphic_itemfontfamily>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item font family"
+msgstr "항목 글꼴 계열"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTBOLD <wms_getlegendgraphic_itemfontbold>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label bold rendering"
+msgstr "항목 라벨을 굵은 글꼴로 렌더링"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label font size (pt)"
+msgstr "항목 라벨 글꼴 크기 (포인트 단위)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label italic rendering"
+msgstr "항목 라벨을 기울인 글꼴로 렌더링"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label color"
+msgstr "항목 라벨 글꼴 색상"
+
+#: ../../docs/server_manual/services/wms.rst:857
+msgid ""
+"This parameter can be used to specify the geographical area for which the "
+"legend should be built (its format is described :ref:`here <wms_bbox>`) but "
+"cannot be combined with the ``RULE`` parameter. The ``SRS``/``CRS`` "
+"parameter becomes mandatory when using the ``BBOX`` parameter."
+msgstr ""
+"이 파라미터를 통해 범례를 (범례 서식은 :ref:`여기 <wms_bbox>` 에서 설명하고 있습니다) 작성해야 할 지리적 영역을 지정할"
+" 수 있지만, ``RULE`` 파라미터와 함께 사용할 수는 없습니다. ``BBOX`` 파라미터를 사용하는 경우 반드시 "
+"``SRS``/``CRS`` 파라미터도 함께 설정해줘야만 합니다."
+
+#: ../../docs/server_manual/services/wms.rst:875
+msgid ""
+"When the ``BBOX`` parameter is defined, the legend is referred to as a "
+"*content based legend*."
+msgstr "``BBOX`` 파라미터를 정의한 경우, 범례를 *콘텐츠 기반 범례* 라고 부릅니다."
+
+#: ../../docs/server_manual/services/wms.rst:884
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the width in "
+"pixels of the output image."
+msgstr ""
+"이 파라미터는 기본적으로 쓰이지 않지만, ``RULE`` 파라미터를 설정한 경우 필수 파라미터가 됩니다. 이런 경우 산출 이미지의 너비를"
+" 픽셀 단위로 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:904
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the height in "
+"pixels of the output image."
+msgstr ""
+"이 파라미터는 기본적으로 쓰이지 않지만, ``RULE`` 파라미터를 설정한 경우 필수 파라미터가 됩니다. 이런 경우 산출 이미지의 높이를"
+" 픽셀 단위로 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:924
+msgid ""
+"This parameter may be used to specify the format of legend image. Available "
+"values are:"
+msgstr "이 파라미터를 통해 범례 이미지 포맷을 지정할 수도 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:931
+msgid ""
+"For JSON, symbols are encoded with Base64 and most other options related to "
+"layout or fonts are not taken into account because the legend must be built "
+"on the client side. The ``RULE`` parameter cannot be combined with this "
+"format."
+msgstr ""
+"JSON 포맷의 경우, 심볼을 Base64로 인코딩하고 조판이나 글꼴 관련 다른 옵션들은 연산에 넣지 않습니다. 범례는 클라이언트 쪽에서"
+" 작성되어야만 하기 때문입니다. JSON 포맷은 ``RULE`` 파라미터와 함께 사용할 수 없습니다."
+
+#: ../../docs/server_manual/services/wms.rst:935
+msgid "URL example with the corresponding JSON output:"
+msgstr "다음은 산출물을 JSON 포맷으로 지정한 URL 예시입니다:"
+
+#: ../../docs/server_manual/services/wms.rst:945
+msgid "And the corresponding JSON output:"
+msgstr "그리고 대응하는 JSON 산출물은 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:964
+msgid "SRCWIDTH"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:966
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this "
+"case, the ``SRCWIDTH`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``WIDTH`` parameter while the ``WIDTH`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+"``RULE`` 파라미터를 설정한 경우 이 파라미터를 정의할 수도 있습니다. 이런 경우, 기저 ``GetMap`` 요청에 "
+"``SRCWIDTH`` 값을 ``WIDTH`` 파라미터로 포워딩하고 ``GetLegendGraphic`` 요청의 ``WIDTH`` "
+"파라미터는 이미지 범례 크기에 사용합니다."
+
+#: ../../docs/server_manual/services/wms.rst:975
+msgid "SRCHEIGHT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:977
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this "
+"case, the ``SRCHEIGHT`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+"``RULE`` 파라미터를 설정한 경우 이 파라미터를 정의할 수도 있습니다. 이런 경우, 기저 ``GetMap`` 요청에 "
+"``SRCHEIGHT`` 값을 ``HEIGHT`` 파라미터로 포워딩하고 ``GetLegendGraphic`` 요청의 ``HEIGHT`` "
+"파라미터는 이미지 범례 크기에 사용합니다."
+
+#: ../../docs/server_manual/services/wms.rst:986
+msgid "SHOWFEATURECOUNT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:988
+msgid ""
+"This parameter can be used to activate feature count in the legend. "
+"Available values are (not case sensitive):"
+msgstr ""
+"이 파라미터를 통해 범례에 피처 개수를 활성화시킬 수 있습니다. 사용할 수 있는 값은 다음과 같습니다(대소문자 구분 안 함):"
+
+#: ../../docs/server_manual/services/wms.rst:994
+#: ../../docs/server_manual/services/wms.rst:1680
+msgid "For example:"
+msgstr "다음은 예시입니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1003
+msgid "RULE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1005
+msgid ""
+"This parameter is available on layers with :guilabel:`Rule-based` rendering "
+"and allows to build a legend with only the named rule symbol. It cannot be "
+"combined with ``BBOX`` parameter nor the JSON format."
+msgstr ""
+"이 파라미터를 통해 레이어 상에서 :guilabel:`Rule-based` 렌더링 작업을 할 수 있어, 지정한 규칙 심볼만 가진 범례를 "
+"작성할 수 있습니다. 이 파라미터는 ``BBOX`` 파라미터 또는 JSON 포맷과 함께 사용할 수 없습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1023
+msgid "RULELABEL"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1025
+msgid ""
+"This parameter allows to control the item label rendering. Available values "
+"are (not case sensitive):"
+msgstr "이 파라미터를 통해 항목 라벨 렌더링을 제어할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다(대소문자 구분 안 함):"
+
+#: ../../docs/server_manual/services/wms.rst:1028
+msgid "``TRUE``: display item label"
+msgstr "``TRUE``: 항목 라벨 표시"
+
+#: ../../docs/server_manual/services/wms.rst:1029
+msgid "``FALSE``: hide item label"
+msgstr "``FALSE``: 항목 라벨 숨기기"
+
+#: ../../docs/server_manual/services/wms.rst:1030
+msgid ""
+"``AUTO``: hide item label for layers with :guilabel:`Single symbol` "
+"rendering"
+msgstr "``AUTO``: :guilabel:`Single symbol` 로 렌더링된 레이어의 경우 항목 라벨 숨기기"
+
+#: ../../docs/server_manual/services/wms.rst:1049
+msgid "Legend rendering without label for single symbol layers"
+msgstr "단일 심볼 레이어의 라벨을 숨긴 범례 렌더링"
+
+#: ../../docs/server_manual/services/wms.rst:1056
+msgid "BOXSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1058
+msgid ""
+"This parameter allows to specify the space between legend frame and content "
+"in millimeters. By default, the space value is ``2`` mm."
+msgstr ""
+"이 파라미터를 통해 범례 프레임과 범례 내용 사이의 여백을 밀리미터 단위로 지정할 수 있습니다. 기본 여백값은 ``2`` 밀리미터입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1077
+msgid "To the left ``BOXSPACE=0`` and to the right ``BOXSPACE=15``"
+msgstr "왼쪽은 ``BOXSPACE=0`` 그리고 오른쪽은 ``BOXSPACE=15``"
+
+#: ../../docs/server_manual/services/wms.rst:1084
+msgid "LAYERSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1086
+msgid ""
+"This parameter allows to specify the vertical space between layers in "
+"millimeters. By default, the space value is ``3`` mm."
+msgstr "이 파라미터를 통해 레이어 사이의 수직 간격을 밀리미터 단위로 지정할 수 있습니다. 기본 여백값은 ``3`` 밀리미터입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1105
+msgid "To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``"
+msgstr "왼쪽은 ``LAYERSPACE=0`` 그리고 오른쪽은 ``LAYERSPACE=10``"
+
+#: ../../docs/server_manual/services/wms.rst:1111
+msgid "LAYERTITLESPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1113
+msgid ""
+"This parameter allows to specify the vertical space between layer title and "
+"items following in millimeters. By default the space value is ``3`` mm."
+msgstr ""
+"이 파라미터를 통해 레이어 제목과 그 아래 항목들 사이의 수직 간격을 밀리미터 단위로 지정할 수 있습니다. 기본 여백값은 ``3`` "
+"밀리미터입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1132
+msgid ""
+"To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``"
+msgstr "왼쪽은 ``LAYERTITLESPACE=0`` 그리고 오른쪽은 ``LAYERTITLESPACE=10``"
+
+#: ../../docs/server_manual/services/wms.rst:1138
+msgid "SYMBOLSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1140
+msgid ""
+"This parameter allows to specify the vertical space between symbol and item "
+"following in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+"이 파라미터를 통해 심볼과 그 아래 항목 사이의 수직 간격을 밀리미터 단위로 지정할 수 있습니다. 기본 여백값은 ``2`` "
+"밀리미터입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1159
+msgid "To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``"
+msgstr "왼쪽은 ``SYMBOLSPACE=0`` 그리고 오른쪽은 ``SYMBOLSPACE=5``"
+
+#: ../../docs/server_manual/services/wms.rst:1165
+msgid "ICONLABELSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1167
+msgid ""
+"This parameter allows to specify the horizontal space between symbol and "
+"label text in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+"이 파라미터를 통해 심볼과 라벨 텍스트 사이의 수평 간격을 밀리미터 단위로 지정할 수 있습니다. 기본 여백값은 ``2`` 밀리미터입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1186
+msgid ""
+"To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``"
+msgstr "왼쪽은 ``ICONLABELSPACE=0`` 그리고 오른쪽은 ``ICONLABELSPACE=10``"
+
+#: ../../docs/server_manual/services/wms.rst:1192
+msgid "SYMBOLWIDTH"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1194
+msgid ""
+"This parameter allows to specify the width of the symbol preview in "
+"millimeters. By default the width value is ``7`` mm."
+msgstr "이 파라미터를 통해 심볼 미리보기의 너비를 밀리미터 단위로 지정할 수 있습니다. 기본 여백값은 ``7`` 밀리미터입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1213
+msgid "To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``"
+msgstr "왼쪽은 ``SYMBOLWIDTH=2`` 그리고 오른쪽은 ``SYMBOLWIDTH=20``"
+
+#: ../../docs/server_manual/services/wms.rst:1219
+msgid "SYMBOLHEIGHT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1221
+msgid ""
+"This parameter allows to specify the height of the symbol preview in "
+"millimeters. By default the height value is ``4`` mm."
+msgstr "이 파라미터를 통해 심볼 미리보기의 높이를 밀리미터 단위로 지정할 수 있습니다. 기본 여백값은 ``4`` 밀리미터입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1240
+msgid "To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``"
+msgstr "왼쪽은 ``SYMBOLHEIGHT=2`` 그리고 오른쪽은 ``SYMBOLHEIGHT=6``"
+
+#: ../../docs/server_manual/services/wms.rst:1246
+msgid "LAYERTITLE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1248
+msgid "This parameter specifies whether to render layer title."
+msgstr "이 파라미터는 레이어 제목을 렌더링할지 여부를 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1252
+msgid "``TRUE`` (default value)"
+msgstr "``TRUE`` (기본값)"
+
+#: ../../docs/server_manual/services/wms.rst:1259
+msgid "LAYERFONTFAMILY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1261
+msgid ""
+"This parameter specifies the font family to use for rendering layer title."
+msgstr "이 파라미터는 레이어 제목을 렌더링할 글꼴 계열을 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1275
+msgid "LAYERFONTBOLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1277
+msgid ""
+"This parameter specifies whether the layer title is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+"이 파라미터는 레이어 제목을 굵은 글꼴로 렌더링할지 여부를 지정합니다. 사용할 수 있는 값은 다음과 같습니다(대소문자 구분 안 함):"
+
+#: ../../docs/server_manual/services/wms.rst:1299
+msgid "Legend with ``LAYERFONTBOLD=TRUE``"
+msgstr "``LAYERFONTBOLD=TRUE`` 로 렌더링한 범례"
+
+#: ../../docs/server_manual/services/wms.rst:1305
+msgid "LAYERFONTSIZE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1307
+#: ../../docs/server_manual/services/wms.rst:1437
+msgid ""
+"This parameter specifies the font size for rendering layer title in point."
+msgstr "이 파라미터는 레이어 제목을 렌더링할 글꼴 크기를 포인트 단위로 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1325
+msgid "Legend with ``LAYERFONTSIZE=20``"
+msgstr "``LAYERFONTSIZE=20`` 으로 렌더링한 범례"
+
+#: ../../docs/server_manual/services/wms.rst:1331
+msgid "LAYERFONTITALIC"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1333
+msgid ""
+"This parameter specifies whether the layer title is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+"이 파라미터는 레이어 제목을 기울인 글꼴로 렌더링할지 여부를 지정합니다. 사용할 수 있는 값은 다음과 같습니다(대소문자 구분 안 함):"
+
+#: ../../docs/server_manual/services/wms.rst:1355
+msgid "Legend with ``LAYERFONTITALIC=TRUE``"
+msgstr "``LAYERFONTITALIC=TRUE`` 로 렌더링한 범례"
+
+#: ../../docs/server_manual/services/wms.rst:1361
+msgid "LAYERFONTCOLOR"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1363
+msgid ""
+"This parameter specifies the layer title color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"이 파라미터는 레이어 제목 글꼴 색상을 지정합니다. 색상을 지원하는 색상 이름으로 (``red``, ``green``, ...) 지정할 "
+"수도 있고, 16진법 표기법으로 (``0xFF0000``, ``0x00FF00``, ...) 지정할 수도 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1383
+msgid "Legend with ``LAYERFONTCOLOR=0x5f9930``"
+msgstr "``LAYERFONTCOLOR=0x5f9930`` 으로 렌더링한 범례"
+
+#: ../../docs/server_manual/services/wms.rst:1389
+msgid "ITEMFONTFAMILY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1391
+msgid ""
+"This parameter specifies the font family to use for rendering item label."
+msgstr "이 파라미터는 항목 라벨을 렌더링할 글꼴 계열을 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1405
+msgid "ITEMFONTBOLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1407
+msgid ""
+"This parameter specifies whether the item label is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+"이 파라미터는 항목 라벨을 굵은 글꼴로 렌더링할지 여부를 지정합니다. 사용할 수 있는 값은 다음과 같습니다(대소문자 구분 안 함):"
+
+#: ../../docs/server_manual/services/wms.rst:1429
+msgid "Legend with ``ITEMFONTBOLD=TRUE``"
+msgstr "``ITEMFONTBOLD=TRUE`` 로 렌더링한 범례"
+
+#: ../../docs/server_manual/services/wms.rst:1435
+msgid "ITEMFONTSIZE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1455
+msgid "Legend with ``ITEMFONTSIZE=30``"
+msgstr "``ITEMFONTSIZE=30`` 으로 렌더링한 범례"
+
+#: ../../docs/server_manual/services/wms.rst:1461
+msgid "ITEMFONTITALIC"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1463
+msgid ""
+"This parameter specifies whether the item label is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+"이 파라미터는 항목 라벨을 기울인 글꼴로 렌더링할지 여부를 지정합니다. 사용할 수 있는 값은 다음과 같습니다(대소문자 구분 안 함):"
+
+#: ../../docs/server_manual/services/wms.rst:1485
+msgid "Legend with ``ITEMFONTITALIC=TRUE``"
+msgstr "``ITEMFONTITALIC=TRUE`` 로 렌더링한 범례"
+
+#: ../../docs/server_manual/services/wms.rst:1491
+msgid "ITEMFONTCOLOR"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1493
+msgid ""
+"This parameter specifies the item label color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"이 파라미터는 항목 라벨 글꼴 색상을 지정합니다. 색상을 지원하는 색상 이름으로 (``red``, ``green``, ...) 지정할 "
+"수도 있고, 16진법 표기법으로 (``0xFF0000``, ``0x00FF00``, ...) 지정할 수도 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1513
+msgid "Legend with ``ITEMFONTCOLOR=0x5f9930``"
+msgstr "``ITEMFONTCOLOR=0x5f9930`` 으로 렌더링한 범례"
+
+#: ../../docs/server_manual/services/wms.rst:1519
+msgid "GetStyle(s)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1521
+msgid ""
+"Standard parameters for the **GetStyle** (or **GetStyles**) request "
+"according to the OGC WMS 1.1.1 specifications:"
+msgstr "OGC WMS 1.1.1 사양에 따른 **GetStyle** (또는 **GetStyles**) 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetStyle** or **GetStyles**)"
+msgstr "요청(**GetStyle** 또는 **GetStyles**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1532
+msgid ""
+"The **GetStyle** request supports as well the following vendor parameters:"
+msgstr "**GetStyle** 요청은 다음 상용 소프트웨어의 파라미터도 지원합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1553
+msgid "DescribeLayer"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1555
+msgid ""
+"Standard parameters for the **DescribeLayer** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 및 1.3.0 사양에 따른 **DescribeLayer** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**DescribeLayer**)"
+msgstr "요청(**DescribeLayer**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to describe"
+msgstr "설명할 레이어"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD version"
+msgstr "SLD 버전"
+
+#: ../../docs/server_manual/services/wms.rst:1567
+msgid ""
+"The **DescribeLayer** request supports as well the following vendor "
+"parameters:"
+msgstr "**DescribeLayer** 요청은 다음 상용 소프트웨어의 파라미터도 지원합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1586
+#: ../../docs/server_manual/services/wms.rst:1852
+msgid "The XML document looks like:"
+msgstr "XML 문서의 예시:"
+
+#: ../../docs/server_manual/services/wms.rst:1612
+msgid "SLD_VERSION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1614
+msgid ""
+"This parameter allows to specify the version of SLD. Only the value "
+"``1.1.0`` is available."
+msgstr "이 파라미터를 통해 SLD의 버전을 지정할 수 있습니다. ``1.1.0`` 값만 사용할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1621
+msgid "GetPrint"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1623
+msgid ""
+"QGIS Server has the capability to create print layout output in pdf or pixel"
+" format. Print layout windows in the published project are used as "
+"templates. In the **GetPrint** request, the client has the possibility to "
+"specify parameters of the contained layout maps and labels."
+msgstr ""
+"QGIS 서버는 인쇄 조판 출력물을 PDF 또는 픽셀 포맷으로 생성할 수 있습니다. 게시된 프로젝트에 있는 인쇄 조판기 창을 템플릿으로 "
+"사용합니다. 클라이언트는 **GetPrint** 요청 안에 템플릿이 담고 있는 조판 맵 및 라벨의 파라미터를 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1628
+msgid ""
+"The **GetPrint** request supports :ref:`redlining <wms_redlining>`, "
+":ref:`external WMS layers <wms_external>` as well as the following "
+"parameters:"
+msgstr ""
+"**GetPrint** 요청은 :ref:`레드라이닝 <wms_redlining>`, :ref:`외부 WMS 레이어 "
+"<wms_external>` 는 물론 다음 파라미터도 지원합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetPrint**)"
+msgstr "요청(**GetPrint**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`TEMPLATE <wms_template>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layout template to use"
+msgstr "사용할 레이어 템플릿"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getprint_format>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ATLAS_PK <wms_atlaspk>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Atlas features"
+msgstr "지도책 피처"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:EXTENT <wms_mapextent>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Extent of the map 'X'"
+msgstr "맵 'X' 의 범위"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:LAYERS <wms_maplayers>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers of the map 'X'"
+msgstr "맵 'X' 의 레이어"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:STYLES <wms_mapstyles>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style of the map 'X'"
+msgstr "맵 'X' 의 레이어의 스타일"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:SCALE <wms_mapscale>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' scale of the map 'X'"
+msgstr "맵 'X' 의 레이어의 축척"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:ROTATION <wms_maprotation>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Rotation  of the map 'X'"
+msgstr "맵 'X' 의 기울기"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on x axis of the map 'X'"
+msgstr "맵 'X' 의 X축 그리드 간격"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on y axis of the map 'X'"
+msgstr "맵 'X' 의 Y축 그리드 간격"
+
+#: ../../docs/server_manual/services/wms.rst:1675
+msgid ""
+"Note that the layout template may contain more than one map. In this way, if"
+" you want to configure a specific map, you have to use ``mapX:`` parameters "
+"where ``X`` is a positive number that you can retrieve thanks to the "
+"**GetProjectSettings** request."
+msgstr ""
+"조판 템플릿이 맵을 하나 이상 담고 있을 수도 있다는 사실을 기억하십시오. 이런 맥락에서, 사용자가 특정 맵을 환경 설정하려는 경우 "
+"``mapX:`` 파라미터를 사용해야 합니다. 이때 ``X`` 는 **GetProjectSettings** 요청 시 받아올 수 있는 "
+"양수(陽數)입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1698
+msgid "TEMPLATE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1700
+msgid ""
+"This parameter can be used to specify the name of a layout template to use "
+"for printing."
+msgstr "이 파라미터는 인쇄용으로 사용할 조판 템플릿의 이름을 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1708
+msgid ""
+"This parameter specifies the format of map image. Available values are:"
+msgstr "이 파라미터는 맵 이미지의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1710
+msgid "``png`` (default value)"
+msgstr "``png`` (기본값)"
+
+#: ../../docs/server_manual/services/wms.rst:1715
+msgid "``svg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1716
+msgid "``image/svg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1717
+msgid "``image/svg+xml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1718
+msgid "``pdf``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1719
+msgid "``application/pdf``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1721
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then an "
+"exception is returned."
+msgstr "``FORMAT`` 파라미터가 이 값들 가운데 하나가 아닐 경우, 예외를 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1727
+msgid "ATLAS_PK"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1729
+msgid ""
+"This parameter allows activation of Atlas rendering by indicating which "
+"features we want to print. In order to retrieve an atlas with all features, "
+"the ``*`` symbol may be used (according to the maximum number of features "
+"allowed in the project configuration)."
+msgstr ""
+"이 파라미터는 인쇄하려는 피처를 지정해서 지도책 렌더링을 활성화할 수 있습니다. (프로젝트 환경 설정에서 설정한 피처 최대 개수에 따라)"
+" 모든 피처를 담은 지도책을 받아오려면, ``*`` 특수문자를 사용하면 됩니다."
+
+#: ../../docs/server_manual/services/wms.rst:1735
+msgid ""
+"When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
+"pages is returned. For all other formats, a single page is returned."
+msgstr ""
+"``FORMAT`` 파라미터가 ``pdf`` 인 경우, 모든 피처 페이지를 결합한 PDF 문서 파일 1개를 반환합니다. 다른 모든 포맷의"
+" 경우, 단일 페이지를 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1742
+msgid "mapX:EXTENT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1744
+msgid ""
+"This parameter specifies the extent for a layout map item as "
+"xmin,ymin,xmax,ymax."
+msgstr "이 파라미터는 조판 맵 항목의 범위를 ``xmin,ymin,xmax,ymax`` 서식으로 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1750
+msgid "mapX:ROTATION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1752
+msgid "This parameter specifies the map rotation in degrees."
+msgstr "이 파라미터는 맵의 기울기를 도 단위로 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1757
+msgid "mapX:GRID_INTERVAL_X"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1759
+msgid "This parameter specifies the grid line density in the X direction."
+msgstr "이 파라미터는 X축 방향의 그리드선 밀도를 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1764
+msgid "mapX:GRID_INTERVAL_Y"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1766
+msgid "This parameter specifies the grid line density in the Y direction."
+msgstr "이 파라미터는 Y축 방향의 그리드선 밀도를 지정합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1771
+msgid "mapX:SCALE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1773
+msgid ""
+"This parameter specifies the map scale for a layout map item. This is useful"
+" to ensure scale based visibility of layers and labels even if client and "
+"server may have different algorithms to calculate the scale denominator."
+msgstr ""
+"이 파라미터는 조판 맵 항목의 맵 축척을 지정합니다. 클라이언트 및 서버가 축척 분모를 계산할 때 서로 다른 알고리즘을 사용하는 "
+"경우라도, 레이어와 라벨의 축척 기반 가시성을 보장하는 데 유용합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1781
+msgid "mapX:LAYERS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1783
+msgid ""
+"This parameter specifies the layers for a layout map item. See :ref:`GetMap "
+"Layers <wms_layers>` for more information on this parameter."
+msgstr ""
+"이 파라미터는 조판기 맵 항목의 레이어를 지정합니다. 이 파라미터에 대해 더 자세한 정보를 알고 싶다면 :ref:`GetMap 레이어 "
+"<wms_layers>` 를 참조하세요."
+
+#: ../../docs/server_manual/services/wms.rst:1790
+msgid "mapX:STYLES"
+msgstr "mapX:STYLES"
+
+#: ../../docs/server_manual/services/wms.rst:1792
+msgid ""
+"This parameter specifies the layers' styles defined in a specific layout map"
+" item. See :ref:`GetMap Styles <wms_styles>` for more information on this "
+"parameter."
+msgstr ""
+"이 파라미터는 특정 조판기 맵 항목에 정의된 레이어 스타일을 지정합니다. 이 파라미터에 대해 더 자세한 정보를 알고 싶다면 "
+":ref:`GetMap 스타일 <wms_styles>` 을 참조하세요."
+
+#: ../../docs/server_manual/services/wms.rst:1801
+msgid "GetProjectSettings"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1803
+msgid ""
+"This request type works similar to :ref:`GetCapabilities "
+"<wms_getcapabilities>`, but it is more specific to QGIS Server and allows a "
+"client to read additional information which are not available in the "
+":ref:`GetCapabilities <wms_getcapabilities>` output:"
+msgstr ""
+"이 요청 유형은 :ref:`GetCapabilities <wms_getcapabilities>` 와 비슷하게 작동하지만 좀 더 QGIS "
+"서버에 특화되어 있고, 클라이언트가 :ref:`GetCapabilities <wms_getcapabilities>` 산출물에는 없는 추가"
+" 정보를 읽어올 수 있게 해줍니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1808
+msgid "initial visibility of layers"
+msgstr "레이어의 초기 가시성"
+
+#: ../../docs/server_manual/services/wms.rst:1809
+msgid "information about vector attributes and their edit types"
+msgstr "벡터 속성 및 속성 편집 유형 관련 정보"
+
+#: ../../docs/server_manual/services/wms.rst:1810
+msgid "information about layer order and drawing order"
+msgstr "레이어 순서 및 렌더링 순서 관련 정보"
+
+#: ../../docs/server_manual/services/wms.rst:1811
+msgid "list of layers published in WFS"
+msgstr "WFS에 게시된 레이어 목록"
+
+#: ../../docs/server_manual/services/wms.rst:1812
+msgid ""
+"show if a group in the layer tree is :ref:`mutually exclusive "
+"<group_layers_interact>`"
+msgstr "레이어 트리에 있는 그룹이 :ref:`상호 배타적 <group_layers_interact>` 인 경우 표시합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1814
+msgid "The **GetProjectSettings** request supports the following parameters:"
+msgstr "**GetProjectSettings** 요청은 다음 파라미터를 지원합니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetProjectSettings**)"
+msgstr "요청(**GetProjectSettings**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1828
+msgid "GetSchemaExtension"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1830
+msgid ""
+"The **GetSchemaExtension** request allows to retrieve optional extended "
+"capabilities and operations of the WMS service such as implemented by QGIS "
+"Server."
+msgstr ""
+"**GetSchemaExtension** 요청을 통해 QGIS 서버가 구현한 것과 같은 WMS 서비스의 부가적으로 확장된 케이퍼빌리티 및"
+" 작업 내용을 검색할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetSchemaExtension**)"
+msgstr "요청(**GetSchemaExtension**)의 이름"
+
+#: ../../docs/server_manual/services/wms.rst:1866
+msgid "External WMS layers"
+msgstr "외부 WMS 레이어"
+
+#: ../../docs/server_manual/services/wms.rst:1868
+msgid ""
+"QGIS Server allows including layers from external WMS servers in WMS "
+":ref:`GetMap <wms_getmap>` and WMS :ref:`GetPrint <wms_getprint>` requests. "
+"This is especially useful if a web client uses an external background layer "
+"in the web map. For performance reasons, such layers should be directly "
+"requested by the web client (not cascaded via QGIS server). For printing "
+"however, these layers should be cascaded via QGIS server in order to appear "
+"in the printed map."
+msgstr ""
+"QGIS 서버는 WMS :ref:`GetMap <wms_getmap>` 및 WMS :ref:`GetPrint <wms_getprint>`"
+" 요청에 외부 WMS 서버의 레이어를 포함시킬 수 있습니다. 웹 클라이언트가 웹 지도에 외부 배경 레이어를 사용하는 경우 특히 유용한 "
+"기능입니다. 성능 상의 이유로, 웹 클라이언트가 이런 외부 레이어를 (QGIS 서버를 경유하는 것이 아니라) 직접 요청해야 합니다. "
+"하지만 인쇄 작업의 경우, 지도에 이런 외부 레이어를 인쇄하려면 QGIS 서버를 통해 외부 레이어를 경유시켜야 합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1876
+msgid ""
+"External layers can be added to the LAYERS parameter as "
+"EXTERNAL_WMS:<layername>. The parameters for the external WMS layers (e.g. "
+"url, format, dpiMode, crs, layers, styles) can later be given as service "
+"parameters <layername>:<parameter>. In a :ref:`GetMap <wms_getmap>` request,"
+" this might look like this:"
+msgstr ""
+"``LAYERS`` 파라미터에 외부 레이어를 ``EXTERNAL_WMS:<layername>`` 으로 추가할 수 있습니다. 외부 WMS "
+"레이어의 파라미터는 (예: URL, 포맷, dpiMode, 좌표계, 레이어, 스타일) 나중에 "
+"``<layername>:<parameter>`` 서식의 서비스 파라미터로 지정할 수 있습니다. :ref:`GetMap "
+"<wms_getmap>` 요청에서 이런 서비스 파라미터는 다음과 같이 보일 것입니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1898
+msgid ""
+"Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>` "
+"requests:"
+msgstr ":ref:`GetPrint <wms_getprint>` 요청에서도 외부 레이어를 비슷하게 사용할 수 있습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1921
+msgid "Redlining"
+msgstr "레드라이닝(redlining)"
+
+#: ../../docs/server_manual/services/wms.rst:1923
+msgid ""
+"This feature is available and can be used with :ref:`GetMap <wms_getmap>` "
+"and :ref:`GetPrint <wms_getprint>` requests."
+msgstr ""
+"이 기능은 :ref:`GetMap <wms_getmap>` 및 :ref:`GetPrint <wms_getprint>` 요청과 함께 사용할"
+" 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1926
+msgid ""
+"The redlining feature can be used to pass geometries and labels in the "
+"request which are overlapped by the server over the standard returned image "
+"(map). This permits the user to put emphasis or maybe add some comments "
+"(labels) to some areas, locations etc. that are not in the standard map."
+msgstr ""
+"요청 안에 있는, 서버가 반환한 표준 이미지(맵) 위에 중첩되는 도형 및 라벨을 전송하는 데 이 ``REDLINING`` 기능을 사용할 "
+"수 있습니다. 이 기능은 사용자가 표준 맵에는 없는 일부 지역 또는 위치 등을 강조하거나 또는 그런 곳에 주석(라벨)을 달 수 있도록 "
+"해줍니다."
+
+#: ../../docs/server_manual/services/wms.rst:1931
+msgid "The :ref:`GetMap <wms_getmap>` request is in the format:"
+msgstr "다음 서식은 :ref:`GetMap <wms_getmap>` 요청입니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1948
+msgid ""
+"The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that "
+"``mapX:`` parameter is added to tell which map has redlining):"
+msgstr ""
+"다음 서식은 :ref:`GetPrint <wms_getprint>` 요청입니다. (``mapX:`` 파라미터는 어떤 맵에 레드라이닝할지 "
+"지정하기 위해 추가되었다는 사실을 기억하십시오):"
+
+#: ../../docs/server_manual/services/wms.rst:1965
+msgid ""
+"Here is the image outputed by the above request in which a polygon and a "
+"label are drawn on top of the normal map:"
+msgstr "다음 그림은 앞의 요청을 통해 일반 맵 위에 폴리곤 및 라벨을 렌더링한 출력물을 보여줍니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1973
+msgid "Server response to a GetMap request with redlining parameters"
+msgstr "REDLINING 파라미터를 보유한 GetMap 요청에 대한 서버의 응답"
+
+#: ../../docs/server_manual/services/wms.rst:1975
+msgid ""
+"You can see there are several parameters in this request to control the "
+"redlining feature. The full list includes:"
+msgstr ""
+"이 요청에 레드라이닝 피처를 제어하기 위한 몇몇 파라미터가 존재한다는 사실을 알 수 있습니다. 이런 파라미터의 전체 목록은 다음과 "
+"같습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1978
+msgid ""
+"**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
+"supports multipart geometries. Here is an example: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. The coordinates should "
+"be in the CRS of the GetMap/GetPrint request."
+msgstr ""
+"**HIGHLIGHT_GEOM**: 포인트, 멀티라인스트링, 폴리곤 등을 추가할 수 있습니다. 다중 부분 도형도 지원합니다. 이 "
+"파라미터는 ``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))`` 과 같이 사용할 수 있습니다. "
+"사용 좌표는 ``GetMap`` / ``GetPrint`` 요청의 좌표계의 좌표여야 합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1982
+msgid ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
+"color."
+msgstr "**HIGHLIGHT_LABELBUFFERCOLOR**: 이 파라미터는 라벨 버퍼의 색상을 제어합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1984
+msgid ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
+"size."
+msgstr "**HIGHLIGHT_LABELBUFFERSIZE**: 이 파라미터는 라벨 버퍼의 크기를 제어합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1986
+msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
+msgstr "**HIGHLIGHT_LABELCOLOR**: 이 파라미터는 라벨의 색상을 제어합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1987
+msgid ""
+"**HIGHLIGHT_LABEL_DISTANCE**: controls the distance between feature (e.g. "
+"point or line) and the label in mm"
+msgstr ""
+"**HIGHLIGHT_LABEL_DISTANCE**: (포인트 또는 라인 같은) 피처와 라벨 사이의 거리를 밀리미터 단위로 제어합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1989
+msgid ""
+"**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label (e.g."
+" Arial)"
+msgstr "**HIGHLIGHT_LABELFONT**: 이 파라미터는 라벨의 글꼴(예: Arial)을 제어합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1991
+msgid ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally on a"
+" point using the specified alignment (e.g. 'left', 'center', 'right')"
+msgstr ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: 지정한 정렬을 (예: '왼쪽', '가운데', '오른쪽') "
+"이용해서 포인트 위에 라벨을 수평으로 배치합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1993
+msgid "**HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees"
+msgstr "**HIGHLIGHT_LABEL_ROTATION**: 라벨의 기울기를 도 단위로 제어합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1994
+msgid ""
+"**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
+msgstr "**HIGHLIGHT_LABELSIZE**: 이 파라미터는 라벨의 크기를 제어합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1996
+msgid ""
+"**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
+"parameter."
+msgstr "**HIGHLIGHT_LABELSTRING**: 이 파라미터를 통해 사용자의 라벨 텍스트를 넘겨줄 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1998
+msgid ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: places the label vertically on a "
+"point using the specified alignment (e.g. 'top', 'half', 'bottom')"
+msgstr ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: 지정한 정렬을 (예: '위로', '가운데', '아래로') 이용해서"
+" 포인트 위에 라벨을 수직으로 배치합니다."
+
+#: ../../docs/server_manual/services/wms.rst:2000
+msgid ""
+"**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
+" change the stroke width, color and opacity."
+msgstr ""
+"**HIGHLIGHT_SYMBOL**: 이 파라미터는 도형의 외곽선을 어떻게 렌더링할지 제어하며, 사용자가 획의 너비, 색상 및 "
+"불투명도를 변경할 수 있습니다."

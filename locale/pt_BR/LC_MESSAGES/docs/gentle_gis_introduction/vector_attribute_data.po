@@ -1,0 +1,925 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Gabriela Piedade, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Gabriela Piedade, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:5
+msgid "Vector Attribute Data"
+msgstr "Dado de Atributo Vetorial"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
+msgid "|gentleLogo|"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:515
+msgid "gentleLogo"
+msgstr "gentleLogo"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
+msgid "Objectives:"
+msgstr "Objetivos:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
+msgid ""
+"In this topic we describe how attribute data are associated with vector "
+"features and can be used to symbolise data."
+msgstr ""
+"Neste tópico iremos descrever como dados de atributos são associados a "
+"feições vetoriais e podem ser utilizados para simbolizar dados."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:10
+msgid "Keywords:"
+msgstr "Palavras chave:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:10
+msgid "Attribute, database, fields, data, vector, symbology"
+msgstr "Atributo, base de dados, campo, dado, vetor, simbologia"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:14
+msgid "Overview"
+msgstr "Visão geral"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:26
+msgid ""
+"Maps come to life when colour and different symbols are used to help you to "
+"tell one type of feature from the next. Can you tell the difference between "
+"rivers, roads and contours using the map on the left? Using the map on the "
+"right it is much easier to see the different features."
+msgstr ""
+"Mapas ganham vida quando diferentes cores e símbolos são usando para ajudar "
+"a informar a que tipo de feição se refere. Você pode informar diferenças "
+"entre rios, estradas e contornos usando o mapa à esquerda? Usando o mapa à "
+"direita é muito mais fácil identificar diferentes feições."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:42
+msgid ""
+"Every feature has characteristics that we can describe. These can be visible"
+" things, or things we know about the feature (e.g. year built)."
+msgstr ""
+"Toda feição tem características que nós podemos descrever. Estas podem ser "
+"aparentes ou coisas que nós conhecemos a respeito da feição (por exemplo o "
+"ano de construção);"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:58
+msgid ""
+"A houses layer. House features have attributes that describe the houses’ "
+"roof colour and other properties. The attribute table (lower image) lists "
+"the attributes for the house areas shown on the map. When a feature is "
+"highlighted in the table, it will appear as a yellow polygon on the map."
+msgstr ""
+"A camada casas. A feição casa tem atributos que descrevem a cor do telhado "
+"da casa e outras propriedades. A tabela de atributos (imagem abaixo) lista "
+"os atributos de área da casa mostrados sobre o mapa. Quando um feição está "
+"destacada na tabela, esta vai aparecer como um polígono amarelo no mapa."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:75
+msgid ""
+"In a GIS Application, we can draw features differently depending on their "
+"attributes. On the left we have drawn house polygons with the same colour as"
+" the roof attribute. On the right we colour coded houses according to "
+"whether they have a balcony or not."
+msgstr ""
+"Numa aplicação SIG, nós podemos desenhar feições diferentemente dependendo "
+"do seus atributos. À esquerda nós temos o desenho dos polígonos com a mesma "
+"cor do atributo telhado. À direita nós codificamos as cores de acordo com o "
+"se existe ou não varanda. "
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:80
+msgid ""
+"Attribute data can also be useful when creating **map labels**. Most GIS "
+"Applications will have a facility to select an attribute that should be used"
+" to label each feature."
+msgstr ""
+"Dados de atributos também são úteis na crianção de **rótulos de mapas**. A "
+"maioria das aplicações SIG facilitam a seleção de um atributo que será usado"
+" como rótulo em cada feição."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:95
+msgid ""
+"In a GIS Application, we can also search for features based on their "
+"attributes. Here we see a search for houses with black roofs. Results are "
+"shown in yellow in the map, turquoise on the table."
+msgstr ""
+"Em um aplicativo SIG, nós podemos também procurar por feições baseadas em "
+"seus atributos. Aqui nos vemos a busca por casa com telhados negros. "
+"Resultados são mostrados em amarelo no mapa, e turquesa na tabela."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:99
+msgid ""
+"Finally, attribute data can be very useful in carrying out **spatial "
+"analysis**. Spatial analysis combines the spatial information stored in the "
+"geometry of features with their attribute information. This allows us to "
+"study features and how they relate to each other. There are many types of "
+"spatial analysis that can be carried out, for example, you could use GIS to "
+"find out how many red roofed houses occur in a particular area. If you have "
+"tree features, you could use GIS to try to find out which species might be "
+"affected if a piece of land is developed. We can use the attributes stored "
+"for water samples along a river course to understand where pollution is "
+"entering into the stream. The possibilities are endless! In a later topic we"
+" will be exploring spatial analysis in more detail."
+msgstr ""
+"Por fim, dados de atributos podem ser muito úteis na realização de "
+"**análises espaciais**. Análises espaciais combinam informação espacial "
+"armazenada na geometria da feição com as informações de atributos. Isso "
+"permite-nos estudar o relacionamento entre feições. Há muitos tipos de "
+"análises espaciais que podem ser realizadas, por exemplo, nós podemos usar o"
+" SIG para descobrir quantas casas de telhado vermelho existem em uma "
+"determinada área. Se você tem feições de árvores, você pode usar o SIG para "
+"tentar identificar quais espécimes serão afetadas pelo desenvolvimento "
+"urbano. Nós podemos usar atributos de amostras d'água armazenadas ao longo "
+"do curso de um rio para entender onde a poluição este entrando na corrente. "
+"As possibilidades são infinitas! Em um tópico posterior nos vamos explorar "
+"as análises espaciais mais detalhadamente."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:110
+msgid ""
+"Before we move on to attribute data in more detail, let's take a quick "
+"recap."
+msgstr ""
+"Antes de seguirmos no detalhamento dos dados de atributos, vamos a uma "
+"rápida recapitulação."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:123
+msgid "Vector features at a glance."
+msgstr "Feições vetoriais em foco."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:126
+msgid "Attributes in detail"
+msgstr "Atributos em detalhe"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:128
+msgid ""
+"Attributes for a vector feature are stored in a **table**. A table is like a"
+" spreadsheet. Each column in the table is called a **field**. Each row in "
+"the table is a **record**. Table table_house_attributes_ shows a simple "
+"example of how an attribute table looks in a GIS. The records in the "
+"attribute table in a GIS each correspond to one feature. Usually the "
+"information in the attribute table is stored in some kind of database. The "
+"GIS application links the attribute records with the feature geometry so "
+"that you can find records in the table by selecting features on the map, and"
+" find features on the map by selecting features in the table."
+msgstr ""
+"Atributos para feições vetoriais são armazenados em uma **tabela**. A tabela"
+" é como uma planilha. Cada coluna na tabela é chamada **campo**. Cada linha "
+"na tabela é chamado **registro**. Tabela table_house_attributes_ mostra um "
+"exemplo simples de como um atributo  aparece numa tabela em uma SIG. Um "
+"registro em uma tabela de atributos em um SIG corresponde a uma feição. "
+"Normalmente as informações das tabelas de atributos são armazenadas em algum"
+" tipo de banco de dados. A aplicação SIG vincula este registro de atributo "
+"com a feição geométrica, então você pode encontrar registros na tabela pela "
+"seleção de feições no mapa, e encontrar feições no mapa pela seleção de "
+"registros na tabela."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Attribute Table"
+msgstr "Tabela de atributos"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Field 1 : YearBuilt"
+msgstr "Campo 1: AnoConstrucao"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Field 2: RoofColour"
+msgstr "Campo 2: ColorTelhado"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Field 3: Balcony"
+msgstr "Campo 3: Varanda"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
+msgid "Record 1"
+msgstr "Registro 1"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
+msgid "1998"
+msgstr "1998"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
+msgid "Red"
+msgstr "Vermelho"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:147
+msgid "Yes"
+msgstr "Sim"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:145
+msgid "Record 2"
+msgstr "Registro 2"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:145
+msgid "2000"
+msgstr "2000"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:145
+msgid "Black"
+msgstr "Negro"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:145
+msgid "No"
+msgstr "Não"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:147
+msgid "Record 3"
+msgstr "Registro3"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:147
+msgid "2001"
+msgstr "2001"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:147
+msgid "Silver"
+msgstr "Prata"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:150
+msgid ""
+"Table House Attributes: An attribute table has fields (columns) and records "
+"(in rows)."
+msgstr ""
+"Atributos da Tabela Casa: Uma tabela de atributos tem campos (colunas) e "
+"registros (em linhas)."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:153
+msgid ""
+"Each field in the attribute table contains a specific type of data –-- text,"
+" numeric or date. Deciding what attributes to use for a feature requires "
+"some thought and planning. In our house example earlier on in this topic, we"
+" chose roof colour, presence of a balcony and month of construction as "
+"attributes of interest. We could just as easily have chosen other aspects of"
+" a house such as:"
+msgstr ""
+"Cada campo na tabela de atributos contém um tipo específico de dados --- "
+"texto, numérico ou data. Decidir quais atributos usar para uma "
+"característica requer alguma reflexão e planejamento. Em nosso exemplo de "
+"casa anterior neste tópico, escolhemos a cor do telhado, a presença de uma "
+"varanda e o mês de construção como atributos de interesse. Poderíamos ter "
+"escolhido com a mesma facilidade outros aspectos de uma casa, como por "
+"exemplo:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:159
+msgid "number of levels"
+msgstr "Número de andares"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:160
+msgid "number of rooms"
+msgstr "Número de salas"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:161
+msgid "number of occupants"
+msgstr "Número de moradores"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:162
+msgid "type of dwelling (RDP House, block of flats, shack, brick house, etc)"
+msgstr ""
+"Tipo de habitação (bloco de apartamentos, barracas, casa de  alvenaria, etc)"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:163
+msgid "year the house was built"
+msgstr "Ano de construção da casa"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:164
+msgid "area of floor space in the house"
+msgstr "Área espacial do piso da casa"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:165
+msgid "and so on...."
+msgstr "E assim por diante..."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:167
+msgid ""
+"With so many options, how do we make a good choice as to what attributes are"
+" needed for a feature? It usually boils down to what you plan to do with the"
+" data. If you want to produce a colour coded map showing houses by age, it "
+"will make sense to have a 'Year Built' attribute for your feature. If you "
+"know for sure you will never use this type of map, it is better to not store"
+" the information. Collecting and storing unneeded information is a bad idea "
+"because of the cost and time required to research and capture the "
+"information. Very often we obtain vector data from companies, friends or the"
+" government. In these cases it is usually not possible to request specific "
+"attributes and we have to make do with what we get."
+msgstr ""
+"Com tantas opções, como poderíamos fazer boas escolhas como quais atributos "
+"nossa feição precisará? Isso geralmente limita ao que você pretende fazer "
+"com os dados. Se você quiser produzir uma mapa de código de cores mostrando "
+"casas por idade, fará sentido ter um atributo 'Ano de construção' como "
+"recurso. Se você tem certeza de que você nunca vai usar esse tipo de mapa, é"
+" melhor não armazenar as informações. Coleta e armazenamento de informações "
+"desnecessárias é uma má idéia por causa do custo e do tempo necessário para "
+"a investigação e capturar as informações. Muitas vezes, obtemos dados "
+"vetoriais de empresas, amigos ou do governo. Nesses casos, geralmente, não é"
+" possível solicitar atributos específicos e nós temos de nos contentar com o"
+" que temos."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:179
+msgid "Single Symbols"
+msgstr "Símbolo simples"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:181
+msgid ""
+"If a feature is symbolised without using any attribute table data, it can "
+"only be drawn in a simple way. For example with point features you can set "
+"the colour and **marker** (circle, square, star etc.) but that is all. You "
+"cannot tell the GIS to draw the features based on one of its properties in "
+"the attribute table. In order to do that, you need to use either a "
+"**graduated**, **continuous** or **unique value** symbol. These are "
+"described in detail in the sections that follow."
+msgstr ""
+"Se uma feição é simbolizada sem usar os dados da tabela de atributo, ela só "
+"pode ser desenhada de uma forma simples. Por exemplo, com feições de ponto, "
+"você pode definir a cor e o **marcador** (círculo, quadrado, estrela etc.), "
+"mas isso é tudo. Você não pode dizer o SIG para desenhar as características "
+"com base em uma de suas propriedades na tabela de atributos. A fim de fazer "
+"isso, você precisa usar um símbolo  **graduado**, **contínuas** ou **valores"
+" únicos**. Estes são descritos em detalhe nas secções que se seguem."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:205
+msgid ""
+"When using simple symbols, the feature is drawn without using an attribute "
+"to control how it looks. This is the dialog for point features."
+msgstr ""
+"Quando utilizando símbolos simples, as feições são desenhadas sem utilizar "
+"um atributo que controle sua aparência. Este é o diálogo para feições de "
+"pontos."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:214
+msgid ""
+"There are different options when defining simple symbols for polyline and "
+"polygon features."
+msgstr ""
+"Há diferentes opções quando definindo símbolos simples para polilinha e "
+"feições poligonais."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:218
+msgid "Graduated Symbols"
+msgstr "Símbolos Graduados"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:220
+msgid ""
+"Sometimes vector features represent things with a changing numerical value. "
+"Contour lines are a good example of this. Each contour usually has an "
+"attribute value called 'height' that contains information about what height "
+"that contour represents. In  earlier in this topic we showed contours all "
+"drawn with the same colour. Adding colour to the contours can help us to "
+"interpret the meanings of contours. For example we can draw low lying areas "
+"with one colour, mid-altitude areas with another and high-altitude areas "
+"with a third."
+msgstr ""
+"Às vezes feições vetoriais representam coisas com um valor numérico "
+"variante. As curvas de nível ou isolinhas são um bom exemplo disso. Cada "
+"curva normalmente tem um valor de atributo chamado \"altura\" que contém "
+"informações sobre qual a altura a linha representa. Anteriormente neste "
+"tópico mostramos todos as curvas de nível desenhadas com a mesma cor. "
+"Adicionar cor às curvas de nível pode nos auxiliar na interpretação do "
+"significado das curvas. Por exemplo, podemos desenhar zonas baixas com uma "
+"cor, zonas de média altitude, com um outro e áreas de alta altitude com uma "
+"terceiro."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:234
+msgid ""
+"The height attribute of contours can be used to separate the contours into 3"
+" classes. Contours between 980 m and 1120 m will be drawn in brown, those "
+"between 1120 m and 1240 m in green and those between 1240 m and 1500 m in "
+"purple."
+msgstr ""
+"O atributo altura da curva de nível pode ser usada para separar as curvas em"
+" 3 classes. Contornos entre 980 m e 1120 m podem ser desenhados em marrom, "
+"aquelas entre 1120 m e 1240 m em verde, e aquelas entre 1240 m e 1500 m em "
+"roxo."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:245
+msgid "Our map after setting graduated colours for our contours."
+msgstr ""
+"Nosso mapa após configurarmos cores graduadas para as curvas de nível."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:258
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:295
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:367
+msgid "Attribute Value"
+msgstr "Valores de Atributos"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:258
+msgid "Class and Colour"
+msgstr "Classes e cores"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:260
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:297
+msgid "1"
+msgstr "1"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:260
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:262
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:264
+msgid "Class 1"
+msgstr "Classe 1"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:262
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:299
+msgid "2"
+msgstr "2"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:264
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:301
+msgid "3"
+msgstr "3"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:266
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:303
+msgid "4"
+msgstr "4"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:266
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:268
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:270
+msgid "Class 2"
+msgstr "Classe 2 "
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:268
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:305
+msgid "5"
+msgstr "5"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:270
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:307
+msgid "6"
+msgstr "6"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:272
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:309
+msgid "7"
+msgstr "7"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:272
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:274
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:276
+msgid "Class 3"
+msgstr "Classe 3"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:274
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:311
+msgid "8"
+msgstr "8"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:276
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:313
+msgid "9"
+msgstr "9"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:279
+msgid ""
+"Table Graduated: Graduated colour breaks up the attribute value ranges into "
+"the number of classes you select. Each class is represented by a different "
+"colour."
+msgstr ""
+"Tabela Graduada: a cor graduada divide os intervalos de valor do atributo no"
+" número de classes que você selecionar. Cada classe é representada por uma "
+"cor diferente."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:283
+msgid "Continuous Colour Symbols"
+msgstr "Símbolos de Cores Contínuas"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:285
+msgid ""
+"In the previous section on Graduated Colour symbols we saw that we can draw "
+"features in discrete groups or classes. Sometimes it is useful to draw "
+"features in a **colour range** from one colour to another. The GIS "
+"Application will use a numerical attribute value from a feature (e.g. "
+"contour heights or pollution levels in a stream) to decide which colour to "
+"use. Table table_continuous_ shows how the attribute value is used to define"
+" a continuous range of colours."
+msgstr ""
+"Na seção anterior, em símbolos de Cores Graduadas vimos que podemos desenhar"
+" feições em grupos discretos ou classes. Às vezes é necessário desenhar as "
+"feições em um **gama de cores** de uma cor para outra. O aplicativo SIG "
+"usará um valor de atributo numérico a partir de uma feição (por exemplo, "
+"alturas de contorno (curvas de nível) ou os níveis de poluição em um "
+"córrego) para decidir qual cor usar. Tabela table_continuous_1_ mostra como "
+"o valor de atributo é utilizado para definir um intervalo contínuo de cores."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:295
+msgid "Colour (no classes or grouping)"
+msgstr "COres (sem classe ou agrupamento)"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:316
+msgid ""
+"Table Continuous: Continuous colour symbology uses a start colour (e.g. "
+"light orange shown here) and an end colour (e.g. dark brown shown here) and "
+"creates a series of shades between those colours."
+msgstr ""
+"Tabela Contínua: A simbologia de cores contínua usa uma cor inicial (por "
+"exemplo, laranja claro mostrada aqui) e uma cor final (por exemplo, marrom "
+"escuro mostrada aqui) e cria uma série de tons entre essas cores."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:331
+msgid ""
+"Setting up continuous colour symbology. The contour height attribute is used"
+" to determine colour values. Colours are defined for the minimum and maximum"
+" values. The GIS Application will then create a gradient of colours for "
+"drawing the features based on their heights."
+msgstr ""
+"Configurando simbologia de cor contínua. O atributo altura contorno é usado "
+"para determinar os valores de cor. As cores são definidas para os valores "
+"mínimos e máximos. O aplicativo SIG, então, criar um gradiente de cores para"
+" desenhar as características com base em suas alturas."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:351
+msgid "A contour map drawn using continuous colour symbology"
+msgstr "Um mapa desenhado com simbologia cor contínua"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:354
+msgid "Unique Value Symbols"
+msgstr "Simbologia de Valores Únicos"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:356
+msgid ""
+"Sometimes the attributes of features are not numeric, but instead "
+"**strings** are used. 'String' is a computer term meaning a group of "
+"letters, numbers and other writing symbols. Strings attributes are often "
+"used to classify things by name. We can tell the GIS Application to give "
+"each unique string or number its own colour and symbol. Road features may "
+"have different classes (e.g. 'street', 'secondary road', 'main road' etc.), "
+"each drawn in the map view of the GIS with different colours or symbols. "
+"This is illustrated in table_unique_."
+msgstr ""
+"Algumas vezes os atributos das feições não são numéricos, mas **strings** "
+"são usadas. 'String' é uma termo de computador que significa um grupo de "
+"letras, números e outros símbolos da escrita. Atributos tipo Strings são "
+"frequentemente usados para classificar coisas por nome. Podemos dizer ao "
+"Aplicativo SIG para dar a número ou a cada string distintos sua própria cor "
+"e símbolo. Feições de estradas podem ter classes diferentes (e.g. 'rua', "
+"'estrada secundária', 'estrada principal' etc.), cada uma desenhada no mapa "
+"do SIG com diferentes cores ou símbolos. Isso é ilustrado na table_unique_."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:367
+msgid "Colour class and symbol"
+msgstr "Símbolo e classes de cores"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:369
+msgid "Arterial route"
+msgstr "Rota Arterial"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:371
+msgid "Main road"
+msgstr "Estrada principal"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:373
+msgid "Secondary road"
+msgstr "Estrada secundária"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:375
+msgid "Street"
+msgstr "Estrada"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:378
+msgid ""
+"Table Unique: Unique attribute values for a feature type (e.g. roads) can "
+"each have their own symbol."
+msgstr ""
+"Tabela Exclusiva: valores de atributo exclusivos para um tipo de feição (por"
+" exemplo, estradas) podem ter seu próprio símbolo."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:392
+msgid "Defining unique value symbology for roads based on the road type."
+msgstr ""
+"Definindo simbologia de valores únicos para estradas com base no tipo de "
+"estrada."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:405
+msgid "A roads vector layer symbolised using a unique value per road type."
+msgstr ""
+"A camada vetor de estradas simbolizada através de valores únicos por tipo de"
+" estrada."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:408
+msgid "Things to be aware of"
+msgstr "Coisas para estar ciente de"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:410
+msgid ""
+"Deciding which attributes and symbology to use requires some planning. "
+"Before you start collecting any **GeoSpatial** data, you should ensure you "
+"know what attributes are needed and how it will be symbolised. It is very "
+"difficult to go back and re-collect data if you plan poorly the first time "
+"around. Remember also that the goal of collecting attribute data is to allow"
+" you to analyse and interpret spatial information. How you do this depends "
+"on the questions you are trying to answer. Symbology is a visual language "
+"that allows people to see and understand your attribute data based on the "
+"colours and symbols you use. Because of this you should put a lot of thought"
+" into how you symbolise your maps in order to make them easy to understand."
+msgstr ""
+"Decidir quais atributos e simbologia usar requer algum planejamento. Ante de"
+" você começar a coletar qualquer dado **Geo Espacial**, você deve saber "
+"quais atributos são necessários e como eles serão simbolizados. É muito "
+"difícil voltar e coletar novamente os dados se você planeja mal da primeira "
+"vez. Lembre-se que o objetivo de coletar dados dos atributos é permitir a "
+"análise a a interpretação de informações espaciais. Como você fará isso "
+"depende das questões que você está tentando responder. A simbologia é uma "
+"linguagem visual que permite ver e entender seus atributos baseados em cores"
+" e símbolos. Por causa disso, você deve pensar bastante em como simbolizar "
+"seus mapas de maneira que fiquem fáceis de entender."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:422
+msgid "What have we learned?"
+msgstr "O que aprendemos?"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:424
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Vamos encerrar o que nós abordamos nesta planilha:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:426
+msgid "Vector features have **attributes**"
+msgstr "Feições vetoriais têm **atributos**"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:427
+msgid "Attributes **describe** the **properties** of the feature"
+msgstr "Atributos **descrevem** as **propriedades** das feições"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:428
+msgid "The attributes are stored in a **table**"
+msgstr "Os atributos são armazenados em uma **tabela**"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:429
+msgid "Rows in the table are called **records**"
+msgstr "Linhas em uma tabela são chamadas de **registros**"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:430
+msgid "There is **one record per feature** in the vector layer"
+msgstr "Existe **um registro por feição** em camadas vetoriais"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:431
+msgid "Columns in the table are called **fields**"
+msgstr "Colunas em tabelas são chamadas **campos**"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:432
+msgid ""
+"Fields represent **properties** of the feature e.g. height, roof colour etc."
+msgstr ""
+"Campos representantes **propriedades** da feição ex altura, cor da cobertura"
+" etc."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:433
+msgid ""
+"Fields can contain **numerical**, **string** (any text) and **date** "
+"information"
+msgstr ""
+"Campos podem conter informações **numéricas**, **texto** (qualquer texto) e "
+"**data**"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:434
+msgid ""
+"The attribute data for a feature can be used to determine how it is "
+"**symbolised**"
+msgstr ""
+"O atributo data para uma feição poderá determinar como ela será usada para "
+"ser **simbolizada**"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:435
+msgid "**Graduated colour** symbology groups the data into discrete classes"
+msgstr "**Cor Graduada** grupos  de simbologia de dados em classes discretas"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:436
+msgid ""
+"**Continuous colour** symbology assigns colours from a colour range to the "
+"features based on their attributes"
+msgstr ""
+"**Cores contínuas** simbologia atribui cores a partir de um range de cores "
+"para as feições baseadas nos seus atributos"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:438
+msgid ""
+"**Unique value** symbology associates each different value in the chosen "
+"attribute column with a different symbol (colour and style)"
+msgstr ""
+"**Valores únicos** simbologias associadas cada valor diferente na coluna "
+"atributo escolhido com um símbolo diferente (cor e estilo)"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:440
+msgid ""
+"If the attribute of a vector layer is not used to determine its symbology, "
+"it is drawn using a **single symbol** only"
+msgstr ""
+"Se o atributo de uma camada de vetor não for utilizad para determinar a sua "
+"simbologia, que será desenhada com um **símbolo único** apenas"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:444
+msgid "Now you try!"
+msgstr "Agora você tenta!"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:446
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Aqui estão algumas idéias para você experimentar com os seus alunos:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:448
+msgid ""
+"Using the table that you created in the last topic, add a new column for the"
+" symbology type you would use for each feature type and have the learners "
+"identify which symbology type they would use (see table_example_symbols_ for"
+" an example)."
+msgstr ""
+"Usando a tabela que você criou no último tópico, adicione uma nova coluna "
+"para o tipo de simbologia que você usaria para cada tipo de recurso e peça "
+"aos alunos que identifiquem qual tipo de simbologia eles usariam (veja "
+"table_example_symbols_  como um exemplo)."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:452
+msgid ""
+"Try to identify which symbology types you would use for the following types "
+"of vector features:"
+msgstr ""
+"Tente identificar quais tipos de simbologia que você usaria para os "
+"seguintes tipos de feições de vetoriais:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:455
+msgid "points showing pH level of soil samples taken around your school"
+msgstr ""
+"os pontos mostrando nível de pH em amostras de solo amostrados em torno de "
+"sua escola"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:456
+msgid "lines showing a road network in a city"
+msgstr "linhas mostrando uma rede de estradas em sua cidade"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:457
+msgid ""
+"polygons for houses with an attribute that shows whether it is made of "
+"brick, wood or 'other' material."
+msgstr ""
+"polígonos para casas com um atributo que mostra se ela é feita de tijolo, "
+"madeira ou 'outro' material."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:463
+msgid "Real world feature"
+msgstr "Feições do mundo real"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:463
+msgid "Geometry Type"
+msgstr "Tipo de Geometria"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:463
+msgid "Symbology Type"
+msgstr "Tipo de Simbologia"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:465
+msgid "The school flagpole"
+msgstr "O mastro da escola"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:465
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:471
+msgid "Point"
+msgstr "Ponto"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:465
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:467
+msgid "Single Symbol"
+msgstr "Símbolo Simples"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:467
+msgid "The soccer field"
+msgstr "O campo de futebol"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:467
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:473
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:477
+msgid "Polygon"
+msgstr "Polígono"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:469
+msgid "The footpaths in and around the school"
+msgstr "As trilhas e em torno da escola"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:469
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:475
+msgid "Polyline"
+msgstr "Linha"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:469
+msgid ""
+"Have your learners count the number of learners using each footpath in the "
+"hour before school and then use **graduated symbols** to show the popularity"
+" of each footpath"
+msgstr ""
+"Peça aos seus alunos para contarem o número de alunos que utilizam cada "
+"trilha nas horas antes da escola e, em seguida, use **símbolos graduados** "
+"para mostrar a popularidade de cada trilha"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:471
+msgid "Places where taps are located"
+msgstr "Locais onde estão localizadas as torneiras"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:471
+msgid "Single symbol"
+msgstr "Símbolo simples"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:473
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:477
+msgid "Classrooms"
+msgstr "As salas de aula"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:473
+msgid "**Unique value** based on the grade of the learners in the classroom"
+msgstr "**Valores únicos** baseados em série dos alunos na sala de aula"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:475
+msgid "Fence"
+msgstr "Cerca"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:475
+msgid ""
+"Have your learners rate the condition of the fence around your school by "
+"separating it into sections and grading each section on a scale of 1\\-9 "
+"based on its condition. Use **graduated symbols** to classify the condition "
+"attribute."
+msgstr ""
+"Peça aos seus alunos avaliarem a condição da cerca em torno de sua escola, "
+"separando-a em seções e classificação de cada seção em uma escala de 1\\-9 "
+"com base na sua condição. Use **símbolos graduados** para classificar a "
+"condição do atributo."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:477
+msgid ""
+"Count the number of learners in each classroom and use a **continuous colour"
+" symbol** to define a range of colours from red to blue."
+msgstr ""
+"Conte o número de alunos em cada sala de aula e use um **símbolo de cor "
+"contínua** para definir um range de cores de vermelho para azul."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:480
+msgid ""
+"Table Example Symbols: An example of a table that defines the feature types "
+"and the kind of symbology you would use for each."
+msgstr ""
+"Símbolos de exemplo de tabela: um exemplo de uma tabela que define os tipos "
+"de recurso e o tipo de simbologia que você usaria para cada um."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:484
+msgid "Something to think about"
+msgstr "Algo para pensar"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:486
+msgid ""
+"If you don't have a computer available, you can use transparency sheets and "
+"a 1:50 000 map sheet to experiment with different symbology types. For "
+"example place a transparency sheet over the map and using different coloured"
+" koki pens, draw in red all contour lines below 900 m (or similar) and in "
+"green all lines above or equal to 900 m. Can you think of how to reproduce "
+"other symbology types using the same technique?"
+msgstr ""
+"Se você não tiver um computador disponível, você pode usar folhas de "
+"transparência e uma folha mapa 1:50.000 para experimentar diferentes tipos "
+"de simbologia. Por exemplo, coloque uma folha de transparência sobre o mapa "
+"e utilizando diferentes canetas coloridas, desenhe em vermelho todas as "
+"linhas de contorno abaixo de 900 m (ou similar) e em verde todas as linhas "
+"iguais ou acima de 900 m. Você pode pensar em como reproduzir outros tipos "
+"de simbologia usando a mesma técnica?"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:494
+msgid "Further reading"
+msgstr "Outras leituras"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:496
+msgid "**Website:** https://en.wikipedia.org/wiki/Cartography"
+msgstr "**Website:** https://en.wikipedia.org/wiki/Cartography"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:498
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"attribute data and symbology in QGIS."
+msgstr ""
+"O Guia do Usuário QGIS também tem informações mais detalhadas sobre como "
+"trabalhar com dados de atributos e simbologia no QGIS."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:502
+msgid "What's next?"
+msgstr "Qual é o próximo?"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:504
+msgid ""
+"In the section that follows we will take a closer look at **data capture.** "
+"We will put the things we have learned about vector data and attributes into"
+" practice by creating new data."
+msgstr ""
+"Na seção seguinte, vamos dar uma olhada mais de perto em **captura de "
+"dados**. Vamos colocar as coisas que aprendemos sobre dados vetoriais e "
+"atributos em prática através da criação de novos dados."

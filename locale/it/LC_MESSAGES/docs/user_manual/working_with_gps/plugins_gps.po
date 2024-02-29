@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:4
+msgid "Introducing GNSS/GPS Data"
+msgstr "Introduzione ai Dati GNSS/GPS"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:14
+msgid "What is GPS?"
+msgstr "Cos'è un GPS?"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:16
+msgid ""
+"GPS, the **Global Positioning System**, is a satellite-based system that "
+"allows anyone with a GPS receiver to find their exact position anywhere in "
+"the world. GPS is used as an aid in navigation, for example in airplanes, in"
+" boats and by hikers. The GPS receiver uses the signals from the satellites "
+"to calculate its latitude, longitude and (sometimes) elevation. Most "
+"receivers also have the capability to store:"
+msgstr ""
+"GPS, il **Global Positioning System**, è un sistema satellitare che permette"
+" a chiunque abbia un ricevitore GPS di trovare la propria posizione esatta "
+"in qualsiasi parte del mondo. Il GPS è utilizzato come ausilio alla "
+"navigazione, ad esempio in aereo, in barca e dagli escursionisti. Il "
+"ricevitore GPS utilizza i segnali dei satelliti per calcolare la latitudine,"
+" la longitudine e (talvolta) l'elevazione. La maggior parte dei ricevitori "
+"ha anche la capacità di memorizzare:"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:23
+msgid "locations (known as **waypoints**)"
+msgstr "posizioni (note come **waypoints**)"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:24
+msgid "sequences of locations that make up a planned **route**"
+msgstr "sequenze di posizioni che compongono una **route** pianificata"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:25
+msgid "and a **track** log of the receiver's movement over time."
+msgstr "e un registro **track** del percorso del ricevitore nel tempo."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:27
+msgid ""
+"Waypoints, routes and tracks are the three basic feature types in GPS data. "
+"QGIS displays waypoints in point layers, while routes and tracks are "
+"displayed in linestring layers."
+msgstr ""
+"Waypoint, route e track sono i tre tipi di elementi di base dei dati GPS. "
+"QGIS visualizza i waypoint in layer di punti, mentre le route e le track "
+"sono visualizzate in layer di linee."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:30
+msgid ""
+"QGIS supports also GNSS receivers. But we keep using the term GPS in this "
+"documentation."
+msgstr ""
+"QGIS supporta anche ricevitori GNSS. Ma noi continuiamo a usare il termine "
+"GPS in questa documentazione."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:33
+msgid "Defining GPS device types"
+msgstr "Definire i tipi di dispositivo GPS"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:35
+msgid ""
+"There are lots of different types of GPS devices. QGIS allows you to define "
+"your own device type and set parameters of use under "
+":menuselection:`Settings --> Options --> GPS --> GPSBabel` tab. Read "
+":ref:`defining_new_device` for more details."
+msgstr ""
+"Esistono molti tipi diversi di dispositivi GPS. QGIS consente di definire il"
+" proprio tipo di dispositivo e di impostarne i parametri d'uso nella scheda "
+":menuselection:`Impostazioni --> Opzioni --> GPS --> GPSBabel`. Leggere "
+":ref:`defining_new_device` per maggiori dettagli."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:40
+msgid ""
+"Once you have created a new device type, it will appear in the device lists "
+"for the download and upload tools."
+msgstr ""
+"Una volta che avrai creato una nuova periferica, essa apparirà nella lista "
+"dei dispositivi presenti sia nella scheda Scarica dal GPS che nella scheda "
+"Carica sul GPS."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:46
+msgid "Transferring or loading GPS data"
+msgstr "Trasferire o caricare dati GPS"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:48
+msgid ""
+"There are dozens of different file formats for storing GPS data. The format "
+"that QGIS uses is called GPX (GPS eXchange format), which is a standard "
+"interchange format that can contain any number of waypoints, routes and "
+"tracks in the same file."
+msgstr ""
+"Ci sono una dozzina di formati di file diversi per memorizzare dati GPS. Il "
+"formato utilizzato da QGIS è chiamato GPX (GPS eXchange format), che è un "
+"formato standard di interscambio che può contenere svariati numeri di "
+"posizioni, percorsi e tracce nello stesso file."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:53
+msgid "To load a :file:`GPX` file:"
+msgstr "Per caricare un file :file:`GPX`:"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:55
+msgid ""
+"Open the :guilabel:`GPS` tab in the :guilabel:`Data Source Manager` dialog, "
+"i.e.:"
+msgstr ""
+"Apri la scheda :guilabel:`GPS` nella finestra di dialogo :guilabel:`Gestore "
+"delle Sorgenti Dati`, ad es:"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:57
+msgid ""
+"Click the |dataSourceManager| :sup:`Open Data Source Manager` button on the "
+"toolbar (or press :kbd:`Ctrl+L`) and enable the target tab"
+msgstr ""
+"Fai clic sul pulsante |dataSourceManager| :sup:`Gestore delle Sorgenrti "
+"Dati` sulla barra degli strumenti (o premere :kbd:`Ctrl+L`) e attiva la "
+"scheda obiettivo"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:95
+msgid "dataSourceManager"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:59
+msgid ""
+"Or select :menuselection:`Layer --> Add Layer -->` |addGpsLayer| "
+":menuselection:`Add GPX Layer...`"
+msgstr ""
+"Oppure seleziona :menuselection:`Layer --> Aggiungi layer -->` |addGpsLayer|"
+" :menuselection:`Aggiungi layer GPX...`"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:93
+msgid "addGpsLayer"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:61
+msgid ""
+"Use the :guilabel:`...` :sup:`Browse` button next to the :guilabel:`GPX "
+"dataset` option to select the GPX file"
+msgstr ""
+"Usa il pulsante :guilabel:`...` :sup:`Sfoglia` accanto all'opzione "
+":guilabel:`Dataset GPX` per selezionare il file GPX."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:63
+msgid ""
+"Use the check boxes to select the :guilabel:`Feature types` you want to load"
+" from the file. Each feature type (:guilabel:`Waypoints`, :guilabel:`Tracks`"
+" or :guilabel:`Routes`) will be loaded in a separate layer."
+msgstr ""
+"Utilizza le caselle di controllo per selezionare i :guilabel:`Tipi di "
+"elementi` che vuoi caricare dal file. Ogni tipo di elemento "
+"(:guilabel:`Waypoints`, :guilabel:`Tracks` o :guilabel:`Routes`) sarà "
+"caricato in un layer separato."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:70
+msgid "Loading GPS Data dialog"
+msgstr "Caricare finestra di dialogo Dati GPS"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:73
+msgid ""
+"Since QGIS uses GPX files, you need a way to convert other GPS file formats "
+"to GPX. This can be done for many formats using the free program `GPSBabel "
+"<https://www.gpsbabel.org>`_. This program can also transfer GPS data "
+"between your computer and a GPS device. QGIS relies on GPSBabel to do these "
+"things and provides you with convenient Processing algorithms available "
+"under the :ref:`GPS group <gps_algorithms>`."
+msgstr ""
+"Poiché QGIS utilizza i file GPX, è necessario un modo per convertire altri "
+"formati di file GPS in GPX. Questo può essere fatto per molti formati "
+"utilizzando il programma gratuito `GPSBabel <https://www.gpsbabel.org>`_. "
+"Questo programma può anche trasferire i dati GPS tra il computer e un "
+"dispositivo GPS. QGIS si affida a GPSBabel per fare queste cose e fornisce "
+"dei semplici algoritmi di elaborazione disponibili sotto il :ref:`GPS group "
+"<gps_algorithms>`."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:80
+msgid ""
+"GPS units allow you to store data in different coordinate systems. When "
+"downloading a GPX file (from your GPS unit or a web site) and then loading "
+"it in QGIS, be sure that the data stored in the GPX file uses WGS 84 "
+"(latitude/longitude). QGIS expects this, and it is the official GPX "
+"specification. See `GPX 1.1 Schema Documentation "
+"<https://www.topografix.com/GPX/1/1/>`_."
+msgstr ""
+"Le unità GPS consentono di memorizzare i dati in diversi sistemi di "
+"coordinate. Quando si scarica un file GPX (dall'unità GPS o da un sito web) "
+"e lo si carica in QGIS, assicurarsi che i dati memorizzati nel file GPX "
+"utilizzino il sistema WGS 84 (latitudine/longitudine). QGIS lo prevede ed è "
+"la specifica GPX ufficiale. Vedere `GPX 1.1 Schema Documentation "
+"<https://www.topografix.com/GPX/1/1/>`_."

@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/processing/iterative_model.rst:2
+msgid "More iterative execution of algorithms"
+msgstr "Di più su esecuzione iterativa di algoritmi"
+
+#: ../../docs/training_manual/processing/iterative_model.rst:4
+msgid ""
+"This lesson shows how to combine the iterative execution of algorithms with "
+"the modeler to get more automation."
+msgstr ""
+"Questa lezione mostra come combinare l'esecuzione iterativa degli algoritmi "
+"con il modellatore per ottenere una maggiore automazione."
+
+#: ../../docs/training_manual/processing/iterative_model.rst:7
+msgid ""
+"The iterative execution of algorithms is available not just for built-in "
+"algorithms, but also for the algorithms that you can create yourself, such "
+"as models. We are going to see how to combine a model and the iterative "
+"execution of algorithms, so we can obtain more complex results with ease."
+msgstr ""
+"L'esecuzione iterativa degli algoritmi è disponibile non solo per gli "
+"algoritmi incorporati, ma anche per gli algoritmi che potete creare voi "
+"stessi, come i modelli. Vedremo come combinare un modello e l'esecuzione "
+"iterativa di algoritmi, in modo da poter ottenere risultati più complessi "
+"con facilità."
+
+#: ../../docs/training_manual/processing/iterative_model.rst:10
+msgid ""
+"The data the we are going to use for this lesson is the same one that we "
+"already used for the last one. In this case, instead of just clipping the "
+"DEM with each watershed polygon, we will add some extra steps and calculate "
+"a hypsometric curve for each of them, to study how elevation is distributed "
+"within the watershed."
+msgstr ""
+"I dati che useremo per questa lezione sono gli stessi che abbiamo già usato "
+"per l'ultima lezione. In questo caso, invece di limitarci a ritagliare il "
+"DEM con ogni poligono di bacino, aggiungeremo qualche passo in più e "
+"calcoleremo una curva ipsometrica per ognuno di essi, per studiare come "
+"l'altezza è distribuita all'interno del bacino idrografico."
+
+#: ../../docs/training_manual/processing/iterative_model.rst:12
+msgid ""
+"Since we have a workflow that involves several steps (clipping + computing "
+"the hypsometric curve), we should go to the modeler and create the "
+"corresponding model for that workflow."
+msgstr ""
+"Dato che abbiamo un flusso di lavoro che implica diversi passaggi (ritaglio "
+"+ calcolo della curva ipsometrica), dovremmo andare nel modellatore e creare"
+" il modello corrispondente a tale flusso di lavoro."
+
+#: ../../docs/training_manual/processing/iterative_model.rst:14
+msgid ""
+"You can find the model already created in the data folder for this lesson, "
+"but it would be good if you first try to create it yourself. The clipped "
+"layer is not a final result in this case, since we are just interested in "
+"the curves, so this model will not generated any layers, but just a table "
+"with the curve data."
+msgstr ""
+"Puoi trovare il modello già creato nella cartella dei dati di questa "
+"lezione, ma sarebbe bene che tu prima provassi a crearlo da solo. Il layer "
+"ritagliato non è un risultato finale in questo caso, dato che siamo "
+"interessati solo alle curve, quindi questo modello non genererà alcun layer,"
+" ma solo una tabella con i dati delle curve."
+
+#: ../../docs/training_manual/processing/iterative_model.rst:16
+msgid "The model should look like this:"
+msgstr "Il modello dovrebbe apparire così:"
+
+#: ../../docs/training_manual/processing/iterative_model.rst:20
+msgid ""
+"Add the model to you models folder, so it is available in the toolbox, and "
+"execute it."
+msgstr ""
+"Aggiungi il modello alla tua cartella models, in modo che sia disponibile "
+"nella casella degli strumenti, ed eseguilo."
+
+#: ../../docs/training_manual/processing/iterative_model.rst:22
+msgid "Select the DEM and watersheds basins."
+msgstr "Seleziona il DEM e i bacini idrografici."
+
+#: ../../docs/training_manual/processing/iterative_model.rst:24
+msgid ""
+"The algorithm will generate tables for all the basins and place them in the "
+"output directory."
+msgstr ""
+"L'algoritmo genererà tabelle per tutti i bacini e le metterà nella cartella "
+"in uscita."
+
+#: ../../docs/training_manual/processing/iterative_model.rst:27
+msgid ""
+"We can make this example more complex by extending the model and computing "
+"some slope statistics. Add the *Slope* algorithm to the model, and then the "
+"*Raster statistics* algorithm, which should use the slope output as its only"
+" input."
+msgstr ""
+"Possiamo rendere questo esempio più complesso estendendo il modello e "
+"calcolando alcune statistiche di pendenza. Aggiungi l'algoritmo *Slope* al "
+"modello, e poi l'algoritmo *Raster statistics*, che dovrebbe usare il "
+"risultato della pendenza come unico ingresso."
+
+#: ../../docs/training_manual/processing/iterative_model.rst:34
+msgid ""
+"If you now run the model, apart from the tables you will get a set of pages "
+"with statistics. These pages will be available in the results dialog."
+msgstr ""
+"Se ora esegui il modello, oltre alle tabelle otterrai una serie di pagine "
+"con le statistiche. Queste pagine saranno disponibili nella finestra di "
+"dialogo dei risultati."

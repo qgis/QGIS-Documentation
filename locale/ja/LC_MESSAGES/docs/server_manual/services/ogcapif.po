@@ -1,0 +1,740 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-08 18:30+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/services/ogcapif.rst:4
+msgid "OGC API Features"
+msgstr "OGC API機能"
+
+#: ../../docs/server_manual/services/ogcapif.rst:6
+msgid ""
+"OGC API Features (OAPIF) is the first implementation of the new generation "
+"of OGC protocols. It is described by the `OGC API - Features - Part 1: Core "
+"<http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ document."
+msgstr ""
+"OGC API Features（OAPIF）は、新世代のOGCプロトコルの最初の実装です。これは `OGC API - Features - Part"
+" 1：コア <http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ ドキュメントで説明されています。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:11
+msgid ""
+"The API can be reached on typical installations via "
+"`http://localhost/qgisserver/wfs3`"
+msgstr "一般的なインストールでは、APIには `http://localhost/qgisserver/wfs3` からアクセスできます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:13
+msgid ""
+"Here is a quick informal summary of the most important differences between "
+"the well known WFS protocol and OAPIF:"
+msgstr "以下は、よく知られたWFSプロトコルとOAPIFの最も重要な相違点を簡単にまとめたものです："
+
+#: ../../docs/server_manual/services/ogcapif.rst:16
+msgid ""
+"OAPIF is based on a `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+msgstr ""
+"OAPIFは `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ "
+"APIを基にしています"
+
+#: ../../docs/server_manual/services/ogcapif.rst:19
+msgid ""
+"OAPIF must follow the `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
+msgstr ""
+"OAPIFは `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ "
+"仕様に従わなければなりません"
+
+#: ../../docs/server_manual/services/ogcapif.rst:22
+msgid ""
+"OAPIF supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS OAPIF) and it uses `content"
+" negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"determine which format is to be served to the client"
+msgstr ""
+"OAPIF は複数の出力形式をサポートしていますが、どの形式も指定することはありません（QGIS OAPIF で現在利用できるのは GeoJSON と "
+"HTML のみです）。また、`content negotiation "
+"<https://en.wikipedia.org/wiki/Content_negotiation>`_ "
+"を使用して、クライアントに提供する形式を決定します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:27
+msgid "JSON and HTML are first class citizens in OAPIF"
+msgstr "JSONとHTMLはOAPIFの一級市民です"
+
+#: ../../docs/server_manual/services/ogcapif.rst:28
+msgid "OAPIF is self-documenting (through the ``/api`` endpoint)"
+msgstr "OAPIFは（``/api`` エンドポイントを通して）自己文書化されています。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:29
+msgid "OAPIF is fully navigable (through links) and browsable"
+msgstr "OAPIFは（リンクを通じて）完全に誘導可能性があり、ブラウズ可能です"
+
+#: ../../docs/server_manual/services/ogcapif.rst:33
+msgid ""
+"While the OGC API Features implementation in QGIS can make use of the "
+"``MAP`` parameter to specify the project file, no extra query parameters are"
+" allowed by the OPENAPI specification. For this reason it is strongly "
+"recommended that ``MAP`` is not exposed in the URL and the project file is "
+"specified in the environment by other means (i.e. setting "
+"``QGIS_PROJECT_FILE`` in the environment through a web server rewrite rule)."
+msgstr ""
+"QGIS の OGC API Features の実装では、プロジェクトファイルを指定するために ``MAP`` "
+"パラメータを活用することができますが、OPENAPI 仕様では余分なクエリパラメータを使用することはできません。このため、``MAP`` を URL "
+"で公開せず、他の方法（例えば、ウェブサーバの書き換えルールで ``QGIS_PROJECT_FILE`` "
+"を環境に設定する）でプロジェクトファイルを指定することを強く推奨します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:44
+msgid ""
+"The **API** endpoint provides comprehensive documentation of all supported "
+"parameters and output formats of your service. The following paragraphs will"
+" only describe the most important ones."
+msgstr ""
+"**API** "
+"エンドポイントは、サポートされているすべてのパラメータとサービスの出力形式に関する包括的なドキュメントを提供します。以下の段落では、最も重要なもののみを説明します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:50
+msgid "Resource representation"
+msgstr "リソース表現"
+
+#: ../../docs/server_manual/services/ogcapif.rst:52
+msgid ""
+"The implementation of OGC API Features in QGIS Server currently supports the"
+" following resource representation (output) formats:"
+msgstr "QGIS ServerにおけるOGC API Featuresの実装は、現在、以下のリソース表現（出力）形式をサポートしています："
+
+#: ../../docs/server_manual/services/ogcapif.rst:55
+msgid "HTML"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:56
+msgid "JSON"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:58
+msgid ""
+"The format that is actually served will depend on content negotiation, but a"
+" specific format can be explicitly requested by appending a format specifier"
+" to the endpoints."
+msgstr ""
+"実際に提供される形式はコンテント・ネゴシエーションに依存しますが、エンドポイントにフォーマット指定子を付加することで、特定の形式を明示的に要求することができます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:62
+msgid "Supported format specifier extensions are:"
+msgstr "サポートされているフォーマット指定子の拡張子："
+
+#: ../../docs/server_manual/services/ogcapif.rst:64
+msgid "``.json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:65
+msgid "``.html``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:67
+msgid ""
+"Additional format specifier aliases may be defined by specific endpoints:"
+msgstr "追加のフォーマット指定子エイリアスは、特定のエンドポイントによって定義されることができます："
+
+#: ../../docs/server_manual/services/ogcapif.rst:70
+msgid "``.openapi``: alias for ``.json`` supported by the **API** endpoint"
+msgstr "``.openapi``: **API** エンドポイントがサポートする ``.json`` のエイリアス"
+
+#: ../../docs/server_manual/services/ogcapif.rst:71
+msgid ""
+"``.geojson``: alias for ``.json`` supported by the **Features** and "
+"**Feature** endpoints"
+msgstr ""
+"``.geojson``: **Features** 及び **Feature** エンドポイントがサポートする ``.json`` のエイリアス"
+
+#: ../../docs/server_manual/services/ogcapif.rst:77
+msgid "Endpoints"
+msgstr "エンドポイント"
+
+#: ../../docs/server_manual/services/ogcapif.rst:79
+msgid ""
+"The API provides a list of endpoints that the clients can retrieve. The "
+"system is designed in such a way that every response provides a set of links"
+" to navigate through all the provided resources."
+msgstr ""
+"APIは、クライアントが取得できるエンドポイントのリストを提供します。システムは、すべてのレスポンスが、提供されたすべてのリソースをナビゲートするためのリンクのセットを提供するように設計されています。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:83
+msgid "Endpoints points provided by the QGIS implementation are:"
+msgstr "QGISの実装によって提供されるエンドポイント・ポイントは以下のものです："
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Name"
+msgstr "名前"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Path"
+msgstr "パス"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+#: ../../docs/server_manual/services/ogcapif.rst:107
+msgid "Landing Page"
+msgstr "Landing Page"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid ""
+"General information about the service and provides links to all available "
+"endpoints"
+msgstr "サービスに関する一般的な情報と、利用可能なすべてのエンドポイントへのリンクを提供します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Conformance"
+msgstr "Conformance"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/conformance``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about the conformance of the service to the standards"
+msgstr "サービスの規格適合性に関する情報"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "API"
+msgstr "API"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/api``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid ""
+"Full description of the endpoints provided by the service and the returned "
+"documents structure"
+msgstr "サービスによって提供されるエンドポイントの完全な説明と、返された文書の構造"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Collections"
+msgstr "Collections"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/collections``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "List of all collections (i.e. 'vector layers') provided by the service"
+msgstr "サービスが提供するすべてのコレクション（すなわち「ベクタレイヤ」）のリスト"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Collection"
+msgstr "Collection"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/collections/{collectionId}``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about a collection (name, metadata, extent etc.)"
+msgstr "コレクションに関する情報（名前、メタデータ、範囲など）"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Features"
+msgstr "Features"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/collections/{collectionId}/items``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "List of the features provided by the collection"
+msgstr "コレクションが提供する地物のリスト"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Feature"
+msgstr "Feature"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/collections/{collectionId}/items/{featureId}``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about a single feature"
+msgstr "単独地物に関する情報"
+
+#: ../../docs/server_manual/services/ogcapif.rst:104
+msgid ""
+"Similar to WFS-T (transactional Web Feature Service), it is possible to add,"
+" update and delete features (CRUD). The respective requests are described on"
+" \"``/api``\"."
+msgstr ""
+"WFS-T (transactional Web Feature "
+"Service)と同様に、地物の追加、更新、削除(CRUD)が可能です。それぞれのリクエストは \"``/api``\" に記述されています。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:109
+msgid ""
+"The main endpoint is the **Landing Page**. From that page it is possible to "
+"navigate to all the available service endpoints. The **Landing Page** must "
+"provide links to"
+msgstr ""
+"主なエンドポイントは **ランディングページ** "
+"です。このページから、利用可能なすべてのサービス・エンドポイントに移動することができます。**ランディング・ページ** "
+"は、以下へのリンクを提供しなければなりません"
+
+#: ../../docs/server_manual/services/ogcapif.rst:113
+msgid ""
+"the API definition (path ``/api`` link relations ``service-desc`` and "
+"``service-doc``),"
+msgstr "API定義（パス ``/api`` リンクリレーション ``service-desc`` 及び ``service-doc``）、"
+
+#: ../../docs/server_manual/services/ogcapif.rst:115
+msgid ""
+"the Conformance declaration (path ``/conformance``, link relation "
+"``conformance``), and"
+msgstr "適合性宣言（パス ``/conformance``、リンクリレーション ``conformance``）、及び"
+
+#: ../../docs/server_manual/services/ogcapif.rst:117
+msgid "the Collections (path ``/collections``, link relation ``data``)."
+msgstr "コレクション（パス ``/collections``, リンクリレーション ``data``）。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:124
+msgid "Server OAPIF landing page"
+msgstr "サーバーのOAPIFランディングページ"
+
+#: ../../docs/server_manual/services/ogcapif.rst:129
+msgid "API Definition"
+msgstr "API定義"
+
+#: ../../docs/server_manual/services/ogcapif.rst:131
+msgid ""
+"The **API Definition** is an OPENAPI-compliant description of the API "
+"provided by the service. In its HTML representation it is a browsable page "
+"where all the endpoints and their response formats are accurately listed and"
+" documented. The path of this endpoint is ``/api``."
+msgstr ""
+"**API定義** "
+"は、サービスが提供するAPIのOPENAPI準拠の記述です。HTML表現においては、すべてのエンドポイントとそのレスポンスフォーマットが正確にリスト化、文書化されたブラウズ可能なページです。このエンドポイントのパスは"
+" ``/api`` です。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:138
+msgid ""
+"The API definition provides a comprehensive and authoritative documentation "
+"of the service, including all supported parameters and returned formats."
+msgstr "API定義は、サポートされる全てのパラメータと返されるフォーマットを含む、サービスの包括的で権威ある文書を提供します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:144
+msgid "This endpoint is analogue to WFS's ``GetCapabilities``"
+msgstr "このエンドポイントはWFSの ``GetCapabilities`` に類似しています"
+
+#: ../../docs/server_manual/services/ogcapif.rst:147
+msgid "Collections list"
+msgstr "コレクションのリスト"
+
+#: ../../docs/server_manual/services/ogcapif.rst:149
+msgid ""
+"The collections endpoint provides a list of all the collections available in"
+" the service. Since the service \"serves\" a single QGIS project the "
+"collections are the vector layers from the current project (if they were "
+"published as WFS in the project properties). The path of this endpoint is "
+"``/collections/``."
+msgstr ""
+"コレクションエンドポイントは、サービスで利用可能な全てのコレクションのリストを提供します。そのサービスはひとつのQGISプロジェクトに "
+"「サービスを提供する」ため、コレクションは現在のプロジェクトのベクタレイヤになります（プロジェクトのプロパティでWFSとして公開されている場合）。このエンドポイントのパスは"
+" ``/collections/`` です。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:161
+msgid "Server OAPIF collections list page"
+msgstr "サーバーのOAPIFコレクションリストページ"
+
+#: ../../docs/server_manual/services/ogcapif.rst:165
+msgid "Collection detail"
+msgstr "コレクションの詳細"
+
+#: ../../docs/server_manual/services/ogcapif.rst:167
+msgid ""
+"While the collections endpoint does not provide detailed information about "
+"each available collection, that information is available in the "
+"``/collections/{collectionId}`` endpoints. Typical information includes the "
+"extent, a description, CRSs and other metadata."
+msgstr ""
+"コレクションエンドポイントは利用可能な各コレクションの詳細情報を提供しませんが、その情報は ``/collections/{collectionId}`"
+" エンドポイントで利用可能です。典型的な情報には、範囲、説明、CRS、その他のメタデータが含まれます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:173
+#: ../../docs/server_manual/services/ogcapif.rst:194
+msgid ""
+"The HTML representation also provides a browsable map with the available "
+"features."
+msgstr "また、そのHTML表現は、利用可能な地物を持った閲覧可能な地図も提供されます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:182
+msgid "Server OAPIF collection detail page"
+msgstr "サーバーのOAPIFコレクションの詳細ページ"
+
+#: ../../docs/server_manual/services/ogcapif.rst:188
+msgid "Features list"
+msgstr "地物のリスト"
+
+#: ../../docs/server_manual/services/ogcapif.rst:190
+msgid ""
+"This endpoint provides a list of all features in a collection knowing the "
+"collection ID. The path of this endpoint is "
+"``/collections/{collectionId}/items``."
+msgstr ""
+"このエンドポイントは、コレクション ID がわかっているコレクション内の全ての地物のリストを提供します。このエンドポイントのパスは "
+"``/collections/{collectionId}/items`` です。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:200
+msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
+msgstr "このエンドポイントは、WFS 1 と WFS 2 の ``GetFeature`` に類似しています。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:208
+msgid "Server OAPIF features list page"
+msgstr "サーバーのOAPIF地物のリストページ"
+
+#: ../../docs/server_manual/services/ogcapif.rst:212
+msgid "Feature detail"
+msgstr "地物の詳細"
+
+#: ../../docs/server_manual/services/ogcapif.rst:214
+msgid ""
+"This endpoint provides all the available information about a single feature,"
+" including the feature attributes and its geometry. The path of this "
+"endpoint is ``/collections/{collectionId}/items/{itemId}``."
+msgstr ""
+"このエンドポイントは、地物の属性やジオメトリなど、1 つの地物に関する全ての情報を提供します。このエンドポイントのパスは "
+"``/collections/{collectionId}/items/{itemId}`` です。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:219
+msgid ""
+"The HTML representation also provides a browsable map with the feature "
+"geometry."
+msgstr "また、そのHTML表現は、地物ジオメトリを含むブラウズ可能な地図も提供されます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:228
+msgid "Server OAPIF feature detail page"
+msgstr "サーバーのOAPIF地物の詳細ページ"
+
+#: ../../docs/server_manual/services/ogcapif.rst:233
+msgid "Pagination"
+msgstr "ページ付け"
+
+#: ../../docs/server_manual/services/ogcapif.rst:235
+msgid ""
+"Pagination of a long list of features is implemented in the OGC API through "
+"``next`` and ``prev`` links, QGIS server constructs these links by appending"
+" ``limit`` and ``offset`` as query string parameters."
+msgstr ""
+"地物の長いリストのページ付けはOGC APIで ``next`` と ``prev`` "
+"のリンクを通して実装されており、QGISサーバーはクエリ文字列のパラメータとして ``limit`` と ``offset`` "
+"を追加することでこれらのリンクを構築します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:240
+#: ../../docs/server_manual/services/ogcapif.rst:315
+#: ../../docs/server_manual/services/ogcapif.rst:327
+#: ../../docs/server_manual/services/ogcapif.rst:341
+#: ../../docs/server_manual/services/ogcapif.rst:352
+#: ../../docs/server_manual/services/ogcapif.rst:381
+msgid "URL example:"
+msgstr "URLの例:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:248
+msgid ""
+"The maximum acceptable value for ``limit`` can be configured with the "
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: "
+":ref:`qgis-server-envvar`)."
+msgstr ""
+"``limit`` の最大許容値は ``QGIS_SERVER_API_WFS3_MAX_LIMIT`` "
+"サーバー設定で設定することができます（:ref:`qgis-server-envar` を参照してください）。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:254
+msgid "Feature filtering"
+msgstr "地物フィルタリング"
+
+#: ../../docs/server_manual/services/ogcapif.rst:256
+msgid ""
+"The features available in a collection can be filtered/searched by "
+"specifying one or more filters."
+msgstr "コレクションで利用可能な地物は、1 つ以上のフィルタを指定してフィルタ/検索できます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:261
+msgid "Date and time filter"
+msgstr "日付と時間フィルタ"
+
+#: ../../docs/server_manual/services/ogcapif.rst:262
+msgid ""
+"Collections with date and/or datetime attributes can be filtered by "
+"specifying a ``datetime`` argument in the query string. By default the first"
+" date/datetime field is used for filtering. This behavior can be configured "
+"by setting a \"Date\" or \"Time\" dimension in the :menuselection:`QGIS "
+"Server --> Dimension` section of the layer properties dialog."
+msgstr ""
+"クエリ文字列の引数に ``datetime`` "
+"を指定することで、日付や日付時刻属性を持つコレクションをフィルタすることができます。デフォルトでは、最初のdate/datetimeフィールドがフィルタに使用されます。この動作は、レイヤプロパティダイアログの"
+" :menuselection:`QGISサーバー --> Dimension` セクションで \"Date\" または \"Time\" "
+"次元を設定することで設定できます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:269
+msgid ""
+"The date and time filtering syntax is fully described in the "
+":ref:`ogc_api_features_api_definition` and also supports ranges (begin and "
+"end values are included) in addition to single values."
+msgstr ""
+"日付と時刻のフィルタ構文は :ref:`ogc_api_features_api_definition` に完全に記述されており、単一の値だけでなく範囲"
+" (開始値と終了値が含まれます) も対応しています。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:274
+msgid "URL examples:"
+msgstr "URLの例:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:276
+msgid "Returns only the features with date dimension matching ``2019-01-01``"
+msgstr "日付次元が ``2019-01-01`` に一致する地物のみを返します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:282
+msgid ""
+"Returns only the features with datetime dimension matching "
+"``2019-01-01T01:01:01``"
+msgstr "日付時刻次元が ``2019-01-01T01:01:01`` に一致する地物のみを返します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:289
+msgid ""
+"Returns only the features with datetime dimension in the range "
+"``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
+msgstr ""
+"日付時刻次元が ``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00`` の範囲に含まれる地物のみを返します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:298
+msgid "Bounding box filter"
+msgstr "バウンディングボックスフィルタ"
+
+#: ../../docs/server_manual/services/ogcapif.rst:300
+msgid ""
+"A bounding box spatial filter can be specified with the ``bbox`` parameter:"
+msgstr "``bbox`` パラメータでバウンディングボックス空間フィルタを指定することができます："
+
+#: ../../docs/server_manual/services/ogcapif.rst:302
+msgid "The order of the comma separated elements is:"
+msgstr "コンマで区切られた要素の順序は:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:304
+msgid "Lower left corner, WGS 84 longitude"
+msgstr "左下隅、WGS 84 経度"
+
+#: ../../docs/server_manual/services/ogcapif.rst:305
+msgid "Lower left corner, WGS 84 latitude"
+msgstr "左下隅、WGS 84 緯度"
+
+#: ../../docs/server_manual/services/ogcapif.rst:306
+msgid "Upper right corner, WGS 84 longitude"
+msgstr "右上隅、WGS 84 経度"
+
+#: ../../docs/server_manual/services/ogcapif.rst:307
+msgid "Upper right corner, WGS 84 latitude"
+msgstr "右上隅、WGS 84 緯度"
+
+#: ../../docs/server_manual/services/ogcapif.rst:310
+msgid ""
+"The OGC specifications also allow a 6 item bbox specifier where the third "
+"and sixth items are the Z components, this is not yet supported by QGIS "
+"server."
+msgstr ""
+"OGC仕様では、3番目と6番目の項目がZ成分となる6項目のbbox指定子も認められていますが、QGISサーバーではまだサポートされていません。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:321
+msgid ""
+"If the *CRS* of the bounding box is not `WGS 84 "
+"<https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, a different CRS can be "
+"specified by using the optional parameter ``bbox-crs``. The CRS format "
+"identifier must be in the `OGC URI <https://www.opengis.net/def/crs/>`_ "
+"format:"
+msgstr ""
+"バウンディングボックスの *CRS* が `WGS 84 "
+"<https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_ でない場合、オプションのパラメータ ``bbox-"
+"crs`` を使って別の CRS を指定することができます。CRS形式識別子は `OGC URI "
+"<https://www.opengis.net/def/crs/>`_ 形式でなければなりません："
+
+#: ../../docs/server_manual/services/ogcapif.rst:335
+msgid "Attribute filters"
+msgstr "属性フィルタ"
+
+#: ../../docs/server_manual/services/ogcapif.rst:337
+msgid ""
+"Attribute filters can be combined with the bounding box filter and they are "
+"in the general form: ``<attribute name>=<attribute value>``. Multiple "
+"filters can be combined using the ``AND`` operator."
+msgstr ""
+"属性フィルタはバウンディングボックスフィルタと組み合わせることができ、一般的な形式は： ``<attribute name> = <attribute "
+"value>``。複数のフィルタは ``AND`` 演算子を使って組み合わせることができます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:343
+msgid "filters all features where attribute ``name`` equals \"my value\""
+msgstr "属性 ``name`` が \"my value\" と等しい全ての地物をフィルタします"
+
+#: ../../docs/server_manual/services/ogcapif.rst:350
+msgid "Partial matches are also supported by using a ``*`` (\"star\") operator:"
+msgstr "部分一致も ``*`` (\"star\") 演算子を使うことで対応しています："
+
+#: ../../docs/server_manual/services/ogcapif.rst:354
+msgid "filters all features where attribute ``name`` ends with \"value\""
+msgstr "属性 ``name`` の末尾が \"value\" であるすべての地物をフィルタします"
+
+#: ../../docs/server_manual/services/ogcapif.rst:361
+msgid "Feature sorting"
+msgstr "地物の並び替え"
+
+#: ../../docs/server_manual/services/ogcapif.rst:363
+msgid ""
+"It is possible to order the result set by field value using the ``sortby`` "
+"query parameter."
+msgstr "クエリパラメータ ``sortby`` を使って、フィールド値で結果セットを並べ替えることができます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:366
+msgid ""
+"The results are sorted in ascending order by default. To sort the results in"
+" descending order, a boolean flag (``sortdesc``) can be set:"
+msgstr "結果はデフォルトで昇順に並べ替えられます。結果を降順に並べ替えるには、ブール値のフラグ (``sortdesc``) を設定します："
+
+#: ../../docs/server_manual/services/ogcapif.rst:375
+msgid "Attribute selection"
+msgstr "属性の選択"
+
+#: ../../docs/server_manual/services/ogcapif.rst:377
+msgid ""
+"The feature attributes returned by a :ref:`ogc_api_features_features_list` "
+"call can be limited by adding a comma separated list of attribute names in "
+"the optional ``properties`` query string argument."
+msgstr ""
+":ref:`ogc_api_features_features_list` の呼び出しによって返される地物の属性は、オプションの "
+"``properties`` クエリ文字列引数にカンマ区切りの属性名のリストを追加することで制限することができます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:383
+msgid "returns only the ``name`` attribute"
+msgstr "``name`` 属性だけを返します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:391
+msgid "Customize the HTML pages"
+msgstr "HTMLページをカスタマイズする"
+
+#: ../../docs/server_manual/services/ogcapif.rst:393
+msgid ""
+"The HTML representation uses a set of HTML templates to generate the "
+"response. The template is parsed by a template engine called `inja "
+"<https://github.com/pantor/inja/>`_. The templates can be customized by "
+"overriding them (see: :ref:`server_oapif_template_override`). The template "
+"has access to the same data that are available to the ``JSON`` "
+"representation and a few additional functions are available to the template:"
+msgstr ""
+"HTML表現はHTMLテンプレートのセットを使ってレスポンスを生成します。テンプレートは `inja "
+"<https://github.com/pantor/inja/>`_ "
+"と呼ばれるテンプレートエンジンによって解析されます。テンプレートはそれらをオーバーライドすることでカスタマイズすることができます (参照: "
+":ref:`server_oapif_template_override`)。テンプレートは ``JSON`` "
+"表現と同じデータにアクセスすることができ、さらにいくつかの関数を利用することができます："
+
+#: ../../docs/server_manual/services/ogcapif.rst:405
+msgid "Custom template functions"
+msgstr "カスタムテンプレート関数"
+
+#: ../../docs/server_manual/services/ogcapif.rst:407
+msgid "``path_append( path )``: appends a directory path to the current url"
+msgstr "``path_append( path )``: 現在のurlにディレクトリパスを追加します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:408
+msgid ""
+"``path_chomp( n )``: removes the specified number \"n\" of directory "
+"components from the current url path"
+msgstr "``path_chomp( n )``: 現在のurlパスから指定された \"n\" 個のディレクトリ構成要素を取り除きます"
+
+#: ../../docs/server_manual/services/ogcapif.rst:410
+msgid "``json_dump( )``: prints the JSON data passed to the template"
+msgstr "``json_dump( )``: テンプレートに渡されたJSONデータを表示します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:411
+msgid ""
+"``static( path )``: returns the full URL to the specified static path. For "
+"example: \"static( \"/style/black.css\" )\" with a root path "
+"\"http://localhost/qgisserver/wfs3\" will return "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
+msgstr ""
+"``static( path )``: 指定された静的パスの完全なURLを返します。例えば \"static( \"/style/black.css\""
+" )\" でルートパスが \"http://localhost/qgisserver/wfs3\" "
+"の場合、\"http://localhost/qgisserver/wfs3/static/style/black.css\" を返します。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:415
+msgid ""
+"``links_filter( links, key, value )``: Returns filtered links from a link "
+"list"
+msgstr "``links_filter( links, key, value )``: リンクリストからフィルタされたリンクを返します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:417
+msgid ""
+"``content_type_name( content_type )``: Returns a short name from a content "
+"type, for example \"text/html\" will return \"HTML\""
+msgstr ""
+"``content_type_name( content_type )``: content typeから短い名前を返します。例 "
+"\"text/html\" は \"HTML\" を返します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:419
+msgid ""
+"``nl2br( text )``: Returns the input text with all newlines replaced by "
+"\"<br>\" tags"
+msgstr "``nl2br( text )``: 入力テキストから改行をすべて \"<br>\" タグに置き換えたものを返します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:421
+msgid ""
+"``starts_with( string, prefix )``: returns true if a string begins with the "
+"provided string prefix, false otherwise"
+msgstr ""
+"``starts_with( string, prefix )``: "
+"文字列が指定された文字列プレフィックスで始まっていれば真を、そうでなければ偽を返します"
+
+#: ../../docs/server_manual/services/ogcapif.rst:428
+msgid "Template overrides"
+msgstr "テンプレートのオーバーライド"
+
+#: ../../docs/server_manual/services/ogcapif.rst:430
+msgid ""
+"Templates and static assets are stored in subdirectories of the QGIS server "
+"default API resource directory "
+"(:file:`/usr/share/qgis/resources/server/api/` on a Linux system), the base "
+"directory can be customized by changing the environment variable "
+"``QGIS_SERVER_API_RESOURCES_DIRECTORY``."
+msgstr ""
+"テンプレートと静的アセットはQGISサーバーのデフォルトのAPIリソースディレクトリのサブディレクトリ(Linuxシステムの場合 "
+":file:`/usr/share/qgis/resources/server/api/`)に保存され、ベースディレクトリは環境変数 "
+"``QGIS_SERVER_API_RESOURCES_DIRECTORY`` を変更することでカスタマイズできます。"
+
+#: ../../docs/server_manual/services/ogcapif.rst:436
+msgid "A typical Linux installation will have the following directory tree:"
+msgstr "一般的なLinuxのインスタレーションは次のディレクトリ構造を持っています:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:461
+msgid ""
+"To override the templates you can copy the whole tree to another location "
+"and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location."
+msgstr ""
+"テンプレートを上書きするには、ツリー全体を別の場所にコピーし、 ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` "
+"を新しい場所に指定します。"

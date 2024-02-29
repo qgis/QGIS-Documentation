@@ -1,0 +1,697 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:2
+msgid "|LS| Actions"
+msgstr "Занятие: Действия"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:4
+msgid ""
+"Now that you have seen a default action in the previous lesson, it is time "
+"to define your own actions."
+msgstr ""
+"Теперь, когда вы видели действие по умолчанию в предыдущем занятии, пришло "
+"время определить собственные действия."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:7
+msgid ""
+"An action is something that happens when you click on a feature. It can add "
+"a lot of extra functionality to your map, allowing you to retrieve "
+"additional information about an object, for example. Assigning actions can "
+"add a whole new dimension to your map!"
+msgstr ""
+"Действие - это то, что происходит когда вы нажимаете на функцию. Оно может "
+"добавить много дополнительных функциональных возможностей на карту, позволяя"
+" получить дополнительную информацию об объекте, для примера. Назначение "
+"действий может добавить на карту совершенно новое измерение!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:12
+msgid "**The goal for this lesson:** To learn how to add custom actions."
+msgstr ""
+"**Цель этого занятия:** Научиться добавлять пользовательские действия."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:14
+msgid ""
+"In this lesson you will use the :guilabel:`school_property` layer you "
+"created previously. The sample data include photos of each of the three "
+"properties you digitized. What we are going to do is to associate each "
+"property with its image. Then we will create an action that will open the "
+"image for a property when clicking on the property."
+msgstr ""
+"На этом занятии вы будете использовать слой  :guilabel:`school_property`, "
+"который вы ранее создавали previously. Примеры данных включают фотографии "
+"каждого из трех оцифрованных свойств. Мы собираемся связать каждое свойство "
+"с его изображением. Затем создадим действие, которое откроет изображение для"
+" свойства при щелчке на свойстве."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:23
+msgid "|basic| |FA| Add a Field for Images"
+msgstr "|basic| Идем дальше: Добавление поля для изображений"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:351
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:25
+msgid ""
+"The ``school_property`` layer has no way to associate an image with a "
+"property yet. First we will create a field for this purpose."
+msgstr ""
+"В слое ``school_property`` пока не удается связать изображение со свойством."
+" Сначала создадим поле для этой цели."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:28
+msgid "Open the :guilabel:`Layer Properties` dialog."
+msgstr "Откройте диалоговое окно :guilabel:`Layer Properties`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:29
+msgid "Click on the :guilabel:`Fields` tab."
+msgstr "Кликните :guilabel:`Fields`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:30
+msgid "Toggle editing mode:"
+msgstr "Режим редактирования:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:35
+msgid "Add a new column:"
+msgstr "Добавьте новую колонку:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:40
+msgid "Enter the values below:"
+msgstr "Ниже введите значения:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:45
+msgid ""
+"After the field has been created, move to the :guilabel:`Attributes Form` "
+"tab and select the ``image`` field."
+msgstr ""
+"После того как вы создали поле перейдите к :guilabel:`Attributes Form` и "
+"выберите поле `image``."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:47
+msgid "Set :guilabel:`Widget Type` to :guilabel:`Attachment`:"
+msgstr ""
+"Задать тип виджета :guilabel:`Widget Type` для вложения "
+":guilabel:`Attachment`:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:52
+msgid "Click :guilabel:`OK` in the :guilabel:`Layer Properties` dialog."
+msgstr ""
+"Кликните :guilabel:`OK` в диалоговом окне :guilabel:`Layer Properties`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:53
+msgid ""
+"Use the :guilabel:`Identify` tool to click on one of the three features in "
+"the :guilabel:`school_property` layer."
+msgstr ""
+"Используйте инструмент :guilabel:`Identify` для клика на одну из трех "
+"функций в слое :guilabel:`school_property`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:56
+msgid ""
+"Since you are still in edit mode, the dialog should be active and look like "
+"this:"
+msgstr ""
+"Поскольку вы все еще находитесь в режиме редактирования, диалоговое окно "
+"должно быть активным и выглядеть следующим образом:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:62
+msgid ""
+"Click on the browse button (the :guilabel:`...` next to the "
+":guilabel:`image` field)."
+msgstr ""
+"Кликните на кнопку просмотра ( :guilabel:`...` рядом с полем "
+":guilabel:`image`)."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:64
+msgid ""
+"Select the path for your image. The images are in "
+":file:`exercise_data/school_property_photos/` and are named the same as the "
+"features they should be associated with."
+msgstr ""
+"Выберите путь к вашему изображению. Изображения в "
+":file:`exercise_data/school_property_photos/` и имеют то же имя, что и "
+"функции, с которыми они должны быть связаны."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:67
+msgid "Click :guilabel:`OK`."
+msgstr "Кликните :guilabel:`OK`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:68
+msgid ""
+"Associate all of the images with the correct features using this method."
+msgstr ""
+"Свяжите все изображения с правильными функциями с помощью этого метода."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:70
+msgid "Save your edits and exit edit mode."
+msgstr "Сохраните изменения и выйдите из режима редактирования."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:74
+msgid "|basic| |FA| Creating an Action"
+msgstr "|basic| Идем дальше: Создание действия"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:76
+msgid ""
+"Open the :guilabel:`Actions` tab for the :guilabel:`school_property` layer, "
+"and click on the |symbologyAdd| :sup:`Add a new action` button."
+msgstr ""
+"Откройте вкладку :guilabel:`Actions` для слоя  :guilabel:`school_property` и"
+" кликните на кнопку |symbologyAdd| :sup:`Add a new action`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:83
+msgid ""
+"In the :guilabel:`Add New Action` dialog, enter the words ``Show Image`` "
+"into the :guilabel:`Description` field:"
+msgstr ""
+"В диалоговом окне :guilabel:`Add New Action` введите слова ``Show Image`` в "
+"поле :guilabel:`Description`:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:89
+#: ../../docs/training_manual/create_vector_data/actions.rst:175
+msgid ""
+"What to do next varies according to your operating system, so choose the "
+"appropriate course to follow:"
+msgstr ""
+"Что делать дальше, зависит от операционной системы, поэтому выберите "
+"подходящий курс:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:92
+#: ../../docs/training_manual/create_vector_data/actions.rst:178
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:94
+msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Open`."
+msgstr "Кликните :guilabel:`Type` и выберите :guilabel:`Open`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:97
+#: ../../docs/training_manual/create_vector_data/actions.rst:184
+msgid "Ubuntu Linux"
+msgstr "Ubuntu Linux"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:99
+msgid ""
+"Under :guilabel:`Action`, write ``eog`` for the *Gnome Image Viewer*, or "
+"write ``display`` to use *ImageMagick*. Remember to put a space after the "
+"command!"
+msgstr ""
+"В поле :guilabel:`Action`, напишите ``eog`` для Средства просмотра "
+"изображений Gnome *Gnome Image Viewer*, или напишите  ``display`` чтобы "
+"использовать  *ImageMagick*. Помните, что нужно ставить пробел после "
+"команды!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:104
+#: ../../docs/training_manual/create_vector_data/actions.rst:190
+msgid "macOS"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:106
+msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Mac`."
+msgstr "Жмите на выпадающий :guilabel:`Type` и выберите  :guilabel:`Mac`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:108
+msgid ""
+"Under :guilabel:`Action`, write ``open``. Remember to put a space after the "
+"command!"
+msgstr ""
+"В  :guilabel:`Action`, пишите ``open``. Помните, что нужно ставить пробел "
+"после команды!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:112
+msgid "Now you can continue writing the command."
+msgstr "Теперь можно продолжить запись команды."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:114
+msgid ""
+"You want to open the image, and QGIS knows where the image is. All it needs "
+"to do is to tell the :guilabel:`Action` where the image is."
+msgstr ""
+"Вы хотите открыть изображение, и QGIS знает, где оно находится. Все, что ему"
+" нужно сделать, это сказать  :guilabel:`Action` там, где изображение."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:118
+msgid "Select :guilabel:`image` from the list:"
+msgstr "Выберите :guilabel:`image` из списка:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:123
+msgid ""
+"Click the :guilabel:`Insert field` button. QGIS will add the phrase ``[% "
+"\"image\" %]`` in the :guilabel:`Action Text` field."
+msgstr ""
+"Кликните на кнопку :guilabel:`Insert field`. QGIS добавит фразу ``[% "
+"\"image\" %]`` в поле :guilabel:`Action Text`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:126
+#: ../../docs/training_manual/create_vector_data/actions.rst:242
+msgid ""
+"Click the :guilabel:`OK` button to close the :guilabel:`Add New Action` "
+"dialog"
+msgstr ""
+"Кликните на кнопку :guilabel:`OK`, чтобы закрыть диалоговое окно "
+":guilabel:`Add New Action`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:128
+#: ../../docs/training_manual/create_vector_data/actions.rst:244
+msgid "Click :guilabel:`OK` to close the :guilabel:`Layer Properties` dialog"
+msgstr ""
+"Кликните на кнопку :guilabel:`OK` чтобы закрыть диалоговое окно "
+":guilabel:`Layer Properties`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:131
+msgid "Now it is time to test the new action:"
+msgstr "Теперь пришло время протестировать новое действие:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:133
+msgid ""
+"Click on the :guilabel:`school_property` layer in the :guilabel:`Layers` "
+"panel so that it is highlighted."
+msgstr ""
+"Кликните на слой :guilabel:`school_property` на панели  :guilabel:`Layers` "
+"чтобы оно выделилось."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:135
+msgid ""
+"Find the |actionRun| :sup:`Run feature action` button (in the "
+":guilabel:`Attributes Toolbar`)."
+msgstr ""
+"Найдите кнопку |actionRun| :sup:`Run feature action` (в  "
+":guilabel:`Attributes Toolbar`)."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:137
+msgid ""
+"Click on the down arrow to the right of this button. There is only one "
+"action defined for this layer so far, which is the one you just created."
+msgstr ""
+"Кликните стрелку вниз справа от этой кнопки. Для этого слоя на данный момент"
+" определено только одно действие, которое только что создано."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:144
+msgid "Click the button itself to activate the tool."
+msgstr "Кликните кнопку, чтобы активировать инструмент."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:145
+msgid "Using this tool, click on any of the three school properties."
+msgstr "С помощью этого инструмент кликните любое из трех свойств школы."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:147
+msgid "The image for that property should open."
+msgstr "Должно открыться изображение для этого свойства."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:150
+msgid "|moderate| |FA| Searching the Internet"
+msgstr "|moderate| Идем дальше: Поиск в Интернете"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:353
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:152
+msgid ""
+"Let's say we are looking at the map and want to know more about the area "
+"that a farm is in. Suppose you know nothing of the area in question and want"
+" to find general information about it. Your first impulse, considering that "
+"you're using a computer right now, would probably be to Google the name of "
+"the area. So let's tell QGIS to do that automatically for us!"
+msgstr ""
+"Допустим, мы смотрим на карту и хотим узнать больше о районе, в котором "
+"находится ферма. Предположим, вы ничего не знаете о данной местности и "
+"хотите найти общую информацию о ней. Ваш первый импульс, учитывая, что вы "
+"используете компьютер прямо сейчас, вероятно, будет найти в Google название "
+"местности. Давайте попросим QGIS сделать это автоматически для нас!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:158
+msgid "Open the attribute table for the :guilabel:`landuse` layer."
+msgstr "Откройте таблицу атрибутов в слое :guilabel:`landuse`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:160
+msgid ""
+"We will be using the ``name`` field for each of our landuse areas to search "
+"Google."
+msgstr ""
+"Мы будем использовать поле ``name`` для каждого района землепользования "
+"чтобы найти в Google."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:162
+msgid "Close the attribute table."
+msgstr "Закройте таблицу атрибутов."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:163
+msgid "Go back to :guilabel:`Actions` in :guilabel:`Layer Properties`."
+msgstr "Вернитесь к :guilabel:`Actions` в :guilabel:`Layer Properties`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:164
+msgid ""
+"Click on the :guilabel:`Create Default Actions` button to add a number of "
+"pre-defined actions."
+msgstr ""
+"Кликните на кнопку :guilabel:`Create Default Actions`, чтобы добавить ряд "
+"предварительно определенных действий."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:166
+msgid ""
+"Remove all the actions but the :guilabel:`Open URL` action with the short "
+"name :guilabel:`Search Web` using the |symbologyRemove| :sup:`Remove the "
+"selected action` button below."
+msgstr ""
+"Удалите все действия кроме :guilabel:`Open URL` с коротким именем "
+":guilabel:`Search Web` с помощью кнопки |symbologyRemove| :sup:`Remove the "
+"selected action`, которая расположена ниже."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:356
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:169
+msgid "Double-click on the remaining action to edit it"
+msgstr "Кликните два раза на оставшееся действие, чтобы редактировать его."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:170
+msgid ""
+"Change the :guilabel:`Description` to ``Google Search``, and remove the "
+"content of the :guilabel:`Short Name` field."
+msgstr ""
+"Поменяйте :guilabel:`Description` на ``Google Search``, и удалите содержимое"
+" поля :guilabel:`Short Name`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:172
+msgid ""
+"Make sure that :guilabel:`Canvas` is among the checked :guilabel:`Action "
+"scopes`."
+msgstr ""
+"Убедитесь, что Полотно :guilabel:`Canvas` находится среди :guilabel:`Action "
+"scopes` с флажками."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:180
+msgid ""
+"Under :guilabel:`Type`, choose :guilabel:`Open`. This will tell Windows to "
+"open an Internet address in your default browser, such as Internet Explorer."
+msgstr ""
+"В :guilabel:`Type` выберите :guilabel:`Open`. Это позволит Windows открыть "
+"адрес Интернета в браузере по умолчанию, например Internet Explorer."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:186
+msgid ""
+"Under :guilabel:`Action`, write ``xdg-open``. This will tell Ubuntu to open "
+"an Internet address in your default browser, such as Chrome or Firefox."
+msgstr ""
+"В :guilabel:`Action` напишите ``xdg-open``. Это позволит Ubuntu открыть "
+"интернет-адрес в браузере по умолчанию, например Chrome или Firefoxhis."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:196
+msgid "Now you can continue writing the command"
+msgstr "Теперь можно продолжить запись команды."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:198
+msgid ""
+"Whichever command you used above, you need to tell it which Internet address"
+" to open next. You want it to visit Google, and to search for a phrase "
+"automatically."
+msgstr ""
+"Независимо от того, какую команду вы использовали выше, вы должны сообщить "
+"ей, какой адрес Интернета открыть следующим. Вы хотите, чтобы она посетила "
+"Google и искала фразу автоматически."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:203
+msgid ""
+"Usually when you use Google, you enter your search phrase into the Google "
+"Search bar. But in this case, you want your computer to do this for you. The"
+" way you tell Google to search for something (if you don't want to use its "
+"search bar directly) is by giving your Internet browser the address "
+"``https://www.google.com/search?q=SEARCH_PHRASE``, where ``SEARCH_PHRASE``` "
+"is what you want to search for. Since we don't know what phrase to search "
+"for yet, we will just enter the first part (without the search phrase)."
+msgstr ""
+"Обычно при использовании Google вы вводите свою поисковую фразу в строку "
+"поиска Google. Но в этом случае вы хотите, чтобы ваш компьютер сделал это "
+"для вас. То, как вы зададите Google поиск чего-то (если вы не хотите "
+"использовать его строку поиска напрямую) является путем предоставления "
+"адреса вашему интернет-браузеру "
+"``https://www.google.com/search?q=SEARCH_PHRASE``, где ``SEARCH_PHRASE``` "
+"это то что вы ищете. Поскольку мы пока не знаем, какую фразу искать, мы "
+"просто введем первую часть (без поисковой фразы)."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:214
+msgid ""
+"In the :guilabel:`Action` field, write ``https://www.google.com/search?q=``."
+" Remember to add a space after your initial command before writing this in!"
+msgstr ""
+"В поле :guilabel:`Action` впишите ``https://www.google.com/search?q=``. Не "
+"забывайте добавить пробел после начальной команды перед тем как впишите это!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:219
+msgid ""
+"Now you want QGIS to tell the browser to tell Google to search for the value"
+" of ``name`` for any feature that you could click on."
+msgstr ""
+"Теперь вы хотите, чтобы QGIS сказал браузеру, чтобы Google искал значение "
+"имени  ``name`` для любой функции, которую вы можете нажать."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:222
+msgid "Select the :guilabel:`name` field."
+msgstr "Выберите поле :guilabel:`name`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:223
+msgid "Click :guilabel:`Insert` button:"
+msgstr "Кликните кнопку :guilabel:`Insert`:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:228
+msgid ""
+"What this means is that QGIS is going to open the browser and send it to the"
+" address ``https://www.google.com/search?q=[% \"name\" %]``. ``[% \"name\" "
+"%]`` tells QGIS to use the contents of the ``name`` field as the phrase to "
+"search for."
+msgstr ""
+"Это означает, что QGIS собирается открыть браузер и отправить его по адресу "
+"``https://www.google.com/search?q=[% \"name\" %]``. Команда ``[% \"name\" "
+"%]`` говорит QGIS использовать содержимое поля ``name`` как фразу поиска."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:234
+msgid ""
+"So if, for example, the landuse area you click on is named ``Marloth Nature "
+"Reserve``, QGIS is going to send the browser to "
+"``https://www.google.com/search?q=Marloth%20Nature%20Reserve``, which will "
+"cause your browser to visit Google, which will in turn search for \"Marloth "
+"Nature Reserve\"."
+msgstr ""
+"Так, например, если местность землепользования, на которую вы нажимаете, "
+"называется ``Marloth Nature Reserve``, QGIS собирается отправить браузер на "
+"``https://www.google.com/search?q=Marloth%20Nature%20Reserve``, что приведет"
+" к тому, что ваш браузер посетит Google, который в свою очередь будет искать"
+" \"Marloth Nature Reserve\"."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:240
+msgid "If you have not done so already, set everything up as explained above."
+msgstr "Если вы еще не сделали этого, настройте все, как описано выше."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:247
+msgid "Now to test the new action."
+msgstr "Теперь, чтобы проверить новое действие."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:249
+msgid ""
+"With the :guilabel:`landuse` layer active in the :guilabel:`Layers` panel, "
+"click on the down arrow to the right of the |actionRun| :sup:`Run feature "
+"action` button, and select the only action (``Google Search``) defined for "
+"this layer."
+msgstr ""
+"Слой :guilabel:`landuse` должен быть активен на панели  :guilabel:`Layers`, "
+"теперь кликните на стрелку вниз справа от кнопки  |actionRun| :sup:`Run "
+"feature action`, и выберите единственное действие (``Google Search``), "
+"определенное для этого слоя."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:253
+msgid ""
+"Click on any landuse area you can see on the map. Your browser will now "
+"open, and will start a Google search for the place that is recorded as that "
+"area's ``name`` value."
+msgstr ""
+"Кликните на любом участке землепользования, который можно увидеть на карте. "
+"Ваш браузер откроется и начнет поиск в Google места, записанного как "
+"значение ``name`` на этой местности."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:257
+msgid ""
+"If your action doesn't work, check that everything was entered correctly; "
+"typos are common with this kind of work!"
+msgstr ""
+"Если действие не работает, убедитесь, что все введено правильно; опечатки "
+"часто встречаются при таких работах!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:261
+msgid "|hard| |FA| Open a Webpage Directly in QGIS"
+msgstr "|hard| Идем дальше: Открытие веб-страницы непосредственно в QGIS"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:352
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:263
+msgid ""
+"Above, you've seen how to open a webpage in an external browser. There are "
+"some shortcomings with this approach in that it adds an unknowable "
+"dependency – will the end-user have the software required to execute the "
+"action on their system? As you've seen, they don't necessarily even have the"
+" same kind of base command for the same kind of action, if you don't know "
+"which OS they will be using. With some OS versions, the above commands to "
+"open the browser might not work at all. This could be an insurmountable "
+"problem."
+msgstr ""
+"Выше, вы видели, как открыть веб-страницу во внешнем браузере. Есть "
+"некоторые недостатки в таком подходе, так как он добавляет неизвестную "
+"зависимость - будет ли у конечного пользователя программное обеспечение, "
+"необходимое для выполнения действия в своей системе? Как вы видели, они не "
+"обязательно даже имеют один и тот же вид базовой команды для одного и того "
+"же вида действий, если вы не знаете, какую OS они будут использовать. В "
+"некоторых версиях OS вышеуказанные команды для открытия браузера могут "
+"вообще не работать. Это может быть непреодолимой проблемой."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:271
+msgid ""
+"However, QGIS sits on top of the incredibly powerful and versatile Qt "
+"library. Also, QGIS actions can be arbitrary, tokenized (i.e. using variable"
+" information based on the contents of a field attribute) Python commands!"
+msgstr ""
+"Однако QGIS находится в топе невероятно мощной и универсальной библиотеки "
+"Qt. Кроме того, действия QGIS могут быть произвольными, маркированными (т.е."
+" с использованием информации переменной на основе содержимого атрибута поля)"
+" командами Python!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:275
+msgid ""
+"Now you will see how to use a python action to show a web page. It is the "
+"same general idea as opening a site in an external browser, but it requires "
+"no browser on the user’s system since it uses the Qt QWebView class (which "
+"is a webkit based html widget) to display the content in a pop-up window."
+msgstr ""
+"Теперь вы увидите, как использовать действие python для отображения веб-"
+"страницы. Здесь лежит та же самая общая идея, что и открытие сайта во "
+"внешнем браузере, но она не требует браузера в системе пользователя, "
+"поскольку он использует класс Qt QWebView (который является HTML-виджетом на"
+" основе webkit) для отображения содержимого во всплывающем окне."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:281
+msgid ""
+"Let us use Wikipedia this time. So the URL you request will look like this:"
+msgstr ""
+"Давайте используем Википедию на этот раз. Таким образом, запрашиваемый URL "
+"будет выглядеть следующим образом:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:284
+msgid "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
+msgstr "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:286
+msgid "To create the layer action:"
+msgstr "Чтобы создать действие слоя:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:288
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog and head over to the "
+":guilabel:`Actions` tab."
+msgstr ""
+"Откройте диалоговое окно :guilabel:`Layer Properties` и перейдите к вкладке "
+":guilabel:`Actions`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:290
+msgid "Set up a new action using the following properties for the action:"
+msgstr ""
+"Настройте новое действие, используя для него следующие свойства действия:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:292
+msgid ":guilabel:`Type`: ``Python``"
+msgstr ":guilabel:`Type`: ``Python``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:293
+msgid ":guilabel:`Description`: ``Wikipedia``"
+msgstr ":guilabel:`Description`: ``Wikipedia``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:307
+msgid "There are a couple of things going on here:"
+msgstr "Здесь происходит несколько вещей:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:309
+msgid ""
+"``[%name%]`` will be replaced by the actual attribute value when the action "
+"is invoked (as before)."
+msgstr ""
+"``[%name%]`` будет заменено фактическим значением атрибута при вызове "
+"действия (как и ранее)."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:311
+msgid ""
+"The code simply creates a new ``QWebView`` instance, sets its URL, and then "
+"calls ``show()`` on it to make it visible as a window on the user’s desktop."
+msgstr ""
+"Код просто создает новый экземпляр ``QWebView``, задает его URL, а затем "
+"вызывает ``show()``· на нем, чтобы сделать его видимым в виде окна на "
+"рабочем столе пользователя."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:315
+msgid ""
+"You could also use this approach to display an image without requiring that "
+"the users have a particular image viewer on their system."
+msgstr ""
+"Этот подход можно также использовать для того чтобы показать изображение без"
+" необходимости наличия у пользователей определенного средства просмотра "
+"изображений в их системе."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:319
+msgid ""
+"Try to use the methods described above to load a Wikipedia page using the "
+"Wikipedia action you just created."
+msgstr ""
+"Попробуйте использовать описанные выше методы для загрузки страницы "
+"Википедии с помощью только что созданного действия Википедии."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:323
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:325
+msgid ""
+"Actions allow you to give your map extra functionality, useful to the end-"
+"user who views the same map in QGIS. Due to the fact that you can use shell "
+"commands for any operating system, as well as Python, the sky is the limit "
+"in terms of the functions you could incorporate!"
+msgstr ""
+"Действия позволяют предоставить вашей карте дополнительные функциональные "
+"возможности, полезные для конечного пользователя, который просматривает ту "
+"же карту в QGIS. Благодаря тому, что можно использовать команды оболочки для"
+" любой операционной системы, а также для Python, ваши возможности "
+"безграничны с точки зрения функций, которые вы могли бы включить!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:332
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:334
+msgid ""
+"Now that you've done all kinds of vector data creation, you will learn how "
+"to analyze the data to solve problems. That is the topic of the next module."
+msgstr ""
+"Теперь, когда вы освоили все виды создания векторных данных, вы научитесь "
+"анализировать данные для решения проблем. А это тема следующего модуля."

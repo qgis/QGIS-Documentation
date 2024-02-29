@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:5
+msgid "Offline Editing Plugin"
+msgstr "Plugin Offline Editing"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:7
+msgid ""
+"For data collection, it is a common situation to work with a laptop or a "
+"cell phone offline in the field. Upon returning to the network, the changes "
+"need to be synchronized with the master datasource (e.g., a PostGIS "
+"database). If several persons are working simultaneously on the same "
+"datasets, it is difficult to merge the edits by hand, even if people don’t "
+"change the same features."
+msgstr ""
+"In progetti di acquisizione dati è situazione comune trovarsi a lavorare sul"
+" campo con computer portatili e palmari: i dati in tal modo acquisiti vanno,"
+" poi, sincronizzati con la banca dati principale, (ad esempio un database "
+"PostGIS). Se più persone lavorano simultaneamente sullo stesso set di dati, "
+"risulta difficile aggiornare la banca dati principale manualmente, anche se "
+"le persone non stanno aggiornando gli stessi elementi."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:13
+msgid ""
+"The |offlineEditingCopy| :sup:`Offline Editing` Plugin automates the "
+"synchronisation by copying the content of the datasource to a SpatiaLite or "
+"GeoPackage database and storing the offline edits to dedicated tables. After"
+" being connected to the network again, it is possible to apply the offline "
+"edits to the master dataset."
+msgstr ""
+"Il plugin |offlineEditingCopy| :sup:`Offline Editing` automatizza la "
+"sincronizzazione copiando il contenuto della sorgente dati in un database "
+"SpatiaLite o GeoPackage e memorizzando le modifiche offline in specifiche "
+"tabelle. Dopo essere stato connesso di nuovo alla rete, è possibile "
+"applicare le modifiche offline al dataset principale."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:77
+msgid "offlineEditingCopy"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:19
+msgid "To use the plugin:"
+msgstr "Per usare il plugin:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:21
+msgid ""
+"Open a project with some vector layers (e.g., from an Esri Shapefile, "
+"PostGIS or WFS-T datasource)."
+msgstr ""
+"Apri un progetto con alcuni layer vettoriali (ad esempio, da un Esri "
+"Shapefile, PostGIS o da una sorgente dati WFS-T)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:23
+msgid ""
+"Assuming you have already enabled the plugin (see "
+":ref:`core_and_external_plugins`) go to :menuselection:`Database --> Offline"
+" Editing -->` |offlineEditingCopy| :guilabel:`Convert to offline project`. "
+"The eponym dialog opens."
+msgstr ""
+"Supponendo che tu abbia già abilitato il plugin (vedi "
+":ref:`core_and_external_plugins`) vai su  :menuselection:`Database --> "
+"Editing Offline -->` |offlineEditingCopy| :guilabel:`Converti a Progetto "
+"Offline...`.  Si apre la finestra di dialogo 'Crea Progetto Offline'."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:26
+msgid ""
+"Select the :guilabel:`Storage type`. It can be of :guilabel:`GeoPackage` or "
+":guilabel:`SpatiaLite` database type."
+msgstr ""
+"Seleziona il :guilabel:`Tipo archiviazione`. Può essere database "
+":guilabel:`GeoPackage` o :guilabel:`SpatiaLite`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:28
+msgid ""
+"Use the :guilabel:`Browse` button to indicate the location of the database "
+"in which to store the :guilabel:`Offline data`. It can be an existing file "
+"or one to create."
+msgstr ""
+"Utilizza il pulsante :guilabel:`Sfoglia` per indicare la posizione del "
+"database in cui archiviare i  :guilabel:`Dati Offline`. Può essere un file "
+"esistente o uno da creare."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:31
+msgid ""
+"In the :guilabel:`Select remote layers` section, check the layers you'd like"
+" to save. The content of the layers is saved to database tables."
+msgstr ""
+"Nella sezione :guilabel:`Seleziona layer remoti`, seleziona i file che vuoi "
+"salvare. Il contenuto dei layer viene salvato nelle tabelle del database."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:35
+msgid ""
+"Since target database formats do not have native list support, the offline "
+"editing plugin transforms {string, number} list fields into string fields "
+"where values are separated by commas. This allows reading and edit of the "
+"contents of those fields when offline."
+msgstr ""
+"Poiché i formati di database di destinazione non hanno un supporto nativo "
+"per le liste, il plugin di modifica offline trasforma i campi elenco "
+"{stringa, numero} in campi stringa dove i valori sono separati da virgole. "
+"Questo permette di leggere e modificare il contenuto di quei campi quando si"
+" è offline."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:40
+msgid ""
+"If you would like to handle both the field from the original layer and the "
+"offline layer, you can rely on the :ref:`try() "
+"<expression_function_Conditionals_try>` and :ref:`array <array_functions>` "
+"expression functions, e.g.::"
+msgstr ""
+"Se vuoi gestire sia il campo dal layer originale che il layer offline, puoi "
+"fare affidamento sulle funzioni di espressione :ref:`try() "
+"<expression_function_Conditionals_try>` e :ref:`array <array_functions>`, ad"
+" esempio:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:46
+msgid ""
+"You can check |checkbox| :guilabel:`Only synchronize selected features if a "
+"selection is present` allowing to only save and work on a subset. It can be "
+"invaluable in case of large layers."
+msgstr ""
+"Puoi selezionare la casella di controllo :guilabel:`Sincronizza solo gli "
+"elementi selezionati se è presente una selezione` che ti permette di salvare"
+" e lavorare solo su un sottoinsieme. Può essere prezioso nel caso di layer "
+"di grandi dimensioni."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:73
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:50
+msgid "This is all!"
+msgstr "Questo è tutto!"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:51
+msgid "Save your project and bring it on the field."
+msgstr "Salva il tuo progetto e lavoraci su."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:52
+msgid "Edit the layers offline."
+msgstr "Modificare layer in modalità non in linea."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:53
+msgid ""
+"After being connected again, upload the changes using "
+":menuselection:`Database --> Offline Editing -->` |offlineEditingSync| "
+":guilabel:`Synchronize`."
+msgstr ""
+"Dopo essersi nuovamente connessi, carica le modifiche utilizzando "
+":menuselection:`Database --> Editing Offline -->` |offlineEditingSync| "
+":guilabel:`Sincronizza`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:79
+msgid "offlineEditingSync"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:56
+msgid ""
+"Layers that are used offline are marked with the |indicatorOffline| icon in "
+"the :guilabel:`Layers` panel."
+msgstr ""
+"I layer utilizzati offline sono contrassegnati con |indicatorOffline| nel "
+"pannello :guilabel:'Layer'."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:75
+msgid "indicatorOffline"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:64
+msgid "Create an offline project"
+msgstr "Crea Progetto Offline"

@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/developers_guide/localization.rst:3
+msgid "Localization"
+msgstr "Lokalisatie"
+
+#: ../../docs/developers_guide/localization.rst:5
+msgid "QGIS user interface is available in multiple languages."
+msgstr "De QGIS gebruikersinterface is beschikbaar in meerdere talen."
+
+#: ../../docs/developers_guide/localization.rst:7
+msgid ""
+"A global option in the settings allows to override the user interface "
+"language which was automatically detected from the operating system."
+msgstr ""
+"Een globale optie in de instellingen maakt het mogelijk de taal voor de "
+"gebruikersinterface, die automatisch wordt gedetecteerd vanuit het "
+"besturingssysteem, te overschrijven."
+
+#: ../../docs/developers_guide/localization.rst:11
+msgid ""
+"The representation of numbers, currency and dates varies according to the "
+"country and it is also overrideable in the settings."
+msgstr ""
+"De weergave van getallen, valuta en datums varieert per land en is dus ook "
+"te overschrijven in de instellingen."
+
+#: ../../docs/developers_guide/localization.rst:15
+msgid ""
+"Another option in the settings allows to define if the numeric thousands "
+"separator has to be used."
+msgstr ""
+"Een andere optie in de instellingen maakt het mogelijk te definiëren of het "
+"scheidingsteken voor duizendtallen moet worden gebruikt."
+
+#: ../../docs/developers_guide/localization.rst:18
+msgid ""
+"All these features are implemented through the `QLocale "
+"<https://doc.qt.io/qt-5/qlocale.html>`_ QT class which provides a very "
+"complete support for numeric and date types representation."
+msgstr ""
+"Al deze mogelijkheden werden geïmplementeerd door de QT-klasse `QLocale "
+"<https://doc.qt.io/qt-5/qlocale.html>`_, die een zeer volledige "
+"ondersteuning voor weergave van typen numeriek en datum verschaft."
+
+#: ../../docs/developers_guide/localization.rst:23
+msgid ""
+"In order to make this system work a few rules need to be carefully followed "
+"when displaying numeric values in the QGIS user interface and when "
+"converting user input to integral or floating point variables."
+msgstr ""
+"Om dit systeem te laten werken moeten een paar regels zorgvuldig in acht "
+"worden genomen bij het weergeven van numerieke waarden in de "
+"gebruikersinterface van QGIS en bij het converteren van invoer van de "
+"gebruiker naar variabelen integral of floating point."
+
+#: ../../docs/developers_guide/localization.rst:29
+msgid "Converting numbers to strings"
+msgstr "Getallen converteren naar tekenreeksen"
+
+#: ../../docs/developers_guide/localization.rst:31
+msgid ""
+"For strings that are printed on the screen and visible to the users do not "
+"use ``QString::number()`` because it does not take locale options into "
+"consideration and it always uses ``C`` locale."
+msgstr ""
+"Gebruik niet ``QString::number()`` voor tekenreeksen die worden afgedrukt op"
+" het scherm en zichtbaar zijn voor gebruikers, omdat het geen rekening houdt"
+" met de opties voor de locale en altijd de locale ``C`` gebruikt."
+
+#: ../../docs/developers_guide/localization.rst:35
+msgid ""
+"Also do not use string interpolation unless you use the ``L`` suffix as "
+"explained in `QString documentation "
+"<https://doc.qt.io/qt-5/qstring.html#arg-5>`_."
+msgstr ""
+"Gebruik ook niet interpoleren van tekenreeksen, tenzij u het achtervoegsel "
+"``L`` gebruikt, zoals uitgelegd in `QString documentatie "
+"<https://doc.qt.io/qt-5/qstring.html#arg-5>`_."
+
+#: ../../docs/developers_guide/localization.rst:38
+msgid "Use ``QLocale().toString()`` instead."
+msgstr "Gebruik in plaats daarvan ``QLocale().toString()``."
+
+#: ../../docs/developers_guide/localization.rst:40
+msgid "Example:"
+msgstr "Voorbeeld:"
+
+#: ../../docs/developers_guide/localization.rst:53
+msgid ""
+"A notable exception to this rule is the generation of strings that will be "
+"passed to external applications or scripts that expect ``C`` number "
+"representation (dot as decimal separator and no thousands separator). "
+"``QString::number()`` must be used in this situation."
+msgstr ""
+"Een te onthouden uitzondering op deze regel is het maken van tekenreeksen "
+"die zullen worden doorgegeven aan externe toepassingen of scripts die "
+"``C``-weergave van getallen verwachten (punt als decimaal scheidingsteken en"
+" geen scheidingsteken voor duizendtallen). ``QString::number()`` moet in "
+"deze situatie worden gebruikt."
+
+#: ../../docs/developers_guide/localization.rst:60
+msgid "Converting user input strings to numbers"
+msgstr "Gebruikersinvoer converteren van tekenreeksen naar getallen"
+
+#: ../../docs/developers_guide/localization.rst:62
+msgid ""
+"When converting strings from user input to numbers do not use "
+"``QVariant::toDouble()``, ``QString::toDouble()`` or other ``::toDouble()`` "
+"methods available in QT classes because these methods ignore locale "
+"settings. The same consideration applies to integral types and ``::toInt()``"
+" or ``::toLongLong()`` methods."
+msgstr ""
+"Bij het converteren van tekenreeksen van gebruikersinvoer naar getallen, "
+"gebruik dan niet ``QVariant::toDouble()``, ``QString::toDouble()`` of andere"
+" methoden ``::toDouble()`` die beschikbaar zijn in klassen van QT, omdat die"
+" methoden instellingen voor de locale negeren. Hetzelfde is van toepassing "
+"voor typen integral en methoden ``::toInt()`` of ``::toLongLong()``."
+
+#: ../../docs/developers_guide/localization.rst:68
+msgid ""
+"``QLocale().toDouble()`` or ``QLocale().toInt()`` and the others "
+"``QLocale()`` conversion methods can be used in this situation."
+msgstr ""
+"``QLocale().toDouble()`` of ``QLocale().toInt()`` en de andere methoden voor"
+" conversie van ``QLocale()``kunnen in deze situatie worden gebruikt."
+
+#: ../../docs/developers_guide/localization.rst:71
+msgid ""
+"As a better alternative, QGIS API provides a few classes that should be used"
+" for floating point numeric user input:"
+msgstr ""
+"Als een beter alternatief verschaft de QGIS API een aantal klassen die "
+"zouden moeten worden gebruikt voor numerieke gebruikersinvoer van floating "
+"point:"
+
+#: ../../docs/developers_guide/localization.rst:74
+msgid ":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>`"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:75
+msgid ":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>`"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:78
+msgid ""
+":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>` displays the number "
+"according to user locale and settings and it validates the user input using "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>`."
+msgstr ""
+":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>` geeft het getal weer "
+"overeenkomstig de locale van de gebruiker en instellingen en het valideert "
+"de gebruikersinvoer met :class:`QgsDoubleValidator "
+"<qgis.gui.QgsDoubleValidator>`."
+
+#: ../../docs/developers_guide/localization.rst:82
+msgid ""
+"The validator class is tolerant and it will try to interpret the input "
+"checking first for the user locale and falling back to ``C`` locale if there"
+" is no match."
+msgstr ""
+"De klasse voor valideren is tolerant en het zal proberen de invoer te "
+"interpreteren door eerst te controleren op de locale van de gebruiker en, "
+"als er geen overeenkomst wordt gevonden, terug te vallen op de locale ``C``."
+
+#: ../../docs/developers_guide/localization.rst:86
+msgid ""
+"The general recommendation is to use :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` for all floating point types I/O whenever it is"
+" possible because it is very well tested and it validates the input "
+"correctly. As an alternative it is possible to use the "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class "
+"independently on a string obtained from another widget (e.g. a simple "
+"``QLineEdit`` widget)."
+msgstr ""
+"De algemene aanbeveling is om :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` te gebruiken voor alle typen floating point I/O"
+" wanneer dat mogelijk is, omdat het heel goed getest is en het de invoer "
+"correct valideert. Als een alternatief is het mogelijk de klasse "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` onafhanklijk te "
+"gebruiken op een tekenreeks die is verkregen uit een ander widget (bijv. een"
+" eenvoudig widget ``QLineEdit``)."

@@ -1,0 +1,666 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2024\n"
+"Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:2
+msgid "|LS| Creating Detailed Maps with the Atlas Tool"
+msgstr "|LS| Crearea hărților detaliate folosind instrumentul Atlas"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:4
+msgid ""
+"The systematic sampling design is ready and the field teams have loaded the "
+"GPS coordinates in their navigation devices. They also have a field data "
+"form where they will collect the information measured at every sample plot. "
+"To easier find their way to every sample plot, they have requested a number "
+"of detail maps where some ground information can be clearly seen along with "
+"a smaller subset of sample plots and some information about the map area. "
+"You can use the Atlas tool to automatically generate a number of maps with a"
+" common format."
+msgstr ""
+"Proiectarea sistematică de eșantionare este gata, iar echipele de teren și-"
+"au încărcat coordonatele GPS în dispozitivele de navigare. Există, de "
+"asemenea, un formular pentru date, în care se vor colecta informațiile "
+"măsurate pentru fiecare schiță. Pentru a găsi mai ușor drumul spre fiecare "
+"parcelă, s-au solicitat o serie de hărți detaliate, în cazul în care unele "
+"informații din teren pot fi văzute în mod clar, împreună cu un subset mic de"
+" schițe și câteva informații despre zonă. Puteți utiliza instrumentul Atlas "
+"pentru a genera automat o serie de hărți, având un format comun."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:12
+msgid ""
+"**The goal for this lesson:** Learn to use the Atlas tool in QGIS to "
+"generate detailed printable maps to assist in the field inventory work."
+msgstr ""
+"**Scopul acestei lecții:** Aflați cum să utilizați instrumentul Atlas în "
+"QGIS, pentru a genera hărți tipăribile detaliate, în scopul sprijinirii "
+"activității de inventariere în teren."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:16
+msgid "|basic| |FA| Preparing the Print Layout"
+msgstr "|basic| |FA| Pregătirea Hărților pentru Tipărire"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:489
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:18
+msgid ""
+"Before we can automate the detailed maps of the forest area and our sampling"
+" plots, we need to create a map template with all the elements we consider "
+"useful for the field work. Of course the most important will be a properly "
+"styled but, as you have seen before, you will also need to add lots of other"
+" elements that complete the printed map."
+msgstr ""
+"Înainte de a putea automatiza hărțile detaliate ale zonei forestiere și "
+"schițele noastre de eșantionare, trebuie să creăm un șablon cu toate "
+"elementele pe care le considerăm utile în munca de teren. Desigur, cea mai "
+"importantă va fi o stilizare corectă, dar, după cum ați văzut mai înainte, "
+"va trebui să adăugați și o mulțime de alte elemente care completează harta "
+"tipărită."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:24
+msgid ""
+"Open the QGIS project from the previous lesson :file:`forest_inventory.qgs`."
+" You should have at least the following layers:"
+msgstr ""
+"Deschideți proiectul QGIS din lecția anterioară "
+":file:`forest_inventory.qgs`. Ar trebui să aveți cel puțin următoarele "
+"straturi:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:27
+msgid ""
+":guilabel:`forest_stands_2012` (with a 50% transparency, green fill and "
+"darker green border lines)"
+msgstr ""
+":guilabel:`forest_stands_2012` (cu o transparență de 50%, umplere verde și "
+"linii de margine de culoare verde mai închis)"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:29
+msgid ":guilabel:`systematic_plots_clip`"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:30
+msgid ":guilabel:`rautjarvi_aerial`"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:32
+msgid "Save the project with a new name, :file:`map_creation.qgs`."
+msgstr "Salvați proiectul sub un nume nou, :file:`map_creation.qgs`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:494
+msgid "layoutManager"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:48
+msgid "Check :guilabel:`Size` is :guilabel:`A4`."
+msgstr "Asigurați-vă că :guilabel:`Dimensiunea` este :guilabel:`A4`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:49
+msgid "Check :guilabel:`Orientation` is :guilabel:`Landscape`."
+msgstr "Asigurați-vă că :guilabel:`Orientarea` este :guilabel:`Peisaj`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:60
+msgid "You need to activate the use of the grid:"
+msgstr "Trebuie să activați folosirea grilei:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:62
+msgid "Open the :menuselection:`View` menu."
+msgstr "Deschideți meniul :menuselection:`Vizualizare"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:63
+msgid "Check :guilabel:`Show grid`."
+msgstr "Bifați :guilabel:`Afișarea grilei`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:64
+msgid "Check :guilabel:`Snap to grid`."
+msgstr "Bifați :guilabel:`Acroșare la grilă`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:485
+msgid "addMap"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:73
+msgid ""
+"Click and drag a box on the canvas so that the map occupies most of it."
+msgstr ""
+"Țineți apăsat butonul stâng al mouse-ului și trasați un dreptunghi în care "
+"să încadrați cea mai mare parte a hărții."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:78
+msgid ""
+"Notice how the mouse cursor snaps to the canvas grid. Use this function when"
+" you add other elements. If you want to have more accuracy, change the grid "
+":guilabel:`Spacing` setting. If for some reason you don't want to snap to "
+"the grid at some point, you can always check or uncheck it in the "
+":menuselection:`View` menu."
+msgstr ""
+"Observați modul în care cursorul mouse-ului se acroșează la grila "
+"canevasului. Utilizați această funcție atunci când adăugați alte elemente. "
+"Dacă doriți să aveți mai multă acuratețe, schimbați setările de "
+":guilabel:`Spațiere` ale grilei. Dacă dintr-un motiv oarecare nu mai doriți "
+"acroșarea la grilă la un moment dat, puteți întotdeauna bifa sau debifa "
+"meniul :menuselection:`Vizualizare`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:86
+msgid "|basic| |FA| Adding Background Map"
+msgstr "|basic| |FA| Adăugarea Fundalului Hărții"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:95
+msgid ""
+"As you can see the background map is already styled. This type of ready to "
+"use cartography raster is very common. It is created from vector data, "
+"styled in a standard format and stored as a raster so that you don't have to"
+" bother styling several vector layers and worrying about getting a good "
+"result."
+msgstr ""
+"După cum puteți vedea, harta de fundal este deja stilizată. Acest tip de "
+"raster cartografic gata de utilizare este foarte frecvent. El este creat din"
+" date vectoriale, stilizate într-un format standard și stocate ca un raster,"
+" așa că nu trebuie să vă îngrijoreze obținerea unui rezultat bun."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:100
+msgid ""
+"Now zoom to your sample plots, so that you can see only about four or five "
+"lines of plots."
+msgstr ""
+"Acum măriți schițele dvs., astfel încât să puteți vedea doar aproximativ "
+"patru sau cinci linii de parcele."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:500
+msgid "select"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:115
+#: ../../docs/training_manual/forestry/forest_maps.rst:324
+msgid "Go to the :guilabel:`Item properties` tab."
+msgstr "Mergeți la fila :guilabel:`Proprietățile itemului` tab."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:502
+msgid "setToCanvasExtent"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:498
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:126
+msgid "|basic| |TY| Changing the Symbology of the Layers"
+msgstr "|basic| |TY| Schimbarea Simbologiei Straturilor"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:128
+msgid ""
+"You have been working in :doc:`../basic_map/index` with symbology and in "
+":doc:`../vector_classification/index` with labeling. Go back to those "
+"modules if you need to refresh about some of the available options and "
+"tools. Your goal is to get the plots locations and their name to be as "
+"clearly visible as possible but always allowing to see the background map "
+"elements. You can take some guidance from this image:"
+msgstr ""
+"Ați exersat simbologia cu :doc:`../basic_map/index`, și etichetarea cu "
+":doc:`../vector_classification/index`. Reveniți la aceste module dacă "
+"trebuie să vă reamintiți unele dintre opțiunile și instrumentele "
+"disponibile. Scopul dvs. este de a afișa locațiile loturilor și numele lor "
+"cât mai clar, dar întotdeauna să fie posibilă vizualizarea elementelor din "
+"fundalul hărții. Vă puteți orienta după această imagine:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:142
+msgid ""
+"You get a new layer named ``forest_stands_2012 copy`` that you can use to "
+"define a different style, for example with no filling and red borders."
+msgstr ""
+"Obțineți un nou strat numit ``forest_stands_2012 copy`` pe care îl puteți "
+"utiliza pentru a defini un stil diferit, de ex.: fără umplere și cu margini "
+"roșii."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:145
+msgid ""
+"Now you have two different visualizations of the forest stands and you can "
+"decide which one to display for your detail map."
+msgstr ""
+"Acum aveți două vizualizări diferite ale parcelelor împădurite și puteți "
+"decide pe care să o afișați pentru harta dvs. detaliată."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:163
+msgid "|basic| |TY| Create a Basic Map Template"
+msgstr "|basic| |TY| Crearea unui șabblon pentru Harta de Bază"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:168
+msgid "Title."
+msgstr "Titlu."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:169
+msgid "A scale bar."
+msgstr "O scară grafică."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:170
+msgid "Grid frame for your map."
+msgstr "Cadrul grilei pentru harta dvs."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:171
+msgid "Coordinates on the sides of the grid."
+msgstr "Coordonate situate pe părțile laterale ale grilei."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:179
+msgid "Export your map as an image and look at it."
+msgstr "Exportați harta dvs. ca o imagine și priviți-o."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:184
+msgid "That is what it will look like when printed."
+msgstr "Iată cum va arăta atunci la tipărire."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:189
+msgid ""
+"As you probably noticed in the suggested map template images, there are "
+"plenty of room on the right side of the canvas. Lets see what else could go "
+"in there. For the purposes of our map, a legend is not really necessary, but"
+" an overview map and some text boxes could add value to the map."
+msgstr ""
+"Așa cum probabil ați observat în imaginea hărții șablon propusă, există o "
+"mulțime de loc în partea dreaptă a canevasului. Haideți să vedem ce altceva "
+"ar putea merge acolo. Pentru scopul hărții noastre, o legendă nu este cu "
+"adevărat necesară, dar o imagine de ansamblu a hărții și niște casete de "
+"text ar putea adăuga valoare hărții."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:194
+msgid ""
+"The overview map will help the field teams place the detail map inside the "
+"general forest area:"
+msgstr ""
+"Harta de ansamblu va ajuta echipele de teren să plaseze harta detaliată în "
+"interiorul suprafeței generală a pădurii:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:197
+msgid "Add another map element to the canvas, right under the title text."
+msgstr ""
+"Adăugați un alt element de hartă pe canevas, chiar sub textul din titlu."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:198
+msgid ""
+"In the :guilabel:`Item properties` tab, open the :guilabel:`Overview` "
+"dropdown."
+msgstr ""
+"În fila :guilabel:`Proprietăților elementului`, deschideți caseta cu "
+"derulare verticală :guilabel:`Overview`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:199
+msgid ""
+"Set the :guilabel:`Overview frame` to :guilabel:`Map 0`. This creates a "
+"shadowed rectangle over the smaller map representing the extent visible in "
+"the bigger map."
+msgstr ""
+"Puneți :guilabel:`Overview frame` pe :guilabel:`Map 0`. Acest lucru creează "
+"un dreptunghi umbrit deasupra hărții mici, care reprezintă extinderea "
+"vizibilă în harta mai mare."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:218
+msgid ""
+"Deactivate all layers except for :guilabel:`basic_map` and "
+":guilabel:`forest_stands_2012`."
+msgstr ""
+"Dezactivați toate straturile, cu excepția :guilabel:`basic_map` și "
+":guilabel:`forest_stands_2012`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:232
+msgid ""
+"Go to the map window again and select the layers you want to be visible "
+"(``systematic_plots_clip``, ``forest_stands_2012 copy`` and ``Basic_map``)."
+msgstr ""
+"Mergeți din nou la fereastra hărții și selectați straturile pe care le "
+"doriți să fie vizibile (``systematic_plots_clip``, ``forest_stands_2012 "
+"copy`` și ``Basic_map``)."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:234
+msgid "Zoom again to have only a few lines of sample plots visible."
+msgstr ""
+"Transfocați iarăși, pentru a avea vizibile doar câteva linii ale parcelelor."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:240
+msgid ""
+"Notice that only the bigger map is displaying the current map view, and the "
+"small overview map is keeping the same view you had when you locked it."
+msgstr ""
+"Observați că numai harta mai mare afișează vizualizarea curentă a hărții, "
+"iar harta mai mică de ansamblu păstrează aceeași vedere pe care ați "
+"blocat-o."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:243
+msgid ""
+"Note also that the overview is showing a shaded frame for the extent shown "
+"in the detail map."
+msgstr ""
+"Rețineți, de asemenea, că o vedere de ansamblu afișează un cadru umbrit "
+"pentru  extinderea prezentată în harta detaliată."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:248
+msgid ""
+"Your template map is almost ready. Add now two text boxes below the map, one"
+" containing the text 'Detailed map zone: ' and the other one 'Remarks: '. "
+"Place them as you can see in the image above."
+msgstr ""
+"Șablonul hărții dvs. este aproape gata. Adăugați în hartă cele două casete "
+"de text de mai jos, una conținând textul 'Zona detaliată a hărții:', iar "
+"cealaltă 'Observații:'. Plasați-le așa cum se vede în imaginea de mai sus."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:252
+msgid "You can also add a North arrow to the overview map:"
+msgstr "Puteți adăuga, de asemenea, o săgeată a Nordului la harta generală:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:496
+msgid "northArrow"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:260
+msgid "Resize the arrow image to a size that looks good on the small map."
+msgstr ""
+"Redimensionați imaginea săgeții la o dimensiune care arată bine pe hărțile "
+"mici."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:267
+msgid "|basic| |FA| Creating an Atlas Coverage"
+msgstr "|basic| |FA| Crearea unei Acoperiri de Atlas"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:269
+msgid ""
+"The Atlas coverage is just a vector layer that will be used to generate the "
+"detail maps, one map for every feature in the coverage. To get an idea of "
+"what you will do next, here is a full set of detail maps for the forest "
+"area:"
+msgstr ""
+"Acoperirea Atlasului reprezintă doar un strat vectorial care va fi folosit "
+"pentru a genera hărțile detaliate, o hartă pentru fiecare entitate din aria "
+"de acoperire. Pentru a vă face o idee despre aceasta, iată un set complet de"
+" hărți detaliate pentru zona de pădure:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:276
+msgid ""
+"The coverage could be any existing layer, but usually it makes more sense to"
+" create one for the specific purpose. Let's create a grid of polygons "
+"covering the forest area:"
+msgstr ""
+"Acoperirea poate fi orice strat existent, dar, de obicei, are mai mult sens "
+"crearea unuia în acest scop specific. Haideți să creăm o rețea de poligoane "
+"care acoperă zona de pădure:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:504
+msgid "vectorGrid"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:282
+msgid "Set the tool as shown in this image:"
+msgstr "Setați instrumentul așa cum se arată în această imagine:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:289
+msgid "Save the output as :file:`atlas_coverage.shp`."
+msgstr "Salvați rezultatul ca :file:`atlas_coverage.shp`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:292
+msgid ""
+"The new polygons are covering the whole forest area and they give you an "
+"idea of what each map (created from each polygon) will contain."
+msgstr ""
+"Noile poligoane acoperă întreaga zonă de pădure și vă conferă o idee despre "
+"ceea ce va conține fiecare hartă (creată din fiecare poligon)."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:299
+msgid "|basic| |FA| Setting Up the Atlas Tool"
+msgstr "|basic| |FA| Configurarea Instrumentului Atlas"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:301
+msgid "The last step is to set up the Atlas tool:"
+msgstr "Ultimul pas este de a crea instrumentul Atlas:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:304
+msgid "In the panel on the right, go to the :guilabel:`Atlas generation` tab."
+msgstr "În panoul din dreapta, mergeți la fila :guilabel:`Atlas generation`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:305
+msgid "Set the options as follows:"
+msgstr "Setați opțiunile după cum urmează:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:317
+msgid ""
+"One more thing needs to be done. You need to tell the Atlas tool what map "
+"element is going to be updated for every output map. By now, you probably "
+"can guess that the map to be changed for every feature is the one you have "
+"prepared to contain detail views of the sample plots, that is the bigger map"
+" element in your canvas:"
+msgstr ""
+"Mai trebuie să fie făcut un lucru. Trebuie să indicați Atlasului care "
+"element va fi actualizat pentru fiecare hartă de ieșire. Până acum, probabil"
+" că ați ghicit că harta care urmează a fi schimbată pentru fiecare entitate,"
+" este cea pe care ați pregătit-o să conțină vederile detaliate ale "
+"parcelelor eșantion, ea reprezentând elementul cel mai mare de pe canevas:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:325
+msgid "In the list, check :guilabel:`Controlled by atlas`."
+msgstr "În listă, bifați :guilabel:`Controlat de atlas`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:333
+msgid ""
+"Now you can use the preview tool for Atlas maps to review what your maps "
+"will look like:"
+msgstr ""
+"Acum puteți utiliza instrumentul de vizualizare pentru Atlas, pentru a "
+"revizui ceea ce vor arăta hărțile:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:335
+msgid ""
+"Activate the Atlas previews using the button |atlas| or if your Atlas "
+"toolbar is not visible, via :menuselection:`Atlas --> Preview Atlas`."
+msgstr ""
+"Activați previzualizarea Atlasului folosind butonul |atlas| sau, în cazul în"
+" care bara de instrumente nu este vizibilă, via :menuselection:`Atlas --> "
+"Previzualizare Atlas`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:487
+msgid "atlas"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:337
+msgid ""
+"You can use the arrows in the Atlas tool bar or in the "
+":menuselection:`Atlas` menu to move through maps that will be created."
+msgstr ""
+"Puteți folosi săgețile din bara de instrumente a Atlasului, sau din meniul "
+":menuselection:`Atlas`, pentru a vă deplasa printre hărțile care vor fi "
+"create."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:344
+msgid "|basic| |FA| Editing the Coverage Layer"
+msgstr "|basic| |FA| Editarea Stratului de Acoperire"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:346
+msgid ""
+"Besides removing the polygons for those areas that are not interesting, you "
+"can also customize the text labels in your map to be generated with content "
+"from the :guilabel:`Attribute table` of your coverage layer:"
+msgstr ""
+"Pe lângă eliminarea poligoanelor pentru acele zone care nu sunt interesante,"
+" puteți personaliza, de asemenea, etichetele din harta dvs., prin generarea "
+"conținutului acestora din :guilabel:`Tabela de atribute` a stratului de "
+"acoperire."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:353
+msgid "Go back to the map view."
+msgstr "Mergeți înapoi la vizualizarea hărții."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:355
+msgid "Select the polygons that are selected (in yellow) in the image below."
+msgstr ""
+"Selectați poligoanele care sunt evidențiate (în galben) în imaginea de mai "
+"jos."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:356
+msgid "Remove the selected polygons."
+msgstr "Eliminați poligoanele selectate."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:357
+msgid "Disable editing and save the edits."
+msgstr "Dezactivați editarea și salvați modificările."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:365
+msgid ""
+"The coverage layer you are using does not yet have useful information that "
+"you could use to customize the content of the labels in your map. The first "
+"step is to create them, you can add for example a zone code for the polygon "
+"areas and a field with some remarks for the field teams to have into "
+"account:"
+msgstr ""
+"Stratul de acoperire pe care îl utilizați, încă nu conține informații utile,"
+" pe care să le puteți folosi la personalizarea conținutului etichetelor din "
+"hartă. Primul pas este de a le crea; în acest scop puteți adăuga, de "
+"exemplu, un cod de zonă pentru zonele poligonale, și un câmp cu câteva "
+"observații pe care să le aibă în vedere echipele din teren:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:371
+msgid "Enable editing."
+msgstr "Activează editarea."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:372
+msgid ""
+"Use the |calculateField| calculator to create and populate the following two"
+" fields."
+msgstr ""
+"Folosiți calculatorul |calculateField| pentru a crea și popula următoarele "
+"două câmpuri."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:490
+msgid "calculateField"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:391
+msgid "Disable editing and save your edits."
+msgstr "Dezactivează editarea și salvează modificările."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:398
+msgid "Set the :guilabel:`Font` size to ``12``."
+msgstr "Setați dimensiunea :guilabel:`Fontului` la ``12``."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:399
+msgid "Set the cursor at the end of the text in the label."
+msgstr "Duceți cursorul la sfârșitul textului din etichetă."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:404
+msgid "Click :guilabel:`OK`."
+msgstr "Clic pe :guilabel:`OK`"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:410
+msgid ""
+"Test the contents of the label by looking at the different Atlas preview "
+"maps."
+msgstr ""
+"Testați conținutul etichetei, prin vizualizarea unor diferite hărți din "
+"Atlas."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:418
+msgid ""
+"Use the Atlas preview to browse through all the maps you will be creating "
+"soon and enjoy!"
+msgstr ""
+"Utilizați previzualizarea din Atlas pentru a naviga prin toate hărțile care "
+"vor fi create în curând!"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:422
+msgid "|basic| |FA| Printing the Maps"
+msgstr "|basic| |FA| Tipărirea Hărților"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:424
+msgid ""
+"Last but not least, printing or exporting your maps to image files or PDF "
+"files. You can use the :menuselection:`Atlas --> Export Atlas as Images...` "
+"or :menuselection:`Atlas --> Export Atlas as PDF...`. Currently the SVG "
+"export format is not working properly and will give a poor result."
+msgstr ""
+"Nu în ultimul rând, imprimați sau exportați hărțile în fișiere imagine sau "
+"PDF. Aveți posibilitatea să utilizați :menuselection:`Atlas --> Export Atlas"
+" as Images...` sau :menuselection:`Atlas --> Export Atlas as PDF...`. În "
+"prezent, formatul de export SVG nu funcționează în mod corespunzător și va "
+"da un rezultat slab."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:429
+msgid ""
+"Lets print the maps as a single PDF that you can send to the field office "
+"for printing:"
+msgstr ""
+"Haideți să exportăm hărțile într-un singur PDF pe care îl puteți trimite la "
+"biroul teritorial pentru imprimare:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:431
+msgid "Go to the :guilabel:`Atlas generation` tab on the right panel."
+msgstr "Mergeți la fila :guilabel:`Atlas generation`, în panoul din dreapta."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:432
+msgid ""
+"Under the :guilabel:`Output` check the :guilabel:`Single file export when "
+"possible`. This will put all the maps together into a PDF file, if this "
+"option is not checked you will get one file for every map."
+msgstr ""
+"Sub :guilabel:`Output` bifați :guilabel:`Single file export when possible`. "
+"Acest lucru va pune toate hărțile împreună într-un fișier PDF; în cazul în "
+"care această opțiune nu este bifată, veți obtine câte un fișier pentru "
+"fiecare hartă."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:438
+msgid "Open the PDF file to check that everything went as expected."
+msgstr ""
+"Deschideți fișierul PDF pentru a verifica dacă totul a mers cum era de "
+"așteptat."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:439
+msgid ""
+"You could just as easily create separate images for every map (remember to "
+"uncheck the single file creation), here you can see the thumbnails of the "
+"images that would be created:"
+msgstr ""
+"Puteți crea la fel de ușor imagini separate pentru fiecare hartă (amintiți-"
+"vă să debifați crearea unui singur fișier), unde puteți vedea miniaturile "
+"imaginilor care vor fi create:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:492
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:459
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:461
+msgid ""
+"You have managed to create a template map that can be used to automatically "
+"generate detail maps to be used in the field to help navigate to the "
+"different plots. As you noticed, this was not an easy task but the benefit "
+"will come when you need to create similar maps for other regions and you can"
+" use the template you just saved."
+msgstr ""
+"Ați reușit să creați o hartă șablon, care poate fi folosită pentru a genera "
+"automat hărți detaliate, în scopul ușurării utilizării în teren. După cum "
+"ați observat, acest lucru nu a fost o sarcină ușoară, dar beneficiul va veni"
+" atunci când va trebui să creați hărți similare pentru alte regiuni, unde "
+"puteți utiliza șablonul pe care tocmai l-ați salvat."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:468
+msgid "|WN|"
+msgstr ""

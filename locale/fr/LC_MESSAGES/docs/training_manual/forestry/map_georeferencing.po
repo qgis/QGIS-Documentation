@@ -1,0 +1,423 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:2
+msgid "|LS| Georeferencing a Map"
+msgstr "|LS| Géoréférencement d'une carte"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:4
+msgid ""
+"A common forestry task would be the update of the information for a forestry"
+" area. It is possible that the previous information for that area dates "
+"several years back and was collected analogically (that is, in paper) or "
+"perhaps it was digitized but all you have left is the paper version of that "
+"inventory data."
+msgstr ""
+"Une tâche forestière commune serait la mise à jour des informations "
+"relatives à une zone forestière. Il est possible que les informations "
+"précédentes pour cette zone datent de plusieurs années et aient été "
+"collectées de manière analogique (c'est-à-dire sur papier) ou peut-être "
+"qu'elles aient été numérisées mais qu'il ne vous reste que la version papier"
+" de ces données d'inventaire."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:9
+msgid ""
+"Most likely you would like to use that information in your GIS to, for "
+"example, compare later with later inventories. This means that you will need"
+" to digitize the information at hand using your GIS software. But before you"
+" can start the digitizing, there is an important first step to be done, "
+"scanning and georeferencing your paper map."
+msgstr ""
+"Il est fort probable que vous souhaitiez utiliser ces informations dans "
+"votre SIG pour, par exemple, les comparer plus tard avec des inventaires "
+"ultérieurs. Cela signifie que vous devrez numériser les informations dont "
+"vous disposez à l'aide de votre logiciel SIG. Mais avant de pouvoir "
+"commencer la numérisation, il y a une première étape importante à franchir, "
+"à savoir la numérisation et le géoréférencement de votre carte papier."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:15
+msgid ""
+"**The goal for this lesson:** To learn to use the Georeferencer tool in "
+"QGIS."
+msgstr ""
+"**Le but de cette leçon:** Apprendre à utiliser l'outil Georeferencer dans "
+"QGIS."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:18
+msgid "|basic| Scan the map"
+msgstr "|basic| Scanner la carte"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:174
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:20
+msgid ""
+"The first task you will have to do is to scan your map. If your map is too "
+"big, then you can scan it in different parts but keep in mind that you will "
+"have to repeat preprocessing and georeferencing tasks for each part. So if "
+"possible, scan the map in as few parts as possible."
+msgstr ""
+"La première tâche que vous aurez à faire est de scanner votre carte. Si "
+"votre carte est trop grande, vous pouvez la numériser en plusieurs parties, "
+"mais n'oubliez pas que vous devrez répéter les tâches de prétraitement et de"
+" géoréférencement pour chaque partie. Donc, si possible, scannez la carte en"
+" un nombre de parties aussi réduit que possible."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:25
+msgid ""
+"If you are going to use a different map that the one provided with this "
+"manual, use your own scanner to scan the map as an image file, a resolution "
+"of 300 DPI will do. If your map has colors, scan the image in color so that "
+"you can later use those colors to separate information from your map into "
+"different  layers (for ex., forest stands, contour lines, roads...)."
+msgstr ""
+"Si vous devez utiliser une carte différente de celle fournie avec ce manuel,"
+" utilisez votre propre scanner pour scanner la carte sous forme de fichier "
+"image, une résolution de 300 DPI fera l'affaire. Si votre carte comporte des"
+" couleurs, scannez l'image en couleur afin de pouvoir utiliser ces couleurs "
+"plus tard pour séparer les informations de votre carte en différentes "
+"couches (par exemple, les peuplements forestiers, les courbes de niveau, les"
+" routes...)."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:31
+msgid ""
+"For this exercise you will use a previously scanned map, you can find it as "
+":file:`rautjarvi_map.tif` in the data folder :file:`exercise_data/forestry`"
+msgstr ""
+"Pour cet exercice, vous allez utiliser une carte qui aura été scanné "
+"préalablement, que vous pouvez trouver sous le nom :file:`rautjarvi_map.tif`"
+" dans le dossier de données :file:`exercise_data/forestry`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:35
+msgid "|basic| |FA| Georeferencing the scanned map"
+msgstr "|basic| |FA| Géoréférencement de la carte scannée"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:37
+msgid ""
+"Open QGIS and set the project's CRS to ``EPSG:3067 - ETRS89 / TM35FIN(E,N)``"
+" in :menuselection:`Project --> Properties --> CRS`, which is the currently "
+"used CRS in Finland."
+msgstr ""
+"Ouvrez QGIS et définissez le SCR du projet comme ``EPSG:3067 - ETRS89 / "
+"TM35FIN(E,N)`` dans :menuselection:`Projet --> Propriétés --> SCR`, qui est "
+"le SCR actuellement utilisé en Finlande."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:44
+msgid "Save the QGIS project as :file:`map_digitizing.qgs`."
+msgstr "Enregistrez le projet QGIS sous :file:`map_digitizing.qgs`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:46
+msgid ""
+"You will use the georeferencing tool from QGIS named "
+":guilabel:`Georeferencer`. To georeference the map:"
+msgstr ""
+"Vous allez utiliser l'outil de géoréférencement de QGIS nommé  "
+":guilabel:`Géoréférencer`. Pour géoréférencer la carte :"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:49
+msgid ""
+"Open the georeference tool, :menuselection:`Layer -->` |georefRun| "
+":menuselection:`Georeferencer...`."
+msgstr ""
+"Ouvrez l'outil de géoréférencement, :menuselection:`Couche -->` |georefRun| "
+":menuselection:`Géoréférencer...`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:177
+msgid "georefRun"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:55
+msgid ""
+"Add the map image file, :file:`rautjarvi_map.tif`, as the image to "
+"georeference, :menuselection:`File --> Open raster`."
+msgstr ""
+"Ajoutez le fichier image de la carte, :file:`rautjarvi_map.tif`, en tant "
+"qu'image à géoréférencer, :menuselection:`Fichier --> Ouvrir un raster…`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:57
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:76
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:96
+msgid "Click :guilabel:`OK`."
+msgstr "Cliquez sur :guilabel:`OK`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:59
+msgid ""
+"Next you should define the transformation settings for georeferencing the "
+"map:"
+msgstr ""
+"Ensuite, vous devez définir les paramètres de transformation pour le "
+"géoréférencement de la carte :"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:61
+msgid "Open :menuselection:`Settings --> Transformation settings`."
+msgstr "Ouvrez :menuselection:`Paramètres --> Paramètres de transformation`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:62
+msgid ""
+"Set the :guilabel:`Transformation type` to ``Linear`` and the "
+":guilabel:`Resampling method` to ``Nearest neighbour``."
+msgstr ""
+"Définissez le :guilabel:`Type de transformation` en ``Linéaire`` et la "
+":guilabel:`Méthode de ré-échantillonnage` en  ``Plus proche voisin``."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:64
+msgid ""
+"Press the |setProjection| :sup:`Select CRS` button next to the "
+":guilabel:`Target SRS` option and select the ``EPSG:2392 - KKJ / Finland "
+"zone 2`` CRS; it is the CRS that was used in Finland back in 1994 when this "
+"map was created."
+msgstr ""
+"Cliquez sur le bouton |setProjection| :sup:`Sélectionner le SCR` à côté de "
+"l'option :guilabel:`SCR cible` et sélectionnez le SCR ``EPSG:2392 - KKJ / "
+"Finland zone 2`` ; c'est le SCR qui était utilisé en Finlande en 1994, quand"
+" cette carte a été créée."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:179
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:67
+msgid ""
+"Click the icon next to the :guilabel:`Output raster` box, go to the folder "
+"and create the folder :file:`exercise_data\\\\forestry\\\\digitizing` and "
+"name the file as :file:`rautjarvi_georef.tif`."
+msgstr ""
+"Cliquez sur l'icône à côté de la boîte :guilabel:`Raster de sortie`, allez "
+"dans le dossier, créez le dossier "
+":file:`exercise_data\\\\forestry\\\\digitizing`  et nommez le fichier "
+":file:`rautjarvi_georef.tif`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:70
+msgid "Check |checkbox| :guilabel:`Load in QGIS when done`"
+msgstr ""
+"Cochez la case |checkbox| :guilabel:`Charger dans QGIS lorsque terminé`"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:175
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:71
+msgid "Leave the rest of parameters as default."
+msgstr "Laissez le reste des paramètres à leur valeur par défaut."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:78
+msgid ""
+"The map contains several cross-hairs marking the coordinates in the map, we "
+"will use those to georeference this image. You can use the zooming and "
+"panning tools as you usually do in QGIS to inspect the image in the "
+"Georeferencer's window."
+msgstr ""
+"La carte contient plusieurs croix marquant les coordonnées dans la carte, "
+"nous les utiliserons pour géoréférencer cette image. Vous pouvez utiliser "
+"les outils de zoom et de panoramique comme vous le faites habituellement "
+"dans QGIS pour inspecter l'image dans la fenêtre géoréférencer."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:83
+msgid ""
+"Zoom in to the left lower corner of the map and note that there is a cross-"
+"hair with a coordinate pair, X and Y, that as mentioned before are in ``KKJ "
+"/ Finland zone 2`` CRS. You will use this point as the first ground control "
+"point for the georeferencing your map."
+msgstr ""
+"Zoomez sur le coin en bas à gauche de la carte et remarquez qu'il s'y trouve"
+" une croix avec une paire de coordonnées X et Y qui sont, comme mentionné "
+"précédemment, dans le SCR ``KKJ / Finland zone 2``. Vous utiliserez ce point"
+" en tant que premier point de contrôle pour géoréférencer la carte."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:87
+msgid ""
+"Select the :guilabel:`Add point` tool and click in the intersection of the "
+"cross-hairs (pan and zoom as needed)."
+msgstr ""
+"Sélectionnez l'outil :guilabel:`Ajouter point` et cliquez dans "
+"l'intersection du réticule (pan et zoom si nécessaire)."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:89
+msgid ""
+"In the :guilabel:`Enter map coordinates` dialogue write the coordinates that"
+" appear in the map (X: 2557000 and Y: 6786000) and their CRS (``EPSG:2392 - "
+"KKJ / Finland zone 2``)"
+msgstr ""
+"Dans le dialogue :guilabel:`Entrer les coordonnées de la carte`, saisissez "
+"les coordonnées qui apparaissent sur la carte (X : 2557000 et Y : 6786000) "
+"et leur SCR (``EPSG:2392 - KKJ / Finland zone 2``)"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:98
+msgid "The first coordinate for the georeferencing is now ready."
+msgstr "La première coordonnée pour le géoréférencement est maintenant prête."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:100
+msgid ""
+"Look for other black cross-hairs in the image, they are separated 1000 "
+"meters from each other both in North and East direction. You should be able "
+"to calculate the coordinates of those points in relation to the first one."
+msgstr ""
+"Recherchez d'autres croix de calage noires dans l'image, elles sont séparées"
+" de 1000 mètres dans les directions nord et est. Vous devriez pouvoir "
+"calculer les coordonnées de ces points en relation avec le premier point. "
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:104
+msgid ""
+"Zoom out in the image and move to the right or the top until you find other "
+"cross-hair, and estimate how many kilometres you have moved. Try to get "
+"ground control points as far from each other as possible."
+msgstr ""
+"Dézoomez l'image et déplacez-vous vers la droite ou le haut jusqu'à trouver "
+"une autre croix de calage, et estimez de combien de kilomètres vous vous "
+"êtes déplacé. Essayez d'obtenir des points de contrôle les plus éloignés "
+"possible les uns des autres."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:107
+msgid ""
+"Digitize at least three more ground control points in the same way you did "
+"the first one. You should end up with something similar to this:"
+msgstr ""
+"Numérisez au moins trois points de contrôle supplémentaires de la même façon"
+" que pour le premier point. Vous devriez obtenir quelque chose similaire à "
+"ceci :"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:113
+msgid ""
+"With already three digitized ground control points you will be able to see "
+"the georeferencing error as a red line coming out of the points. The error "
+"in pixels can be seen also in the :guilabel:`GCP table` in the "
+":guilabel:`dX[pixels]` and :guilabel:`dY[pixels]` columns. The error in "
+"pixels should not be higher than 10 pixels. If it is, you should review the "
+"points you have digitized and the coordinates you have entered to find what "
+"the problem is. You can use the image above as a guide."
+msgstr ""
+"Quand vous aurez numérisé trois points de contrôle, vous pourrez visualiser "
+"les erreurs de géoréférencement par une ligne rouge partant des points. "
+"L'erreur en pixels peut aussi être vue dans le :guilabel:`Tableau des points"
+" de contrôle`, dans les colonnes :guilabel:`dX[pixels]` et "
+":guilabel:`dY[pixels]`. L'erreur en pixels ne doit pas dépasser 10 pixels. "
+"Si c'est le cas, vous devez revoir les points que vous avez numérisés et les"
+" coordonnées que vous avez entrées pour trouver où est le problème. Vous "
+"pouvez utiliser l'image au-dessus pour vous guider."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:121
+msgid ""
+"Once you are happy with your control points, you can save them for later "
+"use:"
+msgstr ""
+"Une fois que vous êtes satisfait de vos points de contrôle, vous pouvez les "
+"conserver pour une utilisation ultérieure :"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:123
+msgid "Go to :menuselection:`File --> Save GCP points as...`."
+msgstr ""
+"Allez sur  :menuselection:`Fichier --> Enregistrer les points de contrôle "
+"sous...`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:124
+msgid ""
+"In the folder :file:`exercise_data\\\\forestry\\\\digitizing`, name the file"
+" :file:`rautjarvi_map.tif.points`."
+msgstr ""
+"Dans le dossier :file:`exercise_data\\\\forestry\\\\digitizing`, nommez le "
+"fichier :file:`rautjarvi_map.tif.points`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:127
+msgid "Finally, georeference your map:"
+msgstr "Pour terminer, géoréférencez votre carte :"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:129
+msgid "Go to :menuselection:`File --> Start georeferencing`."
+msgstr "Allez sur :menuselection:`Fichier --> Débuter le géoréférencement`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:130
+msgid ""
+"Note that you named the file already as :file:`rautjarvi_georef.tif` when "
+"you edited the Georeferencer settings."
+msgstr ""
+"Notez que vous avez déjà nommé le fichier :file:`rautjarvi_georef.tif` quand"
+" vous avez modifié les paramètres de géoréférencement."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:133
+msgid ""
+"Now you can see the map in QGIS project as a georeferenced raster. Note that"
+" the raster seems to be slightly rotated, but that is simply because the "
+"data is in ``KKJ / Finland zone 2`` and your project is in ``ETRS89 / "
+"TM35FIN(E,N)``."
+msgstr ""
+"A présent, vous pouvez voir la carte en tant que raster géoréférencé dans le"
+" projet QGIS. Notez que le raster paraît légèrement de travers, mais c'est "
+"simplement dû au fait que les données sont en ``KKJ / Finland zone 2`` et "
+"votre projet est en ``ETRS89 / TM35FIN(E,N)``."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:138
+msgid "To check that your data is properly georeferenced, you can"
+msgstr ""
+"Pour vérifier que vos données sont correctement géoréférencées, vous pouvez"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:140
+msgid ""
+"Open the aerial image in the :file:`exercise_data\\\\forestry` folder, named"
+" :file:`rautjarvi_aerial.tif`."
+msgstr ""
+"Ouvrir l'imagerie aérienne dans le dossier "
+":file:`exercise_data\\\\forestry`, nommée :file:`rautjarvi_aerial.tif`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:142
+msgid ""
+"Your map and this image should match quite well: set the map transparency to"
+" 50% and compare it to the aerial image."
+msgstr ""
+"Votre carte et l'image doivent plutôt bien correspondre : mettez la "
+"transparence de la carte à 50 % et comparez avec l'image aérienne."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:148
+msgid ""
+"Save the changes to your QGIS project, you will continue from this point for"
+" the next lesson."
+msgstr ""
+"Enregistrez les modifications apportées à votre projet QGIS, vous "
+"continuerez à partir de ce point pour la prochaine leçon."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:152
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:154
+msgid ""
+"You have now georeferenced a paper map, making it possible to use it as a "
+"map layer in QGIS."
+msgstr ""
+"Vous avez maintenant géoréférencé une carte papier, ce qui permet de "
+"l'utiliser comme couche cartographique dans QGIS."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:158
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:160
+msgid ""
+"In the next lesson, you will digitize the forest stands in your map as "
+"polygons and add the inventory data to them."
+msgstr ""
+"Dans la prochaine leçon, vous numériserez les peuplements forestiers de "
+"votre carte sous forme de polygones et y ajouterez les données d'inventaire."

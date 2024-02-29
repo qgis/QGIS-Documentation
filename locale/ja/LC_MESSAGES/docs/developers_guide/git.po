@@ -1,0 +1,616 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/developers_guide/git.rst:5
+msgid "Development Process"
+msgstr "開発プロセス"
+
+#: ../../docs/developers_guide/git.rst:10
+msgid ""
+"As common in open source projects, contributions of code and documentation "
+"to the project are highly appreciated. The QGIS community is very "
+"supportive. This section describes the procedure for developing and merging "
+"your contributions in the QGIS project."
+msgstr ""
+"オープンソースプロジェクトではよくあることですが、プロジェクトへのコードやドキュメントの貢献は高く評価されます。QGISコミュニティは非常に協力的です。このセクションでは、QGISプロジェクトであなたの貢献を開発し、マージする手順について説明します。"
+
+#: ../../docs/developers_guide/git.rst:16
+msgid "A git based project"
+msgstr "git型のプロジェクト"
+
+#: ../../docs/developers_guide/git.rst:18
+msgid ""
+"The complexity of the QGIS source code has increased considerably during the"
+" last years. Therefore it is hard to anticipate the side effects that the "
+"addition of a feature will have. In the past, the QGIS project had very long"
+" release cycles because it was a lot of work to reestablish the stability of"
+" the software system after new features were added. To overcome these "
+"problems, QGIS switched to a development model using the `git <https://git-"
+"scm.com>`_ version control system: new features are coded in the contributor"
+" branches first and merged to the QGIS master (the main branch) when they "
+"are finished and stable."
+msgstr ""
+"QGISのソースコードの複雑さは、ここ数年でかなり増しています。そのため、機能の追加がもたらす副作用を予測することは困難です。過去、QGISプロジェクトはリリースサイクルが非常に長く、新機能の追加後にソフトウェアシステムの安定性を再構築するのに多くの労力を要しました。これらの問題を克服するために、QGISは"
+" `git <https://git-scm.com>`_ "
+"バージョン管理システムを使った開発モデルに切り替えました：新しい機能はまずコントリビューターブランチでコーディングされ、完成して安定した時点でQGISマスタ（メインブランチ）にマージされます。"
+
+#: ../../docs/developers_guide/git.rst:27
+msgid "QGIS source code is hosted at https://github.com/qgis/QGIS."
+msgstr "QGISのソースコードは、https://github.com/qgis/QGIS にホストされています。"
+
+#: ../../docs/developers_guide/git.rst:31
+msgid "Roles"
+msgstr "ロール"
+
+#: ../../docs/developers_guide/git.rst:33
+msgid ""
+"There exist various roles on GitHub. When having an account on GitHub you "
+"are already allowed to contribute by forking the repository and have the "
+"role 'contributor'. Core developers are 'collaborators' and can merge "
+"branches into the upstream and official repository."
+msgstr ""
+"GitHub にはさまざまなロールがあります。GitHub "
+"にアカウントを持つと、リポジトリをフォークして貢献することができるようになり、「コントリビュータ」というロールが与えられます。コア開発者は「コラボレータ」であり、ブランチをアップストリームや公式リポジトリにマージすることができます。"
+
+#: ../../docs/developers_guide/git.rst:40
+msgid "Environment"
+msgstr "環境"
+
+#: ../../docs/developers_guide/git.rst:42
+msgid ""
+"To get started using and contributing to the QGIS repository, you need to:"
+msgstr "QGISリポジトリの使用と貢献を始めるには、次のことが必要です："
+
+#: ../../docs/developers_guide/git.rst:44
+msgid "have a `GitHub account <https://github.com/join>`_"
+msgstr "`GitHubアカウント <https://github.com/join>`_ を持っている"
+
+#: ../../docs/developers_guide/git.rst:45
+msgid ""
+"make your own copy of the `QGIS repository <https://github.com/qgis/QGIS>`_ "
+"(see `fork <https://docs.github.com/en/get-started/quickstart/fork-a-"
+"repo>`_)"
+msgstr ""
+"QGIS リポジトリ <https://github.com/qgis/QGIS>`_ の自分用のコピーを作る (`フォーク "
+"<https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_ を参照)"
+
+#: ../../docs/developers_guide/git.rst:47
+msgid "have a :ref:`git client installed <installing_git>` on your system"
+msgstr "自分のシステムに :ref:`gitクライアントをインストール <installing_git>` している"
+
+#: ../../docs/developers_guide/git.rst:48
+msgid ""
+"set up your `git environment <https://docs.github.com/en/get-"
+"started/quickstart/set-up-git#setting-up-git>`_"
+msgstr ""
+"`git環境 <https://docs.github.com/en/get-started/quickstart/set-up-"
+"git#setting-up-git>`_ をセットアップする"
+
+#: ../../docs/developers_guide/git.rst:49
+msgid "and have fun!"
+msgstr "そして楽しむ！"
+
+#: ../../docs/developers_guide/git.rst:55
+msgid "Installing git"
+msgstr "gitをインストールする"
+
+#: ../../docs/developers_guide/git.rst:57
+msgid ""
+"The git project provides recent versions of the software for most platforms."
+" Follow the instructions at https://git-scm.com/downloads to get and install"
+" the copy corresponding to your OS and architecture. There, it's also "
+"possible to install a git GUI client to browse and manage your repositories "
+"(most of the time, it will install git if not yet available)."
+msgstr ""
+"gitプロジェクトは、ほとんどのプラットフォーム用にソフトウェアの最新バージョンを提供しています。https://git-"
+"scm.com/downloads "
+"の指示に従って、あなたのOSとアーキテクチャに対応するコピーを入手し、インストールしてください。リポジトリをブラウズして管理するためのgit "
+"GUIクライアントをインストールすることもできます（ほとんどの場合、利用できなければgitがインストールされます）。"
+
+#: ../../docs/developers_guide/git.rst:64
+msgid "Development in branches"
+msgstr "ブランチでの開発"
+
+#: ../../docs/developers_guide/git.rst:67
+msgid "Contributions to development"
+msgstr "開発への貢献"
+
+#: ../../docs/developers_guide/git.rst:69
+msgid ""
+"Once signed up on GitHub and having forked the repository, you can engage as"
+" a contributor."
+msgstr "GitHubにサインアップしてリポジトリをフォークすれば、コントリビューターとして参加できます。"
+
+#: ../../docs/developers_guide/git.rst:72
+msgid ""
+"Contributions to QGIS code can be done from your forked repository on the "
+"GitHub website. The new code will automatically be built by the test "
+"environment. But this workflow can quickly reveal its limits when you want "
+"to provide complex changes. Instructions below will assume a local clone."
+msgstr ""
+"QGISコードへの貢献は、GitHubウェブサイト上のフォークしたリポジトリから行うことができます。新しいコードはテスト環境によって自動的にビルドされます。しかし、複雑な変更を加えたい場合、このワークフローではすぐに限界が見えてしまいます。以下の説明では、ローカルクローンを想定しています。"
+
+#: ../../docs/developers_guide/git.rst:77
+msgid ""
+"You can contribute by initiating a pull request. To do that follow these "
+"generic steps:"
+msgstr "プルリクエストを開始することで貢献できます。そのためには、以下の一般的な手順に従ってください："
+
+#: ../../docs/developers_guide/git.rst:79
+msgid ""
+":ref:`Clone your repository <access_repository>` onto your local computer "
+"and set up the build environment"
+msgstr "ローカルコンピューターに :ref:`リポジトリをクローン <access_repository>` し、ビルド環境をセットアップします"
+
+#: ../../docs/developers_guide/git.rst:81
+msgid "Create a new branch and do the edits for development"
+msgstr "新しいブランチを作成し、開発用の編集を行います"
+
+#: ../../docs/developers_guide/git.rst:82
+msgid ""
+"Commit your changes and push your branch back to the remote fork on GitHub. "
+"A pull request is then offered as web link (URL) right after."
+msgstr ""
+"変更をコミットし、ブランチをGitHubのリモートフォークにプッシュバックします。プルリクエストは、その直後にウェブリンク(URL)として提供されます。"
+
+#: ../../docs/developers_guide/git.rst:84
+msgid ""
+"Open a pull request (PR) asking to pull the commit(s) from your branch into "
+"the master branch into the upstream repository."
+msgstr "プルリクエスト(PR) を開き、あなたのブランチからマスターブランチへのコミットをアップストリームリポジトリにプルするよう依頼します。"
+
+#: ../../docs/developers_guide/git.rst:86
+msgid ""
+"A review process is being started informing other contributors and "
+"collaborators about your pull request. You should be reactive to their "
+"comments and suggestions."
+msgstr ""
+"あなたのプルリクエストについて他のコントリビュータやコラボレータに知らせるレビュープロセスが開始されます。あなたは彼らのコメントや提案に反応するべきです。"
+
+#: ../../docs/developers_guide/git.rst:90
+msgid ""
+"A more detailed Github's Fork & Pull Workflow is available at "
+"https://reflectoring.io/github-fork-and-pull/"
+msgstr ""
+"Githubのフォーク＆プルワークフローの詳細は、https://reflectoring.io/github-fork-and-pull/ "
+"にあります。"
+
+#: ../../docs/developers_guide/git.rst:93
+msgid ""
+"Most of the QGIS projects (website, documentation, pyQGIS API, plugins...) "
+"are available in the `project GitHub page <https://github.com/qgis>`_ and "
+"can get contributions, following the same process."
+msgstr ""
+"ほとんどのQGISプロジェクト（ウェブサイト、ドキュメント、pyQGIS API、プラグイン...）は、 "
+"`プロジェクトのGitHubページ<https://github.com/qgis>`_ "
+"で公開されており、同じプロセスでコントリビューションを得ることができます。"
+
+#: ../../docs/developers_guide/git.rst:100
+msgid "Accessing the Repository"
+msgstr "リポジトリにアクセスする"
+
+#: ../../docs/developers_guide/git.rst:102
+msgid ""
+"To be able to interact from your local disk with both your remote fork and "
+"the QGIS upstream repositories, you need to:"
+msgstr "ローカルディスクからリモートフォークとQGISアップストリームリポジトリの両方とやり取りするには、次のことが必要です："
+
+#: ../../docs/developers_guide/git.rst:105
+msgid "Make a clone of your copy on your local disk"
+msgstr "ローカルディスクにコピーのクローンを作る"
+
+#: ../../docs/developers_guide/git.rst:112
+msgid ""
+"Connect the QGIS main repository (we will name it ``upstream``) to yours"
+msgstr "QGISのメインリポジトリを自分のものに繋げる（ここではそれを ``upstream`` と呼びます）"
+
+#: ../../docs/developers_guide/git.rst:118
+msgid "Check connected remote repositories"
+msgstr "リモートリポジトリの接続を確認する"
+
+#: ../../docs/developers_guide/git.rst:128
+msgid ""
+"Your online repository is now accessible from your local drive and you can "
+"interact with it using the name ``origin``. Whenever you'd like to fetch "
+"changes from the qgis/QGIS repository, use ``upstream``."
+msgstr ""
+"これでオンラインリポジトリにローカルドライブからアクセスできるようになり、 ``origin`` "
+"という名前を使って操作できるようになりました。qgis/QGIS リポジトリから変更を取得したい場合は、いつでも ``upstream`` を使います。"
+
+#: ../../docs/developers_guide/git.rst:133
+msgid ""
+"In QGIS we keep our most stable code in the current release branch. "
+"``master`` branch contains code for the so called 'unstable' release series."
+" Periodically we will branch a release off master, and then continue "
+"stabilisation and selective incorporation of new features into master."
+msgstr ""
+"QGIS では、最も安定したコードを現在のリリースブランチに保持しています。``master`` "
+"ブランチには、いわゆる「不安定な」リリースシリーズのコードが含まれています。定期的に master "
+"ブランチからリリースを分岐し、安定化と新機能の選択的な取り込みを master ブランチで行います。"
+
+#: ../../docs/developers_guide/git.rst:138
+msgid ""
+"See the :source:`INSTALL <INSTALL.md>` file in the source tree for specific "
+"instructions on building development versions."
+msgstr "開発版のビルド方法については、ソースツリーの :source:`INSTALL <INSTALL.md>` ファイルを参照してください。"
+
+#: ../../docs/developers_guide/git.rst:142
+msgid "Procedure"
+msgstr "手順"
+
+#: ../../docs/developers_guide/git.rst:150
+msgid "Initial announcement on mailing list or issues repo:"
+msgstr "メーリングリストまたはイシューリポでの最初のアナウンス："
+
+#: ../../docs/developers_guide/git.rst:145
+msgid ""
+"Before starting, make an announcement on the developer mailing list to see "
+"if another developer is already working on the same feature. You can also "
+"mention your interest as a comment in the issue report if one exists in the "
+"repo. If the new feature requires any changes to the QGIS architecture, a "
+"`QGIS Enhancement Proposal (QEP) <https://github.com/qgis/QGIS-Enhancement-"
+"Proposals/>`_ is needed."
+msgstr ""
+"作業を始める前に、開発者メーリングリストにアナウンスして、 "
+"他の開発者がすでに同じ機能に取り組んでいないかどうか確認してください。また、イシューレポートがリポに存在する場合は、コメントとしてあなたの関心に言及することもできます。新機能が"
+" QGIS アーキテクチャへの変更を必要とする場合、`QGIS Enhancement Proposal (QEP) "
+"<https://github.com/qgis/QGIS-Enhancement-Proposals/>`_ が必要です。"
+
+#: ../../docs/developers_guide/git.rst:159
+msgid "Create a branch in your local repository:"
+msgstr "ローカルリポジトリにブランチを作る："
+
+#: ../../docs/developers_guide/git.rst:153
+msgid ""
+"Create a new git branch for the development of the new feature, based on "
+"latest state of the master branch."
+msgstr "masterブランチの最新の状態に基づいて、新機能の開発用に新しいgitブランチを作成する。"
+
+#: ../../docs/developers_guide/git.rst:163
+msgid "Now you can start developing:"
+msgstr "開発を始める："
+
+#: ../../docs/developers_guide/git.rst:162
+msgid ""
+"Code your changes in your local disk with your usual IDE. Remember to write "
+"tests suite for your modifications, when appropriate."
+msgstr ""
+"あなたのローカル・ディスクで、いつものIDEを使って変更をコーディングしてください。適切なときは、あなたの変更に対してテストスイートを書くことを忘れないでください。"
+
+#: ../../docs/developers_guide/git.rst:173
+msgid "Commit your changes to the git repo:"
+msgstr "変更を git リポジトリにコミットする："
+
+#: ../../docs/developers_guide/git.rst:166
+msgid ""
+"When making a commit, put a descriptive comment and rather do several small "
+"commits if the changes across a number of files are unrelated. Conversely we"
+" prefer you to group related changes into a single commit."
+msgstr ""
+"コミットを行う際には、説明的なコメントをつけ、複数のファイルの変更が関連しないものの場合は、複数の小さなコミットを行うようにしてください。逆に、関連する変更は1つのコミットにまとめることを推奨します。"
+
+#: ../../docs/developers_guide/git.rst:175
+msgid ""
+"Now, you may want to share your work with QGIS community members. Push your "
+"new feature up to your online fork repository by doing:"
+msgstr ""
+"ここで、QGISコミュニティのメンバーとあなたの作業を共有したいと思うかもしれません。次の方法で新しい機能をオンラインフォークリポジトリにプッシュしてください："
+
+#: ../../docs/developers_guide/git.rst:182
+msgid ""
+"If the branch already exists, your changes will be pushed into it, "
+"otherwise, it is created."
+msgstr "ブランチがすでに存在する場合は、あなたの変更がそれにプッシュされ、そうでない場合はブランチが作成されます。"
+
+#: ../../docs/developers_guide/git.rst:195
+msgid ":ref:`Submit your changes <submit_patch>` with a pull-request"
+msgstr "プルリクエストで :ref:`変更を提出します <submit_patch>`"
+
+#: ../../docs/developers_guide/git.rst:186
+msgid ""
+"With opening the pull-request, the automated test suite is triggered and "
+"checks whether your changes follow the coding guidelines of QGIS and do not "
+"break any existing feature. You'd need to fix any reported issues before "
+"your branch is merged upstream."
+msgstr ""
+"プルリクエストを開くと、自動テストスイートが起動し、あなたの変更が QGIS "
+"のコーディングガイドラインに沿っているか、既存の機能を壊していないかをチェックします。ブランチがupstreamにマージされる前に、報告されたイシューを修正する必要があります。"
+
+#: ../../docs/developers_guide/git.rst:191
+msgid ""
+"We use `GitHub actions <https://docs.github.com/en/actions>`_ to manage the "
+"tests to be run on the repository. For convenience, you can enable the "
+"actions on your repository so that the tests are run when you push the "
+"changes. You'd then open the pull request after they all passed, making the "
+"review process more efficient."
+msgstr ""
+"`GitHubアクション <https://docs.github.com/en/actions>`_ "
+"を使用して、リポジトリ上で実行するテストを管理します。便利なように、プッシュしたときにテストが実行されるように、リポジトリ上でアクションを有効にすることができます。そして、すべてのテストが合格した後にプルリクエストをオープンすることで、レビュー作業をより効率的に行うことができます。"
+
+#: ../../docs/developers_guide/git.rst:206
+msgid "Rebase to upstream master regularly:"
+msgstr "定期的にupstream masterにリベースする："
+
+#: ../../docs/developers_guide/git.rst:198
+msgid ""
+"It is recommended to rebase to incorporate the changes in master to the "
+"branch on a regular basis. This makes it easier to merge the branch back to "
+"master later. After a rebase you need to ``git push -f`` to your forked "
+"repo."
+msgstr ""
+"masterでの変更をブランチに取り込むために、定期的にリベースすることをお勧めします。こうすることで、後でブランチを master "
+"にマージするのが簡単になります。リベースの後は、フォークしたレポジトリに ``git push -f`` する必要があります。"
+
+#: ../../docs/developers_guide/git.rst:208
+msgid "See the following sites for information on becoming a GIT master."
+msgstr "GITのマスターになることについては、以下のサイトを参照してください。"
+
+#: ../../docs/developers_guide/git.rst:210
+msgid "https://git-scm.com/book/en/v2"
+msgstr "https://git-scm.com/book/en/v2"
+
+#: ../../docs/developers_guide/git.rst:211
+msgid "https://gitready.com"
+msgstr "https://gitready.com"
+
+#: ../../docs/developers_guide/git.rst:212
+msgid "https://support.github.com/"
+msgstr "https://support.github.com/"
+
+#: ../../docs/developers_guide/git.rst:215
+msgid "Testing before merging back to master"
+msgstr "マスターに戻してマージする前にテストする"
+
+#: ../../docs/developers_guide/git.rst:217
+msgid ""
+"When you are finished with the new feature and happy with the stability, "
+"make an announcement on the developer list. Before merging back, the changes"
+" will be tested by developers and users."
+msgstr ""
+"新しい機能性と安定性に満足して終了したら、開発者リストで発表を行います。戻してマージする前に、変更は開発者とユーザーによってテストされるでしょう。"
+
+#: ../../docs/developers_guide/git.rst:224
+msgid "Submitting Pull Requests"
+msgstr "プルリクエストを送る"
+
+#: ../../docs/developers_guide/git.rst:226
+msgid ""
+"There are a few guidelines that will help you to get your patches and pull "
+"requests into QGIS easily, and help us deal with the patches that are sent "
+"to use easily."
+msgstr ""
+"あなたがパッチやプルリクエストをQGISに簡単に取り込み、私たちが送られてきたパッチを簡単に処理するのに役立つガイドラインがいくつかあります。"
+
+#: ../../docs/developers_guide/git.rst:230
+msgid ""
+"In general it is easier for developers if you submit GitHub pull requests. "
+"We do not describe Pull Requests here, but rather refer you to the `GitHub "
+"pull request documentation <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/proposing-changes-to-your-work-"
+"with-pull-requests/about-pull-requests>`_."
+msgstr ""
+"一般的に、GitHub にプルリクエストを送ったほうが開発者にとって簡単です。ここではプルリクエストについては説明しませんので、`GitHub "
+"プルリクエストドキュメント <https://docs.github.com/en/pull-requests/collaborating-with-"
+"pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-"
+"requests>`_ を参照してください。"
+
+#: ../../docs/developers_guide/git.rst:234
+msgid ""
+"If you make a pull request we ask that you please merge master to your PR "
+"branch regularly so that your PR is always mergeable to the upstream master "
+"branch."
+msgstr ""
+"プルリクエストを行う場合、あなたのPRブランチにmasterを定期的にマージし、あなたのPRが常にupstreamのmasterブランチにマージできるようにしてください。"
+
+#: ../../docs/developers_guide/git.rst:238
+msgid ""
+"If you are a developer and wish to evaluate the pull request queue, there is"
+" a very nice `tool that lets you do this from the command line "
+"<https://changelog.com/posts/git-pulls-command-line-tool-for-github-pull-"
+"requests>`_"
+msgstr ""
+"もしあなたが開発者で、プルリクエストキューを評価したいのであれば、`コマンドラインからこれを実行できる、とても素晴らしいツール "
+"<https://changelog.com/posts/git-pulls-command-line-tool-for-github-pull-"
+"requests>`_ > があります。"
+
+#: ../../docs/developers_guide/git.rst:242
+msgid ""
+"In general when you submit a PR you should take the responsibility to follow"
+" it through to completion - respond to queries posted by other developers, "
+"seek out a 'champion' for your feature and give them a gentle reminder "
+"occasionally if you see that your PR is not being acted on. Please bear in "
+"mind that the QGIS project is driven by volunteer effort and people may not "
+"be able to attend to your PR instantaneously. We do scan the incoming pull "
+"requests but sometimes we miss things. Don't be offended or alarmed. Try to "
+"identify a developer to help you and contact them asking them if they can "
+"look at your patch. If you feel the PR is not receiving the attention it "
+"deserves your options to accelerate it should be (in order of priority):"
+msgstr ""
+"一般的に、PRを提出したら、それを最後までやり遂げる責任を負うべきですー他の開発者から投稿された問い合わせに対応し、あなたの機能の「チャンピオン」を探し、あなたのPRが実行されていないことがわかったら、時折彼らに優しく注意を促してください。QGISプロジェクトはボランティアの努力によって運営されており、あなたのPRに即座に対応できない場合があることを念頭に置いてください。入ってくるプルリクエストをスキャンしていますが、時には見逃してしまうこともあります。気を悪くしたり、心配したりしないでください。あなたを助けてくれる開発者を見つけ、あなたのパッチを見てもらえるかどうか連絡してみてください。もしあなたが、その"
+" PR が相応の注意を払われていないと感じるのであれば、それを加速するための選択肢を (優先順位の高い順に) 挙げてください："
+
+#: ../../docs/developers_guide/git.rst:253
+msgid "Help review others pull requests to free the person assigned to yours."
+msgstr "他のプルリクエストのレビューを手伝い、自分の担当者を解放します。"
+
+#: ../../docs/developers_guide/git.rst:254
+msgid ""
+"Send a message to the mailing list 'marketing' your PR and how wonderful it "
+"will be to have it included in the code base."
+msgstr "あなたのPRおよびそれがコードベースに含まれるとどれほど素晴らしいかを「売り込む」メッセージをメーリングリストに送信します。"
+
+#: ../../docs/developers_guide/git.rst:256
+msgid ""
+"Send a message to the person your PR has been assigned to in the PR queue."
+msgstr "PRキュー内であなたのPRが割り当てられている人にメッセージを送信します。"
+
+#: ../../docs/developers_guide/git.rst:257
+msgid ""
+"Send a message to the project steering committee asking them to help see "
+"your PR incorporated into the code base."
+msgstr "プロジェクトの運営委員会にメッセージを送信し、あなたのPRがコードベースに組み込まれるのを見るのを助けるよう求めます。"
+
+#: ../../docs/developers_guide/git.rst:262
+msgid "Best practice for creating a pull request"
+msgstr "プルリクエストを作成するためのベストプラクティス"
+
+#: ../../docs/developers_guide/git.rst:264
+msgid "Always start a feature branch from current master."
+msgstr "常に現在のマスターから機能ブランチを開始します。"
+
+#: ../../docs/developers_guide/git.rst:265
+msgid ""
+"If you are coding a feature branch, don't \"merge\" anything into that "
+"branch, rather rebase as described in the next point to keep your history "
+"clean."
+msgstr ""
+"機能ブランチをコーディングしている場合は、そのブランチに何かを「マージ」しないでください。むしろ、あなたの履歴をきれいなままに保持するために、次のポイントで説明されるように、リベースしてください。"
+
+#: ../../docs/developers_guide/git.rst:267
+msgid ""
+"Before you create a pull request do ``git fetch upstream`` and ``git rebase "
+"upstream/master`` (given upstream is the remote for qgis user and not your "
+"own remote, check your ``.git/config`` or do ``git remote -v | grep "
+"github.com/qgis``)."
+msgstr ""
+"プルリクエストを作成する前に ``git fetch upstream`` と ``git rebase upstream/master`` "
+"を実行します (upstreamが qgis ユーザーのリモートであり、自分のリモートではない場合は ``.git/config`` "
+"を確認するか、``git remote -v | grep github.com/qgis`` を実行します)。"
+
+#: ../../docs/developers_guide/git.rst:271
+msgid ""
+"You may do a git rebase like in the last line repeatedly without doing any "
+"damage (as long as the only purpose of your branch is to get merged into "
+"master)."
+msgstr ""
+"何らかのダメージを与えることなく繰り返し、最後の行のようにgitリベースを行うことができます（あなたのブランチの唯一の目的がマスターにマージされることである限り、）。"
+
+#: ../../docs/developers_guide/git.rst:274
+msgid ""
+"Attention: After a rebase you need to ``git push -f`` to your forked repo. "
+"**CORE DEVS: DO NOT DO THIS ON THE QGIS PUBLIC REPOSITORY!**"
+msgstr ""
+"注意：リベースした後、あなたのフォークレポに ``git push -f`` する必要があります。 **CORE "
+"DEVS：QGIS公開リポジトリ上でこれ​​をしないでください！**"
+
+#: ../../docs/developers_guide/git.rst:279
+msgid "Special labels to notify documentors"
+msgstr "ドキュメント作成者に通知する特別なラベル"
+
+#: ../../docs/developers_guide/git.rst:281
+msgid ""
+"There is a special label (``Needs Documentation``) that can be assigned by "
+"reviewers to your pull request to automatically generate issue reports in "
+"QGIS-Documentation repository as soon as your pull request is merged. "
+"Remember to mention whether your feature deserves such a label."
+msgstr ""
+"レビュアーがあなたのプルリクエストに特別なラベル (``Needs Documentation``) "
+"を付けることで、あなたのプルリクエストがマージされると同時に、QGIS-Documentation "
+"リポジトリにイシューレポートが自動的に生成されます。あなたの機能がそのようなラベルを付けるに値するかどうかを忘れずに記述してください。"
+
+#: ../../docs/developers_guide/git.rst:286
+msgid ""
+"Moreover, you can add special tags to your commit messages to provide more "
+"information to documenters. The commit message is then added to the "
+"generated issue report:"
+msgstr ""
+"さらに、コミットメッセージに特別なタグを追加することで、ドキュメント作成者に詳細な情報を提供することができます。コミットメッセージは生成されたイッシューレポートに追加されます："
+
+#: ../../docs/developers_guide/git.rst:289
+msgid ""
+"``[needs-docs]`` to instruct doc writers to please add some extra "
+"documentation after a fix or addition to an already existing functionality."
+msgstr ""
+"``[needs-docs]`` "
+"既存の機能に修正や追加した後、いくつかの余分なドキュメントを追加してくださいとお願いするドキュメントライターを指示します。"
+
+#: ../../docs/developers_guide/git.rst:291
+msgid ""
+"``[feature]`` in case of new functionality. Filling a good description in "
+"your PR will be a good start."
+msgstr "新機能の場合は ``[feature]`` 。PRに良い説明を記入することは良いスタートとなるでしょう。"
+
+#: ../../docs/developers_guide/git.rst:294
+msgid ""
+"Please devs use these labels (case insensitive) so doc writers have issues "
+"to work on and have an overview of things to do. BUT please also take time "
+"to add some text: either in the commit OR in the docs itself."
+msgstr ""
+"開発者はこれらのラベル（大小文字を区別しない）を使用してください、ドキュメントの作成者が作業する問題を持ち、するべきことの概要を持つように。しかし、また、いくつかのテキストを追加する時間をかけてください：コミットまたはドキュメント自体のいずれかで。"
+
+#: ../../docs/developers_guide/git.rst:300
+msgid "Due Diligence"
+msgstr "適当な注意"
+
+#: ../../docs/developers_guide/git.rst:302
+msgid ""
+"QGIS is licensed under the GPL. You should make every effort to ensure you "
+"only submit patches which are unencumbered by conflicting intellectual "
+"property rights. Also do not submit code that you are not happy to have made"
+" available under the GPL."
+msgstr ""
+"QGISはGPLの下でライセンスされています。あなたは、矛盾する知的財産権によって妨げられないパッチを提出するよう、あらゆる努力をする必要があります。また、GPLの下で利用可能になって嬉しくないコードを提出しないでください。"
+
+#: ../../docs/developers_guide/git.rst:309
+msgid "Obtaining GIT Write Access"
+msgstr "GIT書き込みアクセス権の取得"
+
+#: ../../docs/developers_guide/git.rst:311
+msgid ""
+"Write access to QGIS source tree is by invitation. Typically when a person "
+"submits several (there is no fixed number here) substantial patches that "
+"demonstrate basic competence and understanding of C++ and QGIS coding "
+"conventions, one of the PSC members or other existing developers can "
+"nominate that person to the PSC for granting of write access. The nominator "
+"should give a basic promotional paragraph of why they think that person "
+"should gain write access. In some cases we will grant write access to non "
+"C++ developers e.g. for translators and documentors. In these cases, the "
+"person should still have demonstrated ability to submit patches and should "
+"ideally have submitted several substantial patches that demonstrate their "
+"understanding of modifying the code base without breaking things, etc."
+msgstr ""
+"QGISソースツリーへの書き込みアクセス権は招待によります。人はC "
+"++とQGISコーディング規約の基本的な能力と理解を示し、いくつかの（ここには一定の数が存在しない）かなりのパッチを提出する場合、通常、PSCのメンバーや他の既存の開発者の一人は、書き込みアクセスを許可するためのPSCにその人を指名できます。推薦は、彼らがその人が書き込みアクセス権を取得すべきだと思う理由の基本的なプロモーション段落を与える必要があります。いくつかのケースでは、我々は、翻訳者とdocumentors用など非C"
+" "
+"++開発者への書き込みアクセスを許可します。これらのケースでは、人はまだパッチを提出する能力を実証している必要があり、理想的に物事を壊すことなく、コードベースを変更することの理解を示し、いくつかのかなりのパッチなどを提出している必要があります"
+
+#: ../../docs/developers_guide/git.rst:323
+msgid ""
+"Since moving to GIT, we are less likely to grant write access to new "
+"developers since it is trivial to share code within github by forking QGIS "
+"and then issuing pull requests."
+msgstr ""
+"GITに移動するので、QGISをforkしてプル要求を発行することによってgithubの内のコードを共有することは簡単なので、新しい開発者に書き込みアクセスを許可する可能性は低いです。"
+
+#: ../../docs/developers_guide/git.rst:327
+msgid ""
+"Always check that everything compiles before making any commits / pull "
+"requests. Try to be aware of possible breakages your commits may cause for "
+"people building on other platforms and with older / newer versions of "
+"libraries."
+msgstr ""
+"常にすべてがコミット/プル要求を作成する前にコンパイルされることを確認してください。あなたのコミットは、人々が他のプラットフォーム上で構築するためのライブラリとの古い/新しいバージョンの原因となる可能性のある破損を認識するようにしてください。"
+" "

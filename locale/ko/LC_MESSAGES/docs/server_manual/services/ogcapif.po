@@ -1,0 +1,738 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-08 18:30+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/services/ogcapif.rst:4
+msgid "OGC API Features"
+msgstr "OGC API 피처"
+
+#: ../../docs/server_manual/services/ogcapif.rst:6
+msgid ""
+"OGC API Features (OAPIF) is the first implementation of the new generation "
+"of OGC protocols. It is described by the `OGC API - Features - Part 1: Core "
+"<http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ document."
+msgstr ""
+"OAPIF(OGC API Features)는 신세대 OGC 프로토콜을 처음으로 구현한 것입니다. `OGC API ─ 피처 ─ 1부: 핵심"
+" <http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ 문서에 잘 설명되어 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:11
+msgid ""
+"The API can be reached on typical installations via "
+"`http://localhost/qgisserver/wfs3`"
+msgstr ""
+"일반적으로 설치했을 경우, `http://localhost/qgisserver/wfs3` 주소를 통해 API에 접근할 수 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:13
+msgid ""
+"Here is a quick informal summary of the most important differences between "
+"the well known WFS protocol and OAPIF:"
+msgstr "다음 내용은 잘 알려진 WFS 프로토콜과 OAPIF의 주요 차이점을 비공식적으로 간단히 요약한 것입니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:16
+msgid ""
+"OAPIF is based on a `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+msgstr ""
+"OAPIF는 `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API를 기반으로 "
+"합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:19
+msgid ""
+"OAPIF must follow the `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
+msgstr ""
+"OAPIF API는 `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ "
+"사양을 따라야만 합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:22
+msgid ""
+"OAPIF supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS OAPIF) and it uses `content"
+" negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"determine which format is to be served to the client"
+msgstr ""
+"OAPIF는 여러 산출물 포맷을 지원하지만 어느 포맷도 강제하지 않으며 (QGIS OAPIF는 현재 GeoJSON과 HTML만 "
+"지원합니다) 클라이언트에 서비스할 포맷을 결정하는 데 `내용 협상(content negotiation) "
+"<https://en.wikipedia.org/wiki/Content_negotiation>`_ 을 사용합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:27
+msgid "JSON and HTML are first class citizens in OAPIF"
+msgstr "JSON과 HTML은 OAPIF의 일급 객체(first class citizen)입니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:28
+msgid "OAPIF is self-documenting (through the ``/api`` endpoint)"
+msgstr "OAPIF는 (``/api`` 종단점을 통해) 자체 문서화(self-documenting)합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:29
+msgid "OAPIF is fully navigable (through links) and browsable"
+msgstr "OAPIF를 (링크를 통해) 완전하게 둘러보고 또 탐색할 수 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:33
+msgid ""
+"While the OGC API Features implementation in QGIS can make use of the "
+"``MAP`` parameter to specify the project file, no extra query parameters are"
+" allowed by the OPENAPI specification. For this reason it is strongly "
+"recommended that ``MAP`` is not exposed in the URL and the project file is "
+"specified in the environment by other means (i.e. setting "
+"``QGIS_PROJECT_FILE`` in the environment through a web server rewrite rule)."
+msgstr ""
+"QGIS에 구현된 OGC API 피처는 프로젝트 파일을 지정하는 데 ``MAP`` 파라미터를 사용할 수 있지만, OPENAPI 사양으로 "
+"인해 다른 추가 파라미터를 사용할 수는 없습니다. 때문에 URL에 ``MAP`` 을 노출시키지 말고, 해당 환경에서 다른 방법으로 (예를"
+" 들어 웹 서버 고쳐쓰기 규칙을 통해 해당 환경에 ``QGIS_PROJECT_FILE`` 을 설정해서) 프로젝트 파일을 지정할 것을 "
+"강력히 추천합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:44
+msgid ""
+"The **API** endpoint provides comprehensive documentation of all supported "
+"parameters and output formats of your service. The following paragraphs will"
+" only describe the most important ones."
+msgstr ""
+"**API** 종단점은 사용자 서비스가 지원하는 모든 파라미터 및 산출물 포맷의 포괄적인 기록을 지원합니다. 다음은 그 가운데 가장 "
+"중요한 것들만 설명한 것입니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:50
+msgid "Resource representation"
+msgstr "리소스 표현"
+
+#: ../../docs/server_manual/services/ogcapif.rst:52
+msgid ""
+"The implementation of OGC API Features in QGIS Server currently supports the"
+" following resource representation (output) formats:"
+msgstr "QGIS 서버에 구현된 OGC API 피처는 현재 다음과 같은 리소스 표현(산출물) 포맷을 지원합니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:55
+msgid "HTML"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:56
+msgid "JSON"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:58
+msgid ""
+"The format that is actually served will depend on content negotiation, but a"
+" specific format can be explicitly requested by appending a format specifier"
+" to the endpoints."
+msgstr ""
+"실제로 서비스되는 포맷은 내용 협상에 좌우될 것이지만, 종단점에 포맷 지정자를 추가해서 특정 포맷을 명확하게 요청할 수 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:62
+msgid "Supported format specifier extensions are:"
+msgstr "다음과 같은 포맷 지정자 확장자를 지원합니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:64
+msgid "``.json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:65
+msgid "``.html``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:67
+msgid ""
+"Additional format specifier aliases may be defined by specific endpoints:"
+msgstr "특정 종단점이 포맷 지정자의 추가적인 별명을 정의할 수도 있습니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:70
+msgid "``.openapi``: alias for ``.json`` supported by the **API** endpoint"
+msgstr "``.openapi``: **API** 종단점이 지원하는 ``.json`` 의 별명"
+
+#: ../../docs/server_manual/services/ogcapif.rst:71
+msgid ""
+"``.geojson``: alias for ``.json`` supported by the **Features** and "
+"**Feature** endpoints"
+msgstr "``.geojson``: **Features** 및 **Feature** 종단점이 지원하는 ``.json`` 의 별명"
+
+#: ../../docs/server_manual/services/ogcapif.rst:77
+msgid "Endpoints"
+msgstr "종단점(Endpoint)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:79
+msgid ""
+"The API provides a list of endpoints that the clients can retrieve. The "
+"system is designed in such a way that every response provides a set of links"
+" to navigate through all the provided resources."
+msgstr ""
+"API는 클라이언트가 검색할 수 있는 종단점 목록을 제공합니다. 이 시스템은 모든 응답이 모든 제공 리소스를 탐색할 수 있는 링크 집합을"
+" 제공하도록 설계되었습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:83
+msgid "Endpoints points provided by the QGIS implementation are:"
+msgstr "QGIS에 구현된 종단점 포인트는 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Name"
+msgstr "이름"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Path"
+msgstr "경로"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+#: ../../docs/server_manual/services/ogcapif.rst:107
+msgid "Landing Page"
+msgstr "Landing Page"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid ""
+"General information about the service and provides links to all available "
+"endpoints"
+msgstr "서비스에 대한 일반 정보와 사용할 수 있는 모든 종단점을 가리키는 링크를 제공"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Conformance"
+msgstr "Conformance"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/conformance``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about the conformance of the service to the standards"
+msgstr "표준에 대한 서비스의 적합성 정보"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "API"
+msgstr "API"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/api``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid ""
+"Full description of the endpoints provided by the service and the returned "
+"documents structure"
+msgstr "서비스가 제공하는 종단점에 대한 전체 설명과 반환된 문서의 구조"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Collections"
+msgstr "Collections"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/collections``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "List of all collections (i.e. 'vector layers') provided by the service"
+msgstr "서비스가 제공하는 모든 선택 집합(예: 'vector layers')의 목록"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Collection"
+msgstr "Collection"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/collections/{collectionId}``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about a collection (name, metadata, extent etc.)"
+msgstr "선택 집합 관련 정보 (이름, 메타데이터, 범위 등등)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Features"
+msgstr "Features"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/collections/{collectionId}/items``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "List of the features provided by the collection"
+msgstr "선택 집합이 제공하는 피처의 목록"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Feature"
+msgstr "Feature"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "``/collections/{collectionId}/items/{featureId}``"
+msgstr ""
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about a single feature"
+msgstr "단일 피처 관련 정보"
+
+#: ../../docs/server_manual/services/ogcapif.rst:104
+msgid ""
+"Similar to WFS-T (transactional Web Feature Service), it is possible to add,"
+" update and delete features (CRUD). The respective requests are described on"
+" \"``/api``\"."
+msgstr ""
+"WFS-T(트랜잭션을 통한 웹 피처 서비스)와 비슷하게, OAPIF는 피처를 CRUD(생성, 읽기, 업데이트, 삭제)할 수 있습니다. "
+"CRUD 각각의 요청에 대해서는 \"``/api``\" 에서 설명하고 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:109
+msgid ""
+"The main endpoint is the **Landing Page**. From that page it is possible to "
+"navigate to all the available service endpoints. The **Landing Page** must "
+"provide links to"
+msgstr ""
+"주 종단점은 **Landing Page** 입니다. 해당 페이지에서 사용할 수 있는 모든 서비스 종단점으로 탐색해 갈 수 있습니다. "
+"**Landing Page** 는 다음을 가리키는 링크를 제공해야만 합니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:113
+msgid ""
+"the API definition (path ``/api`` link relations ``service-desc`` and "
+"``service-doc``),"
+msgstr "API 정의 (경로 ``/api``, 링크 관계 ``service-desc`` 그리고 ``service-doc``)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:115
+msgid ""
+"the Conformance declaration (path ``/conformance``, link relation "
+"``conformance``), and"
+msgstr "적합성 선언 (경로 ``/conformance``, 링크 관계 ``conformance``)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:117
+msgid "the Collections (path ``/collections``, link relation ``data``)."
+msgstr "선택 집합 (경로 ``/collections``, 링크 관계 ``data``)."
+
+#: ../../docs/server_manual/services/ogcapif.rst:124
+msgid "Server OAPIF landing page"
+msgstr "서버 OAPIF 랜딩 페이지"
+
+#: ../../docs/server_manual/services/ogcapif.rst:129
+msgid "API Definition"
+msgstr "API 정의"
+
+#: ../../docs/server_manual/services/ogcapif.rst:131
+msgid ""
+"The **API Definition** is an OPENAPI-compliant description of the API "
+"provided by the service. In its HTML representation it is a browsable page "
+"where all the endpoints and their response formats are accurately listed and"
+" documented. The path of this endpoint is ``/api``."
+msgstr ""
+"**API 정의** 는 서비스가 제공하는 API의, OPENAPI와 호환되는 설명입니다. 이 HTML 표현은 모든 종단점 및 각 종단점의"
+" 응답 포맷을 정확하게 목록화하고 문서화한, 탐색 가능한 페이지입니다. 이 종단점의 경로는 ``/api`` 입니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:138
+msgid ""
+"The API definition provides a comprehensive and authoritative documentation "
+"of the service, including all supported parameters and returned formats."
+msgstr "API 정의는 서비스에 대한, 지원하는 파라미터와 반환되는 포맷을 모두 포함하는 포괄적이고 권위 있는 문서를 제공합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:144
+msgid "This endpoint is analogue to WFS's ``GetCapabilities``"
+msgstr "이 종단점은 WFS의 ``GetCapabilities`` 와 유사합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:147
+msgid "Collections list"
+msgstr "Collections 목록"
+
+#: ../../docs/server_manual/services/ogcapif.rst:149
+msgid ""
+"The collections endpoint provides a list of all the collections available in"
+" the service. Since the service \"serves\" a single QGIS project the "
+"collections are the vector layers from the current project (if they were "
+"published as WFS in the project properties). The path of this endpoint is "
+"``/collections/``."
+msgstr ""
+"**Collections** 종단점은 서비스에서 사용할 수 있는 모든 선택 집합의 목록을 제공합니다. 서비스가 단일 QGIS 프로젝트를 "
+"\"서비스\" 하기 때문에, 선택 집합은 (프로젝트 속성에서 벡터 레이어를 WFS로 게시한 경우) 현재 프로젝트의 벡터 레이어들입니다. "
+"이 종단점의 경로는 ``/collections/`` 입니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:161
+msgid "Server OAPIF collections list page"
+msgstr "서버 OAPIF 선택 집합 목록 페이지"
+
+#: ../../docs/server_manual/services/ogcapif.rst:165
+msgid "Collection detail"
+msgstr "Collection 상세 정보"
+
+#: ../../docs/server_manual/services/ogcapif.rst:167
+msgid ""
+"While the collections endpoint does not provide detailed information about "
+"each available collection, that information is available in the "
+"``/collections/{collectionId}`` endpoints. Typical information includes the "
+"extent, a description, CRSs and other metadata."
+msgstr ""
+"**Collections** 종단점이 사용할 수 있는 각 선택 집합에 대한 자세한 정보를 제공하지 않는 반면, "
+"``/collections/{collectionId}`` 종단점에서는 해당 정보를 사용할 수 있습니다. 이 정보는 전형적으로 범위, "
+"설명, 좌표계 및 기타 메타데이터를 포함합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:173
+#: ../../docs/server_manual/services/ogcapif.rst:194
+msgid ""
+"The HTML representation also provides a browsable map with the available "
+"features."
+msgstr "이 HTML 표현은 사용할 수 있는 피처를 보유한 탐색 가능한 맵도 제공합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:182
+msgid "Server OAPIF collection detail page"
+msgstr "서버 OAPIF 선택 집합 상세 정보 페이지"
+
+#: ../../docs/server_manual/services/ogcapif.rst:188
+msgid "Features list"
+msgstr "Features 목록"
+
+#: ../../docs/server_manual/services/ogcapif.rst:190
+msgid ""
+"This endpoint provides a list of all features in a collection knowing the "
+"collection ID. The path of this endpoint is "
+"``/collections/{collectionId}/items``."
+msgstr ""
+"이 종단점은 ID를 알고 있는 선택 집합에 있는 모든 피처의 목록을 제공합니다. 이 종단점의 경로는 "
+"``/collections/{collectionId}/items`` 입니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:200
+msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
+msgstr "이 종단점은 WFS1 및 WFS2의 ``GetFeature`` 와 유사합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:208
+msgid "Server OAPIF features list page"
+msgstr "서버 OAPIF 피처 목록 페이지"
+
+#: ../../docs/server_manual/services/ogcapif.rst:212
+msgid "Feature detail"
+msgstr "Feature 상세 정보"
+
+#: ../../docs/server_manual/services/ogcapif.rst:214
+msgid ""
+"This endpoint provides all the available information about a single feature,"
+" including the feature attributes and its geometry. The path of this "
+"endpoint is ``/collections/{collectionId}/items/{itemId}``."
+msgstr ""
+"이 종단점은 단일 피처에 대해 피처 속성과 도형을 포함하는, 사용할 수 있는 모든 정보를 제공합니다. 이 종단점의 경로는 "
+"``/collections/{collectionId}/items/{itemId}`` 입니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:219
+msgid ""
+"The HTML representation also provides a browsable map with the feature "
+"geometry."
+msgstr "이 HTML 표현은 피처 도형을 보유한 탐색 가능한 맵도 제공합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:228
+msgid "Server OAPIF feature detail page"
+msgstr "서버 OAPIF 피처 상세 정보 페이지"
+
+#: ../../docs/server_manual/services/ogcapif.rst:233
+msgid "Pagination"
+msgstr "페이지 번호 매기기"
+
+#: ../../docs/server_manual/services/ogcapif.rst:235
+msgid ""
+"Pagination of a long list of features is implemented in the OGC API through "
+"``next`` and ``prev`` links, QGIS server constructs these links by appending"
+" ``limit`` and ``offset`` as query string parameters."
+msgstr ""
+"OGC API에서 피처의 긴 목록에 페이지 번호를 메기는 기능(pagination)은 ``next`` 및 ``prev`` 링크를 통해 "
+"구현되어 있습니다. QGIS 서버는 ``limit`` 및 ``offset`` 을 쿼리 문자열 파라미터로 추가해서 이 링크들을 구성합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:240
+#: ../../docs/server_manual/services/ogcapif.rst:315
+#: ../../docs/server_manual/services/ogcapif.rst:327
+#: ../../docs/server_manual/services/ogcapif.rst:341
+#: ../../docs/server_manual/services/ogcapif.rst:352
+#: ../../docs/server_manual/services/ogcapif.rst:381
+msgid "URL example:"
+msgstr "URL 예시:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:248
+msgid ""
+"The maximum acceptable value for ``limit`` can be configured with the "
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: "
+":ref:`qgis-server-envvar`)."
+msgstr ""
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` 서버 환경 설정으로 ``limit`` 의 최대 허용 값의 환경을 설정할 수"
+" 있습니다. (:ref:`qgis-server-envvar` 참조)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:254
+msgid "Feature filtering"
+msgstr "객체 필터링"
+
+#: ../../docs/server_manual/services/ogcapif.rst:256
+msgid ""
+"The features available in a collection can be filtered/searched by "
+"specifying one or more filters."
+msgstr "하나 이상의 필터를 지정해서 선택 집합에서 사용할 수 있는 피처를 필터링/검색할 수 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:261
+msgid "Date and time filter"
+msgstr "날짜 및 시간 필터"
+
+#: ../../docs/server_manual/services/ogcapif.rst:262
+msgid ""
+"Collections with date and/or datetime attributes can be filtered by "
+"specifying a ``datetime`` argument in the query string. By default the first"
+" date/datetime field is used for filtering. This behavior can be configured "
+"by setting a \"Date\" or \"Time\" dimension in the :menuselection:`QGIS "
+"Server --> Dimension` section of the layer properties dialog."
+msgstr ""
+"쿼리 문자열에 ``datetime`` 인자를 지정하면 날짜 그리고/또는 날짜&시간 속성을 가진 선택 집합을 필터링할 수 있습니다. 필터링"
+" 작업에 첫 번째 날짜/날짜&시간 필드를 기본적으로 이용합니다. 레이어 속성 대화창의 :menuselection:`QGIS Server "
+"--> Dimension` 부분에서 \"Date\" 및 \"Time\" 차원을 설정하면 이 습성의 환경을 설정할 수 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:269
+msgid ""
+"The date and time filtering syntax is fully described in the "
+":ref:`ogc_api_features_api_definition` and also supports ranges (begin and "
+"end values are included) in addition to single values."
+msgstr ""
+"날짜와 시간 필터링 문법은 :ref:`ogc_api_features_api_definition` 에 충분히 설명되어 있으며, 단일 값만이"
+" 아니라 (시작 및 종단 값도 포함하는) 범위도 지원합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:274
+msgid "URL examples:"
+msgstr "URL 예시:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:276
+msgid "Returns only the features with date dimension matching ``2019-01-01``"
+msgstr "날짜 차원이 ``2019-01-01`` 과 일치하는 피처만 반환"
+
+#: ../../docs/server_manual/services/ogcapif.rst:282
+msgid ""
+"Returns only the features with datetime dimension matching "
+"``2019-01-01T01:01:01``"
+msgstr "날짜&시간 차원이 ``2019-01-01T01:01:01`` 과 일치하는 피처만 반환"
+
+#: ../../docs/server_manual/services/ogcapif.rst:289
+msgid ""
+"Returns only the features with datetime dimension in the range "
+"``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
+msgstr ""
+"날짜 차원이 ``2019-01-01T01:01:01`` ─ ``2019-01-01T12:00:00`` 범위에 들어오는 피처만 반환"
+
+#: ../../docs/server_manual/services/ogcapif.rst:298
+msgid "Bounding box filter"
+msgstr "경계 상자 필터"
+
+#: ../../docs/server_manual/services/ogcapif.rst:300
+msgid ""
+"A bounding box spatial filter can be specified with the ``bbox`` parameter:"
+msgstr "경계 상자 공간 필터는 ``bbox`` 파라미터로 지정할 수 있습니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:302
+msgid "The order of the comma separated elements is:"
+msgstr "쉼표로 구분된 요소들의 순서는 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:304
+msgid "Lower left corner, WGS 84 longitude"
+msgstr "좌하단 모서리, WGS 84 경도"
+
+#: ../../docs/server_manual/services/ogcapif.rst:305
+msgid "Lower left corner, WGS 84 latitude"
+msgstr "좌하단 모서리, WGS 84 위도"
+
+#: ../../docs/server_manual/services/ogcapif.rst:306
+msgid "Upper right corner, WGS 84 longitude"
+msgstr "우상단 모서리, WGS 84 경도"
+
+#: ../../docs/server_manual/services/ogcapif.rst:307
+msgid "Upper right corner, WGS 84 latitude"
+msgstr "우상단 모서리, WGS 84 위도"
+
+#: ../../docs/server_manual/services/ogcapif.rst:310
+msgid ""
+"The OGC specifications also allow a 6 item bbox specifier where the third "
+"and sixth items are the Z components, this is not yet supported by QGIS "
+"server."
+msgstr ""
+"OGC 사양은 경계 상자 파라미터의 값을 6개 항목으로 지정하는 일도 지원합니다. 이때 세 번째와 여섯 번째는 Z 요소인데, QGIS "
+"서버가 아직 지원하지 않고 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:321
+msgid ""
+"If the *CRS* of the bounding box is not `WGS 84 "
+"<https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, a different CRS can be "
+"specified by using the optional parameter ``bbox-crs``. The CRS format "
+"identifier must be in the `OGC URI <https://www.opengis.net/def/crs/>`_ "
+"format:"
+msgstr ""
+"경계 상자의 좌표계가 `WGS 84 <https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_ 가 아닌 "
+"경우, 부가적인 ``bbox-crs`` 파라미터를 사용해서 다른 좌표계를 지정할 수 있습니다. 이때 좌표계 식별자 서식은 `OGC URI"
+" <https://www.opengis.net/def/crs/>`_ 에 있는 서식이어야만 합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:335
+msgid "Attribute filters"
+msgstr "속성 필터"
+
+#: ../../docs/server_manual/services/ogcapif.rst:337
+msgid ""
+"Attribute filters can be combined with the bounding box filter and they are "
+"in the general form: ``<attribute name>=<attribute value>``. Multiple "
+"filters can be combined using the ``AND`` operator."
+msgstr ""
+"속성 필터와 경계 상자 필터를 결합할 수 있습니다. 속성 필터의 일반적인 서식은 ``<attribute name>=<attribute "
+"value>`` 입니다. ``AND`` 연산자를 사용해서 여러 필터를 결합할 수 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:343
+msgid "filters all features where attribute ``name`` equals \"my value\""
+msgstr "``name`` 속성이 \"my value\" 와 동일한 모든 피처를 필터링"
+
+#: ../../docs/server_manual/services/ogcapif.rst:350
+msgid "Partial matches are also supported by using a ``*`` (\"star\") operator:"
+msgstr "``*`` (\"star\") 연산자를 사용하는 부분 일치도 지원합니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:354
+msgid "filters all features where attribute ``name`` ends with \"value\""
+msgstr "``name`` 속성이 \"value\" 로 끝나는 모든 피처를 필터링"
+
+#: ../../docs/server_manual/services/ogcapif.rst:361
+msgid "Feature sorting"
+msgstr "객체 정렬"
+
+#: ../../docs/server_manual/services/ogcapif.rst:363
+msgid ""
+"It is possible to order the result set by field value using the ``sortby`` "
+"query parameter."
+msgstr "``sortby`` 쿼리 파라미터를 사용하면 필드값으로 설정된 산출물을 정렬할 수 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:366
+msgid ""
+"The results are sorted in ascending order by default. To sort the results in"
+" descending order, a boolean flag (``sortdesc``) can be set:"
+msgstr ""
+"산출물은 기본적으로 오름차순으로 정렬됩니다. 산출물을 내림차순으로 정렬하려면, 불(boolean) 플래그(``sortdesc``)를 "
+"설정하면 됩니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:375
+msgid "Attribute selection"
+msgstr "속성 선택"
+
+#: ../../docs/server_manual/services/ogcapif.rst:377
+msgid ""
+"The feature attributes returned by a :ref:`ogc_api_features_features_list` "
+"call can be limited by adding a comma separated list of attribute names in "
+"the optional ``properties`` query string argument."
+msgstr ""
+"부가적인 ``properties`` 쿼리 문자열 인자에 쉼표로 구분한 속성명 목록을 추가하면 "
+":ref:`ogc_api_features_features_list` 호출이 반환하는 피처 속성을 제한할 수 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:383
+msgid "returns only the ``name`` attribute"
+msgstr "``name`` 속성만 반환"
+
+#: ../../docs/server_manual/services/ogcapif.rst:391
+msgid "Customize the HTML pages"
+msgstr "HTML 페이지 사용자 정의"
+
+#: ../../docs/server_manual/services/ogcapif.rst:393
+msgid ""
+"The HTML representation uses a set of HTML templates to generate the "
+"response. The template is parsed by a template engine called `inja "
+"<https://github.com/pantor/inja/>`_. The templates can be customized by "
+"overriding them (see: :ref:`server_oapif_template_override`). The template "
+"has access to the same data that are available to the ``JSON`` "
+"representation and a few additional functions are available to the template:"
+msgstr ""
+"HTML 표현은 응답을 생성하기 위해 HTML 템플릿의 집합을 사용합니다. `inja "
+"<https://github.com/pantor/inja/>`_ 라는 템플릿 엔진이 템플릿을 파싱합니다. 템플릿을 무시하면 "
+"(:ref:`server_oapif_template_override` 참조) 템플릿을 사용자 지정할 수 있습니다. 템플릿은 "
+"``JSON`` 표현에 사용할 수 있는 데이터와 동일한 데이터에 접근할 수 있으며, 템플릿에 몇몇 추가 함수를 사용할 수 있습니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:405
+msgid "Custom template functions"
+msgstr "사용자 지정 템플릿 함수"
+
+#: ../../docs/server_manual/services/ogcapif.rst:407
+msgid "``path_append( path )``: appends a directory path to the current url"
+msgstr "``path_append( path )``: 현재 URL에 디렉터리 경로를 추가합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:408
+msgid ""
+"``path_chomp( n )``: removes the specified number \"n\" of directory "
+"components from the current url path"
+msgstr "``path_chomp( n )``: 현재 URL 경로에서 디렉터리 요소들 가운데 지정한 \"n\" 번 디렉터리를 제거합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:410
+msgid "``json_dump( )``: prints the JSON data passed to the template"
+msgstr "``json_dump( )``: 템플릿에 전송된 JSON 데이터를 인쇄합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:411
+msgid ""
+"``static( path )``: returns the full URL to the specified static path. For "
+"example: \"static( \"/style/black.css\" )\" with a root path "
+"\"http://localhost/qgisserver/wfs3\" will return "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
+msgstr ""
+"``static( path )``: URL 전체를 지정한 정적 경로로 반환합니다. 예를 들면: 루트 경로가 "
+"\"http://localhost/qgisserver/wfs3\" 인 \"static( \"/style/black.css\" )\" 는 "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\" 를 반환할 것입니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:415
+msgid ""
+"``links_filter( links, key, value )``: Returns filtered links from a link "
+"list"
+msgstr "``links_filter( links, key, value )``: 링크 목록에서 필터링한 링크를 반환합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:417
+msgid ""
+"``content_type_name( content_type )``: Returns a short name from a content "
+"type, for example \"text/html\" will return \"HTML\""
+msgstr ""
+"``content_type_name( content_type )``: 내용 유형으로부터 약칭을 반환합니다. 예를 들어 "
+"\"text/html\" 은 \"HTML\" 을 반환할 것입니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:419
+msgid ""
+"``nl2br( text )``: Returns the input text with all newlines replaced by "
+"\"<br>\" tags"
+msgstr "``nl2br( text )``: 입력 텍스트의 모든 새줄 문자(newline)를 \"<br>\" 태그로 치환해서 반환합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:421
+msgid ""
+"``starts_with( string, prefix )``: returns true if a string begins with the "
+"provided string prefix, false otherwise"
+msgstr ""
+"``starts_with( string, prefix )``: 문자열이 지정한 문자열 접두어로 시작하는 경우 참을, 그렇지 않은 경우 "
+"거짓을 반환합니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:428
+msgid "Template overrides"
+msgstr "템플릿 무시"
+
+#: ../../docs/server_manual/services/ogcapif.rst:430
+msgid ""
+"Templates and static assets are stored in subdirectories of the QGIS server "
+"default API resource directory "
+"(:file:`/usr/share/qgis/resources/server/api/` on a Linux system), the base "
+"directory can be customized by changing the environment variable "
+"``QGIS_SERVER_API_RESOURCES_DIRECTORY``."
+msgstr ""
+"템플릿과 정적 자산(asset)은 QGIS 서버의 기본 API 리소스 디렉터리(리눅스 시스템의 경우 "
+":file:`/usr/share/qgis/resources/server/api/`)의 하위 디렉터리에 저장되는데, "
+"``QGIS_SERVER_API_RESOURCES_DIRECTORY`` 환경 변수를 변경하면 기본 디렉터리를 사용자 지정할 수 있습니다."
+
+#: ../../docs/server_manual/services/ogcapif.rst:436
+msgid "A typical Linux installation will have the following directory tree:"
+msgstr "전형적인 리눅스 설치는 다음과 같은 디렉터리 트리를 가지게 될 것입니다:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:461
+msgid ""
+"To override the templates you can copy the whole tree to another location "
+"and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location."
+msgstr ""
+"템플릿을 무시하려면, 이 트리 전체를 다른 위치에 복사한 다음 ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` "
+"환경 변수가 새 위치를 가리키도록 변경하십시오."

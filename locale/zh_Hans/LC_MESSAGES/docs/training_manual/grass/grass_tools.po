@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:2
+msgid "|LS| GRASS Tools"
+msgstr "课: GRASS工具"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:4
+msgid ""
+"In this lesson we will present a selection of tools to give you an idea of "
+"the capabilities of GRASS."
+msgstr "在本课，我们将介绍一些工具，让您更深入了解GRASS的功能。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:11
+msgid "|basic| |FA| Create an aspect map"
+msgstr "|basic| 跟我做: 创建坡向地图"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:200
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/grass/grass_tools.rst:13
+#: ../../docs/training_manual/grass/grass_tools.rst:36
+msgid "Open the :guilabel:`GRASS Tools` tab"
+msgstr "打开 :guilabel:`GRASS工具` 选项卡"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:14
+#: ../../docs/training_manual/grass/grass_tools.rst:37
+msgid ""
+"Load the :file:`g_dem` raster layer from the :guilabel:`grass_mapset` Mapset"
+msgstr "从 :guilabel:`grass_mapset` 地图集加载 :file:`g_dem` 栅格图层"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:15
+msgid ""
+"Look for the :guilabel:`r.aspect` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr "在 :guilabel:`模块列表` 选项卡的 :guilabel:`过滤器` 字段中搜索 :guilabel:`r.aspect` 模块"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:17
+msgid ""
+"Open the tool and set it up like this and click on the :guilabel:`Run` "
+"button:"
+msgstr "打开工具并按如下进行设置，然后单击 :guilabel:`运行` 按钮："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:22
+msgid ""
+"When the process is finished click on :guilabel:`View Output` to load the "
+"resulting layer in the canvas:"
+msgstr "完成该过程后，单击 :guilabel:`查看输出` 将生成的图层加载到画布中："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:28
+msgid ""
+"The :file:`g_aspect` layer is stored within the :guilabel:`grass_mapset` "
+"Mapset so you can remove the layer from the canvas and reload it whenever "
+"you want."
+msgstr ""
+"该 :file:`g_aspect` 图层存储在 :guilabel:`grass_mapset` 地图集，因此您可以从画布中移除图层，并随时重新加载。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:32
+msgid "|basic| |FA| Get basic statistic of raster layer"
+msgstr "|basic| 跟我做: 获取栅格图层的基本统计信息"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:34
+msgid ""
+"We want to know some basic statistics of the :file:`g_dem` raster layer."
+msgstr "我们想知道 :file:`g_dem` 栅格图层的一些基本统计数据。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:38
+msgid ""
+"Look for the :guilabel:`r.info` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr "在 :guilabel:`模块列表` 选项卡的 :guilabel:`过滤器` 字段中搜索 :guilabel:`r.info` 模块"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:40
+msgid "Set up the tool like this and click on :guilabel:`Run`:"
+msgstr "如下设置工具，然后单击 :guilabel:`运行`:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:45
+msgid ""
+"Within the Output tab you will see some raster information printed, like the"
+" path of the file, the number of rows and columns and other useful "
+"information:"
+msgstr "在输出选项卡，您将看到输出的一些栅格信息，如文件路径、行数和列数以及其他有用信息："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:53
+msgid "|moderate| |FA| The Reclass Tool"
+msgstr "|moderate| 跟我做: 重分类工具"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:201
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/grass/grass_tools.rst:55
+msgid ""
+"Reclassifying a raster layer is a very useful task. We just created the "
+":file:`g_aspect` layer from the :file:`g_dem` one. The value range gets from"
+" 0 (North) passing through 90 (East), 180 (South), 270 (West) and finally to"
+" 360 (North again). We can reclassify the :file:`g_aspect` layer to have "
+"just 4 **categories** following specific *rules* (North = 1, East = 2, South"
+" = 3 and West = 4)."
+msgstr ""
+"重分类栅格图层是一项非常有用的工作。我们刚刚从 :file:`g_dem` 图层创建了 :file:`g_aspect` 图层。数值范围从0 (北) "
+"经过 90 (东)、180 (南)、270 (西)，最后到360 (北)。可以根据指定 *规则* (北 = 1, 东 = 2, 南 = 3 和西 = "
+"4) 将 :file:`g_aspect` 图层重分类为4个 **类别** 。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:62
+msgid ""
+"Grass reclassify tool accepts a ``txt`` file with the defined rules. Writing"
+" the rules is very simple and the GRASS Manual contains very good "
+"description."
+msgstr "Grass重分类工具接受具有定义规则的 ``txt`` 文件。编写规则非常简单，GRASS手册有详细的描述。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:65
+msgid ""
+"Each GRASS tool has its own Manual tab. Take the time to read the "
+"description of the tool you are using to don't miss some useful parameters"
+msgstr "每个GRASS工具都有自己的帮助选项卡。花点时间阅读您正在使用工具的描述，不要错过一些有用的参数"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:69
+msgid ""
+"Load the :file:`g_aspect` layer or, if you don't have create it, go back to "
+"the :ref:`grass_aspect` section."
+msgstr "加载 :file:`g_aspect` 图层，如果您没有创建，请返回 :ref:`grass_aspect` 章节。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:71
+msgid ""
+"Look for the :guilabel:`r.reclass` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+"在 :guilabel:`模块列表` 选项卡的 :guilabel:`过滤器` 字段中搜索 :guilabel:`r.reclass` 模块"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:73
+msgid ""
+"Open the tool and set it up like the following picture. The file containing "
+"the rules is in the :file:`exercise_data/grass/` folder, named "
+":file:`reclass_aspect.txt`."
+msgstr ""
+"打开工具，如下图所示进行设置。包含规则的文件位于 :file:`exercise_data/grass/` 文件夹，命名为 "
+":file:`reclass_aspect.txt` 。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:75
+msgid "Click on :guilabel:`Run` and wait until the process is finished:"
+msgstr "单击 :guilabel:`运行` 并等待处理完成："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:80
+msgid ""
+"Click on :guilabel:`View Output` to load the reclassified raster in the "
+"canvas"
+msgstr "单击 :guilabel:`查看输出` ，将重分类的栅格加载到画布中"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:82
+msgid ""
+"The new layer is made up by just 4 values (1, 2, 3, and 4) and it is easier "
+"to manage and to process."
+msgstr "新图层仅由4个值 (1、2、3和4) 组成，更易于管理和处理。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:88
+msgid ""
+"Open the :file:`reclass_aspect.txt` with a text editor to see the rules and "
+"to start becoming used to them. Moreover, take a deep look at the GRASS "
+"manual: a lot of different examples are pointed out."
+msgstr ""
+"使用文本编辑器打开 :file:`reclass_aspect.txt` "
+"查看规则并开始熟悉它们。此外，请深入阅读GRASS手册：其中指出了许多不同的示例。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:94
+msgid "|moderate| |TY| Reclassify with your rules"
+msgstr "|moderate| 试一试 按照您的规则重分类"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:96
+msgid "Try to reclassify the :file:`g_dem` layer into 3 new categories:"
+msgstr "尝试将 :file:`g_dem` 图层重分类为3个新类别："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:98
+msgid "from 0 to 1000, new value = 1"
+msgstr "从 0 到 1000，新值 = 1"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:99
+msgid "from 1000 to 1400, new value = 2"
+msgstr "从 1000 到 1400，新值 = 2"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:100
+msgid "from 1400 to the maximum raster value, new value = 3"
+msgstr "从 1400 到最大栅格值，新值 = 3"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:102
+msgid "Answer"
+msgstr "回答"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:105
+msgid ""
+"To discover the maximum value of the raster run the ``r.info`` tool: in the "
+"console you will see that the maximum value is 1699. You are now ready to "
+"write the rules."
+msgstr "要找到栅格的最大值，请运行 ``r.info`` 工具：在控制台，将看到最大值是1699。您现在可以写规则了。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:109
+msgid "Open a text editor and add the following rules::"
+msgstr "打开文本编辑器并添加以下规则::"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:115
+msgid "Save the file as ``my_rules.txt`` file and close the text editor."
+msgstr "保存为 ``my_rules.txt`` 文件并关闭文本编辑器。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:116
+msgid ""
+"Run the ``r.reclass`` tool: choose the ``g_dem`` layer and load the file "
+"containing the rules you just have saved."
+msgstr "运行 ``r.reclass`` 工具：选择 ``g_dem`` 图层并加载刚刚保存的包含规则的文件。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:118
+msgid ""
+"Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change"
+" the colors and the final result should look like the following picture:"
+msgstr "单击 :guilabel:`运行` ，然后单击 :guilabel:`查看输出` 。您可以更改颜色，最终结果应如下图所示："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:126
+msgid "|moderate| |FA| The Mapcalc Tool"
+msgstr "|moderate| 跟我做: Mapcalc工具"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:128
+msgid ""
+"The Mapcalc tools is similar to the Raster Calculator of QGIS. You can "
+"perform mathematical operation on one or more raster layers and the final "
+"result will be a new layer with the calculated values."
+msgstr "Mapcalc工具类似于QGIS的栅格计算器。可以对一个或多个栅格图层执行数学运算，最终结果将是一个具有计算值的新图层。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:132
+msgid ""
+"The aim of the next exercise is to extract the values greater than 1000 from"
+" the :file:`g_dem` raster layer."
+msgstr "下一个练习的目的是从 :file:`g_dem` 栅格图层提取大于 1000 的值。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:135
+msgid ""
+"Look for the :guilabel:`r.mapcalc` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab."
+msgstr ""
+"在 :guilabel:`模块列表` 选项卡的 :guilabel:`过滤器` 字段中查找 :guilabel:`r.mapcalc` 模块。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:137
+msgid "Start the tool."
+msgstr "启动工具。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:139
+msgid ""
+"The :guilabel:`Mapcalc` dialog allows you to construct a sequence of "
+"analyses to be performed on a raster, or collection of rasters. You will use"
+" these tools to do so:"
+msgstr ":guilabel:`Mapcalc` 对话框允许构建在栅格或栅格集合上执行分析序列。您将使用以下工具来执行此操作："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:146
+msgid "In order, they are:"
+msgstr "依次为："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:148
+msgid ":guilabel:`Add map`: Add a raster file from your current GRASS mapset."
+msgstr ":guilabel:`添加地图`: 从当前GRASS地图集添加栅格文件。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:149
+msgid ""
+":guilabel:`Add constant value`: Add a constant value to be used in "
+"functions, 1000 in this case"
+msgstr ":guilabel:`添加常量值`: 添加要在函数中使用的常量值，本例中为1000"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:151
+msgid ""
+":guilabel:`Add operator or function`: Add an operator or function to be "
+"connected to inputs and outputs, we will use the operator ``greater equals "
+"than``"
+msgstr ":guilabel:`添加运算符或函数`: 添加要连接到输入和输出的运算符或函数，我们将使用运算符 ``大于等于``"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:153
+msgid ""
+":guilabel:`Add connection`: Connect elements. Using this tool, click and "
+"drag from the red dot on one item to the red dot on another item. Dots that "
+"are correctly connected to a connector line will turn gray. If the line or "
+"dot is red, it is not properly connected!"
+msgstr ""
+":guilabel:`添加连接`: "
+"连接元素。使用此工具，从一项的红点单击并拖动到另一项上的红点。正确连接到连接线的点将变为灰色。如果线或点为红色，表示连接不正确！"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:157
+msgid ":guilabel:`Select item`: Select an item and move selected items."
+msgstr ":guilabel:`选择项`: 选择一项并移动所选项。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:158
+msgid ""
+":guilabel:`Delete selected item`: Removes the selected item from the current"
+" mapcalc sheet, but not from the mapset (if it is an existing raster)"
+msgstr ":guilabel:`删除所选项`: 从当前Mapcalc工作表中移除选中项，但不是从地图集中删除 (如果它是现有栅格)"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:160
+msgid ":guilabel:`Open`: Open an existing file with the operation defined"
+msgstr ":guilabel:`打开`: 打开已定义运算的现有文件"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:161
+msgid ":guilabel:`Save`: Save all the operation in a file"
+msgstr ":guilabel:`保存`: 将所有运算保存在一个文件中"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:162
+msgid ""
+":guilabel:`Save as`: Save all the operations as a new file on the disk."
+msgstr ":guilabel:`另存为`: 将所有运算另存为磁盘上的新文件。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:164
+msgid "Using these tools, construct the following algorithm:"
+msgstr "使用这些工具，构建以下算法："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:169
+msgid ""
+"Click on :guilabel:`Run` and then on :guilabel:`View output` to see the "
+"output displayed in your map:"
+msgstr "单击 :guilabel:`运行` ，然后单击 :guilabel:`查看输出` ，查看地图中显示的输出内容："
+
+#: ../../docs/training_manual/grass/grass_tools.rst:175
+msgid "This shows all the areas where the terrain is higher than 1000 meters."
+msgstr "这显示了地形高于1000米的所有区域。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:177
+msgid ""
+"You can also save the formula you have created and load it in another QGIS "
+"project by clicking on the last button on the GRASS Mapcalc toolbar."
+msgstr "通过单击 GRASS Mapcalc 工具栏上的最后一个按钮，还可以保存已创建的公式，并将其加载到另一个QGIS工程中。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:181
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/grass/grass_tools.rst:183
+msgid ""
+"In this lesson, we have covered only a few of the many tools GRASS offers. "
+"To explore the capabilities of GRASS for yourself, open the :guilabel:`GRASS"
+" Tools` dialog and scroll down the :guilabel:`Modules List`. Or for a more "
+"structured approach, look under the :guilabel:`Modules Tree` tab, which "
+"organizes tools by type."
+msgstr ""
+"在本课，我们只介绍了GRASS提供的众多工具中的一小部分。要亲自探索GRASS功能，请打开 :guilabel:`GRASS工具` 对话框并向下滚动 "
+":guilabel:`模块列表` 。或者，要了解更结构化的方法，请查看 :guilabel:`模块树` 选项卡，该选项卡按类型组织工具。"

@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/developers_guide/localization.rst:3
+msgid "Localization"
+msgstr "현지화"
+
+#: ../../docs/developers_guide/localization.rst:5
+msgid "QGIS user interface is available in multiple languages."
+msgstr "QGIS 사용자 인터페이스를 여러 언어로 사용할 수 있습니다."
+
+#: ../../docs/developers_guide/localization.rst:7
+msgid ""
+"A global option in the settings allows to override the user interface "
+"language which was automatically detected from the operating system."
+msgstr "설정에 있는 전체 수준 옵션을 통해 운영 체제로부터 자동 탐지된 사용자 인터페이스 언어를 대체할 수 있습니다."
+
+#: ../../docs/developers_guide/localization.rst:11
+msgid ""
+"The representation of numbers, currency and dates varies according to the "
+"country and it is also overrideable in the settings."
+msgstr "국가에 따라 달라지는 숫자, 화폐 및 날짜 표현도 설정에서 대체할 수 있습니다."
+
+#: ../../docs/developers_guide/localization.rst:15
+msgid ""
+"Another option in the settings allows to define if the numeric thousands "
+"separator has to be used."
+msgstr "설정에 있는 또다른 옵션을 통해 숫자에 천 단위 구분자를 사용해야 하는지를 정의할 수 있습니다."
+
+#: ../../docs/developers_guide/localization.rst:18
+msgid ""
+"All these features are implemented through the `QLocale "
+"<https://doc.qt.io/qt-5/qlocale.html>`_ QT class which provides a very "
+"complete support for numeric and date types representation."
+msgstr ""
+"이 모든 특징은 `QLocale <https://doc.qt.io/qt-5/qlocale.html>`_ QT 클래스 통해 구현되며 숫자와"
+" 데이터 형 표현을 완전하게 제공합니다."
+
+#: ../../docs/developers_guide/localization.rst:23
+msgid ""
+"In order to make this system work a few rules need to be carefully followed "
+"when displaying numeric values in the QGIS user interface and when "
+"converting user input to integral or floating point variables."
+msgstr ""
+"이 시스템이 작동하려면, QGIS 사용자 인터페이스에 숫자값을 출력하는 경우 그리고 사용자 입력값을 정수형 또는 부동소수점형 변수로 "
+"변환하는 경우 몇 가지 규칙들을 조심스럽게 따라야 합니다."
+
+#: ../../docs/developers_guide/localization.rst:29
+msgid "Converting numbers to strings"
+msgstr "숫자형을 문자열로 변환하기"
+
+#: ../../docs/developers_guide/localization.rst:31
+msgid ""
+"For strings that are printed on the screen and visible to the users do not "
+"use ``QString::number()`` because it does not take locale options into "
+"consideration and it always uses ``C`` locale."
+msgstr ""
+"문자열이 화면에 출력되어 사용자가 볼 수 있는 경우, ``QString::number()`` 함수를 사용하지 마십시오. 이 함수는 "
+"로캘(locale) 옵션을 고려하지 않고 언제나 ``C`` 로케일만 사용하기 때문입니다."
+
+#: ../../docs/developers_guide/localization.rst:35
+msgid ""
+"Also do not use string interpolation unless you use the ``L`` suffix as "
+"explained in `QString documentation "
+"<https://doc.qt.io/qt-5/qstring.html#arg-5>`_."
+msgstr ""
+"또한 `QString 문서 <https://doc.qt.io/qt-5/qstring.html#arg-5>`_ 에서 설명한 대로 ``L``"
+" 접미어를 사용하지 않는 이상 문자열 보간도 하지 마십시오."
+
+#: ../../docs/developers_guide/localization.rst:38
+msgid "Use ``QLocale().toString()`` instead."
+msgstr "그 대신 ``QLocale().toString()`` 을 사용하십시오."
+
+#: ../../docs/developers_guide/localization.rst:40
+msgid "Example:"
+msgstr "예시:"
+
+#: ../../docs/developers_guide/localization.rst:53
+msgid ""
+"A notable exception to this rule is the generation of strings that will be "
+"passed to external applications or scripts that expect ``C`` number "
+"representation (dot as decimal separator and no thousands separator). "
+"``QString::number()`` must be used in this situation."
+msgstr ""
+"이 규칙에 대해 기억해둘 만한 예외는 (소수점 구분자로 마침표를 사용하고 천 단위 구분자를 사용하지 않는) ``C`` 숫자 표현을 "
+"기대하는 외부 응용 프로그램 또는 스크립트로 전송될 문자열을 생성하는 경우입니다. 이런 경우엔 반드시 "
+"``QString::number()`` 을 사용해야만 합니다."
+
+#: ../../docs/developers_guide/localization.rst:60
+msgid "Converting user input strings to numbers"
+msgstr "사용자 입력 문자열을 숫자형으로 변환하기"
+
+#: ../../docs/developers_guide/localization.rst:62
+msgid ""
+"When converting strings from user input to numbers do not use "
+"``QVariant::toDouble()``, ``QString::toDouble()`` or other ``::toDouble()`` "
+"methods available in QT classes because these methods ignore locale "
+"settings. The same consideration applies to integral types and ``::toInt()``"
+" or ``::toLongLong()`` methods."
+msgstr ""
+"사용자가 입력한 문자열을 숫자형으로 변환할 때 ``QVariant::toDouble()``, ``QString::toDouble()`` "
+"또는 QT 클래스에서 사용할 수 있는 다른 ``::toDouble()`` 메소드들을 사용하지 마십시오. 이 메소드들은 로케일 설정을 "
+"무시하기 때문입니다. 정수 유형으로 변환하는  ``::toInt()`` 또는 ``::toLongLong()`` 메소드들도 마찬가지입니다."
+
+#: ../../docs/developers_guide/localization.rst:68
+msgid ""
+"``QLocale().toDouble()`` or ``QLocale().toInt()`` and the others "
+"``QLocale()`` conversion methods can be used in this situation."
+msgstr ""
+"이런 상황에서는 ``QLocale().toDouble()`` 또는 ``QLocale().toInt()`` 및 기타 "
+"``QLocale()`` 변환 메소드를 사용할 수 있습니다."
+
+#: ../../docs/developers_guide/localization.rst:71
+msgid ""
+"As a better alternative, QGIS API provides a few classes that should be used"
+" for floating point numeric user input:"
+msgstr ""
+"좀 더 나은 대안은, 사용자가 입력한 부동소수점형 숫자값에 대해 사용해야 하는 다음 몇몇 QGIS API 제공 클래스들을 사용하는 "
+"것입니다:"
+
+#: ../../docs/developers_guide/localization.rst:74
+msgid ":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>`"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:75
+msgid ":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>`"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:78
+msgid ""
+":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>` displays the number "
+"according to user locale and settings and it validates the user input using "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>`."
+msgstr ""
+":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>` 는 사용자 로케일 및 설정에 따라 숫자를"
+" 출력하고 :class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` 를 이용해서 사용자 "
+"입력값을 검증합니다."
+
+#: ../../docs/developers_guide/localization.rst:82
+msgid ""
+"The validator class is tolerant and it will try to interpret the input "
+"checking first for the user locale and falling back to ``C`` locale if there"
+" is no match."
+msgstr ""
+"검증자(validator) 클래스는 유연하기 때문에, 먼저 사용자 로케일에 대해 입력값을 확인한 다음 일치하지 않을 경우 ``C`` "
+"로케일로 폴백(fall back)합니다."
+
+#: ../../docs/developers_guide/localization.rst:86
+msgid ""
+"The general recommendation is to use :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` for all floating point types I/O whenever it is"
+" possible because it is very well tested and it validates the input "
+"correctly. As an alternative it is possible to use the "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class "
+"independently on a string obtained from another widget (e.g. a simple "
+"``QLineEdit`` widget)."
+msgstr ""
+"일반 권장 사항은 모든 부동소수점형 입력/출력에 대해 가능한 모든 경우에 :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` 클래스를 사용하는 것입니다. 이 클래스가 매우 잘 테스트되어 있고 입력값을 정확하게 "
+"검증하기 때문입니다. 아니면 (단순 ``QLineEdit`` 위젯 같은) 또다른 위젯으로부터 가져온 문자열에 대해 "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` 클래스를 독립적으로 사용할 수도 "
+"있습니다."

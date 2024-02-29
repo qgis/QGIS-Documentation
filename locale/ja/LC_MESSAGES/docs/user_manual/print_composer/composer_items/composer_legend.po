@@ -1,0 +1,612 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:5
+msgid "The Legend Item"
+msgstr "凡例アイテム"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:13
+msgid ""
+"The :guilabel:`Legend` item is a box or a table that explains the meanings "
+"of the symbols used on the map. A legend is then bound to a map item. You "
+"can add a legend item with the |addLegend| :guilabel:`Add Legend` tool "
+"following :ref:`items creation instructions <create_layout_item>` and "
+"manipulate it the same way as exposed in :ref:`interact_layout_item`."
+msgstr ""
+":guilabel:`凡例` "
+"アイテムは、地図上で使用されているシンボルの意味を説明するボックス、あるいはテーブルです。このため、凡例は地図アイテムに関連付けられます。凡例アイテムは"
+" :ref:`アイテムの作成手順 <create_layout_item>` に従って |addLegend| :guilabel:`凡例を追加` "
+"ツールを使用して追加でき、 :ref:`interact_layout_item` と同じ方法で操作できます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:315
+msgid "addLegend"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:19
+msgid ""
+"By default, the legend item displays all available layers and can be refined"
+" using its :guilabel:`Item Properties` panel. Other than the :ref:`items "
+"common properties <item_common_properties>`, this feature has the following "
+"functionalities (see :numref:`figure_layout_legend`):"
+msgstr ""
+"デフォルトでは、凡例アイテムは全ての利用可能なレイヤを表示しますが、これは :guilabel:`アイテムプロパティ` パネルを使用して改良できます。 "
+":ref:`アイテムの共通プロパティ <item_common_properties>` の他に、凡例アイテムには以下の機能があります（ "
+":numref:`figure_layout_legend` 参照）。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:32
+msgid "Legend Item Properties Panel"
+msgstr "凡例アイテムプロパティパネル"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:35
+msgid "Main properties"
+msgstr "メインプロパティ"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:37
+msgid ""
+"The :guilabel:`Main properties` group of the legend :guilabel:`Item "
+"Properties` panel provides the following functionalities (see "
+":numref:`figure_layout_legend_ppt`):"
+msgstr ""
+"凡例の :guilabel:`アイテムプロパティ` パネルの :guilabel:`メインプロパティ` グループには、下記の機能があります（ "
+":numref:`figure_layout_legend_ppt` 参照）："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:45
+msgid "Legend Main properties group"
+msgstr "凡例メインプロパティグループ"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:47
+msgid "In Main properties you can:"
+msgstr "メインプロパティでは、以下の設定ができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:49
+msgid ""
+"Change the :guilabel:`Title` of the legend. It can be made dynamic using the"
+" :ref:`data-defined override <data_defined>` setting, useful for example "
+"when generating an atlas;"
+msgstr ""
+"凡例の :guilabel:`タイトル` の変更。 :ref:`データによって定義された上書き <data_defined>` "
+"の設定を使用すれば、タイトルを動的に変更することもでき、例えば地図帳の作成時に便利です。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:52
+msgid ""
+"Choose which :guilabel:`Map` item the current legend will refer to. By "
+"default, the map over which the legend item is drawn is picked. If none, "
+"then it falls back to the :ref:`reference map <reference_map>`."
+msgstr ""
+"現在の凡例がどの :guilabel:`地図` "
+"アイテムを参照しているかの選択。デフォルトでは、描画した凡例アイテムの下にある地図が選ばれます。もし下に地図アイテムが無ければ、 :ref:`参照マップ"
+" <reference_map>` にフォールバックします。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:56
+msgid ""
+":ref:`Variables <expression_variables>` of the linked map item (@map_id, "
+"@map_scale, @map_extent...) are also accessible from data-defined properties"
+" of the legend."
+msgstr ""
+"リンクしている地図アイテムの :ref:`変数 <expression_variables>` （@map_id, @map_scale, "
+"@map_extent...）は、凡例のデータ定義のプロパティからもアクセス可能です。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:60
+msgid ""
+"Wrap the text of the legend on a given character: each time the character "
+"appears, it's replaced with a line break;"
+msgstr "指定した文字による凡例テキストの折り返し。凡例テキストにその文字が現れるたびに、改行文字で置き換えられます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:62
+msgid ""
+"Set the symbols and text placement in the legend: the "
+":guilabel:`Arrangement` can be :guilabel:`Symbols on left` or "
+":guilabel:`Symbols on right`. The default value depends on the locale in use"
+" (right-to-left based or not)."
+msgstr ""
+"凡例内でのシンボルとテキストの配置の設定。 :guilabel:`配置` は、 :guilabel:`左側のシンボル` または "
+":guilabel:`右側のシンボル` とすることができます。デフォルト値は使用しているロケール（右から左へと書く言語か、そうでないか）によります。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:65
+msgid ""
+"Use |checkbox| :guilabel:`Resize to fit contents` to control whether or not "
+"a legend should be automatically resized to fit its contents. If unchecked, "
+"then the legend will never resize and instead just stick to whatever size "
+"the user has set. Any content which doesn't fit the size is cropped out."
+msgstr ""
+"|checkbox| :guilabel:`大きさを内容に合わせる` "
+"を使用すると、コンテンツに合わせて凡例を自動的にサイズ変更するかどうかを制御できます。チェックしない場合には凡例のサイズ変更は行われず、ユーザーが設定した大きさに固定されます。サイズが合わないコンテンツはすべて切り取られます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:321
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:72
+msgid "Legend items"
+msgstr "凡例アイテム"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:74
+msgid ""
+"The :guilabel:`Legend items` group of the legend :guilabel:`Item Properties`"
+" panel provides the following functionalities (see "
+":numref:`figure_layout_legend_items`):"
+msgstr ""
+"凡例の :guilabel:`アイテムプロパティ` パネルの :guilabel:`凡例アイテム` グループには、下記の機能があります（ "
+":numref:`figure_layout_legend_items` 参照）："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:82
+msgid "Legend Items group"
+msgstr "凡例アイテムグループ"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:84
+msgid ""
+"The legend will be updated automatically if |checkbox| :guilabel:`Auto "
+"update` is checked. When :guilabel:`Auto update` is unchecked this will give"
+" you more control over the legend items. All the icons below the legend "
+"items list will be activated."
+msgstr ""
+"|checkbox| :guilabel:`自動更新` にチェックが入っていると、凡例は自動的に更新されます。When :guilabel:`自動更新`"
+" がチェックされていない時には、凡例アイテムをより細かくコントロールすることができます。凡例アイテムのリスト下にある全てのアイコンが有効です。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:88
+msgid ""
+"The legend items window lists all legend items and allows you to change item"
+" order, group layers, remove and restore items in the list, edit layer names"
+" and symbology and add a filter."
+msgstr ""
+"凡例アイテムウィンドウにはすべての凡例アイテムが一覧表示されており、アイテムの順番の変更やレイヤのグループ化、リスト内のアイテムの削除と復元、レイヤ名とシンボロジの編集、フィルタの追加などができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:92
+msgid ""
+"The item order can be changed using the |arrowUp| and |arrowDown| buttons or"
+" with 'drag-and-drop' functionality. The order can not be changed for WMS "
+"legend graphics."
+msgstr ""
+"|arrowUp| や |arrowDown| ボタンを使用するか、ドラッグ＆ドロップでアイテムの順序を変更できます。 "
+"WMS凡例グラフィックは順序を変更できません。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:319
+msgid "arrowUp"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:317
+msgid "arrowDown"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:95
+msgid "Use the |addGroup| button to add a legend group."
+msgstr "|addGroup| ボタンを使用して凡例のグループを追加します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:313
+msgid "addGroup"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:96
+msgid ""
+"Use the |symbologyAdd| button to add layers and |symbologyRemove| button to "
+"remove groups, layers or symbol classes."
+msgstr ""
+"|symbologyAdd| ボタンを使用してレイヤを追加し、 |symbologyRemove| "
+"ボタンを使用してグループ、レイヤまたはシンボルクラスを削除します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:331
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:335
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:98
+msgid ""
+"The |symbologyEdit| button is used to edit the layer, group name or title. "
+"First you need to select the legend item. Double-clicking the item also "
+"opens the text box to rename it."
+msgstr ""
+"|symbologyEdit| "
+"ボタンを使用して、レイヤ名やグループ名、タイトルを編集できます。最初に凡例アイテムを選択する必要があります。アイテムをダブルクリックしても、テキストボックスが開き、名前の変更ができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:333
+msgid "symbologyEdit"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:101
+msgid ""
+"The |expression| button uses expressions to customize each symbol label of "
+"the selected layer (see :ref:`legend_items_data_defined`)"
+msgstr ""
+"|expression| ボタンは、選択したレイヤの各シンボルラベルをカスタマイズするために式を使用します（ "
+":ref:`legend_items_data_defined` 参照）"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:323
+msgid "expression"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:103
+msgid "The |sum| button adds a feature count for each class of vector layer."
+msgstr "|sum| ボタンは、ベクタレイヤの各クラスの地物数を凡例に追加します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:329
+msgid "sum"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:104
+msgid ""
+"The |expressionFilter| :sup:`Filter legend by expression` helps you filter "
+"which of the legend items of a layer will be displayed, i.e. using a layer "
+"that has different legend items (e.g., from a rule-based or categorized "
+"symbology), you can specify a boolean expression to remove from the legend "
+"tree, styles that have no feature satisfying a condition. Note that the "
+"features are nevertheless kept and shown in the layout map item."
+msgstr ""
+"|expressionFilter| :sup:`式による凡例フィルタ` "
+"は、レイヤのどの凡例アイテムを表示するかをフィルタリングするのに役立ちます。例えば、異なる凡例アイテムを持つレイヤ（ルールに基づいた、あるいはカテゴリ値によるシンボロジなど）を使って、条件式を満たす地物が無い場合にはそのスタイルを凡例ツリーから除外するためのブール式を指定することができます。ただし、そのような地物はレイアウトの地図アイテムでは残っており、表示されることに注意してください。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:325
+msgid "expressionFilter"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:111
+msgid ""
+"While the default behavior of the legend item is to mimic the "
+":guilabel:`Layers` panel tree, displaying the same groups, layers and "
+"classes of symbology, right-click any item offers you options to hide "
+"layer's name or raise it as a group or subgroup. In case you have made some "
+"changes to a layer, you can revert them by choosing :guilabel:`Reset to "
+"defaults` from the contextual menu of the legend entry."
+msgstr ""
+"凡例アイテムのデフォルトの動作は、 :guilabel:`レイヤ` "
+"パネルツリーを模倣し、同じグループ、レイヤ、シンボロジのクラスを表示しますが、アイテムを右クリックするとレイヤ名を隠したり、グループやサブグループとして表示するオプションがあります。レイヤに何らかの変更を加えた場合は、凡例エントリのコンテキストメニューから"
+" :guilabel:`デフォルトにリセット` を選択することで、変更を元に戻すことができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:118
+msgid ""
+"After changing the symbology in the QGIS main window, you can click on "
+":guilabel:`Update All` to adapt the changes in the legend element of the "
+"print layout."
+msgstr ""
+"QGISのメインウィンドウでシンボロジを変更したあと、 :guilabel:`全て更新` "
+"ボタンをクリックすると、印刷レイアウトの凡例要素に変更が反映されます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:122
+msgid ""
+"With the |checkbox| :guilabel:`Only show items inside linked map`, only the "
+"legend items visible in the linked map will be listed in the legend. This "
+"tool remains available when |checkbox| :guilabel:`Auto-update` is active"
+msgstr ""
+"|checkbox| :guilabel:`リンク先地図の内側にあるアイテムだけ表示する` "
+"にチェックを入れると、リンクした地図で表示されている凡例アイテムのみが凡例にリストされます。このツールは、 |checkbox| "
+":guilabel:`自動更新` が有効な場合にも利用可能です。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:125
+msgid ""
+"While generating an atlas with polygon features, you can filter out legend "
+"items that lie outside the current atlas feature. To do that, check the "
+"|checkbox| :guilabel:`Only show items inside current atlas feature` option."
+msgstr ""
+"ポリゴン地物を使用して地図帳を作成する際に、現在の地図帳地物の外にある地物の凡例アイテムをフィルタして除外できます。これを行うには、 "
+"|checkbox| :guilabel:`現在の地図帳地物の内部のアイテムのみを表示する` オプションにチェックを入れてください。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:132
+msgid "Data-define the legend labels"
+msgstr "データ定義による凡例ラベル"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:134
+msgid ""
+"|expression| allows you to add :ref:`expressions <vector_expressions>` to "
+"each symbol label of a given layer. New variables (``@symbol_label``, "
+"``@symbol_id`` and ``@symbol_count``) help you interact with the legend "
+"entry."
+msgstr ""
+"|expression| により、与えられたレイヤの各シンボルラベルに :ref:`式 <vector_expressions>` "
+"を追加できます。新しい変数（ ``@symbol_label`` 、 ``@symbol_id`` と ``@symbol_count`` "
+"）は、凡例エントリを操作する上で役立ちます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:138
+msgid ""
+"For example, given a ``regions`` layer categorized by its ``type`` field, "
+"you can append to each class in the legend their number of features and "
+"total area, e.g. ``Borough (3) - 850ha``:"
+msgstr ""
+"例えば、 ``regions`` レイヤがあり、 ``type`` フィールドで分類されているとしましょう。この凡例の各クラスに、 ``Borough "
+"(3) - 850ha`` のように地物の数と面積を追加できます："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:142
+msgid "Select the layer entry in the legend tree"
+msgstr "凡例ツリー内で設定したいレイヤのエントリを選択します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:143
+msgid ""
+"Press the |expression| button, opening the :guilabel:`Expression String "
+"Builder` dialog"
+msgstr "|expression| ボタンを押し、 :guilabel:`式文字列ビルダ` ダイアログを開きます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:145
+msgid ""
+"Enter the following expression (*assuming symbol labels have not been "
+"edited*)::"
+msgstr "以下の式を入力します（ *シンボルラベルは編集されていないことを仮定しています* ）::"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:153
+msgid "Press :guilabel:`OK`"
+msgstr ":guilabel:`OK` ボタンを押します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:158
+msgid "Customizing legend items"
+msgstr "凡例をカスタマイズする"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:165
+msgid ""
+"Legend items can also be customized individually in the :guilabel:`Legend "
+"Items Properties`. But these customization can only be done with |checkbox| "
+":guilabel:`Auto update` disabled."
+msgstr ""
+"凡例アイテムは :guilabel:`凡例アイテムプロパティ` で個別にカスタマイズすることもできます。しかし、これらのカスタマイズは "
+"|checkbox| :guilabel:`自動更新` が無効になっている場合のみ可能です。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:168
+msgid ""
+"Double-clicking on an item or pressing |symbologyEdit| :sup:`Edit selected "
+"item properties` allows for futher customization."
+msgstr ""
+"アイテムをダブルクリックするか、|symbologyEdit| :sup:`アイテムのプロパティを編集` "
+"を押すと、さらにカスタマイズすることができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:171
+msgid ":guilabel:`Label`"
+msgstr ":guilabel:`ラベル`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:173
+#, python-format
+msgid ""
+"For all item types it allows to modify the label text by typing in or by "
+"inserting expressions using the |expression| :guilabel:`Insert or Edit an "
+"Expression`. Expressions can also be added directly anywhere in the item's "
+"label by using the [% expression %] notation."
+msgstr ""
+"すべてのアイテムタイプについて、|expression| :guilabel:`式の挿入・編集` "
+"を使って式を入力または挿入することでラベルのテキストを変更することができます。式は[%式 "
+"%]記法を使ってアイテムのラベルの任意の場所に直接追加することもできます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:178
+msgid ":guilabel:`Columns`"
+msgstr ":guilabel:`カラム`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:180
+msgid ""
+"The Legend Item Property also allows you to control the column splitting "
+"behaviour by forcing the column split to occur after a specific item or all "
+"symbols of a layer. Automatic splitting of a layer and its child can also be"
+" allowed or blocked on a layer-basis in this widget."
+msgstr ""
+"凡例プロパティは、列分割を特定のアイテムの後またはレイヤのすべてのシンボルに強制的に発生させることによって、列分割の動作を制御することもできます。このウィジェットではレイヤを基にレイヤとその子の自動分割を許可またはブロックすることもできます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:184
+msgid ":guilabel:`Patch`"
+msgstr ":guilabel:`パッチ`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:186
+msgid ""
+"For items with a symbol, the Legend Item Property allows you to specify the "
+"maximum height and width that a symbol can occupy."
+msgstr "シンボルを持つアイテムの場合、凡例アイテムプロパティでシンボルが占有できる最大の高さと幅を指定できます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:189
+msgid ""
+"For vector symbols, you can specify a custom shape for the symbol. The "
+"shapes are usually defined by an expression to represent the geometry in a "
+"simple plane, but those symbols can also be saved in the style manager and "
+"imported later. The default symbol for each geometry type can also be "
+"controlled via the style manager."
+msgstr ""
+"ベクタシンボルの場合、シンボルにカスタムシェイプを指定することができます。シェイプは通常、単純な平面でジオメトリを表現する式で定義されますが、これらのシンボルはスタイルマネージャに保存して後でインポートすることもできます。各ジオメトリタイプのデフォルトシンボルもスタイルマネージャで制御できます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:194
+msgid ":guilabel:`Custom Symbol`"
+msgstr ":guilabel:`カスタムシンボル`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:196
+msgid ""
+"A custom symbol can also be specified for vector symbols. This can be useful"
+" to tweak the render of a specific symbol, to enhance it in the legend or "
+"have a symbol independent from its true symbol preview. This custom symbol "
+"will override the legend symbol, but will take into account the symbol "
+":guilabel:`Patch` specified."
+msgstr ""
+"カスタムシンボルはベクタシンボルにも指定できます。これは特定のシンボルのレンダリングを微調整したり、凡例でそのシンボルを強調したり、真のシンボルのプレビューから独立したシンボルを持つのに便利です。このカスタムシンボルは凡例シンボルを上書きしますが、指定されたシンボル"
+" :guilabel:`パッチ` を考慮します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:202
+msgid "Fonts"
+msgstr "フォント"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:204
+msgid ""
+"The :guilabel:`Fonts` group of the legend :guilabel:`Item Properties` panel "
+"provides the following functionalities:"
+msgstr "凡例の :guilabel:`アイテムプロパティ` パネルの :guilabel:`フォント` グループには、下記の機能があります："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:212
+msgid "Legend Fonts properties"
+msgstr "凡例フォントプロパティ"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:214
+msgid ""
+"You can change the font of the legend title, group, subgroup and item "
+"(feature) in the legend item using the :ref:`font selector <font_selector>` "
+"widget"
+msgstr ""
+":ref:`フォントセレクタ <font_selector>` "
+"ウィジェットを使用して、凡例アイテム内の凡例タイトル、グループ見出し、サブグループ見出しとアイテム（地物）のフォントを変更できます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:216
+msgid ""
+"For each of these levels you can set the text :guilabel:`Alignment`: it can "
+"be :guilabel:`Left` (default for left-to-right based locales), "
+":guilabel:`Center` or :guilabel:`Right` (default for right-to-left based "
+"locales)."
+msgstr ""
+"これらの各レベルで、テキストの :guilabel:`整列` の設定ができます。設定値には、 :guilabel:`左` "
+"（左から右に文字を書くロケールでのデフォルト）、 :guilabel:`中央` 、または :guilabel:`右` "
+"（右から左に文字を書くロケールでのデフォルト）があります。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:220
+msgid ""
+"You set the :guilabel:`Color` of the labels using the :ref:`color selector "
+"<color-selector>` widget. The selected color will apply to all the font "
+"items in the legend."
+msgstr ""
+":ref:`色セレクタ <color-selector>` ウィジェットを使用して、ラベルの :guilabel:`色` "
+"を設定できます。選択した色は、凡例内の全てのフォントアイテムに適用されます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:226
+msgid "Columns"
+msgstr "カラム"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:228
+msgid ""
+"Under the :guilabel:`Columns` group of the legend :guilabel:`Item "
+"Properties` panel, legend items can be arranged over several columns:"
+msgstr ""
+"凡例の :guilabel:`アイテムプロパティ` パネルの :guilabel:`カラム` "
+"グループでは、凡例アイテムを複数の列にわたって並べる設定ができます："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:231
+msgid ""
+"Set the number of columns in the :guilabel:`Count` |selectNumber| field. "
+"This value can be made dynamic e.g., following atlas features, legend "
+"contents, the frame size..."
+msgstr ""
+":guilabel:`カウント（Count）` |selectNumber| "
+"フィールドに列の数を設定します。この値は、例えば地図帳地物や凡例のコンテンツ、フレームのサイズ等に応じて動的に変更させることもできます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:327
+msgid "selectNumber"
+msgstr ""
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:234
+msgid ""
+"|checkbox| :guilabel:`Equal column widths` sets how legend columns should be"
+" adjusted."
+msgstr "|checkbox| :guilabel:`等幅` は、凡例の列幅がどのように調整されるかを設定します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:236
+msgid ""
+"The |checkbox| :guilabel:`Split layers` option allows a categorized or a "
+"graduated layer legend to be divided between columns."
+msgstr ""
+"|checkbox| :guilabel:`レイヤを分割` オプションは、カテゴリ値や連続値によるレイヤの凡例を列にまたがって分割することができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:244
+msgid "Legend Columns settings"
+msgstr "凡例のカラムの設定"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:248
+msgid "Symbol"
+msgstr "シンボル"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:250
+msgid ""
+"The :guilabel:`Symbol` group of the legend :guilabel:`Item Properties` panel"
+" configures the size of symbols displayed next to the legend labels. You "
+"can:"
+msgstr ""
+"凡例の :guilabel:`アイテムプロパティ` パネルの :guilabel:`シンボル` "
+"グループでは、凡例ラベルの横に表示されるシンボルのサイズを設定します。以下の設定ができます："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:254
+msgid "Set the :guilabel:`Symbol width` and :guilabel:`Symbol height`"
+msgstr ":guilabel:`シンボル幅` と :guilabel:`シンボル高さ` の設定"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:255
+msgid ""
+"Set the markers' :guilabel:`Min symbol size` and :guilabel:`Max symbol "
+"size`: ``0.00mm`` means there is no value set."
+msgstr ""
+"マーカーの :guilabel:`最小シンボルサイズ` と :guilabel:`最大シンボルサイズ` を設定します: ``0.00mm`` "
+"は値が設定されていないことを意味します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:257
+msgid ""
+"|checkbox| :guilabel:`Draw stroke for raster symbols`: this adds an outline "
+"to the symbol representing the band color of the raster layer; you can set "
+"both the :guilabel:`Stroke color` and :guilabel:`Tickness`."
+msgstr ""
+"|checkbox| :guilabel:`ラスタシンボルのストローク（輪郭）を描画` "
+"：これは、シンボルにラスタレイヤのバンドカラーを表す輪郭線を追加します。 :guilabel:`ストローク色` と :guilabel:`太さ` "
+"を設定できます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:266
+msgid "Legend Symbol configuration"
+msgstr "凡例のシンボル設定"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:270
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:281
+msgid "WMS LegendGraphic"
+msgstr "WMS LegendGraphic"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:272
+msgid ""
+"The :guilabel:`WMS LegendGraphic` section of the legend :guilabel:`Item "
+"Properties` panel provide the following functionalities (see "
+":numref:`figure_layout_legend_wms`):"
+msgstr ""
+"凡例の :guilabel:`アイテムプロパティ` パネルの :guilabel:`WMS LegendGraphic` "
+"セクションは以下の機能を提供します（ :numref:`figure_layout_legend_wms` を参照）："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:283
+msgid ""
+"When you have added a WMS layer and you insert a legend item, a request will"
+" be sent to the WMS server to provide a WMS legend. This Legend will only be"
+" shown if the WMS server provides the GetLegendGraphic capability. The WMS "
+"legend content will be provided as a raster image."
+msgstr ""
+"WMSレイヤを追加して凡例アイテムを挿入すると、WMSの凡例を提供するようWMSサーバーにリクエストが送信されます。この凡例は、WMSサーバーがGetLegendGraphicケーパビリティを提供している場合にのみ表示されます。WMS凡例のコンテンツはラスタ画像として提供されます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:288
+msgid ""
+":guilabel:`WMS LegendGraphic` is used to be able to adjust the "
+":guilabel:`Legend width` and the :guilabel:`Legend height` of the WMS legend"
+" raster image."
+msgstr ""
+":guilabel:`WMSLegendGraphic` は、WMS凡例のラスタ画像の :guilabel:`凡例の幅` と "
+":guilabel:`凡例の高さ` を調整するために使用します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:292
+msgid "Spacing"
+msgstr "間隔"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:300
+msgid ""
+"The :guilabel:`Spacing` section allows you to customize the spacing within "
+"the legend. Spacing can greatly help denote the groupement of items in the "
+"legend and their relation."
+msgstr ""
+":guilabel:`間隔` "
+"セクションでは凡例内の間隔をカスタマイズすることができます。間隔は凡例内のアイテムのグループ化とそれらの関係を示すのに大いに役立ちます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:303
+msgid ""
+":guilabel:`Spacing` around and before title, groups, subgroups, symbols, "
+"labels, boxes, columns and lines can be customized through this dialog."
+msgstr ""
+"タイトル、グループ、サブグループ、シンボル、ラベル、ボックス、カラム、行の前後の :guilabel:`間隔` はこのダイアログでカスタマイズできます。"

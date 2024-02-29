@@ -1,0 +1,594 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:2
+msgid "|LS| Actions"
+msgstr "课: 动作"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:4
+msgid ""
+"Now that you have seen a default action in the previous lesson, it is time "
+"to define your own actions."
+msgstr "现在，您已经在上一课中看到了默认动作，现在是定义自己动作的时候了。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:7
+msgid ""
+"An action is something that happens when you click on a feature. It can add "
+"a lot of extra functionality to your map, allowing you to retrieve "
+"additional information about an object, for example. Assigning actions can "
+"add a whole new dimension to your map!"
+msgstr "动作是指单击要素时发生的事情。可以为地图添加许多额外的功能，例如，允许您检索有关对象的其他信息。设定动作可以为地图提升一个全新的维度！"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:12
+msgid "**The goal for this lesson:** To learn how to add custom actions."
+msgstr "**本课目标:** 学习如何添加自定义动作。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:14
+msgid ""
+"In this lesson you will use the :guilabel:`school_property` layer you "
+"created previously. The sample data include photos of each of the three "
+"properties you digitized. What we are going to do is to associate each "
+"property with its image. Then we will create an action that will open the "
+"image for a property when clicking on the property."
+msgstr ""
+"在本课程中，您将使用之前创建的 :guilabel:`school_property` "
+"图层。示例数据包括您数字化的三个属性的每张照片。我们要做的是将每个属性与其图像进行关联。然后，创建动作，在单击某个属性时打开该属性的图像。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:23
+msgid "|basic| |FA| Add a Field for Images"
+msgstr "|basic| 跟我做: 为图像添加字段"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:351
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:25
+msgid ""
+"The ``school_property`` layer has no way to associate an image with a "
+"property yet. First we will create a field for this purpose."
+msgstr "``school_property`` 图层还无法将图像与属性相关联。首先，我们将为此创建字段。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:28
+msgid "Open the :guilabel:`Layer Properties` dialog."
+msgstr "打开 :guilabel:`图层属性` 对话框。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:29
+msgid "Click on the :guilabel:`Fields` tab."
+msgstr "单击 :guilabel:`字段` 选项卡。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:30
+msgid "Toggle editing mode:"
+msgstr "切换编辑模式："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:35
+msgid "Add a new column:"
+msgstr "新增一列："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:40
+msgid "Enter the values below:"
+msgstr "输入以下值："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:45
+msgid ""
+"After the field has been created, move to the :guilabel:`Attributes Form` "
+"tab and select the ``image`` field."
+msgstr "创建字段后，移动到 :guilabel:`属性表单` 选项卡并选择 ``image`` 字段。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:47
+msgid "Set :guilabel:`Widget Type` to :guilabel:`Attachment`:"
+msgstr "将 :guilabel:`控件类型` 设置为 :guilabel:`附件` ："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:52
+msgid "Click :guilabel:`OK` in the :guilabel:`Layer Properties` dialog."
+msgstr "在 :guilabel:`图层属性` 对话框中单击 :guilabel:`确定` 。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:53
+msgid ""
+"Use the :guilabel:`Identify` tool to click on one of the three features in "
+"the :guilabel:`school_property` layer."
+msgstr "使用 :guilabel:`识别` 工具单击 :guilabel:`school_property` 图层中的三个要素中的一个。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:56
+msgid ""
+"Since you are still in edit mode, the dialog should be active and look like "
+"this:"
+msgstr "由于您仍处于编辑模式，该对话框应处于激活状态，如下所示："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:62
+msgid ""
+"Click on the browse button (the :guilabel:`...` next to the "
+":guilabel:`image` field)."
+msgstr "单击浏览按钮 ( :guilabel:`image` 字段旁边的 :guilabel:`...` )。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:64
+msgid ""
+"Select the path for your image. The images are in "
+":file:`exercise_data/school_property_photos/` and are named the same as the "
+"features they should be associated with."
+msgstr ""
+"选择图像的路径。这些图像位于 :file:`exercise_data/school_property_photos/` "
+"，并与它们应该关联的要素命名相同。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:67
+msgid "Click :guilabel:`OK`."
+msgstr "单击 :guilabel:`确定` 。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:68
+msgid ""
+"Associate all of the images with the correct features using this method."
+msgstr "使用此方法将所有图像与正确的要素相关联。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:70
+msgid "Save your edits and exit edit mode."
+msgstr "保存编辑并退出编辑模式。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:74
+msgid "|basic| |FA| Creating an Action"
+msgstr "|basic| 跟我做: 创建动作"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:76
+msgid ""
+"Open the :guilabel:`Actions` tab for the :guilabel:`school_property` layer, "
+"and click on the |symbologyAdd| :sup:`Add a new action` button."
+msgstr ""
+"打开 :guilabel:`school_property` 图层属性的 :guilabel:`动作` 选项卡，然后单击 |symbologyAdd| "
+":sup:`添加新动作` 按钮。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:354
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:83
+msgid ""
+"In the :guilabel:`Add New Action` dialog, enter the words ``Show Image`` "
+"into the :guilabel:`Description` field:"
+msgstr "在 :guilabel:`添加新动作` 对话框中的 :guilabel:`描述` 字段输入 ``Show Image`` 字符："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:89
+#: ../../docs/training_manual/create_vector_data/actions.rst:175
+msgid ""
+"What to do next varies according to your operating system, so choose the "
+"appropriate course to follow:"
+msgstr "下一步要执行的动作因操作系统而异，因此请选择适当的课程："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:92
+#: ../../docs/training_manual/create_vector_data/actions.rst:178
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:94
+msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Open`."
+msgstr "单击 :guilabel:`类型` 下拉列表并选择 :guilabel:`打开` 。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:97
+#: ../../docs/training_manual/create_vector_data/actions.rst:184
+msgid "Ubuntu Linux"
+msgstr "Ubuntu Linux"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:99
+msgid ""
+"Under :guilabel:`Action`, write ``eog`` for the *Gnome Image Viewer*, or "
+"write ``display`` to use *ImageMagick*. Remember to put a space after the "
+"command!"
+msgstr ""
+"在 :guilabel:`动作` 中，为 *Gnome Image Viewer* 编写 ``eog`` ，或编写 ``display`` 以使用 "
+"*ImageMagick* 。请记住在命令后面加一个空格！"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:104
+#: ../../docs/training_manual/create_vector_data/actions.rst:190
+msgid "macOS"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:106
+msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Mac`."
+msgstr "单击 :guilabel:`类型` 下拉列表，并选择 :guilabel:`Mac` 。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:108
+msgid ""
+"Under :guilabel:`Action`, write ``open``. Remember to put a space after the "
+"command!"
+msgstr "在 :guilabel:`动作` 中，写入 ``open`` 。记住在命令后面加一个空格！"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:112
+msgid "Now you can continue writing the command."
+msgstr "现在可以继续编写命令了。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:114
+msgid ""
+"You want to open the image, and QGIS knows where the image is. All it needs "
+"to do is to tell the :guilabel:`Action` where the image is."
+msgstr "您要打开图像，QGIS需要知道图像的位置。它所要做的就是告诉 :guilabel:`动作` 图像在哪儿。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:118
+msgid "Select :guilabel:`image` from the list:"
+msgstr "从动作文本列表中选择 :guilabel:`image` ："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:123
+msgid ""
+"Click the :guilabel:`Insert field` button. QGIS will add the phrase ``[% "
+"\"image\" %]`` in the :guilabel:`Action Text` field."
+msgstr ""
+"单击 :guilabel:`插入` 按钮。QGIS将在 :guilabel:`动作文本` 字段中添加短语 ``[% \"image\" %]`` 。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:126
+#: ../../docs/training_manual/create_vector_data/actions.rst:242
+msgid ""
+"Click the :guilabel:`OK` button to close the :guilabel:`Add New Action` "
+"dialog"
+msgstr "单击 :guilabel:`确定` 按钮关闭 :guilabel:`添加新动作` 对话框"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:128
+#: ../../docs/training_manual/create_vector_data/actions.rst:244
+msgid "Click :guilabel:`OK` to close the :guilabel:`Layer Properties` dialog"
+msgstr "单击 :guilabel:`确定` ，关闭 :guilabel:`图层属性` 对话框"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:131
+msgid "Now it is time to test the new action:"
+msgstr "现在是测试新动作的时候了："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:133
+msgid ""
+"Click on the :guilabel:`school_property` layer in the :guilabel:`Layers` "
+"panel so that it is highlighted."
+msgstr "单击 :guilabel:`图层` 面板中的 :guilabel:`school_property` 图层，使其高亮显示。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:135
+msgid ""
+"Find the |actionRun| :sup:`Run feature action` button (in the "
+":guilabel:`Attributes Toolbar`)."
+msgstr "查找 |actionRun| :sup:`执行要素动作` 按钮 (在 :guilabel:`属性工具栏` 中)。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:349
+msgid "actionRun"
+msgstr "actionRun"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:137
+msgid ""
+"Click on the down arrow to the right of this button. There is only one "
+"action defined for this layer so far, which is the one you just created."
+msgstr "单击此按钮右侧的向下箭头。到目前为止，只为该图层定义了一个动作，即您刚刚创建的动作。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:144
+msgid "Click the button itself to activate the tool."
+msgstr "单击按钮本身以激活该工具。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:145
+msgid "Using this tool, click on any of the three school properties."
+msgstr "使用此工具，单击三个学校属性中的任意一个。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:147
+msgid "The image for that property should open."
+msgstr "应该可以打开该属性的图像。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:150
+msgid "|moderate| |FA| Searching the Internet"
+msgstr "|moderate| 跟我做: 搜索互联网"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:353
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:152
+msgid ""
+"Let's say we are looking at the map and want to know more about the area "
+"that a farm is in. Suppose you know nothing of the area in question and want"
+" to find general information about it. Your first impulse, considering that "
+"you're using a computer right now, would probably be to Google the name of "
+"the area. So let's tell QGIS to do that automatically for us!"
+msgstr ""
+"假设我们正在查看地图，并希望了解更多有关农场所在区域的信息。假设您对所讨论的区域一无所知，并希望找到有关它的一般信息。考虑到您现在正在使用电脑，首先想到的可能是用谷歌搜索该地区的名称。所以，让我们告诉QGIS为我们自动执行此操作！"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:158
+msgid "Open the attribute table for the :guilabel:`landuse` layer."
+msgstr "打开 :guilabel:`landuse` 图层的属性表。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:160
+msgid ""
+"We will be using the ``name`` field for each of our landuse areas to search "
+"Google."
+msgstr "我们将使用每个土地利用区域的 ``name`` 字段进行谷歌搜索。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:162
+msgid "Close the attribute table."
+msgstr "关闭属性表。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:163
+msgid "Go back to :guilabel:`Actions` in :guilabel:`Layer Properties`."
+msgstr "返回 :guilabel:`图层属性` 中的 :guilabel:`动作` 。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:164
+msgid ""
+"Click on the :guilabel:`Create Default Actions` button to add a number of "
+"pre-defined actions."
+msgstr "单击 :guilabel:`创建默认动作` 按钮添加一些预定义的动作。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:166
+msgid ""
+"Remove all the actions but the :guilabel:`Open URL` action with the short "
+"name :guilabel:`Search Web` using the |symbologyRemove| :sup:`Remove the "
+"selected action` button below."
+msgstr ""
+"使用 |symbologyRemove| :sup:`移除选中的动作` 按钮，移除除 :guilabel:`打开 URL` "
+"动作之外的所有动作，并使用短名称 :guilabel:`搜索 Web` 。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:356
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:169
+msgid "Double-click on the remaining action to edit it"
+msgstr "双击所剩动作进行编辑"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:170
+msgid ""
+"Change the :guilabel:`Description` to ``Google Search``, and remove the "
+"content of the :guilabel:`Short Name` field."
+msgstr "将 :guilabel:`描述` 更改为 ``Google Search`` ，并移除 :guilabel:`短名称` 字段的内容。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:172
+msgid ""
+"Make sure that :guilabel:`Canvas` is among the checked :guilabel:`Action "
+"scopes`."
+msgstr "确保 :guilabel:`作用域` 中的 :guilabel:`画布` 被勾选。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:180
+msgid ""
+"Under :guilabel:`Type`, choose :guilabel:`Open`. This will tell Windows to "
+"open an Internet address in your default browser, such as Internet Explorer."
+msgstr ""
+"在 :guilabel:`类型` 中，选择 :guilabel:`打开` 。这将告诉Windows使用默认浏览器打开互联网地址，如 Internet "
+"Explorer。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:186
+msgid ""
+"Under :guilabel:`Action`, write ``xdg-open``. This will tell Ubuntu to open "
+"an Internet address in your default browser, such as Chrome or Firefox."
+msgstr ""
+"在 :guilabel:`动作` 中，写入 ``xdg-open`` 。这将告诉Ubuntu在您的默认浏览器中打开互联网地址，如 Chrome 或 "
+"Firefox。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:196
+msgid "Now you can continue writing the command"
+msgstr "现在可以继续编写命令了"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:198
+msgid ""
+"Whichever command you used above, you need to tell it which Internet address"
+" to open next. You want it to visit Google, and to search for a phrase "
+"automatically."
+msgstr "无论您在上面使用哪个命令，都需要告诉它下一步要打开哪个互联网地址。您希望它访问谷歌，并自动搜索短语。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:203
+msgid ""
+"Usually when you use Google, you enter your search phrase into the Google "
+"Search bar. But in this case, you want your computer to do this for you. The"
+" way you tell Google to search for something (if you don't want to use its "
+"search bar directly) is by giving your Internet browser the address "
+"``https://www.google.com/search?q=SEARCH_PHRASE``, where ``SEARCH_PHRASE``` "
+"is what you want to search for. Since we don't know what phrase to search "
+"for yet, we will just enter the first part (without the search phrase)."
+msgstr ""
+"通常，当您使用谷歌浏览器时，会在谷歌搜索栏输入待搜索的短语。但在这种情况下，您希望计算机为您执行此操作。您告诉谷歌搜索某个东西 "
+"(如果不想直接使用它的搜索栏) 的方式是给您的互联网浏览器提供地址 "
+"``https://www.google.com/search?q=SEARCH_PHRASE`` ，其中 ``SEARCH_PHRASE``` "
+"是您要搜索的内容。因为我们还不知道要搜索哪个短语，所以只需输入第一部分 (不包括搜索短语)。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:214
+msgid ""
+"In the :guilabel:`Action` field, write ``https://www.google.com/search?q=``."
+" Remember to add a space after your initial command before writing this in!"
+msgstr ""
+"在 :guilabel:`动作` 字段里，写入 ``https://www.google.com/search?q=`` "
+"。请记住在写入此命令之前，在初始命令后添加一个空格！"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:219
+msgid ""
+"Now you want QGIS to tell the browser to tell Google to search for the value"
+" of ``name`` for any feature that you could click on."
+msgstr "现在，您希望QGIS告诉浏览器，让谷歌搜索您可以单击的任意要素 ``name`` 的值。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:222
+msgid "Select the :guilabel:`name` field."
+msgstr "选择 :guilabel:`name` 字段。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:223
+msgid "Click :guilabel:`Insert` button:"
+msgstr "单击 :guilabel:`插入` 按钮："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:228
+msgid ""
+"What this means is that QGIS is going to open the browser and send it to the"
+" address ``https://www.google.com/search?q=[% \"name\" %]``. ``[% \"name\" "
+"%]`` tells QGIS to use the contents of the ``name`` field as the phrase to "
+"search for."
+msgstr ""
+"这意味着QGIS将打开浏览器并将其发送到地址 ``https://www.google.com/search?q=[% \"name\" %]`` "
+"，其中 ``[% \"name\" %]`` 告诉QGIS使用 ``name`` 字段的内容作为要搜索的短语。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:234
+msgid ""
+"So if, for example, the landuse area you click on is named ``Marloth Nature "
+"Reserve``, QGIS is going to send the browser to "
+"``https://www.google.com/search?q=Marloth%20Nature%20Reserve``, which will "
+"cause your browser to visit Google, which will in turn search for \"Marloth "
+"Nature Reserve\"."
+msgstr ""
+"例如，如果您单击的土地利用区域被命名为 ``Marloth Nature Reserve`` ，QGIS将把此短语发送到浏览器 "
+"``https://www.google.com/search?q=Marloth%20Nature%20Reserve`` "
+"，这将导致您的浏览器访问谷歌，而谷歌将反过来搜索 \"Marloth Nature Reserve\" 。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:240
+msgid "If you have not done so already, set everything up as explained above."
+msgstr "如果您还没有这样做，请按照上述说明进行设置。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:247
+msgid "Now to test the new action."
+msgstr "现在来测试新动作。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:249
+msgid ""
+"With the :guilabel:`landuse` layer active in the :guilabel:`Layers` panel, "
+"click on the down arrow to the right of the |actionRun| :sup:`Run feature "
+"action` button, and select the only action (``Google Search``) defined for "
+"this layer."
+msgstr ""
+"在 :guilabel:`图层` 面板激活 :guilabel:`landuse` 图层后，单击 |actionRun| :sup:`执行要素动作` "
+"按钮右侧的向下箭头，然后选择为该图层定义的唯一动作 (``Google Search``) 。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:253
+msgid ""
+"Click on any landuse area you can see on the map. Your browser will now "
+"open, and will start a Google search for the place that is recorded as that "
+"area's ``name`` value."
+msgstr "单击地图上您能看到的任意土地利用区域。您的浏览器现在将打开，并将启动谷歌搜索记录为该区域 ``name`` 值的位置。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:257
+msgid ""
+"If your action doesn't work, check that everything was entered correctly; "
+"typos are common with this kind of work!"
+msgstr "如果您的动作没有反应，请检查输入的所有内容是否正确，打字错误在这类工作中很常见！"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:261
+msgid "|hard| |FA| Open a Webpage Directly in QGIS"
+msgstr "|hard| 跟我做: 直接在QGIS中打开网页"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:352
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:263
+msgid ""
+"Above, you've seen how to open a webpage in an external browser. There are "
+"some shortcomings with this approach in that it adds an unknowable "
+"dependency – will the end-user have the software required to execute the "
+"action on their system? As you've seen, they don't necessarily even have the"
+" same kind of base command for the same kind of action, if you don't know "
+"which OS they will be using. With some OS versions, the above commands to "
+"open the browser might not work at all. This could be an insurmountable "
+"problem."
+msgstr ""
+"以上，您已经了解了如何在外部浏览器打开网页。这种方法存在一些缺点，因为它增加了一种不可知的依赖关系 - "
+"最终用户是否拥有在其系统上执行动作所需的软件？正如您所见，如果您不知道将使用哪个操作系统，甚至不一定有相同类型的基本命令来执行相同的动作。对于某些操作系统版本，上述用于打开浏览器的命令可能根本不起作用。这可能是一个无法克服的问题。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:271
+msgid ""
+"However, QGIS sits on top of the incredibly powerful and versatile Qt "
+"library. Also, QGIS actions can be arbitrary, tokenized (i.e. using variable"
+" information based on the contents of a field attribute) Python commands!"
+msgstr ""
+"然而，QGIS基于功能强大且用途广泛的Qt库。此外，QGIS动作可以是任意、标记化的 (即使用基于字段属性内容的变量信息) Python命令！"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:275
+msgid ""
+"Now you will see how to use a python action to show a web page. It is the "
+"same general idea as opening a site in an external browser, but it requires "
+"no browser on the user’s system since it uses the Qt QWebView class (which "
+"is a webkit based html widget) to display the content in a pop-up window."
+msgstr ""
+"现在，您将看到如何使用python动作来显示网页。这与在外部浏览器打开网站的总体思路相同，但它不需要用户系统上的浏览器，因为是使用 Qt "
+"QWebView 类 (这是一个基于webkit的html控件) 在弹出窗口中显示内容。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:281
+msgid ""
+"Let us use Wikipedia this time. So the URL you request will look like this:"
+msgstr "这次让我们访问维基百科。因此，您请求的URL如下所示："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:284
+msgid "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
+msgstr "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:286
+msgid "To create the layer action:"
+msgstr "要创建图层动作，请执行以下操作："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:288
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog and head over to the "
+":guilabel:`Actions` tab."
+msgstr "打开 :guilabel:`图层属性` 对话框，转到 :guilabel:`动作` 选项卡。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:290
+msgid "Set up a new action using the following properties for the action:"
+msgstr "使用动作的以下属性设置新动作："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:292
+msgid ":guilabel:`Type`: ``Python``"
+msgstr ":guilabel:`类型`: ``Python``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:293
+msgid ":guilabel:`Description`: ``Wikipedia``"
+msgstr ":guilabel:`描述`: ``Wikipedia``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:307
+msgid "There are a couple of things going on here:"
+msgstr "在此强调几点："
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:309
+msgid ""
+"``[%name%]`` will be replaced by the actual attribute value when the action "
+"is invoked (as before)."
+msgstr "``[%name%]``  将在调用动作时替换为实际属性值 (如前所述)。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:311
+msgid ""
+"The code simply creates a new ``QWebView`` instance, sets its URL, and then "
+"calls ``show()`` on it to make it visible as a window on the user’s desktop."
+msgstr "这段代码只是创建一段新的 ``QWebView`` 实例，设置URL，然后对其调用 ``show()`` ，使其在用户桌面上显示为窗口。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:315
+msgid ""
+"You could also use this approach to display an image without requiring that "
+"the users have a particular image viewer on their system."
+msgstr "您还可以使用这种方法显示图像，而无需用户在其系统上使用指定的图像查看器。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:319
+msgid ""
+"Try to use the methods described above to load a Wikipedia page using the "
+"Wikipedia action you just created."
+msgstr "尝试使用上述方法，用刚刚创建的维基百科动作加载维基百科页面。"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:323
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:325
+msgid ""
+"Actions allow you to give your map extra functionality, useful to the end-"
+"user who views the same map in QGIS. Due to the fact that you can use shell "
+"commands for any operating system, as well as Python, the sky is the limit "
+"in terms of the functions you could incorporate!"
+msgstr ""
+"动作允许您为地图提供额外的功能，这对于在QGIS中查看同一地图的最终用户非常有用。由于可以对任何操作系统以及Python使用shell命令，因此可以使用的功能是无限的！"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:332
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:334
+msgid ""
+"Now that you've done all kinds of vector data creation, you will learn how "
+"to analyze the data to solve problems. That is the topic of the next module."
+msgstr "现在，已经完成了各种矢量数据的创建，您将学习如何分析数据以解决问题。这是下一单元的主题。"

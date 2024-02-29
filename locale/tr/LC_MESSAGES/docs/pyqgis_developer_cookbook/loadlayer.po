@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Turkish (https://app.transifex.com/qgis/teams/6144/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:25
+msgid "Loading Layers"
+msgstr "Katman Yükleme"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:41
+msgid ""
+"Let's open some layers with data. QGIS recognizes vector and raster layers. "
+"Additionally, custom layer types are available, but we are not going to "
+"discuss them here."
+msgstr ""
+"Şimdi veri içeren bazı katmanları açalım. QGIS vektör ve rater tipi "
+"katmanları tanır. Ek olarak özel katman tipleri mevcut, fakat bu konudan "
+"burada bahsetmeyeceğiz."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:49
+msgid "Vector Layers"
+msgstr "Vektör Katmanları"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:68
+msgid ""
+"The data source identifier is a string and it is specific to each vector "
+"data provider. Layer's name is used in the layer list widget. It is "
+"important to check whether the layer has been loaded successfully. If it was"
+" not, an invalid layer instance is returned."
+msgstr ""
+"``data_source`` metin tipindedir ve dosya yolunu gösterir. ``layer_name`` "
+"katman listesinde gösterim için gerekir. ``provider_name`` katman dosyası "
+"türüne göre çözümleme sistemini gösterir. ``isValid()`` fonksiyonu false "
+"döndürürse katman yüklemesinde hata oluşmuş demektir."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:73
+msgid "For a geopackage vector layer:"
+msgstr "Geopackage vektör katmanı için:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:88
+msgid ""
+"The quickest way to open and display a vector layer in QGIS is the "
+":meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>` method of "
+"the :class:`QgisInterface <qgis.gui.QgisInterface>`:"
+msgstr ""
+"QGIS içeinde vektör katmanını açıp göstermenin en hızlı yolu "
+":class:`QgisInterface <qgis.gui.QgisInterface>`: arayüzünün "
+":meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>` metodunu "
+"kullanmaktır."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:98
+msgid ""
+"This creates a new layer and adds it to the current QGIS project (making it "
+"appear in the layer list) in one step. The function returns the layer "
+"instance or ``None`` if the layer couldn't be loaded."
+msgstr ""
+"Bu kod QGIS projesine sadece bir adımda yeni bir katman ekler (katman "
+"listesinde görünür). Fonksiyon bir katman değişkeni döndürür veya katman "
+"yüklenemedi ise ``None`` döndürür."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:102
+msgid ""
+"The following list shows how to access various data sources using vector "
+"data providers:"
+msgstr ""
+"Aşağıdaki liste çeşitli vektör veri işleyicilerine nasıl erişebileceğinizi "
+"gösteriyor."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:111
+msgid "for Shapefile:"
+msgstr "Shape dosyaları için:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:118
+msgid "for dxf (note the internal options in data source uri):"
+msgstr "dxf dosyaları (not: ayarlar dosya kaynağı içerisinde):"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:129
+msgid ""
+"PostGIS database - data source is a string with all information needed to "
+"create a connection to PostgreSQL database."
+msgstr ""
+"PostGIS veritabanı - PostgreSQL veritabanı bağlantısı yapmak için gereken "
+"bilgilerin olduğu bir bağlantı bilgileri metinidir."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:132
+msgid ""
+":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` class can generate "
+"this string for you. Note that QGIS has to be compiled with Postgres "
+"support, otherwise this provider isn't available:"
+msgstr ""
+":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` sınıfı bağlantı "
+"metnini sizin için oluşturur. Not: QGIS, Postgres desteği ile derlenmelidir,"
+" diğer türlü sağlayıcı mümkün olamazdı:"

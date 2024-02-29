@@ -1,0 +1,499 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:2
+msgid "|LS| Forms"
+msgstr "课: 表单"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:4
+msgid ""
+"When you add new data via digitizing, you're presented with a dialog that "
+"lets you fill in the attributes for that feature. However, this dialog is "
+"not, by default, very nice to look at. This can cause a usability problem, "
+"especially if you have large datasets to create, or if you want other people"
+" to help you digitize and they find the default forms to be confusing."
+msgstr ""
+"通过数字化添加新数据时，系统会显示一个对话框，让您填写该要素的属性。然而，默认情况下，这个对话框并不是很友好。这可能会导致易用性的问题，尤其是当您需要创建大型数据集，或者希望其他人帮助您进行数字化，而他们发现默认表单令人困惑。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:11
+msgid ""
+"Fortunately, QGIS lets you create your own custom dialogs for a layer. This "
+"lesson shows you how."
+msgstr "幸运的是，QGIS允许您为图层创建自定义对话框。这节课将向您演示如何操作。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:15
+msgid "**The goal for this lesson:** To create a form for a layer."
+msgstr "**本课目标:** 为图层创建表单。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:18
+msgid "|basic| |FA| Using QGIS' Form Design Functionality"
+msgstr "|basic| 跟我做: 使用QGIS的表单设计功能"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:278
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:20
+msgid "Select the ``roads`` layer in the :guilabel:`Layers` panel"
+msgstr "在 :guilabel:`图层` 面板选择 ``roads`` 图层"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:21
+msgid "Enter *Edit Mode* as before"
+msgstr "像以前一样进入 *编辑模式*"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:22
+msgid "Open the ``roads`` layer's attribute table"
+msgstr "打开 ``roads`` 图层的属性表"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:23
+msgid ""
+"Right-click on any cell in the table. A short menu will appear, that "
+"includes the :guilabel:`Open form` entry."
+msgstr "右键单击表格中的任意单元格。将出现一个简略菜单，其中包括 :guilabel:`打开表单` 条目。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:25
+msgid "Click on it to see the form that QGIS generates for this layer"
+msgstr "单击并查看QGIS为该图层生成的表单"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:27
+msgid ""
+"Obviously it would be nice to be able to do this while looking at the map, "
+"rather than needing to search for a specific street in the "
+":guilabel:`Attribute Table` all the time."
+msgstr "很明显，在查看地图时能够这样做会非常好，而不需要一直在 :guilabel:`属性表` 中搜索特定的街道。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:31
+msgid "Select the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
+msgstr "在 :guilabel:`图层` 面板选择 :guilabel:`roads` 图层"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:32
+msgid ""
+"Using the |identify| :sup:`Identify Features` tool, click on any street in "
+"the map."
+msgstr "使用 |identify| :sup:`识别要素` 工具，单击地图中的任意街道。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:280
+msgid "identify"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:34
+msgid ""
+"The :guilabel:`Identify Results` panel opens and shows a tree view of the "
+"fields values and other general information about the clicked feature."
+msgstr ":guilabel:`识别结果` 面板随即打开，并显示字段值的树状视图，以及其他有关单击要素的一般信息。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:37
+msgid ""
+"At the top of the panel, check the :guilabel:`Auto open form for single "
+"feature results` checkbox in the |options| :sup:`Identify Settings` menu."
+msgstr "在面板顶部，勾选 |options| :sup:`识别设置` 菜单中的 :guilabel:`对于单个要素结果自动打开表单` 复选框。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:284
+msgid "options"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:39
+msgid ""
+"Now, click again on any street in the map. Along the previous "
+":guilabel:`Identify Results` dialog, you'll see the now-familiar form:"
+msgstr "现在，再次单击地图上的任意街道。随着前面的 :guilabel:`识别结果` 对话框，您将看到现在熟悉的表单："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:46
+msgid ""
+"Each time you click on a single feature with the *Identify* tool, its form "
+"pops up as long as the :guilabel:`Auto open form` is checked."
+msgstr "每次使用 *识别* 工具单击单个要素时，只要勾选 :guilabel:`自动打开表单` ，就会弹出其表单。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:51
+msgid "|basic| |TY| Using the Form to Edit Values"
+msgstr "|basic| 试一试 使用表单编辑值"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:53
+msgid ""
+"If you are in edit mode, you can use this form to edit a feature's "
+"attributes."
+msgstr "如果处于编辑模式，就可以使用此表单编辑要素的属性。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:56
+msgid "Activate edit mode (if it isn't already activated)."
+msgstr "激活编辑模式 (如果尚未激活)。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:57
+msgid ""
+"Using the |identify| :sup:`Identify Features` tool, click on the main street"
+" running through |majorUrbanName|:"
+msgstr "使用 |identify| :sup:`识别要素` 工具，单击贯穿 |majorUrbanName| 的主要街道："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:63
+msgid "Edit its :guilabel:`highway` value to be ``secondary``"
+msgstr "将其 :guilabel:`highway` 值编辑为 ``secondary``"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:64
+msgid "Exit edit mode and save your edits"
+msgstr "退出编辑模式并保存编辑"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:65
+msgid ""
+"Open the :guilabel:`Attribute Table` and note that the value has been "
+"updated in the attributes table and therefore in the source data"
+msgstr "打开 :guilabel:`属性表` ，注意属性表和源数据中的值都已更新"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:70
+msgid "|moderate| |FA| Setting Form Field Types"
+msgstr "|moderate| 跟我做: 设置表单字段类型"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:283
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:72
+msgid ""
+"It's nice to edit things using a form, but you still have to enter "
+"everything by hand. Fortunately, forms have different kinds of so-called "
+"*widgets* that allow you to edit data in various different ways."
+msgstr "使用表单编辑内容固然很好，但仍然需要手动输入所有内容。幸运的是，表单有不同类型的所谓 *控件* ，允许您以各种不同的方式编辑数据。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:77
+msgid "Open the :guilabel:`roads` layer's :guilabel:`Properties...`"
+msgstr "打开 :guilabel:`roads` 图层的 :guilabel:`属性...`"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:78
+msgid "Switch to the :guilabel:`Fields` tab. You'll see this:"
+msgstr "切换到 :guilabel:`字段` 选项卡，您将看到以下内容："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:83
+msgid "Switch to the :guilabel:`Attributes Form` tab. You'll see this:"
+msgstr "切换到 :guilabel:`属性表单` 选项卡，您将看到以下内容："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:88
+msgid ""
+"Click on the ``oneway`` row and choose :guilabel:`Checkbox` as "
+":guilabel:`Widget Type` in the list of options:"
+msgstr "单击 ``oneway`` 行，并在选项列表中选择 :guilabel:`复选框` 作为 :guilabel:`控件类型` ："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:94
+msgid "Click :guilabel:`OK`"
+msgstr "单击 :guilabel:`确定`"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:95
+msgid "Enter edit mode (if the ``roads`` layer is not already in edit mode)"
+msgstr "进入编辑模式 (如果 ``roads`` 图层尚未处于编辑模式)"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:96
+msgid "Click on the |identify| :sup:`Identify Features` tool"
+msgstr "单击 |identify| :sup:`识别要素` 工具"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:97
+msgid "Click on the same main road you chose earlier"
+msgstr "单击之前选择的同一条主干道"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:99
+msgid ""
+"You will now see that the :guilabel:`oneway` attribute has a checkbox next "
+"to it denoting ``True`` (checked) or ``False`` (unchecked)."
+msgstr ""
+"现在，您将看到 :guilabel:`oneway` 属性旁边有一个复选框，表示 ``True`` (选中) 或 ``False`` (未选中)。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:105
+msgid "|hard| |TY|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:279
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:107
+msgid "Set a more appropriate form widget for the :guilabel:`highway` field."
+msgstr "为 :guilabel:`highway` 字段设置更合适的表单控件。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:109
+msgid "Answer"
+msgstr "回答"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:112
+msgid ""
+"For the :guilabel:`TYPE`, there is obviously a limited amount of types that "
+"a road can be, and if you check the attribute table for this layer, you'll "
+"see that they are predefined."
+msgstr "对于 :guilabel:`TYPE` ，道路可以使用的类型明显是有限的，如果检查该图层的属性表，就会发现它们是预定义的。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:116
+msgid ""
+"Set the widget to :guilabel:`Value Map` and click :guilabel:`Load Data from "
+"Layer`."
+msgstr "将控件设置为 :guilabel:`值映射` ，然后单击 :guilabel:`从图层加载数据` 。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:118
+msgid ""
+"Select :guilabel:`roads` in the :guilabel:`Label` dropdown and "
+":guilabel:`highway` for both the :guilabel:`Value` and "
+":guilabel:`Description` options:"
+msgstr ""
+"在 :guilabel:`图层` 下拉列表中选择 :guilabel:`roads` ，并在 :guilabel:`值` 和 "
+":guilabel:`描述` 选项中选择 :guilabel:`highway` ："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:125
+msgid "Click :guilabel:`OK` three times."
+msgstr "单击 :guilabel:`确定` 三次。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:126
+msgid ""
+"If you use the :guilabel:`Identify` tool on a street now while edit mode is "
+"active, the dialog you get should look like this:"
+msgstr "如果您现在在编辑模式处于活动状态时在街道上使用 :guilabel:`识别` 工具，则会出现如下对话框："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:133
+msgid "|hard| |TY| Creating Test Data"
+msgstr "|hard| 试一试 创建测试数据"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:135
+msgid "You can also design your own custom form completely from scratch."
+msgstr "您还可以完全从头开始设计自己的自定义表单。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:137
+msgid "Create a simple point layer named ``test-data`` with two attributes:"
+msgstr "创建一个名为 ``test-data`` 简单的点图层，该图层有两个属性："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:140
+msgid "name (text)"
+msgstr "name (文本)"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:141
+msgid "age (integer)"
+msgstr "age (整数)"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:146
+msgid ""
+"Capture a few points on your new layer using the digitizing tools so that "
+"you have a little data to play with. You should be presented with the "
+"default QGIS generated attribute capture form each time you capture a new "
+"point."
+msgstr "使用数字化工具在新图层上采集少许点，这样您就有了少量数据可供使用。每次采集新点时，都应显示默认的QGIS生成的属性表单。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:151
+msgid "You may need to disable Snapping if still enabled from earlier tasks."
+msgstr "如果之前的作业启用了捕捉功能，现在可能需要禁用。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:160
+msgid "|hard| |FA| Creating a New Form"
+msgstr "|hard| 跟我做: 创建新表单"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:162
+msgid ""
+"Now we want to create our own custom form for the attribute data capture "
+"phase. To do this, you need to have *QT Designer* installed (only needed for"
+" the person who creates the forms)."
+msgstr "现在，我们想为属性数据采集阶段创建自己的自定义表单。为此，您需要安装 QT Designer (仅创建表单的人员需要)。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:167
+msgid "Start *QT Designer*."
+msgstr "启动 *QT Designer* 。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:168
+msgid "In the dialog that appears, create a new dialog:"
+msgstr "在出现的对话框中，创建一个新对话框："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:173
+msgid ""
+"Look for the :guilabel:`Widget Box` along the left of your screen (default)."
+" It contains an item called :guilabel:`Line Edit`."
+msgstr ""
+"在屏幕 (默认) 左侧查找 :guilabel:`Widget Box` ，它含有一个名为 :guilabel:`Line Edit` 的项。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:176
+msgid ""
+"Click and drag this item into your form. This creates a new :guilabel:`Line "
+"Edit` in the form."
+msgstr "单击并将此项拖到表单，这将在表单中创建一个新的 :guilabel:`Line Edit` 。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:178
+msgid ""
+"With the new line edit element selected, you'll see its *properties* along "
+"the side of your screen (on the right by default):"
+msgstr "选中新 Line Edit 元素后，您将在屏幕一侧 (默认位于右侧) 看到其属性："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:185
+msgid "Set its name to ``name``."
+msgstr "将其名称设置为 ``name`` 。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:186
+msgid ""
+"Using the same approach, create a new :guilabel:`Spin Box` and set its name "
+"to ``age``."
+msgstr "使用相同的方法，创建一个新的 :guilabel:`Spin Box` 并其名称设置为 ``age`` 。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:188
+msgid ""
+"Add a :guilabel:`Label` with the text ``Add a New Person`` in a bold font "
+"(look in the object *properties* to find out how to set this). "
+"Alternatively, you may want to set the title of the dialog itself (rather "
+"than adding a label)."
+msgstr ""
+"添加带有粗体文本 ``Add a New Person`` 的 :guilabel:`Label` (查看对象 *属性* "
+"了解如何设置此项)。或者，您可能希望设置对话框自身的标题 (而不是添加标签)。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:193
+msgid ""
+"Add a :guilabel:`Label` for your :guilabel:`Line Edit` and your "
+":guilabel:`Spin Box`."
+msgstr "为 :guilabel:`Line Edit` 和 :guilabel:`Spin Box` 添加 :guilabel:`Label` 。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:194
+msgid "Arrange the elements to your own desire."
+msgstr "根据自己的想法排列元素。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:195
+msgid "Click anywhere in your dialog."
+msgstr "单击对话框中的任意位置。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:196
+msgid ""
+"Find the *Lay Out in a Form Layout* button (in a toolbar along the top edge "
+"of the screen, by default). This lays out your dialog automatically."
+msgstr " 查找 *在窗体布局中布局* 按钮 (默认是在沿屏幕顶部边缘的工具栏中)，这会自动布局对话框。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:199
+msgid ""
+"Set the dialog's maximum size (in its properties) to ``200`` (width) by "
+"``150`` (height)."
+msgstr "将对话框的最大尺寸 (在其属性中) 设置为 ``200`` (宽度) 乘以 ``150`` (高度)。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:201
+msgid "Your form should now look similar to this:"
+msgstr "您的表单现在应该类似于以下所示："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:206
+msgid "Save your new form as :file:`exercise_data/forms/add_people.ui`"
+msgstr "将新表单另存为 :file:`exercise_data/forms/add_people.ui`"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:207
+msgid "When it's done saving, you can close *Qt Designer*"
+msgstr "保存完成后，可以关闭 *Qt Designer*"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:210
+msgid "|hard| |FA| Associating the Form with Your Layer"
+msgstr "|hard| 跟我做: 将表单与图层关联"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:212
+msgid "Go back to QGIS"
+msgstr "返回到QGIS"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:213
+msgid ""
+"Double click the :guilabel:`test-data` layer in the legend to access its "
+"properties."
+msgstr "双击图例中的 :guilabel:`test-data` 图层以访问其属性。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:215
+msgid ""
+"Click on the :guilabel:`Attributes Form` tab in the :guilabel:`Layer "
+"Properties` dialog"
+msgstr "单击 :guilabel:`图层属性` 对话框中的 :guilabel:`属性表单` 选项卡"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:217
+msgid ""
+"In the :guilabel:`Attribute editor layout` dropdown, select "
+":guilabel:`Provide ui-file`."
+msgstr "在 :guilabel:`选择属性布局编辑器` 下拉列表中，选择 :guilabel:`提供界面文件` 选项。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:219
+msgid ""
+"Click the ellipsis button and choose the :file:`add_people.ui` file you just"
+" created:"
+msgstr "单击省略号按钮，然后选择刚才创建的 :file:`add_people.ui` 文件："
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:225
+msgid "Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog"
+msgstr "在 :guilabel:`图层属性` 对话框中单击 :guilabel:`确定`"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:226
+msgid "Enter edit mode and capture a new point"
+msgstr "进入编辑模式并采集新点"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:227
+msgid ""
+"When you do so, you will be presented with your custom dialog (instead of "
+"the generic one that QGIS usually creates)."
+msgstr "执行此操作时，您会看到自定义对话框 (而不是QGIS通常创建的通用对话框)。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:229
+msgid ""
+"If you click on one of your points using the |identify| :sup:`Identify "
+"Features` tool, you can now bring up the form by right clicking in the "
+"identify results window and choosing :menuselection:`View Feature Form` from"
+" the context menu."
+msgstr ""
+"如果使用 |identify| :sup:`识别要素` 工具单击其中一个点，现在可以通过在识别结果窗口中右键单击并从上下文菜单中选择 "
+":menuselection:`查看要素表单` 来打开表单。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:233
+msgid ""
+"If you are in edit mode for this layer, that context menu will show "
+":menuselection:`Edit Feature Form` instead, and you can then adjust the "
+"attributes in the new form even after initial capture."
+msgstr ""
+"如果处于该图层的编辑模式，则此上下文菜单将显示 :menuselection:`编辑要素表单` ，即使在初始采集之后，您也可以调整新表单中的属性。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:238
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:240
+msgid ""
+"Using forms, you can make life easier for yourself when editing or creating "
+"data. By editing widget types or creating an entirely new form from scratch,"
+" you can control the experience of someone who digitizes new data for that "
+"layer, thereby minimizing misunderstandings and unnecessary errors."
+msgstr ""
+"使用表单，您可以在编辑或创建数据时让自己的生活更轻松。通过编辑控件类型或从头创建一个全新的表单，您可以控制为该图层数字化新数据的用户体验，从而最大限度地减少误解和不必要的错误。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:248
+msgid "|FR|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:250
+msgid ""
+"If you completed the advanced section above and have knowledge of Python, "
+"you may want to check out `this blog entry "
+"<https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-"
+"with-python-logic/>`_ about creating custom feature forms with Python logic,"
+" which allows advanced functions including data validation, autocompletion, "
+"etc."
+msgstr ""
+"如果您已经完成了上面的高级章节，并且了解Python，那么您可能想看看有关使用Python逻辑创建自定义要素表单的 `博客文章 "
+"<https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-"
+"with-python-logic/>`_ ，它允许使用高级功能，包括数据验证、自动补全等。"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:257
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:259
+msgid ""
+"Opening a form on identifying a feature is one of the standard actions that "
+"QGIS can perform. However, you can also direct it to perform custom actions "
+"that you define. This is the subject of the next lesson."
+msgstr "在识别要素时打开表单是QGIS可以执行的标准动作之一。但是，也可以指示它执行您定义的自定义动作。这是下一课的主题。"

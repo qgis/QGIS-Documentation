@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Czech (https://app.transifex.com/qgis/teams/6144/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: ../../docs/developers_guide/codingstandards.rst:5
+msgid "QGIS Coding Standards"
+msgstr "QGIS kódovací standardy"
+
+#: ../../docs/developers_guide/codingstandards.rst:10
+msgid "These standards should be followed by all QGIS developers."
+msgstr "Těmito standardy by se měli řídit všichni vývojáři QGIS"
+
+#: ../../docs/developers_guide/codingstandards.rst:13
+msgid "Classes"
+msgstr "Třídy"
+
+#: ../../docs/developers_guide/codingstandards.rst:17
+#: ../../docs/developers_guide/codingstandards.rst:213
+msgid "Names"
+msgstr "Názvy"
+
+#: ../../docs/developers_guide/codingstandards.rst:19
+msgid "Class in QGIS begin with Qgs and are formed using camel case."
+msgstr "Třída v QGIS začína s Qgs a je formována za použití CamelCase."
+
+#: ../../docs/developers_guide/codingstandards.rst:21
+#: ../../docs/developers_guide/codingstandards.rst:192
+#: ../../docs/developers_guide/codingstandards.rst:265
+msgid "Examples:"
+msgstr "Příklady:"
+
+#: ../../docs/developers_guide/codingstandards.rst:23
+msgid "``QgsPoint``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:24
+msgid "``QgsMapCanvas``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:25
+msgid "``QgsRasterLayer``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:29
+msgid "Members"
+msgstr "Členy"
+
+#: ../../docs/developers_guide/codingstandards.rst:32
+msgid ""
+"Class member names begin with a lower case m and are formed using mixed "
+"case."
+msgstr ""
+"Jména členů třídy začínají malým písmenem m a jsou formovány s použitím "
+"velkých i malých písmen."
+
+#: ../../docs/developers_guide/codingstandards.rst:35
+msgid "``mMapCanvas``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:36
+msgid "``mCurrentExtent``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:38
+msgid ""
+"All class members should be private. Public class members are STRONGLY "
+"discouraged. Protected members should be avoided when the member may need to"
+" be accessed from Python subclasses, since protected members cannot be used "
+"from the Python bindings."
+msgstr ""
+"Všechny členy třídy by měli být privátní. Veřejné člyny tříd jsou SILNĚ "
+"nedoporučovány. Chráněných členů by se mělo být vyvarováno, pokud by mohlo "
+"být k členu přistupováno z Pythonovských podtříd, jelikož chráněné členy "
+"nemohou být použity z Pythonovských vazeb."
+
+#: ../../docs/developers_guide/codingstandards.rst:46
+msgid "``sRefCounter``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:47
+msgid "``DEFAULT_QUEUE_SIZE``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:58
+msgid "``mapCanvas()``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:59
+msgid "``currentExtent()``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:66
+msgid "Functions"
+msgstr "Funkce"
+
+#: ../../docs/developers_guide/codingstandards.rst:72
+msgid "``updateMapExtent()``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:73
+msgid "``setUserOptions()``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:84
+msgid "Function Arguments"
+msgstr "Argumenty funkcí"
+
+#: ../../docs/developers_guide/codingstandards.rst:100
+msgid "Function Return Values"
+msgstr "Vrácené hodnoty funkcí"
+
+#: ../../docs/developers_guide/codingstandards.rst:107
+msgid "``int maximumValue() const``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:108
+msgid "``const LayerSet& layers() const``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:184
+msgid "Qt Designer"
+msgstr "Qt Návrhář"
+
+#: ../../docs/developers_guide/codingstandards.rst:187
+msgid "Generated Classes"
+msgstr "Generované třídy"
+
+#: ../../docs/developers_guide/codingstandards.rst:194
+msgid "``QgsPluginManagerBase``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:195
+msgid "``QgsUserOptionsBase``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:199
+msgid "Dialogs"
+msgstr "Dialogy"
+
+#: ../../docs/developers_guide/codingstandards.rst:210
+msgid "C++ Files"
+msgstr "C++ Soubory"
+
+#: ../../docs/developers_guide/codingstandards.rst:260
+msgid "Variable Names"
+msgstr "Proměné názvy"
+
+#: ../../docs/developers_guide/codingstandards.rst:267
+msgid "``mapCanvas``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:268
+msgid "``currentExtent``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:327
+msgid "Editing"
+msgstr "Editování"
+
+#: ../../docs/developers_guide/codingstandards.rst:435
+msgid "``SIP_FACTORY``: ``/Factory/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:436
+msgid "``SIP_OUT``: ``/Out/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:437
+msgid "``SIP_INOUT``: ``/In,Out/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:438
+msgid "``SIP_TRANSFER``: ``/Transfer/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:440
+msgid "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:441
+msgid "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:442
+msgid "``SIP_TRANSFERBACK``: ``/TransferBack/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:489
+msgid "Settings"
+msgstr "Nastavení"
+
+#: ../../docs/developers_guide/codingstandards.rst:529
+msgid "``0 == value`` instead of ``value == 0``"
+msgstr "``0 == value`` namísto ``value == 0``"
+
+#: ../../docs/developers_guide/codingstandards.rst:548
+msgid "or this:"
+msgstr "nebo toto:"
+
+#: ../../docs/developers_guide/codingstandards.rst:566
+msgid "Consider:"
+msgstr "Zvaž:"
+
+#: ../../docs/developers_guide/codingstandards.rst:633
+msgid ":source:`doc/CONTRIBUTORS`"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:634
+msgid ":source:`doc/AUTHORS`"
+msgstr ""

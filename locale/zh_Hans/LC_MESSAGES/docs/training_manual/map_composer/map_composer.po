@@ -1,0 +1,662 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:2
+msgid "|LS| Using Print Layout"
+msgstr "课: 使用打印布局"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:4
+msgid ""
+"Now that you've got a map, you need to be able to print it or to export it "
+"to a document. The reason is, a GIS map file is not an image. Rather, it "
+"saves the state of the GIS program, with references to all the layers, their"
+" labels,colors, etc. So for someone who doesn't have the data or the same "
+"GIS program (such as QGIS), the map file will be useless. Luckily, QGIS can "
+"export its map file to a format that anyone's computer can read, as well as "
+"printing out the map if you have a printer connected. Both exporting and "
+"printing is handled via the *Print Layout*."
+msgstr ""
+"您现在已经有了一张地图，可能需要打印或将它导出到文档中。而GIS地图文件不是图像。相反，它保存了GIS程序的状态，并引用了所有图层、其标注、颜色等。因此，对于没有数据或相同GIS程序"
+" (如QGIS) "
+"的人来说，地图文件将毫无用处。幸运的是，QGIS可以将地图文件导出到任何人的计算机都可以读取的格式，如果连接了打印机，还可以打印地图。导出和打印都是通过"
+" *打印布局* 进行处理。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:16
+msgid ""
+"**The goal for this lesson:** To use the QGIS *Print Layout* to create a "
+"basic map with all the required settings."
+msgstr "**本课目标:** 使用QGIS *打印布局* 创建具有所有必需设置的基本地图。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:20
+msgid "|basic| |FA| The Layout Manager"
+msgstr "|basic| 跟我做:  布局管理器"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:343
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:22
+msgid ""
+"QGIS allows you to create multiple maps using the same map file. For this "
+"reason, it has a tool called the *Layout Manager*."
+msgstr "QGIS允许您使用同一地图文件创建多个地图。因此，它有一个名为 *布局管理器* 的工具。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:25
+msgid ""
+"Click on the :menuselection:`Project --> Layout Manager...` menu entry to "
+"open this tool. You'll see a blank :guilabel:`Layout manager` dialog appear."
+msgstr ""
+"单击 :menuselection:`工程 --> 布局管理器...` 菜单项以打开此工具，您将看到一个空白的 :guilabel:`布局管理器` "
+"对话框出现。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:32
+msgid ""
+"Under :guilabel:`New from Template`, select :guilabel:`Empty layout` and "
+"press the :guilabel:`Create...` button."
+msgstr "在 :guilabel:`由模板新建` ，选择 :guilabel:`空白布局` ，然后按 :guilabel:`新建...` 按钮"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:34
+msgid ""
+"Give the new layout the name of |majorUrbanName| and click :guilabel:`OK`."
+msgstr "将新布局命名为 |majorUrbanName| ，然后单击 :guilabel:`确定` 。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:36
+msgid "You will now see the *Print Layout* window:"
+msgstr "现在，您将看到 *打印布局* 窗口："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:41
+msgid ""
+"You could also create this new layout via the :menuselection:`Project --> "
+"New Print Layout...` menu."
+msgstr "您还可以通过 :menuselection:`工程 --> 新建打印布局...` 菜单创建新布局。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:44
+msgid ""
+"Whichever route you take, the new print layout is now accessible from the "
+":menuselection:`Project --> Layouts -->` menu, as in the image below."
+msgstr "无论您选择哪种方式，现在都可以从 :menuselection:`工程 --> 布局 -->` 访问新的打印布局，如下图所示。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:52
+msgid "|basic| |FA| Basic Map Composition"
+msgstr "|basic| 跟我做: 基本地图构图"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:54
+msgid ""
+"In this example, the composition was already the way we wanted it. Ensure "
+"that yours is as well."
+msgstr "在此示例，构图已经是我们想要的了，确保您的也是。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:57
+msgid ""
+"Right-click on the sheet in the central part of the layout window and choose"
+" :guilabel:`Page properties...` in the context menu."
+msgstr "右键单击布局窗口中间部位的页面，然后在上下文菜单中选择 :guilabel:`页面属性...` 。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:59
+msgid ""
+"Check that the values in the :guilabel:`Item Properties` tab are set to the "
+"following:"
+msgstr "检查 :guilabel:`项属性` 选项卡中的值是否设置为以下值："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:62
+msgid ":guilabel:`Size`: ``A4``"
+msgstr ":guilabel:`大小`: ``A4``"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:63
+msgid ":guilabel:`Orientation`: ``Landscape``"
+msgstr ":guilabel:`纸张方向`: ``横向``"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:65
+msgid ""
+"Now you've got the page layout the way you wanted it, but this page is still"
+" blank. It clearly lacks a map. Let's fix that!"
+msgstr "现在，您已经按照自己想要的方式进行了页面布局，但是这个页面仍然是空白的。它显然缺少地图。我们来解决这个问题！"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:69
+msgid "Click on the |addMap| :sup:`Add Map` button."
+msgstr "单击 |addMap| :sup:`添加地图` 按钮。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:337
+msgid "addMap"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:71
+msgid "With this tool activated, you will be able to place a map on the page."
+msgstr "激活此工具后，您将能够在页面上放置地图。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:74
+msgid "Click and drag a box on the blank page:"
+msgstr "在空白页面上单击并拖动虚框："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:79
+msgid "The map will appear on the page."
+msgstr "地图将出现在页面上。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:81
+msgid "Move the map by clicking and dragging it around:"
+msgstr "通过单击并拖动地图使其移动："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:86
+msgid "Resize it by clicking and dragging the boxes on the edges:"
+msgstr "通过单击并拖动边缘上的框来调整大小："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:91
+msgid ""
+"Your map may look a lot different, of course! This depends on how your own "
+"project is set up. But not to worry! These instructions are general, so they"
+" will work the same regardless of what the map itself looks like."
+msgstr ""
+"当然，您的地图看起来可能会不大一样！这取决于您自己的工程是如何设置的。但别担心！这些说明是通用的，因此无论地图本身看起来是什么样子，它们的操作方式都是一样的。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:96
+msgid ""
+"Be sure to leave margins along the edges, and a space along the top for the "
+"title."
+msgstr "确保沿边缘留有边距，并沿顶部留出足够的空间放置标题。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:99
+msgid "Zoom in and out on the page (but not the map!) by using these buttons:"
+msgstr "使用以下按钮放大和缩小页面 (但不是地图!)："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:102
+msgid "|zoomFullExtent| |zoomIn| |zoomOut|"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:372
+msgid "zoomFullExtent"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:374
+msgid "zoomIn"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:376
+msgid "zoomOut"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:104
+msgid ""
+"Zoom and pan the map in the main QGIS window. You can also pan the map using"
+" the |moveItemContent| :sup:`Move item content` tool."
+msgstr "在QGIS主窗口缩放和平移地图。还可以使用 |moveItemContent| :sup:`移动项内容` 工具平移地图。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:354
+msgid "moveItemContent"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:108
+msgid "The map view updates as you zoom in or zoom out."
+msgstr "地图视图会随着您的放大或缩小而更新。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:109
+msgid ""
+"If, for any reason, the map view does not refresh correctly, you can force "
+"the map to refresh by clicking the |refresh| :sup:`Refresh view` button."
+msgstr "如果由于某种原因，地图视图未正确刷新，可以通过单击 |refresh| :sup:`刷新视图` 按钮强制地图进行刷新。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:356
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:113
+msgid ""
+"Remember that the size and position you've given the map doesn't need to be "
+"final. You can always come back and change it later if you're not satisfied."
+" For now, you need to ensure that you've saved your work on this map. "
+"Because a *Print Layout* in QGIS is part of the main map file, you must save"
+" your project."
+msgstr ""
+"请记住，您为地图设置的大小和位置不是最终结果。如果不满意，可以随时回来更改。目前，您需要确保已在此地图上保存了您的工作。因为QGIS中的 *打印布局* "
+"是主地图文件的一部分，所以必须保存工程。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:122
+msgid ""
+"Go to the :menuselection:`Layout -->` |fileSave| :menuselection:`Save "
+"Project`. This is a convenient shortcut to the one in the main dialog."
+msgstr ""
+"转到 :menuselection:`布局 -->` |fileSave| :menuselection:`保存工程` 。这是主对话框中的快捷方式。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:346
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:127
+msgid "|basic| |FA| Adding a Title"
+msgstr "|basic| 跟我做: 添加标题"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:129
+msgid ""
+"Now your map is looking good on the page, but your readers/users are not "
+"being told what's going on yet. They need some context, which is what you'll"
+" provide for them by adding map elements. First, let us add a title."
+msgstr ""
+"现在，您的地图在页面上看起来不错，但是您的读者及用户还未被告知这是什么。他们需要一些辅助说明，这就是您将通过添加地图元素为他们提供的内容。首先，让我们添加一个标题。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:135
+msgid "Click on the |label| :sup:`Add Label` button"
+msgstr "单击 |label| :sup:`添加标注` 按钮"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:348
+msgid "label"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:136
+msgid ""
+"Click on the page, above the map, accept the suggested values in the "
+":guilabel:`New Item Properties` dialog, and a label will appear at the top "
+"of the map."
+msgstr "单击地图上方的空白页面，同意 :guilabel:`新建项属性` 对话框中的推荐值，地图顶部将显示一个标注。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:139
+msgid ""
+"Resize it and place it in the top center of the page. It can be resized and "
+"moved in the same way that you resized and moved the map."
+msgstr "调整大小并将其放置在页面的顶部中心，可以调整其大小和位置，这与调整大小和移动地图的方式相同。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:143
+msgid ""
+"As you move the title, you'll notice that guidelines appear to help you "
+"position the title in the center of the page."
+msgstr "移动标题时，可能会注意到出现的辅助线，这会帮助您将标题定位在页面中心。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:146
+msgid ""
+"However, there is also a tool in the Actions Toolbar to help position the "
+"title relative to the map (not the page):"
+msgstr "不过，操作工具栏中还有一个工具，可以帮助相对于地图 (而不是页面) 定位标题："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:149
+msgid "|alignLeft|"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:341
+msgid "alignLeft"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:151
+msgid "Click the map to select it"
+msgstr "单击地图将其选中"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:152
+msgid ""
+"Hold in :kbd:`Shift` on your keyboard and click on the label so that both "
+"the map and the label are selected."
+msgstr "按住键盘上的 :kbd:`Shift` 键并单击标注，以便同时选中地图和标注。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:154
+msgid ""
+"Look for the |alignLeft| :sup:`Align selected items left` button and click "
+"on the dropdown arrow next to it to reveal the positioning options and click"
+" |alignHCenter| :guilabel:`Align center`:"
+msgstr ""
+"查找 |alignLeft| :sup:`左对齐选中的项` 按钮，然后单击其旁边的下拉箭头以显示定位选项，然后单击 |alignHCenter| "
+":guilabel:`居中对齐`:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:339
+msgid "alignHCenter"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:162
+msgid ""
+"Now the label frame is centered on the map, but not the contents. To center "
+"the contents of the label:"
+msgstr "现在标注框在地图上居中，而不是内容。要使标注内容居中，请执行以下操作："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:165
+msgid "Select the label by clicking on it."
+msgstr "单击标注将其选中。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:166
+msgid ""
+"Click on the :guilabel:`Item Properties` tab in the side panel of the layout"
+" window."
+msgstr "单击布局窗口侧面板中的 :guilabel:`项属性` 选项卡。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:168
+msgid "Change the text of the label to \"|majorUrbanName|\":"
+msgstr "将标注文本更改为 \"|majorUrbanName|\":"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:173
+msgid ""
+"Use this interface to set the font and alignment options under the "
+":guilabel:`Appearance` section:"
+msgstr "使用此界面设置 :guilabel:`外观` 区段的字体和对齐选项："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:176
+msgid ""
+"Choose a large but sensible font (the example will use the default font with"
+" a size of ``36``)"
+msgstr "选择一种大字号而明显的字体 (示例将使用 ``36`` 号的默认字体)"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:178
+msgid "Set the :guilabel:`Horizontal Alignment` to :guilabel:`Center`."
+msgstr "将 :guilabel:`水平对齐` 设置为 :guilabel:`水平居中` 。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:180
+msgid ""
+"You can also change the font color, but it's probably best to keep it black "
+"as per the default."
+msgstr "您也可以更改字体颜色，但最好按照默认设置将其保持为黑色。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:183
+msgid ""
+"The default setting is not to add a frame to the title's text box. However, "
+"if you wish to add a frame, you can do so:"
+msgstr "默认设置是未向标题的文本框中添加框架。但是，如果希望添加框架，可以执行以下操作："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:186
+msgid ""
+"In the :guilabel:`Item Properties` tab, scroll down until you see the "
+":guilabel:`Frame` option."
+msgstr "在 :guilabel:`项属性` 选项卡，向下滚动，直到看到 :guilabel:`框架` 选项。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:188
+msgid ""
+"Click the :guilabel:`Frame` checkbox to enable the frame. You can also "
+"change the frame's color and width."
+msgstr "单击 :guilabel:`框架` 复选框以启用框架。您还可以更改框架的颜色和线宽。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:191
+msgid ""
+"In this example, we won't enable the frame, so here is our page so far:"
+msgstr "在本例中，我们不会启用框架，因此这里是目前为止的页面内容："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:197
+msgid ""
+"To make sure that you don't accidentally move these elements around now that"
+" you've aligned them, you can lock items into place:"
+msgstr "为了确保在对齐这些元素后不会意外移动它们，可以将项锁定到所在的位置："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:200
+msgid "Select both the label and the map items"
+msgstr "选择标注和地图项"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:201
+msgid ""
+"Click the |lockItems| :sup:`Lock Selected Items` button in the *Actions* "
+"Toolbar."
+msgstr "单击 *操作* 工具栏中的 |lockItems| :sup:`锁定选中的项` 按钮。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:350
+msgid "lockItems"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:204
+msgid ""
+"Click the |unlockAll| :sup:`Unlock All Items` button in the *Actions* "
+"Toolbar to be able to edit the items again."
+msgstr "单击 *操作* 工具栏中的 |unlockAll| :sup:`解锁全部项` 按钮，可以再次编辑项。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:370
+msgid "unlockAll"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:209
+msgid "|basic| |FA| Adding a Legend"
+msgstr "|basic| 跟我做: 添加图例"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:211
+msgid ""
+"The map reader also needs to be able to see what various things on the map "
+"actually mean. In some cases, like the place names, this is quite obvious. "
+"In other cases, it's more difficult to guess, like the colors of the "
+"forests. Let's add a new legend."
+msgstr ""
+"地图读者还需要能够看懂地图上各种元素的实际含义。在某些情况下，比如地名，这是很明显的；而在另一种情况下，则更难猜测，比如森林的颜色。让我们添加一个新的图例。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:218
+msgid "Click on the |addLegend| :sup:`Add Legend` button"
+msgstr "单击 |addLegend| :sup:`添加图例` 按钮"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:335
+msgid "addLegend"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:219
+msgid ""
+"Click on the page to place the legend, accept the suggested values in the "
+":guilabel:`New Item Properties` dialog,"
+msgstr "单击页面放置图例，在 :guilabel:`新建项属性` 对话框中使用推荐值。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:221
+msgid ""
+"A legend is added to the layout page, showing layers symbology as set in the"
+" main dialog."
+msgstr "布局页面会添加一个图例，其中显示主对话框中设置的图层符号。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:223
+msgid "As usual, you can click and move the item to where you want it:"
+msgstr "与之前一样，您可以单击并将项移动到恰当的位置："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:230
+msgid "|moderate| |FA| Customizing Legend Items"
+msgstr "|moderate| 跟我做: 自定义图例项"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:353
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:232
+msgid ""
+"Not everything on the legend is necessary, so let's remove some unwanted "
+"items."
+msgstr "并不是图例上的所有内容都是必需的，因此让我们移除一些不需要的项。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:235
+msgid ""
+"In the :guilabel:`Item Properties` tab, you'll find the :guilabel:`Legend "
+"items` group."
+msgstr "在 :guilabel:`项属性` 选项卡，找到 :guilabel:`图例项` 组。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:237
+msgid ""
+"Uncheck the |unchecked| :guilabel:`Auto update` box, allowing you to "
+"directly modify the legend items"
+msgstr "取消勾选 |unchecked| :guilabel:`自动更新` 框，这允许您直接修改图例项"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:368
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:239
+msgid "Select the entry with :guilabel:`buildings`"
+msgstr "选择带有 :guilabel:`buildings` 的条目"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:240
+msgid "Delete it from the legend by clicking the |symbologyRemove| button"
+msgstr "单击 |symbologyRemove| 按钮将其从图例中删除"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:366
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:242
+msgid "You can also rename items."
+msgstr "您还可以重命名项。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:244
+msgid "Select a layer from the same list."
+msgstr "从同一列表中选择一个图层。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:245
+msgid "Click the |symbologyEdit| :sup:`Edit selected item properties` button."
+msgstr "单击 |symbologyEdit| :sup:`编辑所选项的属性` 按钮。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:364
+msgid "symbologyEdit"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:246
+msgid ""
+"Rename the layers to ``Places``, ``Roads and Streets``, ``Surface Water``, "
+"and ``Rivers``."
+msgstr ""
+"将图层重命名为 ``Places``, ``Roads and Streets``, ``Surface Water``, 和 ``Rivers` 。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:249
+msgid "You can also reorder the items:"
+msgstr "您还可以对项重新排序："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:255
+msgid ""
+"As the legend will likely be widened by the new layer names, you may wish to"
+" move and resize the legend and or map. This is the result:"
+msgstr "由于图例可能会因新图层名称而加宽，因此您可能希望对图例和 (或) 地图进行移动并调整大小。结果如下："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:264
+msgid "|basic| |FA| Exporting Your Map"
+msgstr "|basic| 跟我做: 导出地图"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:266
+msgid "Did you remember to save your work often?"
+msgstr "您记得经常保存您的工作吗？"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:268
+msgid ""
+"Finally the map is ready for export! You'll see the export buttons near the "
+"top left corner of the layout window:"
+msgstr "地图终于可以导出了！您将在布局窗口左上角附近看到导出按钮："
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:271
+msgid ""
+"|filePrint| :sup:`Print Layout`: interfaces with a printer. Since the "
+"printer options will differ depending on the model of printer that you're "
+"working with, it's probably better to consult the printer manual or a "
+"general guide to printing for more information on this topic."
+msgstr ""
+"|filePrint| :sup:`打印布局`: "
+"与打印机接口。由于打印机选项会因您使用的打印机型号而不同，因此最好查阅打印机手册或打印通用指南，以获取有关此主题的更多信息。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:344
+msgid "filePrint"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:277
+msgid "The other buttons allow you to export the map page to a file."
+msgstr "其他按钮允许您将地图页面导出到文件。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:278
+msgid ""
+"|saveMapAsImage| :sup:`Export as Image`: gives you a selection of various "
+"common image formats to choose from. This is probably the simplest option, "
+"but the image it creates is \"dead\" and difficult to edit."
+msgstr ""
+"|saveMapAsImage| :sup:`导出为图像`: 提供多种常见图像格式供您选择。这可能是最简单的选项，但它创建的图像是 \"dead\" "
+"且难以编辑。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:362
+msgid "saveMapAsImage"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:282
+msgid ""
+"|saveAsSVG| :sup:`Export as SVG`: If you're sending the map to a "
+"cartographer (who may want to edit the map for publication), it's best to "
+"export as an SVG. SVG stands for \"Scalable Vector Graphic\", and can be "
+"imported to programs like `Inkscape <https://inkscape.org/>`_ or other "
+"vector image editing software."
+msgstr ""
+"|saveAsSVG| :sup:`导出为SVG文件`: 如果要将地图发送给制图员 "
+"(他们可能需要编辑地图以供出版)，最好将其导出为SVG格式。SVG是指 \"Scalable Vector Graphic - "
+"可缩放矢量图形\"，可以导入到 `Inkscape <https://inkscape.org/>`_ 或其他矢量图像编辑软件等程序中。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:360
+msgid "saveAsSVG"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:287
+msgid ""
+"|saveAsPDF| :sup:`Export as PDF`: If you need to send the map to a client, "
+"it's most common to use a PDF, because it's easier to set up printing "
+"options for a PDF. Some cartographers may prefer PDF as well, if they have a"
+" program that allows them to import and edit this format."
+msgstr ""
+"|saveAsPDF| :sup:`导出为PDF文件`: "
+"如果需要将地图发送给客户，最常见的方法是使用PDF，因为PDF格式设置打印选项更容易些。某些制图员如果有程序允许他们导入和编辑PDF格式，他们可能也更喜欢这种格式。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:358
+msgid "saveAsPDF"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:293
+msgid "For our purposes, we're going to use PDF."
+msgstr "出于我们的目的，将使用PDF格式。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:295
+msgid "Click the |saveAsPDF| :sup:`Export as PDF` button"
+msgstr "单击 |saveAsPDF| :sup:`导出为PDF文件` 按钮"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:296
+msgid ""
+"Choose a save location and a file name as usual. The following dialog will "
+"show up."
+msgstr "像往常一样选择保存位置和文件名，之后将显示以下对话框。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:302
+msgid "You can safely use the default values now and click :guilabel:`Save`."
+msgstr "现在可以使用默认值，然后单击 :guilabel:`保存` 。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:305
+msgid ""
+"QGIS will proceed to the map export and push a message on top of the print "
+"layout dialog as soon as it finishes."
+msgstr "QGIS将继续导出地图，并在完成后立即在打印布局对话框的顶部推送一条信息。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:307
+msgid ""
+"Click the hyperlink in the message to open the folder in which the PDF has "
+"been saved in your system's file manager"
+msgstr "单击信息中的超链接，在系统文件管理器中打开保存PDF的文件夹"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:309
+msgid "Open it and see how your layout looks."
+msgstr "打开PDF文件，看看您的第一个布局效果如何。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:311
+msgid ""
+"Everything is OK? Congratulations on your first completed QGIS map project!"
+msgstr "一切都好吗？祝贺您首次完成QGIS地图工程！"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:314
+msgid ""
+"Anything unsatisfying? Go back to the QGIS window, do the appropriate "
+"modifications and export again."
+msgstr "如果有不满意的地方，可以返回到QGIS窗口，进行适当的修改并再次导出。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:316
+msgid "Remember to save your project file."
+msgstr "请记住保存工程文件。"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:320
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:321
+msgid ""
+"Now you know how to create a basic static map layout. We can go a step "
+"further and create a map layout that adapts dynamically, with more layout "
+"items."
+msgstr "现在，您已了解如何创建基本的静态地图布局。我们可以更进一步，创建动态可调整的地图布局，其中包含更多的布局项。"

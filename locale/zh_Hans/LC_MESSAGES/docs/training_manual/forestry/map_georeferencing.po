@@ -1,0 +1,343 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:2
+msgid "|LS| Georeferencing a Map"
+msgstr "课: 地理配准地图"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:4
+msgid ""
+"A common forestry task would be the update of the information for a forestry"
+" area. It is possible that the previous information for that area dates "
+"several years back and was collected analogically (that is, in paper) or "
+"perhaps it was digitized but all you have left is the paper version of that "
+"inventory data."
+msgstr ""
+"常见的林业任务是更新林区的信息。有可能该地区以前的信息可以追溯到几年前，并以类似方式收集 "
+"(即以纸质形式)，也可能是数字化的，但现存的只是该库存量数据的纸质版。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:9
+msgid ""
+"Most likely you would like to use that information in your GIS to, for "
+"example, compare later with later inventories. This means that you will need"
+" to digitize the information at hand using your GIS software. But before you"
+" can start the digitizing, there is an important first step to be done, "
+"scanning and georeferencing your paper map."
+msgstr ""
+"例如，很可能您希望在GIS中使用这些信息，以便与以后的库存进行比较。这意味着您需要使用GIS软件将手头的信息数字化。但在开始数字化之前，首先要做的是扫描和地理配准您的纸质地图。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:15
+msgid ""
+"**The goal for this lesson:** To learn to use the Georeferencer tool in "
+"QGIS."
+msgstr "**本课目标:** 学习在QGIS中使用地理配准工具。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:18
+msgid "|basic| Scan the map"
+msgstr "|basic| 扫描地图"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:174
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:20
+msgid ""
+"The first task you will have to do is to scan your map. If your map is too "
+"big, then you can scan it in different parts but keep in mind that you will "
+"have to repeat preprocessing and georeferencing tasks for each part. So if "
+"possible, scan the map in as few parts as possible."
+msgstr ""
+"您要做的第一件事就是扫描地图。如果地图太大，那么可以在不同的部位进行扫描，但要记住，必须为每个部位重复预处理和地理配准任务。因此，如果可能的话，尽可能少地扫描地图。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:25
+msgid ""
+"If you are going to use a different map that the one provided with this "
+"manual, use your own scanner to scan the map as an image file, a resolution "
+"of 300 DPI will do. If your map has colors, scan the image in color so that "
+"you can later use those colors to separate information from your map into "
+"different  layers (for ex., forest stands, contour lines, roads...)."
+msgstr ""
+"如果要使用与本手册提供的不同地图，请使用扫描仪将地图扫描为图像文件，分辨率为 300 DPI "
+"即可。如果是彩色地图，请以彩色扫描图像，便于以后可以使用这些颜色将地图中的信息分为不同的图层 (例如，林分、等高线、道路等)。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:31
+msgid ""
+"For this exercise you will use a previously scanned map, you can find it as "
+":file:`rautjarvi_map.tif` in the data folder :file:`exercise_data/forestry`"
+msgstr ""
+"在本练习中，将使用之前扫描的地图，您可以在数据文件夹 :file:`exercise_data/forestry` 中找到 "
+":file:`rautjarvi_map.tif`"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:35
+msgid "|basic| |FA| Georeferencing the scanned map"
+msgstr "|basic| 跟我做: 对扫描的地图进行地理配准"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:37
+msgid ""
+"Open QGIS and set the project's CRS to ``EPSG:3067 - ETRS89 / TM35FIN(E,N)``"
+" in :menuselection:`Project --> Properties --> CRS`, which is the currently "
+"used CRS in Finland."
+msgstr ""
+"打开QGIS并在 :menuselection:`工程 --> 工程属性 --> CRS` 中设置工程的CRS为 ``EPSG:3067 - "
+"ETRS89 / TM35FIN(E,N)`` ，这是芬兰目前使用的CRS。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:44
+msgid "Save the QGIS project as :file:`map_digitizing.qgs`."
+msgstr "将QGIS工程另存为 :file:`map_digitizing.qgs` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:46
+msgid ""
+"You will use the georeferencing tool from QGIS named "
+":guilabel:`Georeferencer`. To georeference the map:"
+msgstr "您将使用的是QGIS中名为 :guilabel:`配准工具` 的地理配准工具。要对地图进行配准："
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:177
+msgid "georefRun"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:55
+msgid ""
+"Add the map image file, :file:`rautjarvi_map.tif`, as the image to "
+"georeference, :menuselection:`File --> Open raster`."
+msgstr ""
+"使用 :menuselection:`文件 --> 打开栅格` 添加地图图像文件 :file:`rautjarvi_map.tif` "
+"，作为要配准的图像。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:57
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:76
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:96
+msgid "Click :guilabel:`OK`."
+msgstr "单击 :guilabel:`确定` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:59
+msgid ""
+"Next you should define the transformation settings for georeferencing the "
+"map:"
+msgstr "接下来，应定义地理配准地图的变换设置："
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:61
+msgid "Open :menuselection:`Settings --> Transformation settings`."
+msgstr "打开 :menuselection:`设置 --> 变换设置` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:62
+msgid ""
+"Set the :guilabel:`Transformation type` to ``Linear`` and the "
+":guilabel:`Resampling method` to ``Nearest neighbour``."
+msgstr "将 :guilabel:`变换类型` 设置为 ``线性`` ，将 :guilabel:`重采样方法` 设置为 ``最近邻`` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:64
+msgid ""
+"Press the |setProjection| :sup:`Select CRS` button next to the "
+":guilabel:`Target SRS` option and select the ``EPSG:2392 - KKJ / Finland "
+"zone 2`` CRS; it is the CRS that was used in Finland back in 1994 when this "
+"map was created."
+msgstr ""
+"按 :guilabel:`目标SRS` 选项旁边的 |setProjection| :sup:`选择CRS` 按钮，并选择 ``EPSG:2392 - "
+"KKJ / Finland zone 2`` CRS。这是1994年创建此地图时芬兰使用的CRS。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:179
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:67
+msgid ""
+"Click the icon next to the :guilabel:`Output raster` box, go to the folder "
+"and create the folder :file:`exercise_data\\\\forestry\\\\digitizing` and "
+"name the file as :file:`rautjarvi_georef.tif`."
+msgstr ""
+"单击 :guilabel:`输出栅格` 方框旁边的图标，转到文件夹，新建 "
+":file:`exercise_data\\\\forestry\\\\digitizing` 文件夹，并将文件命名为 "
+":file:`rautjarvi_georef.tif` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:70
+msgid "Check |checkbox| :guilabel:`Load in QGIS when done`"
+msgstr "勾选 |checkbox| :guilabel:`完成后加载到QGIS`"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:175
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:71
+msgid "Leave the rest of parameters as default."
+msgstr "将其余参数保留为默认值。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:78
+msgid ""
+"The map contains several cross-hairs marking the coordinates in the map, we "
+"will use those to georeference this image. You can use the zooming and "
+"panning tools as you usually do in QGIS to inspect the image in the "
+"Georeferencer's window."
+msgstr ""
+"该地图有几个十字标线，用于标记地图中的坐标，我们将使用这些十字标线对图像进行配准。您可以像通常在QGIS中那样使用缩放和平移工具来检查配准工具窗口中的图像。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:83
+msgid ""
+"Zoom in to the left lower corner of the map and note that there is a cross-"
+"hair with a coordinate pair, X and Y, that as mentioned before are in ``KKJ "
+"/ Finland zone 2`` CRS. You will use this point as the first ground control "
+"point for the georeferencing your map."
+msgstr ""
+"放大到地图的左下角，注意有一个带有坐标对X和Y的十字标线，如前所述，位于 ``KKJ / Finland zone 2`` "
+"CRS中。您将使用该点作为地图地理配准的第一个地面控制点。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:87
+msgid ""
+"Select the :guilabel:`Add point` tool and click in the intersection of the "
+"cross-hairs (pan and zoom as needed)."
+msgstr "选择 :guilabel:`添加控制点` 工具，并单击十字标线的交叉点 (根据需要进行平移和缩放)。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:89
+msgid ""
+"In the :guilabel:`Enter map coordinates` dialogue write the coordinates that"
+" appear in the map (X: 2557000 and Y: 6786000) and their CRS (``EPSG:2392 - "
+"KKJ / Finland zone 2``)"
+msgstr ""
+"在 :guilabel:`输入地图坐标` 对话框中，填写地图中显示的坐标 (X: 2557000 和 Y: 6786000) 及其 CRS "
+"(``EPSG:2392 - KKJ / Finland zone 2``)"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:98
+msgid "The first coordinate for the georeferencing is now ready."
+msgstr "地理配准的第一个坐标现已准备就绪。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:100
+msgid ""
+"Look for other black cross-hairs in the image, they are separated 1000 "
+"meters from each other both in North and East direction. You should be able "
+"to calculate the coordinates of those points in relation to the first one."
+msgstr "在图像中寻找其他黑色十字标线，它们在北向和东向上彼此间隔1000米。您应该能够计算出这些点相对于第一个点的坐标。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:104
+msgid ""
+"Zoom out in the image and move to the right or the top until you find other "
+"cross-hair, and estimate how many kilometres you have moved. Try to get "
+"ground control points as far from each other as possible."
+msgstr "缩小图像并向右或向上移动，直到找到其他十字标线，然后估算移动了多少千米。尽量让地面控制点彼此远离。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:107
+msgid ""
+"Digitize at least three more ground control points in the same way you did "
+"the first one. You should end up with something similar to this:"
+msgstr "以与第一个相同的方式数字化至少三个以上的地面控制点。您最终应该得到类似的结果："
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:113
+msgid ""
+"With already three digitized ground control points you will be able to see "
+"the georeferencing error as a red line coming out of the points. The error "
+"in pixels can be seen also in the :guilabel:`GCP table` in the "
+":guilabel:`dX[pixels]` and :guilabel:`dY[pixels]` columns. The error in "
+"pixels should not be higher than 10 pixels. If it is, you should review the "
+"points you have digitized and the coordinates you have entered to find what "
+"the problem is. You can use the image above as a guide."
+msgstr ""
+"由于已经有三个数字化地面控制点，您将能够看到地理配准误差，即从这些点出来的一条红线。像素误差也可以在 :guilabel:`地面控制点列表` 的 "
+":guilabel:`dX[像素]` 和 :guilabel:`dY[像素]` 列中看到。像素误差不应超过 10 "
+"像素。如果是，您应该检查已经数字化的点和输入的坐标，以找出问题所在。可以使用上面的图像作为参考。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:121
+msgid ""
+"Once you are happy with your control points, you can save them for later "
+"use:"
+msgstr "一旦您对控制点感到满意，可以将其保存以备后用："
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:123
+msgid "Go to :menuselection:`File --> Save GCP points as...`."
+msgstr "转到 :menuselection:`文件 --> 地面控制点另存为...` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:124
+msgid ""
+"In the folder :file:`exercise_data\\\\forestry\\\\digitizing`, name the file"
+" :file:`rautjarvi_map.tif.points`."
+msgstr ""
+"保存到 :file:`exercise_data\\\\forestry\\\\digitizing` 文件夹，并命名文件为 "
+":file:`rautjarvi_map.tif.points` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:127
+msgid "Finally, georeference your map:"
+msgstr "最后，对您的地图进行配准："
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:129
+msgid "Go to :menuselection:`File --> Start georeferencing`."
+msgstr "转到 :menuselection:`文件 --> 开始配准` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:130
+msgid ""
+"Note that you named the file already as :file:`rautjarvi_georef.tif` when "
+"you edited the Georeferencer settings."
+msgstr "请注意，在编辑地理配准工具设置时您已将该文件命名为 :file:`rautjarvi_georef.tif`"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:133
+msgid ""
+"Now you can see the map in QGIS project as a georeferenced raster. Note that"
+" the raster seems to be slightly rotated, but that is simply because the "
+"data is in ``KKJ / Finland zone 2`` and your project is in ``ETRS89 / "
+"TM35FIN(E,N)``."
+msgstr ""
+"现在，您可以在QGIS工程中将地图视为已配准栅格。请注意，栅格似乎略微旋转，但这仅仅是因为数据位于 ``KKJ / Finland zone 2`` "
+"，而您的工程在 ``ETRS89 / TM35FIN(E,N)`` 中。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:138
+msgid "To check that your data is properly georeferenced, you can"
+msgstr "要检查数据是否正确地进行了地理配准，可以"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:140
+msgid ""
+"Open the aerial image in the :file:`exercise_data\\\\forestry` folder, named"
+" :file:`rautjarvi_aerial.tif`."
+msgstr ""
+"在 :file:`exercise_data\\\\forestry` 文件夹中打开名为 :file:`rautjarvi_aerial.tif` "
+"的航拍图像。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:142
+msgid ""
+"Your map and this image should match quite well: set the map transparency to"
+" 50% and compare it to the aerial image."
+msgstr "您的地图和这张图像应该非常匹配：设置地图透明度为50%，将其与航拍图像进行比较。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:148
+msgid ""
+"Save the changes to your QGIS project, you will continue from this point for"
+" the next lesson."
+msgstr "保存对QGIS工程所做的更改，您将从此继续学习下一课。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:152
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:154
+msgid ""
+"You have now georeferenced a paper map, making it possible to use it as a "
+"map layer in QGIS."
+msgstr "现在，您已经对纸质地图进行了地理配准，可以将其用作QGIS中的地图图层。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:158
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:160
+msgid ""
+"In the next lesson, you will digitize the forest stands in your map as "
+"polygons and add the inventory data to them."
+msgstr "在下一课，您将把地图中的林分数字化为多边形，并向其添加库存量数据。"

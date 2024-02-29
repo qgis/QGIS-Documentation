@@ -1,0 +1,369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/services/wmts.rst:2
+msgid "Web Map Tile Service (WMTS)"
+msgstr "WMTS(웹 맵 타일 서비스)"
+
+#: ../../docs/server_manual/services/wmts.rst:4
+msgid ""
+"The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP "
+"interface to request tiled map images generated from a QGIS project. A "
+"typical WMTS request defined the QGIS project to use, some WMS parameters "
+"like layers to render, as well as tile parameters."
+msgstr ""
+"QGIS 서버에 구현된 WMTS **1.0.0** 표준은 QGIS 프로젝트로부터 생성된 타일 맵 이미지들을 요청할 수 있는 HTTP "
+"인터페이스를 제공합니다. 전형적인 WMTS 요청은 사용할 QGIS 프로젝트, 렌더링할 레이어와 같은 몇몇 WMS 파라미터들은 물론 타일 "
+"파라미터들도 정의합니다."
+
+#: ../../docs/server_manual/services/wmts.rst:9
+msgid "Specifications document of the service:"
+msgstr "WMTS 서비스의 사양 문서:"
+
+#: ../../docs/server_manual/services/wmts.rst:11
+msgid "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
+msgstr "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
+
+#: ../../docs/server_manual/services/wmts.rst:13
+msgid "Standard requests provided by QGIS Server:"
+msgstr "QGIS 서버가 제공하는 표준 요청:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Request"
+msgstr "요청"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`GetCapabilities <wmts_getcapabilities>`"
+msgstr ":ref:`GetCapabilities <wmts_getcapabilities>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "서버에 대한 정보를 담은 XML 메타데이터를 반환"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`GetTile <wmts_gettile>`"
+msgstr ":ref:`GetTile <wmts_gettile>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Returns a tile"
+msgstr "타일을 반환"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
+msgstr ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "픽셀 위치에 대한 데이터(도형 및 값)를 검색"
+
+#: ../../docs/server_manual/services/wmts.rst:27
+msgid "GetCapabilities"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:29
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMTS 1.0.0 specifications:"
+msgstr "OGC WMTS 1.0.0 사양에 따른 **GetCapabilities** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Required"
+msgstr "필수 여부"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Yes"
+msgstr "Ο"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the service (**WMTS**)"
+msgstr "서비스(**WMTS**)의 이름"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "요청(**GetCapabilities**)의 이름"
+
+#: ../../docs/server_manual/services/wmts.rst:40
+#: ../../docs/server_manual/services/wmts.rst:83
+#: ../../docs/server_manual/services/wmts.rst:186
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr "표준 파라미터 이외에도, QGIS 서버는 다음과 같은 추가 파라미터를 지원합니다:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "QGIS project file"
+msgstr "QGIS 프로젝트 파일"
+
+#: ../../docs/server_manual/services/wmts.rst:51
+#: ../../docs/server_manual/services/wmts.rst:94
+#: ../../docs/server_manual/services/wmts.rst:197
+msgid "URL example:"
+msgstr "URL 예시:"
+
+#: ../../docs/server_manual/services/wmts.rst:64
+msgid "GetTile"
+msgstr "GetTile"
+
+#: ../../docs/server_manual/services/wmts.rst:66
+msgid ""
+"Standard parameters for the **GetTile** request according to the OGC WMTS "
+"1.0.0 specifications:"
+msgstr "OGC WMTS 1.0.0 사양에 따른 **GetTile** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the request (**GetTile**)"
+msgstr "요청(**GetTile**)의 이름"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`LAYER <wms_layers>`"
+msgstr ":ref:`LAYER <wms_layers>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Layer identifier"
+msgstr "레이어 식별자"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`FORMAT <wmts_gettile_format>`"
+msgstr ":ref:`FORMAT <wmts_gettile_format>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Output format of the tile"
+msgstr "타일의 산출물 포맷"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`"
+msgstr ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the pyramid"
+msgstr "피라미드명"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
+msgstr ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Meshing"
+msgstr "메시 작업"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILEROW <wmts_gettile_tilerow>`"
+msgstr ":ref:`TILEROW <wmts_gettile_tilerow>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Row coordinate in the mesh"
+msgstr "메시 내부의 행 좌표"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`TILECOL <wmts_gettile_tilecol>`"
+msgstr ":ref:`TILECOL <wmts_gettile_tilecol>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Column coordinate in the mesh"
+msgstr "메시 내부의 열 좌표"
+
+#: ../../docs/server_manual/services/wmts.rst:112
+msgid "FORMAT"
+msgstr "FORMAT"
+
+#: ../../docs/server_manual/services/wmts.rst:114
+msgid ""
+"This parameter may be used to specify the format of tile image. Available "
+"values are:"
+msgstr "이 파라미터는 타일 이미지의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wmts.rst:117
+msgid "``jpg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:118
+msgid "``jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:119
+msgid "``image/jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:120
+msgid "``image/png``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:122
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then the "
+"default format PNG is used instead."
+msgstr "``FORMAT`` 파라미터가 이 값들 가운데 하나가 아닐 경우, 기본 포맷인 PNG를 대신 사용합니다."
+
+#: ../../docs/server_manual/services/wmts.rst:129
+msgid "TILEMATRIXSET"
+msgstr "TILEMATRIXSET"
+
+#: ../../docs/server_manual/services/wmts.rst:131
+msgid ""
+"This parameter defines the CRS to use when computing the underlying pyramid."
+" Format: ``EPSG:XXXX``."
+msgstr "이 파라미터는 기저 피라미드를 계산할 때 사용할 좌표계를 정의합니다. 서식: ``EPSG:XXXX``."
+
+#: ../../docs/server_manual/services/wmts.rst:138
+msgid "TILEMATRIX"
+msgstr "TILEMATRIX"
+
+#: ../../docs/server_manual/services/wmts.rst:140
+msgid "This parameter allows to define the matrix to use for the output tile."
+msgstr "이 파라미터는 산출물 타일용으로 사용할 매트릭스를 정의할 수 있습니다."
+
+#: ../../docs/server_manual/services/wmts.rst:146
+msgid "TILEROW"
+msgstr "TILEROW"
+
+#: ../../docs/server_manual/services/wmts.rst:148
+msgid ""
+"This parameter allows to select the row of the tile to get within the "
+"matrix."
+msgstr "이 파라미터는 매트릭스 내부에 들어갈 타일의 행을 선택할 수 있습니다."
+
+#: ../../docs/server_manual/services/wmts.rst:155
+msgid "TILECOL"
+msgstr "TILECOL"
+
+#: ../../docs/server_manual/services/wmts.rst:157
+msgid ""
+"This parameter allows to select the column of the tile to get within the "
+"matrix."
+msgstr "이 파라미터는 매트릭스 내부에 들어갈 타일의 열을 선택할 수 있습니다."
+
+#: ../../docs/server_manual/services/wmts.rst:165
+msgid "GetFeatureInfo"
+msgstr "GetFeatureInfo"
+
+#: ../../docs/server_manual/services/wmts.rst:167
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMTS 1.0.0 specification:"
+msgstr "OGC WMTS 1.0.0 사양에 따른 **GetFeatureInfo** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr "요청(**GetFeatureInfo**)의 이름"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`"
+msgstr ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "No"
+msgstr "Ｘ"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Output format"
+msgstr "출력물 포맷"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`I <wmts_getfeatureinfo_i>`"
+msgstr ":ref:`I <wmts_getfeatureinfo_i>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "X coordinate of a pixel"
+msgstr "픽셀의 X 좌표"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid ":ref:`J <wmts_getfeatureinfo_j>`"
+msgstr ":ref:`J <wmts_getfeatureinfo_j>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Y coordinate of a pixel"
+msgstr "픽셀의 Y 좌표"
+
+#: ../../docs/server_manual/services/wmts.rst:214
+msgid "INFOFORMAT"
+msgstr "INFOFORMAT"
+
+#: ../../docs/server_manual/services/wmts.rst:216
+msgid ""
+"This parameter allows to define the output format of the result. Available "
+"values are:"
+msgstr "이 파라미터는 산출물의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wmts.rst:219
+msgid "``text/xml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:220
+msgid "``text/html``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:221
+msgid "``text/plain``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:222
+msgid "``application/vnd.ogc.gml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wmts.rst:224
+msgid "The default value is ``text/plain``."
+msgstr "기본값은 ``text/plain`` 입니다."
+
+#: ../../docs/server_manual/services/wmts.rst:230
+msgid "I"
+msgstr "I"
+
+#: ../../docs/server_manual/services/wmts.rst:232
+msgid ""
+"This parameter allows to define the X coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr "이 파라미터는 기저 정보를 검색하고자 하는 픽셀의 X 좌표를 정의할 수 있습니다."
+
+#: ../../docs/server_manual/services/wmts.rst:239
+msgid "J"
+msgstr "J"
+
+#: ../../docs/server_manual/services/wmts.rst:241
+msgid ""
+"This parameter allows to define the Y coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr "이 파라미터는 기저 정보를 검색하고자 하는 픽셀의 Y 좌표를 정의할 수 있습니다."

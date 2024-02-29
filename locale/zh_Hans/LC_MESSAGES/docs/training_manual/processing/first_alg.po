@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/processing/first_alg.rst:2
+msgid "Running our first algorithm. The  toolbox"
+msgstr "工具箱 - 运行我们的第一个算法"
+
+#: ../../docs/training_manual/processing/first_alg.rst:5
+msgid ""
+"In this lesson we will run our first algorithm, and get our first result "
+"from it."
+msgstr "在本课，我们将运行首个算法，并从中获得第一个结果。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:8
+msgid ""
+"As we have already mentioned, the processing framework can run algorithms "
+"from other applications, but it also contains native algorithms that need no"
+" external software to be run. To start exploring the processing framework, "
+"we are going to run one of those native algorithms. In particular, we are "
+"going to calculate the centroids of set of polygons."
+msgstr ""
+"正如我们已经提到的，处理框架可以运行来自其他应用程序的算法，但它也包含不需要运行外部软件的原生算法。为了开始探索处理框架，我们将运行其中一个原生算法，来计算多边形集的质心。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:14
+msgid ""
+"First, open the QGIS project corresponding to this lesson. It contains just "
+"a single layer with two polygons"
+msgstr ""
+"首先，打开与本课对应的QGIS工程 - exercise_data > processing > first_alg > "
+"first_alg.qgs。它只包含一个带有两个多边形的图层。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:19
+msgid ""
+"Now go to the text box at the top of the toolbox. That is the search box, "
+"and if you type text in it, it will filter the list of algorithms so just "
+"those ones containing the entered text are shown. If there are algorithms "
+"that match your search but belong to a provider that is not active, an "
+"additional label will be shown in the lower part of the toolbox."
+msgstr ""
+"现在转到工具箱顶部的文本框。这是搜索框，如果您在其中输入文本，它将过滤算法列表，只显示包含输入文本的那些算法。如果存在与您的搜索相匹配但属于未激活提供程序的算法，则工具箱的下部将显示一个附加标签。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:25
+msgid "Type ``centroids`` and you should see something like this."
+msgstr "输入 ``centroids`` ，您应该会看到类似的内容。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:29
+msgid ""
+"The search box is a very practical way of finding the algorithm you are "
+"looking for. At the bottom of the dialog, an additional label shows that "
+"there are algorithms that match your search but belong to a provider that is"
+" not active. If you click on the link in that label, the list of algorithms "
+"will also include results from those inactive providers, which will be shown"
+" in light gray. A link to activate each inactive provider is also shown. "
+"We'll see later how to activate other providers."
+msgstr ""
+"搜索框是一个非常实用的工具，可以查找您正在寻找的算法。在对话框末端，扩展标签显示有一些算法与您的搜索相匹配，但属于未激活提供程序的算法。如果单击该标签中的链接，算法列表还将包括来自那些非激活提供程序的结果，这些结果将以浅灰色显示，并显示了用于激活每个非活动提供程序的链接。稍后我们将看到如何激活扩展提供程序。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:39
+msgid ""
+"To execute an algorithm, you just have to double-click on its name in the "
+"toolbox. When you double-click on the *Polygon centroids* algorithm, you "
+"will see the following dialog."
+msgstr "要执行算法，只需在工具箱中双击其名称。双击 *Polygon centroids* 算法时，将看到以下对话框。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:45
+msgid ""
+"All algorithms have a similar interface, which basically contains input "
+"parameters that you have to fill, and outputs that you have to select where "
+"to store. In this case, the only input we have is a vector layer with "
+"polygons."
+msgstr "所有算法都有类似的界面，基本上包含您必须填写的输入参数，以及您必须选择储存位置的输出。在这种情况下，我们唯一的输入是带有多边形的矢量图层。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:49
+msgid ""
+"Select the *Polygons* layer as input. The algorithm has a single output, "
+"which is the centroids layer. There are two options to define where a data "
+"output is saved: enter a filepath or save it to a temporary filename"
+msgstr ""
+"选择 *Polygons* "
+"图层作为输入图层。该算法有一个单一的输出，即质心图层。有两个选项可以定义数据输出的保存位置：输入文件路径或将其保存到临时文件名。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:53
+msgid ""
+"In case you want to set a destination and not save the result in a temporary"
+" file, the format of the output is defined by the filename extension. To "
+"select a format, just select the corresponding file extension (or add it if "
+"you are directly typing the filepath instead). If the extension of the "
+"filepath you entered does not match any of the supported ones, a default "
+"extension (usually :file:`.dbf` for tables, :file:`.tif` for raster layers "
+"and :file:`.shp` for vector ones) will be appended to the filepath and the "
+"file format corresponding to that extension will be used to save the layer "
+"or table."
+msgstr ""
+"如果要设置目标而不是将结果保存到临时文件，则输出格式由文件扩展名定义。要选择一种格式，只需选择相应的文件扩展名 "
+"(如果您直接输入文件路径，则添加扩展名)。如果输入的文件路径扩展名与任何受支持的扩展名不匹配，则会将默认扩展名 (通常 :file:`.dbf` "
+"用于表格， :file:`.tif` 用于栅格图层， :file:`.shp` 用于矢量图层) "
+"附加到文件路径，并使用与该扩展名对应的文件格式保存图层或表格。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:62
+msgid ""
+"In all the exercises in this guide, we will be saving results to a temporary"
+" file, since there is no need to save them for a later use. Feel free to "
+"save them to a permanent location if you want to."
+msgstr "在本指南的所有练习中，我们将把结果保存到临时文件，这是因为无需保存供以后使用。如果您愿意，请随时将其保存到永久位置。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:66
+msgid ""
+"Temporary files are deleted once you close QGIS. If you create a project "
+"with an output that was saved as a temporary output, QGIS will complain when"
+" you try to open back the project later, since that output file will not "
+"exist."
+msgstr "关闭QGIS后，将删除临时文件。如果您创建工程的输出保存为临时输出，那么当您稍后尝试打开该工程时，QGIS会报错，因为该输出文件不存在。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:71
+msgid ""
+"Once you have configured the algorithm dialog, press :guilabel:`Run` to run "
+"the algorithm."
+msgstr "配置算法对话框结束后，按 :guilabel:`运行` 按钮运行算法。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:74
+msgid "You will get the following output."
+msgstr "您将获得以下输出。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:78
+msgid ""
+"The output has the same CRS as the input. Geoalgorithms assumes all input "
+"layers share the same CRS and do not perform any reprojection. Except in the"
+" case of some special algorithms (for instance, reprojection ones), the "
+"outputs will also have that same CRS. We will see more about this soon."
+msgstr ""
+"输出与输入具有相同的CRS。地理算法假设所有输入图层共享相同的CRS，并且不执行任何重投影。除某些特殊算法 (例如重投影算法) "
+"外，输出也将具有相同的CRS。我们很快就会看到更多关于这方面的信息。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:83
+msgid ""
+"Try yourself saving it using different file formats (use, for instance, "
+":file:`shp` and :file:`geojson` as extensions). Also, if you do not want the"
+" layer to be loaded in QGIS after it is generated, you can check off the "
+"checkbox that is found below the output path box."
+msgstr ""
+"尝试使用不同的文件格式保存 (例如，使用 :file:`shp` 和 :file:`geojson` "
+"作为扩展名)。此外，如果不希望在生成图层后将其加载到QGIS中，可以核对输出路径框下方的复选框。"

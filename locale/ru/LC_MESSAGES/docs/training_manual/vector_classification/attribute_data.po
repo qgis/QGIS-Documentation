@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-09 10:03+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:4
+msgid "|LS| Vector Attribute Data"
+msgstr "Занятие: Атрибуты векторных данных"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:6
+msgid ""
+"Vector data is arguably the most common kind of data in the daily use of "
+"GIS. The vector model represents the location and shape of geographic "
+"features using points, lines and polygons (and for 3D data also surfaces and"
+" volumes), while their other properties are included as attributes (often "
+"presented as a table in QGIS)."
+msgstr ""
+"Векторные данные, вероятно, являются наиболее распространенным видом данных "
+"в повседневном использовании GIS. Векторная модель представляет расположение"
+" и форму географических функций с помощью точек, линий и полигонов (а для "
+"трехмерных данных также поверхность и объем), в то время как другие ее "
+"свойства включены как атрибуты\\атрибуты (часто представлены в виде таблицы "
+"в QGIS)."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:12
+msgid ""
+"Up to now, none of the changes we have made to the map have been influenced "
+"by the objects that are being shown. In other words, all the land use areas "
+"look alike, and all the roads look alike. When looking at the map, the "
+"viewers don't know anything about the roads they are seeing; only that there"
+" is a road of a certain shape in a certain area."
+msgstr ""
+"До сих пор ни одно из изменений, которое мы внесли в карту, не повлияло на "
+"отображаемые объекты. Другими словами, все участки земли похожи друг на "
+"друга, и все дороги похожи друг на друга. Глядя на карту, смотрящий ничего "
+"не знает о дорогах, которые он видит, только то, что на определенной "
+"местности есть дорога определенной формы."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:18
+msgid ""
+"But the whole strength of GIS is that all the objects that are visible on "
+"the map also have attributes. Maps in a GIS aren't just pictures. They "
+"represent not only objects in locations, but also information about those "
+"objects."
+msgstr ""
+"Но вся сила GIS состоит в том, что все объекты, которые видны на карте, "
+"также имеют атрибуты. Карты в GIS - это не просто изображения. Они "
+"представляют не только объекты на местах, но и информацию об этих объектах."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:23
+msgid ""
+"**The goal for this lesson:** To learn about the structure of vector data "
+"and explore the attribute data of an object"
+msgstr ""
+"**Цель данного занятия:** узнать о структуре векторных данных и изучить "
+"атрибуты данных объекта."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:27
+msgid "|basic| |FA| Viewing Layer Attributes"
+msgstr "|basic| Идем дальше: Обзор атрибутов слоя"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:194
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:29
+msgid ""
+"It's important to know that the data you will be working with does not only "
+"represent **where** objects are in space, but also tells you **what** those "
+"objects are."
+msgstr ""
+"Важно знать, что данные, с которыми вы будете работать, не только "
+"показывают, **где** находятся объекты в пространстве, но также говорят вам, "
+"**что** это за объекты."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:33
+msgid ""
+"From the previous exercise, you should have the ``protected_areas`` layer "
+"loaded in your map. If it is not loaded, then you can find the "
+":file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory "
+":file:`exercise_data/shapefile`."
+msgstr ""
+"Исходя из предыдущего упражнения на вашу карту должен быть загружен слой "
+"``protected_areas``. Если он не загружен, то вы можете найти набор данных "
+"формата ESRI Shapefile :file:`protected_areas.shp` *ESRI Shapefile* в "
+"каталоге :file:`exercise_data/shapefile`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:38
+msgid ""
+"The polygons representing the protected areas constitute the **spatial "
+"data**, but we can learn more about the protected areas by exploring the "
+"**attribute table**."
+msgstr ""
+"Полигоны, представляющие охраняемые территории, составляют "
+"**пространственные данные**, но мы можем узнать больше об охраняемых "
+"территориях, изучив **таблицу атрибутов**."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:42
+msgid ""
+"In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to "
+"select it."
+msgstr ""
+"На панели Слои :guilabel:`Layers` кликните слой ``protected_areas``, чтобы "
+"выбрать его."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:197
+msgid "openTable"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:51
+msgid ""
+"A row is called a **record** and is associated with a **feature** in the "
+"Canvas Map, such as a polygon. A column is called a **field** (or an "
+"**attribute**), and has a name that helps describe it, such as ``name`` or "
+"``id``. Values in the cells are known as **attribute values**. These "
+"definitions are commonly used in GIS, so it is good to become familiar with "
+"them."
+msgstr ""
+"Строка называется **Запись**, она связана с  **Функцией** на Полотне Карты, "
+"например, как полигон. Столбец называется **Поле** (или **Атрибуты**) и "
+"имеет наименование, которое помогает описать его, например Имя ``name`` или "
+"Идентификатор ``id``. Значения в ячейках называются **Значения атрибутов**. "
+"Данные определения обычно используются в GIS, поэтому полезно с ними "
+"ознакомиться."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:59
+msgid ""
+"In the ``protected_areas`` layer, there are two **features**, which are "
+"represented by the two polygons we see on the Map Canvas."
+msgstr ""
+"В слое ``protected_areas`` имеются две **функции**, представленные двумя "
+"полигонами, которые мы видим на Полотне карты."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:62
+msgid ""
+"In order to understand what the **fields** and **attribute values** "
+"represent, one may need to find documentation (or metadata) describing the "
+"meaning of the attribute values. This is usually available from the creator "
+"of the data set."
+msgstr ""
+"Чтобы понять, что представляют собой *поля* и *значения атрибутов*, может "
+"потребоваться документация (или метаданные), описывающая смысл значений "
+"атрибутов. Обычно она доступна у создателя набора данных."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:67
+msgid ""
+"Next, let's see how a record in the attribute table is linked to a polygon "
+"feature that we see on the Map Canvas."
+msgstr ""
+"Далее рассмотрим, как запись в таблице атрибутов связана с полигоном, "
+"который мы видим на полотне карты."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:70
+msgid "Go back to the main QGIS window."
+msgstr "Вернитесь к главному окну QGIS."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:199
+msgid "selectRectangle"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:72
+msgid ""
+"Make sure the ``protected_areas`` layer is still selected in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Убедитесь в том, что слой ``protected_areas`` по-прежнему выбран на панели "
+":guilabel:`Layers`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:86
+msgid "You can also select a feature using the Attribute Table."
+msgstr "Можно также выбрать функцию с помощью Таблицы атрибутов."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:88
+msgid ""
+"In the :guilabel:`Attribute Table` window, on the far left, click on the row"
+" number of the record that is currently not selected."
+msgstr ""
+"В окне :guilabel:`Attribute Table` в крайнем левом углу кликните по номеру "
+"строки записи, которая в данный момент не выбрана."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:94
+msgid ""
+"Go back to the main QGIS window and look at the Map Canvas. You should see "
+"the larger of the two polygons colored yellow."
+msgstr ""
+"Вернитесь к главному окну QGIS и посмотрите на Полотно Карты. Вы должны "
+"увидеть больший из двух полигонов, окрашенный в желтый цвет."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:96
+msgid ""
+"To deselect the feature, go to the :guilabel:`Attribute Table` window and "
+"click on |deselectActiveLayer| :sup:`Deselect all features from the layer` "
+"button."
+msgstr ""
+"Чтобы отменить выделение функции, идите к окну  :guilabel:`Attribute Table` "
+"и кликните на кнопку «Отменить выделение всех функций из слоя» "
+"|deselectActiveLayer| :sup:`Deselect all features from the layer`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:195
+msgid "deselectActiveLayer"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:99
+msgid ""
+"Sometimes there are many features shown on the Map Canvas and it might be "
+"difficult to see which feature is selected from the Attribute Table.  "
+"Another way to identify the location of a feature is to use the "
+":guilabel:`Flash Feature` tool."
+msgstr ""
+"Иногда в полотне карты отображено много функций, и может быть трудно "
+"увидеть, какая функция выбрана из Таблицы атрибутов. Другим способом "
+"определения местоположения функции является использование инструмента "
+":guilabel:`Flash Feature`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:104
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on any cell in the row that "
+"has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr ""
+"В :guilabel:`Attribute Table` кликните правой кнопкой мыши любую ячейку в "
+"строке со значением атрибута ``r2855697`` для поля ``full_id``."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:106
+msgid ""
+"In the context menu, click on :guilabel:`Flash Feature` and watch the Map "
+"Canvas."
+msgstr ""
+"В контекстном меню выберите :guilabel:`Flash Feature` 1.    и просмотрите "
+"Полотно Карты."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:112
+msgid ""
+"You should see the polygon flash red a few times.  If you missed it, try it "
+"again."
+msgstr ""
+"Вы должны увидеть, как полигон несколько раз мигнет красным. Если вы "
+"пропустили мигание, попробуйте еще раз."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:115
+msgid ""
+"Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS"
+" to zoom to the feature of interest."
+msgstr ""
+"Очередной полезный инструмент – это Приблизить до функции :guilabel:`Zoom to"
+" Feature` которая сообщает QGIS о необходимости масштабирования до "
+"интересующей функции."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:118
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on  any cell in the row that"
+" has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr ""
+"В Таблице :guilabel:`Attribute Table` кликните правой кнопкой мыши любую "
+"ячейку в строке, которая имеет значение атрибута ``r2855697`` для поля "
+"``full_id``."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:120
+msgid "In the context menu, click on :guilabel:`Zoom to Feature`"
+msgstr "В контекстном меню кликните на :guilabel:`Zoom to Feature`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:128
+msgid "You may now close the attribute table."
+msgstr "Теперь вы можете закрыть таблицу атрибутов."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:133
+msgid "|basic| |TY| Exploring Vector Data Attributes"
+msgstr "|basic| Попробуйте сами: изучите атрибуты векторных данных "
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:135
+msgid "How many fields are available in the :guilabel:`rivers` layer?"
+msgstr "Сколько полей доступно в слое :guilabel:`rivers`?"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:136
+msgid "Tell us a bit about the ``town`` places in your dataset."
+msgstr ""
+"Расскажите нам немного о местах Города ``town`` в вашем наборе данных."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:137
+msgid ""
+"Open the attribute table for the :guilabel:`places` layer. Which field would"
+" be the most useful to represent in label form, and why?"
+msgstr ""
+"Откройте таблицу атрибутов для слоя :guilabel:`places`. Какое поле было бы "
+"наиболее полезно представить в форме надписей и почему?"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:167
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:169
+msgid ""
+"You now know how to use the attribute table to see what is actually in the "
+"data you're using. Any dataset will only be useful to you if it has the "
+"attributes that you care about. If you know which attributes you need, you "
+"can quickly decide if you're able to use a given dataset, or if you need to "
+"look for another one that has the required attribute data."
+msgstr ""
+"Теперь вы знаете, как использовать таблицу атрибутов, чтобы увидеть, что на "
+"самом деле содержится в используемых вами данных. Любой набор данных будет "
+"вам полезен только в том случае, если в нем есть интересующие вас атрибуты. "
+"Если вы знаете, какой атрибут вам нужен, вы можете быстро решить, можете ли "
+"вы использовать данный набор данных или вам нужно найти другой, имеющий "
+"необходимые данные атрибутов."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:176
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:178
+msgid ""
+"Different attributes are useful for different purposes. Some of them can be "
+"represented directly as text for the map user to see. You'll learn how to do"
+" this in the next lesson."
+msgstr ""
+"Разные атрибуты полезны для разных целей. Некоторые из них могут быть "
+"отображены непосредственно в виде текста для просмотра пользователем карты. "
+"Вы узнаете, как это сделать, на следующем занятии."

@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:2
+msgid "|LS| Georeferencing a Map"
+msgstr "|LS| 지도 지오리퍼런싱"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:4
+msgid ""
+"A common forestry task would be the update of the information for a forestry"
+" area. It is possible that the previous information for that area dates "
+"several years back and was collected analogically (that is, in paper) or "
+"perhaps it was digitized but all you have left is the paper version of that "
+"inventory data."
+msgstr ""
+"일반적인 삼림관리 작업은 삼림 지역에 대한 정보를 업데이트하는 일일 것입니다. 해당 지역의 정보가 몇 년 전의 것일 수도 있고, "
+"아날로그적으로 (즉 종이 위에) 수집되었을 수도 있으며, 또는 디지털화되었다고 해도 여러분이 접근할 수 있는 정보는 해당 목록 데이터의 "
+"하드카피 버전뿐일 수도 있습니다."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:9
+msgid ""
+"Most likely you would like to use that information in your GIS to, for "
+"example, compare later with later inventories. This means that you will need"
+" to digitize the information at hand using your GIS software. But before you"
+" can start the digitizing, there is an important first step to be done, "
+"scanning and georeferencing your paper map."
+msgstr ""
+"예를 들자면 아마도 이전 목록 정보와 비교하기 위해 해당 정보를 GIS에서 사용하고자 하는 경우가 대부분일 것입니다. 즉 GIS  "
+"소프트웨어를 이용해서 지금 접근할 수 있는 정보를 디지털화해야 한다는 의미입니다. 그러나 디지털화 작업을 시작하기 전에 여러분의 종이 "
+"지도를 스캔하고 지리참조시키는 아주 중요한 첫 번째 단계를 거쳐야 합니다."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:15
+msgid ""
+"**The goal for this lesson:** To learn to use the Georeferencer tool in "
+"QGIS."
+msgstr "**이 강의의 목표:** QGIS의 지리참조 도구를 사용하는 방법을 배우기."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:18
+msgid "|basic| Scan the map"
+msgstr "|basic| 지도 스캔"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:174
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:20
+msgid ""
+"The first task you will have to do is to scan your map. If your map is too "
+"big, then you can scan it in different parts but keep in mind that you will "
+"have to repeat preprocessing and georeferencing tasks for each part. So if "
+"possible, scan the map in as few parts as possible."
+msgstr ""
+"여러분이 해야 할 첫 번째 작업은 여러분의 지도를 스캔하는 일입니다. 지도가 아주 클 경우, 부분 부분을 각각 따로 스캔할 수 있지만 각"
+" 부분마다 전처리 및 지리참조 작업을 반복해야 한다는 것을 명심하십시오. 따라서 가능한 한 가장 적은 부분들로 지도를 스캔하는 것이 "
+"좋습니다."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:25
+msgid ""
+"If you are going to use a different map that the one provided with this "
+"manual, use your own scanner to scan the map as an image file, a resolution "
+"of 300 DPI will do. If your map has colors, scan the image in color so that "
+"you can later use those colors to separate information from your map into "
+"different  layers (for ex., forest stands, contour lines, roads...)."
+msgstr ""
+"이 교재가 제공하는 것과는 다른 지도를 사용할 예정이라면, 여러분의 스캐너를 이용하여 지도를 직접 이미지 파일로 스캔하십시오. 해상도 "
+"300 DPI 정도가 좋습니다. 여러분의 지도에 여러 색상이 쓰였다면 컬러로 스캔하십시오. 나중에 이 색상들을 사용하여 지도에서 정보를 "
+"분리, 서로 다른 레이어로 저장할 수 있습니다. (예 : 수종경계, 등고선, 도로 등등) "
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:35
+msgid "|basic| |FA| Georeferencing the scanned map"
+msgstr "|basic| |FA| 스캔한 맵을 지리참조시키기"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:177
+msgid "georefRun"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:57
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:76
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:96
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:59
+msgid ""
+"Next you should define the transformation settings for georeferencing the "
+"map:"
+msgstr "다음으로 맵을 지리참조시키기 위한 변환 설정을 정의해야 합니다."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:61
+msgid "Open :menuselection:`Settings --> Transformation settings`."
+msgstr ":menuselection:`Settings --> Transformation settings` 메뉴를 클릭합니다."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:179
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:175
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:78
+msgid ""
+"The map contains several cross-hairs marking the coordinates in the map, we "
+"will use those to georeference this image. You can use the zooming and "
+"panning tools as you usually do in QGIS to inspect the image in the "
+"Georeferencer's window."
+msgstr ""
+"지도에는 다양한 십자선의로 좌표 마킹한 위치를 포함합니다. 이 위치값으로 배경이미지로 설정항 수 있습니다. 확대/축소 & 이동툴을 "
+"사용하여 QGIS의 지오리퍼런서 윈도우에서 이미지를 확인할 수 있습니다."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:87
+msgid ""
+"Select the :guilabel:`Add point` tool and click in the intersection of the "
+"cross-hairs (pan and zoom as needed)."
+msgstr ""
+":guilabel:`Add point` 도구를 사용해서 십자 표식의 교차점을 선택하십시오. (필요하다면 확대/축소 및 이동 도구를 "
+"사용하십시오.)"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:98
+msgid "The first coordinate for the georeferencing is now ready."
+msgstr "지리참조 작업을 위한 첫 번째 좌표가 준비됐습니다."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:121
+msgid ""
+"Once you are happy with your control points, you can save them for later "
+"use:"
+msgstr "기준점에 만족하시면 나중에 사용할 수 있도록 저장할 수 있습니다:"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:148
+msgid ""
+"Save the changes to your QGIS project, you will continue from this point for"
+" the next lesson."
+msgstr "변경 사항을 QGIS 프로젝트에 저장하십시오. 다음 강의에서도 이 프로젝트를 사용할 것입니다."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:152
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:154
+msgid ""
+"You have now georeferenced a paper map, making it possible to use it as a "
+"map layer in QGIS."
+msgstr "이제 종이지도에 지오리퍼런싱되어 QGIS의 지도레이어로 사용할 수 있습니다."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:158
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:160
+msgid ""
+"In the next lesson, you will digitize the forest stands in your map as "
+"polygons and add the inventory data to them."
+msgstr "다음 레슨에서 지도에 있는 식생을 폴리곤으로 디지타이징하여 인벤토리 데이터를 추가하십시오."

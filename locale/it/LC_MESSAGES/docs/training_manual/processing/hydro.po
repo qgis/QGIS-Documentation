@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/training_manual/processing/hydro.rst:4
+msgid "Hydrological analysis"
+msgstr "Analisi idrologica"
+
+#: ../../docs/training_manual/processing/hydro.rst:7
+msgid ""
+"In this lesson we will perform some hydrological analysis. This analysis "
+"will be used in some of the following lessons, as it constitutes a very good"
+" example of an analysis workflow, and we will use it to demonstrate some "
+"advanced features."
+msgstr ""
+"In questa lezione eseguiremo alcune analisi idrologiche. Questa analisi "
+"verrá usata in alcune delle prossime lezioni, dato che costituisce un buon "
+"esempio di flusso di lavoro per l'analisi, e verrá utilizzata per dimostrare"
+" alcune funzionalitá avanzate."
+
+#: ../../docs/training_manual/processing/hydro.rst:12
+msgid ""
+"Objectives: Starting with a DEM, we are going to extract a channel network, "
+"delineate watersheds and calculate some statistics."
+msgstr ""
+"Obiettivi: Partendo da un DEM, estrarremo una rete di incanalature, "
+"delineeremo gli spartiacque e elaboreremo alcune statistiche."
+
+#: ../../docs/training_manual/processing/hydro.rst:15
+msgid ""
+"The first thing is to load the project with the lesson data, which just "
+"contains a DEM."
+msgstr ""
+"La prima cosa da fare é caricare il progetto con i dati della lezione, che "
+"contengono il DEM."
+
+#: ../../docs/training_manual/processing/hydro.rst:19
+msgid ""
+"The first module to execute is *Catchment area* (in some SAGA versions it is"
+" called *Flow accumulation (Top Down)*). You can use any of the others named"
+" *Catchment area*. They have different algorithms underneath, but the "
+"results are basically the same."
+msgstr ""
+"Il primo modulo da eseguire è *Area di raccolta* (in alcune versioni di SAGA"
+" si chiama *Accumulo di flusso (Top Down)*). Puoi utilizzare uno qualsiasi "
+"degli altri moduli denominato *Area di cattura*. Gli algoritmi sottostanti "
+"sono diversi, ma i risultati sono sostanzialmente gli stessi."
+
+#: ../../docs/training_manual/processing/hydro.rst:23
+msgid ""
+"Select the DEM in the :guilabel:`Elevation` field, and leave the default "
+"values for the rest of the parameters."
+msgstr ""
+"Seleziona il DEM nel campo :guilabel:`Elevation` e lascia i valori "
+"predefiniti per il resto dei parametri."
+
+#: ../../docs/training_manual/processing/hydro.rst:28
+msgid ""
+"Some algorithms calculate many layers, but the *Catchment Area* layer is the"
+" only one we will be using. You can get rid of the other ones if you want."
+msgstr ""
+"Alcuni algoritmi calcolano molti layer, ma il layer *Area di raccolta* è "
+"l'unico che utilizzeremo. Se vuoi puoi eliminare gli altri."
+
+#: ../../docs/training_manual/processing/hydro.rst:31
+msgid "The rendering of the layer is not very informative."
+msgstr "La visualizzazione del layer non é molto informativa."
+
+#: ../../docs/training_manual/processing/hydro.rst:35
+msgid ""
+"To know why, you can have a look at the histogram and you will see that "
+"values are not evenly distributed (there are a few cells with very high "
+"value, those corresponding to the channel network). Use the "
+":guilabel:`Raster calculator` algorithm to calculate the logarithm of the "
+"catchment value area and you will get a layer with much more information"
+msgstr ""
+"Per sapere perché, si può dare un'occhiata all'istogramma e si vedrà che i "
+"valori non sono distribuiti in modo uniforme (ci sono alcune celle con "
+"valori molto alti, quelle corrispondenti alla rete di canali). Utilizzando "
+"l'algoritmo :guilabel:`Raster calculator` per calcolare il logaritmo "
+"dell'area del valore del bacino idrografico, si otterrà un layer con molte "
+"più informazioni."
+
+#: ../../docs/training_manual/processing/hydro.rst:43
+msgid ""
+"The catchment area (also known as flow accumulation) can be used to set a "
+"threshold for channel initiation. This can be done using the "
+":guilabel:`Channel network` algorithm."
+msgstr ""
+"L'area di raccolta (nota anche come accumulo di flusso) può essere "
+"utilizzata per stabilire una soglia per l'inizio del canale. Questo può "
+"essere fatto usando l'algoritmo :guilabel:`Channel network`."
+
+#: ../../docs/training_manual/processing/hydro.rst:47
+msgid ""
+":guilabel:`Initiation grid`: use the catchment area layer and not the "
+"logarithm one."
+msgstr ""
+":guilabel:`Initiation grid`: utilizza il layer del bacino idrografico e non "
+"quello del logaritmo."
+
+#: ../../docs/training_manual/processing/hydro.rst:48
+msgid ":guilabel:`Initiation threshold`: ``10.000.000``"
+msgstr ":guilabel:`Initiation threshold`: ``10.000.000``"
+
+#: ../../docs/training_manual/processing/hydro.rst:49
+msgid ":guilabel:`Initiation type`: *Greater than*"
+msgstr ":guilabel:`Initiation type`: *Greater than*"
+
+#: ../../docs/training_manual/processing/hydro.rst:53
+msgid ""
+"If you increase the :guilabel:`Initiation threshold` value, you will get a "
+"more sparse channel network. If you decrease it, you will get a denser one. "
+"With the proposed value, this is what you get."
+msgstr ""
+"Se aumenti il valore di :guilabel:`Initiation threshold`, otterrai una rete "
+"di canali più rada. Se lo diminuisci, otterrai una rete più densa. Con il "
+"valore proposto, questo è il tuo risultato."
+
+#: ../../docs/training_manual/processing/hydro.rst:59
+msgid ""
+"The image above shows just the resulting vector layer and the DEM, but there"
+" should be also a raster layer with the same channel network. That raster "
+"will be, in fact, the layer we will be using."
+msgstr ""
+"L'immagine qui sopra mostra solo il layer vettoriale risultante e il DEM, ma"
+" dovrebbe esserci anche un layer raster con la stessa rete di canali. Questo"
+" raster sarà, infatti, il layer che utilizzeremo."
+
+#: ../../docs/training_manual/processing/hydro.rst:63
+msgid ""
+"Now, we will use the :guilabel:`Watersheds basins` algorithm to delineate "
+"the subbasins corresponding to that channel network, using as outlet points "
+"all the junctions in it. Here is how you have to set the corresponding "
+"parameters dialog."
+msgstr ""
+"Ora useremo l'algoritmo :guilabel:`Watersheds basins` per delineare i "
+"sottobacini corrispondenti a quella rete di canali, usando come punti di "
+"uscita tutte le giunzioni in essa presenti. Ecco come impostare la finestra "
+"di dialogo dei parametri corrispondenti."
+
+#: ../../docs/training_manual/processing/hydro.rst:70
+msgid "And this is what you will get."
+msgstr "E questo é il risultato."
+
+#: ../../docs/training_manual/processing/hydro.rst:74
+msgid ""
+"This is a raster result. You can vectorise it using the "
+":guilabel:`Vectorising grid classes` algorithm."
+msgstr ""
+"Questo è un risultato raster. Puoi vettorializzarlo utilizzando l'algoritmo "
+":guilabel:`Vectorising Raster Classes`."
+
+#: ../../docs/training_manual/processing/hydro.rst:82
+msgid ""
+"Now, let's try to compute statistics about the elevation values in one of "
+"the subbasins. The idea is to have a layer that just represents the "
+"elevation within that subbasin and then pass it to the module that "
+"calculates those statistics."
+msgstr ""
+"Si calcolino adesso le statistiche dei valori di elevazione in uno dei "
+"sottobacini. L'idea é quella di avere un layer che rappresenti l'elevazione "
+"nei sottobacini e quindi passarlo al modulo che calcola tali statistiche."
+
+#: ../../docs/training_manual/processing/hydro.rst:86
+msgid ""
+"First, let's clip the original DEM with the polygon representing a subbasin."
+" We will use the :guilabel:`Clip raster with polygon` algorithm. If we "
+"select a single subbasin polygon and then call the clipping algorithm, we "
+"can clip the DEM to the area covered by that polygon, since the algorithm is"
+" aware of the selection."
+msgstr ""
+"Per prima cosa, agganciamo il DEM originale con il poligono che rappresenta "
+"un sottobacino. Utilizzeremo l'algoritmo :guilabel:`Clip Raster with "
+"Polygon`. Se si seleziona un singolo poligono del sottobacino e si richiama "
+"l'algoritmo di ritaglio, è possibile ritagliare il DEM nell'area coperta da "
+"quel poligono, poiché l'algoritmo è già informato della selezione."
+
+#: ../../docs/training_manual/processing/hydro.rst:91
+msgid "Select a polygon"
+msgstr "Seleziona un poligono"
+
+#: ../../docs/training_manual/processing/hydro.rst:95
+msgid "Call the clipping algorithm with the following parameters:"
+msgstr "Richiama l'algoritmo di ritaglio con i seguenti parametri:"
+
+#: ../../docs/training_manual/processing/hydro.rst:99
+msgid ""
+"The element selected in the input field is, of course, the DEM we want to "
+"clip."
+msgstr ""
+"L'elemento selezionato nel campo in ingresso è, ovviamente, il DEM che "
+"vogliamo ritagliare."
+
+#: ../../docs/training_manual/processing/hydro.rst:101
+msgid "You will get something like this."
+msgstr "Si otterrá qualcosa del genere."
+
+#: ../../docs/training_manual/processing/hydro.rst:105
+msgid ""
+"This layer is ready to be used in the :guilabel:`Raster layer statistics` "
+"algorithm."
+msgstr ""
+"Questo layer è pronto per essere usato nell'algoritmo :guilabel:`Statistiche"
+" dei layer raster`."
+
+#: ../../docs/training_manual/processing/hydro.rst:109
+msgid "The resulting statistics are the following ones."
+msgstr "Di seguito le statistiche risultanti."
+
+#: ../../docs/training_manual/processing/hydro.rst:113
+msgid ""
+"We will use both the basin calculations procedure and the statistics "
+"calculation in other lessons, to find out how other elements can help us "
+"automate both of them and work more effectively."
+msgstr ""
+"Utilizzeremo sia la procedura per il calcolo del bacino che il calcolo delle"
+" statistiche in altre lezioni, per trovare altri elementi che ci possano "
+"aiutare ad autmatizzarli e lavorare in modo piú efficiente."

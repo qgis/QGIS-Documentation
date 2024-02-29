@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Miyoshi Tomoya, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:2
+msgid "|LS| Working with Raster Data"
+msgstr "|LS| ラスタデータで作業する"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:4
+msgid ""
+"Raster data is quite different from vector data. Vector data has discrete "
+"features with geometries constructed out of vertices, and perhaps connected "
+"with lines and/or areas. Raster data, however, is like any image. Although "
+"it may portray various properties of objects in the real world, these "
+"objects don't exist as separate objects. Rather, they are represented using "
+"pixels with different values."
+msgstr ""
+"ラスタデータは、ベクタデータとは全く異なります。ベクタデータは、線や領域で結ばれていることもある、頂点で構成されるジオメトリを伴う別々の地物を持ちます。しかし、ラスタデータは画像と同じです。実世界に存在するさまざまな物体の性質を表現していますが、それらは独立した物体として存在しているわけではありません。異なる値を持つピクセルで表現されます。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:12
+msgid ""
+"During this module you are going to use raster data to supplement your "
+"existing GIS analysis."
+msgstr "このモジュールでは、既存のGIS解析を補完するためにラスタデータを使用することになります。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:15
+msgid ""
+"**The goal for this lesson:** To learn how to work with raster data in QGIS."
+msgstr "**このレッスンの目標:** QGISでラスタデータを扱う方法を習得する。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:19
+msgid "|basic| |FA| Loading Raster Data"
+msgstr "|basic| |FA| ラスタデータを読み込む"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:167
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:21
+msgid ""
+"Raster data can be loaded with the same methods we used for vector data. "
+"However we suggest to use the :guilabel:`Browser` Panel."
+msgstr "ラスタデータは、ベクタデータと同じ方法で読み込むことができますが、 :guilabel:`ブラウザ` パネルを使うことをお勧めします。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:25
+msgid ""
+"Open the :guilabel:`Browser` Panel and expand the "
+":file:`exercise_data/raster` folder."
+msgstr ":guilabel:`ブラウザ` パネルを開いて、 :file:`exercise_data/raster` フォルダを展開します。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:27
+msgid "Load all the data in this folder:"
+msgstr "このフォルダにあるすべてのデータを読み込みます:"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:29
+msgid ":file:`3320C_2010_314_RGB_LATLNG.tif`"
+msgstr ":file:`3320C_2010_314_RGB_LATLNG.tif`"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:30
+msgid ":file:`3320D_2010_315_RGB_LATLNG.tif`"
+msgstr ":file:`3320D_2010_315_RGB_LATLNG.tif`"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:31
+msgid ":file:`3420B_2010_328_RGB_LATLNG.tif`"
+msgstr ":file:`3420B_2010_328_RGB_LATLNG.tif`"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:32
+msgid ":file:`3420C_2010_327_RGB_LATLNG.tif`"
+msgstr ":file:`3420C_2010_327_RGB_LATLNG.tif`"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:34
+msgid "You should see the following map:"
+msgstr "以下のような地図が表示されるはずです:"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:39
+msgid "There we have it - four aerial images covering our study area."
+msgstr "以上、4枚の航空写真で調査地域をカバーしました。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:44
+msgid "|basic| |FA| Create a Virtual Raster"
+msgstr "|basic| |FA| 仮想ラスタの作成"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:46
+msgid ""
+"Now as you can see from this, your solution layer lies across all four "
+"images. What this means is that you are going to have to work with four "
+"rasters all the time. That's not ideal. It would be better to have one file "
+"to work with."
+msgstr ""
+"このように、ソリューションレイヤは4つの画像すべてにまたがっています。これはつまり、常に4枚のラスタを扱う必要があることを意味します。これは理想的ではありません。1つのファイルで作業できた方が良いでしょう。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:52
+msgid ""
+"Luckily, QGIS allows you to do exactly this, and without needing to actually"
+" create a new raster file. You can create a **Virtual Raster**. This is also"
+" often called a *Catalog*, which explains its function. It's not really a "
+"new raster. Rather, it is a way to organize your existing rasters into one "
+"catalog: one file for easy access."
+msgstr ""
+"幸いなことに、QGISではまさにこれを行うことができます。実際に新しいラスタファイルを作成することなく、 **仮想ラスタ** "
+"を作成することができます。これはしばしばその機能を説明している、 *カタログ* "
+"とも呼ばれます。これは実際の新しいラスタではありません。むしろ、既存の複数のラスタを簡単にアクセスできるようにするために1つのカタログ: "
+"1つのファイルに整理する方法です。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:60
+msgid ""
+"To make a catalog we will use the :menuselection:`Processing --> Toolbox`."
+msgstr "カタログを作るには、 :menuselection:`プロセシング --> ツールボックス` を使います。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:63
+msgid ""
+"Open the :guilabel:`Build virtual raster` algorithm from the "
+":menuselection:`GDAL --> Raster miscellaneous`;"
+msgstr ""
+":menuselection:`GDAL --> ラスタその他` から :guilabel:`仮想ラスタの構築` アルゴリズムを起動します;"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:65
+msgid ""
+"In the dialog that appears, click on the :guilabel:`...` button next to the "
+":guilabel:`Input layers` parameter and check all the layers or use the "
+":guilabel:`Select All` button;"
+msgstr ""
+"表示されたダイアログで、 :guilabel:`Input layers` パラメータの隣にある :guilabel:`...` "
+"ボタンをクリックし、すべてのレイヤをチェックするか :guilabel:`すべて選択` ボタンを使用します;"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:68
+msgid ""
+"Uncheck :guilabel:`Place each input file into a separate band`. Notice the "
+"text field below. What this dialog is actually doing is that it is writing "
+"that text for you. It is a long command that QGIS is going to run."
+msgstr ""
+":guilabel:`Place each input file into a separate band` "
+"のチェックを外します。下のテキストフィールドに注目してください。このダイアログが実際に行っていることは、あなたのためにテキストを書いているのです。これはQGISが実行することになる長いコマンドです。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:74
+msgid ""
+"Keep in mind that you can copy and paste the text in the ``OSGeo Shell`` "
+"(Windows user) or ``Terminal`` (Linux and OSX users) to run the command. You"
+" can also create a script for each GDAL command. This is very handy when the"
+" procedure is taking a long time or when you want to schedule specific "
+"tasks. Use the :guilabel:`Help` button to get more help on the syntax of the"
+" command."
+msgstr ""
+"そのテキストをコピーして ``OSGeo Shell`` (Windows ユーザ）または ``Terminal`` （Linux および OSX "
+"ユーザ）に貼り付けて、コマンドを実行することができることを覚えておいてください。また、それぞれの GDAL "
+"コマンドに対してスクリプトを作成することができます。これは、手順に時間がかかっているときや、特定のタスクをスケジュールしたいときにとても便利です。コマンドのシンタックスに関するより詳しいヘルプを得るには、"
+" :guilabel:`ヘルプ` ボタンを使用します。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:83
+msgid "Finally click on :guilabel:`Run`."
+msgstr "最期に :guilabel:`実行` をクリックします。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:85
+msgid ""
+"As you know from the previous modules, :guilabel:`Processing` creates "
+"temporary layers by default. To save the file click on the :guilabel:`...` "
+"button."
+msgstr ""
+"これまでのモジュールでご存知のように、 :guilabel:`プロセシング` はデフォルトで一時レイヤを作成します。ファイルを保存するには "
+":guilabel:`...` ボタンをクリックします。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:92
+msgid ""
+"You can now remove the original four rasters from the :guilabel:`Layers` "
+"Panel and leave only the output virtual catalog raster."
+msgstr "これで :guilabel:`レイヤ` パネルから元の4つのラスタを削除して、出力された仮想カタログラスタだけを残すことができます。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:98
+msgid "|hard| Transforming Raster Data"
+msgstr "|hard| ラスタデータの変換"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:168
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:100
+msgid ""
+"The above methods allow you to virtually merge datasets using a catalog, and"
+" to reproject them \"on the fly\". However, if you are setting up data that "
+"you'll be using for quite a while, it may be more efficient to create new "
+"rasters that are already merged and reprojected. This improves performance "
+"while using the rasters in a map, but it may take some time to set up "
+"initially."
+msgstr ""
+"上記の方法では、カタログを使用してデータセットを仮想的にマージし、それらを「その場で」再投影できます。しかし、もし長期間使用することになるデータを用意しているならば、マージされ再投影された新しいラスタを作成する方が効率的かもしれません。はじめに用意をするのに少し時間がかかりますが、そうしておけば地図でラスタを使う際のパフォーマンスが向上します。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:109
+msgid "Reprojecting rasters"
+msgstr "ラスタを再投影する"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:111
+msgid ""
+"Open :guilabel:`Warp (reproject)` from :menuselection:`GDAL --> Raster "
+"projections`."
+msgstr ":menuselection:`GDAL --> ラスタ投影` から :guilabel:`再投影 (warp)` を開いてください。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:114
+msgid ""
+"You can also reproject virtual rasters (catalogs), enable multithreaded "
+"processing, and more."
+msgstr "また、仮想ラスタ（カタログ）の再投影、マルチスレッド処理の有効化なども可能です。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:121
+msgid "Merging rasters"
+msgstr "ラスタをマージする"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:123
+msgid ""
+"If you need to create a new raster layer and save it to disk you can use the"
+" merge algorithm."
+msgstr "新しいラスタレイヤを作成してディスクに保存する必要がある場合、マージアルゴリズムを使用することができます。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:126
+msgid ""
+"Depending on how many raster files you are merging and their resolution, the"
+" new raster file created can be really big. Consider instead to create a "
+"raster catalog as described in the :ref:`Create a Virtual Raster "
+"<tm_virtual_raster>` section."
+msgstr ""
+"マージするラスタファイルの数や解像度によっては、新しく作成されるラスタファイルが非常に大きくなることがあります。代わりに :ref:`仮想ラスタの作成 "
+"<tm_virtual_raster>` セクションで説明したように、ラスタカタログを作成することを検討してください。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:131
+msgid ""
+"Click on the :guilabel:`Merge` algorithm from the :menuselection:`GDAL --> "
+"Raster miscellaneous` menu."
+msgstr ""
+":menuselection:`GDAL --> ラスタその他` メニューから、 :guilabel:`結合 (gdal_merge)` "
+"アルゴリズムをクリックします。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:133
+msgid ""
+"As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>`, use "
+"the :guilabel:`...` button to choose which layers you want to merge."
+msgstr ""
+":ref:`仮想ラスタの作成 <tm_virtual_raster>` で行ったように、 :guilabel:`...` "
+"ボタンを使って結合するレイヤを選択します。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:137
+msgid ""
+"You can also specify a Virtual raster as input, and then all of the rasters "
+"that it consists of will be processed."
+msgstr "また、入力に仮想ラスタを指定すると、そのラスタを構成する全てのラスタが処理されます。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:139
+msgid ""
+"If you know the GDAL library, you can also add your own options by opening "
+"the :guilabel:`Advanced parameters` menu."
+msgstr "GDAL ライブラリを知っていれば、 :guilabel:`詳細パラメータ` メニューを開いて、独自のオプションを追加することも可能です。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:146
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:148
+msgid "QGIS makes it easy to include raster data into your existing projects."
+msgstr "QGISでは既存のプロジェクトにラスターデータを入れることが簡単です。"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:151
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:153
+msgid ""
+"Next, we'll use raster data that isn't aerial imagery, and see how "
+"symbolization is useful in the case of rasters as well."
+msgstr "次は航空画像ではないラスターデータを使用して、同様にラスターの場合にシンボル化はどのように有用であるかを見ていきます。"

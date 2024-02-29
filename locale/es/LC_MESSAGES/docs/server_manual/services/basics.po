@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/server_manual/services/basics.rst:4
+msgid "Basics"
+msgstr "Básicos"
+
+#: ../../docs/server_manual/services/basics.rst:6
+msgid ""
+"This section describes concepts and parameters mutually shared by services. "
+"Some of these are standard and defined in OGC specifications while others "
+"are very specific to QGIS Server."
+msgstr ""
+"En esta sección se describen conceptos y parámetros compartidos entre sí por"
+" los servicios. Algunos de estos son estándar y están definidos en las "
+"especificaciones de OGC, mientras que otros son muy específicos de QGIS "
+"Server."
+
+#: ../../docs/server_manual/services/basics.rst:10
+msgid "Standard concepts:"
+msgstr "Conceptos estándar:"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Concept"
+msgstr "Concepto"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Description"
+msgstr "Descripción"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Name of the service"
+msgstr "Nombre del servicio"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Name of the request"
+msgstr "Nombre de la petición"
+
+#: ../../docs/server_manual/services/basics.rst:20
+msgid "Vendor concepts:"
+msgstr "Conceptos de proveedores:"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "QGIS project file"
+msgstr "Archivo de proyecto QGIS"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`FILE_NAME <services_basics_file_name>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "File name of the downloaded file"
+msgstr "Nombre de archivo de la capa descargada"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`Short name <services_basics_short_name>`"
+msgstr ":ref:`Short name <services_basics_short_name>`"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Short name definition"
+msgstr "Definición de nombre corto"
+
+#: ../../docs/server_manual/services/basics.rst:34
+msgid "SERVICE"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:36
+msgid ""
+"This standard parameter allows to specify the name of the service to use for"
+" a specific :ref:`request <services_basics_request>` and has to be formed "
+"like ``SERVICE=NAME``."
+msgstr ""
+"Este parámetro estándar permite especificar el nombre del servicio a "
+"utilizar para una :ref:`request<services_basics_request>` específica y tiene"
+" que formarse como ``SERVICIO=NOMBRE``."
+
+#: ../../docs/server_manual/services/basics.rst:40
+msgid "URL example for the **WMS** service:"
+msgstr "Ejemplo de URL para el servicio **WMS**:"
+
+#: ../../docs/server_manual/services/basics.rst:50
+#: ../../docs/server_manual/services/basics.rst:73
+#: ../../docs/server_manual/services/basics.rst:120
+msgid ""
+"Not available for REST based services like :ref:`WFS3 (OGC API Features) "
+"<ogc_api_features>`."
+msgstr ""
+"No disponible para servicios basados en DESCANSO como :ref:`WFS3 (OGC API "
+"Features) <ogc_api_features>`."
+
+#: ../../docs/server_manual/services/basics.rst:57
+msgid "REQUEST"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:59
+msgid ""
+"This standard parameter allows to specify the name of the request to execute"
+" for a specific :ref:`service <services_basics_service>` and has to be "
+"formed like ``REQUEST=RequestName``."
+msgstr ""
+"Este parámetro estándar permite especificar el nombre de la solicitud a "
+"ejecutar para un :ref:`service<services_basics_service>` específico y debe "
+"formarse como ``SOLICITUD=NombreSolicitud``.."
+
+#: ../../docs/server_manual/services/basics.rst:63
+msgid "URL example for the **GetCapabilities** request:"
+msgstr "Ejemplo de URL para la solicitud **GetCapabilities**:"
+
+#: ../../docs/server_manual/services/basics.rst:80
+msgid "MAP"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:82
+msgid ""
+"This vendor parameter allows to define the QGIS project file to use. It may "
+"be an absolute path or a path relative to the location of the server "
+"executable :file:`qgis_mapserv.fcgi`. ``MAP`` is mandatory by default "
+"because a request needs a QGIS project to actually work. However, the "
+"**QGIS_PROJECT_FILE** environment variable may be used to define a default "
+"QGIS project. In this specific case, ``MAP`` is no longer a required "
+"parameter. For further information you may refer to the "
+":ref:`server_env_variables` chapter."
+msgstr ""
+"Este parámetro de proveedor permite definir el archivo de proyecto de QGIS a"
+" utilizar. Puede ser una ruta absoluta o una ruta relativa a la ubicación "
+"del ejecutable del servidor :file:`qgis_mapserv.fcgi`. ``MAP`` es "
+"obligatorio por defecto porque una solicitud necesita un proyecto QGIS para "
+"funcionar. Sin embargo, la variable de entorno **QGIS_PROJECT_FILE** puede "
+"usarse para definir un proyecto QGIS predeterminado. En este caso "
+"específico, ``MAP`` ya no es un parámetro obligatorio. Para más información "
+"puede consultar el capítulo :ref:`server_env_variables`."
+
+#: ../../docs/server_manual/services/basics.rst:90
+msgid "URL example:"
+msgstr "URL ejemplo:"
+
+#: ../../docs/server_manual/services/basics.rst:102
+msgid "FILE_NAME"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:104
+msgid ""
+"If this vendor parameter is set, the server response will be sent to the "
+"client as a file attachment with the specified file name."
+msgstr ""
+"Si se establece este parámetro de proveedor, la respuesta del servidor se "
+"enviará al cliente como un archivo adjunto con el nombre de archivo "
+"especificado."
+
+#: ../../docs/server_manual/services/basics.rst:107
+msgid "URL example to save an XML **GetCapabilities** document:"
+msgstr "Ejemplo de URL para guardar un documento XML **GetCapabilities**:"
+
+#: ../../docs/server_manual/services/basics.rst:127
+msgid "Short name"
+msgstr "Nombre corto"
+
+#: ../../docs/server_manual/services/basics.rst:129
+msgid ""
+"A number of elements have both a **short name** and a **title**. The short "
+"name is a text string used for machine-to-machine communication while the "
+"title is for the benefit of humans. For example, a dataset might have the "
+"descriptive title *“Maximum Atmospheric Temperature”* and be requested using"
+" the abbreviated short name *“ATMAX”*. You can set title, short name and "
+"abstract for:"
+msgstr ""
+"Varios elementos tienen tanto un **nombre corto** como un **título**. El "
+"nombre abreviado es una cadena de texto utilizada para la comunicación de "
+"máquina a máquina, mientras que el título es para beneficio de los humanos. "
+"Por ejemplo, un conjunto de datos puede tener el título descriptivo "
+"*“Temperatura atmosférica máxima”* y solicitarse con el nombre corto "
+"abreviado *“ATMAX”*. Puede establecer el título, el nombre corto y el "
+"resumen para:"
+
+#: ../../docs/server_manual/services/basics.rst:136
+msgid ""
+"**Layers**: right-click on a layer and choose :menuselection:`Properties... "
+"--> QGIS Server --> Description`."
+msgstr ""
+"**Capas**: haga clic con el botón derecho en una capa y seleccione "
+":menuselection:`Propiedades... --> Servidor QGIS --> Descripción`."
+
+#: ../../docs/server_manual/services/basics.rst:139
+msgid ""
+"**Groups**: right-click on a group and select :guilabel:`Set Group WMS data`"
+msgstr ""
+"**Grupos**: haga clic con el botón derecho en un grupo y seleccione "
+":guilabel:`Establecer datos WMS del grupo`"
+
+#: ../../docs/server_manual/services/basics.rst:141
+msgid ""
+"**Project**: go to :menuselection:`Project --> Properties... --> QGIS Server"
+" --> Service Capabilities`."
+msgstr ""
+"**Proyecto**: vaya a :menuselection:`Proyecto --> Propiedades... --> "
+"Servidor QGIS --> Capacidades de servicio`."
+
+#: ../../docs/server_manual/services/basics.rst:151
+msgid "Set group WMS data dialog"
+msgstr "Establecer cuadro de diálogo de datos WMS de grupo"
+
+#: ../../docs/server_manual/services/basics.rst:154
+msgid ""
+"Thus, the short name may be used to identify these items when interacting "
+"with QGIS Server. For example with the standard ``LAYERS`` parameter:"
+msgstr ""
+"Por lo tanto, el nombre corto puede usarse para identificar estos elementos "
+"al interactuar con QGIS Server. Por ejemplo con el parámetro ``CAPAS`` "
+"estándar:"

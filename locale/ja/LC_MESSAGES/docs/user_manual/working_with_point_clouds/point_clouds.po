@@ -1,0 +1,1202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-11 08:42+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:6
+msgid "Working with Point Clouds"
+msgstr "点群の操作"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:16
+msgid "Introduction to Point Clouds"
+msgstr "点群入門"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:18
+msgid "**What is A Point Cloud?**"
+msgstr "**点群とは？**"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:20
+msgid ""
+"A point cloud is a three-dimensional image of a space made up of many "
+"individual of data points (up to billions, even trillions). Each of the "
+"points has an x, y and z coordinate. Depending on the capture method, point "
+"clouds usually also have additional attributes that came from the capture, "
+"such as color values or intensity. These attributes can be used, for "
+"instance, to display point clouds in different colors. In QGIS, a point "
+"cloud can be used to generate a three-dimensional image of the landscape (or"
+" of another space)."
+msgstr ""
+"点群とは、多数のデータ点（最大数十億、数兆）からなる空間の3次元画像です。各点はx、y、z座標を持ちます。キャプチャ方法にもよりますが、点群には通常、色値や強度など、キャプチャに由来した追加属性もあります。これらの属性は、例えば、異なる色で点群を表示するために使用することができます。QGISでは、点群を使って風景（または別の空間）の3次元画像を生成することができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:29
+msgid "**Supported Formats**"
+msgstr "**サポートしている形式**"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:31
+msgid ""
+"QGIS supports the data formats Entwine Point Tile (EPT) and LAS/LAZ. To work"
+" with point clouds, QGIS always saves the data in EPT. EPT is a storage "
+"format that consists of several files stored in a common folder. To allow "
+"quick access to the data, EPT uses indexing. For more information on the EPT"
+" format, see `entwine homepage <https://entwine.io/entwine-point-"
+"tile.html>`_"
+msgstr ""
+"QGISは、Entwine Point Tile "
+"(EPT)とLAS/LAZのデータ形式をサポートしています。点群データを扱う場合、QGISは常にEPTでデータを保存します。EPTは、共通のフォルダーに保存される複数のファイルで構成された保存形式です。データに素早くアクセスできるように、EPTはインデックスを使います。EPT形式の詳細については、`entwine"
+" homepage <https://entwine.io/entwine-point-tile.html>`_ を参照してください。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:37
+msgid ""
+"If the data is in LAS or LAZ format, QGIS will convert it to EPT when it is "
+"loaded for the first time. Depending on the size of the file, this may take "
+"some time. In this process, a subfolder is created in the folder in which "
+"the LAS/LAZ file is located according to the scheme :file:`ept_` + "
+":file:`name_LAS/LAZ_file`. If such a subfolder already exists, QGIS loads "
+"the EPT immediately (which leads to a reduced loading time)."
+msgstr ""
+"データがLASまたはLAZ形式の場合、QGISは初回に読み込む時にEPTに変換します。ファイルの大きさによっては、これに時間がかかる場合があります。この処理では、LAS/LAZファイルがあるフォルダに、"
+" :file:`ept_` + :file:`name_LAS/LAZ_file` "
+"というスキームでサブフォルダーが作られます。そのようなサブフォルダーがすでに存在する場合、QGISはEPTをすぐに読み込みます（読み込み時間の短縮につながります）。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:44
+msgid "**Worth Knowing**"
+msgstr "**知っておくべきこと**"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:46
+msgid ""
+"In QGIS it is not (yet) possible to edit point clouds. If you want to "
+"manipulate your point cloud, you can use `CloudCompare "
+"<https://www.cloudcompare.org/>`_, an open source point cloud processing "
+"tool. Also the `Point Data Abstraction Library "
+"<https://pdal.io/en/stable/>`_ (PDAL - similar to GDAL) offers you options "
+"to edit point clouds (PDAL is command line only)."
+msgstr ""
+"QGISでは（まだ）点群を編集することはできません。点群を操作したい場合は、オープンソースの点群処理ツールである`CloudCompare "
+"<https://www.cloudcompare.org/>`_ を使うことができます。また、`Point Data Abstraction "
+"Library <https://pdal.io/en/stable/>`_ （PDAL - "
+"GDALに似ている）は点群を編集するオプションを提供しています（PDALはコマンドラインのみです）。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:52
+msgid ""
+"Due to the large number of data points, it is not possible to display an "
+"attribute table of point clouds in QGIS. However, the |identify| "
+":ref:`Identify tool <identify>` supports point clouds, so you can display "
+"all attributes, even of a single data point."
+msgstr ""
+"データ点の数が多いため、QGISでは点群の属性テーブルを表示することはできません。しかし、|identify| :ref:`Identify tool "
+"<identify>` は点群をサポートしているので、1つのデータポイントであってもすべての属性を表示することができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:605
+msgid "identify"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:61
+msgid "Point Clouds Properties"
+msgstr "点群のプロパティ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:62
+msgid ""
+"The :guilabel:`Layer Properties` dialog for a point cloud layer offers "
+"general settings for the layer and its rendering. It also provides "
+"information about the layer."
+msgstr ""
+"点群レイヤの :guilabel:`レイヤプロパティ` "
+"ダイアログは、レイヤとそのレンダリングに関する一般的な設定を提供します。また、レイヤの情報も提供します。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:66
+msgid "To access the :guilabel:`Layer Properties` dialog:"
+msgstr ":guilabel:`レイヤプロパティ` ダイアログにアクセスするには："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:68
+msgid ""
+"In the :guilabel:`Layers` panel, double-click the layer or right-click and "
+"select :guilabel:`Properties...` from the context menu;"
+msgstr ""
+":guilabel:`レイヤ` パネルでレイヤをダブルクリックするか、右クリックしてコンテキストメニューから :guilabel:`プロパティ...` "
+"を選択する；"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:70
+msgid ""
+"Go to :menuselection:`Layer --> Layer Properties...` menu when the layer is "
+"selected."
+msgstr "レイヤを選択した状態で、 :menuselection:`レイヤ --> レイヤのプロパティ...` メニューを選ぶ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:73
+msgid ""
+"The point cloud :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr "点群 :guilabel:`レイヤプロパティ` ダイアログには次のセクションがあります："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:78
+msgid "|metadata| :ref:`Information <point_clouds_information>`"
+msgstr "|metadata| :ref:`情報 <point_clouds_information>`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:609
+msgid "metadata"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:79
+msgid "|system| :ref:`Source <point_clouds_source>`"
+msgstr "|system| :ref:`ソース <point_clouds_source>`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:633
+msgid "system"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:80
+msgid "|symbology| :ref:`Symbology <point_clouds_symbology>`:sup:`[1]`"
+msgstr "|symbology| :ref:`シンボロジ <point_clouds_symbology>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:627
+msgid "symbology"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:81
+msgid "|3d| :ref:`3D View <point_clouds_3d>`:sup:`[1]`"
+msgstr "|3d| :ref:`3Dビュー <point_clouds_3d>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:591
+msgid "3d"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:82
+msgid "|rendering| :ref:`Rendering <point_clouds_rendering>`"
+msgstr "|rendering| :ref:`レンダリング <point_clouds_rendering>`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:619
+msgid "rendering"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:83
+msgid "|elevationscale| :ref:`Elevation <point_clouds_elevation>`:sup:`[1]`"
+msgstr "|elevationscale| :ref:`高さ <point_clouds_elevation>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:599
+msgid "elevationscale"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:84
+msgid "|editMetadata| :ref:`Metadata <point_clouds_metadata>`"
+msgstr "|editMetadata| :ref:`メタデータ <point_clouds_metadata>`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:597
+msgid "editMetadata"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:85
+msgid "|basicStatistics| :ref:`Statistics <point_clouds_statistics>`"
+msgstr "|basicStatistics| :ref:`統計量の出力 <point_clouds_statistics>`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:593
+msgid "basicStatistics"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:88
+msgid ""
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
+msgstr ":sup:`[1]` :ref:`レイヤスタイルパネル <layer_styling_panel>` からも利用可能です"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:90
+msgid ""
+"Most of the properties of a point cloud layer can be saved to or loaded from"
+" a :file:`.qml` file using the :guilabel:`Style` menu at the bottom of the "
+"properties dialog. More details at :ref:`save_layer_property`"
+msgstr ""
+"点群レイヤのプロパティのほとんどは、プロパティダイアログの下部にある :guilabel:`スタイル` メニューを使って :file:`.qml` "
+"ファイルに保存したり、そこから読み込んだりすることができます。詳細は :ref:`save_layer_property` を参照してください。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:99
+msgid "Information Properties"
+msgstr "情報プロパティ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:101
+msgid ""
+"The |metadata| :guilabel:`Information` tab is read-only and represents an "
+"interesting place to quickly grab summarized information and metadata on the"
+" current layer. Provided information are:"
+msgstr ""
+"|metadata| :guilabel:`情報` "
+"タブは読み取り専用で、現在のレイヤの要約された情報やメタデータをさっと掴むことができる興味深い場所です。提供される情報には、以下のものがあります："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:105
+msgid ""
+"General such as name in the project, source path, last save time and size, "
+"the used provider"
+msgstr "名前、ソースパス、最終保存日時と大きさ、使用されたプロバイダなどの一般"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:107
+msgid "Based on the provider of the layer: extent and number of points"
+msgstr "レイヤのプロバイダに基づいた：領域と点の数"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:108
+msgid ""
+"The Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr "空間参照系：名前、単位、方法、精度、参照（即ち、静的か動的のいずれか）"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:110
+msgid ""
+"Metadata delivered by the provider: creation date, version, data format, "
+"scale X/Y/Z, ..."
+msgstr "プロバイダからのメタデータ：作成日、バージョン、データフォーマット、縮尺X/Y/Z…"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:112
+msgid ""
+"Picked from the |editMetadata| :ref:`Metadata <point_clouds_metadata>` tab "
+"(where they can be edited): access, extents, links, contacts, history..."
+msgstr ""
+"|editMetadata| :ref:`メタデータ <point_clouds_metadata>` "
+"タブから選ばれた（編集可能な）：アクセス、領域、リンク、連絡先、履歴…"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:120
+msgid "Point cloud information tab"
+msgstr "点群情報タブ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:126
+msgid "Source Properties"
+msgstr "ソースプロパティ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:128
+msgid ""
+"In the |system| :guilabel:`Source` tab you can see and edit basic "
+"information about the point cloud layer:"
+msgstr "|system| :guilabel:`ソース` タブでは、点群レイヤの基本情報を確認・編集することができます："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:131
+msgid ""
+":guilabel:`Settings`: Set a Layer name different from the layer filename "
+"that will be used to identify the layer in the project (in the Layers Panel,"
+" with expressions, in print layout legend,...)"
+msgstr ""
+":guilabel:`設定`: "
+"プロジェクト（レイヤパネル、式、印刷レイヤ凡例…）でレイヤを識別するのに使われるレイヤ名をレイヤファイル名と異なるものに設定します"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:134
+msgid ""
+":guilabel:`Assigned Coordinate Reference System (CRS)`: Here you can change "
+"the layer's assigned :ref:`Coordinate Reference System <layer_crs>`, "
+"selecting a recently used one in the drop-down list or clicking on "
+"|setProjection| set Projection Select CRS button (see :ref:`crs_selector`). "
+"Use this process only if the CRS applied to the layer is a wrong one or if "
+"none was applied."
+msgstr ""
+":guilabel:`設定されたCRS`： ここではレイヤに割り当てられている :ref:`座標参照系 <layer_crs>` "
+"を変更することができます。ドロップダウンリストで最近使用したものを選択するか、|setProjection| set Projection Select"
+" CRS ボタンをクリックします(参照 :ref:`crs_selector`)。この処理は、レイヤに適用されている CRS "
+"が誤っている場合や、何も適用されていない場合にのみ使用します。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:621
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:147
+msgid "Point cloud source tab"
+msgstr "点群のソースタブ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:153
+msgid "Symbology Properties"
+msgstr "シンボロジプロパティ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:155
+msgid ""
+"In the |symbology| :guilabel:`Symbology` tab the settings for the rendering "
+"of the point cloud are made. In the upper part, the settings of the "
+"different feature renderers can be found. In the lower part, there are "
+"sections with which general settings for the entire layer can be made and "
+"which apply over feature renderers."
+msgstr ""
+"|symbology| :guilabel:`シンボロジ` "
+"タブでは、点群のレンダリングの設定を行います。上部には、異なる地物レンダラーの設定があります。下部には、レイヤ全体の一般的な設定と、地物レンダラーに適用される設定があります。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:164
+msgid "Feature Rendering types"
+msgstr "地物レンダリングタイプ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:166
+msgid ""
+"There are different options for rendering point clouds that can be selected "
+"using the drop-down menu at the top of the :guilabel:`Symbology` tab (see "
+":numref:`figure_point_cloud_symbology_overview`):"
+msgstr ""
+"点群のレンダリングにはさまざまなオプションがあり、 :guilabel:`シンボロジ` タブの上部にあるドロップダウンメニューで選択することができます（"
+" :numref:`figure_point_cloud_symbology_overview` を参照）："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:170
+msgid ""
+"|pointCloudExtent| :guilabel:`Extent Only`: Only a bounding box of the "
+"extent of the data is displayed; convenient for overviewing the data extent."
+" As usual, the :guilabel:`Symbol` :ref:`widget <symbol_widget_selector>` "
+"helps you configure any properties (color, stroke, opacity, sub-layers, ...)"
+" you'd like for the box."
+msgstr ""
+"|pointCloudExtent| :guilabel:`範囲のみ`： "
+"データの範囲のバウンディングボックスのみを表示します；データの範囲を概観するのに便利です。普通通り、 :guilabel:`シンボル` "
+":ref:`ウィジェット <symbol_widget_selector>` "
+"を使用することで、ボックスのプロパティ（色、ストローク、不透明度、サブレイヤなど）を設定することができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:615
+msgid "pointCloudExtent"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:174
+msgid ""
+"|singlebandPseudocolor| :guilabel:`Attribute by Ramp`: The data is drawn "
+"over a color gradient. See :ref:`point_cloud_ramp`"
+msgstr ""
+"|singlebandPseudocolor| :guilabel:`ランプによる属性`: "
+"データはカラーグラデーション上に描画されます。:ref:`point_cloud_ramp` を参照"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:625
+msgid "singlebandPseudocolor"
+msgstr "singlebandPseudocolor"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:176
+msgid ""
+"|multibandColor| :guilabel:`RGB`: Draw the data using red, green and blue "
+"color values. See :ref:`point_cloud_rgb`"
+msgstr ""
+"|multibandColor| :guilabel:`RGB`： "
+"赤、緑、青の色値を用いてデータを描画します。:ref:`point_cloud_rgb` を参照"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:611
+msgid "multibandColor"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:178
+msgid ""
+"|paletted| :guilabel:`Classification`: The data is drawn using different "
+"colors for different classes. See :ref:`point_cloud_classification`"
+msgstr ""
+"|paletted| :guilabel:`分類`： "
+"データは分類ごとに異なる色で描画されます。:ref:`point_cloud_classification` を参照してください"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:613
+msgid "paletted"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:181
+msgid ""
+"When a point cloud is loaded, QGIS follows a logic to select the best "
+"renderer:"
+msgstr "点群が読み込まれると、QGISはロジックに従って最適なレンダラーを選択します："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:184
+msgid ""
+"if the dataset contains color information (red, green, blue attributes), the"
+" RGB renderer will be used"
+msgstr "データセットに色情報（赤、緑、青属性）が含まれている場合、RGBレンダラーが使われます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:186
+msgid ""
+"else if the dataset contains a ``Classification`` attribute, the classified "
+"renderer will be used"
+msgstr "そうではなく、データセットに ``Classification`` 属性が含まれていれば、分類レンダラーが使われます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:188
+msgid "else it will fall back to rendering based on Z attribute"
+msgstr "そうでなければ、Z属性に基づくレンダリングにフォールバックします"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:190
+msgid ""
+"If you do not know the attributes of the point cloud, the |basicStatistics| "
+":guilabel:`Statistics` :ref:`tab <point_clouds_statistics>` provides a good "
+"overview of which attributes are contained in the point cloud and in which "
+"ranges the values are located."
+msgstr ""
+"点群の属性がわからない場合は、|basicStatistics| :guilabel:`統計量の出力` :ref:`タブ "
+"<point_clouds_statistics>` を参照すると、点群にどの属性が含まれていて、どの範囲に値があるのかの概要を知ることができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:200
+msgid "Point cloud symbology tab"
+msgstr "点群シンボロジタブ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:206
+msgid "Attribute by Ramp Renderer"
+msgstr "ランプによる属性"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:208
+msgid ""
+"With |singlebandPseudocolor| :guilabel:`Attribute by Ramp`, the data can be "
+"displayed by numerical values over a color gradient. Such numerical values "
+"can be, for example, an existing intensity attribute or the Z-value. "
+"Depending on a minimum and a maximum value, the other values are spread to "
+"the color gradient via interpolation. The distinct values and their "
+"assignment to a certain color are called \"color map\" and are shown in the "
+"table. There are various setting options, which are described below the "
+"figure."
+msgstr ""
+"|singlebandPseudocolor|:guilabel:`ランプによる属性` "
+"では、データをカラーグラデーション上の数値で表示することができます。このような数値は、例えば、既存の強度属性やZ値にすることができます。最小値と最大値により、他の値は内挿によってカラーグラデーションに広がります。明確な値と特定の色への割り当ては「カラーマップ」と呼ばれ、表に示されます。様々な設定オプションがあり、それらは図の下に説明されています。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:221
+msgid "Point cloud symbology tab: Attribute by Ramp"
+msgstr "点群シンボロジタブ：ランプによる属性"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:223
+msgid ""
+":guilabel:`Min` and :guilabel:`Max` define the range that is applied to the "
+"color ramp: the :guilabel:`Min` value represents the left, the "
+":guilabel:`Max` value the right end of the color ramp, the values in between"
+" are interpolated. By default QGIS detects the minimum and the maximum from "
+"the selected attribute but they can be modified. Once you have changed the "
+"values, you can restore the defaults by clicking on the :guilabel:`Load` "
+"button."
+msgstr ""
+":guilabel:`最小値` と :guilabel:`最大値` はカラーランプに適用される範囲を定義します： :guilabel:`最小値` "
+"の値はカラーランプの左端、 :guilabel:`最大値` "
+"の値は右端を表し、その間の値は内挿されます。デフォルトでは、QGISは選択された属性から最小値と最大値を検出しますが、変更することもできます。値を変更したら、:guilabel:`読み込み`"
+" ボタンをクリックしてデフォルトに戻すことができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:230
+msgid ""
+"The :guilabel:`Interpolation` entry defines how values are assigned their "
+"color:"
+msgstr ":guilabel:`内挿` の項目は、値にどのように色が割り当てられるかを定義します："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:233
+msgid ""
+":guilabel:`Discrete` (a ``<=`` symbol appears in the header of the "
+":guilabel:`Value` column): The color is taken from the closest color map "
+"entry with equal or higher value"
+msgstr ""
+":guilabel:`離散値` （ ``<=`` シンボルが :guilabel:`値` "
+"カラムのヘッダに表示されます）：ラスタの色には、その値以上で最も近いカラーマップのエントリを使用します"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:236
+msgid ""
+":guilabel:`Linear` The color is linearly interpolated from the color map "
+"entries above and below the pixel value, meaning that to each dataset value "
+"corresponds a unique color"
+msgstr ""
+":guilabel:`線形`　ピクセル値の上下にあるカラーマップの項目から線形補間された色であり、データセット値毎にユニークな色に対応します"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:239
+msgid ""
+":guilabel:`Exact` (a ``=`` symbol appears in the header of the "
+":guilabel:`Value` column): Only pixels with value equal to a color map entry"
+" are applied a color; others are not rendered."
+msgstr ""
+":guilabel:`正確な` （ ``=`` シンボルが :guilabel:`値` "
+"カラムのヘッダに表示されます）：カラーマップエントリの値に等しい値を持つピクセルだけに色が適用されます。その他の値のピクセルはレンダリングされません。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:242
+msgid ""
+"The :guilabel:`Color ramp` widget helps you select the color ramp to assign "
+"to the dataset. As usual with :ref:`this widget <color_ramp_widget>`, you "
+"can create a new one and edit or save the currently selected one."
+msgstr ""
+":guilabel:`カラーランプ` ウィジェットは、データセットに割り当てるカラーランプを選択するのに役立ちます。:ref:`このウィジェット "
+"<color_ramp_widget>` と同様に、新しいウィジェットを作ったり、現在選択されているウィジェットを編集して保存することができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:245
+msgid ""
+"The :guilabel:`Label unit suffix` adds a label after the value in the "
+"legend, and the :guilabel:`Label precision` controls the number of decimals "
+"to display."
+msgstr ""
+":guilabel:`ラベルの単位の接尾辞` は、凡例内で値の後ろにラベルを追加します。また、 :guilabel:`ラベルの精度` "
+"は表示する小数点以下の桁数を制御します。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:249
+msgid ""
+"The classification :guilabel:`Mode` helps you define how values are "
+"distributed across the classes:"
+msgstr "分類の :guilabel:`モード` は、クラス間でどのように値が分布するかを定義できます："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:252
+msgid ""
+":guilabel:`Continuous`: Classes number and color are fetched from the color "
+"ramp stops; limits values are set following stops distribution in the color "
+"ramp (you can find more information on stops in :ref:`color-ramp`)."
+msgstr ""
+":guilabel:`連続的`： クラス番号と色はカラーランプのストップから取得されます; 限界値はカラーランプのストップの分布に従って設定されます "
+"(ストップに関する詳細は :ref:`color-ramp` を参照してください)。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:255
+msgid ""
+":guilabel:`Equal interval`: The number of classes is set by the "
+":guilabel:`Classes` field at the end of the line; limits values are defined "
+"so that the classes all have the same magnitude."
+msgstr ""
+":guilabel:`等間隔分類`： クラスの数は行末の :guilabel:`クラス` フィールドによって設定されます; "
+"限界値はクラスがすべて同じ大きさになるように定義されます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:259
+msgid ""
+"The classes are determined automatically and shown in the color map table. "
+"But you can also edit these classes manually:"
+msgstr "クラスは自動的に決定され、カラーマップ表に表示されます。しかし、手動でこれらのクラスを編集することもできます："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:262
+msgid ""
+"Double clicking in a :guilabel:`Value` in the table lets you modify the "
+"class value"
+msgstr "テーブルの :guilabel:`値` をダブルクリックするとクラス値を変更することができます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:263
+msgid ""
+"Double clicking in the :guilabel:`Color` column opens the :ref:`color-"
+"selector` widget, where you can select a color to apply for that value"
+msgstr "guilabel:`色` 列をダブルクリックすると :ref:`色を選択` ウィジェットが開き、その値に適用する色を選択することができます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:265
+msgid ""
+"Double clicking in the :guilabel:`Label` column to modify the label of the "
+"class"
+msgstr ":guilabel:`ラベル` 列をダブルクリックするとクラスのラベルを変更することができます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:266
+msgid ""
+"Right-clicking over selected rows in the color table shows a contextual menu"
+" to :guilabel:`Change Color...` and :guilabel:`Change Opacity...` for the "
+"selection"
+msgstr ""
+"カラーテーブルで選択された行の上で右クリックすると、 :guilabel:`色を変更...` と :guilabel:`不透明度を変更...` "
+"のコンテキストメニューが表示されます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:269
+msgid ""
+"Below the table there are the options to restore the default classes with "
+":guilabel:`Classify` or to manually |symbologyAdd| :sup:`Add` values or "
+"|symbologyRemove| :sup:`Delete` selected values from the table."
+msgstr ""
+"テーブルの下には、:guilabel:`分類` でデフォルトのクラスに戻すか、手動で値を |symbologyAdd| :sup:`追加` "
+"するか、表から選択した行を |symbologyRemove| :sup:`削除` するオプションがあります。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:629
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:631
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:273
+msgid ""
+"Since a customized color map can be very complex, there is also the option "
+"to |fileOpen| :sup:`Load` an existing color map or to |fileSaveAs| "
+":sup:`Save` it for use in other layers (as a :file:`txt` file)."
+msgstr ""
+"カスタマイズされたカラーマップは非常に複雑になる可能性があるため、既存のカラーマップを |fileOpen| :sup:`読み込む` "
+"オプションや、他のレイヤで使用するために（ :file:`txt` ファイルとして） |fileSaveAs| :sup:`保存` "
+"するオプションもあります。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:601
+msgid "fileOpen"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:603
+msgid "fileSaveAs"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:277
+msgid ""
+"If you have selected :guilabel:`Linear` for :guilabel:`Interpolation`, you "
+"can also configure:"
+msgstr ":guilabel:`内挿` で :guilabel:`線形` を選択した場合は、以下の設定も可能です："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:280
+msgid ""
+"|checkbox| :guilabel:`Clip out of range values` By default, the linear "
+"method assigns the first class (respectively the last class) color to values"
+" in the dataset that are lower than the set :guilabel:`Min` (respectively "
+"greater than the set :guilabel:`Max`) value. Check this setting if you do "
+"not want to render those values."
+msgstr ""
+"|checkbox| :guilabel:`範囲外の値を無視` デフォルトで、線形法はデータセットの値のうち、設定された :guilabel:`最小値`"
+" より小さな値（設定された :guilabel:`最大値` "
+"より大きな値）に対して最初のクラス（最後のクラス）の色を割り当てます。これらの値をレンダリングしたくない場合は、この設定をチェックしてください。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:595
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:285
+msgid ""
+":guilabel:`Legend settings`, for display in the :guilabel:`Layers` panel and"
+" in the :ref:`layout legend <layout_legend_item>`. Customization works the "
+"same way as with a raster layer (find more details at "
+":ref:`raster_legend_settings`)."
+msgstr ""
+":guilabel:`凡例の設定` は :guilabel:`レイヤ` パネルと :ref:`レイアウト凡例 <layout_legend_item>`"
+" に表示されます。カスタマイズはラスタレイヤと同じように動作します（詳細は :ref:`raster_legend_settings` "
+"を参照してください）。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:294
+msgid "RGB Renderer"
+msgstr "RGBレンダラー"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:296
+msgid ""
+"With the |multibandColor| :guilabel:`RGB` renderer, three selected "
+"attributes from the point cloud will be used as the red, green and blue "
+"component. If the attributes are named accordingly, QGIS selects them "
+"automatically and fetches :guilabel:`Min` and :guilabel:`Max` values for "
+"each band and scales the coloring accordingly. However, it is also possible "
+"to modify the values manually."
+msgstr ""
+"multibandColor| :guilabel:`RGB` "
+"レンダラーでは、点群から選択された3つの属性が赤、緑、青の成分として使用されます。属性に適切な名前が付けられている場合、QGISは自動的に属性を選択し、各バンドの"
+" :guilabel:`最小値` と :guilabel:`最大値` "
+"を取得し、それに応じてカラーリングをスケーリングします。しかし、手動で値を変更することも可能です。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:302
+msgid ""
+"A :guilabel:`Contrast enhancement` method can be applied to the values: "
+":guilabel:`No Enhancement`, :guilabel:`Stretch to MinMax`, "
+":guilabel:`Stretch and Clip to MinMax` and :guilabel:`Clip to MinMax`"
+msgstr ""
+":guilabel:`コントラスト` 方法には、 :guilabel:`強調しない`、 :guilabel:`最小最大範囲に引き伸ばす`、 "
+":guilabel:`最小最大範囲に引き伸ばしカット`、 :guilabel:`最小から最大までの範囲以外は無視` の値が適用できます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:306
+msgid ""
+"The :guilabel:`Contrast enhancement` tool is still under development. If you"
+" have problems with it, you should use the default setting "
+":guilabel:`Stretch to MinMax`."
+msgstr ""
+":guilabel:`コントラスト` ツールはまだ開発中です。問題がある場合は、デフォルトの :guilabel:`最小最大範囲に引き伸ばす` "
+"を使用してください。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:315
+msgid "The point cloud RGB renderer"
+msgstr "点群RGBレンダラー"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:321
+msgid "Classification Renderer"
+msgstr "分類レンダラー"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:323
+msgid ""
+"In the |paletted| :guilabel:`Classification` rendering, the point cloud is "
+"shown differentiated by color on the basis of an attribute. Any type of "
+"attribute can be used (numeric, string, ...). Point cloud data often "
+"includes a field called ``Classification``. This usually contains data "
+"determined automatically by post-processing, e.g. about vegetation. With "
+":guilabel:`Attribute` you can select the field from the attribute table that"
+" will be used for the classification. By default, QGIS uses the definitions "
+"of the LAS specification (see table 'ASPRS Standard Point Classes' in the "
+"PDF on `ASPRS home page <https://www.asprs.org/divisions-committees/lidar-"
+"division/laser-las-file-format-exchange-activities>`_). However, the data "
+"may deviate from this schema; in case of doubt, you have to ask the person "
+"or institution from which you received the data for the definitions."
+msgstr ""
+"|paletted| :guilabel:`分類` "
+"レンダリングでは、点群は属性に基づいて色分けされて表示されます。属性はどのようなタイプでも使用できます（数値、文字列、...）。点群データにはしばしば "
+"``Classification`` "
+"というフィールドが含まれます。このフィールドには通常、後処理によって自動的に決定された植生などのデータが含まれます。:guilabel:`属性` "
+"を使うと、属性テーブルから分類に使用するフィールドを選択することができます。デフォルトでは、QGISはLAS仕様の定義を使用します（`ASPRSホームページ"
+" <https://www.asprs.org/divisions-committees/lidar-division/laser-las-file-"
+"format-exchange-activities>`_ にあるPDFの 'ASPRS標準点クラス' "
+"の表を参照してください）。しかし、データはこのスキーマから逸脱している可能性があります。疑問がある場合は、データを受け取った人や機関に定義を問い合わせる必要があります。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:341
+msgid "The point cloud classification renderer"
+msgstr "点群分類レンダラー"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:343
+msgid ""
+"In the table all used values are displayed with the corresponding color and "
+"legend. At the beginning of each row there is a |checkbox| check box; if it "
+"is unchecked, this value is no longer shown on the map. With double click in"
+" the table, the :guilabel:`Color`, the :guilabel:`Value` and the "
+":guilabel:`Legend` can be modified (for the color, the :ref:`color-selector`"
+" widget opens)."
+msgstr ""
+"表では、使用されたすべての値が対応する色と凡例とともに表示されます。各行の先頭には |checkbox| "
+"チェックボックスがあり、チェックを外すとその値はマップ上に表示されなくなります。テーブルをダブルクリックすると "
+":guilabel:`色`、:guilabel:`値`、:guilabel:`凡例` を変更することができます（色については :ref:`色選択` "
+"ウィジェットが開きます)。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:349
+msgid ""
+"Below the table there are buttons with which you can change the default "
+"classes generated by QGIS:"
+msgstr "表の下にはボタンがあり、QGISが生成するデフォルトクラスを変更することができます："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:352
+msgid ""
+"With the :guilabel:`Classify` button the data can be classified "
+"automatically: all values that occur in the attributes and are not yet "
+"present in the table are added"
+msgstr ""
+"guilabel:`分類` ボタンを使用すると、データを自動的に分類することができます：属性に出現し、テーブルにまだ存在しないすべての値が追加されます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:355
+msgid ""
+"With |symbologyAdd| :sup:`Add` and |symbologyRemove| :sup:`Delete`, values "
+"can be added or removed manually"
+msgstr ""
+"|symbologyAdd| :sup:`追加` と |symbologyRemove| :sup:`削除` を使うと、値を手動で追加または削除できます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:357
+msgid ":guilabel:`Delete All` removes all values from the table"
+msgstr ":guilabel:`すべて削除` は表からすべての値を取り除きます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:361
+msgid ""
+"In the :guilabel:`Layers` panel, you can right-click over a class leaf entry"
+" of a layer to quickly configure visibility of the corresponding features."
+msgstr ""
+":guilabel:`レイヤ` パネルでは、レイヤのクラスリーフエントリの上で右クリックすると、対応する地物の可視性を素早く設定することができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:366
+msgid "Point Symbol"
+msgstr "点シンボル"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:368
+msgid ""
+"Under :guilabel:`Point Symbol`, the size and the unit (e.g. millimeters, "
+"pixels, inches) with which each data point is displayed can be set. Either "
+":guilabel:`Circle` or :guilabel:`Square` can be selected as the style for "
+"the points."
+msgstr ""
+":guilabel:`点シンボル` "
+"では、各データポイントを表示する大きさと単位（ミリメートル、ピクセル、インチなど）を設定することができます。点のスタイルとして "
+":guilabel:`円` または :guilabel:`Square` が選択できます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:373
+msgid "Layer Rendering"
+msgstr "レイヤレンダリング"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:375
+msgid ""
+"In the :guilabel:`Layer Rendering` section you have the following options to"
+" modify the rendering of the layer:"
+msgstr ":guilabel:`レイヤレンダリング` セクションには、レイヤのレンダリングを変更するための以下のオプションがあります："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:380
+msgid ""
+":guilabel:`Draw order`: allows to control whether point clouds rendering "
+"order on 2d map canvas should rely on their Z value. It is possible to "
+"render :"
+msgstr ""
+":guilabel:`描画順`: "
+"2次元マップキャンバス上の点群のレンダリング順をZ値に依存するかどうかを制御できます。次でレンダリングすることができます:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:384
+msgid ""
+"with the :guilabel:`Default` order in which the points are stored in the "
+"layer,"
+msgstr "点がレイヤに格納されている :guilabel:`デフォルト` 順、"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:385
+msgid ""
+"from :guilabel:`Bottom to top` (points with larger Z values cover lower "
+"points giving the looks of a true ortho photo),"
+msgstr ":guilabel:`下から上`（Z値が大きい点は低い点を覆い、真のオルソ写真のように見える）、"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:387
+msgid ""
+"or from :guilabel:`Top to bottom` where the scene appears as viewed from "
+"below."
+msgstr "または、情景を下から見ているように見える :guilabel:`上から下`。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:391
+msgid ""
+":guilabel:`Maximum error`: Point clouds usually contains more points than "
+"are needed for the display. By this option you set how dense or sparse the "
+"display of the point cloud will be (this can also be understood as 'maximum "
+"allowed gap between points'). If you set a large number (e.g. 5 mm), there "
+"will be visible gaps between points. Low value (e.g. 0.1 mm) could force "
+"rendering of unnecessary amount of points, making rendering slower "
+"(different units can be selected)."
+msgstr ""
+":guilabel:`最大エラー`: "
+"点群には通常、表示に必要な以上の点が含まれています。このオプションで、点群の表示をどの程度密にするか、または疎にするかを設定します（これは「点間の最大許容ギャップ」とも理解できます）。大きな数値（例：5"
+" "
+"mm）を設定すると、点と点の間に目に見える隙間ができます。低い値（例：0.1mm）を設定すると、不必要な量の点をレンダリングすることになり、レンダリングが遅くなります（異なる単位を選択することができます）。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:398
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your layer"
+" to your needs. You can also make a precise definition of the percentage of "
+"visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`不透明度`： "
+"このツールでマップキャンバスの下にあるレイヤを表示させることができます。スライダーを使ってレイヤの可視性をニーズに合わせて調整します。また、スライダーの横のメニューで可視性のパーセンテージを正確に定義することもできます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:403
+msgid ""
+":guilabel:`Blending mode`: You can achieve special rendering effects with "
+"this tool. The pixels of your overlaying and underlying layers are mixed "
+"through the settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`混合モード`： "
+"このツールで特殊なレンダリング効果を得ることができます。オーバーレイレイヤとその下のレイヤのピクセルは、:ref:`blend-modes` "
+"で説明されている設定によって混合されます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:407
+msgid ""
+":guilabel:`Eye dome lighting`: this applies shading effects to the map "
+"canvas for a better depth rendering. Rendering quality depends on the "
+":ref:`draw order <point_cloud_draw_order>` property; the :guilabel:`Default`"
+" draw order may give sub-optimal results. Following parameters can be "
+"controlled:"
+msgstr ""
+":guilabel:`アイドーム照明`: これはマップキャンバスにシェーディング効果を適用し、より良い深度レンダリングを行います。レンダリングの品質は "
+":ref:`draw order <point_cloud_draw_order>` プロパティに依存します。:guilabel:`デフォルト` "
+"の描画順では最適な結果が得られないかもしれません。以下のパラメータを制御することができます:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:412
+msgid ""
+":guilabel:`Strength`: increases the contrast, allowing for better depth "
+"perception"
+msgstr ":guilabel:`強度`: コントラストを増加し、奥行き感を与えます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:413
+msgid ""
+":guilabel:`Distance`: represents the distance of the used pixels off the "
+"center pixel and has the effect of making edges thicker."
+msgstr ":guilabel:`距離`: 中心ピクセルからの使用ピクセルの距離を表し、エッジを太くする効果があります。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:420
+msgid "3D View Properties"
+msgstr "3Dビュープロパティ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:422
+msgid ""
+"In the |3d| :guilabel:`3D View` tab you can make the settings for the "
+"rendering of the point cloud in 3D maps."
+msgstr "|3d| :guilabel:`3Dビュー` タブでは、3Dマップでの点群のレンダリングの設定を行うことができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:426
+msgid "3D Rendering modes"
+msgstr "3Dレンダリングモード"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:428
+msgid ""
+"Following options can be selected from the drop down menu at the top of the "
+"tab:"
+msgstr "タブ上部のドロップダウンメニューから以下のオプションが選択できます："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:430
+msgid ":guilabel:`No Rendering`: Data are not displayed"
+msgstr ":guilabel:`レンダリングしない`: データは表示されません"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:431
+msgid ""
+":guilabel:`Follow 2D Symbology`: Syncs features rendering in 3D with "
+":ref:`symbology assigned in 2D <point_clouds_rendering_types>`"
+msgstr ""
+":guilabel:`2Dシンボルに従う`: 3Dの地物レンダリングを :ref:`2Dに割り当てたシンボロジ "
+"<point_clouds_rendering_types>` に合わせます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:433
+msgid ""
+"|singleColor| :guilabel:`Single Color`: All points are displayed in the same"
+" :ref:`color <color-selector>` regardless of attributes"
+msgstr ""
+"|singleColor| :guilabel:`単一色`： すべての点は属性に関係なく同じ :ref:`色 <color-selector>` "
+"で表示されます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:623
+msgid "singleColor"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:435
+msgid ""
+"|singlebandPseudocolor| :guilabel:`Attribute by Ramp`: Interpolates a given "
+"attribute over a color ramp and assigns to features their matching color. "
+"See :ref:`point_cloud_ramp`."
+msgstr ""
+"|singlebandPseudocolor| :guilabel:`ランプによる属性`： "
+"指定された属性をカラーランプで補間し、それにマッチする色を地物に割り当てます。:ref:`point_cloud_ramp` を参照。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:438
+msgid ""
+"|multibandColor| :guilabel:`RGB`: Use different attributes of the features "
+"to set the Red, Green and Blue color components to assign to them. See "
+":ref:`point_cloud_rgb`."
+msgstr ""
+"|multibandColor| :guilabel:`RGB`： "
+"地物に割り当てる赤、緑、青の色成分を設定するために、地物の異なる属性を使います。:ref:`point_cloud_rgb` を参照。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:441
+msgid ""
+"|paletted| :guilabel:`Classification`: differentiates points by color on the"
+" basis of an attribute. See :ref:`point_cloud_classification`."
+msgstr ""
+"|paletted| :guilabel:`分類`: "
+"属性に基づいてポイントを色で区別します。:ref:`point_cloud_classification` を参照。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:449
+msgid "The point cloud 3D view tab with the classification renderer"
+msgstr "点群3Dビュータブと分類レンダラー"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:452
+msgid "3D Point Symbol"
+msgstr "3D点シンボル"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:454
+msgid ""
+"In the lower part of the |3d| :guilabel:`3D View` tab you can find the "
+":guilabel:`Point Symbol` section. Here you can make general settings for the"
+" entire layer which are the same for all renderers. There are the following "
+"options:"
+msgstr ""
+"|3d| :guilabel:`3Dビュー` タブの下部には :guilabel:`点シンボル` "
+"セクションがある。ここでは全てのレンダラに同じ、レイヤ全体の一般的な設定を行うことができる。以下のオプションがある："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:459
+msgid ""
+":guilabel:`Point size`: The size (in pixels) with which each data point is "
+"displayed can be set"
+msgstr ":guilabel:`点の大きさ`: 各データポイントを表示する大きさ（ピクセル単位で）を設定できます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:461
+msgid ""
+":guilabel:`Maximum screen space error`: By this option you set how dense or "
+"sparse the display of the point cloud will be (in pixels). If you set a "
+"large number (e.g. 10), there will be visible gaps between points; low value"
+" (e.g. 0) could force rendering of unnecessary amount of points, making "
+"rendering slower (you can find more details at :guilabel:`Symbology` "
+":ref:`Maximum error <point_clouds_symbology_maxerror>`)."
+msgstr ""
+":guilabel:`最大画面誤差`： このオプションで、点群の表示を（ピクセル単位で）どの程度密にするか、または疎にするかを設定します。大きな数値（例"
+" 10）を設定すると、点と点の間に目に見える隙間ができます。低い値（例 "
+"0）を設定すると、不必要な量の点をレンダリングすることになり、レンダリングが遅くなります（詳細は :guilabel:`シンボロジ` "
+":ref:`最大エラー <point_clouds_symbology_maxerror>` を参照）。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:467
+msgid ""
+":guilabel:`Point budget`: To avoid long rendering, you can set the maximum "
+"number of points that will be rendered"
+msgstr ":guilabel:`Point budget`： 長時間のレンダリングを避けるために、レンダリングされるポイントの最大数を設定できます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:469
+msgid ""
+"Check |checkbox| :guilabel:`Render as surface (Triangulate)` to render the "
+"point cloud layer in the 3D view with a solid surface obtained by "
+"triangulation. You can control dimensions of the computed triangles:"
+msgstr ""
+"|checkbox| :guilabel:`サーフェス（三角網）としてレンダリング` "
+"をチェックすると、3Dビューの点群レイヤを三角形分割によって得られた平面でレンダリングします。計算された三角形の寸法を制御できます："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:473
+msgid ""
+"|checkbox| :guilabel:`Skip triangles longer than` a threshold value: sets in"
+" the horizontal plan, the maximum length of a side of the triangles to "
+"consider"
+msgstr "|checkbox| :guilabel:`スキップする三角形の幅の下限`: 水平面で、三角形の一辺の長さの最大値を設定します"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:475
+msgid ""
+"|checkbox| :guilabel:`Skip triangles taller than` a threshold value: sets in"
+" the vertical plan, the maximum height of a side of the triangles to "
+"consider"
+msgstr "|checkbox|:guilabel:`スキップする三角形の高さの下限`: 垂直面で、三角形の一辺の高さの最大値を設定します"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:477
+msgid ""
+"|checkbox| :guilabel:`Show bounding boxes`: Especially useful for debugging,"
+" shows bounding boxes of nodes in hierarchy"
+msgstr ""
+"|checkbox| :guilabel:`バウンディングボックスを表示`： 特にデバッグに便利で、階層内のノードのバウンディングボックスを表示します"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:484
+msgid "Rendering Properties"
+msgstr "レンダリングプロパティ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:486
+msgid ""
+"Under the :guilabel:`Scale dependent visibility` group box, you can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scale, "
+"defining a range of scale in which features will be visible. Out of this "
+"range, they are hidden. The |mapIdentification| :sup:`Set to current canvas "
+"scale` button helps you use the current map canvas scale as boundary of the "
+"range visibility. See :ref:`label_scaledepend` for more information."
+msgstr ""
+":guilabel:`縮尺に応じた表示設定` グループボックスの下で、 :guilabel:`最大縮尺（含む）`と "
+":guilabel:`最小縮尺（含まない）` "
+"を設定し、地物を可視とする縮尺の範囲を定義することができます。この範囲外では隠される。|mapIdentification| "
+":sup:`現在のキャンバスが表示している縮尺を設定` ボタンを使うと、現在のマップキャンバスの縮尺を可視範囲の境界として使うことができます。詳しくは "
+":ref:`label_scaledepend` を参照してください。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:607
+msgid "mapIdentification"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:496
+msgid ""
+"You can also activate scale dependent visibility on a layer from within the "
+":guilabel:`Layers` panel: right-click on the layer and in the contextual "
+"menu, select :guilabel:`Set Layer Scale Visibility`."
+msgstr ""
+"レイヤの縮尺に応じた表示は、:guilabel:`レイヤ` パネルからも有効にすることもできます:　レイヤを右クリックし、コンテキストメニューから "
+":guilabel:`レイヤの縮尺表示を設定` を選択します。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:505
+msgid "The point cloud rendering tab"
+msgstr "点群レンダリングタブ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:511
+msgid "Elevation Properties"
+msgstr "高さプロパティ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:513
+msgid ""
+"In the |elevationscale| :guilabel:`Elevation` tab, you can set corrections "
+"for the Z-values of the data. This may be necessary to adjust the elevation "
+"of the data in 3D maps and its appearance in the :ref:`profile tool charts "
+"<label_elevation_profile_view>`. There are following options:"
+msgstr ""
+"|elevationscale| :guilabel:`高さ` "
+"タブでは、データのZ値の補正を設定することができます。これは3Dマップでのデータの標高や、 :ref:`profile tool charts "
+"<label_elevation_profile_view>` での見栄えを調整するために必要かもしれません。以下のオプションがあります："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:518
+msgid "Under :guilabel:`Elevation` group:"
+msgstr ":guilabel:`高さ` グループの下では:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:520
+msgid ""
+"You can set a :guilabel:`Scale`: If ``10`` is entered here, a point that has"
+" a value Z = ``5`` is displayed at a height of ``50``."
+msgstr ""
+":guilabel:`縮尺` を設定することができます: ここに ``10`` を入力すると、Z = ``5`` の点は ``50`` "
+"の高さで表示されます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:522
+msgid ""
+"An :guilabel:`offset` to the z-level can be entered. This is useful to match"
+" different data sources in its height to each other. By default, the lowest "
+"z-value contained in the data is used as this value. This value can also be "
+"restored with the |refresh| :sup:`Refresh` button at the end of the line."
+msgstr ""
+"zレベルに対する :guilabel:`オフセット` "
+"を入力することができます。これは異なるデータソースの高さを一致させるのに便利です。デフォルトでは、データに含まれる最も低いz値がこの値として使用されます。この値は行末の"
+" |refresh| :sup:`Refresh` ボタンで元に戻すこともできます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:617
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:527
+msgid ""
+"Under :guilabel:`Profile Chart Accuracy`, the :guilabel:`Maximum error` "
+"helps you control how dense or sparse the points will be rendered in the "
+"elevation profile. Larger values result in a faster generation with less "
+"points included."
+msgstr ""
+":guilabel:`断面図の精度` の下にある :guilabel:`最大エラー` "
+"は、標高断面図でレンダリングされる点をどの程度密にするか、または疎にするかを制御するのに役立ちます。値を大きくすると、含まれる点が少なくなり、生成が速くなります。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:530
+msgid ""
+"Under :guilabel:`Profile Chart Appearance`, you can control the point "
+"display:"
+msgstr ":guilabel:`断面図の外観` では、点の表示を制御できます："
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:532
+msgid ""
+":guilabel:`Point size`: the size to render the points with, in supported "
+"units (millimeters, map units, pixels, ...)"
+msgstr ":guilabel:`点の大きさ`: サポートされている単位（ミリメートル、地図単位、ピクセル、...）で、点をレンダリングするサイズ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:534
+msgid ""
+":guilabel:`Style`: whether to render the points as :guilabel:`Circle` or "
+":guilabel:`Square`"
+msgstr ":guilabel:`スタイル`: :guilabel:`円` または :guilabel:`四角` のどちらで点をレンダリングするか"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:535
+msgid ""
+"Apply a single :guilabel:`Color` to all the points visible in the profile "
+"view"
+msgstr "単一の :guilabel:`色` を断面図ビューに表示されている全ての点に適用する"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:536
+msgid ""
+"Check |checkbox| :guilabel:`Respect layer's coloring` to instead show the "
+"points with the color assigned via their :ref:`2D symbology "
+"<point_clouds_symbology>`"
+msgstr ""
+"|checkbox| :guilabel:`レイヤーの色に従う` をチェックすると、代わりに :ref:`2D シンボロジ "
+"<point_clouds_symbology>` によって割り当てられた色で点を表示します"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:538
+msgid ""
+"|unchecked| :guilabel:`Apply opacity by distance from curve effect`, "
+"reducing the opacity of points which are further from the profile curve"
+msgstr "|unchecked| :guilabel:`距離に応じた不透明度を適用` は、プロファイル曲線から遠い点の不透明度を下げます"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:635
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:546
+msgid "The point cloud elevation tab"
+msgstr "点群高さタブ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:552
+msgid "Metadata Properties"
+msgstr "メタデータプロパティ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:554
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"|editMetadata| :guilabel:`メタデータ` タブには、レイヤに関するメタデータレポートの作成・編集オプションがあります。詳細は "
+":ref:`metadatamenu` を参照してください。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:562
+msgid "Statistics Properties"
+msgstr "統計量の出力プロパティ"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:564
+msgid ""
+"In the |basicStatistics| :guilabel:`Statistics` tab you can get an overview "
+"of the attributes of your point cloud and their distribution."
+msgstr "|basicStatistics| :guilabel:`統計量の出力` タブでは、点群の属性とその分布の概要を知ることができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:567
+msgid ""
+"At the top you will find the section :guilabel:`Attribute Statistics`. Here "
+"all attributes contained in the point cloud are listed, as well as some of "
+"their statistical values: :guilabel:`Minimum`, :guilabel:`Maximum`, "
+":guilabel:`Mean`, :guilabel:`Standard Deviation`"
+msgstr ""
+"一番上には :guilabel:`属性の統計量` というセクションがあります。ここには点群に含まれる全ての属性と、その統計値の一部が一覧表示されます： "
+":guilabel:`最小値`、:guilabel:`最大`、:guilabel:`平均値`、:guilabel:`標準偏差`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:572
+msgid ""
+"If there is an attribute :guilabel:`Classification`, then there is another "
+"table in the lower section. Here all values contained in the attribute are "
+"listed, as well as their absolute :guilabel:`Count` and relative "
+":guilabel:`%` abundance."
+msgstr ""
+"もし :guilabel:`Classification` "
+"という属性があれば、下のセクションに別の表があります。ここには、その属性に含まれる全ての値と、その絶対的な :guilabel:`カウント` と相対的な"
+" :guilabel:`%` 存在度が一覧にされています。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:582
+msgid "The point cloud statistics tab"
+msgstr "点群 統計量の出力タブ"

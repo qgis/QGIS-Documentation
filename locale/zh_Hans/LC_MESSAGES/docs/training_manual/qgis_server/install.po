@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/qgis_server/install.rst:6
+msgid "|LS| Install QGIS Server"
+msgstr "课: 安装 QGIS Server"
+
+#: ../../docs/training_manual/qgis_server/install.rst:8
+msgid ""
+"**The goal for this lesson:** To learn how to install **QGIS Server** on "
+"Debian Stretch. With negligible variations you can also follow it for any "
+"Debian based distribution like Ubuntu and its derivatives."
+msgstr ""
+"**本课目标:** 了解如何在 Debian Stretch 安装 **QGIS Server** 。您也可以在任何基于Debian的发行版 "
+"(如Ubuntu及其衍生系统) 中安装与使用，只是有点微不足道的差异。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:12
+msgid ""
+"In Ubuntu you can use your regular user, prepending ``sudo`` to commands "
+"requiring admin permissions. In Debian you can work as admin (``root``), "
+"without using ``sudo``."
+msgstr ""
+"在Ubuntu中，您可以是普通用户身份，并在使用 ``sudo`` 命令时获取管理员权限。在Debian中，您可以作为管理员 (``root``) "
+"工作，而无需使用 ``sudo`` 。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:17
+msgid "|moderate| |FA| Install from packages"
+msgstr "|moderate| 跟我做: 从软件包安装"
+
+#: ../../docs/training_manual/qgis_server/install.rst:149
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:19
+msgid ""
+"In this lesson we're going to do only the install from packages as shown "
+"`here <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ ."
+msgstr ""
+"在本课，我们将只从 `此处 <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_"
+"  所示的软件包中进行安装。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:22
+msgid "Install QGIS Server with:"
+msgstr "安装 QGIS Server 使用："
+
+#: ../../docs/training_manual/qgis_server/install.rst:31
+msgid ""
+"QGIS Server should be used in production without QGIS Desktop (with the "
+"accompanying X Server) installed on the same machine."
+msgstr "QGIS Server 不应与 QGIS Desktop (以及附带的X服务器) 安装在同一台机器的情况下用于生产环境。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:35
+msgid "|moderate| |FA| QGIS Server Executable"
+msgstr "|moderate| 跟我做: QGIS Server 可执行文件"
+
+#: ../../docs/training_manual/qgis_server/install.rst:37
+msgid ""
+"The QGIS Server executable is ``qgis_mapserv.fcgi``. You can check where it "
+"has been installed by running ``find / -name 'qgis_mapserv.fcgi'`` which "
+"should output something like ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``."
+msgstr ""
+"QGIS Server 可执行文件是 ``qgis_mapserv.fcgi`` 。您可以通过运行 ``find / -name "
+"'qgis_mapserv.fcgi'`` 来检查它的安装位置，应该输出如 ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``"
+" 这样的内容。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:41
+msgid ""
+"Optionally, if you want to do a command line test at this time you can run "
+"the ``/usr/lib/cgi-bin/qgis_mapserv.fcgi --version`` command which should "
+"output something like:"
+msgstr ""
+"或者，如果此时要执行命令行测试，可以运行 ``/usr/lib/cgi-bin/qgis_mapserv.fcgi --version`` "
+"命令，应该输出如下内容："
+
+#: ../../docs/training_manual/qgis_server/install.rst:59
+msgid "We'll see later on how to make WMS requests."
+msgstr "稍后我们将了解如何发出WMS请求。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:62
+msgid "|hard| HTTP Server Configuration"
+msgstr "|hard| HTTP Server 配置"
+
+#: ../../docs/training_manual/qgis_server/install.rst:148
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:64
+msgid ""
+"In order to access on the installed QGIS server from an Internet Browser we "
+"need to use an HTTP server. The Apache HTTP Server installation process is "
+"detailed in :ref:`httpserver` section."
+msgstr ""
+"为了从互联网浏览器访问已安装的QGIS服务器，我们需要使用HTTP服务器。Apache HTTP服务器的安装方法在 :ref:`httpserver` "
+"一节中有详细说明。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:69
+msgid ""
+"If you installed QGIS Server without running an X Server (included in Linux "
+"Desktop) and if you also want to use the ``GetPrint`` command then you "
+"should install a fake X Server and tell QGIS Server to use it. You can do "
+"that by following the :ref:`Xvfb installation process <xvfb>`."
+msgstr ""
+"如果安装 QGIS Server 时没有运行 X 服务器 (包含在 Linux Desktop 中)，并且还想使用 ``GetPrint`` "
+"命令，那么应该安装一个模拟 X 服务器，并告诉QGIS服务器使用它。您可以通过学习 :ref:`Xvfb安装方法 <xvfb>` 来实现。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:76
+msgid "|moderate| |FA| Create another virtual host"
+msgstr "|moderate| 跟我做: 创建另一个虚拟主机"
+
+#: ../../docs/training_manual/qgis_server/install.rst:78
+msgid ""
+"Let's create another Apache virtual host pointing to QGIS Server. You can "
+"choose whatever name you like (``coco.bango``, ``super.duper.training``, "
+"``example.com``, etc.) but for simplicity sake we're going to use "
+"``myhost``."
+msgstr ""
+"让我们创建另一个指向QGIS服务器的Apache虚拟主机。可以选择任何您喜欢的名称 (``coco.bango``, "
+"``super.duper.training``, ``example.com`` 等等)，但为了简单起见，我们将使用 ``myhost`` 。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:82
+msgid ""
+"Let's set up the ``myhost`` name to point to the localhost IP by adding "
+"``127.0.0.1 x`` to the :file:`/etc/hosts` with the following command: ``sh "
+"-c \"echo '127.0.0.1 myhost' >> /etc/hosts\"`` or by manually editing the "
+"file with ``gedit /etc/hosts``."
+msgstr ""
+"让我们使用以下命令: ``sh -c \"echo '127.0.0.1 myhost' >> /etc/hosts\"`` ，或手动编辑文件 "
+"``gedit /etc/hosts`` ，将 ``127.0.0.1 x`` 添加到 :file:`/etc/hosts` 来设置 "
+"``myhost`` 名称以指向本地主机IP。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:86
+msgid ""
+"We can check that ``myhost`` points to the localhost by running in the "
+"terminal the  ``ping myhost`` command which should output:"
+msgstr "可以通过在终端运行 ``ping myhost`` 命令来检查 ``myhost`` 是否指向本地主机，该命令应输出："
+
+#: ../../docs/training_manual/qgis_server/install.rst:96
+msgid ""
+"Let's try if we can access QGIS Server from the ``myhost`` site by doing: "
+"``curl http://myhost/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url "
+"from your Debian box browser. You will probably get:"
+msgstr ""
+"让我们尝试一下是否可以通过执行以下命令从 ``myhost`` 站点访问QGIS服务器: ``curl http://myhost/cgi-"
+"bin/qgis_mapserv.fcgi`` 或者从 Debian box 浏览器访问URL。您可能会得到："
+
+#: ../../docs/training_manual/qgis_server/install.rst:112
+msgid ""
+"Apache doesn't know that he's supposed to answer requests pointing to the "
+"server named ``myhost``. In order to setup the virtual host the simplest way"
+" would be to make a ``myhost.conf`` file in the :file:`/etc/apache2/sites-"
+"available` directory that has the same content as :file:`qgis.demo.conf` "
+"except for the ``ServerName`` line that should be ``ServerName myhost``. You"
+" could also change where the logs go as otherwise the logs for the two "
+"virtual hosts would be shared but this is optional."
+msgstr ""
+"Apache不知道他应该回答指向名为 ``myhost`` 服务器的请求。为了设置虚拟主机，最简单的方法是在 "
+":file:`/etc/apache2/sites-available` 目录中创建一个 ``myhost.conf`` 文件，其内容与 "
+":file:`qgis.demo.conf` 相同，但 ``ServerName`` 行应为 ``ServerName myhost`` "
+"。您还可以更改日志的位置，否则两个虚拟主机的日志将被共享，但这是可选的。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:119
+msgid ""
+"Let's now enable the virtual host with ``a2ensite myhost.conf`` and then "
+"reload the Apache service with ``service apache2 reload``."
+msgstr ""
+"现在让我们使用 ``a2ensite myhost.conf`` 启用虚拟主机，然后使用 ``service apache2 reload`` "
+"重新加载Apache服务。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:121
+msgid ""
+"If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url "
+"you'll notice everything is working now!"
+msgstr "如果您再次尝试访问 http://myhost/cgi-bin/qgis_mapserv.fcgi URL，您会注意到现在一切正常！"
+
+#: ../../docs/training_manual/qgis_server/install.rst:125
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:127
+msgid ""
+"You learned how to install different QGIS Server versions from packages, how"
+" to configure Apache with QGIS Server, on Debian based Linux distros."
+msgstr "您学习了如何从软件包中安装不同的QGIS服务器版本，如何在基于Debian的Linux发行版使用QGIS服务器配置Apache。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:131
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:133
+msgid ""
+"Now that you've installed QGIS Server and it's accessible through the HTTP "
+"protocol, we need to learn how to access some of the services it can offer. "
+"The topic of the next lesson is to learn how to access QGIS Server WMS "
+"services."
+msgstr ""
+"现在您已经安装了QGIS服务器，并且可以通过HTTP协议访问，我们需要了解如何访问它可以提供的一些服务。下一课的主题是学习如何访问 QGIS "
+"Server WMS 服务。"

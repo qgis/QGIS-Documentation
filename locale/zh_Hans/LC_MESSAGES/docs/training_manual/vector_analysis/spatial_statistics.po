@@ -1,0 +1,700 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:2
+msgid "|LS| Spatial Statistics"
+msgstr "课: 空间统计"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:4
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr "本课程由 Linfiniti 和S Motala 开发 (Cape Peninsula University of Technology)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:7
+msgid ""
+"Spatial statistics allows you to analyze and understand what is going on in "
+"a given vector dataset. QGIS includes many useful tools for statistical "
+"analysis."
+msgstr "空间统计允许您分析和理解给定矢量数据集中发生的情况。QGIS包括许多有用的统计分析工具。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:11
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools within the :guilabel:`Processing Toolbox`."
+msgstr "**本课目标:** 了解如何在 :guilabel:`处理工具箱` 中使用QGIS的空间统计工具。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:15
+msgid "|basic| |FA| Create a Test Dataset"
+msgstr "|basic| 跟我做: 创建测试数据集"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:391
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:17
+msgid "We will create a random set of points, to get a dataset to work with."
+msgstr "我们将创建一组随机点，以获取要使用的数据集。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:19
+msgid ""
+"To do so, you will need a polygon dataset to define the area you want to "
+"create the points in."
+msgstr "为此，您需要一个多边形数据集来定义要在其中创建点的区域。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:22
+msgid "We will use the area covered by streets."
+msgstr "我们将使用覆盖街道的区域。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:24
+msgid "Start a new project"
+msgstr "开始一个新工程"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:25
+msgid ""
+"Add your ``roads`` dataset, as well as ``srtm_41_19`` (elevation data) found"
+" in :file:`exercise_data/raster/SRTM/`."
+msgstr ""
+"添加 ``roads`` 数据集，以及在 :file:`exercise_data/raster/SRTM/` 中找到的 ``srtm_41_19`` "
+"(高程数据)。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:28
+msgid ""
+"You might find that the SRTM DEM layer has a different CRS to that of the "
+"roads layer. QGIS is reprojecting both layers in a single CRS. For the "
+"following exercises this difference does not matter, but feel free to "
+"reproject (as shown earlier in this module)."
+msgstr ""
+"您可能会发现 SRTM DEM "
+"图层与roads图层的CRS不同，QGIS正在一个CRS中重投影这两个图层。对于以下练习，这种差异并不重要，但可以随意重投影 (如本单元前面所示)。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:34
+msgid "Open :guilabel:`Processing` toolbox"
+msgstr "打开 :guilabel:`处理` 工具箱"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:35
+msgid ""
+"Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool "
+"to generate an area enclosing all the roads by selecting ``Convex Hull`` as "
+"the :guilabel:`Geometry Type`:"
+msgstr ""
+"使用 :menuselection:`矢量几何图形 --> 最小边界几何图形` 工具，选择 ``凸包`` 作为 :guilabel:`几何图形类型` "
+"，生成包围所有道路的区域："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:43
+msgid ""
+"As you know, if you don't specify the output, *Processing* creates temporary"
+" layers. It is up to you to save the layers immediately or at a later stage."
+msgstr "如您所知，如果未指定输出， *处理工具* 将创建临时图层。由您决定是否立即或在后期保存图层。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:48
+msgid "Creating random points"
+msgstr "创建随机点"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:50
+msgid ""
+"Create 100 random points in this area using the tool at "
+":menuselection:`Vector Creation --> Random points in layer bounds`, with a "
+"minimum distance of ``0.0``:"
+msgstr ""
+"使用 :menuselection:`矢量创建 --> 图层边界内生成随机点` 工具在该区域创建100个随机点，最小距离为 ``0.0`` ："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:57
+msgid ""
+"The yellow warning sign tells you that that parameter concerns distances. "
+"The :guilabel:`Bounding geometry` layer is in a Geographical Coordinate "
+"System and the algorithm is just reminding you this. For this example we "
+"won't use this parameter so you can ignore it."
+msgstr ""
+"黄色警告标志告诉您该参数与距离有关，算法只是提醒您 :guilabel:`边界几何图形` "
+"图层位于地理坐标系中。在本示例，我们不使用此参数，因此您可以忽略。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:64
+msgid ""
+"If needed, move the generated random point to the top of the legend to see "
+"them better:"
+msgstr "如果需要，将生成随机点的图层移到图例顶部，以便更好地查看它们："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:71
+msgid "Sampling the data"
+msgstr "数据采样"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:73
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":menuselection:`Raster Analysis --> Sample raster values` algorithm. This "
+"tool samples the raster at the locations of the points and adds the raster "
+"values in new field(s) depending on the number of bands in the raster."
+msgstr ""
+"要从栅格创建采样数据集，需要使用 :menuselection:`栅格分析 --> 对栅格值取样` "
+"算法。此工具在点的位置对栅格进行采样，并根据栅格中的波段数在新字段中添加栅格值。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:77
+msgid "Open the :guilabel:`Sample raster values` algorithm dialog"
+msgstr "打开 :guilabel:`对栅格值取样` 算法对话框"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:78
+msgid ""
+"Select ``Random_points`` as the layer containing sampling points, and the "
+"SRTM raster as the band to get values from. The default name of the new "
+"field is ``rvalue_N``, where ``N`` is the number of the raster band. You can"
+" change the name of the prefix if you want."
+msgstr ""
+"选择 ``随机点`` 作为包含采样点的图层，选择SRTM栅格作为要从中获取值的波段。新字段的默认名称为 ``rvalue_N`` ，其中 ``N`` "
+"是栅格波段的编号。如果需要，可以更改前缀的名称。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:87
+msgid "Press :guilabel:`Run`"
+msgstr "按 :guilabel:`运行`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:89
+msgid ""
+"Now you can check the sampled data from the raster file in the attribute "
+"table of the ``Sampled Points`` layer. They will be in a new field with the "
+"name you have chosen."
+msgstr "现在，可以在 ``Sampled Points`` 图层的属性表检查栅格文件中的采样数据。它们位于您选择名称的新字段中。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:93
+msgid "A possible sample layer is shown here:"
+msgstr "此处显示了可能出现的采样图层："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:98
+msgid ""
+"The sample points are classified using the ``rvalue_1`` field such that red "
+"points are at a higher altitude."
+msgstr "使用 ``rvalue_1`` 字段对采样点进行分类，使红色点位于较高的高度。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:101
+msgid ""
+"You will be using this sample layer for the rest of the statistical "
+"exercises."
+msgstr "您将在剩余的统计练习中使用此采样图层。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:105
+msgid "|basic| |FA| Basic Statistics"
+msgstr "|basic| 跟我做: 基本统计"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:107
+msgid "Now get the basic statistics for this layer."
+msgstr "现在获取该图层的基本统计信息。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:109
+msgid ""
+"Click on the |sum| :sup:`Show statistical summary` icon in the "
+":guilabel:`Attributes Toolbar`. A new panel will pop up."
+msgstr "单击 :guilabel:`属性工具栏` 中的 |sum| :sup:`显示统计汇总` 图标，将弹出新面板。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:399
+msgid "sum"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:112
+msgid ""
+"In the dialog that appears, specify the ``Sampled Points`` layer as the "
+"source."
+msgstr "在出现的对话框中，指定 ``Sampled Points`` 图层作为源。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:114
+msgid ""
+"Select the *rvalue_1* field in the field combo box. This is the field you "
+"will calculate statistics for."
+msgstr "在字段组合框中选择 *rvalue_1* 字段。这是您用于计算统计数据的字段。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:116
+msgid ""
+"The :guilabel:`Statistics` Panel will be automatically updated with the "
+"calculated statistics:"
+msgstr ":guilabel:`统计` 面板将自动更新计算出的统计数据："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:122
+msgid ""
+"You can copy the values by clicking on the |editCopy| :sup:`Copy Statistics "
+"To Clipboard` button and paste the results into a spreadsheet."
+msgstr "您可以通过单击 |editCopy| :sup:`复制统计数据到剪贴板` 按钮来复制这些值，并将结果粘贴到电子表格。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:392
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:126
+msgid "Close the :guilabel:`Statistics` Panel when done"
+msgstr "完成后关闭 :guilabel:`统计` 面板"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:128
+msgid "Many different statistics are available:"
+msgstr "有许多不同的统计数据可用："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "Count"
+msgstr "计数"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "The number of samples/values."
+msgstr "采样或值的数量。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "Sum"
+msgstr "总和"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "The values added together."
+msgstr "这些值相加之和。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:138
+msgid "Mean"
+msgstr "均值"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:137
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"number of values."
+msgstr "均值 (平均值) 就是值的总和除以值的个数。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:143
+msgid "Median"
+msgstr "中值"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:141
+msgid ""
+"If you arrange all the values from smallest to greatest, the middle value "
+"(or the average of the two middle values, if N is an even number) is the "
+"median of the values."
+msgstr "如果将所有值按最小到最大顺序进行排列，中间值 (或两个中间值的平均值，如果N是偶数) 是这些值的中值。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:150
+msgid "St Dev (pop)"
+msgstr "标准差 (pop)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:146
+msgid ""
+"The standard deviation. Gives an indication of how closely the values are "
+"clustered around the mean. The smaller the standard deviation, the closer "
+"values tend to be to the mean."
+msgstr "标准差，指示值围绕均值聚合的紧密程度。标准差越小，值越接近均值。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "Minimum"
+msgstr "最小值"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "The minimum value."
+msgstr "最小的值。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "Maximum"
+msgstr "最大值"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "The maximum value."
+msgstr "最大的值。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
+msgid "Range"
+msgstr "范围"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
+msgid "The difference between the minimum and maximum values."
+msgstr "最小值和最大值之间的差。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "Q1"
+msgstr "Q1"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "First quartile of the data."
+msgstr "数据的第一四分位数。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Q3"
+msgstr "Q3"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Third quartile of the data."
+msgstr "数据的第三四分位数。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:169
+msgid "Missing (null) values"
+msgstr "缺失 (空) 值"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:168
+msgid "The number of missing values."
+msgstr "缺失值的数量。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:172
+msgid "|basic| |FA| Compute statistics on distances between points"
+msgstr "|basic| 跟我做: 计算点之间距离的统计信息"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:174
+msgid "Create a new temporary point layer."
+msgstr "创建新的临时点图层。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:175
+msgid ""
+"Enter edit mode, and digitize three points somewhere among the other points."
+msgstr "进入编辑模式，在其他点中的某个位置数字化三个点。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:178
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only **three** points."
+msgstr "或者，使用与之前相同的随机点生成方法，但仅指定 **三个** 点。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:180
+msgid ""
+"Save your new layer as :guilabel:`distance_points` in the format you prefer."
+msgstr "以您喜欢的格式将新图层保存为 :guilabel:`distance_points` 。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:183
+msgid ""
+"To generate statistics on the distances between points in the two layers:"
+msgstr "要生成两个图层中的点之间距离的统计数据，请执行以下操作："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:186
+msgid "Open the :menuselection:`Vector Analysis --> Distance matrix` tool."
+msgstr "打开 :menuselection:`矢量分析 --> 距离矩阵` 工具。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:187
+msgid ""
+"Select the ``distance_points`` layer as the input layer, and the ``Sampled "
+"Points`` layer as the target layer."
+msgstr "选择 ``distance_points`` 图层作为输入点图层，选择 ``Sampled Points`` 图层作为目标点图层。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:189
+msgid "Set it up like this:"
+msgstr "设置如下："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:194
+msgid ""
+"If you want you can save the output layer as a file or just run the "
+"algorithm and save the temporary output layer later."
+msgstr "如果需要，可以将输出图层另存为文件，或者运行算法后再保存临时输出图层。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:196
+msgid "Click :guilabel:`Run` to generate the distance matrix layer."
+msgstr "单击 :guilabel:`运行` 生成距离矩阵图层。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:197
+msgid ""
+"Open the attribute table of the generated layer: values refer to the "
+"distances between the :guilabel:`distance_points` features and their two "
+"nearest points in the :guilabel:`Sampled Points` layer:"
+msgstr ""
+"打开生成的图层属性表：值是指 :guilabel:`distance_points` 要素与其在 :guilabel:`Sampled Points` "
+"图层中两个最近点之间的距离："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:204
+msgid ""
+"With these parameters, the *Distance Matrix* tool calculates distance "
+"statistics for each point of the input layer with respect to the nearest "
+"points of the target layer. The fields of the output layer contain the mean,"
+" standard deviation, minimum and maximum for the distances to the nearest "
+"neighbors of the points in the input layer."
+msgstr ""
+"利用这些参数， *距离矩阵* "
+"工具计算输入图层每个点相对于目标图层最近点的距离统计数据。输出图层的字段包含输入图层中的点的最邻近距离的均值、标准差、最小值和最大值。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:213
+msgid "|basic| |FA| Nearest Neighbor Analysis (within layer)"
+msgstr "|basic| 跟我做: 最近邻分析 (图层内)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:215
+msgid "To do a nearest neighbor analysis of a point layer:"
+msgstr "要对点图层进行最近邻分析，请执行以下操作："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:217
+msgid "Choose :menuselection:`Vector analysis --> Nearest neighbor analysis`."
+msgstr "选择 :menuselection:`矢量分析 --> 最近邻分析` 。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:219
+msgid ""
+"In the dialog that appears, select the :guilabel:`Random points` layer and "
+"click :guilabel:`Run`."
+msgstr "在出现的对话框中，选择 :guilabel:`Random points` 图层，然后单击 :guilabel:`运行` 。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:221
+msgid ""
+"The results will appear in the Processing :guilabel:`Result Viewer` Panel."
+msgstr "结果将显示在 :guilabel:`结果查看器` 面板。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:227
+msgid "Click on the blue link to open the ``html`` page with the results:"
+msgstr "单击蓝色链接打开 ``html`` 页面的结果："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:233
+msgid "|basic| |FA| Mean Coordinates"
+msgstr "|basic| 跟我做: 平均坐标"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:235
+msgid "To get the mean coordinates of a dataset:"
+msgstr "要获取数据集的平均坐标，请执行以下操作："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:237
+msgid "Start :menuselection:`Vector analysis --> Mean coordinate(s)`"
+msgstr "启动 :menuselection:`矢量分析 --> 平均坐标`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:238
+msgid ""
+"In the dialog that appears, specify :guilabel:`Random points` as "
+":guilabel:`Input layer`, and leave the optional choices unchanged."
+msgstr "在出现的对话框中，将 :guilabel:`Random points` 指定为 :guilabel:`输入图层` ，其他可选选项不变。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:240
+msgid "Click :guilabel:`Run`."
+msgstr "单击 :guilabel:`运行` 。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:242
+msgid ""
+"Let us compare this to the central coordinate of the polygon that was used "
+"to create the random sample."
+msgstr "让我们将其与用于创建随机采样的多边形中心坐标进行比较。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:245
+msgid "Start :menuselection:`Vector geometry --> Centroids`"
+msgstr "启动 :menuselection:`矢量几何图形 --> 质心`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:246
+msgid ""
+"In the dialog that appears, select ``Bounding geometry`` as the input layer."
+msgstr "在出现的对话框中，选择 ``Bounding geometry - 边界几何图形`` 作为输入图层。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:249
+msgid ""
+"As you can see, the mean coordinates (pink point) and the center of the "
+"study area (in green) don't necessarily coincide."
+msgstr "如您所见，平均坐标 (粉红点) 和研究区域的中心 (绿色) 不一定重叠。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:252
+msgid ""
+"The centroid is the barycenter of the layer (the barycenter of a square is "
+"the center of the square) while the mean coordinates represent the average "
+"of all node coordinates."
+msgstr "质心是图层的重心 (正方形的重心是正方形的中心)，而平均坐标表示所有结点坐标的平均值。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:260
+msgid "|basic| |FA| Image Histograms"
+msgstr "|basic| 跟我做: 图像直方图"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:262
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer "
+"(raster dataset)."
+msgstr ""
+"数据集的直方图显示其值的分布。在QGIS中演示这个最简单方法是通过图像直方图，可以在任何图像图层 (栅格数据集) 的 :guilabel:`图层属性` "
+"对话框中找到。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:267
+msgid ""
+"In your :guilabel:`Layers` panel, right-click on the ``srtm_41_19`` layer"
+msgstr "在 :guilabel:`图层` 面板，右键单击 ``srtm_41_19`` 图层"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:269
+msgid "Select :menuselection:`Properties`"
+msgstr "选择 :menuselection:`属性`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:270
+msgid ""
+"Choose the :guilabel:`Histogram` tab. You may need to click on the "
+":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
+" graph that shows the frequency distribution for the raster values."
+msgstr ""
+"选择 :guilabel:`直方图` 选项卡。您可能需要单击 :guilabel:`计算直方图` "
+"按钮来生成图形。您将看到一个显示栅格值的频率分布的图表。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:279
+msgid ""
+"The graph can be exported as an image with the |fileSave| :sup:`Save plot` "
+"button"
+msgstr "可以使用 |fileSave| :sup:`保存图` 按钮将图表导出为图像"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:394
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:282
+msgid ""
+"You can see more detailed information about the layer in the "
+":guilabel:`Information` tab (the mean and max values are estimated, and may "
+"not be exact)."
+msgstr "您可以在 :guilabel:`信息` 选项卡中查看有关该图层的更多详细信息 (平均值和最大值是估算值，可能不准确)。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:286
+msgid ""
+"The mean value is ``332.8`` (estimated to 324.3), and the maximum value is "
+"``1699`` (estimated to 1548)! You can zoom in the histogram. Since there are"
+" a lot of pixels with value ``0``, the histogram looks compressed "
+"vertically. By zooming in to cover everything but the peak at ``0``, you "
+"will see more details:"
+msgstr ""
+"平均值是 ``332.8`` (估算为324.3)，最大值是 ``1699`` (估算为1548)！您可以放大直方图。因为有很多像素的值为 ``0`` "
+"，所以直方图看起来是垂直压缩的。通过放大以覆盖除 ``0`` 处峰值以外的所有内容，您将看到更多信息："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:297
+msgid ""
+"If the mean and maximum values are not the same as above, it can be due to "
+"the min/max value calculation. Open the :guilabel:`Symbology` tab and expand"
+" the :guilabel:`Min / Max Value Settings` menu. Choose "
+"|radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`."
+msgstr ""
+"如果平均值和最大值与上述不同，可能是由于最小值/最大值的计算。打开 :guilabel:`符号化` 选项卡并展开 "
+":guilabel:`最小/最大值设置` 菜单，选择 |radioButtonOn|:guilabel:`最小值/最大值` 并单击 "
+":guilabel:`应用` 。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:397
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:304
+msgid ""
+"Keep in mind that a histogram shows you the distribution of values, and not "
+"all values are necessarily visible on the graph."
+msgstr "请记住，直方图显示值的分布，并非所有值必须在图表上可见。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:309
+msgid "|basic| |FA| Spatial Interpolation"
+msgstr "|basic| 跟我做: 空间插值"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:311
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`Sampled points` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr ""
+"假设有一个采样点集合，您希望从中推测数据。例如，您可以访问我们之前创建的 :guilabel:`Sampled points` "
+"数据集，并且希望对地形有所了解。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:317
+msgid ""
+"To start, launch the :menuselection:`GDAL --> Raster analysis --> Grid (IDW "
+"with nearest neighbor searching)` tool in the :guilabel:`Processing "
+"Toolbox`."
+msgstr ""
+"首先，在 :guilabel:`处理工具箱` 中启动 :menuselection:`GDAL --> 栅格分析 --> 网格化 "
+"(最近邻搜索反距离权重法)` 工具。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:320
+msgid "For :guilabel:`Point layer` select ``Sampled points``"
+msgstr "对于 :guilabel:`点图层` 请选择 ``Sampled points``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:321
+msgid "Set :guilabel:`Weighting power` to ``5.0``"
+msgstr "将 :guilabel:`加权功率` 设置为 ``5.0``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:322
+msgid ""
+"In :guilabel:`Advanced parameters`, set :guilabel:`Z value from field` to "
+"``rvalue_1``"
+msgstr "在 :guilabel:`高级参数` 中，将 :guilabel:`字段Z值` 设置为 ``rvalue_1``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:324
+msgid "Finally click on :guilabel:`Run` and wait until the processing ends"
+msgstr "最后单击 :guilabel:`运行` 并等待处理结束"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:325
+msgid "Close the dialog"
+msgstr "关闭对话框"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:327
+msgid ""
+"Here is a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr "下面是原始数据集 (左) 与从采样点构建的数据集 (右) 的比较。由于采样点位置的随机性，您的可能看起来有所不同。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:335
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well."
+msgstr "如您所见，100个采样点并不足以获得地形的详细印象。它给出了一个非常笼统的概念，但也可能会产生误导。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:340
+msgid "|moderate| |TY| Different interpolation methods"
+msgstr "|moderate| 试一试 不同的插值方法"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:396
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:342
+msgid "Use the processes shown above to create a set of 10 000 random points"
+msgstr "使用上面显示的流程创建一组 10 000 个随机点"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:345
+msgid ""
+"If the number of points is really big, the processing time can take a long "
+"time."
+msgstr "如果点的数量很大，可能处理时间会很长。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:348
+msgid "Use these points to sample the original DEM"
+msgstr "使用这些点对原始DEM进行采样"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:349
+msgid ""
+"Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this "
+"dataset."
+msgstr "在此数据集上使用 :guilabel:`网格化 (最近邻搜索反距离权重法)` 工具。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:351
+msgid ""
+"Set :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``, "
+"respectively."
+msgstr "将 :guilabel:`加权功率` 和 :guilabel:`平滑` 分别设置为 ``5.0`` 和 ``2.0`` 。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:354
+msgid ""
+"The results (depending on the positioning of your random points) will look "
+"more or less like this:"
+msgstr "结果 (取决于随机点的位置) 大致如下："
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:360
+msgid ""
+"This is a better representation of the terrain, due to the greater density "
+"of sample points. Remember, larger samples give better results."
+msgstr "由于采样点的密度更大，可以更好地表示地形。请记住，采样越多，结果越好。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:366
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:368
+msgid ""
+"QGIS has a number of tools for analyzing the spatial statistical properties "
+"of datasets."
+msgstr "QGIS有许多用于分析数据集空间统计属性的工具。"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:373
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:375
+msgid ""
+"Now that we have covered vector analysis, why not see what can be done with "
+"rasters? That is what we will do in the next module!"
+msgstr "既然已经介绍了矢量分析，为什么不看看用栅格可以做些什么呢？这就是我们在下一单元要学习的内容！"

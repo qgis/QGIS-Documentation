@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:15
+msgid "Reading And Storing Settings"
+msgstr "읽기 및 저장하기 설정"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:18
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:33
+msgid ""
+"Many times it is useful for a plugin to save some variables so that the user"
+" does not have to enter or select them again next time the plugin is run."
+msgstr ""
+"플러그인에 몇몇 변수를 저장하는 것이 유용한 경우가 많습니다. 여러분이 다음에 해당 플러그인을 실행할 때 변수들을 다시 입력하거나 "
+"선택하지 않아도 되기 때문입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:36
+msgid ""
+"These variables can be saved and retrieved with help of Qt and QGIS API. For"
+" each variable, you should pick a key that will be used to access the "
+"variable --- for user's favourite color you could use key "
+"\"favourite_color\" or any other meaningful string. It is recommended to "
+"give some structure to naming of keys."
+msgstr ""
+"Qt 및 QGIS API 덕분에 이런 변수들을 저장하고 가져올 수 있습니다. 각 변수에 대해 해당 변수에 접근하는 데 사용할 키를 "
+"선택해야 합니다 -- 예를 들면 여러분이 가장 선호하는 색상에 대해 \"favourite_color\" 또는 비슷한 의미를 가진 다른 "
+"어떤 문자열도 사용할 수 있습니다. 키를 명명할 때 어떤 기준을 따를 것을 권장합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:41
+msgid "We can differentiate between several types of settings:"
+msgstr "설정을 다음 몇 가지 서로 다른 유형으로 구분할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:45
+msgid ""
+"**global settings** --- they are bound to the user at a particular machine. "
+"QGIS itself stores a lot of global settings, for example, main window size "
+"or default snapping tolerance. Settings are handled using the "
+":class:`QgsSettings <qgis.core.QgsSettings>` class, through for example the "
+":meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() "
+"<qgis.core.QgsSettings.value>` methods."
+msgstr ""
+"**전체 수준 설정(global settings)** -- 이 설정은 특정 머신의 사용자에 종속됩니다. QGIS 자체도 수많은, 예를 "
+"들면 주 윈도우의 크기 또는 기본 스냅 작업 허용 오차와 같은 전체 수준 설정을 저장합니다. 예를 들어 :meth:`setValue() "
+"<qgis.core.QgsSettings.setValue>` 및 :meth:`value() "
+"<qgis.core.QgsSettings.value>` 메소드를 통해 :class:`QgsSettings "
+"<qgis.core.QgsSettings>` 클래스를 사용해서 설정을 처리합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:52
+msgid "Here you can see an example of how these methods are used."
+msgstr "다음은 이런 메소드들을 어떻게 사용하는지 보여주는 예시입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:73
+msgid ""
+"The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>` "
+"method is optional and specifies the default value that is returned if there"
+" is no previous value set for the passed setting name."
+msgstr ""
+":meth:`value() <qgis.core.QgsSettings.value>` 메소드의 두 번째 파라미터는 선택적으로, 전송된 설정 "
+"이름에 대해 이전에 설정한 값이 없을 경우 반환하는 기본값을 지정합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:77
+msgid ""
+"For a method to pre-configure the default values of the global settings "
+"through the  :file:`global_settings.ini` file, see "
+":ref:`deploying_organization` for further details."
+msgstr ""
+":file:`global_settings.ini` 파일을 통해 전체 수준 설정의 기본값들을 사전 설정할 수 있는 메소드에 대해 더 자세히"
+" 알고 싶다면 :ref:`deploying_organization` 을 참조하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:83
+msgid ""
+"**project settings** --- vary between different projects and therefore they "
+"are connected with a project file. Map canvas background color or "
+"destination coordinate reference system (CRS) are examples --- white "
+"background and WGS84 might be suitable for one project, while yellow "
+"background and UTM projection are better for another one."
+msgstr ""
+"**프로젝트 수준 설정** -- 프로젝트에 따라 달라지기 때문에 프로젝트 파일과 연동됩니다. 맵 캔버스 배경색 또는 대상 좌표계 등이 "
+"프로젝트 수준 설정의 예시입니다. 어떤 프로젝트에서는 하얀 배경 및 WGS84가 어울리는 반면 다른 프로젝트에서는 노란 배경 및 UTM "
+"투영 좌표계가 어울리는 경우가 있는 법이죠."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:89
+msgid "An example of usage follows."
+msgstr "다음은 프로젝트 수준 설정 사용의 예시입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:119
+msgid ""
+"As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` "
+"method is used for many data types (integer, string, list), but several "
+"methods exist for reading the setting value back, and the corresponding one "
+"has to be selected for each data type."
+msgstr ""
+"여러분도 알 수 있듯이, 많은 (정수, 문자열, 목록) 데이터 유형에 대해 :meth:`writeEntry() "
+"<qgis.core.QgsProject.writeEntry>` 메소드를 사용하지만, 설정값을 다시 읽어오기 위한 메소드가 몇 가지 "
+"존재하며 각 데이터 유형에 대응하는 메소드를 선택해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:126
+msgid ""
+"**map layer settings** --- these settings are related to a particular "
+"instance of a map layer with a project. They are *not* connected with "
+"underlying data source of a layer, so if you create two map layer instances "
+"of one shapefile, they will not share the settings. The settings are stored "
+"inside the project file, so if the user opens the project again, the layer-"
+"related settings will be there again. The value for a given setting is "
+"retrieved using the :meth:`customProperty() "
+"<qgis.core.QgsMapLayer.customProperty>` method, and can be set using the "
+":meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one."
+msgstr ""
+"**맵 레이어 수준 설정** -- 프로젝트의 맵 레이어 하나의 특정 인스턴스와 관련된 설정입니다. 이 설정은 레이어의 기저 데이터소스와 "
+"연결되지 *않기* 때문에, shapefile 1개의 맵 레이어 인스턴스를 2개 생성하는 경우 이 두 인스턴스는 설정을 공유하지 않을 "
+"것입니다. 맵 레이어 수준 설정은 프로젝트 파일 내부에 저장되기 때문에 여러분이 프로젝트를 다시 열면 레이어 관련 설정도 그대로 불러올 "
+"것입니다. :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` 메소드를 사용해서 지정한 "
+"설정의 값을 가져오고, :meth:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` 메소드를 사용해서 설정할 수 있습니다."

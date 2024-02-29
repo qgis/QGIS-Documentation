@@ -1,0 +1,1173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-29 06:13+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/getting_started.rst:3
+msgid "Getting Started"
+msgstr "시작하기"
+
+#: ../../docs/server_manual/getting_started.rst:12
+msgid "Installation on Debian-based systems"
+msgstr "데비안 기반 시스템에 설치하기"
+
+#: ../../docs/server_manual/getting_started.rst:16
+msgid ""
+"We will give a short and simple installation how-to for a minimal working "
+"configuration on Debian based systems (including Ubuntu and derivatives). "
+"However, many other distributions and OSs provide packages for QGIS Server."
+msgstr ""
+"데비안 기반 (우분투 및 파생판 포함) 시스템 상에서 작동에 필요한 최소한의 환경 설정으로 설치하는 방법을 짧고 간단하게 설명할 "
+"것입니다. 하지만, 다른 많은 리눅스 배포판과 운영 체제도 QGIS 서버 패키지를 제공하고 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:20
+msgid ""
+"In Ubuntu you can use your regular user, prepending ``sudo`` to commands "
+"requiring admin permissions. In Debian you can work as admin (``root``), "
+"without using ``sudo``."
+msgstr ""
+"우분투에서는 운영자(admin) 권한이 필요한 명령어 앞에 ``sudo`` 를 추가하면 일반 사용자도 설치할 수 있습니다. 데비안에서는 "
+"``sudo`` 를 추가할 필요없는 운영자(``root``)로 작업하면 됩니다."
+
+#: ../../docs/server_manual/getting_started.rst:24
+msgid ""
+"Requirements and steps to add official QGIS repositories to install QGIS "
+"Server on a Debian based system are provided in `QGIS installers page "
+"<https://qgis.org/en/site/forusers/alldownloads.html>`_. You may want to "
+"install at least the latest Long Term Release."
+msgstr ""
+"데비안 기반 시스템에 QGIS 서버를 설치하기 위해 공식 QGIS 저장소를 추가하기 위한 요구 사항 및 각 단계는 `QGIS 설치관리자 "
+"페이지 <https://qgis.org/en/site/forusers/alldownloads.html>`_ 를 참고하십시오. 적어도 최신"
+" 장기 지원 버전(Long Term Release) 정도는 설치해야 할 겁니다."
+
+#: ../../docs/server_manual/getting_started.rst:28
+msgid ""
+"Once the target version repository is configured and QGIS Server installed, "
+"you can test the installation with:"
+msgstr ""
+"대상 버전의 저장소를 환경설정하고 QGIS 서버를 설치하고 나면, 다음과 같은 방법으로 제대로 설치됐는지 테스트할 수 있습니다:"
+
+#: ../../docs/server_manual/getting_started.rst:35
+msgid "If you get the following output, the server is correctly installed."
+msgstr "다음과 같이 출력됐다면, 서버가 정확히 설치된 것입니다."
+
+#: ../../docs/server_manual/getting_started.rst:37
+msgid ""
+"Depending on the version of QGIS, you might see slightly different output "
+"reported when you run ``qgis_mapserv.fcgi``."
+msgstr "``qgis_mapserv.fcgi`` 를 실행했을 때 QGIS 버전에 따라 살짝 다른 내용이 출력될 수도 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:55
+msgid ""
+"As seen below, QGIS reports a Status 400 code, which correctly identifies "
+"the request has failed because there is no active http session. This is not "
+"a bug and indicates the server is functioning properly."
+msgstr ""
+"다음 화면에 보이듯이, QGIS가 Status 400 코드를 출력합니다. 이는 활성화된 HTTP 세션이 없기 때문에 요청이 실패했다는 "
+"것을 정확하게 식별한 것입니다. 이 코드는 버그가 아니며, 서버가 제대로 동작하고 있다는 것을 의미합니다."
+
+#: ../../docs/server_manual/getting_started.rst:80
+msgid ""
+"Let's add a sample project. You can use your own, or one from `Training demo"
+" data <https://github.com/qgis/QGIS-Training-Data/>`_:"
+msgstr ""
+"예시 프로젝트를 추가해봅시다. 사용자 데이터를 사용해도 되고, 또는 `예제 데이터 <https://github.com/qgis/QGIS-"
+"Training-Data/>`_ 를 사용해도 됩니다."
+
+#: ../../docs/server_manual/getting_started.rst:92
+msgid ""
+"Of course, you can use your favorite GIS software to open this file and take"
+" a look at the configuration and available layers."
+msgstr "물론 사용자가 선호하는 GIS 소프트웨어로 이 파일을 열고 환경 설정 및 사용할 수 있는 데이터를 살펴봐도 좋습니다."
+
+#: ../../docs/server_manual/getting_started.rst:95
+msgid ""
+"To properly deploy QGIS server you need a HTTP server. Recommended choices "
+"are `Apache <https://httpd.apache.org/docs/>`_ or `NGINX "
+"<https://nginx.org/en/docs/>`__."
+msgstr ""
+"QGIS 서버를 구동하려면 HTTP 서버가 필요합니다. `아파치 <https://httpd.apache.org/docs/>`_ 또는 "
+"`엔진X <https://nginx.org/en/docs/>`_ 를 추천합니다."
+
+#: ../../docs/server_manual/getting_started.rst:103
+msgid "Apache HTTP Server"
+msgstr "아파치 HTTP 서버"
+
+#: ../../docs/server_manual/getting_started.rst:105
+#: ../../docs/server_manual/getting_started.rst:239
+msgid ""
+"In the following, please replace ``qgis.demo`` with the name or IP address "
+"of your server."
+msgstr "다음 예시에서, ``qgis.demo`` 를 사용자 서버의 명칭 또는 IP 주소로 대체해주십시오."
+
+#: ../../docs/server_manual/getting_started.rst:107
+msgid ""
+"Install Apache and `mod_fcgid "
+"<https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:"
+msgstr ""
+"아파치와 `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_ 를 "
+"설치하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:114
+msgid ""
+"You can run QGIS Server on your default website, but let's configure a "
+"`virtualhost <https://httpd.apache.org/docs/2.4/vhosts>`_ specifically for "
+"this, as follows."
+msgstr ""
+"사용자의 기본 웹사이트에서 QGIS 서버를 실행할 수 있지만, 이번 예시에서는 특별히 `virtualhost "
+"<https://httpd.apache.org/docs/2.4/vhosts>`_ 를 다음과 같이 환경 설정해봅시다."
+
+#: ../../docs/server_manual/getting_started.rst:117
+msgid ""
+"In the :file:`/etc/apache2/sites-available` directory, create a file called "
+":file:`qgis.demo.conf`, with this content:"
+msgstr ""
+":file:`/etc/apache2/sites-available` 디렉터리에 다음 내용을 가진 :file:`qgis.demo.conf` "
+"라는 파일을 생성하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:170
+msgid ""
+"Some of the above configuration options are explained in the Server "
+":ref:`environment variables <server_env_variables>` and :ref:`pg_service "
+"file <pg-service-file>` sections."
+msgstr ""
+"서버 :ref:`환경 변수 <server_env_variables>` 절과 ref:`pg_service 파일 <pg-service-"
+"file>` 절에서 앞의 환경 설정 옵션들 가운데 일부를 설명하고 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:174
+msgid ""
+"Let's now create the directories that will store the QGIS Server logs and "
+"the authentication database:"
+msgstr "이제 QGIS 서버 로그 및 인증 데이터베이스를 저장할 디렉터리를 생성해봅시다:"
+
+#: ../../docs/server_manual/getting_started.rst:186
+msgid ""
+"``www-data`` is the Apache user on Debian based systems and we need Apache "
+"to have access to those locations or files. The ``chown www-data...`` "
+"commands change the owner of the respective directories and files to ``www-"
+"data``."
+msgstr ""
+"데비안 기반 시스템에서는 ``www-data`` 가 아파치 사용자이며, 아파치가 앞에서 말한 위치 또는 파일에 접근할 권한을 가져야 "
+"합니다. ``chown www-data...`` 명령어로 ``www-data`` 에게 해당하는 디렉터리와 파일의 권한을 줍니다."
+
+#: ../../docs/server_manual/getting_started.rst:191
+msgid ""
+"We can now enable the virtual host and the ``fcgid`` mod if it's not already"
+" done:"
+msgstr "이미 활성화되어 있지 않다면, 이제 가상 호스트와 ``fcgid`` 모드를 활성화할 수 있습니다:"
+
+#: ../../docs/server_manual/getting_started.rst:198
+msgid "Now restart Apache for the new configuration to be taken into account:"
+msgstr "이제 아파치를 재시작해서 새 환경 설정을 적용하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:204
+#, python-format
+msgid ""
+"Now that Apache knows that he should answer requests to http://qgis.demo we "
+"also need to setup the client system so that it knows who ``qgis.demo`` is. "
+"We do that by adding ``127.0.0.1 qgis.demo`` in the `hosts "
+"<https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file."
+msgstr ""
+"이제 아파치가 http://qgis.demo 에 요청에 대한 응답을 해야 한다는 사실을 알게 됐으니, 아파치가 ``qgis.demo`` "
+"가 어디 있는지 알게 하기 위해 클라이언트 시스템을 설정해줘야 합니다. `hosts "
+"<https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ 파일에 ``127.0.0.1 "
+"qgis.demo`` 한 줄을 추가하면 됩니다."
+
+#: ../../docs/server_manual/getting_started.rst:216
+msgid ""
+"Remember that both the :file:`qgis.demo.conf` and :file:`/etc/hosts` files "
+"should be configured for your setup to work. You can also test the access to"
+" your QGIS Server from other clients on the network (e.g. Windows or macos "
+"machines) by going to their :file:`/etc/hosts` file and point the "
+"``qgis.demo`` name to whatever IP the server machine has on the network (not"
+" ``127.0.0.1`` as it is the local IP, only accessible from the local "
+"machine).  On ``*nix`` machines the :file:`hosts` file is located in "
+":file:`/etc`, while on Windows it's under the "
+":file:`C:\\\\Windows\\\\System32\\\\drivers\\\\etc` directory. Under Windows"
+" you need to start your text editor with administrator privileges before "
+"opening the hosts file."
+msgstr ""
+":file:`qgis.demo.conf` 와 :file:`/etc/hosts` 두 파일 모두 환경 설정돼 있어야 사용자 설정이 작동한다는"
+" 사실을 기억하십시오. 네트워크 상에 있는 다른 클라이언트(예: 윈도우 또는 맥OS 컴퓨터)에서 사용자의 QGIS 서버에 접근할 수 "
+"있는지 점검하려면 다른 클라이언트의 :file:`/etc/hosts` 파일을 찾아 ``qgis.demo`` 이름을 서버의 네트워크 IP를"
+" 가리키도록 변경하십시오. (``127.0.0.1`` 는 로컬 IP이기 때문에 오직 로컬 컴퓨터에서만 접근할 수 있습니다.) "
+"``*닉스`` 컴퓨터의 :file:`hosts` 파일은 :file:`/etc` 디렉터리에 있으며, 윈도우에서는 "
+":file:`C:\\\\Windows\\\\System32\\\\drivers\\\\etc` 에 있습니다. 윈도우 컴퓨터의 경우 호스트 "
+"파일을 열기 전에 사용자 텍스트 편집기를 관리자 권한으로 실행해야 합니다."
+
+#: ../../docs/server_manual/getting_started.rst:228
+msgid ""
+"QGIS Server is now available at http://qgis.demo. To check, type in a "
+"browser, as in the simple case:"
+msgstr ""
+"이제 QGIS 서버가 http://qgis.demo 주소에서 실행되고 있습니다. 이를 점검하려면 웹브라우저에 다음과 같은 간단한 예시를 "
+"입력하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:237
+msgid "NGINX HTTP Server"
+msgstr "엔진X HTTP 서버"
+
+#: ../../docs/server_manual/getting_started.rst:241
+msgid ""
+"You can also use QGIS Server with `NGINX <https://nginx.org/en/docs/>`__. "
+"Unlike Apache, NGINX does not automatically spawn FastCGI processes. The "
+"FastCGI processes are to be started by something else."
+msgstr ""
+"QGIS 서버를 `엔진X <https://nginx.org/en/docs>`_ 로 실행할 수도 있습니다. 아파치와는 달리, "
+"엔진X(NGINX)는 FastCGI 프로세스를 자동으로 스폰(spawn)하지 않습니다. 다른 무언가로 FastCGI 프로세스를 시작시켜야"
+" 합니다."
+
+#: ../../docs/server_manual/getting_started.rst:245
+msgid "Install NGINX:"
+msgstr "엔진X를 설치하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:252
+msgid ""
+"As a first option, you can use **spawn-fcgi** or **fcgiwrap** to start and "
+"manage the QGIS Server processes. Official Debian packages exist for both. "
+"When you have no X server running and you need, for example, printing, you "
+"can use :ref:`xvfb <xvfb>`."
+msgstr ""
+"첫 번째 옵션으로, QGIS 서버 프로세스를 시동하고 관리하는 **spawn-fcgi** 또는 **fcgiwrap** 을 사용할 수 "
+"있습니다. 둘 다 공식 데비안 패키지가 있습니다. 현재 실행중인 X 서버가 없는데 예를 들어 인쇄 등을 해야 하는 경우, "
+":ref:`Xvfb<xvfb>` 를 사용할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:258
+msgid ""
+"Another option is to rely on **Systemd**, the init system for GNU/Linux that"
+" most Linux distributions use today. One of the advantages of this method is"
+" that it requires no other components or processes. It’s meant to be simple,"
+" yet robust and efficient for production deployments."
+msgstr ""
+"또다른 옵션은 **systemd** 에 의존하는 것입니다. 'systemd' 란 오늘날 대부분의 리눅스 배포판이 사용하는 "
+"GNU/Linux 용 init 시스템입니다. 이 방법의 장점 가운데 하나는 다른 요소 또는 프로세스가 필요없다는 점입니다. "
+"'systemd' 은 단순하면서도 신뢰성이 높고 생산 배치(production deployment)에 효율적이라고 여겨지고 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:265
+msgid "NGINX Configuration"
+msgstr "엔진X 환경 설정"
+
+#: ../../docs/server_manual/getting_started.rst:267
+msgid ""
+"The **include fastcgi_params;** used in the previous configuration is "
+"important, as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:"
+msgstr ""
+"앞의 환경 설정에서 쓰인 **include fastcgi_params;** 가 중요한데, "
+":file:`/etc/nginx/fastcgi_params` 에서 파라미터를 추가하기 때문입니다:"
+
+#: ../../docs/server_manual/getting_started.rst:297
+msgid ""
+"Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS "
+"Server. In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you "
+"have to use ``fastcgi_param`` instruction to define these variables as shown"
+" below:"
+msgstr ""
+"이에 더해, QGIS 서버 환경을 설정하는 데 몇몇 :ref:`qgis-server-envvar` 도 사용할 수 있습니다. 엔진X 환경 "
+"설정 파일 :file:`/etc/nginx/nginx.conf` 에서 이런 변수들을 정의하기 위해 다음과 같이 "
+"``fastcgi_param`` 을 사용해야 합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:312
+msgid "FastCGI wrappers"
+msgstr "FastCGI 래퍼"
+
+#: ../../docs/server_manual/getting_started.rst:316
+msgid ""
+"**fcgiwrap** is easier to set up than **spawn-fcgi**, because it's already "
+"wrapped in a Systemd service. But it also leads to a solution that is much "
+"slower than using spawn-fcgi. With fcgiwrap, a new QGIS Server process is "
+"created on each request, meaning that the QGIS Server initialization "
+"process, which includes reading and parsing the QGIS project file, is done "
+"on each request. With spawn-fcgi, the QGIS Server process remains alive "
+"between requests, resulting in much better performance. For that reason, "
+"spawn-fcgi is recommended for production use."
+msgstr ""
+"**fcgiwrap** 설정 작업이 **spawn-fcgi** 보다 쉽습니다. 'fcgiwrap' 이 이미 systemd 서비스에 포함돼"
+" 있기 때문입니다. 그러나 동시에 'spawn-fcgi' 보다 훨씬 느린 솔루션이 되고 맙니다. 'fcgiwrap' 을 사용하면 각 "
+"요청마다 새 QGIS 서버 프로세스를 생성합니다. 다시 말해 각 요청마다 QGIS 프로젝트 파일을 읽고 파싱하는 일을 포함하는 QGIS "
+"서버 초기화 프로세스를 반복한다는 뜻입니다. 'spawn-fcgi' 를 사용하면 각 요청들 사이에 QGIS 서버 프로세스가 살아 있기 "
+"때문에 훨씬 나은 성능을 보여줍니다. 따라서 생산 활용(production use) 관점에서는 'spawn-fcgi' 를 추천합니다."
+
+#: ../../docs/server_manual/getting_started.rst:326
+msgid "spawn-fcgi"
+msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:328
+msgid ""
+"If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
+"fcgi/wiki>`_:"
+msgstr ""
+"`spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-fcgi/wiki>`_ 를 사용하고"
+" 싶다면:"
+
+#: ../../docs/server_manual/getting_started.rst:330
+msgid "The first step is to install the package:"
+msgstr "첫 단계로 해당 패키지를 설치해야 합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:337
+#: ../../docs/server_manual/getting_started.rst:418
+msgid ""
+"Then, introduce the following block in your NGINX server configuration:"
+msgstr "그 다음 사용자의 엔진X 서버 환경 설정에 다음 블록을 추가하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:347
+msgid "And restart NGINX to take into account the new configuration:"
+msgstr "그리고 엔진X를 재시작해서 새 환경 설정을 적용하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:353
+msgid ""
+"Finally, considering that there is no default service file for spawn-fcgi, "
+"you have to manually start QGIS Server in your terminal:"
+msgstr ""
+"마지막으로, 'spawn-fcgi' 용 기본 서비스 파일이 없다는 점을 고려해서 사용자 터미널에서 QGIS 서버를 직접 시작해야 합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:362
+#: ../../docs/server_manual/getting_started.rst:437
+msgid "QGIS Server is now available at http://qgis.demo/qgisserver."
+msgstr "이제 QGIS 서버가 http://qgis.demo/qgisserver 주소에서 실행되고 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:366
+msgid ""
+"When using spawn-fcgi, you may directly define environment variables before "
+"running the server. For example: ``export QGIS_SERVER_LOG_STDERR=1``"
+msgstr ""
+"'spawn-fcgi' 를 사용하는 경우, 서버 실행 전에 환경 변수를 직접 정의할 수도 있습니다. 예: ``export "
+"QGIS_SERVER_LOG_STDERR=1``"
+
+#: ../../docs/server_manual/getting_started.rst:370
+msgid ""
+"Of course, you can add an init script to start QGIS Server at boot time or "
+"whenever you want. For example with **systemd**:"
+msgstr ""
+"물론 부팅 시 또는 원하는 때에 QGIS 서버를 실행하기 위한 init 스크립트를 추가할 수도 있습니다. 예를 들어 **systemd**"
+" 를 사용하는 경우:"
+
+#: ../../docs/server_manual/getting_started.rst:373
+msgid ""
+"Edit the file :file:`/etc/systemd/system/qgis-server.service` with this "
+"content:"
+msgstr ":file:`/etc/systemd/system/qgis-server.service` 파일을 다음 내용으로 편집하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:396
+msgid "Then enable and start the service:"
+msgstr "그리고 서비스를 활성화하고 실행합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:404
+msgid ""
+"With the above commands spawn-fcgi spawns only one QGIS Server process."
+msgstr "위의 명령어는 spawn-fcgi가 단 하나의 QGIS 서버 프로세스만 스폰하도록 합니다."
+
+#: ../../docs/server_manual/getting_started.rst:407
+msgid "fcgiwrap"
+msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:409
+msgid ""
+"Using `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ is "
+"much easier to setup than **spawn-fcgi** but it's much slower."
+msgstr ""
+"`fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ 설정은"
+" **spawn-fcgi** 보다 훨씬 쉽지만 훨씬 느리기도 합니다."
+
+#: ../../docs/server_manual/getting_started.rst:412
+msgid "You first have to install the corresponding package:"
+msgstr "먼저 해당 패키지를 설치해야 합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:430
+msgid ""
+"Finally, restart NGINX and **fcgiwrap** to take into account the new "
+"configuration:"
+msgstr "마지막으로, 엔진X를 재시작해서 새 환경 설정을 적용하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:441
+msgid "Systemd"
+msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:443
+msgid ""
+"QGIS Server needs a running X Server to be fully usable, in particular for "
+"printing. In the case you already have a running X Server, you can use "
+"systemd services."
+msgstr ""
+"QGIS 서버를 완전히 활용하려면, 그 중에서도 인쇄 작업을 하려면 X 서버를 실행해야 합니다. 이미 실행중인 X 서버가 있다면, "
+"systemd 서비스를 사용할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:446
+msgid ""
+"This method, to deploy QGIS Server, relies on two Systemd units to "
+"configure: a `Socket unit "
+"<https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ and"
+" a `Service unit "
+"<https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_."
+msgstr ""
+"이 방법은 QGIS 서버를 구동하기 위한 환경 설정을 위해 `Socket 단위 "
+"<https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ 와 "
+"`Service 단위 "
+"<https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_ "
+"2개의 systemd 단위에 의존합니다."
+
+#: ../../docs/server_manual/getting_started.rst:450
+msgid ""
+"The **QGIS Server Socket unit** defines and creates a file system socket, "
+"used by NGINX to start and communicate with QGIS Server. The Socket unit has"
+" to be configured with ``Accept=false``, meaning that the calls to the "
+"``accept()`` system call are delegated to the process created by the Service"
+" unit. It is located in :file:`/etc/systemd/system/qgis-server@.socket`, "
+"which is actually a template:"
+msgstr ""
+"**QGIS 서버 소켓 단위** 는 엔진X가 QGIS 서버를 실행하고 서버와 통신하는 데 사용하는 파일 시스템 소켓을 정의하고 "
+"생성합니다. 소켓 단위 환경 설정에 ``Accept=false`` 를 추가해야 하는데, ``accept()`` 시스템 호출을 호출하면 "
+"서비스 단위가 생성한 프로세스로 위임한다는 의미입니다. 이 설정은 :file:`/etc/systemd/system/qgis-"
+"server@.socket` 파일에 실제 템플릿으로 저장돼 있습니다:"
+
+#: ../../docs/server_manual/getting_started.rst:473
+msgid "Now enable and start sockets:"
+msgstr "이제 소켓을 활성화하고 실행합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:479
+msgid ""
+"The **QGIS Server Service unit** defines and starts the QGIS Server process."
+" The important part is that the Service process’ standard input is connected"
+" to the socket defined by the Socket unit. This has to be configured using "
+"``StandardInput=socket`` in the Service unit configuration located in "
+":file:`/etc/systemd/system/qgis-server@.service`:"
+msgstr ""
+"**QGIS 서버 서비스 단위** 는 QGIS 서버 프로세스를 정의하고 실행합니다. 중요한 점은 서비스 프로세스의 표준 입력이 소켓 "
+"단위가 정의한 소켓과 연결돼 있다는 점입니다. :file:`/etc/systemd/system/qgis-server@.service` "
+"파일에 있는 서비스 단위 환경 설정에 이 사실을 ``StandardInput=socket`` 을 사용해서 설정해주어야 합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:503
+msgid ""
+"The QGIS Server :ref:`environment variables <qgis-server-envvar>` are "
+"defined in a separate file, :file:`/etc/qgis-server/env`. It could look like"
+" this:"
+msgstr ""
+"QGIS 서버의 :ref:`환경 변수 <qgis-server-envvar>` 는 별개의 :file:`/etc/qgis-"
+"server/env` 파일에 정의돼 있습니다. 다음처럼 보일 것입니다:"
+
+#: ../../docs/server_manual/getting_started.rst:513
+msgid "Now start socket service:"
+msgstr "이제 소켓 서비스를 실행합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:519
+msgid ""
+"Finally, for the NGINX HTTP server, let's introduce the configuration for "
+"this setup:"
+msgstr "마지막으로 이 설정을 위한 엔진X HTTP 서버 환경 설정을 추가하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:540
+msgid "Now restart NGINX for the new configuration to be taken into account:"
+msgstr "이제 엔진X를 재시작해서 새 환경 설정을 적용하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:546
+msgid ""
+"Thanks to Oslandia for sharing `their tutorial "
+"<https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_."
+msgstr ""
+"`예제 <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-"
+"systemd/>`_ 를 공유해준 오슬란디아(Oslandia)에 감사드립니다."
+
+#: ../../docs/server_manual/getting_started.rst:551
+msgid "Xvfb"
+msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:552
+msgid ""
+"QGIS Server needs a running X Server to be fully usable, in particular for "
+"printing. On servers it is usually recommended not to install it, so you may"
+" use ``xvfb`` to have a virtual X environment."
+msgstr ""
+"QGIS 서버를 완전히 활용하려면, 그 중에서도 인쇄 작업을 하려면 X 서버를 실행해야 합니다. 보통 서버에 X 서버 설치를 권장하지 "
+"않기 때문에, 가상 X 환경을 보유하기 위해 ``Xvfb`` 를 사용해야 할 수도 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:556
+msgid ""
+"If you're running the Server in graphic/X11 environment then there is no "
+"need to install xvfb. More info at https://www.itopen.it/qgis-server-setup-"
+"notes/."
+msgstr ""
+"서버가 X11 그래픽 환경에서 실행중이라면 Xvfb를 설치할 필요가 없습니다. https://www.itopen.it/qgis-"
+"server-setup-notes/ 에서 더 자세한 내용을 찾을 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:559
+msgid "To install the package:"
+msgstr "패키지를 설치하려면:"
+
+#: ../../docs/server_manual/getting_started.rst:565
+msgid ""
+"Create the service file, :file:`/etc/systemd/system/xvfb.service`, with this"
+" content:"
+msgstr "다음 내용을 가진 :file:`/etc/systemd/system/xvfb.service` 파일을 생성하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:579
+msgid "Enable, start and check the status of the ``xvfb.service``:"
+msgstr "``xvfb.service`` 를 활성화하고 실행한 다음 상태를 점검합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:586
+msgid ""
+"Then, according to your HTTP server, you should configure the **DISPLAY** "
+"parameter or directly use **xvfb-run**."
+msgstr ""
+"그 다음 사용자의 HTTP 서버에 따라 **DISPLAY** 파라미터를 사용해야 하거나 또는 **xvfb-run** 을 직접 실행해야 "
+"합니다."
+
+#: ../../docs/server_manual/getting_started.rst:589
+msgid "Using Apache:"
+msgstr "아파치 사용하기:"
+
+#: ../../docs/server_manual/getting_started.rst:591
+msgid "Add to your *Fcgid* configuration (see :ref:`httpserver`):"
+msgstr "사용자의 *Fcgid* 환경 설정에 다음을 추가하십시오(:ref:`httpserver` 참조):"
+
+#: ../../docs/server_manual/getting_started.rst:597
+msgid "Restart Apache for the new configuration to be taken into account:"
+msgstr "아파치를 재시작해서 새 환경 설정을 적용하십시오:"
+
+#: ../../docs/server_manual/getting_started.rst:603
+msgid "Using NGINX"
+msgstr "엔진X 사용하기:"
+
+#: ../../docs/server_manual/getting_started.rst:605
+msgid "With spawn-fcgi using ``xvfb-run``:"
+msgstr "spawn-fcgi를 사용하는 경우 ``xvfb-run`` 을 실행합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:613
+msgid ""
+"With the **DISPLAY** environment variable in the HTTP server configuration."
+msgstr "파라미터를 사용하는 경우 HTTP 서버 환경 설정에 **DISPLAY** 환경 변수를 추가합니다."
+
+#: ../../docs/server_manual/getting_started.rst:620
+msgid "Installation on Windows"
+msgstr "윈도우에 설치하기"
+
+#: ../../docs/server_manual/getting_started.rst:624
+msgid ""
+"QGIS Server can also be installed on Windows systems using the 64 bit "
+"version of the OSGeo4W network installer "
+"(https://qgis.org/en/site/forusers/download.html)."
+msgstr ""
+"OSGeo4W 네트워크 설치 파일(https://qgis.org/en/site/forusers/download.html) 64비트 버전을"
+" 이용하면 윈도우 시스템에도 QGIS 서버를 설치할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:627
+msgid "A simple procedure is the following:"
+msgstr "다음과 같은 간단한 과정을 거치면 됩니다:"
+
+#: ../../docs/server_manual/getting_started.rst:629
+msgid "Download and run the OSGeo4W installer"
+msgstr "OSGeo4W 설치 파일을 다운로드한 다음 실행하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:630
+msgid ""
+"Follow the \"Advanced Install\" and install the **QGIS Desktop**, **QGIS "
+"Server** **apache** and **mod_fcgid** packages."
+msgstr ""
+"\"고급 설치(Advanced Install)\"를 선택해서 **QGIS 데스크탑**, **QGIS 서버** **아파치** 및 "
+"**mod_fcgid** 패키지를 설치하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:636
+msgid "Apache is not directly installed as a service on Windows. You need to:"
+msgstr "아파치는 윈도우 상에서 바로 서비스로 설치되지 않습니다. 다음 과정을 거쳐야 합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:638
+msgid ""
+"Right-click the :file:`OSGeo4W.bat` file at the root of the "
+":file:`C:\\\\OSGeo4W64\\\\` folder (if the default installation paths have "
+"been used) and select :guilabel:`Run as administrator`"
+msgstr ""
+"(기본 설치 경로를 사용한 경우) :file:`C:\\\\OSGeo4W64\\\\` 폴더의 루트 위치에 있는 "
+":file:`OSGeo4W.bat` 파일을 오른쪽 클릭한 다음 :guilabel:`Run as administrator` 를 "
+"선택하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:641
+msgid "In the console, run ``apache-install.bat``, which will output"
+msgstr "콘솔에서 ``apache-install.bat`` 을 실행하십시오. 다음과 같은 내용을 출력할 것입니다:"
+
+#: ../../docs/server_manual/getting_started.rst:652
+msgid ""
+"The service is started as you can notice in the report. But the server may "
+"fail to run due to missing custom configuration."
+msgstr ""
+"이 보고서에서 볼 수 있는 바와 같이 서비스가 구동됩니다. 하지만 사용자 지정 환경 설정이 없기 때문에 서버가 실행되지 않을 수도 "
+"있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:654
+msgid ""
+"Edit the :file:`C:\\\\OSGeo4w64\\\\apps\\\\apache\\\\conf\\\\httpd.conf` "
+"file with the following changes (various other combinations are possible):"
+msgstr ""
+":file:`C:\\\\OSGeo4w64\\\\apps\\\\apache\\\\conf\\\\httpd.conf` 파일의 내용을 다음 "
+"변경 사항들로 편집하십시오(다양한 서로 다른 조합도 가능합니다):"
+
+#: ../../docs/server_manual/getting_started.rst:661
+msgid "Purpose"
+msgstr "목적"
+
+#: ../../docs/server_manual/getting_started.rst:662
+msgid "Existing config"
+msgstr "기존 환경 설정"
+
+#: ../../docs/server_manual/getting_started.rst:663
+msgid "Replacement"
+msgstr "대체물"
+
+#: ../../docs/server_manual/getting_started.rst:664
+msgid ""
+"(Optional) Customize the address to listen to using an IP and/or port, You "
+"can and add as many entries as you wish."
+msgstr ""
+"(선택적) IP 그리고/또는 포트를 이용해서 수신할 주소를 사용자 지정합니다. 사용자가 원하는 만큼 많은 항목을 추가할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:675
+msgid "Indicate where to find the script files"
+msgstr "스크립트 파일을 찾을 위치를 나타냅니다."
+
+#: ../../docs/server_manual/getting_started.rst:684
+msgid "Provide permissions on the script folder"
+msgstr "스크립트 폴더에 대한 권한을 제공합니다."
+
+#: ../../docs/server_manual/getting_started.rst:701
+msgid "Enable file extensions to use for script files. Uncomment and complete"
+msgstr "스크립트 파일로 사용할 파일 확장자를 활성화합니다. 주석 처리를 해제하면 됩니다."
+
+#: ../../docs/server_manual/getting_started.rst:709
+msgid "Add more OSGeo4W custom configuration variables"
+msgstr "OSGeo4W 사용자 지정 환경 설정 변수들을 더 많이 추가합니다."
+
+#: ../../docs/server_manual/getting_started.rst:722
+msgid "Restart the Apache web server"
+msgstr "아파치 웹 서버를 재시작하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:728
+msgid ""
+"Open browser window to testing a GetCapabilities request to QGIS Server. "
+"Replace ``localhost:8080`` with the IP and port you set to listen."
+msgstr ""
+"브라우저 창을 열어서 QGIS 서버에 대한 GetCapabilities 요청을 테스트하십시오. ``localhost:8080`` 부분을 "
+"사용자가 수신하도록 설정한 IP 및 포트로 변경하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:735
+msgid ""
+"A :file:`XML` file with the capabilities should be returned. Your server is "
+"ready to use."
+msgstr "케이퍼빌리티를 담은 :file:`XML` 파일이 반환될 것입니다. 사용자 서버를 사용할 준비가 끝났습니다."
+
+#: ../../docs/server_manual/getting_started.rst:743
+msgid "Serve a project"
+msgstr "프로젝트를 서비스하기"
+
+#: ../../docs/server_manual/getting_started.rst:745
+msgid "Now that QGIS Server is installed and running, we just have to use it."
+msgstr "이제 QGIS 서버를 설치하고 실행했으니, 사용만 하면 됩니다."
+
+#: ../../docs/server_manual/getting_started.rst:747
+msgid ""
+"Obviously, we need a QGIS project to work on. Of course, you can fully "
+"customize your project by defining contact information, precise some "
+"restrictions on CRS or even exclude some layers. Everything you need to know"
+" about that is described later in :ref:`Creatingwmsfromproject`."
+msgstr ""
+"당연히, 작업할 QGIS 프로젝트가 필요합니다. 물론 연락처 정보를 정의하고 좌표계에 몇몇 제약 조건을 확실히 하거나 일부 레이어를 "
+"제외하는 등 사용자 프로젝트 전체를 사용자 지정할 수 있습니다. 이 작업에 대해 사용자가 알아야 할 모든 것은 다음 "
+":ref:`Creatingwmsfromproject` 에서 설명하고 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:752
+msgid ""
+"But for now, we are going to use a simple project already configured and "
+"previously downloaded in :file:`/home/qgis/projects/world.qgs`, as described"
+" above."
+msgstr ""
+"그러나 지금 단계에서는 앞에서 설명한 대로 사전에 다운로드한, 환경 설정을 완료한 "
+":file:`/home/qgis/projects/world.qgs` 파일을 통해 간단한 프로젝트를 이용하겠습니다."
+
+#: ../../docs/server_manual/getting_started.rst:755
+msgid ""
+"By opening the project and taking a quick look on layers, we know that 4 "
+"layers are currently available:"
+msgstr "이 프로젝트 파일을 열고 레이어를 살펴보면, 현재 사용 가능한 레이어가 4개 있습니다:"
+
+#: ../../docs/server_manual/getting_started.rst:758
+msgid "airports"
+msgstr "'airports'"
+
+#: ../../docs/server_manual/getting_started.rst:759
+msgid "places"
+msgstr "'places'"
+
+#: ../../docs/server_manual/getting_started.rst:760
+msgid "countries"
+msgstr "'countries'"
+
+#: ../../docs/server_manual/getting_started.rst:761
+msgid "countries_shapeburst"
+msgstr "'countries_shapeburst'"
+
+#: ../../docs/server_manual/getting_started.rst:763
+msgid ""
+"You don't have to understand the full request for now but you may retrieve a"
+" map with some of the previous layers thanks to QGIS Server by doing "
+"something like this in your web browser to retrieve the *countries* layer:"
+msgstr ""
+"서버에 요청하는 방법에 대해 지금 전부 이해할 필요는 없습니다. 그러나 QGIS 서버에서 이 레이어들 가운데 몇 개를 받아올 수도 "
+"있습니다. 사용자의 웹 브라우저에 다음과 같이 입력하면 '*countries*' 레이어를 받아올 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:767
+msgid ""
+"If you followed the above instructions to install an Apache HTTP Server:"
+msgstr "앞에서 설명한 아파치 HTTP 서버 설치 지침을 따른 경우:"
+
+#: ../../docs/server_manual/getting_started.rst:782
+msgid ""
+"If you followed the above instructions to install an NGINX HTTP Server:"
+msgstr "앞에서 설명한 엔진X HTTP 서버 설치 지침을 따른 경우:"
+
+#: ../../docs/server_manual/getting_started.rst:797
+msgid "If you obtain the next image, then QGIS Server is running correctly:"
+msgstr "웹 브라우저에 다음 이미지가 표시된다면, QGIS 서버가 바르게 실행되고 있다는 의미입니다:"
+
+#: ../../docs/server_manual/getting_started.rst:802
+msgid "Server response to a basic GetMap request"
+msgstr "기본 GetMap 요청에 대한 서버의 응답"
+
+#: ../../docs/server_manual/getting_started.rst:804
+msgid ""
+"Note that you may define **QGIS_PROJECT_FILE** environment variable to use a"
+" project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
+"server-envvar`)."
+msgstr ""
+"**MAP** 파라미터를 지정하는 대신 프로젝트가 기본으로 사용할 **QGIS_PROJECT_FILE** 환경 변수를 정의해야 할 수도 "
+"있다는 사실을 기억하십시오. (:ref:`qgis-server-envvar` 를 참조하세요.)"
+
+#: ../../docs/server_manual/getting_started.rst:807
+msgid "For example with spawn-fcgi:"
+msgstr "예를 들어 'spawn-fcgi' 의 경우:"
+
+#: ../../docs/server_manual/getting_started.rst:819
+msgid "Configure your project"
+msgstr "사용자 프로젝트 환경 설정하기"
+
+#: ../../docs/server_manual/getting_started.rst:821
+msgid ""
+"To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a "
+"QGIS project file with some data or use one of your current project. Define "
+"the colors and styles of the layers in QGIS and the project CRS, if not "
+"already defined. Then, go to the :guilabel:`QGIS Server` menu of the "
+":menuselection:`Project --> Properties...` dialog and provide some "
+"information about the OWS in the :guilabel:`Service Capabilities` tab."
+msgstr ""
+"새로운 QGIS 서버 WMS, WFS, OAPIF 또는 WCS를 제공하려면, 일정 데이터를 가진 QGIS 프로젝트 파일을 생성하거나 "
+"사용자의 현재 프로젝트들 가운데 하나를 사용해야 합니다. 아직 정의되지 않았다면, QGIS에서 레이어들의 색상과 스타일 및 프로젝트 "
+"좌표계를 정의하십시오. 그 다음 :menuselection:`Project --> Properties...` 대화창의 "
+":guilabel:`QGIS Server` 메뉴를 선택하고 :guilabel:`Service Capabilities` 탭에서 OWS 관련"
+" 정보를 입력하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:833
+msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
+msgstr "WMS/WFS/WCS를 서비스하는 QGIS 서버 프로젝트 정의하기"
+
+#: ../../docs/server_manual/getting_started.rst:835
+msgid ""
+"You have to :guilabel:`Enable Service Capabilities` first, if it is "
+"deactivated. This will appear in the GetCapabilities response of the WMS, "
+"WFS or WCS. If you don't check |checkbox| :guilabel:`Enable Service "
+"capabilities`, QGIS Server will use the information given in the "
+":file:`wms_metadata.xml` file located in the :file:`cgi-bin` folder."
+msgstr ""
+":guilabel:`Enable Service Capabilities` 옵션이 비활성 상태라면, 먼저 이 옵션을 활성화해야 합니다. 이 "
+"정보는 WMS, WFS 또는 WCS 의 `GetCapabilities` 응답에 나타날 것입니다. |checkbox| "
+":guilabel:`Enable Service capabilities` 옵션을 활성화하지 않은 경우, QGIS 서버는 "
+":file:`cgi-bin` 폴더에 있는 :file:`wms_metadata.xml` 파일 안에 있는 정보를 사용할 것입니다."
+
+#: ../../docs/server_manual/getting_started.rst:1052
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:842
+msgid "WMS capabilities"
+msgstr "WMS 케이퍼빌리티"
+
+#: ../../docs/server_manual/getting_started.rst:844
+msgid ""
+"In the :guilabel:`WMS capabilities` tab, you can define the extent "
+"advertised in the WMS GetCapabilities response by entering the minimum and "
+"maximum X and Y values in the fields under :guilabel:`Advertised extent`."
+msgstr ""
+":guilabel:`WMS capabilities` 탭의 :guilabel:`Advertised extent` 밑에 있는 여러 란에 최소"
+" 및 최대 X/Y 값을 입력해서 WMS 의 `GetCapabilities` 응답에 선언된 범위를 정의할 수 있습니다. "
+
+#: ../../docs/server_manual/getting_started.rst:854
+msgid "Definitions in the WMS tab"
+msgstr "WMS 탭에서 정의할 수 있는 항목들"
+
+#: ../../docs/server_manual/getting_started.rst:856
+msgid ""
+"Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
+"extent currently displayed in the QGIS map canvas. By checking |checkbox| "
+":guilabel:`CRS restrictions`, you can restrict in which coordinate reference"
+" systems (CRS) QGIS Server will offer to render maps. It is recommended that"
+" you restrict the offered CRS as this reduces the size of the WMS "
+"GetCapabilities response. Use the |symbologyAdd| button below to select "
+"those CRSs from the Coordinate Reference System Selector, or click "
+":guilabel:`Used` to add the CRSs used in the QGIS project to the list."
+msgstr ""
+":guilabel:`Use Current Canvas Extent` 버튼을 클릭하면 이 값들을 QGIS 맵 캔버스에 현재 표시된 범위로 "
+"설정합니다. |checkbox| :guilabel:`CRS restrictions` 옵션을 활성화하면, QGIS 서버가 맵을 렌더링하는 "
+"데 어떤 좌표계를 사용할지를 제약할 수 있습니다. 제안된 좌표계를 제약하는 편이 좋습니다. WMS 의 `GetCapabilities` "
+"응답의 용량을 줄여주기 때문입니다. 해당 옵션 아래 있는 |symbologyAdd| 아이콘을 클릭해서 좌표계 선택기에서 좌표계를 선택할 "
+"수 있고, 또는 :guilabel:`Used` 버튼을 클릭해서 목록에 QGIS 프로젝트에서 사용된 적이 있는 좌표계들을 추가할 수도 "
+"있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:1054
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:866
+msgid ""
+"If you have print layouts defined in your project, they will be listed in "
+"the ``GetProjectSettings`` response, and they can be used by the GetPrint "
+"request to create prints, using one of the print layouts as a template. This"
+" is a QGIS-specific extension to the WMS 1.3.0 specification. If you want to"
+" exclude any print layout from being published by the WMS, check |checkbox| "
+":guilabel:`Exclude layouts` and click the |symbologyAdd| button below. Then,"
+" select a print layout from the :guilabel:`Select print layout` dialog in "
+"order to add it to the excluded layouts list."
+msgstr ""
+"사용자 프로젝트에 인쇄 조판을 정의했다면, ``GetProjectSettings`` 응답에 인쇄 조판 목록이 들어 있을 것입니다. "
+"`GetPrint` 요청이 이 정보를 이용, 인쇄 조판기의 조판 가운데 하나를 템플릿으로 사용해서 인쇄할 수 있습니다. 이 기능은 WMS"
+" 1.3.0 사양에 대응하는 QGIS 전용 확장 기능입니다. WMS가 게시하는 인쇄 조판 가운데 하나라도 제외하고 싶다면, "
+"|checkbox| :guilabel:`Exclude layouts` 옵션을 활성화한 다음 그 아래 있는 |symbologyAdd| "
+"아이콘을 클릭하십시오. 그러면 :guilabel:`Select print layout` 대화창이 열리는데, 이 대화창에서 인쇄 조판을 "
+"선택해서 제외될 조판 목록에 추가할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:876
+msgid ""
+"If you want to exclude any layer or layer group from being published by the "
+"WMS, check |checkbox| :guilabel:`Exclude Layers` and click the "
+"|symbologyAdd| button below. This opens the :guilabel:`Select restricted "
+"layers and groups` dialog, which allows you to choose the layers and groups "
+"that you don't want to be published. Use the :kbd:`Shift` or :kbd:`Ctrl` key"
+" if you want to select multiple entries. It is recommended that you exclude "
+"from publishing the layers that you don't need as this reduces the size of "
+"the WMS GetCapabilities response which leads to faster loading times on the "
+"client side."
+msgstr ""
+"WMS가 게시하는 레이어 가운데 어떤 레이어 또는 레이어 그룹을 제외하고 싶다면, |checkbox| :guilabel:`Exclude "
+"Layers` 옵션을 활성화한 다음 그 아래 있는 |symbologyAdd| 아이콘을 클릭하십시오. 그러면 "
+":guilabel:`Select restricted layers and groups` 대화창이 열리는데, 이 대화창에서 게시하고 싶지 "
+"않은 레이어 및 레이어 그룹을 선택할 수 있습니다. 여러 항목을 한꺼번에 선택하고 싶다면 :kbd:`Shift` 또는 "
+":kbd:`Ctrl` 키를 함께 사용하십시오. 필요하지 않은 레이어를 게시되는 레이어에서 제외시키는 편이 좋습니다. WMS "
+"`GetCapabilities` 응답의 용량을 줄여 클라이언트 쪽의 불러오기 시간을 단축시킬 수 있기 때문입니다."
+
+#: ../../docs/server_manual/getting_started.rst:886
+msgid ""
+"If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
+" used to reference layers in the ``GetCapabilities`` response or ``GetMap "
+"LAYERS`` parameter. If not, layer name or short name if defined (see "
+":ref:`vectorservermenu`) is used."
+msgstr ""
+"|checkbox| :guilabel:`Use layer ids as name` 옵션을 체크하면, ``GetCapabilities`` "
+"응답 또는 ``GetMap LAYERS`` 파라미터에서 레이어를 참조하는 데 레이어 ID를 사용할 것입니다. 체크하지 않으면, 레이어명 "
+"또는 단축명이 정의된 경우 (:ref:`vectorservermenu` 참조) 그 이름을 사용합니다."
+
+#: ../../docs/server_manual/getting_started.rst:891
+msgid ""
+"You can receive requested GetFeatureInfo as plain text, XML and GML. The "
+"default is XML."
+msgstr "요청한 ``GetFeatureInfo`` 를 평문 텍스트, XML 및 GML로 받을 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:895
+msgid ""
+"If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
+"response`. This will include the bounding box for each feature in the "
+"GetFeatureInfo response. See also the :ref:`WITH_GEOMETRY "
+"<wms_getfeatureinfo>` parameter."
+msgstr ""
+"사용자가 원한다면 |checkbox| :guilabel:`Add geometry to feature response` 옵션을 활성화시킬 "
+"수 있습니다. 이 옵션을 활성화하면 GetFeatureInfo 응답에 각 피처에 대한 경계 상자를 포함시킬 것입니다. "
+":ref:`WITH_GEOMETRY <wms_getfeatureinfo>` 파라미터도 참조하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:899
+msgid ""
+"As many web clients can’t display circular arcs in geometries you have the "
+"option to segmentize the geometry before sending it to the client in a "
+"GetFeatureInfo response. This allows such clients to still display a "
+"feature’s geometry (e.g. for highlighting the feature). You need to check "
+"the |checkbox| :guilabel:`Segmentize feature info geometry` to activate the "
+"option."
+msgstr ""
+"원호(circular arc) 도형을 표시하지 못 하는 웹 클라이언트가 많이 있기 때문에, `GetFeatureInfo` 응답으로 "
+"클라이언트에 도형을 전송하기 전에 도형을 선분화시키는 옵션이 있습니다. 이 옵션으로 이런 클라이언트라도 피처의 도형을 (예를 들어 피처를"
+" 강조하기 위해) 표시하게 할 수 있습니다. 이 옵션을 활성화하려면 |checkbox| :guilabel:`Segmentize "
+"feature info geometry` 를 체크해야 합니다."
+
+#: ../../docs/server_manual/getting_started.rst:905
+msgid ""
+"You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
+" set the precision of the GetFeatureInfo geometry. This enables you to save "
+"bandwidth when you don't need the full precision."
+msgstr ""
+":guilabel:`GetFeatureInfo geometry precision` 옵션을 사용해서 `GetFeatureInfo` 도형의 "
+"정밀도도 설정할 수 있습니다. 완전한 정밀도가 필요하지 않은 경우, 이 옵션으로 대역폭을 절약할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:909
+msgid ""
+"If you want QGIS Server to advertise specific request URLs in the WMS "
+"GetCapabilities response, enter the corresponding URL in the "
+":guilabel:`Advertised URL` field."
+msgstr ""
+"QGIS 서버가 WMS `GetCapabilities` 응답 안에 특정한 요청 URL을 선언하기를 바란다면, "
+":guilabel:`Advertised URL` 란에 그에 해당하는 URL을 입력하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:913
+msgid ""
+"Furthermore, you can restrict the maximum size of the maps returned by the "
+"GetMap request by entering the maximum width and height into the respective "
+"fields under :guilabel:`Maximums for GetMap request`."
+msgstr ""
+"또한 :guilabel:`Maximums for GetMap request` 밑에 있는 란에 각각 최대 너비 및 높이를 입력해서 "
+"`GetMap` 요청이 반환하는 맵의 최대 크기를 제한할 수도 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:917
+msgid ""
+"You can change the :guilabel:`Quality for JPEG images` factor. The quality "
+"factor must be in the range 0 to 100. Specify 0 for maximum compression, 100"
+" for no compression."
+msgstr ""
+":guilabel:`Quality for JPEG images` 인자를 변경할 수 있습니다. 품질 인자의 범위가 0부터 100 사이여야만"
+" 합니다. 0을 지정하면 최대 압축이고, 100을 지정하면 압축하지 않음입니다."
+
+#: ../../docs/server_manual/getting_started.rst:920
+msgid ""
+"You can change the limit for atlas features to be printed in one request by "
+"setting the :guilabel:`Maximum features for Atlas print requests` field."
+msgstr ""
+":guilabel:`Maximum features for Atlas print requests` 필드를 설정하면 요청 한 번으로 인쇄할 "
+"수 있는 지도책 객체의 개수 제한을 변경할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:923
+msgid ""
+"When QGIS Server is used in tiled mode (see :ref:`TILED parameter "
+"<wms_tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The "
+"recommended value is the size of the largest symbol or line width in your "
+"QGIS project."
+msgstr ""
+"QGIS 서버를 타일 모드로 (:ref:`TILED 파라미터 <wms_tiled>` 참조) 사용하는 경우, :guilabel:`Tile "
+"buffer in pixels` 를 설정할 수 있습니다. 추천 값은 사용자의 QGIS 프로젝트에서 가장 큰 심볼 또는 라인 너비의 "
+"크기입니다."
+
+#: ../../docs/server_manual/getting_started.rst:927
+msgid ""
+"If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
+"show text using expressions) this will be listed inside the GetFeatureInfo "
+"output. If the layer uses a Value Map for one of its attributes, this "
+"information will also be shown in the GetFeatureInfo output."
+msgstr ""
+"사용자 레이어 가운데 하나가 :ref:`맵 도움말 표시<maptips>` 를 이용하고 있는 경우 (예: 표현식을 사용해서 텍스트를 "
+"표시하는 경우) `GetFeatureInfo` 출력물 안에 이 정보가 들어 있을 것입니다. 레이어가 값 맵(`개념 매핑 "
+"<https://en.wikipedia.org/wiki/Perceptual_mapping>`_)을 이용하고 있다면, 이 정보도 "
+"`GetFeatureInfo` 출력물 안에 들어 있을 것입니다."
+
+#: ../../docs/server_manual/getting_started.rst:933
+msgid "WMTS capabilities"
+msgstr "WMTS 케이퍼빌리티"
+
+#: ../../docs/server_manual/getting_started.rst:935
+msgid ""
+"In the :guilabel:`WMTS capabilities` tab you can select the layers you want "
+"to publish as WMTS and specify if you want to publish as PNG or JPEG."
+msgstr ""
+":guilabel:`WMTS capabilities` 탭에서 사용자가 WMTS로 게시하려는 레이어를 선택하고, PNG 또는 JPEG "
+"가운데 어떤 포맷으로 게시할지 선택할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:943
+msgid "Definitions in the WMTS tab"
+msgstr "WMTS 탭에서 정의할 수 있는 항목들"
+
+#: ../../docs/server_manual/getting_started.rst:945
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WMTS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WMTS GetCapabilities response."
+msgstr ""
+":guilabel:`WMTS capabilities` 부분의 :guilabel:`Advertised URL` 란에 URL을 입력한다면, "
+"QGIS 서버가 WMTS GetCapabilities 응답에 이 특정 URL을 선언할 것입니다."
+
+#: ../../docs/server_manual/getting_started.rst:950
+msgid "WFS/OAPIF capabilities"
+msgstr "WFS/OAPIF 케이퍼빌리티"
+
+#: ../../docs/server_manual/getting_started.rst:952
+msgid ""
+"In the :guilabel:`WFS/OAPIF capabilities` tab, you can select the layers you"
+" want to publish as WFS or OAPIF, and specify if they will allow update, "
+"insert and delete operations."
+msgstr ""
+":guilabel:`WFS/OAPIF capabilities` 탭에서 사용자가 WFS 또는 OAPIF로 게시하려는 레이어를 선택하고, "
+"선택한 레이어에 업데이트, 삽입 및 삭제 작업을 허용할지를 지정할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:961
+msgid "Definitions in the WFS/OAPIF tab"
+msgstr "WFS/OAPIF 탭에서 정의할 수 있는 항목들"
+
+#: ../../docs/server_manual/getting_started.rst:963
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WFS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WFS GetCapabilities response."
+msgstr ""
+":guilabel:`WFS capabilities` 부분의 :guilabel:`Advertised URL` 란에 URL을 입력한다면, "
+"QGIS 서버가 WFS GetCapabilities 응답에 이 특정 URL을 선언할 것입니다."
+
+#: ../../docs/server_manual/getting_started.rst:968
+msgid "WCS capabilities"
+msgstr "WCS 케이퍼빌리티"
+
+#: ../../docs/server_manual/getting_started.rst:970
+msgid ""
+"In the :guilabel:`WCS capabilities` tab, you can select the layers that you "
+"want to publish as WCS."
+msgstr ":guilabel:`WCS capabilities` 탭에서 사용자가 WCS로 게시하려는 레이어를 선택할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:978
+msgid "Definitions in the WCS tab"
+msgstr "WCS 탭에서 정의할 수 있는 항목들"
+
+#: ../../docs/server_manual/getting_started.rst:980
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WCS GetCapabilities response."
+msgstr ""
+":guilabel:`WCS capabilities` 부분의 :guilabel:`Advertised URL` 란에 URL을 입력한다면, "
+"QGIS 서버가 WCS GetCapabilities 응답에 이 특정 URL을 선언할 것입니다."
+
+#: ../../docs/server_manual/getting_started.rst:985
+msgid "Fine tuning your OWS"
+msgstr "사용자 OWS를 미세 조정하기"
+
+#: ../../docs/server_manual/getting_started.rst:987
+msgid ""
+"For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer "
+"--> Layer Properties` dialog allows you to define for each attribute if it "
+"will be published or not. By default, all the attributes are published by "
+"your WMS and WFS. If you don't want a specific attribute to be published, "
+"uncheck the corresponding checkbox in the :guilabel:`WMS` or :guilabel:`WFS`"
+" column."
+msgstr ""
+"벡터 레이어의 경우, :menuselection:`Layer --> Layer Properties` 대화창의 "
+":guilabel:`Fields` 메뉴에서 각 속성을 게시할 것인지 여부를 정의할 수 있습니다. 기본적으로, 사용자의 WMS 및 WFS는"
+" 모든 속성을 게시합니다. 특정 속성을 게시하고 싶지 않은 경우, :guilabel:`WMS` 또는 :guilabel:`WFS` 열에서 "
+"해당하는 체크박스를 체크 해제하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:994
+msgid ""
+"You can overlay watermarks over the maps produced by your WMS by adding text"
+" annotations or SVG annotations to the project file. See the "
+":ref:`sec_annotations` section for instructions on creating annotations. For"
+" annotations to be displayed as watermarks on the WMS output, the "
+":guilabel:`Fixed map position` checkbox in the :guilabel:`Annotation text` "
+"dialog must be unchecked. This can be accessed by double clicking the "
+"annotation while one of the annotation tools is active. For SVG annotations,"
+" you will need either to set the project to save absolute paths (in the "
+":guilabel:`General` menu of the :menuselection:`Project --> Properties...` "
+"dialog) or to manually modify the path to the SVG image so that it "
+"represents a valid relative path."
+msgstr ""
+"프로젝트 파일에 텍스트 주석 또는 SVG 주석을 추가해서 사용자의 WMS가 생성한 맵 위에 워터마크를 중첩시킬 수 있습니다. 주석 생성에"
+" 대한 지침은 :ref:`sec_annotations` 를 참조하세요. WMS 출력물 위에 주석을 워터마크로 표시하려면, "
+":guilabel:`Annotation text` 대화창의 :guilabel:`Fixed map position` 옵션을 비활성화해야 "
+"합니다. 주석 도구 가운데 하나를 선택한 상태에서 주석을 더블클릭하면 이 옵션에 접근할 수 있습니다. SVG 주석의 경우, "
+":menuselection:`Project --> Properties...` 대화창의 :guilabel:`General` 메뉴에서 "
+"프로젝트가 절대 경로를 저장하도록 설정하거나 또는 SVG 이미지의 경로를 직접 수정해서 유효한 상대 경로를 나타내도록 해야 합니다."
+
+#: ../../docs/server_manual/getting_started.rst:1009
+msgid "Integration with third parties"
+msgstr "외부 소프트웨어와의 통합"
+
+#: ../../docs/server_manual/getting_started.rst:1011
+msgid ""
+"QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
+"<https://www.ogc.org/docs/is>`_ thus it can be used by a wide variety of end"
+" user tools."
+msgstr ""
+"QGIS 서버는 `WMS, WFS 등등 <https://www.ogc.org/docs/is>`_ 같은 표준 OGC 웹 서비스를 제공하기 "
+"때문에, 수많은 종단 사용자 도구가 이를 이용할 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:1015
+msgid "Integration with QGIS Desktop"
+msgstr "QGIS 데스크탑과의 통합"
+
+#: ../../docs/server_manual/getting_started.rst:1017
+msgid ""
+"QGIS Desktop is the map designer where QGIS Server is the map server. The "
+"maps or QGIS projects will be served by the QGIS Server to provide OGC "
+"standards. These QGIS projects can either be files or entries in a database "
+"(by using :menuselection:`Project --> Save to --> PostgreSQL` in QGIS "
+"Desktop)."
+msgstr ""
+"QGIS 서버가 맵 서버라면 QGIS 데스크탑은 맵 설계자입니다. QGIS 서버가 맵 또는 QGIS 프로젝트를 OGC 표준을 제공하기 "
+"위해 서비스할 것입니다. 이런 QGIS 프로젝트는 파일 또는 데이터베이스의 항목 (QGIS 데스크탑에서 "
+":menuselection:`Project --> Save to --> PostgreSQL` 사용) 가운데 하나일 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:1022
+msgid ""
+"Furthermore, dedicated update workflow must be established to refresh a "
+"project used by a QGIS Server (ie. copy project files into server location "
+"and restart QGIS Server). For now, automated processes (as server reloading "
+"over message queue service) are not implemented yet."
+msgstr ""
+"여기에 더해, QGIS 서버가 사용하는 프로젝트를 새로고침하려면 전용 업데이트 워크플로를 (예: 프로젝트 파일을 서버 위치에 복사해넣고 "
+"QGIS 서버를 재시작한다는지) 설정해야만 합니다. 지금은 아직 (메시지 큐 서비스를 통해 서버를 다시 불러오는) 자동화 프로세스가 "
+"구현되지 않았습니다."
+
+#: ../../docs/server_manual/getting_started.rst:1029
+msgid "Integration with MapProxy"
+msgstr "MapProxy와의 통합"
+
+#: ../../docs/server_manual/getting_started.rst:1031
+msgid ""
+"`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can "
+"read and serve any WMS/WMTS map server, it can be directly connected to QGIS"
+" server web services and improve end user experience."
+msgstr ""
+"`MapProxy <https://mapproxy.org/>`_ 는 타일 캐시 서버로 모든 WMS/WMTS 맵 서버를 읽고 서비스할 수 "
+"있기 때문에, QGIS 서버 웹 서비스에 직접 연결해서 사용자 경험을 향상시킬 수 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:1037
+msgid "Integration with QWC2"
+msgstr "QWC2와의 통합"
+
+#: ../../docs/server_manual/getting_started.rst:1039
+msgid ""
+"`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
+"dedicated to QGIS Server. It helps you to build a highly customized map "
+"viewer with layer selection, feature info, etc.. Also many plugins are "
+"available like authentication or print service, the full list is available "
+"in this `repository <https://github.com/qwc-services>`_."
+msgstr ""
+"`QWC2 <https://github.com/qgis/qwc2>`_ 는 QGIS 서버 전용의 응답형 웹 응용 프로그램입니다. 레이어 "
+"선택, 객체 정보 등등 고도로 사용자 지정된 맵 뷰어를 작성할 수 있게 해줍니다. 여기에 인증 또는 인쇄 서비스와 같은 많은 플러그인을 "
+"사용할 수 있는데, 이 `저장소 <https://github.com/qwc-services>`_ 에서 전체 목록을 볼 수 있습니다."

@@ -1,0 +1,416 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:2
+msgid "|LS| Reprojecting and Transforming Data"
+msgstr "课: 重投影和数据转换"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:4
+msgid ""
+"Let us talk about Coordinate Reference Systems (CRSs) again. We have touched"
+" on this briefly before, but haven't discussed what it means practically."
+msgstr "让我们再来聊聊坐标参照系 (CRS)。之前简单地讨论过，但没有谈到它的实际含义。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:8
+msgid ""
+"**The goal for this lesson:** To reproject and transform vector datasets."
+msgstr "**本课目标:** 重投影和转换矢量数据集。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:11
+msgid "|basic| |FA| Projections"
+msgstr "|basic| 跟我做: 投影"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:250
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:13
+msgid ""
+"The CRS that all the data, as well as the map itself are in right now is "
+"called *WGS84*. This is a very common Geographic Coordinate System (GCS) for"
+" representing data. But there's a problem, as we will see."
+msgstr "所有数据以及地图本身现在所在的CRS称为 *WGS84* ，这是用于表示数据非常常见的地理坐标系 (GCS)。但有一个问题，我们来看。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:19
+msgid "Save your current map"
+msgstr "保存当前地图"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:20
+msgid ""
+"Then open the map of the world which you will find under "
+":file:`exercise_data/world/world.qgs`"
+msgstr "然后在 :file:`exercise_data/world/world.qgs` 找到并打开世界地图工程文件"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:22
+msgid "Zoom in to South Africa by using the :guilabel:`Zoom In` tool"
+msgstr "使用 :guilabel:`放大` 工具放大到南非"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:23
+msgid ""
+"Try setting a scale in the :guilabel:`Scale` field, which is in the "
+"*Statusbar* along the bottom of the screen. While over South Africa, set "
+"this value to ``1:5 000 000`` (one to five million)."
+msgstr ""
+"尝试在屏幕底部 *状态栏* 的 :guilabel:`比例` 字段中设置比例。在南非上方时，将该值设置为 ``1:5 000 000`` "
+"(1至500万)。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:27
+msgid "Pan around the map while keeping an eye on the :guilabel:`Scale` field"
+msgstr "在地图周围平移，同时注意 :guilabel:`比例` 字段"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:30
+msgid ""
+"Notice the scale changing? That's because you are moving away from the one "
+"point that you zoomed into at ``1:5 000 000``, which was at the center of "
+"your screen. All around that point, the scale is different."
+msgstr "注意到比例变化了吗？这是因为正在远离您在 ``1:5 000 000`` 时放大的那个点，该点位于屏幕中心。在这一点的周围，比例是不同的。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:35
+msgid ""
+"To understand why, think about a globe of the Earth. It has lines running "
+"along it from North to South. These longitude lines are far apart at the "
+"equator, but they meet at the poles."
+msgstr "知道为什么吗？想想地球仪。它有从北到南连续的线，这些经度线在赤道相距最远，但在两极相遇。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:40
+msgid ""
+"In a GCS, you are working on this sphere, but your screen is flat. When you "
+"try to represent the sphere on a flat surface, distortion occurs, similar to"
+" what would happen if you cut open a tennis ball and tried to flatten it "
+"out. What this means on a map is that the longitude lines stay equally far "
+"apart from each other, even at the poles (where they are supposed to meet). "
+"This means that, as you travel away from the equator on your map, the scale "
+"of the objects that you see gets larger and larger. What this means for us, "
+"practically, is that there is no constant scale on our map!"
+msgstr ""
+"在GCS中，您在使用这个球体，但屏幕是平的。当您试图在平面上表示球体时，就会发生变形，这与您切开网球并试图将其压平时所发生的情况类似。这在地图上的意思是，即使在两极"
+" "
+"(它们应该相遇的地方)，经度线彼此之间也应该保持相等的距离。意味着当您远离地图上的赤道时，所看到对象的比例会越来越大。实际上，这说明我们的地图没有恒定的比例！"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:52
+msgid ""
+"To solve this, let's use a Projected Coordinate System (PCS) instead. A PCS "
+"\"projects\" or converts the data in a way that makes allowance for the "
+"scale change and corrects it. Therefore, to keep the scale constant, we "
+"should reproject our data to use a PCS."
+msgstr ""
+"为了解决这个问题，让我们使用投影坐标系 (PCS)。PCS \"投影\" "
+"或转换数据的方式应考虑比例的变化，并对其进行校正。因此，为了保持比例不变，我们应该使用PCS重投影数据。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:59
+msgid "|basic| |FA| \"On the Fly\" Reprojection"
+msgstr "|basic| 跟我做: \"动态\" 重投影"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:61
+msgid ""
+"By default, QGIS reprojects data \"on the fly\". What this means is that "
+"even if the data itself is in another CRS, QGIS can project it as if it were"
+" in a CRS of your choice."
+msgstr "默认情况下，QGIS \"动态\" 重投影数据。这意味着，即使数据本身在另一个CRS中，QGIS也可以将其投影为您选择的CRS。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:65
+msgid ""
+"You can change the CRS of the project by clicking on the |projectionEnabled|"
+" :sup:`Current projection` button in the bottom right corner of QGIS."
+msgstr "通过单击QGIS右下角的 |projectionEnabled| :sup:`当前投影` 按钮，可以更改工程的CRS。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:253
+msgid "projectionEnabled"
+msgstr "projectionEnabled"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:69
+msgid ""
+"In the dialog that appears, type the word ``global`` into the "
+":guilabel:`Filter` field. A few CRSs should appear in the "
+":guilabel:`Predefined Reference Systems` field below."
+msgstr ""
+"在出现的对话框中，在 :guilabel:`过滤器` 字段输入 ``global`` 。下面的 :guilabel:`预定义坐标参照系` "
+"字段应该出现一些CRS。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:73
+msgid ""
+"Select :guilabel:`WGS 84 / NSIDC EASE-Grid 2.0 Global | EPSG:6933` entry by "
+"clicking on it, and then click :guilabel:`OK`."
+msgstr ""
+"单击并选择 :guilabel:`WGS 84 / NSIDC EASE-Grid 2.0 Global | EPSG:6933` 条目，然后单击 "
+":guilabel:`确定` 。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:76
+msgid ""
+"Notice how the shape of South Africa changes. All projections work by "
+"changing the apparent shapes of objects on Earth."
+msgstr "注意南非的形状是如何变化的。所有的投影都是通过改变地球上对象的表面形状来实现的。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:79
+msgid "Zoom to a scale of ``1:5 000 000`` again, as before."
+msgstr "像之前一样，再次缩放到 ``1:5 000 000`` 的比例。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:80
+msgid "Pan around the map."
+msgstr "在地图周围平移。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:82
+msgid "Notice how the scale stays the same!"
+msgstr "注意比例是如何保持不变的！"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:84
+msgid ""
+"\"On the fly\" reprojection is also used for combining datasets that are in "
+"different CRSs."
+msgstr "\"动态\" 重投影也适用于组合不同CRS中的数据集。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:87
+msgid ""
+"Add another vector layer to your map which has the data for South Africa "
+"only. You will find it as :file:`exercise_data/world/RSA.shp`."
+msgstr ""
+"将另一个矢量图层添加到地图中，该图层仅包含南非的数据。您可以在 :file:`exercise_data/world/RSA.shp` 找到。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:90
+msgid ""
+"Load it. A quick way to see its CRS is by hovering the mouse over the layer "
+"in the legend. It is ``EPSG:3410``."
+msgstr "将其加载。查看CRS的快速方法是将鼠标悬停在图例中的图层上，它是 ``EPSG:3410`` 。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:94
+msgid "What do you notice?"
+msgstr "您注意到了什么？"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:96
+msgid ""
+"The layer is visible even if it has a different CRS from the "
+":guilabel:`continents` one."
+msgstr "即使该图层不同于 :guilabel:`各大洲` 的CRS，也是可见的。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:101
+msgid "|moderate| |FA| Saving a Dataset to Another CRS"
+msgstr "|moderate| 跟我做: 将数据集保存到另一个CRS"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:252
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:103
+msgid ""
+"Sometimes you need to export an existing dataset with another CRS. As we "
+"will see in the next lesson, if you need to make distance calculations on "
+"layer, it is always better to have the layer in a projected coordinate "
+"system."
+msgstr "有时，您需要使用另一个CRS导出现有数据集。正如我们将在下一课中看到的，如果需要对图层进行距离计算，最好将图层置于投影坐标系。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:108
+msgid ""
+"Be aware that the 'on the fly' reprojection is related to the **project** "
+"and not to single layers. This means that a layer can have a different CRS "
+"from the project even if you see it in the *correct* position."
+msgstr ""
+"请注意， '动态' 重投影与 **工程** 有关，而不是单个图层。这意味着，即使在 *正确* 的位置看到某个图层，该图层也可以具有与工程不同的CRS。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:113
+msgid "You can easily export the layer with another CRS."
+msgstr "您可以使用另一个CRS轻易导出图层。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:115
+msgid "Add the ``buildings`` dataset from :file:`training_data.gpkg`"
+msgstr "从 :file:`training_data.gpkg` 添加 ``buildings`` 数据集。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:116
+msgid "Right-click on the ``buildings`` layer in the :guilabel:`Layers` panel"
+msgstr "右键单击 :guilabel:`图层` 面板中的 ``buildings`` 图层"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:118
+msgid ""
+"Select :menuselection:`Export --> Save Features As...` in the menu that "
+"appears. You will be shown the :guilabel:`Save Vector Layer as...` dialog."
+msgstr ""
+"在显示的菜单中选择 :menuselection:`导出 --> 要素另存为...` ，您将看到 :guilabel:`矢量图层另存为...` 对话框。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:121
+msgid ""
+"Click on the :guilabel:`Browse` button next to the :guilabel:`File name` "
+"field"
+msgstr "单击 :guilabel:`文件名` 字段旁边的 :guilabel:`浏览` 按钮"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:123
+msgid ""
+"Navigate to :file:`exercise_data/` and specify the name of the new layer as "
+":file:`buildings_reprojected.shp`."
+msgstr ""
+"导航至 :file:`exercise_data/` 并将新图层的名称指定为 :file:`buildings_reprojected.shp` 。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:125
+msgid ""
+"Change the value of the :guilabel:`CRS`. Only the recent CRSs used will be "
+"shown in the drop-down menu. Click on the |setProjection| :sup:`Select "
+"projection` button next to the drop-down menu."
+msgstr ""
+"更改 :guilabel:`CRS` 的值。下拉菜单中仅显示最近使用的CRS，单击下拉菜单旁边的 |setProjection| :sup:`选择投影`"
+" 按钮。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:255
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:129
+msgid ""
+"The :guilabel:`Coordinate Reference System Selector` dialog will appear. In "
+"its :guilabel:`Filter` field, search for ``34S``."
+msgstr "此时将出现 :guilabel:`坐标参照系选择器` 对话框。在其 :guilabel:`过滤器` 字段，搜索 ``34S`` 。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:132
+msgid "Select :guilabel:`WGS 84 / UTM zone 34S | EPSG:32734` from the list"
+msgstr "从列表中选择 :guilabel:`WGS 84 / UTM zone 34S | EPSG:32734`"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:137
+msgid ""
+"Leave the other options unchanged. The :guilabel:`Save Vector Layer as...` "
+"dialog now looks like this:"
+msgstr "其他选项保持不变， :guilabel:`矢量图层另存为...` 对话框现在如下所示："
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:143
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:207
+msgid "Click :guilabel:`OK`"
+msgstr "单击 :guilabel:`确定`"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:145
+msgid ""
+"You can now compare the old and new projections of the layer and see that "
+"they are in two different CRS but they are still overlapping."
+msgstr "现在，您可以比较图层的新旧投影，并看到它们位于两个不同的CRS中，但仍然重叠。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:150
+msgid "|hard| |FA| Creating Your Own Projection"
+msgstr "|hard| 跟我做: 创建自己的投影"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:251
+msgid "hard"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:152
+msgid ""
+"There are many more projections than just those included in QGIS by default."
+" You can also create your own projections."
+msgstr "默认情况下，除了QGIS中包含的投影之外，还有更多的投影。您还可以创建自己的投影。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:155
+msgid "Start a new map"
+msgstr "新建一个地图"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:156
+msgid "Load the :file:`world/oceans.shp` dataset"
+msgstr "加载 :file:`world/oceans.shp` 数据集"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:157
+msgid ""
+"Go to :menuselection:`Settings --> Custom Projections...` and you will see "
+"this dialog."
+msgstr "转到 :menuselection:`设置 --> 自定义投影...` ，您会看到这个对话框。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:163
+msgid ""
+"Click on the |symbologyAdd| :sup:`Add new CRS` button to create a new "
+"projection"
+msgstr "单击 |symbologyAdd| :sup:`添加新的CRS` 按钮创建新投影"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:257
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:165
+msgid ""
+"An interesting projection to use is called ``Van der Grinten I``. Enter its "
+"name in the :guilabel:`Name` field."
+msgstr "要使用的感兴趣的投影是 ``Van der Grinten I`` 。请在 :guilabel:`名称` 字段输入其名称。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:168
+msgid ""
+"This projection represents the Earth on a circular field instead of a "
+"rectangular one, as most other projections do."
+msgstr "这个投影表示圆磁场上的地球，而不是像大多数其他投影那样是矩形的。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:171
+msgid "In :guilabel:`Format`, select :guilabel:`WKT (Recommended)`"
+msgstr "在 :guilabel:`格式` 中，选择 :guilabel:`WKT (推荐)`"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:172
+msgid "Add the following string in the :guilabel:`Parameters` field::"
+msgstr "在 :guilabel:`参数` 字段添加以下字符串::"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:208
+msgid ""
+"Click on the |projectionEnabled| :sup:`Current CRS` button at the right of "
+"the status bar to change the project CRS"
+msgstr "单击状态栏右侧的 |projectionEnabled| :sup:`当前CRS` 按钮，更改工程的CRS"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:210
+msgid ""
+"Choose your newly defined projection (search for its name in the "
+":guilabel:`Filter` field)"
+msgstr "选择新定义的投影 (在 :guilabel:`过滤器` 字段搜索其名称)"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:212
+msgid "On applying this projection, the map will be reprojected thus:"
+msgstr "应用此投影后，地图将重投影，如下所示："
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:218
+msgid "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:220
+msgid ""
+"Different projections are useful for different purposes. By choosing the "
+"correct projection, you can ensure that the features on your map are being "
+"represented accurately."
+msgstr "不同的投影对应不同的目的。通过选择正确的投影，您可以确保准确表示地图上的要素。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:225
+msgid "|FR|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:227
+msgid ""
+"Materials for the *Advanced* section of this lesson were taken from `this "
+"article <https://anitagraser.com/2012/03/18/beautiful-global-projections-"
+"adding-custom-projections-to-qgis/>`_."
+msgstr ""
+"本课 *高级* 部分的素材摘自 `本文 <https://anitagraser.com/2012/03/18/beautiful-global-"
+"projections-adding-custom-projections-to-qgis/>`_ 。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:230
+msgid ""
+"Read further information on :ref:`Coordinate Reference Systems "
+"<gis_coord_ref_system>`."
+msgstr "请阅读有关 :ref:`坐标参照系 <gis_coord_ref_system>` 的详细信息。"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:233
+msgid "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:235
+msgid ""
+"In the next lesson you will learn how to analyze vector data using QGIS' "
+"various vector analysis tools."
+msgstr "下一课，您将学习如何使用QGIS的各种矢量分析工具分析矢量数据。"
