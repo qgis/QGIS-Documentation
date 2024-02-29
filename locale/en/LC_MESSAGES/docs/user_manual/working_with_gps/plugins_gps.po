@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-01 00:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:4
+msgid "Introducing GNSS/GPS Data"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:14
+msgid "What is GPS?"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:16
+msgid ""
+"GPS, the **Global Positioning System**, is a satellite-based system that "
+"allows anyone with a GPS receiver to find their exact position anywhere "
+"in the world. GPS is used as an aid in navigation, for example in "
+"airplanes, in boats and by hikers. The GPS receiver uses the signals from"
+" the satellites to calculate its latitude, longitude and (sometimes) "
+"elevation. Most receivers also have the capability to store:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:23
+msgid "locations (known as **waypoints**)"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:24
+msgid "sequences of locations that make up a planned **route**"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:25
+msgid "and a **track** log of the receiver's movement over time."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:27
+msgid ""
+"Waypoints, routes and tracks are the three basic feature types in GPS "
+"data. QGIS displays waypoints in point layers, while routes and tracks "
+"are displayed in linestring layers."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:30
+msgid ""
+"QGIS supports also GNSS receivers. But we keep using the term GPS in this"
+" documentation."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:36
+msgid "Transferring or loading GPS data"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:39
+msgid "Loading a GPX file"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:41
+msgid ""
+"There are dozens of different file formats for storing GPS data. The "
+"format that QGIS uses is called GPX (GPS eXchange format), which is a "
+"standard interchange format that can contain any number of waypoints, "
+"routes and tracks in the same file."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:46
+msgid "To load a :file:`GPX` file:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:48
+msgid ""
+"Open the :guilabel:`GPS` tab in the :guilabel:`Data Source Manager` "
+"dialog, i.e.:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:50
+msgid ""
+"Click the |dataSourceManager| :sup:`Open Data Source Manager` button on "
+"the toolbar (or press :kbd:`Ctrl+L`) and enable the target tab"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:136
+msgid "dataSourceManager"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:52
+msgid ""
+"Or select :menuselection:`Layer --> Add Layer -->` |addGpsLayer| "
+":menuselection:`Add GPX Layer...`"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:134
+msgid "addGpsLayer"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:54
+msgid ""
+"Use the :guilabel:`...` :sup:`Browse` button next to the :guilabel:`GPX "
+"dataset` option to select the GPX file"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:56
+msgid ""
+"Use the check boxes to select the :guilabel:`Feature types` you want to "
+"load from the file. Each feature type (:guilabel:`Waypoints`, "
+":guilabel:`Tracks` or :guilabel:`Routes`) will be loaded in a separate "
+"layer."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:63
+msgid "Loading GPS Data dialog"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:69
+msgid "Loading to or from a device"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:71
+msgid ""
+"There are lots of different types of GPS devices and formats. Since QGIS "
+"uses GPX files, you need a way to convert other GPS file formats to GPX. "
+"QGIS can do that using the free program `GPSBabel "
+"<https://www.gpsbabel.org>`_. GPSBabel can help you convert waypoints, "
+"tracks, and routes between popular GPS receivers such as Garmin or "
+"Magellan and mapping programs like Google Earth or Basecamp. Literally "
+"hundreds of GPS receivers and programs are supported. It can also "
+"transfer GPS data between your computer and a GPS device."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:79
+msgid ""
+"Under :menuselection:`Settings -->` |options| :menuselection:`Options "
+"-->` |gps| :menuselection:`GPS -->` |gps| :menuselection:`GPSBabel`, QGIS"
+" allows you to define your own device type and set parameters of "
+"conversion that could later be used by the :ref:`Processing GPS "
+"algorithms <gps_algorithms>`."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:140
+msgid "options"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:138
+msgid "gps"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:87
+msgid "GPS Babel settings"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:89
+msgid "First you have to define the :guilabel:`Path to GPSBabel` binaries."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:90
+msgid ""
+"Then you may want to add your device. You can update devices list using "
+"|symbologyAdd| :sup:`Add new device` or |symbologyRemove| :sup:`Remove "
+"device` button."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:142
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:144
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:93
+msgid "For each device:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:95
+msgid "you provide a :guilabel:`Device name`"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:96
+msgid ""
+"you configure different :guilabel:`Commands` QGIS will use while "
+"interacting with it, such as:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:99
+msgid ":guilabel:`Waypoint download` from the device"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:100
+msgid ":guilabel:`Waypoint upload` to the device"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:101
+msgid ":guilabel:`Route download` from the device"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:102
+msgid ":guilabel:`Route upload` to the device"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:103
+msgid ":guilabel:`Track download` from the device"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:104
+msgid ":guilabel:`Track upload` to the device"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:106
+#, python-format
+msgid ""
+"While the commands are usually GPSBabel commands, you can also use any "
+"other command line program that can create a GPX file. QGIS will replace "
+"the keywords ``%type``, ``%in``, and ``%out`` when it runs the command."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:109
+#, python-format
+msgid ""
+"As an example, if you create a device type with the download command "
+"``gpsbabel %type -i garmin -o gpx %in %out`` and then use it to download "
+"waypoints from port ``/dev/ttyS0`` to the file :file:`output.gpx`, QGIS "
+"will replace the keywords and run the command ``gpsbabel -w -i garmin -o "
+"gpx /dev/ttyS0 output.gpx``."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:115
+msgid ""
+"Read the GPSBabel manual for the command line options that may be "
+"specific to your use case."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:117
+msgid ""
+"Once you have created a new device type, it will appear in the device "
+"lists for the GPS download and upload algorithms."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:121
+msgid ""
+"GPS units allow you to store data in different coordinate systems. When "
+"downloading a GPX file (from your GPS unit or a web site) and then "
+"loading it in QGIS, be sure that the data stored in the GPX file uses WGS"
+" 84 (latitude/longitude). QGIS expects this, and it is the official GPX "
+"specification. See `GPX 1.1 Schema Documentation "
+"<https://www.topografix.com/GPX/1/1/>`_."
+msgstr ""
+

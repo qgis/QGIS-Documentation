@@ -1,0 +1,2575 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-01 00:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../docs/user_manual/map_views/map_view.rst:6
+msgid "2D Map View"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:14
+msgid ""
+"The 2D map view (also called **Map canvas**) is the central place where "
+"maps are displayed. QGIS opens by default with a single map view (called "
+"``main map``), showing layers in 2D, and tightly bound to the "
+":guilabel:`Layers` panel. That window reflects the rendering (symbology, "
+"labeling, visibilities...) you applied to the loaded layers."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:26
+msgid "QGIS GUI"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:33
+msgid "Exploring the map view"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:35
+msgid ""
+"When you add a layer (see e.g. :ref:`opening_data`), QGIS automatically "
+"looks for its CRS. If a different CRS is set by default for the project "
+"(see :ref:`project_crs`) then the layer extent is \"on-the-fly\" "
+"translated to that CRS, and the map view is zoomed to that extent if you "
+"start with a blank QGIS project. If there are already layers in the "
+"project, no map canvas resize is performed, so only features falling "
+"within the current map canvas extent will be visible."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:44
+msgid ""
+"Click on the map view and you should be able to interact with it, panning"
+" or zooming to different areas of the map. Dedicated tools are provided "
+"in the :guilabel:`Navigation Toolbar` and in the :menuselection:`View` "
+"menu, with handful shortcuts from the keyboard or the mouse buttons."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:51
+msgid "Map canvas navigation tools"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:56
+#: ../../docs/user_manual/map_views/map_view.rst:750
+msgid "Tool"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:57
+#: ../../docs/user_manual/map_views/map_view.rst:750
+msgid "Usage"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:58
+msgid "|pan| :sup:`Pan Map`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1352
+msgid "pan"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:59
+msgid ""
+"Single left click: the map is centered on the clicked point, at the same "
+"scale"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:60
+msgid "Hold down the left mouse button and drag the map canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:62
+msgid "|zoomIn| :sup:`Zoom In`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1413
+msgid "zoomIn"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:63
+msgid ""
+"Single left click: the map is centered on the clicked point, while the "
+"scale gets doubled"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:65
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom in "
+"to an area."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:67
+msgid "Hold the :kbd:`Alt` key to switch to the |zoomOut| :sup:`Zoom Out` tool."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1419
+msgid "zoomOut"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:69
+msgid "|zoomOut| :sup:`Zoom Out`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:70
+msgid ""
+"Single left click: the map is centered on the clicked point, while the "
+"scale gets halved"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:72
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom out"
+" from an area."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:74
+msgid "Hold the :kbd:`Alt` key to switch to the |zoomIn| :sup:`Zoom In` tool."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:76
+msgid "|panToSelected| :sup:`Pan Map to Selection`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1354
+msgid "panToSelected"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:77
+msgid ""
+"Pan the map to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:79
+msgid "|zoomToSelected| :sup:`Zoom To Selection`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1425
+msgid "zoomToSelected"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:80
+msgid ""
+"Zoom to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:83
+#: ../../docs/user_manual/map_views/map_view.rst:88
+#: ../../docs/user_manual/map_views/map_view.rst:100
+msgid "*Also available in the layer contextual menu*"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:84
+msgid "|zoomToLayer| :sup:`Zoom To Layer(s)`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1423
+msgid "zoomToLayer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:85
+msgid ""
+"Zoom to the extent of all the selected layers in the :guilabel:`Layers` "
+"panel."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:89
+msgid "|zoomFullExtent| :sup:`Zoom Full`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1411
+msgid "zoomFullExtent"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:90
+msgid ""
+"Zoom to the extent of all the layers in the project or to the "
+":ref:`project full extent <project_full_extent>`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:92
+msgid "|zoomLast| :sup:`Zoom Last`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1415
+msgid "zoomLast"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:93
+msgid "Zoom the map to the previous extent in history."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:94
+msgid "|zoomNext| :sup:`Zoom Next`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1417
+msgid "zoomNext"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:95
+msgid "Zoom the map to the next extent in history."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:96
+msgid "|zoomActual| :sup:`Zoom to Native Resolution`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1409
+msgid "zoomActual"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:97
+msgid ""
+"Zoom the map to a level where one pixel of the active raster layer covers"
+" one screen pixel."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:101
+msgid "Mouse wheel"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:102
+msgid "Pan map: Hold and drag the mouse wheel."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:103
+msgid ""
+"Zoom: Roll the mouse wheel to zoom in or zoom out. With :kbd:`Ctrl` key "
+"pressed while rolling the mouse wheel results in a finer zoom."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:106
+msgid "Press the back or forward button to browse the map canvas zoom history."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:107
+msgid "Keyboard"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:108
+msgid ""
+"Pan map: Hold down the :kbd:`Space` key and move the mouse. Press the "
+"arrow keys to pan up, down, left and right."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:110
+msgid "Zoom in: Press :kbd:`PgUp` or :kbd:`Ctrl++`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:111
+msgid "Zoom out: Press :kbd:`PgDown` or :kbd:`Ctrl+-`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:112
+msgid ""
+"Zoom to area: When certain map tools are active (Identify, Measure...), "
+"hold down :kbd:`Shift` and drag a rectangle on the map to zoom to that "
+"area. Not compatible with active selection or edit tools."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:116
+msgid ""
+"Right-click over the map and you should be able to |editCopy| "
+":guilabel:`Copy coordinates` of the clicked point in the map CRS, in "
+"WGS84 or in a custom CRS. The copied information can then be pasted in an"
+" expression, a script, text editor or spreadsheet..."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1324
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:127
+msgid "Controlling map rendering"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:129
+msgid ""
+"By default, QGIS renders all visible layers whenever the map canvas is "
+"refreshed. The events that trigger a refresh of the map canvas include:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:132
+msgid "changing the visibility of a layer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:133
+msgid "modifying symbology of a visible layer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:134
+msgid "adding a layer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:135
+msgid "panning or zooming"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:136
+msgid "resizing the QGIS window"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:138
+msgid "QGIS allows you to control the rendering process in a number of ways."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:140
+msgid "at the :ref:`global level <rendering_options>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:141
+msgid ""
+"per layer, using e.g. the :ref:`scale dependent rendering "
+"<label_scaledepend>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:142
+msgid "or with dedicated tools in the GUI."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:144
+msgid ""
+"To stop the map drawing, press the :kbd:`Esc` key. This will halt the "
+"refresh of the map canvas and leave the map partially drawn. It may "
+"however take a bit of time after pressing :kbd:`Esc` for the map drawing "
+"to halt."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:148
+msgid ""
+"To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in"
+" the bottom-right corner of the status bar. When |checkbox| "
+":guilabel:`Render` is unchecked, QGIS does not redraw the canvas in "
+"response to any of the usual triggers mentioned earlier. Examples of when"
+" you might want to suspend rendering include:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1316
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:154
+msgid "adding many layers and symbolizing them prior to drawing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:155
+msgid ""
+"adding one or more large layers and setting scale dependency before "
+"drawing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:156
+msgid ""
+"adding one or more large layers and zooming to a specific view before "
+"drawing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:157
+msgid "any combination of the above"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:159
+msgid ""
+"Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and"
+" causes an immediate refresh of the map canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:166
+msgid "Time-based control on the map canvas"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:168
+msgid ""
+"QGIS can handle temporal control on loaded layers, i.e. modify the map "
+"canvas rendering based on a time variation. To achieve this, you need:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:171
+msgid ""
+"Layers that have dynamic temporal properties set. QGIS supports temporal "
+"control for different data providers, with custom settings. It's mainly "
+"about setting the time range in which the layer would display:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:175
+msgid ""
+":ref:`raster layers <raster_temporal>`: controls whether to display or "
+"not the layer."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:177
+msgid ""
+":ref:`WMTS layers <wmts_temporal>`: controls whether the data should be "
+"rendered based on a static time range or following a dynamic temporal "
+"range"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:179
+msgid ""
+":ref:`vector layers <vectortemporalmenu>`: features are filtered based on"
+" time values associated to their attributes"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:181
+msgid ""
+":ref:`mesh layers <meshtemporal>`: displays dynamically the active "
+"dataset groups values"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:184
+msgid ""
+"When dynamic temporal options are enabled for a layer, an "
+"|indicatorTemporal| icon is displayed next to the layer in the "
+":guilabel:`Layers` panel to remind you that the layer is temporally "
+"controlled. Click the icon to update the temporal settings."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1332
+msgid "indicatorTemporal"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:189
+msgid ""
+"Enable the temporal navigation of the map canvas using the :ref:`Temporal"
+" controller panel <temporal_controller>`. The panel is activated:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:192
+msgid ""
+"using the |temporal| :sup:`Temporal controller panel` icon located in the"
+" :guilabel:`Map Navigation` toolbar"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1391
+msgid "temporal"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:194
+msgid ""
+"or from the :menuselection:`View --> Panels --> Temporal controller "
+"panel` menu"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:200
+msgid "The temporal controller panel"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:202
+msgid "The :guilabel:`Temporal controller` panel has the following modes:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:207
+msgid "Temporal Controller Panel in navigation mode"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:209
+msgid ""
+"|temporalNavigationOff| :sup:`Turn off temporal navigation`: all the "
+"temporal settings are disabled and visible layers are rendered as usual"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1397
+msgid "temporalNavigationOff"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:211
+msgid ""
+"|temporalNavigationFixedRange| :sup:`Fixed range temporal navigation`: a "
+"time range is set and only layers (or features) whose temporal range "
+"overlaps with this range are displayed on the map."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1395
+msgid "temporalNavigationFixedRange"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:214
+msgid ""
+"|temporalNavigationAnimated| :sup:`Animated temporal navigation`: a time "
+"range is set, split into steps, and only layers (or features) whose "
+"temporal range overlaps with each frame are displayed on the map"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1393
+msgid "temporalNavigationAnimated"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:217
+msgid "|settings| :sup:`Settings` for general control of the animation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1377
+msgid "settings"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:219
+msgid ":guilabel:`Frames rate`: number of steps that are shown per second"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:221
+msgid ""
+"|unchecked| :guilabel:`Cumulative range`: all animation frames will have "
+"the same start date-time but different end dates and times. This is "
+"useful if you wish to accumulate data in your temporal visualization "
+"instead of showing a ‘moving time window’ across your data."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1407
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:229
+msgid "Animating a temporal navigation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:231
+msgid ""
+"An animation is based on a varying set of visible layers at particular "
+"times within a time range. To create a temporal animation:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:235
+msgid ""
+"Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal "
+"navigation`, displaying the animation player widget"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:237
+msgid ""
+"Enter the :guilabel:`Time range` to consider. Using the |refresh| button,"
+" this can be defined as:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1362
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:240
+msgid ":guilabel:`Set to full range` of all the time enabled layers"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:241
+msgid ""
+":guilabel:`Set to preset project range` as defined in the :ref:`project "
+"properties <project_temporal>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:243
+msgid ":guilabel:`Set to single layer's range` taken from a time-enabled layer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:244
+msgid ""
+"Fill in the time :guilabel:`Step` to split the time range. Different "
+"units are supported, from ``seconds`` to ``centuries``. A ``source "
+"timestamps`` option is also available as step: when selected, this causes"
+" the temporal navigation to step between all available time ranges from "
+"layers in the project. It’s useful when a project contains layers with "
+"non-contiguous available times, such as a WMS-T service which provides "
+"images that are available at irregular dates. This option will allow you "
+"to only step between time ranges where the next available image is shown."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:253
+msgid ""
+"Click the |play| button to preview the animation. QGIS will generate "
+"scenes using the layers rendering at the set times. Layers display "
+"depends on whether they overlap any individual time frame."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1356
+msgid "play"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:262
+msgid "Temporal navigation through a layer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:264
+msgid ""
+"The animation can also be previewed by moving the time slider. Checking "
+"the |unchecked| :guilabel:`Loop` checkbox will repeatedly run the "
+"animation while clicking |play| stops a running animation. A full set of "
+"video player buttons is available."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:269
+msgid ""
+"Horizontal scrolling using the mouse wheel (where supported) with the "
+"cursor on the map canvas will also allow you to navigate, or “scrub”, the"
+" temporal navigation slider backwards and forwards."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:273
+msgid ""
+"Click the |fileSave| :sup:`Export animation` button if you want to "
+"generate a series of images representing the scene. They can be later "
+"combined in a video editor software:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1326
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:280
+msgid "Exporting map canvas animation scenes to images"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:282
+msgid ""
+"The filename :guilabel:`Template`: the ``####`` are replaced with frame "
+"sequence number"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:284
+msgid "The :guilabel:`Output directory`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:285
+msgid "Under :guilabel:`Map settings`, you can:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:287
+msgid "redefine the :ref:`spatial extent <extent_selector>` to use"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:288
+msgid ""
+"control the :guilabel:`Resolution` of the image (:guilabel:`Output width`"
+" and :guilabel:`Output height`)"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:290
+msgid ""
+":guilabel:`Draw active decorations`: whether active :ref:`decorations "
+"<decorations>` should be kept in the output"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:292
+msgid "Under :guilabel:`Temporal settings`, you can redefine:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:294
+msgid "the time :guilabel:`Range` for the animation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:295
+msgid "the :guilabel:`Step (frame length)` in the unit of your choice"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:304
+msgid "Bookmarking extents on the map"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:306
+msgid ""
+"Spatial Bookmarks allow you to \"bookmark\" a geographic location and "
+"return to it later. By default, bookmarks are saved in the user's profile"
+" (as :guilabel:`User Bookmarks`), meaning that they are available from "
+"any project the user opens. They can also be saved for a single project "
+"(named :guilabel:`Project Bookmarks`) and stored within the project file,"
+" which can be helpful if the project is to be shared with other users."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:314
+msgid "Creating a Bookmark"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:316
+msgid "To create a bookmark:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:318
+msgid "Zoom and pan to the area of interest."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:319
+msgid ""
+"Select the menu option :menuselection:`View -->` |newBookmark| "
+":menuselection:`New Spatial Bookmark...`, press :kbd:`Ctrl+B` or right-"
+"click the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the "
+":guilabel:`Browser` panel and select :guilabel:`New Spatial Bookmark`. "
+"The :guilabel:`Bookmark Editor` dialog opens."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1344
+msgid "newBookmark"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1385
+msgid "showBookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:331
+msgid "The Bookmark Editor Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:333
+msgid "Enter a descriptive name for the bookmark"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:334
+msgid "Enter or select a group name in which to store related bookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:335
+msgid ""
+"Select the extent of the area you wish to save, using the :ref:`extent "
+"selector <extent_selector>` widget"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:337
+msgid "Change the map :guilabel:`Rotation`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:338
+msgid "Indicate the :guilabel:`CRS` to use for the extent"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:339
+msgid ""
+"Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User "
+"Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down "
+"list is set to :guilabel:`User Bookmarks`)"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:342
+msgid "Press :guilabel:`Save` to add the bookmark to the list"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:344
+msgid "Note that you can have multiple bookmarks with the same name."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:347
+msgid "Working with Bookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:349
+msgid ""
+"To use and manage bookmarks, you can either use the :guilabel:`Spatial "
+"Bookmarks` panel or :guilabel:`Browser`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:352
+msgid ""
+"Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show "
+"Spatial Bookmark Manager` or press :kbd:`Ctrl+7` to open the "
+":guilabel:`Spatial Bookmarks Manager` panel. Select :menuselection:`View "
+"-->` |showBookmarks| :menuselection:`Show Bookmarks` or "
+":kbd:`Ctrl+Shift+B` to show the |showBookmarks| :guilabel:`Spatial "
+"Bookmarks` entry in the :guilabel:`Browser` panel."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:360
+msgid "You can perform the following tasks:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:362
+msgid "Managing bookmark actions"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:367
+msgid "Task"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:368
+msgid "Spatial Bookmark Manager"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:369
+msgid "Browser"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:370
+msgid "**Zoom to a Bookmark**"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:371
+msgid ""
+"Double-click on it, or select the bookmark and press the |zoomToBookmark|"
+" :guilabel:`Zoom to bookmark` button."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1421
+msgid "zoomToBookmark"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:373
+msgid ""
+"Double-click on it, drag and drop it to the map canvas, or right-click "
+"the bookmark and select :guilabel:`Zoom to Bookmark`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:375
+msgid "**Delete a bookmark**"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:376
+msgid ""
+"Select the bookmark and click the |deleteSelected| :guilabel:`Delete "
+"bookmark` button. Confirm your choice."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1322
+msgid "deleteSelected"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:378
+msgid ""
+"Right-click the bookmark and select :guilabel:`Delete Spatial Bookmark`. "
+"Confirm your choice."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:380
+msgid "**Export bookmarks to XML**"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:381
+msgid ""
+"Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select"
+" |sharingExport| :guilabel:`Export`. All the bookmarks (user or project) "
+"are saved in an xml file."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1379
+msgid "sharing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1381
+msgid "sharingExport"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:384
+msgid ""
+"Select one or more folders (user or project) or subfolders (groups), then"
+" right-click and select |sharingExport| :guilabel:`Export Spatial "
+"Bookmarks...`. The selected bookmark subset is saved."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:387
+msgid "**Import bookmarks from XML**"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:388
+msgid ""
+"Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select"
+" |sharingImport| :guilabel:`Import`. All bookmarks in the XML file are "
+"imported as user bookmarks."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1383
+msgid "sharingImport"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:391
+msgid ""
+"Right-click the :guilabel:`Spatial Bookmarks` entry or one of its folders"
+" (user or project) or subfolders (groups) to determine where to import "
+"the bookmarks, then select |sharingImport| :guilabel:`Import Spatial "
+"Bookmarks`. If performed on the :guilabel:`Spatial Bookmarks` entry, the "
+"bookmarks are added to :guilabel:`User Bookmarks`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:396
+msgid "**Edit bookmark**"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:397
+msgid ""
+"You can change a bookmark by changing the values in the table. You can "
+"edit the name, the group, the extent and if it is stored in the project "
+"or not."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:400
+msgid ""
+"Right-click the desired bookmark and select :guilabel:`Edit Spatial "
+"Bookmark...`. The :guilabel:`Bookmark Editor` will open, allowing you to "
+"redefine every aspect of the bookmark as if you were creating it for the "
+"first time."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:405
+msgid ""
+"You can also drag and drop the bookmark between folders (user and "
+"project) and subfolders (groups)."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:408
+msgid ""
+"You can manage bookmark actions by right-click on the desired bookmark in"
+" the :guilabel:`Spatial Bookmarks Manager`. You can also zoom to "
+"bookmarks by typing the bookmark name in the :ref:`locator "
+"<label_statusbar>`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:416
+msgid "Decorating the map"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:418
+msgid ""
+"Decorations include Grid, Title Label, Copyright Label, Image, North "
+"Arrow, Scale Bar and Layout Extents. They are used to 'decorate' the map "
+"by adding cartographic elements."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:425
+msgid "Grid"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:427
+msgid ""
+"|addGrid| :guilabel:`Grid` allows you to add a coordinate grid and "
+"coordinate annotations to the map canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1302
+msgid "addGrid"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:430
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Grid...` to "
+"open the dialog."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:437
+msgid "The Grid Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:439
+msgid ""
+"Tick |checkbox| :guilabel:`Enable grid` and set grid definitions "
+"according to the layers loaded in the map canvas:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:442
+msgid ""
+"The :guilabel:`Grid type`: it can be :guilabel:`Line` or "
+":guilabel:`Marker`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:443
+msgid ""
+"The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker "
+"symbol <vector_marker_symbols>` used to represent the grid marks"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:445
+msgid ""
+"The :guilabel:`Interval X` and :guilabel:`Interval Y` between the grid "
+"marks, in map units"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:447
+msgid ""
+"An :guilabel:`Offset X` and :guilabel:`Offset Y` distance of the grid "
+"marks from the bottom left corner of the map canvas, in map units"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:449
+msgid "The interval and offset parameters can be set based on the:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:451
+msgid ""
+":guilabel:`Canvas Extents`: generates a grid with an interval that is "
+"approximatively 1/5 of the canvas width"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:453
+msgid ":guilabel:`Active Raster Layer` resolution"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:454
+msgid ""
+"Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates "
+"of the grid marks and set:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:457
+msgid ""
+"The :guilabel:`Annotation direction`, ie how the labels would be placed "
+"relative to their grid line. It can be:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:460
+msgid ":guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:461
+msgid ""
+":guilabel:`Horizontal and Vertical`, ie each label is parallel to the "
+"grid mark it refers to"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:463
+msgid ""
+":guilabel:`Boundary direction`, ie each label follows the canvas "
+"boundary, and is perpendicular to the grid mark it refers to"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:465
+msgid ""
+"The :guilabel:`Annotation font` (text formatting, buffer, shadow...) "
+"using the :ref:`font selector widget <font_selector>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:467
+msgid ""
+"The :guilabel:`Distance to map frame`, margin between annotations and map"
+" canvas limits. Convenient when :ref:`exporting the map canvas "
+"<exportingmapcanvas>` eg to an image format or PDF, and avoid annotations"
+" to be on the \"paper\" limits."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:470
+msgid "The :guilabel:`Coordinate precision`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:472
+#: ../../docs/user_manual/map_views/map_view.rst:512
+#: ../../docs/user_manual/map_views/map_view.rst:551
+#: ../../docs/user_manual/map_views/map_view.rst:658
+msgid ""
+"Click :guilabel:`Apply` to verify that it looks as expected or "
+":guilabel:`OK` if you're satisfied."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:479
+msgid "Title Label"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:481
+msgid ""
+"|titleLabel| :guilabel:`Title Label` allows you to decorate your map with"
+" a **Title**."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1403
+msgid "titleLabel"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:483
+msgid "To add a Title Label decoration:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:485
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Title "
+"Label...` to open the dialog."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:493
+msgid "The Title Decoration Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:495
+msgid "Make sure |checkbox| :guilabel:`Enable Title Label` is checked"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:496
+msgid ""
+"Enter the title text you want to place on the map. You can make it "
+"dynamic using the :guilabel:`Insert or Edit an Expression...` button."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:499
+#: ../../docs/user_manual/map_views/map_view.rst:540
+msgid ""
+"Choose the :guilabel:`Font` for the label using the :ref:`font selector "
+"widget <font_selector>` with full access to QGIS :ref:`text formatting "
+"<text_format>` options. Quickly set the font color and opacity by "
+"clicking the black arrow to the right of the font combo box."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:503
+msgid ""
+"Select the :ref:`color <color-selector>` to apply to the title's "
+":guilabel:`Background bar color`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:505
+msgid ""
+"Choose the :guilabel:`Placement` of the label in the canvas: options are "
+":guilabel:`Top left`, :guilabel:`Top Center` (default), :guilabel:`Top "
+"Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center` and "
+":guilabel:`Bottom Right`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:509
+#: ../../docs/user_manual/map_views/map_view.rst:548
+msgid ""
+"Refine the placement of the item by setting a horizontal and/or vertical "
+":guilabel:`Margin from Edge`. These values can be in **Millimeters** or "
+"**Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:519
+msgid "Copyright Label"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:521
+msgid ""
+"|copyrightLabel| :guilabel:`Copyright Label` can be used to decorate your"
+" map with a **Copyright** label."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1318
+msgid "copyrightLabel"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:524
+msgid "To add this decoration:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:526
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Copyright "
+"Label...` to open the dialog."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:534
+msgid "The Copyright Decoration Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:536
+msgid "Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:537
+msgid ""
+"Enter the copyright text you want to place on the map. You can make it "
+"dynamic using the :guilabel:`Insert or Edit an Expression...` button."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:544
+msgid ""
+"Choose the :guilabel:`Placement` of the label in the canvas: options are "
+":guilabel:`Top left`, :guilabel:`Top Center`, :guilabel:`Top Right`, "
+":guilabel:`Bottom left`, :guilabel:`Bottom Center`, and :guilabel:`Bottom"
+" Right` (default for Copyright decoration)"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:558
+msgid "Image Decoration"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:560
+msgid ""
+"|addImage| :guilabel:`Image` allows you to add an image (logo, legend, "
+"..) on the map canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1304
+msgid "addImage"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:562
+msgid "To add an image:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:564
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Image...` to "
+"open the dialog."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:572
+msgid "The Image Decoration Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:574
+msgid "Make sure |checkbox| :guilabel:`Enable Image` is checked"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:575
+msgid ""
+"Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` "
+":sup:`Browse` button"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:577
+msgid ""
+"If you have chosen a parameter enabled SVG then you can also set a "
+":guilabel:`Fill` or :guilabel:`Stroke` (outline) color. For bitmap "
+"images, the color settings are disabled."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:580
+msgid ""
+"Set a :guilabel:`Size` of the image in mm. The width of selected image is"
+" used to resize it to given :guilabel:`Size`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:582
+msgid ""
+"Choose where you want to place the image on the map canvas with the "
+":guilabel:`Placement` combo box. The default position is :guilabel:`Top "
+"Left`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:584
+msgid ""
+"Set the :guilabel:`Horizontal` and :guilabel:`Vertical Margin from "
+"(Canvas) Edge`. These values can be set in **Millimeters**, **Pixels** or"
+" as a **Percentage** of the width or height of the map canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:587
+#: ../../docs/user_manual/map_views/map_view.rst:618
+#: ../../docs/user_manual/map_views/map_view.rst:696
+msgid ""
+"Click :guilabel:`Apply` to verify that it looks as expected and "
+":guilabel:`OK` if you're satisfied."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:594
+msgid "North Arrow"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:596
+msgid ""
+"|northArrow| :guilabel:`North Arrow` allows you to add a north arrow on "
+"the map canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1348
+msgid "northArrow"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:598
+msgid "To add a north arrow:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:600
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> North "
+"Arrow...` to open the dialog."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:608
+msgid "The North Arrow Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:610
+msgid "Make sure |checkbox| :guilabel:`Enable north arrow` is checked"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:611
+msgid "Optionally change the color and size, or choose a custom SVG"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:612
+msgid ""
+"Optionally change the angle or choose **Automatic** to let QGIS determine"
+" the direction"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:614
+msgid "Optionally choose the placement from the Placement combo box"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:615
+msgid ""
+"Optionally refine the placement of the arrow by setting a horizontal "
+"and/or vertical `Margin from (Canvas) Edge`. These values can be in "
+"**Millimeters** or **Pixels** or set as a **Percentage** of the width or "
+"height of the map canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:625
+msgid "Scale Bar"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:627
+msgid ""
+"|scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map "
+"canvas. You can control the style and placement, as well as the labelling"
+" of the bar. The scale bar respects the active :ref:`project's distance "
+"unit <measurements_ellipsoid>` as defined in :menuselection:`Project "
+"properties --> General --> Units for distance measurement`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1368
+msgid "scaleBar"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:632
+msgid "To add a scale bar:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:634
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Scale Bar...`"
+" to open the dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:642
+msgid "The Scale Bar Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:644
+msgid "Make sure |checkbox| :guilabel:`Enable scale bar` is checked"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:645
+msgid ""
+"Choose a style from the :guilabel:`Scale bar style` |selectString| combo "
+"box"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1373
+msgid "selectString"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:646
+msgid ""
+"Select the :guilabel:`Color of bar` |selectColor| by choosing a fill "
+"color (default: black) and an outline color (default: white). The scale "
+"bar fill and outline can be made opaque by clicking on the down arrow to "
+"the right of the color input."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1372
+msgid "selectColor"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:650
+msgid ""
+"Select the font for the scale bar from the :guilabel:`Font of bar` "
+"|selectString| combo box"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:651
+msgid "Set the :guilabel:`Size of bar` in the active unit"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:652
+msgid ""
+"Optionally check |checkbox| :guilabel:`Automatically snap to round number"
+" on resize` to display easy-to-read values"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:654
+msgid ""
+"Choose the placement from the :guilabel:`Placement` |selectString| combo "
+"box"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:655
+msgid ""
+"You can refine the placement of the item by setting a horizontal and/or "
+"vertical `Margin from (Canvas) Edge`. These values can be in "
+"**Millimeters** or **Pixels** or set as a **Percentage** of the width or "
+"height of the map canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:664
+msgid "Layout Extents"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:666
+msgid ""
+"|addMap| :guilabel:`Layout Extents` adds the extents of :ref:`map item(s)"
+" <layout_map_item>` in print layout(s) to the canvas. When enabled, the "
+"extents of all map items within all print layouts are shown using a "
+"lightly dotted border labeled with the name of the print layout and map "
+"item. You can control the style and labeling of the displayed layout "
+"extents. This decoration is useful when you are tweaking the positioning "
+"of map elements such as labels, and need to know the actual visible "
+"region of print layouts."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1306
+msgid "addMap"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:678
+msgid ""
+"Example of layout extents displayed in a QGIS project with two print "
+"layouts. The print layout named 'Sights' contains two map items, while "
+"the other print layout contains one map item."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:682
+msgid "To add layout extent(s):"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:684
+msgid ""
+"Select :menuselection:`View --> Decorations --> Layout Extents` to open "
+"the dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:692
+msgid "The Layout Extents Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:694
+msgid "Make sure |checkbox| :guilabel:`Show layout extents` is checked."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:695
+msgid "Optionally change the symbol and labeling of the extents."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:702
+msgid "**Decorations Settings**"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:704
+msgid ""
+"When you save a QGIS project file, any changes you have made to Grid, "
+"North Arrow, Scale Bar, Copyright and Layout Extents will be saved in the"
+" project and restored the next time you load the project."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:715
+msgid "Annotation Tools"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:717
+msgid ""
+"Annotations are another type of elements added onto the map canvas to "
+"provide additional information that can not be depicted by the rendered "
+"layers. Unlike :ref:`labels <vector_labels_tab>` that rely on attribute "
+"values stored in vector layers, annotations are independent details, "
+"stored within the project file itself."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:723
+msgid "Two families of annotations are available in QGIS:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:725
+msgid ""
+"**Feature annotations**: they are actual georeferenced features of text, "
+"marker, line or polygon type stored within a special layer type called "
+"\"annotation layer\". They are tied to a particular geographic location, "
+"meaning that moving your map, changing the scale or changing projection "
+"won’t cause your annotations to jump around the map. Rather, they’ll be "
+"locked in place to the location you’ve drawn them."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:730
+msgid ""
+"**Balloon annotations**: these are individuals annotations of text, form "
+"or image type placed inside a bubble. They can be associated to any layer"
+" for their visibility, are drawn on top of the map canvas. The size is "
+"dependent from the map canvas scale, and its position can be anchored."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:735
+msgid "**Layout the map with annotations**"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:737
+msgid ""
+"You can print or export annotations with your map to various formats "
+"using:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:739
+msgid "map canvas export tools available in the :menuselection:`Project` menu"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:740
+msgid ""
+":ref:`print layout <create-output>`, in which case you need to check "
+":guilabel:`Draw map canvas items` in the corresponding map item "
+"properties"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:744
+msgid ""
+"The :guilabel:`Annotations Toolbar` provides a set of tools to create and"
+" interact with both families of annotations."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:747
+msgid "The Annotations Toolbar actions"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:750
+msgid "Scope"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:752
+msgid "|createAnnotationLayer| :sup:`New Annotation Layer`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1320
+msgid "createAnnotationLayer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:752
+msgid "Create a new layer to store annotations"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:752
+msgid "Feature annotations"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:754
+msgid ":sup:`Main Annotation Layer Properties`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:754
+msgid "Control settings of the Main Annotation Layer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:756
+msgid "|select| :sup:`Modify Annotations`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1370
+msgid "select"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:756
+msgid "Select, move, resize and modify symbology properties of annotations"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:758
+#: ../../docs/user_manual/map_views/map_view.rst:854
+msgid "|addPolygon| :sup:`Create Polygon Annotation`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1310
+msgid "addPolygon"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:758
+msgid "Create an annotation as a polygon feature"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:760
+#: ../../docs/user_manual/map_views/map_view.rst:855
+msgid "|addPolyline| :sup:`Create Line Annotation`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1312
+msgid "addPolyline"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:760
+msgid "Create an annotation as a polyline feature"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:762
+#: ../../docs/user_manual/map_views/map_view.rst:856
+msgid "|addMarker| :sup:`Create Marker Annotation`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1308
+msgid "addMarker"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:762
+msgid "Create an annotation as a point feature"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:764
+#: ../../docs/user_manual/map_views/map_view.rst:857
+msgid "|actionText| :sup:`Create Text Annotation at Point`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1300
+msgid "actionText"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:764
+msgid "Create an annotation as a text label"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:766
+#: ../../docs/user_manual/map_views/map_view.rst:858
+msgid "|textAlongLine| :sup:`Create Text Annotation along Line`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1399
+msgid "textAlongLine"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:766
+msgid "Create an annotation as a curved text along a linestring"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "|textAnnotation| :sup:`Text Annotation`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1401
+msgid "textAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "Select and create a text formatted annotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+#: ../../docs/user_manual/map_views/map_view.rst:923
+msgid "Balloon annotations"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "|htmlAnnotation| :sup:`HTML Annotation`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1330
+msgid "htmlAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "Select and create annotation with an :file:`HTML` file's content"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid "|svgAnnotation| :sup:`SVG Annotation`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1389
+msgid "svgAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid "Select and create annotation showing an :file:`SVG` file"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:775
+msgid "|formAnnotation| :sup:`Form Annotation`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1328
+msgid "formAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:775
+msgid ""
+"Select and create annotation showing attributes of a vector layer in a "
+"custom form file"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:782
+msgid "Feature Annotations"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:784
+msgid ""
+"Feature annotations are stored in **annotation layers**. Unlike "
+"conventional layers, an annotation layer is available only in the current"
+" project and can contain features of different types (text, marker, line,"
+" polygon). The layer has no attributes and no symbology associated, but "
+"instead each feature can be symbolized on an item-by-item basis, through "
+":guilabel:`Layer Styling` panel."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:790
+msgid "Two types of annotation layer are available in QGIS:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:792
+msgid ""
+"A common :guilabel:`Annotation Layer`: you can create one using the "
+"|createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed in"
+" the :guilabel:`Layers` panel, allowing you to control its features' "
+"visibility, move it to show above or below particular layers in your map,"
+" like any common layer. Double-click the layer and you can access its "
+"properties."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid ""
+"The :guilabel:`Main Annotation Layer`: By default, this is where "
+"annotations are stored when no annotation layer is available in the "
+"project or is selected at creation time. This layer is always drawn on "
+"the very top of your map and you won't see it listed in the "
+":guilabel:`Layers` panel alongside the other layers in your project, "
+"meaning that its features are always visible. The :guilabel:`Main "
+"Annotation Layer Properties` entry on the :guilabel:`Annotations` toolbar"
+" helps you open its properties dialog."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:807
+msgid "Layer Properties"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:809
+msgid "The properties dialog of an annotation layer provides the following tabs:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:811
+msgid ""
+":guilabel:`Information`: a read-only dialog representing an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. This may include the layer extent, count of items per annotation "
+"type and total count, CRS details, ..."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:815
+msgid ""
+":guilabel:`Source`: defines general settings for the annotation layer. "
+"You can:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:817
+msgid ""
+"Set a :guilabel:`Layer name` that will be used to identify the layer in "
+"the project (in the :guilabel:`Layers Panel`, with expressions, ...)"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:819
+msgid ""
+"Display the layer's :ref:`Assigned Coordinate Reference System (CRS) "
+"<layer_crs>`: you can change the layer's CRS, selecting a recently used "
+"one in the drop-down list or clicking on |setProjection| :sup:`Select "
+"CRS` button (see :ref:`crs_selector`). Use this process only if the CRS "
+"applied to the layer is a wrong one or if none was applied."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1375
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:827
+msgid ":guilabel:`Rendering`:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:829
+msgid ""
+"You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum "
+"(exclusive)` scale, defining a range of scale in which features will be "
+"visible. Out of this range, they are hidden. The |mapIdentification| "
+":sup:`Set to current canvas scale` button helps you use the current map "
+"canvas scale as boundary of the range visibility. See "
+":ref:`label_scaledepend` for more information."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1334
+msgid "mapIdentification"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:835
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your "
+"vector layer to your needs. You can also make a precise definition of the"
+" percentage of visibility in the menu beside the slider."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:839
+msgid ""
+":guilabel:`Blending mode` at the :guilabel:`Layer` level: You can achieve"
+" special rendering effects with these tools that you may previously only "
+"know from graphics programs. The pixels of your overlaying and underlying"
+" layers are mixed through the settings described in :ref:`blend-modes`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:843
+msgid ""
+"Apply :ref:`paint effects <draw_effects>` on all the layer features with "
+"the :guilabel:`Draw Effects` button."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:846
+msgid ""
+"Some of these options are accessible from the feature annotation "
+":guilabel:`Symbology` properties."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:850
+msgid "Interacting with features"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:852
+msgid ""
+"The Feature annotations have dedicated tools for creation depending on "
+"their type:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:860
+msgid ""
+"All the usual QGIS shortcuts for creating features apply when creating "
+"annotation items. A line or polygon annotation is drawn by left-clicking "
+"once for each vertex, with a final right mouse click to complete the "
+"shape. Snapping can be enabled while you draw, you can use the "
+":guilabel:`Advanced Digitizing Tools` to precisely place vertices, and "
+"even switch the :ref:`drawing tools <drawing_methods>` to the streaming "
+"mode for completely free-form shapes."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:867
+msgid ""
+"Unlike common layers, an annotation layer does not need to be active "
+"before you select its features. Simply grab the |select| :sup:`Modify "
+"Annotations` tool and you will be able to interact with any feature "
+"annotation:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:871
+msgid ""
+"**Selection**: left-click on the annotation. By default, annotations are "
+"rendered in the order of creation, meaning that recent annotations will "
+"be placed on top of older. You may need to play with the Z-index property"
+" of features in order to select ones they would sit above."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:876
+msgid ""
+"**Moving**: Left click on a selected annotation item to start moving it. "
+"A right-click or pressing :kbd:`Esc` key cancels the move, while a second"
+" left click will confirm the move. The displacement can also be "
+"controlled pressing the cursor keys:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:881
+msgid ":kbd:`Shift+key` for big movement"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:882
+msgid ":kbd:`Alt+key` for ``1 px`` movement"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:883
+msgid ""
+"**Geometry modification**: for line or polygon annotations, left-click on"
+" a vertex of the geometry, move and click again. Double-click a segment "
+"to add a new vertex."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:886
+msgid ""
+"**Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while an "
+"annotation is selected will delete that annotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:888
+msgid ":ref:`Change feature symbology <annotation_feature_symbology>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid "Feature symbology"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:895
+msgid ""
+"A selected annotation will display its :guilabel:`Symbology` properties "
+"in the :guilabel:`Layer styling` panel. You can:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:898
+msgid "Modify the appearance using full capabilities of:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:900
+msgid ""
+"the :ref:`symbol properties <symbol-selector>` for polygon, polyline and "
+"marker annotations"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:901
+msgid ""
+"the :ref:`text format properties <text_format>` for text-based "
+"annotations. A text area allows you to construct the string to display "
+"using QGIS expression functions. It is also possible to set the "
+":guilabel:`Alignment` for text annotation at point (left, center or right"
+" of the text point)."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid ""
+"For text annotation at point, also configure whether it should "
+":guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`. In both "
+"cases, a custom :guilabel:`Angle` can be set for the feature orientation."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:908
+msgid ""
+"For text annotation along a line, configure an :guilabel:`Offset from "
+"line` in the unit of your choice"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:910
+msgid ""
+"Configure a |unchecked| :guilabel:`Reference scale`: indicates the map "
+"scale at which symbol or text sizes which uses paper-based units (such as"
+" millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale. For instance, a line "
+"feature wide of 2mm at 1:2000 :guilabel:`Reference scale` will be "
+"rendered using 4mm when the map is viewed at 1:1000."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:915
+msgid ""
+"Set a :guilabel:`Z-index`: a feature with a higher index is placed on top"
+" of features with lower index. A convenient setting for both feature "
+"display and selection."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:918
+msgid ""
+"Modify some of the :ref:`Layer rendering <annotationslayer_rendering>` "
+"settings"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:925
+msgid ""
+"You can add balloon annotations through :menuselection:`Edit --> Add "
+"Annotation -->` menu or from the :guilabel:`Annotations Toolbar`:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:928
+msgid "|textAnnotation| :sup:`Text Annotation` for custom formatted text"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:929
+msgid ""
+"|htmlAnnotation| :sup:`HTML Annotation` to place the content of an "
+":file:`html` file"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:930
+msgid "|svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:931
+msgid ""
+"|formAnnotation| :sup:`Form Annotation`: useful to display attributes of "
+"a vector layer in a customized :file:`ui` file (see "
+":numref:`figure_custom_annotation`). This is similar to the :ref:`custom "
+"attribute forms <provide_ui_file>`, but displayed in an annotation item. "
+"Also see this video "
+"https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s from"
+" Tim Sutton for more information."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:947
+msgid "Examples of balloon annotations"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:950
+msgid ""
+"To add a balloon annotation, select the corresponding tool and click on "
+"the map canvas. An empty balloon is added. Double-click on it and a "
+"dialog opens with various options. This dialog is almost the same for all"
+" the annotation types:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:954
+msgid ""
+"At the top, a file selector to fill with the path to an :file:`html`, "
+":file:`svg` or :file:`ui` file depending on the type of annotation. For "
+"text annotation, you can enter your message in a text box and set its "
+"rendering with the normal font tools."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:958
+msgid ""
+"|checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon "
+"placement is based on a screen position (instead of the map), meaning "
+"that it's always shown regardless the map canvas extent."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:961
+msgid ""
+":guilabel:`Linked layer`: associates the annotation with a map layer, "
+"making it visible only when that layer is visible."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:963
+msgid ""
+":guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, sets"
+" the symbol to display at the balloon anchor position (shown only when "
+":guilabel:`Fixed map position` is checked)."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:966
+msgid ""
+":guilabel:`Frame style`: sets the frame background color, transparency, "
+"stroke color or width of the balloon using QGIS symbols."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:968
+msgid ""
+":guilabel:`Contents margins`: sets interior margins of the annotation "
+"frame."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:969
+msgid ""
+"|checkbox| :guilabel:`Live update` allows you to live preview your "
+"changes."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:976
+msgid "A ballon annotation text dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:978
+msgid "When a balloon annotation tool is active, you can also:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:980
+msgid "Select an annotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:981
+msgid "Resize an annotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:982
+msgid ""
+"Move an annotation by map position (by dragging the map marker) or by "
+"moving only the balloon."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:983
+msgid ""
+"Delete an annotation: select it and either press the :kbd:`Del` or "
+":kbd:`Backspace` button, or double-click it and press the "
+":guilabel:`Delete` button in the properties dialog."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:985
+msgid "Right-click and in the contextual menu:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:987
+msgid ""
+"|editCopy| :guilabel:`Copy coordinate` of the annotation's map marker in "
+"various CRS"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:988
+msgid ""
+"|toggleEditing| :guilabel:`Edit` properties of the annotation. Same as "
+"double-clicking the annotation."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1405
+msgid "toggleEditing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:989
+msgid "|deleteSelected| :guilabel:`Delete` the annotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:997
+msgid "Measuring"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1000
+msgid "General information"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1002
+msgid "QGIS provides four means of measuring geometries:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1004
+msgid "interactive measurement tools |measure|"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1336
+msgid "measure"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1005
+msgid "measuring in the |calculateField| :sup:`Field Calculator`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1314
+msgid "calculateField"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1006
+msgid "derived measurements in the :ref:`identify` tool"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1007
+msgid ""
+"the vector analysis tool: :menuselection:`Vector --> Geometry Tools --> "
+"Export/Add Geometry Columns`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1010
+msgid ""
+"Measuring works within projected coordinate systems (e.g., UTM) and "
+"unprojected data. The first three measuring tools behave equally to "
+"global project settings:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1013
+msgid ""
+"Unlike most other GIS, the default measurement metric is ellipsoidal, "
+"using the ellipsoid defined in :menuselection:`Project --> Properties... "
+"--> General`. This is true both when geographic and projected coordinate "
+"systems are defined for the project."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1017
+msgid ""
+"If you want to calculate the projected/planimetric area or distance using"
+" cartesian maths, the measurement ellipsoid has to be set to "
+"\"None/Planimetric\" (:menuselection:`Project --> Properties... --> "
+"General`). However, with a geographic (ie unprojected) CRS defined for "
+"the data and project, area and distance measurement will be ellipsoidal."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1023
+msgid ""
+"However, neither the identify tool nor the field calculator will "
+"transform your data to the project CRS before measuring. If you want to "
+"achieve this, you have to use the vector analysis tool: "
+":menuselection:`Vector --> Geometry Tools --> Add Geometry "
+"Attributes...`. Here, measurement is planimetric, unless you choose the "
+"ellipsoidal measurement."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1030
+msgid "Measure length, areas, bearings and angles interactively"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1032
+msgid ""
+"Click the |measure| icon in the Attribute toolbar to begin measurements. "
+"The down arrow near the icon switches between |measure| length, "
+"|measureArea| area, |measureBearing| bearing or |measureAngle| angle. The"
+" default unit used in the dialog is the one set in "
+":menuselection:`Project --> Properties... --> General` menu."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1340
+msgid "measureArea"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1342
+msgid "measureBearing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1338
+msgid "measureAngle"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1038
+msgid ""
+"For the :guilabel:`Measure Line` and the :guilabel:`Measure Area` the "
+"measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or "
+"|radioButtonOn| :guilabel:`Ellipsoidal` measure."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1360
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1042
+msgid "**Configuring the measure tool**"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1044
+msgid ""
+"While measuring length or area, clicking the :guilabel:`Configuration` "
+"button at the bottom of the widget opens the :menuselection:`Settings -->"
+" Options --> Map Tools` menu, where you can select the rubberband color, "
+"the precision of the measurements and the unit behavior. You can also "
+"choose your preferred measurement or angle units, but keep in mind that "
+"those values are overridden in the current project by the selection made "
+"in the :menuselection:`Project --> Properties... --> General` menu, and "
+"by the selection made in the measurement widget."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1053
+msgid ""
+"All measuring modules use the snapping settings from the digitizing "
+"module (see section :ref:`snapping_tolerance`). So, if you want to "
+"measure exactly along a line feature, or around a polygon feature, first "
+"set its layer snapping tolerance. Now, when using the measuring tools, "
+"each mouse click (within the tolerance setting) will snap to that layer."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1065
+msgid ""
+"The |measure| :sup:`Measure Line` measures distances between given "
+"points. The tool then allows you to click points on the map. Each segment"
+" length, as well as the total, shows up in the measure window. In the "
+"measure window, you will see coordinates for all your points and "
+"distances. Keep in mind that the first row will contain only coordinates,"
+" as it represents your starting point. Now it is possible to copy all "
+"your line measurements at once to the clipboard using the "
+":guilabel:`Copy` button. Clicking the :guilabel:`Configuration` button "
+"you will access to :guilabel:`Measure Tool Copy Settings` where you can "
+"set up :ref:`copy options <measure_copy_settings>`. To stop measuring, "
+"click the right mouse button."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1076
+msgid ""
+"Note that you can use the drop-down list near the total to change the "
+":ref:`measurement units <measurements_ellipsoid>` interactively while "
+"working with the measure tool. This unit is retained for the widget until"
+" a new project is created or another project is opened."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1082
+msgid ""
+"The :guilabel:`Info` section in the dialog explains how calculations are "
+"made according to the CRS settings available."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1091
+msgid "Measure Distance"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1093
+msgid ""
+"|measureArea| :sup:`Measure Area`: Areas can also be measured. In the "
+"measure window, the accumulated area size appears. Right-click to stop "
+"drawing. The Info section is also available as well as the ability to "
+"switch between different :ref:`area units <measurements_ellipsoid>`."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1103
+msgid "Measure Area"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1105
+msgid ""
+"|measureBearing| :sup:`Measure Bearing`: You can also measure bearings. "
+"The cursor becomes cross-shaped. Click to draw the first point of the "
+"bearing, then move the cursor to draw the second point. The measurement "
+"is displayed in a pop-up dialog."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1116
+msgid "Measure Bearing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1118
+msgid ""
+"|measureAngle| :sup:`Measure Angle`: You can also measure angles. The "
+"cursor becomes cross-shaped. Click to draw the first segment of the angle"
+" you wish to measure, then move the cursor to draw the desired angle. The"
+" measurement is displayed in a pop-up dialog."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1129
+msgid "Measure Angle"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1135
+msgid "Setting additional map views"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1137
+msgid ""
+"It is also possible to open additional map views whose content could "
+"diverge from the :guilabel:`Layers` panel current state. To add a new map"
+" view, go to :menuselection:`View -->` |newMap| :menuselection:`New Map "
+"View`. A new floating widget, mimicking the main map view's rendering, is"
+" added to QGIS. You can add as many map views as you need. They can be "
+"kept floating, placed side by side or stacked on top of each other."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1346
+msgid "newMap"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1151
+msgid "Multiple map views with different settings"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1153
+msgid ""
+"At the top of an additional map canvas, there's a toolbar with the "
+"following capabilities:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1156
+msgid ""
+"|zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to "
+"Selection` and |zoomToLayer| :sup:`Zoom to Layer(s)` to navigate within "
+"the view"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1158
+msgid ""
+"|showPresets| :sup:`Set View Theme` to select the :ref:`map theme "
+"<map_themes>` to display in the map view. If set to ``(none)``, the view "
+"will follow the :guilabel:`Layers` panel changes."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1387
+msgid "showPresets"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1161
+msgid "|options| :sup:`View settings` to configure the map view:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1350
+msgid "options"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1163
+msgid ""
+"|radioButtonOn| :guilabel:`Synchronize view center with main map`: syncs "
+"the center of the map views without changing the scale. This allows you "
+"to have an overview style or magnified map which follows the main canvas "
+"center."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1167
+msgid ""
+"|radioButtonOff| :guilabel:`Synchronize view to selection`: same as zoom "
+"to selection"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1358
+msgid "radioButtonOff"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1169
+msgid ":guilabel:`Scale`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1170
+msgid ":guilabel:`Rotation`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1171
+msgid ":guilabel:`Magnification`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1172
+msgid ""
+"|unchecked| :guilabel:`Synchronize scale` with the main map scale. A "
+":guilabel:`Scale factor` can then be applied, allowing you to have a view"
+" which is e.g. always 2x the scale of the main canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1175
+msgid "|checkbox| :guilabel:`Show annotations`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1176
+msgid "|checkbox| :guilabel:`Show cursor position`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1177
+msgid "|unchecked| :guilabel:`Show main canvas extent`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1178
+msgid ""
+"|checkbox| :guilabel:`Show labels`: allows to hide labels regardless they"
+" are set in the displayed layers' properties"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1180
+msgid ":guilabel:`Change map CRS...`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1181
+msgid ":guilabel:`Rename view...`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1187
+msgid "Exporting the map view"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1189
+msgid ""
+"Maps you make can be layout and exported to various formats using the "
+"advanced capabilities of the :ref:`print layout or report "
+"<label_printlayout>`. It's also possible to directly export the current "
+"rendering, without a layout. This quick \"screenshot\" of the map view "
+"has some convenient features."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1196
+msgid "To export the map canvas with the current rendering:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1198
+msgid "Go to :menuselection:`Project --> Import/Export`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1199
+msgid "Depending on your output format, select either"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1201
+msgid "|saveMapAsImage| :guilabel:`Export Map to Image...`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1366
+msgid "saveMapAsImage"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1202
+msgid "or |saveAsPDF| :guilabel:`Export Map to PDF...`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1364
+msgid "saveAsPDF"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1204
+msgid ""
+"The two tools provide you with a common set of options. In the dialog "
+"that opens:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1212
+msgid "The Save Map as Image dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1214
+msgid ""
+"Choose the :guilabel:`Extent` to export: it can be the current view "
+"extent (the default), the extent of a layer or a custom extent drawn over"
+" the map canvas. Coordinates of the selected area are displayed and "
+"manually editable."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1218
+msgid ""
+"Enter the :guilabel:`Scale` of the map or select it from the "
+":ref:`predefined scales <predefinedscales>`: changing the scale will "
+"resize the extent to export (from the center)."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1221
+msgid "Set the :guilabel:`Resolution` of the output"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1222
+msgid ""
+"Control the :guilabel:`Output width` and :guilabel:`Output height` in "
+"pixels of the image: based by default on the current resolution and "
+"extent, they can be customized and will resize the map extent (from the "
+"center). The size ratio can be locked, which may be particularly "
+"convenient when drawing the extent on the canvas."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1228
+msgid ""
+"|checkbox| :guilabel:`Draw active decorations`: in use :ref:`decorations "
+"<decorations>` (scale bar, title, grid, north arrow...) are exported with"
+" the map"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1231
+msgid ""
+"|checkbox| :guilabel:`Draw annotations` to export any :ref:`annotation "
+"<sec_annotations>`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1233
+msgid ""
+"|checkbox| :guilabel:`Append georeference information (embedded or via "
+"world file)`: depending on the output format, a world file of the same "
+"name (with extension ``PNGW`` for ``PNG`` images, ``JPGW`` for ``JPG``, "
+"...) is saved in the same folder as your image. The ``PDF`` format embeds"
+" the information in the PDF file."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1238
+msgid ""
+"When exporting to PDF, more options are available in the :guilabel:`Save "
+"map as PDF...` dialog:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1246
+msgid "The Save Map as PDF dialog"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1248
+msgid ""
+"|checkbox| :guilabel:`Export RDF metadata` of the document such as the "
+"title, author, date, description..."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1250
+msgid ""
+"|unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`: Generate a "
+"`georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_. You"
+" can:"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1254
+msgid "Choose the GeoPDF :guilabel:`Format`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1255
+msgid ""
+"|checkbox| :guilabel:`Include vector feature information` in the GeoPDF "
+"file: will include all the geometry and attribute information from "
+"features visible within the map in the output GeoPDF file."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1262
+msgid ""
+"A GeoPDF file can also be used as a data source. For more on GeoPDF "
+"support in QGIS, see https://north-road.com/2019/09/03/qgis-3-10-loves-"
+"geopdf/."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1266
+msgid ":guilabel:`Rasterize map`"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1267
+msgid ""
+"|checkbox| :guilabel:`Simplify geometries to reduce output file size`: "
+"Geometries will be simplified while exporting the map by removing "
+"vertices that are not discernibly different at the export resolution "
+"(e.g. if the export resolution is ``300 dpi``, vertices that are less "
+"than ``1/600 inch`` apart will be removed). This can reduce the size and "
+"complexity of the export file (very large files can fail to load in other"
+" applications)."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1275
+msgid ""
+"Set the :guilabel:`Text export`: controls whether text labels are "
+"exported as proper text objects (:guilabel:`Always export texts as text "
+"objects`) or as paths only (:guilabel:`Always export texts as paths`). If"
+" they are exported as text objects then they can be edited in external "
+"applications (e.g. Inkscape) as normal text. BUT the side effect is that "
+"the rendering quality is decreased, AND there are issues with rendering "
+"when certain text settings like buffers are in place. That’s why "
+"exporting as paths is recommended."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1286
+msgid "Click :guilabel:`Save` to select file location, name and format."
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1288
+msgid ""
+"When exporting to image, it's also possible to :guilabel:`Copy to "
+"clipboard` the expected result of the above settings and paste the map in"
+" another application such as LibreOffice, GIMP..."
+msgstr ""
+

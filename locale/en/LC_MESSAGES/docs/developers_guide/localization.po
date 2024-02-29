@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-01 00:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../docs/developers_guide/localization.rst:3
+msgid "Localization"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:5
+msgid "QGIS user interface is available in multiple languages."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:7
+msgid ""
+"A global option in the settings allows to override the user interface "
+"language which was automatically detected from the operating system."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:11
+msgid ""
+"The representation of numbers, currency and dates varies according to the"
+" country and it is also overrideable in the settings."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:15
+msgid ""
+"Another option in the settings allows to define if the numeric thousands "
+"separator has to be used."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:18
+msgid ""
+"All these features are implemented through the `QLocale "
+"<https://doc.qt.io/qt-5/qlocale.html>`_ QT class which provides a very "
+"complete support for numeric and date types representation."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:23
+msgid ""
+"In order to make this system work a few rules need to be carefully "
+"followed when displaying numeric values in the QGIS user interface and "
+"when converting user input to integral or floating point variables."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:29
+msgid "Converting numbers to strings"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:31
+msgid ""
+"For strings that are printed on the screen and visible to the users do "
+"not use ``QString::number()`` because it does not take locale options "
+"into consideration and it always uses ``C`` locale."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:35
+msgid ""
+"Also do not use string interpolation unless you use the ``L`` suffix as "
+"explained in `QString documentation "
+"<https://doc.qt.io/qt-5/qstring.html#arg-5>`_."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:38
+msgid "Use ``QLocale().toString()`` instead."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:40
+msgid "Example:"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:53
+msgid ""
+"A notable exception to this rule is the generation of strings that will "
+"be passed to external applications or scripts that expect ``C`` number "
+"representation (dot as decimal separator and no thousands separator). "
+"``QString::number()`` must be used in this situation."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:60
+msgid "Converting user input strings to numbers"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:62
+msgid ""
+"When converting strings from user input to numbers do not use "
+"``QVariant::toDouble()``, ``QString::toDouble()`` or other "
+"``::toDouble()`` methods available in QT classes because these methods "
+"ignore locale settings. The same consideration applies to integral types "
+"and ``::toInt()`` or ``::toLongLong()`` methods."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:68
+msgid ""
+"``QLocale().toDouble()`` or ``QLocale().toInt()`` and the others "
+"``QLocale()`` conversion methods can be used in this situation."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:71
+msgid ""
+"As a better alternative, QGIS API provides a few classes that should be "
+"used for floating point numeric user input:"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:74
+msgid ":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>`"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:75
+msgid ":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>`"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:78
+msgid ""
+":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>` displays the number"
+" according to user locale and settings and it validates the user input "
+"using :class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>`."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:82
+msgid ""
+"The validator class is tolerant and it will try to interpret the input "
+"checking first for the user locale and falling back to ``C`` locale if "
+"there is no match."
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:86
+msgid ""
+"The general recommendation is to use :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` for all floating point types I/O whenever it"
+" is possible because it is very well tested and it validates the input "
+"correctly. As an alternative it is possible to use the "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class "
+"independently on a string obtained from another widget (e.g. a simple "
+"``QLineEdit`` widget)."
+msgstr ""
+

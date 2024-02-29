@@ -1,0 +1,2433 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-01 00:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../docs/server_manual/services/wms.rst:2
+msgid "Web Map Service (WMS)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:4
+msgid ""
+"The **1.1.1** and **1.3.0** WMS standards implemented in QGIS Server "
+"provide a HTTP interface to request map or legend images generated from a"
+" QGIS project. A typical WMS request defines the QGIS project to use, the"
+" layers to render as well as the image format to generate. Basic support "
+"is also available for **Styled Layer Descriptor (SLD)**."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:10
+msgid "Specifications:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:12
+msgid ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:13
+msgid "`WMS 1.3.0 <https://portal.ogc.org/files/?artifact_id=14416&format=pdf>`_"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:14
+msgid ""
+"`SLD 1.1.0 WMS profile "
+"<https://portal.ogc.org/files/?artifact_id=22364&format=pdf>`_"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:16
+msgid "Standard requests provided by QGIS Server:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Request"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetCapabilities <wms_getcapabilities>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetMap <wms_getmap>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a map"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetFeatureInfo <wms_getfeatureinfo>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns legend symbols"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetStyle(s) <wms_getstyle>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML document with style description in SLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`DescribeLayer <wms_describelayer>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"Returns information about WFS and WCS availability respectively for "
+"vector and raster layers"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:30
+msgid "Vendor requests provided by QGIS Server:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetPrint <wms_getprint>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a QGIS layout"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetProjectSettings <wms_getprojectsettings>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns specific information about QGIS Server"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`GetSchemaExtension <wms_getschemaextension>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata about optional extended capabilities"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:44
+msgid "GetCapabilities"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:46
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the "
+"OGC WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Parameter"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Required"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Yes"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the service (**WMS**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`VERSION <wms_version>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "No"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Version of the service"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:57
+msgid ""
+"The **GetCapabilities** request supports as well the following vendor "
+"parameters:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "QGIS project file"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:66
+#: ../../docs/server_manual/services/wms.rst:127
+#: ../../docs/server_manual/services/wms.rst:335
+#: ../../docs/server_manual/services/wms.rst:432
+#: ../../docs/server_manual/services/wms.rst:475
+#: ../../docs/server_manual/services/wms.rst:640
+#: ../../docs/server_manual/services/wms.rst:873
+#: ../../docs/server_manual/services/wms.rst:1021
+#: ../../docs/server_manual/services/wms.rst:1046
+#: ../../docs/server_manual/services/wms.rst:1075
+#: ../../docs/server_manual/services/wms.rst:1103
+#: ../../docs/server_manual/services/wms.rst:1130
+#: ../../docs/server_manual/services/wms.rst:1157
+#: ../../docs/server_manual/services/wms.rst:1184
+#: ../../docs/server_manual/services/wms.rst:1211
+#: ../../docs/server_manual/services/wms.rst:1238
+#: ../../docs/server_manual/services/wms.rst:1297
+#: ../../docs/server_manual/services/wms.rst:1323
+#: ../../docs/server_manual/services/wms.rst:1353
+#: ../../docs/server_manual/services/wms.rst:1381
+#: ../../docs/server_manual/services/wms.rst:1427
+#: ../../docs/server_manual/services/wms.rst:1453
+#: ../../docs/server_manual/services/wms.rst:1483
+#: ../../docs/server_manual/services/wms.rst:1511
+#: ../../docs/server_manual/services/wms.rst:1598
+#: ../../docs/server_manual/services/wms.rst:1634
+#: ../../docs/server_manual/services/wms.rst:1719
+#: ../../docs/server_manual/services/wms.rst:1810
+#: ../../docs/server_manual/services/wms.rst:1944
+msgid "URL example:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:79
+msgid "GetMap"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:81
+msgid ""
+"Standard parameters for the **GetMap** request according to the OGC WMS "
+"1.1.1 and 1.3.0 specifications:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetMap**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERS <wms_layers>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`STYLES <wms_styles>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRS / CRS <wms_srs>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Coordinate reference system"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BBOX <wms_bbox>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map extent"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WIDTH <wms_width>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the image in pixels"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`HEIGHT <wms_height>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the image in pixels"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getmap_format>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Image format"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`TRANSPARENT <wms_transparent>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Transparent background"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "URL of an SLD to be used for styling"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD_BODY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "In-line SLD (XML) to be used for styling"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:103
+msgid ""
+"In addition to the standard ones, QGIS Server supports :ref:`redlining "
+"<wms_redlining>`, :ref:`external WMS layers <wms_external>` as well as "
+"the following extra parameters:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BGCOLOR <wms_bgcolor>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the background color"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`DPI <wms_dpi>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the output resolution"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`IMAGE_QUALITY <wms_imagequality>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "JPEG compression"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`OPACITIES <wms_opacities>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Opacity for layer or group"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FILTER <wms_filter>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Subset of features"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SELECTION <wms_selection>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Highlight features"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "FILE_NAME"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "File name of the downloaded file"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/dxf``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT_OPTIONS <wms_getmap_formatoptions>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Options of the specified file format"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`TILED <wms_tiled>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Working in *tiled mode*"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:151
+msgid "VERSION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:153
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:156
+msgid "``1.1.1``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:157
+msgid "``1.3.0``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:159
+msgid ""
+"According to the version number, slight differences have to be expected "
+"as explained later for the next parameters:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:162
+msgid "``CRS`` / ``SRS``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:163
+msgid "``BBOX``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:169
+msgid "LAYERS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:171
+msgid ""
+"This parameter allows to specify the layers to display on the map. Names "
+"have to be separated by a comma."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:174
+msgid "In addition, QGIS Server introduced some options to select layers by:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:176
+msgid ""
+"the layer id: the project option allowing to select layers by their id is"
+" in :menuselection:`QGIS Server --> WMS` tab of the "
+":menuselection:`Project --> Properties...` dialog. Check the "
+":guilabel:`Use layer ids as names` checkbox to activate this option."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:179
+msgid "a :ref:`short name <services_basics_short_name>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:193
+msgid "STYLES"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:195
+msgid ""
+"This parameter can be used to specify a layer's style for the rendering "
+"step. Styles have to be separated by a comma. The name of the default "
+"style is ``default``."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:204
+msgid "SRS / CRS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:206
+msgid ""
+"This parameter allows to indicate the map output Spatial Reference System"
+" in WMS **1.1.1** and has to be formed like ``EPSG:XXXX``. Note that "
+"``CRS`` is also supported if current version is **1.1.1**."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:210
+msgid ""
+"For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also "
+"supported."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:213
+msgid ""
+"Note that if both ``CRS`` and ``SRS`` parameters are indicated in the "
+"request, then it's the current version indicated in ``VERSION`` parameter"
+" which is decisive."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:217
+msgid ""
+"In the next case, the ``SRS`` parameter is kept whatever the ``VERSION`` "
+"parameter because ``CRS`` is not indicated:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:229
+msgid ""
+"In the next case, the ``SRS`` parameter is kept instead of ``CRS`` "
+"because of the ``VERSION`` parameter:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:242
+msgid ""
+"In the next case, the ``CRS`` parameter is kept instead of ``SRS`` "
+"because of the ``VERSION`` parameter:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:259
+#: ../../docs/server_manual/services/wms.rst:866
+msgid "BBOX"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:261
+msgid ""
+"This parameter allows to specify the map extent with units according to "
+"the current CRS. Coordinates have to be separated by a comma."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:264
+msgid ""
+"The ``BBOX`` parameter is formed like ``min_a,min_b,max_a,max_b`` but "
+"``a`` and ``b`` axis definition is different according to the current "
+"``VERSION`` parameter:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:268
+msgid "in WMS **1.1.1**, the axis ordering is always east/north"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:269
+msgid "in WMS **1.3.0**, the axis ordering depends on the CRS authority"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:271
+msgid ""
+"For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the "
+"longitude (east) and ``b`` the latitude (north), leading to a request "
+"like:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:284
+msgid ""
+"But in case of WMS **1.3.0**, the axis ordering defined in the EPSG "
+"database is north/east so ``a`` is the latitude and ``b`` the longitude:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:301
+#: ../../docs/server_manual/services/wms.rst:893
+msgid "WIDTH"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:303
+msgid "This parameter allows to specify the width in pixels of the output image."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:310
+#: ../../docs/server_manual/services/wms.rst:913
+msgid "HEIGHT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:312
+msgid "This parameter allows to specify the height in pixels of the output image."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:319
+#: ../../docs/server_manual/services/wms.rst:933
+#: ../../docs/server_manual/services/wms.rst:1767
+msgid "FORMAT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:321
+msgid ""
+"This parameter may be used to specify the format of map image. Available "
+"values are:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:324
+#: ../../docs/server_manual/services/wms.rst:1773
+msgid "``jpg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:325
+#: ../../docs/server_manual/services/wms.rst:1774
+msgid "``jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:326
+#: ../../docs/server_manual/services/wms.rst:938
+#: ../../docs/server_manual/services/wms.rst:1775
+msgid "``image/jpeg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:327
+#: ../../docs/server_manual/services/wms.rst:939
+#: ../../docs/server_manual/services/wms.rst:1772
+msgid "``image/png``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:328
+msgid "``image/png; mode=1bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:329
+msgid "``image/png; mode=8bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:330
+msgid "``image/png; mode=16bit``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:331
+msgid "``image/webp``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:332
+msgid ""
+"``application/dxf``: only layers that have read access in the WFS service"
+" are exported in the DXF format"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:354
+msgid "TRANSPARENT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:356
+msgid ""
+"This boolean parameter can be used to specify the background "
+"transparency. Available values are (not case sensitive):"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:360
+#: ../../docs/server_manual/services/wms.rst:773
+#: ../../docs/server_manual/services/wms.rst:785
+#: ../../docs/server_manual/services/wms.rst:799
+#: ../../docs/server_manual/services/wms.rst:1002
+#: ../../docs/server_manual/services/wms.rst:1294
+#: ../../docs/server_manual/services/wms.rst:1350
+#: ../../docs/server_manual/services/wms.rst:1424
+#: ../../docs/server_manual/services/wms.rst:1480
+msgid "``TRUE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:361
+#: ../../docs/server_manual/services/wms.rst:774
+#: ../../docs/server_manual/services/wms.rst:786
+#: ../../docs/server_manual/services/wms.rst:800
+#: ../../docs/server_manual/services/wms.rst:1003
+#: ../../docs/server_manual/services/wms.rst:1267
+#: ../../docs/server_manual/services/wms.rst:1295
+#: ../../docs/server_manual/services/wms.rst:1351
+#: ../../docs/server_manual/services/wms.rst:1425
+#: ../../docs/server_manual/services/wms.rst:1481
+msgid "``FALSE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:363
+msgid ""
+"However, this parameter is ignored if the format of the image indicated "
+"with ``FORMAT`` is different from PNG."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:370
+msgid "BGCOLOR"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:372
+msgid ""
+"This parameter allows to indicate a background color for the map image. "
+"However it cannot be combined with ``TRANSPARENT`` parameter in case of "
+"PNG images (transparency takes priority). The colour may be literal or in"
+" hexadecimal notation."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:377
+msgid "URL example with the literal notation:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:388
+msgid "URL example with the hexadecimal notation:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:403
+msgid "DPI"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:405
+msgid "This parameter can be used to specify the requested output resolution."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:411
+msgid "IMAGE_QUALITY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:413
+msgid ""
+"This parameter is only used for JPEG images. By default, the JPEG "
+"compression is ``-1``."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:416
+msgid ""
+"You can change the default per QGIS project in the :menuselection:`OWS "
+"Server --> WMS capabilities` menu of the :menuselection:`Project --> "
+"Properties...` dialog. If you want to override it in a ``GetMap`` request"
+" you can do it using the ``IMAGE_QUALITY`` parameter."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:426
+msgid "OPACITIES"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:428
+msgid ""
+"Comma separated list of opacity values. Opacity can be set on layer or "
+"group level. Allowed values range from ``0`` (fully transparent) to "
+"``255`` (fully opaque)."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:451
+msgid "To the left ``OPACITIES=255,0`` and to the right ``OPACITIES=255,255``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:456
+msgid "FILTER"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:458
+msgid ""
+"A subset of layers can be selected with the ``FILTER`` parameter. The "
+"syntax is basically the same as for the QGIS subset string. However, "
+"there are some restrictions to avoid SQL injections into databases via "
+"QGIS Server. If a dangerous string is found in the parameter, QGIS Server"
+" will return the next error:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:494
+msgid "Server response to a GetMap request with FILTER parameter"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:497
+msgid ""
+"In this example, the same filter ``\"name\" = 'France'`` is applied to "
+"layers ``countries`` and ``countries_shapeburst``, while the filter "
+"``\"name\" = 'Paris'`` is only applied to ``places``."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:503
+msgid ""
+"It is possible to make attribute searches via GetFeatureInfo and omit the"
+" X/Y parameter if a FILTER is there. QGIS Server then returns info about "
+"the matching features and generates a combined bounding box in the XML "
+"output."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:512
+msgid "SELECTION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:514
+msgid ""
+"The ``SELECTION`` parameter can highlight features from one or more "
+"layers. Vector features can be selected by passing comma separated lists "
+"with feature ids."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:528
+msgid ""
+"The following image presents the response from a GetMap request using the"
+" ``SELECTION`` option e.g. "
+"``http://myserver.com/...&SELECTION=countries:171,65``."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:532
+msgid ""
+"As those features id's correspond in the source dataset to **France** and"
+" **Romania** they're highlighted in yellow."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:540
+msgid "Server response to a GetMap request with SELECTION parameter"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:545
+#: ../../docs/server_manual/services/wms.rst:1788
+msgid "FORMAT_OPTIONS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:547
+msgid ""
+"This parameter can be used to specify options for the selected format. "
+"Only for ``FORMAT=application/dxf`` in GetMap request. Takes a list of "
+"key:value pairs separated by semicolon:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:551
+msgid ""
+"SCALE: to be used for symbology rules, filters and styles (not actual "
+"scaling of the data - data remains in the original scale)."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:553
+msgid ""
+"MODE: corresponds to the export options offered in the QGIS Desktop DXF "
+"export dialog. Possible values are ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` "
+"and ``SYMBOLLAYERSYMBOLOGY``."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:556
+msgid ""
+"LAYERATTRIBUTES: specify a field or in case of many layers a comma "
+"separated list of fields that contains values for DXF layer names - if "
+"not specified, the original QGIS layer names are used."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:558
+msgid ""
+"USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will be used "
+"as layer name."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:560
+msgid ""
+"CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1``"
+" check the QGIS desktop DXF export dialog for valid values."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:562
+msgid "NO_MTEXT: Use TEXT instead of MTEXT for labels."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:563
+msgid "FORCE_2D: Force 2D output. This is required for polyline width."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:568
+msgid "TILED"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:570
+msgid ""
+"For performance reasons, QGIS Server can be used in tiled mode. In this "
+"mode, the client requests several small fixed size tiles, and assembles "
+"them to form the whole map. Doing this, symbols at or near the boundary "
+"between two tiles may appeared cut, because they are only present in one "
+"of the tile."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:576
+msgid ""
+"Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in "
+"*tiled* mode, and to apply the *Tile buffer* configured in the QGIS "
+"project (see :ref:`Creatingwmsfromproject`)."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:580
+msgid ""
+"When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured "
+"in the QGIS project, features outside the tile extent are drawn to avoid "
+"cut symbols at tile boundaries."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:584
+msgid "``TILED`` defaults to ``FALSE``."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:590
+msgid "GetFeatureInfo"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:592
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the "
+"OGC WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`QUERY_LAYERS <wms_querylayers>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to query"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display (identical to `QUERY_LAYERS`)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`INFO_FORMAT <wms_infoformat>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Output format"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FEATURE_COUNT <wms_featurecount>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Maximum number of features to return"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`I <wms_i>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel column of the point to query"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`X <wms_x>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `I` parameter, but in WMS 1.1.1"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`J <wms_j>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel row of the point to query"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`Y <wms_y>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `J` parameter, but in WMS 1.1.1"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "WMS_PRECISION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"The precision (number of digits) to be used when returning geometry (see "
+":ref:`how to add geometry to feature response "
+"<addGeometryToFeatureResponse>`). The default value is ``-1`` meaning "
+"that the precision defined in the project is used."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:621
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following "
+"extra parameters:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FI_POINT_TOLERANCE <wms_fipointtolerance>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for point layers"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for line layers"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FI_POLYGON_TOLERANCE <wms_fipolygontolerance>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for polygon layers"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FILTER_GEOM <wms_filtergeom>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Geometry filtering"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add the feature display name to the output"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WITH_MAPTIP <wms_withmaptip>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add map tips to the output"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WITH_GEOMETRY <wms_withgeometry>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add geometry to the output"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:664
+msgid "INFO_FORMAT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:666
+msgid ""
+"This parameter may be used to specify the format of the result. Available"
+" values are:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:669
+msgid "``text/xml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:670
+msgid "``text/html``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:671
+msgid "``text/plain``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:672
+msgid "``application/vnd.ogc.gml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:673
+#: ../../docs/server_manual/services/wms.rst:940
+msgid "``application/json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:678
+msgid "QUERY_LAYERS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:680
+msgid ""
+"This parameter specifies the layers to display on the map. Names are "
+"separated by a comma."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:683
+msgid "In addition, QGIS Server introduces options to select layers by:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:685
+msgid "short name"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:686
+msgid "layer id"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:688
+msgid ""
+"See the ``LAYERS`` parameter defined in :ref:`GetMap <wms_layers>` for "
+"more information."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:694
+msgid "FEATURE_COUNT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:696
+msgid ""
+"This parameter specifies the maximum number of features per layer to "
+"return. For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
+"``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from "
+"layer1 will be returned. Likewise a maximum of 3 features from layer2 "
+"will be returned."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:703
+msgid "By default, only 1 feature per layer is returned."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:708
+msgid "I"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:710
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel "
+"column of the query point."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:716
+msgid "X"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:718
+msgid "Same parameter as ``I``, but defined in WMS 1.1.1."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:723
+msgid "J"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:725
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel row"
+" of the query point."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:731
+msgid "Y"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:733
+msgid "Same parameter as ``J``, but defined in WMS 1.1.1."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:738
+msgid "FI_POINT_TOLERANCE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:740
+msgid "This parameter specifies the tolerance in pixels for point layers."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:745
+msgid "FI_LINE_TOLERANCE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:747
+msgid "This parameter specifies the tolerance in pixels for line layers."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:752
+msgid "FI_POLYGON_TOLERANCE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:754
+msgid "This parameter specifies the tolerance in pixels for polygon layers."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:759
+msgid "FILTER_GEOM"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:761
+msgid ""
+"This parameter specifies a WKT geometry with which features have to "
+"intersect."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:767
+msgid "WITH_DISPLAY_NAME"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:769
+msgid ""
+"This parameter specifies whether to add feature display name to the "
+"output."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:771
+#: ../../docs/server_manual/services/wms.rst:783
+#: ../../docs/server_manual/services/wms.rst:797
+#: ../../docs/server_manual/services/wms.rst:1264
+msgid "Available values are (not case sensitive):"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:779
+msgid "WITH_MAPTIP"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:781
+msgid "This parameter specifies whether to add map tips to the output."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:791
+msgid "WITH_GEOMETRY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:793
+msgid ""
+"This parameter specifies whether to add geometries to the output. To use "
+"this feature you must first enable the :guilabel:`Add geometry to feature"
+" response` option in the QGIS project. See :ref:`Configure your project "
+"<Creatingwmsfromproject>`."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:807
+msgid "GetLegendGraphic"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:809
+msgid ""
+"Standard parameters for the **GetLegendGraphic** request according to the"
+" OGC WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetLegendGraphic**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BBOX <wms_getlegendgraphic_bbox>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`WIDTH <wms_getlegendgraphic_width>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`HEIGHT <wms_getlegendgraphic_height>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getlegendgraphic_format>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Legend format"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:828
+msgid ""
+"In addition to the standard ones, QGIS Server supports extra parameters "
+"to change the size of the legend elements or the font properties for "
+"layer titles and item labels:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRCWIDTH <wms_getlegendgraphic_srcwidth>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map width"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SRCHEIGHT <wms_getlegendgraphic_srcheight>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map height"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphic_showfeaturecount>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add feature count of features"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`RULE <wms_getlegendgraphic_rule>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Rule symbol to render"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`RULELABEL <wms_getlegendgraphic_rulelabel>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item labels rendering"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`BOXSPACE <wms_getlegendgraphic_boxspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Space between legend frame and content (mm)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERSPACE <wms_getlegendgraphic_layerspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layers (mm)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERTITLESPACE <wms_getlegendgraphic_layertitlespace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layer title and items (mm)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLSPACE <wms_getlegendgraphic_symbolspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between symbol and items (mm)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ICONLABELSPACE <wms_getlegendgraphic-iconlabelspace>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Horizontal space between symbol and label (mm)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLWIDTH <wms_getlegendgraphic_symbolwidth>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the symbol preview (mm)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SYMBOLHEIGHT <wms_getlegendgraphic_symbolheight>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the symbol preview (mm)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERTITLE <wms_getlegendgraphic_layertitle>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title rendering"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer font family"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title bold rendering"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTSIZE <wms_getlegendgraphic_layerfontsize>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title font size (pt)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTITALIC <wms_getlegendgraphic_layerfontitalic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title italic rendering"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`LAYERFONTCOLOR <wms_getlegendgraphic_layerfontcolor>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title color"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTFAMILY <wms_getlegendgraphic_itemfontfamily>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item font family"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTBOLD <wms_getlegendgraphic_itemfontbold>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label bold rendering"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label font size (pt)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label italic rendering"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label color"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Adds the layer groups to JSON output"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:868
+msgid ""
+"This parameter can be used to specify the geographical area for which the"
+" legend should be built (its format is described :ref:`here <wms_bbox>`) "
+"but cannot be combined with the ``RULE`` parameter. The ``SRS``/``CRS`` "
+"parameter becomes mandatory when using the ``BBOX`` parameter."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:886
+msgid ""
+"When the ``BBOX`` parameter is defined, the legend is referred to as a "
+"*content based legend*."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:895
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the width in"
+" pixels of the output image."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:915
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the height "
+"in pixels of the output image."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:935
+msgid ""
+"This parameter may be used to specify the format of legend image. "
+"Available values are:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:942
+msgid ""
+"For JSON, symbols are encoded with Base64 and most other options related "
+"to layout or fonts are not taken into account because the legend must be "
+"built on the client side. The ``RULE`` parameter cannot be combined with "
+"this format."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:946
+msgid "URL example with the corresponding JSON output:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:956
+msgid "And the corresponding JSON output:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:975
+msgid "SRCWIDTH"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:977
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this"
+" case, the ``SRCWIDTH`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``WIDTH`` parameter while the ``WIDTH`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:986
+msgid "SRCHEIGHT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:988
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this"
+" case, the ``SRCHEIGHT`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:997
+msgid "SHOWFEATURECOUNT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:999
+msgid ""
+"This parameter can be used to activate feature count in the legend. "
+"Available values are (not case sensitive):"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1005
+#: ../../docs/server_manual/services/wms.rst:1741
+msgid "For example:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1014
+msgid "RULE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1016
+msgid ""
+"This parameter is available on layers with :guilabel:`Rule-based` "
+"rendering and allows to build a legend with only the named rule symbol. "
+"It cannot be combined with ``BBOX`` parameter nor the JSON format. "
+"``HEIGHT`` and ``WIDTH`` must be specified."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1037
+msgid "RULELABEL"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1039
+msgid ""
+"This parameter allows to control the item label rendering. Available "
+"values are (not case sensitive):"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1042
+msgid "``TRUE``: display item label"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1043
+msgid "``FALSE``: hide item label"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1044
+msgid ""
+"``AUTO``: hide item label for layers with :guilabel:`Single symbol` "
+"rendering"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1063
+msgid "Legend rendering without label for single symbol layers"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1070
+msgid "BOXSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1072
+msgid ""
+"This parameter allows to specify the space between legend frame and "
+"content in millimeters. By default, the space value is ``2`` mm."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1091
+msgid "To the left ``BOXSPACE=0`` and to the right ``BOXSPACE=15``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1098
+msgid "LAYERSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1100
+msgid ""
+"This parameter allows to specify the vertical space between layers in "
+"millimeters. By default, the space value is ``3`` mm."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1119
+msgid "To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1125
+msgid "LAYERTITLESPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1127
+msgid ""
+"This parameter allows to specify the vertical space between layer title "
+"and items following in millimeters. By default the space value is ``3`` "
+"mm."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1146
+msgid "To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1152
+msgid "SYMBOLSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1154
+msgid ""
+"This parameter allows to specify the vertical space between symbol and "
+"item following in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1173
+msgid "To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1179
+msgid "ICONLABELSPACE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1181
+msgid ""
+"This parameter allows to specify the horizontal space between symbol and "
+"label text in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1200
+msgid "To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1206
+msgid "SYMBOLWIDTH"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1208
+msgid ""
+"This parameter allows to specify the width of the symbol preview in "
+"millimeters. By default the width value is ``7`` mm."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1227
+msgid "To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1233
+msgid "SYMBOLHEIGHT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1235
+msgid ""
+"This parameter allows to specify the height of the symbol preview in "
+"millimeters. By default the height value is ``4`` mm."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1254
+msgid "To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1260
+msgid "LAYERTITLE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1262
+msgid "This parameter specifies whether to render layer title."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1266
+msgid "``TRUE`` (default value)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1273
+msgid "LAYERFONTFAMILY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1275
+msgid "This parameter specifies the font family to use for rendering layer title."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1289
+msgid "LAYERFONTBOLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1291
+msgid ""
+"This parameter specifies whether the layer title is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1313
+msgid "Legend with ``LAYERFONTBOLD=TRUE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1319
+msgid "LAYERFONTSIZE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1321
+#: ../../docs/server_manual/services/wms.rst:1451
+msgid "This parameter specifies the font size for rendering layer title in point."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1339
+msgid "Legend with ``LAYERFONTSIZE=20``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1345
+msgid "LAYERFONTITALIC"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1347
+msgid ""
+"This parameter specifies whether the layer title is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1369
+msgid "Legend with ``LAYERFONTITALIC=TRUE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1375
+msgid "LAYERFONTCOLOR"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1377
+msgid ""
+"This parameter specifies the layer title color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1397
+msgid "Legend with ``LAYERFONTCOLOR=0x5f9930``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1403
+msgid "ITEMFONTFAMILY"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1405
+msgid "This parameter specifies the font family to use for rendering item label."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1419
+msgid "ITEMFONTBOLD"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1421
+msgid ""
+"This parameter specifies whether the item label is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1443
+msgid "Legend with ``ITEMFONTBOLD=TRUE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1449
+msgid "ITEMFONTSIZE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1469
+msgid "Legend with ``ITEMFONTSIZE=30``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1475
+msgid "ITEMFONTITALIC"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1477
+msgid ""
+"This parameter specifies whether the item label is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1499
+msgid "Legend with ``ITEMFONTITALIC=TRUE``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1505
+msgid "ITEMFONTCOLOR"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1507
+msgid ""
+"This parameter specifies the item label color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1527
+msgid "Legend with ``ITEMFONTCOLOR=0x5f9930``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1533
+msgid "ADDLAYERGROUPS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1535
+msgid ""
+"This parameter specifies if the JSON output will also display the names "
+"of the layers groups (and subgroups) in the legend entry. Possible values"
+" are:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1539
+msgid "``TRUE``: display the groups labels"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1540
+msgid "``FALSE`` (default): hide the groups labels"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1545
+msgid "Legend without (left) and with (right) layer groups labels display"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1547
+msgid "The corresponding JSON output showing groups name would look like:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1577
+msgid "GetStyle(s)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1579
+msgid ""
+"Standard parameters for the **GetStyle** (or **GetStyles**) request "
+"according to the OGC WMS 1.1.1 specifications:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetStyle** or **GetStyles**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1590
+msgid "The **GetStyle** request supports as well the following vendor parameters:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1611
+msgid "DescribeLayer"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1613
+msgid ""
+"Standard parameters for the **DescribeLayer** request according to the "
+"OGC WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**DescribeLayer**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to describe"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD version"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1625
+msgid ""
+"The **DescribeLayer** request supports as well the following vendor "
+"parameters:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1644
+#: ../../docs/server_manual/services/wms.rst:1953
+msgid "The XML document looks like:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1670
+msgid "SLD_VERSION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1672
+msgid ""
+"This parameter allows to specify the version of SLD. Only the value "
+"``1.1.0`` is available."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1679
+msgid "GetPrint"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1681
+msgid ""
+"QGIS Server has the capability to create print layout output in pdf or "
+"pixel format. Print layout windows in the published project are used as "
+"templates. In the **GetPrint** request, the client has the possibility to"
+" specify parameters of the contained layout maps and labels."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1686
+msgid ""
+"The **GetPrint** request supports :ref:`redlining <wms_redlining>`, "
+":ref:`external WMS layers <wms_external>` as well as the following "
+"parameters:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetPrint**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`TEMPLATE <wms_template>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layout template to use"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT <wms_getprint_format>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/pdf``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`ATLAS_PK <wms_atlaspk>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Atlas features"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:EXTENT <wms_mapextent>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Extent of the map 'X'"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:LAYERS <wms_maplayers>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers of the map 'X'"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:STYLES <wms_mapstyles>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style of the map 'X'"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:SCALE <wms_mapscale>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' scale of the map 'X'"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:ROTATION <wms_maprotation>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Rotation  of the map 'X'"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on x axis of the map 'X'"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on y axis of the map 'X'"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1736
+msgid ""
+"Note that the layout template may contain more than one map. In this way,"
+" if you want to configure a specific map, you have to use ``mapX:`` "
+"parameters where ``X`` is a positive number that you can retrieve thanks "
+"to the **GetProjectSettings** request."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1759
+msgid "TEMPLATE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1761
+msgid ""
+"This parameter can be used to specify the name of a layout template to "
+"use for printing."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1769
+msgid "This parameter specifies the format of map image. Available values are:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1771
+msgid "``png`` (default value)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1776
+msgid "``svg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1777
+msgid "``image/svg``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1778
+msgid "``image/svg+xml``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1779
+msgid "``pdf``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1780
+msgid "``application/pdf``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1782
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then "
+"an exception is returned."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1790
+msgid ""
+"This parameter can be used to specify options for the selected format. "
+"Only for ``FORMAT=application/pdf`` in GetPrint requests. Takes a list of"
+" key:value pairs separated by semicolon:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1794
+msgid ""
+"``RASTERIZE_WHOLE_IMAGE``: whether the whole pdf should be exported as an"
+" image. Default: false."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1795
+msgid ""
+"``FORCE_VECTOR_OUTPUT``: whether pdf should be exported as vector. "
+"Default: false."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1796
+msgid ""
+"``APPEND_GEOREFERENCE``: whether georeference info shall be added to the "
+"pdf. Default: true."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1797
+msgid ""
+"``EXPORT_METADATA``: whether metadata shall be added to the pdf. Default:"
+" true."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1798
+msgid ""
+"``TEXT_RENDER_FORMAT``: sets the text render format for pdf export. It "
+"can be ``AlwaysOutlines`` (default) or ``AlwaysText``."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1800
+msgid ""
+"``SIMPLIFY_GEOMETRY``: whether features geometries shall be simplified. "
+"Default: true."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1801
+msgid "``WRITE_GEO_PDF``: whether a GeoPDF shall be exported. Default: false."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1802
+msgid ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: whether Iso32000 "
+"georeferencing shall be used. Default: false."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1803
+msgid ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: whether OGC best "
+"practice georeferencing shall be used. Default: false."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1804
+msgid ""
+"``EXPORT_THEMES``: a comma separated list of map themes to use for a "
+"GeoPDF export"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1805
+msgid ""
+"``PREDEFINED_MAP_SCALES``: a comma separated list of map scales to render"
+" the map"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1806
+msgid ""
+"``LOSSLESS_IMAGE_COMPRESSION``: whether images embedded in pdf must be "
+"compressed using a lossless algorithm. Default: false."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1807
+msgid ""
+"``DISABLE_TILED_RASTER_RENDERING``: whether rasters shall be untiled in "
+"the pdf. Default: false."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1828
+msgid "ATLAS_PK"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1830
+msgid ""
+"This parameter allows activation of Atlas rendering by indicating which "
+"features we want to print. In order to retrieve an atlas with all "
+"features, the ``*`` symbol may be used (according to the maximum number "
+"of features allowed in the project configuration)."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1836
+msgid ""
+"When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
+"pages is returned. For all other formats, a single page is returned."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1843
+msgid "mapX:EXTENT"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1845
+msgid ""
+"This parameter specifies the extent for a layout map item as "
+"xmin,ymin,xmax,ymax."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1851
+msgid "mapX:ROTATION"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1853
+msgid "This parameter specifies the map rotation in degrees."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1858
+msgid "mapX:GRID_INTERVAL_X"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1860
+msgid "This parameter specifies the grid line density in the X direction."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1865
+msgid "mapX:GRID_INTERVAL_Y"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1867
+msgid "This parameter specifies the grid line density in the Y direction."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1872
+msgid "mapX:SCALE"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1874
+msgid ""
+"This parameter specifies the map scale for a layout map item. This is "
+"useful to ensure scale based visibility of layers and labels even if "
+"client and server may have different algorithms to calculate the scale "
+"denominator."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1882
+msgid "mapX:LAYERS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1884
+msgid ""
+"This parameter specifies the layers for a layout map item. See "
+":ref:`GetMap Layers <wms_layers>` for more information on this parameter."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1891
+msgid "mapX:STYLES"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1893
+msgid ""
+"This parameter specifies the layers' styles defined in a specific layout "
+"map item. See :ref:`GetMap Styles <wms_styles>` for more information on "
+"this parameter."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1902
+msgid "GetProjectSettings"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1904
+msgid ""
+"This request type works similar to :ref:`GetCapabilities "
+"<wms_getcapabilities>`, but it is more specific to QGIS Server and allows"
+" a client to read additional information which are not available in the "
+":ref:`GetCapabilities <wms_getcapabilities>` output:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1909
+msgid "initial visibility of layers"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1910
+msgid "information about vector attributes and their edit types"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1911
+msgid "information about layer order and drawing order"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1912
+msgid "list of layers published in WFS"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1913
+msgid ""
+"show if a group in the layer tree is :ref:`mutually exclusive "
+"<group_layers_interact>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1915
+msgid "The **GetProjectSettings** request supports the following parameters:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetProjectSettings**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1929
+msgid "GetSchemaExtension"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1931
+msgid ""
+"The **GetSchemaExtension** request allows to retrieve optional extended "
+"capabilities and operations of the WMS service such as implemented by "
+"QGIS Server."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetSchemaExtension**)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1967
+msgid "External WMS layers"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1969
+msgid ""
+"QGIS Server allows including layers from external WMS servers in WMS "
+":ref:`GetMap <wms_getmap>` and WMS :ref:`GetPrint <wms_getprint>` "
+"requests. This is especially useful if a web client uses an external "
+"background layer in the web map. For performance reasons, such layers "
+"should be directly requested by the web client (not cascaded via QGIS "
+"server). For printing however, these layers should be cascaded via QGIS "
+"server in order to appear in the printed map."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1977
+msgid ""
+"External layers can be added to the LAYERS parameter as "
+"EXTERNAL_WMS:<layername>. The parameters for the external WMS layers "
+"(e.g. url, format, dpiMode, crs, layers, styles) can later be given as "
+"service parameters <layername>:<parameter>. In a :ref:`GetMap "
+"<wms_getmap>` request, this might look like this:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:1999
+msgid ""
+"Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>` "
+"requests:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2022
+msgid "Redlining"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2024
+msgid ""
+"This feature is available and can be used with :ref:`GetMap <wms_getmap>`"
+" and :ref:`GetPrint <wms_getprint>` requests."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2027
+msgid ""
+"The redlining feature can be used to pass geometries and labels in the "
+"request which are overlapped by the server over the standard returned "
+"image (map). This permits the user to put emphasis or maybe add some "
+"comments (labels) to some areas, locations etc. that are not in the "
+"standard map."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2032
+msgid "The :ref:`GetMap <wms_getmap>` request is in the format:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2049
+msgid ""
+"The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that"
+" ``mapX:`` parameter is added to tell which map has redlining):"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2066
+msgid ""
+"Here is the image outputed by the above request in which a polygon and a "
+"label are drawn on top of the normal map:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2074
+msgid "Server response to a GetMap request with redlining parameters"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2076
+msgid ""
+"You can see there are several parameters in this request to control the "
+"redlining feature. The full list includes:"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2079
+msgid ""
+"**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
+"supports multipart geometries. Here is an example: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. The coordinates "
+"should be in the CRS of the GetMap/GetPrint request."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2083
+msgid ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
+"color."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2085
+msgid ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
+"size."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2087
+msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2088
+msgid ""
+"**HIGHLIGHT_LABEL_DISTANCE**: controls the distance between feature (e.g."
+" point or line) and the label in mm"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2090
+msgid ""
+"**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label "
+"(e.g. Arial)"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2092
+msgid ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally "
+"on a point using the specified alignment (e.g. 'left', 'center', 'right')"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2094
+msgid "**HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2095
+msgid "**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2097
+msgid ""
+"**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
+"parameter."
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2099
+msgid ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: places the label vertically on a "
+"point using the specified alignment (e.g. 'top', 'half', 'bottom')"
+msgstr ""
+
+#: ../../docs/server_manual/services/wms.rst:2101
+msgid ""
+"**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you "
+"can change the stroke width, color and opacity."
+msgstr ""
+
