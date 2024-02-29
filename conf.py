@@ -234,6 +234,14 @@ StandaloneHTMLBuilder.supported_image_types = [
     'image/jpeg'
 ]
 
+rst_prolog = r"""
+    .. only:: html and i18n
+
+      .. important::
+        Translation is a community effort `you can join <https://qgis.org/en/site/getinvolved/translate.html#becoming-a-translator>`_.
+        This page is currently translated at |translation progress|.
+    """
+
 # -- Options for LaTeX output --------------------------------------------------
 
 latex_engine = 'xelatex'
