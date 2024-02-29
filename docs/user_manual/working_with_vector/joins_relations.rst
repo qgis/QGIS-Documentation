@@ -659,6 +659,102 @@ The example above uses the following database schema:
 Once relations are established, the :ref:`Identify Features <identify_features_vector>` result panel
 will display related features, allowing you to view associated data directly.
 
+.. index:: External Storage, WebDAV
+.. _external_storage:
+
+Storing and fetching an external resource
+==========================================
+
+A field may target a resource stored on an external storage system. Attribute forms can be configured
+so they act as a client to an external storage system in order to store and fetch those resources, on
+users demand, directly from the forms.
+
+.. _external_storage_configuration:
+
+Configuring an external storage
+-------------------------------
+
+In order to setup an external storage, you have to first configure it from the vector
+:ref:`attribute form properties <edit_widgets>` and select the :guilabel:`Attachment` widget.
+
+.. _figure_external_storage_configuration:
+
+.. figure:: img/external_storage_configuration.png
+   :align: center
+
+   Editing a WebDAV external storage for a given field
+
+From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`Storage type`:
+
+* :guilabel:`Select Existing File`: The target URL already exists. When
+  you select a resource, no store operation is achieved, the attribute is simply updated with the URL.
+
+* :guilabel:`Simple Copy`: Stores a copy of the resource on a file disk destination
+  (which could be a local or network shared file system) and the attribute is updated with the path to
+  the copy.
+
+* :guilabel:`WebDAV Storage`: The resource is pushed to a HTTP server supporting the
+  `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol and the attribute is updated with
+  its URL. `Nextcloud <https://nextcloud.com/>`_, `Pydio <https://pydio.com>`_
+  or other file hosting software support this protocol.
+
+* :guilabel:`AWS S3`: The resource is pushed to a server supporting
+  `AWS Simple Storage Service <https://en.wikipedia.org/wiki/Amazon_S3>`_ protocol and the attribute is
+  updated with its URL. Amazon Web Service and `MinIO <https://en.wikipedia.org/wiki/MinIO>`_ hosting software
+  support this protocol.
+
+Then, you have to set up the :guilabel:`Store URL` parameter, which provides the URL to be used when a new
+resource needs to be stored. It's possible to set up an expression using the
+:ref:`data defined override widget <data_defined>` in order to have specific values according to
+feature attributes.
+
+The variable **@selected_file_path** could be used in that expression and represent the absolute
+file path of the user selected file (using the file selector or drag'n drop).
+
+.. note::
+
+   Using the **WebDAV** or **AWS S3** external storage, if the URL ends with a "/", it is considered as a folder and
+   the selected file name will be appended to get the final URL.
+
+
+If the external storage system needs to, it's possible to configure an
+:ref:`authentication <authentication>`.
+
+.. note::
+
+   To use the **AWS S3** external storage, you must use an **AWS S3** authentication type.
+
+.. _external_storage_use:
+
+Using an external storage
+-------------------------
+
+Once configured, you can select a local file using the button :guilabel:`...` when editing a feature's attribute.
+Depending on the configured :ref:`storage type <external_storage_configuration>`, the file
+will be stored on the external storage system (except if :guilabel:`Select existing file` has been
+selected) and the field will be updated with the new resource URL.
+
+.. _figure_external_storage_store:
+
+.. figure:: img/external_storage_store.png
+   :align: center
+
+   Storing a file to a WebDAV external storage
+
+.. note::
+
+   User can also achieve the same result if he drags and drops a file on the whole attachment
+   widget.
+
+Use the |taskCancel| :sup:`Cancel` button to abort the storing process.
+It's possible to configure a viewer using the :guilabel:`Integrated document viewer`
+so the resource will be automatically fetched from the external storage system and
+displayed directly below the URL.
+The above |warning| icon indicates that the resource cannot be fetched
+from the external storage system. In that case, more details might appear in the
+:ref:`log_message_panel`.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -701,11 +797,15 @@ will display related features, allowing you to view associated data directly.
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
+.. |taskCancel| image:: /static/common/mTaskCancel.png
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |unlink| image:: /static/common/mActionUnlink.png
+   :width: 1.5em
+.. |warning| image:: /static/common/mIconWarning.png
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
