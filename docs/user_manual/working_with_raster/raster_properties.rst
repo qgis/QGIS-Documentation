@@ -1,5 +1,4 @@
 .. index:: Raster, Layer properties
-
 .. _raster_properties_dialog:
 
 ************************
@@ -18,9 +17,8 @@ It is commonly used to store various types of data, including:
 * Elevation data, such as digital elevation models (DEMs), digital terrain models (DTMs)
 * Other types of data, such as land cover, soil types, rainfall and many others.
 
-Raster data can be stored in serval supported formats, including GeoTIFF,
+Raster data can be stored in several supported formats, including GeoTIFF,
 ERDAS Imagine, ArcInfo ASCII GRID, PostGIS Raster and others.
-
 See more at :ref:`opening_data`.
 
 To view and set the properties for a raster layer, double click on
