@@ -2207,8 +2207,10 @@ directly linked to a particular field (like the HTML/QML widgets or the
       * the :guilabel:`Label`: the title that will be used for the container
       * the :guilabel:`Container Type`: it can be a :guilabel:`Tab`,
         :guilabel:`Group box in container` (a collapsible group box inside a tab or another group)
-        or a :guilabel:`Row` (a container type that allows you to arange your widgets in a horizonatl row,
-        automatically determining the number of columns based on the number of widgets.)
+        or a :guilabel:`Row` (a container type that allows you to arrange your widgets in a horizontal row,
+        automatically determining the number of columns based on the number of widgets),
+      * the :guilabel:`Within` option: provides additional flexibility for customizing the arrangement
+        of the widgets within each container,
       * and the :guilabel:`Number of columns` the embedded fields should be distributed over
 
       .. _figure_fields_layout:
