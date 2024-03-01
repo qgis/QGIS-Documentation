@@ -99,8 +99,10 @@ You can setup some parameters that apply to the global symbol:
     |openTable| :sup:`List View` button below the frame;
   * or as icon preview using the |iconView| :sup:`Icon View` button.
 
-* Press the :guilabel:`Save Symbol` button to add the symbol being edited to the
-  symbols library or style database.
+* Press the :guilabel:`Save Symbol` button to open the :guilabel:`Save New Symbol` dialog.
+  Here, you can choose the :guilabel:`Destination` where you want to add the symbol being edited,
+  give it a :guilabel:`Name` and add :guilabel:`Tag(s)`.
+  You also have the option to |checkbox| :sup:`Add to favorites` your new symbol.
 * With the :guilabel:`Advanced` |selectString| option, you can:
 
   * for line and fill symbols, :guilabel:`Clip features to canvas extent`.
