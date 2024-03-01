@@ -214,6 +214,10 @@ The :guilabel:`Temporal controller` panel has the following modes:
 * |temporalNavigationAnimated| :sup:`Animated temporal navigation`:
   a time range is set, split into steps, and only layers (or features)
   whose temporal range overlaps with each frame are displayed on the map
+* |temporalNavigationMovie| :sup:`Animated movie`:
+  a total number of frames is set for the animation, with the map settings
+  advancing at each step, displaying the progression frame by frame without
+  any time-based filtering of data.
 * |settings| :sup:`Settings` for general control of the animation
 
   * :guilabel:`Frames rate`: number of steps that are shown per second
@@ -1393,6 +1397,8 @@ In the dialog that opens:
 .. |temporalNavigationAnimated| image:: /static/common/mTemporalNavigationAnimated.png
    :width: 1.5em
 .. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
+   :width: 1.5em
+.. |temporalNavigationMovie| image:: /static/common/mTemporalNavigationMovie.png
    :width: 1.5em
 .. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
    :width: 1.5em
