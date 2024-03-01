@@ -2209,8 +2209,8 @@ directly linked to a particular field (like the HTML/QML widgets or the
         :guilabel:`Group box in container` (a collapsible group box inside a tab or another group)
         or a :guilabel:`Row` (a container type that allows you to arrange your widgets in a horizontal row,
         automatically determining the number of columns based on the number of widgets),
-      * the :guilabel:`Within` option: provides additional flexibility for customizing the arrangement
-        of the widgets within each container,
+      * the :guilabel:`Within`: this optional feature allows you to select an existing container 
+        in which the new container (:guilabel:`Group box in container` or :guilabel:`Row`) will be embedded.
       * and the :guilabel:`Number of columns` the embedded fields should be distributed over
 
       .. _figure_fields_layout:
