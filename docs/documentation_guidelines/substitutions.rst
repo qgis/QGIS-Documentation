@@ -245,7 +245,7 @@ Icon                            Substitution                        Icon        
 |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
 |temporal|                      ``|temporal``                       |temporalNavigationOff|         ``|temporalNavigationOff|``
 |temporalNavigationFixedRange|  ``|temporalNavigationFixedRange|``  |temporalNavigationAnimated|    ``|temporalNavigationAnimated|``
-|newElevationProfile|           ``|newElevationProfile|``
+|temporalNavigationMovie|       ``|temporalNavigationMovie|``       |newElevationProfile|           ``|newElevationProfile|``
 ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -1619,6 +1619,8 @@ Icon                            Substitution                        Icon        
 .. |temporalNavigationAnimated| image:: /static/common/mTemporalNavigationAnimated.png
    :width: 1.5em
 .. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
+   :width: 1.5em
+.. |temporalNavigationMovie| image:: /static/common/mTemporalNavigationMovie.png
    :width: 1.5em
 .. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
    :width: 1.5em
