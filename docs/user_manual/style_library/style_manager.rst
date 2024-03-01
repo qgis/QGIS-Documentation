@@ -51,6 +51,11 @@ Organizing style items
 
 In the upper left corner ot the :guilabel:`Style Manager` dialog, within
 the drop-down menu, you can choose the style database you want to connect to.
+If you choose :guilabel:`Default` you will be connected to the default style database
+where you can find all available default style items and the ones that you saved in this database.
+Choosing :guilabel:`Project Styles` will connect you to the Project Style database
+where you can find only symbols that you saved in this database.
+If you created more style databases, they will be listed in the drop-down menu.
 There are also options to |symbologyAdd| :sup:`Add existing style database to project`
 and |newPage| :sup:`Create new style database` (see more :ref:`Style database <style_database>`).
 
