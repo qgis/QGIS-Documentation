@@ -1,5 +1,5 @@
 *******************************************************************************
-|MOD| GRASS
+Module: GRASS
 *******************************************************************************
 
 GRASS (Geographic Resources Analysis Support System) is a well-known open
@@ -12,12 +12,3 @@ QGIS allows you to make use of GRASS' powerful GIS tools directly.
    
    grass_setup
    grass_tools
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |MOD| replace:: Module:

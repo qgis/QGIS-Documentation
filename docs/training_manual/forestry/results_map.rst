@@ -1,4 +1,4 @@
-|LS| Map Presentation
+Lesson: Map Presentation
 ===============================================================================
 
 In the previous lessons you have imported an old forest inventor as a GIS project,
@@ -13,7 +13,7 @@ at the specific numbers.
 **The goal for this lesson:** Create a map to present the inventory results
 using a hillshade raster as background.
 
-|basic| |FA| Preparing the Map Data
+:abbr:`★☆☆ (Basic level)` Follow Along: Preparing the Map Data
 -------------------------------------------------------------------------------
 
 Open the QGIS project from the parameters calculations lesson, :kbd:`forest_inventory.qgs`.
@@ -55,7 +55,7 @@ Your map will look something like this:
    :align: center
 
 
-|basic| |TY| Try Different Blending Modes
+:abbr:`★☆☆ (Basic level)` Try Yourself: Try Different Blending Modes
 -------------------------------------------------------------------------------
 
 The style you loaded:
@@ -72,8 +72,8 @@ Try with different modes and see the differences in your map. Then choose the
 one you like better for your final map.
 
 
-|basic| |TY| Using a Layout Template to Create the Map result
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Try Yourself: Using a Layout Template to Create the Map result
+------------------------------------------------------------------------------------------
 
 Use a template prepared in advanced to present the results. The template
 :kbd:`forest_map.qpt` is located in the :kbd:`exercise_data\\forestry\\results\\`
@@ -91,23 +91,10 @@ The map template you are using will give a map similar to this one:
 
 Save your QGIS project for future references.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Through this module you have seen how a basic forest inventory can be planned
 and presented with QGIS. Many more forest analysis are possible with the variety
 of tools that you can access, but hopefully this manual has given you a good
 starting point to explore how you could achieve the specific results you need.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |basic| image:: /static/common/basic.png
