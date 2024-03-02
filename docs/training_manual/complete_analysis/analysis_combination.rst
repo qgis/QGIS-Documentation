@@ -1,4 +1,4 @@
-|LS| Combining the Analyses
+Lesson: Combining the Analyses
 ===============================================================================
 
 Using the vectorized results of the raster analysis will allow you to select
@@ -7,7 +7,7 @@ only those buildings on suitable terrain.
 **The goal for this lesson:** To use the vectorized terrain results to select
 suitable plots.
 
-|moderate| |TY|
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 #. Save your current map (:file:`raster_analysis.qgs`).
@@ -34,7 +34,7 @@ example:
    :align: center
 
 
-|moderate| |TY| Inspecting the Results
+:abbr:`★★☆ (Moderate level)` Try Yourself: Inspecting the Results
 -------------------------------------------------------------------------------
 
 Look at each of the buildings in your :guilabel:`new_solution` layer. Compare them
@@ -54,7 +54,7 @@ deem to be unsuitable?
    our dataset.
 
 
-|moderate| |TY| Refining the Analysis
+:abbr:`★★☆ (Moderate level)` Try Yourself: Refining the Analysis
 -------------------------------------------------------------------------------
 
 You can see from the results that some buildings which were included were
@@ -135,27 +135,14 @@ over 100m squared in size.
    #. Save the selection under :file:`exercise_data/residential_development/` as
       :file:`final_answer.shp`.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You have now answered the original research question, and can offer an opinion
 (with reasons, backed by analysis) for a recommendation regarding which
 property to develop.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next you will present these results as part of your second assignment.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |moderate| image:: /static/common/moderate.png

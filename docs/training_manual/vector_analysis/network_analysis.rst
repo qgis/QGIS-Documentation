@@ -1,4 +1,4 @@
-|LS| Network Analysis
+Lesson: Network Analysis
 ======================================================================
 
 Calculating the shortest distance between two points is a common GIS
@@ -8,7 +8,7 @@ Tools for this can be found in the :guilabel:`Processing Toolbox`.
 **The goal for this lesson:** learn to use
 :guilabel:`Network analysis` algorithms.
 
-|basic| |FA| The Tools and the Data
+:abbr:`★☆☆ (Basic level)` Follow Along: The Tools and the Data
 ----------------------------------------------------------------------
 
 You can find all the network analysis algorithms in the
@@ -43,7 +43,7 @@ or the fastest path between two points of a network, given:
 
 Let's start.
 
-|basic| Calculate the shortest path (point to point)
+:abbr:`★☆☆ (Basic level)` Calculate the shortest path (point to point)
 ----------------------------------------------------------------------
 The
 :menuselection:`Network analysis --> Shortest path (point to point)`
@@ -107,7 +107,7 @@ Now that you know how to use the tool, feel free to test other locations.
 
 .. _network_fastest_path:
 
-|moderate| |TY| Fastest path
+:abbr:`★★☆ (Moderate level)` Try Yourself: Fastest path
 ----------------------------------------------------------------------
 
 With the same data of the previous exercise, try to calculate the
@@ -132,7 +132,7 @@ How much time do you need to go from the start to the end point?
       .. figure:: img/fastest_path_attribute.png
          :align: center
 
-|moderate| |FA| Advanced options
+:abbr:`★★☆ (Moderate level)` Follow Along: Advanced options
 ----------------------------------------------------------------------
 
 Let us explore some more options of the Network Analysis tools.
@@ -176,7 +176,7 @@ Now you know how many minutes it will take to get from one point to
 the other one if the whole network speed is at ``4 km/h``.
 
 
-|hard| Shortest path with speed limit
+:abbr:`★★★ (Advanced level)` Shortest path with speed limit
 ----------------------------------------------------------------------
 The Network analysis toolbox has other interesting options.
 Looking at the following map:
@@ -223,7 +223,7 @@ and we will manually choose the start and end points.
 As you can see the fastest route does not correspond to the shortest one.
 
 
-|moderate| Service area (from layer)
+:abbr:`★★☆ (Moderate level)` Service area (from layer)
 ----------------------------------------------------------------------
 The :menuselection:`Network Analysis --> Service area (from layer)`
 algorithm can answer the question: given a point layer, what are all
@@ -262,7 +262,7 @@ on the network from each point of the :guilabel:`network_points` layer.
 
 Cool isn't it?
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 
 Now you know how to use :guilabel:`Network analysis` algorithm
@@ -271,7 +271,7 @@ to solve shortest and fastest path problems.
 We are now ready to perform some spatial statistic on vector layer data.
 Let's go!
 
-|WN|
+What's Next?
 ----------------------------------------------------------------------
 
 Next you'll see how to run spatial statistics algorithms on vector datasets.
@@ -283,13 +283,5 @@ Next you'll see how to run spatial statistics algorithms on vector datasets.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
-.. |hard| image:: /static/common/hard.png
-.. |moderate| image:: /static/common/moderate.png

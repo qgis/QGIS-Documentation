@@ -1,4 +1,4 @@
-|LS| Vector Analysis
+Lesson: Vector Analysis
 ======================================================================
 
 Vector data can also be analyzed to reveal how different features
@@ -11,7 +11,7 @@ using the tools that QGIS provides.
 analysis tools.
 
 
-|basic| The GIS Process
+:abbr:`★☆☆ (Basic level)` The GIS Process
 ----------------------------------------------------------------------
 
 Before we start, it would be useful to give a brief overview of a
@@ -24,7 +24,7 @@ The way to go about it is:
 #. Present the Results
 
 
-|basic| The Problem
+:abbr:`★☆☆ (Basic level)` The Problem
 ----------------------------------------------------------------------
 
 Let's start off the process by deciding on a problem to solve.
@@ -39,7 +39,7 @@ following criteria:
 #. Closer than 500m to a restaurant
 
 
-|basic| The Data
+:abbr:`★☆☆ (Basic level)` The Data
 ----------------------------------------------------------------------
 
 To answer these questions, we are going to need the following data:
@@ -63,8 +63,8 @@ If you want to download data from another area, jump to the
     region.
 
 
-|basic| |FA| Start a Project and get the Data
-----------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Start a Project and get the Data
+-------------------------------------------------------------------------
 
 We first need to load the data to work with.
 
@@ -120,7 +120,7 @@ The map with all the data should look like the following one:
    :align: center
 
 
-|basic| |TY| Convert Layers' CRS
+:abbr:`★☆☆ (Basic level)` Try Yourself: Convert Layers' CRS
 ----------------------------------------------------------------------
 
 Because we are going to be measuring distances within our layers, we need to
@@ -174,8 +174,8 @@ Feel free to choose the best workflow for yourself.
 Now that we have converted OSM data to a UTM projection, we can begin
 our calculations.
 
-|basic| |FA| Analyzing the Problem: Distances From Schools and Roads
-----------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Analyzing the Problem: Distances From Schools and Roads
+-------------------------------------------------------------------------------------------------
 
 QGIS allows you to calculate distances between any vector object.
 
@@ -269,7 +269,7 @@ Now there are no unnecessary subdivisions.
 
 .. _backlink-vector-analysis-basic-1:
 
-|basic| |TY| Distance from schools
+:abbr:`★☆☆ (Basic level)` Try Yourself: Distance from schools
 ----------------------------------------------------------------------
 
 Use the same approach as above and create a buffer for your schools.
@@ -304,7 +304,7 @@ Save the new layer in the :file:`vector_analysis.gpkg` file as ``schools_buffer_
    In our example, the difference is subtle, but you can see that the buffer's edges
    are smoother with the higher value.
 
-|basic| |FA| Overlapping Areas
+:abbr:`★☆☆ (Basic level)` Follow Along: Overlapping Areas
 ----------------------------------------------------------------------
 
 Now we have identified areas where the road is less than 50 meters
@@ -342,7 +342,7 @@ You can find it in :menuselection:`Vector Overlay` group in the
 
 .. _select-by-location:
 
-|basic| |FA| Extract the Buildings
+:abbr:`★☆☆ (Basic level)` Follow Along: Extract the Buildings
 ----------------------------------------------------------------------
 
 Now you've got the area that the buildings must overlap.
@@ -376,8 +376,8 @@ Next, you want to extract the buildings in that area.
    from the layer list.
 
 
-|moderate| |TY| Further Filter our Buildings
-----------------------------------------------------------------------
+:abbr:`★★☆ (Moderate level)` Try Yourself: Further Filter our Buildings
+-------------------------------------------------------------------------
 
 We now have a layer which shows us all the buildings within 1km of a
 school and within 50m of a road.
@@ -415,8 +415,8 @@ within 500m of a restaurant.
    .. figure:: img/restaurant_buffer_result.png
       :align: center
 
-|basic| |FA| Select Buildings of the Right Size
-----------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Select Buildings of the Right Size
+----------------------------------------------------------------------------
 
 To see which buildings are of the correct size (more than 100 square
 meters), we need to calculate their size.
@@ -453,7 +453,7 @@ Your map should now only show you those buildings which match our
 starting criteria and which are more than 100 square meters in size.
 
 
-|basic| |TY|
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 ----------------------------------------------------------------------
 
 Save your solution as a new layer, using the approach you learned
@@ -461,14 +461,14 @@ above for doing so.
 The file should be saved within the same GeoPackage database, with
 the name ``solution``.
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 
 Using the GIS problem solving approach together with QGIS vector
 analysis tools, you were able to solve a problem with multiple
 criteria quickly and easily.
 
-|WN|
+What's Next?
 ----------------------------------------------------------------------
 
 In the next lesson, we will look at how to calculate the shortest
@@ -481,17 +481,10 @@ distance along roads from one point to another.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/common/moderate.png
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

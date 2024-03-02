@@ -1,4 +1,4 @@
-|LS| Queries
+Lesson: Queries
 ===============================================================================
 
 When you write a :kbd:`SELECT ...` command it is commonly known as a query -
@@ -270,7 +270,7 @@ Result:
 .. note::  Because we have not used an :kbd:`ORDER BY` clause, the order of your
   results may not match what is shown here.
 
-|TY| |moderate|
+Try Yourself: :abbr:`★★☆ (Moderate level)`
 ...............................................................................
 
 Summarise the people by street name and show the actual street names instead
@@ -300,26 +300,13 @@ of the street_ids.
   is ambiguous (i.e. not unique across all tables in the database).
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You've seen how to use queries to return the data in your database in a way
 that allows you to extract useful information from it.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next you'll see how to create views from the queries that you've written.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |moderate| image:: /static/common/moderate.png
