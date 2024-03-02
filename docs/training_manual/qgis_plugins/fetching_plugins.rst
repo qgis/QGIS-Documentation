@@ -1,4 +1,4 @@
-|LS| Installing and Managing Plugins
+Lesson: Installing and Managing Plugins
 ===============================================================================
 
 To begin using plugins, you need to know how to download, install and activate
@@ -7,7 +7,7 @@ and :guilabel:`Plugin Manager`.
 
 **The goal for this lesson:** To understand and use QGIS' plugin system.
 
-|basic| |FA| Managing Plugins
+:abbr:`★☆☆ (Basic level)` Follow Along: Managing Plugins
 -------------------------------------------------------------------------------
 
 #. To open the :guilabel:`Plugin Manager`, click on the menu item
@@ -32,7 +32,7 @@ and :guilabel:`Plugin Manager`.
 
 .. _plugin_installation:
 
-|basic| |FA| Installing New Plugins
+:abbr:`★☆☆ (Basic level)` Follow Along: Installing New Plugins
 -------------------------------------------------------------------------------
 
 The list of plugins that you can activate and deactivate draws from the plugins
@@ -56,8 +56,8 @@ that you currently have installed. To install new plugins:
 .. note:: if the plugin has some error it will be listed in the :guilabel:`Invalid`
   tab. You can then contact the plugin owner to fix the problem.
 
-|basic| |FA| Configuring Additional Plugin Repositories
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Configuring Additional Plugin Repositories
+------------------------------------------------------------------------------------
 
 The plugins that are available to you for installation depend on which
 plugin *repositories* you are configured to use.
@@ -95,25 +95,12 @@ you want to configure additional repositories. To do this:
 #. To install a plugin, click on it in the list and then on the
    :guilabel:`Install plugin` button.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Installing plugins in QGIS should be straightforward and effective!
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next we'll introduce you to some useful plugins as examples.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png

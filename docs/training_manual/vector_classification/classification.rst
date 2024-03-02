@@ -1,4 +1,4 @@
-|LS| Classification
+Lesson: Classification
 ======================================================================
 
 Labels are a good way to communicate information such as the names of
@@ -16,7 +16,7 @@ if there are numerous different landuse areas on the map.
 **The goal for this lesson:** To learn how to classify vector data
 effectively.
 
-|basic| |FA| Classifying Nominal Data
+:abbr:`★☆☆ (Basic level)` Follow Along: Classifying Nominal Data
 ----------------------------------------------------------------------
 
 #. Open the :guilabel:`Layer Properties` dialog for the ``landuse``
@@ -74,7 +74,7 @@ or *NULL* value.
 Remember to save your map now so that you don't lose all your
 hard-earned changes!
 
-|basic| |TY| More Classification
+:abbr:`★☆☆ (Basic level)` Try Yourself: More Classification
 ----------------------------------------------------------------------
 
 Use the knowledge you gained above to classify the ``buildings`` layer.
@@ -83,7 +83,7 @@ Set the categorisation against the ``building`` field and use the
 
 .. note:: Remember to zoom into an urban area to see the results.
 
-|moderate| |FA| Ratio Classification
+:abbr:`★★☆ (Moderate level)` Follow Along: Ratio Classification
 ----------------------------------------------------------------------
 
 There are four types of classification: *nominal*, *ordinal*,
@@ -266,7 +266,7 @@ Now that we have the data, let's use them to render the ``landuse`` layer.
    :align: center
 
 
-|moderate| |TY| Refine the Classification
+:abbr:`★★☆ (Moderate level)` Try Yourself: Refine the Classification
 ----------------------------------------------------------------------
 
 * Change the values of :guilabel:`Mode` and :guilabel:`Classes` until
@@ -283,7 +283,7 @@ Now that we have the data, let's use them to render the ``landuse`` layer.
       :align: center
 
 
-|hard| |FA| Rule-based Classification
+:abbr:`★★★ (Advanced level)` Follow Along: Rule-based Classification
 ----------------------------------------------------------------------
 
 It's often useful to combine multiple criteria for a classification,
@@ -371,7 +371,7 @@ Now you have a map with |majorUrbanName| the most prominent
 residential area and other non-residential areas colored according to
 their size.
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 
 Symbology allows us to represent the attributes of a layer in an
@@ -381,7 +381,7 @@ of features, using any relevant attributes that we choose.
 Depending on the problems you face, you'll apply different
 classification techniques to solve them.
 
-|WN|
+What's Next?
 ----------------------------------------------------------------------
 
 Now we have a nice-looking map, but how are we going to get it out of
@@ -394,12 +394,6 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
@@ -408,9 +402,7 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
-.. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/common/moderate.png
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png

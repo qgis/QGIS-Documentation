@@ -76,7 +76,7 @@ The module-level index file will look like this:
 ::
 
   *******************************************************************************
-  |MOD| Module Name
+  Module: Module Name
   *******************************************************************************
 
   Short paragraph describing the module.
@@ -104,7 +104,7 @@ To add a lesson to a new or existing module:
 .. note:: For editing purposes, a :kbd:`.rst` file works exactly like a normal
    text file (:kbd:`.txt`).
 
-* To begin writing the lesson, write the markup phrase :kbd:`|LS|`, followed by
+* To begin writing the lesson, write the markup phrase ``Lesson:``, followed by
   the lesson name.
 * In the next line, write a line of 80 equal signs (:kbd:`=`).
 * Leave a line open after this.
@@ -137,14 +137,14 @@ There are two types of sections: "follow along" and "try yourself".
   assignment, and will show the expected outcome if possible.
 
 Every section comes with a difficulty level. An easy section is denoted by
-:kbd:`|basic|`, moderate by :kbd:`|moderate|`, and advanced by :kbd:`|hard|`.
+``★☆☆``, moderate by ``★★☆``, and advanced by ``★★★``.
 
 Adding a "follow along" section
 -------------------------------------------------------------------------------
 
 * To start this section, write the markup phrase of the intended difficulty
   level (as shown above).
-* Leave a space and then write :kbd:`|FA|` (for "follow along").
+* Leave a space and then write ``Follow Along:``.
 * Leave another space and write the name of the section (use only an initial
   capital letter, as well as capitals for proper nouns).
 * In the next line, write a line of 80 minuses/dashes (:kbd:`-`). Ensure that
@@ -162,8 +162,8 @@ Adding a "try yourself" section
 
 * To start this section, write the markup phrase of the intended difficulty
   level (as shown above).
-* Leave a space and then write :kbd:`|TY|` (for "try yourself").
-* In the next line, write a line of 80 minuses/dashes (:kbd:`-`). Ensure that
+* Leave a space and then write ``Try Yourself:``.
+* In the next line, write a line of 80 minuses/dashes (``-``). Ensure that
   your text editor does not replace the default minus/dash character with a
   long dash or other character.
 * Explain the exercise that you want the reader to complete. Refer to previous
@@ -212,23 +212,23 @@ below it, otherwise it could cause errors while creating the document.
 Add a Conclusion
 ===============================================================================
 
-* To end a lesson, write the phrase :kbd:`|IC|` for "in conclusion", followed
-  by a new line of 80 minuses/dashes (:kbd:`-`). Write a conclusion for the
+* To end a lesson, write the phrase ``In Conclusion``, followed
+  by a new line of 80 minuses/dashes (``-``). Write a conclusion for the
   lesson, explaining which concepts have been covered in the lesson.
 
 Add a Further Reading Section
 ===============================================================================
 
 * This section is optional.
-* Write the phrase :kbd:`FR` for "further reading", followed by a new line of
-  80 minuses/dashes (:kbd:`-`).
+* Write the phrase ``Further Reading``, followed by a new line of
+  80 minuses/dashes (``-``).
 * Include links to appropriate external websites.
 
 Add a What's Next Section
 ===============================================================================
 
-* Write the phrase :kbd:`|WN|` for "what's next", followed by a new line of 80
-  minuses/dashes (:kbd:`-`).
+* Write the phrase ``What's Next?`` for "what's next", followed by a new line of 80
+  minuses/dashes (``-``).
 * Explain how this lesson has prepared students for the next lesson or module.
 * Remember to change the "what's next" section of the previous lesson if
   necessary, so that it refers to your new lesson. This will be necessary if
@@ -366,20 +366,3 @@ Thank You!
 
 Thank you for contributing to this project! By so doing, you are making QGIS
 more accessible to users and adding value to the QGIS project as a whole.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |MOD| replace:: Module:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
-.. |hard| image:: /static/common/hard.png
-.. |moderate| image:: /static/common/moderate.png
