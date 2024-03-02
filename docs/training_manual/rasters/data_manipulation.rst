@@ -1,4 +1,4 @@
-|LS| Working with Raster Data
+Lesson: Working with Raster Data
 ======================================================================
 
 Raster data is quite different from vector data.
@@ -15,7 +15,7 @@ existing GIS analysis.
 **The goal for this lesson:** To learn how to work with raster data in
 QGIS.
 
-|basic| |FA| Loading Raster Data
+:abbr:`★☆☆ (Basic level)` Follow Along: Loading Raster Data
 ----------------------------------------------------------------------
 
 Raster data can be loaded with the same methods we used for vector
@@ -40,7 +40,7 @@ There we have it - four aerial images covering our study area.
 
 .. _tm_virtual_raster:
 
-|basic| |FA| Create a Virtual Raster
+:abbr:`★☆☆ (Basic level)` Follow Along: Create a Virtual Raster
 ----------------------------------------------------------------------
 
 Now as you can see from this, your solution layer lies across all four
@@ -95,7 +95,7 @@ You can now remove the original four rasters from the
 raster.
 
 
-|hard| Transforming Raster Data
+:abbr:`★★★ (Advanced level)` Transforming Raster Data
 ----------------------------------------------------------------------
 
 The above methods allow you to virtually merge datasets using a
@@ -143,27 +143,13 @@ use the merge algorithm.
 .. figure:: img/merge_rasters.png
    :align: center
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 
 QGIS makes it easy to include raster data into your existing projects.
 
-|WN|
+What's Next?
 ----------------------------------------------------------------------
 
 Next, we'll use raster data that isn't aerial imagery, and see how
 symbolization is useful in the case of rasters as well.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
-.. |hard| image:: /static/common/hard.png

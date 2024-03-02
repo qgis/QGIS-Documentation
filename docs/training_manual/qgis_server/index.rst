@@ -1,7 +1,7 @@
 .. _training_qgis_server:
 
 *******************************************************************************
-|MOD| QGIS Server
+Module: QGIS Server
 *******************************************************************************
 
 Module contributed by Tudor Bărăscu.
@@ -15,12 +15,3 @@ To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
 
    install
    wms
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |MOD| replace:: Module:

@@ -1,4 +1,4 @@
-|LS| Implementing the Data Model
+Lesson: Implementing the Data Model
 ===============================================================================
 
 Now that we've covered all the theory, let's create a new database. This
@@ -244,7 +244,7 @@ Which should show something like this:
 
 As you can see, our table is currently empty.
 
-|TY| |moderate|
+Try Yourself: :abbr:`★★☆ (Moderate level)`
 ...............................................................................
 
 Use the approach shown above to make a table called people:
@@ -423,26 +423,13 @@ Under Ubuntu, you can install it like this:
 
 pgAdmin III will be covered in more detail in another module.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You have now seen how to create a brand new database, starting completely from
 scratch.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next you'll learn how to use the DBMS to add new data.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |moderate| image:: /static/common/moderate.png

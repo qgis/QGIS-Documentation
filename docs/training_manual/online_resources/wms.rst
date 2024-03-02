@@ -1,6 +1,6 @@
 .. _`wms-services`:
 
-|LS| Web Mapping Services
+Lesson: Web Mapping Services
 ===============================================================================
 
 A Web Mapping Service (WMS) is a service hosted on a remote server. Similar to
@@ -15,7 +15,7 @@ if you pan or zoom on the map.
 
 **The goal for this lesson:** To use a WMS and understand its limitations.
 
-|basic| |FA| Loading a WMS Layer
+:abbr:`★☆☆ (Basic level)` Follow Along: Loading a WMS Layer
 -------------------------------------------------------------------------------
 
 For this exercise, you can either use the basic map you made at the start of
@@ -160,7 +160,7 @@ This will be covered in the next lesson, however.
 First, let's add another WMS layer.
 
 
-|basic| |TY|
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 #. Add the ``eAtlas`` WMS server at this URL: ``https://maps.eatlas.org.au/maps/wms``
@@ -188,7 +188,7 @@ First, let's add another WMS layer.
    #. After the layer is loaded, you can modify its :guilabel:`Opacity` value
       (under the :guilabel:`Transparency` properties tab)
 
-|hard| |TY|
+:abbr:`★★★ (Advanced level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Part of the difficulty of using WMS is finding a good (free) server.
@@ -219,7 +219,7 @@ Part of the difficulty of using WMS is finding a good (free) server.
    There are many other WMS servers to choose from.
 
 
-|hard| |TY|
+:abbr:`★★★ (Advanced level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 * Add the :guilabel:`bluemarble` layer from the :guilabel:`MapServer Demonstration Server`.
@@ -244,19 +244,19 @@ Part of the difficulty of using WMS is finding a good (free) server.
       The Blue Marble data is more suitable at global or national scales
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Using a WMS, you can add inactive maps as backdrops for your existing map data.
 
-|FR|
+Further Reading
 -------------------------------------------------------------------------------
 
 * `Spatineo Directory <https://directory.spatineo.com/>`_
 * `OpenStreetMap.org list of WMS servers
   <https://wiki.openstreetmap.org/wiki/WMS>`_
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Now that you've added an inactive map as a backdrop, you'll be glad to know
@@ -271,18 +271,10 @@ Feature Service (WFS). That's the topic of the next lesson.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |FR| replace:: Further Reading
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
 .. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
-.. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |search| image:: /static/common/search.png
    :width: 1.5em

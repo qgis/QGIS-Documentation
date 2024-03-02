@@ -1,4 +1,4 @@
-|LS| Import and Export
+Lesson: Import and Export
 ===============================================================================
 
 Of course, a database with no easy way to migrate data into it and out of it
@@ -78,25 +78,14 @@ next module is largely devoted to using this tool, we will only briefly mention
 it here.
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Importing and exporting data to and from the database can be done in many
 various ways. Especially when using disparate data sources, you will probably
 use these functions (or others like them) on a regular basis.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next we'll look at how to query the data we've created before.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?

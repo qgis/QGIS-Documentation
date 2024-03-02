@@ -1,4 +1,4 @@
-|LS| Symbology
+Lesson: Symbology
 ===============================================================================
 
 The symbology of a layer is its visual appearance on the map.
@@ -19,7 +19,7 @@ information that people will be able to use.
 **The goal for this lesson:** To be able to create any symbology you want for
 any vector layer.
 
-|basic| |FA| Changing Colors
+:abbr:`★☆☆ (Basic level)` Follow Along: Changing Colors
 -------------------------------------------------------------------------------
 
 To change a layer's symbology, open its :guilabel:`Layer Properties`. Let's
@@ -48,7 +48,7 @@ begin by changing the color of the ``landuse`` layer.
 #. Click :guilabel:`OK` again in the :guilabel:`Layer Properties` window, and
    you will see the color change being applied to the layer.
 
-|basic| |TY|
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Change the color of the ``water`` layer to light blue. Try to use the
@@ -71,7 +71,7 @@ Change the color of the ``water`` layer to light blue. Try to use the
    is hidden.
 
 
-|basic| |FA| Changing Symbol Structure
+:abbr:`★☆☆ (Basic level)` Follow Along: Changing Symbol Structure
 -------------------------------------------------------------------------------
 
 This is good stuff so far, but there's more to a layer's symbology than just
@@ -98,7 +98,7 @@ areas so as to make the map less visually cluttered.
 Now the ``landuse`` layer won't have any lines between areas.
 
 
-|basic| |TY|
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 * Change the ``water`` layer's symbology again so that it has a
@@ -131,7 +131,7 @@ individual changes while symbolizing a layer.
       :align: center
 
 
-|moderate| |FA| Scale-Based Visibility
+:abbr:`★★☆ (Moderate level)` Follow Along: Scale-Based Visibility
 -------------------------------------------------------------------------------
 
 Sometimes you will find that a layer is not suitable for a given scale. For
@@ -168,7 +168,7 @@ Test the effects of this by zooming in and out in your map, noting when the
 
    |zoomIn| |zoomOut|
 
-|moderate| |FA| Adding Symbol Layers
+:abbr:`★★☆ (Moderate level)` Follow Along: Adding Symbol Layers
 -------------------------------------------------------------------------------
 
 Now that you know how to change simple symbology for layers, the next step is
@@ -226,7 +226,7 @@ your layer that way.
 It's fun! But it probably has too many colors to use in a real map...
 
 
-|moderate| |TY|
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Remembering to zoom in if necessary, create a simple, but not distracting
@@ -245,7 +245,7 @@ texture for the ``buildings`` layer using the methods above.
       :align: center
 
 
-|moderate| |FA| Ordering Symbol Levels
+:abbr:`★★☆ (Moderate level)` Follow Along: Ordering Symbol Levels
 -------------------------------------------------------------------------------
 
 When symbol layers are rendered, they are also rendered in a sequence, similar
@@ -315,7 +315,7 @@ button. Before you change a style, keep in mind that any unsaved style you are
 replacing will be lost.
 
 
-|moderate| |TY|
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Change the appearance of the ``roads`` layer again.
@@ -353,7 +353,7 @@ rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
          :align: center
 
 
-|hard| |TY|
+:abbr:`★★★ (Advanced level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Symbol levels also work for classified layers (i.e., layers having multiple
@@ -385,7 +385,7 @@ rudimentary pre-classified data.
    #. Open your original map again before continuing with the next exercise.
 
 
-|moderate| |FA| Symbol layer types
+:abbr:`★★☆ (Moderate level)` Follow Along: Symbol layer types
 -------------------------------------------------------------------------------
 
 In addition to setting fill colors and using predefined patterns, you can use
@@ -484,7 +484,7 @@ that make up the texture.
 
 .. _backlink-symbology-marker-line:
 
-|moderate| |TY|
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Apply a green transparent fill color to the ``protected_areas`` layer,
@@ -506,7 +506,7 @@ and change the outline to look like this:
       :align: center
 
 
-|hard| |FA| Geometry generator symbology
+:abbr:`★★★ (Advanced level)` Follow Along: Geometry generator symbology
 -------------------------------------------------------------------------------
 
 You can use the Geometry generator symbology with all layer types (points, lines
@@ -549,7 +549,7 @@ With the Geometry generator symbology you can really go over the edge of *normal
 symbology.
 
 
-|hard| |TY|
+:abbr:`★★★ (Advanced level)` Try Yourself:
 ...............................................................................
 
 Geometry generator are just another symbol level. Try to add another
@@ -574,7 +574,7 @@ The final result should look like this:
    #. Try experimenting other options to get more useful results.
 
 
-|hard| |FA| Creating a Custom SVG Fill
+:abbr:`★★★ (Advanced level)` Follow Along: Creating a Custom SVG Fill
 -------------------------------------------------------------------------------
 
 .. note::  To do this exercise, you will need to have the free vector editing
@@ -656,20 +656,20 @@ canvas or set in the layer properties a bigger :guilabel:`Texture width`.
 .. figure:: img/svg_symbol_result.png
    :align: center
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Changing the symbology for the different layers has transformed a collection of
 vector files into a legible map. Not only can you see what's happening, it's
 even nice to look at!
 
-|FR|
+Further Reading
 -------------------------------------------------------------------------------
 
 `Examples of Beautiful Maps
 <https://gis.stackexchange.com/questions/3083/seeking-examples-of-beautiful-maps>`_
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Changing symbols for whole layers is useful, but the information contained
@@ -688,20 +688,11 @@ map.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |FR| replace:: Further Reading
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/common/moderate.png
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png

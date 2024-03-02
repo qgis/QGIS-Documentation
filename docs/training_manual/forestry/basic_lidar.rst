@@ -1,4 +1,4 @@
-|LS| DEM from LiDAR Data
+Lesson: DEM from LiDAR Data
 ===============================================================================
 
 You can improve the look of your maps by using different background images.
@@ -12,7 +12,7 @@ hillshade raster to use in your map presentation later.
 data and a hillshade raster.
 
 
-|basic| |FA| Installing Lastools
+:abbr:`★☆☆ (Basic level)` Follow Along: Installing Lastools
 -------------------------------------------------------------------------------
 
 Managing LiDAR data within QGIS is possible using the Processing framework and
@@ -68,7 +68,7 @@ To setup the LAStools in QGIS:
 .. figure:: img/processing_options.png
    :align: center
 
-|basic| |FA| Calculating a DEM with LAStools
+:abbr:`★☆☆ (Basic level)` Follow Along: Calculating a DEM with LAStools
 -------------------------------------------------------------------------------
 
 You have already used the :menuselection:`Processing` toolbox in :doc:`../vector_analysis/spatial_statistics`
@@ -147,7 +147,7 @@ The result DEM is added to your map with the generic name :kbd:`Output raster fi
   You can use the unlicensed tool as indicated in the license file, but you get
   the diagonals you can appreciate in the image results.
 
-|basic| |FA| Creating a Terrain Hillshade
+:abbr:`★☆☆ (Basic level)` Follow Along: Creating a Terrain Hillshade
 -------------------------------------------------------------------------------
 
 For visualization purposes, a hillshade generated from a DEM gives a better
@@ -171,7 +171,7 @@ soil drains that have been dug in the forests.
    :align: center
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Using LiDAR data to get a DEM, specially in forested areas, gives good results
@@ -180,21 +180,8 @@ sources like the `SRTM 9m resolution DEMs <https://srtm.csi.cgiar.org/srtmdata/>
 Either way, you can use them to create a hillshade raster to use in your map
 presentations.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 In the next, and final step in this module, lesson you will use the hillshade
 raster and the forest inventory results to create a map presentation of the results.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png

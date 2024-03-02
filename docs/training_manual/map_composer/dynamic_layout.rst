@@ -1,4 +1,4 @@
-|LS| Creating a Dynamic Print Layout
+Lesson: Creating a Dynamic Print Layout
 ======================================================================
 
 Now that you have learned to create a basic map layout we go a step
@@ -7,8 +7,8 @@ extent and to the page properties, e.g. when you change the size of
 the page.
 Also, the date of creation will adapt dynamically.
 
-|moderate| |FA| Creating the dynamic map canvas
-----------------------------------------------------------------------
+:abbr:`★★☆ (Moderate level)` Follow Along: Creating the dynamic map canvas
+----------------------------------------------------------------------------
 
 #. Load the ESRI Shapefile format datasets
    :file:`protected_areas.shp`, :file:`places.shp`, :file:`rivers.shp`
@@ -77,7 +77,7 @@ Also, the date of creation will adapt dynamically.
    The :guilabel:`Grid type` :guilabel:`Cross` is very well suited
    for our purposes.
 
-|moderate| |FA| Creating the dynamic header
+:abbr:`★★☆ (Moderate level)` Follow Along: Creating the dynamic header
 -------------------------------------------------------------------------------
 
 #. Insert a rectangle which will contain the header with the
@@ -139,7 +139,7 @@ Also, the date of creation will adapt dynamically.
 .. figure:: img/dynamic_layout_structure.png
    :align: center
 
-|moderate| |FA| Creating labels for the dynamic header
+:abbr:`★★☆ (Moderate level)` Follow Along: Creating labels for the dynamic header
 ---------------------------------------------------------------------------------------
 
 #. The title of your QGIS project can be included automatically.
@@ -224,7 +224,7 @@ Also, the date of creation will adapt dynamically.
 
 .. figure:: img/dynamic_layout_organisation.png
 
-|moderate| |FA| Adding pictures to the dynamic header
+:abbr:`★★☆ (Moderate level)` Follow Along: Adding pictures to the dynamic header
 ---------------------------------------------------------------------------------------
 
 #. Use the |addImage| :sup:`Add Picture` button to place a picture
@@ -263,8 +263,8 @@ Also, the date of creation will adapt dynamically.
    #. For :guilabel:`Width`, use ``21.027``
    #. For :guilabel:`Height`, use ``21.157``
 
-|moderate| |FA| Creating the scalebar of the dynamic header
-----------------------------------------------------------------------
+:abbr:`★★☆ (Moderate level)` Follow Along: Creating the scalebar of the dynamic header
+----------------------------------------------------------------------------------------
 
 #. To insert a scalebar in the header click on
    |scaleBar| :sup:`Add Scale Bar` and place it in the rectangle
@@ -302,7 +302,7 @@ adapted.
 .. figure:: img/dynamic_layout.png
    :align: center
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 On the next page, you will be given an assignment to complete.
@@ -316,9 +316,6 @@ far.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
 .. |addImage| image:: /static/common/mActionAddImage.png
@@ -329,7 +326,6 @@ far.
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
-.. |moderate| image:: /static/common/moderate.png
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png

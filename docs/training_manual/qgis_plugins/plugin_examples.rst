@@ -1,4 +1,4 @@
-|LS| Useful QGIS Plugins
+Lesson: Useful QGIS Plugins
 ===============================================================================
 
 Now that you can install, enable and disable plugins, let's see how this can
@@ -8,7 +8,7 @@ help you in practice by looking at some examples of useful plugins.
 and get acquainted with some useful plugins.
 
 
-|basic| |FA| The QuickMapServices Plugin
+:abbr:`★☆☆ (Basic level)` Follow Along: The QuickMapServices Plugin
 -------------------------------------------------------------------------------
 
 The QuickMapServices plugin is a simple and easy to use plugin that adds base maps
@@ -60,7 +60,7 @@ It is also possible to search trough the now available data providers
       :width: 80%
 
 
-|basic| |FA| The QuickOSM Plugin
+:abbr:`★☆☆ (Basic level)` Follow Along: The QuickOSM Plugin
 -------------------------------------------------------------------------------
 
 With an incredible simple interface, the QuickOSM plugin allows you to download
@@ -105,7 +105,7 @@ canvas.
   :kbd:`Advanced` menu in QuickOSM and choose where to save the data in the
   :guilabel:`Directory` menu.
 
-|hard| |FA| The QuickOSM Query engine
+:abbr:`★★★ (Advanced level)` Follow Along: The QuickOSM Query engine
 -------------------------------------------------------------------------------
 
 The quickest way to download data from QuickOSM plugin is using the :guilabel:`Quick query`
@@ -174,7 +174,7 @@ You can write complex queries using the `Overpass Query language
 <https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_.
 Take a look at some example and try to explore the query language.
 
-|basic| |FA| The DataPlotly Plugin
+:abbr:`★☆☆ (Basic level)` Follow Along: The DataPlotly Plugin
 -------------------------------------------------------------------------------
 
 The **DataPlotly** plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
@@ -244,14 +244,14 @@ in the map canvas.
 .. tip:: Each plot has its own manual page available in the |helpContents| tab.
   Try to explore all the plot types and see all the other settings available.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 There are many useful plugins available for QGIS. Using the built-in tools for
 installing and managing these plugins, you can find new plugins and make
 optimum use of them.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next we'll look at how to use layers that are hosted on remote servers in real
@@ -264,14 +264,8 @@ time.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
 .. |addHtml| image:: /static/common/mActionAddHtml.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
-.. |hard| image:: /static/common/hard.png
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png

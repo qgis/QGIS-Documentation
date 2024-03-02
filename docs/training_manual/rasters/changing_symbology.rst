@@ -1,4 +1,4 @@
-|LS| Changing Raster Symbology
+Lesson: Changing Raster Symbology
 ======================================================================
 
 Not all raster data are aerial photos.
@@ -9,7 +9,7 @@ visible and useful.
 **The goal for this lesson:** To change the symbology for a raster
 layer.
 
-|basic| |TY|
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 ----------------------------------------------------------------------
 
 #. Use the :guilabel:`Browser` Panel to load :file:`srtm_41_19.tif`,
@@ -34,8 +34,8 @@ QGIS has automatically applied a stretch to the pixel values of the
 image for visualization purposes, and we will learn more about how
 this works as we continue.
 
-|basic| |FA| Changing Raster Layer Symbology
-----------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Changing Raster Layer Symbology
+-------------------------------------------------------------------------
 
 You have two different options to change the raster symbology:
 
@@ -51,7 +51,7 @@ You have two different options to change the raster symbology:
 
 Choose the method you prefer to work with.
 
-|basic| |FA| Singleband gray
+:abbr:`★☆☆ (Basic level)` Follow Along: Singleband gray
 ----------------------------------------------------------------------
 
 When you load a raster file, if it is not a photo image like the ones
@@ -95,7 +95,7 @@ use them for the stretch:
    according to the mean value and the standard deviation
 
 
-|basic| |FA| Singleband pseudocolor
+:abbr:`★☆☆ (Basic level)` Follow Along: Singleband pseudocolor
 ----------------------------------------------------------------------
 
 Grayscales are not always great styles for raster layers.
@@ -124,7 +124,7 @@ displayed, going from blue for the lower areas to red for the higher
 ones.
 
 
-|FA| Changing the transparency
+Follow Along: Changing the transparency
 ----------------------------------------------------------------------
 
 Sometimes changing the transparency of the whole raster layer can help
@@ -166,7 +166,7 @@ To set these pixels as transparent, go to
   See? The corners are now 100% transparent.
 
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 
 These are some the basic functions to get you started with raster
@@ -182,7 +182,7 @@ Reference
 The SRTM dataset was obtained from
 `http://srtm.csi.cgiar.org/ <http://srtm.csi.cgiar.org/>`_
 
-|WN|
+What's Next?
 ----------------------------------------------------------------------
 
 Now that we can see our data displayed properly, let's investigate how we can
@@ -195,12 +195,6 @@ analyze it further.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png

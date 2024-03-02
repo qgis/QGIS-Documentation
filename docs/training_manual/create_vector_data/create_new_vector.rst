@@ -1,4 +1,4 @@
-|LS| Creating a New Vector Dataset
+Lesson: Creating a New Vector Dataset
 ===============================================================================
 
 The data that you use has to come from somewhere. For most common applications,
@@ -8,7 +8,7 @@ you'll need to create your own new data.
 
 **The goal for this lesson:** To create a new vector dataset.
 
-|basic| |FA| The Layer Creation Dialog
+:abbr:`★☆☆ (Basic level)` Follow Along: The Layer Creation Dialog
 -------------------------------------------------------------------------------
 
 Before you can add new vector data, you need a vector dataset to add it to. In
@@ -80,7 +80,7 @@ The new layer should appear in your :guilabel:`Layers` panel.
 
 .. _tm_datasources:
 
-|basic| |FA| Data Sources
+:abbr:`★☆☆ (Basic level)` Follow Along: Data Sources
 -------------------------------------------------------------------------------
 
 When you create new data, it obviously has to be about objects that really
@@ -234,7 +234,7 @@ digitizing until you're done creating the feature as above. Then:
    to get out of edit mode.
 
 
-|basic| |TY| Digitizing Polygons 
+:abbr:`★☆☆ (Basic level)` Try Yourself: Digitizing Polygons
 -------------------------------------------------------------------------------
 
 Digitize the school itself and the upper field. Use this image to assist you:
@@ -252,7 +252,7 @@ Remember that each new feature needs to have a unique ``id`` value!
    lessons.
 
 
-|moderate| |FA| Using Vertex Editor Table
+:abbr:`★★☆ (Moderate level)` Follow Along: Using Vertex Editor Table
 -------------------------------------------------------------------------------
 
 Another way to edit a feature is to manually enter the actual
@@ -302,7 +302,7 @@ table.
 #. When done editing, click the |toggleEditing| :sup:`Toggle Editing`
    button to get out of edit mode, and save your edits.
 
-|basic| |TY| Digitizing Lines
+:abbr:`★☆☆ (Basic level)` Try Yourself: Digitizing Lines
 -------------------------------------------------------------------------------
 We are going to digitize two routes which are not already marked on the roads layer;
 one is a path, the other is a track.
@@ -347,7 +347,7 @@ Our track is a little further to the south:
       :align: center
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Now you know how to create features! This course doesn't cover adding point
@@ -359,7 +359,7 @@ usual, and then the feature is created.
 Knowing how to digitize is important because it's a very common activity in GIS
 programs.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Features in a GIS layer aren't just pictures, but objects in space. For
@@ -374,19 +374,12 @@ be useful.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |captureLine| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
-.. |moderate| image:: /static/common/moderate.png
 .. |raster| image:: /static/common/mIconRaster.png
    :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png

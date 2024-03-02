@@ -1,4 +1,4 @@
-|LS| Navigating the Map Canvas
+Lesson: Navigating the Map Canvas
 ===============================================================================
 This section will focus on basic QGIS navigation tools used to navigate within 
 the Map Canvas. These tools will allow you to visually explore the layers at 
@@ -7,7 +7,7 @@ different scales.
 **The goal for this lesson:** Learn how to use Pan and Zoom tools within QGIS 
 and learn about map scale.
 
-|basic| |FA| Basic Navigation Tools
+:abbr:`★☆☆ (Basic level)` Follow Along: Basic Navigation Tools
 -------------------------------------------------------------------------------
 
 Before learning how to navigate within the Map Canvas, let's add some
@@ -98,7 +98,7 @@ Now you know the basics of navigating the Map Canvas. Check out the User Manual 
 :ref:`Zooming and Panning<zoom_pan>` to learn about alternative ways of navigating 
 the Map Canvas.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Knowing how to navigate the Map Canvas is important, as it allows one to explore
@@ -111,10 +111,6 @@ or to validate output of a spatial analysis.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |basic| image:: /static/common/basic.png
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png

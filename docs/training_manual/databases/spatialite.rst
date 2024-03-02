@@ -1,4 +1,4 @@
-|LS| Working with SpatiaLite databases in QGIS
+Lesson: Working with SpatiaLite databases in QGIS
 ======================================================================
 While PostGIS is generally used on a server to provide spatial
 database capabilities to multiple users at the same time, QGIS also
@@ -14,8 +14,8 @@ provided to work with these databases in QGIS.
 **The goal for this lesson:** To learn how to interact with
 SpatiaLite databases using the QGIS Browser interface.
 
-|basic| |FA| Creating a SpatiaLite database with the Browser
-----------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Creating a SpatiaLite database with the Browser
+-------------------------------------------------------------------------------------------
 
 Using the Browser panel, we can create a new SpatiaLite database and
 get it setup for use in QGIS.
@@ -65,7 +65,7 @@ We also learned about how to import data into a database using the
 DB Manager and you can use this same technique to import data into
 your new SpatiaLite DB.
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 
 You have seen how to create SpatiaLite databases, add tables to
@@ -78,9 +78,5 @@ them and use these tables as layers in QGIS.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |basic| image:: /static/common/basic.png
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em

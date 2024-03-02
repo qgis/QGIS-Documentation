@@ -1,4 +1,4 @@
-|LS| Adding Data to the Model
+Lesson: Adding Data to the Model
 ===============================================================================
 
 The models we've created will now need to be populated with the data they're
@@ -48,7 +48,7 @@ Result:
   (1 row)
 
 
-|TY| |basic|
+Try Yourself: :abbr:`★☆☆ (Basic level)`
 ...............................................................................
 
 Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` table.
@@ -65,7 +65,7 @@ Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` table.
 Sequencing Data Addition According to Constraints
 -------------------------------------------------------------------------------
 
-|TY| |moderate|
+Try Yourself: :abbr:`★★☆ (Moderate level)`
 -------------------------------------------------------------------------------
 
 Try to add a person object to the :kbd:`people` table with the following details::
@@ -178,7 +178,7 @@ Let's look at our people table now:
    ----+------+----------+-----------+----------
   (0 rows)
 
-|TY| |hard|
+Try Yourself: :abbr:`★★★ (Advanced level)`
 -------------------------------------------------------------------------------
 
 Use the skills you have learned to add some new friends to your database:
@@ -193,30 +193,15 @@ Use the skills you have learned to add some new friends to your database:
    Sally Norman     |       83 |         1 | 072 932 31 32
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Now you know how to add new data to the existing models you created previously.
 Remember that if you want to add new kinds of data, you may want to modify
 and/or create new models to contain that data.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Now that you've added some data, you'll learn how to use queries to access this
 data in various ways.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
-.. |hard| image:: /static/common/hard.png
-.. |moderate| image:: /static/common/moderate.png

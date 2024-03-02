@@ -1,4 +1,4 @@
-|LS| Spatial Queries
+Lesson: Spatial Queries
 ===============================================================================
 
 Spatial queries are no different from other database queries. You can use the
@@ -89,7 +89,7 @@ Result:
     "people_street_id_fkey" FOREIGN KEY (street_id) REFERENCES streets(id)
 
 
-|TY| |moderate|
+Try Yourself: :abbr:`★★☆ (Moderate level)`
 -------------------------------------------------------------------------------
 Modify the cities table so its geometry column is spatially indexed.
 
@@ -371,27 +371,14 @@ Further examples ...
       FROM building a
       GROUP BY a.name;
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You have seen how to query spatial objects using the new database functions
 from PostGIS.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next we're going to investigate the structures of more complex geometries and
 how to create them using PostGIS.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |moderate| image:: /static/common/moderate.png

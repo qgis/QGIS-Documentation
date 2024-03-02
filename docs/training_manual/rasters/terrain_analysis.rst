@@ -1,4 +1,4 @@
-|LS| Terrain Analysis
+Lesson: Terrain Analysis
 ======================================================================
 
 Certain types of rasters allow you to gain more insight into the
@@ -12,7 +12,7 @@ earlier.
 **The goal for this lesson:** To use terrain analysis tools to derive
 more information about the terrain.
 
-|basic| |FA| Calculating a Hillshade
+:abbr:`★☆☆ (Basic level)` Follow Along: Calculating a Hillshade
 ----------------------------------------------------------------------
 
 We are going to use the same DEM layer as in the previous lesson.
@@ -61,8 +61,8 @@ looks like a plaster cast. Can't we use it together with our other, more
 colorful rasters somehow? Of course we can, by using the hillshade as an
 overlay.
 
-|basic| |FA| Using a Hillshade as an Overlay
-----------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Using a Hillshade as an Overlay
+--------------------------------------------------------------------------
 
 A hillshade can provide very useful information about the sunlight at a given
 time of day. But it can also be used for aesthetic purposes, to make the map
@@ -95,7 +95,7 @@ to find a balance that works for you.
 
 Remember to save the project when you are done.
 
-|FA| Finding the best areas
+Follow Along: Finding the best areas
 ----------------------------------------------------------------------
 
 Think back to the estate agent problem, which we last addressed in the
@@ -111,7 +111,7 @@ needs to have areas on it that:
 
 Let's find the best areas for them.
 
-|moderate| |FA| Calculating the Slope
+:abbr:`★★☆ (Moderate level)` Follow Along: Calculating the Slope
 ----------------------------------------------------------------------
 
 *Slope* informs about how steep the terrain is. If, for example,
@@ -135,7 +135,7 @@ slope value. Black pixels show flat terrain and white pixels, steep terrain:
    :align: center
 
 
-|moderate| |TY| Calculating the aspect
+:abbr:`★★☆ (Moderate level)` Try Yourself: Calculating the aspect
 ----------------------------------------------------------------------
 
 *Aspect* is the compass direction that the slope of the terrain faces. An aspect
@@ -163,8 +163,8 @@ layer saved along with the ``slope``.
      .. figure:: img/answer_aspect_result.png
         :align: center
 
-|moderate| |FA| Finding the north-facing aspect
-----------------------------------------------------------------------
+:abbr:`★★☆ (Moderate level)` Follow Along: Finding the north-facing aspect
+----------------------------------------------------------------------------
 
 Now, you have rasters showing you the slope as well as the aspect,
 but you have no way of knowing where ideal conditions are
@@ -233,7 +233,7 @@ the conditions or not.
 Therefore the final result will be **False** (0) and **True** (1).
 
 
-|moderate| |TY| More criteria
+:abbr:`★★☆ (Moderate level)` Try Yourself: More criteria
 ----------------------------------------------------------------------
 
 Now that you have done the aspect, create two new layers from the
@@ -273,8 +273,8 @@ DEM.
         :align: center
 
 
-|moderate| |FA| Combining Raster Analysis Results
-----------------------------------------------------------------------
+:abbr:`★★☆ (Moderate level)` Follow Along: Combining Raster Analysis Results
+--------------------------------------------------------------------------------
 
 Now you have generated three raster layers from the DEM:
 
@@ -323,7 +323,7 @@ The result:
     ((aspect@1 <= 90 OR  aspect@1 >= 270) AND slope@1 <= 5) OR slope@1 <= 2
 
 
-|moderate| |FA| Simplifying the Raster
+:abbr:`★★☆ (Moderate level)` Follow Along: Simplifying the Raster
 ----------------------------------------------------------------------
 
 As you can see from the image above, the combined analysis has left us
@@ -388,7 +388,7 @@ expected, viewing the metadata (and vector attributes, if applicable)
 can prove essential to solving the problem.
 
 
-|moderate| |FA| Reclassifying the Raster
+:abbr:`★★☆ (Moderate level)` Follow Along: Reclassifying the Raster
 ----------------------------------------------------------------------
 
 We have used the *Raster calculator* to do calculations on raster
@@ -461,7 +461,7 @@ With this reclassification and the paletted style applied to the
 layer, you can immediately differentiate the aspect areas.
 
 
-|basic| |FA| Querying the raster
+:abbr:`★☆☆ (Basic level)` Follow Along: Querying the raster
 ----------------------------------------------------------------------
 
 Unlike vector layers, raster layers don't have an attribute table.
@@ -528,7 +528,7 @@ We can use the *Value Tool* plugin to solve this problem.
       :align: center
 
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 
 You've seen how to derive all kinds of analysis products from a DEM.
@@ -538,7 +538,7 @@ and combine these results.
 Finally you learned how to reclassify a layer and how to query the
 results.
 
-|WN|
+What's Next?
 ----------------------------------------------------------------------
 
 Now you have two analyses: the vector analysis which shows you the
@@ -555,12 +555,5 @@ That's the topic for the next lesson, starting in the next module.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
-.. |moderate| image:: /static/common/moderate.png
