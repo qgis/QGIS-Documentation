@@ -2,27 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traduction est le fruit d'un effort communautaire auquel `vous pouvez "
+"prendre part <https://qgis.org/fr/site/getinvolved/translate.html#becoming-"
+"a-translator>`_. Cette page est actuellement traduite à |translation "
+"progress|."
 
 #: ../../docs/developers_guide/unittesting.rst:6
 msgid "Unit Testing"
@@ -176,24 +186,23 @@ msgstr "Créer un test unitaire"
 msgid ""
 "Creating a unit test is easy - typically you will do this by just creating a"
 " single :file:`.cpp` file (no :file:`.h` file is used) and implement all "
-"your test methods as public methods that return void. We'll use a simple "
+"your test methods as private methods that return void. We'll use a simple "
 "test class for ``QgsRasterLayer`` throughout the section that follows to "
 "illustrate. By convention we will name our test with the same name as the "
 "class they are testing but prefixed with 'Test'. So our test implementation "
 "goes in a file called :file:`testqgsrasterlayer.cpp` and the class itself "
 "will be ``TestQgsRasterLayer``. First we add our standard copyright banner:"
 msgstr ""
-"La création d'un test unitaire est facile - en général, vous le ferez en "
-"créant un seul fichier :file:`.cpp` (aucun fichier :file:`.h` n'est utilisé)"
-" et en implémentant toutes vos méthodes de test comme des méthodes publiques"
-" qui renvoient nul. Nous utiliserons une simple classe de test pour "
-"\"QgsRasterLayer\" tout au long de la section qui suit pour illustrer notre "
-"propos. Par convention, nous donnerons à notre test le même nom que la "
-"classe qu'ils testent, mais avec le préfixe \"Test\". Ainsi, notre "
-"implémentation de test va dans un fichier appelé "
-":file:`testqgsrasterlayer.cpp` et la classe elle-même sera "
-"``TestQgsRasterLayer``. Nous ajoutons d'abord notre bannière de copyright "
-"standard :"
+"La création d'un test unitaire est facile - typiquement, il vous faut juste "
+"créer un seul fichier :file:`.cpp` (aucun fichier :file:`.h` n'est "
+"nécessaire) et d'y implémenter vos fonctions de tests comme méthodes privées"
+" renvoyant un void. Dans la section qui suit, nous allons illustrer nos "
+"propos à l'aide d'une classe de test simple pour ``QgsRasterLayer``. Par "
+"convention, nous appellerons notre test du même nom que la classe testée, "
+"préfixé du mot 'Test'. De fait, le test sera effectué dans un fichier nommé "
+":file:`testqgsrasterlayer.cpp` et la classe elle-même se nommera "
+"``TestQgsRasterLayer``. Pour commencer nous ajoutons note bandeau standard "
+"de copyright."
 
 #: ../../docs/developers_guide/unittesting.rst:98
 msgid ""
@@ -506,7 +515,7 @@ msgstr "QFAIL ( *message* )"
 
 #: ../../docs/developers_guide/unittesting.rst:316
 msgid "QFETCH ( *type, name* )"
-msgstr ""
+msgstr "QFETCH ( *type, name* )"
 
 #: ../../docs/developers_guide/unittesting.rst:317
 msgid "QSKIP ( *description, mode* )"
@@ -605,9 +614,9 @@ msgid ""
 " obscure reasons."
 msgstr ""
 "Les images rendues sur des environnements différents peuvent produire de "
-"légères différences du aux implémentations spécifiques aux plateformes (ex :"
-" rendus de polices de caractères et algorithmes antialiasing différents), du"
-" aux polices disponibles sur le système et du à d'autres raisons obscures. "
+"légères différences dues aux implémentations spécifiques aux plateformes (ex"
+" : rendus de polices de caractères et algorithmes antialiasing différents), "
+"aux polices disponibles sur le système et à d'autres raisons obscures. "
 
 #: ../../docs/developers_guide/unittesting.rst:375
 msgid ""
@@ -1079,7 +1088,7 @@ msgstr "Valeur"
 
 #: ../../docs/developers_guide/unittesting.rst:735
 msgid "PYTHONPATH"
-msgstr ""
+msgstr "PYTHONPATH"
 
 #: ../../docs/developers_guide/unittesting.rst:735
 msgid ""
@@ -1089,7 +1098,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:737
 msgid "QGIS_PREFIX_PATH"
-msgstr ""
+msgstr "QGIS_PREFIX_PATH"
 
 #: ../../docs/developers_guide/unittesting.rst:737
 msgid "[build]/output"
@@ -1097,7 +1106,7 @@ msgstr "[build]/output"
 
 #: ../../docs/developers_guide/unittesting.rst:739
 msgid "LD_LIBRARY_PATH"
-msgstr ""
+msgstr "LD_LIBRARY_PATH"
 
 #: ../../docs/developers_guide/unittesting.rst:739
 msgid "[build]/output/lib"
