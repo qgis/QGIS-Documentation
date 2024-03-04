@@ -2,28 +2,38 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# DiGro, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
+# DiGro, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-11 08:42+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: DiGro, 2024\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"Vertalen is een inspanning van de gemeenschap `waaraan u deel kunt nemen "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Deze pagina is momenteel voor |translation progress| "
+"vertaald."
 
 #: ../../docs/user_manual/processing/configuration.rst:5
 msgid "Configuring the Processing Framework"
@@ -42,44 +52,46 @@ msgstr ""
 "gestructureerd in afzonderlijke blokken die u kunt selecteren aan de "
 "linkerkant van het dialoogvenster."
 
-#: ../../docs/user_manual/processing/configuration.rst:165
+#: ../../docs/user_manual/processing/configuration.rst:168
 msgid "processingAlgorithm"
 msgstr "processingAlgorithm"
 
-#: ../../docs/user_manual/processing/configuration.rst:18
+#: ../../docs/user_manual/processing/configuration.rst:20
 msgid "General"
 msgstr "Algemeen"
 
-#: ../../docs/user_manual/processing/configuration.rst:20
+#: ../../docs/user_manual/processing/configuration.rst:22
 msgid ""
 "The :guilabel:`General` block contains the default settings to control how "
 "the algorithm dialog as well as input or output parameters should behave. "
-"Some of the settings can however be overridden at the algorithm runtime, for"
-" :ref:`individual parameters <alg_parameter_types>`."
+"Some of the settings can however be overridden at the algorithm level, per "
+":ref:`algorithm run <alg_override_setting>` or for :ref:`individual "
+"parameters <alg_parameter_types>`."
 msgstr ""
 "Het blok :guilabel:`Algemeen` bevat de standaard instellingen om te beheren "
 "hoe het dialoogvenster voor algoritmes, als ook de parameters voor in- en "
-"uitvoer, zich zouden moeten gedragen. Sommige instellingen kunnen, voor "
-":ref:`individuele parameters <alg_parameter_types>`, echter worden "
-"overschreven bij het uitvoeren van het algoritme."
+"uitvoer, zich zouden moeten gedragen. Sommige instellingen kunnen echter "
+"worden overschreven op het niveau van het algoritme, met :ref:`algorithm run"
+" <alg_override_setting>` of voor :ref:`individuele parameters "
+"<alg_parameter_types>`."
 
-#: ../../docs/user_manual/processing/configuration.rst:25
+#: ../../docs/user_manual/processing/configuration.rst:28
 msgid ""
 ":guilabel:`Default output raster layer extension` is by default ``tif``"
 msgstr ":guilabel:`Standaard uitvoer rasterlaagextensie` is standaard ``tif``"
 
-#: ../../docs/user_manual/processing/configuration.rst:26
+#: ../../docs/user_manual/processing/configuration.rst:29
 msgid ""
 ":guilabel:`Default output vector layer extension` is by default ``gpkg``"
 msgstr ""
 ":guilabel:`Standaard uitvoer vectorlaagextensie` is standaard ``gpkg``"
 
-#: ../../docs/user_manual/processing/configuration.rst:27
+#: ../../docs/user_manual/processing/configuration.rst:30
 msgid ":guilabel:`Invalid features filtering` when executing algorithm:"
 msgstr ""
 ":guilabel:`Ongeldige objecten filteren` bij het uitvoeren van een algoritme:"
 
-#: ../../docs/user_manual/processing/configuration.rst:29
+#: ../../docs/user_manual/processing/configuration.rst:32
 msgid ""
 ":guilabel:`Do not filter (better performance)`: all the features (with valid"
 " and invalid geometries) are processed, but the result may be erroneous "
@@ -90,7 +102,7 @@ msgstr ""
 "kunnen zijn, afhankelijk van hoe de ongeldigheid van de geometrie de "
 "bewerkingen beïnvloedt"
 
-#: ../../docs/user_manual/processing/configuration.rst:32
+#: ../../docs/user_manual/processing/configuration.rst:35
 msgid ""
 ":guilabel:`Skip (ignore) features with invalid geometries`, meaning that "
 "only a subset of your dataset (the valid geometry features) will be "
@@ -100,7 +112,7 @@ msgstr ""
 "betekent dat alleen een subset van uw gegevensset (de objecten met een "
 "geldige geometrie) zullen worden verwerkt"
 
-#: ../../docs/user_manual/processing/configuration.rst:35
+#: ../../docs/user_manual/processing/configuration.rst:38
 msgid ""
 ":guilabel:`Stop algorithm execution when a geometry is invalid`: you'll need"
 " to track and fix the invalid geometries if you want the algorithm to "
@@ -113,7 +125,7 @@ msgstr ""
 ":ref:`qgischeckvalidity` of :ref:`qgisfixgeometries` kunnen helpen dit te "
 "bereiken."
 
-#: ../../docs/user_manual/processing/configuration.rst:40
+#: ../../docs/user_manual/processing/configuration.rst:43
 msgid ""
 "The :guilabel:`Invalid features filtering` setting can be overridden on a "
 "per-input basis, at algorithm runtime."
@@ -121,7 +133,7 @@ msgstr ""
 "De instelling :guilabel:`Ongeldige objecten filteren` kan worden "
 "overschreven op een per-invoer basis, bij het uitvoeren van het algoritme."
 
-#: ../../docs/user_manual/processing/configuration.rst:42
+#: ../../docs/user_manual/processing/configuration.rst:45
 msgid ""
 ":guilabel:`Keep dialog open after running algorithm`. Once an algorithm has "
 "finished execution and its output layers are loaded into the QGIS project, "
@@ -136,11 +148,11 @@ msgstr ""
 "voeren, maar met andere parameters, of om de uitvoer, die is weggeschreven "
 "naar de tab Log, beter te controleren), selecteer dan deze optie."
 
-#: ../../docs/user_manual/processing/configuration.rst:47
+#: ../../docs/user_manual/processing/configuration.rst:50
 msgid ":guilabel:`Max Threads`"
 msgstr ":guilabel:`Max threads`"
 
-#: ../../docs/user_manual/processing/configuration.rst:48
+#: ../../docs/user_manual/processing/configuration.rst:51
 msgid ""
 ":guilabel:`Output folder` for non temporary outputs: If no folder path is "
 "provided for the Processing execution outputs, this is the folder in which "
@@ -153,7 +165,7 @@ msgstr ""
 ":file:`processing/outputs` onder de map van het actieve "
 ":ref:`gebruikersprofiel <user_profiles>`."
 
-#: ../../docs/user_manual/processing/configuration.rst:52
+#: ../../docs/user_manual/processing/configuration.rst:55
 msgid ""
 ":guilabel:`Override temporary output folder path`: Temporary outputs are "
 "saved by default in the :file:`tmp` folder on the machine. This option helps"
@@ -163,7 +175,7 @@ msgstr ""
 "standaard opgeslagen in de map :file:`tmp` op de machine. Deze optie helpt u"
 " een andere plaats voor de opslag in te stellen."
 
-#: ../../docs/user_manual/processing/configuration.rst:55
+#: ../../docs/user_manual/processing/configuration.rst:58
 msgid ""
 ":guilabel:`Pre-execution script` and :guilabel:`Post-execution script`. "
 "These parameters point to files that contain scripts written using the "
@@ -175,7 +187,7 @@ msgstr ""
 "geschreven met behulp van de functionaliteit Scripten in Processing, "
 "uitgelegd in het gedeelte dat het scripten en de console behandelt."
 
-#: ../../docs/user_manual/processing/configuration.rst:59
+#: ../../docs/user_manual/processing/configuration.rst:62
 msgid ""
 ":guilabel:`Prefer output filename for layer names`. The name of each "
 "resulting layer created by an algorithm is defined by the algorithm itself. "
@@ -201,7 +213,7 @@ msgstr ""
 " tijdelijke bestand gewoonlijk een lange en betekenisloze is, bedoeld om "
 "botsingen met reeds bestaande bestandsnamen te vermijden."
 
-#: ../../docs/user_manual/processing/configuration.rst:71
+#: ../../docs/user_manual/processing/configuration.rst:74
 msgid ""
 ":guilabel:`Results group name`. If you want to obtain all processing result "
 "layers in a group in the :guilabel:`Layers` panel, set a group name for this"
@@ -225,7 +237,7 @@ msgstr ""
 "uitvoeren van algoritme` is geselecteerd in het dialoogvenster van het "
 "algoritme."
 
-#: ../../docs/user_manual/processing/configuration.rst:81
+#: ../../docs/user_manual/processing/configuration.rst:84
 msgid ""
 ":guilabel:`Show algorithms with known issues`: By default, QGIS avoids "
 "display of broken algorithms (generally from third-party providers). If "
@@ -238,7 +250,7 @@ msgstr ""
 "Toolbox van Processing, met een waarschuwingspictogram en een helptip die "
 "uitlegt dat zij problemen hebben. Gebruik ze op uw eigen risico."
 
-#: ../../docs/user_manual/processing/configuration.rst:85
+#: ../../docs/user_manual/processing/configuration.rst:88
 msgid ""
 ":guilabel:`Show feature count for output vector layers`. Since calculating "
 "the feature count might take some time in certain data formats, this option "
@@ -248,15 +260,15 @@ msgstr ""
 " gezet, omdat het berekenen van het aantal objecten enige tijd kan vergen in"
 " bepaalde indelingen."
 
-#: ../../docs/user_manual/processing/configuration.rst:88
+#: ../../docs/user_manual/processing/configuration.rst:91
 msgid ":guilabel:`Show layer CRS definition in selection boxes`"
 msgstr ":guilabel:`CRS-definitie van laag in selectievakken weergeven`"
 
-#: ../../docs/user_manual/processing/configuration.rst:89
+#: ../../docs/user_manual/processing/configuration.rst:92
 msgid ":guilabel:`Show tooltip when there are disabled providers`"
 msgstr ":guilabel:`Helptip weergeven indien er providers zijn uitgeschakeld`"
 
-#: ../../docs/user_manual/processing/configuration.rst:90
+#: ../../docs/user_manual/processing/configuration.rst:93
 msgid ""
 ":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
 ":guilabel:`Style for polygons layers` and :guilabel:`Style for raster "
@@ -277,7 +289,7 @@ msgstr ""
 "wordt geladen door Processing en toegevoegd aan het kaartvenster van QGIS, "
 "zal die worden gerenderd in die stijl."
 
-#: ../../docs/user_manual/processing/configuration.rst:101
+#: ../../docs/user_manual/processing/configuration.rst:104
 msgid ""
 "Rendering styles can be configured individually for each algorithm and each "
 "one of its outputs. Just right-click on the name of the algorithm in the "
@@ -290,11 +302,11 @@ msgstr ""
 "stijlen voor uitvoer bewerken`. U zult een dialoogvenster zien zoals "
 "hieronder wordt weergegeven."
 
-#: ../../docs/user_manual/processing/configuration.rst:112
+#: ../../docs/user_manual/processing/configuration.rst:115
 msgid "Rendering Styles"
 msgstr "Weergave-stijlen"
 
-#: ../../docs/user_manual/processing/configuration.rst:114
+#: ../../docs/user_manual/processing/configuration.rst:117
 msgid ""
 "Select the style file (:file:`.qml`) that you want for each output and press"
 " :guilabel:`OK`."
@@ -302,7 +314,7 @@ msgstr ""
 "Selecteer het stijlbestand (:file:`.qml`) dat u wilt toepassen voor elke "
 "uitvoer en druk op :guilabel:`OK`."
 
-#: ../../docs/user_manual/processing/configuration.rst:116
+#: ../../docs/user_manual/processing/configuration.rst:119
 msgid ""
 ":guilabel:`Warn before executing if parameter CRS's do not match`: By "
 "default, QGIS native algorithms (i.e. the ones listed under the |menu| "
@@ -320,15 +332,15 @@ msgstr ""
 " die opnieuw projecteren niet ondersteunen, als de CRS-en voor de invoer "
 "niet identiek zijn. Derde partij-providers worden niet betrokken."
 
-#: ../../docs/user_manual/processing/configuration.rst:163
+#: ../../docs/user_manual/processing/configuration.rst:166
 msgid "menu"
-msgstr ""
+msgstr "menu"
 
-#: ../../docs/user_manual/processing/configuration.rst:124
+#: ../../docs/user_manual/processing/configuration.rst:127
 msgid "Menus"
 msgstr "Menu's"
 
-#: ../../docs/user_manual/processing/configuration.rst:126
+#: ../../docs/user_manual/processing/configuration.rst:129
 msgid ""
 "The |menu| :guilabel:`Menus` block controls whether an algorithm, script or "
 "model (built-in or provided by plugins) should be made available through a "
@@ -340,7 +352,7 @@ msgstr ""
 "gemaakt via een toegewezen menu of werkbalk (naast de Toolbox van "
 "Processing). Voor elk item van elke provider, kunt u:"
 
-#: ../../docs/user_manual/processing/configuration.rst:131
+#: ../../docs/user_manual/processing/configuration.rst:134
 msgid ""
 ":guilabel:`Add button in toolbar`, making it available in the "
 ":guilabel:`Processing Algorithms` toolbar"
@@ -348,11 +360,11 @@ msgstr ""
 ":guilabel:`Knop toevoegen aan werkbalk`, wat het beschikbaar maakt op de "
 "werkbalk :guilabel:`Processing algoritmes`"
 
-#: ../../docs/user_manual/processing/configuration.rst:133
+#: ../../docs/user_manual/processing/configuration.rst:136
 msgid "assign an :guilabel:`Icon` to the algorithm"
 msgstr "een :guilabel:`Pictogram` toewijzen aan het algoritme"
 
-#: ../../docs/user_manual/processing/configuration.rst:134
+#: ../../docs/user_manual/processing/configuration.rst:137
 msgid ""
 "set a :guilabel:`Menu path`: the algorithm will then be available through an"
 " existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms``"
@@ -360,7 +372,7 @@ msgstr ""
 "een :guilabel:`Menupad` instellen: het algoritme zal dan beschikbaar zijn "
 "via een bestaand of aangepast menu, bijv. ``Vect&or/MyTopAlgorithms``"
 
-#: ../../docs/user_manual/processing/configuration.rst:137
+#: ../../docs/user_manual/processing/configuration.rst:140
 msgid ""
 "Restart QGIS to apply the settings. At any time, your changes can be "
 ":guilabel:`Reset to defaults`."
@@ -369,11 +381,11 @@ msgstr ""
 "wijzigingen worden teruggezet met :guilabel:`Terug naar "
 "standaardinstellingen`."
 
-#: ../../docs/user_manual/processing/configuration.rst:141
+#: ../../docs/user_manual/processing/configuration.rst:144
 msgid "Models and Scripts"
 msgstr "Modellen en scripts"
 
-#: ../../docs/user_manual/processing/configuration.rst:143
+#: ../../docs/user_manual/processing/configuration.rst:146
 msgid ""
 "In the |processingModel| :guilabel:`Models` and |pythonFile| "
 ":guilabel:`Scripts` blocks, you can set a default folder to store, and look "
@@ -383,19 +395,19 @@ msgstr ""
 ":guilabel:`Scripts` kunt u een standaardmap instellen om op te slaan en "
 "respectievelijk uw modellen en scripts te zoeken."
 
-#: ../../docs/user_manual/processing/configuration.rst:167
+#: ../../docs/user_manual/processing/configuration.rst:170
 msgid "processingModel"
 msgstr "processingModel"
 
-#: ../../docs/user_manual/processing/configuration.rst:169
+#: ../../docs/user_manual/processing/configuration.rst:172
 msgid "pythonFile"
 msgstr "pythonFile"
 
-#: ../../docs/user_manual/processing/configuration.rst:147
+#: ../../docs/user_manual/processing/configuration.rst:150
 msgid "Providers"
 msgstr "Providers"
 
-#: ../../docs/user_manual/processing/configuration.rst:149
+#: ../../docs/user_manual/processing/configuration.rst:152
 msgid ""
 "You will also find a block for algorithm |processingAlgorithm| "
 ":guilabel:`Providers`. This is the place where installed providers expose "
