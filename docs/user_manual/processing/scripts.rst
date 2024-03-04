@@ -449,9 +449,12 @@ Input types
    * - :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable>`
      - ``alg.DATABASE_TABLE``
      - A database table
-   * - :class:`QgsProcessingParameterDateTime <qgis.core.QgsProcessingParameterDateTime>`
+   * - :attr:`QgsProcessingParameterDateTime.Date <qgis.core.QgsProcessingParameterDateTime.Date>`
+     - ``alg.DATE``
+     - A pure date
+   * - :attr:`QgsProcessingParameterDateTime.DateTime <qgis.core.QgsProcessingParameterDateTime.DateTime>`
      - ``alg.DATETIME``
-     - A datetime (or a pure date or time)
+     - A datetime
    * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
      - ``alg.DISTANCE``
      - A double numeric parameter for distance values
@@ -541,6 +544,9 @@ Input types
    * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
      - ``alg.STRING``
      - A text string
+   * - :attr:`QgsProcessingParameterDateTime.Time <qgis.core.QgsProcessingParameterDateTime.Time>`
+     - ``alg.TIME``
+     - A pure time
    * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
      - ``alg.VECTOR_LAYER``
      - A vector layer
