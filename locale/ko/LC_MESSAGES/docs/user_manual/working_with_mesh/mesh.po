@@ -1,0 +1,2761 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"번역은 `여러분이 참여할 수 있는 "
+"<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:5
+msgid "Working with Mesh Data"
+msgstr "메시 데이터 작업"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:13
+msgid "What's a mesh?"
+msgstr "메시란 무엇일까요?"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:15
+msgid ""
+"A mesh is an unstructured grid usually with temporal and other components. "
+"The spatial component contains a collection of vertices, edges and/or faces,"
+" in 2D or 3D space:"
+msgstr ""
+"메시(mesh)란 일반적으로 시계열 및 기타 요소들을 가지고 있는 비구조적 그리드를 말합니다. 공간 요소는 2차원 또는 3차원 공간에 "
+"있는 꼭짓점, 변(edge) 및 면(face)의 집합을 담고 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:19
+msgid ""
+"**vertices** - XY(Z) points (in the layer's coordinate reference system)"
+msgstr "**꼭짓점**: XY(Z) 포인트 (레이어 좌표계)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:20
+msgid "**edges** - connect pairs of vertices"
+msgstr "**변**: 연결된 두 꼭짓점"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:21
+msgid ""
+"**faces** - a face is a set of edges forming a closed shape - typically a "
+"triangle or a quadrilateral (quad), rarely polygons with more vertices"
+msgstr ""
+"**면**: 면이란 닫힌 도형(closed shape)을 형성하는 변(edge)의 집합을 말합니다. 일반적으로 삼각형 또는 "
+"사변형(quadrilateral)이며, 드물게 더 많은 꼭짓점을 가진 폴리곤도 면이 될 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:24
+msgid ""
+"Relying on the above, mesh layers can thus have different types of "
+"structure:"
+msgstr "위의 정의에 따라서, 메시 레이어는 서로 다른 구조 유형들을 가질 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:26
+msgid ""
+"1D Meshes: consist of vertices and edges. An edge connects two vertices and "
+"can have assigned data (scalars or vectors) on it. The 1D mesh network can "
+"be for example used for modelling of an urban drainage system."
+msgstr ""
+"1차원 메시: 꼭짓점 및 변으로 이루어집니다. 변이란 꼭짓점 두 개를 잇는 선분으로, (스칼라 또는 벡터) 데이터를 할당시킬 수 "
+"있습니다. 예를 들면 도시 하수 시스템 모델링에 1차원 메시 네트워크를 활용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:29
+msgid ""
+"2D meshes: consist of faces with triangles, regular or unstructured quads."
+msgstr ""
+"2차원 메시: 삼각면, 정규 사분면(regular quads) 또는 비구조적 사분면(unstructured quads)으로 이루어집니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:30
+msgid ""
+"3D layered meshes: consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (levels) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. The mesh definition (vertical level extrusion) could in general "
+"change in time. The data is usually defined in volume centres or by some "
+"parametric function."
+msgstr ""
+"3차원 레이어드 메시: 수직 좌표를 통해 수직 방향(수준)으로 각각 압출(extrusion)된 2차원 비구조적 메시 여러 개의 층위로 "
+"이루어집니다. 각 수직 수준에서 꼭짓점과 면의 위상은 동일합니다. 메시 정의는 (수직 수준 압출은) 일반적으로 시간에 따라 변화할 수도 "
+"있습니다. 3차원 메시 데이터는 일반적으로 부피 중심 또는 어떤 파라미터 함수로 정의됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:41
+msgid "Different mesh types"
+msgstr "서로 다른 메시 유형"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:43
+msgid ""
+"Mesh provides information about the spatial structure. In addition, the mesh"
+" can have datasets (groups) that assign a value to every vertex. For "
+"example, having a triangular mesh with numbered vertices as shown in the "
+"image below:"
+msgstr ""
+"메시는 공간 구조에 관한 정보를 제공합니다. 거기에 더해, 메시는 모든 꼭짓점에 값을 할당하는 데이터셋(그룹)을 보유할 수 있습니다. "
+"예를 들면, 다음 그림처럼 번호가 붙은 꼭짓점을 가진 삼각형 메시의 경우:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:52
+msgid "Triangular grid with numbered vertices"
+msgstr "번호가 붙은 꼭짓점을 가진 삼각형 그리드"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:54
+msgid ""
+"Each vertex can store different datasets (typically multiple quantities), "
+"and those datasets can also have a temporal dimension. Thus, a single file "
+"may contain multiple datasets."
+msgstr ""
+"각 꼭짓점이 서로 다른 (일반적으로 여러 수량의) 데이터셋을 저장할 수 있으며, 이 데이터셋들은 시계열 차원도 보유할 수 있습니다. "
+"따라서 단일 파일이 여러 데이터셋을 담고 있을 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:58
+msgid ""
+"The following table gives an idea about the information that can be stored "
+"in mesh datasets. Table columns represent indices of mesh vertices, each row"
+" represents one dataset. Datasets can have different datatypes. In this "
+"case, it stores wind velocity at 10m at a particular moments in time (t1, "
+"t2, t3)."
+msgstr ""
+"다음 테이블을 보면 메시 데이터셋에 어떤 데이터를 저장할 수 있는지 알 수 있습니다. 테이블 열은 메시 꼭짓점들의 인덱스를 나타내며, 각"
+" 행은 데이터셋 하나를 나타냅니다. 데이터셋은 서로 다른 데이터 유형들을 보유할 수 있습니다. 이 테이블의 경우, 특정 시간(t1, "
+"t2, t3)에 표고 10m에서 측정한 풍속을 저장하고 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:64
+msgid ""
+"In a similar way, the mesh dataset can also store vector values for each "
+"vertex. For example, wind direction vector at the given time stamps:"
+msgstr ""
+"비슷한 방식으로, 메시 데이터셋이 각 꼭짓점에 벡터값도 저장할 수 있습니다. 예를 들어 지정한 타임 스탬프 순간의 풍향처럼 말이죠:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:67
+msgid "Example of mesh dataset"
+msgstr "메시 데이터셋의 예시"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "10 metre wind"
+msgstr "표고 10m 바람"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "1"
+msgstr "1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "2"
+msgstr "2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "3"
+msgstr "3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:75
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:79
+msgid "..."
+msgstr "..."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+msgid "10 metre speed at time=t1"
+msgstr "t1 시간의 표고 10m 풍속"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "17251"
+msgstr "17251"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+msgid "24918"
+msgstr "24918"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+msgid "32858"
+msgstr "32858"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "10 metre speed at time=t2"
+msgstr "t2시간의 표고 10m 풍속"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "19168"
+msgstr "19168"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "23001"
+msgstr "23001"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "36418"
+msgstr "36418"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "10 metre speed at time=t3"
+msgstr "t3 시간의 표고 10m 풍속"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "21085"
+msgstr "21085"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "30668"
+msgstr "30668"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "10m wind direction time=t1"
+msgstr "t1 시간의 표고 10m 풍향"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "[20,2]"
+msgstr "[20,2]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "[20,3]"
+msgstr "[20,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "[20,4.5]"
+msgstr "[20,4.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "10m wind direction time=t2"
+msgstr "t2 시간의 표고 10m 풍향"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "[21,3]"
+msgstr "[21,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "[21,4]"
+msgstr "[21,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "[21,5.5]"
+msgstr "[21,5.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "10m wind direction time=t3"
+msgstr "t3 시간의 표고 10m 풍향"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "[22,4]"
+msgstr "[22,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "[22,5]"
+msgstr "[22,5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "[22,6.5]"
+msgstr "[22,6.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:82
+msgid ""
+"We can visualize the data by assigning colors to values (similarly to how it"
+" is done with :ref:`Singleband pseudocolor <label_colormaptab>` raster "
+"rendering) and interpolating data between vertices according to the mesh "
+"topology. It is common that some quantities are 2D vectors rather than being"
+" simple scalar values (e.g. wind direction). For such quantities it is "
+"desirable to display arrows indicating the directions."
+msgstr ""
+"값에 색상을 할당하고 (:ref:`단일 밴드 의사색상 <label_colormaptab>` 래스터 렌더링 작업과 비슷합니다) 메시 위상에"
+" 따라 꼭짓점 사이의 데이터를 보간해서 데이터를 가시화할 수 있습니다. 몇몇 수량이 단순 스칼라(scalar) 값이 아니라 2차원 벡터인"
+" (예: 풍향) 경우도 흔합니다. 이런 수량의 경우 방향을 나타내는 화살표를 표시하는 편이 바람직합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:94
+msgid "Possible visualisation of mesh data"
+msgstr "메시 데이터를 가시화할 수 있는 방법들"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:99
+msgid "Supported formats"
+msgstr "지원 포맷"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:101
+msgid ""
+"QGIS accesses mesh data using the `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, and natively supports a "
+"`variety of formats <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`__. Whether QGIS can edit a mesh layer depends on the format and "
+"the mesh structure type."
+msgstr ""
+"QGIS는 `MDAL 드라이버 <https://github.com/lutraconsulting/MDAL>`_ 를 이용해서 메시 데이터에 "
+"접근하기 때문에 `다양한 포맷들 <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`_ 을 자체 지원합니다. QGIS가 메시 레이어를 편집할 수 있느냐 없느냐는 메시 포맷 및 구조 유형에 따라 달라집니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:106
+msgid ""
+"To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` "
+"tab in the :guilabel:`Data Source Manager` dialog. Read :ref:`mesh_loading` "
+"for more details."
+msgstr ""
+":guilabel:`Data Source Manager` 대화창에 있는 |addMeshLayer| :guilabel:`Mesh` 탭을 "
+"통해 QGIS로 메시 데이터셋을 불러올 수 있습니다. 더 자세한 내용은 :ref:`mesh_loading` 를 읽어보세요."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1145
+msgid "addMeshLayer"
+msgstr "addMeshLayer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:114
+msgid "Mesh Dataset Properties"
+msgstr "메시 데이터셋 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:116
+msgid ""
+"The :guilabel:`Layer Properties` dialog for a mesh layer provides general "
+"settings to manage dataset groups of the layer and their rendering (active "
+"dataset groups, symbology, 2D and 3D rendering). It also provides "
+"information about the layer."
+msgstr ""
+"메시 레이어의 :guilabel:`Layer Properties` 대화창은 레이어의 데이터셋 그룹과 각 그룹의 렌더링을 (활성 데이터셋 "
+"그룹, 심볼, 2차원 및 3차원 렌더링 등등을) 관리할 수 있는 일반 설정을 제공합니다. 또 레이어에 대한 정보를 제공하기도 합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:121
+msgid "To access the :guilabel:`Layer Properties` dialog:"
+msgstr ":guilabel:`Layer Properties` 대화창을 열려면:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:123
+msgid ""
+"In the :guilabel:`Layers` panel, double-click the layer or right-click and "
+"select :guilabel:`Properties...` from the pop-up menu;"
+msgstr ""
+":guilabel:`Layers` 패널에서 레이어를 더블 클릭하거나, 오른쪽 클릭한 다음 컨텍스트 메뉴에서 "
+":guilabel:`Properties...` 를 선택하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:125
+msgid ""
+"Go to :menuselection:`Layer --> Layer Properties...` menu when the layer is "
+"selected."
+msgstr ""
+"레이어를 선택한 다음 :menuselection:`Layer --> Layer Properties...` 메뉴를 클릭하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:128
+msgid ""
+"The mesh :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr "메시 :guilabel:`Layer Properties` 대화창은 다음 탭들로 이루어져 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:130
+msgid "Tabs of the Mesh Layer Properties"
+msgstr "메시 레이어 속성 탭들"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:132
+msgid "|metadata| :ref:`Information <meshinformation>`"
+msgstr "|metadata| :ref:`정보 <meshinformation>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1197
+msgid "metadata"
+msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:133
+msgid "|system| :ref:`Source <meshsource>`"
+msgstr "|system| :ref:`소스 <meshsource>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1215
+msgid "system"
+msgstr "system"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:134
+msgid "|symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`"
+msgstr "|symbology| :ref:`심볼 <meshsymbology>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1213
+msgid "symbology"
+msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:135
+msgid "|3d| :ref:`3D View <mesh3dview>`:sup:`[1]`"
+msgstr "|3d| :ref:`3차원 뷰 <mesh3dview>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1141
+msgid "3d"
+msgstr "3d"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:136
+msgid "|temporal| :ref:`Temporal <meshtemporal>`"
+msgstr "|temporal| :ref:`시계열 <meshtemporal>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1217
+msgid "temporal"
+msgstr "temporal"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:137
+msgid "|elevationscale| :ref:`Elevation <meshelevation>`"
+msgstr "|elevationscale| :ref:`표고 <meshelevation>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1159
+msgid "elevationscale"
+msgstr "elevationscale"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:138
+msgid "|rendering| :ref:`Rendering <meshrendering>`"
+msgstr "|rendering| :ref:`렌더링 <meshrendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1203
+msgid "rendering"
+msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:139
+msgid "|editMetadata| :ref:`Metadata <meshmetadata>`"
+msgstr "|editMetadata| :ref:`메타데이터 <meshmetadata>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1157
+msgid "editMetadata"
+msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:143
+msgid ""
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
+msgstr ":sup:`[1]` :ref:`레이어 스타일 작업 패널 <layer_styling_panel>` 에서도 사용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:145
+msgid ""
+"Most of the properties of a mesh layer can be saved to or loaded from a "
+":file:`.qml` using the :guilabel:`Style` menu at the bottom of the dialog. "
+"More details at :ref:`manage_custom_style`."
+msgstr ""
+"대화창 하단에 있는 :guilabel:`Style` 메뉴를 이용해서 메시 레이어 속성 대부분을 :file:`.qml` 파일로 저장하거나 "
+":file:`.qml` 파일로부터 불러올 수 있습니다. 자세한 내용은 :ref:`manage_custom_style` 를 참조하세요."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:153
+msgid "Information Properties"
+msgstr "정보 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:160
+msgid "Mesh Layer Information Properties"
+msgstr "메시 레이어 정보 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:162
+msgid ""
+"The |metadata| :guilabel:`Information` tab is read-only and represents an "
+"interesting place to quickly grab summarized information and metadata on the"
+" current layer. Provided information are:"
+msgstr ""
+"|metadata| :guilabel:`Information` 탭은 읽기 전용으로, 현재 레이어에 대한 요약 정보 및 메타데이터를 한 "
+"눈에 볼 수 있는 흥미로운 장소입니다. 다음과 같은 정보를 제공합니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:166
+msgid ""
+"general such as  name in the project, source path, list of auxiliary files, "
+"last save time and size, the used provider"
+msgstr "프로젝트 이름, 소스 경로, 보조 파일 목록, 최신 저장 시간 및 용량, 사용하는 제공자 등의 일반 정보"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:168
+msgid ""
+"based on the provider of the layer: extent, vertex, face, edges and/or "
+"dataset groups count"
+msgstr "해당 레이어의 제공자 기반: 범위, 꼭짓점, 면, 변 그리고/또는 데이터셋 그룹 개수"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:170
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr "좌표계: 이름, 단위, 메소드, 정확도, 참조(예: 정적인지 동적인지 여부)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:172
+msgid ""
+"extracted from filled :ref:`metadata <meshmetadata>`: access, extents, "
+"links, contacts, history..."
+msgstr "채워진 :ref:`메타데이터 <meshmetadata>` 로부터 추출: 접근, 범위, 링크, 연락처, 이력, ..."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:179
+msgid "Source Properties"
+msgstr "소스 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:181
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected mesh, including:"
+msgstr "|system| :guilabel:`Source` 탭은 선택한 메시에 대한 다음과 같은 기본 정보를 표시합니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:189
+msgid "Mesh Layer Source Properties"
+msgstr "메시 레이어 소스 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:191
+msgid "the layer name to display in the :guilabel:`Layers` panel"
+msgstr ":guilabel:`Layers` 패널에 표시할 레이어명"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:192
+msgid ""
+"setting the Coordinate Reference System: Displays the layer’s :ref:`Assigned"
+" Coordinate Reference System (CRS) <layer_crs>`. You can change the layer’s "
+"CRS by selecting a recently used one in the drop-down list or clicking on "
+"|setProjection| :guilabel:`Select CRS` button (see :ref:`crs_selector`). Use"
+" this process only if the CRS applied to the layer is wrong or if none was "
+"applied."
+msgstr ""
+"좌표계 설정: 레이어에 :ref:`할당된 좌표계 <layer_crs>` 를 표시합니다. 드롭다운 목록에서 최근 사용된 좌표계를 선택하거나"
+" |setProjection| :guilabel:`Select CRS` 버튼을 (:ref:`crs_selector` 참조) 클릭하면 "
+"레이어 좌표계를 변경할 수 있습니다. 레이어에 적용된 좌표계가 틀렸거나 적용된 좌표계가 없는 경우에만 변경하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1211
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:198
+msgid ""
+"The :guilabel:`Available datasets` frame lists all the dataset groups (and "
+"subgroups) in the mesh layer, with their type and description in a tree "
+"view. Both regular datasets (i.e. their data is stored in the file) and "
+"virtual datasets (which are :ref:`calculated on the fly <mesh_calculator>`) "
+"are listed."
+msgstr ""
+":guilabel:`Available datasets` 프레임은 메시 레이어에 있는 모든 데이터셋 그룹(및 하위 그룹)들의 목록을 담고 "
+"있습니다. 트리 뷰에서 각 그룹의 유형 및 설명을 볼 수 있습니다. (예를 들어 파일에 데이터를 저장하는) 정규 데이터셋과 "
+"(:ref:`실시간으로 계산되는 <mesh_calculator>`) 가상 데이터셋 둘 다 목록화됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:203
+msgid ""
+"Use the |add| :guilabel:`Assign extra dataset to mesh` button to add more "
+"groups to the current mesh layer."
+msgstr ""
+"현재 메시 레이어에 더 많은 그룹을 추가하려면 |add| :guilabel:`Assign extra dataset to mesh` 버튼을"
+" 사용하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1143
+msgid "add"
+msgstr "add"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:205
+msgid ""
+"|collapseTree| :guilabel:`Collapse all` and |expandTree| :guilabel:`Expand "
+"all` the dataset tree, in case of embedded groups"
+msgstr ""
+"내장된 그룹들의 경우 |collapseTree| :guilabel:`Collapse all` 및 |expandTree| "
+":guilabel:`Expand all` 버튼으로 트리 뷰를 접거나 펼쳐보십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1155
+msgid "collapseTree"
+msgstr "collapseTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1161
+msgid "expandTree"
+msgstr "expandTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:207
+msgid ""
+"If you are interested in few datasets, you can uncheck the others and make "
+"them unavailable in the project"
+msgstr ""
+"관심을 가진 데이터셋이 몇 개 되지 않는다면 다른 데이터셋들을 체크 해제해서 프로젝트에서 사용할 수 없게 만들 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:209
+msgid "Double-click over a name and you can rename the dataset."
+msgstr "데이터셋 이름을 더블클릭하면 데이터셋을 재명명할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:210
+msgid ""
+"|refresh| :guilabel:`Reset to defaults`: checks all the groups and renames "
+"them back to their original name in the provider."
+msgstr ""
+"|refresh| :guilabel:`Reset to defaults`: 모든 그룹을 체크하고 제공자에 있는 원래 이름으로 되돌립니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1201
+msgid "refresh"
+msgstr "refresh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:212
+msgid "Right-click over a virtual dataset group and you can:"
+msgstr "가상 데이터셋 그룹을 오른쪽 클릭하면:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:214
+msgid ":guilabel:`Remove dataset group` from the project"
+msgstr ":guilabel:`Remove dataset group`: 프로젝트에서 해당 데이터셋 그룹을 제거할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:215
+msgid ""
+":guilabel:`Save dataset group as...` a file on disk, to any supported "
+"format. The new file is kept assigned to the current mesh layer in the "
+"project."
+msgstr ""
+":guilabel:`Save dataset group as...`: 해당 데이터셋 그룹을 디스크 상에 어떤 지원 포맷으로든 파일로 저장할"
+" 수 있습니다. 이 새 파일은 프로젝트에 있는 현재 메시 레이어에 할당된 채로 유지됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:217
+msgid ""
+"Checking the |unchecked| :guilabel:`Treat as static dataset` group allows to"
+" ignore the :ref:`map temporal navigation <maptimecontrol>` properties while"
+" rendering the mesh layer. For each active dataset group (as selected in "
+"|symbology| :menuselection:`Symbology -->` |general| :guilabel:`Datasets` "
+"tab), you can:"
+msgstr ""
+"|unchecked| :guilabel:`Treat as static dataset` 그룹을 체크하면 메시 레이어를 렌더링하는 동안 "
+":ref:`맵 시계열 탐색 <maptimecontrol>` 속성을 무시할 수 있습니다. (|symbology| "
+":menuselection:`Symbology -->` |general| :guilabel:`Datasets` 탭에서 선택한) 각 활성 "
+"데이터셋 그룹에 대해:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1221
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1167
+msgid "general"
+msgstr "general"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:223
+msgid "set to :guilabel:`None`: the dataset group is not displayed at all"
+msgstr ":guilabel:`None` 으로 설정하면 해당 데이터셋 그룹을 하나도 표시하지 않습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:224
+msgid ""
+":guilabel:`Display dataset`: e.g., for the \"bed elevation\" dataset which "
+"is not time aware"
+msgstr ""
+"예를 들어 시계열 데이터가 아닌 \"지층 표고(bed elevation)\"의 경우, :guilabel:`Display dataset` "
+"으로 설정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:226
+msgid ""
+"extract a particular date time: the dataset matching the provided time is "
+"rendered and stay fixed during map navigation."
+msgstr ""
+"특정 날짜/시간을 추출할 수 있습니다: 지정한 시간과 일치하는 데이터셋을 렌더링해서 맵 탐색 동안 해당 시계열로 고정시킵니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:233
+msgid "Symbology Properties"
+msgstr "심볼 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:235
+msgid ""
+"Click the |symbology| :guilabel:`Symbology` button to activate the dialog. "
+"Symbology properties are divided into several tabs:"
+msgstr ""
+"|symbology| :guilabel:`Symbology` 버튼을 클릭해서 심볼 대화창을 활성화시키십시오. 심볼 속성은 몇 개의 탭으로"
+" 나뉘어져 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:238
+msgid ":ref:`Datasets <mesh_symbology_datasets>`"
+msgstr ":ref:`데이터셋 <mesh_symbology_datasets>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:239
+msgid ":ref:`Contours <mesh_symbology_contours>`"
+msgstr ":ref:`등고선 <mesh_symbology_contours>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:240
+msgid ":ref:`Vectors <mesh_symbology_vectors>`"
+msgstr ":ref:`벡터 <mesh_symbology_vectors>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:241
+msgid ":ref:`Rendering <mesh_symbology_rendering>`"
+msgstr ":ref:`렌더링 <mesh_symbology_rendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:242
+msgid ":ref:`Stacked mesh averaging method <mesh_stacked_averaging>`"
+msgstr ":ref:`메시 스택 평균화 메소드 <mesh_stacked_averaging>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:247
+msgid "Datasets"
+msgstr "데이터셋"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:249
+msgid ""
+"The tab |general| :sup:`Datasets` is the main place to control and set which"
+" datasets will be used for the layer. It presents the following items:"
+msgstr ""
+"|general| :sup:`Datasets` 탭에서 레이어에 어떤 데이터셋을 사용할지 제어하고 설정합니다. 다음 항목들을 설정할 수 "
+"있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:252
+msgid ""
+":guilabel:`Groups` available in the mesh dataset, with whether they provide:"
+msgstr "메시 데이터셋에서 사용할 수 있는 :guilabel:`Groups` 가 다음 가운데 어느 유형을 제공하는지:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:254
+msgid "|meshcontoursoff| scalar dataset"
+msgstr "|meshcontoursoff| 스칼라(scalar) 데이터셋"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1189
+msgid "meshcontoursoff"
+msgstr "meshcontoursoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:255
+msgid ""
+"or |meshvectorsoff| vector dataset: by default, each vector dataset has a "
+"scalar dataset representing its magnitude automatically generated."
+msgstr ""
+"또는 |meshvectorsoff| 벡터 데이터셋: 기본적으로 각 벡터 데이터셋은 그 규모(magnitude)를 표현하는 스칼라 데이터셋"
+" 하나를 자동적으로 생성합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1195
+msgid "meshvectorsoff"
+msgstr "meshvectorsoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:258
+msgid ""
+"Click on the icon next to the dataset name to select the group and type of "
+"data to represent."
+msgstr "데이터셋 이름 옆에 있는 아이콘을 클릭하면 표현할 그룹과 데이터 유형을 선택할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:260
+msgid ":guilabel:`Selected dataset group(s) metadata`, with details on:"
+msgstr ""
+":guilabel:`Selected dataset group(s) metadata` 에서 다음과 같은 상세 정보를 볼 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:262
+msgid "the mesh type: edges or faces"
+msgstr "메시 유형: 변(edge) 또는 면(face)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:263
+msgid "the data type: vertices, edges, faces or volume"
+msgstr "데이터 유형: 꼭짓점, 변, 면 또는 부피"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:264
+msgid "whether it's of vector type or not"
+msgstr "데이터셋 그룹이 벡터 유형인지 아닌지"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:265
+msgid "the original name in the mesh layer"
+msgstr "메시 레이어에 있는 원래 이름"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:266
+msgid "the unit, if applicable"
+msgstr "적용 가능한 경우, 단위"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:267
+msgid ""
+":ref:`blending mode <blend-modes>` available for the selected datasets."
+msgstr "선택한 데이터셋에 사용할 수 있는 :ref:`혼합 모드 <blend-modes>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:274
+msgid "Mesh Layer Datasets"
+msgstr "메시 레이어 데이터셋"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:277
+msgid ""
+"You can apply symbology to the selected vector and/or scalar group using the"
+" next tabs."
+msgstr "선택한 벡터 그리고/또는 스칼라 그룹에 다음 탭들을 이용해서 심볼을 적용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:284
+msgid "Contours Symbology"
+msgstr "등고선 심볼"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:286
+msgid ""
+"The |meshcontours| :sup:`Contours` tab can be activated only if a scalar "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab."
+msgstr ""
+"|meshcontours| :sup:`Contours` 탭은 |general| :guilabel:`Datasets` 탭에서 스칼라 "
+"데이터셋을 선택한 경우에만 활성화됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1187
+msgid "meshcontours"
+msgstr "meshcontours"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:289
+msgid ""
+"In the |meshcontours| :sup:`Contours` tab you can see and change the current"
+" visualization options of contours for the selected group, as shown in "
+":numref:`figure_mesh_symbology_contours` below:"
+msgstr ""
+"|meshcontours| :sup:`Contours` 탭에서는 다음 "
+":numref:`figure_mesh_symbology_contours` 에서 볼 수 있듯이 선택한 그룹의 현재 등고선 시각화 옵션을 "
+"확인하고 변경할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:298
+msgid "Styling Contours in a Mesh Layer"
+msgstr "메시 레이어에서 등고선 스타일 작업하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:300
+msgid ""
+"For 1D mesh, set the :guilabel:`Stroke width` of the edges. This can be a "
+"fixed size for the whole dataset, or vary along the geometry (more details "
+"with the :ref:`interpolated line renderer <interpolated_line_symbol>`)"
+msgstr ""
+"1차원 메시의 경우, 변의 :guilabel:`Stroke width` 를 설정하십시오. 전체 데이터셋에 대해 고정 너비를 설정할 수도 "
+"있고, 아니면 도형에 따라 다른 너비를 설정할 수도 있습니다. (더 자세한 내용은 :ref:`보간된 라인 렌더링 작업자 "
+"<interpolated_line_symbol>` 를 참조하세요.)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:303
+msgid ""
+"Use the slider or the spinbox to set the :guilabel:`Opacity` of the current "
+"group, if of a 2D mesh type."
+msgstr ""
+"2차원 메시 유형의 경우, 슬라이드 바 또는 스핀박스를 사용해서 현재 그룹의 :guilabel:`Opacity` 를 설정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:305
+msgid ""
+"Enter the range of values you want to represent on the current group: use "
+"|refresh| :sup:`Load` to fetch the min and max values of the current group "
+"or enter custom values if you want to exclude some."
+msgstr ""
+"사용자가 현재 그룹에 대해 표현하고자 하는 값의 범위를 입력하십시오: 현재 그룹의 최소/최대값을 가져오려면 |refresh| "
+":sup:`Load` 아이콘을 클릭하고, 어떤 범위를 제외하려면 사용자 지정 값을 입력하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:308
+msgid ""
+"For 2D/3D meshes, select the :guilabel:`Resampling method` to interpolate "
+"the values on the surrounding vertices to the faces (or from the surrounding"
+" faces to the vertices) using the :guilabel:`Neighbour average` method. "
+"Depending on whether the dataset is defined on the vertices (respectively on"
+" the faces), QGIS defaults this setting to :guilabel:`None` (respectively "
+":guilabel:`Neighbour average`) method in order to use values on vertices and"
+" keep the default rendering smooth."
+msgstr ""
+"2차원/3차원 메시의 경우, :guilabel:`Neighbour average` 메소드를 이용해서 면들을 둘러싼 꼭짓점들에 대해 (또는"
+" 꼭짓점들을 둘러싼 면들로부터) 값을 보간하려면 :guilabel:`Resampling method` 를 선택하십시오. 데이터셋이 (면 "
+"각각에 대해) 꼭짓점들에 대해 정의되어 있는지에 따라, QGIS는 꼭짓점들에 대한 값을 이용해서 기본 렌더링을 매끄럽게 유지하기 위해 "
+"(각각 :guilabel:`Neighbour average` 인) :guilabel:`None` 메소드를 이 설정의 기본값으로 "
+"사용합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:314
+msgid ""
+"Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>` "
+"classification."
+msgstr ""
+":ref:`색상표 셰이더(color ramp shader) <color_ramp_shader>` 범주화를 이용해서 데이터셋을 "
+"범주화시키십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:321
+msgid "Vectors Symbology"
+msgstr "벡터 심볼"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:323
+msgid ""
+"The |meshvectors| :sup:`Vectors` tab can be activated only if a vector "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab."
+msgstr ""
+"|meshcontours| :sup:`Vectors` 탭은 |general| :guilabel:`Datasets` 탭에서 벡터 데이터셋을"
+" 선택한 경우에만 활성화됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1193
+msgid "meshvectors"
+msgstr "meshvectors"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:326
+msgid ""
+"In the |meshvectors| :sup:`Vectors` tab you can see and change the current "
+"visualization options of vectors for the selected group, as shown in "
+":numref:`figure_mesh_symbology_vectors`:"
+msgstr ""
+"|meshcontours| :sup:`Vectors` 탭에서는 다음 "
+":numref:`figure_mesh_symbology_vectors` 에서 볼 수 있듯이 선택한 그룹의 현재 벡터 시각화 옵션을 "
+"확인하고 변경할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:335
+msgid "Styling Vectors in a Mesh Layer with arrows"
+msgstr "메시 레이어에서 화살표로 벡터 스타일 작업하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:337
+msgid ""
+"Mesh vector dataset can be styled using various types of "
+":guilabel:`Symbology`:"
+msgstr "다양한 유형의 :guilabel:`Symbology` 를 이용해서 메시 벡터 데이터셋의 스타일을 작업할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:339
+msgid ""
+"**Arrows**: vectors are represented with arrows at the same place as they "
+"are defined in the raw dataset (i.e. on the nodes or center of elements) or "
+"on a user-defined grid (hence, they are evenly distributed). The arrow "
+"length is proportional to the magnitude of the arrow as defined in the raw "
+"data but can be scaled by various methods."
+msgstr ""
+"**화살표**: 벡터가 원시 데이터셋에서 (예를 들어 노드에서 또는 요소의 중심에서) 또는 사용자 정의 그리드에서 (그러니까 균등하게 "
+"분포되어) 정의된 대로, 동일한 위치에서 벡터를 화살표로 표현할 수 있습니다. 화살표의 길이는 원시 데이터에 정의된 벡터 규모에 "
+"비례하지만, 다양한 메소드로 크기를 조정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:344
+msgid ""
+"**Streamlines**: vectors are represented with streamlines seeded from start "
+"points. The seeding points can start from the vertices of the mesh, from a "
+"user grid or randomly."
+msgstr ""
+"**유선(流線; streamline)**: 벡터를 시작점(start point)에서 시작하는 유선으로 표현합니다. 이 시작점은 메시의 "
+"꼭짓점, 사용자 그리드, 또는 임의의 위치에서 시작할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:347
+msgid ""
+"**Traces**: a nicer animation of the streamlines, the kind of effect you get"
+" when you randomly throws sand in the water and see where the sand items "
+"flows."
+msgstr ""
+"**추적(trace)**: 유선보다 더 보기 좋은 애니메이션입니다. 물 속에 모래알을 임의로 던진 다음 해당 모래가 어디로 떠내려 "
+"가는지를 확인하는 것과 비슷한 효과를 보여줍니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:350
+msgid ""
+"Available properties depend on the selected symbology as shown in the "
+"following table."
+msgstr "선택한 심볼에 따라 사용할 수 있는 속성은 다음 표와 같습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:352
+msgid "Availability and meaning of the vectors symbology properties"
+msgstr "벡터 심볼 속성의 사용 가능성 및 그 의미"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:661
+msgid "Label"
+msgstr "라벨"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+msgid "Description and Properties"
+msgstr "설명 및 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+msgid "Arrow"
+msgstr "화살표"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+msgid "Streamlines"
+msgstr "유선"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+msgid "Traces"
+msgstr "추적"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:357
+msgid ":guilabel:`Line width`"
+msgstr ":guilabel:`Line width`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:357
+msgid "Width of the vector representation"
+msgstr "벡터를 표현하는 너비"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:357
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:359
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:363
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:366
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:369
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:372
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:377
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:380
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:382
+msgid "|checkbox|"
+msgstr "|checkbox|"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1151
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:359
+msgid ":guilabel:`Coloring method`"
+msgstr ":guilabel:`Coloring method`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:359
+msgid "a :guilabel:`Single color` assigned to all vectors"
+msgstr ":guilabel:`Single color`: 모든 벡터에 할당되는 단일 색상"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:360
+msgid ""
+"or a variable color based on vectors magnitude, using a :ref:`Color ramp "
+"shader <color_ramp_shader>`"
+msgstr "또는 :ref:`색상표 셰이더 <color_ramp_shader>` 를 이용하는, 벡터 규모를 기반으로 하는 다양한 색상"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:363
+msgid ":guilabel:`Filter by magnitude`"
+msgstr ":guilabel:`Filter by magnitude`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:363
+msgid ""
+"Only vectors whose length for the selected dataset falls between a "
+":guilabel:`Min` and :guilabel:`Max` range are displayed"
+msgstr "선택한 데이터셋에서 그 길이가 :guilabel:`Min` 과 :guilabel:`Max` 범위 사이에 떨어지는 벡터만 표시"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:366
+msgid ":guilabel:`Display on user grid`"
+msgstr ":guilabel:`Display on user grid`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:366
+msgid ""
+"Places the vector on a grid with custom :guilabel:`X spacing` and "
+":guilabel:`Y spacing` and interpolates their length based on neighbours"
+msgstr ""
+"그리드 상에 벡터를 사용자 지정 :guilabel:`X spacing` 및 :guilabel:`Y spacing` 으로 배치한 다음 벡터"
+" 길이를 이웃을 기반으로 보간"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:369
+msgid ":guilabel:`Head options`"
+msgstr ":guilabel:`Head options`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:369
+msgid ""
+":guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage "
+"of its shaft length"
+msgstr ":guilabel:`Length` 및 :guilabel:`Width`: 화살촉의 길이 및 너비를 화살대 길이의 백분율로 설정"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:372
+msgid ":guilabel:`Arrow length`"
+msgstr ":guilabel:`Arrow length`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:372
+msgid ""
+"**Defined by Min and Max**: You specify the minimum and maximum length for "
+"the arrows, QGIS will interpolate their size based on the underlying "
+"vector's magnitude"
+msgstr ""
+"**최소/최대값으로 정의**: 사용자가 화살표에 대한 최단/최장 길이를 지정하면, QGIS가 기저 벡터의 규모를 기반으로 그 크기를 "
+"보간할 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:374
+msgid ""
+"**Scale to magnitude**: arrow length is proportional to their vector's "
+"magnitude"
+msgstr "**규모에 비례**: 화살표 길이가 기저 벡터의 규모에 비례합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:375
+msgid "**Fixed**: all the vectors are shown with the same length"
+msgstr "**고정**: 모든 벡터를 동일한 길이로 표시합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:377
+msgid ":guilabel:`Streamlines seeding method`"
+msgstr ":guilabel:`Streamlines seeding method`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:377
+msgid "**On mesh/grid**: relies on the user grid to display the vectors"
+msgstr "**메시/그리드 상**: 벡터를 표시하기 위해 사용자 그리드에 의존합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:378
+msgid ""
+"**Randomly**: vector placement is randomly done with respect to a certain "
+"density"
+msgstr "**임의**: 벡터를 특정 밀도에 따라 임의로 배치합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:380
+msgid ":guilabel:`Particles count`"
+msgstr ":guilabel:`Particles count`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:380
+msgid "The amount of \"sand\" you want to throw into visualisation"
+msgstr "사용자가 시각화에 던져 넣고자 하는 \"모래\"의 양"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:382
+msgid ":guilabel:`Max tail length`"
+msgstr ":guilabel:`Max tail length`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:382
+msgid "The time until the particle fades out"
+msgstr "입자가 사라질 때까지의 시간"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:389
+msgid "Rendering"
+msgstr "렌더링"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:391
+msgid ""
+"In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to "
+"display and customize the mesh structure. :guilabel:`Line width` and "
+":guilabel:`Line color` can be set to represent:"
+msgstr ""
+"QGIS는 |meshframe| :sup:`Rendering` 탭에서 메시 구조를 표시하고 사용자 지정할 수 있는 다양한 옵션을 "
+"제공합니다. 다음을 표현하기 위해 :guilabel:`Line width` 및 :guilabel:`Line color` 를 설정할 수 "
+"있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1191
+msgid "meshframe"
+msgstr "meshframe"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:395
+msgid "the edges for 1D meshes"
+msgstr "1차원 메시의 경우, 변(edge)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:396
+msgid "For 2D meshes:"
+msgstr "2차원 메시의 경우:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:398
+msgid ""
+":guilabel:`Native mesh rendering`: shows original faces and edges from the "
+"layer"
+msgstr ":guilabel:`Native mesh rendering`: 레이어로부터 원본 면과 변을 표시"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:399
+msgid ""
+":guilabel:`Triangular mesh rendering`: adds more edges and displays the "
+"faces as triangles"
+msgstr ":guilabel:`Triangular mesh rendering`: 더 많은 변을 추가해서 면을 삼각형으로 표시"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:407
+msgid "2D Mesh Rendering"
+msgstr "2차원 메시 렌더링"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:413
+msgid "Stacked mesh averaging method"
+msgstr "메시 스택 평균화 메소드"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:415
+msgid ""
+"3D layered meshes consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (``levels``) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. Values are usually stored on the volumes that are regularly stacked "
+"over base 2d mesh. In order to visualise them on 2D canvas, you need to "
+"convert values on volumes (3d) to values on faces (2d) that can be shown in "
+"mesh layer. The |meshaveraging| :sup:`Stacked mesh averaging method` "
+"provides different averaging/interpolation methods to handle this."
+msgstr ""
+"3차원 적층(積層) 메시는 수직 좌표를 이용해서 각각 수직 방향(``levels``)으로 압출(extrude)된 2차원 "
+"비구조적(unstructured) 메시 여러 개를 쌓아 올린 형태로 이루어져 있습니다. 꼭짓점 및 면의 위상은 각 꼭짓점 수준의 위상과 "
+"동일합니다. 일반적으로 기반 2차원 메시 위에 규칙적으로 쌓아 올린 부피에 값을 저장합니다. 2차원 캔버스에 3차원 적층 메시를 "
+"가시화시키려면, (3차원) 부피의 값을 메시 레이어에 표시할 수 있는 (2차원) 면의 값으로 변환해야 합니다. "
+"|meshaveraging| :sup:`Stacked mesh averaging method` 가 이런 변환을 처리할 수 있는 다양한 "
+"평균화/보간 메소드를 제공합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1185
+msgid "meshaveraging"
+msgstr "meshaveraging"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:424
+msgid ""
+"You can select the method to derive the 2D datasets and corresponding "
+"parameters (level index, depth or height values). For each method, an "
+"example of application is shown in the dialog but you can read more on the "
+"methods at "
+"https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results."
+msgstr ""
+"2차원 데이터셋 및 대응하는 (수준 인덱스, 깊이 또는 높이 값) 파라미터들을 파생시키는 메소드를 선택할 수 있습니다. 대화창에 메소드 "
+"각각에 대한 응용 프로그램 예시가 표시되지만, "
+"https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results 웹페이지에서 이 "
+"메소드들에 대한 자세한 내용을 읽어볼 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:434
+msgid "3D View Properties"
+msgstr "3차원 뷰 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:436
+msgid ""
+"Mesh layers can be used as :ref:`terrain in a 3D map view "
+"<scene_configuration>` based on their vertices Z values. From the |3d| "
+":guilabel:`3D View` properties tab, it's also possible to render the mesh "
+"layer's dataset in the same 3D view. Therefore, the vertical component of "
+"the vertices can be set equal to dataset values (for example, level of water"
+" surface) and the texture of the mesh can be set to render other dataset "
+"values with color shading (for example velocity)."
+msgstr ""
+"메시 레이어의 꼭짓점 Z 값을 바탕으로 메시 레이어를 :ref:`3차원 맵 뷰의 지형 <scene_configuration>` 으로 "
+"사용할 수 있습니다. |3d| :guilabel:`3D View` 속성 탭에서 동일한 3차원 뷰에 메시 레이어의 데이터셋을 렌더링할 수도"
+" 있습니다. 따라서 꼭짓점의 수직 요소를 (수면의 수준 같은) 데이터셋 값과 동등하게 설정할 수 있고, 메시의 텍스처를 색상 음영을 "
+"이용해서 (예를 들어 속도 같은) 다른 데이터셋 값으로 렌더링하도록 설정할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:448
+msgid "Mesh dataset 3D properties"
+msgstr "메시 데이터셋 3차원 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:450
+msgid ""
+"Check |checkbox| :guilabel:`Enable 3D Renderer` and you can edit following "
+"properties:"
+msgstr ""
+"|checkbox| :guilabel:`Enable 3D Renderer` 를 체크하면 다음과 같은 속성을 편집할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:453
+msgid "Under :guilabel:`Triangle settings`"
+msgstr ":guilabel:`Triangle settings` 에서는:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:455
+msgid ""
+":guilabel:`Smooth triangles`: Angles between consecutive triangles are "
+"smoothed for a better 3D rendering"
+msgstr ""
+":guilabel:`Smooth triangles`: 연속되는 삼각형들 사이의 각도를 부드럽게 처리해서 3차원 렌더링을 개선합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:457
+msgid ""
+":guilabel:`Show wireframe` whose you can set the :guilabel:`Line width` and "
+":guilabel:`Color`"
+msgstr ""
+":guilabel:`Show wireframe`: 철사 구조(wire frame)의 :guilabel:`Line width` 및 "
+":guilabel:`Color` 를 설정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:462
+msgid ""
+":guilabel:`Level of detail`: Controls how :ref:`simplified <meshrendering>` "
+"the mesh layer to render should be. On the far right, it is the base mesh, "
+"and the more you go left, the more the layer is simplified and is rendered "
+"with less details. This option is only available if the :guilabel:`Simplify "
+"mesh` option under the :guilabel:`Rendering` tab is activated."
+msgstr ""
+":guilabel:`Level of detail`: 렌더링할 메시 레이어를 어떻게 :ref:`단순화 <meshrendering>` "
+"시킬지를 제어합니다. 맨 오른쪽이 기반 메시이며, 왼쪽으로 갈수록 레이어를 더 단순화시켜 세부 정보를 줄여서 렌더링합니다. "
+":guilabel:`Rendering` 탭의 :guilabel:`Simplify mesh` 옵션을 활성화시킨 경우에만 이 옵션을 사용할 "
+"수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:469
+msgid ""
+":guilabel:`Vertical settings` to control behavior of the vertical component"
+msgstr ":guilabel:`Vertical settings` 에서는 렌더링된 삼각형의 꼭짓점의"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:469
+msgid "of vertices of rendered triangles"
+msgstr "수직 요소의 습성을 제어합니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:471
+msgid ""
+":guilabel:`Dataset group for vertical value`: the dataset group that will be"
+" used for the vertical component of the mesh"
+msgstr ""
+":guilabel:`Dataset group for vertical value`: 메시의 수직 요소로 쓰이게 될 데이터셋 그룹을 "
+"지정합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:473
+msgid ""
+"|unchecked|:guilabel:`Dataset value relative to vertices Z value`: whether "
+"to consider the dataset values as absolute Z coordinate or relative to the "
+"vertices native Z value"
+msgstr ""
+"|unchecked|:guilabel:`Dataset value relative to vertices Z value`: 데이터셋 값을 "
+"절대 Z 좌표로 간주할지 아니면 꼭짓점의 자체 Z 값에 상대적인 값으로 간주할지 여부를 선택합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:476
+msgid ""
+":guilabel:`Vertical scale`: the scale factor to apply to the dataset Z "
+"values"
+msgstr ":guilabel:`Vertical scale`: 데이터셋의 Z 값에 적용할 척도를 지정합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:478
+msgid ""
+":guilabel:`Rendering color settings` with a :guilabel:`Rendering style` that"
+" can be based on the color ramp shader set in :ref:`mesh_symbology_contours`"
+" (:guilabel:`2D contour color ramp shader`) or as a :guilabel:`Single color`"
+" with an associated :guilabel:`Mesh color`"
+msgstr ""
+":guilabel:`Rendering color settings`: :ref:`mesh_symbology_contours` "
+"(:guilabel:`2D contour color ramp shader`) 에 설정된 색상표 셰이더를 기반으로 할 수도 있는 렌더링 "
+"스타일(:guilabel:`Rendering style`)을 이용해서 렌더링할지, 또는 관련 :guilabel:`Mesh color` 인"
+" 단일 색상(:guilabel:`Single color`)으로 렌더링할지를 설정합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:482
+msgid ""
+":guilabel:`Show arrows`: displays arrows on mesh layer dataset 3D entity, "
+"based on the same vector dataset group used in the :ref:`vector 2D rendering"
+" <mesh_symbology_vectors>`. They are displayed using the 2D color setting. "
+"It's also possible to define the :guilabel:`Arrow spacing` and, if it's of a"
+" :guilabel:`Fixed size` or scaled on magnitude. This spacing setting defines"
+" also the max size of arrows because arrows can't overlap."
+msgstr ""
+":guilabel:`Show arrows`: :ref:`벡터 2차원 렌더링 <mesh_symbology_vectors>` 에 쓰인 것과 "
+"동일한 벡터 데이터셋 그룹을 바탕으로 메시 레이어 데이터셋의 3차원 개체에 화살표를 표시합니다. 화살표의 색상은 2차원 색상 설정으로 "
+"표시됩니다. 화살표 사이의 간격(:guilabel:`Arrow spacing`)을 정의할 수도 있고, 화살표의 크기가 "
+"고정값(:guilabel:`Fixed size`)인지 아니면 축척에 따라 조정되는지도 정의할 수 있습니다. 화살표가 서로 중첩할 수는 "
+"없기 때문에, 이 간격 설정을 통해 화살표의 최대 크기도 정의합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:494
+msgid "Rendering Properties"
+msgstr "렌더링 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:501
+msgid "Mesh rendering properties"
+msgstr "메시 렌더링 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:503
+msgid ""
+"Under the :guilabel:`Scale dependent visibility` group box, you can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scale, "
+"defining a range of scale in which mesh elements will be visible. Out of "
+"this range, they are hidden. The |mapIdentification| :sup:`Set to current "
+"canvas scale` button helps you use the current map canvas scale as boundary "
+"of the range visibility. See :ref:`label_scaledepend` for more information."
+msgstr ""
+":guilabel:`Scale dependent visibility` 그룹 박스에서는 :guilabel:`Maximum "
+"(inclusive)` 및 :guilabel:`Minimum (exclusive)` 축척을 설정해서 메시 요소가 보이게 될 축척 범위를 "
+"정의할 수 있습니다. 이 범위를 벗어나면, 메시 요소를 숨깁니다. |mapIdentification| :sup:`Set to "
+"current canvas scale` 버튼을 클릭하면 현재 맵 캔버스의 축척을 가시성 범위의 한계값으로 설정할 수 있습니다. 자세한 "
+"내용은 :ref:`label_scaledepend` 을 참조하세요."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1171
+msgid "mapIdentification"
+msgstr "mapIdentification"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:513
+msgid ""
+"You can also activate scale dependent visibility on a layer from within the "
+":guilabel:`Layers` panel: right-click on the layer and in the contextual "
+"menu, select :guilabel:`Set Layer Scale Visibility`."
+msgstr ""
+":guilabel:`Layers` 패널에서 레이어에 대한 축척 의존 가시성을 활성화시킬 수도 있습니다. 레이어를 오른쪽 클릭한 다음 "
+"컨텍스트 메뉴에서 :guilabel:`Set Layer Scale Visibility` 를 선택하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:517
+msgid ""
+"As mesh layers can have millions of faces, their rendering can sometimes be "
+"very slow, especially when all the faces are displayed in the view whereas "
+"they are too small to be viewed. To speed up the rendering, you can simplify"
+" the mesh layer, resulting in one or more meshes representing different "
+":ref:`levels of detail <levelofdetail>` and select at which level of detail "
+"you would like QGIS to render the mesh layer. Note that the simplify mesh "
+"contains only triangular faces."
+msgstr ""
+"메시 레이어의 면이 수백만에 달할 수도 있기 때문에, 특히 모든 면을 보이기엔 너무 작은 뷰에 모든 면을 표시하는 경우 렌더링이 아주 "
+"느려지는 경우가 있을 수도 있습니다. 렌더링의 속도를 높이려면 메시 레이어를 단순화시켜 하나 이상의 메시가 서로 다른 :ref:`상세 "
+"수준(level of detail) <levelofdetail>` 을 표현하도록 하고 QGIS가 메시 레이어를 렌더링하길 바라는 상세 "
+"수준을 선택하면 됩니다. 단순화된 메시는 삼각면만 담고 있다는 사실을 기억하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:525
+msgid ""
+"From the |rendering| :guilabel:`Rendering` tab, check |checkbox| "
+":guilabel:`Simplify mesh` and set:"
+msgstr ""
+"|rendering| :guilabel:`Rendering` 탭에서 |checkbox| :guilabel:`Simplify mesh` "
+"옵션을 체크한 다음 다음을 설정하십시오:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:528
+msgid ""
+"a :guilabel:`Reduction factor`: Controls generation of successive levels of "
+"simplified meshes. For example, if the base mesh has 5M faces, and the "
+"reduction factor is 10, the first simplified mesh will have approximately "
+"500 000 faces, the second 50 000 faces, the third 5000,... If a higher "
+"reduction factor leads quickly to simpler meshes (i.e. with triangles of "
+"bigger size), it produces also fewer levels of detail."
+msgstr ""
+":guilabel:`Reduction factor`: 단순화된 메시의 연속적인 수준의 생성을 제어합니다. 예를 들면 기반 메시의 면이 "
+"5백만 개이고 축도(縮圖) 인자가 10인 경우, 처음으로 단순화된 메시의 면은 약 50만 개, 두 번째로 단순화된 메시의 면은 5만 개,"
+" 세 번째는 5천 개, ... 일 것입니다. 축도 인자의 값이 높을수록 메시를 더 빠르게 단순화하지만 (즉 삼각면의 크기가 커지지만) "
+"상세 수준의 개수는 적어집니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:535
+msgid ""
+":guilabel:`Minimum triangle size`: the average size (in pixels) of the "
+"triangles that is permitted to display. If the average size of the mesh is "
+"lesser than this value, the rendering of a lower level of details mesh is "
+"triggered."
+msgstr ""
+":guilabel:`Minimum triangle size`: 표시가 허용되는 삼각형의 (픽셀 단위) 평균 크기를 설정합니다. 메시의 "
+"평균 크기가 이 값보다 적을 경우, 더 낮은 상세 수준의 메시를 렌더링할 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:545
+msgid "Temporal Properties"
+msgstr "시계열 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:547
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. It allows to dynamically display temporal "
+"values of the enabled dataset groups. Such a dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"|temporal| :guilabel:`Temporal` 탭은 레이어의 렌더링을 시간에 따라 제어할 수 있는 옵션들을 제공합니다. 이 "
+"옵션들은 활성화된 데이터셋 그룹의 시계열 값을 동적으로 표시할 수 있게 해줍니다. 이런 동적 렌더링에는 맵 캔버스 전체에 적용되는 "
+":ref:`시계열 탐색 <maptimecontrol>` 을 활성화해야 할 필요가 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:558
+msgid "Mesh Temporal properties"
+msgstr "메시 시계열 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:560
+msgid "**Layer temporal settings**"
+msgstr "**레이어 시계열 설정**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:562
+msgid ""
+":guilabel:`Reference time` of the dataset group, as an absolute date time. "
+"By default, QGIS parses the source layer and returns the first valid "
+"reference time in the layer's dataset group. If unavailable, the value will "
+"be set by the project time range or fall back to the current date. The "
+":guilabel:`Start time` and :guilabel:`End time` to  consider are then "
+"calculated based on the internal timestamp step of the dataset."
+msgstr ""
+":guilabel:`Reference time`: 데이터셋 그룹의 참조(기준) 시간을 절대 날짜&시간 값으로 설정합니다. QGIS는 "
+"기본적으로 소스 레이어를 파싱해서 레이어의 데이터셋 그룹에 있는 무결한 첫 번째 참조 시간을 반환합니다. 레이어에 참조 시간이 없다면 "
+"프로젝트의 시간 범위가 설정한 값을 사용하거나, 또는 현재 날짜로 되돌아갑니다. 그 다음 데이터셋의 내부 타임스탬프 단계를 기반으로 "
+"연산에 넣을 :guilabel:`Start time` 과 :guilabel:`End time` 을 계산합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:570
+msgid ""
+"It is possible to set a custom :guilabel:`Reference time` (and then the time"
+" range), and revert the changes using the |refresh| :sup:`Reload from "
+"provider` button. With |checkbox| :guilabel:`Always take reference time from"
+" data source` checked, you ensure that the time properties are updated from "
+"the file each time the layer is reloaded or the project reopened."
+msgstr ""
+":guilabel:`Reference time`: 참조 시간을 (그 다음 시간 범위를) 사용자 지정할 수 있으며, |refresh| "
+":sup:`Reload from provider` 버튼을 사용해서 변경 사항을 되돌릴 수도 있습니다. |checkbox| "
+":guilabel:`Always take reference time from data source` 옵션을 체크하면, 레이어를 다시 "
+"불러올 때마다 또는 프로젝트를 다시 열 때마다 파일로부터 시간 속성을 업데이트시킬 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:575
+msgid ""
+":guilabel:`Dataset matching method`: determines the dataset to display at "
+"the given time. Options are :guilabel:`Find closest dataset before requested"
+" time` or :guilabel:`Find closest dataset from requested time (after or "
+"before)`."
+msgstr ""
+":guilabel:`Dataset matching method`: 지정한 시간에 표시할 데이터셋을 결정합니다. "
+":guilabel:`Find closest dataset before requested time` 옵션은 요청 시간 이전에 가장 가까운 "
+"데이터셋을 검색하며, :guilabel:`Find closest dataset from requested time (after or "
+"before)` 옵션은 요청 시간 전후에 가장 가까운 데이터셋을 검색합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:579
+msgid "**Provider time settings**"
+msgstr "**제공자 시간 설정**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:581
+msgid ""
+":guilabel:`Time unit` extracted from the raw data, or user defined. This can"
+" be used to align the speed of the mesh layer with other layers in the "
+"project during map time navigation. Supported units are :guilabel:`Seconds`,"
+" :guilabel:`Minutes`, :guilabel:`Hours` and :guilabel:`Days`."
+msgstr ""
+"원시 데이터에서 :guilabel:`Time unit` 을 추출하거나, 또는 사용자 정의합니다. 시간 단위를 정의하면 맵 시간 탐색 도중"
+" 메시 레이어의 속도를 프로젝트의 다른 레이어들과 정렬시킬 수 있습니다. :guilabel:`Seconds`, "
+":guilabel:`Minutes`, :guilabel:`Hours` 및 :guilabel:`Days` 단위를 지원합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:592
+msgid "Elevation Properties"
+msgstr "표고 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:594
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and its appearance in the :ref:`profile tool charts "
+"<label_elevation_profile_view>`. Specifically, you can set:"
+msgstr ""
+"|elevationscale| :guilabel:`Elevation` 탭은 :ref:`3차원 맵 뷰 <label_3dmapview>` "
+"안에서의 레이어 표고 속성 및 :ref:`단면 도구 도표(profile tool charts) "
+"<label_elevation_profile_view>` 에서의 3차원 맵 뷰의 모양을 제어할 수 있는 옵션들을 제공합니다. 그 중에서도"
+" 다음을 설정할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:604
+msgid "Mesh Elevation properties"
+msgstr "메시 표고 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:606
+msgid ""
+":guilabel:`Elevation Surface`: how the mesh layer vertices Z values should "
+"be interpreted as terrain elevation. You can apply a :guilabel:`Scale` "
+"factor and an :guilabel:`Offset`."
+msgstr ""
+":guilabel:`Elevation Surface`: 메시 레이어의 수직 Z 값을 어떻게 지형 표고로 해석해야 할지를 정의합니다. "
+":guilabel:`Scale` 인자와 :guilabel:`Offset` 값을 적용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:609
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls the rendering of the mesh "
+"elements elevation in the profile chart. The profile :guilabel:`Style` can "
+"be set as:"
+msgstr ""
+":guilabel:`Profile Chart Appearance`: 단면 도표에 있는 메시 요소 표고의 렌더링을 제어합니다. 단면 "
+":guilabel:`Style` 을 다음 가운데 하나로 설정할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:613
+msgid ""
+"a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
+msgstr ":ref:`라인 스타일 <vector_line_symbols>` 이 적용된 :guilabel:`Line`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:614
+msgid ""
+"an elevation surface rendered using a fill symbol either above "
+"(:guilabel:`Fill above`) or below (:guilabel:`Fill below`) the elevation "
+"curve line. The surface symbology is represented using:"
+msgstr ""
+"표고 곡선 위(:guilabel:`Fill above`) 또는 아래(:guilabel:`Fill below`)에 채우기 심볼을 사용해서 "
+"렌더링한 표고 표면입니다. 표면 심볼은 다음을 이용해서 표현됩니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:618
+msgid "a :ref:`Fill style <vector_fill_symbols>`"
+msgstr ":ref:`채우기 스타일 <vector_fill_symbols>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:619
+msgid ""
+"and a :guilabel:`Limit`: the maximum (respectively minimum) altitude "
+"determining how high the fill surface will be"
+msgstr ":guilabel:`Limit`: 채우기 표면이 얼마나 높이 올라가게 될지 결정하는 최대 (제각기 최저) 고도를 설정합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:627
+msgid "Metadata Properties"
+msgstr "메타데이터 속성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:629
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"|editMetadata| :guilabel:`Metadata` 탭에 사용자 레이어에 대한 메타데이터 리포트를 생성하고 편집할 수 있는 "
+"옵션이 있습니다. 더 자세한 정보는 :ref:`metadatamenu` 를 참조하세요."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:637
+msgid "Editing a mesh layer"
+msgstr "메시 레이어 편집"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:639
+msgid ""
+"QGIS allows to :ref:`create a mesh layer <vector_create_mesh>` from scratch "
+"or based on an existing one. You can create/modify the geometries of the new"
+" layer whom you can assign datasets afterwards. It's also possible to edit "
+"an existing mesh layer. Because the editing operation requires a frames-only"
+" layer, you will be asked to either remove any associated datasets first "
+"(make sure you have them available if they still are necessary) or create a "
+"copy (only geometries) of the layer."
+msgstr ""
+"QGIS는 처음부터 또는 기존 메시 레이어를 기반으로 :ref:`메시 레이어를 생성 <vector_create_mesh>` 할 수 "
+"있습니다. 새 레이어의 도형을 생성 또는 수정할 수 있으며, 나중에 해당 도형에 데이터셋을 할당할 수 있습니다. 기존 메시 레이어를 "
+"편집할 수도 있습니다. 편집 작업 대상 레이어는 도형만 가지고 있어야 하기 때문에, 편집 전에 모든 관련 데이터셋을 제거하거나 (편집 후"
+" 해당 데이터셋이 필요한 경우 데이터셋을 다시 할당할 수 있도록 준비해놓아야 합니다) 또는 레이어의 (도형만 가지고 있는) 복사본을 "
+"생성하도록 요청받게 될 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:647
+msgid ""
+"QGIS does not allow to digitize edges on mesh layers. Only vertices and "
+"faces are mesh elements that can be created. Also not all supported mesh "
+"formats can be edited in QGIS (see `permissions "
+"<https://github.com/lutraconsulting/MDAL#supported-formats>`__)."
+msgstr ""
+"QGIS에서는 메시 레이어 상에 변을 디지타이즈할 수 없습니다. 생성할 수 있는 메시 요소는 꼭짓점과 면뿐입니다. 또한 QGIS에서 모든"
+" 지원 메시 포맷을 편집할 수도 없습니다. (`권한 "
+"<https://github.com/lutraconsulting/MDAL#supported-formats>`_ 을 참조하세요.)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:654
+msgid "Overview of the mesh digitizing tools"
+msgstr "메시 디지타이즈 작업 도구의 개요"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:656
+msgid ""
+"To interact with or edit a base mesh layer element, following tools are "
+"available."
+msgstr "다음 도구들을 이용해서 기반 메시 레이어 요소와 대화형 작업을 하거나 편집할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:658
+msgid "Tools for mesh digitizing"
+msgstr "메시 디지타이즈 작업을 위한 도구들"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:662
+msgid "Purpose"
+msgstr "목적"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:663
+msgid "Location"
+msgstr "위치"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:664
+msgid "|allEdits| :sup:`Current Edits`"
+msgstr "|allEdits| :sup:`Current Edits`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1147
+msgid "allEdits"
+msgstr "allEdits"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:665
+msgid ""
+"Access to save, rollback or cancel changes in all or selected layers "
+"simultaneously"
+msgstr "모든 레이어 또는 선택한 레이어에서 변경 사항을 동시에 저장, 되돌리기, 또는 취소"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:666
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:669
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:672
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:675
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:678
+msgid ":guilabel:`Digitizing` toolbar"
+msgstr ":guilabel:`Digitizing` 툴바"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:667
+msgid "|toggleEditing| :sup:`Toggle to Edit`"
+msgstr "|toggleEditing| :sup:`Toggle to Edit`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1219
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:668
+msgid "Turn on/off the layer in edit mode"
+msgstr "레이어의 편집 모드를 켜고 끄기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:670
+msgid "|saveEdits| :sup:`Save Edits`"
+msgstr "|saveEdits| :sup:`Save Edits`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1205
+msgid "saveEdits"
+msgstr "saveEdits"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:671
+msgid "Save changes done to the layer"
+msgstr "레이어의 변경 사항을 저장"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:673
+msgid "|undo| :sup:`Undo`"
+msgstr "|undo| :sup:`Undo`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1223
+msgid "undo"
+msgstr "undo"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:674
+msgid "Undo the last change(s) - :kbd:`Ctrl+Z`"
+msgstr "마지막 변경 사항(들)을 되돌리기 - :kbd:`Ctrl+Z`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:676
+msgid "|redo| :sup:`Redo`"
+msgstr "|redo| :sup:`Redo`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1199
+msgid "redo"
+msgstr "redo"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:677
+msgid "Redo the last undone action(s) - :kbd:`Ctrl+Shift+Z`"
+msgstr "마지막으로 되돌린 액션(들)을 다시 실행 - :kbd:`Ctrl+Shift+Z`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:679
+msgid "|cad| :sup:`Enable Advanced Digitizing tools`"
+msgstr "|cad| :sup:`Enable Advanced Digitizing tools`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1149
+msgid "cad"
+msgstr "cad"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:680
+msgid ""
+"Turn on/off the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`"
+msgstr ":ref:`고급 디지타이즈 작업 패널 <advanced_digitizing_panel>` 을 켜고 끄기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:681
+msgid ":guilabel:`Advanced Digitizing` toolbar"
+msgstr ":guilabel:`Advanced Digitizing` 툴바"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:682
+msgid "|meshReindex| :sup:`Reindex Faces and Vertices`"
+msgstr "|meshReindex| :sup:`Reindex Faces and Vertices`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1177
+msgid "meshReindex"
+msgstr "meshReindex"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:683
+msgid "Recreate index and renumber the mesh elements for optimization"
+msgstr "최적화를 위해 메시 요소의 개수를 다시 세고 인덱스를 재생성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:684
+msgid ":guilabel:`Mesh` menu"
+msgstr ":guilabel:`Mesh` 메뉴"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:685
+msgid "|meshDigitizing| :sup:`Digitize Mesh Elements`"
+msgstr "|meshDigitizing| :sup:`Digitize Mesh Elements`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1173
+msgid "meshDigitizing"
+msgstr "meshDigitizing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:686
+msgid "Select/Create vertices and faces"
+msgstr "꼭짓점 및 면을 선택/생성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:687
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:690
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:693
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:696
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:699
+msgid ":guilabel:`Mesh Digitizing` toolbar"
+msgstr ":guilabel:`Mesh Digitizing` 툴바"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:688
+msgid "|meshSelectPolygon| :sup:`Select Mesh Elements by Polygon`"
+msgstr "|meshSelectPolygon| :sup:`Select Mesh Elements by Polygon`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1181
+msgid "meshSelectPolygon"
+msgstr "meshSelectPolygon"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:689
+msgid "Select vertices and faces overlapped by a drawn polygon"
+msgstr "폴리곤을 그려서 그 안에 들어오는 꼭짓점 및 면을 선택"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:691
+msgid "|meshSelectExpression| :sup:`Select Mesh Elements by Expression`"
+msgstr "|meshSelectExpression| :sup:`Select Mesh Elements by Expression`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1179
+msgid "meshSelectExpression"
+msgstr "meshSelectExpression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:692
+msgid "Select vertices and faces using an expression"
+msgstr "표현식을 이용해서 꼭짓점 및 면을 선택"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:694
+msgid "|meshTransformByExpression| :sup:`Transform Vertices Coordinates`"
+msgstr "|meshTransformByExpression| :sup:`Transform Vertices Coordinates`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1183
+msgid "meshTransformByExpression"
+msgstr "meshTransformByExpression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:695
+msgid "Modify coordinates of a selection of vertices"
+msgstr "선택한 꼭짓점의 좌표를 수정"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:697
+msgid "|meshEditForceByVectorLines| :sup:`Force by Selected Geometries`"
+msgstr "|meshEditForceByVectorLines| :sup:`Force by Selected Geometries`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1175
+msgid "meshEditForceByVectorLines"
+msgstr "meshEditForceByVectorLines"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:698
+msgid "Split faces and constrain Z value using a linear geometry"
+msgstr "라인 도형을 이용해서 면을 분할하고 Z 값을 강제"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:702
+msgid "Exploring the Z value assignment logic"
+msgstr "Z 값 할당 로직 탐구하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:704
+msgid ""
+"When a mesh layer is turned into edit mode, a :guilabel:`Vertex Z value` "
+"widget opens at the top right of the map canvas. By default, its value "
+"corresponds to the :guilabel:`Default Z value` set in "
+":menuselection:`Settings --> Options --> Digitizing` tab. When there are "
+"selected vertices, the widget displays the average Z value of the selected "
+"vertices."
+msgstr ""
+"메시 레이어의 편집 모드를 켠 경우, 맵 캔버스의 우상단에 :guilabel:`Vertex Z value` 위젯이 열립니다. 이 꼭짓점 "
+"Z 값은 기본적으로 :menuselection:`Settings --> Options --> Digitizing` 탭에 설정된 "
+":guilabel:`Default Z value` 에 대응합니다. 꼭짓점 집합을 선택한 경우 이 위젯은 선택한 꼭짓점들의 평균 Z 값을 "
+"표시합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:710
+msgid ""
+"During editing, the :guilabel:`Vertex Z value` is assigned to new vertices. "
+"It is also possible to set a custom value: edit the widget, press "
+":kbd:`Enter` and you will override the default value and make use of this "
+"new value in the digitizing process. Click the |clearText| icon in the "
+"widget to reset its value to the Options default value."
+msgstr ""
+"편집 작업 도중 새 꼭짓점에 :guilabel:`Vertex Z value` 를 할당합니다. Z 값을 사용자 지정할 수도 있습니다. "
+"위젯에서 값을 편집한 다음 :kbd:`Enter` 키를 누르면 기본값을 무시하고 디지타이즈 작업 과정에 이 새로운 값을 사용할 것입니다."
+" 위젯에 있는 |clearText| 아이콘을 클릭하면 Z 값을 기본값으로 리셋합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1153
+msgid "clearText"
+msgstr "clearText"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:718
+msgid "Rules of assignment"
+msgstr "할당 규칙"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:720
+msgid ""
+"When **creating** a new vertex, its Z value definition may vary depending on"
+" the active selection in the mesh layer and its location. The following "
+"table displays the various combinations."
+msgstr ""
+"새 꼭짓점을 **생성하는** 경우, 그 Z 값은 메시 레이어에 활성화된 선택 집합과 꼭짓점의 위치에 따라 다르게 정의됩니다. 다음 표에서"
+" 그 다양한 조합을 볼 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:724
+msgid "Matrix of Z value assignment to new vertex"
+msgstr "새 꼭짓점에 Z 값을 할당하는 경우들"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:727
+msgid "Vertex creation"
+msgstr "꼭짓점 생성"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:727
+msgid "Are there selected vertices in mesh layer?"
+msgstr "메시 레이어에 선택한 꼭짓점들이 있는가?"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:727
+msgid "Source of assigned value"
+msgstr "할당되는 값의 소스"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:727
+msgid "Assigned Z Value"
+msgstr "할당되는 Z 값"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:730
+msgid "\"Free\" vertex, not connected to any"
+msgstr "어떤 면 또는 면의 변에도"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:732
+msgid "face or edge of a face"
+msgstr "연결되지 않은 \"자유\" 꼭짓점"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:730
+msgid "No"
+msgstr "Ｘ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:730
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:737
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:743
+msgid ":guilabel:`Vertex Z value`"
+msgstr ":guilabel:`Vertex Z value`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:730
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:743
+msgid "Default or user defined"
+msgstr "기본값 또는 사용자 정의 값"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:732
+msgid ""
+":guilabel:`Advanced Digitizing Panel` (if :guilabel:`z` widget is in "
+"|locked| :sup:`Locked` state)"
+msgstr ""
+":guilabel:`Advanced Digitizing Panel` (:guilabel:`z` 위젯이 |locked| "
+":sup:`Locked` 상태인 경우)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1169
+msgid "locked"
+msgstr "locked"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:732
+msgid ":guilabel:`z` widget if in |locked| :sup:`Locked` state"
+msgstr ":guilabel:`z` 위젯이 |locked| :sup:`Locked` 상태인 경우 :guilabel:`z` 위젯의 값"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:737
+msgid "Yes"
+msgstr "Ο"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:737
+msgid "Average of the selected vertices"
+msgstr "선택한 꼭짓점들의 평균값"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:739
+msgid "Vertex on an edge"
+msgstr "변 위에 있는 꼭짓점"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:739
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:741
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:743
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:745
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:747
+msgid "---"
+msgstr "---"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:739
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:741
+msgid "Mesh layer"
+msgstr "메시 레이어"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:739
+msgid "Interpolated from the edge's vertices"
+msgstr "변의 꼭짓점들로부터 보간한 값"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:741
+msgid "Vertex on a face"
+msgstr "면 위에 있는 꼭짓점"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:741
+msgid "Interpolated from the face's vertices"
+msgstr "면의 꼭짓점들로부터 보간한 값"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:743
+msgid "Vertex snapped to a 2D vector feature"
+msgstr "2차원 벡터 피처에 스냅된 꼭짓점"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:745
+msgid "Vertex snapped to a 3D vector vertex"
+msgstr "3차원 벡터 꼭짓점에 스냅된 꼭짓점"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:745
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:747
+msgid "Vector layer"
+msgstr "벡터 레이어"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:745
+msgid "Vertex"
+msgstr "꼭짓점의 Z 값"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:747
+msgid "Vertex snapped to a 3D vector segment"
+msgstr "3차원 벡터 선분에 스냅된 꼭짓점"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:747
+msgid "Interpolated along the vector segment"
+msgstr "벡터 선분을 따라 보간된 값"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:751
+msgid ""
+"The :guilabel:`Vertex Z value` widget is deactivated if the :ref:`Advanced "
+"Digitizing Panel <advanced_digitizing_panel>` is enabled and no mesh element"
+" is selected. The latter's :guilabel:`z` widget then rules the Z value "
+"assignment."
+msgstr ""
+":ref:`고급 디지타이즈 작업 패널 <advanced_digitizing_panel>` 을 활성화하고 어떤 메시 요소도 선택하지 않은 "
+"경우 :guilabel:`Vertex Z value` 위젯이 비활성화됩니다. 이때 고급 디지타이즈 작업 패널의 :guilabel:`z` "
+"위젯이 Z 값 할당 규칙을 제어합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:758
+msgid "Modifying Z value of existing vertices"
+msgstr "기존 꼭짓점의 Z 값을 수정하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:760
+msgid "To modify the Z value of vertices, the most straightforward way is:"
+msgstr "꼭짓점의 Z 값을 수정하는 가장 단순한 방법은 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:762
+msgid ""
+"Select one or many vertices. The :guilabel:`Vertex Z value` widget will "
+"display the average height of the selection."
+msgstr ""
+"하나 이상의 꼭짓점을 선택하십시오. :guilabel:`Vertex Z value` 위젯이 선택 집합의 평균 높이를 표시할 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:764
+msgid "Change the value in the widget."
+msgstr "위젯의 값을 변경하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:765
+msgid ""
+"Press :kbd:`Enter`. The entered value is assigned to the vertices and "
+"becomes the default value of next vertices."
+msgstr ":kbd:`Enter` 키를 누르십시오. 입력한 값이 꼭짓점에 할당되고 다음 꼭짓점의 기본값이 됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:768
+msgid ""
+"Another way to change the Z value of a vertex is to move and snap it on a "
+"vector layer feature with the Z value capability. If more than one vertex "
+"are selected, the Z value can't be changed in this way."
+msgstr ""
+"꼭짓점의 Z 값을 변경하는 또다른 방법은 Z 값 케이퍼빌리티를 가진 벡터 레이어 피처로 꼭짓점을 이동시켜 스냅하는 것입니다. 하나 이상의"
+" 꼭짓점을 선택한 경우, Z 값을 이 방법으로 변경할 수 없습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:772
+msgid ""
+"The :ref:`Transform mesh vertices <transform_meshvertices>` dialog also "
+"provides means to modify the Z value of a selection of vertices (along with "
+"their X or Y coordinates)."
+msgstr ""
+":ref:`메시 꼭짓점 변형 <transform_meshvertices>` 대화창에서도 꼭짓점 선택 집합의 Z 값을 (꼭짓점의 X 또는 "
+"Y 좌표와 함께) 수정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:779
+msgid "Selecting mesh elements"
+msgstr "메시 요소 선택하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:782
+msgid "Using :guilabel:`Digitize Mesh Elements`"
+msgstr ":guilabel:`Digitize Mesh Elements` 사용하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:784
+msgid ""
+"Activate the |meshDigitizing| :sup:`Digitize Mesh Elements` tool. Hover over"
+" an element and it gets highlighted, allowing you to select it."
+msgstr ""
+"|meshDigitizing| :sup:`Digitize Mesh Elements` 도구를 활성화하십시오. 요소 위로 마우스 커서를 "
+"가져가면 요소가 강조되고, 요소를 선택할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:787
+msgid "Click on a vertex, and it is selected."
+msgstr "꼭짓점을 클릭하면 해당 꼭짓점이 선택됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:788
+msgid ""
+"Click on the small square at the center of a face or an edge, and it gets "
+"selected. Connected vertices are also selected. Conversely, selecting all "
+"the vertices of an edge or a face also selects that element."
+msgstr ""
+"면 또는 변의 중심에 있는 작은 정사각형을 클릭하면 해당 면 또는 변을 선택합니다. 연결되어 있는 꼭짓점들도 선택됩니다. 반대로 변 또는"
+" 면의 모든 꼭짓점을 선택하면 해당 요소도 선택됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:792
+msgid ""
+"Drag a rectangle to select overlapping elements (a selected face comes with "
+"all their vertices). Press :kbd:`Alt` key if you want to select only "
+"completely contained elements."
+msgstr ""
+"직사각형을 그려 직사각형과 중첩하는 요소를 (면이 선택되는 경우 면의 모든 꼭짓점도) 선택합니다. 직사각형 안에 완전히 들어오는 요소만 "
+"선택하고자 하는 경우 :kbd:`Alt` 키를 누른 채 직사각형을 그리십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:795
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:813
+msgid ""
+"To add elements to a selection, press :kbd:`Shift` while selecting them."
+msgstr "선택 집합에 요소를 추가하려면, :kbd:`Shift` 키를 누른 채 요소를 선택하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:796
+msgid ""
+"To remove an element from the selection, press :kbd:`Ctrl` and reselect it. "
+"A deselected face will also deselect all their vertices."
+msgstr ""
+"선택 집합에서 요소를 제거하려면, :kbd:`Ctrl` 키를 누른 채 제거할 요소를 다시 선택하십시오. 면을 선택 해제하면 면의 꼭짓점도"
+" 모두 선택 해제될 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:800
+msgid "Using :guilabel:`Select Mesh Elements by Polygon`"
+msgstr ":guilabel:`Select Mesh Elements by Polygon` 사용하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:802
+msgid ""
+"Activate the |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` tool"
+" and:"
+msgstr ""
+"|meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` 도구를 활성화한 다음:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:804
+msgid ""
+"Draw a polygon (left-click to add vertex, :kbd:`Backspace` to undo last "
+"vertex, :kbd:`Esc` to abort the polygon and right-click to validate it) over"
+" the mesh geometries. Any partially overlapping vertices and faces will get "
+"selected. Press :kbd:`Alt` key while drawing if you want to select only "
+"completely contained elements."
+msgstr ""
+"메시 도형 위로 폴리곤을 그립니다. (왼쪽 클릭은 꼭짓점을 추가하고, :kbd:`Backspace` 키는 마지막 꼭짓점을 취소하고, "
+":kbd:`Esc` 키는 폴리곤 그리기를 중단하며, 오른쪽 클릭은 폴리곤을 완성합니다.) 폴리곤과 일부분이라도 중첩하는 모든 꼭짓점 및 "
+"면이 선택될 것입니다. 폴리곤 안에 완전히 들어오는 요소만 선택하고자 하는 경우 폴리곤을 그리는 도중 :kbd:`Alt` 키를 "
+"누르십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:809
+msgid ""
+"Right-click over the geometry of a vector layer's feature, select it in the "
+"list that pops up and any partially overlapping vertices and faces of the "
+"mesh layer will get selected. Use :kbd:`Alt` while drawing to select only "
+"completely contained elements."
+msgstr ""
+"벡터 레이어의 피처를 오른쪽 클릭하면 뜨는 목록에서 도형을 선택하면, 선택한 도형과 조금이라도 중첩하는 메시 레이어의 꼭짓점 및 면이 "
+"선택될 것입니다. :kbd:`Alt` 키를 누른 채 선택하면 도형 안에 완전히 들어오는 요소만 선택됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:814
+msgid ""
+"To remove an element from the selection, press :kbd:`Ctrl` while drawing "
+"over the selection polygon."
+msgstr "선택 집합에서 요소를 제거하려면, :kbd:`Ctrl` 키를 누른 채 선택 폴리곤을 그리십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:818
+msgid "Using :guilabel:`Select Mesh Elements by Expression`"
+msgstr ":guilabel:`Select Mesh Elements by Expression` 사용하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:820
+msgid ""
+"Another tool for mesh elements selection is |meshSelectExpression| "
+":sup:`Select Mesh Elements by Expression`. When pressed, the tool opens the "
+"mesh :ref:`expression selector dialog <vector_expressions>` from which you "
+"can:"
+msgstr ""
+"|meshSelectExpression| :sup:`Select Mesh Elements by Expression` 은 메시 요소를 "
+"선택하기 위한 또다른 도구입니다. 이 도구를 선택하면 메시 :ref:`표현식 선택기 대화창 <vector_expressions>` 이 "
+"열리고 이 대화창에서 다음 작업을 할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:824
+msgid "Select the method of selection:"
+msgstr "선택 방법을 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:826
+msgid ""
+":guilabel:`Select by vertices`: applies the entered expression to vertices, "
+"and returns matching ones and their eventually associated edges/faces"
+msgstr ""
+":guilabel:`Select by vertices`: 꼭짓점에 입력한 표현식을 적용시켜 표현식을 만족하는 꼭짓점 및 꼭짓점과 "
+"최종적으로 연결된 변/면을 반환합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:828
+msgid ""
+":guilabel:`Select by faces`: applies the entered expression to faces, and "
+"returns matching ones and their associated edges/vertices"
+msgstr ""
+":guilabel:`Select by faces`: 면에 입력한 표현식을 적용시켜 표현식을 만족하는 면 및 면과 최종적으로 연결된 "
+"변/꼭짓점을 반환합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:830
+msgid ""
+"Write the expression of selection. Depending on the selected method, "
+"available functions in the :ref:`Meshes group <expression_function_meshes>` "
+"will be filtered accordingly."
+msgstr ""
+"선택 표현식을 작성할 수 있습니다. :ref:`메시 그룹 <expression_function_meshes>` 에서 사용할 수 있는 "
+"함수들을 선택한 선택 방법에 따라 필터링할 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:833
+msgid "Run the query by setting how the selection should behave and pressing:"
+msgstr "선택 집합이 가져야 할 습성을 설정해서 다음을 눌러 쿼리를 실행할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:835
+msgid ""
+"|expressionSelect| :guilabel:`Select`: replaces any existing selection in "
+"the layer"
+msgstr "|expressionSelect| :guilabel:`Select`: 레이어에 있는 기존 선택 집합을 모두 대체합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1165
+msgid "expressionSelect"
+msgstr "expressionSelect"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:837
+msgid "|selectAdd| :guilabel:`Add to current selection`"
+msgstr ""
+"|selectAdd| :guilabel:`Add to current selection`: 현재 선택 집합에 선택한 메시 요소를 "
+"추가합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1207
+msgid "selectAdd"
+msgstr "selectAdd"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:838
+msgid "|selectRemove| :guilabel:`Remove from current selection`"
+msgstr ""
+"|selectAdd| :guilabel:`Add to current selection`: 현재 선택 집합에서 선택한 메시 요소를 "
+"제거합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1209
+msgid "selectRemove"
+msgstr "selectRemove"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:841
+msgid "Modifying mesh elements"
+msgstr "메시 요소 수정하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:844
+msgid "Adding vertices"
+msgstr "꼭짓점 추가하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:846
+msgid "To add vertices to a mesh layer:"
+msgstr "메시 레이어에 꼭짓점을 추가하려면:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:848
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:865
+msgid "Press the |meshDigitizing| :sup:`Digitize mesh elements` button"
+msgstr "|meshDigitizing| :sup:`Digitize mesh elements` 버튼을 누르십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:849
+msgid ""
+"A :guilabel:`Vertex Z value` widget appears on the top right corner of the "
+"map canvas. Set this value to the Z coordinate you would like to assign to "
+"the subsequent vertices"
+msgstr ""
+"맵 캔버스 우상단에 :guilabel:`Vertex Z value` 위젯이 나타납니다. 이 위젯의 값을 이후 추가할 꼭짓점에 할당하고자 "
+"하는 Z 좌표로 설정하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:851
+msgid "Then double-click:"
+msgstr "그리고 다음과 같이 더블클릭하십시오:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:853
+msgid ""
+"outside a face: adds a \"free vertex\", that is a vertex not linked to any "
+"face. This vertex is represented by a red dot when the layer is in editing "
+"mode."
+msgstr ""
+"면 바깥에: 어떤 면과도 연결되지 않은 꼭짓점은 \"자유\" 꼭짓점을 추가합니다. 레이어의 편집 모드가 켜져 있다면 이 꼭짓점은 빨간 "
+"점으로 표현됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:855
+msgid ""
+"on the edge of existing face(s): adds a vertex on the edge, splits the "
+"touching face(s) into triangles connected to the new vertex."
+msgstr "기존 면(들)의 변 위에: 변 위에 꼭짓점을 추가하고, 접하는 면(들)을 새 꼭짓점과 연결된 삼각형들로 분할합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:857
+msgid ""
+"inside a face: splits the face into triangles whose edges connect the "
+"surrounding vertices to the new vertex."
+msgstr "면 안에: 면을 새 꼭짓점에 주변 꼭짓점들을 연결하는 변을 가진 삼각형들로 분할합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:861
+msgid "Adding faces"
+msgstr "면 추가하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:863
+msgid "To add faces to a mesh layer:"
+msgstr "메시 레이어에 면을 추가하려면:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:866
+msgid ""
+"A :guilabel:`Vertex Z value` widget appears on the top right corner of the "
+"map canvas. Set this value to the Z coordinate you would like to assign to "
+"the subsequent vertices."
+msgstr ""
+"맵 캔버스 우상단에 :guilabel:`Vertex Z value` 위젯이 나타납니다. 이 위젯의 값을 이후 추가할 꼭짓점에 할당하고자 "
+"하는 Z 좌표로 설정하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:868
+msgid "Hover over a vertex and click the small triangle that appears next it."
+msgstr "꼭짓점 위에 마우스 커서를 가져가면 옆에 나타나는 작은 삼각형을 클릭하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:869
+msgid ""
+"Move the cursor to the next vertex position; you can snap to existing vertex"
+" or left-click to add a new one."
+msgstr "커서를 다음 꼭짓점 위치로 옮기십시오. 기존 꼭짓점에 스냅하거나 왼쪽 클릭으로 새 꼭짓점을 추가할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:871
+msgid ""
+"Proceed as above to add as many vertices you wish for the face. Press "
+":kbd:`Backspace` button to undo the last vertex."
+msgstr ""
+"앞의 단계를 반복하며 추가하는 면에 필요한 만큼 많은 꼭짓점들을 추가하십시오. 마지막 꼭짓점을 취소하려면 :kbd:`Backspace` "
+"키를 누르십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:873
+msgid ""
+"While moving the mouse, a rubberband showing the shape of the face is "
+"displayed. If it is shown in green, then the expected face is valid and you "
+"can right-click to add it to the mesh. If it is red, the face is not valid "
+"(e.g. because it self-intersects, overlaps an existing face or vertex, "
+"creates a hole, ...) and can't be added. You'd need to undo some vertices "
+"and fix the geometry."
+msgstr ""
+"마우스를 움직이는 동안 면의 형태를 나타내는 고무줄이 표시됩니다. 고무줄이 녹색이면 예상되는 면이 무결하다는 뜻으로, 오른쪽 클릭으로 "
+"메시에 면을 추가할 수 있습니다. 고무줄이 빨간색이면 (자체 교차, 기존 면 또는 꼭짓점과 중첩, 구멍 생성 등등 때문에) 면이 무결하지"
+" 않다는 뜻으로 메시에 추가할 수 없습니다. 이런 경우 일부 꼭짓점을 되돌려서 도형을 수정해야 할 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:879
+msgid "Press :kbd:`Esc` to abort the face digitizing."
+msgstr "면 디지타이즈 작업을 중단하려면 :kbd:`Esc` 키를 누르십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:880
+msgid "Right-click to validate the face."
+msgstr "오른쪽 클릭으로 면을 완성하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:887
+msgid "Examples of invalid mesh"
+msgstr "무결하지 않은 메시의 예시들"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:892
+msgid "Removing mesh elements"
+msgstr "메시 요소 제거하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:894
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:915
+msgid ":ref:`Select the target elements <select_mesh_elements>`"
+msgstr ":ref:`대상 요소를 선택 <select_mesh_elements>` 하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:895
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:916
+msgid "Enable the |meshDigitizing| :sup:`Digitize mesh elements` tool"
+msgstr "|meshDigitizing| :sup:`Digitize mesh elements` 도구를 활성화하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:896
+msgid "Right-click and select:"
+msgstr "오른쪽 클릭한 다음 다음을 선택하십시오:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:898
+msgid ""
+":guilabel:`Remove Selected Vertices and Fill Hole(s)` or press "
+":kbd:`Ctrl+Del`: removes vertices and linked faces and fills the hole(s) by "
+"triangulating from the neighbor vertices"
+msgstr ""
+":guilabel:`Remove Selected Vertices and Fill Hole(s)` 또는 :kbd:`Ctrl+Del` 키:"
+"  꼭짓점 및 연결된 면을 제거하고 이웃 꼭짓점들로부터 삼각형을 생성해서 구멍(들)을 채웁니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:901
+msgid ""
+":guilabel:`Remove Selected Vertices Without Filling Hole(s)` or press "
+":kbd:`Ctrl+Shift+Del`: removes vertices and linked faces and do not fill "
+"hole(s)"
+msgstr ""
+":guilabel:`Remove Selected Vertices Without Filling Hole(s)` 또는 "
+":kbd:`Ctrl+Shift+Del` 키: 꼭짓점 및 연결된 면을 제거하고 구멍(들)을 채우지 않습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:904
+msgid ""
+":guilabel:`Remove Selected Face(s)` or press :kbd:`Shift+Del`: removes faces"
+" but keeps the vertices"
+msgstr ""
+":guilabel:`Remove Selected Face(s)` 또는 :kbd:`Shift+Del` 키: 면을 제거하지만 꼭짓점은 "
+"유지합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:907
+msgid ""
+"These options are also accessible from the contextual menu when hovering "
+"over a single item without selecting."
+msgstr "선택하지 않은 채 단일 아이템 위에 커서를 가져가면 나타나는 컨텍스트 메뉴로부터 이 옵션들을 사용할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:911
+msgid "Moving mesh elements"
+msgstr "메시 요소 이동시키기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:913
+msgid "To move vertices and faces of a mesh layer:"
+msgstr "메시 레이어의 꼭짓점 및 면을 이동시키려면:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:917
+msgid ""
+"To start moving the element, click on a vertex or the centroid of a "
+"face/edge"
+msgstr "요소 이동을 시작하려면, 면/변의 꼭짓점 하나 또는 중심점을 클릭하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:918
+msgid ""
+"Move the cursor to the target location (snapping to vector features is "
+"supported)."
+msgstr "커서를 대상 위치로 움직이십시오. (벡터 피처에 스냅시킬 수 있습니다.)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:919
+msgid ""
+"If the new location does not generate an :ref:`invalid mesh "
+"<figure_invalid_mesh>`, the moved elements appear in green. Click again to "
+"release them at this location. Faces whose vertices are all selected are "
+"translated, their neighbors are reshaped accordingly."
+msgstr ""
+"새 위치로 이동시켰을 때 :ref:`무결하지 않은 메시 <figure_invalid_mesh>` 를 생성하지 않는다면, 이동시킨 요소가 "
+"녹색으로 나타납니다. 다시 클릭해서 요소를 해당 위치로 옮기십시오. 모든 꼭짓점이 선택된 면의 위치가 변경되고, 이웃 면들의 형태도 그에"
+" 맞춰 변경됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:927
+msgid "Transforming mesh vertices"
+msgstr "메시 꼭짓점 변형시키기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:929
+msgid ""
+"The |meshTransformByExpression| :sup:`Transform Vertices Coordinates` tool "
+"gives a more advanced way to move vertices, by editing their X, Y and/or Z "
+"coordinates thanks to expressions."
+msgstr ""
+"|meshTransformByExpression| :sup:`Transform Vertices Coordinates` 도구는 표현식을 "
+"통해 꼭짓점의 X, Y, 그리고/또는 Z 좌표를 편집해서 꼭짓점을 이동시키는 고급 방식을 제공합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:933
+msgid "Select the vertices you want to edit the coordinates"
+msgstr "좌표를 편집하고자 하는 꼭짓점을 선택하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:934
+msgid ""
+"Press |meshTransformByExpression| :sup:`Transform Vertices Coordinates`. A "
+"dialog opens with a mention of the number of selected vertices. You can "
+"still add or remove vertices from the selection."
+msgstr ""
+"|meshTransformByExpression| :sup:`Transform Vertices Coordinates` 아이콘을 "
+"클릭하십시오. 대화창이 선택한 꼭짓점들의 개수와 함께 열립니다. 이 상태에서도 선택 집합에 꼭짓점을 추가하거나 제거할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:937
+msgid ""
+"Depending on the properties you want to modify, you need to check the "
+":guilabel:`X coordinate`, :guilabel:`Y coordinate` and/or :guilabel:`Z "
+"value`."
+msgstr ""
+"사용자가 수정하려는 속성에 따라, :guilabel:`X coordinate`, :guilabel:`Y coordinate` 그리고/또는"
+" :guilabel:`Z value` 옵션을 체크해야 합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:939
+msgid ""
+"Then enter the target position in the box, either as a numeric value or an "
+"expression (using the |expression| :sup:`Expression dialog`)"
+msgstr ""
+"그 다음 텍스트란에 대상 위치를 입력하십시오. 숫자값을 입력할 수도 있고 (|expression| :sup:`Expression "
+"dialog` 를 통해) 표현식을 작성할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1163
+msgid "expression"
+msgstr "expression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:941
+msgid ""
+"With the |vertexCoordinates| :sup:`Import Coordinates of the Selected "
+"Vertex` pressed, the X, Y and Z boxes are automatically filled with its "
+"coordinates whenever a single vertex is selected. A convenient and quick way"
+" to adjust vertices individually."
+msgstr ""
+"|vertexCoordinates| :sup:`Import Coordinates of the Selected Vertex` 아이콘을 "
+"클릭하면 꼭짓점을 하나 선택할 때마다 X, Y, 그리고/또는 Z 텍스트란에 선택한 꼭짓점의 좌표를 자동으로 채웁니다. 꼭짓점을 개별적으로"
+" 조정할 수 있는 편리하고 빠른 방법입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1225
+msgid "vertexCoordinates"
+msgstr "vertexCoordinates"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:945
+msgid ""
+"Press :guilabel:`Preview Transform` to simulate the vertices new location "
+"and preview the mesh with transformation."
+msgstr ""
+":guilabel:`Preview Transform` 버튼을 누르면 꼭짓점의 새 위치를 시뮬레이션해서 변형된 메시를 미리 보기할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:948
+msgid ""
+"If the preview is green, transformed mesh is valid and you can apply the "
+"transformation."
+msgstr "미리 보기가 녹색인 경우 변형된 메시가 무결하다는 뜻이므로 변형 작업을 적용시킬 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:950
+msgid ""
+"If the preview is red, the transformed mesh is invalid and you can not apply"
+" the transformation until it is corrected."
+msgstr "미리 보기가 빨간색이면 변형된 메시가 무결하지 않다는 뜻이기 때문에 메시가 수정될 때까지 변형 작업을 적용시킬 수 없습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:952
+msgid ""
+"Press :guilabel:`Apply Transform` to modify the selected coordinates for the"
+" set of vertices."
+msgstr "꼭짓점 집합에서 선택한 좌표를 수정하려면 :guilabel:`Apply Transform` 버튼을 누르십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:956
+msgid "Reshaping mesh geometry"
+msgstr "메시 도형 형태 변경"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:959
+msgid "The contextual menu"
+msgstr "컨텍스트 메뉴"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:961
+msgid "Enable the |meshDigitizing| :sup:`Digitize mesh elements`"
+msgstr "|meshDigitizing| :sup:`Digitize mesh elements` 도구를 활성화하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:962
+msgid "Select mesh item(s), or not"
+msgstr "메시 항목(들)을 선택하거나, 선택하지 마십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:963
+msgid "Hover over a mesh element, it gets highlighted."
+msgstr "메시 요소 위에 커서를 가져가면 메시 요소가 강조됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:964
+msgid "Right-click and you can:"
+msgstr "이를 오른쪽 클릭하면 다음 작업을 할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:966
+msgid ":ref:`remove the item(s) <remove_mesh_items>`"
+msgstr ":ref:`항목(들)을 제거 <remove_mesh_items>` 할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:967
+msgid ""
+":guilabel:`Split Selected Face(s)` (:guilabel:`Split Current Face`): splits "
+"the face you are hovering over or each selected quad mesh faces into two "
+"triangles"
+msgstr ""
+":guilabel:`Split Selected Face(s)` (:guilabel:`Split Current Face`): 사용자가 "
+"커서를 올려놓은 면, 또는 선택한 사각(quad) 메시 면 각각을 삼각형 2개로 분할합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:970
+msgid ""
+":guilabel:`Delaunay Triangulation with Selected vertices`: builds triangular"
+" faces using selected free vertices."
+msgstr ""
+":guilabel:`Delaunay Triangulation with Selected vertices`: 선택한 자유 꼭짓점들을 이용해서"
+" 삼각면을 작성합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:972
+msgid ""
+":guilabel:`Refine Selected Face(s)` (:guilabel:`Refine Current Face`): "
+"splits the face into four faces, based on vertices added at the middle of "
+"each edge (a triangle results into triangles, a quad into quads). Also "
+"triangulates adjacent faces connected to the new vertices."
+msgstr ""
+":guilabel:`Refine Selected Face(s)` (:guilabel:`Refine Current Face`): 면의 각 "
+"변 중간에 추가된 꼭짓점을 바탕으로 면 하나를 4개로 분할합니다. (삼각형은 삼각형들로, 사각형은 사각형들로 분할됩니다.) 또한 새 "
+"꼭짓점에 연결된 인접 면을 삼각 분할할 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:978
+msgid "The edge markers"
+msgstr "변 마커"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:980
+msgid ""
+"When the |meshDigitizing| :sup:`Digitize mesh elements` is active and you "
+"hover over an edge, the edge is highlighted and it is possible to interact "
+"with it. Depending on the context, following markers may be available:"
+msgstr ""
+"|meshDigitizing| :sup:`Digitize mesh elements` 도구가 활성화된 상태에서 사용자가 변 위로 커서를 "
+"가져가면 해당 변이 강조되고 쌍방향 작업이 가능해집니다. 작업의 맥락에 따라, 다음과 같은 마커들을 사용하게 될 수도 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:984
+msgid ""
+"a **square**, at the center of the edge: click on it to select extremity "
+"vertices."
+msgstr "변의 중앙에 나타나는 **정사각형**: 이 마커를 클릭하면 양 극단의 꼭짓점들을 선택합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:985
+msgid ""
+"a **cross** if the two faces on either side can be merged: click on it to "
+"delete the edge and merge the faces."
+msgstr "변 양쪽의 두 면을 병합할 수 있는 경우 나타나는 **십자표**: 이 마커를 클릭하면 변을 삭제하고 두 면을 병합합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:987
+msgid ""
+"a **circle** if the edge is between two triangles: Click on it to flip the "
+"edge, i.e. connect it instead to the two other \"free\" vertices of the "
+"faces"
+msgstr ""
+"변이 두 삼각형 사이에 있는 경우 나타나는 **원**: 이 마커를 클릭하면 변을 뒤집습니다. 즉, 두 면의 다른 \"자유\" 꼭짓점 "
+"2개에 대신 연결합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:991
+msgid "The :guilabel:`Force by Selected Geometries` tool"
+msgstr ":guilabel:`Force by Selected Geometries` 도구"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:993
+msgid ""
+"The |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool "
+"provides advanced ways to apply break lines using lines geometry. A break "
+"line will force the mesh to have edges along the line. Note that the break "
+"line will not be considered persistent once the operation is done; resulting"
+" edges will not act as constraints anymore and can be modified like any "
+"other edge. This can be used for example to locally modify a mesh layer with"
+" accurate lines, as river banks or border of road embankments."
+msgstr ""
+"|meshEditForceByVectorLines| :sup:`Force by Selected Geometries` 도구는 라인 도형을 "
+"이용해서 절단선(break line)을 적용하는 고급 방식을 제공합니다. 절단선은 메시의 변을 절단선을 따라 강제로 분할할 것입니다. "
+"작업이 완료되고 나면 절단선을 영구적인 것으로 간주하지 않기 때문에, 변들이 제약조건으로 작동하지 않을 것이고 다른 모든 변과 마찬가지로"
+" 수정할 수 있게 됩니다. 이 도구를 이용하면 예를 들어 강둑이나 도로의 경사면 경계 같은 정확한 라인으로 메시 레이어를 부분적으로 "
+"수정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1002
+msgid ""
+"Enable the |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` "
+"tool"
+msgstr ""
+"|meshEditForceByVectorLines| :sup:`Force by Selected Geometries` 도구를 "
+"활성화하십시오."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1003
+msgid "Indicate the geometry to use as \"forcing line\"; it can be:"
+msgstr "\"강제선(forcing line)\"으로 사용할 도형을 지정하십시오. 다음과 같은 도형을 지정할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1005
+msgid ""
+"picked from a line or polygon feature in the map canvas: right-click over "
+"the vector feature and select it from the list in the contextual menu."
+msgstr ""
+"맵 캔버스에 있는 라인 또는 폴리곤 피처에서 선택: 벡터 피처를 오른쪽 클릭하면 나타나는 컨텍스트 메뉴의 목록에서 도형을 선택할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1007
+msgid ""
+"a virtual line drawn over the mesh frame: left-click to add vertices, right-"
+"click for validation. Vertices Z value is set through the :guilabel:`Vertex "
+"Z value` widget or the :guilabel:`z` widget if the :guilabel:`Advanced "
+"Digitizing Panel` is on. If the line is snapped to a mesh vertex or a 3D "
+"vector feature's vertex or segment, the new vertex takes the snapped element"
+" Z value."
+msgstr ""
+"메시 프레임 위에 그린 가상의 선: 왼쪽 클릭으로 꼭짓점을 추가하고, 오른쪽 클릭으로 선을 완성하십시오. :guilabel:`Vertex"
+" Z value` 위젯 또는 :guilabel:`Advanced Digitizing Panel` 이 열려 있는 경우 "
+":guilabel:`z` 위젯을 통해 꼭짓점의 Z 값을 설정하십시오. 가상의 선의 꼭짓점이 메시의 꼭짓점 아니면 3차원 벡터 피처의 "
+"꼭짓점 또는 선분에 스냅되어 있는 경우라면 새 꼭짓점이 스냅되어 있는 요소의 Z 값을 가질 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1014
+msgid ""
+"Mesh faces that overlap the line geometry or the polygon's boundary will be "
+"affected in a way that depends on options you can set from the "
+"|meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool drop-"
+"down menu:"
+msgstr ""
+"|meshEditForceByVectorLines| :sup:`Force by Selected Geometries` 도구의 드롭다운 "
+"메뉴에서 설정할 수 있는 옵션에 따라 달라지는 방식으로 라인 도형 또는 폴리곤의 경계선과 중첩하는 메시 면에 영향을 미칠 것입니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1019
+msgid ""
+"|checkbox| :guilabel:`Add new vertex on intersecting edges`: with this "
+"option, a new vertex is added each time the forcing line intersect an edge. "
+"This option leads to split along the line each encountered faces."
+msgstr ""
+"|checkbox| :guilabel:`Add new vertex on intersecting edges`: 이 옵션을 선택하면 "
+"강제선(절단선)이 변과 교차할 때마다 새 꼭짓점을 추가합니다. 이 옵션을 선택한 경우 강제선과 교차하는 모든 면을 강제선을 따라 분할하게"
+" 됩니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1023
+msgid ""
+"Without this option, encountered faces are removed and replaced by faces "
+"coming from a triangulation with only the existing vertices plus the "
+"vertices of the forcing lines (new vertices are also added on the boundary "
+"edge intersecting the forcing lines)."
+msgstr ""
+"이 옵션을 체크 해제하면, 강제선과 교차하는 면을 제거하고 기존 꼭짓점과 강제선의 꼭짓점만을 이용해서 삼각 분할한 면으로 대체합니다. "
+"(강제선과 교차하는 경계선의 변 위에도 새 꼭짓점을 추가합니다.)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1033
+msgid ""
+"Force Mesh using a line geometry - Results without (middle) and with (right)"
+" new vertex on edges intersection"
+msgstr "라인 도형으로 메시를 강제 분할 - 변들의 교차점에 새 꼭짓점을 추가하지 않은 (가운데) 결과물과 추가한 (오른쪽) 결과물"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1036
+msgid ""
+":guilabel:`Interpolate Z value from`: set how the new vertices Z value is "
+"calculated. It can be from:"
+msgstr ""
+":guilabel:`Interpolate Z value from`: 새 꼭짓점의 Z 값을 어떻게 계산할지 설정합니다. 다음 가운데 선택할"
+" 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1039
+msgid ""
+"the :guilabel:`Mesh` itself: the new vertices Z value is interpolated from "
+"vertices of the face they fall within"
+msgstr ":guilabel:`Mesh` 자체: 새 꼭짓점이 들어가는 면의 꼭짓점들로부터 새 꼭짓점의 Z 값을 보간합니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1041
+msgid ""
+"or the :guilabel:`Forcing line`: if the line is defined by a 3D vector "
+"feature or a drawn line then the new vertices Z value is derived from its "
+"geometry. In case of 2D line feature, the new vertices Z value is the "
+":guilabel:`Vertex Z value`."
+msgstr ""
+"또는 :guilabel:`Forcing line`: 3차원 벡터 피처 또는 사용자가 그린 선이 강제선을 정의하는 경우 해당 도형에서 새 "
+"꼭짓점의 Z 값을 파생시킵니다. 2차원 라인 피처의 경우, 새 꼭짓점의 Z 값은 :guilabel:`Vertex Z value` 입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1046
+msgid ""
+":guilabel:`Tolerance`: when an existing mesh vertex is closer to the line "
+"than the tolerance value, do not create new vertex on the line but use the "
+"existing vertex instead. The value can be set in :guilabel:`Meters at Scale`"
+" or in :guilabel:`Map Units` (more details at :ref:`unit_selector`)."
+msgstr ""
+":guilabel:`Tolerance`: 기존 메시 꼭짓점이 강제선에 이 허용 오차 값보다 가까이 있는 경우 강제선 위에 새 꼭짓점을 "
+"생성하지 않고 대신 기존 꼭짓점을 사용합니다. :guilabel:`Meters at Scale` 또는 :guilabel:`Map "
+"Units` 단위로 이 값을 설정할 수 있습니다. (자세한 내용은 :ref:`unit_selector` 를 참조하세요.)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1055
+msgid "Reindexing meshes"
+msgstr "메시 인덱스 재생성하기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1057
+msgid ""
+"During edit, and in order to allow quick undo/redo operations, QGIS keeps "
+"empty places for deleted elements, which may lead to growing memory use and "
+"inefficient mesh structuring. The :menuselection:`Mesh -->` |meshReindex| "
+":menuselection:`Reindex Faces and Vertices` tool is designed to remove these"
+" holes and renumber the indices of faces and vertices so that they are "
+"continuous and somewhat reasonably ordered. This optimizes relation between "
+"faces and vertices and increases the efficiency of calculation."
+msgstr ""
+"편집 작업 도중 되돌리기/다시 실행(undo/redo) 작업을 빠르게 하기 위해, QGIS는 삭제된 요소를 위한 텅 빈 공간을 "
+"유지합니다. 이때 메모리 사용량이 늘어날 수도 있고 메시 구조 생성이 비효율적으로 바뀔 수도 있습니다. "
+":menuselection:`Mesh -->` |meshReindex| :menuselection:`Reindex Faces and "
+"Vertices` 도구는 이런 구멍을 제거하고 면과 꼭짓점의 인덱스가 연속적이고 어느 정도 합리적인 순서가 되도록 번호를 다시 매기도록 "
+"설계되었습니다. 이렇게 하면 면과 꼭짓점 사이의 관계를 최적화하고 계산의 효율을 향상시킵니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1066
+msgid ""
+"The |meshReindex| :guilabel:`Reindex Faces and Vertices` tool saves the "
+"layer and clear the undo/redo stacks, disabling any rollback."
+msgstr ""
+"|meshReindex| :guilabel:`Reindex Faces and Vertices` 도구는 레이어를 저장하고 되돌리기/다시 "
+"실행 스택을 초기화하기 때문에 모든 되돌리기를 비활성화시킵니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1073
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1084
+msgid "Mesh Calculator"
+msgstr "메시 계산기"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1075
+msgid ""
+"The :guilabel:`Mesh Calculator` tool from the top :menuselection:`Mesh` menu"
+" allows you to perform arithmetic and logical calculations on existing "
+"dataset groups to generate a new dataset group (see "
+":numref:`figure_mesh_calculator`)."
+msgstr ""
+"최상위 :menuselection:`Mesh` 메뉴의 :guilabel:`Mesh Calculator` 도구를 이용하면 기존 데이터셋 "
+"그룹에 대한 수학적이고 논리적인 계산을 수행해서 새로운 데이터셋 그룹을 생성할 수 있습니다. "
+"(:numref:`figure_mesh_calculator` 을 참조하세요.)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1086
+msgid ""
+"The :guilabel:`Datasets` list contains all dataset groups in the active mesh"
+" layer. To use a dataset group in an expression, double click its name in "
+"the list and it will be added to the :guilabel:`Mesh calculator expression` "
+"field. You can then use the operators to construct calculation expressions, "
+"or you can just type them into the box."
+msgstr ""
+":guilabel:`Datasets` 프레임은 활성 메시 레이어의 모든 데이터셋 그룹의 목록을 담고 있습니다. 표현식에 데이터셋 그룹을 "
+"사용하려면 이 목록에서 데이터셋 그룹의 이름을 더블클릭하십시오. :guilabel:`Mesh calculator expression` "
+"란에 선택한 데이터셋 그룹이 추가될 것입니다. 그러면 연산자를 이용해서 계산 표현식을 작성하거나 또는 사용자가 직접 표현식을 입력할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1092
+msgid ""
+"The :guilabel:`Result Layer` helps you configure properties of the output "
+"layer:"
+msgstr ":guilabel:`Result Layer` 프레임에서 산출 레이어의 속성을 환경 설정할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1094
+msgid ""
+"|checkbox| :guilabel:`Create on-the-fly dataset group instead of writing "
+"layer to disk`:"
+msgstr ""
+"|checkbox| :guilabel:`Create on-the-fly dataset group instead of writing "
+"layer to disk`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1097
+msgid ""
+"If unchecked, the output is stored on disk as a new plain file. An "
+":guilabel:`Output File` path and an :guilabel:`Output Format` are required."
+msgstr ""
+"이 옵션을 체크 해제하는 경우, 디스크 상에 산출물을 새 평문 텍스트 파일로 저장합니다. :guilabel:`Output File` 경로"
+" 및 :guilabel:`Output Format` 은 필수입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1099
+msgid ""
+"If checked, a new dataset group will be added to the mesh layer. Values of "
+"the dataset group are not stored in memory but each dataset is calculated "
+"when needed with the formula entered in the mesh calculator. That virtual "
+"dataset group is saved with the project, and if needed, it can be removed or"
+" made persistent in file from the layer :guilabel:`Source` properties tab."
+msgstr ""
+"이 옵션을 체크하면 메시 레이어에 새 데이터셋 그룹을 추가할 것입니다. 이 데이터셋 그룹의 값들은 메모리에 저장되는 것이 아니라 필요한 "
+"경우 메시 계산기에 입력된 공식으로 각 데이터셋을 계산해서 나옵니다. 이런 가상 데이터셋 그룹은 프로젝트와 함께 저장되며, 필요한 경우 "
+"레이어의 :guilabel:`Source` 속성 탭에서 제거하거나 또는 영구적인 파일로 저장할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1106
+msgid ""
+"In either case, you should provide a :guilabel:`Group Name` for the output "
+"dataset group."
+msgstr "둘 중 어떤 경우라도, 산출 데이터셋 그룹의 :guilabel:`Group Name` 을 지정해야 할 것입니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1108
+msgid "The :guilabel:`Spatial extent` to consider for calculation can be:"
+msgstr "계산에 넣을 :guilabel:`Spatial extent` 는 다음 가운데 하나일 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1110
+msgid ""
+"a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`, "
+":guilabel:`X max`, :guilabel:`Y min` and :guilabel:`Y max` coordinate, or "
+"extracted from an existing dataset group (select it in the list and press "
+":guilabel:`Use selected layer extent` to fill the abovementioned coordinate "
+"fields)"
+msgstr ""
+":guilabel:`Custom extent`: 사용자가 직접 :guilabel:`X min`, :guilabel:`X max`, "
+":guilabel:`Y min` 그리고 :guilabel:`Y max` 좌표를 입력하거나, 또는 기존 데이터셋 그룹에서 추출해서 "
+"(목록에서 원하는 데이터셋 그룹을 선택한 다음 :guilabel:`Use selected layer extent` 버튼을 누르면 앞에서 "
+"말한 좌표 란을 채울 것입니다) 사용자 지정 범위를 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1115
+msgid ""
+"defined by a polygon layer (:guilabel:`Mask layer`) of the project: the "
+"polygon features geometry are used to clip the mesh layer datasets"
+msgstr ""
+"프로젝트의 폴리곤 레이어로 정의(:guilabel:`Mask layer`):  폴리곤 피처 도형을 이용해서 메시 레이어 데이터셋을 잘라낼"
+" 수 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1118
+msgid ""
+"The :guilabel:`Temporal extent` to take into account for datasets can be set"
+" with the :guilabel:`Start time` and :guilabel:`End time` options, selected "
+"from the existing dataset groups timesteps. They can also be filled using "
+"the :guilabel:`Use all selected dataset times` button to take the whole "
+"range."
+msgstr ""
+":guilabel:`Temporal extent`: 기존 데이터셋 그룹의 타임스탬프에서 선택한 :guilabel:`Start time` "
+"및 :guilabel:`End time` 옵션으로 계산에 넣을 데이터셋 시계열 범위를 설정할 수 있습니다. :guilabel:`Use "
+"all selected dataset times` 버튼을 눌러 전체 시계열 범위를 가져와 :guilabel:`Start time` 및 "
+":guilabel:`End time` 란을 채울 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1123
+msgid ""
+"The :guilabel:`Operators` section contains all available operators. To add "
+"an operator to the mesh calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"statistical functions (``min``, ``max``, ``sum (aggr)``, ``average (aggr)``,"
+" ... ) are available. Conditional expressions (``=``, ``!=``, ``<``, ``>=``,"
+" ``IF``, ``AND``, ``NOT``, ... ) return either 0 for false and 1 for true, "
+"and therefore can be used with other operators and functions. The ``NODATA``"
+" value can also be used in the expressions."
+msgstr ""
+":guilabel:`Operators` 프레임이 사용할 수 있는 모든 연산자를 담고 있습니다. 메시 계산기 표현식란에 연산자를 "
+"추가하려면, 적절한 버튼을 클릭하십시오. 산술 계산(``+``, ``-``, ``*``, ... ) 및 통계 함수(``min``, "
+"``max``, ``sum (aggr)``, ``average (aggr)``, ... )를 사용할 수 있습니다. 조건 "
+"표현식(``=``, ``!=``, ``<``, ``>=``, ``IF``, ``AND``, ``NOT``, ... )은 거짓인 경우 0을"
+" 또는 참인 경우 1을 반환하기 때문에, 다른 연산자 및 함수와 함께 사용할 수 있습니다. 표현식에 ``NODATA`` 값도 사용할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1131
+msgid ""
+"The :guilabel:`Mesh Calculator Expression` widget shows and lets you edit "
+"the expression to execute."
+msgstr ""
+":guilabel:`Mesh Calculator Expression` 위젯은 실행할 표현식을 표시하고 편집할 수 있게 해줍니다."
