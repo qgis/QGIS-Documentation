@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Eric Armijo, 2024
+# Harrissou Sant-anna, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:6
+msgid "Working with Vector Tiles"
+msgstr "Trabajando con Teselas Vectoriales"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:14
+msgid "What are Vector Tiles?"
+msgstr "¿Qué son las teselas vectoriales?"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:16
+msgid ""
+"Vector tiles are packets of geographic data, packaged into pre-defined "
+"roughly-square shaped \"tiles\" for transfer over the web. They combine pre-"
+"rendered raster map tiles and vector map tiles. The vector tile server "
+"returns vector map data, which has been clipped to the boundaries of each "
+"tile, instead of a pre-rendered map image. The clipped tiles represent the "
+"zoom-levels of the vector tile service, derived from a pyramid approach. "
+"Using this structure, the data-transfer is reduced in comparison to un-tiled"
+" vector maps. Only data within the current map view, and at the current zoom"
+" level need to be transferred. Also, compared to a tiled raster map, data "
+"transfer is also greatly reduced, as vector data is typically much smaller "
+"than a rendered bitmap. Vector tiles do not have any styling information "
+"assigned so QGIS needs to apply a cartographic style in order to display the"
+" data."
+msgstr ""
+"Las teselas vectoriales son paquetes de datos geográficos, empaquetados en "
+"\"mosaicos\" predefinidos de forma aproximadamente cuadrada para su "
+"transferencia a través de la web. Combinan teselas de mapas ráster pre-"
+"renderizados y teselas de mapas vectoriales. El servidor de teselas "
+"vectoriales devuelve datos de mapas vectoriales, que se han recortado a los "
+"límites de cada tesela, en lugar de una imagen de mapa renderizada "
+"previamente. Las teselas recortadas representan los niveles de zoom del "
+"servicio de teselas vectoriales, derivados de un enfoque piramidal. Con esta"
+" estructura, la transferencia de datos se reduce en comparación con los "
+"mapas vectoriales sin teselas. Solo es necesario transferir los datos dentro"
+" de la vista de mapa actual y en el nivel de zoom actual. Además, en "
+"comparación con un mapa ráster en mosaico, la transferencia de datos también"
+" se reduce considerablemente, ya que los datos vectoriales suelen ser mucho "
+"más pequeños que un mapa de bits renderizado. Las teselas vectoriales no "
+"tienen ninguna información de estilo asignada, por lo que QGIS necesita "
+"aplicar un estilo cartográfico para mostrar los datos."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:36
+msgid "Pyramid structure of vector tiles with zoom-levels"
+msgstr "Estructura piramidal de teselas vectoriales con niveles de zoom"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:40
+msgid "Supported Formats"
+msgstr "Formatos Soportados"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:42
+msgid "There is support for vector tiles through:"
+msgstr "Hay soporte para teselas vectoriales a través de:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:44
+msgid ""
+"remote sources (HTTP/S) - with XYZ template - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+msgstr ""
+"fuentes (HTTP/S) remotas - con plantilla XYZ - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:45
+msgid ""
+"local files - with XYZ template - e.g. "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+msgstr ""
+"archivos locales - con plantilla XYZ - p.ej. "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:46
+msgid ""
+"local MBTiles database - e.g. "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
+msgstr ""
+"base de datos local MBTiles - p.ej. "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:48
+msgid ""
+"To load a vector tiles dataset into QGIS, use the |addVectorTileLayer| "
+":guilabel:`Vector Tile` tab in the :guilabel:`Data Source Manager` dialog. "
+"Read :ref:`vector_tiles` for more details."
+msgstr ""
+"Para cargar un conjunto de datos de teselas vectoriales en QGIS, "
+"utilice|addVectorTileLayer| :guilabel:`Tesela vectorial`  en el cuadro de "
+"diálogo :guilabel:`Administrador de fuente de datos`. Lea "
+":ref:`vector_tiles` para más detalles."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:228
+msgid "addVectorTileLayer"
+msgstr "addVectorTileLayer"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:55
+msgid "Vector Tiles Dataset Properties"
+msgstr "Propiedades del conjunto de datos de teselas vectoriales"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:236
+msgid "metadata"
+msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:252
+msgid "system"
+msgstr "system"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:244
+msgid "symbology"
+msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:232
+msgid "labelingSingle"
+msgstr "labelingSingle"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:238
+msgid "rendering"
+msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:230
+msgid "editMetadata"
+msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:68
+msgid ""
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
+msgstr ""
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:74
+msgid "Information Properties"
+msgstr "Propiedades de información"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:76
+msgid ""
+"The :guilabel:`Information` tab is read-only and represents an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. Provided information are:"
+msgstr ""
+"La pestaña :guilabel:`Información` es de solo lectura y representa un lugar "
+"interesante para obtener rápidamente información resumida y metadatos en la "
+"capa actual. Los datos proporcionados son:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:80
+msgid ""
+"based on the provider of the layer: name, URI, source type and path, number "
+"of zoom levels"
+msgstr ""
+"según el proveedor de la capa: nombre, URI, tipo de fuente y ruta, número de"
+" niveles de zoom"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:82
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr ""
+"el sistema de referencia de coordenadas: nombre, unidades, método, "
+"precisión, referencia (es decir, si es estático o dinámico)"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:84
+msgid ""
+"picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access, "
+"extents, links, contacts, history..."
+msgstr ""
+"seleccionado de los :ref:`filled metadata <vectortilesmetadatamenu>`: "
+"acceso, extensiones, enlaces, contactos, historial..."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:90
+msgid "Source Properties"
+msgstr "Propiedades de fuente"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:95
+msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
+msgstr ""
+"el :guilabel:`Nombre de la capa` a mostrar en el :guilabel:`Panel de capas`;"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:242
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:123
+msgid "Vector Tile Layer Symbology"
+msgstr "Simbología de capa de teselas vectoriales"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:246
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:250
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:248
+msgid "symbologyEdit"
+msgstr "symbologyEdit"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:254
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:240
+msgid "search"
+msgstr "search"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:163
+msgid "Layer rendering"
+msgstr "Reproducción de capas"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:168
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your "
+"vector layer to your needs. You can also make a precise definition of the "
+"percentage of visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`Opacidad`: Con esta herramienta puede hacer visible la capa "
+"subyacente en el lienzo del mapa. Utilice el control deslizante para adaptar"
+" la visibilidad de la capa vectorial a sus necesidades. También puede "
+"definir con precisión el porcentaje de visibilidad en el menú situado junto "
+"al deslizador."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:177
+msgid "Styles"
+msgstr "Estilos"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:184
+msgid ":guilabel:`QML` files (:ref:`qgisstylefile`)"
+msgstr ":guilabel:`QML` archivos (:ref:`qgisstylefile`)"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:185
+msgid ":guilabel:`MapBox GL Json` style configuration files"
+msgstr ":guilabel:Archivos de configuración de estilo `MapBox GL Json`"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:192
+msgid "Rendering Properties"
+msgstr "Propiedades de representación"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:234
+msgid "mapIdentification"
+msgstr "mapIdentification"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:215
+msgid "Metadata Properties"
+msgstr "Propiedades de metadatos"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:217
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"El |editMetadata| :guilabel:`Metadata` le brinda opciones para crear y "
+"editar un informe de metadatos en su capa. Consulte :ref:`metadatamenu` para"
+" obtener más información."

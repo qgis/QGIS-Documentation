@@ -1,0 +1,3076 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2024
+# Harrissou Sant-anna, 2024
+# DiGro, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: DiGro, 2024\n"
+"Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"Vertalen is een inspanning van de gemeenschap `waaraan u deel kunt nemen "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Deze pagina is momenteel voor |translation progress| "
+"vertaald."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:5
+msgid "Working with Mesh Data"
+msgstr "Werken met gegevens met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:13
+msgid "What's a mesh?"
+msgstr "Wat zijn mazen?"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:15
+msgid ""
+"A mesh is an unstructured grid usually with temporal and other components. "
+"The spatial component contains a collection of vertices, edges and/or faces,"
+" in 2D or 3D space:"
+msgstr ""
+"Een laag met mazen is een ongestructureerd raster, gewoonlijk met tijd- en "
+"andere componenten. De ruimtelijke component bevat een collectie punten, "
+"randen en zijden in ruimte 2D of 3D:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:19
+msgid ""
+"**vertices** - XY(Z) points (in the layer's coordinate reference system)"
+msgstr ""
+"**punten** - XY(Z)-punten (in het coördinaten referentiesysteem van de laag)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:20
+msgid "**edges** - connect pairs of vertices"
+msgstr "**randen** - verbonden paren punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:21
+msgid ""
+"**faces** - a face is a set of edges forming a closed shape - typically a "
+"triangle or a quadrilateral (quad), rarely polygons with more vertices"
+msgstr ""
+"**zijden** - een zijde is een set hoeken die een gesloten vorm vormen - "
+"gewoonlijk een driehoek of een vierhoek (quad), zelden polygonen met "
+"meerdere punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:24
+msgid ""
+"Relying on the above, mesh layers can thus have different types of "
+"structure:"
+msgstr ""
+"Uitgaande van bovenstaande kunnen lagen met mazen dus verschillende typen "
+"structuur hebben:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:26
+msgid ""
+"1D Meshes: consist of vertices and edges. An edge connects two vertices and "
+"can have assigned data (scalars or vectors) on it. The 1D mesh network can "
+"be for example used for modelling of an urban drainage system."
+msgstr ""
+"1D-mazen: bestaan uit punten en randen. Een rand verbindt twee punten en kan"
+" gegevens (scalairen of vectoren) aan zich hebben toegewezen. Het netwerk "
+"van 1D-mazen kan bijvoorbeeld worden gebruikt voor het modelleren van een "
+"stedelijk drainagesysteem."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:29
+msgid ""
+"2D meshes: consist of faces with triangles, regular or unstructured quads."
+msgstr ""
+"2D-mazen: bestaan uit zijden met driehoeken, regelmatige of "
+"ongestructureerde vierkanten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:30
+msgid ""
+"3D layered meshes: consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (levels) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. The mesh definition (vertical level extrusion) could in general "
+"change in time. The data is usually defined in volume centres or by some "
+"parametric function."
+msgstr ""
+"3D-gelaagde mazen: bestaan uit meerdere gestapelde 2D ongestructureerde "
+"mazen die elk zijn uitgetrokken in de verticale richting (niveaus) door "
+"middel van een verticale coördinaat. De punten en zijden hebben dezelfde "
+"topologie op elk verticaal niveau. De definitie van de mazen (uittrekking "
+"van verticaal niveau) zou in het algemeen kunnen wijzigen in tijd. De "
+"gegevens worden gewoonlijk gedefinieerd in volumecentra of door enige "
+"parametrische functie."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:41
+msgid "Different mesh types"
+msgstr "Verschillende typen mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:43
+msgid ""
+"Mesh provides information about the spatial structure. In addition, the mesh"
+" can have datasets (groups) that assign a value to every vertex. For "
+"example, having a triangular mesh with numbered vertices as shown in the "
+"image below:"
+msgstr ""
+"Mazen verschaffen informatie over de ruimtelijke structuur. In aanvulling "
+"daarop kunnen de mazen gegevenssets (groepen) hebben die een waarde "
+"toewijzen aan elk punt. Bijvoorbeeld driehoekige mazen hebben met genummerde"
+" punten, zoals weergegeven in de afbeelding hieronder:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:52
+msgid "Triangular grid with numbered vertices"
+msgstr "Driehoekig raster met genummerde punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:54
+msgid ""
+"Each vertex can store different datasets (typically multiple quantities), "
+"and those datasets can also have a temporal dimension. Thus, a single file "
+"may contain multiple datasets."
+msgstr ""
+"Elk punt kan verschillende gegevenssets opslaan (gewoonlijk meerdere "
+"kwantiteiten), en deze gegevenssets kunnen ook een tijdelijk dimensie "
+"hebben. Één enkel bestand kan dus meerdere gegevenssets bevatten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:58
+msgid ""
+"The following table gives an idea about the information that can be stored "
+"in mesh datasets. Table columns represent indices of mesh vertices, each row"
+" represents one dataset. Datasets can have different datatypes. In this "
+"case, it stores wind velocity at 10m at a particular moments in time (t1, "
+"t2, t3)."
+msgstr ""
+"De volgende tabel geeft een idee over welke informatie kan worden opgeslagen"
+" in gegevenssets met mazen. Tabelkolommen geven indices weer van punten van "
+"mazen, elke rij staat voor één gegevensset. Gegevenssets kunnen "
+"verschillende gegevenstypen hebben. In dit geval slaat het de windsnelheid "
+"op 10 m op op bepaalde tijden (t1, t2, t3)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:64
+msgid ""
+"In a similar way, the mesh dataset can also store vector values for each "
+"vertex. For example, wind direction vector at the given time stamps:"
+msgstr ""
+"Op soortgelijke wijze kan de gegevensset van mazen ook vectorwaarden opslaan"
+" voor elk punt. Bijvoorbeeld een vector voor de windrichting op de opgegeven"
+" tijdstippen:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:67
+msgid "Example of mesh dataset"
+msgstr "Voorbeeld van gegevensset met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "10 metre wind"
+msgstr "10 meter wind"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "1"
+msgstr "1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "2"
+msgstr "2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "3"
+msgstr "3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:75
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:79
+msgid "..."
+msgstr "..."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+msgid "10 metre speed at time=t1"
+msgstr "10 meter snelheid op tijd=t1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "17251"
+msgstr "17251"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+msgid "24918"
+msgstr "24918"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+msgid "32858"
+msgstr "32858"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "10 metre speed at time=t2"
+msgstr "10 meter snelheid op tijd=t2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "19168"
+msgstr "19168"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "23001"
+msgstr "23001"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "36418"
+msgstr "36418"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "10 metre speed at time=t3"
+msgstr "10 meter snelheid op tijd=t3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "21085"
+msgstr "21085"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "30668"
+msgstr "30668"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "10m wind direction time=t1"
+msgstr "10 m windrichting tijd=t1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "[20,2]"
+msgstr "[20,2]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "[20,3]"
+msgstr "[20,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "[20,4.5]"
+msgstr "[20,4.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "10m wind direction time=t2"
+msgstr "10 m windrichting tijd=t2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "[21,3]"
+msgstr "[21,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "[21,4]"
+msgstr "[21,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "[21,5.5]"
+msgstr "[21,5.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "10m wind direction time=t3"
+msgstr "10 m windrichting tijd=t3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "[22,4]"
+msgstr "[22,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "[22,5]"
+msgstr "[22,5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "[22,6.5]"
+msgstr "[22,6.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:82
+msgid ""
+"We can visualize the data by assigning colors to values (similarly to how it"
+" is done with :ref:`Singleband pseudocolor <label_colormaptab>` raster "
+"rendering) and interpolating data between vertices according to the mesh "
+"topology. It is common that some quantities are 2D vectors rather than being"
+" simple scalar values (e.g. wind direction). For such quantities it is "
+"desirable to display arrows indicating the directions."
+msgstr ""
+"We kunnen de gegevens visualiseren door kleuren aan waarden toe te wijzen "
+"(soortgelijk als hoe dat wordt gedaan met :ref:`Enkelbands pseudokleur "
+"<label_colormaptab>` renderen van rasters) en gegevens interpoleren tussen "
+"punten overeenkomstig de topologie van de mazen. Het komt vaak voor dat "
+"sommige kwantiteiten 2D-vectors zijn, in plaats van dat zij eenvoudige "
+"scalaire waarden zijn (bijv. windrichting). Voor dergelijke kwantiteiten is "
+"het wenselijk om pijlen weer te geven die de richtingen aangeven."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:94
+msgid "Possible visualisation of mesh data"
+msgstr "Mogelijke visualisatie van gegevens met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:99
+msgid "Supported formats"
+msgstr "Ondersteunde indelingen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:101
+msgid ""
+"QGIS accesses mesh data using the `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, and natively supports a "
+"`variety of formats <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`__. Whether QGIS can edit a mesh layer depends on the format and "
+"the mesh structure type."
+msgstr ""
+"QGIS verkrijgt toegang tot de gegevens van mazen met de `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, en ondersteunt vanuit zichzelf "
+"een `variëteit aan indelingen "
+"<https://github.com/lutraconsulting/MDAL#supported-formats>`__. Of QGIS een "
+"laag met mazen kan bewerken is afhankelijk van de indeling en het "
+"structuurtype van de mazen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:106
+msgid ""
+"To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` "
+"tab in the :guilabel:`Data Source Manager` dialog. Read :ref:`mesh_loading` "
+"for more details."
+msgstr ""
+"Gebruik de tab |addMeshLayer| :guilabel:`Mazen` in het dialoogvenster "
+":guilabel:`Databronnen beheren` om een gegevensset met mazen in QGIS te "
+"laden. Lees :ref:`mesh_loading` voor meer details."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1145
+msgid "addMeshLayer"
+msgstr "addMeshLayer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:114
+msgid "Mesh Dataset Properties"
+msgstr "Eigenschappen gegevensset met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:116
+msgid ""
+"The :guilabel:`Layer Properties` dialog for a mesh layer provides general "
+"settings to manage dataset groups of the layer and their rendering (active "
+"dataset groups, symbology, 2D and 3D rendering). It also provides "
+"information about the layer."
+msgstr ""
+"Het dialoogvenster :guilabel:`Laageigenschappen` voor een laag met mazen "
+"verschaft algemene instellingen om de groepen van gegevenssets van de laag "
+"te beheren en het renderen ervan (actieve groepen van de gegevensset, "
+"symbologie, 2D en 3D renderen). Het verschaft ook informatie over de laag."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:121
+msgid "To access the :guilabel:`Layer Properties` dialog:"
+msgstr "Toegang tot het dialoogvenster :guilabel:`Laag-eigenschappen`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:123
+msgid ""
+"In the :guilabel:`Layers` panel, double-click the layer or right-click and "
+"select :guilabel:`Properties...` from the pop-up menu;"
+msgstr ""
+"In het paneel :guilabel:`Lagen`, dubbelklik op de laag of klik met rechts en"
+" selecteer :guilabel:`Eigenschappen…` uit het contextmenu;"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:125
+msgid ""
+"Go to :menuselection:`Layer --> Layer Properties...` menu when the layer is "
+"selected."
+msgstr ""
+"Ga naar menu :menuselection:`Kaartlagen --> Laageigenschappen…` als de laag "
+"is geselecteerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:128
+msgid ""
+"The mesh :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"Het dialoogvenster voor mazen :guilabel:`Laageigenschappen` verschaft de "
+"volgende gedeelten:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:130
+msgid "Tabs of the Mesh Layer Properties"
+msgstr "Tabs van de eigenschappen van laag met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:132
+msgid "|metadata| :ref:`Information <meshinformation>`"
+msgstr "|metadata| :ref:`Informatie <meshinformation>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1197
+msgid "metadata"
+msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:133
+msgid "|system| :ref:`Source <meshsource>`"
+msgstr "|system| :ref:`Bron <meshsource>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1215
+msgid "system"
+msgstr "system"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:134
+msgid "|symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`"
+msgstr "|symbology| :ref:`Symbologie <meshsymbology>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1213
+msgid "symbology"
+msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:135
+msgid "|3d| :ref:`3D View <mesh3dview>`:sup:`[1]`"
+msgstr "|3d| :ref:`3D-weergave <mesh3dview>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1141
+msgid "3d"
+msgstr "3d"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:136
+msgid "|temporal| :ref:`Temporal <meshtemporal>`"
+msgstr "|temporal| :ref:`Tijdbeheer <meshtemporal>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1217
+msgid "temporal"
+msgstr "temporal"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:137
+msgid "|elevationscale| :ref:`Elevation <meshelevation>`"
+msgstr "|elevationscale| :ref:`Hoogte <meshelevation>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1159
+msgid "elevationscale"
+msgstr "elevationscale"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:138
+msgid "|rendering| :ref:`Rendering <meshrendering>`"
+msgstr "|rendering| :ref:`Renderen <meshrendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1203
+msgid "rendering"
+msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:139
+msgid "|editMetadata| :ref:`Metadata <meshmetadata>`"
+msgstr "|editMetadata| :ref:`Metadata <meshmetadata>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1157
+msgid "editMetadata"
+msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:143
+msgid ""
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
+msgstr ""
+":sup:`[1]` Ook beschikbaar in het :ref:`paneel Laag opmaken "
+"<layer_styling_panel>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:145
+msgid ""
+"Most of the properties of a mesh layer can be saved to or loaded from a "
+":file:`.qml` using the :guilabel:`Style` menu at the bottom of the dialog. "
+"More details at :ref:`manage_custom_style`."
+msgstr ""
+"De meeste eigenschappen van een laag met mazen kunnen worden opgeslagen naar"
+" of geladen uit een bestand :file:`.qml` met het menu :guilabel:`Stijl` aan "
+"de onderzijde van het dialoogvenster. Meer details in "
+":ref:`manage_custom_style`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:153
+msgid "Information Properties"
+msgstr "Eigenschappen Informatie"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:160
+msgid "Mesh Layer Information Properties"
+msgstr "Laag met mazen eigenschappen Informatie"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:162
+msgid ""
+"The |metadata| :guilabel:`Information` tab is read-only and represents an "
+"interesting place to quickly grab summarized information and metadata on the"
+" current layer. Provided information are:"
+msgstr ""
+"De tab |metadata| :guilabel:`Informatie` is alleen-lezen en is een "
+"interessante plek om snel wat overzichtsinformatie en metadata over de "
+"huidige laag op te pakken. Verschafte informatie is:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:166
+msgid ""
+"general such as  name in the project, source path, list of auxiliary files, "
+"last save time and size, the used provider"
+msgstr ""
+"algemeen, zoals naam in het project, pad van de bron, lijst met aanvullende "
+"bestanden, laatste tijd en grootte van opslaan, de gebruikte provider"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:168
+msgid ""
+"based on the provider of the layer: extent, vertex, face, edges and/or "
+"dataset groups count"
+msgstr ""
+"gebaseerd op de provider van de laag: bereik, punt, zijde, aantal randen "
+"en/of groepen gegevensset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:170
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr ""
+"het Coördinaten ReferentieSysteem: naam, eenheden, methode, nauwkeurigheid, "
+"verwijzing (d.i. of het statisch of dynamisch is)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:172
+msgid ""
+"extracted from filled :ref:`metadata <meshmetadata>`: access, extents, "
+"links, contacts, history..."
+msgstr ""
+"opgehaald uit de gevulde :ref:`metadata <meshmetadata>`: toegang, bereiken, "
+"links, contacten, geschiedenis…"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:179
+msgid "Source Properties"
+msgstr "Eigenschappen Bron"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:181
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected mesh, including:"
+msgstr ""
+"De tab |system| :guilabel:`Bron` geeft basisinformatie weer over de "
+"geselecteerde laag met mazen, inclusief:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:189
+msgid "Mesh Layer Source Properties"
+msgstr "Laag met mazen eigenschappen Bron"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:191
+msgid "the layer name to display in the :guilabel:`Layers` panel"
+msgstr "de laagnaam om weer te geven in het paneel :guilabel:`Lagen`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:192
+msgid ""
+"setting the Coordinate Reference System: Displays the layer’s :ref:`Assigned"
+" Coordinate Reference System (CRS) <layer_crs>`. You can change the layer’s "
+"CRS by selecting a recently used one in the drop-down list or clicking on "
+"|setProjection| :guilabel:`Select CRS` button (see :ref:`crs_selector`). Use"
+" this process only if the CRS applied to the layer is wrong or if none was "
+"applied."
+msgstr ""
+"instellen van het Coördinaten ReferentieSysteem: Geeft het :ref:`toegewezen "
+"Coördinaten ReferentieSysteem (CRS) <layer_crs>` van de laag weer. U kunt "
+"het CRS van de laag wijzigen door een recent gebruikte te kiezen uit de "
+"keuzelijst of te klikken op de knop |setProjection| :guilabel:`CRS "
+"selecteren` (bekijk :ref:`crs_selector`). Gebruik dit proces alleen als het "
+"op de laag toegepaste CRS verkeerd is of als er geen werd gespecificeerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1211
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:198
+msgid ""
+"The :guilabel:`Available datasets` frame lists all the dataset groups (and "
+"subgroups) in the mesh layer, with their type and description in a tree "
+"view. Both regular datasets (i.e. their data is stored in the file) and "
+"virtual datasets (which are :ref:`calculated on the fly <mesh_calculator>`) "
+"are listed."
+msgstr ""
+"Het frame :guilabel:`Beschikbare gegevenssets` vermeldt alle groepen "
+"gegevenssets (en subgroepen) in de laag met mazen, met hun type en "
+"omschrijving in een boomweergave. Zowel gewone gegevenssets (d.i. hun "
+"gegevens zijn opgeslagen in het bestand) en virtuele gegevenssets (die "
+"direct worden :ref:`berekend <mesh_calculator>`) worden vermeld."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:203
+msgid ""
+"Use the |add| :guilabel:`Assign extra dataset to mesh` button to add more "
+"groups to the current mesh layer."
+msgstr ""
+"Gebruik de knop |add| :guilabel:`Extra gegevensset aan mazen toevoegen` om "
+"meer groepen aan de huidige laag met mazen toe te voegen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1143
+msgid "add"
+msgstr "add"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:205
+msgid ""
+"|collapseTree| :guilabel:`Collapse all` and |expandTree| :guilabel:`Expand "
+"all` the dataset tree, in case of embedded groups"
+msgstr ""
+"|collapseTree| :guilabel:`Alles inklappen` en |expandTree| :guilabel:`Alles "
+"uitklappen` van de boom van de gegevensset, in het geval van ingebedde "
+"groepen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1155
+msgid "collapseTree"
+msgstr "collapseTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1161
+msgid "expandTree"
+msgstr "expandTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:207
+msgid ""
+"If you are interested in few datasets, you can uncheck the others and make "
+"them unavailable in the project"
+msgstr ""
+"Als u slechts geïnteresseerd bent in enkele gegevenssets kunt u de andere "
+"deselecteren en ze onbeschikbaar maken in het project"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:209
+msgid "Double-click over a name and you can rename the dataset."
+msgstr "Dubbelklik op een naam en u kunt de gegevensset hernoemen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:210
+msgid ""
+"|refresh| :guilabel:`Reset to defaults`: checks all the groups and renames "
+"them back to their original name in the provider."
+msgstr ""
+"|refresh| :guilabel:`Herstellen naar standaarden`: selecteert alle groepen "
+"en hernoemt ze terug naar hun originele naam in de provider."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1201
+msgid "refresh"
+msgstr "refresh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:212
+msgid "Right-click over a virtual dataset group and you can:"
+msgstr "Klik met rechts op een virtuele groep gegevensset en u kunt:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:214
+msgid ":guilabel:`Remove dataset group` from the project"
+msgstr ":guilabel:`Groep gegevensset verwijderen` uit het project"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:215
+msgid ""
+":guilabel:`Save dataset group as...` a file on disk, to any supported "
+"format. The new file is kept assigned to the current mesh layer in the "
+"project."
+msgstr ""
+":guilabel:`Groep gegevensset opslaan als…` een bestand op schijf, naar elke "
+"ondersteunde indeling. Het nieuwe bestand blijft toegewezen aan de huidige "
+"laag met mazen in het project."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:217
+msgid ""
+"Checking the |unchecked| :guilabel:`Treat as static dataset` group allows to"
+" ignore the :ref:`map temporal navigation <maptimecontrol>` properties while"
+" rendering the mesh layer. For each active dataset group (as selected in "
+"|symbology| :menuselection:`Symbology -->` |general| :guilabel:`Datasets` "
+"tab), you can:"
+msgstr ""
+"Selecteren van de groep |unchecked| :guilabel:`Behandelen als statische "
+"gegevensset` maakt het mogelijk de eigenschappen voor :ref:`navigatie "
+"Tijdbeheer <maptimecontrol>` voor de kaart te negeren bij het renderen van "
+"de laag met mazen. Voor elke actieve groep gegevensset (zoals geselecteerd "
+"in |symbology| :menuselection:`Symbologie -->` tab |general| "
+":guilabel:`Gegevenssets`), kunt u:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1221
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1167
+msgid "general"
+msgstr "general"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:223
+msgid "set to :guilabel:`None`: the dataset group is not displayed at all"
+msgstr ""
+"instellen op :guilabel:`Geen`: de groep gegevensset wordt helemaal niet "
+"weergegeven"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:224
+msgid ""
+":guilabel:`Display dataset`: e.g., for the \"bed elevation\" dataset which "
+"is not time aware"
+msgstr ""
+":guilabel:`Gegevensset weergeven`: bijv. voor de gegevensset \"bed "
+"elevation\" die geen tijdsindeling heeft"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:226
+msgid ""
+"extract a particular date time: the dataset matching the provided time is "
+"rendered and stay fixed during map navigation."
+msgstr ""
+"een bepaalde datum/tijd uitnemen: de gegevensset die overeenkomt met de "
+"opgegeven tijd wordt gerenderd en blijft vast tijdens navigeren op de kaart."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:233
+msgid "Symbology Properties"
+msgstr "Eigenschappen Symbologie"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:235
+msgid ""
+"Click the |symbology| :guilabel:`Symbology` button to activate the dialog. "
+"Symbology properties are divided into several tabs:"
+msgstr ""
+"Klik op de knop |symbology| :guilabel:`Symbologie` om het dialoogvenster te "
+"activeren. Eigenschappen voor Symbologie zijn verdeeld over verschillende "
+"tabs:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:238
+msgid ":ref:`Datasets <mesh_symbology_datasets>`"
+msgstr ":ref:`Gegevenssets <mesh_symbology_datasets>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:239
+msgid ":ref:`Contours <mesh_symbology_contours>`"
+msgstr ":ref:`Contouren <mesh_symbology_contours>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:240
+msgid ":ref:`Vectors <mesh_symbology_vectors>`"
+msgstr ":ref:`Vectoren <mesh_symbology_vectors>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:241
+msgid ":ref:`Rendering <mesh_symbology_rendering>`"
+msgstr ":ref:`Renderen <mesh_symbology_rendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:242
+msgid ":ref:`Stacked mesh averaging method <mesh_stacked_averaging>`"
+msgstr ""
+":ref:`Methode voor middelen van gestapelde mazen <mesh_stacked_averaging>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:247
+msgid "Datasets"
+msgstr "Gegevenssets"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:249
+msgid ""
+"The tab |general| :sup:`Datasets` is the main place to control and set which"
+" datasets will be used for the layer. It presents the following items:"
+msgstr ""
+"De tab |general| :sup:`Gegevenssets` is de belangrijkste plaats om te "
+"beheren en in te stellen welke gegevenssets zullen worden gebruikt voor de "
+"laag. Het geeft de volgende items weer:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:252
+msgid ""
+":guilabel:`Groups` available in the mesh dataset, with whether they provide:"
+msgstr ""
+":guilabel:`Groepen` beschikbaar in de gegevensset met mazen, en of zij "
+"verschaffen:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:254
+msgid "|meshcontoursoff| scalar dataset"
+msgstr "|meshcontoursoff| scalaire gegevensset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1189
+msgid "meshcontoursoff"
+msgstr "meshcontoursoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:255
+msgid ""
+"or |meshvectorsoff| vector dataset: by default, each vector dataset has a "
+"scalar dataset representing its magnitude automatically generated."
+msgstr ""
+"of |meshvectorsoff| vector gegevensset: standaard heeft elke vector "
+"gegevensset een scalaire gegevensset die zijn automatisch gemaakte omvang "
+"weergeeft."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1195
+msgid "meshvectorsoff"
+msgstr "meshvectorsoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:258
+msgid ""
+"Click on the icon next to the dataset name to select the group and type of "
+"data to represent."
+msgstr ""
+"Klik op het pictogram naast de naam van de gegevensset om de groep en het "
+"type gegevens, dat moet worden weergegeven, te selecteren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:260
+msgid ":guilabel:`Selected dataset group(s) metadata`, with details on:"
+msgstr ""
+":guilabel:`Metadata voor groep(en) van geselecteerde gegevensset`, met "
+"details over:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:262
+msgid "the mesh type: edges or faces"
+msgstr "het type mazen: randen of zijden"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:263
+msgid "the data type: vertices, edges, faces or volume"
+msgstr "het type gegevens: punten, randen, zijden of volume"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:264
+msgid "whether it's of vector type or not"
+msgstr "of het van het type vector is of niet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:265
+msgid "the original name in the mesh layer"
+msgstr "de originele naam in de laag met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:266
+msgid "the unit, if applicable"
+msgstr "de eenheid, indien van toepassing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:267
+msgid ""
+":ref:`blending mode <blend-modes>` available for the selected datasets."
+msgstr ""
+":ref:`Meng-modus <blend-modes>` beschikbaar voor de geselecteerde "
+"gegevenssets."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:274
+msgid "Mesh Layer Datasets"
+msgstr "Laag met mazen Gegevenssets"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:277
+msgid ""
+"You can apply symbology to the selected vector and/or scalar group using the"
+" next tabs."
+msgstr ""
+"U kunt symbologie toepassen op de geselecteerde vector- en/of scalaire groep"
+" met de volgende tabs."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:284
+msgid "Contours Symbology"
+msgstr "Symbologie Contouren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:286
+msgid ""
+"The |meshcontours| :sup:`Contours` tab can be activated only if a scalar "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab."
+msgstr ""
+"De tab |meshcontours| :sup:`Contouren` kan alleen worden geactiveerd als een"
+" scalaire gegevensset is geselecteerd op de tab |general| "
+":guilabel:`Gegevenssets`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1187
+msgid "meshcontours"
+msgstr "meshcontours"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:289
+msgid ""
+"In the |meshcontours| :sup:`Contours` tab you can see and change the current"
+" visualization options of contours for the selected group, as shown in "
+":numref:`figure_mesh_symbology_contours` below:"
+msgstr ""
+"Op de tab |meshcontours| :sup:`Contouren` kunt u bekijken en wijzigen de "
+"huidige opties voor visualisatie van contouren voor de geselecteerde groep, "
+"zoals hieronder weergegeven in :numref:`figure_mesh_symbology_contours`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:298
+msgid "Styling Contours in a Mesh Layer"
+msgstr "Contouren opmaken in een laag met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:300
+msgid ""
+"For 1D mesh, set the :guilabel:`Stroke width` of the edges. This can be a "
+"fixed size for the whole dataset, or vary along the geometry (more details "
+"with the :ref:`interpolated line renderer <interpolated_line_symbol>`)"
+msgstr ""
+"Voor 1D-mazen, stel de :guilabel:`Lijndikte` van de randen in. Dit kan een "
+"vaste grootte zijn voor de gehele gegevensset, of variëren langs de "
+"geometrie (meer details bij de :ref:`renderer geïnterpoleerde lijn "
+"<interpolated_line_symbol>`)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:303
+msgid ""
+"Use the slider or the spinbox to set the :guilabel:`Opacity` of the current "
+"group, if of a 2D mesh type."
+msgstr ""
+"Gebruik de schuifbalk of draaiknop om de :guilabel:`Opaciteit` van de "
+"huidige groep in te stellen, indien van het type 2D-mazen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:305
+msgid ""
+"Enter the range of values you want to represent on the current group: use "
+"|refresh| :sup:`Load` to fetch the min and max values of the current group "
+"or enter custom values if you want to exclude some."
+msgstr ""
+"Voer het bereik aan waarden in die u wilt laten weergeven voor de huidige "
+"groep: gebruik |refresh| :sup:`Laden` om de minimum en maximum waarden van "
+"de huidige groep op te halen of voer aangepaste waarden in als u enkele wilt"
+" uitsluiten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:308
+msgid ""
+"For 2D/3D meshes, select the :guilabel:`Resampling method` to interpolate "
+"the values on the surrounding vertices to the faces (or from the surrounding"
+" faces to the vertices) using the :guilabel:`Neighbour average` method. "
+"Depending on whether the dataset is defined on the vertices (respectively on"
+" the faces), QGIS defaults this setting to :guilabel:`None` (respectively "
+":guilabel:`Neighbour average`) method in order to use values on vertices and"
+" keep the default rendering smooth."
+msgstr ""
+"Voor 2D/3D-mazen, selecteer de :guilabel:`Hersampling methode` om de waarden"
+" van de omliggende punten te interpoleren naar de zijden (of vanuit de "
+"omliggende zijden naar de punten) met de methode :guilabel:`Gemiddelde "
+"buur`. Afhankelijk van of de gegevensset is gedefinieerd op de punten "
+"(respectievelijk op de zijden), stelt QGIS deze instelling standaard in op "
+"de methode :guilabel:`Geen` (respectievelijk :guilabel:`Gemiddelde buur`) om"
+" de waarden op punten te gebruiken en het standaard renderen glad te houden."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:314
+msgid ""
+"Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>` "
+"classification."
+msgstr ""
+"Classificeer de gegevensset met de classificatie voor het :ref:`Kleurverloop"
+" <color_ramp_shader>`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:321
+msgid "Vectors Symbology"
+msgstr "Symbologie Vectors"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:323
+msgid ""
+"The |meshvectors| :sup:`Vectors` tab can be activated only if a vector "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab."
+msgstr ""
+"De tab |meshvectors| :sup:`Vectoren` kan alleen worden geactiveerd als een "
+"vector gegevensset is geselecteerd op de tab |general| "
+":guilabel:`Gegevenssets`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1193
+msgid "meshvectors"
+msgstr "meshvectors"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:326
+msgid ""
+"In the |meshvectors| :sup:`Vectors` tab you can see and change the current "
+"visualization options of vectors for the selected group, as shown in "
+":numref:`figure_mesh_symbology_vectors`:"
+msgstr ""
+"Op de tab |meshvectors| :sup:`Vectoren` kunt u bekijken en wijzigen de "
+"huidige opties voor visualisatie van vectoren voor de geselecteerde groep, "
+"zoals hieronder weergegeven in :numref:`figure_mesh_symbology_vectors`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:335
+msgid "Styling Vectors in a Mesh Layer with arrows"
+msgstr "Vectoren opmaken in een laag met mazen met pijlen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:337
+msgid ""
+"Mesh vector dataset can be styled using various types of "
+":guilabel:`Symbology`:"
+msgstr ""
+"Een vector gegevensset met mazen kan worden opgemaakt met verscheidene typen"
+" :guilabel:`Symbologie`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:339
+msgid ""
+"**Arrows**: vectors are represented with arrows at the same place as they "
+"are defined in the raw dataset (i.e. on the nodes or center of elements) or "
+"on a user-defined grid (hence, they are evenly distributed). The arrow "
+"length is proportional to the magnitude of the arrow as defined in the raw "
+"data but can be scaled by various methods."
+msgstr ""
+"**Pijlen**: vectoren worden weergegeven met pijlen op dezelfde plaats als "
+"waar zij zijn gedefinieerd in de ruwe gegevensset (d.i. op de knopen of het "
+"midden van elementen) of op een gebruiker-gedefinieerd raster (waardoor zij "
+"evenredig worden verdeeld). De lengte van de pijl is proportioneel ten "
+"opzichte van de omvang van de pijl, zoals gedefinieerd in de ruwe gegevens, "
+"maar kan met verscheidene methoden op schaal worden gebracht."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:344
+msgid ""
+"**Streamlines**: vectors are represented with streamlines seeded from start "
+"points. The seeding points can start from the vertices of the mesh, from a "
+"user grid or randomly."
+msgstr ""
+"**Stroomlijnen**: vectoren worden weergegeven met stroomlijnen die beginnen "
+"vanuit het beginpunt. De beginpunten mogen beginnen vanuit de punten van de "
+"mazen, vanuit een gebruikers-raster of willekeurig."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:347
+msgid ""
+"**Traces**: a nicer animation of the streamlines, the kind of effect you get"
+" when you randomly throws sand in the water and see where the sand items "
+"flows."
+msgstr ""
+"**Sporen**: een nettere animatie van de stroomlijnen, het soort effect dat u"
+" krijgt wanneer u willekeurig zand in het water strooit en kijkt waar de "
+"zandkorrels naartoe vloeien."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:350
+msgid ""
+"Available properties depend on the selected symbology as shown in the "
+"following table."
+msgstr ""
+"Beschikbare eigenschappen zijn afhankelijk van de geselecteerde symbologie, "
+"zoals weergegeven in de volgende tabel."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:352
+msgid "Availability and meaning of the vectors symbology properties"
+msgstr ""
+"Beschikbaarheid en betekenis van de eigenschappen voor symbologie van "
+"vectors"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:661
+msgid "Label"
+msgstr "Label"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+msgid "Description and Properties"
+msgstr "Beschrijving en eigenschappen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+msgid "Arrow"
+msgstr "Pijl"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+msgid "Streamlines"
+msgstr "Stroomlijnen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:355
+msgid "Traces"
+msgstr "Sporen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:357
+msgid ":guilabel:`Line width`"
+msgstr ":guilabel:`Lijndikte`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:357
+msgid "Width of the vector representation"
+msgstr "Breedte van de weergave van de vector"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:357
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:359
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:363
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:366
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:369
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:372
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:377
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:380
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:382
+msgid "|checkbox|"
+msgstr "|checkbox|"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1151
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:359
+msgid ":guilabel:`Coloring method`"
+msgstr ":guilabel:`Kleurmethode`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:359
+msgid "a :guilabel:`Single color` assigned to all vectors"
+msgstr "een :guilabel:`Enkele kleur` toegewezen aan alle vectoren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:360
+msgid ""
+"or a variable color based on vectors magnitude, using a :ref:`Color ramp "
+"shader <color_ramp_shader>`"
+msgstr ""
+"of een variabele kleur, gebaseerd op de omvang van vectoren, met een "
+":ref:`Kleurverloop schaduw <color_ramp_shader>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:363
+msgid ":guilabel:`Filter by magnitude`"
+msgstr ":guilabel:`Op omvang filteren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:363
+msgid ""
+"Only vectors whose length for the selected dataset falls between a "
+":guilabel:`Min` and :guilabel:`Max` range are displayed"
+msgstr ""
+"Alleen vectoren waarvan de lengte voor de geselecteerde gegevensset vallen "
+"binnen het bereik :guilabel:`Min` en :guilabel:`Max` worden weergegeven"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:366
+msgid ":guilabel:`Display on user grid`"
+msgstr ":guilabel:`Weergeven op raster gebruiker`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:366
+msgid ""
+"Places the vector on a grid with custom :guilabel:`X spacing` and "
+":guilabel:`Y spacing` and interpolates their length based on neighbours"
+msgstr ""
+"Plaatst de vector op een raster met een aangepaste :guilabel:`Afstand X` en "
+":guilabel:`Afstand Y` en interpoleert hun lengte, gebaseerd op buren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:369
+msgid ":guilabel:`Head options`"
+msgstr ":guilabel:`Opties voor uiteinde`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:369
+msgid ""
+":guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage "
+"of its shaft length"
+msgstr ""
+":guilabel:`Lengte` en :guilabel:`Breedte` van de pijlkop, als een percentage"
+" van de lengte van de schacht"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:372
+msgid ":guilabel:`Arrow length`"
+msgstr ":guilabel:`Lengte pijl`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:372
+msgid ""
+"**Defined by Min and Max**: You specify the minimum and maximum length for "
+"the arrows, QGIS will interpolate their size based on the underlying "
+"vector's magnitude"
+msgstr ""
+"**Gedefinieerd door Min en Max**: U specificeert de minimum en maximum "
+"lengte voor de pijlen, QGIS zal hun grootte interpoleren, gebaseerd op de "
+"onderliggende omvang van de vectoren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:374
+msgid ""
+"**Scale to magnitude**: arrow length is proportional to their vector's "
+"magnitude"
+msgstr ""
+"**Op grootte schalen**: pijllengte is proportioneel aan de grootte van hun "
+"vector"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:375
+msgid "**Fixed**: all the vectors are shown with the same length"
+msgstr "**Vast**: alle vectoren worden weergegeven met dezelfde lengte"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:377
+msgid ":guilabel:`Streamlines seeding method`"
+msgstr ":guilabel:`Methode voor begin stroomlijnen`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:377
+msgid "**On mesh/grid**: relies on the user grid to display the vectors"
+msgstr ""
+"**Op mazen/raster**: vertrouwt op het raster van de gebruiker om de vectoren"
+" weer te geven"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:378
+msgid ""
+"**Randomly**: vector placement is randomly done with respect to a certain "
+"density"
+msgstr ""
+"**Willekeurig**: plaatsing van vectoren wordt willekeurig gedaan met "
+"inachtneming van een bepaalde dichtheid"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:380
+msgid ":guilabel:`Particles count`"
+msgstr ":guilabel:`Aantal deeltjes`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:380
+msgid "The amount of \"sand\" you want to throw into visualisation"
+msgstr "De hoeveelheid \"zand\" die u in de visualisatie wilt gooien"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:382
+msgid ":guilabel:`Max tail length`"
+msgstr ":guilabel:`Max. staartlengte`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:382
+msgid "The time until the particle fades out"
+msgstr "De tijd waarin de deeltjes zich verspreiden"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:389
+msgid "Rendering"
+msgstr "Renderen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:391
+msgid ""
+"In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to "
+"display and customize the mesh structure. :guilabel:`Line width` and "
+":guilabel:`Line color` can be set to represent:"
+msgstr ""
+"Op de tab |meshframe| :sup:`Renderen` biedt QGIS mogelijkheden voor het "
+"weergeven en aanpassen van de structuur van mazen. :guilabel:`Lijndikte` en "
+":guilabel:`Lijnkleur` kunnen ook worden ingesteld om weer te geven:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1191
+msgid "meshframe"
+msgstr "meshframe"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:395
+msgid "the edges for 1D meshes"
+msgstr "de randen voor 1D-mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:396
+msgid "For 2D meshes:"
+msgstr "Voor 2D-mazen:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:398
+msgid ""
+":guilabel:`Native mesh rendering`: shows original faces and edges from the "
+"layer"
+msgstr ""
+":guilabel:`Normale mazen renderen`: geeft originele zijden en randen van de "
+"laag weer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:399
+msgid ""
+":guilabel:`Triangular mesh rendering`: adds more edges and displays the "
+"faces as triangles"
+msgstr ""
+":guilabel:`Driehoekige mazen renderen`: voegt meer randen toe en geeft de "
+"zijden als driehoeken weer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:407
+msgid "2D Mesh Rendering"
+msgstr "2D-mazen renderen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:413
+msgid "Stacked mesh averaging method"
+msgstr "Methode voor middelen van gestapelde mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:415
+msgid ""
+"3D layered meshes consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (``levels``) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. Values are usually stored on the volumes that are regularly stacked "
+"over base 2d mesh. In order to visualise them on 2D canvas, you need to "
+"convert values on volumes (3d) to values on faces (2d) that can be shown in "
+"mesh layer. The |meshaveraging| :sup:`Stacked mesh averaging method` "
+"provides different averaging/interpolation methods to handle this."
+msgstr ""
+"3D-gelaagde mazen bestaan uit meerdere gestapelde 2D ongestructureerde "
+"mazen, elk uitgetrokken in de verticale richting (``niveaus``) door middel "
+"van een verticale coördinaat. De punten en zijden hebben dezelfde topologie "
+"op elk verticaal niveau. Waarden worden gewoonlijk opgeslagen in de volumes "
+"die regelmatig zijn gestapeld over de basis 2D-mazen. Om ze te visualiseren "
+"in een 2D-kaartvenster moet u waarden op de volumes (3D) converteren naar "
+"waarden op zijden (2D) die in de laag met mazen kunnen worden weergegeven. "
+"De |meshaveraging| :sup:`Methode voor middelen van gestapelde mazen` "
+"verschaft verschillende methoden voor middelen/interpoleren om dit af t "
+"handelen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1185
+msgid "meshaveraging"
+msgstr "meshaveraging"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:424
+msgid ""
+"You can select the method to derive the 2D datasets and corresponding "
+"parameters (level index, depth or height values). For each method, an "
+"example of application is shown in the dialog but you can read more on the "
+"methods at "
+"https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results."
+msgstr ""
+"U kunt de methode selecteren om de 2D-gegevenssets af te leiden en "
+"corresponderende parameters (index niveau, waarden diepte of hoogte). Voor "
+"elke methode wordt een voorbeeld voor het toepassen weergegeven in het "
+"dialoogvenster, maar u kunt meer over de methoden lezen op "
+"https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:434
+msgid "3D View Properties"
+msgstr "Eigenschappen 3D-weergave"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:436
+msgid ""
+"Mesh layers can be used as :ref:`terrain in a 3D map view "
+"<scene_configuration>` based on their vertices Z values. From the |3d| "
+":guilabel:`3D View` properties tab, it's also possible to render the mesh "
+"layer's dataset in the same 3D view. Therefore, the vertical component of "
+"the vertices can be set equal to dataset values (for example, level of water"
+" surface) and the texture of the mesh can be set to render other dataset "
+"values with color shading (for example velocity)."
+msgstr ""
+"Lagen met mazen kunnen worden gebruikt als :ref:`terrein in een "
+"3D-kaartweergave <scene_configuration>`, gebaseerd op de waarden Z van hun "
+"punten. Op de tab voor eigenschappen van |3d| :guilabel:`3D-weergave` is het"
+" ook mogelijk om de gegevensset van de laag met mazen in dezelfde "
+"3D-weergave te renderen Daarvoor kan de verticale component van de punten "
+"gelijk worden gesteld met de waarden van de gegevensset (bijvoorbeeld niveau"
+" van wateroppervlak) en de textuur van de mazen kan worden ingesteld om "
+"andere waarden van de gegevensset te renderen met kleurschaduw (bijvoorbeeld"
+" snelheid)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:448
+msgid "Mesh dataset 3D properties"
+msgstr "Eigenschappen 3D gegevensset met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:450
+msgid ""
+"Check |checkbox| :guilabel:`Enable 3D Renderer` and you can edit following "
+"properties:"
+msgstr ""
+"Selecteer |checkbox| :guilabel:`3D-renderer inschakelen` en u kunt de "
+"volgende eigenschappen bewerken:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:453
+msgid "Under :guilabel:`Triangle settings`"
+msgstr "Onder :guilabel:`Instellingen voor driehoeken`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:455
+msgid ""
+":guilabel:`Smooth triangles`: Angles between consecutive triangles are "
+"smoothed for a better 3D rendering"
+msgstr ""
+":guilabel:`Afgevlakte driehoeken`: Hoeken tussen opeenvolgende driehoeken "
+"worden afgevlakt voor beter renderen in 3D"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:457
+msgid ""
+":guilabel:`Show wireframe` whose you can set the :guilabel:`Line width` and "
+":guilabel:`Color`"
+msgstr ""
+":guilabel:`Draadmodel weergeven` waarvan u de :guilabel:`Lijndikte` en "
+":guilabel:`Keur` kunt instellen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:462
+msgid ""
+":guilabel:`Level of detail`: Controls how :ref:`simplified <meshrendering>` "
+"the mesh layer to render should be. On the far right, it is the base mesh, "
+"and the more you go left, the more the layer is simplified and is rendered "
+"with less details. This option is only available if the :guilabel:`Simplify "
+"mesh` option under the :guilabel:`Rendering` tab is activated."
+msgstr ""
+":guilabel:`Waarde van detail`: Beheert hoe :ref:`vereenvoudigd "
+"<meshrendering>` de te renderen laag met mazen zou moeten zijn. Aan de "
+"uiterste rechterzijde, is het de basis mazen, en hoe meer u naar links gaat,"
+" hoe meer de laag wordt vereenvoudigd en  wordt gerenderd met minder "
+"details. Deze optie is alleen beschikbaar als de optie :guilabel:`Mazen "
+"vereenvoudigen` op de tab :guilabel:`Renderen` is geactiveerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:469
+msgid ""
+":guilabel:`Vertical settings` to control behavior of the vertical component"
+msgstr ""
+":guilabel:`Verticale instellingen` om het gedrag van de verticale component "
+"te beheren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:469
+msgid "of vertices of rendered triangles"
+msgstr "van punten van gerenderde driehoeken"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:471
+msgid ""
+":guilabel:`Dataset group for vertical value`: the dataset group that will be"
+" used for the vertical component of the mesh"
+msgstr ""
+":guilabel:`Groep gegevensset voor verticale waarde`: de groep van de "
+"gegevensset die zal worden gebruikt voor de verticale component van de mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:473
+msgid ""
+"|unchecked|:guilabel:`Dataset value relative to vertices Z value`: whether "
+"to consider the dataset values as absolute Z coordinate or relative to the "
+"vertices native Z value"
+msgstr ""
+"|unchecked|:guilabel:`Waarde gegevensset relatief ten opzichte van de waarde"
+" Z van punten`: of de waarden van de gegevensset moeten worden beschouwd als"
+" absolute coördinaat Z of relatief ten opzichte van eigen waarde Z van de "
+"punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:476
+msgid ""
+":guilabel:`Vertical scale`: the scale factor to apply to the dataset Z "
+"values"
+msgstr ""
+":guilabel:`Verticale schaal`: de schaalfactor om toe te passen op de waarden"
+" Z van de gegevensset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:478
+msgid ""
+":guilabel:`Rendering color settings` with a :guilabel:`Rendering style` that"
+" can be based on the color ramp shader set in :ref:`mesh_symbology_contours`"
+" (:guilabel:`2D contour color ramp shader`) or as a :guilabel:`Single color`"
+" with an associated :guilabel:`Mesh color`"
+msgstr ""
+":guilabel:`Instellingen voor renderen van kleuren` met een "
+":guilabel:`Weergave-stijl` die kan worden gebaseerd op het kleurverloop "
+"schaduw ingesteld in :ref:`mesh_symbology_contours` (:guilabel:`2D contour "
+"kleurverloop schaduw`) of als een :guilabel:`Enkele kleur` met een "
+"geassocieerde :guilabel:`Kleur mazen`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:482
+msgid ""
+":guilabel:`Show arrows`: displays arrows on mesh layer dataset 3D entity, "
+"based on the same vector dataset group used in the :ref:`vector 2D rendering"
+" <mesh_symbology_vectors>`. They are displayed using the 2D color setting. "
+"It's also possible to define the :guilabel:`Arrow spacing` and, if it's of a"
+" :guilabel:`Fixed size` or scaled on magnitude. This spacing setting defines"
+" also the max size of arrows because arrows can't overlap."
+msgstr ""
+":guilabel:`Pijlen weergeven`: geeft pijlen weer op gegevensset laag met "
+"mazen 3D-entiteit, gebaseerd op dezelfde vector groep gegevensset, gebruikt "
+"in de :ref:`vector 2D-renderen <mesh_symbology_vectors>`. Zij worden "
+"weergegeven met de 2D kleurinstelling. Het is ook mogelijk de "
+":guilabel:`Tussenruimte pijlen` te definiëren en, of het van een "
+":guilabel:`Vaste grootte` of op schaal is gebracht naar zijn omvang. Deze "
+"instelling voor tussenruimte definieert ook de maximum grootte van pijlen "
+"omdat pijlen niet kunnen overlappen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:494
+msgid "Rendering Properties"
+msgstr "Rendering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:501
+msgid "Mesh rendering properties"
+msgstr "Mazen eigenschappen renderen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:503
+msgid ""
+"Under the :guilabel:`Scale dependent visibility` group box, you can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scale, "
+"defining a range of scale in which mesh elements will be visible. Out of "
+"this range, they are hidden. The |mapIdentification| :sup:`Set to current "
+"canvas scale` button helps you use the current map canvas scale as boundary "
+"of the range visibility. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"Onder het groepsvak :guilabel:`Scaalafhankelijke zichtbaarheid`, kunt u de "
+"schaal :guilabel:`Maximum (inclusief)` en :guilabel:`Minimum (exclusief)` "
+"instellen, wat een bereik van schalen definieert waarin elementen van mazen "
+"zichtbaar zullen zijn. Buiten dit bereik is hij verborgen. De knop "
+"|mapIdentification| :sup:`Op huidige schaal kaartvenster instellen` helpt u "
+"de schaal van het huidige kaartvenster te gebruiken als grens voor de "
+"zichtbaarheid van het bereik. Bekijk :ref:`label_scaledepend` voor meer "
+"informatie."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1171
+msgid "mapIdentification"
+msgstr "mapIdentification"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:513
+msgid ""
+"You can also activate scale dependent visibility on a layer from within the "
+":guilabel:`Layers` panel: right-click on the layer and in the contextual "
+"menu, select :guilabel:`Set Layer Scale Visibility`."
+msgstr ""
+"U kunt het schaalafhankelijk renderen ook activeren op een laag vanuit het "
+"paneel :guilabel:`Lagen`. Klik met rechts op de laag en selecteer in het "
+"contextmenu, :guilabel:`Zichtbaarheidsschaal laag instellen`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:517
+msgid ""
+"As mesh layers can have millions of faces, their rendering can sometimes be "
+"very slow, especially when all the faces are displayed in the view whereas "
+"they are too small to be viewed. To speed up the rendering, you can simplify"
+" the mesh layer, resulting in one or more meshes representing different "
+":ref:`levels of detail <levelofdetail>` and select at which level of detail "
+"you would like QGIS to render the mesh layer. Note that the simplify mesh "
+"contains only triangular faces."
+msgstr ""
+"Omdat lagen met mazen miljoenen zijden kunnen hebben, kan het renderen "
+"daarvan soms heel traag zijn, speciaal wanneer alle zijden worden "
+"weergegeven in de weergave hoewel zij te klein zijn om te worden "
+"weergegeven. U kunt, om het renderen te versnellen, de laag met mazen "
+"vereenvoudigen, wat er in resulteert dat één of meer mazen verschillende "
+":ref:`niveaus van detail <levelofdetail>` weergeven en selecteren op welk "
+"niveau u QGIS zou willen  de laag met mazen te renderen. Onthoud dat de "
+"vereenvoudigde laag met mazen alleen driehoekige mazen bevat."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:525
+msgid ""
+"From the |rendering| :guilabel:`Rendering` tab, check |checkbox| "
+":guilabel:`Simplify mesh` and set:"
+msgstr ""
+"Op de tab |rendering| :guilabel:`Renderen`, selecteer |checkbox| "
+":guilabel:`Mazen vereenvoudigen` en stel in:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:528
+msgid ""
+"a :guilabel:`Reduction factor`: Controls generation of successive levels of "
+"simplified meshes. For example, if the base mesh has 5M faces, and the "
+"reduction factor is 10, the first simplified mesh will have approximately "
+"500 000 faces, the second 50 000 faces, the third 5000,... If a higher "
+"reduction factor leads quickly to simpler meshes (i.e. with triangles of "
+"bigger size), it produces also fewer levels of detail."
+msgstr ""
+"een :guilabel:`Verkleiningsfactor`: Beheert het maken van opeenvolgende "
+"niveaus van vereenvoudigde mazen. Als bijvoorbeeld de basislaag met mazen 5 "
+"miljoen zijden heeft, en de verkleiningsfactor is 10, zal de eerste "
+"vereenvoudigde laag met mazen ongeveer 500.000 zijden hebben, de tweede "
+"50.000 zijden, de derde 5000,… Omdat een hogere verkleiningsfactor snel "
+"leidt tot eenvoudiger mazen (d.i. met driehoeken van een grotere omvang), "
+"produceert het ook minder niveaus van detail."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:535
+msgid ""
+":guilabel:`Minimum triangle size`: the average size (in pixels) of the "
+"triangles that is permitted to display. If the average size of the mesh is "
+"lesser than this value, the rendering of a lower level of details mesh is "
+"triggered."
+msgstr ""
+":guilabel:`Minimale grootte driehoek`: de gemiddelde grootte (in pixels) van"
+" de driehoeken die toegestaan is om te worden weergegeven. Als de gemiddelde"
+" grootte van de mazen minder is dan deze waarde, wordt het renderen van "
+"mazen met een lager niveau van details geactiveerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:545
+msgid "Temporal Properties"
+msgstr "Eigenschappen Tijdbeheer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:547
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. It allows to dynamically display temporal "
+"values of the enabled dataset groups. Such a dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"De tab |temporal| :guilabel:`Tijdbeheer` verschaft opties om het renderen "
+"van de laag in de tijd te beheren. Het maakt het mogelijk dynamisch "
+"tijdwaarden van de ingeschakelde groepen van gegevenssets weer te geven. "
+"Dergelijk dynamisch renderen vereist dat de :ref:`Navigatie voor Tijdbeheer "
+"<maptimecontrol>` is ingeschakeld in het kaartvenster."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:558
+msgid "Mesh Temporal properties"
+msgstr "Laag met mazen eigenschappen Tijdbeheer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:560
+msgid "**Layer temporal settings**"
+msgstr "**Instellingen Tijdbeheer voor laag**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:562
+msgid ""
+":guilabel:`Reference time` of the dataset group, as an absolute date time. "
+"By default, QGIS parses the source layer and returns the first valid "
+"reference time in the layer's dataset group. If unavailable, the value will "
+"be set by the project time range or fall back to the current date. The "
+":guilabel:`Start time` and :guilabel:`End time` to  consider are then "
+"calculated based on the internal timestamp step of the dataset."
+msgstr ""
+":guilabel:`Verwijzingstijd` van de groep van de gegevensset, als een "
+"absolute datum/tijd. Standaard parst QGIS de bronlaag en geeft de eerste "
+"geldige verwijzingstijd in de groep van de gegevensset in de laag terug. "
+"Indien niet beschikbaar zal de waarde worden ingesteld door de tijdsperiode "
+"van het project of terugvallen op de huidige datum. De :guilabel:`Starttijd`"
+" en :guilabel:`Eindtijd` waarmee rekening moet worden gehouden worden dan "
+"berekend op basis van de stap van het interne tijdstempel van de "
+"gegevensset."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:570
+msgid ""
+"It is possible to set a custom :guilabel:`Reference time` (and then the time"
+" range), and revert the changes using the |refresh| :sup:`Reload from "
+"provider` button. With |checkbox| :guilabel:`Always take reference time from"
+" data source` checked, you ensure that the time properties are updated from "
+"the file each time the layer is reloaded or the project reopened."
+msgstr ""
+"Het is mogelijk een aangepaste :guilabel:`Verwijzingstijd` (en dan de "
+"tijdperiode) in te stellen, en de wijzigingen terug te draaien met de knop "
+"|refresh| :sup:`Opnieuw laden vanaf provider`. Met |checkbox| "
+":guilabel:`Verwijzingstijd altijd nemen uit databron` geselecteerd zorgt u "
+"ervoor dat de eigenschappen voor de tijd worden bijgewerkt vanuit het "
+"bestand, elke keer als de laag opnieuw wordt geladen of het project opnieuw "
+"wordt geopend."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:575
+msgid ""
+":guilabel:`Dataset matching method`: determines the dataset to display at "
+"the given time. Options are :guilabel:`Find closest dataset before requested"
+" time` or :guilabel:`Find closest dataset from requested time (after or "
+"before)`."
+msgstr ""
+":guilabel:`Gegevensset overeenkomende methode`: bepaalt de op een bepaalde "
+"tijd weer te geven gegevensset. Opties zijn :guilabel:`Zoek dichtstbijzijnde"
+" gegevensset vóór gevraagde tijd` of :guilabel:`Zoek dichtstbijzijnde "
+"gegevensset vanaf gevraagde tijd (na of voor)`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:579
+msgid "**Provider time settings**"
+msgstr "**Tijdinstelingen provider**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:581
+msgid ""
+":guilabel:`Time unit` extracted from the raw data, or user defined. This can"
+" be used to align the speed of the mesh layer with other layers in the "
+"project during map time navigation. Supported units are :guilabel:`Seconds`,"
+" :guilabel:`Minutes`, :guilabel:`Hours` and :guilabel:`Days`."
+msgstr ""
+":guilabel:`Tijdseenheid` uitgenomen vanuit de ruwe gegevens, of gebruiker-"
+"gedefinieerd. Dit kan worden gebruikt om de snelheid van de laag met mazen "
+"uit te lijnen met andere lagen in het project gedurende navigeren door de "
+"tijd van de kaart. Ondersteunde eenheden zijn :guilabel:`Seconden`, "
+":guilabel:`Minuten`, :guilabel:`Uren` en :guilabel:`Dagen`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:592
+msgid "Elevation Properties"
+msgstr "Eigenschappen hoogte"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:594
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and its appearance in the :ref:`profile tool charts "
+"<label_elevation_profile_view>`. Specifically, you can set:"
+msgstr ""
+"De tab |elevationscale| :guilabel:`Hoogte` verschaft opties om de "
+"eigenschappen voor hoogte van de laag te beheren in een "
+":ref:`3D-kaartweergave <label_3dmapview>` en het uiterlijk in de "
+":ref:`diagrammen van het profiel <label_elevation_profile_view>`. Specifiek "
+"kunt u instellen:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:604
+msgid "Mesh Elevation properties"
+msgstr "Eigenschappen hoogte mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:606
+msgid ""
+":guilabel:`Elevation Surface`: how the mesh layer vertices Z values should "
+"be interpreted as terrain elevation. You can apply a :guilabel:`Scale` "
+"factor and an :guilabel:`Offset`."
+msgstr ""
+":guilabel:`Hoogte oppervlak`: hoe de laag met mazen punten met waarden Z zou"
+" moeten interpreteren als hoogte voor het terrein. U kunt een factor voor "
+":guilabel:`Schaal` en een :guilabel:`Verschuiving` toewijzen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:613
+msgid ""
+"a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
+msgstr ""
+"een :guilabel:`Lijn` met een specifieke :ref:`Lijnstijl "
+"<vector_line_symbols>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:614
+msgid ""
+"an elevation surface rendered using a fill symbol either above "
+"(:guilabel:`Fill above`) or below (:guilabel:`Fill below`) the elevation "
+"curve line. The surface symbology is represented using:"
+msgstr ""
+"een hoogteoppervlakte, gerenderd met een symbool voor de vulling, ofwel "
+"boven (:guilabel:`Vullen boven`) of onder (:guilabel:`Vullen onder`) de "
+"booglijn voor de hoogte. De symbologie voor het oppervlak wordt weergegeven "
+"met:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:618
+msgid "a :ref:`Fill style <vector_fill_symbols>`"
+msgstr "een :ref:`Vulstijl <vector_fill_symbols>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:619
+msgid ""
+"and a :guilabel:`Limit`: the maximum (respectively minimum) altitude "
+"determining how high the fill surface will be"
+msgstr ""
+"en een :guilabel:`Limiet`: de maximum (respectievelijk minimum) hoogte die "
+"bepaalt hoe hoog het gevulde oppervlak zal zijn"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:627
+msgid "Metadata Properties"
+msgstr "Metadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:629
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"De tab |editMetadata| :guilabel:`Metadata` verschaft u opties om een rapport"
+" met metadata voor uw laag te maken en te bewerken. Bekijk "
+":ref:`metadatamenu` voor meer informatie."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:637
+msgid "Editing a mesh layer"
+msgstr "Een laag met mazen bewerken"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:639
+msgid ""
+"QGIS allows to :ref:`create a mesh layer <vector_create_mesh>` from scratch "
+"or based on an existing one. You can create/modify the geometries of the new"
+" layer whom you can assign datasets afterwards. It's also possible to edit "
+"an existing mesh layer. Because the editing operation requires a frames-only"
+" layer, you will be asked to either remove any associated datasets first "
+"(make sure you have them available if they still are necessary) or create a "
+"copy (only geometries) of the layer."
+msgstr ""
+"QGIS maakt het mogelijk :ref:`een laag met mazen te maken "
+"<vector_create_mesh>` vanuit niets of gebaseerd op een bestaande. U kunt de "
+"geometrieën van de nieuwe laag maken/aanpassen waaraan u later gegevenssets "
+"kunt toewijzen. Het is ook mogelijk een bestaande laag met mazen te "
+"bewerken. Om dat het bewerken een  alleen-frames-laag vereist, zult u worden"
+" gevraagd om eerst enige geassocieerde gegevensset te verwijderen (zorg er "
+"voor dat u hem nog steeds beschikbaar hebt als zij nog steeds noodzakelijk "
+"zijn) of een kopie te maken van de laag (alleen geometrieën)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:647
+msgid ""
+"QGIS does not allow to digitize edges on mesh layers. Only vertices and "
+"faces are mesh elements that can be created. Also not all supported mesh "
+"formats can be edited in QGIS (see `permissions "
+"<https://github.com/lutraconsulting/MDAL#supported-formats>`__)."
+msgstr ""
+"QGIS staat niet toe dat randen op lagen met mazen worden gedigitaliseerd. "
+"Alleen punten en zijden zijn elementen van mazen die kunnen worden gemaakt. "
+"Ook kunnen niet alle ondersteunde indelingen voor mazen worden bewerkt in "
+"QGIS (bekijk `permissions "
+"<https://github.com/lutraconsulting/MDAL#supported-formats>`__)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:654
+msgid "Overview of the mesh digitizing tools"
+msgstr "Overzicht van de gereedschappen voor het digitaliseren van mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:656
+msgid ""
+"To interact with or edit a base mesh layer element, following tools are "
+"available."
+msgstr ""
+"De volgende gereedschappen zijn beschikbaar voor interactie met of bewerken "
+"van een element van een basis laag met mazen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:658
+msgid "Tools for mesh digitizing"
+msgstr "Gereedschappen voor digitaliseren van mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:662
+msgid "Purpose"
+msgstr "Doel"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:663
+msgid "Location"
+msgstr "Locatie"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:664
+msgid "|allEdits| :sup:`Current Edits`"
+msgstr "|allEdits| :sup:`Huidige bewerkingen`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1147
+msgid "allEdits"
+msgstr "allEdits"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:665
+msgid ""
+"Access to save, rollback or cancel changes in all or selected layers "
+"simultaneously"
+msgstr ""
+"Toegang tot opslaan, terugdraaien of annuleren van wijzigingen "
+"tegelijkertijd in alle of geselecteerde lagen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:666
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:669
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:672
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:675
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:678
+msgid ":guilabel:`Digitizing` toolbar"
+msgstr "Werkbalk :guilabel:`Digitaliseren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:667
+msgid "|toggleEditing| :sup:`Toggle to Edit`"
+msgstr "|toggleEditing| :sup:`Bewerken aan/uitzetten`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1219
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:668
+msgid "Turn on/off the layer in edit mode"
+msgstr "In-/Uitschakelen laag naar modus Bewerken"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:670
+msgid "|saveEdits| :sup:`Save Edits`"
+msgstr "|saveEdits| :sup:`Bewerkingen opslaan`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1205
+msgid "saveEdits"
+msgstr "saveEdits"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:671
+msgid "Save changes done to the layer"
+msgstr "Wijzigingen op de laag opslaan"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:673
+msgid "|undo| :sup:`Undo`"
+msgstr "|undo| :sup:`Ongedaan maken`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1223
+msgid "undo"
+msgstr "undo"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:674
+msgid "Undo the last change(s) - :kbd:`Ctrl+Z`"
+msgstr "Laatste wijziging(en) ongedaan maken - :kbd:`Ctrl+Z`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:676
+msgid "|redo| :sup:`Redo`"
+msgstr "|redo| :sup:`Opnieuw`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1199
+msgid "redo"
+msgstr "redo"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:677
+msgid "Redo the last undone action(s) - :kbd:`Ctrl+Shift+Z`"
+msgstr ""
+"Laatste actie voor ongedaan maken opnieuw uitvoeren - :kbd:`Ctrl+Shift+Z`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:679
+msgid "|cad| :sup:`Enable Advanced Digitizing tools`"
+msgstr "|cad| :sup:`Gereedschap Geavanceerd digitaliseren inschakelen`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1149
+msgid "cad"
+msgstr "cad"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:680
+msgid ""
+"Turn on/off the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`"
+msgstr ""
+"In-/Uitschakelen van het :ref:`paneel Geavanceerd digitaliseren "
+"<advanced_digitizing_panel>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:681
+msgid ":guilabel:`Advanced Digitizing` toolbar"
+msgstr "Werkbalk :guilabel:`Geavanceerd digitaliseren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:682
+msgid "|meshReindex| :sup:`Reindex Faces and Vertices`"
+msgstr "|meshReindex| :sup:`Zijden en punten opnieuw indexeren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1177
+msgid "meshReindex"
+msgstr "meshReindex"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:683
+msgid "Recreate index and renumber the mesh elements for optimization"
+msgstr ""
+"Maak de index opnieuw en hernummer de elementen van de mazen voor "
+"optimalisatie"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:684
+msgid ":guilabel:`Mesh` menu"
+msgstr "Menu :guilabel:`Mazen`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:685
+msgid "|meshDigitizing| :sup:`Digitize Mesh Elements`"
+msgstr "|meshDigitizing| :sup:`Elementen van mazen digitaliseren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1173
+msgid "meshDigitizing"
+msgstr "meshDigitizing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:686
+msgid "Select/Create vertices and faces"
+msgstr "Punten en zijden selecteren/maken"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:687
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:690
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:693
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:696
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:699
+msgid ":guilabel:`Mesh Digitizing` toolbar"
+msgstr ":guilabel:`Digitaliseren mazen` werkbalk "
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:688
+msgid "|meshSelectPolygon| :sup:`Select Mesh Elements by Polygon`"
+msgstr ""
+"|meshSelectPolygon| :sup:`Elementen van mazen met een polygoon selecteren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1181
+msgid "meshSelectPolygon"
+msgstr "meshSelectPolygon"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:689
+msgid "Select vertices and faces overlapped by a drawn polygon"
+msgstr ""
+"Punten en zijden selecteren die worden overlapt door een getekende polygoon"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:691
+msgid "|meshSelectExpression| :sup:`Select Mesh Elements by Expression`"
+msgstr ""
+"|meshSelectExpression| :sup:`Elementen van mazen met een expressie "
+"selecteren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1179
+msgid "meshSelectExpression"
+msgstr "meshSelectExpression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:692
+msgid "Select vertices and faces using an expression"
+msgstr "Punten en zijden selecteren m.b.v. reguliere expressie"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:694
+msgid "|meshTransformByExpression| :sup:`Transform Vertices Coordinates`"
+msgstr ""
+"|meshTransformByExpression| :sup:`Coördinaten van punten transformeren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1183
+msgid "meshTransformByExpression"
+msgstr "meshTransformByExpression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:695
+msgid "Modify coordinates of a selection of vertices"
+msgstr "Coördinaten van een selectie van punten aanpassen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:697
+msgid "|meshEditForceByVectorLines| :sup:`Force by Selected Geometries`"
+msgstr ""
+"|meshEditForceByVectorLines| :sup:`Forceren op geselecteerde geometrieën`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1175
+msgid "meshEditForceByVectorLines"
+msgstr "meshEditForceByVectorLines"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:698
+msgid "Split faces and constrain Z value using a linear geometry"
+msgstr "Zijden splitsen en Z-waarde beperken met een lineaire geometrie"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:702
+msgid "Exploring the Z value assignment logic"
+msgstr "Verkennen van de logica voor het toewijzen van de Z-waarde"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:704
+msgid ""
+"When a mesh layer is turned into edit mode, a :guilabel:`Vertex Z value` "
+"widget opens at the top right of the map canvas. By default, its value "
+"corresponds to the :guilabel:`Default Z value` set in "
+":menuselection:`Settings --> Options --> Digitizing` tab. When there are "
+"selected vertices, the widget displays the average Z value of the selected "
+"vertices."
+msgstr ""
+"Wanneer een laag met mazen in modus Bewerken wordt gezet, opent een widget "
+":guilabel:`Z-waarde punt` aan de rechterbovenkant van het kaartvenster. "
+"Standaard correspondeert de waarde ervan met de :guilabel:`Standaardwaarde "
+"Z` ingesteld op de tab :menuselection:`Extra--> Opties --> Digitaliseren`. "
+"Wanneer er geselecteerde punten zijn, geeft het widget de gemiddelde "
+"Z-waarde van d geselecteerde punten weer."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:710
+msgid ""
+"During editing, the :guilabel:`Vertex Z value` is assigned to new vertices. "
+"It is also possible to set a custom value: edit the widget, press "
+":kbd:`Enter` and you will override the default value and make use of this "
+"new value in the digitizing process. Click the |clearText| icon in the "
+"widget to reset its value to the Options default value."
+msgstr ""
+"Gedurende het bewerken wordt de :guilabel:`Z-waarde punt` toegewezen aan "
+"nieuwe punten. Het is ook mogelijk een aangepaste waarde in te stellen: "
+"bewerk de widget, druk op :kbd:`Enter` en u zult de standaardwaarde "
+"overschrijven en gebruik maken van deze nieuwe waarde in het proces "
+"Digitaliseren. Klik op het pictogram |clearText| in de widget om de waarde "
+"te herstellen naar de standaardwaarde van Opties."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1153
+msgid "clearText"
+msgstr "clearText"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:718
+msgid "Rules of assignment"
+msgstr "Regels voor tewijzen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:720
+msgid ""
+"When **creating** a new vertex, its Z value definition may vary depending on"
+" the active selection in the mesh layer and its location. The following "
+"table displays the various combinations."
+msgstr ""
+"Bij het **maken** van een nieuw punt, kan de definitie van de Z-waarde ervan"
+" variëren, afhankelijk van actieve selectie in de laag met mazen en de "
+"locatie ervan. De volgende tabel laat de verschillende combinaties zien."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:724
+msgid "Matrix of Z value assignment to new vertex"
+msgstr "Matrix voor toewijzen van Z-waarde voor nieuwe punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:727
+msgid "Vertex creation"
+msgstr "Vector maken"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:727
+msgid "Are there selected vertices in mesh layer?"
+msgstr "Zijn er geselecteerde punten in de laag met mazen?"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:727
+msgid "Source of assigned value"
+msgstr "Bron van toegewezen waarde"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:727
+msgid "Assigned Z Value"
+msgstr "Toegewezen Z-waarde"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:730
+msgid "\"Free\" vertex, not connected to any"
+msgstr "\"Vrij\" punt, niet verbonden met enige"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:732
+msgid "face or edge of a face"
+msgstr "zijde of rande van een zijde"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:730
+msgid "No"
+msgstr "Nee"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:730
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:737
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:743
+msgid ":guilabel:`Vertex Z value`"
+msgstr ":guilabel:`Z-waarde punt`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:730
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:743
+msgid "Default or user defined"
+msgstr "Standaard of gebruikergedefinieerd"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:732
+msgid ""
+":guilabel:`Advanced Digitizing Panel` (if :guilabel:`z` widget is in "
+"|locked| :sup:`Locked` state)"
+msgstr ""
+":guilabel:`paneel Geavanceerd digitaliseren` (als widget :guilabel:`z` in de"
+" vastgezette |locked| :sup:`Vastgezet` status staat)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1169
+msgid "locked"
+msgstr "locked"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:732
+msgid ":guilabel:`z` widget if in |locked| :sup:`Locked` state"
+msgstr "widget :guilabel:`z` indien in status |locked| :sup:`Vastgezet`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:737
+msgid "Yes"
+msgstr "Ja"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:737
+msgid "Average of the selected vertices"
+msgstr "Gemiddelde van de geselecteerde punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:739
+msgid "Vertex on an edge"
+msgstr "Punt op een rand"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:739
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:741
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:743
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:745
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:747
+msgid "---"
+msgstr "---"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:739
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:741
+msgid "Mesh layer"
+msgstr "Laag met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:739
+msgid "Interpolated from the edge's vertices"
+msgstr "Geïnterpoleerd vanuit de punten van de rand"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:741
+msgid "Vertex on a face"
+msgstr "Punt op een zijde"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:741
+msgid "Interpolated from the face's vertices"
+msgstr "Geïnterpoleerd vanuit de punten van de zijde"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:743
+msgid "Vertex snapped to a 2D vector feature"
+msgstr "Punt gesnapt aan een 2D-vectorobject"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:745
+msgid "Vertex snapped to a 3D vector vertex"
+msgstr "Punt gesnapt aan een 3D-vectorobject"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:745
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:747
+msgid "Vector layer"
+msgstr "Vectorlaag"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:745
+msgid "Vertex"
+msgstr "Punt"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:747
+msgid "Vertex snapped to a 3D vector segment"
+msgstr "Punt gesnapt aan een 3D-vectorsegmentt"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:747
+msgid "Interpolated along the vector segment"
+msgstr "Geïnterpoleerd langs het vectorsegment"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:751
+msgid ""
+"The :guilabel:`Vertex Z value` widget is deactivated if the :ref:`Advanced "
+"Digitizing Panel <advanced_digitizing_panel>` is enabled and no mesh element"
+" is selected. The latter's :guilabel:`z` widget then rules the Z value "
+"assignment."
+msgstr ""
+"De widget :guilabel:`Z-waarde punt` wordt gedeactiveerd als het :ref:`paneel"
+" Geavanceerd digitaliseren <advanced_digitizing_panel>` is ingeschakeld en "
+"er geen element van mazen is geselecteerd. De widget :guilabel:`z` van het "
+"laatste bepaalt dan de toewijzing van de Z-waarde."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:758
+msgid "Modifying Z value of existing vertices"
+msgstr "Z-waarde van bestaande punten aanpassen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:760
+msgid "To modify the Z value of vertices, the most straightforward way is:"
+msgstr ""
+"De meest eenvoudige manier, om de Z-waarde van punten aan het passen, is:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:762
+msgid ""
+"Select one or many vertices. The :guilabel:`Vertex Z value` widget will "
+"display the average height of the selection."
+msgstr ""
+"Selecteer één of meerdere punten. Het widget :guilabel:`Z-waarde punt` zal "
+"de gemiddelde hoogte van de selectie weergeven."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:764
+msgid "Change the value in the widget."
+msgstr "Wijzig de waarde in de widget."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:765
+msgid ""
+"Press :kbd:`Enter`. The entered value is assigned to the vertices and "
+"becomes the default value of next vertices."
+msgstr ""
+"Druk op :kbd:`Enter`. De ingevoerde waarde wordt toegewezen aan de punten en"
+" wordt de standaardwaarde voor de volgende punten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:768
+msgid ""
+"Another way to change the Z value of a vertex is to move and snap it on a "
+"vector layer feature with the Z value capability. If more than one vertex "
+"are selected, the Z value can't be changed in this way."
+msgstr ""
+"Een andere manier om de Z-waarde van een punt te wijzigen is om het te "
+"verplaatsen en het te snappen aan een object van een vectorlaag met de "
+"mogelijkheid voor een Z-waarde. Indien meer dan één punt is geselecteerd, "
+"kan de Z-waarde niet worden gewijzigd op deze manier."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:772
+msgid ""
+"The :ref:`Transform mesh vertices <transform_meshvertices>` dialog also "
+"provides means to modify the Z value of a selection of vertices (along with "
+"their X or Y coordinates)."
+msgstr ""
+"Het dialoogvenster :ref:`Punten van mazen transformeren "
+"<transform_meshvertices>` verschaft ook mogelijkheden om de Z-waarde van een"
+" selectie van punten aan te passen (samen met hun coördinaten X of Y)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:779
+msgid "Selecting mesh elements"
+msgstr "Elementen van mazen selecteren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:782
+msgid "Using :guilabel:`Digitize Mesh Elements`"
+msgstr "Gebruiken van :guilabel:`Elementen van mazen digitaliseren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:784
+msgid ""
+"Activate the |meshDigitizing| :sup:`Digitize Mesh Elements` tool. Hover over"
+" an element and it gets highlighted, allowing you to select it."
+msgstr ""
+"Activeer het gereedschap |meshDigitizing| :sup:`Elementen van mazen "
+"digitaliseren`. Ga over een element en het wordt geaccentueerd, wat u in "
+"staat stelt het te selecteren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:787
+msgid "Click on a vertex, and it is selected."
+msgstr "Klik op een punt en het is geslecteerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:788
+msgid ""
+"Click on the small square at the center of a face or an edge, and it gets "
+"selected. Connected vertices are also selected. Conversely, selecting all "
+"the vertices of an edge or a face also selects that element."
+msgstr ""
+"Klik op het kleine vierkant in het midden van een zijde of een rand en het "
+"wordt geselecteerd. Verbonden knopen worden ook geselecteerd. Omgekeerd "
+"selecteert het selecteren van alle punten van een rand of een zijde ook dat "
+"element."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:792
+msgid ""
+"Drag a rectangle to select overlapping elements (a selected face comes with "
+"all their vertices). Press :kbd:`Alt` key if you want to select only "
+"completely contained elements."
+msgstr ""
+"Sleep een vierkant om overlappende elementen te selecteren (een "
+"geselecteerde zijde komt met al zijn punten). Druk op :kbd:`Alt`-toets als u"
+" alleen volledig opgenomen elementen wilt selecteren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:795
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:813
+msgid ""
+"To add elements to a selection, press :kbd:`Shift` while selecting them."
+msgstr ""
+"Druk op de :kbd:`Shift`-toets tijdens het selecteren om elementen aan een "
+"selectie toe te voegen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:796
+msgid ""
+"To remove an element from the selection, press :kbd:`Ctrl` and reselect it. "
+"A deselected face will also deselect all their vertices."
+msgstr ""
+"Druk, om een element uit de selectie te verwijderen, op de :kbd:`Ctrl`-toets"
+" en selecteer het opnieuw. Een gedeselecteerde zijde zal ook al zijn punten "
+"hebben gedeselecteerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:800
+msgid "Using :guilabel:`Select Mesh Elements by Polygon`"
+msgstr ""
+"Gebruiken van :guilabel:`Elementen van mazen met een polygoon selecteren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:802
+msgid ""
+"Activate the |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` tool"
+" and:"
+msgstr ""
+"Activeer het gereedschap |meshSelectPolygon| :sup:`Elementen van mazen met "
+"een polygoon selecteren` en:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:804
+msgid ""
+"Draw a polygon (left-click to add vertex, :kbd:`Backspace` to undo last "
+"vertex, :kbd:`Esc` to abort the polygon and right-click to validate it) over"
+" the mesh geometries. Any partially overlapping vertices and faces will get "
+"selected. Press :kbd:`Alt` key while drawing if you want to select only "
+"completely contained elements."
+msgstr ""
+"Teken een polygoon (klik met links om een punt toe te voegen, "
+":kbd:`Backspace` om het laatste punt ongedaan te maken, :kbd:`Esc` om de "
+"polygoon te verlaten en klik met rechts om die te valideren) over de "
+"geometrieën met mazen. Alle gedeeltelijk overlappende punten en zijden "
+"zullen worden geselecteerd. Druk op de  :kbd:`Alt` -toets tijdens het "
+"tekenen als u alleen volledig opgenomen elementen wilt selecteren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:809
+msgid ""
+"Right-click over the geometry of a vector layer's feature, select it in the "
+"list that pops up and any partially overlapping vertices and faces of the "
+"mesh layer will get selected. Use :kbd:`Alt` while drawing to select only "
+"completely contained elements."
+msgstr ""
+"Klik met rechts op de geometrie van een object van een vectorlaag, selecteer"
+" het in de lijst die tevoorschijn komt en alle gedeeltelijk overlappende "
+"punten en zijden van de laag met mazen zullen worden geselecteerd. Gebruik "
+":kbd:`Alt` tijdens het tekenen om alleen volledig opgenomen elementen te "
+"selecteren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:814
+msgid ""
+"To remove an element from the selection, press :kbd:`Ctrl` while drawing "
+"over the selection polygon."
+msgstr ""
+"Druk, om een element uit de selectie te verwijderen, op :kbd:`Ctrl` tijdens "
+"het tekenen over de polygoon voor de selectie."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:818
+msgid "Using :guilabel:`Select Mesh Elements by Expression`"
+msgstr ""
+"Gebruiken van :guilabel:`Elementen van mazen met een expressie selecteren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:820
+msgid ""
+"Another tool for mesh elements selection is |meshSelectExpression| "
+":sup:`Select Mesh Elements by Expression`. When pressed, the tool opens the "
+"mesh :ref:`expression selector dialog <vector_expressions>` from which you "
+"can:"
+msgstr ""
+"Een ander gereedschap voor het selecteren van elementen van mazen is "
+"|meshSelectExpression| :sup:`Elementen van mazen met een expressie "
+"selecteren`. Indien op gedrukt zal het gereedschap het mazen "
+":ref:`dialoogvenster Expressie selecteren <vector_expressions>` openen van "
+"waaruit u kunt:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:824
+msgid "Select the method of selection:"
+msgstr "De methode voor de selectie selecteren:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:826
+msgid ""
+":guilabel:`Select by vertices`: applies the entered expression to vertices, "
+"and returns matching ones and their eventually associated edges/faces"
+msgstr ""
+":guilabel:`Selecteren op punten`:past de ingevoerde expressie toe op punten,"
+" en geeft overeenkomende en hun eventuele geassocieerde randen/zijden terug"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:828
+msgid ""
+":guilabel:`Select by faces`: applies the entered expression to faces, and "
+"returns matching ones and their associated edges/vertices"
+msgstr ""
+":guilabel:`Selecteren op zijden`:past de ingevoerde expressie toe op zijden,"
+" en geeft overeenkomende en hun eventuele geassocieerde randen/punten terug"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:830
+msgid ""
+"Write the expression of selection. Depending on the selected method, "
+"available functions in the :ref:`Meshes group <expression_function_meshes>` "
+"will be filtered accordingly."
+msgstr ""
+"Schrijf de expressie voor de selectie. Afhankelijk van de geselecteerde "
+"methode, zullen beschikbare functies in de  :ref:`groep Mazen "
+"<expression_function_meshes>` overeenkomstig worden gefilterd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:833
+msgid "Run the query by setting how the selection should behave and pressing:"
+msgstr ""
+"Voer de query uit door in te stellen hoe de selectie zich zou moeten "
+"gedragen en te drukken op:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:835
+msgid ""
+"|expressionSelect| :guilabel:`Select`: replaces any existing selection in "
+"the layer"
+msgstr ""
+"|expressionSelect| :guilabel:`Selecteren`: vervangt elke bestaande selectie "
+"in de laag"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1165
+msgid "expressionSelect"
+msgstr "expressionSelect"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:837
+msgid "|selectAdd| :guilabel:`Add to current selection`"
+msgstr "|selectAdd| :guilabel:`Toevoegen aan huidige selectie`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1207
+msgid "selectAdd"
+msgstr "selectAdd"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:838
+msgid "|selectRemove| :guilabel:`Remove from current selection`"
+msgstr "|selectRemove| :guilabel:`Verwijderen uit huidige selectie`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1209
+msgid "selectRemove"
+msgstr "selectRemove"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:841
+msgid "Modifying mesh elements"
+msgstr "Elementen van mazen aanpassen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:844
+msgid "Adding vertices"
+msgstr "Punten toevoegen "
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:846
+msgid "To add vertices to a mesh layer:"
+msgstr "Punten toevoegen aan een laag met mazen:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:848
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:865
+msgid "Press the |meshDigitizing| :sup:`Digitize mesh elements` button"
+msgstr ""
+"Druk op de knop |meshDigitizing| :sup:`Elementen van mazen digitaliseren`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:849
+msgid ""
+"A :guilabel:`Vertex Z value` widget appears on the top right corner of the "
+"map canvas. Set this value to the Z coordinate you would like to assign to "
+"the subsequent vertices"
+msgstr ""
+"Een widget :guilabel:`Z-waarde punt` verschijnt rechtsboven in het "
+"kaartvenster. Stel deze waarde in op de Z-coördinaat die u wilt toewijzen "
+"aan de opeenvolgende punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:851
+msgid "Then double-click:"
+msgstr "Dubbelklik dan:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:853
+msgid ""
+"outside a face: adds a \"free vertex\", that is a vertex not linked to any "
+"face. This vertex is represented by a red dot when the layer is in editing "
+"mode."
+msgstr ""
+"buiten een zijde: voegt een \"vrij punt\" toe dat een punt is dat niet is "
+"gekoppeld aan enige zijde. Dit punt wordt weergegeven als een rode punt als "
+"de laag in de modus Bewerken staat."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:855
+msgid ""
+"on the edge of existing face(s): adds a vertex on the edge, splits the "
+"touching face(s) into triangles connected to the new vertex."
+msgstr ""
+"op de rand van bestaande zijde(n): voegt een punt toe op de rand, splitst de"
+" elkaar rakende zijde(n) in driehoeken die zijn verbonden met het nieuwe "
+"punt"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:857
+msgid ""
+"inside a face: splits the face into triangles whose edges connect the "
+"surrounding vertices to the new vertex."
+msgstr ""
+"binnen een zijde: splitst de zijde in driehoeken waarvan de randen de "
+"omliggende punten verbinden met het nieuwe punt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:861
+msgid "Adding faces"
+msgstr "Zijden toevoegen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:863
+msgid "To add faces to a mesh layer:"
+msgstr "Zijden toevoegen aan een laag met mazen:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:866
+msgid ""
+"A :guilabel:`Vertex Z value` widget appears on the top right corner of the "
+"map canvas. Set this value to the Z coordinate you would like to assign to "
+"the subsequent vertices."
+msgstr ""
+"Een widget :guilabel:`Z-waarde punt` verschijnt rechtsboven in het "
+"kaartvenster. Stel deze waarde in op de Z-coördinaat die u wilt toewijzen "
+"aan de opeenvolgende punten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:868
+msgid "Hover over a vertex and click the small triangle that appears next it."
+msgstr ""
+"Ga met de muis over een punt en klik op de kleine driehoek die ernaast "
+"verschijnt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:869
+msgid ""
+"Move the cursor to the next vertex position; you can snap to existing vertex"
+" or left-click to add a new one."
+msgstr ""
+"Verplaats de cursor naar de volgende positie voor een punt; u kunt snappen "
+"aan bestaande punten of dubbelklikken om een nieuw toe te voegen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:871
+msgid ""
+"Proceed as above to add as many vertices you wish for the face. Press "
+":kbd:`Backspace` button to undo the last vertex."
+msgstr ""
+"Ga door zoals hierboven om net zoveel punten aan de zijde toe te voegen als "
+"u wilt. Druk op de knop :kbd:`Backspace` om het laatste punt ongedaan te "
+"maken."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:873
+msgid ""
+"While moving the mouse, a rubberband showing the shape of the face is "
+"displayed. If it is shown in green, then the expected face is valid and you "
+"can right-click to add it to the mesh. If it is red, the face is not valid "
+"(e.g. because it self-intersects, overlaps an existing face or vertex, "
+"creates a hole, ...) and can't be added. You'd need to undo some vertices "
+"and fix the geometry."
+msgstr ""
+"Tijdens het verplaatsen van de muis wordt een elastiek weergegeven dat de "
+"vorm van de zijde weergeeft. Als het groen wordt weergegeven dan is de "
+"verwachte zijde geldig en kunt u met rechts klikken om hem toe te voegen aan"
+" de laag met mazen. Als het rood is, is de zijde niet geldig (bijv. omdat "
+"die zichzelf snijdt, een bestaande zijde of punt overlapt, maakt een gat, …)"
+" en kan niet worden toegevoegd. U moet eerst enkele punten ongedaan maken en"
+" de geometrie repareren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:879
+msgid "Press :kbd:`Esc` to abort the face digitizing."
+msgstr "Druk op :kbd:`Esc` om het digitaliseren van de zijde af te breken."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:880
+msgid "Right-click to validate the face."
+msgstr "Klik met rechts om de zijde te valideren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:887
+msgid "Examples of invalid mesh"
+msgstr "Voorbeelden van ongeldige mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:892
+msgid "Removing mesh elements"
+msgstr "Elementen van mazen verwijderen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:894
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:915
+msgid ":ref:`Select the target elements <select_mesh_elements>`"
+msgstr ":ref:`De doelelementen selecteren <select_mesh_elements>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:895
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:916
+msgid "Enable the |meshDigitizing| :sup:`Digitize mesh elements` tool"
+msgstr ""
+"Schakel het gereedschap |meshDigitizing| :sup:`Elementen van mazen "
+"digitaliseren` in."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:896
+msgid "Right-click and select:"
+msgstr "Klik met rechts en selecteer."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:898
+msgid ""
+":guilabel:`Remove Selected Vertices and Fill Hole(s)` or press "
+":kbd:`Ctrl+Del`: removes vertices and linked faces and fills the hole(s) by "
+"triangulating from the neighbor vertices"
+msgstr ""
+":guilabel:`Geselecteerde punten verwijderen en gat(en) vullen` of drukken op"
+" :kbd:`Ctrl+Del`: verwijdert punten en gekoppelde zijden en vult het/de "
+"gat(en)  door te trianguleren vanaf de naburige punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:901
+msgid ""
+":guilabel:`Remove Selected Vertices Without Filling Hole(s)` or press "
+":kbd:`Ctrl+Shift+Del`: removes vertices and linked faces and do not fill "
+"hole(s)"
+msgstr ""
+":guilabel:`Geselecteerde punten verwijderen zonder gat(en) vullen` of "
+"drukken op :kbd:`Ctrl+Shift+Del`: verwijdert punten en gekoppelde zijden en "
+"vult het/de gat(en)  niet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:904
+msgid ""
+":guilabel:`Remove Selected Face(s)` or press :kbd:`Shift+Del`: removes faces"
+" but keeps the vertices"
+msgstr ""
+":guilabel:`Geselecteerde zijden(n) verwijderen` of drukken op "
+":kbd:`Shift+Del`: verwijdert zijden, maar behoud de punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:907
+msgid ""
+"These options are also accessible from the contextual menu when hovering "
+"over a single item without selecting."
+msgstr ""
+"Deze opties zijn ook toegankelijk vanuit het contextmenu wanneer u over één "
+"enkel item gaat zonder te selecteren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:911
+msgid "Moving mesh elements"
+msgstr "Elementen van mazen verplaatsen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:913
+msgid "To move vertices and faces of a mesh layer:"
+msgstr "Punten en zijden verplaatsen in laag met mazen:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:917
+msgid ""
+"To start moving the element, click on a vertex or the centroid of a "
+"face/edge"
+msgstr ""
+"Klik, om te beginnen met het verplaatsen van het element, op een punt of het"
+" zwaartepunt van een zijde/rand"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:918
+msgid ""
+"Move the cursor to the target location (snapping to vector features is "
+"supported)."
+msgstr ""
+"Verplaats de cursor naar de doellocatie (snappen aan vectorobjecten wordt "
+"ondersteund)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:919
+msgid ""
+"If the new location does not generate an :ref:`invalid mesh "
+"<figure_invalid_mesh>`, the moved elements appear in green. Click again to "
+"release them at this location. Faces whose vertices are all selected are "
+"translated, their neighbors are reshaped accordingly."
+msgstr ""
+"Als de nieuwe locatie geen :ref:`ongeldige laag met mazen "
+"<figure_invalid_mesh>` genereert, verschijnen de verplaatste elementen in "
+"het groen. Klik opnieuw om ze op deze locatie los te laten. Zijden waarvan "
+"alle punten zijn geselecteerd worden vertaald, hun buren worden opnieuw "
+"overeenkomstig vorm gegeven."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:927
+msgid "Transforming mesh vertices"
+msgstr "Punten van mazen transformeren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:929
+msgid ""
+"The |meshTransformByExpression| :sup:`Transform Vertices Coordinates` tool "
+"gives a more advanced way to move vertices, by editing their X, Y and/or Z "
+"coordinates thanks to expressions."
+msgstr ""
+"Het gereedschap |meshTransformByExpression| :sup:`Coördinaten van punten "
+"transformeren` geeft een meer geavanceerde manier om punten te verplaatsen, "
+"door het bewerken van hun X-, Y- en/of Z-coördinaten, met expressies."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:933
+msgid "Select the vertices you want to edit the coordinates"
+msgstr "Selecteer de punten waarvan u de coördinaten wilt bewerken"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:934
+msgid ""
+"Press |meshTransformByExpression| :sup:`Transform Vertices Coordinates`. A "
+"dialog opens with a mention of the number of selected vertices. You can "
+"still add or remove vertices from the selection."
+msgstr ""
+"Druk op |meshTransformByExpression| :sup:`Coördinaten van punten "
+"transformeren`. Een dialoogvenster opent met een vermelding van het aantal "
+"geselecteerde punten. U kunt nog steeds punten aan de selectie toevoegen of "
+"daaruit verwijderen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:937
+msgid ""
+"Depending on the properties you want to modify, you need to check the "
+":guilabel:`X coordinate`, :guilabel:`Y coordinate` and/or :guilabel:`Z "
+"value`."
+msgstr ""
+"Afhankelijk van de eigenschappen die u wilt aanpassen, moet u "
+":guilabel:`X-coördinaat`, :guilabel:`Y-coördinaat` en/of :guilabel:`Z-waarde"
+" selecteren`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:939
+msgid ""
+"Then enter the target position in the box, either as a numeric value or an "
+"expression (using the |expression| :sup:`Expression dialog`)"
+msgstr ""
+"Voer dan de doelpositie in het vak in, ofwel als een numerieke waarde of als"
+" een expressie (met het |expression| :sup:`dialoovenster Expressie`)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1163
+msgid "expression"
+msgstr "expression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:941
+msgid ""
+"With the |vertexCoordinates| :sup:`Import Coordinates of the Selected "
+"Vertex` pressed, the X, Y and Z boxes are automatically filled with its "
+"coordinates whenever a single vertex is selected. A convenient and quick way"
+" to adjust vertices individually."
+msgstr ""
+"Met de knop |vertexCoordinates| :sup:`Coördinaten van het geselecteerde punt"
+" importeren` ingedrukt, worden de vakken X, Y en Z automatisch gevuld met "
+"hun coördinaten wanneer één enkel punt is geselecteerd. Een handige en "
+"snelle manier om punten individueel aan te passen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1225
+msgid "vertexCoordinates"
+msgstr "vertexCoordinates"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:945
+msgid ""
+"Press :guilabel:`Preview Transform` to simulate the vertices new location "
+"and preview the mesh with transformation."
+msgstr ""
+"Druk op :guilabel:`Voorbeeld transformatie` om de nieuwe locatie van het "
+"punt te simuleren en een voorbeeld te zien van de mazen met de "
+"transformatie."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:948
+msgid ""
+"If the preview is green, transformed mesh is valid and you can apply the "
+"transformation."
+msgstr ""
+"Als het voorbeeld groen is, is de getransformeerde laag met mazen geldig en "
+"kunt u de transformatie toepassen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:950
+msgid ""
+"If the preview is red, the transformed mesh is invalid and you can not apply"
+" the transformation until it is corrected."
+msgstr ""
+"Als het voorbeeld rood is, is de getransformeerde laag met mazen ongeldig en"
+" kunt u de transformatie niet toepassen, totdat het is gecorrigeerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:952
+msgid ""
+"Press :guilabel:`Apply Transform` to modify the selected coordinates for the"
+" set of vertices."
+msgstr ""
+"Druk op :guilabel:`Transformatie toepassen` om de geselecteerde coördinaten "
+"voor de set met punten aan te passen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:956
+msgid "Reshaping mesh geometry"
+msgstr "Geometrie van mazen opnieuw vormen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:959
+msgid "The contextual menu"
+msgstr "Het contextmenu"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:961
+msgid "Enable the |meshDigitizing| :sup:`Digitize mesh elements`"
+msgstr "Schakel |meshDigitizing| :sup:`Elementen van mazen digitaliseren` in"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:962
+msgid "Select mesh item(s), or not"
+msgstr "Selecteer item(s) van mazen, of niet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:963
+msgid "Hover over a mesh element, it gets highlighted."
+msgstr "Door over een element van mazen te gaan wordt het geaccentueerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:964
+msgid "Right-click and you can:"
+msgstr "Klik met rechts en u kunt:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:966
+msgid ":ref:`remove the item(s) <remove_mesh_items>`"
+msgstr ":ref:`de item(s) verplaatsen <remove_mesh_items>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:967
+msgid ""
+":guilabel:`Split Selected Face(s)` (:guilabel:`Split Current Face`): splits "
+"the face you are hovering over or each selected quad mesh faces into two "
+"triangles"
+msgstr ""
+":guilabel:`Geselecteerde zijde(n) splitsen)` (:guilabel:`Huidige zijde "
+"splitsen`): splitst de zijde waar u overheen gaat of elke geselecteerde "
+"quadzijden in twee driehoeken"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:970
+msgid ""
+":guilabel:`Delaunay Triangulation with Selected vertices`: builds triangular"
+" faces using selected free vertices."
+msgstr ""
+":guilabel:`Delaunay-triangulatie met geselecteerde punten`: bouwt "
+"driehoekige zijden met behulp van geselecteerde vrije punten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:972
+msgid ""
+":guilabel:`Refine Selected Face(s)` (:guilabel:`Refine Current Face`): "
+"splits the face into four faces, based on vertices added at the middle of "
+"each edge (a triangle results into triangles, a quad into quads). Also "
+"triangulates adjacent faces connected to the new vertices."
+msgstr ""
+":guilabel:`Geselecteerde zijde(n) verfijnen` (:guilabel:`Huidige zijde "
+"verfijnen`): splitst de zijde in vier zijden, gebaseerd op punten die zijn "
+"toegevoegd aan het midden van elke rand (een driehoek resulteert in "
+"driehoeken, een quad in quads). Trianguleert ook aanliggende zijden die zijn"
+" verbonden met de nieuwe punten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:978
+msgid "The edge markers"
+msgstr "De markeringen voor randen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:980
+msgid ""
+"When the |meshDigitizing| :sup:`Digitize mesh elements` is active and you "
+"hover over an edge, the edge is highlighted and it is possible to interact "
+"with it. Depending on the context, following markers may be available:"
+msgstr ""
+"Als |meshDigitizing| :sup:`Elementen van mazen digitaliseren` actief is en u"
+"  gaat over een rand, wordt de rand geaccentueerd en is het mogelijk om "
+"daarmee interactief te werken. Afhankelijk van de context zouden de volgende"
+" markeringen beschikbaar kunnen zijn:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:984
+msgid ""
+"a **square**, at the center of the edge: click on it to select extremity "
+"vertices."
+msgstr ""
+"een **vierkant**, in het midden van de rand: klik erop om de eindpunten te "
+"selecteren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:985
+msgid ""
+"a **cross** if the two faces on either side can be merged: click on it to "
+"delete the edge and merge the faces."
+msgstr ""
+"een **kruis** als de twee zijden aan beide zijden kunnen worden "
+"samengevoegd: klik erop om de rand te verwijderen en de zijden samen te "
+"voegen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:987
+msgid ""
+"a **circle** if the edge is between two triangles: Click on it to flip the "
+"edge, i.e. connect it instead to the two other \"free\" vertices of the "
+"faces"
+msgstr ""
+"een **cirkel** als de rand tussen twee driehoeken staat: Klik erop om de "
+"rand om te draaien, d.i. hem verbinden in plaats van aan de twee andere "
+"\"vrije\" punten van de zijden."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:991
+msgid "The :guilabel:`Force by Selected Geometries` tool"
+msgstr "Het gereedschap :guilabel:`Forceren op geselecteerde geometrieën`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:993
+msgid ""
+"The |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool "
+"provides advanced ways to apply break lines using lines geometry. A break "
+"line will force the mesh to have edges along the line. Note that the break "
+"line will not be considered persistent once the operation is done; resulting"
+" edges will not act as constraints anymore and can be modified like any "
+"other edge. This can be used for example to locally modify a mesh layer with"
+" accurate lines, as river banks or border of road embankments."
+msgstr ""
+"Het gereedschap |meshEditForceByVectorLines| :sup:`Forceren op geselecteerde"
+" geometrieën` verschaft geavanceerde manieren om breuklijnen toe te passen "
+"met lijn-geometrie. Een breuklijn zal de mazen forceren om randen langs de "
+"lijn te hebben. Onthoud dat de breuklijn niet als persistent zal worden "
+"beschouwd als de bewerking eenmaal is uitgevoerd; resulterende randen zullen"
+" niet langer als beperkingen optreden en kunnen worden aangepast, net als "
+"elke andere rand. Dit kan worden gebruikt om bijvoorbeeld om lokaal een laag"
+" met mazen aan te passen met nauwkeurige lijnen, zoals rivieroevers of "
+"grenzen of wegbermen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1002
+msgid ""
+"Enable the |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` "
+"tool"
+msgstr ""
+"Schakel het gereedschap |meshEditForceByVectorLines| :sup:`Forceren op "
+"geselecteerde geometrieën` in"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1003
+msgid "Indicate the geometry to use as \"forcing line\"; it can be:"
+msgstr ""
+"Geef de geometrie aan die moet worden gebruikt als \"forcerende lijn\"; het "
+"mag zijn:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1005
+msgid ""
+"picked from a line or polygon feature in the map canvas: right-click over "
+"the vector feature and select it from the list in the contextual menu."
+msgstr ""
+"uitgekozen vanuit een object lijn of polygoon in het kaartvenster: klik met "
+"rechts op het vectorobject en selecteer het uit de lijst in het contextmenu."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1007
+msgid ""
+"a virtual line drawn over the mesh frame: left-click to add vertices, right-"
+"click for validation. Vertices Z value is set through the :guilabel:`Vertex "
+"Z value` widget or the :guilabel:`z` widget if the :guilabel:`Advanced "
+"Digitizing Panel` is on. If the line is snapped to a mesh vertex or a 3D "
+"vector feature's vertex or segment, the new vertex takes the snapped element"
+" Z value."
+msgstr ""
+"een virtuele lijn die is getekend over het frame met mazen: klik met links "
+"om punten toe te voegen, klik met rechts om te valideren. De Z-waarde van de"
+" punten wordt ingesteld door de widget :guilabel:`Z-waarde punt` of de "
+"widget :guilabel:`z` als het :guilabel:`paneel Geavanceerd digitaliseren` is"
+" ingeschakeld. Als de lijn is gesnapt aan een punt van de mazen of een punt "
+"of segment van een 3D-vectorobject, zal het nieuwe punt de Z-waarde van het "
+"gesnapte element aannemen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1014
+msgid ""
+"Mesh faces that overlap the line geometry or the polygon's boundary will be "
+"affected in a way that depends on options you can set from the "
+"|meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool drop-"
+"down menu:"
+msgstr ""
+"Zijden van mazen die de geometrie lijn of de grenzen van de polygoon "
+"overlappen zullen worden beïnvloed op een manier die afhankelijk is van de "
+"opties die u in kunt stellen vanuit het keuzemenu van het gereedschap "
+"|meshEditForceByVectorLines| :sup:`Forceren op geselecteerde geometrieën`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1019
+msgid ""
+"|checkbox| :guilabel:`Add new vertex on intersecting edges`: with this "
+"option, a new vertex is added each time the forcing line intersect an edge. "
+"This option leads to split along the line each encountered faces."
+msgstr ""
+"|checkbox| :guilabel:`Nieuw punt op kruisen randen toevoegen`: met deze "
+"optie wordt een nieuw punt toegevoegd, elke keer als de forcerende lijn een "
+"rand kruist. Deze optie leidt tot het splitsen langs de lijn bij elke "
+"tegengekomen zijde."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1023
+msgid ""
+"Without this option, encountered faces are removed and replaced by faces "
+"coming from a triangulation with only the existing vertices plus the "
+"vertices of the forcing lines (new vertices are also added on the boundary "
+"edge intersecting the forcing lines)."
+msgstr ""
+"Zonder deze optie worden tegengekomen zijden verwijderd en vervangen door "
+"zijden die komen uit een triangulatie met slechts de bestaande punten plus "
+"de punten van de forcerende lijnen (nieuwe punten worden ook toegevoegd op "
+"de grensrand die de forcerende lijnen kruist)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1033
+msgid ""
+"Force Mesh using a line geometry - Results without (middle) and with (right)"
+" new vertex on edges intersection"
+msgstr ""
+"Mazen forceren met een geometrie lijn - Resultaten zonder (midden) en met "
+"(rechts) nieuwe punten op kruisingen van randen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1036
+msgid ""
+":guilabel:`Interpolate Z value from`: set how the new vertices Z value is "
+"calculated. It can be from:"
+msgstr ""
+":guilabel:`Z-waarde interpoleren vanuit`: stelt in hoe de Z-waarde van de "
+"nieuwe punten wordt bewerkt. Het mag zijn:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1039
+msgid ""
+"the :guilabel:`Mesh` itself: the new vertices Z value is interpolated from "
+"vertices of the face they fall within"
+msgstr ""
+"de :guilabel:`Mazen` zelf: de Z-waarde van de nieuwe punten wordt "
+"geïnterpoleerd uit punten van de zijde waarop zij vallen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1041
+msgid ""
+"or the :guilabel:`Forcing line`: if the line is defined by a 3D vector "
+"feature or a drawn line then the new vertices Z value is derived from its "
+"geometry. In case of 2D line feature, the new vertices Z value is the "
+":guilabel:`Vertex Z value`."
+msgstr ""
+"of de :guilabel:`Forcerende lijn`: als de lijn wordt gedefinieerd door een "
+"3D-vectorobject of een getekende lijn, dan wordt de Z-waarde voor de nieuwe "
+"punten afgeleid van de geometrie daarvan. In het geval van een 2D-lijnobject"
+" is de Z-waarde voor de nieuwe punten de :guilabel:`Z-waarde punt`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1046
+msgid ""
+":guilabel:`Tolerance`: when an existing mesh vertex is closer to the line "
+"than the tolerance value, do not create new vertex on the line but use the "
+"existing vertex instead. The value can be set in :guilabel:`Meters at Scale`"
+" or in :guilabel:`Map Units` (more details at :ref:`unit_selector`)."
+msgstr ""
+":guilabel:`Tolerantie`: wanneer een bestaand punt van mazen dichter bij de "
+"lijn staat dan de waarde van de tolerantie, maak geen nieuw punt op de lijn,"
+" maar gebruik in plaats daarvan het bestaande punt. De waarde kan worden "
+"ingesteld in :guilabel:`Meters op schaal` of in :guilabel:`Schaaleenheden` "
+"(meer details op :ref:`unit_selector`)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1055
+msgid "Reindexing meshes"
+msgstr "Herindexeren van lagen met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1057
+msgid ""
+"During edit, and in order to allow quick undo/redo operations, QGIS keeps "
+"empty places for deleted elements, which may lead to growing memory use and "
+"inefficient mesh structuring. The :menuselection:`Mesh -->` |meshReindex| "
+":menuselection:`Reindex Faces and Vertices` tool is designed to remove these"
+" holes and renumber the indices of faces and vertices so that they are "
+"continuous and somewhat reasonably ordered. This optimizes relation between "
+"faces and vertices and increases the efficiency of calculation."
+msgstr ""
+"Gedurende het bewerken, en om bewerkingen voor ongedaan maken/opnieuw snel "
+"uit te kunnen voeren, behoudt QGIS lege plekken voor verwijderde elementen, "
+"wat kan leiden tot groeiend gebruik van het geheugen en inefficiënte "
+"structuur van mazen. Het  gereedschap :menuselection:`Mazen -->` "
+"|meshReindex| :menuselection:`Zijden en punten herindexeren` is ontworpen om"
+" deze gaten te verwijderen en de indices van zijden en punten opnieuw te "
+"nummeren, zodat ze doorlopen en enigszins redelijk geordend zijn. Dit "
+"optimaliseert de relatie tussen zijden en punten en vergroot de efficiëntie "
+"van berekeningen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1066
+msgid ""
+"The |meshReindex| :guilabel:`Reindex Faces and Vertices` tool saves the "
+"layer and clear the undo/redo stacks, disabling any rollback."
+msgstr ""
+"Het gereedschap |meshReindex| :guilabel:`Zijden en punten herindexeren` "
+"slaat de laag op en maakt de stapels voor ongedaan/maken/opnieuw leeg, wat "
+"terugdraaien onmogelijk maakt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1073
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1084
+msgid "Mesh Calculator"
+msgstr "Mazen berekenen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1075
+msgid ""
+"The :guilabel:`Mesh Calculator` tool from the top :menuselection:`Mesh` menu"
+" allows you to perform arithmetic and logical calculations on existing "
+"dataset groups to generate a new dataset group (see "
+":numref:`figure_mesh_calculator`)."
+msgstr ""
+"Het gereedschap :guilabel:`Mazen berekenen` uit het bovenste menu "
+":menuselection:`Mazen`  stelt u in staat rekenkundige en logische "
+"berekeningen uit te voeren op bestaande groepen gegevenssets om een nieuwe "
+"groep gegevensset te maken (bekijk :numref:`figure_mesh_calculator`)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1086
+msgid ""
+"The :guilabel:`Datasets` list contains all dataset groups in the active mesh"
+" layer. To use a dataset group in an expression, double click its name in "
+"the list and it will be added to the :guilabel:`Mesh calculator expression` "
+"field. You can then use the operators to construct calculation expressions, "
+"or you can just type them into the box."
+msgstr ""
+"De lijst :guilabel:`Gegevenssets` bevat alle groepen gegevenssets in de "
+"actieve laag met mazen. Dubbelklik, om een groep gegevensset in een "
+"expressie te gebruiken, op de naam in de lijst en het zal worden toegevoegd "
+"aan het veld :guilabel:`Uitdrukking voor mazen berekenen`. U kunt dan de "
+"operatoren gebruiken om, expressies voor berekeningen te construeren, of u "
+"kunt ze eenvoudigweg in het vak typen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1092
+msgid ""
+"The :guilabel:`Result Layer` helps you configure properties of the output "
+"layer:"
+msgstr ""
+"De :guilabel:`Resultaatlaag` helpt u eigenschappen voor de uitvoerlaag te "
+"configureren:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1094
+msgid ""
+"|checkbox| :guilabel:`Create on-the-fly dataset group instead of writing "
+"layer to disk`:"
+msgstr ""
+"|checkbox| :guilabel:`Direct groep voor gegevensset maken in plaats van de "
+"laag naar schijf te schrijven`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1097
+msgid ""
+"If unchecked, the output is stored on disk as a new plain file. An "
+":guilabel:`Output File` path and an :guilabel:`Output Format` are required."
+msgstr ""
+"Indien niet geselecteerd wordt de uitvoer opgeslagen op schijf als een nieuw"
+" gewoon bestand. Een pad voor :guilabel:`Uitvoerbestand` en een "
+":guilabel:`Indeling uitvoer` zijn vereist."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1099
+msgid ""
+"If checked, a new dataset group will be added to the mesh layer. Values of "
+"the dataset group are not stored in memory but each dataset is calculated "
+"when needed with the formula entered in the mesh calculator. That virtual "
+"dataset group is saved with the project, and if needed, it can be removed or"
+" made persistent in file from the layer :guilabel:`Source` properties tab."
+msgstr ""
+"Indien geselecteerd zal een nieuwe groep voor de gegevensset worden "
+"toegevoegd aan de laag met mazen. Waarden van de groep voor de gegevensset "
+"worden niet in het geheugen opgeslagen, maar elke gegevensset wordt berekend"
+" als die nodig is in de formule die is ingevoerd in Mazen berekenen. Die "
+"virtuele groep voor de gegevensset wordt met het project opgeslagen, en "
+"indien nodig, kan hij worden verwijderd of permanent worden gemaakt in het "
+"bestand vanaf de tab :guilabel:`Bron` in de Laageigenschappen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1106
+msgid ""
+"In either case, you should provide a :guilabel:`Group Name` for the output "
+"dataset group."
+msgstr ""
+"In beide gevallen zou u een :guilabel:`Groepsnaam` moeten opgeven voor de "
+"uitvoer groep voor de gegevensset."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1108
+msgid "The :guilabel:`Spatial extent` to consider for calculation can be:"
+msgstr ""
+"Het :guilabel:`Ruimtelijk bereik` waarmee rekening moet worden gehouden voor"
+" berekenen mag zijn:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1110
+msgid ""
+"a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`, "
+":guilabel:`X max`, :guilabel:`Y min` and :guilabel:`Y max` coordinate, or "
+"extracted from an existing dataset group (select it in the list and press "
+":guilabel:`Use selected layer extent` to fill the abovementioned coordinate "
+"fields)"
+msgstr ""
+"een :guilabel:`Aangepast bereikt`, handmatig gevuld met de coördinaten voor "
+":guilabel:`X min`, :guilabel:`X max`, :guilabel:`Y min` en :guilabel:`Y "
+"max`, of uitgenomen uit een bestaande groep voor de gegevensset (selecteer "
+"hem in de lijst en druk op :guilabel:`Geselecteerd laagbereik gebruiken` om "
+"de bovengenoemde velden voor coördinaten te vullen)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1115
+msgid ""
+"defined by a polygon layer (:guilabel:`Mask layer`) of the project: the "
+"polygon features geometry are used to clip the mesh layer datasets"
+msgstr ""
+"gedefinieerd door een polygonenlaag (:guilabel:`Maskeerlaag`) van het "
+"project: de geometrie van de objecten polygoon worden gebruikt om de "
+"gegevenssets van de laag met mazen te clippen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1118
+msgid ""
+"The :guilabel:`Temporal extent` to take into account for datasets can be set"
+" with the :guilabel:`Start time` and :guilabel:`End time` options, selected "
+"from the existing dataset groups timesteps. They can also be filled using "
+"the :guilabel:`Use all selected dataset times` button to take the whole "
+"range."
+msgstr ""
+"De :guilabel:`Tijdperiode` waarmee rekening moet worden gehouden voor "
+"gegevenssets kan worden ingesteld met de opties :guilabel:`Starttijd` en "
+":guilabel:`Eindtijd`, geselecteerd uit de bestaande tijdstappen van de "
+"groepen voor gegevenssets. Ze kunnen ook  worden gevuld met de knop "
+":guilabel:`Alle geselecteerde tijden van de gegevensset gebruiken` om de "
+"gehele periode te nemen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1123
+msgid ""
+"The :guilabel:`Operators` section contains all available operators. To add "
+"an operator to the mesh calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"statistical functions (``min``, ``max``, ``sum (aggr)``, ``average (aggr)``,"
+" ... ) are available. Conditional expressions (``=``, ``!=``, ``<``, ``>=``,"
+" ``IF``, ``AND``, ``NOT``, ... ) return either 0 for false and 1 for true, "
+"and therefore can be used with other operators and functions. The ``NODATA``"
+" value can also be used in the expressions."
+msgstr ""
+"Het gedeelte :guilabel:`Operatoren` bevat alle beschikbare operatoren. Klik,"
+" om een operator toe te voegen aan het expressievak van Mazen berekenen, op "
+"de toepasselijke knop. Rekenkundige berekeningen (``+``, ``-``, ``*``, … ) "
+"en statistische functies (``min``, ``max``, ``sum (aggr)``, ``average "
+"(aggr)``, … ) zijn beschikbaar. Voorwaardelijke expressies (``=``, ``!=``, "
+"``<``, ``>=``, ``IF``, ``AND``, ``NOT``, … ) geven ofwel 0 voor false of 1 "
+"voor true terug, en kunnen daarom worden gebruikt met andere operatoren en "
+"functies. De waarde ``NODATA`` mag ook in de expressies worden gebruikt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1131
+msgid ""
+"The :guilabel:`Mesh Calculator Expression` widget shows and lets you edit "
+"the expression to execute."
+msgstr ""
+"De widget :guilabel:`Uitdrukking voor mazen berekenen` geeft de expressie "
+"weer en laat u die bewerken om uit te voeren."

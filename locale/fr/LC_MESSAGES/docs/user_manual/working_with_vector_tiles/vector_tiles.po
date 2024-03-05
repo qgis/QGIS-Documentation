@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# MarieSilvestre, 2024
+# Harrissou Sant-anna, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traduction est le fruit d'un effort communautaire auquel `vous pouvez "
+"prendre part <https://qgis.org/fr/site/getinvolved/translate.html#becoming-"
+"a-translator>`_. Cette page est actuellement traduite à |translation "
+"progress|."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:6
+msgid "Working with Vector Tiles"
+msgstr "Les Tuiles Vectorielles"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:14
+msgid "What are Vector Tiles?"
+msgstr "Que sont les tuiles vectorielles?"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:16
+msgid ""
+"Vector tiles are packets of geographic data, packaged into pre-defined "
+"roughly-square shaped \"tiles\" for transfer over the web. They combine pre-"
+"rendered raster map tiles and vector map tiles. The vector tile server "
+"returns vector map data, which has been clipped to the boundaries of each "
+"tile, instead of a pre-rendered map image. The clipped tiles represent the "
+"zoom-levels of the vector tile service, derived from a pyramid approach. "
+"Using this structure, the data-transfer is reduced in comparison to un-tiled"
+" vector maps. Only data within the current map view, and at the current zoom"
+" level need to be transferred. Also, compared to a tiled raster map, data "
+"transfer is also greatly reduced, as vector data is typically much smaller "
+"than a rendered bitmap. Vector tiles do not have any styling information "
+"assigned so QGIS needs to apply a cartographic style in order to display the"
+" data."
+msgstr ""
+"Les tuiles vectorielles sont des paquets de données géographiques, "
+"conditionnés en \"tuiles\" prédéfinies de forme approximativement carrée "
+"pour le transfert sur le web. Elles combinent des tuiles de cartes raster "
+"pré-rendues et des tuiles de cartes vectorielles. Le serveur de tuiles "
+"vectorielles renvoie des données cartographiques vectorielles, qui ont été "
+"découpées aux limites de chaque tuile, au lieu d'une image cartographique "
+"pré-rendue. Les tuiles découpées représentent les niveaux de zoom du service"
+" de tuiles vectorielles, dérivés d'une approche pyramidale. Grâce à cette "
+"structure, le transfert de données est réduit par rapport aux cartes "
+"vectorielles non découpées. Seules les données situées dans la vue actuelle "
+"de la carte et au niveau de zoom actuel doivent être transférées. De plus, "
+"par rapport à une carte raster en mosaïque, le transfert de données est "
+"également très réduit, car les données vectorielles sont généralement "
+"beaucoup plus petites qu'un bitmap rendu. Les tuiles vectorielles n'ont pas "
+"d'informations de style assignées. QGIS doit donc appliquer un style "
+"cartographique afin d'afficher les données."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:36
+msgid "Pyramid structure of vector tiles with zoom-levels"
+msgstr "Structure pyramidale de tuiles vectorielles avec niveaux de zoom"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:40
+msgid "Supported Formats"
+msgstr "Formats pris en charge"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:42
+msgid "There is support for vector tiles through:"
+msgstr "Il y a un support pour les tuiles vectorielles à travers :"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:44
+msgid ""
+"remote sources (HTTP/S) - with XYZ template - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+msgstr ""
+"sources distantes (HTTP/S) - avec modèle XYZ - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:45
+msgid ""
+"local files - with XYZ template - e.g. "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+msgstr ""
+"fichiers locaux - avec modèle XYZ - par ex, "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:46
+msgid ""
+"local MBTiles database - e.g. "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
+msgstr ""
+"base de données locale MBTiles - par ex, "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:228
+msgid "addVectorTileLayer"
+msgstr "addVectorTileLayer"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:236
+msgid "metadata"
+msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:252
+msgid "system"
+msgstr "system"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:244
+msgid "symbology"
+msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:232
+msgid "labelingSingle"
+msgstr "labelingSingle"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:238
+msgid "rendering"
+msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:230
+msgid "editMetadata"
+msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:68
+msgid ""
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
+msgstr ""
+":sup:`[1]` Aussi disponible dans le :ref:`panneau Style de Couche "
+"<layer_styling_panel>`"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:74
+msgid "Information Properties"
+msgstr "Onglet Information"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:90
+msgid "Source Properties"
+msgstr "Onglet Source"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:95
+msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
+msgstr ""
+"le :guilabel:`nom de la couche` à afficher dans le :guilabel:`panneau "
+"couche`;"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:242
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:246
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:250
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:248
+msgid "symbologyEdit"
+msgstr "symbologyEdit"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:254
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:240
+msgid "search"
+msgstr "search"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:163
+msgid "Layer rendering"
+msgstr "Rendu de couche"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:177
+msgid "Styles"
+msgstr "Styles"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:192
+msgid "Rendering Properties"
+msgstr "Onglet Rendu"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:234
+msgid "mapIdentification"
+msgstr "mapIdentification"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:215
+msgid "Metadata Properties"
+msgstr "Onglet Métadonnées"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:217
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"L'onglet |editMetadata| :guilabel:`Métadonnées` vous offre des options pour "
+"créer et modifier un rapport de métadonnées sur votre couche. Voir "
+":ref:`metadatamenu` pour plus d'informations. "
