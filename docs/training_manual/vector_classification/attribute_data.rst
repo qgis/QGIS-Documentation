@@ -68,7 +68,7 @@ Next, let's see how a record in the attribute table is linked to a polygon
 feature that we see on the Map Canvas.
 
 #. Go back to the main QGIS window.
-#. In the :guilabel:`Edit --> Select` menu, click on the |selectRectangle| :guilabel:`Select Feature(s)` button.
+#. In the :menuselection:`Edit --> Select` menu, click on the |selectRectangle| :guilabel:`Select Feature(s)` button.
 #. Make sure the ``protected_areas`` layer is still selected in the :guilabel:`Layers` panel.
 #. Move your mouse to the Map Canvas and left click on the smaller of the two polygons.
    The polygon will turn yellow indicating it is selected.
