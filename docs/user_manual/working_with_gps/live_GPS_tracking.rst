@@ -264,8 +264,8 @@ in this case GPSD, so
 
     sudo modprobe garmin_gps
 
-#. And then connect the unit. Then check with ``dmesg`` the actual device being
-used by the unit, for example ``/dev/ttyUSB0``.
+#. And then connect the unit and check with ``dmesg`` the actual device being
+   used by the unit, for example ``/dev/ttyUSB0``.
 
 #. Now you can launch gpsd
 
