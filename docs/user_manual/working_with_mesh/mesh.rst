@@ -466,7 +466,7 @@ properties:
     This option is only available if the :guilabel:`Simplify mesh` option under
     the :guilabel:`Rendering` tab is activated.
 * :guilabel:`Vertical settings` to control behavior of the vertical component
-   of vertices of rendered triangles
+  of vertices of rendered triangles:
 
   * :guilabel:`Dataset group for vertical value`: the dataset group that will
     be used for the vertical component of the mesh
