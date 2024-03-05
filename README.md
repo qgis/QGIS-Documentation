@@ -34,6 +34,20 @@ The latest documentation of QGIS is available at <https://docs.qgis.org/latest>
 
 The best way to build the documentation is within a Python Virtual Environment (venv).
 
+## Build on Linux (NixOS)
+
+If you are using NixOS or the nix package manager, setting up a development
+environment is very easy:
+
+```
+cd QGIS-Documentation
+nix-shell
+./vscode.sh
+```
+
+Will provide you with a fully working, repeatable environment for building the
+HTML documentation.
+ 
 ## Build on Linux or macOS
 
 You can use your own virtual env by creating it first:
