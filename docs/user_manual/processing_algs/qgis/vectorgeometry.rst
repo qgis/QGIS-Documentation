@@ -5994,6 +5994,7 @@ Parameters
    * - **Value for NoData or non-intersecting vertices**
      - ``NODATA``
      - [number |dataDefine|]
+
        Default: 0.0
      - Value to use in case the vertex does not intersect
        (a valid pixel of) the raster
@@ -6002,8 +6003,7 @@ Parameters
      - [number |dataDefine|]
 
        Default: 1.0
-     - Scaling value: the band values are multiplied
-       by this value.
+     - Scaling value: the band values are multiplied by this value.
    * - **Offset**
      - ``OFFSET``
      - [number |dataDefine|]
