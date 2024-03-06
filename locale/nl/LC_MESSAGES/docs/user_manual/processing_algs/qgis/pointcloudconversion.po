@@ -36,6 +36,10 @@ msgstr ""
 "translator>`_. Deze pagina is momenteel voor |translation progress| "
 "vertaald."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:2
+msgid "Point Cloud Conversion"
+msgstr "Conversie van puntenwolken"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:4
 msgid "|332|"
 msgstr "|332|"
@@ -43,6 +47,14 @@ msgstr "|332|"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:16
 msgid "Convert format"
 msgstr "Indeling converteren"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:18
+msgid ""
+"Converts a point cloud to a different file format, e.g. creates a compressed"
+" :file:`.LAZ`."
+msgstr ""
+"Converteert een puntenwolk naar een andere bestandsindeling, maakt "
+"bijvoorbeeld een gecomprimeerd :file:`.LAZ`."
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:21
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:87
@@ -121,6 +133,19 @@ msgstr "**Invoerlaag**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:102
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:230
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:352
+msgid "[point cloud]"
+msgstr "[point cloud]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:34
+msgid "Input point cloud layer to convert"
+msgstr "Invoerlaag puntenwolk om te converteren"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:35
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:57
 msgid "**Converted**"
@@ -144,6 +169,10 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Standaard: ``[Opslaan naar tijdelijk bestand]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:40
+msgid "Specify the point cloud file to use as output. One of:"
+msgstr "Specificeer het bestand voor puntenwolk voor de uitvoer. Één van:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Opslaan naar tijdelijk bestand"
@@ -159,12 +188,25 @@ msgstr "Opslaan als bestand…"
 msgid "Outputs"
 msgstr "Uitvoer"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:60
+msgid ""
+"Output point cloud layer in a modified file format. Currently supported "
+"formats are :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` and :file:`.VPC`."
+msgstr ""
+"Uitvoerlaag puntenwolk in een aangepaste bestandsindeling. Momenteel "
+"ondersteunde indelingen zijn :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` "
+"en :file:`.VPC`."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:64
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:190
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:314
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:417
 msgid "Python code"
 msgstr "Pythoncode"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:66
+msgid "**Algorithm ID**: ``pdal:convertformat``"
+msgstr "**ID algoritme**: ``pdal:convertformat``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -179,16 +221,58 @@ msgstr ""
 ":ref:`processing_console` voor details over hoe algoritmes van Processing "
 "uit te voeren vanuit de console voor Python."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:76
+msgid "Export to raster"
+msgstr "Exporteren naar raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:78
+msgid ""
+"Exports point cloud data to a 2D raster grid having cell size of given "
+"resolution, writing values from the specified attribute."
+msgstr ""
+"Exporteert gegevens van puntenwolk naar een 2D-raster dat een celgrootte "
+"heeft met de opgegeven resolutie, waarden geschreven uit het gespecificeerde"
+" attribuut."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:84
+msgid "Raster output using Intensity attribute of points"
+msgstr "Rasteruitvoer met attribuut Intensiteit van punten"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:90
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:218
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:340
 msgid "Basic parameters"
 msgstr "Basis parameters"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:231
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:353
+msgid "Input point cloud layer to export"
+msgstr "Invoerlaag puntenwolk om te exporteren"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:104
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:354
 msgid "**Attribute**"
 msgstr "**Attribuut**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:105
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:357
+msgid "``ATTRIBUTE``"
+msgstr "``ATTRIBUTE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:106
+msgid "[field] [enumeration]"
+msgstr "[veld] [enumeratie]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:107
+msgid "A Field of the point cloud layer to extract the values from"
+msgstr ""
+"Een veld uit de laag puntenwolk waaruit de waarde moet worden uitgenomen"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:108
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:232
+msgid "**Resolution of the density raster**"
+msgstr "**Resolutie voor het raster voor de dichtheid**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:109
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:233
@@ -211,6 +295,16 @@ msgstr "[getal]"
 msgid "Default: 1.0"
 msgstr "Standaard: 1.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:113
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:237
+msgid "Cell size of the output raster"
+msgstr "Celgrootte van het uitvoer raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:114
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:238
+msgid "**Tile size for parallel runs**"
+msgstr "**Tegelgrootte voor parallelle uitvoeringen**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:115
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:239
 msgid "``TILE_SIZE``"
@@ -221,12 +315,27 @@ msgstr "``TILE_SIZE``"
 msgid "Default: 1000"
 msgstr "Standaard: 1000"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:120
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:183
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:244
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:360
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:410
+msgid "**Exported**"
+msgstr "**Geëxporteerd**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:122
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:185
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:246
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:309
 msgid "[raster]"
 msgstr "[raster]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:125
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:249
+msgid "Specify the raster file to export the data to. One of:"
+msgstr ""
+"Specificeer het bestand waarnaar de gegevens moeten worden geëxporteerd. Één"
+" van:"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:132
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:256
@@ -266,11 +375,42 @@ msgstr "``FILTER_EXPRESSION``"
 msgid "[expression]"
 msgstr "[expressie]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:147
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:271
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:387
+msgid ""
+"A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of "
+"features in the point cloud data"
+msgstr ""
+"Een :ref:`PDAL-expressie <pdal_expressions>` voor het selecteren van een "
+"subset met objecten uit de gegevens van de puntenwolk"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:148
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:272
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:388
+msgid "**Cropping extent**"
+msgstr "**Bereik bijsnijden**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:151
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:275
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:391
+msgid "``FILTER_EXTENT``"
+msgstr "``FILTER_EXTENT``"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:152
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:276
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:392
 msgid "[extent]"
 msgstr "[bereik]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:153
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:277
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:393
+msgid ""
+"A map extent for selecting a subset of features in the point cloud data"
+msgstr ""
+"Een kaartbereik voor het selecteren van een subset met objecten uit de "
+"gegevens van de puntenwolk"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -315,7 +455,121 @@ msgstr ""
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Voer de coördinaten in als ``xmin, xmax, ymin, ymax``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:159
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:283
+msgid "**X origin of a tile for parallel runs**"
+msgstr "**X-origine van een tegel; voor parallelle uitvoeringen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:162
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:286
+msgid "``ORIGIN_X``"
+msgstr "``ORIGIN_X``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:165
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:289
+msgid "**Y origin of a tile for parallel runs**"
+msgstr "**Y-origine van een tegel voor parallelle uitvoeringen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:168
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:292
+msgid "``ORIGIN_Y``"
+msgstr "``ORIGIN_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:186
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:310
+msgid ""
+"Output raster layer features of the point cloud layer are exported to. "
+"Currently supported format is :file:`.TIF`."
+msgstr ""
+"Uitvoer rasterlaag waar de objecten van de laag puntenwolk naartoe zijn "
+"geëxporteerd. Momenteel ondersteunde indeling is :file:`.TIF`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:192
+msgid "**Algorithm ID**: ``pdal:exportraster``"
+msgstr "**ID algoritme**: ``pdal:exportraster``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:201
+msgid "Export raster (using triangulation)"
+msgstr "Raster exporteren (met triangulatie)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:203
+msgid ""
+"Exports point cloud data to a 2D raster grid using a triangulation of points"
+" and then interpolating cell values from triangles."
+msgstr ""
+"Exporteert gegevens van puntenlaag naar een 2D-raster met een triangulatie "
+"van punten en dan interpoleren van celwaarden uit driehoeken."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:206
+msgid ""
+"Using this algorithm can be slower if you are dealing with a large dataset. "
+"If your point cloud is dense, you can export your ground points as a raster "
+"using the :ref:`pdalexportraster` algorithm."
+msgstr ""
+"Gebruiken van dit algoritme kan trager zijn als u werkt met een grote "
+"gegevensset. Als uw puntenwolk dichtbevolkt is, kunt u uw grondpunten als "
+"een raster exporteren met het algoritme :ref:`pdalexportraster`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:212
+msgid "Terrain raster output generated by point cloud triangulation"
+msgstr "Terrein rasteruitvoer gemaakt met triangulatie van puntenwolk"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:307
+msgid "**Exported (using triangulation)**"
+msgstr "**Geëxporteerd (met triangulatie)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:316
+msgid "**Algorithm ID**: ``pdal:exportrastertin``"
+msgstr "**ID algoritme**: ``pdal:exportrastertin``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:326
+msgid "Export to vector"
+msgstr "Exporteren naar vector"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:328
+msgid ""
+"Exports point cloud data to a vector layer with 3D points (a GeoPackage), "
+"optionally with extra attributes."
+msgstr ""
+"Exporteert gegevens van puntenwolk naar een vectorlaag met 3D-punten (een "
+"GeoPackage), optioneel met extra attributen."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:334
+msgid ""
+"Exporting point cloud (ground points) to a vector layer styled based on the "
+"elevation"
+msgstr ""
+"Exporteren van puntenwolk (grondpunten) naar een vectorlaag, stijl gebaseerd"
+" op de hoogte"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:358
+msgid "[field] [list]"
+msgstr "[veld] [lijst]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:359
+msgid "One or more fields of the point cloud layer to export with the points."
+msgstr ""
+"Een of meer velden van de laag puntenwolk om met de punten te exporteren."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:362
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:412
 msgid "[vector]"
 msgstr "[vector]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:365
+msgid "Specify the vector file to export the data to. One of:"
+msgstr ""
+"Specificeer het vectorbestand waarnaar de gegevens moeten worden "
+"geëxporteerd. Één van:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:413
+msgid ""
+"Output vector layer features of the point cloud layer are exported to. "
+"Currently supported format is :file:`.GPKG`."
+msgstr ""
+"Uitvoer vectorlaag waar de objecten van de laag puntenwolk naartoe zijn "
+"geëxporteerd. Momenteel ondersteunde indeling is :file:`.GPKG`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:419
+msgid "**Algorithm ID**: ``pdal:exportvector``"
+msgstr "**ID algoritme**: ``pdal:exportvector``"
