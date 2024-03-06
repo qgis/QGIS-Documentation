@@ -2,28 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
-# tomoya miyoshi, 2023
+# Harrissou Sant-anna, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-11 08:42+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: tomoya miyoshi, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"翻訳は `あなたが参加できる "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_ コミュニティの取り組みです。このページは現在 |translation progress| 翻訳されています。"
 
 #: ../../docs/user_manual/processing/configuration.rst:5
 msgid "Configuring the Processing Framework"
@@ -40,40 +49,29 @@ msgstr ""
 ":guilabel:`プロセシング` "
 "タブ）では、アルゴリズムの動作について設定することができます。設定パラメータは、ダイアログの左側で選択できる個別のブロックに構成されています。"
 
-#: ../../docs/user_manual/processing/configuration.rst:165
+#: ../../docs/user_manual/processing/configuration.rst:168
 msgid "processingAlgorithm"
 msgstr "processingAlgorithm"
 
-#: ../../docs/user_manual/processing/configuration.rst:18
+#: ../../docs/user_manual/processing/configuration.rst:20
 msgid "General"
 msgstr "一般情報"
 
-#: ../../docs/user_manual/processing/configuration.rst:20
-msgid ""
-"The :guilabel:`General` block contains the default settings to control how "
-"the algorithm dialog as well as input or output parameters should behave. "
-"Some of the settings can however be overridden at the algorithm runtime, for"
-" :ref:`individual parameters <alg_parameter_types>`."
-msgstr ""
-":guilabel:`一般情報` "
-"ブロックには、アルゴリズムダイアログや入力・出力パラメータの動作を制御するためのデフォルト設定が含まれています。しかし、いくつかの設定はアルゴリズム実行時に上書きすることができます。:ref:`個々のパラメータ"
-" <alg_parameter_types>` を参照。"
-
-#: ../../docs/user_manual/processing/configuration.rst:25
+#: ../../docs/user_manual/processing/configuration.rst:28
 msgid ""
 ":guilabel:`Default output raster layer extension` is by default ``tif``"
 msgstr ":guilabel:`デフォルトのラスタレイヤ拡張子` はデフォルトで ``tif`` "
 
-#: ../../docs/user_manual/processing/configuration.rst:26
+#: ../../docs/user_manual/processing/configuration.rst:29
 msgid ""
 ":guilabel:`Default output vector layer extension` is by default ``gpkg``"
 msgstr ":guilabel:`デフォルトのベクタレイヤ拡張子` はデフォルトで ``gpkg``"
 
-#: ../../docs/user_manual/processing/configuration.rst:27
+#: ../../docs/user_manual/processing/configuration.rst:30
 msgid ":guilabel:`Invalid features filtering` when executing algorithm:"
 msgstr "アルゴリズムを実行するときの :guilabel:`無効地物フィルタ`:"
 
-#: ../../docs/user_manual/processing/configuration.rst:29
+#: ../../docs/user_manual/processing/configuration.rst:32
 msgid ""
 ":guilabel:`Do not filter (better performance)`: all the features (with valid"
 " and invalid geometries) are processed, but the result may be erroneous "
@@ -81,14 +79,14 @@ msgid ""
 msgstr ""
 ":guilabel:`フィルタリングしない（パフォーマンスを向上させる）`：すべての地物（有効と無効なジオメトリを含む）を処理するが、ジオメトリの無効が演算に与える影響により、結果が誤っている場合がある"
 
-#: ../../docs/user_manual/processing/configuration.rst:32
+#: ../../docs/user_manual/processing/configuration.rst:35
 msgid ""
 ":guilabel:`Skip (ignore) features with invalid geometries`, meaning that "
 "only a subset of your dataset (the valid geometry features) will be "
 "processed"
 msgstr ":guilabel:`不正なジオメトリの地物を無視`、 つまり、データセットの一部（有効なジオメトリの地物）のみが処理されることを意味する"
 
-#: ../../docs/user_manual/processing/configuration.rst:35
+#: ../../docs/user_manual/processing/configuration.rst:38
 msgid ""
 ":guilabel:`Stop algorithm execution when a geometry is invalid`: you'll need"
 " to track and fix the invalid geometries if you want the algorithm to "
@@ -99,13 +97,13 @@ msgstr ""
 "アルゴリズムでレイヤ全体を処理したい場合は無効なジオメトリを追跡して修正する必要があります。:ref:`qgischeckvalidity` や "
 ":ref:`qgisfixgeometries` のようなアルゴリズムが、これを実現するのに役立ちます。"
 
-#: ../../docs/user_manual/processing/configuration.rst:40
+#: ../../docs/user_manual/processing/configuration.rst:43
 msgid ""
 "The :guilabel:`Invalid features filtering` setting can be overridden on a "
 "per-input basis, at algorithm runtime."
 msgstr ":guilabel:`無効地物フィルタ` の設定は、アルゴリズムの実行時に入力ごとに上書きすることができます。"
 
-#: ../../docs/user_manual/processing/configuration.rst:42
+#: ../../docs/user_manual/processing/configuration.rst:45
 msgid ""
 ":guilabel:`Keep dialog open after running algorithm`. Once an algorithm has "
 "finished execution and its output layers are loaded into the QGIS project, "
@@ -115,11 +113,11 @@ msgid ""
 msgstr ""
 ":guilabel:`アルゴリズムの実行時にダイアログを開いたままにする`。アルゴリズムの実行が終了し、その出力レイヤがQGISプロジェクトに読み込まれると、アルゴリズムダイアログは閉じられます。このダイアログを開いたままにしたい場合（異なるパラメータでアルゴリズムを再実行したり、ログタブに書き込まれる出力をよりよく確認するため）、このオプションをチェックします。"
 
-#: ../../docs/user_manual/processing/configuration.rst:47
+#: ../../docs/user_manual/processing/configuration.rst:50
 msgid ":guilabel:`Max Threads`"
 msgstr ":guilabel:`最大スレッド数`"
 
-#: ../../docs/user_manual/processing/configuration.rst:48
+#: ../../docs/user_manual/processing/configuration.rst:51
 msgid ""
 ":guilabel:`Output folder` for non temporary outputs: If no folder path is "
 "provided for the Processing execution outputs, this is the folder in which "
@@ -130,7 +128,7 @@ msgstr ""
 "プロセシング実行時の出力にフォルダパスが与えられていない場合、このフォルダに保存されます。デフォルトは、アクティブな :ref:`user "
 "profile` ディレクトリ下の :file:`processing/outputs` です。"
 
-#: ../../docs/user_manual/processing/configuration.rst:52
+#: ../../docs/user_manual/processing/configuration.rst:55
 msgid ""
 ":guilabel:`Override temporary output folder path`: Temporary outputs are "
 "saved by default in the :file:`tmp` folder on the machine. This option helps"
@@ -139,7 +137,7 @@ msgstr ""
 ":guilabel:`一時出力先パスの上書き`: 一時的な出力は、デフォルトではマシンの :file:`tmp` "
 "フォルダーに保存されます。このオプションを使用すると、別の保存場所を設定することができます。"
 
-#: ../../docs/user_manual/processing/configuration.rst:55
+#: ../../docs/user_manual/processing/configuration.rst:58
 msgid ""
 ":guilabel:`Pre-execution script` and :guilabel:`Post-execution script`. "
 "These parameters point to files that contain scripts written using the "
@@ -149,7 +147,7 @@ msgstr ""
 ":guilabel:`事前実行スクリプト` と "
 ":guilabel:`事後実行スクリプト`。これらのパラメータは、スクリプトとコンソールのセクションで説明した、プロセシングスクリプト機能を使って書かれたスクリプトを含むファイルを指します。"
 
-#: ../../docs/user_manual/processing/configuration.rst:59
+#: ../../docs/user_manual/processing/configuration.rst:62
 msgid ""
 ":guilabel:`Prefer output filename for layer names`. The name of each "
 "resulting layer created by an algorithm is defined by the algorithm itself. "
@@ -164,7 +162,7 @@ msgid ""
 msgstr ""
 ":guilabel:`レイヤ名にファイル名を優先使用する`。アルゴリズムによって作成される各結果レイヤの名前は、そのアルゴリズム自体によって定義されます。ある場合には、どの入力レイヤを使用しても同じ出力名が使用されることを意味する、固定名が使用されるかもしれません。他の場合、名前は入力レイヤの名前やアルゴリズムの実行に使われるパラメーターの一部に依存するかもしれません。このチェックボックスをオンにすると、代わりに出力ファイル名から名前が取られます。出力が一時ファイルに保存される場合、この一時ファイルのファイル名は通常、他の既存のファイル名との衝突を避けるための長くて無意味なものであることに注意してください。"
 
-#: ../../docs/user_manual/processing/configuration.rst:71
+#: ../../docs/user_manual/processing/configuration.rst:74
 msgid ""
 ":guilabel:`Results group name`. If you want to obtain all processing result "
 "layers in a group in the :guilabel:`Layers` panel, set a group name for this"
@@ -181,7 +179,7 @@ msgstr ""
 " パネル内の異なる場所に追加されます。なお、出力レイヤが :guilabel:`レイヤ` パネルに読み込まれるのは、アルゴリズムダイアログで "
 ":guilabel:`アルゴリズムの終了後に出力ファイルを開く` がチェックされている場合のみです。"
 
-#: ../../docs/user_manual/processing/configuration.rst:81
+#: ../../docs/user_manual/processing/configuration.rst:84
 msgid ""
 ":guilabel:`Show algorithms with known issues`: By default, QGIS avoids "
 "display of broken algorithms (generally from third-party providers). If "
@@ -191,7 +189,7 @@ msgstr ""
 ":guilabel:`既知の問題があるアルゴリズムを表示`: "
 "デフォルトでは、QGISは壊れたアルゴリズム（一般的にサードパーティプロバイダのもの）の表示を避けています。チェックした場合、それらはプロセシングツールボックスで利用可能になり、警告アイコンと問題があることを説明するツールチップを表示します。ご自身の責任においてご利用ください。"
 
-#: ../../docs/user_manual/processing/configuration.rst:85
+#: ../../docs/user_manual/processing/configuration.rst:88
 msgid ""
 ":guilabel:`Show feature count for output vector layers`. Since calculating "
 "the feature count might take some time in certain data formats, this option "
@@ -199,15 +197,15 @@ msgid ""
 msgstr ""
 ":guilabel:`出力レイヤの地物数を表示`。データ形式によっては地物数の計算に時間がかかることがあるため、このオプションはデフォルトでオフになっています。"
 
-#: ../../docs/user_manual/processing/configuration.rst:88
+#: ../../docs/user_manual/processing/configuration.rst:91
 msgid ":guilabel:`Show layer CRS definition in selection boxes`"
 msgstr ":guilabel:`選択ボックス内にレイヤCRS定義を表示`"
 
-#: ../../docs/user_manual/processing/configuration.rst:89
+#: ../../docs/user_manual/processing/configuration.rst:92
 msgid ":guilabel:`Show tooltip when there are disabled providers`"
 msgstr ":guilabel:`無効のプロバイダがある場合にツールチップを表示`"
 
-#: ../../docs/user_manual/processing/configuration.rst:90
+#: ../../docs/user_manual/processing/configuration.rst:93
 msgid ""
 ":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
 ":guilabel:`Style for polygons layers` and :guilabel:`Style for raster "
@@ -222,7 +220,7 @@ msgstr ""
 ":guilabel:`ラスタレイヤのスタイル` "
 "は、出力レイヤ（つまり、プロセシングアルゴリズムが生成するレイヤ）に対するデフォルトのレンダリングスタイルを設定するためのものです。QGISを使って必要なスタイルを作成し、それをファイルに保存し、設定にそのファイルへのパスを入力してアルゴリズムがそれを使用できるようにします。プロセシングによってレイヤが読み込まれ、QGISキャンバスに追加されるたびに、そのスタイルでレンダリングされます。"
 
-#: ../../docs/user_manual/processing/configuration.rst:101
+#: ../../docs/user_manual/processing/configuration.rst:104
 msgid ""
 "Rendering styles can be configured individually for each algorithm and each "
 "one of its outputs. Just right-click on the name of the algorithm in the "
@@ -232,17 +230,17 @@ msgstr ""
 "レンダリングスタイルは、各アルゴリズムとその出力のそれぞれに対して個別に設定できます。ツールボックスでアルゴリズムの名前を右クリックして "
 ":guilabel:`出力のためのレンダリングスタイルを編集` を選択するだけです。次の図のようなダイアログが表示されます。"
 
-#: ../../docs/user_manual/processing/configuration.rst:112
+#: ../../docs/user_manual/processing/configuration.rst:115
 msgid "Rendering Styles"
 msgstr "レンダリングスタイル"
 
-#: ../../docs/user_manual/processing/configuration.rst:114
+#: ../../docs/user_manual/processing/configuration.rst:117
 msgid ""
 "Select the style file (:file:`.qml`) that you want for each output and press"
 " :guilabel:`OK`."
 msgstr "それぞれの出力に設定したいスタイルファイル ( :file:`.qml` ) を選択して :guilabel:`OK` を押して下さい。"
 
-#: ../../docs/user_manual/processing/configuration.rst:116
+#: ../../docs/user_manual/processing/configuration.rst:119
 msgid ""
 ":guilabel:`Warn before executing if parameter CRS's do not match`: By "
 "default, QGIS native algorithms (i.e. the ones listed under the |menu| "
@@ -256,15 +254,15 @@ msgstr ""
 ":menuselection:`メニュー --> QGIS（ネイティブC++）` "
 "グループにリストされているもの）は、実行前に入力レイヤを最初のレイヤのCRSに透過的に再投影します。このオプションをチェックすると、再投影をサポートしていない他のツールから、入力CRSが同一でない場合に通知を受け取ることができます。サードパーティプロバイダは関係ありません。"
 
-#: ../../docs/user_manual/processing/configuration.rst:163
+#: ../../docs/user_manual/processing/configuration.rst:166
 msgid "menu"
-msgstr ""
+msgstr "menu"
 
-#: ../../docs/user_manual/processing/configuration.rst:124
+#: ../../docs/user_manual/processing/configuration.rst:127
 msgid "Menus"
 msgstr "メニュー"
 
-#: ../../docs/user_manual/processing/configuration.rst:126
+#: ../../docs/user_manual/processing/configuration.rst:129
 msgid ""
 "The |menu| :guilabel:`Menus` block controls whether an algorithm, script or "
 "model (built-in or provided by plugins) should be made available through a "
@@ -274,7 +272,7 @@ msgstr ""
 "|menu| :guilabel:`メニュー` "
 "ブロックは、アルゴリズム、スクリプト、モデル（組み込みまたはプラグインによって提供される）を、専用のメニューまたはツールバー（プロセシングツールボックスと共に）で利用できるようにするかどうかを制御します。各プロバイダの各項目について次ができます:"
 
-#: ../../docs/user_manual/processing/configuration.rst:131
+#: ../../docs/user_manual/processing/configuration.rst:134
 msgid ""
 ":guilabel:`Add button in toolbar`, making it available in the "
 ":guilabel:`Processing Algorithms` toolbar"
@@ -282,11 +280,11 @@ msgstr ""
 ":guilabel:`Add button in toolbar` は、 :guilabel:`プロセシングアルゴリズム` "
 "ツールバーで利用できるようにします"
 
-#: ../../docs/user_manual/processing/configuration.rst:133
+#: ../../docs/user_manual/processing/configuration.rst:136
 msgid "assign an :guilabel:`Icon` to the algorithm"
 msgstr "そのアルゴリズムに :guilabel:`Icon` を割り当てる"
 
-#: ../../docs/user_manual/processing/configuration.rst:134
+#: ../../docs/user_manual/processing/configuration.rst:137
 msgid ""
 "set a :guilabel:`Menu path`: the algorithm will then be available through an"
 " existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms``"
@@ -294,18 +292,18 @@ msgstr ""
 ":guilabel:`Menu path` を設定する: このアルゴリズムは、既存のメニューまたはカスタムメニューから利用できるようになります（例: "
 "``Vect&or/MyTopAlgorithms`` ）"
 
-#: ../../docs/user_manual/processing/configuration.rst:137
+#: ../../docs/user_manual/processing/configuration.rst:140
 msgid ""
 "Restart QGIS to apply the settings. At any time, your changes can be "
 ":guilabel:`Reset to defaults`."
 msgstr ""
 "設定を適用するためにQGISを再起動してください。変更した内容は、いつでも :guilabel:`デフォルトにリセットする` ことができます。"
 
-#: ../../docs/user_manual/processing/configuration.rst:141
+#: ../../docs/user_manual/processing/configuration.rst:144
 msgid "Models and Scripts"
 msgstr "モデルとスクリプト"
 
-#: ../../docs/user_manual/processing/configuration.rst:143
+#: ../../docs/user_manual/processing/configuration.rst:146
 msgid ""
 "In the |processingModel| :guilabel:`Models` and |pythonFile| "
 ":guilabel:`Scripts` blocks, you can set a default folder to store, and look "
@@ -314,19 +312,19 @@ msgstr ""
 "|processingModel| :guilabel:`モデル` と |pythonFile| :guilabel:`スクリプト` "
 "ブロックでは、それぞれモデルやスクリプトを保存し、探すためのデフォルトフォルダを設定することができます。"
 
-#: ../../docs/user_manual/processing/configuration.rst:167
+#: ../../docs/user_manual/processing/configuration.rst:170
 msgid "processingModel"
 msgstr "processingModel"
 
-#: ../../docs/user_manual/processing/configuration.rst:169
+#: ../../docs/user_manual/processing/configuration.rst:172
 msgid "pythonFile"
 msgstr "pythonFile"
 
-#: ../../docs/user_manual/processing/configuration.rst:147
+#: ../../docs/user_manual/processing/configuration.rst:150
 msgid "Providers"
 msgstr "プロバイダ"
 
-#: ../../docs/user_manual/processing/configuration.rst:149
+#: ../../docs/user_manual/processing/configuration.rst:152
 msgid ""
 "You will also find a block for algorithm |processingAlgorithm| "
 ":guilabel:`Providers`. This is the place where installed providers expose "

@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
+# Transifex Bot <>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Transifex Bot <>, 2024\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -55,9 +55,9 @@ msgstr "**本课目标:** 学习如何在QGIS中使用栅格数据。"
 msgid "|basic| |FA| Loading Raster Data"
 msgstr "|basic| 跟我做: 加载栅格数据"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:167
+#: ../../docs/training_manual/rasters/data_manipulation.rst:168
 msgid "basic"
-msgstr ""
+msgstr "basic"
 
 #: ../../docs/training_manual/rasters/data_manipulation.rst:21
 msgid ""
@@ -142,15 +142,6 @@ msgstr ""
 "在出现的对话框中，单击 :guilabel:`输入图层` 参数旁边的 :guilabel:`...` 按钮，并勾选所有图层或使用 "
 ":guilabel:`全选` 按钮。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:68
-msgid ""
-"Uncheck :guilabel:`Place each input file into a separate band`. Notice the "
-"text field below. What this dialog is actually doing is that it is writing "
-"that text for you. It is a long command that QGIS is going to run."
-msgstr ""
-"取消勾选 :guilabel:`将各输入文件置于不同的单独波段中 - Place each input file into a separate "
-"band` 。请注意下面的文本字段。这个对话框实际上是在为您编写文本，QGIS将运行一个很长的命令。"
-
 #: ../../docs/training_manual/rasters/data_manipulation.rst:74
 msgid ""
 "Keep in mind that you can copy and paste the text in the ``OSGeo Shell`` "
@@ -168,28 +159,21 @@ msgstr ""
 msgid "Finally click on :guilabel:`Run`."
 msgstr "最后单击 :guilabel:`运行` 。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:85
-msgid ""
-"As you know from the previous modules, :guilabel:`Processing` creates "
-"temporary layers by default. To save the file click on the :guilabel:`...` "
-"button."
-msgstr "从前面的单元中可以看出， :guilabel:`处理算法` 默认会创建临时图层。要保存文件，请单击 :guilabel:`...` 按钮。"
-
-#: ../../docs/training_manual/rasters/data_manipulation.rst:92
+#: ../../docs/training_manual/rasters/data_manipulation.rst:93
 msgid ""
 "You can now remove the original four rasters from the :guilabel:`Layers` "
 "Panel and leave only the output virtual catalog raster."
 msgstr "现在可以从 :guilabel:`图层` 面板移除原来的四个栅格，只保留输出虚拟目录栅格。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:98
+#: ../../docs/training_manual/rasters/data_manipulation.rst:99
 msgid "|hard| Transforming Raster Data"
 msgstr "|hard| 转换栅格数据"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:168
+#: ../../docs/training_manual/rasters/data_manipulation.rst:169
 msgid "hard"
-msgstr ""
+msgstr "hard"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:100
+#: ../../docs/training_manual/rasters/data_manipulation.rst:101
 msgid ""
 "The above methods allow you to virtually merge datasets using a catalog, and"
 " to reproject them \"on the fly\". However, if you are setting up data that "
@@ -201,33 +185,33 @@ msgstr ""
 "上述方法允许您使用目录虚拟合并数据集，并 \"动态\" "
 "重投影。但是，如果您要设置的数据将使用相当长一段时间，创建已合并并重投影的新栅格可能会更有效。这样可以提高在地图中使用栅格时的性能，但初始设置可能需要一些时间。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:109
+#: ../../docs/training_manual/rasters/data_manipulation.rst:110
 msgid "Reprojecting rasters"
 msgstr "重投影栅格"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:111
+#: ../../docs/training_manual/rasters/data_manipulation.rst:112
 msgid ""
 "Open :guilabel:`Warp (reproject)` from :menuselection:`GDAL --> Raster "
 "projections`."
 msgstr "从 :menuselection:`GDAL --> 栅格投影` 打开 :guilabel:`变形 (重投影)` 。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:114
+#: ../../docs/training_manual/rasters/data_manipulation.rst:115
 msgid ""
 "You can also reproject virtual rasters (catalogs), enable multithreaded "
 "processing, and more."
 msgstr "您还可以重投影虚拟栅格 (目录)，启用多线程处理等等。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:121
+#: ../../docs/training_manual/rasters/data_manipulation.rst:122
 msgid "Merging rasters"
 msgstr "合并栅格"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:123
+#: ../../docs/training_manual/rasters/data_manipulation.rst:124
 msgid ""
 "If you need to create a new raster layer and save it to disk you can use the"
 " merge algorithm."
 msgstr "如果需要创建新的栅格图层并将其保存到磁盘，可以使用合并算法。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:126
+#: ../../docs/training_manual/rasters/data_manipulation.rst:127
 msgid ""
 "Depending on how many raster files you are merging and their resolution, the"
 " new raster file created can be really big. Consider instead to create a "
@@ -237,44 +221,44 @@ msgstr ""
 "根据要合并的栅格文件数量及其分辨率，创建的新栅格文件可能非常大。请考虑按照 :ref:`创建虚拟栅格 <tm_virtual_raster>` "
 "部分中的描述创建栅格目录。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:131
+#: ../../docs/training_manual/rasters/data_manipulation.rst:132
 msgid ""
 "Click on the :guilabel:`Merge` algorithm from the :menuselection:`GDAL --> "
 "Raster miscellaneous` menu."
 msgstr "从 :menuselection:`GDAL --> 栅格杂项` 菜单中单击 :guilabel:`合并` 算法。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:133
+#: ../../docs/training_manual/rasters/data_manipulation.rst:134
 msgid ""
 "As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>`, use "
 "the :guilabel:`...` button to choose which layers you want to merge."
 msgstr ""
 "正如我们对 :ref:`创建虚拟栅格 <tm_virtual_raster>` 所做的那样，使用 :guilabel:`...` 按钮选择要合并的图层。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:137
+#: ../../docs/training_manual/rasters/data_manipulation.rst:138
 msgid ""
 "You can also specify a Virtual raster as input, and then all of the rasters "
 "that it consists of will be processed."
 msgstr "您还可以指定虚拟栅格作为输入图层，然后它所包含的所有栅格都将被处理。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:139
+#: ../../docs/training_manual/rasters/data_manipulation.rst:140
 msgid ""
 "If you know the GDAL library, you can also add your own options by opening "
 "the :guilabel:`Advanced parameters` menu."
 msgstr "如果您了解GDAL库，还可以通过打开 :guilabel:`高级参数` 菜单添加自己的选项。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:146
+#: ../../docs/training_manual/rasters/data_manipulation.rst:147
 msgid "|IC|"
-msgstr ""
+msgstr "|IC|"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:148
+#: ../../docs/training_manual/rasters/data_manipulation.rst:149
 msgid "QGIS makes it easy to include raster data into your existing projects."
 msgstr "QGIS可以轻松地将栅格数据包含到现有工程中。"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:151
+#: ../../docs/training_manual/rasters/data_manipulation.rst:152
 msgid "|WN|"
-msgstr ""
+msgstr "|WN|"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:153
+#: ../../docs/training_manual/rasters/data_manipulation.rst:154
 msgid ""
 "Next, we'll use raster data that isn't aerial imagery, and see how "
 "symbolization is useful in the case of rasters as well."

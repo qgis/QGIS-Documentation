@@ -2,33 +2,43 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Transifex Bot <>, 2023
 # Harrissou Sant-anna, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-06 06:24+0000\n"
-"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:57+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:5
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traduction est le fruit d'un effort communautaire auquel `vous pouvez "
+"prendre part <https://qgis.org/fr/site/getinvolved/translate.html#becoming-"
+"a-translator>`_. Cette page est actuellement traduite à |translation "
+"progress|."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:6
 msgid "Configuring external applications"
 msgstr "Configuration d'applications externes"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:12
+#: ../../docs/user_manual/processing/3rdParty.rst:13
 msgid ""
 "The processing framework can be extended using additional applications. "
 "Algorithms that rely on external applications are managed by their own "
@@ -41,7 +51,7 @@ msgstr ""
 "fournisseurs supplémentaires peuvent être trouvés en tant que plugins "
 "séparés et installés à l'aide du gestionnaire de plugins QGIS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:18
+#: ../../docs/user_manual/processing/3rdParty.rst:19
 msgid ""
 "This section will show you how to configure the Processing framework to "
 "include these additional applications, and it will explain some particular "
@@ -58,7 +68,7 @@ msgstr ""
 " la boîte à outils ou le modeleur graphique, comme vous le faites avec "
 "n'importe quel autre algorithme."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:25
+#: ../../docs/user_manual/processing/3rdParty.rst:26
 msgid ""
 "By default, algorithms that rely on an external application not shipped with"
 " QGIS are not enabled. You can enable them in the Processing settings dialog"
@@ -69,11 +79,11 @@ msgstr ""
 " de dialogue Paramètres de traitement s'ils sont installés sur votre "
 "système."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:32
+#: ../../docs/user_manual/processing/3rdParty.rst:33
 msgid "A note for Windows users"
 msgstr "Note pour les utilisateurs de Windows"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:34
+#: ../../docs/user_manual/processing/3rdParty.rst:35
 msgid ""
 "If you are not an advanced user and you are running QGIS on Windows, you "
 "might not be interested in reading the rest of this chapter. Make sure you "
@@ -94,11 +104,11 @@ msgstr ""
 "vous installez avec l'application OSGeo4W, assurez-vous de sélectionner "
 "également SAGA et GRASS pour l'installation."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:47
+#: ../../docs/user_manual/processing/3rdParty.rst:48
 msgid "A note on file formats"
 msgstr "A propos des formats de fichiers"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:49
+#: ../../docs/user_manual/processing/3rdParty.rst:50
 msgid ""
 "When using external software, opening a file in QGIS does not mean that it "
 "can be opened and processed in that other software. In most cases, other "
@@ -120,7 +130,7 @@ msgstr ""
 "programmes et vérifiez la sortie de la console (dans le panneau de journal) "
 "pour découvrir ce qui ne va pas."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:59
+#: ../../docs/user_manual/processing/3rdParty.rst:60
 msgid ""
 "You might for instance get trouble and not be able to complete your work if "
 "you call an external algorithm with a GRASS raster layers as input. For this"
@@ -131,7 +141,7 @@ msgstr ""
 "couches raster GRASS en entrée. Pour cette raison, ces couches "
 "n'apparaîtront pas comme disponibles pour les algorithmes."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:65
+#: ../../docs/user_manual/processing/3rdParty.rst:66
 msgid ""
 "You should, however, not have problems with vector layers, since QGIS "
 "automatically converts from the original file format to one accepted by the "
@@ -148,7 +158,7 @@ msgstr ""
 "faut plus de temps pour traiter une couche à partir d'une connexion DB "
 "qu'une couche d'un jeu de données au format Shapefile de taille similaire."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:73
+#: ../../docs/user_manual/processing/3rdParty.rst:74
 msgid ""
 "Providers not using external applications can process any layer that you can"
 " open in QGIS, since they open it for analysis through QGIS."
@@ -157,7 +167,7 @@ msgstr ""
 "les couches qui peuvent s'ouvrir dans QGIS puisque qu'ils sont lancés depuis"
 " QGIS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:76
+#: ../../docs/user_manual/processing/3rdParty.rst:77
 msgid ""
 "All raster and vector output formats produced by QGIS can be used as input "
 "layers. Some providers do not support certain formats, but all can export to"
@@ -172,11 +182,11 @@ msgstr ""
 "couches d'entrée, si une conversion est nécessaire, cela pourrait augmenter "
 "le temps de traitement."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:85
+#: ../../docs/user_manual/processing/3rdParty.rst:86
 msgid "A note on vector layer selections"
 msgstr "A propos des sélections sur les couches vectorielles"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:87
+#: ../../docs/user_manual/processing/3rdParty.rst:88
 msgid ""
 "External applications may also be made aware of the selections that exist in"
 " vector layers within QGIS. However, that requires rewriting all input "
@@ -194,7 +204,7 @@ msgstr ""
 "pas activée dans les paramètres de configuration généraux du module de "
 "traitement."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:96
+#: ../../docs/user_manual/processing/3rdParty.rst:97
 msgid ""
 "In other cases, exporting only selected features is needed, which causes "
 "longer execution times."
@@ -202,11 +212,11 @@ msgstr ""
 "Dans d'autres cas, l'exportation uniquement des entités sélectionnées est "
 "nécessaire, ce qui entraîne des temps d'exécution plus longs."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:104
+#: ../../docs/user_manual/processing/3rdParty.rst:108
 msgid "SAGA"
 msgstr "SAGA"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:106
+#: ../../docs/user_manual/processing/3rdParty.rst:110
 msgid ""
 "SAGA algorithms can be run from QGIS if SAGA is included with the QGIS "
 "installation."
@@ -214,7 +224,7 @@ msgstr ""
 "Les algorithmes SAGA peuvent être exécutés à partir de QGIS si SAGA est "
 "inclus dans l'installation de QGIS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:109
+#: ../../docs/user_manual/processing/3rdParty.rst:113
 msgid ""
 "If you are running Windows, both the stand-alone installer and the OSGeo4W "
 "installer include SAGA."
@@ -222,11 +232,11 @@ msgstr ""
 "Si vous exécutez Windows, le programme d'installation autonome et le "
 "programme d'installation OSGeo4W incluent SAGA."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:113
+#: ../../docs/user_manual/processing/3rdParty.rst:117
 msgid "About SAGA grid system limitations"
 msgstr "A propos des limitations du système de grille de SAGA"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:115
+#: ../../docs/user_manual/processing/3rdParty.rst:119
 msgid ""
 "Most SAGA algorithms that require several input raster layers require them "
 "to have the same grid system. That is, they must cover the same geographic "
@@ -246,7 +256,7 @@ msgstr ""
 "grille commune avant de les transmettre à SAGA (à moins que l'algorithme "
 "SAGA manipule directement des couches dans des grilles différentes)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:126
+#: ../../docs/user_manual/processing/3rdParty.rst:130
 msgid ""
 "The definition of that common grid system is controlled by the user, and you"
 " will find several parameters in the SAGA group of the settings window to do"
@@ -256,7 +266,7 @@ msgstr ""
 "peut se faire selon plusieurs paramètres, présents dans le groupe SAGA de la"
 " fenêtre de configuration. Deux façons de procéder existent:"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:131
+#: ../../docs/user_manual/processing/3rdParty.rst:135
 msgid ""
 "Setting it manually. You define the extent by setting the values of the "
 "following parameters:"
@@ -264,27 +274,27 @@ msgstr ""
 "La configuration manuelle. Vous définissez l'emprise à l'aide des paramètres"
 " suivants:"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:134
+#: ../../docs/user_manual/processing/3rdParty.rst:138
 msgid ":guilabel:`Resampling min X`"
 msgstr ":guilabel:`Rééchantillonner la valeur minimum de X`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:135
+#: ../../docs/user_manual/processing/3rdParty.rst:139
 msgid ":guilabel:`Resampling max X`"
 msgstr ":guilabel:`Rééchantillonner la valeur maximum de X`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:136
+#: ../../docs/user_manual/processing/3rdParty.rst:140
 msgid ":guilabel:`Resampling min Y`"
 msgstr ":guilabel:`Rééchantillonner la valeur minimum de Y`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:137
+#: ../../docs/user_manual/processing/3rdParty.rst:141
 msgid ":guilabel:`Resampling max Y`"
 msgstr ":guilabel:`Rééchantillonner la valeur maximum de Y`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:138
+#: ../../docs/user_manual/processing/3rdParty.rst:142
 msgid ":guilabel:`Resampling cellsize`"
 msgstr ":guilabel:`Rééchantillonner la taille de la cellule`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:140
+#: ../../docs/user_manual/processing/3rdParty.rst:144
 msgid ""
 "Notice that QGIS will resample input layers to that extent, even if they do "
 "not overlap with it."
@@ -292,7 +302,7 @@ msgstr ""
 "Veuillez noter que QGIS rééchantillonnera les couches en entrées sur cette "
 "emprise, même si elles ne la recoupent pas."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:142
+#: ../../docs/user_manual/processing/3rdParty.rst:146
 msgid ""
 "Setting it automatically from input layers. To select this option, just "
 "check the :guilabel:`Use min covering grid system for resampling` option. "
@@ -307,7 +317,7 @@ msgstr ""
 " cellule de la couche cible sera la plus grande des tailles de cellules des "
 "couches en entrée."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:150
+#: ../../docs/user_manual/processing/3rdParty.rst:154
 msgid ""
 "For algorithms that do not use multiple raster layers, or for those that do "
 "not need a unique input grid system, no resampling is performed before "
@@ -317,11 +327,11 @@ msgstr ""
 "ceux qui n'ont pas besoin d'une grille unique, le rééchantillonnage n'est "
 "pas nécessaire et ces paramètres ne seront pas utilisés."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:155
+#: ../../docs/user_manual/processing/3rdParty.rst:159
 msgid "Limitations for multi-band layers"
 msgstr "Limitations pour les couches multi-bandes"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:157
+#: ../../docs/user_manual/processing/3rdParty.rst:161
 msgid ""
 "Unlike QGIS, SAGA has no support for multi-band layers. If you want to use a"
 " multiband layer (such as an RGB or multispectral image), you first have to "
@@ -337,11 +347,11 @@ msgstr ""
 "crée trois images à partir d'une image RVB) ou l'algorithme 'SAGA/Grid - "
 "Tools/Extract band' (qui extrait une bande en particulier)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:165
+#: ../../docs/user_manual/processing/3rdParty.rst:169
 msgid "Limitations in cell size"
 msgstr "Limitations dans la résolution"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:167
+#: ../../docs/user_manual/processing/3rdParty.rst:171
 msgid ""
 "SAGA assumes that raster layers have the same cell size in the X and Y axis."
 " If you are working with a layer with different values for horizontal and "
@@ -355,11 +365,11 @@ msgstr ""
 "d'avertissement est ajouté au journal, indiquant que la couche n'est pas "
 "adaptée au traitement par SAGA."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:175
+#: ../../docs/user_manual/processing/3rdParty.rst:179
 msgid "Logging"
 msgstr "Suivi du journal"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:177
+#: ../../docs/user_manual/processing/3rdParty.rst:181
 msgid ""
 "When QGIS calls SAGA, it does so using its command-line interface, thus "
 "passing a set of commands to perform all the required operations. SAGA shows"
@@ -374,7 +384,7 @@ msgstr ""
 "sont filtrés et utilisés pour afficher la barre d'avancement pendant "
 "l'exécution de l'algorithme."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:185
+#: ../../docs/user_manual/processing/3rdParty.rst:189
 msgid ""
 "Both the commands sent by QGIS and the additional information printed by "
 "SAGA can be logged along with other processing log messages, and you might "
@@ -389,7 +399,7 @@ msgstr ""
 "paramètres, à savoir :guilabel:`Log console output` et :guilabel:`Log "
 "execution command`, pour activer ce mécanisme de journalisation."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:193
+#: ../../docs/user_manual/processing/3rdParty.rst:197
 msgid ""
 "Most other providers that use external applications and call them through "
 "the command-line have similar options, so you will find them as well in "
@@ -400,11 +410,7 @@ msgstr ""
 "les trouverez donc également à d'autres endroits dans la liste des "
 "paramètres de traitement."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:201
-msgid "R scripts"
-msgstr "Scripts R"
-
-#: ../../docs/user_manual/processing/3rdParty.rst:203
+#: ../../docs/user_manual/processing/3rdParty.rst:207
 msgid ""
 "To enable R in Processing you need to install the **Processing R Provider** "
 "plugin and configure R for QGIS."
@@ -412,7 +418,7 @@ msgstr ""
 "Pour activer R dans le Processing, vous devez installer le plug-in "
 "**Processing R Provider** et configurer R pour QGIS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:206
+#: ../../docs/user_manual/processing/3rdParty.rst:210
 msgid ""
 "Configuration is done in :menuselection:`Provider --> R` in the "
 ":guilabel:`Processing` tab of :menuselection:`Settings --> Options`."
@@ -421,7 +427,7 @@ msgstr ""
 " dans l'onglet :guilabel:`Traitements` du menu :menuselection:`Préférences "
 "--> Options`."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:210
+#: ../../docs/user_manual/processing/3rdParty.rst:214
 msgid ""
 "Depending on your operating system, you may have to use :guilabel:`R folder`"
 " to specify where your R binaries are located."
@@ -430,7 +436,7 @@ msgstr ""
 ":guilabel:`dossier R` pour spécifier l'emplacement de vos fichiers binaires "
 "R."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:213
+#: ../../docs/user_manual/processing/3rdParty.rst:217
 msgid ""
 "On **Windows** the R executable file is normally in a folder "
 "(``R-<version>``) under :file:`C:\\\\Program Files\\\\R\\\\`. Specify the "
@@ -440,7 +446,7 @@ msgstr ""
 "dossier (``R-<version>``) sous :file:`C:\\\\Program Files\\\\R\\\\`. "
 "Spécifiez le dossier et **PAS** le binaire!"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:217
+#: ../../docs/user_manual/processing/3rdParty.rst:221
 msgid ""
 "On **Linux** you just have to make sure that the R folder is in the PATH "
 "environment variable. If ``R`` in a terminal window starts R, then you are "
@@ -450,7 +456,7 @@ msgstr ""
 "dans la variable d'environnement PATH. Si ``R`` dans une fenêtre de terminal"
 " démarre R, alors vous êtes prêt."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:221
+#: ../../docs/user_manual/processing/3rdParty.rst:225
 msgid ""
 "After installing the **Processing R Provider** plugin, you will find some "
 "example scripts in the :guilabel:`Processing Toolbox`:"
@@ -458,7 +464,7 @@ msgstr ""
 "Après avoir installé le plugin **Processing R Provider**, vous trouverez des"
 " exemples de scripts dans :guilabel:`Processing Toolbox`:"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:224
+#: ../../docs/user_manual/processing/3rdParty.rst:228
 msgid ""
 ":guilabel:`Scatterplot` runs an R function that produces a scatter plot from"
 " two numerical fields of the provided vector layer."
@@ -466,7 +472,7 @@ msgstr ""
 ":guilabel:`Scatterplot` exécute une fonction R qui produit un nuage de "
 "points à partir de deux champs numériques de la couche vectorielle fournie."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:226
+#: ../../docs/user_manual/processing/3rdParty.rst:230
 msgid ""
 ":guilabel:`test_sf` does some operations that depend on the ``sf`` package "
 "and can be used to check if the R package ``sf`` is installed. If the "
@@ -483,7 +489,7 @@ msgstr ""
 "dans les options de traitement. La valeur par défaut est "
 "https://cran.r-project.org/. L'installation peut prendre un certain temps..."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:235
+#: ../../docs/user_manual/processing/3rdParty.rst:239
 msgid ""
 ":guilabel:`test_sp` can be used to check if the R package ``sp`` is "
 "installed. If the package is not installed, R will try to install it for "
@@ -493,7 +499,7 @@ msgstr ""
 "est installé. Si le package n'est pas installé, R essaiera de l'installer "
 "pour vous."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:242
+#: ../../docs/user_manual/processing/3rdParty.rst:246
 msgid ""
 "If you have R configured correctly for QGIS, you should be able to run these"
 " scripts."
@@ -501,11 +507,11 @@ msgstr ""
 "Si vous avez correctement configuré R pour QGIS, vous devriez pouvoir "
 "exécuter ces scripts."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:251
+#: ../../docs/user_manual/processing/3rdParty.rst:255
 msgid "Adding R scripts from the QGIS collection"
 msgstr "Ajout de scripts R à partir de la collection QGIS"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:253
+#: ../../docs/user_manual/processing/3rdParty.rst:257
 msgid ""
 "R integration in QGIS is different from that of SAGA in that there is not a "
 "predefined set of algorithms you can run (except for some example script "
@@ -516,7 +522,7 @@ msgstr ""
 "l'exception de certains exemples de script fournis avec le plug-in "
 "*Processing R Provider*)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:257
+#: ../../docs/user_manual/processing/3rdParty.rst:261
 msgid ""
 "A set of example R scripts is available in the QGIS Repository. Perform the "
 "following steps to load and enable them using the *QGIS Resource Sharing* "
@@ -526,7 +532,7 @@ msgstr ""
 " Effectuez les étapes suivantes pour les charger et les activer à l'aide du "
 "plug-in *QGIS Resource Sharing*."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:261
+#: ../../docs/user_manual/processing/3rdParty.rst:265
 msgid ""
 "Add the *QGIS Resource Sharing* plugin (you may have to enable "
 ":guilabel:`Show also experimental plugins` in the Plugin Manager "
@@ -536,25 +542,19 @@ msgstr ""
 ":guilabel:`Afficher également les plugins expérimentaux` dans le "
 "gestionnaire de plugins :guilabel:`Paramètres`)"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:264
-msgid "Open it (Plugins --> Resource Sharing --> Resource Sharing)"
-msgstr ""
-"Ouvrez-le (:menuselection:`Extensions --> Resource Sharing --> Resource "
-"Sharing`)"
-
-#: ../../docs/user_manual/processing/3rdParty.rst:265
+#: ../../docs/user_manual/processing/3rdParty.rst:269
 msgid "Choose the :guilabel:`Settings` tab"
 msgstr "Choisir l'onglet :guilabel:`Paramètre`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:266
+#: ../../docs/user_manual/processing/3rdParty.rst:270
 msgid "Click :guilabel:`Reload repositories`"
 msgstr "Cliquer sur :guilabel:`Recharger les référentiels`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:267
+#: ../../docs/user_manual/processing/3rdParty.rst:271
 msgid "Choose the :guilabel:`All` tab"
 msgstr "Choisir l'onglet :guilabel:`Tous`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:268
+#: ../../docs/user_manual/processing/3rdParty.rst:272
 msgid ""
 "Select :guilabel:`QGIS R script collection` in the list and click on the "
 ":guilabel:`Install` button"
@@ -562,17 +562,17 @@ msgstr ""
 "Sélectionnez :guilabel:`Collection de scripts QGIS R` dans la liste et "
 "cliquez sur le bouton :guilabel:`Installer`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:270
+#: ../../docs/user_manual/processing/3rdParty.rst:274
 msgid "The collection should now be listed in the :guilabel:`Installed` tab"
 msgstr ""
 "La collection devrait maintenant être répertoriée dans l'onglet "
 ":guilabel:`Installé`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:272
+#: ../../docs/user_manual/processing/3rdParty.rst:276
 msgid "Close the plugin"
 msgstr "Fermer la fenêtre plugin."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:273
+#: ../../docs/user_manual/processing/3rdParty.rst:277
 msgid ""
 "Open the :guilabel:`Processing Toolbox`, and if everything is OK, the "
 "example scripts will be present under R, in various groups (only some of the"
@@ -582,12 +582,12 @@ msgstr ""
 "scripts d'exemple seront présents sous R, dans différents groupes (seuls "
 "certains des groupes sont développés dans la capture d'écran ci-dessous)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:281
+#: ../../docs/user_manual/processing/3rdParty.rst:285
 msgid "The :guilabel:`Processing Toolbox` with some R scripts shown"
 msgstr ""
 "La :guilabel:`Boîte à outils de traitement` avec quelques scripts R affichés"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:283
+#: ../../docs/user_manual/processing/3rdParty.rst:287
 msgid ""
 "The scripts at the top are the example scripts from the *Processing R "
 "Provider* plugin."
@@ -595,7 +595,7 @@ msgstr ""
 "Les scripts en haut sont des exemples de scripts du plugin *Processing R "
 "Provider*."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:286
+#: ../../docs/user_manual/processing/3rdParty.rst:290
 msgid ""
 "If, for some reason, the scripts are not available in the "
 ":guilabel:`Processing Toolbox`, you can try to:"
@@ -603,7 +603,7 @@ msgstr ""
 "Si, pour une raison quelconque, les scripts ne sont pas disponibles dans "
 ":guilabel:`la boite à outils traitement`, vous pouvez essayer de :"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:289
+#: ../../docs/user_manual/processing/3rdParty.rst:293
 msgid ""
 "Open the Processing settings (:menuselection:`Settings --> Options --> "
 "Processing` tab)"
@@ -611,37 +611,41 @@ msgstr ""
 "Ouvrir les paramètres de traitement ( :menuselection:`Préférences --> "
 "Options --> Traitement`)"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:292
+#: ../../docs/user_manual/processing/3rdParty.rst:296
 msgid "Go to :menuselection:`Providers --> R --> R scripts folder`"
 msgstr ""
 "Aller dans :menuselection:`Fournisseurs de données --> R --> dossier de "
 "scripts R`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:294
+#: ../../docs/user_manual/processing/3rdParty.rst:298
 msgid "On Ubuntu, set the path to (or, better, include in the path):"
 msgstr ""
 "Sur Ubuntu, définissez le chemin d'accès (ou, mieux, incluez-le dans le "
 "chemin d'accès) :"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:296
+#: ../../docs/user_manual/processing/3rdParty.rst:300
 msgid ""
 "/home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-"
 "Resources/collections/rscripts"
 msgstr ""
+"/home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-"
+"Resources/collections/rscripts"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:301
+#: ../../docs/user_manual/processing/3rdParty.rst:305
 msgid "On Windows, set the path to (or, better, include in the path):"
 msgstr ""
 "Sous Windows, définissez le chemin d'accès (ou, mieux, incluez-le dans le "
 "chemin d'accès):"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:303
+#: ../../docs/user_manual/processing/3rdParty.rst:307
 msgid ""
 "C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\default\\\\resource_sharing\\\\repositories\\\\github.com\\\\qgis\\\\QGIS-"
 "Resources\\\\collections\\\\rscripts"
 msgstr ""
+"C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\default\\\\resource_sharing\\\\repositories\\\\github.com\\\\qgis\\\\QGIS-"
+"Resources\\\\collections\\\\rscripts"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:305
+#: ../../docs/user_manual/processing/3rdParty.rst:309
 msgid ""
 "To edit, double-click. You can then choose to just paste / type the path, or"
 " you can navigate to the directory by using the :guilabel:`...` button and "
@@ -655,7 +659,7 @@ msgstr ""
 " fenêtre qui s'ouvre. Il est possible de fournir ici plusieurs répertoires. "
 "Ils seront séparés par un point-virgule (\";\")."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:315
+#: ../../docs/user_manual/processing/3rdParty.rst:319
 msgid ""
 "If you would like to get all the R scrips from the QGIS 2 on-line "
 "collection, you can select *QGIS R script collection (from QGIS 2)* instead "
@@ -668,11 +672,11 @@ msgstr ""
 "scripts qui dépendent de l'entrée ou de la sortie de données vectorielles ne"
 " fonctionneront pas."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:327
+#: ../../docs/user_manual/processing/3rdParty.rst:331
 msgid "Creating R scripts"
 msgstr "Création scripts R"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:329
+#: ../../docs/user_manual/processing/3rdParty.rst:333
 msgid ""
 "You can write scripts and call R commands, as you would do from R. This "
 "section shows you the syntax for using R commands in QGIS, and how to use "
@@ -683,7 +687,7 @@ msgstr ""
 " commandes R dans QGIS, et comment utiliser des objets QGIS (couches, "
 "tables)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:333
+#: ../../docs/user_manual/processing/3rdParty.rst:337
 msgid ""
 "To add an algorithm that calls an R function (or a more complex R script "
 "that you have developed and you would like to have available from QGIS), you"
@@ -694,7 +698,7 @@ msgstr ""
 "partir de QGIS), vous devez créer un fichier de script qui exécute les "
 "commandes R."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:338
+#: ../../docs/user_manual/processing/3rdParty.rst:342
 msgid ""
 "R script files have the extension :file:`.rsx`, and creating them is pretty "
 "easy if you just have a basic knowledge of R syntax and R scripting. They "
@@ -709,7 +713,7 @@ msgstr ""
 "groupe de paramètres :guilabel:`R` dans la boîte de dialogue Paramètres de "
 "traitement)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:345
+#: ../../docs/user_manual/processing/3rdParty.rst:349
 msgid ""
 "Let’s have a look at a very simple script file, which calls the R method "
 "``spsample`` to create a random grid within the boundary of the polygons in "
@@ -726,7 +730,7 @@ msgstr ""
 " connaissance des packages spatiaux tels que ``maptools`` et ``sp``/``sf`` "
 "est très utile."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:366
+#: ../../docs/user_manual/processing/3rdParty.rst:370
 msgid ""
 "The first lines, which start with a double Python comment sign (``##``), "
 "define the display name and group of the script, and tell QGIS about its "
@@ -736,7 +740,7 @@ msgstr ""
 "Python (``##``), définissent le nom d'affichage et le groupe du script et "
 "indiquent à QGIS ses entrées et sorties."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:371
+#: ../../docs/user_manual/processing/3rdParty.rst:375
 msgid ""
 "To find out more about how to write your own R scripts, have a look at the "
 ":ref:`R Intro <r-intro>` section in the training manual and consult the "
@@ -746,7 +750,7 @@ msgstr ""
 "la section :ref:`Introduction à R <r-intro>` dans le manuel de formation et "
 "la section :ref:`Syntax R dans QGIS <r-syntax>`."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:375
+#: ../../docs/user_manual/processing/3rdParty.rst:379
 msgid ""
 "When you declare an input parameter, QGIS uses that information for two "
 "things: creating the user interface to ask the user for the value of that "
@@ -758,7 +762,7 @@ msgstr ""
 "l'utilisateur la valeur de ce paramètre et la création d'une variable R "
 "correspondante qui peut être utilisée comme entrée de fonction R."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:380
+#: ../../docs/user_manual/processing/3rdParty.rst:384
 msgid ""
 "In the above example, we have declared an input of type ``vector``, named "
 "``Vector_layer``. When executing the algorithm, QGIS will open the layer "
@@ -775,7 +779,7 @@ msgstr ""
 "paramètre (vous devez donc éviter d'utiliser des mots R réservés comme noms "
 "de paramètres)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:388
+#: ../../docs/user_manual/processing/3rdParty.rst:392
 msgid ""
 "Spatial parameters such as vector and raster layers are read using the "
 "``st_read()`` (or ``readOGR``) and ``brick()`` (or ``readGDAL``) commands "
@@ -789,7 +793,7 @@ msgstr ""
 "votre fichier de description -- QGIS le fera), et ils sont stockés en tant "
 "qu'objets ``sf`` (ou ``Spatial*DataFrame``)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:394
+#: ../../docs/user_manual/processing/3rdParty.rst:398
 msgid ""
 "Table fields are stored as strings containing the name of the selected "
 "field."
@@ -797,7 +801,7 @@ msgstr ""
 "Les champs de table sont stockés sous forme de chaînes contenant le nom du "
 "champ sélectionné."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:397
+#: ../../docs/user_manual/processing/3rdParty.rst:401
 msgid ""
 "Vector files can be read using the ``readOGR()`` command instead of "
 "``st_read()`` by specifying ``##load_vector_using_rgdal``. This will produce"
@@ -808,7 +812,7 @@ msgstr ""
 "``##load_vector_using_rgdal``. Cela produira un objet ``Spatial*DataFrame`` "
 "au lieu d'un objet ``sf``."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:402
+#: ../../docs/user_manual/processing/3rdParty.rst:406
 msgid ""
 "Raster files can be read using the ``readGDAL()`` command instead of "
 "``brick()`` by specifying ``##load_raster_using_rgdal``."
@@ -816,7 +820,7 @@ msgstr ""
 "Les fichiers raster peuvent être lus à l'aide de la commande ``readGDAL()`` "
 "au lieu de ``brick()`` en spécifiant ``##load_raster_using_rgdal``."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:405
+#: ../../docs/user_manual/processing/3rdParty.rst:409
 msgid ""
 "If you are an advanced user and do not want QGIS to create the object for "
 "the layer, you can use ``##pass_filenames`` to indicate that you prefer a "
@@ -829,7 +833,7 @@ msgstr ""
 "c'est à vous d'ouvrir le fichier avant d'effectuer toute opération sur les "
 "données qu'il contient."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:411
+#: ../../docs/user_manual/processing/3rdParty.rst:415
 msgid ""
 "With the above information, it is possible to understand the first lines of "
 "the R script (the first line not starting with a Python comment character)."
@@ -838,7 +842,7 @@ msgstr ""
 " lignes du script R (la première ligne ne commençant pas par un caractère de"
 " commentaire Python)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:421
+#: ../../docs/user_manual/processing/3rdParty.rst:425
 msgid ""
 "The ``spsample`` function is provided by the *sp* library, so the first "
 "thing we do is to load that library. The variable ``Vector_layer`` contains "
@@ -853,7 +857,7 @@ msgstr ""
 "convertir l'objet ``sf`` en objet ``SpatialPolygonsDataFrame`` en utilisant "
 "la fonction ``as``."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:428
+#: ../../docs/user_manual/processing/3rdParty.rst:432
 msgid ""
 "Then we call the ``spsample`` function with this object and the "
 "``numpoints`` input parameter (which specifies the number of points to "
@@ -863,7 +867,7 @@ msgstr ""
 "paramètre d'entrée \"numpoints\" (qui spécifie le nombre de points à "
 "générer)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:432
+#: ../../docs/user_manual/processing/3rdParty.rst:436
 msgid ""
 "Since we have declared a vector output named ``Output``, we have to create a"
 " variable named ``Output`` containing an ``sf`` object."
@@ -871,7 +875,7 @@ msgstr ""
 "Puisque nous avons déclaré une sortie vectorielle nommée ``Sortie``, nous "
 "devons créer une variable nommée ``Sortie`` contenant un objet ``sf``."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:435
+#: ../../docs/user_manual/processing/3rdParty.rst:439
 msgid ""
 "We do this in two steps. First we create a ``SpatialPolygonsDataFrame`` "
 "object from the result of the function, using the *SpatialPointsDataFrame* "
@@ -884,7 +888,7 @@ msgstr ""
 "objet en objet ``sf`` en utilisant la fonction ``st_as_sf`` (de la "
 "librairie*sf*)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:441
+#: ../../docs/user_manual/processing/3rdParty.rst:445
 msgid ""
 "You can use whatever names you like for your intermediate variables. Just "
 "make sure that the variable storing your final result has the defined name "
@@ -897,7 +901,7 @@ msgstr ""
 " une valeur appropriée (un objet ``sf`` pour la sortie de la couche "
 "vectorielle)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:447
+#: ../../docs/user_manual/processing/3rdParty.rst:451
 msgid ""
 "In this case, the result obtained from the ``spsample`` method had to be "
 "converted explicitly into an ``sf`` object via a ``SpatialPointsDataFrame`` "
@@ -909,7 +913,7 @@ msgstr ""
 "``SpatialPointsDataFrame``, car il est lui-même un objet de classe ``ppp``, "
 "qui ne peut pas être retourné à QGIS ."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:452
+#: ../../docs/user_manual/processing/3rdParty.rst:456
 msgid ""
 "If your algorithm generates raster layers, the way they are saved will "
 "depend on whether or not you have used the ``##dontuserasterpackage`` "
@@ -923,7 +927,7 @@ msgstr ""
 "en utilisant la méthode ``writeGDAL()``. Si non, la méthode "
 "``writeRaster()`` du paquet ``raster`` sera utilisée."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:460
+#: ../../docs/user_manual/processing/3rdParty.rst:464
 msgid ""
 "If you have used the ``##pass_filenames`` option, outputs are generated "
 "using the ``raster`` package (with ``writeRaster()``)."
@@ -931,7 +935,7 @@ msgstr ""
 "Si vous avez utilisé l'option ``##pass_filenames``, les sorties sont "
 "générées à l'aide du package ``raster`` (avec ``writeRaster()``)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:463
+#: ../../docs/user_manual/processing/3rdParty.rst:467
 msgid ""
 "If your algorithm does not generate a layer, but a text result in the "
 "console instead, you have to indicate that you want the console to be shown "
@@ -950,7 +954,7 @@ msgstr ""
 "le fichier de description d'un algorithme qui effectue un test de normalité "
 "sur un champ (colonne) donné des attributs d'une couche vectorielle :"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:481
+#: ../../docs/user_manual/processing/3rdParty.rst:485
 msgid ""
 "The output of the last line is printed, but the output of the first is not "
 "(and neither are the outputs from other command lines added automatically by"
@@ -959,7 +963,7 @@ msgstr ""
 "La sortie de la dernière ligne est affichée, mais la sortie de la première "
 "ne l'est pas (ni celles des commandes ajoutées automatiquement par QGIS)."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:485
+#: ../../docs/user_manual/processing/3rdParty.rst:489
 msgid ""
 "If your algorithm creates any kind of graphics (using the ``plot()`` "
 "method), add the following line (``output_plots_to_html`` used to be "
@@ -969,7 +973,7 @@ msgstr ""
 " la ligne suivante (``showplots`` a été remplacé par "
 "``output_plots_to_html``) :"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:493
+#: ../../docs/user_manual/processing/3rdParty.rst:497
 msgid ""
 "This will cause QGIS to redirect all R graphical outputs to a temporary "
 "file, which will be opened once R execution has finished."
@@ -977,7 +981,7 @@ msgstr ""
 "Ceci va indiquer à QGIS de rediriger toutes les sorties graphiques de R vers"
 " un fichier temporaire qui sera chargé une fois l'exécution de R terminée."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:496
+#: ../../docs/user_manual/processing/3rdParty.rst:500
 msgid ""
 "Both graphics and console results will be available through the processing "
 "results manager."
@@ -985,20 +989,7 @@ msgstr ""
 "Les graphiques et les résultats dans la console seront disponibles via le "
 "gestionnaire de résultats."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:499
-msgid ""
-"For more information, please check the R scripts in the official QGIS "
-"collection (you download and install them using the *QGIS Resource Sharing* "
-"plugin, as explained elsewhere). Most of them are rather simple and will "
-"greatly help you understand how to create your own scripts."
-msgstr ""
-"Pour plus d'informations, veuillez vérifier les scripts R dans la collection"
-" officielle de QGIS (vous les téléchargez et installez à l'aide du plugin "
-"*QGIS Resource Sharing*, comme expliqué ailleurs). La plupart d'entre eux "
-"sont assez simples et vous aideront grandement à comprendre comment créer "
-"vos propres scripts."
-
-#: ../../docs/user_manual/processing/3rdParty.rst:506
+#: ../../docs/user_manual/processing/3rdParty.rst:510
 msgid ""
 "The ``sf``, ``rgdal`` and ``raster`` libraries are loaded by default, so you"
 " do not have to add the corresponding ``library()`` commands. However, other"
@@ -1019,20 +1010,16 @@ msgstr ""
 "conscient** que si le paquet doit être téléchargé, le script peut prendre "
 "beaucoup de temps pour s'exécuter la première fois."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:520
-msgid "R libraries"
-msgstr "Bibliothèques R"
+#: ../../docs/user_manual/processing/3rdParty.rst:525
+msgid "R libraries installed when running sf_test"
+msgstr "Bibliothèques R installées lors de l'exécution de sf_test"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:522
+#: ../../docs/user_manual/processing/3rdParty.rst:527
 msgid ""
 "The R script ``sp_test`` tries to load the R packages ``sp`` and ``raster``."
 msgstr ""
 "Le script R ``sp_test`` essaie de charger les packages R ``sp`` et "
 "``raster``."
-
-#: ../../docs/user_manual/processing/3rdParty.rst:527
-msgid "R libraries installed when running sf_test"
-msgstr "Bibliothèques R installées lors de l'exécution de sf_test"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:529
 msgid ""
@@ -1092,7 +1079,7 @@ msgstr ""
 "dossier dans lequel l'autre version est installée. GRASS 7 est nécessaire "
 "pour que les algorithmes fonctionnent correctement."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:571
+#: ../../docs/user_manual/processing/3rdParty.rst:570
 msgid ""
 "If you are running Linux, you just have to make sure that GRASS is correctly"
 " installed, and that it can be run without problem from a terminal window."
@@ -1101,7 +1088,7 @@ msgstr ""
 "correctement installé et qu'il peut être exécuté sans problème à partir "
 "d'une fenêtre de terminal."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:575
+#: ../../docs/user_manual/processing/3rdParty.rst:574
 msgid ""
 "GRASS algorithms use a region for calculations. This region can be defined "
 "manually using values similar to the ones found in the SAGA configuration, "
@@ -1117,11 +1104,11 @@ msgstr ""
 "préférez ce dernier réglage, cochez l'option :guilabel:`Utiliser l'emprise "
 "minimale` dans les paramètres de configuration de GRASS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:589
+#: ../../docs/user_manual/processing/3rdParty.rst:587
 msgid "LAStools"
 msgstr "LAStools"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:591
+#: ../../docs/user_manual/processing/3rdParty.rst:589
 msgid ""
 "To use `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS, you need to "
 "download and install LAStools on your computer and install the LAStools "
@@ -1131,7 +1118,7 @@ msgstr ""
 " devez télécharger et installer LAStools sur votre ordinateur et installer "
 "le plugin LAStools (disponible dans le référentiel officiel) dans QGIS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:595
+#: ../../docs/user_manual/processing/3rdParty.rst:593
 msgid ""
 "On Linux platforms, you will need `Wine <https://www.winehq.org/>`_ to be "
 "able to run some of the tools."
@@ -1139,7 +1126,7 @@ msgstr ""
 "Sur les plateformes Linux, vous aurez besoin de `Wine "
 "<https://www.winehq.org/>`_ pour pouvoir exécuter certains des outils."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:598
+#: ../../docs/user_manual/processing/3rdParty.rst:596
 msgid ""
 "LAStools is activated and configured in the Processing options "
 "(:menuselection:`Settings --> Options`, :guilabel:`Processing` tab, "
@@ -1154,33 +1141,18 @@ msgstr ""
 ":guilabel:`Dossier Wine`). Sur Ubuntu, le dossier Wine par défaut est "
 ":file:`/usr/bin`."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:609
+#: ../../docs/user_manual/processing/3rdParty.rst:607
 msgid "OTB Applications"
 msgstr "Applications OTB "
 
-#: ../../docs/user_manual/processing/3rdParty.rst:611
+#: ../../docs/user_manual/processing/3rdParty.rst:609
 msgid ""
 "OTB applications are fully supported within the QGIS Processing framework."
 msgstr ""
 "Les applications OTB sont intégralement supportées par le module de "
 "Traitements de QGIS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:614
-msgid ""
-"`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) is an image "
-"processing library for remote sensing data. It also provides applications "
-"that provide image processing functionalities. The list of applications and "
-"their documentation are available in `OTB CookBook <https://www.orfeo-"
-"toolbox.org/CookBook/Applications.html>`_"
-msgstr ""
-"`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) est une bibliothèque "
-"de traitement d'images pour les données de télédétection. Elle fournit "
-"également des applications qui offrent des fonctionnalités de traitement "
-"d'images. La liste des applications et leur documentation sont disponibles "
-"dans `OTB CookBook <https://www.orfeo-"
-"toolbox.org/CookBook/Applications.html>`_"
-
-#: ../../docs/user_manual/processing/3rdParty.rst:621
+#: ../../docs/user_manual/processing/3rdParty.rst:619
 msgid ""
 "Note that OTB is not distributed with QGIS and needs to be installed "
 "separately. Binary packages for OTB can be found on the `download page "
@@ -1190,28 +1162,12 @@ msgstr ""
 " Les paquets binaires pour OTB peuvent être trouvés sur la `page de "
 "téléchargement <https://www.orfeo-toolbox.org/download>`_."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:625
+#: ../../docs/user_manual/processing/3rdParty.rst:623
 msgid "To configure QGIS processing to find the OTB library:"
 msgstr ""
 "Pour configurer le traitement QGIS afin de trouver la bibliothèque OTB :"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:627
-msgid ""
-"Open the processing settings: :menuselection:`Settings --> Options --> "
-"Processing` (left panel)*"
-msgstr ""
-"Ouvrez les paramètres de traitement : :menuselection:`Settings --> Options "
-"--> Processing` (panneau de gauche)*"
-
-#: ../../docs/user_manual/processing/3rdParty.rst:628
-msgid "You can see OTB under \"Providers\":"
-msgstr "Vous pouvez trouver OTB sous la rubrique \"Fournisseurs\" :"
-
-#: ../../docs/user_manual/processing/3rdParty.rst:630
-msgid "Expand the :guilabel:`OTB` tab"
-msgstr "Développez l'onglet :guilabel:`OTB`"
-
-#: ../../docs/user_manual/processing/3rdParty.rst:631
+#: ../../docs/user_manual/processing/3rdParty.rst:629
 msgid ""
 "Set the :guilabel:`OTB folder`. This is the location of your OTB "
 "installation."
@@ -1219,7 +1175,7 @@ msgstr ""
 "Définissez le dossier :guilabel:`OTB`. C'est l'emplacement de votre "
 "installation OTB."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:632
+#: ../../docs/user_manual/processing/3rdParty.rst:630
 msgid ""
 "Set the :guilabel:`OTB application folder`. This is the location of your OTB"
 " applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)"
@@ -1229,12 +1185,6 @@ msgstr ""
 ":file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:634
-msgid "Click \"ok\" to save the settings and close the dialog."
-msgstr ""
-"Cliquez sur \"ok\" pour enregistrer les paramètres et fermer la boîte de "
-"dialogue."
-
-#: ../../docs/user_manual/processing/3rdParty.rst:636
 msgid ""
 "If settings are correct, OTB algorithms will be available in the "
 ":guilabel:`Processing Toolbox`."
@@ -1242,33 +1192,33 @@ msgstr ""
 "Si les paramètres sont corrects, les algorithmes OTB seront disponibles dans"
 " la :guilabel:`Processing Toolbox`."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:640
+#: ../../docs/user_manual/processing/3rdParty.rst:637
 msgid "Documentation of OTB settings available in QGIS Processing"
 msgstr "Documentation des paramètres OTB disponibles dans le traitement QGIS"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:643
+#: ../../docs/user_manual/processing/3rdParty.rst:639
 msgid "**OTB folder**: This is the directory where OTB is available."
 msgstr "**Répertoire OTB** : Il s'agit du répertoire où  OTB est disponible."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:645
+#: ../../docs/user_manual/processing/3rdParty.rst:641
 msgid ""
 "**OTB application folder**: This is the location(s) of OTB applications."
 msgstr ""
 "**Répertoire des applications OTB** : C'est le(s) lieu(x) où se trouvent les"
 " applications OTB."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:647
+#: ../../docs/user_manual/processing/3rdParty.rst:643
 msgid "Multiple paths are allowed."
 msgstr "Plusieurs chemins sont autorisés."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:649
+#: ../../docs/user_manual/processing/3rdParty.rst:645
 msgid ""
 "**Logger level** (optional): Level of logger to use by OTB applications."
 msgstr ""
 "**Niveau du logger** (facultatif) : Niveau de l'enregistreur à utiliser par "
 "les applications OTB."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:651
+#: ../../docs/user_manual/processing/3rdParty.rst:647
 msgid ""
 "The level of logging controls the amount of detail printed during algorithm "
 "execution. Possible values for logger level are ``INFO``, ``WARNING``, "
@@ -1281,7 +1231,7 @@ msgstr ""
 "Cette valeur est \"INFO\" par défaut. Il s'agit d'une configuration "
 "utilisateur avancée."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:656
+#: ../../docs/user_manual/processing/3rdParty.rst:652
 msgid ""
 "**Maximum RAM to use** (optional): by default, OTB applications use all "
 "available system RAM."
@@ -1289,7 +1239,7 @@ msgstr ""
 "**Maximum de RAM à utiliser** (facultatif) : par défaut, les applications "
 "OTB utilisent toute la RAM système disponible."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:659
+#: ../../docs/user_manual/processing/3rdParty.rst:655
 msgid ""
 "You can, however, instruct OTB to use a specific amount of RAM (in MB) using"
 " this option. A value of 256 is ignored by the OTB processing provider. This"
@@ -1300,11 +1250,11 @@ msgstr ""
 "ignorée par le fournisseur de traitement  OTB. Il s'agit d'une configuration"
 " utilisateur avancée."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:663
+#: ../../docs/user_manual/processing/3rdParty.rst:659
 msgid "**Geoid file** (optional): Path to the geoid file."
 msgstr "**Fichier Geoid** (facultatif) : Chemin d'accès au fichier géoïd."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:665
+#: ../../docs/user_manual/processing/3rdParty.rst:661
 msgid ""
 "This option sets the value of the elev.dem.geoid and elev.geoid parameters "
 "in OTB applications. Setting this value globally enables users to share it "
@@ -1315,14 +1265,14 @@ msgstr ""
 "permet aux utilisateurs de la partager entre plusieurs algorithmes de "
 "traitement. Vide par défaut."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:670
+#: ../../docs/user_manual/processing/3rdParty.rst:666
 msgid ""
 "**SRTM tiles folder** (optional): Directory where SRTM tiles are available."
 msgstr ""
 "**Dossier de tuiles SRTM** (facultatif) : Répertoire où les tuiles SRTM sont"
 " disponibles."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:673
+#: ../../docs/user_manual/processing/3rdParty.rst:668
 msgid ""
 "SRTM data can be stored locally to avoid downloading of files during "
 "processing. This option sets the value of elev.dem.path and elev.dem "
@@ -1336,23 +1286,7 @@ msgstr ""
 "utilisateurs de la partager entre plusieurs algorithmes de traitement. Vide "
 "par défaut."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:680
-msgid "Compatibility between QGIS and OTB versions"
-msgstr "Compatibilité entre les versions QGIS et OTB"
-
-#: ../../docs/user_manual/processing/3rdParty.rst:682
-msgid ""
-"All OTB versions (from OTB 6.6.1) are compatible with the latest QGIS "
-"version."
-msgstr ""
-"Toutes les versions d'OTB (depuis OTB 6.6.1) sont compatibles avec la "
-"dernière version de QGIS."
-
-#: ../../docs/user_manual/processing/3rdParty.rst:685
-msgid "Troubleshoot"
-msgstr "Troubleshoot"
-
-#: ../../docs/user_manual/processing/3rdParty.rst:686
+#: ../../docs/user_manual/processing/3rdParty.rst:681
 msgid ""
 "If you have issues with OTB applications in QGIS Processing, please open an "
 "issue on the `OTB bug tracker <https://gitlab.orfeo-"
@@ -1362,11 +1296,3 @@ msgstr ""
 "QGIS, veuillez ouvrir un problème sur le `dépôt de signalement de bugs d'OTB"
 " <https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues>`_, en "
 "utilisant le label ``qgis``."
-
-#: ../../docs/user_manual/processing/3rdParty.rst:690
-msgid ""
-"Additional information about OTB and QGIS can be found `here "
-"<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"
-msgstr ""
-"Des informations complémentaires sur OTB et le QGIS sont disponibles `ici "
-"<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"
