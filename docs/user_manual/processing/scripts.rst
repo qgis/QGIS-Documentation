@@ -449,9 +449,12 @@ Input types
    * - :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable>`
      - ``alg.DATABASE_TABLE``
      - A database table
-   * - :class:`QgsProcessingParameterDateTime <qgis.core.QgsProcessingParameterDateTime>`
+   * - :attr:`QgsProcessingParameterDateTime.Date <qgis.core.QgsProcessingParameterDateTime.Date>`
+     - ``alg.DATE``
+     - A pure date
+   * - :attr:`QgsProcessingParameterDateTime.DateTime <qgis.core.QgsProcessingParameterDateTime.DateTime>`
      - ``alg.DATETIME``
-     - A datetime (or a pure date or time)
+     - A datetime
    * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
      - ``alg.DISTANCE``
      - A double numeric parameter for distance values
@@ -479,7 +482,7 @@ Input types
    * - :class:`QgsProcessingParameterGeometry <qgis.core.QgsProcessingParameterGeometry>`
      - ``alg.GEOMETRY``
      - A geometry
-   * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
+   * - :attr:`QgsProcessingParameterNumber.Integer <qgis.core.QgsProcessingParameterNumber.Integer>`
      - ``alg.INT``
      - An integer
    * - :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
@@ -503,7 +506,7 @@ Input types
    * - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
      - ``alg.MULTILAYER``
      - A set of layers
-   * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
+   * - :attr:`QgsProcessingParameterNumber.Double <qgis.core.QgsProcessingParameterNumber.Double>`
      - ``alg.NUMBER``
      - A numerical value
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
@@ -541,6 +544,9 @@ Input types
    * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
      - ``alg.STRING``
      - A text string
+   * - :attr:`QgsProcessingParameterDateTime.Time <qgis.core.QgsProcessingParameterDateTime.Time>`
+     - ``alg.TIME``
+     - A pure time
    * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
      - ``alg.VECTOR_LAYER``
      - A vector layer
