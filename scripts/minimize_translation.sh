@@ -25,18 +25,21 @@ tx pull --use-git-timestamps --mode onlytranslated --workers 15 $LANG
 # The onlytranslated mode actually pulls all the existing files
 # (with only the file header when no string has been translated yet)
 # so let's remove those files that have no translated string (except for English)
+# Moreover, Transifex "notranslate" tag helps all translators skip some manual translations,
+# when source and translation strings should be identical (e.g., for substitutions).
+# This means we may end up with some unfinished po files containing only these duplicate strings.
+# Let's remove them also to avoid unnecessary fattening up the repo.
 for POFILE in `find $SOURCEPOFILES -type f -not -path "*/en/*" -name '*.po'`
 do
-  # Todo: Also remove the Tx notranslate strings from pulled strings?
+  # We count the number of lines that have duplicate source and translation strings
+  # and compare to actual translation entries
+  COUNTX2=`grep -Pazo 'msgid ((".*"\n)+)msgstr (\1)' $POFILE | wc -l`
+  COUNT=$(("$COUNTX2" / 2))
+  # Number of translated entries in the file
+  MSGSTRCOUNT=`grep -c "^msgstr" $POFILE`
 
-  # If only msgstr with no text between quotes next to it or on next line appears in the file,
-  # then there's not a single human translated string in the file
-  # so let's find those files and delete them.
-  # For safety we catch the whole block including lines number, original and translated strings
-  COUNT=`grep -Pazo '(#:.*\n)+msgid (".*"\n)+msgstr (".+"|""\n(".+"\n)+)' $POFILE | wc -l`
-  # echo "$POFILE: $COUNT" >>  $ENGLISHPOFILES
-  if [[ $COUNT -lt 1 ]]; then \
-    # echo "$POFILE to delete" >> $UNTRANSLATEDPOFILES;\
+  # echo "file: $POFILE - count $COUNT - msgstrcount $MSGSTRCOUNT" >> $UNTRANSLATEDPOFILES;\
+  if [[ $COUNT -eq $MSGSTRCOUNT ]]; then \
     rm "$POFILE"
   fi;
 done
