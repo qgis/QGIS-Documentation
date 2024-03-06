@@ -482,7 +482,7 @@ Input types
    * - :class:`QgsProcessingParameterGeometry <qgis.core.QgsProcessingParameterGeometry>`
      - ``alg.GEOMETRY``
      - A geometry
-   * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
+   * - :attr:`QgsProcessingParameterNumber.Integer <qgis.core.QgsProcessingParameterNumber.Integer>`
      - ``alg.INT``
      - An integer
    * - :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
@@ -506,7 +506,7 @@ Input types
    * - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
      - ``alg.MULTILAYER``
      - A set of layers
-   * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
+   * - :attr:`QgsProcessingParameterNumber.Double <qgis.core.QgsProcessingParameterNumber.Double>`
      - ``alg.NUMBER``
      - A numerical value
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
