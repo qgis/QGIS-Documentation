@@ -269,9 +269,112 @@ msgstr ""
 msgid "setProjection"
 msgstr "setProjection"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:109
+msgid "Vector Tiles Properties - Source Dialog"
+msgstr "Eigenschappen vectortegels - dialoogvenster Bron"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:115
+msgid "Symbology and Labels Properties"
+msgstr "Eigenschappen Symbologie en Label"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:123
 msgid "Vector Tile Layer Symbology"
 msgstr "Symbologie voor vectortegellaag "
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:126
+msgid "Setting rules"
+msgstr "Regels instellen"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:128
+msgid ""
+"As vector tiles consist of point, line and polygon geometries, the "
+"respective symbols are available. To apply a cartographic style (with "
+"symbology and/or labels), you can either:"
+msgstr ""
+"Omdat vectortegels bestaan uit geometrieën punt, lijn en polygoon, zijn de "
+"respectievelijke symbolen beschikbaar. Voor het toepassen van een "
+"cartografische stijl (met symbologie en/of labels), kunt u ofwel:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:131
+msgid ""
+"Use a :guilabel:`Style URL` when creating the :ref:`Vector Tiles Connection "
+"<vector_tiles>`. The symbology will be shown immediately in the |symbology| "
+":guilabel:`Symbology` tab after the layer is loaded in QGIS."
+msgstr ""
+"Een :guilabel:`URL stijl` gebruiken bij het maken van de :ref:`Vectortegels "
+"verbinding <vector_tiles>`. De symbologie zal onmiddellijk worden "
+"weergegeven op de tab |symbology| :guilabel:`Symbologie`, nadat de laag is "
+"geladen in QGIS."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:134
+msgid ""
+"Or build your own symbology and labeling in the corresponding tabs of the "
+"layer properties. By default, QGIS assigns an identical symbol to the "
+"features based on their geometry type."
+msgstr ""
+"Of bouw uw eigen symbologie en labels op de corresponderende tabs van de "
+"eigenschappen van de laag. Standaard wijst QGIS een identiek symbool toe aan"
+" de objecten, gebaseerd op hun type geometrie."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:137
+msgid ""
+"In both cases, setting a style for a vector tile relies on a set of "
+":ref:`rules <rule_based_rendering>` applied to the features, indicating:"
+msgstr ""
+"In beide gevallen vertrouwt het instellen van een stijl voor een vectortegel"
+" op een set :ref:`regels <rule_based_rendering>`, die worden toegepast op de"
+" objecten, die aangeeft:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:140
+msgid "a vector :ref:`symbol <symbol-selector>` or :ref:`label <showlabels>`"
+msgstr ""
+"ee vector :ref:`symbool <symbol-selector>` of :ref:`label <showlabels>`"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:141
+msgid ""
+"a :guilabel:`Label`, a title for comprehensive identification of the rule"
+msgstr ""
+"een :guilabel:`Label`, een titel voor uitgebreide identificatie van de regel"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:142
+msgid ""
+"the name of a particular :guilabel:`Layer` the rule should apply to, if not "
+"applied to ``(all layers)``"
+msgstr ""
+"de naam van een bepaalde :guilabel:`Laag` waarop de regel van toepassing "
+"moet zijn, indien niet toegepast op ``(alle lagen)``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:143
+msgid ""
+"a :guilabel:`Min. Zoom` and a :guilabel:`Max. Zoom`, for the range of "
+"display. symbology and labelling can be dependent on the zoom level."
+msgstr ""
+"een :guilabel:`Min. zoomniveau` en een :guilabel:`Max. zoomniveau` voor het "
+"weer te geven bereik. Symbologie en labelen mogen afhankelijk zijn van het "
+"zoomniveau."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:145
+msgid ""
+"a :guilabel:`Filter`, a QGIS expression to identify the features to apply "
+"the style to"
+msgstr ""
+"een :guilabel:`Filter`, een expressie van QGIS om de objecten te "
+"identificeren waarop de stijl moet worden toegepast"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:147
+msgid ""
+"Each rule is added pressing the |symbologyAdd| :sup:`Add rule` button and "
+"selecting the type of symbols (:guilabel:`Marker`, :guilabel:`Line`, "
+":guilabel:`Fill`) corresponding to the features geometry type. You can as "
+"well |symbologyRemove| :sup:`Remove selected rules` or |symbologyEdit| "
+":sup:`Edit current rule`."
+msgstr ""
+"Elke regel wordt toegevoegd door te drukken op de knop |symbologyAdd| "
+":sup:`Regel toevoegen` en selecteren van het type symbolen "
+"(:guilabel:`Markering`, :guilabel:`Lijn`, :guilabel:`Vulling`) "
+"corresponderend met het type geometrie van de objecten. U kunt ook "
+"|symbologyRemove| :sup:`Geselecteerde regels verwijderen` of |symbologyEdit|"
+" :sup:`Huidige regel bewerken`."
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:246
 msgid "symbologyAdd"
@@ -285,6 +388,25 @@ msgstr "symbologyRemove"
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:152
+msgid ""
+"At the bottom the :guilabel:`Current Zoom` is shown. Check the |unchecked| "
+":guilabel:`Visible rules only` option at the top of the dialog to filter the"
+" list of rules to only those that are visible at the current zoom level. "
+"This makes it easier to work with complex vector styling and to locate "
+"troublesome rules. The |search| :guilabel:`Filter rules` text box also helps"
+" you easily find a rule, by searching the :guilabel:`Label`, "
+":guilabel:`Layer` and :guilabel:`Filter` fields."
+msgstr ""
+"Aan de onderzijde wordt de :guilabel:`Huidige zoom` weergegeven. Selecteer "
+"de optie |unchecked| :guilabel:`Alleen zichtbare regels` om de lijst met "
+"regels te filteren tot alleen die welke zichtbaar zijn op het huidige "
+"zoomniveau. Dit maakt het eenvoudiger te werken met complexe opmaak voor "
+"vector en om regels die problemen geven te lokaliseren. Het tekstvak "
+"|search| :guilabel:`Regels filteren` helpt u ook om gemakkelijk een regel te"
+" zoeken, door te zoeken op de velden :guilabel:`Label`, :guilabel:`Laag` en "
+":guilabel:`Filter`."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:254
 msgid "unchecked"
 msgstr "unchecked"
@@ -292,6 +414,16 @@ msgstr "unchecked"
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:240
 msgid "search"
 msgstr "search"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:159
+msgid ""
+"In :numref:`figure_vector_tile_symbology` we set up style for the "
+"OpenStreetMap ``landuse`` layer. For better visibility most of the rules are"
+" deselected."
+msgstr ""
+"In :numref:`figure_vector_tile_symbology` stellen we een stijl in voor de "
+"laag van OpenStreetMap ``landuse``. Voor betere zichtbaarheid zijn de meeste"
+" regels niet geselecteerd."
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:163
 msgid "Layer rendering"
@@ -334,6 +466,19 @@ msgstr ""
 msgid "Styles"
 msgstr "Stijlen"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:179
+msgid ""
+"Available at the bottom of most of the tabs, the :menuselection:`Styles -->`"
+" menu provides shortcuts to save, load, create, switch styles to apply to "
+"the vector tiles. Vector tiles can have their style saved from QGIS as "
+":guilabel:`QML` files and they can be imported as:"
+msgstr ""
+"Beschikbaar aan de onderzijde van de meeste tabs, het menu "
+":menuselection:`Stijl -->` verschaft sneltoetsen op stijlen op te slaan, te "
+"laden, te maken en te schakelen om op de vectortegels toe te passen. "
+"Vectortegels kunnen hun stijl hebben opgeslagen in QGIS als bestanden "
+":guilabel:`QML` en zij kunnen worden geïmporteerd als:"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:184
 msgid ":guilabel:`QML` files (:ref:`qgisstylefile`)"
 msgstr ":guilabel:`QML`-bestanden (:ref:`qgisstylefile`)"
@@ -341,6 +486,10 @@ msgstr ":guilabel:`QML`-bestanden (:ref:`qgisstylefile`)"
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:185
 msgid ":guilabel:`MapBox GL Json` style configuration files"
 msgstr ":guilabel:`MapBox GL Json` stijl configuratiebestanden"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:187
+msgid "More details at :ref:`save_layer_property`."
+msgstr "Meer details op :ref:`save_layer_property`."
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:192
 msgid "Rendering Properties"
@@ -366,6 +515,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:234
 msgid "mapIdentification"
 msgstr "mapIdentification"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:208
+msgid "Vector Tiles Properties - Rendering Dialog"
+msgstr "Eigenschappen vectortegels - dialoogvenster Renderen"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:215
 msgid "Metadata Properties"
