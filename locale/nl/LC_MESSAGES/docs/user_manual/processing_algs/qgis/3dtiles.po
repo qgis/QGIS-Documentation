@@ -35,6 +35,26 @@ msgstr ""
 "translator>`_. Deze pagina is momenteel voor |translation progress| "
 "vertaald."
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:2
+msgid "3D Tiles"
+msgstr "3D-tegels"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:3
+msgid "|334|"
+msgstr "|334|"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:15
+msgid "Convert B3DM to GLTF"
+msgstr "Converteer B3DM naar GLTF"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:17
+msgid ""
+"Converts files from the legacy :file:`.B3DM` format to :file:`.GLTF` or "
+":file:`.GLB`."
+msgstr ""
+"Converteert bestanden van de oude indeling :file:`.B3DM` naar :file:`.GLTF` "
+"of :file:`.GLB`."
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:80
 msgid "Parameters"
@@ -68,10 +88,26 @@ msgstr "Type"
 msgid "Description"
 msgstr "Beschrijving"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:31
+msgid "**Input B3DM**"
+msgstr "**Invoer B3DM**"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:32
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:92
 msgid "``INPUT``"
 msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:93
+msgid "[3D Tile]"
+msgstr "[3D Tile]"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:94
+msgid "Input file to convert."
+msgstr "Te converteren invoerbestand."
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:35
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:57
@@ -87,6 +123,10 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Standaard: ``[Opslaan naar tijdelijk bestand]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:40
+msgid "Specify the output 3D tile file. One of:"
+msgstr "Specificeer het uitvoerbestand voor 3D-tegels. Één van:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Opslaan naar tijdelijk bestand"
@@ -101,10 +141,18 @@ msgstr "Opslaan als bestand…"
 msgid "Outputs"
 msgstr "Uitvoer"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:60
+msgid "Output layer in :file:`.GLTF` format."
+msgstr "Uitvoerlaag in indeling :file:`.GLTF`."
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:63
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:141
 msgid "Python code"
 msgstr "Pythoncode"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:65
+msgid "**Algorithm ID**: ``native:b3dmtogltf``"
+msgstr "**ID algoritme**: ``native:b3dmtogltf``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -118,6 +166,27 @@ msgstr ""
 "parameters* verschaft de NAME's en waarden van de parameters. Bekijk "
 ":ref:`processing_console` voor details over hoe algoritmen van Processing "
 "uit te voeren vanuit de console voor Python."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:75
+msgid "Convert GLTF to vector features"
+msgstr "GLTF naar vectorobjecten converteren"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:77
+msgid ""
+"Converts :file:`.GLTF` or :file:`.GLB` file contents to standard vector "
+"layer formats."
+msgstr ""
+"Converteert inhoud van bestand :file:`.GLTF` of :file:`.GLB` naar de "
+"standaard indelingen voor vectorlaag."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:91
+msgid "**Input GLTF**"
+msgstr "**Invoer GLTF**"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:95
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:131
+msgid "**Output polygons**"
+msgstr "**Uitvoer polygonen**"
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:97
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:109
@@ -139,6 +208,12 @@ msgstr "[vector: polygoon]"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Standaard: ``[Tijdelijke laag maken]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:102
+msgid "Specify the output vector layer to store polygon features. One of:"
+msgstr ""
+"Specificeer de uitvoer vectorlaag om de objecten polygoon op te slaan. Één "
+"van:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "Uitvoer overslaan"
@@ -159,6 +234,11 @@ msgstr "Opslaan als tabel voor database…"
 msgid "The file encoding can also be changed here."
 msgstr "De bestandscodering kan hier ook gewijzigd worden."
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:135
+msgid "**Output lines**"
+msgstr "**Uitvoer lijnen**"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:110
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:136
 msgid "``OUTPUT_LINES``"
@@ -168,3 +248,20 @@ msgstr "``OUTPUT_LINES``"
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:137
 msgid "[vector: line]"
 msgstr "[vector: lijn]"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:114
+msgid "Specify the output vector layer to store line features. One of:"
+msgstr ""
+"Specificeer de uitvoer vectorlaag om de objecten lijn op te slaan. Één van:"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:134
+msgid "A vector layer storing the polygon features in input layer."
+msgstr "Een vectorlaag die de objecten polygoon opslaat in de invoerlaag."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:138
+msgid "A vector layer storing the line features in input layer."
+msgstr "Een vectorlaag die de objecten lijn opslaat in de invoerlaag."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:143
+msgid "**Algorithm ID**: ``native:gltftovector``"
+msgstr "**ID algoritme**: ``native:gltftovector``"
