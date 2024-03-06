@@ -108,7 +108,7 @@ Under the |general| :guilabel:`General` tab, you can:
 
   The set extent is also used as reference extent
   when pressing the |zoomFullExtent| :sup:`Zoom full` button in 3D map view.
-* Press |checkbox| :guilabel:`Show in 2D map view` to display in the main map canvas
+* Check |checkbox| :guilabel:`Show in 2D map view` to display in the main map canvas
   a rubberband corresponding to the current extent of the 3D scene.
 
 Terrain
