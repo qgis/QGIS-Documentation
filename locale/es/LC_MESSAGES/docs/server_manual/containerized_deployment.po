@@ -2,26 +2,38 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
+# Harrissou Sant-anna, 2024
+# Ever Medina <ever.medinaftal@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traducción es un esfuerzo comunitario al que `puedes unirte "
+"<https://qgis.org/es/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Esta página está actualmente traducida en |translation "
+"progress|."
 
 #: ../../docs/server_manual/containerized_deployment.rst:3
 msgid "Containerized deployment"
@@ -223,7 +235,7 @@ msgstr ""
 
 #: ../../docs/server_manual/containerized_deployment.rst:197
 #: ../../docs/server_manual/containerized_deployment.rst:293
-#: ../../docs/server_manual/containerized_deployment.rst:516
+#: ../../docs/server_manual/containerized_deployment.rst:540
 msgid "Cleanup"
 msgstr "Limpieza"
 
@@ -419,19 +431,19 @@ msgstr "Manifiestos de implementación"
 msgid "Create a file :file:`deployments.yaml` with this content:"
 msgstr "Cree un archivo :file:`deployments.yaml` con este contenido:"
 
-#: ../../docs/server_manual/containerized_deployment.rst:435
+#: ../../docs/server_manual/containerized_deployment.rst:459
 msgid "Service manifests"
 msgstr "Manifiestos de servicio"
 
-#: ../../docs/server_manual/containerized_deployment.rst:437
+#: ../../docs/server_manual/containerized_deployment.rst:461
 msgid "Create a file :file:`services.yaml` with this content:"
 msgstr "Cree un archivo :file:`services.yaml` con este contenido:"
 
-#: ../../docs/server_manual/containerized_deployment.rst:469
+#: ../../docs/server_manual/containerized_deployment.rst:493
 msgid "Deploying manifests"
 msgstr "Implementar manifiesto"
 
-#: ../../docs/server_manual/containerized_deployment.rst:471
+#: ../../docs/server_manual/containerized_deployment.rst:495
 msgid ""
 "To deploy the images and services in Kubernetes, one can use the dashboard "
 "(click on the **+** on the upper right) or the command line."
@@ -440,7 +452,7 @@ msgstr ""
 "el panel (haga clic en **+** en la parte superior derecha) o la línea de "
 "comandos."
 
-#: ../../docs/server_manual/containerized_deployment.rst:475
+#: ../../docs/server_manual/containerized_deployment.rst:499
 msgid ""
 "When using the command line with microk8s you will have to prefix each "
 "command with `microk8s`."
@@ -448,23 +460,23 @@ msgstr ""
 "Cuando use la línea de comando con microk8s, tendrá que anteponer cada "
 "comando con `microk8s`."
 
-#: ../../docs/server_manual/containerized_deployment.rst:478
+#: ../../docs/server_manual/containerized_deployment.rst:502
 msgid "To deploy or update your manifests:"
 msgstr "Para implementar o actualizar sus manifiestos:"
 
-#: ../../docs/server_manual/containerized_deployment.rst:484
+#: ../../docs/server_manual/containerized_deployment.rst:508
 msgid "To check what is currently deployed:"
 msgstr "Para verificar qué está implementado actualmente:"
 
-#: ../../docs/server_manual/containerized_deployment.rst:490
+#: ../../docs/server_manual/containerized_deployment.rst:514
 msgid "You should obtain something like::"
 msgstr "Debería obtener algo como:"
 
-#: ../../docs/server_manual/containerized_deployment.rst:506
+#: ../../docs/server_manual/containerized_deployment.rst:530
 msgid "To read nginx/qgis logs, type:"
 msgstr "Para leer los registros de nginx / qgis, escriba:"
 
-#: ../../docs/server_manual/containerized_deployment.rst:512
+#: ../../docs/server_manual/containerized_deployment.rst:536
 msgid ""
 "To check WMS capabilities, type in a web browser "
 "http://localhost:30080/qgis-"
@@ -474,15 +486,15 @@ msgstr ""
 "http://localhost:30080/qgis-"
 "server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
 
-#: ../../docs/server_manual/containerized_deployment.rst:518
+#: ../../docs/server_manual/containerized_deployment.rst:542
 msgid "To clean up, type:"
 msgstr "Para limpiar, escriba:"
 
-#: ../../docs/server_manual/containerized_deployment.rst:525
+#: ../../docs/server_manual/containerized_deployment.rst:549
 msgid "Cloud deployment"
 msgstr "Implementar nube"
 
-#: ../../docs/server_manual/containerized_deployment.rst:527
+#: ../../docs/server_manual/containerized_deployment.rst:551
 msgid ""
 "Managing your own cluster of servers to handle the deployment of "
 "containerized applications, is a complex job. You have to handle multiple "
@@ -493,7 +505,7 @@ msgstr ""
 "varios problemas, como hardware, ancho de banda y seguridad en diferentes "
 "niveles."
 
-#: ../../docs/server_manual/containerized_deployment.rst:532
+#: ../../docs/server_manual/containerized_deployment.rst:556
 msgid ""
 "Cloud deployment solutions can be a good alternative when you do not want to"
 " focus on infrastructure management."
@@ -501,7 +513,7 @@ msgstr ""
 "Las soluciones de implementación en la nube pueden ser una buena alternativa"
 " cuando no desea centrarse en la gestión de la infraestructura."
 
-#: ../../docs/server_manual/containerized_deployment.rst:535
+#: ../../docs/server_manual/containerized_deployment.rst:559
 msgid ""
 "A cloud deployment may use proprietary mechanisms, but they are also "
 "compatible with the stages explained previously (:ref:`docker images "
@@ -512,11 +524,11 @@ msgstr ""
 "(:ref:`docker images <simple-docker-images>` y :ref:`stack management "
 "<docker-stacks>`)."
 
-#: ../../docs/server_manual/containerized_deployment.rst:541
+#: ../../docs/server_manual/containerized_deployment.rst:565
 msgid "AWS usecase"
 msgstr "Caso de uso de AWS"
 
-#: ../../docs/server_manual/containerized_deployment.rst:543
+#: ../../docs/server_manual/containerized_deployment.rst:567
 msgid ""
 "With Amazon AWS, through `ECS (Elastic Container Service) "
 "<https://console.aws.amazon.com/ecs/home>`_ functionalities, you can use "
@@ -532,7 +544,7 @@ msgstr ""
 "<https://console.aws.amazon.com/ecr/home>`_ para que sus imágenes "
 "personalizadas sean accesibles."
 
-#: ../../docs/server_manual/containerized_deployment.rst:551
+#: ../../docs/server_manual/containerized_deployment.rst:575
 msgid ""
 "To use docker-compose alike functionalities, you need to install the **ecs-"
 "cli** client and have `proper permissions / roles "
@@ -548,7 +560,7 @@ msgstr ""
 "<https://github.com/aws/amazon-ecs-cli>`_ usted puede reutilizar la "
 ":ref:`stack description <docker-compose-file>`."
 
-#: ../../docs/server_manual/containerized_deployment.rst:557
+#: ../../docs/server_manual/containerized_deployment.rst:581
 msgid ""
 "To use Kubernetes, you can use the AWS web console or the command line tool "
 "`eksctl <https://docs.aws.amazon.com/eks/latest/userguide/getting-"
