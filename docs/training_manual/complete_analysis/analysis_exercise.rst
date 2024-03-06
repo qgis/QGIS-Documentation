@@ -277,7 +277,7 @@ First we change the resolution of our rainfall data to 30 meters
    .. figure:: img/wrap_rainfall.png
       :align: center
 
-      Wrap (Reproject) Rainfall_clipped
+      Warp (Reproject) Rainfall_clipped
 
 
 Then we align the DEM:
