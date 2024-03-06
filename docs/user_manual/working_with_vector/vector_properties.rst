@@ -1113,7 +1113,7 @@ the symbol's redrawing.
 #. You can now use ``@symbol_frame`` variable in any sub-symbol data defined 
    property in order to animate that property. 
 
-Fow example, setting the symbol's rotation to data 
+For example, setting the symbol's rotation to data 
 defined expression ``@symbol_frame % 360`` 
 will cause the symbol to rotate over time, with rotation speed dictated by
 the symbol's frame rate:
@@ -2207,7 +2207,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
 #. Select fields you do not want to use in your :guilabel:`Form Layout`
    panel and hit the |symbologyRemove| button to remove them.
    You can also toggle the selection with the |invertSelection| :sup:`Invert selection` button.
-#. Drag and drop fields from the first panel to the :guilabel`Form Layout` one to re-add them.
+#. Drag and drop fields from the first panel to the :guilabel:`Form Layout` one to re-add them.
    The same field can be added multiple times.
 #. Drag and drop fields within the :guilabel:`Form Layout` panel to reorder their position.
 #. Add containers to associate fields that belong to  the same category
