@@ -1128,7 +1128,7 @@ Optionally, you can activate the following options:
   and may include missing records. Only check this option if you are certain that
   all geometries present in the database are valid, and any newly added geometries
   or tables will also be valid.
-* |checkbox| :guilabel:`Use only a Subset of Schemas` will alow you to filter 
+* |checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter 
   schemas for MS SQL connection. If enabled, only checked schemas will be displayed.
   You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema 
   in the list. 
