@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
+# Transifex Bot <>, 2024
 # DiGro, 2024
 # 
 #, fuzzy
@@ -35,6 +36,97 @@ msgstr ""
 "translator>`_. Deze pagina is momenteel voor |translation progress| "
 "vertaald."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:6
+msgid "Connecting and Editing Data Across Layers"
+msgstr "Gegevens tussen lagen verbinden en bewerken"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:13
+msgid ""
+"Ability to connect data from different layers is one of the duties of a GIS "
+"software. Such a connection can be based on the spatial relationship between"
+" the features, or on their shared attributes. QGIS provides tools to handle "
+"any of these associations, such as:"
+msgstr ""
+"De mogelijkheid om gegevens tussen lagen te verbinden is een van de plichten"
+" van GIS-software. Een dergelijke verbinding kan zijn gebaseerd op de "
+"ruimtelijke relatie tussen de objecten, of op hun gedeelde attributen. QGIS "
+"verschaft gereedschappen om deze associaties af te handelen, zoals:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:18
+msgid ""
+"Processing algorithms that can create a new layer as a result of the "
+"connection, namely :ref:`qgisjoinattributesbylocation`, "
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, ..."
+msgstr ""
+"Algoritmes voor Processing die een nieuwe laag kunnen maken als resultaat "
+"van de verbinding, met name :ref:`qgisjoinattributesbylocation`, "
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, …"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:21
+msgid ""
+"SQL queries to create a new layer from the :ref:`DB Manager <dbmanager>` or "
+"as a :ref:`virtual layer <vector_virtual_layers>`"
+msgstr ""
+"SQL-query's om een nieuwe laag te maken uit :ref:`Databronnen beheren "
+"<dbmanager>` of als een :ref:`virtuele laag <vector_virtual_layers>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:23
+msgid ""
+":ref:`Joins properties <sec_joins>` or :ref:`relations settings "
+"<vector_relations>` that temporarily extend attributes of features in a "
+"given layer, with those of features in another layer based on some matching "
+"attribute(s)."
+msgstr ""
+":ref:`Eigenschappen voor koppelingen <sec_joins>` od :ref:`instellingen voor"
+" relaties <vector_relations>` die tijdelijk attributen of objecten in een "
+"laag uitbreiden met die van objecten in een andere laag, gebaseerd op enige "
+"overeenkomend(e) attribu(u)t(en)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:27
+msgid ""
+"Joins and relations are technical concepts borrowed from databases to get "
+"the most out of data stored in tables by combining their contents. The idea "
+"is that features (rows) of different layers (tables) can be associated to "
+"each other. The number of rows which are matching each other can be of any "
+"value (zero, one, many)."
+msgstr ""
+"Koppelingen en relaties zijn technische concepten die zijn geleend van "
+"databases om het meeste te halen uit de gegevens die zijn opgeslagen in "
+"tabellen, door hun inhoud te combineren. Het idee is dat objecten (rijen) "
+"van verschillende lagen (tabellen) met elkaar kan worden gekoppeld. Het "
+"aantal rijen dat overeenkomt met elkaar kan elke waarde zijn (nul, een, "
+"veel)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:37
+msgid "Joining features between two layers"
+msgstr "Objecten koppelen tussen twee lagen"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:39
+msgid ""
+"**Joins** in QGIS allow you to associate features of the current layer to "
+"features from another loaded vector layer. Whether they are spatially "
+"enabled and the type of geometry do not matter. The join is based on an "
+"attribute that is shared by the layers, in a one-to-one relationship."
+msgstr ""
+"**Koppelingen** in QGIS maken het voor u mogelijk om objecten van de huidige"
+" laag te koppelen aan objecten van een andere geladen vectorlaag. Of zij "
+"ruimtelijk ingeschakeld zijn of het type geometrie maakt niet uit. De "
+"koppeling is gebaseerd op een attribuut dat is gedeeld door de lagen, in een"
+" relatie een-tot-een."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:44
+msgid "To create a join on a layer (identified below as ``target layer``):"
+msgstr ""
+"Een koppeling maken met een laag (hieronder geïdentificeerd als "
+"``doellaag``):"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:46
+msgid ""
+"Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab"
+msgstr ""
+"Ga naar de tab van de laag :menuselection:`Eigenschappen -->` |join| "
+":guilabel:`Koppelingen`"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
 msgid "join"
 msgstr "join"
@@ -59,6 +151,18 @@ msgstr ""
 "Selecteer de :guilabel:`Koppellaag` waarmee u de doelvectorlaag wilt "
 "verbinden"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:50
+msgid ""
+"Specify the :guilabel:`Join field` (from the ``join layer``) and the "
+":guilabel:`Target field` (from the ``target layer``). These are the fields "
+"that are used to find matching feature in both layers hence they should have"
+" values in common."
+msgstr ""
+"Specificeer het :guilabel:`Koppelveld` (uit de ``koppellaag``) en het "
+":guilabel:`Doelveld` (uit de ``doellaag``). Dat zijn de velden die worden "
+"gebruikt om overeenkomende objecten te vinden in beide lagen, als zij "
+"gemeenschappelijke waarden hebben."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:54
 msgid ""
 "Press :guilabel:`OK` and a summary of selected parameters is added to the "
@@ -70,6 +174,54 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:61
 msgid "Join an attribute table to an existing vector layer"
 msgstr "Een attributentabel koppelen aan een bestaande vectorlaag"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:63
+msgid ""
+"The steps above will create a join, where **ALL** the attributes of the "
+"**first matching feature** in the join layer is added to the target layer's "
+"feature. The following logic is used to pair features during a join process:"
+msgstr ""
+"De stappen hierboven zullen een koppeling maken waar **ALLE** attributen, "
+"van het **eerste overeenkomende object** in de koppellaag, worden toegevoegd"
+" aan het object van de doellaag. De volgende logica wordt gebruikt om "
+"objecten te paren, gedurende een proces van koppelen:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:68
+msgid ""
+"All the features in the target layer are returned, regardless they have a "
+"match"
+msgstr ""
+"Alle objecten in de doellaag worden teruggegeven, ongeacht of zij een "
+"overeenkomst hebben"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:69
+msgid ""
+"If the target field contains duplicate values, these features are assigned "
+"the same feature from the join layer."
+msgstr ""
+"Als het doelveld duplicaat-waarden bevat, worden deze objecten toegewezen "
+"aan hetzelfde object uit de koppellaag."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:71
+msgid ""
+"If the join field contains duplicate matching values, only the first fetched"
+" feature is picked."
+msgstr ""
+"Als het koppelveld dubbele overeenkomende waarden bevat, wordt alleen het "
+"eerst opgehaalde object gekozen."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:73
+msgid ""
+"Joins in QGIS are based on a single field matching so most of the times, you"
+" would want to make sure that values in the matchable fields are unique."
+msgstr ""
+"Koppelingen in QGIS zijn gebaseerd op een enkel veld dat overeenkomt, dus de"
+" meeste keren zou u er voor moeten zorgen dat waarden in het overeen te "
+"komen veld uniek zijn."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:76
+msgid "QGIS provides some more options to tweak the join:"
+msgstr "QGIS verschaft nog wat meer opties om de koppeling aan te passen:"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:78
 msgid ""
@@ -84,6 +236,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:80
+msgid ""
+"|unchecked| :guilabel:`Create attribute index on the join field` to speed up"
+" lookups"
+msgstr ""
+"|unchecked| :guilabel:`Index voor attributen aanmaken op het koppelveld` om "
+"opzoeken sneller te maken"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
 msgid "unchecked"
@@ -139,6 +299,22 @@ msgstr ""
 msgid "joinedLayerNotEditable"
 msgstr "joinedLayerNotEditable"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:94
+msgid ""
+"|joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization "
+"mechanisms are not activated. If you want to automatically add a feature in "
+"the join layer when a feature is created in the target layer, then you have "
+"to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, "
+"the option |checkbox| :guilabel:`Delete cascade` may be activated if you  "
+"want to automatically delete join features."
+msgstr ""
+"|joinHasNotUpsertOnEdit|: de koppellaag is te bewerken, maar de mechanismen "
+"voor synchroniseren zijn niet geactiveerd. Als u automatisch een object wilt"
+" toevoegen in de koppellaag als een object in de doellaag wordt gemaakt, dan"
+" moet u de optie |checkbox| :guilabel:`Bijwerken bij bewerken` selecteren. "
+"Symmetrisch, de optie |checkbox| :guilabel:`Stapel verwijderen` moet worden "
+"geactiveerd als u automatisch gekoppelde objecten wilt verwijderen."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
 msgid "joinHasNotUpsertOnEdit"
 msgstr "joinHasNotUpsertOnEdit"
@@ -159,9 +335,76 @@ msgstr ""
 "|unchecked| :guilabel:`Voorvoegsel voor naam aangepast veld` voor gekoppelde"
 " velden, om botsingen tussen namen van velden te vermijden "
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:111
+msgid "Setting relations between multiple layers"
+msgstr "Relaties instellen tussen twee lagen"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:113
+msgid ""
+"Unlike joins that define a one-to-one link between features across two "
+"layers, relations help you build interconnections between multiple features "
+"across two or more layers. As such, relations are project level settings and"
+" are set in :menuselection:`Project --> Properties -->` |relations| "
+":guilabel:`Relations` tab. From there, you can:"
+msgstr ""
+"Anders dan koppelingen die een koppeling een-tot-een definiëren tussen "
+"objecten van twee lagen, helpen relaties u verbindingen te maken tussen "
+"meerdere objecten van twee of meer lagen. Als zodanig zijn relaties "
+"instellingen op het niveau van het project en worden ingesteld in "
+":menuselection:`Project --> Eigenschappen -->` tab |relations| "
+":guilabel:`Relaties`. Daar kunt u:"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
 msgid "relations"
-msgstr "relaties"
+msgstr "relations"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:119
+msgid "|symbologyAdd| :guilabel:`Add relation` whose type can be:"
+msgstr ""
+"|symbologyAdd| :guilabel:`Relatie toevoegen` waarvan het type kan zijn:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:121
+msgid ":ref:`one to many relation <one_to_many_relation>`"
+msgstr ":ref:`relatie een-tot-veel <one_to_many_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:122
+msgid ":ref:`many to many relation <many_to_many_relation>`"
+msgstr ":ref:`relatie veel-tot-veel <many_to_many_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:123
+msgid ""
+":ref:`polymorphic relation <polymorphic_relation>` that you can add or edit "
+"with the dedicated tools in the action drop-down menu."
+msgstr ""
+":ref:`polymorfische relatie <polymorphic_relation>` die u kunt toevoegen of "
+"bewerken met de toegewezen gereedschappen in het keuzemenu voor de actie."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:126
+msgid ""
+"There is no simple way yet to edit a non-polymorphic relation once it has "
+"been created. Only the name can be edited with a double-click. For any other"
+" parameters of such a relation you will have to remove and recreate it."
+msgstr ""
+"Er is nog geen eenvoudige manier om een niet-polymorfische relatie te "
+"bewerken als die eenmaal is gemaakt. Alleen de naam kan worden bewerkt met "
+"een dubbelklik. Voor elke andere parameter van een dergelijke relatie zult u"
+" die moeten verwijderen en opnieuw maken=."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:130
+msgid ""
+"|symbologyAdd| :guilabel:`Discover relations`: QGIS is able to discover "
+"existing relations from supported database formats (PostgreSQL, GeoPackage, "
+"ESRI File Geodatabase, ...). This can be a good way to ease the relations "
+"definition."
+msgstr ""
+"|symbologyAdd| :guilabel:`Relaties ontdekken`: QGIS is in staat om bestaande"
+" relaties te ontdekken uit ondersteunde indelingen voor databases "
+"(PostgreSQL, GeoPackage, ESRI File Geodatabase, …). Dit kan ene goede manier"
+" zijn om het definiëren van relaties te makkelijker te maken."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:133
+msgid "|symbologyRemove| :guilabel:`Remove relation`"
+msgstr "|symbologyRemove| :guilabel:`Relatie verwijderen`"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
 msgid "symbologyRemove"
@@ -170,6 +413,20 @@ msgstr "symbologyRemove"
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:140
 msgid "Relations tab"
 msgstr "Tab Relaties"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:148
+msgid "One to many (1-N) relations"
+msgstr "Relaties een-tot-veel (1-N) "
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:150
+msgid ""
+"As an example you have a layer with all regions of Alaska (polygon) which "
+"provides some attributes about its name and region type and a unique id "
+"(which acts as primary key)."
+msgstr ""
+"Als voorbeeld heeft u een laag met alle regio's van Alaska (polygoon) die "
+"verschillende attributen verschaft over de naam ervan en het type regio en "
+"een unieke ID (die dient als primaire sleutel)."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:154
 msgid ""
@@ -189,6 +446,59 @@ msgstr ""
 msgid "Alaska region with airports"
 msgstr "Regio Alaska met vliegvelden"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:168
+msgid "Layers and keys"
+msgstr "Lagen en sleutels"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:170
+msgid ""
+"QGIS makes no difference between a table and a vector layer. Basically, a "
+"vector layer is a table with a geometry. So you can add your table as a "
+"vector layer. To demonstrate the 1-n relation, you can load the "
+":file:`regions` and :file:`airports` layers in the sample dataset. In "
+"practice, each airport belongs to exactly one region while each region can "
+"have any number of airports (a typical one to many relation)."
+msgstr ""
+"QGIS maakt geen verschil tussen een tabel en een vectorlaag. In feite is een"
+" vectorlaag een tabel met een geometrie. Dus kunt u uw laag tabel als een "
+"vectorlaag toevoegen. U kunt, om de relatie 1-n te demonstreren, de lagen "
+":file:`regions` en :file:`airports` laden uit de voorbeeld gegevensset. In "
+"de praktijk behoort elk vliegveld tot precies één regio, terwijl elke regio "
+"een onbepaald aantal vliegvelden kan hebben (een typische een tot veel-"
+"relatie)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:178
+msgid "which has a foreign key field (``fk_region``) to the layer regions."
+msgstr ""
+"dat een veld vreemde sleutel heeft (``fk_region``) naar de laag regions."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:180
+msgid ""
+"In addition to the attributes describing the airports, the aiports layer has"
+" another field ``fk_region`` which acts as a foreign key (if you have a "
+"database, you will probably want to define a constraint on it). This "
+"``fk_region`` field will always contain an id of a region. It can be seen "
+"like a pointer to the region it belongs to."
+msgstr ""
+"In aanvulling op de attributen die de vliegvelden beschrijven, heeft de laag"
+" aiports een ander veld ``fk_region``, dat optreedt als een secundaire "
+"sleutel (als u een database hebt wilt u waarschijnlijk daar een beperking "
+"voor maken). Dit veld ``fk_region`` zal altijd een ID van een region "
+"bevatten. Het kan worden gezien als een verwijzing naar de region waartoe "
+"het behoort."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:186
+msgid ""
+"All you have to do is to tell QGIS the relation between the layers so that "
+"you can design a custom edit form for editing and QGIS takes care of the "
+"setup. It works with different providers (so you can also use it with shape "
+"and csv files)."
+msgstr ""
+"Alles wat u hoeft te doen is QGIS de relatie te vertellen tussen de lagen "
+"zodat u een aangepast formulier voor bewerken kunt maken en QGIS zorgt dan "
+"voor de instelling. Het werkt met verschillende providers (dus u kunt het "
+"ook gebruiken met Shapefiles en CSV-bestanden)."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:191
 msgid "Defining 1-N relations"
 msgstr "1-N-relaties definiëren"
@@ -204,6 +514,16 @@ msgstr ""
 "tussen de lagen. Dit wordt gedaan in :menuselection:`Project --> "
 "Eigenschappen…`. Open de tab :guilabel:`Relaties` en klik op |symbologyAdd| "
 ":guilabel:`Relatie toevoegen`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:197
+msgid ""
+"**Name** is going to be used as a title. It should be a human readable "
+"string describing what the relation is used for. We will just call say "
+"**airport_relation** in this case."
+msgstr ""
+"**Naam** zal worden gebruikt als de titel. Het zou een door mensen te lezen "
+"tekenreeks moeten zijn, die beschrijft waar de relatie voor wordt gebruikt. "
+"We zullen het in dit geval eenvoudigweg **vliegveld_relatie** noemen."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:200
 msgid ""
@@ -227,6 +547,22 @@ msgstr ""
 " veld voor de vreemde sleutel erop. In ons geval is dit de laag "
 "``airports``. Voor deze laag dient u een verwijzingsveld toe te voegen dat "
 "naar de andere laag verwijst, dus is dit ``fk_region``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:209
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:587
+msgid ""
+"Sometimes, you need more than a single field to uniquely identify features "
+"in a layer. Creating a relation with such a layer requires a **composite "
+"key**, i.e. more than a single pair of matching fields. Use the "
+"|symbologyAdd| :sup:`Add new field pair as part of a composite foreign key` "
+"button to add as many pairs as necessary."
+msgstr ""
+"Soms heeft u meer dan één enkel veld nodig om objecten op een laag uniek te "
+"kunnen identificeren. Maken van een relatie met een dergelijke laag vereist "
+"een **samengestelde sleutel**, d.i. meer dan één enkel paar van "
+"overeenkomende velden. Gebruik de knop |symbologyAdd| :sup:`Nieuw veldpaar "
+"toevoegen als deel van een samengestelde sleutel` om net zoveel paren toe te"
+" voegen als nodig is."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:215
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:576
@@ -279,6 +615,24 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:240
 msgid "Forms for 1-N relations"
 msgstr "Formulieren voor 1-N-relaties"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:242
+msgid ""
+"Now that QGIS knows about the relation, it will be used to improve the forms"
+" it generates. As we did not change the default form method (autogenerated),"
+" it will just add a new widget in our form. So let's select the layer region"
+" in the legend and use the identify tool. Depending on your settings, the "
+"form might open directly or you will have to choose to open it in the "
+"identification dialog under actions."
+msgstr ""
+"Nu QGIS van de relatie weet zal het worden gebruikt om de formulieren te "
+"verbeteren die het genereert. Als we de standaardmethode voor het formulier "
+"niet wijzigden (automatisch gegenereerd) zal het eenvoudigweg een nieuw "
+"widget in ons formulier maken. Dus laten we de laag regions selecteren in de"
+" legenda en het gereedschap Objecten identificeren gebruiken. Afhankelijk "
+"van uw instellingen zou het formulier direct kunnen openen of u moet het "
+"kiezen om het openen in het dialoogvenster Identificatieresultaten onder "
+"Acties."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:253
 msgid "Identification dialog regions with relation to airports"
@@ -541,6 +895,17 @@ msgstr ""
 "Airports: selecteer het veld ``fk_region`` en selecteer de optie ``Ingebed "
 "formulier weergeven``."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:327
+msgid ""
+"If you look at the feature dialog now, you will see that the form of the "
+"region is embedded inside the airports form and will even have a combobox, "
+"which allows you to assign the current airport to another region."
+msgstr ""
+"Als u nu kijkt naar het dialoogvenster van het object, zult u zien dat het "
+"formulier van de regio nu is ingebed in het formulier van de vliegvelden en "
+"zelfs een combinatievak zal hebben, wat u in staat stelt het huidige "
+"vliegveld aan een andere regio toe te wijzen."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:336
 msgid ""
 "Moreover if you toggle the editing mode of the airport layer, the "
@@ -589,6 +954,10 @@ msgstr ""
 msgid "Select parent features with child values"
 msgstr "Ouderobjecten selecteren met waarden van hun kind"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:363
+msgid "Many-to-many (N-M) relations"
+msgstr "Relaties veel-tot-veel (N-M) "
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:365
 msgid ""
 "N-M relations are many-to-many relations between two tables. For instance, "
@@ -599,6 +968,31 @@ msgstr ""
 "voor de lagen ``airports`` en ``airlines``: een vliegveld ontvangt "
 "verscheidene luchtvaartmaatschappijen en een luchtvaartmaatschappij vliegt "
 "naar verscheidene vliegvelden."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:370
+msgid ""
+"This SQL code creates the three tables we need for an N-M relationship in a "
+"PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
+":menuselection:`Database --> DB Manager…` for PostGIS or external tools such"
+" as `pgAdmin <https://www.pgadmin.org>`_. The airports table stores the "
+"``airports`` layer and the airline table stores the ``airlines`` layer. In "
+"both tables few fields are used for clarity. The *tricky* part is the "
+"``airports_airlines`` table. We need it to list all airlines for all "
+"airports (or vice versa). This kind of table is known as a *pivot table*. "
+"The *constraints* in this table force that an airport can be associated with"
+" an airline only if both already exist in their layers."
+msgstr ""
+"Deze code voor SQL maakt de drie tabellen die we nodig hebben voor een "
+"relatie N-M in schema voor PostgreSQL/PostGIS, genaamd *locations*. U kunt "
+"de code uitvoeren met :menuselection:`Database --> DB Manager…` voor PostGIS"
+" of met externe programma's als `pgAdmin <https://www.pgadmin.org>`_. De "
+"tabel airports slaat de laag ``airports`` op en de tabel airlines slaat de "
+"laag ``airlines`` op. In beide tabellen worden voor de duidelijkheid enkele "
+"velden gebruikt. Het *moeilijke* gedeelte is de tabel ``airports_airlines``."
+" We dienen er voor te zorgen dat die alle airlines voor alle airports "
+"vermeld (of vice versa). Dit soort tabel staat bekend als een *draaitabel*. "
+"De *voorwaarden* in deze tabel forceren dat een airport alleen kan worden "
+"geassocieerd met een airline als beide al in hun lagen bestaan."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:424
 msgid ""
@@ -742,9 +1136,46 @@ msgstr "N-M-relaties tussen airports en airlines"
 msgid "Using **Many to one relation** cardinality"
 msgstr "Kardinaliteit **Veel-tot één-relatie** gebruiken "
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:510
+msgid ""
+"Sometimes hiding the pivot table in an N-M relationship is not desirable. "
+"Mainly because there are attributes in the relationship that can only have "
+"values when a relationship is established. If your tables have a geometry "
+"field, it could be interesting to activate the :guilabel:`On map "
+"identification` option (:menuselection:`Layer Properties --> Attributes Form"
+" --> Available widgets --> Fields`) for the foreign key fields in the pivot "
+"table."
+msgstr ""
+"Soms is het verbergen van de draaitabel in een N-M-relatie niet gewenst. "
+"Voornamelijk omdat er attributen in de relatie kunnen staan die alleen "
+"waarden hebben als er een relatie is. Als uw tabellen een veld geometrie "
+"hebben, zou het interessant kunnen zijn om de optie :guilabel:`Op kaart "
+"identificeren` (:menuselection:`Laageigenschappen --> Formulier attributen "
+"--> Beschikbare widgets --> Velden`) te activeren voor de velden met "
+"secundaire sleutels in de draaitabel."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:517
 msgid "**Pivot table primary key**"
 msgstr "**Primaire sleutel draaitabel**"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:519
+msgid ""
+"Avoid using multiple fields in the primary key in a pivot table. QGIS "
+"assumes a single  primary key so a constraint like ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` will not work."
+msgstr ""
+"Vermijd het gebruiken van meerdere velden voor de primaire sleutel in een "
+"draaitabel. QGIS gaat uit van één enkele sleutel, dus een voorwaarde als "
+"``constraint airports_airlines_pkey primary key (airport_fk, airline_fk)`` "
+"zal niet werken."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:528
+msgid "Polymorphic relations"
+msgstr "Polymorfische relaties"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:531
+msgid "The purpose"
+msgstr "Het doel"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:533
 msgid ""
@@ -920,6 +1351,14 @@ msgid ""
 msgstr ""
 "Eenmaal toegevoegd kan de polymorfische relatie worden bewerkt via het menu-"
 "item :guilabel:`Polymorfische relatie bewerken`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:623
+msgid ""
+"Preview of the newly created polymorphic relation and its child relations "
+"for animals and plants."
+msgstr ""
+"Voorbeeld van de nieuw gemaakte polymorfische relatie en zijn kind-relaties "
+"voor animals en plants."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:626
 msgid "The example above uses the following database schema:"
