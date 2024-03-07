@@ -119,7 +119,7 @@ API Documentation
 It is required to write API documentation for every class, method, enum and
 other code that is available in the public API.
 
-QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ or documentation.
+QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ for documentation.
 Write descriptive and meaningful comments
 that give a reader information about what to expect, what happens in edge cases
 and give hints about other interfaces he could be looking for, best
