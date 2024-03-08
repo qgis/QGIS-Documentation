@@ -336,7 +336,7 @@ More level 1 groups
 Combining nested and consecutive sections, together with section
 headers and footers allows for tons of flexibility.
 For instance, in the below report we add another field group as a
-child of the main report for the :guilabel`Ports` layer.
+child of the main report for the :guilabel:`Ports` layer.
 Now, after listing the states together with their populated places
 and airports, we’ll get a summary list of all the ports in the
 region:
