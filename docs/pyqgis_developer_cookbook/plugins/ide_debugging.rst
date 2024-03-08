@@ -25,6 +25,7 @@ From :menuselection:`Plugins --> Manage and Install plugins…`, install:
 * *First Aid*: This will add a Python console and local debugger
   to inspect variables when an exception is raised from a plugin.
 
+.. warning:: Despite our constant efforts, information beyond this line may not be updated for QGIS 3.
 
 A note on configuring your IDE on Linux and Windows
 ====================================================
