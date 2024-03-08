@@ -1835,6 +1835,9 @@ Under |symbology| :guilabel:`Styles` tab, you can configure symbols and colors
 inherent to the project, allowing to safely share the project among different
 machines.
 
+Default symbols
+...............
+
 The :guilabel:`Default Symbols` group lets you control how new layers will
 be drawn in the project when they do not have an existing :file:`.qml` style
 defined. You can set :guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill` to
@@ -1842,6 +1845,9 @@ apply depending on the layer geometry type as well as default :guilabel:`Color
 Ramp` and :guilabel:`Text Format` (e.g. when enabling labeling).
 Any of these items can be reset using the :guilabel:`Clear` entry from
 the corresponding drop-down widget.
+
+Options
+.......
 
 In the :guilabel:`Options` group, you can:
 
@@ -1857,6 +1863,9 @@ In the :guilabel:`Options` group, you can:
    Styles tab
 
 .. _project_colors:
+
+Project Colors
+..............
 
 There is also an additional section where you can define specific colors for the
 running project. Like the :ref:`global colors <colors_options>`, you can:
@@ -1889,6 +1898,33 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
   #. Repeat steps 2 and 3 as much as needed
   #. Update the project color once and the change is reflected EVERYWHERE
      it's in use.
+
+.. _style_database: 
+
+Style Database
+..............
+
+A style database in QGIS is a structured repository designed to store symbols,
+text formats, and other styling elements. It serves as a centralized location 
+where you can organize and manage your symbology resources efficiently.
+You can create a dedicated style database for a specific client, housing 
+symbols tailored to that client's need. This ensures a clean and organized 
+approach, without cluttering the default style database.
+In multi-user environments, it's possible to store project-specific styles 
+in a shared location. By linking a project to these styles, all users within
+the project gain access to common symbology, eliminating the need for 
+manual import or updates to individual local style database.
+Storing symbols in a project file offers a practical solution, preventing users
+from overcrowding their global style database with project-specific symbology. 
+This approach guarantees that other users working on the same project immediately
+have access to all the necessary symbology upon loading the project.
+
+In the :guilabel:`Style Database` section you can choose to 
+|symbologyAdd| :guilabel:`Add` or |symbologyRemove| :guilabel:`Remove` 
+style database or you can |newPage| :guilabel:`Create new style database`.
+When you add or remove a style database in this section, the changes will
+be automatically reflected in the |symbology| :guilabel:`Symbology Properties`.
+
 
 .. _project_data_source_properties:
 
@@ -2688,6 +2724,8 @@ in the QGIS user profile.
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
+   :width: 1.5em
+.. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
