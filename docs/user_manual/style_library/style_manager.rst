@@ -49,7 +49,7 @@ You can open that modeless dialog either:
 Organizing style items
 ----------------------
 
-In the upper left corner ot the :guilabel:`Style Manager` dialog, within
+In the upper left corner of the :guilabel:`Style Manager` dialog, within
 the drop-down menu, you can choose the style database you want to connect to.
 If you choose :guilabel:`Default` you will be connected to the default style database
 where you can find all available default style items and the ones that you saved in this database.
