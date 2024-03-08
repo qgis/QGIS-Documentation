@@ -34,29 +34,149 @@ msgstr ""
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
 "translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:6
+msgid "Working with 3D Tiles"
+msgstr "3D 타일 작업"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:14
+msgid "What are 3D Tiles?"
+msgstr "3D 타일이란?"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:16
+msgid ""
+"3D tiles are specification for streaming and rendering large-scale 3D "
+"geospatial datasets. They use a hierarchical structure to efficiently manage"
+" and display 3D content, optimising performance by dynamically loading "
+"appropriate levels of detail. This technology is widely used in urban "
+"planning, architecture, simulation, gaming, and virtual reality, providing a"
+" standardised and interoperable solution for visualising complex "
+"geographical data. Read :ref:`3d_tiles` for more details."
+msgstr ""
+"3D 타일은 대규모의 3차원 지리공간 데이터셋을 스트리밍하고 렌더링하기 위한 사양입니다. 3D 타일은 3차원 콘텐츠를 효율적으로 관리하고"
+" 표시하기 위해 계층적 구조를 사용해서 적절한 수준의 상세 내용을 동적으로 불러오는 방식으로 성능을 최적화합니다. 이 기술은 복합적인 "
+"지리 데이터를 가시화하기 위해 표준화되고 상호 정보 교환이 가능한 솔루션을 제공하기 때문에 도시계획, 건축, 시뮬레이션, 게임 및 가상 "
+"현실 분야에서 광범위하게 사용되고 있습니다. 더 자세한 내용을 알고 싶다면 :ref:`3d_tiles` 를 읽어보세요."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:30
+msgid "Example of 3D tiles"
+msgstr "3D 타일의 예시"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:34
+msgid "Data Sources"
+msgstr "데이터소스"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:36
+msgid "Support for 3D tiles:"
+msgstr "3D 타일 지원:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:38
+msgid "Remote source - ``http://example.com/tileset.json``"
+msgstr "원격 소스 - ``http://example.com/tileset.json``"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:39
+msgid "Local files - ``file:///path/to/tiles/tileset.json``"
+msgstr "로컬 파일 - ``file:///path/to/tiles/tileset.json``"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:43
+msgid "Using data from Cesium ion"
+msgstr "세슘 이온 데이터 사용하기"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:45
+msgid ""
+"*Cesium ion* is a cloud-based platform for managing and streaming 3D "
+"geospatial data. It simplifies data management, visualisation and sharing. "
+"To add 3D tiles from Cesium ion, you need to first sign up to their service "
+"here: https://ion.cesium.com."
+msgstr ""
+"*세슘 이온(Cesium ion)* 은 3차원 지리공간 데이터를 관리하고 스트리밍하기 위한 클라우드 기반 플랫폼입니다. 세슘 이온을 통해"
+" 데이터 관리, 가시화 및 공유를 간단하게 작업할 수 있습니다. 세슘 이온으로부터 3D 타일을 추가하려면, 먼저 `세슘 이온 서비스 "
+"<https://ion.cesium.com>`_ 에 가입해야 합니다:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:50
+msgid ""
+"You can also use Cesium ion plugin from the QGIS repository to add the data "
+"to QGIS."
+msgstr "QGIS 저장소에 있는 세슘 이온 플러그인을 이용해서 QGIS에 세슘 이온의 데이터를 추가할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:54
+msgid "Using Google 3D data"
+msgstr "구글 3D 데이터 사용하기"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:56
+msgid ""
+"To use Google Photorealistic 3D tiles in QGIS, get an API key for 3D tiles. "
+"Once you have the key, simply add Google tiles using the same connection "
+"process."
+msgstr ""
+"QGIS에서 구글의 `실사 3D 타일 "
+"<https://developers.google.com/maps/documentation/tile/3d-tiles?hl=ko>`_ 을 "
+"사용하려면 3D 타일 용 API 키를 가져와야 합니다. 키를 받았다면 동일한 연결 과정을 통해 구글 타일을 그냥 추가하십시오."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:65
+msgid "Google 3D Tiles connection"
+msgstr "구글 3D 타일 연결"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:70
+msgid "3D Tiles Properties"
+msgstr "3D 타일 속성"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:72
+msgid ""
+"The 3D tiles :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr "3D 타일 :guilabel:`Layer Properties` 대화창은 다음 탭들로 이루어져 있습니다:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:76
+msgid "|metadata| :ref:`Information <3dtilesinformationmenu>`"
+msgstr "|metadata| :ref:`정보 <3dtilesinformationmenu>`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:249
 msgid "metadata"
 msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:77
+msgid "|system| :ref:`Source <3dtilessourcemenu>`"
+msgstr "|system| :ref:`소스 <3dtilessourcemenu>`"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:259
 msgid "system"
 msgstr "system"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:78
+msgid "|symbology| :ref:`Symbology <3dtilessymbologymenu>`:sup:`[1]`"
+msgstr "|symbology| :ref:`심볼 <3dtilessymbologymenu>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:257
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:79
+msgid "|3d| :ref:`3D View <3dtiles3dviewmenu>`:sup:`[1]`"
+msgstr "|3d| :ref:`3차원 뷰 <3dtiles3dviewmenu>`:sup:`[1]`"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:239
 msgid "3d"
 msgstr "3d"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:80
+msgid "|rendering| :ref:`Rendering <3dtilesrenderingmenu>`"
+msgstr "|rendering| :ref:`렌더링 <3dtilesrenderingmenu>`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:253
 msgid "rendering"
 msgstr "rendering"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:81
+msgid "|elevationscale| :ref:`Elevation <3dtileselevationmenu>`:sup:`[1]`"
+msgstr "|elevationscale| :ref:`표고 <3dtileselevationmenu>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:245
 msgid "elevationscale"
 msgstr "elevationscale"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:82
+msgid "|editMetadata| :ref:`Metadata <3dtilesmetadatamenu>`"
+msgstr "|editMetadata| :ref:`메타데이터 <3dtilesmetadatamenu>`"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:243
 msgid "editMetadata"
@@ -81,15 +201,34 @@ msgstr ""
 ":guilabel:`Information` 탭은 읽기 전용으로, 현재 레이어에 대한 요약 정보 및 메타데이터를 한 눈에 볼 수 있는 "
 "흥미로운 장소입니다. 다음과 같은 정보를 제공합니다:"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:99
+msgid ""
+"based on the provider of the layer: name, URL, source type and path, number "
+"of zoom levels"
+msgstr "레이어 제공자 기반: 이름, URL, 소스 유형 및 경로, 확대/축소 수준 개수"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:101
 msgid ""
 "the Coordinate Reference System: name, units, method, accuracy, reference "
 "(i.e. whether it's static or dynamic)"
 msgstr "좌표계: 이름, 단위, 메소드, 정확도, 참조(예: 정적인지 동적인지 여부)"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:103
+msgid ""
+"picked from the :ref:`filled metadata <3dtilesmetadatamenu>`: access, "
+"extents, links, contacts, history..."
+msgstr ""
+":ref:`채워진 메타데이터 <3dtilesmetadatamenu>` 로부터 선택: 접근, 범위, 링크, 연락처, 이력, ..."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:109
 msgid "Source Properties"
 msgstr "소스 속성"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:111
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected 3D tile, including:"
+msgstr "|system| :guilabel:`Source` 탭은 선택한 3D 타일에 대한 다음과 같은 기본 정보를 표시합니다:"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:114
 msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
@@ -117,9 +256,37 @@ msgstr "setProjection"
 msgid "Symbology Properties"
 msgstr "심볼 속성"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:133
+msgid "3D Tile Layer Symbology"
+msgstr "3D 타일 레이어 심볼"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:135
+msgid ""
+"By default, the layer is styled using texture, but you can change it to see "
+"the wireframe mesh behind the scene by choosing :guilabel:`Wireframe` in the"
+" drop-down menu. You can also, change the mesh fill and line symbols similar"
+" to the vector polygons. Checking |checkbox| :guilabel:`Use texture colors` "
+"will render each mesh element with the average value of the full texture. "
+"This is a good option to try when dealing with a large dataset and want to "
+"get a quick overview of the data."
+msgstr ""
+"레이어 스타일은 기본적으로 텍스처를 이용하지만, 드롭다운 메뉴에서 :guilabel:`Wireframe` 을 선택하면 신(scene) "
+"뒤에 와이어프레임 메시(wireframe mesh)가 보이도록 변경할 수 있습니다. 메시의 채우기 및 라인 심볼을 벡터 폴리곤과 유사하게"
+" 변경할 수도 있습니다. |checkbox| :guilabel:`Use texture colors` 를 체크하면 각각의 메시 요소를 전체"
+" 텍스처의 평균 색상값으로 렌더링할 것입니다. 대용량 데이터셋을 처리할 때 데이터를 빠르게 훑어보고자 하는 경우 이 옵션을 시도해볼 "
+"만합니다."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:241
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:149
+msgid "3D Tiles - textured and wireframe"
+msgstr "3D 타일 ─ 텍스처와 와이어프레임"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:151
+msgid "To view the data you can open |new3DMap| :guilabel:`New 3D map view`."
+msgstr "데이터를 보려면 |new3DMap| :guilabel:`New 3D map view` 를 열면 됩니다."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:251
 msgid "new3DMap"
@@ -136,6 +303,35 @@ msgid ""
 msgstr ""
 ":guilabel:`Symbology` 탭에서 레이어의 모든 피처에 대해 일괄적으로 적용되는 다음 옵션들을 설정할 수도 있습니다:"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:163
+msgid ""
+":guilabel:`Maximum error`: This parameter determines the level of detail "
+"displayed in the 3D model. Similar to point clouds, 3D tiles often contain "
+"more information than necessary for visual representation. By adjusting this"
+" setting, you control the balance between display density and rendering "
+"speed. A larger value (e.g., 5 mm) may introduce noticeable gaps between "
+"elements, while a smaller value (e.g., 0.1 mm) could lead to the rendering "
+"of an excessive number of details, potentially slowing down the rendering "
+"process. Different units can be selected to tailor the setting to your "
+"specific needs."
+msgstr ""
+":guilabel:`Maximum error`: 이 파라미터는 3차원 모델에 표시되는 상세 내용의 수준을 결정합니다. 3D 타일은 "
+"점구름과 마찬가지로 시각적 표현에 필요한 양보다 더 많은 정보를 담고 있는 경우가 많습니다. 이 설정을 조정하면 표시 밀도와 렌더링 속도"
+" 사이의 밸런스를 제어할 수 있습니다. 값이 클수록 (예: 5mm) 요소 사이사이에 눈에 띌 만한 틈이 생길 수도 있습니다. 반면에 값이"
+" 작을수록 (예: 0.1mm) 렌더링해야 할 상세 항목들의 개수가 과도해져 렌더링 과정의 속도가 느려질 가능성이 큽니다. 서로 다른 "
+"단위들 가운데 선택할 수 있으므로, 사용자의 특정한 수요에 맞춰 설정을 맞출 수 있습니다."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:172
+msgid ""
+":guilabel:`Opacity`: Adjust the visibility of the underlying layer on the "
+"map canvas using this tool. Use slider to tailor the visibility of your "
+"scene layer according to your preferences. Alternatively, specify the exact "
+"percentage of visibility through the menu next to the slider."
+msgstr ""
+":guilabel:`Opacity`: 이 도구를 통해 맵 캔버스에서 아래에 있는 레이어의 가시성을 조정할 수 있습니다. 슬라이드 바를 "
+"이용해서 사용자 신 레이어의 가시성을 필요에 따라 조정하십시오. 슬라이드 바 옆에 있는 메뉴에서 가시성을 정확한 백분율로 설정할 수도 "
+"있습니다."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:176
 msgid ""
 ":guilabel:`Blending mode`: You can achieve special rendering effects with "
@@ -149,6 +345,25 @@ msgstr ""
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:184
 msgid "3D View Properties"
 msgstr "3차원 뷰 속성"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:186
+msgid ""
+":guilabel:`Maximum screen space error` determines the threshold for swapping"
+" terrain tiles with more detailed ones (and vice versa) - i.e. how soon the "
+"3D view will use higher quality tiles. Lower numbers mean more details in "
+"the scene at the expenses of increased rendering complexity."
+msgstr ""
+":guilabel:`Maximum screen space error`: 지형 타일을 더 자세한 타일로 (그리고 그 반대로) 교체하는 "
+"역치(threshold)를 결정합니다. 즉 3차원 뷰가 얼마나 빨리 더 상세한 타일을 사용할 것인가를 결정하는 것이죠. 이 값이 낮을수록"
+" 신의 세부 사항이 더 자세해지지만, 그에 반비례해서 렌더링 복잡도는 더 높아집니다."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:191
+msgid ""
+"|unchecked| :guilabel:`Show bounding boxes` Show 3D bounding boxes of the "
+"terrain tiles (useful for troubleshooting terrain issues)."
+msgstr ""
+"|unchecked| :guilabel:`Show bounding boxes`: 지형 타일의 3D 경계 상자(bounding box)를 "
+"켜고 끕니다. (지형에 문제가 있을 때 파악하고 해결하는 데 유용합니다.)"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:261
 msgid "unchecked"
@@ -180,6 +395,24 @@ msgstr "mapIdentification"
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:212
 msgid "Elevation Properties"
 msgstr "표고 속성"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:214
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view "
+"<label_3dmapview>`. Specifically, you can set:"
+msgstr ""
+"|elevationscale| :guilabel:`Elevation` 탭은 :ref:`3차원 맵 뷰 <label_3dmapview>` "
+"안에서의 레이어 표고 속성을 제어할 수 있는 옵션들을 제공합니다. 그 중에서도 다음을 설정할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:218
+msgid ""
+":guilabel:`Elevation Surface`: how the 3D layer vertices Z values should be "
+"interpreted as terrain elevation. You can apply a :guilabel:`Scale` factor "
+"and an :guilabel:`Offset`."
+msgstr ""
+":guilabel:`Elevation Surface`: 3D 레이어의 수직 Z 값을 어떻게 지형 표고로 해석해야 할지를 정의합니다. "
+":guilabel:`Scale` 인자와 :guilabel:`Offset` 값을 적용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:226
 msgid "Metadata Properties"
