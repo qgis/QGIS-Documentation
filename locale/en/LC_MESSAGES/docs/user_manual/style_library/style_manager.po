@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-03-08 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -58,7 +58,7 @@ msgid ""
 ":menuselection:`Style Manager...` menu"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:425
+#: ../../docs/user_manual/style_library/style_manager.rst:438
 msgid "styleManager"
 msgstr ""
 
@@ -81,129 +81,44 @@ msgstr ""
 
 #: ../../docs/user_manual/style_library/style_manager.rst:52
 msgid ""
-"The :guilabel:`Style Manager` dialog displays in its center a frame with "
-"previewed items organized into tabs:"
+"In the upper left corner of the :guilabel:`Style Manager` dialog, within "
+"the drop-down menu, you can choose the style database you want to connect"
+" to. If you choose :guilabel:`Default` you will be connected to the "
+"default style database where you can find all available default style "
+"items and the ones that you saved in this database. Choosing "
+":guilabel:`Project Styles` will connect you to the Project Style database"
+" where you can find only symbols that you saved in this database. If you "
+"created more style databases, they will be listed in the drop-down menu. "
+"There are also options to |symbologyAdd| :sup:`Add existing style "
+"database to project` and |newPage| :sup:`Create new style database` (see "
+"more :ref:`Style database <style_database>`)."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:55
+#: ../../docs/user_manual/style_library/style_manager.rst:440
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:426
+msgid "newPage"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:62
 msgid ""
-":guilabel:`All` for a complete collection of point, linear and surface "
-"symbols and label settings as well as predefined color ramps and text "
-"formats;"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:57
-msgid "|pointLayer| :guilabel:`Marker` for point symbols only;"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:417
-msgid "pointLayer"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:58
-msgid "|lineLayer| :guilabel:`Line` for linear symbols only;"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:413
-msgid "lineLayer"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:59
-msgid "|polygonLayer| :guilabel:`Fill` for surface symbols only;"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:419
-msgid "polygonLayer"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:60
-msgid "|color| :guilabel:`Color ramp`;"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:402
-msgid "color"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:61
-msgid ""
-"|text| :guilabel:`Text format` to manage :ref:`text formats "
-"<text_format>`, which store the font, color, buffers, shadows, and "
-"backgrounds of texts (i.e. all the formatting parts of the label "
-"settings, which for instance can be used in layouts);"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:433
-msgid "text"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:65
-msgid ""
-"|labelingSingle| :guilabel:`Label settings` to manage :ref:`label "
-"settings <showlabels>`, which include the text formats and some layer-"
-"type specific settings such as label placement, priority, callouts, "
-"rendering..."
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:409
-msgid "labelingSingle"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:68
-msgid ""
-"|legend| :guilabel:`Legend Patch Shapes` to manage custom legend patch "
-"shapes, which include :guilabel:`Marker`, :guilabel:`Line` and "
-":guilabel:`Fill` geometries."
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:411
-msgid "legend"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:71
-msgid ""
-"|3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties"
-" <3dsymbols>` (extrusion, shading, altitude, ...) for the features to "
-"render in a :ref:`3D Map view <label_3dmapview>`"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:398
-msgid "3d"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:75
-msgid ""
-"You can arrange the Styles in |iconView| :guilabel:`Icon View` or in "
-"|openTable| :guilabel:`List View` on the bottom right side. In both views"
-" the tooltip shows a larger instance of the style. The thumbnail size "
-"slider at the left of the icons helps you adjust the actual thumbnail "
-"sizes in the dialog, for a better preview of the symbols!"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:407
-msgid "iconView"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:415
-msgid "openTable"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:81
-msgid ""
-"For each family of items, you can organize the elements into different "
+"For each style database, you can organize the elements into different "
 "categories, listed in the panel on the left:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:84
+#: ../../docs/user_manual/style_library/style_manager.rst:65
 msgid ""
 "**Favorites**: displayed by default when configuring an item, it shows an"
 " extensible set of items;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:86
+#: ../../docs/user_manual/style_library/style_manager.rst:67
 msgid "**All**: lists all the available items for the active type;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:87
+#: ../../docs/user_manual/style_library/style_manager.rst:68
 msgid ""
 "**Tags**: shows a list of labels you can use to identify the items. An "
 "item can be tagged more than once. Select a tag in the list and the tabs "
@@ -213,11 +128,7 @@ msgid ""
 "any tag contextual menu;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:427
-msgid "symbologyAdd"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/style_manager.rst:93
+#: ../../docs/user_manual/style_library/style_manager.rst:74
 msgid ""
 "**Smart Group**: a smart group dynamically fetches its symbols according "
 "to conditions set (see eg, :numref:`figure_smart_group`). Click the "
@@ -228,11 +139,11 @@ msgid ""
 "condition(s) is automatically added to the smart group."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:106
+#: ../../docs/user_manual/style_library/style_manager.rst:87
 msgid "Creating a Smart Group"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:108
+#: ../../docs/user_manual/style_library/style_manager.rst:89
 msgid ""
 "Tags and smart groups are not mutually exclusive: they are simply two "
 "different ways to organize your style elements. Unlike the smart groups "
@@ -241,13 +152,13 @@ msgid ""
 "categories, you can either:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:114
+#: ../../docs/user_manual/style_library/style_manager.rst:95
 msgid ""
 "select the items, right-click and choose :menuselection:`Add to Tag -->` "
 "and then select the tag name or create a new tag;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:116
+#: ../../docs/user_manual/style_library/style_manager.rst:97
 msgid ""
 "select the tag and press :menuselection:`Modify group... --> Attach "
 "Selected Tag to Symbols`. A checkbox appears next to each item to help "
@@ -255,7 +166,7 @@ msgid ""
 ":menuselection:`Modify group... --> Finish Tagging`."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:120
+#: ../../docs/user_manual/style_library/style_manager.rst:101
 msgid ""
 "select the smart group, press :menuselection:`Modify group... --> Edit "
 "smart group...` and configure a new set of constraints in the "
@@ -263,29 +174,137 @@ msgid ""
 "the contextual menu of the smart group."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:125
+#: ../../docs/user_manual/style_library/style_manager.rst:106
 msgid ""
 "To remove a tag or a smart group, right-click on it and select the "
 "|symbologyRemove| :guilabel:`Remove` button. Note that this does not "
 "delete the items grouped in the category."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:431
+#: ../../docs/user_manual/style_library/style_manager.rst:444
 msgid "symbologyRemove"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:130
+#: ../../docs/user_manual/style_library/style_manager.rst:110
+msgid ""
+"The :guilabel:`Style Manager` dialog displays in its center a frame with "
+"previewed items organized into tabs:"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:113
+msgid ""
+":guilabel:`All` for a complete collection of point, linear and surface "
+"symbols and label settings as well as predefined color ramps and text "
+"formats;"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:115
+msgid "|pointLayer| :guilabel:`Marker` for point symbols only;"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:430
+msgid "pointLayer"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:116
+msgid "|lineLayer| :guilabel:`Line` for linear symbols only;"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:424
+msgid "lineLayer"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:117
+msgid "|polygonLayer| :guilabel:`Fill` for surface symbols only;"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:432
+msgid "polygonLayer"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:118
+msgid "|color| :guilabel:`Color ramp`;"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:413
+msgid "color"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:119
+msgid ""
+"|text| :guilabel:`Text format` to manage :ref:`text formats "
+"<text_format>`, which store the font, color, buffers, shadows, and "
+"backgrounds of texts (i.e. all the formatting parts of the label "
+"settings, which for instance can be used in layouts);"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:446
+msgid "text"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:123
+msgid ""
+"|labelingSingle| :guilabel:`Label settings` to manage :ref:`label "
+"settings <showlabels>`, which include the text formats and some layer-"
+"type specific settings such as label placement, priority, callouts, "
+"rendering..."
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:420
+msgid "labelingSingle"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:126
+msgid ""
+"|legend| :guilabel:`Legend Patch Shapes` to manage custom legend patch "
+"shapes, which include :guilabel:`Marker`, :guilabel:`Line` and "
+":guilabel:`Fill` geometries."
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:422
+msgid "legend"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:129
+msgid ""
+"|3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties"
+" <3dsymbols>` (extrusion, shading, altitude, ...) for the features to "
+"render in a :ref:`3D Map view <label_3dmapview>`"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:409
+msgid "3d"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:133
+msgid ""
+"You can arrange the Styles in |iconView| :guilabel:`Icon View` or in "
+"|openTable| :guilabel:`List View` on the bottom right side. In both views"
+" the tooltip shows a larger instance of the style. The thumbnail size "
+"slider at the left of the icons helps you adjust the actual thumbnail "
+"sizes in the dialog, for a better preview of the symbols!"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:418
+msgid "iconView"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:428
+msgid "openTable"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/style_manager.rst:141
 msgid "Adding, editing or removing an item"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:132
+#: ../../docs/user_manual/style_library/style_manager.rst:143
 msgid ""
 "As seen earlier, style elements are listed under different tabs whose "
 "contents depend on the active category (tag, smart group, favorites...). "
 "When a tab is enabled, you can:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:136
+#: ../../docs/user_manual/style_library/style_manager.rst:147
 msgid ""
 "Add new items: press the |symbologyAdd| :sup:`Add item` button and "
 "configure the item following :ref:`symbols <symbol-selector>`, "
@@ -293,86 +312,86 @@ msgid ""
 "<showlabels>` builder description."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:139
+#: ../../docs/user_manual/style_library/style_manager.rst:150
 msgid ""
 "Modify an existing item: select an item and press |symbologyEdit| "
 ":sup:`Edit item` button and configure as mentioned above."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:429
+#: ../../docs/user_manual/style_library/style_manager.rst:442
 msgid "symbologyEdit"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:141
+#: ../../docs/user_manual/style_library/style_manager.rst:152
 msgid ""
 "Delete existing items: to delete an element you no longer need, select it"
 " and click |symbologyRemove| :sup:`Remove item` (also available through "
 "right-click). The item will be deleted from the local database."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:145
+#: ../../docs/user_manual/style_library/style_manager.rst:156
 msgid ""
 "Note that the :guilabel:`All` tab provides access to these options for "
 "every type of item."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:148
+#: ../../docs/user_manual/style_library/style_manager.rst:159
 msgid "Right-clicking over a selection of items also allows you to:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:150
+#: ../../docs/user_manual/style_library/style_manager.rst:161
 msgid ":guilabel:`Add to Favorites`;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:151
+#: ../../docs/user_manual/style_library/style_manager.rst:162
 msgid ":guilabel:`Remove from Favorites`;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:152
+#: ../../docs/user_manual/style_library/style_manager.rst:163
 msgid ""
 ":menuselection:`Add to Tag -->` and select the appropriate tag or create "
 "a new one to use; the currently assigned tags are checked;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:154
+#: ../../docs/user_manual/style_library/style_manager.rst:165
 msgid ":guilabel:`Clear Tags`: detaching the symbols from any tag;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:155
+#: ../../docs/user_manual/style_library/style_manager.rst:166
 msgid ":guilabel:`Remove Item(s)`;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:156
+#: ../../docs/user_manual/style_library/style_manager.rst:167
 msgid ":guilabel:`Edit Item`: applies to the item you right-click over;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:157
+#: ../../docs/user_manual/style_library/style_manager.rst:168
 msgid ":guilabel:`Copy Item`;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:158
+#: ../../docs/user_manual/style_library/style_manager.rst:169
 msgid ""
 ":guilabel:`Paste Item ...`: pasting to one of the categories of the style"
 " manager or elsewhere in QGIS (symbol or color buttons)"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:160
+#: ../../docs/user_manual/style_library/style_manager.rst:171
 msgid ""
 ":guilabel:`Export Selected Symbol(s) as PNG...` (only available with "
 "symbols);"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:161
+#: ../../docs/user_manual/style_library/style_manager.rst:172
 msgid ""
 ":guilabel:`Export Selected Symbol(s) as SVG...` (only available with "
 "symbols);"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:166
+#: ../../docs/user_manual/style_library/style_manager.rst:177
 msgid "Sharing style items"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:168
+#: ../../docs/user_manual/style_library/style_manager.rst:179
 msgid ""
 "The |sharing| :guilabel:`Import/Export` tool, at the left bottom of the "
 "Style Manager dialog, offers options to easily share symbols, color "
@@ -380,35 +399,35 @@ msgid ""
 "also available through right-click over the items."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:423
+#: ../../docs/user_manual/style_library/style_manager.rst:436
 msgid "sharing"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:174
+#: ../../docs/user_manual/style_library/style_manager.rst:185
 msgid "Exporting items"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:176
+#: ../../docs/user_manual/style_library/style_manager.rst:187
 msgid "You can export a set of items to an :file:`.XML` file:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:178
+#: ../../docs/user_manual/style_library/style_manager.rst:189
 msgid ""
 "Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select "
 "|fileSave| :guilabel:`Export Item(s)...`"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:405
+#: ../../docs/user_manual/style_library/style_manager.rst:416
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:180
+#: ../../docs/user_manual/style_library/style_manager.rst:191
 msgid ""
 "Choose the items you'd like to integrate. Selection can be done with the "
 "mouse or using a tag or a group previously set."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:182
+#: ../../docs/user_manual/style_library/style_manager.rst:193
 msgid ""
 "Press :guilabel:`Export` when ready. You'll be prompted to indicate the "
 "destination of the saved file. The XML format generates a single file "
@@ -416,11 +435,11 @@ msgid ""
 "another user's style library."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:192
+#: ../../docs/user_manual/style_library/style_manager.rst:203
 msgid "Exporting style items"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:194
+#: ../../docs/user_manual/style_library/style_manager.rst:205
 msgid ""
 "When symbols are selected, you can also export them to :file:`.PNG` or "
 ":file:`.SVG`. Exporting to :file:`.PNG` or :file:`.SVG` (both not "
@@ -430,97 +449,97 @@ msgid ""
 " menu of another user, allowing him direct access to all these symbols."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:204
+#: ../../docs/user_manual/style_library/style_manager.rst:215
 msgid "Importing items"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:206
+#: ../../docs/user_manual/style_library/style_manager.rst:217
 msgid "You can extend your style library by importing new items:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:208
+#: ../../docs/user_manual/style_library/style_manager.rst:219
 msgid ""
 "Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select "
 "|fileOpen| :guilabel:`Import Item(s)` at the left bottom of the dialog."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:403
+#: ../../docs/user_manual/style_library/style_manager.rst:414
 msgid "fileOpen"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:210
+#: ../../docs/user_manual/style_library/style_manager.rst:221
 msgid ""
 "In the new dialog, indicate the source of the style items (it can be an "
 ":file:`.xml` file on the disk or a url)."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:212
+#: ../../docs/user_manual/style_library/style_manager.rst:223
 msgid ""
 "Set whether to |unchecked| :guilabel:`Add to favorites` the items to "
 "import."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:435
+#: ../../docs/user_manual/style_library/style_manager.rst:448
 msgid "unchecked"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:213
+#: ../../docs/user_manual/style_library/style_manager.rst:224
 msgid ""
 "Check |unchecked| :guilabel:`Do not import embedded tags` to avoid the "
 "import of tags associated to the items being imported."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:215
+#: ../../docs/user_manual/style_library/style_manager.rst:226
 msgid ""
 "Give the name of any :guilabel:`Additional tag(s)` to apply to the new "
 "items."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:216
+#: ../../docs/user_manual/style_library/style_manager.rst:227
 msgid "Select from the preview the symbols you want to add to your library."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:217
+#: ../../docs/user_manual/style_library/style_manager.rst:228
 msgid "And press :guilabel:`Import`."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:224
+#: ../../docs/user_manual/style_library/style_manager.rst:235
 msgid "Importing style items"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:230
+#: ../../docs/user_manual/style_library/style_manager.rst:241
 msgid "Using the Browser panel"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:232
+#: ../../docs/user_manual/style_library/style_manager.rst:243
 msgid ""
 "It's also possible to import style items into the active user profile "
 "style database directly from the :guilabel:`Browser` panel:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:235
+#: ../../docs/user_manual/style_library/style_manager.rst:246
 msgid "Select the style :file:`.xml` file in the browser"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:236
+#: ../../docs/user_manual/style_library/style_manager.rst:247
 msgid ""
 "Drag-and-drop it over the map canvas or right-click and select "
 ":guilabel:`Import Style...`"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:238
+#: ../../docs/user_manual/style_library/style_manager.rst:249
 msgid ""
 "Fill the :guilabel:`Import Items` dialog following "
 ":ref:`import_style_items`"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:239
+#: ../../docs/user_manual/style_library/style_manager.rst:250
 msgid ""
 "Press :guilabel:`Import` and the selected style items are added to the "
 "style database"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:242
+#: ../../docs/user_manual/style_library/style_manager.rst:253
 msgid ""
 "Double-clicking the style file in the browser opens the :guilabel:`Style "
 "Manager` dialog showing the items in the file. You can select them and "
@@ -529,21 +548,21 @@ msgid ""
 "right-click, :guilabel:`Open Style...` command."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:253
+#: ../../docs/user_manual/style_library/style_manager.rst:264
 msgid "Opening a style items file"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:255
+#: ../../docs/user_manual/style_library/style_manager.rst:266
 msgid ""
 "The dialog also allows to export single symbols as :file:`.PNG` or "
 ":file:`.SVG` files."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:260
+#: ../../docs/user_manual/style_library/style_manager.rst:271
 msgid "Using the online repository"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:262
+#: ../../docs/user_manual/style_library/style_manager.rst:273
 msgid ""
 "The QGIS project maintains a repository with a collection of styles "
 "shared by QGIS users. This is available at "
@@ -552,47 +571,47 @@ msgid ""
 " Online Styles` button at the bottom."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:421
+#: ../../docs/user_manual/style_library/style_manager.rst:434
 msgid "search"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:267
+#: ../../docs/user_manual/style_library/style_manager.rst:278
 msgid "From that repository, you can:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:269
+#: ../../docs/user_manual/style_library/style_manager.rst:280
 msgid "Browse and search for any style items, based on their type or name"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:270
+#: ../../docs/user_manual/style_library/style_manager.rst:281
 msgid "Download the style file and unzip it"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:271
+#: ../../docs/user_manual/style_library/style_manager.rst:282
 msgid ""
 "Load the :file:`.xml` based file into your style database in QGIS, using "
 "any of the aforementioned import methods."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:278
+#: ../../docs/user_manual/style_library/style_manager.rst:289
 msgid "Setting a Color Ramp"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:286
+#: ../../docs/user_manual/style_library/style_manager.rst:297
 msgid ""
 "The Color ramp tab in the :guilabel:`Style Manager` dialog helps you "
 "preview different color ramps based on the category selected in the left "
 "panel."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:289
+#: ../../docs/user_manual/style_library/style_manager.rst:300
 msgid ""
 "To create a custom color ramp, activate the Color ramp tab and click the "
 "|symbologyAdd| :sup:`Add item` button. The button reveals a drop-down "
 "list to choose the ramp type:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:293
+#: ../../docs/user_manual/style_library/style_manager.rst:304
 msgid ""
 ":guilabel:`Gradient`: given a start and end colors, generates a color "
 "ramp which can be **continuous** or **discrete**. With double-clicking "
@@ -601,14 +620,14 @@ msgid ""
 "stop` you can:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:298
+#: ../../docs/user_manual/style_library/style_manager.rst:309
 msgid ""
 "adjust its :guilabel:`Relative position` from the color ramp start. Also "
 "possible dragging the indicator with the mouse, or pressing the arrow "
 "keys (combine with :kbd:`Shift` key for a larger move)"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:301
+#: ../../docs/user_manual/style_library/style_manager.rst:312
 msgid ""
 "specify the color model to use when interpolating between colors: it can "
 "be :guilabel:`RGB`, :guilabel:`HSL` or :guilabel:`HSV`. In some "
@@ -616,58 +635,58 @@ msgid ""
 "resulting in more visually pleasing gradients."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:305
+#: ../../docs/user_manual/style_library/style_manager.rst:316
 msgid ""
 "set the direction which the interpolation should follow for the **Hue** "
 "component of a :guilabel:`HSL` or :guilabel:`HSV` color specification. It"
 " can be :guilabel:`Clockwise` or :guilabel:`Counterclockwise`."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:308
+#: ../../docs/user_manual/style_library/style_manager.rst:319
 msgid "set the :ref:`color properties <color-selector>`"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:309
+#: ../../docs/user_manual/style_library/style_manager.rst:320
 msgid "remove the color stop pressing :guilabel:`Delete stop` or :kbd:`DEL`"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:311
+#: ../../docs/user_manual/style_library/style_manager.rst:322
 msgid ""
 "The :guilabel:`Plots` group provides another graphical way to design the "
 "color ramp, changing the position or the opacity and HSL components of "
 "the color stops."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:319
+#: ../../docs/user_manual/style_library/style_manager.rst:330
 msgid "Example of custom gradient color ramp with multiple stops"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:321
+#: ../../docs/user_manual/style_library/style_manager.rst:332
 msgid ""
 "Drag-and-drop a color from a color spot onto the gradient ramp preview "
 "adds a new color stop."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:324
+#: ../../docs/user_manual/style_library/style_manager.rst:335
 msgid ""
 ":guilabel:`Color presets`: allows to create a color ramp consisting of a "
 "list of colors selected by the user;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:326
+#: ../../docs/user_manual/style_library/style_manager.rst:337
 msgid ""
 ":guilabel:`Random`: creates a random set of colors based on range of "
 "values for :guilabel:`Hue`, :guilabel:`Saturation`, :guilabel:`Value` and"
 " :guilabel:`Opacity` and a number of colors (:guilabel:`Classes`);"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:329
+#: ../../docs/user_manual/style_library/style_manager.rst:340
 msgid ""
 ":guilabel:`Catalog: ColorBrewer`: a set of predefined discrete color "
 "gradients you can customize the number of colors in the ramp;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:331
+#: ../../docs/user_manual/style_library/style_manager.rst:342
 msgid ""
 "or :guilabel:`Catalog: cpt-city`: an access to a whole catalog of color "
 "gradients to locally :guilabel:`save as standard gradient`. The cpt-city "
@@ -675,87 +694,87 @@ msgid ""
 "box'."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:340
+#: ../../docs/user_manual/style_library/style_manager.rst:351
 msgid "cpt-city dialog with hundreds of color ramps"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:346
+#: ../../docs/user_manual/style_library/style_manager.rst:357
 msgid "Creating a Legend Patch Shape"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:348
+#: ../../docs/user_manual/style_library/style_manager.rst:359
 msgid ""
 "To create a new Legend Patch Shape, activate the :guilabel:`Legend Patch "
 "Shapes` tab and click the |symbologyAdd| :sup:`Add item` button. The "
 "button reveals a drop-down list to choose the geometry type:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:352
+#: ../../docs/user_manual/style_library/style_manager.rst:363
 msgid ":guilabel:`Marker Legend Patch Shape...`: to use with point geometries."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:353
+#: ../../docs/user_manual/style_library/style_manager.rst:364
 msgid ":guilabel:`Line Legend Patch Shape...`: to use with line geometries."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:354
+#: ../../docs/user_manual/style_library/style_manager.rst:365
 msgid ":guilabel:`Fill Legend Patch Shape...`: to use with polygon geometries."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:356
+#: ../../docs/user_manual/style_library/style_manager.rst:367
 msgid "All three options will show the same dialog."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:363
+#: ../../docs/user_manual/style_library/style_manager.rst:374
 msgid "Create a new Legend Patch Shape"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:365
+#: ../../docs/user_manual/style_library/style_manager.rst:376
 msgid ""
 "Only the shape type and displayed legend patch shapes will differ "
 "regarding to the chosen geometry type. The following options will be "
 "available:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:368
+#: ../../docs/user_manual/style_library/style_manager.rst:379
 msgid ""
 ":guilabel:`Shape`: define the shape of the legend patch shape as a WKT "
 "string. Single and multipart geometries may be used, but no "
 "GeometryCollection."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:371
+#: ../../docs/user_manual/style_library/style_manager.rst:382
 msgid "|checkbox| :guilabel:`Preserve aspect ratio`"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:400
+#: ../../docs/user_manual/style_library/style_manager.rst:411
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:372
+#: ../../docs/user_manual/style_library/style_manager.rst:383
 msgid ""
 "|iconView| :guilabel:`Icon View` or |openTable| :guilabel:`List View` of "
 "available legend patch shapes, filtered by tags."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:375
+#: ../../docs/user_manual/style_library/style_manager.rst:386
 msgid ""
 "When the new Shape is defined you can :guilabel:`Save Legend Patch "
 "Shape...` or press :guilabel:`OK`, which will both lead to the same "
 "dialog."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:383
+#: ../../docs/user_manual/style_library/style_manager.rst:394
 msgid "Save a new Legend Patch Shape"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:385
+#: ../../docs/user_manual/style_library/style_manager.rst:396
 msgid ""
 "Here you have to choose a name, tags to describe the shape and if it "
 "should be added to favorites."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/style_manager.rst:388
+#: ../../docs/user_manual/style_library/style_manager.rst:399
 msgid ""
 "If you press :guilabel:`Save...`, the shape is added to the list and you "
 "are directed back to the :guilabel:`New Legend Patch Shape` dialog to "
