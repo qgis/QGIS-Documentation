@@ -183,7 +183,7 @@ To add fields to the layer you are creating:
    as described in section :ref:`sec_edit_existing_layer`.
 
 If desired, you can select |checkbox| :guilabel:`Create an autoincrementing
-primary key` under the guilabel:`Advanced Options` section. You can also rename
+primary key` under the :guilabel:`Advanced Options` section. You can also rename
 the :guilabel:`Geometry column` (``geometry`` by default).
 
 Further management of SpatiaLite layers can be done with :ref:`DB Manager
