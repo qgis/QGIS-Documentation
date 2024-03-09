@@ -284,7 +284,7 @@ Enumerated types should be named in CamelCase with a leading capital e.g.:
   };
 
 Do not use generic type names that will conflict with other types. e.g. use
-``UnkownUnit`` rather than ``Unknown``
+``UnknownUnit`` rather than ``Unknown``
 
 Global Constants & Macros
 ==========================
