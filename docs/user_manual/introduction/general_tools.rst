@@ -2182,6 +2182,12 @@ Clicking the |dataDefine| :sup:`Data defined override` icon shows the following 
  You can enable or disable a configured |dataDefine| :sup:`Data-defined
  override` button by simply clicking the widget with the right mouse button.
 
+.. tip:: **Use middle-click to create or edit the expression to apply**
+
+ You can directly open the :guilabel:`Expression String Builder` dialog to create or
+ edit the expression to apply by simply clicking the |dataDefine| :sup:`Data-defined
+ override` widget with the middle mouse button.
+
 .. _data_defined_assistant:
 
 Using the data-defined assistant interface
