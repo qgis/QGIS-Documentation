@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
+# Transifex Bot <>, 2024
 # Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
@@ -34,6 +35,84 @@ msgstr ""
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
 "translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:6
+msgid "Connecting and Editing Data Across Layers"
+msgstr "크로스 레이어 데이터 연결 및 편집 작업"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:13
+msgid ""
+"Ability to connect data from different layers is one of the duties of a GIS "
+"software. Such a connection can be based on the spatial relationship between"
+" the features, or on their shared attributes. QGIS provides tools to handle "
+"any of these associations, such as:"
+msgstr ""
+"서로 다른 레이어들의 데이터를 연결할 수 있는 기능은 GIS 소프트웨어의 필수적인 기능 가운데 하나입니다. 피처들 간의 공간 관계 또는 "
+"공유되는 속성을 기반으로 이런 연결을 만들 수 있습니다. QGIS는 이러한 모든 결합들을 다룰 수 있는 다음과 같은 도구들을 제공합니다:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:18
+msgid ""
+"Processing algorithms that can create a new layer as a result of the "
+"connection, namely :ref:`qgisjoinattributesbylocation`, "
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, ..."
+msgstr ""
+":ref:`qgisjoinattributesbylocation`, :ref:`qgisjoinbynearest`, "
+":ref:`qgisjoinattributestable` 등등과 같이 데이터 연결의 결과로서 새 레이어를 생성할 수 있는 공간 처리 "
+"알고리즘들"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:21
+msgid ""
+"SQL queries to create a new layer from the :ref:`DB Manager <dbmanager>` or "
+"as a :ref:`virtual layer <vector_virtual_layers>`"
+msgstr ""
+":ref:`데이터베이스 관리자 <dbmanager>` 로부터 새 레이어를 생성하거나, :ref:`가상 레이어 "
+"<vector_virtual_layers>` 로서 새 레이어를 생성할 수 있는 SQL 쿼리"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:23
+msgid ""
+":ref:`Joins properties <sec_joins>` or :ref:`relations settings "
+"<vector_relations>` that temporarily extend attributes of features in a "
+"given layer, with those of features in another layer based on some matching "
+"attribute(s)."
+msgstr ""
+"지정한 레이어에 있는 피처들의 속성을 몇몇 일치하는 속성(들)을 바탕으로 또다른 레이어에 있는 피처들의 속성으로 일시적으로 확장시키는 "
+":ref:`결합 속성 <sec_joins>` 또는 :ref:`관계 설정 <vector_relations>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:27
+msgid ""
+"Joins and relations are technical concepts borrowed from databases to get "
+"the most out of data stored in tables by combining their contents. The idea "
+"is that features (rows) of different layers (tables) can be associated to "
+"each other. The number of rows which are matching each other can be of any "
+"value (zero, one, many)."
+msgstr ""
+"결합(join)과 관계(relation)는 데이터베이스 테이블들에 저장되어 있는 데이터를 테이블의 내용을 합쳐서 가장 효율적으로 사용하기"
+" 위해 빌려온, 데이터베이스에서 사용되는 개념입니다. 서로 다른 레이어(테이블)들의 피처(행)들이 서로 연결될 수 있다는 뜻이죠. 서로 "
+"간에 일치하는 행의 개수는 어떤 값이든 (0이든, 1이든, 다수든) 될 수 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:37
+msgid "Joining features between two layers"
+msgstr "두 레이어 간 피처 결합하기"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:39
+msgid ""
+"**Joins** in QGIS allow you to associate features of the current layer to "
+"features from another loaded vector layer. Whether they are spatially "
+"enabled and the type of geometry do not matter. The join is based on an "
+"attribute that is shared by the layers, in a one-to-one relationship."
+msgstr ""
+"QGIS에서는 현재 레이어의 피처와 또다른 레이어의 피처를, 두 레이어가 공간적으로 활성화되어 있는지 그리고 도형의 유형이 일치하는지 "
+"관계 없이, **결합** 을 통해 연결시킬 수 있습니다. 이 결합은 두 레이어가 1대1 관계로 공유하는 속성을 기반으로 생성됩니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:44
+msgid "To create a join on a layer (identified below as ``target layer``):"
+msgstr "어떤 (다음에서 ``target layer`` 로 표기되는) 레이어 상에 결합을 생성하려면:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:46
+msgid ""
+"Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab"
+msgstr ""
+"레이어 메뉴에서 :menuselection:`Properties -->` |join| :guilabel:`Joins` 탭으로 가십시오."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
 msgid "join"
 msgstr "join"
@@ -56,6 +135,17 @@ msgid ""
 " layer"
 msgstr "대상 벡터 레이어와 연결하려는 :guilabel:`Join layer` 를 선택하십시오."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:50
+msgid ""
+"Specify the :guilabel:`Join field` (from the ``join layer``) and the "
+":guilabel:`Target field` (from the ``target layer``). These are the fields "
+"that are used to find matching feature in both layers hence they should have"
+" values in common."
+msgstr ""
+"(``join layer`` 로부터) :guilabel:`Join field` 를 그리고 (``target layer`` 로부터) "
+":guilabel:`Target field` 를 지정하십시오. 두 레이어에서 일치하는 피처를 찾는 데 쓰이는 필드들이기 때문에 두 필드가"
+" 공통된 값들을 가지고 있어야 합니다."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:54
 msgid ""
 "Press :guilabel:`OK` and a summary of selected parameters is added to the "
@@ -65,6 +155,45 @@ msgstr ":guilabel:`OK` 를 누르면 :guilabel:`Join` 패널에 선택한 파라
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:61
 msgid "Join an attribute table to an existing vector layer"
 msgstr "기존 벡터 레이어에 속성 테이블 결합"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:63
+msgid ""
+"The steps above will create a join, where **ALL** the attributes of the "
+"**first matching feature** in the join layer is added to the target layer's "
+"feature. The following logic is used to pair features during a join process:"
+msgstr ""
+"앞의 단계들을 통해 생성된 결합은, 결합 레이어에서 **처음으로 일치하는 피처** 의 **모든** 속성을 대상 레이어의 피처에 "
+"추가시킵니다. 결합 과정에서 피처 쌍을 만드는 데에는 다음과 같은 논리가 쓰입니다:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:68
+msgid ""
+"All the features in the target layer are returned, regardless they have a "
+"match"
+msgstr "일치하는 피처가 있는지에 상관 없이, 대상 레이어(target layer)에 있는 모든 피처를 반환합니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:69
+msgid ""
+"If the target field contains duplicate values, these features are assigned "
+"the same feature from the join layer."
+msgstr "대상 필드가 중복되는 값들을 담고 있을 경우, 이 피처들은 결합 레이어의 동일한 피처에 할당됩니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:71
+msgid ""
+"If the join field contains duplicate matching values, only the first fetched"
+" feature is picked."
+msgstr "결합 필드가 중복되는 일치하는 값들을 담고 있을 경우, 맨 처음 가져온 피처만 선택합니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:73
+msgid ""
+"Joins in QGIS are based on a single field matching so most of the times, you"
+" would want to make sure that values in the matchable fields are unique."
+msgstr ""
+"QGIS에서 결합은 일치하는 단일 필드에 기반하기 때문에 대부분의 경우 두 레이어의 두 필드들이 담고 있는 값들이 유일한지 확인해보는 "
+"편이 좋습니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:76
+msgid "QGIS provides some more options to tweak the join:"
+msgstr "QGIS는 이 결합을 미세 조정할 수 있는 많은 옵션을 제공하고 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:78
 msgid ""
@@ -78,6 +207,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:80
+msgid ""
+"|unchecked| :guilabel:`Create attribute index on the join field` to speed up"
+" lookups"
+msgstr ""
+"|unchecked| :guilabel:`Create attribute index on the join field`: 이 옵션을 "
+"활성화하면 검색 속도를 향상시키기 위해 결합 필드에 속성 인덱스를 생성합니다."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
 msgid "unchecked"
@@ -126,6 +263,20 @@ msgstr ""
 msgid "joinedLayerNotEditable"
 msgstr "joinedLayerNotEditable"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:94
+msgid ""
+"|joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization "
+"mechanisms are not activated. If you want to automatically add a feature in "
+"the join layer when a feature is created in the target layer, then you have "
+"to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, "
+"the option |checkbox| :guilabel:`Delete cascade` may be activated if you  "
+"want to automatically delete join features."
+msgstr ""
+"|joinHasNotUpsertOnEdit|: 결합 레이어를 편집할 수 있지만, 동기화 메커니즘이 활성화되지 않았습니다. 대상 레이어에서"
+" 피처를 생성하면 결합 레이어에 피처를 자동적으로 추가하게 하려면, |checkbox| :guilabel:`Upsert on edit` "
+"옵션을 체크해야 합니다. 마찬가지로, 대상 레이어에서 피처를 삭제하면 결합 레이어에서도 자동적으로 삭제하게 하려면 |checkbox| "
+":guilabel:`Delete cascade` 옵션을 체크해야 합니다."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
 msgid "joinHasNotUpsertOnEdit"
 msgstr "joinHasNotUpsertOnEdit"
@@ -146,9 +297,70 @@ msgstr ""
 "|unchecked| :guilabel:`Custom field name prefix`: 이름의 충돌을 방지하기 위해 결합된 필드명에 "
 "사용자 지정 접두어를 추가합니다."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:111
+msgid "Setting relations between multiple layers"
+msgstr "여러 레이어 간 관계 설정하기"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:113
+msgid ""
+"Unlike joins that define a one-to-one link between features across two "
+"layers, relations help you build interconnections between multiple features "
+"across two or more layers. As such, relations are project level settings and"
+" are set in :menuselection:`Project --> Properties -->` |relations| "
+":guilabel:`Relations` tab. From there, you can:"
+msgstr ""
+"두 레이어의 피처들 사이에 1대1 연결을 정의하는 결합과는 달리, 관계는 사용자가 두 개 이상의 레이어들의 여러 피처들 사이에 상호 "
+"연결(interconnection)을 작성할 수 있도록 해줍니다. 이와 같이, 관계란 프로젝트 수준의 설정이므로 "
+":menuselection:`Project --> Properties -->` |relations| "
+":guilabel:`Relations` 탭에서 설정합니다. 이 탭에서 다음을 설정할 수 있습니다:"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
 msgid "relations"
-msgstr "관계"
+msgstr "relations"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:119
+msgid "|symbologyAdd| :guilabel:`Add relation` whose type can be:"
+msgstr "|symbologyAdd| :guilabel:`Add relation`: 다음과 같은 유형의 관계를 추가할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:121
+msgid ":ref:`one to many relation <one_to_many_relation>`"
+msgstr ":ref:`1대다 관계 <one_to_many_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:122
+msgid ":ref:`many to many relation <many_to_many_relation>`"
+msgstr ":ref:`다대다 관계 <many_to_many_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:123
+msgid ""
+":ref:`polymorphic relation <polymorphic_relation>` that you can add or edit "
+"with the dedicated tools in the action drop-down menu."
+msgstr ""
+"액션 드롭다운 메뉴의 전용 도구들로 추가하거나 편집할 수 있는 :ref:`다형성 관계 <polymorphic_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:126
+msgid ""
+"There is no simple way yet to edit a non-polymorphic relation once it has "
+"been created. Only the name can be edited with a double-click. For any other"
+" parameters of such a relation you will have to remove and recreate it."
+msgstr ""
+"비다형성(non-polymorphic) 관계를 한번 생성하고 나면, 이 관계를 간단하게 편집할 수 있는 방법이 없습니다. 더블클릭으로 "
+"관계의 이름만 편집할 수 있을 뿐이죠. 이런 관계의 다른 모든 파라미터의 경우, 사용자가 제거한 다음 다시 생성해야만 할 것입니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:130
+msgid ""
+"|symbologyAdd| :guilabel:`Discover relations`: QGIS is able to discover "
+"existing relations from supported database formats (PostgreSQL, GeoPackage, "
+"ESRI File Geodatabase, ...). This can be a good way to ease the relations "
+"definition."
+msgstr ""
+"|symbologyAdd| :guilabel:`Discover relations`: QGIS는 지원하는 데이터베이스 "
+"포맷들(PostgreSQL, 지오패키지, ESRI 파일 지오데이터베이스, ...)로부터 기존 관계를 발견할 수 있습니다. 이를 통해 "
+"관계를 보다 쉽게 정의할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:133
+msgid "|symbologyRemove| :guilabel:`Remove relation`"
+msgstr ""
+"|symbologyRemove| :guilabel:`Remove relation`: 현재 선택 집합에서 선택한 관계를 제거합니다."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
 msgid "symbologyRemove"
@@ -157,6 +369,19 @@ msgstr "symbologyRemove"
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:140
 msgid "Relations tab"
 msgstr "관계 탭"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:148
+msgid "One to many (1-N) relations"
+msgstr "1대다(1-N) 관계"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:150
+msgid ""
+"As an example you have a layer with all regions of Alaska (polygon) which "
+"provides some attributes about its name and region type and a unique id "
+"(which acts as primary key)."
+msgstr ""
+"예를 들어 사용자에게 알래스카의 모든 지역을 담고 있고, 지역명, 지역 유형, (기본키로 동작하는) 유일 ID 관련 속성을 제공하는 "
+"(폴리곤) 레이어가 있다고 해보겠습니다."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:154
 msgid ""
@@ -174,6 +399,53 @@ msgstr ""
 msgid "Alaska region with airports"
 msgstr "알래스카의 지역과 공항"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:168
+msgid "Layers and keys"
+msgstr "레이어와 키"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:170
+msgid ""
+"QGIS makes no difference between a table and a vector layer. Basically, a "
+"vector layer is a table with a geometry. So you can add your table as a "
+"vector layer. To demonstrate the 1-n relation, you can load the "
+":file:`regions` and :file:`airports` layers in the sample dataset. In "
+"practice, each airport belongs to exactly one region while each region can "
+"have any number of airports (a typical one to many relation)."
+msgstr ""
+"QGIS는 테이블과 벡터 레이어를 전혀 구분하지 않습니다. 기본적으로, 벡터 레이어는 도형을 지닌 테이블입니다. 따라서 사용자의 테이블을"
+" 벡터 레이어로 추가할 수 있습니다. 일대다 관계를 시연해보기 위해, 동일한 데이터셋에 있는 :file:`regions` 및 "
+":file:`airports` shapefile을 불러오겠습니다. 실제로는 각 공항이 딱 1개 지역에만 속해 있는 반면 각 지역은 공항을"
+" 몇 개든 가지고 있을 수 있다는 뜻입니다. (전형적인 일대다 관계죠.)"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:178
+msgid "which has a foreign key field (``fk_region``) to the layer regions."
+msgstr ""
+":file:`airports` shapefile은 ``regions`` 레이어에 대한 외래 키 필드(``fk_region``)를 가지고 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:180
+msgid ""
+"In addition to the attributes describing the airports, the aiports layer has"
+" another field ``fk_region`` which acts as a foreign key (if you have a "
+"database, you will probably want to define a constraint on it). This "
+"``fk_region`` field will always contain an id of a region. It can be seen "
+"like a pointer to the region it belongs to."
+msgstr ""
+"공항을 설명하는 속성에 더해, 공항 레이어는 외래 키처럼 동작하는 또다른 ``fk_region`` 필드를 가지고 있습니다. "
+"(데이터베이스를 사용하는 경우, 이 외래 키 필드에 제약조건을 정의해놓는 편이 좋을 겁니다.) 이 ``fk_region`` 필드는 항상 "
+"지역의 ID를 담고 있을 것입니다. 이 ID를 해당 지역을 가리키는 포인터라고 볼 수도 있겠죠."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:186
+msgid ""
+"All you have to do is to tell QGIS the relation between the layers so that "
+"you can design a custom edit form for editing and QGIS takes care of the "
+"setup. It works with different providers (so you can also use it with shape "
+"and csv files)."
+msgstr ""
+"편집 작업을 위한 사용자 지정 편집 양식을 설계할 수 있도록 QGIS에 레이어들 사이의 관계를 알려주면 끝입니다. QGIS가 나머지 "
+"설정을 처리할 것입니다. 서로 다른 제공자와도 같은 방식으로 작업할 수 있습니다. (즉 shapefile 및 CSV 파일에도 동일하게 "
+"사용할 수 있습니다.)"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:191
 msgid "Defining 1-N relations"
 msgstr "1대다(1-N) 관계 정의하기"
@@ -188,6 +460,15 @@ msgstr ""
 "가장 먼저 할 일은 QGIS 에 두 레이어 간의 관계를 알려주는 것입니다. :menuselection:`Project --> "
 "Properties...` 메뉴에서 이 작업을 할 수 있습니다. :guilabel:`Relations` 탭을 선택한 다음 "
 "|symbologyAdd| :guilabel:`Add Relation` 버튼을 클릭하십시오."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:197
+msgid ""
+"**Name** is going to be used as a title. It should be a human readable "
+"string describing what the relation is used for. We will just call say "
+"**airport_relation** in this case."
+msgstr ""
+"**이름(Name)**: 제목으로 사용됩니다. 관계의 목적을 설명하는, 사람이 읽을 수 있는 문자열이어야 합니다. 이 예시에서는 그냥 "
+"**airport_relation** 라고 하겠습니다."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:200
 msgid ""
@@ -209,6 +490,20 @@ msgstr ""
 "**참조하는 레이어(Referencing Layer) (자식)**: 자식 레이어로도 간주되는 이 레이어가 외래 키 필드를 담고 있습니다."
 " 이 예시에서는 ``airports`` 레이어입니다. 이 레이어의 경우 다른 레이어를 가리키는 참조하는 필드를 추가해야 합니다. 이 "
 "예시에서는 ``fk_region`` 입니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:209
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:587
+msgid ""
+"Sometimes, you need more than a single field to uniquely identify features "
+"in a layer. Creating a relation with such a layer requires a **composite "
+"key**, i.e. more than a single pair of matching fields. Use the "
+"|symbologyAdd| :sup:`Add new field pair as part of a composite foreign key` "
+"button to add as many pairs as necessary."
+msgstr ""
+"어떤 경우, 레이어에 있는 피처들을 유일하게 식별하기 위해 단일 필드 이상이 필요할 때가 있습니다. 이런 레이어와의 관계를 생성하는 "
+"데에는 **복합 키(composite key)**, 예를 들어 일치하는 필드들의 단일 쌍 이상이 필요합니다. |symbologyAdd| "
+":sup:`Add new field pair as part of a composite foreign key` 버튼을 이용해서 필요한만큼 "
+"많은 쌍을 추가하십시오."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:215
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:576
@@ -256,6 +551,19 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:240
 msgid "Forms for 1-N relations"
 msgstr "1대다(1-N) 관계용 양식"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:242
+msgid ""
+"Now that QGIS knows about the relation, it will be used to improve the forms"
+" it generates. As we did not change the default form method (autogenerated),"
+" it will just add a new widget in our form. So let's select the layer region"
+" in the legend and use the identify tool. Depending on your settings, the "
+"form might open directly or you will have to choose to open it in the "
+"identification dialog under actions."
+msgstr ""
+"이제 QGIS가 관계를 인지했으니, 관계를 이용해서 QGIS가 생성하는 양식을 향상시킬 것입니다. 기본 양식 생성 방법(자동 생성)을 "
+"변경하지 않았으므로, 양식에 위젯 하나만 추가할 것입니다. 범례에서 ``regions`` 레이어를 선택한 다음 식별 도구를 써보십시오. "
+"사용자 설정에 따라 양식이 바로 열릴 수도 있고, 식별 대화창의 액션을 통해 양식을 열어야 할 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:253
 msgid "Identification dialog regions with relation to airports"
@@ -330,6 +638,10 @@ msgid ""
 msgstr ""
 "|duplicateFeature| 버튼은 하위 레이어 안에 있는 하나 이상의 하위 피처를 복사하고 붙여넣기할 수 있습니다. 나중에 서로 "
 "다른 상위 피처에 이 하위 피처를 할당하거나 또는 하위 피처의 속성을 수정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:676
+msgid "duplicateFeature"
+msgstr "duplicateFeature"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:272
 msgid ""
@@ -479,6 +791,15 @@ msgstr ""
 ":menuselection:`Properties --> Attributes Form` 메뉴를 선택하고, ``fk_region`` 필드를 "
 "선택한 다음 ``Show embedded form`` 옵션을 활성화하십시오."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:327
+msgid ""
+"If you look at the feature dialog now, you will see that the form of the "
+"region is embedded inside the airports form and will even have a combobox, "
+"which allows you to assign the current airport to another region."
+msgstr ""
+"지금 피처 대화창을 보고 있다면, 지역의 양식이 공항 양식 안에 삽입돼 있고 현재 공항을 다른 지역으로 할당할 수 있는 콤보박스도 있다는"
+" 것을 알 수 있을 겁니다."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:336
 msgid ""
 "Moreover if you toggle the editing mode of the airport layer, the "
@@ -519,6 +840,10 @@ msgstr "이 양식에서 여러 서로 다른 집계 함수들을 사용할 수 
 msgid "Select parent features with child values"
 msgstr "자식 값으로 부모 피처 선택"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:363
+msgid "Many-to-many (N-M) relations"
+msgstr "다대다(N-M) 관계"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:365
 msgid ""
 "N-M relations are many-to-many relations between two tables. For instance, "
@@ -527,6 +852,28 @@ msgid ""
 msgstr ""
 "N-M 관계란 두 테이블 간의 다대다 관계를 말합니다. ``airports`` 와 ``airlines`` 레이어를 예로 들 수 있습니다."
 " 공항은 여러 항공사의 노선을 받아들이고 항공사는 여러 공항에 이착륙합니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:370
+msgid ""
+"This SQL code creates the three tables we need for an N-M relationship in a "
+"PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
+":menuselection:`Database --> DB Manager…` for PostGIS or external tools such"
+" as `pgAdmin <https://www.pgadmin.org>`_. The airports table stores the "
+"``airports`` layer and the airline table stores the ``airlines`` layer. In "
+"both tables few fields are used for clarity. The *tricky* part is the "
+"``airports_airlines`` table. We need it to list all airlines for all "
+"airports (or vice versa). This kind of table is known as a *pivot table*. "
+"The *constraints* in this table force that an airport can be associated with"
+" an airline only if both already exist in their layers."
+msgstr ""
+"다음 SQL 코드는 PostgreSQL/PostGIS 스키마에 *locations* 라는 이름의 N-M 관계를 위해 필요한 테이블 3개를"
+" 생성합니다. PostGIS의 경우 :menuselection:`Database --> DB Manager…` 메뉴를 통해, 또는 "
+"`pgAdmin <https://www.pgadmin.org>`_ 같은 외부 도구들을 통해 코드를 실행할 수 있습니다. 공항 테이블은 "
+"``airports`` 레이어를, 항공사 테이블은 ``airlines`` 레이어를 저장하고 있습니다. 이 두 테이블에서 관계를 분명히 "
+"하기 위해 사용되는 필드는 몇 개 되지 않습니다. *까다로운* 부분은 ``airports_airlines`` 테이블입니다. 이 테이블에 "
+"모든 공항에 대해 모든 항공사를 (그리고 그 반대도) 전부 목록화해야 합니다. 이런 유형의 테이블을 *피벗(pivot) 테이블* 이라고 "
+"합니다. 공항과 항공사 둘 다 이미 각각의 레이어에 존재하는 경우에만 공항을 항공사와 관련지을 수 있도록 강제하는 것이 이 테이블의 "
+"*제약조건* 입니다."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:424
 msgid ""
@@ -660,9 +1007,42 @@ msgstr "공항과 항공사 사이의 N-M 관계"
 msgid "Using **Many to one relation** cardinality"
 msgstr "**다대일 관계** 기수성 사용하기"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:510
+msgid ""
+"Sometimes hiding the pivot table in an N-M relationship is not desirable. "
+"Mainly because there are attributes in the relationship that can only have "
+"values when a relationship is established. If your tables have a geometry "
+"field, it could be interesting to activate the :guilabel:`On map "
+"identification` option (:menuselection:`Layer Properties --> Attributes Form"
+" --> Available widgets --> Fields`) for the foreign key fields in the pivot "
+"table."
+msgstr ""
+"N-M 관계에서 피벗 테이블을 숨기는 것이 바람직하지 않을 때가 있습니다. 주로 관계가 확정된 후에야 값을 가질 수 있는 관계에 있는 "
+"속성이 존재하기 때문입니다. 사용자 테이블이 도형 필드를 보유하고 있는 경우 피벗 테이블의 외래 키 필드에 대해 :guilabel:`On"
+" map identification` 옵션을 (:menuselection:`Layer Properties --> Attributes "
+"Form --> Available widgets --> Fields`) 활성화시켜보면 재미있을 수도요."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:517
 msgid "**Pivot table primary key**"
 msgstr "**피벗 테이블의 기본 키**"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:519
+msgid ""
+"Avoid using multiple fields in the primary key in a pivot table. QGIS "
+"assumes a single  primary key so a constraint like ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` will not work."
+msgstr ""
+"피벗 테이블의 기본 키에 여러 필드를 사용하는 일을 피하십시오. QGIS는 단일 기본 키를 가정하기 때문에 ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` 같은 제약조건은 작동하지 "
+"않을 것입니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:528
+msgid "Polymorphic relations"
+msgstr "다형성 관계"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:531
+msgid "The purpose"
+msgstr "목적"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:533
 msgid ""
@@ -813,6 +1193,12 @@ msgid ""
 msgstr ""
 "다형성 관계를 추가하고 나면, :guilabel:`Edit Polymorphic Relation` 메뉴 항목을 통해 다형성 관계를 편집할"
 " 수 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:623
+msgid ""
+"Preview of the newly created polymorphic relation and its child relations "
+"for animals and plants."
+msgstr "새로 생성한 다형성 관계와 이 관계의 동식물에 대한 하위(자식) 관계의 미리보기"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:626
 msgid "The example above uses the following database schema:"
