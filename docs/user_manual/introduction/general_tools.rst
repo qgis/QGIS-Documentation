@@ -1279,23 +1279,43 @@ Save and Share Layer Properties
 Managing Custom Styles
 -----------------------
 
-When a vector layer is added to the map canvas, QGIS by default uses a random
-symbol/color to render its features. However, you can set a default symbol in
+All layer properties together are also called 'style' in QGIS. Whenever a vector layer is
+added to the map canvas, QGIS uses a random symbol/color to render its features
+and creates a style named 'default'. However, you can set a default symbol in
 :menuselection:`Project --> Properties... --> Default styles` that will be
 applied to each newly added layer according to its geometry type.
 
 .. any idea on how it works for raster?
 
-Most of the time, though, you'd rather have a custom and more complex style
-that can be applied automatically or manually to the layers (with less effort).
-You can achieve this by using the :menuselection:`Style` menu at the bottom
-of the Layer Properties dialog. This menu provides you with functions to
-create, load and manage styles.
+All changes and settings of the layer properties are automatically saved in the
+'default' style. But it is possible to define different styles for a layer in a project.
+This makes it easy to switch between different styles (e.g. different symbols with different
+labels) or to apply them to other layers in the project. Styles can also be saved as a file
+and thus be shared between projects (see :ref:`store_style`).
 
 A style stores any information set in the layer properties dialog to render
 or interact with the layer (including symbology, labeling, fields and form definitions,
 actions, diagrams...) for vector layers, or the pixels (band or color rendering, transparency,
 pyramids, histogram ...) for raster.
+
+The :menuselection:`Style` menu at the bottom of the Layer Properties dialog
+(:numref:`figure_manage_style`) gives you different options to work with styles:
+
+* :menuselection:`Save Style`: the current style can be saved to a file
+  (see :ref:`store_style`).
+* :menuselection:`Load Style`: a saved style file can be applied to the layer.
+* :menuselection:`Save Current Style` / :menuselection:`Save All Styles`
+  (only with multiple styles): only the current one or all styles can be saved.
+* :menuselection:`Save as Default`: creates immediately a QML file with the
+  current settings in the folder where the layer is located (same name as the layer).
+  With :menuselection:`Restore Default` the settings can be reloaded from this QML file
+  (:ref:`store_style`).
+* :menuselection:`Add`: A new style is created for the layer using the current settings
+  (saved within the project).
+* :menuselection:`Rename Current`: The active style is renamed and updated with the current
+  options.
+* :menuselection:`Remove`: Delete unwanted style, in case you have more than one style defined
+  for the layer.
 
 
 .. _figure_manage_style:
@@ -1303,22 +1323,11 @@ pyramids, histogram ...) for raster.
 .. figure:: img/style_combobox.png
    :align: center
 
-   Vector layer style combo box options
+   Vector layer style menu options
 
-By default, the style applied to a loaded layer is named ``default``. Once you
-have got the ideal and appropriate rendering for your layer, you can save it by
-clicking the |selectString| :menuselection:`Style` combo box and choosing:
 
-* **Rename Current**: The active style is renamed and updated with the current
-  options
-* **Add**: A new style is created using the current options. By default, it will
-  be saved in the QGIS project file. See below to save the style in another file
-  or a database
-* **Remove**: Delete unwanted style, in case you have more than one style defined
-  for the layer.
-
-At the bottom of the Style drop-down list, you can see the styles set for the layer
-with the active one checked.
+At the bottom of the Style drop-down list, you can see the styles available for the layer
+with the active one checked. You can select a style by clicking on it.
 
 Note that each time you validate the layer properties dialog, the active style
 is updated with the changes you've made.
@@ -1334,22 +1343,22 @@ to duplicate any layer in the map legend.
   are stored in the active style, always ensure you are editing the right style
   to avoid mistakenly altering a style used in a :ref:`map theme <map_themes>`.
 
-.. tip:: **Manage styles from layer context menu**
+.. tip:: **Quickly share a layer style within the project**
 
    Right-click on the layer in the :guilabel:`Layers` panel to copy, paste, add
-   or rename layer styles.
+   or rename layer styles. When inserted into a group or selection, the style is
+   applied to all layers of the same type (vector vs raster) as the original one
+   and, in the case of vector layers, have the same geometry (point, line or polygon).
 
 .. _store_style:
 
 Storing Styles in a File or a Database
 --------------------------------------
 
-While styles created from the :guilabel:`Style` combo box are by default saved
-inside the project and can be copied and pasted from layer to layer in the project,
-it's also possible to save them outside the project so that they can be loaded
-in another project.
+Styles can be saved outside of a project so that they can be used in other projects.
+Depending on the data source, this can be in a file or a database.
 
-Save as text file
+Storing in a text file
 ........................
 
 Clicking the |selectString| :menuselection:`Style --> Save Style`, you can
@@ -1358,8 +1367,16 @@ save the style as a:
 * QGIS layer style file (:file:`.qml`)
 * SLD file (:file:`.sld`), only available for vector layers
 
-Used on file-based format layers (:file:`.shp`, :file:`.tab`...), :guilabel:`Save
-as Default` generates a :file:`.qml` file for the layer (with the same name).
+When a style for a vector layer is saved to a QML file, you can decide in
+the :menuselection:`Save Layer Style` dialog which properties are saved, by
+checking/unchecking them (:numref:`figure_manage_style`).
+
+If you add a layer to a project, QGIS can automatically apply the settings
+from a QML file to the layer. To do this, the QML file must be located in
+the same folder as the layer and have the same name. Such a QML file (same
+name, same location) can be created very easily using
+:menuselection:`Save as Default` from the Style Menu.
+
 SLDs can be exported from any type of renderer -- single symbol,
 categorized, graduated or rule-based -- but when importing an SLD, either a
 single symbol or rule-based renderer is created.
@@ -1368,8 +1385,8 @@ If you want to preserve those renderers, you have to use the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
-Save in database
-.................
+Storing in a database
+......................
 
 Vector layer styles can also be stored in a database if the layer datasource is a
 database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MS SQL Server
@@ -1379,9 +1396,19 @@ then fill in the dialog to define a style name, add a description, a :file:`.ui`
 file if applicable and to check if the style should be the default style.
 
 You can save several styles for a single table in the database. However, each
-table can have only one default style. Default styles can be saved in the layer
-database or in :file:`qgis.db`, a local SQLite database in the active
-:ref:`user profile <user_profiles>` directory.
+table can have only one default style. Default styles for a layer
+(:menuselection:`Save as Default`) can be saved in the layer database or in
+:file:`qgis.db`, a local SQLite database in the active
+:ref:`user profile <user_profiles>` directory. When a layer from a database is
+added, QGIS looks for a default style in both databases, but the layers database
+is given priority.
+
+While text-file styles (:file:`.sld` or :file:`.qml`) can be applied
+to any layer whatever its format, loading styles stored in a database is only
+possible if the layer is from the same database or the style is stored in the
+QGIS local database. The :guilabel:`Database Styles Manager` dialog displays a
+list of styles related to the layer found in the database and all the other styles
+saved in it, with name and description.
 
 .. _figure_save_style_database:
 
@@ -1401,32 +1428,6 @@ database or in :file:`qgis.db`, a local SQLite database in the active
 
   You may encounter issues restoring the :file:`layer_styles` table from a
   PostgreSQL database backup. Follow :ref:`layer_style_backup` to fix that.
-
-Load style
-...........
-
-When loading a layer in QGIS, if a default style already exists for this layer,
-QGIS loads the layer with this style. Also :menuselection:`Style --> Restore Default`
-looks for and loads that file, replacing the layer's current style.
-
-:menuselection:`Style --> Load Style` helps you apply any saved style to a
-layer. While text-file styles (:file:`.sld` or :file:`.qml`) can be applied
-to any layer whatever its format, loading styles stored in a database is only
-possible if the layer is from the same database or the style is stored in the
-QGIS local database.
-
-The :guilabel:`Database Styles Manager` dialog displays a list of styles related
-to the layer found in the database and all the other styles saved in it,
-with name and description.
-
-.. tip:: **Quickly share a layer style within the project**
-
-   You can also share layer styles within a project without importing a file or
-   database style: right-click on the layer in the :guilabel:`Layers Panel` and,
-   from the :guilabel:`Styles` combo box , copy the style of a layer and paste it
-   to a group or a selection of layers: the style is applied to all the layers
-   that are of the same type (vector vs raster) as the original layer and, in
-   the case of vector layers, have the same geometry type (point, line or polygon).
 
 .. index:: Layer Definition File, qlr file
 .. _layer_definition_file:
