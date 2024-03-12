@@ -41,6 +41,12 @@ with the following line:
 
     >>> from qgis import processing
 
+And if you are running a custom application, this is the import. Also, need to `initialize()` Processing.
+
+    >>> from processing.core.Processing import Processing
+    >>> proc = Processing()
+    >>> proc.initialize()
+
 Now, there is basically just one (interesting) thing you can do with
 that from the console: execute an algorithm. That is done using the
 :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method, which
