@@ -2,27 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:53+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traduction est le fruit d'un effort communautaire auquel `vous pouvez "
+"prendre part <https://qgis.org/fr/site/getinvolved/translate.html#becoming-"
+"a-translator>`_. Cette page est actuellement traduite à |translation "
+"progress|."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:14
 msgid "Map Rendering and Printing"
@@ -64,7 +74,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:73
 msgid "Here's an example:"
-msgstr "Voici un exemple:"
+msgstr "Voici un exemple :"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:107
 msgid "Rendering layers with different CRS"
@@ -84,6 +94,23 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:124
 msgid "Output using print layout"
 msgstr "Sortie en utilisant la mise en page "
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:126
+msgid ""
+"Print layout is a very handy tool if you would like to do a more "
+"sophisticated output than the simple rendering shown above. It is possible "
+"to create complex map layouts consisting of map views, labels, legend, "
+"tables and other elements that are usually present on paper maps. The "
+"layouts can be then exported to PDF, SVG, raster images or directly printed "
+"on a printer."
+msgstr ""
+"La mise en page est un outil très pratique si vous souhaitez obtenir un "
+"résultat plus sophistiqué que le simple rendu présenté ci-dessus. Il est "
+"possible de créer des mises en page complexes composées de cartes, "
+"d'étiquettes, de légendes, de tableaux et d'autres éléments qui sont "
+"généralement présents sur les cartes papier. Les mises en page peuvent "
+"ensuite être exportées au format PDF, SVG, en images raster ou directement "
+"imprimées sur une imprimante."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:132
 msgid ""
@@ -180,7 +207,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:192
 msgid "legend"
-msgstr ""
+msgstr "legend"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:200
 msgid "scale bar"
@@ -224,6 +251,50 @@ msgstr ""
 "créés et ajoutés à la composition), nous pouvons procéder à la production "
 "d'une sortie raster et/ou vecteur."
 
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:263
+msgid "Checking layout validity"
+msgstr "Validation d'une mise en page"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:265
+msgid ""
+"A layout is a made of a set of interconnected items and it can happen that "
+"these connections are broken during modifications (a legend connected to a "
+"removed map, an image item with missing source file,...) or you may want to "
+"apply custom constraints to the layout items. The "
+":class:`QgsAbstractValidityCheck <qgis.core.QgsAbstractValidityCheck>` helps"
+" you achieve this."
+msgstr ""
+"Une mise en page comprend un certain nombre d'éléments interconnectés et il "
+"peut arriver que certaines de ces connexions soient endommagées au fil des "
+"modifications (par exemple, une légende connectée à une carte qui a été "
+"supprimée, une image sans fichier source associé, ...) ou vous pourriez "
+"vouloir appliquer des contraintes particulières à des éléments de la mise en"
+" page. La classe :class:`QgsAbstractValidityCheck "
+"<qgis.core.QgsAbstractValidityCheck>` pourrait bien vous être utile."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:270
+msgid "A basic check looks like:"
+msgstr "Une vérification basique consiste en :"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:279
+msgid ""
+"Here's a check which throws a warning whenever a layout map item is set to "
+"the web mercator projection:"
+msgstr ""
+"Voici une méthode qui affiche un avertissement chaque fois qu'un élément "
+"carte de la mise en page est défini dans le système de projection web "
+"mercator :"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:297
+msgid ""
+"And here's a more complex example, which throws a warning if any layout map "
+"items are set to a CRS which is only valid outside of the extent shown in "
+"that map item:"
+msgstr ""
+"Et voici un autre exemple, plus complexe, qui affiche un avertissement si un"
+" élément carte de la mise en page affiche une étendue spatiale qui n'est pas"
+" incluse dans l'emprise de validité du SCR qui lui est appliqué."
+
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:324
 msgid "Exporting the layout"
 msgstr "Exporter la mise en page"
@@ -235,6 +306,19 @@ msgid ""
 msgstr ""
 "Pour exporter une mise en page, la classe :class:`QgsLayoutExporter "
 "<qgis.core.QgsLayoutExporter>` doit être utilisée."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:336
+msgid ""
+"Use :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>` or "
+":meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case "
+"you want to export to respectively an SVG or image file instead of a PDF "
+"file."
+msgstr ""
+"Utilisez les méthodes :meth:`exportToSvg() "
+"<qgis.core.QgsLayoutExporter.exportToSvg>` ou :meth:`exportToImage() "
+"<qgis.core.QgsLayoutExporter.exportToImage>` au cas où vous voudriez "
+"exporter respectivement vers un fichier SVG ou une image au lieu d'un "
+"fichier PDF."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:340
 msgid "Exporting a layout atlas"
