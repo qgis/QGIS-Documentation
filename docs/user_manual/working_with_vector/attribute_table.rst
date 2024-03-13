@@ -218,10 +218,10 @@ In the new dialog, you can:
 
 .. _sort_columns:
 
-Sorting columns
+Sorting rows
 ...............
 
-The table can be sorted by any column, by clicking on the column header. A
+The rows can be sorted by any column, by clicking on the column header. A
 small arrow indicates the sort order (downward pointing means descending
 values from the top row down, upward pointing means ascending values from
 the top row down).
@@ -231,6 +231,9 @@ using multiple columns you can write ``concat(col0, col1)``.
 
 In form view, features identifier can be sorted using the |sort| :guilabel:`Sort
 by preview expression` option.
+
+Note that sorting the rows only affects the table rendering and does not alter
+the features order in the layer datasource.
 
 .. _tip_sortcolumns:
 
