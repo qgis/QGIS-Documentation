@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-06 13:40+0000\n"
+"POT-Creation-Date: 2024-03-13 06:21+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: DiGro, 2024\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
@@ -846,12 +846,12 @@ msgstr ""
 ":ref:`actions_menu` voor meer informatie over acties."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:222
-msgid "Sorting columns"
-msgstr "Kolommen sorteren"
+msgid "Sorting rows"
+msgstr "Rijen sorteren"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:224
 msgid ""
-"The table can be sorted by any column, by clicking on the column header. A "
+"The rows can be sorted by any column, by clicking on the column header. A "
 "small arrow indicates the sort order (downward pointing means descending "
 "values from the top row down, upward pointing means ascending values from "
 "the top row down). You can also choose to sort the rows with the "
@@ -859,14 +859,14 @@ msgid ""
 "expression. E.g. to sort the rows using multiple columns you can write "
 "``concat(col0, col1)``."
 msgstr ""
-"De tabel kan worden gesorteerd op elke kolom, door te klikken op de "
+"De rijen kunnen op elke kolom worden gesorteerd, door te klikken op de "
 "kolomkop. Een kleine pijl geeft de sorteervolgorde aan (naar beneden wijzend"
 " betekent aflopende waarden vanaf de bovenste rij naar beneden, naar boven "
 "wijzend betekent oplopende waarden vanaf de bovenste rij naar beneden). U "
 "kunt er ook voor kiezen de rijen te sorteren met de optie "
 ":guilabel:`Sorteren…` van het contextmenu van de kolomkop en een expressie "
-"schrijven. Om bijvoorbeeld de rijen te sorteren op meerdere kolommen kunt u "
-"schrijven ``concat(col0, col1)``."
+"te schrijven. Om bijvoorbeeld de rijen te sorteren op meerdere kolommen kunt"
+" u schrijven ``concat(col0, col1)``."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:232
 msgid ""
@@ -880,11 +880,19 @@ msgstr ""
 msgid "sort"
 msgstr "sort"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:237
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:235
+msgid ""
+"Note that sorting the rows only affects the table rendering and does not "
+"alter the features order in the layer datasource."
+msgstr ""
+"Onthoud dat sorteren van de rijen alleen het renderen van de tabel "
+"beïnvloedt en niet de volgorde van de objecten in de databron van de laag."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:240
 msgid "**Sorting based on columns of different types**"
 msgstr "**Sorteren gebaseerd op kolommen van verschillende typen**"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:239
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:242
 msgid ""
 "Trying to sort an attribute table based on columns of string and numeric "
 "types may lead to unexpected result because of the ``concat(\"USE\", "
@@ -899,11 +907,11 @@ msgstr ""
 "``concat(\"USE\", lpad(\"ID\", 3, 0))`` te gebruiken, dat ``'Borough105' > "
 "'Borough006'`` teruggeeft."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:249
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:252
 msgid "Formatting of table cells using conditions"
 msgstr "Opmaken van tabelcellen met voorwaarden"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:251
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:254
 msgid ""
 "Conditional formatting settings can be used to highlight in the attribute "
 "table features you may want to put a particular focus on, using custom "
@@ -913,7 +921,7 @@ msgstr ""
 "in de attributentabel, waarop u een bijzonder focus wilt zetten, te "
 "accentueren met behulp van aangepaste voorwaarden op de object:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:255
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:258
 msgid ""
 "geometry (e.g., identifying multi-parts features, small area ones or in a "
 "defined map extent...);"
@@ -921,7 +929,7 @@ msgstr ""
 "geometrie (bijv. identificeren van meerdelige objecten, zeer kleine gebieden"
 " of in een gedefinieerd kaartbereik…);"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:257
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:260
 msgid ""
 "or field value (e.g., comparing values to a threshold, identifying empty "
 "cells, duplicates, ...)."
@@ -929,7 +937,7 @@ msgstr ""
 "of veldwaarde (bijv. waarden vergelijken met een drempel, lege cellen "
 "identificeren, duplicaten, …)."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:260
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:263
 msgid ""
 "You can enable the conditional formatting panel clicking on "
 "|conditionalFormatting| :sup:`Conditional formatting` button at the top "
@@ -940,7 +948,7 @@ msgstr ""
 "rechterbovenkant van het venster Attributen in de tabelweergave (niet "
 "geactiveerd in de formulierweergave)."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:264
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:267
 msgid ""
 "The new panel allows user to add new rules to format rendering of "
 "|radioButtonOn|:guilabel:`Field` or |radioButtonOff|:guilabel:`Full row`. "
@@ -959,11 +967,11 @@ msgstr "radioButtonOn"
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:268
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:271
 msgid "the name of the rule;"
 msgstr "de naam van de regel;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:269
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:272
 msgid ""
 "a condition using any of the :ref:`expression builder <vector_expressions>` "
 "functions;"
@@ -971,7 +979,7 @@ msgstr ""
 "een voorwaarde met behulp van een van de functies van :ref:`Expressie-string"
 " bouwer <vector_expressions>`;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:270
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:273
 msgid ""
 "the formatting: it can be choosen from a list of predefined formats or "
 "created based on properties like:"
@@ -979,35 +987,35 @@ msgstr ""
 "de opmaak: die kan worden gekozen uit een lijst met vooraf gedefinieerde "
 "opmaak of gemaakt worden, gebaseerd op eigenschappen zoals:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:273
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:276
 msgid "background and text colors;"
 msgstr "achtergrond- en tekstkleuren;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:274
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:277
 msgid "use of icon;"
 msgstr "gebruik van pictogram;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:275
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:278
 msgid "bold, italic, underline, or strikeout;"
 msgstr "vet, cursief onderstreept, of doorgehaald;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:276
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:279
 msgid "font."
 msgstr "lettertype."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:283
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:286
 msgid "Conditional Formatting of an attribute table"
 msgstr "Voorwaardelijke opmaak van een attributentabel"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:290
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:293
 msgid "Interacting with features in an attribute table"
 msgstr "Werken met objecten in een attributentabel"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:293
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:296
 msgid "Selecting features"
 msgstr "Objecten selecteren"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:295
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:298
 msgid ""
 "In table view, each row in the attribute table displays the attributes of a "
 "unique feature in the layer. Selecting a row selects the feature and "
@@ -1025,7 +1033,7 @@ msgstr ""
 "attributentabel) wordt gewijzigd, dan wordt die selectie ook overeenkomstig "
 "bijgewerkt in de attributentabel (of het kaartvenster)."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:302
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:305
 msgid ""
 "Rows can be selected by clicking on the row number on the left side of the "
 "row. **Multiple rows** can be marked by holding the :kbd:`Ctrl` key. A "
@@ -1046,7 +1054,7 @@ msgstr ""
 "aanpassen. Het wijzigen van de selectie in het kaartvenster, zal niet de "
 "cursorpositie in de attributentabel wijzigen."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:311
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:314
 msgid ""
 "In form view of the attribute table, features are by default identified in "
 "the left panel by the value of their displayed field (see :ref:`maptips`). "
@@ -1061,7 +1069,7 @@ msgstr ""
 "veld te kiezen of door een aangepaste expressie te gebruiken. U kunt er ook "
 "voor kiezen de lijst met objecten te sorteren vanuit de keuzelijst."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:317
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:320
 msgid ""
 "Click a value in the left panel to display the feature's attributes in the "
 "right one. To select a feature, you need to click inside the square symbol "
@@ -1076,7 +1084,7 @@ msgstr ""
 "selecteren van objecten uitvoeren met behulp van de reeds eerder weergegeven"
 " combinaties voor het toetsenbord."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:326
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:329
 msgid ""
 "Beyond selecting features with the mouse, you can perform automatic "
 "selection based on feature's attribute using tools available in the "
@@ -1089,13 +1097,13 @@ msgstr ""
 " gedeelte :ref:`automatic_selection` en volgende voor meer informatie en "
 "gebruiksgevallen):"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:331
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:334
 msgid "|expressionSelect| :guilabel:`Select By Expression...`"
 msgstr ""
 "|expressionSelect| :guilabel:`Objecten selecteren m.b.v. een reguliere "
 "expressie`"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:332
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:335
 msgid "|formSelect| :guilabel:`Select Features By Value...`"
 msgstr "|formSelect| :guilabel:`Objecten selecteren d.m.v. waarde...`"
 
@@ -1103,32 +1111,32 @@ msgstr "|formSelect| :guilabel:`Objecten selecteren d.m.v. waarde...`"
 msgid "formSelect"
 msgstr "formSelect"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:333
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:336
 msgid "|deselectActiveLayer| :guilabel:`Deselect All Features from the Layer`"
 msgstr ""
 "|deselectActiveLayer| :guilabel:`Objecten deselecteren van huidige actieve "
 "laag`"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:334
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:337
 msgid "|selectAll| :guilabel:`Select All Features`"
 msgstr "|selectAll| :guilabel:`Alle objecten selecteren`"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:335
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:338
 msgid "|invertSelection| :guilabel:`Invert Feature Selection`."
 msgstr "|invertSelection| :guilabel:`Selectie van objecten omdraaien`"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:337
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:340
 msgid ""
 "It is also possible to select features using the :ref:`filter_select_form`."
 msgstr ""
 "Het is ook mogelijk objecten te selecteren met behulp van "
 ":ref:`filter_select_form`."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:343
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:346
 msgid "Filtering features"
 msgstr "Objecten filteren"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:345
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:348
 msgid ""
 "Once you have selected features in the attribute table, you may want to "
 "display only these records in the table. This can be easily done using the "
@@ -1142,11 +1150,11 @@ msgstr ""
 " uit de keuzelijst aan de linkeronderzijde van het dialoogvenster "
 "Attributentabel. Deze lijst biedt de volgende filters:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:350
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:353
 msgid "|openTable| :guilabel:`Show All Features`"
 msgstr "|openTable| :guilabel:`Alle objecten tonen`"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:351
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:354
 msgid ""
 "|openTableSelected| :guilabel:`Show Selected Features` - same as using "
 ":guilabel:`Open Attribute Table (Selected Features)` from the "
@@ -1162,7 +1170,7 @@ msgstr ""
 msgid "openTableSelected"
 msgstr "openTableSelected"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:354
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:357
 msgid ""
 "|openTableVisible| :guilabel:`Show Features visible on map` - same as using "
 ":guilabel:`Open Attribute Table (Visible Features)` from the "
@@ -1178,7 +1186,7 @@ msgstr ""
 msgid "openTableVisible"
 msgstr "openTableVisible"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:357
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:360
 msgid ""
 "|openTableInvalid| :guilabel:`Show Features with Failing Constraints` - "
 "features will be filtered to only show the ones which have failing "
@@ -1196,7 +1204,7 @@ msgstr ""
 msgid "openTableInvalid"
 msgstr "openTableInvalid"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:361
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:364
 msgid ""
 "|openTableEdited| :guilabel:`Show Edited and New Features` - same as using "
 ":guilabel:`Open Attribute Table (Edited and New Features)` from the "
@@ -1211,7 +1219,7 @@ msgstr ""
 msgid "openTableEdited"
 msgstr "openTableEdited"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:364
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:367
 msgid ""
 ":guilabel:`Field Filter` - allows the user to filter based on value of a "
 "field: choose a column from a list, type or select a value and press "
@@ -1232,7 +1240,7 @@ msgstr ""
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:369
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:372
 msgid ""
 "|filterMap| :guilabel:`Advanced filter (Expression)` - Opens the expression "
 "builder dialog. Within it, you can create :ref:`complex expressions "
@@ -1247,7 +1255,7 @@ msgstr ""
 " veld. Indien toegepast verschijnt de expressie van het filter aan de "
 "onderzijde van het formulier."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:374
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:377
 msgid ""
 "|handleStoreFilterExpressionChecked| :menuselection:`Stored filter "
 "expressions -->`: a shortcut to :ref:`saved expressions <store_filter>` "
@@ -1261,7 +1269,7 @@ msgstr ""
 msgid "handleStoreFilterExpressionChecked"
 msgstr "handleStoreFilterExpressionChecked"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:377
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:380
 msgid ""
 "It is also possible to :ref:`filter features using forms "
 "<filter_select_form>`."
@@ -1269,7 +1277,7 @@ msgstr ""
 "Het is ook mogelijk :ref:`objecten te filteren met formulieren "
 "<filter_select_form>`."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:381
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:384
 msgid ""
 "Filtering records out of the attribute table does not filter features out of"
 " the layer; they are simply momentaneously hidden from the table and can be "
@@ -1283,13 +1291,13 @@ msgstr ""
 "verwijderen. Voor filters die wel objecten van de laag verbergen, gebruik de"
 " :ref:`Querybouwer <vector_query_builder>`."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:387
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:390
 msgid "**Update datasource filtering with** ``Show Features Visible on Map``"
 msgstr ""
 "**Gegevensbron bijwerken door te filteren met** ``Op kaart zichtbare "
 "objecten tonen``"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:389
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:392
 msgid ""
 "When for performance reasons, features shown in attribute table are "
 "spatially limited to the canvas extent at its opening (see :ref:`Data Source"
@@ -1303,11 +1311,11 @@ msgstr ""
 "how-to), zal selecteren van :guilabel:`Op kaart zichtbare objecten tonen` op"
 " een nieuw kaartbereik de ruimtelijke beperking bijwerken."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:398
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:401
 msgid "Storing filter expressions"
 msgstr "Filterexpressies opslaan"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:400
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:403
 msgid ""
 "Expressions you use for attribute table filtering can be saved for further "
 "calls. When using :guilabel:`Field Filter` or :guilabel:`Advanced Filter "
@@ -1339,7 +1347,7 @@ msgstr ""
 msgid "handleStoreFilterExpressionUnchecked"
 msgstr "handleStoreFilterExpressionUnchecked"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:411
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:414
 msgid ""
 "Saved filter expressions are saved in the project and available through the "
 ":guilabel:`Stored filter expressions` menu of the attribute table. They are "
@@ -1352,11 +1360,11 @@ msgstr ""
 "<user_expressions_functions>`, die worden gedeeld door alle projecten van "
 "het actieve gebruikersprofiel."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:419
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:422
 msgid "Filtering and selecting features using forms"
 msgstr "Objecten filteren en selecteren met formulieren"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:421
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:424
 msgid ""
 "Clicking the |filterMap| :sup:`Filter/Select features using form` or "
 "pressing :kbd:`Ctrl+F` will make the attribute table dialog switch to form "
@@ -1367,7 +1375,7 @@ msgstr ""
 "de attributentabel zal dat schakelen naar de formulierweergave en elk widget"
 " vervangen door zijn variant om te zoeken."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:425
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:428
 msgid ""
 "From this point onwards, this tool functionality is similar to the one "
 "described in :ref:`select_by_value`, where you can find descriptions of all "
@@ -1377,11 +1385,11 @@ msgstr ""
 " welke werd beschreven in :ref:`select_by_value`, waar u beschrijvingen kunt"
 " vinden van alle operatoren en modi voor selecteren."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:434
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:437
 msgid "Attribute table filtered by the filter form"
 msgstr "Attributentabel gefilterd door het filterformulier"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:436
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:439
 msgid ""
 "When selecting / filtering features from the attribute table, there is a "
 ":guilabel:`Filter features` button that allows defining and refining "
@@ -1396,7 +1404,7 @@ msgstr ""
 "expressie voor het filteren weer in een bewerkbaar tekstwidget aan de "
 "onderzijde van het formulier."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:441
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:444
 msgid ""
 "If there are already filtered features, you can refine the filter using the "
 "drop-down list next to the :guilabel:`Filter features` button. The options "
@@ -1406,15 +1414,15 @@ msgstr ""
 "behulp van de keuzelijst naast de knop :guilabel:`Objecten filteren`. De "
 "opties zijn:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:444
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:447
 msgid ":guilabel:`Filter within (\"AND\")`"
 msgstr ":guilabel:`Filteren binnen (\"AND\")`"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:445
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:448
 msgid ":guilabel:`Extend filter (\"OR\")`"
 msgstr ":guilabel:`Filter uitbreiden (\"OR\")`"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:447
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:450
 msgid ""
 "To clear the filter, either select the :guilabel:`Show all features` option "
 "from the bottom left pull-down menu, or clear the expression and click "
@@ -1424,11 +1432,11 @@ msgstr ""
 "objecten tonen` uit de keuzelijst aan de linkeronderzijde, of maak de "
 "expressie leeg en klik op :guilabel:`Toepassen` of druk op :kbd:`Enter`."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:452
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:455
 msgid "Using action on features"
 msgstr "Acties op objecten gebruiken"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:454
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:457
 msgid ""
 "Users have several possibilities to manipulate feature with the contextual "
 "menu like:"
@@ -1436,12 +1444,12 @@ msgstr ""
 "Gebruikers hebben verscheidene mogelijkheden om objecten te bewerken met het"
 " contextmenu, zoals:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:457
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:460
 msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`) the features;"
 msgstr ""
 ":guilabel:`Alles selecteren` (:kbd:`Ctrl+A`) alle objecten selecteren;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:458
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:461
 msgid ""
 "Copy the content of a cell in the clipboard with :guilabel:`Copy cell "
 "content`;"
@@ -1449,22 +1457,22 @@ msgstr ""
 "De inhoud van een cel naar het klembord te kopiëren met :guilabel:`Celinhoud"
 " kopiëren`;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:459
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:462
 msgid ":guilabel:`Zoom to feature` without having to select it beforehand;"
 msgstr ""
 ":guilabel:`Naar object inzoomen` zonder het eerst te hebben geselecteerd;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:460
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:463
 msgid ":guilabel:`Pan to feature` without having to select it beforehand;"
 msgstr ""
 ":guilabel:`Naar object verplaatsen` zonder het eerst te hebben geselecteerd;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:461
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:464
 msgid ":guilabel:`Flash feature`, to highlight it in the map canvas;"
 msgstr ""
 ":guilabel:`Flitsmogelijkheid`, om het in het kaartvenster te accentueren;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:462
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:465
 msgid ""
 ":guilabel:`Open form`: it toggles attribute table into form view with a "
 "focus on the clicked feature."
@@ -1472,11 +1480,11 @@ msgstr ""
 ":guilabel:`Formulier openen`: Het schakelt de attributentabel naar "
 "formulierweergave met de focus op het aangeklikte object."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:470
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:473
 msgid "Copy cell content button"
 msgstr "Knop Celinhoud kopiëren"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:472
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:475
 msgid ""
 "If you want to use attribute data in external programs (such as Excel, "
 "LibreOffice, QGIS or a custom web application), select one or more row(s) "
@@ -1488,7 +1496,7 @@ msgstr ""
 "of meer rij(en) en gebruik de knop |copySelected| :sup:`Geselecteerde rijen "
 "naar klembord kopiëren` of druk op :kbd:`Ctrl+C`."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:479
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:482
 msgid ""
 "In :menuselection:`Settings --> Options --> Data Sources` menu you can "
 "define the format to paste to with :guilabel:`Copy features as` dropdown "
@@ -1498,19 +1506,19 @@ msgstr ""
 "keuzelijst de opmaak definiëren die moet worden geplakt met "
 ":guilabel:`Objecten kopiëren als`:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:483
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:486
 msgid "Plain text, no geometry,"
 msgstr "Platte tekst, geen geometrie,"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:484
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:487
 msgid "Plain text, WKT geometry,"
 msgstr "Platte tekst, WKT-geometrie,"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:485
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:488
 msgid "GeoJSON"
 msgstr "GeoJSON"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:487
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:490
 msgid ""
 "You can also display a list of actions in this contextual menu. This is "
 "enabled in the :menuselection:`Layer properties --> Actions` tab. See "
@@ -1520,11 +1528,11 @@ msgstr ""
 "ingeschakeld op de tab :menuselection:`Laageigenschappen --> Acties`. Bekijk"
 " :ref:`actions_menu` voor meer informatie over acties."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:492
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:495
 msgid "Saving selected features as new layer"
 msgstr "Geselecteerde objecten als nieuwe laag opslaan"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:494
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:497
 msgid ""
 "The selected features can be saved as any OGR-supported vector format and "
 "also transformed into another coordinate reference system (CRS). In the "
@@ -1546,15 +1554,15 @@ msgstr ""
 "is ook mogelijk om opties voor het maken van GDAL op te geven in het "
 "dialoogvenster."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:506
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:509
 msgid "Editing attribute values"
 msgstr "Attribuutwaarden bewerken"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:508
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:511
 msgid "Editing attribute values can be done by:"
 msgstr "Bewerken van waarden van attributen kan worden gedaan door:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:510
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:513
 msgid ""
 "typing the new value directly in the cell, whether the attribute table is in"
 " table or form view. Changes are hence done cell by cell, feature by "
@@ -1564,7 +1572,7 @@ msgstr ""
 " formulierweergave. Wijzigingen worden daarom per cel uitgevoerd, object na "
 "object;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:512
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:515
 msgid ""
 "using the :ref:`field calculator <vector_field_calculator>`: update in a row"
 " a field that may already exist or to be created but for multiple features. "
@@ -1574,7 +1582,7 @@ msgstr ""
 "van een veld dat al kan bestaan of dat kan worden gemaakt, maar voor "
 "meerdere objecten. Het kan worden gebruikt om virtuele velden te maken;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:515
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:518
 msgid ""
 "using the quick field :ref:`calculation bar <quick_field_calculation_bar>`: "
 "same as above but for only existing field;"
@@ -1582,7 +1590,7 @@ msgstr ""
 "met de :ref:`werkbalk Snelle veldberekening <quick_field_calculation_bar>`: "
 "hetzelfde als hierboven maar alleen voor bestaande velden;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:517
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:520
 msgid ""
 "or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row "
 "multiple fields for multiple features."
@@ -1590,34 +1598,24 @@ msgstr ""
 "of met de modus :ref:`Meervoudige bewerkingen <multi_edit_fields>`: meerdere"
 " velden voor meerdere objecten bijwerken in een rij."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:523
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:526
 msgid "Using the Field Calculator"
 msgstr "Veldberekening gebruiken"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:525
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:528
 msgid ""
 "The |calculateField| :sup:`Field Calculator` button in the attribute table "
 "allows you to perform calculations on the basis of existing attribute values"
 " or defined functions, for instance, to calculate length or area of geometry"
-" features. The results can be:"
+" features. The results can be used to update an existing field, or written "
+"to a new field (that can be a :ref:`virtual <virtual_field>` one)."
 msgstr ""
 "De knop |calculateField| :sup:`Veldberekening` in de attributentabel geeft "
 "de mogelijkheid om berekeningen uit te voeren van bestaande waarden van "
 "attributen of gedefinieerde functies, bijvoorbeeld om de lengte of "
-"oppervlakte van objecten geometrie te berekenen. De resultaten kunnen "
-"worden:"
-
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:530
-msgid "used to update an existing field"
-msgstr "gebruikt om een bestaand veld bij te werken"
-
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:531
-msgid "written to a new \"common\" field"
-msgstr "geschreven naar een nieuw \"algemeen\" veld"
-
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:532
-msgid "or written to a :ref:`virtual field <virtual_field>`:"
-msgstr "of geschreven naar een :ref:`virtueel veld <virtual_field>`:"
+"oppervlakte van objecten geometrie te berekenen. De resultaten kunnen worden"
+" gebruikt om een bestaand veld bij te werken of worden geschreven naar een "
+"nieuw veld (dat een :ref:`virtueel veld <virtual_field>` mag zijn)."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:534
 msgid ""
