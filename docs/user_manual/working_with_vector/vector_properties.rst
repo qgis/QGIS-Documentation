@@ -2572,7 +2572,8 @@ with the field type. The available widgets are:
 * **Relation Reference**: This is the default widget assigned to the referencing
   field (i.e., the foreign key in the child layer) when a :ref:`relation <vector_relations>`
   is set. It provides direct access to the parent feature's form which in turn
-  embeds the list and form of its children.
+  embeds the list and form of its children. The number of entries in the widget
+  can be limited for efficiency, and if limit is not set, all entries will be loaded.
 * **Text Edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
   can also choose html content.
