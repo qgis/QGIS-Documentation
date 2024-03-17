@@ -6,6 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
+# Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,6 +24,17 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traducción es un esfuerzo comunitario al que `puedes unirte "
+"<https://qgis.org/es/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Esta página está actualmente traducida en |translation "
+"progress|."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:2
 msgid "Vector creation"
@@ -810,6 +823,25 @@ msgstr ""
 "Crea una capa vectorial con una cuadrícula cubriendo una extensión dada. La "
 "celdas de rejilla pueden tener diferentes formas:"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:274
+msgid ""
+"Different grid cell shapes applied to the same extent, without overlaps"
+msgstr ""
+"Diferentes formas de celda de grid aplicadas a la misma extensión, sin "
+"solapamientos"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:276
+msgid ""
+"The size and/or placement of each element in the grid is defined using a "
+"horizontal and vertical spacing. The CRS of the output layer must be "
+"defined. The grid extent and the spacing values must be expressed in the "
+"coordinates and units of this CRS."
+msgstr ""
+"El tamaño y/o la colocación de cada elemento en la cuadrícula se definen "
+"mediante un espaciado horizontal y vertical. Debe definirse el SRC de la "
+"capa de salida. La extensión de la cuadrícula y los valores de espaciado "
+"deben expresarse en las coordenadas y unidades de este SRC."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:282
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:956
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1065
@@ -1001,6 +1033,35 @@ msgstr "**Cuadrícula**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:355
 msgid "Resulting vector grid layer. One of:"
 msgstr "Capa de cuadrícula vectorial resultante. Uno de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:375
+msgid ""
+"Resulting vector grid layer. The output geometry type (point, line or "
+"polygon) depends on the :guilabel:`Grid type`. Features are created from top"
+" to bottom, left to right. The attribute table is filled with:"
+msgstr ""
+"Capa de malla vectorial resultante. El tipo de geometría de salida (punto, "
+"línea o polígono) depende de :guilabel:`Tipo de cuadrícula`. Los objetos "
+"espaciales se crean de arriba a abajo, de izquierda a derecha. La tabla de "
+"atributos se rellena con:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:380
+msgid "an ``id``"
+msgstr "un ``id``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:381
+msgid "coordinates on the ``left``, ``right``, ``top`` and ``bottom`` sides"
+msgstr ""
+"coordenadas de los lados ``izquierdo``, ``derecho``, ``superior`` e "
+"``inferior``."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:382
+msgid ""
+"and their placement in the grid: ``row_index`` and ``column_index`` "
+"(available for point, rectangle and hexagon grid types)"
+msgstr ""
+"y su ubicación en la cuadrícula: ``row_index`` y ``column_index`` "
+"(disponibles para los tipos de rejilla punto, rectángulo y hexágono)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:388
 msgid "**Algorithm ID**: ``native:creategrid``"
@@ -1305,6 +1366,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:630
 msgid "Import geotagged photos"
 msgstr "Importar fotos geoetiquetadas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:631
+msgid ""
+"Creates a point layer corresponding to the geotagged locations from JPEG or "
+"HEIC/HEIF images from a source folder."
+msgstr ""
+"Crea una capa de puntos correspondiente a las ubicaciones geoetiquetadas a "
+"partir de imágenes JPEG o HEIC/HEIF de una carpeta de origen."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:634
 msgid ""
@@ -2251,6 +2320,16 @@ msgstr ""
 "Crea una capa vectorial de puntos correspondientes a cada píxel en una capa "
 "ráster."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1597
+msgid ""
+"Converts a raster layer to a vector layer, by creating point features for "
+"each individual pixel's center in the raster layer. Any NoData  pixels are "
+"skipped in the output."
+msgstr ""
+"Convierte una capa ráster en una capa vectorial, creando objetos espaciales "
+"punto para cada centro de píxel individual en la capa ráster. Los píxeles "
+"NoData se omiten en la salida."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1616
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1690
 msgid "**Band number**"
@@ -2325,6 +2404,16 @@ msgid ""
 msgstr ""
 "Crea una capa vectorial de polígonos correspondiente a cada píxel en una "
 "capa ráster."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1671
+msgid ""
+"Converts a raster layer to a vector layer, by creating polygon features for "
+"each individual pixel's extent in the raster layer. Any NoData  pixels are "
+"skipped in the output."
+msgstr ""
+"Convierte una capa ráster en una capa vectorial, creando objetos espaciales "
+"polígono para la extensión de cada píxel individual en la capa ráster. Los "
+"píxeles NoData se omiten en la salida."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1700
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1723
