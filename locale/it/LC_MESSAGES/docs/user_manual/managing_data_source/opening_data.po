@@ -5,19 +5,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
 # marcobra <marcobra.ubuntu@gmail.com>, 2024
+# Transifex Bot <>, 2024
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-03-06 17:56+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2024\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -994,9 +994,44 @@ msgstr ""
 msgid "Loading a Shapefile with open options"
 msgstr "Caricamento di uno Shapefile con le opzioni aperte"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:380
+msgid ""
+"Press :guilabel:`Add` to load the file in QGIS and display them in the map "
+"view. When adding vector datasets containing multiple layers, the "
+":guilabel:`Select Items to Add` dialog will appear. In this dialog, you can "
+"choose the specific layers from your dataset that you want to add. Also, "
+"under :guilabel:`Options` you can choose to:"
+msgstr ""
+"Premi :guilabel:`Aggiungi` per caricare il file in QGIS e visualizzarlo "
+"nell'area di visualizzazione della mappa. Quando si aggiungono set di dati "
+"vettoriali contenenti più layer, appare la finestra di dialogo "
+":guilabel:`Seleziona Oggetti da aggiungere`. In questa finestra di dialogo "
+"puoi scegliere i layer specifici del set di dati che vuoi aggiungere. "
+"Inoltre, sotto :guilabel:`Opzioni` puoi scegliere di:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:386
+msgid "|checkbox|:guilabel:`Add layers to a group`"
+msgstr "|checkbox|:guilabel:`Aggiungi layer a un gruppo`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1657
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:387
+msgid "|checkbox|:guilabel:`Show system and internal tables`"
+msgstr "|checkbox|:guilabel:`Mostra tabelle interne e di sistema`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:388
+msgid "|checkbox|:guilabel:`Show empty vector layers`."
+msgstr "|checkbox|:guilabel:`Mostra vettori vuoti`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:390
+msgid ""
+":numref:`figure_vector_loaded` shows QGIS after loading the "
+":file:`alaska.shp` file."
+msgstr ""
+":numref:`figure_vector_loaded` mostra QGIS dopo il caricamento del file "
+":file:`alaska.shp`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:397
 msgid "QGIS with Shapefile of Alaska loaded"
@@ -1157,7 +1192,7 @@ msgid ""
 " from the :menuselection:`Layer -->` menu or clicking the "
 "|dataSourceManager| :sup:`Open Data Source Manager` button."
 msgstr ""
-"Apri la finestra di dialogo :menuselection:`Data Source Manager`, o "
+"Apri la finestra di dialogo :menuselection:`Gestore delle Sorgenti Dati`, o "
 "selezionala dal menu :menuselection:`Layer -->` o cliccando il pulsante "
 "|dataSourceManager| :sup:`Apri Gestore delle Sorgenti Dati`."
 
@@ -1637,12 +1672,61 @@ msgstr ""
 "Nella finestra di dialogo :guilabel:`Importa DWG/DXF`, per importare il file"
 " Disegno nel Geopackage:"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:662
+msgid ""
+"Input the location of the :guilabel:`Source drawing`, i.e. the DWG/DXF "
+"drawing file to import."
+msgstr ""
+"Immetti il percorso del :guilabel:`Disegno di provenienza`, cioè il file di "
+"disegno DWG/DXF da importare."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:664
 msgid ""
 "Specify the coordinate reference system of the data in the drawing file."
 msgstr ""
 "Specifica il sistema di riferimento delle coordinate dei dati del file "
 "DWG/DXF."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:665
+msgid ""
+"Input the location of the :guilabel:`Target package`, i.e. the GeoPackage "
+"file that will store the data. If an existing file is provided, then it will"
+" be overwritten."
+msgstr ""
+"Immetti il percorso del :guilabel:`Pacchetto destinazione`, cioè il file "
+"GeoPackage che memorizzerà i dati. Se viene fornito un file esistente, "
+"questo verrà sovrascritto."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:668
+msgid "Choose how to import ``blocks`` with the dedicated combobox:"
+msgstr ""
+"Scegli come importare i ``blocchi'' con la casella combinata dedicata:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:670
+msgid ""
+":guilabel:`Expand Block Geometries`: imports the blocks in the drawing file "
+"as normal elements."
+msgstr ""
+":guilabel:`Espandi geometrie blocco`: importa i blocchi nel file di disegno "
+"come elementi normali."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:671
+msgid ""
+":guilabel:`Expand Block Geometries and Add Insert Points`: imports the "
+"blocks in the drawing file as normal elements and adds the insertion point "
+"as a point layer."
+msgstr ""
+":guilabel:`Espandi Geometrie Blocco e Aggiungi Punti di Inserimento`: "
+"importa i blocchi nel file di disegno come elementi normali e aggiunge i "
+"punti di inserimento come layer di punti."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:672
+msgid ""
+":guilabel:`Add Only Insert Points`: adds the blocks insertion point as a "
+"point layer."
+msgstr ""
+":guilabel:`Aggiungere solo Punti di Inserimento`: aggiunge i punti di "
+"inserimento dei blocchi come layer di punti."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:674
 msgid ""
@@ -1651,6 +1735,18 @@ msgid ""
 msgstr ""
 "Scegli |checkbox| :guilabel:`Usa curve` per trasformare i layer importati in"
 " un tipo di geometria ``curva``."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:676
+msgid ""
+"Use the :guilabel:`Import` button to import the drawing into the destination"
+" GeoPackage file. The GeoPackage database will be automatically populated "
+"with the drawing file content. Depending on the size of the file, this can "
+"take some time."
+msgstr ""
+"Utilizza il pulsante :guilabel:`Importa` per importare il disegno nel file "
+"GeoPackage di destinazione. Il database del GeoPackage verrà automaticamente"
+" popolato con il contenuto del file di disegno. A seconda delle dimensioni "
+"del file, questa operazione può richiedere del tempo."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:682
 msgid ""
@@ -1663,6 +1759,15 @@ msgstr ""
 "database di GeoPackage, la cornice nella metà inferiore della finestra di "
 "dialogo è popolata con la lista dei layer provenienti dal file importato. Lì"
 " puoi selezionare quali layer aggiungere al progetto QGIS:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:687
+msgid ""
+"At the top, set a :guilabel:`Group name` to group the drawing files in the "
+"project. By default this is set to the filename of the source drawing file."
+msgstr ""
+"In alto, imposta un :guilabel:`Nome gruppo` per raggruppare i file di "
+"disegno nel progetto. Per impostazione predefinita, è impostato sul nome del"
+" file di disegno di origine."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:689
 msgid ""
@@ -1890,8 +1995,8 @@ msgid ""
 "|addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing "
 ":kbd:`Ctrl+Shift+G`"
 msgstr ""
-"|addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` o digitando "
-":kbd:`Ctrl+Shift+G`"
+"|addHanaLayer| :menuselection:`Aggiungi Layer SAP HANA Spatial...` o "
+"digitando :kbd:`Ctrl+Shift+G`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1631
 msgid "addHanaLayer"
@@ -2297,6 +2402,20 @@ msgstr ""
 msgid "The service file can look like this::"
 msgstr "Il file di servizio può essere simile a questo:"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:970
+msgid ""
+"There are two services in the above example: ``water_service`` and "
+"``wastewater_service``. You can use these to connect from QGIS, pgAdmin, "
+"etc. by specifying only the name of the service you want to connect to "
+"(without the enclosing brackets). If you want to use the service with "
+"``psql``, you can do ``psql service=water_service``."
+msgstr ""
+"Nell'esempio precedente ci sono due servizi: ``water_service'' e "
+"``wastewater_service''. Puoi utilizzarli per connetterti da QGIS, pgAdmin, "
+"ecc. specificando solo il nome del servizio a cui vuoi connetterti (senza le"
+" parentesi graffe). Se vuoi usare il servizio con ``psql'', puoi usare "
+"``psql service=water_service''."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:976
 msgid ""
 "You can find all the PostgreSQL parameters `here "
@@ -2315,6 +2434,20 @@ msgid ""
 msgstr ""
 "Se non vuoi salvare le password nel file di servizio puoi usare l'opzione "
 "`.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:984
+msgid "**QGIS Server and service**"
+msgstr "**Server QGIS e servizio**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:986
+msgid ""
+"When using a service file and QGIS Server, you must configure the service on"
+" the server side as well. You can follow the :ref:`QGIS Server <QGIS-Server-"
+"manual>` documentation."
+msgstr ""
+"Quando si utilizza un file di servizio e un server QGIS, devi configurare il"
+" servizio anche sul lato server. Puoi cosultare la documentazione :ref:`QGIS"
+" Server <QGIS-Server-manual>`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:989
 msgid ""
@@ -2545,6 +2678,143 @@ msgstr ""
 msgid "Connecting to MS SQL Server"
 msgstr "Connessione a MS SQL Server"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1086
+msgid ""
+"As mentioned in :ref:`vector_create_stored_connection` QGIS allows you to "
+"create MS SQL Server connection through :guilabel:`Data Source Manager`."
+msgstr ""
+"Come indicato in :ref:`vector_create_stored_connection` QGIS ti permette di "
+"creare una iconnessione a MS SQL Server attraverso :guilabel:`Gestore delle "
+"Sorgenti Dati`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1094
+msgid "MS SQL Server Connection"
+msgstr "Connessione Server MS SQL"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1096
+msgid ""
+"To create a new MS SQL Server connection, you need to provide some of the "
+"following information in the :guilabel:`Connection Details` dialog:"
+msgstr ""
+"Per creare una nuova connessione a MS SQL Server, devi fornire alcune delle "
+"seguenti informazioni nella finestra di dialogo :guilabel:`Dettagli "
+"Connessione`:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1099
+msgid ":guilabel:`Connection name`"
+msgstr ":guilabel:`Nome connessione`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1100
+msgid ":guilabel:`Provider/DNS`"
+msgstr ":guilabel:`Provider/DNS`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1101
+msgid ":guilabel:`Host`"
+msgstr ":guilabel:`Host`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1102
+msgid ""
+":guilabel:`Login` information. You can choose to |checkbox| :guilabel:`Save`"
+" your credentials."
+msgstr ""
+"Informazioni di :guilabel:`Login`. Puoi scegliere l'opzione |checkbox| "
+":guilabel:`Salva` per le tue credenziali."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1105
+msgid ""
+"Navigate to the :guilabel:`Database Details` section and click the "
+":guilabel:`List Databases` button to view the available datasets. Select "
+"datasets that you want, then press :guilabel:`OK`. Optionally, you can also "
+"perform a :guilabel:`Test Connection`. Once you click :guilabel:`OK` the "
+":guilabel:`Create a New MS SQL Server Connection` dialog will close and in "
+"the :guilabel:`Data Source Manager` press :guilabel:`Connect`, select a "
+"layer and then click :guilabel:`Add`."
+msgstr ""
+"Passa alla sezione :guilabel:`Dettagli database` e fai clic sul pulsante "
+":guilabel:`Elenco database` per visualizzare i set di dati disponibili. "
+"Seleziona i set di dati desiderati e premi :guilabel:`OK`. Opzionalmente, "
+"puoi anche eseguire una :guilabel:`Prova Connessione`. Una volta fatto clic "
+"su :guilabel:`OK`, la finestra di dialogo :guilabel:`Crea una Nuova "
+"Connessione MS SQL Server` si chiude e nel :guilabel:`Gestore delle Sorgenti"
+" Dati` premi :guilabel:`Connetti`, seleziona un layer e poi fai clic su "
+":guilabel:`Aggiungi`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1113
+msgid "Optionally, you can activate the following options:"
+msgstr "Se necessario, puoi attivare le seguenti opzioni:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1115
+msgid ""
+"|checkbox| :guilabel:`Only look in the geometry_columns metadata table`."
+msgstr ""
+"|checkbox| :guilabel:`Cerca solamente nella tabella di metadati di "
+"geometry_columns`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1116
+msgid ""
+"|checkbox| :guilabel:`Use layer extent from geometry_columns table`, this "
+"checkbox is dependent on the first one; it remains disabled unless the first"
+" option is checked."
+msgstr ""
+"|checkbox| :guilabel:`Usa estensione del layer dalla tabella "
+"geometry_columns`, questa casella di controllo dipende dalla prima; rimane "
+"disabilitata se la prima opzione non è selezionata."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1119
+msgid "|checkbox| :guilabel:`Use primary key from geometry_columns table`"
+msgstr ""
+"|checkbox| :guilabel:`Usa la chiave primaria dalla tabella geometry_columns`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1120
+msgid ""
+"|checkbox| :guilabel:`Also list table with no geometry`: tables without a "
+"geometry column attached will also be shown in the available table list."
+msgstr ""
+"|checkbox| :guilabel:`Mostra anche le tabelle senza geometria`: anche le "
+"tabelle senza una colonna di geometria saranno mostrate nell'elenco delle "
+"tabelle disponibili."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1122
+msgid ""
+"|checkbox| :guilabel:`Use estimated table parameters`: only estimated table "
+"metadata will be used. This avoids a slow table scan, but may result in "
+"incorrect layer properties such as layer extent."
+msgstr ""
+"|checkbox| :guilabel:`Usa i metadati stimati della tabella`: verranno "
+"utilizzati solo i metadati stimati della tabella. Questo evita una lenta "
+"scansione della tabella, ma può causare proprietà errate del layer, come "
+"l'estensione del layer."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1125
+msgid ""
+"|checkbox| :guilabel:`Skip invalid geometry handling`: all handling of "
+"records with invalid geometry will be disabled. This speeds up the provider,"
+" however, if any invalid geometries are present in a table then the result "
+"is unpredictable and may include missing records. Only check this option if "
+"you are certain that all geometries present in the database are valid, and "
+"any newly added geometries or tables will also be valid."
+msgstr ""
+"|checkbox| :guilabel:`Salta la gestione della geometria non valida`: tutta "
+"la gestione dei record con geometria non valida sarà disabilitata. Questo "
+"velocizza il provider, ma se in una tabella sono presenti geometrie non "
+"valide, il risultato è imprevedibile e può comportare record mancanti. "
+"Seleziona questa opzione solo se sei certo che tutte le geometrie presenti "
+"nel database siano valide e che anche le nuove geometrie o tabelle aggiunte "
+"siano valide."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1131
+msgid ""
+"|checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter"
+" schemas for MS SQL connection. If enabled, only checked schemas will be "
+"displayed. You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` "
+"any schema in the list."
+msgstr ""
+"|checkbox| :guilabel:`Usa Solo un Sottoinsieme di Schemi` consente di "
+"filtrare gli schemi per la connessione a MS SQL. Se abilitato, verranno "
+"visualizzati solo gli schemi controllati. Puoi fare clic con il pulsante "
+"destro del mouse su :guilabel:`Controlla` o :guilabel:`Non controllare` "
+"qualsiasi schema dell'elenco."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1139
 msgid "Connecting to SAP HANA"
 msgstr "Connessione a SAP HANA"
@@ -2630,11 +2900,11 @@ msgid ""
 "can either connect to a tenant with the name given at :guilabel:`Tenant "
 "database` or you can connect to the system database."
 msgstr ""
-":guilabel:`Mode`: Specifica la modalità di esecuzione dell'istanza SAP HANA."
-" Questa impostazione viene presa in considerazione solo se "
-":guilabel:`Identifier` è impostato su :guilabel:`Instance Number`. Se il "
-"database ospita più container, è possibile connettersi a un tenant con il "
-"nome indicato in :guilabel:`Tenant database` oppure al database di sistema."
+":guilabel:`Modalità`: Specifica la modalità di esecuzione dell'istanza SAP "
+"HANA. Questa impostazione viene presa in considerazione solo se "
+":guilabel:`Identificativo` è impostato su :guilabel:`Numero Istanza`. Se il "
+"database ospita più contenitori, puoi connetterti con il nome indicato in "
+":guilabel:`Database Tenant` oppure al database di sistema."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1178
 msgid ""
@@ -2679,10 +2949,10 @@ msgid ""
 "work on |win| and :guilabel:`commoncrypto` requires CommonCryptoLib to be "
 "installed."
 msgstr ""
-":guilabel:`Provider`: Specifica il provider della libreria crittografica "
-"usata per la comunicazione SSL. :guilabel:`sapcrypto` dovrebbe funzionare su"
-" tutte le piattaforme, :guilabel:`openssl` dovrebbe funzionare su |nix| "
-"|osx|, :guilabel:`mscrypto` dovrebbe funzionare su |win| e "
+":guilabel:`Sorgente dati`: Specifica il provider della libreria "
+"crittografica usata per la comunicazione SSL. :guilabel:`sapcrypto` dovrebbe"
+" funzionare su tutte le piattaforme, :guilabel:`openssl` dovrebbe funzionare"
+" su |nix| |osx|, :guilabel:`mscrypto` dovrebbe funzionare su |win| e "
 ":guilabel:`commoncrypto` richiede l'installazione di CommonCryptoLib."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1196
@@ -2691,9 +2961,9 @@ msgid ""
 "certificate will be validated using the truststore given in :guilabel:`Trust"
 " store file with public key`."
 msgstr ""
-"|checkbox| `Convalida il certificato SSL`: Se selezionata, il certificato "
-"SSL sarà convalidato utilizzando il truststore indicato in :guilabel:`File "
-"del trust store con chiave pubblica`."
+"|checkbox| :guilabel:`Convalida il certificato SSL`: Se selezionata, il "
+"certificato SSL sarà convalidato utilizzando il truststore indicato in "
+":guilabel:`File del Trust store con chiave pubblica`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1199
 msgid ""
@@ -2715,9 +2985,9 @@ msgid ""
 "parameter might allow to authenticate via certificate instead via user and "
 "password in future."
 msgstr ""
-":guilabel:`Keystore file with private key`: Attualmente ignorato. Questo "
-"parametro potrebbe consentire in futuro l'autenticazione tramite certificato"
-" anziché tramite utente e password."
+":guilabel:`File di Keystore con chiave privata`: Attualmente ignorato. "
+"Questo parametro potrebbe consentire in futuro l'autenticazione tramite "
+"certificato anziché tramite utente e password."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1207
 msgid ""
@@ -2728,9 +2998,9 @@ msgid ""
 " If you are using the cryptographic library CommonCryptoLib or msCrypto, "
 "then leave this property empty."
 msgstr ""
-":guilabel:`Trust store file with public key`: Specifica il percorso di un "
-"file dell'archivio di fiducia che contiene i certificati pubblici del server"
-" se si utilizza OpenSSL. In genere, l'archivio di fiducia contiene il "
+":guilabel:`File del Trust store con chiave pubblica`: Specifica il percorso "
+"di un file dell'archivio di fiducia che contiene i certificati pubblici del "
+"server se si utilizza OpenSSL. In genere, l'archivio di fiducia contiene il "
 "certificato radice o il certificato dell'autorità di certificazione che ha "
 "firmato i certificati pubblici del server. Se si utilizza la libreria "
 "crittografica CommonCryptoLib o msCrypto, lasciare questa proprietà vuota."
@@ -2764,8 +3034,8 @@ msgid ""
 "encryption`."
 msgstr ""
 "Se vuoi connetterti a un'istanza di SAP HANA Cloud, di norma devi impostare "
-":guilabel:`Port Number` su ``443`` e selezionare :guilabel:`Enable TLS/SSL "
-"encryption`."
+":guilabel:`Port Number` su ``443`` e selezionare :guilabel:`Abilita "
+"criptazione TLS/SSL`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1230
 msgid "Loading a Database Layer"
@@ -2901,6 +3171,42 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1286
 msgid "The Layer Metadata Search Panel"
 msgstr "Il Pannello Ricerca Metadati Layer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1288
+msgid ""
+"By default, QGIS can retrieve layers metadata from the connections or data "
+"providers that allow metadata storage (more details on :ref:`saving metadata"
+" to the database <savemetadatatodb>`). The :guilabel:`Metadata search` panel"
+" allows to browse the layers by their metadata and add them to the project "
+"(either with a double-click or the :guilabel:`Add` button). The list can be "
+"filtered:"
+msgstr ""
+"Per impostazione predefinita, QGIS può recuperare i metadati dei layer dalle"
+" connessioni o dai fornitori di dati che consentono la memorizzazione dei "
+"metadati (maggiori dettagli su :ref:`saving metadata to the database "
+"<savemetadatatodb>`). Il pannello :guilabel:`Ricerca metadati` consente di "
+"sfogliare i layer in base ai loro metadati e di aggiungerli al progetto (con"
+" un doppio clic o con il pulsante :guilabel:`Aggiungi`). L'elenco può essere"
+" filtrato:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1294
+msgid ""
+"by text, watching a set of metadata properties (identifier, title, abstract)"
+msgstr ""
+"dal testo, consultando un insieme di proprietà di metadati (identificativo, "
+"titolo, abstract)"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1295
+msgid ""
+"by spatial extent, using the current :ref:`project extent "
+"<project_full_extent>` or the map canvas extent"
+msgstr ""
+"per l'estensione spaziale, utilizzando l'attuale :ref:`project extent "
+"<project_full_extent>` o l'estensione della della mappa visualizzata"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1296
+msgid "by the layer (geometry) type"
+msgstr "in base al tipo di layer (geometria)"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1298
 msgid ""
@@ -3069,8 +3375,8 @@ msgid ""
 "connections, the URL overrides the default style configuration specified in "
 "the server configuration."
 msgstr ""
-"a :guilabel:`Stile URL`: un URL a una configurazione di stile MapBox GL "
-"JSON. Se fornito, lo stile verrà applicato ogni volta che i livelli della "
+"uno :guilabel:`Stile URL`: un URL a una configurazione di stile MapBox GL "
+"JSON. Se fornito, lo stile verrà applicato ogni volta che i layer della "
 "connessione vengono aggiunti a QGIS. Nel caso di connessioni al servizio di "
 "tasselli vettoriali di Arcgis, l'URL sovrascrive la configurazione di stile "
 "predefinita specificata nella configurazione del server."
@@ -3082,13 +3388,13 @@ msgid ""
 "the :ref:`authentication <authentication_index>` configuration if necessary"
 msgstr ""
 "la configurazione :ref:`authentication <authentication_index>`, se "
-"necessario."
+"necessaria."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1379
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1440
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1528
 msgid "a :guilabel:`Referer`"
-msgstr "una :guilabel:`Referer`"
+msgstr "un :guilabel:`Riferimento`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1381
 msgid ""
@@ -3165,6 +3471,19 @@ msgstr ""
 msgid "Using XYZ Tile services"
 msgstr "Usare i servizi di Tasselli XYZ"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1414
+msgid ""
+"XYZ Tile services can be added via the |addXyzLayer| :guilabel:`XYZ` tab of "
+"the :guilabel:`Data Source Manager` dialog or the contextual menu of the "
+":guilabel:`XYZ Tiles` entry in the :guilabel:`Browser` panel. By default, "
+"QGIS provides some default and ready-to-use XYZ Tiles services:"
+msgstr ""
+"I servizi Tasselli XYZ possono essere aggiunti tramite la scheda "
+":guilabel:`XYZ` della finestra di dialogo :guilabel: `Gestore delle Sorgenti"
+" Dati` o il menu contestuale della voce :guilabel:`Tiles XYZ` nel pannello "
+":guilabel:`Browser`. Per impostazione predefinita, QGIS fornisce alcuni "
+"servizi predefiniti e pronti all'uso di Tasselli XYZ:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1653
 msgid "addXyzLayer"
 msgstr "addXyzLayer"
@@ -3175,8 +3494,8 @@ msgid ""
 "global DEM source for the projects. More details and resources at "
 "https://registry.opendata.aws/terrain-tiles/"
 msgstr ""
-"|:guilabel:`Mapzen Global Terrain`, che consente un accesso immediato alla "
-"fonte DEM globale per i progetti. Maggiori dettagli e risorse su "
+"|xyz| :guilabel:`Mapzen Global Terrain`, che consente un accesso immediato "
+"alla fonte DEM globale per i progetti. Maggiori dettagli e risorse su "
 "https://registry.opendata.aws/terrain-tiles/"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1422
@@ -3189,9 +3508,26 @@ msgstr ""
 ":numref:`figure_xyz_tiles_openstreetmap` mostra la finestra di dialogo con "
 "la configurazione del servizio Tasselli XYZ di OpenStreetMap."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1426
+msgid ""
+"To add a new service, press :guilabel:`New` (respectively :guilabel:`New "
+"Connection` from the Browser panel) and provide:"
+msgstr ""
+"Per aggiungere un nuovo servizio, premere :guilabel: `Nuovo` "
+"(rispettivamente :guilabel: `Nuova connessione` dal pannello del Browser) e "
+"fornire:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1433
 msgid "XYZ Tiles - OpenStreetMap configuration"
 msgstr "Tasselli XYZ - Configurazione OpenStreetMap"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1436
+msgid ""
+"the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or "
+"``file:///local_path/{z}/{x}/{y}.png``"
+msgstr ""
+"l' :guilabel:`URL`, puoi aggiungere ``http://example.com/{z}/{x}/{y}.png`` o"
+" ``file:///local_path/{z}/{x}/{y}.png``"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1439
 msgid "the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`"
@@ -3229,6 +3565,21 @@ msgstr ""
 "mobile, pronto per essere stilizzato usando il solito :ref:`raster renderers"
 " <raster_rendering>` di QGIS."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1456
+msgid ""
+"Press :guilabel:`OK` to establish the connection. It will then be possible "
+"to:"
+msgstr ""
+"Premere :guilabel:`OK` per stabilire la connessione. Sarà quindi possibile:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1459
+msgid ""
+":guilabel:`Add` the new layer to the project; it is loaded with the name "
+"given in the settings."
+msgstr ""
+":guilabel:`Aggiungi` il nuovo layer al progetto; viene caricato con il nome "
+"specificato nelle impostazioni."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1460
 msgid ":guilabel:`Edit` the XYZ connection settings"
 msgstr ":guilabel:`Modifica` le impostazioni della connessione XYZ"
@@ -3240,9 +3591,45 @@ msgid ""
 msgstr ""
 ":menuselection:`Esporta`, :ref:`saving it as a raster <general_saveas>`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1472
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`XYZ` entry in :guilabel:`Data Source "
+"Manager` dialog or its contextual menu in the :guilabel:`Browser` panel. "
+"Likewise, they can be added from a file (:guilabel:`Load Connections`)."
+msgstr ""
+"Le configurazioni possono essere salvate in un file :file:`.XML` "
+"(:guilabel:`Salva Connessioni`) attraverso la voce :guilabel:`XYZ` nella "
+"finestra di dialogo :guilabel:`Gestore delle Sorgenti Dati` o il suo menu "
+"contestuale nel pannello :guilabel:`Browser`. Allo stesso modo, possono "
+"essere aggiunti da un file (:guilabel:`Carica connessioni`)."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1477
 msgid "The XML file for OpenStreetMap looks like this:"
 msgstr "Il file XML per OpenStreetMap si presenta così:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1488
+msgid "**Loading XYZ tiles without creating a connection**"
+msgstr "**Caricamento deei tasselli XYZ senza creare una connessione**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1490
+msgid ""
+"It is also possible to add XYZ tiles to a project without necessarily "
+"storing its connection settings in you user profile (e.g. for a dataset you "
+"may need once). In the :menuselection:`Data Source Manager --> XYZ` tab, "
+"edit any properties in the :guilabel:`Connection Details` group. The "
+":guilabel:`Name` field above should turn into ``Custom``. Press "
+":guilabel:`Add` to load the layer in the project. It will be named by "
+"default ``XYZ Layer``."
+msgstr ""
+"È anche possibile aggiungere tasselli XYZ a un progetto senza "
+"necessariamente memorizzare le impostazioni di connessione nel proprio "
+"profilo utente (ad esempio, per un set di dati che può servire una volta "
+"sola). Nella scheda :menuselection:`Gestore delle Sorgenti Dati --> XYZ`, "
+"modifica le proprietà nel gruppo :guilabel:`Dettagli Connessione`. Il campo "
+"prima di :guilabel:`Nome` dovrebbe diventare ``Personalizzato``. Premi "
+":guilabel: `Aggiungi` per caricare il layer nel progetto. Il nome "
+"predefinito è ``XYZ Layer``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1498
 msgid "Examples of XYZ Tile services:"
@@ -3307,11 +3694,11 @@ msgstr "l' :guilabel:`URL`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1525
 msgid "a :guilabel:`Community endpoint URL`"
-msgstr "un :guilabel:`Community endpoint URL`"
+msgstr "un :guilabel:`URL dell'endpoint della Comunità`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1526
 msgid "a :guilabel:`Content endpoint URL`"
-msgstr "un :guilabel:`Content endpoint URL`"
+msgstr "un :guilabel:`URL dell'endpoint del contenuto`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1532
 msgid ""
@@ -3417,3 +3804,66 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1568
 msgid ":menuselection:`Export layer... --> To File`"
 msgstr ":menuselection:`Esporta layer... --> su File`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1580
+msgid "Using 3D tiles services"
+msgstr "Utilizzare servizi tasselli 3D"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1582
+msgid ""
+"To load a 3D tiles into QGIS, use the |addTiledSceneLayer| :guilabel:`Scene`"
+" tab in the :guilabel:`Data Source Manager` dialog."
+msgstr ""
+"Per caricare tasselli 3D in QGIS, utilizza la scheda |addTiledSceneLayer| "
+":guilabel:`Scena` nella finestra di dialogo :guilabel: `Gestore delle "
+"Sorgenti Dati`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1649
+msgid "addTiledSceneLayer"
+msgstr "addTiledSceneLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1590
+msgid "Data Source Manager - Scene"
+msgstr "Gestore delle Sorgenti Dati - Scena"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1592
+msgid ""
+"Create a :guilabel:`New Cesium 3D Tiles Connection` by clicking on "
+":guilabel:`New`. Add :guilabel:`Name` and :guilabel:`URL` or add local "
+"tileset file."
+msgstr ""
+"Crea una :guilabel: `Nuova Connessione Tasselli 3D Cesium` facendo clic su "
+":guilabel: `Nuovo`. Aggiungi :guilabel:`Nome` e :guilabel:`URL` o aggiungi "
+"un file tileset locale."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1596
+msgid "Support for 3D tiles:"
+msgstr "Supporto per tasselli 3D:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1598
+msgid "Remote source - ``http://example.com/tileset.json``"
+msgstr "Sorgente dati remota - ``http://example.com/tileset.json``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1599
+msgid "Local files - ``file:///path/to/tiles/tileset.json``"
+msgstr "File locali - ``file:///path/to/tiles/tileset.json``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1606
+msgid "Tiled Scene Connection"
+msgstr "Connessione Tasselli Scena"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1608
+msgid "You can also add the service from :guilabel:`Browser Panel`."
+msgstr "Puoi aggiungere il servizio anche dal :guilabel:`Pannello browser`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1610
+msgid ""
+"After creating new connection you are able to :guilabel:`Add` the new layer "
+"to your map."
+msgstr ""
+"Dopo aver creato una nuova connessione, puoi premere :guilabel: `Aggiungi` "
+"il nuovo layer alla tua mappa."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1618
+msgid "3D Tiles Layer - Textured"
+msgstr "Layer Tasselli 3D - testurizzato"
