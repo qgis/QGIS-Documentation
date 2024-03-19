@@ -2,27 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
+# Harrissou Sant-anna, 2024
+# marcobra <marcobra.ubuntu@gmail.com>, 2024
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-30 19:51+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traduzione è uno sforzo comunitario a cui puoi unirti. Questa pagina è "
+"attualmente tradotta al |translation progress|."
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:25
 msgid "Geometry Handling"
@@ -157,17 +167,18 @@ msgstr ""
 "Restituisce un valore dell'enumerazione :class:`QgsWkbTypes.Type "
 "<qgis.core.QgsWkbTypes>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:167
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:164
 msgid ""
 "As an alternative, one can use the :meth:`type() "
 "<qgis.core.QgsGeometry.type>` method which returns a value from the "
-":class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` enumeration."
+":meth:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>` "
+"enumeration."
 msgstr ""
 "In alternativa, si può usare il metodo :meth:`type() "
 "<qgis.core.QgsGeometry.type>` che restituisce un valore dell'enumerazione "
-":class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>`."
+":meth:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:171
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:178
 msgid ""
 "You can use the :meth:`displayString() "
 "<qgis.core.QgsWkbTypes.displayString>` function to get a human readable "
@@ -177,7 +188,7 @@ msgstr ""
 "<qgis.core.QgsWkbTypes.displayString>` per ottenere un tipo di geometria "
 "leggibile in chiaro."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:189
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:197
 msgid ""
 "There is also a helper function :meth:`isMultipart() "
 "<qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is "
@@ -187,7 +198,7 @@ msgstr ""
 "<qgis.core.QgsGeometry.isMultipart>` per scoprire se una geometria è "
 "multipart o meno."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:192
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:200
 msgid ""
 "To extract information from a geometry there are accessor functions for "
 "every vector type. Here's an example on how to use these accessors:"
@@ -196,7 +207,7 @@ msgstr ""
 "per ogni tipologia di vettore. Ecco un esempio di utilizzo di queste "
 "funzioni di selezione:"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:212
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:220
 msgid ""
 "The tuples (x,y) are not real tuples, they are :class:`QgsPoint "
 "<qgis.core.QgsPoint>` objects, the values are accessible with :meth:`x() "
@@ -206,7 +217,7 @@ msgstr ""
 "<qgis.core.QgsPoint>`, i cui valori sono accessibili con i metodi :meth:`x()"
 " <qgis.core.QgsPoint.x>` e :meth:`y() <qgis.core.QgsPoint.y>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:216
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:224
 msgid ""
 "For multipart geometries there are similar accessor functions: "
 ":meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, "
@@ -218,7 +229,7 @@ msgstr ""
 ":meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>` e "
 ":meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:222
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:230
 msgid ""
 "It is possible to iterate over all the parts of a geometry, regardless of "
 "the geometry's type. E.g."
@@ -226,7 +237,7 @@ msgstr ""
 "È possibile iterare su tutte le parti di una geometria, indipendentemente "
 "dal tipo di geometria. Ad esempio"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:257
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:265
 msgid ""
 "It's also possible to modify each part of the geometry using "
 ":meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` method."
@@ -234,11 +245,11 @@ msgstr ""
 "È anche possibile modificare ciascuna parte della geometria usando il metodo"
 " :meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:279
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:287
 msgid "Geometry Predicates and Operations"
 msgstr "Predicati ed Operazioni delle Geometrie"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:281
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:289
 msgid ""
 "QGIS uses GEOS library for advanced geometry operations such as geometry "
 "predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, "
@@ -256,7 +267,7 @@ msgstr ""
 "calcolare le proprietà geometriche delle geometrie, come l'area (nel caso "
 "dei poligoni) o le lunghezze (per poligoni e linee)."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:287
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:295
 msgid ""
 "Let's see an example that combines iterating over the features in a given "
 "layer and performing some geometric computations based on their geometries. "
@@ -268,8 +279,8 @@ msgstr ""
 "codice seguente calcolerà e stamperà l'area e il perimetro di ogni countrie "
 "nel layer ``countries'' del nostro progetto QGIS."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:292
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:331
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:300
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:339
 msgid ""
 "The following code assumes ``layer`` is a :class:`QgsVectorLayer "
 "<qgis.core.QgsVectorLayer>` object that has Polygon feature type."
@@ -278,7 +289,7 @@ msgstr ""
 ":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` che ha una tipologia "
 "Poligono."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:322
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:330
 msgid ""
 "Now you have calculated and printed the areas and perimeters of the "
 "geometries. You may however quickly notice that the values are strange. That"
@@ -298,11 +309,11 @@ msgstr ""
 "occorre utilizzare la classe :class:`QgsDistanceArea "
 "<qgis.core.QgsDistanceArea>`, che può eseguire calcoli basati su ellissoidi:"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:367
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:375
 msgid "Alternatively, you may want to know the distance between two points."
 msgstr "In alternativa, potresti voler conoscere la distanza tra due punti."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:387
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:395
 msgid ""
 "You can find many example of algorithms that are included in QGIS and use "
 "these methods to analyze and transform vector data. Here are some links to "
@@ -312,7 +323,7 @@ msgstr ""
 "utilizzare questi metodi per analizzare e trasformare i dati vettoriali. Di "
 "seguito i link al codice di alcuni di questi."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:391
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:399
 msgid ""
 "Distance and area using the :class:`QgsDistanceArea "
 "<qgis.core.QgsDistanceArea>` class: :source:`Distance matrix algorithm "
@@ -322,7 +333,7 @@ msgstr ""
 "<qgis.core.QgsDistanceArea>`: :source:`Distance matrix algorithm "
 "<python/plugins/processing/algs/qgis/PointDistance.py>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:393
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:401
 msgid ""
 ":source:`Lines to polygons algorithm "
 "<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"
