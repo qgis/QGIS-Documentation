@@ -205,27 +205,23 @@ For more advanced controls, press the |editTable| :sup:`Organize columns...`
 button from the dialog toolbar or choose :guilabel:`Organize columns...`
 in a column header contextual menu.
 
-.. _figure_organize_columns:
-
-.. figure:: img/organize_table_columns.png
-   :align: center
-
-   Organize Table Columns Dialog
-
 In the new dialog, you can:
 
 * check/uncheck columns you want to show or hide: a hidden column will
-  disappear from every instances of the attribute table dialog until it is
-  actively restored
+  disappear from every instance of the attribute table dialog until it is
+  actively restored.
+   
+   * choose :guilabel:`Show All` to display all the fields (columns) and actions in the table 
+   * choose :guilabel:`Hide All` to hide all the fields (columns) and actions in the table,
+   * use the :guilabel:`Toggle selection` to invert visibility of the current selection of columns.
+   
 * drag-and-drop items to reorder the columns in the attribute table. Note that
   this change is for the table rendering and does not alter the fields order in
   the layer datasource
 * add a new virtual :guilabel:`Actions` column that displays in each row a
   drop-down box or a button list of enabled actions.
   See :ref:`actions_menu` for more information about actions
-* choose :guilabel:`Select All` to select all columns or 
-* :guilabel:`Deselect All` to deselect all columns,
-* use the :guilabel:`Toggle selection` to invert the current selection of columns.
+
 
 .. _sort_columns:
 
