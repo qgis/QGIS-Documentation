@@ -5,19 +5,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
 # marcobra <marcobra.ubuntu@gmail.com>, 2024
+# Stefano Campus <skampus@gmail.com>, 2024
+# Transifex Bot <>, 2024
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-03-08 11:24+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2024\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,6 +56,10 @@ msgstr "Funzioni di Aggregazione"
 msgid ""
 "This group contains functions which aggregate values over layers and fields."
 msgstr "Questo gruppo contiene funzioni che aggregano valori su layer e campi"
+
+#: ../../docs/user_manual/expressions/text_include.rst:7
+msgid "Show/hide list of functions"
+msgstr "Mostrare/nascondere l'elenco delle funzioni"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:12
 msgid "aggregate"
@@ -1369,6 +1374,38 @@ msgstr ""
 "expression:=\"name\", concatenator:=',')`` → elenco separato da virgole del "
 "campo nome per tutti gli elementi nel layer rail_stations"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:62
+msgid ""
+"``aggregate(layer:='countries', aggregate:='max', expression:=\"code\", "
+"filter:=intersects( @geometry, geometry(@parent) ) )`` → The country code of"
+" an intersecting country on the layer 'countries'"
+msgstr ""
+"``aggregate(layer:='countries', aggregate:='max', expression:=\"code\", "
+"filter:=intersects( @geometry, geometry(@parent) ) )`` → The country code of"
+" an intersecting country on the layer 'countries'"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:63
+msgid ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\",filter:=contains("
+" @atlas_geometry, @geometry ) )`` → sum of all values from the passengers "
+"field in the rail_stations within the current atlas feature"
+msgstr ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\",filter:=contains("
+" @atlas_geometry, @geometry ) )`` → sum of all values from the passengers "
+"field in the rail_stations within the current atlas feature"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:64
+msgid ""
+"``aggregate(layer:='rail_stations', aggregate:='collect', "
+"expression:=centroid(@geometry), filter:=\"region_name\" = "
+"attribute(@parent,'name') )`` → aggregates centroid geometries of the "
+"rail_stations of the same region as current feature"
+msgstr ""
+"``aggregate(layer:='rail_stations', aggregate:='collect', "
+"expression:=centroid(@geometry), filter:=\"region_name\" = "
+"attribute(@parent,'name') )`` → aggregates centroid geometries of the "
+"rail_stations of the same region as current feature"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:72
 msgid "array_agg"
 msgstr "array_agg"
@@ -1498,6 +1535,21 @@ msgstr "collect(expression, [group_by], [filter])"
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:109
 msgid "**expression** - geometry expression to aggregate"
 msgstr "**espression** - espressione geometrica di aggregazione"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:113
+msgid "``collect( @geometry )`` → multipart geometry of aggregated geometries"
+msgstr ""
+"``collect( @geometry )`` → multipart geometry of aggregated geometries"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:114
+msgid ""
+"``collect( centroid(@geometry), group_by:=\"region\", filter:= \"use\" = "
+"'civilian' )`` → aggregated centroids of the civilian features based on "
+"their region value"
+msgstr ""
+"``collect( centroid(@geometry), group_by:=\"region\", filter:= \"use\" = "
+"'civilian' )`` → aggregated centroids of the civilian features based on "
+"their region value"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:122
 msgid "concatenate"
@@ -1938,7 +1990,7 @@ msgstr ""
 "id di tutte gli elementi figli corrispondenti utilizzando la relazione "
 "'my_relation'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:34
+#: ../../docs/user_manual/expressions/functions_list.rst:32
 msgid "Further reading: :ref:`vector_relations`"
 msgstr "Ulteriori informazioni: :ref:`vector_relations`"
 
@@ -1978,11 +2030,11 @@ msgstr ""
 "``sum(\"population\",group_by:=\"state\")`` → valore somma della population,"
 " raggruppato per il campo state"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:44
+#: ../../docs/user_manual/expressions/functions_list.rst:42
 msgid "Array Functions"
 msgstr "Funzioni Array"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:46
+#: ../../docs/user_manual/expressions/functions_list.rst:44
 msgid ""
 "This group contains functions to create and manipulate arrays (also known as"
 " list data structures). The order of values within the array matters, unlike"
@@ -2307,7 +2359,7 @@ msgstr "``array_get(array('a','b','c'),1)`` → 'b'"
 msgid "``array_get(array('a','b','c'),-1)`` → 'c'"
 msgstr "``array_get(array('a','b','c'),-1)`` → 'c'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:61
+#: ../../docs/user_manual/expressions/functions_list.rst:57
 msgid ""
 "You can also use the :ref:`index operator ([]) "
 "<expression_function_Operators_index>` to get a value from an array."
@@ -3058,6 +3110,16 @@ msgstr ""
 " 3 2, 5 8)),LineString (3 2, 4 2))'))`` → un array di geometrie poligono e "
 "linea"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:533
+msgid ""
+"``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon"
+" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
+"1, 3 2, 5 8))'"
+msgstr ""
+"``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon"
+" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
+"1, 3 2, 5 8))'"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:534
 msgid ""
 "``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
@@ -3144,11 +3206,11 @@ msgstr "``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]"
 msgid "``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]"
 msgstr "``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:69
+#: ../../docs/user_manual/expressions/functions_list.rst:65
 msgid "Color Functions"
 msgstr "Funzioni colore"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:71
+#: ../../docs/user_manual/expressions/functions_list.rst:67
 msgid "This group contains functions for manipulating colors."
 msgstr "Questo gruppo contiene funzioni per la manipolazione dei colori."
 
@@ -3646,7 +3708,7 @@ msgstr "se il fattore è 0 o negativo, il valore risultante non è prevedibile."
 msgid "``darker('200,10,30', 200)`` → '100,5,15,255'"
 msgstr "``darker('200,10,30', 200)`` → '100,5,15,255'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:83
+#: ../../docs/user_manual/expressions/functions_list.rst:77
 msgid "Further reading: :ref:`expression_function_Color_lighter`"
 msgstr "Ulteriori informazioni: :ref:`expression_function_Color_lighter`"
 
@@ -3687,7 +3749,7 @@ msgstr ""
 msgid "``lighter('200,10,30', 200)`` → '255,158,168,255'"
 msgstr "``lighter('200,10,30', 200)`` → '255,158,168,255'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:89
+#: ../../docs/user_manual/expressions/functions_list.rst:83
 msgid "Further reading: :ref:`expression_function_Color_darker`"
 msgstr "Ulteriori informazioni: :ref:`expression_function_Color_darker`"
 
@@ -3711,7 +3773,7 @@ msgstr "**name** - il nome di un colore"
 msgid "``project_color('Logo color')`` → '20,140,50'"
 msgstr "``project_color('Logo color')`` → '20,140,50'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:95
+#: ../../docs/user_manual/expressions/functions_list.rst:89
 msgid "Further reading: :ref:`setting project colors <project_colors>`"
 msgstr ""
 "Ulteriori informazioni: :ref:`setting project colors <project_colors>`"
@@ -3787,7 +3849,7 @@ msgstr "ramp_color(ramp, value)"
 msgid "**ramp** - the color ramp"
 msgstr "**ramp** - La scala di colori"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:101
+#: ../../docs/user_manual/expressions/functions_list.rst:95
 msgid "Further reading: :ref:`color-ramp`, :ref:`color_ramp_widget`"
 msgstr "Ulteriori informazioni: :ref:`color-ramp`, :ref:`color_ramp_widget`"
 
@@ -3827,11 +3889,11 @@ msgstr ""
 msgid "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
 msgstr "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:108
+#: ../../docs/user_manual/expressions/functions_list.rst:102
 msgid "Conditional Functions"
 msgstr "Funzioni Condizionali"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:110
+#: ../../docs/user_manual/expressions/functions_list.rst:104
 msgid ""
 "This group contains functions to handle conditional checks in expressions."
 msgstr ""
@@ -4173,11 +4235,11 @@ msgstr "``try( to_int( 'a' ), 0 )`` → 0"
 msgid "``try( to_date( 'invalid_date' ) )`` → NULL"
 msgstr "``try( to_date( 'invalid_date' ) )`` → NULL"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:125
+#: ../../docs/user_manual/expressions/functions_list.rst:117
 msgid "Conversions Functions"
 msgstr "Funzioni di conversione"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:127
+#: ../../docs/user_manual/expressions/functions_list.rst:119
 msgid ""
 "This group contains functions to convert one data type to another (e.g., "
 "string from/to integer, binary from/to string, string to date, ...)."
@@ -4819,11 +4881,11 @@ msgstr "``to_time('12:34','HH:mm')`` → 12:34:00"
 msgid "``to_time('12:34','HH:mm','fr')`` → 12:34:00"
 msgstr "``to_time('12:34','HH:mm','fr')`` → 12:34:00"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:141
+#: ../../docs/user_manual/expressions/functions_list.rst:131
 msgid "Custom Functions"
 msgstr "Funzioni personalizzate"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:143
+#: ../../docs/user_manual/expressions/functions_list.rst:133
 msgid ""
 "This group contains functions created by the user. See "
 ":ref:`function_editor` for more details."
@@ -4831,11 +4893,11 @@ msgstr ""
 "Questo gruppo contiene funzioni create dall'utente. Vedi "
 ":ref:`function_editor` per maggiori dettagli."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:148
+#: ../../docs/user_manual/expressions/functions_list.rst:138
 msgid "Date and Time Functions"
 msgstr "Funzioni di data e ora"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:150
+#: ../../docs/user_manual/expressions/functions_list.rst:140
 msgid ""
 "This group contains functions for handling date and time data. This group "
 "shares several functions with the :ref:`conversion_functions` (to_date, "
@@ -4847,11 +4909,11 @@ msgstr ""
 "(to_date, to_time, to_datetime, to_interval) e :ref:`string_functions` "
 "(format_date)."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:155
+#: ../../docs/user_manual/expressions/functions_list.rst:145
 msgid "**Storing date, datetime and intervals on fields**"
 msgstr "**Memorizzazione di data, datetime e intervalli su campi**"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:157
+#: ../../docs/user_manual/expressions/functions_list.rst:147
 msgid ""
 "The ability to store *date*, *time* and *datetime* values directly on fields"
 " depends on the data source's provider (e.g., Shapefile accepts *date* "
@@ -4863,7 +4925,7 @@ msgstr ""
 "Shapefile accetta il formato *data*, ma non il formato *datetime* o *time*)."
 " I seguenti sono alcuni suggerimenti per superare questa limitazione:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:162
+#: ../../docs/user_manual/expressions/functions_list.rst:152
 msgid ""
 "*date*, *datetime* and *time* can be converted and stored in text type "
 "fields using the :ref:`format_date() "
@@ -4873,7 +4935,7 @@ msgstr ""
 " di tipo testo usando la funzione :ref:`format_date() "
 "<expression_function_Date_and_Time_format_date>`."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:166
+#: ../../docs/user_manual/expressions/functions_list.rst:156
 msgid ""
 "*Intervals* can be stored in integer or decimal type fields after using one "
 "of the date extraction functions (e.g., :ref:`day() "
@@ -5130,7 +5192,7 @@ msgstr "**format** - Modello di stringa usato per formattare la stringa."
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
 msgid "Expression"
-msgstr "Espressione"
+msgstr "Expression"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
@@ -5879,12 +5941,12 @@ msgstr "``year(to_interval('3 years'))`` → 3"
 msgid "``year(age('2012-01-01','2010-01-01'))`` → 1.9986"
 msgstr "``year(age('2012-01-01','2010-01-01'))`` → 1.9986"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:180
-#: ../../docs/user_manual/expressions/functions_list.rst:1316
+#: ../../docs/user_manual/expressions/functions_list.rst:168
+#: ../../docs/user_manual/expressions/functions_list.rst:1279
 msgid "**Some examples:**"
 msgstr "**Alcuni esempi:**"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:182
+#: ../../docs/user_manual/expressions/functions_list.rst:170
 msgid ""
 "Besides these functions, subtracting dates, datetimes or times using the "
 "``-`` (minus) operator will return an interval."
@@ -5892,7 +5954,7 @@ msgstr ""
 "Oltre a queste funzioni, le differenze di data, i tempi o le ore che usano "
 "l'operatore `` -`` (meno) restituiscono un intervallo."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:185
+#: ../../docs/user_manual/expressions/functions_list.rst:173
 msgid ""
 "Adding or subtracting an interval to dates, datetimes or times, using the "
 "``+`` (plus) and ``-`` (minus) operators, will return a datetime."
@@ -5900,23 +5962,23 @@ msgstr ""
 "Aggiungendo o sottraendo un intervallo a date, datetime o tempi, usando gli "
 "operatori ``+`` (più) e ``-`` (meno), restituisce un datetime."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:188
+#: ../../docs/user_manual/expressions/functions_list.rst:176
 msgid "Get the number of days until QGIS 3.0 release:"
 msgstr "Fino alla versione di QGIS 3.0 dà il numero di giorni:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:195
+#: ../../docs/user_manual/expressions/functions_list.rst:183
 msgid "The same with time:"
 msgstr "Lo stesso con time:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:202
+#: ../../docs/user_manual/expressions/functions_list.rst:190
 msgid "Get the datetime of 100 days from now:"
 msgstr "Ottieni il tempo di 100 giorni a partire da adesso:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:212
+#: ../../docs/user_manual/expressions/functions_list.rst:200
 msgid "Fields and Values"
 msgstr "Campi e Valori"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:214
+#: ../../docs/user_manual/expressions/functions_list.rst:202
 msgid ""
 "Contains a list of fields from the active layer, and special values. Fields "
 "list includes the ones stored in the dataset, :ref:`virtual <virtual_field>`"
@@ -5928,7 +5990,7 @@ msgstr ""
 "<virtual_field>` e :ref:`auxiliary <vector_auxiliary_storage>` e quelli di "
 ":ref:`joins <sec_joins>`."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:219
+#: ../../docs/user_manual/expressions/functions_list.rst:207
 msgid ""
 "Double-click a field name to have it added to your expression. You can also "
 "type the field name (preferably inside double quotes) or its :ref:`alias "
@@ -5938,7 +6000,7 @@ msgstr ""
 "anche digitare il nome del campo (preferibilmente all'interno di virgolette "
 "doppie) o il suo :ref:`alias <configure_field>`. "
 
-#: ../../docs/user_manual/expressions/functions_list.rst:223
+#: ../../docs/user_manual/expressions/functions_list.rst:211
 msgid ""
 "To retrieve fields values to use in an expression, select the appropriate "
 "field and, in the shown widget, choose between :guilabel:`10 Samples` and "
@@ -5954,7 +6016,7 @@ msgstr ""
 " sono accessibili anche facendo clic con il tasto destro del mouse su un "
 "campo. "
 
-#: ../../docs/user_manual/expressions/functions_list.rst:229
+#: ../../docs/user_manual/expressions/functions_list.rst:217
 msgid ""
 "To add a value to the expression you are writing, double-click on it in the "
 "list. If the value is of a string type, it should be simple quoted, "
@@ -5981,11 +6043,11 @@ msgstr "``NULL`` → un valore NULL"
 msgid "To test for NULL use an *IS NULL* or *IS NOT NULL* expression."
 msgstr "To test for NULL use an *IS NULL* or *IS NOT NULL* expression."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:244
+#: ../../docs/user_manual/expressions/functions_list.rst:230
 msgid "Files and Paths Functions"
 msgstr "Funzioni per i File e i Percorsi"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:246
+#: ../../docs/user_manual/expressions/functions_list.rst:232
 msgid "This group contains functions which manipulate file and path names."
 msgstr ""
 "Questo gruppo contiene funzioni che manipolano i nomi dei file e dei "
@@ -6198,11 +6260,11 @@ msgstr "``is_file('/home/qgis/data/country_boundaries.shp')`` → TRUE"
 msgid "``is_file('/home/qgis/data/')`` → FALSE"
 msgstr "``is_file('/home/qgis/data/')`` → FALSE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:259
+#: ../../docs/user_manual/expressions/functions_list.rst:243
 msgid "Form Functions"
 msgstr "Funzioni modulo"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:261
+#: ../../docs/user_manual/expressions/functions_list.rst:245
 msgid ""
 "This group contains functions that operate exclusively under the attribute "
 "form context. For example, in :ref:`field's widgets "
@@ -6285,11 +6347,11 @@ msgstr ""
 "``current_value( 'FIELD_NAME' )`` → Il valore attuale del campo "
 "'FIELD_NAME'."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:275
+#: ../../docs/user_manual/expressions/functions_list.rst:257
 msgid "Fuzzy Matching Functions"
 msgstr "Funzioni varie di confronto"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:277
+#: ../../docs/user_manual/expressions/functions_list.rst:259
 msgid "This group contains functions for fuzzy comparisons between values."
 msgstr "Questo gruppo contiene funzioni per confronti vari tra valori."
 
@@ -6455,11 +6517,11 @@ msgstr "``soundex('rupert')`` → 'R163'"
 msgid "``soundex('rubin')`` → 'R150'"
 msgstr "``soundex('rubin')`` → 'R150'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:290
+#: ../../docs/user_manual/expressions/functions_list.rst:270
 msgid "General Functions"
 msgstr "Funzioni Generali"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:292
+#: ../../docs/user_manual/expressions/functions_list.rst:272
 msgid "This group contains general assorted functions."
 msgstr "Questo gruppo contiene funzioni generali assortite."
 
@@ -6627,8 +6689,8 @@ msgstr "**name** - un nome di variabile"
 msgid "``var('qgis_version')`` → '2.12'"
 msgstr "``var('qgis_version')`` → '2.12'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:304
-#: ../../docs/user_manual/expressions/functions_list.rst:754
+#: ../../docs/user_manual/expressions/functions_list.rst:282
+#: ../../docs/user_manual/expressions/functions_list.rst:728
 msgid ""
 "Further reading: List of default :ref:`variables <expression_variables>`"
 msgstr ""
@@ -6674,11 +6736,11 @@ msgid "``with_variable('my_sum', 1 + 2 + 3, @my_sum * 2 + @my_sum * 5)`` → 42"
 msgstr ""
 "``with_variable('my_sum', 1 + 2 + 3, @my_sum * 2 + @my_sum * 5)`` → 42"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:313
+#: ../../docs/user_manual/expressions/functions_list.rst:291
 msgid "Geometry Functions"
 msgstr "Funzioni Geometria"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:315
+#: ../../docs/user_manual/expressions/functions_list.rst:293
 msgid ""
 "This group contains functions that operate on geometry objects (e.g. buffer,"
 " transform, $area)."
@@ -7039,9 +7101,52 @@ msgstr ""
 msgid "bearing"
 msgstr "bearing"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:156
+msgid ""
+"Returns the north-based bearing as the angle in radians measured clockwise "
+"on the ellipsoid from the vertical on point_a to point_b."
+msgstr ""
+"Restituisce l'orientamento del nord come angolo in radianti misurato in "
+"senso orario sull'ellissoide dalla verticale del punto_a al punto_b."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:162
 msgid "bearing(point_a, point_b, [source_crs], [ellipsoid])"
 msgstr "bearing(point_a, point_b, [source_crs], [ellipsoid])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:168
+msgid ""
+"**source_crs** - an optional string representing the source CRS of the "
+"points. By default the current layer's CRS is used."
+msgstr ""
+"**source_crs** - una stringa opzionale che rappresenta il SR di origine dei "
+"punti. Per impostazione predefinita, viene utilizzato il SR del layer "
+"corrente."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:169
+msgid ""
+"**ellipsoid** - an optional string representing the acronym or the "
+"authority:ID (eg 'EPSG:7030') of the ellipsoid on which the bearing should "
+"be measured. By default the current project's ellipsoid setting is used."
+msgstr ""
+"**ellipsoid** - an optional string representing the acronym or the "
+"authority:ID (eg 'EPSG:7030') of the ellipsoid on which the bearing should "
+"be measured. By default the current project's ellipsoid setting is used."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:171
+msgid ""
+"``degrees( bearing( make_point(16198544, -4534850), make_point(18736872, "
+"-1877769), 'EPSG:3857', 'EPSG:7030') )`` → 49.980071"
+msgstr ""
+"``degrees( bearing( make_point(16198544, -4534850), make_point(18736872, "
+"-1877769), 'EPSG:3857', 'EPSG:7030') )`` → 49.980071"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:172
+msgid ""
+"``degrees( bearing( make_point(18736872, -1877769), make_point(16198544, "
+"-4534850), 'EPSG:3857', 'WGS84') )`` → 219.282386"
+msgstr ""
+"``degrees( bearing( make_point(18736872, -1877769), make_point(16198544, "
+"-4534850), 'EPSG:3857', 'WGS84') )`` → 219.282386"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:180
 msgid "boundary"
@@ -7081,7 +7186,7 @@ msgstr ""
 "``geom_to_wkt(boundary(geom_from_wkt('LineString(1 1,0 0,-1 1)')))`` → "
 "'MultiPoint ((1 1),(-1 1))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:328
+#: ../../docs/user_manual/expressions/functions_list.rst:304
 msgid "Further reading: :ref:`qgisboundary` algorithm"
 msgstr "Ulteriori informazioni: :ref:`qgisboundary` algoritmo"
 
@@ -7102,6 +7207,11 @@ msgstr ""
 msgid "bounds(geometry)"
 msgstr "bounds(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``bounds(@geometry)`` → bounding box of the current feature's geometry"
+msgstr ""
+"``bounds(@geometry)`` → bounding box of the current feature's geometry"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid ""
 "``geom_to_wkt(bounds(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → "
@@ -7116,7 +7226,7 @@ msgstr ""
 "Le linee nere indicano i riquadri di delimitazione di ciascun elemento "
 "poligonale."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:334
+#: ../../docs/user_manual/expressions/functions_list.rst:310
 msgid "Further reading: :ref:`qgisboundingboxes` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisboundingboxes` "
 
@@ -7135,6 +7245,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "bounds_height(geometry)"
 msgstr "bounds_height(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``bounds_height(@geometry)`` → height of bounding box of the current "
+"feature's geometry"
+msgstr ""
+"``bounds_height(@geometry)`` → height of bounding box of the current "
+"feature's geometry"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid "``bounds_height(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 1"
@@ -7156,6 +7274,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "bounds_width(geometry)"
 msgstr "bounds_width(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"``bounds_width(@geometry)`` → width of bounding box of the current feature's"
+" geometry"
+msgstr ""
+"``bounds_width(@geometry)`` → width of bounding box of the current feature's"
+" geometry"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 msgid "``bounds_width(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 2"
@@ -7222,6 +7348,14 @@ msgstr ""
 "**miter_limit** - limite distanza quadrato, da usare quando lo stile di "
 "giunzione è impostato su 'miter'."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
+msgid ""
+"``buffer(@geometry, 10.5)`` → polygon of the current feature's geometry "
+"buffered by 10.5 units"
+msgstr ""
+"``buffer(@geometry, 10,5)`` → poligono della geometria dell'elemento "
+"corrente, bufferizzato di 10,5 unità."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
 msgid ""
 "Buffer (in yellow) of points, line, polygon with positive buffer, and "
@@ -7230,7 +7364,7 @@ msgstr ""
 "Buffer (in giallo) di punti, linea, poligono con buffer positivo e poligono "
 "con buffer negativo"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:340
+#: ../../docs/user_manual/expressions/functions_list.rst:316
 msgid "Further reading: :ref:`qgisbuffer` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisbuffer`"
 
@@ -7280,7 +7414,7 @@ msgstr ""
 msgid "Buffering line features using the m value on the vertices"
 msgstr "Buffering degli elementi lineari utilizzando il valore m sui vertici"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:346
+#: ../../docs/user_manual/expressions/functions_list.rst:322
 msgid "Further reading: :ref:`qgisbufferbym` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisbufferbym`"
 
@@ -7296,7 +7430,11 @@ msgstr "Restituisce il centro geometrico di una geometria."
 msgid "centroid(geometry)"
 msgstr "centroid(geometry)"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:352
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``centroid(@geometry)`` → a point geometry"
+msgstr "``centroid(@geometry)`` → una geometria di punti"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:328
 msgid "Further reading: :ref:`qgiscentroids` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgiscentroids`"
 
@@ -7429,7 +7567,7 @@ msgstr ""
 "``geom_to_wkt(collect_geometries(array(make_point(1,2), make_point(3,4), "
 "make_point(5,6))))`` → 'MultiPoint ((1 2),(3 4),(5 6))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:358
+#: ../../docs/user_manual/expressions/functions_list.rst:334
 msgid "Further reading: :ref:`qgiscollect` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgiscollect`"
 
@@ -7491,6 +7629,10 @@ msgstr ""
 "Restituisce un poligono possibilmente concavo che contiene tutti i punti "
 "della geometria"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
+msgid "concave_hull(geometry, target_percent, [allow_holes=False])"
+msgstr "concave_hull(geometry, target_percent, [allow_holes=False])"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
 msgid ""
 "**target_percent** - the percentage of area of the convex hull the solution "
@@ -7534,7 +7676,7 @@ msgstr ""
 "186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 "
 "28, 22 64, 30 112))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:364
+#: ../../docs/user_manual/expressions/functions_list.rst:340
 msgid "Further reading: :ref:`expression_function_GeometryGroup_convex_hull`"
 msgstr ""
 "Ulteriore lettura: :ref:`expression_function_GeometryGroup_convex_hull`"
@@ -7574,7 +7716,7 @@ msgstr ""
 "``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), "
 "geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:370
+#: ../../docs/user_manual/expressions/functions_list.rst:346
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_overlay_contains`"
 msgstr ""
@@ -7605,7 +7747,7 @@ msgstr ""
 "``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) "
 ")`` → 'POLYGON((3 3, 4 10, 4 4, 3 3))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:376
+#: ../../docs/user_manual/expressions/functions_list.rst:352
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_concave_hull`, "
 ":ref:`qgisconvexhull` algorithm"
@@ -7645,7 +7787,7 @@ msgstr ""
 "``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 "
 "4, 5 5)' ) )`` → FALSE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:383
+#: ../../docs/user_manual/expressions/functions_list.rst:359
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_overlay_crosses`"
 msgstr ""
@@ -7679,7 +7821,7 @@ msgstr ""
 "``geom_to_wkt(densify_by_count(geom_from_wkt('LINESTRING(1 1, 10 1)'), 3))``"
 " → LineString (1 1, 3.25 1, 5.5 1, 7.75 1, 10 1)"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:389
+#: ../../docs/user_manual/expressions/functions_list.rst:365
 msgid "Further reading: :ref:`qgisdensifygeometries` algorithm"
 msgstr "Ulteriore lettura: :ref:`qgisdensifygeometries` algoritmo"
 
@@ -7716,7 +7858,7 @@ msgstr ""
 "``geom_to_wkt(densify_by_distance(geom_from_wkt('LINESTRING(1 1, 10 1)'), "
 "4))`` → LineString (1 1, 4 1, 7 1, 10 1)"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:395
+#: ../../docs/user_manual/expressions/functions_list.rst:371
 msgid "Further reading: :ref:`qgisdensifygeometriesgivenaninterval` algorithm"
 msgstr ""
 "Ulteriore lettura: :ref:`qgisdensifygeometriesgivenaninterval` algoritmo"
@@ -7745,7 +7887,7 @@ msgstr ""
 "``geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), "
 "geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → 'LINESTRING(4 4, 5 5)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:401
+#: ../../docs/user_manual/expressions/functions_list.rst:377
 msgid "Further reading: :ref:`qgisdifference` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisdifference`"
 
@@ -7781,7 +7923,7 @@ msgstr ""
 "``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( "
 "'POINT(4 4)' ))`` → FALSE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:407
+#: ../../docs/user_manual/expressions/functions_list.rst:383
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_overlay_disjoint`"
 msgstr ""
@@ -7863,9 +8005,9 @@ msgstr ""
 "``geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → "
 "'Point (0 2)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:413
-#: ../../docs/user_manual/expressions/functions_list.rst:596
-#: ../../docs/user_manual/expressions/functions_list.rst:662
+#: ../../docs/user_manual/expressions/functions_list.rst:389
+#: ../../docs/user_manual/expressions/functions_list.rst:572
+#: ../../docs/user_manual/expressions/functions_list.rst:638
 msgid "Further reading: :ref:`qgisextractspecificvertices` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisextractspecificvertices`"
 
@@ -7936,7 +8078,7 @@ msgstr ""
 "``geom_to_wkt(extend(geom_from_wkt('MultiLineString((0 0, 1 0, 1 1), (2 2, 0"
 " 2, 0 5))'),1,2))`` → 'MultiLineString ((-1 0, 1 0, 1 3),(3 2, 0 2, 0 7))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:419
+#: ../../docs/user_manual/expressions/functions_list.rst:395
 msgid "Further reading: :ref:`qgisextendlines` algorithm"
 msgstr "Ulteriori informazioni: :ref:`qgisextendlines` algoritmo"
 
@@ -8046,7 +8188,7 @@ msgstr ""
 "``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
 "6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:425
+#: ../../docs/user_manual/expressions/functions_list.rst:401
 msgid "Further reading: :ref:`qgisswapxy` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisswapxy`"
 
@@ -8082,7 +8224,7 @@ msgstr ""
 "``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
 "2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:431
+#: ../../docs/user_manual/expressions/functions_list.rst:407
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_force_polygon_cw`, "
 ":ref:`expression_function_GeometryGroup_force_rhr`"
@@ -8115,7 +8257,7 @@ msgstr ""
 "``geom_to_wkt(force_polygon_cw(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0,"
 " 4 2, 0 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:438
+#: ../../docs/user_manual/expressions/functions_list.rst:414
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_force_polygon_ccw`,"
 " :ref:`expression_function_GeometryGroup_force_rhr`"
@@ -8156,7 +8298,7 @@ msgstr ""
 "``geom_to_wkt(force_rhr(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0"
 " 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:445
+#: ../../docs/user_manual/expressions/functions_list.rst:421
 msgid ""
 "Further reading: :ref:`qgisforcerhr` algorithm, "
 ":ref:`expression_function_GeometryGroup_force_polygon_ccw`, "
@@ -8258,6 +8400,12 @@ msgstr ""
 msgid "geom_to_wkb(geometry)"
 msgstr "geom_to_wkb(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:78
+msgid ""
+"``geom_to_wkb( @geometry )`` → binary blob containing a geometry object"
+msgstr ""
+"``geom_to_wkb( @geometry )`` → blob binario contenente un oggetto geometria"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:86
 msgid "geom_to_wkt"
 msgstr "geom_to_wkt"
@@ -8335,6 +8483,14 @@ msgstr "geometry(feature)"
 msgid "**feature** - a feature object"
 msgstr "**feature** - un elemento"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:141
+msgid ""
+"``geometry( @feature )`` → the geometry of the current feature. Prefer using"
+" @geometry."
+msgstr ""
+"``geometry( @feature )`` → la geometria dell'elemento corrente. È "
+"preferibile usare @geometry."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:142
 msgid ""
 "``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → the "
@@ -8344,6 +8500,16 @@ msgstr ""
 "''geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) )'' → la "
 "geometria in WKT dell'elemento con l'id 1 sul layer \"streets\", ad esempio "
 "'POINT(6 50)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:143
+msgid ""
+"``intersects( @geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )`` → TRUE if the current feature spatially intersects the 'Main "
+"St.' named feature in the \"streets\" layer"
+msgstr ""
+"``intersects( @geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )``→ TRUE se l'elemento corrente interseca spazialmente l'elemento "
+"denominato 'Main St.' nel layer \"streets\" "
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:151
 msgid "geometry_n"
@@ -8627,7 +8793,7 @@ msgstr ""
 "``geom_to_wkt( intersection( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), "
 "geom_from_wkt( 'MULTIPOINT(3.5 3.5, 4 5)' ) ) )`` → 'POINT(3.5 3.5)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:453
+#: ../../docs/user_manual/expressions/functions_list.rst:429
 msgid "Further reading: :ref:`qgisintersection` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisintersection`"
 
@@ -8664,7 +8830,7 @@ msgstr ""
 "``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) "
 ")`` → FALSE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:459
+#: ../../docs/user_manual/expressions/functions_list.rst:435
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_overlay_intersects`"
 msgstr ""
@@ -8766,7 +8932,7 @@ msgstr "``is_empty(geom_from_wkt('POINT(7 4)'))`` → FALSE"
 msgid "``is_empty(geom_from_wkt('POINT EMPTY'))`` → TRUE"
 msgstr "``is_empty(geom_from_wkt('POINT EMPTY'))`` → TRUE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:465
+#: ../../docs/user_manual/expressions/functions_list.rst:441
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_is_empty_or_null`"
 msgstr ""
@@ -8775,6 +8941,16 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "is_empty_or_null"
 msgstr "is_empty_or_null"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns TRUE if a geometry is NULL or empty (without coordinates) or false "
+"otherwise. This function is like the expression '@geometry IS NULL or "
+"is_empty(@geometry)'"
+msgstr ""
+"Restituisce TRUE se una geometria è NULL o vuota (senza coordinate) o false "
+"altrimenti. Questa funzione è simile all'espressione '@geometry IS NULL or "
+"is_empty(@geometry)'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "is_empty_or_null(geometry)"
@@ -8802,7 +8978,7 @@ msgstr "``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → FALSE"
 msgid "``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → TRUE"
 msgstr "``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → TRUE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:471
+#: ../../docs/user_manual/expressions/functions_list.rst:447
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_is_empty`, "
 ":ref:`expression_function_Fields_and_Values_NULL`"
@@ -8856,7 +9032,7 @@ msgstr "``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE"
 msgid "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
 msgstr "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:478
+#: ../../docs/user_manual/expressions/functions_list.rst:454
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_make_valid`, "
 ":ref:`qgischeckvalidity` algorithm"
@@ -8967,7 +9143,7 @@ msgstr "**geometry** - oggetto geometria linea"
 msgid "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
 msgstr "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:485
+#: ../../docs/user_manual/expressions/functions_list.rst:461
 msgid ""
 "Further reading: "
 ":ref:`expression_function_GeometryGroup_straight_distance_2d`"
@@ -9078,7 +9254,7 @@ msgstr ""
 "``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 "
 "0, 1 0)'), distance:=2))`` → NULL"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:491
+#: ../../docs/user_manual/expressions/functions_list.rst:467
 msgid "Further reading: :ref:`qgisinterpolatepoint` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisinterpolatepoint`"
 
@@ -9190,7 +9366,7 @@ msgstr ""
 "``geom_to_wkt(line_substring(geometry:=geom_from_wkt('LineString(0 0, 10 "
 "0)'),start_distance:=2,end_distance:=6))`` → 'LineString (2 0,6 0)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:497
+#: ../../docs/user_manual/expressions/functions_list.rst:473
 msgid "Further reading: :ref:`qgislinesubstring` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgislinesubstring`"
 
@@ -9210,6 +9386,40 @@ msgstr "**geometry** - una geometria di punti"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "``m( geom_from_wkt( 'POINTM(2 5 4)' ) )`` → 4"
 msgstr "``m( geom_from_wkt( 'POINTM(2 5 4)' ) )`` → 4"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid "m_at"
+msgstr "m_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"Retrieves a m coordinate of the geometry, or NULL if the geometry has no m "
+"value."
+msgstr ""
+"Restituisce una coordinata m della geometria o NULL se la geometria non ha "
+"alcun valore m."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
+msgid "m_at(geometry, vertex)"
+msgstr "m_at(geometry, vertex)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:116
+msgid ""
+"**vertex** - index of the vertex of the geometry (indices start at 0; "
+"negative values apply from the last index, starting at -1)"
+msgstr ""
+"**vertex** - indice del vertice della geometria (gli indici partono da 0; i "
+"valori negativi si applicano a partire dall'ultimo indice, a partire da -1)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"``m_at(geom_from_wkt('LineStringZM(0 0 0 0, 10 10 0 5, 10 10 0 0)'), 1)`` → "
+"5"
+msgstr ""
+"``m_at(geom_from_wkt('LineStringZM(0 0 0 0, 10 10 0 5, 10 10 0 0)'), 1)`` → "
+"5"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
 msgid "m_max"
@@ -9753,6 +9963,10 @@ msgstr ""
 "``geom_to_wkt(boundary(make_triangle(make_point(0,0), make_point(5,5), "
 "make_point(0,10))))`` → 'LineString (0 0, 5 5, 0 10, 0 0)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:373
+msgid "make_valid"
+msgstr "make_valid"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:375
 msgid ""
 "Returns a valid geometry or an empty geometry if the geometry could not be "
@@ -9760,6 +9974,10 @@ msgid ""
 msgstr ""
 "Restituisce una geometria valida o una geometria vuota se non è stato "
 "possibile renderla valida."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:381
+msgid "make_valid(geometry, [method=structure], [keep_collapsed=false])"
+msgstr "make_valid(geometry, [method=structure], [keep_collapsed=false])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:386
 msgid ""
@@ -9795,12 +10013,30 @@ msgstr ""
 "``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
 "2))')))`` → 'Polygon ((3 2, 5 8, 4 1, 3 2))'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:390
+msgid ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
+"2))'), 'linework'))`` → 'GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 "
+"8)),LineString (3 2, 4 2))'"
+msgstr ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
+"2))'), 'linework'))`` → 'GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 "
+"8)),LineString (3 2, 4 2))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:391
+msgid ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8))'), "
+"method:='linework'))`` → 'Polygon ((3 2, 4 1, 5 8, 3 2))'"
+msgstr ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8))'), "
+"method:='linework'))`` → 'Polygon ((3 2, 4 1, 5 8, 3 2))'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:392
 msgid "``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → An empty geometry"
 msgstr ""
 "``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → Una geometria vuota"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:503
+#: ../../docs/user_manual/expressions/functions_list.rst:479
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_is_valid`, "
 ":ref:`qgisfixgeometries` algorithm"
@@ -9840,7 +10076,7 @@ msgstr ""
 "``geom_to_wkt( minimal_circle( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ),"
 " 4 ) )`` → 'Polygon ((3 4, 3 2, 1 2, 1 4, 3 4))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:510
+#: ../../docs/user_manual/expressions/functions_list.rst:486
 msgid "Further reading: :ref:`qgisminimumenclosingcircle` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisminimumenclosingcircle`"
 
@@ -9887,7 +10123,7 @@ msgstr ""
 "``geom_to_wkt(nodes_to_points(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, "
 "-1 -1))'),true))`` → 'MultiPoint ((-1 -1),(4 0),(4 2),(0 2))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:516
+#: ../../docs/user_manual/expressions/functions_list.rst:492
 msgid "Further reading: :ref:`qgisextractvertices` algorithm"
 msgstr "Ulteriori informazioni: :algoritmo ref:`qgisextractvertices`"
 
@@ -9969,6 +10205,14 @@ msgstr "Restituisce il numero di vertici di una geometria."
 msgid "num_points(geometry)"
 msgstr "num_points(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+msgid ""
+"``num_points(@geometry)`` → number of vertices in the current feature's "
+"geometry"
+msgstr ""
+"``num_points(@geometry)`` → numero di vertici nella geometria dell'elemento "
+"corrente"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
 msgid "num_rings"
 msgstr "num_rings"
@@ -10049,7 +10293,36 @@ msgstr ""
 "**miter_limit** - limite sul rapporto di seghettatura usato per gli angoli "
 "molto stretti (quando si usano solo le giunzioni seghettate)"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:522
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:105
+msgid ""
+"``offset_curve(@geometry, 10.5)`` → line offset to the left by 10.5 units"
+msgstr ""
+"``offset_curve(@geometry, 10.5)`` → linea spostata a sinistra di 10.5 unità"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:106
+msgid ""
+"``offset_curve(@geometry, -10.5)`` → line offset to the right by 10.5 units"
+msgstr ""
+"``offset_curve(@geometry, -10.5)`` → linea spostata a destra di 10.5 unità"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:107
+msgid ""
+"``offset_curve(@geometry, 10.5, segments:=16, join:=1)`` → line offset to "
+"the left by 10.5 units, using more segments to result in a smoother curve"
+msgstr ""
+"``offset_curve( @geometry, 10.5, segments:=16, join:=1)`` → linea spostata a"
+" sinistra di 10.5 unità, utilizzando più segmenti per ottenere una curva più"
+" regolare"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:108
+msgid ""
+"``offset_curve(@geometry, 10.5, join:=3)`` → line offset to the left by 10.5"
+" units, using a beveled join"
+msgstr ""
+"``offset_curve(@geometry, 10.5, join:=3)`` → linea spostata a sinistra di "
+"10.5 unità, utilizzando un raccordo smussato"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:498
 msgid "Further reading: :ref:`qgisoffsetline` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisoffsetline`"
 
@@ -10077,6 +10350,16 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
 msgid "**ascending** - boolean, True for ascending, False for descending"
 msgstr "**ascendente** - booleano, True per ascendente, False per discendente"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
+msgid ""
+"``geom_to_wkt(order_parts(geom_from_wkt('MultiPolygon (((1 1, 5 1, 5 5, 1 5,"
+" 1 1)),((1 1, 9 1, 9 9, 1 9, 1 1)))'), 'area(@geometry)', False))`` → "
+"'MultiPolygon (((1 1, 9 1, 9 9, 1 9, 1 1)),((1 1, 5 1, 5 5, 1 5, 1 1)))'"
+msgstr ""
+"``geom_to_wkt(order_parts(geom_from_wkt('MultiPolygon (((1 1, 5 1, 5 5, 1 5,"
+" 1 1)),((1 1, 9 1, 9 9, 1 9, 1 1)))'), 'area(@geometry)', False))`` → "
+"'MultiPolygon (((1 1, 9 1, 9 9, 1 9, 1 1)),((1 1, 5 1, 5 5, 1 5, 1 1)))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
 msgid ""
@@ -10110,7 +10393,7 @@ msgstr ""
 "``geom_to_wkt( oriented_bbox( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ) )"
 " )`` → 'Polygon ((3 2, 3 4, 1 4, 1 2, 3 2))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:528
+#: ../../docs/user_manual/expressions/functions_list.rst:504
 msgid "Further reading: :ref:`qgisorientedminimumboundingbox` algorithm"
 msgstr ""
 "Ulteriori informazioni: algoritmo :ref:`qgisorientedminimumboundingbox`"
@@ -10270,7 +10553,17 @@ msgstr ""
 "filter:= population > 10000))`` → un array ordinato di name, per le regions "
 "contenute nell'elemento corrente e con una population maggiore di 10000"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:534
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
+msgid ""
+"``overlay_contains(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"contained in the current feature"
+msgstr ""
+"``overlay_contains(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → un array di geometrie (in WKT), per un massimo di due regioni "
+"contenute nell'elemento corrente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:510
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_contains`, "
 ":ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation` "
@@ -10354,7 +10647,17 @@ msgstr ""
 "filter:= population > 10000))`` → un array ordinato di name, per le regions "
 "attraversate dall'elemento corrente e con una population maggiore di 10000"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:542
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_crosses(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions crossed"
+" by the current feature"
+msgstr ""
+"``overlay_crosses(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → un array di geometrie (in WKT), per un massimo di due regioni "
+"attraversate dall'elemento corrente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:518
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_crosses`, "
 ":ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation` "
@@ -10442,7 +10745,17 @@ msgstr ""
 "spazialmente disgiunte dall'elemento corrente e con una population maggiore "
 "di 10000"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:550
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_disjoint(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"spatially disjoint from the current feature"
+msgstr ""
+"``overlay_disjoint(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → un array di geometrie (in WKT), per un massimo di due regioni "
+"spazialmente disgiunte dall'elemento corrente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:526
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_disjoint`, "
 ":ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation` "
@@ -10529,7 +10842,17 @@ msgstr ""
 "spazialmente uguali all'elemento corrente e con una population maggiore di "
 "10000"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:558
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"spatially equal to the current feature"
+msgstr ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)``→ un array di geometrie (in WKT), per un massimo di due regioni "
+"spazialmente uguali all'elemento corrente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:534
 msgid ""
 "Further reading: :ref:`array manipulation <array_functions>`, "
 ":ref:`qgisselectbylocation` algorithm"
@@ -10699,6 +11022,16 @@ msgstr ""
 "filter:= population > 10000))`` → un array ordinato di name, per le regions "
 "intersecate dall'elemento corrente e con una population maggiore di 10000"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"intersected by the current feature"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → un array di geometrie (in WKT), per un massimo di due regioni "
+"intersecate dall'elemento corrente"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
 msgid ""
 "``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE if the "
@@ -10723,7 +11056,27 @@ msgstr ""
 " massimo del cerchio inscritto nell'area di intersezione (di almeno una "
 "delle parti in caso di multi parte) è maggiore o uguale a 0.54"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:565
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"return_details:=true)`` → an array of maps containing 'id', 'result', "
+"'overlap' and 'radius'"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"return_details:=true)`` → un array di mappe contenenti 'id', 'result', "
+"'overlap' e 'radius'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"sort_by_intersection_size:='des')`` → an array of geometries (in WKT) "
+"ordered by the overlap value in descending order"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"sort_by_intersection_size:='des')`` → un array di geometrie (in WKT) "
+"ordinate per il loro valore di sovrapposizione in ordine decrescente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:541
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_intersects`, "
 ":ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation` "
@@ -10860,7 +11213,7 @@ msgstr ""
 "distanza di 5000 unità di mappa dall'elemento corrente, ordinato per "
 "distanza"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:573
+#: ../../docs/user_manual/expressions/functions_list.rst:549
 msgid ""
 "Further reading: :ref:`array manipulation <array_functions>`, "
 ":ref:`qgisjoinbynearest` algorithm"
@@ -10941,7 +11294,17 @@ msgstr ""
 "filter:= population > 10000))`` → un array ordinato di name, per le regions "
 "toccate dall'elemento corrente e con una population maggiore di 10000"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:580
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_touches(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions touched"
+" by the current feature"
+msgstr ""
+"``overlay_touches(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → un array di geometrie (in WKT), per un massimo di due regioni "
+"toccate dall'elemento corrente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:556
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_touches`, "
 ":ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation` "
@@ -11024,7 +11387,17 @@ msgstr ""
 " population > 10000))`` → un array ordinato di name, per le regions "
 "contenenti l'elemento corrente e con una population maggiore di 10000"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:588
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_within(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"containing the current feature"
+msgstr ""
+"``overlay_within(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → un array di geometrie (in WKT), per un massimo di due regioni "
+"contenenti l'elemento corrente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:564
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_within`, "
 ":ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation` "
@@ -11132,7 +11505,11 @@ msgstr ""
 msgid "point_on_surface(geometry)"
 msgstr "point_on_surface(geometry)"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:602
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``point_on_surface(@geometry)`` → a point geometry"
+msgstr "``point_on_surface(@geometry)`` → una geometria punto"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:578
 msgid "Further reading: :ref:`qgispointonsurface` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgispointonsurface`"
 
@@ -11176,7 +11553,7 @@ msgstr ""
 "``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
 "10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:608
+#: ../../docs/user_manual/expressions/functions_list.rst:584
 msgid "Further reading: :ref:`qgispoleofinaccessibility` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgispoleofinaccessibility`"
 
@@ -11220,7 +11597,7 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(project(make_point(1, 2), 3, radians(270)))`` → 'Point(-2, 2)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:614
+#: ../../docs/user_manual/expressions/functions_list.rst:590
 msgid "Further reading: :ref:`qgisprojectpointcartesian` algorithm"
 msgstr "Ulteriori informazioni: algoritmo:ref:`qgisprojectpointcartesian`"
 
@@ -11311,7 +11688,7 @@ msgstr ""
 "``geom_to_wkt(reverse(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)')))`` → "
 "'LINESTRING(2 2, 1 1, 0 0)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:620
+#: ../../docs/user_manual/expressions/functions_list.rst:596
 msgid "Further reading: :ref:`qgisreverselinedirection` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgisreverselinedirection` "
 
@@ -11326,6 +11703,10 @@ msgid ""
 msgstr ""
 "Restituisce una versione ruotata di una geometria. I calcoli sono nel "
 "sistema di riferimento spaziale di questa geometria."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "rotate(geometry, rotation, [center=NULL], [per_part=false])"
+msgstr "rotate(geometry, rotation, [center=NULL], [per_part=false])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid "**rotation** - clockwise rotation in degrees"
@@ -11349,6 +11730,22 @@ msgstr ""
 " applicata intorno al centro del rettangolo di selezione di ciascuna parte "
 "quando la geometria in ingresso è multi parte e non viene specificato un "
 "punto centrale di rotazione esplicito."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``rotate(@geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees "
+"clockwise around the (4, 5) point"
+msgstr ""
+"``rotate(@geometry, 45, make_point(4, 5))`` → geometria ruotata di 45 gradi "
+"in senso orario intorno al punto (4, 5)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``rotate(@geometry, 45)`` → geometry rotated 45 degrees clockwise around the"
+" center of its bounding box"
+msgstr ""
+"``rotate(@geometry, 45)`` → geometria ruotata di 45 gradi in senso orario "
+"attorno al centro del suo perimetro di delimitazione."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "Rotating features"
@@ -11392,7 +11789,7 @@ msgstr ""
 "``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 0.1, 1 0.1, 1 0, 0 0))')),"
 " 3)`` → 0.260"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:626
+#: ../../docs/user_manual/expressions/functions_list.rst:602
 msgid "Further reading: :ref:`qgisroundness` algorithm"
 msgstr "Ulteriore lettura: :ref:`qgisroundness` algoritmo"
 
@@ -11429,6 +11826,22 @@ msgstr ""
 " viene utilizzato il centro del perimetro del rettangolo che circoscrive la "
 "geometria."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``scale(@geometry, 2, 0.5, make_point(4, 5))`` → geometry scaled twice "
+"horizontally and halved vertically, around the (4, 5) point"
+msgstr ""
+"``scale(@geometry, 2, 0.5, make_point(4, 5))`` → geometria scalata due volte"
+" in orizzontale e dimezzata in verticale, intorno al punto (4, 5)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``scale(@geometry, 2, 0.5)`` → geometry twice horizontally and halved "
+"vertically, around the center of its bounding box"
+msgstr ""
+"``scale(@geometry, 2, 0.5)`` → geometria due volte in orizzontale e "
+"dimezzata in verticale, intorno al centro del suo perimetro di delimitazione"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
 msgid "segments_to_lines"
 msgstr "segments_to_lines"
@@ -11453,7 +11866,7 @@ msgstr ""
 "``geom_to_wkt(segments_to_lines(geom_from_wkt('LINESTRING(0 0, 1 1, 2 "
 "2)')))`` → 'MultiLineString ((0 0, 1 1),(1 1, 2 2))'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:632
+#: ../../docs/user_manual/expressions/functions_list.rst:608
 msgid "Further reading: :ref:`qgisexplodelines` algorithm"
 msgstr "Ulteriori informazioni: :ref:`qgisexplodelines` algoritmo"
 
@@ -11583,8 +11996,8 @@ msgstr ""
 "``geom_to_wkt(simplify(geometry:=geom_from_wkt('LineString(0 0, 5 0.1, 10 "
 "0)'),tolerance:=5))`` → 'LineString(0 0, 10 0)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:638
-#: ../../docs/user_manual/expressions/functions_list.rst:644
+#: ../../docs/user_manual/expressions/functions_list.rst:614
+#: ../../docs/user_manual/expressions/functions_list.rst:620
 msgid "Further reading: :ref:`qgissimplifygeometries` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgissimplifygeometries`"
 
@@ -11653,7 +12066,41 @@ msgstr ""
 "**distance** - distanza del buffer. I valori positivi saranno bufferizzati a"
 " sinistra delle linee, i valori negativi a destra"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:650
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``single_sided_buffer(@geometry, 10.5)`` → line buffered to the left by 10.5"
+" units"
+msgstr ""
+"``single_sided_buffer(@geometry, 10.5)`` → linea bufferizzata a sinistra di "
+"10.5 unità"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
+msgid ""
+"``single_sided_buffer(@geometry, -10.5)`` → line buffered to the right by "
+"10.5 units"
+msgstr ""
+"``single_sided_buffer(@geometry, -10.5)`` → linea bufferizzata a destra di "
+"10.5 unità"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid ""
+"``single_sided_buffer(@geometry, 10.5, segments:=16, join:=1)`` → line "
+"buffered to the left by 10.5 units, using more segments to result in a "
+"smoother buffer"
+msgstr ""
+"``single_sided_buffer(@geometry, 10.5, segments:=16, join:=1)`` → linea "
+"bufferizzata a sinistra di 10.5 unità, utilizzando più segmenti per ottenere"
+" un buffer più omogeneo"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid ""
+"``single_sided_buffer(@geometry, 10.5, join:=3)`` → line buffered to the "
+"left by 10.5 units, using a beveled join"
+msgstr ""
+"``single_sided_buffer(@geometry, 10.5, join:=3)`` → linea bufferizzata a "
+"sinistra di 10.5 unità, usando un raccordo smussato"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:626
 msgid "Further reading: :ref:`qgissinglesidedbuffer` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgissinglesidedbuffer`"
 
@@ -11764,7 +12211,7 @@ msgstr ""
 "5)'),iterations:=1,offset:=0.2,min_length:=-1,max_angle:=180))`` → "
 "'LineString (0 0, 4 0, 5 1, 5 5)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:656
+#: ../../docs/user_manual/expressions/functions_list.rst:632
 msgid "Further reading: :ref:`qgissmoothgeometry` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgissmoothgeometry`"
 
@@ -11812,6 +12259,10 @@ msgid ""
 msgstr ""
 "``onda_quadrata(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Onde "
 "quadrate con lunghezza d'onda 3 e ampiezza 1 lungo la linea"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+msgid "square_wave_randomized"
+msgstr "square_wave_randomized"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
 msgid ""
@@ -11921,7 +12372,7 @@ msgstr ""
 "``round(straight_distance_2d(geom_from_wkt('LINESTRING(1 4, 3 5, 5 0)')), "
 "3)`` → 5.657"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:668
+#: ../../docs/user_manual/expressions/functions_list.rst:644
 msgid "Further reading: :ref:`expression_function_GeometryGroup_length`"
 msgstr "Further reading: :ref:`expression_function_GeometryGroup_length`"
 
@@ -11949,7 +12400,7 @@ msgstr ""
 "``geom_to_wkt( sym_difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ),"
 " geom_from_wkt( 'LINESTRING(3 3, 8 8)' ) ) )`` → 'LINESTRING(5 5, 8 8)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:674
+#: ../../docs/user_manual/expressions/functions_list.rst:650
 msgid "Further reading: :ref:`qgissymmetricaldifference` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgissymmetricaldifference`"
 
@@ -11999,7 +12450,7 @@ msgstr ""
 msgid "Tapered buffer on line features"
 msgstr "Baffer rastremato sugli elementi lineari"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:680
+#: ../../docs/user_manual/expressions/functions_list.rst:656
 msgid "Further reading: :ref:`qgistaperedbuffer` algorithm"
 msgstr "Ulteriori informazioni: :ref:`qgistaperedbuffer` algoritmo"
 
@@ -12036,7 +12487,7 @@ msgstr ""
 "``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` "
 "→ FALSE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:686
+#: ../../docs/user_manual/expressions/functions_list.rst:662
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_overlay_touches`"
 msgstr ""
@@ -12074,7 +12525,7 @@ msgstr ""
 "``geom_to_wkt( transform( make_point(488995.53240249, 7104473.38600835), "
 "'EPSG:2154', 'EPSG:4326' ) )`` → 'POINT(0 51)'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:692
+#: ../../docs/user_manual/expressions/functions_list.rst:668
 msgid "Further reading: :ref:`qgisreprojectlayer` algorithm"
 msgstr "Ulteriori informazioni: :algoritmo ref:`qgisreprojectlayer`"
 
@@ -12102,11 +12553,19 @@ msgstr "**dx** - delta x"
 msgid "**dy** - delta y"
 msgstr "**dy** - delta y"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``translate(@geometry, 5, 10)`` → a geometry of the same type like the "
+"original one"
+msgstr ""
+"``translate(@geometry, 5, 10)`` → una geometria dello stesso tipo di quella "
+"originale"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "Translating features"
 msgstr "Traslare elementi"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:698
+#: ../../docs/user_manual/expressions/functions_list.rst:674
 msgid "Further reading: :ref:`qgistranslategeometry` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgistranslategeometry`"
 
@@ -12117,6 +12576,10 @@ msgstr "triangular_wave"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
 msgid "Constructs triangular waves along the boundary of a geometry."
 msgstr "Costruisce onde triangolari lungo il confine di una geometria."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "triangular_wave(geometry, wavelength, amplitude, [strict=False])"
+msgstr "triangular_wave(geometry, wavelength, amplitude, [strict=False])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid "**wavelength** - wavelength of triangular waveform"
@@ -12150,6 +12613,10 @@ msgid ""
 msgstr ""
 "``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Onde "
 "triangolari con lunghezza d'onda 3 e ampiezza 1 lungo l'anello di linea"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+msgid "triangular_wave_randomized"
+msgstr "triangular_wave_randomized"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
 msgid ""
@@ -12198,10 +12665,18 @@ msgstr ""
 "``geom_to_wkt( union( make_point(4, 4), make_point(5, 5) ) )`` → "
 "'MULTIPOINT(4 4, 5 5)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:79
+msgid "wave"
+msgstr "wave"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:81
 msgid "Constructs rounded (sine-like) waves along the boundary of a geometry."
 msgstr ""
 "Costruisce onde tondeggianti (sinusoidali) lungo i confini di una geometria."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:87
+msgid "wave(geometry, wavelength, amplitude, [strict=False])"
+msgstr "wave(geometry, wavelength, amplitude, [strict=False])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:92
 msgid "**wavelength** - wavelength of sine-like waveform"
@@ -12319,7 +12794,7 @@ msgstr ""
 "centrato sul punto (1,2), rivolto a est, con una larghezza di 180 gradi e "
 "raggio esterno di 1."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:704
+#: ../../docs/user_manual/expressions/functions_list.rst:680
 msgid "Further reading: :ref:`qgiswedgebuffers` algorithm"
 msgstr "Ulteriori informazioni: algoritmo :ref:`qgiswedgebuffers`"
 
@@ -12355,7 +12830,7 @@ msgstr ""
 "``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 "
 "1, 1 1, 1 0, 0 0 ))' ) )`` → FALSE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:710
+#: ../../docs/user_manual/expressions/functions_list.rst:686
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_overlay_within`"
 msgstr ""
@@ -12367,9 +12842,25 @@ msgstr ""
 msgid "$x"
 msgstr "$x"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the x coordinate of the current point feature. If the feature is a "
+"multipoint feature, then the x-coordinate of the first point will be "
+"returned. **WARNING: This function is deprecated. It is recommended to use "
+"the replacement x() function with @geometry variable instead.**"
+msgstr ""
+"Restituisce la coordinata x del punto corrente. Se l'elemento è multipunto, "
+"viene restituita la coordinata x del primo punto. **Attenzione: questa "
+"funzione è deprecata. Si raccomanda di utilizzare la funzione sostitutiva "
+"x() con la variabile @geometry.**"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 msgid "``$x`` → 42"
 msgstr "``$x`` → 42"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:692
+msgid "Further reading: :ref:`expression_function_GeometryGroup_x`"
+msgstr "Ulteriore documentazione: :ref:`expression_function_GeometryGroup_x`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "x"
@@ -12391,25 +12882,62 @@ msgstr "x(geometry)"
 msgid "``x( geom_from_wkt( 'POINT(2 5)' ) )`` → 2"
 msgstr "``x( geom_from_wkt( 'POINT(2 5)' ) )`` → 2"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``x( @geometry )`` → x coordinate of the current feature's centroid"
+msgstr ""
+"``x( @geometry )`` → coordinata x del centroide dell'elemento corrente"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "$x_at"
 msgstr "$x_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"Retrieves a x coordinate of the current feature's geometry. **WARNING: This "
+"function is deprecated. It is recommended to use the replacement x_at "
+"function with @geometry variable instead.**"
+msgstr ""
+"Restituisce una coordinata x della geometria dell'elemento corrente. "
+"**Attenzione: questa funzione è deprecata. Si raccomanda di utilizzare la "
+"funzione sostitutiva x_at con la variabile @geometry.**"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "$x_at(vertex)"
 msgstr "$x_at(vertex)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+msgid ""
+"**vertex** - index of the vertex of the current geometry (indices start at "
+"0; negative values apply from the last index, starting at -1)"
+msgstr ""
+"**vertex** - indice del vertice della geometria corrente (gli indici partono"
+" da 0; i valori negativi si applicano a partire dall'ultimo indice, a "
+"partire da -1)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid "``$x_at(1)`` → 5"
 msgstr "``$x_at(1)`` → 5"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:698
+msgid "Further reading: :ref:`expression_function_GeometryGroup_x_at`"
+msgstr ""
+"Ulteriore documentazione: :ref:`expression_function_GeometryGroup_x_at`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "x_at"
 msgstr "x_at"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Retrieves a x coordinate of the geometry."
+msgstr "Restituisce una coordinata x della geometria."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "x_at(geometry, vertex)"
 msgstr "x_at(geometry, vertex)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``x_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 4"
+msgstr "``x_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 4"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "x_max"
@@ -12456,9 +12984,25 @@ msgstr "``x_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 2"
 msgid "$y"
 msgstr "$y"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:69
+msgid ""
+"Returns the y coordinate of the current point feature. If the feature is a "
+"multipoint feature, then the y-coordinate of the first point will be "
+"returned. **WARNING: This function is deprecated. It is recommended to use "
+"the replacement y() function with @geometry variable instead.**"
+msgstr ""
+"Restituisce la coordinata y del punto corrente. Se l'elemento è multipunto, "
+"viene restituita la coordinata y del primo punto. **Attenzione: questa "
+"funzione è deprecata. Si consiglia di utilizzare la funzione sostitutiva y()"
+" con la variabile @geometry.**"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
 msgid "``$y`` → 42"
 msgstr "``$y`` → 42"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:704
+msgid "Further reading: :ref:`expression_function_GeometryGroup_y`"
+msgstr "Ulteriore documentazione: :ref:`expression_function_GeometryGroup_y`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "y"
@@ -12480,9 +13024,24 @@ msgstr "y(geometry)"
 msgid "``y( geom_from_wkt( 'POINT(2 5)' ) )`` → 5"
 msgstr "``y( geom_from_wkt( 'POINT(2 5)' ) )`` → 5"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``y( @geometry )`` → y coordinate of the current feature's centroid"
+msgstr ""
+"``y( @geometry )`` → coordinata y del centroide dell'elemento corrente"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "$y_at"
 msgstr "$y_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"Retrieves a y coordinate of the current feature's geometry. **WARNING: This "
+"function is deprecated. It is recommended to use the replacement y_at "
+"function with @geometry variable instead.**"
+msgstr ""
+"Restituisce una coordinata y della geometria dell'elemento corrente. "
+"**Attenzione: questa funzione è deprecata. Si raccomanda di utilizzare la "
+"funzione sostitutiva y_at con la variabile @geometry.**"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "$y_at(vertex)"
@@ -12491,6 +13050,27 @@ msgstr "$y_at(vertex)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid "``$y_at(1)`` → 2"
 msgstr "``$y_at(1)`` → 2"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:710
+msgid "Further reading: :ref:`expression_function_GeometryGroup_y_at`"
+msgstr ""
+"Ulteriore documentazione: :ref:`expression_function_GeometryGroup_y_at`"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
+msgid "y_at"
+msgstr "y_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Retrieves a y coordinate of the geometry."
+msgstr "Restituisce una coordinata y della geometria."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "y_at(geometry, vertex)"
+msgstr "y_at(geometry, vertex)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``y_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 5"
+msgstr "``y_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 5"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "y_max"
@@ -12537,6 +13117,18 @@ msgstr "``y_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 5"
 msgid "$z"
 msgstr "$z"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:69
+msgid ""
+"Returns the z value of the current point feature if it is 3D. If the feature"
+" is a multipoint feature, then the z value of the first point will be "
+"returned. **WARNING: This function is deprecated. It is recommended to use "
+"the replacement z() function with @geometry variable instead.**"
+msgstr ""
+"Restituisce il valore z del punto corrente, se è 3D. Se l'elemento è "
+"multipunto, viene restituito il valore z del primo punto. **Attenzione: "
+"questa funzione è deprecata. Si raccomanda di utilizzare la funzione "
+"sostitutiva z() con la variabile @geometry.**"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
 msgid "``$z`` → 123"
 msgstr "``$z`` → 123"
@@ -12556,6 +13148,27 @@ msgstr "z(geometry)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:97
 msgid "``z( geom_from_wkt( 'POINTZ(2 5 7)' ) )`` → 7"
 msgstr "``z( geom_from_wkt( 'POINTZ(2 5 7)' ) )`` → 7"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:105
+msgid "z_at"
+msgstr "z_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:107
+msgid ""
+"Retrieves a z coordinate of the geometry, or NULL if the geometry has no z "
+"value."
+msgstr ""
+"Restituisce una coordinata z della geometria o NULL se la geometria non ha "
+"alcun valore z."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:113
+msgid "z_at(geometry, vertex)"
+msgstr "z_at(geometry, vertex)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:118
+msgid "``z_at(geom_from_wkt('LineStringZ(0 0 0, 10 10 5, 10 10 0)'), 1)`` → 5"
+msgstr ""
+"``z_at(geom_from_wkt('LineStringZ(0 0 0, 10 10 5, 10 10 0)'), 1)`` → 5"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:126
 msgid "z_max"
@@ -12641,11 +13254,11 @@ msgstr ""
 msgid "``z_min( geom_from_wkt( 'POINT ( 0 0 )' ) )`` → NULL"
 msgstr "``z_min( geom_from_wkt( 'POINT ( 0 0 )' ) )`` → NULL"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:740
+#: ../../docs/user_manual/expressions/functions_list.rst:716
 msgid "Layout Functions"
 msgstr "Funzioni per il Layout"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:742
+#: ../../docs/user_manual/expressions/functions_list.rst:718
 msgid ""
 "This group contains functions to manipulate print layout items properties."
 msgstr ""
@@ -12683,6 +13296,29 @@ msgstr ""
 msgid "map_credits"
 msgstr "map_credits"
 
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:8
+msgid ""
+"Returns a list of credit (usage rights) strings for the layers shown in a "
+"layout, or specific layout map item."
+msgstr ""
+"Restituisce un elenco di stringhe di crediti (diritti di utilizzo) per i "
+"layer mostrati in un layout o in un elemento specifico della mappa di "
+"layout."
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:14
+msgid ""
+"map_credits([id], [include_layer_names=false], [layer_name_separator=': '])"
+msgstr ""
+"map_credits([id], [include_layer_names=false], [layer_name_separator=': '])"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:18
+msgid ""
+"**id** - Map item ID. If not specified, the layers from all maps in the "
+"layout will be used."
+msgstr ""
+"**id** - ID dell'oggetto mappa. Se non viene specificato, verranno "
+"utilizzati i layer di tutte le mappe del layout."
+
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:19
 msgid ""
 "**include_layer_names** - Set to true to include layer names before their "
@@ -12698,6 +13334,16 @@ msgid ""
 msgstr ""
 "**layer_name_separator** - Stringa da inserire tra i nomi dei layer e le "
 "loro stringhe di credito, se include_layer_names è true"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:22
+msgid ""
+"``array_to_string( map_credits() )`` → comma separated list of layer credits"
+" for all layers shown in all map items in the layout, e.g 'CC-BY-NC, CC-BY-"
+"SA'"
+msgstr ""
+"``array_to_string( map_credits() )`` → elenco separato da virgole dei "
+"crediti dei layer per tutti i layer mostrati in tutti gli elementi della "
+"mappa nel layout, ad esempio 'CC-BY-NC, CC-BY-SA'."
 
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:23
 msgid ""
@@ -12721,7 +13367,7 @@ msgstr ""
 "layer e dei loro crediti per i layer mostrati nell'elemento di layout 'Main "
 "Map', ad esempio 'Railway lines: CC-BY-NC, Basemap: CC-BY-SA'."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:760
+#: ../../docs/user_manual/expressions/functions_list.rst:734
 msgid ""
 "This function requires the :ref:`Access metadata properties <metadatamenu>` "
 "of the layers to have been filled."
@@ -12729,11 +13375,11 @@ msgstr ""
 "Questa funzione richiede le proprietà dei metadati :ref:'Access "
 "<metadatamenu>' dei layer da compilare."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:768
+#: ../../docs/user_manual/expressions/functions_list.rst:742
 msgid "Map Layers"
 msgstr "Layer della Mappa"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:770
+#: ../../docs/user_manual/expressions/functions_list.rst:744
 msgid ""
 "This group contains a list of the available layers in the current project "
 "and, for each layer, their fields (stored in the dataset, virtual or "
@@ -12757,7 +13403,7 @@ msgstr ""
 "query :ref:`aggregates <aggregates_function>`, :ref:`attribute "
 "<record_attributes>` o :ref:`spatial <geometry_functions>`."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:780
+#: ../../docs/user_manual/expressions/functions_list.rst:754
 msgid "It also provides some convenient functions to manipulate layers."
 msgstr "Fornisce anche alcune comode funzioni per manipolare i layer."
 
@@ -12891,6 +13537,10 @@ msgstr "crs_definition: definizione completa del SR del layer"
 msgid "crs_description: layer CRS description"
 msgstr "crs_description: descrizione SR del layer"
 
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
+msgid "crs_ellipsoid: acronym of the layer CRS ellipsoid"
+msgstr "crs_ellipsoid: acronimo dell'SR ellissoide del layer"
+
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
 msgid "extent: layer extent (as a geometry object)"
 msgstr "extent: estensione del layer (come oggetto geometrico)"
@@ -12939,7 +13589,7 @@ msgstr "``layer_property('airports','feature_count')`` → 120"
 msgid "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 msgstr "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:792
+#: ../../docs/user_manual/expressions/functions_list.rst:764
 msgid ""
 "Further reading: :ref:`vector <vectorinformationmenu>`, :ref:`raster "
 "<raster_information>` and :ref:`mesh <meshinformation>` layer properties"
@@ -12951,11 +13601,35 @@ msgstr ""
 msgid "load_layer"
 msgstr "load_layer"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:803
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:8
+msgid "Loads a layer by source URI and provider name."
+msgstr "Carica un layer in base all'URI del sorgente e al nome del provider."
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:14
+msgid "load_layer(uri, provider)"
+msgstr "load_layer(uri, provider)"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:16
+msgid "**uri** - layer source URI string"
+msgstr "**uri** - stringa URI di origine del layer"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:17
+msgid "**provider** - layer data provider name"
+msgstr "**provider** - nome del fornitore dei dati del layer"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:19
+msgid ""
+"``layer_property(load_layer('c:/data/roads.shp', 'ogr'), 'feature_count')`` "
+"→ count of features from the c:/data/roads.shp vector layer"
+msgstr ""
+"``layer_property(load_layer('c:/data/roads.shp', 'ogr'), 'feature_count')`` "
+"→ conteggio degli elementi dal layer vettoriale c:/data/roads.shp"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:775
 msgid "Maps Functions"
 msgstr "Funzioni mappa"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:805
+#: ../../docs/user_manual/expressions/functions_list.rst:777
 msgid ""
 "This group contains functions to create or manipulate keys and values of map"
 " data structures (also known as dictionary objects, key-value pairs, or "
@@ -13176,7 +13850,7 @@ msgstr ""
 "``map_get( item_variables('Map 0'), 'map_scale')`` → scala dell'oggetto 'Map"
 " 0' (se esiste) nel layout di stampa corrente"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:821
+#: ../../docs/user_manual/expressions/functions_list.rst:792
 msgid ""
 "You can also use the :ref:`index operator ([]) "
 "<expression_function_Operators_index>` to get a value from a map."
@@ -13270,17 +13944,43 @@ msgstr "``map_to_hstore(map('qgis','rocks'))`` → '\"qgis\"=>\"rocks\"'"
 msgid "map_to_html_dl"
 msgstr "map_to_html_dl"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:72
+msgid "Merge map elements into a HTML definition list string."
+msgstr ""
+"Fonde gli elementi della mappa in una lista di definizioni HTML in formato "
+"stringa."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:78
 msgid "map_to_html_dl(map)"
 msgstr "map_to_html_dl(map)"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:82
+msgid ""
+"``map_to_html_dl(map('qgis','rocks'))`` → "
+"<dl><dt>qgis</dt><dd>rocks</dd></dl>"
+msgstr ""
+"``map_to_html_dl(map('qgis','rocks'))`` → "
+"<dl><dt>qgis</dt><dd>rocks</dd></dl>"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:90
 msgid "map_to_html_table"
 msgstr "map_to_html_table"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:92
+msgid "Merge map elements into a HTML table string."
+msgstr "Fonde gli elementi della mappa in una tabella di stringhe HTML."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:98
 msgid "map_to_html_table(map)"
 msgstr "map_to_html_table(map)"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:102
+msgid ""
+"``map_to_html_table(map('qgis','rocks'))`` → "
+"<table><thead><th>qgis</th></thead><tbody><tr><td>rocks</td></tr></tbody></table>"
+msgstr ""
+"``map_to_html_table(map('qgis','rocks'))`` → "
+"<table><thead><th>qgis</th></thead><tbody><tr><td>rocks</td></tr></tbody></table>"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:110
 msgid "to_json"
@@ -13341,11 +14041,11 @@ msgstr ""
 "``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → "
 "'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:829
+#: ../../docs/user_manual/expressions/functions_list.rst:800
 msgid "Mathematical Functions"
 msgstr "Funzioni Matematiche"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:831
+#: ../../docs/user_manual/expressions/functions_list.rst:802
 msgid "This group contains math functions (e.g., square root, sin and cos)."
 msgstr ""
 "Questo gruppo contiene funzioni matematiche (ad es. Radice quadrata, seno e "
@@ -14040,6 +14740,33 @@ msgstr ""
 msgid "scale_polynomial"
 msgstr "scale_polynomial"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:526
+msgid ""
+"Transforms a given value from an input domain to an output range using a "
+"polynomial curve. This function can be used to ease values in or out of the "
+"specified output range."
+msgstr ""
+"Trasforma un dato valore da un dominio in ingresso a un intervallo in uscita"
+" utilizzando una curva polinomiale. Questa funzione può essere utilizzata "
+"per facilitare i valori all'interno o all'esterno dell'intervallo per il "
+"risultato specificato."
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:532
+msgid ""
+"scale_polynomial(value, domain_min, domain_max, range_min, range_max, "
+"exponent)"
+msgstr ""
+"scale_polynomial(value, domain_min, domain_max, range_min, range_max, "
+"exponent)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:541
+msgid "``scale_polynomial(5,0,10,0,100,2)`` → 25"
+msgstr "``scale_polynomial(5,0,10,0,100,2)`` → 25"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:544
+msgid "``scale_polynomial(3,0,10,0,100,0.5)`` → 54.772"
+msgstr "``scale_polynomial(3,0,10,0,100,0.5)`` → 54.772"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:554
 msgid "sin"
 msgstr "sin"
@@ -14088,11 +14815,11 @@ msgstr "tan(angle)"
 msgid "``tan(1.0)`` → 1.5574077246549"
 msgstr "``tan(1.0)`` → 1.5574077246549"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:845
+#: ../../docs/user_manual/expressions/functions_list.rst:814
 msgid "Meshes Functions"
 msgstr "Funzioni Mesh"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:847
+#: ../../docs/user_manual/expressions/functions_list.rst:816
 msgid ""
 "This group contains functions which calculate or return mesh related values."
 msgstr ""
@@ -14201,11 +14928,11 @@ msgstr "Restituisce il valore Z del vertice corrente della mesh."
 msgid "``$vertex_z`` → 42"
 msgstr "``$vertex_z`` → 42"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:860
+#: ../../docs/user_manual/expressions/functions_list.rst:827
 msgid "Operators"
 msgstr "Operatori"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:862
+#: ../../docs/user_manual/expressions/functions_list.rst:829
 msgid ""
 "This group contains operators (e.g., +, -, \\*). Note that for most of the "
 "mathematical functions below, if one of the inputs is NULL then the result "
@@ -14333,7 +15060,7 @@ msgstr ""
 "``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → "
 "2020-08-02T14:00:00"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:876
+#: ../../docs/user_manual/expressions/functions_list.rst:841
 msgid ""
 "Further reading: :ref:`expression_function_String_concat`, "
 ":ref:`expression_function_Operators_concat`"
@@ -14387,6 +15114,18 @@ msgstr "``5 / NULL`` → NULL"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:51
 msgid "//"
 msgstr "//"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:53
+msgid "Floor division of two values"
+msgstr "Divisione approssimata per eccesso di due valori"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:59
+msgid "a // b"
+msgstr "a // b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
+msgid "``9 // 2`` → 4"
+msgstr "``9 // 2`` → 4"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:72
 msgid "<"
@@ -14654,7 +15393,7 @@ msgstr ""
 "*value BETWEEN lower_bound AND higher_bound* is the same as \"*value >= "
 "lower_bound AND value <= higher_bound*\"."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:883
+#: ../../docs/user_manual/expressions/functions_list.rst:848
 msgid "Further reading: :ref:`expression_function_Operators_NOT_BETWEEN`"
 msgstr "Ulterior letture: :ref:`expression_function_Operators_NOT_BETWEEN`"
 
@@ -14815,6 +15554,10 @@ msgstr "``4 IS 2+2`` → TRUE"
 msgid "``4 IS 2`` → FALSE"
 msgstr "``4 IS 2`` → FALSE"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:81
+msgid "``@geometry IS NULL`` → 0, if your geometry is not NULL"
+msgstr "``@geometry IS NULL`` → 0, se la tua geometria non è NULL"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:89
 msgid "IS NOT"
 msgstr "IS NOT"
@@ -14972,7 +15715,7 @@ msgstr ""
 "*value NOT BETWEEN lower_bound AND higher_bound* è uguale a \"*value < "
 "lower_bound OR value > higher_bound*\"."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:889
+#: ../../docs/user_manual/expressions/functions_list.rst:854
 msgid "Further reading: :ref:`expression_function_Operators_BETWEEN`"
 msgstr "Ulteriori letture: :ref:`expression_function_Operators_BETWEEN`"
 
@@ -15037,7 +15780,7 @@ msgstr "``map('a',1,'b',2)['a']`` → 1"
 msgid "``map('a',1,'b',2)['b']`` → 2"
 msgstr "``map('a',1,'b',2)['b']`` → 2"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:895
+#: ../../docs/user_manual/expressions/functions_list.rst:860
 msgid ""
 "Further reading: :ref:`expression_function_Arrays_array_get`, "
 ":ref:`expression_function_Maps_map_get`"
@@ -15101,7 +15844,7 @@ msgstr "``'Dia: ' || \"Diameter\"`` → 'Dia: 25'"
 msgid "``1 || 2`` → '12'"
 msgstr "``1 || 2`` → '12'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:902
+#: ../../docs/user_manual/expressions/functions_list.rst:867
 msgid ""
 "Further reading: :ref:`expression_function_String_concat`, "
 ":ref:`expression_function_Operators_plus`"
@@ -15153,15 +15896,15 @@ msgstr "``'hello' ~ 'llo$'`` → TRUE"
 msgid "``'abc123' ~ '\\\\d+'`` → TRUE"
 msgstr "``'abc123' ~ '\\\\d+'`` → TRUE"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:909
+#: ../../docs/user_manual/expressions/functions_list.rst:874
 msgid "Further reading: :ref:`expression_function_String_regexp_match`"
 msgstr "Ulteriori letture: :ref:`expression_function_String_regexp_match`"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:918
+#: ../../docs/user_manual/expressions/functions_list.rst:883
 msgid "Processing Functions"
 msgstr "Funzioni di Processing"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:920
+#: ../../docs/user_manual/expressions/functions_list.rst:885
 msgid "This group contains functions that operate on processing algorithms."
 msgstr ""
 "Questo gruppo contiene funzioni che operano su algoritmi di processing."
@@ -15188,17 +15931,27 @@ msgstr "**name** - nome del parametro in ingresso corrispondente"
 msgid "``parameter('BUFFER_SIZE')`` → 5.6"
 msgstr "``parameter('BUFFER_SIZE')`` → 5.6"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:931
+#: ../../docs/user_manual/expressions/functions_list.rst:898
 msgid "Rasters Functions"
 msgstr "Funzioni Raster"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:933
+#: ../../docs/user_manual/expressions/functions_list.rst:900
 msgid "This group contains functions to operate on raster layer."
 msgstr "Questo gruppo contiene funzioni che operano sui layer raster."
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:12
 msgid "raster_attributes"
 msgstr "raster_attributes"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:14
+msgid ""
+"Returns a map with the fields names as keys and the raster attribute table "
+"values as values from the attribute table entry that matches the given "
+"raster value."
+msgstr ""
+"Restituisce una mappa con i nomi dei campi come chiavi e i valori della "
+"tabella degli attributi raster come valori della casella della tabella degli"
+" attributi che corrisponde al valore raster dato."
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:20
 msgid "raster_attributes(layer, band, value)"
@@ -15208,6 +15961,23 @@ msgstr "raster_attributes(layer, band, value)"
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:78
 msgid "**layer** - the name or id of a raster layer"
 msgstr "**layer** - il nome o l'id di un layer raster"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:23
+msgid "**band** - the band number for the associated attribute table lookup."
+msgstr ""
+"**band** - il numero di banda della associata lookup table degli attributi."
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:24
+msgid "**value** - raster value"
+msgstr "**value** - valore raster"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:26
+msgid ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+msgstr ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:34
 msgid "raster_statistic"
@@ -15304,11 +16074,11 @@ msgstr ""
 msgid "``raster_value('dem', 1, make_point(1,1))`` → 25"
 msgstr "``raster_value('dem', 1, make_point(1,1))`` → 25"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:944
+#: ../../docs/user_manual/expressions/functions_list.rst:913
 msgid "Record and Attributes Functions"
 msgstr "Funzioni relative ai record e agli attributi"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:946
+#: ../../docs/user_manual/expressions/functions_list.rst:915
 msgid "This group contains functions that operate on record identifiers."
 msgstr ""
 "Questo gruppo contiene funzioni che operano sugli identificativi dei record."
@@ -15419,7 +16189,7 @@ msgstr ""
 "``attributes( @atlas_feature )['name']`` → valore memorizzato nell'attributo"
 " 'name' per l'elemento dell'atlante corrente"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:958
+#: ../../docs/user_manual/expressions/functions_list.rst:925
 msgid "Further reading: :ref:`maps_functions`"
 msgstr "Ulteriori informazioni: :ref:`maps_functions`"
 
@@ -15568,9 +16338,38 @@ msgstr ""
 "``display_expression( 'streets', get_feature_by_id('streets', 1))`` → "
 "L'espressione di visualizzazione dell'elemento con ID 1 sul layer 'streets'."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:73
+msgid ""
+"``display_expression('a_layer_id', @feature, 'False')`` → The display "
+"expression of the given feature not evaluated."
+msgstr ""
+"``display_expression('a_layer_id', @feature, 'False')`` → L'espressione per "
+"la visualizzazione dell'elemento dato non viene valutata."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:81
 msgid "feature_id"
 msgstr "feature_id"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:83
+msgid "Returns a feature's unique ID, or NULL if the feature is not valid."
+msgstr ""
+"Restituisce l'ID univoco di un elemento o NULL se l'elemento non è valido."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:89
+msgid "feature_id(feature)"
+msgstr "feature_id(feature)"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:93
+msgid "``feature_id( @feature )`` → the ID of the current feature"
+msgstr "``feature_id( @feature )`` → l' ID dell'elemento corrente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:931
+msgid ""
+"Further reading: "
+":ref:`expression_function_Record_and_Attributes_get_feature_by_id`"
+msgstr ""
+"Ulteriore docomentazione: "
+":ref:`expression_function_Record_and_Attributes_get_feature_by_id`"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "get_feature"
@@ -15625,6 +16424,10 @@ msgstr ""
 "Insieme all'ID del layer, una mappa contenente le colonne (chiave) e il "
 "rispettivo valore da utilizzare."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:35
+msgid "get_feature(layer, attribute)"
+msgstr "get_feature(layer, attribute)"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:38
 msgid "**attribute** - Map containing the column and value pairs to use"
 msgstr ""
@@ -15668,6 +16471,13 @@ msgstr ""
 "``get_feature_by_id('streets', 1)`` → l'elemento con l'id 1 nel layer "
 "\"streets\""
 
+#: ../../docs/user_manual/expressions/functions_list.rst:937
+msgid ""
+"Further reading: :ref:`expression_function_Record_and_Attributes_feature_id`"
+msgstr ""
+"Ulteriore docomentazione: "
+":ref:`expression_function_Record_and_Attributes_feature_id`"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
 msgid "$id"
@@ -15685,6 +16495,113 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
 msgid "``$id`` → 42"
 msgstr "``$id`` → 42"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:943
+msgid ""
+"Further reading: "
+":ref:`expression_function_Record_and_Attributes_feature_id`, "
+":ref:`expression_function_Record_and_Attributes_get_feature_by_id`"
+msgstr ""
+"Ulteriore docomentazione: "
+":ref:`expression_function_Record_and_Attributes_feature_id`, "
+":ref:`expression_function_Record_and_Attributes_get_feature_by_id`"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
+msgid "is_attribute_valid"
+msgstr "is_attribute_valid"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid "Returns TRUE if a specific feature attribute meets all constraints."
+msgstr ""
+"Restituisce TRUE se un attributo specifico dell'elemento soddisfa tutti i "
+"vincoli."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
+msgid "is_attribute_valid(attribute, [feature], [layer], [strength])"
+msgstr "is_attribute_valid(attribute, [feature], [layer], [strength])"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
+msgid "**attribute** - an attribute name"
+msgstr "**attribute** - il nome di un attributo"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+msgid "**feature** - A feature. If not set, the current feature will be used."
+msgstr ""
+"**feature** - Un elemento. Se non viene impostato, verrà utilizzato "
+"l'elemento corrente."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+msgid ""
+"**layer** - A vector layer. If not set, the current layer will be used."
+msgstr ""
+"**layer** - Un layer vettoriale. Se non viene impostato, verrà utilizzato il"
+" layer corrente."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:21
+msgid ""
+"**strength** - Set to 'hard' or 'soft' to narrow down to a specific "
+"constraint type. If not set, the function will return FALSE if either a hard"
+" or a soft constraint fails."
+msgstr ""
+"**strength** - Imposta 'hard' o 'soft' per restringere il campo a un tipo di"
+" vincolo specifico. Se non viene impostato, la funzione restituirà FALSE se "
+"un vincolo rigido o soft fallisce."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:23
+msgid ""
+"``is_attribute_valid('HECTARES')`` → TRUE if the current feature's value in "
+"the \"HECTARES\" field meets all constraints."
+msgstr ""
+"``is_attribute_valid('HECTARES')`` → TRUE se il valore dell'elemento "
+"corrente nel campo \"HECTARES\" soddisfa tutti i vincoli."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:24
+msgid ""
+"``is_attribute_valid('HOUSES',get_feature('my_layer', 'FID', 10), "
+"'my_layer')`` → FALSE if the value in the \"HOUSES\" field from the feature "
+"with \"FID\"=10 in 'my_layer' fails to meet all constraints."
+msgstr ""
+"``is_attribute_valid('HOUSES',get_feature('my_layer', 'FID', 10), "
+"'my_layer')`` → FALSE se il valore del campo \"HOUSES\" dall'elemento con "
+"\"FID\"=10 in 'my_layer' non soddisfa tutti i vincoli."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:950
+#: ../../docs/user_manual/expressions/functions_list.rst:956
+msgid "Further reading: :ref:`constraints`"
+msgstr "Ulteriore docomentazione: :ref:`constraints`"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
+msgid "is_feature_valid"
+msgstr "is_feature_valid"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid "Returns TRUE if a feature meets all field constraints."
+msgstr "Restituisce TRUE se un elemento soddisfa tutti i vincoli del campo."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
+msgid "is_feature_valid([feature], [layer], [strength])"
+msgstr "is_feature_valid([feature], [layer], [strength])"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:22
+msgid ""
+"``is_feature_valid(strength:='hard')`` → TRUE if all fields from the current"
+" feature meet their hard constraints."
+msgstr ""
+"``is_feature_valid(strength:='hard')`` → TRUE se tutti i campi dell'elemento"
+" corrente soddisfano i vincoli hard."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:23
+msgid ""
+"``is_feature_valid(get_feature('my_layer', 'FID', 10), 'my_layer')`` → FALSE"
+" if all fields from feature with \"FID\"=10 in 'my_layer' fails to meet all "
+"constraints."
+msgstr ""
+"``is_feature_valid(get_feature('my_layer', 'FID', 10), 'my_layer')`` → FALSE"
+" se tutti i campi dell'elemento con \"FID\"=10 in 'my_layer' non soddisfano "
+"tutti i vincoli."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "is_selected"
@@ -15869,6 +16786,14 @@ msgstr ""
 "``maptip('streets', get_feature_by_id('streets', 1))`` → Il suggerimento "
 "dell'elemento con ID 1 sul layer 'streets'."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:111
+msgid ""
+"``maptip('a_layer_id', @feature, 'False')`` → The maptip of the given "
+"feature not evaluated."
+msgstr ""
+"``maptip('a_layer_id', @feature, 'False')`` → Il maptip dell'elemento dato "
+"non è stato valutato."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:119
 msgid "num_selected"
 msgstr "num_selected"
@@ -15908,6 +16833,10 @@ msgstr ""
 "``num_selected('streets')`` → Il numero di elementi selezionati sul layer "
 "streets"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:142
+msgid "represent_attributes"
+msgstr "represent_attributes"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:144
 msgid ""
 "Returns a map with the attribute names as keys and the configured "
@@ -15929,6 +16858,10 @@ msgstr ""
 "Se chiamata senza parametri, la funzione restituisce la rappresentazione "
 "degli attributi dell'elemento corrente nel layer corrente."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:154
+msgid "represent_attributes()"
+msgstr "represent_attributes()"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:156
 msgid ""
 "``represent_attributes()`` → The representation of the attributes for the "
@@ -15946,6 +16879,10 @@ msgstr ""
 "Se richiamata con il solo parametro \"feature\", la funzione restituirà la "
 "rappresentazione degli attributi dell'elemento specificato dal layer "
 "corrente."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:167
+msgid "represent_attributes(feature)"
+msgstr "represent_attributes(feature)"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:171
 msgid ""
@@ -15965,6 +16902,10 @@ msgstr ""
 "restituisce la rappresentazione degli attributi dell'elemento specificato "
 "dal layer specificato."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:182
+msgid "represent_attributes(layer, feature)"
+msgstr "represent_attributes(layer, feature)"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:184
 msgid "**layer** - The layer (or its ID or name)."
 msgstr "**layer** - Il layer (o il suo ID o nome)."
@@ -15977,7 +16918,7 @@ msgstr ""
 "``represent_attributes('atlas_layer', @atlas_feature)`` → Rappresentazione "
 "degli attributi dell'elemento specificato dal layer specificato."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:995
+#: ../../docs/user_manual/expressions/functions_list.rst:962
 msgid ""
 "Further reading: "
 ":ref:`expression_function_Record_and_Attributes_represent_value`"
@@ -15997,6 +16938,10 @@ msgstr ""
 "Restituisce il valore di rappresentazione configurato per un valore di "
 "campo. Dipende dal tipo di widget configurato. Spesso è utile per i widget "
 "'Value Map'."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
+msgid "represent_value(value, [fieldName])"
+msgstr "represent_value(value, [fieldName])"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
 msgid "**value** - The value which should be resolved. Most likely a field."
@@ -16024,7 +16969,7 @@ msgstr ""
 "``represent_value('static value', 'field_name')`` → Descrizione per il "
 "valore statico"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1001
+#: ../../docs/user_manual/expressions/functions_list.rst:968
 msgid ""
 "Further reading: :ref:`widget types <edit_widgets>`, "
 ":ref:`expression_function_Record_and_Attributes_represent_attributes`"
@@ -16181,7 +17126,7 @@ msgstr ""
 "map('last_change', 'date(''now'')', 'user', '''' || @user_account_name || "
 "''''))`` → 0"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1008
+#: ../../docs/user_manual/expressions/functions_list.rst:975
 msgid ""
 "Further reading: :ref:`project_data_source_properties`, "
 ":ref:`vector_relations`"
@@ -16226,11 +17171,11 @@ msgstr "``uuid('WithoutBraces')`` → '0bd2f60f-f157-4a6d-96af-d4ba4cb366a1'"
 msgid "``uuid('Id128')`` → '0bd2f60ff1574a6d96afd4ba4cb366a1'"
 msgstr "``uuid('Id128')`` → '0bd2f60ff1574a6d96afd4ba4cb366a1'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1018
+#: ../../docs/user_manual/expressions/functions_list.rst:985
 msgid "Relations"
 msgstr "Relazioni"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1020
+#: ../../docs/user_manual/expressions/functions_list.rst:987
 msgid ""
 "This group contains the list of the :ref:`relations <project_relations>` "
 "available in the current project, with their description. It provides a "
@@ -16246,19 +17191,49 @@ msgstr ""
 "<expression_function_Aggregates_relation_aggregate>`) o per personalizzare "
 "un modulo."
 
+#: ../../docs/user_manual/expressions/functions_list.rst:996
+msgid "Sensors Functions"
+msgstr "Funzioni Sensori"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:998
+msgid "This group contains functions to interact with sensors."
+msgstr "Questo gruppo contiene le funzioni per interagire con i sensori."
+
 #: ../../docs/user_manual/expressions/expression_help/Sensors.rst:12
 msgid "sensor_data"
 msgstr "sensor_data"
+
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:14
+msgid ""
+"Returns the last captured value (or values as a map for sensors which report"
+" multiple values) from a registered sensor."
+msgstr ""
+"Restituisce l'ultimo valore acquisito (o i valori come mappa per i sensori "
+"che riportano più valori) da un sensore registrato."
 
 #: ../../docs/user_manual/expressions/expression_help/Sensors.rst:20
 msgid "sensor_data(name, [expiration])"
 msgstr "sensor_data(name, [expiration])"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1046
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:24
+msgid "**name** - the sensor name"
+msgstr "**name** - il nome del sensore"
+
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:25
+msgid "**expiration** - maximum millisecond since last captured value allowed"
+msgstr ""
+"**expiration** - massimo in millesecondi consentito dall'ultimo valore "
+"catturato "
+
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:27
+msgid "``sensor_data('geiger_1')`` → '2000'"
+msgstr "``sensor_data('geiger_1')`` → '2000'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1011
 msgid "String Functions"
 msgstr "Funzioni Stringa"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1048
+#: ../../docs/user_manual/expressions/functions_list.rst:1013
 msgid ""
 "This group contains functions that operate on strings (e.g., that replace, "
 "convert to upper case)."
@@ -16344,11 +17319,11 @@ msgstr "``concat('Anno ', 1984)`` → 'Anno 1984'"
 msgid "``concat('The Wall', NULL)`` → 'The Wall'"
 msgstr "``concat('The Wall', NULL)`` → 'The Wall'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1061
+#: ../../docs/user_manual/expressions/functions_list.rst:1024
 msgid "**About fields concatenation**"
 msgstr "**Informazioni sulla concatenazione dei campi**"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1063
+#: ../../docs/user_manual/expressions/functions_list.rst:1026
 msgid ""
 "You can also concatenate strings or field values using either ``||`` or "
 "``+`` operators, with some special characteristics:"
@@ -16356,7 +17331,7 @@ msgstr ""
 "Puoi anche concatenare stringhe o valori di campo usando gli operatori "
 "``||`` o ``+```, con alcune caratteristiche speciali:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1066
+#: ../../docs/user_manual/expressions/functions_list.rst:1029
 msgid ""
 "The ``+`` operator also means sum up expression, so if you have an integer "
 "(field or numeric value) operand, this can be error prone and you better use"
@@ -16366,7 +17341,7 @@ msgstr ""
 "operando intero (campo o valore numerico), questo può essere soggetto a "
 "errori ed è meglio usare gli altri:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1072
+#: ../../docs/user_manual/expressions/functions_list.rst:1035
 msgid ""
 "When any of the arguments is a NULL value, either ``||`` or ``+`` will "
 "return a NULL value. To return the other arguments regardless the NULL "
@@ -16376,7 +17351,7 @@ msgstr ""
 "restituiranno un valore NULL. Per restituire gli altri argomenti "
 "indipendentemente dal valore NULL, potete usare la funzione ``concat``::"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1080
+#: ../../docs/user_manual/expressions/functions_list.rst:1043
 msgid ""
 "further reading: :ref:`expression_function_Operators_concat`, "
 ":ref:`expression_function_Operators_plus`"
@@ -16587,6 +17562,18 @@ msgstr "``lpad('Hello', 10, 'x')`` → 'xxxxxHello'"
 msgid "``lpad('Hello', 3, 'x')`` → 'Hel'"
 msgstr "``lpad('Hello', 3, 'x')`` → 'Hel'"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:225
+msgid "ltrim"
+msgstr "ltrim"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:227
+msgid ""
+"Removes the longest string containing only the specified characters (a space"
+" by default) from the start of string."
+msgstr ""
+"Rimuove la stringa più lunga contenente solo i caratteri specificati (uno "
+"spazio per impostazione predefinita) dall'inizio della stringa."
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:233
 msgid "ltrim(string, [characters=' '])"
 msgstr "ltrim(string, [characters=' '])"
@@ -16596,6 +17583,27 @@ msgstr "ltrim(string, [characters=' '])"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:237
 msgid "**string** - string to trim"
 msgstr "**string** - stringa da tagliare"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:175
+#: ../../docs/user_manual/expressions/expression_help/String.rst:238
+msgid "**characters** - characters to trim"
+msgstr "**characters** - caratteri da tagliare"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:240
+msgid "``ltrim('   hello world  ')`` → 'hello world  '"
+msgstr "``ltrim('   hello world  ')`` → 'hello world  '"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:241
+msgid "``ltrim('zzzytest', 'xyz')`` → 'test'"
+msgstr "``ltrim('zzzytest', 'xyz')`` → 'test'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1050
+msgid ""
+"Further reading: :ref:`expression_function_String_rtrim`, "
+":ref:`expression_function_String_trim`"
+msgstr ""
+"Ulteriore docomentazione: :ref:`expression_function_String_rtrim`, "
+":ref:`expression_function_String_trim`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:28
 msgid "regexp_replace"
@@ -16823,9 +17831,33 @@ msgstr "``rpad('Hello', 3, 'x')`` → 'Hel'"
 msgid "rtrim"
 msgstr "rtrim"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:164
+msgid ""
+"Removes the longest string containing only the specified characters (a space"
+" by default) from the end of string."
+msgstr ""
+"Rimuove la stringa più lunga contenente solo i caratteri specificati (uno "
+"spazio per impostazione predefinita) dalla fine della stringa."
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:170
 msgid "rtrim(string, [characters=' '])"
 msgstr "rtrim(string, [characters=' '])"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:177
+msgid "``rtrim('   hello world  ')`` → '   hello world'"
+msgstr "``rtrim('   hello world  ')`` → '   hello world'"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:178
+msgid "``rtrim('testxxzx', 'xyz')`` → 'test'"
+msgstr "``rtrim('testxxzx', 'xyz')`` → 'test'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1057
+msgid ""
+"Further reading: :ref:`expression_function_String_ltrim`, "
+":ref:`expression_function_String_trim`"
+msgstr ""
+"Ulteriore docomentazione: :ref:`expression_function_String_ltrim`, "
+":ref:`expression_function_String_trim`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "strpos"
@@ -16963,6 +17995,14 @@ msgstr "trim(string)"
 msgid "``trim('   hello world  ')`` → 'hello world'"
 msgstr "``trim('   hello world  ')`` → 'hello world'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:1064
+msgid ""
+"Further reading: :ref:`expression_function_String_ltrim`, "
+":ref:`expression_function_String_rtrim`"
+msgstr ""
+"Ulteriore docomentazione: :ref:`expression_function_String_ltrim`, "
+":ref:`expression_function_String_rtrim`"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "upper"
 msgstr "upper"
@@ -17027,11 +18067,11 @@ msgstr "``wordwrap('UNIVERSITY OF QGIS',13)`` → 'UNIVERSITY OF<br>QGIS'"
 msgid "``wordwrap('UNIVERSITY OF QGIS',-3)`` → 'UNIVERSITY<br>OF QGIS'"
 msgstr "``wordwrap('UNIVERSITY OF QGIS',-3)`` → 'UNIVERSITY<br>OF QGIS'"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1108
+#: ../../docs/user_manual/expressions/functions_list.rst:1071
 msgid "User Expressions"
 msgstr "Espressioni utente"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1110
+#: ../../docs/user_manual/expressions/functions_list.rst:1073
 msgid ""
 "This group contains the expressions saved as :ref:`user expressions "
 "<user_expressions_functions>`."
@@ -17039,11 +18079,11 @@ msgstr ""
 "Questo gruppo contiene le espressioni salvate come :ref:`user expressions "
 "<user_expressions_functions>`."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1117
+#: ../../docs/user_manual/expressions/functions_list.rst:1080
 msgid "Variables"
 msgstr "Variabili"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1119
+#: ../../docs/user_manual/expressions/functions_list.rst:1082
 msgid ""
 "This group contains dynamic variables related to the application, the "
 "project file and other settings. The availability of variables depends on "
@@ -17053,33 +18093,33 @@ msgstr ""
 "file di progetto e ad altre impostazioni. La disponibilità delle variabili "
 "dipende dal contesto:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1123
+#: ../../docs/user_manual/expressions/functions_list.rst:1086
 msgid "from the |expressionSelect| :sup:`Select by expression` dialog"
 msgstr ""
 "dalla finestra di dialogo |expressionSelect| :sup:`Seleziona tramite una "
 "espressione` "
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1361
+#: ../../docs/user_manual/expressions/functions_list.rst:1324
 msgid "expressionSelect"
 msgstr "expressionSelect"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1124
+#: ../../docs/user_manual/expressions/functions_list.rst:1087
 msgid "from the |calculateField| :sup:`Field calculator` dialog"
 msgstr "dalla finestra di dialogo |calculateField| :sup:`Calcolatore campo` "
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1359
+#: ../../docs/user_manual/expressions/functions_list.rst:1322
 msgid "calculateField"
 msgstr "calculateField"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1125
+#: ../../docs/user_manual/expressions/functions_list.rst:1088
 msgid "from the layer properties dialog"
 msgstr "dalla finestra di dialogo Proprietà layer"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1126
+#: ../../docs/user_manual/expressions/functions_list.rst:1089
 msgid "from the print layout"
 msgstr "dal layout di stampa"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1128
+#: ../../docs/user_manual/expressions/functions_list.rst:1091
 msgid ""
 "To use these variables in an expression, they should be preceded by the "
 "``@`` character (e.g, ``@row_number``)."
@@ -17489,8 +18529,19 @@ msgid "layer_crs_ellipsoid"
 msgstr "layer_crs_ellipsoid"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The ellipsoid Authority ID of the current layer CRS"
+msgstr "L'ID dell'Autorità dell'ellissoide del SR del layer corrente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_cursor_point"
 msgstr "layer_cursor_point"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Point geometry under the mouse position in map canvas, in active layer's CRS"
+msgstr ""
+"Geometria puntuale sotto la posizione del mouse nell'area di disegno della "
+"mappa, nel SR del layer attivo"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_id"
@@ -17700,6 +18751,10 @@ msgid ""
 msgstr ""
 "La definizione Proj4 del sistema di riferimento delle coordinate della mappa"
 " corrente"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "map_crs_projection"
+msgstr "map_crs_projection"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid ""
@@ -18234,6 +19289,14 @@ msgstr ""
 "Il numero di elementi rappresentati dal simbolo (nella legenda del layout)"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "symbol_frame"
+msgstr "symbol_frame"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The frame number (for animated symbols only)"
+msgstr "Il numero del fotogramma (solo per i simboli animati)"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "symbol_id"
 msgstr "symbol_id"
 
@@ -18349,12 +19412,12 @@ msgstr ""
 "visualizzazione (derivato dalla scala corrente della mappa). Normalmente "
 "nell'intervallo [0, 20]."
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1318
+#: ../../docs/user_manual/expressions/functions_list.rst:1281
 msgid "Return the X coordinate of a map item center in layout::"
 msgstr ""
 "Restituire la coordinata X del centro di un oggetto della mappa nel layout:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1322
+#: ../../docs/user_manual/expressions/functions_list.rst:1285
 msgid ""
 "Return, for each feature in the current layer, the number of overlapping "
 "airport features::"
@@ -18362,15 +19425,15 @@ msgstr ""
 "Restituire, per ogni elemento nel layer corrente, il numero di aeroporti "
 "sovrapposti:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1328
+#: ../../docs/user_manual/expressions/functions_list.rst:1291
 msgid "Get the object_id of the first snapped point of a line::"
 msgstr "Ottenere l'object_id del primo punto agganciato di una linea:"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1344
+#: ../../docs/user_manual/expressions/functions_list.rst:1307
 msgid "Recent Functions"
 msgstr "Funzioni recenti"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1346
+#: ../../docs/user_manual/expressions/functions_list.rst:1309
 msgid ""
 "This group contains recently used functions. Depending on the context of its"
 " usage (feature selection, field calculator, generic), recently applied "
