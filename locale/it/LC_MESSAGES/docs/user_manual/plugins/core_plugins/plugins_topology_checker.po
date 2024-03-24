@@ -255,6 +255,42 @@ msgstr ""
 msgid "On **polygon layers**, the following rules are available:"
 msgstr "Per i vettori poligono hai a disposizione le seguenti regole:"
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:73
+msgid ""
+":guilabel:`Must contain`: Polygon layer must contain at least one point "
+"geometry from the second layer."
+msgstr ""
+":guilabel:`deve contenere`: Il vettore poligonale deve contenere almeno una "
+"geometria puntiforme del secondo layer."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:75
+msgid ""
+":guilabel:`Must not have duplicates`: Polygons from the same layer must not "
+"have identical geometries. Whenever a polygon feature is represented twice "
+"or more it will occur in the 'Error' field."
+msgstr ""
+":guilabel:`non deve avere duplicati`: I poligoni del layer stesso non devono"
+" avere geometrie identiche. Ogni volta che un elemento poligonale è "
+"rappresentato due o più volte, verrà visualizzato nel campo 'Errore'."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:78
+msgid ""
+":guilabel:`Must not have gaps`: Adjacent polygons should not form gaps "
+"between them. Administrative boundaries could be mentioned as an example (US"
+" state polygons do not have any gaps between them...)."
+msgstr ""
+":guilabel:`Non deve avere vuoti`: I poligoni adiacenti non devono avere "
+"spazi vuoti tra loro. I confini amministrativi possono essere citati come "
+"esempio (i poligoni degli Stati Uniti non hanno spazi vuoti tra loro...)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:81
+msgid ""
+":guilabel:`Must not have invalid geometries`: Checks whether the geometries "
+"are valid. Some of the rules that define a valid geometry are:"
+msgstr ""
+":guilabel:`non deve avere geometrie non valide`: Controlla se le geometrie "
+"sono valide. Alcune delle regole che definiscono una geometria valida sono:"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:84
 msgid "Polygon rings must close."
 msgstr "I poligoni anello devono essere chiusi."
@@ -277,6 +313,38 @@ msgstr ""
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:87
 msgid "Rings may not touch other rings, except at a point."
 msgstr "Gli anelli non tocchino altri anelli, tranne che in un punto."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:89
+msgid ""
+":guilabel:`Must not have multi-part geometries`: Sometimes, a geometry is "
+"actually a collection of simple (single-part) geometries. Such a geometry is"
+" called multi-part geometry. If it contains just one type of simple "
+"geometry, we call it multi-point, multi-linestring or multi-polygon. For "
+"example, a country consisting of multiple islands can be represented as a "
+"multi-polygon."
+msgstr ""
+":guilabel:`non deve avere geometrie multi-part`: A volte, una geometria è in"
+" realtà un insieme di geometrie semplici (a parti singole). Una geometria di"
+" questo tipo è chiamata geometria multiparte. Se contiene un solo tipo di "
+"geometria semplice, la si chiama multi-punto, multi-linea o multi-poligono. "
+"Ad esempio, un paese composto da più isole può essere rappresentato come un "
+"multipoligono."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:94
+msgid ""
+":guilabel:`Must not overlap`: Adjacent polygons should not share common "
+"area."
+msgstr ""
+":guilabel:`non deve sovrapporsi`: I poligoni adiacenti non devono "
+"condividere un'area comune."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:95
+msgid ""
+":guilabel:`Must not overlap with`: Adjacent polygons from one layer should "
+"not share common area with polygons from another layer."
+msgstr ""
+":guilabel:`non deve sovrapporsi`: I poligoni adiacenti di un layer non "
+"devono condividere l'area comune con i poligoni di un altro layer."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:98
 msgid ""
@@ -339,6 +407,18 @@ msgstr ""
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:145
 msgid "validateAll"
 msgstr "validateAll"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:113
+msgid ""
+"or |validateExtent| :sup:`Validate Extent`: applies the active rules to the "
+"features of the involved layer(s), within the current map canvas. The button"
+" is kept pushed and the results will update as the map canvas extent "
+"changes."
+msgstr ""
+"o |validateExtent| :sup:`Verifica l'estensione`: applica le regole attive "
+"agli elementi del(i) layer coinvolti, all'interno dell'area di disegno "
+"corrente. Il pulsante viene mantenuto premuto e i risultati si aggiornano al"
+" variare dell'estensione dell'area di disegno."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:147
 msgid "validateExtent"
