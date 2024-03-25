@@ -118,7 +118,7 @@ Input types
      - ``alg.GEOMETRY``
      - A geometry
    * -
-     - :class:`ProcessingNumberParameterType.Integer <qgis.gui.Qgis.ProcessingNumberParameterType>`
+     - :attr:`QgsProcessingParameterNumber.Integer <qgis.core.QgsProcessingParameterNumber.Integer>`
      - ``alg.INT``
      - An integer
    * - Print Layout
@@ -158,7 +158,7 @@ Input types
      - ``alg.MULTILAYER``
      - A set of layers
    * - Number
-     - :class:`ProcessingNumberParameterType.Double <qgis.gui.Qgis.ProcessingNumberParameterType>`
+     - :attr:`QgsProcessingParameterNumber.Double <qgis.core.QgsProcessingParameterNumber.Double>`
      - ``alg.NUMBER``
      - A numerical value
    * - Point
