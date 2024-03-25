@@ -1,7 +1,8 @@
 .. _processing_algs_input_output:
 
+**************************************************
 Input and output types for Processing Algorithms
--------------------------------------------------------
+**************************************************
 
 Here is the list of input and output types that are supported in
 Processing with their corresponding alg decorator constants,
@@ -9,7 +10,7 @@ their name in the modeler designer if exposed.
 
 
 Input types
-...........
+===========
 
 
 .. list-table::
@@ -69,7 +70,7 @@ Input types
    * - Datetime
      - :class:`ProcessingDateTimeParameterDataType.DateTime <qgis.gui.Qgis.ProcessingDateTimeParameterDataType>`
      - ``alg.DATETIME``
-     - A datetime (or a pure date or time)
+     - A datetime
    * - Distance
      - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
      - ``alg.DISTANCE``
@@ -202,15 +203,19 @@ Input types
      - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
      - ``alg.SCALE``
      - A map scale
+   * -
+     - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
+     - ``alg.SINK``
+     - A feature sink
+   * - String
+     - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
+     - ``alg.STRING``
+     - A text string
    * - TIN Creation Layers
      - :class:`QgsProcessingParameterTinInputLayers <qgis.core.QgsProcessingParameterTinInputLayers>`
      -
      - Selection of multiple layers to create a TIN with vertices
        and/or break lines
-   * -
-     - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
-     - ``alg.SINK``
-     - A feature sink
    * - Time
      - :class:`ProcessingDateTimeParameterDataType.Time <qgis.gui.Qgis.ProcessingDateTimeParameterDataType>`
      - ``alg.TIME``
@@ -219,10 +224,6 @@ Input types
      - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
      - ``alg.SOURCE``
      - A feature source
-   * - String
-     - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
-     - ``alg.STRING``
-     - A text string
    * - Vector Layer
      - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
      - ``alg.VECTOR_LAYER``
@@ -240,7 +241,7 @@ Input types
 
 
 Output types
-............
+============
 
 .. list-table::
    :widths: 47 24 29
