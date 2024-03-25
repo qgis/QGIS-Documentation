@@ -303,7 +303,12 @@ Python bindings
 All classes and public functions have sip bindings, except ``QgsAuthCrypto``,
 since management of the master password hashing and auth database encryption
 should be handled by the main app, and not via Python.
-See :ref:`authentication_security_considerations` concerning Python access.
+
+Once the master password is entered, the API is open to access authentication
+configs in the authentication database, similar to how Firefox works.
+However, no wall against PyQGIS access has been defined.
+This may lead to issues where a user downloads/installs a malicious PyQGIS plugin
+or standalone app that gains access to authentication credentials.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
