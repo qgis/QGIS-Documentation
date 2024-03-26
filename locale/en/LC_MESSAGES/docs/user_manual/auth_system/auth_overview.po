@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-03-26 10:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -154,15 +154,15 @@ msgid ""
 "|symbologyEdit| button to modify existing ones."
 msgstr ""
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:317
+#: ../../docs/user_manual/auth_system/auth_overview.rst:322
 msgid "symbologyAdd"
 msgstr ""
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:321
+#: ../../docs/user_manual/auth_system/auth_overview.rst:326
 msgid "symbologyRemove"
 msgstr ""
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:319
+#: ../../docs/user_manual/auth_system/auth_overview.rst:324
 msgid "symbologyEdit"
 msgstr ""
 
@@ -215,7 +215,7 @@ msgid ""
 "Plugins` button."
 msgstr ""
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:315
+#: ../../docs/user_manual/auth_system/auth_overview.rst:320
 msgid "options"
 msgstr ""
 
@@ -406,7 +406,16 @@ msgid ""
 "All classes and public functions have sip bindings, except "
 "``QgsAuthCrypto``, since management of the master password hashing and "
 "auth database encryption should be handled by the main app, and not via "
-"Python. See :ref:`authentication_security_considerations` concerning "
-"Python access."
+"Python."
+msgstr ""
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:307
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, no wall against PyQGIS access has been defined. "
+"This may lead to issues where a user downloads/installs a malicious "
+"PyQGIS plugin or standalone app that gains access to authentication "
+"credentials."
 msgstr ""
 
