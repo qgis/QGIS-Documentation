@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # Harrissou Sant-anna, 2024
 # marcobra <marcobra.ubuntu@gmail.com>, 2024
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2024\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -818,6 +818,25 @@ msgstr ""
 "Crea un layer vettoriale con un reticolo che copre una data estensione. Le "
 "celle del reticolo possono avere forme diverse:"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:274
+msgid ""
+"Different grid cell shapes applied to the same extent, without overlaps"
+msgstr ""
+"Forme diverse di celle del reticolo applicate alla stessa estensione, senza "
+"sovrapposizioni"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:276
+msgid ""
+"The size and/or placement of each element in the grid is defined using a "
+"horizontal and vertical spacing. The CRS of the output layer must be "
+"defined. The grid extent and the spacing values must be expressed in the "
+"coordinates and units of this CRS."
+msgstr ""
+"La dimensione e/o la collocazione di ciascun elemento del reticolo viene "
+"definita utilizzando una spaziatura orizzontale e verticale. Deve essere "
+"definito il SR del layer in uscita. L'estensione del reticolo e i valori di "
+"spaziatura devono essere espressi nelle coordinate e nelle unità di tale SR."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:282
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:956
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1065
@@ -1008,6 +1027,33 @@ msgstr "**Reticolo**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:355
 msgid "Resulting vector grid layer. One of:"
 msgstr "Layer del reticolo vettoriale risultante. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:375
+msgid ""
+"Resulting vector grid layer. The output geometry type (point, line or "
+"polygon) depends on the :guilabel:`Grid type`. Features are created from top"
+" to bottom, left to right. The attribute table is filled with:"
+msgstr ""
+"Layer del reticolo vettoriale risultante. Il tipo di geometria in uscita "
+"(punto, linea o poligono) dipende da :guilabel: `Tipo reticolo`. Gli "
+"elementi vengono creati dall'alto verso il basso, da sinistra a destra. La "
+"tabella degli attributi viene riempita con:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:380
+msgid "an ``id``"
+msgstr "un ``id``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:381
+msgid "coordinates on the ``left``, ``right``, ``top`` and ``bottom`` sides"
+msgstr "coordinate sui lati ``sinistro``, ``destro``, ``alto`` e ``basso``."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:382
+msgid ""
+"and their placement in the grid: ``row_index`` and ``column_index`` "
+"(available for point, rectangle and hexagon grid types)"
+msgstr ""
+"e il loro posizionamento nel reticolo: ``indice_riga`` e ``indice_colonna`` "
+"(disponibili per i tipi di reticolo Punto, Rettangolo ed Esagono)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:388
 msgid "**Algorithm ID**: ``native:creategrid``"
@@ -1312,6 +1358,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:630
 msgid "Import geotagged photos"
 msgstr "Importa foto con geotag"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:631
+msgid ""
+"Creates a point layer corresponding to the geotagged locations from JPEG or "
+"HEIC/HEIF images from a source folder."
+msgstr ""
+"Crea un layer punto corrispondente alle posizioni geotaggate da immagini "
+"JPEG o HEIC/HEIF da una cartella di provenienza."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:634
 msgid ""
@@ -2078,7 +2132,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1298
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1566
 msgid "**Number of features with missed points**"
-msgstr "**Numero di elementi con punti persi**"
+msgstr "**Numero di elementi con punti mancanti**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1299
 msgid "``POLYGONS_WITH_MISSED_POINTS``"
@@ -2259,6 +2313,16 @@ msgstr ""
 "Crea un layer vettoriale di punti corrispondenti ad ogni pixel di un layer "
 "raster."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1597
+msgid ""
+"Converts a raster layer to a vector layer, by creating point features for "
+"each individual pixel's center in the raster layer. Any NoData  pixels are "
+"skipped in the output."
+msgstr ""
+"Converte un layer raster in un layer vettoriale, creando elementi puntuali "
+"per il centro di ogni singolo pixel nel layer raster. I pixel NoData vengono"
+" ignorati nel risultato."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1616
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1690
 msgid "**Band number**"
@@ -2333,6 +2397,16 @@ msgid ""
 msgstr ""
 "Crea un layer vettoriale di poligoni in corrispondenza di ogni pixel di un "
 "layer raster."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1671
+msgid ""
+"Converts a raster layer to a vector layer, by creating polygon features for "
+"each individual pixel's extent in the raster layer. Any NoData  pixels are "
+"skipped in the output."
+msgstr ""
+"Converte un layer raster in un layer vettoriale, creando elementi poligonali"
+" per ogni singolo pixel del layer raster. I pixel NoData vengono ignorati "
+"nel risultato."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1700
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1723
