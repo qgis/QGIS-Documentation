@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-03-26 10:13+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: DiGro, 2024\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
@@ -207,15 +207,15 @@ msgstr ""
 "knop |symbologyRemove| om configuraties te verwijderen, en de knop "
 "|symbologyEdit| om bestaande aan te passen."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:317
+#: ../../docs/user_manual/auth_system/auth_overview.rst:322
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:321
+#: ../../docs/user_manual/auth_system/auth_overview.rst:326
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:319
+#: ../../docs/user_manual/auth_system/auth_overview.rst:324
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
 
@@ -295,7 +295,7 @@ msgstr ""
 "op de tab :guilabel:`Authenticatie`, klik op de knop |options| "
 ":guilabel:`Geïnstalleerde plug-ins`."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:315
+#: ../../docs/user_manual/auth_system/auth_overview.rst:320
 msgid "options"
 msgstr "options"
 
@@ -550,12 +550,25 @@ msgstr "Python-bindingen"
 msgid ""
 "All classes and public functions have sip bindings, except "
 "``QgsAuthCrypto``, since management of the master password hashing and auth "
-"database encryption should be handled by the main app, and not via Python. "
-"See :ref:`authentication_security_considerations` concerning Python access."
+"database encryption should be handled by the main app, and not via Python."
 msgstr ""
 "Alle klassen en publieke functies hebben sip-bindingen, uitgezonderd "
 "``QgsAuthCrypto``, omdat beheer van het hashen van het hoofdwachtwoord en "
 "encryptie van de authenticatiedatabase zouden moeten worden afgehandeld via "
-"de hoofdtoepassing en niet via Python. Bekijk "
-":ref:`authentication_security_considerations` met betrekking tot toegang tot"
-" Python."
+"de hoofdtoepassing en niet via Python."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:307
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, no wall against PyQGIS access has been defined. This"
+" may lead to issues where a user downloads/installs a malicious PyQGIS "
+"plugin or standalone app that gains access to authentication credentials."
+msgstr ""
+"Als het hoofdwachtwoord eenmaal is ingevoerd, is de API geopend om toegang "
+"te verkrijgen voor de configuraties voor authenticatie in de database voor "
+"authenticatie, soortgelijk aan de manier waarop Firefox werkt. Er is echter "
+"geen muur tegen toegang door PyQGIS gedefinieerd. Dit kan leiden tot "
+"problemen als een gebruiker een schadelijke plug-in of zelfstandige "
+"toepassing voor PyQGIS downloadt/installeert, die toegang verkrijgt tot "
+"gegevens voor authenticatie."
