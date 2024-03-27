@@ -923,7 +923,8 @@ pixels identification:
 * |checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips for the layer
 * The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor for map tips,
   mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
-  You can check the result of your code sample in the :guilabel:`Preview` frame.
+  You can check the result of your code sample in the :guilabel:`Preview` frame. You can also select and
+  edit existing expressions using the :guilabel:`Insert/Edit Expression` button.
 
 .. _figure_raster_display:
 
