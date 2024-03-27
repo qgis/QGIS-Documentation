@@ -6,9 +6,9 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
-# Transifex Bot <>, 2024
 # marcobra <marcobra.ubuntu@gmail.com>, 2024
+# Transifex Bot <>, 2024
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2024\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -109,9 +109,21 @@ msgstr "Scorciatoia"
 msgid "Description"
 msgstr "Descrizione"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:45
+msgid "|addLayer| :sup:`Add Layers`"
+msgstr "|addLayer| :sup:`Aggiungi Layer`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:265
 msgid "addLayer"
 msgstr "addLayer"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:46
+msgid "hold :kbd:`Ctrl` while drag-and-drop"
+msgstr "tieni premuto :kbd:`Ctrl` durante il trascinamento"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:47
+msgid "Allows you to add new layers to a plot."
+msgstr "Ti permette di aggiungere nuovi layer a un grafico."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:48
 msgid "|layerTree| :sup:`Show Layer Tree`"
@@ -360,9 +372,27 @@ msgstr "saveMapAsImage"
 msgid "Exports plots to several image formats"
 msgstr "Esporta grafici in diversi formati di immagine"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:98
+msgid "|fileSaveAs| :sup:`Export Results`"
+msgstr "|fileSaveAs| :sup:`Esporta Risultati`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:279
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:100
+msgid ""
+"Exports plots as 3D features, 2D Profile and Distance/Elevation Table. (The "
+"results can be saved as DXF files, CSV files or any of the standard writable"
+" vector spatial formats)"
+msgstr ""
+"Esporta i grafici come elementi 3D, Profilo 2D e Tabella di "
+"Distanza/Elevazione. (I risultati possono essere salvati come file DXF, CSV "
+"o qualsiasi altro formato spaziale vettoriale standard scrivibile)."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:103
+msgid "|options| :sup:`Options` :menuselection:`-->`"
+msgstr "|options| :sup:`Opzioni` :menuselection:`-->`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:291
 msgid "options"
@@ -375,9 +405,52 @@ msgstr ""
 "Consente di accedere alle impostazioni di configurazione della linea del "
 "profilo di elevazione."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:106
+msgid ""
+":menuselection:`-->` |unchecked| :menuselection:`Lock distance/elevation "
+"scales`"
+msgstr ""
+":menuselection:`-->` |unchecked| :menuselection:`Blocca Scale "
+"Distanza/Elevazione`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:301
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:108
+msgid ""
+"Ensures that the horizontal and vertical scales are always kept equal (so "
+"that e.g. a 45° slope will appear as a 45° slope in the profile view)."
+msgstr ""
+"Assicura che le scale orizzontali e verticali siano sempre uguali (in modo "
+"che, ad esempio, una pendenza di 45° appaia come una pendenza di 45° nella "
+"visualizzazione del profilo)."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:110
+msgid ":menuselection:`--> Distance units`"
+msgstr ":menuselection:`--> Unità di Distanza`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:112
+msgid ""
+"Allows to render distances in the profile chart with units other than the "
+"map canvas units."
+msgstr ""
+"Consente di visualizzare le distanze nel grafico del profilo con unità "
+"diverse da quelle dell'area di disegno della mappa."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:113
+msgid ":menuselection:`--> Tolerance`"
+msgstr ":menuselection:`--> Tolleranza`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:115
+msgid ""
+"Sets how far from the actual profile line a point can reside within to be "
+"included in the results. Uses the map units and is ignored by other layer or"
+" geometry types."
+msgstr ""
+"Imposta la distanza dalla linea del profilo reale entro cui un punto può "
+"trovarsi per essere incluso nei risultati. Utilizza le unità cartografiche e"
+" viene ignorato da altri tipi di layer o geometrie."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:117
 msgid "|dock| :sup:`Dock Elevation Profile View`"
@@ -458,12 +531,26 @@ msgstr "Creare un profilo di elevazione"
 msgid "To create a profile view, you can:"
 msgstr "Per creare una vista del profilo, puoi:"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:148
+msgid ""
+"Go to :menuselection:`View -->` |newElevationProfile| "
+":menuselection:`Elevation Profile` menu. The :guilabel:`Elevation profile` "
+"panel opens."
+msgstr ""
+"Andare al menu :menuselection:`Visualizza -->` |newElevationProfile| "
+":menuselection:`Profilo Elevazione`. Si apre il pannello :guilabel:`Profilo "
+"Elevazione`."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:289
+msgid "newElevationProfile"
+msgstr "newElevationProfile"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:150
 msgid ""
 "Create the profile line along which the terrain and the features will be "
 "rendered. Select a drawing tool:"
 msgstr ""
-"Definisci la linea del profilo lungo cui verranno visualizzati il terreno e "
+"Definire la linea del profilo lungo cui verranno visualizzati il terreno e "
 "gli elementi. Seleziona uno strumento di disegno:"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:153
@@ -513,6 +600,37 @@ msgid ""
 msgstr ""
 "Il passo successivo consiste nel configurare le proprietà di elevazione dei "
 "layer che vuoi visualizzare."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:167
+msgid ""
+"Push on the |layerTree| :sup:`Show Layer Tree` button to display the list of"
+" layers. By default, not all the layers of the project are loaded and "
+"referenced in the profile tool; e.g., raster layers which are not marked as "
+"having elevation data in their properties are ignored. Clicking the "
+"|addLayer| :sup:`Add layers` button will show a filtered list of possible "
+"layers which can be added to the plot, but which currently aren't in the "
+"plot. Applying the dialog with selected layers will automatically mark them "
+"as having elevation data and immediately add them to the plot."
+msgstr ""
+"Premi il pulsante |layerTree| :sup:`Mostra Albero dei Layer` per "
+"visualizzare l'elenco dei layer. Per impostazione predefinita, non tutti i "
+"layer del progetto vengono caricati e referenziati nello strumento profilo; "
+"ad esempio, i layer raster che non sono contrassegnati come dati di "
+"elevazione nelle loro proprietà vengono ignorati. Facendo clic sul pulsante "
+"|addLayer| :sup:`Aggiungi layer` viene visualizzato un elenco filtrato di "
+"possibili layer che possono essere aggiunti al grafico, ma che attualmente "
+"non sono presenti nel grafico. Applicando la finestra di dialogo ai layer "
+"selezionati, questi verranno automaticamente contrassegnati come dotati di "
+"dati di elevazione e aggiunti immediatamente al grafico."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:175
+msgid ""
+"Holding :kbd:`Ctrl` key, it is possible to drag and drop additional layers "
+"from the main layer tree to one in the elevation profile tool."
+msgstr ""
+"Tenendo premuto il tasto :kbd:`Ctrl`, è possibile trascinare e rilasciare "
+"layer aggiuntivi dall'albero dei layer principale a uno nello strumento "
+"profilo di elevazione."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:178
 msgid ""
