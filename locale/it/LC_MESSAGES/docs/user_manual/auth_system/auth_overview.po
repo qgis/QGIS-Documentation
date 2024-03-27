@@ -5,19 +5,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # Harrissou Sant-anna, 2024
 # marcobra <marcobra.ubuntu@gmail.com>, 2024
 # Transifex Bot <>, 2024
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-03-26 10:13+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -208,15 +208,15 @@ msgstr ""
 "pulsante |symbologyRemove| per rimuovere le configurazioni e il pulsante "
 "|symbologyEdit| per modificare quelle esistenti."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:317
+#: ../../docs/user_manual/auth_system/auth_overview.rst:322
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:321
+#: ../../docs/user_manual/auth_system/auth_overview.rst:326
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:319
+#: ../../docs/user_manual/auth_system/auth_overview.rst:324
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
 
@@ -297,7 +297,7 @@ msgstr ""
 "Opzioni` e, nella scheda :guilabel:`Autenticazione`, fai clic sul pulsante "
 "|options| :guilabel:`Plugins Installati`."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:315
+#: ../../docs/user_manual/auth_system/auth_overview.rst:320
 msgid "options"
 msgstr "options"
 
@@ -550,12 +550,24 @@ msgstr "Collegamenti Python"
 msgid ""
 "All classes and public functions have sip bindings, except "
 "``QgsAuthCrypto``, since management of the master password hashing and auth "
-"database encryption should be handled by the main app, and not via Python. "
-"See :ref:`authentication_security_considerations` concerning Python access."
+"database encryption should be handled by the main app, and not via Python."
 msgstr ""
-"Tutte le classi e le funzioni pubbliche hanno collegamenti SIP, eccetto "
+"Tutte le classi e le funzioni pubbliche hanno legami sip, tranne "
 "``QgsAuthCrypto``, poiché la gestione dell'hashing della master password e "
 "della crittografia del database auth dovrebbe essere gestita "
-"dall'applicazione principale, e non tramite Python. Vedi "
-":ref:`authentication_security_considerations` riguardo all'accesso di "
-"Python."
+"dall'applicazione principale e non da Python."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:307
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, no wall against PyQGIS access has been defined. This"
+" may lead to issues where a user downloads/installs a malicious PyQGIS "
+"plugin or standalone app that gains access to authentication credentials."
+msgstr ""
+"Una volta inserita la master password, l'API è aperta per accedere alle "
+"configurazioni di autenticazione nel database di autenticazione, in modo "
+"simile a come funziona Firefox. Tuttavia, non è stato definito alcun blocco "
+"contro l'accesso a PyQGIS. Questo può portare a problemi nel caso in cui un "
+"utente scarichi/installi un plugin PyQGIS o un'applicazione standalone "
+"dannosi che accedono alle credenziali di autenticazione."
