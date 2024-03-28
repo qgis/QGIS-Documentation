@@ -2409,6 +2409,10 @@ this group helps you configure the look of the widget assigned to the field:
 * :guilabel:`Override label color`: applies specific color to the field's label
 * :guilabel:`Override label font`: applies specific font properties (bold, italic, underline,
   strikethrough, or font family) to the field's label
+* :guilabel:`Size`: allows control of the horizontal and vertical stretch factors of the widget.
+
+  * :guilabel:`Horizontal stretch`: set a higher horizontal value for widgets that need more horizontal space.
+  * :guilabel:`Vertical stretch`: determines how widgets resize vertically when the form is resized.
 
 General options
 ^^^^^^^^^^^^^^^
