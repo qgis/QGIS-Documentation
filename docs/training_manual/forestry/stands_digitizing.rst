@@ -1,4 +1,4 @@
-|LS| Digitizing Forest Stands
+Lesson: Digitizing Forest Stands
 ===============================================================================
 
 Unless you are going to use your georeferenced map as a simple background image,
@@ -11,7 +11,7 @@ doing it using an aerial image, you will use your georeferenced map.
 **The goal for this lesson:** Learn a technique to help the digitizing task,
 digitizing forest stands and finally adding the inventory data to them.
 
-|basic| |FA| Extracting the Forest Stands Borders
+:abbr:`★☆☆ (Basic level)` Follow Along: Extracting the Forest Stands Borders
 -------------------------------------------------------------------------------
 
 Open your :file:`map_digitizing.qgs` project in QGIS, that you saved from the
@@ -87,7 +87,7 @@ You could do the same process with other elements in the image, for example
 extracting the black lines that represent roads or the brown ones that represent
 the terrain' contour lines. But for us, the forest stands is enough.
 
-|basic| |TY| Georeference the Green Pixels Image
+:abbr:`★☆☆ (Basic level)` Try Yourself: Georeference the Green Pixels Image
 -------------------------------------------------------------------------------
 
 As you did in the previous lesson, you need to georeference this new image to
@@ -107,8 +107,8 @@ Georeferencer tool is concerned. Here are some things you should remember:
 Check that the new raster is fitting nicely with the original map.
 
 
-|basic| |FA| Creating Supporting Points for Digitizing
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Creating Supporting Points for Digitizing
+-----------------------------------------------------------------------------------
 
 Having in mind the digitizing tools in QGIS, you might already be thinking that
 it would be helpful to snap to those green pixels while digitizing. That is
@@ -157,7 +157,7 @@ It is not necessary to differentiate points from each other, you just need them
 to be there for the snapping tools to use them. You can use those points now to
 follow the original lines much easily than without them.
 
-|basic| |FA| Digitize the Forest Stands
+:abbr:`★☆☆ (Basic level)` Follow Along: Digitize the Forest Stands
 -------------------------------------------------------------------------------
 
 Now you are ready to start with the actual digitizing work. You would start by
@@ -273,7 +273,7 @@ automatically trimmed and you are left with a common border - as you intended
 it to be.
 
 
-|basic| |TY| Finish Digitizing the Forest Stands
+:abbr:`★☆☆ (Basic level)` Try Yourself: Finish Digitizing the Forest Stands
 -------------------------------------------------------------------------------
 
 Now you have two forest stands ready. And a good idea on how to proceed.
@@ -298,7 +298,7 @@ Your result will look like this:
 
 |
 
-|basic| |FA| Joining the Forest Stand Data
+:abbr:`★☆☆ (Basic level)` Follow Along: Joining the Forest Stand Data
 -------------------------------------------------------------------------------
 
 It is possible that the forest inventory data you have for you map is also
@@ -370,7 +370,7 @@ you need to save the ``forest_stands`` layer as a new vector file. To do this:
    :width: 80%
 
 
-|basic| |TY| Adding Area and Perimeter 
+:abbr:`★☆☆ (Basic level)` Try Yourself: Adding Area and Perimeter
 -------------------------------------------------------------------------------
 
 To finish gathering the information related to these forest stands, you might
@@ -386,13 +386,13 @@ available information.
 Save your project to keep the current map layers in case you need to come
 back later to it.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 It has taken a few clicks of the mouse but you now have your old inventory data
 in digital format and ready for use in QGIS.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 You could start doing different analysis with your brand new dataset, but you
@@ -407,16 +407,10 @@ aerial photos and the addition of some relevant information to your dataset.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
 .. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png

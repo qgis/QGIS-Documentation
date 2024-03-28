@@ -1,4 +1,4 @@
-|LS| Adding your first layers
+Lesson: Adding your first layers
 ===============================================================================
 
 We will start the application, and create a basic map to use for examples and
@@ -23,7 +23,7 @@ Let's get started right away!
 
 .. _tm_prepare_a_map:
 
-|basic| |FA| Prepare a map
+:abbr:`★☆☆ (Basic level)` Follow Along: Prepare a map
 -------------------------------------------------------------------------------
 
 #. Open QGIS. You will have a new, blank map.
@@ -73,7 +73,7 @@ your work.
 
 .. _backlink-interface-preparation-1:
 
-|basic| |TY|
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
@@ -95,8 +95,8 @@ layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
 .. _load_geopackage:
 
-|basic| |FA| Loading vector data from a GeoPackage Database
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Loading vector data from a GeoPackage Database
+----------------------------------------------------------------------------------------
 
 Databases allow you to store a large volume of associated data in one file. You
 may already be familiar with a database management system (DBMS) such as
@@ -141,8 +141,8 @@ Congratulations! You have loaded the first layer from a GeoPackage.
 
 .. _backlink-vector-load-from-database-1:
 
-|basic| |FA| Loading vector data from a SpatiaLite Database with the Browser
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Loading vector data from a SpatiaLite Database with the Browser
+--------------------------------------------------------------------------------------------------------
 
 QGIS provides access to many other database formats. Like GeoPackage, the
 SpatiaLite database format is an extension of the SQLite library. And adding
@@ -185,7 +185,7 @@ the :guilabel:`Browser`.
 .. note:: Remember to save your project frequently! The project file doesn't contain
    any of the data itself, but it remembers which layers you loaded into your map.
 
-|moderate| |TY| Load More Vector Data
+:abbr:`★★☆ (Moderate level)` Try Yourself: Load More Vector Data
 -------------------------------------------------------------------------------
 
 Load the following datasets from the :file:`exercise_data` folder into your map
@@ -208,7 +208,7 @@ using any of the methods explained above:
    * :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
 
 
-|FA| Reordering the Layers
+Follow Along: Reordering the Layers
 -------------------------------------------------------------------------------
 
 The layers in your Layers list are drawn on the map in a certain order. The
@@ -244,14 +244,14 @@ You'll see that the map now makes more sense visually, with roads and buildings
 appearing above the land use regions.
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Now you've added all the layers you need from several different sources
 and created a basic map!
 
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Now you're familiar with the basic function of the :guilabel:`Open Data Source Manager`
@@ -266,12 +266,6 @@ This is the topic of the next lesson.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
 .. |dbSchema| image:: /static/common/mIconDbSchema.png
@@ -282,7 +276,6 @@ This is the topic of the next lesson.
    :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
-.. |moderate| image:: /static/common/moderate.png
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |polygonLayer| image:: /static/common/mIconPolygonLayer.png

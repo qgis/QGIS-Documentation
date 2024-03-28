@@ -32,8 +32,8 @@ course outcomes. Each category contains information that is essential for the
 next one, so it's important to do all exercises that are at or below your level
 of experience.
 
-|basic| Basic
-.............
+:abbr:`★☆☆ (Basic level)` Basic
+................................
 In this category, the course assumes that you have little or no prior
 experience with theoretical GIS knowledge or the operation of GIS software.
 
@@ -44,8 +44,8 @@ by doing.
 When you complete the course, you will have a better concept of the
 possibilities of GIS, and how to harness their power via QGIS.
 
-|moderate| Intermediate
-.......................
+:abbr:`★★☆ (Moderate level)` Intermediate
+...........................................
 In this category, it is assumed that you have working knowledge and experience
 of the everyday uses of GIS software.
 
@@ -57,8 +57,8 @@ also learn how to use analysis functions in QGIS.
 When you complete the course, you should be comfortable with using QGIS for all
 of the functions you usually need for everyday use.
 
-|hard| Advanced
-...............
+:abbr:`★★★ (Advanced level)` Advanced
+........................................
 In this category, the assumption is that you are experienced with GIS software,
 have knowledge of and experience with spatial databases, using data on a remote
 server, perhaps writing scripts for analysis purposes, etc.
@@ -94,14 +94,3 @@ folder.
 If you are an instructor, and would like to use more relevant
 data, you will find instructions for creating local data
 in the :ref:`tm_preparing_data` appendix.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |basic| image:: /static/common/basic.png
-.. |hard| image:: /static/common/hard.png
-.. |moderate| image:: /static/common/moderate.png

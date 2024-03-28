@@ -1,4 +1,4 @@
-|LS| Updating Forest Stands
+Lesson: Updating Forest Stands
 ===============================================================================
 
 Now that you have digitized the information from the old inventory maps and
@@ -17,8 +17,8 @@ constraints given by conservation regulations.
 CIR aerial photographs and add information from other datasets.
 
 
-|basic| Comparing the Old Forest Stands to Current Aerial Photographs
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Comparing the Old Forest Stands to Current Aerial Photographs
+------------------------------------------------------------------------------------------
 
 The National Land Survey of Finland has an open data policy that allows you
 downloading a variety of geographical data like aerial imagery, traditional
@@ -65,7 +65,7 @@ Next, you will create new forest stands for this image without using the old one
 Later you can compare them to see the differences.
 
 
-|basic| Interpreting the CIR Image
+:abbr:`★☆☆ (Basic level)` Interpreting the CIR Image
 -------------------------------------------------------------------------------
 
 Let's digitize the same area that was covered by the old inventory, limited by
@@ -115,8 +115,8 @@ Some points to consider:
    :align: center
 
 
-|basic| |TY| Digitizing Forest Stands from CIR Imagery
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Try Yourself: Digitizing Forest Stands from CIR Imagery
+------------------------------------------------------------------------------------
 
 When digitizing the forest stands, you should try to get forest areas that are
 as homogeneous as possible in terms of tree species, forest age, stand density...
@@ -164,8 +164,8 @@ You will see how to do that in the next lesson.
 You can add some extra information about conservation regulations that need to be taken into account for this area.
 
 
-|basic| |FA| Updating Forest Stands with Conservation Information
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Updating Forest Stands with Conservation Information
+----------------------------------------------------------------------------------------------
 
 For the area you are working in, there are some conservation regulations
 that must be taken into account when doing the forest planning:
@@ -253,8 +253,8 @@ showing the protection information for the Siberian flying squirrel.
  to actually delimitate area people should not go to?
 
 
-|basic| |TY| Updating Forest Stands with Distance to the Stream
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Try Yourself: Updating Forest Stands with Distance to the Stream
+---------------------------------------------------------------------------------------------
 
 Following the same approach as for the protected squirrel locations
 you can now update your forest stands with protection information related to the stream.
@@ -271,7 +271,7 @@ associated with the stream.
 
 When you are happy with the results, save your QGIS project.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You have seen how to interpret CIR images to digitize forest stands. Of course
@@ -280,7 +280,7 @@ information like soil maps would give better results, but you know now the basis
 for this type of task. And adding information from other datasets resulted to
 be quite a trivial task.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 The forest stands you digitized will be used for planning forestry operations
@@ -296,14 +296,8 @@ of forest parameters.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
 .. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |openTable| image:: /static/common/mActionOpenTable.png

@@ -1,4 +1,4 @@
-|LS| Web Feature Services
+Lesson: Web Feature Services
 ===============================================================================
 
 A Web Feature Service (WFS) provides its users with GIS data in formats that
@@ -8,7 +8,7 @@ map which you can't edit, a WFS gives you access to the features themselves.
 **The goal for this lesson:** To use a WFS and understand how it differs from a
 WMS.
 
-|basic| |FA| Loading a WFS Layer
+:abbr:`★☆☆ (Basic level)` Follow Along: Loading a WFS Layer
 -------------------------------------------------------------------------------
 
 #. Start a new map. This is for demo purposes and won't be saved.
@@ -77,7 +77,7 @@ you're loading have complicated shapes, a lot of attributes, or many features;
 or even if you're just loading a lot of layers. WFS layers typically take a
 very long time to load because of this.
 
-|moderate| |FA| Querying a WFS Layer
+:abbr:`★★☆ (Moderate level)` Follow Along: Querying a WFS Layer
 -------------------------------------------------------------------------------
 
 Although it is of possible to query a WFS layer after having loaded
@@ -148,7 +148,7 @@ sends only images.
 The most common type of WFS you'll encounter will therefore probably be on a
 local network or even on your own computer, rather than on the Internet.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 WFS layers are preferable over WMS layers if you need direct access to the
@@ -157,7 +157,7 @@ data that needs to be downloaded (which leads to speed problems and also a lack
 of easily available public WFS servers) it's not always possible to use a WFS
 instead of a WMS.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next, you'll see how to use QGIS Server to provide OGC services.
@@ -169,15 +169,9 @@ Next, you'll see how to use QGIS Server to provide OGC services.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
-.. |moderate| image:: /static/common/moderate.png
 .. |wfs| image:: /static/common/mIconWfs.png
    :width: 1.5em

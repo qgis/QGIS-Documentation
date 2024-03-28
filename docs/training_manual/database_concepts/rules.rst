@@ -1,4 +1,4 @@
-|LS| Rules
+Lesson: Rules
 ===============================================================================
 
 Rules allow the "query tree" of an incoming query to be rewritten. One common
@@ -58,25 +58,14 @@ this:
 .. note::  The value of the :kbd:`time` field will depend on the current date
    and time.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Rules allow you to automatically add or change data in your database to reflect
 changes in other parts of the database.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 The next module will introduce you to Spatial Database using PostGIS,
 which takes these database concepts and applies them to GIS data.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?

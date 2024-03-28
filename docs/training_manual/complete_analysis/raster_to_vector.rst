@@ -1,4 +1,4 @@
-|LS| Raster to Vector Conversion
+Lesson: Raster to Vector Conversion
 ===============================================================================
 
 Converting between raster and vector formats allows you to make use of both
@@ -14,8 +14,8 @@ vector.
 **The goal for this lesson:** To get the raster result into a vector that can
 be used to complete the analysis.
 
-|moderate| |FA| The :guilabel:`Raster to Vector` Tool
--------------------------------------------------------------------------------
+:abbr:`★★☆ (Moderate level)` Follow Along: The :guilabel:`Raster to Vector` Tool
+----------------------------------------------------------------------------------
 
 Start with the map from the last module, :kbd:`raster_analysis.qgs`. There you
 should have the :kbd:`all_conditions_simple.tif` calculated during the previous
@@ -39,7 +39,7 @@ polygons where the value of :guilabel:`suitable` is ``1``. You can change the
 style of this layer if you want to have a clearer visualization of it.
 
 
-|moderate| |TY|
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Refer back to the module on vector analysis.
@@ -68,8 +68,8 @@ Refer back to the module on vector analysis.
       layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
       then continue as per the instructions.
 
-|moderate| |FA| The :guilabel:`Vector to Raster` Tool
--------------------------------------------------------------------------------
+:abbr:`★★☆ (Moderate level)` Follow Along: The :guilabel:`Vector to Raster` Tool
+----------------------------------------------------------------------------------
 
 Although unnecessary for our current problem, it's useful to know about the
 opposite conversion from the one performed above. Convert to raster the
@@ -99,29 +99,15 @@ opposite conversion from the one performed above. Convert to raster the
 * When it is complete, gauge its success by comparing the new raster with the
   original one.  They should match up exactly, pixel for pixel.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Converting between raster and vector formats allows you to widen the
 applicability of data, and need not lead to data degradation.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Now that we have the results of the terrain analysis available in vector
 format, they can be used to solve the problem of which buildings we should consider
 for the residential development.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |moderate| image:: /static/common/moderate.png

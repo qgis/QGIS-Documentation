@@ -1,4 +1,4 @@
-|LS| GRASS Setup
+Lesson: GRASS Setup
 ===============================================================================
 
 Using GRASS in QGIS requires you to think of the interface in a slightly
@@ -11,7 +11,7 @@ on the ``QGIS Desktop with GRASS`` icon.
 
 **The goal for this lesson:** To begin a GRASS project in QGIS.
 
-|basic| |FA| Start a New GRASS Session
+:abbr:`★☆☆ (Basic level)` Follow Along: Start a New GRASS Session
 -------------------------------------------------------------------------------
 
 To launch GRASS from within QGIS, you need to activate it as with any other
@@ -56,7 +56,7 @@ information visit the `GRASS website <https://grass.osgeo.org/grass82/manuals/gr
 
    GRASS database structure (from GRASS docs)
 
-|basic| |FA| Start a New GRASS Project
+:abbr:`★☆☆ (Basic level)` Follow Along: Start a New GRASS Project
 -------------------------------------------------------------------------------
 
 #. Click on the :menuselection:`Plugins --> GRASS --> New Mapset` menu:
@@ -117,7 +117,7 @@ geographic area you'll be working in, also known as Grass ``Region``.
 You will see that the GRASS Panel will become active and you can start to use
 all GRASS tools.
 
-|basic| |FA| Loading Vector Data into GRASS
+:abbr:`★☆☆ (Basic level)` Follow Along: Loading Vector Data into GRASS
 -------------------------------------------------------------------------------
 
 You have now a blank map and before you can start to use all the GRASS tools
@@ -130,7 +130,7 @@ with the first one.
 
 .. _grass_browser:
 
-|basic| |FA| Load data using the QGIS Browser
+:abbr:`★☆☆ (Basic level)` Follow Along: Load data using the QGIS Browser
 ...............................................................................
 
 In section :ref:`browser_panel_tm` we saw that the easiest and quickest way to
@@ -164,7 +164,7 @@ layer. You can now load in QGIS the imported layer like all the other layers.
   Browser Panel. This will speed up incredibly your workflow!
 
 
-|basic| |FA| Load data using the GRASS Panel
+:abbr:`★☆☆ (Basic level)` Follow Along: Load data using the GRASS Panel
 ...............................................................................
 
 We will use now the *long* method to load the :file:`rivers.shp` layer into the
@@ -193,7 +193,7 @@ same Mapset.
    .. figure:: img/grass_tool_selected.png
       :align: center
 
-   .. note:: |hard| Note the extra import options provided under
+   .. note:: :abbr:`★★★ (Advanced level)` Note the extra import options provided under
     :guilabel:`Advanced Options`. These include the ability to add a WHERE
     clause for the SQL query used for importing the data.
 
@@ -208,7 +208,7 @@ same Mapset.
 Now you are left with only the imported GRASS layer as displayed in your QGIS
 map.
 
-|basic| |FA| Loading Raster Data into GRASS
+:abbr:`★☆☆ (Basic level)` Follow Along: Loading Raster Data into GRASS
 -------------------------------------------------------------------------------
 
 You can import a raster layer in the same ways we imported vector layers.
@@ -241,7 +241,7 @@ We are going to import in the GRASS Mapset the layer |srtmFileName|.
 #. You may now remove the original |srtmFileName| layer.
 
 
-|basic| |TY| Add Layers to Mapset
+:abbr:`★☆☆ (Basic level)` Try Yourself: Add Layers to Mapset
 -------------------------------------------------------------------------------
 Try to import in the GRASS Mapset the vector layers :file:`water.shp` and
 :file:`places.shp` from the :file:`exercise_data/shapefile/` folder. As we did
@@ -255,7 +255,7 @@ to avoid confusion
    drop them in the Browser (see :ref:`grass_browser`) or by using the
    ``v.in.gdal.qgis`` for vector and ``r.in.gdal.qgis`` for raster layers.
 
-|basic| Open an existing GRASS Mapset
+:abbr:`★☆☆ (Basic level)` Open an existing GRASS Mapset
 -------------------------------------------------------------------------------
 If you have an existing GRASS Mapset you can easily reopen it in another session
 of QGIS.
@@ -266,7 +266,7 @@ Let's close the Mapset by clicking on the :guilabel:`Close Mapset` button of the
 :guilabel:`GRASS Tools` window.
 
 
-|basic| |FA| Using the GRASS plugin
+:abbr:`★☆☆ (Basic level)` Follow Along: Using the GRASS plugin
 ...............................................................................
 
 #. Click on the :guilabel:`Plugins --> GRASS --> Open Mapset` menu next to the
@@ -286,7 +286,7 @@ That's it! The GRASS Panel will become active meaning that the Mapset has been
 correctly opened.
 
 
-|basic| |FA| Using the QGIS Browser
+:abbr:`★☆☆ (Basic level)` Follow Along: Using the QGIS Browser
 ...............................................................................
 
 Even faster and easier is opening a ``Mapset`` using the QGIS Browser:
@@ -306,7 +306,7 @@ The Mapset is now open and ready to use!
 .. tip:: Right click on a GRASS Mapset offers you a lot of different settings.
   Try to explore them and see all the useful options.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 The GRASS workflow for ingesting data is somewhat different from the QGIS
@@ -314,7 +314,7 @@ method because GRASS loads its data into a spatial database structure.
 However, by using QGIS as a frontend, you can make the setup of a GRASS mapset
 easier by using existing layers in QGIS as data sources for GRASS.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Now that the data is imported into GRASS, we can look at the advanced analysis
@@ -327,17 +327,10 @@ operations that GRASS offers.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |grassLogo| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |grassMapsetOpen| image:: /static/common/grass_mapset_open.png
    :width: 1.5em
-.. |hard| image:: /static/common/hard.png
 .. |srtmFileName| replace:: :file:`srtm_41_19_4326.tif`
 .. |win| image:: /static/common/win.png
    :width: 1em

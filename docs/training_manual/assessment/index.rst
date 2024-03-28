@@ -1,5 +1,5 @@
 *******************************************************************************
-|MOD| Assessment
+Module: Assessment
 *******************************************************************************
 
 Use your own data for this section. You will need:
@@ -24,7 +24,7 @@ Add the point layer
 * Add in the point layer. Based on the level that you're doing the course at,
   do only what is listed in the appropriate section below:
 
-|basic|
+:abbr:`★☆☆ (Basic level)`
 ...............................................................................
 
 * Label the points according to a unique attribute, such as place names.  Use a
@@ -34,17 +34,17 @@ Add the point layer
   For example, categories could include "tourist destination", "police
   station", and "town center".
 
-|moderate| 
+:abbr:`★★☆ (Moderate level)`
 ...............................................................................
 
-* Do the same as the |basic| section.
+* Do the same as the :abbr:`★☆☆ (Basic level)` section.
 * Classify the point size by importance: the more significant a feature, the
   larger its point. However, don't exceed the point size of :kbd:`2.00`.
 * For features that aren't located at a single point (for example,
   provincial/regional names, or town names at a large scale), don't assign any
   point at all.
 
-|hard|
+:abbr:`★★★ (Advanced level)`
 ...............................................................................
 
 * Don't use point symbols to symbolize the layer at all. Instead, use labels
@@ -61,13 +61,13 @@ Add the line layer
 
 * Add the road layer and then change its symbology. Don't label the roads.
 
-|basic|
+:abbr:`★☆☆ (Basic level)`
 ...............................................................................
 
 * Change the road symbology to a light color with a broad line. Make it
   somewhat transparent as well.
 
-|moderate|
+:abbr:`★★☆ (Moderate level)`
 ...............................................................................
 
 * Create a symbol with multiple symbol layers. The resulting symbol should look
@@ -81,10 +81,10 @@ Add the line layer
 * All symbols should have multiple symbol layers. Use symbols to make them
   display correctly.
 
-|hard|
+:abbr:`★★★ (Advanced level)`
 ...............................................................................
 
-* Do the same as in the |moderate| section above.
+* Do the same as in the :abbr:`★★☆ (Moderate level)` section above.
 * In addition, roads should be classified. When using realistic road-like
   symbols, each type of road should have an appropriate symbol; for example, a
   highway should appear to have two lanes in either direction.
@@ -94,19 +94,19 @@ Add the polygon layer
 
 * Add the land use layer and change its symbology.
 
-|basic|
+:abbr:`★☆☆ (Basic level)`
 ...............................................................................
 
 * Classify the layer according to land use. Use solid colors.
 
-|moderate|
+:abbr:`★★☆ (Moderate level)`
 ...............................................................................
 
 * Classify the layer according to land use. Where appropriate, incorporate
   symbol layers, different symbol types, etc. Keep the results looking subdued
   and uniform, however. Keep in mind that this will be part of a backdrop!
 
-|hard|
+:abbr:`★★★ (Advanced level)`
 ...............................................................................
 
 * Use rule-based classification to classify the land use into general
@@ -138,7 +138,7 @@ Analyze the data
   * it should be within a given distance from some category of points, like a
     hospital for example
 
-|moderate| / |hard| 
+:abbr:`★★☆ (Moderate level)` / :abbr:`★★★ (Advanced level)`
 -------------------------------------------------------------------------------
 
 * Include raster analysis in your results. Consider at least one derived
@@ -153,15 +153,3 @@ Final Map
   map has become too visually busy due to the added layer(s), deselect the
   layers which you feel are the least necessary.
 * Your map must include a title and a legend.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |MOD| replace:: Module:
-.. |basic| image:: /static/common/basic.png
-.. |hard| image:: /static/common/hard.png
-.. |moderate| image:: /static/common/moderate.png

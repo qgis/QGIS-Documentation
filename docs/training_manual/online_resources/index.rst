@@ -1,5 +1,5 @@
 *******************************************************************************
-|MOD| Online Resources
+Module: Online Resources
 *******************************************************************************
 
 When considering data sources for a map, there is no need to be restricted to
@@ -15,12 +15,3 @@ Services (WMS) and Web Feature Services (WFS).
 
    wms
    wfs
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |MOD| replace:: Module:

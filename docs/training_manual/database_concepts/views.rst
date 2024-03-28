@@ -1,4 +1,4 @@
-|LS| Views
+Lesson: Views
 ===============================================================================
 
 When you write a query, you need to spend a lot of time and effort formulating
@@ -78,24 +78,13 @@ If you no longer need a view, you can delete it like this:
 
   drop view roads_count_v;
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Using views, you can save a query and access its results as if it were a table.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Sometimes, when changing data, you want your changes to have effects elsewhere
 in the database. The next lesson will show you how to do this.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?

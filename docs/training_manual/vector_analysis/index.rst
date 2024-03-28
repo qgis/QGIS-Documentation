@@ -1,5 +1,5 @@
 *******************************************************************************
-|MOD| Vector Analysis
+Module: Vector Analysis
 *******************************************************************************
 
 Now that you have edited a few features, you must want to know what else one
@@ -38,5 +38,4 @@ locate suitable farm properties for this new residential development.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |MOD| replace:: Module:
 .. |majorUrbanName| replace:: Swellendam

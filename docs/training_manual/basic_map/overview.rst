@@ -1,4 +1,4 @@
-|LS| An Overview of the Interface
+Lesson: An Overview of the Interface
 ===============================================================================
 
 We will explore the QGIS user interface so that you are familiar with the
@@ -8,7 +8,7 @@ the interface.
 **The goal for this lesson:** To understand the basics of the QGIS user
 interface.
 
-|basic| |TY|: The Basics
+:abbr:`★☆☆ (Basic level)` Try Yourself:: The Basics
 -------------------------------------------------------------------------------
 
 .. _figure_gui_numbered:
@@ -28,7 +28,7 @@ The elements identified in the figure above are:
 .. Don't reorder these list items! They refer to elements as numbered on an
    image.
 
-|basic| The Layers List
+:abbr:`★☆☆ (Basic level)` The Layers List
 ...............................................................................
 
 In the Layers list, you can see a list, at any time, of all the layers
@@ -50,7 +50,7 @@ will be using some of them before long, so take a look around!
 
 .. _browser_panel_tm:
 
-|basic| The Browser Panel
+:abbr:`★☆☆ (Basic level)` The Browser Panel
 ...............................................................................
 
 The QGIS Browser is a panel in QGIS that lets you easily navigate in your
@@ -71,7 +71,7 @@ Favorite``. You should then be able to see your folder in the |favourites|
   long name: don't worry right-click on the path and choose ``Rename Favorite...``
   to set another name.
 
-|basic| Toolbars
+:abbr:`★☆☆ (Basic level)` Toolbars
 ...............................................................................
 
 Your most often used sets of tools can be turned into toolbars for basic access.
@@ -86,7 +86,7 @@ toolbar (which contains the :guilabel:`Save` button), you can still save your
 map by clicking on the :guilabel:`Project` menu and then clicking on
 :guilabel:`Save`.
 
-|basic| The Map Canvas
+:abbr:`★☆☆ (Basic level)` The Map Canvas
 ...............................................................................
 
 This is where the map itself is displayed and where layers are loaded. In the map
@@ -94,20 +94,20 @@ canvas you can interact with the visible layers: zoom in/out, move the map,
 select features and many other operations that we will deeply see in the next
 sections.
 
-|basic| The Status Bar
+:abbr:`★☆☆ (Basic level)` The Status Bar
 ...............................................................................
 
 Shows you information about the current map. Also allows you to adjust the map
 scale, the map rotation and see the mouse cursor's coordinates on the map.
 
-|basic| The Side Toolbar
+:abbr:`★☆☆ (Basic level)` The Side Toolbar
 ...............................................................................
 
 By default the Side toolbar contains the buttons to load the layer and all the
 buttons to create a new layer. But remember that you can move all the toolbars
 wherever it is more comfortable for you.
 
-|basic| The Locator Bar
+:abbr:`★☆☆ (Basic level)` The Locator Bar
 ...............................................................................
 
 Within this bar you can access to almost all the objects of QGIS: layers, layer
@@ -117,7 +117,7 @@ the :ref:`locator_options` section of the QGIS User Manual.
 .. tip:: With the shortcut :kbd:`Ctrl+K` you can easily access the bar.
 
 
-|basic| |TY| 1
+:abbr:`★☆☆ (Basic level)` Try Yourself: 1
 -------------------------------------------------------------------------------
 
 Try to identify the four elements listed above on your own screen, without
@@ -132,7 +132,7 @@ the coming days.
    remember the names and functions of the screen elements.
 
 
-|basic| |TY| 2
+:abbr:`★☆☆ (Basic level)` Try Yourself: 2
 -------------------------------------------------------------------------------
 
 Try to find each of these tools on your screen. What is their purpose?
@@ -160,7 +160,7 @@ Try to find each of these tools on your screen. What is their purpose?
    #. :guilabel:`Measure line`
 
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Now that you are familiar with the basics of the QGIS interface, in the next 
@@ -173,10 +173,6 @@ lesson we will see how to load some common data types.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |favourites| image:: /static/common/mIconFavourites.png

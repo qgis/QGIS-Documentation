@@ -1,4 +1,4 @@
-|LS| Labels
+Lesson: Labels
 ===============================================================================
 
 Labels can be added to a map to show any information about an object. Any
@@ -9,7 +9,7 @@ attribute data of a layer for their content.
 layer.
 
 
-|basic| |FA| Using Labels
+:abbr:`★☆☆ (Basic level)` Follow Along: Using Labels
 -------------------------------------------------------------------------------
 
 First, ensure that the |labelingSingle| button is visible in the GUI:
@@ -41,7 +41,7 @@ The map should now have labels like this:
    :align: center
 
 
-|basic| |FA| Changing Label Options
+:abbr:`★☆☆ (Basic level)` Follow Along: Changing Label Options
 -------------------------------------------------------------------------------
 
 Depending on the styles you chose for your map in earlier lessons, you might
@@ -99,8 +99,8 @@ are too far away from their point markers.
    You'll see that the labels are no longer overlapping their point markers.
 
 
-|moderate| |FA| Using Labels Instead of Layer Symbology
--------------------------------------------------------------------------------
+:abbr:`★★☆ (Moderate level)` Follow Along: Using Labels Instead of Layer Symbology
+-----------------------------------------------------------------------------------
 
 In many cases, the location of a point doesn't need to be very specific. For
 example, most of the points in the ``places`` layer refer to entire
@@ -151,7 +151,7 @@ For now, zoom out and click on the |showUnplacedLabel| button in the toolbar
 and see what happens.
 
 
-|moderate| |TY| Customize the Labels
+:abbr:`★★☆ (Moderate level)` Try Yourself: Customize the Labels
 -------------------------------------------------------------------------------
 
 * Reset the label and symbol settings to have a point marker and a label offset
@@ -196,7 +196,7 @@ and see what happens.
 
 
 
-|moderate| |FA| Labeling Lines
+:abbr:`★★☆ (Moderate level)` Follow Along: Labeling Lines
 -------------------------------------------------------------------------------
 
 Now that you know how labeling works, there's an additional problem. Points and
@@ -269,7 +269,7 @@ these options to use, depending on what you think seems more useful or what
 looks better.
 
 
-|hard| |FA| Data Defined Settings
+:abbr:`★★★ (Advanced level)` Follow Along: Data Defined Settings
 -------------------------------------------------------------------------------
 
 #. Deactivate labeling for the ``roads`` layer
@@ -309,7 +309,7 @@ field matches ``town`` are displayed in italics.
    :align: center
 
 
-|hard| |TY| Using Data Defined Settings
+:abbr:`★★★ (Advanced level)` Try Yourself: Using Data Defined Settings
 -------------------------------------------------------------------------------
 
 .. note::  We're jumping ahead a bit here to demonstrate some advanced labeling
@@ -348,7 +348,7 @@ field matches ``town`` are displayed in italics.
         :align: center
 
 
-|hard| Further Possibilities With Labeling
+:abbr:`★★★ (Advanced level)` Further Possibilities With Labeling
 -------------------------------------------------------------------------------
 
 We can't cover every option in this course, but be aware that the
@@ -369,14 +369,14 @@ in edit mode.)
 Feel free to explore more possibilities of the labeling system.
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You've learned how to use layer attributes to create dynamic labels. This can
 make your map a lot more informative and stylish!
 
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Now that you know how attributes can make a visual difference for your map, how
@@ -390,21 +390,13 @@ topic for the next lesson!
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |hard| image:: /static/common/hard.png
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/common/moderate.png
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png

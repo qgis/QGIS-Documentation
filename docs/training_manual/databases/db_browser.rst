@@ -1,4 +1,4 @@
-|LS| Working with Databases in the QGIS Browser 
+Lesson: Working with Databases in the QGIS Browser
 ===============================================================================
 
 In the previous 2 modules we looked at the basic concepts, features and 
@@ -9,8 +9,8 @@ section will dive deeper into how to effectively use spatial databases in QGIS.
 **The goal for this lesson:** To learn how to interact with spatial databases 
 using the QGIS Browser interface. 
 
-|basic| |FA| Adding Database Tables to QGIS using the Browser
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Adding Database Tables to QGIS using the Browser
+-----------------------------------------------------------------------------------------
 
 We have already briefly looked at how to add tables from a database as QGIS 
 layers, now lets look at this in a bit more detail and look at the different 
@@ -43,8 +43,8 @@ interface.
    parameters for a new connection.
 
 
-|basic| |FA| Adding a filtered set of records as a Layer
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Adding a filtered set of records as a Layer
+------------------------------------------------------------------------------------
 
 Now that we have seen how to add an entire table as a QGIS layer it might be
 nice to learn how to add a filtered set of records from a table as a layer 
@@ -75,27 +75,14 @@ by using queries that we learned about in previous sections.
 You will notice that only the Primary Roads have been added to your map rather
 than the entire layer.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You have seen how to interact with spatial databases using the QGIS Browser and 
 how to add layers to your map based on a query filter.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next you'll see how to work with the DB Manager interface in QGIS for a more
 complete set of database management tasks.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png

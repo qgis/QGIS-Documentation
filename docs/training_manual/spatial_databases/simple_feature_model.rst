@@ -1,4 +1,4 @@
-|LS| Simple Feature Model
+Lesson: Simple Feature Model
 ===============================================================================
 
 How can we store and represent geographic features in a database? In this
@@ -59,7 +59,7 @@ You will notice that the geometry field type does not implicitly specify what
 This adds a constraint to the table so that it will only accept a point geometry
 or a null value.
 
-|TY| |hard|
+Try Yourself: :abbr:`★★★ (Advanced level)`
 -------------------------------------------------------------------------------
 
 Create a new table called cities and give it some appropriate columns,
@@ -113,7 +113,7 @@ The value :kbd:`4326` refers to the projection we are using; in this case, WGS
 84, which is referred to by the number 4326 (refer to the earlier discussion
 about the EPSG).
 
-|TY| |basic|
+Try Yourself: :abbr:`★☆☆ (Basic level)`
 ...............................................................................
 
 Add an appropriate `geometry_columns` entry for your new cities layer
@@ -191,7 +191,7 @@ Then click :guilabel:`OK` to create this connection.
 Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`
 and add layers to your project as usual.
 
-|TY| |moderate|
+Try Yourself: :abbr:`★★☆ (Moderate level)`
 ...............................................................................
 
 Formulate a query that shows a person's name, street name and position (from the
@@ -222,13 +222,13 @@ the_geom column) as plain text.
    As you can see, our constraint allows nulls to be added into the database.
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You have seen how to add spatial objects to your database and view them in GIS
 software.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next you'll see how to import data into, and export data from, your database.
@@ -240,12 +240,5 @@ Next you'll see how to import data into, and export data from, your database.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
 .. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
-.. |hard| image:: /static/common/hard.png
-.. |moderate| image:: /static/common/moderate.png

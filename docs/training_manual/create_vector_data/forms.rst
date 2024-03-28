@@ -1,4 +1,4 @@
-|LS| Forms
+Lesson: Forms
 ======================================================================
 
 When you add new data via digitizing, you're presented with a dialog
@@ -14,8 +14,8 @@ This lesson shows you how.
 
 **The goal for this lesson:** To create a form for a layer.
 
-|basic| |FA| Using QGIS' Form Design Functionality
-----------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Using QGIS' Form Design Functionality
+------------------------------------------------------------------------------
 
 #. Select the ``roads`` layer in the :guilabel:`Layers` panel
 #. Enter *Edit Mode* as before
@@ -47,7 +47,7 @@ map, rather than needing to search for a specific street in the
    its form pops up as long as the :guilabel:`Auto open form` is
    checked.
 
-|basic| |TY| Using the Form to Edit Values
+:abbr:`★☆☆ (Basic level)` Try Yourself: Using the Form to Edit Values
 ----------------------------------------------------------------------
 
 If you are in edit mode, you can use this form to edit a feature's
@@ -66,7 +66,7 @@ attributes.
    been updated in the attributes table and therefore in the source
    data
 
-|moderate| |FA| Setting Form Field Types
+:abbr:`★★☆ (Moderate level)` Follow Along: Setting Form Field Types
 ----------------------------------------------------------------------
 
 It's nice to edit things using a form, but you still have to enter
@@ -101,7 +101,7 @@ checkbox next to it denoting ``True`` (checked) or ``False``
 (unchecked).
 
 
-|hard| |TY|
+:abbr:`★★★ (Advanced level)` Try Yourself:
 ----------------------------------------------------------------------
 
 Set a more appropriate form widget for the :guilabel:`highway` field.
@@ -129,7 +129,7 @@ Set a more appropriate form widget for the :guilabel:`highway` field.
       .. figure:: img/highway_as_value_map.png
          :align: center
 
-|hard| |TY| Creating Test Data
+:abbr:`★★★ (Advanced level)` Try Yourself: Creating Test Data
 ----------------------------------------------------------------------
 
 You can also design your own custom form completely from scratch.
@@ -156,7 +156,7 @@ You can also design your own custom form completely from scratch.
 
 .. _creating-new-form:
 
-|hard| |FA| Creating a New Form
+:abbr:`★★★ (Advanced level)` Follow Along: Creating a New Form
 ----------------------------------------------------------------------
 
 Now we want to create our own custom form for the attribute data
@@ -206,8 +206,8 @@ the person who creates the forms).
 #. Save your new form as :file:`exercise_data/forms/add_people.ui`
 #. When it's done saving, you can close *Qt Designer*
 
-|hard| |FA| Associating the Form with Your Layer
-----------------------------------------------------------------------
+:abbr:`★★★ (Advanced level)` Follow Along: Associating the Form with Your Layer
+---------------------------------------------------------------------------------
 
 #. Go back to QGIS
 #. Double click the :guilabel:`test-data` layer in the legend to
@@ -234,7 +234,7 @@ the person who creates the forms).
    :menuselection:`Edit Feature Form` instead, and you can then adjust
    the attributes in the new form even after initial capture.
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 
 Using forms, you can make life easier for yourself when editing or
@@ -244,7 +244,7 @@ you can control the experience of someone who digitizes new data for
 that layer, thereby minimizing misunderstandings and unnecessary
 errors.
 
-|FR|
+Further Reading
 ----------------------------------------------------------------------
 
 If you completed the advanced section above and have knowledge of
@@ -253,7 +253,7 @@ Python, you may want to check out
 about creating custom feature forms with Python logic, which allows
 advanced functions including data validation, autocompletion, etc.
 
-|WN|
+What's Next?
 ----------------------------------------------------------------------
 
 Opening a form on identifying a feature is one of the standard actions
@@ -269,17 +269,8 @@ This is the subject of the next lesson.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |FR| replace:: Further Reading
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
-.. |hard| image:: /static/common/hard.png
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/common/moderate.png
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
