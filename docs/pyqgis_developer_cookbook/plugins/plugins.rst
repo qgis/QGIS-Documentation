@@ -130,6 +130,8 @@ server                 False     boolean flag, :const:`True` or :const:`False`, 
                                  the plugin has a server interface
 hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
                                  the plugin provides processing algorithms
+supportsQt6            False     boolean flag, :const:`True` or :const:`False`, determines if
+                                 the plugin can be run on QGIS built with Qt6
 =====================  ========  =============================================================
 
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
@@ -171,8 +173,8 @@ An example for this metadata.txt
   about=This paragraph can contain a detailed description
       of the plugin. Multiline is allowed, HTML is not.
   version=version 1.2
-  tracker=http://bugs.itopen.it
-  repository=http://www.itopen.it/repo
+  tracker=https://bugs.itopen.it
+  repository=https://www.itopen.it/repo
   ; end of mandatory metadata
 
   ; start of optional metadata
@@ -209,6 +211,9 @@ An example for this metadata.txt
   ; Both "MyOtherPlugin" and "YetAnotherPlugin" names come from their own metadata's
   ; name field
   plugin_dependencies=MyOtherPlugin==1.12,YetAnotherPlugin
+
+  ; whether the plugin can be run on QGIS built with Qt6 
+  supportsQt6=True
 
 
 .. index:: Plugins; Initialisation
