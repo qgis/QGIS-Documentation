@@ -530,7 +530,8 @@ Optionally, you can also choose to:
   layer name itself;
 * |checkbox| :guilabel:`Export features intersecting the current map extent`;
 * |unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;
-* |checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements.
+* |checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements;
+* |unchecked| :guilabel:`Use only selected features`.
 
 .. _figure_create_dxf:
 
