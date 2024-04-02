@@ -1062,6 +1062,12 @@ Parameters
 
        Default: False
      - Exports labels as MTEXT or TEXT elements
+   * - **Use only selected features**
+     - ``SELECTED_FEATURES_ONLY``
+     - [boolean]
+
+       Default: False
+     - Exports only the selected features.
    * - **DXF**
      - ``OUTPUT``
      - [file]
