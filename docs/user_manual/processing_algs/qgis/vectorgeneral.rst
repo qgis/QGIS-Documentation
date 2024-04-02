@@ -1060,7 +1060,7 @@ Parameters
      - ``MTEXT``
      - [boolean]
 
-       Default: False
+       Default: True
      - Exports labels as MTEXT or TEXT elements
    * - **Use only selected features**
      - ``SELECTED_FEATURES_ONLY``
