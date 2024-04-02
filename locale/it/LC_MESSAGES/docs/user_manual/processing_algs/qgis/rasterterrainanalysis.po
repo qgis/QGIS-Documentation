@@ -5,9 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # Harrissou Sant-anna, 2024
 # marcobra <marcobra.ubuntu@gmail.com>, 2024
+# Transifex Bot <>, 2024
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2024\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -326,6 +327,82 @@ msgstr ""
 " i dettagli su come eseguire gli algoritmi di processing dalla console "
 "Python."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:99
+msgid "DTM filter (slope-based)"
+msgstr "Filtro DTM (basato sulle pendenze)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:101
+msgid "|334|"
+msgstr "|334|"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:103
+msgid ""
+"Can be used to filter a digital elevation model in order to classify its "
+"cells into ground and object (non-ground) cells."
+msgstr ""
+"Può essere utilizzato per filtrare un modello di elevazione digitale al fine"
+" di classificarne le celle in celle del terreno e celle degli oggetti (non "
+"del terreno)."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:105
+msgid ""
+"The tool uses concepts as described by Vosselman (2000) and is based on the "
+"assumption that a large height difference between two nearby cells is "
+"unlikely to be caused by a steep slope in the terrain. The probability that "
+"the higher cell might be non-ground increases when the distance between the "
+"two cells decreases. Therefore the filter defines a maximum height "
+"difference (``dz_max``) between two cells as a function of the distance "
+"(``d``) between the cells (``dz_max( d ) = d``). A cell is classified as "
+"terrain if there is no cell within the kernel radius to which the height "
+"difference is larger than the allowed maximum height difference at the "
+"distance between these two cells."
+msgstr ""
+"Lo strumento utilizza i concetti descritti da Vosselman (2000) e si basa sul"
+" presupposto che una grande differenza di altezza tra due celle vicine è "
+"improbabile che sia causata da una forte pendenza del terreno. La "
+"probabilità che la cella più alta possa essere non terrestre aumenta quando "
+"la distanza tra le due celle diminuisce. Pertanto il filtro definisce una "
+"differenza di altezza massima (``dz_max``) tra due celle in funzione della "
+"distanza (``d``) tra le celle (``dz_max( d ) = d```). Una cella è "
+"classificata come terreno se all'interno del raggio del kernel non c'è "
+"nessuna cella la cui differenza di altezza sia maggiore della differenza di "
+"altezza massima consentita alla distanza tra le due celle."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:112
+#, python-format
+msgid ""
+"The approximate terrain slope (``s``) parameter is used to modify the filter"
+" function to match the overall slope in the study area (``dz_max( d ) = d * "
+"s``). A 5 % confidence interval (``ci = 1.65 * sqrt( 2 * stddev )``) may be "
+"used to modify the filter function even further by either relaxing "
+"(``dz_max( d ) = d * s + ci``) or amplifying (``dz_max( d ) = d * s - ci``) "
+"the filter criterium."
+msgstr ""
+"Il parametro della pendenza approssimativa del terreno (``s``) viene "
+"utilizzato per modificare la funzione di filtro in modo che corrisponda alla"
+" pendenza complessiva dell'area di studio (``dz_max( d ) = d * s``). Un "
+"intervallo di confidenza del 5% (``ci = 1,65 * sqrt( 2 * stddev )``) può "
+"essere utilizzato per modificare ulteriormente la funzione di filtro, "
+"attenuando (``dz_max( d ) = d * s + ci```) o amplificando (``dz_max( d ) = d"
+" * s - ci```) il parametro del filtro."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:117
+msgid ""
+"*References: Vosselman, G. (2000): Slope based filtering of laser altimetry "
+"data. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942*"
+msgstr ""
+"*Riferimenti: Vosselman, G. (2000): Filtraggio dei dati di altimetria laser "
+"basato sulla pendenza. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The "
+"Netherlands, 935-942*."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:119
+msgid ""
+"This tool is a port of the SAGA `DTM Filter (slope-based) <https://saga-"
+"gis.sourceforge.io/saga_tool_doc/9.1.1/grid_filter_7.html>`_"
+msgstr ""
+"Questo strumento è un porting del filtro SAGA `DTM (basato sulle pendenze) "
+"<https://saga-gis.sourceforge.io/saga_tool_doc/9.1.1/grid_filter_7.html>`_"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:133
 msgid "**Input layer**"
 msgstr "**Layer in ingresso**"
@@ -338,6 +415,18 @@ msgstr "**Numero Banda**"
 msgid "``BAND``"
 msgstr "``BAND``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:139
+msgid "[number] [list]"
+msgstr "[number] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:140
+msgid "The band of the DEM to consider"
+msgstr "La banda del DEM da considerare"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:141
+msgid "**Kernel radius (pixels)**"
+msgstr "**Raggio del Kernel (in pixel)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:142
 msgid "``RADIUS``"
 msgstr "``RADIUS``"
@@ -345,6 +434,46 @@ msgstr "``RADIUS``"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:145
 msgid "Default: 5"
 msgstr "Predefinito: 5"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:146
+msgid ""
+"The radius of the filter kernel (in pixels). Must be large enough to reach "
+"ground cells next to non-ground objects."
+msgstr ""
+"Il raggio del filtro del kernel (in pixel). Deve essere sufficientemente "
+"grande da raggiungere le celle del terreno accanto agli oggetti non del "
+"terreno."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:148
+msgid "**Terrain slope (%, pixel size/vertical units)**"
+msgstr "**Pendenza del terreno (%, dimensioni pixel/unità verticali)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:149
+msgid "``TERRAIN_SLOPE``"
+msgstr "``TERRAIN_SLOPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:152
+msgid "Default: 30"
+msgstr "Predefinito: 30"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:153
+msgid ""
+"The approximate terrain slope in ``%``. The terrain slope must be adjusted "
+"to account for the ratio of height units vs raster pixel dimensions. Used to"
+" relax the filter criterium in steeper terrain."
+msgstr ""
+"La pendenza approssimativa del terreno in ``%``. La pendenza del terreno "
+"deve essere regolata per tenere conto del rapporto tra unità di altezza e "
+"dimensioni dei pixel raster. Si usa per attenuare il parametro del filtro "
+"nei terreni più ripidi."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:156
+msgid "**Filter modification**"
+msgstr "**Modifiche al filtro**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:157
+msgid "``FILTER_MODIFICATION``"
+msgstr "``FILTER_MODIFICATION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:158
 msgid "[list]"
@@ -354,13 +483,52 @@ msgstr "[list]"
 msgid "Default: 0"
 msgstr "Predefinito: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:161
+msgid ""
+"Choose whether to apply the filter kernel without modification or to use a "
+"confidence interval to relax or amplify the height criterium."
+msgstr ""
+"Scegliere se applicare il filtro kernel senza modifiche o se utilizzare un "
+"intervallo di confidenza per attenuare o amplificare il parametro "
+"dell'altezza."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:164
+msgid "0 - None"
+msgstr "0 - Nessuno"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:165
+msgid "1 - Relax filter"
+msgstr "1 - Filtro attenuato"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:166
+msgid "2 - Amplify"
+msgstr "2 - Amplificato"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:167
 msgid "**Standard deviation**"
 msgstr "**Deviazione Standard**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:168
+msgid "``STANDARD_DEVIATION``"
+msgstr "``STANDARD_DEVIATION``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:171
 msgid "Default: 0.1"
 msgstr "Predefinito: 0.1"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:172
+#, python-format
+msgid ""
+"The standard deviation used to calculate a 5% confidence interval applied to"
+" the height threshold."
+msgstr ""
+"La deviazione standard utilizzata per calcolare un intervallo di confidenza "
+"del 5% applicato alla soglia di altezza."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:173
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:212
+msgid "**Output layer (ground)**"
+msgstr "**Layer in uscita (terreno)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:175
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:189
@@ -369,14 +537,52 @@ msgstr "Predefinito: 0.1"
 msgid "Optional"
 msgstr "Opzionale"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:213
+msgid "``OUTPUT_GROUND``"
+msgstr "``OUTPUT_GROUND``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:180
+msgid ""
+"Specify the filtered DEM containing only cells classified as ground. One of:"
+msgstr ""
+"Specificare il DEM filtrato contenente solo le celle classificate come "
+"terreno. Uno di:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "Tralascia risultato"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:216
+msgid "**Output layer (non-ground objects)**"
+msgstr "**Layer in uscita (oggetti non terreno)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:217
+msgid "``OUTPUT_NONGROUND``"
+msgstr "``OUTPUT_NONGROUND``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:193
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:528
 msgid "Default: ``[Skip output]``"
 msgstr "Predefinito: ``[Skip output]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:194
+msgid "Specify the non-ground objects removed by the filter. One of:"
+msgstr "Specificare gli oggetti non terreno rimossi dal filtro. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:215
+msgid "The filtered DEM containing only cells classified as ground."
+msgstr "Il DEM filtrato contenente solo le celle classificate come terreno."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:219
+msgid "The non-ground objects removed by the filter."
+msgstr "Gli oggetti non terreno rimossi dal filtro."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:224
+msgid "**Algorithm ID**: ``native:dtmslopebasedfilter``"
+msgstr "**ID Algoritmo**: ``native:dtmslopebasedfilter``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:234
 msgid "Hillshade"
