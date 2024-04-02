@@ -1035,6 +1035,12 @@ Parameters
 
        Default: 1:1 000 000
      - Default scale of data export.
+   * - **Map theme**
+
+       Optional
+     - ``MAP_THEME``
+     - [map theme]
+     - Match layer styling to the provided map theme.
    * - **Encoding**
      - ``ENCODING``
      - [enumeration]
@@ -1044,6 +1050,8 @@ Parameters
      - [crs]
      - Choose the CRS for the output layer.
    * - **Extent**
+
+       Optional
      - ``EXTENT``
      - [extent]
      - Limit exported features to those with geometries intersecting the
