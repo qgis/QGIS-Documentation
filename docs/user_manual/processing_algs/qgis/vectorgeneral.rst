@@ -1043,6 +1043,11 @@ Parameters
      - ``CRS``
      - [crs]
      - Choose the CRS for the output layer.
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - Limit exported features to those with geometries intersecting the
+       provided extent.
    * - **Use layer title as name**
      - ``USE_LAYER_TITLE``
      - [boolean]
