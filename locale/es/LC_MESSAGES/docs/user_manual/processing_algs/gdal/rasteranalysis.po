@@ -6,8 +6,10 @@
 # 
 # Translators:
 # vareli <ehespinosa@ya.com>, 2024
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
+# Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Transifex Bot <>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,6 +26,17 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traducción es un esfuerzo comunitario al que `puedes unirte "
+"<https://qgis.org/es/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Esta página está actualmente traducida en |translation "
+"progress|."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2
 msgid "Raster analysis"
@@ -431,7 +444,7 @@ msgstr "**Número de banda**"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2280
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2391
 msgid "``BAND``"
-msgstr "``BANDA``"
+msgstr "``BAND``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:48
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:183
@@ -1088,6 +1101,34 @@ msgstr "Un ráster saliente de 4 bandas"
 msgid "**Algorithm ID**: ``gdal:colorrelief``"
 msgstr "**Algoritmo ID**: ``gdal:colorrelief``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:272
+msgid "Fill NoData"
+msgstr "Rellenar NoData"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:273
+msgid ""
+"Fill raster regions with NoData values by interpolation from edges. The "
+"values for the NoData regions are calculated by the surrounding pixel values"
+" using inverse distance weighting. After the interpolation a smoothing of "
+"the results takes place. Input can be any GDAL-supported raster layer. This "
+"algorithm is generally suitable for interpolating missing regions of fairly "
+"continuously varying rasters (such as elevation models for instance). It is "
+"also suitable for filling small holes and cracks in more irregularly varying"
+" images (like airphotos). It is generally not so great for interpolating a "
+"raster from sparse point data."
+msgstr ""
+"Rellena regiones ráster con valores NoData mediante interpolación desde los "
+"bordes. Los valores de las regiones NoData se calculan a partir de los "
+"valores de los píxeles circundantes utilizando una ponderación de distancia "
+"inversa. Después de la interpolación se produce un suavizado de los "
+"resultados. La entrada puede ser cualquier capa ráster compatible con GDAL. "
+"Este algoritmo suele ser adecuado para interpolar regiones que faltan en "
+"rásters que varían de forma bastante continua (como modelos de elevación, "
+"por ejemplo). También es adecuado para rellenar pequeños agujeros y grietas "
+"en imágenes que varían de forma más irregular (como las aerofotografías). No"
+" suele ser tan bueno para interpolar una trama a partir de datos de puntos "
+"dispersos."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:285
 msgid ""
 "This algorithm is derived from the `GDAL fillnodata utility "
@@ -1116,6 +1157,13 @@ msgstr "Parámetros básicos"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:313
 msgid "Input raster layer"
 msgstr "Capa ráster de entrada"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:319
+msgid ""
+"The band to operate on. NoData values must be represented by the value 0."
+msgstr ""
+"La banda sobre la que operar. Los valores NoData deben representarse con el "
+"valor 0."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:321
 msgid ""
@@ -1490,6 +1538,27 @@ msgstr "**Mínimo número de puntos de datos a usar**"
 msgid "``MIN_POINTS``"
 msgstr "``MIN_POINTS``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:501
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:661
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:844
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1151
+msgid ""
+"Minimum number of data points to average. If less amount of points found the"
+" grid node considered empty and will be filled with NoData marker."
+msgstr ""
+"Número mínimo de puntos de datos a promediar. Si se encuentran menos puntos,"
+" el nodo de la cuadrícula se considerará vacío y se rellenará con el "
+"marcador NoData."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:505
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:665
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:848
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:989
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1155
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1308
+msgid "**NoData**"
+msgstr "**NoData**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:506
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:666
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:849
@@ -1499,6 +1568,15 @@ msgstr "``MIN_POINTS``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1789
 msgid "``NODATA``"
 msgstr "``NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:510
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:670
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:853
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:994
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1160
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1313
+msgid "NoData marker to fill empty points"
+msgstr "Marcador NoData para rellenar puntos vacíos"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:511
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:587
@@ -1634,6 +1712,10 @@ msgstr "9 --- CFloat32     (Float32 complejo)"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:19
 msgid "10 --- CFloat64   (Complex Float64)"
 msgstr "10 --- CFloat64   (Complejo Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:20
+msgid "11 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "11 --- Int8 (entero con signo de ocho bits (qint8))"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:22
 msgid ""
@@ -1793,6 +1875,22 @@ msgstr "**Algoritmo ID**: ``gdal:gridinversedistance``"
 msgid "Grid (Linear)"
 msgstr "Cuadrícula (lineal)"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:949
+msgid ""
+"The Linear method perform linear interpolation by computing a Delaunay "
+"triangulation of the point cloud, finding in which triangle of the "
+"triangulation the point is, and by doing linear interpolation from its "
+"barycentric coordinates within the triangle. If the point is not in any "
+"triangle, depending on the radius, the algorithm will use the value of the "
+"nearest point or the NoData value."
+msgstr ""
+"El método Lineal realiza la interpolación lineal calculando una "
+"triangulación de Delaunay de la nube de puntos, encontrando en qué triángulo"
+" de la triangulación se encuentra el punto, y realizando la interpolación "
+"lineal a partir de sus coordenadas baricéntricas dentro del triángulo. Si el"
+" punto no está en ningún triángulo, dependiendo del radio, el algoritmo "
+"utilizará el valor del punto más cercano o el valor NoData."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:978
 msgid "**Search distance**"
 msgstr "**Distancia de búsqueda**"
@@ -1800,6 +1898,19 @@ msgstr "**Distancia de búsqueda**"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:982
 msgid "Default: -1.0"
 msgstr "Predeterminado: -1.0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:983
+msgid ""
+"In case the point to be interpolated does not fit into a triangle of the "
+"Delaunay triangulation, use that maximum distance to search a nearest "
+"neighbour, or use NoData otherwise. If set to ``-1``, the search distance is"
+" infinite. If set to ``0``, NoData value will be used."
+msgstr ""
+"En caso de que el punto a interpolar no encaje en un triángulo de la "
+"triangulación de Delaunay, utiliza esa distancia máxima para buscar un "
+"vecino más cercano, o utiliza NoData en caso contrario. Si se establece en "
+"``-1``, la distancia de búsqueda es infinita. Si se establece en ``0``, se "
+"utilizará el valor NoData."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:995
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1071
@@ -1813,6 +1924,24 @@ msgstr "**Algoritmo ID**: ``gdal:gridlinear``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1089
 msgid "Grid (Moving average)"
 msgstr "Cuadrícula(promedio móvil)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1090
+msgid ""
+"The Moving Average is a simple data averaging algorithm. It uses a moving "
+"window of elliptic form to search values and averages all data points within"
+" the window. Search ellipse can be rotated by specified angle, the center of"
+" ellipse located at the grid node. Also the minimum number of data points to"
+" average can be set, if there are not enough points in window, the grid node"
+" considered empty and will be filled with specified NoData value."
+msgstr ""
+"La media móvil es un algoritmo sencillo de promediación de datos. Utiliza "
+"una ventana móvil de forma elíptica para buscar valores y promedia todos los"
+" puntos de datos dentro de la ventana. La elipse de búsqueda se puede girar "
+"un ángulo especificado, el centro de la elipse se encuentra en el nodo de la"
+" cuadrícula. También se puede establecer el número mínimo de puntos de datos"
+" a promediar, si no hay suficientes puntos en la ventana, el nodo de "
+"cuadrícula se considera vacío y se rellenará con el valor NoData "
+"especificado."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1161
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1236
@@ -1837,6 +1966,18 @@ msgstr "**Algoritmo ID**: ``gdal:gridaverage``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1254
 msgid "Grid (Nearest neighbor)"
 msgstr "Cuadrícula (Vecino mas próximo)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1255
+msgid ""
+"The Nearest Neighbor method doesn't perform any interpolation or smoothing, "
+"it just takes the value of nearest point found in grid node search ellipse "
+"and returns it as a result. If there are no points found, the specified "
+"NoData value will be returned."
+msgstr ""
+"El método Vecino más próximo no realiza ninguna interpolación ni suavizado, "
+"sólo toma el valor del punto más próximo encontrado en la elipse de búsqueda"
+" de nodos de la cuadrícula y lo devuelve como resultado. Si no se encuentra "
+"ningún punto, se devolverá el valor NoData especificado."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1314
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1390
@@ -2134,6 +2275,20 @@ msgstr "**La distancia máxima a ser generada**"
 msgid "``MAX_DISTANCE``"
 msgstr "``MAX_DISTANCE``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1766
+msgid ""
+"The maximum distance to be generated. The NoData value will be used for "
+"pixels beyond this distance. If a NoData value is not provided, the output "
+"band will be queried for its NoData value. If the output band does not have "
+"a NoData value, then the value 65535 will be used. Distance is interpreted "
+"according to the value of *Distance units*."
+msgstr ""
+"La distancia máxima a generar. El valor NoData se utilizará para los píxeles"
+" más allá de esta distancia. Si no se proporciona un valor NoData, se "
+"preguntará a la banda de salida por su valor NoData. Si la banda de salida "
+"no tiene un valor NoData, se utilizará el valor 65535. La distancia se "
+"interpreta según el valor de *Unidades de distancia*."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1775
 msgid ""
 "**Value to be applied to all pixels that are within the maxdist of target "
@@ -2155,6 +2310,14 @@ msgstr ""
 "Especifica un valor a aplicar a todos los pixels que estén mas cerca de la "
 "distancia máxima de los pixels objetivo (incluyendo los pixels objetivo) en "
 "lugar del valor de distancia."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1786
+msgid "**NoData value to use for the destination proximity raster**"
+msgstr "**Valor de NoData a utilizar para la trama de proximidad de destino."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1793
+msgid "Specify the NoData value to use for the output raster"
+msgstr "Especifique el valor NoData que se utilizará para el raster de salida"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1794
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1863
@@ -2189,6 +2352,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1976
 msgid "**Roughness**"
 msgstr "**Rugosidad**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1979
+msgid ""
+"Single-band output roughness raster. The value -9999 is used as NoData "
+"value."
+msgstr ""
+"Raster de rugosidad de salida de una sola banda. El valor -9999 se utiliza "
+"como valor NoData."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1985
 msgid "**Algorithm ID**: ``gdal:roughness``"
@@ -2323,6 +2494,11 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2452
 msgid "**Terrain Ruggedness Index**"
 msgstr "**Índice de rugosidad del Terreno**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2344
+msgid "Output ruggedness raster. The value -9999 is used as NoData value."
+msgstr ""
+"Salida de la trama de robustez. El valor -9999 se utiliza como valor NoData."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2350
 msgid "**Algorithm ID**: ``gdal:triterrainruggednessindex``"
