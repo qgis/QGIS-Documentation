@@ -3168,13 +3168,12 @@ feature identification:
   Additionally, you can select and edit existing expressions
   using the :guilabel:`Insert/Edit Expression` button. 
   
-.. note::
+  .. note:: Understanding the :guilabel:`Insert/Edit Expression` button behavior
 
-  If you select some text within an expression (between "[%" and "%]"),
-  or if no text is selected but the cursor is inside an expression,
-  the whole expression will be automatically selected.
-  If the cursor is outside an expression, or if an entire expression is already selected,
-  the selection will remain as is.
+   If you select some text within an expression (between "[%" and "%]"),
+   or if no text is selected but the cursor is inside an expression,
+   the whole expression will be automatically selected for editing.
+   If the cursor or a selected text is outside an expression, the dialog opens with the selection.
 
 .. _figure_display_code:
 
