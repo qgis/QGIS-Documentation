@@ -1522,6 +1522,8 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
 * a :guilabel:`Name`
 * the :guilabel:`URL`
+* a :guilabel:`Prefix`: This is used to specify the proxy prefix in the URL,
+  which is necessary for some ArcGIS servers that use web proxy prefixes. 
 * a :guilabel:`Community endpoint URL`
 * a :guilabel:`Content endpoint URL`
 * the :ref:`authentication <authentication_index>` configuration if necessary
