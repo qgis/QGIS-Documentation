@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-04-11 01:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -215,9 +215,9 @@ msgstr "編集する目的では、 :kbd:`.rst` ファイルは通常のテキ�
 
 #: ../../docs/training_manual/appendix/contribute.rst:107
 msgid ""
-"To begin writing the lesson, write the markup phrase :kbd:`|LS|`, followed "
+"To begin writing the lesson, write the markup phrase ``Lesson:``, followed "
 "by the lesson name."
-msgstr "レッスンの書き始めるには、マークアップの語句 :kbd:`|LS|` を書き、その後ろにレッスン名を書きます。"
+msgstr "レッスンを書き始めるには、マークアップの語句 ``Lesson`` を書き、その後ろにレッスン名を書きます。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:109
 msgid "In the next line, write a line of 80 equal signs (:kbd:`=`)."
@@ -286,11 +286,10 @@ msgstr ""
 #: ../../docs/training_manual/appendix/contribute.rst:139
 msgid ""
 "Every section comes with a difficulty level. An easy section is denoted by "
-":kbd:`|basic|`, moderate by :kbd:`|moderate|`, and advanced by "
-":kbd:`|hard|`."
+"``★☆☆``, moderate by ``★★☆``, and advanced by ``★★★``."
 msgstr ""
-"すべてのセクションには難易度が付けられています。簡単なセクションは :kbd:`|basic|` 、適度は :kbd:`|moderate|` "
-"、そして上級は :kbd:`|hard|` で表されます。"
+"すべてのセクションには難易度が付けられています。簡単なセクションは ``★☆☆`` 、適度は ``★★☆`` 、そして上級は ``★★★`` "
+"で表されます。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:143
 msgid "Adding a \"follow along\" section"
@@ -304,8 +303,8 @@ msgid ""
 msgstr "（上記のように）このセクションを開始するには、意図した難易度のマークアップ語句を書き込みます。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:147
-msgid "Leave a space and then write :kbd:`|FA|` (for \"follow along\")."
-msgstr "スペースを置き、次に（「この通りに従ってください」の）:kbd:`|FA|` を書きます。"
+msgid "Leave a space and then write ``Follow Along:``."
+msgstr "スペースを置き、次に「この通りに従ってください:」を書きます。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:148
 msgid ""
@@ -314,7 +313,6 @@ msgid ""
 msgstr "もうひとつスペースを置いて、セクションの名前を書きます（初回のみ大文字だけでなく、固有名詞のための大文字を使用）。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:150
-#: ../../docs/training_manual/appendix/contribute.rst:166
 msgid ""
 "In the next line, write a line of 80 minuses/dashes (:kbd:`-`). Ensure that "
 "your text editor does not replace the default minus/dash character with a "
@@ -346,8 +344,16 @@ msgid "Adding a \"try yourself\" section"
 msgstr "「自分でやってみよう」セクションを追加する"
 
 #: ../../docs/training_manual/appendix/contribute.rst:165
-msgid "Leave a space and then write :kbd:`|TY|` (for \"try yourself\")."
-msgstr "スペースを置き、次に（「自分でやってみよう」の） :kbd:`|TY|` と書き込みます。"
+msgid "Leave a space and then write ``Try Yourself:``."
+msgstr "スペースを置き、次に「自分でやってみよう:」を書きます。"
+
+#: ../../docs/training_manual/appendix/contribute.rst:166
+msgid ""
+"In the next line, write a line of 80 minuses/dashes (``-``). Ensure that "
+"your text editor does not replace the default minus/dash character with a "
+"long dash or other character."
+msgstr ""
+"次の行に、80個のマイナス/ダッシュ（``-``）の線を書き込みます。テキストエディタがデフォルトのマイナス/ダッシュ文字を長いダッシュや他の文字で置き換えないことを確認してください。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:169
 msgid ""
@@ -418,12 +424,12 @@ msgstr "結論を追加"
 
 #: ../../docs/training_manual/appendix/contribute.rst:215
 msgid ""
-"To end a lesson, write the phrase :kbd:`|IC|` for \"in conclusion\", "
-"followed by a new line of 80 minuses/dashes (:kbd:`-`). Write a conclusion "
-"for the lesson, explaining which concepts have been covered in the lesson."
+"To end a lesson, write the phrase ``In Conclusion``, followed by a new line "
+"of 80 minuses/dashes (``-``). Write a conclusion for the lesson, explaining "
+"which concepts have been covered in the lesson."
 msgstr ""
-"レッスンを終了するには、80個のマイナス/ハイフン（ :kbd:`-` ）の新しい行に続いて、 「結論」のための :kbd:`|IC|` "
-"語句を書きます。どのような概念がレッスンでカバーされているかを説明しながら、レッスンの結論を書きます。"
+"レッスンを終了するには、80個のマイナス/ハイフン（``-``）の新しい行に続いて語句、 「結論」 "
+"を書きます。どのような概念がレッスンでカバーされたかを説明しながら、レッスンの結論を書きます。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:220
 msgid "Add a Further Reading Section"
@@ -435,9 +441,9 @@ msgstr "このセクションは任意です。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:223
 msgid ""
-"Write the phrase :kbd:`FR` for \"further reading\", followed by a new line "
-"of 80 minuses/dashes (:kbd:`-`)."
-msgstr "80個のマイナス/ハイフン（ :kbd:`-` ）の新しい行に続いて「さらに読む」のための語句 :kbd:`FR` を書きます。"
+"Write the phrase ``Further Reading``, followed by a new line of 80 "
+"minuses/dashes (``-``)."
+msgstr "語句「さらに読む」を書き、80個のマイナス/ハイフン（ :kbd:`-` ）の新しい行を続けます。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:225
 msgid "Include links to appropriate external websites."
@@ -449,9 +455,9 @@ msgstr "[次は]セクションを追加"
 
 #: ../../docs/training_manual/appendix/contribute.rst:230
 msgid ""
-"Write the phrase :kbd:`|WN|` for \"what's next\", followed by a new line of "
-"80 minuses/dashes (:kbd:`-`)."
-msgstr "80個のマイナス/ハイフン（ :kbd:`-` ）の新しい行に続いて、「次は」のための語句 :kbd:`|WN|` を書きます。"
+"Write the phrase ``What's Next?`` for \"what's next\", followed by a new "
+"line of 80 minuses/dashes (``-``)."
+msgstr "80個のマイナス/ハイフン（``-``）の新しい行に続いて、「次は」のための語句「次は」を書きます。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:232
 msgid ""
