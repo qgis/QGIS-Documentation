@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-04-11 01:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 
 #: ../../docs/training_manual/databases/db_manager.rst:2
-msgid "|LS| Using DB Manager to work with Spatial Databases in QGIS"
+msgid "Lesson: Using DB Manager to work with Spatial Databases in QGIS"
 msgstr ""
 
 #: ../../docs/training_manual/databases/db_manager.rst:4
@@ -39,49 +39,47 @@ msgid ""
 "management oriented tools."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:9
+#: ../../docs/training_manual/databases/db_manager.rst:10
 msgid ""
 "**The goal for this lesson:** To learn how to interact with spatial "
 "databases using the QGIS DB Manager."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:13
-msgid "|basic| |FA| Managing PostGIS Databases with DB Manager"
+#: ../../docs/training_manual/databases/db_manager.rst:14
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Managing PostGIS Databases with "
+"DB Manager"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:300
-msgid "basic"
-msgstr ""
-
-#: ../../docs/training_manual/databases/db_manager.rst:15
+#: ../../docs/training_manual/databases/db_manager.rst:16
 msgid ""
 "You should first open the DB Manager interface by selecting "
 ":guilabel:`Database --> DB Manager --> DB Manager` on the menu or by "
 "selecting the DB Manager icon on the toolbar."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:19
+#: ../../docs/training_manual/databases/db_manager.rst:20
 msgid "|dbManager|"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:301
+#: ../../docs/training_manual/databases/db_manager.rst:297
 msgid "dbManager"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:21
+#: ../../docs/training_manual/databases/db_manager.rst:22
 msgid ""
 "You should already see the previous connections we have configured and be"
 " able to expand the ``myPG`` section and its ``public`` schema to see the"
 " tables we have worked with in previous sections."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:25
+#: ../../docs/training_manual/databases/db_manager.rst:26
 msgid ""
 "The first thing you may notice is that you can now see some metadata "
 "about the Schemas contained in your database."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:31
+#: ../../docs/training_manual/databases/db_manager.rst:32
 msgid ""
 "Schemas are a way of grouping data tables and other objects in a "
 "PostgreSQL database and a container for permissions and other "
@@ -93,34 +91,34 @@ msgid ""
 " manage them effectively."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:42
+#: ../../docs/training_manual/databases/db_manager.rst:43
 msgid ""
 "DB Manager can also be used to manage the tables within your database. We"
 " have already looked at various ways to create and manage tables on the "
 "command line, but now lets look at how to do this in DB Manager."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:47
+#: ../../docs/training_manual/databases/db_manager.rst:48
 msgid ""
 "First, its useful to just look at a table's metadata by clicking on its "
 "name in tree and looking in the :guilabel:`Info` tab."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:53
+#: ../../docs/training_manual/databases/db_manager.rst:54
 msgid ""
 "In this panel you can see the :guilabel:`General Info` about the table as"
 " well the information that the PostGIS extension maintains about the "
 "geometry and spatial reference system."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:57
+#: ../../docs/training_manual/databases/db_manager.rst:58
 msgid ""
 "If you scroll down in the :guilabel:`Info` tab, you can see more "
 "information about the :guilabel:`Fields`, :guilabel:`Constraints` and "
 ":guilabel:`Indexes` for the table you are viewing."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:64
+#: ../../docs/training_manual/databases/db_manager.rst:65
 msgid ""
 "Its also very useful to use DB Manager to simply look at the records in "
 "the database in much the same way you might do this by viewing the "
@@ -128,118 +126,118 @@ msgid ""
 "selecting the :guilabel:`Table` tab."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:72
+#: ../../docs/training_manual/databases/db_manager.rst:73
 msgid ""
 "There is also a :guilabel:`Preview` tab which will show you the layer "
 "data in a map preview."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:75
+#: ../../docs/training_manual/databases/db_manager.rst:76
 msgid ""
 "Right-clicking on a layer in the tree and clicking :guilabel:`Add to "
 "Canvas` will add this layer to your map."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:78
+#: ../../docs/training_manual/databases/db_manager.rst:79
 msgid ""
 "So far we have only been viewing the database its schemas and tables and "
 "their metadata, but what if we wanted to alter the table to add an "
 "additional column perhaps? DB Manager allows you to do this directly."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:83
+#: ../../docs/training_manual/databases/db_manager.rst:84
 msgid "Select the table you want to edit in the tree"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:84
+#: ../../docs/training_manual/databases/db_manager.rst:85
 msgid ""
 "Select :menuselection:`Table --> Edit Table` from the menu, to open the "
 ":guilabel:`Table Properties` dialog."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:90
+#: ../../docs/training_manual/databases/db_manager.rst:91
 msgid ""
 "You can use this dialog to Add Columns, Add geometry columns, edit "
 "existing columns or to remove a column completely."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:93
+#: ../../docs/training_manual/databases/db_manager.rst:94
 msgid ""
 "Using the :guilabel:`Constraints` tab, you can manage which fields are "
 "used as the primary key or to drop existing constraints."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:99
+#: ../../docs/training_manual/databases/db_manager.rst:100
 msgid ""
 "The :guilabel:`Indexes` tab can be used to add and delete both spatial "
 "and normal indexes."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:106
-msgid "|basic| |FA| Creating a New Table"
+#: ../../docs/training_manual/databases/db_manager.rst:107
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Creating a New Table"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:108
+#: ../../docs/training_manual/databases/db_manager.rst:109
 msgid ""
 "Now that we have gone through the process of working with existing tables"
 " in our database, let's use DB Manager to create a new table."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:111
+#: ../../docs/training_manual/databases/db_manager.rst:112
 msgid ""
 "If it is not already open, open the DB Manager window, and expand the "
 "tree until you see the list of tables already in your database."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:113
+#: ../../docs/training_manual/databases/db_manager.rst:114
 msgid ""
 "From the menu select :guilabel:`Table --> Create Table` to bring up the "
 "Create Table dialog."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:115
+#: ../../docs/training_manual/databases/db_manager.rst:116
 msgid "Use the default ``Public`` schema and name the table ``places``."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:116
+#: ../../docs/training_manual/databases/db_manager.rst:117
 msgid "Add the ``id``, ``place_name``, and ``elevation`` fields as shown below"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:118
+#: ../../docs/training_manual/databases/db_manager.rst:119
 msgid "Make sure the ``id`` field is set as the primary key."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:119
+#: ../../docs/training_manual/databases/db_manager.rst:120
 msgid ""
 "Click the checkbox to :guilabel:`Create geometry column` and make sure it"
 " is set to a ``POINT`` type and leave it named ``geom`` and specify "
 "``4326`` as the :guilabel:`SRID`."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:123
+#: ../../docs/training_manual/databases/db_manager.rst:124
 msgid ""
 "Click the checkbox to :guilabel:`Create spatial index` and click "
 ":guilabel:`Create` to create the table."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:129
+#: ../../docs/training_manual/databases/db_manager.rst:130
 msgid ""
 "Dismiss the dialog letting you know that the table was created and click "
 ":guilabel:`Close` to close the Create Table Dialog."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:132
+#: ../../docs/training_manual/databases/db_manager.rst:133
 msgid ""
 "You can now inspect your table in the DB Manager and you will of course "
 "find that there is no data in it. From here you can :guilabel:`Toggle "
 "Editing` on the layer menu and begin to add places to your table."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:138
-msgid "|basic| |FA| Basic Database Administration"
+#: ../../docs/training_manual/databases/db_manager.rst:139
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Basic Database Administration"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:140
+#: ../../docs/training_manual/databases/db_manager.rst:141
 msgid ""
 "The DB Manager will also let you do some basic database administration "
 "tasks. It is certainly not a substitute for a more complete database "
@@ -247,7 +245,7 @@ msgid ""
 "use to maintain your database."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:146
+#: ../../docs/training_manual/databases/db_manager.rst:147
 msgid ""
 "Database tables can often become quite large and tables which are being "
 "modified frequently can end up leaving around remnants of records that "
@@ -256,38 +254,40 @@ msgid ""
 "tables for better performance."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:152
+#: ../../docs/training_manual/databases/db_manager.rst:153
 msgid ""
 "Let us take a look at how we can perform a *VACUUM ANALYZE* command from "
 "within DB Manager."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:155
+#: ../../docs/training_manual/databases/db_manager.rst:156
 msgid "Select one of your tables in the DB Manager Tree"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:156
+#: ../../docs/training_manual/databases/db_manager.rst:157
 msgid "Select :menuselection:`Table --> Run Vacuum Analyze` from the menu"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:158
+#: ../../docs/training_manual/databases/db_manager.rst:159
 msgid ""
 "PostgreSQL will now perform the operation. Depending on how big your "
 "table is, this may take some time to complete."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:162
+#: ../../docs/training_manual/databases/db_manager.rst:163
 msgid ""
 "You can find more information about the VACUUM ANALYZE process in the "
 "`PostgreSQL Documentation on VACUUM ANALYZE "
 "<https://www.postgresql.org/docs/9.1/sql-vacuum.html>`_."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:167
-msgid "|basic| |FA| Executing SQL Queries with DB Manager"
+#: ../../docs/training_manual/databases/db_manager.rst:168
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Executing SQL Queries with DB "
+"Manager"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:169
+#: ../../docs/training_manual/databases/db_manager.rst:170
 msgid ""
 "DB Manager also provides a way for you to write queries against your "
 "database tables and to view the results. We have already seen this type "
@@ -295,181 +295,181 @@ msgid ""
 "again here with DB Manager."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:175
+#: ../../docs/training_manual/databases/db_manager.rst:176
 msgid "Select the ``lines`` table in the tree."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:176
+#: ../../docs/training_manual/databases/db_manager.rst:177
 msgid "Select the :guilabel:`SQL window` button in the DB Manager toolbar."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:181
+#: ../../docs/training_manual/databases/db_manager.rst:182
 msgid "Compose the following :guilabel:`SQL query` in the space provided::"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:185
+#: ../../docs/training_manual/databases/db_manager.rst:186
 msgid "Click the :guilabel:`Execute (F5)` button to run the query."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:186
+#: ../../docs/training_manual/databases/db_manager.rst:187
 msgid "You should now see the records that match in the :guilabel:`Result` panel."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:192
+#: ../../docs/training_manual/databases/db_manager.rst:193
 msgid ""
 "Click the checkbox for :guilabel:`Load as new layer` to add the results "
 "to your map."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:194
+#: ../../docs/training_manual/databases/db_manager.rst:195
 msgid ""
 "Select the ``id`` column as the :guilabel:`Column with unique integer "
 "values` and the ``geom`` column as the :guilabel:`Geometry column`."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:197
+#: ../../docs/training_manual/databases/db_manager.rst:198
 msgid "Enter ``roads_primary`` as the :guilabel:`Layer name (prefix)`."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:198
+#: ../../docs/training_manual/databases/db_manager.rst:199
 msgid ""
 "Click :guilabel:`Load now!` to load the results as a new layer into your "
 "map."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:204
+#: ../../docs/training_manual/databases/db_manager.rst:205
 msgid ""
 "The layers that matched your query are now displayed on your map. You can"
 " of course use this query tool to execute any arbitrary SQL command "
 "including many of the ones we looked at in previous modules and sections."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:210
+#: ../../docs/training_manual/databases/db_manager.rst:211
 msgid "Importing Data into a Database with DB Manager"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:212
+#: ../../docs/training_manual/databases/db_manager.rst:213
 msgid ""
 "We have already looked at how to import data into a spatial database "
 "using command line tools, so now let's learn how to use DB Manager to do "
 "imports."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:216
+#: ../../docs/training_manual/databases/db_manager.rst:217
 msgid ""
 "Click the :guilabel:`Import layer/file` button on the toolbar in the DB "
 "Manager dialog."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:222
+#: ../../docs/training_manual/databases/db_manager.rst:223
 msgid ""
 "Select the :file:`urban_33S.shp` file from "
 ":file:`exercise_data/projected_data` as the input dataset"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:224
+#: ../../docs/training_manual/databases/db_manager.rst:225
 msgid ""
 "Click the :guilabel:`Update Options` button to pre-fill some of the form "
 "values."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:226
+#: ../../docs/training_manual/databases/db_manager.rst:227
 msgid "Make sure that the :guilabel:`Create new table` option is selected"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:227
+#: ../../docs/training_manual/databases/db_manager.rst:228
 msgid ""
 "Specify the :guilabel:`Source SRID` as ``32722`` and the "
 ":guilabel:`Target SRID` as ``4326``"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:229
+#: ../../docs/training_manual/databases/db_manager.rst:230
 msgid "Enable the checkbox to :guilabel:`Create Spatial Index`"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:230
+#: ../../docs/training_manual/databases/db_manager.rst:231
 msgid "Click :guilabel:`OK` to perform the import"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:235
+#: ../../docs/training_manual/databases/db_manager.rst:236
 msgid "Dismiss the dialog letting you know that the import was successful"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:236
+#: ../../docs/training_manual/databases/db_manager.rst:237
 msgid "Click the :guilabel:`Refresh` button on the DB Manager Toolbar"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:238
+#: ../../docs/training_manual/databases/db_manager.rst:239
 msgid ""
 "You can now inspect the table in your database by clicking on it in the "
 "Tree. Verify that the data has been reprojected by checking that the "
 ":guilabel:`Spatial ref:` is listed as ``WGS 84 (4326)``."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:246
+#: ../../docs/training_manual/databases/db_manager.rst:247
 msgid ""
 "Right clicking on the table in the Tree and a selecting :guilabel:`Add to"
 " Canvas` will add the table as a layer in your map."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:251
+#: ../../docs/training_manual/databases/db_manager.rst:252
 msgid "Exporting Data from a Database with DB Manager"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:253
+#: ../../docs/training_manual/databases/db_manager.rst:254
 msgid ""
 "Of course DB Manager can also be used to export data from your spatial "
 "databases, so lets take a look at how that is done."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:256
+#: ../../docs/training_manual/databases/db_manager.rst:257
 msgid ""
 "Select the ``lines`` layer in the Tree and click the :guilabel:`Export to"
 " File` button on the toolbar to open the :guilabel:`Export to vector "
 "file` dialog."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:259
+#: ../../docs/training_manual/databases/db_manager.rst:260
 msgid ""
 "Click the :guilabel:`...` button to select the :guilabel:`Output file` "
 "and save the data to your :file:`exercise_data` directory as "
 ":file:`urban_4326`."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:262
+#: ../../docs/training_manual/databases/db_manager.rst:263
 msgid "Set the :guilabel:`Target SRID` as ``4326``."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:263
+#: ../../docs/training_manual/databases/db_manager.rst:264
 msgid "Click :guilabel:`OK` to initialize the export."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:268
+#: ../../docs/training_manual/databases/db_manager.rst:269
 msgid ""
 "Dismiss the dialog letting you know the export was successful and close "
 "the DB Manager."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:271
+#: ../../docs/training_manual/databases/db_manager.rst:272
 msgid "You can now inspect the shapefile you created with the Browser panel."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:277
-msgid "|IC|"
+#: ../../docs/training_manual/databases/db_manager.rst:278
+msgid "In Conclusion"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:279
+#: ../../docs/training_manual/databases/db_manager.rst:280
 msgid ""
 "You have now seen how to use the DB Manager interface in QGIS to manage "
 "your spatial databases, to execute SQL queries against your data and how "
 "to import and export data."
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:284
-msgid "|WN|"
+#: ../../docs/training_manual/databases/db_manager.rst:285
+msgid "What's Next?"
 msgstr ""
 
-#: ../../docs/training_manual/databases/db_manager.rst:286
+#: ../../docs/training_manual/databases/db_manager.rst:287
 msgid ""
 "Next, we will look at how to use many of these same techniques with "
 "*SpatiaLite* databases."
