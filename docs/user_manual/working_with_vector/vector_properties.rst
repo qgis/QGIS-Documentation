@@ -504,6 +504,9 @@ available modes are:
   (the idea of a boxplot).
 * Equal Interval: each class will have the same size (e.g. with the values
   from 1 to 16 and four classes, each class will have a size of four).
+* Fixed Interval: each class will have a fixed range of values (e.g. with the
+  values from 1 to 16 and an interval size of 4, the classes will be 1-4,
+  5-8, 9-12 and 13-16).  
 * Logarithmic scale: suitable for data with a wide range of values.
   Narrow classes for low values and wide classes for large values (e.g. for
   decimal numbers with range [0..100] and two classes, the first class will
