@@ -190,7 +190,7 @@ homebrew or MacPorts installs on Mac.
 The ``--code`` parameter
 ------------------------
 
-You can provide custom code to execute as startup paramteter
+You can provide custom code to execute as startup parameter
 to QGIS. To do so, create a python file, for example ``qgis_init.py``, to execute and
 start QGIS from the command line using ``qgis --code qgis_init.py``.
 
