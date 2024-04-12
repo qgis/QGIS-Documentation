@@ -47,8 +47,9 @@ Once a device is detected by QGIS, you will be able to interact with it:
 * actions for feature creation:
 
   * |addTrackPoint| :sup:`Add vertex to GPS track using GPS current location`
-  * |captureLine| :sup:`Create feature from track`
   * |capturePoint| :sup:`Create a new point feature at current GPS location`
+  * |captureLine| :sup:`Create a new line feature using the current GPS track`
+  * |capturePolygon| :sup:`Create a new polygon feature using the current GPS track`
   * |reset| :sup:`Reset track`
 
 * |metadata| :sup:`Show GPS information`: opens the :ref:`GPS Information
@@ -325,9 +326,11 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 
 .. |addTrackPoint| image:: /static/common/mActionAddTrackPoint.png
    :width: 1.5em
+.. |capturePoint| image:: /static/common/mActionCapturePoint.png
+   :width: 1.5em
 .. |captureLine| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
-.. |capturePoint| image:: /static/common/mActionCapturePoint.png
+.. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
 .. |gpsConnect| image:: /static/common/mIconGpsConnect.png
    :width: 1.5em
