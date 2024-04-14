@@ -2,27 +2,40 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
+# Transifex Bot <>, 2024
+# Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traducción es un esfuerzo comunitario al que `puedes unirte "
+"<https://qgis.org/es/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Esta página está actualmente traducida en |translation "
+"progress|."
 
 #: ../../docs/developers_guide/unittesting.rst:6
 msgid "Unit Testing"
@@ -174,23 +187,23 @@ msgstr "Creando una prueba de unidad"
 msgid ""
 "Creating a unit test is easy - typically you will do this by just creating a"
 " single :file:`.cpp` file (no :file:`.h` file is used) and implement all "
-"your test methods as public methods that return void. We'll use a simple "
+"your test methods as private methods that return void. We'll use a simple "
 "test class for ``QgsRasterLayer`` throughout the section that follows to "
 "illustrate. By convention we will name our test with the same name as the "
 "class they are testing but prefixed with 'Test'. So our test implementation "
 "goes in a file called :file:`testqgsrasterlayer.cpp` and the class itself "
 "will be ``TestQgsRasterLayer``. First we add our standard copyright banner:"
 msgstr ""
-"Crear una unidad de prueba es fácil - por lo general, esto se hace sólo por "
-"la creación de un único archivo :file:`.cpp` (no se utiliza el archivo "
-":file:`.h`) e implementar todos tus métodos de prueba cómo métodos públicos "
-"que devuelven nulos. Vamos a usar una clase de prueba simple "
-"``QgsRasterLayer`` en la siguiente sección para ilustrar. Por convención "
-"nombraremos nuestra prueba con el mismo nombre que la clase que estamos "
-"evaluando, pero con el prefijo 'Test'. De manera que la implementación de "
-"prueba va en un archivo llamado :file:`testqgsrasterlayer.cpp` de prueba y "
-"la propia clase será ``TestQgsRasterLayer``. Primero añadimos nuestro "
-"titular estándar de copyright: "
+"Crear una prueba unitaria es fácil - normalmente lo harás creando un único "
+"fichero :file:`.cpp` (no se utiliza ningún fichero :file:`.h`) e "
+"implementando todos tus métodos de prueba como métodos privados que "
+"devuelven void. Utilizaremos una clase de prueba simple para "
+"``QgsRasterLayer`` a lo largo de la sección que sigue para ilustrar. Por "
+"convención nombraremos nuestro test con el mismo nombre que la clase que "
+"están probando pero prefijado con ``Test``. Así que la implementación de "
+"nuestro test va en un fichero llamado :file:`testqgsrasterlayer.cpp` y la "
+"clase en sí será ``TestQgsRasterLayer``. Primero añadimos nuestro banner "
+"estándar de copyright:"
 
 #: ../../docs/developers_guide/unittesting.rst:98
 msgid ""
@@ -483,7 +496,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:313
 msgid "QCOMPARE ( *actual, expected* )"
-msgstr "QCOMPARE ( *actual, esperada* )"
+msgstr "QCOMPARE ( *actual, expected* )"
 
 #: ../../docs/developers_guide/unittesting.rst:314
 msgid "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
@@ -491,15 +504,15 @@ msgstr "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
 
 #: ../../docs/developers_guide/unittesting.rst:315
 msgid "QFAIL ( *message* )"
-msgstr "QFAIL ( *mensaje* )"
+msgstr "QFAIL ( *message* )"
 
 #: ../../docs/developers_guide/unittesting.rst:316
 msgid "QFETCH ( *type, name* )"
-msgstr ""
+msgstr "QFETCH ( *type, name* )"
 
 #: ../../docs/developers_guide/unittesting.rst:317
 msgid "QSKIP ( *description, mode* )"
-msgstr "QSKIP ( *descripción, modo* )"
+msgstr "QSKIP ( *description, mode* )"
 
 #: ../../docs/developers_guide/unittesting.rst:318
 msgid "QTEST ( *actual, testElement* )"
@@ -519,15 +532,15 @@ msgstr "QTEST_NOOP_MAIN ()"
 
 #: ../../docs/developers_guide/unittesting.rst:322
 msgid "QVERIFY2 ( *condition, message* )"
-msgstr "QVERIFY2 ( *condición, mensaje* )"
+msgstr "QVERIFY2 ( *condition, message* )"
 
 #: ../../docs/developers_guide/unittesting.rst:323
 msgid "QVERIFY ( *condition* )"
-msgstr "QVERIFY ( *condición* )"
+msgstr "QVERIFY ( *condition* )"
 
 #: ../../docs/developers_guide/unittesting.rst:324
 msgid "QWARN ( *message* )"
-msgstr "QWARN ( *mensaje* )"
+msgstr "QWARN ( *message* )"
 
 #: ../../docs/developers_guide/unittesting.rst:326
 msgid ""
@@ -1060,7 +1073,7 @@ msgstr "Valor"
 
 #: ../../docs/developers_guide/unittesting.rst:735
 msgid "PYTHONPATH"
-msgstr ""
+msgstr "PYTHONPATH"
 
 #: ../../docs/developers_guide/unittesting.rst:735
 msgid ""
@@ -1070,7 +1083,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:737
 msgid "QGIS_PREFIX_PATH"
-msgstr ""
+msgstr "QGIS_PREFIX_PATH"
 
 #: ../../docs/developers_guide/unittesting.rst:737
 msgid "[build]/output"
@@ -1078,7 +1091,7 @@ msgstr "[build]/output"
 
 #: ../../docs/developers_guide/unittesting.rst:739
 msgid "LD_LIBRARY_PATH"
-msgstr ""
+msgstr "LD_LIBRARY_PATH"
 
 #: ../../docs/developers_guide/unittesting.rst:739
 msgid "[build]/output/lib"
