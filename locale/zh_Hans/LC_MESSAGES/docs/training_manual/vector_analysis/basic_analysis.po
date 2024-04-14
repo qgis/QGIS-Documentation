@@ -2,31 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-29 08:40+0000\n"
-"PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:2
-msgid "|LS| Vector Analysis"
-msgstr "课: 矢量分析"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:4
 msgid ""
@@ -42,14 +37,6 @@ msgid ""
 "**The goal for this lesson:** To ask a question and solve it using analysis "
 "tools."
 msgstr "**本课目标:** 提出问题并使用分析工具进行解决。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:15
-msgid "|basic| The GIS Process"
-msgstr "|basic| GIS流程"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:489
-msgid "basic"
-msgstr ""
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:17
 msgid ""
@@ -72,10 +59,6 @@ msgstr "分析问题"
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:24
 msgid "Present the Results"
 msgstr "结果展示"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:28
-msgid "|basic| The Problem"
-msgstr "|basic| 问题"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:30
 msgid ""
@@ -104,10 +87,6 @@ msgstr "距离主干道50米以内"
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:39
 msgid "Closer than 500m to a restaurant"
 msgstr "距离餐厅500米以内"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:43
-msgid "|basic| The Data"
-msgstr "|basic| 数据"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:45
 msgid "To answer these questions, we are going to need the following data:"
@@ -148,10 +127,6 @@ msgid ""
 "on restaurants, for example, you may need to chose a different region."
 msgstr "虽然OSM下载具有一致的数据字段，但覆盖范围和详细信息确实有所不同。例如，如果您发现所选地区不包含餐厅信息，则可能需要选择其他地区。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:67
-msgid "|basic| |FA| Start a Project and get the Data"
-msgstr "|basic| 跟我做: 启动工程并获取数据"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:69
 msgid "We first need to load the data to work with."
 msgstr "我们首先需要加载要使用的数据。"
@@ -176,19 +151,19 @@ msgstr "在 :file:`training_data.gpkg` Geopackage数据库，您将找到我们�
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:82
 msgid "``buildings``"
-msgstr ""
+msgstr "``buildings``"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:83
 msgid "``roads``"
-msgstr ""
+msgstr "``roads``"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:84
 msgid "``restaurants``"
-msgstr ""
+msgstr "``restaurants``"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:85
 msgid "``schools``"
-msgstr ""
+msgstr "``schools``"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:87
 msgid "Load them, and also :file:`landuse.sqlite`."
@@ -250,17 +225,13 @@ msgstr ""
 "请注意 :guilabel:`roads` 图层旁边的 |indicatorFilter| "
 "图标。这有助于您记住，该图层有已激活的过滤器，因此某些要素可能在工程中不可用。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:492
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:486
 msgid "indicatorFilter"
-msgstr ""
+msgstr "indicatorFilter"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:117
 msgid "The map with all the data should look like the following one:"
 msgstr "包含所有数据的地图应如下所示："
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:124
-msgid "|basic| |TY| Convert Layers' CRS"
-msgstr "|basic| 试一试 转换图层的CRS"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:126
 msgid ""
@@ -342,10 +313,6 @@ msgid ""
 "Now that we have converted OSM data to a UTM projection, we can begin our "
 "calculations."
 msgstr "现在，我们已经将OSM数据转换为UTM投影，可以开始计算了。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:178
-msgid "|basic| |FA| Analyzing the Problem: Distances From Schools and Roads"
-msgstr "|basic| 跟我做: 分析问题 - 学校和道路的距离"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
 msgid "QGIS allows you to calculate distances between any vector object."
@@ -486,10 +453,6 @@ msgid ""
 msgstr ""
 "对话框右侧的 *简短帮助* 解释了算法的工作原理。如果需要更多信息，只需单击底部的 :guilabel:`帮助` 按钮，即可打开更详细的算法指南。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:273
-msgid "|basic| |TY| Distance from schools"
-msgstr "|basic| 试一试 学校的距离"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
 msgid "Use the same approach as above and create a buffer for your schools."
 msgstr "使用与上面相同的方法，为您的学校创建缓冲区。"
@@ -537,10 +500,6 @@ msgstr ""
 "第一幅图显示的缓冲区是将 :guilabel:`近似线段数` 值设置为 :guilabel:`5` ，第二幅图显示的是设置为 "
 ":guilabel:`20` 的值。在我们的示例中，差异很小，但您可以看到，缓冲区的边随着值的增加而变得更平滑。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:308
-msgid "|basic| |FA| Overlapping Areas"
-msgstr "|basic| 跟我做: 重叠区域"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
 msgid ""
 "Now we have identified areas where the road is less than 50 meters away and "
@@ -580,10 +539,6 @@ msgid ""
 "You may remove the two buffer layers and only keep the one that shows where "
 "they overlap, since that's what we really wanted to know in the first place:"
 msgstr "您可以移除两个缓冲区图层，只保留显示它们重叠位置的缓冲区图层，因为这是我们一开始真正想知道的："
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:346
-msgid "|basic| |FA| Extract the Buildings"
-msgstr "|basic| 跟我做: 提取建筑物"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
 msgid ""
@@ -633,14 +588,6 @@ msgid ""
 "layer list."
 msgstr "现在您有了两个独立的图层，可以从图层列表中移除 ``buildings_34S`` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:380
-msgid "|moderate| |TY| Further Filter our Buildings"
-msgstr "|moderate| 试一试 进一步过滤建筑物"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:495
-msgid "moderate"
-msgstr ""
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
 msgid ""
 "We now have a layer which shows us all the buildings within 1km of a school "
@@ -680,10 +627,6 @@ msgid ""
 "road, 1km of a school and 500m of a restaurant:"
 msgstr "您的地图现在应该只显示距离道路50米、学校1千米和餐厅500米范围以内的建筑："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
-msgid "|basic| |FA| Select Buildings of the Right Size"
-msgstr "|basic| 跟我做: 选择面积合适的建筑"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
 msgid ""
 "To see which buildings are of the correct size (more than 100 square "
@@ -699,9 +642,9 @@ msgstr ""
 "选择 :guilabel:`houses_restaurants_500m` 图层，通过单击主工具栏或属性表窗口中的 |calculateField| "
 ":sup:`打开字段计算器` 按钮打开 *字段计算器*"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:490
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:484
 msgid "calculateField"
-msgstr ""
+msgstr "calculateField"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:428
 msgid ""
@@ -731,9 +674,9 @@ msgid ""
 "and save your edits when prompted."
 msgstr "单击 |toggleEditing| :sup:`切换编辑模式` 按钮完成编辑，并在出现提示时保存编辑。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:496
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:489
 msgid "toggleEditing"
-msgstr ""
+msgstr "toggleEditing"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
 msgid ""
@@ -753,10 +696,6 @@ msgid ""
 "criteria and which are more than 100 square meters in size."
 msgstr "您的地图现在应该只显示那些符合我们开始的条件，并且面积超过100平方米的建筑。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:457
-msgid "|basic| |TY|"
-msgstr ""
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
 msgid ""
 "Save your solution as a new layer, using the approach you learned above for "
@@ -764,20 +703,12 @@ msgid ""
 " the name ``solution``."
 msgstr "使用上述学到的方法，将解决方案另存为一个新图层。该文件应保存在同一GeoPackage数据库中，名称是 ``solution`` 。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:465
-msgid "|IC|"
-msgstr ""
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
 msgid ""
 "Using the GIS problem solving approach together with QGIS vector analysis "
 "tools, you were able to solve a problem with multiple criteria quickly and "
 "easily."
 msgstr "将GIS问题解决方法和QGIS矢量分析工具结合使用，您能够快速轻松地解决含有多个条件的问题。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:472
-msgid "|WN|"
-msgstr ""
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
 msgid ""

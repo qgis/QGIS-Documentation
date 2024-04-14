@@ -6,6 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
+# Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,6 +24,17 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traducción es un esfuerzo comunitario al que `puedes unirte "
+"<https://qgis.org/es/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Esta página está actualmente traducida en |translation "
+"progress|."
 
 #: ../../docs/user_manual/plugins/python_console.rst:8
 msgid "QGIS Python console"
@@ -48,9 +61,36 @@ msgstr ""
 "usuario interactúe con sus objetos (capas, función o interfaz). QGIS también"
 " tiene una consola Python."
 
+#: ../../docs/user_manual/plugins/python_console.rst:22
+msgid ""
+"The QGIS Python Console is an interactive shell for Python command "
+"executions. It also has a Python file editor that allows you to edit and "
+"save your Python scripts. Both console and editor are based on PyQScintilla2"
+" package. To open the console go to :menuselection:`Plugins --> Python "
+"Console` (:kbd:`Ctrl+Alt+P`)."
+msgstr ""
+"La Consola Python de QGIS es un intérprete de comandos interactivo para la "
+"ejecución de comandos Python. También tiene un editor de archivos Python que"
+" le permite editar y guardar sus scripts Python. Tanto la consola como el "
+"editor están basados en el paquete PyQScintilla2. Para abrir la consola vaya"
+" a :menuselection:`Complementos --> Consola Python` (:kbd:`Ctrl+Alt+P`)."
+
 #: ../../docs/user_manual/plugins/python_console.rst:30
 msgid "The Interactive Console"
 msgstr "La consola interactiva"
+
+#: ../../docs/user_manual/plugins/python_console.rst:32
+msgid ""
+"The console is a Python interpreter that allows you to execute Python "
+"commands. Modules from QGIS (analysis, core, gui, server, processing, 3d) "
+"and Qt (QtCore, QtGui, QtNetwork, QtWidgets, QtXml) as well as Python's "
+"math, os, re and sys modules are already imported and can be used directly."
+msgstr ""
+"La consola es un intérprete de Python que permite ejecutar comandos de "
+"Python. Los módulos de QGIS (analysis, core, gui, server, processing, 3d) y "
+"Qt (QtCore, QtGui, QtNetwork, QtWidgets, QtXml) así como los módulos math, "
+"os, re y sys de Python ya están importados y se pueden utilizar "
+"directamente."
 
 #: ../../docs/user_manual/plugins/python_console.rst:38
 msgid ""
@@ -80,6 +120,14 @@ msgstr "|clearConsole| :sup:`Limpiar consola` para limpiar el área de salida;"
 msgid "clearConsole"
 msgstr "clearConsole"
 
+#: ../../docs/user_manual/plugins/python_console.rst:53
+msgid ""
+"|start| :sup:`Run Command` available in the input area: same as pressing "
+":kbd:`Enter`;"
+msgstr ""
+"|start| :sup:`Ejecutar Comando` disponible en el área de entrada: igual que "
+"pulsar :kbd:`Intro`;"
+
 #: ../../docs/user_manual/plugins/python_console.rst:210
 msgid "start"
 msgstr "start"
@@ -100,13 +148,42 @@ msgstr "showEditorConsole"
 msgid "options"
 msgstr "options"
 
+#: ../../docs/user_manual/plugins/python_console.rst:59
+msgid ""
+"|helpContents| :sup:`Help...` provides a menu to access various "
+"documentation:"
+msgstr ""
+"|helpContents| :sup:`Ayuda...` proporciona un menú para acceder a diversa "
+"documentación:"
+
 #: ../../docs/user_manual/plugins/python_console.rst:202
 msgid "helpContents"
 msgstr "helpContents"
 
+#: ../../docs/user_manual/plugins/python_console.rst:62
+msgid ":pyqgis:`PyQGIS API documentation <>`"
+msgstr ":pyqgis:`Documentación de la API PyQGIS <>`"
+
+#: ../../docs/user_manual/plugins/python_console.rst:64
+msgid ""
+"|dock| :sup:`Dock Code Editor` to dock or undock the panel in QGIS interface"
+msgstr ""
+"|dock| :sup:`Acoplar Editor de Código` para acoplar o desacoplar el panel en"
+" la interfaz QGIS"
+
 #: ../../docs/user_manual/plugins/python_console.rst:200
 msgid "dock"
 msgstr "dock"
+
+#: ../../docs/user_manual/plugins/python_console.rst:67
+msgid "Input area"
+msgstr "Área de entrada"
+
+#: ../../docs/user_manual/plugins/python_console.rst:69
+msgid "The Console input area main features are:"
+msgstr ""
+"Las principales prestaciones del área de introducción de datos de la consola"
+" son:"
 
 #: ../../docs/user_manual/plugins/python_console.rst:71
 #: ../../docs/user_manual/plugins/python_console.rst:145
@@ -194,6 +271,54 @@ msgstr ""
 "Guarde y borre el historial de comandos. El historial se guardará en el "
 "archivo :file:`console_history.txt` en la carpeta activa :ref:`user profile "
 "<user_profiles>`;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:94
+msgid "Type the following special commands:"
+msgstr "Escriba los siguientes comandos especiales:"
+
+#: ../../docs/user_manual/plugins/python_console.rst:96
+msgid "``?`` to show a help of the Python Console"
+msgstr "``?`` para mostrar una ayuda de la Consola Python"
+
+#: ../../docs/user_manual/plugins/python_console.rst:97
+msgid ""
+"``_api`` to open :api:`QGIS C++ API <>` documentation or ``_api(object)`` "
+"for a specific object documentation (in QGIS C++ API or Qt API "
+"documentation)"
+msgstr ""
+"``_api`` para abrir la documentación :api:`QGIS C++ API <>` o "
+"``_api(object)`` para la documentación de un objeto específico (en la "
+"documentación de QGIS C++ API o Qt API)"
+
+#: ../../docs/user_manual/plugins/python_console.rst:100
+msgid ""
+"``_pyqgis`` to open :pyqgis:`QGIS Python API <>` documentation or "
+"``_pyqgis(object)`` for a specific object documentation (in QGIS Python API "
+"or Qt API documentation)"
+msgstr ""
+"``_pyqgis`` para abrir la documentación de :pyqgis:`API Python QGIS <>` o "
+"``_pyqgis(object)`` para la documentación de un objeto específico (en la "
+"documentación de la API Python QGIS o la API Qt)."
+
+#: ../../docs/user_manual/plugins/python_console.rst:104
+msgid ""
+"``!`` followed by a command to execute Shell commands from the Python "
+"Console. The console will start a subprocess, and forward its output to the "
+"Python Console Output. While the subprocess is running, the Python Console "
+"Input switches to STDIN mode and forwards entered character to the child "
+"process. This makes it possible to send confirmation when the child program "
+"asks for it. When the Console is in STDIN mode, pressing :kbd:`Ctrl+C` kills"
+" the subprocess. It is also possible to affect the result of a command to a "
+"variable with the syntax ``var = !cmd``"
+msgstr ""
+"``!`` seguido de un comando para ejecutar comandos Shell desde la Consola de"
+" Python. La consola iniciará un subproceso, y reenviará su salida a la "
+"Salida de la Consola Python. Mientras se ejecuta el subproceso, la Entrada "
+"de la Consola Python cambia al modo STDIN y reenvía los caracteres "
+"introducidos al proceso hijo. Esto hace posible enviar confirmación cuando "
+"el programa hijo la pide. Cuando la Consola está en modo STDIN, pulsando "
+":kbd:`Ctrl+C` se mata el subproceso. También es posible afectar el resultado"
+" de un comando a una variable con la sintaxis ``var = !cmd``."
 
 #: ../../docs/user_manual/plugins/python_console.rst:128
 msgid "**Reuse executed commands from the output panel**"

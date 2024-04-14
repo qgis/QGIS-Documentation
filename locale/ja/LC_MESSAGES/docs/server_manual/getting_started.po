@@ -2,29 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Takaki IEKURA <tacostea@gmail.com>, 2023
-# Transifex Bot <>, 2023
-# tomoya miyoshi, 2023
+# Harrissou Sant-anna, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-29 06:13+0000\n"
-"PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: tomoya miyoshi, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"翻訳は `あなたが参加できる "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_ コミュニティの取り組みです。このページは現在 |translation progress| 翻訳されています。"
 
 #: ../../docs/server_manual/getting_started.rst:3
 msgid "Getting Started"
@@ -312,10 +320,6 @@ msgstr ""
 "Serverの初期化処理がリクエストごとに行われます。spawn-fcgiを使用すると、QGIS "
 "Serverプロセスはリクエストの間中存続するため、パフォーマンスが大幅に向上します。そのため、spawn-fcgiは実運用での使用を推奨します。"
 
-#: ../../docs/server_manual/getting_started.rst:326
-msgid "spawn-fcgi"
-msgstr ""
-
 #: ../../docs/server_manual/getting_started.rst:328
 msgid ""
 "If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
@@ -379,10 +383,6 @@ msgid ""
 "With the above commands spawn-fcgi spawns only one QGIS Server process."
 msgstr "spawn-fcgiは、上のコマンドでQGIS Serverプロセスをひとつだけ起動します。"
 
-#: ../../docs/server_manual/getting_started.rst:407
-msgid "fcgiwrap"
-msgstr ""
-
 #: ../../docs/server_manual/getting_started.rst:409
 msgid ""
 "Using `fcgiwrap "
@@ -402,10 +402,6 @@ msgid ""
 "Finally, restart NGINX and **fcgiwrap** to take into account the new "
 "configuration:"
 msgstr "最後に NGINX と **fcgiwrap** を再起動し、新しい設定を反映させます:"
-
-#: ../../docs/server_manual/getting_started.rst:441
-msgid "Systemd"
-msgstr ""
 
 #: ../../docs/server_manual/getting_started.rst:443
 msgid ""
@@ -491,10 +487,6 @@ msgid ""
 msgstr ""
 "`チュートリアル <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-"
 "systemd/>`_ を共有してくれたOslandiaに感謝します。"
-
-#: ../../docs/server_manual/getting_started.rst:551
-msgid "Xvfb"
-msgstr ""
 
 #: ../../docs/server_manual/getting_started.rst:552
 msgid ""
@@ -594,15 +586,6 @@ msgstr ""
 msgid "Apache is not directly installed as a service on Windows. You need to:"
 msgstr "Apache は Windows ではサービスとして直接インストールされません。次が必要です："
 
-#: ../../docs/server_manual/getting_started.rst:638
-msgid ""
-"Right-click the :file:`OSGeo4W.bat` file at the root of the "
-":file:`C:\\\\OSGeo4W64\\\\` folder (if the default installation paths have "
-"been used) and select :guilabel:`Run as administrator`"
-msgstr ""
-":file:`C:\\\\OSGeo4W64\\\\` フォルダー（デフォルトのインストールパスが使用されている場合）のルートにある "
-":file:`OSGeo4W.bat` ファイルを右クリックし、 :guilabel:`管理者として実行` を選択します"
-
 #: ../../docs/server_manual/getting_started.rst:641
 msgid "In the console, run ``apache-install.bat``, which will output"
 msgstr "コンソールで、``apache-install.bat`` を実行し、次が出力されます"
@@ -612,14 +595,6 @@ msgid ""
 "The service is started as you can notice in the report. But the server may "
 "fail to run due to missing custom configuration."
 msgstr "レポートにあるようにサービスは開始されています。しかし、カスタム設定がないため、サーバーの実行に失敗する可能性があります。"
-
-#: ../../docs/server_manual/getting_started.rst:654
-msgid ""
-"Edit the :file:`C:\\\\OSGeo4w64\\\\apps\\\\apache\\\\conf\\\\httpd.conf` "
-"file with the following changes (various other combinations are possible):"
-msgstr ""
-"次の変更で :file:`C:\\\\OSGeo4w64\\\\apps\\\\apache\\\\conf\\\\httpd.conf` "
-"ファイルを編集します（他にも様々な組み合わせがあります）："
 
 #: ../../docs/server_manual/getting_started.rst:661
 msgid "Purpose"
@@ -797,50 +772,23 @@ msgstr ""
 ":guilabel:`Service Capabilitiesを有効化` にチェックを入れない場合、QGIS Serverは :file:`cgi-"
 "bin` フォルダにある :file:`wms_metadata.xml` ファイルにある情報を使用します。"
 
-#: ../../docs/server_manual/getting_started.rst:1052
+#: ../../docs/server_manual/getting_started.rst:1056
 msgid "checkbox"
-msgstr ""
+msgstr "checkbox"
 
 #: ../../docs/server_manual/getting_started.rst:842
 msgid "WMS capabilities"
 msgstr "WMS機能"
 
-#: ../../docs/server_manual/getting_started.rst:844
-msgid ""
-"In the :guilabel:`WMS capabilities` tab, you can define the extent "
-"advertised in the WMS GetCapabilities response by entering the minimum and "
-"maximum X and Y values in the fields under :guilabel:`Advertised extent`."
-msgstr ""
-":guilabel:`WMS capabilities` タブでは、:guilabel:`Advertise範囲` の下のフィールドに X と Y "
-"の最小値と最大値を入力して、WMS GetCapabilities 応答で広告される範囲を定義できます。"
-
-#: ../../docs/server_manual/getting_started.rst:854
+#: ../../docs/server_manual/getting_started.rst:849
 msgid "Definitions in the WMS tab"
 msgstr "WMSタブにある定義"
 
-#: ../../docs/server_manual/getting_started.rst:856
-msgid ""
-"Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
-"extent currently displayed in the QGIS map canvas. By checking |checkbox| "
-":guilabel:`CRS restrictions`, you can restrict in which coordinate reference"
-" systems (CRS) QGIS Server will offer to render maps. It is recommended that"
-" you restrict the offered CRS as this reduces the size of the WMS "
-"GetCapabilities response. Use the |symbologyAdd| button below to select "
-"those CRSs from the Coordinate Reference System Selector, or click "
-":guilabel:`Used` to add the CRSs used in the QGIS project to the list."
-msgstr ""
-":guilabel:`現在のキャンバス領域を利用` をクリックすると、これらの値がQGIS "
-"マップキャンバスに現在表示されている範囲に設定されます。|checkbox| :guilabel:`CRS制限` をオンにすると、QGIS Server"
-" がマップをレンダリングする際に提供する座標参照系 (CRS) を制限することができます。これにより、WMS GetCapabilities "
-"レスポンスのサイズが小さくなるため、提供する CRS を制限することをお勧めします。下の |symbologyAdd| "
-"ボタンを使用して、座標参照系セレクタからそのCRSを選択するか、:guilabel:`使用中` "
-"をクリックしてQGISプロジェクトで使用されているCRSをリストに追加します。"
-
-#: ../../docs/server_manual/getting_started.rst:1054
+#: ../../docs/server_manual/getting_started.rst:1058
 msgid "symbologyAdd"
-msgstr ""
+msgstr "symbologyAdd"
 
-#: ../../docs/server_manual/getting_started.rst:866
+#: ../../docs/server_manual/getting_started.rst:864
 msgid ""
 "If you have print layouts defined in your project, they will be listed in "
 "the ``GetProjectSettings`` response, and they can be used by the GetPrint "
@@ -858,7 +806,7 @@ msgstr ""
 "ボタンをクリックします。次に、除外レイアウトリストに追加するために、 :guilabel:`印刷レイアウトの選択` "
 "ダイアログから印刷レイアウトを選択します。"
 
-#: ../../docs/server_manual/getting_started.rst:876
+#: ../../docs/server_manual/getting_started.rst:874
 msgid ""
 "If you want to exclude any layer or layer group from being published by the "
 "WMS, check |checkbox| :guilabel:`Exclude Layers` and click the "
@@ -876,7 +824,7 @@ msgstr ""
 ":kbd:`Ctrl` "
 "キーを使用してください。WMSのGetCapabilitiesレスポンスのサイズが小さくなり、クライアント側のロード時間が短縮されるため、不要なレイヤは公開しないことをお勧めします。"
 
-#: ../../docs/server_manual/getting_started.rst:886
+#: ../../docs/server_manual/getting_started.rst:884
 msgid ""
 "If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
 " used to reference layers in the ``GetCapabilities`` response or ``GetMap "
@@ -888,13 +836,13 @@ msgstr ""
 "が使用されます。そうでない場合は、レイヤの名前、または定義されている場合は、短い名前 (ref:`vectorservermenu` を参照) "
 "が使用されます。"
 
-#: ../../docs/server_manual/getting_started.rst:891
+#: ../../docs/server_manual/getting_started.rst:889
 msgid ""
 "You can receive requested GetFeatureInfo as plain text, XML and GML. The "
 "default is XML."
 msgstr "要求された GetFeatureInfo は、平文テキスト、XML、および GML で受け取ることができます。デフォルトは XML です。"
 
-#: ../../docs/server_manual/getting_started.rst:895
+#: ../../docs/server_manual/getting_started.rst:893
 msgid ""
 "If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
 "response`. This will include the bounding box for each feature in the "
@@ -905,7 +853,7 @@ msgstr ""
 "をチェックします。これにより、各地物のバウンディングボックスが GetFeatureInfo "
 "レスポンスに含まれます。ref:`WITH_GEOMETRY ` パラメータも参照してください。"
 
-#: ../../docs/server_manual/getting_started.rst:899
+#: ../../docs/server_manual/getting_started.rst:897
 msgid ""
 "As many web clients can’t display circular arcs in geometries you have the "
 "option to segmentize the geometry before sending it to the client in a "
@@ -919,7 +867,7 @@ msgstr ""
 " 地物のハイライト表示）。このオプションを有効にするには、 |checkbox| :guilabel:`地物情報ジオメトリをセグメント化` "
 "をチェックする必要があります。"
 
-#: ../../docs/server_manual/getting_started.rst:905
+#: ../../docs/server_manual/getting_started.rst:909
 msgid ""
 "You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
 " set the precision of the GetFeatureInfo geometry. This enables you to save "
@@ -928,7 +876,7 @@ msgstr ""
 "また、:guilabel:`GetFeatureInfoジオメトリ精度` オプションを使用して、GetFeatureInfo "
 "ジオメトリの精度を設定することもできます。これにより、完全な精度を必要としない場合に帯域幅を節約することができます。"
 
-#: ../../docs/server_manual/getting_started.rst:909
+#: ../../docs/server_manual/getting_started.rst:913
 msgid ""
 "If you want QGIS Server to advertise specific request URLs in the WMS "
 "GetCapabilities response, enter the corresponding URL in the "
@@ -937,7 +885,7 @@ msgstr ""
 "WMS GetCapabilitiesレスポンスでQGIS Serverに特定のリクエストURLを広告させたい場合は、:guilabel:`公開URL`"
 " フィールドに対応するURLを入力します。"
 
-#: ../../docs/server_manual/getting_started.rst:913
+#: ../../docs/server_manual/getting_started.rst:917
 msgid ""
 "Furthermore, you can restrict the maximum size of the maps returned by the "
 "GetMap request by entering the maximum width and height into the respective "
@@ -946,7 +894,7 @@ msgstr ""
 "さらに、:guilabel:`Maximums for GetMap "
 "request`の下にあるそれぞれのフィールドに最大幅と最大高さを入力することで、GetMapリクエストによって返されるマップの最大サイズを制限することができます。"
 
-#: ../../docs/server_manual/getting_started.rst:917
+#: ../../docs/server_manual/getting_started.rst:921
 msgid ""
 "You can change the :guilabel:`Quality for JPEG images` factor. The quality "
 "factor must be in the range 0 to 100. Specify 0 for maximum compression, 100"
@@ -955,14 +903,14 @@ msgstr ""
 ":guilabel:`JPEGイメージの品質` "
 "の係数を変更することができます。品質係数は0から100の範囲でなければなりません。0を指定すると最大圧縮、100を指定すると非圧縮になります。"
 
-#: ../../docs/server_manual/getting_started.rst:920
+#: ../../docs/server_manual/getting_started.rst:924
 msgid ""
 "You can change the limit for atlas features to be printed in one request by "
 "setting the :guilabel:`Maximum features for Atlas print requests` field."
 msgstr ""
 ":guilabel:`地図帳印刷する地物数の上限` フィールドを設定することで、1回のリクエストで印刷する地図帳地物の上限を変更することができます。"
 
-#: ../../docs/server_manual/getting_started.rst:923
+#: ../../docs/server_manual/getting_started.rst:927
 msgid ""
 "When QGIS Server is used in tiled mode (see :ref:`TILED parameter "
 "<wms_tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The "
@@ -973,7 +921,7 @@ msgstr ""
 "を参照）、:guilabel:`タイルのバッファ（ピクセル）` "
 "を設定することができます。推奨値は、QGISプロジェクトで最大のシンボルまたは線幅の大きさです。"
 
-#: ../../docs/server_manual/getting_started.rst:927
+#: ../../docs/server_manual/getting_started.rst:931
 msgid ""
 "If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
 "show text using expressions) this will be listed inside the GetFeatureInfo "
@@ -983,22 +931,22 @@ msgstr ""
 "レイヤーの一つが :ref:`地図ヒントディスプレイ <maptips>` "
 "を使用している場合（つまり式を使ってテキストを表示するために）これはGetFeatureInfo出力内で表示されます。レイヤーは、その属性のいずれかの値マップを使用している場合は、この情報には、GetFeatureInfo出力に表示されます。"
 
-#: ../../docs/server_manual/getting_started.rst:933
+#: ../../docs/server_manual/getting_started.rst:937
 msgid "WMTS capabilities"
 msgstr "WMTS機能"
 
-#: ../../docs/server_manual/getting_started.rst:935
+#: ../../docs/server_manual/getting_started.rst:939
 msgid ""
 "In the :guilabel:`WMTS capabilities` tab you can select the layers you want "
 "to publish as WMTS and specify if you want to publish as PNG or JPEG."
 msgstr ""
 ":guilabel:`WMTS機能` タブでは、WMTSとして公開したいレイヤを選択し、PNGまたはJPEGとして公開するかどうかを指定できます。"
 
-#: ../../docs/server_manual/getting_started.rst:943
+#: ../../docs/server_manual/getting_started.rst:947
 msgid "Definitions in the WMTS tab"
 msgstr "WMTSタブにある定義"
 
-#: ../../docs/server_manual/getting_started.rst:945
+#: ../../docs/server_manual/getting_started.rst:949
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WMTS capabilities` section, QGIS Server will advertise this "
@@ -1007,11 +955,11 @@ msgstr ""
 ":guilabel:`WMTS機能` セクションの :guilabel:`公開URL` フィールドにURLを入力すると、QGIS ServerはWMTS"
 " GetCapabilitiesレスポンスでこの特定のURLを広告します。"
 
-#: ../../docs/server_manual/getting_started.rst:950
+#: ../../docs/server_manual/getting_started.rst:954
 msgid "WFS/OAPIF capabilities"
 msgstr "WFS/OAPIF機能"
 
-#: ../../docs/server_manual/getting_started.rst:952
+#: ../../docs/server_manual/getting_started.rst:956
 msgid ""
 "In the :guilabel:`WFS/OAPIF capabilities` tab, you can select the layers you"
 " want to publish as WFS or OAPIF, and specify if they will allow update, "
@@ -1020,11 +968,11 @@ msgstr ""
 ":guilabel:`WFS/OAPIF機能` "
 "タブでは、WFSまたはOAPIFとして公開したいレイヤを選択し、更新、挿入、削除操作を許可するかどうかを指定することができます。"
 
-#: ../../docs/server_manual/getting_started.rst:961
+#: ../../docs/server_manual/getting_started.rst:965
 msgid "Definitions in the WFS/OAPIF tab"
 msgstr "WFS/OAPIFタブにある定義"
 
-#: ../../docs/server_manual/getting_started.rst:963
+#: ../../docs/server_manual/getting_started.rst:967
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WFS capabilities` section, QGIS Server will advertise this "
@@ -1033,21 +981,21 @@ msgstr ""
 ":guilabel:`WFS機能` セクションの :guilabel:`公開URL` フィールドに URL を入力すると、QGIS Server は "
 "WFS GetCapabilities レスポンスでこの特定の URL を広告します。"
 
-#: ../../docs/server_manual/getting_started.rst:968
+#: ../../docs/server_manual/getting_started.rst:972
 msgid "WCS capabilities"
 msgstr "WCS機能"
 
-#: ../../docs/server_manual/getting_started.rst:970
+#: ../../docs/server_manual/getting_started.rst:974
 msgid ""
 "In the :guilabel:`WCS capabilities` tab, you can select the layers that you "
 "want to publish as WCS."
 msgstr ":guilabel:`WCS機能` タブでは、WCSとして公開したいレイヤを選択することができます。"
 
-#: ../../docs/server_manual/getting_started.rst:978
+#: ../../docs/server_manual/getting_started.rst:982
 msgid "Definitions in the WCS tab"
 msgstr "WCSタブにある定義"
 
-#: ../../docs/server_manual/getting_started.rst:980
+#: ../../docs/server_manual/getting_started.rst:984
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
@@ -1056,11 +1004,11 @@ msgstr ""
 ":guilabel:`WCS機能` セクションの :guilabel:`公開URL` フィールドにURLを入力すると、QGIS ServerはWCS "
 "GetCapabilitiesレスポンスでこの特定のURLを広告します。"
 
-#: ../../docs/server_manual/getting_started.rst:985
+#: ../../docs/server_manual/getting_started.rst:989
 msgid "Fine tuning your OWS"
 msgstr "OWSを微調整する"
 
-#: ../../docs/server_manual/getting_started.rst:987
+#: ../../docs/server_manual/getting_started.rst:991
 msgid ""
 "For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer "
 "--> Layer Properties` dialog allows you to define for each attribute if it "
@@ -1073,7 +1021,7 @@ msgstr ""
 "メニューで、各属性を公開するかどうかを定義することができます。デフォルトでは、すべての属性がWMSとWFSによって公開されます。特定の属性を公開したくない場合は、"
 " :guilabel:`WMS` または :guilabel:`WFS` 列の対応するチェックボックスのチェックを外してください。"
 
-#: ../../docs/server_manual/getting_started.rst:994
+#: ../../docs/server_manual/getting_started.rst:998
 msgid ""
 "You can overlay watermarks over the maps produced by your WMS by adding text"
 " annotations or SVG annotations to the project file. See the "
@@ -1094,11 +1042,11 @@ msgstr ""
 " :menuselection:`プロジェクト --> プロパティ...` ダイアログの :guilabel:`一般情報` "
 "メニューで）プロジェクトを絶対パスで保存するように設定するか、SVG画像へのパスを有効な相対パスになるように手動で修正する必要があります。"
 
-#: ../../docs/server_manual/getting_started.rst:1009
+#: ../../docs/server_manual/getting_started.rst:1013
 msgid "Integration with third parties"
 msgstr "サードパーティとの統合"
 
-#: ../../docs/server_manual/getting_started.rst:1011
+#: ../../docs/server_manual/getting_started.rst:1015
 msgid ""
 "QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
 "<https://www.ogc.org/docs/is>`_ thus it can be used by a wide variety of end"
@@ -1107,11 +1055,11 @@ msgstr ""
 "QGIS Serverは、`WMS、WFSなど <https://www.ogc.org/docs/is>`_ "
 "の標準的なOGCウェブサービスを提供します。 したがって、さまざまなエンドユーザーツールで使用することができます。"
 
-#: ../../docs/server_manual/getting_started.rst:1015
+#: ../../docs/server_manual/getting_started.rst:1019
 msgid "Integration with QGIS Desktop"
 msgstr "QGIS Desktopとの統合"
 
-#: ../../docs/server_manual/getting_started.rst:1017
+#: ../../docs/server_manual/getting_started.rst:1021
 msgid ""
 "QGIS Desktop is the map designer where QGIS Server is the map server. The "
 "maps or QGIS projects will be served by the QGIS Server to provide OGC "
@@ -1124,7 +1072,7 @@ msgstr ""
 "によって提供されます。これらのQGISプロジェクトは、ファイルでもデータベース内のエントリでもかまいません（QGIS Desktopの "
 ":menuselection:`プロジェクト --> 保存 --> PostgreSQL` を使用します）。"
 
-#: ../../docs/server_manual/getting_started.rst:1022
+#: ../../docs/server_manual/getting_started.rst:1026
 msgid ""
 "Furthermore, dedicated update workflow must be established to refresh a "
 "project used by a QGIS Server (ie. copy project files into server location "
@@ -1135,11 +1083,11 @@ msgstr ""
 "Serverで使用されているプロジェクトを更新するには、専用の更新ワークフローを確立する必要があります（プロジェクトファイルをサーバーの場所にコピーし、QGIS"
 " Serverを再起動するなど）。今のところ、自動化された処理（メッセージキューサービスを介したサーバーのリロード）は実装されていません。"
 
-#: ../../docs/server_manual/getting_started.rst:1029
+#: ../../docs/server_manual/getting_started.rst:1033
 msgid "Integration with MapProxy"
 msgstr "MapProxyとの統合"
 
-#: ../../docs/server_manual/getting_started.rst:1031
+#: ../../docs/server_manual/getting_started.rst:1035
 msgid ""
 "`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can "
 "read and serve any WMS/WMTS map server, it can be directly connected to QGIS"
@@ -1148,11 +1096,11 @@ msgstr ""
 "`MapProxy <https://mapproxy.org/>`_ "
 "は、タイルキャッシュサーバーで、あらゆるWMS/WMTSマップサーバーを読み込んで提供することができるため、QGISサーバーのウェブサービスに直接接続することができ、エンドユーザーエクスペリエンスを向上させることができます。"
 
-#: ../../docs/server_manual/getting_started.rst:1037
+#: ../../docs/server_manual/getting_started.rst:1041
 msgid "Integration with QWC2"
 msgstr "QWC2との統合"
 
-#: ../../docs/server_manual/getting_started.rst:1039
+#: ../../docs/server_manual/getting_started.rst:1043
 msgid ""
 "`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
 "dedicated to QGIS Server. It helps you to build a highly customized map "

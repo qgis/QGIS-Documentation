@@ -2,31 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:2
-msgid "|LS| Terrain Analysis"
-msgstr "课: 地形分析"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:4
 msgid ""
@@ -44,14 +39,6 @@ msgid ""
 "**The goal for this lesson:** To use terrain analysis tools to derive more "
 "information about the terrain."
 msgstr "**本课目标:** 使用地形分析工具获取有关地形的更多信息。"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:16
-msgid "|basic| |FA| Calculating a Hillshade"
-msgstr "|basic| 跟我做: 计算山体阴影"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:563
-msgid "basic"
-msgstr ""
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:18
 msgid ""
@@ -135,10 +122,6 @@ msgid ""
 msgstr ""
 "这看起来还不错，而且是3D效果，但我们可以完善一下吗？就其本身而言，山体阴影看起来就像石膏模型。就不能以某种方式把它和其他颜色更丰富的栅格一起使用吗？当然可以，我们通过使用山体阴影作为叠加图层来实现。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:65
-msgid "|basic| |FA| Using a Hillshade as an Overlay"
-msgstr "|basic| 跟我做: 使用山体阴影作为叠加图层"
-
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:67
 msgid ""
 "A hillshade can provide very useful information about the sunlight at a "
@@ -202,10 +185,6 @@ msgstr ""
 msgid "Remember to save the project when you are done."
 msgstr "完成后记得保存工程。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:99
-msgid "|FA| Finding the best areas"
-msgstr "跟我做: 寻找最佳区域"
-
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:101
 msgid ""
 "Think back to the estate agent problem, which we last addressed in the "
@@ -233,14 +212,6 @@ msgstr "但如果坡度小于2度，则无需考虑坡向问题。"
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:112
 msgid "Let's find the best areas for them."
 msgstr "让我们为他们找到最好的地方。"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:115
-msgid "|moderate| |FA| Calculating the Slope"
-msgstr "|moderate| 跟我做: 计算坡度"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:566
-msgid "moderate"
-msgstr ""
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:117
 msgid ""
@@ -285,10 +256,6 @@ msgid ""
 "steep terrain:"
 msgstr "现在，您将看到地形的坡度，每个像素都有相应的坡度值。黑色像素显示为平坦地形，白色像素显示陡峭地形："
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:139
-msgid "|moderate| |TY| Calculating the aspect"
-msgstr "|moderate| 试一试 计算坡向"
-
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:141
 msgid ""
 "*Aspect* is the compass direction that the slope of the terrain faces. An "
@@ -324,10 +291,6 @@ msgstr "按如下设置 :guilabel:`坡向` 对话框："
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:161
 msgid "Your result:"
 msgstr "您的结果是："
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:167
-msgid "|moderate| |FA| Finding the north-facing aspect"
-msgstr "|moderate| 跟我做: 寻找朝北坡向"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:169
 msgid ""
@@ -441,10 +404,6 @@ msgstr ""
 "输出值为 ``0`` 或 ``1`` ，这是什么意思？对于栅格中的每个像素，我们编写的公式将返回它是否符合条件。因此，最终结果将是 **False** "
 "(0) 和 **True** (1) 。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:237
-msgid "|moderate| |TY| More criteria"
-msgstr "|moderate| 试一试 更多条件"
-
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:239
 msgid "Now that you have done the aspect, create two new layers from the DEM."
 msgstr "现在已经完成了坡向，请从DEM创建两个新图层。"
@@ -498,10 +457,6 @@ msgstr "2度："
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:270
 msgid "5 degrees:"
 msgstr "5度："
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:277
-msgid "|moderate| |FA| Combining Raster Analysis Results"
-msgstr "|moderate| 跟我做: 组合栅格分析结果"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:279
 msgid "Now you have generated three raster layers from the DEM:"
@@ -590,10 +545,6 @@ msgstr "其结果为："
 msgid ""
 "The previous steps could have been simplified using the following command::"
 msgstr "使用以下命令可以简化前面的步骤::"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:327
-msgid "|moderate| |FA| Simplifying the Raster"
-msgstr "|moderate| 跟我做: 简化栅格"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:329
 msgid ""
@@ -686,10 +637,6 @@ msgid ""
 "essential to solving the problem."
 msgstr ""
 "这就是预期的结果：早期结果的简化版本。请记住，如果从工具中获得的结果与预期不符，那么请查看元数据 (以及矢量属性，如果适用)，这对解决问题至关重要。"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:392
-msgid "|moderate| |FA| Reclassifying the Raster"
-msgstr "|moderate| 跟我做: 重分类栅格"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:394
 msgid ""
@@ -813,10 +760,6 @@ msgid ""
 "can immediately differentiate the aspect areas."
 msgstr "通过对图层应用此重分类和调色板样式，可以立即区分坡向地区。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:465
-msgid "|basic| |FA| Querying the raster"
-msgstr "|basic| 跟我做: 查询栅格"
-
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:467
 msgid ""
 "Unlike vector layers, raster layers don't have an attribute table. Each "
@@ -837,9 +780,9 @@ msgid ""
 "the |identify| :sup:`Identify Features` button!"
 msgstr "我们如何查询栅格图层获取像素值呢？这可以使用 |identify| :sup:`识别要素` 按钮！"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:564
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:558
 msgid "identify"
-msgstr ""
+msgstr "identify"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:479
 msgid "Select the tool from the Attributes toolbar."
@@ -916,10 +859,6 @@ msgstr ""
 "但还有很多操作，如： Value Tool 插件允许您在 :guilabel:`图层` 面板中查询 **所有** 激活的栅格图层。将 "
 ":guilabel:`aspect` 和 :guilabel:`slope` 图层再次设置为激活状态，并将鼠标悬停在地图上："
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:532
-msgid "|IC|"
-msgstr ""
-
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:534
 msgid ""
 "You've seen how to derive all kinds of analysis products from a DEM. These "
@@ -928,10 +867,6 @@ msgid ""
 "Finally you learned how to reclassify a layer and how to query the results."
 msgstr ""
 "您已经了解了如何从DEM获取各种分析成果，其中包括山体阴影、坡度和坡向计算。还了解了如何使用栅格计算器进一步分析和组合这些结果。最后，您学习了如何重分类图层以及如何查询结果。"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:542
-msgid "|WN|"
-msgstr ""
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:544
 msgid ""

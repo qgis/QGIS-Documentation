@@ -6,7 +6,6 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
 # Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
@@ -14,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 11:14+0000\n"
+"POT-Creation-Date: 2024-03-26 09:59+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
@@ -332,871 +331,32 @@ msgid ""
 "The @alg.output decorator is used to define the outputs of the algorithm."
 msgstr "@alg.output 장식자를 사용해서 알고리즘의 산출물을 정의합니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:406
-msgid "Input and output types for Processing Algorithms"
-msgstr "공간 처리 알고리즘의 입력물 및 산출물 유형"
-
-#: ../../docs/user_manual/processing/scripts.rst:408
-msgid ""
-"Here is the list of input and output types that are supported in Processing "
-"with their corresponding alg decorator constants (the :source:`algfactory.py"
-" <python/processing/algfactory.py>` file contains the complete list of alg "
-"constants). Sorted on class name."
-msgstr ""
-"다음은 공간 처리 프레임워크가 지원하는 입력물 및 산출물 유형을 대응하는 alg 장식자 상수와 함께 정리한 목록입니다. "
-"(:source:`algfactory.py <python/processing/algfactory.py>` 파일이 alg 상수의 전체 "
-"목록을 담고 있습니다.) 클래스명으로 정렬되어 있습니다."
-
-#: ../../docs/user_manual/processing/scripts.rst:414
-msgid "Input types"
-msgstr "입력물 유형"
-
-#: ../../docs/user_manual/processing/scripts.rst:421
-#: ../../docs/user_manual/processing/scripts.rst:565
-msgid "Class"
-msgstr "클래스"
-
-#: ../../docs/user_manual/processing/scripts.rst:422
-#: ../../docs/user_manual/processing/scripts.rst:566
-msgid "Alg constant"
-msgstr "alg 상수"
-
-#: ../../docs/user_manual/processing/scripts.rst:423
-#: ../../docs/user_manual/processing/scripts.rst:567
-msgid "Description"
-msgstr "설명"
-
-#: ../../docs/user_manual/processing/scripts.rst:424
-msgid ""
-":class:`QgsProcessingParameterAnnotationLayer "
-"<qgis.core.QgsProcessingParameterAnnotationLayer>`"
-msgstr ""
-":class:`QgsProcessingParameterAnnotationLayer "
-"<qgis.core.QgsProcessingParameterAnnotationLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:425
-msgid "``alg.ANNOTATION_LAYER``"
-msgstr "``alg.ANNOTATION_LAYER``"
-
-#: ../../docs/user_manual/processing/scripts.rst:426
-msgid "An annotation layer"
-msgstr "주석 레이어"
-
-#: ../../docs/user_manual/processing/scripts.rst:427
-msgid ""
-":class:`QgsProcessingParameterAuthConfig "
-"<qgis.core.QgsProcessingParameterAuthConfig>`"
-msgstr ""
-":class:`QgsProcessingParameterAuthConfig "
-"<qgis.core.QgsProcessingParameterAuthConfig>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:428
-msgid "``alg.AUTH_CFG``"
-msgstr "``alg.AUTH_CFG``"
-
-#: ../../docs/user_manual/processing/scripts.rst:429
-msgid ""
-"Allows users to select from available authentication configurations or "
-"create new authentication configurations"
-msgstr "사용자가 사용할 수 있는 인증 환경 설정에서 선택하거나 또는 새 인증 환경 설정을 생성할 수 있게 해줍니다."
-
-#: ../../docs/user_manual/processing/scripts.rst:431
-msgid ""
-":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
-msgstr ""
-":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:432
-msgid "``alg.BAND``"
-msgstr "``alg.BAND``"
-
-#: ../../docs/user_manual/processing/scripts.rst:433
-msgid "A band of a raster layer"
-msgstr "래스터 레이어의 밴드"
-
-#: ../../docs/user_manual/processing/scripts.rst:434
-msgid ""
-":class:`QgsProcessingParameterBoolean "
-"<qgis.core.QgsProcessingParameterBoolean>`"
-msgstr ""
-":class:`QgsProcessingParameterBoolean "
-"<qgis.core.QgsProcessingParameterBoolean>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:435
-#: ../../docs/user_manual/processing/scripts.rst:569
-msgid "``alg.BOOL``"
-msgstr "``alg.BOOL``"
-
-#: ../../docs/user_manual/processing/scripts.rst:436
-#: ../../docs/user_manual/processing/scripts.rst:570
-msgid "A boolean value"
-msgstr "불(boolean) 값"
-
-#: ../../docs/user_manual/processing/scripts.rst:437
-msgid ""
-":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
-msgstr ""
-":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:438
-msgid "``alg.COLOR``"
-msgstr "``alg.COLOR``"
-
-#: ../../docs/user_manual/processing/scripts.rst:439
-msgid "A color"
-msgstr "색상"
-
-#: ../../docs/user_manual/processing/scripts.rst:440
-msgid ""
-":class:`QgsProcessingParameterCoordinateOperation "
-"<qgis.core.QgsProcessingParameterCoordinateOperation>`"
-msgstr ""
-":class:`QgsProcessingParameterCoordinateOperation "
-"<qgis.core.QgsProcessingParameterCoordinateOperation>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:441
-msgid "``alg.COORDINATE_OPERATION``"
-msgstr "``alg.COORDINATE_OPERATION``"
-
-#: ../../docs/user_manual/processing/scripts.rst:442
-msgid "A coordinate operation (for CRS transformations)"
-msgstr "좌표 연산 (좌표계 변환용)"
-
-#: ../../docs/user_manual/processing/scripts.rst:443
-msgid ""
-":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
-msgstr ""
-":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:444
-msgid "``alg.CRS``"
-msgstr "``alg.CRS``"
-
-#: ../../docs/user_manual/processing/scripts.rst:445
-msgid "A Coordinate Reference System"
-msgstr "좌표계"
-
-#: ../../docs/user_manual/processing/scripts.rst:446
-msgid ""
-":class:`QgsProcessingParameterDatabaseSchema "
-"<qgis.core.QgsProcessingParameterDatabaseSchema>`"
-msgstr ""
-":class:`QgsProcessingParameterDatabaseSchema "
-"<qgis.core.QgsProcessingParameterDatabaseSchema>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:447
-msgid "``alg.DATABASE_SCHEMA``"
-msgstr "``alg.DATABASE_SCHEMA``"
-
-#: ../../docs/user_manual/processing/scripts.rst:448
-msgid "A database schema"
-msgstr "데이터베이스 스키마"
-
-#: ../../docs/user_manual/processing/scripts.rst:449
-msgid ""
-":class:`QgsProcessingParameterDatabaseTable "
-"<qgis.core.QgsProcessingParameterDatabaseTable>`"
-msgstr ""
-":class:`QgsProcessingParameterDatabaseTable "
-"<qgis.core.QgsProcessingParameterDatabaseTable>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:450
-msgid "``alg.DATABASE_TABLE``"
-msgstr "``alg.DATABASE_TABLE``"
-
-#: ../../docs/user_manual/processing/scripts.rst:451
-msgid "A database table"
-msgstr "데이터베이스 테이블"
-
-#: ../../docs/user_manual/processing/scripts.rst:452
-msgid ""
-":class:`QgsProcessingParameterDateTime "
-"<qgis.core.QgsProcessingParameterDateTime>`"
-msgstr ""
-":class:`QgsProcessingParameterDateTime "
-"<qgis.core.QgsProcessingParameterDateTime>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:453
-msgid "``alg.DATETIME``"
-msgstr "``alg.DATETIME``"
-
-#: ../../docs/user_manual/processing/scripts.rst:454
-msgid "A datetime (or a pure date or time)"
-msgstr "날짜&시간 (또는 순수한 날짜 또는 시간)"
-
-#: ../../docs/user_manual/processing/scripts.rst:455
-msgid ""
-":class:`QgsProcessingParameterDistance "
-"<qgis.core.QgsProcessingParameterDistance>`"
-msgstr ""
-":class:`QgsProcessingParameterDistance "
-"<qgis.core.QgsProcessingParameterDistance>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:456
-#: ../../docs/user_manual/processing/scripts.rst:572
-msgid "``alg.DISTANCE``"
-msgstr "``alg.DISTANCE``"
-
-#: ../../docs/user_manual/processing/scripts.rst:457
-#: ../../docs/user_manual/processing/scripts.rst:573
-msgid "A double numeric parameter for distance values"
-msgstr "거리 값을 위한 실수형(double) 숫자 파라미터"
-
-#: ../../docs/user_manual/processing/scripts.rst:458
-msgid ""
-":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
-msgstr ""
-":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:459
-msgid "``alg.ENUM``"
-msgstr "``alg.ENUM``"
-
-#: ../../docs/user_manual/processing/scripts.rst:460
-msgid "An enumeration, allowing for selection from a set of predefined values"
-msgstr "사전 정의된 값들의 집합에서 선택할 수 있는 집합(enumeration)"
-
-#: ../../docs/user_manual/processing/scripts.rst:461
-msgid ""
-":class:`QgsProcessingParameterExpression "
-"<qgis.core.QgsProcessingParameterExpression>`"
-msgstr ""
-":class:`QgsProcessingParameterExpression "
-"<qgis.core.QgsProcessingParameterExpression>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:462
-msgid "``alg.EXPRESSION``"
-msgstr "``alg.EXPRESSION``"
-
-#: ../../docs/user_manual/processing/scripts.rst:463
-msgid "An expression"
-msgstr "표현식"
-
-#: ../../docs/user_manual/processing/scripts.rst:464
-msgid ""
-":class:`QgsProcessingParameterExtent "
-"<qgis.core.QgsProcessingParameterExtent>`"
-msgstr ""
-":class:`QgsProcessingParameterExtent "
-"<qgis.core.QgsProcessingParameterExtent>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:465
-msgid "``alg.EXTENT``"
-msgstr "``alg.EXTENT``"
-
-#: ../../docs/user_manual/processing/scripts.rst:466
-msgid "A spatial extent defined by xmin, xmax, ymin, ymax"
-msgstr "xmin, xmax, ymin, ymax로 정의된 공간 범위"
-
-#: ../../docs/user_manual/processing/scripts.rst:467
-msgid ""
-":class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`"
-msgstr ""
-":class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:468
-msgid "``alg.FIELD``"
-msgstr "``alg.FIELD``"
-
-#: ../../docs/user_manual/processing/scripts.rst:469
-msgid "A field in the attribute table of a vector layer"
-msgstr "벡터 레이어의 속성 테이블에 있는 필드"
-
-#: ../../docs/user_manual/processing/scripts.rst:470
-msgid ""
-":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
-msgstr ""
-":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:471
-#: ../../docs/user_manual/processing/scripts.rst:575
-msgid "``alg.FILE``"
-msgstr "``alg.FILE``"
-
-#: ../../docs/user_manual/processing/scripts.rst:472
-#: ../../docs/user_manual/processing/scripts.rst:576
-msgid "A filename of an existing file"
-msgstr "기존 파일의 파일명"
-
-#: ../../docs/user_manual/processing/scripts.rst:473
-msgid ""
-":class:`QgsProcessingParameterFileDestination "
-"<qgis.core.QgsProcessingParameterFileDestination>`"
-msgstr ""
-":class:`QgsProcessingParameterFileDestination "
-"<qgis.core.QgsProcessingParameterFileDestination>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:474
-msgid "``alg.FILE_DEST``"
-msgstr "``alg.FILE_DEST``"
-
-#: ../../docs/user_manual/processing/scripts.rst:475
-msgid "A filename for a newly created output file"
-msgstr "새로 생성된 산출물 파일의 파일명"
-
-#: ../../docs/user_manual/processing/scripts.rst:476
-msgid ""
-":class:`QgsProcessingParameterFolderDestination "
-"<qgis.core.QgsProcessingParameterFolderDestination>`"
-msgstr ""
-":class:`QgsProcessingParameterFolderDestination "
-"<qgis.core.QgsProcessingParameterFolderDestination>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:477
-msgid "``alg.FOLDER_DEST``"
-msgstr "``alg.FOLDER_DEST``"
-
-#: ../../docs/user_manual/processing/scripts.rst:478
-msgid "A folder (destination folder)"
-msgstr "폴더(대상 폴더)"
-
-#: ../../docs/user_manual/processing/scripts.rst:479
-msgid ""
-":class:`QgsProcessingParameterGeometry "
-"<qgis.core.QgsProcessingParameterGeometry>`"
-msgstr ""
-":class:`QgsProcessingParameterGeometry "
-"<qgis.core.QgsProcessingParameterGeometry>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:480
-msgid "``alg.GEOMETRY``"
-msgstr "``alg.GEOMETRY``"
-
-#: ../../docs/user_manual/processing/scripts.rst:481
-msgid "A geometry"
-msgstr "도형"
-
-#: ../../docs/user_manual/processing/scripts.rst:482
-msgid ""
-":attr:`QgsProcessingParameterNumber.Integer "
-"<qgis.core.QgsProcessingParameterNumber.Integer>`"
-msgstr ""
-":attr:`QgsProcessingParameterNumber.Integer "
-"<qgis.core.QgsProcessingParameterNumber.Integer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:483
-#: ../../docs/user_manual/processing/scripts.rst:584
-msgid "``alg.INT``"
-msgstr "``alg.INT``"
-
-#: ../../docs/user_manual/processing/scripts.rst:484
-msgid "An integer"
-msgstr "정수"
-
-#: ../../docs/user_manual/processing/scripts.rst:485
-msgid ""
-":class:`QgsProcessingParameterLayout "
-"<qgis.core.QgsProcessingParameterLayout>`"
-msgstr ""
-":class:`QgsProcessingParameterLayout "
-"<qgis.core.QgsProcessingParameterLayout>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:486
-msgid "``alg.LAYOUT``"
-msgstr "``alg.LAYOUT``"
-
-#: ../../docs/user_manual/processing/scripts.rst:487
-msgid "A layout"
-msgstr "조판"
-
-#: ../../docs/user_manual/processing/scripts.rst:488
-msgid ""
-":class:`QgsProcessingParameterLayoutItem "
-"<qgis.core.QgsProcessingParameterLayoutItem>`"
-msgstr ""
-":class:`QgsProcessingParameterLayoutItem "
-"<qgis.core.QgsProcessingParameterLayoutItem>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:489
-msgid "``alg.LAYOUT_ITEM``"
-msgstr "``alg.LAYOUT_ITEM``"
-
-#: ../../docs/user_manual/processing/scripts.rst:490
-msgid "A layout item"
-msgstr "조판 항목"
-
-#: ../../docs/user_manual/processing/scripts.rst:491
-msgid ""
-":class:`QgsProcessingParameterMapLayer "
-"<qgis.core.QgsProcessingParameterMapLayer>`"
-msgstr ""
-":class:`QgsProcessingParameterMapLayer "
-"<qgis.core.QgsProcessingParameterMapLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:492
-#: ../../docs/user_manual/processing/scripts.rst:590
-msgid "``alg.MAPLAYER``"
-msgstr "``alg.MAPLAYER``"
-
-#: ../../docs/user_manual/processing/scripts.rst:493
-#: ../../docs/user_manual/processing/scripts.rst:591
-msgid "A map layer"
-msgstr "맵 레이어"
-
-#: ../../docs/user_manual/processing/scripts.rst:494
-msgid ""
-":class:`QgsProcessingParameterMapTheme "
-"<qgis.core.QgsProcessingParameterMapTheme>`"
-msgstr ""
-":class:`QgsProcessingParameterMapTheme "
-"<qgis.core.QgsProcessingParameterMapTheme>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:495
-msgid "``alg.MAP_THEME``"
-msgstr "``alg.MAP_THEME``"
-
-#: ../../docs/user_manual/processing/scripts.rst:496
-msgid "A project map theme"
-msgstr "프로젝트 맵 테마"
-
-#: ../../docs/user_manual/processing/scripts.rst:497
-msgid ""
-":class:`QgsProcessingParameterMatrix "
-"<qgis.core.QgsProcessingParameterMatrix>`"
-msgstr ""
-":class:`QgsProcessingParameterMatrix "
-"<qgis.core.QgsProcessingParameterMatrix>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:498
-msgid "``alg.MATRIX``"
-msgstr "``alg.MATRIX``"
-
-#: ../../docs/user_manual/processing/scripts.rst:499
-msgid "A matrix"
-msgstr "매트릭스"
-
-#: ../../docs/user_manual/processing/scripts.rst:500
-msgid ""
-":class:`QgsProcessingParameterMeshLayer "
-"<qgis.core.QgsProcessingParameterMeshLayer>`"
-msgstr ""
-":class:`QgsProcessingParameterMeshLayer "
-"<qgis.core.QgsProcessingParameterMeshLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:501
-msgid "``alg.MESH_LAYER``"
-msgstr "``alg.MESH_LAYER``"
-
-#: ../../docs/user_manual/processing/scripts.rst:502
-msgid "A mesh layer"
-msgstr "메시 레이어"
-
-#: ../../docs/user_manual/processing/scripts.rst:503
-msgid ""
-":class:`QgsProcessingParameterMultipleLayers "
-"<qgis.core.QgsProcessingParameterMultipleLayers>`"
-msgstr ""
-":class:`QgsProcessingParameterMultipleLayers "
-"<qgis.core.QgsProcessingParameterMultipleLayers>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:504
-#: ../../docs/user_manual/processing/scripts.rst:593
-msgid "``alg.MULTILAYER``"
-msgstr "``alg.MULTILAYER``"
-
-#: ../../docs/user_manual/processing/scripts.rst:505
-#: ../../docs/user_manual/processing/scripts.rst:594
-msgid "A set of layers"
-msgstr "레이어 집합"
-
-#: ../../docs/user_manual/processing/scripts.rst:506
-msgid ""
-":attr:`QgsProcessingParameterNumber.Double "
-"<qgis.core.QgsProcessingParameterNumber.Double>`"
-msgstr ""
-":attr:`QgsProcessingParameterNumber.Double "
-"<qgis.core.QgsProcessingParameterNumber.Double>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:507
-#: ../../docs/user_manual/processing/scripts.rst:596
-msgid "``alg.NUMBER``"
-msgstr "``alg.NUMBER``"
-
-#: ../../docs/user_manual/processing/scripts.rst:508
-#: ../../docs/user_manual/processing/scripts.rst:597
-msgid "A numerical value"
-msgstr "숫자 값"
-
-#: ../../docs/user_manual/processing/scripts.rst:509
-msgid ""
-":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
-msgstr ""
-":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:510
-msgid "``alg.POINT``"
-msgstr "``alg.POINT``"
-
-#: ../../docs/user_manual/processing/scripts.rst:511
-msgid "A point"
-msgstr "포인트"
-
-#: ../../docs/user_manual/processing/scripts.rst:512
-msgid ""
-":class:`QgsProcessingParameterPointCloudDestination "
-"<qgis.core.QgsProcessingParameterPointCloudDestination>`"
-msgstr ""
-":class:`QgsProcessingParameterPointCloudDestination "
-"<qgis.core.QgsProcessingParameterPointCloudDestination>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:513
-msgid "``alg.POINTCLOUD_LAYER_DEST``"
-msgstr "``alg.POINTCLOUD_LAYER_DEST``"
-
-#: ../../docs/user_manual/processing/scripts.rst:514
-msgid ""
-"A point cloud layer destination parameter, for specifying the destination "
-"path for a point cloud layer created by the algorithm"
-msgstr "알고리즘이 생성한 점구름 레이어의 대상 경로를 지정하는 점구름 레이어 대상 파라미터"
-
-#: ../../docs/user_manual/processing/scripts.rst:516
-msgid ""
-":class:`QgsProcessingParameterPointCloudLayer "
-"<qgis.core.QgsProcessingParameterPointCloudLayer>`"
-msgstr ""
-":class:`QgsProcessingParameterPointCloudLayer "
-"<qgis.core.QgsProcessingParameterPointCloudLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:517
-#: ../../docs/user_manual/processing/scripts.rst:599
-msgid "``alg.POINTCLOUD_LAYER``"
-msgstr "``alg.POINTCLOUD_LAYER``"
-
-#: ../../docs/user_manual/processing/scripts.rst:518
-#: ../../docs/user_manual/processing/scripts.rst:600
-msgid "A point cloud layer"
-msgstr "점구름(point cloud) 레이어"
-
-#: ../../docs/user_manual/processing/scripts.rst:519
-msgid ""
-":class:`QgsProcessingParameterProviderConnection "
-"<qgis.core.QgsProcessingParameterProviderConnection>`"
-msgstr ""
-":class:`QgsProcessingParameterProviderConnection "
-"<qgis.core.QgsProcessingParameterProviderConnection>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:520
-msgid "``alg.PROVIDER_CONNECTION``"
-msgstr "``alg.PROVIDER_CONNECTION``"
-
-#: ../../docs/user_manual/processing/scripts.rst:521
-msgid "An available connection for a database provider"
-msgstr "데이터베이스 제공자에 대해 사용할 수 있는 연결"
-
-#: ../../docs/user_manual/processing/scripts.rst:522
-msgid ""
-":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
-msgstr ""
-":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:523
-msgid "``alg.RANGE``"
-msgstr "``alg.RANGE``"
-
-#: ../../docs/user_manual/processing/scripts.rst:524
-msgid "A number range"
-msgstr "숫자의 범위"
-
-#: ../../docs/user_manual/processing/scripts.rst:525
-msgid ""
-":class:`QgsProcessingParameterRasterLayer "
-"<qgis.core.QgsProcessingParameterRasterLayer>`"
-msgstr ""
-":class:`QgsProcessingParameterRasterLayer "
-"<qgis.core.QgsProcessingParameterRasterLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:526
-#: ../../docs/user_manual/processing/scripts.rst:602
-msgid "``alg.RASTER_LAYER``"
-msgstr "``alg.RASTER_LAYER``"
-
-#: ../../docs/user_manual/processing/scripts.rst:527
-#: ../../docs/user_manual/processing/scripts.rst:603
-msgid "A raster layer"
-msgstr "래스터 레이어"
-
-#: ../../docs/user_manual/processing/scripts.rst:528
-msgid ""
-":class:`QgsProcessingParameterRasterDestination "
-"<qgis.core.QgsProcessingParameterRasterDestination>`"
-msgstr ""
-":class:`QgsProcessingParameterRasterDestination "
-"<qgis.core.QgsProcessingParameterRasterDestination>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:529
-msgid "``alg.RASTER_LAYER_DEST``"
-msgstr "``alg.RASTER_LAYER_DEST``"
-
-#: ../../docs/user_manual/processing/scripts.rst:530
-msgid ""
-"A raster layer destination parameter, for specifying the destination path "
-"for a raster layer created by the algorithm"
-msgstr "알고리즘이 생성한 래스터 레이어의 대상 경로를 지정하는 래스터 레이어 대상 파라미터"
-
-#: ../../docs/user_manual/processing/scripts.rst:532
-msgid ""
-":class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`"
-msgstr ""
-":class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:533
-msgid "``alg.SCALE``"
-msgstr "``alg.SCALE``"
-
-#: ../../docs/user_manual/processing/scripts.rst:534
-msgid "A map scale"
-msgstr "맵 축척"
-
-#: ../../docs/user_manual/processing/scripts.rst:535
-msgid ""
-":class:`QgsProcessingParameterFeatureSink "
-"<qgis.core.QgsProcessingParameterFeatureSink>`"
-msgstr ""
-":class:`QgsProcessingParameterFeatureSink "
-"<qgis.core.QgsProcessingParameterFeatureSink>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:536
-msgid "``alg.SINK``"
-msgstr "``alg.SINK``"
-
-#: ../../docs/user_manual/processing/scripts.rst:537
-msgid "A feature sink"
-msgstr "피처 싱크(sink)"
-
-#: ../../docs/user_manual/processing/scripts.rst:538
-msgid ""
-":class:`QgsProcessingParameterFeatureSource "
-"<qgis.core.QgsProcessingParameterFeatureSource>`"
-msgstr ""
-":class:`QgsProcessingParameterFeatureSource "
-"<qgis.core.QgsProcessingParameterFeatureSource>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:539
-msgid "``alg.SOURCE``"
-msgstr "``alg.SOURCE``"
-
-#: ../../docs/user_manual/processing/scripts.rst:540
-msgid "A feature source"
-msgstr "피처 소스"
-
-#: ../../docs/user_manual/processing/scripts.rst:541
-msgid ""
-":class:`QgsProcessingParameterString "
-"<qgis.core.QgsProcessingParameterString>`"
-msgstr ""
-":class:`QgsProcessingParameterString "
-"<qgis.core.QgsProcessingParameterString>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:542
-#: ../../docs/user_manual/processing/scripts.rst:605
-msgid "``alg.STRING``"
-msgstr "``alg.STRING``"
-
-#: ../../docs/user_manual/processing/scripts.rst:543
-#: ../../docs/user_manual/processing/scripts.rst:606
-msgid "A text string"
-msgstr "텍스트 문자열"
-
-#: ../../docs/user_manual/processing/scripts.rst:544
-msgid ""
-":class:`QgsProcessingParameterVectorLayer "
-"<qgis.core.QgsProcessingParameterVectorLayer>`"
-msgstr ""
-":class:`QgsProcessingParameterVectorLayer "
-"<qgis.core.QgsProcessingParameterVectorLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:545
-#: ../../docs/user_manual/processing/scripts.rst:608
-msgid "``alg.VECTOR_LAYER``"
-msgstr "``alg.VECTOR_LAYER``"
-
-#: ../../docs/user_manual/processing/scripts.rst:546
-#: ../../docs/user_manual/processing/scripts.rst:609
-msgid "A vector layer"
-msgstr "벡터 레이어"
-
-#: ../../docs/user_manual/processing/scripts.rst:547
-msgid ""
-":class:`QgsProcessingParameterVectorDestination "
-"<qgis.core.QgsProcessingParameterVectorDestination>`"
-msgstr ""
-":class:`QgsProcessingParameterVectorDestination "
-"<qgis.core.QgsProcessingParameterVectorDestination>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:548
-msgid "``alg.VECTOR_LAYER_DEST``"
-msgstr "``alg.VECTOR_LAYER_DEST``"
-
-#: ../../docs/user_manual/processing/scripts.rst:549
-msgid ""
-"A vector layer destination parameter, for specifying the destination path "
-"for a vector layer created by the algorithm"
-msgstr "알고리즘이 생성한 벡터 레이어의 대상 경로를 지정하는 벡터 레이어 대상 파라미터"
-
-#: ../../docs/user_manual/processing/scripts.rst:551
-msgid ""
-":class:`QgsProcessingParameterVectorTileDestination "
-"<qgis.core.QgsProcessingParameterVectorTileDestination>`"
-msgstr ""
-":class:`QgsProcessingParameterVectorTileDestination "
-"<qgis.core.QgsProcessingParameterVectorTileDestination>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:553
-msgid ""
-"A vector tile layer destination parameter, for specifying the destination "
-"path for a vector tile layer created by the algorithm"
-msgstr "알고리즘이 생성한 벡터 타일 레이어의 대상 경로를 지정하는 벡터 타일 레이어 대상 파라미터"
-
-#: ../../docs/user_manual/processing/scripts.rst:558
-msgid "Output types"
-msgstr "산출물 유형"
-
-#: ../../docs/user_manual/processing/scripts.rst:568
-msgid ""
-":class:`QgsProcessingOutputBoolean <qgis.core.QgsProcessingOutputBoolean>`"
-msgstr ""
-":class:`QgsProcessingOutputBoolean <qgis.core.QgsProcessingOutputBoolean>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:571
-#: ../../docs/user_manual/processing/scripts.rst:583
-#: ../../docs/user_manual/processing/scripts.rst:595
-msgid ""
-":class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`"
-msgstr ""
-":class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:574
-msgid ":class:`QgsProcessingOutputFile <qgis.core.QgsProcessingOutputFile>`"
-msgstr ":class:`QgsProcessingOutputFile <qgis.core.QgsProcessingOutputFile>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:577
-msgid ""
-":class:`QgsProcessingOutputFolder <qgis.core.QgsProcessingOutputFolder>`"
-msgstr ""
-":class:`QgsProcessingOutputFolder <qgis.core.QgsProcessingOutputFolder>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:578
-msgid "``alg.FOLDER``"
-msgstr "``alg.FOLDER``"
-
-#: ../../docs/user_manual/processing/scripts.rst:579
-msgid "A folder"
-msgstr "폴더"
-
-#: ../../docs/user_manual/processing/scripts.rst:580
-msgid ":class:`QgsProcessingOutputHtml <qgis.core.QgsProcessingOutputHtml>`"
-msgstr ":class:`QgsProcessingOutputHtml <qgis.core.QgsProcessingOutputHtml>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:581
-msgid "``alg.HTML``"
-msgstr "``alg.HTML``"
-
-#: ../../docs/user_manual/processing/scripts.rst:582
-msgid "HTML"
-msgstr "HTML"
-
-#: ../../docs/user_manual/processing/scripts.rst:585
-msgid "A integer"
-msgstr "정수"
-
-#: ../../docs/user_manual/processing/scripts.rst:586
-msgid ""
-":class:`QgsProcessingOutputLayerDefinition "
-"<qgis.core.QgsProcessingOutputLayerDefinition>`"
-msgstr ""
-":class:`QgsProcessingOutputLayerDefinition "
-"<qgis.core.QgsProcessingOutputLayerDefinition>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:587
-msgid "``alg.LAYERDEF``"
-msgstr "``alg.LAYERDEF``"
-
-#: ../../docs/user_manual/processing/scripts.rst:588
-msgid "A layer definition"
-msgstr "레이어 정의"
-
-#: ../../docs/user_manual/processing/scripts.rst:589
-msgid ""
-":class:`QgsProcessingOutputMapLayer <qgis.core.QgsProcessingOutputMapLayer>`"
-msgstr ""
-":class:`QgsProcessingOutputMapLayer <qgis.core.QgsProcessingOutputMapLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:592
-msgid ""
-":class:`QgsProcessingOutputMultipleLayers "
-"<qgis.core.QgsProcessingOutputMultipleLayers>`"
-msgstr ""
-":class:`QgsProcessingOutputMultipleLayers "
-"<qgis.core.QgsProcessingOutputMultipleLayers>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:598
-msgid ""
-":class:`QgsProcessingOutputPointCloudLayer "
-"<qgis.core.QgsProcessingOutputPointCloudLayer>`"
-msgstr ""
-":class:`QgsProcessingOutputPointCloudLayer "
-"<qgis.core.QgsProcessingOutputPointCloudLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:601
-msgid ""
-":class:`QgsProcessingOutputRasterLayer "
-"<qgis.core.QgsProcessingOutputRasterLayer>`"
-msgstr ""
-":class:`QgsProcessingOutputRasterLayer "
-"<qgis.core.QgsProcessingOutputRasterLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:604
-msgid ""
-":class:`QgsProcessingOutputString <qgis.core.QgsProcessingOutputString>`"
-msgstr ""
-":class:`QgsProcessingOutputString <qgis.core.QgsProcessingOutputString>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:607
-msgid ""
-":class:`QgsProcessingOutputVectorLayer "
-"<qgis.core.QgsProcessingOutputVectorLayer>`"
-msgstr ""
-":class:`QgsProcessingOutputVectorLayer "
-"<qgis.core.QgsProcessingOutputVectorLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:610
-msgid ""
-":class:`QgsProcessingOutputVectorTileLayer "
-"<qgis.core.QgsProcessingOutputVectorTileLayer>`"
-msgstr ""
-":class:`QgsProcessingOutputVectorTileLayer "
-"<qgis.core.QgsProcessingOutputVectorTileLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:612
-msgid "A vector tile layer"
-msgstr "벡터 타일 레이어"
-
-#: ../../docs/user_manual/processing/scripts.rst:616
+#: ../../docs/user_manual/processing/scripts.rst:407
 msgid "Handing algorithm output"
 msgstr "알고리즘 산출물 건네주기"
 
-#: ../../docs/user_manual/processing/scripts.rst:618
+#: ../../docs/user_manual/processing/scripts.rst:409
 msgid ""
 "When you declare an output representing a layer (raster or vector), the "
 "algorithm will try to add it to QGIS once it is finished."
 msgstr ""
 "레이어(래스터 또는 벡터)를 표현하는 산출물을 선언하는 경우, 알고리즘 실행 종료시 알고리즘이 QGIS에 산출물을 추가하려 할 것입니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:621
+#: ../../docs/user_manual/processing/scripts.rst:412
 msgid ""
 "Raster layer output: QgsProcessingParameterRasterDestination / "
 "alg.RASTER_LAYER_DEST."
 msgstr ""
 "래스터 레이어 산출물: QgsProcessingParameterRasterDestination / alg.RASTER_LAYER_DEST"
 
-#: ../../docs/user_manual/processing/scripts.rst:623
+#: ../../docs/user_manual/processing/scripts.rst:414
 msgid ""
 "Vector layer output: QgsProcessingParameterVectorDestination / "
 "alg.VECTOR_LAYER_DEST."
 msgstr ""
 "벡터 레이어 산출물: QgsProcessingParameterVectorDestination / alg.VECTOR_LAYER_DEST"
 
-#: ../../docs/user_manual/processing/scripts.rst:626
+#: ../../docs/user_manual/processing/scripts.rst:417
 msgid ""
 "So even if the ``processing.run()`` method does not add the layers it "
 "creates to the user's current project, the two output layers (buffer and "
@@ -1208,7 +368,7 @@ msgstr ""
 "산출물 레이어 2개(버퍼 및 래스터 버퍼)를 불러올 것입니다. 두 레이어가 사용자가 입력한 대상 위치에 (또는 사용자가 대상 위치를 "
 "지정하지 않은 경우 임시 위치에) 저장되기 때문입니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:632
+#: ../../docs/user_manual/processing/scripts.rst:423
 msgid ""
 "If a layer is created as output of an algorithm, it should be declared as "
 "such. Otherwise, you will not be able to properly use the algorithm in the "
@@ -1218,7 +378,7 @@ msgstr ""
 "레이어가 알고리즘의 산출물로 생성되는 경우, 산출물로 선언되어야 합니다. 그렇지 않으면 모델 설계자에서 알고리즘을 제대로 사용할 수 "
 "없습니다. 선언한 내용과 알고리즘이 실제로 생성한 산출물이 일치하지 않을 것이기 때문입니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:638
+#: ../../docs/user_manual/processing/scripts.rst:429
 msgid ""
 "You can return strings, numbers and more by specifying them in the result "
 "dictionary (as demonstrated for \"NUMBEROFFEATURES\"), but they should "
@@ -1231,11 +391,11 @@ msgstr ""
 "있습니다. 그러나 항상 사용자 알고리즘에서 나온 산출물로 명확하게 정의해야 합니다. 알고리즘이 유용한 값을 가능한 한 많이 산출하는 것을"
 " 권장합니다. 사용자 알고리즘이 모델의 일부로 사용되는 경우 다음 알고리즘에 매우 유용하게 사용할 수 있기 때문입니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:647
+#: ../../docs/user_manual/processing/scripts.rst:438
 msgid "Communicating with the user"
 msgstr "사용자에게 정보 전달하기"
 
-#: ../../docs/user_manual/processing/scripts.rst:649
+#: ../../docs/user_manual/processing/scripts.rst:440
 msgid ""
 "If your algorithm takes a long time to process, it is a good idea to inform "
 "the user about the progress.  You can use ``feedback`` "
@@ -1245,7 +405,7 @@ msgstr ""
 "(:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`)을 사용하면 "
 "됩니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:653
+#: ../../docs/user_manual/processing/scripts.rst:444
 msgid ""
 "The progress text and progressbar can be updated using two methods: "
 ":meth:`setProgressText(text) "
@@ -1257,7 +417,7 @@ msgstr ""
 ":meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>` 메소드 2개를 "
 "사용하면 각각 진행 상황 텍스트 및 진행 상황 막대를 업데이트할 수 있습니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:657
+#: ../../docs/user_manual/processing/scripts.rst:448
 msgid ""
 "You can provide more information by using :meth:`pushCommandInfo(text) "
 "<qgis.core.QgsProcessingFeedback.pushCommandInfo>`, "
@@ -1272,7 +432,7 @@ msgstr ""
 ":meth:`reportError(text) <qgis.core.QgsProcessingFeedback.reportError>` 메소드를"
 " 사용하면 더 많은 정보를 제공할 수 있습니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:663
+#: ../../docs/user_manual/processing/scripts.rst:454
 msgid ""
 "If your script has a problem, the correct way of handling it is to raise a "
 ":class:`QgsProcessingException <qgis.core.QgsProcessingException>`. You can "
@@ -1286,11 +446,11 @@ msgstr ""
 "있습니다. 공간 처리 프레임워크는 알고리즘이 어디서 (툴박스, 모델 설계자, 파이썬 콘솔 등등) 실행되느냐에 따라 예외를 처리하고 "
 "사용자에게 알려줄 것입니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:672
+#: ../../docs/user_manual/processing/scripts.rst:463
 msgid "Documenting your scripts"
 msgstr "사용자 스크립트 문서 작성하기"
 
-#: ../../docs/user_manual/processing/scripts.rst:674
+#: ../../docs/user_manual/processing/scripts.rst:465
 msgid ""
 "You can document your scripts by overloading the :meth:`helpString() "
 "<qgis.core.QgsProcessingAlgorithm.helpString>` and :meth:`helpUrl() "
@@ -1302,11 +462,11 @@ msgstr ""
 ":meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` 메소드를 "
 "과부하(overload)시키면 사용자 스크립트를 문서화할 수 있습니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:680
+#: ../../docs/user_manual/processing/scripts.rst:471
 msgid "Flags"
 msgstr "플래그"
 
-#: ../../docs/user_manual/processing/scripts.rst:682
+#: ../../docs/user_manual/processing/scripts.rst:473
 msgid ""
 "You can override the :meth:`flags() "
 "<qgis.core.QgsProcessingAlgorithm.flags>` method of "
@@ -1320,7 +480,7 @@ msgstr ""
 " 알고리즘에 대해 더 많이 알려줄 수 있습니다. 예를 들어 QGIS에 스크립트를 모델 설계자로부터 숨겨야 한다고, 취소될 수 있다고, "
 "스레드 편에서 안전하지 않다고, 그 외의 많은 것을 알려줄 수 있습니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:690
+#: ../../docs/user_manual/processing/scripts.rst:481
 msgid ""
 "By default, Processing runs algorithms in a separate thread in order to keep"
 " QGIS responsive while the processing task runs. If your algorithm is "
@@ -1335,11 +495,11 @@ msgstr ""
 "``flags()`` 메소드에서 ``QgsProcessingAlgorithm.FlagNoThreading`` 플래그를 반환하게 "
 "해보십시오."
 
-#: ../../docs/user_manual/processing/scripts.rst:699
+#: ../../docs/user_manual/processing/scripts.rst:490
 msgid "Best practices for writing script algorithms"
 msgstr "스크립트 알고리즘 작성을 위한 모범적인 예제"
 
-#: ../../docs/user_manual/processing/scripts.rst:701
+#: ../../docs/user_manual/processing/scripts.rst:492
 msgid ""
 "Here's a quick summary of ideas to consider when creating your script "
 "algorithms and, especially, if you want to share them with other QGIS users."
@@ -1351,17 +511,17 @@ msgstr ""
 "고려해야 할 사항들을 정리해봤습니다. 이 간단한 규칙을 따른다면 툴박스, 모델 설계자, 배치 프로세스 인터페이스와 같은 서로 다른 공간 "
 "처리 구성 요소를 아우르는 일관성을 유지할 수 있을 겁니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:707
+#: ../../docs/user_manual/processing/scripts.rst:498
 msgid ""
 "Do not load resulting layers. Let Processing handle your results and load "
 "your layers if needed."
 msgstr "산출 레이어를 불러오지 마십시오. 공간 처리 프레임워크가 사용자의 산출물을 처리하게 하고, 필요한 경우 불러오십시오."
 
-#: ../../docs/user_manual/processing/scripts.rst:709
+#: ../../docs/user_manual/processing/scripts.rst:500
 msgid "Always declare the outputs your algorithm creates."
 msgstr "항상 사용자 알고리즘이 생성한 산출물을 선언하십시오."
 
-#: ../../docs/user_manual/processing/scripts.rst:710
+#: ../../docs/user_manual/processing/scripts.rst:501
 msgid ""
 "Do not show message boxes or use any GUI element from the script. If you "
 "want to communicate with the user, use the methods of the feedback object "
@@ -1373,7 +533,7 @@ msgstr ""
 "사용하거나 또는 :class:`QgsProcessingException <qgis.core.QgsProcessingException>` "
 "예외를 날리십시오."
 
-#: ../../docs/user_manual/processing/scripts.rst:716
+#: ../../docs/user_manual/processing/scripts.rst:507
 msgid ""
 "There are already many processing algorithms available in QGIS. You can find"
 " code on the :source:`QGIS <python/plugins/processing/algs/qgis>` repo."

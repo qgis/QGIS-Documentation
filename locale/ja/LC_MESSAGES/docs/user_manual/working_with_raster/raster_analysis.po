@@ -2,27 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"翻訳は `あなたが参加できる "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_ コミュニティの取り組みです。このページは現在 |translation progress| 翻訳されています。"
 
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:6
 msgid "Raster Analysis"
@@ -66,9 +76,9 @@ msgid ""
 "disk`:"
 msgstr "|checkbox| :guilabel:`ディスクに書き込まないオンザフライ・ラスタを作成`"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:184
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:160
 msgid "checkbox"
-msgstr ""
+msgstr "checkbox"
 
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:42
 msgid ""
@@ -136,30 +146,26 @@ msgstr ""
 "``=`` 、 ``!=`` 、 ``<`` 、 ``>=`` など）は、偽の場合は 0 、真の場合は 1 "
 "を返すので、他の演算子や関数と共に使うことができます。"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:70
-msgid "See also the :ref:`qgisrastercalculator` algorithm."
-msgstr ":ref:`qgisrastercalculator` のアルゴリズムについても参照してください。"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:73
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:108
 msgid "Examples"
 msgstr "例"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:75
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:110
 msgid "**Convert elevation values from meters to feet**"
 msgstr "**標高値をメートルからフィートに変換する**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:77
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:112
 msgid ""
 "Creating an elevation raster in feet from a raster in meters, you need to "
 "use the conversion factor for meters to feet: 3.28. The expression is:"
 msgstr ""
 "メートル単位の標高ラスタからフィート単位のラスタを作成するには、メートルからフィートへの換算係数 3.28 を掛けます。式は次のとおりです："
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:84
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:119
 msgid "**Using a mask**"
 msgstr "**マスクを使用する**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:86
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:121
 msgid ""
 "If you want to mask out parts of a raster -- say, for instance, because you "
 "are only interested in elevations above 0 meters -- you can use the "
@@ -168,7 +174,7 @@ msgid ""
 msgstr ""
 "例えば、標高0メートル以上の部分だけに興味があるなど、ラスタの一部をマスクしたい場合には、マスクの作成とその結果のラスタへの適用が以下の式を使用して一度に行えます。"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:94
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
 msgid ""
 "In other words, for every cell greater than or equal to 0 the conditional "
 "expression evaluates to 1, which keeps the original value by multiplying it "
@@ -177,11 +183,11 @@ msgid ""
 msgstr ""
 "これはつまり、標高値が0以上の各セルは条件式の評価が1になり、元の値に1を掛けるので値が維持されます。そうでない場合には条件式の評価が0になり、ラスタ値が0になります。これにより、標高値に応じたマスクが作成されます。"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:99
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:134
 msgid "**Classify a Raster**"
 msgstr "**ラスタのクラス分類**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:101
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:136
 msgid ""
 "If you want to classify a raster -- say, for instance into two elevation "
 "classes, you can use the following expression to create a raster with two "
@@ -189,154 +195,12 @@ msgid ""
 msgstr ""
 "ラスタを例えば2つの標高クラスに分類したい場合には、次の式を使用すると、1つのステップで2種類の値 1と2を持つラスタを作成することができます。"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:109
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
 msgid ""
 "In other words, for every cell less than 50 set its value to 1. For every "
 "cell greater than or equal 50 set its value to 2."
 msgstr "これはつまり、標高値が50未満の各セルには値1が設定され、50以上の各セルには値2が設定されます。"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:112
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:147
 msgid "Or you can use the ``IF`` operator."
 msgstr "``IF`` 演算子を使用することもできます。"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:123
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:175
-msgid "Raster Alignment"
-msgstr "ラスタを揃える"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:125
-msgid ""
-"This tool is able to take several rasters as input and to align them "
-"perfectly, that means:"
-msgstr "このツールは複数のラスタを入力として、それらの位置を完全に合わせることが可能です。これはつまり、"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:128
-msgid "reproject to the same CRS,"
-msgstr "同じCRSに再投影し、"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
-msgid "resample to the same cell size and offset in the grid,"
-msgstr "同じセルサイズや同じグリッドオフセットにリサンプリングし、"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:130
-msgid "clip to a region of interest,"
-msgstr "関心のある領域で切り抜きを行い、"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:131
-msgid "rescale values when required."
-msgstr "必要に応じて値を再スケールします。"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:133
-msgid "All rasters will be saved in another files."
-msgstr "ラスタはすべて、別のファイルに保存されます。"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:135
-msgid ""
-"First, open the tools from :menuselection:`Raster --> Align Raster...` and "
-"click on the |symbologyAdd| :sup:`Add new raster` button to choose one "
-"existing raster in QGIS. Select an output file to save the raster after the "
-"alignment, the resampling method and if the tools need to :guilabel:`Rescale"
-" values according to the cell size`. The resampling method can be (see "
-":numref:`figure_raster_align_edit`):"
-msgstr ""
-"まず、 :menuselection:`ラスタ --> ラスタを揃える...` からツールを開き、 |symbologyAdd| "
-":sup:`新しいラスタを追加` "
-"ボタンをクリックして、QGISの既存のラスタを1つ選択します。揃えたあとのラスタを保存する出力ファイルやリサンプリング方法を選択し、ツールで必要ならば "
-":guilabel:`セルサイズに応じてスケール` にチェックを入れます。リサンプリング方法は以下が選択できます（ "
-":numref:`figure_raster_align_edit` 参照）："
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:186
-msgid "symbologyAdd"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:141
-msgid "**Nearest Neighbor**"
-msgstr "**最近傍（Nearest Neighbor）**"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:142
-msgid "**Bilinear (2x2 kernel)**"
-msgstr "**バイリニア（2x2）**"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:143
-msgid "**Cubic (4x4 kernel)**: Cubic Convolution Approximation"
-msgstr "**キュービック（4x4 ）** ：三次の畳込み内挿近似"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
-msgid "**Cubic B-Spline (4x4 kernel)**: Cubic B-Spline Approximation"
-msgstr "**キュービックBスプライン（4x4 ）** ：キュービックBスプライン近似"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:145
-msgid "**Lanczos (6x6 kernel)**: Lanczos windowed sinc interpolation"
-msgstr "**ランチョス（6x6）** ：ランチョス窓によるsinc補間"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:146
-msgid ""
-"**Average**: computes the average of all non-NODATA contributing pixels"
-msgstr "**平均（Average）** ：NODATAでない寄与ピクセルすべての平均を計算"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:147
-msgid ""
-"**Mode**: selects the value which appears most often of all the sampled "
-"points"
-msgstr "**モード** ：すべてのサンプリングポイントの中で最も頻繁に出現する値を選択"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:148
-msgid ""
-"**Maximum**, **Minimum**, **Mediane**, **First Quartile (Q1)** or **Third "
-"Quartile (Q3)** of all non-NODATA contributing pixels"
-msgstr ""
-"**最大値** 、 **最小値** 、 **中央値** 、 **第１四分位（Q1）** 、 **第３四分位（Q3）** "
-"：それぞれNODATAでない寄与ピクセルすべての最大値 、最小値、中央値、第１四分位値、第３四分位値を選択"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:156
-msgid "Select Raster Resampling Options"
-msgstr "ラスタのリサンプリングオプションの選択"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:158
-msgid ""
-"In the main :guilabel:`Align raster` dialog, you can still |symbologyEdit| "
-":sup:`Edit file settings` or |symbologyRemove| :sup:`Remove an existing "
-"file` from the list of raster layers. You can also choose one or more other "
-"options (see :numref:`figure_raster_align`):"
-msgstr ""
-":guilabel:`ラスタを揃える` のメインダイアログでは、 |symbologyEdit| :sup:`ファイル設定の編集` "
-"を行ったり、ラスタレイヤのリストから |symbologyRemove| :sup:`既存のファイルを削除` "
-"することができます。また、以下の複数のオプションを選択することもできます（ :numref:`figure_raster_align` 参照）。"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:188
-msgid "symbologyEdit"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:190
-msgid "symbologyRemove"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:162
-msgid "Select the :guilabel:`Reference Layer`,"
-msgstr ":guilabel:`スナップで参照するレイヤ` の選択"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:163
-msgid "Transform into a new :guilabel:`CRS`,"
-msgstr "新しい :guilabel:`座標参照系（CRS）` への変換"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:164
-msgid "Setup a different :guilabel:`Cell size`,"
-msgstr "異なる :guilabel:`セルサイズ` の設定"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:165
-msgid "Setup a different :guilabel:`Grid Offset`,"
-msgstr "異なる :guilabel:`グリッドオフセット` の設定"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:166
-msgid ""
-":guilabel:`Clip to Extent`: it can be user-defined, bound to a layer or to "
-"the map canvas"
-msgstr ":guilabel:`切り抜く範囲` ：ユーザ定義の範囲やレイヤ領域、マップキャンバス領域を境界とすることができます"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:167
-msgid ":guilabel:`Output Size`,"
-msgstr ":guilabel:`出力サイズ` "
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:168
-msgid ":guilabel:`Add aligned raster to the map canvas`."
-msgstr ":guilabel:`揃えられたラスタをキャンバスに追加する`"

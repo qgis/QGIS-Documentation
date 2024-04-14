@@ -2,28 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
-# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# Harrissou Sant-anna, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"번역은 `여러분이 참여할 수 있는 "
+"<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:6
 msgid "Raster Analysis"
@@ -70,9 +79,9 @@ msgstr ""
 "|checkbox| :guilabel:`Create on-the-fly raster instead of writing layer to "
 "disk`:"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:184
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:160
 msgid "checkbox"
-msgstr ""
+msgstr "checkbox"
 
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:42
 msgid ""
@@ -141,19 +150,15 @@ msgstr ""
 "``cos``, ``tan``, ... )를 사용할 수 있습니다. 조건 표현식(``=``, ``!=``, ``<``, ``>=``, "
 "... )은 거짓인 경우 0을 또는 참인 경우 1을 반환하기 때문에, 다른 연산자 및 함수와 함께 사용할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:70
-msgid "See also the :ref:`qgisrastercalculator` algorithm."
-msgstr ":ref:`qgisrastercalculator` 알고리즘도 참조하세요."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:73
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:108
 msgid "Examples"
 msgstr "예제"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:75
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:110
 msgid "**Convert elevation values from meters to feet**"
 msgstr "**표고값을 미터 단위에서 피트 단위로 변환하기**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:77
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:112
 msgid ""
 "Creating an elevation raster in feet from a raster in meters, you need to "
 "use the conversion factor for meters to feet: 3.28. The expression is:"
@@ -161,11 +166,11 @@ msgstr ""
 "미터 단위의 표고 래스터에서 피트 단위의 래스터를 생성하려면, 미터를 피트로 변환하는 인수 3.28을 사용해야 합니다. 다음은 그 "
 "표현식입니다:"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:84
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:119
 msgid "**Using a mask**"
 msgstr "**마스크 이용하기**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:86
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:121
 msgid ""
 "If you want to mask out parts of a raster -- say, for instance, because you "
 "are only interested in elevations above 0 meters -- you can use the "
@@ -175,7 +180,7 @@ msgstr ""
 "래스터의 일부분을 가리고 싶은 경우 － 그러니까 예를 들어 표고 0미터 이상에만 관심이 있을 경우 － 다음 표현식을 이용해서 마스크를 "
 "생성하고 그 결과를 래스터에 적용하는 작업을 한 번에 할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:94
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
 msgid ""
 "In other words, for every cell greater than or equal to 0 the conditional "
 "expression evaluates to 1, which keeps the original value by multiplying it "
@@ -185,11 +190,11 @@ msgstr ""
 "즉 그 값이 0 이상인 모든 셀에 대해 조건 표현식이 1을 반환하기 때문에 1을 곱해도 원본 값을 유지합니다. 반면 값이 0 미만인 셀에"
 " 대해서는 0을 반환하기 때문에 래스터 값이 0이 됩니다. 이렇게 실시간으로 마스크를 생성합니다."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:99
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:134
 msgid "**Classify a Raster**"
 msgstr "**래스터 범주화하기**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:101
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:136
 msgid ""
 "If you want to classify a raster -- say, for instance into two elevation "
 "classes, you can use the following expression to create a raster with two "
@@ -198,162 +203,12 @@ msgstr ""
 "래스터를 범주화하고 싶은 경우 － 그러니까 예를 들어 표고값을 2단계로 나누고 싶은 경우, 다음 표현식을 이용해서 1과 2 두 개의 값을"
 " 지닌 래스터를 한 번에 생성할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:109
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
 msgid ""
 "In other words, for every cell less than 50 set its value to 1. For every "
 "cell greater than or equal 50 set its value to 2."
 msgstr "즉 그 값이 50 미만인 모든 셀의 값은 1이 되고, 50 이상인 모든 셀의 값은 2가 됩니다."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:112
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:147
 msgid "Or you can use the ``IF`` operator."
 msgstr "또는 ``IF`` 연산자를 사용할 수 있습니다."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:123
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:175
-msgid "Raster Alignment"
-msgstr "래스터 정렬"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:125
-msgid ""
-"This tool is able to take several rasters as input and to align them "
-"perfectly, that means:"
-msgstr "이 도구는 여러 래스터를 입력받아 완벽하게 정렬할 수 있습니다. 무슨 뜻이냐 하면:"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:128
-msgid "reproject to the same CRS,"
-msgstr "동일한 좌표계로 재투영하고,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
-msgid "resample to the same cell size and offset in the grid,"
-msgstr "그리드에 있는 셀 크기 및 오프셋을 동일하게 리샘플링하며,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:130
-msgid "clip to a region of interest,"
-msgstr "관심 지역으로 잘라내고,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:131
-msgid "rescale values when required."
-msgstr "필요한 경우 값을 재조정할 수 있습니다."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:133
-msgid "All rasters will be saved in another files."
-msgstr "이때 모든 래스터는 다른 파일로 저장될 것입니다."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:135
-msgid ""
-"First, open the tools from :menuselection:`Raster --> Align Raster...` and "
-"click on the |symbologyAdd| :sup:`Add new raster` button to choose one "
-"existing raster in QGIS. Select an output file to save the raster after the "
-"alignment, the resampling method and if the tools need to :guilabel:`Rescale"
-" values according to the cell size`. The resampling method can be (see "
-":numref:`figure_raster_align_edit`):"
-msgstr ""
-"먼저, :menuselection:`Raster --> Align Raster...` 에서 이 도구를 열고 |symbologyAdd| "
-":sup:`Add new raster` 아이콘을 클릭해서 QGIS에 있는 기존 래스터 가운데 하나를 선택하십시오. 정렬 작업 뒤에 "
-"래스터를 저장할 산출 파일, 리샘플링 방법, 그리고 :guilabel:`Rescale values according to the cell"
-" size` 옵션으로 셀 크기에 따라 값을 재조정할지 여부를 선택하십시오. 리샘플링 방법은 다음 가운데 하나를 선택할 수 있습니다. "
-"(:numref:`figure_raster_align_edit` 를 참조하세요.):"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:186
-msgid "symbologyAdd"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:141
-msgid "**Nearest Neighbor**"
-msgstr "**Nearest Neighbor**"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:142
-msgid "**Bilinear (2x2 kernel)**"
-msgstr "**Bilinear (2x2 kernel)**"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:143
-msgid "**Cubic (4x4 kernel)**: Cubic Convolution Approximation"
-msgstr "**Cubic (4x4 kernel)**: 3차 회선 근사값(Cubic Convolution Approximation)"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
-msgid "**Cubic B-Spline (4x4 kernel)**: Cubic B-Spline Approximation"
-msgstr ""
-"**Cubic B-Spline (4x4 kernel)**: 3차 B 스플라인 근사값(Cubic B-Spline Approximation)"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:145
-msgid "**Lanczos (6x6 kernel)**: Lanczos windowed sinc interpolation"
-msgstr ""
-"**Lanczos (6x6 kernel)**: `란초시 창함수 싱크 보간법 "
-"<https://en.wikipedia.org/wiki/Lanczos_resampling>`_ (Lánczos windowed sinc "
-"interpolation)"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:146
-msgid ""
-"**Average**: computes the average of all non-NODATA contributing pixels"
-msgstr "**Average**: NODATA가 아닌 모든 기여 픽셀(contributing pixel)의 평균값을 계산"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:147
-msgid ""
-"**Mode**: selects the value which appears most often of all the sampled "
-"points"
-msgstr "**Mode**: 표본 추출(sampling)한 모든 포인트 가운데 가장 흔히 나타나는 값을 선택"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:148
-msgid ""
-"**Maximum**, **Minimum**, **Mediane**, **First Quartile (Q1)** or **Third "
-"Quartile (Q3)** of all non-NODATA contributing pixels"
-msgstr ""
-"**Maximum**, **Minimum**, **Mediane**, **First Quartile (Q1)** 또는 **Third "
-"Quartile (Q3)**: NODATA가 아닌 모든 기여 픽셀의 최대값, 최소값, 중앙값, 제1 사분위수(Q1) 또는 제3 "
-"사분위수(Q3)를 계산"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:156
-msgid "Select Raster Resampling Options"
-msgstr "래스터 리샘플링 옵션 선택하기"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:158
-msgid ""
-"In the main :guilabel:`Align raster` dialog, you can still |symbologyEdit| "
-":sup:`Edit file settings` or |symbologyRemove| :sup:`Remove an existing "
-"file` from the list of raster layers. You can also choose one or more other "
-"options (see :numref:`figure_raster_align`):"
-msgstr ""
-":guilabel:`Align raster` 대화창에서, 래스터 레이어 목록으로부터 |symbologyEdit| :sup:`Edit "
-"file settings` 아이콘으로 파일 설정을 편집하거나 |symbologyRemove| :sup:`Remove an existing"
-" file` 아이콘으로 기존 파일을 제거할 수 있습니다. 다음 기타 옵션도 하나 이상 선택할 수 있습니다. "
-"(:numref:`figure_raster_align` 을 참조하세요.):"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:188
-msgid "symbologyEdit"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:190
-msgid "symbologyRemove"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:162
-msgid "Select the :guilabel:`Reference Layer`,"
-msgstr ":guilabel:`Reference Layer`: 참조 레이어 선택"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:163
-msgid "Transform into a new :guilabel:`CRS`,"
-msgstr ":guilabel:`CRS`: 새 좌표계로 변형"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:164
-msgid "Setup a different :guilabel:`Cell size`,"
-msgstr ":guilabel:`Cell size`: 다른 셀 크기를 설정"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:165
-msgid "Setup a different :guilabel:`Grid Offset`,"
-msgstr ":guilabel:`Grid Offset`: 다른 그리드 오프셋을 설정"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:166
-msgid ""
-":guilabel:`Clip to Extent`: it can be user-defined, bound to a layer or to "
-"the map canvas"
-msgstr ":guilabel:`Clip to Extent`: 사용자 정의, 레이어 기반, 또는 맵 캔버스 기반 가운데 하나를 선택"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:167
-msgid ":guilabel:`Output Size`,"
-msgstr ":guilabel:`Output Size`: 산출물 크기를 설정"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:168
-msgid ":guilabel:`Add aligned raster to the map canvas`."
-msgstr ""
-":guilabel:`Add aligned raster to the map canvas`: 맵 캔버스에 정렬한 래스터를 추가할지 여부를 "
-"선택"

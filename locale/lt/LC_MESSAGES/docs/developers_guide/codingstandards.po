@@ -2,96 +2,158 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
-# Tomas Straupis, 2023
+# Harrissou Sant-anna, 2024
+# Transifex Bot <>, 2024
+# Tomas Straupis, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Tomas Straupis, 2023\n"
+"POT-Creation-Date: 2024-03-11 16:48+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Tomas Straupis, 2024\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"Vertimas yra bendruomenės pastangos `jūs galite prisijungti "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Šis puslapis šiuo metu išverstas |translation progress|."
+
+#: ../../docs/developers_guide/codingstandards.rst:5
+msgid "QGIS Coding Standards"
+msgstr "QGIS programavimo standartai"
+
+#: ../../docs/developers_guide/codingstandards.rst:10
+msgid "These standards should be followed by all QGIS developers."
+msgstr "Šių standartų turi laikytis visi QGIS programuotojai."
+
+#: ../../docs/developers_guide/codingstandards.rst:13
+msgid "Classes"
+msgstr "Klasės"
+
+#: ../../docs/developers_guide/codingstandards.rst:17
+#: ../../docs/developers_guide/codingstandards.rst:213
+msgid "Names"
+msgstr "Pavadinimai"
+
+#: ../../docs/developers_guide/codingstandards.rst:19
+msgid "Class in QGIS begin with Qgs and are formed using camel case."
+msgstr ""
+"QGIS klasės prasideda Qgs ir formuojamos naudojant kupranugario stilių."
+
+#: ../../docs/developers_guide/codingstandards.rst:21
+#: ../../docs/developers_guide/codingstandards.rst:192
+#: ../../docs/developers_guide/codingstandards.rst:265
+msgid "Examples:"
+msgstr "Pavyzdžiai:"
+
 #: ../../docs/developers_guide/codingstandards.rst:23
 msgid "``QgsPoint``"
-msgstr ""
+msgstr "``QgsPoint``"
 
 #: ../../docs/developers_guide/codingstandards.rst:24
 msgid "``QgsMapCanvas``"
-msgstr ""
+msgstr "``QgsMapCanvas``"
 
 #: ../../docs/developers_guide/codingstandards.rst:25
 msgid "``QgsRasterLayer``"
+msgstr "``QgsRasterLayer``"
+
+#: ../../docs/developers_guide/codingstandards.rst:29
+msgid "Members"
+msgstr "Nariai"
+
+#: ../../docs/developers_guide/codingstandards.rst:32
+msgid ""
+"Class member names begin with a lower case m and are formed using mixed "
+"case."
 msgstr ""
+"Klasių narių pavadinimai prasideda mažąja raide ir formuojami naudojant "
+"skirtingo dydžio raides."
 
 #: ../../docs/developers_guide/codingstandards.rst:35
 msgid "``mMapCanvas``"
-msgstr ""
+msgstr "``mMapCanvas``"
 
 #: ../../docs/developers_guide/codingstandards.rst:36
 msgid "``mCurrentExtent``"
+msgstr "``mCurrentExtent``"
+
+#: ../../docs/developers_guide/codingstandards.rst:38
+msgid ""
+"All class members should be private. Public class members are STRONGLY "
+"discouraged. Protected members should be avoided when the member may need to"
+" be accessed from Python subclasses, since protected members cannot be used "
+"from the Python bindings."
 msgstr ""
+"Visi klasių nariai turi būti privatūs. Vieši klasių nariai LABAI "
+"nepageidaujami. Reikėtų vengti apsaugotų narių, kai prie nario reikės "
+"prieiti iš Python poklasių, nes apsaugotų narių negalima naudoti iš Python "
+"susiejimų."
 
 #: ../../docs/developers_guide/codingstandards.rst:46
 msgid "``sRefCounter``"
-msgstr ""
+msgstr "``sRefCounter``"
 
 #: ../../docs/developers_guide/codingstandards.rst:47
 msgid "``DEFAULT_QUEUE_SIZE``"
-msgstr ""
+msgstr "``DEFAULT_QUEUE_SIZE``"
 
 #: ../../docs/developers_guide/codingstandards.rst:58
 msgid "``mapCanvas()``"
-msgstr ""
+msgstr "``mapCanvas()``"
 
 #: ../../docs/developers_guide/codingstandards.rst:59
 msgid "``currentExtent()``"
-msgstr ""
+msgstr "``currentExtent()``"
 
 #: ../../docs/developers_guide/codingstandards.rst:72
 msgid "``updateMapExtent()``"
-msgstr ""
+msgstr "``updateMapExtent()``"
 
 #: ../../docs/developers_guide/codingstandards.rst:73
 msgid "``setUserOptions()``"
-msgstr ""
+msgstr "``setUserOptions()``"
 
 #: ../../docs/developers_guide/codingstandards.rst:107
 msgid "``int maximumValue() const``"
-msgstr ""
+msgstr "``int maximumValue() const``"
 
 #: ../../docs/developers_guide/codingstandards.rst:108
 msgid "``const LayerSet& layers() const``"
-msgstr ""
+msgstr "``const LayerSet& layers() const``"
 
 #: ../../docs/developers_guide/codingstandards.rst:194
 msgid "``QgsPluginManagerBase``"
-msgstr ""
+msgstr "``QgsPluginManagerBase``"
 
 #: ../../docs/developers_guide/codingstandards.rst:195
 msgid "``QgsUserOptionsBase``"
-msgstr ""
+msgstr "``QgsUserOptionsBase``"
 
 #: ../../docs/developers_guide/codingstandards.rst:267
 msgid "``mapCanvas``"
-msgstr ""
+msgstr "``mapCanvas``"
 
 #: ../../docs/developers_guide/codingstandards.rst:268
 msgid "``currentExtent``"
-msgstr ""
+msgstr "``currentExtent``"
 
 #: ../../docs/developers_guide/codingstandards.rst:327
 msgid "Editing"
@@ -99,40 +161,44 @@ msgstr "Redagavimas"
 
 #: ../../docs/developers_guide/codingstandards.rst:435
 msgid "``SIP_FACTORY``: ``/Factory/``"
-msgstr ""
+msgstr "``SIP_FACTORY``: ``/Factory/``"
 
 #: ../../docs/developers_guide/codingstandards.rst:436
 msgid "``SIP_OUT``: ``/Out/``"
-msgstr ""
+msgstr "``SIP_OUT``: ``/Out/``"
 
 #: ../../docs/developers_guide/codingstandards.rst:437
 msgid "``SIP_INOUT``: ``/In,Out/``"
-msgstr ""
+msgstr "``SIP_INOUT``: ``/In,Out/``"
 
 #: ../../docs/developers_guide/codingstandards.rst:438
 msgid "``SIP_TRANSFER``: ``/Transfer/``"
-msgstr ""
+msgstr "``SIP_TRANSFER``: ``/Transfer/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:439
+msgid "``SIP_PYNAME(name)``: ``/PyName=name/``"
+msgstr "``SIP_PYNAME(name)``: ``/PyName=name/``"
 
 #: ../../docs/developers_guide/codingstandards.rst:440
 msgid "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
-msgstr ""
+msgstr "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
 
 #: ../../docs/developers_guide/codingstandards.rst:441
 msgid "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
-msgstr ""
+msgstr "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
 
 #: ../../docs/developers_guide/codingstandards.rst:442
 msgid "``SIP_TRANSFERBACK``: ``/TransferBack/``"
-msgstr ""
+msgstr "``SIP_TRANSFERBACK``: ``/TransferBack/``"
 
 #: ../../docs/developers_guide/codingstandards.rst:489
 msgid "Settings"
 msgstr "Nustatymai"
 
-#: ../../docs/developers_guide/codingstandards.rst:633
-msgid ":source:`doc/CONTRIBUTORS`"
-msgstr ""
-
 #: ../../docs/developers_guide/codingstandards.rst:634
+msgid ":source:`doc/CONTRIBUTORS`"
+msgstr ":source:`doc/CONTRIBUTORS`"
+
+#: ../../docs/developers_guide/codingstandards.rst:635
 msgid ":source:`doc/AUTHORS`"
-msgstr ""
+msgstr ":source:`doc/AUTHORS`"

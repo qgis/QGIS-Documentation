@@ -2,36 +2,27 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
+# Hongguo Zhang, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Hongguo Zhang, 2024\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../docs/training_manual/database_concepts/db_intro.rst:122
-#: ../../docs/training_manual/database_concepts/db_intro.rst:209
-msgid "|TY| |basic|"
-msgstr ""
-
-#: ../../docs/training_manual/database_concepts/db_intro.rst:457
-msgid "basic"
-msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:127
 #: ../../docs/training_manual/database_concepts/db_intro.rst:216
@@ -39,18 +30,37 @@ msgstr ""
 msgid "Answer"
 msgstr "回答"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:340
-msgid "|TY| |moderate|"
-msgstr ""
+#: ../../docs/training_manual/database_concepts/db_intro.rst:416
+msgid "Transactions"
+msgstr "事务"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:458
-msgid "moderate"
+#: ../../docs/training_manual/database_concepts/db_intro.rst:418
+msgid ""
+"When adding, changing, or deleting data in a database, it is always "
+"important that the database is left in a good state if something goes wrong."
+" Most databases provide a feature called transaction support. Transactions "
+"allow you to create a rollback position that you can return to if your "
+"modifications to the database did not run as planned."
 msgstr ""
+"如果在数据库中添加、更改或删除数据时出现问题，确保数据库始终处于良好状态至关重要。大多数数据库都提供了一种称为事务支持的功能。事务允许您创建一个回滚位置，当您对数据库的修改未按预期运行，可以返回到该位置。"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:435
-msgid "|IC|"
-msgstr ""
+#: ../../docs/training_manual/database_concepts/db_intro.rst:424
+msgid ""
+"Take a scenario where you have an accounting system. You need to transfer "
+"funds from one account and add them to another. The sequence of steps would "
+"go like this:"
+msgstr "假设您有一个会计系统给，您需要从一个账户向另一个账户转账。操作步骤的顺序如下："
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:441
-msgid "|WN|"
-msgstr ""
+#: ../../docs/training_manual/database_concepts/db_intro.rst:428
+msgid "remove R20 from Joe"
+msgstr "移除 R20 从 Joe"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:429
+msgid "add R20 to Anne"
+msgstr "添加 R20 至 Anne"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:431
+msgid ""
+"If something goes wrong during the process (e.g. power failure), the "
+"transaction will be rolled back."
+msgstr "如果在处理过程中出现错误（例如：断电），事务将会回滚。"

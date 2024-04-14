@@ -2,27 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# tomoya miyoshi, 2023
+# Harrissou Sant-anna, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-30 19:51+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: tomoya miyoshi, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"翻訳は `あなたが参加できる "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_ コミュニティの取り組みです。このページは現在 |translation progress| 翻訳されています。"
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:25
 msgid "Geometry Handling"
@@ -138,16 +148,7 @@ msgstr ""
 "まず、ジオメトリタイプを調べます。使用するのは :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>` "
 "というメソッドです。これは :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>` の列挙から値を返します。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:167
-msgid ""
-"As an alternative, one can use the :meth:`type() "
-"<qgis.core.QgsGeometry.type>` method which returns a value from the "
-":class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` enumeration."
-msgstr ""
-"代替案として、 :meth:`type() <qgis.core.QgsGeometry.type>` メソッドを使うことができます。このメソッドは "
-":class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` 列挙から値を返します。"
-
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:171
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:178
 msgid ""
 "You can use the :meth:`displayString() "
 "<qgis.core.QgsWkbTypes.displayString>` function to get a human readable "
@@ -156,7 +157,7 @@ msgstr ""
 ":meth:`displayString() <qgis.core.QgsWkbTypes.displayString>` "
 "関数を使用すると、人間が読めるジオメトリタイプを取得することができます。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:189
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:197
 msgid ""
 "There is also a helper function :meth:`isMultipart() "
 "<qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is "
@@ -165,14 +166,14 @@ msgstr ""
 "また、ジオメトリがマルチパートであるかどうかを調べるヘルパー関数 :meth:`isMultipart() "
 "<qgis.core.QgsGeometry.isMultipart>` も用意されています。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:192
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:200
 msgid ""
 "To extract information from a geometry there are accessor functions for "
 "every vector type. Here's an example on how to use these accessors:"
 msgstr ""
 "ジオメトリから情報を抽出するために、各ベクタ型に対応したアクセサ関数が用意されています。ここでは、これらのアクセサの使い方の例を紹介します:"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:212
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:220
 msgid ""
 "The tuples (x,y) are not real tuples, they are :class:`QgsPoint "
 "<qgis.core.QgsPoint>` objects, the values are accessible with :meth:`x() "
@@ -182,7 +183,7 @@ msgstr ""
 ":meth:`x() <qgis.core.QgsPoint.x>` と :meth:`y() <qgis.core.QgsPoint.y>` "
 "というメソッドでアクセスできます。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:216
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:224
 msgid ""
 "For multipart geometries there are similar accessor functions: "
 ":meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, "
@@ -194,13 +195,13 @@ msgstr ""
 "<qgis.core.QgsGeometry.asMultiPolyline>` および :meth:`asMultiPolygon() "
 "<qgis.core.QgsGeometry.asMultiPolygon>`。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:222
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:230
 msgid ""
 "It is possible to iterate over all the parts of a geometry, regardless of "
 "the geometry's type. E.g."
 msgstr "ジオメトリのタイプに関係なく、ジオメトリのすべてのパーツに対して反復処理を行うことが可能です。例"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:257
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:265
 msgid ""
 "It's also possible to modify each part of the geometry using "
 ":meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` method."
@@ -208,11 +209,11 @@ msgstr ""
 "また、 :meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` "
 "メソッドを使ってジオメトリの各パーツを修正することも可能です。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:279
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:287
 msgid "Geometry Predicates and Operations"
 msgstr "ジオメトリの述語と操作"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:281
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:289
 msgid ""
 "QGIS uses GEOS library for advanced geometry operations such as geometry "
 "predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, "
@@ -228,7 +229,7 @@ msgstr ""
 "<qgis.core.QgsGeometry.difference>`, ...)などの高度なジオメトリ操作にGEOSライブラリを使っています。 "
 "また、面積（ポリゴンの場合）や長さ（ポリゴンとラインの場合）のようなジオメトリのプロパティを計算することもできます。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:287
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:295
 msgid ""
 "Let's see an example that combines iterating over the features in a given "
 "layer and performing some geometric computations based on their geometries. "
@@ -238,8 +239,8 @@ msgstr ""
 "ここでは、与えられたレイヤーの地物を繰り返し処理し、そのジオメトリに基づいて幾何学的な計算を実行する例を見てみましょう。以下のコードは、チュートリアル "
 "QGIS プロジェクトの ``countries`` レイヤーにある各国の面積と周囲長を計算し、表示するものです。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:292
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:331
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:300
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:339
 msgid ""
 "The following code assumes ``layer`` is a :class:`QgsVectorLayer "
 "<qgis.core.QgsVectorLayer>` object that has Polygon feature type."
@@ -247,7 +248,7 @@ msgstr ""
 "以下のコードは ``レイヤ`` が :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` オブジェクトで"
 " ポリゴン地物タイプを持っていると仮定します。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:322
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:330
 msgid ""
 "Now you have calculated and printed the areas and perimeters of the "
 "geometries. You may however quickly notice that the values are strange. That"
@@ -265,11 +266,11 @@ msgstr ""
 "を使って計算した場合、面積や周長はCRSを考慮しないためです。より強力な面積と距離の計算を行うには、 :class:`QgsDistanceArea "
 "<qgis.core.QgsDistanceArea>` クラスを使用することができ、楕円体ベースの計算を行うことができます:"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:367
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:375
 msgid "Alternatively, you may want to know the distance between two points."
 msgstr "また、2点間の距離を知りたい場合もあります。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:387
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:395
 msgid ""
 "You can find many example of algorithms that are included in QGIS and use "
 "these methods to analyze and transform vector data. Here are some links to "
@@ -277,7 +278,7 @@ msgid ""
 msgstr ""
 "QGISに含まれているアルゴリズムの多くの例を見つけて、これらのメソッドをベクターデータを分析し変換するために使用できます。ここにそれらのコードのいくつかへのリンクを記載します。"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:391
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:399
 msgid ""
 "Distance and area using the :class:`QgsDistanceArea "
 "<qgis.core.QgsDistanceArea>` class: :source:`Distance matrix algorithm "
@@ -287,7 +288,7 @@ msgstr ""
 "matrix algorithm <python/plugins/processing/algs/qgis/PointDistance.py>` "
 "による距離と領域の計算"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:393
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:401
 msgid ""
 ":source:`Lines to polygons algorithm "
 "<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"

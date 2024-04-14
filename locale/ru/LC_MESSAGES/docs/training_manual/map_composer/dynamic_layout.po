@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-04-11 01:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
 "Last-Translator: Transifex Bot <>, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
@@ -23,10 +23,6 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
-
-#: ../../docs/training_manual/map_composer/dynamic_layout.rst:2
-msgid "|LS| Creating a Dynamic Print Layout"
-msgstr "Занятие: Создание динамического макета печати"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:4
 msgid ""
@@ -40,14 +36,6 @@ msgstr ""
 "карты и свойствам страницы, например, при изменении размера страницы. Также "
 "дата создания будет динамически адаптироваться."
 
-#: ../../docs/training_manual/map_composer/dynamic_layout.rst:11
-msgid "|moderate| |FA| Creating the dynamic map canvas"
-msgstr "|moderate| Идем дальше: Создаем динамическое Полотно Карты"
-
-#: ../../docs/training_manual/map_composer/dynamic_layout.rst:332
-msgid "moderate"
-msgstr "moderate"
-
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:13
 msgid ""
 "Load the ESRI Shapefile format datasets :file:`protected_areas.shp`, "
@@ -57,6 +45,10 @@ msgstr ""
 "Загрузите наборы данных формата ESRI Shapefile :file:`protected_areas.shp`, "
 ":file:`places.shp`, :file:`rivers.shp` and :file:`water.shp` в Полотно Карты"
 " и настройте их свойства для вашего удобства."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:329
+msgid "newLayout"
+msgstr "newLayout"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:21
 msgid ""
@@ -91,6 +83,10 @@ msgstr ""
 "|symbologyAdd| и введите имя ``sw_layout_height_header``. Установите "
 "значение ``36``."
 
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:337
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:40
 msgid ""
 "Now you are ready to create the position and the size of the map canvas "
@@ -107,7 +103,7 @@ msgstr ""
 "|dataDefineExpressionOn| :sup:`Data defined override` для :guilabel:`X` и из"
 " :guilabel:`Variables` выберите ``@sw_layout_margin``."
 
-#: ../../docs/training_manual/map_composer/dynamic_layout.rst:328
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:325
 msgid "dataDefineExpressionOn"
 msgstr "dataDefineExpressionOn"
 
@@ -161,10 +157,6 @@ msgstr ""
 ":guilabel:`Grid type` :guilabel:`Cross` очень хорошо подходит для наших "
 "целей."
 
-#: ../../docs/training_manual/map_composer/dynamic_layout.rst:81
-msgid "|moderate| |FA| Creating the dynamic header"
-msgstr "|moderate| Идем дальше: Создаем динамический заголовок "
-
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:83
 msgid ""
 "Insert a rectangle which will contain the header with the |addBasicShape| "
@@ -174,6 +166,10 @@ msgstr ""
 "Вставьте прямоугольник, в котором будет заголовок, с помощью кнопки "
 "|addBasicShape| :sup:`Add Shape`. Введите имя заголовка ``header`` на панели"
 "  :guilabel:`Items`."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:319
+msgid "addBasicShape"
+msgstr "addBasicShape"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:86
 msgid ""
@@ -204,6 +200,10 @@ msgstr ""
 "заголовок на разные секции при помощи Добавить элемент узла |addNodesShape| "
 ":sup:`Add Node Item`. Создайте горизонтальную линию две вертикальные линии "
 "назовите их ``Horizontal line``, ``Vertical line 1`` ``Vertical line 2``."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:323
+msgid "addNodesShape"
+msgstr "addNodesShape"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:102
 msgid "For the horizontal line:"
@@ -263,10 +263,6 @@ msgstr ""
 "На рисунке ниже показана структура нашего динамического макета. Мы заполним "
 "некоторыми элементами те области, которые созданы линиями."
 
-#: ../../docs/training_manual/map_composer/dynamic_layout.rst:143
-msgid "|moderate| |FA| Creating labels for the dynamic header"
-msgstr "|moderate| Идем дальше: Создаем надписи для динамического заголовка"
-
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:145
 msgid ""
 "The title of your QGIS project can be included automatically. The title is "
@@ -281,6 +277,10 @@ msgstr ""
 "``project title (variable)``. В Основных свойствах :guilabel:`Main "
 "Properties` на панели Свойств элементов :guilabel:`Items Properties` введите"
 " следующее выражение::"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:327
+msgid "label"
+msgstr "label"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:154
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:183
@@ -369,11 +369,6 @@ msgstr "Для :guilabel:`Width` используйте ``49.00``."
 msgid "For :guilabel:`Height`, use the expression::"
 msgstr "Для :guilabel:`Height` используйте выражение::"
 
-#: ../../docs/training_manual/map_composer/dynamic_layout.rst:228
-msgid "|moderate| |FA| Adding pictures to the dynamic header"
-msgstr ""
-"|moderate| Идем дальше: Добавляем изображения к динамическому заголовку"
-
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:230
 msgid ""
 "Use the |addImage| :sup:`Add Picture` button to place a picture above your "
@@ -383,6 +378,10 @@ msgstr ""
 "Используйте кнопку |addImage| :sup:`Add Picture`, чтобы разместить картинку "
 "над вашей надписью  ``organisation information``. После ввода названия "
 "``organisation logo``, определите положение и размер логотипа:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:321
+msgid "addImage"
+msgstr "addImage"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:243
 msgid "For :guilabel:`Width`, use ``39.292``"
@@ -413,6 +412,10 @@ msgstr ""
 "North Arrow`. Мы будем использовать стрелку на север по умолчанию. "
 "Определите положение:"
 
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:331
+msgid "northArrow"
+msgstr "northArrow"
+
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:263
 msgid "For :guilabel:`Width`, use ``21.027``"
 msgstr "Для :guilabel:`Width` используйте ``21.027``."
@@ -420,10 +423,6 @@ msgstr "Для :guilabel:`Width` используйте ``21.027``."
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:264
 msgid "For :guilabel:`Height`, use ``21.157``"
 msgstr "Для :guilabel:`Height` используйте ``21.157``."
-
-#: ../../docs/training_manual/map_composer/dynamic_layout.rst:267
-msgid "|moderate| |FA| Creating the scalebar of the dynamic header"
-msgstr "|moderate| Идем дальше: Создаем шкалу динамического заголовка"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:269
 msgid ""
@@ -443,6 +442,10 @@ msgstr ""
 "основном полотне QGIS. Выберите :guilabel:`Style` :guilabel:`Numeric`. Это "
 "означает, что мы вводим простой масштаб без шкалы. Так как для шкалы нужно "
 "положение и размер."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:335
+msgid "scaleBar"
+msgstr "scaleBar"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:289
 msgid "For :guilabel:`Width`, use ``25``"
@@ -472,9 +475,9 @@ msgstr ""
 "кликните на Обновить просмотр :sup:`Refresh view`, и дизайн страницы будет "
 "адаптирован."
 
-#: ../../docs/training_manual/map_composer/dynamic_layout.rst:306
-msgid "|WN|"
-msgstr "|WN|"
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:333
+msgid "refresh"
+msgstr "refresh"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:308
 msgid ""

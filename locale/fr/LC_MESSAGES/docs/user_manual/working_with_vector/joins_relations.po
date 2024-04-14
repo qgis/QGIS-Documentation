@@ -5,6 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
+# Transifex Bot <>, 2024
 # Harrissou Sant-anna, 2024
 # 
 #, fuzzy
@@ -34,6 +35,20 @@ msgstr ""
 "a-translator>`_. Cette page est actuellement traduite à |translation "
 "progress|."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:6
+msgid "Connecting and Editing Data Across Layers"
+msgstr "Connecter et modifier des données entre couches"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:18
+msgid ""
+"Processing algorithms that can create a new layer as a result of the "
+"connection, namely :ref:`qgisjoinattributesbylocation`, "
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, ..."
+msgstr ""
+"Des algorithmes de traitement qui par interaction entre couches génèrent une"
+" nouvelle couche, comme par exemple :ref:`qgisjoinattributesbylocation`, "
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, ..."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:21
 msgid ""
 "SQL queries to create a new layer from the :ref:`DB Manager <dbmanager>` or "
@@ -42,6 +57,17 @@ msgstr ""
 "Requêtes SQL de création d'une nouvelle couche depuis le :ref:`Gestionnaire "
 "de Bases de données <dbmanager>` ou en tant que :ref:`couche virtuelle "
 "<vector_virtual_layers>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:37
+msgid "Joining features between two layers"
+msgstr "Joindre des entités de deux couches"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:46
+msgid ""
+"Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab"
+msgstr ""
+"Rendez vous dans l'onglet :menuselection:`Propriétés -->` |join| "
+":guilabel:`Jointures` de la couche"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
 msgid "join"
@@ -92,6 +118,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:80
+msgid ""
+"|unchecked| :guilabel:`Create attribute index on the join field` to speed up"
+" lookups"
+msgstr ""
+"|unchecked| :guilabel:`Créer un index des attributs sur le champ de la "
+"jointure` pour accélérer les recherches"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
 msgid "unchecked"
@@ -147,6 +181,23 @@ msgstr ""
 msgid "joinedLayerNotEditable"
 msgstr "joinedLayerNotEditable"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:94
+msgid ""
+"|joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization "
+"mechanisms are not activated. If you want to automatically add a feature in "
+"the join layer when a feature is created in the target layer, then you have "
+"to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, "
+"the option |checkbox| :guilabel:`Delete cascade` may be activated if you  "
+"want to automatically delete join features."
+msgstr ""
+"|joinHasNotUpsertOnEdit| : la couche de jointure est modifiable, mais les "
+"mécanismes de synchronisation ne sont pas activés. Si vous souhaitez ajouter"
+" automatiquement une entité dans la couche de jointure lorsqu'une entité est"
+" créée dans la couche cible, vous devez cocher l'option |checkbox| "
+":guilabel:`Mise à jour et insertion lors de l'édition`. Symétriquement, "
+"l'option |checkbox| :guilabel:`Supprimer en cascade` peut être activée si "
+"vous souhaitez supprimer automatiquement les entités jointes."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
 msgid "joinHasNotUpsertOnEdit"
 msgstr "joinHasNotUpsertOnEdit"
@@ -167,9 +218,33 @@ msgstr ""
 "|unchecked| :guilabel:`Préfixe de nom de champ personnalisé` pour les champs"
 " joints, afin d'éviter la collision de noms"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:111
+msgid "Setting relations between multiple layers"
+msgstr "Définir des relations entre plusieurs couches"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
 msgid "relations"
-msgstr "les relations"
+msgstr "relations"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:121
+msgid ":ref:`one to many relation <one_to_many_relation>`"
+msgstr ":ref:`relation un à plusieurs <one_to_many_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:122
+msgid ":ref:`many to many relation <many_to_many_relation>`"
+msgstr ":ref:`relation plusieurs à plusieurs <many_to_many_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:123
+msgid ""
+":ref:`polymorphic relation <polymorphic_relation>` that you can add or edit "
+"with the dedicated tools in the action drop-down menu."
+msgstr ""
+":ref:`relation polymorphique <polymorphic_relation>` que vous pouvez ajouter"
+" ou modifier grâce aux outils dédiés dans la liste déroulante."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:133
+msgid "|symbologyRemove| :guilabel:`Remove relation`"
+msgstr "|symbologyRemove| :guilabel:`Supprimer relation`"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
 msgid "symbologyRemove"
@@ -178,6 +253,20 @@ msgstr "symbologyRemove"
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:140
 msgid "Relations tab"
 msgstr "Onglet Relations"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:148
+msgid "One to many (1-N) relations"
+msgstr "Relation un à plusieurs (1-N)"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:150
+msgid ""
+"As an example you have a layer with all regions of Alaska (polygon) which "
+"provides some attributes about its name and region type and a unique id "
+"(which acts as primary key)."
+msgstr ""
+"Comme exemple, nous prendrons une couche contenant toutes les régions de "
+"l'Alaska (des polygones) qui fournit quelques attributs sur le nom, le type "
+"de région et un identifiant unique (qui jouera le rôle de clé primaire)."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:154
 msgid ""
@@ -197,6 +286,27 @@ msgstr ""
 msgid "Alaska region with airports"
 msgstr "Les régions d'Alaska contenant des aéroports"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:168
+msgid "Layers and keys"
+msgstr "Couches et clés"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:170
+msgid ""
+"QGIS makes no difference between a table and a vector layer. Basically, a "
+"vector layer is a table with a geometry. So you can add your table as a "
+"vector layer. To demonstrate the 1-n relation, you can load the "
+":file:`regions` and :file:`airports` layers in the sample dataset. In "
+"practice, each airport belongs to exactly one region while each region can "
+"have any number of airports (a typical one to many relation)."
+msgstr ""
+"QGIS ne fait pas de distinction entre une table et une couche vecteur. Très "
+"simplement, une couche vecteur est une table associée à une géométrie. Ce "
+"qui signifie que vous pouvez ajouter votre table comme une couche vecteur. "
+"Pour démontrer la relation de 1 à n, vous pouvez charger les couches "
+":file:`regions` et :file:`airports` du jeu de données. En pratique, chaque "
+"aéroport appartient à une et une seule région alors que chaque région peut "
+"avoir un nombre variable d'aéroports (une relation 1 à plusieurs)."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:191
 msgid "Defining 1-N relations"
 msgstr "Définir les relations 1-N"
@@ -213,6 +323,15 @@ msgstr ""
 ":menuselection:`Projet --> Propriétés...`. Ouvrez l'onglet "
 ":guilabel:`Relations` et cliquez sur |symbologyAdd| :guilabel:`Ajout "
 "relation` ."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:197
+msgid ""
+"**Name** is going to be used as a title. It should be a human readable "
+"string describing what the relation is used for. We will just call say "
+"**airport_relation** in this case."
+msgstr ""
+"**Nom** sera utilisé comme titre. Il s'agit d'un texte lisible décrivant la "
+"relation. Ici, nous allons simplement mettre **airport_relation**."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:200
 msgid ""
@@ -237,6 +356,22 @@ msgstr ""
 " cas, il s'agit de la couche ``airports``. Pour cette couche, vous devez "
 "ajouter un champ de référencement qui pointe vers l'autre couche, c'est donc"
 " la ``fk_region``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:209
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:587
+msgid ""
+"Sometimes, you need more than a single field to uniquely identify features "
+"in a layer. Creating a relation with such a layer requires a **composite "
+"key**, i.e. more than a single pair of matching fields. Use the "
+"|symbologyAdd| :sup:`Add new field pair as part of a composite foreign key` "
+"button to add as many pairs as necessary."
+msgstr ""
+"Parfois, il faut plus qu'un seul champ pour identifier de manière unique les"
+" éléments d'une couche. Pour créer une relation avec une telle couche, il "
+"faut une **clé composite**, c'est-à-dire plus qu'une seule paire de champs "
+"correspondants. Utilisez le bouton |symbologyAdd| :sup:`Ajouter une nouvelle"
+" paire de champ pour créer une clé composite` pour ajouter autant de paires "
+"que nécessaire."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:215
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:576
@@ -272,6 +407,23 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:240
 msgid "Forms for 1-N relations"
 msgstr "Formulaires pour les relations de 1 à n"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:242
+msgid ""
+"Now that QGIS knows about the relation, it will be used to improve the forms"
+" it generates. As we did not change the default form method (autogenerated),"
+" it will just add a new widget in our form. So let's select the layer region"
+" in the legend and use the identify tool. Depending on your settings, the "
+"form might open directly or you will have to choose to open it in the "
+"identification dialog under actions."
+msgstr ""
+"Maintenant que QGIS a bien généré la relation, le formulaire d'édition va "
+"être amélioré. Nous n'avons pas modifié le formulaire d'édition par défaut "
+"(généré automatiquement), une nouvelle zone va simplement être ajoutée au "
+"formulaire. Sélectionnez la couche de régions dans la légende et utilisez "
+"l'outil d'identification. Selon vos préférences, le formulaire s'ouvre "
+"directement ou vous devez le faire via la zone d'identification qui "
+"s'affiche."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:253
 msgid "Identification dialog regions with relation to airports"
@@ -323,6 +475,14 @@ msgstr "duplicateFeature"
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:674
 msgid "deleteSelectedFeatures"
 msgstr "deleteSelectedFeatures"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
+msgid "link"
+msgstr "link"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:706
+msgid "unlink"
+msgstr "unlink"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:278
 msgid ""
@@ -424,6 +584,16 @@ msgstr ""
 "d'attributs` de la couche des aéroports : sélectionner le champ "
 "``fk_region`` et cocher l'option ``Montrer le formulaire incrusté`` "
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:327
+msgid ""
+"If you look at the feature dialog now, you will see that the form of the "
+"region is embedded inside the airports form and will even have a combobox, "
+"which allows you to assign the current airport to another region."
+msgstr ""
+"Vous devriez ainsi voir que le formulaire de la région est inclus dans celui"
+" d'un aéroport et il vous permet via une liste déroulante de modifier la "
+"région assignée à l'aéroport."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:336
 msgid ""
 "Moreover if you toggle the editing mode of the airport layer, the "
@@ -473,6 +643,10 @@ msgstr ""
 msgid "Select parent features with child values"
 msgstr "Sélectionner les entités des parents avec les valeurs des enfants"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:363
+msgid "Many-to-many (N-M) relations"
+msgstr "Relations plusieurs à plusieurs (N-M)"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:365
 msgid ""
 "N-M relations are many-to-many relations between two tables. For instance, "
@@ -483,6 +657,32 @@ msgstr ""
 "deux tables. Par exemple, les couches ``airports`` et ``airlines``: un "
 "aéroport reçoit plusieurs compagnies aériennes et une compagnie aérienne "
 "utilise plusieurs aéroports."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:370
+msgid ""
+"This SQL code creates the three tables we need for an N-M relationship in a "
+"PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
+":menuselection:`Database --> DB Manager…` for PostGIS or external tools such"
+" as `pgAdmin <https://www.pgadmin.org>`_. The airports table stores the "
+"``airports`` layer and the airline table stores the ``airlines`` layer. In "
+"both tables few fields are used for clarity. The *tricky* part is the "
+"``airports_airlines`` table. We need it to list all airlines for all "
+"airports (or vice versa). This kind of table is known as a *pivot table*. "
+"The *constraints* in this table force that an airport can be associated with"
+" an airline only if both already exist in their layers."
+msgstr ""
+"Ce code SQL crée les trois tables dont nous avons besoin pour une relation "
+"de n à n dans un schéma PostgreSQL/PostGIS nommé *locations*. Vous pouvez "
+"lancer le code en utilisant :menuselection:`Base de données --> DB Manager…`"
+" pour PostGIS ou des outils extérieurs tels que `pgAdmin "
+"<https://www.pgadmin.org>`_. La table des aéroports stocke la couche "
+"``airports`` et la table ``airlines`` stocke des lignes aériennes. Dans les "
+"deux tables, il y a peu de champs, pour faire simple. La partie *délicate* "
+"est la table ``airports_airlines``. Il faut qu'elle compile toutes les "
+"lignes aériennes pour tous les aéroports (et vice versa). Ce genre de table "
+"s'appelle une *table pivot*. Les *contraintes* de cette table ne rendent "
+"possible l'association d'un aéroport avec une ligne que si les deux existent"
+" déjà dans leurs couches. "
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:424
 msgid ""
@@ -618,10 +818,52 @@ msgstr "relation de n à n entre aéroports et lignes aériennes"
 msgid "Using **Many to one relation** cardinality"
 msgstr "Utiliser la cardinalité **Relation de n à 1**"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:510
+msgid ""
+"Sometimes hiding the pivot table in an N-M relationship is not desirable. "
+"Mainly because there are attributes in the relationship that can only have "
+"values when a relationship is established. If your tables have a geometry "
+"field, it could be interesting to activate the :guilabel:`On map "
+"identification` option (:menuselection:`Layer Properties --> Attributes Form"
+" --> Available widgets --> Fields`) for the foreign key fields in the pivot "
+"table."
+msgstr ""
+"Il n'est parfois pas souhaitable de cacher la table pivot dans une relation "
+"de n à n. Principalement parce qu'il y a des attributs dans cette relation "
+"qui ne peuvent avoir de valeurs que lorsque la relation est établie. Si vos "
+"tables sont des couches (qui ont un champ géométrie), il peut être "
+"intéressant d'activer l'option :guilabel:`Identification sur la carte` "
+"(:menuselection:`Propriétés de la couche --> Formulaire d'attributs --> "
+"Outils disponibles --> Champs`) pour les champs de clé étrangère dans la "
+"table pivot. "
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:517
 msgid "**Pivot table primary key**"
 msgstr "**Clé primaire de la table pivot**"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:519
+msgid ""
+"Avoid using multiple fields in the primary key in a pivot table. QGIS "
+"assumes a single  primary key so a constraint like ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` will not work."
+msgstr ""
+"Évitez d'utiliser des champs multiples dans la clé primaire de la table "
+"pivot. QGIS attend une clé primaire unique donc une contrainte comme "
+"``constraint airports_airlines_pkey primary key (airport_fk, airline_fk)`` "
+"ne fonctionnera pas. "
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:528
+msgid "Polymorphic relations"
+msgstr "Les relations polymorphiques"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:531
+msgid "The purpose"
+msgstr "L'objectif"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
 msgid "Defining polymorphic relations"
 msgstr "Définir les relations polymorphiques"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:626
+msgid "The example above uses the following database schema:"
+msgstr "L'exemple ci-dessus utilise le schéma de base de données suivant :"

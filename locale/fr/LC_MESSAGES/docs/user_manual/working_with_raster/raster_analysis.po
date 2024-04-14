@@ -2,27 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"La traduction est le fruit d'un effort communautaire auquel `vous pouvez "
+"prendre part <https://qgis.org/fr/site/getinvolved/translate.html#becoming-"
+"a-translator>`_. Cette page est actuellement traduite à |translation "
+"progress|."
 
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:6
 msgid "Raster Analysis"
@@ -45,23 +55,19 @@ msgstr ""
 "raster existant (voir :numref:`figure_raster_calculator`). Le résultat est "
 "écrit dans un nouveau raster dans un des formats gérés par GDAL."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:184
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:160
 msgid "checkbox"
-msgstr ""
+msgstr "checkbox"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:70
-msgid "See also the :ref:`qgisrastercalculator` algorithm."
-msgstr "Voir aussi l'algorithme :ref:`qgisrastercalculator`."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:73
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:108
 msgid "Examples"
 msgstr "Exemples"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:75
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:110
 msgid "**Convert elevation values from meters to feet**"
 msgstr "**Conversion en pieds de données d'élévation en mètres**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:77
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:112
 msgid ""
 "Creating an elevation raster in feet from a raster in meters, you need to "
 "use the conversion factor for meters to feet: 3.28. The expression is:"
@@ -70,11 +76,11 @@ msgstr ""
 "vous devez utiliser le facteur de conversion 3,28. La formule est la "
 "suivante :"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:84
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:119
 msgid "**Using a mask**"
 msgstr "**Utilisation d'un masque**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:86
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:121
 msgid ""
 "If you want to mask out parts of a raster -- say, for instance, because you "
 "are only interested in elevations above 0 meters -- you can use the "
@@ -86,7 +92,7 @@ msgstr ""
 "utiliser la formule suivante qui crée un masque et l'applique au raster en "
 "une seule étape."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:94
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
 msgid ""
 "In other words, for every cell greater than or equal to 0 the conditional "
 "expression evaluates to 1, which keeps the original value by multiplying it "
@@ -99,7 +105,7 @@ msgstr ""
 "qui remplace la valeur originelle par 0. Ceci permet de créer le masque à la"
 " volée."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:101
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:136
 msgid ""
 "If you want to classify a raster -- say, for instance into two elevation "
 "classes, you can use the following expression to create a raster with two "
@@ -109,7 +115,7 @@ msgstr ""
 " vous pouvez utiliser la formule suivante pour créer un raster contenant "
 "deux valeurs, 1 et 2, en une seule étape :"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:109
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
 msgid ""
 "In other words, for every cell less than 50 set its value to 1. For every "
 "cell greater than or equal 50 set its value to 2."
@@ -117,159 +123,3 @@ msgstr ""
 "En d'autres termes, les pixels de valeur inférieure à 50, ils prennent la "
 "valeur 1. Pour tous les pixels supérieurs ou égal à 50, ils prennent la "
 "valeur 2."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:123
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:175
-msgid "Raster Alignment"
-msgstr "Alignement de rasters"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:125
-msgid ""
-"This tool is able to take several rasters as input and to align them "
-"perfectly, that means:"
-msgstr ""
-"Cet outil permet de prendre plusieurs rasters en entrée et de les aligner "
-"exactement :"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:128
-msgid "reproject to the same CRS,"
-msgstr "reprojète dans le même SCR"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
-msgid "resample to the same cell size and offset in the grid,"
-msgstr ""
-"échantillonne à la même taille de cellule et décale sur la même grille,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:130
-msgid "clip to a region of interest,"
-msgstr "découpe une zone d'intérêt,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:131
-msgid "rescale values when required."
-msgstr "rééchantillonne les valeurs lorsque cela est nécessaire."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:133
-msgid "All rasters will be saved in another files."
-msgstr "Les rasters seront sauvegardés dans de nouveaux fichiers."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:135
-msgid ""
-"First, open the tools from :menuselection:`Raster --> Align Raster...` and "
-"click on the |symbologyAdd| :sup:`Add new raster` button to choose one "
-"existing raster in QGIS. Select an output file to save the raster after the "
-"alignment, the resampling method and if the tools need to :guilabel:`Rescale"
-" values according to the cell size`. The resampling method can be (see "
-":numref:`figure_raster_align_edit`):"
-msgstr ""
-"Tout d'abord, ouvrez les outils à partir de :menuselection:`Raster --> "
-"Aligner les Rasters...` et cliquez sur |symbologyAdd| :sup:`Ajouter un "
-"nouveau raster` pour choisir un raster existant. Sélectionnez un fichier de "
-"sortie pour enregistrer le raster après l'alignement, la méthode de ré-"
-"échantillonnage et si nécessaire :guilabel:`Rééchelonner les valeurs en "
-"fonction de la taille de la cellule`. La méthode de ré-échantillonnage est à"
-" choisir parmi (voir :numref:`figure_raster_align_edit`) :"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:186
-msgid "symbologyAdd"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:141
-msgid "**Nearest Neighbor**"
-msgstr "**Au plus proche voisin**"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:142
-msgid "**Bilinear (2x2 kernel)**"
-msgstr "**Bilinéaire (noyau de 2x2)**"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:143
-msgid "**Cubic (4x4 kernel)**: Cubic Convolution Approximation"
-msgstr "**Cubique (noyau de 4x4)** : approximation par convolution cubique"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
-msgid "**Cubic B-Spline (4x4 kernel)**: Cubic B-Spline Approximation"
-msgstr ""
-"**B-Spline cubique (noyau de 4x4)** : approximation par B-Spline cubique"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:145
-msgid "**Lanczos (6x6 kernel)**: Lanczos windowed sinc interpolation"
-msgstr ""
-"**Lanczos (noyau de 6x6)** : interpolation Lanczos avec fenêtrage avec la "
-"fonction sinus cardinal"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:146
-msgid ""
-"**Average**: computes the average of all non-NODATA contributing pixels"
-msgstr ""
-"**Moyenne** : calcule la moyenne de tous les pixels qui ne sont pas des "
-"NODATA"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:147
-msgid ""
-"**Mode**: selects the value which appears most often of all the sampled "
-"points"
-msgstr "**Mode** : sélectionne la valeur la plus fréquente parmi les pixels"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:148
-msgid ""
-"**Maximum**, **Minimum**, **Mediane**, **First Quartile (Q1)** or **Third "
-"Quartile (Q3)** of all non-NODATA contributing pixels"
-msgstr ""
-"**Maximum**, **Minimum**, **Médiane**, **Premier Quartile (Q1)** or "
-"**Troisième Quartile (Q3)** de tous les pixels qui ne sont pas des NODATA"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:156
-msgid "Select Raster Resampling Options"
-msgstr "Sélection des options de ré-échantillonnage raster"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:158
-msgid ""
-"In the main :guilabel:`Align raster` dialog, you can still |symbologyEdit| "
-":sup:`Edit file settings` or |symbologyRemove| :sup:`Remove an existing "
-"file` from the list of raster layers. You can also choose one or more other "
-"options (see :numref:`figure_raster_align`):"
-msgstr ""
-"Dans la fenêtre :guilabel:`Aligner les raster`, vous pouvez |symbologyEdit| "
-":sup:`Modifier les paramètres de traitement d'un fichier` ou "
-"|symbologyRemove| :sup:`Supprimer un fichier existant` de la liste des "
-"couches raster.Vous pouvez également choisir parmi les options suivantes "
-"(voir :numref:`figure_raster_align`) :"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:188
-msgid "symbologyEdit"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:190
-msgid "symbologyRemove"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:162
-msgid "Select the :guilabel:`Reference Layer`,"
-msgstr "sélectionner une :guilabel:`Couche de référence`,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:163
-msgid "Transform into a new :guilabel:`CRS`,"
-msgstr "re-projeter dans un nouveau :guilabel:`SCR`,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:164
-msgid "Setup a different :guilabel:`Cell size`,"
-msgstr "choisir une  :guilabel:`Taille de cellule` différente,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:165
-msgid "Setup a different :guilabel:`Grid Offset`,"
-msgstr "choisir un :guilabel:`Décalage de la grille`,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:166
-msgid ""
-":guilabel:`Clip to Extent`: it can be user-defined, bound to a layer or to "
-"the map canvas"
-msgstr ""
-":guilabel:`Découper selon l'emprise` : elle peut être définie par "
-"l'utilisateur, basée sur une des couches ou sur l'emprise de la carte."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:167
-msgid ":guilabel:`Output Size`,"
-msgstr ":guilabel:`Taille de sortie`,"
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:168
-msgid ":guilabel:`Add aligned raster to the map canvas`."
-msgstr ":guilabel:`Ajouter les rasters alignés au canevas de la carte`."

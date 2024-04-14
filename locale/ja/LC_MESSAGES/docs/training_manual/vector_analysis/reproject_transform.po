@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-04-11 01:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -35,10 +35,6 @@ msgstr ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_ コミュニティの取り組みです。このページは現在 |translation progress| 翻訳されています。"
 
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:2
-msgid "|LS| Reprojecting and Transforming Data"
-msgstr "|LS| データを再投影および変換する"
-
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:4
 msgid ""
 "Let us talk about Coordinate Reference Systems (CRSs) again. We have touched"
@@ -50,14 +46,6 @@ msgstr ""
 msgid ""
 "**The goal for this lesson:** To reproject and transform vector datasets."
 msgstr "**このレッスンの目標:** ベクターデータセットの再投影および変換をします。"
-
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:11
-msgid "|basic| |FA| Projections"
-msgstr "|basic| |FA| 投影法"
-
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:250
-msgid "basic"
-msgstr "basic"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:13
 msgid ""
@@ -134,10 +122,6 @@ msgid ""
 msgstr ""
 "この問題を解決するため、かわりに投影座標系（PCS）を使用してみましょう。PCSでは縮尺変更のための余裕を作り、それを修正する方法でデータを「投影」または変換します。そのため、一定の縮尺を維持するために、PCSを使用するために私たちのデータを投影変換する必要があります。"
 
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:59
-msgid "|basic| |FA| \"On the Fly\" Reprojection"
-msgstr "|basic| |FA| *オンザフライ* 再投影"
-
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:61
 msgid ""
 "By default, QGIS reprojects data \"on the fly\". What this means is that "
@@ -154,7 +138,7 @@ msgstr ""
 "QGISの右下にある |projectionEnabled| :sup:`現在のCRS` "
 "ボタンをクリックすることで、プロジェクトのCRSを変更することができます。"
 
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:253
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:245
 msgid "projectionEnabled"
 msgstr "projectionEnabled"
 
@@ -223,14 +207,6 @@ msgid ""
 ":guilabel:`continents` one."
 msgstr "レイヤは :guilabel:`continents` と異なる CRS を持つ場合でも、表示されます。"
 
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:101
-msgid "|moderate| |FA| Saving a Dataset to Another CRS"
-msgstr "|moderate| |FA| 他のCRSに設定したデータセットの保存"
-
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:252
-msgid "moderate"
-msgstr "moderate"
-
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:103
 msgid ""
 "Sometimes you need to export an existing dataset with another CRS. As we "
@@ -293,7 +269,7 @@ msgstr ""
 ":guilabel:`CRS` の値を変更します。最近使用されたCRSのみがドロップダウンメニューに表示されます。ドロップダウンメニューの横にある、 "
 "|setProjection| :sup:`CRSの選択` ボタンをクリックします。"
 
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:255
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:247
 msgid "setProjection"
 msgstr "setProjection"
 
@@ -326,14 +302,6 @@ msgid ""
 "they are in two different CRS but they are still overlapping."
 msgstr "これでレイヤの新旧の投影を比較すると、2つの異なるCRSでありながら、重なっていることがわかります。"
 
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:150
-msgid "|hard| |FA| Creating Your Own Projection"
-msgstr "|hard| |FA| 独自の投影法の作成"
-
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:251
-msgid "hard"
-msgstr "hard"
-
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:152
 msgid ""
 "There are many more projections than just those included in QGIS by default."
@@ -360,7 +328,7 @@ msgid ""
 "projection"
 msgstr "|symbologyAdd| :sup:`CRSを追加` ボタンをクリックし、新しい投影法を作成します"
 
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:257
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:249
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
@@ -403,20 +371,12 @@ msgstr "新しく定義した投影法を選択します（ :guilabel:`フィル
 msgid "On applying this projection, the map will be reprojected thus:"
 msgstr "この投影法を適用するため地図は再投影され、こうなります："
 
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:218
-msgid "|IC|"
-msgstr "|IC|"
-
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:220
 msgid ""
 "Different projections are useful for different purposes. By choosing the "
 "correct projection, you can ensure that the features on your map are being "
 "represented accurately."
 msgstr "異なる投影は、異なる目的のために有用です。正しい投影を選択することにより、地図上の地物が正確に表現されていることを確認できます。"
-
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:225
-msgid "|FR|"
-msgstr "|FR|"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:227
 msgid ""
@@ -433,10 +393,6 @@ msgid ""
 "Read further information on :ref:`Coordinate Reference Systems "
 "<gis_coord_ref_system>`."
 msgstr ":ref:`Coordinate Reference Systems` に関する詳細な情報はこちらをご覧ください。"
-
-#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:233
-msgid "|WN|"
-msgstr "|WN|"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:235
 msgid ""

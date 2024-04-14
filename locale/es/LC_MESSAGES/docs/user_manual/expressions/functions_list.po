@@ -7015,6 +7015,24 @@ msgstr "bearing"
 msgid "bearing(point_a, point_b, [source_crs], [ellipsoid])"
 msgstr "bearing(point_a, point_b, [source_crs], [ellipsoid])"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:168
+msgid ""
+"**source_crs** - an optional string representing the source CRS of the "
+"points. By default the current layer's CRS is used."
+msgstr ""
+"**source_crs** - una cadena opcional que representa el SRC de origen de los "
+"puntos. Predeterminado: se utiliza el CRS de la capa actual."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:169
+msgid ""
+"**ellipsoid** - an optional string representing the acronym or the "
+"authority:ID (eg 'EPSG:7030') of the ellipsoid on which the bearing should "
+"be measured. By default the current project's ellipsoid setting is used."
+msgstr ""
+"**elipsoide** - cadena opcional que representa el acrónimo o la autoridad:ID"
+" (por ejemplo, \"EPSG:7030\") del elipsoide sobre el que debe medirse el "
+"rumbo. Predeterminado: se utiliza el elipsoide del proyecto actual."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:171
 msgid ""
 "``degrees( bearing( make_point(16198544, -4534850), make_point(18736872, "
@@ -7090,6 +7108,12 @@ msgstr ""
 msgid "bounds(geometry)"
 msgstr "bounds(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``bounds(@geometry)`` → bounding box of the current feature's geometry"
+msgstr ""
+"``bounds(@geometry)`` → cuadro delimitador de la geometría del objeto "
+"espacial actual."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid ""
 "``geom_to_wkt(bounds(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → "
@@ -7124,6 +7148,14 @@ msgstr ""
 msgid "bounds_height(geometry)"
 msgstr "bounds_height(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``bounds_height(@geometry)`` → height of bounding box of the current "
+"feature's geometry"
+msgstr ""
+"``bounds_height(@geometry)`` → altura del cuadro delimitador de la geometría"
+" del objeto espacial actual."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid "``bounds_height(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 1"
 msgstr ""
@@ -7144,6 +7176,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "bounds_width(geometry)"
 msgstr "bounds_width(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"``bounds_width(@geometry)`` → width of bounding box of the current feature's"
+" geometry"
+msgstr ""
+"``bounds_width(@geometry)`` → anchura del cuadro delimitador de la geometría"
+" del objeto espacial actual."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 msgid "``bounds_width(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 2"
@@ -7209,6 +7249,14 @@ msgid ""
 msgstr ""
 "**miter_limit** - límite de distancia de inglete, para usar cuando el estilo"
 " de unión se establece en 'miter'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
+msgid ""
+"``buffer(@geometry, 10.5)`` → polygon of the current feature's geometry "
+"buffered by 10.5 units"
+msgstr ""
+"``buffer(@geometry, 10.5)`` → polígono de la geometría del objeto espacial "
+"actual con un área de influencia de 10,5 unidades."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
 msgid ""
@@ -7286,6 +7334,10 @@ msgstr "Devuelve el centro geométrico de una geometría."
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "centroid(geometry)"
 msgstr "centroid(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``centroid(@geometry)`` → a point geometry"
+msgstr "``centroid( @geometry)`` → una geometría de puntos"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:328
 msgid "Further reading: :ref:`qgiscentroids` algorithm"
@@ -8258,6 +8310,13 @@ msgstr "Devuelve la representación Well-Known Binary (WKB) de una geometría"
 msgid "geom_to_wkb(geometry)"
 msgstr "geom_to_wkb(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:78
+msgid ""
+"``geom_to_wkb( @geometry )`` → binary blob containing a geometry object"
+msgstr ""
+"``geom_to_wkb( @geometry )`` → blob binario que contiene un objeto "
+"geométrico."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:86
 msgid "geom_to_wkt"
 msgstr "geom_to_wkt"
@@ -8335,6 +8394,14 @@ msgstr "geometry(feature)"
 msgid "**feature** - a feature object"
 msgstr "**feature** - un objeto característico"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:141
+msgid ""
+"``geometry( @feature )`` → the geometry of the current feature. Prefer using"
+" @geometry."
+msgstr ""
+"``geometry( @feature )`` → la geometría del objeto espacial actual. Es "
+"preferible utilizar @geometry."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:142
 msgid ""
 "``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → the "
@@ -8344,6 +8411,16 @@ msgstr ""
 "``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → la "
 "geometría en WKT de la entidad con el id 1 en la capa \"streets\", e.g. "
 "'POINT(6 50)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:143
+msgid ""
+"``intersects( @geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )`` → TRUE if the current feature spatially intersects the 'Main "
+"St.' named feature in the \"streets\" layer"
+msgstr ""
+"``intersects( @geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )`` → TRUE si el objeto espacial actual intersecta espacialmente el"
+" objeto espacial con nombre 'Main St.' en la capa \"streets\"."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:151
 msgid "geometry_n"
@@ -8772,6 +8849,16 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "is_empty_or_null"
 msgstr "is_empty_or_null"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns TRUE if a geometry is NULL or empty (without coordinates) or false "
+"otherwise. This function is like the expression '@geometry IS NULL or "
+"is_empty(@geometry)'"
+msgstr ""
+"Devuelve TRUE si una geometría es NULL o está vacía (sin coordenadas) o "
+"falso en caso contrario. Esta función es como la expresión '@geometry IS "
+"NULL o is_empty(@geometry)'."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "is_empty_or_null(geometry)"
@@ -9216,9 +9303,28 @@ msgstr "``m( geom_from_wkt( 'POINTM(2 5 4)' ) )`` → 4"
 msgid "m_at"
 msgstr "m_at"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"Retrieves a m coordinate of the geometry, or NULL if the geometry has no m "
+"value."
+msgstr ""
+"Recupera una coordenada m de la geometría, o NULL si la geometría no tiene "
+"valor m."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "m_at(geometry, vertex)"
 msgstr "m_at(geometry, vertex)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:116
+msgid ""
+"**vertex** - index of the vertex of the geometry (indices start at 0; "
+"negative values apply from the last index, starting at -1)"
+msgstr ""
+"**vértice** - índice del vértice de la geometría (los índices comienzan en "
+"0; los valores negativos se aplican a partir del último índice, comenzando "
+"en -1)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid ""
@@ -10015,6 +10121,14 @@ msgstr "Devuelve el número de vértices en una geoemtría."
 msgid "num_points(geometry)"
 msgstr "num_points(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+msgid ""
+"``num_points(@geometry)`` → number of vertices in the current feature's "
+"geometry"
+msgstr ""
+"``num_points(@geometry)`` → número de vértices en la geometría del objeto "
+"espacial actual."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
 msgid "num_rings"
 msgstr "num_rings"
@@ -10094,6 +10208,37 @@ msgid ""
 msgstr ""
 "**miter_limit** - límite en la relación de inglete que se usa para esquinas "
 "muy afiladas (cuando se usan juntas de inglete solamente)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:105
+msgid ""
+"``offset_curve(@geometry, 10.5)`` → line offset to the left by 10.5 units"
+msgstr ""
+"``offset_curve( @geometry, 10.5)`` → línea desplazada a la izquierda 10,5 "
+"unidades."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:106
+msgid ""
+"``offset_curve(@geometry, -10.5)`` → line offset to the right by 10.5 units"
+msgstr ""
+"``offset_curve( @geometry, -10.5)`` → línea desplazada a la derecha 10,5 "
+"unidades."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:107
+msgid ""
+"``offset_curve(@geometry, 10.5, segments:=16, join:=1)`` → line offset to "
+"the left by 10.5 units, using more segments to result in a smoother curve"
+msgstr ""
+"``offset_curve(@geometry, 10.5, segments:=16, join:=1)`` → línea desplazada "
+"hacia la izquierda 10.5 unidades, utilizando más segmentos para obtener una "
+"curva más suave."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:108
+msgid ""
+"``offset_curve(@geometry, 10.5, join:=3)`` → line offset to the left by 10.5"
+" units, using a beveled join"
+msgstr ""
+"``offset_curve(@geometry, 10.5, join:=3)`` → línea desplazada a la izquierda"
+" 10.5 unidades, utilizando una unión biselada."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:498
 msgid "Further reading: :ref:`qgisoffsetline` algorithm"
@@ -10325,6 +10470,16 @@ msgstr ""
 "regiones contenidas en la entidad actual y con una población superior a "
 "10000"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
+msgid ""
+"``overlay_contains(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"contained in the current feature"
+msgstr ""
+"``overlay_contains(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → una matriz de geometrías (en WKT), para un máximo de dos "
+"regiones contenidas en la prestación actual."
+
 #: ../../docs/user_manual/expressions/functions_list.rst:510
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_contains`, "
@@ -10408,6 +10563,16 @@ msgstr ""
 "filter:= population > 10000))`` → una matriz ordenada de nombres, para las "
 "regiones atravesadas por la entidad actual y con una población superior a "
 "10000"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_crosses(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions crossed"
+" by the current feature"
+msgstr ""
+"``overlay_crosses(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → una matriz de geometrías (en WKT), para un máximo de dos "
+"regiones atravesadas por el objeto espacial actual."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:518
 msgid ""
@@ -10497,6 +10662,16 @@ msgstr ""
 "regiones espacialmente separadas de la entidad actual y con una población "
 "superior a 10000"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_disjoint(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"spatially disjoint from the current feature"
+msgstr ""
+"``overlay_disjoint(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → una matriz de geometrías (en WKT), para hasta dos regiones "
+"espacialmente disjuntas del objeto espacial actual."
+
 #: ../../docs/user_manual/expressions/functions_list.rst:526
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_disjoint`, "
@@ -10583,6 +10758,16 @@ msgstr ""
 " population > 10000))`` → una matriz ordenada de nombres, para las regiones "
 "espacialmente iguales a la entidad actual y con una población superior a "
 "10000"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"spatially equal to the current feature"
+msgstr ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → una matriz de geometrías (en WKT), para un máximo de dos "
+"regiones espacialmente iguales al objeto espacial actual."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:534
 msgid ""
@@ -10756,6 +10941,16 @@ msgstr ""
 "regiones intersectadas por la entidad actual y con una población superior a "
 "10000"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"intersected by the current feature"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → una matriz de geometrías (en WKT), para un máximo de dos "
+"regiones intersectadas por el objeto espacial actual."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
 msgid ""
 "``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE if the "
@@ -10779,6 +10974,26 @@ msgstr ""
 "→ TRUE si el objeto espacial actual intersecta espacialmente una región y el"
 " radio del círculo inscrito máximo del área de intersección (de al menos una"
 " de las partes en caso de multiparte) es mayor o igual a 0.54"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"return_details:=true)`` → an array of maps containing 'id', 'result', "
+"'overlap' and 'radius'"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"return_details:=true)`` → una matriz de mapas que contiene 'id', 'result', "
+"'overlap' y 'radius'."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"sort_by_intersection_size:='des')`` → an array of geometries (in WKT) "
+"ordered by the overlap value in descending order"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"sort_by_intersection_size:='des')`` → una matriz de geometrías (en WKT) "
+"ordenadas por el valor de solapamiento en orden descendente."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:541
 msgid ""
@@ -10999,6 +11214,16 @@ msgstr ""
 "regiones afectadas por la entidad actual y con una población superior a "
 "10000"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_touches(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions touched"
+" by the current feature"
+msgstr ""
+"``overlay_touches(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → una matriz de geometrías (en WKT), para un máximo de dos "
+"regiones tocadas por el objeto espacial actual."
+
 #: ../../docs/user_manual/expressions/functions_list.rst:556
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_touches`, "
@@ -11081,6 +11306,16 @@ msgstr ""
 "``array_sort(overlay_within(layer:='regions', expression:=\"name\", filter:="
 " population > 10000))`` → una matriz ordenada de nombres, para las regiones "
 "que contienen la entidad actual y con una población superior a 10000"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_within(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"containing the current feature"
+msgstr ""
+"``overlay_within(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → una matriz de geometrías (en WKT), para un máximo de dos "
+"regiones que contengan el objeto espacial actual."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:564
 msgid ""
@@ -11189,6 +11424,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "point_on_surface(geometry)"
 msgstr "point_on_surface(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``point_on_surface(@geometry)`` → a point geometry"
+msgstr "``point_on_surface(@geometry)`` → una geometría de puntos."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:578
 msgid "Further reading: :ref:`qgispointonsurface` algorithm"
@@ -11412,6 +11651,22 @@ msgstr ""
 " aplicará alrededor del centro del cuadro delimitador de cada pieza cuando "
 "la geometría de entrada sea multiparte y no se especifique un punto central "
 "de rotación explícito."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``rotate(@geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees "
+"clockwise around the (4, 5) point"
+msgstr ""
+"``rotate(@geometry, 45, make_point(4, 5))`` → geometría girada 45 grados en "
+"el sentido de las agujas del reloj alrededor del punto (4, 5)."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``rotate(@geometry, 45)`` → geometry rotated 45 degrees clockwise around the"
+" center of its bounding box"
+msgstr ""
+"``rotate(@geometry, 45)`` → geometría girada 45 grados en el sentido de las "
+"agujas del reloj alrededor del centro de su caja delimitadora."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "Rotating features"
@@ -12453,6 +12708,10 @@ msgstr "$x"
 msgid "``$x`` → 42"
 msgstr "``$x`` → 42"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:692
+msgid "Further reading: :ref:`expression_function_GeometryGroup_x`"
+msgstr "Lectura adicional: :ref:`expression_function_GeometryGroup_x`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "x"
 msgstr "x"
@@ -12473,21 +12732,53 @@ msgstr "x(geometry)"
 msgid "``x( geom_from_wkt( 'POINT(2 5)' ) )`` → 2"
 msgstr "``x( geom_from_wkt( 'POINT(2 5)' ) )`` → 2"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``x( @geometry )`` → x coordinate of the current feature's centroid"
+msgstr ""
+"``x( @geometría )`` → coordenada x del centroide del objeto espacial actual."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "$x_at"
 msgstr "$x_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"Retrieves a x coordinate of the current feature's geometry. **WARNING: This "
+"function is deprecated. It is recommended to use the replacement x_at "
+"function with @geometry variable instead.**"
+msgstr ""
+"Obtiene una coordenada x de la geometría del objeto espacial actual. "
+"**AVISO: Esta función está obsoleta. Se recomienda utilizar la función de "
+"reemplazo x_at con la variable @geometry en su lugar."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "$x_at(vertex)"
 msgstr "$x_at(vertex)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+msgid ""
+"**vertex** - index of the vertex of the current geometry (indices start at "
+"0; negative values apply from the last index, starting at -1)"
+msgstr ""
+"**vértice** - índice del vértice de la geometría actual (los índices "
+"comienzan en 0; los valores negativos se aplican a partir del último índice,"
+" comenzando en -1)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid "``$x_at(1)`` → 5"
 msgstr "``$x_at(1)`` → 5"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:698
+msgid "Further reading: :ref:`expression_function_GeometryGroup_x_at`"
+msgstr "Lectura adicional: :ref:`expression_function_GeometryGroup_x_at`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "x_at"
 msgstr "x_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Retrieves a x coordinate of the geometry."
+msgstr "Recupera una coordenada x de la geometría."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "x_at(geometry, vertex)"
@@ -12542,9 +12833,25 @@ msgstr "``x_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 2"
 msgid "$y"
 msgstr "$y"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:69
+msgid ""
+"Returns the y coordinate of the current point feature. If the feature is a "
+"multipoint feature, then the y-coordinate of the first point will be "
+"returned. **WARNING: This function is deprecated. It is recommended to use "
+"the replacement y() function with @geometry variable instead.**"
+msgstr ""
+"Devuelve la coordenada y del objeto espacial punto actual. Si el objeto "
+"espacial es multipunto, se devolverá la coordenada y del primer punto. "
+"**AVISO: Esta función está obsoleta. Se recomienda utilizar en su lugar la "
+"función de sustitución y() con la variable @geometry.**"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
 msgid "``$y`` → 42"
 msgstr "``$y`` → 42"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:704
+msgid "Further reading: :ref:`expression_function_GeometryGroup_y`"
+msgstr "Lectura adicional: :ref:`expression_function_GeometryGroup_y`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "y"
@@ -12566,9 +12873,24 @@ msgstr "y(geometry)"
 msgid "``y( geom_from_wkt( 'POINT(2 5)' ) )`` → 5"
 msgstr "``y( geom_from_wkt( 'POINT(2 5)' ) )`` → 5"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``y( @geometry )`` → y coordinate of the current feature's centroid"
+msgstr ""
+"``y( @geometry )`` → coordenada y del centroide del objeto espacial actual."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "$y_at"
 msgstr "$y_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"Retrieves a y coordinate of the current feature's geometry. **WARNING: This "
+"function is deprecated. It is recommended to use the replacement y_at "
+"function with @geometry variable instead.**"
+msgstr ""
+"Obtiene una coordenada y de la geometría del objeto espacial actual. "
+"**AVISO: Esta función está obsoleta. Se recomienda utilizar en su lugar la "
+"función de sustitución y_at con la variable @geometry.**"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "$y_at(vertex)"
@@ -12578,9 +12900,17 @@ msgstr "$y_at(vertex)"
 msgid "``$y_at(1)`` → 2"
 msgstr "``$y_at(1)`` → 2"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:710
+msgid "Further reading: :ref:`expression_function_GeometryGroup_y_at`"
+msgstr "Lectura adicional: :ref:`expression_function_GeometryGroup_y_at`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "y_at"
 msgstr "y_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Retrieves a y coordinate of the geometry."
+msgstr "Recupera una coordenada y de la geometría."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "y_at(geometry, vertex)"
@@ -12635,6 +12965,18 @@ msgstr "``y_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 5"
 msgid "$z"
 msgstr "$z"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:69
+msgid ""
+"Returns the z value of the current point feature if it is 3D. If the feature"
+" is a multipoint feature, then the z value of the first point will be "
+"returned. **WARNING: This function is deprecated. It is recommended to use "
+"the replacement z() function with @geometry variable instead.**"
+msgstr ""
+"Devuelve el valor z del objeto espacial punto actual si es 3D. Si el objeto "
+"espacial es multipunto, devolverá el valor z del primer punto. **AVISO: Esta"
+" función está obsoleta. Se recomienda utilizar la función de sustitución z()"
+" con la variable @geometry."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
 msgid "``$z`` → 123"
 msgstr "``$z`` → 123"
@@ -12658,6 +13000,14 @@ msgstr "``z( geom_from_wkt( 'POINTZ(2 5 7)' ) )`` → 7"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:105
 msgid "z_at"
 msgstr "z_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:107
+msgid ""
+"Retrieves a z coordinate of the geometry, or NULL if the geometry has no z "
+"value."
+msgstr ""
+"Recupera una coordenada z de la geometría, o NULL si la geometría no tiene "
+"valor z."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:113
 msgid "z_at(geometry, vertex)"
@@ -12794,11 +13144,27 @@ msgstr ""
 msgid "map_credits"
 msgstr "map_credits"
 
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:8
+msgid ""
+"Returns a list of credit (usage rights) strings for the layers shown in a "
+"layout, or specific layout map item."
+msgstr ""
+"Devuelve una lista de cadenas de crédito (derechos de uso) para las capas "
+"mostradas en un diseño, o un elemento de mapa de diseño específico."
+
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:14
 msgid ""
 "map_credits([id], [include_layer_names=false], [layer_name_separator=': '])"
 msgstr ""
 "map_credits([id], [include_layer_names=false], [layer_name_separator=': '])"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:18
+msgid ""
+"**id** - Map item ID. If not specified, the layers from all maps in the "
+"layout will be used."
+msgstr ""
+"**id** - ID del elemento de mapa. Si no se especifica, se utilizarán las "
+"capas de todos los mapas de la composición."
 
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:19
 msgid ""
@@ -12815,6 +13181,16 @@ msgid ""
 msgstr ""
 "**layer_name_separator** - Cadena para insertar entre los nombres de las "
 "capas y sus cadenas de crédito, si include_layer_names es verdadero"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:22
+msgid ""
+"``array_to_string( map_credits() )`` → comma separated list of layer credits"
+" for all layers shown in all map items in the layout, e.g 'CC-BY-NC, CC-BY-"
+"SA'"
+msgstr ""
+"``array_to_string( map_credits() )`` → lista separada por comas de créditos "
+"de capa para todas las capas mostradas en todos los elementos de mapa de la "
+"presentación, por ejemplo 'CC-BY-NC, CC-BY-SA'."
 
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:23
 msgid ""
@@ -13008,6 +13384,10 @@ msgstr "crs_definition: definición completa SRC de la capa"
 msgid "crs_description: layer CRS description"
 msgstr "crs_description: descripción SRC de capa"
 
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
+msgid "crs_ellipsoid: acronym of the layer CRS ellipsoid"
+msgstr "crs_ellipsoid: acrónimo del elipsoide SRC de la capa"
+
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
 msgid "extent: layer extent (as a geometry object)"
 msgstr "extent: extensión de la capa (como un objeto de geometría)"
@@ -13070,9 +13450,29 @@ msgstr ""
 msgid "load_layer"
 msgstr "load_layer"
 
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:8
+msgid "Loads a layer by source URI and provider name."
+msgstr "Carga una capa por URI de origen y nombre de proveedor."
+
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:14
 msgid "load_layer(uri, provider)"
 msgstr "load_layer(uri, provider)"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:16
+msgid "**uri** - layer source URI string"
+msgstr "**uri** - cadena URI de origen de la capa"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:17
+msgid "**provider** - layer data provider name"
+msgstr "**proveedor** - nombre del proveedor de datos de la capa"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:19
+msgid ""
+"``layer_property(load_layer('c:/data/roads.shp', 'ogr'), 'feature_count')`` "
+"→ count of features from the c:/data/roads.shp vector layer"
+msgstr ""
+"``layer_property(load_layer('c:/data/roads.shp', 'ogr'), 'feature_count')`` "
+"→ recuento de objetos espaciales de la capa vectorial c:/data/roads.shp."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:775
 msgid "Maps Functions"
@@ -13390,6 +13790,10 @@ msgstr "``map_to_hstore(map('qgis','rocks'))`` → '\"qgis\"=>\"rocks\"'"
 msgid "map_to_html_dl"
 msgstr "map_to_html_dl"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:72
+msgid "Merge map elements into a HTML definition list string."
+msgstr "Combinar elementos de mapa en una cadena de lista de definición HTML."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:78
 msgid "map_to_html_dl(map)"
 msgstr "map_to_html_dl(map)"
@@ -13397,6 +13801,10 @@ msgstr "map_to_html_dl(map)"
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:90
 msgid "map_to_html_table"
 msgstr "map_to_html_table"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:92
+msgid "Merge map elements into a HTML table string."
+msgstr "Combinar elementos de mapa en una cadena de tabla HTML."
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:98
 msgid "map_to_html_table(map)"
@@ -14155,6 +14563,16 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:524
 msgid "scale_polynomial"
 msgstr "scale_polynomial"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:526
+msgid ""
+"Transforms a given value from an input domain to an output range using a "
+"polynomial curve. This function can be used to ease values in or out of the "
+"specified output range."
+msgstr ""
+"Transforma un valor dado de un dominio de entrada a un rango de salida "
+"utilizando una curva polinómica. Esta función puede utilizarse para "
+"facilitar valores dentro o fuera del rango de salida especificado."
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:532
 msgid ""
@@ -16988,6 +17406,22 @@ msgstr "**string** - cadena a recortar"
 msgid "**characters** - characters to trim"
 msgstr "**caracteres** - caracteres a recortar"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:240
+msgid "``ltrim('   hello world  ')`` → 'hello world  '"
+msgstr "``ltrim('   hola mundo  ')`` → 'hola mundo  '"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:241
+msgid "``ltrim('zzzytest', 'xyz')`` → 'test'"
+msgstr "``ltrim('zzzytest', 'xyz')`` → 'test'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1050
+msgid ""
+"Further reading: :ref:`expression_function_String_rtrim`, "
+":ref:`expression_function_String_trim`"
+msgstr ""
+"Lectura adicional: :ref:`expression_function_String_rtrim`, "
+":ref:`expression_function_String_trim`"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:28
 msgid "regexp_replace"
 msgstr "regexp_replace"
@@ -17210,9 +17644,21 @@ msgstr "``rpad('Hello', 3, 'x')`` → 'Hel'"
 msgid "rtrim"
 msgstr "rtrim"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:164
+msgid ""
+"Removes the longest string containing only the specified characters (a space"
+" by default) from the end of string."
+msgstr ""
+"Elimina la cadena más larga que contenga sólo los caracteres especificados "
+"(un espacio por predeterminado) del final de la cadena."
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:170
 msgid "rtrim(string, [characters=' '])"
 msgstr "rtrim(string, [characters=' '])"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:177
+msgid "``rtrim('   hello world  ')`` → '   hello world'"
+msgstr "``rtrim('   hola mundo  ')`` → '   hola mundo'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "strpos"

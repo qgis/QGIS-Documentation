@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Febriani Ayuningsih, 2023
+# Febriani Ayuningsih, 2024
+# Harrissou Sant-anna, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-30 19:51+0000\n"
-"PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Febriani Ayuningsih, 2023\n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: Indonesian (https://app.transifex.com/qgis/teams/6144/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -155,17 +155,7 @@ msgstr ""
 "tersebut menghasilkan nilai dari enumerasi :class:`QgsWkbTypes.Type "
 "<qgis.core.QgsWkbTypes>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:167
-msgid ""
-"As an alternative, one can use the :meth:`type() "
-"<qgis.core.QgsGeometry.type>` method which returns a value from the "
-":class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` enumeration."
-msgstr ""
-"Sebagai alternatif, dapat menggunakan metode :meth:`type() "
-"<qgis.core.QgsGeometry.type>` yang menghasilkan nilai dari enumerasi "
-":class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` ."
-
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:171
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:178
 msgid ""
 "You can use the :meth:`displayString() "
 "<qgis.core.QgsWkbTypes.displayString>` function to get a human readable "
@@ -175,7 +165,7 @@ msgstr ""
 "<qgis.core.QgsWkbTypes.displayString>` untuk mendapatkan tipe geometri yang "
 "mudah dibaca oleh manusia."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:189
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:197
 msgid ""
 "There is also a helper function :meth:`isMultipart() "
 "<qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is "
@@ -185,7 +175,7 @@ msgstr ""
 "<qgis.core.QgsGeometry.isMultipart>` untuk mengetahui apakah sebuah geometri"
 " multi-part atau tidak."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:192
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:200
 msgid ""
 "To extract information from a geometry there are accessor functions for "
 "every vector type. Here's an example on how to use these accessors:"
@@ -193,7 +183,7 @@ msgstr ""
 "Untuk mengekstrak informasi dari sebuah geometri, tersedia fungsi aksesor "
 "untuk setiap tipe vektor. Berikut contoh bagaimana menggunakan aksesor:"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:212
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:220
 msgid ""
 "The tuples (x,y) are not real tuples, they are :class:`QgsPoint "
 "<qgis.core.QgsPoint>` objects, the values are accessible with :meth:`x() "
@@ -203,7 +193,7 @@ msgstr ""
 " <qgis.core.QgsPoint>` , nilainya dapat diakses dengan metode :meth:`x() "
 "<qgis.core.QgsPoint.x>` and :meth:`y() <qgis.core.QgsPoint.y>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:216
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:224
 msgid ""
 "For multipart geometries there are similar accessor functions: "
 ":meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, "
@@ -215,7 +205,7 @@ msgstr ""
 "<qgis.core.QgsGeometry.asMultiPolyline>` dan :meth:`asMultiPolygon() "
 "<qgis.core.QgsGeometry.asMultiPolygon>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:222
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:230
 msgid ""
 "It is possible to iterate over all the parts of a geometry, regardless of "
 "the geometry's type. E.g."
@@ -223,7 +213,7 @@ msgstr ""
 "Dimungkinkan untuk melakukan iterasi terhadap semua bagian dari sebuah "
 "geometry, apapun tipe geometrinya. Contohnya."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:257
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:265
 msgid ""
 "It's also possible to modify each part of the geometry using "
 ":meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` method."
@@ -231,11 +221,11 @@ msgstr ""
 "Dimungkinkan juga untuk memodifikasi setiap bagian dari geometri dengan "
 "metode :meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` ."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:279
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:287
 msgid "Geometry Predicates and Operations"
 msgstr "Operasi dan Predikat Geometri"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:281
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:289
 msgid ""
 "QGIS uses GEOS library for advanced geometry operations such as geometry "
 "predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, "
@@ -253,7 +243,7 @@ msgstr ""
 "menghitung sifat geometris dari geometri, seperti luasan (dalam kasus "
 "poligon) atau panjang (pada poligon dan garis)."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:287
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:295
 msgid ""
 "Let's see an example that combines iterating over the features in a given "
 "layer and performing some geometric computations based on their geometries. "
@@ -266,8 +256,8 @@ msgstr ""
 "menampilkan area dan perimeter dari setiap negara pada layer \"countries\" "
 "pada project tutorial QGIS."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:292
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:331
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:300
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:339
 msgid ""
 "The following code assumes ``layer`` is a :class:`QgsVectorLayer "
 "<qgis.core.QgsVectorLayer>` object that has Polygon feature type."
@@ -275,7 +265,7 @@ msgstr ""
 "Kode berikut mengasumsikan \"layer\" sebagai sebuah objek "
 ":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`  yang berupa poligon."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:322
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:330
 msgid ""
 "Now you have calculated and printed the areas and perimeters of the "
 "geometries. You may however quickly notice that the values are strange. That"
@@ -296,11 +286,11 @@ msgstr ""
 "<qgis.core.QgsDistanceArea>` dapat digunakan, yang dapat menunjukkan "
 "perhitungan berdasarkan elipsoid: "
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:367
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:375
 msgid "Alternatively, you may want to know the distance between two points."
 msgstr "Di sisi lain, anda mungkin ingin mengetahui jarak antara dua titik."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:387
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:395
 msgid ""
 "You can find many example of algorithms that are included in QGIS and use "
 "these methods to analyze and transform vector data. Here are some links to "
@@ -310,7 +300,7 @@ msgstr ""
 "tersebut untuk menganalisa dan mentransformasi data vektor. Berikut "
 "merupakan beberapa tautan ke kode tersebut."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:391
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:399
 msgid ""
 "Distance and area using the :class:`QgsDistanceArea "
 "<qgis.core.QgsDistanceArea>` class: :source:`Distance matrix algorithm "
@@ -320,7 +310,7 @@ msgstr ""
 "<qgis.core.QgsDistanceArea>` class: :source:`Distance matrix algorithm "
 "<python/plugins/processing/algs/qgis/PointDistance.py>`"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:393
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:401
 msgid ""
 ":source:`Lines to polygons algorithm "
 "<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"

@@ -2,31 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2023
-# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.28\n"
+"Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
-"PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"PO-Revision-Date: 2024-03-02 11:57+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:2
-msgid "|LS| Systematic Sampling Design"
-msgstr "课: 系统抽样设计"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:4
 msgid ""
@@ -91,14 +86,6 @@ msgstr ""
 "(例如，随机、系统、沿路线)。取样地的大小、形状和位置通常是根据统计、经济和实际考虑确定的。如果您缺乏林业知识，可能有兴趣阅读这篇 `维基百科 "
 "<https://en.wikipedia.org/wiki/Forest_inventory>`_ 文章。"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:40
-msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
-msgstr "|basic| 跟我做: 实施系统取样地设计"
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:213
-msgid "basic"
-msgstr ""
-
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:42
 msgid ""
 "For the forest you are working with, the manager has decided that a "
@@ -143,9 +130,9 @@ msgid ""
 ":guilabel:`Regular points`."
 msgstr "打开 :menuselection:`矢量 --> 研究工具` |regularPoints| :guilabel:`生成规则点` 。"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:222
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:217
 msgid "regularPoints"
-msgstr ""
+msgstr "regularPoints"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:60
 msgid ""
@@ -210,9 +197,9 @@ msgid ""
 "geoprocessing --> Clip vector by mask layer`."
 msgstr "从处理工具箱，打开 |gdal| :menuselection:`GDAL --> 矢量地理处理 --> 按掩膜图层裁剪矢量` 。"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:216
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:211
 msgid "gdal"
-msgstr ""
+msgstr "gdal"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:86
 msgid "Select :guilabel:`systematic_plots` as the :guilabel:`Input layer`."
@@ -261,9 +248,9 @@ msgstr ""
 "为 ``systematic_plots_clip`` 图层打开 :menuselection:`图层属性 -->` |labelingSingle| "
 ":guilabel:`标注` 。"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:220
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:215
 msgid "labelingSingle"
-msgstr ""
+msgstr "labelingSingle"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:106
 msgid "Turn the top menu into |labelingSingle| :guilabel:`Single Labels`."
@@ -281,9 +268,9 @@ msgstr ""
 "转到 |labelbuffer| :guilabel:`描边` 选项卡，勾选 :guilabel:`绘制文本描边` 并将描边大小 "
 ":guilabel:`大小` 设置为 ``1`` 。"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:218
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:213
 msgid "labelbuffer"
-msgstr ""
+msgstr "labelbuffer"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:110
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:135
@@ -320,17 +307,17 @@ msgstr "转到 ``systematic_plots_clip`` 的 :guilabel:`属性表` 。"
 msgid "Enable the |toggleEditing| edit mode."
 msgstr "启用 |toggleEditing| 编辑模式。"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:224
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:219
 msgid "toggleEditing"
-msgstr ""
+msgstr "toggleEditing"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:125
 msgid "Open the |calculateField| :sup:`Field calculator`:"
 msgstr "打开 |calculateField| :sup:`字段计算器`:"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:214
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:209
 msgid "calculateField"
-msgstr ""
+msgstr "calculateField"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:127
 msgid "Check :guilabel:`Create a new field`"
@@ -368,10 +355,6 @@ msgid ""
 msgstr ""
 "现在，您有了一个新列，其中包含对您有意义的地块名称。对于 ``systematic_plots_clip`` 图层，将用于标注的字段更改为新 "
 "``Plot_id`` 字段。"
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:146
-msgid "|basic| |FA| Exporting Sample Plots as GPX format"
-msgstr "|basic| 跟我做: 将取样地导出为GPX格式"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:148
 msgid ""
@@ -450,10 +433,6 @@ msgstr ""
 msgid "Save your QGIS project now."
 msgstr "现在保存QGIS工程。"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:188
-msgid "|IC|"
-msgstr ""
-
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:190
 msgid ""
 "You just saw how easily you can create a systematic sampling design to be "
@@ -463,10 +442,6 @@ msgid ""
 " the same."
 msgstr ""
 "您刚才看到了创建一个用于森林资源清查的系统抽样设计是多么容易。创建其他类型的抽样设计将涉及使用QGIS中的不同工具、电子表格或脚本来计算取样地的坐标，但总体思路保持不变。"
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:196
-msgid "|WN|"
-msgstr ""
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:198
 msgid ""
