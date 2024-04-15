@@ -522,8 +522,8 @@ Editing attribute values can be done by:
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes are hence done cell by cell, feature by feature;
 * using the :ref:`field calculator <vector_field_calculator>`: update in a row
-  a field that may already exist or to be created but for multiple features. It
-  can be used to create virtual fields;
+  a field that may already exist or to be created but for multiple features.
+  It can be used to create virtual fields;
 * using the quick field :ref:`calculation bar <quick_field_calculation_bar>`:
   same as above but for only existing field;
 * or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row
@@ -536,8 +536,8 @@ Using the Field Calculator
 
 The |calculateField| :sup:`Field Calculator` button in the attribute table
 allows you to perform calculations on the basis of existing attribute values or
-defined functions, for instance, to calculate length or area of geometry
-features. The results can be used to update an existing field, or written
+defined functions, for instance, to calculate length or area of geometry features.
+The results can be used to update an existing field, or written
 to a new field (that can be a :ref:`virtual <virtual_field>` one).
 
 The field calculator is available on any layer that supports edit.
@@ -594,23 +594,30 @@ Creating a Virtual Field
 ------------------------
 
 A virtual field is a field based on an expression calculated on the fly, meaning
-that its value is automatically updated as soon as an underlying parameter
-changes. The expression is set once; you no longer need to recalculate the field
-each time underlying values change.
+that its value is automatically updated as soon as an underlying parameter changes.
+The expression applies to all the features in the layer and is set once;
+you no longer need to recalculate the field each time underlying values change.
 For example, you may want to use a virtual field if you need area to be evaluated
 as you digitize features or to automatically calculate a duration between dates
 that may change (e.g., using ``now()`` function).
 
+Creating a virtual field is done through the |calculateField| :guilabel:`Field calculator` dialog
+and follows the :ref:`same procedure <vector_field_calculator>` as for regular fields.
+Simply remember to check the |checkbox| :guilabel:`Create virtual field` option
+and use a field type compatible with the data your expression would generate.
+
+Editing a virtual field is done through the |sourceFields| :guilabel:`Fields` tab
+of the layer properties dialog (see :ref:`vector_fields_menu`).
+The expression defining the field is exposed in the :guilabel:`Comment` column,
+and pressing the |expression| button next to it opens an expression editor window
+for update.
+
 .. note:: **Use of Virtual Fields**
 
+   * A field can be set virtual only at its creation.
    * Virtual fields are not permanent in the layer attributes, meaning that
      they're only saved and available in the project file they've been created.
-   * A field can be set virtual only at its creation.
-     Virtual fields are marked with a purple background in the fields tab of
-     the layer properties dialog to distinguish them from regular physical
-     or joined fields. Their expression can be edited later by pressing the
-     expression button in the Comment column. An expression editor window will
-     be opened to adjust the expression of the virtual field.
+
 
 .. _quick_field_calculation_bar:
 
@@ -939,6 +946,8 @@ from the external storage system. In that case, more details might appear in the
 .. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
+   :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
    :width: 1.5em
 .. |taskCancel| image:: /static/common/mTaskCancel.png
    :width: 1.5em
