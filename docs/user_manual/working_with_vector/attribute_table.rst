@@ -302,11 +302,11 @@ selects the row in the attribute table. If the set of features selected in the
 map canvas (or attribute table) is changed, then the selection is also updated
 in the attribute table (or map canvas) accordingly.
 
-Rows can be selected by clicking on the row number on the left side of the
-row. **Multiple rows** can be marked by holding the :kbd:`Ctrl` key.
+Rows can be selected by clicking on the row number on the left side of the row.
+**Multiple rows** can be marked by holding the :kbd:`Ctrl` key.
 A **continuous selection** can be made by holding the :kbd:`Shift` key and
-clicking on several row headers on the left side of the rows. All rows
-between the current cursor position and the clicked row are selected.
+clicking on several row headers on the left side of the rows.
+All rows between the current cursor position and the clicked row are selected.
 Moving the cursor position in the attribute table, by clicking a cell in the
 table, does not change the row selection. Changing the selection in the main
 canvas does not move the cursor position in the attribute table.
@@ -328,7 +328,7 @@ combinations previously exposed.
 
 Beyond selecting features with the mouse, you can perform automatic selection
 based on feature's attribute using tools available in the attribute table
-toolbar, such as (see section :ref:`automatic_selection` and following one for
+toolbar, such as (see section :ref:`automatic_selection` and subsequent for
 more information and use case):
 
 * |expressionSelect| :guilabel:`Select By Expression...`
@@ -337,7 +337,7 @@ more information and use case):
 * |selectAll| :guilabel:`Select All Features`
 * |invertSelection| :guilabel:`Invert Feature Selection`.
 
-It is also possible to select features using the :ref:`filter_select_form`.
+It is also possible to :ref:`select features using forms <filter_select_form>`.
 
 
 .. _filter_features:
@@ -451,11 +451,11 @@ To clear the filter, either select the :guilabel:`Show all features` option
 from the bottom left pull-down menu, or clear the expression and
 click :guilabel:`Apply` or press :kbd:`Enter`.
 
-Using action on features
-========================
+More actions on features
+------------------------
 
-Users have several possibilities to manipulate feature with the contextual menu
-like:
+Users have several possibilities to manipulate feature in an attribute table.
+Right-click in a cell and you can:
 
 * :guilabel:`Select all` (:kbd:`Ctrl+A`) the features;
 * Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`;
@@ -464,6 +464,8 @@ like:
 * :guilabel:`Flash feature`, to highlight it in the map canvas;
 * :guilabel:`Open form`: it toggles attribute table into form view with a focus
   on the clicked feature.
+* Display a :ref:`list of actions <actions_menu>`, previously enabled
+  in the :menuselection:`Layer properties --> Actions` tab.
 
 .. _figure_copy_cell:
 
@@ -472,27 +474,23 @@ like:
 
     Copy cell content button
 
-If you want to use attribute data in external programs (such as Excel,
-LibreOffice, QGIS or a custom web application), select one or more row(s) and
-use the |copySelected| :sup:`Copy selected rows to clipboard` button or press
-:kbd:`Ctrl+C`.
-
 .. _geometry_format:
 
+If you want to use attribute data in external programs (such as Excel,
+LibreOffice, or a custom web application), select one or more row(s) and
+use the |copySelected| :sup:`Copy selected rows to clipboard` button
+or press :kbd:`Ctrl+C`.
+
 In :menuselection:`Settings --> Options --> Data Sources` menu you can
-define the format to paste to with :guilabel:`Copy features as` dropdown
-list:
-
-* Plain text, no geometry,
-* Plain text, WKT geometry,
-* GeoJSON
-
-You can also display a list of actions in this contextual menu. This is enabled
-in the :menuselection:`Layer properties --> Actions` tab.
-See :ref:`actions_menu` for more information on actions.
+define the format to paste to with :guilabel:`Copy features as` dropdown list:
 
 Saving selected features as new layer
 -------------------------------------
+* :guilabel:`Plain text, no geometry`: attributes are copied as text
+  but the geometry is skipped
+* :guilabel:`Plain text, WKT geometry`: attributes are copied as text
+  and the geometry is returned in WKT
+* :guilabel:`GeoJSON`: attributes and geometry are formatted as GeoJSON data
 
 The selected features can be saved as any OGR-supported vector format and
 also transformed into another coordinate reference system (CRS). In the
@@ -721,7 +719,7 @@ Under the :guilabel:`Feature` column, panel will display following information:
   * Depending on the geometry type, cartesian measurements of length, perimeter, or area
     in the layer's CRS units. For 3D line vectors, the cartesian line length is available.
   * Depending on the geometry type and if an ellipsoid is set in the :guilabel:`Project Properties`
-    dialog (:guilabel:`General` --> :guilabel:`Measurements`), ellipsoidal values
+    dialog (:menuselection:`General --> Measurements`), ellipsoidal values
     of length, perimeter, or area using the specified units.
   * The count of geometry parts in the feature and the number of the part clicked.
   * The count of vertices in the feature.
