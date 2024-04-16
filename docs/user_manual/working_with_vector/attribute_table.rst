@@ -515,7 +515,12 @@ It is also possible to specify GDAL creation options within the dialog.
 Editing attribute values
 =========================
 
-Editing attribute values can be done by:
+In order to modify data in an attribute table, you should first toggle the layer into edit.
+Press the |toggleEditing| :sup:`Toggle Editing` button.
+Depending on the layer geometry type and the clipboard state,
+a few more tools are enabled in the attribute table top toolbar.
+
+Editing attribute values can then be done by:
 
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes are hence done cell by cell, feature by feature;
@@ -526,6 +531,12 @@ Editing attribute values can be done by:
   same as above but for only existing field;
 * or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row
   multiple fields for multiple features.
+
+Putting the layer into edit mode will also allow you to
+|editPaste| :sup:`Paste features from clipboard` (:kbd:`Ctrl+V`)
+|editCut| :sup:`Cut selected rows to clipboard` (:kbd:`Ctrl+X`)
+or |deleteSelectedFeatures| :sup:`Delete selected features`.
+More details at :ref:`editing_vector`.
 
 .. _vector_field_calculator:
 
