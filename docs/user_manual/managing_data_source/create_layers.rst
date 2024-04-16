@@ -526,9 +526,10 @@ In the :guilabel:`DXF Export` dialog:
   
 Optionally, you can also choose to:
 
-* |checkbox| :guilabel:`Use the layer title as name if set` instead of the
-  layer name itself;
-* |checkbox| :guilabel:`Export features intersecting the current map extent`;
+* |unchecked| :guilabel:`Use the layer title as name if set` instead of the
+  layer name itself (a layer title can be set in the
+  :ref:`vector_properties_dialog`);
+* |unchecked| :guilabel:`Export features intersecting the current map extent`;
 * |unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;
 * |checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements;
 * |unchecked| :guilabel:`Use only selected features`.
