@@ -493,21 +493,12 @@ or press :kbd:`Ctrl+C`.
 In :menuselection:`Settings --> Options --> Data Sources` menu you can
 define the format to paste to with :guilabel:`Copy features as` dropdown list:
 
-Saving selected features as new layer
--------------------------------------
 * :guilabel:`Plain text, no geometry`: attributes are copied as text
   but the geometry is skipped
 * :guilabel:`Plain text, WKT geometry`: attributes are copied as text
   and the geometry is returned in WKT
 * :guilabel:`GeoJSON`: attributes and geometry are formatted as GeoJSON data
 
-The selected features can be saved as any OGR-supported vector format and
-also transformed into another coordinate reference system (CRS). In the
-contextual menu of the layer, from the :guilabel:`Layers` panel, click on
-:menuselection:`Export --> Save selected features as...` to define the name of
-the output dataset, its format and CRS (see section :ref:`general_saveas`). You'll
-notice that |checkbox| :menuselection:`Save only selected features` is checked.
-It is also possible to specify GDAL creation options within the dialog.
 
 .. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
 .. _calculate_fields_values:
