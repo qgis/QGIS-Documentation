@@ -1518,6 +1518,12 @@ Returns the portion of a line (or curve) geometry which falls between the specif
      - * ``geom_to_wkt(line_substring(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),start_distance:=2,end_distance:=6))`` → 'LineString (2 0,6 0)'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/substring.png
+   :align: center
+   :width: 100%
+
+   Substring line with starting distance set at 0 meters and the ending distance at 250 meters.
+
 .. end_line_substring_section
 
 .. _expression_function_GeometryGroup_m:
@@ -2810,6 +2816,12 @@ Simplifies a geometry by removing nodes using a distance based threshold (ie, th
      - * ``geom_to_wkt(simplify(geometry:=geom_from_wkt('LineString(0 0, 5 0.1, 10 0)'),tolerance:=5))`` → 'LineString(0 0, 10 0)'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/simplify_geometries.png
+   :align: center
+   :width: 100%
+
+   Clockwise from top left: source layer and increasing simplification tolerances
+
 .. end_simplify_section
 
 .. _expression_function_GeometryGroup_simplify_vw:
@@ -3286,6 +3298,12 @@ Returns a wedge shaped buffer originating from a point geometry.
    * - Examples
      - * ``wedge_buffer(center:=geom_from_wkt('POINT(1 2)'),azimuth:=90,width:=180,outer_radius:=1)`` → A wedge shaped buffer centered on the point (1,2), facing to the East, with a width of 180 degrees and outer radius of 1.
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/wedge_buffers.png
+   :align: center
+   :width: 100%
+
+   Wedge buffering features
 
 .. end_wedge_buffer_section
 
