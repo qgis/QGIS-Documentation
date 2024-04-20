@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-04-20 15:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -90,15 +90,26 @@ msgstr ""
 
 #: ../../docs/user_manual/processing/batch.rst:62
 msgid ""
+"|processingAlgorithm| :sup:`Toggle advanced mode`: Available only when "
+"the algorithm has parameters that are marked as advanced, this button "
+"allows to show or hide such parameters in the batch dialog."
+msgstr ""
+
+#: ../../docs/user_manual/processing/batch.rst:207
+msgid "processingAlgorithm"
+msgstr ""
+
+#: ../../docs/user_manual/processing/batch.rst:65
+msgid ""
 "|symbologyAdd| :sup:`Add row`: adds a new processing entry for "
 "configuration"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:204
+#: ../../docs/user_manual/processing/batch.rst:209
 msgid "symbologyAdd"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:63
+#: ../../docs/user_manual/processing/batch.rst:66
 msgid ""
 "|symbologyRemove| :sup:`Remove row(s)`: remove selected rows from the "
 "table. Row selection is done by clicking the number at the left and "
@@ -106,40 +117,40 @@ msgid ""
 " selection."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:206
+#: ../../docs/user_manual/processing/batch.rst:211
 msgid "symbologyRemove"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:66
+#: ../../docs/user_manual/processing/batch.rst:69
 msgid "|fileOpen| :sup:`Open` a batch processing configuration file"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:200
+#: ../../docs/user_manual/processing/batch.rst:203
 msgid "fileOpen"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:67
+#: ../../docs/user_manual/processing/batch.rst:70
 msgid ""
 "|fileSave| :sup:`Save` the batch processing configuration to a "
 ":file:`.JSON` file that can be run afterwards"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:202
+#: ../../docs/user_manual/processing/batch.rst:205
 msgid "fileSave"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:70
+#: ../../docs/user_manual/processing/batch.rst:73
 msgid "By default, the table contains just two rows:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:72
+#: ../../docs/user_manual/processing/batch.rst:75
 msgid ""
 "The first row displays in each cell an :menuselection:`Autofill... -->` "
 "drop-down menu with :ref:`options <batch_parameters>` to quickly fill the"
 " cells below. Available options depend on the parameter type."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:75
+#: ../../docs/user_manual/processing/batch.rst:78
 msgid ""
 "The second row (as well as each subsequent one) represents a single "
 "execution of the algorithm, and each cell contains the value of one of "
@@ -148,27 +159,27 @@ msgid ""
 "arrangement."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:80
+#: ../../docs/user_manual/processing/batch.rst:83
 msgid ""
 "At the bottom of the table, you can set whether to |checkbox| "
 ":guilabel:`Load layers on completion`."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:198
+#: ../../docs/user_manual/processing/batch.rst:201
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:83
+#: ../../docs/user_manual/processing/batch.rst:86
 msgid ""
 "Once the size of the table has been set, it has to be filled with the "
 "desired values."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:89
+#: ../../docs/user_manual/processing/batch.rst:92
 msgid "Filling the parameters table"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:91
+#: ../../docs/user_manual/processing/batch.rst:94
 msgid ""
 "For most parameters, setting the value is trivial. The appropriate "
 "widget, same as in the :ref:`single process dialog <algorithm_widgets>`, "
@@ -177,7 +188,7 @@ msgid ""
 "data-define widget, when compatible."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:97
+#: ../../docs/user_manual/processing/batch.rst:100
 msgid ""
 "To automate the batch process definition and avoid filling the table cell"
 " by cell, you may want to press down the :guilabel:`Autofill...` menu of "
@@ -185,13 +196,13 @@ msgid ""
 "the column:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:102
+#: ../../docs/user_manual/processing/batch.rst:105
 msgid ""
 ":guilabel:`Fill Down` will take the input for the first process and enter"
 " it for all other processes."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:104
+#: ../../docs/user_manual/processing/batch.rst:107
 msgid ""
 "|calculateField| :guilabel:`Calculate by Expression...` will allow you to"
 " create a new QGIS expression to use to update all existing values within"
@@ -201,11 +212,11 @@ msgid ""
 "the buffer distance of each layer:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:196
+#: ../../docs/user_manual/processing/batch.rst:199
 msgid "calculateField"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:115
+#: ../../docs/user_manual/processing/batch.rst:118
 msgid ""
 ":guilabel:`Add Values by Expression...` will add new rows using the "
 "values from an expression which returns an array (as opposed to "
@@ -216,11 +227,11 @@ msgid ""
 "parameter results in new rows with values 100, 150, 200, .... 1000."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:123
+#: ../../docs/user_manual/processing/batch.rst:126
 msgid "When setting a file or layer parameter, more options are provided:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:125
+#: ../../docs/user_manual/processing/batch.rst:128
 msgid ""
 ":guilabel:`Add Files by Pattern...`: adds new rows to the table for files"
 " matching a :guilabel:`File pattern` in a folder to :guilabel:`Look in`. "
@@ -229,37 +240,37 @@ msgid ""
 "sub-folders."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:129
+#: ../../docs/user_manual/processing/batch.rst:132
 msgid ":guilabel:`Select Files...` individually on disk"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:130
+#: ../../docs/user_manual/processing/batch.rst:133
 msgid ":guilabel:`Add All Files from a Directory...`"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:131
+#: ../../docs/user_manual/processing/batch.rst:134
 msgid ":guilabel:`Select from Open Layers...` in the active project"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:133
+#: ../../docs/user_manual/processing/batch.rst:136
 msgid ""
 "Output data parameter exposes the same capabilities as when executing the"
 " algorithm as a single process. Depending on the algorithm, the output "
 "can be:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:136
+#: ../../docs/user_manual/processing/batch.rst:139
 msgid "skipped, if the cell is left empty"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:137
+#: ../../docs/user_manual/processing/batch.rst:140
 msgid ""
 "saved as a temporary layer: fill the cell with ``TEMPORARY_OUTPUT`` and "
 "remember to tick the |checkbox| :guilabel:`Load layers on completion` "
 "checkbox."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:139
+#: ../../docs/user_manual/processing/batch.rst:142
 msgid ""
 "saved as a plain file (:file:`.SHP`, :file:`.GPKG`, :file:`.XML`, "
 ":file:`.PDF`, :file:`.JPG`,...) whose path could be set with the "
@@ -268,7 +279,7 @@ msgid ""
 "complex expressions like:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:148
+#: ../../docs/user_manual/processing/batch.rst:151
 msgid ""
 "You can also type the file path directly or use the file chooser dialog "
 "that appears when clicking on the accompanying :guilabel:`...` button. "
@@ -276,11 +287,11 @@ msgid ""
 "completion of other cells in the same column (same parameter)."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:158
+#: ../../docs/user_manual/processing/batch.rst:161
 msgid "Batch Processing Save"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:160
+#: ../../docs/user_manual/processing/batch.rst:163
 msgid ""
 "If the default value (:guilabel:`Do not autofill`) is selected, it will "
 "just put the selected filename in the selected cell from the parameters "
@@ -289,28 +300,28 @@ msgid ""
 "criteria:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:165
+#: ../../docs/user_manual/processing/batch.rst:168
 msgid ""
 ":guilabel:`Fill with numbers`: incrementally appends a number to the file"
 " name"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:166
+#: ../../docs/user_manual/processing/batch.rst:169
 msgid ""
 ":guilabel:`Fill with parameter values`: you can select a parameter whose "
 "value in the same row is appended to the file name. This is particularly "
 "useful for naming output data objects according to input ones."
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:170
+#: ../../docs/user_manual/processing/batch.rst:173
 msgid "saved as a layer within a database container:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:182
+#: ../../docs/user_manual/processing/batch.rst:185
 msgid "Executing the batch process"
 msgstr ""
 
-#: ../../docs/user_manual/processing/batch.rst:184
+#: ../../docs/user_manual/processing/batch.rst:187
 msgid ""
 "To execute the batch process once you have introduced all the necessary "
 "values, just click on :guilabel:`Run`. The :guilabel:`Log` panel is "
