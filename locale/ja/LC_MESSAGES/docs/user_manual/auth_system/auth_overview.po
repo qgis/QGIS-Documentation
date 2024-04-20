@@ -444,3 +444,22 @@ msgstr "構成が選択された認証設定セレクタ"
 #: ../../docs/user_manual/auth_system/auth_overview.rst:301
 msgid "Python bindings"
 msgstr "Pythonバインディング"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:303
+msgid ""
+"All classes and public functions have sip bindings, except "
+"``QgsAuthCrypto``, since management of the master password hashing and auth "
+"database encryption should be handled by the main app, and not via Python."
+msgstr ""
+"マスターパスワードのハッシュ化と認証データベースの暗号化の管理は、Pythonを経由してではなく、メインのアプリによって処理されるべきなので、``QgsAuthCrypto``"
+" を除く全てのクラスとパブリック関数はsipバインディングを持っています。"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:307
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, no wall against PyQGIS access has been defined. This"
+" may lead to issues where a user downloads/installs a malicious PyQGIS "
+"plugin or standalone app that gains access to authentication credentials."
+msgstr ""
+"マスターパスワードが入力されると、Firefoxの仕組みと同じように、認証データベースの認証設定にアクセスするためのAPIが開かれる。ただし、PyQGISアクセスに対する壁は定義されていません。このため、認証情報にアクセスする悪意のあるPyQGISプラグインやスタンドアロンアプリをユーザーがダウンロード/インストールした場合に問題が発生する可能性があります。"
