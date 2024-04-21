@@ -34,6 +34,10 @@ msgstr ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_ コミュニティの取り組みです。このページは現在 |translation progress| 翻訳されています。"
 
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:4
+msgid "Lesson: Vector Attribute Data"
+msgstr "レッスン: ベクタ属性データ"
+
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:6
 msgid ""
 "Vector data is arguably the most common kind of data in the daily use of "
@@ -42,7 +46,7 @@ msgid ""
 " volumes), while their other properties are included as attributes (often "
 "presented as a table in QGIS)."
 msgstr ""
-"ベクタデータは、GISの日常的な使用において間違いなく最も一般的な種類のデータです。ベクタモデルは、ポイント、ライン、ポリゴン（および3Dデータの場合はサーフェスとボリューム）を使用して地理的特徴の位置と形状を表し、その他のプロパティは属性として含まれます（QGISではよくテーブルとして表示されます）。"
+"ベクタデータは、GISの日常的な使用において間違いなく最も一般的な種類のデータです。ベクタモデルは、ポイント、ライン、ポリゴン（および3Dデータの場合はサーフェスとボリューム）を使用して地理的地物の位置と形状を表し、その他のプロパティは属性として含まれます（QGISではよくテーブルとして表示されます）。"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:12
 msgid ""
@@ -52,7 +56,7 @@ msgid ""
 "viewers don't know anything about the roads they are seeing; only that there"
 " is a road of a certain shape in a certain area."
 msgstr ""
-"今までは、地図に行った変更はどれも、表示されているオブジェクトに影響されませんでした。言い換えれば、すべての土地利用エリアは同じように見え、そしてすべての道路は同じように見えます。地図を見ている人は、見ている道路については何もわかっていません。わかっているのは、その地域にその形状の道があるということだけです。"
+"今までは、地図に行った変更はどれも、表示されているオブジェクトに影響されませんでした。言い換えれば、全ての土地利用エリアは同じように見え、そして全ての道路は同じように見えます。地図を見ている人は、見ている道路については何も分かっていません。分かっているのは、その地域にその形状の道があるということだけです。"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:18
 msgid ""
@@ -61,13 +65,17 @@ msgid ""
 "represent not only objects in locations, but also information about those "
 "objects."
 msgstr ""
-"しかし、GISの全体強みは、地図上に表示されるすべてのオブジェクトが属性も持っていることです。GISでの地図はただの絵ではありません。それらは場所内のオブジェクトだけでなく、それらのオブジェクトに関する情報も表しています。"
+"しかし、GISの全体強みは、地図上に表示される全てのオブジェクトが属性も持っていることです。GISでの地図はただの絵ではありません。それらは場所内のオブジェクトだけでなく、それらのオブジェクトに関する情報も表しています。"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:23
 msgid ""
 "**The goal for this lesson:** To learn about the structure of vector data "
 "and explore the attribute data of an object"
 msgstr "**このレッスンの目標：** ベクタデータの構造について学び、オブジェクトの属性データについて探ります"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:27
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Viewing Layer Attributes"
+msgstr ":abbr:`★☆☆ （初級レベル）` 理解しよう: レイヤ属性を表示する"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:29
 msgid ""
@@ -85,7 +93,7 @@ msgid ""
 ":file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory "
 ":file:`exercise_data/shapefile`."
 msgstr ""
-"前の演習から、地図に ``protected_areas`` レイヤがロードされているはずです。ロードされていない場合は、ディレクトリ "
+"前の演習から、地図に ``protected_areas`` レイヤが読み込まれているはずです。読み込まれていない場合は、ディレクトリ "
 ":file:`exercise_data/shapefile` に :file:`protected_areas.shp` という *ESRI "
 "Shapefile* 形式のデータセットがあります。"
 
@@ -112,7 +120,7 @@ msgid ""
 msgstr ""
 ":menuselection:`レイヤ` メニューで、 |openTable| :sup:`属性テーブルを開く` "
 "ボタンをクリックします（トップにあるツールバーのボタンからもアクセスできます）。これにより、``protected_areas`` "
-"レイヤーの属性テーブルが表示された新しいウィンドウが開かれます。"
+"レイヤの属性テーブルが表示された新しいウィンドウが開かれます。"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:191
 msgid "openTable"
@@ -157,6 +165,14 @@ msgstr "次に、属性テーブルのレコードが、マップキャンバス
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:70
 msgid "Go back to the main QGIS window."
 msgstr "QGIS のメインウィンドウに戻ります。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:71
+msgid ""
+"In the :menuselection:`Edit --> Select` menu, click on the |selectRectangle|"
+" :guilabel:`Select Feature(s)` button."
+msgstr ""
+":menuselection:`編集 --> 選択` メニューで、 |selectRectangle| :guilabel:`地物を選択` "
+"ボタンをクリックします。"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:193
 msgid "selectRectangle"
@@ -268,6 +284,11 @@ msgstr "マップキャンバスを見てください。ポリゴンはマップ
 msgid "You may now close the attribute table."
 msgstr "ここで属性テーブルを閉じてください."
 
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:133
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Exploring Vector Data Attributes"
+msgstr ":abbr:`★☆☆ （初級レベル）` 自分でやってみよう: ベクタデータ属性を探索する"
+
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:135
 msgid "How many fields are available in the :guilabel:`rivers` layer?"
 msgstr ":guilabel:`rivers` レイヤにはいくつのフィールドがありますか？"
@@ -341,6 +362,10 @@ msgstr ""
 "フィールドは、ラベルとして表示するのに最も有用なフィールドです。これは、そのすべての値がすべてのオブジェクトに対して一意であり、*NULL* "
 "値を含む可能性が非常に低いからです。データに *NULL* 値が含まれていても、ほとんどの場所に名前があれば心配はありません。"
 
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:167
+msgid "In Conclusion"
+msgstr "結論"
+
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:169
 msgid ""
 "You now know how to use the attribute table to see what is actually in the "
@@ -350,6 +375,10 @@ msgid ""
 "look for another one that has the required attribute data."
 msgstr ""
 "これで使用しているデータ中に実際に何があるかを見るために属性テーブルを使用する方法がわかりましたね。どんなデータセットでも有用なのは気になる属性を持っている場合だけでしょう。どんな属性が必要かを知っていれば、与えられたデータセットが使用できるかどうか、あるいは必要な属性データを持つ別のデータセットを探す必要があるか、すぐに判断できます。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:176
+msgid "What's Next?"
+msgstr "次は?"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:178
 msgid ""
