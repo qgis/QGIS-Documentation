@@ -70,10 +70,14 @@ Distance and elevation axes
 The :guilabel:`Distance axis` and :guilabel:`Elevation axis` groups give options
 to tweak the grid over the elevation profile item, respectively on the X and Y axes:
 
+* the distance display :guilabel:`Unit`, allowing to override the map canvas unit
 * the graduation on the axis with both a :guilabel:`Major interval` and :guilabel:`Minor interval`
 * the line symbols to apply to the corresponding :guilabel:`Major grid lines` and :guilabel:`Minor grid lines`
 * how regular the graduation items should be labeled (:guilabel:`Label interval`)
   as well as their :guilabel:`Label format` and :guilabel:`Label font`
+* the :guilabel:`Distance labels`: configures whether the distance unit symbol should be placed
+  next to :guilabel:`Every value`, :guilabel:`First value`, :guilabel:`Last value`,
+  :guilabel:`First and last values`, or skipped (:guilabel:`None`)
 
 Chart area
 ----------
