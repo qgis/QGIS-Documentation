@@ -88,7 +88,7 @@ areas so as to make the map less visually cluttered.
    and select the :guilabel:`Simple fill` option.
 #. Click on the :guilabel:`Stroke style` dropdown. At the moment, it should be
    showing a short line and the words :guilabel:`Solid Line`.
-#. Change this to :guilabel:`No Pen`.
+#. Change this to :guilabel:`No Line`.
 
    .. figure:: img/simple_fill_selected.png
       :align: center
@@ -179,7 +179,7 @@ layers.
    :guilabel:`Simple fill` in the symbol layers tree).
 
    In this example, the current symbol has no outline (i.e., it uses the
-   :guilabel:`No Pen` border style).
+   :guilabel:`No Line` border style).
 
    .. figure:: img/simple_fill_selected.png
       :align: center
