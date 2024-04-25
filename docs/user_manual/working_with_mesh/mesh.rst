@@ -134,10 +134,10 @@ The mesh :guilabel:`Layer Properties` dialog provides the following sections:
      - |symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`
    * - |3d| :ref:`3D View <mesh3dview>`:sup:`[1]`
      - |temporal| :ref:`Temporal <meshtemporal>`
-     - |elevationscale| :ref:`Elevation <meshelevation>`
-   * - |rendering| :ref:`Rendering <meshrendering>`
+     - |labelingSingle| :ref:`Labels <meshlabels>`:sup:`[1]`
+   * - |elevationscale| :ref:`Elevation <meshelevation>`
+     - |rendering| :ref:`Rendering <meshrendering>`
      - |editMetadata| :ref:`Metadata <meshmetadata>`
-     -
 
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
@@ -448,10 +448,8 @@ Available methods are:
 
 * |labelingNone| :guilabel:`No labels`: the default value, showing no labels
   from the layer.
-* |labelingSingle| :guilabel:`Labels on vertics`: the temporary feature is
-  a point and label is placed on the vertex.
-* |labelingSingle| :guilabel:`Labels on faces`: the temporary feature is
-  a polygon and label is placed on the face.
+* |labelingSingle| :guilabel:`Labels on vertices`: labels the mesh vertices as a point feature.
+* |labelingSingle| :guilabel:`Labels on faces`: labels the mesh faces as a polygon feature.
 
 .. _figure_mesh_label_example:
 
@@ -460,22 +458,10 @@ Available methods are:
 
    Mesh Labeling methods
 
-When you start labeling, you'll have access to the geometric properties of the
-mesh in your labeling expressions. This means you can use functions that relate
-to the geometry of the mesh to contol where labels are placed and what they display.
-
-For vertices, you can use the following functions:
-
-* `$vertex_x`: Returns the x-coordinate of the vertex.
-* `$vertex_y`: Returns the y-coordinate of the vertex.
-* `$vertex_z`: Returns the z-coordinate of the vertex.
-* `$vertex_index`: Returns the index of the vertex.
-* `$vertex_as_point`: Returns the point geometry of the vertex.
-
-For faces, the available functions are:
-
-* `$face_area`: Returns the area of the face.
-* `$face_index`: Returns the index of the face.
+Once the labeling method has been selected, open |expression| :sup:`Expression dialog`
+and choose a :ref:`mesh function <expression_function_meshes>`.
+You can combine meshes functions with other functions from the :ref:`list <functions_list>`
+to modify the label.
 
 Below are displayed options to customize the labels, under various tabs:
 
