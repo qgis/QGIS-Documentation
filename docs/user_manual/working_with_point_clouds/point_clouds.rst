@@ -416,6 +416,44 @@ Under :guilabel:`Point Symbol`, the size and the unit (e.g. millimeters,
 pixels, inches) with which each data point is displayed can be set.
 Either :guilabel:`Circle` or :guilabel:`Square` can be selected as the style for the points.
 
+Render as a surface (Triangulate)
+.................................
+
+Check |checkbox| :guilabel:`Render as surface (Triangulate)` to enable the triangulation
+of the point cloud layer in the 2D view. This option allows rendering triangles instead of points.
+Each point keeps its color for interpolation in the triangle.
+You can control the horizontal length of computed triangles:
+
+* |checkbox| :guilabel:`Skip triangles longer than` a threshold value:
+  sets in the horizontal plan, the maximum length of a side of the triangles to consider.
+  Note that this can be useful if you want to see actual holes in the data. 
+
+Through the :guilabel:`Shading Renderer` in the :guilabel:`Layer Styling` panel
+you can access the :ref:`Global Map Shading <global_map_shading>` which is also
+supported by this option.
+
+.. _figure_clasification_render_surface_example:
+
+.. figure:: img/clasification_render_surface_example.png
+   :align: center
+
+   Example of Render as a surface (Triangulate) option in Classification renderer
+
+.. _figure_RGB_render_surface_example:
+
+.. figure:: img/RGB_render_surface_example.png
+   :align: center
+
+   Example of Render as a surface (Triangulate) option in RGB renderer
+
+.. _figure_shading_render_surface_example:
+
+.. figure:: img/shading_render_surface_example.png
+   :align: center
+
+   Global map shading when `Render as a Surface` is enabled
+
+
 Layer Rendering
 ...............
 
