@@ -265,7 +265,9 @@ Along with the :guilabel:`Parameters` tab, there is another tab named
 :guilabel:`Log` (see :numref:`figure_alg_dialog_log` below).
 Information provided by the algorithm during its execution is written
 in this tab, allowing you to track the execution as well as being aware and
-having more details about the algorithm as it runs.
+having more details about the algorithm as it runs. You can directly click on
+the names of output files, folders, or HTML files listed in the log. Doing so
+will open the folder containing the generated file and automatically select it.
 Information on algorithm execution is also output in the
 :menuselection:`View --> Panels --> Log Messages Panel`.
 
