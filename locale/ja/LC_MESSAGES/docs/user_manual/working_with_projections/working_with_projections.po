@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:5
 msgid "Working with Projections"
-msgstr "投影法の利用方法"
+msgstr "投影法の操作"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:14
 msgid ""
@@ -346,6 +346,18 @@ msgid ""
 " and no conversion is possible."
 msgstr "距離や面積の単位、座標表示は強制的に「不明な単位」で固定され、距離や面積の測定値はすべて未知の地図単位となり、変換はできません。"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
+msgid ""
+"or an existing coordinate reference system that can be *geographic*, "
+"*projected* or *user-defined*. A preview of the CRS extent on earth is "
+"displayed to help you select the appropriate one. Layers added to the "
+"project are translated on-the-fly to this CRS in order to overlay them "
+"regardless of their original CRS. Use of units and ellipsoid setting are "
+"available and make sense and you can perform calculations accordingly."
+msgstr ""
+"または、既存の座標参照系で *地理的座標系* 、 *投影された座標系* あるいは *ユーザ定義の座標系* "
+"を使用することができます。CRSの地球上における適用範囲のプレビューが表示されるため、適切なCRSを選択するのに役立ちます。プロジェクトに追加されたレイヤは、重ね合わせるために元のCRSに関係なくオンザフライでこのCRSに変換されます。使用する単位や楕円体の設定が可能かつ意味を持ち、これに応じて距離や面積の計算を行うことができます。"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
 msgid ""
 "Whenever you select a new CRS for your QGIS project, the measurement units "
@@ -390,6 +402,10 @@ msgstr ""
 msgid "Coordinate Reference System Selector"
 msgstr "座標参照系セレクタ"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:217
+msgid "CRS Selector"
+msgstr "CRSセレクタ"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:219
 msgid ""
 "This dialog helps you assign a Coordinate Reference System to a project or a"
@@ -433,9 +449,35 @@ msgstr ""
 "**PROJ text** "
 "：投影変換エンジンであるPROJで使われるCRS文字列です。この文字列は読み取り専用であり、情報提供のために表示されています。"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:236
+msgid ""
+"If you want to remove a recently used CRS from the list that can be done in "
+"several ways:"
+msgstr "最近使用したCRSをリストから削除するには、いくつかの方法があります："
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:239
+msgid ""
+"Press |clearItem| :sup:`Remove from recently used CRS` button on the right "
+"side."
+msgstr "右側にある |clearItem| :sup:`最近使ったCRSから削除` ボタンを押す。"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:433
 msgid "clearItem"
 msgstr "clearItem"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
+msgid "Press :kbd:`Del` after selecting CRS that you want to remove."
+msgstr "削除したいCRSを選択した後に :kbd:`Del` を押す。"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:242
+msgid ""
+"Right-click on used CRS and choose |clearItem| :guilabel:`Remove selected "
+"CRS from recently used CRS` to remove selected CRS or |clearConsole| "
+":guilabel:`Clear all recently used CRS` to remove all used CRS."
+msgstr ""
+"使ったCRSを右クリックし、|clearItem| :guilabel:`選択したCRSを最近使ったCRSから削除` "
+"を選んで選択したCRSを削除するか、|clearConsole| :guilabel:`Clear all recently used CRS` "
+"を選んで使ったCRSをすべて削除します。 "
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:431
 msgid "clearConsole"
