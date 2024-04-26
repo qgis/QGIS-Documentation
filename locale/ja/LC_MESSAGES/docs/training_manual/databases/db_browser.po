@@ -34,6 +34,10 @@ msgstr ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_ コミュニティの取り組みです。このページは現在 |translation progress| 翻訳されています。"
 
+#: ../../docs/training_manual/databases/db_browser.rst:2
+msgid "Lesson: Working with Databases in the QGIS Browser"
+msgstr "レッスン: QGISブラウザでデータベースを操作する"
+
 #: ../../docs/training_manual/databases/db_browser.rst:4
 msgid ""
 "In the previous 2 modules we looked at the basic concepts, features and "
@@ -42,13 +46,19 @@ msgid ""
 "section will dive deeper into how to effectively use spatial databases in "
 "QGIS."
 msgstr ""
-"前の2つのモジュールでは、リレーショナルデータベースの基本的な概念、特徴および機能だけでなく、保存、管理、クエリとリレーショナルデータベース内の空間データを操作できる機能拡張について見ました。このセクションでは、効果的にQGISで空間データベースを使用する方法について深掘りします。"
+"前の2つのモジュールでは、リレーショナルデータベースの基本的な概念、特徴および機能だけでなく、保存、管理、クエリとリレーショナルデータベース内の空間データを操作できる機能拡張について見ました。このセクションでは、QGISで空間データベースを効果的に使用する方法について深掘りします。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:9
 msgid ""
 "**The goal for this lesson:** To learn how to interact with spatial "
 "databases using the QGIS Browser interface."
-msgstr "**このレッスンの目的：** QGISのブラウザのインターフェイスを使って空間的なデータベースをどのように作用させるのかを学びます。"
+msgstr "**このレッスンの目的：** QGISのブラウザのインタフェースを使って空間的なデータベースをどのように作用させるのかを学びます。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:13
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Adding Database Tables to QGIS using"
+" the Browser"
+msgstr ":abbr:`★☆☆ （初級レベル）` 理解しよう: ブラウザを使ってQGISにデータベーステーブルを追加する"
 
 #: ../../docs/training_manual/databases/db_browser.rst:15
 msgid ""
@@ -57,7 +67,7 @@ msgid ""
 " ways this can be done in QGIS. Lets start by looking at the new Browser "
 "interface."
 msgstr ""
-"すでにQGISレイヤーとしてデータベースからテーブルを追加する方法を簡単に見てきました。これをもう少し詳細に見て、これがQGISで行うことができるさまざまな方法を見てみましょう。新しいブラウザ・インターフェイスを見ることで開始できます。"
+"すでにQGISレイヤとしてデータベースからテーブルを追加する方法を簡単に見てきました。これをもう少し詳細に見て、これがQGISで行うことができるさまざまな方法を見てみましょう。新しいブラウザ・インタフェースを見ることで開始できます。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:20
 msgid "Start a new empty map in QGIS."
@@ -67,7 +77,7 @@ msgstr "QGISで新しい空の地図を開きます。"
 msgid ""
 "Open the Browser by clicking the :guilabel:`Browser` tab at the bottom of "
 "the *Layer Panel*"
-msgstr "*レイヤーパネル* の下部にある :guilabel:`ブラウザ` タブをクリックしてブラウザを開きます"
+msgstr "*レイヤパネル* の下部にある :guilabel:`ブラウザ` タブをクリックしてブラウザを開きます"
 
 #: ../../docs/training_manual/databases/db_browser.rst:23
 msgid ""
@@ -75,13 +85,13 @@ msgid ""
 "configured connection available (you may need to click the Refresh button at"
 " the top of the browser window)."
 msgstr ""
-"木のPostGISの部分を開きます。前に設定した接続が可能なはずです（ブラウザウィンドウの上部にある[更新]ボタンをクリックする必要があるかもしれません）。"
+"木のPostGISの部分を開きます。前に設定した接続が利用可能なはずです（ブラウザウィンドウの上部にある[更新]ボタンをクリックする必要があるかもしれません）。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:30
 msgid ""
 "Double clicking on any of the table/layers listed here will add it to the "
 "Map Canvas."
-msgstr "ここに記載されているテーブル/レイヤーのいずれかをダブルクリックすると、それが地図キャンバスに追加されます。"
+msgstr "ここに記載されているテーブル/レイヤのいずれかをダブルクリックすると、それがマップキャンバスに追加されます。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:33
 msgid ""
@@ -89,8 +99,8 @@ msgid ""
 "Click on the :guilabel:`Properties` item to look at the properties of the "
 "layer."
 msgstr ""
-"このビューでテーブル/レイヤーを右クリックすると、いくつかのオプションを提供します。レイヤーのプロパティを見るために :guilabel:`プロパティ`"
-" 項目をクリックしてください。"
+"このビューでテーブル/レイヤを右クリックすると、いくつかのオプションを提供します。:guilabel:`プロパティ` "
+"項目をクリックしてレイヤのプロパティを見てください。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:40
 msgid ""
@@ -100,6 +110,12 @@ msgid ""
 "for a new connection."
 msgstr ""
 "もちろん、このインタフェースを使って、ワークステーションの外部のサーバーにホストされているPostGISデータベースに接続することも可能です。ツリーのPostGISエントリーを右クリックすると、新しい接続のための接続パラメータを指定することができます。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:47
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Adding a filtered set of records as "
+"a Layer"
+msgstr ":abbr:`★☆☆ （初級レベル）` 理解しよう: レコードのフィルタセットをレイヤとして追加する"
 
 #: ../../docs/training_manual/databases/db_browser.rst:49
 msgid ""
@@ -166,11 +182,19 @@ msgid ""
 "rather than the entire layer."
 msgstr "地図にはレイヤー全体ではなく主要道路のみが追加されていることに気づくでしょう。"
 
+#: ../../docs/training_manual/databases/db_browser.rst:79
+msgid "In Conclusion"
+msgstr "結論"
+
 #: ../../docs/training_manual/databases/db_browser.rst:81
 msgid ""
 "You have seen how to interact with spatial databases using the QGIS Browser "
 "and how to add layers to your map based on a query filter."
 msgstr "QGISブラウザを使用して空間データベースと対話する方法、およびクエリフィルタに基づいて地図にレイヤーを追加する方法を見てきました。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:85
+msgid "What's Next?"
+msgstr "次は?"
 
 #: ../../docs/training_manual/databases/db_browser.rst:87
 msgid ""
