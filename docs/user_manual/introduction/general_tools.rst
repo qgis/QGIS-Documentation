@@ -211,7 +211,7 @@ a right-click shows a dedicated set of options presented below.
   |zoomToLayer| :guilabel:`Zoom to Selection`                                |checkbox|
   |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|  
   :guilabel:`Show Feature Count`                                             |checkbox|
-  |labelingSingle| :guilabel:`Show Label`                                    |checkbox|
+  |labelingSingle| :guilabel:`Show Label`                                    |checkbox|                      |checkbox|
   :guilabel:`Copy Layer/Group`                                 |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Rename Layer/Group`                               |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                  |checkbox|
