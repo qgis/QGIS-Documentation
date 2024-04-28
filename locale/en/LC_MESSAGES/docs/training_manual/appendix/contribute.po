@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -34,16 +34,16 @@ msgstr ""
 #: ../../docs/training_manual/appendix/contribute.rst:5
 msgid ""
 "To add materials to this course, you must follow the guidelines in this "
-"Appendix. You are not to alter the conditions in this Appendix except for"
-" clarification. This is to ensure that the quality and consistency of "
-"this manual can be maintained."
+"Appendix. You are not allowed to alter the conditions in this Appendix "
+"except for clarification. This is to ensure that the quality and "
+"consistency of this manual can be maintained."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:11
+#: ../../docs/training_manual/appendix/contribute.rst:10
 msgid "Downloading Resources"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:13
+#: ../../docs/training_manual/appendix/contribute.rst:12
 msgid ""
 "The source of this document is available at `GitHub "
 "<https://github.com/qgis/QGIS-Documentation>`_. Consult `GitHub.com "
@@ -51,11 +51,11 @@ msgid ""
 "control system."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:19
+#: ../../docs/training_manual/appendix/contribute.rst:17
 msgid "Manual Format"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:21
+#: ../../docs/training_manual/appendix/contribute.rst:19
 msgid ""
 "This manual is written using `Sphinx <https://www.sphinx-"
 "doc.org/en/master/>`_, a Python document generator using the "
@@ -64,183 +64,198 @@ msgid ""
 "respective sites."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:27
+#: ../../docs/training_manual/appendix/contribute.rst:25
 msgid "Adding a Module"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:27
+msgid "To add a new module:"
 msgstr ""
 
 #: ../../docs/training_manual/appendix/contribute.rst:29
 msgid ""
-"To add a new module, first create a new directory (directly under the "
-"top-level of the :kbd:`qgis-training-manual` directory) with the name of "
-"the new module."
+"First create a new directory (directly under the  top-level of the :file"
+":`qgis-training-manual` directory) with the name of the new module."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:32
+#: ../../docs/training_manual/appendix/contribute.rst:31
 msgid ""
-"Under this new directory, create a file called :kbd:`index.rst`. Leave "
+"Under this new directory, create a file called :file:`index.rst`. Leave "
 "this file blank for now."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:34
+#: ../../docs/training_manual/appendix/contribute.rst:33
 msgid ""
-"Open the :kbd:`index.rst` file under the top-level directory. Its first "
+"Open the :file:`index.rst` file under the top-level directory. Its first "
 "lines are::"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:44
+#: ../../docs/training_manual/appendix/contribute.rst:42
 msgid ""
 "You will note that this is a list of directory names, followed by the "
-"name :kbd:`index`. This directs the top-level index file to the index "
-"files in each directory. The order in which they are listed determines "
-"the order they will have in the document."
+"name ``index``. This directs the top-level index file to the index files "
+"in each directory. The order in which they are listed determines the "
+"order they will have in the document."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:49
+#: ../../docs/training_manual/appendix/contribute.rst:46
 msgid ""
 "Add the name of your new module (i.e., the name you gave the new "
-"directory), followed by :kbd:`/index`, to this list, wherever you want "
-"your module to appear."
+"directory), followed by ``/index``, to this list, wherever you want your "
+"module to appear."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:52
+#: ../../docs/training_manual/appendix/contribute.rst:48
 msgid ""
 "Remember to keep the order of the modules logical, such that later "
 "modules build on the knowledge presented in earlier modules."
 msgstr ""
 
+#: ../../docs/training_manual/appendix/contribute.rst:50
+msgid "Open your new module's own index file (:file:`{module_name}/index.rst`)."
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:51
+msgid "Along the top of the page, create the module heading:"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:53
+msgid "write a first line of asterisks (``*``)."
+msgstr ""
+
 #: ../../docs/training_manual/appendix/contribute.rst:54
-msgid "Open your new module's own index file (:kbd:`[module name]/index.rst`)."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:55
 msgid ""
-"Along the top of the page, write a line of 80 asterisks (:kbd:`*`). This "
-"represents a module heading."
+"Follow this with a line containing the markup phrase ``Module:``, "
+"followed by the name of your module."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:57
+#: ../../docs/training_manual/appendix/contribute.rst:56
+msgid "End this off with another line of same number of asterisks."
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:58
 msgid ""
-"Follow this with a line containing the markup phrase :kbd:`|MOD|` (which "
-"stands for \"module\"), followed by the name of your module."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:59
-msgid "End this off with another line of 80 asterisks."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:60
-msgid "Leave a line open beneath this."
+"The underline and the overline should not be shorter than the line "
+"containing the module title."
 msgstr ""
 
 #: ../../docs/training_manual/appendix/contribute.rst:61
-msgid "Write a short paragraph explaining the purpose and content of the module."
+msgid "Leave a line open beneath this."
 msgstr ""
 
 #: ../../docs/training_manual/appendix/contribute.rst:62
+msgid "Write a short paragraph explaining the purpose and content of the module."
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:63
 msgid "Leave one line open, then add the following text::"
 msgstr ""
 
 #: ../../docs/training_manual/appendix/contribute.rst:71
 msgid ""
-"... where :kbd:`lesson1`, :kbd:`lesson2`, etc., are the names of your "
-"planned lessons."
+"... where ``lesson1``, ``lesson2``, etc., are the names of your planned "
+"lessons."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:74
+#: ../../docs/training_manual/appendix/contribute.rst:73
 msgid "The module-level index file will look like this:"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:92
+#: ../../docs/training_manual/appendix/contribute.rst:90
 msgid "Adding a Lesson"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:94
+#: ../../docs/training_manual/appendix/contribute.rst:92
 msgid "To add a lesson to a new or existing module:"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:96
+#: ../../docs/training_manual/appendix/contribute.rst:94
 msgid "Open the module directory."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:97
-msgid "Open the :kbd:`index.rst` file (created above in the case of new modules)."
+#: ../../docs/training_manual/appendix/contribute.rst:95
+msgid ""
+"Open the :file:`index.rst` file (created above in the case of new "
+"modules)."
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:96
+msgid ""
+"Ensure that the name of the planned lesson is listed underneath the "
+":file:`toctree` directive, as shown above."
 msgstr ""
 
 #: ../../docs/training_manual/appendix/contribute.rst:98
-msgid ""
-"Ensure that the name of the planned lesson is listed underneath the "
-":kbd:`toctree` directive, as shown above."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:100
 msgid "Create a new file under the module directory."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:101
+#: ../../docs/training_manual/appendix/contribute.rst:99
 msgid ""
 "Name this file exactly the same as the name you provided in the module's "
-":kbd:`index.rst` file, and add the extension :kbd:`.rst`."
+":file:`index.rst` file, and add the extension :file:`.rst`."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:104
+#: ../../docs/training_manual/appendix/contribute.rst:102
 msgid ""
-"For editing purposes, a :kbd:`.rst` file works exactly like a normal text"
-" file (:kbd:`.txt`)."
+"For editing purposes, a :file:`.rst` file works exactly like a normal "
+"text file (:file:`.txt`)."
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:105
+msgid ""
+"To begin writing the lesson, write the markup phrase ``Lesson``, followed"
+" by the lesson name."
 msgstr ""
 
 #: ../../docs/training_manual/appendix/contribute.rst:107
 msgid ""
-"To begin writing the lesson, write the markup phrase ``Lesson:``, "
-"followed by the lesson name."
+"In the next line, write a line of equal signs (``=``), not shorter than "
+"the lesson title."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:109
-msgid "In the next line, write a line of 80 equal signs (:kbd:`=`)."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:110
+#: ../../docs/training_manual/appendix/contribute.rst:108
 msgid "Leave a line open after this."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:111
+#: ../../docs/training_manual/appendix/contribute.rst:109
 msgid "Write a short description of the lesson's intended purpose."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:112
+#: ../../docs/training_manual/appendix/contribute.rst:110
 msgid ""
 "Include a general introduction to the subject matter. See the existing "
 "lessons in this manual for examples."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:114
+#: ../../docs/training_manual/appendix/contribute.rst:112
 msgid "Beneath this, start a new paragraph, beginning with this phrase::"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:118
+#: ../../docs/training_manual/appendix/contribute.rst:116
 msgid "Briefly explain the intended outcome of completing this lesson."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:119
+#: ../../docs/training_manual/appendix/contribute.rst:117
 msgid ""
 "If you can't describe the goal of the lesson in one or two sentences, "
 "consider breaking the subject matter up into multiple lessons."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:122
+#: ../../docs/training_manual/appendix/contribute.rst:120
 msgid ""
 "Each lesson will be subdivided into multiple sections, which will be "
 "addressed next."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:126
+#: ../../docs/training_manual/appendix/contribute.rst:123
 msgid "Adding a Section"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:128
+#: ../../docs/training_manual/appendix/contribute.rst:125
 msgid "There are two types of sections: \"follow along\" and \"try yourself\"."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:130
+#: ../../docs/training_manual/appendix/contribute.rst:127
 msgid ""
 "A \"follow along\" section is a detailed set of directions intended to "
 "teach the reader how to use a given aspect of QGIS. This is typically "
@@ -248,190 +263,160 @@ msgid ""
 "interspersed with screenshots."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:134
+#: ../../docs/training_manual/appendix/contribute.rst:131
 msgid ""
 "A \"try yourself\" section gives the reader a short assignment to try by "
-"themselves. It is usually associated with an entry in the answer sheet at"
-" the end of the documentation, which will show or explain how to complete"
-" the assignment, and will show the expected outcome if possible."
+"themselves. It is usually associated with an entry in the answer box "
+"beneath, which will show or explain how to complete the assignment, and "
+"will show the expected outcome if possible."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:139
+#: ../../docs/training_manual/appendix/contribute.rst:136
 msgid ""
 "Every section comes with a difficulty level. An easy section is denoted "
 "by ``★☆☆``, moderate by ``★★☆``, and advanced by ``★★★``."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:143
+#: ../../docs/training_manual/appendix/contribute.rst:140
 msgid "Adding a \"follow along\" section"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:145
-#: ../../docs/training_manual/appendix/contribute.rst:163
+#: ../../docs/training_manual/appendix/contribute.rst:142
+#: ../../docs/training_manual/appendix/contribute.rst:158
 msgid ""
 "To start this section, write the markup phrase of the intended difficulty"
 " level (as shown above)."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:147
+#: ../../docs/training_manual/appendix/contribute.rst:144
 msgid "Leave a space and then write ``Follow Along:``."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:148
+#: ../../docs/training_manual/appendix/contribute.rst:145
 msgid ""
 "Leave another space and write the name of the section (use only an "
 "initial capital letter, as well as capitals for proper nouns)."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:150
+#: ../../docs/training_manual/appendix/contribute.rst:147
+#: ../../docs/training_manual/appendix/contribute.rst:161
 msgid ""
-"In the next line, write a line of 80 minuses/dashes (:kbd:`-`). Ensure "
-"that your text editor does not replace the default minus/dash character "
-"with a long dash or other character."
+"In the next line, write a line of minuses/dashes (``-``), not shorter "
+"than the section title."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:153
+#: ../../docs/training_manual/appendix/contribute.rst:148
 msgid ""
 "Write a short introduction to the section, explaining its purpose. Then "
 "give detailed (click-by-click) instructions on the procedure to be "
 "demonstrated."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:155
+#: ../../docs/training_manual/appendix/contribute.rst:150
 msgid ""
 "In each section, include internal links, external links and screenshots "
 "as needed."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:157
+#: ../../docs/training_manual/appendix/contribute.rst:151
 msgid ""
 "Try to end each section with a short paragraph that concludes it and "
 "leads naturally to the next section, if possible."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:161
+#: ../../docs/training_manual/appendix/contribute.rst:155
 msgid "Adding a \"try yourself\" section"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:165
+#: ../../docs/training_manual/appendix/contribute.rst:160
 msgid "Leave a space and then write ``Try Yourself:``."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:166
-msgid ""
-"In the next line, write a line of 80 minuses/dashes (``-``). Ensure that "
-"your text editor does not replace the default minus/dash character with a"
-" long dash or other character."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:169
+#: ../../docs/training_manual/appendix/contribute.rst:162
 msgid ""
 "Explain the exercise that you want the reader to complete. Refer to "
 "previous sections, lessons or modules if necessary."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:171
+#: ../../docs/training_manual/appendix/contribute.rst:164
 msgid ""
 "Include screenshots to clarify the requirements if a plain textual "
 "description is not clear."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:174
+#: ../../docs/training_manual/appendix/contribute.rst:167
 msgid ""
 "In most cases, you will want to provide an answer regarding how to "
 "complete the assignment given in this section. To do so, you will need to"
-" add an entry in the answer sheet."
+" create and feed an answer block beneath the instructions."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:178
+#: ../../docs/training_manual/appendix/contribute.rst:171
+msgid "First, create the custom collapsible widget that contains the answer::"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:176
 msgid ""
-"First, decide on a unique name for the answer. Ideally, this name will "
-"include the name of the lesson and an incrementing number."
+"Keeping an indentation with regard to the above block, write the "
+"instructions on how to complete the assignment, using links and images "
+"where needed."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:180
-msgid "Create a link for this answer:"
+#: ../../docs/training_manual/appendix/contribute.rst:181
+msgid "Add a Conclusion"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:183
+msgid "To end a lesson:"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:185
+msgid ""
+"Write the phrase ``In Conclusion``, followed by a new line of "
+"minuses/dashes (``-``)."
 msgstr ""
 
 #: ../../docs/training_manual/appendix/contribute.rst:186
-msgid "Open the answer sheet (:kbd:`answers/answers.rst`)."
+msgid ""
+"Write a conclusion for the lesson, explaining which concepts have been "
+"covered in the lesson."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:187
-msgid "Create a link to the \"try yourself\" section by writing this line:"
+#: ../../docs/training_manual/appendix/contribute.rst:189
+msgid "Add a Further Reading Section"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:191
+msgid "This section is optional."
 msgstr ""
 
 #: ../../docs/training_manual/appendix/contribute.rst:193
 msgid ""
-"Write the instructions on how to complete the assignment, using links and"
-" images where needed."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:195
-msgid ""
-"To end it off, include a link back to the \"try yourself\" section by "
-"writing this line:"
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:202
-msgid ""
-"To make this link work, add the following line above the heading to the "
-"\"try yourself\" section:"
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:209
-msgid ""
-"Remember that each of these lines shown above must have a blank line "
-"above and below it, otherwise it could cause errors while creating the "
-"document."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:213
-msgid "Add a Conclusion"
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:215
-msgid ""
-"To end a lesson, write the phrase ``In Conclusion``, followed by a new "
-"line of 80 minuses/dashes (``-``). Write a conclusion for the lesson, "
-"explaining which concepts have been covered in the lesson."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:220
-msgid "Add a Further Reading Section"
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:222
-msgid "This section is optional."
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:223
-msgid ""
-"Write the phrase ``Further Reading``, followed by a new line of 80 "
+"Write the phrase ``Further Reading``, followed by a new line of "
 "minuses/dashes (``-``)."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:225
+#: ../../docs/training_manual/appendix/contribute.rst:195
 msgid "Include links to appropriate external websites."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:228
+#: ../../docs/training_manual/appendix/contribute.rst:198
 msgid "Add a What's Next Section"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:230
+#: ../../docs/training_manual/appendix/contribute.rst:200
 msgid ""
-"Write the phrase ``What's Next?`` for \"what's next\", followed by a new "
-"line of 80 minuses/dashes (``-``)."
+"Write the phrase ``What's Next?``, followed by a new line of "
+"minuses/dashes (``-``)."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:232
+#: ../../docs/training_manual/appendix/contribute.rst:201
 msgid ""
 "Explain how this lesson has prepared students for the next lesson or "
 "module."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:233
+#: ../../docs/training_manual/appendix/contribute.rst:202
 msgid ""
 "Remember to change the \"what's next\" section of the previous lesson if "
 "necessary, so that it refers to your new lesson. This will be necessary "
@@ -439,137 +424,139 @@ msgid ""
 "existing lesson."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:239
+#: ../../docs/training_manual/appendix/contribute.rst:208
 msgid "Using Markup"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:241
+#: ../../docs/training_manual/appendix/contribute.rst:210
 msgid ""
 "To adhere to the standards of this document, you will need to add "
 "standard markup to your text."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:245
+#: ../../docs/training_manual/appendix/contribute.rst:214
 msgid "New concepts"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:247
+#: ../../docs/training_manual/appendix/contribute.rst:216
 msgid ""
 "If you are explaining a new concept, you will need to write the new "
-"concept's name in italics by enclosing it in asterisks (:kbd:`*`)."
+"concept's name in italics by enclosing it in asterisks (``*``)."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:255
+#: ../../docs/training_manual/appendix/contribute.rst:224
 msgid "Emphasis"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:257
+#: ../../docs/training_manual/appendix/contribute.rst:226
 msgid ""
 "To emphasize a crucial term which is not a new concept, write the term in"
-" bold by enclosing it in double asterisks (:kbd:`**`)."
+" bold by enclosing it in double asterisks (``**``)."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:259
+#: ../../docs/training_manual/appendix/contribute.rst:228
 msgid ""
 "Use this sparingly! If used too much, it can seem to the reader that you "
 "are shouting or being condescending."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:269
+#: ../../docs/training_manual/appendix/contribute.rst:238
 msgid "Images"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:271
-msgid "When adding an image, save it to the folder :kbd:`_static/lesson_name/`."
+#: ../../docs/training_manual/appendix/contribute.rst:240
+msgid ""
+"When adding an image, save it to an :file:`img` folder next to the lesson"
+" file."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:272
+#: ../../docs/training_manual/appendix/contribute.rst:241
 msgid "Include it in the document like this::"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:277
+#: ../../docs/training_manual/appendix/contribute.rst:246
 msgid "Remember to leave a line open above and below the image markup."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:280
+#: ../../docs/training_manual/appendix/contribute.rst:249
 msgid "Internal links"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:282
+#: ../../docs/training_manual/appendix/contribute.rst:251
 msgid ""
 "To create an anchor for a link, write the following line above the place "
 "where you want the link to point to::"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:287
-msgid "To create a link, add this line::"
-msgstr ""
-
-#: ../../docs/training_manual/appendix/contribute.rst:291
-#: ../../docs/training_manual/appendix/contribute.rst:300
+#: ../../docs/training_manual/appendix/contribute.rst:256
 msgid "Remember to leave a line open above and below this line."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:294
+#: ../../docs/training_manual/appendix/contribute.rst:257
+msgid "To create a link, refer to it as below::"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/contribute.rst:262
 msgid "External links"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:296
+#: ../../docs/training_manual/appendix/contribute.rst:264
 msgid "To create an external link, write it out like this::"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:303
+#: ../../docs/training_manual/appendix/contribute.rst:269
 msgid "Using monospaced text"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:305
+#: ../../docs/training_manual/appendix/contribute.rst:271
 msgid ""
 "When you are writing text that the user needs to enter, a path name, or "
 "the name of a database element such as a table or column name, you must "
-"write it in :kbd:`monospaced text`. For example::"
+"write it in ``monospaced text``. For example::"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:312
+#: ../../docs/training_manual/appendix/contribute.rst:278
 msgid "Labeling GUI items"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:314
+#: ../../docs/training_manual/appendix/contribute.rst:280
 msgid ""
 "If you are referring to a GUI item, such as a button, you must write its "
 "name in :guilabel:`the GUI label format`. For example::"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:319
+#: ../../docs/training_manual/appendix/contribute.rst:285
 msgid ""
 "This also applies if you are mentioning the name of a tool without "
 "requiring the user to click a button."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:323
+#: ../../docs/training_manual/appendix/contribute.rst:289
 msgid "Menu selections"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:325
+#: ../../docs/training_manual/appendix/contribute.rst:291
 msgid ""
 "If you are guiding a user through menus, you must use the "
 ":menuselection:`menu --> selection --> format`. For example::"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:332
+#: ../../docs/training_manual/appendix/contribute.rst:298
 msgid "Adding notes"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:334
+#: ../../docs/training_manual/appendix/contribute.rst:300
 msgid ""
-"You might need to a note in the text, which explains extra details that "
-"can't easily be made part of the flow of the lesson. This is the markup::"
+"You might need to add a note in the text, which explains extra details "
+"that can't easily be made part of the flow of the lesson. This is the "
+"markup::"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:347
+#: ../../docs/training_manual/appendix/contribute.rst:313
 msgid "Adding a sponsorship/authorship note"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:349
+#: ../../docs/training_manual/appendix/contribute.rst:315
 msgid ""
 "If you are writing a new module, lesson or section on behalf of a "
 "sponsor, you must include a short sponsor message of their choice. This "
@@ -578,24 +565,24 @@ msgid ""
 "However, it may not be an advertisement for their company."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:355
+#: ../../docs/training_manual/appendix/contribute.rst:321
 msgid ""
 "If you have volunteered to write a module, lesson or section in your own "
 "capacity, and not on behalf of a sponsor, you may include an authorship "
 "note below the heading of the module, lesson or section that you "
-"authored. This must take the form :kbd:`This [module/lesson/section] "
-"contributed by [author name].` Do not add further text, contact details, "
-"etc. Such details are to be added in the \"Contributors\" section of the "
-"Foreword, along with the name(s) of the part(s) you added. If you only "
+"authored. This must take the form ``This [module/lesson/section] "
+"contributed by [author name].`` Do not add further text, contact details,"
+" etc. Such details are to be added in the \"Contributors\" section of the"
+" Foreword, along with the name(s) of the part(s) you added. If you only "
 "made enhancements, corrections and/or additions, list yourself as an "
 "editor."
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:365
+#: ../../docs/training_manual/appendix/contribute.rst:331
 msgid "Thank You!"
 msgstr ""
 
-#: ../../docs/training_manual/appendix/contribute.rst:367
+#: ../../docs/training_manual/appendix/contribute.rst:333
 msgid ""
 "Thank you for contributing to this project! By so doing, you are making "
 "QGIS more accessible to users and adding value to the QGIS project as a "

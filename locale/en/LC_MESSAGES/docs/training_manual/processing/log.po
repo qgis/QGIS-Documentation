@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -44,18 +44,18 @@ msgid ""
 "implements some interactivity."
 msgstr ""
 
-#: ../../docs/training_manual/processing/log.rst:8
+#: ../../docs/training_manual/processing/log.rst:11
 msgid ""
 "To open the log, click on the balloon at the bottom right, on the QGIS "
 "status bar. Some algorithms might leave here information about their "
 "execution. For instance, those algorithms that call an external "
 "application usually log the console output of that application to this "
 "entry. If you have a look at it, you will see that the output of the SAGA"
-" algorithm that we just run (and that fail to execute because input data "
-"was not correct) is stored here."
+" algorithm that we just run (and that fails to execute because input data"
+" was not correct) is stored here."
 msgstr ""
 
-#: ../../docs/training_manual/processing/log.rst:10
+#: ../../docs/training_manual/processing/log.rst:18
 msgid ""
 "This is helpful to understand what is going on. Advanced users will be "
 "able to analyze that output to find out why the algorithm failed. If you "
@@ -65,7 +65,7 @@ msgid ""
 "provided."
 msgstr ""
 
-#: ../../docs/training_manual/processing/log.rst:12
+#: ../../docs/training_manual/processing/log.rst:23
 msgid ""
 "Even if the algorithm could be executed, some algorithms might leave "
 "warnings in case the result might not be right. For instance, when "
@@ -76,52 +76,82 @@ msgid ""
 "some aspect of a given algorithm."
 msgstr ""
 
-#: ../../docs/training_manual/processing/log.rst:14
+#: ../../docs/training_manual/processing/log.rst:28
 msgid ""
-"From the *Processing* menu, under the *History* section, you'll find "
-"*Algorithms*. All algorithms that are executed, even if they are executed"
-" from the GUI and not from the console (which will be explained later in "
-"this manual) are stored in this section as a console call. That means "
-"that everytime you run an algorithm, a console command is added to the "
-"log, and you have the full history of your working session. Here is how "
-"that history looks like:"
+"From the :menuselection:`Processing --> History...` menu, you'll find "
+"*algorithms* that are executed, regardless of they are executed from the "
+"GUI or from the console (which will be explained later in this manual). "
+"The execution is stored in this dialog as a console call. That means that"
+" everytime you run an algorithm, a console command is added to the log, "
+"and you have the full history of your working session. Here is how that "
+"history looks like:"
 msgstr ""
 
-#: ../../docs/training_manual/processing/log.rst:18
+#: ../../docs/training_manual/processing/log.rst:37
 msgid ""
 "This can be very useful when starting working with the console, to learn "
 "about the syntax of algorithms. We will use it when we discuss how to run"
 " analysis commands from the console."
 msgstr ""
 
-#: ../../docs/training_manual/processing/log.rst:20
-msgid ""
-"The history is also interactive, and you can re--run any previous "
-"algorithm just by double--clicking on its entry. This is an easy way of "
-"replicating the work we already did before."
+#: ../../docs/training_manual/processing/log.rst:41
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along"
 msgstr ""
 
-#: ../../docs/training_manual/processing/log.rst:22
+#: ../../docs/training_manual/processing/log.rst:43
 msgid ""
-"For instance, try the following. Open the data corresponding to the first"
-" chapter of this manual and run the algorithm explained there. Now go to "
-"the log dialog and locate the last algorithm in the list, which "
-"corresponds to the algorithm you have just run. Double--click on it an a "
-"new result should be produced, just like when you run it using the normal"
-" dialog and calling it from the toolbox."
+"The history is also interactive, and you can run any previous algorithm "
+"just by double-clicking on its entry. This is an easy way of replicating "
+"the work we already did before."
 msgstr ""
 
-#: ../../docs/training_manual/processing/log.rst:25
+#: ../../docs/training_manual/processing/log.rst:46
+msgid "For instance, try the following:"
+msgstr ""
+
+#: ../../docs/training_manual/processing/log.rst:48
+msgid ""
+"Open the data corresponding to the first chapter of this manual and run "
+"the algorithm explained there."
+msgstr ""
+
+#: ../../docs/training_manual/processing/log.rst:49
+msgid ""
+"Now go to the log dialog and locate the last algorithm in the list, which"
+" corresponds to the algorithm you have just run."
+msgstr ""
+
+#: ../../docs/training_manual/processing/log.rst:50
+msgid ""
+"Double-click on it and a new result should be produced, just like when "
+"you run it using the normal dialog and calling it from the toolbox."
+msgstr ""
+
+#: ../../docs/training_manual/processing/log.rst:53
 msgid ":abbr:`★★★ (Advanced level)` Advanced"
 msgstr ""
 
-#: ../../docs/training_manual/processing/log.rst:27
-msgid ""
-"You can also modify the algorithm. Just copy it, open the "
-":menuselection:`Plugins --> Python console`, click on "
-":menuselection:`Import class --> Import Processing class`, then paste it "
-"to re-run the analysis; change the text at will. To display the resulting"
-" file, type :kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name "
-"in legend', 'ogr')`. Otherwise, you can use :kbd:`processing.runandload`."
+#: ../../docs/training_manual/processing/log.rst:55
+msgid "You can also modify the algorithm."
+msgstr ""
+
+#: ../../docs/training_manual/processing/log.rst:57
+msgid "Copy the algorithm call"
+msgstr ""
+
+#: ../../docs/training_manual/processing/log.rst:58
+msgid "Open the :menuselection:`Plugins --> Python console`"
+msgstr ""
+
+#: ../../docs/training_manual/processing/log.rst:59
+msgid "Paste your copy to run the analysis; change the text at will."
+msgstr ""
+
+#: ../../docs/training_manual/processing/log.rst:60
+msgid "To display the resulting file, type::"
+msgstr ""
+
+#: ../../docs/training_manual/processing/log.rst:64
+msgid "Otherwise, you can use::"
 msgstr ""
 
