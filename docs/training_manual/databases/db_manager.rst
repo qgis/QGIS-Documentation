@@ -14,10 +14,8 @@ databases using the QGIS DB Manager.
 ------------------------------------------------------------------------------------
 
 You should first open the DB Manager interface by selecting
-:guilabel:`Database --> DB Manager --> DB Manager` on the menu or by
-selecting the DB Manager icon on the toolbar.
-
-    |dbManager|
+:menuselection:`Database --> DB Manager --> DB Manager` on the menu
+or by selecting the |dbManager| :sup:`DB Manager` icon on the toolbar.
 
 You should already see the previous connections we have configured
 and be able to expand the ``myPG`` section and its ``public`` schema
@@ -30,8 +28,7 @@ about the Schemas contained in your database.
    :align: center
 
 Schemas are a way of grouping data tables and other objects in a
-PostgreSQL database and a container for permissions and other
-constraints.
+PostgreSQL database and a container for permissions and other constraints.
 Managing PostgreSQL schemas is beyond the scope of this manual, but
 you can find more information about them in the
 `PostgreSQL documentation on Schemas

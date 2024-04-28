@@ -83,7 +83,7 @@ the real world.
 
 You can also use this field to set the Map Scale manually.
 
-#. In the Status Bar, click on the :guilabel:`Scale` textfield.
+#. In the Status Bar, click on the :guilabel:`Scale` text field.
 #. Type in ``50000`` and press :kbd:`Enter`.  This will redraw the features in the 
    Map Canvas to reflect the scale you typed in.
 #. Alternatively, click on the options arrow of the :guilabel:`Scale` field to see
@@ -95,7 +95,7 @@ You can also use this field to set the Map Scale manually.
 #. Select :guilabel:`1:5000`.  This will also update the map scale in the Map Canvas.
 
 Now you know the basics of navigating the Map Canvas. Check out the User Manual on 
-:ref:`Zooming and Panning<zoom_pan>` to learn about alternative ways of navigating 
+:ref:`Zooming and Panning <zoom_pan>` to learn about alternative ways of navigating
 the Map Canvas.
 
 In Conclusion
