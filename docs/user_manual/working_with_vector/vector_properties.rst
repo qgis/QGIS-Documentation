@@ -2912,7 +2912,7 @@ that was selected from the identify results or attribute table (see :ref:`using_
 Double quote marks can be used to group text into a single argument to the program, script or command.
 Double quotes will be ignored if preceded by a backslash.
 
-Actions can invoke a single process, with arguments, so booleen operators (such as ``&``, ``&&``, ``;``, ``|``) will not work.
+Actions can invoke a single process, with arguments, so Boolean operators (such as ``&``, ``&&``, ``;``, ``|``) will not work.
 In UNIX-like operating systems multiple commands can be executed via ``bash -c``.
 
 The :guilabel:`Action Scopes` allows you to define where the action should be available.
