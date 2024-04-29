@@ -45,9 +45,12 @@ This is an easy way of replicating the work we already did before.
 
 For instance, try the following:
 
-#. Open the data corresponding to the first chapter of this manual and run the algorithm explained there.
-#. Now go to the log dialog and locate the last algorithm in the list, which corresponds to the algorithm you have just run.
-#. Double-click on it and a new result should be produced, just like when you run it using the normal dialog and calling it from the toolbox.
+#. Open the data corresponding to the first chapter of this manual
+   and run the algorithm explained there.
+#. Now go to the History dialog and locate the last algorithm in the list,
+   which corresponds to the algorithm you have just run.
+#. Double-click on it and a new result should be produced,
+   just like when you run it using the normal dialog and calling it from the toolbox.
 
 :abbr:`★★★ (Advanced level)` Advanced
 -------------------------------------
@@ -56,12 +59,11 @@ You can also modify the algorithm.
 
 #. Copy the algorithm call
 #. Open the :menuselection:`Plugins --> Python console`
-#. Paste your copy to run the analysis; change the text at will.
-#. To display the resulting file, type::
+#. Paste your copy to run the analysis; change the parameters at will.
+#. To display the resulting file, you may want to replace ``processing.run`` in the pasted command
+   with ``processing.runAndLoadResults``.
 
-    iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', 'ogr')
+   Or, after you ran the pasted command, and depending on the output layer type, you can type e.g.::
 
-   Otherwise, you can use::
-
-    processing.runAndloadResults
+    iface.addVectorLayer('/path/to/output/filename', 'Layer name in legend', 'ogr')
 
