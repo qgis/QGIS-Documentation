@@ -424,34 +424,31 @@ of the point cloud layer in the 2D view. This option allows rendering triangles 
 Each point keeps its color for interpolation in the triangle.
 You can control the horizontal length of computed triangles:
 
-* |checkbox| :guilabel:`Skip triangles longer than` a threshold value:
-  sets in the horizontal plan, the maximum length of a side of the triangles to consider.
-  Note that this can be useful if you want to see actual holes in the data. 
-
-Through the :guilabel:`Shading Renderer` in the :guilabel:`Layer Styling` panel
-you can access the :ref:`Global Map Shading <global_map_shading>` which is also
-supported by this option.
+By checking the |checkbox| :guilabel:`Skip triangles longer than` option and setting up
+the threshold value, you can control the maximum lenght of a side of the triangles
+to consider in the horizontal plan. This can be particularly useful if you want to
+identify actual holes in the data. 
 
 .. _figure_clasification_render_surface_example:
 
 .. figure:: img/clasification_render_surface_example.png
    :align: center
 
-   Example of Render as a surface (Triangulate) option in Classification renderer
+   Example of disabled (left) and enabled (right) Render as a surface (Triangulate) option in Classification renderer
 
 .. _figure_RGB_render_surface_example:
 
 .. figure:: img/RGB_render_surface_example.png
    :align: center
 
-   Example of Render as a surface (Triangulate) option in RGB renderer
+   Example of disabled (left) and enabled (right) Render as a surface (Triangulate) option in RGB renderer
 
 .. _figure_shading_render_surface_example:
 
 .. figure:: img/shading_render_surface_example.png
    :align: center
 
-   Global map shading when `Render as a Surface` is enabled
+   Example of `Render as a Surface` with map shading (left) and with map shading, filtering large triangles (right)
 
 
 Layer Rendering
