@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
@@ -56,25 +56,25 @@ msgstr ""
 "accadono, e anche di rieseguire operazioni precedenti, dato che il sistema "
 "di log implementa anche una certa interattività."
 
-#: ../../docs/training_manual/processing/log.rst:8
+#: ../../docs/training_manual/processing/log.rst:11
 msgid ""
 "To open the log, click on the balloon at the bottom right, on the QGIS "
 "status bar. Some algorithms might leave here information about their "
 "execution. For instance, those algorithms that call an external application "
 "usually log the console output of that application to this entry. If you "
 "have a look at it, you will see that the output of the SAGA algorithm that "
-"we just run (and that fail to execute because input data was not correct) is"
-" stored here."
+"we just run (and that fails to execute because input data was not correct) "
+"is stored here."
 msgstr ""
-"Per aprire il log, clicca sul fumetto in basso a destra, sulla barra di "
-"stato di QGIS. Alcuni algoritmi potrebbero lasciare qui informazioni sulla "
-"loro esecuzione. Per esempio, quegli algoritmi che chiamano un'applicazione "
-"esterna di solito registrano il risultato della console di "
-"quell'applicazione in questa voce. Se dai un'occhiata, vedrai che il "
-"risultato dell'algoritmo SAGA che abbiamo appena eseguito (e che non è stato"
-" eseguito perché i dati in ingresso non erano corretti) è memorizzato qui."
+"Per aprire il log, fai clic sul fumetto in basso a destra, sulla barra di "
+"stato di QGIS. Alcuni algoritmi possono lasciare qui informazioni sulla loro"
+" esecuzione. Ad esempio, gli algoritmi che chiamano un'applicazione esterna "
+"di solito registrano il risultato della console di tale applicazione in "
+"questa voce. Se dai un'occhiata, vedrai che il risultato dell'algoritmo SAGA"
+" che abbiamo appena eseguito (e che non è stato eseguito perché i dati di "
+"input non erano corretti) è memorizzato qui."
 
-#: ../../docs/training_manual/processing/log.rst:10
+#: ../../docs/training_manual/processing/log.rst:18
 msgid ""
 "This is helpful to understand what is going on. Advanced users will be able "
 "to analyze that output to find out why the algorithm failed. If you are not "
@@ -89,7 +89,7 @@ msgstr ""
 " problema nell'installazione del software esterno o un problema con i dati "
 "che hai fornito."
 
-#: ../../docs/training_manual/processing/log.rst:12
+#: ../../docs/training_manual/processing/log.rst:23
 msgid ""
 "Even if the algorithm could be executed, some algorithms might leave "
 "warnings in case the result might not be right. For instance, when executing"
@@ -108,25 +108,25 @@ msgstr ""
 " questo tipo di avvisi se non si è sicuri di qualche aspetto di un dato "
 "algoritmo."
 
-#: ../../docs/training_manual/processing/log.rst:14
+#: ../../docs/training_manual/processing/log.rst:28
 msgid ""
-"From the *Processing* menu, under the *History* section, you'll find "
-"*Algorithms*. All algorithms that are executed, even if they are executed "
-"from the GUI and not from the console (which will be explained later in this"
-" manual) are stored in this section as a console call. That means that "
+"From the :menuselection:`Processing --> History...` menu, you'll find "
+"*algorithms* that are executed, regardless of they are executed from the GUI"
+" or from the console (which will be explained later in this manual). The "
+"execution is stored in this dialog as a console call. That means that "
 "everytime you run an algorithm, a console command is added to the log, and "
 "you have the full history of your working session. Here is how that history "
 "looks like:"
 msgstr ""
-"Dal menu *Processing*, sotto la sezione *Storico*, troverai *Algoritmi*. "
-"Tutti gli algoritmi che vengono eseguiti, anche se vengono eseguiti dalla "
-"GUI e non dalla console (cosa che verrà spiegata più avanti in questo "
-"manuale) vengono memorizzati in questa sezione come una chiamata da console."
-" Ciò significa che ogni volta che si esegue un algoritmo, un comando da "
-"console viene aggiunto al log, e si ha la storia completa della propria "
-"sessione di lavoro. Ecco come appare questo storico:"
+"Dal menu :menuselection:`Processing --> Cronologia`, trovi gli *algoritmi* "
+"che sono stati eseguiti, indipendentemente dal fatto che siano stati "
+"eseguiti dalla GUI o dalla console (cosa che verrà spiegata più avanti in "
+"questo manuale). L'esecuzione viene memorizzata in questa finestra di "
+"dialogo come una chiamata alla console. Ciò significa che ogni volta che "
+"esegui un algoritmo, un comando da console viene aggiunto al log e hai la "
+"storia completa della sessione di lavoro. Ecco come appare la cronologia:"
 
-#: ../../docs/training_manual/processing/log.rst:18
+#: ../../docs/training_manual/processing/log.rst:37
 msgid ""
 "This can be very useful when starting working with the console, to learn "
 "about the syntax of algorithms. We will use it when we discuss how to run "
@@ -136,50 +136,74 @@ msgstr ""
 "per imparare la sintassi degli algoritmi. Lo useremo quando parleremo di "
 "come eseguire comandi di analisi dalla console."
 
-#: ../../docs/training_manual/processing/log.rst:20
+#: ../../docs/training_manual/processing/log.rst:41
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along"
+msgstr ":abbr:`★☆☆ (Livello Base)` Segui passo dopo passo"
+
+#: ../../docs/training_manual/processing/log.rst:43
 msgid ""
-"The history is also interactive, and you can re--run any previous algorithm "
-"just by double--clicking on its entry. This is an easy way of replicating "
-"the work we already did before."
+"The history is also interactive, and you can run any previous algorithm just"
+" by double-clicking on its entry. This is an easy way of replicating the "
+"work we already did before."
 msgstr ""
-"Lo storico è anche interattivo, e si può rieseguire qualsiasi algoritmo "
+"La cronologia è anche interattiva e puoi eseguire qualsiasi algoritmo "
 "precedente semplicemente facendo doppio clic sulla sua voce. Questo è un "
-"modo semplice per replicare il lavoro che abbiamo già fatto prima."
+"modo semplice per replicare il lavoro già svolto in precedenza."
 
-#: ../../docs/training_manual/processing/log.rst:22
+#: ../../docs/training_manual/processing/log.rst:46
+msgid "For instance, try the following:"
+msgstr "Per esempio, prova a fare quanto segue:"
+
+#: ../../docs/training_manual/processing/log.rst:48
 msgid ""
-"For instance, try the following. Open the data corresponding to the first "
-"chapter of this manual and run the algorithm explained there. Now go to the "
-"log dialog and locate the last algorithm in the list, which corresponds to "
-"the algorithm you have just run. Double--click on it an a new result should "
-"be produced, just like when you run it using the normal dialog and calling "
-"it from the toolbox."
+"Open the data corresponding to the first chapter of this manual and run the "
+"algorithm explained there."
 msgstr ""
-"Per esempio, prova quanto segue. Apri i dati corrispondenti al primo "
-"capitolo di questo manuale ed esegui l'algoritmo ivi spiegato. Ora vai alla "
-"finestra di dialogo dei log e individua l'ultimo algoritmo nella lista, che "
-"corrisponde all'algoritmo che hai appena eseguito. Fai doppio clic su di "
-"esso e dovrebbe essere prodotto un nuovo risultato, proprio come quando lo "
-"esegui usando la finestra di dialogo normale e chiamandolo dalla casella "
-"degli strumenti."
+"Apri i dati riportati nel primo capitolo di questo manuale ed esegui "
+"l'algoritmo ivi illustrato."
 
-#: ../../docs/training_manual/processing/log.rst:25
+#: ../../docs/training_manual/processing/log.rst:49
+msgid ""
+"Now go to the log dialog and locate the last algorithm in the list, which "
+"corresponds to the algorithm you have just run."
+msgstr ""
+"Passa ora alla finestra di dialogo del log e individua l'ultimo algoritmo "
+"dell'elenco, che corrisponde all'algoritmo che hai appena eseguito."
+
+#: ../../docs/training_manual/processing/log.rst:50
+msgid ""
+"Double-click on it and a new result should be produced, just like when you "
+"run it using the normal dialog and calling it from the toolbox."
+msgstr ""
+"Facendo doppio clic su di esso, otterrai un nuovo risultato, proprio come "
+"quando lo esegui utilizzando la normale finestra di dialogo e richiamandolo "
+"dalla casella degli strumenti."
+
+#: ../../docs/training_manual/processing/log.rst:53
 msgid ":abbr:`★★★ (Advanced level)` Advanced"
 msgstr ":abbr:`★★★ (Livello Avanzato)` Avanzato"
 
-#: ../../docs/training_manual/processing/log.rst:27
-msgid ""
-"You can also modify the algorithm. Just copy it, open the "
-":menuselection:`Plugins --> Python console`, click on :menuselection:`Import"
-" class --> Import Processing class`, then paste it to re-run the analysis; "
-"change the text at will. To display the resulting file, type "
-":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
-"'ogr')`. Otherwise, you can use :kbd:`processing.runandload`."
+#: ../../docs/training_manual/processing/log.rst:55
+msgid "You can also modify the algorithm."
+msgstr "Puoi anche modificare l'algoritmo."
+
+#: ../../docs/training_manual/processing/log.rst:57
+msgid "Copy the algorithm call"
+msgstr "Copia la chiamata all'algoritmo"
+
+#: ../../docs/training_manual/processing/log.rst:58
+msgid "Open the :menuselection:`Plugins --> Python console`"
+msgstr "Apri :menuselection:`Plugins --> Console Python`"
+
+#: ../../docs/training_manual/processing/log.rst:59
+msgid "Paste your copy to run the analysis; change the text at will."
 msgstr ""
-"Puoi anche modificare l'algoritmo. Basta copiarlo, aprire la "
-":menuselection:`Plugins --> Python console`, cliccare su "
-":menuselection:`Import class --> Import Processing class`, quindi incollarlo"
-" per eseguire nuovamente l'analisi; cambiare il testo a piacere. Per "
-"visualizzare il file risultante, digita "
-":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
-"'ogr')`. Altrimenti, puoi usare :kbd:`processing.runandload`."
+"Incolla la tua copia per eseguire l'analisi; modifica il testo a piacere."
+
+#: ../../docs/training_manual/processing/log.rst:60
+msgid "To display the resulting file, type::"
+msgstr "Per visualizzare il file risultante, digita::"
+
+#: ../../docs/training_manual/processing/log.rst:64
+msgid "Otherwise, you can use::"
+msgstr "Altrimenti, puoi usare::"
