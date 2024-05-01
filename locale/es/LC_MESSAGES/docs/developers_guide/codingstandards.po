@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-11 16:48+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -293,6 +294,19 @@ msgstr ""
 "enumerado y cualquier otro código que esté accesible a través de la API "
 "pública."
 
+#: ../../docs/developers_guide/codingstandards.rst:122
+msgid ""
+"QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ for documentation. "
+"Write descriptive and meaningful comments that give a reader information "
+"about what to expect, what happens in edge cases and give hints about other "
+"interfaces he could be looking for, best practices and code samples."
+msgstr ""
+"QGIS utiliza `Doxygen <https://www.doxygen.nl/index.html>`_ para la "
+"documentación. Escribe comentarios descriptivos y significativos que den al "
+"lector información sobre qué esperar, qué ocurre en casos extremos y le den "
+"pistas sobre otras interfaces que podría estar buscando, mejores prácticas y"
+" ejemplos de código."
+
 #: ../../docs/developers_guide/codingstandards.rst:129
 msgid "Methods"
 msgstr "Métodos"
@@ -468,6 +482,14 @@ msgid ""
 msgstr ""
 "Los tipos enumerados deben nombrarse en CamelCase con una mayúscula al "
 "inicio, p. ej:"
+
+#: ../../docs/developers_guide/codingstandards.rst:286
+msgid ""
+"Do not use generic type names that will conflict with other types. e.g. use "
+"``UnknownUnit`` rather than ``Unknown``"
+msgstr ""
+"No utilice nombres de tipos genéricos que entren en conflicto con otros "
+"tipos. Por ejemplo, utilice ``UnknownUnit`` en lugar de ``Unknown``."
 
 #: ../../docs/developers_guide/codingstandards.rst:290
 msgid "Global Constants & Macros"
@@ -794,6 +816,18 @@ msgstr ""
 "disponibles (:api:`QgsSettingsEntryString "
 "<classQgsSettingsEntryString.html>`, :api:`QgsSettingsEntryInteger "
 "<classQgsSettingsEntryInteger.html>`, ...)."
+
+#: ../../docs/developers_guide/codingstandards.rst:496
+msgid ""
+"settings must be integrated in the settings tree (:api:`QgsSettingsTree "
+"<classQgsSettingsTree.html>`), this is automatically done when using the "
+"constructor with a parent node (:api:`QgsSettingsTreeNode "
+"<classQgsSettingsTreeNode.html>`)."
+msgstr ""
+"los ajustes deben integrarse en el árbol de ajustes (:api:`QgsSettingsTree "
+"<classQgsSettingsTree.html>`), esto se hace automáticamente cuando se "
+"utiliza el constructor con un nodo padre (:api:`QgsSettingsTreeNode "
+"<classQgsSettingsTreeNode.html>`)."
 
 #: ../../docs/developers_guide/codingstandards.rst:499
 msgid ""
