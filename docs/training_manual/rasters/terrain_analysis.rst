@@ -47,7 +47,7 @@ We are going to use algorithms in the
       :align: center
 
 #. Save the file in a new folder :file:`exercise_data/raster_analysis/`
-   with the name ``hillshade``
+   with the name ``hillshade.tif``
 #. Finally click on :guilabel:`Run`
 
 You will now have a new layer called :guilabel:`hillshade` that looks like
@@ -124,7 +124,7 @@ of the :menuselection:`Processing --> Raster terrain analysis`.
 #. Open the algorithm
 #. Choose :guilabel:`srtm_41_19` as the :guilabel:`Elevation layer`
 #. Keep the :guilabel:`Z factor` at ``1.0``
-#. Save the output as a file with the name ``slope`` in the same folder as the
+#. Save the output as a file with the name ``slope.tif`` in the same folder as the
    ``hillshade``
 #. Click on :guilabel:`Run`
 
@@ -147,7 +147,7 @@ ideally be built on a north-facing slope so that they can remain in the
 sunlight.
 
 Use the :guilabel:`Aspect` algorithm of the
-:menuselection:`Processing --> Raster terrain analysis` to get the ``aspect``
+:menuselection:`Processing --> Raster terrain analysis` to get the ``aspect.tif``
 layer saved along with the ``slope``.
 
 .. admonition:: Answer
@@ -212,7 +212,7 @@ the *Processing Toolbox*
    next to the :guilabel:`Reference layer(s)` parameter.
 #. In the dialog, choose the :guilabel:`aspect` layer, because we want
    to obtain a layer with the same resolution.
-#. Save the layer as ``aspect_north``.
+#. Save the layer as ``aspect_north.tif``.
 
    The dialog should look like:
 
