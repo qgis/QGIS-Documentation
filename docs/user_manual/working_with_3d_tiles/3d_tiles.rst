@@ -98,6 +98,8 @@ Provided information are:
 
 * based on the provider of the layer: name, URL, source type and path, number
   of zoom levels
+* custom properties, used to store additional information about certain objects, such as map layers.
+  These properties are created and managed using PyQGIS, specifically through the `setCustomProperty` method.
 * the Coordinate Reference System: name, units, method, accuracy, reference
   (i.e. whether it's static or dynamic)
 * picked from the :ref:`filled metadata <3dtilesmetadatamenu>`: access,

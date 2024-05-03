@@ -104,6 +104,8 @@ the current layer. Provided information are:
 
 * General such as name in the project, source path, last save time and size,
   the used provider
+* Custom properties, used to store additional information about certain objects, such as map layers.
+  These properties are created and managed using PyQGIS, specifically through the `setCustomProperty` method.
 * Based on the provider of the layer: extent and number of points
 * The Coordinate Reference System: name, units, method, accuracy, reference
   (i.e. whether it's static or dynamic)
@@ -119,6 +121,7 @@ the current layer. Provided information are:
 
    Point cloud information tab
 
+.. Change screenshot to show Custom properties
 
 .. _point_clouds_source:
 
