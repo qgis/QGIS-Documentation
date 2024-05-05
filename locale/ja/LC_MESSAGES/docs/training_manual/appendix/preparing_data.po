@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
 "Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -76,9 +76,8 @@ msgid ""
 msgstr "以下の手順では、QGISの十分な知識を持っており、教材として使用されることを意図していないと仮定します。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:25
-msgid ""
-":abbr:`★★★ (Advanced level)` Try Yourself:  Create OSM based vector files"
-msgstr ":abbr:`★★★ （上級レベル）` 自分でやってみよう:  OSMを基にしたベクタファイルを作る"
+msgid "Create OSM based vector files"
+msgstr "OSMを基にしたベクタファイルを作る"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:27
 msgid ""
@@ -148,7 +147,7 @@ msgid ""
 msgstr ""
 ":menuselection:`ベクタ --> QuickOSM --> QuickOSM...` メニューから、新しいプラグインを実行します"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:64
+#: ../../docs/training_manual/appendix/preparing_data.rst:63
 msgid ""
 "In the :guilabel:`Quick query` tab, select ``building`` in the "
 ":guilabel:`Key` drop-down menu"
@@ -156,17 +155,17 @@ msgstr ""
 ":guilabel:`Quick query` タブで、 :guilabel:`Key` ドロップダウンメニューから ``building`` "
 "を選択します"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:66
+#: ../../docs/training_manual/appendix/preparing_data.rst:65
 msgid ""
 "Leave the :guilabel:`Value` field empty, meaning that you are querying all "
 "buildings."
 msgstr ":guilabel:`Value` フィールドを空にして、すべてのビルに問い合わせることを意味します。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:68
+#: ../../docs/training_manual/appendix/preparing_data.rst:67
 msgid "Select :guilabel:`Canvas Extent` in the next drop-down menu"
 msgstr "次のドロップダウンメニューで :guilabel:`Canvas Extent` を選択します"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:69
+#: ../../docs/training_manual/appendix/preparing_data.rst:68
 msgid ""
 "Expand the :guilabel:`Advanced` group below and uncheck all geometry types "
 "on the right except :guilabel:`Multipolygons`."
@@ -174,42 +173,42 @@ msgstr ""
 "下の :guilabel:`Advanced` グループを展開し、 :guilabel:`Multipolygons` "
 "を除く右側のすべてのジオメトリタイプのチェックを外します。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:71
+#: ../../docs/training_manual/appendix/preparing_data.rst:70
 msgid "Press :guilabel:`Run query`"
 msgstr ":guilabel:`Run query` を押します"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:76
+#: ../../docs/training_manual/appendix/preparing_data.rst:75
 msgid ""
 "A new ``building`` layer is added to the :guilabel:`Layers` panel, showing "
 "buildings in the selected extent."
 msgstr "新しい ``building`` レイヤが :guilabel:`レイヤ` パネルに追加され、選択した範囲の建物が表示されます。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:78
+#: ../../docs/training_manual/appendix/preparing_data.rst:77
 msgid "Proceed as above to extract other data:"
 msgstr "他のデータを抽出するため、上記と同様に行います："
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:80
+#: ../../docs/training_manual/appendix/preparing_data.rst:79
 msgid "``Key = landuse`` and ``Multipolygons`` geometry type."
 msgstr "``Key = landuse`` とジオメトリ型 ``Multipolygons``。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:81
+#: ../../docs/training_manual/appendix/preparing_data.rst:80
 msgid ""
 "``Key = boundary``, ``Value = protected_area`` and ``Multipolygons`` "
 "geometry type."
 msgstr ""
 "``Key = boundary``、 ``Value = protected_area`` とジオメトリ型 ``Multipolygons``。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:83
+#: ../../docs/training_manual/appendix/preparing_data.rst:82
 msgid ""
 "``Key = natural``, ``Value = water`` and ``Multipolygons`` geometry type."
 msgstr "``Key = natural``, ``Value = water`` とジオメトリ型 ``Multipolygons`` 。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:84
+#: ../../docs/training_manual/appendix/preparing_data.rst:83
 msgid ""
 "``Key = highway`` and check ``Lines`` and ``Multilines`` geometry types."
 msgstr "``Key = highway`` とジオメトリ型  ``Lines`` と ``Multilines`` をチェックする。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:85
+#: ../../docs/training_manual/appendix/preparing_data.rst:84
 msgid ""
 "``Key = waterway``, ``Value = river`` and check ``Lines`` and ``Multilines``"
 " geometry types."
@@ -217,27 +216,27 @@ msgstr ""
 "``Key = waterway``、 ``Value = river`` とジオメトリ型 ``Lines`` と ``Multilines`` "
 "をチェックする。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:87
+#: ../../docs/training_manual/appendix/preparing_data.rst:86
 msgid "``Key = place`` and ``Points`` geometry type."
 msgstr "``Key = place`` とジオメトリ型 ``Points`` 。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:89
+#: ../../docs/training_manual/appendix/preparing_data.rst:88
 msgid ""
 "This process adds the layers as temporary files (indicated by the "
 "|indicatorMemory| icon next to their name)."
 msgstr "このプロセスにより、レイヤーが一時ファイルとして追加されます（名前の横にある |indicatorMemory| アイコンで示されます）。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:244
+#: ../../docs/training_manual/appendix/preparing_data.rst:243
 msgid "indicatorMemory"
 msgstr "indicatorMemory"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:95
+#: ../../docs/training_manual/appendix/preparing_data.rst:94
 msgid ""
 "You can sample the data your region contains in order to see what kind of "
 "results your region will yield."
 msgstr "あなたの地域に含まれるデータをサンプリングして、あなたの地域でどのような結果が得られるかを確認できます。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:98
+#: ../../docs/training_manual/appendix/preparing_data.rst:97
 msgid ""
 "We now need to save the resulting data to use during your course. We'll be "
 "using ESRI Shapefile, GeoPackage and SpatiaLite formats depending on the "
@@ -245,11 +244,11 @@ msgid ""
 msgstr ""
 "講座で使用するために、結果のデータを保存する必要があります。データに応じて、ESRIシェープファイル、GeoPackage、SpatiaLite形式を使用します。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:102
+#: ../../docs/training_manual/appendix/preparing_data.rst:101
 msgid "To convert the :guilabel:`place` temporary layer to another format:"
 msgstr ":guilabel:`place` 一時レイヤを他の形式に変換するには:"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:104
+#: ../../docs/training_manual/appendix/preparing_data.rst:103
 msgid ""
 "Click the |indicatorMemory| icon next to the :guilabel:`place` layer to open"
 " the :guilabel:`Save Scratch Layer` dialog."
@@ -257,7 +256,7 @@ msgstr ""
 ":guilabel:`place` レイヤーの横にある |IndicatorMemory| アイコンをクリックして、 "
 ":guilabel:`スクラッチレイヤを保存` ダイアログを開きます。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:107
+#: ../../docs/training_manual/appendix/preparing_data.rst:106
 msgid ""
 "If you need to change any of the temporary layer's properties (CRS, extent, "
 "fields...), use the :menuselection:`Export --> Save Features as...` "
@@ -268,11 +267,11 @@ msgstr ""
 ":menuselection:`書出->地物に名前を付けて保存...` コンテキストメニューを使用し、を確認してください。 "
 ":guilabel:`保存したファイルを地図に追加する` オプションがチェックされています。これにより、新しいレイヤーが追加されます。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:112
+#: ../../docs/training_manual/appendix/preparing_data.rst:111
 msgid "Select the :guilabel:`ESRI Shapefile` format"
 msgstr ":guilabel:`ESRIシェープファイル` 形式を選択します。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:113
+#: ../../docs/training_manual/appendix/preparing_data.rst:112
 msgid ""
 "Use the :guilabel:`...` button to browse to the "
 ":file:`exercise_data/shapefile/` folder and save the file as "
@@ -281,13 +280,13 @@ msgstr ""
 ":guilabel:`...` ボタンを使用して :file:`exercise_data/shapefile/` フォルダを参照し、ファイルを "
 ":file:`places.shp` として保存します。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:119
-#: ../../docs/training_manual/appendix/preparing_data.rst:150
-#: ../../docs/training_manual/appendix/preparing_data.rst:166
+#: ../../docs/training_manual/appendix/preparing_data.rst:118
+#: ../../docs/training_manual/appendix/preparing_data.rst:149
+#: ../../docs/training_manual/appendix/preparing_data.rst:165
 msgid "Press :guilabel:`OK`"
 msgstr ":guilabel:`OK` を押します"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:121
+#: ../../docs/training_manual/appendix/preparing_data.rst:120
 msgid ""
 "In the :guilabel:`Layers` panel, the temporary :guilabel:`place` layer is "
 "replaced with the saved :guilabel:`places` shapefile layer and the temporary"
@@ -296,7 +295,7 @@ msgstr ""
 ":guilabel:`レイヤー` パネルで、一時的な :guilabel:`place` レイヤーが保存された :guilabel:`places` "
 "シェープファイルレイヤーに置き換えられ、その横にある一時的なアイコンが削除されます。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:124
+#: ../../docs/training_manual/appendix/preparing_data.rst:123
 msgid ""
 "Double-click the layer to open its :menuselection:`Layer Properties --> "
 "Source` tab and update the :guilabel:`Layer name` property to match the file"
@@ -305,61 +304,61 @@ msgstr ""
 "レイヤーをダブルクリックして :menuselection:`レイヤのプロパティ->ソース` タブを開き、 :guilabel:`レイヤ名` "
 "プロパティをファイル名と一致するように更新します。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:128
+#: ../../docs/training_manual/appendix/preparing_data.rst:127
 msgid "Repeat the process for other layers, renaming them as follows:"
 msgstr "他のレイヤーに対してこのプロセスを繰り返し、次のように名前を変更します："
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:130
+#: ../../docs/training_manual/appendix/preparing_data.rst:129
 msgid "``natural_water`` into ``water``"
 msgstr "``natural_water`` を ``water``"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:131
+#: ../../docs/training_manual/appendix/preparing_data.rst:130
 msgid "``waterway_river`` into ``rivers``"
 msgstr "``waterway_river`` を ``rivers``"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:132
+#: ../../docs/training_manual/appendix/preparing_data.rst:131
 msgid "``boundary_protected_area`` into ``protected_areas``"
 msgstr "``boundary_protected_area`` を ``protected_areas``"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:134
+#: ../../docs/training_manual/appendix/preparing_data.rst:133
 msgid ""
 "Each resulting data set should be saved in the "
 ":file:`exercise_data/shapefile/` directory."
 msgstr "各結果データセットは、 :file:`exercise_data/shapefile/` ディレクトリに保存する必要があります。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:137
+#: ../../docs/training_manual/appendix/preparing_data.rst:136
 msgid ""
 "The next step is to create a GeoPackage file from the :guilabel:`building` "
 "layer to use during the course:"
 msgstr "次のステップは、コース中に使用する :guilabel:`建物` レイヤーからGeoPackageファイルを作成することです。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:140
+#: ../../docs/training_manual/appendix/preparing_data.rst:139
 msgid ""
 "Click the |indicatorMemory| icon next to the :guilabel:`building` layer"
 msgstr ":guilabel:`building` レイヤの隣にある |indicatorMemory| アイコンをクリックします"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:141
+#: ../../docs/training_manual/appendix/preparing_data.rst:140
 msgid "Select the :guilabel:`GeoPackage` format"
 msgstr ":guilabel:`GeoPackage` 形式を選びます"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:142
+#: ../../docs/training_manual/appendix/preparing_data.rst:141
 msgid ""
 "Save the file as :file:`training_data.gpkg` under the :file:`exercise_data/`"
 " folder"
 msgstr ""
 "ファイルを :file:`training_data.gpkg` として :file:`exercise_data/` フォルダの下に保存します"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:144
+#: ../../docs/training_manual/appendix/preparing_data.rst:143
 msgid ""
 "By default, the :guilabel:`Layer name` is filled as the file name. Replace "
 "it with ``buildings``."
 msgstr ":guilabel:`レイヤ名` がデフォルトのファイル名として記入されます。それを ``buildings`` に置き換えます。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:151
+#: ../../docs/training_manual/appendix/preparing_data.rst:150
 msgid "Rename the layer in its properties dialog"
 msgstr "レイヤのプロパティダイアログで名前を変更します"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:152
+#: ../../docs/training_manual/appendix/preparing_data.rst:151
 msgid ""
 "Repeat the process with the :guilabel:`highway` layer, saving it as "
 "``roads`` in the same GeoPackage database."
@@ -367,20 +366,20 @@ msgstr ""
 "このプロセスを :guilabel:`highway` レイヤで繰り返し、それを ``roads`` "
 "として同じGeoPackageデータベースに保存します。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:155
+#: ../../docs/training_manual/appendix/preparing_data.rst:154
 msgid ""
 "The last step is to save the remaining temporary file as a SpatiaLite file."
 msgstr "最後のステップは、残りの一時ファイルをSpatiaLiteファイルとして保存することです。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:157
+#: ../../docs/training_manual/appendix/preparing_data.rst:156
 msgid "Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer"
 msgstr ":guilabel:`landuse` レイヤの隣にある |indicatorMemory| アイコンをクリックします"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:158
+#: ../../docs/training_manual/appendix/preparing_data.rst:157
 msgid "Select the :guilabel:`SpatiaLite` format"
 msgstr ":guilabel:`SpatiaLite` 形式を選択します"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:159
+#: ../../docs/training_manual/appendix/preparing_data.rst:158
 msgid ""
 "Save the file as :file:`landuse.sqlite` under the :file:`exercise_data/` "
 "folder. By default, the :guilabel:`Layer name` is filled as the file name. "
@@ -389,7 +388,7 @@ msgstr ""
 "そのファイルを :file:`exercise_data/` フォルダの下に :file:`landuse.sqlite` "
 "として保存します。デフォルトでは、 :guilabel:`レイヤー名` がファイル名として入力されます。変更しないでください。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:168
+#: ../../docs/training_manual/appendix/preparing_data.rst:167
 msgid ""
 "You should now have a map which looks something like this (the symbology "
 "will certainly be very different, because QGIS randomly assigns colors when "
@@ -397,17 +396,17 @@ msgid ""
 msgstr ""
 "これで、次のような地図が作成されます（レイヤーが地図に追加されると、QGISがランダムに色を割り当てるため、シンボルは確かに大きく異なります）："
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:175
+#: ../../docs/training_manual/appendix/preparing_data.rst:174
 msgid ""
 "The important thing is that you have 7 vector layers matching those shown "
 "above and that all those layers have some data."
 msgstr "重要なことは、上に示したものと一致する7つのベクターレイヤーがあり、それらすべてのレイヤーにいくつかのデータがあることです。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:179
-msgid ":abbr:`★★★ (Advanced level)` Try Yourself: Create SRTM DEM tiff files"
-msgstr ":abbr:`★★★ （上級レベル）` 自分でやってみよう: SRTM DEM tiffファイルを作る"
+#: ../../docs/training_manual/appendix/preparing_data.rst:178
+msgid "Create SRTM DEM tiff files"
+msgstr "SRTM DEM tiffファイルを作る"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:181
+#: ../../docs/training_manual/appendix/preparing_data.rst:180
 msgid ""
 "For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also "
 "need raster images (SRTM DEM) which cover the region you have selected for "
@@ -416,7 +415,7 @@ msgstr ""
 "モジュール :ref:`tm_create_vector_data` および :ref:`tm_rasters` "
 "の場合、講座用に選択した地域をカバーするラスターイメージ（SRTM DEM）も必要です。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:185
+#: ../../docs/training_manual/appendix/preparing_data.rst:184
 msgid ""
 "The `CGIAR-CGI <https://srtm.csi.cgiar.org/>`_ provides some SRTM DEM you "
 "can download from https://srtm.csi.cgiar.org/srtmdata/."
@@ -424,7 +423,7 @@ msgstr ""
 "`CGIAR-CGI <https://srtm.csi.cgiar.org/>`_ は、 "
 "https://srtm.csi.cgiar.org/srtmdata/ からダウンロードできるSRTMDEMを提供します。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:188
+#: ../../docs/training_manual/appendix/preparing_data.rst:187
 msgid ""
 "You'll need images which cover the entire region you have chosen to use. To "
 "find the extent coordinates, in QGIS , |zoomToLayer| zoom to the extent of "
@@ -438,15 +437,15 @@ msgstr ""
 ":file:`GeoTiff` 形式のままにします。フォームに入力したら、 :guilabel:`ここをクリックして検索を開始>>` "
 "ボタンをクリックし、ファイルをダウンロードします。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:247
+#: ../../docs/training_manual/appendix/preparing_data.rst:246
 msgid "zoomToLayer"
 msgstr "zoomToLayer"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:242
+#: ../../docs/training_manual/appendix/preparing_data.rst:241
 msgid "extents"
 msgstr "extents"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:195
+#: ../../docs/training_manual/appendix/preparing_data.rst:194
 msgid ""
 "Once you have downloaded the required file(s), they should be saved in the "
 ":file:`exercise_data` directory, under :file:`raster/SRTM` subfolders."
@@ -454,11 +453,11 @@ msgstr ""
 "必要なファイルをダウンロードしたら、それらを :file:`raster/SRTM` サブフォルダの下の :file:`exercise_data` "
 "ディレクトリに保存する必要があります。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:199
-msgid ":abbr:`★★★ (Advanced level)` Try Yourself: Create imagery tiff files"
-msgstr ":abbr:`★★★ （上級レベル）` 自分でやってみよう: 画像のTIFFファイルを作る"
+#: ../../docs/training_manual/appendix/preparing_data.rst:198
+msgid "Create imagery tiff files"
+msgstr "画像のtiffファイルを作る"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:202
+#: ../../docs/training_manual/appendix/preparing_data.rst:201
 msgid ""
 "In Module :ref:`tm_create_vector_data`, :ref:`tm_datasources` lesson shows "
 "close-up images of three school sports fields which students are asked to "
@@ -470,15 +469,15 @@ msgstr ""
 "モジュール :ref:`tm_create_vector_data` で、 :ref:`tm_datasources` "
 "レッスンは、生徒がデジタイズするように求められる3つの学校の運動場のクローズアップ画像を示します。したがって、新しいSRTMDEMtiffファイルを使用してこれらの画像を再現する必要があります。学校の運動場を使用する義務はありません。3つの学校の土地利用タイプを使用できます（たとえば、異なる学校の建物、遊び場、駐車場）。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:209
+#: ../../docs/training_manual/appendix/preparing_data.rst:208
 msgid "For reference, the image in the example data is:"
 msgstr "参考までに、その例題データの画像はこれです:"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:216
-msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Replace tokens"
-msgstr ":abbr:`★☆☆ （初級レベル）` 自分でやってみよう: トークンの置き換え"
+#: ../../docs/training_manual/appendix/preparing_data.rst:215
+msgid "Replace tokens"
+msgstr "トークンを置き換える"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:218
+#: ../../docs/training_manual/appendix/preparing_data.rst:217
 msgid ""
 "Having created your localized dataset, the final step is to replace the "
 "tokens in the :file:`substitutions.txt` file so that the appropriate names "
@@ -487,25 +486,25 @@ msgstr ""
 "ローカライズされたデータセットを作成したら、最後に :file:`substitutions.txt` "
 "ファイル内のトークンを置き換えて、ローカライズ版トレーニングマニュアルに適切な名前が表示されるようにします。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:222
+#: ../../docs/training_manual/appendix/preparing_data.rst:221
 msgid "The tokens you need to replace are as follows:"
 msgstr "置き換える必要のあるトークンは次のとおりです:"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:224
+#: ../../docs/training_manual/appendix/preparing_data.rst:223
 msgid ""
 "``majorUrbanName``: this defaults to \"Swellendam\". Replace with the name "
 "of the major town in your region."
 msgstr ""
 "``majorUrbanName`` ：これはデフォルトで「スウェレンダム」になります。お住まいの地域の主要な町の名前に置き換えてください。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:226
+#: ../../docs/training_manual/appendix/preparing_data.rst:225
 msgid ""
 "``schoolAreaType1``: this defaults to \"athletics field\". Replace with the "
 "name of the largest school area type in your region."
 msgstr ""
 "``schoolAreaType1`` ：これはデフォルトで「陸上競技場」になります。お住まいの地域で最大の学校エリアタイプの名前に置き換えてください。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:228
+#: ../../docs/training_manual/appendix/preparing_data.rst:227
 msgid ""
 "``largeLandUseArea``: this defaults to \"Bontebok National Park\". Replace "
 "with the name of a large landuse polygon in your region."
@@ -513,7 +512,7 @@ msgstr ""
 "``largeLandUseArea`` "
 "：これはデフォルトで「ボンテボック国立公園」になります。お住まいの地域の大きな土地利用ポリゴンの名前に置き換えてください。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:230
+#: ../../docs/training_manual/appendix/preparing_data.rst:229
 msgid ""
 "``srtmFileName``: this defaults to :file:`srtm_41_19.tif`. Replace this with"
 " the filename of your SRTM DEM file."
@@ -521,7 +520,7 @@ msgstr ""
 "``srtmFileName`` ：これはデフォルトで :file:`srtm_41_19.tif` "
 "になります。これをSRTMDEMファイルのファイル名に置き換えます。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:232
+#: ../../docs/training_manual/appendix/preparing_data.rst:231
 msgid ""
 "``localCRS``: this defaults to ``WGS 84 / UTM 34S``. You should replace this"
 " with the correct CRS for your region."
