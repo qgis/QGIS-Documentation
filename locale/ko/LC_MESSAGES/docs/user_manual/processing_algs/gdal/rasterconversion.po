@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:2
 msgid "Raster conversion"
@@ -196,6 +196,10 @@ msgstr "기본값: 입력 레이어의 첫 번째 밴드"
 msgid "If the raster is multiband, choose the band you want to convert"
 msgstr "래스터가 다중 밴드인 경우, 변환하려는 밴드를 선택하십시오."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:41
+msgid "**Source NoData**"
+msgstr "**Source NoData**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:43
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:51
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:267
@@ -205,7 +209,7 @@ msgstr "래스터가 다중 밴드인 경우, 변환하려는 밴드를 선택�
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:567
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:582
 msgid "Optional"
-msgstr "부가적"
+msgstr "선택적"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:44
 msgid "``NODATA_INPUT``"
@@ -226,9 +230,25 @@ msgstr "[number]"
 msgid "Default: None"
 msgstr "기본값: None"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:48
+msgid "Input pixel value to treat as \"NoData\" (GDAL >= 3.7)."
+msgstr "\"NODATA\"로 취급할 입력 픽셀 값입니다. (GDAL >= 3.7)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:49
+msgid "**Destination NoData**"
+msgstr "**Destination NoData**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:52
 msgid "``NODATA_OUTPUT``"
 msgstr "``NODATA_OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:56
+msgid "Assign specified \"NoData\" value to output (GDAL >= 3.7)."
+msgstr "산출물에 지정한 \"NODATA\" 값을 할당합니다. (GDAL >= 3.7)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:57
+msgid "**Do not output NoData values**"
+msgstr "**Do not output NoData values**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:58
 msgid "``SKIP_NODATA``"
@@ -249,6 +269,10 @@ msgstr "[boolean]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:540
 msgid "Default: False"
 msgstr "기본값: False"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:62
+msgid "Do not output \"NoData\" values (GDAL >= 3.3)."
+msgstr "\"NODATA\" 값을 산출하지 않습니다. (GDAL >= 3.3)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:63
 msgid "**Output comma-separated values**"
@@ -686,6 +710,10 @@ msgstr "10 --- CFloat32 (Complex Float32)"
 msgid "11 --- CFloat64   (Complex Float64)"
 msgstr "11 --- CFloat64 (Complex Float64)"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:20
+msgid "12 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "12 --- Int8 (8비트 부호 있는 정수(qint8))"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:22
 msgid ""
 "Available options depend on the GDAL version built with QGIS (see "
@@ -796,6 +824,10 @@ msgstr "[crs]"
 msgid "Specify a projection for the output file"
 msgstr "산출 파일용 투영체를 지정합니다."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:528
+msgid "**Assign a specified NoData value to output bands**"
+msgstr "**Assign a specified NoData value to output bands**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:531
 msgid "``NODATA``"
 msgstr "``NODATA``"
@@ -803,6 +835,10 @@ msgstr "``NODATA``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:534
 msgid "Default: Not set"
 msgstr "기본값: 설정하지 않음"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:535
+msgid "Defines the value to use for NoData in the output raster"
+msgstr "산출 래스터에 있는 NODATA에 사용할 값을 정의합니다"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:536
 msgid "**Copy all subdatasets of this file to individual output files**"
