@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-05 15:16+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2
 msgid "Vector geometry"
@@ -2471,6 +2471,15 @@ msgstr "[vector: polygon]"
 msgid "Specify the output (bounding box) layer. One of:"
 msgstr "산출 (경계 상자) 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:524
+msgid ""
+"Bounding boxes of input layer. Other than the input attributes, the output "
+"layer also contains following fields: ``width``, ``height``, ``area`` and "
+"``perimeter`` of the generated polygon."
+msgstr ""
+"입력 레이어의 경계 상자입니다. 산출 레이어는 입력물의 속성 이외에도, 생성된 폴리곤의 ``width``, ``height``, "
+"``area`` 및 ``perimeter`` 필드들을 담고 있습니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:531
 msgid "**Algorithm ID**: ``native:boundingboxes``"
 msgstr "**알고리즘 ID**: ``native:boundingboxes``"
@@ -2811,6 +2820,19 @@ msgstr "**Keep disjoint features separate**"
 msgid "``SEPARATE_DISJOINT``"
 msgstr "``SEPARATE_DISJOINT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:690
+msgid ""
+"If ``True`` (checked) and dissolved is checked, features that do not overlap"
+" or touch will be exported as separate features (instead of parts of a "
+"multipart feature)."
+msgstr ""
+"``True`` (체크)이며 dissolved 파라미터를 체크한 경우, 중첩하거나 접하지 않는 피처들을 (다중 부분 피처의 부분들로가 "
+"아닌) 개별 피처들로 내보낼 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:697
+msgid "Results in 2 single part features"
+msgstr "단일 부분 피처 2개를 산출"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:713
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6348
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7022
@@ -2936,11 +2958,11 @@ msgstr "**알고리즘 ID**: ``native:centroids``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:816
 msgid "Check validity"
-msgstr "유효성 점검하기"
+msgstr "무결성 점검하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:817
 msgid "Performs a validity check on the geometries of a vector layer."
-msgstr "벡터 레이어의 도형에 대해 유효성(validity) 점검을 수행합니다."
+msgstr "벡터 레이어의 도형에 대해 무결성(validity) 점검을 수행합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:819
 msgid ""
@@ -3011,7 +3033,7 @@ msgstr "기본값: 2"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:870
 msgid "Method to use to check validity. Options:"
-msgstr "유효성을 검증하기 위해 사용하는 메소드입니다. 다음 옵션 가운데 선택할 수 있습니다:"
+msgstr "무결성을 검증하기 위해 사용하는 메소드입니다. 다음 옵션 가운데 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:873
 msgid "0: The one selected in digitizing settings"
@@ -3035,7 +3057,7 @@ msgstr "``IGNORE_RING_SELF_INTERSECTION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:881
 msgid "Ignore self intersecting rings when checking for validity."
-msgstr "유효성 점검 작업시 자체 교차(self-intersect)하는 고리를 무시합니다."
+msgstr "무결성 점검 작업시 자체 교차(self-intersect)하는 고리를 무시합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:882
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:957
@@ -3091,7 +3113,7 @@ msgid ""
 "Point layer of the exact position of the validity problems detected with the"
 " ``message`` field describing the error(s) found. One of:"
 msgstr ""
-"발견한 오류(들)를 서술하는 ``message`` 필드와 함께 감지된 유효성 문제점의 정확한 위치를 담고 있는 포인트 레이어를 "
+"발견한 오류(들)를 서술하는 ``message`` 필드와 함께 감지된 무결성 문제점의 정확한 위치를 담고 있는 포인트 레이어를 "
 "지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:933
@@ -3110,7 +3132,7 @@ msgstr "오류를 초래한 도형의 개수"
 msgid ""
 "Point layer of the exact position of the validity problems detected with the"
 " ``message`` field describing the error(s) found."
-msgstr "발견한 오류(들)를 서술하는 ``message`` 필드와 함께 감지된 유효성 문제점의 정확한 위치를 담고 있는 포인트 레이어"
+msgstr "발견한 오류(들)를 서술하는 ``message`` 필드와 함께 감지된 무결성 문제점의 정확한 위치를 담고 있는 포인트 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:943
 msgid "**Count of invalid features**"
@@ -3399,6 +3421,14 @@ msgstr "모아진 도형들을 저장할 산출 벡터 레이어를 지정합니
 msgid "**Algorithm ID**: ``native:collect``"
 msgstr "**알고리즘 ID**: ``native:collect``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1189
+msgid "Concave hull"
+msgstr "오목 껍질"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1190
+msgid "Computes the concave hull of the features from an input point layer."
+msgstr "입력 포인트 레이어에 있는 피처의 오목 껍질(concave hull)을 계산합니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1195
 msgid "Concave hulls with different thresholds (0.3, 0.6, 0.9)"
 msgstr "서로 다른 한계값(0.3, 0.6, 0.9)을 가진 오목 껍질들"
@@ -3477,6 +3507,10 @@ msgstr "**Concave hull**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3556
 msgid "The output vector layer"
 msgstr "산출 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1266
+msgid "**Algorithm ID**: ``native:concavehull``"
+msgstr "**알고리즘 ID**: ``native:concavehull``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1276
 msgid "Convert geometry type"
@@ -3961,7 +3995,7 @@ msgstr "**Inner radius**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5595
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7425
 msgid "Optional"
-msgstr "부가적"
+msgstr "선택적"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1723
 msgid "``INNER_RADIUS``"
@@ -4016,9 +4050,27 @@ msgstr "**Tolerance**"
 msgid "``TOLERANCE``"
 msgstr "``TOLERANCE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1802
+msgid ""
+"Specifies an optional snapping tolerance which can be used to improve the "
+"robustness of the triangulation."
+msgstr "삼각분할의 견고성을 향상시키는 데 사용할 수 있는 선택적인 스냅 허용 오차를 지정합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1803
+msgid "**Add point IDs to output**"
+msgstr "**Add point IDs to output**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1804
 msgid "``ADD_ATTRIBUTES``"
 msgstr "``ADD_ATTRIBUTES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1808
+msgid ""
+"Specifies whether fields storing involved point features ID should be added "
+"to the output. If False, an ``id`` field is used to identify the polygons."
+msgstr ""
+"산출물에 관련 포인트 피처 ID를 저장하고 있는 필드들을 추가해야 할지 여부를 지정합니다. 거짓으로 설정하는 경우 ``id`` 필드를 "
+"사용해서 폴리곤을 식별합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1810
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1833
@@ -4028,6 +4080,10 @@ msgstr "**Delaunay triangulation**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1836
 msgid "The output (Delaunay triangulation) vector layer"
 msgstr "산출 (델로네 삼각분할) 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1841
+msgid "**Algorithm ID**: ``native:delaunaytriangulation``"
+msgstr "**알고리즘 ID**: ``native:delaunaytriangulation``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1851
 msgid "Delete holes"
@@ -4375,6 +4431,11 @@ msgstr "[raster band]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2287
 msgid "The raster band to take the Z values from"
 msgstr "Z 값을 가져올 래스터 밴드"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2288
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5994
+msgid "**Value for NoData or non-intersecting vertices**"
+msgstr "**Value for NoData or non-intersecting vertices**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2289
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5995
@@ -5225,7 +5286,7 @@ msgid ""
 "validity."
 msgstr ""
 "입력 도형의 속성 및 사용된 필터에 따라, 이 알고리즘이 생상하는 산출 도형이 더 이상 유효하지 않을 수도 있습니다. 산출 도형의 "
-"유효성을 보장하려면 :ref:`qgisfixgeometries` 알고리즘을 실행해야 할 수도 있습니다."
+"무결성을 보장하려면 :ref:`qgisfixgeometries` 알고리즘을 실행해야 할 수도 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3166
 msgid ""
@@ -5837,9 +5898,19 @@ msgstr "입력 레이어에 있는 피처의 최소 외함 원을 계산합니�
 msgid "Enclosing circles for each feature"
 msgstr "각 피처를 외함하는 원들"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4076
+msgid "**Number of segments in circles**"
+msgstr "**Number of segments in circles**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4080
 msgid "Default: 72"
 msgstr "기본값: 72"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4081
+msgid ""
+"The number of segments used to approximate a circle. Minimum 8, maximum "
+"100000."
+msgstr "원에 가깝게 만드는 데 사용할 선분의 개수입니다. 최소값은 8, 최대값은 100,000입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4083
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4105
@@ -6537,6 +6608,10 @@ msgstr "``ROTATION``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5253
 msgid "Rotation of the buffer shape"
 msgstr "버퍼 형태의 기울기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5254
+msgid "**Number of segments**"
+msgstr "**Number of segments**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5258
 msgid "Default: 36"
@@ -8102,9 +8177,28 @@ msgid ""
 "the input layer"
 msgstr "산출 레이어의 범위는 입력 레이어의 범위보다 이만큼 더 커질 것입니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7430
+msgid ""
+"Specifies an optional snapping tolerance which can be used to improve the "
+"robustness of the voronoi."
+msgstr "보로노이 폴리곤 생성의 경고성을 향상시키는 데 사용할 수 있는 선택적인 스냅 허용 오차를 지정합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7431
+msgid "**Copy attributes from input features**"
+msgstr "**Copy attributes from input features**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7432
 msgid "``COPY_ATTRIBUTES``"
 msgstr "``COPY_ATTRIBUTES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7436
+msgid ""
+"Specifies whether fields storing involved point features ID should be added "
+"to the output. If False, an ``id`` field is created to identify the "
+"polygons."
+msgstr ""
+"산출물에 관련 포인트 피처 ID를 저장하고 있는 필드들을 추가해야 할지 여부를 지정합니다. 거짓으로 설정하는 경우 ``id`` 필드를 "
+"생성해서 폴리곤을 식별합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7438
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7461
@@ -8118,3 +8212,7 @@ msgstr "보로노이 폴리곤을 담을 산출 레이어를 지정합니다. �
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7464
 msgid "Voronoi polygons of the input point vector layer"
 msgstr "입력 포인트 벡터 레이어에 대한 보로노이 폴리곤"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7469
+msgid "**Algorithm ID**: ``native:voronoipolygons``"
+msgstr "**알고리즘 ID**: ``native:voronoipolygons``"
