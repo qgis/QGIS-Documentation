@@ -160,6 +160,10 @@ msgstr "입력 벡터 레이어"
 msgid "**Convert all layers from dataset**"
 msgstr "**Convert all layers from dataset**"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:40
+msgid "``CONVERT_ALL_LAYERS``"
+msgstr "``CONVERT_ALL_LAYERS``"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:41
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:161
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:256
@@ -247,7 +251,7 @@ msgstr "**Additional creation options**"
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:459
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:475
 msgid "Optional"
-msgstr "부가적"
+msgstr "선택적"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:75
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:432
@@ -632,9 +636,17 @@ msgstr "캔버스에 그리기: 연산에 넣을 범위를 정하는 직사각�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "좌표를 ``xmin, xmax, ymin, ymax`` 로 입력"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:393
+msgid "**Assign a specified NoData value to output bands**"
+msgstr "**Assign a specified NoData value to output bands**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:396
 msgid "``NODATA``"
 msgstr "``NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:400
+msgid "Assigns a specified NoData value to output bands"
+msgstr "산출 밴드에 지정한 NODATA 값을 할당합니다"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:405
 msgid "Default: ``[Save to temporary file]``"
@@ -733,6 +745,10 @@ msgstr "9 --- CFloat32 (Complex Float32)"
 msgid "10 --- CFloat64   (Complex Float64)"
 msgstr "10 --- CFloat64 (Complex Float64)"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:20
+msgid "11 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "11 --- Int8 (8비트 부호 있는 정수(qint8))"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:22
 msgid ""
 "Available options depend on the GDAL version built with QGIS (see "
@@ -748,6 +764,14 @@ msgstr "**Pre-initialize the output image with value**"
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:460
 msgid "``INIT``"
 msgstr "``INIT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:462
+msgid ""
+"Pre-initializes the output image bands with this value. Not marked as the "
+"NoData value in the output file. The same value is used in all the bands."
+msgstr ""
+"산출 이미지의 밴드를 이 값으로 사전 초기화합니다. 산출물 파일에서 NODATA 값으로 마크하지 않습니다. 모든 밴드에 동일한 값을 "
+"사용합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:465
 msgid "**Invert rasterization**"
