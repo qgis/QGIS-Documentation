@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:2
 msgid "Modeler tools"
@@ -45,9 +45,26 @@ msgid ""
 " in the Processing Toolbox."
 msgstr "이 도구들은 모델 설계자에서만 사용할 수 있습니다. 공간 처리 툴박스에서 사용할 수는 없습니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:20
+msgid "Calculate expression"
+msgstr "표현식 계산"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:21
 msgid "|334|"
 msgstr "|334|"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:23
+msgid ""
+"It calculates the result of a QGIS expression and eliminates the need to use"
+" the same expression multiple times throughout a model when the same result "
+"is required more than once. Additionally, it enables use cases that would "
+"otherwise not be possible. For instance, you can generate a timestamp value "
+"once and use it multiple times within the model, if the timestamp were "
+"recalculated every time, the values would vary during the model's runtime."
+msgstr ""
+"QGIS 표현식의 결과를 계산해서, 동일한 결과를 한 번 이상 사용해야 할 때 모델 전반에서 동일한 표현식을 여러 번 써야 할 필요를 "
+"없애줍니다. 또한 다른 방법으로는 불가능한 활용을 가능하게 해줍니다. 예를 들면, 타임스탬프 값을 한번 생성해서 모델 안에서 여러 번 "
+"사용할 수 있습니다. 이때 타임스탬프를 매번 다시 계산한다면, 모델의 런타임 동안 값이 바뀌게 될 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:33
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:87
@@ -170,6 +187,10 @@ msgstr "유형"
 msgid "Description"
 msgstr "설명"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:43
+msgid "**Input**"
+msgstr "**Input**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:44
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:194
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:252
@@ -186,6 +207,10 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:467
 msgid "[expression]"
 msgstr "[expression]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:46
+msgid "Expression to calculate"
+msgstr "계산할 표현식"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:49
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:107
@@ -217,6 +242,16 @@ msgstr "**Value**"
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:61
+msgid "[Result Value]"
+msgstr "[Result Value]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:62
+msgid ""
+"Calculated result value, the data type of the output will vary based on the "
+"specific expression used in the algorithm."
+msgstr "계산한 결과값으로, 산출물의 데이터 유형은 이 알고리즘에 사용된 특정 표현식에 따라 달라질 것입니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:67
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:112
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:163
@@ -233,6 +268,10 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:779
 msgid "Python code"
 msgstr "파이썬 코드"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:69
+msgid "**Algorithm ID**: ``native:calculateexpression``"
+msgstr "**알고리즘 ID**: ``native:calculateexpression``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -324,6 +363,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:141
 msgid "**Directory path**"
 msgstr "**Directory path**"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:142
+msgid "``PATH``"
+msgstr "``PATH``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:144
 msgid "Folder path to create"
@@ -444,7 +487,11 @@ msgstr "**Vector features**"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:418
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:465
 msgid "Optional"
-msgstr "부가적"
+msgstr "선택적"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:271
+msgid "``VECTOR``"
+msgstr "``VECTOR``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:272
 msgid "[vector]"
