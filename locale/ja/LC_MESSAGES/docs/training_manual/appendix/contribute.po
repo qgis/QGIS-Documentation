@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -41,17 +41,17 @@ msgstr "付録：このマニュアルに貢献する"
 #: ../../docs/training_manual/appendix/contribute.rst:5
 msgid ""
 "To add materials to this course, you must follow the guidelines in this "
-"Appendix. You are not to alter the conditions in this Appendix except for "
-"clarification. This is to ensure that the quality and consistency of this "
-"manual can be maintained."
+"Appendix. You are not allowed to alter the conditions in this Appendix "
+"except for clarification. This is to ensure that the quality and consistency"
+" of this manual can be maintained."
 msgstr ""
-"このコースに材料を追加するには、この付録のガイドラインに従う必要があります。明確化のためを除き、この付録の条件を変更してはいけません。これは、このマニュアルの品質と一貫性を維持できるようにするためです。"
+"このコースに教材を追加するには、この付録のガイドラインに従わなければなりません。明確にする場合を除き、この付録の条件を変更してはいけません。これは、このマニュアルの品質と一貫性を維持するためです。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:11
+#: ../../docs/training_manual/appendix/contribute.rst:10
 msgid "Downloading Resources"
 msgstr "リソースのダウンロード"
 
-#: ../../docs/training_manual/appendix/contribute.rst:13
+#: ../../docs/training_manual/appendix/contribute.rst:12
 msgid ""
 "The source of this document is available at `GitHub "
 "<https://github.com/qgis/QGIS-Documentation>`_. Consult `GitHub.com "
@@ -62,11 +62,11 @@ msgstr ""
 "で提供されています。Gitのバージョン管理システムを使用する方法については、 `GitHub.com <https://github.com/>`_ "
 "を参照してください。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:19
+#: ../../docs/training_manual/appendix/contribute.rst:17
 msgid "Manual Format"
 msgstr "マニュアルの形式"
 
-#: ../../docs/training_manual/appendix/contribute.rst:21
+#: ../../docs/training_manual/appendix/contribute.rst:19
 msgid ""
 "This manual is written using `Sphinx <https://www.sphinx-"
 "doc.org/en/master/>`_, a Python document generator using the "
@@ -78,194 +78,209 @@ msgstr ""
 "マーク付け言語を使ったPythonドキュメントジェネレータ、`Sphinx <https://www.sphinx-"
 "doc.org/en/master/>`_ を使って書かれました。これらのツールの使い方はそれぞれのサイトで入手できます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:27
+#: ../../docs/training_manual/appendix/contribute.rst:25
 msgid "Adding a Module"
 msgstr "モジュールを追加する"
 
+#: ../../docs/training_manual/appendix/contribute.rst:27
+msgid "To add a new module:"
+msgstr "新しいモジュールを追加するには:"
+
 #: ../../docs/training_manual/appendix/contribute.rst:29
 msgid ""
-"To add a new module, first create a new directory (directly under the top-"
-"level of the :kbd:`qgis-training-manual` directory) with the name of the new"
-" module."
+"First create a new directory (directly under the  top-level of the "
+":file:`qgis-training-manual` directory) with the name of the new module."
 msgstr ""
-"新しいモジュールを追加するには、最初に新しいモジュール名を持つ新しいディレクトリを（ :kbd:`qgis-training-manual` "
+"最初に新しいモジュールの名前を持った新しいディレクトリを（ :file:`qgis-training-manual` "
 "ディレクトリのトップレベルのすぐ下に）作成します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:32
+#: ../../docs/training_manual/appendix/contribute.rst:31
 msgid ""
-"Under this new directory, create a file called :kbd:`index.rst`. Leave this "
-"file blank for now."
-msgstr "この新しいディレクトリの下に、 :kbd:`index.rst` というファイルを作成します。今のところ、このファイルは空のままにします。"
+"Under this new directory, create a file called :file:`index.rst`. Leave this"
+" file blank for now."
+msgstr ""
+"この新しいディレクトリの下に、 :file:`index.rst` というファイルを作成します。今のところ、このファイルは空のままにします。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:34
+#: ../../docs/training_manual/appendix/contribute.rst:33
 msgid ""
-"Open the :kbd:`index.rst` file under the top-level directory. Its first "
+"Open the :file:`index.rst` file under the top-level directory. Its first "
 "lines are::"
-msgstr "最上位ディレクトリの下の :kbd:`index.rst` ファイル開きます。その最初の数行は::"
+msgstr "最上位ディレクトリの下の :file:`index.rst` ファイル開きます。その最初の数行は::"
 
-#: ../../docs/training_manual/appendix/contribute.rst:44
+#: ../../docs/training_manual/appendix/contribute.rst:42
 msgid ""
 "You will note that this is a list of directory names, followed by the name "
-":kbd:`index`. This directs the top-level index file to the index files in "
-"each directory. The order in which they are listed determines the order they"
-" will have in the document."
+"``index``. This directs the top-level index file to the index files in each "
+"directory. The order in which they are listed determines the order they will"
+" have in the document."
 msgstr ""
-"これは、名前 :kbd:`index` "
+"これは、名前 ``index`` "
 "が続く、ディレクトリ名のリストであることに注意します。これは、トップレベルのインデックスファイルに各ディレクトリ内のインデックスファイルを指示します。リストされている順序で文書中の順序が決定されます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:49
+#: ../../docs/training_manual/appendix/contribute.rst:46
 msgid ""
 "Add the name of your new module (i.e., the name you gave the new directory),"
-" followed by :kbd:`/index`, to this list, wherever you want your module to "
+" followed by ``/index``, to this list, wherever you want your module to "
 "appear."
 msgstr ""
-"このリストのモジュールを表示したい場所に、新しいモジュールの名前（すなわち、新しいディレクトリに付けた名前）に :kbd:`/index` "
+"このリストのモジュールを表示したい場所に、新しいモジュールの名前（すなわち、新しいディレクトリに付けた名前）に ``/index`` "
 "を続けたものを追加します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:52
+#: ../../docs/training_manual/appendix/contribute.rst:48
 msgid ""
 "Remember to keep the order of the modules logical, such that later modules "
 "build on the knowledge presented in earlier modules."
 msgstr "後のモジュールは前のモジュールで提示される知識の上に構築するように、モジュールの順序を論理的に維持することを忘れないでください。"
 
+#: ../../docs/training_manual/appendix/contribute.rst:50
+msgid ""
+"Open your new module's own index file (:file:`{module_name}/index.rst`)."
+msgstr "新しいモジュールの独自のインデックスファイル（ :file:`{module_name}/index.rst` ）を開きます。"
+
+#: ../../docs/training_manual/appendix/contribute.rst:51
+msgid "Along the top of the page, create the module heading:"
+msgstr "ページの先頭に沿ってモジュールの見出しを作ります:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:53
+msgid "write a first line of asterisks (``*``)."
+msgstr "アスタリスク(``*``)の最初の行を書きます。"
+
 #: ../../docs/training_manual/appendix/contribute.rst:54
 msgid ""
-"Open your new module's own index file (:kbd:`[module name]/index.rst`)."
-msgstr "新しいモジュールの独自のインデックスファイル（ :kbd:`[module name]/index.rst` ）を開きます。"
+"Follow this with a line containing the markup phrase ``Module:``, followed "
+"by the name of your module."
+msgstr "``Module:`` というマークアップ語句の後に、モジュールの名前を付けた１行を続けます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:55
+#: ../../docs/training_manual/appendix/contribute.rst:56
+msgid "End this off with another line of same number of asterisks."
+msgstr "同じ数のアスタリスクをもう1行書いて終えます。"
+
+#: ../../docs/training_manual/appendix/contribute.rst:58
 msgid ""
-"Along the top of the page, write a line of 80 asterisks (:kbd:`*`). This "
-"represents a module heading."
-msgstr "ページの上部に沿って、80個のアスタリスク（ :kbd:`*` ）の行を書きます。これは、モジュールの見出しを表します。"
+"The underline and the overline should not be shorter than the line "
+"containing the module title."
+msgstr "アンダーラインとオーバーラインは、モジュールの表題を含む行よりも短くすべきではありません。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:57
-msgid ""
-"Follow this with a line containing the markup phrase :kbd:`|MOD|` (which "
-"stands for \"module\"), followed by the name of your module."
-msgstr "これに続けて 、モジュールの名前が続くマークアップの語句 :kbd:`|MOD|` （「モジュール」の略）を含む行を書きます。"
-
-#: ../../docs/training_manual/appendix/contribute.rst:59
-msgid "End this off with another line of 80 asterisks."
-msgstr "もう一度80個のアスタリスクの行を書いてこれを終えます。"
-
-#: ../../docs/training_manual/appendix/contribute.rst:60
+#: ../../docs/training_manual/appendix/contribute.rst:61
 msgid "Leave a line open beneath this."
 msgstr "この下に空白行を置きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:61
+#: ../../docs/training_manual/appendix/contribute.rst:62
 msgid ""
 "Write a short paragraph explaining the purpose and content of the module."
 msgstr "モジュールの目的と内容を説明する短い段落を書きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:62
+#: ../../docs/training_manual/appendix/contribute.rst:63
 msgid "Leave one line open, then add the following text::"
 msgstr "1行を空白のままに残し、次のテキストを追加します::"
 
 #: ../../docs/training_manual/appendix/contribute.rst:71
 msgid ""
-"... where :kbd:`lesson1`, :kbd:`lesson2`, etc., are the names of your "
-"planned lessons."
-msgstr "...ここで、:kbd:`lesson1` 、 :kbd:`lesson2` などは、計画したレッスンの名前です。"
+"... where ``lesson1``, ``lesson2``, etc., are the names of your planned "
+"lessons."
+msgstr "...ここで、``lesson1`` 、 ``lesson2`` などは、計画したレッスンの名前です。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:74
+#: ../../docs/training_manual/appendix/contribute.rst:73
 msgid "The module-level index file will look like this:"
 msgstr "モジュールレベルのインデックスファイルは次のようになります。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:92
+#: ../../docs/training_manual/appendix/contribute.rst:90
 msgid "Adding a Lesson"
 msgstr "レッスンを追加する"
 
-#: ../../docs/training_manual/appendix/contribute.rst:94
+#: ../../docs/training_manual/appendix/contribute.rst:92
 msgid "To add a lesson to a new or existing module:"
 msgstr "新規または既存のモジュールにレッスンを追加するには:"
 
-#: ../../docs/training_manual/appendix/contribute.rst:96
+#: ../../docs/training_manual/appendix/contribute.rst:94
 msgid "Open the module directory."
 msgstr "モジュールディレクトリを開きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:97
+#: ../../docs/training_manual/appendix/contribute.rst:95
 msgid ""
-"Open the :kbd:`index.rst` file (created above in the case of new modules)."
-msgstr ":kbd:`index.rst` ファイル（新しいモジュールの場合に上で作成）を開きます。"
+"Open the :file:`index.rst` file (created above in the case of new modules)."
+msgstr ":file:`index.rst` ファイル（新しいモジュールの場合に上で作成）を開きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:98
+#: ../../docs/training_manual/appendix/contribute.rst:96
 msgid ""
 "Ensure that the name of the planned lesson is listed underneath the "
-":kbd:`toctree` directive, as shown above."
-msgstr "計画したレッスンの名前が、上で示されるように、 :kbd:`toctree` ディレクティブ下に表示されていることを確認します。"
+":file:`toctree` directive, as shown above."
+msgstr "計画したレッスンの名前が、上で示されるように、 :file:`toctree` ディレクティブ下に表示されていることを確認します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:100
+#: ../../docs/training_manual/appendix/contribute.rst:98
 msgid "Create a new file under the module directory."
 msgstr "モジュールディレクトリの下に新しいファイルを作成します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:101
+#: ../../docs/training_manual/appendix/contribute.rst:99
 msgid ""
 "Name this file exactly the same as the name you provided in the module's "
-":kbd:`index.rst` file, and add the extension :kbd:`.rst`."
+":file:`index.rst` file, and add the extension :file:`.rst`."
 msgstr ""
-"このファイルにモジュールの :kbd:`index.rst` ファイルの中に与えた名前とまったく同じ名前を付け、拡張子 :kbd:`.rst` "
+"このファイルにモジュールの :file:`index.rst` ファイルの中に与えた名前とまったく同じ名前を付け、拡張子 :file:`.rst` "
 "を追加します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:104
+#: ../../docs/training_manual/appendix/contribute.rst:102
 msgid ""
-"For editing purposes, a :kbd:`.rst` file works exactly like a normal text "
-"file (:kbd:`.txt`)."
-msgstr "編集する目的では、 :kbd:`.rst` ファイルは通常のテキストファイル（ :kbd:`.txt` ）とまったく同じように動作します。"
+"For editing purposes, a :file:`.rst` file works exactly like a normal text "
+"file (:file:`.txt`)."
+msgstr ""
+"編集する目的では、 :file:`.rst` ファイルは通常のテキストファイル（ :file:`.txt` ）とまったく同じように動作します。"
+
+#: ../../docs/training_manual/appendix/contribute.rst:105
+msgid ""
+"To begin writing the lesson, write the markup phrase ``Lesson``, followed by"
+" the lesson name."
+msgstr "レッスンを書き始めは、マークアップ語句 ``Lesson`` にレッスン名を続けて書きます。"
 
 #: ../../docs/training_manual/appendix/contribute.rst:107
 msgid ""
-"To begin writing the lesson, write the markup phrase ``Lesson:``, followed "
-"by the lesson name."
-msgstr "レッスンを書き始めるには、マークアップの語句 ``Lesson`` を書き、その後ろにレッスン名を書きます。"
+"In the next line, write a line of equal signs (``=``), not shorter than the "
+"lesson title."
+msgstr "次の行には、等号(``='``)の行をレッスンの表題より短くならないように書きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:109
-msgid "In the next line, write a line of 80 equal signs (:kbd:`=`)."
-msgstr "次の行に、80個の等号（ :kbd:`=` ）の行を書き込みます。"
-
-#: ../../docs/training_manual/appendix/contribute.rst:110
+#: ../../docs/training_manual/appendix/contribute.rst:108
 msgid "Leave a line open after this."
 msgstr "この後に空行を置きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:111
+#: ../../docs/training_manual/appendix/contribute.rst:109
 msgid "Write a short description of the lesson's intended purpose."
 msgstr "レッスンの意図された目的について短い説明を書きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:112
+#: ../../docs/training_manual/appendix/contribute.rst:110
 msgid ""
 "Include a general introduction to the subject matter. See the existing "
 "lessons in this manual for examples."
 msgstr "主題への一般的な紹介を含めます。例として、このマニュアル中の既存のレッスンを参照してください。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:114
+#: ../../docs/training_manual/appendix/contribute.rst:112
 msgid "Beneath this, start a new paragraph, beginning with this phrase::"
 msgstr "この下には、この語句から始まる、新しい段落を開始します::"
 
-#: ../../docs/training_manual/appendix/contribute.rst:118
+#: ../../docs/training_manual/appendix/contribute.rst:116
 msgid "Briefly explain the intended outcome of completing this lesson."
 msgstr "このレッスンを完了することによる意図した成果を簡単に説明します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:119
+#: ../../docs/training_manual/appendix/contribute.rst:117
 msgid ""
 "If you can't describe the goal of the lesson in one or two sentences, "
 "consider breaking the subject matter up into multiple lessons."
 msgstr "1つのまたは2つの文にレッスンの目標を記述できない場合は、主題を複数のレッスンに分けることを検討してください。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:122
+#: ../../docs/training_manual/appendix/contribute.rst:120
 msgid ""
 "Each lesson will be subdivided into multiple sections, which will be "
 "addressed next."
 msgstr "次に説明するように、各レッスンは複数のセクションに細分化されます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:126
+#: ../../docs/training_manual/appendix/contribute.rst:123
 msgid "Adding a Section"
 msgstr "セクションを追加する"
 
-#: ../../docs/training_manual/appendix/contribute.rst:128
+#: ../../docs/training_manual/appendix/contribute.rst:125
 msgid "There are two types of sections: \"follow along\" and \"try yourself\"."
 msgstr "セクションには、「理解しよう」と「自分でやってみよう」の2種類があります。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:130
+#: ../../docs/training_manual/appendix/contribute.rst:127
 msgid ""
 "A \"follow along\" section is a detailed set of directions intended to teach"
 " the reader how to use a given aspect of QGIS. This is typically done by "
@@ -274,16 +289,16 @@ msgid ""
 msgstr ""
 "「理解しよう」セクションは指示の詳細なセットで、QGISの所定の態様を使用する方法を読者に教示することを意図しています。これは通常、スクリーンショットを散りばめた状態で、クリックごとの指示をできる限り明確に示すことで行われます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:134
+#: ../../docs/training_manual/appendix/contribute.rst:131
 msgid ""
 "A \"try yourself\" section gives the reader a short assignment to try by "
-"themselves. It is usually associated with an entry in the answer sheet at "
-"the end of the documentation, which will show or explain how to complete the"
-" assignment, and will show the expected outcome if possible."
+"themselves. It is usually associated with an entry in the answer box "
+"beneath, which will show or explain how to complete the assignment, and will"
+" show the expected outcome if possible."
 msgstr ""
-"「自分でやってみよう」セクションでは、読者自身が試す短い課題を与えます。これは通常表示または課題を完了するために、可能な場合に予想される結果を表示する方法を説明します、文書の最後に解答用紙のエントリに関連付けられています。"
+"「やってみよう」セクションは、読者に自分でやらせる短い課題を与えます。通常、その下には結び付いた解答欄があり、その課題を完了する方法を示したり、説明したり、可能であれば期待される結果を示したりします。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:139
+#: ../../docs/training_manual/appendix/contribute.rst:136
 msgid ""
 "Every section comes with a difficulty level. An easy section is denoted by "
 "``★☆☆``, moderate by ``★★☆``, and advanced by ``★★★``."
@@ -291,180 +306,145 @@ msgstr ""
 "すべてのセクションには難易度が付けられています。簡単なセクションは ``★☆☆`` 、中級は ``★★☆`` 、そして上級は ``★★★`` "
 "で表されます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:143
+#: ../../docs/training_manual/appendix/contribute.rst:140
 msgid "Adding a \"follow along\" section"
 msgstr "「理解しよう」セクションを追加する"
 
-#: ../../docs/training_manual/appendix/contribute.rst:145
-#: ../../docs/training_manual/appendix/contribute.rst:163
+#: ../../docs/training_manual/appendix/contribute.rst:142
+#: ../../docs/training_manual/appendix/contribute.rst:158
 msgid ""
 "To start this section, write the markup phrase of the intended difficulty "
 "level (as shown above)."
 msgstr "（上記のように）このセクションを開始するには、意図した難易度のマークアップ語句を書き込みます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:147
+#: ../../docs/training_manual/appendix/contribute.rst:144
 msgid "Leave a space and then write ``Follow Along:``."
 msgstr "スペースを置き、次に「理解しよう:」を書きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:148
+#: ../../docs/training_manual/appendix/contribute.rst:145
 msgid ""
 "Leave another space and write the name of the section (use only an initial "
 "capital letter, as well as capitals for proper nouns)."
 msgstr "もうひとつスペースを置いて、セクションの名前を書きます（初回のみ大文字だけでなく、固有名詞のための大文字を使用）。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:150
+#: ../../docs/training_manual/appendix/contribute.rst:147
+#: ../../docs/training_manual/appendix/contribute.rst:161
 msgid ""
-"In the next line, write a line of 80 minuses/dashes (:kbd:`-`). Ensure that "
-"your text editor does not replace the default minus/dash character with a "
-"long dash or other character."
-msgstr ""
-"次の行に、80個のマイナス/ダッシュ（ :kbd:`-` "
-"）の行を書き込みます。テキストエディタによってデフォルトのマイナス/ダッシュ文字が長いダッシュまたは他の文字で置き換えられないことを確認してください。"
+"In the next line, write a line of minuses/dashes (``-``), not shorter than "
+"the section title."
+msgstr "次の行には、負号／ダッシュ(``-'``)の行をセクションの表題より短くならないように書きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:153
+#: ../../docs/training_manual/appendix/contribute.rst:148
 msgid ""
 "Write a short introduction to the section, explaining its purpose. Then give"
 " detailed (click-by-click) instructions on the procedure to be demonstrated."
 msgstr "その目的を説明し、セクションへの簡単な紹介を書きます。そして、例証される手続きについての詳細な（クリック毎の）指示を与えます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:155
+#: ../../docs/training_manual/appendix/contribute.rst:150
 msgid ""
 "In each section, include internal links, external links and screenshots as "
 "needed."
 msgstr "必要に応じて各セクションには、内部リンク、外部リンク、およびスクリーンショットが含まれます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:157
+#: ../../docs/training_manual/appendix/contribute.rst:151
 msgid ""
 "Try to end each section with a short paragraph that concludes it and leads "
 "naturally to the next section, if possible."
 msgstr "可能ならば、それを終了し、次のセクションに自然につながる短い段落で、各セクションを終了してみてください。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:161
+#: ../../docs/training_manual/appendix/contribute.rst:155
 msgid "Adding a \"try yourself\" section"
 msgstr "「自分でやってみよう」セクションを追加する"
 
-#: ../../docs/training_manual/appendix/contribute.rst:165
+#: ../../docs/training_manual/appendix/contribute.rst:160
 msgid "Leave a space and then write ``Try Yourself:``."
 msgstr "スペースを置き、次に「自分でやってみよう:」を書きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:166
-msgid ""
-"In the next line, write a line of 80 minuses/dashes (``-``). Ensure that "
-"your text editor does not replace the default minus/dash character with a "
-"long dash or other character."
-msgstr ""
-"次の行に、80個のマイナス/ダッシュ（``-``）の線を書き込みます。テキストエディタがデフォルトのマイナス/ダッシュ文字を長いダッシュや他の文字で置き換えないことを確認してください。"
-
-#: ../../docs/training_manual/appendix/contribute.rst:169
+#: ../../docs/training_manual/appendix/contribute.rst:162
 msgid ""
 "Explain the exercise that you want the reader to complete. Refer to previous"
 " sections, lessons or modules if necessary."
 msgstr "読者に完成させたい練習を説明します。必要に応じて、前のセクション、レッスンやモジュールを参照します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:171
+#: ../../docs/training_manual/appendix/contribute.rst:164
 msgid ""
 "Include screenshots to clarify the requirements if a plain textual "
 "description is not clear."
 msgstr "単なる文章での説明でははっきりしない場合、要件を明確にするためにスクリーンショットを含めます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:174
+#: ../../docs/training_manual/appendix/contribute.rst:167
 msgid ""
 "In most cases, you will want to provide an answer regarding how to complete "
-"the assignment given in this section. To do so, you will need to add an "
-"entry in the answer sheet."
+"the assignment given in this section. To do so, you will need to create and "
+"feed an answer block beneath the instructions."
 msgstr ""
-"ほとんどの場合、このセクションで与えられた課題を完成する方法についての解答を提供したいと思うでしょう。そのためには、解答用紙にエントリを追加する必要があるでしょう。"
+"ほとんどの場合、このセクションで与えられた課題を完成する方法についての解答を提供したいと思うでしょう。そのためには、指示の下に解答ブロックを作って与える必要があります。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:178
+#: ../../docs/training_manual/appendix/contribute.rst:171
+msgid "First, create the custom collapsible widget that contains the answer::"
+msgstr "まず、解答を格納するカスタム折りたたみウィジェットを作ります::"
+
+#: ../../docs/training_manual/appendix/contribute.rst:176
 msgid ""
-"First, decide on a unique name for the answer. Ideally, this name will "
-"include the name of the lesson and an incrementing number."
-msgstr "まず、回答に一意の名前を決めます。この名前には、レッスン名と連番が入っているのが理想です。"
+"Keeping an indentation with regard to the above block, write the "
+"instructions on how to complete the assignment, using links and images where"
+" needed."
+msgstr "上のブロックに対してインデントを保ちながら、必要に応じてリンクや画像を使い、課題を完了するための指示を書きます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:180
-msgid "Create a link for this answer:"
-msgstr "この回答へのリンクを作成:"
-
-#: ../../docs/training_manual/appendix/contribute.rst:186
-msgid "Open the answer sheet (:kbd:`answers/answers.rst`)."
-msgstr "解答用紙 (:kbd:`answers/answers.rst`)を開きます。"
-
-#: ../../docs/training_manual/appendix/contribute.rst:187
-msgid "Create a link to the \"try yourself\" section by writing this line:"
-msgstr "この行を書き込むことによって、「自分でやってみよう」セクションへのリンクを作成します："
-
-#: ../../docs/training_manual/appendix/contribute.rst:193
-msgid ""
-"Write the instructions on how to complete the assignment, using links and "
-"images where needed."
-msgstr "必要な場合、リンクや画像を使用して、課題を完了する方法の手順を書きます。"
-
-#: ../../docs/training_manual/appendix/contribute.rst:195
-msgid ""
-"To end it off, include a link back to the \"try yourself\" section by "
-"writing this line:"
-msgstr "それを終了するには、この行を書き込むことによって、「自分でやってみよう」セクションに戻るリンクを含めます："
-
-#: ../../docs/training_manual/appendix/contribute.rst:202
-msgid ""
-"To make this link work, add the following line above the heading to the "
-"\"try yourself\" section:"
-msgstr "このリンクを動作させるために、「自分でやってみよう」セクションに、見出しの上に次の行を追加します："
-
-#: ../../docs/training_manual/appendix/contribute.rst:209
-msgid ""
-"Remember that each of these lines shown above must have a blank line above "
-"and below it, otherwise it could cause errors while creating the document."
-msgstr ""
-"上に示したこれらの線のそれぞれは、その上下に空白行を持たなければならず、それ以外の場合は文書を作成している間にエラーが発生する可能性があることに注意してください。"
-
-#: ../../docs/training_manual/appendix/contribute.rst:213
+#: ../../docs/training_manual/appendix/contribute.rst:181
 msgid "Add a Conclusion"
 msgstr "結論を追加"
 
-#: ../../docs/training_manual/appendix/contribute.rst:215
+#: ../../docs/training_manual/appendix/contribute.rst:183
+msgid "To end a lesson:"
+msgstr "レッスンを終えるには:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:185
 msgid ""
-"To end a lesson, write the phrase ``In Conclusion``, followed by a new line "
-"of 80 minuses/dashes (``-``). Write a conclusion for the lesson, explaining "
-"which concepts have been covered in the lesson."
-msgstr ""
-"レッスンを終了するには、80個のマイナス/ハイフン（``-``）の新しい行に続いて語句、 「結論」 "
-"を書きます。どのような概念がレッスンでカバーされたかを説明しながら、レッスンの結論を書きます。"
+"Write the phrase ``In Conclusion``, followed by a new line of minuses/dashes"
+" (``-``)."
+msgstr "語句「結論」を書き、マイナス/ハイフン(``-``)の新しい行を続けます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:220
+#: ../../docs/training_manual/appendix/contribute.rst:186
+msgid ""
+"Write a conclusion for the lesson, explaining which concepts have been "
+"covered in the lesson."
+msgstr "どの概念がレッスンで取り扱われたかを説明しながら、レッスンの結論を書きます。"
+
+#: ../../docs/training_manual/appendix/contribute.rst:189
 msgid "Add a Further Reading Section"
-msgstr "[さらに読む]セクションを追加"
+msgstr "参考文献セクションを追加"
 
-#: ../../docs/training_manual/appendix/contribute.rst:222
+#: ../../docs/training_manual/appendix/contribute.rst:191
 msgid "This section is optional."
 msgstr "このセクションは任意です。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:223
+#: ../../docs/training_manual/appendix/contribute.rst:193
 msgid ""
-"Write the phrase ``Further Reading``, followed by a new line of 80 "
+"Write the phrase ``Further Reading``, followed by a new line of "
 "minuses/dashes (``-``)."
-msgstr "語句「さらに読む」を書き、80個のマイナス/ハイフン（ :kbd:`-` ）の新しい行を続けます。"
+msgstr "語句「参考文献」を書き、マイナス/ハイフン（ :kbd:`-` ）の新しい行を続けます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:225
+#: ../../docs/training_manual/appendix/contribute.rst:195
 msgid "Include links to appropriate external websites."
 msgstr "適切な外部のウェブサイトへのリンクを含めます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:228
+#: ../../docs/training_manual/appendix/contribute.rst:198
 msgid "Add a What's Next Section"
 msgstr "[次は]セクションを追加"
 
-#: ../../docs/training_manual/appendix/contribute.rst:230
+#: ../../docs/training_manual/appendix/contribute.rst:200
 msgid ""
-"Write the phrase ``What's Next?`` for \"what's next\", followed by a new "
-"line of 80 minuses/dashes (``-``)."
-msgstr "80個のマイナス/ハイフン（``-``）の新しい行に続いて、「次は」のための語句「次は」を書きます。"
+"Write the phrase ``What's Next?``, followed by a new line of minuses/dashes "
+"(``-``)."
+msgstr "語句「次は?」を書き、マイナス/ハイフン (``-``)の新しい行を続けます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:232
+#: ../../docs/training_manual/appendix/contribute.rst:201
 msgid ""
 "Explain how this lesson has prepared students for the next lesson or module."
 msgstr "このレッスンがどのように学生にとって次のレッスンまたはモジュールの準備になったかを説明します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:233
+#: ../../docs/training_manual/appendix/contribute.rst:202
 msgid ""
 "Remember to change the \"what's next\" section of the previous lesson if "
 "necessary, so that it refers to your new lesson. This will be necessary if "
@@ -473,121 +453,121 @@ msgid ""
 msgstr ""
 "必要であれば前のレッスンの「次は」のセクションを、新しいレッスンを参照するように変更することを忘れないでください。これは既存のレッスンの間に、または既存のレッスンの後に新しいレッスンを挿入した場合に必要となります。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:239
+#: ../../docs/training_manual/appendix/contribute.rst:208
 msgid "Using Markup"
 msgstr "マークアップを使用する"
 
-#: ../../docs/training_manual/appendix/contribute.rst:241
+#: ../../docs/training_manual/appendix/contribute.rst:210
 msgid ""
 "To adhere to the standards of this document, you will need to add standard "
 "markup to your text."
 msgstr "このドキュメントの基準を遵守するため、テキストに標準的なマークアップを追加する必要があります。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:245
+#: ../../docs/training_manual/appendix/contribute.rst:214
 msgid "New concepts"
 msgstr "新しい概念"
 
-#: ../../docs/training_manual/appendix/contribute.rst:247
+#: ../../docs/training_manual/appendix/contribute.rst:216
 msgid ""
 "If you are explaining a new concept, you will need to write the new "
-"concept's name in italics by enclosing it in asterisks (:kbd:`*`)."
-msgstr "新しい概念を説明している場合は、アスタリスク（ :kbd:`*` ）で囲むことでイタリック体で新しい概念の名前を記述する必要があります。"
+"concept's name in italics by enclosing it in asterisks (``*``)."
+msgstr "新しい概念を説明している場合は、その新しい概念の名前をアスタリスク (``*``)で囲んで斜体で記述する必要があります。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:255
+#: ../../docs/training_manual/appendix/contribute.rst:224
 msgid "Emphasis"
 msgstr "強調"
 
-#: ../../docs/training_manual/appendix/contribute.rst:257
+#: ../../docs/training_manual/appendix/contribute.rst:226
 msgid ""
 "To emphasize a crucial term which is not a new concept, write the term in "
-"bold by enclosing it in double asterisks (:kbd:`**`)."
-msgstr "新しい概念ではない重要な用語を強調するために、二重のアスタリスク（ :kbd:`**` ）で囲むことで太字の用語を記述します。"
+"bold by enclosing it in double asterisks (``**``)."
+msgstr "新しい概念ではない重要な用語を強調するには、その用語を二重のアスタリスク（``**``）で囲んで太字で記述します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:259
+#: ../../docs/training_manual/appendix/contribute.rst:228
 msgid ""
 "Use this sparingly! If used too much, it can seem to the reader that you are"
 " shouting or being condescending."
 msgstr "これは控えめに使いましょう！多用すると、読者には怒鳴っていたり見下しているように見えることがあります。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:269
+#: ../../docs/training_manual/appendix/contribute.rst:238
 msgid "Images"
 msgstr "画像"
 
-#: ../../docs/training_manual/appendix/contribute.rst:271
+#: ../../docs/training_manual/appendix/contribute.rst:240
 msgid ""
-"When adding an image, save it to the folder :kbd:`_static/lesson_name/`."
-msgstr "画像を追加する場合は、フォルダ :kbd:`_static/lesson_name/` に保存します。"
+"When adding an image, save it to an :file:`img` folder next to the lesson "
+"file."
+msgstr "画像を追加する場合は、レッスンファイルの隣にある :file:`img` フォルダに保存します。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:272
+#: ../../docs/training_manual/appendix/contribute.rst:241
 msgid "Include it in the document like this::"
 msgstr "文書にそれを入れるにはこのようにします::"
 
-#: ../../docs/training_manual/appendix/contribute.rst:277
+#: ../../docs/training_manual/appendix/contribute.rst:246
 msgid "Remember to leave a line open above and below the image markup."
 msgstr "画像マークアップの上方および下方の空行を残すことを忘れないでください。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:280
+#: ../../docs/training_manual/appendix/contribute.rst:249
 msgid "Internal links"
 msgstr "内部リンク"
 
-#: ../../docs/training_manual/appendix/contribute.rst:282
+#: ../../docs/training_manual/appendix/contribute.rst:251
 msgid ""
 "To create an anchor for a link, write the following line above the place "
 "where you want the link to point to::"
 msgstr "リンクのアンカーを作成するには、リンクが指すようにしたい場所の上に次の行を書きます::"
 
-#: ../../docs/training_manual/appendix/contribute.rst:287
-msgid "To create a link, add this line::"
-msgstr "リンクを作成するには、この行を追加します::"
-
-#: ../../docs/training_manual/appendix/contribute.rst:291
-#: ../../docs/training_manual/appendix/contribute.rst:300
+#: ../../docs/training_manual/appendix/contribute.rst:256
 msgid "Remember to leave a line open above and below this line."
 msgstr "この行の上および下に空行を残すことを忘れないでください。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:294
+#: ../../docs/training_manual/appendix/contribute.rst:257
+msgid "To create a link, refer to it as below::"
+msgstr "リンクを作成するには、それを次のように参照します::"
+
+#: ../../docs/training_manual/appendix/contribute.rst:262
 msgid "External links"
 msgstr "外部リンク"
 
-#: ../../docs/training_manual/appendix/contribute.rst:296
+#: ../../docs/training_manual/appendix/contribute.rst:264
 msgid "To create an external link, write it out like this::"
 msgstr "外部リンクを作成するには、このように書き出します::"
 
-#: ../../docs/training_manual/appendix/contribute.rst:303
+#: ../../docs/training_manual/appendix/contribute.rst:269
 msgid "Using monospaced text"
 msgstr "等幅テキストを使う"
 
-#: ../../docs/training_manual/appendix/contribute.rst:305
+#: ../../docs/training_manual/appendix/contribute.rst:271
 msgid ""
 "When you are writing text that the user needs to enter, a path name, or the "
 "name of a database element such as a table or column name, you must write it"
-" in :kbd:`monospaced text`. For example::"
+" in ``monospaced text``. For example::"
 msgstr ""
-"ユーザーが入力する必要のあるテキスト、パス名、またはテーブルや列の名前などのデータベース要素の名前を書いているときは、それを :kbd:`等幅テキスト`"
-" で記述する必要があります。例えば::"
+"ユーザーが入力する必要のあるテキスト、パス名、またはテーブルや列の名前などのデータベース要素の名前を書いているときは、それを ``等幅テキスト`` "
+"で記述する必要があります。例えば::"
 
-#: ../../docs/training_manual/appendix/contribute.rst:312
+#: ../../docs/training_manual/appendix/contribute.rst:278
 msgid "Labeling GUI items"
 msgstr "ラベルするGUI項目"
 
-#: ../../docs/training_manual/appendix/contribute.rst:314
+#: ../../docs/training_manual/appendix/contribute.rst:280
 msgid ""
 "If you are referring to a GUI item, such as a button, you must write its "
 "name in :guilabel:`the GUI label format`. For example::"
 msgstr ""
 "GUIの項目、ボタンなど、を参照している場合は、 :guilabel:`GUIラベルフォーマット` の中にその名前を書く必要があります。例えば::"
 
-#: ../../docs/training_manual/appendix/contribute.rst:319
+#: ../../docs/training_manual/appendix/contribute.rst:285
 msgid ""
 "This also applies if you are mentioning the name of a tool without requiring"
 " the user to click a button."
 msgstr "これは、ユーザーがボタンをクリックする必要なしに、ツールの名前を言及している場合にも適用されます。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:323
+#: ../../docs/training_manual/appendix/contribute.rst:289
 msgid "Menu selections"
 msgstr "メニューの選択"
 
-#: ../../docs/training_manual/appendix/contribute.rst:325
+#: ../../docs/training_manual/appendix/contribute.rst:291
 msgid ""
 "If you are guiding a user through menus, you must use the "
 ":menuselection:`menu --> selection --> format`. For example::"
@@ -595,21 +575,22 @@ msgstr ""
 "メニューを通じてユーザーを導く場合は、 :menuselection:`メニュー --> 選択 --> フォーマット` "
 "を使用する必要があります。例えば::"
 
-#: ../../docs/training_manual/appendix/contribute.rst:332
+#: ../../docs/training_manual/appendix/contribute.rst:298
 msgid "Adding notes"
 msgstr "注を追加する"
 
-#: ../../docs/training_manual/appendix/contribute.rst:334
+#: ../../docs/training_manual/appendix/contribute.rst:300
 msgid ""
-"You might need to a note in the text, which explains extra details that "
+"You might need to add a note in the text, which explains extra details that "
 "can't easily be made part of the flow of the lesson. This is the markup::"
-msgstr "テキスト中で、簡単には授業の流れの一部にできない余分な詳細を説明するため、注が必要になる場合があります。これは、マークアップです::"
+msgstr ""
+"レッスンの流れの一部とすることが容易でない余分な詳細を説明するために、テキストに注を加えることが必要になる場合があります。これがそのマークアップです::"
 
-#: ../../docs/training_manual/appendix/contribute.rst:347
+#: ../../docs/training_manual/appendix/contribute.rst:313
 msgid "Adding a sponsorship/authorship note"
 msgstr "後援/原作者注を追加する"
 
-#: ../../docs/training_manual/appendix/contribute.rst:349
+#: ../../docs/training_manual/appendix/contribute.rst:315
 msgid ""
 "If you are writing a new module, lesson or section on behalf of a sponsor, "
 "you must include a short sponsor message of their choice. This must notify "
@@ -619,26 +600,26 @@ msgid ""
 msgstr ""
 "スポンサーに代わって新しいモジュール、レッスンまたはセクションを記述する場合は、スポンサーが希望する短いスポンサーメッセージを含める必要があります。これはスポンサーの名前を読者に通知しなければならず、そのスポンサーが主催するモジュール、レッスンやセクションの見出しの下に表示されなければなりません。しかし、それはスポンサーの会社の広告であってはいけません。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:355
+#: ../../docs/training_manual/appendix/contribute.rst:321
 msgid ""
 "If you have volunteered to write a module, lesson or section in your own "
 "capacity, and not on behalf of a sponsor, you may include an authorship note"
 " below the heading of the module, lesson or section that you authored. This "
-"must take the form :kbd:`This [module/lesson/section] contributed by [author"
-" name].` Do not add further text, contact details, etc. Such details are to "
+"must take the form ``This [module/lesson/section] contributed by [author "
+"name].`` Do not add further text, contact details, etc. Such details are to "
 "be added in the \"Contributors\" section of the Foreword, along with the "
 "name(s) of the part(s) you added. If you only made enhancements, corrections"
 " and/or additions, list yourself as an editor."
 msgstr ""
-"自身の能力で自発的にモジュール、レッスン、またはセクションを書いた場合、スポンサーに代わってではない場合は、執筆したモジュール、レッスンやセクションの見出しの下に原作者注を入れてもよいです。これは以下の形を取る必要がありますの"
-" :kbd:`この[モジュール/レッスン/セクション]は[著者名]による寄稿です。` "
-"さらにテキスト、連絡先などは追加しないでください。そのような詳細は、追加した部分（複数可）の名前（複数可）と一緒に、前文の「Contributors寄稿者」セクションに追加されるべきです。機能強化、修正および/または追加を行っただけの場合は、編集者として自分自身をリストします。"
+"スポンサーに代わってではなく、自身の能力で自発的にモジュール、レッスン、またはセクションを書いた場合は、執筆したモジュール、レッスンやセクションの見出しの下に原作者注を入れることができます。これは、"
+" ``この[モジュール/レッスン/セクション]は[著者名]による寄稿です`` "
+"という形を取る必要があります。それ以上のテキストや連絡先などは追加しないでください。そのような詳細は、追加した部分の名前と一緒に、前文の「寄稿者」セクションに追加されるべきです。機能強化、修正および/または追加を行っただけの場合は、編集者として自分自身をリストします。"
 
-#: ../../docs/training_manual/appendix/contribute.rst:365
+#: ../../docs/training_manual/appendix/contribute.rst:331
 msgid "Thank You!"
 msgstr "ありがとうございました！"
 
-#: ../../docs/training_manual/appendix/contribute.rst:367
+#: ../../docs/training_manual/appendix/contribute.rst:333
 msgid ""
 "Thank you for contributing to this project! By so doing, you are making QGIS"
 " more accessible to users and adding value to the QGIS project as a whole."
