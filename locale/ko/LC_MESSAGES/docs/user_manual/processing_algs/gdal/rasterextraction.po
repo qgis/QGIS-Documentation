@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:2
 msgid "Raster extraction"
@@ -255,6 +255,11 @@ msgstr "기본값: False"
 msgid "If checked, the output file is assigned the input layer CRS."
 msgstr "체크박스를 체크하면, 산출 파일에 입력 레이어의 좌표계를 할당합니다."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:58
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:206
+msgid "**Assign a specified NoData value to output bands**"
+msgstr "**Assign a specified NoData value to output bands**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:60
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:92
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:120
@@ -274,7 +279,7 @@ msgstr "체크박스를 체크하면, 산출 파일에 입력 레이어의 좌�
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:599
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:608
 msgid "Optional"
-msgstr "부가적"
+msgstr "선택적"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:61
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:209
@@ -308,6 +313,15 @@ msgstr "[number]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:612
 msgid "Default: None"
 msgstr "기본값: None"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:65
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:213
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:453
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:604
+msgid ""
+"Defines a value that should be inserted for the NoData values in the output "
+"raster"
+msgstr "산출 래스터에 있는 NODATA에 사용할 값을 정의합니다"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:67
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:138
@@ -474,6 +488,10 @@ msgstr "10 --- CFloat32 (Complex Float32)"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:19
 msgid "11 --- CFloat64   (Complex Float64)"
 msgstr "11 --- CFloat64 (Complex Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:20
+msgid "12 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "12 --- Int8 (8비트 부호 있는 정수(qint8))"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:22
 msgid ""
@@ -863,6 +881,16 @@ msgstr "**Treat all raster values as valid**"
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:592
 msgid "``IGNORE_NODATA``"
 msgstr "``IGNORE_NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:445
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:596
+msgid "Ignores any NoData values in the dataset."
+msgstr "데이터셋에 있는 모든 NODATA 값을 무시합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:446
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:597
+msgid "**Input pixel value to treat as \"NoData\"**"
+msgstr "**Input pixel value to treat as \"NoData\"**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:462
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:613
