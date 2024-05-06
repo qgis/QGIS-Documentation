@@ -110,6 +110,32 @@ msgid ""
 msgstr ""
 "どのバックグラウンドタスクも（どのように作成されたかに関わらず）、QgsVectorLayerやQgsProjectへのアクセスや、新しいウィジェットの作成や既存のウィジェットとのインタラクションのようなGUIベースの操作のように、メインスレッドに存在するQObjectを決して使ってはいけません。Qtウィジェットへのアクセスや変更はメインスレッドからのみ行ってください。タスクで使用されるデータは、タスクが開始される前にコピーされなければなりません。バックグラウンドのスレッドからそれらを使用しようとするとクラッシュします。"
 
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:104
+msgid ""
+"Moreover always make sure that :class:`context "
+"<qgis.core.QgsProcessingContext>` and :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` live for at least as long as the tasks "
+"that use them. QGIS will crash if, upon completion of a task, "
+"*QgsTaskManager* fails to access the *context* and *feedback* against which "
+"the task was scheduled."
+msgstr ""
+"さらに、常に :class:`context <qgis.core.QgsProcessingContext>` と :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` "
+"が少なくともそれらを使用するタスクと同じ期間生きていることを確実にしてください。タスクの完了時に、*QgsTaskManager* "
+"がタスクがスケジュールされた *context* と *feedback* にアクセスできない場合、QGISはクラッシュします。"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:111
+msgid ""
+"It is a common pattern to call :meth:`setProject() "
+"<qgis.core.QgsProcessingContext.setProject>` shortly after calling "
+"``QgsProcessingContext``. This allows the task as well as its callback "
+"function to use most of the project-wide settings. This is especially "
+"valuable when working with spatial layers in the callback function."
+msgstr ""
+"QgsProcessingContext`` を呼び出した直後に :meth:`setProject() "
+"<qgis.core.QgsProcessingContext.setProject>` "
+"を呼び出すのが一般的なパターンです。これにより、タスクとそのコールバック関数がプロジェクト全体の設定のほとんどを使えるようになります。これは、コールバック関数で空間レイヤを扱うときに特に有用です。"
+
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:116
 msgid ""
 "Dependencies between tasks can be described using the :meth:`addSubTask() "
