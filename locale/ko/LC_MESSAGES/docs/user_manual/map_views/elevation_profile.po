@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,9 +102,21 @@ msgstr "단축키"
 msgid "Description"
 msgstr "설명"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:45
+msgid "|addLayer| :sup:`Add Layers`"
+msgstr "|addLayer| :sup:`Add Layers`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:265
 msgid "addLayer"
 msgstr "addLayer"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:46
+msgid "hold :kbd:`Ctrl` while drag-and-drop"
+msgstr ":kbd:`Ctrl` 키 누른 채 드래그&드롭"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:47
+msgid "Allows you to add new layers to a plot."
+msgstr "도표에 새 레이어를 추가할 수 있게 해줍니다."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:48
 msgid "|layerTree| :sup:`Show Layer Tree`"
@@ -332,9 +344,26 @@ msgstr "saveMapAsImage"
 msgid "Exports plots to several image formats"
 msgstr "도표를 몇 가지의 이미지 포맷으로 내보낼 수 있습니다."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:98
+msgid "|fileSaveAs| :sup:`Export Results`"
+msgstr "|fileSaveAs| :sup:`Export Results`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:279
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:100
+msgid ""
+"Exports plots as 3D features, 2D Profile and Distance/Elevation Table. (The "
+"results can be saved as DXF files, CSV files or any of the standard writable"
+" vector spatial formats)"
+msgstr ""
+"도표를 3차원 피처, 2차원 단면, 그리고 거리/표고 테이블로 내보냅니다. (산출물을 DXF 파일, CSV 파일, 아니면 작성 가능한 "
+"표준 벡터 공간 포맷들 가운데 어떤 포맷으로든 저장할 수 있습니다.)"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:103
+msgid "|options| :sup:`Options` :menuselection:`-->`"
+msgstr "|options| :sup:`Options` :menuselection:`-->`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:291
 msgid "options"
@@ -345,9 +374,46 @@ msgid ""
 "Provides access to configuration settings of the profile elevation line."
 msgstr "표고 단면선을 환경설정할 수 있습니다."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:106
+msgid ""
+":menuselection:`-->` |unchecked| :menuselection:`Lock distance/elevation "
+"scales`"
+msgstr ""
+":menuselection:`-->` |unchecked| :menuselection:`Lock distance/elevation "
+"scales`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:301
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:108
+msgid ""
+"Ensures that the horizontal and vertical scales are always kept equal (so "
+"that e.g. a 45° slope will appear as a 45° slope in the profile view)."
+msgstr "수평 및 수직 척도를 항상 동등하게 (따라서 예를 들면 단면 뷰에서 45° 경사가 45° 경사로 나타나도록) 유지합니다."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:110
+msgid ":menuselection:`--> Distance units`"
+msgstr ":menuselection:`--> Distance units`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:112
+msgid ""
+"Allows to render distances in the profile chart with units other than the "
+"map canvas units."
+msgstr "단면 도표에서 거리를 맵 캔버스 단위가 아닌 다른 단위들로 렌더링할 수 있도록 해줍니다."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:113
+msgid ":menuselection:`--> Tolerance`"
+msgstr ":menuselection:`--> Tolerance`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:115
+msgid ""
+"Sets how far from the actual profile line a point can reside within to be "
+"included in the results. Uses the map units and is ignored by other layer or"
+" geometry types."
+msgstr ""
+"포인트가 실제 단면선으로부터 어느 정도 거리 안에 있어야 산출물에 포함될 것인지를 설정합니다. 맵 단위이며, 다른 레이어 또는 도형 "
+"유형들은 무시합니다."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:117
 msgid "|dock| :sup:`Dock Elevation Profile View`"
@@ -416,6 +482,15 @@ msgstr "표고 단면 생성하기"
 msgid "To create a profile view, you can:"
 msgstr "단면(profile) 뷰를 생성하려면, 다음과 같이 하면 됩니다:"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:148
+msgid ""
+"Go to :menuselection:`View -->` |newElevationProfile| "
+":menuselection:`Elevation Profile` menu. The :guilabel:`Elevation profile` "
+"panel opens."
+msgstr ""
+":menuselection:`View -->` |newElevationProfile| :menuselection:`Elevation "
+"Profile` 메뉴를 선택하십시오. :guilabel:`Elevation profile` 패널이 열립니다."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:289
 msgid "newElevationProfile"
 msgstr "newElevationProfile"
@@ -466,6 +541,31 @@ msgid ""
 "The next step is to configure the elevation properties of the layers you "
 "want to visualize."
 msgstr "다음 단계는 사용자가 가시화하고자 하는 레이어들의 표고 속성을 환경설정하는 것입니다."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:167
+msgid ""
+"Push on the |layerTree| :sup:`Show Layer Tree` button to display the list of"
+" layers. By default, not all the layers of the project are loaded and "
+"referenced in the profile tool; e.g., raster layers which are not marked as "
+"having elevation data in their properties are ignored. Clicking the "
+"|addLayer| :sup:`Add layers` button will show a filtered list of possible "
+"layers which can be added to the plot, but which currently aren't in the "
+"plot. Applying the dialog with selected layers will automatically mark them "
+"as having elevation data and immediately add them to the plot."
+msgstr ""
+"|layerTree| :sup:`Show Layer Tree` 버튼을 클릭해서 레이어 목록을 보이게 하십시오. 기본적으로 단면 도구에 "
+"프로젝트의 모든 레이어를 불러와 참조시키지는 않습니다. 예를 들어 속성에 표고 데이터를 가지고 있다고 표시되지 않은 래스터 레이어는 "
+"무시합니다. |addLayer| :sup:`Add layers` 버튼을 클릭하면 도표에 추가할 수 있지만 지금은 도표에 없는, 필터링된 "
+"레이어들의 목록이 열릴 것입니다. 선택한 레이어를 가진 대화창을 적용하면 자동으로 해당 레이어가 표고 데이터를 가지고 있다고 표시하고 "
+"즉시 도표에 추가할 것입니다."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:175
+msgid ""
+"Holding :kbd:`Ctrl` key, it is possible to drag and drop additional layers "
+"from the main layer tree to one in the elevation profile tool."
+msgstr ""
+":kbd:`Ctrl` 키를 누른 채 드래그&드롭하는 방법으로 주 레이어 트리에서 표고 단면 도구의 레이어 트리로 레이어를 추가할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:178
 msgid ""
