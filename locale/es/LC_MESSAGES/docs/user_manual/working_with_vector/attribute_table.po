@@ -7,8 +7,8 @@
 # Translators:
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
 # Transifex Bot <>, 2024
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-20 21:53+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1769,6 +1769,54 @@ msgstr ""
 "Haga clic en la herramienta :guilabel:`Identificar objetos espaciales` de la"
 " barra de herramientas o pulse :kbd:`Ctrl+Mayús+I`."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:730
+msgid ""
+"Depending on the geometry type and if an ellipsoid is set in the "
+":guilabel:`Project Properties` dialog (:menuselection:`General --> "
+"Measurements`), ellipsoidal values of length, perimeter, or area using the "
+"specified units."
+msgstr ""
+"Dependiendo del tipo de geometría y si se ha establecido un elipsoide en el "
+"diálogo :guilabel:`Propiedades del proyecto` (:menuselection:`General --> "
+"Medidas`), valores elipsoidales de longitud, perímetro o área utilizando las"
+" unidades especificadas."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:733
+msgid ""
+"The count of geometry parts in the feature and the number of the part "
+"clicked."
+msgstr ""
+"El recuento de piezas de geometría en el objeto espacial y el número de la "
+"pieza en la que se ha hecho clic."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:734
+msgid "The count of vertices in the feature."
+msgstr "Número de vértices del objeto espacial."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:736
+msgid "Coordinate information that can be found in this section:"
+msgstr "Información de coordenada que puede encontrar en esta sección:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:738
+msgid "X and Y coordinate values of the clicked point."
+msgstr "Valores de las coordenadas X e Y del punto pulsado."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:739
+msgid "The number of the closest vertex to the clicked point."
+msgstr "El número del vértice más cercano al punto pulsado."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:740
+msgid "X and Y coordinate values of the closest vertex."
+msgstr "Valores de las coordenadas X e Y del vértice más cercano."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:741
+msgid ""
+"If you click on a curved segment, the radius of that section is also "
+"displayed."
+msgstr ""
+"Si hace clic en un segmento curvo, también se muestra el radio de esa "
+"sección."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:743
 msgid ""
 "**Data attributes**: This is the list of attribute fields and values for the"
@@ -1889,6 +1937,20 @@ msgstr ""
 "`Pydio <https://pydio.com>`_ u otros software de alojamiento soportan este "
 "protocolo."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:794
+msgid ""
+":guilabel:`AWS S3`: The resource is pushed to a server supporting `AWS "
+"Simple Storage Service <https://en.wikipedia.org/wiki/Amazon_S3>`_ protocol "
+"and the attribute is updated with its URL. Amazon Web Service and `MinIO "
+"<https://en.wikipedia.org/wiki/MinIO>`_ hosting software support this "
+"protocol."
+msgstr ""
+":guilabel:`AWS S3`: El recurso se envía a un servidor compatible con el "
+"protocolo `AWS Simple Storage Service "
+"<https://en.wikipedia.org/wiki/Amazon_S3>`_ y el atributo se actualiza con "
+"su URL. Amazon Web Service y el software de alojamiento `MinIO "
+"<https://en.wikipedia.org/wiki/MinIO>`_ soportan este protocolo."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:799
 msgid ""
 "Then, you have to set up the :guilabel:`Store URL` parameter, which provides"
@@ -1913,6 +1975,16 @@ msgstr ""
 "representar la ruta de archivo absoluta del archivo seleccionado por el "
 "usuario (usando el selector de archivos o arrastrar y soltar)."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:809
+msgid ""
+"Using the **WebDAV** or **AWS S3** external storage, if the URL ends with a "
+"\"/\", it is considered as a folder and the selected file name will be "
+"appended to get the final URL."
+msgstr ""
+"Utilizando el almacenamiento externo **WebDAV** o **AWS S3**, si la URL "
+"termina con \"/\", se considera como una carpeta y se añadirá el nombre del "
+"archivo seleccionado para obtener la URL final."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:813
 msgid ""
 "If the external storage system needs to, it's possible to configure an "
@@ -1920,6 +1992,14 @@ msgid ""
 msgstr ""
 "Si el sistema de almacenamiento externo lo necesita, es posible configurar "
 "un :ref:`authentication <authentication>`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:818
+msgid ""
+"To use the **AWS S3** external storage, you must use an **AWS S3** "
+"authentication type."
+msgstr ""
+"Para utilizar el almacenamiento externo **AWS S3**, debe utilizar un tipo de"
+" autenticación **AWS S3**."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:823
 msgid "Using an external storage"

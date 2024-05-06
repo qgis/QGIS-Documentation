@@ -7,15 +7,16 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,25 +58,7 @@ msgstr ""
 "cuando se producen, y también para re-ejecutar las operaciones anteriores, "
 "ya que el sistema de registro también implementa cierta interactividad."
 
-#: ../../docs/training_manual/processing/log.rst:8
-msgid ""
-"To open the log, click on the balloon at the bottom right, on the QGIS "
-"status bar. Some algorithms might leave here information about their "
-"execution. For instance, those algorithms that call an external application "
-"usually log the console output of that application to this entry. If you "
-"have a look at it, you will see that the output of the SAGA algorithm that "
-"we just run (and that fail to execute because input data was not correct) is"
-" stored here."
-msgstr ""
-"Para abrir el registro, haga clic sobre el globo inferior derecho en la "
-"barra de estado de QGIS. Algunos algoritmos pueden dejar aquí información "
-"sobre su ejecución. Por ejemplo, estos algoritmos que llaman a una "
-"aplicación externa normalmente registran la salida de la consola de esa "
-"aplicación a esta entrada. Si tiene una vista, verá que la salida del "
-"algoritmo SAGA que sólo se ejecuta (y que falla al ejecutar porque los datos"
-" de entrada fueron incorrectos) se almacena aquí."
-
-#: ../../docs/training_manual/processing/log.rst:10
+#: ../../docs/training_manual/processing/log.rst:18
 msgid ""
 "This is helpful to understand what is going on. Advanced users will be able "
 "to analyze that output to find out why the algorithm failed. If you are not "
@@ -90,7 +73,7 @@ msgstr ""
 "instalación del software externo o un problema con los datos que nos ha "
 "facilitado. "
 
-#: ../../docs/training_manual/processing/log.rst:12
+#: ../../docs/training_manual/processing/log.rst:23
 msgid ""
 "Even if the algorithm could be executed, some algorithms might leave "
 "warnings in case the result might not be right. For instance, when executing"
@@ -108,25 +91,7 @@ msgstr ""
 "buena idea revisar regularmente este tipo de advertencias si no esta seguro "
 "acerca de algunos aspectos de un algoritmo dado."
 
-#: ../../docs/training_manual/processing/log.rst:14
-msgid ""
-"From the *Processing* menu, under the *History* section, you'll find "
-"*Algorithms*. All algorithms that are executed, even if they are executed "
-"from the GUI and not from the console (which will be explained later in this"
-" manual) are stored in this section as a console call. That means that "
-"everytime you run an algorithm, a console command is added to the log, and "
-"you have the full history of your working session. Here is how that history "
-"looks like:"
-msgstr ""
-"Del menú *Procesos*, bajo la sección *Historial*, encontrará *Algoritmos*. "
-"Todos los algoritmos que se ejecutan, incluso si se ejecutan desde la "
-"interfaz de usuario y no desde la consola (que será explicada después en "
-"este manual) se almacena en la sección como una llamada de consola. Eso "
-"significa que todo el tiempo que ejecuta un algoritmo, una comando de "
-"consola se agrega al registro, y tiene el historial lleno de su sesión de "
-"trabajo. Así es como se ve el historial."
-
-#: ../../docs/training_manual/processing/log.rst:18
+#: ../../docs/training_manual/processing/log.rst:37
 msgid ""
 "This can be very useful when starting working with the console, to learn "
 "about the syntax of algorithms. We will use it when we discuss how to run "
@@ -136,46 +101,6 @@ msgstr ""
 "aprender acerca de la sintaxis de los algoritmos. Vamos a utilizarlos cuando"
 " se discuta cómo ejecutar comandos de análisis desde la consola. "
 
-#: ../../docs/training_manual/processing/log.rst:20
-msgid ""
-"The history is also interactive, and you can re--run any previous algorithm "
-"just by double--clicking on its entry. This is an easy way of replicating "
-"the work we already did before."
-msgstr ""
-"El histórico también es interactivo, y se puede volver a ejecutar cualquier "
-"algoritmo anterior, simplemente haciendo doble - clic sobre su entrada. Esta"
-" es una manera fácil de replicar el trabajo que ya hicimos antes. "
-
-#: ../../docs/training_manual/processing/log.rst:22
-msgid ""
-"For instance, try the following. Open the data corresponding to the first "
-"chapter of this manual and run the algorithm explained there. Now go to the "
-"log dialog and locate the last algorithm in the list, which corresponds to "
-"the algorithm you have just run. Double--click on it an a new result should "
-"be produced, just like when you run it using the normal dialog and calling "
-"it from the toolbox."
-msgstr ""
-"Por ejemplo, pruebe lo siguiente. Abra los datos correspondientes al primer "
-"capítulo de este manual y ejecute el algoritmo explicado allí. Ahora vaya al"
-" diálogo de registro y localice el último algoritmo en la lista, que "
-"corresponde al algoritmo que acaba de ejecutar. Haga doble - clic en él y un"
-" nuevo resultado debe ser producido, al igual que cuando se ejecuta "
-"utilizando el diálogo normal y llamándolo desde la caja de herramientas. "
-
-#: ../../docs/training_manual/processing/log.rst:27
-msgid ""
-"You can also modify the algorithm. Just copy it, open the "
-":menuselection:`Plugins --> Python console`, click on :menuselection:`Import"
-" class --> Import Processing class`, then paste it to re-run the analysis; "
-"change the text at will. To display the resulting file, type "
-":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
-"'ogr')`. Otherwise, you can use :kbd:`processing.runandload`."
-msgstr ""
-"También puede modificar el algoritmo. Solo cópielo, abra el "
-":menuselection:`Complementos --> consola de Python`, haga clic en "
-":menuselection:`Importar clase --> Importar clase de procesos`, a "
-"continuación peguelo para re-ejecutar el análisis; cambie el texto a "
-"voluntad. Para desplegar el archivo de resultado, escriba "
-":kbd:`iface.addVectorLayer('/path/filename.shp', 'Nombre de la capa en la "
-"leyenda', 'ogr')`. De otra manera, se puede utilizar "
-":kbd:`processing.runandload`."
+#: ../../docs/training_manual/processing/log.rst:53
+msgid ":abbr:`★★★ (Advanced level)` Advanced"
+msgstr ":abbr:`★★★ (Nivel avanzado)` Avanzado"

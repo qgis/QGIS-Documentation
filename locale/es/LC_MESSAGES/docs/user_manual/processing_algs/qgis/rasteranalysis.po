@@ -1013,6 +1013,21 @@ msgstr "Guardar en archivo…"
 msgid "Advanced parameters"
 msgstr "Parámetros avanzados"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:58
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:65
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:121
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:284
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:618
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:761
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1633
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1845
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1999
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2978
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3106
+msgid "**Output NoData value**"
+msgstr "**Valor de salida NoData**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:59
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:122
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:285
@@ -1035,6 +1050,19 @@ msgstr "``OUTPUT_NODATA_VALUE``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3110
 msgid "Default: -9999.0"
 msgstr "Predeterminado: -9999.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:72
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:126
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:289
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:625
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:768
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1638
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1850
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2004
+msgid "Value to use for NoData in the output layer"
+msgstr "Valor a utilizar para NoData en la capa de salida"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:66
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:75
@@ -2814,6 +2842,19 @@ msgstr ""
 "para usar como referencia al crear el ráster de salida. El ráster de salida "
 "tendrá la misma extensión, SRC y dimensiones de píxeles que esta capa."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1783
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1937
+msgid ""
+"By default, a NoData pixel in ANY of the input layers will result in a "
+"NoData pixel in the output raster. If the :guilabel:`Treat NoData values as "
+"false` option is checked, then NoData inputs will be treated the same as a "
+"``0`` input value."
+msgstr ""
+"De forma predeterminada, un píxel NoData en CUALQUIERA de las capas de "
+"entrada resultará en un píxel NoData en el ráster de salida. Si la opción "
+":guilabel:`Tratar los valores NoData como falsos` está marcada, las entradas"
+" NoData se tratarán igual que un valor de entrada ``0``."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1788
 msgid ":ref:`qgisrasterbooleanor`"
 msgstr ":ref:`qgisrasterbooleanor`"
@@ -2825,10 +2866,23 @@ msgstr ":ref:`qgisrasterbooleanor`"
 msgid "List of input raster layers"
 msgstr "Lista de capas ráster entrantes"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1814
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1968
+msgid "**Treat NoData values as false**"
+msgstr "**Tratar los valores NoData como falsos**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1815
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1969
 msgid "``NODATA_AS_FALSE``"
 msgstr "``NODATA_AS_FALSE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1819
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1973
+msgid ""
+"Treat NoData values in the input files as 0 when performing the operation"
+msgstr ""
+"Tratar como 0 los valores NoData de los ficheros de entrada al realizar la "
+"operación."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1846
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2000
@@ -2912,12 +2966,24 @@ msgstr ""
 "Las opciones disponibles dependen de la versión  de GDAL compilada con QGIS "
 "(vea l menú :menuselection:`Ayuda --> Sobre`)"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1894
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2048
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2585
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2741
+msgid "**NoData pixel count**"
+msgstr "**Recuento de píxeles sin datos**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1895
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2049
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2586
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2742
 msgid "``NODATA_PIXEL_COUNT``"
 msgstr "``NODATA_PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1897
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2051
+msgid "The count of NoData pixels in the output raster layer"
+msgstr "Recuento de píxeles NoData en la capa ráster de salida"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1898
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2052
@@ -3000,6 +3066,14 @@ msgstr ""
 "expresión. La expresión puede contener valores numéricos, operadores y "
 "referencias a cualquiera de las capas del proyecto actual."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2096
+msgid ""
+":ref:`qgisvirtualrastercalc`, :ref:`gdalrastercalculator`, "
+":ref:`label_raster_calc`"
+msgstr ""
+":ref:`qgisvirtualrastercalc`, :ref:`gdalrastercalculator`, "
+":ref:`label_raster_calc`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2114
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2221
 msgid "**Expression**"
@@ -3079,6 +3153,13 @@ msgstr ""
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Ingresar las coordenadas como ``xmin, xmax, ymin, ymax``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2131
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2238
+msgid "**Output cell size (leave empty to set automatically)**"
+msgstr ""
+"**Tamaño de la celda de salida (dejar vacío para que se ajuste "
+"automáticamente)**."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2134
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2241
 msgid "``CELLSIZE``"
@@ -3124,13 +3205,86 @@ msgstr "**Calculado**"
 msgid "Output raster file with the calculated values."
 msgstr "Archivo ráster saliente con los valores calculados."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2178
+msgid "**Algorithm ID**: ``native:rastercalc``"
+msgstr "**ID Algoritmo**: ``native:rastercalc``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2188
+msgid "Raster calculator (virtual)"
+msgstr "Calculadora Ráster (virtual)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2190
+msgid ""
+"Performs algebraic operations using raster layers and generates in-memory "
+"result."
+msgstr ""
+"Realiza operaciones algebraicas con capas ráster y genera resultados en "
+"memoria."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2196
+msgid ""
+"A virtual raster layer is a raster layer defined by its URI and whose pixels"
+" are calculated on-the-fly. It's not a new file on disk; the virtual layer "
+"is still connected to the rasters used in the calculation meaning that "
+"deleting or moving these rasters would break it. A :guilabel:`Layer name` "
+"can be provided, otherwise the calculation expression is used as such. "
+"Removing the virtual layer from the project deletes it, and it can be made "
+"persistent in file using the layer :menuselection:`Export --> Save as...` "
+"contextual menu."
+msgstr ""
+"Una capa ráster virtual es una capa ráster definida por su URI y cuyos "
+"píxeles se calculan sobre la marcha. No se trata de un nuevo archivo en el "
+"disco; la capa ráster virtual sigue conectada a las capas ráster utilizadas "
+"en el cálculo, lo que significa que borrar o mover estas capas ráster la "
+"dañaría. Se puede proporcionar una etiqueta :guilabel:`Nombre de la capa`, "
+"de lo contrario la expresión del cálculo se utiliza como tal. Al eliminar la"
+" capa virtual del proyecto se borra, y puede hacerse persistente en un "
+"archivo utilizando el menú contextual de la capa :menuselection:`Exportar "
+"--> Guardar como...`."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2203
+msgid ""
+":ref:`qgisrastercalc`, :ref:`gdalrastercalculator`, :ref:`label_raster_calc`"
+msgstr ""
+":ref:`qgisrastercalc`, :ref:`gdalrastercalculator`, :ref:`label_raster_calc`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2255
+msgid "**Output layer name**"
+msgstr "**Nombre de la capa de salida**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2258
 msgid "``LAYER_NAME``"
 msgstr "``LAYER_NAME``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2260
+msgid ""
+"The name to assign to the generated layer. If not set, the text of the "
+"calculation expression is used."
+msgstr ""
+"El nombre a asignar a la capa generada. Si no se establece, se utiliza el "
+"texto de la expresión de cálculo."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2277
+msgid "Output virtual raster layer with the calculated values."
+msgstr "Salida de la capa ráster virtual con los valores calculados."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2282
+msgid "**Algorithm ID**: ``native:virtualrastercalc``"
+msgstr "**ID Algoritmo**: ``native:virtualrastercalc``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2292
 msgid "Raster layer properties"
 msgstr "Propiedades de capa ráster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2294
+msgid ""
+"Returns basic properties of the given raster layer, including the extent, "
+"size in pixels and dimensions of pixels (in map units), number of bands, and"
+" NoData value."
+msgstr ""
+"Devuelve las propiedades básicas de la capa ráster dada, incluyendo la "
+"extensión, el tamaño en píxeles y las dimensiones de los píxeles (en "
+"unidades de mapa), el número de bandas y el valor NoData."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2298
 msgid ""
@@ -3204,6 +3358,14 @@ msgstr "``HAS_NODATA_VALUE``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2352
 msgid "[Boolean]"
 msgstr "[Booleano]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2353
+msgid ""
+"Indicates whether the raster layer has a value set for NoData pixels in the "
+"selected band"
+msgstr ""
+"Indica si la capa ráster tiene un valor establecido para los píxeles NoData "
+"en la banda seleccionada."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2358
 msgid "The number of columns in the raster layer"
@@ -3522,6 +3684,11 @@ msgstr "Guardar en tabla de base de datos..."
 msgid "The file encoding can also be changed here."
 msgstr "El fichero codificado también puede ser cambiado aquí."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2588
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2744
+msgid "The number of NoData pixels in the output raster layer"
+msgstr "Número de píxeles NoData en la capa ráster de salida"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2596
 msgid "The output HTML file contains the following information:"
 msgstr "El archivo HTML saliente contiene la siguiente información:"
@@ -3549,6 +3716,10 @@ msgstr "Altura en pixels: número de columans y tamaño de ancho de píxel"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2603
 msgid "Total pixel count: count of all the pixels"
 msgstr "Recuento total de pixel: recuento de todos los pixels"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2604
+msgid "NoData pixel count: count of pixels with NoData value"
+msgstr "Recuento de píxeles NoData: recuento de píxeles con valor NoData"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2608
 msgid "A table with three columns:"
@@ -3932,6 +4103,14 @@ msgstr "``MIN_FIELD``"
 msgid "[tablefield: numeric]"
 msgstr "[campo de tabla: numérico]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2942
+msgid ""
+"Field with the minimum value of the range for the class. Use ``-inf`` to "
+"capture the lowest possible value."
+msgstr ""
+"Campo con el valor mínimo del rango para la clase. Utilice ``-inf`` para "
+"capturar el valor más bajo posible."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2944
 msgid "**Maximum class value field**"
 msgstr "**Campo de valor máximo de clase**"
@@ -3939,6 +4118,14 @@ msgstr "**Campo de valor máximo de clase**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2945
 msgid "``MAX_FIELD``"
 msgstr "``MAX_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2947
+msgid ""
+"Field with the maximum value of the range for the class. Use ``inf`` to "
+"capture the highest possible value."
+msgstr ""
+"Campo con el valor máximo del rango para la clase. Utilice ``inf`` para "
+"capturar el valor más alto posible."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2949
 msgid "**Output value field**"
@@ -3948,12 +4135,27 @@ msgstr "**Campo de valor de salida**"
 msgid "``VALUE_FIELD``"
 msgstr "``VALUE_FIELD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2952
+msgid ""
+"Field with the value that will be assigned to the pixels that fall in the "
+"class (between the corresponding min and max values). Use ``nan`` to set the"
+" value of the range to NoData."
+msgstr ""
+"Campo con el valor que se asignará a los píxeles que caigan en la clase "
+"(entre los valores min y max correspondientes). Utilice ``nan`` para "
+"establecer el valor del rango en NoData."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2955
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3027
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3082
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3155
 msgid "**Reclassified raster**"
 msgstr "**Ráster reclasificado**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2983
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3111
+msgid "Value to apply to NoData values."
+msgstr "Valor a aplicar a los valores NoData."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2984
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3112
@@ -3990,10 +4192,24 @@ msgstr "2 --- min <= valor <= max"
 msgid "3 --- min < value < max"
 msgstr "3 --- min < valor < max"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2996
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3124
+msgid "**Use NoData when no range matches value**"
+msgstr "**Utilizar NoData cuando ningún rango coincide con el valor**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2997
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3125
 msgid "``NODATA_FOR_MISSING``"
 msgstr "``NODATA_FOR_MISSING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3001
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3129
+msgid ""
+"Applies the NoData value to band values that do not fall in any class. If "
+"False, the original value is kept."
+msgstr ""
+"Aplica el valor NoData a los valores de banda que no pertenecen a ninguna "
+"clase. Si es False, se mantiene el valor original."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3009
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3137
@@ -4033,6 +4249,20 @@ msgstr "**Tabla de reclasificación**"
 msgid "``TABLE``"
 msgstr "``TABLE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3077
+msgid ""
+"A 3-columns table to fill with the values to set the boundaries of each "
+"class (``Minimum`` and ``Maximum``) and the new ``Value`` to assign to the "
+"band values that fall in the class. The value ``-inf`` can be used as "
+"minimum, ``inf`` as maximum, and ``nan`` can be used to set the output value"
+" to NoData."
+msgstr ""
+"Una tabla de 3 columnas para rellenar con los valores para establecer los "
+"límites de cada clase (``Mínimo`` y ``Máximo``) y el nuevo ``Valor`` para "
+"asignar a los valores de banda que caen en la clase. El valor ``-inf`` se "
+"puede utilizar como mínimo, ``inf`` como máximo, y ``nan`` se puede utilizar"
+" para establecer el valor de salida a NoData."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3087
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3235
 msgid "Specification of the output raster layer. One of:"
@@ -4058,6 +4288,14 @@ msgstr ""
 "píxeles). Los valores de entrada son mapeados usando interpolación lineal "
 "los valores mínimo y máximo del ráster fuente hacia el rango de píxeles "
 "mínimo y máximo destino."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3180
+msgid ""
+"By default the algorithm preserves the original NoData value, but there is "
+"an option to override it."
+msgstr ""
+"De forma predeterminada, el algoritmo conserva el valor original de NoData, "
+"pero existe una opción para anularlo."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3186
 msgid "Rescaling values of a raster layer from [0 - 50] to [100 - 1000]"
@@ -4106,6 +4344,10 @@ msgstr "Valor predeterminado: 255.0"
 msgid "Maximum pixel value to use in the rescaled layer"
 msgstr "Valor máximo de píxel para usar en la capa reescalada"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3221
+msgid "**New NoData value**"
+msgstr "**Nuevo valor NoData**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3224
 msgid "``NODATA``"
 msgstr "``NODATA``"
@@ -4113,6 +4355,14 @@ msgstr "``NODATA``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3227
 msgid "Default value: Not set"
 msgstr "Predeterminado: No establecido"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3228
+msgid ""
+"Value to assign to the NoData pixels. If unset, original NoData values are "
+"preserved."
+msgstr ""
+"Valor a asignar a los píxeles NoData. Si no se establece, se conservan los "
+"valores NoData originales."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3230
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3253

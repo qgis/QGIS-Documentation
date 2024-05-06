@@ -6,10 +6,10 @@
 # 
 # Translators:
 # Federico, 2024
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
 # Transifex Bot <>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-06 17:56+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1000,9 +1000,44 @@ msgstr ""
 msgid "Loading a Shapefile with open options"
 msgstr "Cargar un archivo Shape con opciones de apertura"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:380
+msgid ""
+"Press :guilabel:`Add` to load the file in QGIS and display them in the map "
+"view. When adding vector datasets containing multiple layers, the "
+":guilabel:`Select Items to Add` dialog will appear. In this dialog, you can "
+"choose the specific layers from your dataset that you want to add. Also, "
+"under :guilabel:`Options` you can choose to:"
+msgstr ""
+"Pulse :guilabel:`Añadir` para cargar el archivo en QGIS y mostrarlo en la "
+"vista de mapa. Cuando añada conjuntos de datos vectoriales que contengan "
+"varias capas, aparecerá el cuadro de diálogo :guilabel:`Seleccionar "
+"elementos para añadir`. En este cuadro de diálogo, puede elegir las capas "
+"específicas del conjunto de datos que desea añadir. Además, en "
+":guilabel:`Opciones` puede elegir entre:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:386
+msgid "|checkbox|:guilabel:`Add layers to a group`"
+msgstr "|checkbox|:guilabel:`Añadir capas a un grupo`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1657
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:387
+msgid "|checkbox|:guilabel:`Show system and internal tables`"
+msgstr "|checkbox|:guilabel:`Mostrar sistema y tablas internas`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:388
+msgid "|checkbox|:guilabel:`Show empty vector layers`."
+msgstr "|checkbox|:guilabel:`Mostrar capas vectoriales vacías`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:390
+msgid ""
+":numref:`figure_vector_loaded` shows QGIS after loading the "
+":file:`alaska.shp` file."
+msgstr ""
+":numref:`figure_vector_loaded` muestra QGIS después de cargar el archivo "
+":file:`alaska.shp`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:397
 msgid "QGIS with Shapefile of Alaska loaded"
@@ -1650,12 +1685,60 @@ msgstr ""
 "En el diálogo :guilabel:`Importar DWG/DXF`, para importar los contenidos del"
 " archivo de dibujo:"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:662
+msgid ""
+"Input the location of the :guilabel:`Source drawing`, i.e. the DWG/DXF "
+"drawing file to import."
+msgstr ""
+"Introduzca la ubicación del :guilabel:`Dibujo de origen`, es decir, el "
+"archivo de dibujo DWG/DXF a importar."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:664
 msgid ""
 "Specify the coordinate reference system of the data in the drawing file."
 msgstr ""
 "Especifique el sistema de referencia de coordenadas de los datos en el "
 "archivo de dibujo."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:665
+msgid ""
+"Input the location of the :guilabel:`Target package`, i.e. the GeoPackage "
+"file that will store the data. If an existing file is provided, then it will"
+" be overwritten."
+msgstr ""
+"Introduzca la ubicación del :guilabel:`Paquete de destino`, es decir, el "
+"archivo GeoPackage que almacenará los datos. Si se proporciona un archivo "
+"existente, se sobrescribirá."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:668
+msgid "Choose how to import ``blocks`` with the dedicated combobox:"
+msgstr "Elija cómo importar ``bloques`` con el combobox dedicado:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:670
+msgid ""
+":guilabel:`Expand Block Geometries`: imports the blocks in the drawing file "
+"as normal elements."
+msgstr ""
+":guilabel:`Expandir geometrías de bloques`: importa los bloques del archivo "
+"de dibujo como elementos normales."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:671
+msgid ""
+":guilabel:`Expand Block Geometries and Add Insert Points`: imports the "
+"blocks in the drawing file as normal elements and adds the insertion point "
+"as a point layer."
+msgstr ""
+":guilabel:`Expandir geometrías de bloques y añadir puntos de inserción`: "
+"importa los bloques del archivo de dibujo como elementos normales y añade el"
+" punto de inserción como una capa de puntos."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:672
+msgid ""
+":guilabel:`Add Only Insert Points`: adds the blocks insertion point as a "
+"point layer."
+msgstr ""
+":guilabel:`Añadir sólo puntos de inserción`: añade el punto de inserción de "
+"los bloques como una capa de puntos."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:674
 msgid ""
@@ -1664,6 +1747,18 @@ msgid ""
 msgstr ""
 "Marque |checkbox| :guilabel:`Usar curvas` para promover las capas importadas"
 " a un tipo de geoemtría ``curvada``."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:676
+msgid ""
+"Use the :guilabel:`Import` button to import the drawing into the destination"
+" GeoPackage file. The GeoPackage database will be automatically populated "
+"with the drawing file content. Depending on the size of the file, this can "
+"take some time."
+msgstr ""
+"Utilice el botón :guilabel:`Importar` para importar el dibujo en el archivo "
+"GeoPackage de destino. La base de datos de GeoPackage se llenará "
+"automáticamente con el contenido del archivo de dibujo. Dependiendo del "
+"tamaño del archivo, esto puede llevar algún tiempo."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:682
 msgid ""
@@ -1676,6 +1771,15 @@ msgstr ""
 "base de datos de GeoPackage, el marco de la mitad inferior del cuadro de "
 "diálogo se rellena con la lista de capas del archivo importado. Allí puede "
 "seleccionar qué capas agregar al proyecto QGIS:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:687
+msgid ""
+"At the top, set a :guilabel:`Group name` to group the drawing files in the "
+"project. By default this is set to the filename of the source drawing file."
+msgstr ""
+"En la parte superior, establezca una etiqueta :guilabel:`Nombre del grupo` "
+"para agrupar los archivos de dibujo en el proyecto. Predeterminado: el "
+"nombre del archivo de dibujo de origen."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:689
 msgid ""
@@ -2314,6 +2418,20 @@ msgstr ""
 msgid "The service file can look like this::"
 msgstr "El archivo de servicio puede verse como::"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:970
+msgid ""
+"There are two services in the above example: ``water_service`` and "
+"``wastewater_service``. You can use these to connect from QGIS, pgAdmin, "
+"etc. by specifying only the name of the service you want to connect to "
+"(without the enclosing brackets). If you want to use the service with "
+"``psql``, you can do ``psql service=water_service``."
+msgstr ""
+"Hay dos servicios en el ejemplo anterior: ``water_service`` y "
+"``wastewater_service``. Puedes usarlos para conectarte desde QGIS, pgAdmin, "
+"etc. especificando sólo el nombre del servicio al que quieres conectarte "
+"(sin los corchetes). Si quieres usar el servicio con ``psql``, puedes hacer "
+"``psql service=water_service``."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:976
 msgid ""
 "You can find all the PostgreSQL parameters `here "
@@ -2333,6 +2451,10 @@ msgstr ""
 "Si no desea guardar las contraseñas en el archivo de servicio, puede usar el"
 " `.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ "
 "option."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:984
+msgid "**QGIS Server and service**"
+msgstr "**Servidor y servicio QGIS"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:989
 msgid ""
@@ -2560,6 +2682,28 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1084
 msgid "Connecting to MS SQL Server"
 msgstr "Conexión a MS SQL Server"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1086
+msgid ""
+"As mentioned in :ref:`vector_create_stored_connection` QGIS allows you to "
+"create MS SQL Server connection through :guilabel:`Data Source Manager`."
+msgstr ""
+"Como se menciona en :ref:`vector_create_stored_connection` QGIS permite "
+"crear conexión MS SQL Server a través de :guilabel:`Gestor de fuentes de "
+"datos`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1094
+msgid "MS SQL Server Connection"
+msgstr "Conexión a MS SQL Server"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1096
+msgid ""
+"To create a new MS SQL Server connection, you need to provide some of the "
+"following information in the :guilabel:`Connection Details` dialog:"
+msgstr ""
+"Para crear una nueva conexión a MS SQL Server, debe proporcionar algunos de "
+"los siguientes datos en el cuadro de diálogo :guilabel:`Detalles de "
+"conexión`:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1139
 msgid "Connecting to SAP HANA"
@@ -3440,3 +3584,32 @@ msgstr ":menuselection:`Exportar capa.. --> A archivo`"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1649
 msgid "addTiledSceneLayer"
 msgstr "addTiledSceneLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1598
+msgid "Remote source - ``http://example.com/tileset.json``"
+msgstr "Fuente remota - ``http://example.com/tileset.json``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1599
+msgid "Local files - ``file:///path/to/tiles/tileset.json``"
+msgstr "Archivos locales - ``file:///path/to/tiles/tileset.json``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1606
+msgid "Tiled Scene Connection"
+msgstr "Conexión de escenas en mosaico"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1608
+msgid "You can also add the service from :guilabel:`Browser Panel`."
+msgstr ""
+"También puede añadir el servicio desde :guilabel:`Panel de Navegador`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1610
+msgid ""
+"After creating new connection you are able to :guilabel:`Add` the new layer "
+"to your map."
+msgstr ""
+"Una vez creada la nueva conexión, podrá :guilabel:`Añadir` la nueva capa a "
+"su mapa."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1618
+msgid "3D Tiles Layer - Textured"
+msgstr "Capa de teselas 3D - Texturizado"

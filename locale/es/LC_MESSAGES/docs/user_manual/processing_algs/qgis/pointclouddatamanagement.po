@@ -539,6 +539,10 @@ msgstr "Parámetros básicos"
 msgid "Input point cloud layer to clip"
 msgstr "Capa de la nube de puntos de entrada para recortar"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:203
+msgid "**Clipping polygons**"
+msgstr "**Recorte de polígonos**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:204
 msgid "``OVERLAY``"
 msgstr "``OVERLAY``"
@@ -547,10 +551,22 @@ msgstr "``OVERLAY``"
 msgid "[vector: polygon]"
 msgstr "[vectorial: poligonal]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:206
+msgid "Polygon vector layer to use as coverage for clipping the points"
+msgstr ""
+"Capa vectorial poligonal que se utilizará como cobertura para recortar los "
+"puntos"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:207
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:257
 msgid "**Clipped**"
 msgstr "**Cortadas**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:212
+msgid "Specify the point cloud file to export the clipped points to. One of:"
+msgstr ""
+"Especifique el archivo de nube de puntos al que exportar los puntos "
+"recortados. Uno de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:219
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:459
@@ -670,6 +686,32 @@ msgstr ""
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Ingresar las coordenadas como ``xmin, xmax, ymin, ymax``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:260
+msgid ""
+"Output point cloud whose features are the points within the coverage polygon"
+" layer."
+msgstr ""
+"Nube de puntos de salida cuyos objetos espaciales son los puntos dentro de "
+"la capa del polígono de cobertura."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:265
+msgid "**Algorithm ID**: ``pdal:clip``"
+msgstr "**ID Algoritmo**: ``pdal:clip``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:275
+msgid "Create COPC"
+msgstr "Crear COPC"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:277
+msgid "Creates the index for all the input point cloud files in a batch mode."
+msgstr ""
+"Crea el índice de todos los archivos de nubes de puntos de entrada por "
+"lotes."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:293
+msgid "Input point cloud layers to create an index for"
+msgstr "Capas de nubes de puntos de entrada para crear un índice para"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:294
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:318
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:835
@@ -688,6 +730,11 @@ msgstr "[carpeta]"
 msgid "Default: ``[Skip output]``"
 msgstr "Preestablecido: ``[Omitir salida]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:301
+msgid "Specify the folder to create the new files in. One of:"
+msgstr ""
+"Especifique la carpeta en la que se crearán los nuevos archivos. Una de:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "Saltar salida"
@@ -702,6 +749,38 @@ msgstr "Guardar en Directorio Temporal"
 msgid "Save to Directory"
 msgstr "Guardar en Directorio"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:321
+msgid ""
+"Output folder containing point cloud layers with accompanying COPC index "
+"files."
+msgstr ""
+"Carpeta de salida que contiene las capas de nubes de puntos con los archivos"
+" de índice COPC correspondientes."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:326
+msgid "**Algorithm ID**: ``pdal:createcopc``"
+msgstr "**ID Algoritmo**: ``pdal:createcopc``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:336
+msgid "Information"
+msgstr "Información"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:338
+msgid "Outputs basic metadata from an input point cloud file."
+msgstr ""
+"Genera metadatos básicos a partir de un archivo de nube de puntos de "
+"entrada."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:340
+msgid "Example of output information::"
+msgstr "Ejemplo de información de salida::"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:383
+msgid "Input point cloud layer to extract metadata information from"
+msgstr ""
+"Capa de la nube de puntos de entrada de la que extraer información de "
+"metadatos"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:384
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:406
 msgid "**Layer information**"
@@ -711,18 +790,54 @@ msgstr "**Información de la capa**"
 msgid "[file]"
 msgstr "[archivo]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:389
+msgid "Specify the file to store the metadata information. One of:"
+msgstr ""
+"Especifique el archivo para almacenar la información de metadatos. Uno de:"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:408
 msgid "[vector]"
 msgstr "[vector]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:409
+msgid ":file:`HTML` file to store the metadata information."
+msgstr ":file:`HTML` archivo para almacenar la información de metadatos."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:414
+msgid "**Algorithm ID**: ``pdal:info``"
+msgstr "**ID Algoritmo**: ``pdal:info``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:423
 msgid "Merge"
 msgstr "Mezclar"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:425
+msgid "Merges multiple point cloud files into a single one."
+msgstr "Fusiona varios archivos de nubes de puntos en uno solo."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:427
+msgid ":ref:`pdalvirtualpointcloud`"
+msgstr ":ref:`pdalvirtualpointcloud`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:446
+msgid "Input point cloud layers to merge into a single one"
+msgstr "Capas de nubes de puntos de entrada para fusionarlas en una sola"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:447
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:497
 msgid "**Merged**"
 msgstr "**Mezclado**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:452
+msgid "Specify the output point cloud merging input files. One of:"
+msgstr ""
+"Especifique los archivos de entrada de fusión de nubes de puntos de salida. "
+"Uno de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:500
+msgid "Output point cloud layer merging all the input files."
+msgstr ""
+"Capa de nube de puntos de salida que fusiona todos los archivos de entrada."
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:536
 msgid "**Target CRS**"
@@ -754,6 +869,26 @@ msgstr "[número]"
 msgid "Default: 1.0"
 msgstr "Predeterminado: 1.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:705
+msgid "Thin (by skipping points)"
+msgstr "Alivianar (saltándose puntos)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:707
+msgid ""
+"Creates a thinned version of the point cloud by keeping only every N-th "
+"point (reduces the number of points by skipping nearby points)."
+msgstr ""
+"Crea una versión reducida de la nube de puntos manteniendo sólo cada N-ésimo"
+" punto (reduce el número de puntos omitiendo los puntos cercanos)."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:710
+msgid ":ref:`pdalthinbyradius`"
+msgstr ":ref:`pdalthinbyradius`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:730
+msgid "**Number of points to skip**"
+msgstr "**Número de puntos a saltar**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:731
 msgid "``POINTS_NUMBER``"
 msgstr "``POINTS_NUMBER``"
@@ -761,6 +896,36 @@ msgstr "``POINTS_NUMBER``"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:734
 msgid "Default: 1"
 msgstr "Predeterminado: 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:735
+msgid "Keep only every N-th point in the input layer"
+msgstr "Mantener sólo cada N-ésimo punto en la capa de entrada"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:736
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:786
+msgid "**Thinned (by decimation)**"
+msgstr "**Reducido (por diezmación)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:794
+msgid "**Algorithm ID**: ``pdal:thinbydecimate``"
+msgstr "**ID Algoritmo**: ``pdal:thinbydecimate``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:804
+msgid "Tile"
+msgstr "Tesela"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:806
+msgid ""
+"Creates tiles from input point cloud files, recommended for best performance"
+" (in display or analysis) with such datasets in QGIS."
+msgstr ""
+"Crea teselas a partir de archivos de nubes de puntos de entrada, "
+"recomendadas para obtener el mejor rendimiento (en visualización o análisis)"
+" con este tipo de conjuntos de datos en QGIS."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:809
+msgid ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"
+msgstr ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:830
 msgid "``LENGTH``"

@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Transifex Bot <>, 2024
+# Clem Las, 2024
 # Harrissou Sant-anna, 2024
 # 
 #, fuzzy
@@ -874,6 +875,25 @@ msgstr "toggleEditing"
 msgid "User Defined CRS"
 msgstr "SCR défini par l'utilisateur"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:356
+msgid ""
+"The |customProjection| :guilabel:`User Defined CRS` tab helps you to define "
+"a custom CRS which must conform to a WKT or Proj string format."
+msgstr ""
+"L'onglet |customProjection| :guilabel:`SCR défini par l'utilisateur` vous "
+"permet de définir un système de coordonnées de référence (SCR) personnalisé."
+" La définition doit être conforme à un format de chaîne WKT ou Proj."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:366
+msgid ""
+"Set a :guilabel:`Name` and use |symbologyAdd| :sup:`Add new CRS`. If you "
+"want to delete an existing one you can use |symbologyRemove| :sup:`Remove "
+"CRS`."
+msgstr ""
+"Entrez un :guilabel:`Nom` et cliquez sur |symbologyAdd| :sup:`Ajouter un "
+"nouveau SCR`. Si vous souhaitez supprimer un SCR existant, utilisez "
+"|symbologyRemove| :sup:`Supprimer le SCR`."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:369
 msgid "**Definition**"
 msgstr "**Définition**"
@@ -885,6 +905,10 @@ msgstr ":guilabel:`Format`"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:372
 msgid "WKT (Recommended)"
 msgstr "WKT (Recommandé)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:373
+msgid "Proj String (Legacy - Not Recommended)"
+msgstr "Chaîne Proj (héritage - non recommandé)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:377
 msgid ":guilabel:`Parameters`"
@@ -905,6 +929,15 @@ msgstr ":guilabel:`Valider` teste si votre expression est correcte."
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:379
 msgid "**Test**"
 msgstr "**Test**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:381
+msgid ""
+"Here you can test your created CRS definition by Latitude and Longitude. Use"
+" a known coordinate to control if your definition is accurate."
+msgstr ""
+"Ici vous pouvez tester la définition du SCR créé par Latitude et Longitude. "
+"Utilisez une coordonnée connue pour contrôler la qualité de votre "
+"définition."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:388
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:395
@@ -1136,6 +1169,17 @@ msgstr ""
 msgid "**GDAL raster and vector drivers**"
 msgstr "**Pilotes rasters et vecteurs de GDAL**"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:488
+msgid ""
+"The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` tabs allow you"
+" to define which GDAL driver is enabled to read and/or write files, as in "
+"some cases more than one GDAL driver is available."
+msgstr ""
+"Les onglets :guilabel:`Pilotes Raster` et :guilabel:`Pilotes Vecteur` vous "
+"permettent de définir quels pilotes GDAL sont activés pour lire et/ou écrire"
+" des fichiers. En effet, pour certains types de fichiers, plusieurs pilotes "
+"sont disponibles."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:496
 msgid "GDAL Settings - Raster drivers"
 msgstr "Paramètres de GDAL - Pilotes Raster"
@@ -1238,6 +1282,14 @@ msgstr "Exemple de profil de pyramides"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:553
 msgid "Rendering Settings"
 msgstr "Rendu"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:555
+msgid ""
+"The |rendering| :guilabel:`Rendering` tab provides settings for controlling "
+"layers rendering in the map canvas."
+msgstr ""
+"L'onglet |rendering| :guilabel:`Rendu` contient les réglages contrôlant le "
+"rendu des couches dans la carte."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2754
 msgid "rendering"
@@ -1400,6 +1452,26 @@ msgid ""
 msgstr ""
 "Avec la :guilabel:`Sélection de bande RVB`, vous pouvez définir la valeur "
 "des bandes Rouge, Vert et Bleu. "
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:652
+msgid ""
+"The :guilabel:`Zoomed in resampling` and the :guilabel:`Zoomed out "
+"resampling` methods can be defined. For :guilabel:`Zoomed in resampling` you"
+" can choose between three resampling methods: 'Nearest neighbour', 'Bilinear"
+" (2x2 kernel)' and 'Cubic (4x4 kernel)'. For :guilabel:`Zoomed out "
+"resampling` you can choose between 'Nearest Neighbour' and 'Average'. You "
+"can also set the :guilabel:`Oversampling` value (between 0.0 and 99.99 - a "
+"large value means more work for QGIS - the default value is 2.0)."
+msgstr ""
+"Les méthodes de :guilabel:`Rééchantillonage zoom avant` et "
+":guilabel:`Rééchantillonage zoom arrière` peuvent être spécifiées. Pour le "
+":guilabel:`Rééchantillonage zoom avant`, vous avez le choix entre trois "
+"méthodes : 'Plus proche voisin', 'Bilinéaire (noyau 2x2)' et 'Cubique' "
+"(noyau 4x4). Pour le :guilabel:`Rééchantillonage zoom arrière`, vous avez le"
+" choix entre 'Plus proche voisin' et 'Moyenne'. Vous pouvez égaiement "
+"définir la valeur de :guilabel:`Suréchantillonnage` (entre 0.0 et 99.99 - "
+"une grande valeur implique plus de travail pour QGIS). La valeur par défaut "
+"est 2.0."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:672
 msgid ""

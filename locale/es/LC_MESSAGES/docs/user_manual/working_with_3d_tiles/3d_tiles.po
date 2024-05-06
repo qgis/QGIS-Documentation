@@ -36,9 +36,21 @@ msgstr ""
 "translator>`_. Esta página está actualmente traducida en |translation "
 "progress|."
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:6
+msgid "Working with 3D Tiles"
+msgstr "Trabajar con teselas 3D"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:34
 msgid "Data Sources"
 msgstr "Fuentes de datos"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:38
+msgid "Remote source - ``http://example.com/tileset.json``"
+msgstr "Fuente remota - ``http://example.com/tileset.json``"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:39
+msgid "Local files - ``file:///path/to/tiles/tileset.json``"
+msgstr "Archivos locales - ``file:///path/to/tiles/tileset.json``"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:249
 msgid "metadata"
@@ -90,6 +102,14 @@ msgstr ""
 "interesante para obtener rápidamente información resumida y metadatos en la "
 "capa actual. Los datos proporcionados son:"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:99
+msgid ""
+"based on the provider of the layer: name, URL, source type and path, number "
+"of zoom levels"
+msgstr ""
+"en función del proveedor de la capa: nombre, URL, tipo y ruta de origen, "
+"número de niveles de zoom"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:101
 msgid ""
 "the Coordinate Reference System: name, units, method, accuracy, reference "
@@ -101,6 +121,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:109
 msgid "Source Properties"
 msgstr "Propiedades de fuente"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:111
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected 3D tile, including:"
+msgstr ""
+"La pestaña |system| :guilabel:`Fuente` muestra información básica sobre el "
+"mosaico 3D seleccionado, incluyendo:"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:114
 msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
@@ -115,9 +143,42 @@ msgstr "setProjection"
 msgid "Symbology Properties"
 msgstr "Propiedades de simbología"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:133
+msgid "3D Tile Layer Symbology"
+msgstr "Simbología de capas de tesela 3D"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:135
+msgid ""
+"By default, the layer is styled using texture, but you can change it to see "
+"the wireframe mesh behind the scene by choosing :guilabel:`Wireframe` in the"
+" drop-down menu. You can also, change the mesh fill and line symbols similar"
+" to the vector polygons. Checking |checkbox| :guilabel:`Use texture colors` "
+"will render each mesh element with the average value of the full texture. "
+"This is a good option to try when dealing with a large dataset and want to "
+"get a quick overview of the data."
+msgstr ""
+"De forma predeterminada, la capa está estilizada usando textura, pero puede "
+"cambiarla para ver la malla wireframe detrás de la escena eligiendo "
+":guilabel:`Wireframe` en el menú desplegable. También puede cambiar el "
+"relleno de la malla y los símbolos de línea similares a los polígonos "
+"vectoriales. Marcando |checkbox| :guilabel:`Usar colores de textura` "
+"renderizará cada elemento de la malla con el valor medio de la textura "
+"completa. Esta es una buena opción para probar cuando se trata de un gran "
+"conjunto de datos y desea obtener una visión general rápida de los datos."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:241
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:149
+msgid "3D Tiles - textured and wireframe"
+msgstr "Teselas 3D - texturizadas y wireframe"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:151
+msgid "To view the data you can open |new3DMap| :guilabel:`New 3D map view`."
+msgstr ""
+"Para ver los datos puede abrir |new3DMap| :guilabel:`Vista del nuevo mapa "
+"3D`."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:251
 msgid "new3DMap"
@@ -136,6 +197,42 @@ msgstr ""
 "opciones que actúan invariablemente sobre todas las características de la "
 "capa:"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:163
+msgid ""
+":guilabel:`Maximum error`: This parameter determines the level of detail "
+"displayed in the 3D model. Similar to point clouds, 3D tiles often contain "
+"more information than necessary for visual representation. By adjusting this"
+" setting, you control the balance between display density and rendering "
+"speed. A larger value (e.g., 5 mm) may introduce noticeable gaps between "
+"elements, while a smaller value (e.g., 0.1 mm) could lead to the rendering "
+"of an excessive number of details, potentially slowing down the rendering "
+"process. Different units can be selected to tailor the setting to your "
+"specific needs."
+msgstr ""
+":guilabel:`Error máximo`: Este parámetro determina el nivel de detalle "
+"mostrado en el modelo 3D. Al igual que las nubes de puntos, los mosaicos 3D "
+"suelen contener más información de la necesaria para su representación "
+"visual. Al ajustar este parámetro, se controla el equilibrio entre la "
+"densidad de visualización y la velocidad de renderizado. Un valor mayor (por"
+" ejemplo, 5 mm) puede introducir huecos perceptibles entre los elementos, "
+"mientras que un valor menor (por ejemplo, 0,1 mm) podría conducir a la "
+"representación de un número excesivo de detalles, lo que podría ralentizar "
+"el proceso de renderizado. Se pueden seleccionar diferentes unidades para "
+"adaptar el ajuste a sus necesidades específicas."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:172
+msgid ""
+":guilabel:`Opacity`: Adjust the visibility of the underlying layer on the "
+"map canvas using this tool. Use slider to tailor the visibility of your "
+"scene layer according to your preferences. Alternatively, specify the exact "
+"percentage of visibility through the menu next to the slider."
+msgstr ""
+":guilabel:`Opacidad`: Ajuste la visibilidad de la capa subyacente en el "
+"lienzo del mapa utilizando esta herramienta. Utilice el control deslizante "
+"para ajustar la visibilidad de la capa de la escena según sus preferencias. "
+"Alternativamente, especifique el porcentaje exacto de visibilidad a través "
+"del menú situado junto al deslizador."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:176
 msgid ""
 ":guilabel:`Blending mode`: You can achieve special rendering effects with "
@@ -151,6 +248,28 @@ msgstr ""
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:184
 msgid "3D View Properties"
 msgstr "Propiedades de visor 3D"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:186
+msgid ""
+":guilabel:`Maximum screen space error` determines the threshold for swapping"
+" terrain tiles with more detailed ones (and vice versa) - i.e. how soon the "
+"3D view will use higher quality tiles. Lower numbers mean more details in "
+"the scene at the expenses of increased rendering complexity."
+msgstr ""
+":guilabel:`Máximo error de espacio en pantalla` determina el umbral para "
+"cambiar las teselas de terreno por otras más detalladas (y viceversa), es "
+"decir, en cuánto tiempo la vista 3D utilizará baldosas de mayor calidad. "
+"Números más bajos significan más detalles en la escena a costa de una mayor "
+"complejidad de renderizado."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:191
+msgid ""
+"|unchecked| :guilabel:`Show bounding boxes` Show 3D bounding boxes of the "
+"terrain tiles (useful for troubleshooting terrain issues)."
+msgstr ""
+"|unchecked| :guilabel:`Mostrar cajas delimitadoras` Muestra las cajas "
+"delimitadoras 3D de las teselas del terreno (útil para solucionar problemas "
+"del terreno)."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:261
 msgid "unchecked"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-04-20 15:58+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
@@ -105,16 +105,20 @@ msgstr "배치 프로세스 작업"
 msgid "From the top toolbar, you can:"
 msgstr "최상단 툴바에서 다음과 같은 작업을 할 수 있습니다:"
 
-#: ../../docs/user_manual/processing/batch.rst:62
+#: ../../docs/user_manual/processing/batch.rst:207
+msgid "processingAlgorithm"
+msgstr "processingAlgorithm"
+
+#: ../../docs/user_manual/processing/batch.rst:65
 msgid ""
 "|symbologyAdd| :sup:`Add row`: adds a new processing entry for configuration"
 msgstr "|symbologyAdd| :sup:`Add row`: 환경설정에 새로운 배치 프로세스 항목을 추가합니다."
 
-#: ../../docs/user_manual/processing/batch.rst:204
+#: ../../docs/user_manual/processing/batch.rst:209
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/processing/batch.rst:63
+#: ../../docs/user_manual/processing/batch.rst:66
 msgid ""
 "|symbologyRemove| :sup:`Remove row(s)`: remove selected rows from the table."
 " Row selection is done by clicking the number at the left and allows "
@@ -125,34 +129,34 @@ msgstr ""
 "행을 선택할 수 있으며, 다중 선택을 위한 :ref:`키보드 조합 <interacting_features_table>` 을 사용할 수 "
 "있습니다."
 
-#: ../../docs/user_manual/processing/batch.rst:206
+#: ../../docs/user_manual/processing/batch.rst:211
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
-#: ../../docs/user_manual/processing/batch.rst:66
+#: ../../docs/user_manual/processing/batch.rst:69
 msgid "|fileOpen| :sup:`Open` a batch processing configuration file"
 msgstr "|fileOpen| :sup:`Open`: 배치 프로세스 환경설정 파일을 엽니다."
 
-#: ../../docs/user_manual/processing/batch.rst:200
+#: ../../docs/user_manual/processing/batch.rst:203
 msgid "fileOpen"
 msgstr "fileOpen"
 
-#: ../../docs/user_manual/processing/batch.rst:67
+#: ../../docs/user_manual/processing/batch.rst:70
 msgid ""
 "|fileSave| :sup:`Save` the batch processing configuration to a :file:`.JSON`"
 " file that can be run afterwards"
 msgstr ""
 "|fileSave| :sup:`Save`: 다음에 실행할 수 있도록 :file:`.JSON` 파일에 배치 프로세스 환경설정을 저장합니다."
 
-#: ../../docs/user_manual/processing/batch.rst:202
+#: ../../docs/user_manual/processing/batch.rst:205
 msgid "fileSave"
 msgstr "fileSave"
 
-#: ../../docs/user_manual/processing/batch.rst:70
+#: ../../docs/user_manual/processing/batch.rst:73
 msgid "By default, the table contains just two rows:"
 msgstr "기본적으로, 파라미터 표는 2개의 행만 담고 있습니다:"
 
-#: ../../docs/user_manual/processing/batch.rst:72
+#: ../../docs/user_manual/processing/batch.rst:75
 msgid ""
 "The first row displays in each cell an :menuselection:`Autofill... -->` "
 "drop-down menu with :ref:`options <batch_parameters>` to quickly fill the "
@@ -162,7 +166,7 @@ msgstr ""
 ":menuselection:`Autofill... -->` 드롭다운 메뉴를 표시합니다. 파라미터 유형에 따라 사용할 수 있는 옵션들이 "
 "달라집니다."
 
-#: ../../docs/user_manual/processing/batch.rst:75
+#: ../../docs/user_manual/processing/batch.rst:78
 msgid ""
 "The second row (as well as each subsequent one) represents a single "
 "execution of the algorithm, and each cell contains the value of one of the "
@@ -172,7 +176,7 @@ msgstr ""
 "두 번째 행(은 물론 이어지는 각 행)은 알고리즘의 단일 실행을 나타내고, 각 셀은 파라미터 가운데 하나의 값을 담게 됩니다. 툴박스에서"
 " 알고리즘을 실행할 때 보게 되는 파라미터 대화창과 본질적으로 비슷하지만, 구조가 다릅니다."
 
-#: ../../docs/user_manual/processing/batch.rst:80
+#: ../../docs/user_manual/processing/batch.rst:83
 msgid ""
 "At the bottom of the table, you can set whether to |checkbox| "
 ":guilabel:`Load layers on completion`."
@@ -180,21 +184,21 @@ msgstr ""
 "표의 최하단에 있는 |checkbox| :guilabel:`Load layers on completion` 옵션을 이용해서 실행 완료 시"
 " 레이어를 불러올지 여부를 설정할 수 있습니다."
 
-#: ../../docs/user_manual/processing/batch.rst:198
+#: ../../docs/user_manual/processing/batch.rst:201
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/processing/batch.rst:83
+#: ../../docs/user_manual/processing/batch.rst:86
 msgid ""
 "Once the size of the table has been set, it has to be filled with the "
 "desired values."
 msgstr "표의 행 수를 (알고리즘 실행 횟수만큼) 설정하고 나면, 원하는 값을 입력해야 합니다."
 
-#: ../../docs/user_manual/processing/batch.rst:89
+#: ../../docs/user_manual/processing/batch.rst:92
 msgid "Filling the parameters table"
 msgstr "파라미터 표 채우기"
 
-#: ../../docs/user_manual/processing/batch.rst:91
+#: ../../docs/user_manual/processing/batch.rst:94
 msgid ""
 "For most parameters, setting the value is trivial. The appropriate widget, "
 "same as in the :ref:`single process dialog <algorithm_widgets>`, is "
@@ -206,7 +210,7 @@ msgstr ""
 "에서와 마찬가지로 적절한 위젯이 제공되어, 파라미터 유형에 따라 값을 입력하거나 또는 사용할 수 있는 값들의 목록에서 값을 선택할 수 "
 "있습니다. 사용할 수 있는 경우 데이터 정의 위젯도 포함됩니다."
 
-#: ../../docs/user_manual/processing/batch.rst:97
+#: ../../docs/user_manual/processing/batch.rst:100
 msgid ""
 "To automate the batch process definition and avoid filling the table cell by"
 " cell, you may want to press down the :guilabel:`Autofill...` menu of a "
@@ -216,13 +220,13 @@ msgstr ""
 "셀별로 표를 채우는 작업을 피하기 위해 배치 프로세스 정의를 자동화하려면 파라미터의 :guilabel:`Autofill...` 메뉴를 "
 "눌러서 열에 있는 값들을 대체하기 위한 다음 옵션들 가운데 하나를 선택할 수도 있습니다:"
 
-#: ../../docs/user_manual/processing/batch.rst:102
+#: ../../docs/user_manual/processing/batch.rst:105
 msgid ""
 ":guilabel:`Fill Down` will take the input for the first process and enter it"
 " for all other processes."
 msgstr ":guilabel:`Fill Down`: 첫 번째 프로세스의 입력을 가져와서 다른 모든 프로세스에 입력할 것입니다."
 
-#: ../../docs/user_manual/processing/batch.rst:104
+#: ../../docs/user_manual/processing/batch.rst:107
 msgid ""
 "|calculateField| :guilabel:`Calculate by Expression...` will allow you to "
 "create a new QGIS expression to use to update all existing values within "
@@ -236,11 +240,11 @@ msgstr ""
 "<general_tools_variables>` 를 통해 (다른 열의 기존 값들을 포함하는) 기존 파라미터 값들을 표현식 안에 사용할 수"
 " 있습니다. 예를 들면 각 레이어의 버퍼 거리를 기반으로 선분 개수를 설정할 수도 있습니다:"
 
-#: ../../docs/user_manual/processing/batch.rst:196
+#: ../../docs/user_manual/processing/batch.rst:199
 msgid "calculateField"
 msgstr "calculateField"
 
-#: ../../docs/user_manual/processing/batch.rst:115
+#: ../../docs/user_manual/processing/batch.rst:118
 msgid ""
 ":guilabel:`Add Values by Expression...` will add new rows using the values "
 "from an expression which returns an array (as opposed to "
@@ -256,11 +260,11 @@ msgstr ""
 "파라미터에 대해 표현식 ``generate_series(100, 1000, 50)`` 을 사용해서 배치 버퍼에 행을 추가하면 100, "
 "150, 200, .... 1000 값을 가진 새 행들을 추가할 것입니다."
 
-#: ../../docs/user_manual/processing/batch.rst:123
+#: ../../docs/user_manual/processing/batch.rst:126
 msgid "When setting a file or layer parameter, more options are provided:"
 msgstr "파일 또는 레이어 파라미터를 설정하는 경우, 더 많은 옵션이 제공됩니다:"
 
-#: ../../docs/user_manual/processing/batch.rst:125
+#: ../../docs/user_manual/processing/batch.rst:128
 msgid ""
 ":guilabel:`Add Files by Pattern...`: adds new rows to the table for files "
 "matching a :guilabel:`File pattern` in a folder to :guilabel:`Look in`. E.g."
@@ -272,22 +276,22 @@ msgstr ""
 "목록에 폴더의 모든 :file:`SHP` 파일을 추가할 것입니다. 하위 폴더도 탐색하려면 |checkbox| "
 ":guilabel:`Search recursively` 옵션을 체크하십시오."
 
-#: ../../docs/user_manual/processing/batch.rst:129
+#: ../../docs/user_manual/processing/batch.rst:132
 msgid ":guilabel:`Select Files...` individually on disk"
 msgstr ":guilabel:`Select Files...`: 디스크 상에서 파일을 개별적으로 선택합니다."
 
-#: ../../docs/user_manual/processing/batch.rst:130
+#: ../../docs/user_manual/processing/batch.rst:133
 msgid ":guilabel:`Add All Files from a Directory...`"
 msgstr ""
 ":guilabel:`Add All Files from a Directory...`: 선택한 디렉터리에 있는 모든 파일마다 표에 새로운 "
 "행을 추가합니다."
 
-#: ../../docs/user_manual/processing/batch.rst:131
+#: ../../docs/user_manual/processing/batch.rst:134
 msgid ":guilabel:`Select from Open Layers...` in the active project"
 msgstr ""
 ":guilabel:`Select from Open Layers...`: 활성화 프로젝트에 열려 있는 레이어(들)에서 선택합니다."
 
-#: ../../docs/user_manual/processing/batch.rst:133
+#: ../../docs/user_manual/processing/batch.rst:136
 msgid ""
 "Output data parameter exposes the same capabilities as when executing the "
 "algorithm as a single process. Depending on the algorithm, the output can "
@@ -296,11 +300,11 @@ msgstr ""
 "산출 데이터 파라미터는 알고리즘을 단일 프로세스로 실행할 때와 동일한 케이퍼빌리티를 노출시킵니다. 알고리즘에 따라 산출물을 다음과 같이 "
 "산출할 수 있습니다:"
 
-#: ../../docs/user_manual/processing/batch.rst:136
+#: ../../docs/user_manual/processing/batch.rst:139
 msgid "skipped, if the cell is left empty"
 msgstr "셀을 비워두는 경우 산출물을 건너뛸 수 있습니다."
 
-#: ../../docs/user_manual/processing/batch.rst:137
+#: ../../docs/user_manual/processing/batch.rst:140
 msgid ""
 "saved as a temporary layer: fill the cell with ``TEMPORARY_OUTPUT`` and "
 "remember to tick the |checkbox| :guilabel:`Load layers on completion` "
@@ -309,7 +313,7 @@ msgstr ""
 "산출물을 임시 레이어로 저장할 수 있습니다: 셀을 ``TEMPORARY_OUTPUT`` 으로 채운 다음 잊지 말고 |checkbox| "
 ":guilabel:`Load layers on completion` 체크박스를 클릭하십시오."
 
-#: ../../docs/user_manual/processing/batch.rst:139
+#: ../../docs/user_manual/processing/batch.rst:142
 msgid ""
 "saved as a plain file (:file:`.SHP`, :file:`.GPKG`, :file:`.XML`, "
 ":file:`.PDF`, :file:`.JPG`,...) whose path could be set with the "
@@ -322,7 +326,7 @@ msgstr ""
 "예를 들어 산출 파일 이름을 다음과 같은 복잡 표현식으로 설정하려면 :guilabel:`Calculate by Expression...`"
 " 을 이용하십시오:"
 
-#: ../../docs/user_manual/processing/batch.rst:148
+#: ../../docs/user_manual/processing/batch.rst:151
 msgid ""
 "You can also type the file path directly or use the file chooser dialog that"
 " appears when clicking on the accompanying :guilabel:`...` button. Once you "
@@ -332,11 +336,11 @@ msgstr ""
 "파일 경로를 직접 입력하거나 파일 경로 입력란 옆에 있는 :guilabel:`...` 버튼을 누르면 나타나는 파일 선택기 대화창을 이용할"
 " 수도 있습니다. 파일을 선택하면, 동일한 열(동일한 파라미터)에 있는 다른 셀들을 자동 완성시킬 수 있는 새 대화창이 나타납니다."
 
-#: ../../docs/user_manual/processing/batch.rst:158
+#: ../../docs/user_manual/processing/batch.rst:161
 msgid "Batch Processing Save"
 msgstr "배치 프로세스 작업 - 저장"
 
-#: ../../docs/user_manual/processing/batch.rst:160
+#: ../../docs/user_manual/processing/batch.rst:163
 msgid ""
 "If the default value (:guilabel:`Do not autofill`) is selected, it will just"
 " put the selected filename in the selected cell from the parameters table. "
@@ -346,13 +350,13 @@ msgstr ""
 "기본값(:guilabel:`Do not autofill`)을 선택하는 경우, 그냥 파라미터 표에서 선택한 셀에 선택한 파일명을 입력할 "
 "것입니다. 다른 옵션을 선택하면, 선택한 셀 **아래** 에 있는 모든 셀에 정의한 기준에 따라 파일명을 입력할 것입니다."
 
-#: ../../docs/user_manual/processing/batch.rst:165
+#: ../../docs/user_manual/processing/batch.rst:168
 msgid ""
 ":guilabel:`Fill with numbers`: incrementally appends a number to the file "
 "name"
 msgstr ":guilabel:`Fill with numbers`: 파일 이름에 증분 숫자를 추가합니다."
 
-#: ../../docs/user_manual/processing/batch.rst:166
+#: ../../docs/user_manual/processing/batch.rst:169
 msgid ""
 ":guilabel:`Fill with parameter values`: you can select a parameter whose "
 "value in the same row is appended to the file name. This is particularly "
@@ -361,15 +365,15 @@ msgstr ""
 ":guilabel:`Fill with parameter values`: 파일 이름에 동일한 행에 있는 파라미터 값을 추가할 파라미터를 "
 "선택할 수 있습니다. 산출 데이터 객체를 입력 객체에 따라 각각 명명하는 경우 특히 유용한 옵션입니다."
 
-#: ../../docs/user_manual/processing/batch.rst:170
+#: ../../docs/user_manual/processing/batch.rst:173
 msgid "saved as a layer within a database container:"
 msgstr "데이터베이스 컨테이너 내부에 레이어로 저장할 수 있습니다:"
 
-#: ../../docs/user_manual/processing/batch.rst:182
+#: ../../docs/user_manual/processing/batch.rst:185
 msgid "Executing the batch process"
 msgstr "배치 프로세스 실행"
 
-#: ../../docs/user_manual/processing/batch.rst:184
+#: ../../docs/user_manual/processing/batch.rst:187
 msgid ""
 "To execute the batch process once you have introduced all the necessary "
 "values, just click on :guilabel:`Run`. The :guilabel:`Log` panel is "

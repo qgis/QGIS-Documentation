@@ -2527,9 +2527,10 @@ msgid ""
 "Selector <color-selector>` dialog. You can also rename it by double-clicking"
 " in the :guilabel:`Label` column."
 msgstr ""
-"Doppelklicken Sie auf eine Farbe in der Liste, um sie im :ref:`Farbauswahl "
-"<color-selector>` Dialog zu ändern. Mit einem Doppelklick in die Spalte "
-":guilabel:`Beschriftung` können Sie die Farbe auch benennen bzw. umbenennen."
+"Doppelklicken Sie auf eine Farbe in der Liste, um sie mit dem "
+":ref:`Farbauswahl Dialog <color-selector>` zu ändern. Mit einem Doppelklick "
+"in die Spalte :guilabel:`Beschriftung` können Sie die Farbe auch benennen "
+"bzw. umbenennen."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1048
 msgid "Fonts Settings"
@@ -3132,29 +3133,675 @@ msgid "For details on how-to, please refer to :ref:`load_from_device`."
 msgstr ""
 "Einzelheiten zur Vorgehensweise finden Sie unter :ref:`load_from_device`."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1309
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1321
+msgid "Locator settings"
+msgstr "Suche"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1311
+msgid ""
+"|search| The :guilabel:`Locator` tab lets you configure the :ref:`Locator "
+"bar <locator_bar>`, a quick search widget available on the status bar to "
+"help you perform searches in the application. It provides some default "
+"filters (with prefix) to use:"
+msgstr ""
+"Auf dem :guilabel:`Suche` Reiter können Sie die :ref:`<locator_bar>` "
+"konfigurieren, die sich unten in der Statusleiste befindet. Es gibt die "
+"folgenden Standardfilter, für welche Sie verschiedene Einstellungen (s.u.) "
+"vornehmen können (in Klammern jeweils der Präfix):"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2758
 msgid "search"
 msgstr "search"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1324
+msgid ""
+":guilabel:`Project Layers` (``l``): finds and selects a layer in the "
+":guilabel:`Layers` panel."
+msgstr ""
+":guilabel:`Projektlayer` (``l``): sucht einen Layer im :guilabel:`Layer` "
+"Bedienfeld und wählt ihn aus."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1326
+msgid ":guilabel:`Project Layouts` (``pl``): finds and opens a print layout."
+msgstr ""
+":guilabel:`Projektlayouts` (``pl``): findet und öffnet ein Drucklayout."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1327
+msgid ""
+"Actions (``.``): finds and executes a QGIS action; actions can be any tool "
+"or menu in QGIS, opening a panel..."
+msgstr ""
+"Aktionen (``.``): findet und führt eine QGIS-Aktion aus; Aktionen können "
+"jedes Werkzeug oder Menü in QGIS sein, z.B. auch das Aktivieren eines "
+"Bedienfeldes."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1329
+msgid ""
+":guilabel:`Active Layer Features` (``f``): searches for matching attributes "
+"in any field from the current active layer and zooms to the selected "
+"feature. Press |settings| to configure the maximum number of results."
+msgstr ""
+":guilabel:`Objekte des aktiven Layers` (``f``): sucht nach übereinstimmenden"
+" Attributen in allen Feldern des aktiven Layers und zoomt dann auf das "
+"ausgewählte Objekt. Drücken Sie |settings| am Ende der Zeile, um die Anzahl "
+"der maximal angezeigten Ergebnisse einzustellen."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2770
 msgid "settings"
 msgstr "settings"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1332
+msgid ""
+":guilabel:`Features in All Layers` (``af``): searches for matching "
+"attributes in the :ref:`display name <maptips>` of each :ref:`searchable "
+"layers <project_layer_capabilities>` and zooms to the selected feature. "
+"Press |settings| to configure the maximum number of results and the maximum "
+"number of results per layer."
+msgstr ""
+":guilabel:`Objekte in allen Layern` (``af``): sucht nach übereinstimmenden "
+"Attributen in allen Feldern aller :ref:`durchsuchbarer Layer "
+"<project_layer_capabilities>` und zoomt dann auf das ausgewählte Objekt. "
+"Drücken Sie |settings| am Ende der Zeile, um die Anzahl der maximal "
+"angezeigten Ergebnisse und die maximale Anzahl von Ergebnissen pro Layer "
+"einzustellen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1337
+msgid ""
+":guilabel:`Calculator` (``=``): allows evaluation of any QGIS expression "
+"and, if valid, gives an option to copy the result to the clipboard."
+msgstr ""
+":guilabel:`Rechner` (``=``): ermöglicht die Evaluation eines beliebigen "
+"QGIS-Ausdrucks und bietet die Möglichkeit, das Ergebnis in die "
+"Zwischenablage zu kopieren, wenn es gültig ist."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1339
+msgid ""
+":guilabel:`Spatial Bookmarks` (``b``): finds and zooms to the bookmark "
+"extent."
+msgstr ""
+":guilabel:`Räumliche Lesezeichen` (``b``): sucht in den räumlichen "
+"Lesezeichen und zoomt dann auf den entsprechenden Bereich."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1340
+msgid ""
+":guilabel:`Settings` (``set``): browses and opens project and application-"
+"wide properties dialogs."
+msgstr ""
+":guilabel:`Einstellungen` (``set``): durchsucht und öffnet projekt- und "
+"anwendungsweite Eigenschaftsdialoge."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1342
+msgid ""
+":guilabel:`Go to Coordinate` (``go``): pans the map canvas to a location "
+"defined by a comma or space separated pair of x and y coordinates or a "
+"formatted URL (e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...). "
+"The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS."
+msgstr ""
+":guilabel:`Zu Koordianten gehen` (``go``): schwenkt die Kartenansicht zu "
+"einem Punkt, der angegeben wird durch x- und y-Koordinaten (getrennt durch "
+"Komma oder Leerzeichen) oder eine formatierte URL (z.B. OpenStreetMap, "
+"Leaflet, OpenLayer, Google Maps, ...). Die Koordinaten werden in WGS 84 "
+"(``epsg:4326``) und/oder im KBS der Karte erwartet."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1346
+msgid ""
+":guilabel:`Nominatim Geocoder` (``>``): geocodes using the `Nominatim "
+"<https://nominatim.org>`_ geocoding service of the OpenStreetMap Foundation."
+msgstr ""
+":guilabel:`Nominatim-Sammelgeokodierung` (``>``): Geokodierung unter "
+"Verwendung des Geokodierungsdienstes \"Nominatim <https://nominatim.org>`_\""
+" der OpenStreetMap Foundation."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1348
+msgid ""
+"Processing Algorithms (``a``): searches and opens a Processing algorithm "
+"dialog."
+msgstr ""
+"Verarbeitungsalgorithmen (``a``): durchsucht die Verarbeitungsalgorithmen "
+"und öffnet den entsprechenden Dialog."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1349
+msgid ""
+":guilabel:`Edit Selected Features` (``ef``): gives quick access and runs a "
+"compatible :ref:`modify-in-place <processing_inplace_edit>` Processing "
+"algorithm on the active layer."
+msgstr ""
+":guilabel:`Ausgewählte Objekte bearbeiten` (``ef``): bietet Schnellzugriff "
+"auf kompatible :ref:`insitu <processing_inplace_edit>` "
+"Verarbeitungsalgorithmen des aktiven Layers."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1353
+msgid "In the dialog, you can:"
+msgstr "Im Dialog können Sie:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1355
+msgid ""
+"customize the filter :guilabel:`Prefix`, i.e. the keyword to use to trigger "
+"the filter"
+msgstr ""
+"Den :guilabel:`Präfix` des Filters, d.h. das Schlüsselwort, mit dem der "
+"Filter ausgelöst wird, ändern."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1357
+msgid ""
+"set whether the filter is :guilabel:`Enabled`: the filter can be used in the"
+" searches and a shortcut is available in the locator bar menu"
+msgstr ""
+"Festlegen, ob der Filter :guilabel:`Eingeschaltet` ist: der Filter kann bei "
+"der Suche verwendet werden und eine Verknüpfung ist im Menü der Suchleiste "
+"verfügbar."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1359
+msgid ""
+"set whether the filter is :guilabel:`Default`: a search not using a filter "
+"returns results from only the default filters categories."
+msgstr ""
+":guilabel:`Voreinstellung` aktivieren/deaktivieren: Eine Suche, bei der kein"
+" Filter-Präfix vorangestellt wird, liefert nur Ergebnisse aus den "
+"Kategorien, bei denen hier 'Voreinstellung' aktiviert ist."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1361
+msgid ""
+"Some filters provide a way to configure the number of results in a  search."
+msgstr ""
+"Einige Filter bieten die Möglichkeit, die Anzahl der Ergebnisse einer Suche "
+"zu begrenzen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1363
+msgid ""
+"The set of default locator filters can be extended by plugins, eg for OSM "
+"nominatim searches, direct database searching, layer catalog searches, ..."
+msgstr ""
+"Der Umfang der Standard-Suchleisten-Filter kann durch Plugins erweitert "
+"werden, z.B. für OSM-Nominatim-Suchen, direkte Datenbanksuchen, Layer-"
+"Katalog-Suchen, usw."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1369
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1378
+msgid "Acceleration settings"
+msgstr "Beschleunigung"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1371
+msgid "OpenCL acceleration settings."
+msgstr "OpenCL-Beschleunigungseinstellungen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1380
+msgid ""
+"Depending on your hardware and software, you may have to install additional "
+"libraries to enable OpenCL acceleration."
+msgstr ""
+"Abhängig von Ihrer Hard- und Software müssen Sie möglicherweise zusätzliche "
+"Bibliotheken installieren, um die OpenCL-Beschleunigung aktivieren zu "
+"können."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1385
+msgid "IDE settings"
+msgstr "IDE"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1390
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1401
+msgid "Code Editor settings"
+msgstr "Code-Editor"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1392
+msgid ""
+"In the |codeEditor| :guilabel:`Code Editor` tab, you can control the "
+"appearance and behaviour of code editor widgets (Python interactive console "
+"and editor, expression widget and function editor, ...)."
+msgstr ""
+"Auf dem |codeEditor| :guilabel:`Code Editor` Reiter können Sie das Aussehen "
+"und Verhalten der Code-Editor-Fenster (interaktive Python-Konsole und "
+"-Editor, Ausdrucksgenerator, Funktions-Editor, ...) steuern."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2684
 msgid "codeEditor"
 msgstr "codeEditor"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1403
+msgid ""
+"At the top of the dialog, a widget provides a live preview of the current "
+"settings, in various coding languages (Python, QGIS expression, HTML, SQL, "
+"JavaScript). A convenient way to adjust settings."
+msgstr ""
+"Am oberen Rand des Reiters bietet ein Fenster eine Live-Vorschau der "
+"aktuellen Einstellungen in verschiedenen Programmiersprachen (Python, QGIS-"
+"Expression, HTML, SQL, JavaScript)."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1407
+msgid ""
+"Check |unchecked| :guilabel:`Override Code Editor Font` to modify the "
+"default :guilabel:`Font` family and :guilabel:`Size`."
+msgstr ""
+"Aktivieren Sie :guilabel:`Code-Editorschriftart übersteuern`, um die "
+":guilabel:`Schriftart` und die :guilabel:`Size` zu ändern."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1410
+msgid "Under the :guilabel:`Colors` group, you can:"
+msgstr ""
+"Im Bereich :guilabel:`Farben` haben Sie die folgenden "
+"Einstellungsmöglichkeiten:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1412
+msgid ""
+"select a :guilabel:`Color scheme`: predefined settings are ``Default``, "
+"``Solarized Dark`` and ``Solarized Light``. A ``Custom`` scheme is triggered"
+" as soon as you modify a color and can be reset with selecting a predefined "
+"scheme."
+msgstr ""
+"Wählen Sie ein :guilabel:`Farbschema`: Vordefinierte Schemata sind "
+"``Voreinstellungen``, ``Solarized (Dunkel)`` und ``Solarized (Hell)``. Ein "
+"``Benutzerdefiniertes`` Schemata wird aktiviert, sobald Sie eine Farbe "
+"ändern und kann durch Auswahl eines vordefinierten Schemas zurückgesetzt "
+"werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1416
+msgid ""
+"change the :ref:`color <color_widget>` of each element in code writing, such"
+" as the colors to use for comments, quotes, functions, background, ..."
+msgstr ""
+"Ändern Sie die :ref:`Farbe <color_widget>` für jedes Element beim Schreiben "
+"von Code, z.B. für Kommentare, Anführungszeichen, Funktionen, Hintergrund, "
+"usw."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1423
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1440
+msgid "Python Console settings"
+msgstr "Python-Konsole"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1425
+msgid ""
+"The |runConsole| :guilabel:`Python Console` settings help you manage and "
+"control the behavior of the Python editors (:ref:`interactive console "
+"<interactive_console>`, :ref:`code editor <console_editor>`, :ref:`project "
+"macros <project_macros>`, :ref:`custom expressions <function_editor>`, ...)."
+" It can also be accessed using the |options| :sup:`Options...` button from:"
+msgstr ""
+"Die Einstellungen unter |runConsole| :guilabel:`Python-Konsole` helfen "
+"Ihnen, das Verhalten des Python-Editors zu verwalten und zu kontrollieren "
+"(:ref:`interaktive Konsole <interactive_console>`, :ref:`Code-Editor "
+"<console_editor>`, :ref:`Projektmakros <project_macros>`, :ref:`Funktions-"
+"Editor <function_editor>`, ...). Sie können diesen Reiter auch über die "
+"Schaltfläche |options| :sup:`Optionen ...` von den folgenden Stellen "
+"aufrufen:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2756
 msgid "runConsole"
 msgstr "runConsole"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1431
+msgid "the :guilabel:`Python console` toolbar"
+msgstr "der :guilabel:`Python-Konsole` Werkzeugleiste,"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1432
+msgid "the contextual menu of the :guilabel:`Python console` widget"
+msgstr "über das Kontextmenü der :guilabel:`Python-Konsole`,"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1433
+msgid "and the contextual menu of the code editor."
+msgstr "über das Kontextmenü des Code-Editors."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1444
+msgid ""
+"|unchecked| :guilabel:`Autocompletion`: Enables code completion. You can get"
+" autocompletion from the current document, the installed API files or both."
+msgstr ""
+"|unchecked| :guilabel:`Autokompletierung`: Aktiviert die Code-"
+"Vervollständigung. Sie können die automatische Vervollständigung aus dem "
+"aktuellen Dokument, den installierten API-Dateien oder aus beiden abrufen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1447
+msgid ""
+":guilabel:`Autocompletion threshold`: Sets the threshold for displaying the "
+"autocompletion list (in characters)"
+msgstr ""
+":guilabel:`Autokompletierungsschwellenwert`: Legt den Schwellenwert für die "
+"Anzeige der Autovervollständigungsliste fest (in Zeichen)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1450
+msgid "under :guilabel:`Typing`"
+msgstr ":guilabel:`Tippen`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1452
+msgid ""
+"|checkbox| :guilabel:`Automatic parentheses insertion`: When no text is "
+"selected, if an opening character (parentheses, quotes, brackets, ...) is "
+"entered, inserts the matching closing character just after the cursor. Note "
+"that this behavior is disabled if the current cursor is inside a string or "
+"comment."
+msgstr ""
+"|checkbox| :guilabel:`Automatisch Klammern einfügen`: Wenn kein Text "
+"ausgewählt ist, wird bei der Eingabe eines öffnenden Zeichens (Klammern, "
+"Anführungszeichen, eckige Klammern, ...) das passende schließende Zeichen "
+"direkt hinter dem Cursor eingefügt. Beachten Sie, dass dieses Verhalten "
+"deaktiviert ist, wenn sich der aktuelle Cursor innerhalb einer Zeichenfolge "
+"oder eines Kommentars befindet."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1456
+msgid ""
+"|checkbox| :guilabel:`Automatically surround selection when typing quotes or"
+" brackets`: When an opening character is entered, the selected text is "
+"enclosed in the opening/closing pair. Selection remains the same, so it is "
+"possible to quote a selected word and enclose it in parentheses just by "
+"typing ``\"`` then ``(``."
+msgstr ""
+"|checkbox| :guilabel:`Auswahl automatisch beim Tippen von Anführungszeichen "
+"oder Klammern umschließen`: Wenn ein öffnendes Zeichen eingegeben wird, wird"
+" der ausgewählte Text in das öffnende/schließende Paar eingeschlossen. Die "
+"Auswahl bleibt erhalten, sodass es möglich ist, ein ausgewähltes Wort zu "
+"zitieren und es in Klammern zu setzen, indem man einfach ``\"`` und dann "
+"``(`` eingibt."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1461
+msgid ""
+"Special case for multiline selection with quotes and double quotes: "
+"selection is enclosed in triple single/double quotes."
+msgstr ""
+"Sonderfall für mehrzeilige Auswahl mit Anführungszeichen und doppelten "
+"Anführungszeichen: Auswahl wird in dreifache einfache/doppelte "
+"Anführungszeichen eingeschlossen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1463
+msgid ""
+"|unchecked| :guilabel:`Automatic insertion of the 'import' string on 'from "
+"xxx'`: Enables insertion of 'import' when specifying imports"
+msgstr ""
+"|unchecked| :guilabel:`Automatisches Einfügen der Zeichenkette 'import' bei "
+"'from xxx'`: Aktiviert das Einfügen von 'import' bei der Angabe von "
+"Importen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1466
+msgid ""
+"under :guilabel:`Formatting`, you can add automated tools to reformat the "
+"code you are writing:"
+msgstr ""
+"unter :guilabel:`Formatierung` können Sie Werkzeuge einstellen, um den von "
+"Ihnen geschriebenen Code automatisch zu formatieren:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1468
+msgid ""
+"|unchecked| :guilabel:`Reformat on save`: formatting is applied just before "
+"saving the script"
+msgstr ""
+"|unchecked| :guilabel:`Beim Speichern neuformatieren`: Formatierung wird "
+"unmittelbar vor dem Speichern des Codes angewendet"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1469
+msgid ""
+"|checkbox| :guilabel:`Sort imports`: sorts 'import' statements using the "
+"`isort library <https://pycqa.github.io/isort/>`_"
+msgstr ""
+"|checkbox| :guilabel:`Importe sortieren`: sortiert 'import'-Anweisungen "
+"unter Verwendung der `isort-Bibliothek <https://pycqa.github.io/isort/>`_"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1471
+msgid ""
+":guilabel:`Maximum line length`: controls how the formatter will wrap the "
+"lines, and controls the editor ruler"
+msgstr ""
+":guilabel:`Maximale Zeilenlänge`: steuert, wie der Formatierer die Zeilen "
+"umbricht, und steuert das Editor-Lineal"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1472
+msgid ""
+":guilabel:`Formatter` - supported tools are :guilabel:`autopep8` and "
+":guilabel:`black`, with dedicated option:"
+msgstr ""
+":guilabel:`Formatierer`: unterstützte Werkzeuge sind :guilabel:`autopep8` "
+"und :guilabel:`black`, mit jeweils eigenen Option:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1474
+msgid ""
+":guilabel:`Autopep8 level` - more details at `autopep8 advanced usage "
+"<https://pypi.org/project/autopep8/#more-advanced-usage>`_"
+msgstr ""
+":guilabel:`Autopep8-Stufe` - weitere Einzelheiten unter \"Autopep8 advanced "
+"usage <https://pypi.org/project/autopep8/#more-advanced-usage>\"."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1476
+msgid ""
+"|unchecked| :guilabel:`Normalize quotes`: replaces all single quotes with "
+"double quotes if possible"
+msgstr ""
+"|unchecked| :guilabel:`Anführungszeichen normieren`: ersetzt alle einfachen "
+"Anführungszeichen durch doppelte Anführungszeichen, wenn möglich"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1478
+msgid "under :guilabel:`Run and Debug`"
+msgstr ":guilabel:`Ausführen und Fehler suchen`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1480
+msgid ""
+"|unchecked| :guilabel:`Enable Object Inspector (switching between tabs may "
+"be slow)`"
+msgstr ""
+"|unchecked| :guilabel:`Objektinspektor einschalten (Umschaltung zwischen "
+"Reitern kann langsam sein)`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1482
+msgid ""
+"|unchecked| :guilabel:`Auto-save script before running`: Saves the script "
+"automatically when executed. This action will store a temporary file (in the"
+" temporary system directory) that will be deleted automatically after "
+"running."
+msgstr ""
+"|unchecked| :guilabel:`Skript vor Ausführung automatisch speichern`: "
+"Speichert das Skript automatisch bei der Ausführung. Bei dieser Aktion wird "
+"eine temporäre Datei (im Systemverzeichnis) gespeichert, die nach der "
+"Ausführung automatisch gelöscht wird."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1486
+msgid "For :guilabel:`APIs` you can specify:"
+msgstr "Für :guilabel:`APIs` können Sie festlegen:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1488
+msgid ""
+"|checkbox| :guilabel:`Using preloaded APIs file`: You can choose if you "
+"would like to use the preloaded API files.  If this is not checked you can "
+"add API files and you can also choose if you would like to use prepared API "
+"files (see next option)."
+msgstr ""
+"|checkbox| :guilabel:`API-Dateien vorladen`: Sie können wählen, ob Sie die "
+"vorgeladenen API-Dateien verwenden möchten. Wenn diese Option nicht "
+"aktiviert ist, können Sie API-Dateien hinzufügen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1492
+msgid ""
+"|unchecked| :guilabel:`Using prepared APIs file`: If checked, the chosen "
+"``*.pap`` file will be used for code completion. To generate a prepared API "
+"file you have to load at least one ``*.api`` file and then compile it by "
+"clicking the :guilabel:`Compile APIs...` button."
+msgstr ""
+"|unchecked| :guilabel:`Vorbereitete API-Dateien benutzen`: Wenn aktiviert, "
+"wird die gewählte ``*.pap``-Datei für die Code-Vervollständigung verwendet. "
+"Um eine vorbereitete API-Datei zu generieren, müssen Sie mindestens eine "
+"``*.api``-Datei laden und diese dann durch Anklicken der Schaltfläche "
+":guilabel:`Compile APIs...` kompilieren."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1497
+msgid ""
+"Under :guilabel:`GitHub access token`, you can generate a personal token "
+"allowing you to share code snippets from within the Python code editor. More"
+" details on `GitHub authentication "
+"<https://docs.github.com/en/authentication/keeping-your-account-and-data-"
+"secure/creating-a-personal-access-token>`_"
+msgstr ""
+"Unter :guilabel:`GitHub-Zugangstoken` können Sie ein persönliches Token "
+"generieren, mit dem Sie Code-Snippets aus dem Python-Code-Editor heraus "
+"freigeben können. Weitere Einzelheiten unter `GitHub-Authentifizierung "
+"<https://docs.github.com/en/authentication/keeping-your-account-and-data-"
+"secure/creating-a-personal-access-token>`_"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1504
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1520
+msgid "Processing settings"
+msgstr "Verarbeitung"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1506
+msgid ""
+"The |processingAlgorithm| :guilabel:`Processing` tab provides you with "
+"general settings of tools and data providers that are used in the QGIS "
+"Processing framework. More information at :ref:`label_processing`."
+msgstr ""
+"Der Reiter |processingAlgorithm| :guilabel:`Verarbeitung` bietet Ihnen "
+"allgemeine Einstellungen von Werkzeugen und Datenanbietern, die im QGIS "
+"Processing Framework verwendet werden. Mehr Informationen unter "
+":ref:`label_processing`."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2742
 msgid "processingAlgorithm"
 msgstr "processingAlgorithm"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1526
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1533
+msgid "Advanced settings"
+msgstr "Erweitert"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1535
+msgid ""
+"All the settings related to QGIS (UI, tools, data providers, Processing "
+"configurations, default values and paths, plugins options, expressions, "
+"geometry checks...) are saved in a :file:`QGIS/QGIS3.ini` file under the "
+"active :ref:`user profile <user_profiles>` directory. Configurations can be "
+"shared by copying this file to other installations."
+msgstr ""
+"Alle Einstellungen in Bezug auf QGIS (Benutzeroberfläche, Werkzeuge, "
+"Datenanbieter, Verarbeitungskonfigurationen, Standardwerte und -pfade, "
+"Plugin-Optionen, Ausdrücke, Geometrieprüfungen...) werden in der Datei "
+":file:`QGIS/QGIS3.ini` im Verzeichnis für das aktuelle :ref:`Benutzerprofil "
+"<user_profiles>` gespeichert. Durch das Kopieren und Einfügen dieser Datei "
+"können die Einstellungen auf anderen Installationen übertragen werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1541
+msgid ""
+"From within QGIS, the :guilabel:`Advanced` tab offers a way to manage these "
+"settings through the :guilabel:`Advanced Settings Editor`. After you promise"
+" to be careful, the widget is populated with a tree of all the existing "
+"settings, and you can edit their value. Right-click over a setting or a "
+"group and you can delete it (to add a setting or group, you have to edit the"
+" :file:`QGIS3.ini` file). Changes are automatically saved in the "
+":file:`QGIS3.ini` file."
+msgstr ""
+"Der Reiter :guilabel:`Erweitert` bietet die Möglichkeit, diese Einstellungen"
+" über die :guilabel:`Erweiterte Einstellungsbearbeitung` zu verwalten. "
+"Nachdem Sie bestätigt haben, vorsichtig zu sein, werden in dem Bereich alle "
+"vorhandenen Einstellungen angezeigt und Sie können deren Werte bearbeiten. "
+"Wenn Sie mit der rechten Maustaste auf eine Einstellung oder eine Gruppe "
+"klicken, können Sie sie löschen (um eine Einstellung oder Gruppe "
+"hinzuzufügen, müssen Sie die Datei :file:`QGIS3.ini` bearbeiten). Änderungen"
+" werden automatisch in der Datei :file:`QGIS3.ini` gespeichert."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1549
+msgid "**Avoid using the Advanced tab settings blindly**"
+msgstr ""
+"**Verwenden Sie die Erweiterte Einstellungsbearbeitung nicht leichtfertig**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1551
+msgid ""
+"Be careful while modifying items in this dialog given that changes are "
+"automatically applied. Doing changes without knowledge can break your QGIS "
+"installation in various ways."
+msgstr ""
+"Bitte seien Sie vorsichtig beim Ändern von Elementen in diesem Dialog, da "
+"die Änderungen sofort übernommen werden. Änderungen an Werten, über deren "
+"Funktion Sie sich nicht ganz sicher sind, können Ihre QGIS-Installation "
+"unbrauchbar machen!"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1560
+msgid "Working with User Profiles"
+msgstr "Arbeiten mit Benutzerprofilen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1563
+msgid "The concept"
+msgstr "Das Konzept"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1565
+msgid ""
+"The :menuselection:`Settings --> User Profiles` menu provides functions to "
+"set and access user profiles. A user profile is a unified application "
+"configuration that allows to store in a single folder:"
+msgstr ""
+"Das Menü :menuselection:`Einstellungen --> Benutzerprofile` bietet "
+"Funktionen zum Einrichten und Aufrufen von verschiedenen Benutzerprofilen. "
+"Ein Benutzerprofil ist eine standardisierte Anwendungskonfiguration, mit der"
+" die folgenden Einstellungen zusammen in einem Ordner gespeichert werden "
+"können:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1569
+msgid ""
+"all the :ref:`global settings <gui_options>`, including locale, projections,"
+" authentication settings, color palettes, shortcuts..."
+msgstr ""
+"Alle Einstellungen :ref:`Optionen <gui_options>`, einschließlich "
+"Gebietsschema, Projektionen, Authentifizierungseinstellungen, Farbpaletten, "
+"Tastaturkürzel..."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1571
+msgid "GUI configurations and :ref:`customization <sec_customization>`"
+msgstr "GUI-Konfigurationen und :ref:`Anpassungen <sec_customization> `"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1572
+msgid ""
+"grid files and other proj helper files installed for datum transformation"
+msgstr ""
+"Grid-Dateien und andere Projektions-Hilfsdateien, die für die "
+"Datentransformation installiert würden"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1573
+msgid "installed :ref:`plugins <plugins>` and their configurations"
+msgstr "Installierte :ref:`Plugins <plugins>` und ihre Konfigurationen "
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1574
+msgid ""
+"project templates and history of saved project with their image preview"
+msgstr ""
+"Projektvorlagen und der Verlauf der gespeicherten Projekte mit Bildvorschau"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1575
+msgid ":ref:`processing settings <label_processing>`, logs, scripts, models."
+msgstr ""
+":ref:`Verarbeitungs-Einstellungen <label_processing>`, Log-ins, Skripte, "
+"Modelle"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1577
+msgid ""
+"By default, a QGIS installation contains a single user profile named "
+"``default``. But you can create as many user profiles as you want:"
+msgstr ""
+"Standardmäßig gibt es in QGIS nur ein Benutzerprofil namens ``default``. Sie"
+" können aber so viele Benutzerprofile anlegen, wie Sie möchten:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1580
+msgid "Click the :guilabel:`New profile...` entry."
+msgstr "Klicken Sie auf den Eintrag :guilabel:`Neues Profil...`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1581
+msgid ""
+"You'll be prompted to provide a profile name, creating a folder of the same "
+"name under :file:`~/<UserProfiles>/` where:"
+msgstr ""
+"Sie werden aufgefordert, einen Profilnamen anzugeben; dadurch wird auch ein "
+"gleichnamiger Ordner unter :file:`~/<UserProfiles>/` angelegt, wobei"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1584
+msgid ""
+"``~`` represents the **HOME** directory, which on |win| Windows is usually "
+"something like :file:`C:\\\\Users\\\\<username>`."
+msgstr ""
+"``~`` für das **HOME**-Verzeichnis steht, das unter |win| Windows "
+"standardmäßig :file:`C:\\\\Users\\\\ <username>` ist;"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2794
 msgid "win"
 msgstr "win"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1586
+msgid "and ``<UserProfiles>`` represents the main profiles folder, i.e.:"
+msgstr "und ``<UserProfiles>`` steht für den Hauptordner der Profile, d.h.:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1588
+msgid "|nix| :file:`.local/share/QGIS/QGIS3/profiles/`"
+msgstr "|nix| :file:`.local/share/QGIS/QGIS3/profiles/`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2728
 msgid "nix"
@@ -3164,13 +3811,160 @@ msgstr "nix"
 msgid "|win| :file:`%AppData%\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\`"
 msgstr "|win| :file:`%AppData%\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\`"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1590
+msgid "|osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`"
+msgstr "|osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2736
 msgid "osx"
 msgstr "osx"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1592
+msgid ""
+"The user profile folder can be opened from within QGIS using the "
+":guilabel:`Open Active Profile Folder`."
+msgstr ""
+"Der Benutzerprofilordner kann von QGIS aus mit dem :guilabel:`Open Active "
+"Profile Folder` geöffnet werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1594
+msgid ""
+"A new instance of QGIS is started, using a clean configuration. You can then"
+" set your custom configurations."
+msgstr ""
+"Eine neue Instanz von QGIS mit der Standard Start-Konfiguration wird "
+"gestartet. Sie können dann Ihre eigenen Konfigurationen festlegen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1597
+msgid ""
+"If you have more than one profile in your QGIS installation, the name of the"
+" active profile is shown in the application title bar between square "
+"brackets."
+msgstr ""
+"Wenn Sie mindestens ein weiteres Profil angelegt haben, wird der Name des "
+"jeweils aktiven Profils in der Titelleiste von QGIS in eckigen Klammern "
+"angezeigt."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1600
+msgid ""
+"As each user profile contains isolated settings, plugins and history they "
+"can be great for different workflows, demos, users of the same machine, or "
+"testing settings, etc. And you can switch from one to the other by selecting"
+" them in the :menuselection:`Settings --> User Profiles` menu. You can also "
+"run QGIS with a specific user profile from the :ref:`command line "
+"<label_commandline>`."
+msgstr ""
+"Da für jedes Benutzerprofil die Einstellungen, Plugins und der Verlauf "
+"getrennt gespeichert werden, eignen sich Benutzerprofile sehr gut für "
+"unterschiedliche Arbeitsabläufe, Demos, Benutzer desselben Rechners, zum "
+"Testen von Einstellungen, usw. Sie können von einem zum anderen wechseln, "
+"indem Sie im Menü :menuselection:`Einstellungen --> Benutzerprofile` das "
+"entsprechende auswählen. Sie können QGIS auch mit einem bestimmten "
+"Benutzerprofil über die :ref:`Befehlszeile <label_commandline>` starten."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1606
+msgid "**Run QGIS under a new user profile to check for bug persistence**"
+msgstr ""
+"**Führen Sie QGIS unter einem neuen Benutzerprofil aus, um die "
+"Fehlerpersistenz zu überprüfen**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1608
+msgid ""
+"When you encounter weird behavior with some functions in QGIS, create a new "
+"user profile and run the commands again. Sometimes, bugs are related to some"
+" leftovers in the current user profile and creating a new one may fix them "
+"as it restarts QGIS with the new (clean) profile."
+msgstr ""
+"Wenn QGIS unerwünschtes Verhalten zeigt, Sue aber keinen Fehler feststellen "
+"können, besteht die Möglichkeit, ein neues Benutzerprofil anzulegen und zu "
+"versuchen, den Befehl erneut auszuführen. Manchmal hängen Fehler mit "
+"Resten/Einstellungen im aktuellen Benutzerprofil zusammen, die durch das "
+"Anlegen eines neuen Profils behoben werden können, da QGIS mit dem neuen "
+"(sauberen) Profil neu gestartet wird."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1616
+msgid "Setting user profile"
+msgstr "Benutzerprofil einstellen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1618
+msgid ""
+"By default, QGIS opens a new session with the profile of the last closed "
+"session. This, among other settings, can be customized in "
+":menuselection:`Settings -->` |options| :menuselection:`Options -->` |user| "
+":menuselection:`User Profiles` tab:"
+msgstr ""
+"Standardmäßig öffnet QGIS eine neue Sitzung mit dem Profil der letzten "
+"geschlossenen Sitzung. Dies kann, neben anderen Einstellungen, unter "
+":menuselection:`Einstellungen -->` |options| :menuselection:`Optionen -->` "
+"|user| :menuselection:`Benutzerprofile` angepasst werden:"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2792
 msgid "user"
 msgstr "user"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1627
+msgid "User profiles settings"
+msgstr "Benutzerprofile-Reiter"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1629
+msgid ""
+":guilabel:`Startup profile`: indicates the user profile to use when starting"
+" a QGIS session. It can be:"
+msgstr ""
+":guilabel:`Startprofil`: gibt das Benutzerprofil an, das beim Start einer "
+"QGIS-Sitzung verwendet werden soll. Die Optionen sind:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1632
+msgid ":guilabel:`Use last closed profile`"
+msgstr ":guilabel:`Letztes gewähltes Profil verwenden`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1633
+msgid ""
+"a specific user profile to select from :guilabel:`Always use profile` drop-"
+"down menu"
+msgstr ""
+"ein bestimmtes Benutzerprofil, das aus dem Dropdown-Menü :guilabel:`Immer "
+"Profil verwenden` auszuwählen ist"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1634
+msgid ""
+":guilabel:`Choose profile at start up`: Opens the :guilabel:`User Profile "
+"Selector` dialog listing available user profiles. Double-click an entry or "
+"select a profile and press :guilabel:`OK` to use that user profile for the "
+"starting session. It is also possible to |symbologyAdd| :guilabel:`Add new "
+"profile` to the list: a profile is created from scratch and automatically "
+"run with the opening session."
+msgstr ""
+":guilabel:`Profil beim Starten wählen`: Öffnet beim Start von QGIS das "
+"Dialogfeld :guilabel:`Benutzerprofilauswahl`, mit einer Liste der "
+"verfügbaren Benutzerprofile. Doppelklicken Sie auf einen Eintrag oder wählen"
+" Sie ein Profil und drücken Sie :guilabel:`OK`, um dieses Benutzerprofil für"
+" die Startsitzung zu verwenden. Mit :guilabel:`Neues Profil hinzufügen` "
+"können Sie ein Profil direkt neu erstellt und damit die Sitzung starten."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1641
+msgid "Under :guilabel:`Profile display`, you can set:"
+msgstr "Im Bereich :guilabel:`Profilanzeige` können Sie:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1643
+msgid ""
+"The size of icons to use when selecting a profile from the :guilabel:`User "
+"Profile Selector` dialog."
+msgstr ""
+"Die Größe der Symbole einstellen, die bei der Auswahl eines Profils im "
+"Dialogfeld :guilabel:`Benutzerprofilauswahl` angezeigt werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1644
+msgid ""
+"A specific icon to display next to the current profile in the "
+":menuselection:`Settings --> User profiles` menu or the :guilabel:`User "
+"Profile Selector` dialog. Press |refresh| :sup:`Reset profile icon` to "
+"remove custom modifications."
+msgstr ""
+"Ein Symbol auswählen, das neben dem jeweiligen Profil im Menü "
+":menuselection:`Einstellungen --> Benutzerprofile` oder im Dialog "
+":guilabel:`Benutzerprofilauswahl` angezeigt wird. Drücken Sie |refresh| "
+":sup:`Icon zurücksetzen`, um benutzerdefinierte Änderungen zu entfernen."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2750
 msgid "refresh"
@@ -3180,22 +3974,69 @@ msgstr "refresh"
 msgid "Project Properties"
 msgstr "Projekteigenschaften"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1658
+msgid ""
+"In the properties window for the project under :menuselection:`Project --> "
+"Project Properties`, you can set project-specific options. The project-"
+"specific options overwrite their equivalent in the :guilabel:`Options` "
+"dialog described above."
+msgstr ""
+"Im Eigenschaftsfenster des Projekts unter :menuselection:`Projekt --> "
+"Eigenschaften` können Sie projektspezifische Optionen einstellen. Die "
+"Einstellungen überschreiben ggf. ihre Entsprechung im Dialog "
+":guilabel:`Optionen`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1664
+msgid "General Properties"
+msgstr "Allgemein"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1666
+msgid ""
+"In the |general| :guilabel:`General` tab, the :guilabel:`General settings` "
+"let you:"
+msgstr ""
+"Im Bereich :guilabel:`Allgemeine Einstellungen` des Reiters |general| "
+":guilabel:`Allgemein` haben Sie die folgenden Optionen:"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2706
 msgid "general"
 msgstr "general"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1668
+msgid "see the location of the project file"
+msgstr "Den Speicherort der Projektdatei einsehen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1669
+msgid ""
+"set the folder for the project home (available in the :guilabel:`Project "
+"home` item of the :guilabel:`Browser` panel). The path can be relative to "
+"the folder of the project file (type it in) or absolute. The project home "
+"can be used for storing data and other content that is useful for the "
+"project. Convenient when dataset and project files are not stored at the "
+"same place. If not filled, the :guilabel:`Project home` defaults to the "
+"project file folder."
+msgstr ""
+"Den Ordner für das :guilabel:`Projektheimatverzeichnis` festlegen. Der Pfad "
+"kann relativ zu dem Ordner der Projektdatei (geben Sie ihn ein) oder absolut"
+" sein. Das Projektverzeichnis kann zum Speichern von Daten und anderen für "
+"das Projekt nützlichen Inhalten verwendet werden. Dies ist praktisch, wenn "
+"Datensatz und Projektdateien nicht am selben Ort gespeichert sind. Wenn das "
+"Feld :guilabel:`Projektheimatverzeichnis` nicht ausgefüllt ist, wird "
+"standardmäßig der Ordner der Projektdatei verwendet."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1676
 msgid "give a title to the project beside the project file path"
-msgstr "einen Titel für das Projekt hinter dem Projektpfad vergeben"
+msgstr "Einen Titel für das Projekt vergeben."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1677
 msgid "choose the color to use for features when they are selected"
-msgstr ""
-"die Farbe auswählen, die markierte Objekte haben, wenn sie ausgewählt sind"
+msgstr "Die :guilabel:`Auswahlfarbe` für markierte Objekte festlegen."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1678
 msgid "choose the background color: the color to use for the map canvas"
-msgstr "die Hintergrundfarbe wählen: die Farbe für den Kartenhintergrund"
+msgstr ""
+"Eine :guilabel:`Hintergrundfarbe` einstellen, die in der Kartenansicht "
+"verwendet wird."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1679
 msgid ""
@@ -3204,91 +4045,1195 @@ msgid ""
 "path when both layers and project files can be moved or shared or if the "
 "project is accessed from computers on different platforms."
 msgstr ""
-"einstellen, ob der Pfad zu den Layern des Projekts als absolute (voll) oder "
-"als relative zu der Projektdatei gespeichert werden soll. Sie bevorzugen "
-"wahrscheinlich relative Pfade, wenn Layer und Projektdatei bewegt werden "
-"oder geteilt oder wenn Sie von Computern auf verschiedenen Plattformen auf "
-"das Projekt zugreifen wollen."
+"Sie können festlegen, ob der Pfad zu den Layern im Projekt als absoluter "
+"(vollständiger) oder als relativer Pfad zum Speicherort der Projektdatei "
+"gespeichert werden soll. Ein relativer Pfad ist z.B. dann sinnvoll, wenn "
+"Layer und/oder Projektdateien verschoben werden soll oder wenn der Zugriff "
+"auf das Projekt von verschiedenen Computern erfolgt."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1683
 msgid ""
 "choose to avoid artifacts when project is rendered as map tiles. Note that "
 "checking this option can lead to performance degradation."
 msgstr ""
-"wählen Sie Artefakte bei der Darstellung von Kartenkacheln vermeiden. "
-"Beachten Sie, dass diese Option zu Leistungseinbußen führen kann."
+"Sie können auswählen, dass versucht werden soll, Artefakte bei der "
+"Darstellung von Kartenkacheln zu vermeiden. Beachten Sie, dass die "
+"Aktivierung dieser Option zu Leistungseinbußen führen kann."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1685
+msgid ""
+":guilabel:`Remember attribute tables windows and docks between sessions`: If"
+" checked for a project, then any opened attribute tables will be saved into "
+"the project and immediately restored when loading that project. This can "
+"improve workflows when you constructed a project with a particular set of "
+"attribute table configurations for your requirements, and re-setting up "
+"these attribute tables is a hassle."
+msgstr ""
+":guilabel:`Attributtabellenfenster und Docks zwischen Sitzungen merken`: "
+"Wenn diese Option aktiviert ist, werden alle geöffneten Attributtabellen "
+"(als Fenster oder Dock) gespeichert und beim Laden des Projekts direkt "
+"wiederhergestellt. Dies kann Arbeitsabläufe erleichtern, wenn Sie in einem "
+"Projekt mit einer bestimmten Konfiguration der Attributtabellen arbeiten und"
+" das erneute Einrichten aufwendig wäre."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1694
+msgid ""
+"Calculating areas and distances is a common need in GIS. However, these "
+"values are really tied to the underlying projection settings. The "
+":guilabel:`Measurements` frame lets you control these parameters. You can "
+"indeed choose:"
+msgstr ""
+"Die Berechnung von Flächen und Entfernungen ist eine häufige Aufgabe im GIS."
+" Die ermittelten Werte sind aber abhängig von den zugrundeliegenden "
+"Einstellungen. Im Bereich :guilabel:`Messungen` können Sie diese Parameter "
+"steuern. Sie können auswählen:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1699
+msgid ""
+"the :guilabel:`Ellipsoid`, on which distance and area calculations are "
+"entirely based; it can be:"
+msgstr ""
+"den :guilabel:`Ellipsoid`, auf dem die Entfernungs- und Flächenberechnungen "
+"vollständig beruhen; dieser kann sein:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1702
+msgid ""
+"**None/Planimetric**: returned values are in this case cartesian "
+"measurements. This option can be set as default for new projects from the "
+":menuselection:`Settings -->` |options| :menuselection:`Options -->` |crs| "
+":menuselection:`CRS Handling` menu"
+msgstr ""
+"**Keiner/Planimetrisch**: die zurückgegebenen Werte sind in diesem Fall "
+"kartesische Maße. Diese Option kann als Standard für neue Projekte über das "
+"Menü :menuselection:`Einstellungen -->` |options| :menuselection:`Optionen "
+"-->` |crs| :menuselection:`KBS Handling` gesetzt werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1705
+msgid ""
+"a **Custom** one: you'll need to set values of the semi-major and semi-minor"
+" axes."
+msgstr ""
+"**Angepasst**: Sie müssen die Werte für die Hauptachse und die Nebenachse "
+"selbst festlegen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1706
+msgid ""
+"or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN, New"
+" International 1967, WGS 84...)."
+msgstr ""
+"oder aus einer Liste mit vordefinierten Ellipsoiden ausgewählt werden "
+"(Clarke 1866, Clarke 1880 IGN, New International 1967, WGS 84...)."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1708
+msgid ""
+"the :guilabel:`Units for distance measurements` for length and perimeter, "
+"and the :guilabel:`Units for area measurements`. These settings which "
+"default to their corresponding :ref:`global options <global_measure_tool>` "
+"override them in the current project. They are used in:"
+msgstr ""
+"die :guilabel:`Einheiten für Abstandsmessungen` für Länge und Umfang, und "
+"die :guilabel:`Einheiten für Flächenmessungen`. WICHTIG: die Einstellungen "
+"hier überschreiben ihre Entsprechungen in den globalen :ref:`Optionen "
+"<global_measure_tool>` für das aktuelle Projekt. Die Einstellungen werden "
+"verwendet bei:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1714
 msgid "Attribute table field update bar"
-msgstr "Attributtabellen Feld mit Aktualisierungsleiste"
+msgstr "dem Aktualisierungsfeld in Attributtabellen"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1715
 msgid "Field calculator calculations"
 msgstr "Feldrechner Berechnungen"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1716
+msgid ""
+":ref:`Identify tool <identify>` derived length, perimeter and area values"
+msgstr ""
+":ref:`Objekte abfragen Werkzeug <identify>` : Werte für Länge, Umfang und "
+"Fläche"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1717
+msgid ":ref:`measure dialog <sec_measure>`"
+msgstr "im :ref:`Messen Dialog <sec_measure>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1718
+msgid ":ref:`scale bar decoration <scalebar_decoration>`"
+msgstr "bei :ref:`Dekoration mit einem Maßstab<scalebar_decoration>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1722
+msgid ""
+"The :guilabel:`Coordinate and Bearing display` allows you to customize the "
+"display of:"
+msgstr ""
+"Im Bereich :guilabel:`Koordinaten- und Kursanzeige` haben Sie die "
+"Möglichkeit, die Anzeige für die folgenden Werte anzupassen:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1725
+msgid ""
+"the coordinates shown in the :guilabel:`Coordinates` box on QGIS status bar "
+"and in the :guilabel:`Derived` section of the |identify| :sup:`Identify "
+"features` tool's results"
+msgstr ""
+"Koordinaten, die in der QGIS-Statusleiste und im Bereich "
+":guilabel:`Abgeleitet` in den Ergebnissen des identify| :sup:`Objekte "
+"abfragen` Werkzeugs angezeigt werden,"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1728
+msgid ""
+"the bearing value displayed in the status bar for the map canvas panning "
+"direction and by the |measureBearing| :sup:`Measure bearing` tool."
+msgstr ""
+"Peilungswerte, die in der Statusleiste oder bei Abfragen mit dem "
+"|measureBearing| :sup:`Kurs Messen` Werkzeug angezeigt werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1731
+msgid "Available parameters are:"
+msgstr "Folgende Parameter sind verfügbar:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1733
+msgid ":guilabel:`Display coordinates using` either:"
+msgstr ":guilabel:`Koordianten anzeigen in`:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1735
+msgid "``Map Units``, based on the project CRS"
+msgstr ""
+"``Karteneinheiten (Meter)``, basierend auf dem für das Projekt eingestellten"
+" KBS"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1736
+msgid ""
+"``Map Geographic (degrees)``: based on the project CRS if it is of "
+"geographic type, otherwise uses its associated geographic CRS. This is "
+"helpful e.g. for non-earth celestial bodies."
+msgstr ""
+"``Kartengeographisch (Grad)``: basierend auf dem Projekt-KBS, wenn es ein "
+"geografisches ist, andernfalls verwendet es das zugehörige geografische KBS."
+" Dies ist z. B. bei nicht-irdischen Himmelskörpern hilfreich."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1738
+msgid ""
+"or ``Custom Projection Units``: allows to rely on any CRS you desire for "
+"coordinates display"
+msgstr ""
+"``Benutzerprojektionseinheit``: ermöglicht es, jedes beliebige KBS für die "
+"Anzeige der Koordinaten zu verwenden"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1740
+msgid ""
+"In the :guilabel:`Coordinate CRS` option, you can view or define the CRS to "
+"use depending on your display mode."
+msgstr ""
+"Im Feld :guilabel:`Koordinaten KBS` wird, je nach oben gewähltem Modus, das "
+"KBS verwendete KBS angezeigt oder Sie können eins auswählen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1742
+msgid ""
+":guilabel:`Coordinate format`: you can configure it as ``Decimal Degrees``, "
+"``Degrees, Minutes`` or ``Degrees, Minutes, Seconds``, and whether it should"
+" display:"
+msgstr ""
+"Unter :guilabel:`Koordinatenformat` können Sie mit "
+":guilabel:`Ändern...`einstellen, ob die Werte in ``Dezimalgrad``, ``Grad, "
+"Minuten`` oder ``Grad, Minuten, Sekunden`` angezeigt werden sollen. Darüber "
+"hinaus haben sie folgende Optionen:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1745
+msgid "|unchecked| :guilabel:`Show directional suffix`"
+msgstr "|unchecked| :guilabel:`Richtungsendung anzeigen`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1746
+msgid "|unchecked| :guilabel:`Show leading zeros for minutes and seconds`"
+msgstr ""
+"|unchecked| :guilabel:`Führende Nullen für Minuten und Sekunden anzeigen`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1747
+msgid "|unchecked| :guilabel:`Show leading zeros for degrees`"
+msgstr "|unchecked| :guilabel:`Führende Nullen bei Grad anzeigen`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1748
+msgid "|unchecked| :guilabel:`Show trailing zeros`"
+msgstr "|unchecked| :guilabel:`Nullen am Ende anzeigen`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1750
+msgid ""
+":guilabel:`Coordinate precision`: the number of decimal places can be "
+"automatic (derived from the type of CRS) or set manually"
+msgstr ""
+":guilabel:`Koordinatengenauigkeit`: die Anzahl der Dezimalstellen kann "
+"automatisch (abgeleitet vom Typ des KBS) oder manuell eingestellt werden"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1752
+msgid ""
+":guilabel:`Coordinate order`: you can opt to display the coordinates in the "
+"native order of the CRS (``Default``) or switch it to either ``Easting, "
+"Northing (Longitude, Latitude)`` or ``Northing, Easting (Latitude, "
+"Longitude)`` order"
+msgstr ""
+":guilabel:`Koordinatenreihenfolge`: Sie können wählen, ob die Koordinaten in"
+" der nativen Reihenfolge des KBS (``Voreinstellung``) angezeigt werden "
+"sollen, in der Reihenfolge ``Ostwert, Nordwert (Länge, Breite)`` oder in der"
+" Reihenfolge ``Nordwert, Ostwert (Breite, Länge)``."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1755
+msgid ""
+":guilabel:`Bearing format` possible values are ``0 to 180°, with E/W "
+"suffix``, ``-180 to +180°`` or ``0 to 360°``. The number of "
+":guilabel:`Decimal places` as well as whether to :guilabel:`Show trailing "
+"zeros` can be set."
+msgstr ""
+"Unter :guilabel:`Kursformat` können Sie mit der Schaltfläche "
+":guilabel:`Anpassen` einstellen, ob der Kurs von ``0 bis 180° mit "
+"O/W-Zusatz``, von  ``-180 bis +180°`` oder von ``0 bis 360°`` angezeigt "
+"wird. Darüber hinaus können sie Anzahl der :guilabel:`Dezimalstellen` "
+"festlegen und die Option :guilabel:`Nullen am Ende anzeigen` auswählen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1765
+msgid "General tab of the Project Properties dialog"
+msgstr "Der Allgemein-Reiter der Projekteigenschaften"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1770
 msgid "Metadata Properties"
-msgstr "Eigenschaften Metadaten"
+msgstr "Metadaten"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1772
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab allows detailed metadata to be "
+"defined, including (among the others): author, creation date, language, "
+"abstracts, categories, keywords, contact details, links, history. There is "
+"also a validation functionality that checks if specific fields were filled, "
+"anyway this is not enforced. See :ref:`vector layer metadata properties "
+"<vectormetadatamenu>` for some details."
+msgstr ""
+"Auf dem |editMetadata| :guilabel:`Metadata` Reiter können detaillierte "
+"Metadaten definiert werden, darunter Autor, Erzeugungsdatum, Sprache, "
+"Zusammenfassungen, Kategorien, Schlüsselwörter, Kontakt, Links, Protokoll. "
+"Es steht auch eine Validierungsfunktion zur Verfügung, die eine Empfehlung "
+"gibt, welche Angaben gemacht werden sollten. Für Details siehe "
+":ref:`Eigenschaften Metadaten <vectormetadatamenu>` ."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2692
 msgid "editMetadata"
 msgstr "editMetadata"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1780
+msgid "View Settings"
+msgstr "Ansichtseinstellungen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1787
+msgid "View Settings tab of the Project Properties dialog"
+msgstr "Der Reiter Ansichtseinstellungen der Projekteigenschaften"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1789
+msgid ""
+"The |overlay| :guilabel:`View Settings` tab provides means to control the "
+"project map canvas. You can:"
+msgstr ""
+"Der Reiter |overlay| :guilabel:`Ansichtseinstellungen` bietet Möglichkeiten "
+"zur Steuerung der Kartenansicht des Projekts. Sie haben die folgenden "
+"Optionen:"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2738
 msgid "overlay"
 msgstr "overlay"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1792
+msgid ""
+"set :guilabel:`Project predefined scales`: the list of scales to display in "
+"scale-related drop-down widgets, such as the status bar :guilabel:`Scale`, "
+"the visibility scales selector or secondary 2D map view settings,... in "
+"replacement of the global :ref:`predefined scales <predefinedscales>`."
+msgstr ""
+":guilabel:`Vordefinierte Projektmaßstäbe`: eine Liste von Maßstäbe, die in "
+"Maßstabs-Drop-Down-Listen angezeigt werden sollen, wie z.B. im "
+":guilabel:`Maßstab` der Statusleiste oder den Einstellungen einer zweiten "
+"Kartenansicht. Wenn hier :guilabel:`Vordefinierte Projektmaßstäbe` aktiviert"
+" ist, werden die globalen :ref:`vordefinierte Maßstäbe <predefinedscales>` "
+"überschrieben und nur die hier definierten angezeigt."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1799
+msgid ""
+":guilabel:`Set Project full Extent`: this extent will be used instead of the"
+" extent of all layers when zooming to full map extent (|zoomFullExtent|). "
+"It's useful when a project contains web layers/national layers/global layers"
+" yet the actual area of interest for the project is a smaller geographic "
+"area. The project full extent coordinates can be set with the :ref:`extent "
+"selector <extent_selector>` widget."
+msgstr ""
+":guilabel:`Volle Projektausmaße setzen`: diese Ausdehnung wird anstelle der "
+"Ausdehnung aller Layer beim Zoomen auf die volle Kartenausdehnung "
+"(|zoomFullExtent|) verwendet. Dies kann genutzt werden, wenn ein Projekt "
+"Web-Layer/nationale Layer/globale Layer enthält, das eigentliche "
+"Interessengebiet des Projekts jedoch ein kleineres geografisches Gebiet ist."
+" Die Koordinaten für die volle Ausdehnung des Projekts können mit dem Widget"
+" :ref:`extent selector 1` festgelegt werden."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2796
 msgid "zoomFullExtent"
 msgstr "zoomFullExtent"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1807
+msgid "CRS Properties"
+msgstr "KBS"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1809
+msgid ""
+"For more information on how QGIS handles project projection, please read the"
+" dedicated section at :ref:`label_projections`."
+msgstr ""
+"Für weitere Informationen darüber, wie QGIS mit Projektionen arbeitet, lesen"
+" Sie bitte den entsprechenden Abschnitt unter :ref:`label_projections`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1812
+msgid ""
+"The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system "
+"to use in this project. It can be:"
+msgstr ""
+"Auf dem Reiter |crs| :guilabel:`KBS` können Sie das Koordinatenbezugssystem "
+"festlegen, das in diesem Projekt verwendet werden soll. Die Optionen sind:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1815
+msgid ""
+"|checkbox| :guilabel:`No CRS (or unknown/non-Earth projection)`: layers are "
+"drawn based on their raw coordinates"
+msgstr ""
+"|checkbox| :guilabel:`Kein KBS (oder unbekannte/nicht-Erd-Projektion)`: "
+"Layer werden auf der Grundlage ihrer ursprünglichen, also nicht "
+"projizierten, Koordinaten gezeichnet"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1817
+msgid ""
+"or an existing coordinate reference system that can be *geographic*, "
+"*projected* or *user-defined*. Layers added to the project are translated "
+"on-the-fly to this CRS in order to overlay them regardless their original "
+"CRS."
+msgstr ""
+"Ein vorhandenes Koordinatenbezugssystem, das *geografisch*, *projiziert* "
+"oder *benutzerdefiniert* sein kann. Dem Projekt hinzugefügte Layer werden "
+"on-the-fly in dieses KBS übersetzt, um sie unabhängig von ihrem "
+"ursprünglichen KBS zu überlagern."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1822
+msgid "Transformations Properties"
+msgstr "Transformationen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1824
+msgid ""
+"The |transformation| :guilabel:`Transformations` tab  helps you control the "
+"layers reprojection settings by configuring the datum transformation "
+"preferences to apply in the current project. As usual, these override any "
+"corresponding global settings. See :ref:`datum_transformation` for more "
+"details."
+msgstr ""
+"Auf dem Reiter \"Transformationen\" können Sie die Einstellungen für die "
+"Reprojektion von Layern steuern, indem Sie die Datentransformationen "
+"festlegen, die für das aktuelle Projekt gelten sollen. Die Einstellungen "
+"hier haben Vorrang vor den entsprechenden globalen Einstellungen. Siehe "
+":ref:`Datum_transformation` für weitere Details."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1832
+msgid "Styles Properties"
+msgstr "Stile"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1834
+msgid ""
+"Under |symbology| :guilabel:`Styles` tab, you can configure symbols and "
+"colors inherent to the project, allowing to safely share the project among "
+"different machines."
+msgstr ""
+"Unter dem Reiter :guilabel:`Stile` können Sie Symbole und Farben "
+"konfigurieren, die spezifisch für das jeweilige Projekt genutzt werden."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2776
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1839
+msgid "Default symbols"
+msgstr "Vorlagesymbole"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1841
+msgid ""
+"The :guilabel:`Default Symbols` group lets you control how new layers will "
+"be drawn in the project when they do not have an existing :file:`.qml` style"
+" defined. You can set :guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill`"
+" to apply depending on the layer geometry type as well as default "
+":guilabel:`Color Ramp` and :guilabel:`Text Format` (e.g. when enabling "
+"labeling). Any of these items can be reset using the :guilabel:`Clear` entry"
+" from the corresponding drop-down widget."
+msgstr ""
+"Im Bereich :guilabel:`Vorlagesymbole` können Sie festlegen, wie Layer, die "
+"dem Projekt neu hinzugefügt werden, dargestellt werden sollen (wenn für den "
+"Layer kein :file:`.qml`-Stil definiert ist). In Abhängigkeit von den "
+"Eigenschaften des Layers können Sie Standardwerte für "
+":guilabel:`Markierung`, :guilabel:`Linie` und :guilabel:`Füllung` sowie "
+":guilabel:`Farbverlauf` und :guilabel:`Textformat` (z.B. bei der Aktivierung"
+" von Beschriftungen) festlegen. Jedes dieser Elemente kann mit dem Eintrag "
+":guilabel:`Aktuelles Symbol leeren` aus der entsprechenden Dropdown-Liste am"
+" Ende zurückgesetzt werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1852
+msgid "In the :guilabel:`Options` group, you can:"
+msgstr "Im Bereich :guilabel:`Optionen` können Sie:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1854
+msgid "Apply a default :guilabel:`Opacity` to new layers"
+msgstr "Die :guilabel:`Deckkraft` eines neu hinzugefügten Layers einstellen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1855
+msgid ""
+"|checkbox| :guilabel:`Assign random colors to symbols`, modifying the "
+"symbols fill colors, hence avoiding same rendering for all layers."
+msgstr ""
+"Das Kästchen |checkbox| :guilabel:`Den Symbolen zufällige Farben zuordnen` "
+"aktivieren, damit nicht alle Layer mit derselben Farbe dargestellt werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1863
+msgid "Styles tab"
+msgstr "Der Stile-Reiter"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1868
+msgid "Project Colors"
+msgstr "Projektfarben"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1870
+msgid ""
+"There is also an additional section where you can define specific colors for"
+" the running project. Like the :ref:`global colors <colors_options>`, you "
+"can:"
+msgstr ""
+"Es gibt auch einen zusätzlichen Abschnitt, in dem Sie spezifische Farben für"
+" das laufende Projekt definieren können. Wie bei den :ref:`globalen "
+"Einstellungen für Farben <colors_options>`, können Sie:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1882
+msgid ""
+"These colors are identified as :guilabel:`Project colors` and listed as part"
+" of :ref:`color widgets <color-selector>`."
+msgstr ""
+"Diese Liste wird als :guilabel:`Projektfarben` bezeichnet und bei der "
+":ref:`Farbauswahl <color-selector>` als eigene Palette aufgeführt."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1885
+msgid "**Use project colors to quickly assign and update color widgets**"
+msgstr ""
+"**Verwenden Sie Projektfarben, um Farbwidgets schnell zuzuweisen und zu "
+"aktualisieren**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1887
+msgid ""
+"Project colors can be refered to using their label and the color widgets "
+"they are used in are bound to them. This means that instead of repeatedly "
+"setting the same color for many properties and, to avoid a cumbersome update"
+" you can:"
+msgstr ""
+"Projektfarben können über ihre Bezeichnung referenziert werden und die "
+"Farbwidgets, in denen sie verwendet werden, sind an sie gebunden. Das "
+"bedeutet, dass Sie nicht immer wieder dieselbe Farbe für viele Eigenschaften"
+" einstellen müssen, um eine umständliche Aktualisierung zu vermeiden:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1892
+msgid "Define the color as a project color"
+msgstr "Definieren Sie eine Farbe als Projektfarbe"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1893
+msgid ""
+"Click the :ref:`data defined override widget <data_defined>` next to the "
+"color property you want to set"
+msgstr ""
+"Klicken Sie danach an einer beliebigen Stelle in QGIS, an der Sie diese "
+"Farbe verwenden wollen, auf das Feld :ref:`Datendefinierte Übersteuerung "
+"<data_defined>` am Ende der Farbauswahlzeile"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1895
+msgid ""
+"Hover over the :guilabel:`Color` menu and select the project color. The "
+"property is then assigned the expression ``project_color('color_label')`` "
+"and the color widget reflects that color."
+msgstr ""
+"Bewegen Sie dann den Mauszeiger über den Menüeintrag :guilabel:`Farbe` und "
+"wählen Sie Ihre definierte Projektfarbe aus. Der Eigenschaft wird dann der "
+"Ausdruck ``project_color('Name_der_Farbe')`` zugewiesen und die Farbauswahl "
+"zeigt die entsprechende Farbe an."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1898
+msgid "Repeat steps 2 and 3 as much as needed"
+msgstr ""
+"Wiederholen Sie die Schritte 2 und 3 für so viele Farben, wie Sie benötigen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1899
+msgid ""
+"Update the project color once and the change is reflected EVERYWHERE it's in"
+" use."
+msgstr ""
+"Wenn Sie jetzt die Projektfarbe in den Projekteigenschaften ändern, wird die"
+" Änderung an allen Stellen, an denen Sie die Farbe wie oben beschrieben "
+"festgelegt haben, automatisch übernommen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1905
+msgid "Style Database"
+msgstr "Stildatenbanken"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1907
+msgid ""
+"A style database in QGIS is a structured repository designed to store "
+"symbols, text formats, and other styling elements. It serves as a "
+"centralized location where you can organize and manage your symbology "
+"resources efficiently. You can create a dedicated style database for a "
+"specific client, housing symbols tailored to that client's need. This "
+"ensures a clean and organized approach, without cluttering the default style"
+" database. In multi-user environments, it's possible to store project-"
+"specific styles in a shared location. By linking a project to these styles, "
+"all users within the project gain access to common symbology, eliminating "
+"the need for manual import or updates to individual local style database. "
+"Storing symbols in a project file offers a practical solution, preventing "
+"users from overcrowding their global style database with project-specific "
+"symbology. This approach guarantees that other users working on the same "
+"project immediately have access to all the necessary symbology upon loading "
+"the project."
+msgstr ""
+"Eine Stildatenbank in QGIS ist spezielle Datei zum Speichern von Symbolen, "
+"Textformaten und anderen Stilelementen. Sie dient als zentraler Ort, an dem "
+"Sie Ihre Symbologieressourcen effizient organisieren und verwalten können. "
+"Sie können z. B. eine eigene Stildatenbank für einen bestimmten Kunden "
+"erstellen, in der Symbole gespeichert werden, die auf die Bedürfnisse dieses"
+" Kunden zugeschnitten sind. Dies gewährleistet einen sauberen und "
+"organisierten Ansatz, ohne die Standard-Stil-Datenbank zu überladen. Oder in"
+" Mehrbenutzerumgebungen ist es möglich, projektspezifische Stile an einem "
+"gemeinsamen Ort zu speichern. Durch die Verknüpfung eines Projekts mit "
+"diesen Stilen erhalten alle Benutzer Zugriff auf eine gemeinsame Symbolik, "
+"wodurch der manuelle Import oder die Aktualisierung der einzelnen lokalen "
+"Stildatenbanken entfällt. Dieser Ansatz ermöglicht es, dass andere Benutzer,"
+" die an demselben Projekt arbeiten, sofort nach dem Laden des Projekts "
+"Zugang zu allen erforderlichen Symbolen haben."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1922
+msgid ""
+"In the :guilabel:`Style Database` section you can choose to |symbologyAdd| "
+":guilabel:`Add` or |symbologyRemove| :guilabel:`Remove` style database or "
+"you can |newPage| :guilabel:`Create new style database`. When you add or "
+"remove a style database in this section, the changes will be automatically "
+"reflected in the |symbology| :guilabel:`Symbology Properties`."
+msgstr ""
+"Im Bereich :guilabel:`Stildatenbank` können Sie wählen zwischen "
+"|symbologyAdd| :guilabel:`Hinzufügen` oder |symbologyRemove| "
+":guilabel:`Entfernen` einer Stil-Datenbank oder Sie können eine |newPage| "
+":guilabel:`Neue Stildatenbank erzeugen`. Wenn Sie in diesem Abschnitt eine "
+"Stildatenbank hinzufügen oder entfernen, werden die Änderungen automatisch "
+"in den |symbology| :guilabel:`Symbology Properties` übernommen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2726
+msgid "newPage"
+msgstr "newPage"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1932
+msgid "Data Sources Properties"
+msgstr "Datenquellen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1934
+msgid "In the |openTable| :guilabel:`Data Sources` tab, you can:"
+msgstr ""
+"Auf dem Reiter |openTable| :guilabel:`Datenquellen` stehen die folgenden "
+"Optionen zur Verfügung:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2732
 msgid "openTable"
 msgstr "openTable"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1936
+msgid ""
+":guilabel:`Transaction mode`, defines how edits are sent to the data "
+"provider:"
+msgstr ""
+":guilabel:`Transaktionsmodus`, definiert, wie Bearbeitungen an den "
+"Datenanbieter gesendet werden:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1938
+msgid ""
+":guilabel:`Local Edit Buffer`: edits are buffered locally and sent to the "
+"provider when toggling layer editing mode or clicking :guilabel:`Save "
+"edits`."
+msgstr ""
+":guilabel:`Lokaler Bearbeitungspuffer`: Bearbeitungen werden lokal "
+"zwischengespeichert und an den Datenanbieter gesendet, wenn der Layer-"
+"Bearbeitungsmodus umgeschaltet oder auf :guilabel:`Layeränderungen "
+"speichern` geklickt wird."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1940
+msgid ""
+":guilabel:`Automatic Transaction Groups`: on supported datasources (postgres"
+" and geopackage databases) the edit state of all tables that originate from "
+"the same database are synchronized and executed in a server side "
+"transaction. Also, instead of buffering edit changes locally, they are "
+"directly sent to a transaction in the database which gets committed when "
+"toggling layer editing mode or clicking :guilabel:`Save edits`."
+msgstr ""
+":guilabel:`Automatische Transaktionsgruppen`: Bei unterstützten Datenquellen"
+" (Postgres- und GeoPackage-Datenbanken) wird der Bearbeitungsstatus aller "
+"Tabellen, die aus der gleichen Datenbank stammen, synchronisiert und in "
+"einer serverseitigen Transaktion ausgeführt. Anstatt Änderungen lokal zu "
+"puffern, werden sie direkt an eine Transaktion an die Datenbank gesendet und"
+" beim Umschalten des Layer-Bearbeitungsmodus oder beim Klicken auf "
+":guilabel:`Layeränderungen speichern` nur noch bestätigt."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1946
+msgid ""
+":guilabel:`Buffered Transaction Groups`: all editable layers, disregarding "
+"from which provider, are toggled synchronously and all edits are saved in a "
+"local edit buffer. Saving changes is executed within a single transaction on"
+" all layers (per provider)."
+msgstr ""
+":guilabel:`Gepufferte Transaktionsgruppen`: alle bearbeitbaren Layer, egal "
+"von welchem Anbieter, werden synchron umgeschaltet und alle Bearbeitungen in"
+" einem lokalen Bearbeitungspuffer gespeichert. Das Speichern von Änderungen "
+"wird in einer einzigen Transaktion auf allen Layern (pro Anbieter) "
+"durchgeführt."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1951
+msgid ""
+"Note that you can change this option only if no layer is being edited in the"
+" project."
+msgstr ""
+"Beachten Sie, dass Sie diese Option nur ändern können, wenn sich kein Layer "
+"im Projekt im Bearbeitungsmodus befindet."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1953
+msgid ""
+"|unchecked| :guilabel:`Evaluate default values on provider side`: When "
+"adding new features in a PostgreSQL table, fields with default value "
+"constraint are evaluated and populated at the form opening, and not at the "
+"commit moment. This means that instead of an expression like "
+"``nextval('serial')``, the field in the :guilabel:`Add Feature` form will "
+"display expected value (e.g., ``25``)."
+msgstr ""
+"|unchecked| :guilabel:`Vorgabewerte auf Anbieterseite auswerten`: Beim "
+"Hinzufügen neuer Objekte in einer PostgreSQL-Tabelle werden Felder für die "
+"Vorgabewertebeschränkung bestehen (\"constraint\") beim Anlegen des Objekts "
+"ausgewertet und ausgefüllt, und nicht erst bei der Übergabe/Speicherung. Das"
+" bedeutet, dass z. B. im Attribut-Formular anstelle eines Ausdrucks wie "
+"``nextval('serial')`` der zu erwartende Wert (z.B. ``25``) anzeigt wird."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1958
+msgid ""
+"|unchecked| :guilabel:`Remember editable layer status between sessions`: "
+"makes sure that all layers that are editable in a project will be remembered"
+" as such when saving the project, as well as making sure that those layers "
+"are immediately made editable whenever the project is restored."
+msgstr ""
+"|unchecked| :guilabel:`Bearbeitungsstatus zwischen Sitzungen merken`: Wenn "
+"diese Option aktiviert ist, werden alle Layer, die beim Schließen und "
+"Speichern des Projekts auf bearbeitbar gestellt waren, auch wieder in den "
+"Bearbeitungsmodus gesetzt, wenn das Projekt erneut geöffnet wird."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1966
+msgid "Configure the :guilabel:`Layers Capabilities`, i.e.:"
+msgstr "Sie können die :guilabel:`Layereigenschaften` konfigurieren:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1968
+msgid ""
+"Set (or disable) which layers are ``identifiable``, i.e. will respond to the"
+" :ref:`identify tool <identify>`. By default, layers are set queryable."
+msgstr ""
+"Legen Sie fest, welche Layer ``abfragbar`` sind, d.h. beim :ref:`Objekte "
+"abfragen<identify>` Ergebnisse liefern. Standardmäßig sind Layer auf "
+"abfragbar eingestellt."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1970
+msgid ""
+"Set whether a layer should appear as ``read-only``, meaning that it can not "
+"be edited by the user, regardless of the data provider's capabilities. "
+"Although this is a weak protection, it remains a quick and handy "
+"configuration to avoid end-users modifying data when working with file-based"
+" layers."
+msgstr ""
+"Legen Sie fest, ob ein Layer ``schreibgeschützt`` sein soll, was bedeutet, "
+"dass er vom Benutzer nicht bearbeitet werden kann, unabhängig von den "
+"Möglichkeiten des Datenanbieters. Auch wenn es sich hier um einen schwachen "
+"Schutz handelt, da er einfach wieder aufgehoben werden kann, bietet er doch "
+"eine schnelle und praktische Möglichkeit, um unbeabsichtigte Änderungen an "
+"den Daten zu verhindern."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1974
+msgid ""
+"Define which layers are ``searchable``, i.e. could be queried using the "
+":ref:`locator widget <locator_options>`. By default, layers are set "
+"searchable."
+msgstr ""
+"Definieren Sie, welche Layer ``durchsuchbar`` sind, d.h. mit dem "
+":ref:`Suchen-Werkzeug <locator_options>` abgefragt werden können. "
+"Standardmäßig sind die Layer als durchsuchbar eingestellt."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1976
+msgid ""
+"Define which layers are defined as ``required``. Checked layers in this list"
+" are protected from inadvertent removal from the project."
+msgstr ""
+"Legen Sie fest, welche Layer als ``erforderlich`` definiert sind. Markierte "
+"Layer in dieser Liste sind vor versehentlichem Entfernen aus dem Projekt "
+"geschützt."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1978
+msgid ""
+"Define which layers are ``private``, i.e. hidden from the :guilabel:`Layers`"
+" panel. This is meant for accessory layers (basemap, join, lookups for "
+"value-relations, most probably aspatial layers, ...) that you still need in "
+"a project but you don't want them to pollute the legend tree and other layer"
+" selection tools. If set visible, they are still displayed in the map canvas"
+" and rendered in the print layout legend. Use the |filterMap| "
+":menuselection:`Filter legend --> Show private layers` option in the "
+":guilabel:`Layers` panel top toolbar to temporarily turned them on for any "
+"interaction."
+msgstr ""
+"Definieren Sie, welche Layer ``privat`` sind, d.h. aus dem :guilabel:`Layer`"
+" Bedienfeld ausgeblendet werden. Dies ist für zusätzliche Layer gedacht "
+"(Basiskarte, Verknüpfungen, Nachschlagewerke für Wertebeziehungen, ...), die"
+" Sie in einem Projekt benötigen, die aber nicht den Legendenbaum und andere "
+"Layerauswahlwerkzeuge überfrachten sollen. Wenn die Layer auf sichtbar "
+"geschaltet sind, werden sie trotzdem in der Kartenansicht und in "
+"Kartenansichten angezeigt. Verwenden Sie die Option |filterMap| "
+":menuselection:`Legende filtern --> Private Layer anzeigen` in der oberen "
+"Werkzeugleiste des :guilabel:`Layer`-Bedienfelds, um diese Layer im "
+"Bedienfeld anzuzeigen."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2704
 msgid "filterMap"
 msgstr "filterMap"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1988
+msgid ""
+"The :guilabel:`Layers Capabilities` table provides some convenient tools to:"
+msgstr ""
+"Darüber hinaus bietet die Tabelle der  :guilabel:`Layereigenschaften` einige"
+" nützliche Möglichkeiten:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1990
+msgid ""
+"Select multiple cells and press :guilabel:`Toggle Selection` to have them "
+"change their checkbox state;"
+msgstr ""
+"Sie können mehrere Zellen (nicht Zeilen!) markieren, indem Sie einfach in "
+"den Bereich hinter das Kontrollkästchen klicken; wenn Sie jetzt unten auf "
+":guilabel:`Auswahl umschalten` klicken, wird der Status aller ausgewählten "
+"Kontrollkästchen geändert;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1992
+msgid ""
+"|unchecked| :guilabel:`Show spatial layers only`, filtering out non-spatial "
+"layers from the layers list;"
+msgstr ""
+"Sie können sich in der Liste |unchecked| :guilabel:`Nur räumliche Layer "
+"anzeigen` lassen;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1994
+msgid ""
+"|search| :guilabel:`Filter layers...` and quickly find a particular layer to"
+" configure."
+msgstr ""
+"Mit der Funktion |search| :guilabel:`Layer filtern...` können Sie schnell "
+"einen gewünschten Layer finden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1997
+msgid ""
+"Under the :guilabel:`Advanced Settings` group, you can select |unchecked| "
+":guilabel:`Trust project when data source has no metadata`: To speed up "
+"project loading by skipping data checks. Useful in QGIS Server context or in"
+" projects with huge database views/materialized views. The extent of layers "
+"will be read from the QGIS project file (instead of data sources) and when "
+"using the PostgreSQL provider the primary key unicity will not be checked "
+"for views and materialized views."
+msgstr ""
+"Im Bereich :guilabel:`Erweiterte Einstellungen` können Sie die Option "
+":guilabel:`Projekt vertrauen, wenn Datenquelle keine Metadaten hat` "
+"auswählen (standardmäßig nicht markiert), um das Laden von Projekten zu "
+"beschleunigen, indem Datenprüfungen übersprungen werden. Nützlich im QGIS "
+"Server Kontext oder in Projekten mit großen "
+"Datenbankansichten/materialisierten Ansichten. Die Ausdehnung der Layer wird"
+" aus der QGIS Projektdatei gelesen (statt aus den Datenquellen) und bei "
+"Verwendung des PostgreSQL Providers wird die Primärschlüssel-Unität für "
+"Views und Materialized Views nicht geprüft."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2010
+msgid "Data Sources tab"
+msgstr "Der Datenquellen Reiter"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2015
+msgid "Relations Properties"
+msgstr "Beziehungen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2017
+msgid ""
+"The |relations| :guilabel:`Relations` tab is used to define relations "
+"between layers. The relations can be of one to one, many to many or "
+"polymorphic type. They are defined in the project properties dialog. Once "
+"relations exist for a layer, a new user interface element in the form view "
+"(e.g. when identifying a feature and opening its form) will list the related"
+" entities. This provides a powerful way to express e.g. the inspection "
+"history on a length of pipeline or road segment. You can find out more about"
+" relations support in section :ref:`vector_relations`."
+msgstr ""
+"Auf dem Reiter |relations| :guilabel:`Beziehungen` können für das Projekt "
+"Beziehungen zwischen Layern definiert werden. Die Beziehungen können vom Typ"
+" eins zu eins, viele zu viele oder polymorph sein. Sobald Beziehungen für "
+"einen Layer bestehen, listet ein neues Element der Benutzeroberfläche in der"
+" Formularansicht (z. B. beim Identifizieren eines Merkmals und Öffnen seines"
+" Formulars) die zugehörigen Objekte auf. Auf diese Weise lässt sich z. B. "
+"die Inspektionshistorie eines Rohrleitungsabschnitts oder eines "
+"Straßenabschnitts darstellen. Mehr über die Unterstützung von Beziehungen "
+"erfahren Sie im Abschnitt :ref:`vector_relations`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2752
 msgid "relations"
 msgstr "relations"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2030
+msgid "Relations tab"
+msgstr "Der Beziehungen Reiter"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2033
 msgid "Variables Properties"
-msgstr "Eigenschafen Variablen"
+msgstr "Variablen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2035
+msgid ""
+"The |expression| :guilabel:`Variables` tab lists all the variables available"
+" at the project's level (which includes all global variables). Besides, it "
+"also allows the user to manage project-level variables. Click the "
+"|symbologyAdd| button to add a new custom project-level variable. Likewise, "
+"select a custom project-level variable from the list and click the "
+"|symbologyRemove| button to remove it. More information on variables usage "
+"in the General Tools :ref:`general_tools_variables` section."
+msgstr ""
+"Der Reiter |expression| :guilabel:`Variablen` listet alle auf Projektebene "
+"verfügbaren Variablen auf (einschließlich aller globaler Variablen). Darüber"
+" hinaus können sie hier mit der Schaltfläche |symbologyAdd| eine neue, "
+"benutzerdefinierte Variable hinzuzufügen. Wenn Sie eine benutzerdefinierte "
+"Variable aus der Liste auswählen, können Sie diese mit der Schaltfläche "
+"|symbologyRemove| wieder entfernen. Weitere Informationen zur Verwendung von"
+" Variablen finden Sie im Kapitel Allgemeine Werkzeuge im Abschnitt "
+":ref:`general_tools_variables`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2698
 msgid "expression"
 msgstr "expression"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2047
+msgid "Macros Properties"
+msgstr "Makros"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2049
+msgid ""
+"The |action| :guilabel:`Macros` tab is used to edit Python macros for "
+"projects. Currently, only three macros are available: ``openProject()``, "
+"``saveProject()`` and ``closeProject()``."
+msgstr ""
+"Der Reiter |action| :guilabel:`Makros` dient der Bearbeitung von Python-"
+"Makros für das Projekt. Bei neuen Projekten sind standardmäßig drei Makros "
+"angelegt, die mit Inhalten gefüllt werden können: ``openProject()``, "
+"``aveProject()`` und ``closeProject()``."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2680
 msgid "action"
 msgstr "action"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2058
+msgid "Macro settings"
+msgstr "Der Makro Reiter"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2061
 msgid "QGIS Server Properties"
-msgstr "Eigenschaften QGIS Server"
+msgstr "QGIS Server"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2063
+msgid ""
+"The |overlay| :guilabel:`QGIS Server` tab allows you to configure your "
+"project in order to publish it online. Here you can define information about"
+" the QGIS Server WMS and WFS capabilities, extent and CRS restrictions. More"
+" information available in section :ref:`Creatingwmsfromproject` and "
+"subsequent."
+msgstr ""
+"Der Reiter |overlay| :guilabel:`QGIS Server` ermöglicht es Ihnen, Ihr "
+"Projekt zu konfigurieren, wenn es online veröffentlicht werden soll. Hier "
+"können Sie Informationen über die WMS- und WFS-Fähigkeiten des QGIS-Servers,"
+" den Umfang und die KBS-Einschränkungen festlegen. Weitere Informationen "
+"finden Sie im QGIS Server Handbuch im Abschnitt :ref:`Erstellen von WMS aus "
+"dem Projekt` und nachfolgende."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2074
+msgid "QGIS Server settings"
+msgstr "Der QGIS Server Reiter"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2080
 msgid "Temporal Properties"
-msgstr "Eigenschaften Zeitlich"
+msgstr "Zeitlich"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2082
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab is used to set the temporal range of"
+" your project, either by using manual :guilabel:`Start date` and "
+":guilabel:`End date` inputs or by calculating it from the current project "
+"temporal layers. The project time range can then be used in the "
+":guilabel:`Temporal controller panel` to manage the map canvas "
+":ref:`temporal navigation <maptimecontrol>`."
+msgstr ""
+"Auf dem Reiter :guilabel:`Zeitlich` können Sie einen zeitlichen Bereich für "
+"Ihr Projekt festzulegen, entweder durch manuelle Eingabe von einem "
+":guilabel:`Startdatum` und einem :guilabel:`Enddatum` oder durch Analysieren"
+" der zeitlichen Layer des Projekts mit :guilabel:`Aus Layern berechnen`. Der"
+" Zeitbereich des Projekts kann dann im Bedienfeld :guilabel:`Zeitsteuerung` "
+"verwendet werden, um die Kartenansicht zeitlich darzustellen; s. auch "
+":ref:`<maptimecontrol>` ."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2784
 msgid "temporal"
 msgstr "temporal"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2093
+msgid "Project Temporal tab"
+msgstr "Der Zeitlich Reiter"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2100
+msgid "Terrain Properties"
+msgstr "Gelände"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2102
+msgid ""
+"The |layoutItem3DMap| :guilabel:`Terrain` tab helps you configure default "
+"settings for the terrain and elevation. When any new :ref:`3d map "
+"<label_3dmapview>` is created in the project, the map will default to using "
+"the same terrain settings as are defined for the project. The project "
+"elevation settings will also be respected by the :ref:`elevation profile "
+"<label_elevation_profile_view>` tool."
+msgstr ""
+"Auf dem Reiter |layoutItem3DMap| :guilabel:`Gelände` können Sie verschiedene"
+" Einstellungen für das Gelände und die Höhe Ihres Projekts konfigurieren. "
+"Wenn Sie dann eine neue :ref:`3D-Kartenansicht <label_3dmapview>` erstellen,"
+" werden automatisch die hier vorgenommen Geländeeinstellungen übernommen. "
+"Die Höheneinstellungen des Projekts werden auch vom :ref:`Höhenprofil "
+"<label_elevation_profile_view>` Werkzeug verwendet."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2720
 msgid "layoutItem3DMap"
 msgstr "layoutItem3DMap"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2115
+msgid "Project Terrain tab"
+msgstr "Der Gelände Reiter"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2117
+msgid ":guilabel:`Terrain` and elevation options are available for:"
+msgstr ""
+"Im Bereich :guilabel:`Gelände` können sie zwischen den folgenden Typen "
+"wählen:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2119
+msgid ":guilabel:`Flat terrain` with :guilabel:`Terrain height` setting"
+msgstr ""
+":guilabel:`Flaches Gelände` mit der Einstellung für die "
+":guilabel:`Geländehöhe`;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2120
+msgid ""
+":guilabel:`DEM (Raster Layer)`: with setting for defining the "
+":guilabel:`Raster layer`, a :guilabel:`Vertical scale` factor to apply to "
+"band values and a vertical :guilabel:`Offset`"
+msgstr ""
+":guilabel:`DHM (Rasterlayer)` mit der Möglichkeit den entsprechenden "
+":guilabel:`DHM-Layer` auszuwählen, einen :guilabel:`Vertikal Maßstab` für "
+"die Bandwerte und einen vertikalen :guilabel:`Versatz` anzugeben;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2123
+msgid ""
+":guilabel:`Mesh`: with setting for defining the :guilabel:`Mesh layer`, a "
+":guilabel:`Vertical scale` factor to apply to vertices Z value and a "
+"vertical :guilabel:`Offset`"
+msgstr ""
+":guilabel:`Netz` mit der Möglichkeit, den entsprechenden "
+":guilabel:`Netzlayer` auszuwählen, einen :guilabel:`Vertikalen Maßstab`, der"
+" auf den Z-Wert der Eckpunkte angewendet wird und einen vertikalen "
+":guilabel:`Versatz` anzugeben."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2127
+msgid ""
+"These settings can be overwritten from the 3D map :ref:`configuration dialog"
+" <scene_configuration>`."
+msgstr ""
+"Diese Einstellungen können mit dem "
+":ref:`Konfigurieren...<scene_configuration>` Dialog einer 3D-Kartenansicht "
+"überschrieben werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2131
+msgid ""
+"With |unchecked| :guilabel:`Global map shading` settings, you apply a global"
+" shading effect to the map, based on the elevation of all the active layers "
+"that have elevation properties enabled, including:"
+msgstr ""
+"Mit der Einstellung |unmarkiert| :guilabel:`Globale Kartenschattierung` "
+"legen Sie für Ihr Projekt einen Schattierungseffekt fest, der auf der Höhe "
+"aller aktiven Layer der folgenden Typen basiert:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2134
+msgid ":ref:`raster layers <raster_elevation>`"
+msgstr ":ref:`Raster-Layer <raster_elevation>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2135
+msgid ":ref:`mesh layers <meshelevation>`"
+msgstr ":ref:`Netz-Layer<meshelevation>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2136
+msgid ":ref:`point cloud layers <point_clouds_elevation>`"
+msgstr ":ref:`Punktwolken-Layer <point_clouds_elevation>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2138
+msgid ""
+":guilabel:`Method to combine`: the elevation value at any particular "
+"position for all the relevant layers are combined, and the considered "
+"elevation is chosen depending on one of these methods:"
+msgstr ""
+":guilabel:`Methode zur Kombination`: um den Höhenwert an einer bestimmten "
+"Position zu ermitteln, werden alle relevanten Layer berücksichtigt, wobei "
+"einer der folgenden Möglichkeiten gewählt werden kann:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2141
+msgid ":guilabel:`Highest elevation` value"
+msgstr ""
+":guilabel:`Höchste Erhebung`: der höchste Wert aller Layer wird verwendet;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2142
+msgid ""
+":guilabel:`Based on layer's order`: the elevation on the topmost layer in "
+"the layer tree is considered."
+msgstr ""
+":guilabel:`Basierend auf der Layerreihenfolge`: die Höhe auf dem obersten "
+"Layer im Layer-Baum wird verwendet."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2144
+msgid "Supported shading options are:"
+msgstr "Unterstützte Schattierungsoptionen sind:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2146
+msgid ""
+"|checkbox| :guilabel:`Eye-dome lighting`: applies shading effects to the map"
+" canvas for a better depth rendering. Following parameters can be "
+"controlled:"
+msgstr ""
+"|checkbox| :guilabel:`Eye-dome-Lighting`: wendet Schattierungseffekte auf "
+"die Kartenansicht an, um eine bessere Tiefenwiedergabe zu erreichen. Die "
+"folgenden Parameter können gesteuert werden:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2149
+msgid ""
+":guilabel:`Strength`: increases the contrast, allowing for better depth "
+"perception"
+msgstr ""
+":guilabel:`Stärke`: erhöht den Kontrast und ermöglicht eine bessere "
+"Tiefenwahrnehmung"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2150
+msgid ""
+":guilabel:`Distance`: represents the distance of the used pixels off the "
+"center pixel and has the effect of making edges thicker."
+msgstr ""
+":guilabel:`Abstand`: stellt den Abstand der verwendeten Pixel vom mittleren "
+"Pixel dar und bewirkt, dass die Ränder dicker werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2153
+msgid ""
+"|unchecked| :guilabel:`Hillshading`, shaping some reliefs on the map using "
+"shading (levels of gray):"
+msgstr ""
+"|unchecked| :guilabel:`Schummerung` generiert Reliefs auf der Karte mithilfe"
+" von Schattierungen (Graustufen):"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2155
+msgid ":guilabel:`Z Factor`: Scaling factor for the elevation value"
+msgstr ":guilabel:`Z-Faktor`: Skalierungsfaktor für den Höhenwert"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2156
+msgid ""
+"|unchecked| :guilabel:`Multidirectional`: Specify if multidirectional "
+"hillshading is to be used"
+msgstr ""
+"|unchecked| :guilabel:`Mehrgerichtet`: Sie können festlegen, ob eine "
+"multidirektionale Schattierung verwendet werden soll."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2157
+msgid ":guilabel:`Azimuth`: The azimuth of the light source"
+msgstr ":guilabel:`Azimut`: Der Azimut der fiktiven Lichtquelle"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2158
+msgid ":guilabel:`Altitude`: The elevation angle of the light source"
+msgstr ":guilabel:`Höhenlage`: Der Neigungswinkel der fiktiven Lichtquelle"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2160
+msgid ""
+"A shortcut to :guilabel:`Global map shading` properties is available through"
+" the :guilabel:`Layer Styling` panel."
+msgstr ""
+"Über das Bedienfeld :guilabel:`Layergestaltung` steht eine Verknüpfung zu "
+"den Eigenschaften von :guilabel:`Globale Kartenschattierung` zur Verfügung."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2168
+msgid "Sensors Properties"
+msgstr "Sensoren"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2170
+msgid ""
+"The |sensor| :guilabel:`Sensors` tab is used to configure sensors and toggle"
+" their connection status. When active, sensors will passively collect data "
+"in the background and make available their latest data to expressions and "
+"python scripts."
+msgstr ""
+"Der Reiter |sensor| :guilabel:`Sensoren` dient dazu, Sensoren zu "
+"konfigurieren und ihren Verbindungsstatus umzuschalten. Wenn sie aktiv sind,"
+" sammeln die Sensoren passiv Daten im Hintergrund und stellen ihre neuesten "
+"Daten für Ausdrücke und Python-Skripte zur Verfügung."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2768
 msgid "sensor"
 msgstr "sensor"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2180
+msgid "Project Sensors tab"
+msgstr "Der Sensor Reiter"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2182
+msgid ""
+"To add a new sensor, click on the |symbologyAdd| button. A settings sub-"
+"panel will open and allow you to configure:"
+msgstr ""
+"Um einen neuen Sensor hinzuzufügen, klicken Sie auf die |symbologyAdd| "
+"Schaltfläche. Es öffnet sich ein Bedienfeld, in dem Sie die folgenden "
+"Einstellungen vornehmen können:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2185
+msgid ""
+"the :guilabel:`Sensor name`: used to retrieve sensor values in expressions "
+"and python scripts;"
+msgstr ""
+":guilabel:`Name` des Sensors: wird verwendet, um Sensorwerte in Ausdrücken "
+"und Python-Skripten abzurufen;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2187
+msgid "the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and"
+msgstr ":guilabel:`Sensortyp`: TCP, UDP oder serielle Schnittstelle;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2188
+msgid "additional type-specific details (e.g. host name and port)"
+msgstr "zusätzliche typspezifische Angaben (z. B. Hostname und Port)."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2195
+msgid "Sensor Settings sub-panel"
+msgstr "Das Sensor-Einstellungen Fenster"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2197
+msgid ""
+"Once a sensor is configured, you can use the |start| :sup:`Start` button to "
+"connect the sensor. Once active, the last collected data will be displayed "
+"in the sensors table's :guilabel:`Last value` column."
+msgstr ""
+"Sobald ein Sensor konfiguriert ist, können Sie mit der Schaltfläche |start| "
+":sup:`Sensorverbindungsstatus umschalten` die Verbindung mit dem Sensor "
+"herstellen. Wenn die Verbindung aktiv ist, werden die zuletzt erfassten "
+"Daten in der Spalte :guilabel:`Letzter Wert` der Sensortabelle angezeigt."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2772
 msgid "start"
@@ -3298,9 +5243,25 @@ msgstr "start"
 msgid "Customization"
 msgstr "Anpassung"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2208
+msgid ""
+"The :guilabel:`Customization` dialog lets you (de)activate almost every "
+"element in the QGIS user interface. This can be very useful if you want to "
+"provide your end-users with a 'light' version of QGIS, containing only the "
+"icons, menus or panels they need."
+msgstr ""
+"Mit dem Dialog :guilabel:`Oberflächenanpassung` im Menü "
+":guilabel:`Einstellungen` können Sie fast jedes Element der QGIS-"
+"Benutzeroberfläche (de)aktivieren. Dies kann sehr nützlich sein, wenn Sie "
+"Ihren Endbenutzern eine \"Light\"-Version von QGIS zur Verfügung stellen "
+"möchten, die nur die Symbole, Menüs oder Bedienfelder enthält, die sie "
+"benötigen."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2213
 msgid "Before your changes are applied, you need to restart QGIS."
-msgstr "Bevor Ihre Änderungen übernommen werden, müssen Sie QGIS neu starten."
+msgstr ""
+"Bevor die Änderungen an der Benutzeroberfläche übernommen werden, müssen Sie"
+" QGIS neu starten."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2220
 msgid "The Customization dialog"
@@ -3312,43 +5273,69 @@ msgid ""
 "first step on the way to QGIS customization. This enables the toolbar and "
 "the widget panel from which you can uncheck and thus disable some GUI items."
 msgstr ""
-"Die |checkbox| :guilabel:`Anpassung aktivieren` Checkbox anzuklicken ist der"
-" erste Schritt, zur QGIS Anpassung. Dies aktiviert die Werkzeugleiste und "
-"das Widget-Panel, hier können Sie einige QGIS Elemente unsichtbar schalten."
+"Bevor Sie Änderungen an der Oberfläche vornehmen können, müssen Sie "
+"|checkbox| :guilabel:`Anpassung aktivieren` anklicken. Dies aktiviert die "
+"Werkzeugleiste und das Widget-Panel, hier können Sie einige QGIS Elemente "
+"unsichtbar schalten."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2226
 msgid "The configurable item can be:"
-msgstr "Die konfigurierbaren Elemente können sein:"
+msgstr "Die deaktivierbaren Elemente können sein:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2228
 msgid "a **Menu** or some of its sub-menus from the :ref:`label_menubar`"
 msgstr ""
-"ein **Menü** oder einige ihrer Untermenüs von dem :ref:`label_menubar`"
+"aus dem **Menu** ein kompletter Eintrag oder ein Untermenü (s. "
+":ref:`label_menubar`);"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2229
 msgid "a whole **Panel** (see :ref:`sec_panels_and_toolbars`)"
-msgstr "das komplette **Panel** (siehe :ref:`sec_panels_and_toolbars`)"
+msgstr "ein komplettes **Panel** (s. :ref:`sec_panels_and_toolbars`);"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2230
 msgid ""
 "the **Status bar** described in :ref:`label_statusbar` or some of its items"
-msgstr ""
-"die **Statusleiste** beschrieben in :ref:`label_statusbar` oder einige ihrer"
-" Elemente"
+msgstr "die **Statusleiste** oder Teile davon (s. :ref:`label_statusbar`);"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2231
 msgid "a **Toolbar**: the whole bar or some of its icons"
-msgstr "eine **Werkzeugleiste**: die komplette oder einige ihrer Icons"
+msgstr "im **Browser** angezeigte Dateitypen;"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2232
 msgid "or any **widget** from any dialog in QGIS: label, button, combobox..."
 msgstr ""
-"oder irgendein **Widget** aus irgendeinem QGIS Dialog: Beschriftung, Knöpfe,"
-" Komboboxen..."
+"ein beliebiges **Element** (\"Widget\") aus einem beliebigen QGIS Dialog: "
+"Beschriftung, Knöpfe, Komboboxen..."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2234
+msgid ""
+"With |select| :sup:`Switch to catching widgets in main application`, you can"
+" click on an item in QGIS interface that you want to be hidden and QGIS "
+"automatically unchecks the corresponding entry in the Customization dialog. "
+"You can also use the :guilabel:`Search` box to find items by their name or "
+"label."
+msgstr ""
+"Mit |select| :sup:`Umschalten um Bedienelemente in der Hauptanwendung zu "
+"fangen` können Sie auf ein Element in der QGIS-Oberfläche klicken, das "
+"ausgeblendet werden soll, und QGIS deaktiviert automatisch die Markierung "
+"des entsprechenden Eintrags im Anpassungsdialog. Sie können auch das Feld "
+":guilabel:`Suchen` verwenden, um Elemente anhand ihres Namens oder ihrer "
+"Bezeichnung zu finden."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2760
 msgid "select"
 msgstr "select"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2239
+msgid ""
+"Once you setup your configuration, click :guilabel:`Apply` or :guilabel:`OK`"
+" to validate your changes. This configuration becomes the one used by "
+"default by QGIS at the next startup."
+msgstr ""
+"Wenn Sie Ihre Einstellungen vorgenommen haben, klicken Sie auf "
+":guilabel:`Anwenden` oder :guilabel:`OK`, um Ihre Änderungen zu bestätigen. "
+"Die Einstellungen werden ab dem nächsten Start von QGIS standardmäßig "
+"verwendet."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2242
 msgid ""
@@ -3359,68 +5346,497 @@ msgid ""
 "You can also run :ref:`command line tools <custom_commandline>` and save "
 "various setups for different use cases as well."
 msgstr ""
-"Die Modifikationen können auch in einer ``.ini`` Datei gespeichert werden "
-"unter Verwendung des |fileSave| :sup:`Als Datei speichern` Knopfs. Dies ist "
-"eine praktische Möglichkeit, eine gemeinsame QGIS Schnittstelle zwischen "
-"mehreren Benutzern zu teilen. Klicken Sie einfach auf |Fileopen| :Sup:`Laden"
-" von Datei` von dem Zielcomputer aus, um die``.ini`` Datei zu importieren. "
-"Sie können auch  :ref:`command line tools <custom_commandline>` starten und "
-"verschiedene Einstellungen für verschiedene Anwendungsfälle speichern."
+"Die Modifikationen können mit |fileSave| :sup:`Als Datei speichern` in einer"
+" ``.ini`` Datei gesichert werden. Mit dieser Option kann auch eine bestimmte"
+" Konfiguration für mehrere Benutzer eingerichtet werden. Mit |Fileopen| "
+":Sup:`Aus Datei laden` kann die``.ini`` Datei auf anderen Rechnern "
+"importiert werden. Sie können auch verschiedene Einstellungen für "
+"verschiedene Anwendungsfälle speichern und diese dann beim Start von QGIS "
+"über die :ref:`Kommandozeile aufrufen <custom_commandline>`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2251
 msgid "**Easily restore predefined QGIS**"
-msgstr "**Voreingestelltes QGIS einfach wiederherstellen**"
+msgstr "**Standardeinstellungen einfach wiederherstellen**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2253
 msgid ""
 "The initial QGIS GUI configuration can be restored by one of the methods "
 "below:"
 msgstr ""
-"Die erste QGIS GUI-Konfiguration kann durch eine der Methoden unten "
-"wiederhergestellt werden:"
+"Mit einer der unten aufgeführten Methoden kann die standardmäßige QGIS GUI-"
+"Konfiguration wiederhergestellt werden:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2255
 msgid ""
 "unchecking |checkbox| :guilabel:`Enable customization` option in the "
 "Customization dialog or click the |selectAllTree| :sup:`Check All` button"
 msgstr ""
-"deaktivieren Sie |checkbox| :guilabel:`Anpassung aktivieren` im "
-"Anpassungsdialog oder klicken Sie |selectAllTree| :sup:`Alle überprüfen`"
+"deaktivieren Sie |checkbox| :guilabel:`Anpassung aktivieren` oder klicken "
+"Sie auf |selectAllTree| :sup:`Alle anhaken`;"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2762
 msgid "selectAllTree"
 msgstr "selectAllTree"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2257
+msgid ""
+"pressing the :guilabel:`Reset` button in the **Settings** frame under "
+":menuselection:`Settings --> Options` menu, :guilabel:`System` tab"
+msgstr ""
+"drücken Sie im Menü :menuselection:`Einstellungen --> Optionen` auf dem "
+"Reiter :guilabel:`System` im Bereich **Einstellungen** auf die "
+":guilabel:`Zurücksetzen` Schaltfläche;"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2259
 msgid ""
 "launching QGIS at a command prompt with the following command line ``qgis "
 "--nocustomization``"
 msgstr ""
-"starte QGIS an einer Eingabeaufforderung mit der folgenden Befehlszeile "
-"``qgis --customization``"
+"starten Sie QGIS über die Eingabeaufforderung mit dem Befehl ``qgis "
+"--nocustomization``;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2261
+msgid ""
+"setting to ``false`` the value of :menuselection:`UI --> Customization --> "
+"Enabled` variable under :menuselection:`Settings --> Options` menu, "
+":guilabel:`Advanced` tab (see the :ref:`warning <optionsadvanced>`)."
+msgstr ""
+"setzen Sie im Menü :menuselection:`Einstellungen --> Optionen` auf dem "
+"Reiter :guilabel:`Erweitert` den Wert der Variablen :menuselection:`UI --> "
+"Customization --> Enabled` auf ``false`` (Beachten Sie die :ref:`Warnung "
+"<optionsadvanced>`)."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2265
 msgid ""
 "In most cases, you need to restart QGIS in order to have the change applied."
 msgstr ""
-"In den meisten Fällen müssen Sie QGIS neu starten, damit die Änderungen "
-"angewendet werden."
+"In den meisten Fällen müssen Sie QGIS neu starten, damit die Änderung "
+"übernommen werden."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2271
 msgid "Keyboard shortcuts"
 msgstr "Tastenkürzel"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2273
+msgid ""
+"QGIS provides default keyboard shortcuts for many features. You can find "
+"them in section :ref:`label_menubar`. Additionally, the menu option "
+":menuselection:`Settings -->` |keyboardShortcuts| :menuselection:`Keyboard "
+"Shortcuts...` allows you to change the default keyboard shortcuts and add "
+"new ones to QGIS features."
+msgstr ""
+"QGIS bietet Standard-Tastaturkürzel für viele Funktionen, Sie finden diese "
+"im Abschnitt :ref:`label_menubar`. Über den Menüpunkt "
+":menuselection:`Einstellungen -->` |keyboardShortcuts| "
+":menuselection:`Tastenkürzel...` können Sie die Standard-Tastaturkürzel "
+"ändern und neue hinzufügen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2284
+msgid "Define shortcut options"
+msgstr "Das Fenster der Tastenkürzel"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2286
+msgid ""
+"Configuration is very simple. Use the search box at the top of the dialog to"
+" find a particular action, select it from the list and click on :"
+msgstr ""
+"Die Konfiguration ist sehr einfach. Verwenden Sie das Suchfeld oben im "
+"Dialogfeld, um eine bestimmte Aktion zu finden, wählen Sie diese in der "
+"Liste aus und klicken dann auf:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2289
+msgid ""
+":guilabel:`Change` and press the new combination you want to assign as new "
+"shortcut"
+msgstr ""
+":guilabel:`Ändern` und drücken Sie die neue Kombination, die Sie als neuen "
+"Shortcut zuweisen möchten;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2290
+msgid ":guilabel:`Set None` to clear any assigned shortcut"
+msgstr ":guilabel:`Leer setzen` um eine zugewiesene Verknüpfung zu löschen;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2291
+msgid ""
+"or :guilabel:`Set Default` to backup the shortcut to its original and "
+"default value."
+msgstr ""
+"oder :guilabel:`Voreinstellung` um die Verknüpfung auf ihren ursprünglichen "
+"Standardwert zurückzusetzen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2293
+msgid ""
+"Proceed as above for any other tools you wish to customize. Once you have "
+"finished your configuration, simply :guilabel:`Close` the dialog to have "
+"your changes applied. You can also :guilabel:`Save` the changes either as an"
+" :file:`.XML` file with only the User Shortcuts or with all Shortcuts or as "
+"an :file:`.PDF` file with all Shortcuts and :guilabel:`Load` them into "
+"another QGIS installation."
+msgstr ""
+"Verfahren Sie wie oben für alle anderen Aktionen, die Sie anpassen möchten. "
+"Wenn Sie Ihre Konfiguration abgeschlossen haben, schließen Sie einfach den "
+"Dialog, um die Änderungen zu übernehmen. Sie können die Änderungen auch "
+":guilabel:`Speichern...`, entweder als :file:`.XML`-Datei nur mit den "
+"benutzerdefinierten Tastenkürzeln oder mit allen Tastenkürzeln oder als "
+":file:`.PDF`-Datei mit allen Tastenkürzeln. Ebenso können sie "
+"benutzerdefinierte Einstellungen aus einer Datei :guilabel:`Laden...`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2303
+msgid "Running QGIS with advanced settings"
+msgstr "QGIS mit erweiterten Einstellungen ausführen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2306
+msgid "Command line and environment variables"
+msgstr "Eingabeaufforderung und Umgebungsvariablen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2308
+msgid ""
+"We've seen that :ref:`launching QGIS <label_startingqgis>` is done as for "
+"any application on your OS. QGIS provides command line options for more "
+"advanced use cases (in some cases you can use an environment variable "
+"instead of the command line option). To get a list of the options, enter "
+"``qgis --help`` on the command line, which returns::"
+msgstr ""
+"QGIS bietet Kommandozeilenoptionen für fortgeschrittene Anwendungsfälle (in "
+"einigen Fällen können Sie eine Umgebungsvariable anstelle der "
+"Kommandozeilenoption verwenden). Um eine Liste der Optionen zu erhalten, "
+"geben Sie ``qgis --help`` in der Kommandozeile ein, was Folgendes "
+"zurückgibt::"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2361
+msgid "**Example Using command line arguments**"
+msgstr "**Beispiel für die Verwendung von Kommandozeilen-Argumenten**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2363
+msgid ""
+"You can start QGIS by specifying one or more data files on the command line."
+" For example, assuming you are in the :file:`qgis_sample_data` directory, "
+"you could start QGIS with a vector layer and a raster file set to load on "
+"startup using the following command: ``qgis ./raster/landcover.img "
+"./gml/lakes.gml``"
+msgstr ""
+"Sie können eine oder mehrere Dateien direkt beim Start von QGIS laden, indem"
+" Sie diese in der Kommandozeile angeben. Wenn Sie sich zum Beispiel im "
+"Verzeichnis :file:`qgis_sample_data` befinden, können Sie QGIS mit einem "
+"Vektor-Layer und einer Rasterdatei starten, indem Sie den folgenden Befehl "
+"verwenden: ``qgis ./raster/landcover.img ./gml/lakes.gml``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2370
+msgid "``--version``"
+msgstr "``--version``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2372
+msgid "This option returns QGIS version information."
+msgstr "Diese Option liefert QGIS Versionsinformationen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2375
+msgid "``--snapshot``"
+msgstr "``--snapshot``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2377
+msgid ""
+"This option allows you to create a snapshot in PNG format from the current "
+"view. This comes in handy when you have many projects and want to generate "
+"snapshots from your data, or when you need to create snapshots of the same "
+"project with updated data."
+msgstr ""
+"Mit dieser Option können Sie ein Bildschirmfoto im PNG-Format von der "
+"aktuellen Ansicht erstellen. Dies ist z.B. praktisch, wenn Sie "
+"Bildschirmfotos desselben Projekts mit verschiedenen Daten erstellen müssen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2382
+msgid ""
+"Currently, it generates a PNG file with 800x600 pixels. The size can be "
+"adjusted using the ``--width`` and ``--height`` arguments. The filename can "
+"be added after ``--snapshot``. For example::"
+msgstr ""
+"Ohne weitere Angaben wird eine PNG-Datei mit 800x600 Pixeln erzeugt. Die "
+"Größe kann mit den Argumenten ``--width`` und ``--height`` angepasst werden."
+" Der Dateiname kann nach ``--snapshot`` hinzugefügt werden. Zum Beispiel::"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2389
+msgid "``--width``"
+msgstr "``--width``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2391
+msgid ""
+"This option returns the width of the snapshot to be emitted (used with "
+"``--snapshot``)."
+msgstr ""
+"Diese Option gibt die Breite des auszugebenden Schnappschusses an (wird "
+"zusammen mit ``-snapshot`` verwendet`)."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2394
+msgid "``--height``"
+msgstr "``--height``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2396
+msgid ""
+"This option returns the height of the snapshot to be emitted (used with "
+"``--snapshot``)."
+msgstr ""
+"Diese Option gibt die Höhe des auszugebenden Schnappschusses an (wird "
+"zusammen mit ``-snapshot`` verwendet)."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2399
+msgid "``--lang``"
+msgstr "``--lang``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2401
+msgid ""
+"Based on your locale, QGIS selects the correct localization. If you would "
+"like to change your language, you can specify a language code. For example, "
+"``qgis --lang it`` starts QGIS in Italian localization."
+msgstr ""
+"Mit dieser Option kann für die QGIS Lokale (Sprache der Oberfläche, "
+"Zahlenformat, etc) eine von der ursprünglichen Installation abweichende "
+"Auswahl getroffen werden. Zum Beispiel startet ``qgis --lang it`` QGIS in "
+"der italienischen Lokalisierung."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2406
+msgid "``--project``"
+msgstr "``--project``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2408
+msgid ""
+"Starting QGIS with an existing project file is also possible. Just add the "
+"command line option ``--project`` followed by your project name and QGIS "
+"will open with all layers in the given file loaded."
+msgstr ""
+"Es ist auch möglich, QGIS mit einer bestehenden Projektdatei zu starten. "
+"Fügen Sie einfach die Kommandozeilenoption ``--project`` gefolgt von Ihrem "
+"Projektnamen hinzu und QGIS wird mit dem entsprechenden Projekt gestartet."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2413
 msgid "``--extent``"
 msgstr "``--extent``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2415
+msgid ""
+"To start with a specific map extent use this option. You need to add the "
+"bounding box of your extent in the following order separated by a comma::"
+msgstr ""
+"Verwenden Sie diese Option, um mit einem bestimmten Kartenausschnitt zu "
+"beginnen. Sie müssen die Angaben für den Ausschnitt Ihres Bereichs in der "
+"folgenden Reihenfolge durch ein Komma getrennt hinzufügen::"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2420
+msgid ""
+"This option probably makes more sense when paired with the ``--project`` "
+"option to open a specific project at the desired extent."
+msgstr ""
+"Diese Möglichkeit kann gut mit der Option ``--project`` kombiniert werden, "
+"um ein bestimmtes Projekt in der gewünschten Größe zu öffnen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2424
+msgid "``--nologo``"
+msgstr "``--nologo``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2426
+msgid "This option hides the splash screen when you start QGIS."
+msgstr "Diese Option blendet den Startbildschirm aus, wenn Sie QGIS starten."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2429
+msgid "``--noversioncheck``"
+msgstr "``--noversioncheck``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2431
+msgid "Skip searching for a new version of QGIS at startup."
+msgstr ""
+"Damit überspringen Sie die Suche nach einer neuen Version von QGIS beim "
+"Starten."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2434
+msgid "``--noplugins``"
+msgstr "``--noplugins``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2436
+msgid ""
+"If you have trouble at start-up with plugins, you can avoid loading them at "
+"start-up with this option. They will still be available from the Plugins "
+"Manager afterwards."
+msgstr ""
+"Wenn Sie beim Start Probleme mit Plugins haben, können Sie mit dieser Option"
+" das Laden der Plugins beim Start unterbinden. Sie sind danach immer noch "
+"über den Plugin-Manager verfügbar."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2441
+msgid "``--nocustomization``"
+msgstr "``--nocustomization``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2443
+msgid ""
+"Using this option, any existing :ref:`GUI customization <sec_customization>`"
+" will not be applied at startup. This means that any hidden buttons, menu "
+"items, toolbars, and so on, will show up on QGIS start up. This is not a "
+"permanent change. The customization will be applied again if QGIS is "
+"launched without this option."
+msgstr ""
+"Mit dieser Option werden alle vorgenommene :ref:`Oberflächen Anpassungen "
+"<sec_customization>` beim Start ignoriert. Das bedeutet, dass QGIS mit allen"
+" Standardeinstellungen, wie bei einer Neuinstallation gestartet wird. Dies "
+"ist keine permanente Änderung, die Anpassungen werden wieder angewendet, "
+"wenn QGIS ohne diese Option gestartet wird."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2449
+msgid ""
+"This option is useful for temporarily allowing access to tools that have "
+"been removed by customization."
+msgstr ""
+"Diese Option ist nützlich, um vorübergehend den Zugriff auf Werkzeuge zu "
+"ermöglichen, die durch Anpassung entfernt wurden."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2455
 msgid "``--skipbadlayers``"
 msgstr "``--skipbadlayers``"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2457
+msgid ""
+"Using this option, you can avoid QGIS prompting the :guilabel:`Handle "
+"Unavailable Layers` dialog at startup. The project file is loaded, with "
+"missing layers kept as unavailable. More details on the topic at "
+":ref:`handle_broken_paths`."
+msgstr ""
+"Mit dieser Option können Sie vermeiden, dass QGIS beim Start den Dialog "
+":guilabel:`Nicht verfügbare Layer behandeln` anzeigt. Fehlende Layer werden "
+"dann beim Starten eines Projekts als nicht verfügbar gekennzeichnet. Mehr "
+"Details zu diesem Thema unter :ref:`handle_broken_paths`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2464
+msgid "``--customizationfile``"
+msgstr "``--customizationfile``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2466
+msgid ""
+"Using this option, you can define a UI customization file, that will be used"
+" at startup."
+msgstr ""
+"Mit dieser Option können Sie eine UI-Anpassungsdatei definieren, die beim "
+"Start verwendet wird."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2470
+msgid "``--globalsettingsfile``"
+msgstr "``--globalsettingsfile``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2472
+msgid "The equivalent environment variable is ``QGIS_GLOBAL_SETTINGS_FILE``."
+msgstr ""
+"Die entsprechende Umgebungsvariable ist ``QGIS_GLOBAL_SETTINGS_FILE``."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2474
+msgid ""
+"Using this option, you can specify the path for a Global Settings file "
+"(``.ini``), also known as the Default Settings. The settings in the "
+"specified file replace the original inline default ones, but the user "
+"profiles' settings will be set on top of those."
+msgstr ""
+"Mit dieser Option können Sie den Pfad zu einer ``.ini``-Datei mit globalen "
+"Einstellungen (auch Standardeinstellungen genannt) angeben. Die Definitionen"
+" in der angegebenen Datei ersetzen die ursprünglichen Inline-"
+"Standardeinstellungen, wobei die Einstellungen des Benutzerprofils "
+"zusätzlich gesetzt werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2479
+msgid ""
+"QGIS looks for the default global settings file in the following order and "
+"only the first found file will be used:"
+msgstr ""
+"QGIS sucht in der folgenden Reihenfolge nach der globalen "
+"Standardeinstellungsdatei, wobei die erste gefundene Datei verwendet wird:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2482
+msgid "path specified by the commandline parameter"
+msgstr "in dem Pfad, der durch diesen Kommandozeilenparameter angegeben wird"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2483
+msgid "path defined by the environment variable"
+msgstr "in dem Pfad, der durch die Umgebungsvariable angegeben wird"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2484
+msgid ""
+"the AppDataLocation folder, where persistent application data can be stored;"
+" it is managed by the user or system administrator and is not touched by "
+"installer and does not require any additional setup like passing commandline"
+" parameters or settings environment variable. Depending on the OS, it is:"
+msgstr ""
+"im AppDataLocation-Ordner, in dem persistente Anwendungsdaten gespeichert "
+"werden können; dieser wird vom Benutzer oder Systemadministrator verwaltet "
+"und wird vom Installationsprogramm nicht verändert und erfordert keine "
+"zusätzliche Einrichtung wie die Übergabe von Befehlszeilenparametern oder "
+"Umgebungsvariablen. Je nach Betriebssystem ist dieser Ordner:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2489
+msgid "|nix| :file:`$HOME/.local/share/QGIS/QGIS3/`"
+msgstr "|nix| :file:`$HOME/.local/share/QGIS/QGIS3/`"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2490
 msgid "|win| :file:`C:\\\\Users\\\\<username>\\\\%AppData%\\\\Roaming\\\\QGIS\\\\QGIS3\\\\`"
 msgstr "|win| :file:`C:\\\\Users\\\\<username>\\\\%AppData%\\\\Roaming\\\\QGIS\\\\QGIS3\\\\`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2491
+msgid "|osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`"
+msgstr "|osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2492
+msgid ""
+"the installation directory, i.e. "
+":file:`your_QGIS_package_path/resources/qgis_global_settings.ini`."
+msgstr ""
+"im Installationsverzeichnis, d.h. unter "
+":file:`Ihr_QGIS_Installationspfad/resources/qgis_global_settings.ini`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2494
+msgid ""
+"Presently, there's no way to specify a file to write settings to; therefore,"
+" you can create a copy of an original settings file, rename, and adapt it."
+msgstr ""
+"Es gibt derzeit keine Möglichkeit, die Einstellungen von QGIS aus in eine "
+"Datei zu schreiben; Sie können daher lediglich eine Kopie der ursprünglichen"
+" Einstellungsdatei erstellen, diese umbenennen und anpassen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2497
+msgid ""
+"Setting the :file:`qgis_global_setting.ini` file path to a network shared "
+"folder, allows a system administrator to change global settings and defaults"
+" in several machines by only editing one file."
+msgstr ""
+"Das Festlegen des Dateipfads für die Datei :file:`qgis_global_setting.ini` "
+"auf einen gemeinsam genutzten Netzlaufwerksordner ermöglicht es einem "
+"Systemadministrator, globale Einstellungen und Standardwerte für mehrere "
+"Rechner zu verwalten, indem er nur eine Datei bearbeitet."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2502
+msgid "``--authdbdirectory``"
+msgstr "``--authdbdirectory``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2504
+msgid ""
+"This option is similar to ``--globalsettingsfile``, but defines the path to "
+"the directory where the authentication database will be stored and loaded."
+msgstr ""
+"Diese Option ist ähnlich wie ``--globalsettingsfile``, definiert aber den "
+"Pfad zu dem Verzeichnis, in dem die Authentifizierungsdatenbank gespeichert "
+"und geladen wird."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2508
+msgid "``--code``"
+msgstr "``--code``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2510
+msgid ""
+"This option can be used to run a given python file directly after QGIS has "
+"started."
+msgstr ""
+"Diese Option kann verwendet werden, um eine bestimmte Python-Datei direkt "
+"nach dem Start von QGIS auszuführen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2513
+msgid ""
+"For example, when you have a python file named :file:`load_alaska.py` with "
+"following content:"
+msgstr ""
+"Wenn Sie zum Beispiel eine Python-Datei mit dem Namen :file:`load_alaska.py`"
+" mit folgendem Inhalt haben:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2716
 msgid "kde"

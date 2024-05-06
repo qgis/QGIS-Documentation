@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
@@ -54,25 +54,11 @@ msgstr ""
 "**Ziel dieser Lektion:** Zu erlernen, wie mit Hilfe der QGIS DB-Verwaltung "
 "mit räumlichen Datenbanken interagiert."
 
-#: ../../docs/training_manual/databases/db_manager.rst:16
-msgid ""
-"You should first open the DB Manager interface by selecting "
-":guilabel:`Database --> DB Manager --> DB Manager` on the menu or by "
-"selecting the DB Manager icon on the toolbar."
-msgstr ""
-"Öffnen Sie als Erstes die DB-Verwaltung durch Auswahl von "
-":guilabel:`Datenbank --> DB-Verwaltung` im Menü durch Auswahl der "
-"Schaltfläche DB-Verwaltung in der Werkzeugleiste."
-
-#: ../../docs/training_manual/databases/db_manager.rst:20
-msgid "|dbManager|"
-msgstr "|dbManager|"
-
-#: ../../docs/training_manual/databases/db_manager.rst:297
+#: ../../docs/training_manual/databases/db_manager.rst:294
 msgid "dbManager"
 msgstr "dbManager"
 
-#: ../../docs/training_manual/databases/db_manager.rst:26
+#: ../../docs/training_manual/databases/db_manager.rst:24
 msgid ""
 "The first thing you may notice is that you can now see some metadata about "
 "the Schemas contained in your database."
@@ -80,7 +66,7 @@ msgstr ""
 "Als Erstes fällt uns vielleicht auf, dass einige Metadaten über die in der "
 "Datenbank enthaltenen Schemas angezeigt werden."
 
-#: ../../docs/training_manual/databases/db_manager.rst:32
+#: ../../docs/training_manual/databases/db_manager.rst:30
 msgid ""
 "Schemas are a way of grouping data tables and other objects in a PostgreSQL "
 "database and a container for permissions and other constraints. Managing "
@@ -100,7 +86,7 @@ msgstr ""
 "effektive Verwaltung andere Werkzeuge wie pgAdmin III oder die Kommandozeile"
 " erforderlich."
 
-#: ../../docs/training_manual/databases/db_manager.rst:43
+#: ../../docs/training_manual/databases/db_manager.rst:40
 msgid ""
 "DB Manager can also be used to manage the tables within your database. We "
 "have already looked at various ways to create and manage tables on the "
@@ -111,7 +97,7 @@ msgstr ""
 "Verwaltung von Tabellen mit Hilfe der Kommandozeile behandelt. Sehen wir uns"
 " nun an, wie man das mit der DB-Verwaltung erledigen kann."
 
-#: ../../docs/training_manual/databases/db_manager.rst:48
+#: ../../docs/training_manual/databases/db_manager.rst:45
 msgid ""
 "First, its useful to just look at a table's metadata by clicking on its name"
 " in tree and looking in the :guilabel:`Info` tab."
@@ -120,7 +106,7 @@ msgstr ""
 "klickt dazu im Baum auf den Namen der Tabelle und schaut sich den "
 ":guilabel:`Info` Reiter an."
 
-#: ../../docs/training_manual/databases/db_manager.rst:54
+#: ../../docs/training_manual/databases/db_manager.rst:51
 msgid ""
 "In this panel you can see the :guilabel:`General Info` about the table as "
 "well the information that the PostGIS extension maintains about the geometry"
@@ -131,7 +117,7 @@ msgstr ""
 "räumliche Bezugssystem, die von der PostGIS Erweiterung bereitgestellt "
 "werden."
 
-#: ../../docs/training_manual/databases/db_manager.rst:58
+#: ../../docs/training_manual/databases/db_manager.rst:55
 msgid ""
 "If you scroll down in the :guilabel:`Info` tab, you can see more information"
 " about the :guilabel:`Fields`, :guilabel:`Constraints` and "
@@ -141,7 +127,7 @@ msgstr ""
 "weitere Informationen zu :guilabel:`Felder`, :guilabel:`Constraints` und "
 ":guilabel:`Indexes` bezüglich der aktuellen Tabelle."
 
-#: ../../docs/training_manual/databases/db_manager.rst:65
+#: ../../docs/training_manual/databases/db_manager.rst:62
 msgid ""
 "Its also very useful to use DB Manager to simply look at the records in the "
 "database in much the same way you might do this by viewing the attribute "
@@ -152,7 +138,7 @@ msgstr ""
 "ähnlich der Attributtabelle eines Layers im Layerbaum. Sie können die Daten "
 "im Reiter :guilabel:`Tabelle` durchsehen."
 
-#: ../../docs/training_manual/databases/db_manager.rst:73
+#: ../../docs/training_manual/databases/db_manager.rst:70
 msgid ""
 "There is also a :guilabel:`Preview` tab which will show you the layer data "
 "in a map preview."
@@ -160,7 +146,7 @@ msgstr ""
 "Es gibt auch einen :guilabel:`Vorschau` Reiter, der die Layerdaten als "
 "Kartenvorschau zeigt."
 
-#: ../../docs/training_manual/databases/db_manager.rst:76
+#: ../../docs/training_manual/databases/db_manager.rst:73
 msgid ""
 "Right-clicking on a layer in the tree and clicking :guilabel:`Add to Canvas`"
 " will add this layer to your map."
@@ -168,7 +154,7 @@ msgstr ""
 "Mit Rechtsklick auf den Layer im Baum und Klick auf :guilabel:`Zur Karte "
 "hinzufügen` wird der Layer in Ihre Karte eingefügt."
 
-#: ../../docs/training_manual/databases/db_manager.rst:79
+#: ../../docs/training_manual/databases/db_manager.rst:76
 msgid ""
 "So far we have only been viewing the database its schemas and tables and "
 "their metadata, but what if we wanted to alter the table to add an "
@@ -179,11 +165,11 @@ msgstr ""
 "eine neue Spalte hinzufügen möchte? Die DB-Verwaltung erlaubt uns, dass "
 "direkt zu machen."
 
-#: ../../docs/training_manual/databases/db_manager.rst:84
+#: ../../docs/training_manual/databases/db_manager.rst:81
 msgid "Select the table you want to edit in the tree"
 msgstr "Wählen Sie die Tabelle, die sie bearbeiten möchten im Baum"
 
-#: ../../docs/training_manual/databases/db_manager.rst:91
+#: ../../docs/training_manual/databases/db_manager.rst:88
 msgid ""
 "You can use this dialog to Add Columns, Add geometry columns, edit existing "
 "columns or to remove a column completely."
@@ -192,7 +178,7 @@ msgstr ""
 "hinzuzufügen, vorhandene Spalten zu bearbeiten oder Spalten komplett zu "
 "entfernen."
 
-#: ../../docs/training_manual/databases/db_manager.rst:94
+#: ../../docs/training_manual/databases/db_manager.rst:91
 msgid ""
 "Using the :guilabel:`Constraints` tab, you can manage which fields are used "
 "as the primary key or to drop existing constraints."
@@ -201,7 +187,7 @@ msgstr ""
 " Felder als Primärschlüssel verwendet werden oder um vorhandene "
 "Einschränkungen zu entfernen."
 
-#: ../../docs/training_manual/databases/db_manager.rst:100
+#: ../../docs/training_manual/databases/db_manager.rst:97
 msgid ""
 "The :guilabel:`Indexes` tab can be used to add and delete both spatial and "
 "normal indexes."
@@ -209,7 +195,7 @@ msgstr ""
 "Im Reiter :guilabel:`Indizes` können normale oder räumliche Indizes "
 "hinzugefügt oder gelöscht werden."
 
-#: ../../docs/training_manual/databases/db_manager.rst:109
+#: ../../docs/training_manual/databases/db_manager.rst:106
 msgid ""
 "Now that we have gone through the process of working with existing tables in"
 " our database, let's use DB Manager to create a new table."
@@ -217,14 +203,14 @@ msgstr ""
 "Nachdem wir den Prozess zur Arbeit mit vorhandenen Tabellen durchgegangen "
 "sind, nutzen wir die DB-Verwaltung jetzt zur Erstellung einer neuen Tabelle."
 
-#: ../../docs/training_manual/databases/db_manager.rst:114
+#: ../../docs/training_manual/databases/db_manager.rst:111
 msgid ""
 "From the menu select :guilabel:`Table --> Create Table` to bring up the "
 "Create Table dialog."
 msgstr ""
 "Wählen Sie :guilabel:`Tabelle --> Tabelle erzeugen` um den Dialog zu öffnen."
 
-#: ../../docs/training_manual/databases/db_manager.rst:124
+#: ../../docs/training_manual/databases/db_manager.rst:121
 msgid ""
 "Click the checkbox to :guilabel:`Create spatial index` and click "
 ":guilabel:`Create` to create the table."
@@ -232,7 +218,7 @@ msgstr ""
 "Setzen Sie den Haken bei :guilabel:`Räumlichen Index erzeugen` und klicken "
 "dann auf :guilabel:`Erzeugen`, um die Tabelle zu erstellen."
 
-#: ../../docs/training_manual/databases/db_manager.rst:147
+#: ../../docs/training_manual/databases/db_manager.rst:144
 msgid ""
 "Database tables can often become quite large and tables which are being "
 "modified frequently can end up leaving around remnants of records that are "
@@ -246,7 +232,7 @@ msgstr ""
 "verringert die Größe der Tabellen. Bei Bedarf analysiert er die Tabellen, um"
 " eine höhere Geschwindigkeit der Datenbank zu erreichen."
 
-#: ../../docs/training_manual/databases/db_manager.rst:163
+#: ../../docs/training_manual/databases/db_manager.rst:160
 msgid ""
 "You can find more information about the VACUUM ANALYZE process in the "
 "`PostgreSQL Documentation on VACUUM ANALYZE "
