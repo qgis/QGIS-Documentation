@@ -837,6 +837,10 @@ msgid ""
 "selector <extent_selector>` widget"
 msgstr ":ref:`범위 선택기 <extent_selector>` 위젯을 이용해서 저장하고자 하는 영역의 범위를 선택하십시오."
 
+#: ../../docs/user_manual/map_views/map_view.rst:337
+msgid "Change the map :guilabel:`Rotation`"
+msgstr "맵의 :guilabel:`Rotation` 회전 각도를 변경하십시오."
+
 #: ../../docs/user_manual/map_views/map_view.rst:338
 msgid "Indicate the :guilabel:`CRS` to use for the extent"
 msgstr "선택한 범위에 사용할 :guilabel:`CRS` 좌표계를 지정하십시오."
@@ -1042,6 +1046,15 @@ msgid ""
 "You can also drag and drop the bookmark between folders (user and project) "
 "and subfolders (groups)."
 msgstr "폴더(사용자 또는 프로젝트) 또는 하위 폴더(그룹)로 북마크를 드래그&드롭할 수도 있습니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:408
+msgid ""
+"You can manage bookmark actions by right-click on the desired bookmark in "
+"the :guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by"
+" typing the bookmark name in the :ref:`locator <label_statusbar>`."
+msgstr ""
+":guilabel:`Spatial Bookmarks Manager` 에서 원하는 북마크를 오른쪽 클릭하면 북마크 작업을 관리할 수 "
+"있습니다. 또 :ref:`위치 탐색자 <label_statusbar>` 에 북마크 이름을 입력하면 북마크로 확대/축소할 수도 있습니다."
 
 #: ../../docs/user_manual/map_views/map_view.rst:416
 msgid "Decorating the map"
@@ -1497,6 +1510,19 @@ msgstr ""
 msgid "Scale Bar"
 msgstr "축척 막대"
 
+#: ../../docs/user_manual/map_views/map_view.rst:627
+msgid ""
+"|scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas. "
+"You can control the style and placement, as well as the labelling of the "
+"bar. The scale bar respects the active :ref:`project's distance unit "
+"<measurements_ellipsoid>` as defined in :menuselection:`Project properties "
+"--> General --> Units for distance measurement`."
+msgstr ""
+"|scaleBar| :guilabel:`Scale Bar` 는 맵 캔버스에 단순한 축척 막대를 추가합니다. 사용자가 축척 막대의 스타일과"
+" 배치는 물론 라벨 작업도 제어할 수 있습니다. 축척 막대는 :menuselection:`Project properties --> "
+"General --> Units for distance measurement` 에서 정의된 활성 :ref:`프로젝트의 거리 단위 "
+"<measurements_ellipsoid>` 를 따릅니다."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1368
 msgid "scaleBar"
 msgstr "scaleBar"
@@ -1550,6 +1576,10 @@ msgid ""
 "Select the font for the scale bar from the :guilabel:`Font of bar` "
 "|selectString| combo box"
 msgstr ":guilabel:`Font of bar` |selectString| 콤보박스에서 축척 막대 용 글꼴을 선택하십시오."
+
+#: ../../docs/user_manual/map_views/map_view.rst:651
+msgid "Set the :guilabel:`Size of bar` in the active unit"
+msgstr ":guilabel:`Size of bar` 에서 축척 막대의 크기를 활성 단위로 설정하십시오."
 
 #: ../../docs/user_manual/map_views/map_view.rst:652
 msgid ""
@@ -1813,9 +1843,18 @@ msgstr "actionText"
 msgid "Create an annotation as a text label"
 msgstr "텍스트 라벨 피처 주석을 생성합니다."
 
+#: ../../docs/user_manual/map_views/map_view.rst:766
+#: ../../docs/user_manual/map_views/map_view.rst:858
+msgid "|textAlongLine| :sup:`Create Text Annotation along Line`"
+msgstr "|textAlongLine| :sup:`Create Text Annotation along Line`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1399
 msgid "textAlongLine"
 msgstr "textAlongLine"
+
+#: ../../docs/user_manual/map_views/map_view.rst:766
+msgid "Create an annotation as a curved text along a linestring"
+msgstr "주석을 라인스트링을 따르는 만곡 텍스트로 생성합니다."
 
 #: ../../docs/user_manual/map_views/map_view.rst:769
 msgid "|textAnnotation| :sup:`Text Annotation`"
@@ -1931,6 +1970,16 @@ msgstr "레이어 속성"
 msgid ""
 "The properties dialog of an annotation layer provides the following tabs:"
 msgstr "주석 레이어의 속성 대화창은 다음 탭들을 제공합니다:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:811
+msgid ""
+":guilabel:`Information`: a read-only dialog representing an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. This may include the layer extent, count of items per annotation type"
+" and total count, CRS details, ..."
+msgstr ""
+":guilabel:`Information`: 현재 레이어에 대한 요약 정보 및 메타데이터를 빠르게 확인할 수 있는 읽기 전용 "
+"대화창입니다. 레이어 범위, 주석 유형 별 항목 개수 및 총 개수, 좌표계 상세 정보 등등을 포함할 수도 있습니다."
 
 #: ../../docs/user_manual/map_views/map_view.rst:815
 msgid ""
@@ -2055,6 +2104,16 @@ msgstr ""
 "일반 레이어와는 달리, 사용자가 피처를 선택하기 전에 주석 레이어를 활성화시키지 않아도 됩니다. 그냥 |select| "
 ":sup:`Modify Annotations` 도구를 선택하면 어떤 피처 주석과도 대화형 작업을 할 수 있습니다:"
 
+#: ../../docs/user_manual/map_views/map_view.rst:871
+msgid ""
+"**Selection**: left-click on the annotation. By default, annotations are "
+"rendered in the order of creation, meaning that recent annotations will be "
+"placed on top of older. You may need to play with the Z-index property of "
+"features in order to select ones they would sit above."
+msgstr ""
+"**선택**: 주석을 왼쪽 클릭하십시오. 기본적으로 주석은 생성 순서대로 렌더링됩니다. 즉 최근에 생성된 주석이 더 전에 생성된 주석 "
+"위에 배치될 것이라는 뜻입니다. 사용자가 위에 배치되길 바라는 주석을 선택하려면 피처의 Z 인덱스 속성을 조정해야 할 수도 있습니다."
+
 #: ../../docs/user_manual/map_views/map_view.rst:876
 msgid ""
 "**Moving**: Left click on a selected annotation item to start moving it. A "
@@ -2104,6 +2163,74 @@ msgid ""
 msgstr ""
 "주석을 선택하면 :guilabel:`Layer styling` 패널에 해당 주석의 :guilabel:`Symbology` 속성이 표시될 "
 "것입니다. 이 패널에서 다음 작업을 할 수 있습니다:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:898
+msgid "Modify the appearance using full capabilities of:"
+msgstr "다음의 완전한 케이퍼빌리티를 사용해서 모양을 수정할 수 있습니다:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:900
+msgid ""
+"the :ref:`symbol properties <symbol-selector>` for polygon, polyline and "
+"marker annotations"
+msgstr "폴리곤, 폴리라인 및 마커 주석 용 :ref:`심볼 속성 <symbol-selector>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:901
+msgid ""
+"the :ref:`text format properties <text_format>` for text-based annotations. "
+"A text area allows you to construct the string to display using QGIS "
+"expression functions. It is also possible to set the :guilabel:`Alignment` "
+"for text annotation at point (left, center or right of the text point)."
+msgstr ""
+"텍스트 기반 주석 용 :ref:`텍스트 서식 속성 <text_format>`. 텍스트 영역에서, 표시할 문자열을 QGIS 표현식 함수를 "
+"사용해서 작성할 수 있습니다. 또 포인트 위치에서 어떻게 (텍스트 포인트의 왼쪽, 가운데, 또는 오른쪽에) 텍스트 주석을 정렬시킬지에 "
+"대한 :guilabel:`Alignment` 도 설정할 수 있습니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid ""
+"For text annotation at point, also configure whether it should "
+":guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`. In both "
+"cases, a custom :guilabel:`Angle` can be set for the feature orientation."
+msgstr ""
+"포인트 위치의 텍스트 주석에 대해, 해당 주석이 :guilabel:`Ignore map rotation` 맵 기울기를 무시할지 또는 "
+":guilabel:`Rotate with map` 맵 기울기를 따를지 여부도 환경설정할 수 있습니다. 두 경우 모두 피처 방향을 나타내는"
+" 사용자 정의 :guilabel:`Angle` 각도를 설정할 수 있습니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:908
+msgid ""
+"For text annotation along a line, configure an :guilabel:`Offset from line` "
+"in the unit of your choice"
+msgstr ""
+"라인을 따라 텍스트 주석을 생성하는 경우, :guilabel:`Offset from line` 라인으로부터의 오프셋을 사용자가 선택한 "
+"단위로 환경설정하십시오."
+
+#: ../../docs/user_manual/map_views/map_view.rst:910
+msgid ""
+"Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale"
+" at which symbol or text sizes which uses paper-based units (such as "
+"millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale. For instance, a line "
+"feature wide of 2mm at 1:2000 :guilabel:`Reference scale` will be rendered "
+"using 4mm when the map is viewed at 1:1000."
+msgstr ""
+"|unchecked| :guilabel:`Reference scale` 환경설정: (밀리미터 또는 포인트 같은) 용지 기반 단위를 "
+"사용하는 심볼 또는 라벨 크기와 관련된 맵 축척을 나타냅니다. 맵을 서로 다른 축척으로 볼 때마다 심볼과 라벨의 크기를 그에 맞춰 조정할"
+" 것입니다. 예를 들어 2mm 너비의 라인을 사용하는 라인 레이어에 참조 축척을 1:2,000으로 설정하면, 맵을 1:1,000 축척으로"
+" 볼 때 라인을 4mm 너비로 렌더링할 것입니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:915
+msgid ""
+"Set a :guilabel:`Z-index`: a feature with a higher index is placed on top of"
+" features with lower index. A convenient setting for both feature display "
+"and selection."
+msgstr ""
+":guilabel:`Z-index` 설정: 높은 Z 인덱스를 가진 피처를 낮은 Z 인덱스를 가진 피처 위에 그립니다. 피처 보이기 및 "
+"선택 양쪽에 모두 편리한 설정입니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:918
+msgid ""
+"Modify some of the :ref:`Layer rendering <annotationslayer_rendering>` "
+"settings"
+msgstr "몇몇 :ref:`레이어 렌더링 <annotationslayer_rendering>` 설정을 수정하십시오."
 
 #: ../../docs/user_manual/map_views/map_view.rst:925
 msgid ""
@@ -2211,13 +2338,68 @@ msgid ""
 ":guilabel:`Contents margins`: sets interior margins of the annotation frame."
 msgstr ":guilabel:`Contents margins`: 주석 프레임의 내부 여백을 설정합니다."
 
+#: ../../docs/user_manual/map_views/map_view.rst:969
+msgid ""
+"|checkbox| :guilabel:`Live update` allows you to live preview your changes."
+msgstr ""
+"|checkbox| :guilabel:`Live update`: 사용자가 변경하는 미리보기를 실시간으로 볼 수 있게 해줍니다."
+
 #: ../../docs/user_manual/map_views/map_view.rst:976
 msgid "A ballon annotation text dialog"
 msgstr "말풍선 주석 텍스트 대화창"
 
+#: ../../docs/user_manual/map_views/map_view.rst:978
+msgid "When a balloon annotation tool is active, you can also:"
+msgstr "말풍선 주석 도구가 활성화되어 있는 동안 다음 작업도 할 수 있습니다:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:980
+msgid "Select an annotation"
+msgstr "주석을 선택할 수 있습니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:981
+msgid "Resize an annotation"
+msgstr "주석 크기를 조정할 수 있습니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:982
+msgid ""
+"Move an annotation by map position (by dragging the map marker) or by moving"
+" only the balloon."
+msgstr "맵 위치를 (맵 마커를 드래그해서) 이동시키거나 또는 말풍선만 이동시키는 방법으로 주석을 이동시킬 수 있습니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:983
+msgid ""
+"Delete an annotation: select it and either press the :kbd:`Del` or "
+":kbd:`Backspace` button, or double-click it and press the :guilabel:`Delete`"
+" button in the properties dialog."
+msgstr ""
+"주석을 삭제할 수 있습니다: 주석을 선택한 다음 :kbd:`Del` 키 또는 :kbd:`Backspace` 키를 누르거나, 또는 주석을 "
+"더블클릭한 다음 속성 대화창에 있는 :guilabel:`Delete` 버튼을 클릭하십시오."
+
+#: ../../docs/user_manual/map_views/map_view.rst:985
+msgid "Right-click and in the contextual menu:"
+msgstr "주석을 오른쪽 클릭하면 다음 컨텍스트 메뉴를 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:987
+msgid ""
+"|editCopy| :guilabel:`Copy coordinate` of the annotation's map marker in "
+"various CRS"
+msgstr ""
+"|editCopy| :guilabel:`Copy coordinate`: 주석의 맵 마커 좌표를 여러 좌표계로 복사할 수 있습니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:988
+msgid ""
+"|toggleEditing| :guilabel:`Edit` properties of the annotation. Same as "
+"double-clicking the annotation."
+msgstr ""
+"|toggleEditing| :guilabel:`Edit`: 주석 속성을 편집할 수 있습니다. 주석을 더블클릭하는 것과 동일합니다."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1405
 msgid "toggleEditing"
 msgstr "toggleEditing"
+
+#: ../../docs/user_manual/map_views/map_view.rst:989
+msgid "|deleteSelected| :guilabel:`Delete` the annotation"
+msgstr "|deleteSelected| :guilabel:`Delete`: 주석을 삭제할 수 있습니다."
 
 #: ../../docs/user_manual/map_views/map_view.rst:997
 msgid "Measuring"
@@ -2380,6 +2562,38 @@ msgstr ""
 "피처를 따라서든 폴리곤 피처를 돌아서든, 정확히 측정하려면 먼저 레이어 스냅 허용 오차를 설정해야 합니다. 그러면 측정 도구 사용 시 "
 "(허용 오차 설정 범위 내의) 각 마우스 클릭이 해당 레이어에 스냅할 것입니다."
 
+#: ../../docs/user_manual/map_views/map_view.rst:1065
+msgid ""
+"The |measure| :sup:`Measure Line` measures distances between given points. "
+"The tool then allows you to click points on the map. Each segment length, as"
+" well as the total, shows up in the measure window. In the measure window, "
+"you will see coordinates for all your points and distances. Keep in mind "
+"that the first row will contain only coordinates, as it represents your "
+"starting point. Now it is possible to copy all your line measurements at "
+"once to the clipboard using the :guilabel:`Copy` button. Clicking the "
+":guilabel:`Configuration` button you will access to :guilabel:`Measure Tool "
+"Copy Settings` where you can set up :ref:`copy options "
+"<measure_copy_settings>`. To stop measuring, click the right mouse button."
+msgstr ""
+"|measure| :sup:`Measure Line` 도구는 지정한 포인트들 사이의 거리를 측정합니다. 이 도구는 사용자가 맵 상에 "
+"포인트를 클릭할 수 있게 해줍니다. 각 선분의 길이는 물론 전체 길이가 측정창에 표시됩니다. 측정창에서 사용자가 클릭한 모든 포인트들과 "
+"거리들의 좌표를 볼 수 있을 것입니다. 첫 행은 사용자의 시작 포인트를 나타내기 때문에 좌표만 담고 있을 것이라는 점을 기억하십시오. "
+"이제 :guilabel:`Copy` 버튼을 클릭하면 사용자의 라인 측정값들을 클립보드로 한번에 복사할 수 있습니다. "
+":guilabel:`Configuration` 버튼을 클릭하면 :ref:`복사 옵션 <measure_copy_settings>` 을 "
+"설정할 수 있는 :guilabel:`Measure Tool Copy Settings` 가 열릴 것입니다. 측정을 마치려면 오른쪽 클릭하면"
+" 됩니다."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1076
+msgid ""
+"Note that you can use the drop-down list near the total to change the "
+":ref:`measurement units <measurements_ellipsoid>` interactively while "
+"working with the measure tool. This unit is retained for the widget until a "
+"new project is created or another project is opened."
+msgstr ""
+"측정 도구로 작업하는 동안 전체 거리 옆에 있는 드롭다운 목록을 사용해서 :ref:`측정 단위 "
+"<measurements_ellipsoid>` 를 대화형으로 변경할 수 있다는 사실을 기억하십시오. 새 프로젝트를 생성하거나 또다른 "
+"프로젝트를 열기 전까지 위젯에 이렇게 선택한 단위를 유지시킬 것입니다."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1082
 msgid ""
 "The :guilabel:`Info` section in the dialog explains how calculations are "
@@ -2389,6 +2603,17 @@ msgstr "대화창의 :guilabel:`Info` 부분은 사용할 수 있는 좌표계 �
 #: ../../docs/user_manual/map_views/map_view.rst:1091
 msgid "Measure Distance"
 msgstr "거리 측정"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1093
+msgid ""
+"|measureArea| :sup:`Measure Area`: Areas can also be measured. In the "
+"measure window, the accumulated area size appears. Right-click to stop "
+"drawing. The Info section is also available as well as the ability to switch"
+" between different :ref:`area units <measurements_ellipsoid>`."
+msgstr ""
+"|measureArea| :sup:`Measure Area`: 면적도 측정할 수 있습니다. 누적 면적 크기가 측정창에 나타납니다. "
+"그리기를 마치려면 오른쪽 클릭하면 됩니다. 서로 다른 :ref:`면적 단위 <measurements_ellipsoid>` 사이를 전환할 "
+"수 있는 기능은 물론이고, 정보 부분도 볼 수 있습니다."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1103
 msgid "Measure Area"
