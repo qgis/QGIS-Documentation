@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +60,7 @@ msgid ""
 "the CMake build process). Lets take an overview of the process before we "
 "delve into the details:"
 msgstr ""
-"ユニットテストは、QTestLib（Qtのテストライブラリ）とCTest（CMakeのビルドプロセスの一部としてテストをコンパイルして実行するためのフレームワーク）の組み合わせを使って行われます。詳細に入る前に、プロセスの概要を説明しましょう："
+"ユニットテストは、QTestLib（Qtのテストライブラリ）とCTest（CMakeのビルドプロセスの一部としてテストをコンパイルして実行するためのフレームワーク）の組み合わせを使って行われます。詳細に入る前に、プロセスの概要を説明しましょう:"
 
 #: ../../docs/developers_guide/unittesting.rst:26
 msgid ""
@@ -72,7 +72,7 @@ msgid ""
 "QGIS since we are starting with a testing framework well after much "
 "application logic has already been implemented."
 msgstr ""
-"テストしたいコード、たとえばクラスや関数があるとします。エクストリーム・プログラミングの提唱者たちは、コードは、テストを作る前に書いてはならない、そうすればコードを実装したときに、追加した新しい機能の箇所をテストを使ってすぐに検証することができる、と提唱しています。実際には、多くのアプリケーションロジックが実装された後にテストフレームワークを開始するため、QGISの既存のコードに対してテストを記述する必要があるでしょう。"
+"テストしたいコード、例えばクラスや関数があるとします。エクストリーム・プログラミングの提唱者たちは、コードは、テストを作る前に書いてはならない、そうすればコードを実装したときに、追加した新しい機能の箇所をテストを使ってすぐに検証することができる、と提唱しています。実際には、多くのアプリケーションロジックが実装された後にテストフレームワークを開始するため、QGISの既存のコードに対してテストを記述する必要があるでしょう。"
 
 #: ../../docs/developers_guide/unittesting.rst:34
 msgid ""
@@ -147,6 +147,23 @@ msgstr ""
 #: ../../docs/developers_guide/unittesting.rst:70
 msgid "Creating a unit test"
 msgstr "ユニットテストの作成"
+
+#: ../../docs/developers_guide/unittesting.rst:72
+msgid ""
+"Creating a unit test is easy - typically you will do this by just creating a"
+" single :file:`.cpp` file (no :file:`.h` file is used) and implement all "
+"your test methods as private methods that return void. We'll use a simple "
+"test class for ``QgsRasterLayer`` throughout the section that follows to "
+"illustrate. By convention we will name our test with the same name as the "
+"class they are testing but prefixed with 'Test'. So our test implementation "
+"goes in a file called :file:`testqgsrasterlayer.cpp` and the class itself "
+"will be ``TestQgsRasterLayer``. First we add our standard copyright banner:"
+msgstr ""
+"ユニットテストの作成は簡単で、通常は :file:`.cpp` ファイルを1つ作成し（ :file:`.h` "
+"ファイルは使用しない）、すべてのテストメソッドを void を返す private メソッドとして実装するだけです。この後のセクションで "
+"``QgsRasterLayer`` の簡単なテストクラスを使って説明します。テストの名前は、慣例として、テストするクラスと同じ名前にプレフィックス "
+"'Test' を付けます。ですから、テストの実装は :file:`testqgsrasterlayer.cpp` というファイルに記述し、クラス名は "
+"``TestQgsRasterLayer`` となります。最初に標準的なコピーライトのバナーを追加します："
 
 #: ../../docs/developers_guide/unittesting.rst:98
 msgid ""
