@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Transifex Bot <>, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Harrissou Sant-anna, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-20 15:58+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,6 +53,10 @@ msgstr "집계 함수"
 msgid ""
 "This group contains functions which aggregate values over layers and fields."
 msgstr "이 그룹은 레이어 및 필드에 있는 값들을 집계하는 함수를 담고 있습니다."
+
+#: ../../docs/user_manual/expressions/text_include.rst:7
+msgid "Show/hide list of functions"
+msgstr "함수 목록 보이기/숨기기"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:12
 msgid "aggregate"
@@ -1356,6 +1360,38 @@ msgstr ""
 "expression:=\"name\", concatenator:=',')`` → rail_stations 레이어에서 모든 객체에 대한 "
 "쉼표로 구분된 name 필드의 값 목록"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:62
+msgid ""
+"``aggregate(layer:='countries', aggregate:='max', expression:=\"code\", "
+"filter:=intersects( @geometry, geometry(@parent) ) )`` → The country code of"
+" an intersecting country on the layer 'countries'"
+msgstr ""
+"``aggregate(layer:='countries', aggregate:='max', expression:=\"code\", "
+"filter:=intersects( @geometry, geometry(@parent) ) )`` → 'countries' 레이어 상에서"
+" 교차하는 국가의 국가 코드"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:63
+msgid ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\",filter:=contains("
+" @atlas_geometry, @geometry ) )`` → sum of all values from the passengers "
+"field in the rail_stations within the current atlas feature"
+msgstr ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\",filter:=contains("
+" @atlas_geometry, @geometry ) )`` → 현재 지도책 피처 안에 있는 'rail_stations' 레이어의 "
+"'passengers' 필드에서 나온 모든 값의 합계"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:64
+msgid ""
+"``aggregate(layer:='rail_stations', aggregate:='collect', "
+"expression:=centroid(@geometry), filter:=\"region_name\" = "
+"attribute(@parent,'name') )`` → aggregates centroid geometries of the "
+"rail_stations of the same region as current feature"
+msgstr ""
+"``aggregate(layer:='rail_stations', aggregate:='collect', "
+"expression:=centroid(@geometry), filter:=\"region_name\" = "
+"attribute(@parent,'name') )`` → 현재 피처와 동일한 지역의 'rail_stations' 레이어의 중심점 도형을 "
+"집계"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:72
 msgid "array_agg"
 msgstr "array_agg"
@@ -1475,6 +1511,19 @@ msgstr "collect(expression, [group_by], [filter])"
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:109
 msgid "**expression** - geometry expression to aggregate"
 msgstr "**expression** - 집계할 도형 표현식"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:113
+msgid "``collect( @geometry )`` → multipart geometry of aggregated geometries"
+msgstr "``collect( @geometry )`` → 집계된 도형들로 이루어진 다중 부분 도형"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:114
+msgid ""
+"``collect( centroid(@geometry), group_by:=\"region\", filter:= \"use\" = "
+"'civilian' )`` → aggregated centroids of the civilian features based on "
+"their region value"
+msgstr ""
+"``collect( centroid(@geometry), group_by:=\"region\", filter:= \"use\" = "
+"'civilian' )`` → 피처의 'region' 값을 바탕으로 집계된 'civilian' 피처의 중심점(centroid)"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:122
 msgid "concatenate"
@@ -6629,7 +6678,7 @@ msgstr "azimuth"
 msgid ""
 "Returns the north-based azimuth as the angle in radians measured clockwise "
 "from the vertical on point_a to point_b."
-msgstr "포인트 a의 수직선에서 포인트 b로 시계 방향으로 측정한 진북 기준 방위각을 라디안 단위 각도로 반환합니다."
+msgstr "'point_a'의 수직선에서 'point_b'로 시계 방향으로 측정한 진북 기준 방위각을 라디안 단위 각도로 반환합니다."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:146
 msgid "azimuth(point_a, point_b)"
@@ -6667,9 +6716,31 @@ msgstr ""
 msgid "bearing"
 msgstr "bearing"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:162
+msgid ""
+"Returns the north-based bearing as the angle in radians measured clockwise "
+"on the ellipsoid from the vertical on point_a to point_b."
+msgstr "'point_a'의 수직선에서 'point_b'로 시계 방향으로 측정한 진북 기준 방위를 라디안 단위 각도로 반환합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:168
 msgid "bearing(point_a, point_b, [source_crs], [ellipsoid])"
 msgstr "bearing(point_a, point_b, [source_crs], [ellipsoid])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:174
+msgid ""
+"**source_crs** - an optional string representing the source CRS of the "
+"points. By default the current layer's CRS is used."
+msgstr ""
+"**source_crs** - 포인트의 소스 좌표계를 표현하는 선택적인 문자열입니다. 기본적으로 현재 레이어의 좌표계를 사용합니다."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:175
+msgid ""
+"**ellipsoid** - an optional string representing the acronym or the "
+"authority:ID (eg 'EPSG:7030') of the ellipsoid on which the bearing should "
+"be measured. By default the current project's ellipsoid setting is used."
+msgstr ""
+"**ellipsoid** - 그 위에서 방위를 측정해야 할 타원체의 두문자어 또는 기관:ID(예: 'EPSG:7030')를 표현하는 "
+"선택적인 문자열입니다. 기본적으로 현재 프로젝트의 타원체 설정을 사용합니다."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:177
 msgid ""
@@ -6723,6 +6794,10 @@ msgstr ""
 "``geom_to_wkt(boundary(geom_from_wkt('LineString(1 1,0 0,-1 1)')))`` → "
 "'MultiPoint ((1 1),(-1 1))'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:206
+msgid "Boundary (black dashed line) of the source polygon layer"
+msgstr "소스 폴리곤 레이어의 경계(검은 점선)"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:304
 msgid "Further reading: :ref:`qgisboundary` algorithm"
 msgstr "더 읽어볼 거리: :ref:`qgisboundary` 알고리즘"
@@ -6741,6 +6816,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "bounds(geometry)"
 msgstr "bounds(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``bounds(@geometry)`` → bounding box of the current feature's geometry"
+msgstr "``bounds(@geometry)`` → 현재 피처 도형의 경계 상자"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid ""
@@ -6773,6 +6852,12 @@ msgstr ""
 msgid "bounds_height(geometry)"
 msgstr "bounds_height(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``bounds_height(@geometry)`` → height of bounding box of the current "
+"feature's geometry"
+msgstr "``bounds_height(@geometry)`` → 현재 피처 도형의 경계 상자의 높이"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid "``bounds_height(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 1"
 msgstr ""
@@ -6792,6 +6877,12 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "bounds_width(geometry)"
 msgstr "bounds_width(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"``bounds_width(@geometry)`` → width of bounding box of the current feature's"
+" geometry"
+msgstr "``bounds_width(@geometry)`` → 현재 피처 도형의 경계 상자의 너비"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 msgid "``bounds_width(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 2"
@@ -6848,6 +6939,12 @@ msgid ""
 "**miter_limit** - miter distance limit, for use when the join style is set "
 "to 'miter'"
 msgstr "**miter_limit** - 마이터 거리 제한. 결합 스타일을 'miter'로 설정한 경우 사용할 수 있습니다."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
+msgid ""
+"``buffer(@geometry, 10.5)`` → polygon of the current feature's geometry "
+"buffered by 10.5 units"
+msgstr "``buffer(@geometry, 10.5)`` → 현재 피처 도형에 버퍼를 10.5단위만큼 적용한 폴리곤"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
 msgid ""
@@ -6913,6 +7010,10 @@ msgstr "도형의 기하학적 중심을 반환합니다."
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "centroid(geometry)"
 msgstr "centroid(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``centroid(@geometry)`` → a point geometry"
+msgstr "``centroid(@geometry)`` → 포인트 도형"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
 msgid ""
@@ -7828,6 +7929,12 @@ msgstr "도형의 WKB(Well-Known Binary) 표현을 반환합니다"
 msgid "geom_to_wkb(geometry)"
 msgstr "geom_to_wkb(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:78
+msgid ""
+"``geom_to_wkb( @geometry )`` → binary blob containing a geometry object"
+msgstr ""
+"``geom_to_wkb( @geometry )`` → 도형 객체를 담고 있는 바이너리 BLOB(Binary Large Object)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:86
 msgid "geom_to_wkt"
 msgstr "geom_to_wkt"
@@ -7902,6 +8009,12 @@ msgstr "geometry(feature)"
 msgid "**feature** - a feature object"
 msgstr "**feature** - 피처 객체"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:141
+msgid ""
+"``geometry( @feature )`` → the geometry of the current feature. Prefer using"
+" @geometry."
+msgstr "``geometry( @feature )`` → 현재 피처의 도형. @geometry를 사용하는 편이 좋습니다."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:142
 msgid ""
 "``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → the "
@@ -7910,6 +8023,16 @@ msgid ""
 msgstr ""
 "``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → "
 "\"streets\" 레이어의 ID 1인 피처의 WKT에 있는 도형. 예: 'POINT(6 50)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:143
+msgid ""
+"``intersects( @geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )`` → TRUE if the current feature spatially intersects the 'Main "
+"St.' named feature in the \"streets\" layer"
+msgstr ""
+"``intersects( @geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )`` → 현재 피처가 \"streets\" 레이어의 'Main St.'라는 이름의 피처와 공간적으로 교차하는 경우 "
+"TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:151
 msgid "geometry_n"
@@ -8077,7 +8200,9 @@ msgstr "inclination"
 msgid ""
 "Returns the inclination measured from the zenith (0) to the nadir (180) on "
 "point_a to point_b."
-msgstr "포인트 a에서 포인트 b로 가는 경사를 천정(zenith, 0)부터 천저(nadir, 180) 범위에서 측정해서 반환합니다."
+msgstr ""
+"'point_a'에서 'point_b'로 가는 경사를 천정(zenith, 0)부터 천저(nadir, 180) 범위에서 측정해서 "
+"반환합니다."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:241
 msgid "inclination(point_a, point_b)"
@@ -8311,6 +8436,15 @@ msgstr "더 읽어볼 거리:  :ref:`expression_function_GeometryGroup_is_empty_
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "is_empty_or_null"
 msgstr "is_empty_or_null"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns TRUE if a geometry is NULL or empty (without coordinates) or false "
+"otherwise. This function is like the expression '@geometry IS NULL or "
+"is_empty(@geometry)'"
+msgstr ""
+"도형이 NULL이거나 비어 있는(좌표가 없는) 경우 참을 반환하고, 그렇지 않은 경우 거짓을 반환합니다. 이 함수는 '@geometry "
+"IS NULL 또는 is_empty(@geometry)' 표현식과 비슷합니다."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "is_empty_or_null(geometry)"
@@ -8729,9 +8863,23 @@ msgstr "``m( geom_from_wkt( 'POINTM(2 5 4)' ) )`` → 4"
 msgid "m_at"
 msgstr "m_at"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"Retrieves a m coordinate of the geometry, or NULL if the geometry has no m "
+"value."
+msgstr "도형의 M 좌표를 반환하거나, 도형에 M 값이 없는 경우 NULL을 반환합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "m_at(geometry, vertex)"
 msgstr "m_at(geometry, vertex)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:116
+msgid ""
+"**vertex** - index of the vertex of the geometry (indices start at 0; "
+"negative values apply from the last index, starting at -1)"
+msgstr "**vertex** - 도형의 꼭짓점의 인덱스 (0부터 인덱스 시작; 음의 값은 -1부터 시작하며 마지막 인덱스부터 적용)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid ""
@@ -9495,6 +9643,12 @@ msgstr "도형의 꼭짓점 개수를 반환합니다."
 msgid "num_points(geometry)"
 msgstr "num_points(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+msgid ""
+"``num_points(@geometry)`` → number of vertices in the current feature's "
+"geometry"
+msgstr "``num_points(@geometry)`` → 현재 피처 도형에 있는 꼭짓점의 개수"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
 msgid "num_rings"
 msgstr "num_rings"
@@ -9564,6 +9718,32 @@ msgid ""
 "**miter_limit** - limit on the miter ratio used for very sharp corners (when"
 " using miter joins only)"
 msgstr "**miter_limit** - 매우 뾰족한 모서리에 사용된 마이터 비율에 대한 제한 (마이터 결합만 사용하는 경우)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:105
+msgid ""
+"``offset_curve(@geometry, 10.5)`` → line offset to the left by 10.5 units"
+msgstr "``offset_curve(@geometry, 10.5)`` → 라인 왼쪽으로 10.5 단위만큼 오프셋"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:106
+msgid ""
+"``offset_curve(@geometry, -10.5)`` → line offset to the right by 10.5 units"
+msgstr "``offset_curve(@geometry, -10.5)`` → 라인 오른쪽으로 10.5 단위만큼 오프셋"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:107
+msgid ""
+"``offset_curve(@geometry, 10.5, segments:=16, join:=1)`` → line offset to "
+"the left by 10.5 units, using more segments to result in a smoother curve"
+msgstr ""
+"``offset_curve(@geometry, 10.5, segments:=16, join:=1)`` → 라인 왼쪽으로 10.5 단위만큼"
+" 오프셋, 선분을 더 많이 사용할 수록 더 매끈한 만곡 도형을 생성합니다."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:108
+msgid ""
+"``offset_curve(@geometry, 10.5, join:=3)`` → line offset to the left by 10.5"
+" units, using a beveled join"
+msgstr ""
+"``offset_curve(@geometry, 10.5, join:=3)`` → 라인 왼쪽으로 10.5 단위만큼 오프셋, 'bevel' "
+"결합 사용"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:115
 msgid "In blue the source layer, in red the offset one"
@@ -9790,6 +9970,15 @@ msgstr ""
 "filter:= population > 10000))`` → 현재 피처에 담겨 있으며 인구 10,000명을 초과하는 'regions' 의"
 " 이름들을 정렬한 배열"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
+msgid ""
+"``overlay_contains(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"contained in the current feature"
+msgstr ""
+"``overlay_contains(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 현재 피처에 담겨 있는 최대 2개까지의 'regions'의 (WKT 서식) 도형들의 배열"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:510
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_contains`, "
@@ -9864,6 +10053,15 @@ msgstr ""
 "``array_sort(overlay_crosses(layer:='regions', expression:=\"name\", "
 "filter:= population > 10000))`` → 현재 피처를 공간 교차하며 인구 10,000명을 초과하는 'regions' "
 "의 이름들을 정렬한 배열"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_crosses(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions crossed"
+" by the current feature"
+msgstr ""
+"``overlay_crosses(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 현재 피처와 공간 교차하는 최대 2개까지의 'regions'의 (WKT 서식) 도형들의 배열"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:518
 msgid ""
@@ -9946,6 +10144,15 @@ msgstr ""
 "filter:= population > 10000))`` → 현재 피처와 공간적으로 분리되어 있으며 인구 10,000명을 초과하는 "
 "'regions' 의 이름들을 정렬한 배열"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_disjoint(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"spatially disjoint from the current feature"
+msgstr ""
+"``overlay_disjoint(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 현재 피처와 공간적으로 분리되어 있는 최대 2개까지의 'regions'의 (WKT 서식) 도형들의 배열"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:526
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_disjoint`, "
@@ -10022,6 +10229,15 @@ msgstr ""
 "``array_sort(overlay_equals(layer:='regions', expression:=\"name\", filter:="
 " population > 10000))`` → 현재 피처와 공간적으로 동등하며 인구 10,000명을 초과하는 'regions' 의 "
 "이름들을 정렬한 배열"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"spatially equal to the current feature"
+msgstr ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 현재 피처와 공간적으로 동등한 최대 2개까지의 'regions'의 (WKT 서식) 도형들의 배열"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:534
 msgid ""
@@ -10174,6 +10390,15 @@ msgstr ""
 "filter:= population > 10000))`` → 현재 피처를 교차하며 인구 10,000명을 초과하는 'regions' 의 "
 "이름들을 정렬한 배열"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"intersected by the current feature"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 현재 피처와 교차하는 최대 2개까지의 'regions'의 (WKT 서식) 도형들의 배열"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
 msgid ""
 "``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE if the "
@@ -10194,6 +10419,25 @@ msgstr ""
 "``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` "
 "→ TRUE, 현재 피처가 'regions' 와 공간적으로 교차하고 교차 영역의 (다중 부분 도형의 경우 최소한 하나 이상의 부분의) "
 "최대 내접원의 반경이 0.54 이상인 경우"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"return_details:=true)`` → an array of maps containing 'id', 'result', "
+"'overlap' and 'radius'"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"return_details:=true)`` → 'id', 'result', 'overlap' 그리고 'radius'를 담고 있는 맵들의 "
+"배열"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"sort_by_intersection_size:='des')`` → an array of geometries (in WKT) "
+"ordered by the overlap value in descending order"
+msgstr ""
+"``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"sort_by_intersection_size:='des')`` → 중첩 값이 내림차순으로 정렬된 (WKT 서식) 도형들의 배열"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:541
 msgid ""
@@ -10396,6 +10640,15 @@ msgstr ""
 "filter:= population > 10000))`` → 현재 피처를 접하며 인구 10,000명을 초과하는 'regions' 의 "
 "이름들을 정렬한 배열"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_touches(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions touched"
+" by the current feature"
+msgstr ""
+"``overlay_touches(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 현재 피처와 접하는 최대 2개까지의 'regions'의 (WKT 서식) 도형들의 배열"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:556
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_touches`, "
@@ -10470,6 +10723,15 @@ msgstr ""
 "``array_sort(overlay_within(layer:='regions', expression:=\"name\", filter:="
 " population > 10000))`` → 현재 피처를 담고 있으며 인구 10,000명을 초과하는 'regions' 의 이름들을 "
 "정렬한 배열"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_within(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"containing the current feature"
+msgstr ""
+"``overlay_within(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 현재 피처를 담고 있는 최대 2개까지의 'regions'의 (WKT 서식) 도형들의 배열"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:564
 msgid ""
@@ -10567,6 +10829,10 @@ msgstr "도형의 표면 상에 있다고 보장된 포인트를 반환합니다
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "point_on_surface(geometry)"
 msgstr "point_on_surface(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``point_on_surface(@geometry)`` → a point geometry"
+msgstr "``point_on_surface(@geometry)`` → 포인트 도형"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:578
 msgid "Further reading: :ref:`qgispointonsurface` algorithm"
@@ -10738,6 +11004,10 @@ msgstr ""
 "``geom_to_wkt(reverse(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)')))`` → "
 "'LINESTRING(2 2, 1 1, 0 0)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
+msgid "Reversing line direction"
+msgstr "라인 방향 반전시키기"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:596
 msgid "Further reading: :ref:`qgisreverselinedirection` algorithm"
 msgstr "더 읽어볼 거리: :ref:`qgisreverselinedirection` 알고리즘"
@@ -10774,6 +11044,20 @@ msgid ""
 msgstr ""
 "**per_part** - 부분 별로 기울기를 적용합니다. 참으로 설정하면, 입력 도형이 다중 부분 도형이고 기울기 중심 포인트를 "
 "명확하게 지정하지 않은 경우 각 부분의 경계 상자의 중심을 기준으로 기울기를 적용할 것입니다."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``rotate(@geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees "
+"clockwise around the (4, 5) point"
+msgstr ""
+"``rotate(@geometry, 45, make_point(4, 5))`` → 도형을 (4, 5) 포인트 기준으로 시계 방향 45도 "
+"회전시킵니다."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``rotate(@geometry, 45)`` → geometry rotated 45 degrees clockwise around the"
+" center of its bounding box"
+msgstr "``rotate(@geometry, 45)`` → 도형을 도형 경계 상자의 중심을 기준으로 시계 방향 45도 회전시킵니다."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "Rotating features"
@@ -10846,6 +11130,22 @@ msgid ""
 "**center** - scaling center point. If not specified, the center of the "
 "geometry's bounding box is used."
 msgstr "**center** - 크기 조정 중심 포인트. 이를 지정하지 않으면, 도형 경계 상자의 중심을 사용합니다."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``scale(@geometry, 2, 0.5, make_point(4, 5))`` → geometry scaled twice "
+"horizontally and halved vertically, around the (4, 5) point"
+msgstr ""
+"``scale(@geometry, 2, 0.5, make_point(4, 5))`` → 도형 크기를 (4, 5) 포인트 기준으로 수평으로"
+" 2배, 수직으로 0.5배 조정합니다."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``scale(@geometry, 2, 0.5)`` → geometry twice horizontally and halved "
+"vertically, around the center of its bounding box"
+msgstr ""
+"``scale(@geometry, 2, 0.5, make_point(4, 5))`` → 도형 크기를 도형 경계 상자의 중심을 기준으로 "
+"수평으로 2배, 수직으로 0.5배 조정합니다."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
 msgid "segments_to_lines"
@@ -11052,6 +11352,35 @@ msgid ""
 " of lines, negative values to the right"
 msgstr ""
 "**distance** - 버퍼 거리. 양의 값이면 라인 좌측으로 버퍼를 적용하고, 음의 값이면 라인 우측으로 적용할 것입니다."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``single_sided_buffer(@geometry, 10.5)`` → line buffered to the left by 10.5"
+" units"
+msgstr "``single_sided_buffer(@geometry, 10.5)`` → 라인 왼쪽으로 10.5 단위만큼 버퍼 생성"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
+msgid ""
+"``single_sided_buffer(@geometry, -10.5)`` → line buffered to the right by "
+"10.5 units"
+msgstr "``single_sided_buffer(@geometry, -10.5)`` → 라인 오른쪽으로 10.5 단위만큼 버퍼 생성"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid ""
+"``single_sided_buffer(@geometry, 10.5, segments:=16, join:=1)`` → line "
+"buffered to the left by 10.5 units, using more segments to result in a "
+"smoother buffer"
+msgstr ""
+"``single_sided_buffer(@geometry, 10.5, segments:=16, join:=1)`` → 라인 왼쪽으로 "
+"10.5 단위만큼 버퍼 적용, 선분을 더 많이 사용할 수록 더 매끈한 버퍼를 생성합니다."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid ""
+"``single_sided_buffer(@geometry, 10.5, join:=3)`` → line buffered to the "
+"left by 10.5 units, using a beveled join"
+msgstr ""
+"``single_sided_buffer(@geometry, 10.5, join:=3)`` → 라인 왼쪽으로 10.5 단위만큼 버퍼 적용,"
+" 'bevel' 결합 사용"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "Left versus right side buffer on the same vector line layer"
@@ -11478,6 +11807,12 @@ msgstr "**dx** - Δx"
 msgid "**dy** - delta y"
 msgstr "**dy** - Δy"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``translate(@geometry, 5, 10)`` → a geometry of the same type like the "
+"original one"
+msgstr "``translate(@geometry, 5, 10)`` → 원래 도형과 동일한 유형의 도형"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "Translating features"
 msgstr "도형 번역하기"
@@ -11732,9 +12067,24 @@ msgstr "더 읽어볼 거리: :ref:`expression_function_GeometryGroup_overlay_wi
 msgid "$x"
 msgstr "$x"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the x coordinate of the current point feature. If the feature is a "
+"multipoint feature, then the x-coordinate of the first point will be "
+"returned. **WARNING: This function is deprecated. It is recommended to use "
+"the replacement x() function with @geometry variable instead.**"
+msgstr ""
+"현재 포인트 피처의 X 좌표를 반환합니다. 피처가 멀티포인트 피처인 경우, 첫 번째 포인트의 X 좌표를 반환할 것입니다. **경고: 이 "
+"함수는 중요도가 떨어져 더 이상 사용되지 않고 앞으로는 사라지게 될 것입니다. 이 함수를 대체하는 x() 함수를 @geometry 변수와"
+" 함께 사용할 것을 권장합니다.**"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 msgid "``$x`` → 42"
 msgstr "``$x`` → 42"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:692
+msgid "Further reading: :ref:`expression_function_GeometryGroup_x`"
+msgstr "더 읽어볼 거리: :ref:`expression_function_GeometryGroup_x`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "x"
@@ -11754,21 +12104,49 @@ msgstr "x(geometry)"
 msgid "``x( geom_from_wkt( 'POINT(2 5)' ) )`` → 2"
 msgstr "``x( geom_from_wkt( 'POINT(2 5)' ) )`` → 2"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``x( @geometry )`` → x coordinate of the current feature's centroid"
+msgstr "``x( @geometry )`` → 현재 피처 중심점의 X 좌표"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "$x_at"
 msgstr "$x_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"Retrieves a x coordinate of the current feature's geometry. **WARNING: This "
+"function is deprecated. It is recommended to use the replacement x_at "
+"function with @geometry variable instead.**"
+msgstr ""
+"현재 피처 도형의 X 좌표를 반환합니다. **경고: 이 함수는 중요도가 떨어져 더 이상 사용되지 않고 앞으로는 사라지게 될 것입니다. 이"
+" 함수를 대체하는 x_at 함수를 @geometry 변수와 함께 사용할 것을 권장합니다.**"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "$x_at(vertex)"
 msgstr "$x_at(vertex)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+msgid ""
+"**vertex** - index of the vertex of the current geometry (indices start at "
+"0; negative values apply from the last index, starting at -1)"
+msgstr ""
+"**vertex** - 현재 도형의 꼭짓점의 인덱스 (0부터 인덱스 시작; 음의 값은 -1부터 시작하며 마지막 인덱스부터 적용)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid "``$x_at(1)`` → 5"
 msgstr "``$x_at(1)`` → 5"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:698
+msgid "Further reading: :ref:`expression_function_GeometryGroup_x_at`"
+msgstr "더 읽어볼 거리: :ref:`expression_function_GeometryGroup_x_at`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "x_at"
 msgstr "x_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Retrieves a x coordinate of the geometry."
+msgstr "도형의 X 좌표를 반환합니다."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "x_at(geometry, vertex)"
@@ -11819,9 +12197,24 @@ msgstr "``x_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 2"
 msgid "$y"
 msgstr "$y"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:69
+msgid ""
+"Returns the y coordinate of the current point feature. If the feature is a "
+"multipoint feature, then the y-coordinate of the first point will be "
+"returned. **WARNING: This function is deprecated. It is recommended to use "
+"the replacement y() function with @geometry variable instead.**"
+msgstr ""
+"현재 포인트 피처의 Y 좌표를 반환합니다. 피처가 멀티포인트 피처인 경우, 첫 번째 포인트의 Y 좌표를 반환할 것입니다. **경고: 이 "
+"함수는 중요도가 떨어져 더 이상 사용되지 않고 앞으로는 사라지게 될 것입니다. 이 함수를 대체하는 y() 함수를 @geometry 변수와"
+" 함께 사용할 것을 권장합니다.**"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
 msgid "``$y`` → 42"
 msgstr "``$y`` → 42"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:704
+msgid "Further reading: :ref:`expression_function_GeometryGroup_y`"
+msgstr "더 읽어볼 거리: :ref:`expression_function_GeometryGroup_y`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "y"
@@ -11841,9 +12234,22 @@ msgstr "y(geometry)"
 msgid "``y( geom_from_wkt( 'POINT(2 5)' ) )`` → 5"
 msgstr "``y( geom_from_wkt( 'POINT(2 5)' ) )`` → 5"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``y( @geometry )`` → y coordinate of the current feature's centroid"
+msgstr "``y( @geometry )`` → 현재 피처 중심점의 Y 좌표"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "$y_at"
 msgstr "$y_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"Retrieves a y coordinate of the current feature's geometry. **WARNING: This "
+"function is deprecated. It is recommended to use the replacement y_at "
+"function with @geometry variable instead.**"
+msgstr ""
+"현재 피처 도형의 Y 좌표를 반환합니다. **경고: 이 함수는 중요도가 떨어져 더 이상 사용되지 않고 앞으로는 사라지게 될 것입니다. 이"
+" 함수를 대체하는 y_at 함수를 @geometry 변수와 함께 사용할 것을 권장합니다.**"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "$y_at(vertex)"
@@ -11853,9 +12259,17 @@ msgstr "$y_at(vertex)"
 msgid "``$y_at(1)`` → 2"
 msgstr "``$y_at(1)`` → 2"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:710
+msgid "Further reading: :ref:`expression_function_GeometryGroup_y_at`"
+msgstr "더 읽어볼 거리: :ref:`expression_function_GeometryGroup_y_at`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "y_at"
 msgstr "y_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Retrieves a y coordinate of the geometry."
+msgstr "도형의 Y 좌표를 반환합니다."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "y_at(geometry, vertex)"
@@ -11906,6 +12320,17 @@ msgstr "``y_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 5"
 msgid "$z"
 msgstr "$z"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:69
+msgid ""
+"Returns the z value of the current point feature if it is 3D. If the feature"
+" is a multipoint feature, then the z value of the first point will be "
+"returned. **WARNING: This function is deprecated. It is recommended to use "
+"the replacement z() function with @geometry variable instead.**"
+msgstr ""
+"현재 포인트 피처가 3차원일 경우 포인트의 Z 값을 반환합니다. 피처가 멀티포인트 피처인 경우, 첫 번째 포인트의 Z 값을 반환할 "
+"것입니다. **경고: 이 함수는 중요도가 떨어져 더 이상 사용되지 않고 앞으로는 사라지게 될 것입니다. 이 함수를 대체하는 z() 함수를"
+" @geometry 변수와 함께 사용할 것을 권장합니다.**"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
 msgid "``$z`` → 123"
 msgstr "``$z`` → 123"
@@ -11927,6 +12352,12 @@ msgstr "``z( geom_from_wkt( 'POINTZ(2 5 7)' ) )`` → 7"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:105
 msgid "z_at"
 msgstr "z_at"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:107
+msgid ""
+"Retrieves a z coordinate of the geometry, or NULL if the geometry has no z "
+"value."
+msgstr "도형의 Z 좌표를 반환하거나, 도형에 Z 값이 없는 경우 NULL을 반환합니다."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:113
 msgid "z_at(geometry, vertex)"
@@ -12055,11 +12486,23 @@ msgstr ""
 msgid "map_credits"
 msgstr "map_credits"
 
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:8
+msgid ""
+"Returns a list of credit (usage rights) strings for the layers shown in a "
+"layout, or specific layout map item."
+msgstr "조판, 또는 특정 조판 맵 항목에 표시되는 레이어들에 대한 크레디트(사용 권한) 문자열 목록을 반환합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:14
 msgid ""
 "map_credits([id], [include_layer_names=false], [layer_name_separator=': '])"
 msgstr ""
 "map_credits([id], [include_layer_names=false], [layer_name_separator=': '])"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:18
+msgid ""
+"**id** - Map item ID. If not specified, the layers from all maps in the "
+"layout will be used."
+msgstr "**id** - 맵 항목 ID입니다. 지정하지 않는 경우 조판에 있는 모든 맵의 레이어들을 사용할 것입니다."
 
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:19
 msgid ""
@@ -12075,6 +12518,15 @@ msgid ""
 msgstr ""
 "**layer_name_separator** - include_layer_names 인자가 참인 경우 레이어 이름과 레이어 크레디트 "
 "문자열 사이에 삽입할 문자열입니다."
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:22
+msgid ""
+"``array_to_string( map_credits() )`` → comma separated list of layer credits"
+" for all layers shown in all map items in the layout, e.g 'CC-BY-NC, CC-BY-"
+"SA'"
+msgstr ""
+"``array_to_string( map_credits() )`` → 조판에 있는 모든 맵 항목에 표시된 모든 레이어들에 대한, 'CC-"
+"BY-NC, CC-BY-SA' 같은 레이어 크레디트를 쉼표로 구분한 목록"
 
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:23
 msgid ""
@@ -12313,9 +12765,29 @@ msgstr ""
 msgid "load_layer"
 msgstr "load_layer"
 
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:8
+msgid "Loads a layer by source URI and provider name."
+msgstr "레이어를 소스 URI와 제공자 이름으로 불러옵니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:14
 msgid "load_layer(uri, provider)"
 msgstr "load_layer(uri, provider)"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:16
+msgid "**uri** - layer source URI string"
+msgstr "**uri** - 레이어 소스 URI 문자열"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:17
+msgid "**provider** - layer data provider name"
+msgstr "**provider** - 레이어 데이터 제공자 이름"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:19
+msgid ""
+"``layer_property(load_layer('c:/data/roads.shp', 'ogr'), 'feature_count')`` "
+"→ count of features from the c:/data/roads.shp vector layer"
+msgstr ""
+"``layer_property(load_layer('c:/data/roads.shp', 'ogr'), 'feature_count')`` "
+"→ c:/data/roads.shp 벡터 레이어의 피처 개수"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:775
 msgid "Maps Functions"
@@ -12621,17 +13093,41 @@ msgstr "``map_to_hstore(map('qgis','rocks'))`` → '\"qgis\"=>\"rocks\"'"
 msgid "map_to_html_dl"
 msgstr "map_to_html_dl"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:72
+msgid "Merge map elements into a HTML definition list string."
+msgstr "맵 요소들을 HTML 정의 목록 문자열로 병합합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:78
 msgid "map_to_html_dl(map)"
 msgstr "map_to_html_dl(map)"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:82
+msgid ""
+"``map_to_html_dl(map('qgis','rocks'))`` → "
+"<dl><dt>qgis</dt><dd>rocks</dd></dl>"
+msgstr ""
+"``map_to_html_dl(map('qgis','rocks'))`` → "
+"<dl><dt>qgis</dt><dd>rocks</dd></dl>"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:90
 msgid "map_to_html_table"
 msgstr "map_to_html_table"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:92
+msgid "Merge map elements into a HTML table string."
+msgstr "맵 요소들을 HTML 테이블 문자열로 병합합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:98
 msgid "map_to_html_table(map)"
 msgstr "map_to_html_table(map)"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:102
+msgid ""
+"``map_to_html_table(map('qgis','rocks'))`` → "
+"<table><thead><th>qgis</th></thead><tbody><tr><td>rocks</td></tr></tbody></table>"
+msgstr ""
+"``map_to_html_table(map('qgis','rocks'))`` → "
+"<table><thead><th>qgis</th></thead><tbody><tr><td>rocks</td></tr></tbody></table>"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:110
 msgid "to_json"
@@ -13345,6 +13841,15 @@ msgstr "1,000명에서 10,000명 사이에서 변화하는 인구를 글꼴 크�
 msgid "scale_polynomial"
 msgstr "scale_polynomial"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:526
+msgid ""
+"Transforms a given value from an input domain to an output range using a "
+"polynomial curve. This function can be used to ease values in or out of the "
+"specified output range."
+msgstr ""
+"지정한 값을 다항식 곡선(polynomial curve)을 이용해서 입력 범위에서 출력 범위로 변형합니다. 이 함수를 사용하면 지정한 "
+"산출 범위로 값을 부드럽게 조정(ease in or ease out)할 수 있습니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:532
 msgid ""
 "scale_polynomial(value, domain_min, domain_max, range_min, range_max, "
@@ -13700,6 +14205,18 @@ msgstr "``5 / NULL`` → NULL"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:51
 msgid "//"
 msgstr "//"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:53
+msgid "Floor division of two values"
+msgstr "한 값을 다른 값으로 나눈 값에서 소수점 자리를 버린 값을 반환합니다."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:59
+msgid "a // b"
+msgstr "a // b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
+msgid "``9 // 2`` → 4"
+msgstr "``9 // 2`` → 4"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:72
 msgid "<"
@@ -14113,6 +14630,10 @@ msgstr "``4 IS 2+2`` → TRUE"
 msgid "``4 IS 2`` → FALSE"
 msgstr "``4 IS 2`` → FALSE"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:81
+msgid "``@geometry IS NULL`` → 0, if your geometry is not NULL"
+msgstr "``@geometry IS NULL`` → 0, 사용자 도형이 NULL이 아닌 경우"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:89
 msgid "IS NOT"
 msgstr "IS NOT"
@@ -14484,6 +15005,14 @@ msgstr "이 그룹은 래스터 레이어를 대상으로 실행되는 함수를
 msgid "raster_attributes"
 msgstr "raster_attributes"
 
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:14
+msgid ""
+"Returns a map with the fields names as keys and the raster attribute table "
+"values as values from the attribute table entry that matches the given "
+"raster value."
+msgstr ""
+"지정한 래스터 값과 일치하는 속성 테이블 항목에서 나온 필드 이름을 키로 그리고 래스터 속성 테이블 값을 값으로 가진 맵을 반환합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:20
 msgid "raster_attributes(layer, band, value)"
 msgstr "raster_attributes(layer, band, value)"
@@ -14492,6 +15021,22 @@ msgstr "raster_attributes(layer, band, value)"
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:78
 msgid "**layer** - the name or id of a raster layer"
 msgstr "**layer** - 래스터 레이어의 이름 또는 ID"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:23
+msgid "**band** - the band number for the associated attribute table lookup."
+msgstr "**band** - 관련 속성 테이블 검색에 대한 밴드 번호"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:24
+msgid "**value** - raster value"
+msgstr "**value** - 래스터 값"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:26
+msgid ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+msgstr ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:34
 msgid "raster_statistic"
@@ -14815,13 +15360,36 @@ msgstr ""
 "``display_expression( 'streets', get_feature_by_id('streets', 1))`` → "
 "'streets' 레이어에 있는 ID 1인 피처의 표시 표현식"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:73
+msgid ""
+"``display_expression('a_layer_id', @feature, 'False')`` → The display "
+"expression of the given feature not evaluated."
+msgstr ""
+"``display_expression('a_layer_id', @feature, 'False')`` → 지정한 피처의 평가되지 않은 표시"
+" 표현식"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:81
 msgid "feature_id"
 msgstr "feature_id"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:83
+msgid "Returns a feature's unique ID, or NULL if the feature is not valid."
+msgstr "피처의 유일 ID를 반환하거나, 피처가 무결하지 않은 경우 NULL을 반환합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:89
 msgid "feature_id(feature)"
 msgstr "feature_id(feature)"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:93
+msgid "``feature_id( @feature )`` → the ID of the current feature"
+msgstr "``feature_id( @feature )`` → 현재 피처의 ID"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:931
+msgid ""
+"Further reading: "
+":ref:`expression_function_Record_and_Attributes_get_feature_by_id`"
+msgstr ""
+"더 읽어볼 거리: :ref:`expression_function_Record_and_Attributes_get_feature_by_id`"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "get_feature"
@@ -14914,6 +15482,11 @@ msgid ""
 " \"streets\""
 msgstr "``get_feature_by_id('streets', 1)`` → \"streets\" 레이어에서 ID가 1인 피처"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:937
+msgid ""
+"Further reading: :ref:`expression_function_Record_and_Attributes_feature_id`"
+msgstr "더 읽어볼 거리: :ref:`expression_function_Record_and_Attributes_feature_id`"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
 msgid "$id"
@@ -14931,21 +15504,103 @@ msgstr ""
 msgid "``$id`` → 42"
 msgstr "``$id`` → 42"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:943
+msgid ""
+"Further reading: "
+":ref:`expression_function_Record_and_Attributes_feature_id`, "
+":ref:`expression_function_Record_and_Attributes_get_feature_by_id`"
+msgstr ""
+"더 읽어볼 거리: :ref:`expression_function_Record_and_Attributes_feature_id`, "
+":ref:`expression_function_Record_and_Attributes_get_feature_by_id`"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "is_attribute_valid"
 msgstr "is_attribute_valid"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid "Returns TRUE if a specific feature attribute meets all constraints."
+msgstr "특정 피처 속성이 모든 제약조건을 만족시킬 경우 참을 반환합니다."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
 msgid "is_attribute_valid(attribute, [feature], [layer], [strength])"
 msgstr "is_attribute_valid(attribute, [feature], [layer], [strength])"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
+msgid "**attribute** - an attribute name"
+msgstr "**attribute** - 속성 이름"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+msgid "**feature** - A feature. If not set, the current feature will be used."
+msgstr "**feature** - 피처입니다. 설정하지 않을 경우 현재 피처를 사용할 것입니다."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+msgid ""
+"**layer** - A vector layer. If not set, the current layer will be used."
+msgstr "**layer** - 벡터 레이어입니다. 설정하지 않을 경우 현재 레이어를 사용할 것입니다."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:21
+msgid ""
+"**strength** - Set to 'hard' or 'soft' to narrow down to a specific "
+"constraint type. If not set, the function will return FALSE if either a hard"
+" or a soft constraint fails."
+msgstr ""
+"**strength** - 특정 제약조건 유형으로 좁히려면 '강한(hard)' 또는 '약한(soft)' 조건을 설정하십시오. 설정하지 "
+"않을 경우, 강한 제약조건 또는 약한 제한조건 가운데 하나라도 만족시키지 못하면 함수가 거짓을 반환할 것입니다."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:23
+msgid ""
+"``is_attribute_valid('HECTARES')`` → TRUE if the current feature's value in "
+"the \"HECTARES\" field meets all constraints."
+msgstr ""
+"``is_attribute_valid('HECTARES')`` → TRUE, \"HECTARES\" 필드에 있는 현재 피처의 값이 모든 "
+"제약조건을 만족시킬 경우"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:24
+msgid ""
+"``is_attribute_valid('HOUSES',get_feature('my_layer', 'FID', 10), "
+"'my_layer')`` → FALSE if the value in the \"HOUSES\" field from the feature "
+"with \"FID\"=10 in 'my_layer' fails to meet all constraints."
+msgstr ""
+"``is_attribute_valid('HOUSES',get_feature('my_layer', 'FID', 10), "
+"'my_layer')`` → FALSE, 'my_layer' 레이어에서 \"FID\"가 10인 피처의 \"HOUSES\" 필드에 있는 "
+"값이 제약조건을 모두 만족시키지 못할 경우"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:950
+#: ../../docs/user_manual/expressions/functions_list.rst:956
+msgid "Further reading: :ref:`constraints`"
+msgstr "더 읽어볼 거리: :ref:`constraints`"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "is_feature_valid"
 msgstr "is_feature_valid"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid "Returns TRUE if a feature meets all field constraints."
+msgstr "피처가 모든 필드 제약조건을 만족시킬 경우 참을 반환합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
 msgid "is_feature_valid([feature], [layer], [strength])"
 msgstr "is_feature_valid([feature], [layer], [strength])"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:22
+msgid ""
+"``is_feature_valid(strength:='hard')`` → TRUE if all fields from the current"
+" feature meet their hard constraints."
+msgstr ""
+"``is_feature_valid(strength:='hard')`` → TRUE, 현재 피처의 모든 필드가 강한 제약조건을 만족시킬 "
+"경우"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:23
+msgid ""
+"``is_feature_valid(get_feature('my_layer', 'FID', 10), 'my_layer')`` → FALSE"
+" if all fields from feature with \"FID\"=10 in 'my_layer' fails to meet all "
+"constraints."
+msgstr ""
+"``is_feature_valid(get_feature('my_layer', 'FID', 10), 'my_layer')`` → "
+"FALSE, 'my_layer' 레이어에서 \"FID\"가 10인 피처의 모든 필드가 제약조건을 모두 만족시키지 못할 경우"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "is_selected"
@@ -15106,6 +15761,12 @@ msgid ""
 msgstr ""
 "``maptip('streets', get_feature_by_id('streets', 1))`` → 'streets' 레이어에 있는 "
 "ID 1인 피처의 맵 도움말"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:111
+msgid ""
+"``maptip('a_layer_id', @feature, 'False')`` → The maptip of the given "
+"feature not evaluated."
+msgstr "``maptip('a_layer_id', @feature, 'False')`` → 지정한 피처의 평가되지 않은 맵 도움말"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:119
 msgid "num_selected"
@@ -15457,13 +16118,35 @@ msgstr ""
 "<expression_function_Aggregates_relation_aggregate>` 함수) 양식을 사용자 정의하는 데 필요한 "
 "관계 ID에 빠르게 접근할 수 있습니다."
 
+#: ../../docs/user_manual/expressions/functions_list.rst:996
+msgid "Sensors Functions"
+msgstr "센서 함수"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:998
+msgid "This group contains functions to interact with sensors."
+msgstr "이 그룹은 센서와 대화형 작업을 하기 위한 함수를 담고 있습니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Sensors.rst:12
 msgid "sensor_data"
 msgstr "sensor_data"
 
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:14
+msgid ""
+"Returns the last captured value (or values as a map for sensors which report"
+" multiple values) from a registered sensor."
+msgstr "등록된 센서에서 마지막으로 캡처된 값을 (또는 여러 개의 값을 보고하는 센서의 경우 값들을 맵으로) 반환합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/Sensors.rst:20
 msgid "sensor_data(name, [expiration])"
 msgstr "sensor_data(name, [expiration])"
+
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:24
+msgid "**name** - the sensor name"
+msgstr "**name** - 센서 이름"
+
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:25
+msgid "**expiration** - maximum millisecond since last captured value allowed"
+msgstr "**expiration** - 마지막으로 캡처된 값 이후 허용되는 최대 밀리 초"
 
 #: ../../docs/user_manual/expressions/expression_help/Sensors.rst:27
 msgid "``sensor_data('geiger_1')`` → '2000'"
@@ -15783,6 +16466,12 @@ msgstr "``lpad('Hello', 3, 'x')`` → 'Hel'"
 msgid "ltrim"
 msgstr "ltrim"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:227
+msgid ""
+"Removes the longest string containing only the specified characters (a space"
+" by default) from the start of string."
+msgstr "문자열의 시작에서부터 지정한 문자들만 (기본값은 공백) 담고 있는 가장 긴 문자열을 제거합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:233
 msgid "ltrim(string, [characters=' '])"
 msgstr "ltrim(string, [characters=' '])"
@@ -15792,6 +16481,27 @@ msgstr "ltrim(string, [characters=' '])"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:237
 msgid "**string** - string to trim"
 msgstr "**string** - 다듬을 문자열"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:175
+#: ../../docs/user_manual/expressions/expression_help/String.rst:238
+msgid "**characters** - characters to trim"
+msgstr "**characters** - 잘라낼 문자열"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:240
+msgid "``ltrim('   hello world  ')`` → 'hello world  '"
+msgstr "``ltrim('   hello world  ')`` → 'hello world  '"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:241
+msgid "``ltrim('zzzytest', 'xyz')`` → 'test'"
+msgstr "``ltrim('zzzytest', 'xyz')`` → 'test'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1050
+msgid ""
+"Further reading: :ref:`expression_function_String_rtrim`, "
+":ref:`expression_function_String_trim`"
+msgstr ""
+"더 읽어볼 거리: :ref:`expression_function_String_rtrim`, "
+":ref:`expression_function_String_trim`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:28
 msgid "regexp_replace"
@@ -15998,9 +16708,31 @@ msgstr "``rpad('Hello', 3, 'x')`` → 'Hel'"
 msgid "rtrim"
 msgstr "rtrim"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:164
+msgid ""
+"Removes the longest string containing only the specified characters (a space"
+" by default) from the end of string."
+msgstr "문자열의 끝에서부터 지정한 문자들만 (기본값은 공백) 담고 있는 가장 긴 문자열을 제거합니다."
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:170
 msgid "rtrim(string, [characters=' '])"
 msgstr "rtrim(string, [characters=' '])"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:177
+msgid "``rtrim('   hello world  ')`` → '   hello world'"
+msgstr "``rtrim('   hello world  ')`` → '   hello world'"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:178
+msgid "``rtrim('testxxzx', 'xyz')`` → 'test'"
+msgstr "``rtrim('testxxzx', 'xyz')`` → 'test'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1057
+msgid ""
+"Further reading: :ref:`expression_function_String_ltrim`, "
+":ref:`expression_function_String_trim`"
+msgstr ""
+"더 읽어볼 거리: :ref:`expression_function_String_ltrim`, "
+":ref:`expression_function_String_trim`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "strpos"
@@ -16132,6 +16864,14 @@ msgstr "trim(string)"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:109
 msgid "``trim('   hello world  ')`` → 'hello world'"
 msgstr "``trim('   hello world  ')`` → 'hello world'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1064
+msgid ""
+"Further reading: :ref:`expression_function_String_ltrim`, "
+":ref:`expression_function_String_rtrim`"
+msgstr ""
+"더 읽어볼 거리: :ref:`expression_function_String_ltrim`, "
+":ref:`expression_function_String_rtrim`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "upper"
@@ -16541,6 +17281,10 @@ msgid "The current point number in the rendered geometry's part"
 msgstr "현재 렌더링된 도형의 부분에 있는 포인트의 번호"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "geometry_ring_num"
+msgstr "geometry_ring_num"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid ""
 "Current geometry ring number for feature being rendered (for polygon "
 "features only). The exterior ring has a value of 0."
@@ -16608,8 +17352,17 @@ msgid "layer_crs_ellipsoid"
 msgstr "layer_crs_ellipsoid"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The ellipsoid Authority ID of the current layer CRS"
+msgstr "현재 레이어 좌표계의 타원체 기관 ID"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_cursor_point"
 msgstr "layer_cursor_point"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Point geometry under the mouse position in map canvas, in active layer's CRS"
+msgstr "맵 캔버스에서 마우스 커서의 활성 레이어 좌표계 위치 아래 있는 포인트 도형"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_id"
@@ -16685,6 +17438,10 @@ msgid ""
 "whatever unit was used for custom paper size)"
 msgstr ""
 "조판에서 활성화된 페이지 높이 (표준 용지 크기의 경우 밀리미터 단위, 또는 사용자 지정 용지 크기의 경우 사용되는 모든 단위)"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "layout_pageoffsets"
+msgstr "layout_pageoffsets"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid ""
@@ -17267,6 +18024,10 @@ msgid "The current scale bar distance value"
 msgstr "현재 축척 막대 거리 값"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "selected_file_path"
+msgstr "selected_file_path"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid ""
 "Selected file path from file widget selector when uploading a file with an "
 "external storage system"
@@ -17302,6 +18063,10 @@ msgstr "(조판기 범례에 표시되는) 심볼이 표현하는 피처의 개�
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "symbol_frame"
 msgstr "symbol_frame"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The frame number (for animated symbols only)"
+msgstr "프레임 번호 (애니메이션화된 심볼 전용)"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "symbol_id"
@@ -17376,6 +18141,10 @@ msgstr "value"
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "The current value"
 msgstr "현재 값"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "vector_tile_zoom"
+msgstr "vector_tile_zoom"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid ""
