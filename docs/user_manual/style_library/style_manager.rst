@@ -49,36 +49,17 @@ You can open that modeless dialog either:
 Organizing style items
 ----------------------
 
-The :guilabel:`Style Manager` dialog displays in its center a frame with
-previewed items organized into tabs:
+In the upper left corner of the :guilabel:`Style Manager` dialog, within
+the drop-down menu, you can choose the style database you want to connect to.
+If you choose :guilabel:`Default` you will be connected to the default style database
+where you can find all available default style items and the ones that you saved in this database.
+Choosing :guilabel:`Project Styles` will connect you to the Project Style database
+where you can find only symbols that you saved in this database.
+If you created more style databases, they will be listed in the drop-down menu.
+There are also options to |symbologyAdd| :sup:`Add existing style database to project`
+and |newPage| :sup:`Create new style database` (see more :ref:`Style database <style_database>`).
 
-* :guilabel:`All` for a complete collection of point, linear and surface symbols
-  and label settings as well as predefined color ramps and text formats;
-* |pointLayer| :guilabel:`Marker` for point symbols only;
-* |lineLayer| :guilabel:`Line` for linear symbols only;
-* |polygonLayer| :guilabel:`Fill` for surface symbols only;
-* |color| :guilabel:`Color ramp`;
-* |text| :guilabel:`Text format` to manage :ref:`text formats <text_format>`,
-  which store the font, color, buffers, shadows, and backgrounds of texts
-  (i.e. all the formatting parts of the label settings, which for instance can
-  be used in layouts);
-* |labelingSingle| :guilabel:`Label settings` to manage :ref:`label settings
-  <showlabels>`, which include the text formats and some layer-type specific
-  settings such as label placement, priority, callouts, rendering...
-* |legend| :guilabel:`Legend Patch Shapes` to manage custom legend patch
-  shapes, which include :guilabel:`Marker`, :guilabel:`Line` and
-  :guilabel:`Fill` geometries.
-* |3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties
-  <3dsymbols>` (extrusion, shading, altitude, ...) for the features to render
-  in a :ref:`3D Map view <label_3dmapview>`
-
-You can arrange the Styles in |iconView| :guilabel:`Icon View` or in
-|openTable| :guilabel:`List View` on the bottom right side. In both views
-the tooltip shows a larger instance of the style.
-The thumbnail size slider at the left of the icons helps you adjust the actual
-thumbnail sizes in the dialog, for a better preview of the symbols!
-
-For each family of items, you can organize the elements into different categories,
+For each style database, you can organize the elements into different categories,
 listed in the panel on the left:
 
 * **Favorites**: displayed by default when configuring an item, it shows an
@@ -125,6 +106,36 @@ categories, you can either:
 To remove a tag or a smart group, right-click on it and select the |symbologyRemove|
 :guilabel:`Remove` button. Note that this does not delete the items grouped in the
 category.
+
+The :guilabel:`Style Manager` dialog displays in its center a frame with
+previewed items organized into tabs:
+
+* :guilabel:`All` for a complete collection of point, linear and surface symbols
+  and label settings as well as predefined color ramps and text formats;
+* |pointLayer| :guilabel:`Marker` for point symbols only;
+* |lineLayer| :guilabel:`Line` for linear symbols only;
+* |polygonLayer| :guilabel:`Fill` for surface symbols only;
+* |color| :guilabel:`Color ramp`;
+* |text| :guilabel:`Text format` to manage :ref:`text formats <text_format>`,
+  which store the font, color, buffers, shadows, and backgrounds of texts
+  (i.e. all the formatting parts of the label settings, which for instance can
+  be used in layouts);
+* |labelingSingle| :guilabel:`Label settings` to manage :ref:`label settings
+  <showlabels>`, which include the text formats and some layer-type specific
+  settings such as label placement, priority, callouts, rendering...
+* |legend| :guilabel:`Legend Patch Shapes` to manage custom legend patch
+  shapes, which include :guilabel:`Marker`, :guilabel:`Line` and
+  :guilabel:`Fill` geometries.
+* |3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties
+  <3dsymbols>` (extrusion, shading, altitude, ...) for the features to render
+  in a :ref:`3D Map view <label_3dmapview>`
+
+You can arrange the Styles in |iconView| :guilabel:`Icon View` or in
+|openTable| :guilabel:`List View` on the bottom right side. In both views
+the tooltip shows a larger instance of the style.
+The thumbnail size slider at the left of the icons helps you adjust the actual
+thumbnail sizes in the dialog, for a better preview of the symbols!
+
 
 Adding, editing or removing an item
 -----------------------------------
@@ -411,6 +422,8 @@ back to the :guilabel:`New Legend Patch Shape` dialog to keep creating new shape
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
+   :width: 1.5em
+.. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em

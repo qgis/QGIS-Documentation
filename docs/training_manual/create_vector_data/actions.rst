@@ -1,4 +1,4 @@
-|LS| Actions
+Lesson: Actions
 ======================================================================
 
 Now that you have seen a default action in the previous lesson, it is
@@ -19,7 +19,7 @@ What we are going to do is to associate each property with its image.
 Then we will create an action that will open the image for a property
 when clicking on the property.
 
-|basic| |FA| Add a Field for Images
+:abbr:`★☆☆ (Basic level)` Follow Along: Add a Field for Images
 ----------------------------------------------------------------------
 
 The ``school_property`` layer has no way to associate an image with a
@@ -70,7 +70,7 @@ property yet. First we will create a field for this purpose.
 #. Save your edits and exit edit mode.
 
 
-|basic| |FA| Creating an Action
+:abbr:`★☆☆ (Basic level)` Follow Along: Creating an Action
 ----------------------------------------------------------------------
 
 #. Open the :guilabel:`Actions` tab for the
@@ -146,7 +146,7 @@ Now it is time to test the new action:
 
    The image for that property should open.
 
-|moderate| |FA| Searching the Internet
+:abbr:`★★☆ (Moderate level)` Follow Along: Searching the Internet
 ----------------------------------------------------------------------
 
 Let's say we are looking at the map and want to know more about the area that a
@@ -257,8 +257,8 @@ Now to test the new action.
 .. note:: If your action doesn't work, check that everything was
    entered correctly; typos are common with this kind of work!
 
-|hard| |FA| Open a Webpage Directly in QGIS
-----------------------------------------------------------------------
+:abbr:`★★★ (Advanced level)` Follow Along: Open a Webpage Directly in QGIS
+-----------------------------------------------------------------------------
 
 Above, you've seen how to open a webpage in an external browser. There are some
 shortcomings with this approach in that it adds an unknowable dependency – will
@@ -319,16 +319,16 @@ To create the layer action:
 #. Try to use the methods described above to load a Wikipedia page
    using the Wikipedia action you just created.
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 
 Actions allow you to give your map extra functionality, useful to the
 end-user who views the same map in QGIS.
-Due to the fact that you can use shell commands for any operating
-system, as well as Python, the sky is the limit in terms of the
-functions you could incorporate!
+Due to the fact that processes called can be shell commands for any 
+operating system, as well as Python, the sky is the limit in terms of
+the functions you could incorporate!
 
-|WN|
+What's Next?
 ----------------------------------------------------------------------
 
 Now that you've done all kinds of vector data creation, you will
@@ -342,15 +342,8 @@ That is the topic of the next module.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
-.. |hard| image:: /static/common/hard.png
-.. |moderate| image:: /static/common/moderate.png
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png

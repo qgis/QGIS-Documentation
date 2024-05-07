@@ -1,4 +1,4 @@
-|LS| Symbology
+Lesson: Symbology
 ===============================================================================
 
 The symbology of a layer is its visual appearance on the map.
@@ -19,13 +19,13 @@ information that people will be able to use.
 **The goal for this lesson:** To be able to create any symbology you want for
 any vector layer.
 
-|basic| |FA| Changing Colors
+:abbr:`★☆☆ (Basic level)` Follow Along: Changing Colors
 -------------------------------------------------------------------------------
 
 To change a layer's symbology, open its :guilabel:`Layer Properties`. Let's
-begin by changing the color of the :guilabel:`landuse` layer.
+begin by changing the color of the ``landuse`` layer.
 
-#. Right-click on the :guilabel:`landuse` layer in the layers list.
+#. Right-click on the ``landuse`` layer in the layers list.
 #. Select the menu item :guilabel:`Properties...` in the menu that appears.
 
    .. note:: By default, you can also access a layer's properties by
@@ -48,17 +48,17 @@ begin by changing the color of the :guilabel:`landuse` layer.
 #. Click :guilabel:`OK` again in the :guilabel:`Layer Properties` window, and
    you will see the color change being applied to the layer.
 
-|basic| |TY|
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 -------------------------------------------------------------------------------
 
-Change the color of the :guilabel:`water` layer to light blue. Try to use the
+Change the color of the ``water`` layer to light blue. Try to use the
 :guilabel:`Layer Styling` panel instead of the :guilabel:`Layer Properties` menu.
 
 .. admonition:: Solution
    :class: dropdown
 
    * Verify that the colors are changing as you expect them to change.
-   * It is enough to select the :guilabel:`water` layer in the legend and then click
+   * It is enough to select the ``water`` layer in the legend and then click
      on the |symbology| :sup:`Open the Layer Styling panel` button. Change the color
      to one that fits the water layer.
 
@@ -71,14 +71,14 @@ Change the color of the :guilabel:`water` layer to light blue. Try to use the
    is hidden.
 
 
-|basic| |FA| Changing Symbol Structure
+:abbr:`★☆☆ (Basic level)` Follow Along: Changing Symbol Structure
 -------------------------------------------------------------------------------
 
 This is good stuff so far, but there's more to a layer's symbology than just
 its color. Next we want to eliminate the lines between the different land use
 areas so as to make the map less visually cluttered.
 
-#. Open the :guilabel:`Layer Properties` window for the :guilabel:`landuse`
+#. Open the :guilabel:`Layer Properties` window for the ``landuse``
    layer.
 
    Under the |symbology| :guilabel:`Symbology` tab, you will see the same kind
@@ -88,22 +88,22 @@ areas so as to make the map less visually cluttered.
    and select the :guilabel:`Simple fill` option.
 #. Click on the :guilabel:`Stroke style` dropdown. At the moment, it should be
    showing a short line and the words :guilabel:`Solid Line`.
-#. Change this to :guilabel:`No Pen`.
+#. Change this to :guilabel:`No Line`.
 
    .. figure:: img/simple_fill_selected.png
       :align: center
 
 #. Click :guilabel:`OK`.
 
-Now the :guilabel:`landuse` layer won't have any lines between areas.
+Now the ``landuse`` layer won't have any lines between areas.
 
 
-|basic| |TY|
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 -------------------------------------------------------------------------------
 
-* Change the :guilabel:`water` layer's symbology again so that it has a
+* Change the ``water`` layer's symbology again so that it has a
   darker blue outline.
-* Change the :guilabel:`rivers` layer's symbology to a sensible representation
+* Change the ``rivers`` layer's symbology to a sensible representation
   of waterways.
 
 Remember: you can use the |symbology| :sup:`Open the Layer Styling panel`
@@ -131,7 +131,7 @@ individual changes while symbolizing a layer.
       :align: center
 
 
-|moderate| |FA| Scale-Based Visibility
+:abbr:`★★☆ (Moderate level)` Follow Along: Scale-Based Visibility
 -------------------------------------------------------------------------------
 
 Sometimes you will find that a layer is not suitable for a given scale. For
@@ -149,8 +149,7 @@ map, for example...
 
 To enable scale-based rendering:
 
-#. Open the :guilabel:`Layer Properties` dialog for the :guilabel:`buildings`
-   layer.
+#. Open the :guilabel:`Layer Properties` dialog for the ``buildings`` layer.
 #. Activate the |rendering| :guilabel:`Rendering` tab.
 #. Enable scale-based rendering by clicking on the checkbox labeled
    :guilabel:`Scale dependent visibility`:
@@ -162,25 +161,25 @@ To enable scale-based rendering:
 #. Click :guilabel:`OK`.
 
 Test the effects of this by zooming in and out in your map, noting when the
-:guilabel:`buildings` layer disappears and reappears.
+``buildings`` layer disappears and reappears.
 
 .. note::  You can use your mouse wheel to zoom in increments.
    Alternatively, use the zoom tools to zoom to a window:
 
    |zoomIn| |zoomOut|
 
-|moderate| |FA| Adding Symbol Layers
+:abbr:`★★☆ (Moderate level)` Follow Along: Adding Symbol Layers
 -------------------------------------------------------------------------------
 
 Now that you know how to change simple symbology for layers, the next step is
 to create more complex symbology. QGIS allows you to do this using symbol
 layers.
 
-#. Go back to the :guilabel:`landuse` layer's symbol properties panel (by clicking
+#. Go back to the ``landuse`` layer's symbol properties panel (by clicking
    :guilabel:`Simple fill` in the symbol layers tree).
 
    In this example, the current symbol has no outline (i.e., it uses the
-   :guilabel:`No Pen` border style).
+   :guilabel:`No Line` border style).
 
    .. figure:: img/simple_fill_selected.png
       :align: center
@@ -227,17 +226,17 @@ your layer that way.
 It's fun! But it probably has too many colors to use in a real map...
 
 
-|moderate| |TY|
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Remembering to zoom in if necessary, create a simple, but not distracting
-texture for the :guilabel:`buildings` layer using the methods above.
+texture for the ``buildings`` layer using the methods above.
 
 
 .. admonition:: Answer
    :class: dropdown
 
-   Customize your :guilabel:`buildings` layer as you like, but remember that it
+   Customize your ``buildings`` layer as you like, but remember that it
    has to be easy to tell different layers apart on the map.
 
    Here's an example:
@@ -246,14 +245,14 @@ texture for the :guilabel:`buildings` layer using the methods above.
       :align: center
 
 
-|moderate| |FA| Ordering Symbol Levels
+:abbr:`★★☆ (Moderate level)` Follow Along: Ordering Symbol Levels
 -------------------------------------------------------------------------------
 
 When symbol layers are rendered, they are also rendered in a sequence, similar
 to the way the different map layers are rendered. This means that in some cases,
 having many symbol layers in one symbol can cause unexpected results.
 
-#. Give the :guilabel:`roads` layer an extra symbol layer (using the method
+#. Give the ``roads`` layer an extra symbol layer (using the method
    for adding symbol layers demonstrated above).
 #. Give the base line a :guilabel:`Stroke width` of ``1.5`` and a black color.
 #. Give the new, uppermost layer a thickness of ``0.8`` and a white color.
@@ -316,10 +315,10 @@ button. Before you change a style, keep in mind that any unsaved style you are
 replacing will be lost.
 
 
-|moderate| |TY|
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 -------------------------------------------------------------------------------
 
-Change the appearance of the :guilabel:`roads` layer again.
+Change the appearance of the ``roads`` layer again.
 
 Make the roads narrow and yellow, with a thin, pale gray outline and a
 thin black line in the middle. Remember that you may need to change the layer
@@ -354,14 +353,14 @@ rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
          :align: center
 
 
-|hard| |TY|
+:abbr:`★★★ (Advanced level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Symbol levels also work for classified layers (i.e., layers having multiple
 symbols). Since we haven't covered classification yet, you will work with some
 rudimentary pre-classified data.
 
-#. Create a new project and add only the :guilabel:`roads` dataset.
+#. Create a new project and add only the ``roads`` dataset.
 #. Apply the style file :file:`advanced_levels_demo.qml` provided in
    :file:`exercise_data/styles` to the layer. This can be done through the
    :menuselection:`Style --> Load Style...` combobox at the bottom of the
@@ -386,7 +385,7 @@ rudimentary pre-classified data.
    #. Open your original map again before continuing with the next exercise.
 
 
-|moderate| |FA| Symbol layer types
+:abbr:`★★☆ (Moderate level)` Follow Along: Symbol layer types
 -------------------------------------------------------------------------------
 
 In addition to setting fill colors and using predefined patterns, you can use
@@ -400,8 +399,8 @@ types. First we will look at the types available for points.
 Point Symbol Layer Types
 ...............................................................................
 
-#. Uncheck all the layers except for :guilabel:`places`.
-#. Change the symbol properties for the :guilabel:`places` layer:
+#. Uncheck all the layers except for ``places``.
+#. Change the symbol properties for the ``places`` layer:
 
    .. figure:: img/places_layer_properties.png
       :align: center
@@ -425,7 +424,7 @@ Line Symbol Layer Types
 
 To see the various options available for line data:
 
-#. Change the :guilabel:`Symbol layer type` for the :guilabel:`roads` layer's
+#. Change the :guilabel:`Symbol layer type` for the ``roads`` layer's
    topmost symbol layer to :guilabel:`Marker line`:
 
    .. figure:: img/change_to_marker_line.png
@@ -457,7 +456,7 @@ Polygon Symbol Layer Types
 
 To see the various options available for polygon data:
 
-#. Change the :guilabel:`Symbol layer type` for the :guilabel:`water` layer, as
+#. Change the :guilabel:`Symbol layer type` for the ``water`` layer, as
    before for the other layers.
 #. Investigate what the different options on the list can do.
 #. Choose one of them that you find suitable.
@@ -485,10 +484,10 @@ that make up the texture.
 
 .. _backlink-symbology-marker-line:
 
-|moderate| |TY|
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 -------------------------------------------------------------------------------
 
-Apply a green transparent fill color to the :guilabel:`protected_areas` layer,
+Apply a green transparent fill color to the ``protected_areas`` layer,
 and change the outline to look like this:
 
 .. figure:: img/marker_line_preview.png
@@ -507,7 +506,7 @@ and change the outline to look like this:
       :align: center
 
 
-|hard| |FA| Geometry generator symbology
+:abbr:`★★★ (Advanced level)` Follow Along: Geometry generator symbology
 -------------------------------------------------------------------------------
 
 You can use the Geometry generator symbology with all layer types (points, lines
@@ -522,7 +521,7 @@ symbol.
 
 Let's give it a try!
 
-#. Select the :guilabel:`water` layer.
+#. Select the ``water`` layer.
 #. Click on :guilabel:`Simple fill` and change the :guilabel:`Symbol layer type`
    to :guilabel:`Geometry generator`.
 
@@ -539,7 +538,7 @@ Let's give it a try!
    .. figure:: img/geometry_generator_query.png
       :align: center
 
-#. When you click on :guilabel:`OK` you will see that the :guilabel:`water` layer
+#. When you click on :guilabel:`OK` you will see that the ``water`` layer
    is rendered as a point layer! We have just run a spatial operation within the
    layer symbology itself, isn't that amazing?
 
@@ -550,7 +549,7 @@ With the Geometry generator symbology you can really go over the edge of *normal
 symbology.
 
 
-|hard| |TY|
+:abbr:`★★★ (Advanced level)` Try Yourself:
 ...............................................................................
 
 Geometry generator are just another symbol level. Try to add another
@@ -575,7 +574,7 @@ The final result should look like this:
    #. Try experimenting other options to get more useful results.
 
 
-|hard| |FA| Creating a Custom SVG Fill
+:abbr:`★★★ (Advanced level)` Follow Along: Creating a Custom SVG Fill
 -------------------------------------------------------------------------------
 
 .. note::  To do this exercise, you will need to have the free vector editing
@@ -630,15 +629,15 @@ The final result should look like this:
    .. figure:: img/inkscape_final_symbol.png
       :align: center
 
-#. If the symbol you get satisfies you, then save it as :guilabel:`landuse_symbol`
+#. If the symbol you get satisfies you, then save it as ``landuse_symbol``
    under the directory that the course is in, under :file:`exercise_data/symbols`,
    as SVG file.
 
 In QGIS:
 
-#. Open the :guilabel:`Layer Properties` for the :file:`landuse` layer.
+#. Open the :guilabel:`Layer Properties` for the ``landuse`` layer.
 #. In the |symbology| :guilabel:`Symbology` tab, change the symbol structure by
-   changing the :guilabel:`Symbol Layer Type` to :guilabel:`SVG Fill````
+   changing the :guilabel:`Symbol Layer Type` to :guilabel:`SVG Fill` 
    shown below.
 #. Click the :guilabel:`...` button and then
    :guilabel:`Select File...` to select your SVG image.
@@ -649,7 +648,7 @@ In QGIS:
    .. figure:: img/svg_symbol_settings.png
       :align: center
 
-Once you validate the dialog, features in :guilabel:`landuse` layer should now
+Once you validate the dialog, features in ``landuse`` layer should now
 be covered by a set of symbols, showing a texture like the one on the
 following map. If textures are not visible, you may need to zoom in the map
 canvas or set in the layer properties a bigger :guilabel:`Texture width`.
@@ -657,20 +656,20 @@ canvas or set in the layer properties a bigger :guilabel:`Texture width`.
 .. figure:: img/svg_symbol_result.png
    :align: center
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Changing the symbology for the different layers has transformed a collection of
 vector files into a legible map. Not only can you see what's happening, it's
 even nice to look at!
 
-|FR|
+Further Reading
 -------------------------------------------------------------------------------
 
 `Examples of Beautiful Maps
 <https://gis.stackexchange.com/questions/3083/seeking-examples-of-beautiful-maps>`_
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Changing symbols for whole layers is useful, but the information contained
@@ -689,20 +688,11 @@ map.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |FR| replace:: Further Reading
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/common/moderate.png
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png

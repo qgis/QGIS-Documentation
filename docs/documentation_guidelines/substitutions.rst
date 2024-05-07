@@ -103,6 +103,7 @@ Icon                            Substitution                        Icon        
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
 |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
 |newVirtualLayer|               ``|newVirtualLayer|``               |newMeshLayer|                  ``|newMeshLayer|``
+|newGpx|                        ``|newGpx|``
 |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
 |geoPackage|                    ``|geoPackage|``                    |spatialite|                    ``|spatialite|``
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
@@ -242,9 +243,10 @@ Icon                            Substitution                        Icon        
 |newMap|                        ``|newMap|``                        |new3DMap|                      ``|new3DMap|``
 |tiltUp|                        ``|tiltUp|``                        |tiltDown|                      ``|tiltDown|``
 |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
+|camera|                        ``|camera|``                        |shadow|                        ``|shadow|``
 |temporal|                      ``|temporal``                       |temporalNavigationOff|         ``|temporalNavigationOff|``
 |temporalNavigationFixedRange|  ``|temporalNavigationFixedRange|``  |temporalNavigationAnimated|    ``|temporalNavigationAnimated|``
-|newElevationProfile|           ``|newElevationProfile|``
+|temporalNavigationMovie|       ``|temporalNavigationMovie|``       |newElevationProfile|           ``|newElevationProfile|``
 ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -282,9 +284,9 @@ Icon                     Substitution                 Icon                     S
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
 |stackedBar|             ``|stackedBar|``
 |createAnnotationLayer|  ``|createAnnotationLayer|``  |annotationLayer|        ``|annotationLayer|``
-|annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
+|textAnnotation|         ``|textAnnotation|``         |svgAnnotation|          ``|svgAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
-|svgAnnotation|          ``|svgAnnotation|``          |actionText|             ``|actionText|``
+|actionText|             ``|actionText|``             |textAlongLine|          ``|textAlongLine|``
 |labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
@@ -344,7 +346,10 @@ Icon                            Substitution                        Icon        
 |interfaceCustomization|        ``|interfaceCustomization|``        |keyboardShortcuts|             ``|keyboardShortcuts|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
 |scaleBar|                      ``|scaleBar|``                      |tracking|                      ``|tracking|``
-|gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
+|gpsTrackBarChart|              ``|gpsTrackBarChart|``
+|gpsConnect|                    ``|gpsConnect|``                    |gpsDisconnect|                 ``|gpsDisconnect|``
+|gpsDestinationLayer|           ``|gpsDestinationLayer|``           |addTrackPoint|                 ``|addTrackPoint|``
+|recenter|                      ``|recenter|``                      |reset|                         ``|reset|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
 |settings|                      ``|settings|``                      |start|                         ``|start|``
 |properties|                    ``|properties|``                    |deleteSelected|                ``|deleteSelected|``
@@ -660,6 +665,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addToProject| image:: /static/common/mAddToProject.png
    :width: 1.5em
+.. |addTrackPoint| image:: /static/common/mActionAddTrackPoint.png
+   :width: 1.5em
 .. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
    :width: 1.5em
 .. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
@@ -687,8 +694,6 @@ Icon                            Substitution                        Icon        
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
 .. |allowIntersections| image:: /static/common/mActionAllowIntersections.png
-   :width: 1.5em
-.. |annotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
 .. |annotationLayer| image:: /static/common/mIconAnnotationLayer.png
    :width: 1.5em
@@ -729,6 +734,8 @@ Icon                            Substitution                        Icon        
 .. |cadPerpendicular| image:: /static/common/cad_perpendicular.png
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |camera| image:: /static/common/mIconCamera.png
    :width: 1.5em
 .. |captureCurveFromFeature| image:: /static/common/mActionCaptureCurveFromFeature.png
    :width: 1.5em
@@ -980,7 +987,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |gps| image:: /static/common/mIconGps.png
    :width: 1.5em
-.. |gpsImporter| image:: /static/common/gps_importer.png
+.. |gpsConnect| image:: /static/common/mIconGpsConnect.png
+   :width: 1.5em
+.. |gpsDestinationLayer| image:: /static/common/mIconGpsDestinationLayer.png
+   :width: 1.5em
+.. |gpsDisconnect| image:: /static/common/mIconGpsDisconnect.png
    :width: 1.5em
 .. |gpsTrackBarChart| image:: /static/common/gpstrack_barchart.png
    :width: 1.5em
@@ -1249,6 +1260,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
+.. |newGpx| image:: /static/common/mActionNewGpx.png
+   :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
@@ -1383,6 +1396,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |rasterize| image:: /static/common/rasterize.png
    :width: 1.5em
+.. |recenter| image:: /static/common/mActionRecenter.png
+   :width: 1.5em
 .. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
    :width: 1.5em
 .. |rectangle3PointsProjected| image:: /static/common/mActionRectangle3PointsProjected.png
@@ -1412,6 +1427,8 @@ Icon                            Substitution                        Icon        
 .. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |reset| image:: /static/common/mActionReset.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
    :width: 1.5em
@@ -1494,6 +1511,8 @@ Icon                            Substitution                        Icon        
 .. |setToCanvasScale| image:: /static/common/mActionSetToCanvasScale.png
    :width: 1.5em
 .. |settings| image:: /static/common/settings.png
+   :width: 1.5em
+.. |shadow| image:: /static/common/mIconShadow.png
    :width: 1.5em
 .. |sharingExport| image:: /static/common/mActionSharingExport.png
    :width: 1.5em
@@ -1606,11 +1625,15 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
    :width: 1.5em
+.. |temporalNavigationMovie| image:: /static/common/mTemporalNavigationMovie.png
+   :width: 1.5em
 .. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
    :width: 1.5em
 .. |terminal| image:: /static/common/mActionTerminal.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
+   :width: 1.5em
+.. |textAlongLine| image:: /static/common/mActionTextAlongLine.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em

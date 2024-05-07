@@ -12,26 +12,37 @@ QGIS Python console
    .. contents::
       :local:
 
-As you will see later in this chapter, QGIS has been designed with a plugin
-architecture. Plugins can be written in Python, a very famous language in the
-geospatial world.
+As you will see later in this chapter, QGIS has been designed with a plugin architecture.
+Plugins can be written in Python, a very famous language in the geospatial world.
 
 QGIS brings a Python API (see :ref:`PyQGIS Developer Cookbook <PyQGIS-Developer-Cookbook>`
-for some code sample) to let the user interact with its objects (layers,
-feature or interface). QGIS also has a Python console.
+for some code sample) to let the user interact with its objects (layers, feature or interface).
+QGIS also has a Python console.
 
-The QGIS Python Console is an interactive shell for the python command
-executions. It also has a python file editor that allows you to edit and save
-your python scripts. Both console and editor are based on PyQScintilla2
-package. To open the console go to :menuselection:`Plugins --> Python Console`
-(:kbd:`Ctrl+Alt+P`).
+The QGIS Python Console is an interactive shell for Python command executions.
+It also has a Python file editor that allows you to edit and save your Python scripts.
+Both console and editor are based on PyQScintilla2 package.
+To open the console go to :menuselection:`Plugins --> Python Console` (:kbd:`Ctrl+Alt+P`).
 
 .. _interactive_console:
 
 The Interactive Console
 =======================
 
+The console is a Python interpreter that allows you to execute Python commands.
+Modules from QGIS (analysis, core, gui, server, processing, 3d)
+and Qt (QtCore, QtGui, QtNetwork, QtWidgets, QtXml)
+as well as Python's math, os, re and sys modules are already imported
+and can be used directly.
+
 The interactive console is composed of a toolbar, an input area and an output one.
+
+.. _figure_python_console:
+
+.. figure:: img/python_console.png
+   :align: center
+
+   The Python Console
 
 Toolbar
 -------
@@ -39,19 +50,23 @@ Toolbar
 The toolbar proposes the following tools:
 
 * |clearConsole| :sup:`Clear Console` to wipe the output area;
-* |runConsole| :sup:`Run Command` available in the input area: same as
+* |start| :sup:`Run Command` available in the input area: same as
   pressing :kbd:`Enter`;
 * |showEditorConsole| :sup:`Show Editor`: toggles :ref:`console_editor`
   visibility;
-* |options| :sup:`Options...`: opens a dialog to configure console
-  properties (see :ref:`console_options`);
-* |helpContents| :sup:`Help...`: browses the current documentation.
+* |options| :sup:`Options...`: opens a dialog to configure :ref:`console properties
+  <console_options>`;
+* |helpContents| :sup:`Help...` provides a menu to access various documentation:
 
+  * :ref:`Python Console Help <console>` (the current page)
+  * :pyqgis:`PyQGIS API documentation <>`
+  * :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>`
+* |dock| :sup:`Dock Code Editor` to dock or undock the panel in QGIS interface
 
-Console
--------
+Input area
+----------
 
-The console main features are:
+The Console input area main features are:
 
 * Code completion, highlighting syntax and calltips for the following APIs:
 
@@ -75,9 +90,39 @@ The console main features are:
 * Save and clear the command history. The history will be saved into the
   :file:`console_history.txt` file under the active :ref:`user profile
   <user_profiles>` folder;
-* Open :api:`QGIS C++ API <>` documentation by typing ``_api``;
-* Open :pyqgis:`QGIS Python API <>` documentation by typing ``_pyqgis``.
-* Open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` by typing ``_cookbook``.
+
+* Type the following special commands:
+
+  * ``?`` to show a help of the Python Console
+  * ``_api`` to open :api:`QGIS C++ API <>` documentation
+    or ``_api(object)`` for a specific object documentation
+    (in QGIS C++ API or Qt API documentation)
+  * ``_pyqgis`` to open :pyqgis:`QGIS Python API <>` documentation
+    or ``_pyqgis(object)`` for a specific object documentation
+    (in QGIS Python API or Qt API documentation)
+  * ``_cookbook`` to open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>`.
+  * ``!`` followed by a command to execute Shell commands from the Python Console.
+    The console will start a subprocess, and forward its output to the Python Console Output.
+    While the subprocess is running, the Python Console Input switches to STDIN mode
+    and forwards entered character to the child process.
+    This makes it possible to send confirmation when the child program asks for it.
+    When the Console is in STDIN mode, pressing :kbd:`Ctrl+C` kills the subprocess.
+    It is also possible to affect the result of a command to a variable with the syntax ``var = !cmd``
+
+    .. code-block:: bash
+
+      >>> !echo QGIS Rocks!
+      QGIS Rocks
+
+      >>> !gdalinfo --version
+      GDAL 3.6.2, released 2023/01/02
+
+      >>> !pip install black
+      # Install black python formatter using pip (if available)
+
+      >>> sql_formats = !ogrinfo --formats | grep SQL
+      >>> sql_formats
+      ['SQLite -vector- (rw+v): SQLite / Spatialite', '  MSSQLSpatial -vector- (rw+): Microsoft SQL Server Spatial Database', '  PostgreSQL -vector- (rw+): PostgreSQL/PostGIS', '  MySQL -vector- (rw+): MySQL', '  PGDUMP -vector- (w+v): PostgreSQL SQL dump']
 
 
 .. tip:: **Reuse executed commands from the output panel**
@@ -85,13 +130,7 @@ The console main features are:
  You can execute code snippets from the output panel by selecting some text and
  pressing :kbd:`Ctrl+E`. No matter if selected text contains the interpreter
  prompt (``>>>``, ``...``).
-  
-.. _figure_python_console:
 
-.. figure:: img/python_console.png
-   :align: center
-
-   The Python Console
 
 .. _console_editor:
 
@@ -157,6 +196,8 @@ share the code via GitHub and much more). Main features are:
    source folder.
 
 .. |clearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
+.. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em

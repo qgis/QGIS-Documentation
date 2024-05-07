@@ -1222,18 +1222,71 @@ https://doc.qt.io/archives/qt-5.9/qnetworkproxy.html#ProxyType-enum
 GPS settings
 ------------
 
-GPS Visualisation Options
-.........................
+The |gps| :guilabel:`GPS` dialog helps you configure GPS devices connections and properties in QGIS.
+It also provides settings for GPS tracking and data digitizing.
 
 .. figure:: img/options_gps.png
    :align: center
 
    GPS settings
 
-This dialog helps you configure GPS devices display when :ref:`connected to QGIS <sec_gpstracking>`:
+You can specify:
 
-* :guilabel:`GPS location marker` for controlling the marker symbol used for the current GPS location
-* :guilabel:`Rotate to match GPS bearing`: whether the marker symbol should be rotated to match the GPS direction
+* :guilabel:`GPS Connection`: provides different means to connect the device to QGIS
+
+  * |radioButtonOn| :guilabel:`Autodetect`
+  * |radioButtonOff| :guilabel:`Serial device` (reload required if a new GPS Device is connected)
+  * |radioButtonOff| :guilabel:`gpsd` (selecting the :guilabel:`Host` and :guilabel:`Port`
+    your GPS is connected to, and providing a :guilabel:`Device` name)
+
+  In case of connection problems, you can try to switch from one to another.
+
+* :guilabel:`Filtering`: You can set an :guilabel:`Acquisition interval (seconds)`
+  and/or a :guilabel:`Distance threshold (meters)` parameters to keep the cursor still active
+  when the receiver is in static conditions.
+
+* Under :guilabel:`Geometry Options`, the :guilabel:`Store in M values` option
+  allows to create geometries with M values from the inbuilt GPS logging tools.
+  This applies to both features digitized from GPS logs
+  and from the :ref:`Log to Geopackage/SpatiaLite <gps_logging>` functionality...
+  Options include storing timestamps (as ms since epoch), ground speed, altitudes,
+  bearings, and accuracy components as m values.
+
+* :guilabel:`GPS Location Marker`
+
+  * Configure a symbol for the :guilabel:`GPS location marker`, indicating the current GPS position
+  * |checkbox| :guilabel:`Rotate location marker to match GPS bearing`:
+    whether the marker symbol should be rotated to match the GPS direction
+
+* :guilabel:`GPS Bearing`:
+
+  * configure a :guilabel:`Bearing line style` using QGIS line symbol properties
+  * set whether to |unchecked| :guilabel:`Calculate Bearings from travel direction`:
+    If checked, the bearing reported by the GPS device will be ignored
+    and the bearing will instead be calculated by the angle between the previous two GPS locations.
+
+* :guilabel:`GPS Track`: set symbol to use for the :guilabel:`Track line style`
+* :guilabel:`Map Centering and Rotation`: defines when the map canvas is updated
+  according to the user displacement on the field:
+
+  * :guilabel:`Threshold for automatic map centering`: defines the minimal offset
+    of the GPS position from the map canvas center to trigger an automatic
+    :ref:`map recentering <gps_recenter>` if enabled.
+  * :guilabel:`Automatic map rotation frequency`: defines how often the map rotation
+    to match the GPS bearing could happen;
+    it can be on a custom duration or :guilabel:`On GPS signal`.
+
+* :guilabel:`Timestamp Properties` to configure how time values are displayed
+  and stored in the data.
+  Parameters include the :guilabel:`Format` which can be:
+
+  * :guilabel:`Local time`
+  * :guilabel:`UTC`
+  * :guilabel:`UTC with offset`, to account for daylight savings offsets
+    or other complex time zone issues
+  * a specific :guilabel:`Time zone`
+
+  Moreover, :guilabel:`Leap seconds` correction can be applied, by adding the seconds to GPS timestamp.
 
 .. _defining_new_device:
 
@@ -1246,41 +1299,7 @@ Literally hundreds of GPS receivers and programs are supported.
 QGIS relies on GPSBabel to interact with these devices
 and :ref:`manipulate their data <gps_algorithms>`.
 
-#. First you have to define the :guilabel:`Path to GPSBabel` binaries.
-#. Then you may want to add your device.
-   You can update devices list using |symbologyAdd| :sup:`Add new device`
-   or |symbologyRemove| :sup:`Remove device` button.
-#. For each device:
-
-   * you provide a :guilabel:`Device name`
-   * you configure different :guilabel:`Commands` QGIS will use while interacting with it,
-     such as:
-
-     * :guilabel:`Waypoint download` from the device
-     * :guilabel:`Waypoint upload` to the device
-     * :guilabel:`Route download` from the device
-     * :guilabel:`Route upload` to the device
-     * :guilabel:`Track download` from the device
-     * :guilabel:`Track upload` to the device
-
-     While the commands are usually GPSBabel commands, you can also use any other command line program that can create a GPX file.
-     QGIS will replace the keywords ``%type``, ``%in``, and ``%out`` when it runs the command.
-
-     As an example, if you create a device type with the download command
-     ``gpsbabel %type -i garmin -o gpx %in %out``
-     and then use it to download waypoints from port ``/dev/ttyS0`` to the file ``output.gpx``,
-     QGIS will replace the keywords and run the command
-     ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``.
-
-     Read the GPSBabel manual for the command line options that may be specific to your use case.
-
-Once you have created a new device type, it will appear in the device lists for
-the GPS download and upload algorithms.
-
-.. figure:: img/options_gpsbabel.png
-   :align: center
-
-   GPS Babel settings
+For details on how-to, please refer to :ref:`load_from_device`.
 
 
 .. index:: Search widget, Locator
@@ -1816,6 +1835,9 @@ Under |symbology| :guilabel:`Styles` tab, you can configure symbols and colors
 inherent to the project, allowing to safely share the project among different
 machines.
 
+Default symbols
+...............
+
 The :guilabel:`Default Symbols` group lets you control how new layers will
 be drawn in the project when they do not have an existing :file:`.qml` style
 defined. You can set :guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill` to
@@ -1823,6 +1845,9 @@ apply depending on the layer geometry type as well as default :guilabel:`Color
 Ramp` and :guilabel:`Text Format` (e.g. when enabling labeling).
 Any of these items can be reset using the :guilabel:`Clear` entry from
 the corresponding drop-down widget.
+
+Options
+.......
 
 In the :guilabel:`Options` group, you can:
 
@@ -1838,6 +1863,9 @@ In the :guilabel:`Options` group, you can:
    Styles tab
 
 .. _project_colors:
+
+Project Colors
+..............
 
 There is also an additional section where you can define specific colors for the
 running project. Like the :ref:`global colors <colors_options>`, you can:
@@ -1870,6 +1898,33 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
   #. Repeat steps 2 and 3 as much as needed
   #. Update the project color once and the change is reflected EVERYWHERE
      it's in use.
+
+.. _style_database: 
+
+Style Database
+..............
+
+A style database in QGIS is a structured repository designed to store symbols,
+text formats, and other styling elements. It serves as a centralized location 
+where you can organize and manage your symbology resources efficiently.
+You can create a dedicated style database for a specific client, housing 
+symbols tailored to that client's need. This ensures a clean and organized 
+approach, without cluttering the default style database.
+In multi-user environments, it's possible to store project-specific styles 
+in a shared location. By linking a project to these styles, all users within
+the project gain access to common symbology, eliminating the need for 
+manual import or updates to individual local style database.
+Storing symbols in a project file offers a practical solution, preventing users
+from overcrowding their global style database with project-specific symbology. 
+This approach guarantees that other users working on the same project immediately
+have access to all the necessary symbology upon loading the project.
+
+In the :guilabel:`Style Database` section you can choose to 
+|symbologyAdd| :guilabel:`Add` or |symbologyRemove| :guilabel:`Remove` 
+style database or you can |newPage| :guilabel:`Create new style database`.
+When you add or remove a style database in this section, the changes will
+be automatically reflected in the |symbology| :guilabel:`Symbology Properties`.
+
 
 .. _project_data_source_properties:
 
@@ -2130,7 +2185,9 @@ will open and allow you to configure:
 * the :guilabel:`Sensor name`: used to retrieve sensor values in expressions and
   python scripts;
 * the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and
-* additional type-specific details (e.g. host name and port)
+* additional type-specific details (e.g. host name and port).
+  For serial port sensors, comboboxes with the system's available serial ports
+  and connection baud rate are available for their selection.
 
 .. _figure_sensors_configuration:
 
@@ -2567,8 +2624,7 @@ We recommend that you keep these defaults values and add your own sections at th
 of the file. If a section is duplicated in the file, QGIS will take the last
 one from top to bottom.
 
-You can change ``allowVersionCheck=false`` to disable
-the QGIS version check.
+You can change ``allowVersionCheck=false`` to disable the QGIS version check.
 
 If you do not want to display the migration window after a fresh install, you need
 the following section:
@@ -2586,10 +2642,23 @@ If you want to add a custom variable in the global scope:
    [variables]
    organisation="Your organization"
 
-To discover the possibilities of the settings ``INI`` file, we suggest that you set
-the config you would like in QGIS Desktop and then search for it in your ``INI``
-file located in your profile using a text editor. A lot of settings can be set
-using the ``INI`` file such as WMS/WMTS, PostGIS connections, proxy settings, maptips…
+A lot of settings can be set using the :file:`.INI` file such as WMS/WMTS, PostGIS connections,
+proxy settings, maptips, default values for algorithms parameters…
+For example, if you want to configure organization wide default values for some algorithms
+it would be handy if you could configure it in the prepared ini-file for all users.
+If the users then open the toolbox to execute an algorithm, the default values will be there.
+To set the default value e.g. for ``GRID_SIZE`` parameter for the ``native:intersection`` algorithm,
+you could write the following into the :file:`.INI` file:
+
+.. code-block:: ini
+
+   [Processing]
+   DefaultGuiParam\native%3Aintersection\GRID_SIZE=0.01
+
+Not all settings can be prepared from QGIS GUI,
+but to discover the possibilities of the settings :file:`.INI` file,
+we suggest that you set the config you would like in QGIS Desktop
+and then search for it in your :file:`.INI` file located in your profile using a text editor.
 
 Finally, you need to set the environment variable ``QGIS_GLOBAL_SETTINGS_FILE``
 to the path of your customized file.
@@ -2638,6 +2707,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
+.. |gps| image:: /static/common/mIconGps.png
+   :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |indicatorLowAccuracy| image:: /static/common/mIndicatorLowAccuracy.png
@@ -2653,6 +2724,8 @@ in the QGIS user profile.
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
+   :width: 1.5em
+.. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em

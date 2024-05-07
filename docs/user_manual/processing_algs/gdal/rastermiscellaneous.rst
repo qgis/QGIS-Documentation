@@ -785,7 +785,7 @@ dimensions, but no projection checking is performed.
 See the
 `GDAL Raster Calculator utility docs <https://gdal.org/programs/gdal_calc.html>`_.
 
-.. seealso:: :ref:`qgisrastercalculator`
+.. seealso:: :ref:`qgisrastercalc`, :ref:`qgisvirtualrastercalc`
 
 Parameters
 ..........

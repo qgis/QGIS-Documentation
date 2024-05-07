@@ -9,9 +9,9 @@ set -e
 
 # The target deprecated versions to update, folders in site directory
 # List to complete
-DEPRECATED=(3.22 3.16 3.10 3.4)
+DEPRECATED=(3.28 3.22 3.16 3.10 3.4)
 # The versions to reference. List to complete
-DOCVERSIONS=(testing latest 3.28 3.22 3.16 3.10 3.4 2.18)
+DOCVERSIONS=(testing latest 3.34 3.28 3.22 3.16 3.10 3.4 2.18)
 # The main parent folder as a parameter, or use current folder (default value)
 SPATH=${1:-$PWD}
 

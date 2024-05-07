@@ -383,6 +383,8 @@ uses the :meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>` me
     vectorLayer = QgsVectorLayer('testdata/network.gpkg|layername=network_lines', 'lines')
     builder = QgsGraphBuilder(vectorLayer.sourceCrs())
     director = QgsVectorLayerDirector(vectorLayer, -1, '', '', '', QgsVectorLayerDirector.DirectionBoth)
+    strategy = QgsNetworkDistanceStrategy()
+    director.addStrategy(strategy)
 
     startPoint = QgsPointXY(1179661.925139,5419188.074362)
     endPoint = QgsPointXY(1180942.970617,5420040.097560)

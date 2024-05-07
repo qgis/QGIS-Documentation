@@ -446,7 +446,7 @@ URL example:
   &OPACITIES=255,0
 
 
-.. figure:: ../img/wms_getmap_opacities.png
+.. figure:: img/wms_getmap_opacities.png
   :align: center
 
   To the left ``OPACITIES=255,0`` and to the right ``OPACITIES=255,255``
@@ -489,7 +489,7 @@ URL example:
   &FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
 
 
-.. figure:: ../img/wms_getmap_filter.png
+.. figure:: img/wms_getmap_filter.png
   :align: center
 
   Server response to a GetMap request with FILTER parameter
@@ -535,7 +535,7 @@ and **Romania** they're highlighted in yellow.
 
 .. _figure_server_selection:
 
-.. figure:: ../img/server_selection_parameter.png
+.. figure:: img/server_selection_parameter.png
   :align: center
 
   Server response to a GetMap request with SELECTION parameter
@@ -554,8 +554,8 @@ Takes a list of key:value pairs separated by semicolon:
 * MODE: corresponds to the export options offered in the QGIS
   Desktop DXF export dialog. Possible values are ``NOSYMBOLOGY``,
   ``FEATURESYMBOLOGY`` and ``SYMBOLLAYERSYMBOLOGY``.
-* LAYERSATTRIBUTES: specify a field that contains values for DXF
-  layer names - if not specified, the original QGIS layer names are used.
+* LAYERATTRIBUTES: specify a field or in case of many layers a comma separated list of fields
+  that contains values for DXF layer names - if not specified, the original QGIS layer names are used.
 * USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will
   be used as layer name.
 * CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1``
@@ -784,6 +784,9 @@ Available values are (not case sensitive):
 
 - ``TRUE``
 - ``FALSE``
+- ``HTML_FI_ONLY_MAPTIP``: like ``TRUE``, with the difference that the HTML response
+  to the feature info request only contains the maptip.
+  This gives full control over the HTML response using e.g. the built-in layer maptip editor.
 
 .. _wms_withgeometry:
 
@@ -859,6 +862,7 @@ and item labels:
    ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`", "No", "Item label italic rendering"
    ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`", "No", "Item label color"
    ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`", "No", "Adds the rule text to JSON output"
+   ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`", "No", "Adds the layer groups to JSON output"
 
 
 .. _wms_getlegendgraphic_bbox:
@@ -1005,7 +1009,7 @@ values are (not case sensitive):
 
 For example:
 
-.. figure:: ../img/getfeaturecount_legend.png
+.. figure:: img/getfeaturecount_legend.png
    :align: center
 
 
@@ -1057,7 +1061,7 @@ URL example:
   &RULELABEL=AUTO
 
 
-.. figure:: ../img/wms_getlegendgraphic_rulelabel.png
+.. figure:: img/wms_getlegendgraphic_rulelabel.png
    :align: center
 
    Legend rendering without label for single symbol layers
@@ -1085,7 +1089,7 @@ URL example:
   &TRANSPARENT=TRUE
   &BOXSPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_boxspace.png
+.. figure:: img/wms_getlegendgraphic_boxspace.png
    :align: center
 
    To the left ``BOXSPACE=0`` and to the right ``BOXSPACE=15``
@@ -1113,7 +1117,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERSPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_layerspace.png
+.. figure:: img/wms_getlegendgraphic_layerspace.png
    :align: center
 
    To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``
@@ -1140,7 +1144,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERTITLESPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_layertitlespace.png
+.. figure:: img/wms_getlegendgraphic_layertitlespace.png
    :align: center
 
    To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``
@@ -1167,7 +1171,7 @@ URL example:
   &TRANSPARENT=TRUE
   &SYMBOLSPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_symbolspace.png
+.. figure:: img/wms_getlegendgraphic_symbolspace.png
    :align: center
 
    To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``
@@ -1194,7 +1198,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ICONLABELSPACE=0
 
-.. figure:: ../img/wms_getlegendgraphic_iconlabelspace.png
+.. figure:: img/wms_getlegendgraphic_iconlabelspace.png
    :align: center
 
    To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``
@@ -1221,7 +1225,7 @@ URL example:
   &TRANSPARENT=TRUE
   &SYMBOLWIDTH=2
 
-.. figure:: ../img/wms_getlegendgraphic_symbolwidth.png
+.. figure:: img/wms_getlegendgraphic_symbolwidth.png
    :align: center
 
    To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``
@@ -1248,7 +1252,7 @@ URL example:
   &TRANSPARENT=TRUE
   &SYMBOLHEIGHT=2
 
-.. figure:: ../img/wms_getlegendgraphic_symbolheight.png
+.. figure:: img/wms_getlegendgraphic_symbolheight.png
    :align: center
 
    To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``
@@ -1307,7 +1311,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERFONTBOLD=TRUE
 
-.. figure:: ../img/wms_getlegendgraphic_layerfontbold.png
+.. figure:: img/wms_getlegendgraphic_layerfontbold.png
    :align: center
 
    Legend with ``LAYERFONTBOLD=TRUE``
@@ -1333,7 +1337,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERFONTSIZE=20
 
-.. figure:: ../img/wms_getlegendgraphic_layerfontsize.png
+.. figure:: img/wms_getlegendgraphic_layerfontsize.png
    :align: center
 
    Legend with ``LAYERFONTSIZE=20``
@@ -1363,7 +1367,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERFONTITALIC=TRUE
 
-.. figure:: ../img/wms_getlegendgraphic_layerfontitalic.png
+.. figure:: img/wms_getlegendgraphic_layerfontitalic.png
    :align: center
 
    Legend with ``LAYERFONTITALIC=TRUE``
@@ -1391,7 +1395,7 @@ URL example:
   &TRANSPARENT=TRUE
   &LAYERFONTCOLOR=0x5f9930
 
-.. figure:: ../img/wms_getlegendgraphic_layerfontcolor.png
+.. figure:: img/wms_getlegendgraphic_layerfontcolor.png
    :align: center
 
    Legend with ``LAYERFONTCOLOR=0x5f9930``
@@ -1437,7 +1441,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ITEMFONTBOLD=TRUE
 
-.. figure:: ../img/wms_getlegendgraphic_itemfontbold.png
+.. figure:: img/wms_getlegendgraphic_itemfontbold.png
    :align: center
 
    Legend with ``ITEMFONTBOLD=TRUE``
@@ -1463,7 +1467,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ITEMFONTSIZE=20
 
-.. figure:: ../img/wms_getlegendgraphic_itemfontsize.png
+.. figure:: img/wms_getlegendgraphic_itemfontsize.png
    :align: center
 
    Legend with ``ITEMFONTSIZE=30``
@@ -1493,7 +1497,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ITEMFONTITALIC=TRUE
 
-.. figure:: ../img/wms_getlegendgraphic_itemfontitalic.png
+.. figure:: img/wms_getlegendgraphic_itemfontitalic.png
    :align: center
 
    Legend with ``ITEMFONTITALIC=TRUE``
@@ -1521,7 +1525,7 @@ URL example:
   &TRANSPARENT=TRUE
   &ITEMFONTCOLOR=0x5f9930
 
-.. figure:: ../img/wms_getlegendgraphic_itemfontcolor.png
+.. figure:: img/wms_getlegendgraphic_itemfontcolor.png
    :align: center
 
    Legend with ``ITEMFONTCOLOR=0x5f9930``
@@ -1561,6 +1565,49 @@ And the corresponding JSON output:
         "rule": "type = 'airport'"
       }
     ],
+    "title":""
+  }
+
+.. _wms_getlegendgraphic_addlayergroups:
+
+ADDLAYERGROUPS
+^^^^^^^^^^^^^^
+
+This parameter specifies if the JSON output will also
+display the names of the layers groups (and subgroups) in the legend entry.
+Possible values are:
+
+- ``TRUE``: display the groups labels
+- ``FALSE`` (default): hide the groups labels
+
+.. figure:: img/wms_getlegendgraphic_addlayergroups.png
+   :align: center
+
+   Legend without (left) and with (right) layer groups labels display
+
+The corresponding JSON output showing groups name would look like:
+
+.. code-block:: json
+
+  { "nodes":
+    [{ "nodes":
+       [{ "icon":"iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAUklEQVQ4jWNgGAXDHzASUqCsrPwfmX/37l28evBKKisr/0+a7IMiNi93C15DcUpgM4wYQ5nwuZAcMIQNvHv3LuO83C0kG0hysoFZRrJNo2AYAQC87BpkGQj1fwAAAABJRU5ErkJggg==",
+          "title":"layer_a", "type":"layer"
+       },
+       { "nodes":
+         [{ "icon":"iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAHUlEQVQ4jWNgGAWjYCQDxh887r8G2hGjYBQMGAAA1x0CR0FzIkYAAAAASUVORK5CYII=",
+            "title":"layer_b", "type":"layer"
+          },
+          { "icon":"iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAHUlEQVQ4jWNgGAWjYCQDxtmzZ/8aaEeMglEwYAAAaIoCzTtn5XoAAAAASUVORK5CYII=",
+            "title":"layer_c", "type":"layer"
+         }],
+         "title":"lines", "type":"group"
+       },
+       { "icon":"iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAKklEQVQ4jWNUVlX/z0AlwMLAwMDAnXmQKoYxUcWUUcNGDRs1bNSwYWYYACXDAsvQaTuVAAAAAElFTkSuQmCC",
+         "title":"layer_d", "type":"layer"
+       }],
+       "title":"top-level-group", "type":"group"
+    }],
     "title":""
   }
 
@@ -2062,7 +2109,7 @@ a label are drawn on top of the normal map:
 
 .. _figure_server_redlining:
 
-.. figure:: ../img/server_redlining.png
+.. figure:: img/server_redlining.png
    :align: center
 
    Server response to a GetMap request with redlining parameters

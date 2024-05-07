@@ -211,7 +211,7 @@ a right-click shows a dedicated set of options presented below.
   |zoomToLayer| :guilabel:`Zoom to Selection`                                |checkbox|
   |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|  
   :guilabel:`Show Feature Count`                                             |checkbox|
-  |labelingSingle| :guilabel:`Show Label`                                    |checkbox|
+  |labelingSingle| :guilabel:`Show Label`                                    |checkbox|                      |checkbox|
   :guilabel:`Copy Layer/Group`                                 |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Rename Layer/Group`                               |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                  |checkbox|
@@ -1037,52 +1037,159 @@ Once the conditions are set, you can also either:
 Identifying Features
 --------------------
 
-The Identify tool allows you to interact with the map canvas and get information
-on features in a pop-up window. To identify features, use:
+The |identify| :sup:`Identify Features` tool allows you to interact with the map canvas
+and get information on features or pixels in a pop-up window.
+It can be used to query most of the layer types supported by QGIS
+(vector, raster, mesh, point cloud, wms, wfs, ...).
+To identify an element, use either:
 
 * :menuselection:`View --> Identify Features`
 * :kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),
-* |identify| :sup:`Identify Features` icon on the Attributes toolbar
+* |identify| :sup:`Identify Features` button on the :guilabel:`Attributes` toolbar
+
+Then click on a feature or pixel of the active layer.
+The identified item gets highlighted in the map canvas
+while the :guilabel:`Identify Results` dialog opens with detailed information on it.
+The dialog also shows a set of buttons for advanced configuration.
+
+
+The Identify Results dialog
+...........................
+
+.. _figure_identify:
+
+.. figure:: img/identify_features.png
+   :align: center
+
+   Identify Results dialog
+
+From bottom to top:
+
+.. _identify_view:
+
+* The :guilabel:`View` controls the general aspect of the dialog
+  and the formatting of the results; it can be set as:
+
+  * **Tree**: this is the default view, and returns the results in a tree-structure
+  * **Table**: available only for raster-based layers, it allows to display the results
+    as a table whose columns are ``Layer``, ``FID``, ``Attribute`` and ``Value``
+  * or **Graph**: available only for raster-based layers
+
+  .. Todo: If ever someone has experience with the graph view...
+
+  .. _identify_mode:
+
+* The :guilabel:`Mode` helps you select the layers from which results could be returned.
+  These layers should be set visible, displaying data in the map canvas,
+  and set :ref:`identifiable <project_layer_capabilities>`
+  from the :menuselection:`Project properties --> Data Sources --> Layers capabilities`.
+  Available modes are:
+
+  * **Current layer**: only the layer(s) selected in the :guilabel:`Layers` panel
+    return results.
+    If a group is selected, then results are picked from its leaf layers.
+  * **Top down, stop at first**: results are from the layer of the top most feature or pixel
+    under the mouse.
+  * **Top down**: results are from the layers with feature or pixel under the mouse.
+  * **Layer selection**: opens a contextual menu where the user selects the layer
+    to identify features from.
+    If only a single feature is under the mouse, then the results are automatically displayed.
+
+* In the upper part of the :guilabel:`Identify Results` dialog,
+  a frame shows the :ref:`information <identified_information>` returned by features
+  as a table, a graph or a tree, depending on the :ref:`selected view <identify_view>`.
+  When in a tree view, you have a handful of tools above the results:
+
+  * |formView| :sup:`Open Form` of the current feature
+  * |expandTree| :sup:`Expand tree`
+  * |collapseTree| :sup:`Collapse tree`
+  * |expandNewTree| :sup:`Expand New Results by Default` to define whether the next
+    identified feature's information should be collapsed or expanded
+  * |deselectAll| :sup:`Clear Results`
+  * |editCopy| :sup:`Copy the identified feature to clipboard`, suitable for pasting in a spreadsheet.
+  * |filePrint| :sup:`Print selected HTML response`: a text-based formatting of the results
+    to print on paper or save as a :file:`.PDF` file
+  * the :ref:`interactive identifying tools <identify_selection>`: a drop-down menu
+    with tools for selecting on the map canvas features or pixels to identify
+  * Under |options| :sup:`Identify Settings`, you can activate whether to:
+
+    * |checkbox| :guilabel:`Auto open form for single feature results`:
+      If checked, each time a single feature is identified, a form opens showing its attributes.
+      This is a handy way to quickly edit a feature's attributes.
+    * |unchecked| :guilabel:`Hide derived attributes from results`
+      to only show fields actually defined in the layer
+    * |unchecked| :guilabel:`Hide NULL values from results`
+
+  * |helpContents|:sup:`Help` to access the current documentation
+
+.. _identify_selection:
 
 Using the Identify Features tool
 ................................
 
-QGIS offers several ways to identify features with the |identify|
-:sup:`Identify Features` tool:
+In its default display (:guilabel:`View: Tree`), the :guilabel:`Identify Results` panel
+offers several tools to interact with the layers to query.
+A smart combination of these tools with the :ref:`target layers selector <identify_mode>`
+may greatly improve identification operations:
 
-* **left click** identifies features according to the
-  :ref:`selection mode <identify_mode>` and the
-  :ref:`selection mask <identify_selection>` set in the
-  :guilabel:`Identify Results` panel
-* **right click** with :guilabel:`Identify Feature(s)` as
-  :ref:`selection mode <identify_mode>` set in the :guilabel:`Identify Results`
-  panel fetches all snapped features from all visible layers.
-  This opens a context menu, allowing the user to choose more precisely the
-  features to identify or the action to execute on them.
-* **right click** with :guilabel:`Identify Features by Polygon` as
-  :ref:`selection mode <identify_mode>` in the :guilabel:`Identify Results`
-  panel identifies the features that overlap with the chosen existing
-  polygon, according to the :ref:`selection mask <identify_selection>` set in
-  the :guilabel:`Identify Results` panel
+* |identifyByRectangle| :sup:`Identify Feature(s)` by single click or click-and-drag
+
+  * single click or click-and-drag: overlaying features in the target layers are returned
+  * right-click: overlaying features from target layers are listed in the contextual menu,
+    grouped by layers. You can then choose to:
+
+    * display the result for a specific feature,
+    * display the result for all the features of a specific layer,
+    * for vector layers, it is also possible to open its attribute table
+      filtered to the returned features
+    * or show all of the returned features.
+* |identifyByMouseOver| :sup:`Identify Features on Mouse over`:
+  move over the map canvas and hovered items in the target layers get highlighted
+  and returned in the results panel.
+* |identifyByPolygon| :sup:`Identify Features by Polygon`:
+  returns items overlapping a drawn or selected polygon.
+
+  * Draw a polygon (left click to add point, right click to close the polygon)
+    and all the overlaying features from target layers are highlighted
+    and returned in the results panel.
+  * Right-click and you get the list of all visible polygon features
+    in the project under the click.
+    Pick an entry and QGIS will return all the features from the target layers
+    that overlap the selected polygon.
+* |identifyByFreehand| :sup:`Identify Features by Freehand`:
+  returns items overlapping a polygon drawn by freehand.
+  Draw a polygon (left-click to start, move the pointer to shape the area
+  and right-click to close the polygon).
+  All the overlaying features from target layers are highlighted
+  and returned in the results panel.
+* |identifyByRadius| :sup:`Identify Features by Radius`
+  returns items overlapping a drawn circle.
+  Draw a cercle (left-click to indicate the center point,
+  move the pointer to shape the area or enter the radius in the pop-up text box
+  and left-click or press :kbd:`Enter` to validate the circle).
+  All the overlaying features from target layers are highlighted
+  and returned in the results panel.
 
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
-   Under :guilabel:`Layer Capabilities` in :menuselection:`Project --> Properties...
-   --> Data Sources`, uncheck the :guilabel:`Identifiable` column next to a
-   layer to avoid it
-   being queried when using the |identify| :sup:`Identify Features` tool in a mode
-   other than **Current Layer**. This is a handy way to return features from
-   only layers that are of interest for you.
+   Under :menuselection:`Project --> Properties... --> Data Sources --> Layer Capabilities`,
+   uncheck the :guilabel:`Identifiable` column next to a layer
+   to avoid it being queried when using the |identify| :sup:`Identify Features` tool.
+   This is a handy way to return features from only layers that are of interest to you.
 
-If you click on feature(s), the :guilabel:`Identify Results` dialog will list
-information about the feature(s) clicked. The default view is a tree view in which
-the first item is the name of the layer and its children are its identified feature(s).
-Each feature is described by the name of a field along with its value.
-This field is the one set in :menuselection:`Layer Properties --> Display`.
-All the other information about the feature follows.
+
+.. _`identified_information`:
 
 Feature information
 ...................
+
+When you identify a data in the map canvas, the :guilabel:`Identify Results` dialog will list
+information about the items clicked (or hovered over, depending on the tool in use).
+The default view is a tree view in which the first item is the name of the layer
+and its children are its identified feature(s).
+Each feature is described by the name of a field along with its value.
+This field is the one set in :menuselection:`Layer Properties --> Display`.
+All the other information about the feature follows.
 
 The feature information displayed by the identify tool will depend on the type 
 of layer you have selected, whether it is a vector layer (including vector tiles 
@@ -1136,69 +1243,12 @@ default it will display the following information:
 .. note:: Links in the feature's attributes are clickable from the :guilabel:`Identify
    Results` panel and will open in your default web browser.
 
-.. _figure_identify:
 
-.. figure:: img/identify_features.png
-   :align: center
+Results contextual menu
+.......................
 
-   Identify Results dialog
-
-The Identify Results dialog
-...........................
-
-At the top of the window, you have a handful of tools:
-
-* |formView| :sup:`Open Form` of the current feature
-* |expandTree| :sup:`Expand tree`
-* |collapseTree| :sup:`Collapse tree`
-* |expandNewTree| :sup:`Expand New Results by Default` to define whether the next
-  identified feature's information should be collapsed or expanded
-* |deselectAll| :sup:`Clear Results`
-* |editCopy| :sup:`Copy selected feature to clipboard`
-* |filePrint| :sup:`Print selected HTML response`
-
-.. _identify_selection:
-
-* selection mode to use to fetch features to identify:
-
-  * |identifyByRectangle| :sup:`Identify Features by area or single click`
-  * |identifyByMouseOver| :sup:`Identify Features on Mouse Over`
-  * |identifyByPolygon| :sup:`Identify Features by Polygon`
-  * |identifyByFreehand| :sup:`Identify Features by Freehand`
-  * |identifyByRadius| :sup:`Identify Features by Radius`
-
-  .. note::
-     When using |identifyByPolygon| :sup:`Identify Features by Polygon`, you can
-     right-click any existing polygon and use it to identify overlapping
-     features in another layer.
-
-.. _identify_mode:
-
-At the bottom of the window are the :guilabel:`Mode` and :guilabel:`View`
-combo boxes.
-:guilabel:`Mode` defines from which layers features should be identified:
-
-* **Current layer**: only features from the selected layers are identified.
-  If a group is selected, features from its visible layers are identified. If there is no
-  selection then only the current layer is identified.
-* **Top down, stop at first**: only features from the upper visible layer.
-* **Top down**: all features from the visible layers. The results are shown in
-  the panel.
-* **Layer selection**: opens a context menu where the user selects the layer to
-  identify features from, similar to a right-click. Only the chosen features
-  will be shown in the result panel.
-
-The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
-'Table' and 'Graph' views can only be set for raster layers.
-
-The identify tool allows you to |checkbox|
-:guilabel:`Auto open form for single feature results`, found under |options|
-:sup:`Identify Settings`.
-If checked, each time a single feature is identified, a form opens
-showing its attributes. This is a handy way to quickly edit a feature's attributes.
-
-Other functions can be found in the context menu of the identified item. For
-example, from the context menu you can:
+Other functions can be found in the context menu of the identified item.
+For example, from the context menu you can:
 
 * View the feature form
 * Zoom to feature
@@ -1447,8 +1497,9 @@ and for loading/saving metadata in the "Default" location.
    Metadata load/save options
 
 
-The "Default" location used by :guilabel:`Save as Default` and :guilabel:`Restore Default`
-changes depending on the underlying data source and on its configuration:
+The "Default" location used by :guilabel:`Save to Default Location` and 
+:guilabel:`Restore from Default Location` changes depending on the underlying 
+data source and on its configuration:
 
 .. _`savemetadatatodb`:
 
@@ -1457,17 +1508,17 @@ changes depending on the underlying data source and on its configuration:
   is checked the metadata are stored inside a dedicated table in the
   database.
 
-* For GeoPackage data sources :guilabel:`Save as Default` always saves the metadata
-  in the internal metadata tables of the GeoPackage.
+* For GeoPackage data sources :guilabel:`Save to Default Location` always saves
+  the metadata in the internal metadata tables of the GeoPackage.
 
   When metadata are saved into the internal tables of PostgreSQL or GeoPackage they
   become available for search and filtering in the browser and in
   the :ref:`layer metadata search panel <layer_metadata_search_panel>`.
 
-* For all other file based data sources :guilabel:`Save as Default` saves the metadata
-  in a :file:`.qmd` file alongside the file.
+* For all other file based data sources :guilabel:`Save to Default Location` 
+  saves the metadata in a :file:`.qmd` file alongside the file.
 
-* In all other cases :guilabel:`Save as Default` saves the metadata
+* In all other cases :guilabel:`Save to Default Location` saves the metadata
   in a local :file:`.sqlite` database.
 
 
@@ -2103,8 +2154,8 @@ Clicking the |dataDefine| :sup:`Data defined override` icon shows the following 
 * :guilabel:`Description...` that indicates if the option is enabled, which input is
   expected, the valid input type and the current definition. Hovering over the
   widget also pops up this information.
-* :guilabel:`Store data in the project`: a button allowing  the property to be stored
-  using to the :ref:`vector_auxiliary_storage` mechanism.
+* :guilabel:`Store data in the project`: a button allowing the property to be stored
+  using the :ref:`vector_auxiliary_storage` mechanism.
 * :guilabel:`Field type`: an entry to select from the layer's fields that match the
   valid input type.
 * :guilabel:`Color`: when the widget is linked to a color property, this menu
@@ -2130,6 +2181,12 @@ Clicking the |dataDefine| :sup:`Data defined override` icon shows the following 
 
  You can enable or disable a configured |dataDefine| :sup:`Data-defined
  override` button by simply clicking the widget with the right mouse button.
+
+.. tip:: **Use middle-click to create or edit the expression to apply**
+
+ You can directly open the :guilabel:`Expression String Builder` dialog to create or
+ edit the expression to apply by simply clicking the |dataDefine| :sup:`Data-defined
+ override` widget with the middle mouse button.
 
 .. _data_defined_assistant:
 
@@ -2263,6 +2320,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.2em
+.. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
 .. |hideDeselectedLayers| image:: /static/common/mActionHideDeselectedLayers.png

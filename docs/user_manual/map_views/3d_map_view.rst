@@ -21,7 +21,8 @@ You can create, manage and open 3D map views via :menuselection:`View --> 3D Map
 #. By clicking on :menuselection:`Manage 3D Map Views` you get in the 3D Map Views Manager.
    Here you get the ability to open, duplicate, remove and rename 3D map views.
 #. If you created one or more 3D map views, you see them listed in :menuselection:`3D Map Views`.
-   You can turn them on and off by clicking on. They will be saved by saving the project, even if they are turned off.  
+   You can turn them on and off by clicking on.
+   They will be saved by saving the project, even if they are turned off.
 
 
 .. _figure_3dmapview:
@@ -36,7 +37,7 @@ The following tools are provided at the top of the 3D map view panel:
 * |pan| :sup:`Camera Control`: moves the view, keeping the same angle
   and direction of the camera
 * |zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole
-  layers' extent
+  layers' extent, or the :ref:`reference extent <scene_extent>` if set
 * |3dNavigation| :sup:`Toggle On-Screen Notification`: shows/hides the
   navigation widget (that is meant to ease controlling of the map view)
 * |identify| :sup:`Identify`: returns information on the clicked point
@@ -44,31 +45,38 @@ The following tools are provided at the top of the 3D map view panel:
 * |measure| :sup:`Measurement Line`: measures the horizontal distance between points
 * |play| :sup:`Animations`: shows/hides the :ref:`animation player
   <create_animation>` widget
-* |saveMapAsImage| :sup:`Save as Image...`: exports the current view to
-  an image file format
-* |3d| :sup:`Export 3D Scene`: exports the current view as a 3D scene
-  (:file:`.obj` file), allowing post-processing in applications like Blender...
-  The terrain and vector features are exported as 3D objects.
-  The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
-  or map view :ref:`configuration <scene_configuration>`, include:
+* |sharingExport| :sup:`Export` menu allows to export the scene to various formats:
 
-  * :guilabel:`Scene name` and destination :guilabel:`Folder`
-  * :guilabel:`Terrain resolution`
-  * :guilabel:`Terrain texture resolution`
-  * :guilabel:`Model scale`
-  * |checkbox| :guilabel:`Smooth edges`
-  * |checkbox| :guilabel:`Export normals`
-  * |checkbox| :guilabel:`Export textures`
+  * |saveMapAsImage| :sup:`Save as Image...`: exports the current view to
+    an image file format
+  * |3d| :sup:`Export 3D Scene`: exports the current view as a 3D scene
+    (:file:`.obj` file), allowing post-processing in applications like Blender...
+    The terrain and vector features are exported as 3D objects.
+    The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
+    or map view :ref:`configuration <scene_configuration>`, include:
+
+    * :guilabel:`Scene name` and destination :guilabel:`Folder`
+    * :guilabel:`Terrain resolution`
+    * :guilabel:`Terrain texture resolution`
+    * :guilabel:`Model scale`
+    * |checkbox| :guilabel:`Smooth edges`
+    * |checkbox| :guilabel:`Export normals`
+    * |checkbox| :guilabel:`Export textures`
 * |showPresets| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
-* The |options| :sup:`Options` menu provides shortcuts to:
+* The |camera| :sup:`Camera` menu helps you control relation between the 2D and 3D views:
 
-  * Add visual effects to the 3D rendering, such as showing :ref:`shadows <shadows>`,
-    :ref:`eye dome lighting <eye_dome_lighting>` or :ref:`ambient occlusion <ambient_occlusion>`
   * Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or
     :guilabel:`3D camera follows 2D Map view`)
   * :guilabel:`Show visible camera area in 2D map view`
-  * |options| :sup:`Configure` the 3D map view :ref:`settings <scene_configuration>`.
+  * :guilabel:`Set 3D scene on 2D map view`: allows to clip the 3D scene
+    and display only the terrain and features intersecting an extent drawn on the 2D map canvas.
+    More options are available in the :ref:`General configuration <scene_extent>` tab.
+* |shadow| :sup:`Effects` adds visual effects to the 3D rendering,
+  such as showing :ref:`shadows <shadows>`, :ref:`eye dome lighting <eye_dome_lighting>`
+  or :ref:`ambient occlusion <ambient_occlusion>`.
+* The |options| :sup:`Options` button opens the dialog to configure
+  the 3D map view :ref:`settings <scene_configuration>`.
 * |dock| :sup:`Dock 3D Map View`: switch from docked widget to top level window
 
 .. _`scene_configuration`:
@@ -81,19 +89,45 @@ To do so, expand the |options| :sup:`Options` menu at the top of
 the 3D canvas panel and press the |options| :menuselection:`Configure` button
 to open the :guilabel:`3D configuration` window.
 
-.. _figure_3dmap_config:
-
-.. figure:: img/3dmapconfiguration.png
-   :align: center
-
-   The 3D Map Configuration dialog
-
-
 In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
 
+.. _scene_extent:
+
+General
+-------
+
+.. _figure_3dmap_configgeneral:
+
+.. figure:: img/3dmapconfiguration_general.png
+   :align: center
+
+   The 3D Map General Configuration dialog
+
+Under the |general| :guilabel:`General` tab, you can:
+
+* Limit the 3D scene's contents to a 2D map extent,
+  using the :ref:`spatial extent selector <extent_selector>`:
+  terrain and features are clipped at the specified extent
+  and only the parts falling within the extent are loaded in the scene.
+  Elevation range of the terrain, mesh and pointcloud layers is also taken into account
+  so that the camera is not positioned below the scene's contents,
+  particularly when using the terrain's vertical scale setting to exaggerate the elevation differences.
+
+  The set extent is also used as reference extent
+  when pressing the |zoomFullExtent| :sup:`Zoom full` button in 3D map view.
+* Check |checkbox| :guilabel:`Show in 2D map view` to display in the main map canvas
+  a rubberband corresponding to the current extent of the 3D scene.
+
 Terrain
 -------
+
+.. _figure_3dmap_configterrain:
+
+.. figure:: img/3dmapconfiguration_terrain.png
+   :align: center
+
+   The 3D Map Terrain Configuration dialog
 
 * :guilabel:`Terrain`: Before diving into the details, it is worth
   noting that the terrain in a 3D view is represented by a hierarchy of
@@ -175,23 +209,67 @@ From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add
 
    The 3D Map Lights Configuration dialog
 
+.. _scene_effects:
+
+Effects
+-------
+
+.. _figure_3dmap_configeffects:
+
+.. figure:: img/3dmapconfiguration_effects.png
+   :align: center
+
+   The 3D Map Effects Configuration dialog
+
 .. _shadows:
 
-Shadow
-------
+* Check |unchecked| :guilabel:`Show shadows` to display shadows within your scene,
+  given:
 
-Check |unchecked| :guilabel:`Show shadows` to display shadows within your scene,
-given:
+  * a :guilabel:`Directional light`
+  * a :guilabel:`Shadow rendering maximum distance`: to avoid rendering shadow
+    of too distant objects, particularly when the camera looks up along the horizon
+  * a :guilabel:`Shadow bias`: to avoid self-shadowing effects that could make
+    some areas darker than others, due to differences between map sizes.
+    The lower the better
+  * a :guilabel:`Shadow map resolution`: to make shadows look sharper.
+    It may result in less performance if the resolution parameter is too high.
 
-* a :guilabel:`Directional light`
-* a :guilabel:`Shadow rendering maximum distance`: to avoid rendering shadow
-  of too distant objects, particularly when the camera looks up along the
-  horizon
-* a :guilabel:`Shadow bias`: to avoid self-shadowing effects that could make
-  some areas darker than others, due to differences between map sizes.
-  The lower the better
-* a :guilabel:`Shadow map resolution`: to make shadows look sharper.
-  It may result in less performance if the resolution parameter is too high.
+.. _eye_dome_lighting:
+
+* |unchecked| :guilabel:`Show Eye Dome Lighting` (EDL):
+  a post processing effect which enhances depth perception.
+  Each pixel's depth (distance off the camera) is compared to its neighboring pixels' depth
+  and gets highlighted according to that depth difference, making the edges stand out.
+  Affects the whole scene and can be combined with :ref:`Screen Space Ambient Occlusion <ambient_occlusion>`.
+  Following parameters can be controlled:
+
+  * :guilabel:`Lighting strength`: increases the contrast, allowing for better depth perception
+  * :guilabel:`Lighting distance`: represents the distance of the used pixels off the center pixel
+    and has the effect of making edges thicker.
+
+.. _ambient_occlusion:
+
+* Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO):
+  a post processing effect which also enhances depth perception
+  by applying a darker shading to areas which are less exposed to ambient lighting.
+  Affects the whole scene and can be combined with :ref:`Eye dome Lighting <eye_dome_lighting>`.
+  Following parameters can be controlled:
+
+  * :guilabel:`Radius`: how far we will reach to calculate ambient occlusion
+  * :guilabel:`Intensity`: how strong the effect should be (higher values make things darker)
+  * :guilabel:`Occlusion threshold`: how many neighboring points need to be occluded for the effect to appear
+    (lower values than 50% will make the output darker, but possibly providing greater range of occlusion)
+
+.. _figure_3dmaps_edl_ssao:
+
+.. figure:: img/3dmap_edl_ssao.png
+   :align: center
+
+   Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or Screen-Space Ambient Occlusion (SSAO)
+
+   From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL
+
 
 Camera & Skybox
 ---------------
@@ -245,6 +323,13 @@ synchronization and skybox.
 Advanced
 --------
 
+.. _figure_3dmap_configadvanced:
+
+.. figure:: img/3dmapconfiguration_advanced.png
+   :align: center
+
+   The 3D Map Advanced Configuration dialog
+
 * :guilabel:`Map tile resolution`: Width and height of the 2D map
   images used as textures for the terrain tiles.
   256px means that each tile will be rendered into an image of
@@ -276,42 +361,6 @@ Advanced
 * |unchecked| :guilabel:`Show debug overlay`: visual overlay which displays
   some useful debugging and profiling information.
   This allows in particular to quickly see the frame graph and the scene graph.
-
-.. _eye_dome_lighting:
-
-* |unchecked| :guilabel:`Show Eye Dome Lighting` (EDL):
-  a post processing effect which enhances depth perception.
-  Each pixel's depth (distance off the camera) is compared to its neighboring pixels' depth
-  and gets highlighted according to that depth difference, making the edges stand out.
-  Affects the whole scene and can be combined with :ref:`Screen Space Ambient Occlusion <ambient_occlusion>`.
-  Following parameters can be controlled:
-
-  * :guilabel:`Lighting strength`: increases the contrast, allowing for better depth perception
-  * :guilabel:`Lighting distance`: represents the distance of the used pixels off the center pixel
-    and has the effect of making edges thicker.
-
-.. _ambient_occlusion:
-
-* Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO):
-  a post processing effect which also enhances depth perception
-  by applying a darker shading to areas which are less exposed to ambient lighting.
-  Affects the whole scene and can be combined with :ref:`Eye dome Lighting <eye_dome_lighting>`.
-  Following parameters can be controlled:
-
-  * :guilabel:`Radius`: how far we will reach to calculate ambient occlusion
-  * :guilabel:`Intensity`: how strong the effect should be (higher values make things darker)
-  * :guilabel:`Occlusion threshold`: how many neighboring points need to be occluded for the effect to appear
-    (lower values than 50% will make the output darker, but possibly providing greater range of occlusion)
-
-.. _figure_3dmaps_edl_ssao:
-
-.. figure:: img/3dmap_edl_ssao.png
-   :align: center
-
-   Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or Screen-Space Ambient Occlusion (SSAO)
-
-   From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL
-
 * |unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black image
   from the point of view of the light used for shadows (for troubleshooting). 
   The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
@@ -426,11 +475,15 @@ the 3D vector layer.
    :width: 1.5em
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
+.. |camera| image:: /static/common/mIconCamera.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
@@ -445,6 +498,10 @@ the 3D vector layer.
 .. |play| image:: /static/common/mActionPlay.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |shadow| image:: /static/common/mIconShadow.png
+   :width: 1.5em
+.. |sharingExport| image:: /static/common/mActionSharingExport.png
    :width: 1.5em
 .. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em

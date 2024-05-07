@@ -70,8 +70,8 @@ To execute a tool, just double-click on its name in the toolbox.
 The algorithm dialog
 --------------------
 
-Once you double-click on the name of the algorithm that you want to execute, a
-dialog similar to that in the :numref:`figure_parameters_dialog` below is shown
+Once you double-click on the name of the algorithm that you want to execute,
+a dialog similar to that in the :numref:`figure_parameters_dialog` below is shown
 (in this case, the dialog corresponds to the ``Centroids`` algorithm).
 
 .. _figure_parameters_dialog:
@@ -94,9 +94,16 @@ It shows a list of input values and configuration parameters to be set.
 It of course has a different content, depending on the requirements of the algorithm to be executed,
 and is created automatically based on those requirements.
 
+.. tip:: **Setting your own default values for algorithm parameters**
+
+   Algorithm dialogs open with some parameters prefilled with values from QGIS installation.
+   It is however possible to set :ref:`your own default values <deploying_organization>`
+   for specific algorithm parameters so that they are used at algorithm startup.
+
 Although the number and type of parameters depend on the characteristics of the algorithm,
 the structure is similar for all of them.
 The parameters found in the table can be of one of the following types.
+
 
 .. _vector_widget:
 
@@ -245,8 +252,8 @@ The parameters found in the table can be of one of the following types.
 .. _reference_layer_param:
 
 .. note:: Some algorithms require many parameters to run, e.g. in the
-  :ref:`qgisrastercalculator` you have to specify manually the cell size, the
-  extent and the CRS. You can avoid to choose all the parameters manually when
+  :ref:`qgisrastercalc` you have to specify manually the cell size, the extent and the CRS.
+  You can avoid to choose all the parameters manually when
   the algorithm has the ``Reference layers`` parameter. With this parameter you
   can choose the reference layer and all its properties (cell size, extent, CRS)
   will be used.
@@ -258,7 +265,9 @@ Along with the :guilabel:`Parameters` tab, there is another tab named
 :guilabel:`Log` (see :numref:`figure_alg_dialog_log` below).
 Information provided by the algorithm during its execution is written
 in this tab, allowing you to track the execution as well as being aware and
-having more details about the algorithm as it runs.
+having more details about the algorithm as it runs. You can directly click on
+the names of output files, folders, or HTML files listed in the log. Doing so
+will open the folder containing the generated file and automatically select it.
 Information on algorithm execution is also output in the
 :menuselection:`View --> Panels --> Log Messages Panel`.
 

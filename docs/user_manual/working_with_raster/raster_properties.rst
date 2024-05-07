@@ -10,6 +10,17 @@ Raster Properties Dialog
    .. contents::
       :local:
 
+Raster data is made up of pixels (or cells), and each pixel has a value.
+It is commonly used to store various types of data, including:
+
+* Imagery, such as satellite images, digital aerial photographs, scanned maps
+* Elevation data, such as digital elevation models (DEMs), digital terrain models (DTMs)
+* Other types of data, such as land cover, soil types, rainfall and many others.
+
+Raster data can be stored in several supported formats, including GeoTIFF,
+ERDAS Imagine, ArcInfo ASCII GRID, PostGIS Raster and others.
+See more at :ref:`opening_data`.
+
 To view and set the properties for a raster layer, double click on
 the layer name in the map legend, or right click on the layer name and
 choose :guilabel:`Properties` from the context menu. This will open the
@@ -30,10 +41,11 @@ There are several tabs in the dialog:
     - |elevationscale| :ref:`Elevation <raster_elevation>`
   * - |editMetadata| :ref:`Metadata <raster_metadata>`
     - |legend| :ref:`Legend <raster_server>`
-    - |overlay| :ref:`QGIS Server <raster_server>`
-  * - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+    - |display| :ref:`Display <raster_display>`
+  * - |overlay| :ref:`QGIS Server <raster_server>`
+    - :ref:`External plugins <plugins>`:sup:`[2]` tabs
     -
-    -
+
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
@@ -899,6 +911,48 @@ layout legend <layout_legend_item>`. These options include:
    Raster Legend
 
 
+.. index:: Map tips
+.. _raster_display:
+
+Display Properties
+==================
+
+The |display| :guilabel:`Display` tab helps you configure HTML map tips to use for
+pixels identification:
+
+* |checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips for the layer
+* The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor for map tips,
+  mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
+  You can check the result of your code sample in the :guilabel:`Preview` frame. You can also select and
+  edit existing expressions using the :guilabel:`Insert/Edit Expression` button.
+
+   .. note:: Understanding the :guilabel:`Insert/Edit Expression` button behavior
+
+    If you select some text within an expression (between "[%" and "%]"),
+    or if no text is selected but the cursor is inside an expression,
+    the whole expression will be automatically selected for editing.
+    If the cursor or a selected text is outside an expression, the dialog opens with the selection.
+
+.. _figure_raster_display:
+
+.. figure:: img/rasterDisplay.png
+   :align: center
+
+   Map tips with raster layer
+
+
+To display map tips:
+
+#. Select the menu option :menuselection:`View --> Show Map Tips`
+   or click on the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes Toolbar`.
+#. Make sure that the layer you target is active
+   and has the |checkbox| :guilabel:`Enable Map Tips` property checked.
+#. Move over a pixel, and the corresponding information will be displayed over.
+
+Map tip is a cross-layer feature meaning that once activated,
+it stays on and applies to any map tip enabled layer in the project until it is toggled off.
+
+
 .. index:: QGIS Server
 .. _raster_server:
 
@@ -932,6 +986,37 @@ The configuration concerns:
 
    QGIS Server in Raster Properties
 
+.. _raster_identify:
+
+Identify raster cells
+=====================
+
+The |identify| :ref:`identify features <identify>` tool allows you to get information about
+specific points in a raster layer. 
+
+To use the |identify|:guilabel:`Identify features` tool:
+
+#. Select the raster layer in the Layers panel.
+#. Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
+#. Click on the point in the raster layer that you want to identify.
+
+The Identify Results panel will open in its default ``Tree`` view
+and display information about the clicked point.
+Below the name of the raster layer, you have on the left the band(s) of the clicked pixel,
+and on the right their respective value.
+These values can also be rendered (from the :guilabel:`View` menu located at the bottom of the panel) in:
+
+* a ``Table`` view - organizes the information about the identified features
+  and their values in a table.
+* a ``Graph`` view - organizes the information about the identified features
+  and their values in a graph.
+
+Under the pixel attributes, you will find the :guilabel:`Derived` information,
+such as:
+
+* ``X`` and ``Y`` coordinate values of the point clicked
+* Column and row of the point clicked (pixel)
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -945,6 +1030,8 @@ The configuration concerns:
    :width: 1.3em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
+.. |display| image:: /static/common/display.png
+   :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |elevationscale| image:: /static/common/elevationscale.png
@@ -955,9 +1042,13 @@ The configuration concerns:
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em

@@ -1,4 +1,4 @@
-|LS| Geometry Construction
+Lesson: Geometry Construction
 ===============================================================================
 
 In this section we are going to delve a little deeper into how simple
@@ -18,7 +18,7 @@ Going back to our :kbd:`address` database, let's get our streets table matching
 the others; i.e., having a constraint on the geometry, an index and an entry in
 the geometry_columns table.
 
-|TY| |moderate|
+Try Yourself: :abbr:`★★☆ (Moderate level)`
 -------------------------------------------------------------------------------
 
 * Modify the :kbd:`streets` table so that it has a geometry column of type
@@ -188,7 +188,7 @@ By now our schema should be looking like this:
    :align: center
 
 
-|TY| |hard|
+Try Yourself: :abbr:`★★★ (Advanced level)`
 -------------------------------------------------------------------------------
 
 Create city boundaries by computing the minimum convex hull of all addresses
@@ -314,7 +314,7 @@ When you create a database, you can then specify which tablespace to use e.g.::
 
   createdb --tablespace=homespace t4a
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You've learned how to create more complex geometries using PostGIS statements.
@@ -323,16 +323,3 @@ with geo-enabled databases through a GIS frontend. You usually won't need to
 actually enter these statements manually, but having a general idea of their
 structure will help you when using a GIS, especially if you encounter errors
 that would otherwise seem cryptic.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |hard| image:: /static/common/hard.png
-.. |moderate| image:: /static/common/moderate.png

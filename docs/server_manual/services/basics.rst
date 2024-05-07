@@ -144,7 +144,7 @@ for:
 
 .. _figure_group_wms_data:
 
-.. figure:: ../img/set_group_wms_data.png
+.. figure:: img/set_group_wms_data.png
    :align: center
    :width: 400
 

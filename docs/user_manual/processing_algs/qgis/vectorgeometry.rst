@@ -3055,7 +3055,7 @@ the minimum value is tested.
    
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of line and polygon features with M enabled
+of point, line and polygon features with M enabled
 
 .. note:: Depending on the input geometry attributes and the filters
    used, the resultant geometries created by this algorithm may no
@@ -3077,8 +3077,8 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: line, polygon]
-     - Input line or polygon vector layer
+     - [vector: any]
+     - Input vector layer
        to remove vertices from
    * - **Minimum**
 
@@ -3155,7 +3155,7 @@ the minimum value is tested.
    
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of line and polygon features with Z enabled
+of point, line and polygon features with Z enabled
 
 .. note:: Depending on the input geometry attributes and the filters
    used, the resultant geometries created by this algorithm may no
@@ -3179,8 +3179,8 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: line, polygon]
-     - Input line or polygon vector layer
+     - [vector: any]
+     - Input vector layer
        to remove vertices from
    * - **Minimum**
 
@@ -5994,6 +5994,7 @@ Parameters
    * - **Value for NoData or non-intersecting vertices**
      - ``NODATA``
      - [number |dataDefine|]
+
        Default: 0.0
      - Value to use in case the vertex does not intersect
        (a valid pixel of) the raster
@@ -6002,8 +6003,7 @@ Parameters
      - [number |dataDefine|]
 
        Default: 1.0
-     - Scaling value: the band values are multiplied
-       by this value.
+     - Scaling value: the band values are multiplied by this value.
    * - **Offset**
      - ``OFFSET``
      - [number |dataDefine|]

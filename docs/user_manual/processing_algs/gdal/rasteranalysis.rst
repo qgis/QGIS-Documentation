@@ -332,12 +332,6 @@ Basic parameters
        Default: 0
      - The number of 3x3 filter passes to run (0 or more) to smoothen
        the results of the interpolation.
-   * - **Do not use default validity mask for the input band**
-     - ``NO_MASK``
-     - [boolean]
-
-       Default: False
-     - Activates the user-defined validity mask
    * - **Validity mask**
      - ``MASK_LAYER``
      - [raster]

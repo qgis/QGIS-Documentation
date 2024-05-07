@@ -141,6 +141,13 @@ You can use tags to emphasize items.
 
      ``label``
 
+* **Layer names**
+  When referring to layers, format as inline code:
+
+  .. code-block:: rst
+
+     ``layer name``
+
 
 .. _my_anchor:
 
@@ -673,6 +680,7 @@ guidelines:
   LayoutItem                                ``layoutitem``
   Color                                     ``color``
   Scale                                     ``scale``
+  Map theme                                 ``map theme``
   ========================================  =========================  ====================
 
 

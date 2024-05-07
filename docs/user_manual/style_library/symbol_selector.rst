@@ -99,8 +99,10 @@ You can setup some parameters that apply to the global symbol:
     |openTable| :sup:`List View` button below the frame;
   * or as icon preview using the |iconView| :sup:`Icon View` button.
 
-* Press the :guilabel:`Save Symbol` button to add the symbol being edited to the
-  symbols library. 
+* Press the :guilabel:`Save Symbol` button to open the :guilabel:`Save New Symbol` dialog.
+  Here, you can choose the :guilabel:`Destination` where you want to add the symbol being edited,
+  give it a :guilabel:`Name` and add :guilabel:`Tag(s)`.
+  You also have the option to |checkbox| :sup:`Add to favorites` your new symbol.
 * With the :guilabel:`Advanced` |selectString| option, you can:
 
   * for line and fill symbols, :guilabel:`Clip features to canvas extent`.
@@ -633,8 +635,11 @@ symbol layer types:
 * **Raster image fill**: fills the polygon with tiles from a raster image (:file:`PNG`
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
   or an embedded file encoded as a string (:ref:`more details <embedded_file_selector>`).
-  Options include (data defined) opacity, image width, coordinate mode (object
-  or viewport), rotation and offset. The image width can be set using any of the
+  Options include (data defined) opacity, size, coordinate mode (object
+  or viewport), rotation and offset. Under the option Size you can 
+  independently adjust the width and height of the fill pattern, enabling 
+  stretched raster fills in either the horizontal or vertical directions. 
+  The image width and height can be set using any of the
   :ref:`common units <unit_selector>` or as a percentage of the original size.
 * **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`
   of a given size (:guilabel:`Texture width`).

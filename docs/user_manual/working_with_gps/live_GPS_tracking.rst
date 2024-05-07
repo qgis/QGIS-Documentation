@@ -9,45 +9,143 @@ Live GPS tracking
    .. contents::
       :local:
 
-To activate live GPS tracking in QGIS, you need to select :menuselection:`View
---> Panels` |checkbox| :guilabel:`GPS Information Panel` or press :kbd:`Ctrl+0`.
-You will get a new docked window on the left side of the canvas.
+QGIS can help you do field mapping with a GPS receiver.
+Such a live tracking operation is done using the :ref:`GPS Toolbar <gps_toolbar>`.
+Some :ref:`device configuration <gps_options>` may be needed before
+connecting QGIS and the GPS receiver.
 
-There are three possible screens in this GPS tracking window:
 
-* |metadata| :sup:`Position`: GPS position coordinates and an interface for manually entering
-  vertices and features
+.. _gps_toolbar:
+
+GPS toolbar
+-----------
+
+The :guilabel:`GPS Toolbar` provides the main tools to control a live tracking session.
+It can be activated from :menuselection:`View --> Toolbars --> GPS`.
+It follows the state of the project, GPS, and current GPS track, and enables actions
+only when they make sense.
+Once a device is detected by QGIS, you will be able to interact with it:
+
+* |gpsConnect| :sup:`Connect to GPS`
+* |gpsDisconnect| :sup:`Disconnect from GPS`
+* |recenter| :sup:`Recenter map on GPS location`: the map will immediately recenter on the current GPS position
+  regardless of the :ref:`automatic recentering parameter <gps_recenter>`.
+
+* |gpsDestinationLayer| :sup:`Set destination layer for GPS digitized features`:
+  By default, QGIS will :guilabel:`Follow active layer` for feature digitizing,
+  meaning that GPS digitizing tools will adapt to the layer selected in :guilabel:`Layers` panel
+  and created features will be stored in it accordingly.
+  While this may be useful in some contexts, it also implies careful interaction
+  with other layers to avoid storing inadvertently features in undesired layers.
+  This option allows you to explicitly indicate a layer for the data storage
+  during the live tracking session, and you could switch depending on your needs.
+  Exposed tools will adapt as well to the selected layer type.
+
+  The GPS destination layer is made automatically editable when a feature is being created,
+  and the user is notified accordingly.
+
+* actions for feature creation:
+
+  * |addTrackPoint| :sup:`Add vertex to GPS track using GPS current location`
+  * |capturePoint| :sup:`Create a new point feature at current GPS location`
+  * |captureLine| :sup:`Create a new line feature using the current GPS track`
+  * |capturePolygon| :sup:`Create a new polygon feature using the current GPS track`
+  * |reset| :sup:`Reset track`
+
+* |metadata| :sup:`Show GPS information`: opens the :ref:`GPS Information
+  <gps_information_panel>` panel
+
+* a display box for quick access to some GPS information components you may need:
+
+  * |unchecked| :sup:`Show location`
+  * |unchecked| :sup:`Show altitude (Geoid)`
+  * |unchecked| :sup:`Show altitude (WGS 84 ellipsoid)`
+  * |unchecked| :sup:`Show ground speed`
+  * |unchecked| :sup:`Show bearing`
+  * |unchecked| :sup:`Show total track length`
+  * |unchecked| :sup:`Show distance from start of track`
+
+.. _tracking_settings:
+
+* The |options| :sup:`Settings` button opens a drop-down menu with common settings
+  which are expected to be modified mid-session:
+
+  * |unchecked| :guilabel:`Show location marker`
+  * |unchecked| :guilabel:`Show bearing line`
+  * |unchecked| :guilabel:`Rotate map to match GPS direction`
+
+  .. _gps_recenter:
+
+  * Options to control map recentering:
+
+    * |radioButtonOff| :guilabel:`Always recenter map` when the GPS position is offset
+      from the map canvas center by a certain distance (as a ratio of the map canvas extent)
+    * |radioButtonOn| :guilabel:`Recenter map when leaving extent`
+    * |radioButtonOff| :guilabel:`Never recenter`
+
+  * |unchecked| :guilabel:`Automatically add track vertices`
+    whenever new locations are received from the GPS device.
+  * |unchecked| :guilabel:`Automatically save added features`:
+    features created from GPS locations are immediately committed to their target layers
+    (skipping the usual layer edit buffer)
+  * :guilabel:`Time stamp destination` to adjust the field for time fix storage
+
+  .. _gps_logging:
+
+  * |unchecked| :guilabel:`Log to GeoPackage/SpatiaLite...`: When activated,
+    the user will be prompted to select an existing GeoPackage/SpatiaLite file
+    or enter a new file name.
+    A ``gps_points`` and ``gps_tracks`` table will be created in the file
+    with a predefined structure.
+
+    All incoming GPS messages will be logged to the ``gps_points`` layer,
+    along with speed, bearing, altitude and accuracy information from the GPS.
+
+    When the GPS is disconnected (or QGIS closed), the entire recorded GPS track
+    will be added to the ``gps_tracks`` table
+    (along with some calculated information like track length, start and end times).
+
+  * |unchecked| :guilabel:`Log NMEA sentences...`: enables logging all raw NMEA strings
+    from the device to a text file
+  * |options| :guilabel:`GPS settings...` to access the GPS :ref:`global options
+    <gps_options>` dialog
+
+
+.. tip:: **Live status bar information on position**
+
+  When a GPS device is connected and the user moves the cursor over the map canvas,
+  a live status bar message displays the distance and bearing from the cursor to the GPS position.
+  Project distance and bearing settings are respected in this display.
+  On a touch screen device, use a tap-and-hold event to trigger the live status bar message.
+
+
+.. _gps_information_panel:
+
+GPS Information Panel
+---------------------
+
+For full monitoring of a live GPS tracking in QGIS, you may need to enable
+the :guilabel:`GPS Information Panel`
+(:menuselection:`View --> Panels -->` or press :kbd:`Ctrl+0`).
+
+In the top right corner of the :guilabel:`GPS Information Panel`,
+you press :guilabel:`Connect` to initiate connection between QGIS
+and a plugged-in GPS receiver, or :guilabel:`Disconnect` them.
+
+In the top left of the panel, following buttons are accessible:
+
+* |metadata| :sup:`Position`: live details on the GPS position and sensors
 * |gpsTrackBarChart| :sup:`Signal`: signal strength of satellite connections
-* |options| :sup:`Options`: GPS options screen (see :numref:`figure_gps_options`)
+* |options| :sup:`Settings`: drop-down menu to :ref:`live tracking options <tracking_settings>`
+  you may need to modify during a session
 
-With a plugged-in GPS receiver (has to be supported by your operating system),
-a simple click on :guilabel:`Connect` connects the GPS to QGIS. A second click (now
-on :guilabel:`Disconnect`) disconnects the GPS receiver from your computer. For GNU/Linux,
-gpsd support is integrated to support connection to most GPS receivers. Therefore,
-you first have to configure gpsd properly to connect QGIS to it.
-
-With the :guilabel:`Recenter` button the map will jump to the current GPS position.
-
-.. warning::
-   If you want to record your position to the canvas, you have to create a new
-   vector layer first and switch it to editable status to be able to record your
-   track.
-
-When a GPS device is connected and the user moves the cursor over the map canvas,
-a live status bar message displays the distance and bearing from the cursor to
-the GPS position. Project distance and bearing settings are respected in this display.
-
-.. tip:: **Touch Screen Devices**
-
- On a touch screen device use a tap-and-hold event to trigger the live status bar
- message.
 
 Position and additional attributes
-----------------------------------
+..................................
 
-|metadata| If the GPS is receiving signals from satellites, you will
-see your position in latitude, longitude and altitude together with additional
-attributes.
+In the |metadata| :sup:`Position` tab, if the GPS is receiving signals from satellites,
+you will see your position in latitude, longitude and altitude
+together with additional attributes.
 
 .. _figure_gps_position:
 
@@ -56,11 +154,39 @@ attributes.
 
    GPS tracking position and additional attributes
 
-GPS signal strength
--------------------
 
-|gpsTrackBarChart| Here, you can see the signal strength of the satellites you
-are receiving signals from.
+* :guilabel:`Latitude`
+* :guilabel:`Longitude`
+* :guilabel:`Altitude (Geoid)`: Altitude/elevation above or below the mean sea level
+* :guilabel:`Altitude (WGS 84 ellipsoid)`: Altitude/elevation above or below
+  the WGS-84 Earth ellipsoid
+* :guilabel:`Geoidal separation`: Difference between the WGS-84 Earth ellipsoid
+  and mean sea level (geoid), ``-`` means mean sea level is below ellipsoid
+* :guilabel:`Time of fix`
+* :guilabel:`Speed`: Ground speed
+* :guilabel:`Direction`: Bearing measured in degrees clockwise from true north
+  to the direction of travel
+* :guilabel:`HDOP`: Horizontal dilution of precision
+* :guilabel:`VDOP`: Vertical dilution of precision
+* :guilabel:`PDOP`: Dilution of precision
+* :guilabel:`H accuracy`: Horizontal accuracy in meters
+* :guilabel:`V accuracy`: Vertical accuracy in meters
+* :guilabel:`3D accuracy`: 3D Root Mean Square (RMS) in meters
+* :guilabel:`Mode`: GPS receiver configuration 2D/3D mode, can be ``automatic`` or ``manual``
+* :guilabel:`Dimensions`: Position fix dimension, can be ``2D``, ``3D`` or ``No fix``
+* :guilabel:`Quality`: Positioning quality indicator
+* :guilabel:`Status`: Position fix status, can be ``Valid`` or ``Invalid``
+* :guilabel:`Satellites`: Count of satellites used in obtaining the fix
+* :guilabel:`Total track length`: Total distance of current GPS track
+* :guilabel:`Distance from start of track`: Direct distance from first vertex
+  in current GPS track to latest vertex
+
+
+Signal
+......
+
+With |gpsTrackBarChart| :sup:`Signal` tab, you can see the signal strength of the satellites
+you are receiving signals from.
 
 .. _figure_gps_strength:
 
@@ -70,76 +196,16 @@ are receiving signals from.
    GPS tracking signal strength
 
 
-GPS options
------------
-
-.. _figure_gps_options:
-
-.. figure:: img/gpstrack_options.png
-   :align: center
-
-   GPS tracking options window
-
-Here you can specify: 
-
-* :guilabel:`Connection`
-
-  * In case of connection problems, you can switch between:
-
-    * |radioButtonOn| :guilabel:`Autodetect`
-    * |radioButtonOff| :guilabel:`Serial device` (reload required if a new GPS Device is connected)
-    * |radioButtonOff| :guilabel:`gpsd` (selecting the Host, Port and Device your
-      GPS is connected to)
-
-  * A click on :guilabel:`Connect` again initiates the connection to the GPS receiver.
-
-* :guilabel:`Digitizing`
-
-  * You can activate |checkbox| :menuselection:`Automatically save added features`
-    when you are in editing mode. Or you can activate |checkbox|
-    :guilabel:`Automatically add points` to the map canvas with a certain width
-    and color.
-  * The :guilabel:`Calculate bearing from travel direction` can be used if the device
-    reports faulty bearing measurements and it will calculate the GPS bearing based
-    on the previous two recorded locations.
-
-* :guilabel:`Cursor`: you can use a slider |slider| to shrink
-  and grow the position cursor on the canvas.
-
-* :guilabel:`Filtering`: You can also set an :guilabel:`Acquisition interval (seconds)` 
-  and a :guilabel:`Distance threshold (meters)` parameters to keep the cursor still
-  active when the receiver is in static conditions.
-
-* :guilabel:`Map Centering and Rotation`
-
-  * Activating |radioButtonOn| :guilabel:`Map centering` allows you to decide in which
-    way the canvas will be updated. This includes 'always', 'when leaving', if your
-    recorded coordinates start to move out of the canvas, or 'never', to keep map
-    extent.
-  * Activating :guilabel:`Rotate map to match GPS direction` will automatically
-    rotate the map canvas so that it is oriented in the same direction as the GPS bearing.
-
-
-* Activating :guilabel:`Show Bearing Line` will show a line from the GPS location
-  pointing in current path direction of the GPS.
-
-
-* Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
-  and a file where log messages about the GPS tracking are logged.
-
-If you want to set a feature manually, you have to go back to |metadata|
-:sup:`Position` and click on :guilabel:`Add Point` or :guilabel:`Add Track Point`.
-
 Connect to a Bluetooth GPS for live tracking
 --------------------------------------------
 
-With QGIS you can connect a Bluetooth GPS for field data collection. To perform
-this task you need a GPS Bluetooth device and a Bluetooth receiver on your
-computer.
+With QGIS you can connect a Bluetooth GPS for field data collection.
+To perform this task you need a GPS Bluetooth device and a Bluetooth receiver
+on your computer.
 
 At first you must let your GPS device be recognized and paired to the computer.
-Turn on the GPS, go to the Bluetooth icon on your notification area and search
-for a New Device.
+Turn on the GPS, go to the Bluetooth icon on your notification area
+and search for a New Device.
 
 On the right side of the Device selection mask make sure that all devices are
 selected so your GPS unit will probably appear among those available. In the
@@ -162,62 +228,72 @@ If QGIS can't receive GPS data, then you should restart your GPS device, wait
 receive again a connection error make sure you don't have another Bluetooth
 receiver near you, paired with the same GPS unit.
 
+Examples of GPS devices connection in QGIS
+------------------------------------------
+
 Using GPSMAP 60cs
------------------
+.................
 
 MS Windows
-..........
+^^^^^^^^^^
 
 Easiest way to make it work is to use a middleware (freeware, not open) called
 `GPSGate <https://gpsgate.com/gpsgate-splitter>`_.
 
-Launch the program, make it scan for GPS devices (works for both USB and BT
-ones) and then in QGIS just click :guilabel:`Connect` in the Live tracking panel
-using the |radioButtonOn| :guilabel:`Autodetect` mode.
+Launch the program, make it scan for GPS devices (works for both USB and BT ones)
+and then in QGIS:
+
+#. In :menuselection:`Settings --> Options --> GPS`, detect the plugged-in device.
+   You can use the |radioButtonOn| :guilabel:`Autodetect` mode.
+#. Press :guilabel:`Connect` in the :guilabel:`GPS Information` panel
 
 Ubuntu/Mint GNU/Linux
-.....................
+^^^^^^^^^^^^^^^^^^^^^
 
-As for Windows the easiest way is to use a server in the middle, in this case
-GPSD, so
+As for Windows the easiest way is to use a server in the middle,
+in this case GPSD, so
 
-::
+#. Install the program
 
-  sudo apt install gpsd
+   ::
 
-Then load the ``garmin_gps`` kernel module
+    sudo apt install gpsd
 
-::
+#. Then load the ``garmin_gps`` kernel module
 
-  sudo modprobe garmin_gps
+   ::
 
-And then connect the unit. Then check with ``dmesg`` the actual device being
-used bu the unit, for example ``/dev/ttyUSB0``. Now you can launch gpsd
+    sudo modprobe garmin_gps
 
-::
+#. And then connect the unit and check with ``dmesg`` the actual device being
+   used by the unit, for example ``/dev/ttyUSB0``.
 
-  gpsd /dev/ttyUSB0
+#. Now you can launch gpsd
 
-And finally connect with the QGIS live tracking tool.
+   ::
+
+    gpsd /dev/ttyUSB0
+
+#. And finally connect with the QGIS live tracking tool.
 
 Using BTGP-38KM datalogger (only Bluetooth)
--------------------------------------------
+...........................................
 
 Using GPSD (under Linux) or GPSGate (under Windows) is effortless.
 
 Using BlueMax GPS-4044 datalogger (both BT and USB)
----------------------------------------------------
+...................................................
 
 MS Windows
-..........
+^^^^^^^^^^
 
 The live tracking works for both USB and BT modes, by using GPSGate or even
 without it, just use the |radioButtonOn| :guilabel:`Autodetect` mode, or point
-the tool the right port.
+the tool to the right port.
 
 
 Ubuntu/Mint GNU/Linux
-.....................
+^^^^^^^^^^^^^^^^^^^^^
 
 **For USB**
 
@@ -248,8 +324,20 @@ or without it, by connecting the QGIS live tracking tool directly to the device
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em
+.. |addTrackPoint| image:: /static/common/mActionAddTrackPoint.png
+   :width: 1.5em
+.. |capturePoint| image:: /static/common/mActionCapturePoint.png
+   :width: 1.5em
+.. |captureLine| image:: /static/common/mActionCaptureLine.png
+   :width: 1.5em
+.. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
+   :width: 1.5em
+.. |gpsConnect| image:: /static/common/mIconGpsConnect.png
+   :width: 1.5em
+.. |gpsDestinationLayer| image:: /static/common/mIconGpsDestinationLayer.png
+   :width: 1.5em
+.. |gpsDisconnect| image:: /static/common/mIconGpsDisconnect.png
+   :width: 1.5em
 .. |gpsTrackBarChart| image:: /static/common/gpstrack_barchart.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
@@ -260,4 +348,9 @@ or without it, by connecting the QGIS live tracking tool directly to the device
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
-.. |slider| image:: /static/common/slider.png
+.. |recenter| image:: /static/common/mActionRecenter.png
+   :width: 1.5em
+.. |reset| image:: /static/common/mActionReset.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em

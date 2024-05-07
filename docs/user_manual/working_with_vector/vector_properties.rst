@@ -504,6 +504,9 @@ available modes are:
   (the idea of a boxplot).
 * Equal Interval: each class will have the same size (e.g. with the values
   from 1 to 16 and four classes, each class will have a size of four).
+* Fixed Interval: each class will have a fixed range of values (e.g. with the
+  values from 1 to 16 and an interval size of 4, the classes will be 1-4,
+  5-8, 9-12 and 13-16).  
 * Logarithmic scale: suitable for data with a wide range of values.
   Narrow classes for low values and wide classes for large values (e.g. for
   decimal numbers with range [0..100] and two classes, the first class will
@@ -1113,7 +1116,7 @@ the symbol's redrawing.
 #. You can now use ``@symbol_frame`` variable in any sub-symbol data defined 
    property in order to animate that property. 
 
-Fow example, setting the symbol's rotation to data 
+For example, setting the symbol's rotation to data 
 defined expression ``@symbol_frame % 360`` 
 will cause the symbol to rotate over time, with rotation speed dictated by
 the symbol's frame rate:
@@ -2070,6 +2073,19 @@ The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
 the |newAttribute| :sup:`New field` and |deleteAttribute| :sup:`Delete field`
 buttons.
 
+When creating |newAttribute| :sup:`New field`, the :guilabel:`Comment` option is
+available only for data sources that allow editing comments
+(See :ref:`database_entries` for more details).
+You can also set aliases within :guilabel:`Add Field` dialog, for supported
+OGR formats (GeoPackage and ESRI File Geodatabase).
+
+.. _figure_add_field:
+
+.. figure:: img/add_field_comments_aliases.png
+   :align: center
+
+   Add Field Dialog
+
 You can also rename fields by double-clicking its name. This is only supported
 for data providers like PostgreSQL, Oracle, Memory layer and some GDAL layers
 depending on the GDAL version.
@@ -2194,7 +2210,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
 #. Select fields you do not want to use in your :guilabel:`Form Layout`
    panel and hit the |symbologyRemove| button to remove them.
    You can also toggle the selection with the |invertSelection| :sup:`Invert selection` button.
-#. Drag and drop fields from the first panel to the :guilabel`Form Layout` one to re-add them.
+#. Drag and drop fields from the first panel to the :guilabel:`Form Layout` one to re-add them.
    The same field can be added multiple times.
 #. Drag and drop fields within the :guilabel:`Form Layout` panel to reorder their position.
 #. Add containers to associate fields that belong to  the same category
@@ -2205,8 +2221,12 @@ directly linked to a particular field (like the HTML/QML widgets or the
    #. Then set the properties of the container, ie:
 
       * the :guilabel:`Label`: the title that will be used for the container
-      * the :guilabel:`Container Type`: it can be a :guilabel:`Tab`
-        or a :guilabel:`Group box in container` (a collapsible group box inside a tab or another group)
+      * the :guilabel:`Container Type`: it can be a :guilabel:`Tab`,
+        :guilabel:`Group box in container` (a collapsible group box inside a tab or another group)
+        or a :guilabel:`Row` (a container type that allows you to arrange your widgets in a horizontal row,
+        automatically determining the number of columns based on the number of widgets),
+      * the :guilabel:`Within`: this optional feature allows you to select an existing container 
+        in which the new container (:guilabel:`Group box in container` or :guilabel:`Row`) will be embedded.
       * and the :guilabel:`Number of columns` the embedded fields should be distributed over
 
       .. _figure_fields_layout:
@@ -2392,6 +2412,11 @@ this group helps you configure the look of the widget assigned to the field:
 * :guilabel:`Override label color`: applies specific color to the field's label
 * :guilabel:`Override label font`: applies specific font properties (bold, italic, underline,
   strikethrough, or font family) to the field's label
+* :guilabel:`Size`: allows to control how widgets will relatively resize when resizing an
+  attribute form.
+
+  * :guilabel:`Horizontal stretch`: sets a higher horizontal value for widgets that need more horizontal space.
+  * :guilabel:`Vertical stretch`: determines how widgets resize vertically when the form is resized.
 
 General options
 ^^^^^^^^^^^^^^^
@@ -2555,7 +2580,8 @@ with the field type. The available widgets are:
 * **Relation Reference**: This is the default widget assigned to the referencing
   field (i.e., the foreign key in the child layer) when a :ref:`relation <vector_relations>`
   is set. It provides direct access to the parent feature's form which in turn
-  embeds the list and form of its children.
+  embeds the list and form of its children. The number of entries in the widget
+  can be limited for efficiency, and if limit is not set, all entries will be loaded.
 * **Text Edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
   can also choose html content.
@@ -2886,6 +2912,9 @@ that was selected from the identify results or attribute table (see :ref:`using_
 Double quote marks can be used to group text into a single argument to the program, script or command.
 Double quotes will be ignored if preceded by a backslash.
 
+Actions can invoke a single process, with arguments, so Boolean operators (such as ``&``, ``&&``, ``;``, ``|``) will not work.
+In UNIX-like operating systems multiple commands can be executed via ``bash -c``.
+
 The :guilabel:`Action Scopes` allows you to define where the action should be available.
 You have following choices:
 
@@ -3144,10 +3173,19 @@ feature identification:
     Applicable when |checkbox| :guilabel:`Enable Map Tips` is active
     and no :guilabel:`HTML Map Tip` is set.
 * |checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips for the layer
-* The :guilabel:`HTML Map Tip` is specifically created for the map tips:
-  it's a more complex and full HTML text mixing fields, expressions and html tags
-  (multiline, fonts, images, hyperlink...).
-  You can use :guilabel:`HTML Map Tip Preview` for easier design of map tips.
+* The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor for map tips,
+  mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
+  You can check the result of your code sample in the :guilabel:`Preview` frame
+  (also convenient for previewing the :guilabel:`Display name` output).
+  Additionally, you can select and edit existing expressions
+  using the :guilabel:`Insert/Edit Expression` button. 
+  
+  .. note:: Understanding the :guilabel:`Insert/Edit Expression` button behavior
+
+   If you select some text within an expression (between "[%" and "%]"),
+   or if no text is selected but the cursor is inside an expression,
+   the whole expression will be automatically selected for editing.
+   If the cursor or a selected text is outside an expression, the dialog opens with the selection.
 
 .. _figure_display_code:
 
@@ -3161,7 +3199,8 @@ To display map tips:
 
 #. Select the menu option :menuselection:`View --> Show Map Tips`
    or click on the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes Toolbar`.
-#. Make sure that the layer you target is active and has the |checkbox| :guilabel:`Enable Map Tips` property checked.
+#. Make sure that the layer you target is active
+   and has the |checkbox| :guilabel:`Enable Map Tips` property checked.
 #. Move over a feature, and the corresponding information will be displayed over.
 
 Map tip is a cross-layer feature meaning that once activated,

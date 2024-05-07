@@ -1,4 +1,4 @@
-|LS| Supplementary Exercise
+Lesson: Supplementary Exercise
 ======================================================================
 
 In this lesson, you will be guided through a complete GIS analysis in
@@ -48,7 +48,7 @@ The solution will involve:
 #. Analyzing a zoning vector layer to find areas that are away from
    human settlement and are of the correct size
 
-|FA| Setting up the Map
+Follow Along: Setting up the Map
 ----------------------------------------------------------------------
 
 #. Click on the |projectionEnabled| :sup:`Current CRS` button in the
@@ -277,7 +277,7 @@ First we change the resolution of our rainfall data to 30 meters
    .. figure:: img/wrap_rainfall.png
       :align: center
 
-      Wrap (Reproject) Rainfall_clipped
+      Warp (Reproject) Rainfall_clipped
 
 
 Then we align the DEM:
@@ -440,7 +440,7 @@ Change the symbology to a more colorful one:
 #. Select a suitable :guilabel:`Color ramp`
 #. Click :guilabel:`Run`
 
-|TY| Aspect
+Try Yourself: Aspect
 ----------------------------------------------------------------------
 
 Use the same approach as for calculating the slope, choosing
@@ -868,9 +868,6 @@ map.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png

@@ -378,6 +378,15 @@ To load a layer from a file:
       Loading a Shapefile with open options
 
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
+   When adding vector datasets containing multiple layers, the 
+   :guilabel:`Select Items to Add` dialog will appear. In this dialog, you can 
+   choose the specific layers from your dataset that you want to add. 
+   Also, under :guilabel:`Options` you can choose to:
+
+   * |checkbox|:guilabel:`Add layers to a group`
+   * |checkbox|:guilabel:`Show system and internal tables`
+   * |checkbox|:guilabel:`Show empty vector layers`.
+   
    :numref:`figure_vector_loaded` shows QGIS after loading the :file:`alaska.shp` file.
 
    .. _figure_vector_loaded:
@@ -440,6 +449,9 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
     A :guilabel:`URI` is required, with optional :ref:`authentication <authentication_index>`.
   * For all vector source types it is possible to define the :guilabel:`Encoding` or
     to use the :menuselection:`Automatic -->` setting.
+
+
+
 
 .. _mesh_loading:
 
@@ -1071,9 +1083,55 @@ Optionally, you can activate the following checkboxes:
 Connecting to MS SQL Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In addition to some of the options in :ref:`vector_create_stored_connection`,
-creating a new MS SQL Server connection dialog proposes you to fill a **Provider/DSN**
-name. You can also display available databases.
+As mentioned in :ref:`vector_create_stored_connection` QGIS allows you to
+create MS SQL Server connection through :guilabel:`Data Source Manager`.
+
+.. _figure_new_mssql_connection:
+
+.. figure:: img/mssql_connection_dialog.png
+   :align: center
+
+   MS SQL Server Connection
+
+To create a new MS SQL Server connection, you need to provide some of the 
+following information in the :guilabel:`Connection Details` dialog:
+
+* :guilabel:`Connection name`
+* :guilabel:`Provider/DNS`
+* :guilabel:`Host`
+* :guilabel:`Login` information. You can choose
+  to |checkbox| :guilabel:`Save` your credentials.
+
+Navigate to the :guilabel:`Database Details` section and click the
+:guilabel:`List Databases` button to view the available datasets.
+Select datasets that you want, then press :guilabel:`OK`.
+Optionally, you can also perform a :guilabel:`Test Connection`.
+Once you click :guilabel:`OK` the :guilabel:`Create a New MS SQL Server Connection` dialog
+will close and in the :guilabel:`Data Source Manager` press :guilabel:`Connect`,
+select a layer and then click :guilabel:`Add`.
+
+Optionally, you can activate the following options:
+
+* |checkbox| :guilabel:`Only look in the geometry_columns metadata table`.
+* |checkbox| :guilabel:`Use layer extent from geometry_columns table`, 
+  this checkbox is dependent on the first one; it remains disabled unless
+  the first option is checked.
+* |checkbox| :guilabel:`Use primary key from geometry_columns table`
+* |checkbox| :guilabel:`Also list table with no geometry`: tables without a 
+  geometry column attached will also be shown in the available table list.
+* |checkbox| :guilabel:`Use estimated table parameters`: only estimated table 
+  metadata will be used. This avoids a slow table scan, but may result in 
+  incorrect layer properties such as layer extent. 
+* |checkbox| :guilabel:`Skip invalid geometry handling`: all handling of records 
+  with invalid geometry will be disabled. This speeds up the provider, however,
+  if any invalid geometries are present in a table then the result is unpredictable
+  and may include missing records. Only check this option if you are certain that
+  all geometries present in the database are valid, and any newly added geometries
+  or tables will also be valid.
+* |checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter 
+  schemas for MS SQL connection. If enabled, only checked schemas will be displayed.
+  You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema 
+  in the list. 
 
 .. _create_hana_connection:
 
@@ -1356,10 +1414,27 @@ Using XYZ Tile services
 XYZ Tile services can be added via the |addXyzLayer| :guilabel:`XYZ` tab
 of the :guilabel:`Data Source Manager` dialog or the contextual menu of the
 :guilabel:`XYZ Tiles` entry in the :guilabel:`Browser` panel.
-Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
+By default, QGIS provides some default and ready-to-use XYZ Tiles services:
+
+* |xyz| :guilabel:`Mapzen Global Terrain`, allowing an immediate
+  access to global DEM source for the projects.
+  More details and resources at https://registry.opendata.aws/terrain-tiles/
+* |xyz| :guilabel:`OpenStreetMap` to access the world 2D map.
+  :numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
+  XYZ Tile service configuration.
+
+To add a new service, press :guilabel:`New` (respectively :guilabel:`New Connection`
+from the Browser panel) and provide:
+
+  .. _figure_xyz_tiles_openstreetmap:
+  .. figure:: img/xyz_tiles_dialog_osm.png
+     :align: center
+
+     XYZ Tiles - OpenStreetMap configuration
 
 * a :guilabel:`Name`
-* the :guilabel:`URL`
+* the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or 
+  ``file:///local_path/{z}/{x}/{y}.png``
 * the :ref:`authentication <authentication_index>` configuration if necessary
 * the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`
 * a :guilabel:`Referer`
@@ -1378,24 +1453,25 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
   floating point raster layer, ready for styling using QGIS usual
   :ref:`raster renderers <raster_rendering>`.
 
-By default, QGIS provides some default and ready-to-use XYZ Tiles services:
+Press :guilabel:`OK` to establish the connection.
+It will then be possible to:
 
-* |xyz| :guilabel:`Mapzen Global Terrain`, allowing an immediate
-  access to global DEM source for the projects.
-  More details and resources at https://registry.opendata.aws/terrain-tiles/
-* |xyz| :guilabel:`OpenStreetMap` to access the world 2D map.
-  :numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
-  XYZ Tile service configuration.
+* :guilabel:`Add` the new layer to the project; it is loaded with the name given in the settings.
+* :guilabel:`Edit` the XYZ connection settings
+* :guilabel:`Remove` the connection
+* From the :guilabel:`Browser` panel, right-click over the entry
+  and you can also:
 
-  .. _figure_xyz_tiles_openstreetmap:
-  .. figure:: img/xyz_tiles_dialog_osm.png
-     :align: center
-
-     XYZ Tiles - OpenStreetMap configuration
+  * :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
+    <general_saveas>`
+  * :guilabel:`Add layer to project`: a double-click also adds the layer
+  * View the :guilabel:`Layer Properties...` and get access to metadata and
+    a preview of the data provided by the service.
+    More settings are available when the layer has been loaded into the project.
 
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
-through the :guilabel:`XYZ Tiles` entry in :guilabel:`Data Source Manager`
-dialog or its context menu in the :guilabel:`Browser` panel.
+through the :guilabel:`XYZ` entry in :guilabel:`Data Source Manager` dialog
+or its contextual menu in the :guilabel:`Browser` panel.
 Likewise, they can be added from a file (:guilabel:`Load Connections`).
 
 The XML file for OpenStreetMap looks like this:
@@ -1409,20 +1485,15 @@ The XML file for OpenStreetMap looks like this:
      username="" authcfg="" referer=""/>
   </qgsXYZTilesConnections>
 
-Once a connection to a XYZ tile service is set, it's possible to:
+.. tip:: **Loading XYZ tiles without creating a connection**
 
-* :guilabel:`Edit` the XYZ connection settings
-* :guilabel:`Remove` the connection
-* From the :guilabel:`Browser` panel, right-click over the entry
-  and you can also:
-
-  * :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
-    <general_saveas>`
-  * :guilabel:`Add layer to project`: a double-click also adds the layer
-  * View the :guilabel:`Layer Properties...` and get access to metadata and
-    a preview of the data provided by the service.
-    More settings are available when the layer has been loaded into the project.
-
+  It is also possible to add XYZ tiles to a project without necessarily storing
+  its connection settings in you user profile (e.g. for a dataset you may need once).
+  In the :menuselection:`Data Source Manager --> XYZ` tab, edit any properties
+  in the :guilabel:`Connection Details` group.
+  The :guilabel:`Name` field above should turn into ``Custom``.
+  Press :guilabel:`Add` to load the layer in the project.
+  It will be named by default ``XYZ Layer``.
 
 Examples of XYZ Tile services:
 
@@ -1451,6 +1522,8 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
 * a :guilabel:`Name`
 * the :guilabel:`URL`
+* a :guilabel:`Prefix`: This is used to specify the proxy prefix in the URL,
+  which is necessary for some ArcGIS servers that use web proxy prefixes. 
 * a :guilabel:`Community endpoint URL`
 * a :guilabel:`Content endpoint URL`
 * the :ref:`authentication <authentication_index>` configuration if necessary

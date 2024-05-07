@@ -141,7 +141,7 @@ applied to the features, indicating:
 * a :guilabel:`Label`, a title for comprehensive identification of the rule
 * the name of a particular :guilabel:`Layer` the rule should apply to, if not applied to ``(all layers)``
 * a :guilabel:`Min. Zoom` and a :guilabel:`Max. Zoom`, for the range of display.
-  symbology and labelling can be dependent on the zoom level.
+  Symbology and labeling can be dependent on the zoom level.
 * a :guilabel:`Filter`, a QGIS expression to identify the features to apply the style to
 
 Each rule is added pressing the |symbologyAdd| :sup:`Add rule` button

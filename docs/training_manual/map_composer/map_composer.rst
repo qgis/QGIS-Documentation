@@ -1,4 +1,4 @@
-|LS| Using Print Layout
+Lesson: Using Print Layout
 ======================================================================
 
 Now that you've got a map, you need to be able to print it or to
@@ -16,7 +16,7 @@ Both exporting and printing is handled via the *Print Layout*.
 **The goal for this lesson:** To use the QGIS *Print Layout* to create
 a basic map with all the required settings.
 
-|basic| |FA| The Layout Manager
+:abbr:`★☆☆ (Basic level)` Follow Along: The Layout Manager
 ----------------------------------------------------------------------
 
 QGIS allows you to create multiple maps using the same map file.
@@ -48,7 +48,7 @@ the :menuselection:`Project --> Layouts -->` menu, as in the image below.
    :align: center
 
 
-|basic| |FA| Basic Map Composition
+:abbr:`★☆☆ (Basic level)` Follow Along: Basic Map Composition
 ----------------------------------------------------------------------
 
 In this example, the composition was already the way we wanted it.
@@ -123,7 +123,7 @@ Ensure that yours is as well.
    :menuselection:`Save Project`.
    This is a convenient shortcut to the one in the main dialog.
 
-|basic| |FA| Adding a Title
+:abbr:`★☆☆ (Basic level)` Follow Along: Adding a Title
 ----------------------------------------------------------------------
 
 Now your map is looking good on the page, but your readers/users are
@@ -205,7 +205,7 @@ First, let us add a title.
        in the *Actions* Toolbar to be able to edit the items again.
 
 
-|basic| |FA| Adding a Legend
+:abbr:`★☆☆ (Basic level)` Follow Along: Adding a Legend
 ----------------------------------------------------------------------
 
 The map reader also needs to be able to see what various things on
@@ -226,7 +226,7 @@ Let's add a new legend.
       :align: center
       :width: 100%
 
-|moderate| |FA| Customizing Legend Items
+:abbr:`★★☆ (Moderate level)` Follow Along: Customizing Legend Items
 ----------------------------------------------------------------------
 
 Not everything on the legend is necessary, so let's remove some
@@ -260,7 +260,7 @@ This is the result:
    :align: center
    :width: 100%
 
-|basic| |FA| Exporting Your Map
+:abbr:`★☆☆ (Basic level)` Follow Along: Exporting Your Map
 ----------------------------------------------------------------------
 
 .. note::  Did you remember to save your work often?
@@ -316,7 +316,7 @@ For our purposes, we're going to use PDF.
 #. Remember to save your project file.
 
 
-|IC|
+In Conclusion
 ----------------------------------------------------------------------
 Now you know how to create a basic static map layout. We can go a step
 further and create a map layout that adapts dynamically, with more
@@ -329,9 +329,6 @@ layout items.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
 .. |addLegend| image:: /static/common/mActionAddLegend.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
@@ -340,7 +337,6 @@ layout items.
    :width: 1.5em
 .. |alignLeft| image:: /static/common/mActionAlignLeft.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
 .. |filePrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
@@ -350,7 +346,6 @@ layout items.
 .. |lockItems| image:: /static/common/mActionLockItems.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/common/moderate.png
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png

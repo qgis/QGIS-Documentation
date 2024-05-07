@@ -134,10 +134,10 @@ The mesh :guilabel:`Layer Properties` dialog provides the following sections:
      - |symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`
    * - |3d| :ref:`3D View <mesh3dview>`:sup:`[1]`
      - |temporal| :ref:`Temporal <meshtemporal>`
-     - |elevationscale| :ref:`Elevation <meshelevation>`
-   * - |rendering| :ref:`Rendering <meshrendering>`
+     - |labelingSingle| :ref:`Labels <meshlabels>`:sup:`[1]`
+   * - |elevationscale| :ref:`Elevation <meshelevation>`
+     - |rendering| :ref:`Rendering <meshrendering>`
      - |editMetadata| :ref:`Metadata <meshmetadata>`
-     -
 
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
@@ -427,6 +427,56 @@ is shown in the dialog but you can read more on the methods at
 https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
 
 
+.. _meshlabels:
+
+Labels Properties
+-----------------
+
+The |labelingSingle| :guilabel:`Labels` offers you dynamic labeling of mesh vertices
+and native mesh faces based on geometric properties and custom expressions. This
+dialog can also be accessed from the :guilabel:`Layer Styling` panel.
+
+.. _figure_mesh_label_properties:
+
+.. figure:: img/mesh_label_properties.png
+   :align: center
+
+   Mesh Labels Properties
+
+Choose the labeling method from the drop-down list.
+Available methods are:
+
+* |labelingNone| :guilabel:`No labels`: the default value, showing no labels
+  from the layer.
+* |labelingSingle| :guilabel:`Labels on vertices`: labels the mesh vertices as a point feature.
+* |labelingSingle| :guilabel:`Labels on faces`: labels the mesh faces as a polygon feature.
+
+.. _figure_mesh_label_example:
+
+.. figure:: img/mesh_label_example.png
+   :align: center
+
+   Mesh Labeling methods
+
+Once the labeling method has been selected, open |expression| :sup:`Expression dialog`
+and choose a :ref:`mesh function <expression_function_meshes>`.
+You can combine meshes functions with other functions from the :ref:`list <functions_list>`
+to modify the label.
+
+Below are displayed options to customize the labels, under various tabs:
+
+* |text| :ref:`Text <labels_text>`
+* |labelformatting| :ref:`Formatting <labels_formatting>`
+* |labelbuffer| :ref:`Buffer <labels_buffer>`
+* |labelmask| :ref:`Mask <labels_mask>`
+* |labelbackground| :ref:`Background <labels_background>`
+* |labelshadow| :ref:`Shadow <labels_shadow>`
+* |labelcallout| :ref:`Callouts <labels_callouts>`
+* |labelplacement| :ref:`Placement <labels_placement>`
+* |render| :ref:`Rendering <labels_rendering>`
+
+Description of how to set each property is exposed at :ref:`showlabels`.
+
 .. index:: 3D
 .. _mesh3dview:
 
@@ -466,7 +516,7 @@ properties:
     This option is only available if the :guilabel:`Simplify mesh` option under
     the :guilabel:`Rendering` tab is activated.
 * :guilabel:`Vertical settings` to control behavior of the vertical component
-   of vertices of rendered triangles
+  of vertices of rendered triangles:
 
   * :guilabel:`Dataset group for vertical value`: the dataset group that will
     be used for the vertical component of the mesh
@@ -1166,6 +1216,24 @@ the expression to execute.
    :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
+.. |labelbackground| image:: /static/common/labelbackground.png
+   :width: 1.5em
+.. |labelbuffer| image:: /static/common/labelbuffer.png
+   :width: 1.5em
+.. |labelcallout| image:: /static/common/labelcallout.png
+   :width: 1.5em
+.. |labelformatting| image:: /static/common/labelformatting.png
+   :width: 1.5em
+.. |labelingNone| image:: /static/common/labelingNone.png
+   :width: 1.5em
+.. |labelingSingle| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
+   :width: 1.5em
+.. |labelplacement| image:: /static/common/labelplacement.png
+   :width: 1.5em
+.. |labelshadow| image:: /static/common/labelshadow.png
+   :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
@@ -1200,6 +1268,8 @@ the expression to execute.
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
+.. |render| image:: /static/common/render.png
+   :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
@@ -1215,6 +1285,8 @@ the expression to execute.
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
+.. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

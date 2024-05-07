@@ -1,4 +1,4 @@
-|LS| Using DB Manager to work with Spatial Databases in QGIS 
+Lesson: Using DB Manager to work with Spatial Databases in QGIS
 ===============================================================================
 
 We have already seen how to perform many database operations with
@@ -6,17 +6,16 @@ QGIS as well as with other tools, but now it's time to look at the DB
 Manager tool which provides much of this same functionality as well
 as more management oriented tools.
 
+
 **The goal for this lesson:** To learn how to interact with spatial
 databases using the QGIS DB Manager. 
 
-|basic| |FA| Managing PostGIS Databases with DB Manager
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Managing PostGIS Databases with DB Manager
+------------------------------------------------------------------------------------
 
 You should first open the DB Manager interface by selecting
-:guilabel:`Database --> DB Manager --> DB Manager` on the menu or by
-selecting the DB Manager icon on the toolbar.
-
-    |dbManager|
+:menuselection:`Database --> DB Manager --> DB Manager` on the menu
+or by selecting the |dbManager| :sup:`DB Manager` icon on the toolbar.
 
 You should already see the previous connections we have configured
 and be able to expand the ``myPG`` section and its ``public`` schema
@@ -29,8 +28,7 @@ about the Schemas contained in your database.
    :align: center
 
 Schemas are a way of grouping data tables and other objects in a
-PostgreSQL database and a container for permissions and other
-constraints.
+PostgreSQL database and a container for permissions and other constraints.
 Managing PostgreSQL schemas is beyond the scope of this manual, but
 you can find more information about them in the
 `PostgreSQL documentation on Schemas
@@ -102,7 +100,7 @@ spatial and normal indexes.
 .. figure:: img/indexes_panel.png
    :align: center
  
-|basic| |FA| Creating a New Table
+:abbr:`★☆☆ (Basic level)` Follow Along: Creating a New Table
 -------------------------------------------------------------------------------
 
 Now that we have gone through the process of working with existing
@@ -134,7 +132,7 @@ course find that there is no data in it.
 From here you can :guilabel:`Toggle Editing` on the layer menu and
 begin to add places to your table.
 
-|basic| |FA| Basic Database Administration
+:abbr:`★☆☆ (Basic level)` Follow Along: Basic Database Administration
 -------------------------------------------------------------------------------
 
 The DB Manager will also let you do some basic database
@@ -163,7 +161,7 @@ You can find more information about the VACUUM ANALYZE process in the
 `PostgreSQL Documentation on VACUUM ANALYZE
 <https://www.postgresql.org/docs/9.1/sql-vacuum.html>`_.
 
-|basic| |FA| Executing SQL Queries with DB Manager
+:abbr:`★☆☆ (Basic level)` Follow Along: Executing SQL Queries with DB Manager
 -------------------------------------------------------------------------------
 
 DB Manager also provides a way for you to write queries against your
@@ -273,14 +271,14 @@ You can now inspect the shapefile you created with the Browser panel.
 .. figure:: img/inspect_vector_output.png
    :align: center
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You have now seen how to use the DB Manager interface in QGIS to
 manage your spatial databases, to execute SQL queries against your
 data and how to import and export data.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Next, we will look at how to use many of these same techniques with
@@ -293,10 +291,5 @@ Next, we will look at how to use many of these same techniques with
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
