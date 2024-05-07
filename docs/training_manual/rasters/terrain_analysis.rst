@@ -125,7 +125,7 @@ of the :menuselection:`Processing --> Raster terrain analysis`.
 #. Choose :guilabel:`srtm_41_19` as the :guilabel:`Elevation layer`
 #. Keep the :guilabel:`Z factor` at ``1.0``
 #. Save the output as a file with the name ``slope.tif`` in the same folder as the
-   ``hillshade``
+   ``hillshade.tif``
 #. Click on :guilabel:`Run`
 
 Now you'll see the slope of the terrain, each pixel holding the corresponding
@@ -148,7 +148,7 @@ sunlight.
 
 Use the :guilabel:`Aspect` algorithm of the
 :menuselection:`Processing --> Raster terrain analysis` to get the ``aspect.tif``
-layer saved along with the ``slope``.
+layer saved along with the ``slope.tif``.
 
 .. admonition:: Answer
    :class: dropdown
