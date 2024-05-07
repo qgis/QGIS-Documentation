@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,6 +81,86 @@ msgid ""
 msgstr ""
 "``맵 범례`` 라고도 불리는 :guilabel:`Layers` 패널에는 프로젝트의 모든 레이어 목록이 표시되어, 사용자가 레이어의 "
 "가시성을 관리하며 맵의 모양을 정할 수 있습니다. :kbd:`Ctrl+1` 단축키를 누르면 이 패널을 숨기거나 나타나게 할 수 있습니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:52
+msgid "QGIS provides a variety of ways to add layers to a project:"
+msgstr "QGIS는 프로젝트에 레이어를 추가하는 다양한 방법을 제공하고 있습니다:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:54
+msgid ""
+"using the :guilabel:`Add` button from the dedicated data provider tab in the"
+" :ref:`Data source manager <opening_data>` dialog"
+msgstr ""
+":ref:`데이터 소스 관리자 <opening_data>` 대화창의 전용 데이터 제공자 탭에서 :guilabel:`Add` 버튼을 "
+"누릅니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:56
+msgid ""
+"from QGIS :ref:`Browser panel <label_browserpanel>` or :ref:`DB Manager "
+"<dbmanager>`: double-click, drag-and-drop files and layers onto QGIS or use "
+"the contextual menu"
+msgstr ""
+"QGIS :ref:`탐색기 패널 <label_browserpanel>` 또는 :ref:`데이터베이스 관리자 <dbmanager>` 에서 "
+"파일 및 레이어를 더블클릭하거나, QGIS로 드래그&드롭하거나, 또는 컨텍스트 메뉴를 사용합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:58
+msgid "drag-and-drop files from the Operating System files explorer onto QGIS"
+msgstr "운영체제의 파일 탐색기에서 QGIS로 파일을 드래그&드롭합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:60
+msgid ""
+"In all these scenarios, you can open one or many layers at a time. New "
+"layers are added to the :guilabel:`Layers` panel:"
+msgstr ""
+"이 모든 시나리오에서, 사용자는 한번에 하나 또는 여러 레이어를 열 수 있습니다. 새 레이어는 :guilabel:`Layers` 패널에 "
+"추가됩니다:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:63
+msgid ""
+"if dropped over the :guilabel:`Layers` panel, at the exact location they are"
+" released"
+msgstr ":guilabel:`Layers` 패널로 드래그&드롭하는 경우, 정확히 마우스 버튼을 놓은 위치에 레이어를 추가합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:64
+msgid ""
+"in the other cases, at a location that respects the global :ref:`behavior "
+"used when adding new layers <layer_tree_insertion_methods>` setting"
+msgstr ""
+"드래그&드롭 방법이 아닌 경우, 전체 수준 :ref:`새 레이어 추가 시 쓰이는 습성 "
+"<layer_tree_insertion_methods>` 설정을 따르는 위치에 레이어를 추가합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:66
+msgid ""
+"and in case of multiple layers, they are sorted in a way that increases the "
+"chance of their stacking being logical and features being visible as most as"
+" possible, using the following logic (top to bottom):"
+msgstr ""
+"여러 레이어를 추가하는 경우, 다음과 같은 (위에서 아래 방향) 논리에 따라 레이어들을 피처들이 가능한 한 많이 보이게 할 수 있도록 "
+"하는 논리적인 순서로 정렬합니다:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:70
+msgid "vector point layers"
+msgstr "벡터 포인트 레이어"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:71
+msgid "vector line layers"
+msgstr "벡터 라인 레이어"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:72
+msgid "vector polygon layers"
+msgstr "벡터 폴리곤 레이어"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:73
+msgid "point cloud layers"
+msgstr "점구름 레이어"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:74
+msgid "mesh layers"
+msgstr "메시 레이어"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:75
+msgid "raster layers"
+msgstr "래스터 레이어"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:77
 msgid "At the top of the :guilabel:`Layers` panel, a toolbar allows you to:"
@@ -202,7 +282,7 @@ msgstr "레이어 패널을 관리하는 도구들은 인쇄 조판기의 맵과
 
 #: ../../docs/user_manual/introduction/general_tools.rst:118
 msgid "Configuring map themes"
-msgstr "맵 테마 환경 설정하기"
+msgstr "맵 테마 환경설정하기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:120
 msgid ""
@@ -281,8 +361,8 @@ msgid ""
 "**snapshot** of the current map legend that records:"
 msgstr ""
 "레이어 가시성을 간단하게 조작할 수 있을 뿐만 아니라, |showPresets| :sup:`Manage Map Themes` 메뉴는 "
-"범례에서 **맵 테마** 를 환경 설정할 수 있으며 맵 테마를 변경할 수도 있습니다. 맵 테마는 다음과 같은  정보를 기록하는 현재 맵의"
-" **스냅샷** 입니다:"
+"범례에서 **맵 테마** 를 환경설정할 수 있으며 맵 테마를 변경할 수도 있습니다. 맵 테마는 다음과 같은  정보를 기록하는 현재 맵의 "
+"**스냅샷** 입니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:140
 msgid "the layers set as visible in the :guilabel:`Layers` panel"
@@ -323,7 +403,7 @@ msgstr "표시하고자 하는 레이어를 체크하십시오."
 #: ../../docs/user_manual/introduction/general_tools.rst:153
 msgid ""
 "Configure the layer properties (symbology, diagram, labels...) as usual"
-msgstr "평소대로 레이어 속성(심볼, 다이어그램, 라벨 등등)을 환경 설정하십시오."
+msgstr "평소대로 레이어 속성(심볼, 다이어그램, 라벨 등등)을 환경설정하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:154
 msgid ""
@@ -396,9 +476,9 @@ msgid ""
 "create different map items based on specific themes and independent of the "
 "current main canvas rendering (see :ref:`Map item layers <layout_layers>`)."
 msgstr ""
-"맵 테마는 미리 환경 설정해놓은 서로 다른 조합들을 빠르게 바꾸는 데 유용합니다. 목록에서 맵 테마를 선택하면 해당 테마의 조합을 "
-"복구합니다. 인쇄 조판기에서도 환경 설정해놓은 테마에 접근할 수 있기 때문에, 특정 테마에 기반하면서도 현재 주 캔버스의 렌더링에 "
-"독립적인 서로 다른 맵 항목들을 생성할 수 있습니다. (:ref:`맵 항목 레이어 <layout_layers>` 참조)"
+"맵 테마는 미리 환경설정해놓은 서로 다른 조합들을 빠르게 바꾸는 데 유용합니다. 목록에서 맵 테마를 선택하면 해당 테마의 조합을 "
+"복구합니다. 인쇄 조판기에서도 환경설정해놓은 테마에 접근할 수 있기 때문에, 특정 테마에 기반하면서도 현재 주 캔버스의 렌더링에 독립적인"
+" 서로 다른 맵 항목들을 생성할 수 있습니다. (:ref:`맵 항목 레이어 <layout_layers>` 참조)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:187
 msgid "Overview of the context menu of the Layers panel"
@@ -461,6 +541,10 @@ msgstr "메시 레이어"
 #: ../../docs/user_manual/introduction/general_tools.rst:208
 msgid "Point Cloud Layer"
 msgstr "점구름 레이어"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:208
+msgid "3D Layer"
+msgstr "3D 레이어"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:210
 msgid "|zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`"
@@ -1479,6 +1563,12 @@ msgstr ""
 msgid "elevationscale"
 msgstr "elevationscale"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:506
+msgid ""
+"Enable and configure :ref:`global map shading <global_map_shading>` "
+"properties"
+msgstr ":ref:`전체 수준 맵 음영 효과 <global_map_shading>` 속성을 활성화하고 환경설정합니다."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:507
 msgid ""
 "Manage the associated style(s) in the |stylePreset| :guilabel:`Style "
@@ -1736,11 +1826,11 @@ msgstr "범위"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:641
 msgid "Minority"
-msgstr "소수 기준(Minority)"
+msgstr "희귀값 (Minority)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:642
 msgid "Majority"
-msgstr "다수 기준(Majority)"
+msgstr "최빈값 (Majority)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:643
 msgid "Variety"
@@ -1833,9 +1923,39 @@ msgstr "networkAndProxy"
 msgid "|dbManager| :guilabel:`Query Logger`"
 msgstr "|dbManager| :guilabel:`Query Logger`: 쿼리 로그 관리자"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:679
+msgid ""
+"|stopwatch| :guilabel:`Profiler` - under this tab you can choose one out of "
+"these categories:"
+msgstr "|stopwatch| :guilabel:`Profiler`: 이 탭에서 다음 카테고리 가운데 하나를 선택할 수 있습니다:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2413
 msgid "stopwatch"
 msgstr "stopwatch"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:682
+msgid ""
+":guilabel:`Startup` helps you diagnose (and fix) occasional long startup "
+"times of QGIS."
+msgstr ""
+":guilabel:`Startup`: QGIS의 구동 시간이 길어지는 경우 사용자가 문제를 진단(및 해결)할 수 있도록 도와줍니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:684
+msgid ""
+":guilabel:`Project Load` allows you to get a breakdown of the various stages"
+" of project load, in order to identify the causes of slow project load "
+"times."
+msgstr ""
+":guilabel:`Project Load`: 프로젝트를 불러오는 시간이 느릴 경우 그 원인을 식별하기 위해 프로젝트 불러오기의 여러 "
+"단계를 자세히 분석할 수 있도록 해줍니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:687
+msgid ""
+":guilabel:`Map Render` tool allows you to identify pain points in your map "
+"rendering and track down exactly which layers are causing long map redraws."
+msgstr ""
+":guilabel:`Map Render`: 이 도구는 맵 렌더링의 문제점을 파악해서 어떤 레이어가 맵을 다시 그리는 시간을 늘어나게 "
+"하는지를 정확하게 추적할 수 있게 해줍니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:691
 msgid ""
@@ -1860,7 +1980,7 @@ msgid ""
 "timeouts, cache status, etc."
 msgstr ""
 "|networkAndProxy| :guilabel:`Network Logger` 탭은 네트워크 요청은 물론 요청 및 응답 상태, 헤더, "
-"오류, SSL 환경 설정 오류, 타임아웃, 캐시 상태 등등 유용한 상세 정보 전부를 기록하고 표시합니다."
+"오류, SSL 환경설정 오류, 타임아웃, 캐시 상태 등등 유용한 상세 정보 전부를 기록하고 표시합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:704
 #: ../../docs/user_manual/introduction/general_tools.rst:743
@@ -2374,6 +2494,15 @@ msgstr ""
 msgid "selectLocation"
 msgstr "selectLocation"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:934
+msgid ""
+"|selectDistance| :sup:`Select within distance` to select features wherever "
+"they are within the specified maximum distance from referenced features - "
+"see :ref:`qgisselectwithindistance`)"
+msgstr ""
+"|selectDistance| :sup:`Select within distance` 도구로, 참조된 피처로부터 지정한 최대 거리 안에 "
+"존재하는 모든 피처를 선택할 수 있습니다. (:ref:`qgisselectwithindistance` 참조)"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2393
 msgid "selectDistance"
 msgstr "selectDistance"
@@ -2473,7 +2602,7 @@ msgstr "필드 검색 옵션"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:992
 msgid "Numeric"
-msgstr "Numeric"
+msgstr "숫자"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:994
 msgid ":guilabel:`Exclude Field` from the search"
@@ -2599,6 +2728,18 @@ msgstr ""
 msgid "Identifying Features"
 msgstr "피처 식별"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1040
+msgid ""
+"The |identify| :sup:`Identify Features` tool allows you to interact with the"
+" map canvas and get information on features or pixels in a pop-up window. It"
+" can be used to query most of the layer types supported by QGIS (vector, "
+"raster, mesh, point cloud, wms, wfs, ...). To identify an element, use "
+"either:"
+msgstr ""
+"|identify| :sup:`Identify Features` 도구는 맵 캔버스와의 쌍방향 액션을 통해 팝업창에서 피처 또는 픽셀에 "
+"대한 정보를 볼 수 있게 해줍니다. 이 도구를 사용하면 QGIS가 지원하는 거의 모든 (벡터, 래스터, 메시, 점구름, WMS, WFS,"
+" ...) 레이어 유형을 쿼리할 수 있습니다. 요소 하나를 식별하려면 다음 가운데 하나를 이용하십시오:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2327
 msgid "identify"
 msgstr "identify"
@@ -2611,6 +2752,23 @@ msgstr ":menuselection:`View --> Identify Features` 메뉴"
 msgid ":kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),"
 msgstr ":kbd:`Ctrl+Shift+I` (또는 |osx| :kbd:`Cmd+Shift+I`) 키 조합"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1048
+msgid ""
+"|identify| :sup:`Identify Features` button on the :guilabel:`Attributes` "
+"toolbar"
+msgstr ":guilabel:`Attributes` 툴바에 있는 |identify| :sup:`Identify Features` 버튼"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1050
+msgid ""
+"Then click on a feature or pixel of the active layer. The identified item "
+"gets highlighted in the map canvas while the :guilabel:`Identify Results` "
+"dialog opens with detailed information on it. The dialog also shows a set of"
+" buttons for advanced configuration."
+msgstr ""
+"그 다음 활성 레이어의 피처 또는 픽셀 하나를 클릭하십시오. 맵 캔버스에서 식별된 항목을 강조시키는 동시에 해당 항목에 대한 상세 정보를"
+" 볼 수 있는 :guilabel:`Identify Results` 대화창이 열랍니다. 이 대화창에는 고급 환경설정을 위한 일련의 버튼들도"
+" 있습니다."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1057
 msgid "The Identify Results dialog"
 msgstr "식별 결과 대화창"
@@ -2618,6 +2776,93 @@ msgstr "식별 결과 대화창"
 #: ../../docs/user_manual/introduction/general_tools.rst:1064
 msgid "Identify Results dialog"
 msgstr "식별 결과 대화창"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1066
+msgid "From bottom to top:"
+msgstr "아래에서 위로:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1070
+msgid ""
+"The :guilabel:`View` controls the general aspect of the dialog and the "
+"formatting of the results; it can be set as:"
+msgstr ""
+":guilabel:`View` 는 대화창의 일반적인 측면과 결과물의 유형을 제어합니다. 다음 가운데 하나로 설정할 수 있습니다:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1073
+msgid ""
+"**Tree**: this is the default view, and returns the results in a tree-"
+"structure"
+msgstr "**Tree**: 기본 뷰로, 결과물을 트리 구조로 반환합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1074
+msgid ""
+"**Table**: available only for raster-based layers, it allows to display the "
+"results as a table whose columns are ``Layer``, ``FID``, ``Attribute`` and "
+"``Value``"
+msgstr ""
+"**Table**: 래스터 기반 레이어 전용으로, 결과물을 ``Layer``, ``FID``, ``Attribute`` 및 "
+"``Value`` 열을 가진 테이블로 볼 수 있게 해줍니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1076
+msgid "or **Graph**: available only for raster-based layers"
+msgstr "**Graph**: 래스터 기반 레이어 전용입니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1082
+msgid ""
+"The :guilabel:`Mode` helps you select the layers from which results could be"
+" returned. These layers should be set visible, displaying data in the map "
+"canvas, and set :ref:`identifiable <project_layer_capabilities>` from the "
+":menuselection:`Project properties --> Data Sources --> Layers "
+"capabilities`. Available modes are:"
+msgstr ""
+":guilabel:`Mode` 는 결과물을 반환할 수 있는 레이어를 선택할 수 있게 해줍니다. 이런 레이어는 맵 캔버스에서 데이터를 볼 "
+"수 있도록 가시화 설정이 되어 있어야 하는데, :menuselection:`Project properties --> Data "
+"Sources --> Layers capabilities` 메뉴에서 :ref:`식별 가능 "
+"<project_layer_capabilities>` 하도록 설정해줘야 합니다. 다음과 같은 모드를 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1088
+msgid ""
+"**Current layer**: only the layer(s) selected in the :guilabel:`Layers` "
+"panel return results. If a group is selected, then results are picked from "
+"its leaf layers."
+msgstr ""
+"**Current layer**: :guilabel:`Layers` 패널에서 선택한 레이어(들)만 결과를 반환합니다. 그룹을 선택한 "
+"경우, 그룹의 지엽(leaf) 레이어들로부터 결과를 고릅니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1091
+msgid ""
+"**Top down, stop at first**: results are from the layer of the top most "
+"feature or pixel under the mouse."
+msgstr ""
+"**Top down, stop at first**: 마우스 커서 아래 있는 레이어의 피처 또는 픽셀 가운데 가장 위에 있는 피처 또는 "
+"픽셀로부터 결과를 반환합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1093
+msgid ""
+"**Top down**: results are from the layers with feature or pixel under the "
+"mouse."
+msgstr "**Top down**: 마우스 커서 아래 있는 레이어의 피처 또는 픽셀로부터 결과를 반환합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1094
+msgid ""
+"**Layer selection**: opens a contextual menu where the user selects the "
+"layer to identify features from. If only a single feature is under the "
+"mouse, then the results are automatically displayed."
+msgstr ""
+"**Layer selection**: 컨텍스트 메뉴를 열어서 사용자가 피처를 식별할 레이어를 선택할 수 있습니다. 마우스 커서 아래 있는"
+" 피처가 1개뿐인 경우, 자동으로 결과를 표시할 것입니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1098
+msgid ""
+"In the upper part of the :guilabel:`Identify Results` dialog, a frame shows "
+"the :ref:`information <identified_information>` returned by features as a "
+"table, a graph or a tree, depending on the :ref:`selected view "
+"<identify_view>`. When in a tree view, you have a handful of tools above the"
+" results:"
+msgstr ""
+":guilabel:`Identify Results` 대화창 상단에 있는 프레임은 :ref:`선택한 뷰 <identify_view>` 에 "
+"따라 피처가 반환한 :ref:`정보 <identified_information>` 를 테이블, 그래프, 또는 트리로 보여줍니다. 트리 "
+"뷰인 경우, 결과물 위에 있는 몇몇 도구를 사용할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1103
 msgid "|formView| :sup:`Open Form` of the current feature"
@@ -2651,9 +2896,66 @@ msgstr "expandNewTree"
 msgid "|deselectAll| :sup:`Clear Results`"
 msgstr "|deselectAll| :sup:`Clear Results`: 결과를 초기화합니다."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1109
+msgid ""
+"|editCopy| :sup:`Copy the identified feature to clipboard`, suitable for "
+"pasting in a spreadsheet."
+msgstr ""
+"|editCopy| :sup:`Copy the identified feature to clipboard`: 식별된 피처 정보를 클립보드로"
+" 복사하기 때문에, 스프레드시트에 붙여넣는 데 적합합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1110
+msgid ""
+"|filePrint| :sup:`Print selected HTML response`: a text-based formatting of "
+"the results to print on paper or save as a :file:`.PDF` file"
+msgstr ""
+"|filePrint| :sup:`Print selected HTML response`: 결과물의 텍스트 기반 서식을 용지에 인쇄하거나 "
+":file:`.PDF` 파일로 저장합니다."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2305
 msgid "filePrint"
 msgstr "filePrint"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1112
+msgid ""
+"the :ref:`interactive identifying tools <identify_selection>`: a drop-down "
+"menu with tools for selecting on the map canvas features or pixels to "
+"identify"
+msgstr ""
+":ref:`대화형 식별 도구 <identify_selection>`: 맵 캔버스에서 식별할 피처 또는 픽셀을 선택하기 위한 도구들의 "
+"드롭다운 메뉴입니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1114
+msgid "Under |options| :sup:`Identify Settings`, you can activate whether to:"
+msgstr "|options| :sup:`Identify Settings` 아래에서 다음을 활성화할 수 있습니다:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1116
+msgid ""
+"|checkbox| :guilabel:`Auto open form for single feature results`: If "
+"checked, each time a single feature is identified, a form opens showing its "
+"attributes. This is a handy way to quickly edit a feature's attributes."
+msgstr ""
+"|checkbox| :guilabel:`Auto open form for single feature results`: 이 옵션을 "
+"체크하면, 피처를 하나 식별할 때마다 해당 피처의 속성을 보여주는 양식이 열립니다. 피처 속성을 빠르게 편집할 수 있는 편리한 "
+"방법입니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1119
+msgid ""
+"|unchecked| :guilabel:`Hide derived attributes from results` to only show "
+"fields actually defined in the layer"
+msgstr ""
+"|unchecked| :guilabel:`Hide derived attributes from results`: 이 옵션을 체크하면, "
+"레이어에 실제로 정의된 필드만 보여줍니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1121
+msgid "|unchecked| :guilabel:`Hide NULL values from results`"
+msgstr ""
+"|unchecked| :guilabel:`Hide NULL values from results`: 이 옵션을 체크하면, 결과에 NULL "
+"값을 보여주지 않습니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1123
+msgid "|helpContents|:sup:`Help` to access the current documentation"
+msgstr "|helpContents|:sup:`Help`: 현재 문서에 접근할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2317
 msgid "helpContents"
@@ -2663,21 +2965,133 @@ msgstr "helpContents"
 msgid "Using the Identify Features tool"
 msgstr "피처 식별 도구 이용하기"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1130
+msgid ""
+"In its default display (:guilabel:`View: Tree`), the :guilabel:`Identify "
+"Results` panel offers several tools to interact with the layers to query. A "
+"smart combination of these tools with the :ref:`target layers selector "
+"<identify_mode>` may greatly improve identification operations:"
+msgstr ""
+"기본 보기 (:guilabel:`View: Tree`) 상태에서, :guilabel:`Identify Results` 패널은 쿼리할 "
+"레이어와 대화형 작업을 할 수 있는 몇몇 도구를 제공합니다. :ref:`대상 레이어 선택기 <identify_mode>` 와 함께 이 "
+"도구들을 영리하게 조합하면 식별 작업을 크게 향상시킬 수 있습니다:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1135
+msgid ""
+"|identifyByRectangle| :sup:`Identify Feature(s)` by single click or click-"
+"and-drag"
+msgstr ""
+"|identifyByRectangle| :sup:`Identify Feature(s)`: 피처(들)를 클릭 한 번 또는 클릭&드래그로 "
+"식별합니다."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2337
 msgid "identifyByRectangle"
 msgstr "identifyByRectangle"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1137
+msgid ""
+"single click or click-and-drag: overlaying features in the target layers are"
+" returned"
+msgstr "클릭 한 번 또는 클릭&드래그: 대상 레이어에서 중첩하는 피처를 반환합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1138
+msgid ""
+"right-click: overlaying features from target layers are listed in the "
+"contextual menu, grouped by layers. You can then choose to:"
+msgstr ""
+"오른쪽 클릭: 컨텍스트 레이어에 대상 레이어에서 중첩하는 피처를 레이어 별로 그룹화시켜 목록화합니다. 그러면 다음 작업을 선택할 수 "
+"있습니다:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1141
+msgid "display the result for a specific feature,"
+msgstr "특정 피처의 결과물을 볼 수 있습니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1142
+msgid "display the result for all the features of a specific layer,"
+msgstr "특정 레이어에 있는 모든 피처의 결과물을 볼 수 있습니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1143
+msgid ""
+"for vector layers, it is also possible to open its attribute table filtered "
+"to the returned features"
+msgstr "벡터 레이어의 경우, 반환된 피처로 필터링된 속성 테이블을 열 수도 있습니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1145
+msgid "or show all of the returned features."
+msgstr "또는 반환된 피처를 모두 볼 수 있습니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1146
+msgid ""
+"|identifyByMouseOver| :sup:`Identify Features on Mouse over`: move over the "
+"map canvas and hovered items in the target layers get highlighted and "
+"returned in the results panel."
+msgstr ""
+"|identifyByMouseOver| :sup:`Identify Features on Mouse over`: 맵 캔버스 상에서 마우스를"
+" 옮겨 대상 레이어에 있는 항목 위로 가져가면 해당 항목을 강조하고 결과물 패널에 반환합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2331
 msgid "identifyByMouseOver"
 msgstr "identifyByMouseOver"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1149
+msgid ""
+"|identifyByPolygon| :sup:`Identify Features by Polygon`: returns items "
+"overlapping a drawn or selected polygon."
+msgstr ""
+"|identifyByPolygon| :sup:`Identify Features by Polygon`: 사용자가 그린 또는 선택한 폴리곤과"
+" 중첩하는 항목을 반환합니다."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2333
 msgid "identifyByPolygon"
 msgstr "identifyByPolygon"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1152
+msgid ""
+"Draw a polygon (left click to add point, right click to close the polygon) "
+"and all the overlaying features from target layers are highlighted and "
+"returned in the results panel."
+msgstr ""
+"폴리곤을 (왼쪽 클릭으로 포인트를 추가하고 오른쪽 클릭으로 폴리곤을 닫아서) 그리면, 대상 레이어에서 해당 폴리곤과 중첩하는 피처를 모두"
+" 강조하고 결과물 패널에 반환합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1155
+msgid ""
+"Right-click and you get the list of all visible polygon features in the "
+"project under the click. Pick an entry and QGIS will return all the features"
+" from the target layers that overlap the selected polygon."
+msgstr ""
+"오른쪽 클릭하면 프로젝트에서 클릭한 위치 아래 있는 모든 가시 폴리곤 피처의 목록을 볼 수 있습니다. 항목을 하나 고르면 QGIS가 대상"
+" 레이어에서 선택한 폴리곤과 중첩하는 피처를 모두 반환할 것입니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1159
+msgid ""
+"|identifyByFreehand| :sup:`Identify Features by Freehand`: returns items "
+"overlapping a polygon drawn by freehand. Draw a polygon (left-click to "
+"start, move the pointer to shape the area and right-click to close the "
+"polygon). All the overlaying features from target layers are highlighted and"
+" returned in the results panel."
+msgstr ""
+"|identifyByFreehand| :sup:`Identify Features by Freehand`: 사용자가 자유롭게 그린 폴리곤과"
+" 중첩하는 항목을 반환합니다. 폴리곤을 (왼쪽 클릭으로 시작해서 커서를 이동시켜 면의 형태를 잡고 오른쪽 클릭으로 폴리곤을 닫아서) "
+"그리십시오. 대상 레이어에서 중첩하는 모든 피처를 강조하고 결과물 패널에 반환합니다."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2329
 msgid "identifyByFreehand"
 msgstr "identifyByFreehand"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1165
+msgid ""
+"|identifyByRadius| :sup:`Identify Features by Radius` returns items "
+"overlapping a drawn circle. Draw a cercle (left-click to indicate the center"
+" point, move the pointer to shape the area or enter the radius in the pop-up"
+" text box and left-click or press :kbd:`Enter` to validate the circle). All "
+"the overlaying features from target layers are highlighted and returned in "
+"the results panel."
+msgstr ""
+"|identifyByRadius| :sup:`Identify Features by Radius`: 사용자가 그린 원과 중첩하는 항목을 "
+"반환합니다. 원을 (왼쪽 클릭으로 중심을 정하고, 커서를 이동시키거나 팝업 텍스트란에 입력해서 반경을 지정한 다음 왼쪽 클릭 또는 "
+":kbd:`Enter` 키를 눌러 원을 검증하는 단계를 거쳐) 그리십시오. 대상 레이어에서 중첩하는 모든 피처를 강조하고 결과물 패널에 "
+"반환합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2335
 msgid "identifyByRadius"
@@ -2687,9 +3101,52 @@ msgstr "identifyByRadius"
 msgid "**Filter the layers to query with the Identify Features tool**"
 msgstr "**쿼리할 레이어를 피처 식별 도구로 필터링하기**"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1175
+msgid ""
+"Under :menuselection:`Project --> Properties... --> Data Sources --> Layer "
+"Capabilities`, uncheck the :guilabel:`Identifiable` column next to a layer "
+"to avoid it being queried when using the |identify| :sup:`Identify Features`"
+" tool. This is a handy way to return features from only layers that are of "
+"interest to you."
+msgstr ""
+":menuselection:`Project --> Properties... --> Data Sources --> Layer "
+"Capabilities` 메뉴에서 레이어 옆에 있는 :guilabel:`Identifiable` 열을 체크 해제하면, |identify|"
+" :sup:`Identify Features` 도구를 사용할 때 해당 레이어를 쿼리 대상에서 제외합니다. 사용자가 관심을 가진 "
+"레이어에서만 피처를 반환받을 수 있는 간편한 방법입니다."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1184
 msgid "Feature information"
 msgstr "피처 정보"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1186
+msgid ""
+"When you identify a data in the map canvas, the :guilabel:`Identify Results`"
+" dialog will list information about the items clicked (or hovered over, "
+"depending on the tool in use). The default view is a tree view in which the "
+"first item is the name of the layer and its children are its identified "
+"feature(s). Each feature is described by the name of a field along with its "
+"value. This field is the one set in :menuselection:`Layer Properties --> "
+"Display`. All the other information about the feature follows."
+msgstr ""
+"맵 캔버스 상에서 데이터를 식별할 때, :guilabel:`Identify Results` 대화창에 클릭한 (또는 사용하는 도구에 따라 "
+"마우스 커서를 가져간) 항목에 대한 정보 목록이 열릴 것입니다. 기본 뷰는 첫 번째 항목이 레이어 이름이고 그 하위 항목이 식별된 "
+"피처(들)인 트리 뷰입니다. 각 피처는 필드 이름을 그 값과 함께 표시합니다. :menuselection:`Layer Properties"
+" --> Display` 메뉴에서 이 필드를 설정합니다. 그 다음 해당 피처에 대한 다른 모든 정보를 나열합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1194
+msgid ""
+"The feature information displayed by the identify tool will depend on the "
+"type of layer you have selected, whether it is a vector layer (including "
+"vector tiles or point cloud data) or raster layer. If your layer is raster, "
+"clicking on a location on the map canvas with identify tool will highlight "
+"the identified raster pixel. The Identify Results dialog can be customized "
+"to display custom fields, but by default it will display the following "
+"information:"
+msgstr ""
+"식별 도구가 보여주는 피처 정보는 선택한 레이어의 유형에 따라, (벡터 타일 또는 점구름 데이터를 포함하는) 벡터 레이어인지 또는 래스터"
+" 레이어인지에 따라 달라집니다. 선택한 레이어가 래스터인 경우, 맵 캔버스 상에서 식별 도구로 어떤 위치를 클릭했을 때 식별된 래스터 "
+"픽셀이 강조될 것입니다. 사용자가 식별 결과 대화창이 사용자 정의 필드를 보여주도록 설정할 수 있지만, 기본적으로 다음 정보를 보여줄 "
+"것입니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1203
 msgid "The feature :ref:`display name <maptips>`;"
@@ -2812,6 +3269,10 @@ msgid ""
 msgstr ""
 ":guilabel:`Identify Results` 패널에서 피처 속성 내부에 있는 링크를 클릭할 수 있으며, 사용자 기본 웹브라우저로 "
 "열릴 것입니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1248
+msgid "Results contextual menu"
+msgstr "결과물의 컨텍스트 메뉴"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1250
 msgid ""
@@ -3308,6 +3769,15 @@ msgstr ""
 msgid "Metadata load/save options"
 msgstr "메타데이터 저장/불러오기 옵션들"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1500
+msgid ""
+"The \"Default\" location used by :guilabel:`Save to Default Location` and "
+":guilabel:`Restore from Default Location` changes depending on the "
+"underlying data source and on its configuration:"
+msgstr ""
+":guilabel:`Save to Default Location` 및 :guilabel:`Restore from Default "
+"Location` 에 쓰이는 \"기본\" 위치는 기저 데이터소스와 그 환경설정에 따라 달라집니다."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1506
 msgid ""
 "For PostgreSQL data sources if the configuration option :guilabel:`Allow "
@@ -3315,7 +3785,15 @@ msgid ""
 "are stored inside a dedicated table in the database."
 msgstr ""
 "PostgreSQL 데이터소스의 경우 :guilabel:`Allow saving/loading QGIS layer metadata in "
-"the database` 환경 설정 옵션이 체크되어 있다면 데이터베이스의 전용 테이블 안에 메타데이터를 저장합니다."
+"the database` 환경설정 옵션이 체크되어 있다면 데이터베이스의 전용 테이블 안에 메타데이터를 저장합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1511
+msgid ""
+"For GeoPackage data sources :guilabel:`Save to Default Location` always "
+"saves the metadata in the internal metadata tables of the GeoPackage."
+msgstr ""
+"GeoPackage 데이터소스의 경우 :guilabel:`Save to Default Location` 메뉴 항목이 항상 "
+"GeoPackage의 내부 메타데이터 테이블에 메타데이터를 저장합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1514
 msgid ""
@@ -3325,6 +3803,22 @@ msgid ""
 msgstr ""
 "메타데이터가 PostgreSQL 또는 GeoPackage 내부 테이블에 저장되는 경우 브라우저 및 :ref:`레이어 메타데이터 검색 패널"
 " <layer_metadata_search_panel>` 에서 메타데이터를 검색하고 필터링할 수 있습니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1518
+msgid ""
+"For all other file based data sources :guilabel:`Save to Default Location` "
+"saves the metadata in a :file:`.qmd` file alongside the file."
+msgstr ""
+"다른 모든 파일 기반 데이터소스의 경우 :guilabel:`Save to Default Location` 메뉴 항목이 데이터소스 파일 "
+"옆에 메타데이터를 :file:`.qmd` 파일로 저장합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1521
+msgid ""
+"In all other cases :guilabel:`Save to Default Location` saves the metadata "
+"in a local :file:`.sqlite` database."
+msgstr ""
+"그 이외의 모든 경우, :guilabel:`Save to Default Location` 메뉴 항목은 로컬 :file:`.sqlite` "
+"데이터베이스에 메타데이터를 저장합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1528
 msgid "Layer notes"
@@ -3548,7 +4042,7 @@ msgid ""
 ":ref:`authentication_index`."
 msgstr ""
 "QGIS에는 안전한 방식으로 인증서(authentication credentials)를 저장/검색할 수 있는 기능이 있습니다.사용자는 "
-"인증 환경 설정 안에 인증서를 안전하게 저장할 수 있는데, 인증 환경 설정은 자체 데이터베이스에 저장되어 서버 또는 데이터베이스 연결에 "
+"인증 환경설정 안에 인증서를 안전하게 저장할 수 있는데, 인증 환경설정은 자체 데이터베이스에 저장되어 서버 또는 데이터베이스 연결에 "
 "적용할 수 있으며 프로젝트 또는 설정 파일에서 ID 토큰으로 안전하게 참조할 수 있습니다. 더 자세한 정보를 원한다면 "
 ":ref:`authentication_index` 을 참조하세요."
 
@@ -3919,7 +4413,7 @@ msgstr ":guilabel:`Copy Symbol`: 현재 항목의 심볼을 복사합니다."
 #: ../../docs/user_manual/introduction/general_tools.rst:1825
 msgid ":guilabel:`Paste Symbol` to the current item, speeding configuration"
 msgstr ""
-":guilabel:`Paste Symbol`: 현재 항목에 클립보드의 심볼을 붙여넣습니다. 심볼을 빠르게 환경 설정할 수 있습니다."
+":guilabel:`Paste Symbol`: 현재 항목에 클립보드의 심볼을 붙여넣습니다. 심볼을 빠르게 환경설정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1826
 msgid ""
@@ -3958,6 +4452,41 @@ msgstr "심볼, 라벨, 텍스처, 또는 장식을 사용자 지정하기 위�
 #: ../../docs/user_manual/introduction/general_tools.rst:1844
 msgid "Pressing the arrow will provide you with a menu to:"
 msgstr "이 화살표를 누르면 다음 작업을 할 수 있는 메뉴가 표시될 것입니다:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1846
+msgid ""
+":guilabel:`Select File…`, to load the file from the file system. The file is"
+" identified through the file path and QGIS needs to resolve the path in "
+"order to display the corresponding image"
+msgstr ""
+":guilabel:`Select File…`: 파일 시스템으로부터 파일을 불러옵니다. 파일 경로를 통해 파일을 식별하며, QGIS가 해당"
+" 이미지를 표시하려면 이 경로를 확인해야 합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1848
+msgid ""
+":guilabel:`From URL…`, to load the file from a remote URL. As above, the "
+"image will only be loaded on successful retrieval of the remote resource"
+msgstr ""
+":guilabel:`From URL…`: 원격 URL로부터 파일을 불러옵니다. 위와 마찬가지로, 원격 리소스를 성공적으로 검색한 경우에만"
+" 이미지를 불러올 것입니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1850
+msgid ""
+":guilabel:`Embed File…`, to embed the file inside the current project, style"
+" database, or print layout template. The file is then always rendered as "
+"part of the item. This is a convenient way to create self-contained projects"
+" with custom symbols which can be easily shared amongst different users and "
+"installations of QGIS."
+msgstr ""
+":guilabel:`Embed File…`: 현재 프로젝트, 스타일 데이터베이스, 또는 인쇄 조판 템플릿 안에 파일을 내장시킵니다. "
+"그러면 언제나 이 파일을 해당 항목의 일부로서 렌더링합니다. 사용자 지정 심볼을 가진 독립 프로젝트를 생성할 수 있는 편리한 방법으로, "
+"서로 다른 사용자 및 QGIS 설치본 간에 쉽게 공유할 수 있습니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1855
+msgid ""
+":guilabel:`Extract Embedded File…`, to extract the embedded file from the "
+"widget and save it on disk."
+msgstr ":guilabel:`Extract Embedded File…`: 위젯에서 내장 파일을 추출해서 디스크 상에 저장합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1861
 msgid "Visibility Scale Selector"
@@ -4106,6 +4635,17 @@ msgid ""
 "top)"
 msgstr ":menuselection:`Recent Fonts -->`: (맨 위에) 활성화 글꼴이 체크되어 있는 최근 사용 글꼴 목록"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1936
+msgid ""
+":guilabel:`Configure Format...`: same as pressing the font selector widget. "
+"It opens the :ref:`Text format <text_format>` dialog, providing advanced "
+"formatting options such as color, opacity, orientation, HTML notation, "
+"buffer, background, shadow, ..."
+msgstr ""
+":guilabel:`Configure Format...`: 글꼴 선택기 위젯을 클릭하는 것과 동일합니다. 색상, 불투명도, 방향, "
+"HTML 태그, 버퍼, 배경, 음영 등등과 같은 고급 서식 옵션을 제공하는 :ref:`텍스트 서식 <text_format>` 대화창을 "
+"엽니다."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1940
 msgid ":guilabel:`Copy Format` of the text"
 msgstr ":guilabel:`Copy Format`: 텍스트의 서식을 복사합니다."
@@ -4113,7 +4653,7 @@ msgstr ":guilabel:`Copy Format`: 텍스트의 서식을 복사합니다."
 #: ../../docs/user_manual/introduction/general_tools.rst:1941
 msgid ":guilabel:`Paste Format` to the text, speeding configuration"
 msgstr ""
-":guilabel:`Paste Format`: 텍스트에 클립보드의 서식을 붙여넣습니다. 텍스트 서식을 빠르게 환경 설정할 수 있습니다."
+":guilabel:`Paste Format`: 텍스트에 클립보드의 서식을 붙여넣습니다. 텍스트 서식을 빠르게 환경설정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1942
 msgid "the :ref:`color widget <color_widget>` for quick color setting"
@@ -4629,14 +5169,22 @@ msgid ""
 "input is expected, the valid input type and the current definition. Hovering"
 " over the widget also pops up this information."
 msgstr ""
-":guilabel:`Description...` 은 해당 옵션 활성화 여부, 입력해야 할 값, 유효한 입력 유형 그리고 현재 정의를 "
+":guilabel:`Description...` 은 해당 옵션 활성화 여부, 입력해야 할 값, 무결한 입력 유형 그리고 현재 정의를 "
 "설명합니다. 위젯에 마우스를 가져가도 이 정보들을 팝업으로 표시합니다."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2157
+msgid ""
+":guilabel:`Store data in the project`: a button allowing the property to be "
+"stored using the :ref:`vector_auxiliary_storage` mechanism."
+msgstr ""
+":guilabel:`Store data in the project`: :ref:`vector_auxiliary_storage` 메커니즘을"
+" 사용해서 속성을 저장할 수 있는 버튼입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2159
 msgid ""
 ":guilabel:`Field type`: an entry to select from the layer's fields that "
 "match the valid input type."
-msgstr ":guilabel:`Field type`: 유효한 입력 유형과 일치하는 레이어의 필드로부터 선택하는 항목입니다."
+msgstr ":guilabel:`Field type`: 무결한 입력 유형과 일치하는 레이어의 필드로부터 선택하는 항목입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2161
 msgid ""
@@ -4718,7 +5266,7 @@ msgid ""
 "You can enable or disable a configured |dataDefine| :sup:`Data-defined "
 "override` button by simply clicking the widget with the right mouse button."
 msgstr ""
-"위젯을 오른쪽 클릭하는 것만으로도 환경 설정된 |dataDefine| :sup:`Data-defined override` 버튼을 "
+"위젯을 오른쪽 클릭하는 것만으로도 환경설정된 |dataDefine| :sup:`Data-defined override` 버튼을 "
 "활성화시키거나 비활성화시킬 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2188
