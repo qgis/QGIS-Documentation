@@ -5838,6 +5838,339 @@ msgstr ""
 "Wenn Sie zum Beispiel eine Python-Datei mit dem Namen :file:`load_alaska.py`"
 " mit folgendem Inhalt haben:"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2523
+msgid ""
+"Assuming you are in the directory where the file :file:`load_alaska.py` is "
+"located, you can start QGIS, load the raster file :file:`landcover.img` and "
+"give the layer the name 'Alaska' using the following command::"
+msgstr ""
+"Wenn Sie sich jetzt in dem Verzeichnis befinden, in dem auch die "
+":file:`load_alaska.py`-Datei liegt, können Sie mit dem folgenden Befehl in "
+"einem Schritt QGIS starten, die Rasterdatei :file:`landcover.img` laden und "
+"dem Layer den Namen 'Alaska' geben::"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2530
+msgid "``--defaultui``"
+msgstr "``--defaultui``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2532
+msgid ""
+"On load, **permanently resets** the user interface (UI) to the default "
+"settings. This option will restore the panels and toolbars visibility, "
+"position, and size. Unless it's changed again, the default UI settings will "
+"be used in the following sessions."
+msgstr ""
+"Setzt beim Laden **permanent** die Benutzeroberfläche (UI) auf die "
+"Standardeinstellungen zurück. Diese Option stellt die Sichtbarkeit, Position"
+" und Größe der Bedienfelder und Werkzeugleisten wieder her. Die "
+"Standardeinstellungen der Benutzeroberfläche werden in den folgenden "
+"Sitzungen verwendet, sofern sie nicht erneut geändert werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2537
+msgid ""
+"Notice that this option doesn't have any effect on :ref:`GUI customization "
+"<sec_customization>`. Items hidden by GUI customization (e.g. the status "
+"bar) will remain hidden even using the ``--defaultui`` option. See also the "
+"``--nocustomization`` option."
+msgstr ""
+"Beachten Sie, dass diese Option keine Auswirkung auf "
+":ref:`Oberflächenanpassungen <sec_customization>` hat. Veränderungen, die "
+"mittels der Oberflächenanpassung vorgenommen wurden (z.B. das Verstecken der"
+" Statusleiste) bleiben also auch bei Verwendung der Option ``--defaultui`` "
+"erhalten. Siehe auch die Option ``--nocustomization``."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2543
+msgid "``--hide-browser``"
+msgstr "``--hide-browser``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2545
+msgid ""
+"On load, hides the :guilabel:`Browser` panel from the user interface. The "
+"panel can be enabled by right-clicking a space in the toolbars or using the "
+":menuselection:`View --> Panels` (:menuselection:`Settings --> Panels` in "
+"|kde| Linux KDE)."
+msgstr ""
+"Blendet beim Laden das Bedienfeld :guilabel:`Browser` aus der "
+"Benutzeroberfläche aus. Das Bedienfeld kann durch einen Rechtsklick auf ein "
+"Feld in der Werkzeugleiste oder über die :menuselection:`Ansicht --> "
+"Bedienfelder` (:menuselection:`Einstellungen--> Bedienfelder` in |kde| Linux"
+" KDE) aktiviert werden."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2716
 msgid "kde"
 msgstr "kde"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2550
+msgid ""
+"Unless it's enabled again, the Browser panel will remain hidden in the "
+"following sessions."
+msgstr ""
+"Wenn es nicht wieder aktiviert wird, bleibt das Bedienfeld \"Browser\" in "
+"den folgenden Sitzungen ausgeblendet."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2554
+msgid "``--dxf-*``"
+msgstr "``--dxf-*``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2556
+msgid ""
+"These options can be used to export a QGIS project into a DXF file. Several "
+"options are available:"
+msgstr ""
+"Diese Angabe kann verwendet werden, um ein QGIS-Projekt in eine DXF-Datei zu"
+" exportieren. Es sind mehrere Optionen verfügbar:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2559
+msgid "*--dxf-export*: the DXF filename into which to export the layers;"
+msgstr ""
+"*--dxf-export*: gefolgt von dem DXF-Dateinamen, in den die Layer exportiert "
+"werden sollen;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2560
+msgid "*--dxf-extent*: the extent of the final DXF file;"
+msgstr ""
+"*--dxf-extent*: gefolgt von dem Ausschnitt der exportierten DXF-Datei;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2561
+msgid ""
+"*--dxf-symbology-mode*: several values can be used here: ``none`` (no "
+"symbology), ``symbollayer`` (Symbol layer symbology), ``feature`` (feature "
+"symbology);"
+msgstr ""
+"*--dxf-symbology-mode*: hier können verschiedenen Angaben folgen: ``none`` "
+"(keine Symbologie), ``symbollayer`` (Symbollayer Symbologie), ``feature`` "
+"(Objekt Symbologie);"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2564
+msgid "*--dxf-scale-denom*: the scale denominator of the symbology;"
+msgstr "*--dxf-scale-denom*: der Maßstabsnenner der Symbologie;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2565
+msgid "*--dxf-encoding*: the file encoding;"
+msgstr "*--dxf-encoding*: die Datei-Kodierung;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2566
+msgid ""
+"*--dxf-map-theme*: choose a :ref:`map theme <map_themes>` from the layer "
+"tree configuration."
+msgstr ""
+"*--dxf-map-theme*: Wählen Sie ein vorhandenes :ref:`Kartenthema "
+"<map_themes>` aus dem Layer-Bedienfeld, das für den Export verwendet werden "
+"soll."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2570
+msgid "``--take-screenshots``"
+msgstr "``--take-screenshots``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2572
+msgid ""
+"Takes screenshots for the user documentation. Can be used together with "
+"``--screenshots-categories`` to filter which categories/sections of the "
+"documentation screenshots should be created (see "
+"QgsAppScreenShots::Categories)."
+msgstr ""
+"Nimmt Screenshots für die Benutzerdokumentation auf. Kann zusammen mit "
+"``--screenshots-categories`` verwendet werden, um zu filtern, welche "
+"Kategorien/Abschnitte der Dokumentations-Screenshots erstellt werden sollen "
+"(siehe QgsAppScreenShots::Categories)."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2577
+msgid "``--profile``"
+msgstr "``--profile``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2579
+msgid ""
+"Loads QGIS using a specific profile from the user's profile folder. This "
+"option takes precedence over :ref:`user profile startup setting "
+"<user_profile_setting>`."
+msgstr ""
+"Lädt QGIS mit einem bestimmten Profil aus dem Profilordner des Benutzers. "
+"Diese Option hat Vorrang vor den :ref:`Benutzerprofil-Starteinstellung "
+"<user_profile_setting>`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2585
+msgid "``--profiles-path``"
+msgstr "``--profiles-path``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2587
+msgid ""
+"With this option, you can choose a path to load and save the profiles (user "
+"settings). It creates profiles inside a ``{path}\\profiles`` folder, which "
+"includes settings, installed plugins, processing models and scripts, and so "
+"on."
+msgstr ""
+"Mit dieser Option können Sie einen Pfad zum Laden und Speichern der "
+"Benutzerprofile wählen. Die  Profile werden im Ordner ``{Pfad}\\profiles`` "
+"erstellt, welche Einstellungen, installierte Plugins, Verarbeitungsmodelle "
+"und Skripte usw. enthalten."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2591
+msgid ""
+"This option allows you to, for instance, carry all your plugins and settings"
+" in a flash drive, or, for example, share the settings between different "
+"computers using a file sharing service."
+msgstr ""
+"Das bietet Ihnen die Möglichkeit z. B. alle Ihre Plugins und Einstellungen "
+"auf einem externen Laufwerk/USB-Stick mit sich zuführen oder die "
+"Einstellungen über einen Dateifreigabedienst zwischen verschiedenen "
+"Computern auszutauschen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2595
+msgid "The equivalent environment variable is ``QGIS_CUSTOM_CONFIG_PATH``."
+msgstr "Die entsprechende Umgebungsvariable ist ``QGIS_CUSTOM_CONFIG_PATH``."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2598
+msgid "``--version-migration``"
+msgstr "``--version-migration``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2600
+msgid ""
+"If settings from an older version are found (*e.g.*, the ``.qgis2`` folder "
+"from QGIS 2.18), this option will import them into the default QGIS profile."
+msgstr ""
+"Wenn Einstellungen aus einer älteren Version gefunden werden (z.B., der "
+"``.qgis2`` Ordner von QGIS 2.18), ist es mit dieser Option möglich, diese "
+"Einstellungen in das Standard QGIS Profil zu importieren."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2604
+msgid "``--openclprogramfolder``"
+msgstr "``--openclprogramfolder``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2606
+msgid ""
+"Using this option, you can specify an alternative path for your OpenCL "
+"programs. This is useful for developers while testing new versions of the "
+"programs without needing to replace the existing ones."
+msgstr ""
+"Mit dieser Option können Sie einen alternativen Pfad für Ihre OpenCL-"
+"Programme angeben. Dies ist für Entwickler nützlich, wenn sie neue Versionen"
+" der Programme testen wollen, ohne dabei die vorhandenen Programme ersetzen "
+"zu müssen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2610
+msgid "The equivalent environment variable is ``QGIS_OPENCL_PROGRAM_FOLDER``."
+msgstr ""
+"Die entsprechende Umgebungsvariable ist ``QGIS_OPENCL_PROGRAM_FOLDER``."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2615
+msgid "Deploying QGIS within an organization"
+msgstr "Bereitstellen von QGIS innerhalb von Organisationen"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2617
+msgid ""
+"If you need to deploy QGIS within an organization with a custom "
+"configuration file, first you need to copy/paste the content of the default "
+"settings file located in "
+":file:`your_QGIS_package_path/resources/qgis_global_settings.ini`. This file"
+" already contains some default sections identified by a block starting with "
+"``[]``. We recommend that you keep these defaults values and add your own "
+"sections at the bottom of the file. If a section is duplicated in the file, "
+"QGIS will take the last one from top to bottom."
+msgstr ""
+"Wenn Sie QGIS innerhalb einer Organisation (Unternehmen, Verwaltung, ...) "
+"mit einer eigenen, benutzerdefinierten Konfigurationsdatei einsetzen "
+"möchten, müssen Sie zunächst den Inhalt der Standard-Konfigurationsdatei "
+"kopieren/einfügen, die sich in "
+":file:`Ihr_QGIS_Installationspfad/resources/qgis_global_settings.ini` "
+"befindet. Diese Datei enthält bereits einige Blöcke zu verschiedenen "
+"Bereichen, die jeweils durch einen entsprechenden Begriff in eckigen "
+"Klammern gekennzeichnet sind, z.B. ``[digitizing]``. Wir empfehlen, dass Sie"
+" diese Standardwerte beibehalten und Ihre eigenen Abschnitte am Ende der "
+"Datei hinzufügen. Wenn ein Abschnitt in der Datei doppelt vorhanden ist, "
+"wird QGIS den letzten Abschnitt von oben nach unten übernehmen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2625
+msgid ""
+"You can change ``allowVersionCheck=false`` to disable the QGIS version "
+"check."
+msgstr ""
+"Sie können hier z.B. auch ``allowVersionCheck=false`` ändern, um die QGIS "
+"Versionsprüfung zu deaktivieren."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2627
+msgid ""
+"If you do not want to display the migration window after a fresh install, "
+"you need the following section:"
+msgstr ""
+"Wenn Sie das Migrationsfenster nach einer Neuinstallation nicht anzeigen "
+"möchten, müssen Sie den folgenden Abschnitt hinzufügen:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2636
+msgid "If you want to add a custom variable in the global scope:"
+msgstr ""
+"Wenn Sie eine benutzerdefinierte Variable hinzufügen möchten, müssen Sie "
+"folgendes eingeben:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2643
+msgid ""
+"A lot of settings can be set using the :file:`.INI` file such as WMS/WMTS, "
+"PostGIS connections, proxy settings, maptips, default values for algorithms "
+"parameters… For example, if you want to configure organization wide default "
+"values for some algorithms it would be handy if you could configure it in "
+"the prepared ini-file for all users. If the users then open the toolbox to "
+"execute an algorithm, the default values will be there. To set the default "
+"value e.g. for ``GRID_SIZE`` parameter for the ``native:intersection`` "
+"algorithm, you could write the following into the :file:`.INI` file:"
+msgstr ""
+"Mit dieser :file:`.ini`-Datei können viele Einstellungen vorgenommen werden,"
+" wie z.B. WMS/WMTS, PostGIS-Verbindungen, Proxy-Einstellungen, Maptips, "
+"Standardwerte für Algorithmen-Parameter... Wenn Sie z.B. organisationsweite "
+"Standardwerte für einen Algorithmus konfigurieren möchten, können Sie dies "
+"erreichen, wenn Sie eine :file:`.ini`-Datei für alle Benutzer konfigurieren."
+" Wenn die Benutzer dann die Toolbox öffnen, um einen Algorithmus "
+"auszuführen, sind die Standardwerte bereits vorhanden. Um z.B. den "
+"Standardwert für den Parameter ``GRID_SIZE`` für den Algorithmus "
+"``native:intersection`` zu setzen, müssen Sie folgendes in die "
+":file:`.ini`-Datei schreiben:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2656
+msgid ""
+"Not all settings can be prepared from QGIS GUI, but to discover the "
+"possibilities of the settings :file:`.INI` file, we suggest that you set the"
+" config you would like in QGIS Desktop and then search for it in your "
+":file:`.INI` file located in your profile using a text editor."
+msgstr ""
+"Nicht alle Optionen der QGIS GUI sind einstellbar, um die Möglichkeiten der "
+":file:`.ini`-Datei zu entdecken, schlagen wir vor, dass Sie die gewünschte "
+"Konfiguration in QGIS einstellen und dann in Ihrer :file:`.ini`-Datei nach "
+"der entsprechenden Einstellung suchen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2661
+msgid ""
+"Finally, you need to set the environment variable "
+"``QGIS_GLOBAL_SETTINGS_FILE`` to the path of your customized file."
+msgstr ""
+"Schließlich müssen Sie noch die Umgebungsvariable "
+"``QGIS_GLOBAL_SETTINGS_FILE`` auf den Pfad Ihrer angepassten Datei setzen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2664
+msgid ""
+"In addition, you can also deploy files such as Python macros, color "
+"palettes, layout templates, project templates… either in the QGIS system "
+"directory or in the QGIS user profile."
+msgstr ""
+"Darüber hinaus können Sie auch Dateien wie Python-Makros, Farbpaletten, "
+"Layoutvorlagen, Projektvorlagen, ... entweder im QGIS-Systemverzeichnis oder"
+" im QGIS-Benutzerprofil bereitstellen."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2668
+msgid ""
+"Layout templates must be deployed in the :file:`composer_templates` "
+"directory."
+msgstr ""
+"Layout-Vorlagen müssen im Verzeichnis :file:`composer_templates` "
+"bereitgestellt werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2669
+msgid ""
+"Project templates must be deployed in the :file:`project_templates` "
+"directory."
+msgstr ""
+"Projektvorlagen müssen im Verzeichnis :file:`project_templates` "
+"bereitgestellt werden."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2670
+msgid "Custom Python macros must be deployed in the :file:`python` directory."
+msgstr ""
+"Benutzerdefinierte Python-Makros müssen im Verzeichnis :file:`python` "
+"bereitgestellt werden."
