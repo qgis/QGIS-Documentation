@@ -82,8 +82,12 @@ Provided information are:
 
 * general such as name in the project, source path, list of auxiliary files,
   last save time and size, the used provider
-* custom properties, used to store additional information about certain objects, such as map layers.
-  These properties are created and managed using PyQGIS, specifically through the `setCustomProperty` method.
+* custom properties, used to store additional information about layers, in the active project.
+  Default custom properties may include :ref:`layer notes <layer_notes>`,
+  :ref:`legend widgets <vectorlegendmenu>`, :ref:`layer variables <general_tools_variables>`,
+  :ref:`form properties <vector_attributes_menu>`...
+  More custom properties can be created and managed using PyQGIS,
+  specifically through the :pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` method.
 * based on the provider of the layer: format of storage, geometry type,
   data source encoding, extent, feature count...
 * the Coordinate Reference System: name, units, method, accuracy, reference
