@@ -31,9 +31,9 @@ msgid ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. This page is currently translated at |translation progress|."
 msgstr ""
-"Übersetzen ist eine Gemeinschaftsleistung - Sie können mitmachen "
+"Übersetzen ist eine Gemeinschaftsleistung - `Sie können mitmachen "
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. Diese Seite ist aktuell zu  |translation progress| übersetzt."
+"translator>`_. Diese Seite ist aktuell zu |translation progress| übersetzt."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:5
 msgid "Working with Projections"
@@ -49,14 +49,13 @@ msgid ""
 " this choice, and makes working with different CRSs as transparent and "
 "accurate as possible."
 msgstr ""
-"Ein Koordinatenbezugssystem oder CRS ist ein Verfahren zur Zuordnung von "
+"Ein Koordinatenbezugssystem, kurz KBS, ist ein Verfahren zur Zuordnung von "
 "numerischen Koordinaten zu einer Position auf der Erdoberfläche. QGIS "
-"unterstützt ca. 7.000 Standard-CRSs mit jeweils unterschiedlichen "
-"Anwendungsfällen, Vor- und Nachteilen! Die Auswahl eines geeigneten "
-"Referenzsystems für Ihre QGIS-Projekte und -Daten kann eine komplexe Aufgabe"
-" sein, aber glücklicherweise hilft Ihnen QGIS dabei, diese Auswahl zu "
-"treffen und macht die Arbeit mit verschiedenen CRSs so transparent und genau"
-" wie möglich."
+"unterstützt ca. 7.000 Standard-KBS mit jeweils unterschiedlichen "
+"Anwendungsfällen, Vor- und Nachteilen. Die Auswahl eines geeigneten KBS für "
+"Ihre QGIS-Projekte und -Daten kann eine komplexe Aufgabe sein, aber QGIS "
+"hilft Ihnen dabei, diese Auswahl zu treffen und macht die Arbeit mit "
+"verschiedenen KBS so transparent und genau wie möglich."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:25
 msgid "Overview of Projection Support"
@@ -74,19 +73,118 @@ msgid ""
 "For instance, the common WGS 84 latitude/longitude CRS is known by the "
 "identifier ``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``."
 msgstr ""
-"QGIS has support for approximately 7,000 known CRSs. These standard CRSs are"
-" based on those defined by the European Petroleum Search Group (EPSG) and "
-"the Institut Geographique National de France (IGNF), and are made available "
-"in QGIS through the underlying \"Proj\" projection library. Commonly, these "
-"standard projections are identified through use of an authority:code "
-"combination, where the authority is an organisation name such as \"EPSG\" or"
-" \"IGNF\", and the code is a unique number associated with a specific CRS. "
-"For instance, the common WGS 84 latitude/longitude CRS is known by the "
-"identifier ``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``."
+"QGIS unterstützt etwa 7.000 bekannte KBS. Diese Standard-KBS basieren auf "
+"den von der European Petroleum Search Group (EPSG) und dem Institut "
+"Geographique National de France (IGNF) definierten KBS und werden in QGIS "
+"durch die zugrunde liegende Projektionsbibliothek \"Proj\" zur Verfügung "
+"gestellt. Üblicherweise werden diese Standardprojektionen durch eine "
+"Kombination aus Institution und Code identifiziert, wobei die Institution "
+"ein Organisationsname wie \"EPSG\" oder \"IGNF\" und der Code eine "
+"eindeutige Nummer ist, die mit einem bestimmten KBS verbunden ist. Zum "
+"Beispiel wird das verbreitete WGS 84 Breiten-/Längen-KBS unter der Kennung "
+"``EPSG:4326`` geführt, das Web Mapping Standard-KBS ist ``EPSG:3857``."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:37
+msgid ""
+"Custom, user-created CRSs are stored in a user CRS database. See section "
+":ref:`sec_custom_projections` for information on managing your custom "
+"coordinate reference systems."
+msgstr ""
+"Benutzerdefinierte KBS werden in einer Benutzer-KBS-Datenbank gespeichert. "
+"Für Informationen zur Verwaltung Ihrer benutzerdefinierten "
+"Koordinatenbezugssysteme siehe Abschnitt :ref:`sec_custom_projections`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
+msgid "Layer Coordinate Reference Systems"
+msgstr "Koordinatenbezugssysteme für Layer"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
+msgid ""
+"In order to correctly project data into a specific target CRS, either your "
+"data must contain information about its coordinate reference system or you "
+"will need to manually assign the correct CRS to the layer. For PostGIS "
+"layers, QGIS uses the spatial reference identifier that was specified when "
+"that PostGIS layer was created. For data supported by GDAL, QGIS relies on "
+"the presence of a recognized means of specifying the CRS. For instance, for "
+"the Shapefile format this is a file containing an ESRI Well-Known Text "
+"(:index:`WKT`) representation of the layer's CRS. This projection file has "
+"the same base name as the :file:`.shp` file and a :file:`.prj` extension. "
+"For example, :file:`alaska.shp` would have a corresponding projection file "
+"named :file:`alaska.prj`."
+msgstr ""
+"Um Daten korrekt in ein bestimmtes Ziel-KBS zu projizieren, müssen diese "
+"entweder bereits  Informationen über das KBS enthalten, in dem sie "
+"vorliegen, oder Sie müssen den Daten manuell das richtige KBS zuweisen. Für "
+"PostGIS Layer verwendet QGIS den räumlichen Referenzidentifikator, der bei "
+"der Erstellung des Layers angegeben wurde. Bei Daten, die von GDAL "
+"unterstützt werden, benötigt QGIS ein jeweils definiertes Mittel, um das KBS"
+" automatisch identifizieren zu können. Für das Shapefile-Format ist dies zum"
+" Beispiel eine Datei, die eine ESRI Well-Known-Text (:index:`WKT`) "
+"Darstellung des KBS für den Layers enthält. Diese Projektionsdatei hat "
+"denselben Basisnamen wie die :file:`.shp`-Datei und die Erweiterung "
+":file:`.prj`. Zum Beispiel würde die Datei :file:`alaska.shp` eine "
+"entsprechende Projektionsdatei namens :file:`alaska.prj` haben."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
+msgid ""
+"Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
+"determine the correct CRS for that layer. In some cases this is not "
+"possible, e.g. when a layer has been provided without retaining this "
+"information. You can configure QGIS behavior whenever it cannot "
+"automatically determine the correct CRS for a layer:"
+msgstr ""
+"Immer wenn ein Layer in QGIS geladen wird, versucht QGIS, automatisch das "
+"korrekte KBS für diesen Layer zu ermitteln. In manchen Fällen ist dies nicht"
+" möglich, z.B. wenn ein Layer ohne diese Information bereitgestellt wurde. "
+"Sie können einstellen, wie QGIS verfahren soll, wenn es nicht automatisch "
+"das richtige KBS für einen Layer ermitteln kann:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
+msgid ""
+"Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
+"CRS`"
+msgstr ""
+"Öffnen Sie :menuselection:`Einstellungen -->` |options| "
+":menuselection:`Optionen... --> KBS-Behandlung`"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:439
 msgid "options"
 msgstr "options"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
+msgid "The CRS tab in the QGIS Options Dialog"
+msgstr "Der Reiter KBS-Behandlung im Optionen-Dialog"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:73
+msgid ""
+"Under the :guilabel:`CRS for layers` group, set the action to do "
+":guilabel:`when a new layer is created, or when a layer is loaded that has "
+"no CRS`. One of:"
+msgstr ""
+"Legen Sie im Bereich :guilabel:`KBS für Layer` die Aktion :guilabel:`Wenn "
+"ein neuer Layer erzeugt wird oder wenn ein Layer geladen wird, der kein KBS "
+"hat` fest:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
+msgid ""
+"|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`: there "
+"will be no prompt to select a CRS when a layer without CRS is loaded, "
+"defering CRS choice to a later time. Convenient when loading a lot of layers"
+" at once. Such layers will be identifiable in the :guilabel:`Layers` panel "
+"by the |indicatorNoCRS| icon next to them. They'll also be un-referenced, "
+"with coordinates from the layer treated as purely numerical, non-earth "
+"values, i.e. the same behavior as all layers get when :ref:`a project is set"
+" to have no CRS <project_crs>`."
+msgstr ""
+"|radioButtonOn| :guilabel:`bei unbekanntem KBS belassen (nichts tun)`: es "
+"wird keine Aufforderung zur Auswahl eines KBS angezeigt, die Wahl des KBS "
+"kann zu einem späteren Zeitpunkt erfolgen. Dies kann z.B. nützlich sein, "
+"wenn viele Layer auf einmal geladen werden. Ein Layer ohne KBS wird im "
+":guilabel:`Layer` Bedienfeld mit dem Symbol |indicatorNoCRS| gekennzeichnet."
+" Diese Layer werden nicht referenziert, wobei die Koordinaten des Layers als"
+" rein numerische, nicht erdgebundene Werte behandelt werden. Ebenso wird mit"
+" allen Layern verfahren, wenn das Projekt so eingestellt ist,  :ref:` dass "
+"es kein KBS hat <project_crs>`."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:443
 msgid "radioButtonOn"
@@ -96,33 +194,418 @@ msgstr "radioButtonOn"
 msgid "indicatorNoCRS"
 msgstr "indicatorNoCRS"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
+msgid ""
+"|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to manually "
+"select the CRS. Selecting the correct choice is crucial, as a wrong choice "
+"will place your layer in the wrong position on the Earth's surface! "
+"Sometimes, accompanying metadata will describe the correct CRS for a layer, "
+"in other cases you will need to contact the original author of the data to "
+"determine the correct CRS to use."
+msgstr ""
+"|radioButtonOff| :guilabel:`KBS abfragen`: Sie werden aufgefordert, das KBS "
+"manuell auszuwählen. Die Auswahl des richtigen KBS ist von entscheidender "
+"Bedeutung, da ein falsches Ihren Layer an der falschen Position auf der "
+"Erdoberfläche platziert! Manchmal ist das richtige KBS für einen Layer in "
+"den begleitenden Metadaten beschrieben, in anderen Fällen müssen Sie den "
+"ursprünglichen Autor der Daten kontaktieren, um das richtige KBS zu "
+"erfahren."
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:441
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
-msgstr "|radioButtonOff| :guilabel:`KBS des Projektes nutzen`"
+msgstr "|radioButtonOff| :guilabel:`Projekt KBS verwenden`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
+msgid ""
+"|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
+":guilabel:`Default CRS for layers` combobox above."
+msgstr ""
+"|radioButtonOff| :guilabel:`KBS-Vorgabe verwenden`, wie es in der obigen "
+"Combobox :guilabel:`Vorgabe-KBS für Layer` eingestellt ist."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
+msgid ""
+"To assign the same CRS to multiple layers that have no crs or have a wrong "
+"one in one operation:"
+msgstr ""
+"Um mehreren Layern, die kein oder ein falsches KBS haben, in einem "
+"Arbeitsgang dasselbe KBS zuzuweisen, können Sie wie folgt vorgehen:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
+msgid "Select the layers in the :guilabel:`Layers` panel"
+msgstr ""
+"Wählen Sie die entsprechenden Layer im :guilabel:`Layer` Bedienfeld aus"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
+msgid ""
+"Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
+"selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
+msgstr ""
+"Drücken Sie :kbd:`Strg+Shift+C`; Sie können auch mit der rechten Maustaste "
+"auf einen der ausgewählten Layer klicken oder :menuselection:`Layer --> KBS "
+"von Layer(n) setzen` aufrufen."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
+msgid "Find and select the right CRS to use"
+msgstr "Wählen Sie das richtige KBS aus"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
+msgid ""
+"And press :guilabel:`OK`. You can confirm that it has been set correctly in "
+"the :guilabel:`Source` tab of the layers' properties dialog."
+msgstr ""
+"Drücken Sie :guilabel:`OK`; Sie können die korrekte Einstellung im Reiter "
+":guilabel:`Quelle` des Eigenschaftsdialogs der Layer überprüfen."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
+msgid ""
+"Note that changing the CRS in this setting does not alter the underlying "
+"data source in any way, rather it just changes how QGIS interprets the raw "
+"coordinates from the layer in the current QGIS project."
+msgstr ""
+"Beachten Sie, dass das Ändern des KBS in dieser Einstellung die "
+"zugrundeliegende Datenquelle in keiner Weise verändert, sondern nur die Art "
+"und Weise, wie QGIS die Rohkoordinaten des Layers im aktuellen QGIS-Projekt "
+"interpretiert."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
+msgid "Project Coordinate Reference Systems"
+msgstr "Koordinatenbezugssysteme für Projekte"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:119
+msgid ""
+"Every project in QGIS also has an associated Coordinate Reference System. "
+"The project CRS determines how data is projected from its underlying raw "
+"coordinates to the flat map rendered within your QGIS map canvas."
+msgstr ""
+"Jedes Projekt in QGIS hat ein zugehöriges Koordinatenbezugssystem (KBS). Das"
+" KBS des Projekts bestimmt, wie die Daten von den zugrunde liegenden "
+"Rohkoordinaten auf die Karte projiziert werden, die in der Kartenansicht von"
+" QGIS dargestellt wird."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:123
+msgid ""
+"QGIS supports \"on the fly\" CRS transformation for both raster and vector "
+"data. This means that regardless of the underlying CRS of particular map "
+"layers in your project, they will always be automatically transformed into "
+"the common CRS defined for your project. Behind the scenes, QGIS "
+"transparently reprojects all layers contained within your project into the "
+"project's CRS, so that they will all be rendered in the correct position "
+"with respect to each other!"
+msgstr ""
+"QGIS unterstützt die \"on the fly\" KBS-Transformation sowohl für Raster- "
+"als auch für Vektordaten. Das bedeutet, dass unabhängig vom "
+"zugrundeliegenden KBS bestimmter Layer in Ihrem Projekt, diese immer "
+"automatisch in das für Ihr Projekt definierte KBS transformiert werden. Im "
+"Hintergrund projiziert QGIS alle in Ihrem Projekt enthaltenen Layer in das "
+"projekteigene KBS, sodass sie alle in der richtigen Position zueinander "
+"gerendert werden."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
+msgid ""
+"It is important to make an appropriate choice of CRS for your QGIS projects."
+" Choosing an inappropriate CRS can cause your maps to look distorted, and "
+"poorly reflect the real-world relative sizes and positions of features. "
+"Usually, while working in smaller geographic areas, there will be a number "
+"of standard CRSs used within a particular country or administrative area. "
+"It's important to research which CRSs are appropriate or standard choices "
+"for the area you are mapping, and ensure that your QGIS project follows "
+"these standards."
+msgstr ""
+"Es ist wichtig, das korrekte KBS für Ihre QGIS-Projekte zu wählen. Die Wahl "
+"eines ungeeigneten KBS kann dazu führen, dass Ihre Karten verzerrt aussehen "
+"und die realen Größen und Positionen von Merkmalen nur unzureichend "
+"wiedergeben. Wenn Sie in kleineren geografischen Gebieten arbeiten, gibt es "
+"normalerweise eine Reihe von Standard-KBS, die in einem bestimmten Land oder"
+" Verwaltungsgebiet verwendet werden. Es ist wichtig zu recherchieren, welche"
+" KBS für das Gebiet, das Sie kartieren, geeignet sind und sicherzustellen, "
+"dass Ihr QGIS-Projekt diesen Standards folgt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:140
+msgid ""
+"By default, QGIS starts each new project using a global default projection. "
+"This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"), and it is a "
+"global latitude/longitude based reference system. This default CRS can be "
+"changed via the :guilabel:`CRS for New Projects` setting in the "
+":guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
+":menuselection:`Options...` (see :numref:`figure_projection_options`). There"
+" is an option to automatically set the project's CRS to match the CRS of the"
+" first layer loaded into a new project, or alternatively you can select a "
+"different default CRS to use for all newly created projects. This choice "
+"will be saved for use in subsequent QGIS sessions."
+msgstr ""
+"Standardmäßig startet QGIS jedes neue Projekt mit der "
+"Standardprojektion``EPSG:4326`` (\"WGS 84\"), welches ein globales "
+"Breiten-/Längen-basiertes Referenzsystem ist. Dieses Standard-KBS kann über "
+"die Einstellung :guilabel:`KBS für neue Projekte` im Reiter :guilabel:`KBS-"
+"Behandlung` unter :menuselection:`Einstellungen -->` |options| "
+":menuselection:`Optionen...` geändert werden (siehe "
+":numref:`figure_projection_options`). Es besteht auch die Möglichkeit, das "
+"KBS für neue Projekt von dem ersten Layer, der hinzugefügt wird, übernehmen "
+"zu lassen. Diese Auswahl wird für die Verwendung in nachfolgenden QGIS-"
+"Sitzungen gespeichert."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
+msgid ""
+"The project CRS can also be set through the :guilabel:`CRS` tab of the "
+":menuselection:`Project --> Properties...` dialog. It will also be shown in "
+"the lower-right of the QGIS status bar."
+msgstr ""
+"Das KBS des Projekts wird auch unten rechts in der QGIS-Statusleiste "
+"angezeigt. Es kann ebenfalls über den Reiter :guilabel:`KBS` im Dialog "
+":menuselection:`Projekt --> Eigenschaften...` eingestellt werden. "
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
 msgid "Project Properties Dialog"
-msgstr "Dialog Projekteigenschaften"
+msgstr "Der Reiter KBS in den Projekteigenschaften"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
+msgid "Available options are:"
+msgstr "Folgende Optionen sind verfügbar:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:164
+msgid ""
+"|unchecked| :guilabel:`No CRS (or unknown/non-Earth projection)`: Checking "
+"this setting will disable ALL projection handling within the QGIS project, "
+"causing all layers and map coordinates to be treated as simple 2D Cartesian "
+"coordinates, with no relation to positions on the Earth's surface. It can be"
+" used to guess a layer CRS (based on its raw coordinates or when using QGIS "
+"for non earth uses like role-playing game maps, building mapping or "
+"microscopic stuff. In this case:"
+msgstr ""
+"|unchecked| :guilabel:`Kein KBS (oder unbekannte/nicht-irdische "
+"Projektion)`: Wenn Sie diese Einstellung aktivieren, werden alle Layer und "
+"Kartenkoordinaten als einfache kartesische 2D-Koordinaten behandelt, ohne "
+"Bezug zu Positionen auf der Erdoberfläche. Diese Option kann verwendet "
+"werden, um die KBS eines Layers abzuschätzen (basierend auf seinen "
+"Rohkoordinaten) oder wenn QGIS für nicht-irdische Anwendungen wie "
+"Rollenspielkarten, Gebäudekartierungen oder mikroskopische Dinge verwendet "
+"wird. Bei dieser Auswahl gilt:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:453
 msgid "unchecked"
 msgstr "unchecked"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
+msgid ""
+"No reprojection is done while rendering the layers: features are just drawn "
+"using their raw coordinates."
+msgstr ""
+"Beim Rendern der Layer wird keine Reprojektion durchgeführt: Die Features "
+"werden einfach mit ihren Rohkoordinaten gezeichnet."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
+msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
+msgstr ""
+"Der Ellipsoid wird nicht berücksichtigt und wird auf ``Nicht/Planimetrisch``"
+" gesetzt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
+msgid ""
+"The distance and area units, and the coordinate display are locked out and "
+"forced to \"unknown units\"; all measurements are done in unknown map units,"
+" and no conversion is possible."
+msgstr ""
+"Die Entfernungs- und Flächeneinheiten sowie die Koordinatenanzeige sind "
+"deaktiviert und auf \"unbekannte Einheiten\" eingestellt; alle Messungen "
+"erfolgen in unbekannten Karteneinheiten, und eine Umrechnung ist nicht "
+"möglich."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
+msgid ""
+"or an existing coordinate reference system that can be *geographic*, "
+"*projected* or *user-defined*. A preview of the CRS extent on earth is "
+"displayed to help you select the appropriate one. Layers added to the "
+"project are translated on-the-fly to this CRS in order to overlay them "
+"regardless of their original CRS. Use of units and ellipsoid setting are "
+"available and make sense and you can perform calculations accordingly."
+msgstr ""
+"Ein vorhandenes Koordinatenbezugssystem auswählen, das *geografisch*, "
+"*projiziert* oder *benutzerdefiniert* sein kann. Eine Vorschau der KBS-"
+"Ausdehnung auf der Erde wird angezeigt, um Ihnen die Auswahl des geeigneten "
+"Systems zu erleichtern. Dem Projekt hinzugefügte Layer werden on-the-fly in "
+"dieses KBS übersetzt, um sie unabhängig von ihrem ursprünglichen KBS korrekt"
+" zu überlagern. Die Verwendung von Einheiten und Ellipsoideinstellungen ist "
+"möglich und sinnvoll, und Sie können entsprechende Berechnungen durchführen."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
+msgid ""
+"Whenever you select a new CRS for your QGIS project, the measurement units "
+"will automatically be changed in the :guilabel:`General` tab of the "
+":guilabel:`Project properties` dialog (:menuselection:`Project --> "
+"Properties...`) to match the selected CRS. For instance, some CRSs define "
+"their coordinates in feet instead of meters, so setting your QGIS project to"
+" one of these CRSs will also set your project to measure using feet by "
+"default."
+msgstr ""
+"Wenn Sie ein neues KBS für Ihr QGIS-Projekt auswählen, werden die "
+"Maßeinheiten im Reiter :guilabel:`Allgemein` des Dialogs "
+":guilabel:`Projekteigenschaften` (:menuselection:`Projekt --> "
+"Eigenschaften...`) automatisch an das ausgewählte KBS angepasst. Zum "
+"Beispiel definieren einige KBS ihre Koordinaten in Fuß statt in Metern. Wenn"
+" Sie Ihr QGIS Projekt auf eines dieser KBS einstellen, wird in Ihr Projekt "
+"standardmäßig in Fuß gemessen."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
+msgid "**Setting the project CRS from a layer**"
+msgstr "**Einstellung des Projekt-KBS von einem Layer**"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
+msgid "You can assign a CRS to the project using a layer CRS:"
+msgstr ""
+"Sie können dem Projekt ein KBS zuweisen, indem Sie das KBS eines Layers "
+"verwenden:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
+msgid ""
+"In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
+"the CRS"
+msgstr ""
+"Klicken Sie im :guilabel:`Layer` Bedienfeld mit der rechten Maustaste auf "
+"den Layer, von dem Sie das KBS übernehmen möchten."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
+msgid "Select :guilabel:`Set project CRS from Layer`."
+msgstr ""
+"Wählen Sie :guilabel:`Layer-KBS` und dann :guilabel:`Layer-KBS dem Projekt "
+"zuweisen` aus."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:201
+msgid ""
+"The project's CRS is redefined using the layer's CRS. Map canvas extent, "
+"coordinates display are updated accordingly and all the layers in the "
+"project are on-the-fly translated to the new project CRS."
+msgstr ""
+"Das Projekt-KBS wird unter Verwendung des Layer-KBS neu festgelegt. Die "
+"Kartenansicht und die Koordinatenanzeige werden entsprechend aktualisiert "
+"und alle Layer im Projekt werden on-the-fly in das neue KBS des Projekts "
+"übersetzt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
+msgid "Coordinate Reference System Selector"
+msgstr "Auswahl des Koordinatenbezugssystems"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:217
+msgid "CRS Selector"
+msgstr "Das KBS-Auswahl-Fenster"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:219
+msgid ""
+"This dialog helps you assign a Coordinate Reference System to a project or a"
+" layer, provided a set of projection databases. Items in the dialog are:"
+msgstr ""
+"Dieser Dialog hilft Ihnen, einem Projekt oder einem Layer ein "
+"Koordinatenbezugssystem zuzuweisen. Die Elemente im Dialog sind:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:222
+msgid ""
+"**Filter**: If you know the EPSG code, the identifier, or the name for a "
+"Coordinate Reference System, you can use the search feature to find it. "
+"Enter the EPSG code, the identifier or the name."
+msgstr ""
+"**Filter**: Wenn Sie den EPSG-Code, die Kennung oder den Namen eines "
+"Koordinatenbezugssystems kennen, können Sie die Filterfunktion verwenden, um"
+" es zu suchen. Sobald Sie im Filter eine Eingabe machen, werden nur noch die"
+" Übereinstimmungen angezeigt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:225
+msgid ""
+"**Recently used coordinate reference systems**: If you have certain CRSs "
+"that you frequently use in your everyday GIS work, these will be displayed "
+"in this list. Click on one of these items to select the associated CRS."
+msgstr ""
+"**Kürzlich benutzte Koordinatenbezugssysteme**: Wenn Sie bestimmte KBS "
+"einmal verwendet haben, wird es in dieser Liste angezeigt. Klicken Sie auf "
+"einen Eintrag in dieser Liste, um das zugehörige KBS auszuwählen."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:228
+msgid ""
+"**Coordinate reference systems of the world**: This is a list of all CRSs "
+"supported by QGIS, including Geographic, Projected and Custom coordinate "
+"reference systems. To define a CRS, select it from the list by expanding the"
+" appropriate node and selecting the CRS. The active CRS is preselected."
+msgstr ""
+"**Vordefinierte Koordinatenbezugssysteme**: Dies ist eine Liste aller in "
+"QGIS verfügbaren KBS, einschließlich geografischer, projizierter und "
+"benutzerdefinierter Koordinatenbezugssysteme. Um ein KBS festzulegen, wählen"
+" Sie den entsprechenden Eintrag aus der Liste aus (ggf. muss zunächst der "
+"enthaltende Ast zuerst ausgeklappt werden). Das aktive KBS ist "
+"vorausgewählt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:232
+msgid ""
+"**PROJ text**: This is the CRS string used by the PROJ projection engine. "
+"This text is read-only and provided for informational purposes."
+msgstr ""
+"**PROJ-Text**: Im Bereich unten links werden allgemeine Informationen sowie "
+"die Definitionen, die für die Projektion verwendet werden, angezeigt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:236
+msgid ""
+"If you want to remove a recently used CRS from the list that can be done in "
+"several ways:"
+msgstr ""
+"Wenn Sie ein KBS aus der Liste \"Kürzlich benutzte Koordinatensysteme\" "
+"entfernen möchten, können Sie dies auf verschiedene Weise tun:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:239
+msgid ""
+"Press |clearItem| :sup:`Remove from recently used CRS` button on the right "
+"side."
+msgstr ""
+"Drücken Sie die Taste |clearItem| :sup:`Aus kürzlich verwendeten KBS "
+"entfernen` auf der rechten Seite."
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:433
 msgid "clearItem"
 msgstr "clearItem"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
+msgid "Press :kbd:`Del` after selecting CRS that you want to remove."
+msgstr ""
+"Drücken Sie :kbd:`Entfernen`, nachdem Sie das KBS ausgewählt haben, das Sie "
+"entfernen möchten."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:242
+msgid ""
+"Right-click on used CRS and choose |clearItem| :guilabel:`Remove selected "
+"CRS from recently used CRS` to remove selected CRS or |clearConsole| "
+":guilabel:`Clear all recently used CRS` to remove all used CRS."
+msgstr ""
+"Klicken Sie mit der rechten Maustaste auf ein verwendetes KBS und wählen Sie"
+" |clearItem| :guilabel:`Gewähltes KBS aus kürzlich verwendeten KBS "
+"entfernen`, um das ausgewählte KBS zu entfernen oder |clearConsole| "
+":guilabel:`Alle kürzlich verwendeten KBS löschen`, um alle zu entfernen."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:431
 msgid "clearConsole"
 msgstr "clearConsole"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:248
+msgid ""
+"The CRS selector also shows a rough preview of the geographic area for which"
+" a selected CRS is valid for use. Many CRSs are designed only for use in "
+"small geographic areas, and you should not use these outside of the area "
+"they were designed for. The preview map shades an approximate area of use "
+"whenever a CRS is selected from the list. In addition, this preview map also"
+" shows an indicator of the current main canvas map extent."
+msgstr ""
+"Der KBS-Selektor zeigt auch eine ungefähre Vorschau auf das geografische "
+"Gebiet, für das ein ausgewähltes KBS gültig ist. Viele KBS sind nur für die "
+"Verwendung in kleineren geografischen Gebieten vorgesehen, und Sie sollten "
+"ein KBS nicht außerhalb dieses Gebiets einsetzen. Die Vorschaukarte markiert"
+" ein ungefähres Einsatzgebiet, wenn ein KBS aus der Liste ausgewählt wird "
+"(farbig markierte Fläche). Darüber hinaus zeigt diese Vorschaukarte auch die"
+" aktuelle Ausdehnung der Kartenansicht an (violettes Kreuz). Es ist möglich,"
+" mit dem Mausrad in der Vorschaukarte zu zoomen."
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:261
 msgid "Custom Coordinate Reference System"
-msgstr "Eigenes Koordinatenbezugssystem definieren"
+msgstr "Ein eigenes Koordinatenbezugssystem definieren"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:263
 msgid ""
@@ -132,46 +615,358 @@ msgid ""
 "CRSs are stored in your QGIS user database. In addition to your custom CRSs,"
 " this database also contains your spatial bookmarks and other custom data."
 msgstr ""
-"Wenn QGIS nicht das Koordinatenbezugssystem das Sie brauchen zur Verfügung "
-"stellt können Sie ein Benutzerdefiniertes Koordinatensystem definieren. Um "
-"ein KBS zu definieren wählen Sie |customProjection| "
-":guilabel:`Benutzerkoordinatenbezugssystem ...` aus dem Menü "
-":menuselection:`Einstellungen`. Benutzerkoordinatenbezugssysteme werden in "
-"Ihrer QGIS Benutzerdatenbank gespeichert. Zusätzlich zu Ihrem "
-"Benutzerkoordinatensystem enthält diese Datenbank auch Ihre Räumlichen "
-"Lesezeichen und andere Benutzerdaten."
+"Wenn QGIS das benötigte Koordinatenbezugssystem nicht bereitstellt, können "
+"Sie ein eigenes KBS definieren. Um ein KBS zu definieren, wählen Sie aus dem"
+" Menü :menuselection:`Einstellungen` |den den Punkt customProjection| "
+":guilabel:`Benutzerprojektionen...` aus. Benutzerdefinierte KBS werden in "
+"Ihrer QGIS Benutzerdatenbank gespeichert. Zusätzlich zu Ihren "
+"benutzerdefinierten KBS enthält diese Datenbank auch Ihre räumlichen "
+"Lesezeichen und andere benutzerdefinierte Daten."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:435
 msgid "customProjection"
 msgstr "customProjection"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:269
+msgid ""
+"Defining a custom CRS in QGIS requires a good understanding of the PROJ "
+"projection library. To begin, refer to \"Cartographic Projection Procedures "
+"for the UNIX Environment - A User's Manual\" by Gerald I. Evenden, U.S. "
+"Geological Survey Open-File Report 90-284, 1990 (available at "
+"https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
+msgstr ""
+"Die Definition eines benutzerdefinierten KBS in QGIS erfordert ein gutes "
+"Verständnis der PROJ-Projektionsbibliothek. Für die Grundlagen, können Sie "
+"\"Cartographic Projection Procedures for the UNIX Environment - A User's "
+"Manual\" von Gerald I. Evenden, U.S. Geological Survey Open-File Report "
+"90-284, 1990 lesen (verfügbar unter "
+"https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:275
+msgid ""
+"This manual describes the use of ``proj`` and related command line "
+"utilities. The cartographic parameters used with ``proj`` are described in "
+"the user manual and are the same as those used by QGIS."
+msgstr ""
+"Dieses Handbuch beschreibt die Verwendung von ``proj`` und verwandten "
+"Kommandozeilenprogrammen. Die kartographischen Parameter, die mit ``proj`` "
+"verwendet werden, werden im Benutzerhandbuch beschrieben und sind die "
+"gleichen, die auch von QGIS verwendet werden."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:279
 msgid ""
 "The :guilabel:`Custom Coordinate Reference System Definition` dialog "
 "requires only two parameters to define a user CRS:"
 msgstr ""
-"Der Dialog :guilabel:`Definition eines Benutzerkoordinatensystems` braucht "
-"nur zwei Einträge, um eine eigene Projektion zu definieren:"
+"Der :guilabel:`Definition`-Dialog für ein benutzerdefiniertes KBS benötigt "
+"zunächst zwei Angaben, um eine eigene Projektion anlegen zu können:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:282
 msgid "A descriptive name"
-msgstr "Ein beschreibender Name"
+msgstr "einen Name,"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:283
+msgid "The cartographic parameters in PROJ or WKT format"
+msgstr ""
+"die Auswahl des Formats, in dem die kartografischen Parameter gespeichert "
+"werden sollen (PROJ- oder WKT-Format)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:285
+msgid "To create a new CRS:"
+msgstr "Um eine neues KBS anzulegen müssen Sie:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
+msgid "Click the |symbologyAdd| :sup:`Add new CRS` button"
+msgstr ""
+"auf die Schaltfläche |symbologyAdd| :sup:`Neues KBS hinzufügen` klicken;"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:447
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:288
+msgid "Enter a descriptive name"
+msgstr "einen Namen eingeben;"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:289
+msgid ""
+"Select the format: it can be :guilabel:`Proj String` or :guilabel:`WKT`"
+msgstr ""
+"ein Format auswählen, welches :guilabel:`Proj Zeichenkette` or "
+":guilabel:`WKT` sein kann;"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:290
+msgid "Add the CRS :guilabel:`Parameters`."
+msgstr "die :guilabel:`Parameter` eingeben."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:292
+msgid "**Prefer storing the CRS definition in WKT format**"
+msgstr "**Speichern Sie die KBS-Definition im WKT-Format**"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:294
+msgid ""
+"Although both ``Proj String`` and ``WKT`` formats are supported, it's highly"
+" recommended to store projection definitions in the WKT format. Therefore, "
+"if the available definition is in the proj format, select that format, enter"
+" the parameters and then switch to WKT format. QGIS will convert the "
+"definition to the WKT format that you can later save."
+msgstr ""
+"Obwohl beide Formate, ``Proj String`` und ``WKT``, unterstützt werden, ist "
+"es dringend empfohlen, Projektionsdefinitionen im WKT-Format zu speichern. "
+"Wenn Ihnen die Definitionen im proj Format vorliegt, können Sie dieses "
+"Format auswählen, die Parameter eingeben und dann zum WKT Format wechseln. "
+"QGIS wird die Definition automatisch in das WKT-Format konvertieren, das Sie"
+" dann speichern können."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:300
+msgid ""
+"Click :guilabel:`Validate` to test whether the CRS definition is an "
+"acceptable projection definition."
+msgstr ""
+"Klicken Sie auf :guilabel:`Validieren`, um zu prüfen, ob Ihre Angaben einer "
+"gültigen Projektionsdefinition entsprechen."
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:308
 msgid "Custom CRS Dialog"
 msgstr "Der Benutzerkoordinatensystem Dialog"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:311
+msgid ""
+"You can test your CRS parameters to see if they give sane results. To do "
+"this, enter known WGS 84 latitude and longitude values in :guilabel:`North` "
+"and :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, "
+"and compare the results with the known values in your coordinate reference "
+"system."
+msgstr ""
+"Wenn Sie eine bekannte Zuordnung von WGS 84 zu ihrem Koordinatensystem "
+"haben, können Sie Ihre KBS Angaben testen, um zu sehen, ob sie korrekte "
+"Ergebnisse liefern. Geben Sie dazu WGS 84-Breiten- und Längenwerte in die "
+"Felder :guilabel:`Breitengrad` bzw. :guilabel:`Längengrad` ein. Klicken Sie "
+"auf :guilabel:`Berechnen` und vergleichen Sie das Ergebnis mit den bekannten"
+" Werten in Ihrem Koordinatenbezugssystem."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:317
+msgid "Integrate an NTv2-transformation in QGIS"
+msgstr "Einbinden einer NTv2-Transformation in QGIS"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:319
+msgid ""
+"To integrate an NTv2 transformation file in QGIS you need one more step:"
+msgstr ""
+"Um eine NTv2-Transformationsdatei in QGIS zu integrieren, ist ein weiterer "
+"Schritt notwendig:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:321
+msgid ""
+"Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
+":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
+msgstr ""
+"Legen Sie die NTv2-Datei (.gsb) in den KBS/Proj-Ordner, den QGIS verwendet "
+"(z. B. :file:`C:\\\\OSGeo4W64\\share\\\\proj` für Windows-Benutzer);"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:323
+msgid ""
+"Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition in"
+" the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate "
+"Reference System Definition` (:menuselection:`Settings --> Custom "
+"Projections...`)."
+msgstr ""
+"Fügen Sie **nadgrids** (``+nadgrids=NamederDatei.gsb``) zur Proj-Definition "
+"im Feld :guilabel:`Parameter` hinzu."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:332
+msgid "Setting an NTv2 transformation"
+msgstr "Hinzufügen einer NTv2-Transformation"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:339
+msgid "Datum Transformations"
+msgstr "Datumstransformationen"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:341
+msgid ""
+"In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that"
+" whenever you use layers with different coordinate systems QGIS "
+"transparently reprojects them to the project CRS. For some CRS, there are a "
+"number of possible transforms available to reproject to the project's CRS!"
+msgstr ""
+"In QGIS ist die \"on-the-fly\" KBS-Transformation standardmäßig aktiviert, "
+"d.h. wann immer Sie Layer mit unterschiedlichen Koordinatensystemen "
+"verwenden, projiziert QGIS diese automatisch auf das Projekt-KBS. Für einige"
+" KBS gibt es eine Reihe von verschiedenen Transformationen, die für die "
+"Reprojektion in das Projekt-KBS zur Verfügung stehen."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:346
+msgid ""
+"By default, QGIS will attempt to use the most accurate transformation "
+"available. However, in some cases this may not be possible, e.g. whenever "
+"additional support files are required to use a transformation. Whenever a "
+"more accurate transformation is available, but is not currently usable, QGIS"
+" will show an informative warning message advising you of the more accurate "
+"transformation and how to enable it on your system. Usually, this requires "
+"download of an external package of transformation support files, and "
+"extracting these to the :file:`proj` folder under your QGIS :ref:`user "
+"profile <user_profiles>` folder."
+msgstr ""
+"Standardmäßig wird QGIS versuchen, die genaueste verfügbare Transformation "
+"zu verwenden. In einigen Fällen kann dies jedoch nicht möglich sein, z.B. "
+"wenn zusätzliche Unterstützungsdateien für die Verwendung einer "
+"Transformation erforderlich sind. Wenn eine genauere Transformation zur "
+"Verfügung steht, aber derzeit nicht verwendet werden kann, zeigt QGIS eine "
+"Warnmeldung an, die Sie auf die genauere Transformation hinweist und wie Sie"
+" diese auf Ihrem System aktivieren können. Normalerweise erfordert dies den "
+"Download eines externen Pakets von Transformations-Unterstützungsdateien und"
+" das Extrahieren dieser Dateien in den Ordner :file:`proj` unter Ihrem QGIS "
+"Ordner :ref:`Benutzerprofil <user_profiles>`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:356
+msgid ""
+"If desired, QGIS can also prompt you whenever multiple possible "
+"transformations can be made between two CRSs, and allow you to make an "
+"informed selection of which is the most appropriate transformation to use "
+"for your data."
+msgstr ""
+"Wenn gewünscht, kann QGIS Sie auch darauf hinweisen, wenn mehrere mögliche "
+"Transformationen zwischen zwei KBS möglich sind, und Ihnen die Möglichkeit "
+"geben, eine fundierte Auswahl zu treffen, welche Transformation für Ihre "
+"Daten am besten geeignet ist."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:360
+msgid ""
+"This customization is done in the :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> Transformations` tab menu under the "
+":guilabel:`Default datum transformations` group:"
+msgstr ""
+"Diese Anpassung erfolgt im Reiter :menuselection:`Einstellungen -->` "
+"|options| :menuselection:`Optionen --> Koordinatentransformationen`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:364
+msgid ""
+"using |checkbox| :guilabel:`Ask for datum transformation if several are "
+"available`: when more than one appropriate datum transformation exist for a "
+"source/destination CRS combination, a dialog will automatically be opened "
+"prompting users to choose which of these datum transformations to use for "
+"the project. If the :guilabel:`Make default` checkbox is ticked when "
+"selecting a transformation from this dialog, then the choice is remembered "
+"and automatically applied to any newly created QGIS projects."
+msgstr ""
+"Sie können |checkbox| :guilabel:`Datumstransformation erfragen, wenn mehrere"
+" verfügbar` auswählen: wenn mehr als eine geeignete Datentransformation für "
+"eine KBS-Kombination vorhanden ist, wird automatisch ein Dialog geöffnet, "
+"der den Benutzer auffordert, die Datentransformation auszuwählen, die für "
+"das Projekt verwendet werden soll. Wenn das Kontrollkästchen :guilabel:`Als "
+"Voreinstellung übernehmen` bei der Auswahl einer Transformation aus diesem "
+"Dialog angekreuzt wird, dann wird die Auswahl gespeichert und automatisch "
+"auf alle neu erstellten QGIS-Projekte angewendet."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:371
+msgid ""
+"or defining a list of appropriate datum transformations to use as defaults "
+"when loading a layer to a project or reprojecting a layer."
+msgstr ""
+"Sie können eine Liste mit geeigneten Datentransformationen erstellen, die "
+"als Standardwerte beim Laden eines Layers in ein Projekt oder bei der "
+"Neuprojektion eines Layers verwendet werden:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:374
+msgid ""
+"Use the |symbologyAdd| button to open the :guilabel:`Select Datum "
+"Transformations` dialog. Then:"
+msgstr ""
+"Verwenden Sie die Schaltfläche |symbologyAdd|, um den Dialog "
+":guilabel:`Datumstransformation` zu öffnen. Dann:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:377
+msgid ""
+"Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu or "
+"the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"Wählen Sie das :guilabel:`Quell-KBS` des Layers mithilfe des Dropdown-Menüs "
+"oder der |setProjection| :sup:`KBS wählen` Schaltfläche."
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:445
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
+msgid "Provide the :guilabel:`Destination CRS` in the same way."
+msgstr "Geben Sie das :guilabel:`Ziel-KBS` auf die gleiche Weise an."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:380
+msgid ""
+"A list of available transformations from source to destination will be shown"
+" in the table. Clicking a row shows details on the settings applied and the "
+"corresponding accuracy and area of use of the transformation."
+msgstr ""
+"Eine Liste der verfügbaren Transformationen von der Quelle zum Ziel wird in "
+"der Tabelle angezeigt. Wenn Sie auf eine Zeile klicken, werden Details zu "
+"den verwendeten Einstellungen sowie die entsprechende Genauigkeit und der "
+"Anwendungsbereich der Transformation angezeigt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:390
+msgid "Selecting a preferred default datum transformation"
+msgstr "Auswahl einer bevorzugten Standard-Datentransformation"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:392
+msgid ""
+"In some cases a transformation may not be available for use on your system. "
+"In this case, the transformation will still be shown (greyed) in this list "
+"but can not be picked until you install the required package of "
+"transformation support. Usually, a button is provided to download and "
+"install the corresponding grid, which is then stored under the :file:`proj` "
+"folder in the active :ref:`user profile <user_profiles>` directory."
+msgstr ""
+"In einigen Fällen kann es vorkommen, dass eine Transformation auf Ihrem "
+"System nicht zur Verfügung steht. In diesem Fall wird die Transformation "
+"zwar in dieser Liste angezeigt (grau), kann aber nicht ausgewählt werden, "
+"bis Sie das erforderliche Paket zur Unterstützung der Transformation "
+"installiert haben. Normalerweise gibt es eine Schaltfläche zum Herunterladen"
+" und Installieren des entsprechenden Pakets, das dann unter dem Ordner "
+":file:`proj` im aktiven Verzeichnis :ref:`Benutzerprofil <user_profiles>` "
+"gespeichert wird."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:399
+msgid "Find your preferred transformation and select it"
+msgstr "Suchen Sie die gewünschte Transformation und wählen Sie sie aus."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:400
+msgid ""
+"Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred"
+" operation fails`"
+msgstr ""
+"Sie können die Option |checkbox| :guilabel:`Rückgriffstransformation "
+"erlauben, wenn bevorzugte Operation scheitert` festlegen."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:402
+msgid "Click :guilabel:`OK`."
+msgstr "Klicken Sie :guilabel:`OK`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:404
+msgid ""
+"A row is added to the table under :guilabel:`Default Datum Transformations` "
+"with information about the :guilabel:`Source CRS`, the "
+":guilabel:`Destination CRS`, the :guilabel:`Operation` applied for the "
+"transformation and whether :guilabel:`Allow fallback Transforms` is enabled."
+msgstr ""
+"Der Tabelle wird unter :guilabel:`Datumtransformationsvorgabe` eine Zeile "
+"mit Informationen über das :guilabel:`Quell-KBS`, das :guilabel:`Ziel-KBS`, "
+"die :guilabel:`Operation`, die für die Transformation angewendet wird, und "
+"ob :guilabel:`Rückgriffstransformation erlaubt` aktiviert ist, hinzugefügt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+msgid ""
+"From now, QGIS automatically uses the selected datum transformations for "
+"further transformation between these two CRSs until you remove it "
+"(|symbologyRemove|) from the list or change the entry (|toggleEditing|) in "
+"the list."
+msgstr ""
+"Von nun an verwendet QGIS automatisch die ausgewählten Datentransformationen"
+" für weitere Transformationen zwischen diesen beiden KBS, bis Sie diese aus "
+"der Liste entfernen (|symbologyRemove|) oder den Eintrag in der Liste ändern"
+" (|toggleEditing|)."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:449
 msgid "symbologyRemove"
@@ -180,3 +975,22 @@ msgstr "symbologyRemove"
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:451
 msgid "toggleEditing"
 msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:414
+msgid ""
+"Datum transformations set in the :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> Transformations` tab will be inherited by all "
+"new QGIS projects created on the system. Additionally, a particular project "
+"may have its own specific set of transformations specified via the "
+":guilabel:`CRS` tab of the :guilabel:`Project properties` dialog "
+"(:menuselection:`Project --> Properties...`). These settings apply to the "
+"current project only."
+msgstr ""
+"Datumstransformationen, die im Reiter :menuselection:`Einstellungen -->` "
+"|Optionen| :menuselection:`Optionen --> Koordinatentransformationen` "
+"eingestellt werden, werden an alle neuen QGIS-Projekte weitergegeben, die "
+"auf dem System erstellt werden. Zusätzlich kann in einem bestimmten Projekt "
+"über den Reiter :guilabel:`Transformationen` des Dialogs "
+":guilabel:`Projekteigenschaften` (:menuselection:`Projekt --> "
+"Eigenschaften...`) ein eigener Satz von Transformationen festlegen werden. "
+"Diese Einstellungen gelten nur für das jeweilige Projekt."
