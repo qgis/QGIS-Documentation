@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -296,6 +296,26 @@ msgstr ""
 #: ../../docs/user_manual/style_library/label_settings.rst:138
 msgid "Font properties (font family, font size, bold and italic)"
 msgstr "글꼴 속성 (글꼴 계열, 글꼴 크기, 굵은 글꼴 및 기울임 글꼴)"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:139
+msgid ""
+"Superscript and subscript components in text, where the text will be "
+"vertically :sup:`super` or :sub:`sub` aligned and automatically sized to 2/3"
+" of the parent font size. You can also set a fixed font size for the "
+"superscript/subscript by including css rules, e.g.:"
+msgstr ""
+"위 첨자(superscript)와 아래 첨자(subscript) 텍스트는 수직으로 :sup:`위` 또는 :sub:`아래` 정렬되며 "
+"자동적으로 상위 글꼴 크기의 2/3 크기로 조정됩니다. CSS(Cascading Style Sheets)에 예를 들어 다음과 같은 규칙을"
+" 추가하면 위 첨자/아래 첨자의 고정 글꼴 크기를 설정할 수도 있습니다:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:149
+msgid ""
+"The CSS formatting rules ``vertical-align: super`` or ``vertical-align: "
+"sub`` are also available in any other HTML element (annotation, layout label"
+" or HTML items, ...)."
+msgstr ""
+"CSS 서식 규칙 ``vertical-align: super`` 또는 ``vertical-align: sub`` 는 다른 모든 HTML "
+"요소(주석, 조판 라벨, 또는 HTML 항목 등등)에도 사용할 수 있습니다."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:152
 msgid ""
@@ -853,6 +873,26 @@ msgstr "앞에서 설명한 텍스트 서식 설정 이외에도, 라벨이 다�
 #: ../../docs/user_manual/style_library/label_settings.rst:421
 msgid "Mask tab"
 msgstr "마스크 탭"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:423
+msgid ""
+"The |labelmask| :guilabel:`Mask` tab allows you to define a mask area around"
+" the labels. This feature is very useful when you have overlapping symbols "
+"and labels with similar colors, and you want to make the labels visible. A "
+"label mask prevents specified features from drawing within the boundary set "
+"for the mask. For example, you could set a label mask so that a specified "
+"layer does not draw within 2mm of the label, but allow features from another"
+" layer to still show. Label masks are similar to label buffers in that they "
+"allow control of the legibility of labels that cover other features. The "
+"label buffer draws on top of any underlying features, while the label mask "
+"selectively stops other layers from drawing."
+msgstr ""
+"|labelmask| :guilabel:`Mask` 탭에서 라벨 주변에 마스크 영역을 정의할 수 있습니다. 심볼들이 중첩하는데 라벨들이 "
+"비슷한 색상이기 때문에 라벨들이 잘 보이도록 하고 싶을 때 매우 유용한 기능입니다. 라벨 마스크는 마스크에 설정된 경계 안쪽에 지정한 "
+"피처를 그리지 않도록 막습니다. 예를 들면, 라벨의 2mm 안쪽에 지정한 레이어를 그리지 않지만 또다른 레이어의 피처는 보이도록 라벨 "
+"마스크를 설정할 수 있습니다. 라벨 마스크는 다른 피처를 덮고 있는 라벨의 가독성을 제어할 수 있게 해준다는 점에서 라벨 버퍼와 "
+"비슷합니다. 둘 사이의 차이점은 라벨 버퍼는 아래에 있는 모든 피처들 위에 생성되지만, 라벨 마스크는 다른 레이어들이 그려지지 않도록 "
+"선택할 수 있다는 점입니다."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:972
 msgid "labelmask"
