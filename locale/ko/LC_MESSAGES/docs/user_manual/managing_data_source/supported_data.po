@@ -99,7 +99,7 @@ msgid ""
 "to work with these specifics."
 msgstr ""
 "벡터 데이터소스와 상관없이, QGIS에서 사용할 수 있는 많은 기능과 도구들은 동일하게 작동합니다. 하지만 GeoPackage, ESRI"
-" Shapefile, MapInfo 및 MicroStation 파일 포맷, AutoCAD DXF, PostGIS, SpatiaLite, "
+" 셰이프파일, MapInfo 및 MicroStation 파일 포맷, AutoCAD DXF, PostGIS, SpatiaLite, "
 "Oracle Spatial, MS SQL 서버, SAP HANA 공간 데이터베이스, 그 외에도 수많은 포맷들의 사양 차이 때문에 "
 "QGIS가 포맷들의 일부 속성들을 서로 다르게 처리할 수도 있습니다. `GDAL 벡터 드라이버 "
 "<https://gdal.org/drivers/vector/index.html>`_ 가 지원을 제공합니다. 이 단락에서는 이런 사양들을 "
@@ -173,7 +173,7 @@ msgstr "GeoPackage는 QGIS의 벡터 데이터용 기본 포맷입니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:98
 msgid "ESRI Shapefile format"
-msgstr "ESRI Shapefile 포맷"
+msgstr "ESRI 셰이프파일 포맷"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:99
 msgid ""
@@ -181,14 +181,14 @@ msgid ""
 " even if it has some limitations compared to for instance GeoPackage and "
 "SpatiaLite."
 msgstr ""
-"ESRI Shapefile 포맷은, 예를 들어 GeoPackage 및 SpatiaLite와 비교하면 몇몇 제한이 존재하더라도, 지금도 "
+"ESRI 셰이프파일 포맷은, 예를 들어 GeoPackage 및 SpatiaLite와 비교하면 몇몇 제한이 존재하더라도, 지금도 "
 "QGIS에서 가장 자주 이용되는 벡터 파일 포맷 가운데 하나입니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:103
 msgid ""
 "An ESRI Shapefile format dataset consists of several files. The following "
 "three are required:"
-msgstr "ESRI Shapefile 포맷 데이터셋은 파일 몇 개로 이루어져 있습니다. 다음은 필수적인 파일 3개입니다:"
+msgstr "ESRI 셰이프파일 포맷 데이터셋은 파일 몇 개로 이루어져 있습니다. 다음은 필수적인 파일 3개입니다:"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:106
 msgid ":file:`.shp` file containing the feature geometries"
@@ -211,9 +211,9 @@ msgid ""
 "specification <https://www.esri.com/content/dam/esrisites/sitecore-"
 "archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>`_."
 msgstr ""
-"ESRI Shapefile 포맷 데이터셋은 :file:`.prj` 확장자를 쓰는 파일도 포함할 수 있는데, 이 파일은 투영체 정보를 담고"
-" 있습니다. 투영체 파일이 있다면 매우 유용하지만, 필수적인 파일은 아닙니다. Shapefile 포맷 데이터셋은 추가 파일들을 포함할 "
-"수도 있습니다. 더 자세한 내용은 `ESRI 기술 사양 문서 "
+"ESRI 셰이프파일 포맷 데이터셋은 :file:`.prj` 확장자를 쓰는 파일도 포함할 수 있는데, 이 파일은 투영체 정보를 담고 "
+"있습니다. 투영체 파일이 있다면 매우 유용하지만, 필수적인 파일은 아닙니다. 셰이프파일 포맷 데이터셋은 추가 파일들을 포함할 수도 "
+"있습니다. 더 자세한 내용은 `ESRI 기술 사양 문서 "
 "<https://www.esri.com/content/dam/esrisites/sitecore-"
 "archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>`_ 를 참조하세요."
 
@@ -221,12 +221,11 @@ msgstr ""
 msgid ""
 "GDAL has read-write support for compressed ESRI Shapefile format "
 "(:file:`shz` and :file:`shp.zip`)."
-msgstr ""
-"GDAL은 압축 ESRI Shapefile 포맷(:file:`shz` 및 :file:`shp.zip`) 읽고 쓰기를 지원합니다."
+msgstr "GDAL은 압축 ESRI 셰이프파일 포맷(:file:`shz` 및 :file:`shp.zip`) 읽고 쓰기를 지원합니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:121
 msgid "**Improving Performance for ESRI Shapefile format datasets**"
-msgstr "**ESRI Shapefile 포맷 데이터셋 성능 향상**"
+msgstr "**ESRI 셰이프파일 포맷 데이터셋 성능 향상**"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:123
 msgid ""
@@ -235,8 +234,8 @@ msgid ""
 "zooming and panning. Spatial indexes used by QGIS have a :file:`.qix` "
 "extension."
 msgstr ""
-"ESRI Shapefile 포맷 데이터셋 렌더링 성능을 향상시키려면, 공간 인덱스를 생성하면 됩니다. 공간 인덱스가 있다면 확대/축소 및"
-" 이동 속도도 향상됩니다. QGIS가 이용하는 공간 인덱스 파일의 확장자는 :file:`.qix` 입니다. "
+"ESRI 셰이프파일 포맷 데이터셋 렌더링 성능을 향상시키려면, 공간 인덱스를 생성하면 됩니다. 공간 인덱스가 있다면 확대/축소 및 이동 "
+"속도도 향상됩니다. QGIS가 이용하는 공간 인덱스 파일의 확장자는 :file:`.qix` 입니다. "
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:128
 msgid "Use these steps to create the index:"
@@ -244,7 +243,7 @@ msgstr "다음 단계를 통해 인덱스를 생성하십시오:"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:130
 msgid "Load an ESRI Shapefile format dataset (see :ref:`browser_panel`)"
-msgstr "ESRI Shapefile 포맷 데이터셋을 불러옵니다. (:ref:`browser_panel` 참조)"
+msgstr "ESRI 셰이프파일 포맷 데이터셋을 불러옵니다. (:ref:`browser_panel` 참조)"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:131
 msgid ""
@@ -275,11 +274,10 @@ msgid ""
 ":file:`.prj` files often do not provide the complete projection parameters "
 "as used in QGIS and listed in the :guilabel:`CRS` dialog."
 msgstr ""
-":file:`.prj` 파일을 보유한 ESRI Shapefile 포맷 데이터셋을 불러올 때 QGIS가 해당 파일에서 좌표계를 읽어들일 수"
-" 없는 경우, 해당 레이어의 :menuselection:`Layer Properties --> Source` 탭에서 "
-"|setProjection| :sup:`Select CRS` 버튼을 클릭한 다음 적절한 투영체를 직접 정의해줘야 합니다. "
-":file:`.prj` 파일이 QGIS에서 사용되는, :guilabel:`CRS` 대화창 목록에 있는 완전한 투영체 파라미터를 제공하지 "
-"못 하는 경우가 많기 때문입니다."
+":file:`.prj` 파일을 보유한 ESRI 셰이프파일 포맷 데이터셋을 불러올 때 QGIS가 해당 파일에서 좌표계를 읽어들일 수 없는 "
+"경우, 해당 레이어의 :menuselection:`Layer Properties --> Source` 탭에서 |setProjection|"
+" :sup:`Select CRS` 버튼을 클릭한 다음 적절한 투영체를 직접 정의해줘야 합니다. :file:`.prj` 파일이 QGIS에서"
+" 사용되는, :guilabel:`CRS` 대화창 목록에 있는 완전한 투영체 파라미터를 제공하지 못 하는 경우가 많기 때문입니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:720
 msgid "setProjection"
@@ -293,9 +291,9 @@ msgid ""
 ":file:`.qpj` file, providing all the parameters of the CRS. Whenever QGIS "
 "finds a :file:`.qpj` file, it will be used instead of the :file:`.prj`."
 msgstr ""
-"같은 이유로, QGIS에서 새 ESRI Shapefile 포맷 데이터셋을 생성할 때, ESRI 소프트웨어와 호환되는 제한적인 투영체 "
-"파라미터를 담고 있는 :file:`.prj` 파일과, 사용 좌표계의 완전한 파라미터를 제공하는 :file:`.qpj` 파일, 2개의 서로"
-" 다른 투영체 파일을 생성합니다. :file:`.qpj` 파일이 존재하는 경우, QGIS는 :file:`.prj` 파일 대신 "
+"같은 이유로, QGIS에서 새 ESRI 셰이프파일 포맷 데이터셋을 생성할 때, ESRI 소프트웨어와 호환되는 제한적인 투영체 파라미터를 "
+"담고 있는 :file:`.prj` 파일과, 사용 좌표계의 완전한 파라미터를 제공하는 :file:`.qpj` 파일, 2개의 서로 다른 "
+"투영체 파일을 생성합니다. :file:`.qpj` 파일이 존재하는 경우, QGIS는 :file:`.prj` 파일 대신 "
 ":file:`.qpj` 파일을 이용할 것입니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:161
@@ -359,7 +357,7 @@ msgid ""
 "The elevation point data file :file:`elevp.csv` in the QGIS sample dataset "
 "(see section :ref:`label_sampledata`) is an example of a valid text file:"
 msgstr ""
-"유효한 텍스트 파일의 예로, QGIS 예시 데이터셋(:ref:`label_sampledata` 참조)에 들어 있는 다음 "
+"무결한 텍스트 파일의 예로, QGIS 예시 데이터셋(:ref:`label_sampledata` 참조)에 들어 있는 다음 "
 ":file:`elevp.csv` 표고 포인트 데이터 파일을 불러들이겠습니다:"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:201
@@ -823,9 +821,9 @@ msgid ""
 "import a Shapefile format dataset named :file:`lakes.shp` into a PostgreSQL "
 "database named ``gis_data``, use the following command::"
 msgstr ""
-"PostGIS는 PostGIS 호환 데이터베이스로 Shapefile 포맷 데이터셋을 불러올 수 있는 **shp2pgsql** 이라는 "
-"기능을 포함하고 있습니다. 예를 들어, ``gis_data`` 라는 PostgreSQL 데이터베이스로 :file:`lakes.shp` "
-"이라는 Shapefile 포맷 데이터셋을 가져오려면, 다음 명령어를 사용하십시오::"
+"PostGIS는 PostGIS 호환 데이터베이스로 셰이프파일 포맷 데이터셋을 불러올 수 있는 **shp2pgsql** 이라는 기능을 "
+"포함하고 있습니다. 예를 들어, ``gis_data`` 라는 PostgreSQL 데이터베이스로 :file:`lakes.shp` 이라는 "
+"셰이프파일 포맷 데이터셋을 가져오려면, 다음 명령어를 사용하십시오::"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:426
 msgid ""
@@ -847,8 +845,8 @@ msgid ""
 "There is also a tool for exporting PostGIS datasets to Shapefile format: "
 "**pgsql2shp**. It is shipped within your PostGIS distribution."
 msgstr ""
-"PostGIS 데이터베이스를 Shapefile 포맷 데이터셋으로 내보내는 도구인 **pgsql2shp** 도 있습니다. 이 도구도 "
-"PostGIS 배포판에 내장돼 있습니다."
+"PostGIS 데이터베이스를 셰이프파일 포맷 데이터셋으로 내보내는 도구인 **pgsql2shp** 도 있습니다. 이 도구도 PostGIS"
+" 배포판에 내장돼 있습니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:445
 msgid "ogr2ogr"
@@ -865,7 +863,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:451
 msgid "To import a Shapefile format dataset into PostGIS, do the following::"
-msgstr "PostGIS로 Shapefile 포맷 데이터셋을 가져오려면, 다음 명령어를 입력하십시오::"
+msgstr "PostGIS로 셰이프파일 포맷 데이터셋을 가져오려면, 다음 명령어를 입력하십시오::"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:456
 msgid ""
@@ -873,7 +871,7 @@ msgid ""
 "PostGIS database *postgis* using the user *postgres* with the password "
 "*topsecret* on the host server *myhost.de*."
 msgstr ""
-"이 명령어는 호스트 서버 *myhost.de* 에 있는 PostGIS 데이터베이스 *postgis* 로 Shapefile 포맷 데이터셋 "
+"이 명령어는 호스트 서버 *myhost.de* 에 있는 PostGIS 데이터베이스 *postgis* 로 셰이프파일 포맷 데이터셋 "
 ":file:`alaska.shp` 를 사용자 *postgre* 와 비밀번호 *topsecret* 을 이용해서 불러올 것입니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:460
@@ -908,8 +906,8 @@ msgid ""
 "afterwards, as an extra step (as described in the next section "
 ":ref:`vector_improving_performance`)."
 msgstr ""
-"**ogr2ogr** 도구는 **shp2pgsl** 처럼 공간 인덱스를 생성하지 않습니다. Shapefile 포맷 데이터셋을 불러온 후에"
-" (다음 :ref:`vector_improving_performance` 에서 설명하는 대로) 추가 단계로 일반적인 SQL 명령어 "
+"**ogr2ogr** 도구는 **shp2pgsl** 처럼 공간 인덱스를 생성하지 않습니다. 셰이프파일 포맷 데이터셋을 불러온 후에 (다음"
+" :ref:`vector_improving_performance` 에서 설명하는 대로) 추가 단계로 일반적인 SQL 명령어 "
 "**CREATE INDEX** 를 이용해서 직접 생성해야 합니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:482
