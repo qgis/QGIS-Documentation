@@ -426,6 +426,25 @@ msgstr ""
 msgid "pencil"
 msgstr "pencil"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:111
+msgid ""
+"When entering GCPs from the main map canvas, you have the option to hide the"
+" georeferencer window while selecting points from the main canvas. If the "
+"|checkbox| :guilabel:`Automatically hide georeferencer window` checkbox is "
+"ticked, after clicking |pencil| :guilabel:`From Map Canvas`, the main "
+"georeferencer window will be hidden until a point is added on the map "
+"canvas. The :guilabel:`Enter Map Coordinates` dialog will remain open. If "
+"the box is unchecked, both windows will remain open while selecting a point "
+"on the map canvas. This option only takes effect when the georeferencer "
+"window is not docked in the main interface."
+msgstr ""
+"주 맵 캔버스에서 GCP를 입력할 때, 주 캔버스에서 포인트를 선택하는 동안 지리참조자 창을 숨길 수 있는 옵션이 있습니다. "
+"|pencil| :guilabel:`From Map Canvas` 도구를 클릭한 다음 |checkbox| "
+":guilabel:`Automatically hide georeferencer window` 옵션을 체크하면, 맵 캔버스 상에 포인트를 "
+"추가할 때까지 지리참조자 창을 숨길 것입니다. :guilabel:`Enter Map Coordinates` 대화창은 열린 채로 "
+"유지됩니다. 이 옵션을 체크 해제하면, 맵 캔버스 상에서 포인트를 선택하는 동안 두 창 모두 열려 있을 것입니다. 이 옵션은 지리참조자 "
+"창이 메인 인터페이스에 도킹되어 있는 경우 아무 영향도 미치지 않습니다."
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:302
 msgid "checkbox"
 msgstr "checkbox"
@@ -642,6 +661,22 @@ msgstr "다음 다섯 가지 리샘플링 메소드 가운데 하나를 선택�
 msgid "Nearest neighbour"
 msgstr "최근접 이웃(Nearest neighbour)"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:219
+msgid "Bilinear (2x2 kernel)"
+msgstr "쌍선형 (2x2 커널)"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:220
+msgid "Cubic (4x4 kernel)"
+msgstr "3차 (4x4 커널)"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:221
+msgid "Cubic B-Spline (4x4 kernel)"
+msgstr "3차 B-스플라인 (4x4 커널)"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:222
+msgid "Lanczos (6x6 kernel)"
+msgstr "란초시 (6x6 커널)"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:225
 msgid "Define the transformation settings"
 msgstr "변형 설정 정의"
@@ -673,6 +708,15 @@ msgstr ""
 "다른 모든 변형 유형의 경우, :guilabel:`Output raster` 를 정의해야 합니다. 기본적으로, 원본 래스터 이미지와 "
 "동일한 폴더에 ``[파일명]_modified`` 라는 새 파일을 생성할 것입니다."
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:238
+msgid ""
+"As a next step, you have to define the :guilabel:`Target CRS` (Coordinate "
+"Reference System) for the georeferenced raster (see "
+":ref:`label_projections`)."
+msgstr ""
+"그 다음 단계로, 지리참조된 래스터를 위한 :guilabel:`Target CRS` (좌표계)를 정의해야 합니다. "
+"(:ref:`label_projections` 을 참조하세요.)"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:240
 msgid ""
 "If you like, you can **generate a pdf map** and also **a pdf report**. The "
@@ -701,6 +745,23 @@ msgstr ""
 "0 값을 가진 픽셀을 투명하게 가시화해야 하는 경우, |checkbox| :guilabel:`Use 0 for transparency "
 "when needed` 옵션을 활성화하면 됩니다. 예시 지형도의 모든 하얀색 영역이 투명하게 변할 것입니다."
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:249
+msgid ""
+"The |checkbox| :guilabel:`Save GCP Points` will store GCP Points in a file "
+"next to the output raster."
+msgstr ""
+"|checkbox| :guilabel:`Save GCP Points` 옵션을 체크하면 산출 래스터 옆에 GCP 포인트를 파일로 저장할 "
+"것입니다."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:251
+msgid ""
+"Finally, |checkbox| :guilabel:`Load in project when done` loads the output "
+"raster automatically into the QGIS map canvas when the transformation is "
+"done."
+msgstr ""
+"마지막으로, |checkbox| :guilabel:`Load in project when done` 옵션을 활성화하면 변형 작업 종료시 "
+"QGIS 맵 캔버스에 산출 래스터를 자동적으로 불러올 것입니다."
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:255
 msgid "Show and adapt raster properties"
 msgstr "래스터 속성 표시 및 조정"
@@ -718,6 +779,51 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:264
 msgid "Configure the georeferencer"
 msgstr "지리참조자 환경 설정"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:266
+msgid ""
+"You can customize the behavior of the georeferencer in "
+":menuselection:`Settings --> Configure Georeferencer` (or use keyboard "
+"shortcut :kbd:`Ctrl+P`)."
+msgstr ""
+":menuselection:`Settings --> Configure Georeferencer` 메뉴에서 (또는 :kbd:`Ctrl+P`"
+" 단축키로) 지리참조자의 습성을 사용자 정의할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:269
+msgid ""
+"Under :guilabel:`Point Tip` you can use the checkboxes to toggle displaying "
+"GCP IDs and X/Y coordinates in both the Georeferencer window and the main "
+"map canvas."
+msgstr ""
+":guilabel:`Point Tip`: 이 아래 있는 체크박스들을 사용해서 지리참조자 창과 주 맵 캔버스 양쪽에 GCP ID와 X/Y "
+"좌표를 켜고끌 수 있습니다."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:271
+msgid ""
+":guilabel:`Residual Units` controls whether residual units are given in "
+"pixels or map units"
+msgstr ""
+":guilabel:`Residual Units`: 나머지(residual) 단위를 픽셀 단위 또는 맵 단위로 지정할지 여부를 제어합니다."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:273
+msgid ""
+":guilabel:`PDF Report` allows you to set margin size in mm for the report "
+"export"
+msgstr ":guilabel:`PDF Report`: 보고서를 내보내기 위해 여백 크기를 밀리미터 단위로 설정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:274
+msgid ""
+":guilabel:`PDF Map` allows you to choose a paper size for the map export"
+msgstr ":guilabel:`PDF Map`: 맵을 내보내기 위한 용지 크기를 선택할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:275
+msgid ""
+"Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window"
+" docked`. This will dock the Georeferencer window in the main QGIS window "
+"rather than showing it as a separate window that can be minimized."
+msgstr ""
+"마지막으로, |checkbox| :guilabel:`Show Georeferencer window docked` 옵션을 활성화할 수 "
+"있습니다. 이 옵션을 체크하면 지리참조자 창을 최소화시킬 수 있는 개별 창이 아니라 QGIS 메인 창에 도킹시킬 것입니다."
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:283
 msgid "Running the transformation"
