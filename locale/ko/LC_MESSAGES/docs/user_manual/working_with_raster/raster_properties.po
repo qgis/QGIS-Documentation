@@ -38,6 +38,42 @@ msgstr ""
 msgid "Raster Properties Dialog"
 msgstr "래스터 속성 대화창"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:13
+msgid ""
+"Raster data is made up of pixels (or cells), and each pixel has a value. It "
+"is commonly used to store various types of data, including:"
+msgstr ""
+"래스터 데이터는 픽셀(또는 셀)로 이루어져 있으며, 픽셀 하나가 값 하나를 가지고 있습니다. 래스터 데이터는 다음을 포함하는 다양한 "
+"유형의 데이터를 저장하는 데 쓰입니다:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:16
+msgid ""
+"Imagery, such as satellite images, digital aerial photographs, scanned maps"
+msgstr "위성 영상, 수치(digital) 항공 사진, 스캔한 지도 같은 이미지(imagery)"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:17
+msgid ""
+"Elevation data, such as digital elevation models (DEMs), digital terrain "
+"models (DTMs)"
+msgstr ""
+"수치 표고 모델(DEM; Digital Elevation Model), 수치 지형 모델(DTM; Digital Terrain Model)"
+" 같은 표고 데이터"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:18
+msgid ""
+"Other types of data, such as land cover, soil types, rainfall and many "
+"others."
+msgstr "토지 피복(land cover), 토양 유형, 강우량 및 다른 많은 정보 같은 기타 데이터 유형들"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:20
+msgid ""
+"Raster data can be stored in several supported formats, including GeoTIFF, "
+"ERDAS Imagine, ArcInfo ASCII GRID, PostGIS Raster and others. See more at "
+":ref:`opening_data`."
+msgstr ""
+"래스터 데이터는 GeoTIFF, ERDAS Imagine, ArcInfo ASCII GRID, PostGIS Raster 및 기타 등등을"
+" 포함하는 여러 지원 포맷으로 저장할 수 있습니다. 더 자세한 내용은 :ref:`opening_data` 를 참조하세요."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:24
 msgid ""
 "To view and set the properties for a raster layer, double click on the layer"
@@ -140,6 +176,10 @@ msgstr "|legend| :ref:`범례 <raster_server>`"
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1039
 msgid "legend"
 msgstr "legend"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:44
+msgid "|display| :ref:`Display <raster_display>`"
+msgstr "|display| :ref:`표시 <raster_display>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1025
 msgid "display"
@@ -1171,6 +1211,19 @@ msgstr ""
 ":guilabel:`Resampling` 옵션의 효과는 사용자가 이미지를 확대/축소하는 경우 나타납니다. 리샘플링 모드로 맵의 모습을 "
 "최적화할 수 있습니다. 리샘플링 모드들은 기하학적 변형을 통해 새 회색조 값 매트릭스를 생성합니다."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:579
+msgid ""
+"When applying the 'Nearest neighbour' method, the map can get a pixelated "
+"structure when zooming in. This appearance can be improved by using the "
+"'Bilinear (2x2 kernel)' or 'Cubic (4x4 kernel)' method, which cause sharp "
+"edges to be blurred. The effect is a smoother image. This method can be "
+"applied to for instance digital topographic raster maps."
+msgstr ""
+"'최근접 이웃(Nearest neighbour)' 방법을 적용하면, 확대 시 맵의 픽셀이 두드러져 보일 수 있습니다. "
+"'이중선형(Bilinear) (2x2 커널)' 또는 '3차(Cubic) (4x4 커널)' 방법을 사용하면 이 모습을 향상시킬 수 있는데,"
+" 이 방법들은 뚜렷한 경계를 흐릿하게 만듭니다. 이 흐리기 효과로 더 평탄화된 이미지를 생성할 수 있습니다. 예를 들자면 래스터 "
+"수치지형도에 이 방법을 적용할 수 있습니다."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:586
 msgid ""
 "|checkbox| :guilabel:`Early resampling`: allows to calculate the raster "
@@ -1186,6 +1239,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:597
 msgid "Transparency Properties"
 msgstr "투명도 속성"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:599
+msgid ""
+"QGIS provides capabilities to set the |transparency| "
+":guilabel:`Transparency` level of a raster layer."
+msgstr ""
+"QGIS는 래스터 레이어의 |transparency| :guilabel:`Transparency` 투명도 수준을 설정할 수 있는 기능을 "
+"제공합니다."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:602
 msgid ""
@@ -1358,6 +1419,21 @@ msgstr "렌더링 속성"
 msgid "In the |rendering| :guilabel:`Rendering` tab, it's possible to:"
 msgstr "|rendering| :guilabel:`Rendering` 탭에서 다음 설정을 할 수 있습니다:"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:698
+msgid ""
+"set :guilabel:`Scale dependent visibility` for the layer: You can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales, "
+"defining a range of scales in which the layer will be visible. It will be "
+"hidden outside this range. The |mapIdentification| :sup:`Set to current "
+"canvas scale` button helps you use the current map canvas scale as a "
+"boundary. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"레이어의 :guilabel:`Scale dependent visibility` 설정: :guilabel:`Maximum "
+"(inclusive)` 및 :guilabel:`Minimum (exclusive)` 축척을 설정해서 피처가 보이게 될 축척 범위를 정의할"
+" 수 있습니다. 이 범위를 벗어나면, 피처를 숨깁니다. |mapIdentification| :sup:`Set to current "
+"canvas scale` 버튼을 클릭하면 현재 맵 캔버스의 축척을 가시성 범위의 경계 값으로 설정할 수 있습니다. 자세한 내용은 "
+":ref:`label_scaledepend` 을 참조하세요."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1041
 msgid "mapIdentification"
 msgstr "mapIdentification"
@@ -1370,6 +1446,16 @@ msgid ""
 msgstr ""
 ":guilabel:`Layers` 패널에서 레이어에 대한 축척 의존 가시성을 활성화시킬 수도 있습니다. 레이어를 오른쪽 클릭한 다음 "
 "컨텍스트 메뉴에서 :guilabel:`Set Layer Scale Visibility` 를 선택하십시오."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:712
+msgid ""
+"|checkbox| :guilabel:`Refresh layer at interval`: controls whether and how "
+"regular a layer can be refreshed. Available :guilabel:`Configuration` "
+"options are:"
+msgstr ""
+"|checkbox| :guilabel:`Refresh layer at interval`: 이 옵션은 레이어를 얼마나 정기적으로 새로고침할"
+" 수 있는지 그리고 새로고침할지 여부를 제어합니다. 사용할 수 있는 환경설정 :guilabel:`Configuration` 옵션들은 "
+"다음과 같습니다:"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:715
 msgid ""
@@ -1591,6 +1677,15 @@ msgstr ""
 msgid "unchecked"
 msgstr "unchecked"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:848
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls the rendering of the raster "
+"elevation data in the profile chart. The profile :guilabel:`Style` can be "
+"set as:"
+msgstr ""
+":guilabel:`Profile Chart Appearance`: 단면 도표에 있는 래스터 표고 데이터의 렌더링을 제어합니다. 단면 "
+":guilabel:`Style` 을 다음 가운데 하나로 설정할 수 있습니다:"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:852
 msgid ""
 "a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
@@ -1686,12 +1781,34 @@ msgstr "래스터 범례"
 msgid "Display Properties"
 msgstr "표시 속성"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:920
+msgid ""
+"The |display| :guilabel:`Display` tab helps you configure HTML map tips to "
+"use for pixels identification:"
+msgstr ""
+"|display| :guilabel:`Display` 탭에서 픽셀 식별에 사용되는 HTML 맵 도움말을 환경설정할 수 있습니다:"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:923
 msgid ""
 "|checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips "
 "for the layer"
 msgstr ""
 "|checkbox| :guilabel:`Enable Map Tips` 옵션이 레이어에 맵 도움말을 표시할지 말지를 제어합니다."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:924
+msgid ""
+"The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor "
+"for map tips, mixing QGIS expressions and html styles and tags (multiline, "
+"fonts, images, hyperlink, tables, ...). You can check the result of your "
+"code sample in the :guilabel:`Preview` frame."
+msgstr ""
+":guilabel:`HTML Map Tip`: 맵 도움말에 QGIS 표현식과 HTML 스타일 및 태그(여러줄, 글꼴, 이미지, "
+"하이퍼링크, 표 등등)를 함께 쓸 수 있는 완전한 HTML 텍스트 편집기를 제공합니다. :guilabel:`Preview` 프레임에서 "
+"사용자 코드의 결과물을 확인할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:933
+msgid "Map tips with raster layer"
+msgstr "래스터 레이어의 맵 도움말"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:936
 msgid "To display map tips:"
@@ -1717,6 +1834,20 @@ msgid ""
 msgstr ""
 "사용자가 대상으로 삼은 레이어가 활성화되어 있는지 그리고 |checkbox| :guilabel:`Enable Map Tips` 옵션이 "
 "체크되어 있는지 확인하십시오."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:942
+msgid ""
+"Move over a pixel, and the corresponding information will be displayed over."
+msgstr "마우스 커서를 픽셀 위로 가져가면, 해당 픽셀에 대응하는 정보가 표시될 것입니다."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:944
+msgid ""
+"Map tip is a cross-layer feature meaning that once activated, it stays on "
+"and applies to any map tip enabled layer in the project until it is toggled "
+"off."
+msgstr ""
+"맵 도움말은 크로스 레이어(cross-layer) 기능입니다. 다시 말해 한번 활성화시키면 다시 끌 때까지 계속 프로젝트에서 맵 도움말이"
+" 활성화된 레이어들에 모두 적용된다는 뜻입니다."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:952
 msgid "QGIS Server Properties"
@@ -1783,9 +1914,29 @@ msgstr ""
 msgid "QGIS Server in Raster Properties"
 msgstr "래스터 속성에서의 QGIS 서버"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:984
+msgid "Identify raster cells"
+msgstr "래스터 셀 식별하기"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:986
+msgid ""
+"The |identify| :ref:`identify features <identify>` tool allows you to get "
+"information about specific points in a raster layer."
+msgstr ""
+"|identify| :ref:`피처 식별 <identify>` 도구는 래스터 레이어에 있는 특정 포인트에 대한 정보를 볼 수 있게 "
+"해줍니다."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1037
 msgid "identify"
 msgstr "identify"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:989
+msgid "To use the |identify|:guilabel:`Identify features` tool:"
+msgstr "|identify|:guilabel:`Identify features` 도구를 사용하려면:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:991
+msgid "Select the raster layer in the Layers panel."
+msgstr "레이어 패널에서 래스터 레이어를 선택합니다."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:992
 msgid ""
@@ -1795,6 +1946,44 @@ msgstr ""
 "툴바에 있는 :guilabel:`Identify features` 도구를 클릭하거나, 또는 :kbd:`Ctrl+Shift+I` 단축키를 "
 "누릅니다."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:993
+msgid "Click on the point in the raster layer that you want to identify."
+msgstr "래스터 레이어에서 사용자가 식별하려는 포인트를 클릭합니다."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:995
+msgid ""
+"The Identify Results panel will open in its default ``Tree`` view and "
+"display information about the clicked point. Below the name of the raster "
+"layer, you have on the left the band(s) of the clicked pixel, and on the "
+"right their respective value. These values can also be rendered (from the "
+":guilabel:`View` menu located at the bottom of the panel) in:"
+msgstr ""
+"식별 결과 패널이 기본 ``Tree`` 뷰로 열려 클릭한 포인트에 대한 정보를 보여줄 것입니다. 래스터 레이어 이름 아래, 왼쪽에는 "
+"클릭한 픽셀의 밴드(들) 그리고 오른쪽에는 각각의 값을 볼 수 있습니다. (이 패널의 하단에 있는 :guilabel:`View` "
+"메뉴에서) 이 값들을 다음 뷰 가운데 하나로 보이게 할 수도 있습니다:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1001
+msgid ""
+"a ``Table`` view - organizes the information about the identified features "
+"and their values in a table."
+msgstr "``Table`` 뷰 - 표에 식별된 피처와 그 값에 대한 정보를 정리합니다."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1003
+msgid ""
+"a ``Graph`` view - organizes the information about the identified features "
+"and their values in a graph."
+msgstr "``Graph`` 뷰 - 그래프에 식별된 피처와 그 값에 대한 정보를 정리합니다."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1006
+msgid ""
+"Under the pixel attributes, you will find the :guilabel:`Derived` "
+"information, such as:"
+msgstr "픽셀 속성 아래에서 다음과 같은 :guilabel:`Derived` 파생 정보를 찾아볼 수 있습니다:"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1009
 msgid "``X`` and ``Y`` coordinate values of the point clicked"
 msgstr "클릭한 포인트의 ``X`` 및 ``Y`` 좌표값"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1010
+msgid "Column and row of the point clicked (pixel)"
+msgstr "클릭한 포인트(픽셀)의 열 및 행"
