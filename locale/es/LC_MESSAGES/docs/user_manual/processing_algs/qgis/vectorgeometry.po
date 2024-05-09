@@ -2531,6 +2531,16 @@ msgstr "[vector: poligonal]"
 msgid "Specify the output (bounding box) layer. One of:"
 msgstr "Especifique la capa de salida (cuadro delimitador). Uno de:"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:524
+msgid ""
+"Bounding boxes of input layer. Other than the input attributes, the output "
+"layer also contains following fields: ``width``, ``height``, ``area`` and "
+"``perimeter`` of the generated polygon."
+msgstr ""
+"Cuadros delimitadores de la capa de entrada. Además de los atributos de "
+"entrada, la capa de salida también contiene los siguientes campos: "
+"``width``, ``height``, ``area`` y ``perimeter`` del polígono generado."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:531
 msgid "**Algorithm ID**: ``native:boundingboxes``"
 msgstr "**Algoritmo ID**: ``native:boundingboxes``"
@@ -2889,6 +2899,20 @@ msgstr "**Mantener separados los objetos espaciales disjuntos**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2200
 msgid "``SEPARATE_DISJOINT``"
 msgstr "``SEPARATE_DISJOINT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:690
+msgid ""
+"If ``True`` (checked) and dissolved is checked, features that do not overlap"
+" or touch will be exported as separate features (instead of parts of a "
+"multipart feature)."
+msgstr ""
+"Si ``True`` (marcado) y disuelto está marcado, los objetos espaciales que no"
+" se solapen ni se toquen se exportarán como objetos espaciales separados (en"
+" lugar de como partes de un objeto espacial multiparte)."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:697
+msgid "Results in 2 single part features"
+msgstr "Resultados en 2 objetos espaciales de una sola pieza"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:713
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6348
@@ -3541,6 +3565,16 @@ msgstr ""
 msgid "**Algorithm ID**: ``native:collect``"
 msgstr "**Algoritmo ID**: ``native:collect``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1189
+msgid "Concave hull"
+msgstr "Casco cóncavo"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1190
+msgid "Computes the concave hull of the features from an input point layer."
+msgstr ""
+"Calcula el casco cóncavo de los objetos espaciales de una capa de puntos de "
+"entrada."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1195
 msgid "Concave hulls with different thresholds (0.3, 0.6, 0.9)"
 msgstr "Cascos cóncavos con diferentes umbrales (0.3, 0.6, 0.9)"
@@ -3621,6 +3655,10 @@ msgstr "**Casco Cóncavo**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3556
 msgid "The output vector layer"
 msgstr "La capa vectorial saliente"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1266
+msgid "**Algorithm ID**: ``native:concavehull``"
+msgstr "**ID algoritmo**: ``native:concavehull``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1276
 msgid "Convert geometry type"
@@ -4197,9 +4235,30 @@ msgstr "**Tolerancia**"
 msgid "``TOLERANCE``"
 msgstr "``TOLERANCE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1802
+msgid ""
+"Specifies an optional snapping tolerance which can be used to improve the "
+"robustness of the triangulation."
+msgstr ""
+"Especifica una tolerancia de ajuste opcional que puede utilizarse para "
+"mejorar la solidez de la triangulación."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1803
+msgid "**Add point IDs to output**"
+msgstr "**Añadir ID de puntos a la salida**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1804
 msgid "``ADD_ATTRIBUTES``"
 msgstr "``ADD_ATTRIBUTES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1808
+msgid ""
+"Specifies whether fields storing involved point features ID should be added "
+"to the output. If False, an ``id`` field is used to identify the polygons."
+msgstr ""
+"Especifica si los campos que almacenan el ID de los objetos espaciales de "
+"los puntos implicados deben añadirse a la salida. Si es falso, se utiliza un"
+" campo ``id`` para identificar los polígonos."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1810
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1833
@@ -4209,6 +4268,10 @@ msgstr "**Triangulación Delaunay**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1836
 msgid "The output (Delaunay triangulation) vector layer"
 msgstr "La capa vectorial saliente (triangulación Delaunay)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1841
+msgid "**Algorithm ID**: ``native:delaunaytriangulation``"
+msgstr "**ID algoritmo**: ``native:delaunaytriangulation``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1851
 msgid "Delete holes"
@@ -4591,6 +4654,11 @@ msgstr "[banda ráster]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2287
 msgid "The raster band to take the Z values from"
 msgstr "La banda de la capa ráster de donde tomar valores Z"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2288
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5994
+msgid "**Value for NoData or non-intersecting vertices**"
+msgstr "**Valor para NoData o vértices no intersecantes**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2289
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5995
@@ -6179,9 +6247,21 @@ msgstr ""
 msgid "Enclosing circles for each feature"
 msgstr "Circulos cercantes para cada entidad"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4076
+msgid "**Number of segments in circles**"
+msgstr "**Número de segmentos en círculos**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4080
 msgid "Default: 72"
 msgstr "Preestablecido: 72"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4081
+msgid ""
+"The number of segments used to approximate a circle. Minimum 8, maximum "
+"100000."
+msgstr ""
+"Número de segmentos utilizados para aproximar un círculo. Mínimo 8, máximo "
+"100000."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4083
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4105
