@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -221,25 +221,75 @@ msgstr ""
 "꼭짓점을 또다른 레이어에 스냅해야 하는 경우, 대상 레이어가 체크되어 있는지 확인하고 스냅 허용 오차를 더 큰 값으로 늘리십시오. 스냅 "
 "작업 옵션 대화창에서 체크되어 있지 않은 레이어에는 스냅되지 않을 것입니다."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:118
+msgid ""
+"When moving or creating vertex, you can opt for the following snapping "
+"modes:"
+msgstr "꼭짓점을 이동시키거나 생성할 때, 다음 스냅 작업 모드 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:120
+msgid "|snappingVertex| :guilabel:`Vertex`"
+msgstr "|snappingVertex| :guilabel:`Vertex`: 꼭짓점에 스냅합니다."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2284
 msgid "snappingVertex"
 msgstr "snappingVertex"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:121
+msgid ""
+"|snappingSegment| :guilabel:`Segment`: snaps along a line or a polygon "
+"perimeter. If topological editing is enabled, then a new vertex is added at "
+"the snapping location."
+msgstr ""
+"|snappingSegment| :guilabel:`Segment`: 라인 또는 폴리곤 둘레를 따라 스냅합니다. 위상 편집 작업이 "
+"활성화된 경우, 스냅하는 위치에 새 꼭짓점을 추가합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2280
 msgid "snappingSegment"
 msgstr "snappingSegment"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:123
+msgid ""
+"|snappingArea| :guilabel:`Area`: guarantees that the snap point lies "
+"anywhere on a polygon's area, not necessarily on its boundary"
+msgstr ""
+"|snappingArea| :guilabel:`Area`: 스냅 포인트가 꼭 폴리곤의 경계 상만이 아니라 폴리곤의 영역 안에 들어가도록 "
+"보장합니다."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2270
 msgid "snappingArea"
 msgstr "snappingArea"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:125
+msgid ""
+"|snappingCentroid| :guilabel:`Centroid`: snaps to the centroid of the "
+"geometry of a feature. In case of a multipart geometry, the target point may"
+" be distinct from the existing parts."
+msgstr ""
+"|snappingCentroid| :guilabel:`Centroid`: 피처 도형의 중심점에 스냅합니다. 다중부분 도형의 경우, 대상 "
+"포인트가 기존 부분들과 전혀 다를 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2272
 msgid "snappingCentroid"
 msgstr "snappingCentroid"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:127
+msgid ""
+"|snappingMiddle| :guilabel:`Middle of Segments` on line or polygon feature"
+msgstr ""
+"|snappingMiddle| :guilabel:`Middle of Segments`: 라인 또는 폴리곤 둘레의 중앙점에 스냅합니다."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2278
 msgid "snappingMiddle"
 msgstr "snappingMiddle"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:128
+msgid ""
+"|snappingEndpoint| :guilabel:`Line Endpoints`: snaps to the first or last "
+"vertex of every part of a line or polygon feature."
+msgstr ""
+"|snappingEndpoint| :guilabel:`Line Endpoints`: 라인 또는 폴리곤 둘레의 모든 부분의 시작 또는 끝 "
+"꼭짓점에 스냅합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2274
 msgid "snappingEndpoint"
@@ -732,8 +782,8 @@ msgid ""
 msgstr ""
 ":menuselection:`Project --> Properties... --> Data Sources --> Layers "
 "Capabilities` 테이블에서, 제공자의 권한 허가 여부에 상관없이 어떤 레이어든 읽기 전용으로 설정할 수 있습니다. 이것은 다중 "
-"사용자 환경에서 승인받지 않은 사용자가 실수로 레이어를 (예: Shapefile을) 편집해서 혹시라도 데이터를 변질시키는 일을 막기 위한"
-" 간편한 방법이 될 수 있습니다. 이 설정은 현재 프로젝트 안에서만 적용된다는 사실을 기억하십시오."
+"사용자 환경에서 승인받지 않은 사용자가 실수로 레이어를 (예: 셰이프파일을) 편집해서 혹시라도 데이터를 변질시키는 일을 막기 위한 간편한"
+" 방법이 될 수 있습니다. 이 설정은 현재 프로젝트 안에서만 적용된다는 사실을 기억하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:414
 msgid ""
@@ -1838,8 +1888,8 @@ msgid ""
 "inserted."
 msgstr ""
 "사용자의 속성 테이블에 문자열 유형의 새 열을 생성했는데, 더 긴 길이를 가진 다른 속성 열로 그 값을 붙여넣으려는 경우, 열의 길이가 "
-"대상 열의 길이로 늘어날 것입니다. GDAL Shapefile 드라이버가 삽입될 데이터의 길이를 동적으로 수용하기 위해 문자열 및 정수형"
-" 필드를 자동 확장하기 때문입니다."
+"대상 열의 길이로 늘어날 것입니다. GDAL 셰이프파일 드라이버가 삽입될 데이터의 길이를 동적으로 수용하기 위해 문자열 및 정수형 필드를"
+" 자동 확장하기 때문입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:892
 msgid "Deleting Selected Features"
@@ -2476,7 +2526,7 @@ msgid ""
 "reshape a line or polygon geometry by reducing or densifying the number of "
 "vertices, as long as the geometry remains valid:"
 msgstr ""
-"|simplify| :sup:`Simplify Feature` 도구는 도형의 유효성이 유지되는 한 꼭짓점 개수를 줄이거나 밀도를 높여서 "
+"|simplify| :sup:`Simplify Feature` 도구는 도형의 무결성이 유지되는 한 꼭짓점 개수를 줄이거나 밀도를 높여서 "
 "라인 또는 폴리곤 도형의 형태를 대화형 작업으로 변형시킬 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1123
@@ -2711,7 +2761,7 @@ msgid ""
 "rings, as this would generate an invalid polygon."
 msgstr ""
 "폴리곤의 경우, 재형성 작업이 때로 의도하지 않은 결과를 낼 수도 있습니다. 이 도구는 폴리곤의 자잘한 부분을 수정하는 데 유용하지, "
-"본체를 수정하기는 힘듭니다. 또 재형성 라인이 여러 폴리곤 고리와 교차해서도 안 됩니다. 그런 경우 유효하지 않은 폴리곤이 생성되기 "
+"본체를 수정하기는 힘듭니다. 또 재형성 라인이 여러 폴리곤 고리와 교차해서도 안 됩니다. 그런 경우 무결하지 않은 폴리곤이 생성되기 "
 "때문입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1297
@@ -2804,6 +2854,20 @@ msgstr "라인 또는 폴리곤 피처를 분할하려면:"
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1360
 msgid "Select the |splitFeatures| :sup:`Split Features` tool."
 msgstr "|splitFeatures| :sup:`Split Features` 도구를 선택하십시오."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1361
+msgid ""
+"Draw a line across the feature(s) you want to split. If a selection is "
+"active, only selected features are split. Fields of resulting features are "
+"filled according to their :ref:`splitting policy <policies>`."
+msgstr ""
+"분할하려는 피처(들)을 걸치는 라인을 그리십시오. 선택 집합이 활성화되어 있는 경우, 선택한 피처들만 분할합니다. 산출되는 피처들의 "
+"필드는 필드 :ref:`분할 정책 <policies>` 에 따라 채워집니다."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1364
+msgid ""
+"You can then as usual modify any of the attributes of any resulting feature."
+msgstr "이제 산출되는 모든 피처의 모든 속성을 평소대로 수정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1366
 msgid "**Split a polyline into new features in one-click**"
@@ -3187,6 +3251,50 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1566
 msgid "Shape digitizing"
 msgstr "형태 디지타이즈 작업"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1568
+msgid ""
+"The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw lines"
+" or polygons features of regular shape. It is synchronized with the "
+"|digitizeShape| :sup:`Digitize Shape` :ref:`geometry drawing method "
+"<drawing_methods>` you can select on the :guilabel:`Digitizing Toolbar`. To "
+"use it:"
+msgstr ""
+":guilabel:`Shape Digitizing` 툴바는 정다각형 형태의 라인 또는 폴리곤 피처를 그릴 수 있는 일련의 도구들을 "
+"제공합니다. 이 툴바는 사용자가 :guilabel:`Digitizing Toolbar` 에서 선택할 수 있는 |digitizeShape|"
+" :sup:`Digitize Shape` :ref:`도형 그리기 방법 <drawing_methods>` 과 동기화됩니다. 이 툴바를 "
+"사용하려면:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1574
+msgid ""
+"Display the toolbar: :menuselection:`View --> Toolbars --> Shape Digitizing`"
+msgstr "툴바 보이기: :menuselection:`View --> Toolbars --> Shape Digitizing`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1575
+msgid ""
+"Select a tool that creates or modifies the shape of a geometry, e.g. "
+"|captureLine| :sup:`Add line feature`, |capturePolygon| :sup:`Add polygon "
+"feature`, |addPart| :sup:`Add part`, |addRing| :sup:`Add ring`, |reshape| "
+":sup:`Reshape Features`, ..."
+msgstr ""
+"도형의 형태를 생성하거나 수정하는 도구를 선택하십시오. 예: |captureLine| :sup:`Add line feature`, "
+"|capturePolygon| :sup:`Add polygon feature`, |addPart| :sup:`Add part`, "
+"|addRing| :sup:`Add ring`, |reshape| :sup:`Reshape Features`, ..."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1578
+msgid ""
+"The |digitizeWithSegment| :sup:`Digitize with segment` button on the "
+":guilabel:`Digitizing Toolbar` is enabled. The first time, you may need to "
+"switch it to the |digitizeShape| :sup:`Digitize Shape` in order to enable "
+"tools on the :guilabel:`Shape Digitizing` toolbar."
+msgstr ""
+":guilabel:`Digitizing Toolbar` 에 |digitizeWithSegment| :sup:`Digitize with "
+"segment` 버튼이 활성화됩니다. 이 작업이 처음이라면 :guilabel:`Shape Digitizing` 툴바의 도구들을 "
+"활성화시키기 위해 |digitizeShape| :sup:`Digitize Shape` 으로 전환해야 할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1582
+msgid "Pick a shape digitizing tool and draw."
+msgstr "형태 디지타이즈 작업 도구를 고른 다음 그리십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1588
 msgid "Circular string by radius"
@@ -3629,13 +3737,88 @@ msgstr ""
 msgid "cadPerpendicular"
 msgstr "cadPerpendicular"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1763
+msgid ""
+"|settings| :sup:`Snap to common angles`: when moving the cursor, displays a "
+"virtual line that you can snap to to add the next vertex. The snapping line "
+"is defined by the last added vertex and an (absolute or relative to previous"
+" segment) angle from a preset list (following steps of 0.1°, 0.5°, 1°, 5°, "
+"10°, 15°, 18°, 22.5°, 30°, 45° or 90°). Choose :guilabel:`Do not snap to "
+"common angles` to disable this feature."
+msgstr ""
+"|settings| :sup:`Snap to common angles`: 커서를 움직이는 동안 다음 꼭짓점을 추가하기 위해 스냅할 수 "
+"있는 가상의 선을 표시합니다. 마지막으로 추가한 꼭짓점과 사전 설정 (0.1°, 0.5°, 1°, 5°, 10°, 15°, 18°, "
+"22.5°, 30°, 45° 또는 90° 단계를 따르는) 목록에 있는 (이전 선분 기준 절대 또는 상대) 각도가 이 가상의 선을 "
+"정의합니다. 이 기능을 비활성화하려면 :guilabel:`Do not snap to common angles` 를 선택하십시오."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2264
 msgid "settings"
 msgstr "settings"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1770
+msgid ""
+":ref:`Snapping to features <snapping_options>` can be used along with "
+"snapping to common angles for accurate digitizing. For a fine-grained "
+"control on how the target element to snap to is retained, you can indicate "
+"whether to prioritize snapping to features over common angles, and vice-"
+"versa under the :guilabel:`Snapping priority` entry. You can switch from one"
+" method to the other during the digitizing operation, and this avoids "
+"disabling any of the snapping options in the meantime. Press :kbd:`N` (or "
+":kbd:`Shift+N`) during a digitizing operation to cycle through the angles "
+"list."
+msgstr ""
+"정확한 디지타이즈 작업을 위해 :ref:`피처에 스냅하기 <snapping_options>` 를 공통 각도에 스냅하기와 함께 사용할 수 "
+"있습니다. 스냅할 대상 요소를 유지하는 방법을 세밀하게 제어하기 위해, :guilabel:`Snapping priority` 항목에서 "
+"피처에 스냅하기를 우선할지 또는 공통 각도에 스냅하기를 우선할지 여부를 지정할 수 있습니다. 디지타이즈 작업 중에 한 방법에서 다른 "
+"방법으로 전환할 수 있기 때문에, 그 동안 다른 모든 스냅 작업 옵션을 비활성화시키지 않아도 됩니다. 디지타이즈 작업 도중 각도 목록을 "
+"순환시키려면 :kbd:`N` (또는 :kbd:`Shift+N`) 키를 누르십시오."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1779
+msgid ""
+"|floater| :sup:`Floater settings`: if the :guilabel:`Show floater` item is "
+"checked, a contextual menu with digitizing information follows the cursor "
+"during digitizing. The values can be accessed using the :ref:`panel's "
+"shortcuts <digitizing_panel_shortcuts>`, edited and |locked| :sup:`Locked` "
+"after validation (pressing :kbd:`Enter`). The type of information to display"
+" can be selected in the bottom part of the menu:"
+msgstr ""
+"|floater| :sup:`Floater settings`: :guilabel:`Show floater` 옵션을 체크한 경우, "
+"디지타이즈 작업 도중 디지타이즈 정보를 가진 컨텍스트 메뉴가 커서를 따라다니게 됩니다. :ref:`패널의 단축키 "
+"<digitizing_panel_shortcuts>` 를 통해 그 값들에 접근할 수 있고, 무결성 검증 후에 값들을 편집하고 "
+"(:kbd:`Enter` 키를 눌러) |locked| :sup:`Locked` 고정시킬 수 있습니다. 메뉴의 하단에서 표시할 정보 유형을"
+" 선택할 수 있습니다:"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2194
 msgid "floater"
 msgstr "floater"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1785
+msgid ":guilabel:`Show distance`"
+msgstr ":guilabel:`Show distance`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1786
+msgid ":guilabel:`Show angle`"
+msgstr ":guilabel:`Show angle`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1787
+msgid ":guilabel:`Show XY coordinates`"
+msgstr ":guilabel:`Show XY coordinates`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1788
+msgid ":guilabel:`Show Z value`"
+msgstr ":guilabel:`Show Z value`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1789
+msgid ":guilabel:`Show M value`"
+msgstr ":guilabel:`Show M value`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1790
+msgid ":guilabel:`Show bearing/azimuth`"
+msgstr ":guilabel:`Show bearing/azimuth`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1791
+msgid ":guilabel:`Show common snapping angle`"
+msgstr ":guilabel:`Show common snapping angle`"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1793
 msgid ""
