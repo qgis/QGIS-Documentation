@@ -249,6 +249,19 @@ msgstr "또는 |iconView| :sup:`Icon View` 버튼을 통한 아이콘 미리보�
 msgid "iconView"
 msgstr "iconView"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:102
+msgid ""
+"Press the :guilabel:`Save Symbol` button to open the :guilabel:`Save New "
+"Symbol` dialog. Here, you can choose the :guilabel:`Destination` where you "
+"want to add the symbol being edited, give it a :guilabel:`Name` and add "
+":guilabel:`Tag(s)`. You also have the option to |checkbox| :sup:`Add to "
+"favorites` your new symbol."
+msgstr ""
+":guilabel:`Save Symbol` 버튼을 클릭하면 :guilabel:`Save New Symbol` 대화창이 열립니다. 이 "
+"대화창에서 편집 중인 심볼을 :guilabel:`Destination` 어디에 추가할지 선택할 수 있고, :guilabel:`Name` "
+"이름을 지정할 수 있으며, :guilabel:`Tag(s)` 태그를 추가할 수 있습니다. 사용자의 새 심볼을 |checkbox| "
+":sup:`Add to favorites` 즐겨찾기에 추가할 수 있는 옵션도 있습니다."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:890
 msgid "checkbox"
 msgstr "checkbox"
@@ -315,6 +328,10 @@ msgid ""
 msgstr ""
 ":guilabel:`Match to Saved Symbols...` 및 :guilabel:`Match to Symbols from "
 "File...`: 자동적으로 :ref:`범주에 심볼을 할당 <categorized_advanced_menu>` 합니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:129
+msgid ":ref:`Animation settings <animation_settings>`"
+msgstr ":ref:`애니메이션 설정 <animation_settings>`"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:134
 msgid "The symbol layer"
@@ -484,6 +501,10 @@ msgid ""
 msgstr ""
 ":guilabel:`Anchor point`: 심볼 위에 사분면 포인트를 배치 원점으로 정의할 수 있습니다. 앵커 포인트는 "
 ":guilabel:`Offset` 이 적용되는 포인트입니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:206
+msgid "**Animated marker** (see :ref:`animated_marker`)"
+msgstr "**애니메이션화 마커** (:ref:`animated_marker` 참조)"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:207
 msgid ""
@@ -1426,6 +1447,21 @@ msgstr ""
 msgid "Parametrizable SVG"
 msgstr "파라미터화할 수 있는 SVG"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:664
+msgid ""
+"You have the possibility to change the colors of a :guilabel:`SVG marker`. "
+"You have to add the placeholders ``param(fill)`` for fill color, "
+"``param(fill-opacity)`` for fill opacity, ``param(outline)`` and "
+"``param(outline-opacity)`` for stroke color and opacity respectively, and "
+"``param(outline-width)`` for stroke width. These placeholders can optionally"
+" be followed by a default value, e.g.:"
+msgstr ""
+":guilabel:`SVG marker` 의 색상을 변경할 수 있습니다. 채우기 색상의 경우 ``param(fill)`` 자리 표시자를,"
+" 채우기 불투명도의 경우 ``param(fill-opacity)`` 를, 획의 색상 및 불투명도의 경우 각각 "
+"``param(outline)`` 및 ``param(outline-opacity)`` 를 그리고 획 너비의 경우 "
+"``param(outline-width)`` 를 추가해야 합니다. 이 자리 표시자들 뒤에 다음과 같은 선택적인 기본값이 따라올 수 "
+"있습니다:"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:677
 msgid ""
 "More generally, SVG can be freely parametrized using ``param(param_name)``. "
@@ -1445,9 +1481,37 @@ msgstr ""
 msgid "Dynamic SVG parameters table"
 msgstr "동적 SVG 파라미터 테이블"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:696
+msgid ""
+"QGIS is looking for a complete SVG node. So if your parameter is within a "
+"more complex node, you need to inject the complete node with the expression."
+" For instance, ``transform=\"rotate(param(angle)\"`` will not work. Instead,"
+" you need to do ``transform=\"param(rotation)\"`` and ``rotation`` parameter"
+" will be defined with the expression ``'rotate(' || coalesce(my_field, 0) ||"
+" ')'``."
+msgstr ""
+"QGIS는 완전한 SVG 노드를 찾고 있기 때문에, 사용자 파라미터가 좀 더 복잡한 노드 안에 있는 경우 완전한 노드를 표현식으로 "
+"주입해줘야 합니다. 예를 들면 ``transform=\"rotate(param(angle)\"`` 는 동작하지 않을 것입니다. 대신 "
+"``transform=\"param(rotation)\"`` 을 사용하고 ``rotation`` 파라미터를 ``'rotate(' || "
+"coalesce(my_field, 0) || ')'`` 표현식으로 정의해야 할 것입니다."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:705
 msgid "The Geometry Generator"
 msgstr "도형 생성기"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:707
+msgid ""
+"Available with all types of symbols, the :guilabel:`geometry generator` "
+"symbol layer allows to use :ref:`expression syntax <expression_builder>` to "
+"generate a geometry on the fly during the rendering process. The resulting "
+"geometry does not have to match with the original :guilabel:`Geometry type` "
+"and you can add several differently modified symbol layers on top of each "
+"other."
+msgstr ""
+"모든 심볼 유형에 사용할 수 있는 :guilabel:`geometry generator` 심볼 레이어는 렌더링 과정에서 도형을 실시간으로"
+" 생성하기 위해 :ref:`표현식 문법 <expression_builder>` 을 사용할 수 있습니다. 산출 도형은 원본 "
+":guilabel:`Geometry type` 과 일치할 필요가 없으며, 각각의 심볼 레이어 위에 서로 다르게 수정된 심볼 레이어를 몇 "
+"개 추가할 수도 있습니다."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:713
 msgid ""
@@ -1461,6 +1525,38 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:717
 msgid "Some examples:"
 msgstr "다음은 몇몇 예시입니다:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:720
+msgid "Render symbol as the centroid of a feature"
+msgstr "심볼을 피처의 중심점으로 렌더링하기"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:726
+msgid ""
+"Visually overlap features within a 100 map units distance from a point "
+"feature, i.e generate a 100m buffer around the point"
+msgstr ""
+"포인트 피처로부터 100 맵 단위 거리 안에 들어오는 피처들을 가시적으로 중첩시키기, 예: 포인트 주변에 100미터 버퍼 생성하기"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:733
+msgid ""
+"Create a radial effect of points surrounding the central feature point when "
+"used as a MultiPoint geometry generator"
+msgstr ""
+"멀티포인트 도형 생성기로 사용하는 경우 중심 피처 포인트를 둘러싸는 포인트들의 방사형 효과(radial effect) 생성하기"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:751
+msgid ""
+"Create a radial effect of points surrounding the central feature point. The "
+"number of points varies based on a field."
+msgstr ""
+"중심 피처 포인트를 둘러싸는 포인트들의 방사형 효과(radial effect) 생성하기. 포인트 개수는 필드에 따라 달라집니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:773
+msgid ""
+"Create a curved arrow line connecting features of two layers based on their "
+":ref:`relation <project_relations>`"
+msgstr ""
+"두 레이어의 피처들을 연결하는 만곡 화살표 라인을 두 레이어의 :ref:`관계 <project_relations>` 를 바탕으로 생성하기"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:811
 msgid "The Vector Field Marker"
@@ -1511,3 +1607,85 @@ msgid ""
 "The magnitude of field can be scaled up or down to an appropriate size for "
 "viewing the field."
 msgstr "벡터장을 살펴보기 위해 벡터장의 규모(magnitude)를 적절한 크기로 늘리거나 줄일 수 있습니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:838
+msgid "Animated marker"
+msgstr "애니메이션화 마커"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:840
+msgid ""
+"Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,"
+" :file:`.MNG`, etc. animation file to represent points on your map. You can "
+"specify:"
+msgstr ""
+"애니메이션화 마커 심볼 유형은 사용자 맵 상에 포인트를 :file:`.GIF`, :file:`.WebP`, :file:`.MNG` 등등의"
+" 애니메이션 파일을 사용해서 표현할 수 있게 해줍니다. 다음을 지정할 수 있습니다:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:844
+msgid ":guilabel:`File` path,"
+msgstr ":guilabel:`File`: 파일 경로"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:845
+msgid ""
+":guilabel:`Frame rate`: number of steps that are shown per second, "
+"indicating how fast the animation is played,"
+msgstr ":guilabel:`Frame rate`: 초당 보이는 단계의 개수로, 애니메이션이 얼마나 빠르게 재생되는지를 나타냅니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:847
+msgid ":guilabel:`Size` in any :ref:`supported unit <unit_selector>`,"
+msgstr ":guilabel:`Size`: 모든 :ref:`지원 단위 <unit_selector>` 로 설정할 수 있는 크기"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:848
+msgid ":guilabel:`Opacity`,"
+msgstr ":guilabel:`Opacity`: 불투명도"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:849
+msgid ":guilabel:`Rotation`,"
+msgstr ":guilabel:`Rotation`: 회전 각도"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:850
+msgid ""
+":guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions from the "
+"marker position,"
+msgstr ""
+":guilabel:`Offset`: 마커 위치로부터 :guilabel:`x` 와 :guilabel:`y` 방향으로 오프셋을 설정할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:852
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`Anchor point`: 앵커 포인트"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:854
+msgid "There are two ways to handle animated symbols:"
+msgstr "애니메이션화 심볼은 다음 두 가지 방법으로 처리할 수 있습니다:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:856
+msgid ""
+"**When your map is not configured as an animation** (i.e. it's a standard "
+"QGIS project without animations), the frame for the animated markers will be"
+" determined solely by the current timestamp."
+msgstr ""
+"**사용자 맵이 애니메이션으로써 환경설정되지 않은 경우** (예를 들면 애니메이션이 없는 표준 QGIS 프로젝트인 경우) 애니메이션화 "
+"마커의 프레임이 현재 타임스탬프만으로 결정될 것입니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:866
+msgid "Animated marker when map is not configured as animation"
+msgstr "맵이 애니메이션으로써 환경설정되지 않은 경우의 애니메이션화 마커"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:868
+msgid ""
+"**When your map is** :ref:`configured as an animation <maptimecontrol>`, the"
+" animated markers will sync with the animation's timeline. This means that "
+"animated markers will pause when the animation is paused, progress with the "
+"animation, and so forth. The map will also be redrawn according to the frame"
+" rate established for temporal animation. This mode is also applied when "
+"exporting an animation using the temporal controller."
+msgstr ""
+"**사용자 맵이** :ref:`애니메이션으로써 환경설정 <maptimecontrol>` **된 경우** 애니메이션화 마커가 애니메이션의 "
+"타임라인과 동기화될 것입니다. 다시 말해 애니메이션이 일시정지됐을 때 애니메이션화 마커도 일시정지될 것이고, 애니메이션을 다시 시작하면 "
+"그와 함께 다시 진행될 것이라는 뜻입니다. 시계열 애니메이션에 지정된 프레임 레이트에 따라 맵도 다시 그려질 것입니다. 이 모드는 시계열"
+" 제어기를 사용해서 애니메이션을 내보낼 때에도 적용됩니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:881
+msgid "Animated marker when map is configured as animation"
+msgstr "맵이 애니메이션으로써 환경설정된 경우의 애니메이션화 마커"
