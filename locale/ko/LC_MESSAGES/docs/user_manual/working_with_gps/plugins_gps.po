@@ -90,6 +90,10 @@ msgstr ""
 msgid "Transferring or loading GPS data"
 msgstr "GPS 데이터 전송 및 불러오기"
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:39
+msgid "Loading a GPX file"
+msgstr "GPX 파일 불러오기"
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:41
 msgid ""
 "There are dozens of different file formats for storing GPS data. The format "
@@ -157,6 +161,40 @@ msgstr ""
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:63
 msgid "Loading GPS Data dialog"
 msgstr "GPS 데이터 불러오기 대화창"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:69
+msgid "Loading to or from a device"
+msgstr "기기로 또는 기기에서 불러오기"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:71
+msgid ""
+"There are lots of different types of GPS devices and formats. Since QGIS "
+"uses GPX files, you need a way to convert other GPS file formats to GPX. "
+"QGIS can do that using the free program `GPSBabel "
+"<https://www.gpsbabel.org>`_. GPSBabel can help you convert waypoints, "
+"tracks, and routes between popular GPS receivers such as Garmin or Magellan "
+"and mapping programs like Google Earth or Basecamp. Literally hundreds of "
+"GPS receivers and programs are supported. It can also transfer GPS data "
+"between your computer and a GPS device."
+msgstr ""
+"서로 다른 GPS 기기 및 포맷 유형이 많습니다. QGIS가 GPX 파일을 사용하기 때문에, 다른 GPS 파일 포맷들을 GPX로 변환할 "
+"방법이 필요합니다. QGIS는 자유 프로그램인 `GPSBabel <https://www.gpsbabel.org>`_ 을 사용합니다. "
+"GPSBabel은 가민(Garmin) 또는 마젤란(Magellan) 같은 유명한 GPS 수신기와 구글 어스 또는 "
+"베이스캠프(Basecamp) 같은 지도 작성 프로그램들 사이에서 웨이포인트, 트랙, 그리고 루트를 변환할 수 있습니다. 문자 그대로 수백"
+" 개의 GPS 수신기와 프로그램을 지원합니다. 또한 사용자 컴퓨터와 GPS 기기 사이에 GPS 데이터를 전송할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:79
+msgid ""
+"Under :menuselection:`Settings -->` |options| :menuselection:`Options -->` "
+"|gps| :menuselection:`GPS -->` |gps| :menuselection:`GPSBabel`, QGIS allows "
+"you to define your own device type and set parameters of conversion that "
+"could later be used by the :ref:`Processing GPS algorithms "
+"<gps_algorithms>`."
+msgstr ""
+"QGIS의 :menuselection:`Settings -->` |options| :menuselection:`Options -->` "
+"|gps| :menuselection:`GPS -->` |gps| :menuselection:`GPSBabel` 메뉴에서, 사용자는 "
+"자신의 기기 유형을 정의하고 :ref:`공간 처리 GPS 알고리즘 <gps_algorithms>` 이 이후 사용할 수 있는 변환 "
+"파라미터들을 설정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:140
 msgid "options"
@@ -240,6 +278,20 @@ msgid ""
 msgstr ""
 "이런 명령어들은 보통 GPSBabel 명령어이지만, GPX 파일을 생성할 수 있는 다른 어떤 명령 줄 프로그램이라도 사용할 수 있습니다."
 " QGIS는 이런 명령어를 실행할 때 ``%type``, ``%in``, 그리고 ``%out`` 키워드들을 대체할 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:109
+#, python-format
+msgid ""
+"As an example, if you create a device type with the download command "
+"``gpsbabel %type -i garmin -o gpx %in %out`` and then use it to download "
+"waypoints from port ``/dev/ttyS0`` to the file :file:`output.gpx`, QGIS will"
+" replace the keywords and run the command ``gpsbabel -w -i garmin -o gpx "
+"/dev/ttyS0 output.gpx``."
+msgstr ""
+"예를 들자면, 다운로드 명령어 ``gpsbabel %type -i garmin -o gpx %in %out`` 을 가진 기기 유형을 "
+"생성한 다음 ``/dev/ttyS0`` 포트로부터 웨이포인트를 다운로드해서 :file:`output.gpx` 파일로 저장하는 경우 "
+"QGIS가 키워드들을 대체해서 ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx`` 명령어를"
+" 실행할 것입니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:115
 msgid ""
