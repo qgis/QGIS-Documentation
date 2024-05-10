@@ -334,9 +334,102 @@ msgstr ""
 msgid "setProjection"
 msgstr "setProjection"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:151
+msgid ""
+":guilabel:`Provider Feature Filter`: allows to restrict data to use in the "
+"current project to a subset, using functions and expression at the PDAL data"
+" provider level. Press the :guilabel:`Query Builder` button at the bottom to"
+" start setting the filter."
+msgstr ""
+":guilabel:`Provider Feature Filter`: 현재 프로젝트에 사용할 데이터를 PDAL 데이터 제공자 수준에서 함수와"
+" 표현식을 사용해 하위 집합으로 제한할 수 있습니다. 필터를 설정하려면 하단에 있는 :guilabel:`Query Builder` 버튼을"
+" 클릭하십시오."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:160
+msgid "Filtering point cloud layer to buildings at specific altitude"
+msgstr "점구름 레이어를 특정 고도의 건물들로 필터링하기"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:164
+msgid ""
+"In the bottom part of the dialog, you can type a :guilabel:`Provider "
+"specific filter expression`. Such an expression can be built thanks to:"
+msgstr ""
+"이 대화창의 하단 부분 :guilabel:`Provider specific filter expression` 란에 제공자 전용 필터 "
+"표현식을 입력할 수 있습니다. 이 표현식은 다음을 사용해서 작성할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:167
+msgid ""
+":guilabel:`Fields`: the list contains all the attributes of the point cloud "
+"layer. To add an attribute to the expression, double-click its name or just "
+"type it into the text box."
+msgstr ""
+":guilabel:`Fields`: 필드 목록은 점구름 레이어의 모든 속성을 담고 있습니다. 표현식에 속성을 추가하려면, 속성 이름을 "
+"더블클릭하거나 텍스트란에 이름을 입력하기만 하십시오."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:169
+msgid ""
+":guilabel:`Values`: frame lists values or statistics of the currently "
+"selected attribute, as a ``key:value`` pair. To add a value to the "
+"expression field, double click its name in the list: depending on the type "
+"of attribute, either the key or the value will be added to the expression. "
+"Or type the value in the expression text box."
+msgstr ""
+":guilabel:`Values`: 이 프레임의 목록은 현재 선택한 속성의 값 또는 통계를 ``키:값`` 쌍으로 담고 있습니다. 표현식 "
+"텍스트 상자에 값을 추가하려면, 목록에서 값의 이름을 더블클릭하십시오. 속성의 유형에 따라 키 또는 값 가운데 하나가 표현식에 추가될 "
+"것입니다. 또는 표현식 텍스트 상자에 값을 입력하십시오."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:173
+msgid ""
+":guilabel:`Operators`: this toolbar contains all usable operators. To add an"
+" operator to the expression field, click the appropriate button. Relational "
+"operators ( ``=`` , ``>`` , ...) and logical operators (``AND``, ``OR``, "
+"...) are available."
+msgstr ""
+":guilabel:`Operators`: 연산자 툴바는 사용할 수 있는 모든 연산자를 담고 있습니다. 표현식 텍스트 상자에 연산자를 "
+"추가하려면, 알맞은 버튼을 클릭하십시오. 관계 연산자(``=``, ``>`` 등등)와 논리 연산자(``AND``, ``OR`` 등등)를 "
+"사용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:177
+msgid ""
+"The :guilabel:`Test` button helps you check the syntax of your query. Use "
+"the :guilabel:`Clear` button to wipe the query and revert the layer to its "
+"original state (i.e., fully load all the points in the layer). It is "
+"possible to :guilabel:`Save...` the query as a :file:`.QQF` file, or "
+":guilabel:`Load...` the query from a file into the dialog."
+msgstr ""
+":guilabel:`Test` 버튼을 클릭하면 사용자 쿼리의 문법을 점검합니다. :guilabel:`Clear` 버튼은 쿼리를 지우고 "
+"레이어를 원래 상태로 (예를 들면 레이어의 모든 포인트를 다시 불러와) 되돌립니다. 쿼리를 :file:`.QQF` 파일로 "
+":guilabel:`Save...` 저장할 수도 있고, 파일에서 쿼리를 대화창으로 :guilabel:`Load...` 불러올 수도 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:183
+msgid ""
+"When a filter is applied, QGIS treats the resulting subset as if it were the"
+" entire layer. For example if you applied the :ref:`filter above "
+"<figure_point_cloud_querybuilder>` for filtering buildings, you can not e.g."
+" display, query, save or edit points that are of vegetation classification "
+"because they are not part of the subset."
+msgstr ""
+"필터를 적용하면, QGIS는 쿼리로 선택된 하위 집합이 마치 완전한 레이어인 것처럼 취급합니다. 예를 들면 사용자가 :ref:`앞의 필터"
+" <figure_point_cloud_querybuilder>` 를 건물을 필터링하기 위해 적용한 경우, 식생 분류를 표시하거나 "
+"쿼리하거나 저장하거나 편집할 수 없습니다. 식생 분류는 이 하위 집합에 속하지 않기 때문입니다."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:188
 msgid "**Filtered layers are indicated in the Layers Panel**"
 msgstr "**레이어 패널은 필터링된 레이어를 표시합니다**"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:190
+msgid ""
+"In the :guilabel:`Layers` panel, a filtered layer is listed with a "
+"|indicatorFilter| :sup:`Filter` icon next to it indicating the query used "
+"when the mouse hovers over the icon. Double-click the icon to open the "
+":guilabel:`Query Builder` dialog for edit. This can also be achieved through"
+" the :menuselection:`Layer --> Filter...` menu."
+msgstr ""
+":guilabel:`Layers` 패널에서 필터링된 레이어에 마우스를 가져가면 레이어 옆에 쿼리가 사용됐다는 사실을 알려주는 "
+"|indicatorFilter| :sup:`Filter` 아이콘이 나타납니다. 이 아이콘을 더블 클릭하면 :guilabel:`Query "
+"Builder` 대화창이 열려 쿼리를 편집할 수 있습니다. 쿼리 작성기 대화창은 :menuselection:`Layer --> "
+"Filter...` 메뉴를 통해서 열 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:726
 msgid "indicatorFilter"
@@ -1262,3 +1355,119 @@ msgstr ""
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:629
 msgid "The point cloud statistics tab"
 msgstr "점구름 통계 탭"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:635
+msgid "Virtual point cloud"
+msgstr "가상 점구름"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:637
+msgid ""
+"Lidar surveys of larger areas are often multi-terabyte datasets with many "
+"billions of points. Having such large datasets represented as a single point"
+" cloud file is not practical due to the difficulties of storage, transfer, "
+"display and analysis. Point cloud data are therefore typically stored and "
+"distributed split into square tiles (e.g. ``1km x 1km``), each tile having a"
+" more manageable file size (e.g. ~200 MB when compressed)."
+msgstr ""
+"라이다(LiDAR)가 광범위한 영역을 측정할 때, 포인트 수십조 개를 가진 테라바이트 단위의 데이터셋을 생성하는 경우가 많습니다. 이런 "
+"대용량 데이터셋을 단일 점구름 파일로 표현하는 경우 저장, 전송, 표시 및 분석이 어렵기 때문에 실용적이지 않습니다. 따라서 점구름 "
+"데이터는 일반적으로 정사각형 타일(예: ``1km x 1km``)로 분할되어 저장 및 배포됩니다. 이때 각 타일은 좀 더 감당 가능한 "
+"(예: 압축 시 최대 200MB) 파일 크기가 됩니다."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:643
+msgid ""
+"Tiling of data solves the problems with size of data, but it introduces "
+"issues when processing or viewing an area of interest that does not fit "
+"entirely into a single tile. Users need to develop workflows that take into "
+"account multiple tiles and special care needs to be taken to deal with data "
+"near edges of tiles to avoid unwanted artefacts in outputs. Similarly, when "
+"viewing point cloud data, it becomes cumbersome to load many individual "
+"files and apply the same symbology."
+msgstr ""
+"데이터를 타일화하면 데이터 용량의 문제를 해결할 수 있지만, 단일 타일 안에 완전히 들어오지 않는 관심 지역을 처리하거나 볼 때 문제가 "
+"발생합니다. 사용자는 타일 여러 개를 연산하는 워크플로를 개발해야 하며, 산출물에서 원하지 않는 오류를 보고 싶지 않다면 타일 가장자리 "
+"가까이 있는 데이터를 처리할 때 특히 주의를 기울여야 합니다. 마찬가지로, 점구름 데이터를 볼 때 파일 여러 개를 불러와 동일한 심볼을 "
+"적용시키는 과정이 복잡해지고 느려지게 됩니다."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:652
+msgid ""
+"Here is an example of several point cloud tiles loaded in QGIS. Each tile is"
+" styled based on min/max Z values of the tile, creating visible artefacts on"
+" tile edges. The styling has to be adjusted for each layer separately:"
+msgstr ""
+"다음은 QGIS에 점구름 타일 몇 개를 불러온 예시입니다. 각 타일의 스타일은 타일의 최소/최대 Z 값을 바탕으로 하기 때문에, 타일 "
+"가장자리에 눈으로도 볼 수 있는 오류를 발생시킵니다. 즉 각 레이어 별로 스타일 작업을 조정해야 합니다:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:661
+msgid "Individual point cloud tiles loaded, with artefacts on edges"
+msgstr "가장자리에 오류가 발생한 개별 점구름 타일 불러오기"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:663
+msgid ""
+"In the GIS world, many users are familiar with the concept of virtual "
+"rasters. A virtual raster is a file that simply references other raster "
+"files with actual data. In this way, GIS software then treats the whole "
+"dataset comprising many files as a single raster layer, making the display "
+"and analysis of all the rasters listed in the virtual file much easier."
+msgstr ""
+"GIS 업계에서는 가상 래스터라는 개념을 흔히 접할 수 있습니다. 가상 래스터란 실제 데이터를 가진 다른 래스터 파일을 참조하기만 하는 "
+"파일을 말합니다. GIS 소프트웨어는 이런 방법을 통해 수많은 파일들을 포함하고 있는 전체 데이터셋을 단일 래스터 레이어로 취급합니다. "
+"가상 파일에 목록화된 모든 래스터를 표시하고 분석하는 편이 훨씬 쉬우니까요."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:668
+msgid ""
+"Borrowing the concept of virtual rasters from GDAL, **virtual point cloud "
+"(VPC)** is a file format that references other point cloud files. Software "
+"supporting virtual point clouds handles the whole tiled dataset as a single "
+"data source."
+msgstr ""
+"GDAL에서 가상 래스터라는 개념을 빌려온 **가상 점구름(VPC; Virtual Point Cloud)** 은 다른 점구름 파일들을 "
+"참조하는 파일 포맷입니다. 가상 점구름을 지원하는 소프트웨어는 타일화 데이터셋 전체를 단일 데이터 소스로 취급합니다."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:677
+msgid "The virtual point cloud"
+msgstr "가상 점구름"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:679
+msgid ""
+"Displaying and manipulating virtual point cloud is much more fluent and "
+"easy."
+msgstr "가상 점구름을 표시하고 조작하는 편이 실제 점구름 파일보다 훨씬 유연하고 쉽습니다."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:688
+msgid ""
+"The virtual point cloud output on 2D: displaying details when zooming in"
+msgstr "2차원 가상 점구름 산출물: 확대할 때의 표시 상세 수준"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:691
+msgid ""
+"At the core, a virtual point cloud file is a simple JSON file with "
+":file:`.vpc` extension, containing references to actual data files (e.g. "
+":file:`.LAS`, :file:`.LAZ` or :file:`.COPC` files) and additional metadata "
+"extracted from the files. Even though it is possible to write VPC files by "
+"hand, it is strongly recommended to create them using an automated tool, "
+"such as:"
+msgstr ""
+"가상 점구름 파일의 핵심은 실제 데이터 파일(예: :file:`.LAS`, :file:`.LAZ` 또는 :file:`.COPC` 파일)과"
+" 파일로부터 추출한 추가적인 메타데이터를 가리키는 참조를 담고 있는, :file:`.vpc` 확장자를 가진 단순 JSON 파일입니다. "
+"사용자가 직접 입력해서 VPC 파일을 작성할 수 있기는 해도, 다음과 같은 자동화 도구를 사용해서 생성하는 편을 강력하게 권장합니다:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:697
+msgid "The Processing :ref:`pdalvirtualpointcloud` algorithm"
+msgstr "공간 처리 :ref:`pdalvirtualpointcloud` 알고리즘"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:698
+msgid ""
+"The ``build_vpc`` command of `PDAL wrench <https://github.com/PDAL/wrench>`_"
+" tool"
+msgstr ""
+"`PDAL 렌치(wrench) <https://github.com/PDAL/wrench>`_ 도구의 ``build_vpc`` 명령어"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:700
+msgid ""
+"For more details, please refer to the `VPC specification "
+"<https://github.com/PDAL/wrench/blob/main/vpc-spec.md>`_ that also contains "
+"best practices and optional extensions (such as overviews)."
+msgstr ""
+"더 자세한 내용을 알고 싶다면, 최고의 예제와 (오버뷰 같은) 선택적인 확장 사양도 담고 있는 `VPC 사양 "
+"<https://github.com/PDAL/wrench/blob/main/vpc-spec.md>`_ 을 참조해주십시오."
