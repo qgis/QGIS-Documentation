@@ -661,13 +661,93 @@ msgstr ""
 msgid "As grid type, you can specify to use a:"
 msgstr "다음과 같은 그리드 유형을 사용하도록 지정할 수 있습니다:"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:295
+msgid ""
+"**Solid**: shows a line across the grid frame. The :guilabel:`Line style` "
+"can be customized using :ref:`color <color-selector>` and :ref:`symbol "
+"<symbol-selector>` selector widget;"
+msgstr ""
+"**실선(Solid)**: 그리드 프레임을 선으로 표시합니다. :guilabel:`Line style` 을 :ref:`색상 <color-"
+"selector>` 과 :ref:`심볼 <symbol-selector>` 선택기 위젯을 사용해서 사용자 지정할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:298
+msgid ""
+"**Cross**: displays segment at the grid lines intersection for which you can"
+" set the :guilabel:`Line style` and the :guilabel:`Cross width`;"
+msgstr ""
+"**십자(Cross)**: 그리드 선의 교차 지점에 선분을 표시합니다. :guilabel:`Line style` 과 "
+":guilabel:`Cross width` 를 설정할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:300
+msgid ""
+"**Markers**: only displays customizable markers symbol at grid lines "
+"intersection;"
+msgstr "**마커(Markers)**: 그리드 선의 교차 지점에 사용자 지정할 수 있는 마커 심볼만 표시합니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:301
+msgid "or **Frame and annotations only**."
+msgstr "또는 **프레임과 주석만** 표시할 수도 있습니다."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:303
 msgid "Other than the grid type, you can define:"
 msgstr "그리드 유형 외에도, 다음을 정의할 수 있습니다:"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:305
+msgid ""
+"the :guilabel:`CRS` of the grid: by default, it will follow the map item "
+"CRS. Press |setProjection| :sup:`Select CRS` button to set it to a different"
+" CRS."
+msgstr ""
+"그리드의 :guilabel:`CRS`: 기본적으로 맵 항목 좌표계를 따릅니다. |setProjection| :sup:`Select "
+"CRS` 버튼을 클릭하면 다른 좌표계로 설정할 수 있습니다."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:522
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:307
+msgid "the :guilabel:`Interval` type to use for the grid references:"
+msgstr "그리드 참조에 사용할 :guilabel:`Interval` 유형:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:309
+msgid ""
+"**Map Units**: you set a distance within the map (in the unit of the grid "
+"CRS) between consecutive grid references in the :guilabel:`X` and "
+":guilabel:`Y` directions. The number of grid ticks will vary depending on "
+"the map scale."
+msgstr ""
+"**맵 단위(Map Units)**: :guilabel:`X` 및 :guilabel:`Y` 방향으로 연속하는 그리드 참조 사이의 맵 내부"
+" 거리를 (그리드 좌표계 단위로) 설정합니다. 그리드 눈금의 개수는 맵 축척에 따라 달라질 것입니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:312
+msgid ""
+"choosing **Fit Segment Width** will dynamically select the grid interval "
+"based on the map extent to a \"pretty\" interval. That optimal interval is "
+"calculated within a range of distances whose :guilabel:`Minimum` and "
+":guilabel:`Maximum` values can be customized."
+msgstr ""
+"**선분 너비 맞추기(Fit Segment Width)** 를 선택하면 맵 범위를 기반으로 \"보기 좋은(pretty)\" 그리드 간격을"
+" 동적으로 선택할 것입니다. :guilabel:`Minimum` 및 :guilabel:`Maximum` 거리 값을 사용자 지정할 수 있는"
+" 거리 범위 안에서 이 최적 간격을 계산합니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:316
+msgid ""
+"With **Millimeters** or **Centimeters**, you set a distance on the paper "
+"between consecutive grid references in the :guilabel:`X` and :guilabel:`Y` "
+"directions. The number of grid ticks will be the same whatever the map "
+"scale."
+msgstr ""
+"**밀리미터(Millimeters)** 또는 **센티미터(Centimeters)**: :guilabel:`X` 및 "
+":guilabel:`Y` 방향으로 연속하는 그리드 참조 사이의 용지 상 거리를 설정합니다. 그리드 눈금의 개수는 맵 축척에 상관없이 "
+"동일할 것입니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:320
+msgid ""
+"the :guilabel:`Offset` from the map item edges, in the :guilabel:`X` and/or "
+"the :guilabel:`Y` direction"
+msgstr ""
+":guilabel:`Offset`: 맵 항목 경계로부터 :guilabel:`X` 그리고/또는 :guilabel:`Y` 방향으로 오프셋 "
+"거리를 정의할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:322
 msgid ""
@@ -713,9 +793,61 @@ msgid ""
 "showing on each side when working with rotated maps or reprojected grids. "
 "Also you can choose to set visible or not each side of the grid frame."
 msgstr ""
-"기울인 맵 또는 재투영한 그리드를 작업하는 경우, ``divisions`` 옵션들을 ``Latitude/Y only`` 및 "
+"기울인 맵 또는 재투영한 그리드를 작업하는 경우, 구획(division) 부분의 값을 ``Latitude/Y only`` 및 "
 "``Longitude/X only`` 로 설정하면, 그리드 프레임 양쪽에 위도/Y 및 경도/X 좌표가 섞이는 일을 방지할 수 있습니다. "
 "또 그리드 프레임 양쪽에 각각 가시화 또는 비가시화되도록 선택할 수도 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:348
+msgid ""
+"When the map item extent is rotated (from the :guilabel:`Main properties` "
+"group) or the grid has a different CRS applied, grid lines may not be "
+"orthogonal to the map item sides. This can result in bad looking of the grid"
+" when styled with interior and/or exterior ticks. Checking |checkbox| "
+":guilabel:`Follow grid rotation` will align the ticks with grid lines. "
+"Moreover, you can adjust some more properties:"
+msgstr ""
+"맵 항목 영역을 (:guilabel:`Main properties` 그룹에서) 기울였을 때 또는 그리드에 다른 좌표계를 적용시켰을 때, "
+"그리드 선이 맵 항목의 변에 평행 또는 수직이 아니게 될 수도 있습니다. 이런 경우 내부 그리고/또는 외부 눈금 스타일을 적용한 그리드가"
+" 보기 나빠질 수 있습니다. |checkbox| :guilabel:`Follow grid rotation` 옵션을 체크하면 눈금을 그리드"
+" 선에 맞춰 정렬시킬 것입니다. 게다가 몇몇 속성들을 더 조정할 수 있습니다:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:354
+msgid ""
+":guilabel:`Ticks alignment`: The interior and/or exterior ticks will be "
+"parallel to their corresponding grid line. Their alignment can be:"
+msgstr ""
+":guilabel:`Ticks alignment`: 내부 그리고/또는 외부 눈금을 대응하는 그리드 선에 평행하게 만들 것입니다. 눈금을 "
+"다음 가운데 하나로 정렬시킬 수 있습니다:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:358
+msgid ""
+"**Orthogonal**: ticks on the same side end at one line, parallel to the "
+"side. This can result e.g. in some ticks getting longer when with a low "
+"angle to the frame."
+msgstr ""
+"**직교(Orthogonal)**: 한 선에서 같은 쪽에 있는 눈금이 측면에 평행하게 끝납니다. 이렇게 설정하면 예를 들어 프레임에 작은"
+" 각도를 적용했을 때 몇몇 눈금이 더 길어질 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:360
+msgid ""
+"**Fixed length**: all ticks have the same length, so they may not align"
+msgstr ""
+"**고정 길이(Fixed length)**: 모든 눈금이 동일한 길이를 가지기 때문에, 눈금들이 정렬되지 않을 수도 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:361
+msgid ""
+":guilabel:`Skip below angle`: prevents displaying ticks for grid lines "
+"intersecting the frame border below a specified threshold"
+msgstr ""
+":guilabel:`Skip below angle`: 지정한 한계값 밑에서 프레임 경계와 교차하는 그리드 선에 눈금을 표시하지 않습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:363
+msgid ""
+":guilabel:`Margin from map corner`: prevents displaying ticks too close to "
+"the map corners, because they could overlap and/or be out of bounds."
+msgstr ""
+":guilabel:`Margin from map corner`: 맵 모서리에 너무 가까이 있는 눈금을 표시하지 않습니다. 경계와 중첩 "
+"그리고/또는 경계 바깥으로 나갈 수 있기 때문입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:372
 msgid "Grid Frame Dialog"
@@ -724,6 +856,115 @@ msgstr "그리드 프레임 대화창"
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:375
 msgid "Coordinates"
 msgstr "좌표"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:377
+msgid ""
+"The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add "
+"coordinates to the map frame. Displayed values relate to the chosen "
+":ref:`grid interval <grid_appearance>` unit. You can choose the annotation "
+"numeric format, the options range from decimal to degrees, minute and "
+"seconds, with or without suffix, aligned or not and a custom format using "
+"the expression dialog."
+msgstr ""
+"|checkbox| :guilabel:`Draw coordinates` 옵션을 활성화하면 맵 프레임에 좌표를 추가할 수 있습니다. 선택한"
+" :ref:`그리드 간격 <grid_appearance>` 단위에 관련된 값을 표시합니다. 좌표 서식으로 주석 숫자 서식을 선택할 수 "
+"있는데, 이 서식은 실수 좌표인지 도/분/초 좌표인지, 접미사 여부, 정렬 여부 옵션을 가지고 있습니다. 표현식 대화창을 이용한 사용자 "
+"지정 서식도 설정할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:384
+msgid ""
+"For each of the :guilabel:`Left`, :guilabel:`Right`, :guilabel:`Top` and "
+":guilabel:`Bottom` sides of the grid frame, you can indicate:"
+msgstr ""
+"그리드 프레임의 :guilabel:`Left`, :guilabel:`Right`, :guilabel:`Top` 및 "
+":guilabel:`Bottom` 변 각각에 대해 다음을 지정할 수 있습니다:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:387
+msgid ""
+"whether to render the coordinates: **Show all**, **Show latitude/Y only**, "
+"**Show longitude/X only**, **Disabled**. Showing only Latitude/Y or "
+"Longitude/X values in the divisions helps prevent a mix of latitude/Y and "
+"longitude/X coordinates showing on each side when working with rotated maps "
+"or reprojected grids."
+msgstr ""
+"좌표를 렌더링 할지 여부: **전부 보이기(Show all)**, **위도/Y만 보이기(Show latitude/Y only)**, "
+"**경도/X만 보이기(Show longitude/X only)**, **비활성화(Disabled)** 가운데 하나로 지정할 수 있습니다."
+" 그리드 프레임의 각 변에 위도/Y 값만 또는 경도/X 값만 보이게 하면 기울인 맵 또는 재투영한 그리드를 작업할 때 양쪽에 위도/Y 및"
+" 경도/X 좌표가 섞이는 일을 방지할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:392
+msgid ""
+"the relative position of the text to the grid frame: **Outside frame** or "
+"**Inside frame**"
+msgstr ""
+"그리드 프레임 기준 텍스트의 상대적 위치: **프레임 바깥(Outside frame)** 또는 **프레임 안쪽(Inside "
+"frame)** 가운데 하나로 지정할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:394
+msgid "the placement and orientation of the annotation:"
+msgstr "주석의 배치 및 방향:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:396
+msgid "**Horizontal**"
+msgstr "**수평(Horizontal)**"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:397
+msgid "**Vertical ascending**, **Vertical descending**"
+msgstr "**수직 오름차순(Vertical ascending)**, **수직 내림차순(Vertical descending)**"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:398
+msgid "**Boundary direction**"
+msgstr "**경계 방향(Boundary direction)**"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:399
+msgid ""
+"**Above tick**, **On tick**, **Under tick** when a tick-based frame is used"
+msgstr ""
+"눈금 기반 프레임 사용 시 **눈금 위(Above tick)**, **눈금에(On tick)**, **눈금 아래(Under tick)**"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:401
+msgid ""
+"You can also define the :guilabel:`Font` :ref:`properties <text_format>` "
+"(font, size, color, buffer,...) the :guilabel:`Distance to the map frame` "
+"and the :guilabel:`Coordinate precision` (number of decimals) for the drawn "
+"annotations."
+msgstr ""
+"주석을 그리기 위한 :guilabel:`Font` :ref:`글꼴 속성 <text_format>` (글꼴, 크기, 색상, 버퍼, "
+"...), :guilabel:`Distance to the map frame` 맵 프레임까지의 거리, 그리고 "
+":guilabel:`Coordinate precision` 좌표 정밀도(소수점 이하 자릿수)도 정의할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:405
+msgid ""
+"|unchecked| :guilabel:`Follow grid rotation`: available when the map extent "
+"is rotated or the grid is reprojected, it helps you adjust the annotations "
+"placement. Depending on the selected placement mode, the annotations are "
+"also rotated:"
+msgstr ""
+"|unchecked| :guilabel:`Follow grid rotation`: 맵 영역을 회전시키거나 그리드를 재투영한 경우 사용할 "
+"수 있는 이 옵션은 주석의 배치를 조정할 수 있게 해줍니다. 선택한 배치 모드에 따라, 주석도 회전시킵니다:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:409
+msgid ""
+":guilabel:`Annotations alignment`: it can be **Orthogonal** or of **Fixed "
+"length**"
+msgstr ""
+":guilabel:`Annotations alignment`: **직교** 또는 **고정 길이** 가운데 하나로 지정할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:410
+msgid ""
+":guilabel:`Skip below angle`: prevents displaying annotations for grid lines"
+" intersecting the frame border below a specified threshold"
+msgstr ""
+":guilabel:`Skip below angle`: 지정한 한계값 밑에서 프레임 경계와 교차하는 그리드 선에 주석을 표시하지 않습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:412
+msgid ""
+":guilabel:`Margin from map corner`: prevents displaying annotations too "
+"close to the map corners, because they could overlap and/or be out of "
+"bounds."
+msgstr ""
+":guilabel:`Margin from map corner`: 맵 모서리에 너무 가까이 있는 주석을 표시하지 않습니다. 경계와 중첩 "
+"그리고/또는 경계 바깥으로 나갈 수 있기 때문입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:421
 msgid "Grid Draw Coordinates dialog"
