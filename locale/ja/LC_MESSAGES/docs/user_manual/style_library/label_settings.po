@@ -290,6 +290,25 @@ msgstr "テキスト、下線、取り消し線、上線に適用される色"
 msgid "Font properties (font family, font size, bold and italic)"
 msgstr "フォントのプロパティ（フォントファミリ、フォントサイズ、太字、斜体）"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:139
+msgid ""
+"Superscript and subscript components in text, where the text will be "
+"vertically :sup:`super` or :sub:`sub` aligned and automatically sized to 2/3"
+" of the parent font size. You can also set a fixed font size for the "
+"superscript/subscript by including css rules, e.g.:"
+msgstr ""
+"テキスト内の上付き文字と下付き文字のコンポーネントは、テキストが縦方向に :sup:`上付き` または :sub:`下付き` "
+"に揃えられ、自動的に親フォントサイズの2/3のサイズになります。また、cssルールを含めることで、上付き文字/下付き文字のフォントサイズを固定にすることもできます:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:149
+msgid ""
+"The CSS formatting rules ``vertical-align: super`` or ``vertical-align: "
+"sub`` are also available in any other HTML element (annotation, layout label"
+" or HTML items, ...)."
+msgstr ""
+"CSSフォーマットルール ``vertical-align: super`` または ``vertical-align: sub`` "
+"は、他のHTML要素（注釈、レイアウトラベル、HTMLアイテムなど）でも使用できます。"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:152
 msgid ""
 "In order to use the HTML formatting, you need to provide the HTML code in "
@@ -824,6 +843,22 @@ msgstr "上述のテキスト書式設定以外にも、ラベルや地物との
 #: ../../docs/user_manual/style_library/label_settings.rst:421
 msgid "Mask tab"
 msgstr "マスクグリッド（Mask）"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:423
+msgid ""
+"The |labelmask| :guilabel:`Mask` tab allows you to define a mask area around"
+" the labels. This feature is very useful when you have overlapping symbols "
+"and labels with similar colors, and you want to make the labels visible. A "
+"label mask prevents specified features from drawing within the boundary set "
+"for the mask. For example, you could set a label mask so that a specified "
+"layer does not draw within 2mm of the label, but allow features from another"
+" layer to still show. Label masks are similar to label buffers in that they "
+"allow control of the legibility of labels that cover other features. The "
+"label buffer draws on top of any underlying features, while the label mask "
+"selectively stops other layers from drawing."
+msgstr ""
+"|labelmask| :guilabel:`マスクグリッド` "
+"タブでは、ラベルの周りにマスク領域を定義することができます。この機能は、似たような色のシンボルとラベルが重なっていて、ラベルを見えるようにしたい場合に非常に便利です。ラベルマスクは、マスクに設定された境界内に指定された地物が描画されるのを防ぎます。例えば、指定したレイヤはラベルの2mm以内に描画しないが、別のレイヤの地物は表示できるようにラベルマスクを設定することができます。ラベルマスクは、他の地物を覆うラベルの可読性を制御できる点で、ラベルバッファと似ています。ラベルバッファは下にある地物の上に描画しますが、ラベルマスクは他のレイヤの描画を選択的に止めます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:972
 msgid "labelmask"
