@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoyuki arai <tarai.3367@gmail.com>, 2024
 # Transifex Bot <>, 2024
 # Harrissou Sant-anna, 2024
 # tomoya miyoshi, 2024
+# tomoyuki arai <tarai.3367@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-08 11:43+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: tomoya miyoshi, 2024\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1410,9 +1410,8 @@ msgid ""
 " should either :guilabel:`Open layer properties` (default), :guilabel:`Open "
 "attribute table` or :guilabel:`Open layer styling dock`."
 msgstr ""
-"::guilabel:`凡例をダブルクリックした場合の動作`: レイヤ上でダブルクリックしたときは "
-":guilabel:`レイヤのプロパティを開く`（デフォルト）、 :guilabel:`属性テーブルを開く`、 "
-":guilabel:`レイヤスタイルドックを開く` のいずれか。"
+":guilabel:`凡例をダブルクリックした場合の動作`: レイヤ上でダブルクリックしたときは :guilabel:`レイヤのプロパティを開く` "
+"（デフォルト）、 :guilabel:`属性テーブルを開く` 、 :guilabel:`レイヤスタイルドックを開く` のいずれか。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:708
 msgid ""
@@ -2056,7 +2055,7 @@ msgid ""
 "which should assist in troubleshooting large scenes."
 msgstr ""
 ":guilabel:`グラフィックスメモリー` の下にある :guilabel:`地図レイヤごとのメモリ使用量上限` "
-"オプションで、各レイヤのGPUメモリ制限設定を行うことができます。これは、利用可能なGPUメモリリソースを使い果たすような大きな3Dシーンを利用するユーザーにとって便利である。制限に達すると警告も表示されるので、大きなシーンのトラブルシューティングに役立つはずです。"
+"オプションで、各レイヤのGPUメモリ制限設定を行うことができます。これは、利用可能なGPUメモリリソースを使い果たすような大きな3Dシーンを利用するユーザーにとって便利です。制限に達すると警告も表示されるので、大きなシーンのトラブルシューティングに役立つはずです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1004
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1011
@@ -2518,13 +2517,135 @@ msgid ""
 ":guilabel:`Port` your GPS is connected to, and providing a "
 ":guilabel:`Device` name)"
 msgstr ""
-"|radioButtonOff| :guilabel:`gpsd`（GPSが接続されている :guilabel:`ホスト` と "
-":guilabel:`ポート番号` を選択し、 :guilabel:`デバイス` 名を指定します。）"
+"|radioButtonOff| :guilabel:`gpsd` （GPSが接続されている :guilabel:`ホスト` と "
+":guilabel:`ポート番号` を選択し、 :guilabel:`デバイス` 名を指定します）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1242
 msgid ""
 "In case of connection problems, you can try to switch from one to another."
 msgstr "接続に問題がある場合は、別のものに切り替えてみることができます。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1244
+msgid ""
+":guilabel:`Filtering`: You can set an :guilabel:`Acquisition interval "
+"(seconds)` and/or a :guilabel:`Distance threshold (meters)` parameters to "
+"keep the cursor still active when the receiver is in static conditions."
+msgstr ""
+":guilabel:`フィルタ適用`:  :guilabel:`取得間隔（秒）` と :guilabel:`距離閾値（メートル）` "
+"パラメータの両方または片方を設定して、受信機が静止している状態でもカーソルをアクティブにしておくことができます。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1248
+msgid ""
+"Under :guilabel:`Geometry Options`, the :guilabel:`Store in M values` option"
+" allows to create geometries with M values from the inbuilt GPS logging "
+"tools. This applies to both features digitized from GPS logs and from the "
+":ref:`Log to Geopackage/SpatiaLite <gps_logging>` functionality... Options "
+"include storing timestamps (as ms since epoch), ground speed, altitudes, "
+"bearings, and accuracy components as m values."
+msgstr ""
+":guilabel:`ジオメトリオプション` の下にある :guilabel:`M値を保存` "
+"オプションでは、GPSロギングツールに内蔵の値を使用して、M値を持ったジオメトリを作成することができます。これは、GPSログからデジタイズされる地物と、"
+" :ref:`Geopackage/SpatiaLiteにログ... <gps_logging>` "
+"機能でデジタイズされる地物の両方に適用されます。M値として保存する選択肢には、タイムスタンプ（エポックからのミリ秒）や地上速度、標高、方位、精度成分などがあります。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1255
+msgid ":guilabel:`GPS Location Marker`"
+msgstr ":guilabel:`GPS位置マーカー`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1257
+msgid ""
+"Configure a symbol for the :guilabel:`GPS location marker`, indicating the "
+"current GPS position"
+msgstr "GPSの現在位置を示す :guilabel:`GPS位置マーカー` シンボルの設定"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1258
+msgid ""
+"|checkbox| :guilabel:`Rotate location marker to match GPS bearing`: whether "
+"the marker symbol should be rotated to match the GPS direction"
+msgstr ""
+"|checkbox| :guilabel:`GPSの方角に合わせて回転`: マーカーシンボルをGPSの方角に一致するように回転させるかどうか"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1261
+msgid ":guilabel:`GPS Bearing`:"
+msgstr ":guilabel:`GPS方位`:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1263
+msgid ""
+"configure a :guilabel:`Bearing line style` using QGIS line symbol properties"
+msgstr "QGISのラインシンボルプロパティを使用した、 :guilabel:`方位線スタイル` の設定"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1264
+msgid ""
+"set whether to |unchecked| :guilabel:`Calculate Bearings from travel "
+"direction`: If checked, the bearing reported by the GPS device will be "
+"ignored and the bearing will instead be calculated by the angle between the "
+"previous two GPS locations."
+msgstr ""
+"|unchecked| :guilabel:`移動方向の方位を計算` "
+"するかどうかの設定：チェックした場合、GPSデバイスによる方位は無視され、代わりに直前の2つのGPS位置間の角度によって方位が計算されます。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1268
+msgid ""
+":guilabel:`GPS Track`: set symbol to use for the :guilabel:`Track line "
+"style`"
+msgstr ":guilabel:`GPSトラック` ： :guilabel:`トラック線スタイル` に使用するシンボルの設定"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1269
+msgid ""
+":guilabel:`Map Centering and Rotation`: defines when the map canvas is "
+"updated according to the user displacement on the field:"
+msgstr ":guilabel:`地図のセンタリングと回転` ：フィールド上でのユーザーの変位に基づいてマップキャンバスを更新する条件を定義します"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1272
+msgid ""
+":guilabel:`Threshold for automatic map centering`: defines the minimal "
+"offset of the GPS position from the map canvas center to trigger an "
+"automatic :ref:`map recentering <gps_recenter>` if enabled."
+msgstr ""
+":guilabel:`地図の自動センタリングの閾値` は、自動的な :ref:`地図の再センタリング <gps_recenter>` "
+"が有効となっている場合に、再センタリングをトリガーするためのマップキャンバス中心からGPS位置までの最小オフセットを定義します。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1275
+msgid ""
+":guilabel:`Automatic map rotation frequency`: defines how often the map "
+"rotation to match the GPS bearing could happen; it can be on a custom "
+"duration or :guilabel:`On GPS signal`."
+msgstr ""
+":guilabel:`地図の自動回転の頻度` は、GPSの方位に合わせるようにマップを回転させる頻度を定義します。特定の秒間隔とするか、 "
+":guilabel:`GPS信号上` の間隔にできます。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1279
+msgid ""
+":guilabel:`Timestamp Properties` to configure how time values are displayed "
+"and stored in the data. Parameters include the :guilabel:`Format` which can "
+"be:"
+msgstr ""
+":guilabel:`タイムスタンプ属性` は、時間値の表示方法やデータ内への保存方法を設定します。 :guilabel:`フォーマット` "
+"のパラメータには、以下のものがあります："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1283
+msgid ":guilabel:`Local time`"
+msgstr ":guilabel:`ローカル時間`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1284
+msgid ":guilabel:`UTC`"
+msgstr ":guilabel:`UTC（協定世界時）`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1285
+msgid ""
+":guilabel:`UTC with offset`, to account for daylight savings offsets or "
+"other complex time zone issues"
+msgstr ":guilabel:`UTC＋オフセット` ：サマータイムやその他タイムゾーンに関する複雑な問題を考慮した時間値"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1287
+msgid "a specific :guilabel:`Time zone`"
+msgstr "特定の :guilabel:`タイムゾーン`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1289
+msgid ""
+"Moreover, :guilabel:`Leap seconds` correction can be applied, by adding the "
+"seconds to GPS timestamp."
+msgstr "さらに、 :guilabel:`閏秒` 補正を適用することもできます。GPSのタイムスタンプに秒数が加算されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1294
 msgid "GPSBabel"
@@ -2570,7 +2691,7 @@ msgstr "search"
 msgid ""
 ":guilabel:`Project Layers` (``l``): finds and selects a layer in the "
 ":guilabel:`Layers` panel."
-msgstr ":guilabel:`プロジェクトのレイヤ ` (``l``):  :guilabel:`レイヤ` パネル内のレイヤを検索し、選択します。"
+msgstr ":guilabel:`プロジェクトのレイヤ` (``l``):  :guilabel:`レイヤ` パネル内のレイヤを検索し、選択します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1326
 msgid ":guilabel:`Project Layouts` (``pl``): finds and opens a print layout."
@@ -2827,6 +2948,91 @@ msgstr ":guilabel:`入力補完の閾値` ：自動補完リストを表示す�
 msgid "under :guilabel:`Typing`"
 msgstr ":guilabel:`タイピング`"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1452
+msgid ""
+"|checkbox| :guilabel:`Automatic parentheses insertion`: When no text is "
+"selected, if an opening character (parentheses, quotes, brackets, ...) is "
+"entered, inserts the matching closing character just after the cursor. Note "
+"that this behavior is disabled if the current cursor is inside a string or "
+"comment."
+msgstr ""
+"|checkbox| :guilabel:`カッコの自動挿入` "
+"：テキストが選択されていないときにカッコや引用符、ブラケット等の開始文字を入力すると、対応する終了文字がカーソルの直後に挿入されます。現在のカーソルが文字列やコメントの内部にある場合、この動作は無効になることに注意してください。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1456
+msgid ""
+"|checkbox| :guilabel:`Automatically surround selection when typing quotes or"
+" brackets`: When an opening character is entered, the selected text is "
+"enclosed in the opening/closing pair. Selection remains the same, so it is "
+"possible to quote a selected word and enclose it in parentheses just by "
+"typing ``\"`` then ``(``."
+msgstr ""
+"|checkbox| :guilabel:`かっこや引用符で自動選択する` "
+"：開始文字が入力されると、選択されたテキストはカッコや引用符等の開始・終了ペアで囲まれます。選択状態は変わらないので、 ``\"`` を入力して次に "
+"``(`` を入力すれば、選択した単語を引用符で囲み、さらにこの単語をカッコの中に入れることができます。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1461
+msgid ""
+"Special case for multiline selection with quotes and double quotes: "
+"selection is enclosed in triple single/double quotes."
+msgstr "複数行選択に対する引用符や二重引用符は特別なケースです。選択箇所は3連の引用符や二重引用符で囲まれます。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1463
+msgid ""
+"|unchecked| :guilabel:`Automatic insertion of the 'import' string on 'from "
+"xxx'`: Enables insertion of 'import' when specifying imports"
+msgstr ""
+"|unchecked| :guilabel:`'from xxx' に 'import' 文字列を自動挿入する` ：インポート指定の際に "
+"'import' 文字列の挿入を有効にします。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1466
+msgid ""
+"under :guilabel:`Formatting`, you can add automated tools to reformat the "
+"code you are writing:"
+msgstr ":guilabel:`フォーマット` では、書いているコードを再フォーマットするための自動化ツールを追加できます。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1468
+msgid ""
+"|unchecked| :guilabel:`Reformat on save`: formatting is applied just before "
+"saving the script"
+msgstr "|unchecked| :guilabel:`保存時に再フォーマット` ：スクリプトを保存する直前にフォーマッタを適用します"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1469
+msgid ""
+"|checkbox| :guilabel:`Sort imports`: sorts 'import' statements using the "
+"`isort library <https://pycqa.github.io/isort/>`_"
+msgstr ""
+"|checkbox| :guilabel:`インポートをソート` ： 'import' 文を `isort ライブラリ "
+"<https://pycqa.github.io/isort/>`_ を使用してソートします"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1471
+msgid ""
+":guilabel:`Maximum line length`: controls how the formatter will wrap the "
+"lines, and controls the editor ruler"
+msgstr ":guilabel:`1行の最大文字数` ：フォーマッタが行をどのように折り返すかを制御し、エディタのルーラーを制御します。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1472
+msgid ""
+":guilabel:`Formatter` - supported tools are :guilabel:`autopep8` and "
+":guilabel:`black`, with dedicated option:"
+msgstr ""
+":guilabel:`フォーマッター` ：サポートするツールは、 :guilabel:`autopep8` と :guilabel:`black` "
+"で、以下の専用オプションがあります。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1474
+msgid ""
+":guilabel:`Autopep8 level` - more details at `autopep8 advanced usage "
+"<https://pypi.org/project/autopep8/#more-advanced-usage>`_"
+msgstr ""
+":guilabel:`Autopep8レベル` 詳細については `autopep8 advanced usage "
+"<https://pypi.org/project/autopep8/#more-advanced-usage>`_ を参照してください"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1476
+msgid ""
+"|unchecked| :guilabel:`Normalize quotes`: replaces all single quotes with "
+"double quotes if possible"
+msgstr "|unchecked| :guilabel:`引用符を正規化する` ：可能な場合には全ての一重引用符を二重引用符に置き換えます"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1478
 msgid "under :guilabel:`Run and Debug`"
 msgstr "実行とデバッグ"
@@ -2951,6 +3157,10 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1560
 msgid "Working with User Profiles"
 msgstr "ユーザープロファイルの操作"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1563
+msgid "The concept"
+msgstr "コンセプト"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1565
 msgid ""
@@ -3091,9 +3301,81 @@ msgid ""
 msgstr ""
 "QGISの一部の機能で奇妙な動作が発生した場合には、新しいユーザープロファイルを作成してコマンドを再度実行してください。バグは、現在のユーザープロファイルに残っているものが関係していることがあります。新しいユーザープロファイルを作成すると、新しい（クリーンな）プロファイルでQGISを再起動するため、バグが修正されることがあります。"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1616
+msgid "Setting user profile"
+msgstr "ユーザープロファイルの設定"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1618
+msgid ""
+"By default, QGIS opens a new session with the profile of the last closed "
+"session. This, among other settings, can be customized in "
+":menuselection:`Settings -->` |options| :menuselection:`Options -->` |user| "
+":menuselection:`User Profiles` tab:"
+msgstr ""
+"デフォルトでは、QGISは最後にセッションを閉じたときのプロファイルで新しいセッションを開きます。この設定は他の設定とともに、 "
+":menuselection:`設定 -->` |options| :menuselection:`オプション -->` |user| "
+":menuselection:`ユーザープロファイル` タブでカスタマイズできます。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2792
 msgid "user"
 msgstr "user"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1627
+msgid "User profiles settings"
+msgstr "ユーザープロファイルの設定"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1629
+msgid ""
+":guilabel:`Startup profile`: indicates the user profile to use when starting"
+" a QGIS session. It can be:"
+msgstr ""
+":guilabel:`スタートアッププロファイル` "
+"：QGISセッションを開始したときに使用するユーザープロファイルを指定します。以下の選択肢があります："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1632
+msgid ":guilabel:`Use last closed profile`"
+msgstr ":guilabel:`最後に閉じたプロファイルを使う`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1633
+msgid ""
+"a specific user profile to select from :guilabel:`Always use profile` drop-"
+"down menu"
+msgstr ":guilabel:`常にプロファイルを使う` ドロップダウンメニューから選択した、特定のユーザープロファイル"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1634
+msgid ""
+":guilabel:`Choose profile at start up`: Opens the :guilabel:`User Profile "
+"Selector` dialog listing available user profiles. Double-click an entry or "
+"select a profile and press :guilabel:`OK` to use that user profile for the "
+"starting session. It is also possible to |symbologyAdd| :guilabel:`Add new "
+"profile` to the list: a profile is created from scratch and automatically "
+"run with the opening session."
+msgstr ""
+":guilabel:`起動時にプロファイルを選択` ：起動時に :guilabel:`ユーザープロファイルを選択` "
+"ダイアログが開き、利用可能なユーザープロファイルがリストされます。エントリをダブルクリックするか、プロファイルを選択して :guilabel:`OK` "
+"ボタンを押すと、そのユーザープロファイルを使用してセッションを開始します。リストに |symbologyAdd| "
+":guilabel:`新規プロファイルを追加` することもできます。プロファイルはゼロから作成され、セッションは自動的にこのプロファイルで開始します。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1641
+msgid "Under :guilabel:`Profile display`, you can set:"
+msgstr ":guilabel:`プロファイル表示` では、以下の設定ができます："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1643
+msgid ""
+"The size of icons to use when selecting a profile from the :guilabel:`User "
+"Profile Selector` dialog."
+msgstr ":guilabel:`ユーザープロファイルを選択` ダイアログでプロファイルを選択する際に使用されるアイコンのサイズ"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1644
+msgid ""
+"A specific icon to display next to the current profile in the "
+":menuselection:`Settings --> User profiles` menu or the :guilabel:`User "
+"Profile Selector` dialog. Press |refresh| :sup:`Reset profile icon` to "
+"remove custom modifications."
+msgstr ""
+":menuselection:`設定 --> ユーザープロファイル` メニュー内の現在のプロファイルの横や、 "
+":guilabel:`ユーザープロファイルを選択` ダイアログで表示されるアイコン。 |refresh| :sup:`アイコンをリセット` "
+"ボタンを押すと、カスタム変更を削除することができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2750
 msgid "refresh"
@@ -3227,6 +3509,17 @@ msgstr ""
 "または定義済みのリスト（Clarke 1866、 Clarke 1880 IGN、 New International 1967、 WGS 84 など）"
 " から既存のものを選択します。"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1708
+msgid ""
+"the :guilabel:`Units for distance measurements` for length and perimeter, "
+"and the :guilabel:`Units for area measurements`. These settings which "
+"default to their corresponding :ref:`global options <global_measure_tool>` "
+"override them in the current project. They are used in:"
+msgstr ""
+"長さと周長のための :guilabel:`距離計測の単位` と、 :guilabel:`面積計測の単位` 。これらの設定は、デフォルトでは対応する "
+":ref:`グローバルオプション <global_measure_tool>` "
+"の設定が使われますが、現在のプロジェクトの単位で上書きされ、以下の値の単位に使用されます。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1714
 msgid "Attribute table field update bar"
 msgstr "属性テーブルのフィールド更新バー"
@@ -3234,6 +3527,19 @@ msgstr "属性テーブルのフィールド更新バー"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1715
 msgid "Field calculator calculations"
 msgstr "フィールド計算機の計算"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1716
+msgid ""
+":ref:`Identify tool <identify>` derived length, perimeter and area values"
+msgstr ":ref:`地物情報表示ツール <identify>` で表示される長さ、周長および面積値"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1717
+msgid ":ref:`measure dialog <sec_measure>`"
+msgstr ":ref:`計測ダイアログ <sec_measure>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1718
+msgid ":ref:`scale bar decoration <scalebar_decoration>`"
+msgstr ":ref:`地図整飾のスケールバー <scalebar_decoration>`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1722
 msgid ""
@@ -3482,6 +3788,10 @@ msgstr ""
 msgid "symbology"
 msgstr "symbology"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1839
+msgid "Default symbols"
+msgstr "デフォルトのシンボル"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1841
 msgid ""
 "The :guilabel:`Default Symbols` group lets you control how new layers will "
@@ -3518,6 +3828,10 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1863
 msgid "Styles tab"
 msgstr "スタイルタブ"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1868
+msgid "Project Colors"
+msgstr "プロジェクトの色"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1870
 msgid ""
@@ -3579,6 +3893,44 @@ msgid ""
 " use."
 msgstr "プロジェクトの色を一度更新するだけで、その色が使われている箇所の「全て」に変更が反映されます。"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1905
+msgid "Style Database"
+msgstr "スタイルデータベース"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1907
+msgid ""
+"A style database in QGIS is a structured repository designed to store "
+"symbols, text formats, and other styling elements. It serves as a "
+"centralized location where you can organize and manage your symbology "
+"resources efficiently. You can create a dedicated style database for a "
+"specific client, housing symbols tailored to that client's need. This "
+"ensures a clean and organized approach, without cluttering the default style"
+" database. In multi-user environments, it's possible to store project-"
+"specific styles in a shared location. By linking a project to these styles, "
+"all users within the project gain access to common symbology, eliminating "
+"the need for manual import or updates to individual local style database. "
+"Storing symbols in a project file offers a practical solution, preventing "
+"users from overcrowding their global style database with project-specific "
+"symbology. This approach guarantees that other users working on the same "
+"project immediately have access to all the necessary symbology upon loading "
+"the project."
+msgstr ""
+"QGIS "
+"のスタイルデータベースは、シンボルやテキストフォーマット、およびその他のスタイル要素を格納するために設計された、構造化されたリポジトリです。これは、シンボロジのリソースを効率的に整理し管理できる一元的な場所として機能します。特定のクライアント専用のスタイルデータベースを作成し、そのクライアントのニーズに合わせて作成されたシンボルを格納することができます。これにより、デフォルトのスタイルデータベースをごちゃごちゃにすることなく、すっきりと整理されたアプローチが保証されます。マルチユーザー環境では、プロジェクト固有のスタイルを共有の場所に保存できます。プロジェクトをこれらのスタイルにリンクすることで、プロジェクト内のすべてのユーザーが共通のシンボロジにアクセスできるようになり、手動でインポートしたり、個人のローカルスタイルデータベースを更新する必要がなくなります。プロジェクトファイル内にシンボルを保存することは実用的なソリューションです。ユーザーがグローバルなスタイルデータベースにプロジェクト固有のシンボルを詰め込みすぎることを防げます。このアプローチは、同じプロジェクトで作業している他のユーザーがプロジェクトをロードしたときに、必要なすべてのシンボルにすぐにアクセスできることを保証します。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1922
+msgid ""
+"In the :guilabel:`Style Database` section you can choose to |symbologyAdd| "
+":guilabel:`Add` or |symbologyRemove| :guilabel:`Remove` style database or "
+"you can |newPage| :guilabel:`Create new style database`. When you add or "
+"remove a style database in this section, the changes will be automatically "
+"reflected in the |symbology| :guilabel:`Symbology Properties`."
+msgstr ""
+":guilabel:`スタイルデータベース` のセクションでは、 |symbologyAdd| :guilabel:`既存のスタイルデータベースを追加`"
+" や |symbologyRemove| :guilabel:`選択したスタイルデータベースを削除` 、あるいは |newPage| "
+":guilabel:`新規スタイルデータベースを作成` を選択できます。このセクションでスタイルデータベースを追加または削除すると、その変更は自動的に "
+"|symbology| :guilabel:`シンボロジプロパティ` に反映されます。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2726
 msgid "newPage"
 msgstr "newPage"
@@ -3594,6 +3946,12 @@ msgstr "|openTable| :guilabel:`データソース` タブでは、以下の設�
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2732
 msgid "openTable"
 msgstr "openTable"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1936
+msgid ""
+":guilabel:`Transaction mode`, defines how edits are sent to the data "
+"provider:"
+msgstr ":guilabel:`トランザクションモード` は、編集内容がデータプロバイダに送信される方法を定義します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1938
 msgid ""
@@ -3763,6 +4121,21 @@ msgstr "データソースタブ"
 msgid "Relations Properties"
 msgstr "リレーションプロパティ"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2017
+msgid ""
+"The |relations| :guilabel:`Relations` tab is used to define relations "
+"between layers. The relations can be of one to one, many to many or "
+"polymorphic type. They are defined in the project properties dialog. Once "
+"relations exist for a layer, a new user interface element in the form view "
+"(e.g. when identifying a feature and opening its form) will list the related"
+" entities. This provides a powerful way to express e.g. the inspection "
+"history on a length of pipeline or road segment. You can find out more about"
+" relations support in section :ref:`vector_relations`."
+msgstr ""
+"|relations| :guilabel:`リレーション` "
+"タブは、レイヤ間のリレーションを定義するために使用されます。リレーションは1対1、多対多、あるいは多態リレーションとすることができます。これらのリレーションは、プロジェクトのプロパティダイアログで定義されます。あるレイヤにリレーションが存在すると、フォームビューの新しいユーザーインタフェース要素（例えば、地物を特定し、そのフォームを開くとき）に関連するエンティティのリストが表示されます。これは、例えばパイプラインの長さや道路区間の検査履歴を表現するための強力な方法を提供します。リレーションのサポートについての詳細は、"
+" :ref:`vector_relations` のセクションを参照してください。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2752
 msgid "relations"
 msgstr "relations"
@@ -3868,6 +4241,20 @@ msgstr "プロジェクトの時系列タブ"
 msgid "Terrain Properties"
 msgstr "地形プロパティ"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2102
+msgid ""
+"The |layoutItem3DMap| :guilabel:`Terrain` tab helps you configure default "
+"settings for the terrain and elevation. When any new :ref:`3d map "
+"<label_3dmapview>` is created in the project, the map will default to using "
+"the same terrain settings as are defined for the project. The project "
+"elevation settings will also be respected by the :ref:`elevation profile "
+"<label_elevation_profile_view>` tool."
+msgstr ""
+"The |layoutItem3DMap| :guilabel:`地形` タブでは、地形や標高のデフォルト設定を行えます。プロジェクトで任意の新規 "
+":ref:`3Dマップ <label_3dmapview>` "
+"が作成されると、そのマップはデフォルトでプロジェクト定義の地形設定と同じ設定を使用します。プロジェクトの標高設定は、 :ref:`標高断面図 "
+"<label_elevation_profile_view>` ツールでも使用されます。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2720
 msgid "layoutItem3DMap"
 msgstr "layoutItem3DMap"
@@ -3875,6 +4262,10 @@ msgstr "layoutItem3DMap"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2115
 msgid "Project Terrain tab"
 msgstr "プロジェクトの地形タブ"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2117
+msgid ":guilabel:`Terrain` and elevation options are available for:"
+msgstr ":guilabel:`地形` と標高のオプションには、以下のものがあります："
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2119
 msgid ":guilabel:`Flat terrain` with :guilabel:`Terrain height` setting"
@@ -3904,6 +4295,59 @@ msgid ""
 " <scene_configuration>`."
 msgstr "これらの設定は、3Dマップの :ref:`設定ダイアログ <scene_configuration>` から上書きできます。"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2131
+msgid ""
+"With |unchecked| :guilabel:`Global map shading` settings, you apply a global"
+" shading effect to the map, based on the elevation of all the active layers "
+"that have elevation properties enabled, including:"
+msgstr ""
+"|unchecked| :guilabel:`グローバルマップシェーディング` "
+"の設定では、標高プロパティが有効となっているすべてのアクティブなレイヤの標高に基づいて、マップに対するグローバルな陰影効果を適用します。これは以下のレイヤが対象です："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2134
+msgid ":ref:`raster layers <raster_elevation>`"
+msgstr ":ref:`ラスタレイヤ <raster_elevation>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2135
+msgid ":ref:`mesh layers <meshelevation>`"
+msgstr ":ref:`メッシュレイヤ <meshelevation>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2136
+msgid ":ref:`point cloud layers <point_clouds_elevation>`"
+msgstr ":ref:`点群レイヤ <point_clouds_elevation>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2138
+msgid ""
+":guilabel:`Method to combine`: the elevation value at any particular "
+"position for all the relevant layers are combined, and the considered "
+"elevation is chosen depending on one of these methods:"
+msgstr ""
+":guilabel:`合成方法` "
+"：関連するレイヤすべての任意の位置の標高値は合成され、シェーディングに考慮される標高は以下のいずれかの方法で選択されます："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2141
+msgid ":guilabel:`Highest elevation` value"
+msgstr ":guilabel:`最高標高` 値"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2142
+msgid ""
+":guilabel:`Based on layer's order`: the elevation on the topmost layer in "
+"the layer tree is considered."
+msgstr ":guilabel:`レイヤ順` ：レイヤツリーの最上位のレイヤの標高値が考慮されます"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2144
+msgid "Supported shading options are:"
+msgstr "サポートしているシェーディングオプションは、"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2146
+msgid ""
+"|checkbox| :guilabel:`Eye-dome lighting`: applies shading effects to the map"
+" canvas for a better depth rendering. Following parameters can be "
+"controlled:"
+msgstr ""
+"|checkbox| :guilabel:`アイドーム照明（EDL）` "
+"：マップキャンバスに陰影効果を適用し、より良い深度レンダリングを実現します。以下のパラメータを制御できます。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2149
 msgid ""
 ":guilabel:`Strength`: increases the contrast, allowing for better depth "
@@ -3916,9 +4360,92 @@ msgid ""
 "center pixel and has the effect of making edges thicker."
 msgstr ":guilabel:`距離`: 中心ピクセルからの使用ピクセルの距離を表し、エッジを太くする効果があります。"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2153
+msgid ""
+"|unchecked| :guilabel:`Hillshading`, shaping some reliefs on the map using "
+"shading (levels of gray):"
+msgstr "|unchecked| :guilabel:`陰影化` ：シェーディング（グレーレベル）を使用して地図上に陰影を作成します。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2155
+msgid ":guilabel:`Z Factor`: Scaling factor for the elevation value"
+msgstr ":guilabel:`Z係数` ：標高値に対するスケーリング係数"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2156
+msgid ""
+"|unchecked| :guilabel:`Multidirectional`: Specify if multidirectional "
+"hillshading is to be used"
+msgstr "|unchecked| :guilabel:`多方向シェーディング` ：多方向のシェーディングを使用するかを指定します"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2157
+msgid ":guilabel:`Azimuth`: The azimuth of the light source"
+msgstr ":guilabel:`方位角` ：光源の方位角"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2158
+msgid ":guilabel:`Altitude`: The elevation angle of the light source"
+msgstr ":guilabel:`高度` ：光源の仰角"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2160
+msgid ""
+"A shortcut to :guilabel:`Global map shading` properties is available through"
+" the :guilabel:`Layer Styling` panel."
+msgstr ""
+":guilabel:`レイヤスタイル` パネルから :guilabel:`グローバルシェーディング` プロパティへのショートカットが利用可能です。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2168
+msgid "Sensors Properties"
+msgstr "センサプロパティ"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2170
+msgid ""
+"The |sensor| :guilabel:`Sensors` tab is used to configure sensors and toggle"
+" their connection status. When active, sensors will passively collect data "
+"in the background and make available their latest data to expressions and "
+"python scripts."
+msgstr ""
+"|sensor| :guilabel:`センサ` "
+"タブは、センサの設定と接続状態の切り替えに使用します。センサがアクティブな場合、センサはバックグラウンドで受動的にデータを収集し、その最新のデータを式やpythonスクリプトで利用できます。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2768
 msgid "sensor"
 msgstr "sensor"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2180
+msgid "Project Sensors tab"
+msgstr "プロジェクトのセンサタブ"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2182
+msgid ""
+"To add a new sensor, click on the |symbologyAdd| button. A settings sub-"
+"panel will open and allow you to configure:"
+msgstr "新しいセンサを追加するには、 |symbologyAdd| ボタンをクリックします。設定サブパネルが開き、以下を設定できます："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2185
+msgid ""
+"the :guilabel:`Sensor name`: used to retrieve sensor values in expressions "
+"and python scripts;"
+msgstr ":guilabel:`センサ名` ：式やpythonスクリプトでセンサの値を取得するために使用する名前"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2187
+msgid "the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and"
+msgstr ":guilabel:`センサのタイプ` ：TCP、UDP、シリアルポートがあり、"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2188
+msgid "additional type-specific details (e.g. host name and port)"
+msgstr "さらに、タイプに特有の追加の詳細（例：ホスト名とポート）があります"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2195
+msgid "Sensor Settings sub-panel"
+msgstr "センサ設定のサブパネル"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2197
+msgid ""
+"Once a sensor is configured, you can use the |start| :sup:`Start` button to "
+"connect the sensor. Once active, the last collected data will be displayed "
+"in the sensors table's :guilabel:`Last value` column."
+msgstr ""
+"センサを設定したら、 |start| :sup:`センサ接続の状態を切り替え` "
+"ボタンを使用してセンサに接続できます。アクティブになると、最後に収集されたデータがセンサのテーブルの :guilabel:`最終値` "
+"カラムに表示されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2772
 msgid "start"
@@ -4017,7 +4544,7 @@ msgid ""
 "various setups for different use cases as well."
 msgstr ""
 "変更は |fileSave| :sup:`ファイルへ保存` ボタン使用して ``.ini`` ファイルにも保存できます "
-"。これは、複数のユーザー間で共通のQGISインターフェイスを共有するための便利な方法です。 ``.ini`` "
+"。これは、複数のユーザー間で共通のQGISインタフェースを共有するための便利な方法です。 ``.ini`` "
 "ファイルをインポートするには、共有先のコンピュータで |fileOpen| :sup:`ファイルから読み込む` をクリックするだけです。また同様に、 "
 ":ref:`コマンドラインツール <custom_commandline>` を実行してさまざまなユースケースに応じた各種設定を保存できます。 "
 
@@ -4258,7 +4785,7 @@ msgid ""
 "This option probably makes more sense when paired with the ``--project`` "
 "option to open a specific project at the desired extent."
 msgstr ""
-"このオプションは ``-project`` "
+"このオプションは ``--project`` "
 "オプションと組み合わせて、特定のプロジェクトを目的の範囲で開くようにすれば、より意味のあるものになるでしょう。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2424
@@ -4560,6 +5087,15 @@ msgstr ""
 msgid "``--profile``"
 msgstr "``--profile``"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2579
+msgid ""
+"Loads QGIS using a specific profile from the user's profile folder. This "
+"option takes precedence over :ref:`user profile startup setting "
+"<user_profile_setting>`."
+msgstr ""
+"ユーザープロファイルフォルダから特定のプロファイルを使用してQGISを起動します。このオプションは、 "
+":ref:`ユーザープロファイルのスタートアップ設定 <user_profile_setting>` よりも優先されます。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2585
 msgid "``--profiles-path``"
 msgstr "``--profiles-path``"
@@ -4649,6 +5185,33 @@ msgstr "新規インストール後に移行ウィンドウを表示したくな
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2636
 msgid "If you want to add a custom variable in the global scope:"
 msgstr "グローバルスコープのカスタム変数を追加したい場合は、以下が必要です。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2643
+msgid ""
+"A lot of settings can be set using the :file:`.INI` file such as WMS/WMTS, "
+"PostGIS connections, proxy settings, maptips, default values for algorithms "
+"parameters… For example, if you want to configure organization wide default "
+"values for some algorithms it would be handy if you could configure it in "
+"the prepared ini-file for all users. If the users then open the toolbox to "
+"execute an algorithm, the default values will be there. To set the default "
+"value e.g. for ``GRID_SIZE`` parameter for the ``native:intersection`` "
+"algorithm, you could write the following into the :file:`.INI` file:"
+msgstr ""
+"WMS/WMTSやPostGIS接続、プロキシの設定、マップのtips、アルゴリズムのパラメータのデフォルト値など、多くの設定を "
+":file:`.INI` "
+"ファイルを使って設定できます。例えば、いくつかのアルゴリズムについて組織全体で共通のデフォルト値を設定したい場合、すべてのユーザーに対して用意されたiniファイル内で設定するのが便利です。これでユーザーがツールボックスを開いてアルゴリズムを実行すると、デフォルト値が設定されています。例えば"
+" ``native:intersection`` アルゴリズムの ``GRID_SIZE`` パラメータを設定するには、 :file:`.INI` "
+"ファイル内に以下のように記述します。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2656
+msgid ""
+"Not all settings can be prepared from QGIS GUI, but to discover the "
+"possibilities of the settings :file:`.INI` file, we suggest that you set the"
+" config you would like in QGIS Desktop and then search for it in your "
+":file:`.INI` file located in your profile using a text editor."
+msgstr ""
+"すべての設定がQGIS GUIから準備できるわけではありませんが、 :file:`.INI` ファイルで設定できるかをみるため、QGIS "
+"Desktopで必要な設定を行ってから、プロファイルにある :file:`.INI` ファイルをテキストエディタを使用して検索してみるとよいでしょう。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2661
 msgid ""
