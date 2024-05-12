@@ -6755,6 +6755,10 @@ msgstr "入力ジオメトリのバウンディングボックスを表すジオ
 msgid "bounds(geometry)"
 msgstr "bounds(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``bounds(@geometry)`` → bounding box of the current feature's geometry"
+msgstr "``bounds(@geometry)`` → 現在の地物のジオメトリのバウンディングボックス"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid ""
 "``geom_to_wkt(bounds(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → "
@@ -6785,6 +6789,12 @@ msgstr "ジオメトリのバウンディングボックスの高さを返しま
 msgid "bounds_height(geometry)"
 msgstr "bounds_height(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``bounds_height(@geometry)`` → height of bounding box of the current "
+"feature's geometry"
+msgstr "``bounds_height(@geometry)`` → 現在の地物のジオメトリのバウンディングボックスの高さ"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid "``bounds_height(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 1"
 msgstr ""
@@ -6803,6 +6813,12 @@ msgstr "ジオメトリのバウンディングボックスの幅を返します
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "bounds_width(geometry)"
 msgstr "bounds_width(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"``bounds_width(@geometry)`` → width of bounding box of the current feature's"
+" geometry"
+msgstr "``bounds_width(@geometry)`` → 現在の地物のジオメトリのバウンディングボックスの幅"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 msgid "``bounds_width(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 2"
@@ -6858,6 +6874,12 @@ msgid ""
 "**miter_limit** - miter distance limit, for use when the join style is set "
 "to 'miter'"
 msgstr "**miter_limit** - miter距離の上限値（結合スタイルに 'miter' を設定した場合に使用）"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
+msgid ""
+"``buffer(@geometry, 10.5)`` → polygon of the current feature's geometry "
+"buffered by 10.5 units"
+msgstr "``buffer(@geometry, 10.5)`` → 現在の地物ジオメトリから 10.5 単位でバッファリングされたポリゴン"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
 msgid ""
@@ -8327,6 +8349,15 @@ msgstr "関係する項目: :ref:`expression_function_GeometryGroup_is_empty_or_
 msgid "is_empty_or_null"
 msgstr "is_empty_or_null"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns TRUE if a geometry is NULL or empty (without coordinates) or false "
+"otherwise. This function is like the expression '@geometry IS NULL or "
+"is_empty(@geometry)'"
+msgstr ""
+"ジオメトリがNULLか空（座標値を持たない）の場合はTRUE、それ以外ならfalseを返します。この関数は、式 '@geometry IS NULL "
+"or is_empty(@geometry)' と同様です"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "is_empty_or_null(geometry)"
 msgstr "is_empty_or_null(geometry)"
@@ -9495,6 +9526,12 @@ msgstr "ジオメトリの頂点数を返します。"
 msgid "num_points(geometry)"
 msgstr "num_points(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+msgid ""
+"``num_points(@geometry)`` → number of vertices in the current feature's "
+"geometry"
+msgstr "``num_points(@geometry)`` → 現在の地物のジオメトリの頂点数"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
 msgid "num_rings"
 msgstr "num_rings"
@@ -9562,6 +9599,32 @@ msgid ""
 "**miter_limit** - limit on the miter ratio used for very sharp corners (when"
 " using miter joins only)"
 msgstr "**miter_limit** - 非常に鋭い角に使用されるmiter比の制限（miter継ぎ目の場合のみ）"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:105
+msgid ""
+"``offset_curve(@geometry, 10.5)`` → line offset to the left by 10.5 units"
+msgstr "``offset_curve(@geometry, 10.5)`` → 左に10.5単位オフセットしたライン"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:106
+msgid ""
+"``offset_curve(@geometry, -10.5)`` → line offset to the right by 10.5 units"
+msgstr "``offset_curve(@geometry, -10.5)`` → 右に10.5単位オフセットしたライン"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:107
+msgid ""
+"``offset_curve(@geometry, 10.5, segments:=16, join:=1)`` → line offset to "
+"the left by 10.5 units, using more segments to result in a smoother curve"
+msgstr ""
+"``offset_curve(@geometry, 10.5, segments:=16, join:=1)`` → "
+"左に10.5単位オフセットしたラインで、より多くのセグメントを使った滑らかな曲線"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:108
+msgid ""
+"``offset_curve(@geometry, 10.5, join:=3)`` → line offset to the left by 10.5"
+" units, using a beveled join"
+msgstr ""
+"``offset_curve(@geometry, 10.5, join:=3)`` → 左に10.5単位オフセットしたラインで、bebel "
+"継ぎ目を使用"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:115
 msgid "In blue the source layer, in red the offset one"
@@ -9780,6 +9843,15 @@ msgstr ""
 "filter:= population > 10000))`` → 現在の地物に含まれる、population "
 "が10000よりも大きな値を持つregions の地物の名前をソートした配列"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
+msgid ""
+"``overlay_contains(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"contained in the current feature"
+msgstr ""
+"``overlay_contains(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 現在の地物に含まれる2つまでのregionsのジオメトリ（WKT形式）の配列"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:510
 msgid ""
 "Further reading: :ref:`expression_function_GeometryGroup_contains`, "
@@ -9852,6 +9924,15 @@ msgstr ""
 "``array_sort(overlay_crosses(layer:='regions', expression:=\"name\", "
 "filter:= population > 10000))`` → 現在の地物とクロスする、population "
 "が10000よりも大きな値を持つregions の地物の名前をソートした配列"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_crosses(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions crossed"
+" by the current feature"
+msgstr ""
+"``overlay_crosses(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 現在の地物とクロスする2つまでのregionsのジオメトリ（WKT形式）の配列"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:518
 msgid ""
@@ -9930,6 +10011,15 @@ msgstr ""
 "``array_sort(overlay_disjoint(layer:='regions', expression:=\"name\", "
 "filter:= population > 10000))`` → 現在の地物と空間的に非接続な、population "
 "が10000よりも大きな値を持つregions の地物の名前をソートした配列"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid ""
+"``overlay_disjoint(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions "
+"spatially disjoint from the current feature"
+msgstr ""
+"``overlay_disjoint(layer:='regions', expression:= geom_to_wkt($geometry), "
+"limit:=2)`` → 現在の地物と空間的に非接続な2つまでのregionsのジオメトリ（WKT形式）の配列"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:526
 msgid ""
