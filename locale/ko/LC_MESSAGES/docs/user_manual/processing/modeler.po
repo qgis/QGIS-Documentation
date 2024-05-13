@@ -54,6 +54,14 @@ msgstr ""
 " 편이 더 편리하기 때문입니다. 몇 단계를 거치든, 몇 개의 서로 다른 알고리즘을 사용하든 상관없이 모델은 단일 알고리즘처럼 실행되기 "
 "때문에, 시간과 노력을 절약할 수 있습니다."
 
+#: ../../docs/user_manual/processing/modeler.rst:21
+msgid ""
+"The model designer can be opened from the Processing menu "
+"(:menuselection:`Processing --> Model Designer`)."
+msgstr ""
+"공간 처리 메뉴에서 (:menuselection:`Processing --> Model Designer`) 모델 설계자를 열 수 "
+"있습니다."
+
 #: ../../docs/user_manual/processing/modeler.rst:25
 msgid "The model designer interface"
 msgstr "모델 설계자 인터페이스"
@@ -162,6 +170,16 @@ msgid ""
 "Sets the order in which inputs are presented to the user in the algorithm "
 "dialog."
 msgstr "알고리즘 대화창에서 사용자에게 나타나는 입력물들의 순서를 설정합니다."
+
+#: ../../docs/user_manual/processing/modeler.rst:64
+msgid ":guilabel:`Reorder Output Layers...`"
+msgstr ":guilabel:`Reorder Output Layers...`"
+
+#: ../../docs/user_manual/processing/modeler.rst:67
+msgid ""
+"Sets a specific order which the outputs from the model must use when loading"
+" the results into a project."
+msgstr "프로젝트에 결과물을 불러올 때 모델의 산출물이 반드시 따라야만 하는 특정한 순서를 설정합니다."
 
 #: ../../docs/user_manual/processing/modeler.rst:69
 msgid "|fileOpen| :guilabel:`Open Model...`"
@@ -500,6 +518,12 @@ msgstr "설계자의 현재 캔버스에 있는 모든 구성 요소를 표시�
 msgid "|checkbox| :guilabel:`Show Comments`"
 msgstr "|checkbox| :guilabel:`Show Comments`"
 
+#: ../../docs/user_manual/processing/modeler.rst:196
+msgid ""
+"Displays comments associated to every algorithm or input in the model "
+"designer"
+msgstr "모델 설계자에 있는 모든 알고리즘 또는 입력물에 관련된 주석들을 표시합니다."
+
 #: ../../docs/user_manual/processing/modeler.rst:197
 msgid "|unchecked| :guilabel:`Enable Snapping`"
 msgstr "|unchecked| :guilabel:`Enable Snapping`"
@@ -632,6 +656,20 @@ msgstr ""
 msgid "Definition of inputs"
 msgstr "입력물 정의"
 
+#: ../../docs/user_manual/processing/modeler.rst:265
+msgid ""
+"The first step is to define the inputs for the model. They are found in the "
+":guilabel:`Inputs` panel on the left side of the modeler window. Hovering "
+"with the mouse over the inputs will show a tooltip with additional "
+"information. For a full list of available parameters in modeler and their "
+"correspondance for scripting, please read "
+":ref:`processing_algs_input_output`."
+msgstr ""
+"첫 단계는 모델에 대한 입력물을 정의하는 것입니다. 모델 설계자 창의 왼쪽에 있는 :guilabel:`Inputs` 패널에서 입력물을 "
+"찾아볼 수 있습니다. 입력물 위에 마우스 커서를 가져가면 추가 정보를 가진 툴팁이 뜰 것입니다. 모델 설계자에서 사용할 수 있는 "
+"파라미터들의 전체 목록과 스크립트 작업을 위한 파라미터 대응 문자열에 대해 알고 싶다면 "
+":ref:`processing_algs_input_output` 을 읽어보십시오."
+
 #: ../../docs/user_manual/processing/modeler.rst:271
 msgid ""
 "When double-clicking on an element, a dialog is shown that lets you define "
@@ -643,8 +681,8 @@ msgid ""
 msgstr ""
 "이 항목들 가운데 어느 항목을 더블클릭해도 그 특성을 정의할 수 있는 대화창이 열립니다. 파라미터에 따라, 해당 대화창이 적어도 하나 "
 "이상의 요소(모델 실행시 사용자가 보게 될 파라미터 설명)를 담고 있을 수도 있고 또는 하나 이상의 옵션을 담고 있을 수도 있습니다. "
-"예를 들어 숫자 값을 추가하는 경우, 다음 그림에서 볼 수 있는 것처럼 파라미터 설명 이외에도 기본값을 설정하고 유효값의 범위도 설정해야"
-" 합니다."
+"예를 들어 숫자 값을 추가하는 경우, 다음 그림에서 볼 수 있는 것처럼 파라미터 설명 이외에도 기본값을 설정하고 무결한 값의 범위도 "
+"설정해야 합니다."
 
 #: ../../docs/user_manual/processing/modeler.rst:285
 msgid "Model Parameters Definition"
@@ -903,7 +941,7 @@ msgid ""
 "linked to the elements in the canvas (algorithms or inputs) that provide "
 "objects that are used as inputs for the algorithm."
 msgstr ""
-"모든 파라미터에 유효한 값을 할당하고 나면, :guilabel:`OK` 버튼을 누르십시오. 알고리즘이 캔버스에 추가될 것입니다. 해당 "
+"모든 파라미터에 무결한 값을 할당하고 나면, :guilabel:`OK` 버튼을 누르십시오. 알고리즘이 캔버스에 추가될 것입니다. 해당 "
 "알고리즘은 캔버스에 있는 다른 모든 항목들과 ─ 해당 알고리즘에 입력되는 객체를 제공하는 알고리즘이든 입력물이든 ─ 연결돼 있을 것입니다"
 
 #: ../../docs/user_manual/processing/modeler.rst:411
@@ -978,6 +1016,30 @@ msgstr ""
 msgid "Reorder Model Inputs"
 msgstr "모델 입력물 재정렬"
 
+#: ../../docs/user_manual/processing/modeler.rst:458
+msgid ""
+"There is also the possibility to set a specific order which the outputs from"
+" the model must use when loading the results into a project. This gives the "
+"model creator a means of ensuring that layers are logically ordered on the "
+"canvas when running a model, such as placing a vector layer output over a "
+"raster layer output, or a point layer over a polygon layer. The model "
+"creator can also set an optional \"Group name\" for the outputs for "
+"automatically grouping outputs within the layer tree using a new group name "
+"or by adding them to an existing group. In the ``Model`` menu you will find "
+"the ``Reorder Output Layers...`` entry and by clicking on it a new dialog "
+"pops up allowing you to change the order of the output layers:"
+msgstr ""
+"프로젝트에 결과물을 불러올 때 모델의 산출물이 반드시 따라야만 하는 특정한 순서를 설정해야 할 가능성도 존재합니다. 따라서 모델 "
+"설계자에서 모델을 실행할 때 캔버스 상에 레이어들을 논리적인 순서대로, 이를테면 벡터 레이어 산출물을 래스터 레이어 산출물 위로 또는 "
+"포인트 레이어 산출물을 폴리곤 레이어 산출물 위로 정렬할 수 있게 해주는 수단이 필요합니다. 모델 설계자에서는 레이어 트리 안에 산출물을"
+" 새 그룹 이름을 사용해서 또는 기존 그룹에 추가해서 자동으로 그룹화해주기 위한 선택적인 \"그룹 이름\"도 설정할 수 있습니다. "
+":guilabel:`Model` 메뉴에 있는 :guilabel:`Reorder Output Layers...` 항목을 클릭하면 산출 "
+"레이어들의 순서를 변경할 수 있는 새 대화창이 열립니다:"
+
+#: ../../docs/user_manual/processing/modeler.rst:473
+msgid "Reorder Output Layers"
+msgstr "산출 레이어 재정렬"
+
 #: ../../docs/user_manual/processing/modeler.rst:475
 msgid ""
 "Comments can also be added to inputs or algorithms present in the modeler. "
@@ -1035,6 +1097,23 @@ msgstr "editHelpContent"
 #: ../../docs/user_manual/processing/modeler.rst:504
 msgid "Editing Help"
 msgstr "도움말 편집하기"
+
+#: ../../docs/user_manual/processing/modeler.rst:506
+msgid ""
+"On the right-hand side, you will see a simple HTML page, created using the "
+"description of the input parameters and outputs of the algorithm, along with"
+" some additional items like a general description of the model or its "
+"author. Also, there is an Example section where you can input your own "
+"custom examples to help explain the usage of the model. The first time you "
+"open the help editor, all these descriptions are empty, but you can edit "
+"them using the elements on the left-hand side of the dialog. Select an "
+"element on the upper part and then write its description in the text box "
+"below."
+msgstr ""
+"대화창 오른쪽에는 간소한 HTML 페이지가 있습니다. 알고리즘의 입력 파라미터와 산출물에 대한 설명 그리고 모델 또는 모델의 작성자 같은"
+" 몇몇 추가 항목에 대한 일반적인 설명을 함께 사용해서 이 페이지의 내용을 생성합니다. 또한 모델의 활용법을 설명해주는 사용자 정의 "
+"예시를 입력할 수 있는 예시 부분도 있습니다. 처음 도움말 편집기를 열면, 이 모든 내용이 비어 있습니다. 그러나 대화창 왼쪽에 있는 "
+"항목들을 이용해서 이를 편집할 수 있습니다. 상단 부분에서 항목을 선택한 다음 하단 텍스트 란에 해당 항목에 대한 설명을 작성하십시오."
 
 #: ../../docs/user_manual/processing/modeler.rst:517
 msgid "Model help is saved as part of the model itself."
