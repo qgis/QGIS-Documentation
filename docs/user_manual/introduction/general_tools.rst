@@ -91,6 +91,8 @@ At the top of the :guilabel:`Layers` panel, a toolbar allows you to:
   * :guilabel:`Show Private Layers`: a convenient shortcut to display and
     interact with :ref:`private layers <project_layer_capabilities>`
     in the :guilabel:`Layers` panel without modifying the project settings.
+  * :guilabel:`Show Broken Layers Only`: only layers with broken data sources
+    are displayed.
 * |expressionFilter| :sup:`Filter Legend by Expression`: apply an
   expression to remove styles from the selected layer tree that have no feature
   satisfying the condition. This can be used to highlight features
