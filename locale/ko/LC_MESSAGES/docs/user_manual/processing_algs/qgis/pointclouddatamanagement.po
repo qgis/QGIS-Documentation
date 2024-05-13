@@ -35,6 +35,10 @@ msgstr ""
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
 "translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:2
+msgid "Point Cloud Data Management"
+msgstr "점구름 데이터 관리"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:4
 msgid "|332|"
 msgstr "|332|"
@@ -42,6 +46,16 @@ msgstr "|332|"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:16
 msgid "Assign projection"
 msgstr "투영체 할당하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:18
+msgid ""
+"Assigns a Coordinate Reference System to a point cloud layer, if it is "
+"missing or wrong. A new layer is created."
+msgstr "점구름 레이어의 좌표계가 누락되었거나 잘못된 경우, 새 레이어를 생성하는 방식으로 점구름 레이어에 좌표계를 할당합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:21
+msgid ":ref:`pdalreproject`"
+msgstr ":ref:`pdalreproject`"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:24
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:100
@@ -190,6 +204,31 @@ msgstr "**Input layer**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:66
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:138
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:201
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:209
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:382
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:499
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:534
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:542
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:583
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:629
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:639
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:689
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:728
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:738
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:788
+msgid "[point cloud]"
+msgstr "[point cloud]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:37
+msgid "Input point cloud layer to assign a CRS to"
+msgstr "좌표계를 할당할 입력 점구름 레이어"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:38
 msgid "**Desired CRS**"
 msgstr "**Desired CRS**"
@@ -205,6 +244,12 @@ msgstr "``CRS``"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:861
 msgid "[crs]"
 msgstr "[crs]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:539
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:862
+msgid "The CRS to apply to the layer"
+msgstr "레이어에 적용할 좌표계"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:42
 msgid "**Output layer**"
@@ -244,6 +289,10 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "기본값: ``[Save to temporary file]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:47
+msgid "Specify the point cloud file to use as output. One of:"
+msgstr "산출물로 사용할 점구름 파일을 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "임시 파일로 저장"
@@ -269,6 +318,14 @@ msgstr "산출물"
 msgid "**Converted**"
 msgstr "**Converted**"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:67
+msgid ""
+"Output point cloud layer with a new CRS. Currently supported formats are "
+":file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` and :file:`.VPC`."
+msgstr ""
+"새 좌표계를 가진 산출 점구름 레이어입니다. 현재 :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ`, "
+"그리고 :file:`.VPC` 포맷을 지원합니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:71
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:164
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:263
@@ -282,6 +339,10 @@ msgstr "**Converted**"
 msgid "Python code"
 msgstr "파이썬 코드"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:73
+msgid "**Algorithm ID**: ``pdal:assignprojection``"
+msgstr "**알고리즘 ID**: ``pdal:assignprojection``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -292,6 +353,38 @@ msgstr ""
 "공간 처리 툴박스에 있는 알고리즘 위에 마우스를 가져가면 *알고리즘 ID* 를 표시합니다. *파라미터 목록(dictionary)* 은 "
 "파라미터 **이름** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
 ":ref:`processing_console` 을 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:83
+msgid "Build virtual point cloud (VPC)"
+msgstr "가상 점구름(VPC) 작성하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:85
+msgid ""
+"Creates a :ref:`virtual point cloud (VPC) <virtual_point_cloud>` from input "
+"point cloud data."
+msgstr ""
+"입력 점구름 데이터로부터 :ref:`가상 점구름(Virtual Point Cloud) <virtual_point_cloud>` 을 "
+"생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:87
+msgid ""
+"If you leave the optional parameters unchecked, the VPC file will be built "
+"very quickly as the algorithm will only read metadata of input files. With "
+"any of the optional parameters set, the algorithm will read all points which"
+" can take some time."
+msgstr ""
+"선택적인 파라미터들을 체크하지 않은 채 알고리즘을 실행하면, 알고리즘이 입력 파일의 메타데이터만 읽어올 것이기 때문에 VPC를 매우 "
+"빠르게 작성할 것입니다. 선택적인 파라미터를 하나라도 설정한 경우, 알고리즘이 모든 포인트를 읽어올 것이기 때문에 시간이 걸릴 수 "
+"있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:95
+msgid ""
+"Generating Virtual Point Cloud with overview from a set of point cloud tiles"
+msgstr "점구름 타일 집합으로부터 오버뷰를 가진 가상 점구름 생성하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:97
+msgid ":ref:`pdalmerge`"
+msgstr ":ref:`pdalmerge`"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:110
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:290
@@ -307,6 +400,25 @@ msgstr "**Input layers**"
 msgid "``LAYERS``"
 msgstr "``LAYERS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:112
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:292
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:445
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:827
+msgid "[point cloud] [list]"
+msgstr "[point cloud] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:113
+msgid "Input point cloud layers to combine inside a virtual point cloud layer"
+msgstr "가상 점구름 레이어 내부에 결합할 입력 점구름 레이어들"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:114
+msgid "**Calculate boundary polygon**"
+msgstr "**Calculate boundary polygon**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:115
+msgid "``BOUNDARY``"
+msgstr "``BOUNDARY``"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:116
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:122
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:128
@@ -319,18 +431,84 @@ msgstr "[boolean]"
 msgid "Default: False"
 msgstr "기본값: False"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:119
+msgid ""
+"Set to True to show the exact boundaries of data (rather than just "
+"rectangular extent)"
+msgstr "참으로 설정하면 데이터의 (직사각형 범위만 표시하기보다) 정확한 경계를 표시합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:120
+msgid "**Calculate statistics**"
+msgstr "**Calculate statistics**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:121
 msgid "``STATISTICS``"
 msgstr "``STATISTICS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:125
+msgid "Set to True to understand ranges of values of the various attributes"
+msgstr "참으로 설정하면 여러 속성들의 값의 범위를 이해할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:126
+msgid "**Build overview point cloud**"
+msgstr "**Build overview point cloud**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:127
+msgid "``OVERVIEW``"
+msgstr "``OVERVIEW``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:131
+msgid ""
+"Generates a single “thinned” point cloud of all the input data (using only "
+"every 1000th point from original data)."
+msgstr ""
+"모든 입력 데이터의 (원본 데이터에서 1,000번째마다의 포인트만 사용해서) \"솎아낸(thinned)\" 단일 점구름을 생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:134
+msgid ""
+"The overview point cloud will be created next to the VPC file - for example,"
+" for :file:`mydata.vpc`, the overview point cloud would be named "
+":file:`mydata-overview.copc.laz`."
+msgstr ""
+"VPC 파일 옆에 오버뷰 점구름을 생성할 것입니다. 예를 들어 :file:`mydata.vpc` 의 경우 오버뷰 점구름의 이름은 "
+":file:`mydata-overview.copc.laz` 가 될 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:136
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:158
+msgid "**Virtual point cloud**"
+msgstr "**Virtual point cloud**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:141
+msgid "Specify the point cloud file to build the data into. One of:"
+msgstr "데이터를 작성할 점구름 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:160
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:259
 msgid "[raster]"
 msgstr "[raster]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:161
+msgid ""
+"Output point cloud layer combining all the input data, as a virtual file."
+msgstr "모든 입력 데이터를 결합한, 가상 파일로써의 산출 점구름 레이어입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:166
+msgid "**Algorithm ID**: ``pdal:virtualpointcloud``"
+msgstr "**알고리즘 ID**: ``pdal:virtualpointcloud``"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:175
 msgid "Clip"
 msgstr "잘라내기(Clip)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:177
+msgid ""
+"Clips a point cloud layer by a polygon layer so that the resulting point "
+"cloud contains only points within the polygons."
+msgstr "산출되는 점구름이 폴리곤 내부에 들어오는 포인트만 담게 되도록 점구름 레이어를 폴리곤 레이어로 잘라냅니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:183
+msgid "Clipping an input point cloud layer with a polygon coverage"
+msgstr "입력 점구름 레이어를 폴리곤 커버리지로 잘라내기"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:189
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:433
@@ -340,6 +518,14 @@ msgstr "잘라내기(Clip)"
 msgid "Basic parameters"
 msgstr "기본 파라미터"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:202
+msgid "Input point cloud layer to clip"
+msgstr "잘라낼 입력 점구름 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:203
+msgid "**Clipping polygons**"
+msgstr "**Clipping polygons**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:204
 msgid "``OVERLAY``"
 msgstr "``OVERLAY``"
@@ -348,10 +534,18 @@ msgstr "``OVERLAY``"
 msgid "[vector: polygon]"
 msgstr "[vector: polygon]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:206
+msgid "Polygon vector layer to use as coverage for clipping the points"
+msgstr "포인트들을 잘라내기 위한 커버리지로 사용할 폴리곤 벡터 레이어"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:207
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:257
 msgid "**Clipped**"
 msgstr "**Clipped**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:212
+msgid "Specify the point cloud file to export the clipped points to. One of:"
+msgstr "잘라낸 포인트를 내보낼 점구름 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:219
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:459
@@ -397,6 +591,22 @@ msgstr "``FILTER_EXPRESSION``"
 msgid "[expression]"
 msgstr "[expression]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:234
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:474
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:664
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:763
+msgid ""
+"A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of "
+"features in the point cloud data"
+msgstr "점구름 데이터에 있는 피처의 하위 집합을 선택하기 위한 :ref:`PDAL 표현식 <pdal_expressions>`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:235
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:475
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:665
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:764
+msgid "**Cropping extent**"
+msgstr "**Cropping extent**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:238
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:478
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:668
@@ -410,6 +620,14 @@ msgstr "``FILTER_EXTENT``"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:768
 msgid "[extent]"
 msgstr "[extent]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:240
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:480
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:670
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:769
+msgid ""
+"A map extent for selecting a subset of features in the point cloud data"
+msgstr "점구름 데이터에 있는 피처의 하위 집합을 선택하기 위한 맵 범위"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -446,6 +664,28 @@ msgstr "캔버스에 그리기: 연산에 넣을 범위를 정하는 직사각�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "좌표를 ``xmin, xmax, ymin, ymax`` 로 입력"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:260
+msgid ""
+"Output point cloud whose features are the points within the coverage polygon"
+" layer."
+msgstr "커버리지 폴리곤 레이어 내부에 들어오는 포인트들을 피처로 가진 산출 점구름입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:265
+msgid "**Algorithm ID**: ``pdal:clip``"
+msgstr "**알고리즘 ID**: ``pdal:clip``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:275
+msgid "Create COPC"
+msgstr "COPC 생성하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:277
+msgid "Creates the index for all the input point cloud files in a batch mode."
+msgstr "모든 입력 점구름 파일에 대한 인덱스를 배치(batch) 모드로 생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:293
+msgid "Input point cloud layers to create an index for"
+msgstr "인덱스를 생성할 입력 점구름 레이어들"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:294
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:318
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:835
@@ -464,6 +704,10 @@ msgstr "[folder]"
 msgid "Default: ``[Skip output]``"
 msgstr "기본값: ``[Skip output]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:301
+msgid "Specify the folder to create the new files in. One of:"
+msgstr "새 파일을 생성할 폴더를 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "산출물 건너뛰기"
@@ -478,6 +722,32 @@ msgstr "임시 디렉터리에 저장"
 msgid "Save to Directory"
 msgstr "디렉터리에 저장"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:321
+msgid ""
+"Output folder containing point cloud layers with accompanying COPC index "
+"files."
+msgstr "동반하는 COPC 인덱스 파일을 가진 점구름 레이어들을 담고 있는 산출 폴더입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:326
+msgid "**Algorithm ID**: ``pdal:createcopc``"
+msgstr "**알고리즘 ID**: ``pdal:createcopc``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:336
+msgid "Information"
+msgstr "정보"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:338
+msgid "Outputs basic metadata from an input point cloud file."
+msgstr "입력 점구름 파일로부터 기본 메타데이터를 산출합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:340
+msgid "Example of output information::"
+msgstr "산출 정보의 예시:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:383
+msgid "Input point cloud layer to extract metadata information from"
+msgstr "메타데이터 정보를 추출할 입력 점구름 레이어"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:384
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:406
 msgid "**Layer information**"
@@ -487,18 +757,71 @@ msgstr "**Layer information**"
 msgid "[file]"
 msgstr "[file]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:389
+msgid "Specify the file to store the metadata information. One of:"
+msgstr "메타데이터 정보를 저장할 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:408
 msgid "[vector]"
 msgstr "[vector]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:409
+msgid ":file:`HTML` file to store the metadata information."
+msgstr "메타데이터 정보를 저장할 :file:`HTML` 파일입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:414
+msgid "**Algorithm ID**: ``pdal:info``"
+msgstr "**알고리즘 ID**: ``pdal:info``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:423
 msgid "Merge"
 msgstr "병합하기"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:425
+msgid "Merges multiple point cloud files into a single one."
+msgstr "점구름 파일 여러 개를 단일 파일로 병합합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:427
+msgid ":ref:`pdalvirtualpointcloud`"
+msgstr ":ref:`pdalvirtualpointcloud`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:446
+msgid "Input point cloud layers to merge into a single one"
+msgstr "단일 레이어로 병합시킬 입력 점구름 레이어들"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:447
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:497
 msgid "**Merged**"
 msgstr "**Merged**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:452
+msgid "Specify the output point cloud merging input files. One of:"
+msgstr "입력 파일들을 병합시킨 산출 점구름 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:500
+msgid "Output point cloud layer merging all the input files."
+msgstr "모든 입력 데이터를 병합한 산출 점구름 레이어입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:505
+msgid "**Algorithm ID**: ``pdal:merge``"
+msgstr "**알고리즘 ID**: ``pdal:merge``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:515
+msgid "Reproject"
+msgstr "재투영하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:517
+msgid ""
+"Reprojects a point cloud to a different Coordinate Reference System (CRS)."
+msgstr "점구름을 다른 좌표계로 재투영합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:519
+msgid ":ref:`pdalassignprojection`"
+msgstr ":ref:`pdalassignprojection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:535
+msgid "Input point cloud layer to reproject to a different CRS"
+msgstr "다른 좌표계로 재투영할 입력 점구름 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:536
 msgid "**Target CRS**"
@@ -508,13 +831,69 @@ msgstr "**Target CRS**"
 msgid "**Reprojected**"
 msgstr "**Reprojected**"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:545
+msgid "Specify the reprojected point cloud file. One of:"
+msgstr "재투영시킨 점구름 파일을 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:562
+msgid "**Coordinate operation**"
+msgstr "**Coordinate operation**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:565
 msgid "``OPERATION``"
 msgstr "``OPERATION``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:566
+msgid "[datum]"
+msgstr "[datum]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:567
+msgid ""
+"The :ref:`datum transformation <datum_transformation>` to use to reproject "
+"the data between the origin and target systems."
+msgstr ""
+"원본 좌표계와 대상 좌표계 사이에 데이터를 재투영하기 위해 사용할 :ref:`기준점 변환 <datum_transformation>` "
+"입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:581
+msgid "**REPROJECTED**"
+msgstr "**REPROJECTED**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:584
+msgid "Output point cloud layer in the target CRS."
+msgstr "대상 좌표계를 적용한 산출 점구름 레이어입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:589
+msgid "**Algorithm ID**: ``pdal:reproject``"
+msgstr "**알고리즘 ID**: ``pdal:reproject``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:599
+msgid "Thin (by sampling radius)"
+msgstr "솎아내기 (샘플링 반경)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:601
+msgid ""
+"Creates a thinned version of the point cloud by performing sampling by "
+"distance point (reduces the number of points within a certain radius)."
+msgstr ""
+"거리 포인트로 샘플링을 수행하는 방식으로 점구름의 솎아낸 버전을 생성합니다. (특정 반경 안에 들어오는 포인트의 개수를 감소시킵니다.)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:609
+msgid "Thining point cloud (by sampling radius)"
+msgstr "점구름 솎아내기 (샘플링 반경으로)"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:611
 msgid ":ref:`pdalthinbydecimate`"
 msgstr ":ref:`pdalthinbydecimate`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:630
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:729
+msgid "Input point cloud layer to create a thinned version from"
+msgstr "솎아낸 버전을 생성할 입력 점구름 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:631
+msgid "**Sampling radius (in map units)**"
+msgstr "**Sampling radius (in map units)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:632
 msgid "``SAMPLING_RADIUS``"
@@ -530,6 +909,49 @@ msgstr "[number]"
 msgid "Default: 1.0"
 msgstr "기본값: 1.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:636
+msgid "Distance within which points are sampled to a unique point"
+msgstr "이 안에 들어오는 포인트들을 유일 포인트로 샘플링할 거리"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:637
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:687
+msgid "**Thinned (by radius)**"
+msgstr "**Thinned (by radius)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:642
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:741
+msgid "Specify the output point cloud with reduced points. One of:"
+msgstr "감소된 포인트들을 가진 산출 점구름 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:690
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:789
+msgid "Output point cloud layer with reduced points."
+msgstr "감소된 포인트들을 가진 산출 점구름 레이어입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:695
+msgid "**Algorithm ID**: ``pdal:thinbyradius``"
+msgstr "**알고리즘 ID**: ``pdal:thinbyradius``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:705
+msgid "Thin (by skipping points)"
+msgstr "솎아내기 (포인트 건너뛰기)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:707
+msgid ""
+"Creates a thinned version of the point cloud by keeping only every N-th "
+"point (reduces the number of points by skipping nearby points)."
+msgstr ""
+"N번째마다의 포인트만 남기는 방식으로 점구름의 솎아낸 버전을 생성합니다. (가까이 있는 포인트들을 건너뛰어 포인트의 개수를 "
+"감소시킵니다.)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:710
+msgid ":ref:`pdalthinbyradius`"
+msgstr ":ref:`pdalthinbyradius`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:730
+msgid "**Number of points to skip**"
+msgstr "**Number of points to skip**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:731
 msgid "``POINTS_NUMBER``"
 msgstr "``POINTS_NUMBER``"
@@ -538,10 +960,71 @@ msgstr "``POINTS_NUMBER``"
 msgid "Default: 1"
 msgstr "기본값: 1"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:735
+msgid "Keep only every N-th point in the input layer"
+msgstr "입력 레이어에서 N번째마다의 포인트만 남깁니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:736
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:786
+msgid "**Thinned (by decimation)**"
+msgstr "**Thinned (by decimation)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:794
+msgid "**Algorithm ID**: ``pdal:thinbydecimate``"
+msgstr "**알고리즘 ID**: ``pdal:thinbydecimate``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:804
+msgid "Tile"
+msgstr "타일"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:806
+msgid ""
+"Creates tiles from input point cloud files, recommended for best performance"
+" (in display or analysis) with such datasets in QGIS."
+msgstr ""
+"입력 점구름 파일로부터 타일을 생성합니다. QGIS에서 점구름 데이터셋을 (보기 또는 분석) 작업할 때 최고의 성능을 보여주기 위해 "
+"권장됩니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:809
+msgid ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"
+msgstr ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:828
+msgid "Input point cloud layers to create tiles from"
+msgstr "타일을 생성할 입력 점구름 레이어들"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:829
+msgid "**Tile length**"
+msgstr "**Tile length**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:830
 msgid "``LENGTH``"
 msgstr "``LENGTH``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:833
+msgid "Default: 1000.0"
+msgstr "Default: 1000.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:834
+msgid "Size of the edge of each generated tile"
+msgstr "생성된 각 타일의 변의 길이"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:839
 msgid "Default: ``[Save to temporary folder]``"
 msgstr "기본값: ``[Save to temporary folder]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:840
+msgid "Specify the folder to store the generated tiles. One of:"
+msgstr "생성된 타일을 저장할 폴더를 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:857
+msgid "**Assign CRS**"
+msgstr "**Assign CRS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:878
+msgid "Output folder containing the tiles generated from input files."
+msgstr "입력 파일로부터 생성된 타일들을 담고 있는 산출 폴더입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:883
+msgid "**Algorithm ID**: ``pdal:tile``"
+msgstr "**알고리즘 ID**: ``pdal:tile``"
