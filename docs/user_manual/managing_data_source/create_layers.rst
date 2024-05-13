@@ -541,6 +541,11 @@ Optionally, you can also choose to:
 
    Exporting a project to DXF dialog
 
+Current settings defined in the :guilabel:`DXF Export` dialog may be stored in
+an XML file for reusing them in other sessions. For this, the
+:guilabel:`Settings` combo box has two options: :guilabel:`Load Settings from
+File...` and :guilabel:`Save Settings to File...`.
+
 
 .. _paste_into_layer:
 
