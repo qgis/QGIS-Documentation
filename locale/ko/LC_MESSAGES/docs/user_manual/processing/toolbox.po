@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:59+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:4
 msgid "The Toolbox"
@@ -215,6 +215,21 @@ msgstr ""
 "입력값 및 환경 설정 파라미터 목록을 표시합니다. 물론 실행할 알고리즘의 요구 사항에 따라 목록 내용이 달라지며, 해당 요구 사항을 "
 "기반으로 자동적으로 생성됩니다."
 
+#: ../../docs/user_manual/processing/toolbox.rst:97
+msgid "**Setting your own default values for algorithm parameters**"
+msgstr "**알고리즘 파라미터에 사용자의 고유 기본값을 설정하기**"
+
+#: ../../docs/user_manual/processing/toolbox.rst:99
+msgid ""
+"Algorithm dialogs open with some parameters prefilled with values from QGIS "
+"installation. It is however possible to set :ref:`your own default values "
+"<deploying_organization>` for specific algorithm parameters so that they are"
+" used at algorithm startup."
+msgstr ""
+"일부 파라미터들을 QGIS 설치본에서 가져온 값으로 미리 채운 알고리즘 대화창이 열립니다. 하지만 특정 알고리즘 파라미터에 "
+":ref:`사용자 고유 기본값 <deploying_organization>` 을 설정해서 알고리즘 구동 시 사용자 기본값을 사용하게 할 "
+"수도 있습니다."
+
 #: ../../docs/user_manual/processing/toolbox.rst:103
 msgid ""
 "Although the number and type of parameters depend on the characteristics of "
@@ -314,6 +329,20 @@ msgid ""
 msgstr ""
 ":guilabel:`Limit features processed`: 소스로부터 얼마 만큼의 개수의 피처들을 처리해야 할지를 결정하는 "
 "제한값을 지정할 수 있는 옵션입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:149
+msgid ""
+":guilabel:`Feature filter`: allows to enter an expression to subset the "
+"layer dynamically when running the tool, avoiding the need for separate "
+"steps to set layer filters or create layer subsets."
+msgstr ""
+":guilabel:`Feature filter`: 도구 실행 시 레이어의 하위집합을 동적으로 생성하는 표현식을 입력할 수 있습니다. 이 "
+"표현식 필터는 레이어 필터를 따로 설정하기 위해 또는 레이어 하위집합을 생성하기 위해 별도의 단계를 거쳐야 하는 일을 피할 수 있게 "
+"해줍니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:158
+msgid "Advanced options for vector input widget"
+msgstr "벡터 입력 위젯의 고급 옵션들"
 
 #: ../../docs/user_manual/processing/toolbox.rst:160
 msgid ""
@@ -503,6 +532,20 @@ msgid ""
 "using the buttons on the right side of the window."
 msgstr "알고리즘에 따라, 대화창 우측에 있는 버튼들을 사용해서 여러 행들을 수정할 수도 있고 못 할 수도 있습니다."
 
+#: ../../docs/user_manual/processing/toolbox.rst:254
+msgid ""
+"Some algorithms require many parameters to run, e.g. in the "
+":ref:`qgisrastercalc` you have to specify manually the cell size, the extent"
+" and the CRS. You can avoid to choose all the parameters manually when the "
+"algorithm has the ``Reference layers`` parameter. With this parameter you "
+"can choose the reference layer and all its properties (cell size, extent, "
+"CRS) will be used."
+msgstr ""
+"일부 알고리즘은 실행하는 데 많은 파라미터를 필요로 합니다. 예를 들어 :ref:`qgisrastercalc` 에서는 사용자가 직접 셀 "
+"크기, 범위 및 좌표계를 지정해야 합니다. 알고리즘이 ``Reference layers`` 파라미터를 가지고 있을 경우 모든 파라미터를 "
+"직접 지정하는 일을 피할 수 있습니다. 이 파라미터를 사용하면 참조 레이어와 사용할 모든 레이어 속성(셀 크기, 범위, 좌표계)을 선택할"
+" 수 있습니다."
+
 #: ../../docs/user_manual/processing/toolbox.rst:262
 msgid "Logging the execution"
 msgstr "실행 로그 기록하기"
@@ -594,13 +637,60 @@ msgstr ""
 ":menuselection:`Advanced -->` 메뉴는 알고리즘을 실행하지 않고서도 대화창에서 정의한 환경 설정을 재사용할 수 있는"
 " 기능을 제공합니다:"
 
+#: ../../docs/user_manual/processing/toolbox.rst:307
+msgid ""
+"|settings| :guilabel:`Algorithm Settings...`: allows to override processing "
+"settings for the current algorithm execution. More details at "
+":ref:`alg_override_setting`."
+msgstr ""
+"|settings| :guilabel:`Algorithm Settings...`: 현재 알고리즘 실행에 대한 공간 처리 설정을 무시할 수"
+" 있게 해줍니다. 더 자세한 내용은 :ref:`alg_override_setting` 를 참조하세요."
+
 #: ../../docs/user_manual/processing/toolbox.rst:502
 msgid "settings"
 msgstr "settings"
 
+#: ../../docs/user_manual/processing/toolbox.rst:309
+msgid ""
+"|pythonFile| :guilabel:`Copy as Python Command`: allows for easy copying of "
+"the equivalent :ref:`PyQGIS command <processing_console>` to run the tool "
+"using the parameters defined in the dialog"
+msgstr ""
+"|pythonFile| :guilabel:`Copy as Python Command`: 대화창에서 정의한 파라미터들을 사용해서 도구를 "
+"실행할 수 있는 동등한 :ref:`PyQGIS 명령어 <processing_console>` 로 쉽게 복사할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:311
+msgid ""
+"|terminal| :guilabel:`Copy as qgis_process Command`: allows for easy "
+"generation of :ref:`qgis_process command <processing_standalone>`, including"
+" its environment settings like the distance units, area units, ellipsoid, "
+"and any tricky parameter values like GeoPackage outputs with specific layers"
+msgstr ""
+"|terminal| :guilabel:`Copy as qgis_process Command`: 거리 단위, 면적 단위, 타원체, 그리고 "
+"특정 레이어를 가진 GeoPackage 산출물처럼 까다로운 파라미터 값 같은 환경 설정을 포함하는 :ref:`qgis_process "
+"명령어 <processing_standalone>` 를 쉽게 생성할 수 있습니다."
+
 #: ../../docs/user_manual/processing/toolbox.rst:504
 msgid "terminal"
 msgstr "terminal"
+
+#: ../../docs/user_manual/processing/toolbox.rst:315
+msgid ""
+"|editCopy| :guilabel:`Copy as JSON`: all the settings of the command are "
+"copied in a :file:`JSON` format, ready to be consumed by qgis_process. This "
+"is a convenient way to see the expected format of the commands, even for "
+"complex parameters (like TIN interpolation parameters). You can store these "
+"easily and then restore them later by pasting the values."
+msgstr ""
+"|editCopy| :guilabel:`Copy as JSON`: 명령어의 모든 설정을 qgis_process가 사용할 수 있도록 "
+":file:`JSON` 서식으로 복사합니다. (TIN 보간 파라미터 같은) 복잡 파라미터의 경우에도 명령어의 예상 서식을 볼 수 있는 "
+"편리한 방법입니다. :file:`JSON` 서식으로 복사된 파라미터들을 쉽게 저장할 수 있고, 나중에 이 값들을 붙여넣기해서 복원할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:320
+msgid "|editPaste| :guilabel:`Paste Settings` in a :file:`JSON` format"
+msgstr ""
+"|editPaste| :guilabel:`Paste Settings`: 설정 파라미터들을 :file:`JSON` 서식으로 붙여넣습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:480
 msgid "editPaste"
@@ -625,6 +715,56 @@ msgid ""
 msgstr ""
 "알고리즘 실행이 (성공적으로든 아니든) 완료되면, :guilabel:`Log` 탭이 활성화되어 있는 한 새로운 "
 ":guilabel:`Change Parameters` 버튼이 나타납니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:334
+msgid "Override algorithm settings"
+msgstr "알고리즘 설정 무시하기"
+
+#: ../../docs/user_manual/processing/toolbox.rst:336
+msgid ""
+"Triggered from within the :guilabel:`Advanced` drop-down menu at the bottom "
+"of an algorithm dialog, the |settings| :guilabel:`Algorithm Settings...` "
+"shows a panel allowing users to control general processing settings which "
+"apply to that algorithm execution only. It is intended to be a place where a"
+" user can override their :ref:`global processing settings "
+"<processing_general_settings>` on an ad-hoc basis without having to change "
+"their usual default settings."
+msgstr ""
+"알고리즘 대화창 하단에 있는 :guilabel:`Advanced` 드롭다운 메뉴에서 선택할 수 있는 |settings| "
+":guilabel:`Algorithm Settings...` 는 사용자가 해당 알고리즘의 실행에 대해서만 적용되는 일반적인 공간 처리 "
+"설정을 제어할 수 있는 패널을 엽니다. 이 패널의 목적은 사용자가 알고리즘의 일반적인 기본값을 변경해야 하는 일 없이 :ref:`전체 "
+"수준 공간 처리 설정 <processing_general_settings>` 을 `애드혹(ad-hoc) "
+"<https://ko.wikipedia.org/wiki/%EC%95%A0%EB%93%9C%ED%98%B9>`_ 기반으로 무시할 수 있게 "
+"해주는 것입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:342
+msgid "Settings that can be overridden are:"
+msgstr "다음과 같은 설정을 무시할 수 있습니다:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:344
+msgid ""
+":guilabel:`Invalid feature filtering`: unlike the existing per-parameter "
+"setting override for this, setting the handling method here will apply to "
+"**ALL inputs** for the algorithm"
+msgstr ""
+":guilabel:`Invalid feature filtering`: 각 파라미터 별로 설정을 무시하는 기존 방법과는 달리, 여기에서 "
+"처리 방법을 설정하면 알고리즘의 **모든 입력물** 에 적용될 것입니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:346
+msgid ""
+":guilabel:`Calculation settings`, such as :guilabel:`Distance units` and "
+":guilabel:`Area units` to use for distance/area measurements"
+msgstr ""
+":guilabel:`Calculation settings`: :guilabel:`Distance units` 및 "
+":guilabel:`Area units` 같은 거리/면적 측정에 사용할 단위를 무시할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:348
+msgid ""
+":guilabel:`Environment settings`, such as :guilabel:`Temporary folder` and "
+":guilabel:`Number of threads to use`"
+msgstr ""
+":guilabel:`Environment settings`: :guilabel:`Temporary folder` 및 "
+":guilabel:`Number of threads to use` 같은 환경을 무시할 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:352
 msgid "A note on projections"
