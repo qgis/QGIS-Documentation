@@ -464,3 +464,25 @@ msgstr "선택한 환경 설정을 표시한 인증 환경 설정 선택기"
 #: ../../docs/user_manual/auth_system/auth_overview.rst:301
 msgid "Python bindings"
 msgstr "파이썬 바인딩"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:303
+msgid ""
+"All classes and public functions have sip bindings, except "
+"``QgsAuthCrypto``, since management of the master password hashing and auth "
+"database encryption should be handled by the main app, and not via Python."
+msgstr ""
+"모든 클래스 및 공개 함수는 `SIP <https://en.wikipedia.org/wiki/SIP_(software)>`_ 바인딩을 "
+"보유하고 있습니다. ``QgsAuthCrypto`` 를 제외하고 말이죠. 왜냐하면 파이썬을 통해서가 아니라 주 응용 프로그램이 마스터 "
+"비밀번호 `해싱 <http://www.terms.co.kr/hashing.htm>`_ 및 인증 데이터베이스를 관리해야 하기 때문입니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:307
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, no wall against PyQGIS access has been defined. This"
+" may lead to issues where a user downloads/installs a malicious PyQGIS "
+"plugin or standalone app that gains access to authentication credentials."
+msgstr ""
+"마스터 비밀번호를 입력하고 나면, 파이어폭스 작동 방식과 비슷하게 API가 열려 인증 데이터베이스에 있는 인증 환경 설정에 접근할 수 "
+"있습니다. 하지만 PyQGIS 접근을 막는 어떤 방화벽도 정의되지 않은 상태입니다. 인증 정보에 접근할 수 있는 악성 PyQGIS "
+"플러그인 또는 독립형 응용 프로그램을 다운로드해서 설치한 경우 문제가 발생할 수도 있습니다."
