@@ -33,7 +33,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:2
+msgid "Point Cloud Conversion"
+msgstr "점구름 변환"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:4
 msgid "|332|"
@@ -42,6 +46,12 @@ msgstr "|332|"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:16
 msgid "Convert format"
 msgstr "포맷 변환하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:18
+msgid ""
+"Converts a point cloud to a different file format, e.g. creates a compressed"
+" :file:`.LAZ`."
+msgstr "점구름을 다른 파일 포맷으로, 예를 들면 압축 :file:`.LAZ` 파일을 생성하는 방식으로 변환합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:21
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:87
@@ -120,6 +130,19 @@ msgstr "**Input layer**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:102
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:230
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:352
+msgid "[point cloud]"
+msgstr "[point cloud]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:34
+msgid "Input point cloud layer to convert"
+msgstr "변환할 입력 점구름 레이어"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:35
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:57
 msgid "**Converted**"
@@ -143,6 +166,10 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "기본값: ``[Save to temporary file]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:40
+msgid "Specify the point cloud file to use as output. One of:"
+msgstr "산출물로 사용할 점구름 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "임시 파일로 저장"
@@ -158,12 +185,24 @@ msgstr "파일로 저장…"
 msgid "Outputs"
 msgstr "산출물"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:60
+msgid ""
+"Output point cloud layer in a modified file format. Currently supported "
+"formats are :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` and :file:`.VPC`."
+msgstr ""
+"수정된 파일 포맷의 산출 점구름 레이어입니다. 현재 :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ`, "
+"그리고 :file:`.VPC` 포맷을 지원합니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:64
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:190
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:314
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:417
 msgid "Python code"
 msgstr "파이썬 코드"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:66
+msgid "**Algorithm ID**: ``pdal:convertformat``"
+msgstr "**알고리즘 ID**: ``pdal:convertformat``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -176,16 +215,54 @@ msgstr ""
 "파라미터 **이름** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
 ":ref:`processing_console` 을 참조하세요."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:76
+msgid "Export to raster"
+msgstr "래스터로 내보내기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:78
+msgid ""
+"Exports point cloud data to a 2D raster grid having cell size of given "
+"resolution, writing values from the specified attribute."
+msgstr "점구름 데이터를 2차원 래스터 그리드로 내보냅니다. 지정한 해상도가 그리드 셀 크기이며, 지정한 속성의 값을 작성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:84
+msgid "Raster output using Intensity attribute of points"
+msgstr "포인트의 강도(intensity) 속성을 사용한 래스터 산출물"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:90
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:218
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:340
 msgid "Basic parameters"
 msgstr "기본 파라미터"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:231
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:353
+msgid "Input point cloud layer to export"
+msgstr "내보낼 입력 점구름 레이어"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:104
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:354
 msgid "**Attribute**"
 msgstr "**Attribute**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:105
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:357
+msgid "``ATTRIBUTE``"
+msgstr "``ATTRIBUTE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:106
+msgid "[field] [enumeration]"
+msgstr "[field] [enumeration]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:107
+msgid "A Field of the point cloud layer to extract the values from"
+msgstr "값을 추출할 점구름 레이어의 필드"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:108
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:232
+msgid "**Resolution of the density raster**"
+msgstr "**Resolution of the density raster**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:109
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:233
@@ -208,6 +285,16 @@ msgstr "[number]"
 msgid "Default: 1.0"
 msgstr "기본값: 1.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:113
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:237
+msgid "Cell size of the output raster"
+msgstr "산출 래스터의 셀 크기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:114
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:238
+msgid "**Tile size for parallel runs**"
+msgstr "**Tile size for parallel runs**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:115
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:239
 msgid "``TILE_SIZE``"
@@ -218,12 +305,25 @@ msgstr "``TILE_SIZE``"
 msgid "Default: 1000"
 msgstr "기본값: 1000"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:120
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:183
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:244
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:360
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:410
+msgid "**Exported**"
+msgstr "**Exported**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:122
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:185
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:246
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:309
 msgid "[raster]"
 msgstr "[raster]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:125
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:249
+msgid "Specify the raster file to export the data to. One of:"
+msgstr "데이터를 내보낼 래스터 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:132
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:256
@@ -263,6 +363,20 @@ msgstr "``FILTER_EXPRESSION``"
 msgid "[expression]"
 msgstr "[expression]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:147
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:271
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:387
+msgid ""
+"A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of "
+"features in the point cloud data"
+msgstr "점구름 데이터에 있는 피처의 하위 집합을 선택하기 위한 :ref:`PDAL 표현식 <pdal_expressions>`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:148
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:272
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:388
+msgid "**Cropping extent**"
+msgstr "**Cropping extent**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:151
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:275
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:391
@@ -274,6 +388,13 @@ msgstr "``FILTER_EXTENT``"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:392
 msgid "[extent]"
 msgstr "[extent]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:153
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:277
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:393
+msgid ""
+"A map extent for selecting a subset of features in the point cloud data"
+msgstr "점구름 데이터에 있는 피처의 하위 집합을 선택하기 위한 맵 범위입니다."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -310,17 +431,108 @@ msgstr "캔버스에 그리기: 연산에 넣을 범위를 정하는 직사각�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "좌표를 ``xmin, xmax, ymin, ymax`` 로 입력"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:159
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:283
+msgid "**X origin of a tile for parallel runs**"
+msgstr "**X origin of a tile for parallel runs**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:162
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:286
 msgid "``ORIGIN_X``"
 msgstr "``ORIGIN_X``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:165
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:289
+msgid "**Y origin of a tile for parallel runs**"
+msgstr "**Y origin of a tile for parallel runs**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:168
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:292
 msgid "``ORIGIN_Y``"
 msgstr "``ORIGIN_Y``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:186
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:310
+msgid ""
+"Output raster layer features of the point cloud layer are exported to. "
+"Currently supported format is :file:`.TIF`."
+msgstr "점구름 레이어의 피처를 내보낸 산출 래스터 레이어입니다. 현재 :file:`.TIF` 포맷을 지원합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:192
+msgid "**Algorithm ID**: ``pdal:exportraster``"
+msgstr "**알고리즘 ID**: ``pdal:exportraster``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:201
+msgid "Export raster (using triangulation)"
+msgstr "래스터 내보내기 (삼각분할 사용)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:203
+msgid ""
+"Exports point cloud data to a 2D raster grid using a triangulation of points"
+" and then interpolating cell values from triangles."
+msgstr "점구름 데이터를 포인트들을 삼각분할한 다음 삼각형들에서 나온 셀 값들을 보간해서 2차원 래스터 그리드로 내보냅니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:206
+msgid ""
+"Using this algorithm can be slower if you are dealing with a large dataset. "
+"If your point cloud is dense, you can export your ground points as a raster "
+"using the :ref:`pdalexportraster` algorithm."
+msgstr ""
+"이 알고리즘은 대용량 데이터셋을 처리하는 경우 느릴 수 있습니다. 사용자의 점구름 밀도가 높다면, 지상 포인트들을 "
+":ref:`pdalexportraster` 알고리즘을 사용해서 래스터로 내보내면 됩니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:212
+msgid "Terrain raster output generated by point cloud triangulation"
+msgstr "점구름 삼각분할로 생성된 지형 래스터 산출물"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:307
+msgid "**Exported (using triangulation)**"
+msgstr "**Exported (using triangulation)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:316
+msgid "**Algorithm ID**: ``pdal:exportrastertin``"
+msgstr "**알고리즘 ID**: ``pdal:exportrastertin``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:326
+msgid "Export to vector"
+msgstr "벡터로 내보내기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:328
+msgid ""
+"Exports point cloud data to a vector layer with 3D points (a GeoPackage), "
+"optionally with extra attributes."
+msgstr ""
+"점구름 데이터를 3차원 포인트를 가진 벡터 레이어(GeoPackage)로 내보냅니다. 선택적인 추가 속성을 가질 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:334
+msgid ""
+"Exporting point cloud (ground points) to a vector layer styled based on the "
+"elevation"
+msgstr "점구름(지상 포인트)를 표고 기반 스타일을 적용한 벡터 레이어로 내보내기"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:358
+msgid "[field] [list]"
+msgstr "[field] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:359
+msgid "One or more fields of the point cloud layer to export with the points."
+msgstr "포인트와 함께 내보낼 점구름 레이어의 하나 이상의 필드"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:362
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:412
 msgid "[vector]"
 msgstr "[vector]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:365
+msgid "Specify the vector file to export the data to. One of:"
+msgstr "데이터를 내보낼 벡터 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:413
+msgid ""
+"Output vector layer features of the point cloud layer are exported to. "
+"Currently supported format is :file:`.GPKG`."
+msgstr "점구름 레이어의 피처를 내보낸 산출 벡터 레이어입니다. 현재 :file:`.GPKG` 포맷을 지원합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:419
+msgid "**Algorithm ID**: ``pdal:exportvector``"
+msgstr "**알고리즘 ID**: ``pdal:exportvector``"
