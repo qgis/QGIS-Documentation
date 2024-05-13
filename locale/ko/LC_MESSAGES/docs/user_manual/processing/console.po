@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/user_manual/processing/console.rst:4
 msgid "Using processing algorithms from the console"
@@ -451,6 +451,14 @@ msgstr ""
 ":const:`True` 로 설정해야 합니다. 입력 및 산출 파라미터를 어떻게 ``smoothgeometry`` 및 ``buffer`` "
 "알고리즘에 파라미터로 사용하는지 볼 수 있을 겁니다."
 
+#: ../../docs/user_manual/processing/console.rst:488
+msgid ""
+"There are a number of different parameter types available for input and "
+"output. You can find the full list at :ref:`processing_algs_input_output`."
+msgstr ""
+"입력물과 산출물로 사용할 수 있는 서로 다른 파라미터 유형이 많이 있습니다. "
+":ref:`processing_algs_input_output` 에서 전체 목록을 찾아볼 수 있습니다."
+
 #: ../../docs/user_manual/processing/console.rst:491
 msgid ""
 "The first parameter to the constructors is the name of the parameter, and "
@@ -494,7 +502,7 @@ msgid ""
 msgstr ""
 "제대로 동작하는 알고리즘은 의미가 통하는만큼의 산출물을 정의하고 반환해야 합니다. 숫자 및 문자열 같은 피처가 아닌 산출물은 사용자 "
 "알고리즘을 더 큰 모델의 일부로 실행하는 경우 아주 유용합니다. 그 값을 모델 내부의 바로 다음 알고리즘의 입력 파라미터로 사용할 수 "
-"있기 때문입니다. 공간 처리된 피처의 개수, 실행중 찾아낸 유효하지 않은 피처의 개수, 피처 산출물의 개수 등과 같은 값을 위해 숫자형 "
+"있기 때문입니다. 공간 처리된 피처의 개수, 실행중 찾아낸 무결하지 않은 피처의 개수, 피처 산출물의 개수 등과 같은 값을 위해 숫자형 "
 "산출물을 추가하는 것도 좋겠죠. 반환되는 산출물이 많을수록, 사용자 알고리즘도 더 유용해지니까요!"
 
 #: ../../docs/user_manual/processing/console.rst:517
@@ -564,7 +572,7 @@ msgid ""
 "should not recover, then you should raise a :class:`QgsProcessingException "
 "<qgis.core.QgsProcessingException>`. E.g.::"
 msgstr ""
-"사용자 알고리즘의 실행을 방해하는 오류가 발생한 경우, 예를 들어 입력값이 유효하지 않거나 다른 조건이 맞지 않아 복구되서는 안 되고 될"
+"사용자 알고리즘의 실행을 방해하는 오류가 발생한 경우, 예를 들어 입력값이 무결하지 않거나 다른 조건이 맞지 않아 복구되서는 안 되고 될"
 " 수도 없을 때, :class:`QgsProcessingException <qgis.core.QgsProcessingException>`"
 " 을 발생시켜야 합니다. 예를 들면:"
 
