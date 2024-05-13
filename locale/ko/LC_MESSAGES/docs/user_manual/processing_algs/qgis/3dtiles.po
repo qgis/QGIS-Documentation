@@ -35,9 +35,23 @@ msgstr ""
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
 "translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:2
+msgid "3D Tiles"
+msgstr "3D 타일"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:3
 msgid "|334|"
 msgstr "|334|"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:15
+msgid "Convert B3DM to GLTF"
+msgstr "B3DM을 GLTF로 변환하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:17
+msgid ""
+"Converts files from the legacy :file:`.B3DM` format to :file:`.GLTF` or "
+":file:`.GLB`."
+msgstr "파일을 레거시 :file:`.B3DM` 포맷에서 :file:`.GLTF` 또는 :file:`.GLB` 포맷으로 변환합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:80
@@ -72,10 +86,26 @@ msgstr "유형"
 msgid "Description"
 msgstr "설명"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:31
+msgid "**Input B3DM**"
+msgstr "**Input B3DM**"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:32
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:92
 msgid "``INPUT``"
 msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:93
+msgid "[3D Tile]"
+msgstr "[3D Tile]"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:94
+msgid "Input file to convert."
+msgstr "변환할 입력 파일입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:35
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:57
@@ -91,6 +121,10 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "기본값: ``[Save to temporary file]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:40
+msgid "Specify the output 3D tile file. One of:"
+msgstr "산출 3D 타일 파일을 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "임시 파일로 저장"
@@ -105,10 +139,18 @@ msgstr "파일로 저장…"
 msgid "Outputs"
 msgstr "산출물"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:60
+msgid "Output layer in :file:`.GLTF` format."
+msgstr ":file:`.GLTF` 포맷의 산출 레이어입니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:63
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:141
 msgid "Python code"
 msgstr "파이썬 코드"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:65
+msgid "**Algorithm ID**: ``native:b3dmtogltf``"
+msgstr "**알고리즘 ID**: ``native:b3dmtogltf``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -120,6 +162,25 @@ msgstr ""
 "공간 처리 툴박스에 있는 알고리즘 위에 마우스를 가져가면 *알고리즘 ID* 를 표시합니다. *파라미터 목록(dictionary)* 은 "
 "파라미터 **이름** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
 ":ref:`processing_console` 을 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:75
+msgid "Convert GLTF to vector features"
+msgstr "GLTF를 벡터 피처로 변환하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:77
+msgid ""
+"Converts :file:`.GLTF` or :file:`.GLB` file contents to standard vector "
+"layer formats."
+msgstr ":file:`.GLTF` 또는 :file:`.GLB` 파일의 내용을 표준 벡터 레이어 포맷으로 변환합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:91
+msgid "**Input GLTF**"
+msgstr "**Input GLTF**"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:95
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:131
+msgid "**Output polygons**"
+msgstr "**Output polygons**"
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:97
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:109
@@ -141,6 +202,10 @@ msgstr "[vector: polygon]"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "기본값: ``[Create temporary layer]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:102
+msgid "Specify the output vector layer to store polygon features. One of:"
+msgstr "폴리곤 피처를 저장할 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "산출물 건너뛰기"
@@ -161,6 +226,11 @@ msgstr "데이터베이스 테이블에 저장…"
 msgid "The file encoding can also be changed here."
 msgstr "이 파라미터에서 파일 인코딩도 변경할 수 있습니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:135
+msgid "**Output lines**"
+msgstr "**Output lines**"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:110
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:136
 msgid "``OUTPUT_LINES``"
@@ -170,3 +240,19 @@ msgstr "``OUTPUT_LINES``"
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:137
 msgid "[vector: line]"
 msgstr "[vector: line]"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:114
+msgid "Specify the output vector layer to store line features. One of:"
+msgstr "라인 피처를 저장할 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:134
+msgid "A vector layer storing the polygon features in input layer."
+msgstr "입력 레이어의 폴리곤 피처를 저장하고 있는 벡터 레이어입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:138
+msgid "A vector layer storing the line features in input layer."
+msgstr "입력 레이어의 라인 피처를 저장하고 있는 벡터 레이어입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:143
+msgid "**Algorithm ID**: ``native:gltftovector``"
+msgstr "**알고리즘 ID**: ``native:gltftovector``"
