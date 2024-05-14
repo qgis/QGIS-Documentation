@@ -797,6 +797,21 @@ msgid ""
 "have different shapes:"
 msgstr "지정한 범위를 커버하는 그리드를 가진 벡터 레이어를 생성합니다. 그리드 셀이 서로 다른 형태일 수 있습니다:"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:274
+msgid ""
+"Different grid cell shapes applied to the same extent, without overlaps"
+msgstr "동일한 범위에 중첩 없이 적용된 서로 다른 그리드 셀 형태들"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:276
+msgid ""
+"The size and/or placement of each element in the grid is defined using a "
+"horizontal and vertical spacing. The CRS of the output layer must be "
+"defined. The grid extent and the spacing values must be expressed in the "
+"coordinates and units of this CRS."
+msgstr ""
+"그리드에 있는 각 요소의 크기 그리고/또는 배치를 수평 및 수직 간격을 사용해서 정의합니다. 산출 레이어의 좌표계는 반드시 정의해야만 "
+"합니다. 그리드 범위와 간격 값은 반드시 이 좌표계의 좌표와 단위를 통해 표현해야만 합니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:282
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:956
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1065
@@ -974,6 +989,30 @@ msgstr "**Grid**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:355
 msgid "Resulting vector grid layer. One of:"
 msgstr "산출 그리드 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:375
+msgid ""
+"Resulting vector grid layer. The output geometry type (point, line or "
+"polygon) depends on the :guilabel:`Grid type`. Features are created from top"
+" to bottom, left to right. The attribute table is filled with:"
+msgstr ""
+"산출되는 벡터 그리드 레이어입니다. 산출 도형 유형(포인트, 라인, 또는 폴리곤)은 :guilabel:`Grid type` 에 따라 "
+"달라집니다. 피처는 위에서 아래로, 왼쪽에서 오른쪽으로 생성됩니다. 속성 테이블은 다음으로 채워집니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:380
+msgid "an ``id``"
+msgstr "``id``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:381
+msgid "coordinates on the ``left``, ``right``, ``top`` and ``bottom`` sides"
+msgstr "``left``, ``right``, ``top`` 및 ``bottom`` 가장자리의 좌표"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:382
+msgid ""
+"and their placement in the grid: ``row_index`` and ``column_index`` "
+"(available for point, rectangle and hexagon grid types)"
+msgstr ""
+"그리드에서의 배치: ``row_index`` 및 ``column_index`` (포인트, 직사각형 및 육각형 그리드 유형에 사용 가능)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:388
 msgid "**Algorithm ID**: ``native:creategrid``"
@@ -1265,6 +1304,13 @@ msgstr "**알고리즘 ID**: ``native:generatepointspixelcentroidsinsidepolygons
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:630
 msgid "Import geotagged photos"
 msgstr "지오태그된 사진 가져오기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:631
+msgid ""
+"Creates a point layer corresponding to the geotagged locations from JPEG or "
+"HEIC/HEIF images from a source folder."
+msgstr ""
+"소스 폴더에 있는 JPEG 또는 HEIC/HEIF 이미지에서 나온 지오태그(geotag)된 위치에 대응하는 포인트 레이어를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:634
 msgid ""
@@ -2135,6 +2181,15 @@ msgid ""
 "layer."
 msgstr "래스터 레이어에 있는 각 픽셀에 대응하는 포인트를 담은 벡터 레이어를 생성합니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1597
+msgid ""
+"Converts a raster layer to a vector layer, by creating point features for "
+"each individual pixel's center in the raster layer. Any NoData  pixels are "
+"skipped in the output."
+msgstr ""
+"래스터 레이어에 있는 각 개별 픽셀의 중심에 대해 포인트 피처를 생성해서 래스터 레이어를 벡터 레이어로 변환합니다. 산출물에서 "
+"NODATA 픽셀은 건너뜁니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1616
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1690
 msgid "**Band number**"
@@ -2206,6 +2261,15 @@ msgid ""
 "Creates a vector layer of polygons corresponding to each pixel in a raster "
 "layer."
 msgstr "래스터 레이어에 있는 각 픽셀에 대응하는 폴리곤을 담은 벡터 레이어를 생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1671
+msgid ""
+"Converts a raster layer to a vector layer, by creating polygon features for "
+"each individual pixel's extent in the raster layer. Any NoData  pixels are "
+"skipped in the output."
+msgstr ""
+"래스터 레이어에 있는 각 개별 픽셀의 범위에 대해 폴리곤 피처를 생성해서 래스터 레이어를 벡터 레이어로 변환합니다. 산출물에서 "
+"NODATA 픽셀은 건너뜁니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1700
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1723
