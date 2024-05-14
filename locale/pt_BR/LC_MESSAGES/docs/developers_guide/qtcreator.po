@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-05-14 08:58+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Vitor Vieira Vasconcelos <vitor.v.v@gmail.com>, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -143,7 +143,7 @@ msgstr ""
 "Marque |caixa de seleção| :guilabel:`Selecione todos os kits` habilitando a "
 "entrada :guilabel:`Área de Trabalho`"
 
-#: ../../docs/developers_guide/qtcreator.rst:255
+#: ../../docs/developers_guide/qtcreator.rst:231
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -229,75 +229,6 @@ msgstr "Pressione :guilabel:`Aplicar Alterações de Configuração`."
 
 #: ../../docs/developers_guide/qtcreator.rst:107
 msgid ""
-"By default, Qt Creator uses all the CPU cores available to speed the build "
-"with maximum parallelization. To avoid that your computer freezes, you "
-"should specify a smaller number of cores. Under the :guilabel:`Build Steps` "
-"section:"
-msgstr ""
-"Por padrão, o Qt Criador usa todos os núcleos de CPU disponíveis para "
-"acelerar a compilação com paralelização máxima. Para evitar que seu "
-"computador congele, você deve especificar um número menor de núcleos. Na "
-"seção :guilabel:`Etapas de construção`:"
-
-#: ../../docs/developers_guide/qtcreator.rst:111
-msgid ""
-"Press the :menuselection:`Add build step -->` menu and select "
-":guilabel:`Custom Process Step`"
-msgstr ""
-"Pressione o menu: seleção de menu:`Adicionar etapa de compilação -->` e "
-"selecione :guilabel:`Etapa do processo personalizado`"
-
-#: ../../docs/developers_guide/qtcreator.rst:113
-msgid "Fill the new form as follows:"
-msgstr "Preencha o novo formulário da seguinte forma:"
-
-#: ../../docs/developers_guide/qtcreator.rst:115
-msgid ":guilabel:`Command`: ``make``"
-msgstr ":guilabel:`Comando`: ``fazer``"
-
-#: ../../docs/developers_guide/qtcreator.rst:116
-msgid ""
-":guilabel:`Arguments`: ``-j4`` to use 4 cores (setting depends on your "
-"device)"
-msgstr ""
-":guilabel:`Argumentos`: ``-j4`` para usar 4 núcleos (a configuração depende "
-"do seu dispositivo)"
-
-#: ../../docs/developers_guide/qtcreator.rst:117
-msgid ":guilabel:`Working directory`: ``%{buildDir}``"
-msgstr ":guilabel:`Diretório de trabalho`: ``%{buildDir}``"
-
-#: ../../docs/developers_guide/qtcreator.rst:123
-msgid ""
-"Also, if you want to reduce your build times, you can do it with ``ninja``, "
-"an alternative to ``make`` with similar build options. You'd need to set it "
-"as the :guilabel:`CMake generator`:"
-msgstr ""
-"Além disso, se você quiser reduzir seus tempos de compilação, você pode "
-"fazer isso com ``ninja``, uma alternativa ao ``fazer`` com opções de "
-"compilação semelhantes. Você precisaria defini-lo como o :guilabel:`CFazer "
-"generator`:"
-
-#: ../../docs/developers_guide/qtcreator.rst:127
-msgid "Open :menuselection:`Tools --> Options --> Build & Run --> Kits`"
-msgstr ""
-"Abra: seleção de menu:`Ferramentas -->Opções--> Construir e executar --> "
-"Kits`"
-
-#: ../../docs/developers_guide/qtcreator.rst:128
-msgid ""
-"Select the :guilabel:`Desktop (default)` kit entry, displaying its "
-"properties"
-msgstr ""
-"Selecione a entrada do kit :guilabel:`Área de Trabalho (predefinição)`, "
-"exibindo suas propriedades"
-
-#: ../../docs/developers_guide/qtcreator.rst:129
-msgid "Press :guilabel:`Change...` next to :guilabel:`CMake generator`"
-msgstr "Pressione :guilabel:`Mudar...` ao lado de :guilabel:`CFazer gerador`"
-
-#: ../../docs/developers_guide/qtcreator.rst:131
-msgid ""
 "You are now ready to build. Press the |build| :sup:`Build` button at the "
 "left bottom of the dialog (or :kbd:`Ctrl+B`) to launch the project build! Qt"
 " Creator will begin compiling and this may take some time the first time, "
@@ -309,11 +240,11 @@ msgstr ""
 " compilar e isso pode levar algum tempo na primeira vez, dependendo do seu "
 "dispositivo."
 
-#: ../../docs/developers_guide/qtcreator.rst:244
+#: ../../docs/developers_guide/qtcreator.rst:220
 msgid "build"
 msgstr "build"
 
-#: ../../docs/developers_guide/qtcreator.rst:136
+#: ../../docs/developers_guide/qtcreator.rst:112
 msgid ""
 "At the end of the compilation, you can run QGIS by pressing the |runInstall|"
 " :sup:`Run` button."
@@ -321,11 +252,11 @@ msgstr ""
 "No final da compilação, você pode executar o QGIS pressionando o botão "
 "|executarInstalar| :sup:Botão `Executar`."
 
-#: ../../docs/developers_guide/qtcreator.rst:246
+#: ../../docs/developers_guide/qtcreator.rst:222
 msgid "runInstall"
 msgstr "runInstall"
 
-#: ../../docs/developers_guide/qtcreator.rst:139
+#: ../../docs/developers_guide/qtcreator.rst:115
 msgid ""
 "The compilation of QGIS also generates binaries in the build directory. "
 "Hence you can execute QGIS from the command line using:"
@@ -333,7 +264,7 @@ msgstr ""
 "A compilação do QGIS também gera binários no diretório de construção. "
 "Portanto, você pode executar o QGIS a partir da linha de comando usando:"
 
-#: ../../docs/developers_guide/qtcreator.rst:147
+#: ../../docs/developers_guide/qtcreator.rst:123
 msgid ""
 "Sometimes you may want to install QGIS as an executable, outside the build "
 "directory."
@@ -341,7 +272,7 @@ msgstr ""
 "Às vezes você pode querer instalar o QGIS como um executável, fora do "
 "diretório de construção."
 
-#: ../../docs/developers_guide/qtcreator.rst:150
+#: ../../docs/developers_guide/qtcreator.rst:126
 msgid ""
 "Set the ``CMAKE_INSTALL_PREFIX`` to somewhere you have write access to (we "
 "use :file:`${HOME}/apps`). This would avoid overwriting an existing QGIS "
@@ -352,17 +283,17 @@ msgstr ""
 "evitaria sobrescrever uma instalação QGIS existente (pelo seu gerenciador de"
 " pacotes, por exemplo)."
 
-#: ../../docs/developers_guide/qtcreator.rst:156
+#: ../../docs/developers_guide/qtcreator.rst:132
 msgid "Press :guilabel:`Apply Configuration Changes` to update the settings"
 msgstr ""
 "Pressione :guilabel:`Aplicar alterações de configuração` para atualizar as "
 "configurações"
 
-#: ../../docs/developers_guide/qtcreator.rst:157
+#: ../../docs/developers_guide/qtcreator.rst:133
 msgid "Press the |build| button"
 msgstr "Pressione o botão |construir| "
 
-#: ../../docs/developers_guide/qtcreator.rst:158
+#: ../../docs/developers_guide/qtcreator.rst:134
 msgid ""
 "When the build is complete, you'll find the :file:`qgis` executable in the "
 ":file:`${HOME}/apps/bin` folder."
@@ -370,11 +301,11 @@ msgstr ""
 "Quando a compilação estiver completa, você encontrará o executável "
 ":arquivo:`qgis` na pasta :arquivo:`${PÁGINA INICIAL}/apps/caixa`."
 
-#: ../../docs/developers_guide/qtcreator.rst:233
+#: ../../docs/developers_guide/qtcreator.rst:209
 msgid "Running and debugging"
 msgstr "Executando e depurando"
 
-#: ../../docs/developers_guide/qtcreator.rst:235
+#: ../../docs/developers_guide/qtcreator.rst:211
 msgid ""
 "Now you are ready to run and debug QGIS. To set a break point, simply open a"
 " source file and click in the left column."
@@ -383,7 +314,7 @@ msgstr ""
 " de interrupção, basta abrir um arquivo de origem e clicar na coluna da "
 "esquerda."
 
-#: ../../docs/developers_guide/qtcreator.rst:240
+#: ../../docs/developers_guide/qtcreator.rst:216
 msgid ""
 "Now launch QGIS under the debugger by clicking the |runDebug| :sup:`Start "
 "Debugging` in the bottom left of the window."
@@ -391,6 +322,6 @@ msgstr ""
 "Agora inicie o QGIS no depurador clicando em |executar depuração| "
 ":sup:`Iniciar depuração` no canto inferior esquerdo da janela."
 
-#: ../../docs/developers_guide/qtcreator.rst:245
+#: ../../docs/developers_guide/qtcreator.rst:221
 msgid "runDebug"
 msgstr "runDebug"
