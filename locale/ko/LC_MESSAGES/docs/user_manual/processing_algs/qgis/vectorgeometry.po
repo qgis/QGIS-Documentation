@@ -2968,25 +2968,25 @@ msgstr "벡터 레이어의 도형에 대해 무결성(validity) 점검을 수�
 msgid ""
 "The geometries are classified in three groups (valid, invalid and error) and"
 " for each group, a vector layer with its features is generated:"
-msgstr "도형을 세 그룹(유효함, 유효하지 않음 및 오류)으로 분류해서 각 그룹별 피처를 담은 벡터 레이어를 생성합니다:"
+msgstr "도형을 세 그룹(무결함, 무결하지 않음 및 오류)으로 분류해서 각 그룹별 피처를 담은 벡터 레이어를 생성합니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:823
 msgid ""
 "The **Valid output** layer contains only the valid features (without "
 "topological errors)."
-msgstr "**유효한 산출물** 레이어는 (위상 오류가 없는) 유효한 피처만 담고 있습니다."
+msgstr "**무결한 산출물** 레이어는 (위상 오류가 없는) 무결한 피처만 담고 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:825
 msgid ""
 "The **Invalid output** layer contains all the invalid features found by the "
 "algorithm."
-msgstr "**유효하지 않은 산출물** 레이어는 알고리즘이 발견한 유효하지 않은 피처를 모두 담고 있습니다."
+msgstr "**무결하지 않은 산출물** 레이어는 알고리즘이 발견한 무결하지 않은 피처를 모두 담고 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:827
 msgid ""
 "The **Error output** layer is a point layer that points to where the invalid"
 " features were found."
-msgstr "**오류 산출물** 레이어는 유효하지 않은 피처를 발견한 위치를 가리키는 포인트 레이어입니다."
+msgstr "**오류 산출물** 레이어는 무결하지 않은 피처를 발견한 위치를 가리키는 포인트 레이어입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:830
 msgid ""
@@ -2994,8 +2994,8 @@ msgid ""
 "information (\"message\" for the **error** layer, \"FID\" and \"_errors\" "
 "for the **invalid** layer and  only \"FID\" for the **valid** layer):"
 msgstr ""
-"생성된 레이어들의 속성 테이블은 몇몇 (**오류** 레이어의 경우 \"message\", **유효하지 않은** 레이어의 경우 "
-"\"FID\" 및 \"_errors\", 그리고 **유효한** 레이어의 경우 \"FID\" 만) 추가 정보를 담을 것입니다:"
+"생성된 레이어들의 속성 테이블은 몇몇 (**오류** 레이어의 경우 \"message\", **무결하지 않은** 레이어의 경우 "
+"\"FID\" 및 \"_errors\", 그리고 **무결한** 레이어의 경우 \"FID\" 만) 추가 정보를 담을 것입니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:835
 msgid ""
@@ -3007,7 +3007,7 @@ msgstr "생성된 각 레이어의 속성 테이블은 몇몇 (발견된 오류 
 msgid ""
 "Left: the input layer. Right: the valid layer (green), the invalid layer "
 "(orange)"
-msgstr "왼쪽: 입력 레이어, 오른쪽: 유효한 레이어(녹색), 유효하지 않은 레이어(주황색)"
+msgstr "왼쪽: 입력 레이어, 오른쪽: 무결한 레이어(녹색), 무결하지 않은 레이어(주황색)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:846
 msgid ":ref:`qgisfixgeometries` and the core plugin :ref:`geometry_checker`"
@@ -3073,7 +3073,7 @@ msgstr "``VALID_OUTPUT``"
 msgid ""
 "Specify the vector layer to contain a copy of the valid features of the "
 "source layer. One of:"
-msgstr "소스 레이어의 유효한 피처의 복사본을 담고 있는 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+msgstr "소스 레이어의 무결한 피처의 복사본을 담고 있는 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -3095,7 +3095,7 @@ msgid ""
 "with the field  ``_errors`` listing the summary of the error(s) found. One "
 "of:"
 msgstr ""
-"발견한 오류(들)의 요약 목록을 담은 ``_errors`` 필드와 함께 소스 레이어의 유효하지 않은 피처의 복사본을 담고 있는 벡터 "
+"발견한 오류(들)의 요약 목록을 담은 ``_errors`` 필드와 함께 소스 레이어의 무결하지 않은 피처의 복사본을 담고 있는 벡터 "
 "레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:907
@@ -3144,14 +3144,14 @@ msgstr "``INVALID_COUNT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:946
 msgid "The number of invalid geometries."
-msgstr "유효하지 않은 도형의 개수"
+msgstr "무결하지 않은 도형의 개수"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:950
 msgid ""
 "Vector layer containing copy of the invalid features of the source layer "
 "with the field  ``_errors`` listing the summary of the error(s) found."
 msgstr ""
-"발견한 오류(들)의 요약 목록을 담은 ``_errors`` 필드와 함께 소스 레이어의 유효하지 않은 피처의 복사본을 담고 있는 벡터 "
+"발견한 오류(들)의 요약 목록을 담은 ``_errors`` 필드와 함께 소스 레이어의 무결하지 않은 피처의 복사본을 담고 있는 벡터 "
 "레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:953
@@ -3164,12 +3164,12 @@ msgstr "``VALID_COUNT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:956
 msgid "The number of valid geometries."
-msgstr "유효한 도형의 개수"
+msgstr "무결한 도형의 개수"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:960
 msgid ""
 "Vector layer containing a copy of the valid features of the source layer."
-msgstr "소스 레이어의 유효한 피처의 복사본을 담고 있는 벡터 레이어"
+msgstr "소스 레이어의 무결한 피처의 복사본을 담고 있는 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:966
 msgid "**Algorithm ID**: ``qgis:checkvalidity``"
@@ -4447,7 +4447,7 @@ msgstr "``NODATA``"
 msgid ""
 "Value to use in case the vertex does not intersect (a valid pixel of) the "
 "raster"
-msgstr "꼭짓점이 래스터(의 유효한 픽셀)와 교차하지 않는 경우 사용할 값"
+msgstr "꼭짓점이 래스터(의 무결한 픽셀)와 교차하지 않는 경우 사용할 값"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2295
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6001
@@ -5185,7 +5185,7 @@ msgstr ""
 msgid ""
 "Depending on the input geometry attributes and the filters used, the "
 "resultant geometries created by this algorithm may no longer be valid."
-msgstr "입력 도형의 속성 및 사용된 필터에 따라, 이 알고리즘이 생상하는 산출 도형이 더 이상 유효하지 않을 수도 있습니다."
+msgstr "입력 도형의 속성 및 사용된 필터에 따라, 이 알고리즘이 생상하는 산출 도형이 더 이상 무결하지 않을 수도 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3064
 msgid ""
@@ -5285,7 +5285,7 @@ msgid ""
 "may need to run the :ref:`qgisfixgeometries` algorithm to ensure their "
 "validity."
 msgstr ""
-"입력 도형의 속성 및 사용된 필터에 따라, 이 알고리즘이 생상하는 산출 도형이 더 이상 유효하지 않을 수도 있습니다. 산출 도형의 "
+"입력 도형의 속성 및 사용된 필터에 따라, 이 알고리즘이 생상하는 산출 도형이 더 이상 무결하지 않을 수도 있습니다. 산출 도형의 "
 "무결성을 보장하려면 :ref:`qgisfixgeometries` 알고리즘을 실행해야 할 수도 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3166
@@ -5318,7 +5318,7 @@ msgid ""
 "without losing any of the input vertices. Already valid geometries are "
 "returned without further intervention. Always outputs multi-geometry layer."
 msgstr ""
-"입력 꼭짓점을 하나도 잃지 않은 채 지정한 유효하지 않은 도형의 유효한 표현을 생성하려 합니다. 이미 유효한 도형은 다른 처리 없이 "
+"입력 꼭짓점을 하나도 잃지 않은 채 지정한 무결하지 않은 도형의 무결한 표현을 생성하려 합니다. 이미 무결한 도형은 다른 처리 없이 "
 "그대로 반환됩니다. 이 알고리즘은 항상 다중 도형 레이어를 산출합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3248
@@ -6642,7 +6642,7 @@ msgstr "복제 꼭짓점 제거하기"
 msgid ""
 "Removes duplicate vertices from features, wherever removing the vertices "
 "does not result in a degenerate geometry."
-msgstr "꼭짓점 제거가 도형의 유효성을 무너뜨리지 않는 선에서, 도형에서 복제 꼭짓점을 제거합니다."
+msgstr "꼭짓점 제거가 도형의 무결성을 무너뜨리지 않는 선에서, 도형에서 복제 꼭짓점을 제거합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5304
 msgid ""
@@ -7627,7 +7627,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6625
 msgid ""
 "Snapping to grid may generate an invalid geometry in some corner cases."
-msgstr "그리드에 스냅시키면 일부 모서리에서 유효하지 않은 도형을 생성할 수도 있습니다."
+msgstr "그리드에 스냅시키면 일부 모서리에서 무결하지 않은 도형을 생성할 수도 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6628
 msgid ":ref:`qgissnapgeometries`"
@@ -7763,7 +7763,7 @@ msgstr "왼쪽: 입력 레이어, 중앙: 최대 노드 값 100, 오른쪽: 최�
 msgid ""
 "Subdividing a geometry can generate geometry parts that may not be valid and"
 " may contain self-intersections."
-msgstr "도형을 세분화하면 유효하지 않거나 자체 교차하는 도형 부분들을 생성할 수도 있습니다."
+msgstr "도형을 세분화하면 무결하지 않거나 자체 교차하는 도형 부분들을 생성할 수도 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6809
 msgid ":ref:`qgisexplodelines`, :ref:`qgislinesubstring`"
