@@ -494,6 +494,18 @@ msgstr "1 -- 평균 (``average``)"
 msgid "2 -- Gaussian (``gauss``)"
 msgstr "2 -- 가우스 (``gauss``)"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:83
+msgid "3 -- Cubic (4x4 kernel) (``cubic``)"
+msgstr "3 --- 3차 (4x4 커널) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:84
+msgid "4 -- Cubic B-Spline (4x4 kernel) (``cubicspline``)"
+msgstr "4 --- 3차 B-스플라인 (4x4 커널) (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:85
+msgid "5 -- Lanczos (6x6 kernel) (``lanczos``)"
+msgstr "5 --- 란초시 (6x6 커널) (``lanczos``)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:86
 msgid "6 -- Average MP (``average_mp``)"
 msgstr "6 -- 평균 MP (``average_mp``)"
@@ -825,11 +837,46 @@ msgstr "산출 파일용 투영체를 무시합니다. 재투영하지 않습니
 msgid "**Resampling algorithm**"
 msgstr "**Resampling algorithm**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:243
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:714
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1243
+msgid ""
+"The `resampling algorithm "
+"<https://gdal.org/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use. "
+"Options:"
+msgstr ""
+"사용할 `리샘플링 알고리즘 <https://gdal.org/programs/gdalwarp.html#cmdoption-"
+"gdalwarp-r>`_ 입니다. 다음 옵션들 가운데 하나를 선택할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:246
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:717
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1246
 msgid "0 --- Nearest Neighbour (``nearest``)"
 msgstr "0 --- 최근접 이웃 (``nearest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:247
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:718
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1247
+msgid "1 --- Bilinear (2x2 kernel) (``bilinear``)"
+msgstr "1 --- 쌍선형 (2x2 커널) (``bilinear``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:248
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:719
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1248
+msgid "2 --- Cubic (4x4 kernel) (``cubic``)"
+msgstr "2 --- 3차 (4x4 커널) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:249
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:720
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1249
+msgid "3 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)"
+msgstr "3 --- 3차 B-스플라인 (4x4 커널) (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:250
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:721
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1250
+msgid "4 --- Lanczos (6x6 kernel) (``lanczos``)"
+msgstr "4 --- 란초시 (6x6 커널) (``lanczos``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:251
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:722
@@ -840,9 +887,17 @@ msgstr "5 --- 평균 (``average``)"
 msgid "6 --- Mode (``mode``)"
 msgstr "6 --- 모드 (``mode``)"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:253
+msgid "**NoData value(s) for input bands (space separated)**"
+msgstr "**NoData value(s) for input bands (space separated)**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:256
 msgid "``SRC_NODATA``"
 msgstr "``SRC_NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:260
+msgid "Space separated NoData value(s) for input band(s)"
+msgstr "입력 밴드(들)를 위한 공백으로 구분된 NODATA 값(들)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:283
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:642
@@ -1030,6 +1085,30 @@ msgstr "임시 디렉터리에 저장"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to Directory"
 msgstr "디렉터리에 저장"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:414
+msgid "The resampling algorithm to use. Options:"
+msgstr "사용할 리샘플링 알고리즘입니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:418
+msgid "1 --- Nearest Neighbour (``near``)"
+msgstr "1 --- 최근접 이웃 (``nearest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:419
+msgid "2 --- Bilinear (2x2 kernel) (``bilinear``)"
+msgstr "2 --- 쌍선형 (2x2 커널) (``bilinear``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:420
+msgid "3 --- Cubic (4x4 kernel) (``cubic``)"
+msgstr "3 --- 3차 (4x4 커널) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:421
+msgid "4 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)"
+msgstr "4 --- 3차 B-스플라인 (4x4 커널) (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:422
+msgid "5 --- Lanczos (6x6 kernel) (``lanczos``)"
+msgstr "5 --- 란초시 (6x6 커널) (``lanczos``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:423
 msgid "6 --- Antialias (``antialias``)"
@@ -1271,9 +1350,17 @@ msgstr "``NODATA_INPUT``"
 msgid "Ignores pixels from files being merged in with this pixel value"
 msgstr "병합되는 파일들에서 이 픽셀값을 가진 픽셀을 무시합니다."
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:598
+msgid "**Assign specified \"NoData\" value to output**"
+msgstr "**Assign specified \"NoData\" value to output**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:601
 msgid "``NODATA_OUTPUT``"
 msgstr "``NODATA_OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:605
+msgid "Assigns the specified NoData value to output bands."
+msgstr "산출 밴드에 지정한 NODATA 값을 할당합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:606
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:724
@@ -1406,6 +1493,10 @@ msgid ""
 "<https://gdal.org/programs/gdal_calc.html>`_."
 msgstr ""
 "`GDAL 래스터 계산기 유틸리티 문서 <https://gdal.org/programs/gdal_calc.html>`_ 를 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:788
+msgid ":ref:`qgisrastercalc`, :ref:`qgisvirtualrastercalc`"
+msgstr ":ref:`qgisrastercalc`, :ref:`qgisvirtualrastercalc`"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:805
 msgid "**Input layer A**"
@@ -1606,13 +1697,50 @@ msgid ""
 "squared and the value of B squared."
 msgstr "``sqrt(A*A+B*B)`` --- 래스터 A의 값의 제곱과 래스터 B의 값의 제곱의 합의 제곱근을 산출합니다."
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:903
+msgid "**Set output NoData value**"
+msgstr "**Set output NoData value**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:906
 msgid "``NO_DATA``"
 msgstr "``NO_DATA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:910
+msgid "Value to use for NoData"
+msgstr "NODATA 용으로 사용할 값"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:911
+msgid "**Handling of extent differences**"
+msgstr "**Handling of extent differences**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:912
 msgid "``EXTENT_OPT``"
 msgstr "``EXTENT_OPT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:916
+msgid ""
+"Determines how to handle rasters with different extents. Only available with"
+" GDAL 3.3+. `Supported options "
+"<https://gdal.org/programs/gdal_calc.html#cmdoption-extent>`_ are:"
+msgstr ""
+"서로 다른 범위를 가진 래스터들을 처리할 방법을 결정합니다. GDAL 3.3 이상 버전에서만 사용할 수 있습니다. `지원하는 옵션들 "
+"<https://gdal.org/programs/gdal_calc.html#cmdoption-extent>`_ 은 다음과 같습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:919
+msgid "0 --- Ignore"
+msgstr "0 --- 무시"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:920
+msgid "1 --- Fail"
+msgstr "1 --- 실패"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:921
+msgid "2 --- Union"
+msgstr "2 --- 통합(union)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:922
+msgid "3 --- Intersect"
+msgstr "3 --- 교차 영역(intersect)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:923
 msgid "**Output extent**"
@@ -1779,7 +1907,7 @@ msgstr "[html]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1085
 msgid "Specify the HTML file for output. One of:"
-msgstr "산출물용 HTML 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+msgstr "산출물 용 HTML 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1127
 msgid "The HTML file containing information about the input raster layer"
