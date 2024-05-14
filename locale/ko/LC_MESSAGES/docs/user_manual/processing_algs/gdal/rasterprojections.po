@@ -373,7 +373,27 @@ msgstr "기본값: 0"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:191
 msgid "Pixel value resampling method to use. Options:"
-msgstr "사용할 픽셀값 리샘플링 메소드를 선택합니다. 선택할 수 있는 옵션은 다음과 같습니다:"
+msgstr "사용할 픽셀값 리샘플링 메소드입니다. 다음 옵션들 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "0 --- Nearest Neighbour"
+msgstr "0 --- 최근접 이웃"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "1 --- Bilinear (2x2 kernel)"
+msgstr "1 --- 쌍선형 (2x2 커널)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "2 --- Cubic (4x4 kernel)"
+msgstr "2 --- 3차 (4x4 커널)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "3 --- Cubic B-Spline (4x4 kernel)"
+msgstr "3 --- 3차 B-스플라인 (4x4 커널)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "4 --- Lanczos (6x6 kernel)"
+msgstr "4 --- 란초시 (6x6 커널)"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:11
 msgid "5 --- Average"
@@ -393,7 +413,19 @@ msgstr "8 --- 최소값"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:15
 msgid "9 --- Median"
-msgstr "9 --- 중간값"
+msgstr "9 --- 중앙값"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "10 --- First quartile (Q1)"
+msgstr "10 --- 제1사분위수 (Q1)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "11 --- Third quartile (Q3)"
+msgstr "11 --- 제3사분위수 (Q3)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:198
+msgid "**NoData value for output bands**"
+msgstr "**NoData value for output bands**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:201
 msgid "``NODATA``"
@@ -409,6 +441,12 @@ msgstr "[number]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:307
 msgid "Default: None"
 msgstr "기본값: None"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:205
+msgid ""
+"Sets NoData value for output bands. If not provided, then NoData values will"
+" be copied from the source dataset."
+msgstr "산출 밴드에 사용할 NODATA 값을 설정합니다. 설정하지 않을 경우, 소스 데이터셋에서 NODATA 값을 복사할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:208
 msgid "**Output file resolution in target georeferenced units**"
