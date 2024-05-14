@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-05-14 08:58+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -126,7 +126,7 @@ msgstr ""
 "|checkbox| :guilabel:`Select all kits` をチェックして、:guilabel:`Desktop` "
 "エントリを有効にします"
 
-#: ../../docs/developers_guide/qtcreator.rst:255
+#: ../../docs/developers_guide/qtcreator.rst:231
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -198,66 +198,6 @@ msgstr ":guilabel:`Apply Configuration Changes` を押します。"
 
 #: ../../docs/developers_guide/qtcreator.rst:107
 msgid ""
-"By default, Qt Creator uses all the CPU cores available to speed the build "
-"with maximum parallelization. To avoid that your computer freezes, you "
-"should specify a smaller number of cores. Under the :guilabel:`Build Steps` "
-"section:"
-msgstr ""
-"デフォルトでは、Qt Creator は利用可能なすべての CPU "
-"コアを使用し、最大限の並列化でビルドを高速化します。コンピュータがフリーズしないようにこれを避けるするには、コア数を少なく指定する必要があります。:guilabel:`Build"
-" Steps` セクションの下にあります："
-
-#: ../../docs/developers_guide/qtcreator.rst:111
-msgid ""
-"Press the :menuselection:`Add build step -->` menu and select "
-":guilabel:`Custom Process Step`"
-msgstr ""
-":menuselection:`Add build step -->` メニューを押し、 :guilabel:`Custom Process Step`"
-" を選択します"
-
-#: ../../docs/developers_guide/qtcreator.rst:113
-msgid "Fill the new form as follows:"
-msgstr "フォームに次のように入力します："
-
-#: ../../docs/developers_guide/qtcreator.rst:115
-msgid ":guilabel:`Command`: ``make``"
-msgstr ":guilabel:`Command`: ``make``"
-
-#: ../../docs/developers_guide/qtcreator.rst:116
-msgid ""
-":guilabel:`Arguments`: ``-j4`` to use 4 cores (setting depends on your "
-"device)"
-msgstr ":guilabel:`Arguments`: ``-j4`` は、 4コアを使います（設定はあなたのデバイスによって異なります）"
-
-#: ../../docs/developers_guide/qtcreator.rst:117
-msgid ":guilabel:`Working directory`: ``%{buildDir}``"
-msgstr ":guilabel:`Working directory`: ``%{buildDir}``"
-
-#: ../../docs/developers_guide/qtcreator.rst:123
-msgid ""
-"Also, if you want to reduce your build times, you can do it with ``ninja``, "
-"an alternative to ``make`` with similar build options. You'd need to set it "
-"as the :guilabel:`CMake generator`:"
-msgstr ""
-"また、ビルド時間を短縮したいのであれば、 ``ninja`` を使うことができます。これは ``make`` "
-"の代替ツールで、同じようなビルドオプションがあります。それを :guilabel:`CMake generator` として設定する必要があるでしょう："
-
-#: ../../docs/developers_guide/qtcreator.rst:127
-msgid "Open :menuselection:`Tools --> Options --> Build & Run --> Kits`"
-msgstr ":menuselection:`Tools --> Options --> Build & Run --> Kits` を開きます"
-
-#: ../../docs/developers_guide/qtcreator.rst:128
-msgid ""
-"Select the :guilabel:`Desktop (default)` kit entry, displaying its "
-"properties"
-msgstr ":guilabel:`Desktop (default)` キットエントリを選択し、プロパティを表示します"
-
-#: ../../docs/developers_guide/qtcreator.rst:129
-msgid "Press :guilabel:`Change...` next to :guilabel:`CMake generator`"
-msgstr ":guilabel:`CMake generator` の隣にある :guilabel:`Change...` を押します"
-
-#: ../../docs/developers_guide/qtcreator.rst:131
-msgid ""
 "You are now ready to build. Press the |build| :sup:`Build` button at the "
 "left bottom of the dialog (or :kbd:`Ctrl+B`) to launch the project build! Qt"
 " Creator will begin compiling and this may take some time the first time, "
@@ -266,34 +206,34 @@ msgstr ""
 "これでビルドの準備ができました。ダイアログの左下にある |build| :sup:`Build` ボタン（または :kbd:`Ctrl+B` "
 "）を押して、プロジェクトのビルドを開始します！Qt Creator のコンパイルが始まりますが、デバイスによっては初回に時間がかかる場合があります。"
 
-#: ../../docs/developers_guide/qtcreator.rst:244
+#: ../../docs/developers_guide/qtcreator.rst:220
 msgid "build"
 msgstr "build"
 
-#: ../../docs/developers_guide/qtcreator.rst:136
+#: ../../docs/developers_guide/qtcreator.rst:112
 msgid ""
 "At the end of the compilation, you can run QGIS by pressing the |runInstall|"
 " :sup:`Run` button."
 msgstr "コンパイルの最後に、|runInstall| :sup:`Run` ボタンを押してQGISを実行することができます。"
 
-#: ../../docs/developers_guide/qtcreator.rst:246
+#: ../../docs/developers_guide/qtcreator.rst:222
 msgid "runInstall"
 msgstr "runInstall"
 
-#: ../../docs/developers_guide/qtcreator.rst:139
+#: ../../docs/developers_guide/qtcreator.rst:115
 msgid ""
 "The compilation of QGIS also generates binaries in the build directory. "
 "Hence you can execute QGIS from the command line using:"
 msgstr ""
 "QGISのコンパイルでは、ビルドディレクトリにバイナリも生成されます。したがって、次を使ってQGISをコマンドラインから実行することができます："
 
-#: ../../docs/developers_guide/qtcreator.rst:147
+#: ../../docs/developers_guide/qtcreator.rst:123
 msgid ""
 "Sometimes you may want to install QGIS as an executable, outside the build "
 "directory."
 msgstr "QGISを実行ファイルとしてビルドディレクトリの外にインストールしたい場合があります。"
 
-#: ../../docs/developers_guide/qtcreator.rst:150
+#: ../../docs/developers_guide/qtcreator.rst:126
 msgid ""
 "Set the ``CMAKE_INSTALL_PREFIX`` to somewhere you have write access to (we "
 "use :file:`${HOME}/apps`). This would avoid overwriting an existing QGIS "
@@ -302,38 +242,38 @@ msgstr ""
 "``CMAKE_INSTALL_PREFIX`` を書き込み可能な場所に設定します（ここでは :file:`${HOME}/apps` "
 "を使用します）。これにより、（例えばあなたのパッケージマネージャによる）既存のQGISのインストールが上書きされるのを防ぐことができます。"
 
-#: ../../docs/developers_guide/qtcreator.rst:156
+#: ../../docs/developers_guide/qtcreator.rst:132
 msgid "Press :guilabel:`Apply Configuration Changes` to update the settings"
 msgstr ":guilabel:`Apply Configuration Changes` を押して設定を更新します"
 
-#: ../../docs/developers_guide/qtcreator.rst:157
+#: ../../docs/developers_guide/qtcreator.rst:133
 msgid "Press the |build| button"
 msgstr "|build| ボタンを押します"
 
-#: ../../docs/developers_guide/qtcreator.rst:158
+#: ../../docs/developers_guide/qtcreator.rst:134
 msgid ""
 "When the build is complete, you'll find the :file:`qgis` executable in the "
 ":file:`${HOME}/apps/bin` folder."
 msgstr ""
 "ビルドが完了すると、 :file:`${HOME}/apps/bin` フォルダに :file:`qgis` 実行ファイルが作成されています。"
 
-#: ../../docs/developers_guide/qtcreator.rst:233
+#: ../../docs/developers_guide/qtcreator.rst:209
 msgid "Running and debugging"
 msgstr "実行してデバッグする"
 
-#: ../../docs/developers_guide/qtcreator.rst:235
+#: ../../docs/developers_guide/qtcreator.rst:211
 msgid ""
 "Now you are ready to run and debug QGIS. To set a break point, simply open a"
 " source file and click in the left column."
 msgstr "これでQGISを実行してデバッグする準備が整いました。ブレークポイントを設定するには、単にソースファイルを開き、左側の列をクリックします。"
 
-#: ../../docs/developers_guide/qtcreator.rst:240
+#: ../../docs/developers_guide/qtcreator.rst:216
 msgid ""
 "Now launch QGIS under the debugger by clicking the |runDebug| :sup:`Start "
 "Debugging` in the bottom left of the window."
 msgstr ""
 "ウィンドウの左下にある |runDebug| :sup:`Start Debugging` をクリックして、デバッガ下でQGISを起動します。"
 
-#: ../../docs/developers_guide/qtcreator.rst:245
+#: ../../docs/developers_guide/qtcreator.rst:221
 msgid "runDebug"
 msgstr "runDebug"
