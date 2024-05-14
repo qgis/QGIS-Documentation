@@ -33,16 +33,35 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:2
 msgid "Raster tools"
 msgstr "래스터 도구"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:14
+msgid "Align raster"
+msgstr "래스터 정렬"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:15
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:138
 msgid "|334|"
 msgstr "|334|"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:17
+msgid ""
+"Aligns raster by resampling it to the same cell size and reprojecting to the"
+" same CRS as a reference raster."
+msgstr "래스터가 동일한 셀 크기를 가지도록 리샘플링하고 참조 래스터와 동일한 좌표계로 재투영해서 래스터를 정렬시킵니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:20
+msgid ""
+"**This algorithm is ONLY available in the** :ref:`Model Designer "
+"<processing.modeler>` context. For other contexts, use instead "
+":ref:`qgisalignrasters`."
+msgstr ""
+"**이 알고리즘은** :ref:`모델 설계자 <processing.modeler>` **맥락에서만 사용할 수 있습니다**. 다른 맥락의 "
+"경우 :ref:`qgisalignrasters` 을 대신 사용하십시오."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:24
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:147
@@ -140,9 +159,17 @@ msgstr "``INPUT``"
 msgid "[raster]"
 msgstr "[raster]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:38
+msgid "Input raster layer to align"
+msgstr "정렬시킬 입력 래스터 레이어"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:39
 msgid "**Resampling method**"
 msgstr "**Resampling method**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:40
+msgid "``RESAMPLING_METHOD``"
+msgstr "``RESAMPLING_METHOD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:41
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:318
@@ -158,6 +185,35 @@ msgstr "[enumeration]"
 msgid "Default: 0"
 msgstr "기본값: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:175
+msgid ""
+"Method to use for input layer resampling. :class:`Available options "
+"<qgis.analysis.Qgis.GdalResampleAlgorithm>` are:"
+msgstr ""
+"입력 레이어를 리샘플링하는 데 사용할 메소드입니다. :class:`사용할 수 있는 옵션들 "
+"<qgis.analysis.Qgis.GdalResampleAlgorithm>` 은 다음과 같습니다:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "0 --- Nearest Neighbour"
+msgstr "0 --- 최근접 이웃"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "1 --- Bilinear (2x2 kernel)"
+msgstr "1 --- 쌍선형 (2x2 커널)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "2 --- Cubic (4x4 kernel)"
+msgstr "2 --- 3차 (4x4 커널)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "3 --- Cubic B-Spline (4x4 kernel)"
+msgstr "3 --- 3차 B-스플라인 (4x4 커널)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "4 --- Lanczos (6x6 kernel)"
+msgstr "4 --- 란초시 (6x6 커널)"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:11
 msgid "5 --- Average"
 msgstr "5 --- 평균"
@@ -168,7 +224,7 @@ msgstr "6 --- 모드"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:13
 msgid "7 --- Maximum"
-msgstr "7 --- 최대값(Maximum)"
+msgstr "7 --- 최대값"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:14
 msgid "8 --- Minimum"
@@ -176,7 +232,23 @@ msgstr "8 --- 최소값"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:15
 msgid "9 --- Median"
-msgstr "9 --- 중간값"
+msgstr "9 --- 중앙값"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "10 --- First quartile (Q1)"
+msgstr "10 --- 제1사분위수 (Q1)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "11 --- Third quartile (Q3)"
+msgstr "11 --- 제3사분위수 (Q3)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:51
+msgid "**Rescale values according to the cell size**"
+msgstr "**Rescale values according to the cell size**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:52
+msgid "``RESCALE``"
+msgstr "``RESCALE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:309
@@ -187,6 +259,10 @@ msgstr "9 --- 중간값"
 msgid "[boolean]"
 msgstr "[boolean]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:55
+msgid "Default: No"
+msgstr "기본값: No"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:57
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:184
 msgid "**Reference layer**"
@@ -196,6 +272,18 @@ msgstr "**Reference layer**"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:185
 msgid "``REFERENCE_LAYER``"
 msgstr "``REFERENCE_LAYER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:187
+msgid ""
+"A raster layer that will be used to fetch extent, cell size and CRS that "
+"will be applied to input layers."
+msgstr "입력 레이어에 적용될 범위, 셀 크기, 좌표계를 가져오는 데 사용할 래스터 레이어입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:189
+msgid "**Override reference CRS**"
+msgstr "**Override reference CRS**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:64
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:70
@@ -238,6 +326,21 @@ msgstr "``CRS``"
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:194
+msgid "CRS to be used instead of the reference layer's"
+msgstr "참조 레이어 좌표계 대신 사용할 좌표계"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:68
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:195
+msgid "**Override reference cell size X**"
+msgstr "**Override reference cell size X**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:198
+msgid "``CELL_SIZE_X``"
+msgstr "``CELL_SIZE_X``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:72
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:78
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:84
@@ -264,6 +367,61 @@ msgstr "[crs]"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:747
 msgid "[number]"
 msgstr "[number]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:200
+msgid "Cell size in X direction to be used instead of the reference layer's"
+msgstr "참조 레이어의 X 방향 셀 크기 대신 사용할 X 방향 셀 크기"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:74
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:201
+msgid "**Override reference cell size Y**"
+msgstr "**Override reference cell size Y**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:204
+msgid "``CELL_SIZE_Y``"
+msgstr "``CELL_SIZE_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:206
+msgid "Cell size in Y direction to be used instead of the reference layer's"
+msgstr "참조 레이어의 Y 방향 셀 크기 대신 사용할 Y 방향 셀 크기"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:80
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:207
+msgid "**Override reference grid offset X**"
+msgstr "**Override reference grid offset X**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:83
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:210
+msgid "``GRID_OFFSET_X``"
+msgstr "``GRID_OFFSET_X``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:212
+msgid "Offset in X direction to apply to cells grid"
+msgstr "셀 그리드에 적용할 X 방향 오프셋"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:86
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:213
+msgid "**Override reference grid offset Y**"
+msgstr "**Override reference grid offset Y**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:89
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:216
+msgid "``GRID_OFFSET_Y``"
+msgstr "``GRID_OFFSET_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:218
+msgid "Offset in Y direction to apply to cells grid"
+msgstr "셀 그리드에 적용할 Y 방향 오프셋"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:92
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:219
+msgid "**Clip to extent**"
+msgstr "**Clip to extent**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:95
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:222
@@ -324,6 +482,11 @@ msgstr "캔버스에 그리기: 연산에 넣을 범위를 정하는 직사각�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "좌표를 ``xmin, xmax, ymin, ymax`` 로 입력"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:119
+msgid "**Aligned raster**"
+msgstr "**Aligned raster**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:104
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:120
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:328
@@ -332,6 +495,11 @@ msgstr "좌표를 ``xmin, xmax, ymin, ymax`` 로 입력"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:430
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:106
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:122
+msgid "output raster with pixels resampled"
+msgstr "픽셀을 리샘플링한 산출 래스터"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:109
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:232
@@ -351,6 +519,10 @@ msgstr "산출물"
 msgid "Python code"
 msgstr "파이썬 코드"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:127
+msgid "**Algorithm ID**: ``native:alignsingleraster``"
+msgstr "**알고리즘 ID**: ``native:alignsingleraster``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -362,6 +534,24 @@ msgstr ""
 "파라미터 **이름** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
 ":ref:`processing_console` 을 참조하세요."
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:137
+msgid "Align rasters"
+msgstr "래스터들 정렬"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:140
+msgid ""
+"Aligns rasters by resampling them to the same cell size and reprojecting to "
+"the same CRS as a reference raster."
+msgstr "래스터들이 동일한 셀 크기를 가지도록 리샘플링하고 참조 래스터와 동일한 좌표계로 재투영해서 래스터들을 정렬시킵니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:143
+msgid ""
+"**This algorithm is NOT available in the** :ref:`Model Designer "
+"<processing.modeler>` context. Use instead :ref:`qgisalignsingleraster`."
+msgstr ""
+"**이 알고리즘은** :ref:`모델 설계자 <processing.modeler>` **맥락에서는 사용할 수 없습니다**. "
+":ref:`qgisalignsingleraster` 을 대신 사용하십시오."
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:158
 msgid "**Input layers**"
 msgstr "**Input layers**"
@@ -371,9 +561,56 @@ msgstr "**Input layers**"
 msgid "[raster] [list]"
 msgstr "[raster] [list]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:161
+msgid ""
+"List of input raster layers with resampling options associated (filled as a "
+":class:`QgsProcessingParameterAlignRasterLayers "
+"<qgis.core.QgsProcessingParameterAlignRasterLayers>` item --- done in GUI by"
+" pressing :guilabel:`Configure Raster...` button for each selected layer):"
+msgstr ""
+"입력 래스터 레이어들의, 리샘플링 옵션(:class:`QgsProcessingParameterAlignRasterLayers "
+"<qgis.core.QgsProcessingParameterAlignRasterLayers>` 로써 채워집니다 --- GUI에서 선택한 "
+"각 레이어에 대해 :guilabel:`Configure Raster...` 버튼을 클릭하면 됩니다)을 합친 목록:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:169
+msgid "**Input layer** [string] (``inputFile``)"
+msgstr "**입력 레이어** [문자열] (``inputFile``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:169
+msgid "Full path of the input layer to align"
+msgstr "정렬시킬 입력 레이어의 전체 경로"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:172
+msgid "**Output file** [string] (``outputFile``)"
+msgstr "**산출 파일** [문자열] (``outputFile``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:172
+msgid "Full path of the corresponding aligned output layer"
+msgstr "그에 대응하는 정렬된 산출 레이어의 전체 경로"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:180
+msgid "**Resampling method** [enumeration] (``resampleMethod``)"
+msgstr "**리샘플링 메소드** [목록(enumeration)] (``resampleMethod``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:182
+msgid "**Rescale values according to the cell size** [boolean] (``rescale``)"
+msgstr "**셀 크기에 따른 크기 조정 값** [불(boolean)] (``rescale``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:242
+msgid "**Aligned rasters**"
+msgstr "**Aligned rasters**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:243
 msgid "``OUTPUT_LAYERS``"
 msgstr "``OUTPUT_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:245
+msgid "output rasters with pixels resampled"
+msgstr "픽셀을 리샘플링한 산출 래스터들"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:250
+msgid "**Algorithm ID**: ``native:alignrasters``"
+msgstr "**알고리즘 ID**: ``native:alignrasters``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:260
 msgid "Convert map to raster"
@@ -604,6 +841,12 @@ msgid ""
 "Generates raster “XYZ” tiles using the current QGIS project as individual "
 "images to a directory structure."
 msgstr "현재 QGIS 프로젝트를 개별 이미지로 목록(directory) 구조에 사용해서 래스터 \"XYZ\" 타일을 생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:452
+msgid ""
+"Optionally, a Leaflet HTML output file using the generated tiles as a map "
+"layer could be created."
+msgstr "생성된 타일을 맵 레이어로 사용해서 리플렛 HTML 산출 파일을 생성할지를 선택할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:459
 msgid "Basic parameters"
@@ -882,6 +1125,18 @@ msgstr "산출 HTML 파일을 지정합니다. 다음 가운데 하나로 저장
 msgid "Advanced parameters"
 msgstr "고급 파라미터"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:594
+msgid "|330|"
+msgstr "|330|"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:605
+msgid "**Leaflet HTML output title**"
+msgstr "**Leaflet HTML output title**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:608
+msgid "``HTML_TITLE``"
+msgstr "``HTML_TITLE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:609
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:617
 msgid "[string]"
@@ -892,13 +1147,52 @@ msgstr "[string]"
 msgid "Default: Not set"
 msgstr "기본값: 설정하지 않음"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:612
+msgid "HTML <title>-tag used for the Leaflet HTML output file."
+msgstr "리플렛 HTML 산출 파일에 쓰이는 HTML <title> 태그입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:613
+msgid "**Leaflet HTML output attribution**"
+msgstr "**Leaflet HTML output attribution**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:616
+msgid "``HTML_ATTRIBUTION``"
+msgstr "``HTML_ATTRIBUTION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:620
+msgid ""
+"Custom map attribution used for the Leaflet HTML output file. HTML links are"
+" possible."
+msgstr "리플렛 HTML 산출 파일에 쓰이는 사용자 정의 맵 속성입니다. HTML 링크를 사용할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:622
+msgid "**Include OpenStreetMap basemap in Leaflet HTML output**"
+msgstr "**Include OpenStreetMap basemap in Leaflet HTML output**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:625
+msgid "``HTML_OSM``"
+msgstr "``HTML_OSM``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:629
+msgid ""
+"An OpenStreetMap basemap layer (source: https://tile.openstreetmap.org) is "
+"included in the Leaflet HTML output file. Proper map attribution is added "
+"automatically."
+msgstr ""
+"리플렛 HTML 산출 파일에 오픈스트리트맵의 기저 맵(basemap) 레이어(소스: "
+"https://tile.openstreetmap.org)를 포함시킵니다. 알맞은 맵 속성을 자동으로 추가합니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:647
 msgid "Output directory (for the tiles)"
-msgstr "산출물 디렉터리 (타일용)"
+msgstr "산출물 디렉터리 (타일 용)"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:651
 msgid "The output HTML (Leaflet) file"
 msgstr "산출 HTML (리플렛) 파일"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:656
+msgid "**Algorithm ID**: ``native:tilesxyzdirectory``"
+msgstr "**알고리즘 ID**: ``native:tilesxyzdirectory``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:666
 msgid "Generate XYZ tiles (MBTiles)"
@@ -932,3 +1226,7 @@ msgstr "산출 파일을 지정합니다. 다음 가운데 하나로 저장할 �
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:781
 msgid "The output file."
 msgstr "산출 파일"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:786
+msgid "**Algorithm ID**: ``native:tilesxyzmbtiles``"
+msgstr "**알고리즘 ID**: ``native:tilesxyzmbtiles``"
