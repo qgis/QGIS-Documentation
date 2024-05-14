@@ -1080,6 +1080,29 @@ msgstr "밴드 4개의 산출 래스터"
 msgid "**Algorithm ID**: ``gdal:colorrelief``"
 msgstr "**알고리즘 ID**: ``gdal:colorrelief``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:272
+msgid "Fill NoData"
+msgstr "NODATA 채우기"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:273
+msgid ""
+"Fill raster regions with NoData values by interpolation from edges. The "
+"values for the NoData regions are calculated by the surrounding pixel values"
+" using inverse distance weighting. After the interpolation a smoothing of "
+"the results takes place. Input can be any GDAL-supported raster layer. This "
+"algorithm is generally suitable for interpolating missing regions of fairly "
+"continuously varying rasters (such as elevation models for instance). It is "
+"also suitable for filling small holes and cracks in more irregularly varying"
+" images (like airphotos). It is generally not so great for interpolating a "
+"raster from sparse point data."
+msgstr ""
+"데이터 값이 없는 래스터 영역을 경계로부터 보간해서 채웁니다. NODATA 영역을 둘러싸고 있는 픽셀들의 값을 역거리 "
+"가중치법(inverse distance weighting)으로 보간해서 NODATA 영역의 값을 계산합니다. 보간 작업 완료 후 그 "
+"결과를 평탄화합니다. GDAL이 지원하는 모든 래스터 레이어를 입력할 수 있습니다. 이 알고리즘은 일반적으로 상당히 연속적으로 변화하는 "
+"(예를 들어 표고 모델 같은) 래스터에서 빠진 영역을 보간하는 데 적합합니다. 좀 더 불규칙적으로 변화하는 (항공사진 같은) 이미지의 "
+"작은 구멍이나 금이 간 부분을 채우는 데에도 적합합니다. 다만 희박하게 분포한 포인트 데이터로부터 래스터를 보간하는 데에는 이 알고리즘을"
+" 사용하지 않는 편이 좋습니다."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:285
 msgid ""
 "This algorithm is derived from the `GDAL fillnodata utility "
@@ -1108,6 +1131,11 @@ msgstr "기본 파라미터"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:313
 msgid "Input raster layer"
 msgstr "입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:319
+msgid ""
+"The band to operate on. NoData values must be represented by the value 0."
+msgstr "작업할 밴드. NODATA 값은 0 값으로 표현되어야만 합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:321
 msgid ""
@@ -1208,7 +1236,7 @@ msgstr "``NO_MASK``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:340
 msgid "Activates the user-defined validity mask"
-msgstr "사용자 정의 유효성 마스크를 활성화합니다."
+msgstr "사용자 정의 무결성 마스크를 활성화합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:341
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2045
@@ -1453,6 +1481,26 @@ msgstr "**Minimum number of data points to use**"
 msgid "``MIN_POINTS``"
 msgstr "``MIN_POINTS``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:501
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:661
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:844
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1151
+msgid ""
+"Minimum number of data points to average. If less amount of points found the"
+" grid node considered empty and will be filled with NoData marker."
+msgstr ""
+"평균을 낼 데이터 포인트의 최소 개수. 이 값보다 적은 포인트가 발견된 그리드 노드는 비어 있다고 간주되어 NODATA 마커로 채워질 "
+"것입니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:505
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:665
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:848
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:989
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1155
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1308
+msgid "**NoData**"
+msgstr "**NoData**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:506
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:666
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:849
@@ -1462,6 +1510,15 @@ msgstr "``MIN_POINTS``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1789
 msgid "``NODATA``"
 msgstr "``NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:510
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:670
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:853
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:994
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1160
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1313
+msgid "NoData marker to fill empty points"
+msgstr "비어 있는 포인트를 채울 NODATA 마커"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:511
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:587
@@ -1754,6 +1811,20 @@ msgstr "**알고리즘 ID**: ``gdal:gridinversedistance``"
 msgid "Grid (Linear)"
 msgstr "그리드 (선형)"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:949
+msgid ""
+"The Linear method perform linear interpolation by computing a Delaunay "
+"triangulation of the point cloud, finding in which triangle of the "
+"triangulation the point is, and by doing linear interpolation from its "
+"barycentric coordinates within the triangle. If the point is not in any "
+"triangle, depending on the radius, the algorithm will use the value of the "
+"nearest point or the NoData value."
+msgstr ""
+"선형(linear) 방법은 점구름(point cloud)의 델로네 삼각분할(Delaunay triangulation)을 계산해서 선형 "
+"보간을 수행합니다. 포인트가 삼각분할의 어느 삼각형 안에 있는지 찾은 다음, 해당 삼각형 내부의 무게중심 좌표로부터 선형 보간을 "
+"수행합니다. 포인트가 어떤 삼각형에도 들어가지 않는 경우, 이 알고리즘은 검색 반경에 따라 최근접 포인트의 값 또는 NODATA 값을 "
+"사용할 것입니다."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:978
 msgid "**Search distance**"
 msgstr "**Search distance**"
@@ -1761,6 +1832,17 @@ msgstr "**Search distance**"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:982
 msgid "Default: -1.0"
 msgstr "기본값: -1.0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:983
+msgid ""
+"In case the point to be interpolated does not fit into a triangle of the "
+"Delaunay triangulation, use that maximum distance to search a nearest "
+"neighbour, or use NoData otherwise. If set to ``-1``, the search distance is"
+" infinite. If set to ``0``, NoData value will be used."
+msgstr ""
+"보간할 포인트가 델로네 삼각분할의 삼각형 안에 들어가지 않는 경우, 이 최대 거리를 사용해서 최근접 이웃을 찾거나 또는 최대 거리 안에 "
+"최근접 이웃이 없다면 NODATA를 사용합니다. 이 파라미터를 ``-1`` 로 설정하면, 검색 반경이 무한대가 됩니다. ``0`` 으로 "
+"설정하면 NODATA 값을 사용할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:995
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1071
@@ -1774,6 +1856,20 @@ msgstr "**알고리즘 ID**: ``gdal:gridlinear``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1089
 msgid "Grid (Moving average)"
 msgstr "그리드 (이동 평균)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1090
+msgid ""
+"The Moving Average is a simple data averaging algorithm. It uses a moving "
+"window of elliptic form to search values and averages all data points within"
+" the window. Search ellipse can be rotated by specified angle, the center of"
+" ellipse located at the grid node. Also the minimum number of data points to"
+" average can be set, if there are not enough points in window, the grid node"
+" considered empty and will be filled with specified NoData value."
+msgstr ""
+"이동 평균(Moving Average)은 간단한 데이터 평균 알고리즘입니다. 이 알고리즘은 타원 형태의 이동 창을 사용해서 값을 검색하고"
+" 창 안에 들어오는 모든 데이터 포인트의 평균을 계산합니다. 지정한 각도로 검색 타원을 기울일 수 있고, 타원의 중심은 그리드 노드에 "
+"위치합니다. 또 평균을 계산하기 위한 데이터 포인트의 최소 개수도 설정할 수 있어서, 창 안에 충분한 포인트가 없을 경우 해당 그리드 "
+"노드가 비어 있다고 간주하고 지정한 NODATA 값으로 채울 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1161
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1236
@@ -1798,6 +1894,17 @@ msgstr "**알고리즘 ID**: ``gdal:gridaverage``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1254
 msgid "Grid (Nearest neighbor)"
 msgstr "그리드 (최근접 이웃)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1255
+msgid ""
+"The Nearest Neighbor method doesn't perform any interpolation or smoothing, "
+"it just takes the value of nearest point found in grid node search ellipse "
+"and returns it as a result. If there are no points found, the specified "
+"NoData value will be returned."
+msgstr ""
+"최근접 이웃(Nearest Neighbor) 방법은 어떤 보간이나 평탄화도 수행하지 않습니다. 그냥 그리드 노드 검색 타원에서 발견된 "
+"최근접 포인트의 값을 받아서 이를 결과물로 반환할 뿐입니다. 어떤 포인트도 발견하지 못 한 경우, 지정한 NODATA 값을 반환할 "
+"것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1314
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1390
@@ -2079,6 +2186,18 @@ msgstr "**The maximum distance to be generated**"
 msgid "``MAX_DISTANCE``"
 msgstr "``MAX_DISTANCE``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1766
+msgid ""
+"The maximum distance to be generated. The NoData value will be used for "
+"pixels beyond this distance. If a NoData value is not provided, the output "
+"band will be queried for its NoData value. If the output band does not have "
+"a NoData value, then the value 65535 will be used. Distance is interpreted "
+"according to the value of *Distance units*."
+msgstr ""
+"생성할 거리의 최대값입니다. 이 거리를 초과하는 픽셀에 대해서는 NODATA 값을 사용할 것입니다. NODATA 값을 지정하지 않는 "
+"경우, 산출 밴드에 산출 밴드의 NODATA 값을 쿼리할 것입니다. 산출 밴드가 NODATA 값을 가지고 있지 않은 경우, 65535 "
+"값을 사용할 것입니다. *Distance units* 의 값에 따라 거리를 해석합니다."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1775
 msgid ""
 "**Value to be applied to all pixels that are within the maxdist of target "
@@ -2097,6 +2216,14 @@ msgid ""
 " distance from target pixels (including the target pixels) instead of a "
 "distance value."
 msgstr "대상 픽셀에서 최대 거리보다 가까이 있는 모든 픽셀에 거리 값 대신 적용할 값을 지정합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1786
+msgid "**NoData value to use for the destination proximity raster**"
+msgstr "**NoData value to use for the destination proximity raster**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1793
+msgid "Specify the NoData value to use for the output raster"
+msgstr "산출 래스터에 사용할 NODATA 값을 지정합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1794
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1863
@@ -2129,6 +2256,12 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1976
 msgid "**Roughness**"
 msgstr "**Roughness**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1979
+msgid ""
+"Single-band output roughness raster. The value -9999 is used as NoData "
+"value."
+msgstr "단일 밴드 산출 거칠기 래스터. -9999 값을 NODATA 값으로 사용합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1985
 msgid "**Algorithm ID**: ``gdal:roughness``"
@@ -2187,7 +2320,7 @@ msgstr "**Do not use the default validity mask for the input band**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2050
 msgid "Validity mask to use instead of the default"
-msgstr "기본값 대신 사용할 유효성 마스크"
+msgstr "기본값 대신 사용할 무결성 마스크"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2051
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2094
@@ -2259,6 +2392,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2452
 msgid "**Terrain Ruggedness Index**"
 msgstr "**Terrain Ruggedness Index**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2344
+msgid "Output ruggedness raster. The value -9999 is used as NoData value."
+msgstr "산출 험상 래스터. -9999 값을 NODATA 값으로 사용합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2350
 msgid "**Algorithm ID**: ``gdal:triterrainruggednessindex``"
