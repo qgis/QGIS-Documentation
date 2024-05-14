@@ -546,6 +546,21 @@ an XML file for reusing them in other sessions. For this, the
 :guilabel:`Settings` combo box has two options: :guilabel:`Load Settings from
 File...` and :guilabel:`Save Settings to File...`.
 
+.. tip:: Override the layer name to be exported to DXF
+
+   Output DXF layer names may be overridden without altering the original
+   project layers. For this, click on a layer name on the dialog's layers panel
+   and set the output layer name.
+
+.. note::
+
+   The precedence for defining the output layer name is as follows:
+
+   1. Output layer attribute (if any).
+   2. Overridden name (if any).
+   3. Layer title (if the corresponding option is checked and if a title has been set in layer properties).
+   4. Layer name.
+
 
 .. _paste_into_layer:
 

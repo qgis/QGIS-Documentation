@@ -1017,7 +1017,8 @@ Parameters
    * - **Input layers**
      - ``LAYERS``
      - [vector: any] [list]
-     - Input vector layers to export
+     - Input vector layers to export, as well as optional settings like output
+       layer attribute, output layer name and symbol blocks.
    * - **Symbology mode**
      - ``SYMBOLOGY_MODE``
      - [enumeration]
@@ -1061,8 +1062,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - Name the output layer with the layer title (as set in QGIS) instead
-       of the layer name.
+     - Name the output layer with the layer title (as set in layer metadata
+       or QGIS Server properties) instead of the layer name.
    * - **Force 2D**
      - ``FORCE_2D``
      - [boolean]
