@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:2
 msgid "Raster terrain analysis"
@@ -320,9 +320,69 @@ msgstr ""
 "파라미터 **이름** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
 ":ref:`processing_console` 을 참조하세요."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:99
+msgid "DTM filter (slope-based)"
+msgstr "DTM 필터 (경사 기반)"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:101
 msgid "|334|"
 msgstr "|334|"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:103
+msgid ""
+"Can be used to filter a digital elevation model in order to classify its "
+"cells into ground and object (non-ground) cells."
+msgstr "DEM의 셀들을 지표 셀과 (지표가 아닌) 객체 셀로 분류하기 위해 DEM을 필터링하는 데 사용할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:105
+msgid ""
+"The tool uses concepts as described by Vosselman (2000) and is based on the "
+"assumption that a large height difference between two nearby cells is "
+"unlikely to be caused by a steep slope in the terrain. The probability that "
+"the higher cell might be non-ground increases when the distance between the "
+"two cells decreases. Therefore the filter defines a maximum height "
+"difference (``dz_max``) between two cells as a function of the distance "
+"(``d``) between the cells (``dz_max( d ) = d``). A cell is classified as "
+"terrain if there is no cell within the kernel radius to which the height "
+"difference is larger than the allowed maximum height difference at the "
+"distance between these two cells."
+msgstr ""
+"이 도구는 포셀만(G. Vosselman, 2000)이 설명한 개념을 사용해서, 가까이 있는 2개의 셀 사이의 높이 차이가 큰 경우 이는"
+" 지형의 급경사 때문이 아닐 가능성이 크다는 가정에 바탕을 두고 있습니다. 더 높은 셀이 지표가 아닐 수도 있는 확률은 두 셀 사이의 "
+"거리가 줄어들수록 증가합니다. 따라서 이 필터는 두 셀 사이의 최대 높이 차이(``dz_max``)를 셀들 사이의 거리(``d``)의 "
+"함수(``dz_max( d ) = d``)로 정의합니다. 어떤 셀의 커널 반경 안에, 두 셀 사이의 거리에서 허용된 최대 높이 차이를 "
+"초과하는 셀이 하나도 없는 경우 해당 셀을 지형으로 분류합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:112
+#, python-format
+msgid ""
+"The approximate terrain slope (``s``) parameter is used to modify the filter"
+" function to match the overall slope in the study area (``dz_max( d ) = d * "
+"s``). A 5 % confidence interval (``ci = 1.65 * sqrt( 2 * stddev )``) may be "
+"used to modify the filter function even further by either relaxing "
+"(``dz_max( d ) = d * s + ci``) or amplifying (``dz_max( d ) = d * s - ci``) "
+"the filter criterium."
+msgstr ""
+"지형 경사 근사치(``s``) 파라미터를 사용해서 연구 지역의 전체적인 경사와 일치하도록 필터 함수를 수정(``dz_max( d ) = "
+"d * s``)합니다. 5% 신뢰 구간(``ci = 1.65 * sqrt( 2 * stddev )``)을 이용해서 필터 기준을 "
+"완화(``dz_max( d ) = d * s + ci``)시키거나 증폭(``dz_max( d ) = d * s - ci``) 시켜 이 "
+"필터 함수를 더욱 수정할 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:117
+msgid ""
+"*References: Vosselman, G. (2000): Slope based filtering of laser altimetry "
+"data. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942*"
+msgstr ""
+"*참고 문헌: Vosselman, G. (2000): Slope based filtering of laser altimetry data."
+" IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942*"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:119
+msgid ""
+"This tool is a port of the SAGA `DTM Filter (slope-based) <https://saga-"
+"gis.sourceforge.io/saga_tool_doc/9.1.1/grid_filter_7.html>`_"
+msgstr ""
+"이 도구는 SAGA의 `DTM 필터 (경사 기반) <https://saga-"
+"gis.sourceforge.io/saga_tool_doc/9.1.1/grid_filter_7.html>`_ 를 포팅한 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:133
 msgid "**Input layer**"
@@ -336,6 +396,18 @@ msgstr "**Band number**"
 msgid "``BAND``"
 msgstr "``BAND``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:139
+msgid "[number] [list]"
+msgstr "[number] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:140
+msgid "The band of the DEM to consider"
+msgstr "연산에 넣을 DEM의 밴드"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:141
+msgid "**Kernel radius (pixels)**"
+msgstr "**Kernel radius (pixels)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:142
 msgid "``RADIUS``"
 msgstr "``RADIUS``"
@@ -343,6 +415,41 @@ msgstr "``RADIUS``"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:145
 msgid "Default: 5"
 msgstr "기본값: 5"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:146
+msgid ""
+"The radius of the filter kernel (in pixels). Must be large enough to reach "
+"ground cells next to non-ground objects."
+msgstr "필터 커널의 (픽셀 단위) 반경입니다. 지표가 아닌 객체 옆에 있는 지표 셀까지 도달할 정도로 충분히 큰 값이어야만 합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:148
+msgid "**Terrain slope (%, pixel size/vertical units)**"
+msgstr "**Terrain slope (%, pixel size/vertical units)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:149
+msgid "``TERRAIN_SLOPE``"
+msgstr "``TERRAIN_SLOPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:152
+msgid "Default: 30"
+msgstr "기본값: 30"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:153
+msgid ""
+"The approximate terrain slope in ``%``. The terrain slope must be adjusted "
+"to account for the ratio of height units vs raster pixel dimensions. Used to"
+" relax the filter criterium in steeper terrain."
+msgstr ""
+"``%`` 단위 지형 경사 근사치입니다. 지형 경사는 '높이 단위 : 래스터 픽셀 차원' 비율을 연산에 넣도록 조정해야만 합니다. 경사가"
+" 좀 더 급한 지형에서 필터 기준을 완화시키는 데 쓰입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:156
+msgid "**Filter modification**"
+msgstr "**Filter modification**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:157
+msgid "``FILTER_MODIFICATION``"
+msgstr "``FILTER_MODIFICATION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:158
 msgid "[list]"
@@ -352,13 +459,47 @@ msgstr "[list]"
 msgid "Default: 0"
 msgstr "기본값: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:161
+msgid ""
+"Choose whether to apply the filter kernel without modification or to use a "
+"confidence interval to relax or amplify the height criterium."
+msgstr "필터 커널을 수정하지 않고 적용시킬지, 또는 신뢰 구간을 이용해서 높이 기준을 완화 또는 증폭시킬지 여부를 선택합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:164
+msgid "0 - None"
+msgstr "0 - 없음"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:165
+msgid "1 - Relax filter"
+msgstr "1 - 필터 완화"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:166
+msgid "2 - Amplify"
+msgstr "2 - 필터 증폭"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:167
 msgid "**Standard deviation**"
 msgstr "**Standard deviation**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:168
+msgid "``STANDARD_DEVIATION``"
+msgstr "``STANDARD_DEVIATION``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:171
 msgid "Default: 0.1"
 msgstr "기본값: 0.1"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:172
+#, python-format
+msgid ""
+"The standard deviation used to calculate a 5% confidence interval applied to"
+" the height threshold."
+msgstr "높이 한계값에 적용되는 5% 신뢰 구간을 계산하는 데 쓰이는 표준 편차입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:173
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:212
+msgid "**Output layer (ground)**"
+msgstr "**Output layer (ground)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:175
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:189
@@ -367,14 +508,50 @@ msgstr "기본값: 0.1"
 msgid "Optional"
 msgstr "선택적"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:213
+msgid "``OUTPUT_GROUND``"
+msgstr "``OUTPUT_GROUND``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:180
+msgid ""
+"Specify the filtered DEM containing only cells classified as ground. One of:"
+msgstr "지표로 분류된 셀들만 담고 있는 필터링된 DEM을 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "산출물 건너뛰기"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:216
+msgid "**Output layer (non-ground objects)**"
+msgstr "**Output layer (non-ground objects)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:217
+msgid "``OUTPUT_NONGROUND``"
+msgstr "``OUTPUT_NONGROUND``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:193
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:528
 msgid "Default: ``[Skip output]``"
 msgstr "기본값: ``[Skip output]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:194
+msgid "Specify the non-ground objects removed by the filter. One of:"
+msgstr "필터가 제거한 지표가 아닌 객체들을 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:215
+msgid "The filtered DEM containing only cells classified as ground."
+msgstr "지표로 분류된 셀들만 담고 있는 필터링된 DEM입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:219
+msgid "The non-ground objects removed by the filter."
+msgstr "필터가 제거한 지표가 아닌 객체들입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:224
+msgid "**Algorithm ID**: ``native:dtmslopebasedfilter``"
+msgstr "**알고리즘 ID**: ``native:dtmslopebasedfilter``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:234
 msgid "Hillshade"
