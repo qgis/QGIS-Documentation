@@ -993,6 +993,21 @@ msgstr "파일로 저장…"
 msgid "Advanced parameters"
 msgstr "고급 파라미터"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:58
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:65
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:121
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:284
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:618
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:761
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1633
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1845
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1999
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2978
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3106
+msgid "**Output NoData value**"
+msgstr "**Output NoData value**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:59
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:122
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:285
@@ -1015,6 +1030,19 @@ msgstr "``OUTPUT_NODATA_VALUE``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3110
 msgid "Default: -9999.0"
 msgstr "기본값: -9999.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:72
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:126
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:289
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:625
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:768
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1638
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1850
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2004
+msgid "Value to use for NoData in the output layer"
+msgstr "산출 레이어에 있는 NODATA에 사용할 값"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:66
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:75
@@ -1670,6 +1698,10 @@ msgstr "중첩된 모든 레이어 스택 가운데 값의 순위를 매길 레�
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:719
 msgid "**Value raster band**"
 msgstr "**Value raster band**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:400
+msgid "``VALUE_RASTER_BAND``"
+msgstr "``VALUE_RASTER_BAND``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:403
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1114
@@ -2699,6 +2731,18 @@ msgstr ""
 "참조 레이어 파라미터는 산출 래스터 생성 시 참조물로 사용할 기존 래스터 레이어를 지정합니다. 산출 래스터는 참조 레이어와 동일한 범위,"
 " 좌표계, 그리고 픽셀 크기를 가질 것입니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1783
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1937
+msgid ""
+"By default, a NoData pixel in ANY of the input layers will result in a "
+"NoData pixel in the output raster. If the :guilabel:`Treat NoData values as "
+"false` option is checked, then NoData inputs will be treated the same as a "
+"``0`` input value."
+msgstr ""
+"입력 레이어 가운데 **하나에만** NODATA 픽셀이 있어도, 기본적으로 산출 래스터에서도 NODATA 픽셀로 산출될 것입니다. "
+":guilabel:`Treat nodata values as false` 옵션을 활성화한 경우, NODATA 입력을 ``0`` 입력값과 "
+"동일하게 취급할 것입니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1788
 msgid ":ref:`qgisrasterbooleanor`"
 msgstr ":ref:`qgisrasterbooleanor`"
@@ -2710,10 +2754,21 @@ msgstr ":ref:`qgisrasterbooleanor`"
 msgid "List of input raster layers"
 msgstr "입력 래스터 레이어의 목록"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1814
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1968
+msgid "**Treat NoData values as false**"
+msgstr "**Treat NoData values as false**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1815
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1969
 msgid "``NODATA_AS_FALSE``"
 msgstr "``NODATA_AS_FALSE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1819
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1973
+msgid ""
+"Treat NoData values in the input files as 0 when performing the operation"
+msgstr "작업 수행 시 입력 파일에 있는 NODATA 값을 0으로 취급"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1846
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2000
@@ -2797,12 +2852,24 @@ msgstr ""
 "QGIS와 함께 빌드된 GDAL 버전에 따라 사용할 수 있는 옵션이 달라집니다. (:menuselection:`Help --> "
 "About` 메뉴 참조)"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1894
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2048
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2585
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2741
+msgid "**NoData pixel count**"
+msgstr "**NoData pixel count**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1895
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2049
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2586
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2742
 msgid "``NODATA_PIXEL_COUNT``"
 msgstr "``NODATA_PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1897
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2051
+msgid "The count of NoData pixels in the output raster layer"
+msgstr "산출 래스터 레이어에 있는 NODATA 픽셀 개수"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1898
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2052
@@ -2879,6 +2946,14 @@ msgstr ""
 "산출되는 레이어는 표현식에 따라 계산된 값을 가질 것입니다. 표현식은 숫자값, 연산자를 담을 수 있고, 현재 프로젝트에 있는 모든 "
 "레이어를 참조할 수 있습니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2096
+msgid ""
+":ref:`qgisvirtualrastercalc`, :ref:`gdalrastercalculator`, "
+":ref:`label_raster_calc`"
+msgstr ""
+":ref:`qgisvirtualrastercalc`, :ref:`gdalrastercalculator`, "
+":ref:`label_raster_calc`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2114
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2221
 msgid "**Expression**"
@@ -2893,6 +2968,13 @@ msgstr "``EXPRESSION``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2223
 msgid "[expression]"
 msgstr "[expression]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2117
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2224
+msgid ""
+":ref:`Raster-based expression <raster_expression>` that will be used to "
+"calculate the output raster layer."
+msgstr "산출 래스터 레이어를 계산하는 데 사용할 :ref:`래스터 기반 표현식 <raster_expression>` 입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2118
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2225
@@ -2949,6 +3031,11 @@ msgstr "캔버스에 그리기: 연산에 넣을 범위를 정하는 직사각�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "좌표를 ``xmin, xmax, ymin, ymax`` 로 입력"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2131
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2238
+msgid "**Output cell size (leave empty to set automatically)**"
+msgstr "**Output cell size (leave empty to set automatically)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2134
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2241
 msgid "``CELLSIZE``"
@@ -2991,13 +3078,77 @@ msgstr "**Calculated**"
 msgid "Output raster file with the calculated values."
 msgstr "계산된 값을 가진 산출 래스터 파일"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2178
+msgid "**Algorithm ID**: ``native:rastercalc``"
+msgstr "**알고리즘 ID**: ``native:rastercalc``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2188
+msgid "Raster calculator (virtual)"
+msgstr "래스터 계산기 (가상)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2190
+msgid ""
+"Performs algebraic operations using raster layers and generates in-memory "
+"result."
+msgstr "래스터 레이어를 사용해서 산술 작업을 수행하고 인메모리(in-memory) 결과물을 생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2196
+msgid ""
+"A virtual raster layer is a raster layer defined by its URI and whose pixels"
+" are calculated on-the-fly. It's not a new file on disk; the virtual layer "
+"is still connected to the rasters used in the calculation meaning that "
+"deleting or moving these rasters would break it. A :guilabel:`Layer name` "
+"can be provided, otherwise the calculation expression is used as such. "
+"Removing the virtual layer from the project deletes it, and it can be made "
+"persistent in file using the layer :menuselection:`Export --> Save as...` "
+"contextual menu."
+msgstr ""
+"URI로 정의되는 래스터 레이어의 레이어 픽셀을 실시간(on-the-fly)으로 계산해서 가상 래스터 레이어를 정의합니다. 디스크 상에 "
+"새 파일로 저장되는 것이 아니라, 이 가상 레이어는 계산에 사용된 래스터에 계속 연결되어 있기 때문에 계산에 사용된 래스터를 삭제하거나 "
+"이동시키면 가상 레이어에도 오류가 발생합니다. :guilabel:`Layer name` 을 지정할 수 있습니다. 지정하지 않으면 계산 "
+"표현식을 그대로 사용합니다. 프로젝트로부터 가상 레이어를 제거하면 삭제되며, :menuselection:`Export --> Save "
+"as...` 레이어 컨텍스트 메뉴를 이용하면 디스크 상에 파일로 저장할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2203
+msgid ""
+":ref:`qgisrastercalc`, :ref:`gdalrastercalculator`, :ref:`label_raster_calc`"
+msgstr ""
+":ref:`qgisrastercalc`, :ref:`gdalrastercalculator`, :ref:`label_raster_calc`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2255
+msgid "**Output layer name**"
+msgstr "**Output layer name**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2258
 msgid "``LAYER_NAME``"
 msgstr "``LAYER_NAME``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2260
+msgid ""
+"The name to assign to the generated layer. If not set, the text of the "
+"calculation expression is used."
+msgstr "생성된 레이어에 할당할 이름입니다. 설정하지 않는 경우, 계산 표현식의 텍스트를 사용합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2277
+msgid "Output virtual raster layer with the calculated values."
+msgstr "계산된 값을 가진 산출 가상 래스터 파일입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2282
+msgid "**Algorithm ID**: ``native:virtualrastercalc``"
+msgstr "**알고리즘 ID**: ``native:virtualrastercalc``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2292
 msgid "Raster layer properties"
 msgstr "래스터 레이어 속성"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2294
+msgid ""
+"Returns basic properties of the given raster layer, including the extent, "
+"size in pixels and dimensions of pixels (in map units), number of bands, and"
+" NoData value."
+msgstr ""
+"지정한 래스터 레이어의 기본 속성을 반환합니다. 반환되는 속성에는 범위, (맵 단위) 픽셀 크기 및 픽셀 차원, 밴드 개수, 그리고 "
+"NODATA 값이 포함됩니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2298
 msgid ""
@@ -3059,9 +3210,19 @@ msgstr "래스터 레이어의 좌표계 단위 범위"
 msgid "**Band has a NoData value set**"
 msgstr "**Band has a NoData value set**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2351
+msgid "``HAS_NODATA_VALUE``"
+msgstr "``HAS_NODATA_VALUE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2352
 msgid "[Boolean]"
 msgstr "[Boolean]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2353
+msgid ""
+"Indicates whether the raster layer has a value set for NoData pixels in the "
+"selected band"
+msgstr "선택한 밴드에 있는 NODATA 픽셀에 대한 값이 래스터 레이어에 설정되어 있는지 여부를 나타냅니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2358
 msgid "The number of columns in the raster layer"
@@ -3070,6 +3231,10 @@ msgstr "래스터 레이어의 열 개수"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2359
 msgid "**Band NoData value**"
 msgstr "**Band NoData value**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2360
+msgid "``NODATA_VALUE``"
+msgstr "``NODATA_VALUE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2362
 msgid "The value (if set) of the NoData pixels in the selected band"
@@ -3368,6 +3533,11 @@ msgstr "데이터베이스 테이블에 저장…"
 msgid "The file encoding can also be changed here."
 msgstr "이 파라미터에서 파일 인코딩도 변경할 수 있습니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2588
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2744
+msgid "The number of NoData pixels in the output raster layer"
+msgstr "산출 래스터 레이어에 있는 NODATA 픽셀 개수"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2596
 msgid "The output HTML file contains the following information:"
 msgstr "산출 HTML 파일은 다음 정보를 담고 있습니다:"
@@ -3395,6 +3565,10 @@ msgstr "픽셀 단위 높이: 행의 개수와 픽셀 너비 크기"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2603
 msgid "Total pixel count: count of all the pixels"
 msgstr "총 픽셀 개수: 모든 픽셀의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2604
+msgid "NoData pixel count: count of pixels with NoData value"
+msgstr "NODATA 픽셀 개수: NODATA 값을 가진 픽셀의 개수"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2608
 msgid "A table with three columns:"
@@ -3794,6 +3968,11 @@ msgstr ""
 msgid "**Reclassified raster**"
 msgstr "**Reclassified raster**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2983
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3111
+msgid "Value to apply to NoData values."
+msgstr "NODATA 값에 적용할 값입니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2984
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3112
 msgid "**Range boundaries**"
@@ -3829,10 +4008,22 @@ msgstr "2 --- 최소값 <= 값 <= 최대값"
 msgid "3 --- min < value < max"
 msgstr "3 --- 최소값 < 값 < 최대값"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2996
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3124
+msgid "**Use NoData when no range matches value**"
+msgstr "**Use NoData when no range matches value**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2997
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3125
 msgid "``NODATA_FOR_MISSING``"
 msgstr "``NODATA_FOR_MISSING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3001
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3129
+msgid ""
+"Applies the NoData value to band values that do not fall in any class. If "
+"False, the original value is kept."
+msgstr "어떤 범주에도 들어오지 않는 밴드 값에 NODATA 값을 적용합니다. False로 설정한 경우, 원본 값을 유지합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3009
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3137
@@ -3905,6 +4096,12 @@ msgstr ""
 "래스터 레이어의 히스토그램(픽셀 값)의 형태(분포)를 유지하면서, 래스터 레이어를 새 값의 범위로 크기 조정(rescale)합니다. 소스"
 " 래스터의 최소 및 최대 픽셀값에서 대상 최소 및 최대 픽셀 범위로 선형 보간을 사용해서 입력값을 매핑합니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3180
+msgid ""
+"By default the algorithm preserves the original NoData value, but there is "
+"an option to override it."
+msgstr "이 알고리즘은 기본적으로 원본 NODATA 값을 유지하지만, 이를 무시할 수 있는 옵션이 있습니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3186
 msgid "Rescaling values of a raster layer from [0 - 50] to [100 - 1000]"
 msgstr "래스터 레이어의 값을 [0 - 50] 에서 [100 - 1000] 으로 크기 조정하기"
@@ -3950,6 +4147,10 @@ msgstr "기본값: 255.0"
 msgid "Maximum pixel value to use in the rescaled layer"
 msgstr "크기 조정된 레이어에 사용할 최대 픽셀값"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3221
+msgid "**New NoData value**"
+msgstr "**New NoData value**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3224
 msgid "``NODATA``"
 msgstr "``NODATA``"
@@ -3957,6 +4158,12 @@ msgstr "``NODATA``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3227
 msgid "Default value: Not set"
 msgstr "기본값: 설정하지 않음"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3228
+msgid ""
+"Value to assign to the NoData pixels. If unset, original NoData values are "
+"preserved."
+msgstr "NODATA 픽셀에 할당할 값. 이 값을 설정하지 않으면, 원본 NODATA 값을 유지합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3230
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3253
