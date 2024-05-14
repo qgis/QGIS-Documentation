@@ -39,9 +39,19 @@ msgstr ""
 msgid "Vector Tiles"
 msgstr "벡터 타일"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:14
+msgid "Download vector tiles"
+msgstr "벡터 타일 다운로드"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:15
 msgid "|332|"
 msgstr "|332|"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:17
+msgid ""
+"Downloads vector tiles of an input vector tile layer and saves them in a "
+"local vector tile file."
+msgstr "입력 벡터 타일 레이어의 벡터 타일을 다운로드해서 로컬 벡터 타일 파일로 저장합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:105
@@ -102,6 +112,10 @@ msgstr "``INPUT``"
 msgid "[vector tiles]"
 msgstr "[vector tiles]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:33
+msgid "A vector tile layer to extract some tiles from"
+msgstr "일부 타일을 추출할 벡터 타일 레이어"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:34
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:133
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:260
@@ -119,6 +133,12 @@ msgstr "``EXTENT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:264
 msgid "[extent]"
 msgstr "[extent]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:37
+msgid ""
+"Specify the spatial extent of the downloaded area. It will internally be "
+"extended to a multiple of the tile size."
+msgstr "다운로드한 영역의 공간 범위를 정의합니다. 내부적으로 타일 크기의 배수로 확장될 것입니다."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -155,6 +175,10 @@ msgstr "캔버스에 그리기: 연산에 넣을 범위를 정하는 직사각�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "좌표를 ``xmin, xmax, ymin, ymax`` 로 입력"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:44
+msgid "**Maximum zoom level to download**"
+msgstr "**Maximum zoom level to download**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:45
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:127
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:254
@@ -174,6 +198,14 @@ msgstr "[number]"
 msgid "Default: 10"
 msgstr "기본값: 10"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:49
+msgid "Defines how far to zoom in and fetch data from the tiles"
+msgstr "얼마나 확장해서 타일로부터 데이터를 가져올지 정의합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:50
+msgid "**Tile limit**"
+msgstr "**Tile limit**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:51
 msgid "``TILE_LIMIT``"
 msgstr "``TILE_LIMIT``"
@@ -181,6 +213,12 @@ msgstr "``TILE_LIMIT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:54
 msgid "Default: 100"
 msgstr "기본값: 100"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:55
+msgid ""
+"Maximum number of tiles to download, considering the zoom levels and the "
+"extent."
+msgstr "확대/축소 수준 및 범위를 고려한 다운로드할 최대 타일 개수입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:56
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:78
@@ -199,6 +237,10 @@ msgstr "``OUTPUT``"
 msgid "Default: [Save to temporary file]"
 msgstr "기본값: [Save to temporary file]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:61
+msgid "Specification of the output vector tile file. One of:"
+msgstr "산출 벡터 타일 파일을 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "임시 파일로 저장"
@@ -213,11 +255,19 @@ msgstr "파일로 저장…"
 msgid "Outputs"
 msgstr "산출물"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:81
+msgid "A local vector tile file storing the downloaded tiles."
+msgstr "다운로드한 타일들을 저장하고 있는 로컬 벡터 타일 파일입니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:84
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:208
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:298
 msgid "Python code"
 msgstr "파이썬 코드"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:86
+msgid "**Algorithm ID**: ``native:downloadvectortiles``"
+msgstr "**알고리즘 ID**: ``native:downloadvectortiles``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
