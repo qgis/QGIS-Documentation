@@ -309,13 +309,10 @@ appended to the given file path.
 
 Unlike when an algorithm is executed from the toolbox, outputs are not
 added to the map canvas if you execute that same algorithm from the
-Python console using :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>`,
-but ``runAndLoadResults()`` will do that.
-
-The :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method returns
-a dictionary with one or more output names (the
-ones shown in the algorithm description) as keys and the file paths of
-those outputs as values:
+Python console using the :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method.
+That method returns a dictionary with one or more output names
+(the ones shown in the algorithm description) as keys
+and the file paths of those outputs as values:
 
 .. code-block:: python
    :linenos:
@@ -331,11 +328,22 @@ those outputs as values:
     >>> myresult['OUTPUT']
     /data/buffers.shp
 
-You can load feature output by passing the corresponding file paths to
-the ``load()`` method.
-Or you could use ``runAndLoadResults()`` instead of
-:meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` to load
-them immediately.
+You can then load the output in the project as any common layer:
+
+.. code-block:: python
+   :linenos:
+
+    >>> buffered_layer = myresult['OUTPUT']
+    >>> QgsProject.instance().addMapLayer(buffered_layer)
+
+To immediately load the processing outputs in the project,
+you can use the ``runAndLoadResults()`` method instead of ``run()``.
+
+.. code-block:: python
+   :linenos:
+
+    >>> processing.runAndLoadResults("native:buffer", {parameters:values})
+
 
 If you want to open an algorithm dialog from the console you can use the 
 ``createAlgorithmDialog`` method. The only mandatory parameter is the algorithm 
