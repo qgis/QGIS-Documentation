@@ -52,8 +52,8 @@ For instance, try the following:
 #. Double-click on it and a new result should be produced,
    just like when you run it using the normal dialog and calling it from the toolbox.
 
-:abbr:`★★★ (Advanced level)` Advanced
--------------------------------------
+:abbr:`★★☆ (Moderate level)` Follow Along
+------------------------------------------
 
 You can also modify the algorithm.
 
@@ -62,8 +62,3 @@ You can also modify the algorithm.
 #. Paste your copy to run the analysis; change the parameters at will.
 #. To display the resulting file, you may want to replace ``processing.run`` in the pasted command
    with ``processing.runAndLoadResults``.
-
-   Or, after you ran the pasted command, and depending on the output layer type, you can type e.g.::
-
-    iface.addVectorLayer('/path/to/output/filename', 'Layer name in legend', 'ogr')
-
