@@ -520,9 +520,16 @@ In the :guilabel:`DXF Export` dialog:
    The :guilabel:`Select All` and :guilabel:`Deselect All` buttons
    can help to quickly set the data to export.
 
-   For each layer, you can choose whether to export all the features in a
-   single DXF layer or rely on a field whose values are used to split the
-   features into layers in the DXF output.
+   For each layer, you can:
+
+   * Override the output layer name without altering the original project
+     layer. For this, click on a layer name on the dialog's layers panel and
+     set the output layer name.
+
+   * Choose whether to export all the features in a single DXF layer or rely on
+     a field whose values are used to split the features into layers in the DXF
+     output. In the latter case, each layer will take its name from the
+     corresponding field value.
   
 Optionally, you can also choose to:
 
@@ -545,12 +552,6 @@ Current settings defined in the :guilabel:`DXF Export` dialog may be stored in
 an XML file for reusing them in other sessions. For this, the
 :guilabel:`Settings` combo box has two options: :guilabel:`Load Settings from
 File...` and :guilabel:`Save Settings to File...`.
-
-.. tip:: Override the layer name to be exported to DXF
-
-   Output DXF layer names may be overridden without altering the original
-   project layers. For this, click on a layer name on the dialog's layers panel
-   and set the output layer name.
 
 .. note::
 
