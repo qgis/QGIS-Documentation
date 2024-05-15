@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/server_manual/services/wms.rst:2
 msgid "Web Map Service (WMS)"
@@ -420,11 +420,11 @@ msgstr "FILE_NAME"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "File name of the downloaded file"
-msgstr "다운로드한 파일의 파일명"
+msgstr "다운로드한 파일의 파일 이름"
 
 #: ../../docs/server_manual/services/wms.rst:3
 msgid "Only for ``FORMAT=application/dxf``"
-msgstr "``FORMAT=application/dxf`` 파라미터 사용시에만 쓰입니다."
+msgstr "``FORMAT=application/dxf`` 파라미터 사용 시에만 쓰입니다."
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT_OPTIONS <wms_getmap_formatoptions>`"
@@ -483,15 +483,26 @@ msgstr "LAYERS"
 msgid ""
 "This parameter allows to specify the layers to display on the map. Names "
 "have to be separated by a comma."
-msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정할 수 있습니다. 레이어명을 쉼표로 구분해야 합니다."
+msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정할 수 있습니다. 레이어 이름을 쉼표로 구분해야 합니다."
 
 #: ../../docs/server_manual/services/wms.rst:174
 msgid "In addition, QGIS Server introduced some options to select layers by:"
 msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 수 있는 옵션을 제공합니다:"
 
+#: ../../docs/server_manual/services/wms.rst:176
+msgid ""
+"the layer id: the project option allowing to select layers by their id is in"
+" :menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project -->"
+" Properties...` dialog. Check the :guilabel:`Use layer ids as names` "
+"checkbox to activate this option."
+msgstr ""
+"레이어 ID: :menuselection:`Project --> Properties...`  대화창의 "
+":menuselection:`QGIS Server --> WMS` 탭에 레이어 ID로 레이어를 선택할 수 있는 프로젝트 수준 옵션이 "
+"있습니다. 이 옵션을 활성화하려면 :guilabel:`Use layer ids as names` 체크박스를 체크하십시오."
+
 #: ../../docs/server_manual/services/wms.rst:179
 msgid "a :ref:`short name <services_basics_short_name>`"
-msgstr ":ref:`단축명 <services_basics_short_name>`"
+msgstr ":ref:`짧은 이름 <services_basics_short_name>`"
 
 #: ../../docs/server_manual/services/wms.rst:193
 msgid "STYLES"
@@ -726,7 +737,7 @@ msgid ""
 "hexadecimal notation."
 msgstr ""
 "이 파라미터는 맵 이미지의 배경 색상을 지정할 수 있습니다. 하지만 PNG 이미지인 경우, ``TRANSPARENT`` 파라미터와 "
-"결합해서 사용할 수 없습니다. (투명을 더 우선하기 때문입니다.) 일반적인 색상명을 사용할 수도 있고, 십육진법으로 표기할 수도 "
+"결합해서 사용할 수 없습니다. (투명을 더 우선하기 때문입니다.) 일반적인 색상 이름을 사용할 수도 있고, 십육진법으로 표기할 수도 "
 "있습니다."
 
 #: ../../docs/server_manual/services/wms.rst:377
@@ -858,6 +869,15 @@ msgstr "SELECTION 파라미터를 사용한 GetMap 요청에 대한 서버의 �
 msgid "FORMAT_OPTIONS"
 msgstr "FORMAT_OPTIONS"
 
+#: ../../docs/server_manual/services/wms.rst:547
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/dxf`` in GetMap request. Takes a list of key:value "
+"pairs separated by semicolon:"
+msgstr ""
+"선택한 포맷을 위한 옵션들을 지정하는 데 이 파라미터를 사용할 수 있습니다. GetMap 요청에 있는 "
+"``FORMAT=application/dxf`` 전용입니다. 쌍반점으로 구분한 키:값 쌍의 목록을 받습니다:"
+
 #: ../../docs/server_manual/services/wms.rst:551
 msgid ""
 "SCALE: to be used for symbology rules, filters and styles (not actual "
@@ -874,11 +894,20 @@ msgstr ""
 "MODE: QGIS 데스크탑 DXF 내보내기 대화창에서 지정하는 내보내기 옵션에 대응합니다. ``NOSYMBOLOGY``, "
 "``FEATURESYMBOLOGY`` 및 ``SYMBOLLAYERSYMBOLOGY`` 값을 사용할 수 있습니다."
 
+#: ../../docs/server_manual/services/wms.rst:556
+msgid ""
+"LAYERATTRIBUTES: specify a field or in case of many layers a comma separated"
+" list of fields that contains values for DXF layer names - if not specified,"
+" the original QGIS layer names are used."
+msgstr ""
+"LAYERATTRIBUTES: DXF 레이어 이름을 위한 값을 담고 있는 필드 또는 레이어가 여러 개인 경우 쉼표로 구분된 필드 목록을 "
+"지정합니다 --- 지정하지 않을 경우, 원본 QGIS 레이어 이름을 사용합니다."
+
 #: ../../docs/server_manual/services/wms.rst:558
 msgid ""
 "USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will be used as "
 "layer name."
-msgstr "USE_TITLE_AS_LAYERNAME: 이 파라미터를 사용하면, 레이어의 제목을 레이어명으로 사용할 것입니다."
+msgstr "USE_TITLE_AS_LAYERNAME: 이 파라미터를 사용하면, 레이어의 제목을 레이어 이름으로 사용할 것입니다."
 
 #: ../../docs/server_manual/services/wms.rst:560
 msgid ""
@@ -886,7 +915,7 @@ msgid ""
 "check the QGIS desktop DXF export dialog for valid values."
 msgstr ""
 "CODEC: 인코딩에 사용할 코덱을 지정합니다. 기본값은 ``ISO-8859-1`` 입니다. QGIS 데스크탑 DXF 내보내기 대화창에서"
-" 사용할 수 있는 유효한 값을 찾아보십시오."
+" 사용할 수 있는 무결한 값을 찾아보십시오."
 
 #: ../../docs/server_manual/services/wms.rst:562
 msgid "NO_MTEXT: Use TEXT instead of MTEXT for labels."
@@ -1066,6 +1095,10 @@ msgid ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`"
 msgstr ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Add the feature display name to the output"
+msgstr "출력물에 피처 표시 이름 추가"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WITH_MAPTIP <wms_withmaptip>`"
 msgstr ":ref:`WITH_MAPTIP <wms_withmaptip>`"
 
@@ -1120,7 +1153,7 @@ msgstr "QUERY_LAYERS"
 msgid ""
 "This parameter specifies the layers to display on the map. Names are "
 "separated by a comma."
-msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정합니다. 레이어명을 쉼표로 구분해야 합니다."
+msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정합니다. 레이어 이름을 쉼표로 구분해야 합니다."
 
 #: ../../docs/server_manual/services/wms.rst:683
 msgid "In addition, QGIS Server introduces options to select layers by:"
@@ -1128,7 +1161,7 @@ msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 �
 
 #: ../../docs/server_manual/services/wms.rst:685
 msgid "short name"
-msgstr "단축명(short name)"
+msgstr "짧은 이름(short name)"
 
 #: ../../docs/server_manual/services/wms.rst:686
 msgid "layer id"
@@ -1233,6 +1266,11 @@ msgstr "이 파라미터는 피처가 교차해야 하는 WKT 도형을 지정�
 #: ../../docs/server_manual/services/wms.rst:767
 msgid "WITH_DISPLAY_NAME"
 msgstr "WITH_DISPLAY_NAME"
+
+#: ../../docs/server_manual/services/wms.rst:769
+msgid ""
+"This parameter specifies whether to add feature display name to the output."
+msgstr "이 파라미터는 출력물에 피처 표시 이름(feature display name)을 추가할지 여부를 지정합니다."
 
 #: ../../docs/server_manual/services/wms.rst:771
 #: ../../docs/server_manual/services/wms.rst:783
@@ -1495,6 +1533,10 @@ msgstr "항목 라벨 글꼴 색상"
 msgid ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 msgstr ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Adds the layer groups to JSON output"
+msgstr "JSON 출력물에 레이어 그룹 추가"
+
 #: ../../docs/server_manual/services/wms.rst:868
 msgid ""
 "This parameter can be used to specify the geographical area for which the "
@@ -1603,6 +1645,17 @@ msgstr "다음은 예시입니다:"
 #: ../../docs/server_manual/services/wms.rst:1014
 msgid "RULE"
 msgstr "RULE"
+
+#: ../../docs/server_manual/services/wms.rst:1016
+msgid ""
+"This parameter is available on layers with :guilabel:`Rule-based` rendering "
+"and allows to build a legend with only the named rule symbol. It cannot be "
+"combined with ``BBOX`` parameter nor the JSON format. ``HEIGHT`` and "
+"``WIDTH`` must be specified."
+msgstr ""
+"이 파라미터는 :guilabel:`Rule-based` 규칙 기반 렌더링된 레이어 상에서만 사용할 수 있으며, 이름을 지정한 규칙 심볼만"
+" 가진 범례를 작성할 수 있습니다. 이 파라미터는 ``BBOX`` 파라미터 또는 JSON 포맷과 함께 사용할 수 없습니다. "
+"``HEIGHT`` 및 ``WIDTH`` 는 반드시 지정해야만 합니다."
 
 #: ../../docs/server_manual/services/wms.rst:1037
 msgid "RULELABEL"
@@ -1888,6 +1941,30 @@ msgstr "``ITEMFONTCOLOR=0x5f9930`` 으로 렌더링한 범례"
 msgid "ADDLAYERGROUPS"
 msgstr "ADDLAYERGROUPS"
 
+#: ../../docs/server_manual/services/wms.rst:1535
+msgid ""
+"This parameter specifies if the JSON output will also display the names of "
+"the layers groups (and subgroups) in the legend entry. Possible values are:"
+msgstr ""
+"이 파라미터는 JSON 출력물이 범례 항목에 레이어 그룹(및 하위 그룹)의 이름도 표시할지를 지정합니다. 사용할 수 있는 값은 다음과 "
+"같습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1539
+msgid "``TRUE``: display the groups labels"
+msgstr "``TRUE``: 그룹 라벨 표시하기"
+
+#: ../../docs/server_manual/services/wms.rst:1540
+msgid "``FALSE`` (default): hide the groups labels"
+msgstr "``FALSE`` (기본값): 그룹 라벨 숨기기"
+
+#: ../../docs/server_manual/services/wms.rst:1545
+msgid "Legend without (left) and with (right) layer groups labels display"
+msgstr "레이어 그룹 라벨을 표시하지 않은(왼쪽) 범례와 표시한(오른쪽) 범례"
+
+#: ../../docs/server_manual/services/wms.rst:1547
+msgid "The corresponding JSON output showing groups name would look like:"
+msgstr "이에 대응해서 그룹 이름을 표시하는 JSON 출력물은 다음과 같이 보일 것입니다:"
+
 #: ../../docs/server_manual/services/wms.rst:1577
 msgid "GetStyle(s)"
 msgstr "GetStyle(s)"
@@ -1996,6 +2073,10 @@ msgstr ":ref:`FORMAT <wms_getprint_format>`"
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
 msgstr ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
+
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/pdf``"
+msgstr "``FORMAT=application/pdf`` 파라미터 사용 시에만 쓰입니다."
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ATLAS_PK <wms_atlaspk>`"
@@ -2116,6 +2197,101 @@ msgid ""
 "If the ``FORMAT`` parameter is different from one of these values, then an "
 "exception is returned."
 msgstr "``FORMAT`` 파라미터가 이 값들 가운데 하나가 아닐 경우, 예외를 반환합니다."
+
+#: ../../docs/server_manual/services/wms.rst:1790
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/pdf`` in GetPrint requests. Takes a list of "
+"key:value pairs separated by semicolon:"
+msgstr ""
+"선택한 포맷을 위한 옵션들을 지정하는 데 이 파라미터를 사용할 수 있습니다. GetPrint 요청에 있는 "
+"``FORMAT=application/pdf`` 전용입니다. 쌍반점으로 구분한 키:값 쌍의 목록을 받습니다:"
+
+#: ../../docs/server_manual/services/wms.rst:1794
+msgid ""
+"``RASTERIZE_WHOLE_IMAGE``: whether the whole pdf should be exported as an "
+"image. Default: false."
+msgstr "``RASTERIZE_WHOLE_IMAGE``: PDF 전체를 이미지로 내보내야 할지 여부를 지정합니다. 기본값: False"
+
+#: ../../docs/server_manual/services/wms.rst:1795
+msgid ""
+"``FORCE_VECTOR_OUTPUT``: whether pdf should be exported as vector. Default: "
+"false."
+msgstr "``FORCE_VECTOR_OUTPUT``: PDF를 벡터로 내보내야 할지 여부를 지정합니다. 기본값: False"
+
+#: ../../docs/server_manual/services/wms.rst:1796
+msgid ""
+"``APPEND_GEOREFERENCE``: whether georeference info shall be added to the "
+"pdf. Default: true."
+msgstr "``APPEND_GEOREFERENCE``: PDF에 지리참조 정보를 추가해야 할지 여부를 지정합니다. 기본값: True"
+
+#: ../../docs/server_manual/services/wms.rst:1797
+msgid ""
+"``EXPORT_METADATA``: whether metadata shall be added to the pdf. Default: "
+"true."
+msgstr "``EXPORT_METADATA``: PDF에 메타데이터를 추가해야 할지 여부를 지정합니다. 기본값: True"
+
+#: ../../docs/server_manual/services/wms.rst:1798
+msgid ""
+"``TEXT_RENDER_FORMAT``: sets the text render format for pdf export. It can "
+"be ``AlwaysOutlines`` (default) or ``AlwaysText``."
+msgstr ""
+"``TEXT_RENDER_FORMAT``: PDF 내보내기를 위한 텍스트 렌더링 형식을 설정합니다. ``AlwaysOutlines`` "
+"(기본값) 또는 ``AlwaysText`` 가운데 하나로 설정할 수 있습니다."
+
+#: ../../docs/server_manual/services/wms.rst:1800
+msgid ""
+"``SIMPLIFY_GEOMETRY``: whether features geometries shall be simplified. "
+"Default: true."
+msgstr "``SIMPLIFY_GEOMETRY``: 피처 도형을 단순화시켜야 할지 여부를 지정합니다. 기본값: True"
+
+#: ../../docs/server_manual/services/wms.rst:1801
+msgid "``WRITE_GEO_PDF``: whether a GeoPDF shall be exported. Default: false."
+msgstr "``WRITE_GEO_PDF``: PDF를 GeoPDF 포맷으로 내보내야 할지 여부를 지정합니다. 기본값: False"
+
+#: ../../docs/server_manual/services/wms.rst:1802
+msgid ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: whether Iso32000 "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: ISO 32000 지리참조를 사용해야 할지 "
+"여부를 지정합니다. 기본값: False"
+
+#: ../../docs/server_manual/services/wms.rst:1803
+msgid ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: whether OGC best practice "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: OGC 모범 사례(best practice) "
+"지리참조를 사용해야 할지 여부를 지정합니다. 기본값: False"
+
+#: ../../docs/server_manual/services/wms.rst:1804
+msgid ""
+"``EXPORT_THEMES``: a comma separated list of map themes to use for a GeoPDF "
+"export"
+msgstr "``EXPORT_THEMES``: GeoPDF 내보내기에 사용할 맵 테마들을 쉼표로 구분한 목록입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1805
+msgid ""
+"``PREDEFINED_MAP_SCALES``: a comma separated list of map scales to render "
+"the map"
+msgstr "``PREDEFINED_MAP_SCALES``: 맵을 렌더링하기 위한 맵 축척들을 쉼표로 구분한 목록입니다."
+
+#: ../../docs/server_manual/services/wms.rst:1806
+msgid ""
+"``LOSSLESS_IMAGE_COMPRESSION``: whether images embedded in pdf must be "
+"compressed using a lossless algorithm. Default: false."
+msgstr ""
+"``LOSSLESS_IMAGE_COMPRESSION``: PDF에 내장된 이미지를 비손실 압축 알고리즘을 사용해서 압축시켜야만 할지 "
+"여부를 지정합니다. 기본값: False"
+
+#: ../../docs/server_manual/services/wms.rst:1807
+msgid ""
+"``DISABLE_TILED_RASTER_RENDERING``: whether rasters shall be untiled in the "
+"pdf. Default: false."
+msgstr ""
+"``DISABLE_TILED_RASTER_RENDERING``: PDF에 있는 타일화 래스터를 타일화 해제시켜야 할지 여부를 지정합니다."
+" 기본값: False"
 
 #: ../../docs/server_manual/services/wms.rst:1828
 msgid "ATLAS_PK"
