@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,11 +33,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/server_manual/config.rst:8
 msgid "Advanced configuration"
-msgstr "고급 환경 설정"
+msgstr "고급 환경설정"
 
 #: ../../docs/server_manual/config.rst:22
 msgid "Logging"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../../docs/server_manual/config.rst:52
 msgid "Name"
-msgstr "명칭"
+msgstr "이름"
 
 #: ../../docs/server_manual/config.rst:53
 msgid "Description"
@@ -178,6 +178,19 @@ msgstr ""
 "일반적으로 (*MAP* 을 보유한) 쿼리 문자열 내에서 파라미터로 전송되는 ``.qgs`` 또는 ``.qgz`` 프로젝트 파일을 (예를 "
 "들어 ``mod_rewrite`` 아파치 모듈을 사용해서) 환경 변수로 설정할 수도 있습니다."
 
+#: ../../docs/server_manual/config.rst:75
+msgid ""
+"Note that you may also indicate a project stored in PostgreSQL, e.g. "
+"``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``"
+" or inside a geopackage file, e.g. "
+"``geopackage:/path/to/geopackage/file.gpkg?projectName=myProjectName``."
+msgstr ""
+"PostgreSQL에 저장된 프로젝트를 예를 들어 "
+"``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``"
+" 와 같이, 또는 GeoPackage 파일 안에 저장된 프로젝트를 예를 들어 "
+"``geopackage:/path/to/geopackage/file.gpkg?projectName=myProjectName`` 과 같이 "
+"지정할 수도 있다는 사실을 기억하십시오."
+
 #: ../../docs/server_manual/config.rst:80
 msgid "QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS"
 msgstr "QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS"
@@ -220,6 +233,16 @@ msgstr "OAPIF/WFS3"
 msgid "QGIS_SERVER_APPLICATION_NAME"
 msgstr "QGIS_SERVER_APPLICATION_NAME"
 
+#: ../../docs/server_manual/config.rst:92
+msgid ""
+"Name of the application to be used, for instance when connecting to a "
+"database to identify the QGIS server instance connected"
+msgstr "예를 들면 연결된 QGIS 서버 인스턴스를 식별하기 위해 데이터베이스에 연결하는 경우 사용할 응용 프로그램의 이름"
+
+#: ../../docs/server_manual/config.rst:94
+msgid "QGIS3 server"
+msgstr "QGIS3 서버"
+
 #: ../../docs/server_manual/config.rst:97
 msgid "QGIS_SERVER_API_WFS3_MAX_LIMIT"
 msgstr "QGIS_SERVER_API_WFS3_MAX_LIMIT"
@@ -259,6 +282,14 @@ msgstr "50 MB"
 #: ../../docs/server_manual/config.rst:112
 msgid "QGIS_SERVER_CAPABILITIES_CACHE_SIZE"
 msgstr "QGIS_SERVER_CAPABILITIES_CACHE_SIZE"
+
+#: ../../docs/server_manual/config.rst:113
+msgid "The maximum number of project capabilities to cache."
+msgstr "캐시에 저장할 프로젝트 케이퍼빌리티의 최대 개수"
+
+#: ../../docs/server_manual/config.rst:114
+msgid "40"
+msgstr "40"
 
 #: ../../docs/server_manual/config.rst:117
 msgid "QGIS_SERVER_DISABLE_GETPRINT"
@@ -317,7 +348,7 @@ msgid ""
 " will be considered valid and available."
 msgstr ""
 "이 환경 변수를 ``1`` 또는 ``true`` 로 설정하면 이런 기본 습성을 무시할 수 있습니다. 이렇게 설정하면 \"불량\" 레이어를"
-" 그냥 무시해버리고, 프로젝트를 유효하고 사용 가능한 것으로 인식할 것입니다."
+" 그냥 무시해버리고, 프로젝트를 무결하고 사용 가능한 것으로 인식할 것입니다."
 
 #: ../../docs/server_manual/config.rst:141
 msgid "QGIS_SERVER_LANDING_PAGE_PREFIX"
@@ -362,8 +393,8 @@ msgid ""
 "writing to file. File should be created automatically, just send some "
 "requests to server. If it's not there, check permissions."
 msgstr ""
-"경로 및 파일명을 지정합니다. 서버가 파일을 작성하기 위한 적절한 권한을 가지고 있는지 확인하십시오. 서버에 요청을 보내기만 하면 파일을"
-" 자동적으로 생성할 것입니다. 파일이 생성되지 않을 경우, 권한을 확인해보십시오."
+"경로 및 파일 이름을 지정합니다. 서버가 파일을 작성하기 위한 적절한 권한을 가지고 있는지 확인하십시오. 서버에 요청을 보내기만 하면 "
+"파일을 자동적으로 생성할 것입니다. 파일이 생성되지 않을 경우, 권한을 확인해보십시오."
 
 #: ../../docs/server_manual/config.rst:167
 msgid ""
@@ -480,6 +511,13 @@ msgstr ""
 msgid "QGIS_SERVER_PROJECT_CACHE_CHECK_INTERVAL"
 msgstr "QGIS_SERVER_PROJECT_CACHE_CHECK_INTERVAL"
 
+#: ../../docs/server_manual/config.rst:224
+msgid ""
+"Controls the periodic strategy interval for cache invalidation, in "
+"milliseconds. Defaults to 0 which selects the legacy File system watcher."
+msgstr ""
+"캐시 무결성 검증을 위한 주기적 전략 간격을 밀리초 단위로 제어합니다. 기본값은 레거시 파일 시스템 감시자를 선택하는 0입니다."
+
 #: ../../docs/server_manual/config.rst:229
 msgid "QGIS_SERVER_PROJECT_CACHE_STRATEGY"
 msgstr "QGIS_SERVER_PROJECT_CACHE_STRATEGY"
@@ -499,7 +537,7 @@ msgid ""
 " on project configuration. Convenient on atypical file systems, such as NFS,"
 " or when the project file is stored in a database system like PostgreSQL."
 msgstr ""
-"``periodic``: 프로젝트 환경 설정의 변경 사항을 점검하기 위해 프로젝트의 마지막으로 수정된 값을 사용합니다. NFS 같은 "
+"``periodic``: 프로젝트 환경설정의 변경 사항을 점검하기 위해 프로젝트의 마지막으로 수정된 값을 사용합니다. NFS 같은 "
 "일반적이지 않은 파일 시스템 상에서 또는 프로젝트 파일이 PostgreSQL 같은 데이터베이스 시스템에 저장되어 있는 경우 편리합니다."
 
 #: ../../docs/server_manual/config.rst:236
@@ -699,8 +737,8 @@ msgid ""
 "parameters thanks to environment variables. Moreover, the value currently "
 "used and the origin is also displayed."
 msgstr ""
-"QGIS 서버 실행 시, 환경 설정할 수 있는 모든 파라미터의 요약을 환경 변수 덕분에 볼 수 있습니다. 게다가, 현재 사용되는 값과 그"
-" 기원까지 표시됩니다."
+"QGIS 서버 실행 시, 환경설정할 수 있는 모든 파라미터의 요약을 환경 변수 덕분에 볼 수 있습니다. 게다가, 현재 사용되는 값과 그 "
+"기원까지 표시됩니다."
 
 #: ../../docs/server_manual/config.rst:342
 msgid "For example with spawn-fcgi:"
