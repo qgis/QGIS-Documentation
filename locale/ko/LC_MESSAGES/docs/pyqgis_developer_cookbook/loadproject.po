@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/loadproject.rst:14
 msgid "Loading Projects"
@@ -42,7 +42,7 @@ msgstr "프로젝트 불러오기"
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
-msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+msgstr "PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadproject.rst:35
 msgid ""
@@ -105,6 +105,40 @@ msgstr ""
 msgid "Resolving bad paths"
 msgstr "경로 오류 해결하기"
 
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:99
+msgid ""
+"It can happen that layers loaded in the project are moved to another "
+"location. When the project is loaded again all the layer paths are broken. "
+"The :class:`QgsPathResolver <qgis.core.QgsPathResolver>` class helps you "
+"rewrite layers path within the project."
+msgstr ""
+"프로젝트에 불러온 레이어들이 또다른 위치로 옮겨지는 경우가 있을 수 있습니다. 이런 프로젝트를 다시 불러오는 경우 모든 레이어 경로가 "
+"깨지게 됩니다. :class:`QgsPathResolver <qgis.core.QgsPathResolver>` 클래스를 사용하면 프로젝트"
+" 안에서 레이어 경로를 다시 작성할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:104
+msgid ""
+"Its :meth:`setPathPreprocessor() "
+"<qgis.core.QgsPathResolver.setPathPreprocessor>` method allows setting a "
+"custom path pre-processor function to manipulate paths and data sources "
+"prior to resolving them to file references or layer sources."
+msgstr ""
+"이 클래스의 :meth:`setPathPreprocessor() "
+"<qgis.core.QgsPathResolver.setPathPreprocessor>` 메소드는 사용자 정의 경로 전처리기(pre-"
+"processor) 함수를 설정해서, 경로와 데이터 소스를 파일 참조 또는 레이어 소스로 해석하기 전에 조작할 수 있게 해줍니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:109
+msgid ""
+"The processor function must accept a single string argument (representing "
+"the original file path or data source) and return a processed version of "
+"this path. The path pre-processor function is called **before** any bad "
+"layer handler. If multiple preprocessors are set, they will be called in "
+"sequence based on the order in which they were originally set."
+msgstr ""
+"처리기(processor) 함수는 반드시 (원본 파일 경로 또는 데이터 소스를 표현하는) 단일 문자열 인자를 받아서 해당 경로를 처리한 "
+"버전을 반환해야만 합니다. 오류가 발생한 어떤 레이어 처리자(handler)보다도 **먼저** 이 경로 전처리기 함수를 호출합니다. "
+"전처리기를 여러 개 설정한 경우, 원래 전처리기들이 설정된 순서대로 차례차례 호출할 것입니다."
+
 #: ../../docs/pyqgis_developer_cookbook/loadproject.rst:115
 msgid "Some use cases:"
 msgstr "다음은 몇몇 활용 사례입니다:"
@@ -120,3 +154,60 @@ msgstr "새 데이터베이스 호스트 주소로 대체:"
 #: ../../docs/pyqgis_developer_cookbook/loadproject.rst:135
 msgid "replace stored database credentials with new ones:"
 msgstr "저장된 데이터베이스 인증 정보를 새 정보로 대체:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:146
+msgid ""
+"Likewise, a :meth:`setPathWriter() "
+"<qgis.core.QgsPathResolver.setPathWriter>` method is available for a path "
+"writer function."
+msgstr ""
+"마찬가지로, 경로 작성자 함수에 :meth:`setPathWriter() "
+"<qgis.core.QgsPathResolver.setPathWriter>` 메소드를 사용할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:149
+msgid "An example to replace the path with a variable:"
+msgstr "경로를 변수로 대체하는 예시입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:158
+msgid ""
+"Both methods return an ``id`` that can be used to remove the pre-processor "
+"or writer they added. See :meth:`removePathPreprocessor() "
+"<qgis.core.QgsPathResolver.removePathPreprocessor>` and "
+":meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>`."
+msgstr ""
+"두 메소드 모두 전처리기 또는 메소드가 추가한 작성자를 제거하는 데 사용할 수 있는 ``id`` 를 반환합니다. "
+":meth:`removePathPreprocessor() "
+"<qgis.core.QgsPathResolver.removePathPreprocessor>` 및 "
+":meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>` 를 "
+"참조하세요."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:165
+msgid "Using flags to speed up things"
+msgstr "속도 향상을 위해 플래그 사용하기"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:167
+msgid ""
+"In some instances where you may not need to use a fully functional project, "
+"but only want to access it for a specific reason, flags may be helpful. A "
+"full list of flags is available under :class:`ProjectReadFlag "
+"<qgis.core.Qgis.ProjectReadFlag>`. Multiple flags can be added together."
+msgstr ""
+"완전하게 기능하는 프로젝트를 사용할 필요는 없고 특정한 이유 때문에 프로젝트에 접근만 하면 되는 경우, 플래그가 도움이 될 수도 "
+"있습니다. :class:`ProjectReadFlag <qgis.core.Qgis.ProjectReadFlag>` 클래스 아래에서 전체 "
+"플래그 목록을 찾아볼 수 있습니다. 플래그 여러 개를 함께 추가할 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:171
+msgid ""
+"As an example, if we do not care about actual layers and data and simply "
+"want to access a project (e.g. for layout or 3D view settings), we can use "
+"``DontResolveLayers`` flag to bypass the data validation step and prevent "
+"the bad layer dialog from appearing. The following can be done:"
+msgstr ""
+"예를 들어 실제 레이어와 데이터에는 관심이 없고 (예를 들면 조판 또는 3D 뷰 설정 때문에) 단순히 프로젝트에 접근만 하고 싶은 경우,"
+" 데이터 무결성 검증 단계를 뛰어넘고 오류가 발생한 레이어 대화창이 열리는 일을 방지하려면 ``DontResolveLayers`` "
+"플래그를 다음 코드처럼 사용하면 됩니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:183
+msgid "To add more flags the python Bitwise OR operator (``|``) must be used."
+msgstr ""
+"플래그를 더 많이 추가하려면 반드시 파이썬 비트 연산자(bitwise operator) OR(``|``)를 사용해야만 합니다."
