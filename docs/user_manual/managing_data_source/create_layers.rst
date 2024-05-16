@@ -536,8 +536,11 @@ In the :guilabel:`DXF Export` dialog:
      in a single DXF layer or rely on a field whose values are used
      to split the features into layers in the DXF output.
      In the latter case, each layer will take its name from the corresponding field value.
+   * :guilabel:`Allow data defined symbol blocks`:
+   * :guilabel:`Maximum number of symbol blocks`: creates symbol blocks up to the specified limit,
+     starting with the ones containing the highest number of references.
+     The other symbols are written as they are. ``-1`` means no limitation.
 
-  
 Optionally, you can also choose to:
 
 * |unchecked| :guilabel:`Use the layer title as name if set` instead of the
@@ -546,7 +549,12 @@ Optionally, you can also choose to:
 * |unchecked| :guilabel:`Export features intersecting the current map extent`;
 * |unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;
 * |checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements;
-* |unchecked| :guilabel:`Use only selected features`.
+* |unchecked| :guilabel:`Use only selected features`;
+* |unchecked| :guilabel:`Export lines with zero width`: all the lines are exported
+  with minimal width ``0`` (hairline) if enabled.
+  This helps keep the lines minimal in the file regardless of the zoom level,
+  and can be handy for doing further CAD-editing with the exported dxf,
+  especially if there are many features next to each other on the map.
 
 .. note::
 
