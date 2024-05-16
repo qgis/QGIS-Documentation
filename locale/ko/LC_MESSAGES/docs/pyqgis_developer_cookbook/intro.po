@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-04-11 12:37+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
@@ -32,11 +32,20 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:8
 msgid "Introduction"
 msgstr "소개"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:11
+msgid ""
+"This document is intended to be both a tutorial and a reference guide. While"
+" it does not list all possible use cases, it should give a good overview of "
+"the principal functionality."
+msgstr ""
+"이 문서는 교재와 참조 지침서 둘 다를 목표로 작성되었습니다. 이 문서가 가능한 모든 사용례를 모두 보여주지는 못하지만, 중요한 기능들을"
+" 살펴보기엔 충분할 것입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:16
 msgid ""
@@ -52,13 +61,140 @@ msgstr ""
 msgid "A copy of the license is included in the section :ref:`gnu_fdl`."
 msgstr "이 사용 허가서의 복사본은 부록 :ref:`gnu_fdl` 에 포함되어 있습니다."
 
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:23
+msgid "This license also applies to all code snippets in this document."
+msgstr "이 사용 허가서는 이 문서에 있는 모든 코드 조각들에도 적용됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:31
+msgid ""
+"Python support was first introduced in QGIS 0.9. There are several ways to "
+"use Python in QGIS Desktop (covered in the following sections):"
+msgstr ""
+"파이썬 을 처음 지원하기 시작한 것은 QGIS 0.9버전부터입니다. QGIS 데스크탑에서 파이썬을 사용할 수 있는 몇 가지 방법(을 다음"
+" 절들에서 설명합니다)이 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:35
+msgid "Issue commands in the Python console within QGIS"
+msgstr "QGIS 안에 있는 파이썬 콘솔에서 명령어 실행"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:36
+msgid "Create and use plugins"
+msgstr "플러그인 생성 및 사용"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:37
+msgid "Automatically run Python code when QGIS starts"
+msgstr "QGIS 구동 시 파이썬 코드 자동 실행"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:38
+msgid "Create processing algorithms"
+msgstr "공간 처리 알고리즘 생성"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:39
+msgid "Create functions for expressions in QGIS"
+msgstr "QGIS에서 표현식 용 함수 생성"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:40
+msgid "Create custom applications based on the QGIS API"
+msgstr "QGIS API를 바탕으로 사용자 정의 응용 프로그램 생성"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:42
+msgid ""
+"Python bindings are also available for QGIS Server, including Python plugins"
+" (see :ref:`server_plugins`) and Python bindings that can be used to embed "
+"QGIS Server into a Python application."
+msgstr ""
+"QGIS 서버에 대해서도 파이썬 바인딩을 사용할 수 있습니다. 이 사용법은 파이썬 플러그인(:ref:`server_plugins` "
+"참조)과 파이썬 응용 프로그램에 QGIS 서버를 내장시키기 위해 사용할 수 있는 파이썬 바인딩을 포함합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:49
+msgid ""
+"There is a :api:`complete QGIS C++ API <>` reference that documents the "
+"classes from the QGIS libraries. :pyqgis:`The Pythonic QGIS API (pyqgis) <>`"
+" is nearly identical to the C++ API."
+msgstr ""
+"QGIS 라이브러리 클래스를 문서화한 :api:`완전한 QGIS C++ API <>` 참조가 있습니다. :pyqgis:`파이썬의 QGIS"
+" API (pyqgis) <>` 는 C++ API와 거의 동일합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:53
+msgid ""
+"Another good resource for learning how to perform common tasks is to "
+"download existing plugins from the `plugin repository "
+"<https://plugins.qgis.org/>`_ and examine their code."
+msgstr ""
+"흔한 작업들을 수행하는 방법을 배우는 데 좋은 또다른 리소스는 `플러그인 저장소 <https://plugins.qgis.org/>`_ "
+"에서 기존 플러그인을 다운로드해서 그 코드를 공부하는 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:64
+msgid "Scripting in the Python Console"
+msgstr "파이썬 콘솔에서의 스크립트 작업"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:66
+msgid ""
+"QGIS provides an integrated :ref:`Python console <console>` for scripting. "
+"It can be opened from the :menuselection:`Plugins --> Python Console` menu:"
+msgstr ""
+"QGIS는 스크립트 작업을 위한 통합 :ref:`파이썬 콘솔 <console>` 을 제공합니다. "
+":menuselection:`Plugins --> Python Console` 메뉴 항목을 클릭해서 열 수 있습니다."
+
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:73
 msgid "QGIS Python console"
 msgstr "QGIS 파이썬 콘솔"
 
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:75
+msgid ""
+"The screenshot above illustrates how to get the layer currently selected in "
+"the layer list, show its ID and optionally, if it is a vector layer, show "
+"the feature count. For interaction with the QGIS environment, there is an "
+":data:`iface` variable, which is an instance of :class:`QgisInterface "
+"<qgis.gui.QgisInterface>`. This interface allows access to the map canvas, "
+"menus, toolbars and other parts of the QGIS application."
+msgstr ""
+"앞의 스크린샷은 현재 레이어 목록에서 선택한 레이어를 가져오는 방법과, 레이어 ID를 보는 방법, 그리고 벡터 레이어인 경우 피처 개수를"
+" 보는 선택적인 방법을 보여주고 있습니다. QGIS 환경과 쌍방향으로 작업하기 위한, :class:`QgisInterface "
+"<qgis.gui.QgisInterface>` 클래스의 인스턴스인 :data:`iface` 변수가 있습니다. 이 인터페이스를 통해 "
+"QGIS 응용 프로그램의 맵 캔버스, 메뉴, 툴바, 그리고 기타 부분들에 접근할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:84
+msgid ""
+"For user convenience, the following statements are executed when the console"
+" is started (in the future it will be possible to set further initial "
+"commands)"
+msgstr ""
+"사용자 편의성을 위해, 콘솔이 시작될 때 다음 선언문이 실행됩니다. (향후 더 많은 초기 명령어를 설정할 수 있게 될 것입니다.)"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:93
+msgid ""
+"For those which use the console often, it may be useful to set a shortcut "
+"for triggering the console (within :menuselection:`Settings --> Keyboard "
+"shortcuts...`)"
+msgstr ""
+"이 콘솔을 자주 사용하는 사용자라면 (:menuselection:`Settings --> Keyboard shortcuts...` "
+"메뉴에서) 콘솔을 여는 단축키를 설정해두는 편이 유용할 수도 있습니다."
+
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:100
 msgid "Python Plugins"
 msgstr "파이썬 플러그인"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:102
+msgid ""
+"The functionality of QGIS can be extended using plugins. Plugins can be "
+"written in Python. The main advantage over C++ plugins is simplicity of "
+"distribution (no compiling for each platform) and easier development."
+msgstr ""
+"플러그인을 사용하면 QGIS의 기능을 확장할 수 있습니다. 플러그인은 파이썬으로 작성할 수 있습니다. 파이썬 플러그인이 C++ 플러그인을"
+" 뛰어넘는 주요한 장점은 배포가 단순하다는 점과 (각 플랫폼 별로 컴파일해야 할 필요가 없습니다) 개발이 더 쉽다는 점입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:108
+msgid ""
+"Many plugins covering various functionality have been written since the "
+"introduction of Python support. The plugin installer allows users to easily "
+"fetch, upgrade and remove Python plugins. See the `Python Plugins "
+"<https://plugins.qgis.org/>`_ page for more information about plugins and "
+"plugin development."
+msgstr ""
+"파이썬을 지원하기 시작한 후로 여러 기능을 커버하는 수많은 플러그인이 작성돼 왔습니다. 플러그인 설치자는 사용자가 파이썬 플러그인을 쉽게"
+" 가져오고, 업그레이드하고, 제거할 수 있게 해줍니다. 플러그인과 플러그인 개발에 대해 더 많이 알고 싶다면 `파이썬 플러그인 "
+"<https://plugins.qgis.org/>`_ 페이지를 참조하세요."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:114
 msgid ""
@@ -67,17 +203,380 @@ msgid ""
 msgstr ""
 "파이썬으로 플러그인을 생성하는 일은 매우 간단합니다. 자세한 내용은  :ref:`developing_plugins` 강의를 참조하십시오."
 
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:119
+msgid ""
+"Python plugins are also available for QGIS server. See :ref:`server_plugins`"
+" for further details."
+msgstr ""
+"QGIS 서버 용 파이썬 플러그인도 사용할 수 있습니다. 더 자세한 내용은 :ref:`server_plugins` 을 참조하세요."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:124
+msgid "Processing Plugins"
+msgstr "공간 처리 플러그인"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:126
+msgid ""
+"Processing Plugins can be used to process data. They are easier to develop, "
+"more specific and more lightweight than Python Plugins. "
+":ref:`processing_plugin` explains when the use of Processing algorithms is "
+"appropiate and how to develop them."
+msgstr ""
+"공간 처리 플러그인은 데이터를 공간 처리할 수 있습니다. 공간 처리 플러그인은 파이썬 플러그인보다 더 개발하기 쉽고, 더 특정 목적에 "
+"가깝고, 더 가볍습니다. :ref:`processing_plugin` 에서 어떤 경우에 공간 처리 알고리즘을 사용해야 알맞은지 그리고 "
+"어떻게 개발해야 하는지를 설명하고 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:135
+msgid "Running Python code when QGIS starts"
+msgstr "QGIS 구동 시 파이썬 코드 실행"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:137
+msgid "There are different methods to run Python code every time QGIS starts."
+msgstr "QGIS를 구동할 때마다 파이썬 코드를 실행시킬 수 있는 서로 다른 방법들이 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:140
+msgid "Creating a startup.py script"
+msgstr "startup.py 스크립트 생성하기"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:142
+msgid ""
+"Setting the ``PYQGIS_STARTUP`` environment variable to an existing Python "
+"file"
+msgstr "기존 파이썬 파일에 ``PYQGIS_STARTUP`` 환경 변수 설정하기"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:145
+msgid ""
+"Specifying a startup script using the ``--code init_qgis.py`` parameter."
+msgstr "``--code init_qgis.py`` 파라미터를 사용해서 구동 스크립트 지정하기"
+
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:150
 msgid "The :file:`startup.py` file"
 msgstr ":file:`startup.py` 파일"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:152
+msgid ""
+"Every time QGIS starts, the user's Python home directory and a list of "
+"system paths are searched for a file named :file:`startup.py`. If that file "
+"exists, it is executed by the embedded Python interpreter."
+msgstr ""
+"QGIS를 구동할 때마다, 사용자의 파이썬 홈 디렉터리와 시스템 경로 목록에서 :file:`startup.py` 라는 파일을 검색합니다."
+" 해당 파일이 존재하는 경우, 내장 파이썬 해석기가 이 파일을 실행합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:156
+msgid "The path in the user's home directory usually is found under:"
+msgstr "사용자 홈 디렉터리 경로는 보통 다음 아래에서 찾을 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:158
+msgid "Linux: :file:`.local/share/QGIS/QGIS3`"
+msgstr "리눅스: :file:`.local/share/QGIS/QGIS3`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:159
+msgid "Windows: :file:`AppData\\\\Roaming\\\\QGIS\\\\QGIS3`"
+msgstr "윈도우: :file:`AppData\\\\Roaming\\\\QGIS\\\\QGIS3`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:160
+msgid "macOS: :file:`Library/Application Support/QGIS/QGIS3`"
+msgstr "맥OS: :file:`Library/Application Support/QGIS/QGIS3`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:162
+msgid ""
+"The default system paths depend on the operating system. To find the paths "
+"that work for you, open the Python Console and run "
+"``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)`` to see "
+"the list of default directories."
+msgstr ""
+"기본 시스템 경로는 운영체제에 따라 달라집니다. 사용자에 맞게 작동하는 경로를 찾으려면 파이썬 콘솔을 열고 "
+"``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)`` 를 "
+"실행하십시오. 기본 디렉터리 목록이 출력될 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:167
+msgid ""
+"The ``startup.py`` script is executed immediately upon initializing python "
+"in QGIS, early on in the start of the application."
+msgstr ""
+"QGIS 응용 프로그램의 구동 초기에, QGIS에서 파이썬이 초기 설정되는 즉시 ``startup.py`` 스크립트를 실행합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:174
+msgid "The PYQGIS_STARTUP environment variable"
+msgstr "PYQGIS_STARTUP 환경 변수"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:176
+msgid ""
+"You can run Python code just before QGIS initialization completes by setting"
+" the ``PYQGIS_STARTUP`` environment variable to the path of an existing "
+"Python file."
+msgstr ""
+"``PYQGIS_STARTUP`` 환경 변수를 기존 파이썬 파일의 경로로 설정하면 QGIS 초기 설정이 완료되기 직전에 파이썬 코드를 "
+"실행시킬 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:180
+msgid ""
+"This code will run before QGIS initialization is complete. This method is "
+"very useful for cleaning sys.path, which may have undesireable paths, or for"
+" isolating/loading the initial environment without requiring a virtual "
+"environment, e.g. homebrew or MacPorts installs on Mac."
+msgstr ""
+"이 코드는 QGIS 초기 설정이 완료되기 전에 실행될 것입니다. 이 방법은 원하지 않는 경로를 가지고 있을 지도 모를 sys.path를 "
+"지우는 데, 또는 가상 환경을 설정할 필요 없이, 예를 들어 맥에서 홈브루 또는 MacPorts를 설치할 필요 없이 초기 환경을 "
+"격리하기/불러오기하는 데 매우 유용합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:191
+msgid "The ``--code`` parameter"
+msgstr "``--code`` 파라미터"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:193
+msgid ""
+"You can provide custom code to execute as startup parameter to QGIS. To do "
+"so, create a python file, for example ``qgis_init.py``, to execute and start"
+" QGIS from the command line using ``qgis --code qgis_init.py``."
+msgstr ""
+"사용자가 QGIS에 구동 파라미터로 실행되는 사용자 정의 코드를 제공할 수 있습니다. 파이썬 파일을, 예를 들어 "
+"``qgis_init.py`` 파일을 생성한 다음, 명령 줄에서 ``qgis --code qgis_init.py`` 명령어를 실행해서 "
+"QGIS를 구동하면 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:197
+msgid ""
+"Code provided via ``--code`` is executed late in the QGIS initialization "
+"phase, after the application components have been loaded."
+msgstr ""
+"``--code`` 파라미터를 통해 제공된 코드는 QGIS 초기 설정 단계 후반에, 응용 프로그램 구성 요소들을 불러온 후에 실행됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:201
+msgid "Additional arguments for Python"
+msgstr "파이썬 용 추가 인자들"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:203
+msgid ""
+"To provide additional arguments for your ``--code`` script or for other "
+"python code that is executed, you can use the ``--py-args`` argument. Any "
+"argument coming after ``--py-args`` and before a ``--`` arg (if present) "
+"will be passed to Python but ignored by the QGIS application itself."
+msgstr ""
+"사용자의 ``--code`` 스크립트 또는 실행되는 다른 파이썬 코드에 추가 인자를 더하고 싶은 경우, ``--py-args`` 인자를 "
+"사용하면 됩니다. ``--py-args`` 뒤에 그리고 (존재하는 경우) ``--`` 인자 앞에 오는 모든 인자는 파이썬으로 전달될 "
+"것이지만 QGIS 응용 프로그램 자체는 해당 인자를 무시할 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:209
+msgid ""
+"In the following example, ``myfile.tif`` will be available via ``sys.argv`` "
+"in Python but will not be loaded by QGIS. Whereas ``otherfile.tif`` will be "
+"loaded by QGIS but is not present in ``sys.argv``."
+msgstr ""
+"다음 예시에서, ``myfile.tif`` 는 파이썬에서 ``sys.argv`` 를 통해 사용할 수 있지만 QGIS가 "
+"``myfile.tif`` 를 불러오지는 않을 것입니다. 반면 QGIS는 ``otherfile.tif`` 를 불러올 것이지만 "
+"``sys.argv`` 에는 없습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:218
+msgid ""
+"If you want access to every command line parameter from within Python, you "
+"can use ``QCoreApplication.arguments()``"
+msgstr ""
+"파이썬 안에서 나온 모든 명령 줄 파라미터에 접근하고 싶은 경우, ``QCoreApplication.arguments()`` 를 사용하면"
+" 됩니다."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:228
 msgid "Python Applications"
 msgstr "파이썬 응용 프로그램"
 
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:230
+msgid ""
+"It is often handy to create  scripts for automating processes. With PyQGIS, "
+"this is perfectly possible --- import the :pyqgis:`qgis.core <core>` module,"
+" initialize it and you are ready for the processing."
+msgstr ""
+"공간 처리 자동화를 위한 스크립트를 작성하는 것이 편리한 경우가 많습니다. PyQGIS를 사용하면 이를 완벽하게 작업할 수 있습니다 "
+"--- :pyqgis:`qgis.core <core>` 모듈을 가져와서 초기 설정을 하기만 하면 공간 처리 작업을 할 준비가 끝납니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:235
+msgid ""
+"Or you may want to create an interactive application that uses GIS "
+"functionality --- perform measurements, export a map as PDF, ... The "
+":pyqgis:`qgis.gui <gui>` module provides various GUI components, most "
+"notably the map canvas widget that can be incorporated into the application "
+"with support for zooming, panning and/or any further custom map tools."
+msgstr ""
+"또는 사용자가 GIS 기능을 사용하는 대화형 응용 프로그램을 만들려 할 수도 있습니다 --- 측정 작업을 수행하거나, 맵을 PDF로 "
+"내보내거나, 등등과 같은 기능 말이죠. :pyqgis:`qgis.gui <gui>` 모듈은 여러 GUI 구성 요소를 제공합니다. 가장 "
+"주목할 만한 요소는 맵 캔버스 위젯으로, 응용 프로그램에 통합되어 확대/축소, 이동, 그리고/또는 다른 사용자 정의 맵 도구들을 "
+"지원합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:242
+msgid ""
+"PyQGIS custom applications or standalone scripts must be configured to "
+"locate the QGIS resources, such as projection information and providers for "
+"reading vector and raster layers. QGIS Resources are initialized by adding a"
+" few lines to the beginning of your application or script. The code to "
+"initialize QGIS for custom applications and standalone scripts is similar. "
+"Examples of each are provided below."
+msgstr ""
+"PyQGIS 사용자 정의 응용 프로그램 또는 독립 실행형 스크립트는 투영체 정보와 벡터 및 래스터 레이어를 읽어오기 위한 제공자 같은 "
+"QGIS 리소스의 정확한 위치를 찾을 수 있도록 반드시 환경설정해줘야만 합니다. 사용자 응용 프로그램 또는 스크립트의 시작 부분에 몇 "
+"줄을 추가해주면 QGIS 리소스를 초기 설정할 수 있습니다. 사용자 정의 응용 프로그램 또는 독립 실행형 스크립트를 위해 QGIS를 초기"
+" 설정해주는 코드는 비슷합니다. 다음은 그 각각의 예시입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:252
+msgid ""
+"Do *not* use :file:`qgis.py` as a name for your script. Python will not be "
+"able to import the bindings as the script's name will shadow them."
+msgstr ""
+"사용자 스크립트에 :file:`qgis.py` 라는 파일 이름을 사용하지 *마십시오*. 스크립트의 파일 이름이 바인딩을 가릴 것이기 "
+"때문에 파이썬이 바인딩을 가져올 수 없을 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:259
+msgid "Using PyQGIS in standalone scripts"
+msgstr "독립 실행형 스크립트에서 PyQGIS 사용하기"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:261
+msgid ""
+"To start a standalone script, initialize the QGIS resources at the beginning"
+" of the script:"
+msgstr "독립 실행형 스크립트를 시작하려면, 스크립트 시작 부분에 QGIS 리소스를 초기 설정하십시오:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:285
+msgid ""
+"First we import the :pyqgis:`qgis.core <core>` module and configure the "
+"prefix path. The prefix path is the location where QGIS is installed on your"
+" system. It is configured in the script by calling the "
+":meth:`setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` method. The"
+" second argument of :meth:`setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>` is set to :const:`True`, "
+"specifying that default paths are to be used."
+msgstr ""
+"먼저 :pyqgis:`qgis.core <core>` 모듈을 가져온 다음 앞에 붙는(prefix) 경로를 환경설정합니다. 이 접두 경로는"
+" QGIS가 사용자 시스템 상에 설치돼 있는 위치입니다. 스크립트에서 :meth:`setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>` 메소드를 호출해서 접두 경로를 환경설정합니다. "
+":meth:`setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` 의 두 번째 인자를 "
+":const:`True` 로 설정해서 기본 경로들을 사용한다고 지정합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:294
+msgid ""
+"The QGIS install path varies by platform; the easiest way to find it for "
+"your system is to use the :ref:`pythonconsole` from within QGIS and look at "
+"the output from running:"
+msgstr ""
+"QGIS의 설치 경로는 플랫폼에 따라 다릅니다. 사용자 시스템에서 설치 경로를 찾는 가장 쉬운 방법은 QGIS 안에서 "
+":ref:`pythonconsole` 을 사용해서 다음을 실행한 다음 출력물을 살펴보는 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:302
+msgid ""
+"After the prefix path is configured, we save a reference to "
+":class:`QgsApplication <qgis.core.QgsApplication>` in the variable ``qgs``. "
+"The second argument is set to :const:`False`, specifying that we do not plan"
+" to use the GUI since we are writing a standalone script. With "
+"``QgsApplication`` configured, we load the QGIS data providers and layer "
+"registry by calling the :meth:`initQgis() "
+"<qgis.core.QgsApplication.initQgis>` method."
+msgstr ""
+"접두 경로를 환경설정한 다음, ``qgs`` 변수에 :class:`QgsApplication "
+"<qgis.core.QgsApplication>` 클래스를 가리키는 참조를 저장합니다. 두 번째 인자를 :const:`False` 로 "
+"설정해서 GUI를 사용할 계획이 없다고 지정합니다. 우리는 지금 독립 실행형 스크립트를 작성하고 있기 때문이죠. "
+"``QgsApplication`` 클래스를 환경설정한 다음, :meth:`initQgis() "
+"<qgis.core.QgsApplication.initQgis>` 메소드를 호출해서 QGIS 데이터 제공자와 레이어 레지스트리를 "
+"불러옵니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:313
+msgid ""
+"With QGIS initialized, we are ready to write the rest of the script. "
+"Finally, we wrap up by calling :meth:`exitQgis() "
+"<qgis.core.QgsApplication.exitQgis>` to remove the data providers and layer "
+"registry from memory."
+msgstr ""
+"QGIS를 초기 설정하고 나면, 스크립트의 다음 부분을 작성할 준비가 끝납니다. 마지막으로 :meth:`exitQgis() "
+"<qgis.core.QgsApplication.exitQgis>` 메소드를 호출해서 메모리로부터 데이터 제공자와 레리어 레지스트리를 "
+"제거하는 것으로 마무리합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:322
+msgid "Using PyQGIS in custom applications"
+msgstr "사용자 정의 응용 프로그램에서 PyQGIS 사용하기"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:324
+msgid ""
+"The only difference between :ref:`standalonescript` and a custom PyQGIS "
+"application is the second argument when instantiating the "
+":class:`QgsApplication <qgis.core.QgsApplication>`. Pass :const:`True` "
+"instead of :const:`False` to indicate that we plan to use a GUI."
+msgstr ""
+":ref:`standalonescript` 와 사용자 정의 PyQGIS 응용 프로그램의 유일한 차이점은 "
+":class:`QgsApplication <qgis.core.QgsApplication>` 클래스를 인스턴스화할 때의 두 번째 "
+"인자뿐입니다. :const:`False` 대신 :const:`True` 를 전달해서 GUI를 사용할 계획이라고 나타내십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:354
+msgid ""
+"Now you can work with the QGIS API - load layers and do some processing or "
+"fire up a GUI with a map canvas. The possibilities are endless :-)"
+msgstr ""
+"이제 QGIS API를 작업할 수 있습니다 --- 레이어를 불러와서 어떤 공간 처리를 하거나 GUI를 맵 캔버스와 함께 열거나, 가능성은"
+" 무궁무진합니다. :-)"
+
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:362
 msgid "Running Custom Applications"
-msgstr "사용자 정의 응용 프로그램 실행"
+msgstr "사용자 정의 응용 프로그램 실행하기"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:364
+msgid ""
+"You need to tell your system where to search for QGIS libraries and "
+"appropriate Python modules if they are not in a well-known location - "
+"otherwise Python will complain::"
+msgstr ""
+"QGIS 라이브러리 및 알맞은 파이썬 모듈이 잘 알려진 위치에 없는 경우, 사용자 시스템에 이들을 검색해야 할 위치를 알려줘야 합니다 "
+"--- 그렇지 않으면 파이썬이 불평할 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:371
+msgid ""
+"This can be fixed by setting the ``PYTHONPATH`` environment variable. In the"
+" following commands, ``<qgispath>`` should be replaced with your actual QGIS"
+" installation path:"
+msgstr ""
+"``PYTHONPATH`` 환경 변수를 설정하면 이 문제를 해결할 수 있습니다. 다음 명령어들에서, ``<qgispath>`` 를 "
+"사용자의 실제 QGIS 설치 경로로 대체해야 할 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:375
+msgid "on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`"
+msgstr "리눅스: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:376
+msgid "on Windows: :command:`set PYTHONPATH=c:\\\\<qgispath>\\\\python`"
+msgstr "윈도우: :command:`set PYTHONPATH=c:\\\\<qgispath>\\\\python`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:377
+msgid ""
+"on macOS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`"
+msgstr ""
+"맥OS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:379
+msgid ""
+"Now, the path to the PyQGIS modules is known, but they depend on the "
+"``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve only as "
+"wrappers). The path to these libraries may be unknown to the operating "
+"system, and then you will get an import error again (the message might vary "
+"depending on the system)::"
+msgstr ""
+"이제 PyQGIS 모듈들을 가리키는 경로를 지정했지만, 이 모듈들은 ``qgis_core`` 와 ``qgis_gui`` 라이브러리에 "
+"의존하고 있습니다. (파이썬 모듈은 래퍼(wrapper) 역할만 할 뿐입니다.) 운영체제가 이 라이브러리들을 가리키는 경로를 모르고 있을"
+" 수도 있기 때문에, 이 경우 다시 가져오기 오류 메시지를 보게 될 것입니다. (이 메시지는 사용자 시스템에 따라 달라질 수도 "
+"있습니다.):"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:389
+msgid ""
+"Fix this by adding the directories where the QGIS libraries reside to the "
+"search path of the dynamic linker:"
+msgstr "동적 링커(dynamic linker)의 검색 경로에 QGIS 라이브러리가 있는 디렉터리를 추가해서 이 문제를 해결하십시오:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:392
+msgid "on Linux: :command:`export LD_LIBRARY_PATH=/<qgispath>/lib`"
+msgstr "리눅스: :command:`export LD_LIBRARY_PATH=/<qgispath>/lib`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:393
+msgid ""
+"on Windows: :command:`set "
+"PATH=C:\\\\<qgispath>\\\\bin;C:\\\\<qgispath>\\\\apps\\\\<qgisrelease>\\\\bin;%PATH%`"
+" where ``<qgisrelease>`` should be replaced with the type of release you are"
+" targeting (eg, ``qgis-ltr``, ``qgis``, ``qgis-dev``)"
+msgstr ""
+"윈도우: :command:`set "
+"PATH=C:\\\\<qgispath>\\\\bin;C:\\\\<qgispath>\\\\apps\\\\<qgisrelease>\\\\bin;%PATH%`,"
+" 이때 ``<qgisrelease>`` 를 사용자가 대상으로 하는 배포판 유형(예: ``qgis-ltr``, ``qgis``, "
+"``qgis-dev``)으로 대체해야 할 것입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:397
 msgid ""
@@ -85,8 +584,19 @@ msgid ""
 " startup. When deploying custom applications using PyQGIS, there are usually"
 " two possibilities:"
 msgstr ""
-"이러한 명령어를 시동과정을 처리하는 부트스트랩 스크립트에 넣어 둘 수 있습니다. PyQGIS를 이용하는 사용자 정의 응용 프로그램을 "
-"배포할 경우 보통 다음 두 가지 방법을 쓸 수 있습니다."
+"이러한 명령어를 구동 과정을 처리할 부트스트랩(bootstrap) 스크립트에 넣어 둘 수 있습니다. PyQGIS를 이용하는 사용자 정의 "
+"응용 프로그램을 배포하는 경우, 보통 다음 두 가지 방법을 쓸 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:401
+msgid ""
+"require the user to install QGIS prior to installing your application. The "
+"application installer should look for default locations of QGIS libraries "
+"and allow the user to set the path if not found. This approach has the "
+"advantage of being simpler, however it requires the user to do more steps."
+msgstr ""
+"사용자 응용 프로그램을 설치하기 전에 필수적으로 QGIS를 설치해야 한다고 요청하는 방법입니다. 응용 프로그램 설치자가 QGIS "
+"라이브러리의 기본 위치를 검색하게 하고, 찾지 못했을 경우 사용자가 경로를 설정할 수 있도록 해줘야 합니다. 이 방법은 좀 더 간단하다는"
+" 장점이 있지만, 사용자가 더 많은 단계를 거쳐야 합니다."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:407
 msgid ""
@@ -95,5 +605,31 @@ msgid ""
 "saved from the burden of downloading and installing additional pieces of "
 "software."
 msgstr ""
-"QGIS를 응용 프로그램과 함께 패키지하는 방법입니다. 응용 프로그램을 배포하는 데 더 많은 노력이 필요하고 용량이 더 커지게 되지만, "
+"QGIS를 응용 프로그램과 함께 패키징하는 방법입니다. 응용 프로그램을 배포하는 데 더 많은 노력이 필요하고 용량이 더 커지게 되지만, "
 "사용자가 추가로 다른 소프트웨어를 다운로드해 설치해야 하는 부담이 줄어들게 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:412
+msgid ""
+"The two deployment models can be mixed.  You can provide a standalone "
+"applications on Windows and macOS, but for Linux leave the installation of "
+"GIS up to the user and his package manager."
+msgstr ""
+"이 두 가지 배포 모델을 섞을 수도 있습니다. 윈도우와 맥OS에서는 독립 설치형 응용 프로그램을 제공하지만, 리눅스에서는 사용자와 "
+"사용자의 패키지 관리자에 GIS 설치를 맡기도록 할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:417
+msgid "Technical notes on PyQt and SIP"
+msgstr "PyQt 및 SIP에 대한 기술 노트"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:419
+msgid ""
+"We've decided for Python as it's one of the most favoured languages for "
+"scripting. PyQGIS bindings in QGIS 3 depend on SIP and PyQt5. The reason for"
+" using SIP instead of the more widely used SWIG is that the QGIS code "
+"depends on Qt libraries. Python bindings for Qt (PyQt) are done using SIP "
+"and this allows seamless integration of PyQGIS with PyQt."
+msgstr ""
+"우리는 스크립트 작업에 가장 선호되는 언어 가운데 하나이기 때문에 파이썬을 사용하기로 결정했습니다. QGIS 3버전의 PyQGIS "
+"바인딩은 SIP 및 PyQt5에 의존하고 있습니다. 좀 더 널리 쓰이는 SWIG 대신 SIP를 사용하는 이유는 QGIS 코드가 Qt "
+"라이브러리에 의존하고 있기 때문입니다. SIP를 사용해서 Qt(PyQt)에 파이썬을 바인딩하므로 PyQGIS를 PyQt와 완벽하게 통합할"
+" 수 있는 것입니다."
