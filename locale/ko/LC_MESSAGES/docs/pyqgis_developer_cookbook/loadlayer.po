@@ -32,11 +32,15 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:25
 msgid "Loading Layers"
 msgstr "레이어 불러오기"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:27
+msgid "The code snippets on this page need the following imports:"
+msgstr "이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:41
 msgid ""
@@ -44,12 +48,19 @@ msgid ""
 "Additionally, custom layer types are available, but we are not going to "
 "discuss them here."
 msgstr ""
-"데이터를 담고 있는 레이어를 열어봅시다. QGIS는 벡터 및 래스터 레이어를 인식합니다. 추가적으로 사용자 정의 레이어도 이용할 수 "
-"있지만, 이 문서에서는 사용자 정의 레이어를 다루지 않습니다."
+"데이터를 담고 있는 레이어를 열어봅시다. QGIS는 벡터 및 래스터 레이어를 인식합니다. 추가적으로 사용자 정의 레이어 유형도 사용할 수"
+" 있지만, 이 문서에서는 다루지 않을 것입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:49
 msgid "Vector Layers"
 msgstr "벡터 레이어"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:51
+msgid ""
+"To create and add a vector layer instance to the project, specify the "
+"layer's data source identifier, name for the layer and provider's name:"
+msgstr ""
+"프로젝트에 벡터 레이어 인스턴스를 생성하고 추가하려면, 레이어의 데이터 소스 식별자, 레이어 이름, 그리고 제공자의 이름을 지정하십시오:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:68
 msgid ""
@@ -58,15 +69,362 @@ msgid ""
 "important to check whether the layer has been loaded successfully. If it was"
 " not, an invalid layer instance is returned."
 msgstr ""
-"data_source 식별자는 문자열로 각 벡터 데이터 제공자에 지정되어 있습니다. layer_name은 레이어 목록 위젯에서 "
-"사용합니다. 레이어를 성공적으로 불러왔는지 확인하는 일이 중요합니다. 성공적이 아니라면, 유효하지 않은 레이어 인스턴스가 반환됩니다."
+"data_source 식별자는 문자열로, 각 벡터 데이터 제공자에 특화되어 있습니다. layer_name은 레이어 목록 위젯에서 "
+"사용합니다. 레이어를 성공적으로 불러왔는지 확인하는 일이 중요합니다. 성공적이 아니라면, 무결하지 않은 레이어 인스턴스를 반환합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:73
+msgid "For a geopackage vector layer:"
+msgstr "GeoPackage 벡터 레이어의 경우:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:88
+msgid ""
+"The quickest way to open and display a vector layer in QGIS is the "
+":meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>` method of "
+"the :class:`QgisInterface <qgis.gui.QgisInterface>`:"
+msgstr ""
+"QGIS에서 벡터 레이어를 가장 빨리 열어서 보이게 하는 방법은 :class:`QgisInterface "
+"<qgis.gui.QgisInterface>` 클래스의 :meth:`addVectorLayer() "
+"<qgis.gui.QgisInterface.addVectorLayer>` 메소드를 사용하는 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:98
+msgid ""
+"This creates a new layer and adds it to the current QGIS project (making it "
+"appear in the layer list) in one step. The function returns the layer "
+"instance or ``None`` if the layer couldn't be loaded."
+msgstr ""
+"이렇게 하면 한번에 새 레이어를 생성해서 현재 QGIS 프로젝트에 추가합니다. (레이어 목록에 새 레이어를 나타나게 합니다.) 이 함수는"
+" 레이어 인스턴스를 반환하거나 레이어를 불러올 수 없는 경우 ``None`` 을 반환합니다."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:102
 msgid ""
 "The following list shows how to access various data sources using vector "
 "data providers:"
-msgstr "다음 목록은 벡터 데이터 제공자를 통해 여러 데이터 소스에 접근하는 방법을 보여줍니다."
+msgstr "다음 목록은 벡터 데이터 제공자들을 통해 여러 데이터 소스에 접근하는 방법을 보여줍니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:108
+msgid ""
+"GDAL library (Shapefile and many other file formats) --- data source is the "
+"path to the file:"
+msgstr "GDAL 라이브러리 (셰이프파일 및 다른 수많은 파일 포맷들) --- 데이터 소스는 파일을 가리키는 경로입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:111
+msgid "for Shapefile:"
+msgstr "셰이프파일의 경우:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:118
+msgid "for dxf (note the internal options in data source uri):"
+msgstr "DXF 파일의 경우 (데이터 소스 URI에 있는 내부 옵션들을 주목하십시오):"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:129
+msgid ""
+"PostGIS database - data source is a string with all information needed to "
+"create a connection to PostgreSQL database."
+msgstr ""
+"PostGIS 데이터베이스 --- 데이터 소스는 PostgreSQL 데이터베이스와의 연결을 생성하는 데 필요한 모든 정보를 가진 "
+"문자열입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:132
+msgid ""
+":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` class can generate "
+"this string for you. Note that QGIS has to be compiled with Postgres "
+"support, otherwise this provider isn't available:"
+msgstr ""
+":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` 클래스가 이 문자열을 생성할 수 "
+"있습니다. QGIS가 PostgreSQL를 지원하도록 QGIS를 컴파일해야 한다는 점을 기억하십시오. 그렇지 않으면 이 제공자를 사용할 "
+"수 없습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:147
+msgid ""
+"The ``False`` argument passed to ``uri.uri(False)`` prevents the expansion "
+"of the authentication configuration parameters, if you are not using any "
+"authentication configuration this argument does not make any difference."
+msgstr ""
+"``uri.uri(False)`` 에 전달된 ``False`` 인자가 인증 환경설정 파라미터들이 확장되지 못하게 막습니다. 사용자가 어떤"
+" 인증 환경설정도 사용하지 않는 경우, 이 인자는 어떤 영향도 미치지 않습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:154
+msgid ""
+"CSV or other delimited text files --- to open a file with a semicolon as a "
+"delimiter, with field \"x\" for X coordinate and field \"y\" for Y "
+"coordinate you would use something like this:"
+msgstr ""
+"CSV 파일 또는 기타 구분된 텍스트 파일들 --- 쌍반점(``;``)을 구분자로 사용하고 \"x\" 필드에 X 좌표를 그리고 \"y\""
+" 필드에 Y 좌표를 가진 파일을 열려면 다음과 같은 코드를 사용해야 할 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:164
+msgid ""
+"The provider string is structured as a URL, so the path must be prefixed "
+"with ``file://``. Also it allows WKT (well known text) formatted geometries "
+"as an alternative to ``x`` and ``y`` fields, and allows the coordinate "
+"reference system to be specified. For example:"
+msgstr ""
+"제공자 문자열은 URL로써 구성되어 있기 때문에, 경로 앞에 반드시 ``file://`` 을 붙여야만 합니다. 또 ``x`` 및 "
+"``y`` 필드의 대체물로써 WKT(Well Known Text) 서식 도형을 사용할 수 있으며, 좌표계도 지정할 수 있습니다. 다음은 "
+"그 예시입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:176
+msgid ""
+"GPX files --- the \"gpx\" data provider reads tracks, routes and waypoints "
+"from gpx files. To open a file, the type (track/route/waypoint) needs to be "
+"specified as part of the url:"
+msgstr ""
+"GPX 파일 --- \"gpx\" 데이터 제공자는 GPX 파일에서 트랙, 루트, 웨이포인트를 읽어옵니다. GPX 파일을 열려면, 데이터 "
+"유형(트랙/루트/웨이포인트)을 URL의 일부분으로 지정해줘야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:189
+msgid ""
+"SpatiaLite database --- Similarly to PostGIS databases, "
+":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` can be used for "
+"generation of data source identifier:"
+msgstr ""
+"SpatiaLite 데이터베이스 --- PostGIS 데이터베이스와 유사하게, :class:`QgsDataSourceUri "
+"<qgis.core.QgsDataSourceUri>` 클래스를 사용해서 데이터 소스 식별자를 생성할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:209
+msgid ""
+"MySQL WKB-based geometries, through GDAL --- data source is the connection "
+"string to the table:"
+msgstr "GDAL을 통한 MySQL WKB 기반 도형 --- 데이터 소스는 테이블과의 연결 문자열입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:221
+msgid ""
+"WFS connection: the connection is defined with a URI and using the ``WFS`` "
+"provider:"
+msgstr "WFS 연결 --- URI와 ``WFS`` 제공자를 사용해서 연결을 정의합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:229
+msgid "The uri can be created using the standard ``urllib`` library:"
+msgstr "표준 ``urllib`` 라이브러리를 사용해서 URI를 생성할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:244
+msgid ""
+"You can change the data source of an existing layer by calling "
+":meth:`setDataSource() <qgis.core.QgsMapLayer.setDataSource>` on a "
+":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` instance, as in the "
+"following example:"
+msgstr ""
+"다음 예시처럼 :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` 클래스 인스턴스에 대해 "
+":meth:`setDataSource() <qgis.core.QgsMapLayer.setDataSource>` 메소드를 호출하면 기존 "
+"레이어의 데이터 소스를 변경할 수 있습니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:265
 msgid "Raster Layers"
 msgstr "래스터 레이어"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:267
+msgid ""
+"For accessing raster files, GDAL library is used. It supports a wide range "
+"of file formats. In case you have troubles with opening some files, check "
+"whether your GDAL has support for the particular format (not all formats are"
+" available by default). To load a raster from a file, specify its filename "
+"and display name:"
+msgstr ""
+"래스터 파일에 접근하기 위해 GDAL 라이브러리를 사용합니다. GDAL 라이브러리는 광범위한 파일 포맷들을 지원합니다. 어떤 파일을 여는"
+" 데 문제가 있는 경우, 사용자의 GDAL 라이브러리가 그 특정 포맷을 지원하고 있는지 확인하십시오. (기본적으로 모든 포맷을 지원하지는"
+" 않습니다.) 파일로부터 래스터를 불러오려면, 래스터의 파일 이름과 표시 이름을 지정하십시오:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:280
+msgid "To load a raster from a geopackage:"
+msgstr "GeoPackage에서 래스터를 불러오려면:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:294
+msgid ""
+"Similarly to vector layers, raster layers can be loaded using the "
+"addRasterLayer function of the :class:`QgisInterface "
+"<qgis.gui.QgisInterface>` object:"
+msgstr ""
+"벡터 레이어와 비슷하게, :class:`QgisInterface <qgis.gui.QgisInterface>` 클래스 객체의 "
+"addRasterLayer 함수를 사용해서 래스터 레이어를 불러올 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:301
+msgid ""
+"This creates a new layer and adds it to the current project (making it "
+"appear in the layer list) in one step."
+msgstr "이렇게 하면 한번에 새 레이어를 생성해서 현재 프로젝트에 추가합니다. (레이어 목록에 새 레이어를 나타나게 합니다.)"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:305
+msgid "To load a PostGIS raster:"
+msgstr "PostGIS 래스터를 불러오려면:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:307
+msgid ""
+"PostGIS rasters, similar to PostGIS vectors, can be added to a project using"
+" a URI string. It is efficient to keep a reusable dictionary of strings for "
+"the database connection parameters. This makes it easy to edit the "
+"dictionary for the applicable connection. The dictionary is then encoded "
+"into a URI using the 'postgresraster' provider metadata object. After that "
+"the raster can be added to the project."
+msgstr ""
+"PostGIS 벡터와 비슷하게, URI 문자열을 사용해서 프로젝트에 PostGIS 래스터를 추가할 수 있습니다. 데이터베이스 연결 "
+"파라미터에 대해 재사용 가능한 문자열 목록(dictionary)을 유지하는 편이 효율적입니다. 이렇게 하면 적용 가능한 연결에 대한 "
+"목록을 쉽게 편집할 수 있습니다. 그 다음 'postgresraster' 제공자 메타데이터 객체를 사용해서 목록을 URI로 인코딩합니다."
+" 그러면 프로젝트에 래스터를 추가할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:353
+msgid "Raster layers can also be created from a WCS service:"
+msgstr "WCS 서비스로부터도 래스터 레이어를 생성할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:361
+msgid "Here is a description of the parameters that the WCS URI can contain:"
+msgstr "다음에서는 WCS URI가 담을 수 있는 파라미터들을 설명합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:363
+msgid ""
+"WCS URI is composed of **key=value** pairs separated by ``&``. It is the "
+"same format like query string in URL, encoded the same way. "
+":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` should be used to "
+"construct the URI to ensure that special characters are encoded properly."
+msgstr ""
+"WCS URI는 ``&`` 문자로 구분된 **키=값** 쌍으로 이루어집니다. 이는 URL에 있는 동일한 방식으로 인코딩된 쿼리 문자열과 "
+"동일한 서식입니다. 특수 문자들이 제대로 인코딩되도록 보장하려면 :class:`QgsDataSourceUri "
+"<qgis.core.QgsDataSourceUri>` 클래스를 사용해서 URI를 작성해야 할 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:369
+msgid ""
+"**url** (required) : WCS Server URL. Do not use VERSION in URL, because each"
+" version of WCS is using different parameter name for **GetCapabilities** "
+"version, see param version."
+msgstr ""
+"**url** (필수): WCS 서버 URL입니다. WCS 각 버전이 **GetCapabilities** 버전에 대해 서로 다른 파라미터"
+" 이름을 사용하고 있기 때문에, URL에 VERSION을 사용하면 안 됩니다. 파라미터 버전을 참조하세요."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:372
+msgid "**identifier** (required) : Coverage name"
+msgstr "**identifier** (필수): 커버리지 이름"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:373
+msgid ""
+"**time** (optional) : time position or time period "
+"(beginPosition/endPosition[/timeResolution])"
+msgstr ""
+"**time** (선택적): 시점(time position) 또는 기간(time period) "
+"(beginPosition/endPosition[/timeResolution])"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:375
+msgid ""
+"**format** (optional) : Supported format name. Default is the first "
+"supported format with tif in name or the first supported format."
+msgstr ""
+"**format** (선택적): 지원하는 포맷 이름입니다. 기본값은 이름에 ``tif`` 가 있는 경우 첫 번째로 지원하는 포맷 또는 "
+"그렇지 않은 경우 첫 번째로 지원하는 포맷입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:377
+msgid ""
+"**crs** (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is "
+"EPSG:4326 if supported or the first supported CRS."
+msgstr ""
+"**crs** (선택적) : 기관:ID 형식의, 예를 들면 EPSG:4326 같은 좌표계입니다. 기본값은 지원하는 경우 "
+"EPSG:4326, 지원하지 않는 경우 첫 번째로 지원하는 좌표계입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:379
+msgid "**username** (optional) : Username for basic authentication."
+msgstr "**username** (선택적): 기본 인증을 위한 사용자 이름입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:380
+msgid "**password** (optional) : Password for basic authentication."
+msgstr "**password** (선택적): 기본 인증을 위한 비밀번호입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:381
+msgid ""
+"**IgnoreGetMapUrl** (optional, hack) : If specified (set to 1), ignore "
+"GetCoverage URL advertised by GetCapabilities. May be necessary if a server "
+"is not configured properly."
+msgstr ""
+"**IgnoreGetMapUrl** (선택적, 꼼수): 지정한 (1로 설정한) 경우, GetCapabilities가 노출하는 "
+"GetCoverage URL을 무시합니다. 서버를 제대로 환경설정하지 않은 경우 필요할 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:384
+msgid ""
+"**InvertAxisOrientation** (optional, hack) : If specified (set to 1), switch"
+" axis in GetCoverage request. May be necessary for geographic CRS if a "
+"server is using wrong axis order."
+msgstr ""
+"**InvertAxisOrientation** (선택적, 꼼수): 지정한 (1로 설정한) 경우, GetCoverage 요청에 있는 축의 "
+"순서를 바꿉니다. 서버가 사용하는 축 순서가 틀린 경우 지리 좌표계에 대해 필요할 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:387
+msgid ""
+"**IgnoreAxisOrientation** (optional, hack) : If specified (set to 1), do not"
+" invert axis orientation according to WCS standard for geographic CRS."
+msgstr ""
+"**IgnoreAxisOrientation** (선택적, 꼼수): 지정한 (1로 설정한) 경우, 지리 좌표계에 대해 WCS 표준을 "
+"준수하는 축 순서로 바꾸지 않습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:389
+msgid ""
+"**cache** (optional) : cache load control, as described in "
+"QNetworkRequest::CacheLoadControl, but request is resend as PreferCache if "
+"failed with AlwaysCache. Allowed values: AlwaysCache, PreferCache, "
+"PreferNetwork, AlwaysNetwork. Default is AlwaysCache."
+msgstr ""
+"**cache** (선택적): QNetworkRequest::CacheLoadControl에서 설명하는 대로 캐시 불러오기를 제어하지만,"
+" AlwaysCache로 실패한 경우 요청을 PreferCache로 다시 보냅니다. 다음 값들 가운데 하나로 설정할 수 있습니다: "
+"AlwaysCache, PreferCache, PreferNetwork, AlwaysNetwork. 기본값은 AlwaysCache입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:397
+msgid ""
+"Alternatively you can load a raster layer from WMS server. However currently"
+" it's not possible to access GetCapabilities response from API --- you have "
+"to know what layers you want:"
+msgstr ""
+"아니면 WMS 서버에서 래스터 레이어를 불러올 수도 있습니다. 하지만 현재 API에서 GetCapabilities 응답에 접근할 수가 "
+"없습니다 --- 사용자가 원하는 레이어가 어떤 레이어인지 알고 있어야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:411
+msgid "QgsProject instance"
+msgstr "QgsProject 인스턴스"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:413
+msgid ""
+"If you would like to use the opened layers for rendering, do not forget to "
+"add them to the :class:`QgsProject <qgis.core.QgsProject>` instance. The "
+":class:`QgsProject <qgis.core.QgsProject>` instance takes ownership of "
+"layers and they can be later accessed from any part of the application by "
+"their unique ID. When the layer is removed from the project, it gets "
+"deleted, too. Layers can be removed by the user in the QGIS interface, or "
+"via Python using the :meth:`removeMapLayer() "
+"<qgis.core.QgsProject.removeMapLayer>` method."
+msgstr ""
+"렌더링 작업에 열려져 있는 레이어를 사용하고 싶다면, :class:`QgsProject <qgis.core.QgsProject>` 클래스"
+" 인스턴스에 해당 레이어를 추가해야 한다는 사실을 기억하십시오. :class:`QgsProject "
+"<qgis.core.QgsProject>` 클래스 인스턴스는 레이어의 소유권을 가지며, 이후 응용 프로그램의 어느 부분에서든 레이어의 "
+"유일 ID를 통해 해당 레이어에 접근할 수 있습니다. 프로젝트에서 레이어를 제거하는 경우, 유일 ID도 삭제됩니다. 사용자는 QGIS "
+"인터페이스에서 또는 :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` "
+"메소드를 사용하는 파이썬 코드를 통해 레이어를 제거할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:423
+msgid ""
+"Adding a layer to the current project is done using the :meth:`addMapLayer()"
+" <qgis.core.QgsProject.addMapLayer>` method:"
+msgstr ""
+":meth:`addMapLayer() <qgis.core.QgsProject.addMapLayer>` 메소드를 사용하면 현재 프로젝트에 "
+"레이어를 추가할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:430
+msgid "To add a layer at an absolute position:"
+msgstr "절대 위치에 레이어를 추가하려면:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:441
+msgid ""
+"If you want to delete the layer use the :meth:`removeMapLayer() "
+"<qgis.core.QgsProject.removeMapLayer>` method:"
+msgstr ""
+":meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` 메소드를 사용해서 "
+"레이어를 삭제하고 싶다면:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:448
+msgid ""
+"In the above code, the layer id is passed (you can get it calling the "
+":meth:`id() <qgis.core.QgsMapLayer.id>` method of the layer), but you can "
+"also pass the layer object itself."
+msgstr ""
+"앞의 코드에서는 (레이어의 :meth:`id() <qgis.core.QgsMapLayer.id>` 메소드를 호출해서 얻을 수 있는) "
+"레이어 ID를 전달했지만, 레이어 객체 자체도 전달할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:451
+msgid ""
+"For a list of loaded layers and layer ids, use the :meth:`mapLayers() "
+"<qgis.core.QgsProject.mapLayers>` method:"
+msgstr ""
+"불러온 레이어와 레이어 ID의 목록을 원한다면, :meth:`mapLayers() "
+"<qgis.core.QgsProject.mapLayers>` 메소드를 사용하십시오:"
