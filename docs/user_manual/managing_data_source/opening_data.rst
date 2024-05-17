@@ -225,10 +225,10 @@ the layers have been added to the project):
 
 Use :guilabel:`Open with Data Source Manager...` to directly open and configure the
 data source in the :guilabel:`Data Source Manager` using the URI of your data source.
-This will simplify the process of adding a layer from the :guilabel:`Browser`
+This simplifies the process of adding a layer from the :guilabel:`Browser`
 by allowing you to set specific opening options for the data source.
-It is currently available for OGR (including the dedicated GPKG source select), GDAL,
-and Spatialite data sources.
+It is currently available for vector (including the dedicated GeoPackage entry), raster,
+and SpatiaLite data sources.
 
 To add a layer to the project using the :guilabel:`Browser`:
 
