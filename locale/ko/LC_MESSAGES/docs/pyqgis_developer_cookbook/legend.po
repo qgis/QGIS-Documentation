@@ -32,10 +32,226 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:24
+msgid "Accessing the Table Of Contents (TOC)"
+msgstr "TOC(Table Of Contents)에 접근하기"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:26
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
 msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:41
+msgid ""
+"You can use different classes to access all the loaded layers in the TOC and"
+" use them to retrieve information:"
+msgstr ""
+"서로 다른 클래스들을 사용해서 차례(Table Of Contents)에 불러온 모든 레이어에 접근할 수 있으며, 다음 클래스들을 통해 "
+"정보를 검색할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:44
+msgid ":class:`QgsProject <qgis.core.QgsProject>`"
+msgstr ":class:`QgsProject <qgis.core.QgsProject>`"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:45
+msgid ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`"
+msgstr ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:48
+msgid "The QgsProject class"
+msgstr "QgsProject 클래스"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:50
+msgid ""
+"You can use :class:`QgsProject <qgis.core.QgsProject>` to retrieve "
+"information about the TOC and all the layers loaded."
+msgstr ""
+":class:`QgsProject <qgis.core.QgsProject>` 클래스를 사용하면 차례 및 불러온 모든 레이어에 대한 정보를"
+" 검색할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:53
+msgid ""
+"You have to create an ``instance`` of :class:`QgsProject "
+"<qgis.core.QgsProject>` and use its methods to get the loaded layers."
+msgstr ""
+"불러온 레이어들을 가져오려면 :class:`QgsProject <qgis.core.QgsProject>` 클래스의 ``instance``"
+" 를 생성하고 이 클래스의 메소드를 사용해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:56
+msgid ""
+"The main method is :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>`. It "
+"will return a dictionary of the loaded layers:"
+msgstr ""
+"주 메소드는 :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>` 입니다. 이 메소드가 불러온 "
+"레이어들의 목록(dictionary)을 반환할 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:69
+msgid ""
+"The dictionary ``keys`` are the unique layer ids while the ``values`` are "
+"the related objects."
+msgstr "이 목록의 ``keys`` 는 유일한 레이어 ID이고 ``values`` 는 관련 객체입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:72
+msgid ""
+"It is now straightforward to obtain any other information about the layers:"
+msgstr "이제 레이어에 대한 다른 모든 정보를 간단하게 얻을 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:90
+msgid "You can also query the TOC using the name of the layer:"
+msgstr "레이어의 이름을 사용해서 차례도 쿼리할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:96
+msgid ""
+"A list with all the matching layers is returned, so we index with ``[0]`` to"
+" get the first layer with this name."
+msgstr ""
+"이름이 일치하는 모든 레이어들의 목록을 반환하기 때문에, 이 이름을 가진 첫 번째 레이어를 가져오기 위해 ``[0]`` 인덱스를 "
+"사용합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:101
+msgid "QgsLayerTreeGroup class"
+msgstr "QgsLayerTreeGroup 클래스"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:103
+msgid ""
+"The layer tree is a classical tree structure built of nodes. There are "
+"currently two types of nodes: group nodes (:class:`QgsLayerTreeGroup "
+"<qgis.core.QgsLayerTreeGroup>`) and layer nodes (:class:`QgsLayerTreeLayer "
+"<qgis.core.QgsLayerTreeLayer>`)."
+msgstr ""
+"레이어 트리는 노드(node)들로 구성된 전통적인 트리 구조입니다. 현재 두 가지 노드 유형이 존재합니다: 그룹 "
+"노드(:class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`)와 레이어 "
+"노드(:class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>`)입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:107
+msgid ""
+"for more information you can read these blog posts of Martin Dobias: `Part 1"
+" <https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-"
+"part-1/>`_ `Part 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-"
+"layer-tree-api-part-2/>`_ `Part 3 "
+"<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
+"part-3/>`_"
+msgstr ""
+"더 자세한 정보를 알고 싶다면 마르틴 도비아시(Martin Dobiáš)의 블로그 포스트를 읽어보세요: `1편 "
+"<https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-"
+"part-1/>`_ , `2편 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-"
+"layer-tree-api-part-2/>`_ , `3편 "
+"<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
+"part-3/>`_"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:112
+msgid ""
+"The project layer tree can be accessed easily with the method "
+":meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>` of the "
+":class:`QgsProject <qgis.core.QgsProject>` class:"
+msgstr ""
+":class:`QgsProject <qgis.core.QgsProject>` 클래스의 :meth:`layerTreeRoot() "
+"<qgis.core.QgsProject.layerTreeRoot>` 메소드를 사용하면 프로젝트 레이어 트리에 쉽게 접근할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:119
+msgid "``root`` is a group node and has *children*:"
+msgstr "``root`` 는 그룹 노드이며 *하위(children)* 노드를 가지고 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:125
+msgid ""
+"A list of direct children is returned. Sub group children should be accessed"
+" from their own direct parent."
+msgstr "직계 하위 노드 목록을 반환합니다. 하위 그룹 노드는 그 직계 상위 노드로부터 접근해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:128
+msgid "We can retrieve one of the children:"
+msgstr "하위 노드 가운데 하나를 검색할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:139
+msgid "Layers can also be retrieved using their (unique) ``id``:"
+msgstr "레이어의 (유일) ``id`` 를 사용해서도 레이어를 검색할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:147
+msgid "And groups can also be searched using their names:"
+msgstr "그리고 그룹의 이름을 사용해서도 그룹을 검색할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:154
+msgid ""
+":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` has many other "
+"useful methods that can be used to obtain more information about the TOC:"
+msgstr ""
+":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` 클래스는 차례에 대한 더 많은 "
+"정보를 가져오는 데 사용할 수 있는 유용한 다른 메소드들을 다수 가지고 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:167
+msgid ""
+"Now let’s add some layers to the project’s layer tree. There are two ways of"
+" doing that:"
+msgstr "이제 프로젝트의 레이어 트리에 레이어를 몇 개 추가해봅시다. 두 가지 방법이 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:170
+msgid ""
+"**Explicit addition** using the :meth:`addLayer() "
+"<qgis.core.QgsLayerTreeGroup.addLayer>` or :meth:`insertLayer() "
+"<qgis.core.QgsLayerTreeGroup.insertLayer>` functions:"
+msgstr ""
+"**명시적 추가** --- :meth:`addLayer() <qgis.core.QgsLayerTreeGroup.addLayer>` 또는 "
+":meth:`insertLayer() <qgis.core.QgsLayerTreeGroup.insertLayer>` 함수를 사용합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:183
+msgid ""
+"**Implicit addition**: since the project's layer tree is connected to the "
+"layer registry it is enough to add a layer to the map layer registry:"
+msgstr ""
+"**암시적 추가** --- 프로젝트의 레이어 트리가 레이어 레지스트리와 연결돼 있기 때문에 맵 레이어 레지스트리에 레이어를 추가해주는 "
+"것으로 충분합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:191
+msgid ""
+"You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` "
+"and :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` easily:"
+msgstr ""
+":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` 와 "
+":class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` 클래스를 쉽게 전환할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:207
+msgid ""
+"Groups can be added with the :meth:`addGroup() "
+"<qgis.core.QgsLayerTreeGroup.addGroup>` method. In the example below, the "
+"former will add a group to the end of the TOC while for the latter you can "
+"add another group within an existing one:"
+msgstr ""
+":meth:`addGroup() <qgis.core.QgsLayerTreeGroup.addGroup>` 메소드를 사용하면 그룹을 쉽게 "
+"추가할 수 있습니다. 다음 예시에서, 전자는 차례의 마지막에 그룹을 추가할 것이지만 후자의 경우 기존 그룹 안에 또다른 그룹을 추가할 수"
+" 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:218
+msgid "To moving nodes and groups there are many useful methods."
+msgstr "노드 및 그룹을 이동시키고 싶다면, 유용한 메소드들이 많이 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:220
+msgid "Moving an existing node is done in three steps:"
+msgstr "기존 노드의 이동은 세 단계로 이루어집니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:222
+msgid "cloning the existing node"
+msgstr "기존 노드 복제"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:223
+msgid "moving the cloned node to the desired position"
+msgstr "복제한 노드를 원하는 위치로 이동"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:224
+msgid "deleting the original node"
+msgstr "원본 노드 삭제"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:235
+msgid ""
+"It is a little bit more *complicated* to move a layer around in the legend:"
+msgstr "범례에서 레이어를 이동시키는 작업은 좀 더 *복잡합니다*:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:252
+msgid "or moving it to an existing group:"
+msgstr "또는 기존 그룹으로 이동시키는 작업도 그렇죠:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:272
+msgid "Some other methods that can be used to modify the groups and layers:"
+msgstr "몇몇 다른 메소드들을 사용해서 그룹과 레이어를 수정할 수 있습니다:"
