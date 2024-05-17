@@ -220,10 +220,12 @@ the movement with :kbd:`Ctrl` key pressed to have a smaller zoom.
 
 Elevation range
 ---------------
-The :guilabel:`Elevation range` allows you to control the rendering of layers in the map
-item properties based on a specific elevation. Only layers, such as point clouds and raster DEMs,
-whose elevation properties overlap with the elevation range set by the
-:guilabel:`Lower` and :guilabel:`Upper` values are displayed in the map item.
+The :guilabel:`Elevation range` setting in the map item properties allows you to filter
+the content of certain layers based on a specific elevation range.
+While all layers remain visible, those that support elevation filtering
+(currently point clouds and raster DEMs) will have their data filtered.
+Only the parts of these layers that fall within the elevation range
+set by the :guilabel:`Lower` and :guilabel:`Upper` values will be displayed.
 
 The :guilabel:`Elevation range` can be data-defined. This means you can set different
 elevation ranges for different features in the :ref:`atlas <atlas_generation>` or :ref:`report <create-reports>`.
