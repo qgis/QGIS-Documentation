@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -72,7 +72,7 @@ msgstr ""
 msgid "clicking the |expression| button;"
 msgstr "|expression| ボタンをクリックしたとき"
 
-#: ../../docs/user_manual/expressions/expression.rst:442
+#: ../../docs/user_manual/expressions/expression.rst:450
 msgid "expression"
 msgstr "expression"
 
@@ -83,7 +83,7 @@ msgid ""
 msgstr ""
 "|expressionSelect| :sup:`式による地物選択...` ツールで :ref:`地物を選択 <sec_selection>` するとき"
 
-#: ../../docs/user_manual/expressions/expression.rst:444
+#: ../../docs/user_manual/expressions/expression.rst:452
 msgid "expressionSelect"
 msgstr "expressionSelect"
 
@@ -95,7 +95,7 @@ msgstr ""
 "例えば |calculateField| :sup:`フィールド計算機` ツールで :ref:`属性を編集する "
 "<calculate_fields_values>` とき"
 
-#: ../../docs/user_manual/expressions/expression.rst:432
+#: ../../docs/user_manual/expressions/expression.rst:440
 msgid "calculateField"
 msgstr "calculateField"
 
@@ -107,7 +107,7 @@ msgstr ""
 "|dataDefine| :sup:`データによって定義された上書き` "
 "ツールを使用して、シンボロジやラベル、レイアウトアイテムのパラメータを操作するとき（ :ref:`data_defined` 参照）"
 
-#: ../../docs/user_manual/expressions/expression.rst:436
+#: ../../docs/user_manual/expressions/expression.rst:444
 msgid "dataDefine"
 msgstr "dataDefine"
 
@@ -124,6 +124,14 @@ msgstr "何らかの :ref:`ジオプロセシング <label_processing>` を行�
 #: ../../docs/user_manual/expressions/expression.rst:42
 msgid "The Expression builder dialog offers access to the:"
 msgstr "式ビルダーダイアログからは、以下のタブにアクセス可能です。"
+
+#: ../../docs/user_manual/expressions/expression.rst:44
+msgid ""
+":guilabel:`Expression` tab which, thanks to a list of :ref:`predefined "
+"functions <functions_list>`, helps to write and check the expression to use;"
+msgstr ""
+":guilabel:`式` タブは、:ref:`predefined functions <functions_list>` "
+"のリストを利用して、使用する式の作成や確認ができます。"
 
 #: ../../docs/user_manual/expressions/expression.rst:46
 msgid ""
@@ -202,7 +210,7 @@ msgstr "式エディタの上部には、以下のようなツールセットが
 msgid "|fileNew|:sup:`Clear the expression editor`"
 msgstr "|fileNew|:sup:`式エディタをクリア`"
 
-#: ../../docs/user_manual/expressions/expression.rst:446
+#: ../../docs/user_manual/expressions/expression.rst:454
 msgid "fileNew"
 msgstr "fileNew"
 
@@ -237,7 +245,7 @@ msgstr ""
 "。60文字を超える出力プレビューテキストを表示するには、テキストにカーソルを合わせ、出力プレビュー全体を含むツールチップのポップアップを表示します。出力プレビューテキストをクリップボードにコピーするには、出力プレビューテキストを右クリックして、|editCopy|"
 " :guilabel:`式の値をコピー` を選択します。"
 
-#: ../../docs/user_manual/expressions/expression.rst:440
+#: ../../docs/user_manual/expressions/expression.rst:448
 msgid "editCopy"
 msgstr "editCopy"
 
@@ -308,7 +316,7 @@ msgstr ""
 "タイプの場合には、（参照されたレイヤ、テーブル、リストから）マッピングされたフィールドの値をすべてリストすることができます。さらに、このリストをフィルタリングして、現在のフィールドで"
 " |checkbox| :guilabel:`使用中の値のみ表示` することもできます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:434
+#: ../../docs/user_manual/expressions/expression.rst:442
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -461,28 +469,36 @@ msgid ""
 msgstr "この式は、どの地物をラベル付けするか、あるいはどの地物を地図に表示するかを定義するためにも使用できます。"
 
 #: ../../docs/user_manual/expressions/expression.rst:253
+msgid "Select features that overlap a natural zone from the \"lands\" layer::"
+msgstr "\"lands\"レイヤから自然地帯と重なる地物を選択::"
+
+#: ../../docs/user_manual/expressions/expression.rst:257
+msgid "Count for each feature the number of buildings they contain::"
+msgstr "各地物ごとにそれが含んでいる建物の数を数える::"
+
+#: ../../docs/user_manual/expressions/expression.rst:261
 msgid ""
 "Create a different symbol (type) for the layer, using the geometry "
 "generator::"
 msgstr "ジオメトリジェネレータを使用した、レイヤの様々なシンボル（タイプ）の作成::"
 
-#: ../../docs/user_manual/expressions/expression.rst:257
+#: ../../docs/user_manual/expressions/expression.rst:265
 msgid ""
 "Given a point feature, generate a closed line (using ``make_line``) around "
 "its geometry::"
 msgstr "ポイント地物に対して、ジオメトリの周囲に閉じた輪を生成（ ``make_line`` 関数を利用）::"
 
-#: ../../docs/user_manual/expressions/expression.rst:270
+#: ../../docs/user_manual/expressions/expression.rst:278
 msgid ""
 "In a print layout label, display the name of the \"airports\" features that "
 "are within the layout \"Map 1\" item::"
 msgstr "印刷レイアウトのラベルにおいて、レイアウトの \"Map 1\" アイテム内にある \"airports\" 地物の名前を表示::"
 
-#: ../../docs/user_manual/expressions/expression.rst:285
+#: ../../docs/user_manual/expressions/expression.rst:293
 msgid "Saving Expressions"
 msgstr "式の保存"
 
-#: ../../docs/user_manual/expressions/expression.rst:287
+#: ../../docs/user_manual/expressions/expression.rst:295
 msgid ""
 "Using the |fileSave| :sup:`Add current expression to user expressions` "
 "button above the expression editor frame, you can save important expressions"
@@ -498,17 +514,17 @@ msgstr ""
 ":file:`<userprofile>/QGIS/QGIS3.ini` "
 "ファイル）内に保存され、あらゆるプロジェクトで現在のユーザープロファイルを使用すれば、すべての式ダイアログで利用可能です。"
 
-#: ../../docs/user_manual/expressions/expression.rst:448
+#: ../../docs/user_manual/expressions/expression.rst:456
 msgid "fileSave"
 msgstr "fileSave"
 
-#: ../../docs/user_manual/expressions/expression.rst:294
+#: ../../docs/user_manual/expressions/expression.rst:302
 msgid ""
 "A set of tools available above the expression editor frame helps you manage "
 "the user expressions:"
 msgstr "式エディタフレームの上部にあるツール群を使用して、ユーザー式の管理ができます："
 
-#: ../../docs/user_manual/expressions/expression.rst:297
+#: ../../docs/user_manual/expressions/expression.rst:305
 msgid ""
 "|fileSave|:sup:`Add the current expression to user expressions`: store the "
 "expression in the user profile. A label and a help text can be added for "
@@ -517,26 +533,26 @@ msgstr ""
 "|fileSave|:sup:`現在の式をユーザー保存式に追加` "
 "：式をユーザープロファイル内に保存します。ラベルとヘルプ文を追加して、識別しやすくできます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:300
+#: ../../docs/user_manual/expressions/expression.rst:308
 msgid ""
 "|symbologyEdit| :sup:`Edit selected expression from user expressions`, as "
 "well as their help and label"
 msgstr "|symbologyEdit| :sup:`ユーザー保存式から選択した式を編集` は、式やヘルプ文、ラベルを編集できます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:458
+#: ../../docs/user_manual/expressions/expression.rst:466
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
 
-#: ../../docs/user_manual/expressions/expression.rst:302
+#: ../../docs/user_manual/expressions/expression.rst:310
 msgid ""
 "|deleteSelected| :sup:`Remove selected expression from user expressions`"
 msgstr "|deleteSelected| :sup:`選択した式をユーザー保存式から削除`"
 
-#: ../../docs/user_manual/expressions/expression.rst:438
+#: ../../docs/user_manual/expressions/expression.rst:446
 msgid "deleteSelected"
 msgstr "deleteSelected"
 
-#: ../../docs/user_manual/expressions/expression.rst:303
+#: ../../docs/user_manual/expressions/expression.rst:311
 msgid ""
 "|sharingImport| :sup:`Import user expressions` from a ``.json`` file into "
 "the active user profile folder"
@@ -544,11 +560,11 @@ msgstr ""
 "|sharingImport| :sup:`ユーザー式をインポート` は、 ``.json`` "
 "ファイルからユーザー式をアクティブなユーザープロファイルのフォルダ内にインポートします。"
 
-#: ../../docs/user_manual/expressions/expression.rst:452
+#: ../../docs/user_manual/expressions/expression.rst:460
 msgid "sharingImport"
 msgstr "sharingImport"
 
-#: ../../docs/user_manual/expressions/expression.rst:305
+#: ../../docs/user_manual/expressions/expression.rst:313
 msgid ""
 "|sharingExport| :sup:`Export user expressions` as a ``.json`` file; all the "
 "user expressions in the user profile :file:`QGIS3.ini` file are shared"
@@ -556,15 +572,15 @@ msgstr ""
 "|sharingExport| :sup:`ユーザー式をエクスポート` は、ユーザー式を ``.json`` "
 "ファイルとしてエクスポートします。ユーザープロファイル :file:`QGIS3.ini` ファイル内のユーザー式をすべて共有することができます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:450
+#: ../../docs/user_manual/expressions/expression.rst:458
 msgid "sharingExport"
 msgstr "sharingExport"
 
-#: ../../docs/user_manual/expressions/expression.rst:314
+#: ../../docs/user_manual/expressions/expression.rst:322
 msgid "Function Editor"
 msgstr "関数エディタ"
 
-#: ../../docs/user_manual/expressions/expression.rst:316
+#: ../../docs/user_manual/expressions/expression.rst:324
 msgid ""
 "With the :guilabel:`Function Editor` tab, you are able to write your own "
 "functions in Python language. This provides a handy and comfortable way to "
@@ -574,27 +590,27 @@ msgstr ""
 ":guilabel:`関数エディタ` "
 "タブでは、Python言語を使って独自の関数を書くことができます。これにより、定義済みの関数ではカバーできない特定のニーズに対処するための、手軽で簡単な手段を手に入れることができます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:325
+#: ../../docs/user_manual/expressions/expression.rst:333
 msgid "The Function Editor tab"
 msgstr "関数エディタタブ"
 
-#: ../../docs/user_manual/expressions/expression.rst:327
+#: ../../docs/user_manual/expressions/expression.rst:335
 msgid "To create a new function:"
 msgstr "新しい関数を作成するには次のようにします。"
 
-#: ../../docs/user_manual/expressions/expression.rst:329
+#: ../../docs/user_manual/expressions/expression.rst:337
 msgid "Press the |symbologyAdd| :sup:`New File` button."
 msgstr "|symbologyAdd| :sup:`新規ファイル` ボタンをクリックします。"
 
-#: ../../docs/user_manual/expressions/expression.rst:456
+#: ../../docs/user_manual/expressions/expression.rst:464
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/expressions/expression.rst:330
+#: ../../docs/user_manual/expressions/expression.rst:338
 msgid "Enter a name to use in the form that pops up and press :guilabel:`OK`."
 msgstr "フォームがポップアップするので、使用する名前を入力して :guilabel:`OK` をクリックします。"
 
-#: ../../docs/user_manual/expressions/expression.rst:332
+#: ../../docs/user_manual/expressions/expression.rst:340
 msgid ""
 "A new item of the name you provide is added in the left panel of the "
 ":guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on "
@@ -606,14 +622,14 @@ msgstr ""
 "ファイルです。このファイルは現在有効になっている :ref:`ユーザープロファイル <user_profiles>` のディレクトリ下の "
 ":file:`/python/expressions` フォルダに格納されます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:336
+#: ../../docs/user_manual/expressions/expression.rst:344
 msgid ""
 "The right panel displays the content of the file: a python script template. "
 "Update the code and its help according to your needs."
 msgstr ""
 "右側のパネルはファイルの内容を表示します。最初はテンプレートのPythonスクリプトが表示されているので、このコードやヘルプを必要に応じて書き換えてください。"
 
-#: ../../docs/user_manual/expressions/expression.rst:338
+#: ../../docs/user_manual/expressions/expression.rst:346
 msgid ""
 "Press the |start| :guilabel:`Save and Load Functions` button. The function "
 "you wrote is added to the functions tree in the :guilabel:`Expression` tab, "
@@ -622,15 +638,15 @@ msgstr ""
 "|start| :guilabel:`関数の保存と読み込み` ボタンをクリックします。あなたの書いた関数が :guilabel:`式` "
 "タブの関数ツリーの中に追加されます。デフォルトでは ``Custom`` グループの中に追加されます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:454
+#: ../../docs/user_manual/expressions/expression.rst:462
 msgid "start"
 msgstr "start"
 
-#: ../../docs/user_manual/expressions/expression.rst:341
+#: ../../docs/user_manual/expressions/expression.rst:349
 msgid "Enjoy your new function."
 msgstr "新しい関数を使いましょう。"
 
-#: ../../docs/user_manual/expressions/expression.rst:342
+#: ../../docs/user_manual/expressions/expression.rst:350
 msgid ""
 "If the function requires improvements, enable the :guilabel:`Function "
 "Editor` tab, do the changes and press again the |start| :guilabel:`Save and "
@@ -640,7 +656,7 @@ msgstr ""
 "関数に改善が必要なときは、 :guilabel:`関数エディタ` タブに戻って修正を加えた後、再度 |start| "
 ":guilabel:`関数の保存と読み込み` ボタンをクリックして、ファイル内、つまりは任意の式タブで利用できるようにします。"
 
-#: ../../docs/user_manual/expressions/expression.rst:347
+#: ../../docs/user_manual/expressions/expression.rst:355
 msgid ""
 "Custom Python functions are stored under the user profile directory, meaning"
 " that at each QGIS startup, it will auto load all the functions defined with"
@@ -654,19 +670,19 @@ msgstr ""
 "フォルダの中にのみ保存されて、プロジェクトファイルには保存されないことに注意してください。カスタム関数を使用したプロジェクトを共有するときは、 "
 ":file:`/python/expressions` フォルダの :file:`.py` ファイルも共有する必要があります。"
 
-#: ../../docs/user_manual/expressions/expression.rst:354
+#: ../../docs/user_manual/expressions/expression.rst:362
 msgid "To delete a custom function:"
 msgstr "カスタム関数を削除するには："
 
-#: ../../docs/user_manual/expressions/expression.rst:356
+#: ../../docs/user_manual/expressions/expression.rst:364
 msgid "Enable the :guilabel:`Function Editor` tab"
 msgstr ":guilabel:`関数エディタ` タブを有効にします。"
 
-#: ../../docs/user_manual/expressions/expression.rst:357
+#: ../../docs/user_manual/expressions/expression.rst:365
 msgid "Select the function in the list"
 msgstr "リストから削除したい関数を選択します。"
 
-#: ../../docs/user_manual/expressions/expression.rst:358
+#: ../../docs/user_manual/expressions/expression.rst:366
 msgid ""
 "Press the |symbologyRemove| :sup:`Remove selected function`. The function is"
 " removed from the list and the corresponding ``.py`` file deleted from the "
@@ -675,25 +691,25 @@ msgstr ""
 "|symbologyRemove| :sup:`選択した関数ファイルを削除` ボタンを押します。関数がリストから削除され、対応する ``.py`` "
 "ファイルがユーザープロファイルフォルダから削除されます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:460
+#: ../../docs/user_manual/expressions/expression.rst:468
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
-#: ../../docs/user_manual/expressions/expression.rst:362
+#: ../../docs/user_manual/expressions/expression.rst:370
 msgid "**Example**"
 msgstr "**例**"
 
-#: ../../docs/user_manual/expressions/expression.rst:364
+#: ../../docs/user_manual/expressions/expression.rst:372
 msgid ""
 "Here's a short example on how to create your own ``my_sum`` function that "
 "will operate with two values."
 msgstr "これは、2つの値を操作する独自の ``my_sum`` 関数を作成する簡単な例です。"
 
-#: ../../docs/user_manual/expressions/expression.rst:385
+#: ../../docs/user_manual/expressions/expression.rst:393
 msgid "The ``@qgsfunction`` decorator accepts the following arguments:"
 msgstr "``@qgsfunction`` デコレーターは次の引数を受け取ります:"
 
-#: ../../docs/user_manual/expressions/expression.rst:387
+#: ../../docs/user_manual/expressions/expression.rst:395
 msgid ""
 "``args``: the number of arguments. When using the ``args='auto'`` argument "
 "the number of function arguments required will be calculated by the number "
@@ -705,20 +721,20 @@ msgstr ""
 "を使用すると、必要な関数の引数の数は、Pythonで関数が定義されている引数の数（マイナス2 - ``feature`` と ``parent`` "
 "）から計算されます。``args = -1`` とすると、任意の数の引数を受け取ることができます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:391
+#: ../../docs/user_manual/expressions/expression.rst:399
 msgid ""
 "The ``group`` argument indicates the group in which the function should be "
 "listed in the Expression dialog."
 msgstr "引数 ``group`` は、式ダイアログで関数をリストするグループを示します。"
 
-#: ../../docs/user_manual/expressions/expression.rst:393
+#: ../../docs/user_manual/expressions/expression.rst:401
 msgid ""
 "``usesgeometry=True`` if the expression requires access to the features "
 "geometry. By default :const:`False`."
 msgstr ""
 "``usesgeometry=True`` ：式が地物のジオメトリにアクセスする必要があるかどうか。デフォルトは :const:`False` です。"
 
-#: ../../docs/user_manual/expressions/expression.rst:395
+#: ../../docs/user_manual/expressions/expression.rst:403
 msgid ""
 "``handlesnull=True`` if the expression has custom handling for NULL values. "
 "If :const:`False` (default), the result will always be NULL as soon as any "
@@ -727,7 +743,7 @@ msgstr ""
 "``handlesnull=True`` ：式がNULL値のカスタム処理を持つかどうか。 :const:`False` "
 "（デフォルト）の場合、任意のパラメータがNULLであるときには常に即座に結果がNULLとなります。"
 
-#: ../../docs/user_manual/expressions/expression.rst:398
+#: ../../docs/user_manual/expressions/expression.rst:406
 msgid ""
 "``referenced_columns=[list]``: An array of attribute names that are required"
 " to the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
@@ -735,26 +751,26 @@ msgstr ""
 "``referenced_columns=[list]`` ：この関数が必要とする属性名の配列。デフォルトは "
 "``[QgsFeatureRequest.ALL_ATTRIBUTES]`` です。"
 
-#: ../../docs/user_manual/expressions/expression.rst:401
+#: ../../docs/user_manual/expressions/expression.rst:409
 msgid "The function itself allows following arguments:"
 msgstr "この関数自体には次のような引数があります:"
 
-#: ../../docs/user_manual/expressions/expression.rst:403
+#: ../../docs/user_manual/expressions/expression.rst:411
 msgid ""
 "any number and type of parameters you want to pass to your function, set "
 "before the following arguments."
 msgstr "関数に渡したい任意の数と型のパラメータは、以下の引数よりも前に設定します。"
 
-#: ../../docs/user_manual/expressions/expression.rst:405
+#: ../../docs/user_manual/expressions/expression.rst:413
 msgid "``feature``: the current feature"
 msgstr "``feature``: 現在の地物"
 
-#: ../../docs/user_manual/expressions/expression.rst:406
+#: ../../docs/user_manual/expressions/expression.rst:414
 msgid ""
 "``parent``: the :class:`QgsExpression <qgis.core.QgsExpression>` object"
 msgstr "``parent``: :class:`QgsExpression <qgis.core.QgsExpression>` オブジェクト"
 
-#: ../../docs/user_manual/expressions/expression.rst:407
+#: ../../docs/user_manual/expressions/expression.rst:415
 msgid ""
 "``context``: If there is an argument called ``context`` found at the last "
 "position, this variable will contain a :class:`QgsExpressionContext "
@@ -766,15 +782,15 @@ msgstr ""
 ":class:`QgsExpressionContext <qgis.core.QgsExpressionContext>` "
 "オブジェクトが含まれ、式変数のような様々な追加情報へのアクセスを可能にします。例 ``context.variable( 'layer_id' )``"
 
-#: ../../docs/user_manual/expressions/expression.rst:412
+#: ../../docs/user_manual/expressions/expression.rst:420
 msgid "The previous example function can then be used in expressions:"
 msgstr "上記の例の関数は、次のように式中で使うことができます。"
 
-#: ../../docs/user_manual/expressions/expression.rst:419
+#: ../../docs/user_manual/expressions/expression.rst:427
 msgid "Custom Function added to the Expression tab"
 msgstr "式タブに追加されたカスタム関数"
 
-#: ../../docs/user_manual/expressions/expression.rst:422
+#: ../../docs/user_manual/expressions/expression.rst:430
 msgid ""
 "Further information about creating Python code can be found in the "
 ":ref:`PyQGIS-Developer-Cookbook`."
