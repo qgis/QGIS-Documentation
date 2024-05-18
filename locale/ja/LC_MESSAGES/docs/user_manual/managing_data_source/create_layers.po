@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-08 11:43+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -130,7 +130,7 @@ msgid ""
 "specify whether it should :guilabel:`Include Z dimension` and/or "
 ":guilabel:`Include M values`."
 msgstr ""
-":guilabel:`ジオメトリタイプ` を定義します。 ジオメトリなしのレイヤではない場合には、 :guilabel:`Z次元を含む` や "
+":guilabel:`ジオメトリ型` を定義します。 ジオメトリなしのレイヤではない場合には、 :guilabel:`Z次元を含む` や "
 ":guilabel:`M値を含む` を指定できます。"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:67
@@ -163,7 +163,7 @@ msgid ""
 "number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Binary "
 "(BLOB)` and :guilabel:`Boolean`."
 msgstr ""
-"データの :guilabel:`タイプ` を選択します。サポートされているタイプは、 :guilabel:`テキストデータ` 、 "
+"データの :guilabel:`型` を選択します。サポートされているタイプは、 :guilabel:`テキストデータ` 、 "
 ":guilabel:`整数値` （integer と integer64）、 :guilabel:`小数点付き数値` 、 :guilabel:`日付` "
 "と :guilabel:`日付時間` 、 :guilabel:`バイナリ（BLOB）` そして :guilabel:`ブール値` です。"
 
@@ -171,14 +171,14 @@ msgstr ""
 msgid ""
 "Depending on the selected data format, enter the :guilabel:`Maximum length` "
 "of values."
-msgstr "選択したデータタイプにもよりますが、値の :guilabel:`最大長さ` を入力します。"
+msgstr "選択したデータ型にもよりますが、値の :guilabel:`最大長さ` を入力します。"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:78
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:134
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:179
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:299
 msgid "Click on the |newAttribute| :guilabel:`Add to Fields List` button"
-msgstr "|newAttribute| :guilabel:`フィールドリストに追加` ボタンをクリックします"
+msgstr "|newAttribute| :guilabel:`属性リストに追加` ボタンをクリックします"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:767
 msgid "newAttribute"
@@ -271,7 +271,7 @@ msgid ""
 "Specify whether the geometry should have additional dimensions: "
 ":guilabel:`None`, :guilabel:`Z (+ M values)` or :guilabel:`M values`"
 msgstr ""
-"ジオメトリが追加次元を持っているかを指定します： :guilabel:`なし` 、 :guilabel:`Z値（＋M値）` 、 "
+"ジオメトリが追加の次元を持っているかを指定します： :guilabel:`なし` 、 :guilabel:`Z値（＋M値）` 、 "
 ":guilabel:`M値` "
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:124
@@ -353,6 +353,16 @@ msgid ""
 msgstr ""
 ":guilabel:`データ型` を選択します。サポートしている型は、 :guilabel:`テキストデータ` 、 :guilabel:`整数値` 、 "
 ":guilabel:`小数点付き数値` 、 :guilabel:`日付` および :guilabel:`日付時刻` です。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:185
+msgid ""
+"If desired, you can select |checkbox| :guilabel:`Create an autoincrementing "
+"primary key` under the :guilabel:`Advanced Options` section. You can also "
+"rename the :guilabel:`Geometry column` (``geometry`` by default)."
+msgstr ""
+"必要に応じて、 |checkbox| :guilabel:`詳細オプション` セクション下にある |checkbox| "
+":guilabel:`自動インクリメントするプライマリキーを作成する` を選択することができます。また、 :guilabel:`ジオメトリカラム` "
+"の名前（デフォルトは ``geometry`` ）を変えることもできます。"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:761
 msgid "checkbox"
@@ -454,6 +464,14 @@ msgstr "新しいGPXレイヤを作成する"
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:244
 msgid "To create a new GPX file:"
 msgstr "新しいGPXファイルを作成するには："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:246
+msgid ""
+"Select :menuselection:`Create Layer -->` |newGpx| :menuselection:`New GPX "
+"Layer...` from the :menuselection:`Layer` menu."
+msgstr ""
+":menuselection:`レイヤ` メニューから :menuselection:`レイヤを作成 -->` |newGPX| "
+":menuselection:`新規GPXレイヤ...` を選択します。"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:771
 msgid "newGpx"
@@ -1303,6 +1321,12 @@ msgid ""
 msgstr ""
 "SQLiteの関数や "
 "SpatiaLiteの空間関数も仮想レイヤのクエリで使用できます。例えば、属性のみのレイヤからポイントレイヤを作成するには、次のようなクエリを使用します："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:655
+msgid ""
+":ref:`Functions of QGIS expressions <functions_list>` can also be used in a "
+"virtual layer query."
+msgstr ":ref:`QGIS式の関数 <functions_list>` も仮想レイヤのクエリ内で使用できます。"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:658
 msgid "To refer the geometry column of a layer, use the name ``geometry``."
