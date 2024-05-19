@@ -317,8 +317,6 @@ to export an elevation profile, allowing you to reuse the plots in another softw
    :width: 1.5em
 .. |captureLine| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
-.. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
