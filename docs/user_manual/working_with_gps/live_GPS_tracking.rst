@@ -326,9 +326,9 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 
 .. |addTrackPoint| image:: /static/common/mActionAddTrackPoint.png
    :width: 1.5em
-.. |capturePoint| image:: /static/common/mActionCapturePoint.png
-   :width: 1.5em
 .. |captureLine| image:: /static/common/mActionCaptureLine.png
+   :width: 1.5em
+.. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
