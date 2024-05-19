@@ -7,8 +7,8 @@
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2024
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -85,6 +85,10 @@ msgstr "QGISはGNSS受信機もサポートしています。しかし、この�
 msgid "Transferring or loading GPS data"
 msgstr "GPSデータを転送又は読み込む"
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:39
+msgid "Loading a GPX file"
+msgstr "GPXファイルを読み込む"
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:41
 msgid ""
 "There are dozens of different file formats for storing GPS data. The format "
@@ -92,7 +96,7 @@ msgid ""
 "interchange format that can contain any number of waypoints, routes and "
 "tracks in the same file."
 msgstr ""
-"GPSデータを格納するための異なるファイル形式はいくつもあります。同じファイル内のウェイポイント、ルートとトラックの任意の数を含むことができ、標準の交換フォーマットであるQGISが使用するフォーマットGPX（GPS交換フォーマット）と呼ばれます。"
+"GPSデータを格納するためのファイル形式はいくつもあります。QGISが使用する形式はGPX（GPS交換フォーマット）と呼ばれ、同じファイルに任意の数のウェイポイント、ルート、トラックを含むことができる、標準の交換フォーマットです。"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:46
 msgid "To load a :file:`GPX` file:"
@@ -149,6 +153,39 @@ msgstr ""
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:63
 msgid "Loading GPS Data dialog"
 msgstr "GPSデータの読み込みダイアログ"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:69
+msgid "Loading to or from a device"
+msgstr "デバイスへ、またはデバイスから読み込む"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:71
+msgid ""
+"There are lots of different types of GPS devices and formats. Since QGIS "
+"uses GPX files, you need a way to convert other GPS file formats to GPX. "
+"QGIS can do that using the free program `GPSBabel "
+"<https://www.gpsbabel.org>`_. GPSBabel can help you convert waypoints, "
+"tracks, and routes between popular GPS receivers such as Garmin or Magellan "
+"and mapping programs like Google Earth or Basecamp. Literally hundreds of "
+"GPS receivers and programs are supported. It can also transfer GPS data "
+"between your computer and a GPS device."
+msgstr ""
+"GPSデバイスや形式には多くの種類があります。QGISはGPXファイルを使うので、他のGPSファイル形式をGPXに変換する方法が必要です。QGISはそれをフリーのプログラム"
+" `GPSBabel <https://www.gpsbabel.org>`_ "
+"を使ってすることができます。GPSBabelは、GarminやMagellanのような一般的なGPS受信機、Google "
+"EarthやBasecampのようなマッピングプログラムの間で、ウェイポイント、トラック、ルートを変換するのを助けてくれます。文字通り何百ものGPSレシーバーとプログラムがサポートされています。また、コンピュータとGPSデバイス間でGPSデータを転送することもできます。"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:79
+msgid ""
+"Under :menuselection:`Settings -->` |options| :menuselection:`Options -->` "
+"|gps| :menuselection:`GPS -->` |gps| :menuselection:`GPSBabel`, QGIS allows "
+"you to define your own device type and set parameters of conversion that "
+"could later be used by the :ref:`Processing GPS algorithms "
+"<gps_algorithms>`."
+msgstr ""
+":menuselection:`設定 -->` |options| :menuselection:`オプション -->` |gps| "
+":menuselection:`GPS -->` |gps| :menuselection:`GPSBabel` "
+"の下でQGISは独自のデバイスタイプを定義し、後で  :ref:`Processing GPS algorithms <gps_algorithms>`"
+" から使用できる変換パラメータを設定することができます。"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:140
 msgid "options"
@@ -230,6 +267,20 @@ msgid ""
 msgstr ""
 "コマンドは通常、GPSBabelのコマンドですが、GPXファイルを作成することのできるその他のコマンドラインプログラムを使用することもできます。QGISはコマンドを実行する際に"
 " ``%type`` 、 ``%in`` 、 ``%out`` のキーワードを置き換えます。"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:109
+#, python-format
+msgid ""
+"As an example, if you create a device type with the download command "
+"``gpsbabel %type -i garmin -o gpx %in %out`` and then use it to download "
+"waypoints from port ``/dev/ttyS0`` to the file :file:`output.gpx`, QGIS will"
+" replace the keywords and run the command ``gpsbabel -w -i garmin -o gpx "
+"/dev/ttyS0 output.gpx``."
+msgstr ""
+"例えば、ダウンロードコマンド ``gpsbabel %type -i garmin -o gpx %in %out`` "
+"でデバイスタイプを作成し、それを使用してポート ``/dev/ttyS0`` からファイル :file:`output.gpx` "
+"にウェイポイントをダウンロードすると、QGISはキーワードを置き換えて、コマンド ``gpsbabel -w -i garmin -o gpx "
+"/dev/ttyS0 output.gpx`` を実行します。"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:115
 msgid ""
