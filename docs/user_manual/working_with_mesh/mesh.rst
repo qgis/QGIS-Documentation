@@ -12,7 +12,7 @@
 What's a mesh?
 ==============
 
-A mesh is an unstructured grid usually with temporal and other components.
+A mesh is an unstructured grid usually with temporal and other components.
 The spatial component contains a collection of vertices, edges and/or faces,
 in 2D or 3D space:
 
@@ -728,8 +728,9 @@ The following table displays the various combinations.
  |                                       | vertices in mesh layer? |                               |                                          |
  +=======================================+=========================+===============================+==========================================+
  | "Free" vertex, not connected to any   | No                      | :guilabel:`Vertex Z value`    | Default or user defined                  |
+ | face or edge of a face                |                         |                               |                                          |
  +                                       +                         +-------------------------------+------------------------------------------+
- | face or edge of a face                |                         | :guilabel:`Advanced           | :guilabel:`z` widget if in               |
+ |                                       |                         | :guilabel:`Advanced           | :guilabel:`z` widget if in               |
  |                                       |                         | Digitizing Panel` (if         | |locked| :sup:`Locked` state             |
  |                                       |                         | :guilabel:`z` widget is in    |                                          |
  |                                       |                         | |locked| :sup:`Locked` state) |                                          |
