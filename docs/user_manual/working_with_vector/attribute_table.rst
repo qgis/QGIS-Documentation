@@ -497,6 +497,8 @@ define the format to paste to with :guilabel:`Copy features as` dropdown list:
   but the geometry is skipped
 * :guilabel:`Plain text, WKT geometry`: attributes are copied as text
   and the geometry is returned in WKT
+* :guilabel:`Plain text, WKB geometry`: attributes are copied as text
+  and the geometry is returned in WKB (hex format)
 * :guilabel:`GeoJSON`: attributes and geometry are formatted as GeoJSON data
 
 
