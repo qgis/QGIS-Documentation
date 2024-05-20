@@ -371,7 +371,7 @@ field with some remarks for the field teams to have into account:
 #. Enable editing.
 #. Use the |calculateField| calculator to create and populate the following two fields.
 #. Create a field named ``Zone`` of type :guilabel:`Whole number (integer)`.
-#. In the :guilabel:`Expression` box write/copy/construct ``$rownum``.
+#. In the :guilabel:`Expression` box write/copy/construct ``@row_number``.
 #. Create another field named ``Remarks``, of type :guilabel:`Text (string)` and
    a width of ``255``.
 #. In the :guilabel:`Expression` box write ``'No remarks.'``. This will set
