@@ -398,8 +398,17 @@ Data Sources settings
 **Feature attributes and table**
 
 * |checkbox| :guilabel:`Open attribute table as docked window`
-* :guilabel:`Copy features as` 'Plain text, no geometry', 'Plain text, WKT geometry',
-  or 'GeoJSON' when pasting features in other applications.
+* :guilabel:`Copy features as`: defines the format to use for data when pasting
+  features in other applications. 
+
+  * :guilabel:`Plain text, no geometry`: attributes are copied as text
+    but the geometry is skipped
+  * :guilabel:`Plain text, WKT geometry`: attributes are copied as text
+    and the geometry is returned in WKT
+  * :guilabel:`Plain text, WKB geometry`: attributes are copied as text
+    and the geometry is returned in WKB (hex format)
+  * :guilabel:`GeoJSON`: attributes and geometry are formatted as GeoJSON data
+
 * :guilabel:`Attribute table behavior` |selectString|: set filter on the attribute
   table at the opening. There are three possibilities: 'Show all features',
   'Show selected features' and 'Show features visible on map'.
