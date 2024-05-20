@@ -128,10 +128,9 @@ You can create a new column for the ``systematic_plots_clip`` layer:
    #. Enter ``Plot_id`` as :guilabel:`Output field name`
    #. Set the :guilabel:`Output field type` to :guilabel:`Text (string)`.
    #. In the :guilabel:`Expression` field, write, copy or construct this formula
-      ``concat('P_', @rownum )``. Remember that you can also double click on the
+      ``concat('P_', @row_number )``. Remember that you can also double click on the
       elements inside the :guilabel:`Function list`. The ``concat`` function can
-      be found under :guilabel:`String` and ``@rownum`` is under the :guilabel:`Variables
-      and values` group.
+      be found under :guilabel:`String` and ``@row_number`` is under the :guilabel:`Variables` group.
 #. Click :guilabel:`OK`.
 #. Disable the edit mode and save your changes.
 
