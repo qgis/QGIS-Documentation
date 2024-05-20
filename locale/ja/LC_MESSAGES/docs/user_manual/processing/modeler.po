@@ -7,8 +7,8 @@
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2024
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-26 09:59+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,6 +54,12 @@ msgstr ""
 "GISで作業をするときにほとんどの解析作業は単独で存在するのではなく一連の操作の一部として存在します. "
 "グラフィカルモデラーを使うと一連の操作を単一のプロセスにまとめることができ,後で異なるデータセットを入力として実行するときに便利です. "
 "多くのステップや異なるアルゴリズムを含んでいてもモデルは単一のアルゴリズムとして実行されるので時間と労力を節約できます."
+
+#: ../../docs/user_manual/processing/modeler.rst:21
+msgid ""
+"The model designer can be opened from the Processing menu "
+"(:menuselection:`Processing --> Model Designer`)."
+msgstr "モデルデザイナーはプロセシングメニュー（:menuselection:`プロセシング --> モデルデザイナー`）から開けます。"
 
 #: ../../docs/user_manual/processing/modeler.rst:25
 msgid "The model designer interface"
@@ -157,13 +163,23 @@ msgstr "モデルを実行します"
 
 #: ../../docs/user_manual/processing/modeler.rst:60
 msgid ":guilabel:`Reorder Model Inputs...`"
-msgstr ":guilabel:`モデル入力の並び替え...`"
+msgstr ":guilabel:`モデル入力の並べ替え...`"
 
 #: ../../docs/user_manual/processing/modeler.rst:63
 msgid ""
 "Sets the order in which inputs are presented to the user in the algorithm "
 "dialog."
 msgstr "アルゴリズムダイアログでユーザーに提示される入力の順番を設定します。"
+
+#: ../../docs/user_manual/processing/modeler.rst:64
+msgid ":guilabel:`Reorder Output Layers...`"
+msgstr ":guilabel:`出力レイヤの並べ替え...`"
+
+#: ../../docs/user_manual/processing/modeler.rst:67
+msgid ""
+"Sets a specific order which the outputs from the model must use when loading"
+" the results into a project."
+msgstr "結果をプロジェクトに読み込む際に、モデルからの出力が使用しなければならない特定の順序を設定します。"
 
 #: ../../docs/user_manual/processing/modeler.rst:69
 msgid "|fileOpen| :guilabel:`Open Model...`"
@@ -500,6 +516,12 @@ msgstr "デザイナーの現在のキャンバスにあるすべてのコンポ
 msgid "|checkbox| :guilabel:`Show Comments`"
 msgstr "|checkbox| :guilabel:`コメントを表示`"
 
+#: ../../docs/user_manual/processing/modeler.rst:196
+msgid ""
+"Displays comments associated to every algorithm or input in the model "
+"designer"
+msgstr "モデルデザイナーの各アルゴリズムや入力に関連するコメントを表示します"
+
 #: ../../docs/user_manual/processing/modeler.rst:197
 msgid "|unchecked| :guilabel:`Enable Snapping`"
 msgstr "|unchecked| :guilabel:`スナップの有効化`"
@@ -621,6 +643,19 @@ msgstr ""
 msgid "Definition of inputs"
 msgstr "入力の定義"
 
+#: ../../docs/user_manual/processing/modeler.rst:265
+msgid ""
+"The first step is to define the inputs for the model. They are found in the "
+":guilabel:`Inputs` panel on the left side of the modeler window. Hovering "
+"with the mouse over the inputs will show a tooltip with additional "
+"information. For a full list of available parameters in modeler and their "
+"correspondance for scripting, please read "
+":ref:`processing_algs_input_output`."
+msgstr ""
+"最初のステップはモデルの入力を定義することです。それらはモデラーウィンドウの左側にある :guilabel:`入力` "
+"パネルにあります。入力の上にマウスカーソルを置くと、ツールチップに追加情報が表示されます。モデラーで利用可能なパラメータの完全なリストとスクリプトの対応については"
+" :ref:`processing_algs_input_output` を参照してください。"
+
 #: ../../docs/user_manual/processing/modeler.rst:271
 msgid ""
 "When double-clicking on an element, a dialog is shown that lets you define "
@@ -634,7 +669,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing/modeler.rst:285
 msgid "Model Parameters Definition"
-msgstr "モデルパラメーター定義"
+msgstr "モデルパラメータ定義"
 
 #: ../../docs/user_manual/processing/modeler.rst:287
 msgid ""
@@ -644,8 +679,8 @@ msgid ""
 "is particularly useful when the model has many parameters and some of them "
 "are not trivial, but you still want to choose them."
 msgstr ""
-"チェックボックス| ``必須`` をチェックすることで、モデルに必須の入力として定義でき、チェックボックス| ``詳細設定`` "
-"をチェックすることで、入力を ``詳細設定`` "
+"|checkbox| ``必須`` オプションをチェックすることで、モデルに必須の入力として定義でき、|unchecked| ``詳細設定`` "
+"チェックボックスをチェックすることで、入力を ``詳細設定`` "
 "セクション内に設定することができます。これは、モデルに多くのパラメータがあり、そのうちのいくつかは些細なものではないが、それでも選択したい場合に特に有効です。"
 
 #: ../../docs/user_manual/processing/modeler.rst:293
@@ -682,8 +717,8 @@ msgid ""
 "line layer using the ``Drape`` algorithm,  and then calculate the total "
 "ascent of the line layer using the ``Climb Along Line`` algorithm."
 msgstr ""
-"次の例では、2つの入力と2つのアルゴリズムを追加します。このモデルの目的は、``Drape`` "
-"アルゴリズムを用いてDEMラスタレイヤからラインレイヤに標高値をコピーし、``Climb Along Line`` "
+"次の例では、2つの入力と2つのアルゴリズムを追加します。このモデルの目的は、``ドレープ`` "
+"アルゴリズムを用いてDEMラスタレイヤからラインレイヤに標高値をコピーし、``線に沿った上昇下降量`` "
 "アルゴリズムを用いてラインレイヤの合計上昇量を計算することです。"
 
 #: ../../docs/user_manual/processing/modeler.rst:318
@@ -720,7 +755,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing/modeler.rst:345
 msgid "Model Algorithm parameters"
-msgstr "モデルアルゴリズムパラメーター"
+msgstr "モデルアルゴリズムパラメータ"
 
 #: ../../docs/user_manual/processing/modeler.rst:348
 msgid ""
@@ -728,7 +763,7 @@ msgid ""
 "drop-down menu next to it allowing to control how it will be served during "
 "the workflow:"
 msgstr ""
-"ご覧のように、いくつかの違いがあります。各パラメータの横にドロップダウンメニューがあり、ワークフロー中にどのように処理されるかをコントロールすることができます:"
+"しかしご覧のように、いくつかの違いがあります。各パラメータの横にはドロップダウンメニューがあり、ワークフロー中にどのように処理されるかを制御することができます:"
 
 #: ../../docs/user_manual/processing/modeler.rst:352
 msgid ""
@@ -814,7 +849,7 @@ msgstr "モデル入力を使う。例えば、*ファイル/フォルダ* モ�
 msgid ""
 "use another algorithm output, e.g. the output of the *Create directory* "
 "algorithm (from *Modeler tools*)"
-msgstr "別のアルゴリズム出力を使う。例えば、（*モデラーツール* の）*ディレクトリを作成* アルゴリズムの出力"
+msgstr "別のアルゴリズム出力を使う。例えば、（*モデラーツール* の） *ディレクトリを作成* アルゴリズムの出力"
 
 #: ../../docs/user_manual/processing/modeler.rst:377
 msgid ""
@@ -873,7 +908,7 @@ msgid ""
 "linked to the elements in the canvas (algorithms or inputs) that provide "
 "objects that are used as inputs for the algorithm."
 msgstr ""
-"すべてのパラメータに有効な値が代入されたら、 :guilabel:`OK` "
+"全てのパラメータに有効な値が代入されたら、 :guilabel:`OK` "
 "をクリックしてアルゴリズムをキャンバスに追加します。これは、アルゴリズムの入力として使用されるオブジェクトを提供するキャンバスの要素（アルゴリズムまたは入力）にリンクされます。"
 
 #: ../../docs/user_manual/processing/modeler.rst:411
@@ -940,13 +975,33 @@ msgid ""
 "the ``Reorder Model Inputs...`` button and by clicking on it a new dialog "
 "pops up allowing you to change the order of the inputs:"
 msgstr ""
-"入力の順番を変更したり、メインのモデルダイアログにどのように入力が表示されるかを変更したい場 合があるかもしれません。``入力`` パネルの一番下に "
-"``モデル入力の並べ替え... `` "
-"というボタンがあり、これをクリックすると新しいダイアログがポップアップ表示され、入力の順番を変更することができます:"
+"入力の順番を変更したり、メインのモデルダイアログにどのように入力が表示されるかを変更したい場合があるかもしれません。``入力`` パネルの一番下に "
+"``モデル入力の並べ替え...`` というボタンがあり、これをクリックすると新しいダイアログがポップアップ表示され、入力の順番を変更することができます:"
 
 #: ../../docs/user_manual/processing/modeler.rst:456
 msgid "Reorder Model Inputs"
 msgstr "モデル入力の並べ替え"
+
+#: ../../docs/user_manual/processing/modeler.rst:458
+msgid ""
+"There is also the possibility to set a specific order which the outputs from"
+" the model must use when loading the results into a project. This gives the "
+"model creator a means of ensuring that layers are logically ordered on the "
+"canvas when running a model, such as placing a vector layer output over a "
+"raster layer output, or a point layer over a polygon layer. The model "
+"creator can also set an optional \"Group name\" for the outputs for "
+"automatically grouping outputs within the layer tree using a new group name "
+"or by adding them to an existing group. In the ``Model`` menu you will find "
+"the ``Reorder Output Layers...`` entry and by clicking on it a new dialog "
+"pops up allowing you to change the order of the output layers:"
+msgstr ""
+"また、結果をプロジェクトに読み込む際に、モデルからの出力が使用しなければならない特定の順序を設定することもできます。これはモデル作成者に、モデルを実行する際にキャンバス上でレイヤが論理的に順序付けられることを保証する手段を与えます。例えば、ラスタレイヤ出力の上にベクタレイヤ出力を配置したり、ポリゴンレイヤの上にポイントレイヤを配置したりすることができます。モデル作成者は出力にオプションの「グループ名」を設定することもでき、新しいグループ名を使用して出力をレイヤツリー内で自動的にグループ化するか、既存のグループに追加することができます。``モデル``"
+" メニューの中に ``出力レイヤを並べ替え...`` "
+"という項目があり、これをクリックすると新しいダイアログがポップアップし、出力レイヤの順序を変更することができます:"
+
+#: ../../docs/user_manual/processing/modeler.rst:473
+msgid "Reorder Output Layers"
+msgstr "出力レイヤを並べ替え"
 
 #: ../../docs/user_manual/processing/modeler.rst:475
 msgid ""
@@ -957,7 +1012,7 @@ msgid ""
 "the final algorithm dialog; they can be hidden by deactivating "
 ":menuselection:`View --> Show Comments`."
 msgstr ""
-"コメントはモデラーにある入力やアルゴリズムに追加することもできます。これはアイテムの :guilabel:`コメント` "
+"モデラー内の入力やアルゴリズムにコメントを追加することもできます。これはアイテムの :guilabel:`コメント` "
 "タブを開くか、右クリックすることで行えます。同じタブで、個々のモデルコメントに対して手動で色を設定することができます。コメントはモデラーキャンバスのみに表示され、最終アルゴリズムダイアログには表示されません。"
 " :menuselection:`ビュー --> コメントを表示` を無効にすることで非表示にすることができます。"
 
@@ -1003,13 +1058,27 @@ msgstr "editHelpContent"
 msgid "Editing Help"
 msgstr "ヘルプを編集する"
 
+#: ../../docs/user_manual/processing/modeler.rst:506
+msgid ""
+"On the right-hand side, you will see a simple HTML page, created using the "
+"description of the input parameters and outputs of the algorithm, along with"
+" some additional items like a general description of the model or its "
+"author. Also, there is an Example section where you can input your own "
+"custom examples to help explain the usage of the model. The first time you "
+"open the help editor, all these descriptions are empty, but you can edit "
+"them using the elements on the left-hand side of the dialog. Select an "
+"element on the upper part and then write its description in the text box "
+"below."
+msgstr ""
+"右側には、モデルの一般的な説明や作者のような追加項目とともに、アルゴリズムの入力パラメータと出力の説明を使って作られた単純なHTMLページが表示されます。また、モデルの使い方を説明するために、独自のカスタム例を入力できる例セクションもあります。ヘルプエディタを初めて開いたときは、これらの説明はすべて空ですが、ダイアログの左側の要素を使って編集することができます。上部の要素を選択し、下のテキストボックスにその説明を書き込みます。"
+
 #: ../../docs/user_manual/processing/modeler.rst:517
 msgid "Model help is saved as part of the model itself."
 msgstr "モデルヘルプはモデル自体の一部として保存されます。"
 
 #: ../../docs/user_manual/processing/modeler.rst:521
 msgid "Saving and loading models"
-msgstr "モデルを保存したりロードする"
+msgstr "モデルの保存と読み込み"
 
 #: ../../docs/user_manual/processing/modeler.rst:524
 msgid "Saving models"
@@ -1069,7 +1138,7 @@ msgid ""
 "models` menu of the toolbox and in the :menuselection:`Project --> Models` "
 "menu item."
 msgstr ""
-"プロジェクトモデルはツールボックスの |qgsProjectFile| :guilabel:`Project models` メニューと "
+"プロジェクトモデルはツールボックスの |qgsProjectFile| :guilabel:`プロジェクトモデル` メニューと "
 ":menuselection:`プロジェクト --> モデル` メニュー項目で利用できます。"
 
 #: ../../docs/user_manual/processing/modeler.rst:694
@@ -1080,7 +1149,7 @@ msgstr "qgsProjectFile"
 msgid ""
 "The models folder can be set from the Processing configuration dialog, under"
 " the :guilabel:`Modeler` group."
-msgstr "モデルフォルダは :guilabel:`モデラー` グループ下、処理設定ダイアログから設定できます。"
+msgstr "モデルフォルダは、プロセシング設定ダイアログの :guilabel:`モデル` グループ下から設定できます。"
 
 #: ../../docs/user_manual/processing/modeler.rst:558
 msgid ""
