@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:25
 msgid "Geometry Handling"
@@ -44,6 +44,15 @@ msgid ""
 "the pyqgis console:"
 msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
 
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:51
+msgid ""
+"Points, linestrings and polygons that represent a spatial feature are "
+"commonly referred to as geometries. In QGIS they are represented with the "
+":class:`QgsGeometry <qgis.core.QgsGeometry>` class."
+msgstr ""
+"공간 피처를 표현하는 포인트, 라인스트링, 그리고 폴리곤을 흔히 도형(geometry)이라고 부릅니다. QGIS에서는 도형을 "
+":class:`QgsGeometry <qgis.core.QgsGeometry>` 클래스를 사용해서 표현합니다."
+
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:55
 msgid ""
 "Sometimes one geometry is actually a collection of simple (single-part) "
@@ -52,9 +61,9 @@ msgid ""
 "or multi-polygon. For example, a country consisting of multiple islands can "
 "be represented as a multi-polygon."
 msgstr ""
-"도형 한 개가 실제로는 단순(단일 영역, single-part) 도형의 집합인 경우가 종종 있습니다. 이런 도형을 다중 영역(multi-"
-"part) 도형이라고 합니다. 다중 영역 도형이 한 가지 유형의 단순 도형으로만 이루어져 있을 경우 다중 포인트, 다중 라인스트링, 다중"
-" 폴리곤이라 부릅니다. 예를 들어 여러 개의 섬으로 이루어진 국가라면 다중 폴리곤으로 표현할 수 있습니다."
+"도형 한 개가 실제로는 단순(단일 부분, single-part) 도형의 집합인 경우가 종종 있습니다. 이런 도형을 다중 부분(multi-"
+"part) 도형이라고 합니다. 다중 부분 도형이 한 가지 유형의 단순 도형으로만 이루어져 있을 경우 멀티포인트, 멀티라인스트링, 또는 "
+"멀티폴리곤이라고 부릅니다. 예를 들어 여러 개의 섬으로 이루어진 국가라면 멀티폴리곤으로 표현할 수 있습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:61
 msgid ""
@@ -62,16 +71,57 @@ msgid ""
 "(CRS). When fetching features from a layer, associated geometries will have "
 "coordinates in CRS of the layer."
 msgstr ""
-"도형의 좌표는 어떤 좌표계(CRS)라도 될 수 있습니다. 레이어에서 피처를 불러올 때, 해당 도형은 레이어의 좌표계를 따르는 좌표를 "
-"가지게 될 겁니다."
+"도형의 좌표는 어떤 좌표계라도 될 수 있습니다. 레이어에서 피처를 불러올 때, 해당 도형은 레이어의 좌표계를 따르는 좌표를 가지게 될 "
+"것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:65
+msgid ""
+"Description and specifications of all possible geometries construction and "
+"relationships are available in the `OGC Simple Feature Access Standards "
+"<https://www.ogc.org/standards/sfa>`_ for advanced details."
+msgstr ""
+"가능한 모든 도형 구조 및 관계에 대한 고급 상세 정보를 알고 싶다면 `OGC 단순 피처 접근 표준(OGC Simple Feature "
+"Access Standards) <https://www.ogc.org/standards/sfa>`_ 에서 그 설명과 사양을 찾아볼 수 "
+"있습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:72
 msgid "Geometry Construction"
-msgstr "도형 작성"
+msgstr "도형 작성하기"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:74
+msgid "PyQGIS provides several options for creating a geometry:"
+msgstr "PyQGIS는 도형을 생성하기 위한 옵션을 몇 개 제공합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:76
 msgid "from coordinates"
 msgstr "좌표로부터"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:95
+msgid ""
+"Coordinates are given using :class:`QgsPoint <qgis.core.QgsPoint>` class or "
+":class:`QgsPointXY <qgis.core.QgsPointXY>` class. The difference between "
+"these classes is that :class:`QgsPoint <qgis.core.QgsPoint>` supports M and "
+"Z dimensions."
+msgstr ""
+":class:`QgsPoint <qgis.core.QgsPoint>` 클래스 또는 :class:`QgsPointXY "
+"<qgis.core.QgsPointXY>` 클래스를 사용해서 좌표를 지정합니다. 이 두 클래스의 차이라고 하면 "
+":class:`QgsPoint <qgis.core.QgsPoint>` 클래스는 M과 Z 차원을 지원한다는 점입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:99
+msgid "A Polyline (Linestring) is represented by a list of points."
+msgstr "폴리라인(라인스트링)은 포인트 목록으로 표현됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:101
+msgid ""
+"A Polygon is represented by a list of linear rings (i.e. closed "
+"linestrings). The first ring is the outer ring (boundary), optional "
+"subsequent rings are holes in the polygon. Note that unlike some programs, "
+"QGIS will close the ring for you so there is no need to duplicate the first "
+"point as the last."
+msgstr ""
+"폴리곤은 선형 고리 (예: 닫힌 라인스트링들) 목록으로 표현됩니다. 첫 번째 고리(ring)가 외곽 고리(경계)이며, 있을 수도 있고 "
+"없을 수도 있는 그 다음 고리들은 폴리곤에 있는 구멍(hole)입니다. 몇몇 다른 프로그램과는 달리 QGIS는 여러분을 위해 고리를 "
+"닫아줄 것이기 때문에 첫 번째 포인트를 마지막 포인트로 복제할 필요가 없다는 사실을 기억하세요."
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:107
 msgid ""
@@ -79,8 +129,7 @@ msgid ""
 " multi-linestring is a list of linestrings and multi-polygon is a list of "
 "polygons."
 msgstr ""
-"다중 영역 도형은 한 단계 심화됩니다. 다중 포인트는 포인트의 목록, 다중 라인스트링은 라인스트링의 목록, 다중 폴리곤은 폴리곤의 "
-"목록입니다."
+"다중 부분 도형은 한 단계 심화됩니다. 멀티포인트는 포인트의 목록, 멀티라인스트링은 라인스트링의 목록, 멀티폴리곤은 폴리곤의 목록입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:111
 msgid "from well-known text (WKT)"
@@ -92,11 +141,153 @@ msgstr "WKB(well-known binary)로부터"
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:142
 msgid "Access to Geometry"
-msgstr "도형에 접근"
+msgstr "도형에 접근하기"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:144
+msgid ""
+"First, you should find out the geometry type. The :meth:`wkbType() "
+"<qgis.core.QgsGeometry.wkbType>` method is the one to use. It returns a "
+"value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>` "
+"enumeration."
+msgstr ""
+"먼저 도형 유형을 알아야 합니다. :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>` 메소드를 "
+"사용하면 됩니다. 이 메소드는 :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>` 클래스의 열거 "
+"목록(enumeration)으로부터 값을 반환합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:164
+msgid ""
+"As an alternative, one can use the :meth:`type() "
+"<qgis.core.QgsGeometry.type>` method which returns a value from the "
+":meth:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>` "
+"enumeration."
+msgstr ""
+"아니면, :meth:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>` "
+"메소드의 열거 목록으로부터 값을 반환하는 :meth:`type() <qgis.core.QgsGeometry.type>` 메소드를 사용해도"
+" 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:178
+msgid ""
+"You can use the :meth:`displayString() "
+"<qgis.core.QgsWkbTypes.displayString>` function to get a human readable "
+"geometry type."
+msgstr ""
+"사람이 읽을 수 있는 도형 유형을 얻으려면 :meth:`displayString() "
+"<qgis.core.QgsWkbTypes.displayString>` 함수를 사용하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:197
+msgid ""
+"There is also a helper function :meth:`isMultipart() "
+"<qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is "
+"multipart or not."
+msgstr ""
+"도형이 다중 부분인지 아닌지 여부를 알려주는 :meth:`isMultipart() "
+"<qgis.core.QgsGeometry.isMultipart>` 도우미 함수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:200
+msgid ""
+"To extract information from a geometry there are accessor functions for "
+"every vector type. Here's an example on how to use these accessors:"
+msgstr ""
+"모든 벡터 유형 별로 도형에서 정보를 추출하기 위한 접근자(accessor) 함수들이 있습니다. 다음은 이런 접근자를 어떻게 사용하는지 "
+"보여주는 예시입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:220
+msgid ""
+"The tuples (x,y) are not real tuples, they are :class:`QgsPoint "
+"<qgis.core.QgsPoint>` objects, the values are accessible with :meth:`x() "
+"<qgis.core.QgsPoint.x>` and :meth:`y() <qgis.core.QgsPoint.y>` methods."
+msgstr ""
+"(x,y) 투플은 실제 투플(tuple)이 아니라 :class:`QgsPoint <qgis.core.QgsPoint>` 클래스 객체로, "
+":meth:`x() <qgis.core.QgsPoint.x>` 와 :meth:`y() <qgis.core.QgsPoint.y>` 메소드를"
+" 사용해서 그 값들에 접근할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:224
+msgid ""
+"For multipart geometries there are similar accessor functions: "
+":meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, "
+":meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>` and "
+":meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`."
+msgstr ""
+"다중 부분 도형의 경우 비슷한 접근자 함수들이 존재합니다: :meth:`asMultiPoint() "
+"<qgis.core.QgsGeometry.asMultiPoint>`, :meth:`asMultiPolyline() "
+"<qgis.core.QgsGeometry.asMultiPolyline>`, 그리고 :meth:`asMultiPolygon() "
+"<qgis.core.QgsGeometry.asMultiPolygon>` 메소드들입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:230
+msgid ""
+"It is possible to iterate over all the parts of a geometry, regardless of "
+"the geometry's type. E.g."
+msgstr "도형 유형과는 상관없이 도형의 모든 부분들을 반복해서 작업할 수 있습니다. 예를 들면:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:265
+msgid ""
+"It's also possible to modify each part of the geometry using "
+":meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` method."
+msgstr ""
+":meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` 메소드를 사용하면 도형의 각 "
+"부분을 수정할 수도 있습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:287
 msgid "Geometry Predicates and Operations"
-msgstr "도형 관계계산 및 연산"
+msgstr "도형 술어 및 연산"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:289
+msgid ""
+"QGIS uses GEOS library for advanced geometry operations such as geometry "
+"predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, "
+":meth:`intersects() <qgis.core.QgsGeometry.intersects>`, …) and set "
+"operations (:meth:`combine() <qgis.core.QgsGeometry.combine>`, "
+":meth:`difference() <qgis.core.QgsGeometry.difference>`, …). It can also "
+"compute geometric properties of geometries, such as area (in the case of "
+"polygons) or lengths (for polygons and lines)."
+msgstr ""
+"QGIS는 도형 술어(predicate) 같은 고급 도형 연산(:meth:`contains() "
+"<qgis.core.QgsGeometry.contains>`, :meth:`intersects() "
+"<qgis.core.QgsGeometry.intersects>`, …)과 집합 연산(:meth:`combine() "
+"<qgis.core.QgsGeometry.combine>`, :meth:`difference() "
+"<qgis.core.QgsGeometry.difference>`, …)에 GEOS 라이브러리를 사용합니다. GEOS 라이브러리는 "
+"(폴리곤의 경우) 면적 또는 (폴리곤 및 라인의 경우) 길이 같은 도형의 기하 속성도 계산할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:295
+msgid ""
+"Let's see an example that combines iterating over the features in a given "
+"layer and performing some geometric computations based on their geometries. "
+"The below code will compute and print the area and perimeter of each country"
+" in the ``countries`` layer within our tutorial QGIS project."
+msgstr ""
+"지정한 레이어에 있는 피처들을 반복 작업해서 피처들의 도형을 바탕으로 도형 계산을 수행하는 예시를 볼까요. 다음 코드는 예제 QGIS "
+"프로젝트 안에서 ``countries`` 레이어에 있는 각 국가의 면적과 둘레를 계산해서 출력할 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:300
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:339
+msgid ""
+"The following code assumes ``layer`` is a :class:`QgsVectorLayer "
+"<qgis.core.QgsVectorLayer>` object that has Polygon feature type."
+msgstr ""
+"다음 코드는 ``layer`` 가 폴리곤 피처 유형인 :class:`QgsVectorLayer "
+"<qgis.core.QgsVectorLayer>` 클래스 객체라고 가정합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:330
+msgid ""
+"Now you have calculated and printed the areas and perimeters of the "
+"geometries. You may however quickly notice that the values are strange. That"
+" is because areas and perimeters don't take CRS into account when computed "
+"using the :meth:`area() <qgis.core.QgsGeometry.area>` and :meth:`length() "
+"<qgis.core.QgsGeometry.length>` methods from the :class:`QgsGeometry "
+"<qgis.core.QgsGeometry>` class. For a more powerful area and distance "
+"calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class "
+"can be used, which can perform ellipsoid based calculations:"
+msgstr ""
+"이제 도형들의 면적과 둘레를 계산해서 출력했습니다. 하지만 그 값들이 이상하다는 사실을 한 눈에 알아차렸겠죠. "
+":class:`QgsGeometry <qgis.core.QgsGeometry>` 클래스에서 나온 :meth:`area() "
+"<qgis.core.QgsGeometry.area>` 및 :meth:`length() "
+"<qgis.core.QgsGeometry.length>` 메소드를 사용해서 면적과 둘레를 계산할 때 좌표계를 연산에 넣지 않았기 "
+"때문입니다. 좀 더 강력한 면적 및 거리 계산을 하고 싶다면, 타원체 기반 계산을 수행할 수 있는 "
+":class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` 클래스를 사용하면 됩니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:375
+msgid "Alternatively, you may want to know the distance between two points."
+msgstr "아니면, 포인트 2개 사이의 거리를 알고 싶을 수도 있을 겁니다."
 
 #: ../../docs/pyqgis_developer_cookbook/geometry.rst:395
 msgid ""
@@ -104,5 +295,22 @@ msgid ""
 "these methods to analyze and transform vector data. Here are some links to "
 "the code of a few of them."
 msgstr ""
-"QGIS에 포함되어 있는, 벡터 데이터를 분석하고 변환하는 데 사용할 수 있는 알고리즘들의 수많은 예시가 있습니다. 다음은 링크들은 그 "
-"가운데 몇몇 코드를 보여줍니다."
+"QGIS에 포함되어 있는 알고리즘들의 수많은 예시를 찾아볼 수 있으며, 이 알고리즘들을 사용해서 벡터 데이터를 분석하고 변환할 수 "
+"있습니다. 다음 링크들은 그 가운데 몇몇 알고리즘들의 코드를 보여줍니다."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:399
+msgid ""
+"Distance and area using the :class:`QgsDistanceArea "
+"<qgis.core.QgsDistanceArea>` class: :source:`Distance matrix algorithm "
+"<python/plugins/processing/algs/qgis/PointDistance.py>`"
+msgstr ""
+":class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` 클래스를 사용해서 거리 및 면적 계산: "
+":source:`거리 행렬 알고리즘 <python/plugins/processing/algs/qgis/PointDistance.py>`"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:401
+msgid ""
+":source:`Lines to polygons algorithm "
+"<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"
+msgstr ""
+":source:`라인을 폴리곤으로 알고리즘 "
+"<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"
