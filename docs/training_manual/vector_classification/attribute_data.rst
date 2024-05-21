@@ -1,6 +1,6 @@
 .. _tm_working_vector_data:
 
-|LS| Vector Attribute Data
+Lesson: Vector Attribute Data
 ===============================================================================
 
 Vector data is arguably the most common kind of data in the daily
@@ -23,7 +23,7 @@ not only objects in locations, but also information about those objects.
 **The goal for this lesson:** To learn about the structure of vector data and
 explore the attribute data of an object
 
-|basic| |FA| Viewing Layer Attributes
+:abbr:`★☆☆ (Basic level)` Follow Along: Viewing Layer Attributes
 -------------------------------------------------------------------------------
 
 It's important to know that the data you will be working with does not only
@@ -129,7 +129,7 @@ You may now close the attribute table.
 
 .. _backlink-vector-explore-attribute-data:
 
-|basic| |TY| Exploring Vector Data Attributes
+:abbr:`★☆☆ (Basic level)` Try Yourself: Exploring Vector Data Attributes
 -------------------------------------------------------------------------------
 
 #. How many fields are available in the :guilabel:`rivers` layer?
@@ -163,7 +163,7 @@ You may now close the attribute table.
      values. If your data contains some *NULL* values, do not worry as long as most
      of your places have names.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You now know how to use the attribute table to see what is actually in the data
@@ -172,7 +172,7 @@ that you care about. If you know which attributes you need, you can quickly
 decide if you're able to use a given dataset, or if you need to look for
 another one that has the required attribute data.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Different attributes are useful for different purposes. Some of them can be
@@ -186,12 +186,6 @@ this in the next lesson.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png

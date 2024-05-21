@@ -9,7 +9,7 @@
    .. contents::
       :local:
 
-Labels are textual information you can display on vector features or maps.
+Labels are textual information you can display on vector features, mesh layers or maps.
 They add details you could not necessarily represent using symbols.
 Two types of text-related items are available in QGIS:
 
@@ -42,8 +42,8 @@ Two types of text-related items are available in QGIS:
   (:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`,
   :ref:`overlay, scale visibility <labels_rendering>`, mask ...).
 
-  They are used to configure smart labelling for vector layers through the
-  |labelingSingle| :guilabel:`Labels` tab of the vector :guilabel:`Layer Properties`
+  They are used to configure smart labelling for vector and mesh layers through the
+  |labelingSingle| :guilabel:`Labels` tab of the vector or mesh :guilabel:`Layer Properties`
   dialog or :guilabel:`Layer Styling` panel or using the |labelingSingle| :sup:`Layer
   Labeling Options` button of the :ref:`Label toolbar <label_toolbar>`.
 
@@ -550,7 +550,7 @@ Placement tab
 
 Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
-type of vector layer, namely point, line or polygon, and are affected by
+type of vector or mesh layer, namely point, line or polygon, and are affected by
 the global :ref:`PAL setting <automated_placement>`.
 
 .. _labels_point_placement:

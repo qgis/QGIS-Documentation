@@ -16,4 +16,5 @@ QGIS processing framework
     console
     standalone
     scripts
+    parameters
     3rdParty

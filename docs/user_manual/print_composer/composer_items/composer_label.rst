@@ -43,10 +43,12 @@ in order to be interpreted and evaluated as such.
   button, write your formula as usual and when the dialog is applied,
   QGIS automatically adds the surrounding characters.
 
-  .. hint:: Clicking the :guilabel:`Insert/Edit Expression...` button when no
-   selection is made in the textbox will append the new expression to the existing text.
-   If you want to modify an existing expression, you need to first select the part of
-   interest.
+  .. hint:: When you click the :guilabel:`Insert/Edit Expression...` button with
+   no selection made in the textbox, the new expression will be appended to the existing text.
+   However, if you want to modify an existing expression, the behavior changes based
+   on your selection: If some text is selected and the selection is within an expression
+   (between '[%' and '%]'), or if no text is selected but the cursor is inside an expression,
+   the whole expression will be selected. In all other cases, the selection will remain as is.
 
   Because maps are usually filled with some common textual information (date,
   author, title, page number, ...), QGIS provides a direct access to the

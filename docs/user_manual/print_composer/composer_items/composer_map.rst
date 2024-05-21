@@ -215,6 +215,21 @@ view, keeping the same scale. With the |moveItemContent| tool enabled, use the
 mouse wheel to zoom in or out, modifying the scale of the shown map. Combine
 the movement with :kbd:`Ctrl` key pressed to have a smaller zoom.
 
+.. index:: Elevation Range, Print layout
+.. _mapitem_elevationrange:
+
+Elevation range
+---------------
+The :guilabel:`Elevation range` setting in the map item properties allows you to filter
+the content of certain layers based on a specific elevation range.
+While all layers remain visible, those that support elevation filtering
+(currently point clouds and raster DEMs) will have their data filtered.
+Only the parts of these layers that fall within the elevation range
+set by the :guilabel:`Lower` and :guilabel:`Upper` values will be displayed.
+
+The :guilabel:`Elevation range` can be data-defined. This means you can set different
+elevation ranges for different features in the :ref:`atlas <atlas_generation>` or :ref:`report <create-reports>`.
+
 .. index:: Temporal, Print layout
 .. _mapitem_temporalrange:
 

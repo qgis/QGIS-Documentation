@@ -504,6 +504,9 @@ available modes are:
   (the idea of a boxplot).
 * Equal Interval: each class will have the same size (e.g. with the values
   from 1 to 16 and four classes, each class will have a size of four).
+* Fixed Interval: each class will have a fixed range of values (e.g. with the
+  values from 1 to 16 and an interval size of 4, the classes will be 1-4,
+  5-8, 9-12 and 13-16).  
 * Logarithmic scale: suitable for data with a wide range of values.
   Narrow classes for low values and wide classes for large values (e.g. for
   decimal numbers with range [0..100] and two classes, the first class will
@@ -2409,6 +2412,11 @@ this group helps you configure the look of the widget assigned to the field:
 * :guilabel:`Override label color`: applies specific color to the field's label
 * :guilabel:`Override label font`: applies specific font properties (bold, italic, underline,
   strikethrough, or font family) to the field's label
+* :guilabel:`Size`: allows to control how widgets will relatively resize when resizing an
+  attribute form.
+
+  * :guilabel:`Horizontal stretch`: sets a higher horizontal value for widgets that need more horizontal space.
+  * :guilabel:`Vertical stretch`: determines how widgets resize vertically when the form is resized.
 
 General options
 ^^^^^^^^^^^^^^^
@@ -2572,7 +2580,8 @@ with the field type. The available widgets are:
 * **Relation Reference**: This is the default widget assigned to the referencing
   field (i.e., the foreign key in the child layer) when a :ref:`relation <vector_relations>`
   is set. It provides direct access to the parent feature's form which in turn
-  embeds the list and form of its children.
+  embeds the list and form of its children. The number of entries in the widget
+  can be limited for efficiency, and if limit is not set, all entries will be loaded.
 * **Text Edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
   can also choose html content.
@@ -2903,6 +2912,9 @@ that was selected from the identify results or attribute table (see :ref:`using_
 Double quote marks can be used to group text into a single argument to the program, script or command.
 Double quotes will be ignored if preceded by a backslash.
 
+Actions can invoke a single process, with arguments, so Boolean operators (such as ``&``, ``&&``, ``;``, ``|``) will not work.
+In UNIX-like operating systems multiple commands can be executed via ``bash -c``.
+
 The :guilabel:`Action Scopes` allows you to define where the action should be available.
 You have following choices:
 
@@ -3165,6 +3177,15 @@ feature identification:
   mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
   You can check the result of your code sample in the :guilabel:`Preview` frame
   (also convenient for previewing the :guilabel:`Display name` output).
+  Additionally, you can select and edit existing expressions
+  using the :guilabel:`Insert/Edit Expression` button. 
+  
+  .. note:: Understanding the :guilabel:`Insert/Edit Expression` button behavior
+
+   If you select some text within an expression (between "[%" and "%]"),
+   or if no text is selected but the cursor is inside an expression,
+   the whole expression will be automatically selected for editing.
+   If the cursor or a selected text is outside an expression, the dialog opens with the selection.
 
 .. _figure_display_code:
 

@@ -91,6 +91,8 @@ At the top of the :guilabel:`Layers` panel, a toolbar allows you to:
   * :guilabel:`Show Private Layers`: a convenient shortcut to display and
     interact with :ref:`private layers <project_layer_capabilities>`
     in the :guilabel:`Layers` panel without modifying the project settings.
+  * :guilabel:`Show Broken Layers Only`: only layers with broken data sources
+    are displayed.
 * |expressionFilter| :sup:`Filter Legend by Expression`: apply an
   expression to remove styles from the selected layer tree that have no feature
   satisfying the condition. This can be used to highlight features
@@ -211,7 +213,7 @@ a right-click shows a dedicated set of options presented below.
   |zoomToLayer| :guilabel:`Zoom to Selection`                                |checkbox|
   |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|  
   :guilabel:`Show Feature Count`                                             |checkbox|
-  |labelingSingle| :guilabel:`Show Label`                                    |checkbox|
+  |labelingSingle| :guilabel:`Show Label`                                    |checkbox|                      |checkbox|
   :guilabel:`Copy Layer/Group`                                 |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Rename Layer/Group`                               |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                  |checkbox|

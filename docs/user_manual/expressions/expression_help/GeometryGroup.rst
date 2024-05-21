@@ -37,6 +37,12 @@ Returns the geometry after an affine transformation. Calculations are in the Spa
        * ``geom_to_wkt(affine_transform(geom_from_wkt('POINT(3 1)'), 0, 0, 0, 1, 1, 5, 0))`` → 'PointZ (3 1 5)'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/affinetransform.png
+   :align: center
+   :width: 100%
+
+   Vector point layer (green dots) before (left), and after (right) an affine transformation (translation).
+
 .. end_affine_transform_section
 
 .. _expression_function_GeometryGroup_angle_at_vertex:
@@ -193,6 +199,12 @@ Returns the closure of the combinatorial boundary of the geometry (ie the topolo
        * ``geom_to_wkt(boundary(geom_from_wkt('LineString(1 1,0 0,-1 1)')))`` → 'MultiPoint ((1 1),(-1 1))'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/boundary_polygon.png
+   :align: center
+   :width: 100%
+
+   Boundary (black dashed line) of the source polygon layer
+
 .. end_boundary_section
 
 .. _expression_function_GeometryGroup_bounds:
@@ -343,6 +355,12 @@ Returns the geometric center of a geometry.
    * - Examples
      - * ``centroid(@geometry)`` → a point geometry
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/centroids.png
+   :align: center
+   :width: 100%
+
+   The red stars represent the centroids of the features of the input layer.
 
 .. end_centroid_section
 
@@ -556,6 +574,12 @@ Takes a polygon or line layer geometry and generates a new one in which the geom
      - * ``geom_to_wkt(densify_by_count(geom_from_wkt('LINESTRING(1 1, 10 1)'), 3))`` → LineString (1 1, 3.25 1, 5.5 1, 7.75 1, 10 1)
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/densify_geometry.png
+   :align: center
+   :width: 100%
+
+   Red points show the vertices before and after the densify
+
 .. end_densify_by_count_section
 
 .. _expression_function_GeometryGroup_densify_by_distance:
@@ -576,6 +600,12 @@ Takes a polygon or line layer geometry and generates a new one in which the geom
    * - Examples
      - * ``geom_to_wkt(densify_by_distance(geom_from_wkt('LINESTRING(1 1, 10 1)'), 4))`` → LineString (1 1, 4 1, 7 1, 10 1)
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/densify_geometry_interval.png
+   :align: center
+   :width: 100%
+
+   Densify geometry at a given interval
 
 .. end_densify_by_distance_section
 
@@ -1418,6 +1448,12 @@ Returns the point interpolated by a specified distance along a linestring geomet
        * ``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 1 0)'), distance:=2))`` → NULL
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/interpolated_point.png
+   :align: center
+   :width: 100%
+
+   Interpolated point at 500m of the beginning of the line
+
 .. end_line_interpolate_point_section
 
 .. _expression_function_GeometryGroup_line_locate_point:
@@ -2034,6 +2070,12 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
        * ``offset_curve(@geometry, 10.5, join:=3)`` → line offset to the left by 10.5 units, using a beveled join
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/offset_lines.png
+   :align: center
+   :width: 100%
+
+   In blue the source layer, in red the offset one
+
 .. end_offset_curve_section
 
 .. _expression_function_GeometryGroup_order_parts:
@@ -2078,6 +2120,12 @@ Returns a geometry which represents the minimal oriented bounding box of an inpu
    * - Examples
      - * ``geom_to_wkt( oriented_bbox( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ) ) )`` → 'Polygon ((3 2, 3 4, 1 4, 1 2, 3 2))'
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/oriented_minimum_bounding_box.png
+   :align: center
+   :width: 100%
+
+   Oriented minimum bounding box
 
 .. end_oriented_bbox_section
 
@@ -2500,6 +2548,12 @@ Calculates the approximate pole of inaccessibility for a surface, which is the m
      - * ``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/pole_inaccessibility.png
+   :align: center
+   :width: 100%
+
+   Pole of inaccessibility
+
 .. end_pole_of_inaccessibility_section
 
 .. _expression_function_GeometryGroup_project:
@@ -2586,6 +2640,12 @@ Reverses the direction of a line string by reversing the order of its vertices.
    * - Examples
      - * ``geom_to_wkt(reverse(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)')))`` → 'LINESTRING(2 2, 1 1, 0 0)'
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/reverse_line.png
+   :align: center
+   :width: 100%
+
+   Reversing line direction
 
 .. end_reverse_section
 
@@ -2800,6 +2860,12 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
        * ``single_sided_buffer(@geometry, 10.5, join:=3)`` → line buffered to the left by 10.5 units, using a beveled join
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/single_side_buffer.png
+   :align: center
+   :width: 100%
+
+   Left versus right side buffer on the same vector line layer
+
 .. end_single_sided_buffer_section
 
 .. _expression_function_GeometryGroup_sinuosity:
@@ -2846,6 +2912,12 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
    * - Examples
      - * ``geom_to_wkt(smooth(geometry:=geom_from_wkt('LineString(0 0, 5 0, 5 5)'),iterations:=1,offset:=0.2,min_length:=-1,max_angle:=180))`` → 'LineString (0 0, 4 0, 5 1, 5 5)'
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/smooth_geometry_1.png
+   :align: center
+   :width: 100%
+
+   Increasing number of iterations causes smoother geometries
 
 .. end_smooth_section
 

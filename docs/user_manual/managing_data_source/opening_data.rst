@@ -200,6 +200,7 @@ mesh data sources:
 * :menuselection:`Export Layer --> To File...`
 * :guilabel:`Add Layer to Project`
 * :guilabel:`Layer Properties`
+* :guilabel:`Open with Data Source Manager...`
 * :menuselection:`Manage --> Rename "<name of file>"...` or
   :guilabel:`Delete "<name of file>"...`
 * :guilabel:`Show in Files`
@@ -221,6 +222,13 @@ the layers have been added to the project):
 * A :guilabel:`Preview` panel
 * The attribute table for vector sources (in the :guilabel:`Attributes`
   panel).
+
+Use :guilabel:`Open with Data Source Manager...` to directly open and configure the
+data source in the :guilabel:`Data Source Manager` using the URI of your data source.
+This simplifies the process of adding a layer from the :guilabel:`Browser`
+by allowing you to set specific opening options for the data source.
+It is currently available for vector (including the dedicated GeoPackage entry), raster,
+and SpatiaLite data sources.
 
 To add a layer to the project using the :guilabel:`Browser`:
 
@@ -1522,6 +1530,8 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
 * a :guilabel:`Name`
 * the :guilabel:`URL`
+* a :guilabel:`Prefix`: This is used to specify the proxy prefix in the URL,
+  which is necessary for some ArcGIS servers that use web proxy prefixes. 
 * a :guilabel:`Community endpoint URL`
 * a :guilabel:`Content endpoint URL`
 * the :ref:`authentication <authentication_index>` configuration if necessary

@@ -680,6 +680,7 @@ guidelines:
   LayoutItem                                ``layoutitem``
   Color                                     ``color``
   Scale                                     ``scale``
+  Map theme                                 ``map theme``
   ========================================  =========================  ====================
 
 

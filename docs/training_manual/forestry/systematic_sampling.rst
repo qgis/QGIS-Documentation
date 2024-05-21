@@ -1,4 +1,4 @@
-|LS| Systematic Sampling Design
+Lesson: Systematic Sampling Design
 ===============================================================================
 
 You have already digitized a set of polygons that represent the forest stands,
@@ -36,8 +36,8 @@ the sample plots are usually decided following statistical, economical and
 practical considerations. If you have no forestry knowledge, you might be
 interested in reading `this Wikipedia article <https://en.wikipedia.org/wiki/Forest_inventory>`_.
 
-|basic| |FA| Implementing a Systematic Sampling Plot Design
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Implementing a Systematic Sampling Plot Design
+---------------------------------------------------------------------------------------
 
 For the forest you are working with, the manager has decided that a systematic
 sampling design is the most appropriate for this forest and has decided that a
@@ -128,10 +128,9 @@ You can create a new column for the ``systematic_plots_clip`` layer:
    #. Enter ``Plot_id`` as :guilabel:`Output field name`
    #. Set the :guilabel:`Output field type` to :guilabel:`Text (string)`.
    #. In the :guilabel:`Expression` field, write, copy or construct this formula
-      ``concat('P_', @rownum )``. Remember that you can also double click on the
+      ``concat('P_', @row_number )``. Remember that you can also double click on the
       elements inside the :guilabel:`Function list`. The ``concat`` function can
-      be found under :guilabel:`String` and ``@rownum`` is under the :guilabel:`Variables
-      and values` group.
+      be found under :guilabel:`String` and ``@row_number`` is under the :guilabel:`Variables` group.
 #. Click :guilabel:`OK`.
 #. Disable the edit mode and save your changes.
 
@@ -142,7 +141,7 @@ new ``Plot_id`` field.
 .. figure:: img/labelled_plots.png
    :align: center
 
-|basic| |FA| Exporting Sample Plots as GPX format
+:abbr:`★☆☆ (Basic level)` Follow Along: Exporting Sample Plots as GPX format
 -------------------------------------------------------------------------------
 
 The field teams will be probably using a GPS device to locate the sample plots
@@ -184,7 +183,7 @@ information about it in the section :ref:`working_gps` in the **QGIS User Manual
 
 Save your QGIS project now.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You just saw how easily you can create a systematic sampling design to be used
@@ -192,7 +191,7 @@ in a forest inventory. Creating other types of sampling designs will involve
 the use of different tools within QGIS, spreadsheets or scripting to calculate
 the coordinates of the sample plots, but the general idea remains the same.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 In the next lesson you will see how to use the Atlas capabilities in QGIS to
@@ -206,11 +205,6 @@ navigate to the sample plots assigned to them.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |gdal| image:: /static/common/gdal.png

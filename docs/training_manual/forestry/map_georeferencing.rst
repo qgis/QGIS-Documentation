@@ -1,4 +1,4 @@
-|LS| Georeferencing a Map
+Lesson: Georeferencing a Map
 ===============================================================================
 
 A common forestry task would be the update of the information for a forestry
@@ -14,7 +14,7 @@ georeferencing your paper map.
 
 **The goal for this lesson:** To learn to use the Georeferencer tool in QGIS.
 
-|basic| Scan the map
+:abbr:`★☆☆ (Basic level)` Scan the map
 -------------------------------------------------------------------------------
 
 The first task you will have to do is to scan your map. If your map is too big,
@@ -31,7 +31,7 @@ use those colors to separate information from your map into different  layers
 For this exercise you will use a previously scanned map, you can find it as
 :file:`rautjarvi_map.tif` in the data folder :file:`exercise_data/forestry`
 
-|basic| |FA| Georeferencing the scanned map
+:abbr:`★☆☆ (Basic level)` Follow Along: Georeferencing the scanned map
 -------------------------------------------------------------------------------
 
 #. Open QGIS and set the project's CRS to ``EPSG:3067 - ETRS89 / TM35FIN(E,N)``
@@ -148,13 +148,13 @@ Finally, georeference your map:
 #. Save the changes to your QGIS project, you will continue from this point for the
    next lesson.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You have now georeferenced a paper map, making it possible to use it as a map
 layer in QGIS.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 In the next lesson, you will digitize the forest stands in your map as polygons
@@ -167,11 +167,6 @@ and add the inventory data to them.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |georefRun| image:: /static/common/mGeorefRun.png

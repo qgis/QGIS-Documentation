@@ -1,4 +1,4 @@
-|LS| Introduction to Databases
+Lesson: Introduction to Databases
 ===============================================================================
 
 Before using PostgreSQL, let's make sure of our ground by covering general
@@ -118,7 +118,7 @@ Modelling an Address Database
 Let's use a simple case study to see how a database is constructed. We want to
 create an address database.
 
-|TY| |basic|
+Try Yourself: :abbr:`★☆☆ (Basic level)`
 ...............................................................................
 
 Write down the properties which make up a simple address and which we would want
@@ -205,7 +205,7 @@ Imagine you have many friends with the same street name or city. Every time
 this data is duplicated, it consumes space. Worse still, if a city name
 changes, you have to do a lot of work to update your database.
 
-|TY| |basic|
+Try Yourself: :abbr:`★☆☆ (Basic level)`
 -------------------------------------------------------------------------------
 Redesign the theoretical `people` table above to reduce duplication and to
 normalise the data structure.
@@ -336,7 +336,7 @@ this:
 The ER Diagram helps us to express 'one to many' relationships. In this case
 the arrow symbol show that one street can have many people living on it.
 
-|TY| |moderate|
+Try Yourself: :abbr:`★★☆ (Moderate level)`
 ...............................................................................
 
 Our `people` model still has some normalisation issues - try to see if you can
@@ -431,28 +431,14 @@ this:
 If something goes wrong during the process (e.g. power failure), the
 transaction will be rolled back.
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 Databases allow you to manage data in a structured way using simple code
 structures.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 Now that we've looked at how databases work in theory, let's create a new
 database to implement the theory we've covered.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
-.. |basic| image:: /static/common/basic.png
-.. |moderate| image:: /static/common/moderate.png

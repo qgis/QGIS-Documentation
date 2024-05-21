@@ -104,30 +104,6 @@ you may want to enable more features such as:
 
 Press :guilabel:`Apply Configuration Changes`.
 
-By default, Qt Creator uses all the CPU cores available to speed the build with
-maximum parallelization. To avoid that your computer freezes, you should specify a
-smaller number of cores. Under the :guilabel:`Build Steps` section:
-
-#. Press the :menuselection:`Add build step -->` menu and select
-   :guilabel:`Custom Process Step`
-#. Fill the new form as follows:
-
-   * :guilabel:`Command`: ``make``
-   * :guilabel:`Arguments`: ``-j4`` to use 4 cores (setting depends on your device)
-   * :guilabel:`Working directory`: ``%{buildDir}``
-
-.. image:: img/customProcess.png
-
-.. note::
-
-  Also, if you want to reduce your build times, you can do it with ``ninja``, an
-  alternative to ``make`` with similar build options. You'd need to set it as
-  the :guilabel:`CMake generator`:
-  
-  #. Open :menuselection:`Tools --> Options --> Build & Run --> Kits`
-  #. Select the :guilabel:`Desktop (default)` kit entry, displaying its properties
-  #. Press :guilabel:`Change...` next to :guilabel:`CMake generator`
-
 You are now ready to build. Press the |build| :sup:`Build` button at the left
 bottom of the dialog (or :kbd:`Ctrl+B`) to launch the project build! Qt Creator
 will begin compiling and this may take some time the first time, depending on your
