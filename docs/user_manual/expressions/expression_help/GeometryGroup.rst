@@ -2820,7 +2820,7 @@ Simplifies a geometry by removing nodes using a distance based threshold (ie, th
    :align: center
    :width: 100%
 
-   Clockwise from top left: source layer and increasing simplification tolerances
+   From left to right, source layer and increasing simplification tolerances
 
 .. end_simplify_section
 
@@ -3185,7 +3185,7 @@ Constructs triangular waves along the boundary of a geometry.
      - * ``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Triangular waves with wavelength 3 and amplitude 1 along the linestring
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave_randomized.*
+.. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave.*
    :align: center
    :width: 100%
 
@@ -3303,7 +3303,7 @@ Constructs randomized curved (sine-like) waves along the boundary of a geometry.
      - * ``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized curved waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave_randomized.*
+.. figure:: /docs/user_manual/expressions/expression_help/img/wave_randomized.*
    :align: center
    :width: 100%
 
