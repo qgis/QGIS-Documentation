@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -183,6 +183,14 @@ msgid ""
 "Available values for the ``VERSION`` parameter are:"
 msgstr ""
 "このパラメータでは、使用するサービスのバージョンを指定することができます。``VERSION`` パラメータに指定できる値は以下の通りです:"
+
+#: ../../docs/server_manual/services/wfs.rst:62
+msgid "``1.0.0``"
+msgstr "``1.0.0``"
+
+#: ../../docs/server_manual/services/wfs.rst:63
+msgid "``1.1.0``"
+msgstr "``1.1.0``"
 
 #: ../../docs/server_manual/services/wfs.rst:65
 msgid ""
@@ -367,6 +375,42 @@ msgstr ""
 msgid "Available values are:"
 msgstr "利用可能な値は次の通り:"
 
+#: ../../docs/server_manual/services/wfs.rst:189
+msgid "``gml2``"
+msgstr "``gml2``"
+
+#: ../../docs/server_manual/services/wfs.rst:190
+msgid "``text/xml; subtype=gml/2.1.2``"
+msgstr "``text/xml; subtype=gml/2.1.2``"
+
+#: ../../docs/server_manual/services/wfs.rst:191
+msgid "``gml3``"
+msgstr "``gml3``"
+
+#: ../../docs/server_manual/services/wfs.rst:192
+msgid "``text/xml; subtype=gml/3.1.1``"
+msgstr "``text/xml; subtype=gml/3.1.1``"
+
+#: ../../docs/server_manual/services/wfs.rst:193
+msgid "``geojson``"
+msgstr "``geojson``"
+
+#: ../../docs/server_manual/services/wfs.rst:194
+msgid "``application/vnd.geo+json``,"
+msgstr "``application/vnd.geo+json``,"
+
+#: ../../docs/server_manual/services/wfs.rst:195
+msgid "``application/vnd.geo json``"
+msgstr "``application/vnd.geo json``"
+
+#: ../../docs/server_manual/services/wfs.rst:196
+msgid "``application/geo+json``"
+msgstr "``application/geo+json``"
+
+#: ../../docs/server_manual/services/wfs.rst:197
+msgid "``application/geo json``"
+msgstr "``application/geo json``"
+
 #: ../../docs/server_manual/services/wfs.rst:198
 msgid "``application/json``"
 msgstr "``application/json``"
@@ -393,6 +437,10 @@ msgstr "``results``: デフォルトの動作"
 msgid "``hits``: returns only a feature count"
 msgstr "``hits``: 地物の数だけを返します"
 
+#: ../../docs/server_manual/services/wfs.rst:275
+msgid "PROPERTYNAME"
+msgstr "PROPERTYNAME"
+
 #: ../../docs/server_manual/services/wfs.rst:277
 msgid ""
 "This parameter may be used to specify a specific property to return. A "
@@ -409,6 +457,10 @@ msgstr "有効なURLの例:"
 msgid "On the contrary, the next URL will return an exception:"
 msgstr "対して、次のURLでは例外が返されます:"
 
+#: ../../docs/server_manual/services/wfs.rst:310
+msgid "MAXFEATURES"
+msgstr "MAXFEATURES"
+
 #: ../../docs/server_manual/services/wfs.rst:312
 msgid ""
 "This parameter allows to limit the number of features returned by the "
@@ -420,6 +472,10 @@ msgid ""
 "This parameter may be useful to improve performances when underlying vector "
 "layers are heavy."
 msgstr "このパラメータは、下層のベクタレイヤが重い場合にパフォーマンスを向上させるのに有効な場合があります。"
+
+#: ../../docs/server_manual/services/wfs.rst:333
+msgid "SRSNAME"
+msgstr "SRSNAME"
 
 #: ../../docs/server_manual/services/wfs.rst:335
 msgid ""
@@ -474,6 +530,10 @@ msgid ""
 "will result in an exception:"
 msgstr "``FEATUREID`` パラメータは ``BBOX`` と共に使用することはできません。使用しようとすると、例外が発生します:"
 
+#: ../../docs/server_manual/services/wfs.rst:440
+msgid "SORTBY"
+msgstr "SORTBY"
+
 #: ../../docs/server_manual/services/wfs.rst:442
 msgid ""
 "This parameter allows to sort resulting features according to property "
@@ -486,13 +546,49 @@ msgstr ""
 msgid "Available values for ``SORTRULE`` in case of descending sorting:"
 msgstr "降順にソートする場合に ``SORTRULE`` に指定できる値は次の通りです:"
 
+#: ../../docs/server_manual/services/wfs.rst:447
+msgid "``D``"
+msgstr "``D``"
+
+#: ../../docs/server_manual/services/wfs.rst:448
+msgid "``+D``"
+msgstr "``+D``"
+
+#: ../../docs/server_manual/services/wfs.rst:449
+msgid "``DESC``"
+msgstr "``DESC``"
+
+#: ../../docs/server_manual/services/wfs.rst:450
+msgid "``+DESC``"
+msgstr "``+DESC``"
+
 #: ../../docs/server_manual/services/wfs.rst:453
 msgid "Available values for ``SORTRULE`` in case of ascending sorting:"
 msgstr "昇順にソートする場合に、``SORTRULE`` に指定できる値は次の通りです:"
 
+#: ../../docs/server_manual/services/wfs.rst:455
+msgid "``A``"
+msgstr "``A``"
+
+#: ../../docs/server_manual/services/wfs.rst:456
+msgid "``+A``"
+msgstr "``+A``"
+
+#: ../../docs/server_manual/services/wfs.rst:457
+msgid "``ASC``"
+msgstr "``ASC``"
+
+#: ../../docs/server_manual/services/wfs.rst:458
+msgid "``+ASC``"
+msgstr "``+ASC``"
+
 #: ../../docs/server_manual/services/wfs.rst:473
 msgid "The corresponding result:"
 msgstr "対応する結果です:"
+
+#: ../../docs/server_manual/services/wfs.rst:502
+msgid "GEOMETRYNAME"
+msgstr "GEOMETRYNAME"
 
 #: ../../docs/server_manual/services/wfs.rst:504
 msgid ""
@@ -508,6 +604,14 @@ msgstr "``extent``"
 msgid "``centroid``"
 msgstr "``重心``"
 
+#: ../../docs/server_manual/services/wfs.rst:509
+msgid "``none``"
+msgstr "``none``"
+
+#: ../../docs/server_manual/services/wfs.rst:526
+msgid "STARTINDEX"
+msgstr "STARTINDEX"
+
 #: ../../docs/server_manual/services/wfs.rst:528
 msgid ""
 "This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0."
@@ -522,12 +626,20 @@ msgstr ""
 "実際には、結果セットの一部の地物をスキップするために使用することができ、``MAXFEATURES`` "
 "と組み合わせることで、結果をページ送りする機能を提供します。"
 
+#: ../../docs/server_manual/services/wfs.rst:550
+msgid "EXP_FILTER"
+msgstr "EXP_FILTER"
+
 #: ../../docs/server_manual/services/wfs.rst:552
 msgid ""
 "This parameter allows to filter the response with QGIS expressions. The "
 "``;`` character is used to separate filters in case of multiple typenames."
 msgstr ""
 "このパラメータを使用すると、QGIS式でレスポンスをフィルタすることができます。型名が複数ある場合、``;`` 文字でフィルタを区切ることができます。"
+
+#: ../../docs/server_manual/services/wfs.rst:569
+msgid "DescribeFeatureType"
+msgstr "DescribeFeatureType"
 
 #: ../../docs/server_manual/services/wfs.rst:571
 msgid ""
@@ -576,8 +688,16 @@ msgid "Name of the request (**Transaction**)"
 msgstr "リクエストの名称 (**Transaction**)"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`OPERATION <wfs_transaction_operation>`"
+msgstr ":ref:`OPERATION <wfs_transaction_operation>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Specify the operation"
 msgstr "操作を指定します"
+
+#: ../../docs/server_manual/services/wfs.rst:670
+msgid "OPERATION"
+msgstr "OPERATION"
 
 #: ../../docs/server_manual/services/wfs.rst:672
 msgid ""
