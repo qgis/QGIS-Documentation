@@ -32,13 +32,83 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:13
+msgid "Using the Map Canvas"
+msgstr "맵 캔버스 사용하기"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:15
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
 msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:50
+msgid ""
+"The Map canvas widget is probably the most important widget within QGIS "
+"because it shows the map composed from overlaid map layers and allows "
+"interaction with the map and layers. The canvas always shows a part of the "
+"map defined by the current canvas extent. The interaction is done through "
+"the use of **map tools**: there are tools for panning, zooming, identifying "
+"layers, measuring, vector editing and others. Similar to other graphics "
+"programs, there is always one tool active and the user can switch between "
+"the available tools."
+msgstr ""
+"맵 캔버스가 중첩하는 맵 레이어들로 구성된 맵을 보여주고 맵과 레이어들과 쌍방향 작업을 할 수 있게 해주기 때문에, 맵 캔버스 위젯은 "
+"아마도 QGIS에서 가장 중요한 위젯일 겁다. 맵 캔버스는 항상 현재 캔버스 범위로 정의되는 맵의 일부분을 보여줍니다. 쌍방향 작업은 "
+"**맵 도구** 를 사용해서 이루어집니다: 이동(pan), 확대/축소(zoom), 레이어 식별, 측정, 벡터 편집, 그리고 기타 작업들을"
+" 위한 도구들이 있습니다. 다른 그래픽 프로그램들처럼, 도구 하나는 항상 활성화되어 있는 상태이며 여러분은 사용할 수 있는 다른 도구들로"
+" 전환할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:58
+msgid ""
+"The map canvas is implemented with the :class:`QgsMapCanvas "
+"<qgis.gui.QgsMapCanvas>` class in the :pyqgis:`qgis.gui <gui>` module. The "
+"implementation is based on the Qt Graphics View framework. This framework "
+"generally provides a surface and a view where custom graphics items are "
+"placed and user can interact with them.  We will assume that you are "
+"familiar enough with Qt to understand the concepts of the graphics scene, "
+"view and items. If not, please read the `overview of the framework "
+"<https://doc.qt.io/qt-5/graphicsview.html>`_."
+msgstr ""
+"맵 캔버스는 :pyqgis:`qgis.gui <gui>` 모듈에 있는 :class:`QgsMapCanvas "
+"<qgis.gui.QgsMapCanvas>` 클래스로 구현됩니다. 이 구현은 Qt 그래픽스 뷰 프레임워크를 기반으로 합니다. 이 "
+"프레임워크는 일반적으로 사용자 정의 그래픽 항목을 배치하고 쌍방향 작업을 할 수 있는 표면(surface)과 뷰(view)를 제공합니다."
+" 여러분이 그래픽 신(scene), 뷰, 항목이라는 개념을 충분히 이해할 만큼 Qt에 익숙하다고 가정할 것입니다. 그렇지 않을 경우, "
+"`프레임워크의 개요 <https://doc.qt.io/qt-5/graphicsview.html>`_ 를 읽어보시기 바랍니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:67
+msgid ""
+"Whenever the map has been panned, zoomed in/out (or some other action that "
+"triggers a refresh), the map is rendered again within the current extent. "
+"The layers are rendered to an image (using the :class:`QgsMapRendererJob "
+"<qgis.core.QgsMapRendererJob>` class) and that image is displayed on the "
+"canvas. The :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` class also "
+"controls refreshing of the rendered map. Besides this item which acts as a "
+"background, there may be more **map canvas items**."
+msgstr ""
+"맵을 이동시키거나 확대/축소할 (또는 새로고침을 촉발하는 기타 다른 액션을 취할) 때마다, 현재 범위 안에 있는 맵을 다시 렌더링합니다."
+" 레이어를 (:class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>` 클래스를 사용해서) "
+"이미지로 렌더링해서, 캔버스에 이 이미지를 보이는 것입니다. :class:`QgsMapCanvas "
+"<qgis.gui.QgsMapCanvas>` 클래스는 렌더링된 맵의 새로고침도 제어합니다. 배경 역할을 하는 이 항목 외에, 더 많은 "
+"**맵 캔버스 항목들** 이 있을 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:73
+msgid ""
+"Typical map canvas items are rubber bands (used for measuring, vector "
+"editing etc.) or vertex markers. The canvas items are usually used to give "
+"visual feedback for map tools, for example, when creating a new polygon, the"
+" map tool creates a rubber band canvas item that shows the current shape of "
+"the polygon. All map canvas items are subclasses of :class:`QgsMapCanvasItem"
+" <qgis.gui.QgsMapCanvasItem>`  which adds some more functionality to the "
+"basic ``QGraphicsItem`` objects."
+msgstr ""
+"전형적인 맵 캔버스 항목이라고 하면 (측정, 벡터 편집 등등에 쓰이는) 고무줄(rubber band) 또는 꼭짓점 마커 등등이 있습니다."
+" 이런 캔버스 항목들은 보통 맵 도구들을 위한 가시적 피드백을 주기 위해 사용됩니다. 예를 들면 새 폴리곤을 생성할 때 맵 도구가 "
+"폴리곤의 현재 형태를 보여주는 고무줄 캔버스 항목을 생성합니다. 모든 맵 캔버스 항목은 기본 ``QGraphicsItem`` 객체에 더 "
+"많은 기능을 추가하는 :class:`QgsMapCanvasItem <qgis.gui.QgsMapCanvasItem>` 클래스의 하위 "
+"클래스입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:82
 msgid "To summarize, the map canvas architecture consists of three concepts:"
@@ -48,17 +118,67 @@ msgstr "요약하면 맵 캔버스 아키텍처는 다음 3가지 개념으로 �
 msgid "map canvas --- for viewing of the map"
 msgstr "맵 캔버스 --- 맵을 보여주는 데 쓰입니다."
 
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:85
+msgid ""
+"map canvas items --- additional items that can be displayed on the map "
+"canvas"
+msgstr "맵 캔버스 항목 --- 맵 캔버스에 보일 수 있는 추가적인 항목들입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:86
+msgid "map tools --- for interaction with the map canvas"
+msgstr "맵 도구 --- 맵 캔버스와 쌍방향 작업을 하는 데 쓰입니다."
+
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:91
 msgid "Embedding Map Canvas"
 msgstr "맵 캔버스 내장시키기"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:93
+msgid ""
+"Map canvas is a widget like any other Qt widget, so using it is as simple as"
+" creating and showing it."
+msgstr "맵 캔버스는 다른 모든 Qt 위젯과 마찬가지이기 때문에, 이를 사용하는 방법도 생성하고 보이는 방법처럼 간단합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:101
+msgid ""
+"This produces a standalone window with map canvas. It can be also embedded "
+"into an existing widget or window. When using :file:`.ui` files and Qt "
+"Designer, place a ``QWidget`` on the form and promote it to a new class: set"
+" ``QgsMapCanvas`` as class name and set ``qgis.gui`` as header file. The "
+"``pyuic5`` utility will take care of it. This is a very convenient way of "
+"embedding the canvas. The other possibility is to manually write the code to"
+" construct map canvas and other widgets (as children of a main window or "
+"dialog) and create a layout."
+msgstr ""
+"이 코드는 맵 캔버스를 가진 독립형(standalone) 창을 생성합니다. 기존 위젯이나 창에 맵 캔버스 창을 내장시킬 수도 있습니다. "
+":file:`.ui` 파일과 Qt 설계자를 사용할 때, 양식 상에 ``QWidget`` 을 배치하고 새 클래스로 승격시키십시오: "
+"``QgsMapCanvas`` 를 클래스 이름으로 그리고 ``qgis.gui`` 를 헤더 파일로 설정하십시오. ``pyuic5`` "
+"유틸리티가 이를 처리할 것입니다. 캔버스를 내장시킬 수 있는 매우 편리한 방법입니다. 다른 방법은 맵 캔버스와 기타 위젯들을 (메인 창 "
+"또는 대화창의 하위 창으로써) 작성하는 코드를 직접 입력한 다음 조판(layout)을 생성하는 것입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:109
 msgid ""
 "By default, map canvas has black background and does not use anti-aliasing. "
 "To set white background and enable anti-aliasing for smooth rendering"
 msgstr ""
-"맵 캔버스의 초기값은 배경은 검은색, 안티알리아싱은 사용하지 않는 것입니다. 배경을 하얀색으로 설정하고 부드러운 렌더링을 위해 "
-"안티알리아싱을 활성화하려면 다음과 같이 하십시오."
+"맵 캔버스는 기본적으로 검은색 배경이고 위신호 제거(anti-aliasing)를 사용하지 않습니다. 배경을 하얀색으로 설정하고 매끄러운 "
+"렌더링을 위해 위신호 제거를 활성화하려면:"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:117
+msgid ""
+"(In case you are wondering, ``Qt`` comes from ``PyQt.QtCore`` module and "
+"``Qt.white`` is one of the predefined ``QColor`` instances.)"
+msgstr ""
+"(여러분이 궁금할 경우를 위해 알려드리자면, ``Qt`` 는 ``PyQt.QtCore`` 모듈에서 나온 것이고 ``Qt.white`` 는"
+" 사전 정의된 ``QColor`` 인스턴스들 가운데 하나입니다.)"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:120
+msgid ""
+"Now it is time to add some map layers. We will first open a layer and add it"
+" to the current project. Then we will set the canvas extent and set the list"
+" of layers for the canvas."
+msgstr ""
+"이제 맵 레이어 몇 개를 추가할 때입니다. 먼저 레이어 하나를 열어서 현재 프로젝트에 추가할 것입니다. 그 다음 캔버스 범위를 설정하고 "
+"캔버스에 보일 레이어 목록을 설정할 것입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:140
 msgid ""
@@ -68,11 +188,31 @@ msgstr "이 명령어들을 실행하면, 사용자가 불러온 레이어가 �
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:146
 msgid "Rubber Bands and Vertex Markers"
-msgstr "고무줄과 버텍스 마커"
+msgstr "고무줄과 꼭짓점 마커"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:148
+msgid ""
+"To show some additional data on top of the map in canvas, use map canvas "
+"items. It is possible to create custom canvas item classes (covered below), "
+"however there are two useful canvas item classes for convenience: "
+":class:`QgsRubberBand <qgis.gui.QgsRubberBand>` for drawing polylines or "
+"polygons, and :class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` for "
+"drawing points. They both work with map coordinates, so the shape is "
+"moved/scaled automatically when the canvas is being panned or zoomed."
+msgstr ""
+"캔버스에 있는 맵 최상단에 추가 데이터를 보이려면 맵 캔버스 항목을 사용하십시오. (`writing-custom-map-canvas-"
+"items`_ 에서 설명할) 사용자 정의 캔버스 항목 클래스를 생성할 수 있지만, 사용자 편의를 위한 유용한 캔버스 항목 클래스 2개가 "
+"있습니다: 폴리라인 또는 폴리곤을 그리기 위한 :class:`QgsRubberBand <qgis.gui.QgsRubberBand>` "
+"클래스와 포인트를 그리기 위한 :class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` 클래스입니다."
+" 두 클래스 모두 맵 좌표를 사용해서 작업하기 때문에, 캔버스를 이동시키거나 확대/축소할 때 형태를 자동으로 이동/크기 조정합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:156
+msgid "To show a polyline:"
+msgstr "폴리라인을 보이려면:"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:164
 msgid "To show a polygon"
-msgstr "폴리곤을 표시하는 방법은 다음과 같습니다."
+msgstr "폴리곤을 보이려면:"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:172
 msgid ""
@@ -80,15 +220,25 @@ msgid ""
 "rings containing linear rings of the polygon: first ring is the outer "
 "border, further (optional) rings correspond to holes in the polygon."
 msgstr ""
-"폴리곤의 포인트들이 1차원 리스트가 아니라는 점에 주의하십시오. 실제로, 폴리곤의 포인트들은 폴리곤의 선형 폐곡선을 담고 있는 폐곡선 "
-"리스트입니다. 첫 번째 폐곡선은 외곽 경계선이고, 그 다음의 (있을 수도 있고 없을 수도 있는) 폐곡선은 폴리곤 내부의 구멍에 "
-"해당합니다."
+"폴리곤의 포인트들이 평범한 목록이 아니라는 점을 기억하십시오. 사실 이 목록은 폴리곤의 선형 고리들을 담고 있는 고리 목록입니다. 첫 "
+"번째 고리는 외곽 경계이며, 그 다음 (있을 수도 있고 없을 수도 있는) 고리들은 폴리곤 내부의 구멍에 해당합니다."
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:176
 msgid ""
 "Rubber bands allow some customization, namely to change their color and line"
 " width"
-msgstr "고무줄을 사용자 지정 할 수 있습니다. 즉 색상 및 선 두께를 변경할 수도 있습니다. "
+msgstr "고무줄을 사용자 정의할 수 있습니다. 즉 색상 및 선 너비를 변경할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:184
+msgid ""
+"The canvas items are bound to the canvas scene. To temporarily hide them "
+"(and show them again), use the :func:`hide` and :func:`show` combo. To "
+"completely remove the item, you have to remove it from the scene of the "
+"canvas"
+msgstr ""
+"캔버스 항목은 캔버스 신(scene)에 바인딩되어 있습니다. 캔버스 항목을 일시적으로 숨기려면 (그리고 다시 보이려면) "
+":func:`hide` 와 :func:`show` 함수 조합을 사용하십시오. 어떤 항목을 완전히 제거하려면, 캔버스 신에서 제거해야 "
+"합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:192
 msgid ""
@@ -96,16 +246,127 @@ msgid ""
 "would just delete the reference and the object will still exist as it is "
 "owned by the canvas)"
 msgstr ""
-"(C++의 경우 아이템을 그냥 삭제하는 것도 가능하지만, 파이썬에서 ``del r`` 명령어는 참조만 삭제할 뿐 실제 오브젝트는 캔버스가"
-" 소유하고 있으므로 계속 남아 있을 것입니다.)"
+"(C++의 경우 항목을 그냥 삭제할 수 있지만, 파이썬의 경우 ``del r`` 명령어는 참조만 삭제할 뿐 실제 객체는 캔버스가 소유하고"
+" 있기 때문에 계속 남아 있을 것입니다.)"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:196
+msgid ""
+"Rubber band can be also used for drawing points, but the "
+":class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` class is better suited "
+"for this (:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` would only draw a "
+"rectangle around the desired point)."
+msgstr ""
+"포인트도 고무줄을 사용해서 그릴 수 있지만, 이 작업에는 :class:`QgsVertexMarker "
+"<qgis.gui.QgsVertexMarker>` 클래스가 더 적합합니다. (:class:`QgsRubberBand "
+"<qgis.gui.QgsRubberBand>` 클래스는 원하는 지점 주위에  직사각형을 그릴 뿐입니다.)"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:200
+msgid "You can use the vertex marker like this:"
+msgstr "꼭짓점 마커는 다음과 같이 사용할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:207
+msgid ""
+"This will draw a red cross on position **[10,45]**. It is possible to "
+"customize the icon type, size, color and pen width"
+msgstr ""
+"이 코드는 **[10,45]** 위치에 빨간색 십자표를 그릴 것입니다. 아이콘의 유형, 크기, 색상, 그리고 펜 너비를 사용자 정의할 수"
+" 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:217
+msgid ""
+"For temporary hiding of vertex markers and removing them from canvas, use "
+"the same methods as for rubber bands."
+msgstr "꼭짓점 마커를 일시적으로 숨기거나 캔버스에서 제거하려면, 고무줄의 경우와 동일한 메소드들을 사용하십시오."
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:223
 msgid "Using Map Tools with Canvas"
 msgstr "캔버스에서 맵 도구 사용하기"
 
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:225
+msgid ""
+"The following example constructs a window that contains a map canvas and "
+"basic map tools for map panning and zooming. Actions are created for "
+"activation of each tool: panning is done with :class:`QgsMapToolPan "
+"<qgis.gui.QgsMapToolPan>`, zooming in/out with a pair of "
+":class:`QgsMapToolZoom <qgis.gui.QgsMapToolZoom>` instances. The actions are"
+" set as checkable and later assigned to the tools to allow automatic "
+"handling of checked/unchecked state of the actions -- when a map tool gets "
+"activated, its action is marked as selected and the action of the previous "
+"map tool is deselected. The map tools are activated using "
+":meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` method."
+msgstr ""
+"다음 예시는 맵 캔버스와 맵 이동 및 확대/축소를 위한 기본 맵 도구를 담고 있는 창일 작성합니다. 각 도구의 활성화를 위한 액션을 "
+"생성합니다: :class:`QgsMapToolPan <qgis.gui.QgsMapToolPan>` 클래스는 이동을 수행하고, "
+":class:`QgsMapToolZoom <qgis.gui.QgsMapToolZoom>` 클래스 인스턴스의 쌍으로 확대/축소를 "
+"수행합니다. 이 액션들을 체크할 수 있게 설정해서, 향후 액션의 체크/체크 해제 상태를 자동으로 처리할 수 있도록 도구에 할당합니다 "
+"--- 어떤 맵 도구를 활성화시킬 때, 해당 도구의 액션을 선택 상태로 표시하고 이전 맵 도구의 액션을 선택 해제합니다. 맵 도구를 "
+"활성화시키는 메소드는 :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` 입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:289
+msgid ""
+"You can try the above code in the Python console editor. To invoke the "
+"canvas window, add the following lines to instantiate the ``MyWnd`` class. "
+"They will render the currently selected layer on the newly created canvas"
+msgstr ""
+"파이썬 콘솔 편집기에서 앞의 코드를 시도해볼 수 있습니다. 캔버스 창을 열려면, ``MyWnd`` 클래스를 초기 설정하는 다음 줄들을 "
+"추가하십시오. 새로 생성한 캔버스 위에 현재 선택된 레이어를 렌더링할 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:301
+msgid "Select a feature using QgsMapToolIdentifyFeature"
+msgstr "QgsMapToolIdentifyFeature를 사용해서 피처 선택하기"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:303
+msgid ""
+"You can use the map tool :class:`QgsMapToolIdentifyFeature "
+"<qgis.gui.QgsMapToolIdentifyFeature>` for asking to the user to select a "
+"feature that will be sent to a callback function."
+msgstr ""
+"사용자에게 콜백(callback) 함수로 전송될 피처 하나를 선택하도록 요청하려면, "
+":class:`QgsMapToolIdentifyFeature <qgis.gui.QgsMapToolIdentifyFeature>` 맵 "
+"도구를 사용하면 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:325
+msgid "Add items to map canvas contextual menu"
+msgstr "맵 캔버스 컨텍스트 메뉴에 항목 추가하기"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:327
+msgid ""
+"Interaction with map canvas can also be done through entries you may add to "
+"its contextual menu using the :attr:`contextMenuAboutToShow "
+"<qgis.gui.QgsMapCanvas.contextMenuAboutToShow>` signal."
+msgstr ""
+":attr:`contextMenuAboutToShow "
+"<qgis.gui.QgsMapCanvas.contextMenuAboutToShow>` 신호를 사용해서 맵 캔버스의 컨텍스트 메뉴에 추가할"
+" 수도 있는 항목들을 통해서도 맵 캔버스와의 쌍방향 작업을 수행할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:331
+msgid ""
+"The following code adds :menuselection:`My menu --> My Action` action next "
+"to default entries when you right-click over the map canvas."
+msgstr ""
+"다음은 맵 캔버스를 오른쪽 클릭할 때 나타나는 기본 항목에 :menuselection:`My menu --> My Action` 액션을 "
+"추가하는 코드입니다."
+
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:350
 msgid "Writing Custom Map Tools"
-msgstr "사용자 지정 맵 도구 작성"
+msgstr "사용자 정의 맵 도구 작성하기"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:352
+msgid ""
+"You can write your custom tools, to implement a custom behavior to actions "
+"performed by users on the canvas."
+msgstr "여러분이 캔버스 상에서 수행하는 액션에 사용자 정의 습성을 구현하기 위한 사용자 정의 도구를 작성할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:355
+msgid ""
+"Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`,"
+" class or any derived class, and selected as active tools in the canvas "
+"using the :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` method as "
+"we have already seen."
+msgstr ""
+"맵 도구는 클래스든 파생 클래스든 :class:`QgsMapTool <qgis.gui.QgsMapTool>` 클래스로부터 상속받아야 "
+"하며, 이미 앞에서 본 바와 같이 캔버스에서 :meth:`setMapTool() "
+"<qgis.gui.QgsMapCanvas.setMapTool>` 메소드를 사용해서 활성 도구로써 선택되어야 합니다."
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:360
 msgid ""
@@ -115,9 +376,13 @@ msgid ""
 "elements described before to show the selected rectangle as it is being "
 "defined."
 msgstr ""
-"다음 예시 코드는 캔버스 상에서 클릭과 드래그로 사각형 범위를 정의하도록 해주는 맵 도구입니다. 사각형이 정의되면, 콘솔에 그 범위 "
-"좌표를 출력합니다. 이전에 설명했던 고무줄 기능을 사용해서 확정되기 전의 사각형을 표시할 것입니다."
+"다음 예시는 캔버스 상에서 클릭&드래그로 직사각형 범위를 정의하도록 해주는 맵 도구의 코드입니다. 직사각형을 정의하면, 콘솔에 그 경계 "
+"좌표를 출력합니다. 앞에서 설명했던 고무줄 기능을 사용해서 정의되고 있는 직사각형을 보일 것입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:434
 msgid "Writing Custom Map Canvas Items"
-msgstr "사용자 지정 맵 캔버스 아이템 작성"
+msgstr "사용자 정의 맵 캔버스 항목 작성하기"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:436
+msgid "Here is an example of a custom canvas item that draws a circle:"
+msgstr "다음은 원을 그리는 사용자 정의 캔버스 항목의 예시입니다:"
