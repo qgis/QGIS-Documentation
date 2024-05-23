@@ -32,15 +32,41 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:14
 msgid "Map Rendering and Printing"
-msgstr "맵 렌더링 및 출력"
+msgstr "맵 렌더링 및 출력하기"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:16
+msgid "The code snippets on this page need the following imports:"
+msgstr "이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:60
+msgid ""
+"There are generally two approaches when input data should be rendered as a "
+"map: either do it quick way using `QgsMapRendererJob` or produce more fine-"
+"tuned output by composing the map with the :class:`QgsLayout "
+"<qgis.core.QgsLayout>` class."
+msgstr ""
+"입력 데이터를 맵으로 렌더링해야 하는 경우 일반적으로 두 가지 접근법이 있습니다: :class:`QgsMapRendererJob "
+"<qgis.core.QgsMapRendererJob>` 클래스를 사용해서 렌더링하는 빠른 방법 또는 맵을 :class:`QgsLayout"
+" <qgis.core.QgsLayout>` 클래스로 구성해서 좀 더 미세 조정한 산출물을 생성하는 방법입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:67
 msgid "Simple Rendering"
 msgstr "단순 렌더링"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:69
+msgid ""
+"The rendering is done creating a :class:`QgsMapSettings "
+"<qgis.core.QgsMapSettings>` object to define the rendering settings, and "
+"then constructing a :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>`"
+" with those settings. The latter is then used to create the resulting image."
+msgstr ""
+"렌더링 설정을 정의하는 :class:`QgsMapSettings <qgis.core.QgsMapSettings>` 객체를 생성한 다음 "
+"해당 설정으로 :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>` 클래스를 작성해서 "
+"렌더링을 수행합니다. 후자는 산출 이미지를 생성하는 데 쓰입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:73
 msgid "Here's an example:"
@@ -50,11 +76,107 @@ msgstr "다음은 그 예시입니다."
 msgid "Rendering layers with different CRS"
 msgstr "서로 다른 좌표계를 가진 레이어들을 렌더링하기"
 
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:109
+msgid ""
+"If you have more than one layer and they have a different CRS, the simple "
+"example above will probably not work: to get the right values from the "
+"extent calculations you have to explicitly set the destination CRS"
+msgstr ""
+"레이어가 하나 이상 있는데 그 레이어들이 서로 다른 좌표계를 가지고 있는 경우, 앞의 단순 예시는 아마도 작동하지 않을 것입니다. 범위 "
+"계산으로부터 올바른 값들을 얻으려면 대상 좌표계를 명확하게 설정해야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:124
+msgid "Output using print layout"
+msgstr "인쇄 조판을 사용해서 산출하기"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:126
+msgid ""
+"Print layout is a very handy tool if you would like to do a more "
+"sophisticated output than the simple rendering shown above. It is possible "
+"to create complex map layouts consisting of map views, labels, legend, "
+"tables and other elements that are usually present on paper maps. The "
+"layouts can be then exported to PDF, SVG, raster images or directly printed "
+"on a printer."
+msgstr ""
+"앞에서 본 단순 렌더링보다 좀 더 세련된 산출물을 생성하고 싶은 경우, 인쇄 조판(print layout)이 매우 유용한 도구입니다. 맵"
+" 뷰, 라벨, 범례, 표 그리고 보통 종이 지도에서 볼 수 있는 기타 요소들로 이루어진 복잡한 맵 조판을 생성할 수 있습니다. 나중에 이"
+" 조판을 PDF, SVG, 래스터 이미지로 내보내거나 프린터에서 직접 인쇄할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:132
+msgid ""
+"The layout consists of a bunch of classes. They all belong to the core "
+"library. QGIS application has a convenient GUI for placement of the "
+"elements, though it is not available in the GUI library. If you are not "
+"familiar with `Qt Graphics View framework "
+"<https://doc.qt.io/qt-5/graphicsview.html>`_, then you are encouraged to "
+"check the documentation now, because the layout is based on it."
+msgstr ""
+"조판은 클래스 여러 개들로 이루어집니다. 이 클래스들은 모두 핵심 라이브러리에 속해 있습니다. QGIS 응용 프로그램은 이런 요소들을 "
+"배치하기 위한 편리한 GUI를 가지고 있지만, GUI 라이브러리에서 이 GUI를 사용할 수는 없습니다. 여러분이 `Qt 그래픽스 뷰 "
+"프레임워크 <https://doc.qt.io/qt-5/graphicsview.html>`_ 에 익숙하지 않은 경우, 조판이 이 "
+"프레임워크를 기반으로 하기 때문에, 지금 해당 문서를 읽어볼 것을 권장합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:139
+msgid ""
+"The central class of the layout is the :class:`QgsLayout "
+"<qgis.core.QgsLayout>` class, which is derived from the Qt `QGraphicsScene "
+"<https://doc.qt.io/qt-5/qgraphicsscene.html>`_ class. Let us create an "
+"instance of it:"
+msgstr ""
+"조판의 중심 클래스는 Qt `QGraphicsScene "
+"<https://doc.qt.io/qt-5/qgraphicsscene.html>`_ 클래스에서 파생된 :class:`QgsLayout "
+"<qgis.core.QgsLayout>` 클래스입니다. 이 클래스의 인스턴스를 생성해봅시다:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:149
+msgid ""
+"This initializes the layout with some default settings, specifically by "
+"adding an empty A4 page to the layout. You can create layouts without "
+"calling the :meth:`initializeDefaults() "
+"<qgis.core.QgsLayout.initializeDefaults>` method, but you'll need to take "
+"care of adding pages to the layout yourself."
+msgstr ""
+"이 코드는 몇몇 기본 설정으로, 그 중에서도 조판에 비어 있는 A4 페이지를 추가해서 조판을 초기 설정합니다. "
+":meth:`initializeDefaults() <qgis.core.QgsLayout.initializeDefaults>` 메소드를 "
+"호출하지 않고서도 조판을 생성할 수 있지만, 여러분이 조판에 페이지를 직접 추가해야 할 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:154
+msgid ""
+"The previous code creates a \"temporary\" layout that is not visible in the "
+"GUI. It can be handy to e.g. quickly add some items and export without "
+"modifying the project itself nor expose these changes to the user. If you "
+"want the layout to be saved/restored along with the project and available in"
+" the layout manager, then add:"
+msgstr ""
+"앞의 코드는 GUI에 가시화되지 않는 \"임시\" 조판을 생성합니다. 프로젝트 자체를 수정하지 않고, 또는 사용자에게 이런 변경 사항을 "
+"노출시키지 않고서도 몇몇 항목들을 빠르게 추가하고 내보낼 수 있는 편리한 방법입니다. 조판을 프로젝트와 함께 저장하거나 복원하고 조판 "
+"관리자에서 사용할 수 있기를 바라는 경우 다음 코드를 추가하십시오:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:165
+msgid ""
+"Now we can add various elements (map, label, ...) to the layout. All these "
+"objects are represented by classes that inherit from the base "
+":class:`QgsLayoutItem <qgis.core.QgsLayoutItem>` class."
+msgstr ""
+"이제 조판에 여러 가지 (맵, 라벨, ...) 요소들을 추가할 수 있습니다. 이 객체들은 모두 기저 "
+":class:`QgsLayoutItem <qgis.core.QgsLayoutItem>` 클래스에서 상속받은 클래스들로 표현됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:168
+msgid ""
+"Here's a description of some of the main layout items that can be added to a"
+" layout."
+msgstr "다음은 조판에 추가할 수 있는 주요 조판 항목들 가운데 일부를 설명합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:170
+msgid ""
+"map --- Here we create a map of a custom size and render the current map "
+"canvas"
+msgstr "map --- 사용자 정의 크기를 가진 맵을 생성하고 현재 맵 캔버스를 렌더링하는 코드입니다:"
+
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:182
 msgid ""
 "label --- allows displaying labels. It is possible to modify its font, "
 "color, alignment and margin"
-msgstr "라벨 --- 라벨을 표출할 수 있도록 해줍니다. 폰트, 색상, 정렬 및 여백을 수정할 수 있습니다."
+msgstr "label --- 라벨을 보이게 할 수 있게 해주는 코드입니다. 글꼴, 색상, 정렬 및 여백을 수정할 수 있습니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:192
 msgid "legend"
@@ -63,3 +185,116 @@ msgstr "legend"
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:200
 msgid "scale bar"
 msgstr "축척막대(scale bar)"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:210
+msgid "nodes based shape"
+msgstr "노드 기반 형태"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:241
+msgid "Once an item is added to the layout, it can be moved and resized:"
+msgstr "조판에 항목을 추가하고 나면, 항목을 이동시키고 크기를 조정할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:248
+msgid ""
+"A frame is drawn around each item by default. You can remove it as follows:"
+msgstr "기본적으로 각 항목 주위에 프레임을 그립니다. 이 프레임을 다음과 같이 제거할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:255
+msgid ""
+"Besides creating the layout items by hand, QGIS has support for layout "
+"templates which are essentially compositions with all their items saved to a"
+" .qpt file (with XML syntax)."
+msgstr ""
+"조판 항목을 직접 생성하는 방법 이외에, QGIS는 본질적으로 :file:`.qpt` 파일에 모든 조판 항목들을 (XML 문법을 "
+"사용해서) 저장한 조판(composition)인 조판 템플릿을 지원합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:259
+msgid ""
+"Once the composition is ready (the layout items have been created and added "
+"to the composition), we can proceed to produce a raster and/or vector "
+"output."
+msgstr ""
+"이 조판이 준비되고 나면 (조판 항목들을 생성해서 조판에 추가하고 나면) 래스터 그리고/또는 벡터 산출물 생성을 시작할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:263
+msgid "Checking layout validity"
+msgstr "조판 무결성 검증하기"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:265
+msgid ""
+"A layout is a made of a set of interconnected items and it can happen that "
+"these connections are broken during modifications (a legend connected to a "
+"removed map, an image item with missing source file,...) or you may want to "
+"apply custom constraints to the layout items. The "
+":class:`QgsAbstractValidityCheck <qgis.core.QgsAbstractValidityCheck>` helps"
+" you achieve this."
+msgstr ""
+"조판은 상호 연결된 항목들의 집합으로 이루어져 있는데, 수정 작업 동안 이 연결이 깨지는 경우(제거한 맵에 연결된 범례, 누락된 소스 "
+"파일을 가진 이미지 항목 등등)가 있을 수도 있고, 또는 여러분이 조판 항목에 사용자 정의 제약조건을 적용시키고 싶을 수도 있습니다. "
+"이런 경우 :class:`QgsAbstractValidityCheck <qgis.core.QgsAbstractValidityCheck>`"
+" 클래스가 도움이 될 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:270
+msgid "A basic check looks like:"
+msgstr "기본 검증 코드는 다음처럼 보일 겁니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:279
+msgid ""
+"Here's a check which throws a warning whenever a layout map item is set to "
+"the web mercator projection:"
+msgstr "다음은 조판 맵 항목이 웹 메르카토르 투영법으로 설정되어 있을 때마다 경고 메시지를 띄우는 검증 코드의 예시입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:297
+msgid ""
+"And here's a more complex example, which throws a warning if any layout map "
+"items are set to a CRS which is only valid outside of the extent shown in "
+"that map item:"
+msgstr ""
+"그리고 다음은 더 복잡한 예시입니다. 이 코드는 조판 맵 항목이 해당 맵 항목의 범위 바깥에서만 무결한 좌표계로 설정되어 있는 경우 경고"
+" 메시지를 띄웁니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:324
+msgid "Exporting the layout"
+msgstr "조판 내보내기"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:326
+msgid ""
+"To export a layout, the :class:`QgsLayoutExporter "
+"<qgis.core.QgsLayoutExporter>` class must be used."
+msgstr ""
+"조판을 내보내려면, 반드시 :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>` 클래스를"
+" 사용해야만 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:336
+msgid ""
+"Use :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>` or "
+":meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case "
+"you want to export to respectively an SVG or image file instead of a PDF "
+"file."
+msgstr ""
+"여러분이 조판을 SVG 또는 이미지 파일로 아니면 PDF 파일로 내보내고 싶은 경우 각각 :meth:`exportToSvg() "
+"<qgis.core.QgsLayoutExporter.exportToSvg>` 아니면 :meth:`exportToImage() "
+"<qgis.core.QgsLayoutExporter.exportToImage>` 메소드를 사용하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:340
+msgid "Exporting a layout atlas"
+msgstr "조판 지도책 내보내기"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:342
+msgid ""
+"If you want to export all pages from a layout that has the atlas option "
+"configured and enabled, you need to use the :meth:`atlas() "
+"<qgis.core.QgsPrintLayout.atlas>` method in the exporter "
+"(:class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`) with small "
+"adjustments. In the following example, the pages are exported to PNG images:"
+msgstr ""
+"지도책(atlas) 옵션이 환경설정되어 있고 활성화된 조판에서 모든 페이지를 내보내고자 하는 경우, 내보내기 "
+"작업자(:class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>` 클래스)에서 "
+":meth:`atlas() <qgis.core.QgsPrintLayout.atlas>` 메소드를 약간 조정해서 사용해야 합니다. 다음 "
+"예시는 페이지들을 PNG 이미지로 내보내는 코드입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:352
+msgid ""
+"Notice that the outputs will be saved in the base path folder, using the "
+"output filename expression configured on atlas."
+msgstr "산출물이 기본 경로 폴더에 지도책에 대해 환경설정된 산출 파일 이름 표현식을 사용해서 저장될 것이라는 사실을 기억하십시오."
