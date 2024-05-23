@@ -259,7 +259,7 @@ For more details, give a look to `QGIS elevation profile/cross section tool -- a
 .. _export_elevation_profile:
 
 Exporting from the elevation profile
-------------------------------------
+====================================
 
 The top toolbar of the :guilabel:`Elevation profile` dialog provides a variety of tools
 to export an elevation profile, allowing you to reuse the plots in another software:
