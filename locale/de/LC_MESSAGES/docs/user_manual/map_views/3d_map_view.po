@@ -31,77 +31,964 @@ msgid ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. This page is currently translated at |translation progress|."
 msgstr ""
-"Übersetzen ist eine Gemeinschaftsleistung - Sie können mitmachen "
+"Übersetzen ist eine Gemeinschaftsleistung - `Sie können mitmachen "
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. Diese Seite ist aktuell zu  |translation progress| übersetzt."
+"translator>`_. Diese Seite ist aktuell zu |translation progress| übersetzt."
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:6
 msgid "3D Map View"
-msgstr "3D-Ansicht"
+msgstr "3D-Kartenansicht"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:14
+msgid ""
+"3D visualization support is offered through the 3D map view. You can create,"
+" manage and open 3D map views via :menuselection:`View --> 3D Map Views -->`"
+" menu:"
+msgstr ""
+"3D-Visualisierungen werden durch die 3D-Kartenansicht unterstützt. Sie "
+"können 3D-Kartenansichten über das Menü :menuselection:`Ansicht --> "
+"3D-Kartenansichten -->` erstellen, verwalten und öffnen:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:17
+msgid ""
+"By clicking on |new3DMap| :menuselection:`New 3D Map View` you can create a "
+"new 3D map view. A floating and dockable QGIS panel will appear (see "
+":ref:`figure_3dmapview`). It has the same extent and view as the 2D main map"
+" canvas and provides a set of navigation tools to turn the view into 3D."
+msgstr ""
+"Mit einem Klick auf |new3DMap| :menuselection:`Neue 3D-Kartenansicht` können"
+" Sie eine neue 3D-Kartenansicht erstellen. Es erscheint ein schwebendes und "
+"andockbares QGIS Bedienfeld (siehe :ref:`figure_3dmapview`). Diese hat die "
+"gleiche Ausdehnung und Hauptkartenansicht und bietet eine Reihe von "
+"Navigationswerkzeugen, um die Ansicht in eine 3D-Ansicht zu überführen."
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:467
 msgid "new3DMap"
 msgstr "new3DMap"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:21
+msgid ""
+"By clicking on :menuselection:`Manage 3D Map Views` you get in the 3D Map "
+"Views Manager. Here you get the ability to open, duplicate, remove and "
+"rename 3D map views."
+msgstr ""
+"Wenn Sie auf :menuselection:`3D-Kartenansichten verwalten` klicken, gelangen"
+" Sie in die 3D-Kartenansichtsverwaltung. Hier haben Sie die Möglichkeit, "
+"3D-Kartenansichten zu öffnen, zu duplizieren, zu entfernen und umzubenennen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:23
+msgid ""
+"If you created one or more 3D map views, you see them listed in "
+":menuselection:`3D Map Views`. You can turn them on and off by clicking on. "
+"They will be saved by saving the project, even if they are turned off."
+msgstr ""
+"Wenn Sie eine oder mehrere 3D-Kartenansichten erstellt haben, werden diese "
+"in :menuselection:`3D-Kartenansichten` aufgelistet. Sie können sie ein- und "
+"ausschalten, indem Sie darauf klicken. Die Karten werden beim Speichern des "
+"Projekts gespeichert, auch wenn sie nicht aktiv sind."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:32
+msgid "The 3D Map View dialog"
+msgstr "Die 3D-Kartenansicht"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:34
+msgid "The following tools are provided at the top of the 3D map view panel:"
+msgstr ""
+"Am oberen Rand des Bedienfelds für die 3D-Kartenansicht befinden sich die "
+"folgenden Werkzeuge:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:36
+msgid ""
+"|pan| :sup:`Camera Control`: moves the view, keeping the same angle and "
+"direction of the camera"
+msgstr ""
+"|pan| :sup:`Kamerasteuerung`: bewegt die Ansicht, wobei der gleiche Winkel "
+"und die gleiche Richtung der Kamera beibehalten werden"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:471
 msgid "pan"
 msgstr "pan"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:38
+msgid ""
+"|zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole layers' "
+"extent, or the :ref:`reference extent <scene_extent>` if set"
+msgstr ""
+"|zoomFullExtent| :sup:`Volle Ausdehnung`: Ändert die Größe der Ansicht auf "
+"die gesamte Ausdehnung des Layers, oder auf die :ref:`Referenzausdehnung "
+"<scene_extent>`, falls gesetzt"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:487
 msgid "zoomFullExtent"
 msgstr "zoomFullExtent"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:40
+msgid ""
+"|3dNavigation| :sup:`Toggle On-Screen Notification`: shows/hides the "
+"navigation widget (that is meant to ease controlling of the map view)"
+msgstr ""
+"|3dNavigation| :sup:`Bildschirmnavigation umschalten`: zeigt/versteckt das "
+"Navigations-Widget (das die Steuerung der Kartenansicht erleichtern soll)"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:453
 msgid "3dNavigation"
 msgstr "3dNavigation"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:42
+msgid ""
+"|identify| :sup:`Identify`: returns information on the clicked point of the "
+"terrain or the clicked 3D feature(s) -- More details at :ref:`identify`"
+msgstr ""
+"|identify| :sup:`Abfragen`: liefert Informationen über den angeklickten "
+"Punkt des Geländes oder die angeklickten 3D-Elemente -- Mehr Details unter "
+":ref:`identify`"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:463
 msgid "identify"
 msgstr "identify"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:44
+msgid ""
+"|measure| :sup:`Measurement Line`: measures the horizontal distance between "
+"points"
+msgstr ""
+"|measure| :sup:`Maßlinie`: misst den horizontalen Abstand zwischen Punkten"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:465
 msgid "measure"
 msgstr "measure"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:45
+msgid ""
+"|play| :sup:`Animations`: shows/hides the :ref:`animation player "
+"<create_animation>` widget"
+msgstr ""
+"|play| :sup:`Animation`: zeigt/versteckt das "
+":ref:`Animationsspieler<create_animation>` Widget"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:473
 msgid "play"
 msgstr "play"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:47
+msgid ""
+"|saveMapAsImage| :sup:`Save as Image...`: exports the current view to an "
+"image file format"
+msgstr ""
+"|saveMapAsImage| :sup:`Als Bild speichern...`: exportiert die aktuelle "
+"Ansicht in eine Bilddatei"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:475
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:49
+msgid ""
+"|3d| :sup:`Export 3D Scene`: exports the current view as a 3D scene "
+"(:file:`.obj` file), allowing post-processing in applications like "
+"Blender... The terrain and vector features are exported as 3D objects. The "
+"export settings, overriding the layers :ref:`properties <sec_3_d_view>` or "
+"map view :ref:`configuration <scene_configuration>`, include:"
+msgstr ""
+"|3d| :sup:`3D-Szene exportieren`: exportiert die aktuelle Ansicht als "
+"3D-Szene (:file:`.obj`-Datei), was eine Nachbearbeitung in Anwendungen wie "
+"Blender ermöglicht. Das Gelände und die Vektor-Objekte werden als "
+"3D-Elemente exportiert. Sie haben die folgenden Einstellungsmöglichkeiten "
+"für den Export (die Einstellungen hier überschreiben die in den "
+":ref:`Layereigenschaften <sec_3_d_view>` und in der :ref:`3D-Konfiguration "
+"<scene_configuration>`:"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:451
 msgid "3d"
 msgstr "3d"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:55
+msgid ":guilabel:`Scene name` and destination :guilabel:`Folder`"
+msgstr ":guilabel:`Szenenname` und Ziel- :guilabel:`Ordner`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:56
+msgid ":guilabel:`Terrain resolution`"
+msgstr ":guilabel:`Geländeauflösung`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:57
+msgid ":guilabel:`Terrain texture resolution`"
+msgstr ":guilabel:`Geländetexturauflösung`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:58
+msgid ":guilabel:`Model scale`"
+msgstr ":guilabel:`Modellmaßstab`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:59
+msgid "|checkbox| :guilabel:`Smooth edges`"
+msgstr "|checkbox| :guilabel:`Kantenglättung`"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:455
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:60
+msgid "|checkbox| :guilabel:`Export normals`"
+msgstr "|checkbox| :guilabel:`Normale exportieren`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:61
+msgid "|checkbox| :guilabel:`Export textures`"
+msgstr "|checkbox| :guilabel:`Texturen exportieren`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:62
+msgid ""
+"|showPresets| :sup:`Set View Theme`: Allows you to select the set of layers "
+"to display in the map view from predefined :ref:`map themes <map_themes>`."
+msgstr ""
+"|showPresets| :sup:`Kartenthema der Ansicht setzen`: Ermöglicht die Auswahl "
+"der Layer, die in der Kartenansicht angezeigt werden sollen, aus einem "
+"vordefinierten :ref:Kartenthema <map_themes>`."
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:477
 msgid "showPresets"
 msgstr "showPresets"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:64
+msgid "The |options| :sup:`Options` menu provides shortcuts to:"
+msgstr ""
+"Das Menü |options| :sup:`Optionen` bietet die folgenden Möglichkeiten:"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:469
 msgid "options"
 msgstr "options"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:66
+msgid ""
+"Add visual effects to the 3D rendering, such as showing :ref:`shadows "
+"<shadows>`, :ref:`eye dome lighting <eye_dome_lighting>` or :ref:`ambient "
+"occlusion <ambient_occlusion>`"
+msgstr ""
+"Hinzufügen von visuellen Effekten zur 3D-Darstellung, z. B. :ref:`Schatten "
+"<shadows>`, :ref:`Eye-Dome-Lighting <eye_dome_lighting>` oder "
+":ref:`Umgebungsverdeckung <ambient_occlusion>`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:68
+msgid ""
+"Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or "
+":guilabel:`3D camera follows 2D Map view`)"
+msgstr ""
+"Synchronisieren der Ansichten: :guilabel:`2D Kartenansicht folgt 3D Kamera` "
+"und/oder :guilabel:`3D Kamera folgt 2D Kartenansicht`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:70
+msgid ":guilabel:`Show visible camera area in 2D map view`"
+msgstr ":guilabel:`Sichtbaren Kamerabereich in 2D-Kartenansicht anzeigen`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:71
+msgid ""
+"|options| :sup:`Configure` the 3D map view :ref:`settings "
+"<scene_configuration>`."
+msgstr ""
+"|options| :sup:`Konfigurieren` der :ref:`3D-Karteneinstellungen "
+"<scene_configuration>`."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:72
+msgid ""
+"|dock| :sup:`Dock 3D Map View`: switch from docked widget to top level "
+"window"
+msgstr ""
+"|dock| :sup:`3D Kartenansicht andocken`: Wechselt vom angedockten Fenster "
+"zum Fenster in der obersten Ebene"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:457
 msgid "dock"
 msgstr "dock"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:77
+msgid "Scene Configuration"
+msgstr "3D-Konfigurationen"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:79
+msgid ""
+"The 3D map view opens with some default settings you can customize. To do "
+"so, expand the |options| :sup:`Options` menu at the top of the 3D canvas "
+"panel and press the |options| :menuselection:`Configure` button to open the "
+":guilabel:`3D configuration` window."
+msgstr ""
+"Die 3D-Kartenansicht wird mit einigen Standardeinstellungen erstellt, die "
+"Sie anpassen können. Öffnen Sie dazu das Menü |options| :sup:`Optionen` oben"
+" auf dem Bedienfeld der 3D-Kartenansicht und drücken Sie die Schaltfläche "
+"|options| :menuselection:`Konfigurieren`, um das Fenster "
+":guilabel:`3D-Konfigurationen` zu öffnen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:84
+msgid ""
+"In the 3D Configuration window there are various options to fine-tune the 3D"
+" scene:"
+msgstr ""
+"Im Fenster 3D-Konfiguration gibt es verschiedene Optionen zur Feinabstimmung"
+" der 3D-Szene:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:90
+msgid "General"
+msgstr "Allgemein"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:97
+msgid "The 3D Map General Configuration dialog"
+msgstr "Der 3D-Konfigurationen Dialog"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:99
+msgid "Under the |general| :guilabel:`General` tab, you can:"
+msgstr "Unter dem Reiter |general| :guilabel:`Allgemein`, können Sie:"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:461
 msgid "general"
 msgstr "general"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:101
+msgid ""
+"Limit the 3D scene's contents to a 2D map extent, using the :ref:`spatial "
+"extent selector <extent_selector>`: terrain and features are clipped at the "
+"specified extent and only the parts falling within the extent are loaded in "
+"the scene. Elevation range of the terrain, mesh and pointcloud layers is "
+"also taken into account so that the camera is not positioned below the "
+"scene's contents, particularly when using the terrain's vertical scale "
+"setting to exaggerate the elevation differences."
+msgstr ""
+"Begrenzen Sie den Ausschnitt der 3D-Szene auf eine 2D-Kartenausdehnung, "
+"indem Sie die :ref:`Ausdehnungsauswahl <extent_selector>` verwenden: Gelände"
+" und Features werden an der angegebenen Ausdehnung beschnitten und nur die "
+"Teile, die innerhalb der Ausdehnung liegen, werden in die Szene geladen. Der"
+" Höhenbereich der Gelände-, Mesh- und Pointcloud-Layer wird ebenfalls "
+"berücksichtigt, sodass die Kamera nicht unter dem Inhalt der Szene "
+"positioniert wird, insbesondere wenn die vertikale Skalierungseinstellung "
+"des Terrains verwendet wird, um die Höhenunterschiede zu verstärken."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:109
+msgid ""
+"The set extent is also used as reference extent when pressing the "
+"|zoomFullExtent| :sup:`Zoom full` button in 3D map view."
+msgstr ""
+"Die eingestellte Ausdehnung wird auch als Referenzausdehnung verwendet, wenn"
+" Sie die Schaltfläche |zoomFullExtent| :sup:`Volle Ausdehnung` in der "
+"3D-Kartenansicht drücken."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:111
+msgid ""
+"Check |checkbox| :guilabel:`Show in 2D map view` to display in the main map "
+"canvas a rubberband corresponding to the current extent of the 3D scene."
+msgstr ""
+"Aktivieren Sie das Kontrollkästchen :guilabel:`In 2D-Kartenansicht "
+"anzeigen`, um in der Kartenansicht ein Gummiband anzuzeigen, das der "
+"aktuellen Ausdehnung der 3D-Szene entspricht."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:115
+msgid "Terrain"
+msgstr "Gelände"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:122
+msgid "The 3D Map Terrain Configuration dialog"
+msgstr "Der Reiter Gelände des 3D-Konfiguration-Dialogs"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:124
+msgid ""
+":guilabel:`Terrain`: Before diving into the details, it is worth noting that"
+" the terrain in a 3D view is represented by a hierarchy of terrain tiles and"
+" as the camera moves closer to the terrain, existing tiles that do not have "
+"sufficient details are replaced by smaller tiles with more details. Each "
+"tile has mesh geometry derived from the elevation raster layer and texture "
+"from 2D map layers."
+msgstr ""
+":guilabel:`Gelände`: Bevor wir ins Detail gehen, sei darauf hingewiesen, "
+"dass das Gelände in einer 3D-Ansicht durch eine Hierarchie von "
+"Geländekacheln dargestellt wird. Wenn sich die Kamera näher an das Gelände "
+"heran bewegt, werden vorhandene Kacheln, die nicht genügend Details "
+"aufweisen, durch kleinere Kacheln mit mehr Details ersetzt. Jede Kachel hat "
+"eine Netzgeometrie, die aus dem Höhenraster-Layer abgeleitet ist, und eine "
+"Textur aus 2D-Karten-Layern."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:132
+msgid "The elevation terrain :guilabel:`Type` can be:"
+msgstr "Für das Gelände kann ein :guilabel:`Typ` angegeben werden:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:134
+msgid "a :guilabel:`Flat terrain`"
+msgstr ":guilabel:`Flaches Gelände`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:135
+msgid "a loaded :guilabel:`DEM (Raster Layer)`"
+msgstr ":guilabel:`DEM (Rasterlayer)` (muss geladen sein)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:136
+msgid ""
+"an :guilabel:`Online` service, loading `elevation tiles "
+"<http://s3.amazonaws.com/elevation-tiles-prod/>`_ produced by Mapzen tools "
+"-- more details at https://registry.opendata.aws/terrain-tiles/"
+msgstr ""
+":guilabel:`Online`-Dienst: lädt von Mapzen-Tools erstellte Höhenkacheln "
+"<http://s3.amazonaws.com/elevation-tiles-prod/>`_ -- weitere Einzelheiten "
+"unter https://registry.opendata.aws/terrain-tiles/"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:139
+msgid "a loaded :guilabel:`Mesh` dataset"
+msgstr ":guilabel:`Netz` Datensatz"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:140
+msgid ""
+":guilabel:`Elevation`: Raster or mesh layer to be used for generation of the"
+" terrain. The raster layer must contain a band that represents elevation. "
+"For a mesh layer, the Z values of the vertices are used."
+msgstr ""
+":guilabel:`Höhe`: Raster- oder Mesh-Layer, der für die Erstellung des "
+"Geländes verwendet werden soll. Der Raster Layer muss ein Band enthalten, "
+"das die Höhe darstellt. Bei einem Mesh Layer werden die Z-Werte der "
+"Knotenpunkte verwendet."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:144
+msgid ""
+":guilabel:`Vertical scale`: Scale factor for vertical axis. Increasing the "
+"scale will exaggerate the height of the landforms."
+msgstr ""
+":guilabel:`Vertikaler Maßstab`: Skalierungsfaktor für die vertikale Achse. "
+"Wenn Sie den Maßstab erhöhen, wird die Höhe der Landformen überhöht "
+"dargestellt."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:146
+msgid ""
+":guilabel:`Tile resolution`: How many samples from the terrain raster layer "
+"to use for each tile. A value of 16px means that the geometry of each tile "
+"will consist of 16x16 elevation samples. Higher numbers create more detailed"
+" terrain tiles at the expense of increased rendering complexity."
+msgstr ""
+":guilabel:`Kachelauflösung`: stellt ein, wie viele Samples aus dem Terrain "
+"Raster Layer für jede Kachel verwendet werden sollen. Ein Wert von 16px "
+"bedeutet, dass die Geometrie jeder Kachel aus 16x16 Erhebungssamples "
+"besteht. Höhere Werte erzeugen detailliertere Geländekacheln auf Kosten "
+"einer höheren Rendering-Komplexität."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:152
+msgid ""
+":guilabel:`Skirt height`: Sometimes it is possible to see small cracks "
+"between tiles of the terrain. Raising this value will add vertical walls "
+"(\"skirts\") around terrain tiles to hide the cracks."
+msgstr ""
+":guilabel:`Randhöhe`: Manchmal bilden sich kleine Risse zwischen den "
+"Geländekacheln. Wenn Sie diesen Wert erhöhen, werden vertikale Wände um die "
+"Geländekacheln hinzugefügt, um die Risse zu verbergen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:157
+msgid ""
+":guilabel:`Offset`: moves the terrain up or down, e.g. to adjust its "
+"elevation with respect to the ground level of other objects in the scene."
+msgstr ""
+":guilabel:`Versatz`: verschiebt das Gelände nach oben oder unten, z. B. um "
+"seine Höhe in Bezug auf das Bodenniveau anderer Objekte in der Szene "
+"anzupassen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:160
+msgid ""
+"This can be useful when there is a discrepancy between the height of the "
+"terrain and the height of layers in your scene (e.g. point clouds which use "
+"a relative vertical height only). In this case adjusting the terrain "
+"elevation manually to coincide with the elevation of objects in your scene "
+"can improve the navigation experience."
+msgstr ""
+"Dies kann nützlich sein, wenn es eine Diskrepanz zwischen der Höhe des "
+"Geländes und der Höhe der Layer in Ihrer Szene gibt (z. B. bei Punktwolken, "
+"die nur eine relative vertikale Höhe verwenden). In diesem Fall kann die "
+"manuelle Anpassung der Geländehöhe an die Höhe der Objekte in Ihrer Szene "
+"die Navigation verbessern."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:166
+msgid ""
+"When a mesh layer is used as terrain, you can configure the "
+":guilabel:`Triangles settings` (wireframe display, smooth triangles, level "
+"of detail) and the :guilabel:`Rendering colors settings` (as a uniform color"
+" or :ref:`color ramp based <color_ramp_shader>`). More details in the "
+":ref:`Mesh layer 3D properties <mesh3dview>` section."
+msgstr ""
+"Wenn ein Netz-Layer als Gelände-Typ verwendet wird, können Sie die "
+":guilabel:`Dreieckseinstellungen` (Drahtgitter anzeigen, Dreiecke glätten, "
+"Detailtiefe) und die :guilabel:`Darstellungsfarbeinstellungen` (als "
+"Einzelfarbe oder :ref:`Farbrampen-basiert <color_ramp_shader>`) "
+"konfigurieren. Weitere Einzelheiten finden Sie im Abschnitt :ref:`Mesh Layer"
+" 3D Eigenschaften <mesh3dview>`."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:171
+msgid ""
+"|unchecked| :guilabel:`Terrain shading`: Allows you to choose how the "
+"terrain should be rendered:"
+msgstr ""
+"|unchecked| :guilabel:`Geländeschummerung`: Hier können Sie festlegen, wie "
+"das Gelände dargestellt werden soll:"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:485
 msgid "unchecked"
 msgstr "unchecked"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:174
+msgid "Shading disabled - terrain color is determined only from map texture"
+msgstr ""
+"Schummerung deaktiviert - die Farbe des Geländes wird nur von der "
+"Kartentextur bestimmt"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:175
+msgid ""
+"Shading enabled - terrain color is determined using Phong's shading model, "
+"taking into account map texture, the terrain normal vector, scene light(s) "
+"and the terrain material's :guilabel:`Ambient` and :guilabel:`Specular` "
+"colors and :guilabel:`Shininess`"
+msgstr ""
+"Schattierung aktiviert - die Farbe des Geländes wird mit Hilfe des Phong-"
+"Schattierungsmodells bestimmt, wobei die :guilabel:`Stimmung`, die Farbe der"
+" :guilabel:`Spiegelung` sowie der :guilabel:`Glanz` eingestellt werden "
+"können."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:181
+msgid "Lights"
+msgstr "Leuchten"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:183
+msgid "From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add"
+msgstr ""
+"Wenn Sie auf dem the :guilabel:`Leuchten` Reiter das |symbologyAdd| Plus "
+"drücken, können Sie folgendes hinzufügen:"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:479
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:185
+msgid ""
+"up to eight :guilabel:`Point lights`: emits light in all directions, like a "
+"sphere of light filling an area. Objects closer to the light will be "
+"brighter, and objects further away will be darker. A point light has a set "
+"position (:guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), a "
+":guilabel:`Color`, an :guilabel:`Intensity` and an :guilabel:`Attenuation`"
+msgstr ""
+"bis zu acht :guilabel:`Punktlichter`: strahlt Licht in alle Richtungen aus, "
+"wie eine Lichtkugel. Objekte, die sich näher am Licht befinden, werden "
+"heller, weiter entfernte Objekte werden dunkler. Ein Punktlicht hat eine "
+"bestimmte Position (:guilabel:`X`, :guilabel:`Y` und :guilabel:`Z`), eine "
+":guilabel:`Farbe`, eine :guilabel:`Intensität` und eine :guilabel:`Dämpfung`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:190
+msgid ""
+"up to four :guilabel:`Directional lights`: mimics the lighting that you "
+"would get from a giant flash light very far away from your objects, always "
+"centered and that never dies off (e.g. the sun). It emits parallel light "
+"rays in a single direction but the light reaches out into infinity. A "
+"directional light can be rotated given an  :guilabel:`Azimuth`, have an "
+":guilabel:`Altitude`, a :guilabel:`Color` and an :guilabel:`Intensity`."
+msgstr ""
+"bis zu vier :guilabel:`Gerichtete Lichtquellen`: ahmt die Beleuchtung nach, "
+"die man von einer riesigen Lichtquelle erhalten würde, welche sehr weit von "
+"den Objekten entfernt und immer zentriert ist (wie z. B. die Sonne). Sie "
+"sendet parallele Lichtstrahlen in eine Richtung aus, wobei das Licht bis ins"
+" Unendliche reicht. Ein gerichtetes Licht kann mit einem :guilabel:`Azimut` "
+"gedreht werden, hat einen :guilabel:`Höhenwinkel`, eine :guilabel:`Farbe` "
+"und eine :guilabel:`Intensität`."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:202
+msgid "The 3D Map Lights Configuration dialog"
+msgstr "Der Reiter Leuchten des 3D-Konfiguration-Dialogs"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:207
+msgid "Shadow"
+msgstr "Schatten"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:209
+msgid ""
+"Check |unchecked| :guilabel:`Show shadows` to display shadows within your "
+"scene, given:"
+msgstr ""
+"Aktivieren Sie :guilabel:`Schatten anzeigen`, um Schatten in Ihrer Szene "
+"anzuzeigen, wobei Sie die folgenden Optionen haben:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:212
+msgid "a :guilabel:`Directional light`"
+msgstr "ein :guilabel:`Gerichtetes Licht auswählen`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:213
+msgid ""
+"a :guilabel:`Shadow rendering maximum distance`: to avoid rendering shadow "
+"of too distant objects, particularly when the camera looks up along the "
+"horizon"
+msgstr ""
+":guilabel:`maximaler Abstand für Schattendarstellung` einstellen: um die "
+"Darstellung von Schatten zu weit entfernter Objekte zu vermeiden, "
+"insbesondere wenn die Kamera entlang des Horizonts nach oben schaut"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:216
+msgid ""
+"a :guilabel:`Shadow bias`: to avoid self-shadowing effects that could make "
+"some areas darker than others, due to differences between map sizes. The "
+"lower the better"
+msgstr ""
+":guilabel:`Schattenverzerrung`: zur Vermeidung von "
+"Selbstverschattungseffekten, die einige Bereiche aufgrund von Unterschieden "
+"in der Kartengröße dunkler machen könnten als andere. Je niedriger, desto "
+"besser"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:219
+msgid ""
+"a :guilabel:`Shadow map resolution`: to make shadows look sharper. It may "
+"result in less performance if the resolution parameter is too high."
+msgstr ""
+":guilabel:`Schattenkartenauflösung`: um Schatten schärfer aussehen zu "
+"lassen. Es kann zu Leistungseinbußen führen, wenn der Auflösungsparameter zu"
+" hoch ist."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:223
+msgid "Camera & Skybox"
+msgstr "Kamera & Skybox"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:225
+msgid ""
+"In this tab, you can control different parameters like camera, 3D axis, "
+"navigation synchronization and skybox."
+msgstr ""
+"In diesem Reiter können Sie verschiedene Parameter wie Kamera, 3D-Achse, "
+"Navigationssynchronisation und Skybox einstellen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:233
+msgid "The 3D Map Camera Configuration dialog"
+msgstr "Der Reiter Kamera des 3D-Konfiguration-Dialogs"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:235
+msgid ""
+"The :guilabel:`Camera` parameter group overrides some :ref:`default camera "
+"settings <3d_options>` made in the :menuselection:`Settings --> Options --> "
+"3D` dialog."
+msgstr ""
+"Mit den Einstellungen im Abschnitt :guilabel:`Kamera` werden einige "
+":ref:`Standardkameraeinstellungen <3d_options>` überschrieben, die im Dialog"
+" :menuselection:`Einstellungen --> Optionen --> 3D` vorgenommen werden "
+"können."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:238
+msgid ""
+"Check |unchecked| :guilabel:`Show 3D Axis` to enable 3D axis tool. This "
+"parameter group allows to set the axis type and its position."
+msgstr ""
+"Aktivieren Sie :guilabel:`3D-Achse anzeigen`, um das 3D-Achsenwerkzeug zu "
+"aktivieren. IN diesem Bereich können Sie den Achsentyp und seine Position "
+"festlegen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:241
+msgid ""
+"With the :guilabel:`Coordinate Reference System` type an orthogonal axis "
+"will be represented."
+msgstr ""
+"Bei Auswahl des Achsentyps :guilabel:`Koordinatenbezugssystem` wird eine "
+"orthogonale Achse dargestellt."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:243
+msgid ""
+"With the :guilabel:`Cube` type, a 3D cube will be represented. The cube "
+"faces can be used to change the camera view: for example, click on the "
+":guilabel:`north` face to set the camera to see from the north."
+msgstr ""
+"Mit dem Typ :guilabel:`Würfel` wird ein 3D-Würfel dargestellt. Die "
+"Würfelseiten können verwendet werden, um die Kameraperspektive zu ändern: "
+"Klicken Sie z. B. auf die :guilabel:`Nord`-Seite, um die Kamera so "
+"einzustellen, dass sie von Norden sieht."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:247
+msgid ""
+"Right-click the 3D axis to quickly set its position and type, and the camera"
+" view."
+msgstr ""
+"Klicken Sie mit der rechten Maustaste auf die 3D-Achse, um deren Position "
+"und Typ sowie die Kameraansicht schnell festzulegen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:254
+msgid "The 3D Axis context menu"
+msgstr "Das 3D-Achse Kontextmenü"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:256
+msgid ""
+"The :guilabel:`Navigation Synchronization` parameter group adds options to "
+"synchronize 2D view with 3D camera position or 3D camera position with 2D "
+"view or bi directional synchronization. The last option displays the extent "
+"visible from the 3D camera over the 2D map view."
+msgstr ""
+"Im Bereich :guilabel:`Navigationssynchronisation` können Optionen zur "
+"Synchronisation der 2D-Ansicht mit der 3D-Kameraposition oder der "
+"3D-Kameraposition mit der 2D-Ansicht oder der bidirektionalen "
+"Synchronisation hinzugefügt werden. Die letzte Option zeigt den von der "
+"3D-Kamera sichtbaren Bereich über der 2D-Kartenansicht an."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:261
+msgid ""
+"Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering in the "
+"scene. The skybox type can be:"
+msgstr ""
+"Aktivieren Sie :guilabel:`Skybox anzeigen`, um die Darstellung der Skybox in"
+" der Szene zu aktivieren. Der Skybox-Typ kann sein:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:264
+msgid ""
+":guilabel:`Panoramic texture`, with a single file providing sight on 360\\°"
+msgstr ""
+":guilabel:`Panoramatextur` mit einer einzigen Datei, die Sicht auf 360° "
+"bietet"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:265
+msgid ""
+":guilabel:`Distinct faces`, with a texture file for each of the six sides of"
+" a box containing the scene"
+msgstr ""
+":guilabel:`Einzeloberflächen`, mit einer Texturdatei für jede der sechs "
+"Seiten eines Kastens, der die Szene enthält"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:268
+msgid ""
+"Texture image files of the skybox can be files on the disk, remote URLs or "
+"embedded in the project (:ref:`more details <embedded_file_selector>`)."
+msgstr ""
+"Texturbilddateien der Skybox können Dateien auf der Festplatte, Remote-URLs "
+"oder in das Projekt eingebettet sein (:ref:`more details "
+"<embedded_file_selector>`)."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:272
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:274
+msgid ""
+":guilabel:`Map tile resolution`: Width and height of the 2D map images used "
+"as textures for the terrain tiles. 256px means that each tile will be "
+"rendered into an image of 256x256 pixels. Higher numbers create more "
+"detailed terrain tiles at the expense of increased rendering complexity."
+msgstr ""
+":guilabel:`Kartenkachelauflösung`: Breite und Höhe der 2D-Kartenbilder, die "
+"als Texturen für die Geländekacheln verwendet werden. 256px bedeutet, dass "
+"jede Kachel in ein Bild von 256x256 Pixeln gerendert wird. Höhere Zahlen "
+"erzeugen detailliertere Geländekacheln auf Kosten einer höheren Rendering-"
+"Komplexität."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:280
+msgid ""
+":guilabel:`Max. screen error`: Determines the threshold for swapping terrain"
+" tiles with more detailed ones (and vice versa) - i.e. how soon the 3D view "
+"will use higher quality tiles. Lower numbers mean more details in the scene "
+"at the expense of increased rendering complexity."
+msgstr ""
+":guilabel:`Max. Bildschirmfehler`: Bestimmt den Schwellenwert für den "
+"Austausch von Geländekacheln gegen detailliertere Kacheln (und umgekehrt) - "
+"d.h. wie schnell die 3D-Ansicht höherwertige Kacheln verwendet. Niedrigere "
+"Zahlen bedeuten mehr Details in der Szene auf Kosten einer erhöhten "
+"Rendering-Komplexität."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:285
+msgid ""
+":guilabel:`Max. ground error`: The resolution of the terrain tiles at which "
+"dividing tiles into more detailed ones will stop (splitting them would not "
+"introduce any extra detail anyway). This value limits the depth of the "
+"hierarchy of tiles: lower values make the hierarchy deep, increasing "
+"rendering complexity."
+msgstr ""
+":guilabel:`Max. Grundfehler`: Die Auflösung der Geländekacheln, bei der die "
+"Aufteilung der Kacheln in detailliertere Kacheln aufhört (die Aufteilung "
+"würde ohnehin keine zusätzlichen Details liefern). Dieser Wert begrenzt die "
+"Tiefe der Kachelhierarchie: niedrigere Werte machen die Hierarchie tiefer, "
+"was die Komplexität des Renderings erhöht."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:290
+msgid ""
+":guilabel:`Zoom levels`: Shows the number of zoom levels (depends on the map"
+" tile resolution and max. ground error)."
+msgstr ""
+":guilabel:`Zoomstufen`: Zeigt die Anzahl der Zoomstufen an (abhängig von der"
+" Kartenkachelauflösung und dem maximalen Grundfehler)."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:292
+msgid "|unchecked| :guilabel:`Show labels`: Toggles map labels on/off"
+msgstr ""
+"|unchecked| :guilabel:`Beschriftungen anzeigen`: Schaltet die "
+"Kartenbeschriftungen ein/aus"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:293
+msgid ""
+"|unchecked| :guilabel:`Show map tile info`: Include border and tile numbers "
+"for the terrain tiles (useful for troubleshooting terrain issues)"
+msgstr ""
+"|unchecked| :guilabel:`Kartenkachelinfo anzeigen`: Umrandung und "
+"Kachelnummern für die Geländekacheln anzeigen (hilfreich bei der Fehlersuche"
+" in Bezug auf das Gelände)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:295
+msgid ""
+"|unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes of the "
+"terrain tiles (useful for troubleshooting terrain issues)"
+msgstr ""
+"|unmarkiert| :guilabel:`Boundingboxen anzeigen`: 3D-Begrenzungsrahmen der "
+"Geländekacheln anzeigen (hilfreich bei der Fehlersuche in Bezug auf das "
+"Gelände)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:297
+msgid "|unchecked| :guilabel:`Show camera's view center`"
+msgstr "|unchecked| :guilabel:`Sichtzentrum der Kamera anzeigen`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:298
+msgid "|unchecked| :guilabel:`Show camera's rotation center`"
+msgstr "|unchecked| :guilabel:`Drehzentrum der Kamera anzeigen`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:299
+msgid ""
+"|unchecked| :guilabel:`Show light sources`: shows a sphere at light source "
+"origins, allowing easier repositioning and placement of light sources "
+"relative to the scene contents"
+msgstr ""
+"|unchecked| :guilabel:`Lichtquellen anzeigen`: zeigt eine Kugel an den "
+"Ursprüngen der Lichtquellen, was eine einfachere Neupositionierung und "
+"Platzierung der Lichtquellen relativ zum Szeneninhalt ermöglicht"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:301
+msgid "|unchecked| :guilabel:`Show frames per second (FPS)`"
+msgstr "|unchecked| :guilabel:`Einzelbilder pro Sekunde anzeigen (FPS)`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:302
+msgid ""
+"|unchecked| :guilabel:`Show debug overlay`: visual overlay which displays "
+"some useful debugging and profiling information. This allows in particular "
+"to quickly see the frame graph and the scene graph."
+msgstr ""
+"|unchecked| :guilabel:`Debug-Overlay anzeigen`: visuelles Overlay, das "
+"einige nützliche Debugging- und Profiling-Informationen anzeigt. Dies "
+"ermöglicht insbesondere die schnelle Anzeige des Frame-Graphen und des "
+"Szenen-Graphen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:308
+msgid ""
+"|unchecked| :guilabel:`Show Eye Dome Lighting` (EDL): a post processing "
+"effect which enhances depth perception. Each pixel's depth (distance off the"
+" camera) is compared to its neighboring pixels' depth and gets highlighted "
+"according to that depth difference, making the edges stand out. Affects the "
+"whole scene and can be combined with :ref:`Screen Space Ambient Occlusion "
+"<ambient_occlusion>`. Following parameters can be controlled:"
+msgstr ""
+"|unchecked| :guilabel:`Eye Dome Lighting` (EDL) anzeigen: ein Post-"
+"Processing-Effekt, der die Tiefenwahrnehmung verbessert. Die Tiefe jedes "
+"Pixels (Abstand von der Kamera) wird mit der Tiefe der benachbarten Pixel "
+"verglichen und entsprechend dieser Tiefendifferenz hervorgehoben, wodurch "
+"die Kanten betont werden. Wirkt sich auf die gesamte Szene aus und kann mit "
+":ref:`Screen Space Ambient Occlusion (Umgebungslicht) <ambient_occlusion>` "
+"kombiniert werden. Die folgenden Parameter können eingestellt werden:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:315
+msgid ""
+":guilabel:`Lighting strength`: increases the contrast, allowing for better "
+"depth perception"
+msgstr ""
+":guilabel:`Beleuchtungsstärke`: erhöht den Kontrast und ermöglicht eine "
+"bessere Tiefenwahrnehmung"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:316
+msgid ""
+":guilabel:`Lighting distance`: represents the distance of the used pixels "
+"off the center pixel and has the effect of making edges thicker."
+msgstr ""
+":guilabel:`Beleuchtungsabstand`: stellt den Abstand der verwendeten Pixel "
+"vom mittleren Pixel dar und bewirkt, dass die Kanten dicker werden."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:321
+msgid ""
+"Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO): a post "
+"processing effect which also enhances depth perception by applying a darker "
+"shading to areas which are less exposed to ambient lighting. Affects the "
+"whole scene and can be combined with :ref:`Eye dome Lighting "
+"<eye_dome_lighting>`. Following parameters can be controlled:"
+msgstr ""
+"|unchecked| :guilabel:`Umgebungsverdeckung` (engl.: \"screen-space ambient "
+"occlusion\" kurz: SSAO): ein Nachbearbeitungseffekt, der die "
+"Tiefenwahrnehmung verbessert, indem er eine dunklere Schattierung auf "
+"Bereiche anwendet, die dem Umgebungslicht weniger ausgesetzt sind. Wirkt "
+"sich auf die gesamte Szene aus und kann mit :ref:`Eye-Dome_lighting "
+"<eye_dome_lighting>` kombiniert werden. Die folgenden Parameter können "
+"eingestellt werden:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:327
+msgid ""
+":guilabel:`Radius`: how far we will reach to calculate ambient occlusion"
+msgstr ""
+":guilabel:`Radius`: wie weit die Umgebungsverdeckung berechnet werden soll"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:328
+msgid ""
+":guilabel:`Intensity`: how strong the effect should be (higher values make "
+"things darker)"
+msgstr ""
+":guilabel:`Intensität`: wie stark der Effekt sein soll (höhere Werte machen "
+"Objekte dunkler)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:329
+msgid ""
+":guilabel:`Occlusion threshold`: how many neighboring points need to be "
+"occluded for the effect to appear (lower values than 50% will make the "
+"output darker, but possibly providing greater range of occlusion)"
+msgstr ""
+":guilabel:`Verdeckungsschwelle`: wie viele benachbarte Punkte verdeckt sein "
+"müssen, damit der Effekt erscheint (niedrigere Werte als 50% machen die "
+"Darstellung dunkler, bieten aber möglicherweise einen größeren Bereich der "
+"Verdeckung)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:337
+msgid ""
+"Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or "
+"Screen-Space Ambient Occlusion (SSAO)"
+msgstr ""
+"Darstellung von Punktwolken-Layern in 3D-Karten mit Eye Dome Lighting (EDL) "
+"und/oder Umgebungsverdeckung"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:339
+msgid ""
+"From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL"
+msgstr ""
+"Von oben, von links nach rechts: Kein Effekt -- Nur Umgebungsverdeckung -- "
+"Nur EDL -- Umgebungsverdeckung und EDL"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:341
+msgid ""
+"|unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black "
+"image from the point of view of the light used for shadows (for "
+"troubleshooting). The widget is set with a proportional :guilabel:`Size` to "
+"the 3D map view's, and docked in a :guilabel:`Corner`."
+msgstr ""
+"|unchecked| :guilabel:`Schattenkarte debuggen`: rendert die Szene als rot-"
+"schwarzes Bild aus der Sicht des für Schatten verwendeten Lichts (zur "
+"Fehlersuche). Das Widget wird mit einer proportionalen :guilabel:`Größe` zur"
+" 3D-Kartenansicht gesetzt und in einer :guilabel:`Ecke` angedockt."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:345
+msgid ""
+"|unchecked| :guilabel:`Debug Depth Map`: renders the scene's depth map as an"
+"  image with nearer pixels being darker (for troubleshooting). The widget is"
+" set with a proportional :guilabel:`Size` to the 3D map view's, and docked "
+"in a :guilabel:`Corner`."
+msgstr ""
+"|unchecked| :guilabel:`Kartentiefe debuggen`: stellt die Kartentiefe der "
+"Szene als Bild dar, wobei nähere Pixel dunkler sind (zur Fehlersuche). Das "
+"Widget wird mit einer proportionalen :guilabel:`Größe` zur 3D-Kartenansicht "
+"gesetzt und in einer :guilabel:`Ecke` angedockt."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:354
+msgid "Navigation options"
+msgstr "Navigationsmöglichkeiten"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:356
+msgid "To explore the map view in 3D:"
+msgstr "So erkunden Sie die Kartenansicht in 3D:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:358
+msgid ""
+"Tilt the terrain (rotating it around a horizontal axis that goes through the"
+" center of the window)"
+msgstr ""
+"Neigen des Geländes (Drehen um eine horizontale Achse, die durch die Mitte "
+"des Fensters verläuft)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:361
+msgid ""
+"Press the |tiltUp| :sup:`Tilt up` and |tiltDown| :sup:`Tilt down` tools"
+msgstr ""
+"Drücken Sie die |tiltUp| :sup:`Nach oben kippen` und |tiltDown| :sup:`Nach "
+"unten kippen` Tasten"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:483
 msgid "tiltUp"
@@ -110,6 +997,10 @@ msgstr "tiltUp"
 #: ../../docs/user_manual/map_views/3d_map_view.rst:481
 msgid "tiltDown"
 msgstr "tiltDown"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:362
+msgid "Press :kbd:`Shift` and use the up/down keys"
+msgstr "Drücken Sie :kbd:`Umschalt` und verwenden Sie die Auf-/Ab-Tasten"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:363
 msgid "Drag the mouse forward/backward with the middle mouse button pressed"
@@ -124,6 +1015,105 @@ msgstr ""
 "Drücken Sie :kbd:`Shift` und ziehen Sie die Maus mit gedrückter linker "
 "Maustaste vorwärts/rückwärts."
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:367
+msgid ""
+"Rotate the terrain (around a vertical axis that goes through the center of "
+"the window)"
+msgstr ""
+"Drehen Sie das Terrain (um eine vertikale Achse, die durch die Mitte des "
+"Fensters verläuft)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:370
+msgid "Turn the compass of the navigation widget to the watching direction"
+msgstr "Drehen Sie den Kompass des Navigations-Widgets in die Blickrichtung"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:371
+msgid "Press :kbd:`Shift` and use the left/right keys"
+msgstr "Drücken Sie :kbd:`Umschalt` und verwenden Sie die Links/Rechts-Tasten"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:372
+msgid "Drag the mouse right/left with the middle mouse button pressed"
+msgstr ""
+"Ziehen Sie die Maus mit gedrückter mittlerer Maustaste nach rechts/links"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:373
+msgid ""
+"Press :kbd:`Shift` and drag the mouse right/left with the left mouse button "
+"pressed"
+msgstr ""
+"Drücken Sie :kbd:`Umschalt` und ziehen Sie die Maus mit gedrückter linker "
+"Maustaste nach rechts/links"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:376
+msgid ""
+"Change the camera position (and the view center), moving it around in a "
+"horizontal plan"
+msgstr ""
+"Ändern Sie die Kameraposition (und das Zentrum der Ansicht), indem Sie sie "
+"in einer horizontalen Ebene bewegen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:379
+msgid ""
+"Drag the mouse with the left mouse button pressed, and the |pan| "
+":sup:`Camera control` button enabled"
+msgstr ""
+"Ziehen Sie die Maus mit gedrückter linker Maustaste und aktivierter |pan| "
+":sup:`Kamerasteuerung`-Taste"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:381
+msgid "Press the directional arrows of the navigation widget"
+msgstr "Drücken Sie die Richtungspfeile des Navigations-Widgets"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:382
+msgid ""
+"Use the up/down/left/right keys to move the camera forward, backward, right "
+"and left, respectively"
+msgstr ""
+"Verwenden Sie die Tasten Auf/Ab/Links/Rechts, um die Kamera vorwärts, "
+"rückwärts, rechts bzw. links zu bewegen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:385
+msgid ""
+"Change the camera altitude: press the :kbd:`Page Up`/:kbd:`Page Down` keys"
+msgstr ""
+"Ändern Sie die Kamerahöhe: Drücken Sie die Tasten :kbd:`Bild auf`/:kbd:`Bild"
+" ab`."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:386
+msgid ""
+"Change the camera orientation (the camera is kept at its position but the "
+"view center point moves)"
+msgstr ""
+"Ändern Sie die Kameraausrichtung (die Kamera bleibt an ihrer Position, aber "
+"der Mittelpunkt der Ansicht wird verschoben)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:389
+msgid ""
+"Press :kbd:`Ctrl` and use the arrow keys to turn the camera up, down, left "
+"and right"
+msgstr ""
+"Drücken Sie :kbd:`Strg` und verwenden Sie die Pfeiltasten, um die Kamera "
+"nach oben, unten, links und rechts zu bewegen"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:391
+msgid ""
+"Press :kbd:`Ctrl` and drag the mouse with the left mouse button pressed"
+msgstr ""
+"Drücken Sie :kbd:`Strg` und ziehen Sie die Maus mit gedrückter linker "
+"Maustaste"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:394
+msgid "Zoom in and out"
+msgstr "Hinein- und Herauszoomen"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:396
+msgid ""
+"Press the corresponding |zoomIn| :sup:`Zoom In` and |zoomOut| :sup:`Zoom "
+"Out` tools of the navigation widget"
+msgstr ""
+"Drücken Sie die entsprechenden Werkzeuge |zoomIn| :sup:`Hineinzoomen` und "
+"|zoomOut| :sup:`Herauszoomen` des Navigations-Widgets"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:489
 msgid "zoomIn"
 msgstr "zoomIn"
@@ -132,6 +1122,135 @@ msgstr "zoomIn"
 msgid "zoomOut"
 msgstr "zoomOut"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:398
+msgid ""
+"Scroll the mouse wheel (keep :kbd:`Ctrl` pressed results in finer zooms)"
+msgstr ""
+"Scrollen Sie mit dem Mausrad (halten Sie :kbd:`Strg` gedrückt, um feinere "
+"Zooms zu erhalten)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:399
+msgid ""
+"Drag the mouse with the right mouse button pressed to zoom in (drag down) "
+"and out (drag up)"
+msgstr ""
+"Ziehen Sie die Maus mit gedrückter rechter Maustaste, um zu vergrößern (nach"
+" unten ziehen) oder zu verkleinern (nach oben ziehen)."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:402
+msgid ""
+"To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full` button"
+" on the top of the 3D canvas panel."
+msgstr ""
+"Um die Kameraansicht zurückzusetzen, klicken Sie auf die Schaltfläche "
+"|zoomFullExtent| :sup:`Volle Ausdehnung` oben auf dem Bedienfeld der "
+"3D-Kartenansicht."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:408
+msgid "Creating an animation"
+msgstr "Eine Animation erstellen"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:410
+msgid ""
+"An animation is based on a set of keyframes - camera positions at particular"
+" times. To create an animation:"
+msgstr ""
+"Eine Animation basiert auf einer Reihe von Schlüsselbildern - "
+"Kamerapositionen zu bestimmten Zeitpunkten. So erstellen Sie eine Animation:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:413
+msgid ""
+"Toggle on the |play| :sup:`Animations` tool, displaying the animation player"
+" widget"
+msgstr ""
+"Aktivieren Sie das Werkzeug |play| :sup:`Animation` damit das das "
+"Animations-Widget angezeigt wird."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:415
+msgid ""
+"Click the |symbologyAdd| :sup:`Add keyframe` button and enter a "
+":guilabel:`Keyframe time` in seconds. The :guilabel:`Keyframe` combo box now"
+" displays the time set."
+msgstr ""
+"Klicken Sie auf die Schaltfläche |symbologyAdd| :sup:`Schlüsselbild "
+"hinzufügen` und geben Sie eine :guilabel:`Schlüsselbildzeit` in Sekunden "
+"ein. Das Auswahlfeld :guilabel:`Schlüsselbild` zeigt nun die eingestellte "
+"Zeit an."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:417
+msgid ""
+"Using the navigation tools, move the camera to the position to associate "
+"with the current keyframe time."
+msgstr ""
+"Bewegen Sie die Kamera mit den Navigationswerkzeugen an die Position, die "
+"mit der aktuellen Schlüsselbildzeit verknüpft werden soll."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:419
+msgid ""
+"Repeat the previous steps to add as many keyframes (with time and position) "
+"as necessary."
+msgstr ""
+"Wiederholen Sie die vorherigen Schritte, um so viele Schlüsselbilder (mit "
+"Zeit und Position) wie nötig hinzuzufügen."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:420
+msgid ""
+"Click the |play| button to preview the animation. QGIS will generate scenes "
+"using the camera positions/rotations at set times, and interpolating them in"
+" between these keyframes. Various :guilabel:`Interpolation` modes for "
+"animations are available (eg, linear, inQuad, outQuad, inCirc... -- more "
+"details at https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef)."
+msgstr ""
+"Klicken Sie auf die Schaltfläche |play|, um eine Vorschau der Animation zu "
+"erhalten. QGIS generiert Szenen, indem es die Kamerapositionen und "
+"-drehungen zu bestimmten Zeiten verwendet und sie zwischen diesen "
+"Schlüsselbildern interpoliert. Es stehen verschiedene "
+":guilabel:`Interpolation`-Modi für Animationen zur Verfügung (z.B. linear, "
+"inQuad, outQuad, inCirc... -- mehr Details unter "
+"https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef)."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:426
+msgid ""
+"The animation can also be previewed by moving the time slider. Keeping the "
+":guilabel:`Loop` box checked will repeatedly run the animation while "
+"clicking |play| stops a running animation."
+msgstr ""
+"Die Animation kann auch durch Verschieben des Zeitreglers in der Vorschau "
+"angezeigt werden. Wenn Sie das Kontrollkästchen :guilabel:`Schleife` "
+"aktivieren, wird die Animation wiederholt ausgeführt, während ein Klick auf "
+"|play| eine laufende Animation anhält."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:430
+msgid ""
+"Click |fileSave| :sup:`Export animation frames` to generate a series of "
+"images representing the scene. Other than the filename :guilabel:`Template` "
+"and the :guilabel:`Output directory`, you can set the number of "
+":guilabel:`Frames per second`, the :guilabel:`Output width` and "
+":guilabel:`Output height`."
+msgstr ""
+"Klicken Sie auf |fileSave| :sup:`Animationsbilder exportieren`, um eine "
+"Reihe von Bildern zu erzeugen, die die Szene darstellen. Neben dem "
+"Dateinamen :guilabel:`Vorlage` und dem :guilabel:`Ausgabeverzeichnis` können"
+" Sie die Anzahl der :guilabel:`Einzelbilder pro Sekunde`, die "
+":guilabel:`Ausgabebreite` und die :guilabel:`Ausgabehöhe` einstellen."
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:459
 msgid "fileSave"
 msgstr "fileSave"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:436
+msgid "3D vector layers"
+msgstr "3D-Vektor-Layer"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:438
+msgid ""
+"A vector layer with elevation values can be shown in the 3D map view by "
+"checking :guilabel:`Enable 3D Renderer` in the :guilabel:`3D View` section "
+"of the vector layer properties. A number of options are available for "
+"controlling the rendering of the 3D vector layer."
+msgstr ""
+"Ein Vektorlayer mit Höhenwerten kann in der 3D-Kartenansicht angezeigt "
+"werden, indem Sie das Kontrollkästchen :guilabel:`3D-Ansicht aktivieren` im "
+"Abschnitt :guilabel:`3D-Ansicht` der Eigenschaften des Vektorlayers "
+"aktivieren. Es gibt eine Reihe von Optionen zur Steuerung der Darstellung "
+"des 3D-Vektorlayers."
