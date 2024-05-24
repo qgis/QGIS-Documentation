@@ -1518,6 +1518,12 @@ Returns the portion of a line (or curve) geometry which falls between the specif
      - * ``geom_to_wkt(line_substring(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),start_distance:=2,end_distance:=6))`` → 'LineString (2 0,6 0)'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/substring.png
+   :align: center
+   :width: 100%
+
+   Substring line with starting distance set at 0 meters and the ending distance at 250 meters.
+
 .. end_line_substring_section
 
 .. _expression_function_GeometryGroup_m:
@@ -2810,6 +2816,12 @@ Simplifies a geometry by removing nodes using a distance based threshold (ie, th
      - * ``geom_to_wkt(simplify(geometry:=geom_from_wkt('LineString(0 0, 5 0.1, 10 0)'),tolerance:=5))`` → 'LineString(0 0, 10 0)'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/simplify_geometries.png
+   :align: center
+   :width: 100%
+
+   From left to right, source layer and increasing simplification tolerances
+
 .. end_simplify_section
 
 .. _expression_function_GeometryGroup_simplify_vw:
@@ -2944,6 +2956,12 @@ Constructs square/rectangular waves along the boundary of a geometry.
      - * ``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Square waves with wavelength 3 and amplitude 1 along the linestring
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/square_wave.*
+   :align: center
+   :width: 100%
+
+   Symbolizing features with square waves
+
 .. end_square_wave_section
 
 .. _expression_function_GeometryGroup_square_wave_randomized:
@@ -2970,6 +2988,12 @@ Constructs randomized square/rectangular waves along the boundary of a geometry.
    * - Examples
      - * ``square_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized square waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
+
+.. figure:: /docs/user_manual/expressions/expression_help/img/square_wave_randomized.*
+   :align: center
+   :width: 100%
+
+   Symbolizing features with square randomized waves
 
 .. end_square_wave_randomized_section
 
@@ -3161,6 +3185,12 @@ Constructs triangular waves along the boundary of a geometry.
      - * ``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Triangular waves with wavelength 3 and amplitude 1 along the linestring
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave.*
+   :align: center
+   :width: 100%
+
+   Symbolizing features with triangular waves
+
 .. end_triangular_wave_section
 
 .. _expression_function_GeometryGroup_triangular_wave_randomized:
@@ -3187,6 +3217,12 @@ Constructs randomized triangular waves along the boundary of a geometry.
    * - Examples
      - * ``triangular_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized triangular waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
+
+.. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave_randomized.*
+   :align: center
+   :width: 100%
+
+   Symbolizing features with triangular randomized waves
 
 .. end_triangular_wave_randomized_section
 
@@ -3234,6 +3270,12 @@ Constructs rounded (sine-like) waves along the boundary of a geometry.
      - * ``wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Sine-like waves with wavelength 3 and amplitude 1 along the linestring
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/wave.*
+   :align: center
+   :width: 100%
+
+   Symbolizing features with waves
+
 .. end_wave_section
 
 .. _expression_function_GeometryGroup_wave_randomized:
@@ -3261,6 +3303,12 @@ Constructs randomized curved (sine-like) waves along the boundary of a geometry.
      - * ``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized curved waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/wave_randomized.*
+   :align: center
+   :width: 100%
+
+   Symbolizing features with randomized waves
+
 .. end_wave_randomized_section
 
 .. _expression_function_GeometryGroup_wedge_buffer:
@@ -3286,6 +3334,12 @@ Returns a wedge shaped buffer originating from a point geometry.
    * - Examples
      - * ``wedge_buffer(center:=geom_from_wkt('POINT(1 2)'),azimuth:=90,width:=180,outer_radius:=1)`` → A wedge shaped buffer centered on the point (1,2), facing to the East, with a width of 180 degrees and outer radius of 1.
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/wedge_buffers.png
+   :align: center
+   :width: 100%
+
+   Wedge buffering features
 
 .. end_wedge_buffer_section
 
