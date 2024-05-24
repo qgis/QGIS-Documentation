@@ -32,41 +32,54 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:14
 msgid "Expressions, Filtering and Calculating Values"
-msgstr "표현식을 이용한 속성값의 필터링 및 계산"
+msgstr "값을 필터링하고 계산하는 표현식"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:16
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
-msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+msgstr "PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:40
+msgid ""
+"QGIS has some support for parsing of SQL-like expressions. Only a small "
+"subset of SQL syntax is supported. The expressions can be evaluated either "
+"as boolean predicates (returning :const:`True` or :const:`False`) or as "
+"functions (returning a scalar value). See :ref:`vector_expressions` in the "
+"User Manual for a complete list of available functions."
+msgstr ""
+"QGIS는 SQL 계열 표현식의 파싱을 일부분 지원합니다. SQL 문법 가운데 작은 부분만을 지원합니다. (:const:`True` 또는"
+" :const:`False` 를 반환하는) 불 술어(boolean predicate) 또는 (스칼라 값을 반환하는) 함수 가운데 하나로 "
+"표현식을 평가할 수 있습니다. 사용할 수 있는 함수의 전체 목록을 보고 싶다면 사용자 지침서에 있는 "
+":ref:`vector_expressions` 을 참조하세요."
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:46
 msgid "Three basic types are supported:"
-msgstr "다음 3가지 기본 유형이 지원됩니다."
+msgstr "다음 기본 유형 3개를 지원합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:48
 msgid ""
 "number --- both whole numbers and decimal numbers, e.g. ``123``, ``3.14``"
-msgstr "숫자 --- 정수와 십진수, 예를 들면 ``123``, ``3.14``"
+msgstr "숫자 --- 정수와 십진수, 예: ``123``, ``3.14``"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:49
 msgid ""
 "string --- they have to be enclosed in single quotes: ``'hello world'``"
-msgstr "문자열 --- ``'hello world'`` 처럼 작은 따옴표로 둘러싸야 함"
+msgstr "문자열 --- ``'hello world'`` 처럼 작은 따옴표로 둘러싸야 합니다."
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:50
 msgid ""
 "column reference --- when evaluating, the reference is substituted with the "
 "actual value of the field. The names are not escaped."
-msgstr "컬럼 참조 --- 표현식을 평가할 때, 참조가 필드의 실제 값으로 대체됩니다. 이름이 그대로 남지 않습니다."
+msgstr "열(column) 참조 --- 표현식을 평가할 때, 참조를 필드의 실제 값으로 대체합니다. 이름은 이스케이프시키지 않습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:53
 msgid "The following operations are available:"
-msgstr "다음과 같은 연산자들이 있습니다:"
+msgstr "다음과 같은 연산자들을 사용할 수 있습니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:55
 msgid "arithmetic operators: ``+``, ``-``, ``*``, ``/``, ``^``"
@@ -87,13 +100,25 @@ msgid ""
 msgstr ""
 "수학 함수: ``sqrt``, ``sin``, ``cos``, ``tan``, ``asin``, ``acos``, ``atan``"
 
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:60
+msgid ""
+"conversion functions: ``to_int``, ``to_real``, ``to_string``, ``to_date``"
+msgstr "변환 함수: ``to_int``, ``to_real``, ``to_string``, ``to_date``"
+
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:61
 msgid "geometry functions: ``$area``, ``$length``"
 msgstr "도형 함수: ``$area``, ``$length``"
 
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:62
+msgid ""
+"geometry handling functions: ``$x``, ``$y``, ``$geometry``, "
+"``num_geometries``, ``centroid``"
+msgstr ""
+"도형 처리 함수: ``$x``, ``$y``, ``$geometry``, ``num_geometries``, ``centroid``"
+
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:64
 msgid "And the following predicates are supported:"
-msgstr "다음과 같은 서술어들를 지원합니다."
+msgstr "다음과 같은 술어들을 지원합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:66
 msgid "comparison: ``=``, ``!=``, ``>``, ``>=``, ``<``, ``<=``"
@@ -110,11 +135,11 @@ msgstr "논리 술어: ``AND``, ``OR``, ``NOT``"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:69
 msgid "NULL value checking: ``IS NULL``, ``IS NOT NULL``"
-msgstr "NULL 값 확인: ``IS NULL``, ``IS NOT NULL``"
+msgstr "NULL 값 검증: ``IS NULL``, ``IS NOT NULL``"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:71
 msgid "Examples of predicates:"
-msgstr "서술어의 예:"
+msgstr "술어의 예:"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:73
 msgid "``1 + 2 = 3``"
@@ -152,20 +177,84 @@ msgstr "``$length + 1``"
 msgid "Parsing Expressions"
 msgstr "표현식 파싱하기"
 
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:89
+msgid ""
+"The following example shows how to check if a given expression can be parsed"
+" correctly:"
+msgstr "다음은 지정한 표현식을 정확하게 파싱할 수 있는지 여부를 검증하는 방법을 보여주는 예시입니다:"
+
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:104
 msgid "Evaluating Expressions"
 msgstr "표현식 평가하기"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:106
+msgid ""
+"Expressions can be used in different contexts, for example to filter "
+"features or to compute new field values. In any case, the expression has to "
+"be evaluated. That means that its value is computed by performing the "
+"specified computational steps, which can range from simple arithmetic to "
+"aggregate expressions."
+msgstr ""
+"서로 다른 맥락에서, 예를 들면 피처를 필터링하기 위해 또는 새 필드 값을 계산하기 위해 표현식을 사용할 수 있습니다. 어떤 경우라도, "
+"표현식을 평가해야 합니다. 즉 단순 산술 표현식에서 집계 표현식까지 아우를 수 있는 범위에서, 지정된 계산 단계를 따라 그 값을 "
+"계산한다는 뜻입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:113
 msgid "Basic Expressions"
 msgstr "기본 표현식"
 
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:115
+msgid "This basic expression evaluates a simple arithmetic operation:"
+msgstr "다음 기본 표현식은 단순 산술 연산을 평가합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:128
+msgid ""
+"Expression can also be used for comparison, evaluating to 1 (:const:`True`) "
+"or 0 (:const:`False`)"
+msgstr "비교에도 1(:const:`True`) 또는 0(:const:`False`)으로 평가하는 표현식을 사용할 수 있습니다:"
+
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:139
 msgid "Expressions with features"
-msgstr "피처와 표현식"
+msgstr "피처를 사용하는 표현식"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:141
+msgid ""
+"To evaluate an expression against a feature, a :class:`QgsExpressionContext "
+"<qgis.core.QgsExpressionContext>` object has to be created and passed to the"
+" evaluate function in order to allow the expression to access the feature's "
+"field values."
+msgstr ""
+"피처에 대한 표현식을 평가하려면, 표현식이 피처의 필드 값에 접근할 수 있도록 :class:`QgsExpressionContext "
+"<qgis.core.QgsExpressionContext>` 클래스 객체를 생성해서 평가 함수로 전달해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:145
+msgid ""
+"The following example shows how to create a feature with a field called "
+"\"Column\" and how to add this feature to the expression context."
+msgstr ""
+"다음은 \"Column\"이라는 필드를 가진 피처를 생성하는 방법과 표현식 맥락에서 해당 피처를 추가하는 방법을 보여주는 예시입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:164
+msgid ""
+"The following is a more complete example of how to use expressions in the "
+"context of a vector layer, in order to compute new field values:"
+msgstr "다음은 새 필드 값을 계산하기 위해 벡터 레이어 맥락에서 표현식을 사용하는 방법을 보여주는 좀 더 복잡한 예시입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:231
+msgid "Filtering a layer with expressions"
+msgstr "표현식으로 레이어 필터링하기"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:233
 msgid ""
 "The following example can be used to filter a layer and return any feature "
 "that matches a predicate."
-msgstr "다음 예시 코드는 레이어를 필터링해서 서술어와 일치하는 모든 피처를 반환하는 작업에 사용할 수 있습니다."
+msgstr "레이어를 필터링해서 술어와 일치하는 모든 피처를 반환하는 데 다음 예시를 사용할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:264
+msgid "Handling expression errors"
+msgstr "표현식 오류 처리하기"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:266
+msgid ""
+"Expression-related errors can occur during expression parsing or evaluation:"
+msgstr "표현식을 파싱하거나 평가하는 동안 표현식 관련 오류가 발생할 수 있습니다:"
