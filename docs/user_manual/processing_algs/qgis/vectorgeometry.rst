@@ -6145,8 +6145,7 @@ distance based (the "Douglas-Peucker" algorithm), area based
 .. figure:: img/simplify_geometries.png
    :align: center
 
-   Clockwise from top left: source layer and increasing
-   simplification tolerances
+   From left to right, source layer and increasing simplification tolerances
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 of line and polygon features
