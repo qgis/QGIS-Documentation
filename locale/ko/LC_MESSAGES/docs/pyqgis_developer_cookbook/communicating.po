@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:13
 msgid "Communicating with the user"
@@ -42,14 +42,20 @@ msgstr "사용자에게 정보 전달하기"
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
-msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+msgstr "PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:41
 msgid ""
 "This section shows some methods and elements that should be used to "
 "communicate with the user, in order to keep consistency in the User "
 "Interface."
-msgstr "이 장에서는 사용자 인터페이스에서 일관성을 유지하기 위해 이용해야 하는 몇몇 메소드 및 요소들에 대해 설명합니다."
+msgstr ""
+"이 장에서는 사용자 인터페이스에서 일관성을 유지하기 위해 사용자에게 정보를 전달하는 데 사용해야 하는 몇몇 메소드 및 요소에 대해 "
+"설명합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:45
+msgid "Showing messages. The QgsMessageBar class"
+msgstr "메시지 보이기: QgsMessageBar 클래스"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:47
 msgid ""
@@ -57,15 +63,14 @@ msgid ""
 "For showing a small info line or a warning/error messages, the QGIS message "
 "bar is usually a better option."
 msgstr ""
-"메시지 상자를 이용하는 것은 사용자 경험이라는 관점에서 그리 좋은 생각이 아닙니다. 짧은 정보 또는 경고/오류 메시지를 표출하는 데에는 "
-"QGIS 메시지 바를 이용하는 편이 더 낫습니다."
+"메시지 상자를 사용하는 것은 사용자 경험이라는 관점에서 그리 좋은 생각이 아닙니다. 짧은 정보 또는 경고/오류 메시지를 표출하는 데에는 "
+"QGIS 메시지 바를 사용하는 편이 더 낫습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:51
 msgid ""
 "Using the reference to the QGIS interface object, you can show a message in "
 "the message bar with the following code"
-msgstr ""
-"QGIS 인터페이스 오브젝트의 참조(reference)를 사용하면, 다음 코드를 통해 메시지 바에 메시지를 표시할 수 있습니다."
+msgstr "QGIS 인터페이스 객체에 참조(reference)를 사용하면, 메시지 바에 메시지를 다음 코드로 표시할 수 있습니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:68
 msgid "QGIS Message bar"
@@ -73,11 +78,38 @@ msgstr "QGIS 메시지 바"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:70
 msgid "You can set a duration to show it for a limited time"
-msgstr "지속 시간(``duration``)을 설정해서 제한된 시간 동안 메시지를 표출할 수 있습니다."
+msgstr "제한 시간 동안에만 메시지를 보이려면 지속 시간(``duration``)을 설정하면 됩니다."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:84
 msgid "QGIS Message bar with timer"
 msgstr "타이머를 적용한 QGIS 메시지 바"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:86
+msgid ""
+"The examples above show an error bar, but the ``level`` parameter can be "
+"used to creating warning messages or info messages, using the "
+":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You "
+"can use up to 4 different levels:"
+msgstr ""
+"앞의 예시들은 오류 메시지를 보이지만, ``level`` 파라미터를 사용하면 :class:`Qgis.MessageLevel "
+"<qgis.core.Qgis.MessageLevel>` 클래스의 열거 목록(enumeration)을 통해 경고 또는 정보 메시지를 생성할"
+" 수 있습니다. 모두 4개의 서로 다른 수준을 사용할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:90
+msgid "Info"
+msgstr "정보(Info)"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:91
+msgid "Warning"
+msgstr "경고(Warning)"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:92
+msgid "Critical"
+msgstr "중요(Critical)"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:93
+msgid "Success"
+msgstr "성공(Success)"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:99
 msgid "QGIS Message bar (info)"
@@ -87,7 +119,7 @@ msgstr "QGIS 메시지 바 (정보)"
 msgid ""
 "Widgets can be added to the message bar, like for instance a button to show "
 "more info"
-msgstr "추가적인 정보 표시를 위한 버튼 등의 위젯을 메시지 바에 추가할 수도 있습니다."
+msgstr "추가적인 정보를 표시하기 위한 버튼 등의 위젯을 메시지 바에 추가할 수도 있습니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:124
 msgid "QGIS Message bar with a button"
@@ -104,11 +136,11 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:152
 msgid "QGIS Message bar in custom dialog"
-msgstr "사용자 지정 대화창 내부의 QGIS 메시지 바"
+msgstr "사용자 정의 대화창 내부의 QGIS 메시지 바"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:156
 msgid "Showing progress"
-msgstr "진행률 표시"
+msgstr "진행률 보이기"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:158
 msgid ""
@@ -119,6 +151,131 @@ msgstr ""
 "앞에서 배웠듯이 QGIS 메시지 바에 위젯을 추가할 수 있으므로, 진행률(progress) 막대도 추가할 수 있습니다. 다음은 여러분이 "
 "콘솔에서 실행해볼 수 있는 예시 코드입니다."
 
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:184
+msgid ""
+"Also, you can use the built-in status bar to report progress, as in the next"
+" example:"
+msgstr "또한 다음 예시에서와 같이 진행률을 보고하는 내장 상태 바도 사용할 수 있습니다:"
+
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:212
 msgid "Logging"
-msgstr "로그 기록"
+msgstr "로그 작성하기"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:214
+msgid ""
+"There are three different types of logging available in QGIS to log and save"
+" all the information about the execution of your code. Each has its specific"
+" output location. Please consider to use the correct way of logging for your"
+" purpose:"
+msgstr ""
+"여러분의 코드를 실행하는 것에 대한 모든 정보를 로그로 작성하고 저장할 수 있도록, QGIS는 세 가지의 서로 다른 로그 작업 유형을 "
+"지원합니다. 각 유형은 전용 산출 위치를 가지고 있습니다. 여러분의 목적에 따라 올바른 로그 작업 방식을 사용해주십시오:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:218
+msgid ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to "
+"communicate issues to the user. The output of the QgsMessageLog is shown in "
+"the Log Messages Panel."
+msgstr ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` 는 사용자에게 문제점을 전달하기 위한 메시지 용 "
+"클래스입니다. QgsMessageLog 클래스의 산출물은 로그 메시지 패널에 나타납니다."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:221
+msgid ""
+"The python built in **logging** module is for debugging on the level of the "
+"QGIS Python API (PyQGIS). It is recommended for Python script developers "
+"that need to debug their python code, e.g. feature ids or geometries"
+msgstr ""
+"파이썬 내장 **logging** 모듈은 QGIS 파이썬 API (PyQGIS) 수준에서 디버그 작업을 하기 위한 모듈입니다. 예를 들면"
+" 피처 ID 또는 도형 같은 파이썬 코드를 디버그해야 하는 파이썬 스크립트 개발자들에게 권장합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:224
+msgid ""
+":class:`QgsLogger <qgis.core.QgsLogger>` is for messages for *QGIS internal*"
+" debugging / developers (i.e. you suspect something is triggered by some "
+"broken code). Messages are only visible with developer versions of QGIS."
+msgstr ""
+":class:`QgsLogger <qgis.core.QgsLogger>` 는 (예를 들어 어떤 깨진 코드가 뭔가를 촉발한다고 의심하는 "
+"경우) *QGIS 내부* 디버그 작업 또는 개발자 용 클래스입니다. 이 메시지는 QGIS 개발자 버전에서만 보일 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:228
+msgid ""
+"Examples for the different logging types are shown in the following sections"
+" below."
+msgstr "다음 절들에서 이 서로 다른 로그 작업 유형들의 예시를 볼 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:232
+msgid ""
+"Use of the Python ``print`` statement is unsafe to do in any code which may "
+"be multithreaded and **extremely slows down the algorithm**. This includes "
+"**expression functions**, **renderers**, **symbol layers** and **Processing "
+"algorithms** (amongst others). In these cases you should always use the "
+"python **logging** module or thread safe classes (:class:`QgsLogger "
+"<qgis.core.QgsLogger>` or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) "
+"instead."
+msgstr ""
+"파이썬 ``print`` 선언문을 사용하면 멀티스레드일 수도 있는 모든 코드를 안전하지 못 하게 만들고 **알고리즘을 극단적으로 느려지게"
+" 합니다**. 이때 모든 코드란 (다른 것들 가운데에서도) **표현식 함수**, **렌더링 작업자**, **심볼 레이어**, 그리고 "
+"**공간 처리 알고리즘** 을 포함합니다. 이런 경우 항상 파이썬 **로그 작업** 모듈 또는 스레드 안전 "
+"클래스들(:class:`QgsLogger <qgis.core.QgsLogger>` 또는 :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>`)을 대신 시용해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:241
+msgid "QgsMessageLog"
+msgstr "QgsMessageLog"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:258
+msgid ""
+"You can see the output of the :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
+msgstr ""
+":ref:`log_message_panel` 에서 :class:`QgsMessageLog <qgis.core.QgsMessageLog>`"
+" 클래스의 산출물을 볼 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:262
+msgid "The python built in logging module"
+msgstr "파이썬 내장 로그 작업 모듈"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:273
+msgid ""
+"The basicConfig method configures the basic setup of the logging. In the "
+"above code the filename, logging level and the format are defined. The "
+"filename refers to where to write the logfile to, the logging level defines "
+"what levels to output and the format defines the format in which each "
+"message is output."
+msgstr ""
+"basicConfig 메소드가 로그 작업의 기본 설정을 환경설정합니다. 앞의 코드에서 파일 이름, 로그 작업 수준 및 서식을 "
+"정의했습니다. 파일 이름은 로그 파일을 작성할 위치를 알려주며, 로그 작업 수준은 산출할 수준을 정의하고, 서식은 각 메시지를 산출할 "
+"서식을 정의합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:283
+msgid ""
+"If you want to erase the log file every time you execute your script you can"
+" do something like:"
+msgstr "여러분이 여러분의 스크립트를 실행할 때마다 로그 파일을 지우길 바라는 경우, 다음과 같은 코드를 작성하면 됩니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:291
+msgid ""
+"Further resources on how to use the python logging facility are available "
+"at:"
+msgstr "다음 링크에서 파이썬 로그 작업 기능을 사용하는 방법에 대한 심화 자료들을 찾아볼 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:293
+msgid "https://docs.python.org/3/library/logging.html"
+msgstr "https://docs.python.org/ko/3/library/logging.html"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:294
+msgid "https://docs.python.org/3/howto/logging.html"
+msgstr "https://docs.python.org/ko/3/howto/logging.html"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:295
+msgid "https://docs.python.org/3/howto/logging-cookbook.html"
+msgstr "https://docs.python.org/ko/3/howto/logging-cookbook.html"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:299
+msgid ""
+"Please note that without logging to a file by setting a filename the logging"
+" may be multithreaded which heavily slows down the output."
+msgstr ""
+"파일 이름을 설정해서 파일에 로그를 작성하지 않는다면 로그 작업이 산출 속도를 크게 떨어뜨리는 멀티스레드가 될 수도 있다는 사실을 "
+"기억하십시오."
