@@ -39,7 +39,6 @@ Returns the geometry after an affine transformation. Calculations are in the Spa
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/affinetransform.png
    :align: center
-   :width: 100%
 
    Vector point layer (green dots) before (left), and after (right) an affine transformation (translation).
 
@@ -201,7 +200,6 @@ Returns the closure of the combinatorial boundary of the geometry (ie the topolo
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/boundary_polygon.png
    :align: center
-   :width: 100%
 
    Boundary (black dashed line) of the source polygon layer
 
@@ -228,7 +226,6 @@ Returns a geometry which represents the bounding box of an input geometry. Calcu
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/bounding_box.png
    :align: center
-   :width: 100%
 
    Black lines represent the bounding boxes of each polygon feature
 
@@ -303,7 +300,6 @@ Returns a geometry that represents all points whose distance from this geometry 
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/buffer.png
    :align: center
-   :width: 100%
 
    Buffer (in yellow) of points, line, polygon with positive buffer, and polygon with negative buffer
 
@@ -332,7 +328,6 @@ Creates a buffer along a line geometry where the buffer diameter varies accordin
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/variable_buffer_m.png
    :align: center
-   :width: 100%
 
    Buffering line features using the m value on the vertices
 
@@ -358,7 +353,6 @@ Returns the geometric center of a geometry.
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/centroids.png
    :align: center
-   :width: 100%
 
    The red stars represent the centroids of the features of the input layer.
 
@@ -576,7 +570,6 @@ Takes a polygon or line layer geometry and generates a new one in which the geom
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/densify_geometry.png
    :align: center
-   :width: 100%
 
    Red points show the vertices before and after the densify
 
@@ -603,7 +596,6 @@ Takes a polygon or line layer geometry and generates a new one in which the geom
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/densify_geometry_interval.png
    :align: center
-   :width: 100%
 
    Densify geometry at a given interval
 
@@ -1450,7 +1442,6 @@ Returns the point interpolated by a specified distance along a linestring geomet
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/interpolated_point.png
    :align: center
-   :width: 100%
 
    Interpolated point at 500m of the beginning of the line
 
@@ -1520,7 +1511,6 @@ Returns the portion of a line (or curve) geometry which falls between the specif
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/substring.png
    :align: center
-   :width: 100%
 
    Substring line with starting distance set at 0 meters and the ending distance at 250 meters.
 
@@ -2078,7 +2068,6 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/offset_lines.png
    :align: center
-   :width: 100%
 
    In blue the source layer, in red the offset one
 
@@ -2129,7 +2118,6 @@ Returns a geometry which represents the minimal oriented bounding box of an inpu
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/oriented_minimum_bounding_box.png
    :align: center
-   :width: 100%
 
    Oriented minimum bounding box
 
@@ -2556,7 +2544,6 @@ Calculates the approximate pole of inaccessibility for a surface, which is the m
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/pole_inaccessibility.png
    :align: center
-   :width: 100%
 
    Pole of inaccessibility
 
@@ -2649,7 +2636,6 @@ Reverses the direction of a line string by reversing the order of its vertices.
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/reverse_line.png
    :align: center
-   :width: 100%
 
    Reversing line direction
 
@@ -2681,7 +2667,6 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/rotate.*
    :align: center
-   :width: 100%
 
    Rotating features
 
@@ -2818,7 +2803,6 @@ Simplifies a geometry by removing nodes using a distance based threshold (ie, th
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/simplify_geometries.png
    :align: center
-   :width: 100%
 
    From left to right, source layer and increasing simplification tolerances
 
@@ -2874,7 +2858,6 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/single_side_buffer.png
    :align: center
-   :width: 100%
 
    Left versus right side buffer on the same vector line layer
 
@@ -2927,7 +2910,6 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/smooth_geometry_1.png
    :align: center
-   :width: 100%
 
    Increasing number of iterations causes smoother geometries
 
@@ -2958,7 +2940,6 @@ Constructs square/rectangular waves along the boundary of a geometry.
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/square_wave.*
    :align: center
-   :width: 100%
 
    Symbolizing features with square waves
 
@@ -2991,7 +2972,6 @@ Constructs randomized square/rectangular waves along the boundary of a geometry.
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/square_wave_randomized.*
    :align: center
-   :width: 100%
 
    Symbolizing features with square randomized waves
 
@@ -3084,7 +3064,6 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/tapered_buffer.png
    :align: center
-   :width: 100%
 
    Tapered buffer on line features
 
@@ -3156,7 +3135,6 @@ Returns a translated version of a geometry. Calculations are in the Spatial Refe
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/translate_geometry.png
    :align: center
-   :width: 100%
 
    Translating features
 
@@ -3187,7 +3165,6 @@ Constructs triangular waves along the boundary of a geometry.
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave.*
    :align: center
-   :width: 100%
 
    Symbolizing features with triangular waves
 
@@ -3220,7 +3197,6 @@ Constructs randomized triangular waves along the boundary of a geometry.
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave_randomized.*
    :align: center
-   :width: 100%
 
    Symbolizing features with triangular randomized waves
 
@@ -3272,7 +3248,6 @@ Constructs rounded (sine-like) waves along the boundary of a geometry.
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/wave.*
    :align: center
-   :width: 100%
 
    Symbolizing features with waves
 
@@ -3305,7 +3280,6 @@ Constructs randomized curved (sine-like) waves along the boundary of a geometry.
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/wave_randomized.*
    :align: center
-   :width: 100%
 
    Symbolizing features with randomized waves
 
@@ -3337,7 +3311,6 @@ Returns a wedge shaped buffer originating from a point geometry.
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/wedge_buffers.png
    :align: center
-   :width: 100%
 
    Wedge buffering features
 
