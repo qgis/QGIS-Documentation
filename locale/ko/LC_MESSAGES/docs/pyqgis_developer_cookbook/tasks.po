@@ -32,18 +32,220 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:15
+msgid "Tasks - doing heavy work in the background"
+msgstr "태스크 - 배경에서 무거운 작업 하기"
 
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:17
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
-msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+msgstr "PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:39
 msgid "Introduction"
 msgstr "소개"
 
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:41
+msgid ""
+"Background processing using threads is a way to maintain a responsive user "
+"interface when heavy processing is going on. Tasks can be used to achieve "
+"threading in QGIS."
+msgstr ""
+"무거운 공간 처리 작업이 진행 중일 때, 스레드들을 사용한 배경 프로세스가 즉각 반응하는 사용자 인터페이스를 유지하는 한 방법일 수 "
+"있습니다. QGIS에서는 스레드 작업을 태스크(task)를 사용해서 달성할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:45
+msgid ""
+"A task (:class:`QgsTask <qgis.core.QgsTask>`) is a container for the code to"
+" be performed in the background, and the task manager "
+"(:class:`QgsTaskManager <qgis.core.QgsTaskManager>`) is used to control the "
+"running of the tasks. These classes simplify background processing in QGIS "
+"by providing mechanisms for signaling, progress reporting and access to the "
+"status for background processes. Tasks can be grouped using subtasks."
+msgstr ""
+"태스크(:class:`QgsTask <qgis.core.QgsTask>` 클래스)란 배경에서 수행될 코드를 위한 컨테이너이며, 태스크 "
+"관리자(:class:`QgsTaskManager <qgis.core.QgsTaskManager>` 클래스)는 태스크의 실행을 제어하는 데"
+" 쓰입니다. 이 클래스들은 신호 전달, 진행률 보고 및 배경 프로세스의 상태에 접근하기 위한 메커니즘을 제공해서 QGIS에서의 배경 "
+"프로세스 작업을 단순화시켜줍니다. 태스크는 하위 태스크를 사용해서 그룹화할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:53
+msgid ""
+"The global task manager (found with :meth:`QgsApplication.taskManager() "
+"<qgis.core.QgsApplication.taskManager>`) is normally used. This means that "
+"your tasks may not be the only tasks that are controlled by the task "
+"manager."
+msgstr ""
+"일반적으로 (:meth:`QgsApplication.taskManager() "
+"<qgis.core.QgsApplication.taskManager>` 메소드로 호출할 수 있는) 전체 수준 태스크 관리자를 사용합니다."
+" 다시 말해 태스크 관리자가 여러분의 태스크만 제어하는 것이 아닐 수도 있다는 뜻입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:57
+msgid "There are several ways to create a QGIS task:"
+msgstr "몇 가지 방법으로 QGIS 태스크를 생성할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:59
+msgid "Create your own task by extending :class:`QgsTask <qgis.core.QgsTask>`"
+msgstr ":class:`QgsTask <qgis.core.QgsTask>` 클래스를 확장시켜 사용자의 태스크를 생성합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:66
+msgid "Create a task from a function"
+msgstr "함수로부터 태스크를 생성합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:81
+msgid "Create a task from a processing algorithm"
+msgstr "공간 처리 알고리즘으로부터 태스크를 생성합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:95
+msgid ""
+"Any background task (regardless of how it is created) must NEVER use any "
+"QObject that lives on the main thread, such as accessing QgsVectorLayer, "
+"QgsProject or perform any GUI based operations like creating new widgets or "
+"interacting with existing widgets. Qt widgets must only be accessed or "
+"modified from the main thread. Data that is used in a task must be copied "
+"before the task is started. Attempting to use them from background threads "
+"will result in crashes."
+msgstr ""
+"어떤 배경 태스크도 (생성 방법에 상관없이) 주 스레드에 살아 있는, 예를 들면 QgsVectorLayer, QgsProject에 "
+"접근하거나 또는 새 위젯을 생성하거나 기존 위젯과 쌍방향 작업을 하는 것과 같은 GUI 기반 작업을 수행하는 QObject를 절대로 "
+"사용해서는 안 됩니다. Qt 위젯은 주 스레드에서만 접근 또는 수정해야만 합니다. 태스크에 쓰이는 데이터는 태스크를 시작하기 전에 반드시"
+" 복사해야만 합니다. 배경 스레드에서 이들을 사용하려 시도하는 경우 충돌이 발생할 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:104
+msgid ""
+"Moreover always make sure that :class:`context "
+"<qgis.core.QgsProcessingContext>` and :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` live for at least as long as the tasks "
+"that use them. QGIS will crash if, upon completion of a task, "
+"*QgsTaskManager* fails to access the *context* and *feedback* against which "
+"the task was scheduled."
+msgstr ""
+"또한 :class:`context <qgis.core.QgsProcessingContext>` 와 :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` 클래스들이 적어도 이들을 사용하는 태스크만큼은 살아 있도록 항상 "
+"확인하십시오. 태스크 완료 시 *QgsTaskManager* 가 태스크가 예약되었던 *context* 와 *feedback* 에 접근하지"
+" 못하는 경우 QGIS가 중단될 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:111
+msgid ""
+"It is a common pattern to call :meth:`setProject() "
+"<qgis.core.QgsProcessingContext.setProject>` shortly after calling "
+"``QgsProcessingContext``. This allows the task as well as its callback "
+"function to use most of the project-wide settings. This is especially "
+"valuable when working with spatial layers in the callback function."
+msgstr ""
+"``QgsProcessingContext`` 클래스를 호출한 직후 :meth:`setProject() "
+"<qgis.core.QgsProcessingContext.setProject>` 메소드를 호출하는 것이 흔한 패턴입니다. 이렇게 하면 "
+"태스크는 물론 태스크의 콜백 함수가 프로젝트 전체 설정 가운데 대부분을 사용할 수 있습니다. 콜백 함수에서 공간 레이어를 작업하는 경우 "
+"특히 유용합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:116
+msgid ""
+"Dependencies between tasks can be described using the :meth:`addSubTask() "
+"<qgis.core.QgsTask.addSubTask>` function of :class:`QgsTask "
+"<qgis.core.QgsTask>`. When a dependency is stated, the task manager will "
+"automatically determine how these dependencies will be executed. Wherever "
+"possible dependencies will be executed in parallel in order to satisfy them "
+"as quickly as possible. If a task on which another task depends is canceled,"
+" the dependent task will also be canceled. Circular dependencies can make "
+"deadlocks possible, so be careful."
+msgstr ""
+":class:`QgsTask <qgis.core.QgsTask>` 클래스의 :meth:`addSubTask() "
+"<qgis.core.QgsTask.addSubTask>` 함수를 사용하면 태스크들 사이의 의존성을 설명할 수 있습니다. 의존성을 선언하는"
+" 경우, 태스크 관리자가 이런 의존성들을 실행하는 방법을 자동으로 결정할 것입니다. 의존성들을 가능한 한 빨리 만족시키기 위해 의존성들을"
+" 병렬로 실행할 것입니다. 또다른 태스크가 의존하고 있는 태스크를 취소하는 경우, 의존하는 태스크도 취소될 것입니다. 순환 의존성은 교착"
+" 상태(deadlock)를 발생시킬 수 있기 때문에 조심해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:126
+msgid ""
+"If a task depends on a layer being available, this can be stated using the "
+":meth:`setDependentLayers() <qgis.core.QgsTask.setDependentLayers>` function"
+" of :class:`QgsTask <qgis.core.QgsTask>`. If a layer on which a task depends"
+" is not available, the task will be canceled."
+msgstr ""
+"태스크가 사용할 수 있는 레이어에 의존하는 경우, :class:`QgsTask <qgis.core.QgsTask>` 클래스의 "
+":meth:`setDependentLayers() <qgis.core.QgsTask.setDependentLayers>` 함수를 사용해서"
+" 이를 선언할 수 있습니다. 태스크가 의존하는 레이어를 사용할 수 없는 경우 태스크가 취소될 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:132
+msgid ""
+"Once the task has been created it can be scheduled for running using the "
+":meth:`addTask() <qgis.core.QgsTaskManager.addTask>` function of the task "
+"manager. Adding a task to the manager automatically transfers ownership of "
+"that task to the manager, and the manager will cleanup and delete tasks "
+"after they have executed. The scheduling of the tasks is influenced by the "
+"task priority, which is set in :meth:`addTask() "
+"<qgis.core.QgsTaskManager.addTask>`."
+msgstr ""
+"태스크를 생성하고 나면 태스크 관리자의 :meth:`addTask() <qgis.core.QgsTaskManager.addTask>` "
+"함수를 사용해서 실행을 예약할 수 있습니다. 관리자에 태스크를 추가하면 자동적으로 관리자가 해당 태스크를 소유하게 되며, 태스크를 실행한"
+" 후 관리자가 태스크를 정리하고 삭제할 것입니다. 태스크의 예약은 태스크 우선 순위에 영향을 받는데, :meth:`addTask() "
+"<qgis.core.QgsTaskManager.addTask>` 메소드에서 이 우선 순위를 설정합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:140
+msgid ""
+"The status of tasks can be monitored using :class:`QgsTask "
+"<qgis.core.QgsTask>` and :class:`QgsTaskManager <qgis.core.QgsTaskManager>` "
+"signals and functions."
+msgstr ""
+":class:`QgsTask <qgis.core.QgsTask>` 및 :class:`QgsTaskManager "
+"<qgis.core.QgsTaskManager>` 클래스의 신호와 함수를 통해 태스크의 상태를 모니터링할 수 있습니다."
+
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:145
 msgid "Examples"
 msgstr "예제"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:148
+msgid "Extending QgsTask"
+msgstr "QgsTask 클래스 확장하기"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:150
+msgid ""
+"In this example ``RandomIntegerSumTask`` extends :class:`QgsTask "
+"<qgis.core.QgsTask>` and will generate 100 random integers between 0 and 500"
+" during a specified period of time. If the random number is 42, the task is "
+"aborted and an exception is raised. Several instances of "
+"``RandomIntegerSumTask`` (with subtasks) are generated and added to the task"
+" manager, demonstrating two types of dependencies."
+msgstr ""
+"다음 예시에서는 ``RandomIntegerSumTask`` 가 :class:`QgsTask <qgis.core.QgsTask>` "
+"클래스를 확장시키고 지정한 시간 동안 0에서 500 사이의 정수 100개를 랜덤하게 생성할 것입니다. 이때 랜덤한 숫자가 42일 경우, "
+"태스크를 중단하고 예외를 발생시킵니다. 두 가지 유형의 의존성을 보여주는 (하위 태스크를 가진) "
+"``RandomIntegerSumTask`` 의 인스턴스를 몇 개 생성해서 태스크 관리자에 추가합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:299
+msgid "Task from function"
+msgstr "함수로부터 나온 태스크"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:301
+msgid ""
+"Create a task from a function (``doSomething`` in this example). The first "
+"parameter of the function will hold the :class:`QgsTask <qgis.core.QgsTask>`"
+" for the function. An important (named) parameter is ``on_finished``, that "
+"specifies a function that will be called when the task has completed. The "
+"``doSomething`` function in this example has an additional named parameter "
+"``wait_time``."
+msgstr ""
+"함수로부터 (이 예시에서는 ``doSomething`` 으로부터) 태스크를 생성합니다. 이 함수의 첫 번째 파라미터가 함수를 위한 "
+":class:`QgsTask <qgis.core.QgsTask>` 클래스를 담을 것입니다. ``on_finished`` 는 태스크 완료 "
+"시 호출할 함수를 지정하는 중요한 (이름이 있는) 파라미터입니다. 이 예시의 ``doSomething`` 함수는 추가적인 이름이 있는 "
+"파라미터 ``wait_time`` 을 가지고 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:403
+msgid "Task from a processing algorithm"
+msgstr "공간 처리 알고리즘으로부터 나온 태스크"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:405
+msgid ""
+"Create a task that uses the algorithm :ref:`qgis:randompointsinextent "
+"<qgisrandompointsinextent>` to generate 50000 random points inside a "
+"specified extent.  The result is added to the project in a safe way."
+msgstr ""
+"지정한 범위 안에 포인트 50,000개를 :ref:`qgis:randompointsinextent "
+"<qgisrandompointsinextent>` 알고리즘을 사용해서 랜덤하게 생성하는 태스크를 생성합니다. 결과물은 프로젝트에 안전한 "
+"방식으로 추가됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:456
+msgid "See also: https://www.opengis.ch/2018/06/22/threads-in-pyqgis3/."
+msgstr "https://www.opengis.ch/2018/06/22/threads-in-pyqgis3/ 도 참조하세요."
