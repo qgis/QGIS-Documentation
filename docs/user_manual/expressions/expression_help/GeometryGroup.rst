@@ -787,6 +787,11 @@ Returns a line string representing the exterior ring of a polygon geometry. If t
      - * ``geom_to_wkt(exterior_ring(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),( 0.1 0.1, 0.1 0.2, 0.2 0.2, 0.2, 0.1, 0.1 0.1))')))`` → 'LineString (-1 -1, 4 0, 4 2, 0 2, -1 -1)'
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/exterior_ring.*
+   :align: center
+
+   The dashed line represents the exterior ring of the polygon
+
 .. end_exterior_ring_section
 
 .. _expression_function_GeometryGroup_extrude:
