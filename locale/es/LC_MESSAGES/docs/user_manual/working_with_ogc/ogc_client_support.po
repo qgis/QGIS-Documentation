@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -472,6 +472,27 @@ msgstr ""
 msgid "HTTP :guilabel:`Referer`"
 msgstr ":guilabel:`Referente` HTTP"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:215
+msgid ""
+":guilabel:`WMS DPI-Mode`: Available options are **all**, **off**, **QGIS**, "
+"**UMN** and **GeoServer**"
+msgstr ""
+":guilabel:`Modo PPP de WMS`: Las opciones disponibles son **all**, **off**, "
+"**QGIS**, **UMN** y **GeoServer**."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:217
+msgid ""
+":guilabel:`WMTS server-side tile pixel ratio`:  When rendering WMTS layers, "
+"allows to scale up or down the tiles based on the device screen DPI. "
+"Available options are :guilabel:`Undefined (not scaled)`, "
+":guilabel:`Standard (96 DPI)` and :guilabel:`High (192 DPI)`."
+msgstr ""
+":guilabel:`Relación de píxeles de tesela del lado del servidor WMTS`: Al "
+"renderizar capas WMTS, permite aumentar o reducir la escala de los mosaicos "
+"en función de los PPP de la pantalla del dispositivo. Las opciones "
+"disponibles son :guilabel:`Indefinido (no escalado)`, :guilabel:`Estándar "
+"(96 PPP)` y :guilabel:`Alto (192 PPP)`."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:221
 msgid ""
 "|unchecked| :guilabel:`Ignore GetMap/GetTile/GetLegendGraphic URI reported "
@@ -526,6 +547,18 @@ msgstr "|unchecked| :guilabel:`Suavizar transformación de pixel de mapa`"
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:234
 msgid "Press :guilabel:`OK`"
 msgstr "Presiona :guilabel:`Aceptar`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:236
+msgid ""
+"Once the new WMS/WMTS server connection has been created, it will be "
+"preserved for future QGIS sessions. Note that it is also possible to "
+":guilabel:`Load` the connection parameters from a :file:`.XML` file or "
+":guilabel:`Save` them to a :file:`.XML` file."
+msgstr ""
+"Una vez creada la nueva conexión al servidor WMS/WMTS, ésta se conservará "
+"para futuras sesiones de QGIS. Tenga en cuenta que también es posible "
+":guilabel:`Cargar` los parámetros de conexión desde un archivo :file:`.XML` "
+"o :guilabel:`Guardarlos` en un archivo :file:`.XML`."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:243
 msgid ""
@@ -1414,6 +1447,23 @@ msgstr ""
 "plano y el renderizado progresivo, el almacenamiento en caché en disco de "
 "las características descargadas y la autodetección de versiones."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:666
+msgid ""
+"Layers of servers implementing `OGC API - Features - Part 4: Create, "
+"Replace, Update and Delete <https://docs.ogc.org/DRAFTS/20-002.html>`_ can "
+"be turned into editing mode to allow creating, modifying and deleting "
+"features. Note that each created/modified/deleted feature requires a "
+"dedicated network request, so performance might suffer in case of "
+"simultaneous modification of hundreds or more features at a time."
+msgstr ""
+"Las capas de los servidores que implementan `OGC API - Objetos espaciales- "
+"Parte 4: Crear, Reemplazar, Actualizar y Borrar "
+"<https://docs.ogc.org/DRAFTS/20-002.html>`_ pueden ponerse en modo edición "
+"para permitir crear, modificar y borrar objetos espaciales. Tenga en cuenta "
+"que cada objeto espacial creado/modificado/eliminado requiere una solicitud "
+"de red dedicada, por lo que el rendimiento podría verse afectado en caso de "
+"modificación simultánea de cientos o más objetos espaciales a la vez."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:673
 msgid ""
 "In general, adding a WFS layer is very similar to the procedure used with "
@@ -1454,6 +1504,12 @@ msgstr ""
 "Abra el cuadro de diálogo :guilabel:`Administrador de fuente de datos` "
 "presionando el botón |dataSourceManager| :sup:`Abrir Administrador de "
 "fuentes de datos`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:692
+msgid "Enable the |addWfsLayer| :guilabel:`WFS / OGC API - Features` tab"
+msgstr ""
+"Activar la pestaña |addWfsLayer| :guilabel:`WFS / OGC API - Objetos "
+"espaciales`"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:783
 msgid "addWfsLayer"
@@ -1539,6 +1595,18 @@ msgstr ":guilabel:`Utilizar codificación GML2 para transacciones`."
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:734
 msgid "Press :guilabel:`OK` to create the connection."
 msgstr "Presiona :guilabel:`Aceptar` para crear la conexión."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:736
+msgid ""
+"Note that any proxy settings you may have set in your preferences are also "
+"recognized. Also note that it is possible to :guilabel:`Load` the connection"
+" parameters from a :file:`.XML` file or :guilabel:`Save` them to a "
+":file:`.XML` file."
+msgstr ""
+"Tenga en cuenta que también se reconoce cualquier configuración de proxy que"
+" haya establecido en sus preferencias. Tenga en cuenta también que es "
+"posible :guilabel:`Cargar` los parámetros de conexión desde un archivo "
+":file:`.XML` o :guilabel:`Guardarlos` en un archivo :file:`.XML`."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:740
 msgid "Now we are ready to load WFS layers from the above connection."
