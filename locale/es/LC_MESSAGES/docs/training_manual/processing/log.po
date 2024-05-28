@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-28 17:50+0000\n"
+"POT-Creation-Date: 2024-05-19 15:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -58,6 +58,24 @@ msgstr ""
 "cuando se producen, y también para re-ejecutar las operaciones anteriores, "
 "ya que el sistema de registro también implementa cierta interactividad."
 
+#: ../../docs/training_manual/processing/log.rst:11
+msgid ""
+"To open the log, click on the balloon at the bottom right, on the QGIS "
+"status bar. Some algorithms might leave here information about their "
+"execution. For instance, those algorithms that call an external application "
+"usually log the console output of that application to this entry. If you "
+"have a look at it, you will see that the output of the SAGA algorithm that "
+"we just run (and that fails to execute because input data was not correct) "
+"is stored here."
+msgstr ""
+"Para abrir el registro, haga clic en el globo situado en la parte inferior "
+"derecha, en la barra de estado de QGIS. Algunos algoritmos pueden dejar aquí"
+" información sobre su ejecución. Por ejemplo, aquellos algoritmos que llaman"
+" a una aplicación externa suelen registrar la salida de consola de esa "
+"aplicación en esta entrada. Si le echas un vistazo, verás que la salida del "
+"algoritmo SAGA que acabamos de ejecutar (y que no se ejecuta porque los "
+"datos de entrada no eran correctos) se almacena aquí."
+
 #: ../../docs/training_manual/processing/log.rst:18
 msgid ""
 "This is helpful to understand what is going on. Advanced users will be able "
@@ -91,6 +109,24 @@ msgstr ""
 "buena idea revisar regularmente este tipo de advertencias si no esta seguro "
 "acerca de algunos aspectos de un algoritmo dado."
 
+#: ../../docs/training_manual/processing/log.rst:28
+msgid ""
+"From the :menuselection:`Processing --> History...` menu, you'll find "
+"*algorithms* that are executed, regardless of they are executed from the GUI"
+" or from the console (which will be explained later in this manual). The "
+"execution is stored in this dialog as a console call. That means that "
+"everytime you run an algorithm, a console command is added to the log, and "
+"you have the full history of your working session. Here is how that history "
+"looks like:"
+msgstr ""
+"Desde el menú :menuselection:`Procesos --> Historial...`, encontrará los "
+"*algoritmos* que se ejecutan, independientemente de que se ejecuten desde la"
+" GUI o desde la consola (que se explicará más adelante en este manual). La "
+"ejecución se almacena en este diálogo como una llamada a la consola. Eso "
+"significa que cada vez que ejecutas un algoritmo, se añade una orden de "
+"consola al registro, y tienes el historial completo de tu sesión de trabajo."
+" Este es el aspecto de ese historial:"
+
 #: ../../docs/training_manual/processing/log.rst:37
 msgid ""
 "This can be very useful when starting working with the console, to learn "
@@ -101,6 +137,74 @@ msgstr ""
 "aprender acerca de la sintaxis de los algoritmos. Vamos a utilizarlos cuando"
 " se discuta cómo ejecutar comandos de análisis desde la consola. "
 
-#: ../../docs/training_manual/processing/log.rst:53
-msgid ":abbr:`★★★ (Advanced level)` Advanced"
-msgstr ":abbr:`★★★ (Nivel avanzado)` Avanzado"
+#: ../../docs/training_manual/processing/log.rst:41
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along"
+msgstr ":abbr:`★☆☆ (Nivel básico)` Seguir"
+
+#: ../../docs/training_manual/processing/log.rst:43
+msgid ""
+"The history is also interactive, and you can run any previous algorithm just"
+" by double-clicking on its entry. This is an easy way of replicating the "
+"work we already did before."
+msgstr ""
+"El historial también es interactivo, y puedes ejecutar cualquier algoritmo "
+"anterior con sólo hacer doble clic en su entrada. Es una forma sencilla de "
+"replicar el trabajo que ya hicimos antes."
+
+#: ../../docs/training_manual/processing/log.rst:46
+msgid "For instance, try the following:"
+msgstr "Por ejemplo, pruebe lo siguiente:"
+
+#: ../../docs/training_manual/processing/log.rst:48
+msgid ""
+"Open the data corresponding to the first chapter of this manual and run the "
+"algorithm explained there."
+msgstr ""
+"Abra los datos correspondientes al primer capítulo de este manual y ejecute "
+"el algoritmo que allí se explica."
+
+#: ../../docs/training_manual/processing/log.rst:50
+msgid ""
+"Now go to the History dialog and locate the last algorithm in the list, "
+"which corresponds to the algorithm you have just run."
+msgstr ""
+"Ahora vaya al diálogo Historial y localice el último algoritmo de la lista, "
+"que corresponde al algoritmo que acaba de ejecutar."
+
+#: ../../docs/training_manual/processing/log.rst:52
+msgid ""
+"Double-click on it and a new result should be produced, just like when you "
+"run it using the normal dialog and calling it from the toolbox."
+msgstr ""
+"Haga doble clic sobre él y se producirá un nuevo resultado, igual que cuando"
+" lo ejecuta utilizando el cuadro de diálogo normal y llamándolo desde la "
+"caja de herramientas."
+
+#: ../../docs/training_manual/processing/log.rst:56
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along"
+msgstr ":abbr:`★★☆ (Nivel moderado)` Seguir"
+
+#: ../../docs/training_manual/processing/log.rst:58
+msgid "You can also modify the algorithm."
+msgstr "También puede modificar el algoritmo."
+
+#: ../../docs/training_manual/processing/log.rst:60
+msgid "Copy the algorithm call"
+msgstr "Copiar la llamada al algoritmo"
+
+#: ../../docs/training_manual/processing/log.rst:61
+msgid "Open the :menuselection:`Plugins --> Python console`"
+msgstr "Abra la :menuselection:`Complementos --> Consola Python`."
+
+#: ../../docs/training_manual/processing/log.rst:62
+msgid "Paste your copy to run the analysis; change the parameters at will."
+msgstr ""
+"Pegue su copia para ejecutar el análisis; cambie los parámetros a voluntad."
+
+#: ../../docs/training_manual/processing/log.rst:63
+msgid ""
+"To display the resulting file, you may want to replace ``processing.run`` in"
+" the pasted command with ``processing.runAndLoadResults``."
+msgstr ""
+"Para visualizar el archivo resultante, puede sustituir ``processing.run`` en"
+" el comando pegado por ``processing.runAndLoadResults``."
