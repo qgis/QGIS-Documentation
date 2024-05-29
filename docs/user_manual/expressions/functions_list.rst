@@ -337,7 +337,8 @@ Further reading: :ref:`qgiscollect` algorithm
    :start-after: .. end_collect_geometries_section
    :end-before: .. end_concave_hull_section
 
-Further reading: :ref:`expression_function_GeometryGroup_convex_hull`
+Further reading: :ref:`expression_function_GeometryGroup_convex_hull`,
+:ref:`qgisconcavehull` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_concave_hull_section
@@ -386,7 +387,8 @@ Further reading: :ref:`expression_function_GeometryGroup_overlay_disjoint`
    :start-after: .. end_disjoint_section
    :end-before: .. end_end_point_section
 
-Further reading: :ref:`qgisextractspecificvertices` algorithm
+Further reading: :ref:`expression_function_GeometryGroup_start_point`,
+:ref:`qgisextractspecificvertices` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_end_point_section
@@ -635,7 +637,8 @@ Further reading: :ref:`qgissmoothgeometry` algorithm
    :start-after: .. end_smooth_section
    :end-before: .. end_start_point_section
 
-Further reading: :ref:`qgisextractspecificvertices` algorithm
+Further reading: :ref:`expression_function_GeometryGroup_end_point`,
+:ref:`qgisextractspecificvertices` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_start_point_section

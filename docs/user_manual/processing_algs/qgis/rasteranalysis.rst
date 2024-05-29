@@ -846,7 +846,7 @@ where *f1* is the spread and *f2* the midpoint.
   Fuzzify raster example. Input raster source: Land Tirol -
   data.tirol.gv.at.
 
-.. seealso:: :ref:`qgisfuzzifyrasterlargemembership`
+.. seealso:: :ref:`qgisfuzzifyrasterlargemembership`,
   :ref:`qgisfuzzifyrasterlinearmembership`,
   :ref:`qgisfuzzifyrasternearmembership`,
   :ref:`qgisfuzzifyrasterpowermembership`,

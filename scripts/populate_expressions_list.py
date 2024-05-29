@@ -280,7 +280,7 @@ for g_name in groups:
             if func_list[f_name] in img_data.keys():
                 if find_img_path(img_data[func_list[f_name]]):
                     f.write(f".. figure:: {find_img_path(img_data[func_list[f_name]])}\n"
-                            f"   :align: center\n   :width: 100%\n\n"
+                            f"   :align: center\n\n"
                             f"   {img_data[func_list[f_name]]['caption']}\n\n")
 
             f.write(f".. end_{f_name.replace(' ', '_')}_section\n\n")
