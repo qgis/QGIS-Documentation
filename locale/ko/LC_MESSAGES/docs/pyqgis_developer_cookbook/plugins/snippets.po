@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:26
 msgid "Code Snippets"
@@ -42,35 +42,77 @@ msgstr "코드 조각"
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
-msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+msgstr "PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:60
 msgid "This section features code snippets to facilitate plugin development."
-msgstr "이 장에서는 플러그인 개발을 쉽게 할 수 있도록 도와주는 코드 조각(snippet)에 대해 설명합니다."
+msgstr "이 장에서는 플러그인을 쉽게 개발할 수 있도록 도와주는 코드 조각(snippet)에 대해 설명합니다."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:65
 msgid "How to call a method by a key shortcut"
-msgstr "단축키로 함수 메소드를 호출하는 방법"
+msgstr "단축키로 메소드를 호출하는 방법"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:67
 msgid "In the plug-in add to the :func:`initGui()`"
-msgstr "플러그인 내부의 :func:`initGui()` 함수에 다음 코드를 추가하십시오."
+msgstr "플러그인의 :func:`initGui()` 함수에 다음 코드를 추가하십시오:"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:76
 msgid "To :func:`unload()` add"
-msgstr ":func:`unload()` 함수에 다음 코드를 추가하십시오."
+msgstr ":func:`unload()` 함수에 다음 코드를 추가하십시오:"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:82
 msgid "The method that is called when CTRL+I is pressed"
-msgstr "CTRL+I 단축키를 누르면 해당 메소드를 호출합니다."
+msgstr "CTRL+I 단축키를 누르면 해당 메소드를 호출합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:89
+msgid ""
+"It is also possible to allow users to customize key shortcuts for the "
+"provided actions. This is done by adding:"
+msgstr "사용자가 해당 액션에 단축키를 사용자 정의할 수 있게 할 수도 있습니다. 다음 코드를 추가하면 됩니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:102
+msgid "How to reuse QGIS icons"
+msgstr "QGIS 아이콘을 재사용하는 방법"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:104
+msgid ""
+"Because they are well-known and convey a clear message to the users, you may"
+" want sometimes to reuse QGIS icons in your plugin instead of drawing and "
+"setting a new one. Use the :meth:`getThemeIcon() "
+"<qgis.core.QgsApplication.getThemeIcon>` method."
+msgstr ""
+"QGIS 아이콘이 잘 알려져 있고 사용자에게 명확한 메시지를 전달하기 때문에, 여러분의 플러그인에 새 아이콘을 그려서 설정하는 대신 "
+"QGIS 아이콘을 재사용하고 싶을 경우가 있을 수도 있습니다. 이런 경우 :meth:`getThemeIcon() "
+"<qgis.core.QgsApplication.getThemeIcon>` 메소드를 사용하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:108
+msgid ""
+"For example, to reuse the |fileOpen| :source:`mActionFileOpen.svg "
+"<images/themes/default/mActionFileOpen.svg>` icon available in the QGIS code"
+" repository:"
+msgstr ""
+"예를 들어 QGIS 코드 저장소에서 사용할 수 있는 |fileOpen| :source:`mActionFileOpen.svg "
+"<images/themes/default/mActionFileOpen.svg>` 아이콘을 재사용하려면:"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:284
 msgid "fileOpen"
 msgstr "fileOpen"
 
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:122
+msgid ""
+":meth:`iconPath() <qgis.core.QgsApplication.iconPath>` is another method to "
+"call QGIS icons. Find examples of calls to theme icons at `QGIS embedded "
+"images - Cheatsheet "
+"<https://static.geotribu.fr/toc_nav_ignored/qgis_resources_preview_table/>`_."
+msgstr ""
+"QGIS 아이콘을 호출할 수 있는 또다른 메소드로는 :meth:`iconPath() "
+"<qgis.core.QgsApplication.iconPath>` 가 있습니다. `QGIS 내장 이미지 - 치트시트 "
+"<https://static.geotribu.fr/toc_nav_ignored/qgis_resources_preview_table/>`_"
+" 에서 테마 아이콘을 호출하는 예시를 찾아보십시오."
+
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:130
 msgid "Interface for plugin in the options dialog"
-msgstr "옵션 대화창에 있는 플러그인 용 인터페이스"
+msgstr "옵션 대화창의 플러그인 용 인터페이스"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:132
 msgid ""
@@ -80,9 +122,9 @@ msgid ""
 "plugin settings in a single place which is easy for users to discover and "
 "navigate."
 msgstr ""
-":menuselection:`Settings --> Options` 에 사용자 지정 플러그인 옵션을 추가할 수 있습니다. 사용자 "
-"플러그인의 옵션을 위해 특정 주 메뉴 항목을 추가하는 것보다는 이 편이 좋은데, 모든 QGIS 응용 프로그램 설정과 플러그인 설정을 단일"
-" 위치에 모아두기 때문에 사용자가 설정을 찾고 탐색하기에 더 편하기 때문입니다."
+":menuselection:`Settings --> Options` 에 사용자 정의 플러그인 옵션 탭을 추가할 수 있습니다. 사용자 "
+"플러그인의 옵션을 위해 특정 메인 메뉴 항목을 추가하는 것보다는 이 편이 좋은데, 모든 QGIS 응용 프로그램 설정과 플러그인 설정을 "
+"단일 위치에 모아두기 때문에 사용자가 설정을 찾고 탐색하기에 더 편하기 때문입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:137
 msgid ""
@@ -92,14 +134,18 @@ msgid ""
 "files. In this example, we are adding two classes into the main "
 ":file:`mainPlugin.py` file."
 msgstr ""
-"다음 조각은 플러그인의 설정에 새로운 빈 탭만 추가할 것입니다. 사용자가 이 탭에 사용자 플러그인에 특화된 모든 옵션 및 설정을 채워 "
-"넣을 수 있습니다. 다음 클래스들을 서로 다른 파일로 분할할 수 있습니다. 이 예제에서 우리는 주 :file:`mainPlugin.py`"
-" 파일 안에 클래스 2개를 추가할 것입니다."
+"다음 코드 조각은 플러그인의 설정에 새 비어 있는 탭만 추가할 것입니다. 여러분이 이 탭에 사용자 플러그인에 특화된 모든 옵션 및 설정을"
+" 채워 넣을 수 있습니다. 다음 클래스들을 서로 다른 파일들로 분할할 수 있습니다. 이 예제에서 우리는 주 "
+":file:`mainPlugin.py` 파일 안에 클래스 2개를 추가할 것입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:165
 msgid ""
 "Finally we are adding the imports and modifying the ``__init__`` function:"
 msgstr "마지막으로 가져온 것들을 추가하고 ``__init__`` 함수를 수정합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:196
+msgid "**Add custom tabs to layer properties dialog**"
+msgstr "**레이어 속성 대화창에 사용자 정의 탭 추가하기**"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:198
 msgid ""
@@ -110,5 +156,52 @@ msgid ""
 msgstr ""
 "비슷한 논리를 적용해서 :class:`QgsMapLayerConfigWidgetFactory "
 "<qgis.gui.QgsMapLayerConfigWidgetFactory>` 및 :class:`QgsMapLayerConfigWidget"
-" <qgis.gui.QgsMapLayerConfigWidget>` 클래스를 사용하면 레이어 속성 대화창에 플러그인 사용자 지정 옵션을 "
+" <qgis.gui.QgsMapLayerConfigWidget>` 클래스를 사용하면 레이어 속성 대화창에 플러그인 사용자 정의 옵션을 "
 "추가할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:207
+msgid "Embed custom widgets for layers in the layer tree"
+msgstr "레이어 트리에 있는 레이어에 사용자 정의 위젯 내장시키기"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:209
+msgid ""
+"Beside usual layer symbology elements displayed next or below the layer "
+"entry in the :guilabel:`Layers` panel, you can add your own widgets, "
+"allowing for quick access to some actions that are often used with a layer "
+"(setup filtering, selection, style, refreshing a layer with a button widget,"
+" create a layer based time slider or just show extra layer information in a "
+"Label there, or ...). These so-called **Layer tree embedded widgets** are "
+"made available through the layer's properties :guilabel:`Legend` tab for "
+"individual layers."
+msgstr ""
+":guilabel:`Layers` 패널에 있는 레이어 항목 옆 또는 아래에 표시되는 일반 레이어 심볼 요소 이외에도, 레이어에 자주 "
+"쓰이는 (필터링 설정, 선택, 스타일, 버튼 위젯으로 레이어 새로고침, 시간 슬라이드 바를 바탕으로 레이어 생성, 또는 라벨에 추가 "
+"레이어 정보만 보이게 하기, ...) 몇몇 액션에 빠르게 접근할 수 있게 해주는 여러분의 위젯을 추가할 수 있습니다. 이 소위 **레이어"
+" 트리 내장 위젯** 은 개별 레이어에 대한 레이어 속성 대화창의 :guilabel:`Legend` 탭을 통해 사용할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:217
+msgid ""
+"The following code snippet creates a drop-down in the legend which shows you"
+" the layer-styles available for the layer, allowing to quickly switch "
+"between the different layer styles."
+msgstr ""
+"다음 코드 조각은 범례 안에 레이어에 사용할 수 있는 레이어 스타일을 보여줘서 서로 다른 레이어 스타일들을 빠르게 전환할 수 있는 드롭 "
+"다운 메뉴를 생성합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:258
+msgid ""
+"Then from a given layer's :guilabel:`Legend` properties tab, drag the "
+"``Layer style chooser`` from the :guilabel:`Available widgets` to "
+":guilabel:`Used widgets` to enable the widget in the layer tree. Embedded "
+"widgets are ALWAYS displayed at the top of their associated layer node "
+"subitems."
+msgstr ""
+"그러면 지정한 레이어의 :guilabel:`Legend` 속성 탭에서, :guilabel:`Available widgets` 로부터 "
+"``Layer style chooser`` 를 :guilabel:`Used widgets` 로 드래그하면 해당 위젯이 레이어 트리에 "
+"활성화됩니다. 내장 위젯은 항상 관련 레이어 노드 하위 항목의 최상단에 표시됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:264
+msgid ""
+"If you want to use the widgets from within e.g. a plugin, you can add them "
+"like this:"
+msgstr "예를 들어 플러그인 내부에서 위젯을 사용하고 싶은 경우, 다음과 같이 추가하면 됩니다:"
