@@ -1695,6 +1695,62 @@ or :guilabel:`Load Connection` from an XML file.
 
  .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
 
+.. index:: SensorThings
+.. _Sensor_things:
+
+Using SensorThings
+------------------
+
+Use the |addSensorThingsLayer| :guilabel:`SensorThings` tab in the :guilabel:`Data Source Manager` dialog
+or use the contextual menu of the :guilabel:`SensorThings` entry in the :guilabel:`Browser` panel to add
+a new SensorThings connection.
+
+To add a new service, press :guilabel:`New` (or :guilabel:`New SensorThings Connection`
+from the Browser panel) and provide the following:
+
+.. figure:: img/sensorThings_connection.png
+   :align: center
+
+   SensorThings Connection dialog
+
+* a :guilabel:`Name`
+* the :guilabel:`URL`
+* the :ref:`authentication <authentication_index>` configuration if necessary
+* a :guilabel:`Referer`
+* a :guilabel:`Entity Type`
+* a :guilabel:`Geometry Type`
+* a :guilabel:`Page Size`
+* a :guilabel:`Feature Limit` sets a maximum number of features to request from the service
+* a :guilabel:`Extent Limit` sets a maximum extent limit for the layer, so that only features
+  within the extent are requested
+* a :guilabel:`Filter` where you can build a query to filter the data, using SensorThings filter syntax.
+
+Press :guilabel:`OK` to establish the connection.
+Then you will be able to:
+
+* :guilabel:`Add` the new layer to the project; it is loaded with the name given in the settings.
+* :guilabel:`Edit` the SensorThings connection settings
+* :guilabel:`Remove` the connection
+* From the :guilabel:`Browser` panel, right-click over the entry
+  and you can also:
+
+  * :menuselection:`Export layer... --> To File`, :ref:`saving it as a vector
+    <general_saveas>`
+  * :guilabel:`Add layer to project`: a double-click also adds the layer
+  * View the :guilabel:`Layer Properties...` and get access to metadata and
+    a preview of the data provided by the service.
+    More settings are available when the layer has been loaded into the project.
+
+Configurations can be saved to an :file:`.XML` file (:guilabel:`Save Connections`)
+through the :guilabel:`SensorThings` entry in :guilabel:`Data Source Manager` dialog
+or its contextual menu in the :guilabel:`Browser` panel.
+Likewise, configurations can be added from a file (:guilabel:`Load Connections`).
+
+Through the Layer Source Properties dialog, you can set the :guilabel:`Page Size`,
+:guilabel:`Entity Type`, :guilabel:`Geometry Type`, :guilabel:`Extent Limit`, and :guilabel:`Feature Limit`
+for the existing layer in the project without having to add a new layer.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -1722,6 +1778,8 @@ or :guilabel:`Load Connection` from an XML file.
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |addSensorThingsLayer| image:: /static/common/mActionAddSensorThingsLayer.png
    :width: 1.5em
 .. |addTiledSceneLayer| image:: /static/common/mActionAddTiledSceneLayer.png
    :width: 1.5em
