@@ -5,7 +5,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
 # Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
@@ -32,8 +31,268 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:5
+msgid "Releasing your plugin"
+msgstr "사용자 플러그인 배포하기"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:12
+msgid ""
+"Once your plugin is ready and you think the plugin could be helpful for some"
+" people, do not hesitate to upload it to :ref:`official_pyqgis_repository`. "
+"On that page you can also find packaging guidelines about how to prepare the"
+" plugin to work well with the plugin installer. Or in case you would like to"
+" set up your own plugin repository, create a simple XML file that will list "
+"the plugins and their metadata."
+msgstr ""
+"여러분의 플러그인이 준비되었고 이 플러그인이 몇몇 사람에게 도움이 될 거라 생각한다면, 주저 말고 "
+":ref:`official_pyqgis_repository` 에 업로드하십시오. 해당 페이지에서 플러그인 설치자와 잘 작동하도록 "
+"플러그인을 준비하는 방법에 대한 패키지 작업 지침도 찾아볼 수 있습니다. 또는 사용자 자신의 플러그인 저장소를 준비하고 싶은 경우, "
+"플러그인과 그 메타데이터를 목록화할 단순 XML 파일을 생성하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:19
+msgid "Please take special care to the following suggestions:"
+msgstr "다음 권고 사항들에 특히 신경을 써주십시오:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:22
+msgid "Metadata and names"
+msgstr "메타데이터와 이름"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:24
+msgid "avoid using a name too similar to existing plugins"
+msgstr "기존 플러그인과 너무 비슷한 이름을 사용하지 말아주십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:25
+msgid ""
+"if your plugin has a similar functionality to an existing plugin, please "
+"explain the differences in the About field, so the user will know which one "
+"to use without the need to install and test it"
+msgstr ""
+"여러분의 플러그인이 기존 플러그인과 유사한 기능을 가지고 있는 경우, 사용자가 플러그인을 설치해서 테스트할 필요 없이 어떤 플러그인을 "
+"사용해야 할지 알 수 있도록 'About' 필드에 차이점을 설명해주십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:26
+msgid "avoid repeating \"plugin\" in the name of the plugin itself"
+msgstr "플러그인 이름 자체에 \"plugin\"을 반복하지 말아주십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:27
+msgid ""
+"use the description field in metadata for a 1 line description, the About "
+"field for more detailed instructions"
+msgstr ""
+"메타데이터의 'Description' 필드에는 한 줄 설명을 그리고 'About' 필드에는 좀 더 상세한 지침을 작성해주십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:28
+msgid ""
+"include a code repository, a bug tracker, and a home page; this will greatly"
+" enhance the possibility of collaboration, and can be done very easily with "
+"one of the available web infrastructures (GitHub, GitLab, Bitbucket, etc.)"
+msgstr ""
+"코드 저장소, 버그 추적기, 그리고 홈페이지를 포함시켜주십시오. 그렇게 하면 공동 작업의 가능성을 크게 높여주며, 사용할 수 있는 웹 "
+"인프라스트럭처 (깃허브(Github), 깃랩(Gitlab), 비트버킷(Bitbucket) 등등) 가운데 하나를 사용해서 공동 작업을 매우"
+" 쉽게 할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:29
+msgid ""
+"choose tags with care: avoid the uninformative ones (e.g. vector) and prefer"
+" the ones already used by others (see the plugin website)"
+msgstr ""
+"주의를 기울여 태그를 선택하십시오: 쓸데없는 정보를 주는 (예: 벡터) 태그를 피하고 다른 사람들이 이미 사용하고 있는 태그를 쓰는 편이"
+" 좋습니다. (플러그인 웹사이트를 참조하세요.)"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:30
+msgid ""
+"add a proper icon, do not leave the default one; see QGIS interface for a "
+"suggestion of the style to be used"
+msgstr ""
+"기본 아이콘을 내버려두지 말고 제대로 된 아이콘을 추가해주십시오. 사용할 모범적인 스타일을 알고 싶다면 QGIS 인터페이스를 참조하세요."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:33
+msgid "Code and help"
+msgstr "코드와 도움말"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:35
+msgid ""
+"do not include generated file (ui_*.py, resources_rc.py, generated help "
+"files…) and useless stuff (e.g. .gitignore) in repository"
+msgstr ""
+"저장소에 생성된 파일(:file:`ui_*.py`, :file:`resources_rc.py`, 생성된 도움말 파일, …) 및 쓸모없는 "
+"것(예: :file:`.gitignore`)들을 포함시키지 말아주십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:36
+msgid "add the plugin to the appropriate menu (Vector, Raster, Web, Database)"
+msgstr "알맞은 메뉴(Vector, Raster, Web, Database)에 플러그인을 추가하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:37
+msgid ""
+"when appropriate (plugins performing analyses), consider adding the plugin "
+"as a subplugin of Processing framework: this will allow users to run it in "
+"batch, to integrate it in more complex workflows, and will free you from the"
+" burden of designing an interface"
+msgstr ""
+"적절한 경우 (플러그인이 분석을 수행하는 경우) 플러그인을 공간 처리 프레임워크의 하위 플러그인으로 추가하는 것을 고려해주십시오. 그러면"
+" 사용자가 플러그인을 배치(batch) 모드로 실행하거나 좀 더 복잡한 워크플로에 통합시킬 수 있고, 여러분이 인터페이스를 설계할 필요가"
+" 없어집니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:38
+msgid ""
+"include at least minimal documentation and, if useful for testing and "
+"understanding, sample data."
+msgstr "적어도 최소한의 문서를 그리고 테스트 및 사용자 이해에 도움이 된다면 샘플 데이터를 포함시켜주십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:43
+msgid "Official Python plugin repository"
+msgstr "공식 파이썬 플러그인 저장소"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:45
+msgid ""
+"You can find the *official* Python plugin repository at "
+"`<https://plugins.qgis.org/>`_."
+msgstr "*공식* 파이썬 플러그인 저장소는 https://plugins.qgis.org/ 입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:48
+msgid ""
+"In order to use the official repository you must obtain an OSGEO ID from the"
+" `OSGEO web portal <https://www.osgeo.org/community/getting-started-"
+"osgeo/osgeo_userid/>`_."
+msgstr ""
+"공식 저장소를 사용하려면 `OSGEO 웹 포털 <https://www.osgeo.org/community/getting-started-"
+"osgeo/osgeo_userid/>`_ 에서 OSGEO ID를 만들어야만 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:51
+msgid ""
+"Once you have uploaded your plugin it will be approved by a staff member and"
+" you will be notified."
+msgstr "여러분의 플러그인을 업로드하고 나면 스태프 멤버가 이를 승인하고 여러분에게 알려줄 것입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:55
 msgid "**TODO:**"
-msgstr "**TODO:**"
+msgstr "**할 일:**"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:55
+msgid "Insert a link to the governance document"
+msgstr "관리 문서(governance document)를 가리키는 링크 삽입하기"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:61
+msgid "Permissions"
+msgstr "권한"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:63
+msgid "These rules have been implemented in the official plugin repository:"
+msgstr "공식 플러그인 저장소에는 다음 규칙들이 구현되어 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:65
+msgid "every registered user can add a new plugin"
+msgstr "등록된 사용자 모두가 새 플러그인을 추가할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:66
+msgid "*staff* users can approve or disapprove all plugin versions"
+msgstr "*스태프* 사용자는 모든 플러그인 버전들을 승인하거나 승인 취소할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:67
+msgid ""
+"users which have the special permission `plugins.can_approve` get the "
+"versions they upload automatically approved"
+msgstr "``plugins.can_approve`` 특수 권한을 가진 사용자가 업로드한 버전은 자동으로 승인됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:69
+msgid ""
+"users which have the special permission `plugins.can_approve` can approve "
+"versions uploaded by others as long as they are in the list of the plugin "
+"*owners*"
+msgstr ""
+"``plugins.can_approve`` 특수 권한을 가진 사용자는 플러그인 *소유자(owner)* 목록에 들어가 있는 한 다른 사람이"
+" 업로드한 버전을 승인할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:72
+msgid ""
+"a particular plugin can be deleted and edited only by *staff* users and "
+"plugin *owners*"
+msgstr "*스태프* 멤버와 해당 플러그인 *소유자* 만이 플러그인을 삭제하고 편집할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:74
+msgid ""
+"if a user without `plugins.can_approve` permission uploads a new version, "
+"the plugin version is automatically unapproved."
+msgstr ""
+"``plugins.can_approve`` 특수 권한이 없는 사용자가 새 버전을 업로드한 경우, 해당 플러그인 버전은 자동으로 승인 "
+"취소됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:79
+msgid "Trust management"
+msgstr "신뢰 관리"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:81
+msgid ""
+"Staff members can grant *trust* to selected plugin creators setting "
+"`plugins.can_approve` permission through the front-end application."
+msgstr ""
+"스태프 멤버들은 프론트엔드 응용 프로그램을 통해 선택된 플러그인 개발자들에게 ``plugins.can_approve`` 권한을 설정해서 "
+"*신뢰(trust)* 를 부여할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:84
+msgid ""
+"The plugin details view offers direct links to grant trust to the plugin "
+"creator or the plugin *owners*."
+msgstr "플러그인 상세 정보 뷰는 플러그인 개발자 또는 플러그인 *소유자* 에게 신뢰를 부여할 수 있는 직접 링크를 제공합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:90
+msgid "Validation"
+msgstr "무결성 검증"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:92
+msgid ""
+"Plugin's metadata are automatically imported and validated from the "
+"compressed package when the plugin is uploaded."
+msgstr "플러그인이 업로드되면 압축 패키지에서 플러그인의 메타데이터를 자동으로 가져와서 무결성을 검증합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:95
+msgid ""
+"Here are some validation rules that you should aware of when you want to "
+"upload a plugin on the official repository:"
+msgstr "공식 저장소에 플러그인을 업로드하려 할 때 알고 있어야 할 무결성 검증 규칙 몇 개를 소개합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:98
+msgid ""
+"the name of the main folder containing your plugin must contain only ASCII "
+"characters (A-Z and a-z), digits and the characters underscore (_) and minus"
+" (-), also it cannot start with a digit"
+msgstr ""
+"여러분의 플러그인을 담고 있는 주 폴더의 이름은 오직 ASCII 문자(A-Z 및 a-z), 숫자, 그리고 밑줄(_)과 빼기(-) 기호로만"
+" 이루어져야 하며, 숫자로 시작되어서는 안 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:101
+msgid ":file:`metadata.txt` is required"
+msgstr ":file:`metadata.txt` 파일은 필수입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:102
+msgid ""
+"all required metadata listed in :ref:`metadata table<plugin_metadata_table>`"
+" must be present"
+msgstr ":ref:`메타데이터 표 <plugin_metadata_table>` 목록에 있는 필수 메타데이터가 전부 있어야만 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:104
+msgid "the `version` metadata field must be unique"
+msgstr "``version`` 메타데이터 필드가 유일해야만 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:107
+msgid "Plugin structure"
+msgstr "플러그인 구조"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:109
+msgid ""
+"Following the validation rules the compressed (.zip) package of your plugin "
+"must have a specific structure to validate as a functional plugin. As the "
+"plugin will be unzipped inside the users plugins folder it must have it's "
+"own directory inside the .zip file to not interfere with other plugins. "
+"Mandatory files are: :file:`metadata.txt` and :file:`__init__.py`. But it "
+"would be nice to have a :file:`README` and of course an icon to represent "
+"the plugin (:file:`resources.qrc`). Following is an example of how a "
+"plugin.zip should look like."
+msgstr ""
+"무결성 검증 규칙에 따라 플러그인의 압축 (:file:`.zip`) 패키지는 기능하는 플러그인으로써 승인받기 위한 특수 구조를 가져야만 "
+"합니다. 사용자의 플러그인 폴더 안에 플러그인을 압축 해제할 것이기 때문에, 다른 플러그인과 섞이지 않도록 :file:`.zip` 파일 "
+"안에 자체 디렉터리를 가지고 있어야만 합니다. 필수 파일은 :file:`metadata.txt` 와 :file:`__init__.py` "
+"입니다. 하지만 :file:`README` 파일은 물론 플러그인을 표현할 아이콘(:file:`resources.qrc`)도 있는 편이 "
+"좋습니다. 다음은 :file:`plugin.zip` 파일이 어떻게 보여야 하는지에 대한 예시입니다."
