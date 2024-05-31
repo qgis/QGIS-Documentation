@@ -682,6 +682,10 @@ actions like:
      - :kbd:`Ctrl+Alt+-`
      - :guilabel:`Map Navigation`
      - :ref:`zoom_pan`
+   * - :guilabel:`Data Filtering`
+     - 
+     - 
+     - :ref:`label_mapview`   
    * - |identify| :guilabel:`Identify Features`
      - :kbd:`Ctrl+Shift+I`
      - :guilabel:`Attributes`
