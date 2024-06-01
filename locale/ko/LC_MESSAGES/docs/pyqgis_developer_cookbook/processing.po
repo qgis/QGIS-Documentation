@@ -31,4 +31,119 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:17
+msgid "Writing a Processing plugin"
+msgstr "공간 처리 플러그인 작성하기"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:24
+msgid ""
+"Depending on the kind of plugin that you are going to develop, it might be a"
+" better option to add its functionality as a Processing algorithm (or a set "
+"of them). That would provide a better integration within QGIS, additional "
+"functionality (since it can be run in the components of Processing, such as "
+"the modeler or the batch processing interface), and a quicker development "
+"time (since Processing will take of a large part of the work)."
+msgstr ""
+"여러분이 개발하려는 플러그인의 유형에 따라, 플러그인의 기능을 공간 처리 알고리즘으로 (또는 공간 처리 알고리즘 집합으로) 추가하는 편이"
+" 더 나을 수도 있습니다. QGIS 안에 더 잘 통합시킬 수 있고, (모델 작성자 또는 배치(batch) 공간 처리 인터페이스 같은 공간"
+" 처리 프레임워크 구성 요소에서 실행할 수 있기 때문에) 추가 기능을 제공할 수 있으며, (공간 처리 프레임워크가 작업의 상당 부분을 "
+"처리해줄 것이기 때문에) 개발 시간도 절약될 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:31
+msgid ""
+"To distribute those algorithms, you should create a new plugin that adds "
+"them to the Processing Toolbox. The plugin should contain an algorithm "
+"provider, which has to be registered when the plugin is instantiated."
+msgstr ""
+"이런 알고리즘을 배포하려면, 공간 처리 툴박스에 알고리즘을 추가하는 새 플러그인을 생성해야 합니다. 이 플러그인은 알고리즘 제공자를 담고"
+" 있어야 하는데, 플러그인이 인스턴스화될 때 이 알고리즘 제공자를 등록해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:36
+msgid "Creating from scratch"
+msgstr "처음부터 생성하기"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:38
+msgid ""
+"To create a plugin from scratch which contains an algorithm provider, you "
+"can follow these steps using the Plugin Builder:"
+msgstr ""
+"알고리즘 제공자를 담고 있는 플러그인을 처음부터 생성하려면, 플러그인 작성자(Plugin Builder)를 사용해서 다음 단계들을 "
+"따라가면 됩니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:41
+msgid "Install the **Plugin Builder** plugin"
+msgstr "**플러그인 작성자** 플러그인을 설치하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:42
+msgid ""
+"Create a new plugin using the Plugin Builder. When the Plugin Builder asks "
+"you for the template to use, select \"Processing provider\"."
+msgstr ""
+"플러그인 작성자를 사용해서 새 플러그인을 생성하십시오. 플러그인 작성자가 사용할 템플릿을 고르라고 할 때 \"공간 처리 "
+"제공자(Processing provider)\"를 선택하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:44
+msgid ""
+"The created plugin contains a provider with a single algorithm. Both the "
+"provider file and the algorithm file are fully commented and contain "
+"information about how to modify the provider and add additional algorithms. "
+"Refer to them for more information."
+msgstr ""
+"생성된 플러그인은 단일 알고리즘을 가진 제공자를 담고 있습니다. 제공자 파일과 알고리즘 파일 둘 다 충분한 주석들과 제공자를 수정하고 "
+"추가적인 알고리즘을 추가하는 방법에 대한 정보를 담고 있습니다. 자세한 정보를 알고 싶다면 이 파일들을 참조하세요."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:49
+msgid "Updating a plugin"
+msgstr "플러그인을 업데이트하기"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:51
+msgid ""
+"If you want to add your existing plugin to Processing, you need to add some "
+"code."
+msgstr "공간 처리 프레임워크에 여러분의 기존 플러그인을 추가하고 싶은 경우, 몇몇 코드를 추가해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:53
+msgid "In your :file:`metadata.txt` file, you need to add a variable:"
+msgstr ":file:`metadata.txt` 파일에 다음 변수를 추가해야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:59
+msgid ""
+"In the Python file where your plugin is setup with the ``initGui`` method, "
+"you need to adapt some lines like this:"
+msgstr "``initGui`` 메소드를 사용해서 플러그인을 초기 설정하는 파이썬 파일에서 몇 줄을 다음과 같이 조정해줘야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:83
+msgid ""
+"You can create a folder :file:`processing_provider` with three files in it:"
+msgstr ":file:`processing_provider` 폴더를 생성하고 다음 파일 3개를 생성할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:85
+msgid ""
+":file:`__init__.py` with nothing in it. This is necessary to make a valid "
+"Python package."
+msgstr "아무 내용도 없는 :file:`__init__.py` 파일 --- 이 파일은 무결한 파이썬 패키지를 만들기 위해 필요합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:87
+msgid ""
+":file:`provider.py` which will create the Processing provider and expose "
+"your algorithms."
+msgstr ":file:`provider.py` 파일 --- 이 파일이 공간 처리 제공자를 생성하고 여러분의 알고리즘을 알릴 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:127
+msgid ""
+":file:`example_processing_algorithm.py` which contains the example algorithm"
+" file. Copy/paste the content of the :source:`script template file "
+"<python/plugins/processing/script/ScriptTemplate.py>` and update it "
+"according to your needs."
+msgstr ""
+":file:`example_processing_algorithm.py` 파일 --- 이 파일은 예시 알고리즘 파일을 담습니다. 이 파일에"
+" :source:`스크립트 템플릿 파일 <python/plugins/processing/script/ScriptTemplate.py>` "
+"의 내용을 복사/붙여넣기한 다음 여러분의 필요에 따라 업데이트하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:132
+msgid ""
+"Now you can reload your plugin in QGIS and you should see your example "
+"script in the Processing toolbox and modeler."
+msgstr "이제 QGIS에 플러그인을 다시 불러오면 공간 처리 툴박스와 모델 작성자에서 여러분의 예시 스크립트를 볼 수 있을 것입니다."
