@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:29
+msgid "QGIS Server and Python"
+msgstr "QGIS 서버와 파이썬"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:38
 msgid "Introduction"
@@ -41,7 +45,241 @@ msgstr "소개"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:40
 msgid "To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`."
-msgstr "QGIS 서버에 대해 더 알고 싶다면, :ref:`QGIS-Server-manual` 을 읽어보십시오."
+msgstr "QGIS 서버에 대해 자세히 알고 싶다면, :ref:`QGIS-Server-manual` 를 읽어보십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:42
+msgid "QGIS Server is three different things:"
+msgstr "QGIS 서버는 서로 다른 세 가지로 이루어져 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:44
+msgid ""
+"QGIS Server library: a library that provides an API for creating OGC web "
+"services"
+msgstr "QGIS 서버 라이브러리: OGC 웹 서비스를 생성하기 위한 API를 제공하는 라이브러리입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:45
+msgid ""
+"QGIS Server FCGI: a FCGI binary application :file:`qgis_mapserv.fcgi` that "
+"together with a web server implements a set of OGC services (WMS, WFS, WCS "
+"etc.) and OGC APIs (WFS3/OAPIF)"
+msgstr ""
+"QGIS 서버 FCGI: 웹 서버와 함께 일련의 (WMS, WFS, WCS 등등의) OGC 서비스들 및 OGC "
+"API들(WFS3/OAPIF)을 구현하는 FCGI 바이너리 응용 프로그램 :file:`qgis_mapserv.fcgi` 파일"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:48
+msgid ""
+"QGIS Development Server: a development server binary application "
+":file:`qgis_mapserver` that implements a set of OGC services (WMS, WFS, WCS "
+"etc.) and OGC APIs (WFS3/OAPIF)"
+msgstr ""
+"QGIS 개발 서버: 일련의 (WMS, WFS, WCS 등등의) OGC 서비스들 및 OGC API들(WFS3/OAPIF)을 구현하는 개발"
+" 서버 바이너리 응용 프로그램 :file:`qgis_mapserver` 파일"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:51
+msgid ""
+"This chapter of the cookbook focuses on the first topic and by explaining "
+"the usage of QGIS Server API it shows how it is possible to use Python to "
+"extend, enhance or customize the server behavior or how to use the QGIS "
+"Server API to embed QGIS server into another application."
+msgstr ""
+"PyQGIS 쿡북의 이 장에서는 첫 번째 항목에 집중할 것입니다. QGIS 서버 API의 사용 사례를 들어 파이썬을 사용해서 어떻게 "
+"서버의 습성을 확장하거나 향상시키거나 사용자 정의할 수 있는지를, 또는 QGIS 서버 API를 사용해서 어떻게 또다른 응용 프로그램 안에"
+" QGIS 서버를 내장시킬 수 있는지를 보여줄 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:55
+msgid ""
+"There are a few different ways you can alter the behavior of QGIS Server or "
+"extend its capabilities to offer new custom services or APIs, these are the "
+"main scenarios you may face:"
+msgstr ""
+"QGIS 서버의 습성을 변경하거나, 새로운 사용자 정의 서비스 또는 API를 제공하기 위해 QGIS 서버의 케이퍼빌리티를 확장할 수 있는"
+" 서로 다른 방법들이 몇 가지 있습니다. 다음은 여러분이 마주할 수도 있는 주요 시나리오들입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:59
+msgid "EMBEDDING |rarr| Use QGIS Server API from another Python application"
+msgstr "EMBEDDING |rarr| 또다른 파이썬 응용 프로그램에서 QGIS 서버 API 사용하기"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:60
+msgid "STANDALONE |rarr| Run QGIS Server as a standalone WSGI/HTTP service"
+msgstr "STANDALONE |rarr| QGIS 서버를 독립형 WSGI/HTTP 서비스로 실행하기"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:61
+msgid "FILTERS |rarr| Enhance/Customize QGIS Server with filter plugins"
+msgstr "FILTERS |rarr| QGIS 서버를 필터 플러그인을 사용해서 향상시키기/사용자 정의하기"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:62
+msgid "SERVICES |rarr| Add a new *SERVICE*"
+msgstr "SERVICES |rarr| 새 *SERVICE* 를 추가하기"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:63
+msgid "OGC APIs |rarr| Add a new *OGC API*"
+msgstr "OGC APIs |rarr| 새 *OGC API* 를 추가하기"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:65
+msgid ""
+"Embedding and standalone applications require using the QGIS Server Python "
+"API directly from another Python script or application. The remaining "
+"options are better suited for when you want to add custom features to a "
+"standard QGIS Server binary application (FCGI or development server): in "
+"this case you'll need to write a Python plugin for the server application "
+"and register your custom filters, services or APIs."
+msgstr ""
+"내장형 및 독립형 응용 프로그램들은 또다른 파이썬 스크립트 또는 응용 프로그램으로부터 QGIS 서버 파이썬 API를 사용해야 합니다. "
+"나머지 옵션들은 표준 QGIS 서버 바이너리 응용 프로그램(FCGI 또는 개발 서버)에 사용자 정의 기능들을 추가하고 싶은 경우 더 "
+"어울립니다. 이런 경우 서버 응용 프로그램 용 파이썬 플러그인을 작성한 다음 사용자 정의 필터, 서비스, 또는 API를 등록해야 할 "
+"것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:72
+msgid "Server API basics"
+msgstr "서버 API 기본 사항"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:74
+msgid ""
+"The fundamental classes involved in a typical QGIS Server application are:"
+msgstr "전형적인 QGIS 서버 응용 프로그램과 관련된 기본 클래스는 다음과 같습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:76
+msgid ""
+":class:`QgsServer <qgis.server.QgsServer>` the server instance (typically a "
+"single instance for the whole application life)"
+msgstr ""
+":class:`QgsServer <qgis.server.QgsServer>`: 서버 인스턴스 (일반적으로 응용 프로그램 전체 생애 주기에"
+" 대해 단일 인스턴스)"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:78
+msgid ""
+":class:`QgsServerRequest <qgis.server.QgsServerRequest>` the request object "
+"(typically recreated on each request)"
+msgstr ""
+":class:`QgsServerRequest <qgis.server.QgsServerRequest>`: 요청 객체 (일반적으로 각 "
+"요청마다 다시 생성)"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:80
+msgid ""
+":meth:`QgsServer.handleRequest(request, response) "
+"<qgis.server.QgsServer.handleRequest>` processes the request and populates "
+"the response"
+msgstr ""
+":meth:`QgsServer.handleRequest(request, response) "
+"<qgis.server.QgsServer.handleRequest>`: 이 메소드가 요청을 처리하고 응답을 채웁니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:83
+msgid ""
+"The QGIS Server FCGI or development server workflow can be summarized as "
+"follows:"
+msgstr "QGIS 서버 FCGI 또는 개발 서버 워크플로는 다음과 같이 요약할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:97
+msgid ""
+"Inside the :meth:`QgsServer.handleRequest(request, response) "
+"<qgis.server.QgsServer.handleRequest>` method the filter plugins callbacks "
+"are called and :class:`QgsServerRequest <qgis.server.QgsServerRequest>` and "
+":class:`QgsServerResponse <qgis.server.QgsServerResponse>` are made "
+"available to the plugins through the :class:`QgsServerInterface "
+"<qgis.server.QgsServerInterface>` class."
+msgstr ""
+":meth:`QgsServer.handleRequest(request, response) "
+"<qgis.server.QgsServer.handleRequest>` 메소드 안에서 필터 플러그인 콜백을 호출하고 "
+":class:`QgsServerInterface <qgis.server.QgsServerInterface>` 클래스를 통해 플러그인이 "
+":class:`QgsServerRequest <qgis.server.QgsServerRequest>` 및 "
+":class:`QgsServerResponse <qgis.server.QgsServerResponse>` 클래스들을 사용할 수 있게 "
+"됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:104
+msgid ""
+"QGIS server classes are not thread safe, you should always use a "
+"multiprocessing model or containers when building scalable applications "
+"based on QGIS Server API."
+msgstr ""
+"QGIS 서버 클래스들은 스레드 안전(thread safety)하지 않기 때문에, QGIS 서버 API를 기반으로 확장 "
+"가능한(scalable) 응용 프로그램을 작성할 때 항상 다중 처리(multiprocessing) 모델 또는 컨테이너를 사용해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:108
+msgid "Standalone or embedding"
+msgstr "독립형 또는 내장형"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:110
+msgid ""
+"For standalone server applications or embedding, you will need to use the "
+"above mentioned server classes directly, wrapping them up into a web server "
+"implementation that manages all the HTTP protocol interactions with the "
+"client."
+msgstr ""
+"독립형 또는 내장형 서버 응용 프로그램의 경우, 앞에서 언급했던 서버 클래스들을 클라이언트와의 모든 HTTP 프로토콜 상호 작용들을 "
+"관리하는 웹 서버 구현으로 래핑(wrapping)해서 직접 사용해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:115
+msgid ""
+"A minimal example of the QGIS Server API usage (without the HTTP part) "
+"follows:"
+msgstr "QGIS 서버 API 사용 사례의 (HTTP 부분을 뺀) 최소한의 예시는 다음과 같습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:147
+msgid ""
+"Here is a complete standalone application example developed for the "
+"continuous integrations testing on QGIS source code repository, it showcases"
+" a wide set of different plugin filters and authentication schemes (not mean"
+" for production because they were developed for testing purposes only but "
+"still interesting for learning): :source:`qgis_wrapped_server.py "
+"<tests/src/python/qgis_wrapped_server.py>`"
+msgstr ""
+"다음은 QGIS 소스 코드 저장소 상에서 CI(continuous integration)를 테스트하기 위해 개발된 완전한 독립형 응용 "
+"프로그램의 예시로써, 서로 다른 플러그인 필터들과 인증 스키마들의 광범위한 집합을 보여줍니다(테스트 목적만으로 개발되었기 때문에 생산 "
+"용은 아니지만, 학습 용으로도 흥미롭습니다): :source:`qgis_wrapped_server.py "
+"<tests/src/python/qgis_wrapped_server.py>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:154
+msgid "Server plugins"
+msgstr "서버 플러그인"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:156
+msgid ""
+"Server python plugins are loaded once when the QGIS Server application "
+"starts and can be used to register filters, services or APIs."
+msgstr ""
+"QGIS 서버 응용 프로그램을 구동하고 필터, 서비스, 또는 API를 등록하기 위해 사용할 수 있게 되면, 서버 파이썬 플러그인을 "
+"불러옵니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:159
+msgid ""
+"The structure of a server plugin is very similar to their desktop "
+"counterpart, a :class:`QgsServerInterface <qgis.server.QgsServerInterface>` "
+"object is made available to the plugins and the plugins can register one or "
+"more custom filters, services or APIs to the corresponding registry by using"
+" one of the methods exposed by the server interface."
+msgstr ""
+"서버 플러그인의 구조는 대응하는 데스크탑 플러그인과 매우 유사합니다. 플러그인이 :class:`QgsServerInterface "
+"<qgis.server.QgsServerInterface>` 객체를 사용할 수 있게 해주고, 플러그인이 대응하는 레지스트리에 하나 이상의"
+" 사용자 정의 필터, 서비스, 또는 API를 서버 인터페이스에서 볼 수 있는 메소드들 가운데 하나를 사용해서 등록할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:165
+msgid "Server filter plugins"
+msgstr "서버 필터 플러그인"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:167
+msgid ""
+"Filters come in three different flavors and they can be instanciated by "
+"subclassing one of the classes below and by calling the corresponding method"
+" of :class:`QgsServerInterface <qgis.server.QgsServerInterface>`:"
+msgstr ""
+"필터는 세 가지 종류가 있으며, 다음 클래스 가운데 하나를 하위 클래스화하고 :class:`QgsServerInterface "
+"<qgis.server.QgsServerInterface>` 클래스의 대응하는 메소드를 호출해서 인스턴스화할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:174
+msgid "Filter Type"
+msgstr "필터 유형"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:175
+msgid "Base Class"
+msgstr "기반 클래스"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:176
+msgid "QgsServerInterface registration"
+msgstr "QgsServerInterface 등록"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:177
+msgid "I/O"
+msgstr "I/O"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:178
 msgid ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
@@ -52,6 +290,10 @@ msgid ""
 ":meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>`"
 msgstr ""
 ":meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:180
+msgid "Access Control"
+msgstr "접근 제어"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:181
 msgid ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
@@ -65,6 +307,10 @@ msgstr ""
 ":meth:`registerAccessControl() "
 "<qgis.server.QgsServerInterface.registerAccessControl>`"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:183
+msgid "Cache"
+msgstr "캐시"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:184
 msgid ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
 msgstr ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
@@ -76,6 +322,32 @@ msgid ""
 msgstr ""
 ":meth:`registerServerCache() "
 "<qgis.server.QgsServerInterface.registerServerCache>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:188
+msgid "I/O filters"
+msgstr "I/O 필터"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:190
+msgid ""
+"I/O filters can modify the server input and output (the request and the "
+"response) of the core services (WMS, WFS etc.) allowing to do any kind of "
+"manipulation of the services workflow. It is possible for example to "
+"restrict the access to selected layers, to inject an XSL stylesheet to the "
+"XML response, to add a watermark to a generated WMS image and so on."
+msgstr ""
+"I/O 필터는 (WMS, WFS 등등의) 핵심 서비스들의 서버 입력 및 출력을 (요청 및 응답을) 조정할 수 있기 때문에 서비스 "
+"워크플로를 어떤 유형으로든 조작할 수 있게 해줍니다. 예를 들면 선택한 레이어에의 접근을 제한할 수도 있고, XML 응답에 XSL "
+"스타일시트를 주입(inject)할 수도 있으며, 생성한 WMS 이미지에 워터마크를 추가할 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:196
+msgid ""
+"From this point, you might find useful a quick look to the :pyqgis:`server "
+"plugins API docs <server>`."
+msgstr "이 시점에서 :pyqgis:`서버 플러그인 API 문서 <server>` 를 한번 훑어보는 편이 유용할 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:199
+msgid "Each filter should implement at least one of three callbacks:"
+msgstr "각 필터는 다음 콜백 3개 가운데 적어도 하나를 구현해야 합니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:201
 #: ../../docs/pyqgis_developer_cookbook/server.rst:372
@@ -96,26 +368,441 @@ msgstr ""
 msgid ":meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>`"
 msgstr ":meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>`"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:205
+msgid ""
+"All filters have access to the request/response object "
+"(:class:`QgsRequestHandler <qgis.server.QgsRequestHandler>`) and can "
+"manipulate all its properties (input/output) and raise exceptions (while in "
+"a quite particular way as we’ll see below)."
+msgstr ""
+"모든 필터는 요청/응답 객체(:class:`QgsRequestHandler <qgis.server.QgsRequestHandler>`)에"
+" 접근할 수 있고 이 객체의 모든 속성(입력/출력)을 조작할 수 있으며 (다음에서 보게 될 아주 특수한 방식이긴 하지만) 예외를 발생시킬"
+" 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:210
+msgid ""
+"All these methods return a boolean value indicating if the call should be "
+"propagated to the subsequent filters. If one of these method returns "
+":const:`False` then the chain stop, otherwise the call will propagate to the"
+" next filter."
+msgstr ""
+"이 메소드들은 모두 호출을 후속 필터들까지 전파해야 하는지 여부를 나타내는 불(boolean) 값을 반환합니다. 이 메소드들 가운데 "
+"하나가 :const:`False` 를 반환하면 연쇄 전파가 중단되고, 그렇지 않으면 호출을 다음 필터로 전파할 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:214
+msgid ""
+"Here is the pseudo code showing how the server handles a typical request and"
+" when the filter’s callbacks are called:"
+msgstr ""
+"다음은 서버가 전형적인 요청을 어떻게 처리하는지 그리고 언제 필터의 콜백을 호출하는지를 보여주는 의사(pseudo) 코드입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:234
+msgid "The following paragraphs describe the available callbacks in details."
+msgstr "다음 문단들에서 사용할 수 있는 콜백들을 자세히 설명합니다."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:237
 msgid "onRequestReady"
 msgstr "onRequestReady"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:239
+msgid ""
+"This is called when the request is ready: incoming URL and data have been "
+"parsed and before entering the core services (WMS, WFS etc.) switch, this is"
+" the point where you can manipulate the input and perform actions like:"
+msgstr ""
+"요청이 준비됐을 때 이 콜백을 호출합니다. 들어오는 URL과 데이터를 파싱한 다음 핵심 서비스 (WMS, WFS 등등) 스위치를 입력하기"
+" 전, 이 때가 여러분이 입력을 조작하고 다음과 같은 액션들을 수행할 수 있는 시점입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:243
+msgid "authentication/authorization"
+msgstr "인증/승인"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:244
+msgid "redirects"
+msgstr "리다이렉트"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:245
+msgid "add/remove certain parameters (typenames for example)"
+msgstr "특정 파라미터 (예를 들면 typename) 추가/제거"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:246
+msgid "raise exceptions"
+msgstr "예외 발생"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:248
+msgid ""
+"You could even substitute a core service completely by changing **SERVICE** "
+"parameter and hence bypassing the core service completely (not that this "
+"make much sense though)."
+msgstr ""
+"**SERVICE** 파라미터를 변경, 핵심 서비스를 완전히 우회(bypass)해서 핵심 서비스조차도 완전히 대체할 수 있습니다. (물론"
+" 큰 의미가 있는 방법은 아닙니다.)"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:253
 msgid "onSendResponse"
 msgstr "onSendResponse"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:255
+msgid ""
+"This is called whenever any partial output is flushed from response buffer "
+"(i.e to **FCGI** ``stdout`` if the fcgi server is used) and from there, to "
+"the client. This occurs when huge content is streamed (like WFS GetFeature)."
+" In this case :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` may be called multiple times."
+msgstr ""
+"어떤 부분적인 출력이라도 응답 버퍼에서 (예를 들어 FCGI 서버를 사용하는 경우 **FCGI** ``stdout`` 으로) "
+"플러시(flush)될 때마다 이 콜백을 호출하고, 그 다음 클라이언트로 전달합니다. 대용량 콘텐츠가 스트리밍 될 때 (예: WFS "
+"GetFeature) 이런 일이 발생합니다. 이 경우 :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` 를 여러 번 호출할 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:260
+msgid ""
+"Note that if the response is not streamed, then :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` will not be called at all."
+msgstr ""
+"응답을 스트리밍하지 않는 경우 :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` 메소드를 전혀 호출하지 않을 것이란 점을 기억하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:262
+msgid ""
+"In all case, the last (or unique) chunk will be sent to client after a call "
+"to :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+msgstr ""
+"모든 경우에, :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` 메소드를 호출한 다음 클라이언트에 마지막 (또는"
+" 유일한) 덩어리(chunk)를 전달할 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:265
+msgid ""
+"Returning :const:`False` will prevent flushing of data to the client. This "
+"is desirable when a plugin wants to collect all chunks from a response and "
+"examine or change the response in :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+msgstr ""
+":const:`False` 를 반환하면 클라이언트에 데이터를 플러시하지 않을 것입니다. 플러그인이 응답에서 나오는 모든 덩어리들을 모은 "
+"다음 검사하거나 또는 :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` 에서 응답을 변경하고자 하는 경우 유용합니다."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:271
 msgid "onResponseComplete"
 msgstr "onResponseComplete"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:273
+msgid ""
+"This is called once when core services (if hit) finish their process and the"
+" request is ready to be sent to the client. As discussed above, this method "
+"will be called before the last (or unique) chunk of data is sent to the "
+"client. For streaming services, multiple calls to :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` might have been called."
+msgstr ""
+"핵심 서비스가 (적중한 경우) 처리 과정을 완료하고 클라이언트에 응답을 전달할 준비가 됐을 때 이 콜백을 한 번 호출합니다. 앞에서 "
+"설명한 대로, 클라이언트에 마지막 (또는 유일한) 데이터 덩어리를 전달하기 전에 이 메소드를 호출할 것입니다. 스트리밍 서비스의 경우, "
+":meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` 메소드를 "
+"여러 번 호출할 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:279
+msgid ""
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` is the ideal place to "
+"provide new services implementation (WPS or custom services) and to perform "
+"direct manipulation of the output coming from core services (for example to "
+"add a watermark upon a WMS image)."
+msgstr ""
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` 가 새로운 서비스를 (WPS 또는 사용자 정의 "
+"서비스를) 구현하고 핵심 서비스에서 나오는 출력을 직접 조작할 수 있는 (예를 들면 WMS 이미지 위에 워터마크를 추가할 수 있는) "
+"이상적인 위치입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:284
+msgid ""
+"Note that returning :const:`False` will prevent the next plugins to execute "
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` but, in any case, prevent "
+"response to be sent to the client."
+msgstr ""
+":const:`False` 를 반환하면 다음 플러그인들이 :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` 메소드를 실행하지 않을 것이지만, 어떤 "
+"경우에라도 클라이언트에 응답을 전달하지 않을 것이라는 사실을 기억하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:290
+msgid "Raising exceptions from a plugin"
+msgstr "플러그인에서 예외를 발생시키기"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:292
+msgid ""
+"Some work has still to be done on this topic: the current implementation can"
+" distinguish between handled and unhandled exceptions by setting a "
+":class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` property to an "
+"instance of QgsMapServiceException, this way the main C++ code can catch "
+"handled python exceptions and ignore unhandled exceptions (or better: log "
+"them)."
+msgstr ""
+"이 주제에 대해서는 아직 좀 더 작업을 해야 합니다. 현재 구현된 바로는 :class:`QgsMapServiceException "
+"<qgis.server.QgsMapServiceException>` 클래스의 인스턴스에 :class:`QgsRequestHandler "
+"<qgis.server.QgsRequestHandler>` 속성을 설정해서 처리된 예외와 처리되지 않은 예외를 구별할 수 있습니다. 이런"
+" 방식은 주 C++ 코드가 처리된 파이썬 예외를 캐치하고 처리되지 않은 예외는 무시(또는 더 나은 방법으로는 로그를 작성)할 수 있게 "
+"합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:299
+msgid ""
+"This approach basically works but it is not very \"pythonic\": a better "
+"approach would be to raise exceptions from python code and see them bubbling"
+" up into C++ loop for being handled there."
+msgstr ""
+"이 접근법은 기본적으로 작동하지만 그다지 \"파이썬스럽지\" 않습니다. 더 나은 접근법은 파이썬 코드로부터 예외를 발생시킨 다음 처리를 "
+"위해 C++ 루프로 버블링(bubbling)시키는 것일 겁니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:306
+msgid "Writing a server plugin"
+msgstr "서버 플러그인 작성하기"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:308
+msgid ""
+"A server plugin is a standard QGIS Python plugin as described in "
+":ref:`developing_plugins`, that just provides an additional (or alternative)"
+" interface: a typical QGIS desktop plugin has access to QGIS application "
+"through the :class:`QgisInterface <qgis.gui.QgisInterface>` instance, a "
+"server plugin has only access to a :class:`QgsServerInterface "
+"<qgis.server.QgsServerInterface>` when it is executed within the QGIS Server"
+" application context."
+msgstr ""
+"서버 플러그인은 :ref:`developing_plugins` 에서 설명한 대로 추가적인 (또는 대체하는) 인터페이스만 제공하는 표준 "
+"QGIS 파이썬 플러그인입니다. 일반적인 QGIS 데스크탑 플러그인은 :class:`QgisInterface "
+"<qgis.gui.QgisInterface>` 인스턴스를 통해 QGIS 응용 프로그램에 접근할 수 있지만, 서버 플러그인은 QGIS 서버"
+" 응용 프로그램 맥락 안에서 실행될 때에만 :class:`QgsServerInterface "
+"<qgis.server.QgsServerInterface>` 클래스에 접근할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:315
+msgid ""
+"To make QGIS Server aware that a plugin has a server interface, a special "
+"metadata entry is needed (in :file:`metadata.txt`)::"
+msgstr ""
+"QGIS 서버가 플러그인이 서버 인터페이스를 가지고 있다는 사실을 알게 하려면, (:file:`metadata.txt` 파일에) 특별한 "
+"메타데이터 항목이 필요합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:322
+msgid ""
+"Only plugins that have the ``server=True`` metadata set will be loaded and "
+"executed by QGIS Server."
+msgstr "QGIS 서버는 ``server=True`` 메타데이터를 가진 플러그인들만 불러오고 실행할 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:324
+msgid ""
+"The `qgis3-server-vagrant <https://github.com/elpaso/qgis3-server-"
+"vagrant/tree/master/resources/web/plugins>`_ example plugin discussed here "
+"(with many more) is available on github, a few server plugins are also "
+"published in the official `QGIS plugins repository "
+"<https://plugins.qgis.org/plugins/server>`_."
+msgstr ""
+"여기에서 설명하는 (더 많은 플러그인을 가진) `qgis3-server-vagrant "
+"<https://github.com/elpaso/qgis3-server-"
+"vagrant/tree/master/resources/web/plugins>`_ 예제 플러그인은 깃허브에서 사용할 수 있으며, 몇몇 서버"
+" 플러그인은 공식 `QGIS 플러그인 저장소 <https://plugins.qgis.org/plugins/server>`_ 에도 공개되어"
+" 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:329
+#: ../../docs/pyqgis_developer_cookbook/server.rst:554
+msgid "Plugin files"
+msgstr "플러그인 파일들"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:331
+msgid "Here's the directory structure of our example server plugin."
+msgstr "다음은 예제 서버 플러그인의 디렉터리 구조입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:344
 #: ../../docs/pyqgis_developer_cookbook/server.rst:568
 msgid "__init__.py"
 msgstr "__init__.py"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:346
+msgid ""
+"This file is required by Python's import system. Also, QGIS Server requires "
+"that this file contains a :func:`serverClassFactory()` function, which is "
+"called when the plugin gets loaded into QGIS Server when the server starts. "
+"It receives reference to instance of :class:`QgsServerInterface "
+"<qgis.server.QgsServerInterface>` and must return instance of your plugin's "
+"class. This is how the example plugin :file:`__init__.py` looks like:"
+msgstr ""
+"파이썬의 가져오기 시스템이 이 파일을 필요로 합니다. 또 QGIS 서버도 이 파일이 :func:`serverClassFactory()` "
+"함수를 담고 있을 것을 요구합니다. 이 함수는 서버 구동 시 QGIS 서버에 플러그인을 불러왔을 때 호출되어, "
+":class:`QgisServerInterface <qgis.server.QgsServerInterface>` 클래스의 인스턴스를 "
+"가리키는 참조를 받아서 플러그인 클래스의 인스턴스를 반환해야만 합니다. :file:`__init__.py` 의 내용은 다음과 같이 보여야"
+" 합니다:"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:361
 msgid "HelloServer.py"
 msgstr "HelloServer.py"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:363
+msgid ""
+"This is where the magic happens and this is how magic looks like: (e.g. "
+":file:`HelloServer.py`)"
+msgstr ""
+"이 파일에서 마법이 벌어지는데, 이 마법은 다음과 같이 보일 것입니다: (:file:`HelloServer.py` 파일의 예시)"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:366
+msgid ""
+"A server plugin typically consists in one or more callbacks packed into "
+"instances of a :class:`QgsServerFilter <qgis.server.QgsServerFilter>`."
+msgstr ""
+"서버 플러그인은 일반적으로 :class:`QgsServerFilter <qgis.server.QgsServerFilter>` 클래스의 "
+"인스턴스에 패키징된 하나 이상의 콜백으로 이루어져 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:369
+msgid ""
+"Each :class:`QgsServerFilter <qgis.server.QgsServerFilter>` implements one "
+"or more of the following callbacks:"
+msgstr ""
+"각각의 :class:`QgsServerFilter <qgis.server.QgsServerFilter>` 클래스는 다음과 같은 하나 "
+"이상의 콜백을 구현합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:376
+msgid ""
+"The following example implements a minimal filter which prints "
+"*HelloServer!* in case the **SERVICE** parameter equals to “HELLO”:"
+msgstr ""
+"다음은 **SERVICE** 파라미터가 “HELLO”와 동등한 경우 *HelloServer!* 를 출력하는 최소한의 필터를 구현하는 "
+"예시입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:405
+msgid ""
+"The filters must be registered into the **serverIface** as in the following "
+"example:"
+msgstr "이 필터들은 다음 예시에서처럼 반드시 **serverIface** 에 등록되어 있어야만 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:413
+msgid ""
+"The second parameter of :meth:`registerFilter() "
+"<qgis.server.QgsServerInterface.registerFilter>` sets a priority which "
+"defines the order for the callbacks with the same name (the lower priority "
+"is invoked first)."
+msgstr ""
+":meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>` "
+"메소드의 두 번째 파라미터는 같은 이름을 가진 콜백들에 대한 순서를 정의하는 우선 순위를 설정합니다(우선 순위 값이 낮을수록 먼저 "
+"호출됩니다):"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:418
+msgid ""
+"By using the three callbacks, plugins can manipulate the input and/or the "
+"output of the server in many different ways. In every moment, the plugin "
+"instance has access to the :class:`QgsRequestHandler "
+"<qgis.server.QgsRequestHandler>` through the :class:`QgsServerInterface "
+"<qgis.server.QgsServerInterface>`. The :class:`QgsRequestHandler "
+"<qgis.server.QgsRequestHandler>` class has plenty of methods that can be "
+"used to alter the input parameters before entering the core processing of "
+"the server (by using :func:`requestReady`) or after the request has been "
+"processed by the core services (by using :func:`sendResponse`)."
+msgstr ""
+"플러그인은 이 3개의 콜백을 사용해서 서버의 입력 그리고/또는 출력을 서로 다른 많은 방식으로 조작할 수 있습니다. 모든 경우에서, "
+"플러그인 인스턴스는 :class:`QgsServerInterface <qgis.server.QgsServerInterface>` 클래스를"
+" 통해 :class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` 클래스에 접근합니다. "
+":class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` 클래스는 "
+"(:func:`requestReady` 함수를 사용해서) 서버의 핵심 처리 과정에 들어가기 전에 또는 "
+"(:func:`sendResponse` 함수를 사용해서) 핵심 서비스가 요청을 처리한 후에 입력 파라미터들을 변경하는 데 쓰일 수 있는 "
+"메소드들을 많이 가지고 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:428
+msgid "The following examples cover some common use cases:"
+msgstr "다음은 흔한 사용 사례 몇 개를 설명하는 예시들입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:431
+msgid "Modifying the input"
+msgstr "입력을 수정하기"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:433
+msgid ""
+"The example plugin contains a test example that changes input parameters "
+"coming from the query string, in this example a new parameter is injected "
+"into the (already parsed) ``parameterMap``, this parameter is then visible "
+"by core services (WMS etc.), at the end of core services processing we check"
+" that the parameter is still there:"
+msgstr ""
+"다음 플러그인은 쿼리 문자열에서 나오는 입력 파라미터들을 변경하는 테스트 예제로, 이 예시에서는 (이미 파싱된) "
+"``parameterMap`` 에 새 파라미터를 주입합니다. 그러면 (WMS 등등의) 핵심 서비스가 이 파라미터를 인식해서 핵심 서비스 "
+"처리 과정 마지막에 해당 파라미터가 그대로 있는지 확인합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:461
+msgid "This is an extract of what you see in the log file:"
+msgstr "다음은 로그 파일에 보이는 내용을 추출한 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:473
+msgid ""
+"On the highlighted line the “SUCCESS” string indicates that the plugin "
+"passed the test."
+msgstr "강조된 줄에 있는 “SUCCESS” 문자열이 플러그인이 테스트를 통과했다는 사실을 나타냅니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:475
+msgid ""
+"The same technique can be exploited to use a custom service instead of a "
+"core one: you could for example skip a **WFS** **SERVICE** request or any "
+"other core request just by changing the **SERVICE** parameter to something "
+"different and the core service will be skipped. Then you can inject your "
+"custom results into the output and send them to the client (this is "
+"explained below)."
+msgstr ""
+"동일한 기술을 사용해서 핵심 서비스 대신 사용자 정의 서비스를 사용할 수 있습니다. 예를 들어 **SERVICE** 파라미터를 다른 "
+"무언가로 변경하는 것만으로도 **WFS SERVICE** 요청 또는 다른 모든 핵심 요청을 뛰어넘을 수 있으며, 그러면 핵심 서비스를 "
+"뛰어넘을 것입니다. 그 다음 출력에 사용자 정의 결과를 주입해서 클라이언트에 전달할 수 있습니다. (이에 대해서는 다음 부분에서 설명할 "
+"것입니다.)"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:483
+msgid ""
+"If you really want to implement a custom service it is recommended to "
+"subclass :class:`QgsService <qgis.server.QgsService>` and register your "
+"service on :meth:`registerFilter() "
+"<qgis.server.QgsServerInterface.serviceRegistry>` by calling its "
+":meth:`registerService(service) "
+"<qgis.server.QgsServiceRegistry.registerService>`"
+msgstr ""
+"여러분이 정말로 사용자 정의 서비스를 구현하고자 하는 경우, :class:`QgsService "
+"<qgis.server.QgsService>` 클래스의 하위 클래스를 생성한 다음 "
+":meth:`registerService(service) "
+"<qgis.server.QgsServiceRegistry.registerService>` 메소드를 호출해서 "
+":meth:`registerFilter() <qgis.server.QgsServerInterface.serviceRegistry>` "
+"메소드 상에서 사용자 정의 서비스를 등록하는 방식을 권장합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:489
+msgid "Modifying or replacing the output"
+msgstr "출력을 수정 또는 대체하기"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:491
+msgid ""
+"The watermark filter example shows how to replace the WMS output with a new "
+"image obtained by adding a watermark image on the top of the WMS image "
+"generated by the WMS core service:"
+msgstr ""
+"다음 워터마크 필터 예시는 WMS 출력을 WMS 핵심 서비스가 생성한 WMS 이미지 위에 워터마크 이미지를 추가해서 만든 새 이미지로 "
+"대체하는 방법을 보여줍니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:531
+msgid ""
+"In this example the **SERVICE** parameter value is checked and if the "
+"incoming request is a **WMS** **GETMAP** and no exceptions have been set by "
+"a previously executed plugin or by the core service (WMS in this case), the "
+"WMS generated image is retrieved from the output buffer and the watermark "
+"image is added. The final step is to clear the output buffer and replace it "
+"with the newly generated image. Please note that in a real-world situation "
+"we should also check for the requested image type instead of supporting PNG "
+"or JPG only."
+msgstr ""
+"이 예시에서는 **SERVICE** 파라미터 값을 확인해서 들어오는 요청이 **WMS GETMAP** 이며 이전에 실행된 플러그인이 또는"
+" 핵심 서비스가 (이 경우 WMS가) 어떤 예외도 설정하지 않은 경우, 출력 버퍼에서 WMS가 생성한 이미지를 검색해서 워터마크 이미지를"
+" 추가합니다. 마지막 단계는 출력 버퍼를 지운 다음 새로 생성한 이미지로 대체하는 것입니다. 실제 상황에서는 PNG 또는 JPG만 "
+"지원하는 것이 아니라 요청된 이미지 유형도 확인해야 한다는 사실을 기억하십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:540
+msgid "Access control filters"
+msgstr "접근 제어 필터"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:542
+msgid ""
+"Access control filters gives the developer a fine-grained control over which"
+" layers, features and attributes can be accessed, the following callbacks "
+"can be implemented in an access control filter:"
+msgstr ""
+"접근 제어 필터들은 개발자가 어떤 레이어, 필터, 그리고 속성에 접근할 수 있는지에 대해 세밀하게 제어할 수 있게 해줍니다. 접근 제어 "
+"필터에 다음 콜백들을 구현할 수 있습니다:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:546
 msgid ""
@@ -161,30 +848,246 @@ msgstr ""
 msgid ":meth:`cacheKey() <qgis.server.QgsAccessControlFilter.cacheKey>`"
 msgstr ":meth:`cacheKey() <qgis.server.QgsAccessControlFilter.cacheKey>`"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:556
+msgid "Here's the directory structure of our example plugin:"
+msgstr "다음은 예제 플러그인의 디렉터리 구조입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:570
+msgid ""
+"This file is required by Python's import system. As for all QGIS server "
+"plugins, this file contains a :func:`serverClassFactory()` function, which "
+"is called when the plugin gets loaded into QGIS Server at startup. It "
+"receives a reference to an instance of :class:`QgsServerInterface "
+"<qgis.server.QgsServerInterface>` and must return an instance of your "
+"plugin's class. This is how the example plugin :file:`__init__.py` looks "
+"like:"
+msgstr ""
+"파이썬의 가져오기 시스템이 이 파일을 필요로 합니다. 모든 QGIS 서버 플러그인과 마찬가지로, 이 파일이 "
+":func:`serverClassFactory()` 함수를 담고 있습니다. 이 함수는 서버 구동 시 QGIS 서버에 플러그인을 불러왔을 "
+"때 호출되어, :class:`QgisServerInterface <qgis.server.QgsServerInterface>` 클래스의 "
+"인스턴스를 가리키는 참조를 받아서 플러그인 클래스의 인스턴스를 반환해야만 합니다. :file:`__init__.py` 의 내용은 다음과 "
+"같이 보여야 합니다:"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:587
 msgid "AccessControl.py"
 msgstr "AccessControl.py"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:626
+msgid "This example gives a full access for everybody."
+msgstr "이 예시는 모두에게 완전한 접근 권한을 부여합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:628
+msgid "It's the role of the plugin to know who is logged on."
+msgstr "누가 로그인했는지 확인하는 것이 플러그인의 역할입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:630
+msgid ""
+"On all those methods we have the layer on argument to be able to customise "
+"the restriction per layer."
+msgstr "이런 모든 메소드에는 제약 조건을 레이어 별로 사용자 정의할 수 있는 레이어 인자가 있습니다."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:635
 msgid "layerFilterExpression"
 msgstr "layerFilterExpression"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:637
+msgid "Used to add an Expression to limit the results."
+msgstr "결과를 제한하기 위한 표현식을 추가하는 데 쓰입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:639
+#: ../../docs/pyqgis_developer_cookbook/server.rst:652
+msgid ""
+"For example, to limit to features where the attribute ``role`` is equal to "
+"``user``."
+msgstr "예를 들면 ``role`` 속성이 ``user`` 인 경우로 피처를 제한할 수 있습니다."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:648
 msgid "layerFilterSubsetString"
 msgstr "layerFilterSubsetString"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:650
+msgid ""
+"Same than the previous but use the ``SubsetString`` (executed in the "
+"database)"
+msgstr "바로 앞의 함수와 동일하지만 (데이터베이스에서 실행되는) ``SubsetString`` 을 사용합니다."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:661
 msgid "layerPermissions"
 msgstr "layerPermissions"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:663
+msgid "Limit the access to the layer."
+msgstr "레이어에의 접근을 제한합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:665
+msgid ""
+"Return an object of type :meth:`LayerPermissions() "
+"<qgis.server.QgsAccessControlFilter.layerPermissions>`, which has the "
+"properties:"
+msgstr ""
+"다음 속성을 가진 :meth:`LayerPermissions() "
+"<qgis.server.QgsAccessControlFilter.layerPermissions>` 유형의 객체를 반환합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:668
+msgid ""
+":attr:`canRead "
+"<qgis.server.QgsAccessControlFilter.LayerPermissions.canRead>` to see it in "
+"the ``GetCapabilities`` and have read access."
+msgstr ""
+":attr:`canRead "
+"<qgis.server.QgsAccessControlFilter.LayerPermissions.canRead>`: "
+"``GetCapabilities`` 에서 피처를 볼 수 있고 읽기 접근 권한을 가집니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:670
+msgid ""
+":attr:`canInsert "
+"<qgis.server.QgsAccessControlFilter.LayerPermissions.canInsert>` to be able "
+"to insert a new feature."
+msgstr ""
+":attr:`canInsert "
+"<qgis.server.QgsAccessControlFilter.LayerPermissions.canInsert>`: 새 피처를 삽입할 "
+"수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:672
+msgid ""
+":attr:`canUpdate "
+"<qgis.server.QgsAccessControlFilter.LayerPermissions.canUpdate>` to be able "
+"to update a feature."
+msgstr ""
+":attr:`canUpdate "
+"<qgis.server.QgsAccessControlFilter.LayerPermissions.canUpdate>`: 피처를 업데이트할 "
+"수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:674
+msgid ""
+":attr:`canDelete "
+"<qgis.server.QgsAccessControlFilter.LayerPermissions.canDelete>` to be able "
+"to delete a feature."
+msgstr ""
+":attr:`canDelete "
+"<qgis.server.QgsAccessControlFilter.LayerPermissions.canDelete>`: 피처를 삭제할 수 "
+"있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:677
+msgid "For example, to limit everything on read only access:"
+msgstr "예를 들어 읽기 전용 접근에서 모든 권한을 제한하려면:"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:689
 msgid "authorizedLayerAttributes"
 msgstr "authorizedLayerAttributes"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:691
+msgid "Used to limit the visibility of a specific subset of attribute."
+msgstr "속성의 특정 하위 집합의 가시성을 제한하는 데 쓰입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:693
+msgid "The argument attribute return the current set of visible attributes."
+msgstr "이 인자 속성은 현재 가시 속성 집합을 반환합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:695
+msgid "For example, to hide the ``role`` attribute:"
+msgstr "예를 들어 ``role`` 속성을 숨기려면:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:704
 msgid "allowToEdit"
 msgstr "allowToEdit"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:706
+msgid "This is used to limit the editing on a subset of features."
+msgstr "피처들의 하위 집합에 대한 편집 작업을 제한하는 데 쓰입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:708
+msgid "It is used in the ``WFS-Transaction`` protocol."
+msgstr "이 함수는 ``WFS-Transaction`` 프로토콜에 사용됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:710
+msgid ""
+"For example, to be able to edit only feature that has the attribute ``role``"
+" with the value ``user``:"
+msgstr "예를 들면 ``role`` 속성이 ``user`` 인 피처만 편집할 수 있게 하려면:"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:720
 msgid "cacheKey"
 msgstr "cacheKey"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:722
+msgid ""
+"QGIS Server maintains a cache of the capabilities then to have a cache per "
+"role you can return the role in this method. Or return ``None`` to "
+"completely disable the cache."
+msgstr ""
+"QGSI 서버가 케이퍼빌리티의 캐시를 유지·관리하는 경우 역할(role) 별로 캐시하려면 이 메소드에서 역할을 반환하면 됩니다. 또는 "
+"``None`` 을 반환해서 캐시를 완전히 비활성화시킬 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:728
+msgid "Custom services"
+msgstr "사용자 정의 서비스"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:730
+msgid ""
+"In QGIS Server, core services such as WMS, WFS and WCS are implemented as "
+"subclasses of :class:`QgsService <qgis.server.QgsService>`."
+msgstr ""
+"QGIS 서버에서 WMS, WFS 및 WCS 같은 핵심 서비스들은 :class:`QgsService "
+"<qgis.server.QgsService>` 클래스의 하위 클래스로 구현됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:733
+msgid ""
+"To implement a new service that will be executed when the query string "
+"parameter ``SERVICE`` matches the service name, you can implement your own "
+":class:`QgsService <qgis.server.QgsService>` and register your service on "
+"the :meth:`serviceRegistry() "
+"<qgis.server.QgsServerInterface.serviceRegistry>` by calling its "
+":meth:`registerService(service) "
+"<qgis.server.QgsServiceRegistry.registerService>`."
+msgstr ""
+"``SERVICE`` 쿼리 문자열 파라미터가 서비스 이름과 일치할 때 실행될 새 서비스를 구현하려면, 여러분 고유의 "
+":class:`QgsService <qgis.server.QgsService>` 클래스를 구현한 다음 "
+":meth:`registerService(service) "
+"<qgis.server.QgsServiceRegistry.registerService>` 메소드를 호출해서 "
+":meth:`serviceRegistry() <qgis.server.QgsServerInterface.serviceRegistry>` "
+"메소드 상에서 여러분의 서비스를 등록하면 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:738
+msgid "Here is an example of a custom service named ``CUSTOM``:"
+msgstr "다음은 ``CUSTOM`` 이라는 이름을 가진 사용자 정의 서비스의 예시입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:769
+msgid "Custom APIs"
+msgstr "사용자 정의 API"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:771
+msgid ""
+"In QGIS Server, core OGC APIs such OAPIF (aka WFS3) are implemented as "
+"collections of :class:`QgsServerOgcApiHandler "
+"<qgis.server.QgsServerOgcApiHandler>` subclasses that are registered to an "
+"instance of :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` (or it's "
+"parent class :class:`QgsServerApi <qgis.server.QgsServerApi>`)."
+msgstr ""
+"QGIS 서버에서, OAPIF (다른 이름으로는 WFS3) 같은 OGC API들은 :class:`QgsServerOgcApi "
+"<qgis.server.QgsServerOgcApi>` 클래스의 인스턴스에 등록된 :class:`QgsServerOgcApiHandler"
+" <qgis.server.QgsServerOgcApiHandler>` 하위 클래스들의 집합으로 (또는 그 상위 클래스인 "
+":class:`QgsServerApi <qgis.server.QgsServerApi>` 로) 구현됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:776
+msgid ""
+"To implement a new API that will be executed when the url path matches a "
+"certain URL, you can implement your own :class:`QgsServerOgcApiHandler "
+"<qgis.server.QgsServerOgcApiHandler>` instances, add them to an "
+":class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` and register the API "
+"on the :meth:`serviceRegistry() "
+"<qgis.server.QgsServerInterface.serviceRegistry>` by calling its "
+":meth:`registerApi(api) <qgis.server.QgsServiceRegistry.registerApi>`."
+msgstr ""
+"URL 경로가 특정 URL과 일치할 때 실행될 새 API를 구현하려면, 여러분 고유의 "
+":class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>` 클래스 "
+"인스턴스들을 구현한 다음 :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` 클래스에 "
+"추가하고 :meth:`registerApi(api) <qgis.server.QgsServiceRegistry.registerApi>` "
+"메소드를 호출해서 :meth:`serviceRegistry() "
+"<qgis.server.QgsServerInterface.serviceRegistry>` 메소드 상에서 API를 등록하면 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:782
+msgid ""
+"Here is an example of a custom API that will be executed when the URL "
+"contains ``/customapi``:"
+msgstr "다음은 URL이 ``/customapi`` 를 담고 있는 경우 실행될 사용자 정의 API의 예시입니다:"
