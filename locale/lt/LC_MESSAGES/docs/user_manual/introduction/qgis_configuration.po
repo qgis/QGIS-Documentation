@@ -321,7 +321,7 @@ msgid ""
 "and 'Specific': opens a particular project. Use the :guilabel:`...` button "
 "to define the project to use by default."
 msgstr ""
-"ir „Konktetų“: atveria konkretų projektą. Naudokite mygtuką :guilabel:`...`,"
+"ir „Konkretų“: atveria konkretų projektą. Naudokite mygtuką :guilabel:`...`,"
 " kad nurodytumėte pagal nutylėjimą naudojamą projektą."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:121
@@ -4966,9 +4966,70 @@ msgstr ""
 ":guilabel:`Globalaus žemėlapio šešėliavimo` savybes galima greitai pasiekti "
 "per :guilabel:`Sluoksnio stiliaus` skydelį."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2168
+msgid "Sensors Properties"
+msgstr "Jutiklių savybės"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2170
+msgid ""
+"The |sensor| :guilabel:`Sensors` tab is used to configure sensors and toggle"
+" their connection status. When active, sensors will passively collect data "
+"in the background and make available their latest data to expressions and "
+"python scripts."
+msgstr ""
+"Kortelė |sensor| :guilabel:`Jutikliai` naudojama konfigūruojant jutiklius ir"
+" perjungiant jų prisijungimo būseną. Kai aktyvuoti, jutikliai pasyviai rinks"
+" duomenis fone ir paskutinę duomenų versiją teiks pythono scenarijų "
+"išraiškoms."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2768
 msgid "sensor"
 msgstr "sensor"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2180
+msgid "Project Sensors tab"
+msgstr "Projekto jutiklių kortelė"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2182
+msgid ""
+"To add a new sensor, click on the |symbologyAdd| button. A settings sub-"
+"panel will open and allow you to configure:"
+msgstr ""
+"Norėdami pridėti jutiklį spauskite mygtuką |symbologyAdd|. Atsidarys "
+"nustatymų sub-skydelis, kuriame galėsite konfigūruoti:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2185
+msgid ""
+"the :guilabel:`Sensor name`: used to retrieve sensor values in expressions "
+"and python scripts;"
+msgstr ""
+":guilabel:`Jutiklio pavadinimą`: kuris bus naudojamas gaunant jutiklio "
+"reikšmes python scenarijų išraiškose;"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2187
+msgid "the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and"
+msgstr ""
+":guilabel:`Jutiklio tipą`: TCP, UDP, serijinio prievado jutiklis ir pan.; ir"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2188
+msgid "additional type-specific details (e.g. host name and port)"
+msgstr ""
+"papildomas nuo tipo priklausančias detales (pvz. serverio pavadinimą ir "
+"prievadą)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2195
+msgid "Sensor Settings sub-panel"
+msgstr "Jutiklių nustatymų sub-skydelis"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2197
+msgid ""
+"Once a sensor is configured, you can use the |start| :sup:`Start` button to "
+"connect the sensor. Once active, the last collected data will be displayed "
+"in the sensors table's :guilabel:`Last value` column."
+msgstr ""
+"Sukonfigūravus jutiklius jūs galite naudoti mygtuką |start| :sup:`Pradėti`, "
+"kad prisijungtumėte prie jutiklio. Kai jis aktyvus, paskutiniai surinkti "
+"duomenys rodomi jutiklio lentelės stulpelyje :guilabel:`Paskutinė reikšmė`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2772
 msgid "start"
@@ -5248,9 +5309,17 @@ msgstr ""
 "paleidimo metu, naudodami komandą: ``qgis ./raster/landcover.img "
 "./gml/lakes.gml``"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2370
+msgid "``--version``"
+msgstr "``--version``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2372
 msgid "This option returns QGIS version information."
 msgstr "Ši parinktis grąžina QGIS versijos informaciją."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2375
+msgid "``--snapshot``"
+msgstr "``--snapshot``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2377
 msgid ""
@@ -5274,6 +5343,10 @@ msgstr ""
 "argumentus ``--width`` ir ``--height``. Failo pavadinimą galima pridėti po "
 "``--snapshot``. Pavyzdžiui::"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2389
+msgid "``--width``"
+msgstr "``--width``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2391
 msgid ""
 "This option returns the width of the snapshot to be emitted (used with "
@@ -5282,6 +5355,10 @@ msgstr ""
 "Ši parinktis nurodo grąžinamos nuotraukos plotį (naudojama su "
 "``--snapshot``)."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2394
+msgid "``--height``"
+msgstr "``--height``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2396
 msgid ""
 "This option returns the height of the snapshot to be emitted (used with "
@@ -5289,6 +5366,10 @@ msgid ""
 msgstr ""
 "Ši parinktis nurodo grąžinamos nuotraukos aukštį (naudojama su "
 "``--snapshot``)."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2399
+msgid "``--lang``"
+msgstr "``--lang``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2401
 msgid ""
@@ -5299,6 +5380,10 @@ msgstr ""
 "Priklausomai nuo jūsų lokalės, QGIS parenka tinkamą lokalizaciją. Jei norite"
 " pakeisti jūsų kalbą, galite nurodyti kalbos kodą. Pavyzdžiui, ``qgis --lang"
 " it`` paleis QGIS su Itališka lokalizacija."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2406
+msgid "``--project``"
+msgstr "``--project``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2408
 msgid ""
@@ -5331,13 +5416,25 @@ msgstr ""
 "Ši parinktis, tikriausiai, labiausiai tinka naudojant kartu su ``--project``"
 " atidarant konkretų projektą norimoje aprėptyje."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2424
+msgid "``--nologo``"
+msgstr "``--nologo``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2426
 msgid "This option hides the splash screen when you start QGIS."
 msgstr "Ši parinktis paslepia QGIS pradžios užsklandą."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2429
+msgid "``--noversioncheck``"
+msgstr "``--noversioncheck``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2431
 msgid "Skip searching for a new version of QGIS at startup."
 msgstr "QGIS paleidimo metu netikrinti, ar yra naujesnė versija."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2434
+msgid "``--noplugins``"
+msgstr "``--noplugins``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2436
 msgid ""
@@ -5348,6 +5445,10 @@ msgstr ""
 "Jei paleidimo metu turite problemų su priedais, su šia parinktimi jūs galite"
 " neįkelti jų paleidimo metu. Jie vėliau vis tiek bus prieinami per Priedų "
 "tvarkyklę."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2441
+msgid "``--nocustomization``"
+msgstr "``--nocustomization``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2443
 msgid ""
@@ -5387,6 +5488,10 @@ msgstr ""
 "įkeliamas paliekant trūkstamus sluoksnius kaip neprieinamus. Daugiau "
 "informacijos apie šią temą rasite :ref:`handle_broken_paths`."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2464
+msgid "``--customizationfile``"
+msgstr "``--customizationfile``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2466
 msgid ""
 "Using this option, you can define a UI customization file, that will be used"
@@ -5394,6 +5499,10 @@ msgid ""
 msgstr ""
 "Naudojant šią parinktį galite nustatyti UI tinkinimo failą, kuris bus "
 "naudojamas paleidimo metu."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2470
+msgid "``--globalsettingsfile``"
+msgstr "``--globalsettingsfile``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2472
 msgid "The equivalent environment variable is ``QGIS_GLOBAL_SETTINGS_FILE``."
@@ -5440,9 +5549,17 @@ msgstr ""
 "eilutės parametrus arba nustatyti aplinkos kintamąjį. Priklausomai nuo OS, "
 "tai yra:"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2489
+msgid "|nix| :file:`$HOME/.local/share/QGIS/QGIS3/`"
+msgstr "|nix| :file:`$HOME/.local/share/QGIS/QGIS3/`"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2490
 msgid "|win| :file:`C:\\\\Users\\\\<username>\\\\%AppData%\\\\Roaming\\\\QGIS\\\\QGIS3\\\\`"
 msgstr "|win| :file:`C:\\\\Users\\\\<username>\\\\%AppData%\\\\Roaming\\\\QGIS\\\\QGIS3\\\\`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2491
+msgid "|osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`"
+msgstr "|osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2492
 msgid ""
@@ -5471,6 +5588,10 @@ msgstr ""
 "aplanką leidžia administratoriams keisti globalius nustatymus ir "
 "numatytąsias parinktis keliose mašinose keičiant vieną failą."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2502
+msgid "``--authdbdirectory``"
+msgstr "``--authdbdirectory``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2504
 msgid ""
 "This option is similar to ``--globalsettingsfile``, but defines the path to "
@@ -5479,6 +5600,10 @@ msgstr ""
 "Ši parinktis panaši į ``--globalsettingsfile``, bet nustato kelią iki "
 "aplanko, kuriame bus laikoma ir iš kurio bus įkeliama autentifikacijos "
 "duomenų bazė."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2508
+msgid "``--code``"
+msgstr "``--code``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2510
 msgid ""
@@ -5507,6 +5632,10 @@ msgstr ""
 ":file:`landcover.img` ir suteikti sluoksniu pavadinimą 'Alaska' naudodami "
 "tokią komandą::"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2530
+msgid "``--defaultui``"
+msgstr "``--defaultui``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2532
 msgid ""
 "On load, **permanently resets** the user interface (UI) to the default "
@@ -5531,6 +5660,10 @@ msgstr ""
 "būsenos juosta) liks paslėpti net naudojant parinktį ``--defaultui``. "
 "Taipogi žiūrėkite parinktį ``--nocustomization``."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2543
+msgid "``--hide-browser``"
+msgstr "``--hide-browser``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2545
 msgid ""
 "On load, hides the :guilabel:`Browser` panel from the user interface. The "
@@ -5554,6 +5687,10 @@ msgid ""
 msgstr ""
 "Jei nebus vėl įjungtas, Naršyklės skydelis liks paslėptas ir kitų paleidimų "
 "metu."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2554
+msgid "``--dxf-*``"
+msgstr "``--dxf-*``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2556
 msgid ""
@@ -5597,6 +5734,10 @@ msgstr ""
 "*--dxf-map-theme*: parinkite :ref:`žemėlapio temą <map_themes>` iš sluoksnių"
 " medžio konfigūracijos."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2570
+msgid "``--take-screenshots``"
+msgstr "``--take-screenshots``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2572
 msgid ""
 "Takes screenshots for the user documentation. Can be used together with "
@@ -5608,6 +5749,24 @@ msgstr ""
 "``--screenshots-categories``, jei reikie filtruoti, kuriai dokumentacijos "
 "kategorijai/skilčiai reikia kurti nuotraukas (žr. "
 "QgsAppScreenShots::Categories)."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2577
+msgid "``--profile``"
+msgstr "``--profile``"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2579
+msgid ""
+"Loads QGIS using a specific profile from the user's profile folder. This "
+"option takes precedence over :ref:`user profile startup setting "
+"<user_profile_setting>`."
+msgstr ""
+"Įkelia QGIS naudojant konkretų profilį iš naudotojo profilių aplanko. Ši "
+"parinktis permuša :ref:`naudotojo pradžios profilio nustatymą "
+"<user_profile_setting>`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2585
+msgid "``--profiles-path``"
+msgstr "``--profiles-path``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2587
 msgid ""
@@ -5635,6 +5794,10 @@ msgstr ""
 msgid "The equivalent environment variable is ``QGIS_CUSTOM_CONFIG_PATH``."
 msgstr "Atitinkantis aplinkos kintamasis yra ``QGIS_CUSTOM_CONFIG_PATH``."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2598
+msgid "``--version-migration``"
+msgstr "``--version-migration``"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2600
 msgid ""
 "If settings from an older version are found (*e.g.*, the ``.qgis2`` folder "
@@ -5642,6 +5805,10 @@ msgid ""
 msgstr ""
 "Jei randami nustatymai iš senesnės versijos (*pvz.*, ``.qgis2`` QGIS 2.18 "
 "aplankas), ši parinktis importuos juos į numatytąjį QGIS profilį."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2604
+msgid "``--openclprogramfolder``"
+msgstr "``--openclprogramfolder``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2606
 msgid ""
@@ -5699,6 +5866,39 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2636
 msgid "If you want to add a custom variable in the global scope:"
 msgstr "Jei norite pridėti savo kintamąjį globalioje apimtyje:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2643
+msgid ""
+"A lot of settings can be set using the :file:`.INI` file such as WMS/WMTS, "
+"PostGIS connections, proxy settings, maptips, default values for algorithms "
+"parameters… For example, if you want to configure organization wide default "
+"values for some algorithms it would be handy if you could configure it in "
+"the prepared ini-file for all users. If the users then open the toolbox to "
+"execute an algorithm, the default values will be there. To set the default "
+"value e.g. for ``GRID_SIZE`` parameter for the ``native:intersection`` "
+"algorithm, you could write the following into the :file:`.INI` file:"
+msgstr ""
+"Daug nustatymų galima nustatyti naudojant :file:`.INI` failą, pvz. WMS/WMTS,"
+" PostGIS jungtis, proxy nustatymus, žemėlapio patarimus, numatytąsias "
+"algoritmų parametrų reikšmes… Pavyzdžiui jei norite konfigūruoti kai kuriems"
+" algoritmams visoje organizacijoje veikiančias reikšmes, bus patogu "
+"konfigūruoti juos visiems naudotojams paruoštuose ini failuose. Jei "
+"naudotojai tada atvers įrankinę algoritmo paleidimui, numatytosios reikšmės "
+"jau bus ten. Kad nustatytumėte numatytąją reikšmę, pvz. "
+"``native:intersection`` algoritmo ``GRID_SIZE`` parametrui, jūs į "
+":file:`.INI` failą galėtumėte įrašyti:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2656
+msgid ""
+"Not all settings can be prepared from QGIS GUI, but to discover the "
+"possibilities of the settings :file:`.INI` file, we suggest that you set the"
+" config you would like in QGIS Desktop and then search for it in your "
+":file:`.INI` file located in your profile using a text editor."
+msgstr ""
+"Ne visus nustatymus galima paruošti per QGIS GUI, kad suprastumėte "
+":file:`.INI` failo nustatymų galimybes, mes siūlome jums pakeisti "
+"konfigūraciją QGIS Desktop ir tada naudodami tekstų redaktorių ieškoti jos "
+"jūsų :file:`.INI` faile, kurį rasite jūsų profilyje."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2661
 msgid ""
