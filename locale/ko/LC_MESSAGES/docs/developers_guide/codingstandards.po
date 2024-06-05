@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-11 16:48+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:5
 msgid "QGIS Coding Standards"
@@ -54,7 +54,10 @@ msgstr "이름"
 
 #: ../../docs/developers_guide/codingstandards.rst:19
 msgid "Class in QGIS begin with Qgs and are formed using camel case."
-msgstr "QGIS 안의 클래스는 Qgs 로 시작하며 낙타 대문자 형식입니다."
+msgstr ""
+"QGIS 안의 클래스는 ``Qgs`` 로 시작하며 `카멜 표기법 "
+"<https://ko.wikipedia.org/wiki/%EC%B9%B4%EB%A9%9C_%ED%91%9C%EA%B8%B0%EB%B2%95>`_"
+" 형식을 따릅니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:21
 #: ../../docs/developers_guide/codingstandards.rst:192
@@ -82,7 +85,7 @@ msgstr "멤버"
 msgid ""
 "Class member names begin with a lower case m and are formed using mixed "
 "case."
-msgstr "클래스 멤버 이름은 소문자 ``m`` 으로 시작하며 대소문자를 혼합해서 형성됩니다."
+msgstr "클래스 멤버 이름은 소문자 ``m`` 으로 시작하며 대소문자 혼합 형식을 따릅니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:35
 msgid "``mMapCanvas``"
@@ -99,17 +102,17 @@ msgid ""
 " be accessed from Python subclasses, since protected members cannot be used "
 "from the Python bindings."
 msgstr ""
-"모든 클래스 멤버는 프라이빗(private)이어야 합니다. 퍼블릭(public) 클래스 멤버는 절대 권장하지 않습니다. 파이썬 하위 "
-"클래스가 접근해야 할 수도 있는 멤버인 경우 프로텍티드(protected) 멤버로 지정하지 말아야 합니다. 파이썬 바인딩이 프로텍티드 "
-"멤버를 사용할 수 없기 때문입니다."
+"모든 클래스 멤버는 비공개(private)여야 합니다. 공개(public) 클래스 멤버는 절대 권장하지 않습니다. 파이썬 하위 클래스가 "
+"접근해야 할 수도 있는 멤버인 경우 보호(protected) 멤버로 지정하지 말아야 합니다. 파이썬 바인딩에서 보호 멤버를 사용할 수 "
+"없기 때문입니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:43
 msgid ""
 "Mutable static class member names should begin with a lower case ``s``, but "
 "constant static class member names should be all caps:"
 msgstr ""
-"뮤터블(mutable) 정적 클래스 멤버 이름은 소문자 ``s`` 로 시작해야 하지만, 콘스턴트(constant) 정적 클래스 멤버 "
-"이름은 모두 대문자여야 합니다:"
+"뮤터블(mutable) 정적 클래스 멤버 이름은 소문자 ``s`` 로 시작해야 하지만, 상수(constant) 정적 클래스 멤버 이름은 "
+"모두 대문자여야 합니다:"
 
 #: ../../docs/developers_guide/codingstandards.rst:46
 msgid "``sRefCounter``"
@@ -130,7 +133,7 @@ msgid ""
 "two private members above would be:"
 msgstr ""
 "접근자(accesssor) 함수를 통해 클래스 멤버 값을 얻어야 합니다. 이 함수의 이름에는 접두어 ``get`` 이 없어야 합니다. "
-"앞에 예를 든 프라이빗 멤버 2개에 대한 접근자 함수는 다음과 같을 것입니다:"
+"앞에서 예를 들었던 비공개 멤버 2개에 대한 접근자 함수는 다음과 같을 것입니다:"
 
 #: ../../docs/developers_guide/codingstandards.rst:58
 msgid "``mapCanvas()``"
@@ -158,7 +161,7 @@ msgid ""
 "Function names begin with a lowercase letter and are formed using mixed "
 "case. The function name should convey something about the purpose of the "
 "function."
-msgstr "함수 이름은 소문자로 시작해서 대소문자를 혼합해 형성됩니다. 함수 이름은 해당 함수의 목적을 반영해야 합니다."
+msgstr "함수 이름은 소문자로 시작해서 대소문자 혼합 형식을 따릅니다. 함수 이름은 해당 함수의 목적을 반영해야 합니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:72
 msgid "``updateMapExtent()``"
@@ -183,7 +186,7 @@ msgid ""
 "Acronyms should also be camel cased for consistency. E.g. ``setXml`` instead"
 " of ``setXML``."
 msgstr ""
-"일관성을 위해 두문자어(acronym)도 낙타 대문자 형식을 따라야 합니다. 예를 들면 ``setXML`` 이 아니라 ``setXml``"
+"일관성을 위해 두문자어(acronym)도 캐멀 표기법 형식을 따라야 합니다. 예를 들면 ``setXML`` 이 아니라 ``setXml``"
 " 을 써야 합니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:84
@@ -196,7 +199,7 @@ msgid ""
 "arguments (e.g. ``setColor( const QColor& color )`` instead of ``setColor( "
 "const QColor& c )``)."
 msgstr ""
-"함수 인자(argument)는 해당 인자를 설명하는 이름이어야 합니다. 문자 하나짜리 인자를 쓰지 마십시오. (예를 들어 "
+"함수 인자(argument)의 이름은 해당 인자를 설명해야 합니다. 문자 하나짜리 인자를 쓰지 마십시오. (예를 들면 "
 "``setColor( const QColor& c )`` 가 아니라 ``setColor( const QColor& color )`` 를 "
 "써야 합니다.)"
 
@@ -210,13 +213,13 @@ msgid ""
 ")``."
 msgstr ""
 "참조를 통해 인자를 전달해야 하는 경우 특히 신경을 써야 합니다. 인자 객체가 (QPoint 객체처럼) 소용량이고 평범하게 복사되는 "
-"경우가 아니라면, 콘스턴트 참조로 전달해야 합니다. Qt API와 일관성을 지키기 위해, 내재적으로 공유된 객체일지라도 콘스턴트 참조로 "
+"경우가 아니라면, 상수 참조로 전달해야 합니다. Qt API와 일관성을 지키기 위해, 내재적으로 공유된 객체일지라도 상수 참조로 "
 "전달됩니다. (예를 들어 ``setTitle( QString title )`` 이 아니라 ``setTitle( const QString&"
 " title )`` 을 써야 합니다.)"
 
 #: ../../docs/developers_guide/codingstandards.rst:100
 msgid "Function Return Values"
-msgstr "함수 반환값"
+msgstr "함수 반환 값"
 
 #: ../../docs/developers_guide/codingstandards.rst:102
 msgid ""
@@ -225,7 +228,7 @@ msgid ""
 "shared objects, which are always returned by value. Return ``QObject`` or "
 "subclassed objects as pointers."
 msgstr ""
-"소용량이고 평범하게 복사된 객체를 값으로 반환합니다. 대용량 객체는 콘스턴트 참조로 반환되어야 합니다. 이 규칙의 단 한 가지 예외는 "
+"소용량이고 평범하게 복사된 객체를 값으로 반환합니다. 대용량 객체는 상수 참조로 반환되어야 합니다. 이 규칙의 단 한 가지 예외는 "
 "내재적으로 공유된 객체로, 언제나 값으로 반환됩니다. ``QObject`` 또는 하위 클래스 객체는 포인터로 반환합니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:107
@@ -257,8 +260,8 @@ msgid ""
 "``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` is "
 "abstract and will probably need to be casted)"
 msgstr ""
-"``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` 는 축약된 "
-"이름이기 때문에 이름을 바꿔야 할 겁니다)"
+"``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` 는 추상이기 "
+"때문에 캐스트해야 할 수도 있습니다)"
 
 #: ../../docs/developers_guide/codingstandards.rst:117
 msgid "API Documentation"
@@ -268,8 +271,18 @@ msgstr "API 문서"
 msgid ""
 "It is required to write API documentation for every class, method, enum and "
 "other code that is available in the public API."
+msgstr "공개 API에서 사용할 수 있는 모든 클래스, 메소드, 목록(enum), 기타 코드에 대해 API 문서를 작성해야만 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:122
+msgid ""
+"QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ for documentation. "
+"Write descriptive and meaningful comments that give a reader information "
+"about what to expect, what happens in edge cases and give hints about other "
+"interfaces he could be looking for, best practices and code samples."
 msgstr ""
-"퍼블릭 API에서 사용할 수 있는 모든 클래스, 메소드, 목록(enum), 기타 코드에 대해 API 문서를 작성해야만 합니다."
+"QGIS는 문서화 작업에 `Doxygen <https://www.doxygen.nl/index.html>`_ 을 사용합니다. 독자가 어떤"
+" 것을 기대할 수 있는지, 첨단 사례의 경우 어떤 일이 일어나는지에 대한 정보를 제공하는, 그리고 독자가 찾아볼 수 있는 다른 "
+"인터페이스들에 대한 힌트를 알려주는 서술적이고 의미 있는 주석과 함께 최적의 예제와 코드 예시를 작성하십시오."
 
 #: ../../docs/developers_guide/codingstandards.rst:129
 msgid "Methods"
@@ -282,12 +295,39 @@ msgid ""
 "introduced. You should add additional ``\\since`` tags for important changes"
 " that were introduced later on."
 msgstr ""
-"메소드에 대한 설명은 3인칭을 사용하는 서술 형식으로 작성되어야 합니다. 메소드를 소개하는 경우 메소드를 정의하는 ``\\since`` "
-"태그를 사용해야 합니다. 향후 도입되는 중요한 변경 사항에 대해서도 또다른 ``\\since`` 태그를 추가해야 합니다."
+"메소드에 대한 설명은 3인칭을 사용하는 서술 형식으로 작성되어야 합니다. 메소드가 도입된 시기를 정의하는 ``\\since`` 태그를 "
+"사용해야 합니다. 향후 도입된 중요한 변경 사항들에 대해서도 추가적인 ``\\since`` 태그들을 추가해야 합니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:152
 msgid "Members Variables"
 msgstr "멤버 변수"
+
+#: ../../docs/developers_guide/codingstandards.rst:154
+msgid ""
+"Member variables should normally be in the ``private`` section and made "
+"available via getters and setters. One exception to this is for data "
+"containers like for error reporting. In such cases do not prefix the member "
+"with an ``m``."
+msgstr ""
+"멤버 변수는 일반적으로 ``private`` 부분에 있어야 하며 게터(getter)와 세터(setter)를 통해 사용할 수 있어야 "
+"합니다. 이 규칙의 단 한 가지 예외는 오류 보고 작업 용 같은 데이터 컨테이너들입니다. 이런 경우 멤버의 이름 앞에 ``m`` 접두어를"
+" 붙이지 마십시오."
+
+#: ../../docs/developers_guide/codingstandards.rst:184
+msgid "Qt Designer"
+msgstr "Qt 설계자"
+
+#: ../../docs/developers_guide/codingstandards.rst:187
+msgid "Generated Classes"
+msgstr "생성된 클래스들"
+
+#: ../../docs/developers_guide/codingstandards.rst:189
+msgid ""
+"QGIS classes that are generated from Qt Designer (ui) files should have a "
+"Base suffix. This identifies the class as a generated base class."
+msgstr ""
+"Qt 설계자(Qt Designer)의 (UI) 파일들로부터 생성된 QGIS 클래스들은 ``Base`` 접미어를 가져야 합니다. 이 "
+"접미어가 해당 클래스를 Qt 설계자가 생성한 기반 클래스로 식별하게 합니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:194
 msgid "``QgsPluginManagerBase``"
@@ -297,9 +337,90 @@ msgstr "``QgsPluginManagerBase``"
 msgid "``QgsUserOptionsBase``"
 msgstr "``QgsUserOptionsBase``"
 
+#: ../../docs/developers_guide/codingstandards.rst:199
+msgid "Dialogs"
+msgstr "대화창"
+
+#: ../../docs/developers_guide/codingstandards.rst:201
+msgid ""
+"All dialogs should implement tooltip help for all toolbar icons and other "
+"relevant widgets. Tooltips add greatly to feature discoverability for both "
+"new and experienced users."
+msgstr ""
+"모든 대화창은 모든 툴바 아이콘과 기타 관련 위젯들을 위한 툴팁 도움말을 구현해야 합니다. 툴팁은 신규 사용자와 경험이 풍부한 사용자 "
+"모두의 기능 검색 가능성을 크게 높여줍니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:205
+msgid ""
+"Ensure that the tab order for widgets is updated whenever the layout of a "
+"dialog changes."
+msgstr "대화창의 레이아웃이 변경될 때마다 위젯의 탭 순서가 업데이트되는지 확인하십시오."
+
 #: ../../docs/developers_guide/codingstandards.rst:210
 msgid "C++ Files"
 msgstr "C++ 파일"
+
+#: ../../docs/developers_guide/codingstandards.rst:215
+msgid ""
+"C++ implementation and header files should have a .cpp and .h extension "
+"respectively. Filename should be all lowercase and, in the case of classes, "
+"match the class name."
+msgstr ""
+"C++ 구현 파일과 헤더 파일은 각각 :file:`.cpp` 와 :file:`.h` 확장자를 가져야 합니다. 파일 이름은 전부 소문자여야"
+" 하며, 클래스인 경우 클래스 이름과 일치해야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:219
+msgid ""
+"Example: Class ``QgsFeatureAttribute`` source files are "
+":file:`qgsfeatureattribute.cpp` and :file:`qgsfeatureattribute.h`"
+msgstr ""
+"예시: ``QgsFeatureAttribute`` 클래스의 소스 파일은 :file:`qgsfeatureattribute.cpp` 와 "
+":file:`qgsfeatureattribute.h` 입니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:223
+msgid ""
+"In case it is not clear from the statement above, for a filename to match a "
+"class name it implicitly means that each class should be declared and "
+"implemented in its own file. This makes it much easier for newcomers to "
+"identify where the code is relating to specific class."
+msgstr ""
+"앞의 문장이 명확하지 않았다면, 파일 이름을 클래스 이름과 일치시킨다는 것은 각 클래스의 자체 파일에서 해당 클래스를 선언하고 구현해야 "
+"한다는 뜻을 암시합니다. 이렇게 하면 신규 사용자가 코드에서 특정 클래스와 관련된 위치를 훨씬 쉽게 식별할 수 있습니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:230
+msgid "Standard Header and License"
+msgstr "표준 헤더와 사용 허가"
+
+#: ../../docs/developers_guide/codingstandards.rst:232
+msgid ""
+"Each source file should contain a header section patterned after the "
+"following example:"
+msgstr "각 소스 파일은 다음 예시처럼 패턴화된 헤더 부분을 담고 있어야 합니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:252
+msgid ""
+"There is a template for Qt Creator in git repository. To use it, copy it "
+"from :source:`qt_creator_license_template "
+"<editors/QtCreator/qt_creator_license_template>` to a local location, adjust"
+" the mail address and - if required - the name and configure QtCreator to "
+"use it: :menuselection:`Tools --> Options --> C++ --> File Naming`."
+msgstr ""
+"깃 저장소에 Qt 설계자 용 템플릿이 있습니다. 이 템플릿을 사용하려면, "
+":source:`qt_creator_license_template "
+"<editors/QtCreator/qt_creator_license_template>` 에서 로컬 위치로 복사한 다음 메일 주소와 ---"
+" 필요한 경우 --- 이름을 조정하고 QtCreator가 이를 사용할 수 있도록 환경설정하십시오: :menuselection:`Tools"
+" --> Options --> C++ --> File Naming`"
+
+#: ../../docs/developers_guide/codingstandards.rst:260
+msgid "Variable Names"
+msgstr "변수 이름"
+
+#: ../../docs/developers_guide/codingstandards.rst:262
+msgid ""
+"Local variable names begin with a lower case letter and are formed using "
+"mixed case. Do not use prefixes like ``my`` or ``the``."
+msgstr ""
+"로컬 변수 이름은 소문자로 시작하며 대소문사 혼합 형식을 따릅니다. ``my`` 또는 ``the`` 같은 접두어를 사용하지 마십시오."
 
 #: ../../docs/developers_guide/codingstandards.rst:267
 msgid "``mapCanvas``"
@@ -309,13 +430,186 @@ msgstr "``mapCanvas``"
 msgid "``currentExtent``"
 msgstr "``currentExtent``"
 
+#: ../../docs/developers_guide/codingstandards.rst:272
+msgid "Enumerated Types"
+msgstr "열거형"
+
+#: ../../docs/developers_guide/codingstandards.rst:274
+msgid ""
+"Enumerated types should be named in CamelCase with a leading capital e.g.:"
+msgstr "열거형(enumerated type)의 이름은 다음과 같이 첫 글자가 대문자인 카멜 표기법 형식이어야 합니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:286
+msgid ""
+"Do not use generic type names that will conflict with other types. e.g. use "
+"``UnknownUnit`` rather than ``Unknown``"
+msgstr ""
+"다른 유형과 충돌하게 될 일반적인 유형 이름은 사용하지 마십시오. 예를 들면 ``Unknown`` 이라는 이름보다는 "
+"``UnknownUnit`` 을 사용하십시오."
+
+#: ../../docs/developers_guide/codingstandards.rst:290
+msgid "Global Constants & Macros"
+msgstr "전체 수준 상수 및 매크로"
+
+#: ../../docs/developers_guide/codingstandards.rst:292
+msgid ""
+"Global constants and macros should be written in upper case underscore "
+"separated e.g.:"
+msgstr "전체 수준 상수(constant)와 매크로(macro)의 이름은 다음과 같이 공백을 밑줄로 대체한 대문자로 작성해야 합니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:300
+msgid "Comments"
+msgstr "주석"
+
+#: ../../docs/developers_guide/codingstandards.rst:302
+msgid ""
+"Comments to class methods should use a third person indicative style instead"
+" of the imperative style:"
+msgstr "클래스 메소드에 붙는 주석(comment)은 명령형 스타일보다는 3인칭 직설법 스타일로 작성해야 합니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:315
+msgid "Qt Signals and Slots"
+msgstr "Qt 시그널 및 슬롯"
+
+#: ../../docs/developers_guide/codingstandards.rst:317
+msgid ""
+"All signal/slot connects should be made using the \"new style\" connects "
+"available in Qt5. Futher information on this requirement is available in "
+"`QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_."
+msgstr ""
+"모든 시그널(signal)/슬롯(slot)은 Qt5에서 사용할 수 있는 \"새로운 스타일\" 연결을 사용해서 이루어져야 합니다. 이 요구"
+" 사항에 대한 추가 정보는 `QEP #77 <https://github.com/qgis/QGIS-Enhancement-"
+"Proposals/issues/77>`_ 에서 확인해볼 수 있습니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:321
+msgid ""
+"Avoid use of Qt auto connect slots (i.e. those named ``void "
+"on_mSpinBox_valueChanged``). Auto connect slots are fragile and prone to "
+"breakage without warning if dialogs are refactored."
+msgstr ""
+"Qt 자동 연결 슬롯은 (예를 들어 ``void on_mSpinBox_valueChanged`` 같은 이름을 가진 슬롯은) 사용하지 "
+"마십시오. 자동 연결 슬롯은 취약하며, 대화창이 `리팩터링 "
+"<https://ko.wikipedia.org/wiki/%EB%A6%AC%ED%8C%A9%ED%84%B0%EB%A7%81>`_ 되는 경우"
+" 경고 없이 깨지기 쉽습니다."
+
 #: ../../docs/developers_guide/codingstandards.rst:327
 msgid "Editing"
 msgstr "편집 작업"
 
+#: ../../docs/developers_guide/codingstandards.rst:329
+msgid ""
+"Any text editor/IDE can be used to edit QGIS code, providing the following "
+"requirements are met."
+msgstr "다음 요구 사항을 만족시킨다면 어떤 텍스트 편집기/IDE라도 QGIS 코드를 편집하는 데 사용할 수 있습니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:333
+msgid "Tabs"
+msgstr "탭"
+
+#: ../../docs/developers_guide/codingstandards.rst:335
+msgid ""
+"Set your editor to emulate tabs with spaces. Tab spacing should be set to 2 "
+"spaces."
+msgstr ""
+"여러분의 편집기가 공백들을 가진 탭을 에뮬레이트(emulate)하도록 설정하십시오. 탭 간격을 2칸으로 (스페이스 바를 2번 누른 "
+"간격으로) 설정해야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:338
+msgid "In vim this is done with ``set expandtab ts=2``"
+msgstr "빔(Vim) 편집기에서는 ``set expandtab ts=2`` 명령어로 설정할 수 있습니다."
+
 #: ../../docs/developers_guide/codingstandards.rst:341
 msgid "Indentation"
-msgstr "들여쓰"
+msgstr "들여쓰기"
+
+#: ../../docs/developers_guide/codingstandards.rst:343
+msgid ""
+"Source code should be indented to improve readability. There is a "
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` file that looks up "
+"the changed files and reindents them using astyle. This should be run before"
+" committing. You can also use :source:`astyle.sh <scripts/astyle.sh>` to "
+"indent individual files."
+msgstr ""
+"가독성을 향상시키기 위해 소스 코드를 들여쓰기해야 합니다. 변경된 파일을 검색한 다음 `Astyle(Artistic Style) "
+"<https://astyle.sourceforge.net/>`_ 을 사용해서 다시 들여쓰기해주는 "
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` 파일이 있습니다. 소스 코드를 "
+"커밋하기 전에 이 파일을 실행해야 합니다. 개별 파일들을 들여쓰기하려면 :source:`astyle.sh "
+"<scripts/astyle.sh>` 파일을 사용해도 됩니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:349
+msgid ""
+"As newer versions of astyle indent differently than the version used to do a"
+" complete reindentation of the source, the script uses an old astyle "
+"version, that we include in our repository (enable ``WITH_ASTYLE`` in cmake "
+"to include it in the build)."
+msgstr ""
+"Astyle의 신 버전이 소스를 완전히 다시 들여쓰기하는 데 쓰이는 버전과는 다르게 들여쓰기를 하기 때문에, 이 스크립트는 저장소에 "
+"포함된 옛 Astyle 버전을 사용합니다. (빌드 시 이 옛 버전을 포함시키려면 CMake에서 ``WITH_ASTYLE`` 을 "
+"활성화시키십시오.)"
+
+#: ../../docs/developers_guide/codingstandards.rst:355
+msgid "Braces"
+msgstr "괄호"
+
+#: ../../docs/developers_guide/codingstandards.rst:357
+msgid "Braces should start on the line following the expression:"
+msgstr "괄호는 표현식 다음 줄에서 시작해야 합니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:373
+msgid "API Compatibility"
+msgstr "API 호환성"
+
+#: ../../docs/developers_guide/codingstandards.rst:375
+msgid "There is :api:`API documentation <>` for C++."
+msgstr "C++ 용 `API 문서 <https://api.qgis.org/api/3.34/>`_ 가 있습니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:377
+msgid ""
+"We try to keep the API stable and backwards compatible. Cleanups to the API "
+"should be done in a manner similar to the Qt source code e.g."
+msgstr ""
+"우리는 API를 안정적으로 유지하고 이전 버전과 호환되도록 하려 합니다. API 정리(cleanup)는 다음과 같이 Qt 소스 코드와 "
+"비슷한 방식으로 이루어져야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:417
+msgid "SIP Bindings"
+msgstr "SIP 바인딩"
+
+#: ../../docs/developers_guide/codingstandards.rst:419
+msgid ""
+"Some of the SIP files are automatically generated using a dedicated script."
+msgstr ""
+"`SIP "
+"<https://ko.wikipedia.org/wiki/%EC%84%B8%EC%85%98_%EA%B0%9C%EC%8B%9C_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C>`_"
+" 파일들의 일부는 전용 스크립트를 사용해서 자동 생성됩니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:423
+msgid "Header pre-processing"
+msgstr "헤더 전처리"
+
+#: ../../docs/developers_guide/codingstandards.rst:426
+msgid ""
+"All the information to properly build the SIP file must be found in the C++ "
+"header file. Some macros are available for such definition:"
+msgstr ""
+"C++ 헤더 파일에서 SIP 파일을 적절하게 빌드하기 위한 모든 정보를 찾아야만 합니다. 이런 정의에 사용할 수 있는 매크로가 몇 개 "
+"있습니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:429
+msgid ""
+"Use ``#ifdef SIP_RUN`` to generate code only in SIP files or ``#ifndef "
+"SIP_RUN`` for C++ code only. ``#else`` statements are handled in both cases."
+msgstr ""
+"SIP 파일에만 코드를 생성하려면 ``#ifdef SIP_RUN`` 을 사용하고, 또는 C++ 코드만 생성하려면 ``#ifndef "
+"SIP_RUN`` 을 사용하십시오. 두 경우 모두 ``#else`` 선언문을 처리합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:432
+msgid "Use ``SIP_SKIP`` to discard a line"
+msgstr "어떤 줄을 삭제하려면 ``SIP_SKIP`` 을 사용하십시오."
+
+#: ../../docs/developers_guide/codingstandards.rst:433
+msgid "The following annotations are handled:"
+msgstr "다음과 같은 주석(annotation)들을 처리합니다:"
 
 #: ../../docs/developers_guide/codingstandards.rst:435
 msgid "``SIP_FACTORY``: ``/Factory/``"
@@ -349,29 +643,334 @@ msgstr "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
 msgid "``SIP_TRANSFERBACK``: ``/TransferBack/``"
 msgstr "``SIP_TRANSFERBACK``: ``/TransferBack/``"
 
+#: ../../docs/developers_guide/codingstandards.rst:444
+msgid ""
+"``private`` sections are not displayed, except if you use a ``#ifdef "
+"SIP_RUN`` statement in this block."
+msgstr "이 블록에 ``#ifdef SIP_RUN`` 선언문을 사용하지 않는 한 ``private`` 부분은 보이지 않습니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:446
+msgid ""
+"``SIP_PYDEFAULTVALUE(value)`` can be used to define an alternative default "
+"value of the python method. If the default value contains a comma ``,``, the"
+" value should be surrounded by single quotes ``'``"
+msgstr ""
+"``SIP_PYDEFAULTVALUE(value)`` 를 사용해서 파이썬 메소드의 기본값을 대체할 값을 정의할 수 있습니다. 기본값이 "
+"쉼표 ``,`` 를 담고 있는 경우, 값을 작은따옴표 ``'`` 로 둘러싸야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:449
+msgid ""
+"``SIP_PYTYPE(type)`` can be used to define an alternative type for an "
+"argument of the python method. If the type contains a comma ``,``, the type "
+"should be surrounded by single quotes ``'``"
+msgstr ""
+"``SIP_PYTYPE(type)`` 을 사용해서 파이썬 메소드의 인자에 대한 대체 유형을 정의할 수 있습니다. 유형이 쉼표 ``,`` "
+"를 담고 있는 경우, 유형을 작은따옴표 ``'`` 로 둘러싸야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:453
+msgid ""
+"A demo file, :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>`, is also available."
+msgstr ""
+":source:`sipifyheader.h <tests/code_layout/sipify/sipifyheader.h>` 데모 파일도 "
+"사용할 수 있습니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:457
+msgid "Generating the SIP file"
+msgstr "SIP 파일 생성하기"
+
+#: ../../docs/developers_guide/codingstandards.rst:459
+msgid "The SIP file can be generated using a dedicated script. For instance:"
+msgstr "SIP 파일은 다음처럼 전용 스크립트를 사용해서 생성할 수 있습니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:465
+msgid ""
+"To automatically generate the SIP file of a newly added C++ file "
+":source:`sip_include.sh <scripts/sip_include.sh>` needs to be executed."
+msgstr ""
+"새로 추가된 C++ 파일의 SIP 파일을 자동 생성하려면 :source:`sip_include.sh "
+"<scripts/sip_include.sh>` 를 실행해야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:468
+msgid ""
+"As soon as a SIP file is added to one of the source file "
+"(:source:`core_auto.sip <python/core/core_auto.sip>`, :source:`gui_auto.sip "
+"<python/gui/gui_auto.sip>` or :source:`analysis_auto.sip "
+"<python/analysis/analysis_auto.sip>`), it will be considered as generated "
+"automatically. A test on will ensure that this file is up to date with its "
+"corresponding header."
+msgstr ""
+"소스 파일 가운데 하나에 (:source:`core_auto.sip <python/core/core_auto.sip>`, "
+":source:`gui_auto.sip <python/gui/gui_auto.sip>` 또는 "
+":source:`analysis_auto.sip <python/analysis/analysis_auto.sip>` 에) SIP 파일이 "
+"추가되는 순간, 자동 생성되었다고 간주할 것입니다. 테스트를 통해 이 파일이 대응하는 헤더와 최신 상태인지 확인할 것입니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:475
+msgid ""
+"To force recreation of SIP files, :source:`sipify_all.sh "
+"<scripts/sipify_all.sh>` shall be executed."
+msgstr ""
+"SIP 파일을 강제로 다시 생성하려면, :source:`sipify_all.sh <scripts/sipify_all.sh>` 를 실행해야"
+" 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:479
+msgid "Improving sipify script"
+msgstr "sipify 스크립트 향상시키기"
+
+#: ../../docs/developers_guide/codingstandards.rst:481
+msgid ""
+"If some improvements are required for sipify script, please add the missing "
+"bits to the demo file :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>` and create the expected header "
+":source:`sipifyheader.expected.sip "
+"<tests/code_layout/sipify/sipifyheader.expected.sip>`. This will also be "
+"automatically tested as a unit test of the script itself."
+msgstr ""
+"sipify 스크립트를 조금 향상시켜야 할 필요가 있을 경우, :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>` 데모 파일에 누락된 부분들을 추가하고 예상되는 "
+":source:`sipifyheader.expected.sip "
+"<tests/code_layout/sipify/sipifyheader.expected.sip>` 헤더를 생성하십시오. 이 또한 스크립트 "
+"자체의 유닛 테스트로써 자동으로 테스트될 것입니다."
+
 #: ../../docs/developers_guide/codingstandards.rst:489
 msgid "Settings"
 msgstr "설정"
 
+#: ../../docs/developers_guide/codingstandards.rst:491
+msgid ""
+"QGIS code base offers a mechanism to declare, register and use settings."
+msgstr "QGIS 코드 베이스는 설정을 선언하고, 등록하고, 사용할 수 있는 메커니즘을 제공합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:493
+msgid ""
+"settings should be defined using one of the available implementations "
+"(:api:`QgsSettingsEntryString <classQgsSettingsEntryString.html>`, "
+":api:`QgsSettingsEntryInteger <classQgsSettingsEntryInteger.html>`, …)."
+msgstr ""
+"설정은 사용할 수 있는 구현들 (:api:`QgsSettingsEntryString "
+"<classQgsSettingsEntryString.html>`, :api:`QgsSettingsEntryInteger "
+"<classQgsSettingsEntryInteger.html>`, …) 가운데 하나를 사용해서 정의해야 합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:496
+msgid ""
+"settings must be integrated in the settings tree (:api:`QgsSettingsTree "
+"<classQgsSettingsTree.html>`), this is automatically done when using the "
+"constructor with a parent node (:api:`QgsSettingsTreeNode "
+"<classQgsSettingsTreeNode.html>`)."
+msgstr ""
+"설정은 반드시 설정 트리(:api:`QgsSettingsTree <classQgsSettingsTree.html>`)에 통합되어야만 "
+"합니다. 상위 노드(:api:`QgsSettingsTreeNode <classQgsSettingsTreeNode.html>`)를 가진 "
+"작성자(constructor)를 사용하면 자동으로 통합시킵니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:499
+msgid ""
+"they are declared as ``const static`` either in a dedicated class or in the "
+"registry directly (core, gui, app, …)."
+msgstr ""
+"설정은 전용 클래스에 또는 레지스트리(core, gui, app, …)에 직접 ``const static`` 으로 선언됩니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:501
+msgid "the setting key should be using a ``kebab-case``."
+msgstr "설정 키는 ``kebab-case`` 케밥 표기법을 따르는 형식이어야 합니다."
+
 #: ../../docs/developers_guide/codingstandards.rst:504
 msgid "Coding Style"
-msgstr "코딩 스타일"
+msgstr "코드 작업 스타일"
+
+#: ../../docs/developers_guide/codingstandards.rst:507
+msgid ""
+"Here are described some programming hints and tips that will hopefully "
+"reduce errors, development time and maintenance."
+msgstr ""
+"이 절에서는 오류, 개발 시간, 그리고 유지·관리에 드는 수고를 줄여주리라 기대되는 몇몇 프로그래밍 힌트와 도움말을 설명합니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:512
+msgid "Where-ever Possible Generalize Code"
+msgstr "가능한 부분마다 코드를 일반화하기"
+
+#: ../../docs/developers_guide/codingstandards.rst:514
+msgid ""
+"If you are cut-n-pasting code, or otherwise writing the same thing more than"
+" once, consider consolidating the code into a single function."
+msgstr ""
+"여러분이 코드를 잘라내서 붙여넣거나 또는 그러지 않고 동일한 내용을 한 번 이상 작성하는 경우, 해당 코드를 단일 함수로 통합하는 것을 "
+"고려해보십시오."
+
+#: ../../docs/developers_guide/codingstandards.rst:517
+msgid "This will:"
+msgstr "이렇게 하면:"
+
+#: ../../docs/developers_guide/codingstandards.rst:519
+msgid "allow changes to be made in one location instead of in multiple places"
+msgstr "여러 위치에서가 아니라 한 위치에서 변경 사항을 만들 수 있게 됩니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:520
+msgid "help prevent code bloat"
+msgstr "코드가 지저분해지는 일을 막는 데 도움이 됩니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:521
+msgid ""
+"make it more difficult for multiple copies to evolve differences over time, "
+"thus making it harder to understand and maintain for others"
+msgstr ""
+"시간이 지남에 따라 여러 복사본들이 서로 다르게 발전해서 다른 사람들이 코드를 이해하고 유지·보수하기 어려워지는 일을 방지할 수 있게 "
+"해줍니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:526
+msgid "Prefer Having Constants First in Predicates"
+msgstr "술부에 상수를 먼저 넣기"
+
+#: ../../docs/developers_guide/codingstandards.rst:528
+msgid "Prefer to put constants first in predicates."
+msgstr "술부(predicate)에 상수를 먼저 넣는 편이 좋습니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:530
 msgid "``0 == value`` instead of ``value == 0``"
-msgstr "``value == 0`` 대신 ``0 == value`` "
+msgstr "``value == 0`` 말고 ``0 == value`` "
+
+#: ../../docs/developers_guide/codingstandards.rst:532
+msgid ""
+"This will help prevent programmers from accidentally using ``=`` when they "
+"meant to use ``==``, which can introduce very subtle logic bugs. The "
+"compiler will generate an error if you accidentally use ``=`` instead of "
+"``==`` for comparisons since constants inherently cannot be assigned values."
+msgstr ""
+"이렇게 하면 프로그래머들이 ``==`` 를 써야 할 곳에 실수로 ``=`` 를 사용하는 일을 방지하는 데 도움이 될 것입니다. 이런 "
+"실수는 아주 미묘한 논리적 버그를 일으킬 수 있습니다. 비교에 ``==`` 대신 ``=`` 를 실수로 사용한 경우 컴파일러가 오류를 "
+"생성할 것입니다. 본질적으로 상수에 값을 할당할 수는 없기 때문입니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:538
+msgid "Whitespace Can Be Your Friend"
+msgstr "공백은 여러분의 친구"
+
+#: ../../docs/developers_guide/codingstandards.rst:540
+msgid ""
+"Adding spaces between operators, statements, and functions makes it easier "
+"for humans to parse code."
+msgstr "연산자, 선언문, 그리고 함수 사이에 공백을 추가하면 인간이 이해하기 쉬운 코드를 작성할 수 있습니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:543
 msgid "Which is easier to read, this:"
-msgstr "읽기 쉬운 것:"
+msgstr "어느 쪽이 더 읽기 쉽습니까, 이쪽?:"
+
+#: ../../docs/developers_guide/codingstandards.rst:549
+msgid "or this:"
+msgstr "아니면 이쪽?:"
+
+#: ../../docs/developers_guide/codingstandards.rst:555
+msgid ""
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` script will take "
+"care of this."
+msgstr ""
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` 스크립트가 이를 처리해줄 것입니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:560
+msgid "Put commands on separate lines"
+msgstr "명령어는 서로 다른 줄에 넣기"
+
+#: ../../docs/developers_guide/codingstandards.rst:562
+msgid ""
+"When reading code it's easy to miss commands, if they are not at the "
+"beginning of the line. When quickly reading through code, it's common to "
+"skip lines if they don't look like what you are looking for in the first few"
+" characters. It's also common to expect a command after a conditional like "
+"``if``."
+msgstr ""
+"코드를 읽을 때 명령어가 그 줄의 맨 앞에 없다면 놓치기 쉽습니다. 코드를 빨리 훑어볼 때, 처음 몇 문자들이 여러분이 찾는 내용처럼 "
+"보이지 않을 경우 그 줄을 건너뛰어버리는 일도 흔합니다. 또한 ``if`` 같은 조건문 뒤에 명령어가 오는 것을 기대하는 일도 흔합니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:567
 msgid "Consider:"
-msgstr "고려할 것:"
+msgstr "다음을 보십시오:"
+
+#: ../../docs/developers_guide/codingstandards.rst:575
+msgid "It's very easy to miss part of what the flow of control. Instead use"
+msgstr "정말 쉽게 제어 흐름의 일부분을 놓칠 수 있습니다. 대신 다음을 사용하십시오:"
+
+#: ../../docs/developers_guide/codingstandards.rst:587
+msgid "Indent access modifiers"
+msgstr "접근 수정자 들여쓰기"
+
+#: ../../docs/developers_guide/codingstandards.rst:589
+msgid ""
+"Access modifiers structure a class into sections of public API, protected "
+"API and private API. Access modifiers themselves group the code into this "
+"structure. Indent the access modifier and declarations."
+msgstr ""
+"접근 수정자(access modifier)는 클래스를 공개 API 부분, 보호 API 부분, 그리고 비공개 API 부분으로 구조화합니다."
+" 접근 수정자 자체도 자신의 코드를 이런 구조로 그룹화합니다. 접근 수정자와 선언문을 들여쓰기하십시오."
 
 #: ../../docs/developers_guide/codingstandards.rst:606
 msgid "Book recommendations"
 msgstr "권장 도서"
+
+#: ../../docs/developers_guide/codingstandards.rst:609
+msgid ""
+"`Effective Modern C++ <https://www.oreilly.com/library/view/effective-"
+"modern-c/9781491908419/>`_, Scott Meyers"
+msgstr ""
+"`Effective Modern C++ <https://www.oreilly.com/library/view/effective-"
+"modern-c/9781491908419/>`_, 스콧 마이어스(Scott Meyers)"
+
+#: ../../docs/developers_guide/codingstandards.rst:610
+msgid ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+msgstr ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, 스콧 마이어스(Scott Meyers)"
+
+#: ../../docs/developers_guide/codingstandards.rst:611
+msgid ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+msgstr ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, 스콧 마이어스(Scott Meyers)"
+
+#: ../../docs/developers_guide/codingstandards.rst:612
+msgid ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
+"Object-Oriented/dp/0201633612>`_, GoF"
+msgstr ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
+"Object-Oriented/dp/0201633612>`_, GoF(Gang of Four)"
+
+#: ../../docs/developers_guide/codingstandards.rst:614
+msgid ""
+"You should also really read this article from Qt Quarterly on `designing Qt "
+"style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
+msgstr ""
+"계간 Qt(Qt Quarterly)에 나온 `Qt 스타일 설계하기 (APIs) "
+"<https://doc.qt.io/archives/qq/qq13-apis.html>`_ 라는 기사도 읽어봐야 할 것입니다."
+
+#: ../../docs/developers_guide/codingstandards.rst:619
+msgid "Credits for contributions"
+msgstr "공헌에 대한 인정"
+
+#: ../../docs/developers_guide/codingstandards.rst:621
+msgid ""
+"Contributors of new functions are encouraged to let people know about their "
+"contribution by:"
+msgstr "새 함수를 만든 공헌자들이 사람들에게 자신의 공헌을 다음과 같은 방법으로 알릴 것을 권장합니다:"
+
+#: ../../docs/developers_guide/codingstandards.rst:624
+msgid ""
+"adding a note to the changelog for the first version where the code has been"
+" incorporated, of the type::"
+msgstr "코드를 통합시킨 첫 번째 버전에 대한 변경 로그에 다음 형식으로 된 짧은 문장을 추가하기:"
+
+#: ../../docs/developers_guide/codingstandards.rst:630
+msgid ""
+"writing an article about the new feature on a blog, and add it to the QGIS "
+"planet https://plugins.qgis.org/planet/"
+msgstr ""
+"블로그에 새 기능에 대한 포스트를 작성하고, `QGIS 플래닛 <https://plugins.qgis.org/planet/>`_ 에 해당"
+" 포스트를 추가하기"
+
+#: ../../docs/developers_guide/codingstandards.rst:632
+msgid "adding their name to:"
+msgstr "공헌자들의 이름을 다음에 추가하기:"
 
 #: ../../docs/developers_guide/codingstandards.rst:634
 msgid ":source:`doc/CONTRIBUTORS`"
