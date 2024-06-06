@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/developers_guide/localization.rst:3
 msgid "Localization"
@@ -66,8 +66,8 @@ msgid ""
 "<https://doc.qt.io/qt-5/qlocale.html>`_ QT class which provides a very "
 "complete support for numeric and date types representation."
 msgstr ""
-"이 모든 특징은 `QLocale <https://doc.qt.io/qt-5/qlocale.html>`_ QT 클래스 통해 구현되며 숫자와"
-" 데이터 형 표현을 완전하게 제공합니다."
+"이 모든 특징은 `QLocale <https://doc.qt.io/qt-5/qlocale.html>`_ Qt 클래스를 통해 구현되며 "
+"숫자와 데이터 유형 표현을 완전하게 제공합니다."
 
 #: ../../docs/developers_guide/localization.rst:23
 msgid ""
@@ -75,7 +75,7 @@ msgid ""
 "when displaying numeric values in the QGIS user interface and when "
 "converting user input to integral or floating point variables."
 msgstr ""
-"이 시스템이 작동하려면, QGIS 사용자 인터페이스에 숫자값을 출력하는 경우 그리고 사용자 입력값을 정수형 또는 부동소수점형 변수로 "
+"이 시스템이 작동하려면, QGIS 사용자 인터페이스에 숫자값을 출력하는 경우 그리고 사용자 입력 값을 정수형 또는 부동소수점형 변수로 "
 "변환하는 경우 몇 가지 규칙들을 조심스럽게 따라야 합니다."
 
 #: ../../docs/developers_guide/localization.rst:29
@@ -89,7 +89,7 @@ msgid ""
 "consideration and it always uses ``C`` locale."
 msgstr ""
 "문자열이 화면에 출력되어 사용자가 볼 수 있는 경우, ``QString::number()`` 함수를 사용하지 마십시오. 이 함수는 "
-"로캘(locale) 옵션을 고려하지 않고 언제나 ``C`` 로케일만 사용하기 때문입니다."
+"로케일(locale) 옵션을 고려하지 않고 언제나 ``C`` 로케일만 사용하기 때문입니다."
 
 #: ../../docs/developers_guide/localization.rst:35
 msgid ""
@@ -117,7 +117,7 @@ msgid ""
 msgstr ""
 "이 규칙에 대해 기억해둘 만한 예외는 (소수점 구분자로 마침표를 사용하고 천 단위 구분자를 사용하지 않는) ``C`` 숫자 표현을 "
 "기대하는 외부 응용 프로그램 또는 스크립트로 전송될 문자열을 생성하는 경우입니다. 이런 경우엔 반드시 "
-"``QString::number()`` 을 사용해야만 합니다."
+"``QString::number()`` 함수를 사용해야만 합니다."
 
 #: ../../docs/developers_guide/localization.rst:60
 msgid "Converting user input strings to numbers"
@@ -132,7 +132,7 @@ msgid ""
 " or ``::toLongLong()`` methods."
 msgstr ""
 "사용자가 입력한 문자열을 숫자형으로 변환할 때 ``QVariant::toDouble()``, ``QString::toDouble()`` "
-"또는 QT 클래스에서 사용할 수 있는 다른 ``::toDouble()`` 메소드들을 사용하지 마십시오. 이 메소드들은 로케일 설정을 "
+"또는 Qt 클래스에서 사용할 수 있는 다른 ``::toDouble()`` 메소드들을 사용하지 마십시오. 이 메소드들은 로케일 설정을 "
 "무시하기 때문입니다. 정수 유형으로 변환하는  ``::toInt()`` 또는 ``::toLongLong()`` 메소드들도 마찬가지입니다."
 
 #: ../../docs/developers_guide/localization.rst:68
@@ -175,8 +175,8 @@ msgid ""
 "checking first for the user locale and falling back to ``C`` locale if there"
 " is no match."
 msgstr ""
-"검증자(validator) 클래스는 유연하기 때문에, 먼저 사용자 로케일에 대해 입력값을 확인한 다음 일치하지 않을 경우 ``C`` "
-"로케일로 폴백(fall back)합니다."
+"검증자(validator) 클래스는 유연하기 때문에, 먼저 사용자 로케일에 대해 입력값을 확인한 다음 일치하지 않는 경우 ``C`` "
+"로케일로 돌아갑니다."
 
 #: ../../docs/developers_guide/localization.rst:86
 msgid ""
