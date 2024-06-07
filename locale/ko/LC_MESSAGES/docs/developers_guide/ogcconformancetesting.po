@@ -32,11 +32,24 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/developers_guide/ogcconformancetesting.rst:8
 msgid "OGC Conformance Testing"
-msgstr "OGC 적합성 시험"
+msgstr "OGC 적합성 테스트 작업"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:13
+msgid ""
+"The Open Geospatial Consortium (OGC) provides tests which can be run free of"
+" charge to make sure a server is compliant with a certain specification.  "
+"This chapter provides a quick tutorial to setup the WMS and OGC API Features"
+" tests on an Ubuntu system. A detailed documentation can be found at the "
+"`OGC website <https://www.ogc.org/compliance>`_."
+msgstr ""
+"개방형 공간 정보 컨소시엄(Open Geospatial Consortium)은 서버가 특정 사양과 호환되는지 확인하기 위해 무료로 실행할"
+" 수 있는 테스트들을 제공합니다. 이 장에서는 우분투 시스템 상에서 WMS 및 `OGC API - Features "
+"<https://ogcapi.ogc.org/features/>`_ 테스트를 설정할 수 있는 간단한 예제를 설명합니다. `OGC 웹사이트 "
+"<https://www.ogc.org/compliance>`_ 에서 더 자세한 문서를 찾아볼 수 있습니다."
 
 #: ../../docs/developers_guide/ogcconformancetesting.rst:21
 msgid "pyogctest"
@@ -55,6 +68,14 @@ msgstr ""
 msgid "WMS 1.3.0 test suite"
 msgstr "WMS 1.3.0 테스트 스위트"
 
+#: ../../docs/developers_guide/ogcconformancetesting.rst:38
+msgid ""
+"To run the WMS 1.3.0 test suite with success, a specific test dataset is "
+"needed.  It can be downloaded using **pyogctest**:"
+msgstr ""
+"WMS 1.3.0 테스트 스위트를 성공적으로 실행하려면, 특정 데이터셋이 필요합니다. **pyogctest** 를 사용해서 이 데이터셋을"
+" 다운로드할 수 있습니다:"
+
 #: ../../docs/developers_guide/ogcconformancetesting.rst:45
 msgid ""
 "After the download, a ``teamengine_wms_130.qgs`` project is available in the"
@@ -63,9 +84,10 @@ msgid ""
 "environment variable. This way, we don't need to explicitly set the ``MAP`` "
 "vendor-parameter of QGIS Server."
 msgstr ""
-"다운로드가 완료되면, 새 ``data`` 디렉터리 안에서 ``teamengine_wms_130.qgs`` 프로젝트를 찾을 수 있습니다. "
-"**QGIS_SERVER_PROJECT_FILE** 환경 변수를 통해 QGIS 서버에 이 프로젝트를 기본 프로젝트로 등록해야 합니다. "
-"이렇게 하면 QGIS 서버의 ``MAP`` 판매자 파라미터(vendor-parameter)를 명백히 설정할 필요가 없습니다."
+"다운로드가 완료되면, 새 :file:`data` 디렉터리 안에서 :file:`teamengine_wms_130.qgs` 프로젝트를 찾을 "
+"수 있습니다. **QGIS_SERVER_PROJECT_FILE** 환경 변수를 통해 QGIS 서버에 이 프로젝트를 기본 프로젝트로 "
+"등록해야 합니다. 이렇게 하면 QGIS 서버의 ``MAP`` 판매자 파라미터(vendor-parameter)를 명백히 설정할 필요가 "
+"없습니다."
 
 #: ../../docs/developers_guide/ogcconformancetesting.rst:51
 msgid ""
@@ -78,14 +100,49 @@ msgid ""
 " document. So the project needs to be updated according to your testing "
 "environment to let QGIS Server generate a valid XML document:"
 msgstr ""
-"메타데이터 테스트와 호환되려면 특정 환경설정도 설정해야 합니다. 실제로, ``data/metadata`` 디렉터리에 있는 일부 "
+"메타데이터 테스트와 호환되려면 특정 환경설정도 설정해야 합니다. 실제로, :file:`data/metadata` 디렉터리에 있는 일부 "
 "메타데이터를 URL을 통해 OGC 테스트 프레임워크가 사용할 수 있도록 해줘야 합니다. 가장 간편한 선택지는 사용자 웹 서버를 "
 "``http://XXX.XXX.XXX.XXX/metadata/Autos.xml`` 같은 URL을 통해 액세스할 수 있도록 환경설정하는 "
 "것입니다. 프로젝트에서 이런 메타데이터 URL을 정의해서, WMS ``GetCapabilities`` 문서에 삽입합니다. 따라서 QGIS"
-" 서버가 무결한 XML 문서를 생성하게 하려면 사용자 테스트 환경에 따라 프로젝트를 업데이트해주어야 합니다."
+" 서버가 무결한 XML 문서를 생성하게 하려면 사용자 테스트 환경에 따라 프로젝트를 업데이트해줘야 합니다."
 
 #: ../../docs/developers_guide/ogcconformancetesting.rst:65
 msgid ""
 "Now that everything is properly configured, we can run the WMS 1.3.0 test "
 "suite:"
 msgstr "이제 모든 것을 적절하게 환경설정했으니, WMS 1.3.0 테스트 스위트를 다음과 같이 실행하면 됩니다:"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:86
+msgid "OGC API Features test suite"
+msgstr "OGC API - Features 테스트 스위트"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:88
+msgid ""
+"To run the OGC API Features 1.0 test suite, a test dataset is needed. "
+"Considering that the underlying QGIS project doesn't need specific "
+"configuration for this test suite, we can use the ``.qgs`` file provided in "
+"the training repository:"
+msgstr ""
+"OGC API - Features 1.0 테스트 스위트를 실행하려면, 테스트 데이터셋이 필요합니다. 기저 QGIS 프로젝트가 이 테스트 "
+"스위트에 대한 전용 환경설정을 필요로 하지 않는다는 사실을 고려하면, 교육 저장소에서 제공하는 :file:`.qgs` 파일을 사용하면 "
+"됩니다:"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:98
+msgid ""
+"After the download, a ``world.qgs`` project is available in the ``qgis-"
+"server-tutorial`` sub directory. This project has to be registered as the "
+"default project for QGIS Server thanks to the **QGIS_SERVER_PROJECT_FILE** "
+"environment variable. This way, we don't need to explicitly set the ``MAP`` "
+"vendor-parameter of QGIS Server."
+msgstr ""
+"다운로드가 완료되면, :file:`qgis-server-tutorial` 하위 디렉터리 안에서 :file:`world.qgs` 프로젝트를"
+" 찾을 수 있습니다. **QGIS_SERVER_PROJECT_FILE** 환경 변수를 통해 QGIS 서버에 이 프로젝트를 기본 프로젝트로"
+" 등록해야 합니다. 이렇게 하면 QGIS 서버의 ``MAP`` 판매자 파라미터(vendor-parameter)를 명백히 설정할 필요가 "
+"없습니다."
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:104
+msgid ""
+"Now that everything is properly configured, we can run the OGC API Features "
+"1.0 test suite:"
+msgstr ""
+"이제 모든 것을 적절하게 환경설정했으니, OGC API - Features 1.0 테스트 스위트를 다음과 같이 실행하면 됩니다:"
