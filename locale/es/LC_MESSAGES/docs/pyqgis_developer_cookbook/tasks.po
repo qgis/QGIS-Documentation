@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -124,6 +125,37 @@ msgstr ""
 "acceder o modificar los widgets de Qt desde el hilo principal. Los datos que"
 " se utilizan en una tarea se deben copiar antes de iniciar la tarea. "
 "Intentar utilizarlos desde subprocesos en segundo plano provocará bloqueos."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:104
+msgid ""
+"Moreover always make sure that :class:`context "
+"<qgis.core.QgsProcessingContext>` and :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` live for at least as long as the tasks "
+"that use them. QGIS will crash if, upon completion of a task, "
+"*QgsTaskManager* fails to access the *context* and *feedback* against which "
+"the task was scheduled."
+msgstr ""
+"Además asegúrese siempre de que :class:`context "
+"<qgis.core.QgsProcessingContext>` y :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` viven al menos tanto tiempo como las "
+"tareas que los utilizan. QGIS se bloqueará si, al finalizar una tarea, "
+"*QgsTaskManager* falla al acceder al *context* y *feedback* contra los que "
+"se programó la tarea."
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:111
+msgid ""
+"It is a common pattern to call :meth:`setProject() "
+"<qgis.core.QgsProcessingContext.setProject>` shortly after calling "
+"``QgsProcessingContext``. This allows the task as well as its callback "
+"function to use most of the project-wide settings. This is especially "
+"valuable when working with spatial layers in the callback function."
+msgstr ""
+"Es un patrón común llamar :meth:`setProject() "
+"<qgis.core.QgsProcessingContext.setProject>` poco después de llamar a "
+"``QgsProcessingContext``. Esto permite que la tarea, así como su función de "
+"devolución de llamada, utilicen la mayor parte de la configuración de todo "
+"el proyecto. Esto es especialmente valioso cuando se trabaja con capas "
+"espaciales en la función callback."
 
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:116
 msgid ""
