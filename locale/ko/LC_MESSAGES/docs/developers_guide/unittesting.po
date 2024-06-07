@@ -1,0 +1,967 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"번역은 `여러분이 참여할 수 있는 "
+"<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:6
+msgid "Unit Testing"
+msgstr "단위 테스트 작업"
+
+#: ../../docs/developers_guide/unittesting.rst:11
+msgid ""
+"As of November 2007 we require all new features going into master to be "
+"accompanied with a unit test. Initially we have limited this requirement to "
+"qgis_core, and we will extend this requirement to other parts of the code "
+"base once people are familiar with the procedures for unit testing explained"
+" in the sections that follow."
+msgstr ""
+"2007년 11월부터, 마스터로 들어가는 모든 새 기능들은 단위 테스트를 포함해야 합니다. 처음에는 이 요구 사항을 "
+"``qgis_core`` 에만 적용했지만, 사람들이 다음 절들에서 설명하는 단위 테스트 작업에 익숙해지면 코드 베이스의 다른 부분들로 이"
+" 요구 사항을 확장시켜 나갈 것입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:19
+msgid "The QGIS testing framework - an overview"
+msgstr "QGIS 테스트 작업 프레임워크 --- 개요"
+
+#: ../../docs/developers_guide/unittesting.rst:21
+msgid ""
+"Unit testing is carried out using a combination of QTestLib (the Qt testing "
+"library) and CTest (a framework for compiling and running tests as part of "
+"the CMake build process). Lets take an overview of the process before we "
+"delve into the details:"
+msgstr ""
+"단위 테스트 작업은 QTestLib(Qt 테스트 작업 라이브러리)과 CTest(CMake 빌드 절차의 일환으로써 테스트를 컴파일하고 "
+"실행하기 위한 프레임워크)의 조합을 사용해서 수행됩니다. 자세한 내용을 설명하기 전에 이 절차의 개요를 살펴봅시다:"
+
+#: ../../docs/developers_guide/unittesting.rst:26
+msgid ""
+"There is some code you want to test, e.g. a class or function. Extreme "
+"programming advocates suggest that the code should not even be written yet "
+"when you start building your tests, and then as you implement your code you "
+"can immediately validate each new functional part you add with your test. In"
+" practice you will probably need to write tests for pre-existing code in "
+"QGIS since we are starting with a testing framework well after much "
+"application logic has already been implemented."
+msgstr ""
+"여러분이 테스트해보고 싶은 코드가, 예를 들면 클래스 또는 함수가 있을 수 있습니다. 극단적인 프로그래밍 옹호자들은 여러분이 테스트를 "
+"빌드하기 시작할 때는 아직 코드를 작성도 하지 않은 상태여야 하며, 코드를 구현하면서 테스트에 각각의 새 기능 부분을 추가하는 즉시 "
+"무결성을 검증할 수 있어야 한다고 제안합니다. 실제로는 대부분의 응용 프로그램 로직이 이미 구현된 후 테스트 작업 프레임워크를 사용해서 "
+"시작하기 때문에, QGIS에 있는 기존 코드에 대해 테스트를 작성해야 할 수도 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:34
+msgid ""
+"You create a unit test. This happens under ``<QGIS Source "
+"Dir>/tests/src/core`` in the case of the core lib. The test is basically a "
+"client that creates an instance of a class and calls some methods on that "
+"class. It will check the return from each method to make sure it matches the"
+" expected value. If any one of the calls fails, the unit will fail."
+msgstr ""
+"단위 테스트를 생성하십시오. 핵심 라이브러리인 경우 ``<QGIS Source Dir>/tests/src/core`` 에 생성합니다. 이"
+" 테스트는 기본적으로 클래스의 인스턴스를 생성한 다음 해당 클래스에 대해 몇몇 메소드를 호출하는 클라이언트입니다. 이 테스트는 각 "
+"메소드가 반환하는 값이 예상 값과 일치하는지 확인하기 위해 반환 값을 점검할 것입니다. 호출한 메소드 가운데 하나라도 통과하지 못하는 "
+"경우, 단위 테스트가 실패한 것입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:40
+msgid ""
+"You include QtTestLib macros in your test class. This macro is processed by "
+"the Qt meta object compiler (moc) and expands your test class into a "
+"runnable application."
+msgstr ""
+"여러분의 테스트 클래스에 QtTestLib 매크로를 포함시키시오. Qt MOC(Meta Object Compiler)이 이 매크로를 "
+"처리해서 테스트 클래스를 실행 가능한 응용 프로그램으로 확장합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:44
+msgid ""
+"You add a section to the CMakeLists.txt in your tests directory that will "
+"build your test."
+msgstr ""
+"여러분의 테스트 디렉터리에 있는 :file:`CMakeLists.txt` 파일에 테스트를 빌드할 부분(section)을 추가하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:47
+msgid ""
+"You ensure you have ``ENABLE_TESTING`` enabled in ccmake / cmakesetup. This "
+"will ensure your tests actually get compiled when you type make."
+msgstr ""
+"CCMake/CMakeSetup에서 ``ENABLE_TESTING`` 이 활성화되었는지 확인하십시오. 여러분이 ``make`` 를 입력할"
+" 때 여러분의 테스트가 실제로 컴파일되도록 해줄 것입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:50
+msgid ""
+"You optionally add test data to ``<QGIS Source Dir>/tests/testdata`` if your"
+" test is data driven (e.g. needs to load a shapefile). These test data "
+"should be as small as possible and wherever possible you should use the "
+"existing datasets already there. Your tests should never modify this data in"
+" situ, but rather make a temporary copy somewhere if needed."
+msgstr ""
+"여러분의 테스트가 데이터 기반인 경우 (예를 들면 셰이프파일을 불러와야 하는 경우) ``<QGIS Source "
+"Dir>/tests/testdata`` 에 테스트 데이터를 선택적으로 추가할 수 있습니다. 이런 테스트 데이터의 용량은 가능한 한 작아야"
+" 하며 가능한 경우 언제나 이미 존재하는 기존 데이터셋을 사용해야 합니다. 테스트는 절대 제자리에서(in situ) 이 데이터를 "
+"수정해서는 안 되며, 필요한 경우 어딘가에 임시 복사본을 만들어야 합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:56
+msgid ""
+"You compile your sources and install. Do this using normal ``make && (sudo)"
+"  make install`` procedure."
+msgstr ""
+"여러분의 소스를 컴파일한 다음 설치하십시오. 일반적인 ``make && (sudo) make install`` 절차를 사용하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:59
+msgid ""
+"You run your tests. This is normally done simply by doing ``make test`` "
+"after the ``make install`` step, though we will explain other approaches "
+"that offer more fine grained control over running tests."
+msgstr ""
+"여러분의 테스트를 실행하십시오. 일반적으로 ``make install`` 단계 다음에 ``make test`` 명령어를 실행하면 되지만,"
+" 테스트 실행에 대해 더 세밀한 제어를 할 수 있는 다른 접근법들도 설명할 것입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:64
+msgid ""
+"Right with that overview in mind, we will delve into a bit of detail. We've "
+"already done much of the configuration for you in CMake and other places in "
+"the source tree so all you need to do are the easy bits - writing unit "
+"tests!"
+msgstr ""
+"이러한 개요를 기억해두고서 좀 더 자세히 살펴보겠습니다. 이미 CMake 및 소스 트리에 있는 다른 위치들에서 대부분의 환경설정을 "
+"끝마쳤기 때문에, 여러분이 해야 할 일은 쉬운 부분밖에 남지 않았습니다 --- 단위 테스트를 작성하는 것이죠!"
+
+#: ../../docs/developers_guide/unittesting.rst:70
+msgid "Creating a unit test"
+msgstr "단위 테스트 생성하기"
+
+#: ../../docs/developers_guide/unittesting.rst:72
+msgid ""
+"Creating a unit test is easy - typically you will do this by just creating a"
+" single :file:`.cpp` file (no :file:`.h` file is used) and implement all "
+"your test methods as private methods that return void. We'll use a simple "
+"test class for ``QgsRasterLayer`` throughout the section that follows to "
+"illustrate. By convention we will name our test with the same name as the "
+"class they are testing but prefixed with 'Test'. So our test implementation "
+"goes in a file called :file:`testqgsrasterlayer.cpp` and the class itself "
+"will be ``TestQgsRasterLayer``. First we add our standard copyright banner:"
+msgstr ""
+"단위 테스트를 생성하는 일은 쉽습니다 --- 일반적으로 :file:`.cpp` 파일 하나를 생성하고 (:file:`.h` 파일은 쓰지 "
+"않습니다) 모든 테스트 메소드들을 보이드(void)를 반환하는 비공개 메소드로 구현하면 됩니다. 다음 부분에서 "
+"``QgsRasterLayer`` 에 대한 단순 테스트 클래스를 사용해서 설명할 것입니다. 관습에 따라 테스트의 이름은 테스트 대상인 "
+"클래스의 이름 앞에 'Test' 접두어를 붙인 이름이 될 것입니다. 따라서 :file:`testqgsrasterlayer.cpp` 라는 "
+"파일에 테스트를 구현하면 클래스 자체는 ``TestQgsRasterLayer`` 가 될 것입니다. 먼저 표준 저작권 배너를 추가하십시오:"
+
+#: ../../docs/developers_guide/unittesting.rst:98
+msgid ""
+"Next we start our includes needed for the tests we plan to run. There is one"
+" special include all tests should have:"
+msgstr ""
+"그 다음 실행하고자 하는 테스트에 필요한 ``include`` 들을 입력하십시오. 모든 테스트가 가지고 있어야 할 특별한 "
+"``include`` 가 하나 있습니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:105
+msgid ""
+"Beyond that you just continue implementing your class as per normal, pulling"
+" in whatever headers you may need:"
+msgstr "그 후에는 클래스를 평소대로 계속 구현하고, 필요한 헤더를 가져와서 사용하면 됩니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:123
+msgid ""
+"Since we are combining both class declaration and implementation in a single"
+" file the class declaration comes next. We start with our doxygen "
+"documentation. Every test case should be properly documented. We use the "
+"doxygen ingroup directive so that all the UnitTests appear as a module in "
+"the generated Doxygen documentation. After that comes a short description of"
+" the unit test and the class must inherit from QObject and include the "
+"Q_OBJECT macro."
+msgstr ""
+"단일 파일 안에 클래스 선언과 구현을 결합하고 있기 때문에 이 다음은 클래스를 선언해야 합니다. 독시젠(Doxygen) 문서로 "
+"시작합시다. 테스트 사례는 모두 제대로 문서화되어야 합니다. 생성된 독시젠 문서에서 모든 ``UnitTests`` 가 하나의 모듈로 "
+"나타나도록 독시젠 ``ingroup`` 명령어를 사용합니다. 그 다음엔 단위 테스트에 대한 짧은 설명이 오며, 클래스는 반드시 "
+"``QObject`` 로부터 상속받아야만 하고 ``Q_OBJECT`` 매크로를 포함해야만 합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:140
+msgid ""
+"All our test methods are implemented as private slots. The QtTest framework "
+"will sequentially call each private slot method in the test class. There are"
+" four 'special' methods which if implemented will be called at the start of "
+"the unit test (``initTestCase``), at the end of the unit test "
+"(``cleanupTestCase``). Before each test method is called, the ``init()`` "
+"method will be called and after each test method is called the ``cleanup()``"
+" method is called. These methods are handy in that they allow you to "
+"allocate and cleanup resources prior to running each test, and the test unit"
+" as a whole."
+msgstr ""
+"테스트 메소드들은 모두 비공개 슬롯으로 구현됩니다. QtTest 프레임워크는 테스트 클래스에 있는 비공개 슬롯 메소드들을 각각 순차적으로"
+" 호출할 것입니다. 구현된 경우 단위 테스트 시작 시(``initTestCase``), 단위 테스트 종료 "
+"시(``cleanupTestCase``) 호출될 '특수' 메소드들이 4개 있습니다. 각 테스트 메소드를 호출하기 전에 ``init()``"
+" 메소드를 호출할 것이고 각 테스트 메소드를 호출한 후에 ``cleanup()`` 메소드를 호출할 것입니다. 이 메소드들은 각각의 "
+"테스트와 테스트 단위 전체를 실행하기 전에 리소스를 할당하고 정리할 수 있게 해준다는 점에서 편리합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:161
+msgid ""
+"Then come your test methods, all of which should take no parameters and "
+"should return void. The methods will be called in order of declaration. We "
+"are implementing two methods here which illustrate two types of testing."
+msgstr ""
+"이 다음에 여러분의 테스트 메소드들이 옵니다. 모든 메소드는 어떤 파라미터도 받지 말아야 하며 보이드를 반환해야 합니다. 이 메소드들은 "
+"선언 순서대로 호출될 것입니다. 여기에서는 테스트 작업의 두 가지 유형을 보여주는 메소드 2개를 구현합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:165
+msgid ""
+"In the first case we want to generally test if the various parts of the "
+"class are working, We can use a functional testing approach. Once again, "
+"extreme programmers would advocate writing these tests before implementing "
+"the class. Then as you work your way through your class implementation you "
+"iteratively run your unit tests. More and more test functions should "
+"complete successfully as your class implementation work progresses, and when"
+" the whole unit test passes, your new class is done and is now complete with"
+" a repeatable way to validate it."
+msgstr ""
+"첫 번째로 클래스의 여러 부분들이 제대로 동작하는지 전체적으로 테스트하려 합니다. 기능적인 테스트 작업 접근법을 사용하면 됩니다. 다시,"
+" 극단적인 프로그래머들은 클래스를 구현하기 전에 이런 테스트들을 작성하라고 제안할 것입니다. 그 다음 클래스를 구현해나가면서 단위 "
+"테스트를 반복 실행하십시오. 여러분의 클래스 구현 작업이 진행될수록 더 많은 테스트 함수들이 성공적으로 종료될 것입니다. 그리고 전체 "
+"단위 테스트를 통과했을 때, 여러분의 새 클래스도 구현이 완료되고 그 무결성을 반복 가능한 방법으로 검증할 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:173
+msgid ""
+"Typically your unit tests would only cover the public API of your class, and"
+" normally you do not need to write tests for accessors and mutators. If it "
+"should happen that an accessor or mutator is not working as expected you "
+"would normally implement a :ref:`regression test <regression_test>` to check"
+" for this."
+msgstr ""
+"단위 테스트는 일반적으로 클래스의 공개 API만 테스트할 것이고, 접근자(accessor) 및 변이유발자(mutator)에 대한 테스트를"
+" 작성할 필요는 없습니다. 접근자 또는 변이유발자가 예상한대로 작동하지 않는 일이 일어날 경우, 이를 확인하기 위한 :ref:`회귀 "
+"테스트 <regression_test>` 를 구현하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:193
+msgid "Implementing a regression test"
+msgstr "회귀 테스트 구현하기"
+
+#: ../../docs/developers_guide/unittesting.rst:195
+msgid ""
+"Next we implement our regression tests. Regression tests should be "
+"implemented to replicate the conditions of a particular bug. For example:"
+msgstr ""
+"다음으로 회귀 테스트(regression test)를 구현합니다. 회귀 테스트는 다음 예시처럼 특정 버그의 조건을 복제하도록 구현해야 "
+"합니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:198
+msgid ""
+"We received a report by email that the cell count by rasters was off by 1, "
+"throwing off all the statistics for the raster bands."
+msgstr "래스터의 셀 개수가 1씩 틀려서 래스터 밴드에 대한 모든 통계가 엉망이 된다는 보고서를 이메일로 받았습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:200
+msgid ""
+"We opened a bug report (`ticket #832 <https://issues.qgis.org/issues/832>`_)"
+msgstr "버그 보고서를 열었습니다. (`티켓 #832 <https://issues.qgis.org/issues/832>`_)"
+
+#: ../../docs/developers_guide/unittesting.rst:201
+msgid ""
+"We created a regression test that replicated the bug using a small test "
+"dataset (a 10x10 raster)."
+msgstr "버그를 복제하는 회귀 테스트를 소용량 데이터셋(10x10 래스터)를 사용해서 생성했습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:203
+msgid ""
+"We ran the test, verifying that it did indeed fail (the cell count was 99 "
+"instead of 100)."
+msgstr "테스트를 실행했고, 실제로 셀 개수가 틀린다는 사실을 (100개가 아니라 99개로 나온다는 사실을) 검증했습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:205
+msgid ""
+"Then we went to fix the bug and reran the unit test and the regression test "
+"passed. We committed the regression test along with the bug fix. Now if "
+"anybody breakes this in the source code again in the future, we can "
+"immediately identify that the code has regressed."
+msgstr ""
+"그 다음 버그를 수정했고, 단위 테스트와 회귀 테스트를 다시 실행해서 통과했습니다. 우리는 버그 픽스에 회귀 테스트를 포함시켜 "
+"커밋했습니다. 이제 향후 어떤 사람이 소스 코드에서 이를 다시 위반하는 경우, 코드가 과거로 되돌아갔다는 사실을 바로 확인할 수 "
+"있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:210
+msgid ""
+"Better yet, before committing any changes in the future, running our tests "
+"will ensure our changes don't have unexpected side effects - like breaking "
+"existing functionality."
+msgstr ""
+"더 나은 점은, 향후 어떤 변경 사항이라도 커밋하기 전에 이 테스트들을 실행하면 변경 사항이 예상하지 못한 부작용을 발생시키지 않는지 "
+"--- 이를테면 기존 기능을 망가뜨리지 않는지 확인할 수 있다는 것입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:214
+msgid ""
+"There is one more benefit to regression tests - they can save you time. If "
+"you ever fixed a bug that involved making changes to the source, and then "
+"running the application and performing a series of convoluted steps to "
+"replicate the issue, it will be immediately apparent that simply "
+"implementing your regression test before fixing the bug will let you "
+"automate the testing for bug resolution in an efficient manner."
+msgstr ""
+"회귀 테스트의 장점이 또 하나 있습니다 --- 시간을 절약할 수 있게 해줍니다. 여러분이 소스를 변경한 다음 응용 프로그램을 실행해서 "
+"문제점을 재현하기 위한 일련의 복잡한 단계들을 수행해서 버그를 수정했던 적이 있다면, 버그를 수정하기 전에 회귀 테스트를 구현하는 "
+"것만으로도 버그 해결을 위한 테스트 작업을 효율적인 방식으로 자동화할 수 있다는 사실을 즉각 알 수 있을 것입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:221
+msgid ""
+"To implement your regression test, you should follow the naming convention "
+"of **regression<TicketID>** for your test functions. If no ticket exists for"
+" the regression, you should create one first. Using this approach allows the"
+" person running a failed regression test easily go and find out more "
+"information."
+msgstr ""
+"회귀 테스트를 구현하려면, 테스트 함수들에 대해 **regression<TicketID>** 라는 명명 관습을 준수해야 합니다. 회귀 "
+"테스트에 대한 티켓이 존재하지 않는 경우, 먼저 티켓을 생성해야 합니다. 이런 접근법을 사용하면 회귀 테스트를 실패한 사람이 자세한 "
+"정보를 쉽게 찾을 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:240
+msgid ""
+"Finally in your test class declaration you can declare privately any data "
+"members and helper methods your unit test may need. In our case we will "
+"declare a ``QgsRasterLayer *`` which can be used by any of our test methods."
+" The raster layer will be created in the ``initTestCase()`` function which "
+"is run before any other tests, and then destroyed using "
+"``cleanupTestCase()`` which is run after all tests. By declaring helper "
+"methods (which may be called by various test functions) privately, you can "
+"ensure that they won't be automatically run by the QTest executable that is "
+"created when we compile our test."
+msgstr ""
+"마지막으로 여러분의 테스트 클래스 선언에서 단위 테스트에 필요할 수도 있는 모든 데이터 멤버들과 도우미 메소드들을 비공개로 선언할 수 "
+"있습니다. 이번 예시의 경우 모든 테스트 메소드가 사용할 수 있는 ``QgsRasterLayer *`` 를 선언할 것입니다. 다른 모든 "
+"테스트보다 먼저 실행되는 ``initTestCase()`` 함수가 래스터 레이어를 생성한 다음, 모든 테스트 뒤에 실행되는 "
+"``cleanupTestCase()`` 함수를 사용해서 삭제할 것입니다. (여러 테스트 메소드들이 호출할 수도 있는) 도우미 메소드들을 "
+"비공개로 선언하면, 테스트를 컴파일했을 때 생성되는 QTest 실행 파일이 이들을 자동 실행하지 않도록 보장할 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:257
+msgid ""
+"That ends our class declaration. The implementation is simply inlined in the"
+" same file lower down. First our init and cleanup functions:"
+msgstr ""
+"이것으로 클래스 선언이 끝났습니다. 구현은 동일한 파일 다음 부분에 차례로 작성하기만 하면 됩니다. 먼저 초기화(init) 및 "
+"정리(cleanup) 함수들을 살펴보겠습니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:290
+msgid "The above init function illustrates a couple of interesting things."
+msgstr "앞의 초기화 함수는 두 가지 흥미로운 사실을 보여줍니다."
+
+#: ../../docs/developers_guide/unittesting.rst:292
+msgid ""
+"We needed to manually set the QGIS application data path so that resources "
+"such as :file:`srs.db` can be found properly."
+msgstr ""
+":file:`srs.db` 파일 같은 리소스를 제대로 찾을 수 있도록 QGIS 응용 프로그램 데이터 경로를 직접 설정해줘야 합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:294
+msgid ""
+"Secondly, this is a data driven test so we needed to provide a way to "
+"generically locate the :file:`tenbytenraster.asc` file. This was achieved by"
+" using the compiler define ``TEST_DATA_PATH``. The define is created in the "
+"``CMakeLists.txt`` configuration file under :file:`<QGIS Source "
+"Root>/tests/CMakeLists.txt` and is available to all QGIS unit tests. If you "
+"need test data for your test, commit it under :file:`<QGIS Source "
+"Root>/tests/testdata`. You should only commit very small datasets here. If "
+"your test needs to modify the test data, it should make a copy of it first."
+msgstr ""
+"다음으로, 이 테스트가 데이터 기반이기 때문에 :file:`tenbytenraster.asc` 파일의 위치를 일반적으로 찾을 수 있는 "
+"방법을 제공해야 합니다. 컴파일러가 정의하는 ``TEST_DATA_PATH`` 를 사용하면 됩니다. :file:`<QGIS Source "
+"Root>/tests/CMakeLists.txt` 다음에 있는 :file:`CMakeLists.txt` 환경설정 파일에 이 정의를 "
+"생성하는데, 모든 QGIS 단위 테스트가 이 정의를 사용할 수 있습니다. 여러분의 테스트를 위한 테스트 데이터가 필요한 경우, "
+":file:`<QGIS Source Root>/tests/testdata` 아래에 해당 데이터를 커밋하십시오. 여기엔 용량이 아주 작은 "
+"데이터셋만 커밋해야 합니다. 테스트가 테스트 데이터를 수정해야 하는 경우, 먼저 복사본을 만들어야 합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:304
+msgid ""
+"Qt also provides some other interesting mechanisms for data driven testing, "
+"so if you are interested to know more on the topic, consult the Qt "
+"documentation."
+msgstr ""
+"Qt는 데이터 기반 테스트 작업을 위한 흥미로운 다른 메커니즘을 몇 개 제공하기 때문에, 이 주제에 대해 더 자세히 알고 싶다면 Qt "
+"문서를 읽어보시기 바랍니다."
+
+#: ../../docs/developers_guide/unittesting.rst:308
+msgid ""
+"Next lets look at our functional test. The ``isValid()`` test simply checks "
+"the raster layer was correctly loaded in the initTestCase. QVERIFY is a Qt "
+"macro that you can use to evaluate a test condition. There are a few other "
+"use macros Qt provide for use in your tests including:"
+msgstr ""
+"다음으로 기능 테스트를 살펴보겠습니다. ``isValid()`` 테스트는 ``initTestCase()`` 에 래스터 레이어를 정확히 "
+"불러왔는지만 확인합니다. ``QVERIFY`` 는 테스트 조건을 평가하는 데 사용할 수 있는 Qt 매크로입니다. Qt는 이뿐만이 아니라 "
+"다음과 같은 매크로들을 테스트에 사용할 수 있도록 제공하고 있습니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:313
+msgid "QCOMPARE ( *actual, expected* )"
+msgstr "QCOMPARE ( *actual, expected* )"
+
+#: ../../docs/developers_guide/unittesting.rst:314
+msgid "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
+msgstr "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
+
+#: ../../docs/developers_guide/unittesting.rst:315
+msgid "QFAIL ( *message* )"
+msgstr "QFAIL ( *message* )"
+
+#: ../../docs/developers_guide/unittesting.rst:316
+msgid "QFETCH ( *type, name* )"
+msgstr "QFETCH ( *type, name* )"
+
+#: ../../docs/developers_guide/unittesting.rst:317
+msgid "QSKIP ( *description, mode* )"
+msgstr "QSKIP ( *description, mode* )"
+
+#: ../../docs/developers_guide/unittesting.rst:318
+msgid "QTEST ( *actual, testElement* )"
+msgstr "QTEST ( *actual, testElement* )"
+
+#: ../../docs/developers_guide/unittesting.rst:319
+msgid "QTEST_APPLESS_MAIN ( *TestClass* )"
+msgstr "QTEST_APPLESS_MAIN ( *TestClass* )"
+
+#: ../../docs/developers_guide/unittesting.rst:320
+msgid "QTEST_MAIN ( *TestClass* )"
+msgstr "QTEST_MAIN ( *TestClass* )"
+
+#: ../../docs/developers_guide/unittesting.rst:321
+msgid "QTEST_NOOP_MAIN ()"
+msgstr "QTEST_NOOP_MAIN ()"
+
+#: ../../docs/developers_guide/unittesting.rst:322
+msgid "QVERIFY2 ( *condition, message* )"
+msgstr "QVERIFY2 ( *condition, message* )"
+
+#: ../../docs/developers_guide/unittesting.rst:323
+msgid "QVERIFY ( *condition* )"
+msgstr "QVERIFY ( *condition* )"
+
+#: ../../docs/developers_guide/unittesting.rst:324
+msgid "QWARN ( *message* )"
+msgstr "QWARN ( *message* )"
+
+#: ../../docs/developers_guide/unittesting.rst:326
+msgid ""
+"Some of these macros are useful only when using the Qt framework for data "
+"driven testing (see the Qt docs for more detail)."
+msgstr ""
+"이 매크로들 가운데 일부는 데이터 기반 테스트 작업에 Qt 프레임워크를 사용하는 경우에만 유용합니다. (자세한 내용은 Qt 문서를 "
+"참조하세요.)"
+
+#: ../../docs/developers_guide/unittesting.rst:336
+msgid ""
+"Normally your functional tests would cover all the range of functionality of"
+" your classes public API where feasible. With our functional tests out the "
+"way, we can look at our regression test example."
+msgstr ""
+"기능 테스트는 가능한 경우 일반적으로 클래스들의 공개 API 기능의 모든 범위를 포괄합니다. 기능 테스트를 완료하고 나면 회귀 테스트 "
+"예시를 살펴볼 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:340
+msgid ""
+"Since the issue in bug #832 is a misreported cell count, writing our test is"
+" simply a matter of using QVERIFY to check that the cell count meets the "
+"expected value:"
+msgstr ""
+"버그 #832의 문제점이 셀 개수를 잘못 세는 것이기 때문에, QVERIFY를 사용해서 셀 개수가 예상 값과 일치하는지만 확인하도록 "
+"테스트를 작성하면 됩니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:355
+msgid ""
+"With all the unit test functions implemented, there's one final thing we "
+"need to add to our test class:"
+msgstr "단위 테스트 함수들을 모두 구현했다면, 테스트 클래스에 마지막으로 추가해야 할 것이 하나 있습니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:363
+msgid ""
+"The purpose of these two lines is to signal to Qt's moc that this is a "
+"QtTest (it will generate a main method that in turn calls each test "
+"function. The last line is the include for the MOC generated sources. You "
+"should replace ``testqgsrasterlayer`` with the name of your class in lower "
+"case."
+msgstr ""
+"이 두 줄의 목적은 Qt의 MOC에 이 파일이 QtTest라는 사실을 알려주는 것입니다. 이렇게 하면 각각의 테스트 함수를 차례로 "
+"호출하는 주 메소드를 생성할 것입니다. 마지막 줄은 MOC가 생성한 소스에 대한 ``include`` 입니다. 여러분은 "
+"``testqgsrasterlayer`` 를 소문자로 된 여러분의 클래스 이름으로 바꿔줘야 합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:369
+msgid "Comparing images for rendering tests"
+msgstr "렌더링 테스트에서 이미지들을 비교하기"
+
+#: ../../docs/developers_guide/unittesting.rst:371
+msgid ""
+"Rendering images on different environments can produce subtle differences "
+"due to platform-specific implementations (e.g. different font rendering and "
+"antialiasing algorithms), to the fonts available on the system and for other"
+" obscure reasons."
+msgstr ""
+"서로 다른 환경에서 이미지를 렌더링하면 플랫폼 별 구현(예를 들면 서로 다른 글꼴 렌더링이나 위신호 제거 알고리즘), 시스템 상에서 "
+"사용할 수 있는 글꼴, 그리고 기타 모호한 이유 때문에 미묘한 차이가 발생할 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:375
+msgid ""
+"When a rendering test runs on Travis and fails, look for the dash link at "
+"the very bottom of the Travis log. This link will take you to a cdash page "
+"where you can see the rendered vs expected images, along with a "
+"\"difference\" image which highlights in red any pixels which did not match "
+"the reference image."
+msgstr ""
+"`트래비스 <https://www.travis-ci.com/>`_ 상에서 렌더링 테스트를 실행해서 실패한 경우, 트래비스 로그의 최하단에"
+" 있는 대시 링크를 찾아보십시오. 이 링크는 여러분이 렌더링된 이미지와 예상 이미지를 비교해볼 수 있는 `CDash "
+"<https://www.cdash.org/>`_ 페이지를 가리킵니다. 이 페이지에서 기준 이미지와 일치하지 않는 모든 픽셀을 빨간색으로 "
+"강조한 이미지의 \"차이\"를 확인할 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:380
+msgid ""
+"The QGIS unit test system has support for adding \"mask\" images, which are "
+"used to indicate when a rendered image may differ from the reference image. "
+"A mask image is an image (with the same name as the reference image, but "
+"including a **_mask.png** suffix), and should be the same dimensions as the "
+"reference image. In a mask image the pixel values indicate how much that "
+"individual pixel can differ from the reference image, so a black pixel "
+"indicates that the pixel in the rendered image must exactly match the same "
+"pixel in the reference image. A pixel with RGB 2, 2, 2 means that the "
+"rendered image can vary by up to 2 in its RGB values from the reference "
+"image, and a fully white pixel (255, 255, 255) means that the pixel is "
+"effectively ignored when comparing the expected and rendered images."
+msgstr ""
+"QGIS 단위 테스트 시스템은 렌더링된 이미지가 기준 이미지와 다를 수도 있는 경우를 나타내는 데 쓰이는 \"마스크\" 이미지들을 "
+"추가하는 기능을 지원합니다. 마스크 이미지는 (기준 이미지와 같은 이름이지만 :file:`_mask.png` 접미어를 붙인) 이미지로, "
+"기준 이미지와 동일한 크기여야 합니다. 마스크 이미지에서 픽셀 값은 개별 픽셀이 기준 이미지와 얼마나 다를 수 있는지를 나타내기 때문에,"
+" 검은색 픽셀은 렌더링된 이미지에 있는 해당 픽셀이 기준 이미지에 있는 동일 픽셀과 정확히 일치해야만 한다는 사실을 나타냅니다. 렌더링된"
+" 이미지에서 RGB(2,2,2) 값을 가진 픽셀은 기준 이미지의 동일 픽셀 RGB 값에서 2까지 변할 수 있다는 의미이며, 완전히 "
+"하얀색인 RGB(255,255,255) 값은 렌더링된 이미지와 예상 이미지를 비교할 때 해당 픽셀을 사실상 무시한다는 의미입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:392
+msgid ""
+"A utility script to generate mask images is available as "
+"``scripts/generate_test_mask_image.py``. This script is used by passing it "
+"the path of a reference image (e.g. "
+"``tests/testdata/control_images/annotations/expected_annotation_fillstyle/expected_annotation_fillstyle.png``)"
+" and the path to your rendered image."
+msgstr ""
+":file:`scripts/generate_test_mask_image.py` 유틸리티 스크립트를 사용해서 마스크 이미지를 생성할 수 "
+"있습니다. 이 스크립트에 기준 이미지의 경로(예: "
+":file:`tests/testdata/control_images/annotations/expected_annotation_fillstyle/expected_annotation_fillstyle.png`)와"
+" 렌더링된 이미지를 가리키는 경로를 전달하면 됩니다."
+
+#: ../../docs/developers_guide/unittesting.rst:397
+msgid "E.g."
+msgstr "예시:"
+
+#: ../../docs/developers_guide/unittesting.rst:403
+msgid ""
+"You can shortcut the path to the reference image by passing a partial part "
+"of the test name instead, e.g."
+msgstr "다음과 같이 테스트 이름의 일부분을 전달해서 기준 이미지를 가리키는 경로를 축약할 수 있습니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:410
+msgid ""
+"(This shortcut only works if a single matching reference image is found. If "
+"multiple matches are found you will need to provide the full path to the "
+"reference image.)"
+msgstr ""
+"(이 축약 경로는 테스트 이름의 일부분과 일치하는 이미지가 단 하나 존재하는 경우에만 작동합니다. 여러 개가 발견된 경우 기준 이미지를 "
+"가리키는 전체 경로를 제공해야 할 것입니다.)"
+
+#: ../../docs/developers_guide/unittesting.rst:414
+msgid ""
+"The script also accepts http urls for the rendered image, so you can "
+"directly copy a rendered image url from the cdash results page and pass it "
+"to the script."
+msgstr ""
+"이 스크립트는 렌더링 이미지의 HTTP URL도 받기 때문에, CDash 결과 페이지에서 렌더링된 이미지의 URL을 직접 복사해서 "
+"스크립트에 전달할 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:417
+msgid ""
+"Be careful when generating mask images - you should always view the "
+"generated mask image and review any white areas in the image. Since these "
+"pixels are ignored, make sure that these white images do not cover any "
+"important portions of the reference image -- otherwise your unit test will "
+"be meaningless!"
+msgstr ""
+"마스크 이미지를 생성할 때 주의하십시오 --- 항상 생성된 마스크 이미지를 살펴보고 이미지에 하얀색 영역이 있는지 검토해야 합니다. 이 "
+"픽셀들을 무시할 것이기 때문에, 이 하얀색 영역이 기준 이미지의 중요한 부분들의 위치에 있지는 않은지 확인하십시오. 그러지 않으면 "
+"여러분의 단위 테스트가 의미 없게 될 것입니다!"
+
+#: ../../docs/developers_guide/unittesting.rst:422
+msgid ""
+"Similarly, you can manually \"white out\" portions of the mask if you "
+"deliberately want to exclude them from the test. This can be useful e.g. for"
+" tests which mix symbol and text rendering (such as legend tests), where the"
+" unit test is not designed to test the rendered text and you don't want the "
+"test to be subject to cross-platform text rendering differences."
+msgstr ""
+"마찬가지로, 여러분이 테스트에서 이미지의 어떤 영역을 의도적으로 제외하고 싶은 경우 해당 영역을 직접 \"백화(白化)\"시킬 수도 "
+"있습니다. 예를 들면 (범례 테스트처럼) 심볼과 텍스트를 혼합해서 렌더링한 이미지를 테스트하는 경우 이 방법이 유용합니다. 단위 테스트는"
+" 렌더링된 텍스트를 테스트하도록 설계되지 않았기 때문에, 플랫폼 간 텍스트 렌더링 차이 때문에 테스트에 영향을 주고 싶지 않을 것입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:428
+msgid ""
+"To compare images in QGIS unit tests you should use the class "
+"``QgsMultiRenderChecker`` or one of its subclasses."
+msgstr ""
+"QGIS 단위 테스트에서 이미지들을 비교하려면 ``QgsMultiRenderChecker`` 클래스 또는 그 하위 클래스들 가운데 하나를"
+" 사용해야 합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:431
+msgid "To improve tests robustness here are few tips:"
+msgstr "테스트의 견고성을 높이기 위한 도움말을 몇 가지 소개합니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:433
+msgid ""
+"Disable antialiasing if you can, as this minimizes cross-platform rendering "
+"differences."
+msgstr "가능한 경우 위신호 제거(anti-aliasing)를 비활성화시키십시오. 플랫폼 간 렌더링 차이를 최소화해줍니다."
+
+#: ../../docs/developers_guide/unittesting.rst:435
+msgid ""
+"Make sure your reference images are \"chunky\"... i.e. don't have 1 px wide "
+"lines or other fine features, and use large, bold fonts (14 points or more "
+"is recommended)."
+msgstr ""
+"여러분의 기준 이미지가 \"두툼한지\" 확인하십시오 --- 예를 들어 1픽셀 너비 라인 또는 기타 세밀한 피처를 사용하지 말고, 크고 "
+"굵은 글꼴을 (크기 14포인트 이상을 권장합니다) 사용하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:438
+msgid ""
+"Sometimes tests generate slightly different sized images (e.g. legend "
+"rendering tests, where the image size is dependent on font rendering size - "
+"which is subject to cross-platform differences). To account for this, use "
+"``QgsMultiRenderChecker::setSizeTolerance()`` and specify the maximum number"
+" of pixels that the rendered image width and height differ from the "
+"reference image."
+msgstr ""
+"테스트가 미묘하게 크기가 다른 이미지를 생성하는 경우가 있습니다. (예를 들면 이미지 크기가 플랫폼 간 차이에 영향을 받는 글꼴 렌더링 "
+"크기에 따라 달라지는 범례 렌더링 테스트가 그렇습니다.) 이를 고려하려면, "
+"``QgsMultiRenderChecker::setSizeTolerance()`` 메소드를 사용해서 렌더링된 이미지의 너비와 높이가 기준"
+" 이미지와 비교해서 달라도 되는 최대 픽셀 개수를 지정하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:444
+msgid ""
+"Don't use transparent backgrounds in reference images (CDash does not "
+"support them). Instead, use ``QgsMultiRenderChecker::drawBackground()`` to "
+"draw a checkboard pattern for the reference image background."
+msgstr ""
+"기준 이미지에 투명한 배경을 사용하지 마십시오. (CDash가 지원하지 않습니다.) 그 대신 기준 이미지 배경에 바둑무늬 패턴을 그리는 "
+"``QgsMultiRenderChecker::drawBackground()`` 메소드를 사용하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:447
+msgid ""
+"When fonts are required, use the font specified in "
+"``QgsFontUtils::standardTestFontFamily()`` (\"QGIS Vera Sans\")."
+msgstr ""
+"글꼴이 필요한 경우, ``QgsFontUtils::standardTestFontFamily()`` 메소드에 지정된 글꼴(\"QGIS "
+"Vera Sans\")을 사용하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:450
+msgid ""
+"If travis reports errors for new images (for instance due to antialiasing or"
+" font differences), the script :source:`parse_dash_results.py "
+"<scripts/parse_dash_results.py>` can help you when you are updating the "
+"local test masks."
+msgstr ""
+"트래비스가 새 이미지에 대한 (예를 들어 위신호 제거 또는 글꼴 차이로 인한) 오류를 보고하는 경우, 로컬 테스트 마스크 이미지를 "
+"업데이트할 때 :source:`parse_dash_results.py <scripts/parse_dash_results.py>` "
+"스크립트가 도움을 줄 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:456
+msgid "Adding your unit test to CMakeLists.txt"
+msgstr "CMakeLists.txt에 단위 테스트 추가하기"
+
+#: ../../docs/developers_guide/unittesting.rst:459
+msgid ""
+"Adding your unit test to the build system is simply a matter of editing the "
+":file:`CMakeLists.txt` in the test directory, cloning one of the existing "
+"test blocks, and then replacing your test class name into it. For example:"
+msgstr ""
+"빌드 시스템에 여러분의 단위 테스트를 추가하려면 그냥 테스트 디렉터리에 있는 :file:`CMakeLists.txt` 파일을 열고 기존 "
+"테스트 블록 가운데 하나를 복사한 다음 다음과 같이 해당 블록을 여러분의 테스트 클래스 이름으로 바꿔주기만 하면 됩니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:470
+msgid "The ADD_QGIS_TEST macro explained"
+msgstr "ADD_QGIS_TEST 매크로 설명"
+
+#: ../../docs/developers_guide/unittesting.rst:472
+msgid ""
+"We'll run through these lines briefly to explain what they do, but if you "
+"are not interested, just do the step explained in the above section."
+msgstr ""
+"다음 줄들을 간단히 훑어보면서 각 줄이 어떤 작업을 하는지 설명하겠습니다. 그러나 관심이 없을 경우, 그냥 앞 부분에서 설명한 단계를 "
+"따르십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:507
+msgid ""
+"Let's look a little more in detail at the individual lines. First we define "
+"the list of sources for our test. Since we have only one source file "
+"(following the methodology described above where class declaration and "
+"definition are in the same file) its a simple statement:"
+msgstr ""
+"개별 줄들을 좀 더 자세히 살펴봅시다. 먼저 테스트 용 소스 목록을 정의합니다. 이 예시에서는 소스 파일이 하나밖에 없기 때문에 (클래스"
+" 선언과 정의가 동일한 파일에 있다는, 앞에서 설명한 방법론에 따라) 다음과 같은 단순한 선언문으로 정의합니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:516
+msgid ""
+"Since our test class needs to be run through the Qt meta object compiler "
+"(moc) we need to provide a couple of lines to make that happen too:"
+msgstr ""
+"테스트 클래스를 Qt MOC(Meta Object Compiler)을 통해 실행해야 하기 때문에, 이를 이뤄줄 몇 줄을 작성해줘야 "
+"합니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:525
+msgid ""
+"Next we tell cmake that it must make an executable from the test class. "
+"Remember in the previous section on the last line of the class "
+"implementation we included the moc outputs directly into our test class, so "
+"that will give it (among other things) a main method so the class can be "
+"compiled as an executable:"
+msgstr ""
+"그 다음 CMake에 테스트 클래스로부터 실행 파일을 만들어야만 한다고 알려줍니다. 클래스 구현의 마지막 줄에 대해 설명한 앞 부분에서,"
+" (다른 일들 중에서도) 클래스를 실행 파일로 컴파일할 수 있는 주 메소드를 생성하도록 테스트 클래스에 MOC 산출물을 직접 "
+"``include`` 시켰다는 사실을 기억하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:536
+msgid ""
+"Next we need to specify any library dependencies. At the moment, classes "
+"have been implemented with a catch-all QT_LIBRARIES dependency, but we will "
+"be working to replace that with the specific Qt libraries that each class "
+"needs only. Of course you also need to link to the relevant qgis libraries "
+"as required by your unit test."
+msgstr ""
+"다음으로 모든 라이브러리 의존성을 지정해줘야 합니다. 이 시점에서 클래스들은 포괄적인(catch-all) QT_LIBRARIES "
+"의존성으로 구현되어 있지만 각 클래스에만 필요한 특정 Qt 라이브러리로 대체하기 위해 작업할 것입니다. 물론 단위 테스트가 요구하는 관련"
+" QGIS 라이브러리를 가리키는 링크도 필요합니다."
+
+#: ../../docs/developers_guide/unittesting.rst:546
+msgid ""
+"Next we tell cmake to install the tests to the same place as the qgis "
+"binaries itself. This is something we plan to remove in the future so that "
+"the tests can run directly from inside the source tree."
+msgstr ""
+"그 다음 CMake에 QGIS 바이너리 자체와 동일한 위치에 테스트를 설치하라고 알려줍니다. 앞으로 소스 트리 안에서 테스트를 직접 "
+"실행할 수 있도록 이 부분은 향후 제거할 계획입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:573
+msgid ""
+"Finally the above uses ``ADD_TEST`` to register the test with cmake / ctest."
+" Here is where the best magic happens - we register the class with ctest. If"
+" you recall in the overview we gave in the beginning of this section, we are"
+" using both QtTest and CTest together. To recap, QtTest adds a main method "
+"to your test unit and handles calling your test methods within the class. It"
+" also provides some macros like ``QVERIFY`` that you can use as to test for "
+"failure of the tests using conditions. The output from a QtTest unit test is"
+" an executable which you can run from the command line. However when you "
+"have a suite of tests and you want to run each executable in turn, and "
+"better yet integrate running tests into the build process, the CTest is what"
+" we use."
+msgstr ""
+"마지막으로 앞의 예시는 CMake/CTest를 사용해서 테스트를 등록하는 데 ``ADD_TEST`` 를 사용합니다. 여기에서 아주 멋진 "
+"마법이 일어납니다 --- CTest를 사용해서 클래스를 등록하는 것입니다. 이 장의 첫 부분에서 소개했던 개요를 다시 떠올려보면, "
+"QtTest와 CTest를 둘 다 함께 사용합니다. QtTest는 테스트 단위에 주 메소드를 추가하고 클래스 내부에서 테스트 메소드들을 "
+"호출하는 작업을 처리합니다. 조건을 사용하는 테스트가 실패하는 경우 테스트에 사용할 수 있는 ``QVERIFY`` 같은 몇몇 매크로들도 "
+"제공합니다. QtTest 단위 테스트에서 나온 산출물이 여러분이 명령줄에서 실행할 수 있는 실행 파일입니다. 하지만 테스트 스위트가 있고"
+" 각각의 실행 파일을 차례대로 실행하길 원하는 경우, 또는 더 나은 방법으로 실행 중인 테스트들을 빌드 프로세스로 통합하길 바라는 경우 "
+"사용하는 것이 CTest입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:586
+msgid "Building your unit test"
+msgstr "단위 테스트 빌드하기"
+
+#: ../../docs/developers_guide/unittesting.rst:588
+msgid ""
+"To build the unit test you need only to make sure that ``ENABLE_TESTS=true``"
+" in the cmake configuration. There are two ways to do this:"
+msgstr ""
+"단위 테스트를 빌드하려면 CMake 환경설정에 ``ENABLE_TESTS=true`` 를 넣어주기만 하면 됩니다. 두 가지 방법이 "
+"있습니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:591
+msgid ""
+"Run ``ccmake ..`` ( or ``cmakesetup ..`` under windows) and interactively "
+"set the ``ENABLE_TESTS`` flag to ``ON``."
+msgstr ""
+"``ccmake ..`` (또는 윈도우인 경우 ``cmakesetup ..``) 를 실행한 다음 쌍방향 작업을 통해 "
+"``ENABLE_TESTS`` 플래그를 ``ON`` 으로 설정하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:593
+msgid "Add a command line flag to cmake e.g. ``cmake -DENABLE_TESTS=true ..``"
+msgstr "예를 들어 ``cmake -DENABLE_TESTS=true ..`` 와 같이 CMake에 명령줄 플래그를 추가하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:595
+msgid ""
+"Other than that, just build QGIS as per normal and the tests should build "
+"too."
+msgstr "그 외에는 그냥 평소대로 QGIS를 빌드하면 테스트도 빌드될 것입니다."
+
+#: ../../docs/developers_guide/unittesting.rst:599
+msgid "Run your tests"
+msgstr "테스트 실행"
+
+#: ../../docs/developers_guide/unittesting.rst:602
+msgid ""
+"The simplest way to run the tests is as part of your normal build process:"
+msgstr "테스트를 실행하는 가장 단순한 방법은 일반적인 빌드 프로세스의 일부로써 실행하는 것입니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:608
+msgid ""
+"The ``make test`` command will invoke CTest which will run each test that "
+"was registered using the ADD_TEST CMake directive described above. Typical "
+"output from ``make test`` will look like this:"
+msgstr ""
+"``make test`` 명령어는 앞에서 설명했던 ``ADD_TEST`` CMake 명령어를 사용해서 등록한 각 테스트를 실행할 "
+"CTest를 호출합니다. ``make test`` 를 실행해서 나오는 일반적인 산출물은 다음과 같이 보일 것입니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:628
+msgid ""
+"If a test fails, you can use the ctest command to examine more closely why "
+"it failed. Use the ``-R`` option to specify a regex for which tests you want"
+" to run and ``-V`` to get verbose output:"
+msgstr ""
+"테스트가 실패하는 경우, 실패한 이유를 더 자세히 알아보기 위해 ``ctest`` 명령어를 사용할 수 있습니다. 실행하고자 하는 테스트에"
+" 대한 정규 표현식을 지정하려면 ``-R`` 옵션을 사용하고, 서술적인 자세한 산출물을 얻으려면 ``-V`` 옵션을 사용하십시오:"
+
+#: ../../docs/developers_guide/unittesting.rst:673
+msgid "Running individual tests"
+msgstr "개별 테스트 실행하기"
+
+#: ../../docs/developers_guide/unittesting.rst:675
+msgid ""
+"C++ tests are ordinary applications. You can run them from the build folder "
+"like any executable."
+msgstr "C++ 테스트는 일반적인 응용 프로그램입니다. 다른 모든 실행 파일들처럼 빌드 폴더에서 테스트를 실행할 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:691
+msgid ""
+"These tests also take `command line arguments <https://doc.qt.io/qt-5/qtest-"
+"overview.html#qt-test-command-line-arguments>`_. This makes it possible to "
+"run a specific subset of tests:"
+msgstr ""
+"이런 테스트들은 `명령줄 인자 <https://doc.qt.io/qt-5/qtest-overview.html#qt-test-"
+"command-line-arguments>`_ 도 받습니다. 이 인자들을 사용하면 테스트의 특정 하위 집합을 실행할 수 있습니다:"
+
+#: ../../docs/developers_guide/unittesting.rst:707
+msgid "Debugging unit tests"
+msgstr "단위 테스트 디버그 작업"
+
+#: ../../docs/developers_guide/unittesting.rst:710
+msgid "C++ Tests"
+msgstr "C++ 테스트"
+
+#: ../../docs/developers_guide/unittesting.rst:712
+msgid ""
+"For C++ unit tests, QtCreator automatically adds run targets, so you can "
+"start them from the debugger."
+msgstr ""
+"C++ 단위 테스트의 경우, QtCreator가 실행 대상을 자동으로 추가하기 때문에 디버그 작업자에서 테스트를 시작할 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:715
+msgid ""
+"If you go to *Projects* and there to the *Build & Run* --> Desktop *Run* "
+"tab, you can also specify command line parameters that will allow a subset "
+"of the tests to be run inside a .cpp file in the debugger."
+msgstr ""
+":guilabel:`Projects` 메뉴로 가서 :menuselection:`Build & Run --> Run` 탭을 선택하면, "
+"디버그 작업자에서 :file:`.cpp` 파일 안에서 테스트의 하위 집합을 실행할 수 있게 해줄 명령줄 파라미터도 지정할 수 있습니다."
+
+#: ../../docs/developers_guide/unittesting.rst:720
+msgid "Python Tests"
+msgstr "파이썬 테스트"
+
+#: ../../docs/developers_guide/unittesting.rst:722
+msgid ""
+"It's also possible to start Python unit tests from QtCreator with GDB. For "
+"this, you need to go to :guilabel:`Projects` and choose :guilabel:`Run` "
+"under :guilabel:`Build & Run`. Then add a new ``Run configuration`` with the"
+" executable ``/usr/bin/python3`` and the Command line arguments set to the "
+"path of the unit test python file, e.g. "
+":file:`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py`."
+msgstr ""
+"GDB(GNU Debugger)를 사용하면 QtCreator에서 파이썬 단위 테스트도 시작할 수 있습니다. 이러러면 "
+":guilabel:`Projects` 메뉴로 가서 :menuselection:`Build & Run --> Run` 탭을 선택해야 "
+"합니다. 그 다음 :file:`/usr/bin/python3` 실행 파일과 예를 들어 "
+":file:`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py`"
+" 와 같은 단위 테스트 파이썬 파일의 경로로 설정된 명령줄 인자를 사용해서 새 ``Run configuration`` 을 추가하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:730
+msgid "Now also change the ``Run Environment`` and add 3 new variables:"
+msgstr "이제 다음 새로운 변수 3개를 추가해서 ``Run Environment`` 도 변경하십시오:"
+
+#: ../../docs/developers_guide/unittesting.rst:733
+msgid "Variable"
+msgstr "변수"
+
+#: ../../docs/developers_guide/unittesting.rst:733
+msgid "Value"
+msgstr "값"
+
+#: ../../docs/developers_guide/unittesting.rst:735
+msgid "PYTHONPATH"
+msgstr "PYTHONPATH"
+
+#: ../../docs/developers_guide/unittesting.rst:735
+msgid ""
+"[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
+msgstr ""
+"[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
+
+#: ../../docs/developers_guide/unittesting.rst:737
+msgid "QGIS_PREFIX_PATH"
+msgstr "QGIS_PREFIX_PATH"
+
+#: ../../docs/developers_guide/unittesting.rst:737
+msgid "[build]/output"
+msgstr "[build]/output"
+
+#: ../../docs/developers_guide/unittesting.rst:739
+msgid "LD_LIBRARY_PATH"
+msgstr "LD_LIBRARY_PATH"
+
+#: ../../docs/developers_guide/unittesting.rst:739
+msgid "[build]/output/lib"
+msgstr "[build]/output/lib"
+
+#: ../../docs/developers_guide/unittesting.rst:742
+msgid ""
+"Replace ``[build]`` with your build directory and ``[source]`` with your "
+"source directory."
+msgstr "``[build]`` 는 여러분의 빌드 디렉터리로 대체하고 ``[source]`` 는 여러분의 소스 디렉터리로 대체하십시오."
+
+#: ../../docs/developers_guide/unittesting.rst:746
+msgid "Have fun"
+msgstr "재미있게 놀아보세요"
+
+#: ../../docs/developers_guide/unittesting.rst:748
+msgid ""
+"Well that concludes this section on writing unit tests in QGIS. We hope you "
+"will get into the habit of writing test to test new functionality and to "
+"check for regressions. Some aspects of the test system (in particular the "
+":file:`CMakeLists.txt` parts) are still being worked on so that the testing "
+"framework works in a truly platform independent way."
+msgstr ""
+"이것으로 QGIS에 단위 테스트를 작성하는 데에 대한 장을 마칩니다. 여러분이 새로운 기능을 테스트하기 위한 테스트를 작성하고 코드 "
+"회귀에 대해 확인해보는 습관을 들이기를 바랍니다. 테스트 시스템의 일부 측면은 (특히 :file:`CMakeLists.txt` 부분은) "
+"아직 개발 중이기 때문에 테스트 작업 프레임워크는 실제로 플랫폼 독립적인 방식으로 작동합니다."
