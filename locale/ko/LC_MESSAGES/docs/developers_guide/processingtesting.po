@@ -31,4 +31,301 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:5
+msgid "Processing Algorithms Testing"
+msgstr "공간 처리 알고리즘 테스트 작업"
+
+#: ../../docs/developers_guide/processingtesting.rst:11
+msgid "Algorithm tests"
+msgstr "알고리즘 테스트"
+
+#: ../../docs/developers_guide/processingtesting.rst:13
+msgid ""
+"The original version of these instructions is available at "
+":source:`python/plugins/processing/tests/README.md`"
+msgstr ""
+":source:`python/plugins/processing/tests/README.md` 에서 이 지침의 원본을 찾아볼 수 있습니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:16
+msgid ""
+"QGIS provides several algorithms under the Processing framework. You can "
+"extend this list with algorithms of your own and, like any new feature, "
+"adding tests is required."
+msgstr ""
+"QGIS는 공간 처리 프레임워크 아래 몇 개의 알고리즘을 제공합니다. 여러분 자신의 알고리즘으로 이 목록을 확장시킬 수 있는데, 다른 "
+"모든 새 기능들처럼, 반드시 테스트도 추가해야 합니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:20
+msgid ""
+"To test algorithms you can add entries into "
+":file:`testdata/qgis_algorithm_tests.yaml` or "
+":file:`testdata/gdal_algorithm_tests.yaml` as appropriate."
+msgstr ""
+"알고리즘을 테스트하려면 :file:`testdata/qgis_algorithm_tests.yaml` 또는 "
+":file:`testdata/gdal_algorithm_tests.yaml` 파일에 항목들을 알맞게 추가하면 됩니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:23
+msgid "This file is structured with `yaml syntax <https://yaml.org/>`_."
+msgstr "이 파일은 `YAML 문법 <https://yaml.org/>`_ 으로 구성되었습니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:25
+msgid ""
+"A basic test appears under the top level key ``tests`` and looks like this:"
+msgstr "기본 테스트는 최상위 키 ``tests`` 아래 나타나며 다음과 같이 보일 것입니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:42
+msgid "How To"
+msgstr "요령"
+
+#: ../../docs/developers_guide/processingtesting.rst:44
+msgid "To add a new test please follow these steps:"
+msgstr "새 테스트를 추가하려면 다음 단계들을 따르십시오:"
+
+#: ../../docs/developers_guide/processingtesting.rst:46
+msgid ""
+"Run the :ref:`algorithm <processing_algs>` you want to test in QGIS from the"
+" :ref:`processing toolbox <processing.toolbox>`. If the result is a vector "
+"layer prefer GML, with its XSD, as output for its support of mixed geometry "
+"types and good readability. Redirect output to "
+":file:`python/plugins/processing/tests/testdata/expected`. For input layers "
+"prefer to use what's already there in the folder :file:`testdata`. If you "
+"need extra data, put it into :file:`testdata/custom`."
+msgstr ""
+":ref:`공간 처리 툴박스 <processing.toolbox>` 에서 여러분이 QGIS에서 테스트하고 싶은 :ref:`알고리즘 "
+"<processing_algs>` 을 실행하십시오. 결과물이 벡터 레이어인 경우 XSD 스키마를 가진 GML 파일을 선택하는 편이 "
+"좋습니다. GML이 혼합 도형 유형을 지원하고 가독성이 좋기 때문입니다. 산출물을 "
+":file:`python/plugins/processing/tests/testdata/expected` 로 리다이렉트시키십시오. 입력 "
+"레이어의 경우, :file:`testdata` 폴더에 이미 있는 레이어를 사용하는 편이 좋습니다. 추가 데이터가 필요하다면 "
+":file:`testdata/custom` 폴더에 넣으십시오."
+
+#: ../../docs/developers_guide/processingtesting.rst:53
+msgid ""
+"When you have run the algorithm, go to :menuselection:`Processing --> "
+"History` and find the algorithm which you have just run."
+msgstr ""
+"알고리즘을 실행했다면, :menuselection:`Processing --> History` 메뉴로 가서 방금 실행한 알고리즘을 "
+"찾으십시오."
+
+#: ../../docs/developers_guide/processingtesting.rst:55
+msgid ""
+"Right click the algorithm and click :guilabel:`Create Test`. A new window "
+"will open with a text definition."
+msgstr ""
+"해당 알고리즘을 오른쪽 클릭한 다음 :guilabel:`Create Test` 를 선택하십시오. 텍스트 정의를 담은 새 창이 열릴 "
+"것입니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:57
+msgid ""
+"Open the file "
+":file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml`, copy "
+"the text definition there."
+msgstr ""
+":file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml` 파일을 열고"
+" 텍스트 정의를 복사해서 붙여넣으십시오."
+
+#: ../../docs/developers_guide/processingtesting.rst:60
+msgid ""
+"The first string from the command goes to the key ``algorithm``, the "
+"subsequent ones to ``params`` and the last one(s) to ``results``."
+msgstr ""
+"명령어의 첫 문자열은 ``algorithm`` 키로, 그 다음 문자열들은 차례대로 ``params`` 로, 마지막 문자열(들)은 "
+"``results`` 로 갑니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:63
+msgid "The above translates to"
+msgstr "즉 다음과 같이 번역됩니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:79
+msgid ""
+"It is also possible to create tests for Processing scripts. Scripts should "
+"be placed in the :file:`scripts` subdirectory in the test data directory "
+":file:`python/plugins/processing/tests/testdata/`. The script file name "
+"should match the script algorithm name."
+msgstr ""
+"공간 처리 스크립트에 대한 테스트도 생성할 수 있습니다. 스크립트들은 "
+":file:`python/plugins/processing/tests/testdata/` 테스트 데이터 디렉터리의 "
+":file:`scripts` 하위 디렉터리에 있어야 합니다. 스크립트 파일 이름은 스크립트의 알고리즘 이름과 일치해야 합니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:85
+msgid "Parameters and results"
+msgstr "파라미터와 결과물"
+
+#: ../../docs/developers_guide/processingtesting.rst:88
+msgid "Trivial type parameters"
+msgstr "단순(trivial) 유형 파라미터"
+
+#: ../../docs/developers_guide/processingtesting.rst:90
+msgid "Parameters and results are specified as lists or dictionaries:"
+msgstr "파라미터와 결과물은 목록 또는 디렉터리로 지정됩니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:99
+msgid "or"
+msgstr "또는"
+
+#: ../../docs/developers_guide/processingtesting.rst:109
+msgid "Layer type parameters"
+msgstr "레이어 유형 파라미터"
+
+#: ../../docs/developers_guide/processingtesting.rst:111
+msgid ""
+"You will often need to specify layers as parameters. To specify a layer you "
+"will need to specify:"
+msgstr "레이어를 파라미터로 지정해야 하는 경우가 종종 있습니다. 레이어를 지정하려면 다음을 지정해야 할 것입니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:114
+msgid "the type, ie ``vector`` or ``raster``"
+msgstr "유형, 예를 들면 ``vector`` 또는 ``raster``"
+
+#: ../../docs/developers_guide/processingtesting.rst:115
+msgid "a name, with a relative path like :file:`expected/polys_centroid.gml`"
+msgstr "이름, :file:`expected/polys_centroid.gml` 같은 상대 경로와 함께"
+
+#: ../../docs/developers_guide/processingtesting.rst:117
+msgid "This is what it looks like in action:"
+msgstr "실제로는 다음과 같이 보일 것입니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:131
+msgid "File type parameters"
+msgstr "파일 유형 파라미터"
+
+#: ../../docs/developers_guide/processingtesting.rst:133
+msgid ""
+"If you need an external file for the algorithm test, you need to specify the"
+" 'file' type and the (relative) path to the file in its 'name':"
+msgstr ""
+"알고리즘 테스트를 위한 외부 파일이 필요한 경우, 파일 'type'과 그 'name' 으로 파일을 가리키는 (상대) 경로를 지정해야 "
+"합니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:148
+msgid "Results"
+msgstr "결과물"
+
+#: ../../docs/developers_guide/processingtesting.rst:150
+msgid "Results are specified very similarly."
+msgstr "결과물도 매우 비슷하게 지정됩니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:153
+msgid "Basic vector files"
+msgstr "기본 벡터 파일"
+
+#: ../../docs/developers_guide/processingtesting.rst:155
+msgid "It couldn't be more trivial"
+msgstr "이보다 더 단순할 수는 없습니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:164
+msgid "Add the expected GML and XSD files in the folder."
+msgstr "폴더 안에 예상되는 GML 및 XSD 파일을 추가하십시오."
+
+#: ../../docs/developers_guide/processingtesting.rst:167
+msgid "Vector with tolerance"
+msgstr "허용 오차를 가진 벡터"
+
+#: ../../docs/developers_guide/processingtesting.rst:169
+msgid ""
+"Sometimes different platforms create slightly different results which are "
+"still acceptable. In this case (but only then) you may also use additional "
+"properties to define how a layer is compared."
+msgstr ""
+"서로 다른 플랫폼들이 서로 살짝 다른, 그래도 허용 가능한 정도의 결과물들을 생성하는 경우가 가끔 있습니다. 이런 경우 (이런 경우에만)"
+" 레이어를 어떻게 비교할지를 정의하는 추가적인 속성을 사용할 수도 있습니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:173
+msgid ""
+"To deal with a certain tolerance for output values you can specify a "
+"``compare`` property for an output. The compare property can contain sub-"
+"properties for ``fields``. This contains information about how precisely a "
+"certain field is compared (``precision``) or a field can even entirely be "
+"``skip``ed. There is a special field name ``__all__`` which will apply a "
+"certain tolerance to all fields. There is another property ``geometry`` "
+"which also accepts a ``precision`` which is applied to each vertex."
+msgstr ""
+"산출 값에 대한 특정 허용 오차를 처리하려면 산출물에 대한 ``compare`` 속성을 지정하면 됩니다. 이 비교 속성은 "
+"``fields`` 에 대한 하위 속성들을 담을 수 있습니다. ``precision`` 하위 속성은 특정 필드를 얼마나 정밀하게 비교할 "
+"것인지에 대한 정보를, ``skip`` 하위 속성은 어떤 필드를 완전히 무시하고 뛰어넘을지에 대한 정보를 담고 있습니다. "
+"``__all__`` 이라는 특수 필드는 모든 필드에 특정 허용 오차를 적용할 것입니다. 각 꼭짓점에 적용되는 ``precision`` "
+"을 허용하는 또다른 ``geometry`` 속성도 있습니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:196
+msgid "Raster files"
+msgstr "래스터 파일"
+
+#: ../../docs/developers_guide/processingtesting.rst:198
+msgid ""
+"Raster files are compared with a hash checksum. This is calculated when you "
+"create a test from the processing history."
+msgstr ""
+"래스터 파일들은 해시 체크섬(hash checksum)을 사용해서 비교합니다. 공간 처리 이력에서 테스트를 생성할 때 해시 체크섬을 "
+"계산합니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:208
+msgid "Files"
+msgstr "파일"
+
+#: ../../docs/developers_guide/processingtesting.rst:210
+msgid ""
+"You can compare the content of an output file to an expected result "
+"reference file"
+msgstr "산출 파일의 내용을 예상 결과 기준 파일과 비교할 수 있습니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:219
+msgid ""
+"Or you can use one or more regular expressions that will be `matched "
+"<https://docs.python.org/3/library/re.html#re.search>`_ against the file "
+"content"
+msgstr ""
+"또는 파일 내용에 대해 `일치시킬 <https://docs.python.org/3/library/re.html#re.search>`_ "
+"정규 표현식을 하나 이상 사용할 수도 있습니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:233
+msgid "Directories"
+msgstr "디렉터리"
+
+#: ../../docs/developers_guide/processingtesting.rst:235
+msgid ""
+"You can compare the content of an output directory with an expected result "
+"reference directory"
+msgstr "산출 디렉터리의 내용을 예상 결과 기준 디렉터리와 비교할 수 있습니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:245
+msgid "Algorithm Context"
+msgstr "알고리즘 맥락"
+
+#: ../../docs/developers_guide/processingtesting.rst:247
+msgid ""
+"There are a few more definitions that can modify the context of the "
+"algorithm - these can be specified at the top level of test:"
+msgstr "알고리즘의 맥락을 수정할 수 있는 정의들이 몇 개 더 있습니다 --- 테스트의 최상위 수준에서 이들을 지정할 수 있습니다:"
+
+#: ../../docs/developers_guide/processingtesting.rst:250
+msgid ""
+"``project`` - will load a specified QGIS project file before running the "
+"algorithm. If not specified, the algorithm will run with an empty project"
+msgstr ""
+"``project``: 알고리즘을 실행하기 전에 지정한 QGIS 프로젝트 파일을 불러올 것입니다. 지정하지 않는 경우 비어 있는 "
+"프로젝트를 사용해서 알고리즘을 실행할 것입니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:252
+msgid ""
+"``project_crs`` - overrides the default project CRS - e.g. ``EPSG:27700``"
+msgstr "``project_crs``: 기본 프로젝트 좌표계를 무시하고 예를 들면 ``EPSG:27700`` 를 지정할 수 있습니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:253
+msgid ""
+"``ellipsoid`` - overrides the default project ellipsoid used for "
+"measurements, e.g. ``GRS80``"
+msgstr ""
+"``ellipsoid``: 측정에 사용되는 기본 프로젝트 타원체를 무시하고 예를 들면 ``GRS80`` 을 지정할 수 있습니다."
+
+#: ../../docs/developers_guide/processingtesting.rst:258
+msgid "Running tests locally"
+msgstr "로컬에서 테스트 실행하기"
+
+#: ../../docs/developers_guide/processingtesting.rst:264
+msgid ""
+"or one of the following values listed in the :source:`CMakelists.txt "
+"<python/plugins/processing/tests/CMakeLists.txt>`"
+msgstr ""
+"또는 :source:`CMakelists.txt <python/plugins/processing/tests/CMakeLists.txt>`"
+" 의 목록에 나오는 값들 가운데 하나를 사용하십시오."
