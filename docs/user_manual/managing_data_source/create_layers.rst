@@ -506,6 +506,13 @@ single layer to another format, including :file:`*.DXF`, QGIS provides another
 tool to export multiple layers as a single DXF layer. It's accessible in the
 :menuselection:`Project --> Import/Export --> Export Project to DXF...` menu.
 
+.. _figure_create_dxf:
+
+.. figure:: img/export_dxf.png
+   :align: center
+
+   Exporting a project to DXF dialog
+
 In the :guilabel:`DXF Export` dialog:
 
 #. Provide the destination file.
@@ -515,22 +522,25 @@ In the :guilabel:`DXF Export` dialog:
 #. Select the :guilabel:`CRS` to apply: the selected layers will be reprojected
    to the given CRS.
 #. Select the layers to include in the DXF files either by checking them in the
-   table widget or automatically picking them from an existing :ref:`map theme
-   <map_themes>`.
+   table widget or automatically picking them from an existing :ref:`map theme <map_themes>`.
    The :guilabel:`Select All` and :guilabel:`Deselect All` buttons
    can help to quickly set the data to export.
 
    For each layer, you can:
 
-   * Override the output layer name without altering the original project
-     layer. For this, click on a layer name on the dialog's layers panel and
-     set the output layer name.
+   * Override the output layer name without altering the original project layer.
+     For this, click on the :guilabel:`Layer` name in the dialog and
+     write the output name to use.
 
-   * Choose whether to export all the features in a single DXF layer or rely on
-     a field whose values are used to split the features into layers in the DXF
-     output. In the latter case, each layer will take its name from the
-     corresponding field value.
-  
+   * :guilabel:`Output layer attribute`: Choose whether to export all the features
+     in a single DXF layer or rely on a field whose values are used
+     to split the features into layers in the DXF output.
+     In the latter case, each layer will take its name from the corresponding field value.
+   * :guilabel:`Allow data defined symbol blocks`:
+   * :guilabel:`Maximum number of symbol blocks`: creates symbol blocks up to the specified limit,
+     starting with the ones containing the highest number of references.
+     The other symbols are written as they are. ``-1`` means no limitation.
+
 Optionally, you can also choose to:
 
 * |unchecked| :guilabel:`Use the layer title as name if set` instead of the
@@ -539,28 +549,26 @@ Optionally, you can also choose to:
 * |unchecked| :guilabel:`Export features intersecting the current map extent`;
 * |unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;
 * |checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements;
-* |unchecked| :guilabel:`Use only selected features`.
-
-.. _figure_create_dxf:
-
-.. figure:: img/export_dxf.png
-   :align: center
-
-   Exporting a project to DXF dialog
-
-Current settings defined in the :guilabel:`DXF Export` dialog may be stored in
-an XML file for reusing them in other sessions. For this, the
-:guilabel:`Settings` combo box has two options: :guilabel:`Load Settings from
-File...` and :guilabel:`Save Settings to File...`.
+* |unchecked| :guilabel:`Use only selected features`;
+* |unchecked| :guilabel:`Export lines with zero width`: all the lines are exported
+  with minimal width ``0`` (hairline) if enabled.
+  This helps keep the lines minimal in the file regardless of the zoom level,
+  and can be handy for doing further CAD-editing with the exported dxf,
+  especially if there are many features next to each other on the map.
 
 .. note::
 
    The precedence for defining the output layer name is as follows:
 
-   1. Output layer attribute (if any).
-   2. Overridden name (if any).
-   3. Layer title (if the corresponding option is checked and if a title has been set in layer properties).
-   4. Layer name.
+   1. The field value from :guilabel:`Output layer attribute`
+   2. The overridden name in :guilabel:`Layer` column
+   3. The :guilabel:`Use the layer title as name if set` option
+   4. The layer name
+
+Current settings defined in the :guilabel:`DXF Export` dialog may be stored in
+an XML file for reusing them in other sessions. For this, the
+:guilabel:`Settings` combo box has two options: :guilabel:`Load Settings from
+File...` and :guilabel:`Save Settings to File...`.
 
 
 .. _paste_into_layer:
