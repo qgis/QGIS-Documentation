@@ -59,8 +59,14 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinxext.rediraffe',
     'sphinx_togglebutton',
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+    'myst_parser'
 ]
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown'
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -71,7 +77,10 @@ templates_path = ['_templates']
 exclude_patterns = [
     'venv',
     '.github',
-    'docs/user_manual/expressions/expression_help/*'
+    'docs/user_manual/expressions/expression_help/*',
+    'README.md',
+    'release_process.md',
+    'qgis-projects/user_manual/readme.md'
 ]
 
 # -- Internationalisation ----------------------------------------------------
