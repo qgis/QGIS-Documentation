@@ -70,6 +70,7 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = [
     'venv',
+    '.github',
     'docs/user_manual/expressions/expression_help/*'
 ]
 
