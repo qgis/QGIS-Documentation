@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoyuki arai <tarai.3367@gmail.com>, 2024
 # Harrissou Sant-anna, 2024
 # tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoyuki arai <tarai.3367@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -396,7 +396,7 @@ msgid ""
 " to any of the usual triggers mentioned earlier. Examples of when you might "
 "want to suspend rendering include:"
 msgstr ""
-"レンダリングを中断するには、ステータスバーの右下角にある |checkbox| :guilabel:`レンダ` チェックボックスをクリックします。 "
+"レンダリングを中断するには、ステータスバーの右下隅にある |checkbox| :guilabel:`レンダ` チェックボックスをクリックします。 "
 "|checkbox| :guilabel:`レンダ` "
 "がチェックされていない場合、QGISは上で述べた通常のトリガーでは反応せず、キャンバスの再描画を行いません。レンダリングを中断したい場合の例としては、以下のようなものがあります："
 
@@ -818,6 +818,10 @@ msgid ""
 "selector <extent_selector>` widget"
 msgstr ":ref:`範囲セレクタ <extent_selector>` ウィジェットを使用して、保存したい領域を選択します"
 
+#: ../../docs/user_manual/map_views/map_view.rst:337
+msgid "Change the map :guilabel:`Rotation`"
+msgstr "マップの :guilabel:`回転` を変更します"
+
 #: ../../docs/user_manual/map_views/map_view.rst:338
 msgid "Indicate the :guilabel:`CRS` to use for the extent"
 msgstr "領域に使用する :guilabel:`CRS` を指定します"
@@ -1017,6 +1021,16 @@ msgid ""
 "You can also drag and drop the bookmark between folders (user and project) "
 "and subfolders (groups)."
 msgstr "フォルダ間（ユーザー、プロジェクト）やサブフォルダ（グループ）間でブックマークをドラッグ＆ドロップすることもできる"
+
+#: ../../docs/user_manual/map_views/map_view.rst:408
+msgid ""
+"You can manage bookmark actions by right-click on the desired bookmark in "
+"the :guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by"
+" typing the bookmark name in the :ref:`locator <label_statusbar>`."
+msgstr ""
+"ブックマークのアクションの管理は、 :guilabel:`空間ブックマークマネージャ` "
+"内の対象とするブックマークを右クリックすることでできます。ブックマークへのズームは、 :ref:`ロケータ <label_statusbar>` "
+"にブックマーク名を入力することでもできます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:416
 msgid "Decorating the map"
@@ -1440,6 +1454,19 @@ msgstr ""
 msgid "Scale Bar"
 msgstr "スケールバー"
 
+#: ../../docs/user_manual/map_views/map_view.rst:627
+msgid ""
+"|scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas. "
+"You can control the style and placement, as well as the labelling of the "
+"bar. The scale bar respects the active :ref:`project's distance unit "
+"<measurements_ellipsoid>` as defined in :menuselection:`Project properties "
+"--> General --> Units for distance measurement`."
+msgstr ""
+"|scaleBar| :guilabel:`スケールバー` "
+"は、マップキャンバスにシンプルなスケールバーを追加します。スタイルや配置、バーのラベルを制御することができます。スケールバーは、 "
+":menuselection:`プロジェクトのプロパティ --> 一般情報 --> 距離計測の単位` で定義される、現在有効な "
+":ref:`プロジェクトの距離単位 <measurements_ellipsoid>` を参照します。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1368
 msgid "scaleBar"
 msgstr "scaleBar"
@@ -1491,6 +1518,10 @@ msgid ""
 "Select the font for the scale bar from the :guilabel:`Font of bar` "
 "|selectString| combo box"
 msgstr ":guilabel:`バーのフォント` |selectString| コンボボックスからスケールバーのフォントを選択します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:651
+msgid "Set the :guilabel:`Size of bar` in the active unit"
+msgstr ":guilabel:`バーのサイズ` |selectNumber| を現在有効な単位で設定します"
 
 #: ../../docs/user_manual/map_views/map_view.rst:652
 msgid ""
@@ -1741,9 +1772,18 @@ msgstr "actionText"
 msgid "Create an annotation as a text label"
 msgstr "テキストラベルの注記を作成します"
 
+#: ../../docs/user_manual/map_views/map_view.rst:766
+#: ../../docs/user_manual/map_views/map_view.rst:858
+msgid "|textAlongLine| :sup:`Create Text Annotation along Line`"
+msgstr "|textAlongLine| :sup:`線に沿った注記を作成`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1399
 msgid "textAlongLine"
 msgstr "textAlongLine"
+
+#: ../../docs/user_manual/map_views/map_view.rst:766
+msgid "Create an annotation as a curved text along a linestring"
+msgstr "ラインストリングに沿った、曲がったテキストの注記を作成します"
 
 #: ../../docs/user_manual/map_views/map_view.rst:769
 msgid "|textAnnotation| :sup:`Text Annotation`"
@@ -1857,6 +1897,16 @@ msgstr "レイヤプロパティ"
 msgid ""
 "The properties dialog of an annotation layer provides the following tabs:"
 msgstr "注記レイヤのプロパティダイアログには、以下のタブがあります:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:811
+msgid ""
+":guilabel:`Information`: a read-only dialog representing an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. This may include the layer extent, count of items per annotation type"
+" and total count, CRS details, ..."
+msgstr ""
+":guilabel:`情報`: "
+"読み取り専用のダイアログで、現在のレイヤの要約された情報やメタデータをさっと掴むことができる興味深い場所です。提供される情報には、レイヤの領域や注記の種類ごとのアイテム数と合計数、CRSの詳細などがあります。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:815
 msgid ""
@@ -1978,6 +2028,17 @@ msgstr ""
 "通常のレイヤとは異なり、注記レイヤは地物を選択する前にレイヤをアクティブにする必要はありません。単に |select| :sup:`注記を修正` "
 "ツールを使用するだけで、任意の地物注記の操作ができます:"
 
+#: ../../docs/user_manual/map_views/map_view.rst:871
+msgid ""
+"**Selection**: left-click on the annotation. By default, annotations are "
+"rendered in the order of creation, meaning that recent annotations will be "
+"placed on top of older. You may need to play with the Z-index property of "
+"features in order to select ones they would sit above."
+msgstr ""
+"**選択**: "
+"注記を左クリック。デフォルトでは、注記は作成した順番でレンダリングされます。つまり、新しい注記は古い注記の上に配置されます。注記を選択するためには、上にある注記地物の"
+" Z-index プロパティを調整する必要があるかもしれません。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:876
 msgid ""
 "**Moving**: Left click on a selected annotation item to start moving it. A "
@@ -2026,6 +2087,70 @@ msgid ""
 msgstr ""
 "選択した注記は、 :guilabel:`レイヤスタイル` パネルに :guilabel:`シンボロジ` "
 "プロパティを表示します。ここでは、次の操作が可能です:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:898
+msgid "Modify the appearance using full capabilities of:"
+msgstr "見た目の修正を、以下の全機能を使用して行えます："
+
+#: ../../docs/user_manual/map_views/map_view.rst:900
+msgid ""
+"the :ref:`symbol properties <symbol-selector>` for polygon, polyline and "
+"marker annotations"
+msgstr ":ref:`シンボルプロパティ <symbol-selector>` ：ポリゴン、ポリライン、マーカー注記に使用できます"
+
+#: ../../docs/user_manual/map_views/map_view.rst:901
+msgid ""
+"the :ref:`text format properties <text_format>` for text-based annotations. "
+"A text area allows you to construct the string to display using QGIS "
+"expression functions. It is also possible to set the :guilabel:`Alignment` "
+"for text annotation at point (left, center or right of the text point)."
+msgstr ""
+":ref:`テキスト書式プロパティ <text_format>` "
+"：テキストベースの注記に使用できます。テキスト領域では、表示する文字列をQGIS式関数を使用して作成できます。また、テキスト注記の点の "
+":guilabel:`整列` を設定できます（テキスト点の左、中央または右）。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid ""
+"For text annotation at point, also configure whether it should "
+":guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`. In both "
+"cases, a custom :guilabel:`Angle` can be set for the feature orientation."
+msgstr ""
+"点上のテキスト注記では、:guilabel:`地図の回転を無視` するか、 :guilabel:`地図と回転` "
+"するかも設定できます。どちらの場合でも、注記地物の向きに関するカスタムの :guilabel:`回転` を設定できます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:908
+msgid ""
+"For text annotation along a line, configure an :guilabel:`Offset from line` "
+"in the unit of your choice"
+msgstr "線に沿った注記では、任意の単位で :guilabel:`線からのオフセット` を設定できます"
+
+#: ../../docs/user_manual/map_views/map_view.rst:910
+msgid ""
+"Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale"
+" at which symbol or text sizes which uses paper-based units (such as "
+"millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale. For instance, a line "
+"feature wide of 2mm at 1:2000 :guilabel:`Reference scale` will be rendered "
+"using 4mm when the map is viewed at 1:1000."
+msgstr ""
+"|unchecked| :guilabel:`参照スケール` "
+"の設定：これは、シンボルやテキストのサイズに紙ベースの単位（ミリメートルやポイント）を使用するものに関連づける縮尺です。地図が異なる縮尺で表示されるときには、縮尺に応じてサイズが拡大縮小されます。例えば、"
+" :guilabel:`参照スケール` 1:2000 で2mm 幅のライン注記地物は、縮尺 1:1000 では4mm 幅でレンダリングされます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:915
+msgid ""
+"Set a :guilabel:`Z-index`: a feature with a higher index is placed on top of"
+" features with lower index. A convenient setting for both feature display "
+"and selection."
+msgstr ""
+":guilabel:`Z-index` の設定: 大きなindex 値の注記地物は、小さいindex "
+"値の地物よりも上に配置されます。注記地物の表示の調整や選択の際に便利な設定です。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:918
+msgid ""
+"Modify some of the :ref:`Layer rendering <annotationslayer_rendering>` "
+"settings"
+msgstr ":ref:`レイヤレンダリング <annotationslayer_rendering>` 設定の修正"
 
 #: ../../docs/user_manual/map_views/map_view.rst:925
 msgid ""
@@ -2126,13 +2251,65 @@ msgid ""
 ":guilabel:`Contents margins`: sets interior margins of the annotation frame."
 msgstr ":guilabel:`コンテンツのマージン`: 注記フレームの内側のマージンを設定します。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:969
+msgid ""
+"|checkbox| :guilabel:`Live update` allows you to live preview your changes."
+msgstr "|checkbox| :guilabel:`ライブ更新` ：変更をライブプレビューできます。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:976
 msgid "A ballon annotation text dialog"
 msgstr "バルーン注記のテキストダイアログ"
 
+#: ../../docs/user_manual/map_views/map_view.rst:978
+msgid "When a balloon annotation tool is active, you can also:"
+msgstr "バルーン注記ツールがアクティブな時には、以下の操作ができます："
+
+#: ../../docs/user_manual/map_views/map_view.rst:980
+msgid "Select an annotation"
+msgstr "注記の選択"
+
+#: ../../docs/user_manual/map_views/map_view.rst:981
+msgid "Resize an annotation"
+msgstr "注記のサイズ変更"
+
+#: ../../docs/user_manual/map_views/map_view.rst:982
+msgid ""
+"Move an annotation by map position (by dragging the map marker) or by moving"
+" only the balloon."
+msgstr "（マップマーカーのドラッグによる）注記のマップ位置の移動や、バルーンのみの移動"
+
+#: ../../docs/user_manual/map_views/map_view.rst:983
+msgid ""
+"Delete an annotation: select it and either press the :kbd:`Del` or "
+":kbd:`Backspace` button, or double-click it and press the :guilabel:`Delete`"
+" button in the properties dialog."
+msgstr ""
+"注記の削除： 注記を選択して :kbd:`Del` または :kbd:`Backspace` "
+"キーを押すか、またはその注記をダブルクリックしてプロパティダイアログの :guilabel:`削除` ボタンを押します。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:985
+msgid "Right-click and in the contextual menu:"
+msgstr "右クリックのコンテキストメニューには、以下のものがあります："
+
+#: ../../docs/user_manual/map_views/map_view.rst:987
+msgid ""
+"|editCopy| :guilabel:`Copy coordinate` of the annotation's map marker in "
+"various CRS"
+msgstr "|editCopy| :guilabel:`座標をコピー` ：さまざまなCRSで注記のマップマーカーの座標をコピーします"
+
+#: ../../docs/user_manual/map_views/map_view.rst:988
+msgid ""
+"|toggleEditing| :guilabel:`Edit` properties of the annotation. Same as "
+"double-clicking the annotation."
+msgstr "|toggleEditing| :guilabel:`編集` ：注記のプロパティを編集します。注記をダブルクリックした場合と同じです。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1405
 msgid "toggleEditing"
 msgstr "toggleEditing"
+
+#: ../../docs/user_manual/map_views/map_view.rst:989
+msgid "|deleteSelected| :guilabel:`Delete` the annotation"
+msgstr "|deleteSelected| :guilabel:`削除` ：注記を削除します"
 
 #: ../../docs/user_manual/map_views/map_view.rst:997
 msgid "Measuring"
@@ -2178,7 +2355,7 @@ msgid ""
 "unprojected data. The first three measuring tools behave equally to global "
 "project settings:"
 msgstr ""
-"計測は投影された座標系（例えばUTM）でも、非投影データでも機能します。最初の3つの計測ツールは、グローバルなプロジェクト設定に対しても同様に動作します："
+"計測は投影座標系（例えばUTM）でも、非投影データでも機能します。最初の3つの計測ツールは、グローバルなプロジェクト設定に対しても同様に動作します："
 
 #: ../../docs/user_manual/map_views/map_view.rst:1013
 msgid ""
@@ -2288,6 +2465,35 @@ msgstr ""
 "すべての計測モジュールは、デジタイジングモジュールのスナップ設定（ :ref:`snapping_tolerance` "
 "セクションを参照）を使用します。正確にライン地物に沿って、あるいはポリゴン地物の周りを測定したいのであれば、最初にそのレイヤのスナップ許容誤差を設定します。すると、測定ツールを使用している場合の（許容誤差の設定内の）各マウスクリックはそのレイヤにスナップします。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:1065
+msgid ""
+"The |measure| :sup:`Measure Line` measures distances between given points. "
+"The tool then allows you to click points on the map. Each segment length, as"
+" well as the total, shows up in the measure window. In the measure window, "
+"you will see coordinates for all your points and distances. Keep in mind "
+"that the first row will contain only coordinates, as it represents your "
+"starting point. Now it is possible to copy all your line measurements at "
+"once to the clipboard using the :guilabel:`Copy` button. Clicking the "
+":guilabel:`Configuration` button you will access to :guilabel:`Measure Tool "
+"Copy Settings` where you can set up :ref:`copy options "
+"<measure_copy_settings>`. To stop measuring, click the right mouse button."
+msgstr ""
+"|measure| :sup:`線の長さを測る` "
+"は、与えられた点間の距離を測ります。このツールは、マップ上の点を複数クリックできます。各セグメントの長さとその合計が計測ウィンドウに表示されます。計測ウィンドウでは、すべての点の座標と距離が確認できます。最初の行は出発点であるため、座標しか表示されないことに留意してください。"
+" :guilabel:`コピー` ボタンを使用すると、すべての線の計測結果をクリップボードに一度にコピーできます。 :guilabel:`設定` "
+"ボタンをクリックすると、 :ref:`コピーオプション <measure_copy_settings>` を設定するための "
+":guilabel:`測定ツールのコピー設定` へアクセスできます。計測を停止するには、マウスの右ボタンをクリックします。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1076
+msgid ""
+"Note that you can use the drop-down list near the total to change the "
+":ref:`measurement units <measurements_ellipsoid>` interactively while "
+"working with the measure tool. This unit is retained for the widget until a "
+"new project is created or another project is opened."
+msgstr ""
+"合計値の付近にあるドロップダウンリストを使用して、計測ツールを使用しながら :ref:`計測の単位 <measurements_ellipsoid>` "
+"をインタラクティブに変更できます。新しいプロジェクトを作成するか、別のプロジェクトを開くまでは、この単位が計測ツールウィジェット用に保持されます。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1082
 msgid ""
 "The :guilabel:`Info` section in the dialog explains how calculations are "
@@ -2297,6 +2503,17 @@ msgstr "ダイアログの :guilabel:`情報` セクションでは、利用可�
 #: ../../docs/user_manual/map_views/map_view.rst:1091
 msgid "Measure Distance"
 msgstr "距離の計測"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1093
+msgid ""
+"|measureArea| :sup:`Measure Area`: Areas can also be measured. In the "
+"measure window, the accumulated area size appears. Right-click to stop "
+"drawing. The Info section is also available as well as the ability to switch"
+" between different :ref:`area units <measurements_ellipsoid>`."
+msgstr ""
+"|measureArea| :sup:`面積を測る`: "
+"面積も計測することができます。計測ウィンドウには、累積の面積合計が表示されます。右クリックで描画を停止します。情報セクションがあり、さまざまな "
+":ref:`面積単位 <measurements_ellipsoid>` 間の切り替えができます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1103
 msgid "Measure Area"
