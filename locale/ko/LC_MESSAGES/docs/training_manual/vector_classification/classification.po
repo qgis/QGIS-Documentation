@@ -32,7 +32,22 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:2
+msgid "Lesson: Classification"
+msgstr "수업: 범주화"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:4
+msgid ""
+"Labels are a good way to communicate information such as the names of "
+"individual places, but they can't be used for everything. For example, let "
+"us say that someone wants to know what each ``landuse`` area is used for. "
+"Using labels, you would get this:"
+msgstr ""
+"라벨이 개별 장소들의 이름 같은 정보를 소통하기에 좋은 방법이긴 하지만, 모든 경우에 라벨을 사용할 수는 없습니다. 예를 들면 어떤 "
+"사람이 각 ``landuse`` 구역이 어떻게 사용되고 있는지 알고 싶어한다고 해봅시다. 라벨을 사용한다면 다음과 같은 맵을 보게 될 "
+"것입니다:"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:13
 msgid ""
@@ -44,7 +59,20 @@ msgstr "라벨을 읽기 어려울 뿐만 아니라 맵 상에 수많은 토지�
 msgid ""
 "**The goal for this lesson:** To learn how to classify vector data "
 "effectively."
-msgstr "**이 강의의 목표:** 벡터 데이터를 효율적으로 범주화하는 방법 배우기."
+msgstr "**이 수업의 목표:** 벡터 데이터를 효율적으로 범주화하는 방법 배우기."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:20
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Classifying Nominal Data"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 명목형(nominal) 데이터 범주화시키기"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:22
+#: ../../docs/training_manual/vector_classification/classification.rst:297
+msgid "Open the :guilabel:`Layer Properties` dialog for the ``landuse`` layer"
+msgstr "``landuse`` 레이어의 :guilabel:`Layer Properties` 창을 여십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:24
+msgid "Go to the :guilabel:`Symbology` tab"
+msgstr ":guilabel:`Symbology` 탭으로 가십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:25
 msgid ""
@@ -52,22 +80,69 @@ msgid ""
 ":guilabel:`Categorized`:"
 msgstr ""
 ":guilabel:`Single Symbol` 이라는 드롭다운 메뉴를 클릭해서, :guilabel:`Categorized` 로 "
-"변경하십시오."
+"변경하십시오:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:31
+msgid ""
+"In the new panel, change the :guilabel:`Value` to ``landuse`` and the "
+":guilabel:`Color ramp` to :guilabel:`Random colors`"
+msgstr ""
+"새 패널에서 :guilabel:`Value` 를 ``landuse`` 로, :guilabel:`Color ramp` 를 "
+":guilabel:`Random colors` 로 변경하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:33
+msgid "Click the button labeled :guilabel:`Classify`"
+msgstr ":guilabel:`Classify` 버튼을 클릭하십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:38
 #: ../../docs/training_manual/vector_classification/classification.rst:172
 #: ../../docs/training_manual/vector_classification/classification.rst:202
 #: ../../docs/training_manual/vector_classification/classification.rst:245
 msgid "Click :guilabel:`OK`"
-msgstr ":guilabel:`OK` 를 클릭합니다."
+msgstr ":guilabel:`OK` 를 클릭하십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:40
 msgid "You'll see something like this:"
-msgstr "결과는 다음과 같습니다."
+msgstr "결과는 다음과 같을 것입니다:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:45
+msgid ""
+"Click the arrow (or plus sign) next to ``landuse`` in the :guilabel:`Layers`"
+" panel, you'll see the categories explained:"
+msgstr ""
+":guilabel:`Layers` 패널에서 ``landuse`` 옆에 있는 화살표(또는 더하기표)를 클릭하면, 카테고리들에 대한 설명을 "
+"볼 수 있습니다:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:51
+msgid ""
+"Now our landuse polygons are colored and are classified so that areas with "
+"the same land use are the same color."
+msgstr "이제 토지이용구역 폴리곤들을 분류해서 색상을 적용했으므로, 토지이용이 동일한 구역들이 동일한 색상이 되었습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:54
+msgid ""
+"If you wish to, you can change the symbol of each landuse area by double-"
+"clicking the relevant color block in the :guilabel:`Layers` panel or in the "
+":guilabel:`Layer Properties` dialog:"
+msgstr ""
+"여러분이 원한다면 :guilabel:`Layers` 패널 또는 :guilabel:`Layer Properties` 대화창에서 관련 색상 "
+"블록을 더블 클릭해서 각 토지이용에 대한 심볼을 변경할 수 있습니다:"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:62
 msgid "Notice that there is one category that's empty:"
 msgstr "비어 있는 카테고리가 하나 있는 게 보이십니까?"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:67
+msgid ""
+"This empty category is used to color any objects which do not have a landuse"
+" value defined or which have a *NULL* value. It can be useful to keep this "
+"empty category so that areas with a *NULL* value are still represented on "
+"the map. You may like to change the color to more obviously represent a "
+"blank or *NULL* value."
+msgstr ""
+"이 빈 카테고리는 토지이용 값이 없는, 또는 *NULL* 값을 가진 객체에 색상을 적용하기 위해 쓰입니다. 맵 상에 *NULL* 값을 "
+"가진 구역도 표현되도록 이 빈 카테고리를 유지하는 편이 유용할 수 있습니다. 비어 있는 값 또는 *NULL* 값을 표현하는 데 더 "
+"어울리는 색상으로 변경하고 싶을 수도 있겠네요."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:74
 msgid ""
@@ -75,62 +150,410 @@ msgid ""
 "changes!"
 msgstr "여러분이 힘들게 바꾼 변경 사항을 잃지 않도록 지금 맵을 저장하세요!"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:78
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: More Classification"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 다양한 범주화들"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:80
+msgid ""
+"Use the knowledge you gained above to classify the ``buildings`` layer. Set "
+"the categorisation against the ``building`` field and use the "
+":guilabel:`Spectral` color ramp."
+msgstr ""
+"앞에서 배운 지식을 이용해서 ``buildings`` 레이어를 범주화시켜보십시오. ``building`` 필드에 대해 카테고리들을 "
+"설정하고 :guilabel:`Spectral` 색상표를 사용하십시오."
+
 #: ../../docs/training_manual/vector_classification/classification.rst:84
 msgid "Remember to zoom into an urban area to see the results."
 msgstr "결과를 보려면 도심 지역으로 줌인해야 합니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:87
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Ratio Classification"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 비율 범주화"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:89
 msgid ""
 "There are four types of classification: *nominal*, *ordinal*, *interval* and"
 " *ratio*."
-msgstr "범주화에는 *명칭*, *순서*, *간격*, 그리고 *비율*, 네 가지 유형이 있습니다."
+msgstr ""
+"범주화에는 *명목(nominal)*, *순서(ordinal)*, *간격(interval)*, 그리고 *비율(ratio)*, 네 가지 "
+"유형이 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:92
+msgid ""
+"In **nominal** classification, the categories that objects are classified "
+"into are name-based; they have no order. For example: town names, district "
+"codes, etc. Symbols that are used for nominal data should not imply any "
+"order or magnitude."
+msgstr ""
+"**명목형** 범주화의 경우, 객체들이 범주화되는 카테고리들이 이름 기반으로, 순서가 정해지지 않습니다. 예를 들면 도시 이름, 구역 "
+"번호 등등의 카테고리들이죠. 명목형 데이터에 쓰이는 심볼들은 어떤 순서나 규모도 암시해서는 안 됩니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:98
+msgid "For points, we can use symbols of different shape."
+msgstr "포인트의 경우, 서로 다른 형태의 심볼들을 사용할 수 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:99
+msgid ""
+"For polygons, we can use different types of hatching or different colours "
+"(avoid mixing light and dark colours)."
+msgstr ""
+"폴리곤의 경우, 서로 다른 해칭 유형들 또는 서로 다른 색상들을 사용할 수 있습니다. (밝은 색과 어두운 색을 섞어 쓰지는 마십시오.)"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:101
+msgid ""
+"For lines, we can use different dash patterns, different colours (avoid "
+"mixing light and dark colours) and different symbols along the lines."
+msgstr ""
+"라인의 경우, 라인을 따라가는 서로 다른 대시 패턴, 서로 다른 색상들(밝은 색과 어두운 색을 섞어 쓰지는 마십시오), 그리고 서로 다른"
+" 심볼들을 사용할 수 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:105
+msgid ""
+"In **ordinal** classification, the categories are arranged in a certain "
+"order. For example, world cities are given a rank depending on their "
+"importance for world trade, travel, culture, etc. Symbols that are used for "
+"ordinal data should imply order, but not magnitude."
+msgstr ""
+"**순서형** 범주화의 경우, 카테고리들이 특정 순서로 배열됩니다. 예를 들어 세계의 도시들을 세계 무역, 여행, 문화 등등의 중요도에 "
+"따라 순위를 매기는 것입니다. 순서형 데이터에 쓰이는 심볼들은 순서를 암시해야 하지만, 규모를 암시해서는 안 됩니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:112
+msgid "For points, we can use symbols with light to dark colours."
+msgstr "포인트의 경우, 밝은 색에서 어두운 색 순서의 심볼들을 사용할 수 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:113
+msgid "For polygons, we can use graduated colours (light to dark)."
+msgstr "폴리곤의 경우, (밝은 색에서 어두운 색 순서의) 등급(graduated) 색상을 사용할 수 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:114
+msgid "For lines, we can use graduated colours (light to dark)."
+msgstr "라인의 경우, (밝은 색에서 어두운 색 순서의) 등급(graduated) 색상을 사용할 수 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:116
+msgid ""
+"In **interval** classification, the numbers are on a scale with positive, "
+"negative and zero values. For example: height above/below sea level, "
+"temperature in degrees Celsius. Symbols that are used for interval data "
+"should imply order and magnitude."
+msgstr ""
+"**간격형** 범주화의 경우, 숫자는 양수, 음수 및 0 값들의 척도로 표시됩니다. 예를 들면 해수면 위/아래 높이, 섭씨 도 단위 온도"
+" 등이 있습니다. 간격형 데이터에 쓰이는 심볼들은 순서와 규모를 암시해야 합니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:123
+#: ../../docs/training_manual/vector_classification/classification.rst:136
+msgid "For points, we can use symbols with varying size (small to big)."
+msgstr "포인트의 경우, (작은 것에서 큰 것 순서의) 다양한 크기의 심볼들을 사용할 수 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:124
+#: ../../docs/training_manual/vector_classification/classification.rst:137
+msgid ""
+"For polygons, we can use graduated colours (light to dark) or add diagrams "
+"of varying size."
+msgstr "폴리곤의 경우, (밝은 색에서 어두운 색 순서의) 등급 색상을 사용하거나 다양한 크기의 다이어그램들을 추가할 수 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:126
+#: ../../docs/training_manual/vector_classification/classification.rst:139
+msgid "For lines, we can use thickness (thin to thick)."
+msgstr "라인의 경우, (얇은 것에서 굵은 것 순서의) 굵기를 사용할 수 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:128
+msgid ""
+"In **ratio** classification, the numbers are on a scale with only positive "
+"and zero values. For example: temperature above absolute zero (0 degrees "
+"Kelvin), distance from a point, the average amount of traffic on a given "
+"street per month, etc. Symbols that are used for ratio data should imply "
+"order and magnitude."
+msgstr ""
+"**비율형** 범주화의 경우, 양수와 0 값들만의 척도로 표시됩니다. 예를 들면 절대 영도(0 캘빈 온도) 위의 온도, 어떤 "
+"포인트로부터의 거리, 지정한 도로의 월 평균 교통량 등이 있습니다. 비율형 데이터에 쓰이는 심볼들은 순서와 규모를 암시해야 합니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:141
+msgid ""
+"In the example above, we used nominal classification to color each record in"
+" the ``landuse`` layer based on its ``landuse`` attribute. Now we will use "
+"ratio classification to classify the records by area."
+msgstr ""
+"우리는 앞의 예시에서 ``landuse`` 레이어의 각 레코드에 레이어의 ``landuse`` 속성을 기반으로 색상을 할당하는 명목형 "
+"범주화를 사용했습니다. 이제 면적으로 레코드들을 범주화시키는 비율 범주화를 사용할 것입니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:145
+msgid ""
+"We are going to reclassify the layer, so existing classes will be lost if "
+"not saved. To store the current classification:"
+msgstr "레이어를 다시 범주화시킬 것이기 때문에, 기존 범주들을 저장하지 않으면 사라질 것입니다. 현재 범주화를 저장하려면:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:148
+msgid "Open the layer's properties dialog"
+msgstr "레이어의 속성 대화창을 여십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:149
+msgid ""
+"Click the :guilabel:`Save Style ...` button in the :guilabel:`Style` drop-"
+"down menu."
+msgstr ":guilabel:`Style` 드롭다운 메뉴에 있는 :guilabel:`Save Style ...` 버튼을 클릭하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:151
+msgid ""
+"Select :guilabel:`Rename Current...`, enter ``land usage`` and press "
+":guilabel:`OK`."
+msgstr ""
+":guilabel:`Rename Current...` 를 선택하고, ``land usage`` 라고 입력한 다음 "
+":guilabel:`OK` 를 누르십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:154
+msgid ""
+"The categories and their symbols are now saved in the layer's properties."
+msgstr "이제 레이어 속성에 카테고리들과 그 심볼들이 저장되었습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:155
+msgid ""
+"Click now on the :guilabel:`Add...` entry of the :guilabel:`Style` drop-down"
+" menu and create a new style named ``ratio``. This will store the new "
+"classification."
+msgstr ""
+"다음으로 :guilabel:`Style` 드롭다운 메뉴에 있는 :guilabel:`Add...` 항목을 클릭하고 ``ratio`` 라는 "
+"이름의 새 스타일을 생성하십시오. 새 범주화가 저장될 것입니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:158
+msgid "Close the :guilabel:`Layer Properties` dialog"
+msgstr ":guilabel:`Layer Properties` 대화창을 닫으십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:160
+msgid ""
+"We want to classify the landuse areas by size, but there is a problem: they "
+"don't have a size field, so we'll have to make one."
+msgstr ""
+"우리는 토지이용구역들을 크기로 범주화시키고자 하지만, 문제가 하나 있습니다 --- 크기 필드가 없기 때문에 하나 만들어줘야 합니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:163
+msgid "Open the Attributes Table for the ``landuse`` layer."
+msgstr "``landuse`` 레이어의 속성 테이블을 여십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:164
+msgid ""
+"Enter edit mode by clicking the |toggleEditing|  :sup:`Toggle editing` "
+"button"
+msgstr "|toggleEditing| :sup:`Toggle editing` 버튼을 클릭해서 편집 모드로 들어가십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:416
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:166
+msgid ""
+"Add a new column of decimal type, called ``AREA``, using the |newAttribute| "
+":sup:`New field` button:"
+msgstr ""
+"|newAttribute| :sup:`New field` 버튼을 사용해서 십진수 유형의 새로운 열을 ``AREA`` 라는 이름으로 "
+"추가하십시오:"
+
 #: ../../docs/training_manual/vector_classification/classification.rst:406
 msgid "newAttribute"
 msgstr "newAttribute"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:174
+msgid ""
+"The new field will be added (at the far right of the table; you may need to "
+"scroll horizontally to see it). However, at the moment it is not populated, "
+"it just has a lot of *NULL* values."
+msgstr ""
+"새 필드가 (테이블의 가장 오른쪽에) 추가될 것입니다. (이 필드를 보려면 수평 방향으로 스크롤해야 할 수도 있습니다.) 하지만, 이 "
+"시점에서 이 필드에는 값이 없습니다. *NULL* 값들만 가득 있을 뿐이죠."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:179
+msgid "To solve this problem, we will need to calculate the areas."
+msgstr "이 문제를 해결하려면, 면적을 계산해야 할 것입니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:181
+msgid "Open the field calculator with the |calculateField| button."
+msgstr "|calculateField| 버튼으로 필드 계산기를 여십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:397
 msgid "calculateField"
 msgstr "calculateField"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:183
+msgid "You will get this dialog:"
+msgstr "다음 대화창이 나타날 것입니다:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:188
+msgid "Check the |checkbox| :guilabel:`Update existing fields`"
+msgstr "|checkbox| :guilabel:`Update existing fields` 를 체크하십시오."
+
 #: ../../docs/training_manual/vector_classification/classification.rst:399
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:189
+msgid "Select :guilabel:`AREA` in the fields drop-down menu"
+msgstr "필드 드롭다운 메뉴에서 :guilabel:`AREA` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:194
+msgid ""
+"Under the :guilabel:`Expression` tab, expand the :guilabel:`Geometry` "
+"functions group in the list and find :menuselection:`$area`"
+msgstr ""
+":guilabel:`Expression` 탭에서, 목록에 있는 :guilabel:`Geometry` 함수 그룹을 펼친 다음 "
+":menuselection:`$area` 를 찾으십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:196
+msgid ""
+"Double-click on it so that it appears in the :guilabel:`Expression` field"
+msgstr "이 함수가 :guilabel:`Expression` 란에 나타나도록 더블 클릭하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:203
+msgid ""
+"Scroll to the ``AREA`` field in the attribute table and you will notice that"
+" it is populated with values (you may need to click the column header to "
+"refresh the data)."
+msgstr ""
+"속성 테이블의 ``AREA`` 필드로 스크롤하면 해당 필드가 값들로 채워져 있는 것을 볼 수 있을 것입니다. (열 헤더를 클릭해서 "
+"데이터를 새로고침해야 할 수도 있습니다.)"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:207
+msgid ""
+"These areas respect the project's area unit settings, so they may be in "
+"square meters or square degrees."
+msgstr "이 면적 값들은 프로젝트의 면적 단위 설정을 따르기 때문에, 제곱미터일 수도 있고 평방도일 수도 있습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:210
+msgid ""
+"Press |saveEdits| to save the edits and exit the edit mode with "
+"|toggleEditing| :sup:`Toggle editing`"
+msgstr ""
+"|saveEdits| 버튼을 눌러서 편집 내용을 저장한 다음 |toggleEditing| :sup:`Toggle editing` 버튼으로"
+" 편집 모드를 해제하십시오."
+
 #: ../../docs/training_manual/vector_classification/classification.rst:410
 msgid "saveEdits"
 msgstr "saveEdits"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:212
+msgid "Close the attribute table"
+msgstr "속성 테이블을 닫으십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:214
+msgid ""
+"Now that we have the data, let's use them to render the ``landuse`` layer."
+msgstr "이제 데이터를 만들었으니, 이를 사용해서 ``landuse`` 레이어를 렌더링해봅시다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:216
+msgid ""
+"Open the :guilabel:`Layer properties` dialog's :guilabel:`Symbology` tab for"
+" the ``landuse`` layer"
+msgstr ""
+"``landuse`` 레이어의 :guilabel:`Layer properties` 대화창에서 :guilabel:`Symbology` 탭을"
+" 선택하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:218
+msgid ""
+"Change the classification style from :guilabel:`Categorized` to "
+":guilabel:`Graduated`"
+msgstr "범주화 스타일을 :guilabel:`Categorized` 에서 :guilabel:`Graduated` 로 변경하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:221
+msgid "Change the :guilabel:`Value` to ``AREA``"
+msgstr ":guilabel:`Value` 를 ``AREA`` 로 변경하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:223
+msgid ""
+"Under :guilabel:`Color ramp`, choose the option :guilabel:`Create New Color "
+"Ramp...`:"
+msgstr ""
+":guilabel:`Color ramp` 아래 있는 :guilabel:`Create New Color Ramp...` 옵션을 "
+"선택하십시오:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:229
+msgid ""
+"Choose :guilabel:`Gradient` (if it's not selected already) and click "
+":guilabel:`OK`. You will see this:"
+msgstr ""
+"(이미 선택되어 있지 않은 경우) :guilabel:`Gradient` 를 선택하고 :guilabel:`OK` 를 클릭하십시오. 다음 "
+"창을 보게 될 것입니다:"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:235
 msgid ""
 "You'll be using this to denote area, with small areas as :guilabel:`Color 1`"
 " and large areas as :guilabel:`Color 2`."
 msgstr ""
-"이 창을 이용해서, 적은 면적을 :guilabel:`Color 1` 로, 큰 면적을 :guilabel:`Color 2` 로 나타낼 "
+"이 창을 이용해서, 적은 면적을 :guilabel:`Color 1` 로, 큰 면적을 :guilabel:`Color 2` 로 구분할 "
 "것입니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:238
+msgid "Choose appropriate colors"
+msgstr "알맞은 색상들을 선택하십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:240
 msgid "In the example, the result looks like this:"
-msgstr "이 예제에서는 다음과 비슷한 결과가 나옵니다."
+msgstr "이 예제에서는 다음과 비슷한 결과가 나옵니다:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:246
+msgid ""
+"You can save the colour ramp by selecting :guilabel:`Save Color Ramp...` "
+"under the :guilabel:`Color ramp` tab. Choose an appropriate name for the "
+"colour ramp and click :guilabel:`Save`. You will now be able to select the "
+"same colour ramp easily under :guilabel:`All Color Ramps`."
+msgstr ""
+":guilabel:`Color ramp` 탭에서 :guilabel:`Save Color Ramp...` 를 선택하면 색상표를 저장할 수 "
+"있습니다. 이 색상표에 적합한 이름을 선택하고 :guilabel:`Save` 를 클릭하십시오. 이제 :guilabel:`All Color"
+" Ramps` 에서 동일한 색상표를 쉽게 선택할 수 있을 것입니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:253
+msgid ""
+"Under :guilabel:`Mode` choose |equalCount| :sup:`Equal Count (Quantile)` ."
+msgstr ""
+":guilabel:`Mode` 에서 |equalCount| :sup:`Equal Count (Quantile)` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:401
+msgid "equalCount"
+msgstr "equalCount"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:254
+msgid "Click :guilabel:`Classify`"
+msgstr ":guilabel:`Classify` 버튼을 클릭하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:256
+msgid "Now you will have something like this:"
+msgstr "이제 다음과 같은 창을 보게 될 것입니다:"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:261
 msgid "Leave everything else as-is."
 msgstr "다른 항목은 그대로 놔둡니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:263
+msgid "Click :guilabel:`OK`:"
+msgstr ":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:270
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Refine the Classification"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 범주화 개선시키기"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:272
 msgid ""
 "Change the values of :guilabel:`Mode` and :guilabel:`Classes` until you get "
 "a classification that makes sense."
 msgstr ""
-"여러분의 범주화를 이해하기 쉽도록 :guilabel:`Mode` 및 :guilabel:`Classes` 의 값을 변경해보십시오."
+"여러분이 범주화를 이해하기 쉽도록 :guilabel:`Mode` 및 :guilabel:`Classes` 의 값을 변경해보십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:275
 msgid "Answer"
 msgstr "해답"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:278
+msgid ""
+"The settings you used might not be the same, but with the values "
+":guilabel:`Classes` = ``6`` and :guilabel:`Mode` = :guilabel:`Natural Breaks"
+" (Jenks)` (and using the same colors, of course), the map will look like "
+"this:"
+msgstr ""
+"여러분이 사용한 설정들이 똑같지 않을 수도 있지만, :guilabel:`Classes` 값을 ``6`` 으로 그리고 "
+":guilabel:`Mode` 를 :guilabel:`Natural Breaks (Jenks)` 로 설정하면 (물론 색상은 동일하겠죠) "
+"맵이 다음과 같이 보일 것입니다:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:287
+msgid ":abbr:`★★★ (Advanced level)` Follow Along: Rule-based Classification"
+msgstr ":abbr:`★★★ (고급 수준)` 따라해보세요: 규칙 기반 범주화"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:289
 msgid ""
@@ -138,40 +561,167 @@ msgid ""
 "unfortunately normal classification only takes one attribute into account. "
 "That's where rule-based classification comes in handy."
 msgstr ""
-"범주화에 복수의 기준을 결합하는 것이 유용할 경우가 많지만, 아쉽게도 일반 범주화에서는 단일 기준만 적용됩니다. 이런 경우 규칙 기반 "
-"범주화를 쓸 수 있습니다."
+"범주화에 여러 개의 기준들을 결합하는 것이 유용할 경우가 많지만, 아쉽게도 일반적인 범주화에서는 단일 속성만 적용됩니다. 이런 경우 규칙"
+" 기반 범주화가 유용합니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:293
+msgid ""
+"In this lesson, we will represent the ``landuse`` layer in a way to easily "
+"identify |majorUrbanName| city from the other residential area, and from the"
+" other types of landuse (based on their area)."
+msgstr ""
+"이 수업에서는 ``landuse`` 레이어를 |majorUrbanName| 도시가 다른 거주 지역과 그리고 다른 토지이용 유형들과 쉽게 "
+"구분될 수 있는 (면적 기반) 방식으로 표현할 것입니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:299
+msgid "Switch to the :guilabel:`Symbology` tab"
+msgstr ":guilabel:`Symbology` 탭으로 가십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:300
+msgid "Switch the classification style to :guilabel:`Rule-based`"
+msgstr "범주화 스타일을 :guilabel:`Rule-based` 로 바꾸십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:302
+msgid ""
+"QGIS will automatically show the rules that represent the current "
+"classification implemented for this layer. For example, after completing the"
+" exercise above, you may see something like this:"
+msgstr ""
+"QGIS가 현재 이 레이어에 구현된 범주화를 표현하는 규칙을 자동으로 보여줄 것입니다. 예를 들면, 앞의 예제를 완료하면 다음과 같은 "
+"창을 볼 수 있을 겁니다:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:310
+msgid "Click and drag to select all the rules"
+msgstr "모든 규칙을 선택하려면 클릭&드래그하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:311
+msgid ""
+"Use the |symbologyRemove| :sup:`Remove selected rules` button to remove all "
+"of the existing rules"
+msgstr ""
+"기존 규칙들을 전부 제거하려면 |symbologyRemove| :sup:`Remove selected rules` 버튼을 누르십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:414
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:314
+msgid "Let's now add our custom rules."
+msgstr "이제 사용자 정의 규칙을 추가해보겠습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:316
+msgid "Click the |symbologyAdd| :sup:`Add rule` button"
+msgstr "|symbologyAdd| :sup:`Add rule` 버튼을 클릭하십시오."
+
 #: ../../docs/training_manual/vector_classification/classification.rst:412
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:317
+msgid "The :guilabel:`Edit rule` dialog then appears"
+msgstr "그러면 :guilabel:`Edit rule` 대화창이 나타납니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:318
+msgid "Enter ``Swellendam city`` as :guilabel:`Label`"
+msgstr ":guilabel:`Label` 에 ``Swellendam city`` 를 입력하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:319
+msgid ""
+"Click the |expression| button next to the :guilabel:`Filter` text area to "
+"open the :guilabel:`Expression String Builder`"
+msgstr ""
+":guilabel:`Filter` 텍스트란 옆에 있는 |expression| 버튼을 클릭해서 :guilabel:`Expression "
+"String Builder` 를 여십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:403
 msgid "expression"
 msgstr "expression"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:321
+msgid "Enter the criterion ``\"name\" = 'Swellendam'`` and validate"
+msgstr "``\"name\" = 'Swellendam'`` 이라는 기준을 입력하고 무결성을 검증하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:326
+msgid ""
+"Back to the :guilabel:`Edit rule` dialog, assign it a darker grey-blue color"
+" in order to indicate the town's importance in the region and remove the "
+"border"
+msgstr ""
+":guilabel:`Edit rule` 대화창으로 돌아와서, 지역 내에서 이 도시의 중요성을 알려주기 위한 진한 청회색을 할당한 다음 "
+"경계선을 제거하십시오."
+
 #: ../../docs/training_manual/vector_classification/classification.rst:333
 msgid "Press :guilabel:`OK`"
 msgstr ":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:334
+msgid "Repeat the steps above to add the following rules:"
+msgstr "앞의 단계들을 반복해서 다음 규칙들을 추가하십시오:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:336
+msgid ""
+"**Other residential** label with the criterion ``\"landuse\" = 'residential'"
+" AND \"name\" <> 'Swellendam'``. Choose a pale blue-grey :guilabel:`Fill "
+"color`"
+msgstr ""
+"``\"landuse\" = 'residential' AND \"name\" <> 'Swellendam'`` 이라는 기준을 사용해서 "
+"**Other residential** 이라는 라벨을 생성하십시오. :guilabel:`Fill color` 로는 연한 청회색을 "
+"선택하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:339
+msgid ""
+"**Big non residential areas** label with the criterion ``\"landuse\" <> "
+"'residential' AND \"AREA\" >= 605000``. Choose a mid-green color."
+msgstr ""
+"``\"landuse\" <> 'residential' AND \"AREA\" >= 605000`` 이라는 기준을 사용해서 **Big "
+"non residential areas** 라는 라벨을 생성하십시오. 중간 정도의 녹색을 선택하십시오."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:346
+msgid ""
+"These filters are exclusive, in that they exclude areas on the map (non-"
+"residential areas which are smaller than 605000 (square meters) are not "
+"included in any of the rules)."
+msgstr ""
+"이 필터들은 맵 상에 있는 지역들을 제외한다는 점에서 배타적입니다. (면적이 605,000(제곱미터) 미만인 비주거 지역들은 어떤 "
+"규칙에도 포함되지 않았습니다.)"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:350
+msgid ""
+"We will catch the remaining features using a new rule labeled **Small non "
+"residential areas**. Instead of a filter expression, Check the "
+"|radioButtonOn| :guilabel:`Else`. Give this category a suitable pale green "
+"color."
+msgstr ""
+"**Small non residential areas** 라는 새 규칙을 사용해서 나머지 피처들을 커버할 것입니다. 필터 표현식 대신, "
+"|radioButtonOn| :guilabel:`Else` 를 체크하면 됩니다. 이 카테고리에 어울리는 연한 녹색을 할당하십시오."
 
 #: ../../docs/training_manual/vector_classification/classification.rst:408
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:358
+msgid "Your rules should now look like this:"
+msgstr "이제 여러분의 규칙들이 다음과 같이 보여야 합니다:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:363
+msgid "Apply this symbology"
+msgstr "이 심볼을 적용하십시오."
+
 #: ../../docs/training_manual/vector_classification/classification.rst:365
 msgid "Your map will look something like this:"
-msgstr "사용자 맵이 다음과 비슷하게 보일 것입니다."
+msgstr "사용자 맵이 다음과 비슷하게 보일 것입니다:"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:370
 msgid ""
 "Now you have a map with |majorUrbanName| the most prominent residential area"
 " and other non-residential areas colored according to their size."
 msgstr ""
-"이제 |majorUrbanName| 이 가장 두드러진 주거지역으로 나타나고 다른 비주거지역은 면적에 따라 다른 색상을 보여주는 맵이 "
+"이제 |majorUrbanName| 이 가장 두드러진 주거 지역으로 나타나고 다른 비주거 지역은 면적에 따라 다른 색상을 보여주는 맵이 "
 "되었습니다."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:375
+msgid "In Conclusion"
+msgstr "결론"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:377
 msgid ""
@@ -184,11 +734,15 @@ msgstr ""
 "심볼을 이용하면 레이어의 속성들을 읽기 쉬운 방법으로 나타낼 수 있습니다. 우리가 선택한 연관 속성을 이용해서 피처의 중요성을 이해하도록"
 " 만들 수 있습니다. 여러분이 당면한 문제가 무엇이냐에 따라 다른 범주화 기술을 적용해서 문제를 해결하십시오."
 
+#: ../../docs/training_manual/vector_classification/classification.rst:385
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
+
 #: ../../docs/training_manual/vector_classification/classification.rst:387
 msgid ""
 "Now we have a nice-looking map, but how are we going to get it out of QGIS "
 "and into a format we can print out, or make into an image or PDF? That's the"
 " topic of the next lesson!"
 msgstr ""
-"이제 멋진 맵을 만들었습니다만, 이것을 어떻게 QGIS에서 분리시켜 인쇄할 수 있는 파일 형식이나 이미지 또는 PDF로 만들 수 "
+"이제 멋진 맵을 만들었습니다만, 이것을 어떻게 QGIS에서 분리시켜 인쇄할 수 있는 파일 포맷이나 이미지 또는 PDF로 만들 수 "
 "있을까요? 이것이 다음 강의의 주제입니다!"
