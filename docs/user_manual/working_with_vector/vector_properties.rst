@@ -1777,7 +1777,7 @@ The current core implementation of diagrams provides support for:
 * |piechart| :guilabel:`Pie chart`, a circular statistical graphic divided into
   slices to illustrate numerical proportion. The arc length of each slice is
   proportional to the quantity it represents;
-* |text| :guilabel:`Text diagram`, a horizontaly divided circle showing statistics
+* |text| :guilabel:`Text diagram`, a horizontally divided circle showing statistics
   values inside;
 * |histogram| :guilabel:`Histogram`, bars of varying colors for each attribute
   aligned next to each other
