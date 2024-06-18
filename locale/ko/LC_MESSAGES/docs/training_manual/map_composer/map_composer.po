@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-11 01:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,19 +33,125 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:2
+msgid "Lesson: Using Print Layout"
+msgstr "수업: 인쇄 조판 사용하기"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:4
+msgid ""
+"Now that you've got a map, you need to be able to print it or to export it "
+"to a document. The reason is, a GIS map file is not an image. Rather, it "
+"saves the state of the GIS program, with references to all the layers, their"
+" labels,colors, etc. So for someone who doesn't have the data or the same "
+"GIS program (such as QGIS), the map file will be useless. Luckily, QGIS can "
+"export its map file to a format that anyone's computer can read, as well as "
+"printing out the map if you have a printer connected. Both exporting and "
+"printing is handled via the *Print Layout*."
+msgstr ""
+"이제 맵을 완성했으니, 맵을 인쇄하거나 문서로 내보낼 수 있어야 합니다. 그 이유는 GIS 맵 파일이 이미지가 아니기 때문입니다. "
+"그보다는 GIS 프로그램의 특정 상태를 모든 레이어들과 그 라벨, 색상 등등을 가리키는 참조와 함께 저장한 것이라고 봐야겠죠. 즉 해당 "
+"데이터 또는 (QGIS 같은) 동일한 GIS 프로그램을 가지고 있지 않은 사람에겐 맵 파일이 무용지물일 것입니다. 다행히도, QGIS는 "
+"맵 파일을 어떤 사람의 컴퓨터에서든 읽을 수 있는 것은 물론 프린터가 연결되어 있다면 인쇄할 수도 있는 포맷으로 내보낼 수 있습니다. 이"
+" 내보내기와 인쇄하기는 둘 다 *인쇄 조판(Print Layout)* 을 통해 처리됩니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:16
+msgid ""
+"**The goal for this lesson:** To use the QGIS *Print Layout* to create a "
+"basic map with all the required settings."
+msgstr "**이 수업의 목표:** QGIS *인쇄 조판* 을 사용해서 필요한 모든 설정을 한 기본 맵을 생성하기."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:20
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: The Layout Manager"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 조판 관리자"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:22
+msgid ""
+"QGIS allows you to create multiple maps using the same map file. For this "
+"reason, it has a tool called the *Layout Manager*."
+msgstr ""
+"QGIS는 동일한 맵 파일을 사용해서 여러 가지 맵을 생성할 수 있습니다. 이런 이유로, QGIS는 *조판 관리자(Layout "
+"Manager)* 라는 도구를 가지고 있습니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:25
+msgid ""
+"Click on the :menuselection:`Project --> Layout Manager...` menu entry to "
+"open this tool. You'll see a blank :guilabel:`Layout manager` dialog appear."
+msgstr ""
+"이 도구를 열려면 :menuselection:`Project --> Layout Manager...` 메뉴 항목을 클릭하십시오. 텅 비어"
+" 있는 :guilabel:`Layout manager` 대화창이 나타날 것입니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:32
+msgid ""
+"Under :guilabel:`New from Template`, select :guilabel:`Empty layout` and "
+"press the :guilabel:`Create...` button."
+msgstr ""
+":guilabel:`New from Template` 아래에 있는 :guilabel:`Empty layout` 을 선택한 다음, "
+":guilabel:`Create...` 버튼을 누르십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:34
+msgid ""
+"Give the new layout the name of |majorUrbanName| and click :guilabel:`OK`."
+msgstr "새 조판의 이름을 |majorUrbanName| 이름으로 하고 :guilabel:`OK` 를 입력하십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:36
+msgid "You will now see the *Print Layout* window:"
+msgstr "이제 *인쇄 조판* 창을 보게 될 것입니다:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:41
+msgid ""
+"You could also create this new layout via the :menuselection:`Project --> "
+"New Print Layout...` menu."
+msgstr ""
+":menuselection:`Project --> New Print Layout...` 메뉴 항목을 통해서도 이 새 조판을 생성할 수 "
+"있습니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:44
+msgid ""
+"Whichever route you take, the new print layout is now accessible from the "
+":menuselection:`Project --> Layouts -->` menu, as in the image below."
+msgstr ""
+"어떤 방법을 쓰든, 아래 그림처럼 :menuselection:`Project --> Layouts -->` 메뉴에서 이 새 인쇄 조판에 "
+"접근할 수 있습니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:52
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Basic Map Composition"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 기본 맵 구성"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:54
 msgid ""
 "In this example, the composition was already the way we wanted it. Ensure "
 "that yours is as well."
-msgstr "이 예제에서 맵은 이미 원하는 대로 작성돼 있습니다. 사용자 맵도 마찬가지인지 확인하십시오."
+msgstr "이 예제에서 맵은 이미 우리가 원하는 대로 구성돼 있습니다. 여러분의 맵도 마찬가지인지 확인하십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:57
+msgid ""
+"Right-click on the sheet in the central part of the layout window and choose"
+" :guilabel:`Page properties...` in the context menu."
+msgstr ""
+"조판 창의 가운데 부분에 있는 시트(sheet)를 오른쪽 클릭하고 컨텍스트 메뉴에서 :guilabel:`Page "
+"properties...` 를 선택하십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:59
+msgid ""
+"Check that the values in the :guilabel:`Item Properties` tab are set to the "
+"following:"
+msgstr ":guilabel:`Item Properties` 탭에 있는 값들이 다음과 같이 설정되어 있는지 확인하십시오:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:62
+msgid ":guilabel:`Size`: ``A4``"
+msgstr ":guilabel:`Size`: ``A4``"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:63
+msgid ":guilabel:`Orientation`: ``Landscape``"
+msgstr ":guilabel:`Orientation`: ``Landscape``"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:65
 msgid ""
 "Now you've got the page layout the way you wanted it, but this page is still"
 " blank. It clearly lacks a map. Let's fix that!"
-msgstr "이제 원하는 대로 페이지 레이아웃을 설정했지만, 이 페이지는 맵을 담고 있지 않습니다. 맵을 불러봅시다!"
+msgstr "이제 원하는 대로 페이지 레이아웃을 설정했지만, 이 페이지는 아직도 비어 있습니다. 맵을 불러와봅시다!"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:69
 msgid "Click on the |addMap| :sup:`Add Map` button."
@@ -55,9 +161,13 @@ msgstr "|addMap| :sup:`Add Map` 버튼을 클릭하십시오."
 msgid "addMap"
 msgstr "addMap"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:71
+msgid "With this tool activated, you will be able to place a map on the page."
+msgstr "이 도구를 활성화시키면, 페이지 위에 맵을 배치할 수 있게 됩니다."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:74
 msgid "Click and drag a box on the blank page:"
-msgstr "빈 페이지 상에서 클릭 & 드래그로 사각형을 그립니다."
+msgstr "빈 페이지 위에 클릭&드래그로 사각형을 그리십시오."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:79
 msgid "The map will appear on the page."
@@ -65,7 +175,11 @@ msgstr "페이지 상에 맵이 나타날 것입니다."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:81
 msgid "Move the map by clicking and dragging it around:"
-msgstr "클릭 & 드래그로 맵을 이리저리 옮겨보십시오."
+msgstr "클릭&드래그로 맵을 이리저리 옮겨보십시오:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:86
+msgid "Resize it by clicking and dragging the boxes on the edges:"
+msgstr "사각형의 경계선을 클릭&드래그해서 크기를 조정해보십시오:"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:91
 msgid ""
@@ -73,18 +187,18 @@ msgid ""
 "project is set up. But not to worry! These instructions are general, so they"
 " will work the same regardless of what the map itself looks like."
 msgstr ""
-"물론 사용자 맵은 예제와 달라보일 겁니다! 사용자 자신의 프로젝트 설정에 따라 달라집니다. 하지만 걱정하지 마세요! 이것은 일반적인 "
-"지침이므로 맵 자체가 어떻게 보이던지 상관없이 동일하게 작용할 것입니다."
+"물론 여러분의 맵은 예제와 달라보일 겁니다! 여러분 자신의 프로젝트 설정에 따라 달라보입니다. 하지만 걱정하지 마세요! 이 강의는 "
+"일반적인 지침이므로 맵 자체가 어떻게 보이든지 상관없이 동일하게 작동할 것입니다."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:96
 msgid ""
 "Be sure to leave margins along the edges, and a space along the top for the "
 "title."
-msgstr "페이지 주변을 따라 여백을 남기고, 위쪽에 제목을 위한 공간을 남겨두십시오."
+msgstr "경계선 주변을 따라 여백을 남기고, 위쪽에 제목을 위한 공간을 남겨두십시오."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:99
 msgid "Zoom in and out on the page (but not the map!) by using these buttons:"
-msgstr "다음 버튼을 사용해서 (맵이 아니라) 페이지를 줌인/줌아웃해보십시오."
+msgstr "다음 버튼들을 사용해서 (맵이 아니라) 페이지를 확대/축소해보십시오:"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:102
 msgid "|zoomFullExtent| |zoomIn| |zoomOut|"
@@ -102,34 +216,107 @@ msgstr "zoomIn"
 msgid "zoomOut"
 msgstr "zoomOut"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:104
+msgid ""
+"Zoom and pan the map in the main QGIS window. You can also pan the map using"
+" the |moveItemContent| :sup:`Move item content` tool."
+msgstr ""
+"QGIS 메인 창에서 맵을 확대/축소하고 이동해보십시오. |moveItemContent| :sup:`Move item content` "
+"도구도 맵을 이동시킬 수 있습니다."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:349
 msgid "moveItemContent"
 msgstr "moveItemContent"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:108
+msgid "The map view updates as you zoom in or zoom out."
+msgstr "여러분이 확대 또는 축소하는 대로 맵 뷰가 업데이트됩니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:109
+msgid ""
+"If, for any reason, the map view does not refresh correctly, you can force "
+"the map to refresh by clicking the |refresh| :sup:`Refresh view` button."
+msgstr ""
+"어떤 이유로든, 맵 뷰가 정확하게 새로고침되지 않는 경우 |refresh| :sup:`Refresh view` 버튼을 클릭해서 맵을 "
+"강제로 새로고침시킬 수 있습니다."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:351
 msgid "refresh"
 msgstr "refresh"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:113
+msgid ""
+"Remember that the size and position you've given the map doesn't need to be "
+"final. You can always come back and change it later if you're not satisfied."
+" For now, you need to ensure that you've saved your work on this map. "
+"Because a *Print Layout* in QGIS is part of the main map file, you must save"
+" your project."
+msgstr ""
+"여러분이 맵에 지정했던 크기와 위치가 꼭 마지막일 필요는 없다는 사실을 기억하십시오. 여러분이 만족스럽지 않다면, 언제라도 다시 변경해도"
+" 됩니다. 지금은 이 맵 상에서의 여러분의 작업을 저장했는지 확인해야 합니다. 왜냐하면 QGIS에서 *인쇄 조판* 은 주 맵 파일의 "
+"일부이기 때문에, 프로젝트를 반드시 저장해야만 합니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:122
+msgid ""
+"Go to the :menuselection:`Layout -->` |fileSave| :menuselection:`Save "
+"Project`. This is a convenient shortcut to the one in the main dialog."
+msgstr ""
+":menuselection:`Layout -->` |fileSave| :menuselection:`Save Project` 메뉴 항목을 "
+"클릭하십시오. 주 대화창에 있는 저장 기능을 가리키는 편리한 지름길입니다."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:342
 msgid "fileSave"
 msgstr "fileSave"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:127
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Adding a Title"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 제목 추가하기"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:129
+msgid ""
+"Now your map is looking good on the page, but your readers/users are not "
+"being told what's going on yet. They need some context, which is what you'll"
+" provide for them by adding map elements. First, let us add a title."
+msgstr ""
+"여러분의 맵이 이제 페이지 위에 보기 좋게 자리했지만, 여러분의 독자/사용자에게 이게 어떤 맵인지 알려줘야 합니다. 그들에겐 어떤 맥락이"
+" 필요한데, 여러분이 맵 요소들을 추가해서 제공해줄 것입니다. 먼저, 제목을 추가해보죠."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:135
+msgid "Click on the |label| :sup:`Add Label` button"
+msgstr "|label| :sup:`Add Label` 버튼을 클릭하십시오."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:344
 msgid "label"
 msgstr "label"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:136
+msgid ""
+"Click on the page, above the map, accept the suggested values in the "
+":guilabel:`New Item Properties` dialog, and a label will appear at the top "
+"of the map."
+msgstr ""
+"페이지 상에서 맵 위쪽을 클릭하고, :guilabel:`New Item Properties` 대화창에 나타나는 추천 값들을 받아들이면, "
+"맵 위쪽에 라벨이 나타날 것입니다."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:139
 msgid ""
 "Resize it and place it in the top center of the page. It can be resized and "
 "moved in the same way that you resized and moved the map."
 msgstr ""
-"페이지의 상단 한 가운데로 오도록 크기와 위치를 조정합니다. 맵의 크기와 위치를 조정한 방법 그대로 제목을 조정할 수 있습니다."
+"라벨이 페이지의 상단 한가운데로 오도록 크기와 위치를 조정합니다. 맵의 크기와 위치를 조정한 방법 그대로 제목을 조정할 수 있습니다."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:143
 msgid ""
 "As you move the title, you'll notice that guidelines appear to help you "
 "position the title in the center of the page."
-msgstr "제목을 이동하면 페이지 한 가운데 맞출 수 있도록 지시선이 나타나는 것을 알 수 있습니다."
+msgstr "제목을 이동하면 페이지 한가운데 맞출 수 있도록 지시선이 나타나는 것을 알 수 있습니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:146
+msgid ""
+"However, there is also a tool in the Actions Toolbar to help position the "
+"title relative to the map (not the page):"
+msgstr ""
+"하지만, 제목을 (페이지가 아니라) 맵을 기준으로 배치할 수 있게 해주는 액션 툴바(Actions Toolbar)의 도구도 존재합니다:"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:149
 msgid "|alignLeft|"
@@ -139,29 +326,76 @@ msgstr "|alignLeft|"
 msgid "alignLeft"
 msgstr "alignLeft"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:151
+msgid "Click the map to select it"
+msgstr "맵을 클릭해서 선택한 다음,"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:152
+msgid ""
+"Hold in :kbd:`Shift` on your keyboard and click on the label so that both "
+"the map and the label are selected."
+msgstr "키보드의 :kbd:`Shift` 키를 누른 채 라벨을 클릭해서 맵과 라벨을 둘 다 선택하십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:154
+msgid ""
+"Look for the |alignLeft| :sup:`Align selected items left` button and click "
+"on the dropdown arrow next to it to reveal the positioning options and click"
+" |alignHCenter| :guilabel:`Align center`:"
+msgstr ""
+"|alignLeft| :sup:`Align selected items left` 버튼을 찾아서 그 옆에 있는 드롭다운 화살표를 클릭하면 "
+"배치 옵션들이 나타납니다. |alignHCenter| :guilabel:`Align center` 를 클릭하십시오:"
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:336
 msgid "alignHCenter"
 msgstr "alignHCenter"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:162
+msgid ""
+"Now the label frame is centered on the map, but not the contents. To center "
+"the contents of the label:"
+msgstr "이제 라벨 프레임이 맵 위 한가운데 위치로 왔지만, 라벨의 내용은 아직 아닙니다. 라벨의 내용을 한가운데로 정렬시키려면:"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:165
 msgid "Select the label by clicking on it."
 msgstr "라벨을 클릭해서 선택합니다."
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:166
+msgid ""
+"Click on the :guilabel:`Item Properties` tab in the side panel of the layout"
+" window."
+msgstr "조판 창의 사이드 패널에 있는 :guilabel:`Item Properties` 탭을 클릭하십시오."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:168
 msgid "Change the text of the label to \"|majorUrbanName|\":"
-msgstr "라벨 텍스트를 \"|majorUrbanName|\" 로 변경합니다."
+msgstr "라벨 텍스트를 \"|majorUrbanName|\" 으로 변경하십시오:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:173
+msgid ""
+"Use this interface to set the font and alignment options under the "
+":guilabel:`Appearance` section:"
+msgstr "이 인터페이스를 통해 :guilabel:`Appearance` 부분에서 글꼴과 정렬 옵션들을 설정하십시오:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:176
+msgid ""
+"Choose a large but sensible font (the example will use the default font with"
+" a size of ``36``)"
+msgstr "크고 적합한 글꼴을 선택하십시오. (이 예제에서는 크기가 ``36`` 인 기본 글꼴을 사용할 것입니다.)"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:178
+msgid "Set the :guilabel:`Horizontal Alignment` to :guilabel:`Center`."
+msgstr ":guilabel:`Horizontal Alignment` 를 :guilabel:`Center` 로 설정하십시오."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:180
 msgid ""
 "You can also change the font color, but it's probably best to keep it black "
 "as per the default."
-msgstr "폰트 색상도 바꿀 수 있지만, 기본 설정인 검은색을 유지하는 것이 최선일 것입니다."
+msgstr "글꼴 색상도 바꿀 수 있지만, 기본 설정인 검은색을 유지하는 것이 최선일 것입니다."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:183
 msgid ""
 "The default setting is not to add a frame to the title's text box. However, "
 "if you wish to add a frame, you can do so:"
-msgstr "제목의 텍스트 상자에 테를 두르지 않는 것이 기본 설정입니다. 그러나 테를 두르고 싶다면 그렇게 할 수 있습니다."
+msgstr "제목 텍스트 상자에 테두리를 두르지 않는 것이 기본 설정입니다. 그러나 테두리를 두르고 싶다면 그렇게 할 수 있습니다:"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:186
 msgid ""
@@ -174,24 +408,88 @@ msgstr ""
 msgid ""
 "Click the :guilabel:`Frame` checkbox to enable the frame. You can also "
 "change the frame's color and width."
-msgstr ":guilabel:`Frame` 체크박스를 클릭해서 테를 활성화합니다. 또 테의 색상 및 굵기도 바꿀 수 있습니다."
+msgstr ":guilabel:`Frame` 체크박스를 클릭해서 테두리를 활성화합니다. 또 테두리의 색상 및 굵기도 바꿀 수 있습니다."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:191
 msgid ""
 "In this example, we won't enable the frame, so here is our page so far:"
-msgstr "이 예제에서는 테를 활성화하지 않을 것이기 때문에, 페이지가 다음과 같이 보입니다."
+msgstr "이 예제에서는 테두리를 활성화하지 않을 것이기 때문에, 페이지가 다음과 같이 보입니다:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:197
+msgid ""
+"To make sure that you don't accidentally move these elements around now that"
+" you've aligned them, you can lock items into place:"
+msgstr "이제 맵 요소들을 정렬시켰으니, 실수로 이 요소들을 움직이지 않도록 이들을 그 자리에 고정시킬 수 있습니다:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:200
+msgid "Select both the label and the map items"
+msgstr "라벨과 맵 항목을 둘 다 선택하십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:201
+msgid ""
+"Click the |lockItems| :sup:`Lock Selected Items` button in the *Actions* "
+"Toolbar."
+msgstr "*액션* 툴바에 있는 |lockItems| :sup:`Lock Selected Items` 버튼을 클릭하십시오."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:346
 msgid "lockItems"
 msgstr "lockItems"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:204
+msgid ""
+"Click the |unlockAll| :sup:`Unlock All Items` button in the *Actions* "
+"Toolbar to be able to edit the items again."
+msgstr ""
+"이 항목들을 다시 편집하려면 *액션* 툴바에 있는 |unlockAll| :sup:`Unlock All Items` 버튼을 클릭하면 "
+"됩니다."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:365
 msgid "unlockAll"
 msgstr "unlockAll"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:209
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Adding a Legend"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 범례 추가하기"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:211
+msgid ""
+"The map reader also needs to be able to see what various things on the map "
+"actually mean. In some cases, like the place names, this is quite obvious. "
+"In other cases, it's more difficult to guess, like the colors of the "
+"forests. Let's add a new legend."
+msgstr ""
+"맵을 읽는 사람들이 맵 상에 있는 여러 가지가 정확하게 무슨 뜻인지도 알 수 있어야 합니다. 장소의 이름 같은 몇몇 경우, 이 사실은 "
+"자명합니다. 삼림의 색상 같은 다른 경우엔 추측하기가 더 어렵습니다. 새로운 범례를 추가해봅시다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:218
+msgid "Click on the |addLegend| :sup:`Add Legend` button"
+msgstr "|addLegend| :sup:`Add Legend` 버튼을 클릭하십시오."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:332
 msgid "addLegend"
 msgstr "addLegend"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:219
+msgid ""
+"Click on the page to place the legend, accept the suggested values in the "
+":guilabel:`New Item Properties` dialog,"
+msgstr ""
+"페이지 상에서 범례를 배치할 위치를 클릭하고, :guilabel:`New Item Properties` 대화창에 나타나는 추천 값들을 "
+"받아들이면,"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:221
+msgid ""
+"A legend is added to the layout page, showing layers symbology as set in the"
+" main dialog."
+msgstr "주 대화창에 설정된 대로 레이어 심볼들을 보여주는 범례가 조판 페이지에 추가됩니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:223
+msgid "As usual, you can click and move the item to where you want it:"
+msgstr "다른 작업들과 마찬가지로, 범례를 클릭해서 여러분이 원하는 곳으로 이동시킬 수 있습니다:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:230
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Customizing Legend Items"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 범례 항목 사용자 정의하기"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:232
 msgid ""
@@ -199,9 +497,30 @@ msgid ""
 "items."
 msgstr "범례에 보이는 모든 것이 꼭 필요한 것은 아닙니다. 따라서 필요하지 않은 일부 항목을 제거해보겠습니다."
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:235
+msgid ""
+"In the :guilabel:`Item Properties` tab, you'll find the :guilabel:`Legend "
+"items` group."
+msgstr ":guilabel:`Item Properties` 탭에 :guilabel:`Legend items` 그룹이 있습니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:237
+msgid ""
+"Uncheck the |unchecked| :guilabel:`Auto update` box, allowing you to "
+"directly modify the legend items"
+msgstr ""
+"|unchecked| :guilabel:`Auto update` 체크박스를 체크 해제하면 범례 항목들을 직접 수정할 수 있습니다."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:363
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:239
+msgid "Select the entry with :guilabel:`buildings`"
+msgstr ":guilabel:`buildings` 항목을 선택하십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:240
+msgid "Delete it from the legend by clicking the |symbologyRemove| button"
+msgstr "|symbologyRemove| 버튼을 클릭해서 범례에서 해당 항목을 삭제하십시오."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:361
 msgid "symbologyRemove"
@@ -215,33 +534,106 @@ msgstr "항목의 명칭을 바꿀 수도 있습니다."
 msgid "Select a layer from the same list."
 msgstr "동일한 목록에서 레이어를 선택한 다음,"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:245
+msgid "Click the |symbologyEdit| :sup:`Edit selected item properties` button."
+msgstr "|symbologyEdit| :sup:`Edit selected item properties` 버튼을 클릭하십시오."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:359
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:246
+msgid ""
+"Rename the layers to ``Places``, ``Roads and Streets``, ``Surface Water``, "
+"and ``Rivers``."
+msgstr ""
+"레이어들의 이름을 ``Places``, ``Roads and Streets``, ``Surface Water``, 그리고 "
+"``Rivers`` 로 바꾸십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:249
+msgid "You can also reorder the items:"
+msgstr "항목들을 다시 정렬시킬 수도 있습니다:"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:255
 msgid ""
 "As the legend will likely be widened by the new layer names, you may wish to"
 " move and resize the legend and or map. This is the result:"
 msgstr ""
-"이때 범례가 새 레이어명 때문에 넓어질 수 있으므로, 범례 또는 맵을 이동하거나 크기를 조정해야 할 수도 있습니다. 그 결과는 다음과 "
-"같습니다."
+"이때 범례가 새 레이어 이름 때문에 너비가 늘어날 수 있으므로, 범례 또는 맵을 이동하거나 크기를 조정해야 할 수도 있습니다. 그 결과는"
+" 다음과 같습니다:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:264
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Exporting Your Map"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 맵 내보내기"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:266
 msgid "Did you remember to save your work often?"
 msgstr "여러분의 작업을 자주 저장해야 한다는 사실을 기억하시나요?"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:268
+msgid ""
+"Finally the map is ready for export! You'll see the export buttons near the "
+"top left corner of the layout window:"
+msgstr "이제야 맵을 내보낼 준비가 끝났습니다! 조판 창의 좌상단 구석에 내보내기 버튼들이 보일 것입니다:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:271
+msgid ""
+"|filePrint| :sup:`Print Layout`: interfaces with a printer. Since the "
+"printer options will differ depending on the model of printer that you're "
+"working with, it's probably better to consult the printer manual or a "
+"general guide to printing for more information on this topic."
+msgstr ""
+"|filePrint| :sup:`Print Layout`: 프린터를 사용하기 위한 인터페이스입니다. 여러분이 사용하는 프린터 모델에 따라"
+" 프린터 옵션이 달라질 것이기 때문에, 이 주제에 대해서 더 많은 정보를 알고 싶다면 프린터 매뉴얼이나 인쇄를 위한 일반 지침을 찾아보는"
+" 편이 나을 것입니다."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:340
 msgid "filePrint"
 msgstr "filePrint"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:277
+msgid "The other buttons allow you to export the map page to a file."
+msgstr "다른 버튼들은 맵 페이지를 파일로 내보낼 수 있습니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:278
+msgid ""
+"|saveMapAsImage| :sup:`Export as Image`: gives you a selection of various "
+"common image formats to choose from. This is probably the simplest option, "
+"but the image it creates is \"dead\" and difficult to edit."
+msgstr ""
+"|saveMapAsImage| :sup:`Export as Image`: 자주 쓰이는 여러 이미지 포맷들 가운데 하나를 선택할 수 "
+"있습니다. 가장 단순한 옵션이겠지만, 이 버튼으로 생성된 이미지는 \"죽은\" 이미지이기 때문에 편집하기 어렵습니다."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:357
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
 
+#: ../../docs/training_manual/map_composer/map_composer.rst:282
+msgid ""
+"|saveAsSVG| :sup:`Export as SVG`: If you're sending the map to a "
+"cartographer (who may want to edit the map for publication), it's best to "
+"export as an SVG. SVG stands for \"Scalable Vector Graphic\", and can be "
+"imported to programs like `Inkscape <https://inkscape.org/>`_ or other "
+"vector image editing software."
+msgstr ""
+"|saveAsSVG| :sup:`Export as SVG`: (출판을 위해 맵을 편집하길 원할 수도 있는) 지도 제작자에게 맵을 보내는 "
+"경우, SVG 파일로 내보내는 것이 가장 낫습니다. SVG는 \"Scalable Vector Graphics\"의 약자로, `잉크스케이프"
+" <https://inkscape.org/ko/>`_ 또는 다른 벡터 이미지 편집 소프트웨어로 가져올 수 있는 포맷입니다."
+
 #: ../../docs/training_manual/map_composer/map_composer.rst:355
 msgid "saveAsSVG"
 msgstr "saveAsSVG"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:287
+msgid ""
+"|saveAsPDF| :sup:`Export as PDF`: If you need to send the map to a client, "
+"it's most common to use a PDF, because it's easier to set up printing "
+"options for a PDF. Some cartographers may prefer PDF as well, if they have a"
+" program that allows them to import and edit this format."
+msgstr ""
+"|saveAsPDF| :sup:`Export as PDF`: 클라이언트에게 맵을 보내야 하는 경우, PDF 파일을 사용하는 경우가 가장 "
+"많습니다. 왜냐하면 PDF에 대한 인쇄 옵션을 설정하는 것이 가장 쉽기 때문입니다. 몇몇 지도 제작자들도 PDF를 선호할 수 있습니다. "
+"이 포맷을 가져와서 편집할 수 있는 프로그램을 소유하고 있는 경우에 말이죠."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:353
 msgid "saveAsPDF"
@@ -250,3 +642,61 @@ msgstr "saveAsPDF"
 #: ../../docs/training_manual/map_composer/map_composer.rst:293
 msgid "For our purposes, we're going to use PDF."
 msgstr "이 예제에서는 PDF 포맷을 사용하겠습니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:295
+msgid "Click the |saveAsPDF| :sup:`Export as PDF` button"
+msgstr "|saveAsPDF| :sup:`Export as PDF` 버튼을 누르십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:296
+msgid ""
+"Choose a save location and a file name as usual. The following dialog will "
+"show up."
+msgstr "보통 때와 마찬가지로 저장 위치와 파일 이름을 선택하십시오. 다음 대화창이 열릴 것입니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:302
+msgid "You can safely use the default values now and click :guilabel:`Save`."
+msgstr "이제 안전하게 기본값을 사용해서 :guilabel:`Save` 를 클릭하면 됩니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:305
+msgid ""
+"QGIS will proceed to the map export and push a message on top of the print "
+"layout dialog as soon as it finishes."
+msgstr "QGIS가 맵 내보내기를 진행하고, 완료되자마자 인쇄 조판 대화창 상단에 메시지를 띄울 것입니다."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:307
+msgid ""
+"Click the hyperlink in the message to open the folder in which the PDF has "
+"been saved in your system's file manager"
+msgstr "메시지에 있는 하이퍼링크를 클릭해서 여러분의 시스템의 파일 관리자에서 PDF가 저장된 폴더를 여십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:309
+msgid "Open it and see how your layout looks."
+msgstr "PDF 파일을 열어 여러분의 조판이 어떻게 보이는지 살펴보십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:311
+msgid ""
+"Everything is OK? Congratulations on your first completed QGIS map project!"
+msgstr "다 괜찮나요? 여러분의 첫 번째 QGIS 맵 프로젝트가 완료된 것을 축하드립니다!"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:314
+msgid ""
+"Anything unsatisfying? Go back to the QGIS window, do the appropriate "
+"modifications and export again."
+msgstr "만족스럽지 않은 부분이 있나요? QGIS 창으로 돌아가서, 알맞은 수정을 한 다음 다시 내보내보십시오."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:316
+msgid "Remember to save your project file."
+msgstr "프로젝트 파일을 저장하는 것을 잊지 마세요."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:320
+msgid "In Conclusion"
+msgstr "결론"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:321
+msgid ""
+"Now you know how to create a basic static map layout. We can go a step "
+"further and create a map layout that adapts dynamically, with more layout "
+"items."
+msgstr ""
+"이제 기본 정적 맵 조판을 생성하는 방법을 알게 되었습니다. 여기에서 한 발짝 더 나아가, 더 많은 조판 항목을 사용해서 동적으로 "
+"조정되는 맵 조판을 생성할 수 있습니다."
