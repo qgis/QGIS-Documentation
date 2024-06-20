@@ -32,44 +32,475 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:2
+msgid "Lesson: Creating a Dynamic Print Layout"
+msgstr "수업: 동적 인쇄 조판 생성하기"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:4
+msgid ""
+"Now that you have learned to create a basic map layout we go a step further "
+"and create a map layout that adapts dynamically to our map extent and to the"
+" page properties, e.g. when you change the size of the page. Also, the date "
+"of creation will adapt dynamically."
+msgstr ""
+"여러분이 이제 기본 맵 조판을 생성하는 방법을 배웠기 때문에, 여기에서 한 발짝 더 나아가 예를 들어 용지 크기를 변경할 때 맵 범위와 "
+"용지 속성에 맞춰 동적으로 조정되는 맵 조판을 생성할 것입니다. 생성일자 또한 동적으로 조정될 것입니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:11
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Creating the dynamic map canvas"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 동적 맵 캔버스 생성하기"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:13
+msgid ""
+"Load the ESRI Shapefile format datasets :file:`protected_areas.shp`, "
+":file:`places.shp`, :file:`rivers.shp` and :file:`water.shp` into the map "
+"canvas and adapt its properties to suit your own convenience."
+msgstr ""
+"맵 캔버스에 :file:`protected_areas.shp`, :file:`places.shp`, :file:`rivers.shp` "
+"and :file:`water.shp` ESRI 셰이프파일 포맷 데이터셋들을 불러와서 여러분의 편의에 맞춰 조정하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:17
+msgid ""
+"After everything is rendered and symbolized to your liking, click the "
+"|newLayout| :sup:`New Print Layout` icon in the :guilabel:`Project` toolbar "
+"or choose :menuselection:`Project -->` |newLayout| :menuselection:`New Print"
+" Layout`. You will be prompted to choose a title for the new print layout."
+msgstr ""
+"모든 것이 사용자 마음에 들도록 렌더링되고 심볼도 적용된 후에야, :guilabel:`Project` 툴바에 있는 |newLayout| "
+":sup:`New Print Layout` 아이콘을 클릭하거나 :menuselection:`Project -->` |newLayout| "
+":menuselection:`New Print Layout` 메뉴 옵션을 선택하십시오. 새 인쇄 조판의 제목을 설정하라는 메시지가 뜰 "
+"것입니다."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:329
 msgid "newLayout"
 msgstr "newLayout"
 
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:21
+msgid ""
+"We want to create a map layout consisting of a header and a map of the "
+"region near Swellendam, South Africa. The layout should have a margin of 7.5"
+" mm and the header should be 36mm high."
+msgstr ""
+"우리는 헤더(header)와 남아프리카 공화국 스왈렌담(Swellendam) 시 근접 지역의 맵으로 이루어진 지도 조판을 생성하고자 "
+"합니다. 이 조판의 여백은 7.5mm, 헤더의 높이는 36mm이어야 합니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:25
+msgid ""
+"Create a map item called ``main map`` on the canvas and go to the "
+":guilabel:`Layout` panel. Scroll down to the :guilabel:`Variables` section "
+"and find the :guilabel:`Layout` part. Here we set some variables you can use"
+" all over the dynamic print layout. Go to the :guilabel:`Layout` panel and "
+"scroll down to the :guilabel:`Variables` section. The first variable will "
+"define the margin. Press the |symbologyAdd| button and type in the name "
+"``sw_layout_margin``. Set the value to ``7.5``. Press the |symbologyAdd| "
+"button again and type in the name ``sw_layout_height_header``. Set the value"
+" to ``36``."
+msgstr ""
+"캔버스 상에 ``main map`` 이라는 맵 항목을 생성하고 :guilabel:`Layout` 패널로 가서 "
+":guilabel:`Variables` 부분으로 스크롤한 다음 :guilabel:`Layout` 을 찾으십시오. 여기에서 동적 인쇄 조판"
+" 전체에 걸쳐 사용할 수 있는 변수를 몇 개 설정할 것입니다. :guilabel:`Layout` 패널에서 "
+":guilabel:`Variables` 부분으로 스크롤하십시오. 가장 먼저 정의할 변수는 여백입니다. |symbologyAdd| 버튼을 "
+"누른 다음 ``sw_layout_margin`` 이라는 이름을 입력하고 그 값을 ``7.5`` 로 설정하십시오. "
+"|symbologyAdd| 버튼을 다시 누른 다음 ``sw_layout_height_header`` 라는 이름을 입력하고 그 값을 "
+"``36`` 으로 입력하십시오."
+
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:337
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:40
+msgid ""
+"Now you are ready to create the position and the size of the map canvas "
+"automatically by means of the variables. Make sure that your map item is "
+"selected, go to the :guilabel:`Item Properties` panel, scroll down to and "
+"open the :guilabel:`Position and Size` section. Click the "
+"|dataDefineExpressionOn| :sup:`Data defined override` for :guilabel:`X` and "
+"from the :guilabel:`Variables` entry, choose ``@sw_layout_margin``."
+msgstr ""
+"이제 변수라는 수단을 통해 맵 캔버스의 위치와 크기를 자동적으로 생성할 수 있는 준비가 끝났습니다. 맵 항목이 선택된 상태인지 확인한 "
+"다음, :guilabel:`Item Properties` 패널로 가서 :guilabel:`Position and Size` 부분을 "
+"여십시오. :guilabel:`X` 의 |dataDefineExpressionOn| :sup:`Data defined override` "
+"버튼을 클릭하고 :guilabel:`Variables` 항목에서 ``@sw_layout_margin`` 을 선택하십시오."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:325
 msgid "dataDefineExpressionOn"
 msgstr "dataDefineExpressionOn"
 
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:48
+msgid ""
+"Click the |dataDefineExpressionOn| :sup:`Data defined override` for "
+":guilabel:`Y`, choose :guilabel:`Edit...` and type in the formula::"
+msgstr ""
+":guilabel:`Y` 의 |dataDefineExpressionOn| :sup:`Data defined override` 버튼을 "
+"클릭한 다음, :guilabel:`Edit...` 을 선택하고 다음 공식을 입력하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:54
+msgid ""
+"You can create the size of the map item by using the variables for "
+":guilabel:`Width` and :guilabel:`Height`. Click the |dataDefineExpressionOn|"
+" :sup:`Data defined override` for :guilabel:`Width` and choose "
+":guilabel:`Edit ...` again. Fill in the formula::"
+msgstr ""
+":guilabel:`Width` 와 :guilabel:`Height` 변수를 사용해서 맵 항목의 크기를 생성할 수 있습니다. "
+":guilabel:`Width` 의 |dataDefineExpressionOn| :sup:`Data defined override` "
+"버튼을 클릭하고 다시 :guilabel:`Edit ...` 을 선택한 다음, 다음 공식을 입력하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:62
+msgid ""
+"Click the |dataDefineExpressionOn| :sup:`Data defined override` for "
+":guilabel:`Height` and choose :guilabel:`Edit ...`. Here fill in the "
+"formula::"
+msgstr ""
+":guilabel:`Height` 의 |dataDefineExpressionOn| :sup:`Data defined override` "
+"버튼을 클릭한 다음, :guilabel:`Edit...` 을 선택하고 다음 공식을 입력하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:68
+msgid ""
+"We will also create a grid containing the coordinates of the main canvas map"
+" extent. Go to :guilabel:`Item Properties` again and choose the "
+":guilabel:`Grids` section. Insert a grid by clicking the |symbologyAdd| "
+"button. Click on :guilabel:`Modify grid ...` and set the "
+":guilabel:`Interval` for :guilabel:`X`, :guilabel:`Y` and :guilabel:`Offset`"
+" according to the map scale you chose in the QGIS main canvas. The "
+":guilabel:`Grid type` :guilabel:`Cross` is very well suited for our "
+"purposes."
+msgstr ""
+"주 맵 캔버스 범위의 좌표를 담고 있는 그리드도 생성할 것입니다. 다시 :guilabel:`Item Properties` 패널로 가서 "
+":guilabel:`Grids` 부분을 여십시오. |symbologyAdd| 버튼을 클릭해서 그리드를 삽입하십시오. "
+":guilabel:`Modify grid ...` 를 클릭하고 QGIS 주 캔버스에서 선택한 맵 축척을 따라 :guilabel:`X`, "
+":guilabel:`Y` 및 :guilabel:`Offset` 에 대한 :guilabel:`Interval` 을 설정하십시오. "
+":guilabel:`Grid type` 가운데 :guilabel:`Cross` 가 이 예제의 목적에 잘 부합합니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:81
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Creating the dynamic header"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 동적 헤더 생성하기"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:83
+msgid ""
+"Insert a rectangle which will contain the header with the |addBasicShape| "
+":sup:`Add Shape` button. In the :guilabel:`Items` panel enter the name "
+"``header``."
+msgstr ""
+"|addBasicShape| :sup:`Add Shape` 버튼으로 헤더를 담게 될 직사각형을 삽입하십시오. "
+":guilabel:`Items` 패널에서 ``header`` 라는 이름을 입력하십시오."
+
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:319
 msgid "addBasicShape"
 msgstr "addBasicShape"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:86
+msgid ""
+"Again, go to the :guilabel:`Item Properties` and open the "
+":guilabel:`Position and Size` section. Using |dataDefineExpressionOn| "
+":sup:`Data defined override`, choose the ``sw_layout_margin`` variable for "
+":guilabel:`X` as well as for :guilabel:`Y`. :guilabel:`Width` shall be "
+"defined by the expression::"
+msgstr ""
+":guilabel:`Item Properties` 패널로 다시 가서 :guilabel:`Position and Size` 부분을 "
+"여십시오. :guilabel:`X` 는 물론 :guilabel:`Y` 의 |dataDefineExpressionOn| :sup:`Data"
+" defined override` 버튼들을 사용해서 ``sw_layout_margin`` 변수를 선택하십시오. "
+":guilabel:`Width` 는 다음 표현식을 사용해서 정의해야 합니다:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:95
+msgid "and :guilabel:`Height` by the ``sw_layout_height_header`` variable."
+msgstr "그리고 :guilabel:`Height` 는 ``sw_layout_height_header`` 변수로 정의해야 합니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:96
+msgid ""
+"We will insert a horizontal line and two vertical lines to divide the header"
+" into different sections using the |addNodesShape| :sup:`Add Node Item`. "
+"Create a horizontal line and two vertical lines and name them ``Horizontal "
+"line``, ``Vertical line 1`` ``Vertical line 2``."
+msgstr ""
+"|addNodesShape| :sup:`Add Node Item` 버튼을 사용해서 헤더를 서로 다른 부분들로 분할하는 수평선 하나와 "
+"수직선 2개를 삽입할 것입니다. 수평선 하나와 수직선 2개를 생성한 다음 각각 ``Horizontal line``, ``Vertical "
+"line 1``, ``Vertical line 2`` 라고 이름 붙이십시오."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:323
 msgid "addNodesShape"
 msgstr "addNodesShape"
 
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:102
+msgid "For the horizontal line:"
+msgstr "수평선의 경우:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:104
+msgid "Set :guilabel:`X` to the variable ``sw_layout_margin``"
+msgstr ":guilabel:`X` 를 ``sw_layout_margin`` 변수로 설정하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:105
+msgid "Set the expression for :guilabel:`Y` to::"
+msgstr ":guilabel:`Y` 에 대한 표현식을 다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:109
+msgid "Set the expression for :guilabel:`Width` to::"
+msgstr ":guilabel:`Width` 에 대한 표현식을 다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:113
+msgid "For the first vertical line:"
+msgstr "첫 번째 수직선의 경우:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:115
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:127
+msgid "Set the expression for :guilabel:`X` to::"
+msgstr ":guilabel:`X` 에 대한 표현식을 다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:119
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:131
+msgid "Set :guilabel:`Y` to the variable ``sw_layout_margin``"
+msgstr ":guilabel:`Y` 를 ``sw_layout_margin`` 변수로 설정하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:120
+msgid ""
+"The height must be the same as the header we created, so set "
+":guilabel:`Height` to the variable ``sw_layout_height_header``."
+msgstr ""
+"첫 번째 수직선의 높이는 우리가 생성한 헤더의 높이와 반드시 동일해야만 하기 때문에, :guilabel:`Height` 를 "
+"``sw_layout_height_header`` 변수로 설정하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:124
+msgid "The second vertical line is placed to the left of the first one."
+msgstr "두 번째 수직선은 첫 번째 수직선의 왼쪽에 배치됩니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:132
+msgid ""
+"The height shall be the same as the other vertical line, so set "
+":guilabel:`Height` to the variable ``sw_layout_height_header``."
+msgstr ""
+"두 번째 수직선의 높이는 첫 번째 수직선의 높이와 동일해야 하기 때문에, :guilabel:`Height` 를 "
+"``sw_layout_height_header`` 변수로 설정하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:136
+msgid ""
+"The figure below shows the structure of our dynamic layout. We will fill the"
+" areas created by the lines with some elements."
+msgstr "다음 그림은 우리가 생성한 동적 조판의 구조를 보여줍니다. 수평선과 수직선으로 만들어진 영역을 몇몇 요소들로 채울 것입니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:143
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Creating labels for the dynamic "
+"header"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 동적 헤더 용 라벨 생성하기"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:145
+msgid ""
+"The title of your QGIS project can be included automatically. The title is "
+"set in the :guilabel:`Project Properties`. Insert a label with the |label| "
+":sup:`Add Label` button and enter the name ``project title (variable)``. In "
+"the :guilabel:`Main Properties` of the :guilabel:`Items Properties` Panel "
+"enter the expression::"
+msgstr ""
+"여러분의 QGIS 프로젝트 제목을 자동으로 포함시킬 수 있습니다. :guilabel:`Project Properties` 에서 설정한 "
+"제목 말입니다. |label| :sup:`Add Label` 버튼으로 라벨을 삽입하고 ``project title (variable)``"
+" 이라는 이름을 입력하십시오. :guilabel:`Items Properties` 패널의 :guilabel:`Main "
+"Properties` 에 다음 표현식을 입력하십시오:"
+
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:327
 msgid "label"
 msgstr "label"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:154
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:183
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:210
+msgid "Set the position of the label."
+msgstr "라벨의 위치를 설정하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:156
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:185
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:212
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:235
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:255
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:281
+msgid "For :guilabel:`X`, use the expression::"
+msgstr ":guilabel:`X` 의 경우, 다음 표현식을 사용하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:160
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:189
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:216
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:239
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:259
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:285
+msgid "For :guilabel:`Y`, use the expression::"
+msgstr ":guilabel:`Y` 의 경우, 다음 표현식을 사용하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:164
+msgid "For :guilabel:`Width`, use the expression::"
+msgstr ":guilabel:`Width` 의 경우, 다음 표현식을 사용하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:168
+msgid "Enter ``11.25`` for :guilabel:`Height`"
+msgstr ":guilabel:`Height` 의 경우, ``11.25`` 라고 입력하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:170
+msgid "Under :guilabel:`Appearance` set the Font size to 16 pt."
+msgstr ":guilabel:`Appearance` 에서 글꼴 크기를 16포인트로 설정하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:172
+msgid ""
+"The second label will include a description of the map you created. Again, "
+"insert a label and name it ``map description``. In the :guilabel:`Main "
+"Properties` enter the text ``map description``. In the :guilabel:`Main "
+"Properties` we will also include::"
+msgstr ""
+"두 번째 라벨은 여러분이 생성한 맵의 설명을 포함할 것입니다. 다시 라벨을 삽입하고 ``map description`` 이라는 이름을 "
+"붙이십시오. :guilabel:`Main Properties` 에 ``map description`` 문자열을 입력하십시오. "
+":guilabel:`Main Properties` 에 다음도 포함시킬 것입니다:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:180
+msgid ""
+"Here we used two ``Date and Time`` functions (``now`` and ``format_date``)."
+msgstr "여기에 ``Date and Time`` 함수 2개를 (``now`` 와 ``format_date`` 를) 사용했습니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:193
+msgid ""
+"The third label will include information about your organisation. First we "
+"will create some variables in the :guilabel:`Variables` menu of the "
+":guilabel:`Item Properties`. Go to the :guilabel:`Layout` menu, click the "
+"|symbologyAdd| button each time and enter the names ``o_department``, "
+"``o_name`` , ``o_adress`` and ``o_postcode``. In the second row enter the "
+"information about your organisation. We will use these variables in the "
+":guilabel:`Main Properties` section."
+msgstr ""
+"세 번째 라벨은 여러분의 조직에 대한 정보를 포함할 것입니다. 먼저 :guilabel:`Item Properties` 의 "
+":guilabel:`Variables` 메뉴에서 변수를 몇 개 생성할 것입니다. :guilabel:`Layout` 메뉴로 가서, 매번 "
+"|symbologyAdd| 버튼을 클릭하고 각각 ``o_department``, ``o_name`` , ``o_adress`` 및 "
+"``o_postcode`` 라는 이름을 입력하십시오. 두 번째 행에는 여러분의 조직에 대한 정보를 입력하십시오. "
+":guilabel:`Main Properties` 부분에서 이 변수들을 사용할 것입니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:203
+msgid "In :guilabel:`Main Properties` enter::"
+msgstr ":guilabel:`Main Properties` 에 다음을 입력하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:220
+msgid "For :guilabel:`Width`, use ``49.00``"
+msgstr ":guilabel:`Width` 의 경우, ``49.00`` 라고 입력하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:221
+msgid "For :guilabel:`Height`, use the expression::"
+msgstr ":guilabel:`Height` 의 경우, 다음 표현식을 사용하십시오:"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:228
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Adding pictures to the dynamic "
+"header"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 동적 헤더에 그림 추가하기"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:230
+msgid ""
+"Use the |addImage| :sup:`Add Picture` button to place a picture above your "
+"label ``organisation information``. After entering the name ``organisation "
+"logo`` define the position and size of the logo:"
+msgstr ""
+"|addImage| :sup:`Add Picture` 버튼을 사용해서 여러분의 ``organisation information`` 라벨 "
+"위에 그림을 배치하십시오. 이 그림에 ``organisation logo`` 라는 이름을 붙인 다음, 로고의 위치와 크기를 정의하십시오:"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:321
 msgid "addImage"
 msgstr "addImage"
 
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:243
+msgid "For :guilabel:`Width`, use ``39.292``"
+msgstr ":guilabel:`Width` 의 경우, ``39.292`` 라고 입력하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:244
+msgid "For :guilabel:`Height`, use ``9.583``"
+msgstr ":guilabel:`Height` 의 경우, ``9.583`` 이라고 입력하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:246
+msgid ""
+"To include a logo of your organisation you have to save your logo under your"
+" home directory and enter the path under :menuselection:`Main Properties -->"
+" Image Source`."
+msgstr ""
+"여러분의 조직의 로고를 포함시키려면 여러분의 홈 디렉터리에 로고를 저장한 다음 :menuselection:`Main Properties "
+"--> Image Source` 에 경로를 입력해야 합니다."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:249
+msgid ""
+"Our layout still needs a north arrow. This will also be inserted by using "
+"|northArrow| :sup:`Add North Arrow`. We will use the default north arrow. "
+"Define the position:"
+msgstr ""
+"이 조판에는 아직 방위표가 없습니다. |northArrow| :sup:`Add North Arrow` 버튼을 사용해서 방위표를 삽입할 "
+"것입니다. 기본 방위표를 사용하고, 방위표의 위치를 다음과 같이 정의하십시오:"
+
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:331
 msgid "northArrow"
 msgstr "northArrow"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:263
+msgid "For :guilabel:`Width`, use ``21.027``"
+msgstr ":guilabel:`Width` 의 경우, ``21.027`` 이라고 입력하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:264
+msgid "For :guilabel:`Height`, use ``21.157``"
+msgstr ":guilabel:`Height` 의 경우, ``21.157`` 이라고 입력하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:267
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Creating the scalebar of the "
+"dynamic header"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 동적 헤더의 축척 막대 생성하기"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:269
+msgid ""
+"To insert a scalebar in the header click on |scaleBar| :sup:`Add Scale Bar` "
+"and place it in the rectangle above the north arrow. In :guilabel:`Map` "
+"under the :guilabel:`Main Properties` choose your ``main map(Map 1)``. This "
+"means that the scale changes automatically according to the extent you "
+"choose in the QGIS main canvas. Choose the :guilabel:`Style` "
+":guilabel:`Numeric`. This means that we insert a simple scale without a "
+"scalebar. The scale still needs a position and size."
+msgstr ""
+"헤더에 축척 막대를 삽입하려면 |scaleBar| :sup:`Add Scale Bar` 버튼을 클릭한 다음 방위표 위에 있는 직사각형 "
+"안에 배치하십시오. :guilabel:`Main Properties` 의 :guilabel:`Map` 에서 ``main map(Map "
+"1)`` 을 선택하십시오. 이렇게 하면 여러분이 QGIS 주 캔버스에서 선택한 범위에 따라 축척이 자동으로 변경됩니다. "
+":guilabel:`Style` 을 :guilabel:`Numeric` 으로 선택하면 축척 막대 대신 단순한 축척을 삽입합니다. 이 "
+"축척도 위치와 크기를 정의해줘야 합니다."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:335
 msgid "scaleBar"
 msgstr "scaleBar"
 
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:289
+msgid "For :guilabel:`Width`, use ``25``"
+msgstr ":guilabel:`Width` 의 경우, ``25`` 라고 입력하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:290
+msgid "For :guilabel:`Height`, use ``8``"
+msgstr ":guilabel:`Height` 의 경우, ``8`` 이라고 입력하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:291
+msgid "Place the ``Reference point`` in the center."
+msgstr "중심에 ``Reference point`` 를 배치하십시오."
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:293
+msgid ""
+"Congratulations! You have created your first dynamic map layout. Take a look"
+" at the layout and check if everything looks the way you want it! The "
+"dynamic map layout reacts automatically when you change the :guilabel:`page "
+"properties`. For example, if you change the page size from DIN A4 to DIN A3,"
+" click the |refresh| :sup:`Refresh view` button and the page design is "
+"adapted."
+msgstr ""
+"축하합니다! 여러분의 첫 동적 지도 조판을 생성하셨습니다. 이 조판을 살펴보고 모든 것이 여러분이 바라던 대로 보이는지 확인하십시오! "
+"동적 지도 조판은 여러분이 :guilabel:`page properties` 를 변경할 때마다 자동적으로 반응합니다. 예를 들어 여러분이"
+" 용지 크기를 DIN A4에서 DIN A3로 변경하는 경우, |refresh| :sup:`Refresh view` 버튼을 클릭하면 페이지"
+" 디자인이 조정됩니다."
+
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:333
 msgid "refresh"
 msgstr "refresh"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:306
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
+
+#: ../../docs/training_manual/map_composer/dynamic_layout.rst:308
+msgid ""
+"On the next page, you will be given an assignment to complete. This will "
+"allow you to practice the techniques you have learned so far."
+msgstr "다음 페이지에서, 여러분은 완성해야 할 과제를 받게 될 것입니다. 이제까지 배웠던 기술들을 연습해볼 수 있을 것입니다."
