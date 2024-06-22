@@ -32,13 +32,17 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:2
+msgid "Lesson: Feature Topology"
+msgstr "수업: 피처 위상"
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:4
 msgid ""
 "Topology is a useful aspect of vector data layers, because it minimizes "
 "errors such as overlap or gaps."
-msgstr "위상은 벡터 데이터 레이어의 유용한 성질입니다. 겹침이나 틈과 같은 오류를 최소화해주기 때문입니다."
+msgstr "위상은 벡터 데이터 레이어의 유용한 성질입니다. 중첩이나 틈과 같은 오류를 최소화해주기 때문입니다."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:7
 msgid ""
@@ -52,15 +56,91 @@ msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:12
 msgid "**The goal for this lesson:** To understand topology using examples."
-msgstr "**이 강의의 목표:** 예제를 통해 위상을 이해하기."
+msgstr "**이 수업의 목표:** 예제를 통해 위상을 이해하기."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:15
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Snapping"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보기: 스냅 작업"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:17
+msgid ""
+"Snapping makes topological editing easier. This will allow your mouse cursor"
+" to snap to other objects while you digitize. To set snapping options:"
+msgstr ""
+"스냅 작업은 위상 편집을 더 쉽게 만들어줍니다. 스냅은 디지타이즈 도중 여러분의 마우스 커서를 다른 객체에 붙게 해줄 것입니다. 스냅 "
+"옵션을 설정하려면:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:22
+msgid ""
+"Navigate to the menu entry :menuselection:`Project --> Snapping Options...`."
+msgstr ":menuselection:`Project --> Snapping Options...` 메뉴 항목을 찾아가십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:24
+msgid ""
+"Set up your :guilabel:`Snapping options` dialog to activate the ``landuse`` "
+"layer with :guilabel:`Type` *vertex* and tolerance ``12`` pixels:"
+msgstr ""
+":guilabel:`Snapping options` 대화창에서 ``landuse`` 레이어를 :guilabel:`Type` 은 "
+"*vertex* 로 그리고 허용 오차는 ``12`` 픽셀로 설정해서 활성화하십시오:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:31
+msgid ""
+"Make sure that the box in the :guilabel:`Avoid overlap` column is checked."
+msgstr ":guilabel:`Avoid overlap` 열에 있는 체크박스가 체크되어 있는지 확인하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:33
+msgid "Leave the dialog."
+msgstr "대화창을 닫으십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:34
+msgid ""
+"Select the :guilabel:`landuse` layer and enter edit mode (|toggleEditing|)"
+msgstr ":guilabel:`landuse` 레이어를 선택하고 편집 모드로 (|toggleEditing|) 들어가십시오."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:371
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:36
+msgid ""
+"Check (under :menuselection:`View --> Toolbars`) that the "
+":guilabel:`Advanced Digitizing` toolbar is enabled."
+msgstr ""
+"(:menuselection:`View --> Toolbars` 메뉴에서) :guilabel:`Advanced Digitizing` "
+"툴바가 활성화되어 있는지 확인하십시오."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:38
 msgid "Zoom to this area (enable layers and labels if necessary):"
-msgstr "다음 지역으로 줌인/줌아웃합니다. (필요한 경우 레이어와 라벨을 활성화하십시오.)"
+msgstr "다음 지역으로 확대/축소하십시오. (필요한 경우 레이어와 라벨을 활성화하십시오.)"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:43
+msgid "Digitize this new (fictional) area shown in red:"
+msgstr "빨간색으로 보이는 이 새로운 (가상의) 지역을 디지타이즈하십시오:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:48
+msgid ""
+"When prompted, give it an *OGC_FID* of :kbd:`999`, but feel free to leave "
+"the other values unchanged."
+msgstr ""
+"프롬프트 창이 뜨면, 디지타이즈한 피처의 *OGC_FID* 를 :kbd:`999` 로 설정하십시오. 하지만 다른 값들은 그대로 유지해도 "
+"됩니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:51
+msgid ""
+"If you are careful while digitizing, and allow the cursor to snap to the "
+"vertices of adjoining areas, you'll notice that there won't be any gaps "
+"between your new area and the existing adjacent areas."
+msgstr ""
+"디지타이즈 작업 시 신중했다면, 그리고 커서가 인접한 영역들의 꼭짓점들에 스냅하도록 설정했다면, 여러분의 새 지역과 인접 지역들 사이에 "
+"어떤 틈(gap)도 없을 것이라는 사실을 알 수 있을 것입니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:55
+msgid ""
+"Note the |undo| :sup:`undo` and |redo| :sup:`redo` tools in the "
+":guilabel:`Advanced Digitizing` toolbar."
+msgstr ""
+":guilabel:`Advanced Digitizing` 툴바에 있는 |undo| :sup:`undo` 와 |redo| "
+":sup:`redo` 도구들을 기억해두십시오."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:373
 msgid "undo"
@@ -70,22 +150,92 @@ msgstr "undo"
 msgid "redo"
 msgstr "redo"
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:61
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Correct Topological Features"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보기: 위상적인 피처들 교정하기"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:63
+msgid ""
+"Topology features can sometimes need to be updated. In our study area, an "
+"area has been turned into forest, so the ``landuse`` layer need an update. "
+"We will therefore expand and join some forest features in this area:"
+msgstr ""
+"위상적 피처를 업데이트해야 할 경우가 종종 있습니다. 우리의 연구 지역에서, 어떤 영역이 삼림으로 전환되었다고 가정해봅시다. 즉 "
+"``landuse`` 레이어를 업데이트해줘야 합니다. 따라서 이 영역에 삼림 피처들 일부를 확장하고 결합할 것입니다:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:72
+msgid ""
+"Instead of creating new polygons to join the forest areas, we are going to "
+"use the *Vertex Tool* to edit and join existing polygons."
+msgstr ""
+"새 폴리곤들을 생성해서 삼림 영역에 결합시키는 대신, *꼭짓점 도구* 를 사용해서 기존 폴리곤들을 편집하고 결합시킬 것입니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:75
+msgid "Enter edit mode (if it is not active already)"
+msgstr "(아직 활성화된 상태가 아니라면) 편집 모드로 들어가십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:76
+msgid "Select the |vertexToolActiveLayer| :sup:`Vertex Tool` tool."
+msgstr "|vertexToolActiveLayer| :sup:`Vertex Tool` 도구를 선택하십시오."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:375
 msgid "vertexToolActiveLayer"
 msgstr "vertexToolActiveLayer"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:77
+msgid ""
+"Choose an area of forest, select a vertex, and move it to an adjoining "
+"vertex so that the two forest features meet:"
+msgstr "삼림 영역을 하나 선택한 다음, 꼭짓점을 선택하고 두 삼림 피처들이 접하도록 인접 꼭짓점으로 이동시키십시오:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:83
+msgid "Click on the other vertices and snap them into place."
+msgstr "다른 꼭짓점을 클릭해서 두 꼭짓점을 제자리에 스냅시키십시오."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:85
 msgid "The topologically correct border looks like this:"
 msgstr "위상적으로 올바른 경계선은 다음과 같이 보입니다."
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:90
+msgid "Go ahead and join a few more areas using the *Vertex Tool*."
+msgstr "*꼭짓점 도구* 를 사용해서 영역들을 몇 개 더 결합시켜보십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:92
+msgid ""
+"You can also use the |capturePolygon| :sup:`Add Polygon Feature` tool to "
+"fill the gap between the two forest polygons. If you have enabled *Avoid "
+"overlap*, you don't have to add every single vertex - they will be added "
+"automatically if your new polygon overlaps the existing ones."
+msgstr ""
+"두 삼림 폴리곤들 사이의 틈을 채우기 위해 |capturePolygon| :sup:`Add Polygon Feature` 도구도 사용할 "
+"수 있습니다. :guilabel:`Avoid overlap` 옵션을 활성화한 경우, 모든 꼭짓점을 하나하나 추가할 필요는 없습니다 ---"
+" 여러분의 새 폴리곤이 기존 폴리곤들과 중첩하는 경우 꼭짓점들이 자동적으로 추가될 것입니다."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:348
 msgid "capturePolygon"
 msgstr "capturePolygon"
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:98
+msgid ""
+"If you are using our example data, you should have a forest area looking "
+"something like this:"
+msgstr "예제 데이터를 사용하고 있다면, 다음처럼 보이는 삼림 영역을 보게 될 것입니다:"
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:104
 msgid ""
 "Don't worry if you have joined more, less or different areas of forest."
-msgstr "산림 구역을 그림보다 더, 혹은 적게, 아니면 다른 구역들을 합쳤다고 해도 괜찮습니다."
+msgstr "삼림 영역을 그림보다 더, 혹은 적게, 아니면 다른 삼림 영역들과 합쳤다고 해도 괜찮습니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:108
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Tool: Simplify Feature"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보기: 도구: 피처 단순화하기"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:110
+msgid ""
+"Continuing on the same layer, we will test the |simplify| :sup:`Simplify "
+"Feature` tool:"
+msgstr "같은 레이어 상에서 계속해서 |simplify| :sup:`Simplify Feature` 도구를 테스트해보겠습니다:"
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:365
 msgid "simplify"
@@ -95,9 +245,37 @@ msgstr "simplify"
 msgid "Click on it to activate it."
 msgstr "클릭해서 실행하십시오."
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:114
+msgid ""
+"Click on one of the areas which you joined using either the *Vertex Tool* or"
+" *Add Feature* tool. You will see this dialog:"
+msgstr ""
+"*꼭짓점 도구* 또는 *피처 추가* 도구 가운데 하나를 사용해서 결합시킨 영역들 가운데 하나를 클릭하십시오. 다음 대화창이 열릴 "
+"것입니다:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:121
+msgid "Modify the :guilabel:`Tolerance` and watch what happens:"
+msgstr ":guilabel:`Tolerance` 를 수정하고 어떤 일이 일어나는지 살펴보십시오:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:126
+msgid "This allows you to reduce the number of vertices."
+msgstr "이렇게 하면 꼭짓점의 개수를 줄일 수 있습니다."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:128
 msgid "Click :guilabel:`OK`"
 msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:130
+msgid ""
+"The advantage of this tool is that it provides you with a simple and "
+"intuitive interface for generalization. But notice that the tool ruins "
+"topology. The simplified polygon no longer shares boundaries with its "
+"adjacent polygons, as it should. So this tool is better suited for stand-"
+"alone features."
+msgstr ""
+"이 도구의 장점은 일반화를 위한 단순하고 직관적인 인터페이스를 제공한다는 것입니다. 그러나 이 도구는 위상을 망친다는 사실을 "
+"기억하십시오. 단순화된 폴리곤은 더 이상 인접 폴리곤들과 경계선을 공유하지 않습니다. 그래야 하는데 말이죠. 즉 이 도구는 독립 피처들에"
+" 더 적합합니다."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:137
 msgid ""
@@ -105,13 +283,72 @@ msgid ""
 "last change."
 msgstr "다음 단계를 시작하기 전에 마지막 변경 사항을 되돌려 원래 폴리곤 상태로 설정하십시오."
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:142
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Tool: Add Ring"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 도구: 고리 추가하기"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:144
+msgid ""
+"The |addRing| :sup:`Add Ring` tool allows you to add an interior ring to a "
+"polygon feature (cut a hole in the polygon), as long as the hole is "
+"completely contained within the polygon (touching the boundary is OK). For "
+"example, if you have digitized the outer boundaries of South Africa and you "
+"need to add a hole for Lesotho, you would use this tool."
+msgstr ""
+"|addRing| :sup:`Add Ring` 도구는 --- 구멍이 폴리곤 내부에 완전하게 담겨 있는 한(경계선과 접하는 것은 "
+"괜찮습니다) --- 폴리곤 피처에 내곽 고리(interior ring)를 추가할 수 있게 해줍니다. (폴리곤 안에 구멍을 냅니다.) 예를"
+" 들면, 여러분이 남아프리카 공화국의 경계선을 디지타이즈했는데 레소토(Lesotho) 왕국을 표현하는 구멍을 추가해야 하는 경우, 이 "
+"도구를 사용하면 됩니다."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:346
 msgid "addRing"
 msgstr "addRing"
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:152
+msgid ""
+"If you experiment with the tool, you may notice that the snapping options "
+"can prevent you from creating a ring inside a polygon. So you are advised to"
+" turn off snapping before cutting a hole."
+msgstr ""
+"이 도구를 시험해보는 경우, 스냅 옵션 때문에 폴리곤 내부에 고리를 생성할 수 없다는 사실을 알아차릴 수도 있을 겁니다. 따라서 구멍을 "
+"내기 전에 스냅 작업 옵션을 끌 것을 권장합니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:156
+msgid ""
+"Disable snapping for the ``landuse`` layer using the |snapping| :sup:`Enable"
+" Snapping` button (or use the shortcut :kbd:`s`)."
+msgstr ""
+"|snapping| :sup:`Enable Snapping` 버튼을 (또는 :kbd:`s` 단축키를) 사용해서 ``landuse`` "
+"레이어에 대한 스냅 작업 옵션을 비활성화시키십시오."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:367
 msgid "snapping"
 msgstr "snapping"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:158
+msgid ""
+"Use the |addRing| :sup:`Add Ring` tool to create a hole in the middle of a "
+"polygon geometry."
+msgstr "|addRing| :sup:`Add Ring` 도구를 사용해서 폴리곤 도형 한가운데 구멍을 생성하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:160
+msgid ""
+"Draw a polygon over the target feature, as if you were using the "
+"|capturePolygon| :sup:`Add polygon` tool."
+msgstr ""
+"여러분이 |capturePolygon| :sup:`Add polygon` 도구를 사용하는 것처럼 대상 피처 위에 폴리곤을 그리십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:162
+msgid "When you right-click, the hole will be visible."
+msgstr "오른쪽 클릭을 하면 구멍이 가시화될 것입니다"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:163
+msgid ""
+"Remove the hole you just created using the |deleteRing| :sup:`Delete Ring` "
+"tool. Click inside the hole to delete it."
+msgstr ""
+"|deleteRing| :sup:`Delete Ring` 도구를 사용하면 방금 생성한 구멍을 제거할 수 있습니다. 구멍 내부를 클릭해서 "
+"삭제하십시오."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:352
 msgid "deleteRing"
@@ -123,37 +360,222 @@ msgstr "deleteRing"
 msgid "Answer"
 msgstr "해답"
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:170
+msgid ""
+"The exact shape doesn't matter, but you should be getting a hole in the "
+"middle of your feature, like this one:"
+msgstr "정확한 형태는 상관없지만, 다음 그림처럼 피처 한가운데 구멍이 생성되어야 합니다:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:176
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:210
+msgid "Undo your edit before continuing with the exercise for the next tool."
+msgstr "다음 도구를 연습하기 전에 편집 내용을 실행 취소하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:180
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Tool: Add Part"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 도구: 부분 추가하기"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:182
+msgid ""
+"The |addPart| :sup:`Add Part` tool allows you to add a new part to a "
+"feature, that is not directly connected to the main feature. For example, if"
+" you have digitized the boundaries of mainland South Africa, but you haven't"
+" yet added the Prince Edward Islands, you would use this tool to create "
+"them."
+msgstr ""
+"|addPart| :sup:`Add Part` 도구는 피처에 --- 주 피처와 직접 연결되어 있지 않은 --- 새로운 부분을 추가할 수 "
+"있게 해줍니다. 예를 들면, 여러분이 남아프리카 공화국 본토의 경계선을 디지타이즈했지만 아직 프린스에드워드 제도는 추가하지 않은 경우,"
+"  이 도구를 사용해서 섬들을 생성하면 됩니다."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:344
 msgid "addPart"
 msgstr "addPart"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:188
+msgid ""
+"Select the polygon to which you wish to add the part by using the "
+"|selectRectangle| :sup:`Select Features by area or single click` tool."
+msgstr ""
+"|selectRectangle| :sup:`Select Features by area or single click` 도구를 사용해서 "
+"부분을 추가하고자 하는 폴리곤을 선택하십시오."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:363
 msgid "selectRectangle"
 msgstr "selectRectangle"
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:191
+msgid "Use the :guilabel:`Add Part` tool to add an outlying area."
+msgstr ":guilabel:`Add Part` 도구를 사용해서 외딴 영역을 추가하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:192
+msgid ""
+"Delete the part you just created using the |deletePart| :sup:`Delete Part` "
+"tool."
+msgstr "|deletePart| :sup:`Delete Part` 도구를 사용하면 방금 생성한 부분을 삭제할 수 있습니다."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:350
 msgid "deletePart"
 msgstr "deletePart"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:195
+msgid "Click inside the part to delete it."
+msgstr "부분 내부를 클릭해서 삭제하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:200
+msgid "First select the |largeLandUseArea|:"
+msgstr "먼저 |largeLandUseArea| 를 선택하십시오:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:205
+msgid "Now add your new part:"
+msgstr "이제 새로운 부분을 추가하십시오:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:214
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Tool: Reshape Features"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보기: 도구: 피처 형태 변경하기"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:216
+msgid ""
+"The |reshape| :sup:`Reshape Features` tool is used to extend a polygon "
+"feature or cut away a part of it (along the boundary)."
+msgstr ""
+"|reshape| :sup:`Reshape Features` 도구는 폴리곤 피처를 확장하거나 (경계선을 따라) 일부분을 잘라내는 데 "
+"쓰입니다."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:361
 msgid "reshape"
 msgstr "reshape"
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:219
+msgid "Extending:"
+msgstr "확장하기:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:221
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:238
+msgid ""
+"Select the polygon using the |selectRectangle| :sup:`Select Features by area"
+" or single click` tool."
+msgstr ""
+"|selectRectangle| :sup:`Select Features by area or single click` 도구를 사용해서 "
+"폴리곤을 선택하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:223
+msgid "Left-click inside the polygon to start drawing."
+msgstr "폴리곤 내부를 왼쪽 클릭해서 그리기 시작하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:224
+msgid ""
+"Draw a shape outside the polygon. The last vertex should be back inside the "
+"polygon."
+msgstr "폴리곤 외부에 형태를 그리십시오. 마지막 꼭짓점은 다시 폴리곤 내부로 돌아와야 합니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:226
+msgid "Right-click to finish the shape:"
+msgstr "오른쪽 클릭으로 형태를 완료하십시오:"
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:231
 msgid "This will give a result similar to:"
-msgstr "다음과 비슷한 결과를 보게 될 것입니다."
+msgstr "다음과 비슷한 결과를 보게 될 것입니다:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:236
+msgid "Cut away a part:"
+msgstr "부분을 잘라내기:"
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:240
 msgid "Click outside the polygon."
-msgstr "폴리곤 바깥을 클릭하십시오."
+msgstr "폴리곤 외부를 클릭하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:241
+msgid ""
+"Draw a shape inside the polygon. The last vertex must be back outside the "
+"polygon."
+msgstr "폴리곤 내부에 형태를 그리십시오. 마지막 꼭짓점은 다시 폴리곤 외부로 돌아가야 합니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:243
+msgid "Right-click outside the polygon:"
+msgstr "폴리곤 외부를 오른쪽 클릭하십시오:"
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:248
 msgid "The result of the above:"
-msgstr "다음과 비슷한 결과를 보게 될 것입니다."
+msgstr "다음과 비슷한 결과를 보게 될 것입니다:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:255
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Tool: Split Features"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 도구: 피처 분할하기"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:257
+msgid ""
+"The |splitFeatures| :sup:`Split Features` tool is similar to the |reshape| "
+":sup:`Reshape Features` tool, except that it does not delete either of the "
+"two parts. Instead, it keeps them both."
+msgstr ""
+"|splitFeatures| :sup:`Split Features` 도구는 |reshape| :sup:`Reshape Features` "
+"도구와 비슷하지만, 두 부분들 가운데 어떤 부분도 삭제하지 않는다는 점에서 다릅니다. 이 도구는 그 대신 두 부분을 모두 유지합니다."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:369
 msgid "splitFeatures"
 msgstr "splitFeatures"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:262
+msgid "We will use the tool to split a corner from a polygon."
+msgstr "이 도구를 사용해서 폴리곤에서 모퉁이 하나를 분할해볼 것입니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:264
+msgid "First, select the ``landuse`` layer and re-enable snapping for it."
+msgstr "먼저, ``landuse`` 레이어를 선택하고 스냅 작업 옵션을 다시 활성화시키십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:266
+msgid ""
+"Select the |splitFeatures| :sup:`Split Features` tool and click on a vertex "
+"to begin drawing a line."
+msgstr ""
+"|splitFeatures| :sup:`Split Features` 도구를 선택한 다음, 꼭짓점 하나를 클릭해서 라인을 하나 그리기 "
+"시작하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:269
+msgid "Draw the bounding line."
+msgstr "경계선을 그리십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:271
+msgid ""
+"Click a vertex on the \"opposite\" side of the polygon you wish to split and"
+" right-click to complete the line:"
+msgstr "분할하고자 하는 폴리곤의 \"반대쪽\"에 있는 꼭짓점을 클릭한 다음 오른쪽 클릭으로 라인을 완성하십시오:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:277
+msgid ""
+"At this point, it may seem as if nothing has happened. But remember that the"
+" ``landuse`` layer is rendered without border lines, so the new division "
+"line will not be shown."
+msgstr ""
+"이 시점에서는 아무일도 일어나지 않은 것처럼 보일 수도 있습니다. 그러나 ``landuse`` 레이어는 경계선 없이 렌더링되었기 때문에 "
+"새 분할선도 보이지 않을 것이라는 사실을 기억하세요."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:280
+msgid ""
+"Use the |selectRectangle| :sup:`Select Features by area or single click` "
+"tool to select the part you just split out; the new feature will now be "
+"highlighted:"
+msgstr ""
+"|selectRectangle| :sup:`Select Features by area or single click` 도구를 사용해서 "
+"여러분이 방금 분할시킨 부분을 선택하십시오. 새 피처가 강조되어 보일 것입니다:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:291
+msgid ":abbr:`★★★ (Advanced level)` Try Yourself: Tool: Merge Features"
+msgstr ":abbr:`★★★ (고급 수준)` 혼자서 해보세요: 도구: 피처 병합하기"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:293
+msgid ""
+"Now we will re-join the feature you just split out to the remaining part of "
+"the polygon:"
+msgstr "이제 여러분이 방금 분할한 피처를 폴리곤의 나머지 부분에 다시 결합해보겠습니다:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:296
+msgid ""
+"Experiment with  the |mergeFeatures|:sup:`Merge Selected Features` and "
+"|mergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tools."
+msgstr ""
+"|mergeFeatures|:sup:`Merge Selected Features` 와 |mergeFeatureAttributes| "
+":sup:`Merge Attributes of Selected Features` 도구를 시험해보십시오."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:357
 msgid "mergeFeatures"
@@ -167,9 +589,60 @@ msgstr "mergeFeatureAttributes"
 msgid "Note the differences."
 msgstr "달라진 점을 확인해보십시오."
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:305
+msgid ""
+"Use the :guilabel:`Merge Selected Features` tool, making sure to first "
+"select both of the polygons you wish to merge."
+msgstr ""
+"먼저 병합하고자 하는 폴리곤 2개를 모두 선택했는지 확인한 다음, :guilabel:`Merge Selected Features` 도구를"
+" 사용하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:307
+msgid ""
+"Use the feature with the :guilabel:`OGC_FID` of ``1`` as the source of your "
+"attributes (click on its entry in the dialog, then click the :guilabel:`Take"
+" attributes from selected feature` button):"
+msgstr ""
+":guilabel:`OGC_FID` 가 ``1`` 인 피처를 속성의 소스로 사용하십시오(대화창에서 해당 항목을 선택한 다음, "
+":guilabel:`Take attributes from selected feature` 버튼을 클릭하십시오):"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:311
+msgid ""
+"If you're using a different dataset, it is highly likely that your original "
+"polygon's :guilabel:`OGC_FID` will not be ``1``. Just choose the feature "
+"which has an :guilabel:`OGC_FID`."
+msgstr ""
+"여러분이 다른 데이터셋을 사용하고 있다면, 원본 폴리곤의 :guilabel:`OGC_FID` 가 ``1`` 이 아닐 가능성이 큽니다. "
+"그냥 :guilabel:`OGC_FID` 를 가진 피처를 선택하십시오."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:318
+msgid ""
+"Using the :guilabel:`Merge Attributes of Selected Features` tool will keep "
+"the geometries distinct, but give them the same attributes."
+msgstr ""
+":guilabel:`Merge Attributes of Selected Features` 도구를 사용하면 두 도형이 계속 별개로 "
+"유지되지만, 동일한 속성을 가지게 될 것입니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:322
+msgid "In Conclusion"
+msgstr "결론"
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:324
 msgid ""
 "Topology editing is a powerful tool that allows you to create and modify "
 "objects quickly and easily, while ensuring that they remain topologically "
 "correct."
-msgstr "위상 편집은 오브젝트를 빠르고 쉽게 생성하고 변경하면서도 위상적으로 올바르게 유지할 수 있는 강력한 도구입니다."
+msgstr "위상 편집은 객체를 빠르고 쉽게 생성하고 수정하면서도 위상적으로 올바르게 유지할 수 있는 강력한 도구입니다."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:330
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:332
+msgid ""
+"Now you know how to digitize the shape of the objects easily, but adding "
+"attributes is still a bit of a headache! Next we will show you how to use "
+"forms, making attribute editing simpler and more effective."
+msgstr ""
+"이제 객체의 형태를 쉽게 디지타이즈할 수 있는 방법을 배웠지만, 속성을 추가하는 일은 아직도 약간 골치 아픈 일입니다! 다음 수업에서는 "
+"속성을 더 간단하고 효율적으로 편집할 수 있게 해주는 양식(form)을 사용하는 방법을 배울 것입니다."
