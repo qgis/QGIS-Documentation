@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:2
+msgid "Lesson: Forms"
+msgstr "수업: 양식"
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:4
 msgid ""
@@ -42,20 +46,50 @@ msgid ""
 "especially if you have large datasets to create, or if you want other people"
 " to help you digitize and they find the default forms to be confusing."
 msgstr ""
-"디지타이즈 작업으로 새 데이터를 추가할 때, 피처에 대한 속성을 입력할 수 있는 대화 창이 나타납니다. 그러나 이 기본 대화 창은 한 "
-"눈에 파악하기 어렵습니다. 특히 여러분이 대용량 데이터셋을 생성하거나, 다른 사람들에게 디지타이즈 작업을 부탁했는데 기본 서식을 이해하기"
-" 어려워 할 경우 유용성 문제가 제기될 수 있습니다."
+"디지타이즈 작업으로 새 데이터를 추가할 때, 피처에 대한 속성을 입력할 수 있는 대화창이 나타납니다. 그러나 이 기본 대화창은 한 눈에 "
+"파악하기 어렵습니다. 특히 여러분이 대용량 데이터셋을 생성하거나, 다른 사람들에게 디지타이즈 작업을 부탁했는데 기본 양식을 이해하기 "
+"어려워 할 경우 유용성 문제가 제기될 수 있습니다."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:11
 msgid ""
 "Fortunately, QGIS lets you create your own custom dialogs for a layer. This "
 "lesson shows you how."
 msgstr ""
-"QGIS를 사용하면, 다행히도 레이어에 대한 사용자 지정 대화 창을 생성할 수 있습니다. 이 강의에서 그 방법을 배워보겠습니다."
+"QGIS를 사용하면, 다행히도 레이어에 대한 사용자 정의 대화창을 생성할 수 있습니다. 이 수업에서 그 방법을 배워보겠습니다."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:15
 msgid "**The goal for this lesson:** To create a form for a layer."
-msgstr "**이 강의의 목표:** 레이어에 대한 서식을 생성하기."
+msgstr "**이 수업의 목표:** 레이어에 대한 양식을 생성하기."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:18
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Using QGIS' Form Design "
+"Functionality"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: QGIS의 양식 디자인 기능 사용하기"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:20
+msgid "Select the ``roads`` layer in the :guilabel:`Layers` panel"
+msgstr ":guilabel:`Layers` 패널에서 ``roads`` 레이어를 선택하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:21
+msgid "Enter *Edit Mode* as before"
+msgstr "이전과 마찬가지로 *편집 모드* 로 들어가십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:22
+msgid "Open the ``roads`` layer's attribute table"
+msgstr "``roads`` 레이어의 속성 테이블을 여십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:23
+msgid ""
+"Right-click on any cell in the table. A short menu will appear, that "
+"includes the :guilabel:`Open form` entry."
+msgstr ""
+"테이블에 있는 어떤 셀이든 하나를 오른쪽 클릭하십시오. :guilabel:`Open form` 메뉴 항목이 있는 짧은 컨텍스트 메뉴가 "
+"나타날 것입니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:25
+msgid "Click on it to see the form that QGIS generates for this layer"
+msgstr "이 항목을 클릭해서 QGIS가 이 레이어에 대해 생성한 양식을 살펴보십시오."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:27
 msgid ""
@@ -63,26 +97,99 @@ msgid ""
 "rather than needing to search for a specific street in the "
 ":guilabel:`Attribute Table` all the time."
 msgstr ""
-"물론 항상 :guilabel:`Attribute Table` 에서 특정 거리를 찾아봐야 하는 것보다 맵을 보면서 이 작업을 할 수 있다면"
-" 좋겠죠."
+"물론 항상 :guilabel:`Attribute Table` 에서 특정한 거리를 검색해야 하는 것보다는 맵을 보면서 이 작업을 할 수 "
+"있다면 좋겠죠."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:31
+msgid "Select the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
+msgstr ":guilabel:`Layers` 패널에서 ``roads`` 레이어를 선택하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:32
+msgid ""
+"Using the |identify| :sup:`Identify Features` tool, click on any street in "
+"the map."
+msgstr "|identify| :sup:`Identify Features` 도구를 사용해서 맵에 있는 어떤 거리든 하나를 클릭하십시오."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:272
 msgid "identify"
 msgstr "identify"
 
+#: ../../docs/training_manual/create_vector_data/forms.rst:34
+msgid ""
+"The :guilabel:`Identify Results` panel opens and shows a tree view of the "
+"fields values and other general information about the clicked feature."
+msgstr ""
+"클릭한 피처에 대한 필드 값과 기타 일반 정보의 트리 뷰를 보여주는 :guilabel:`Identify Results` 패널이 열립니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:37
+msgid ""
+"At the top of the panel, check the :guilabel:`Auto open form for single "
+"feature results` checkbox in the |options| :sup:`Identify Settings` menu."
+msgstr ""
+"이 패널의 최상단에서, |options| :sup:`Identify Settings` 메뉴에 있는 :guilabel:`Auto open "
+"form for single feature results` 체크박스를 체크하십시오."
+
 #: ../../docs/training_manual/create_vector_data/forms.rst:275
 msgid "options"
 msgstr "options"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:39
+msgid ""
+"Now, click again on any street in the map. Along the previous "
+":guilabel:`Identify Results` dialog, you'll see the now-familiar form:"
+msgstr ""
+"이제 맵에 있는 어떤 거리든 하나를 클릭하십시오. 이전의 :guilabel:`Identify Results` 대화창과 함께, 이젠 익숙한"
+" 양식을 보게 될 것입니다:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:46
+msgid ""
+"Each time you click on a single feature with the *Identify* tool, its form "
+"pops up as long as the :guilabel:`Auto open form` is checked."
+msgstr ""
+":guilabel:`Auto open form for single feature results` 옵션이 체크되어 있는 한, *식별* "
+"도구로 단일 피처를 클릭할 때마다 해당 피처의 양식이 나타날 것입니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:51
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Using the Form to Edit Values"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 양식을 사용해서 값을 편집하기"
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:53
 msgid ""
 "If you are in edit mode, you can use this form to edit a feature's "
 "attributes."
-msgstr "편집 모드에 들어온 상태라면, 이 서식을 사용해서 피처의 속성을 편집할 수 있습니다."
+msgstr "편집 모드로 들어온 상태라면, 이 양식을 사용해서 피처의 속성을 편집할 수 있습니다."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:56
 msgid "Activate edit mode (if it isn't already activated)."
 msgstr "(편집 모드가 아니라면) 편집 모드를 활성화하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:57
+msgid ""
+"Using the |identify| :sup:`Identify Features` tool, click on the main street"
+" running through |majorUrbanName|:"
+msgstr ""
+"|identify| :sup:`Identify Features` 도구를 사용해서 |majorUrbanName| 을 가로지르는 중심가를 "
+"클릭하십시오:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:63
+msgid "Edit its :guilabel:`highway` value to be ``secondary``"
+msgstr "이 도로의 :guilabel:`highway` 값을 ``secondary`` 로 편집하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:64
+msgid "Exit edit mode and save your edits"
+msgstr "편집 모드를 해제하고 편집 내용을 저장하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:65
+msgid ""
+"Open the :guilabel:`Attribute Table` and note that the value has been "
+"updated in the attributes table and therefore in the source data"
+msgstr ""
+":guilabel:`Attribute Table` 을 열어보면 속성 테이블의 값이, 즉 소스 데이터의 값이 업데이트되었다는 사실을 알 수"
+" 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:70
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Setting Form Field Types"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 양식 필드 유형 설정하기"
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:72
 msgid ""
@@ -90,16 +197,56 @@ msgid ""
 "everything by hand. Fortunately, forms have different kinds of so-called "
 "*widgets* that allow you to edit data in various different ways."
 msgstr ""
-"서식을 사용해서 편집하는 것도 좋지만, 모든 것을 직접 입력해야 하기도 합니다. 다행스럽게도, 서식에는 서로 다른 다양한 방법으로 "
-"데이터를 편집할 수 있도록 해주는, 소위 말하는 *위젯*이 여러 종류 있습니다."
+"양식을 사용해서 편집하는 것도 좋지만, 이 방법은 모든 것을 직접 입력해야 하기도 합니다. 다행스럽게도, 양식에는 서로 다른 다양한 "
+"방법으로 데이터를 편집할 수 있도록 해주는, 소위 말하는 *위젯* 이 여러 종류 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:77
+msgid "Open the :guilabel:`roads` layer's :guilabel:`Properties...`"
+msgstr "``roads`` 레이어의 :guilabel:`Properties...` 대화창을 여십시오."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:78
 msgid "Switch to the :guilabel:`Fields` tab. You'll see this:"
-msgstr ":guilabel:`Fields` 탭을 선택하십시오. 다음과 같은 창을 볼 수 있습니다."
+msgstr ":guilabel:`Fields` 탭을 선택하십시오. 다음과 같은 테이블을 볼 수 있습니다:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:83
+msgid "Switch to the :guilabel:`Attributes Form` tab. You'll see this:"
+msgstr ":guilabel:`Attributes Form` 탭으로 전환하십시오. 다음을 보게 될 것입니다:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:88
+msgid ""
+"Click on the ``oneway`` row and choose :guilabel:`Checkbox` as "
+":guilabel:`Widget Type` in the list of options:"
+msgstr ""
+"``oneway`` 행을 클릭한 다음 옵션 목록에서 :guilabel:`Widget Type` 을 :guilabel:`Checkbox` "
+"로 선택하십시오:"
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:94
 msgid "Click :guilabel:`OK`"
 msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:95
+msgid "Enter edit mode (if the ``roads`` layer is not already in edit mode)"
+msgstr "(``roads`` 레이어가 이미 편집 모드가 아니라면) 편집 모드로 들어가십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:96
+msgid "Click on the |identify| :sup:`Identify Features` tool"
+msgstr "|identify| :sup:`Identify Features` 도구를 클릭하십시오"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:97
+msgid "Click on the same main road you chose earlier"
+msgstr "앞서 선택했던 것과 동일한 중심가를 클릭하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:99
+msgid ""
+"You will now see that the :guilabel:`oneway` attribute has a checkbox next "
+"to it denoting ``True`` (checked) or ``False`` (unchecked)."
+msgstr ""
+"이제 ``oneway`` 속성 옆에 ``True`` (체크) 또는 ``False`` (체크 해제)를 의미하는 체크박스가 생긴 것을 볼 수"
+" 있을 것입니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:105
+msgid ":abbr:`★★★ (Advanced level)` Try Yourself:"
+msgstr ":abbr:`★★★ (고급 수준)` 혼자서 해보세요:"
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:107
 msgid "Set a more appropriate form widget for the :guilabel:`highway` field."
@@ -109,9 +256,62 @@ msgstr ":guilabel:`highway` 항목에 더 적합한 위젯을 설정해보십시
 msgid "Answer"
 msgstr "해답"
 
+#: ../../docs/training_manual/create_vector_data/forms.rst:112
+msgid ""
+"For the :guilabel:`TYPE`, there is obviously a limited amount of types that "
+"a road can be, and if you check the attribute table for this layer, you'll "
+"see that they are predefined."
+msgstr ""
+":guilabel:`TYPE` 의 경우, 도로가 가질 수 있는 유형의 개수는 당연하게도 제한되어 있고, 여러분이 이 레이어의 속성 "
+"테이블을 확인해본다면 이 도로 유형들이 사전 정의되어 있다는 사실을 알게 될 것입니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:116
+msgid ""
+"Set the widget to :guilabel:`Value Map` and click :guilabel:`Load Data from "
+"Layer`."
+msgstr ""
+":guilabel:`Value Map` 에 위젯을 설정하고 :guilabel:`Load Data from Layer` 를 클릭하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:118
+msgid ""
+"Select :guilabel:`roads` in the :guilabel:`Label` dropdown and "
+":guilabel:`highway` for both the :guilabel:`Value` and "
+":guilabel:`Description` options:"
+msgstr ""
+":guilabel:`Label` 드롭다운 메뉴에서 :guilabel:`roads` 를 선택하고 :guilabel:`Value` 및 "
+":guilabel:`Description` 옵션 둘 다에 대해 :guilabel:`highway` 를 선택하십시오:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:125
+msgid "Click :guilabel:`OK` three times."
+msgstr ":guilabel:`OK` 를 세 번 클릭합니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:126
+msgid ""
+"If you use the :guilabel:`Identify` tool on a street now while edit mode is "
+"active, the dialog you get should look like this:"
+msgstr ""
+"이제 편집 모드가 활성화된 상태에서 :guilabel:`Identify` 도구를 사용해서 거리를 클릭하면, 다음처럼 보이는 대화창이 열릴"
+" 것입니다:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:133
+msgid ":abbr:`★★★ (Advanced level)` Try Yourself: Creating Test Data"
+msgstr ":abbr:`★★★ (고급 수준)` 혼자서 해보세요: 테스트 데이터 생성하기"
+
 #: ../../docs/training_manual/create_vector_data/forms.rst:135
 msgid "You can also design your own custom form completely from scratch."
-msgstr "완전히 새로운 여러분만의 사용자 지정 서식을 디자인할 수도 있습니다."
+msgstr "여러분만의 사용자 정의 양식을 완전히 새로 디자인할 수도 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:137
+msgid "Create a simple point layer named ``test-data`` with two attributes:"
+msgstr "다음 두 속성을 가진 ``test-data`` 라는 단순 포인트 레이어를 생성하십시오:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:140
+msgid "name (text)"
+msgstr "``name`` (텍스트)"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:141
+msgid "age (integer)"
+msgstr "``age`` (정수)"
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:146
 msgid ""
@@ -121,46 +321,139 @@ msgid ""
 "point."
 msgstr ""
 "이 새 레이어에 디지타이즈 작업 도구로 포인트 몇 개를 찍어 간단한 데이터를 준비하십시오. 새 포인트를 만들 때마다 QGIS의 기본 속성"
-" 부여 서식이 나타날 것입니다."
+" 부여 양식이 나타날 것입니다."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:151
 msgid "You may need to disable Snapping if still enabled from earlier tasks."
-msgstr "이전 단계에서 맞추기 옵션을 활성화시킨 채라면 비활성화시켜야 할 수도 있습니다."
+msgstr "이전 단계에서 스냅 옵션을 활성화시킨 채라면 비활성화시켜야 할 수도 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:160
+msgid ":abbr:`★★★ (Advanced level)` Follow Along: Creating a New Form"
+msgstr ":abbr:`★★★ (고급 수준)` 따라해보세요: 새 양식 생성하기"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:162
+msgid ""
+"Now we want to create our own custom form for the attribute data capture "
+"phase. To do this, you need to have *QT Designer* installed (only needed for"
+" the person who creates the forms)."
+msgstr ""
+"이제 속성 데이터 부여 단계를 위한 우리만의 사용자 정의 양식을 생성하려 합니다. 이 작업을 하려면, *Qt 설계자(Qt "
+"Designer)* 가 설치되어 있어야 합니다. (양식을 생성하는 사람에게만 필요합니다.)"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:167
+msgid "Start *QT Designer*."
+msgstr "*Qt 설계자* 를 실행하십시오."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:168
 msgid "In the dialog that appears, create a new dialog:"
-msgstr "새 대화 창을 생성할 수 있는 다음 대화 창이 나타납니다."
+msgstr "새 대화창을 생성할 수 있는 다음 대화창이 나타납니다:"
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:173
 msgid ""
 "Look for the :guilabel:`Widget Box` along the left of your screen (default)."
 " It contains an item called :guilabel:`Line Edit`."
 msgstr ""
-"창의 (기본적으로) 왼쪽에 있는 :guilabel:`Widget Box` 를 찾아보십시오. :guilabel:`Line Edit` 라는 "
-"항목을 담고 있습니다."
+"(기본적으로) 대화창의 왼쪽에 있는 :guilabel:`Widget Box` 를 찾아보십시오. :guilabel:`Line Edit` "
+"라는 항목을 담고 있습니다."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:176
 msgid ""
 "Click and drag this item into your form. This creates a new :guilabel:`Line "
 "Edit` in the form."
-msgstr ""
-"이 항목을 여러분의 서식으로 클릭 & 드래그합니다. 서식에 새로운 :guilabel:`Line Edit` 이 생성될 것입니다."
+msgstr "이 항목을 여러분의 양식으로 클릭&드래그하십시오. 양식에 새로운 :guilabel:`Line Edit` 가 생성될 것입니다."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:178
 msgid ""
 "With the new line edit element selected, you'll see its *properties* along "
 "the side of your screen (on the right by default):"
-msgstr "이 새로운 라인 편집 요소를 선택하면 (기본적으로 창의 오른쪽에 있는) 요소의 *속성* 창을 볼 수 있습니다."
+msgstr ""
+"이 새로운 라인 편집 요소를 선택하면 (기본적으로 창의 오른쪽에 있는) 요소의 *속성(properties)* 을 볼 수 있습니다:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:185
+msgid "Set its name to ``name``."
+msgstr "이름을 ``name`` 으로 설정하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:186
+msgid ""
+"Using the same approach, create a new :guilabel:`Spin Box` and set its name "
+"to ``age``."
+msgstr "동일한 접근법을 사용해서, 새 :guilabel:`Spin Box` 를 생성하고 그 이름을 ``age`` 로 설정하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:188
+msgid ""
+"Add a :guilabel:`Label` with the text ``Add a New Person`` in a bold font "
+"(look in the object *properties* to find out how to set this). "
+"Alternatively, you may want to set the title of the dialog itself (rather "
+"than adding a label)."
+msgstr ""
+"굵은 글꼴의 ``Add a New Person`` 이라는 텍스트를 가진 :guilabel:`Label` 을 추가하십시오. (이를 설정하는"
+" 방법을 찾아보려면 객체의 *속성* 을 살펴보십시오.) 아니면, (라벨을 추가하기 보다) 대화창 자체의 제목을 설정하고 싶을 수도 "
+"있습니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:193
+msgid ""
+"Add a :guilabel:`Label` for your :guilabel:`Line Edit` and your "
+":guilabel:`Spin Box`."
+msgstr ""
+"여러분의 :guilabel:`Line Edit` 와 :guilabel:`Spin Box` 에 대한 :guilabel:`Label` 을 "
+"추가하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:194
+msgid "Arrange the elements to your own desire."
+msgstr "여러분이 원하는 대로 요소들을 배열해보십시오."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:195
 msgid "Click anywhere in your dialog."
-msgstr "사용자의 대화 창 아무 곳이나 클릭하십시오."
+msgstr "사용자의 대화창 아무 곳이나 클릭하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:196
+msgid ""
+"Find the *Lay Out in a Form Layout* button (in a toolbar along the top edge "
+"of the screen, by default). This lays out your dialog automatically."
+msgstr ""
+"(기본적으로 창 최상단의 툴바에 있는) :guilabel:`Lay Out in a Form Layout` 버튼을 찾으십시오. 이 버튼을 "
+"클릭하면 대화창의 레이아웃을 자동으로 생성합니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:199
+msgid ""
+"Set the dialog's maximum size (in its properties) to ``200`` (width) by "
+"``150`` (height)."
+msgstr "(대화창의 속성에서) 대화창의 최대 크기를 너비 ``200``, 높이 ``150`` 으로 설정하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:201
+msgid "Your form should now look similar to this:"
+msgstr "여러분의 양식은 다음과 비슷하게 보여야 합니다:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:206
+msgid "Save your new form as :file:`exercise_data/forms/add_people.ui`"
+msgstr "새 양식을 :file:`exercise_data/forms/add_people.ui` 파일로 저장하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:207
+msgid "When it's done saving, you can close *Qt Designer*"
+msgstr "저장이 완료되면 *Qt 설계자* 를 닫아도 됩니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:210
+msgid ""
+":abbr:`★★★ (Advanced level)` Follow Along: Associating the Form with Your "
+"Layer"
+msgstr ":abbr:`★★★ (고급 수준)` 따라해보세요: 양식을 사용자 레이어와 연결하기"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:212
+msgid "Go back to QGIS"
+msgstr "QGIS로 돌아가십시오."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:213
 msgid ""
 "Double click the :guilabel:`test-data` layer in the legend to access its "
 "properties."
-msgstr "레이어 목록의 :guilabel:`test-data` 레이어를 더블클릭해서 속성 테이블을 엽니다."
+msgstr "범례에 있는 ``test-data`` 레이어를 더블 클릭해서 속성 테이블을 엽니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:215
+msgid ""
+"Click on the :guilabel:`Attributes Form` tab in the :guilabel:`Layer "
+"Properties` dialog"
+msgstr ""
+":guilabel:`Layer Properties` 대화창에 있는 :guilabel:`Attributes Form` 탭을 클릭하십시오."
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:217
 msgid ""
@@ -170,11 +463,49 @@ msgstr ""
 ":guilabel:`Attribute editor layout` 드롭다운 메뉴에서 :guilabel:`Provide ui-file` 을 "
 "선택합니다."
 
+#: ../../docs/training_manual/create_vector_data/forms.rst:219
+msgid ""
+"Click the ellipsis button and choose the :file:`add_people.ui` file you just"
+" created:"
+msgstr ":guilabel:`...` 버튼을 클릭한 다음 방금 생성한 :file:`add_people.ui` 파일을 선택합니다:"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:225
+msgid "Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog"
+msgstr ":guilabel:`Layer Properties` 대화창의 :guilabel:`OK` 버튼을 클릭하십시오."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:226
+msgid "Enter edit mode and capture a new point"
+msgstr "편집 모드로 들어가서 새 포인트를 생성하십시오."
+
 #: ../../docs/training_manual/create_vector_data/forms.rst:227
 msgid ""
 "When you do so, you will be presented with your custom dialog (instead of "
 "the generic one that QGIS usually creates)."
-msgstr "이제 (QGIS가 보통 생성하는 기본 대화 창 대신) 사용자 지정 대화창이 나타날 것입니다."
+msgstr "이제 (QGIS가 보통 생성하는 기본 대화창 대신) 사용자 정의 대화창이 나타날 것입니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:229
+msgid ""
+"If you click on one of your points using the |identify| :sup:`Identify "
+"Features` tool, you can now bring up the form by right clicking in the "
+"identify results window and choosing :menuselection:`View Feature Form` from"
+" the context menu."
+msgstr ""
+"이제 |identify| :sup:`Identify Features` 도구를 사용해서 포인트들 가운데 하나를 클릭하는 경우, 식별 결과 "
+"창을 오른쪽 클릭해서 나타나는 컨텍스트 메뉴에서 :menuselection:`View Feature Form` 을 선택하면 양식을 열 수"
+" 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:233
+msgid ""
+"If you are in edit mode for this layer, that context menu will show "
+":menuselection:`Edit Feature Form` instead, and you can then adjust the "
+"attributes in the new form even after initial capture."
+msgstr ""
+"이 레이어에 대해 편집 모드를 활성화시킨 경우, 이 컨텍스트 메뉴는 그 대신 :menuselection:`Edit Feature "
+"Form` 메뉴 항목을 보일 것입니다. 포인트를 생성한 후라도, 이 메뉴를 선택하면 열리는 새 양식에서 속성을 조정할 수 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:238
+msgid "In Conclusion"
+msgstr "결론"
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:240
 msgid ""
@@ -183,8 +514,30 @@ msgid ""
 " you can control the experience of someone who digitizes new data for that "
 "layer, thereby minimizing misunderstandings and unnecessary errors."
 msgstr ""
-"데이터 편집이나 생성 시 서식을 이용하면 훨씬 편하게 작업할 수 있습니다. 위젯 유형을 편집하거나 완전히 새로운 서식을 생성해서 해당 "
-"레이어를 위해 새 데이터를 디지타이즈하는 사람의 경험을 향상시켜 오해 및 불필요한 오류를 최소화할 수 있습니다."
+"데이터를 편집 또는 생성할 때 양식을 이용하면 훨씬 편하게 작업할 수 있습니다. 위젯 유형을 편집하거나 완전히 새로운 양식을 생성해서 "
+"해당 레이어를 위해 새 데이터를 디지타이즈하는 사람의 경험을 향상시켜 오해 및 불필요한 오류를 최소화할 수 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:248
+msgid "Further Reading"
+msgstr "더 읽어볼 거리"
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:250
+msgid ""
+"If you completed the advanced section above and have knowledge of Python, "
+"you may want to check out `this blog entry "
+"<https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-"
+"with-python-logic/>`_ about creating custom feature forms with Python logic,"
+" which allows advanced functions including data validation, autocompletion, "
+"etc."
+msgstr ""
+"앞의 고급 수준 부분을 완료했고 파이썬에 대한 지식이 있다면, 데이터 무결성 검증, 자동 완성 등등을 포함하는 고급 기능들을 사용할 수 "
+"있게 해주는 파이썬 로직을 사용해서 사용자 정의 피처 양식을 생성하는 데 대한 `이 블로그 포스트 "
+"<https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-"
+"with-python-logic/>`_ 를 읽어봐도 좋을 겁니다."
+
+#: ../../docs/training_manual/create_vector_data/forms.rst:257
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
 
 #: ../../docs/training_manual/create_vector_data/forms.rst:259
 msgid ""
@@ -192,5 +545,5 @@ msgid ""
 "QGIS can perform. However, you can also direct it to perform custom actions "
 "that you define. This is the subject of the next lesson."
 msgstr ""
-"QGIS의 표준 액션 가운데 하나가 피처를 식별하는 작업과 동시에 서식을 여는 것입니다. 그러나 사용자가 정의한 사용자 지정 액션을 "
-"실행하도록 할 수 있습니다. 이것이 다음 강의의 내용입니다."
+"QGIS가 수행할 수 있는 표준 액션 가운데 하나가 피처를 식별하는 동시에 양식을 여는 것입니다. 하지만 여러분이 정의한 사용자 정의 "
+"액션을 실행하도록 할 수도 있습니다. 이것이 다음 수업의 내용입니다."
