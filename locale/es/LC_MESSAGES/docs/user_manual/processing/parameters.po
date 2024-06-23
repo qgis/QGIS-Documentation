@@ -6,9 +6,9 @@
 # 
 # Translators:
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-26 09:59+0000\n"
 "PO-Revision-Date: 2024-03-26 10:02+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,9 +41,23 @@ msgstr ""
 msgid "Input and output types for Processing Algorithms"
 msgstr "Tipos de entrada y salida para algoritmos de procesamiento"
 
+#: ../../docs/user_manual/processing/parameters.rst:7
+msgid ""
+"Here is the list of input and output types that are supported in Processing "
+"with their corresponding alg decorator constants, their name in the modeler "
+"designer if exposed."
+msgstr ""
+"Aquí está la lista de tipos de entrada y salida que son soportados en "
+"Procesos con sus correspondientes constantes del decorador alg, su nombre en"
+" el diseñador del modelador si está expuesto."
+
 #: ../../docs/user_manual/processing/parameters.rst:13
 msgid "Input types"
 msgstr "Tipos de entrada"
+
+#: ../../docs/user_manual/processing/parameters.rst:21
+msgid "Input name"
+msgstr "Nombre de entrada"
 
 #: ../../docs/user_manual/processing/parameters.rst:22
 #: ../../docs/user_manual/processing/parameters.rst:243
@@ -59,6 +73,10 @@ msgstr "Alg constante"
 #: ../../docs/user_manual/processing/parameters.rst:245
 msgid "Description"
 msgstr "Descripción"
+
+#: ../../docs/user_manual/processing/parameters.rst:25
+msgid "Annotation layer"
+msgstr "Capa de anotación"
 
 #: ../../docs/user_manual/processing/parameters.rst:26
 msgid ""
@@ -140,6 +158,10 @@ msgstr "``alg.BOOL``"
 msgid "A boolean value"
 msgstr "Un valor booleano"
 
+#: ../../docs/user_manual/processing/parameters.rst:42
+msgid "Connection Name"
+msgstr "Nombre de la conexión"
+
 #: ../../docs/user_manual/processing/parameters.rst:43
 #: ../../docs/user_manual/processing/parameters.rst:182
 msgid ""
@@ -148,6 +170,14 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterProviderConnection "
 "<qgis.core.QgsProcessingParameterProviderConnection>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:45
+msgid ""
+"A selection from available registered connections for a particular data "
+"provider"
+msgstr ""
+"Una selección de las conexiones registradas disponibles para un proveedor de"
+" datos concreto"
 
 #: ../../docs/user_manual/processing/parameters.rst:46
 msgid "Color"
@@ -166,6 +196,10 @@ msgstr "``alg.COLOR``"
 #: ../../docs/user_manual/processing/parameters.rst:49
 msgid "A color"
 msgstr "Un color"
+
+#: ../../docs/user_manual/processing/parameters.rst:50
+msgid "Coordinate Operation"
+msgstr "Operación de coordenada"
 
 #: ../../docs/user_manual/processing/parameters.rst:51
 msgid ""
@@ -201,6 +235,10 @@ msgstr "``alg.CRS``"
 msgid "A Coordinate Reference System"
 msgstr "Un Sistema de Coordenadas de Referencia"
 
+#: ../../docs/user_manual/processing/parameters.rst:58
+msgid "Database Schema"
+msgstr "Esquema de la base de datos"
+
 #: ../../docs/user_manual/processing/parameters.rst:59
 msgid ""
 ":class:`QgsProcessingParameterDatabaseSchema "
@@ -216,6 +254,10 @@ msgstr "``alg.DATABASE_SCHEMA``"
 #: ../../docs/user_manual/processing/parameters.rst:61
 msgid "A database schema"
 msgstr "Un esquema de Base de Datos"
+
+#: ../../docs/user_manual/processing/parameters.rst:62
+msgid "Database Table"
+msgstr "Tabla de base de datos"
 
 #: ../../docs/user_manual/processing/parameters.rst:63
 msgid ""
@@ -233,6 +275,10 @@ msgstr "``alg.DATABASE_TABLE``"
 msgid "A database table"
 msgstr "Una tabla de Base de Datos"
 
+#: ../../docs/user_manual/processing/parameters.rst:66
+msgid "Datetime"
+msgstr "Fechahora"
+
 #: ../../docs/user_manual/processing/parameters.rst:67
 msgid ""
 ":class:`QgsProcessingParameterDateTime "
@@ -248,6 +294,10 @@ msgstr "``alg.DATETIME``"
 #: ../../docs/user_manual/processing/parameters.rst:69
 msgid "A datetime (or a pure date or time)"
 msgstr "Una fecha y hora (o una fecha u hora pura)"
+
+#: ../../docs/user_manual/processing/parameters.rst:70
+msgid "Distance"
+msgstr "Distancia"
 
 #: ../../docs/user_manual/processing/parameters.rst:71
 msgid ""
@@ -267,6 +317,10 @@ msgstr "``alg.DISTANCE``"
 msgid "A double numeric parameter for distance values"
 msgstr "Un parámetro numérico doble para valores de distancia"
 
+#: ../../docs/user_manual/processing/parameters.rst:74
+msgid "DXF Layers"
+msgstr "Capas DXF"
+
 #: ../../docs/user_manual/processing/parameters.rst:75
 msgid ""
 ":class:`QgsProcessingParameterDxfLayers "
@@ -274,6 +328,14 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterDxfLayers "
 "<qgis.core.QgsProcessingParameterDxfLayers>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:77
+msgid "A list of vector layers to export as DXF file"
+msgstr "Una lista de capas vectoriales para exportar como archivo DXF"
+
+#: ../../docs/user_manual/processing/parameters.rst:78
+msgid "Enum"
+msgstr "Enum"
 
 #: ../../docs/user_manual/processing/parameters.rst:79
 msgid ""
@@ -345,6 +407,10 @@ msgstr "``alg.FIELD``"
 msgid "A field in the attribute table of a vector layer"
 msgstr "Un campo en la tabla de atributos de una capa vectorial"
 
+#: ../../docs/user_manual/processing/parameters.rst:94
+msgid "Field Aggregates"
+msgstr "Agregados de campo"
+
 #: ../../docs/user_manual/processing/parameters.rst:95
 msgid ""
 ":class:`QgsProcessingParameterAggregate "
@@ -353,6 +419,19 @@ msgstr ""
 ":class:`QgsProcessingParameterAggregate "
 "<qgis.core.QgsProcessingParameterAggregate>`"
 
+#: ../../docs/user_manual/processing/parameters.rst:97
+msgid ""
+"A parameter for “aggregate” configurations, which consist of a definition of"
+" desired output fields, types, and aggregate used to populate them"
+msgstr ""
+"Un parámetro para las configuraciones \"agregadas\", que consisten en una "
+"definición de los campos de salida deseados, los tipos y el agregado "
+"utilizado para rellenarlos."
+
+#: ../../docs/user_manual/processing/parameters.rst:99
+msgid "Fields Mapper"
+msgstr "Mapeador de campos"
+
 #: ../../docs/user_manual/processing/parameters.rst:100
 msgid ""
 ":class:`QgsProcessingParameterFieldMapping "
@@ -360,6 +439,20 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterFieldMapping "
 "<qgis.core.QgsProcessingParameterFieldMapping>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:102
+msgid ""
+"A parameter for “field mapping” configurations, which consist of a "
+"definition of desired output fields, types, and expressions used to populate"
+" them"
+msgstr ""
+"Un parámetro para las configuraciones de \"mapeo de campos\", que consisten "
+"en una definición de los campos de salida deseados, los tipos y las "
+"expresiones utilizadas para rellenarlos."
+
+#: ../../docs/user_manual/processing/parameters.rst:104
+msgid "File/Folder"
+msgstr "Archivo/Carpeta"
 
 #: ../../docs/user_manual/processing/parameters.rst:105
 msgid ""
@@ -408,6 +501,10 @@ msgstr "``alg.FOLDER_DEST``"
 #: ../../docs/user_manual/processing/parameters.rst:115
 msgid "A folder (destination folder)"
 msgstr "Una carpeta (carpeta de destino)"
+
+#: ../../docs/user_manual/processing/parameters.rst:116
+msgid "Geometry"
+msgstr "Geometría"
 
 #: ../../docs/user_manual/processing/parameters.rst:117
 msgid ""
@@ -462,6 +559,10 @@ msgstr "``alg.LAYOUT``"
 msgid "A layout"
 msgstr "Un diseño"
 
+#: ../../docs/user_manual/processing/parameters.rst:128
+msgid "Print Layout Item"
+msgstr "Elemento de diseño de impresión"
+
 #: ../../docs/user_manual/processing/parameters.rst:129
 msgid ""
 ":class:`QgsProcessingParameterLayoutItem "
@@ -477,6 +578,10 @@ msgstr "``alg.LAYOUT_ITEM``"
 #: ../../docs/user_manual/processing/parameters.rst:131
 msgid "A layout item"
 msgstr "Un elemento de diseño"
+
+#: ../../docs/user_manual/processing/parameters.rst:132
+msgid "Map Layer"
+msgstr "Capa de mapa"
 
 #: ../../docs/user_manual/processing/parameters.rst:133
 msgid ""
@@ -495,6 +600,10 @@ msgstr "``alg.MAPLAYER``"
 #: ../../docs/user_manual/processing/parameters.rst:269
 msgid "A map layer"
 msgstr "Una capa de mapa"
+
+#: ../../docs/user_manual/processing/parameters.rst:136
+msgid "Map Theme"
+msgstr "Tema del mapa"
 
 #: ../../docs/user_manual/processing/parameters.rst:137
 msgid ""
@@ -532,6 +641,10 @@ msgstr "``alg.MATRIX``"
 msgid "A matrix"
 msgstr "Una matriz"
 
+#: ../../docs/user_manual/processing/parameters.rst:144
+msgid "Mesh Dataset Groups"
+msgstr "Grupos de conjuntos de datos de malla"
+
 #: ../../docs/user_manual/processing/parameters.rst:145
 msgid ""
 ":class:`QgsProcessingParameterMeshDatasetGroups "
@@ -540,6 +653,14 @@ msgstr ""
 ":class:`QgsProcessingParameterMeshDatasetGroups "
 "<qgis.core.QgsProcessingParameterMeshDatasetGroups>`"
 
+#: ../../docs/user_manual/processing/parameters.rst:147
+msgid "Dataset groups of mesh layer"
+msgstr "Grupos de datos de la capa de malla"
+
+#: ../../docs/user_manual/processing/parameters.rst:148
+msgid "Mesh Dataset Time"
+msgstr "Malla Conjunto de datos Tiempo"
+
 #: ../../docs/user_manual/processing/parameters.rst:149
 msgid ""
 ":class:`QgsProcessingParameterMeshDatasetTime "
@@ -547,6 +668,10 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterMeshDatasetTime "
 "<qgis.core.QgsProcessingParameterMeshDatasetTime>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:151
+msgid "Dataset index from a mesh layer by time setting"
+msgstr "Índice del conjunto de datos de una capa de malla por ajuste temporal"
 
 #: ../../docs/user_manual/processing/parameters.rst:152
 msgid "Mesh Layer"
@@ -567,6 +692,10 @@ msgstr "``alg.MESH_LAYER``"
 #: ../../docs/user_manual/processing/parameters.rst:155
 msgid "A mesh layer"
 msgstr "Una capa de malla"
+
+#: ../../docs/user_manual/processing/parameters.rst:156
+msgid "Multiple Input"
+msgstr "Entrada múltiple"
 
 #: ../../docs/user_manual/processing/parameters.rst:157
 msgid ""
@@ -626,6 +755,10 @@ msgstr "``alg.POINT``"
 msgid "A point"
 msgstr "Un punto"
 
+#: ../../docs/user_manual/processing/parameters.rst:168
+msgid "Point Cloud Attribute"
+msgstr "Atributo de la nube de puntos"
+
 #: ../../docs/user_manual/processing/parameters.rst:169
 msgid ""
 ":class:`QgsProcessingParameterPointCloudAttribute "
@@ -633,6 +766,10 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterPointCloudAttribute "
 "<qgis.core.QgsProcessingParameterPointCloudAttribute>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:171
+msgid "An attribute from a point cloud layer"
+msgstr "Un atributo de una capa de nube de puntos"
 
 #: ../../docs/user_manual/processing/parameters.rst:173
 msgid ""
@@ -778,6 +915,10 @@ msgstr "``alg.SINK``"
 msgid "A feature sink"
 msgstr "Un destino de objetos"
 
+#: ../../docs/user_manual/processing/parameters.rst:206
+msgid "TIN Creation Layers"
+msgstr "Capas de creación de TIN"
+
 #: ../../docs/user_manual/processing/parameters.rst:207
 msgid ""
 ":class:`QgsProcessingParameterTinInputLayers "
@@ -785,6 +926,18 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterTinInputLayers "
 "<qgis.core.QgsProcessingParameterTinInputLayers>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:209
+msgid ""
+"Selection of multiple layers to create a TIN with vertices and/or break "
+"lines"
+msgstr ""
+"Selección de varias capas para crear un TIN con vértices y/o líneas de "
+"rotura"
+
+#: ../../docs/user_manual/processing/parameters.rst:211
+msgid "Vector Features"
+msgstr "Objetos espaciales vectoriales"
 
 #: ../../docs/user_manual/processing/parameters.rst:212
 msgid ""
@@ -865,6 +1018,10 @@ msgid ""
 msgstr ""
 "Un parámetro de destino de la capa vectorial, para especificar la ruta de "
 "destino de una capa vectorial creada por el algoritmo."
+
+#: ../../docs/user_manual/processing/parameters.rst:228
+msgid "Vector Tile Writer Layers"
+msgstr "Capas del escritor de teselas vectoriales"
 
 #: ../../docs/user_manual/processing/parameters.rst:229
 msgid ""
@@ -1002,3 +1159,7 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingOutputVectorTileLayer "
 "<qgis.core.QgsProcessingOutputVectorTileLayer>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:290
+msgid "A vector tile layer"
+msgstr "Una capa de teselas vectoriales"
