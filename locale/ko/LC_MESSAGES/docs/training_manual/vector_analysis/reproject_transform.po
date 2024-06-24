@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:2
+msgid "Lesson: Reprojecting and Transforming Data"
+msgstr "수업: 데이터 재투영 및 변환하기"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:4
 msgid ""
@@ -44,7 +48,11 @@ msgstr ""
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:8
 msgid ""
 "**The goal for this lesson:** To reproject and transform vector datasets."
-msgstr "**이 강의의 목표:** 벡터 데이터를 재투영하고 변환하기."
+msgstr "**이 수업의 목표:** 벡터 데이터를 재투영하고 변환하기."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:11
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Projections"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 투영"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:13
 msgid ""
@@ -52,8 +60,8 @@ msgid ""
 "called *WGS84*. This is a very common Geographic Coordinate System (GCS) for"
 " representing data. But there's a problem, as we will see."
 msgstr ""
-"맵 자체는 물론 모든 데이터는 현재 *WGS84* 라는 CRS를 사용하고 있습니다. WGS84는 데이터를 표현하는 데 쓰이는 매우 흔한 "
-"지리 좌표계(GCS)입니다. 그러나 이제 곧 설명할 문제점도 가지고 있습니다."
+"맵 자체는 물론 모든 데이터는 현재 *WGS84* 라는 좌표계를 사용하고 있습니다. WGS84는 데이터를 표현하는 데 쓰이는 매우 흔한 "
+"지리 좌표계(Geographic Coordinate System)입니다. 그러나 이제 곧 설명할 문제점도 가지고 있습니다."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:19
 msgid "Save your current map"
@@ -75,7 +83,7 @@ msgid ""
 "*Statusbar* along the bottom of the screen. While over South Africa, set "
 "this value to ``1:5 000 000`` (one to five million)."
 msgstr ""
-"창 맨 아래의 *상태 바* 에 있는 :guilabel:`Scale` 항목으로 통해 축척을 설정해보십시오. 남아프리카 공화국이 보이는 "
+"창 맨 아래의 *상태 바* 에 있는 :guilabel:`Scale` 항목을 통해 축척을 설정해보십시오. 남아프리카 공화국이 보이는 "
 "상태에서 ``1:5,000,000`` (5백만 분의 1)로 값을 설정합니다."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:27
@@ -111,10 +119,10 @@ msgid ""
 "of the objects that you see gets larger and larger. What this means for us, "
 "practically, is that there is no constant scale on our map!"
 msgstr ""
-"GCS는 이 구체 상에서 정의되지만, 여러분의 모니터는 평면입니다. 평면에서 구체를 표현하려 할 때, 마치 테니스 공을 잘라서 평평하게 "
-"펼치려고 할 때처럼, 왜곡이 발생합니다. 즉 맵 상에서는 경도 선들이 (서로 만나야 할) 극지방에서도 평행하게 떨어져 있습니다. 다시 "
-"말해 맵 상에서 적도로부터 멀어질수록, 여러분이 보는 객체의 축척이 점점 커진다는 뜻입니다. 한 마디로 말하자면 맵 상의 위치에 따라 "
-"축척이 계속 변한다는 말이지요!"
+"지리 좌표계는 이 구체 상에서 정의되지만, 여러분의 모니터는 평면입니다. 평면에서 구체를 표현하려 할 때, 마치 테니스 공을 잘라서 "
+"평평하게 펼치려고 할 때처럼, 왜곡이 발생합니다. 즉 맵 상에서는 경도 선들이 (서로 만나야 할) 극지방에서도 평행하게 떨어져 있습니다."
+" 다시 말해 맵 상에서 적도로부터 멀어질수록, 여러분이 보는 객체의 축척이 점점 커진다는 뜻입니다. 한 마디로 말하자면 맵 상의 위치에 "
+"따라 축척이 계속 변한다는 말이지요!"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:52
 msgid ""
@@ -123,8 +131,13 @@ msgid ""
 "scale change and corrects it. Therefore, to keep the scale constant, we "
 "should reproject our data to use a PCS."
 msgstr ""
-"이 문제를 해결하기 위해 투영좌표계(PCS)를 대신 사용해봅시다. PCS는 축척 변화를 감안하여 바로잡는 방식으로 데이터를 "
-"\"투영\"하거나 변환합니다. 따라서 축척을 일정하게 유지하려면 PCS를 이용해서 데이터를 재투영해야 합니다."
+"이 문제를 해결하기 위해 투영 좌표계(Projected Coordinate System)를 대신 사용해봅시다. 투영 좌표계는 축척 변화를"
+" 감안하여 바로잡는 방식으로 데이터를 \"투영\"하거나 변환합니다. 따라서 축척을 일정하게 유지하려면 투영 좌표계를 이용해서 데이터를 "
+"재투영해야 합니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:59
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: \"On the Fly\" Reprojection"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: \"실시간\" 재투영"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:61
 msgid ""
@@ -132,7 +145,7 @@ msgid ""
 "even if the data itself is in another CRS, QGIS can project it as if it were"
 " in a CRS of your choice."
 msgstr ""
-"QGIS는 기본적으로 \"실시간(on the fly)\" 으로 데이터를 재투영합니다. 데이터 자체가 다른 좌표계를 이용하고 있더라도, "
+"QGIS는 기본적으로 \"실시간(on-the-fly)\"으로 데이터를 재투영합니다. 데이터 자체가 다른 좌표계를 이용하고 있더라도, "
 "사용자가 바라는 좌표계로 데이터를 투영할 수 있다는 뜻입니다."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:65
@@ -186,7 +199,7 @@ msgstr "축척이 일정하게 유지됩니다!"
 msgid ""
 "\"On the fly\" reprojection is also used for combining datasets that are in "
 "different CRSs."
-msgstr "서로 다른 CRS를 이용하는 데이터셋을 결합하는 데에도 \"실시간\" 재투영을 사용할 수 있습니다."
+msgstr "서로 다른 좌표계를 이용하는 데이터셋을 결합하는 데에도 \"실시간\" 재투영을 사용할 수 있습니다."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:87
 msgid ""
@@ -214,14 +227,113 @@ msgid ""
 ":guilabel:`continents` one."
 msgstr "해당 레이어가 :guilabel:`continents` 레이어와는 다른 좌표계인데도 스크린에 가시화되었습니다."
 
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:101
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Saving a Dataset to Another CRS"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 데이터셋을 또다른 좌표계로 저장하기"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:103
+msgid ""
+"Sometimes you need to export an existing dataset with another CRS. As we "
+"will see in the next lesson, if you need to make distance calculations on "
+"layer, it is always better to have the layer in a projected coordinate "
+"system."
+msgstr ""
+"기존 데이터셋을 또다른 좌표계로 내보내야 할 경우가 있습니다. 다음 수업에서 알게 될 테지만, 여러분이 레이어 상에서 거리를 계산해야 "
+"하는 경우 레이어의 좌표계가 투영 좌표계인 편이 항상 낫습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:108
+msgid ""
+"Be aware that the 'on the fly' reprojection is related to the **project** "
+"and not to single layers. This means that a layer can have a different CRS "
+"from the project even if you see it in the *correct* position."
+msgstr ""
+"'실시간' 재투영은 **프로젝트** 와 연관되어 있지 단일 레이어들과는 연관되어 있지 않다는 사실을 기억하십시오. 다시 말해 레이어가 "
+"*정확한* 위치에 보이더라도 프로젝트와는 다른 좌표계를 가질 수 있다는 뜻입니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:113
+msgid "You can easily export the layer with another CRS."
+msgstr "레이어를 쉽게 또다른 좌표계로 내보낼 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:115
+msgid "Add the ``buildings`` dataset from :file:`training_data.gpkg`"
+msgstr ":file:`training_data.gpkg` 파일로부터 ``buildings`` 데이터셋을 추가하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:116
+msgid "Right-click on the ``buildings`` layer in the :guilabel:`Layers` panel"
+msgstr ":guilabel:`Layers` 패널에서 ``buildings`` 레이어를 오른쪽 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:118
+msgid ""
+"Select :menuselection:`Export --> Save Features As...` in the menu that "
+"appears. You will be shown the :guilabel:`Save Vector Layer as...` dialog."
+msgstr ""
+"컨텍스트 메뉴에서 :menuselection:`Export --> Save Features As...` 를 선택하십시오. "
+":guilabel:`Save Vector Layer as...` 대화창이 열릴 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:121
+msgid ""
+"Click on the :guilabel:`Browse` button next to the :guilabel:`File name` "
+"field"
+msgstr ":guilabel:`File name` 란 옆에 있는 :guilabel:`Browse` 버튼을 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:123
+msgid ""
+"Navigate to :file:`exercise_data/` and specify the name of the new layer as "
+":file:`buildings_reprojected.shp`."
+msgstr ""
+":file:`exercise_data/` 디렉터리를 찾아가서 새 레이어의 이름을 "
+":file:`buildings_reprojected.shp` 로 지정하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:125
+msgid ""
+"Change the value of the :guilabel:`CRS`. Only the recent CRSs used will be "
+"shown in the drop-down menu. Click on the |setProjection| :sup:`Select "
+"projection` button next to the drop-down menu."
+msgstr ""
+":guilabel:`CRS` 의 값을 변경하십시오. 드롭다운 메뉴에는 최근 사용했던 좌표계들만 보일 것입니다. 드롭다운 메뉴 옆에 있는 "
+"|setProjection| :sup:`Select projection` 버튼을 클릭하십시오."
+
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:247
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:129
+msgid ""
+"The :guilabel:`Coordinate Reference System Selector` dialog will appear. In "
+"its :guilabel:`Filter` field, search for ``34S``."
+msgstr ""
+":guilabel:`Coordinate Reference System Selector` 대화창이 열립니다. 대화창의 "
+":guilabel:`Filter` 란에서 ``34S`` 를 검색하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:132
+msgid "Select :guilabel:`WGS 84 / UTM zone 34S | EPSG:32734` from the list"
+msgstr "목록에서 :guilabel:`WGS 84 / UTM zone 34S | EPSG:32734` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:137
+msgid ""
+"Leave the other options unchanged. The :guilabel:`Save Vector Layer as...` "
+"dialog now looks like this:"
+msgstr ""
+"다른 옵션들은 그대로 유지하십시오. :guilabel:`Save Vector Layer as...` 대화창이 이제 다음처럼 보일 "
+"것입니다:"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:143
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:207
 msgid "Click :guilabel:`OK`"
 msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:145
+msgid ""
+"You can now compare the old and new projections of the layer and see that "
+"they are in two different CRS but they are still overlapping."
+msgstr ""
+"이제 레이어의 예전 투영과 새로운 투영을 비교해보면 서로 다른 두 좌표계들이지만 아직도 중첩하고 있다는 사실을 알 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:150
+msgid ""
+":abbr:`★★★ (Advanced level)` Follow Along: Creating Your Own Projection"
+msgstr ":abbr:`★★★ (고급 수준)` 따라해보세요: 사용자 고유 투영체 생성하기"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:152
 msgid ""
@@ -229,19 +341,75 @@ msgid ""
 " You can also create your own projections."
 msgstr "QGIS에 기본으로 포함된 투영체 외에도 많은 투영체가 있습니다. 여러분 자신만의 투영체를 생성할 수도 있습니다."
 
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:155
+msgid "Start a new map"
+msgstr "새로운 맵을 시작하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:156
+msgid "Load the :file:`world/oceans.shp` dataset"
+msgstr ":file:`world/oceans.shp` 데이터셋을 불러오십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:157
+msgid ""
+"Go to :menuselection:`Settings --> Custom Projections...` and you will see "
+"this dialog."
+msgstr ""
+":menuselection:`Settings --> Custom Projections...` 메뉴 항목을 선택하면 다음 대화창이 열릴 "
+"것입니다:"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:163
+msgid ""
+"Click on the |symbologyAdd| :sup:`Add new CRS` button to create a new "
+"projection"
+msgstr "새 투영체를 생성하려면 |symbologyAdd| :sup:`Add new CRS` 버튼을 클릭하십시오."
+
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:249
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:165
+msgid ""
+"An interesting projection to use is called ``Van der Grinten I``. Enter its "
+"name in the :guilabel:`Name` field."
+msgstr ""
+"사용할 흥미로운 투영체는 ``제1 판 데어 그린텐 투영도법(Van der Grinten I)`` 이라고 합니다. "
+":guilabel:`Name` 란에 이 이름을 입력하십시오."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:168
 msgid ""
 "This projection represents the Earth on a circular field instead of a "
 "rectangular one, as most other projections do."
-msgstr "이 투영체는 다른 대부분 투영체와는 달리 사각 면이 아니라 원형 면에 지구를 표현합니다."
+msgstr "이 투영체는 다른 대부분의 투영체와는 달리 직사각형 면이 아니라 원형 면에 지구를 표현합니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:171
+msgid "In :guilabel:`Format`, select :guilabel:`WKT (Recommended)`"
+msgstr ":guilabel:`Format` 에서 :guilabel:`WKT (Recommended)` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:172
+msgid "Add the following string in the :guilabel:`Parameters` field::"
+msgstr ":guilabel:`Parameters` 란에 다음 문자열을 추가하십시오:"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:208
+msgid ""
+"Click on the |projectionEnabled| :sup:`Current CRS` button at the right of "
+"the status bar to change the project CRS"
+msgstr ""
+"상태 바의 오른쪽에 있는 |projectionEnabled| :sup:`Current CRS` 버튼을 클릭해서 프로젝트 좌표계를 "
+"변경하십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:210
+msgid ""
+"Choose your newly defined projection (search for its name in the "
+":guilabel:`Filter` field)"
+msgstr "여러분이 새로 정의한 투영체를 (:guilabel:`Filter` 란에서 그 이름을 검색해서) 선택하십시오."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:212
 msgid "On applying this projection, the map will be reprojected thus:"
-msgstr "이 투영체를 적용하면 맵이 다음과 같이 재투영될 것입니다."
+msgstr "이 투영체를 적용하면 맵이 다음과 같이 재투영될 것입니다:"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:218
+msgid "In Conclusion"
+msgstr "결론"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:220
 msgid ""
@@ -250,3 +418,32 @@ msgid ""
 "represented accurately."
 msgstr ""
 "목적에 따라 유용한 투영체도 달라집니다. 올바른 투영체를 선택함으로써 사용자 맵 상에 피처를 정확하게 표현할 수 있게 됩니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:225
+msgid "Further Reading"
+msgstr "더 읽어볼 거리"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:227
+msgid ""
+"Materials for the *Advanced* section of this lesson were taken from `this "
+"article <https://anitagraser.com/2012/03/18/beautiful-global-projections-"
+"adding-custom-projections-to-qgis/>`_."
+msgstr ""
+"이 수업의 *고급* 부분에서 쓰인 자료는 `이 기사 <https://anitagraser.com/2012/03/18/beautiful-"
+"global-projections-adding-custom-projections-to-qgis/>`_ 에서 발췌했습니다."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:230
+msgid ""
+"Read further information on :ref:`Coordinate Reference Systems "
+"<gis_coord_ref_system>`."
+msgstr ":ref:`좌표계 <gis_coord_ref_system>` 에서 더 자세한 정보를 읽어보십시오."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:233
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:235
+msgid ""
+"In the next lesson you will learn how to analyze vector data using QGIS' "
+"various vector analysis tools."
+msgstr "다음 수업에서는 QGIS의 다양한 벡터 분석 도구들을 사용해서 벡터 데이터를 분석하는 방법을 배울 것입니다."
