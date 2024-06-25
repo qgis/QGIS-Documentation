@@ -32,13 +32,40 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:2
+msgid "Lesson: Vector Analysis"
+msgstr "수업: 벡터 분석"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:4
+msgid ""
+"Vector data can also be analyzed to reveal how different features interact "
+"with each other in space. There are many different analysis-related "
+"functions, so we won't go through them all. Rather, we will pose a question "
+"and try to solve it using the tools that QGIS provides."
+msgstr ""
+"서로 다른 피처들이 공간에서 어떻게 쌍방향 작용을 하는지 밝히기 위해 벡터 데이터를 분석할 수도 있습니다. 서로 다른 분석 관련 기능들이"
+" 많이 있기 때문에, 전부를 살펴보지는 않을 것입니다. 그보다는, 질문을 상정하고 QGIS가 제공하는 도구들을 사용해서 해결하려 해볼 "
+"것입니다."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:10
 msgid ""
 "**The goal for this lesson:** To ask a question and solve it using analysis "
 "tools."
-msgstr "**이 강의의 목표:** 문제를 제시하고, 분석 도구를 써서 해결하기"
+msgstr "**이 수업의 목표:** 문제를 제시하고, 분석 도구를 써서 해결하기"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:15
+msgid ":abbr:`★☆☆ (Basic level)` The GIS Process"
+msgstr ":abbr:`★☆☆ (초급 수준)` GIS 처리 과정"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:17
+msgid ""
+"Before we start, it would be useful to give a brief overview of a process "
+"that can be used to solve a problem. The way to go about it is:"
+msgstr ""
+"시작하기 전에, 문제를 해결하기 위해 사용할 수 있는 처리 과정의 간단한 개요를 알아두는 편이 유용할 것입니다. 그 개요란 다음과 "
+"같습니다:"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:21
 msgid "State the Problem"
@@ -54,7 +81,11 @@ msgstr "문제를 분석"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:24
 msgid "Present the Results"
-msgstr "결과를 표출"
+msgstr "결과를 제시"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:28
+msgid ":abbr:`★☆☆ (Basic level)` The Problem"
+msgstr ":abbr:`★☆☆ (초급 수준)` 문제"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:30
 msgid ""
@@ -63,7 +94,66 @@ msgid ""
 "|majorUrbanName| for clients who have the following criteria:"
 msgstr ""
 "해결해야 할 문제를 결정하는 것으로 처리 과정을 시작합시다. 예를 들어 여러분이 부동산 업자인데 다음 기준을 가진 고객을 위해 "
-"|majorUrbanName| 에 있는 거주지를 찾고 있다고 해봅시다."
+"|majorUrbanName| 에 있는 거주지를 찾고 있다고 해봅시다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:35
+msgid "It needs to be in |majorUrbanName|"
+msgstr "|majorUrbanName| 에 있어야 한다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:36
+msgid "It must be within reasonable driving distance of a school (say 1km)"
+msgstr "학교에서 적정한 운전 거리 (1km 정도) 안에 있어야 한다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:37
+msgid "It must be more than 100m squared in size"
+msgstr "면적은 100평방미터 이상이어야 한다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:38
+msgid "Closer than 50m to a main road"
+msgstr "주요 도로에서 50미터 이상 떨어져서는 안 된다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:39
+msgid "Closer than 500m to a restaurant"
+msgstr "500미터 반경 안에 식당이 있어야 한다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:43
+msgid ":abbr:`★☆☆ (Basic level)` The Data"
+msgstr ":abbr:`★☆☆ (초급 수준)` 데이터"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:45
+msgid "To answer these questions, we are going to need the following data:"
+msgstr "이 질문들에 답하려면, 다음 데이터가 필요할 겁니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:47
+msgid "The residential properties (buildings) in the area"
+msgstr "이 지역의 거주 부지 (건물)"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:48
+msgid "The roads in and around the town"
+msgstr "도시 내부 및 주면의 도로"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:49
+msgid "The location of schools and restaurants"
+msgstr "학교와 식당의 위치"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:50
+msgid "The size of buildings"
+msgstr "건물의 면적"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:52
+msgid ""
+"These data are available through OSM, and you should find that the dataset "
+"you have been using throughout this manual also can be used for this lesson."
+msgstr ""
+"이런 데이터는 오픈스트리트맵을 통해 구할 수 있으며, 지금까지 이 교재를 공부하며 사용했던 데이터셋도 사용할 수 있을 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:56
+msgid ""
+"If you want to download data from another area, jump to the "
+":ref:`Introduction Chapter <tm_preparing_data>` to read how to do it."
+msgstr ""
+"다른 지역의 데이터를 다운로드 받고 싶다면, :ref:`예제 데이터 준비 <tm_preparing_data>` 에서 그 방법을 "
+"읽어보십시오."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:59
 msgid ""
@@ -71,39 +161,566 @@ msgid ""
 "does vary. If you find that your chosen region does not contain information "
 "on restaurants, for example, you may need to chose a different region."
 msgstr ""
-"OSM 다운로드는 일관된 데이터 항목을 가지고 있지만, 커버리지 및 세부 내용은 다를 수 있습니다. 예를 들어 여러분이 선택한 지역에 "
-"식당 정보가 없다면, 다른 지역을 선택해야 할 수도 있습니다."
+"오픈스트리트맵 다운로드는 일관된 데이터 항목을 가지고 있지만, 커버리지 및 세부 내용은 다를 수 있습니다. 예를 들어 여러분이 선택한 "
+"지역에 식당 정보가 없다면, 다른 지역을 선택해야 할 수도 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:67
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Start a Project and get the Data"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 프로젝트를 시작하고 데이터를 가져오기"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:69
+msgid "We first need to load the data to work with."
+msgstr "먼저 작업할 데이터를 불러와야 합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:71
+msgid "Start a new QGIS project"
+msgstr "새로운 QGIS 프로젝트를 시작하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:72
+msgid ""
+"If you want, you can add a background map. Open the :guilabel:`Browser` and "
+"load the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu."
+msgstr ""
+"원하는 경우, 배경 맵을 추가해도 됩니다. :guilabel:`Browser` 를 열어서 :guilabel:`XYZ Tiles` "
+"메뉴로부터 :guilabel:`OSM` 배경 맵을 불러오십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:79
+msgid ""
+"In the :file:`training_data.gpkg` Geopackage database, you will find most "
+"the datasets we will use in this chapter:"
+msgstr ""
+":file:`training_data.gpkg` Geopackage 데이터베이스 파일에서, 이 수업에서 사용할 데이터셋 대부분을 찾을 수"
+" 있을 겁니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:82
+msgid "``buildings``"
+msgstr "``buildings``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:83
+msgid "``roads``"
+msgstr "``roads``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:84
+msgid "``restaurants``"
+msgstr "``restaurants``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:85
+msgid "``schools``"
+msgstr "``schools``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:87
+msgid "Load them, and also :file:`landuse.sqlite`."
+msgstr "이 데이터셋들과, 또 :file:`landuse.sqlite` 파일도 불러오십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:89
+msgid "Zoom to the layer extent to see |majorUrbanName|, South Africa"
+msgstr "남아프리카 공화국 |majorUrbanName| 시를 보려면 레이어 범위로 확대/축소하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:91
+msgid ""
+"Before proceeding we will filter the :guilabel:`roads` layer, in order to "
+"have only some specific road types to work with."
+msgstr "더 진행하기 전에 작업할 특정 도로 유형 몇 개만 남겨두도록 ``roads`` 레이어를 필터링할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:94
+msgid ""
+"Some roads in OSM datasets are listed as ``unclassified``, ``tracks``, "
+"``path`` and ``footway``. We want to exclude these from our dataset and "
+"focus on the other road types, more suitable for this exercise."
+msgstr ""
+"오픈스트리트맵 데이터셋에 있는 도로 가운데 일부는 ``unclassified``, ``tracks``, ``path`` 및 "
+"``footway`` 로 목록화되어 있습니다. 우리는 이 예제에 더 적합한 다른 도로 유형들에 집중할 수 있도록 데이터셋에서 이들을 "
+"제외하고자 합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:99
+msgid ""
+"Moreover, OSM data might not be updated everywhere, and we will also exclude"
+" ``NULL`` values."
+msgstr "게다가, 모든 곳에서 오픈스트리트맵 데이터를 업데이트하지 못할 수도 있기 때문에 ``NULL`` 값들도 제외할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:102
+msgid "Right click on the ``roads`` layer and choose :guilabel:`Filter...`."
+msgstr "``roads`` 레이어를 오른쪽 클릭한 다음 :guilabel:`Filter...` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:103
+msgid ""
+"In the dialog that pops up we filter these features with the following "
+"expression::"
+msgstr "대화창이 열리면 이 피처들을 다음 표현식으로 필터링합니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:107
+msgid ""
+"The concatenation of the two operators ``NOT`` and ``IN`` excludes all the "
+"features that have these attribute values in the ``highway`` field."
+msgstr ""
+"``NOT`` 과 ``IN`` 두 연산자를 연결해서 사용하면 ``highway`` 필드에 이 속성 값들을 가지고 있는 피처들을 모두 "
+"제외합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:110
+msgid ""
+"``IS NOT NULL`` combined with the ``AND`` operator excludes roads with no "
+"value in the ``highway`` field."
+msgstr ""
+"``AND`` 와 ``IS NOT NULL`` 두 연산자를 함께 사용하면 ``highway`` 필드에 어떤 값도 없는 도로들을 "
+"제외합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
+msgid ""
+"Note the |indicatorFilter| icon next to the :guilabel:`roads` layer. It "
+"helps you remember that this layer has a filter activated, so some features "
+"may not be available in the project."
+msgstr ""
+"``roads`` 레이어 옆에 있는 |indicatorFilter| 아이콘을 주목하십시오. 이 레이어에 필터가 활성화돼 있다는 사실을 "
+"알려줍니다. 즉 프로젝트에서 몇몇 피처들을 사용할 수 없을 수도 있다는 뜻입니다."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:486
 msgid "indicatorFilter"
 msgstr "indicatorFilter"
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:117
+msgid "The map with all the data should look like the following one:"
+msgstr "모든 데이터를 불러온 맵은 다음 그림처럼 보일 것입니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:124
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Convert Layers' CRS"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 레이어 좌표계 변환하기"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:126
+msgid ""
+"Because we are going to be measuring distances within our layers, we need to"
+" change the layers' CRS. To do this, we need to select each layer in turn, "
+"save the layer to a new one with our new projection, then import that new "
+"layer into our map."
+msgstr ""
+"레이어들 안에서 거리를 측정할 것이기 때문에, 레이어의 좌표계를 변경해야 합니다. 이를 위해 각 레이어를 차례로 선택해서 새 투영체를 "
+"적용한 새 레이어로 저장한 다음 맵에 새 레이어를 가져와야 합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:131
+msgid ""
+"You have many different options, e.g. you can export each layer as an ESRI "
+"Shapefile format dataset, you can append the layers to an existing "
+"GeoPackage file, or you can create another GeoPackage file and fill it with "
+"the new reprojected layers. We will show the last option, so the "
+":file:`training_data.gpkg` will remain clean. Feel free to choose the best "
+"workflow for yourself."
+msgstr ""
+"서로 다른 옵션들이 많이 있습니다. 예를 들면, 각 레이어를 ESRI 셰이프파일 포맷 데이터셋으로 내보낼 수도 있고, 레이어들을 기존 "
+"GeoPackage 파일에 첨부할 수도 있고, 또는 또다른 GeoPackage 파일을 생성해서 새 재투영 레이어들로 채울 수도 있습니다."
+" 여기에서는 :file:`training_data.gpkg` 파일이 변경되지 않도록 마지막 옵션을 배워볼 것입니다. 여러분 자신에게 가장"
+" 적합한 워크플로를 선택하도록 하세요."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:139
+msgid ""
+"In this example, we are using the *WGS 84 / UTM zone 34S* CRS, but you "
+"should use a UTM CRS which is more appropriate for your region."
+msgstr ""
+"이 예제에서는 *WGS 84 / UTM zone 34S* 좌표계를 사용하고 있지만, 여러분은 여러분의 지역에 더 적합한 UTM 좌표계를 "
+"사용해야 합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
+msgid ""
+"Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
+msgstr ":guilabel:`Layers` 패널에서 ``roads`` 레이어를 오른쪽 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:145
+msgid "Click :guilabel:`Export --> Save Features As...`"
+msgstr ":guilabel:`Export --> Save Features As...` 메뉴 항목을 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:146
+msgid ""
+"In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`"
+" as :guilabel:`Format`"
+msgstr ""
+":guilabel:`Save Vector Layer As` 대화창에서 :guilabel:`Format` 으로 "
+":guilabel:`GeoPackage` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:148
+msgid ""
+"Click on :guilabel:`...` for the :guilabel:`File name`, and name the new "
+"GeoPackage ``vector_analysis``"
+msgstr ""
+":guilabel:`File name` 란 옆에 있는 :guilabel:`...` 버튼을 클릭하고 새 GeoPackage의 이름을 "
+"``vector_analysis`` 라고 입력하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:150
+msgid "Change the :guilabel:`Layer name` to ``roads_34S``"
+msgstr ":guilabel:`Layer name` 을 ``roads_34S`` 로 변경하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:151
+msgid "Change the :guilabel:`CRS` to *WGS 84 / UTM zone 34S*"
+msgstr ":guilabel:`CRS` 를 *WGS 84 / UTM zone 34S* 로 변경하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:152
+msgid "Click on :guilabel:`OK`:"
+msgstr ":guilabel:`OK` 를 클릭하십시오:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:157
+msgid ""
+"This will create the new GeoPackage database and add the ``roads_34S`` "
+"layer."
+msgstr "이렇게 하면 새 GeoPackage 데이터베이스를 생성하고 ``roads_34S`` 레이어를 추가할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:159
+msgid ""
+"Repeat this process for each layer, creating a new layer in the "
+":file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the "
+"original name."
+msgstr ""
+"각 레이어에 대해 이 처리 과정을 반복하십시오. :file:`vector_analysis.gpkg` GeoPackage 파일에 새 "
+"레이어를 생성한 다음, 원본 이름 뒤에 ``_34S`` 를 붙이십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:162
+msgid ""
+"On macOS, press the :guilabel:`Replace` button in the dialog that pops up to"
+" allow QGIS to overwrite the existing GeoPackage."
+msgstr ""
+"맥OS 상에서는, QGIS가 기존 GeoPackage를 덮어쓸 수 있도록 대화창에 있는 :guilabel:`Replace` 버튼을 "
+"누르십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:165
+msgid ""
+"When you choose to save a layer to an existing GeoPackage, QGIS will **add**"
+" that layer next to the existing layers in the GeoPackage, if no layer of "
+"the same name already exists."
+msgstr ""
+"기존 GeoPackage에 레이어를 저장한다고 선택한 경우, QGIS는 GeoPackage에 동일한 이름을 가진 레이어가 없는 한 "
+"GeoPackage에 있는 기존 레이어들 다음에 해당 레이어를 **추가** 할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:169
+msgid "Remove each of the old layers from the project"
+msgstr "프로젝트에서 예전 레이어들을 하나씩 제거하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:170
+msgid ""
+"Once you have completed the process for all the layers, right click on any "
+"layer and click :guilabel:`Zoom to layer extent` to focus the map to the "
+"area of interest."
+msgstr ""
+"모든 레이어에 대해 이 처리 과정을 완료하고 나면, 맵을 관심 지역으로 집중시키기 위해 레이어 가운데 하나를 오른쪽 클릭하고 "
+":guilabel:`Zoom to layer extent` 메뉴를 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:174
+msgid ""
+"Now that we have converted OSM data to a UTM projection, we can begin our "
+"calculations."
+msgstr "이제 오픈스트리트맵 데이터를 UTM 투영으로 변환했으니, 계산을 시작할 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:178
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Analyzing the Problem: Distances "
+"From Schools and Roads"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 문제를 분석하기: 학교 및 도로부터의 거리"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
+msgid "QGIS allows you to calculate distances between any vector object."
+msgstr "QGIS는 모든 벡터 객체 사이의 거리를 계산할 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:182
+msgid ""
+"Make sure that only the ``roads_34S`` and ``buildings_34S`` layers are "
+"visible (to simplify the map while you're working)"
+msgstr ""
+"(작업 도중 맵을 단순화시키기 위해) ``roads_34S`` 와 ``buildings_34S`` 레이어만 가시화되어 있는지 "
+"확인하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:184
+msgid ""
+"Click on the :menuselection:`Processing --> Toolbox` to open the analytical "
+"*core* of QGIS. Basically, **all** algorithms (for vector **and** raster "
+"analysis) are available in this toolbox."
+msgstr ""
+":menuselection:`Processing --> Toolbox` 메뉴 항목을 클릭해서 QGIS의 분석 *핵심* 을 여십시오. "
+"기본적으로 이 툴박스에서 (벡터 **그리고** 래스터 분석 용) **모든** 알고리즘을 사용할 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:188
+msgid ""
+"We start by calculating the area around the ``roads_34S`` by using the "
+":guilabel:`Buffer` algorithm. You can find it in the :menuselection:`Vector "
+"Geometry` group."
+msgstr ""
+"먼저 :guilabel:`Buffer` 알고리즘을 사용해서 ``roads_34S`` 주변 지역을 "
+"계산합니다.:menuselection:`Vector Geometry` 그룹에서 버퍼 알고리즘을 찾을 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:195
+msgid ""
+"Or you can type ``buffer`` in the search menu in the upper part of the "
+"toolbox:"
+msgstr "또는 툴박스의 상단에 있는 검색 메뉴에 ``buffer`` 를 입력해도 됩니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:201
+msgid "Double click on it to open the algorithm dialog"
+msgstr "이 알고리즘을 더블 클릭하면 알고리즘 대화창이 열립니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:202
+msgid ""
+"Select ``roads_34S`` as :guilabel:`Input layer`, set :guilabel:`Distance` to"
+" 50 and use the default values for the rest of the parameters."
+msgstr ""
+":guilabel:`Input layer` 를 ``roads_34S`` 로 선택하고 :guilabel:`Distance` 를 50으로 "
+"설정한 다음 나머지 파라미터들은 기본값으로 유지하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:209
+msgid ""
+"The default :guilabel:`Distance` is in meters because our input dataset is "
+"in a Projected Coordinate System that uses meter as its basic measurement "
+"unit. You can use the combo box to choose other projected units like "
+"kilometers, yards, etc."
+msgstr ""
+"기본 :guilabel:`Distance` 는 미터 단위입니다. 입력 데이터셋이 미터를 기본 측정 단위로 사용하는 투영 좌표계이기 "
+"때문입니다. 킬로미터, 야드 등등의 다른 투영 단위를 선택하려면 콤보박스를 사용하면 됩니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:215
+msgid ""
+"If you are trying to make a buffer on a layer with a Geographical Coordinate"
+" System, Processing will warn you and suggest to reproject the layer to a "
+"metric Coordinate System."
+msgstr ""
+"지리 좌표계인 레이어 상에 버퍼를 생성하려고 하는 경우, 공간 처리 프레임워크(Processing Framework)가 경고하고 해당 "
+"레이어를 미터법 좌표계로 재투영하라고 권고할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:219
+msgid ""
+"By default, *Processing* creates temporary layers and adds them to the "
+":guilabel:`Layers` panel. You can also append the result to the GeoPackage "
+"database by:"
+msgstr ""
+"기본적으로, *공간 처리* 프레임워크는 임시 레이어를 생성해서 :guilabel:`Layers` 패널에 추가합니다.  GeoPackage"
+" 데이터베이스에 결과물을 다음과 같은 방법으로 첨부할 수도 있습니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:223
+msgid ""
+"Clicking on the :guilabel:`...` button and choose :guilabel:`Save to "
+"GeoPackage...`"
+msgstr ""
+":guilabel:`...` 버튼을 클릭한 다음 :guilabel:`Save to GeoPackage...` 메뉴를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:225
+msgid "Naming the new layer ``roads_buffer_50m``"
+msgstr "새 레이어의 이름을 ``roads_buffer_50m`` 으로 입력하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:226
+msgid "Saving it in the :file:`vector_analysis.gpkg` file"
+msgstr ":file:`vector_analysis.gpkg` 파일에 새 레이어를 저장하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:231
+msgid "Click on :guilabel:`Run`, and then close the :guilabel:`Buffer` dialog"
+msgstr ":guilabel:`Run` 버튼을 클릭한 다음, :guilabel:`Buffer` 대화창을 닫으십시오."
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:234
 msgid "Now your map will look something like this:"
-msgstr "이제 여러분의 맵이 다음처럼 보일 것입니다."
+msgstr "이제 여러분의 맵이 다음처럼 보일 것입니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:239
+msgid ""
+"If your new layer is at the top of the :guilabel:`Layers` list, it will "
+"probably obscure much of your map, but this gives you all the areas in your "
+"region which are within 50m of a road."
+msgstr ""
+"새 레이어가 :guilabel:`Layers` 목록 맨 위에 있는 경우, 맵을 많이 가릴 테지만 여러분의 지역에서 도로에서 50미터 이상"
+" 떨어져 있지 않은 모든 지역을 볼 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:243
+msgid ""
+"Notice that there are distinct areas within your buffer, which correspond to"
+" each individual road. To get rid of this problem:"
+msgstr "이 버퍼 안에 개별 영역들이 있는 것이 보이십니까? 개별 도로 각각에 대응하는 버퍼들입니다. 이 문제를 해결하려면:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:246
+msgid ""
+"Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer with"
+" :guilabel:`Dissolve results` enabled."
+msgstr ""
+"``roads_buffer_50m`` 레이어를 체크 해제한 다음 :guilabel:`Dissolve results` 옵션을 활성화시킨 "
+"채로 버퍼를 다시 생성하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:252
+msgid "Save the output as :guilabel:`roads_buffer_50m_dissolved`"
+msgstr "산출물을 ``roads_buffer_50m_dissolved`` 로 저장하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:253
+msgid "Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog"
+msgstr ":guilabel:`Run` 버튼을 클릭한 다음, :guilabel:`Buffer` 대화창을 닫으십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:255
+msgid ""
+"Once you have added the layer to the :guilabel:`Layers` panel, it will look "
+"like this:"
+msgstr ":guilabel:`Layers` 패널에 이 레이어가 추가되고 나면 다음과 같이 보일 것입니다:"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:261
 msgid "Now there are no unnecessary subdivisions."
 msgstr "이제 필요 없는 부분들이 사라졌습니다."
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:263
+msgid ""
+"The *Short Help* on the right side of the dialog explains how the algorithm "
+"works. If you need more information, just click on the :guilabel:`Help` "
+"button in the bottom part to open a more detailed guide of the algorithm."
+msgstr ""
+"대화창의 오른쪽에 있는 *짧은 도움말(Short Help)* 은 알고리즘이 어떻게 작동하는지를 설명합니다. 더 자세한 정보가 필요한 "
+"경우, 대화창 하단에 있는 :guilabel:`Help` 버튼을 클릭하면 좀 더 자세한 알고리즘 지침이 열립니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:273
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Distance from schools"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 학교로부터의 거리"
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
 msgid "Use the same approach as above and create a buffer for your schools."
 msgstr "앞 단계와 동일한 방법으로 학교를 중심으로 하는 버퍼를 생성하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:277
+msgid ""
+"It shall be ``1 km`` in radius. Save the new layer in the "
+":file:`vector_analysis.gpkg` file as ``schools_buffer_1km_dissolved``."
+msgstr ""
+"반경을 ``1 km`` 로 설정해야 합니다. :file:`vector_analysis.gpkg` 파일에 새 레이어를 "
+"``schools_buffer_1km_dissolved`` 로 저장하십시오."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:280
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:392
 msgid "Answer"
 msgstr "해답"
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:283
+msgid "Your buffer dialog should look like this:"
+msgstr "버퍼 대화창이 다음과 같이 보여야 합니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:288
+msgid "The :guilabel:`Buffer distance` is :guilabel:`1` kilometer."
+msgstr ":guilabel:`Buffer distance` 는 ``1`` 킬로미터입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
+msgid ""
+"The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This"
+" is optional, but it's recommended, because it makes the output buffers look"
+" smoother. Compare this:"
+msgstr ""
+":guilabel:`Segments to approximate` 값을 ``20`` 으로 설정하십시오. 선택 옵션이지만 권장합니다. "
+"왜냐하면 산출 버퍼를 더 매끄럽게 보이게 해주기 때문입니다. 다음을:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:297
+msgid "To this:"
+msgstr "다음과 비교해보세요:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:302
+msgid ""
+"The first image shows the buffer with the :guilabel:`Segments to "
+"approximate` value set to :guilabel:`5` and the second shows the value set "
+"to :guilabel:`20`. In our example, the difference is subtle, but you can see"
+" that the buffer's edges are smoother with the higher value."
+msgstr ""
+"첫 번째 이미지는 :guilabel:`Segments to approximate` 값을 ``5`` 로 설정한 버퍼이고 두 번째 이미지는 "
+"``20`` 으로 설정한 버퍼입니다. 이 예제에서 그 차이가 크진 않지만, 값이 높을수록 버퍼의 경계가 더 매끄럽다는 사실을 알 수 "
+"있습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:308
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Overlapping Areas"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 중첩하는 영역들"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
+msgid ""
+"Now we have identified areas where the road is less than 50 meters away and "
+"areas where there is a school within 1 km (direct line, not by road). But "
+"obviously, we only want the areas where both of these criteria are "
+"satisfied. To do that, we will need to use the :guilabel:`Intersect` tool. "
+"You can find it in :menuselection:`Vector Overlay` group in the "
+":guilabel:`Processing Toolbox`."
+msgstr ""
+"이제 도로에서 50미터 이상 떨어져 있지 않은 지역과 학교에서 (도로 거리가 아니라 직선 거리로) 1킬로미터 안에 있는 지역을 "
+"식별했습니다. 그러나 당연하게도, 이 두 기준을 모두 만족시키는 지역만 필요할 뿐입니다. 이를 위해 "
+":guilabel:`Intersect` 도구를 사용해야 합니다. :guilabel:`Processing Toolbox` 의 "
+":menuselection:`Vector Overlay` 그룹에서 이 도구를 찾을 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:319
+msgid ""
+"Use the two buffer layers as :guilabel:`Input layer` and :guilabel:`Overlay "
+"layer`, choose :file:`vector_analysis.gpkg` GeoPackage in "
+":guilabel:`Intersection` with :guilabel:`Layer name` "
+"``road_school_buffers_intersect``. Leave the rest as suggested (default)."
+msgstr ""
+"이 두 버퍼 레이어들을 각각 :guilabel:`Input layer` 와 :guilabel:`Overlay layer` 로 지정하고, "
+":guilabel:`Intersection` 을 :file:`vector_analysis.gpkg` GeoPackage 파일로 그리고 "
+":guilabel:`Layer name` 을 ``road_school_buffers_intersect`` 로 선택하십시오. 나머지는 "
+"제안하는 대로 (기본값으로) 유지하십시오."
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:328
 msgid "Click :guilabel:`Run`."
 msgstr ":guilabel:`Run` 을 클릭합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
+msgid ""
+"In the image below, the blue areas are where both of the distance criteria "
+"are satisfied."
+msgstr "다음 그림에서, 파란색 영역이 두 거리 기준을 모두 만족시키는 지역입니다."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:336
 msgid ""
 "You may remove the two buffer layers and only keep the one that shows where "
 "they overlap, since that's what we really wanted to know in the first place:"
 msgstr "이제 두 버퍼 레이어를 제거하고 겹치는 구역만 보여주는 레이어만 남겨도 됩니다. 원래 그 레이어만을 원했기 때문입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:346
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Extract the Buildings"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 건물 추출하기"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
+msgid ""
+"Now you've got the area that the buildings must overlap. Next, you want to "
+"extract the buildings in that area."
+msgstr "이제 건물들이 중첩해야만 하는 지역을 구했습니다. 다음은 해당 지역에 있는 건물들을 추출할 차례입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:351
+msgid ""
+"Look for the menu entry :menuselection:`Vector Selection --> Extract by "
+"location` within the *Processing Toolbox*"
+msgstr ""
+":guilabel:`Processing Toolbox` 에서 :menuselection:`Vector Selection --> "
+"Extract by location` 메뉴 항목을 찾으십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:354
+msgid ""
+"Select ``buildings_34S`` in :guilabel:`Extract features from`. Check "
+":guilabel:`intersect` in :guilabel:`Where the features (geometric "
+"predicate)`, select the buffer intersection layer in :guilabel:`By comparing"
+" to the features from`. Save to the :file:`vector_analysis.gpkg`, and name "
+"the layer ``well_located_houses``."
+msgstr ""
+":guilabel:`Extract features from` 에 ``buildings_34S`` 를 지정하십시오. "
+":guilabel:`Where the features (geometric predicate)` 에서 "
+":guilabel:`intersect` 를 체크하고, :guilabel:`By comparing to the features from` "
+"에 버퍼 교차 영역 레이어를 선택하십시오. :file:`vector_analysis.gpkg` 파일에 이 레이어를 "
+"``well_located_houses`` 라는 이름으로 저장하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:365
+msgid "Click :guilabel:`Run` and close the dialog"
+msgstr ":guilabel:`Run` 버튼을 클릭한 다음 대화창을 닫으십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
+msgid ""
+"You will probably find that not much seems to have changed. If so, move the "
+":guilabel:`well_located_houses` layer to the top of the layers list, then "
+"zoom in."
+msgstr ""
+"아마 그렇게 변한 게 없다고 느낄 수도 있을 겁니다. 그럴 경우, ``well_located_houses`` 레이어를 레이어 목록 맨 "
+"위로 옮긴 다음 확대해보십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
+msgid ""
+"The red buildings are those which match our criteria, while the buildings in"
+" green are those which do not."
+msgstr "빨간색 건물들이 기준을 만족시키는 건물들이고, 초록색 건물들은 만족시키지 못하는 건물들입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
+msgid ""
+"Now you have two separated layers and can remove ``buildings_34S`` from the "
+"layer list."
+msgstr "이제 개별 레이어 2개를 구했기 때문에 레이어 목록에서 ``buildings_34S`` 를 제거해도 됩니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:380
+msgid ""
+":abbr:`★★☆ (Moderate level)` Try Yourself: Further Filter our Buildings"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 건물을 심화 필터링하기"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
 msgid ""
@@ -114,14 +731,146 @@ msgstr ""
 "이제 학교에서 1km, 도로에서 50m 이내에 있는 모든 건물들을 보여주는 레이어가 생성됐습니다. 다음으로 이 레이어에서 식당으로부터 "
 "500m 이내에 있는 건물들만 추려내야 합니다."
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
+msgid ""
+"Using the processes described above, create a new layer called "
+":guilabel:`houses_restaurants_500m` which further filters your "
+":guilabel:`well_located_houses` layer to show only those which are within "
+"500m of a restaurant."
+msgstr ""
+"앞에서 설명했던 처리 과정을 사용해서, ``well_located_houses`` 레이어를 필터링해서 식당에서 500미터 이내에 있는 "
+"건물들만 보여주는 새로운 ``houses_restaurants_500m`` 레이어를 생성하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:395
+msgid ""
+"To create the new :guilabel:`houses_restaurants_500m` layer, we go through a"
+" two step process:"
+msgstr "새 ``houses_restaurants_500m`` 레이어를 생성하려면, 두 단계 처리 과정을 거쳐야 합니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
+msgid ""
+"First, create a buffer of 500m around the restaurants and add the layer to "
+"the map:"
+msgstr "먼저, 식당 주변에 500미터 버퍼를 생성한 다음 맵에 이 레이어를 추가하십시오:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:407
+msgid "Next, extract buildings within that buffer area:"
+msgstr "다음으로, 해당 버퍼 영역 안에 있는 건물들을 추출하십시오:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:412
+msgid ""
+"Your map should now show only those buildings which are within 50m of a "
+"road, 1km of a school and 500m of a restaurant:"
+msgstr "이제 여러분의 맵은 도로에서 50m, 학교에서 1km, 식당에서 500m 이내에 있는 건물들만 보여줄 것입니다:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Select Buildings of the Right Size"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 알맞은 크기의 건물을 선택하기"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
+msgid ""
+"To see which buildings are of the correct size (more than 100 square "
+"meters), we need to calculate their size."
+msgstr "어떤 건물이 정확한 면적인지 (100평방미터 이상인지) 보려면, 건물들의 면적을 계산해야 합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
+msgid ""
+"Select the :guilabel:`houses_restaurants_500m` layer and open the *Field "
+"Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
+" button in the main toolbar or in the attribute table window"
+msgstr ""
+"``houses_restaurants_500m`` 레이어를 선택한 다음 메인 툴바 또는 속성 테이블 창에 있는 "
+"|calculateField| :sup:`Open Field Calculator` 버튼을 클릭해서 *필드 계산기(Field "
+"Calculator)* 를 여십시오."
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:484
 msgid "calculateField"
 msgstr "calculateField"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:428
+msgid ""
+"Select :guilabel:`Create a new field`, set the :guilabel:`Output field name`"
+" to ``AREA``, choose :guilabel:`Decimal number (real)` as :guilabel:`Output "
+"field type`, and choose ``$area`` from the :menuselection:`Geometry` group."
+msgstr ""
+":guilabel:`Create a new field` 를 선택한 다음, :guilabel:`Output field name` 을 "
+"``AREA`` 로 설정하고 :guilabel:`Output field type` 을 :guilabel:`Decimal number "
+"(real)` 으로 선택하십시오. 마지막으로 :menuselection:`Geometry` 그룹에서 ``$area`` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:437
+msgid ""
+"The new field ``AREA`` will contain the area of each building in square "
+"meters."
+msgstr "각 건물의 면적이 새 ``AREA`` 필드에 평방미터 단위로 담기게 될 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:439
+msgid ""
+"Click :guilabel:`OK`. The ``AREA`` field has been added at the end of the "
+"attribute table."
+msgstr ":guilabel:`OK` 를 클릭합니다. ``AREA`` 필드가 속성 테이블 맨 끝에 추가되었습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:442
+msgid ""
+"Click the |toggleEditing| :sup:`Toggle Editing` button to finish editing, "
+"and save your edits when prompted."
+msgstr ""
+"|toggleEditing| :sup:`Toggle Editing` 버튼을 클릭해서 편집 작업을 완료하고, 메시지가 나타나면 편집 내용을"
+" 저장하십시오."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:489
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
+msgid ""
+"In the :menuselection:`Source` tab of the layer properties, set the "
+":guilabel:`Provider Feature Filter` to ``\"AREA >= 100``."
+msgstr ""
+"레이어 속성의 :menuselection:`Source` 탭에서 :guilabel:`Provider Feature Filter` 를 "
+"``\"AREA\" >= 100`` 으로 설정하십시오."
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:450
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
+msgid ""
+"Your map should now only show you those buildings which match our starting "
+"criteria and which are more than 100 square meters in size."
+msgstr "이제 여러분의 맵에는 초기 기준을 만족시키면서 면적이 100평방미터 이상인 건물들만 보일 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:457
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
+msgid ""
+"Save your solution as a new layer, using the approach you learned above for "
+"doing so. The file should be saved within the same GeoPackage database, with"
+" the name ``solution``."
+msgstr ""
+"앞에서 배웠던 접근법을 사용해서 여러분의 해답을 새 레이어로 저장하십시오. 이 파일은 동일한 GeoPackage 데이터베이스에 "
+"``solution`` 이란 이름으로 저장해야 합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:465
+msgid "In Conclusion"
+msgstr "결론"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
+msgid ""
+"Using the GIS problem solving approach together with QGIS vector analysis "
+"tools, you were able to solve a problem with multiple criteria quickly and "
+"easily."
+msgstr ""
+"GIS 문제 해결 접근법을 QGIS 벡터 분석 도구와 함께 사용해서 여러 기준을 가진 문제를 빠르고 쉽게 해결할 수 있었습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:472
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
+msgid ""
+"In the next lesson, we will look at how to calculate the shortest distance "
+"along roads from one point to another."
+msgstr "다음 수업에서는 어떤 포인트에서 다른 포인트까지 도로를 따르는 최단 거리를 계산하는 방법에 대해 알아볼 것입니다."
