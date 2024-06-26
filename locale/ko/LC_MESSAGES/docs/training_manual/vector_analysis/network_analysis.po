@@ -5,9 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
 # Kwon.Yongchan <ruvyn@naver.com>, 2024
-# Transifex Bot <>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-11 01:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,17 +31,482 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:2
+msgid "Lesson: Network Analysis"
+msgstr "수업: 망 분석"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:4
+msgid ""
+"Calculating the shortest distance between two points is a common GIS task. "
+"Tools for this can be found in the :guilabel:`Processing Toolbox`."
+msgstr ""
+"두 포인트들 사이의 최단 거리를 계산하는 것은 흔한 GIS 작업입니다. :guilabel:`Processing Toolbox` 에서 이를"
+" 위한 도구들을 찾을 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:8
+msgid ""
+"**The goal for this lesson:** learn to use :guilabel:`Network analysis` "
+"algorithms."
+msgstr "**이 수업의 목표:** :guilabel:`Network analysis` 알고리즘 사용법 배우기."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:12
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: The Tools and the Data"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 도구와 데이터"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:14
+msgid ""
+"You can find all the network analysis algorithms in the "
+":menuselection:`Processing --> Network Analysis` menu. You can see that "
+"there are many tools available:"
+msgstr ""
+":menuselection:`Processing --> Network Analysis` 메뉴에서 모든 망(network) 분석 "
+"알고리즘들을 찾을 수 있습니다. 사용할 수 있는 도구들이 많이 있다는 사실을 알 수 있을 겁니다:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:22
+msgid ""
+"Open the project :file:`exercise_data/network_analysis/network.qgz`. It "
+"contains two layers:"
+msgstr ""
+":file:`exercise_data/network_analysis/network.qgz` 프로젝트 파일을 여십시오. 이 프로젝트는 "
+"레이어를 2개 담고 있습니다:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:25
+msgid "``network_points``"
+msgstr "``network_points``"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:26
+msgid "``network_lines``"
+msgstr "``network_lines``"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:28
+msgid ""
+"The :guilabel:`network_lines` layer has already a style that helps to "
+"understand the road network."
+msgstr "``network_lines`` 레이어에는 이미 도로망을 이해하기 쉽게 해주는 스타일이 적용되어 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:35
+msgid ""
+"The shortest path tools provide ways to calculate either the shortest or the"
+" fastest path between two points of a network, given:"
+msgstr ""
+"최단 거리 도구들은 다음을 지정해서 망의 두 포인트들 사이의 최단 또는 최속 경로 가운데 하나를 계산하기 위한 수단을 제공합니다:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:38
+msgid "start and end points selected on the map"
+msgstr "맵 상에서 선택한 시작 및 종단 포인트"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:39
+msgid ""
+"start point selected on the map and end points taken from a point layer"
+msgstr "맵 상에서 선택한 시작 포인트 하나와 포인트 레이어에서 가져온 종단 포인트들"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:41
+msgid ""
+"start points taken from a point layer and end point selected on the map"
+msgstr "포인트 레이어에서 가져온 시작 포인트들과 맵 상에서 선택한 종단 포인트 하나"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:44
+msgid "Let's start."
+msgstr "시작해봅시다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:47
+msgid ":abbr:`★☆☆ (Basic level)` Calculate the shortest path (point to point)"
+msgstr ":abbr:`★☆☆ (초급 수준)` 최단 경로 계산하기 (포인트에서 포인트로)"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:48
+msgid ""
+"The :menuselection:`Network analysis --> Shortest path (point to point)` "
+"allows you to calculate the shortest distance between two manually selected "
+"points on the map."
+msgstr ""
+":menuselection:`Network analysis --> Shortest path (point to point)` 는 여러분이 "
+"맵 상에서 직접 선택한 두 포인트 사이의 최단 거리를 계산할 수 있게 해줍니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:53
+msgid ""
+"In this example we will calculate the **shortest** (not fastest) path "
+"between two points."
+msgstr "이 예제에서는 두 포인트 사이의 (최속이 아니라) **최단** 경로를 계산할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:57
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:146
+msgid "Open the :guilabel:`Shortest path (point to point)` algorithm"
+msgstr ":guilabel:`Shortest path (point to point)` 알고리즘을 여십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:58
+msgid ""
+"Select :guilabel:`network_lines` for :guilabel:`Vector layer representing "
+"network`"
+msgstr ""
+":guilabel:`Vector layer representing network` 에 ``network_lines`` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:60
+msgid "Use ``Shortest`` for :guilabel:`Path type to calculate`"
+msgstr ":guilabel:`Path type to calculate` 에 ``Shortest`` 를 사용하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:62
+msgid "Use these two points as starting and ending points for the analysis:"
+msgstr "다음 두 포인트를 분석을 위한 시작 및 종단 포인트로 사용합니다:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:69
+msgid ""
+"Click on the :guilabel:`...` button next to :guilabel:`Start point (x, y)` "
+"and choose the location tagged with ``Starting Point`` in the picture. "
+"Enable the snapping options for an accurate selection. The coordinates of "
+"the clicked point are added."
+msgstr ""
+":guilabel:`Start point (x, y)` 옆에 있는 :guilabel:`...` 버튼을 클릭하고 그림에서 "
+"``Starting Point`` 라고 태그되어 있는 위치를 선택하십시오. 정확한 선택을 위해 스냅 작업 옵션을 활성화시키십시오. 클릭한"
+" 포인트의 좌표가 추가됩니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:74
+msgid ""
+"Do the same thing, but choosing the location tagged with ``Ending point`` "
+"for :guilabel:`End point (x, y)`"
+msgstr ""
+"동일한 과정을 거쳐, 이번에는 :guilabel:`End point (x, y)` 에 ``Ending point`` 라고 태그된 위치를 "
+"선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:76
+msgid "Click on the :guilabel:`Run` button:"
+msgstr ":guilabel:`Run` 버튼을 클릭하십시오:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:82
+msgid ""
+"A new line layer is created representing the shortest path between the "
+"chosen points. Uncheck the ``network_lines`` layer to see the result better:"
+msgstr ""
+"선택한 포인트들 사이의 최단 경로를 나타내는 새 라인 레이어가 생성되었습니다. 결과물을 더 잘 보려면 ``network_lines`` "
+"레이어를 체크 해제하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:90
+msgid ""
+"Open the attribute table of the output layer. It contains three fields, "
+"representing the coordinates of the start and end points and the **cost**."
+msgstr ""
+"산출 레이어의 속성 테이블을 여십시오. 시작 및 종단 포인트의 좌표와 **비용(cost)** 을 보여주는 필드 3개를 담고 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:94
+msgid ""
+"We chose ``Shortest`` as :guilabel:`Path type to calculate`, so the **cost**"
+" represent the **distance**, in layer units, between the two locations."
+msgstr ""
+":guilabel:`Path type to calculate` 로 ``Shortest`` 를 선택했기 때문에, **비용** 은 두 위치 "
+"사이의 레이어 단위 **거리** 를 뜻합니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:98
+msgid ""
+"In our case, the *shortest* distance between the chosen points is around "
+"``1000`` meters:"
+msgstr "이 예제에서 선택한 포인트들 사이의 *최단* 거리는 약 ``1000`` 미터입니다:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:105
+msgid ""
+"Now that you know how to use the tool, feel free to test other locations."
+msgstr "이제 이 도구를 사용하는 방법을 알았으니, 다른 위치들을 선택해서 마음대로 테스트해보십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:111
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Fastest path"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 최속 경로"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:113
+msgid ""
+"With the same data of the previous exercise, try to calculate the fastest "
+"path between the two points."
+msgstr "이전 예제와 동일한 데이터를 사용해서, 두 포인트 사이의 최속 경로를 계산해보십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:116
+msgid "How much time do you need to go from the start to the end point?"
+msgstr "시작 포인트에서 종단 포인트로 가는 데 시간이 얼마나 필요한가요?"
 
 #: ../../docs/training_manual/vector_analysis/network_analysis.rst:118
 msgid "Answer"
-msgstr "Answer"
+msgstr "해답"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:121
+msgid ""
+"Open :menuselection:`Network Analysis --> Shortest Path (Point to Point)` "
+"and fill the dialog as:"
+msgstr ""
+":menuselection:`Network Analysis --> Shortest Path (Point to Point)` 를 열어서 "
+"대화창을 다음과 같이 채우십시오:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:127
+msgid "Make sure that the :guilabel:`Path type to calculate` is ``Fastest``."
+msgstr ":guilabel:`Path type to calculate` 에 ``Fastest`` 를 선택했는지 확인하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:128
+msgid "Click on :guilabel:`Run` and close the dialog."
+msgstr ":guilabel:`Run` 버튼을 클릭한 다음 대화창을 닫으십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:129
+msgid ""
+"Open now the attribute table of the output layer. The :guilabel:`cost` field"
+" contains the travel time between the two points (as fraction of hours):"
+msgstr ""
+"이제 산출 레이어의 속성 테이블을 열어보십시오. :guilabel:`cost` 필드가 두 포인트 사이의 (소수점 시간 단위) 이동 시간을"
+" 담고 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:136
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Advanced options"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 고급 옵션"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:138
+msgid ""
+"Let us explore some more options of the Network Analysis tools. In the "
+":ref:`previous exercise <network_fastest_path>` we calculated the "
+"**fastest** route between two points. As you can imagine, the time depends "
+"on the travel **speed**."
+msgstr ""
+"망 분석 도구들의 옵션들을 더 많이 탐색해봅시다. :ref:`이전 예제 <network_fastest_path>` 에서 두 포인트 사이의"
+" **최속** 경로를 계산했습니다. 상상할 수 있듯이, 이 이동 시간은 이동 **속도** 에 따라 달라집니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:143
+msgid ""
+"We will use the same layers and starting and ending points of the previous "
+"exercises."
+msgstr "이전 예제와 동일한 레이어와 시작 및 종단 포인트를 사용할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:147
+msgid ""
+"Fill the :guilabel:`Input layer`, :guilabel:`Start point (x, y)` and "
+":guilabel:`End point (x, y)` as we did before"
+msgstr ""
+"이전과 마찬가지로 :guilabel:`Input layer`, :guilabel:`Start point (x, y)` 및 "
+":guilabel:`End point (x, y)` 를 채우십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:149
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:204
+msgid "Choose ``Fastest`` as the :guilabel:`Path type to calculate`"
+msgstr ":guilabel:`Path type to calculate` 에 ``Fastest`` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:150
+msgid "Open the :guilabel:`Advanced parameter` menu"
+msgstr ":guilabel:`Advanced parameters` 메뉴를 엽니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:151
+msgid ""
+"Change the :guilabel:`Default speed (km/h)` from the default ``50`` value to"
+" ``4``"
+msgstr ":guilabel:`Default speed (km/h)` 의 값을 기본값 ``50`` 에서 ``4`` 로 변경하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:158
+msgid "Click on :guilabel:`Run`"
+msgstr ":guilabel:`Run` 을 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:159
+msgid ""
+"Once the algorithm is finished, close the dialog and open the attribute "
+"table of the output layer."
+msgstr "알고리즘 실행이 완료되면, 대화창을 닫고 산출 레이어의 속성 테이블을 여십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:162
+msgid ""
+"The *cost* field contains the value according to the speed parameter you "
+"have chosen. We can convert the *cost* field from hours with fractions to "
+"the more readable *minutes* values."
+msgstr ""
+"*비용* 필드가 여러분이 선택한 속도 파라미터에 따른 값을 담고 있습니다. *비용* 필드의 값을 소수점 시간에서 좀 더 알기 쉬운 *분*"
+" 단위 값으로 변환할 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:167
+msgid "Open the field calculator by clicking on the |calculateField| icon"
+msgstr "|calculateField| 아이콘을 클릭해서 필드 계산기를 여십시오."
 
 #: ../../docs/training_manual/vector_analysis/network_analysis.rst:286
 msgid "calculateField"
 msgstr "calculateField"
 
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:168
+msgid "Add a new field to store the path cost in :guilabel:`minutes`."
+msgstr "경로 비용을 분 단위로 저장할 새 ``minutes`` 필드를 추가하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:174
+msgid ""
+"That's it! Now you know how many minutes it will take to get from one point "
+"to the other one if the whole network speed is at ``4 km/h``."
+msgstr ""
+"이게 다입니다! 이제 전체 망 속도가 ``4 km/h`` 로 고정된 경우 한 포인트에서 다른 포인트로 가는 데 걸리는 시간이 몇 분인지 "
+"알 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:180
+msgid ":abbr:`★★★ (Advanced level)` Shortest path with speed limit"
+msgstr ":abbr:`★★★ (고급 수준)` 속도 제한이 있는 최단 경로"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:181
+msgid ""
+"The Network analysis toolbox has other interesting options. Looking at the "
+"following map:"
+msgstr "망 분석 툴박스는 다른 흥미로운 옵션도 가지고 있습니다. 다음 맵을 살펴보십시오:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:188
+msgid ""
+"we would like to know the **fastest** route considering the **speed limits**"
+" of each road (the labels represent the speed limits in km/h). The shortest "
+"path without considering speed limits would of course be the purple path. "
+"But in that road the speed limit is 20 km/h, while in the green road you can"
+" go at 100 km/h!"
+msgstr ""
+"각 도로의 **속도 제한** 을 고려한 **최속** 경로를 알고자 합니다. (라벨이 시속 킬로미터 단위 속도 제한을 나타냅니다.) 속도 "
+"제한을 고려하지 않은 최단 경로는 당연히 보라색 경로일 것입니다. 그러나 해당 도로의 속도 제한은 시속 20킬로미터인 반면, 녹색 "
+"도로에서는 시속 100킬로미터로 달릴 수 있죠!"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:195
+msgid ""
+"As we did in the first exercise, we will use the :menuselection:`Network "
+"analysis --> Shortest path (point to point)` and we will manually choose the"
+" start and end points."
+msgstr ""
+"첫 번째 예제와 마찬가지로, :menuselection:`Network analysis --> Shortest path (point to"
+" point)` 를 사용하고 시작 및 종단 포인트를 직접 선택할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:199
+msgid ""
+"Open the :menuselection:`Network analysis --> Shortest path (point to "
+"point)` algorithm"
+msgstr ""
+":menuselection:`Network analysis --> Shortest path (point to point)` 알고리즘을 "
+"여십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:202
+msgid ""
+"Select :guilabel:`network_lines` for the :guilabel:`Vector layer "
+"representing network` parameter"
+msgstr ""
+":guilabel:`Vector layer representing network` 파라미터에 ``network_lines`` 를 "
+"선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:205
+msgid ""
+"Select the :guilabel:`Start point (x, y)` and :guilabel:`End point (x, y)` "
+"as we did before"
+msgstr ""
+"이전과 마찬가지로 :guilabel:`Start point (x, y)` 와 :guilabel:`End point (x, y)` 를 "
+"선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:207
+msgid "Open the :guilabel:`Advanced parameters` menu"
+msgstr ":guilabel:`Advanced parameters` 메뉴를 엽니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:208
+msgid ""
+"Choose the *speed* field as the :guilabel:`Speed Field` parameter. With this"
+" option the algorithm will take into account the speed limits for each road."
+msgstr ""
+":guilabel:`Speed Field` 파라미터에 ``speed`` 필드를 선택하십시오. 이 옵션을 사용하면 알고리즘이 각 도로의 "
+"속도 제한을 연산에 넣을 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:216
+msgid "Click on the :guilabel:`Run` button"
+msgstr ":guilabel:`Run` 버튼을 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:217
+msgid "Turn off the ``network_lines`` layer to better see the result"
+msgstr "결과물을 더 잘 보려면 ``network_lines`` 레이어를 끄십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:223
+msgid ""
+"As you can see the fastest route does not correspond to the shortest one."
+msgstr "보면 알겠지만, 최속 경로가 최단 경로와 일치하지 않습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:227
+msgid ":abbr:`★★☆ (Moderate level)` Service area (from layer)"
+msgstr ":abbr:`★★☆ (중급 수준)` 서비스 영역 (레이어로부터)"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:228
+msgid ""
+"The :menuselection:`Network Analysis --> Service area (from layer)` "
+"algorithm can answer the question: given a point layer, what are all the "
+"reachable areas given a distance or a time value?"
+msgstr ""
+":menuselection:`Network Analysis --> Service area (from layer)` 알고리즘은 다음 질문에"
+" 답할 수 있습니다: 포인트 레이어가 주어졌을 때, 지정한 거리 또는 시간 값 안에 도달할 수 있는 모든 영역은 어디어디인가?"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:232
+msgid ""
+"The :menuselection:`Network Analysis --> Service area (from point)` is the "
+"same algorithm, but it allows you to manually choose the point on the map."
+msgstr ""
+":menuselection:`Network Analysis --> Service area (from point)` 도 동일한 "
+"알고리즘이지만, 여러분이 맵 상에서 포인트를 직접 선택할 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:237
+msgid ""
+"Given a distance of ``250`` meters we want to know how far we can go on the "
+"network from each point of the :guilabel:`network_points` layer."
+msgstr ""
+"거리를 ``250`` 미터로 지정했을 때, ``network_points`` 레이어의 각 포인트에서 망을 따라 얼마나 멀리 갈 수 있는지"
+" 알아보려 합니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:240
+msgid "Uncheck all the layers except ``network_points``"
+msgstr "``network_points`` 를 제외한 다른 모든 레이어를 체크 해제하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:241
+msgid ""
+"Open the :menuselection:`Network Analysis --> Service area (from layer)` "
+"algorithm"
+msgstr ""
+":menuselection:`Network Analysis --> Service area (from layer)` 알고리즘을 여십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:244
+msgid ""
+"Choose ``network_lines`` for :guilabel:`Vector layer representing network`"
+msgstr ""
+":guilabel:`Vector layer representing network` 에 ``network_lines`` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:246
+msgid ""
+"Choose ``network_points`` for :guilabel:`Vector layer with start points`"
+msgstr ""
+":guilabel:`Vector layer with start points` 에 ``network_points`` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:248
+msgid "Choose ``Shortest`` in :guilabel:`Path type to calculate`"
+msgstr ":guilabel:`Path type to calculate` 에 ``Shortest`` 를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:249
+msgid "Enter ``250`` for the :guilabel:`Travel cost` parameter"
+msgstr ":guilabel:`Travel cost` 파라미터에 ``250`` 을 입력하십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:250
+msgid "Click on :guilabel:`Run` and close the dialog"
+msgstr ":guilabel:`Run` 버튼을 클릭한 다음 대화창을 닫으십시오."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:256
+msgid ""
+"The output layer represents the maximum path you can reach from the point "
+"features given a distance of 250 meters:"
+msgstr "산출 레이어는 거리를 250미터로 지정했을 때 포인트 피처들에서 도달할 수 있는 최장 경로를 나타냅니다:"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:263
+msgid "Cool isn't it?"
+msgstr "멋지지 않습니까?"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:266
+msgid "In Conclusion"
+msgstr "결론"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:268
+msgid ""
+"Now you know how to use :guilabel:`Network analysis` algorithm to solve "
+"shortest and fastest path problems."
+msgstr ""
+"이제 최단 및 최속 경로 문제를 해결하기 위해 :guilabel:`Network analysis` 알고리즘을 사용하는 방법을 배웠습니다."
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:271
+msgid ""
+"We are now ready to perform some spatial statistic on vector layer data. "
+"Let's go!"
+msgstr "벡터 레이어 데이터 상에서 공간 통계를 수행할 준비가 끝났습니다. 해볼까요!"
+
+#: ../../docs/training_manual/vector_analysis/network_analysis.rst:275
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
+
 #: ../../docs/training_manual/vector_analysis/network_analysis.rst:277
 msgid ""
 "Next you'll see how to run spatial statistics algorithms on vector datasets."
-msgstr "다음 강의에서는 벡터 데이터셋 상에서 공간 통계 알고리듬을 실행하는 방법을 배워보겠습니다."
+msgstr "다음 수업에서는 벡터 데이터셋 상에서 공간 통계 알고리즘을 실행하는 방법을 배워보겠습니다."
