@@ -793,6 +793,20 @@ msgid ""
 "have different shapes:"
 msgstr "指定した範囲を覆うグリッドのベクタレイヤを作成します。グリッドのセルは以下のように様々な形状があります："
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:274
+msgid ""
+"Different grid cell shapes applied to the same extent, without overlaps"
+msgstr "重なり合うことなく同じ範囲に適用された様々なグリッドセル形状"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:276
+msgid ""
+"The size and/or placement of each element in the grid is defined using a "
+"horizontal and vertical spacing. The CRS of the output layer must be "
+"defined. The grid extent and the spacing values must be expressed in the "
+"coordinates and units of this CRS."
+msgstr ""
+"グリッド内の各要素のサイズや配置は、水平方向と垂直方向の間隔を使って定義されます。出力レイヤのCRSは定義されなければなりません。グリッドの範囲と間隔の値は、このCRSの座標と単位で表現されなければなりません。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:282
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:956
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1065
@@ -972,6 +986,31 @@ msgstr "**グリッド**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:355
 msgid "Resulting vector grid layer. One of:"
 msgstr "結果のグリッドベクタレイヤ。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:375
+msgid ""
+"Resulting vector grid layer. The output geometry type (point, line or "
+"polygon) depends on the :guilabel:`Grid type`. Features are created from top"
+" to bottom, left to right. The attribute table is filled with:"
+msgstr ""
+"結果のベクタグリッドレイヤ。出力されるジオメトリ型（ポイント、ライン、ポリゴン）は :guilabel:`グリッドタイプ` "
+"に依ります。地物は上から下、左から右に作成されます。属性テーブルは次により埋められます："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:380
+msgid "an ``id``"
+msgstr "``Id``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:381
+msgid "coordinates on the ``left``, ``right``, ``top`` and ``bottom`` sides"
+msgstr "``left`` (左辺)、``right`` (右辺)、``top`` (上辺)、 ``bottom`` (下辺)の座標"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:382
+msgid ""
+"and their placement in the grid: ``row_index`` and ``column_index`` "
+"(available for point, rectangle and hexagon grid types)"
+msgstr ""
+"グリッド内の配置: ``row_index`` (行番号)と ``column_index`` "
+"(列番号)（点、長方形、六角形のグリッドタイプで利用できます）"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:388
 msgid "**Algorithm ID**: ``native:creategrid``"
@@ -1264,6 +1303,12 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:630
 msgid "Import geotagged photos"
 msgstr "ジオタグ（位置情報）付きの写真"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:631
+msgid ""
+"Creates a point layer corresponding to the geotagged locations from JPEG or "
+"HEIC/HEIF images from a source folder."
+msgstr "ソースフォルダ内のJPEGまたはHEIC/HEIF画像から、ジオタグの位置に対応したポイントレイヤを作成します。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:634
 msgid ""
@@ -2123,6 +2168,14 @@ msgid ""
 "layer."
 msgstr "ラスタレイヤ内の各ピクセルに対応したポイントのベクタレイヤを作成します。"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1597
+msgid ""
+"Converts a raster layer to a vector layer, by creating point features for "
+"each individual pixel's center in the raster layer. Any NoData  pixels are "
+"skipped in the output."
+msgstr ""
+"ラスタレイヤの各ピクセルの中心に対してポイント地物を作成することで、ラスタレイヤをベクタレイヤへ変換します。NoData値のピクセルは出力では省略されます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1616
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1690
 msgid "**Band number**"
@@ -2194,6 +2247,14 @@ msgid ""
 "Creates a vector layer of polygons corresponding to each pixel in a raster "
 "layer."
 msgstr "ラスタレイヤ内の各ピクセルに対応したポリゴンのベクタレイヤを作成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1671
+msgid ""
+"Converts a raster layer to a vector layer, by creating polygon features for "
+"each individual pixel's extent in the raster layer. Any NoData  pixels are "
+"skipped in the output."
+msgstr ""
+"ラスタレイヤの各ピクセルの範囲に対してポリゴン地物を作成することで、ラスタレイヤをベクタレイヤへ変換します。NoData値のピクセルは出力では省略されます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1700
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1723
