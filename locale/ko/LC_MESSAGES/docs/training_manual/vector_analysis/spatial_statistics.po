@@ -32,53 +32,288 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:2
+msgid "Lesson: Spatial Statistics"
+msgstr "수업: 공간 통계"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:4
 msgid ""
 "Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
 "Technology)"
-msgstr "이 강의는 Linfiniti와 S. Motala(남아프리카공화국 케이프 페닌슐라 기술대학교)가 작성했습니다."
+msgstr ""
+"이 수업은 Linfiniti와 (남아프리카공화국 케이프 페닌슐라 기술대학교의) 시디크 모탈라(Siddique Motala)가 "
+"작성했습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:7
+msgid ""
+"Spatial statistics allows you to analyze and understand what is going on in "
+"a given vector dataset. QGIS includes many useful tools for statistical "
+"analysis."
+msgstr ""
+"공간 통계는 여러분이 지정한 벡터 데이터셋에서 어떤 일이 일어나고 있는지 분석하고 이해할 수 있게 해줍니다. QGIS는 공간 통계를 위한"
+" 유용한 도구들을 많이 가지고 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:11
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools within the :guilabel:`Processing Toolbox`."
+msgstr ""
+"**이 수업의 목표:** :guilabel:`Processing Toolbox` 에 있는 QGIS의 공간 통계 도구들을 사용하는 방법을 "
+"이해하기."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:15
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Create a Test Dataset"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 테스트 데이터셋 생성하기"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:17
+msgid "We will create a random set of points, to get a dataset to work with."
+msgstr "작업할 데이터셋을 얻기 위해 랜덤한 포인트들의 집합을 생성할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:19
+msgid ""
+"To do so, you will need a polygon dataset to define the area you want to "
+"create the points in."
+msgstr "이를 위해, 그 안에 포인트들을 생성하고자 하는 영역을 정의하는 폴리곤 데이터셋이 필요할 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:22
+msgid "We will use the area covered by streets."
+msgstr "도로들이 커버하는 영역을 사용하겠습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:24
+msgid "Start a new project"
+msgstr "새 프로젝트를 시작하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:25
+msgid ""
+"Add your ``roads`` dataset, as well as ``srtm_41_19`` (elevation data) found"
+" in :file:`exercise_data/raster/SRTM/`."
+msgstr ""
+"``roads`` 데이터셋은 물론, :file:`exercise_data/raster/SRTM/` 폴더에 있는 ``srtm_41_19``"
+" (표고 데이터)도 추가하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:28
+msgid ""
+"You might find that the SRTM DEM layer has a different CRS to that of the "
+"roads layer. QGIS is reprojecting both layers in a single CRS. For the "
+"following exercises this difference does not matter, but feel free to "
+"reproject (as shown earlier in this module)."
+msgstr ""
+"STRM DEM 레이어의 좌표계가 ``roads`` 레이어의 좌표계와 다를 수도 있습니다. QGIS가 두 레이어를 단일 좌표계로 "
+"재투영하고 있는 겁니다. 다음 예제들에서는 이런 차이가 문제되지는 않지만, (이전 강의에서 배운대로) 재투영하고 싶다면 마음대로 "
+"하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:34
+msgid "Open :guilabel:`Processing` toolbox"
+msgstr ":guilabel:`Processing` 툴박스를 여십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:35
+msgid ""
+"Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool "
+"to generate an area enclosing all the roads by selecting ``Convex Hull`` as "
+"the :guilabel:`Geometry Type`:"
+msgstr ""
+":menuselection:`Vector Geometry --> Minimum bounding geometry` 도구를 사용, "
+":guilabel:`Geometry Type` 을 ``Convex Hull`` 로 선택해서 모든 도로가 감싸고 있는 영역을 생성하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:43
+msgid ""
+"As you know, if you don't specify the output, *Processing* creates temporary"
+" layers. It is up to you to save the layers immediately or at a later stage."
+msgstr ""
+"여러분도 알고 있듯이, 산출물을 지정하지 않는 경우 *공간 처리(Processing)* 프레임워크는 임시 레이어를 생성합니다. 레이어를 "
+"즉시 또는 나중에 저장할지는 여러분의 선택입니다."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:48
 msgid "Creating random points"
-msgstr "랜덤한 포인트 생성"
+msgstr "랜덤한 포인트 생성하기"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:50
+msgid ""
+"Create 100 random points in this area using the tool at "
+":menuselection:`Vector Creation --> Random points in layer bounds`, with a "
+"minimum distance of ``0.0``:"
+msgstr ""
+":menuselection:`Vector Creation --> Random points in layer bounds` 도구를 사용, "
+"최단 거리를 ``0.0`` 으로 설정해서 이 영역에 랜덤한 포인트들을 100개 생성하십시오:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:57
+msgid ""
+"The yellow warning sign tells you that that parameter concerns distances. "
+"The :guilabel:`Bounding geometry` layer is in a Geographical Coordinate "
+"System and the algorithm is just reminding you this. For this example we "
+"won't use this parameter so you can ignore it."
+msgstr ""
+"노란색 경고 표시는 해당 파라미터가 거리와 관련이 있다는 것을 나타냅니다. 이 알고리즘이 ``Bounding geometry`` 레이어가"
+" 지리 좌표계를 사용하고 있다는 사실을 상기시켜주는 것입니다. 이 예제의 경우 이 파라미터를 사용하지 않을 것이기 때문에 무시해도 "
+"괜찮습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:64
+msgid ""
+"If needed, move the generated random point to the top of the legend to see "
+"them better:"
+msgstr "필요한 경우, 생성한 랜덤 포인트들을 범례 최상단으로 옮겨서 더 잘 보이게 하십시오:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:71
 msgid "Sampling the data"
-msgstr "데이터 샘플링"
+msgstr "데이터 샘플링하기"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:73
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":menuselection:`Raster Analysis --> Sample raster values` algorithm. This "
+"tool samples the raster at the locations of the points and adds the raster "
+"values in new field(s) depending on the number of bands in the raster."
+msgstr ""
+"래스터로부터 샘플 데이터셋을 생성하려면, :menuselection:`Raster Analysis --> Sample raster "
+"values` 알고르짐을 사용해야 할 것입니다. 이 도구는 포인트 위치에서 래스터를 샘플링해서 래스터가 보유한 밴드 개수에 따라 새 "
+"필드(들)에 래스터 값들을 추가합니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:77
+msgid "Open the :guilabel:`Sample raster values` algorithm dialog"
+msgstr ":guilabel:`Sample raster values` 알고리즘 대화창을 여십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:78
+msgid ""
+"Select ``Random_points`` as the layer containing sampling points, and the "
+"SRTM raster as the band to get values from. The default name of the new "
+"field is ``rvalue_N``, where ``N`` is the number of the raster band. You can"
+" change the name of the prefix if you want."
+msgstr ""
+"``Random_points`` 를 샘플링 포인트들을 담고 있는 레이어로 선택하고, SRTM 레이어를 값을 가져올 밴드로 선택하십시오. "
+"새 필드의 기본 이름은 ``rvalue_N`` 으로,  이때 ``N`` 이 래스터 밴드의 번호입니다. 원하는 경우 그 앞의 접두어를 "
+"변경해도 됩니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:87
+msgid "Press :guilabel:`Run`"
+msgstr ":guilabel:`Run` 버튼을 누르십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:89
+msgid ""
+"Now you can check the sampled data from the raster file in the attribute "
+"table of the ``Sampled Points`` layer. They will be in a new field with the "
+"name you have chosen."
+msgstr ""
+"이제 ``Sampled Points`` 레이어의 속성 테이블에서 래스터 파일에서 나온 샘플링된 데이터를 확인할 수 있습니다. 이 데이터는"
+" 여러분이 선택한 이름을 가진 새 필드에 있을 것입니다."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:93
 msgid "A possible sample layer is shown here:"
-msgstr "다음과 비슷한 샘플 레이어가 보일 것입니다."
+msgstr "다음과 비슷한 샘플 레이어가 보일 겁니다:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:98
+msgid ""
+"The sample points are classified using the ``rvalue_1`` field such that red "
+"points are at a higher altitude."
+msgstr "이 샘플 포인트들은 고도가 높을수록 빨간색이 진해지도록 ``rvalue_1`` 필드를 사용해서 범주화되었습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:101
+msgid ""
+"You will be using this sample layer for the rest of the statistical "
+"exercises."
+msgstr "나머지 통계 예제들에 이 샘플 레이어를 사용하게 될 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:105
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Basic Statistics"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 기본 통계"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:107
 msgid "Now get the basic statistics for this layer."
 msgstr "이제 이 레이어에 대한 기본적인 통계를 내보겠습니다."
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:109
+msgid ""
+"Click on the |sum| :sup:`Show statistical summary` icon in the "
+":guilabel:`Attributes Toolbar`. A new panel will pop up."
+msgstr ""
+":guilabel:`Attributes Toolbar` 에 있는 |sum| :sup:`Show statistical summary` "
+"아이콘을 클릭하십시오. 새 패널이 열릴 것입니다."
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:392
 msgid "sum"
 msgstr "sum"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:112
+msgid ""
+"In the dialog that appears, specify the ``Sampled Points`` layer as the "
+"source."
+msgstr "나타난 대화창에서, ``Sampled Points`` 레이어를 소스로 지정하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:114
+msgid ""
+"Select the *rvalue_1* field in the field combo box. This is the field you "
+"will calculate statistics for."
+msgstr "필드 콤보박스에서 ``rvalue_1`` 필드를 선택하십시오. 여러분은 이 필드에 대한 통계를 계산하게 될 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:116
+msgid ""
+"The :guilabel:`Statistics` Panel will be automatically updated with the "
+"calculated statistics:"
+msgstr ":guilabel:`Statistics` 패널이 계산된 통계로 자동 업데이트될 것입니다:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:122
+msgid ""
+"You can copy the values by clicking on the |editCopy| :sup:`Copy Statistics "
+"To Clipboard` button and paste the results into a spreadsheet."
+msgstr ""
+"|editCopy| :sup:`Copy Statistics To Clipboard` 버튼을 클릭하면 값들을 복사해서, 통계 결과를 "
+"스프레드시트로 붙여넣을 수 있습니다."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:386
 msgid "editCopy"
 msgstr "editCopy"
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:126
+msgid "Close the :guilabel:`Statistics` Panel when done"
+msgstr "작업이 종료되었으면 :guilabel:`Statistics` 패널을 닫으십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:128
+msgid "Many different statistics are available:"
+msgstr "다음과 같은 많은 통계를 낼 수 있습니다:"
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
 msgid "Count"
-msgstr "개수"
+msgstr "개수(count)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "The number of samples/values."
+msgstr "샘플/값의 개수입니다."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
 msgid "Sum"
-msgstr "Sum"
+msgstr "합(sum)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "The values added together."
+msgstr "값들을 모두 더한 값입니다."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:138
 msgid "Mean"
-msgstr "Mean"
+msgstr "평균(mean)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:137
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"number of values."
+msgstr "평균값은 그저 값들의 합을 값들의 개수로 나눈 값입니다."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:143
 msgid "Median"
-msgstr "Median"
+msgstr "중앙값(median)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:141
+msgid ""
+"If you arrange all the values from smallest to greatest, the middle value "
+"(or the average of the two middle values, if N is an even number) is the "
+"median of the values."
+msgstr ""
+"모든 값들을 최소에서 최대로 나열했을 때, 그 중앙에 있는 (또는 값들의 개수가 짝수인 경우 중앙에 있는 두 값의 평균) 값을 값들의 "
+"중앙값이라 합니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:150
+msgid "St Dev (pop)"
+msgstr "표준 편차 (모집단)"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:146
 msgid ""
@@ -86,47 +321,431 @@ msgid ""
 "clustered around the mean. The smaller the standard deviation, the closer "
 "values tend to be to the mean."
 msgstr ""
-"표준편차입니다. 값들이 얼마나 중간값에 가까이 모여 있는지를 나타냅니다. 표준편차가 작을수록 값들이 중간값에 더 가까이 모이는 경향이 "
-"있습니다."
+"표준 편차입니다. 값들이 얼마나 중앙값에 가까이 모여 있는지를 나타냅니다. 표준 편차가 작을수록 값들이 중앙값에 더 가까이 모이는 경향이"
+" 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "Minimum"
+msgstr "최소값(minimum)"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
 msgid "The minimum value."
-msgstr "최소값입니다."
+msgstr "가장 작은 값입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "Maximum"
+msgstr "최대값(maximun)"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
 msgid "The maximum value."
-msgstr "최대값입니다."
+msgstr "가장 큰 값입니다."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
 msgid "Range"
-msgstr "Range"
+msgstr "범위(range)"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
 msgid "The difference between the minimum and maximum values."
-msgstr "최소/최대값의 차이입니다."
+msgstr "최소값과 최대값의 차입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "Q1"
+msgstr "Q1"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "First quartile of the data."
+msgstr "데이터의 제1 사분위수(quartile)입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Q3"
+msgstr "Q3"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Third quartile of the data."
+msgstr "데이터의 제3 사분위수(quartile)입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:169
+msgid "Missing (null) values"
+msgstr "누락 (NULL) 값"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:168
+msgid "The number of missing values."
+msgstr "누락된 값들의 개수입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:172
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Compute statistics on distances "
+"between points"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 포인트들 사이의 거리에 대한 통계 계산하기"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:174
+msgid "Create a new temporary point layer."
+msgstr "새 임시 포인트 레이어를 생성하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:175
+msgid ""
+"Enter edit mode, and digitize three points somewhere among the other points."
+msgstr "편집 모드로 들어가서, 다른 포인트들 사이 어딘가에 포인트를 3개 디지타이즈하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:178
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only **three** points."
+msgstr "아니면, 이전과 마찬가지로 랜덤 포인트 생성 방법을 사용하지만 이번에는 포인트를 **3개** 만 지정하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:180
+msgid ""
+"Save your new layer as :guilabel:`distance_points` in the format you prefer."
+msgstr "새 레이어의 이름을 ``distance_points`` 로 하고, 여러분이 선호하는 포맷으로 저장하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:183
+msgid ""
+"To generate statistics on the distances between points in the two layers:"
+msgstr "두 레이어에 있는 포인트들 사이의 거리에 대한 통계를 생성하려면:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:186
+msgid "Open the :menuselection:`Vector Analysis --> Distance matrix` tool."
+msgstr ":menuselection:`Vector Analysis --> Distance matrix` 도구를 여십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:187
+msgid ""
+"Select the ``distance_points`` layer as the input layer, and the ``Sampled "
+"Points`` layer as the target layer."
+msgstr ""
+"입력 레이어를 ``distance_points`` 레이어로, 대상 레이어를 ``Sampled Points`` 레이어로 선택하십시오."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:189
 msgid "Set it up like this:"
-msgstr "다음과 같이 설정하십시오."
+msgstr "다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:194
+msgid ""
+"If you want you can save the output layer as a file or just run the "
+"algorithm and save the temporary output layer later."
+msgstr ""
+"원하는 경우 산출 레이어를 파일로 저장할 수도 있고, 또는 그냥 알고리즘을 실행한 다음 나중에 임시 산출 레이어를 저장할 수도 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:196
+msgid "Click :guilabel:`Run` to generate the distance matrix layer."
+msgstr ":guilabel:`Run` 을 클릭해서 거리 행렬 레이어를 생성하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:197
+msgid ""
+"Open the attribute table of the generated layer: values refer to the "
+"distances between the :guilabel:`distance_points` features and their two "
+"nearest points in the :guilabel:`Sampled Points` layer:"
+msgstr ""
+"생성된 레이어의 속성 테이블을 여십시오. 이 값들은 ``distance_points`` 의 피처들과 ``Sampled Points`` "
+"레이어에서 이들과 가장 가까이 있는 포인트 2개 사이의 거리를 참조하고 있습니다:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:204
+msgid ""
+"With these parameters, the *Distance Matrix* tool calculates distance "
+"statistics for each point of the input layer with respect to the nearest "
+"points of the target layer. The fields of the output layer contain the mean,"
+" standard deviation, minimum and maximum for the distances to the nearest "
+"neighbors of the points in the input layer."
+msgstr ""
+"이 파라미터들을 사용해서, *거리 행렬(Distance Matrix)* 도구는 대상 레이어의 최근접 포인트들을 기준으로 입력 레이어의 각"
+" 포인트에 대한 거리 통계를 계산합니다. 산출 레이어의 필드들은 입력 레이어에 있는 포인트들의 최근접 이웃까지의 거리에 대한 평균, 표준"
+" 편차, 최소값 및 최대값을 담고 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:213
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Nearest Neighbor Analysis (within "
+"layer)"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 최근접 이웃 분석 (레이어 내부)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:215
+msgid "To do a nearest neighbor analysis of a point layer:"
+msgstr "포인트 레이어 하나의 최근접 이웃 분석을 하려면:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:217
+msgid "Choose :menuselection:`Vector analysis --> Nearest neighbor analysis`."
+msgstr ""
+":menuselection:`Vector analysis --> Nearest neighbor analysis` 도구를 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:219
+msgid ""
+"In the dialog that appears, select the :guilabel:`Random points` layer and "
+"click :guilabel:`Run`."
+msgstr "대화창이 열리면, ``Random points`` 레이어를 선택한 다음 :guilabel:`Run` 버튼을 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:221
+msgid ""
+"The results will appear in the Processing :guilabel:`Result Viewer` Panel."
+msgstr "결과물이 공간 처리 :guilabel:`Result Viewer` 패널에 나타날 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:227
+msgid "Click on the blue link to open the ``html`` page with the results:"
+msgstr "파란색 링크를 클릭해서 결과물이 담긴 ``html`` 페이지를 여십시오:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:233
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Mean Coordinates"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 평균 좌표"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:235
 msgid "To get the mean coordinates of a dataset:"
-msgstr "데이터의 평균 좌표를 얻으려면,"
+msgstr "데이터셋의 평균 좌표를 얻으려면,"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:237
+msgid "Start :menuselection:`Vector analysis --> Mean coordinate(s)`"
+msgstr ":menuselection:`Vector analysis --> Mean coordinate(s)` 도구를 실행하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:238
+msgid ""
+"In the dialog that appears, specify :guilabel:`Random points` as "
+":guilabel:`Input layer`, and leave the optional choices unchanged."
+msgstr ""
+"대화창이 열리면, :guilabel:`Input layer` 를 ``Random points`` 로 지정하고 다른 옵션들은 그대로 "
+"유지하십시오."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:240
 msgid "Click :guilabel:`Run`."
 msgstr ":guilabel:`Run` 을 클릭합니다."
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:242
+msgid ""
+"Let us compare this to the central coordinate of the polygon that was used "
+"to create the random sample."
+msgstr "이 결과물을 랜덤한 샘플을 생성하는 데 쓰인 폴리곤의 중심 좌표와 비교해봅시다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:245
+msgid "Start :menuselection:`Vector geometry --> Centroids`"
+msgstr ":menuselection:`Vector geometry --> Centroids` 도구를 실행하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:246
+msgid ""
+"In the dialog that appears, select ``Bounding geometry`` as the input layer."
+msgstr "대화창이 열리면, 입력 레이어를 ``Bounding geometry`` 로 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:249
+msgid ""
+"As you can see, the mean coordinates (pink point) and the center of the "
+"study area (in green) don't necessarily coincide."
+msgstr "여러분도 알 수 있듯이, 평균 좌표(분홍색 포인트)와 연구 영역의 중심(녹색 포인트)이 반드시 일치하지는 않습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:252
+msgid ""
+"The centroid is the barycenter of the layer (the barycenter of a square is "
+"the center of the square) while the mean coordinates represent the average "
+"of all node coordinates."
+msgstr ""
+"중심점(centroid)은 레이어의 무게 중심(barycenter)인 반면 (정사각형의 무게 중심은 정사각형의 중심입니다) 평균 좌표는 "
+"모든 노드 좌표들의 평균을 나타냅니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:260
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Image Histograms"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 이미지 히스토그램"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:262
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer "
+"(raster dataset)."
+msgstr ""
+"데이터셋의 히스토그램은 데이터셋의 값들의 분포를 보여줍니다. QGIS에서 이를 보여주는 가장 간단한 방법은 이미지 히스토그램을 사용하는 "
+"것으로, 모든 이미지 레이어(래스터 데이터셋)의 :guilabel:`Layer Properties` 대화창에서 할 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:267
+msgid ""
+"In your :guilabel:`Layers` panel, right-click on the ``srtm_41_19`` layer"
+msgstr ":guilabel:`Layers` 패널에서 ``srtm_41_19`` 레이어를 오른쪽 클릭하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:269
+msgid "Select :menuselection:`Properties`"
+msgstr ":menuselection:`Properties` 항목을 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:270
+msgid ""
+"Choose the :guilabel:`Histogram` tab. You may need to click on the "
+":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
+" graph that shows the frequency distribution for the raster values."
+msgstr ""
+":guilabel:`Histogram` 탭을 선택하십시오. 그래프를 생성하려면 :guilabel:`Compute Histogram` "
+"버튼을 클릭해야 할 수도 있습니다. 래스터 값들의 빈도 분포(frequency distribution)를 보여주는 그래프를 보게 될 "
+"것입니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:279
+msgid ""
+"The graph can be exported as an image with the |fileSave| :sup:`Save plot` "
+"button"
+msgstr "|fileSave| :sup:`Save plot` 버튼을 누르면 이 그래프를 이미지로 내보낼 수 있습니다."
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:388
 msgid "fileSave"
 msgstr "fileSave"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:282
+msgid ""
+"You can see more detailed information about the layer in the "
+":guilabel:`Information` tab (the mean and max values are estimated, and may "
+"not be exact)."
+msgstr ""
+":guilabel:`Information` 탭에서 레이어에 대한 더 상세한 정보를 볼 수 있습니다. (평균값과 최대값은 추정치로, "
+"정확하지 않을 수도 있습니다.)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:286
+msgid ""
+"The mean value is ``332.8`` (estimated to 324.3), and the maximum value is "
+"``1699`` (estimated to 1548)! You can zoom in the histogram. Since there are"
+" a lot of pixels with value ``0``, the histogram looks compressed "
+"vertically. By zooming in to cover everything but the peak at ``0``, you "
+"will see more details:"
+msgstr ""
+"평균값이 ``332.8`` (추정치는 324.3) 그리고 최대값이 ``1699`` (추정치는 1548)입니다! 히스토그램을 확대해볼 수 "
+"있습니다. ``0`` 값을 가진 픽셀들이 아주 많기 때문에, 히스토그램이 수직 방향으로 눌려 있는 것처럼 보입니다. ``0`` 의 "
+"최고점(peak)을 제외한 모든 것을 볼 수 있도록 확대하면 더 자세한 내용을 볼 수 있습니다:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:297
+msgid ""
+"If the mean and maximum values are not the same as above, it can be due to "
+"the min/max value calculation. Open the :guilabel:`Symbology` tab and expand"
+" the :guilabel:`Min / Max Value Settings` menu. Choose "
+"|radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`."
+msgstr ""
+"평균값과 최대값이 앞에서 말한 값들과 동일하지 않을 경우, 최대값/최소값 계산 때문일 수 있습니다. "
+":guilabel:`Symbology` 탭을 열어서 :guilabel:`Min / Max Value Settings` 메뉴를 펼친 다음,"
+" |radioButtonOn|:guilabel:`Min / max` 를 선택하고 :guilabel:`Apply` 를 클릭하십시오."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:390
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:304
+msgid ""
+"Keep in mind that a histogram shows you the distribution of values, and not "
+"all values are necessarily visible on the graph."
+msgstr "히스토그램은 값들의 분포를 보여줄 뿐, 모든 값들이 그래프 상에 반드시 가시화되지는 않는다는 사실을 명심하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:309
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Spatial Interpolation"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 공간 보간"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:311
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`Sampled points` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr ""
+"여러분이 데이터를 외삽(extrapolate)하고 싶은 샘플 포인트들의 집합이 있다고 가정해봅시다. 예를 들면, 앞서 생성했던 "
+"``Sampled points`` 데이터셋에 접근할 수 있는데 해당 지형이 어떻게 생겼는지 알고 싶을 수도 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:317
+msgid ""
+"To start, launch the :menuselection:`GDAL --> Raster analysis --> Grid (IDW "
+"with nearest neighbor searching)` tool in the :guilabel:`Processing "
+"Toolbox`."
+msgstr ""
+"먼저, :guilabel:`Processing Toolbox` 에서 :menuselection:`GDAL --> Raster "
+"analysis --> Grid (IDW with nearest neighbor searching)` 도구를 실행하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:320
+msgid "For :guilabel:`Point layer` select ``Sampled points``"
+msgstr ":guilabel:`Point layer` 를 ``Sampled points`` 로 선택하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:321
+msgid "Set :guilabel:`Weighting power` to ``5.0``"
+msgstr ":guilabel:`Weighting power` 를 ``5.0`` 으로 설정하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:322
+msgid ""
+"In :guilabel:`Advanced parameters`, set :guilabel:`Z value from field` to "
+"``rvalue_1``"
+msgstr ""
+":guilabel:`Advanced parameters` 에서, :guilabel:`Z value from field` 를 "
+"``rvalue_1`` 으로 설정하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:324
+msgid "Finally click on :guilabel:`Run` and wait until the processing ends"
+msgstr "마지막으로 :guilabel:`Run` 을 클릭한 다음 처리 과정이 종료될 때까지 기다리십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:325
+msgid "Close the dialog"
+msgstr "대화창을 닫습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:327
+msgid ""
+"Here is a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr ""
+"다음 그림은 원본 데이터셋(왼쪽)과 샘플 포인트들로부터 구성한 데이터셋(오른쪽)을 비교한 것입니다. 샘플 포인트들의 위치의 랜덤한 특성 "
+"때문에 실제와 다르게 보일 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:335
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well."
+msgstr ""
+"보시다시피 샘플 포인트 100개만으로는 지형을 상세하게 표현하기에 충분하지 않습니다. 매우 일반적인 인상을 주기는 하지만 오해를 불러올 "
+"수도 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:340
+msgid ""
+":abbr:`★★☆ (Moderate level)` Try Yourself: Different interpolation methods"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 다른 보간법들"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:342
+msgid "Use the processes shown above to create a set of 10 000 random points"
+msgstr "앞에서 배운 처리 과정을 사용해서 랜덤 포인트 10,000개 집합을 생성하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:345
+msgid ""
+"If the number of points is really big, the processing time can take a long "
+"time."
+msgstr "포인트 개수가 정말로 클 경우, 처리 시간이 길어질 수 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:348
+msgid "Use these points to sample the original DEM"
+msgstr "이 포인트들을 사용해서 원본 DEM을 샘플링하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:349
+msgid ""
+"Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this "
+"dataset."
+msgstr ""
+"이 데이터셋에 :guilabel:`Grid (IDW with nearest neighbor searching)` 도구를 사용하십시오."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:351
+msgid ""
+"Set :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``, "
+"respectively."
+msgstr ""
+":guilabel:`Power` 와 :guilabel:`Smoothing` 을 각각 ``5.0`` 과 ``2.0`` 으로 설정하십시오."
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:354
 msgid ""
 "The results (depending on the positioning of your random points) will look "
 "more or less like this:"
-msgstr "결과물은 (여러분의 랜덤 포인트 위치에 따라) 다음과 비슷하게 보일 것입니다."
+msgstr "결과물은 (여러분의 랜덤 포인트 위치에 따라) 다음과 비슷하게 보일 것입니다:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:360
+msgid ""
+"This is a better representation of the terrain, due to the greater density "
+"of sample points. Remember, larger samples give better results."
+msgstr "샘플 포인트들의 밀도가 더 높기 때문에, 지형을 더 잘 표현합니다. 기억해두세요 --- 샘플이 클수록 결과물도 좋아집니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:366
+msgid "In Conclusion"
+msgstr "결론"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:368
+msgid ""
+"QGIS has a number of tools for analyzing the spatial statistical properties "
+"of datasets."
+msgstr "QGIS는 데이터셋의 공간 통계 속성을 분석하기 위한 도구들을 많이 가지고 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:373
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:375
+msgid ""
+"Now that we have covered vector analysis, why not see what can be done with "
+"rasters? That is what we will do in the next module!"
+msgstr ""
+"이제 벡터 분석에 대해 배웠으니, 래스터로 무엇을 할 수 있는지 배워보는 것은 어떨까요? 다음 강의에서는 래스터에 대해 배울 것입니다!"
