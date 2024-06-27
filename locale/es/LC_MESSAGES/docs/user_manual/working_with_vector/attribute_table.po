@@ -628,6 +628,17 @@ msgstr ""
 " una celda proporciona :ref:`interaction with the feature "
 "<interacting_features_table>`."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:127
+msgid ""
+"The attribute table supports :kbd:`Shift+Mouse Wheel` scrolling in table "
+"view mode to switch between vertical and horizontal scrolling movements. "
+"This can also be achieved replacing the mouse with the trackpad on macOS."
+msgstr ""
+"La tabla de atributos admite el desplazamiento :kbd:`Shift+Rueda del ratón` "
+"en el modo de vista de tabla para cambiar entre los movimientos de "
+"desplazamiento vertical y horizontal. Esto también se puede conseguir "
+"sustituyendo el ratón por el trackpad en macOS."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:130
 msgid ""
 "The |formView| :sup:`Form view` shows :ref:`feature identifiers <maptips>` "
@@ -835,6 +846,29 @@ msgstr ""
 "Consulte :ref:`actions_menu` para obtener más información sobre las "
 "acciones."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:222
+msgid "Sorting rows"
+msgstr "Ordenar filas"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:224
+msgid ""
+"The rows can be sorted by any column, by clicking on the column header. A "
+"small arrow indicates the sort order (downward pointing means descending "
+"values from the top row down, upward pointing means ascending values from "
+"the top row down). You can also choose to sort the rows with the "
+":guilabel:`Sort...` option of the column header context menu and write an "
+"expression. E.g. to sort the rows using multiple columns you can write "
+"``concat(col0, col1)``."
+msgstr ""
+"Las filas pueden ordenarse por cualquier columna, haciendo clic en la "
+"cabecera de la columna. Una pequeña flecha indica el orden de clasificación "
+"(hacia abajo significa valores descendentes desde la fila superior hacia "
+"abajo, hacia arriba significa valores ascendentes desde la fila superior "
+"hacia abajo). También puede optar por ordenar las filas con la opción "
+":guilabel:`Ordenar...` del menú contextual de la cabecera de columna y "
+"escribir una expresión. Por ejemplo, para ordenar las filas utilizando "
+"varias columnas puede escribir ``concat(col0, col1)``."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:232
 msgid ""
 "In form view, features identifier can be sorted using the |sort| "
@@ -848,9 +882,33 @@ msgstr ""
 msgid "sort"
 msgstr "sort"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:235
+msgid ""
+"Note that sorting the rows only affects the table rendering and does not "
+"alter the features order in the layer datasource."
+msgstr ""
+"Tenga en cuenta que la ordenación de las filas sólo afecta a la "
+"representación de la tabla y no altera el orden de los objetos espaciales en"
+" la fuente de datos de la capa."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:240
 msgid "**Sorting based on columns of different types**"
 msgstr "** Clasificación basada en columnas de diferentes tipos **"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:242
+msgid ""
+"Trying to sort an attribute table based on columns of string and numeric "
+"types may lead to unexpected result because of the ``concat(\"USE\", "
+"\"ID\")`` expression returning string values (ie, ``'Borough105' < "
+"'Borough6'``). You can workaround this by using eg ``concat(\"USE\", "
+"lpad(\"ID\", 3, 0))`` which returns ``'Borough105' > 'Borough006'``."
+msgstr ""
+"Intentar ordenar una tabla de atributos basada en columnas de tipo cadena y "
+"numérico puede dar lugar a resultados inesperados debido a que la expresión "
+"``concat(\"USE\", \"ID\")`` devuelve valores de cadena (es decir, "
+"``'Borough105' < 'Borough6'``). Puede evitarlo utilizando, por ejemplo, "
+"``concat(\"USE\", lpad(\"ID\", 3, 0))`` que devuelve ``'Borough105' > "
+"'Borough006'``."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:252
 msgid "Formatting of table cells using conditions"
@@ -873,6 +931,25 @@ msgid ""
 msgstr ""
 "geometría (por ejemplo, identificación de entidades de múltiples partes, "
 "áreas pequeñas o en una extensión de mapa definida ...);"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:260
+msgid ""
+"or field value (e.g., comparing values to a threshold, identifying empty "
+"cells, duplicates, ...)."
+msgstr ""
+"o valor de campo (por ejemplo, comparando valores con un umbral, "
+"identificando celdas vacías, duplicados, ...)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:263
+msgid ""
+"You can enable the conditional formatting panel clicking on "
+"|conditionalFormatting| :sup:`Conditional formatting` button at the top "
+"right of the attributes window in table view (not triggered in form view)."
+msgstr ""
+"Puede activar el panel de formato condicional pulsando el botón "
+"|conditionalFormatting| :sup:`Formateo condicional` situado en la parte "
+"superior derecha de la ventana de atributos en la vista tabla (no se activa "
+"en la vista formulario)."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:267
 msgid ""
@@ -1012,6 +1089,19 @@ msgstr ""
 "la vista de tabla, puede realizar la selección de múltiples funciones "
 "utilizando las combinaciones de teclado expuestas anteriormente."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:329
+msgid ""
+"Beyond selecting features with the mouse, you can perform automatic "
+"selection based on feature's attribute using tools available in the "
+"attribute table toolbar, such as (see section :ref:`automatic_selection` and"
+" subsequent for more information and use case):"
+msgstr ""
+"Además de seleccionar objetos espaciales con el ratón, puede realizar una "
+"selección automática basada en el atributo de la característica utilizando "
+"las herramientas disponibles en la barra de herramientas de la tabla de "
+"atributos, como (consulte la sección :ref:`automatic_selection` y siguientes"
+" para obtener más información y casos de uso):"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:334
 msgid "|expressionSelect| :guilabel:`Select By Expression...`"
 msgstr "|expressionSelect| :guilabel:`Seleccionar por expresión...`"
@@ -1037,6 +1127,14 @@ msgstr "|selectAll| :guilabel:`Seleccionar todas las entidades`"
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:338
 msgid "|invertSelection| :guilabel:`Invert Feature Selection`."
 msgstr "|invertSelection| :guilabel:`Invertir selección de entidades`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:340
+msgid ""
+"It is also possible to :ref:`select features using forms "
+"<filter_select_form>`."
+msgstr ""
+"También es posible :ref:`seleccionar objetos espaciales mediante formularios"
+" <filter_select_form>`."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:346
 msgid "Filtering features"
@@ -1093,6 +1191,21 @@ msgstr ""
 msgid "openTableVisible"
 msgstr "openTableVisible"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:360
+msgid ""
+"|openTableInvalid| :guilabel:`Show Features with Failing Constraints` - "
+"features will be filtered to only show the ones which have failing "
+":ref:`constraints <constraints>`. Depending on whether the unmet constraint "
+"is hard or soft, failing field values are displayed in respectively dark or "
+"light orange cells."
+msgstr ""
+"|openTableInvalid| :guilabel:`Mostrar objetos espaciales con Restricciones "
+"Fallidas` - las prestaciones se filtrarán para mostrar sólo las que tengan "
+":ref:`restricciones <constraints>` fallidas. Dependiendo de si la "
+"restricción incumplida es dura o blanda, los valores de los campos que "
+"fallan se muestran en celdas de color naranja oscuro o claro, "
+"respectivamente."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:917
 msgid "openTableInvalid"
 msgstr "openTableInvalid"
@@ -1132,6 +1245,31 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:861
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:372
+msgid ""
+"|filterMap| :guilabel:`Advanced filter (Expression)` - Opens the expression "
+"builder dialog. Within it, you can create :ref:`complex expressions "
+"<vector_expressions>` to match table rows. For example, you can filter the "
+"table using more than one field. When applied, the filter expression will "
+"show up at the bottom of the form."
+msgstr ""
+"|filterMap| :guilabel:`Filtro avanzado (Expresión)` - Abre el cuadro de "
+"diálogo del constructor de expresiones. En él, puede crear :ref:`expresiones"
+" complejas <vector_expressions>` para hacer coincidir las filas de la tabla."
+" Por ejemplo, puede filtrar la tabla utilizando más de un campo. Cuando se "
+"aplique, la expresión del filtro aparecerá en la parte inferior del "
+"formulario."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:377
+msgid ""
+"|handleStoreFilterExpressionChecked| :menuselection:`Stored filter "
+"expressions -->`: a shortcut to :ref:`saved expressions <store_filter>` "
+"frequently used for filtering your attribute table."
+msgstr ""
+"|handleStoreFilterExpressionChecked| :menuselection:`Expresiones de filtro "
+"guardadas -->`: un atajo a :ref:`expresiones guardadas <store_filter>` "
+"utilizado frecuentemente para filtrar su tabla de atributos."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:891
 msgid "handleStoreFilterExpressionChecked"
@@ -1298,6 +1436,19 @@ msgstr ""
 "entidades` del menú desplegable inferior izquierdo, o borre la expresión y "
 "haz click en :guilabel:` Aplicar` o presiona :kbd:`Enter`."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:455
+msgid "More actions on features"
+msgstr "Más acciones sobre objetos espaciales"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:457
+msgid ""
+"Users have several possibilities to manipulate feature in an attribute "
+"table. Right-click in a cell and you can:"
+msgstr ""
+"Los usuarios tienen varias posibilidades para manipular objetos espaciales "
+"en una tabla de atributos. Haga clic con el botón derecho del ratón en una "
+"celda y podrá:"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:460
 msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`) the features;"
 msgstr ":guilabel:`Seleccionar todas` (:kbd:`Ctrl+A`) las entidades;"
@@ -1331,9 +1482,29 @@ msgstr ""
 ":guilabel:`Abrir formulario`: cambia la tabla de atributos a la vista de "
 "formulario con un enfoque en la entidad en la que se hizo click."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:467
+msgid ""
+"Display a :ref:`list of actions <actions_menu>`, previously enabled in the "
+":menuselection:`Layer properties --> Actions` tab."
+msgstr ""
+"Mostrar una lista :ref:`de acciones <actions_menu>`, previamente activado en"
+" la pestaña :menuselection:`Propiedades de capa --> Acciones`."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:475
 msgid "Copy cell content button"
 msgstr "Botón de copiar contenido de celda"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:479
+msgid ""
+"If you want to use attribute data in external programs (such as Excel, "
+"LibreOffice, or a custom web application), select one or more row(s) and use"
+" the |copySelected| :sup:`Copy selected rows to clipboard` button or press "
+":kbd:`Ctrl+C`."
+msgstr ""
+"Si desea utilizar los datos de atributos en programas externos (como Excel, "
+"LibreOffice o una aplicación web personalizada), seleccione una o varias "
+"filas y utilice el botón |copySelected| :sup:`Copiar las filas seleccionadas"
+" al portapapeles` o pulse :kbd:`Ctrl+C`."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:484
 msgid ""
@@ -1345,9 +1516,51 @@ msgstr ""
 "puede definir el formato para pegar con :guilabel:` Copiar entidades como` "
 "lista desplegable:"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:487
+msgid ""
+":guilabel:`Plain text, no geometry`: attributes are copied as text but the "
+"geometry is skipped"
+msgstr ""
+":guilabel:`Texto sin geometría`: los atributos se copian como texto pero se "
+"omite la geometría"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:489
+msgid ""
+":guilabel:`Plain text, WKT geometry`: attributes are copied as text and the "
+"geometry is returned in WKT"
+msgstr ""
+":guilabel:`Texto, geometría WKT`: los atributos se copian como texto y la "
+"geometría se devuelve en WKT"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:491
+msgid ""
+":guilabel:`GeoJSON`: attributes and geometry are formatted as GeoJSON data"
+msgstr ""
+":guilabel:`GeoJSON`: los atributos y la geometría se formatean como datos "
+"GeoJSON"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:498
 msgid "Editing attribute values"
 msgstr "Editar valores de atributo"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:500
+msgid ""
+"In order to modify data in an attribute table, you should first toggle the "
+"layer into edit. Press the |toggleEditing| :sup:`Toggle Editing` button. "
+"Depending on the layer geometry type and the clipboard state, a few more "
+"tools are enabled in the attribute table top toolbar."
+msgstr ""
+"Para modificar los datos de una tabla de atributos, primero debe activar la "
+"edición de la capa. Pulse el botón |toggleEditing| :sup:`Conmutar edición`. "
+"Dependiendo del tipo de geometría de la capa y del estado del portapapeles, "
+"se habilitan algunas herramientas más en la barra de herramientas superior "
+"de la tabla de atributos."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:505
+msgid "Editing attribute values can then be done by:"
+msgstr ""
+"La edición de los valores de los atributos puede hacerse de la siguiente "
+"manera:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:507
 msgid ""
@@ -1385,6 +1598,19 @@ msgstr ""
 "o usando el modo :ref:`multiedición<multi_edit_fields>` : actualiza de una "
 "vez múltiples campos para múltiples entidades."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:517
+msgid ""
+"Putting the layer into edit mode will also allow you to |editPaste| "
+":sup:`Paste features from clipboard` (:kbd:`Ctrl+V`) |editCut| :sup:`Cut "
+"selected rows to clipboard` (:kbd:`Ctrl+X`) or |deleteSelectedFeatures| "
+":sup:`Delete selected features`. More details at :ref:`editingvector`."
+msgstr ""
+"Poner la capa en modo edición también le permitirá |editPaste| :sup:`Pegar "
+"objetos espaciales desde el portapapeles` (:kbd:`Ctrl+V`) |editCut| "
+":sup:`Cortar filas seleccionadas al portapapeles` (:kbd:`Ctrl+X`) o "
+"|deleteSelectedFeatures| :sup:`Borrar objetos espaciales seleccionados`. Más"
+" detalles en :ref:`editingvector`."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:526
 msgid "Using the Field Calculator"
 msgstr "Usando la Calculadora de Campos"
@@ -1418,6 +1644,19 @@ msgstr ""
 "está en modo de edición, se muestra una advertencia y el uso de la "
 "calculadora de campo hará que la capa se ponga en modo de edición antes de "
 "realizar el cálculo."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:540
+msgid ""
+"Based on the :ref:`Expression Builder <expression_builder>` dialog, the "
+"field calculator dialog offers a complete interface to define an expression "
+"and apply it to an existing or a newly created field. To use the field "
+"calculator dialog, you must select whether you want to:"
+msgstr ""
+"Basado en el diálogo :ref:`Constructor de expresiones <expression_builder>`,"
+" el cuadro de diálogo calculadora de campos ofrece una interfaz completa "
+"para definir una expresión y aplicarla a un campo existente o de nueva "
+"creación. Para utilizar el cuadro de diálogo de la calculadora de campos, "
+"debe seleccionar si desea:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:545
 msgid "apply calculation on the whole layer or on selected features only"
@@ -1529,6 +1768,57 @@ msgstr ""
 msgid "Creating a Virtual Field"
 msgstr "Creando un campo Virtual"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:587
+msgid ""
+"A virtual field is a field based on an expression calculated on the fly, "
+"meaning that its value is automatically updated as soon as an underlying "
+"parameter changes. The expression applies to all the features in the layer "
+"and is set once; you no longer need to recalculate the field each time "
+"underlying values change. For example, you may want to use a virtual field "
+"if you need area to be evaluated as you digitize features or to "
+"automatically calculate a duration between dates that may change (e.g., "
+"using ``now()`` function)."
+msgstr ""
+"Un campo virtual es un campo basado en una expresión calculada sobre la "
+"marcha, lo que significa que su valor se actualiza automáticamente en cuanto"
+" cambia un parámetro subyacente. La expresión se aplica a todas las "
+"prestaciones de la capa y se establece una vez; ya no es necesario "
+"recalcular el campo cada vez que cambian los valores subyacentes. Por "
+"ejemplo, puede que desee utilizar un campo virtual si necesita que el área "
+"se evalúe a medida que digitaliza características o para calcular "
+"automáticamente una duración entre fechas que pueden cambiar (por ejemplo, "
+"utilizando la función ``now()``)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:595
+msgid ""
+"Creating a virtual field is done through the |calculateField| "
+":guilabel:`Field calculator` dialog and follows the :ref:`same procedure "
+"<vector_field_calculator>` as for regular fields. Simply remember to check "
+"the |checkbox| :guilabel:`Create virtual field` option and use a field type "
+"compatible with the data your expression would generate."
+msgstr ""
+"La creación de un campo virtual se realiza a través del diálogo "
+"|calculateField| :guilabel:`Calculadora de campos` y sigue el :ref:`mismo "
+"procedimiento <vector_field_calculator>` como para los campos regulares. "
+"Simplemente recuerde marcar la opción |checkbox| :guilabel:`Crear campo "
+"virtual` y utilizar un tipo de campo compatible con los datos que generaría "
+"su expresión."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:600
+msgid ""
+"Editing a virtual field is done through the |sourceFields| "
+":guilabel:`Fields` tab of the layer properties dialog (see "
+":ref:`vector_fields_menu`). The expression defining the field is exposed in "
+"the :guilabel:`Comment` column, and pressing the |expression| button next to"
+" it opens an expression editor window for update."
+msgstr ""
+"La edición de un campo virtual se realiza a través de la pestaña "
+"|sourceFields| :guilabel:`Campos` del diálogo de propiedades de la capa "
+"(véase :ref:`menu_campos_vectoriales`). La expresión que define el campo se "
+"expone en la columna :guilabel:`Comentario`, y al pulsar el botón "
+"|expresión| situado junto a ella se abre una ventana del editor de "
+"expresiones para su actualización."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:941
 msgid "sourceFields"
 msgstr "sourceFields"
@@ -1540,6 +1830,10 @@ msgstr "expression"
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:606
 msgid "**Use of Virtual Fields**"
 msgstr "**Uso de Campos Virtuales**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:608
+msgid "A field can be set virtual only at its creation."
+msgstr "Un campo sólo puede ser virtual en el momento de su creación."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:609
 msgid ""
@@ -1757,9 +2051,39 @@ msgstr ""
 "autogenerados y de arrastrar y soltar (ver :ref:`customize_form`); no es "
 "compatible con formularios de interfaz de usuario personalizados."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:707
+msgid "Exploring features attributes through the Identify Tool"
+msgstr ""
+"Exploración de los atributos de los objetos espaciales mediante la "
+"herramienta de Identificación"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:709
+msgid ""
+"The |identify| :ref:`Identify features <identify>` tool can be used to "
+"display all attributes of a feature in the map canvas. It is a quick way to "
+"view and verify all data without having to search for it in the attribute "
+"table."
+msgstr ""
+"La herramienta |identify| :ref:`Identificar prestaciones <identify>` puede "
+"utilizarse para mostrar todos los atributos de un objeto espacial en el "
+"lienzo del mapa. Es una forma rápida de ver y verificar todos los datos sin "
+"tener que buscarlos en la tabla de atributos."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:897
 msgid "identify"
 msgstr "identify"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:713
+msgid ""
+"To use the :guilabel:`Identify features` tool for vector layers, follow "
+"these steps:"
+msgstr ""
+"Para utilizar la herramienta :guilabel:`Identificar objetos espaciales` para"
+" capas vectoriales, siga estos pasos:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:715
+msgid "Select the vector layer in the Layers panel."
+msgstr "Seleccione la capa vectorial en el panel Capas."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:716
 msgid ""
@@ -1768,6 +2092,44 @@ msgid ""
 msgstr ""
 "Haga clic en la herramienta :guilabel:`Identificar objetos espaciales` de la"
 " barra de herramientas o pulse :kbd:`Ctrl+Mayús+I`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:717
+msgid "Click on a feature in the map view."
+msgstr "Haga clic en un objeto espacial en la vista del mapa."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:719
+msgid ""
+"The :guilabel:`Identify results` panel will display different features "
+"information depending on the layer type. There are two columns in the panel,"
+" on the left side you can see :guilabel:`Feature` and on the right side "
+":guilabel:`Value`. Under the :guilabel:`Feature` column, panel will display "
+"following information:"
+msgstr ""
+"El panel :guilabel:`Identificar resultados` mostrará información sobre "
+"distintos objetos espaciales en función del tipo de capa. Hay dos columnas "
+"en el panel, a la izquierda puede ver :guilabel:`Objeto espacial` y a la "
+"derecha :guilabel:`Valor`. En la columna :guilabel:`Objeto espacial`, el "
+"panel mostrará la siguiente información:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:724
+msgid ""
+"**Derived** section - those are the information calculated or derived from "
+"other information in the layer. For example, the area of a polygon or the "
+"length of a line. General information that can be found in this section:"
+msgstr ""
+"Sección **derivada** - son las informaciones calculadas o derivadas de otras"
+" informaciones de la capa. Por ejemplo, el área de un polígono o la longitud"
+" de una línea. Información general que se puede encontrar en esta sección:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:728
+msgid ""
+"Depending on the geometry type, cartesian measurements of length, perimeter,"
+" or area in the layer's CRS units. For 3D line vectors, the cartesian line "
+"length is available."
+msgstr ""
+"Dependiendo del tipo de geometría, medidas cartesianas de longitud, "
+"perímetro o área en las unidades SRC de la capa. Para vectores de línea 3D, "
+"está disponible la longitud de línea cartesiana."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:730
 msgid ""
