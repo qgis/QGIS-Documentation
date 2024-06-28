@@ -40,9 +40,40 @@ msgstr ""
 msgid "Working with 3D Tiles"
 msgstr "Trabajar con teselas 3D"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:14
+msgid "What are 3D Tiles?"
+msgstr "¿Qué son las teselas 3D?"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:16
+msgid ""
+"3D tiles are specification for streaming and rendering large-scale 3D "
+"geospatial datasets. They use a hierarchical structure to efficiently manage"
+" and display 3D content, optimising performance by dynamically loading "
+"appropriate levels of detail. This technology is widely used in urban "
+"planning, architecture, simulation, gaming, and virtual reality, providing a"
+" standardised and interoperable solution for visualising complex "
+"geographical data. Read :ref:`3d_tiles` for more details."
+msgstr ""
+"Las teselas 3D son una especificación para la transmisión y representación "
+"de conjuntos de datos geoespaciales 3D a gran escala. Utilizan una "
+"estructura jerárquica para gestionar y mostrar eficazmente el contenido 3D, "
+"optimizando el rendimiento mediante la carga dinámica de los niveles de "
+"detalle adecuados. Esta tecnología se utiliza ampliamente en urbanismo, "
+"arquitectura, simulación, juegos y realidad virtual, y ofrece una solución "
+"estandarizada e interoperable para visualizar datos geográficos complejos. "
+"Más información en :ref:`3d_tiles`."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:30
+msgid "Example of 3D tiles"
+msgstr "Ejemplo de teselas 3D"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:34
 msgid "Data Sources"
 msgstr "Fuentes de datos"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:36
+msgid "Support for 3D tiles:"
+msgstr "Soporte para teselas 3D:"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:38
 msgid "Remote source - ``http://example.com/tileset.json``"
@@ -52,29 +83,111 @@ msgstr "Fuente remota - ``http://example.com/tileset.json``"
 msgid "Local files - ``file:///path/to/tiles/tileset.json``"
 msgstr "Archivos locales - ``file:///path/to/tiles/tileset.json``"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:43
+msgid "Using data from Cesium ion"
+msgstr "Utilizando datos de ion Cesium"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:45
+msgid ""
+"*Cesium ion* is a cloud-based platform for managing and streaming 3D "
+"geospatial data. It simplifies data management, visualisation and sharing. "
+"To add 3D tiles from Cesium ion, you need to first sign up to their service "
+"here: https://ion.cesium.com."
+msgstr ""
+"*Cesium ion* es una plataforma basada en la nube para gestionar y transmitir"
+" datos geoespaciales en 3D. Simplifica la gestión, visualización e "
+"intercambio de datos. Para añadir mosaicos 3D desde Cesium ion, primero "
+"tienes que registrarte en su servicio aquí: https://ion.cesium.com."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:50
+msgid ""
+"You can also use Cesium ion plugin from the QGIS repository to add the data "
+"to QGIS."
+msgstr ""
+"También puede utilizar el complemento Cesium ion del repositorio de QGIS "
+"para añadir los datos a QGIS."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:54
+msgid "Using Google 3D data"
+msgstr "Uso de los datos 3D de Google"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:56
+msgid ""
+"To use Google Photorealistic 3D tiles in QGIS, get an API key for 3D tiles. "
+"Once you have the key, simply add Google tiles using the same connection "
+"process."
+msgstr ""
+"Para utilizar los mosaicos 3D fotorrealistas de Google en QGIS, obtenga una "
+"clave API para mosaicos 3D. Una vez que tenga la clave, simplemente añada "
+"mosaicos de Google utilizando el mismo proceso de conexión."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:65
+msgid "Google 3D Tiles connection"
+msgstr "Conexión Google 3D Tiles"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:70
+msgid "3D Tiles Properties"
+msgstr "Propiedades de las teselas 3D"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:72
+msgid ""
+"The 3D tiles :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"El cuadro de diálogo teselas 3D :guilabel:`Propiedades de capa` ofrece las "
+"siguientes secciones:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:76
+msgid "|metadata| :ref:`Information <3dtilesinformationmenu>`"
+msgstr "|metadata| :ref:`Información <3dtilesinformationmenu>`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:249
 msgid "metadata"
 msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:77
+msgid "|system| :ref:`Source <3dtilessourcemenu>`"
+msgstr "|system| :ref:`Fuente <3dtilessourcemenu>`"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:259
 msgid "system"
 msgstr "system"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:78
+msgid "|symbology| :ref:`Symbology <3dtilessymbologymenu>`:sup:`[1]`"
+msgstr "|symbology| :ref:`Symbología <3dtilessymbologymenu>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:257
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:79
+msgid "|3d| :ref:`3D View <3dtiles3dviewmenu>`:sup:`[1]`"
+msgstr "|3d| :ref:`Vista 3D <3dtiles3dviewmenu>`:sup:`[1]`"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:239
 msgid "3d"
 msgstr "3d"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:80
+msgid "|rendering| :ref:`Rendering <3dtilesrenderingmenu>`"
+msgstr "|rendering| :ref:`Representación <3dtilesrenderingmenu>`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:253
 msgid "rendering"
 msgstr "rendering"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:81
+msgid "|elevationscale| :ref:`Elevation <3dtileselevationmenu>`:sup:`[1]`"
+msgstr "|elevationscale| :ref:`Elevación <3dtileselevationmenu>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:245
 msgid "elevationscale"
 msgstr "elevationscale"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:82
+msgid "|editMetadata| :ref:`Metadata <3dtilesmetadatamenu>`"
+msgstr "|editMetadata| :ref:`Metadatos <3dtilesmetadatamenu>`"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:243
 msgid "editMetadata"
@@ -118,6 +231,14 @@ msgstr ""
 "el sistema de referencia de coordenadas: nombre, unidades, método, "
 "precisión, referencia (es decir, si es estático o dinámico)"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:103
+msgid ""
+"picked from the :ref:`filled metadata <3dtilesmetadatamenu>`: access, "
+"extents, links, contacts, history..."
+msgstr ""
+"recogidos de los :ref:`metadatos rellenados <3dtilesmetadatamenu>`: acceso, "
+"extensiones, enlaces, contactos, historial..."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:109
 msgid "Source Properties"
 msgstr "Propiedades de fuente"
@@ -134,6 +255,22 @@ msgstr ""
 msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
 msgstr ""
 "el :guilabel:`Nombre de la capa` a mostrar en el :guilabel:`Panel de capas`;"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:115
+msgid ""
+"the :guilabel:`Coordinate Reference System`: Displays the layer's "
+":ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the "
+"layer's CRS, by selecting a recently used one in the drop-down list or "
+"clicking on the |setProjection| :sup:`Select CRS` button (see "
+":ref:`crs_selector`). Use this process only if the layer CRS is wrong or not"
+" specified."
+msgstr ""
+"el :guilabel:`Sistema de Referencia de Coordenadas`: Muestra el "
+":ref:`Sistema de referencia de coordenadas (SRC) <layer_crs>` de la capa. "
+"Puede cambiar el SRC de la capa, seleccionando uno utilizado recientemente "
+"en la lista desplegable o haciendo clic en el botón |setProjection| "
+":sup:`Seleccionar SRC` (véase :ref:`crs_selector`). Utilice este proceso "
+"sólo si el SRC de la capa es incorrecto o no está especificado."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:255
 msgid "setProjection"
@@ -303,6 +440,26 @@ msgstr "mapIdentification"
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:212
 msgid "Elevation Properties"
 msgstr "Propiedades de elevación"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:214
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view "
+"<label_3dmapview>`. Specifically, you can set:"
+msgstr ""
+"La pestaña |elevationscale| :guilabel:`Elevación` proporciona opciones para "
+"controlar las propiedades de elevación de la capa dentro de una :ref:`vista "
+"de mapa 3D <label_3dmapview>`. En concreto, puede establecer:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:218
+msgid ""
+":guilabel:`Elevation Surface`: how the 3D layer vertices Z values should be "
+"interpreted as terrain elevation. You can apply a :guilabel:`Scale` factor "
+"and an :guilabel:`Offset`."
+msgstr ""
+":guilabel:`Superficie de elevación`: cómo deben interpretarse los valores Z "
+"de los vértices de la capa 3D como elevación del terreno. Se puede aplicar "
+"un factor :guilabel:`Escala` y un factor :guilabel:`Desplazamiento`."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:226
 msgid "Metadata Properties"
