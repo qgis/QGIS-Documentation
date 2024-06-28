@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
@@ -41,9 +41,39 @@ msgstr ""
 msgid "The Elevation Profile Item"
 msgstr "Elemento del perfil de elevación"
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:97
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:13
+msgid ""
+"The Elevation Profile item is used to display an :ref:`elevation profile "
+"view <label_elevation_profile_view>` in a layout. Use the |elevationProfile|"
+" :guilabel:`Add Elevation Profile` button, and follow :ref:`items creation "
+"instructions <create_layout_item>` to add a new elevation profile item that "
+"you can later manipulate the same way as demonstrated in "
+":ref:`interact_layout_item`."
+msgstr ""
+"El elemento Perfil de elevación se utiliza para mostrar una :ref:`vista "
+"perfil de elevación <label_elevation_profile_view>` en una composición. "
+"Utilice el botón |elevationProfile| :guilabel:`Añadir perfil de elevación` y"
+" siga las :ref:`instrucciones de creación de elementos <create_layout_item>`"
+" para añadir un nuevo elemento de perfil de elevación que posteriormente "
+"podrá manipular del mismo modo que se demuestra en "
+":ref:`interact_layout_item`."
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:101
 msgid "elevationProfile"
 msgstr "elevationProfile"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:18
+msgid ""
+"A new elevation profile item has default settings that make it render an "
+"empty chart. You can customize its properties in the :guilabel:`Item "
+"Properties` panel. In addition to the :ref:`common properties "
+"<item_common_properties>`, this feature has the following functionalities:"
+msgstr ""
+"Un nuevo elemento de perfil de elevación tiene una configuración "
+"predeterminada que hace que muestre un gráfico vacío. Puede personalizar sus"
+" propiedades en el panel :guilabel:`Propiedades del elemento`. Además de las"
+" :ref:`propiedades comunes <item_common_properties>`, esta prestación tiene "
+"las siguientes funcionalidades:"
 
 #: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:33
 msgid ""
@@ -60,7 +90,7 @@ msgstr ""
 "|refresh| :sup:`Actualizar perfil de elevación` para actualizar la "
 "representación del elemento"
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:99
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:103
 msgid "refresh"
 msgstr "refresh"
 
@@ -75,7 +105,7 @@ msgstr ""
 "configuración de la vista se aplica al elemento del perfil de elevación del "
 "diseño y puede modificarse posteriormente."
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:95
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:99
 msgid "copyProfileSettings"
 msgstr "copyProfileSettings"
 
@@ -98,7 +128,22 @@ msgstr ""
 msgid "Profile curve"
 msgstr "Curva de perfil"
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:101
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:50
+msgid ""
+"|unchecked| :guilabel:`Controlled by atlas`: the :ref:`profile curve "
+"<elevation_profile_create>` will be taken from the current atlas feature and"
+" the elevation profile view updated as you walk through the atlas features. "
+"This is currently supported for an active layout atlas or report, using a "
+"line geometry type coverage layer."
+msgstr ""
+"|unchecked| :guilabel:`Controlado por atlas`: la :ref:`curva de perfil "
+"<elevation_profile_create>` se tomará de la prestación actual del atlas y la"
+" vista del perfil de elevación se actualizará a medida que recorra las "
+"prestaciones del atlas. Esta función es compatible actualmente con un atlas "
+"o informe de diseño activo que utilice una capa de cobertura de geometría "
+"lineal."
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:105
 msgid "unchecked"
 msgstr "unchecked"
 
@@ -160,13 +205,21 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:73
 msgid ""
+"the distance display :guilabel:`Unit`, allowing to override the map canvas "
+"unit"
+msgstr ""
+"la visualización de la distancia :guilabel:`Unidad`, que permite anular la "
+"unidad del lienzo del mapa"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:74
+msgid ""
 "the graduation on the axis with both a :guilabel:`Major interval` and "
 ":guilabel:`Minor interval`"
 msgstr ""
 "la graduación en el eje con un :guilabel:`Intervalo mayor` y un "
 ":guilabel:`Intervalo menor`."
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:74
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:75
 msgid ""
 "the line symbols to apply to the corresponding :guilabel:`Major grid lines` "
 "and :guilabel:`Minor grid lines`"
@@ -175,7 +228,7 @@ msgstr ""
 ":guilabel:`Líneas de cuadrícula mayores` y :guilabel:`Líneas de cuadrícula "
 "menores`."
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:75
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:76
 msgid ""
 "how regular the graduation items should be labeled (:guilabel:`Label "
 "interval`) as well as their :guilabel:`Label format` and :guilabel:`Label "
@@ -185,11 +238,23 @@ msgstr ""
 "(:guilabel:`Intervalo de etiqueta`), así como su :guilabel:`Formato de "
 "etiqueta` y :guilabel:`Fuente de etiqueta`."
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:79
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:78
+msgid ""
+"the :guilabel:`Distance labels`: configures whether the distance unit symbol"
+" should be placed next to :guilabel:`Every value`, :guilabel:`First value`, "
+":guilabel:`Last value`, :guilabel:`First and last values`, or skipped "
+"(:guilabel:`None`)"
+msgstr ""
+"las :guilabel:`Etiquetas de distancia`: configuran si el símbolo de la "
+"unidad de distancia debe colocarse junto a :guilabel:`Cada valor`, "
+":guilabel:`Primer valor`, :guilabel:`Último valor`, :guilabel:`Primeros y "
+"últimos valores`, o saltarse (:guilabel:`Ninguno`)."
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:83
 msgid "Chart area"
 msgstr "Área del gráfico"
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:81
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:85
 msgid ""
 "Under :guilabel:`Chart area`, you can configure the rendering of the area in"
 " which the elevation profile plot is actually displayed:"
@@ -197,14 +262,14 @@ msgstr ""
 "En :guilabel:`Área del gráfico`, puede configurar la representación del área"
 " en la que se muestra realmente el gráfico del perfil de elevación:"
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:84
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:88
 msgid "a :guilabel:`Background` fill symbol"
 msgstr "un símbolo de relleno de :guilabel: `Fondo`"
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:85
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:89
 msgid "a :guilabel:`Border` line symbol"
 msgstr "un símbolo de línea de :guilabel:`Borde`"
 
-#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:86
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:90
 msgid "the margins from the elevation profile item border"
 msgstr "los márgenes del borde del elemento del perfil de elevación"
