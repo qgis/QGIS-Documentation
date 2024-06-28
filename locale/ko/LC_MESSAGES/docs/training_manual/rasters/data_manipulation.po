@@ -5,9 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-11 01:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +32,57 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:2
+msgid "Lesson: Working with Raster Data"
+msgstr "수업: 래스터 데이터 작업"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:4
+msgid ""
+"Raster data is quite different from vector data. Vector data has discrete "
+"features with geometries constructed out of vertices, and perhaps connected "
+"with lines and/or areas. Raster data, however, is like any image. Although "
+"it may portray various properties of objects in the real world, these "
+"objects don't exist as separate objects. Rather, they are represented using "
+"pixels with different values."
+msgstr ""
+"래스터 데이터는 벡터 데이터와는 사뭇 다릅니다. 벡터 데이터는 꼭짓점으로 이루어진, 그리고 아마도 선 그리고/또는 면과 연결된 도형을 "
+"가진 개별 피처를 가지고 있습니다. 하지만 래스터 데이터는 그냥 이미지입니다. 실제 세계에 있는 객체의 다양한 속성을 묘사할 수는 "
+"있지만, 이 객체들이 개별 객체로 존재하지는 않습니다. 그보다는 서로 다른 값들을 가진 픽셀들을 사용해서 객체들을 표현합니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:12
+msgid ""
+"During this module you are going to use raster data to supplement your "
+"existing GIS analysis."
+msgstr "이 강의에서 여러분은 기존 GIS 분석을 보충하기 위해 래스터 데이터를 사용할 것입니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:15
+msgid ""
+"**The goal for this lesson:** To learn how to work with raster data in QGIS."
+msgstr "**이 수업의 목표:** QGIS에서 래스터 데이터를 작업하는 방법을 배우기."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:19
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Loading Raster Data"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 래스터 데이터 불러오기"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:21
+msgid ""
+"Raster data can be loaded with the same methods we used for vector data. "
+"However we suggest to use the :guilabel:`Browser` Panel."
+msgstr ""
+"래스터 데이터는 벡터 데이터와 동일한 방법으로 불러올 수 있습니다. 하지만 :guilabel:`Browser` 패널을 사용할 것을 "
+"권합니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:25
+msgid ""
+"Open the :guilabel:`Browser` Panel and expand the "
+":file:`exercise_data/raster` folder."
+msgstr ":guilabel:`Browser` 패널을 열고 :file:`exercise_data/raster` 폴더를 펼치십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:27
+msgid "Load all the data in this folder:"
+msgstr "이 폴더에 있는 데이터를 전부 불러오십시오:"
 
 #: ../../docs/training_manual/rasters/data_manipulation.rst:29
 msgid ":file:`3320C_2010_314_RGB_LATLNG.tif`"
@@ -51,6 +100,112 @@ msgstr ":file:`3420B_2010_328_RGB_LATLNG.tif`"
 msgid ":file:`3420C_2010_327_RGB_LATLNG.tif`"
 msgstr ":file:`3420C_2010_327_RGB_LATLNG.tif`"
 
+#: ../../docs/training_manual/rasters/data_manipulation.rst:34
+msgid "You should see the following map:"
+msgstr "다음 맵을 보게 될 것입니다:"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:39
+msgid "There we have it - four aerial images covering our study area."
+msgstr "연구 지역을 커버하는 항공사진 4장을 불러왔습니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:44
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Create a Virtual Raster"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 가상 래스터 생성하기"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:46
+msgid ""
+"Now as you can see from this, your solution layer lies across all four "
+"images. What this means is that you are going to have to work with four "
+"rasters all the time. That's not ideal. It would be better to have one file "
+"to work with."
+msgstr ""
+"이제 알 수 있겠지만, 여러분의 해답 레이어는 이 이미지 4장 전부를 걸치게 됩니다. 다시 말해 여러분이 항상 4개의 래스터를 작업해야 "
+"한다는 뜻이지요. 그리 이상적인 상황은 아닙니다. 작업할 파일이 하나인 편이 훨씬 나을 겁니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:52
+msgid ""
+"Luckily, QGIS allows you to do exactly this, and without needing to actually"
+" create a new raster file. You can create a **Virtual Raster**. This is also"
+" often called a *Catalog*, which explains its function. It's not really a "
+"new raster. Rather, it is a way to organize your existing rasters into one "
+"catalog: one file for easy access."
+msgstr ""
+"다행히도, QGIS는 바로 그렇게 할 수 있도록 해줍니다. 실제로 새 래스터 파일을 생성할 필요도 없이 말이죠. **가상 "
+"래스터(virtual raster)** 를 생성하면 됩니다. 가상 래스터를 그 기능을 설명하는 *카탈로그(catalog)* 라고 부르는 "
+"경우도 많습니다. 가상 래스터는 실제로 새 래스터라기보다는, 여러분의 기존 래스터들을 카탈로그 하나로, 즉 쉽게 접근할 수 있는 파일 "
+"하나로 구성하는 방법입니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:60
+msgid ""
+"To make a catalog we will use the :menuselection:`Processing --> Toolbox`."
+msgstr "카탈로그를 만들기 위해 :menuselection:`Processing --> Toolbox` 를 사용할 것입니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:63
+msgid ""
+"Open the :guilabel:`Build virtual raster` algorithm from the "
+":menuselection:`GDAL --> Raster miscellaneous`;"
+msgstr ""
+":menuselection:`GDAL --> Raster miscellaneous` 에서 :guilabel:`Build virtual "
+"raster` 알고리즘을 여십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:65
+msgid ""
+"In the dialog that appears, click on the :guilabel:`...` button next to the "
+":guilabel:`Input layers` parameter and check all the layers or use the "
+":guilabel:`Select All` button;"
+msgstr ""
+"대화창이 열리면, :guilabel:`Input layers` 파라미터 옆에 있는 :guilabel:`...` 버튼을 클릭한 다음 "
+"레이어들을 전부 체크하거나 :guilabel:`Select All` 버튼을 누르십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:68
+msgid ""
+"Uncheck :guilabel:`Place each input file into a separate band`. Notice the "
+"code that is generated at the bottom of the dialog under :guilabel:`GDAL/OGR"
+" console call`. This is the command that will be executed when you click "
+":guilabel:`Run`. The text updates as you change different options in the "
+"dialog."
+msgstr ""
+":guilabel:`Place each input file into a separate band` 옵션은 체크 해제하십시오.  대화창 "
+"하단의 :guilabel:`GDAL/OGR console call` 아래 생성된 코드가 보이십니까? 여러분이 :guilabel:`Run`"
+" 버튼을 클릭하면 실행될 명령어입니다. 대화창에서 서로 다른 옵션들을 변경하는 대로 이 텍스트가 업데이트됩니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:74
+msgid ""
+"Keep in mind that you can copy and paste the text in the ``OSGeo Shell`` "
+"(Windows user) or ``Terminal`` (Linux and OSX users) to run the command. You"
+" can also create a script for each GDAL command. This is very handy when the"
+" procedure is taking a long time or when you want to schedule specific "
+"tasks. Use the :guilabel:`Help` button to get more help on the syntax of the"
+" command."
+msgstr ""
+"명령어를 실행하기 위해 ``OSGeo Shell`` (윈도우 사용자) 또는 ``Terminal`` (리눅스 및 맥OS 사용자)에 이 "
+"텍스트를 복사해서 붙여넣을 수 있다는 사실을 기억하십시오. 또 각각의 GDAL 명령어를 위한 스크립트도 생성할 수 있습니다. 처리 과정이"
+" 오래 걸리거나 또는 여러분이 특정 작업을 예약하고 싶은 경우 매우 유용합니다. 명령어의 문법(syntax)에 대한 도움말을 보고 싶다면"
+" :guilabel:`Help` 버튼을 사용하십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:83
+msgid "Finally click on :guilabel:`Run`."
+msgstr "마지막으로 :guilabel:`Run` 을 클릭하십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:85
+msgid ""
+"As you know from the previous modules, :guilabel:`Processing` creates "
+"temporary layers by default. To save the file, click on the :guilabel:`...` "
+"button under :guilabel:`Virtual`."
+msgstr ""
+"이전 강의에서 배웠던 대로, :guilabel:`Processing` 이 기본적으로 임시 레이어를 생성합니다. 파일로 저장하려면, "
+":guilabel:`Virtual` 아래 있는 :guilabel:`...` 버튼을 클릭하십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:93
+msgid ""
+"You can now remove the original four rasters from the :guilabel:`Layers` "
+"Panel and leave only the output virtual catalog raster."
+msgstr "이제 :guilabel:`Layers` 패널에서 원본 래스터 4개를 제거하고 산출 가상 카탈로그 래스터만 남기면 됩니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:99
+msgid ":abbr:`★★★ (Advanced level)` Transforming Raster Data"
+msgstr ":abbr:`★★★ (고급 수준)` 래스터 데이터 변환하기"
+
 #: ../../docs/training_manual/rasters/data_manipulation.rst:101
 msgid ""
 "The above methods allow you to virtually merge datasets using a catalog, and"
@@ -60,24 +215,95 @@ msgid ""
 "while using the rasters in a map, but it may take some time to set up "
 "initially."
 msgstr ""
-"앞에서 설명한 방법으로 카탈로그를 이용해서 데이터셋을 가상으로 합치고 \"실시간\"으로 재투영할 수 있습니다. 그러나 비교적 긴 시간 "
-"동안 사용할 데이터를 준비하는 경우, 이미 합쳐지고 재투영된 새 래스터를 생성하는 편이 더 효율적일 수도 있습니다. 초기 준비 과정에 "
-"시간이 걸릴 수도 있지만, 맵 상에서 래스터를 사용할 때 속도를 향상시킬 수 있습니다."
+"앞에서 설명한 방법으로 카탈로그를 이용해서 데이터셋을 가상으로 병합하고 \"실시간\"으로 재투영할 수 있습니다. 그러나 비교적 긴 시간 "
+"동안 사용할 데이터를 준비하는 경우, 미리 병합하고 재투영한 새 래스터를 생성하는 편이 더 효율적일 수도 있습니다. 초기 준비 과정에 "
+"시간이 걸릴 수도 있지만, 맵 상에서 래스터를 사용할 때 속도를 향상시킬 수 있기 때문입니다."
 
 #: ../../docs/training_manual/rasters/data_manipulation.rst:110
 msgid "Reprojecting rasters"
-msgstr "래스터 재투영"
+msgstr "래스터 재투영하기"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:112
+msgid ""
+"Open :guilabel:`Warp (reproject)` from :menuselection:`GDAL --> Raster "
+"projections`."
+msgstr ""
+":menuselection:`GDAL --> Raster projections` 에서 :guilabel:`Warp (reproject)`"
+" 알고리즘을 여십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:115
+msgid ""
+"You can also reproject virtual rasters (catalogs), enable multithreaded "
+"processing, and more."
+msgstr ""
+"가상 래스터(카탈로그)를 재투영하거나, 멀티스레딩(multithreading) 공간 처리를 활성화하는 등등 더 많은 작업도 할 수 "
+"있습니다."
 
 #: ../../docs/training_manual/rasters/data_manipulation.rst:122
 msgid "Merging rasters"
-msgstr "래스터 합치기"
+msgstr "래스터 병합하기"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:124
+msgid ""
+"If you need to create a new raster layer and save it to disk you can use the"
+" merge algorithm."
+msgstr "새 래스터 레이어를 생성해서 디스크 상에 저장해야 하는 경우 병합(merge) 알고리즘을 사용하면 됩니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:127
+msgid ""
+"Depending on how many raster files you are merging and their resolution, the"
+" new raster file created can be really big. Consider instead to create a "
+"raster catalog as described in the :ref:`Create a Virtual Raster "
+"<tm_virtual_raster>` section."
+msgstr ""
+"병합하는 래스터 파일이 얼마나 많은지 그리고 래스터의 해상도가 어떻게 되는지에 따라, 생성된 래스터 파일이 매우 커질 수 있습니다. 그 "
+"대신 :ref:`가상 래스터 생성하기 <tm_virtual_raster>` 예제에서 설명한 대로 래스터 카탈로그를 생성하는 것을 "
+"고려해보십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:132
+msgid ""
+"Click on the :guilabel:`Merge` algorithm from the :menuselection:`GDAL --> "
+"Raster miscellaneous` menu."
+msgstr ""
+":menuselection:`GDAL --> Raster miscellaneous` 메뉴에서 :guilabel:`Merge` 알고리즘을 "
+"클릭하십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:134
+msgid ""
+"As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>`, use "
+"the :guilabel:`...` button to choose which layers you want to merge."
+msgstr ""
+":ref:`가상 래스터 생성하기 <tm_virtual_raster>` 예제에서 한 것처럼, :guilabel:`...` 버튼을 사용해서 "
+"병합하고자 하는 레이어들을 선택하십시오."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:138
+msgid ""
+"You can also specify a Virtual raster as input, and then all of the rasters "
+"that it consists of will be processed."
+msgstr "가상 래스터를 입력물로 지정할 수도 있습니다. 그러면 가상 래스터를 구성하고 있는 모든 래스터를 처리할 것입니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:140
+msgid ""
+"If you know the GDAL library, you can also add your own options by opening "
+"the :guilabel:`Advanced parameters` menu."
+msgstr ""
+"여러분이 GDAL 라이브러리를 알고 있다면, :guilabel:`Advanced parameters` 메뉴를 열어서 자신만의 옵션들도 "
+"추가할 수 있습니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:147
+msgid "In Conclusion"
+msgstr "결론"
 
 #: ../../docs/training_manual/rasters/data_manipulation.rst:149
 msgid "QGIS makes it easy to include raster data into your existing projects."
-msgstr "QGIS를 통해 사용자의 기존 프로젝트에 래스터 데이터를 손쉽게 포함시킬 수 있습니다."
+msgstr "QGIS를 통해 여러분의 기존 프로젝트에 래스터 데이터를 손쉽게 포함시킬 수 있습니다."
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:152
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
 
 #: ../../docs/training_manual/rasters/data_manipulation.rst:154
 msgid ""
 "Next, we'll use raster data that isn't aerial imagery, and see how "
 "symbolization is useful in the case of rasters as well."
-msgstr "다음 강의에서 항공사진이 아닌 래스터 데이터를 사용해서 래스터를 어떻게 심볼로도 활용할 수 있는지 배워보겠습니다."
+msgstr "다음 수업에서는 항공사진이 아닌 래스터 데이터를 사용해서 래스터를 어떻게 심볼로도 활용할 수 있는지 배워보겠습니다."
