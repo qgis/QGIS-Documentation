@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
 # Transifex Bot <>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:59+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -244,6 +244,25 @@ msgstr ""
 " tiene un contenido diferente, dependiendo de los requisitos del algoritmo a"
 " ejecutar, y se crea automáticamente en función de esos requisitos."
 
+#: ../../docs/user_manual/processing/toolbox.rst:97
+msgid "**Setting your own default values for algorithm parameters**"
+msgstr ""
+"**Establecer sus propios valores por defecto para los parámetros del "
+"algoritmo."
+
+#: ../../docs/user_manual/processing/toolbox.rst:99
+msgid ""
+"Algorithm dialogs open with some parameters prefilled with values from QGIS "
+"installation. It is however possible to set :ref:`your own default values "
+"<deploying_organization>` for specific algorithm parameters so that they are"
+" used at algorithm startup."
+msgstr ""
+"Los diálogos de los algoritmos se abren con algunos parámetros prefijados "
+"con los valores de la instalación de QGIS. Sin embargo, es posible "
+"establecer :ref:`sus propios valores por defecto <deploying_organization>` "
+"para parámetros específicos del algoritmo, de modo que se utilicen al "
+"iniciarse el algoritmo."
+
 #: ../../docs/user_manual/processing/toolbox.rst:103
 msgid ""
 "Although the number and type of parameters depend on the characteristics of "
@@ -358,6 +377,21 @@ msgid ""
 msgstr ""
 ":guilabel:`Límite de objetos espaciales procesados`: límite opcional del "
 "número de objetos espaciales procesados desde el origen."
+
+#: ../../docs/user_manual/processing/toolbox.rst:149
+msgid ""
+":guilabel:`Feature filter`: allows to enter an expression to subset the "
+"layer dynamically when running the tool, avoiding the need for separate "
+"steps to set layer filters or create layer subsets."
+msgstr ""
+":guilabel:`Filtro de objeto espacial`: permite introducir una expresión para"
+" subconjuntar la capa dinámicamente al ejecutar la herramienta, evitando la "
+"necesidad de pasos separados para establecer filtros de capa o crear "
+"subconjuntos de capa."
+
+#: ../../docs/user_manual/processing/toolbox.rst:158
+msgid "Advanced options for vector input widget"
+msgstr "Opciones avanzadas para el widget de entrada vectorial"
 
 #: ../../docs/user_manual/processing/toolbox.rst:160
 msgid ""
@@ -573,6 +607,22 @@ msgstr ""
 "Dependiendo del algoritmo, el número de filas que pueden ser modificadas o "
 "no al utilizar los botones del lado derecho de la ventana."
 
+#: ../../docs/user_manual/processing/toolbox.rst:254
+msgid ""
+"Some algorithms require many parameters to run, e.g. in the "
+":ref:`qgisrastercalc` you have to specify manually the cell size, the extent"
+" and the CRS. You can avoid to choose all the parameters manually when the "
+"algorithm has the ``Reference layers`` parameter. With this parameter you "
+"can choose the reference layer and all its properties (cell size, extent, "
+"CRS) will be used."
+msgstr ""
+"Algunos algoritmos requieren muchos parámetros para ejecutarse, por ejemplo,"
+" en el :ref:`qgisrastercalc` hay que especificar manualmente el tamaño de la"
+" celda, la extensión y el CRS. Puede evitar elegir todos los parámetros "
+"manualmente cuando el algoritmo tiene el parámetro ``Capas de referencia``. "
+"Con este parámetro puede elegir la capa de referencia y se utilizarán todas "
+"sus propiedades (tamaño de celda, extensión, SRC)."
+
 #: ../../docs/user_manual/processing/toolbox.rst:262
 msgid "Logging the execution"
 msgstr "Registro de la ejecución"
@@ -675,13 +725,65 @@ msgstr ""
 "El menú :menuselection:`Avanzado -->` proporciona funciones para reutilizar "
 "la configuración definida en el diálogo sin ejecutar el algoritmo:"
 
+#: ../../docs/user_manual/processing/toolbox.rst:307
+msgid ""
+"|settings| :guilabel:`Algorithm Settings...`: allows to override processing "
+"settings for the current algorithm execution. More details at "
+":ref:`alg_override_setting`."
+msgstr ""
+"|settings| :guilabel:`Configuración del algoritmo...`: permite anular la "
+"configuración de procesamiento para la ejecución actual del algoritmo. Más "
+"detalles en :ref:`alg_override_setting`."
+
 #: ../../docs/user_manual/processing/toolbox.rst:502
 msgid "settings"
 msgstr "settings"
 
+#: ../../docs/user_manual/processing/toolbox.rst:309
+msgid ""
+"|pythonFile| :guilabel:`Copy as Python Command`: allows for easy copying of "
+"the equivalent :ref:`PyQGIS command <processing_console>` to run the tool "
+"using the parameters defined in the dialog"
+msgstr ""
+"|pythonFile| :guilabel:`Copiar como comando Python`: permite copiar "
+"fácilmente el :ref:`comando PyQGIS <processing_console>` equivalente para "
+"ejecutar la herramienta utilizando los parámetros definidos en el diálogo"
+
+#: ../../docs/user_manual/processing/toolbox.rst:311
+msgid ""
+"|terminal| :guilabel:`Copy as qgis_process Command`: allows for easy "
+"generation of :ref:`qgis_process command <processing_standalone>`, including"
+" its environment settings like the distance units, area units, ellipsoid, "
+"and any tricky parameter values like GeoPackage outputs with specific layers"
+msgstr ""
+"|terminal| :guilabel:`Copiar como comando qgis_process`: permite generar "
+"fácilmente el :ref:`comando qgis_process <processing_standalone>`, incluida "
+"la configuración del entorno, como las unidades de distancia, las unidades "
+"de superficie, el elipsoide y cualquier parámetro complicado, como los "
+"resultados de GeoPackage con capas específicas."
+
 #: ../../docs/user_manual/processing/toolbox.rst:504
 msgid "terminal"
 msgstr "terminal"
+
+#: ../../docs/user_manual/processing/toolbox.rst:315
+msgid ""
+"|editCopy| :guilabel:`Copy as JSON`: all the settings of the command are "
+"copied in a :file:`JSON` format, ready to be consumed by qgis_process. This "
+"is a convenient way to see the expected format of the commands, even for "
+"complex parameters (like TIN interpolation parameters). You can store these "
+"easily and then restore them later by pasting the values."
+msgstr ""
+"|editCopy| :guilabel:`Copiar como JSON`: todos los parámetros del comando se"
+" copian en formato :file:`JSON`, listos para ser consumidos por "
+"qgis_process. Esta es una forma conveniente de ver el formato esperado de "
+"los comandos, incluso para parámetros complejos (como los parámetros de "
+"interpolación TIN). Puede almacenarlos fácilmente y restaurarlos más tarde "
+"pegando los valores."
+
+#: ../../docs/user_manual/processing/toolbox.rst:320
+msgid "|editPaste| :guilabel:`Paste Settings` in a :file:`JSON` format"
+msgstr "|editPaste| :guilabel:`Pegar configuración` en formato :file:`JSON`"
 
 #: ../../docs/user_manual/processing/toolbox.rst:480
 msgid "editPaste"
@@ -709,6 +811,60 @@ msgstr ""
 "Cuando finaliza la ejecución de un algoritmo (con o sin éxito), se muestra "
 "un nuevo botón :guilabel:`Cambiar parámetros` siempre que la pestaña "
 ":guilabel:`Registro` esté activa."
+
+#: ../../docs/user_manual/processing/toolbox.rst:334
+msgid "Override algorithm settings"
+msgstr "Anular la configuración del algoritmo"
+
+#: ../../docs/user_manual/processing/toolbox.rst:336
+msgid ""
+"Triggered from within the :guilabel:`Advanced` drop-down menu at the bottom "
+"of an algorithm dialog, the |settings| :guilabel:`Algorithm Settings...` "
+"shows a panel allowing users to control general processing settings which "
+"apply to that algorithm execution only. It is intended to be a place where a"
+" user can override their :ref:`global processing settings "
+"<processing_general_settings>` on an ad-hoc basis without having to change "
+"their usual default settings."
+msgstr ""
+"Activado desde el menú desplegable :guilabel:`Avanzado` en la parte inferior"
+" del cuadro de diálogo de un algoritmo, |settings| :guilabel:`Configuración "
+"del algoritmo...` muestra un panel que permite a los usuarios controlar la "
+"configuración general de procesamiento que se aplica sólo a la ejecución de "
+"ese algoritmo. Se pretende que sea un lugar donde el usuario pueda anular "
+"sus :ref:`configuraciones globales de procesamiento "
+"<processing_general_settings>` de forma ad hoc sin tener que cambiar su "
+"configuración habitual por omisión."
+
+#: ../../docs/user_manual/processing/toolbox.rst:342
+msgid "Settings that can be overridden are:"
+msgstr "Los ajustes que se pueden anular son:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:344
+msgid ""
+":guilabel:`Invalid feature filtering`: unlike the existing per-parameter "
+"setting override for this, setting the handling method here will apply to "
+"**ALL inputs** for the algorithm"
+msgstr ""
+":guilabel:`Filtrado no válido de objetos espaciales`: a diferencia del "
+"ajuste por parámetro existente para esto, establecer el método de "
+"tratamiento aquí se aplicará a **TODAS las entradas** para el algoritmo."
+
+#: ../../docs/user_manual/processing/toolbox.rst:346
+msgid ""
+":guilabel:`Calculation settings`, such as :guilabel:`Distance units` and "
+":guilabel:`Area units` to use for distance/area measurements"
+msgstr ""
+":guilabel:`Configuraciones de cálculo`, como :guilabel:`Unidades de "
+"distancia` y :guilabel:`Unidades de área` que se utilizarán para las "
+"mediciones de distancia/área."
+
+#: ../../docs/user_manual/processing/toolbox.rst:348
+msgid ""
+":guilabel:`Environment settings`, such as :guilabel:`Temporary folder` and "
+":guilabel:`Number of threads to use`"
+msgstr ""
+":guilabel:`Configuración del entorno`, como :guilabel:`Carpeta temporal` y "
+":guilabel:`Número de hilos a utilizar`."
 
 #: ../../docs/user_manual/processing/toolbox.rst:352
 msgid "A note on projections"
