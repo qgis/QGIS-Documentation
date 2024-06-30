@@ -18,7 +18,7 @@ To launch GRASS from within QGIS, you need to activate it as with any other
 plugin:
 
 #. First, open a new QGIS project.
-#. In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:
+#. In the :guilabel:`Plugin Manager`, enable |grassTools| :guilabel:`GRASS 8` in the list:
 
    .. figure:: img/enable_grass.png
       :align: center
@@ -26,15 +26,10 @@ plugin:
 
    The GRASS toolbar and the GRASS panel will appear:
 
-   .. figure:: img/grass_toolbar.png
-      :align: center
-
-      GRASS toolbar
-
    .. figure:: img/grass_panel.png
       :align: center
 
-      GRASS Panel
+      GRASS Toolbar and Panel
 
 The GRASS panel is not active because, before you can use GRASS, you need to
 create a ``Mapset``. GRASS always works in a database environment, which means
@@ -157,8 +152,8 @@ Go to the Browser, and simply drag the :file:`roads` layer  from the
 .. figure:: img/grass_browser_import.png
    :align: center
 
-That's it! If you expand the Mapset you will see the imported :file:`roads`
-layer. You can now load in QGIS the imported layer like all the other layers.
+That's it! If you expand the Mapset you will see the imported :file:`roads` layer.
+You can now load in QGIS the imported layer like all the other layers.
 
 .. tip:: You can also load layers from the Layer Legend Panel to Mapset in the
   Browser Panel. This will speed up incredibly your workflow!
@@ -173,7 +168,9 @@ same Mapset.
 #. Load data into QGIS as usual. Use the :file:`rivers.shp` dataset (found in the
    :file:`exercise_data/shapefile/` folder)
 #. As soon as it is loaded, click on the :guilabel:`Filter` box of the ``GRASS Panel``
-   and find the vector import tool by entering the term ``v.in.ogr.qgis``:
+   and find the vector import tool by entering the term ``v.in.ogr.qgis``
+   (available under :menuselection:`File management --> Import into GRASS -->
+   Import vector into GRASS`):
 
    .. warning:: There are 2 similar tools: ``v.in.ogr.qgis`` and
      ``v.in.ogr.qgis.loc``. We are looking for the **first** one.
@@ -222,9 +219,10 @@ We are going to import in the GRASS Mapset the layer |srtmFileName|.
 
 #. Load the |srtmFileName| layer in QGIS
 #. Open the :guilabel:`GRASS Tools` dialog again.
-#. Click on the :guilabel:`Modules List` tab.
-#. Search for ``r.in.gdal.qgis`` and double click the tool to open the tool's
-   dialog.
+#. Click on the :guilabel:`Modules` tab.
+#. Search for ``r.in.gdal.qgis`` (available under :menuselection:`File management -->
+   Import into GRASS --> Import raster into GRASS --> Import raster into GRASS from QGIS view`)
+   and double click the tool to open the tool's dialog.
 #. Set it up so that the input layer is |srtmFileName| and the output is :file:`g_dem`.
 
    .. figure:: img/g_dem_settings.png
@@ -269,8 +267,7 @@ Let's close the Mapset by clicking on the :guilabel:`Close Mapset` button of the
 :abbr:`★☆☆ (Basic level)` Follow Along: Using the GRASS plugin
 ...............................................................................
 
-#. Click on the :guilabel:`Plugins --> GRASS --> Open Mapset` menu next to the
-   :guilabel:`Plugins --> GRASS --> New Mapset` menu that we saw in the previous section.
+#. Click on the :menuselection:`Plugins --> GRASS --> Open Mapset` menu.
 
 #. Browse to the GRASS database folder: be careful! You must choose the parent folder,
    not the GRASS Mapset one. Indeed GRASS will read all the ``Locations`` of the
@@ -330,6 +327,8 @@ operations that GRASS offers.
 .. |grassLogo| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |grassMapsetOpen| image:: /static/common/grass_mapset_open.png
+   :width: 1.5em
+.. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
 .. |srtmFileName| replace:: :file:`srtm_41_19_4326.tif`
 .. |win| image:: /static/common/win.png

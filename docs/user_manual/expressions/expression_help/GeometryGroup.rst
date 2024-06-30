@@ -39,7 +39,6 @@ Returns the geometry after an affine transformation. Calculations are in the Spa
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/affinetransform.png
    :align: center
-   :width: 100%
 
    Vector point layer (green dots) before (left), and after (right) an affine transformation (translation).
 
@@ -201,7 +200,6 @@ Returns the closure of the combinatorial boundary of the geometry (ie the topolo
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/boundary_polygon.png
    :align: center
-   :width: 100%
 
    Boundary (black dashed line) of the source polygon layer
 
@@ -228,7 +226,6 @@ Returns a geometry which represents the bounding box of an input geometry. Calcu
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/bounding_box.png
    :align: center
-   :width: 100%
 
    Black lines represent the bounding boxes of each polygon feature
 
@@ -303,7 +300,6 @@ Returns a geometry that represents all points whose distance from this geometry 
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/buffer.png
    :align: center
-   :width: 100%
 
    Buffer (in yellow) of points, line, polygon with positive buffer, and polygon with negative buffer
 
@@ -332,7 +328,6 @@ Creates a buffer along a line geometry where the buffer diameter varies accordin
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/variable_buffer_m.png
    :align: center
-   :width: 100%
 
    Buffering line features using the m value on the vertices
 
@@ -358,7 +353,6 @@ Returns the geometric center of a geometry.
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/centroids.png
    :align: center
-   :width: 100%
 
    The red stars represent the centroids of the features of the input layer.
 
@@ -489,6 +483,11 @@ Returns a possibly concave polygon that contains all the points in the geometry
      - * ``geom_to_wkt(concave_hull(geom_from_wkt('MULTILINESTRING((106 164,30 112,74 70,82 112,130 94,130 62,122 40,156 32,162 76,172 88),(132 178,134 148,128 136,96 128,132 108,150 130,170 142,174 110,156 96,158 90,158 88),(22 64,66 28,94 38,94 68,114 76,112 30,132 10,168 18,178 34,186 52,184 74,190 100,190 122,182 148,178 170,176 184,156 164,146 178,132 186,92 182,56 158,36 150,62 150,76 128,88 118))'), 0.99))`` → 'Polygon ((30 112, 36 150, 92 182, 132 186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 28, 22 64, 30 112))'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/concave_hull_threshold.png
+   :align: center
+
+   Concave hulls with increasing target_percent parameter
+
 .. end_concave_hull_section
 
 .. _expression_function_GeometryGroup_contains:
@@ -530,6 +529,11 @@ Returns the convex hull of a geometry. It represents the minimum convex geometry
    * - Examples
      - * ``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) )`` → 'POLYGON((3 3, 4 10, 4 4, 3 3))'
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/convex_hull.png
+   :align: center
+
+   Black lines identify the convex hull for each feature
 
 .. end_convex_hull_section
 
@@ -576,7 +580,6 @@ Takes a polygon or line layer geometry and generates a new one in which the geom
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/densify_geometry.png
    :align: center
-   :width: 100%
 
    Red points show the vertices before and after the densify
 
@@ -603,7 +606,6 @@ Takes a polygon or line layer geometry and generates a new one in which the geom
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/densify_geometry_interval.png
    :align: center
-   :width: 100%
 
    Densify geometry at a given interval
 
@@ -712,6 +714,11 @@ Returns the last node from a geometry.
      - * ``geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → 'Point (0 2)'
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/end_point.*
+   :align: center
+
+   End point of a line feature
+
 .. end_end_point_section
 
 .. _expression_function_GeometryGroup_exif_geotag:
@@ -755,6 +762,11 @@ Extends the start and end of a linestring geometry by a specified amount. Lines 
        * ``geom_to_wkt(extend(geom_from_wkt('MultiLineString((0 0, 1 0, 1 1), (2 2, 0 2, 0 5))'),1,2))`` → 'MultiLineString ((-1 0, 1 0, 1 3),(3 2, 0 2, 0 7))'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/extend_lines.png
+   :align: center
+
+   The red dashes represent the initial and final extension of the original layer
+
 .. end_extend_section
 
 .. _expression_function_GeometryGroup_exterior_ring:
@@ -774,6 +786,11 @@ Returns a line string representing the exterior ring of a polygon geometry. If t
    * - Examples
      - * ``geom_to_wkt(exterior_ring(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),( 0.1 0.1, 0.1 0.2, 0.2 0.2, 0.2, 0.1, 0.1 0.1))')))`` → 'LineString (-1 -1, 4 0, 4 2, 0 2, -1 -1)'
 
+
+.. figure:: /docs/user_manual/expressions/expression_help/img/exterior_ring.*
+   :align: center
+
+   The dashed line represents the exterior ring of the polygon
 
 .. end_exterior_ring_section
 
@@ -797,6 +814,11 @@ Returns an extruded version of the input (Multi-)Curve or (Multi-)Linestring geo
      - * ``geom_to_wkt(extrude(geom_from_wkt('LineString(1 2, 3 2, 4 3)'), 1, 2))`` → 'Polygon ((1 2, 3 2, 4 3, 5 5, 4 4, 2 4, 1 2))'
        * ``geom_to_wkt(extrude(geom_from_wkt('MultiLineString((1 2, 3 2), (4 3, 8 3))'), 1, 2))`` → 'MultiPolygon (((1 2, 3 2, 4 4, 2 4, 1 2)),((4 3, 8 3, 9 5, 5 5, 4 3)))'
 
+
+.. figure:: /docs/user_manual/expressions/expression_help/img/extrude.*
+   :align: center
+
+   Generating a polygon by extruding a line with offset in x and y directions
 
 .. end_extrude_section
 
@@ -1450,7 +1472,6 @@ Returns the point interpolated by a specified distance along a linestring geomet
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/interpolated_point.png
    :align: center
-   :width: 100%
 
    Interpolated point at 500m of the beginning of the line
 
@@ -1517,6 +1538,11 @@ Returns the portion of a line (or curve) geometry which falls between the specif
    * - Examples
      - * ``geom_to_wkt(line_substring(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),start_distance:=2,end_distance:=6))`` → 'LineString (2 0,6 0)'
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/substring.png
+   :align: center
+
+   Substring line with starting distance set at 0 meters and the ending distance at 250 meters.
 
 .. end_line_substring_section
 
@@ -1936,6 +1962,11 @@ Returns the minimal enclosing circle of a geometry. It represents the minimum ci
        * ``geom_to_wkt( minimal_circle( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ), 4 ) )`` → 'Polygon ((3 4, 3 2, 1 2, 1 4, 3 4))'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/minimum_enclosing_circles.png
+   :align: center
+
+   Minimal enclosing circle of each feature
+
 .. end_minimal_circle_section
 
 .. _expression_function_GeometryGroup_nodes_to_points:
@@ -1959,6 +1990,11 @@ Returns a multipoint geometry consisting of every node in the input geometry.
      - * ``geom_to_wkt(nodes_to_points(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)')))`` → 'MultiPoint ((0 0),(1 1),(2 2))'
        * ``geom_to_wkt(nodes_to_points(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))'),true))`` → 'MultiPoint ((-1 -1),(4 0),(4 2),(0 2))'
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/extract_nodes.png
+   :align: center
+
+   Multi-point feature extracted from vertices
 
 .. end_nodes_to_points_section
 
@@ -2072,7 +2108,6 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/offset_lines.png
    :align: center
-   :width: 100%
 
    In blue the source layer, in red the offset one
 
@@ -2123,7 +2158,6 @@ Returns a geometry which represents the minimal oriented bounding box of an inpu
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/oriented_minimum_bounding_box.png
    :align: center
-   :width: 100%
 
    Oriented minimum bounding box
 
@@ -2550,7 +2584,6 @@ Calculates the approximate pole of inaccessibility for a surface, which is the m
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/pole_inaccessibility.png
    :align: center
-   :width: 100%
 
    Pole of inaccessibility
 
@@ -2643,7 +2676,6 @@ Reverses the direction of a line string by reversing the order of its vertices.
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/reverse_line.png
    :align: center
-   :width: 100%
 
    Reversing line direction
 
@@ -2675,7 +2707,6 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/rotate.*
    :align: center
-   :width: 100%
 
    Rotating features
 
@@ -2810,6 +2841,11 @@ Simplifies a geometry by removing nodes using a distance based threshold (ie, th
      - * ``geom_to_wkt(simplify(geometry:=geom_from_wkt('LineString(0 0, 5 0.1, 10 0)'),tolerance:=5))`` → 'LineString(0 0, 10 0)'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/simplify_geometries.png
+   :align: center
+
+   From left to right, source layer and increasing simplification tolerances
+
 .. end_simplify_section
 
 .. _expression_function_GeometryGroup_simplify_vw:
@@ -2862,7 +2898,6 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/single_side_buffer.png
    :align: center
-   :width: 100%
 
    Left versus right side buffer on the same vector line layer
 
@@ -2915,7 +2950,6 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/smooth_geometry_1.png
    :align: center
-   :width: 100%
 
    Increasing number of iterations causes smoother geometries
 
@@ -2944,6 +2978,11 @@ Constructs square/rectangular waves along the boundary of a geometry.
      - * ``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Square waves with wavelength 3 and amplitude 1 along the linestring
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/square_wave.*
+   :align: center
+
+   Symbolizing features with square waves
+
 .. end_square_wave_section
 
 .. _expression_function_GeometryGroup_square_wave_randomized:
@@ -2971,6 +3010,11 @@ Constructs randomized square/rectangular waves along the boundary of a geometry.
      - * ``square_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized square waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/square_wave_randomized.*
+   :align: center
+
+   Symbolizing features with square randomized waves
+
 .. end_square_wave_randomized_section
 
 .. _expression_function_GeometryGroup_start_point:
@@ -2990,6 +3034,11 @@ Returns the first node from a geometry.
    * - Examples
      - * ``geom_to_wkt(start_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → 'Point (4 0)'
 
+
+.. figure:: /docs/user_manual/expressions/expression_help/img/start_point.*
+   :align: center
+
+   Starting point of a line feature
 
 .. end_start_point_section
 
@@ -3060,7 +3109,6 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/tapered_buffer.png
    :align: center
-   :width: 100%
 
    Tapered buffer on line features
 
@@ -3132,7 +3180,6 @@ Returns a translated version of a geometry. Calculations are in the Spatial Refe
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/translate_geometry.png
    :align: center
-   :width: 100%
 
    Translating features
 
@@ -3161,6 +3208,11 @@ Constructs triangular waves along the boundary of a geometry.
      - * ``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Triangular waves with wavelength 3 and amplitude 1 along the linestring
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave.*
+   :align: center
+
+   Symbolizing features with triangular waves
+
 .. end_triangular_wave_section
 
 .. _expression_function_GeometryGroup_triangular_wave_randomized:
@@ -3187,6 +3239,11 @@ Constructs randomized triangular waves along the boundary of a geometry.
    * - Examples
      - * ``triangular_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized triangular waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
+
+.. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave_randomized.*
+   :align: center
+
+   Symbolizing features with triangular randomized waves
 
 .. end_triangular_wave_randomized_section
 
@@ -3234,6 +3291,11 @@ Constructs rounded (sine-like) waves along the boundary of a geometry.
      - * ``wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Sine-like waves with wavelength 3 and amplitude 1 along the linestring
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/wave.*
+   :align: center
+
+   Symbolizing features with waves
+
 .. end_wave_section
 
 .. _expression_function_GeometryGroup_wave_randomized:
@@ -3261,6 +3323,11 @@ Constructs randomized curved (sine-like) waves along the boundary of a geometry.
      - * ``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized curved waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/wave_randomized.*
+   :align: center
+
+   Symbolizing features with randomized waves
+
 .. end_wave_randomized_section
 
 .. _expression_function_GeometryGroup_wedge_buffer:
@@ -3286,6 +3353,11 @@ Returns a wedge shaped buffer originating from a point geometry.
    * - Examples
      - * ``wedge_buffer(center:=geom_from_wkt('POINT(1 2)'),azimuth:=90,width:=180,outer_radius:=1)`` → A wedge shaped buffer centered on the point (1,2), facing to the East, with a width of 180 degrees and outer radius of 1.
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/wedge_buffers.png
+   :align: center
+
+   Wedge buffering features
 
 .. end_wedge_buffer_section
 

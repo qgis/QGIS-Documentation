@@ -1017,7 +1017,25 @@ Parameters
    * - **Input layers**
      - ``LAYERS``
      - [vector: any] [list]
-     - Input vector layers to export
+     - List of input vector layers with options associated (filled as a
+       :class:`QgsProcessingParameterDxfLayers
+       <qgis.core.QgsProcessingParameterDxfLayers>` item ---
+       done in GUI by pressing :guilabel:`Configure Layer...` button
+       for each selected layer):
+
+       **Layer** [string] (``layer``)
+         Full path of the input layer to export
+
+       **Output layer attribute** [number] (``attributeIndex``)
+         Attribute index to split the input layer using unique values
+
+       **Output layer name** [string] (``overriddenLayerName``)
+         Overridden layer name to be used in the exported DXF file (the
+         original project layer remains untouched)
+
+       **Allow data defined symbol blocks** [boolean] (``buildDataDefinedBlocks``)
+
+       **Maximum number of symbol blocks** [number] (``dataDefinedBlocksMaximumNumberOfClasses``)
    * - **Symbology mode**
      - ``SYMBOLOGY_MODE``
      - [enumeration]
@@ -1061,8 +1079,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - Name the output layer with the layer title (as set in QGIS) instead
-       of the layer name.
+     - Name the output layer with the layer title (as set in layer metadata
+       or QGIS Server properties) instead of the layer name.
    * - **Force 2D**
      - ``FORCE_2D``
      - [boolean]

@@ -21,7 +21,7 @@ Loads a JSON formatted string.
    * - Arguments
      - * **string** - JSON string
    * - Examples
-     - * ``from_json('{"qgis":"rocks"}')`` → { 'qgis': 'rocks' }
+     - * ``from_json('{"1":"one","2":"two"}')`` → { '1': 'one', '2': 'two' }
        * ``from_json('[1,2,3]')`` → [1,2,3]
 
 
@@ -252,7 +252,7 @@ Merge map elements into a hstore-formatted string.
    * - Arguments
      - * **map** - the input map
    * - Examples
-     - * ``map_to_hstore(map('qgis','rocks'))`` → '"qgis"=>"rocks"'
+     - * ``map_to_hstore(map('1','one','2','two'))`` → '"1"=>"one"','"2"=>"two"'
 
 
 .. end_map_to_hstore_section
@@ -272,7 +272,7 @@ Merge map elements into a HTML definition list string.
    * - Arguments
      - * **map** - the input map
    * - Examples
-     - * ``map_to_html_dl(map('qgis','rocks'))`` → <dl><dt>qgis</dt><dd>rocks</dd></dl>
+     - * ``map_to_html_dl(map('1','one','2','two'))`` → <dl><dt>1</dt><dd>one</dd><dt>2</dt><dd>two</dd></dl>
 
 
 .. end_map_to_html_dl_section
@@ -292,7 +292,7 @@ Merge map elements into a HTML table string.
    * - Arguments
      - * **map** - the input map
    * - Examples
-     - * ``map_to_html_table(map('qgis','rocks'))`` → <table><thead><th>qgis</th></thead><tbody><tr><td>rocks</td></tr></tbody></table>
+     - * ``map_to_html_table(map('1','one','2','two'))`` → <table><thead><tr><th>1</th><th>2</th></tr></thead><tbody><tr><td>one</td><td>two</td></tr></tbody></table>
 
 
 .. end_map_to_html_table_section
@@ -312,7 +312,7 @@ Create a JSON formatted string from a map, array or other value.
    * - Arguments
      - * **value** - The input value
    * - Examples
-     - * ``to_json(map('qgis','rocks'))`` → {"qgis":"rocks"}
+     - * ``to_json(map('1','one','2','two'))`` → {"1":"one","2":"two"}
        * ``to_json(array(1,2,3))`` → [1,2,3]
 
 

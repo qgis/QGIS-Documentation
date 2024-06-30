@@ -1577,7 +1577,7 @@ that allows to store in a single folder:
 By default, a QGIS installation contains a single user profile named ``default``.
 But you can create as many user profiles as you want:
 
-#. Click the :guilabel:`New profile...` entry.
+#. Click the :menuselection:`Settings --> User Profiles --> New profile...` entry.
 #. You'll be prompted to provide a profile name, creating a folder of the same name
    under :file:`~/<UserProfiles>/` where:
 

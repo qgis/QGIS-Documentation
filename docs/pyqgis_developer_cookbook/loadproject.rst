@@ -177,7 +177,7 @@ The following can be done:
 
   readflags = Qgis.ProjectReadFlags()
   readflags |= Qgis.ProjectReadFlag.DontResolveLayers
-  project = QgsProject()
+  project = QgsProject.instance()
   project.read('C:/Users/ClintBarton/Documents/Projects/mysweetproject.qgs', readflags)
  
 To add more flags the python Bitwise OR operator (``|``) must be used.
