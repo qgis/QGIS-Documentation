@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,6 +39,18 @@ msgstr ""
 #: ../../docs/training_manual/appendix/contribute.rst:3
 msgid "Appendix: Contributing To This Manual"
 msgstr "Apéndice: Cómo Contribuir a este Manual"
+
+#: ../../docs/training_manual/appendix/contribute.rst:5
+msgid ""
+"To add materials to this course, you must follow the guidelines in this "
+"Appendix. You are not allowed to alter the conditions in this Appendix "
+"except for clarification. This is to ensure that the quality and consistency"
+" of this manual can be maintained."
+msgstr ""
+"Para añadir materiales a este curso, debe seguir las directrices de este "
+"Apéndice. No está permitido alterar las condiciones de este Apéndice, salvo "
+"para clarificarlas. Con ello se pretende garantizar la calidad y coherencia "
+"de este manual."
 
 #: ../../docs/training_manual/appendix/contribute.rst:10
 msgid "Downloading Resources"
@@ -77,6 +90,56 @@ msgstr ""
 msgid "Adding a Module"
 msgstr "Adición de un Módulo"
 
+#: ../../docs/training_manual/appendix/contribute.rst:27
+msgid "To add a new module:"
+msgstr "Para añadir un nuevo módulo:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:29
+msgid ""
+"First create a new directory (directly under the  top-level of the "
+":file:`qgis-training-manual` directory) with the name of the new module."
+msgstr ""
+"Primero cree un nuevo directorio (directamente bajo el nivel superior del "
+"directorio :file:`qgis-training-manual`) con el nombre del nuevo módulo."
+
+#: ../../docs/training_manual/appendix/contribute.rst:31
+msgid ""
+"Under this new directory, create a file called :file:`index.rst`. Leave this"
+" file blank for now."
+msgstr ""
+"En este nuevo directorio, crea un fichero llamado :file:`index.rst`. Deje "
+"este archivo en blanco por ahora."
+
+#: ../../docs/training_manual/appendix/contribute.rst:33
+msgid ""
+"Open the :file:`index.rst` file under the top-level directory. Its first "
+"lines are::"
+msgstr ""
+"Abra el archivo :file:`index.rst` en el directorio de nivel superior. Sus "
+"primeras líneas son::"
+
+#: ../../docs/training_manual/appendix/contribute.rst:42
+msgid ""
+"You will note that this is a list of directory names, followed by the name "
+"``index``. This directs the top-level index file to the index files in each "
+"directory. The order in which they are listed determines the order they will"
+" have in the document."
+msgstr ""
+"Observará que se trata de una lista de nombres de directorios, seguida del "
+"nombre ``index``. Esto dirige el archivo de índice de nivel superior a los "
+"archivos de índice de cada directorio. El orden en que se enumeran determina"
+" el orden que tendrán en el documento."
+
+#: ../../docs/training_manual/appendix/contribute.rst:46
+msgid ""
+"Add the name of your new module (i.e., the name you gave the new directory),"
+" followed by ``/index``, to this list, wherever you want your module to "
+"appear."
+msgstr ""
+"Añada el nombre de tu nuevo módulo (es decir, el nombre que le has dado al "
+"nuevo directorio), seguido de ``/index``, a esta lista, donde quieras que "
+"aparezca tu módulo."
+
 #: ../../docs/training_manual/appendix/contribute.rst:48
 msgid ""
 "Remember to keep the order of the modules logical, such that later modules "
@@ -84,6 +147,41 @@ msgid ""
 msgstr ""
 "Recuerda mantener el orden de los módulos de forma lógica, de forma que los "
 "módulos finales se basen en el conocimiento presentado por los iniciales."
+
+#: ../../docs/training_manual/appendix/contribute.rst:50
+msgid ""
+"Open your new module's own index file (:file:`{module_name}/index.rst`)."
+msgstr ""
+"Abra el archivo de índice de su nuevo módulo "
+"(:file:`{module_name}/index.rst`)."
+
+#: ../../docs/training_manual/appendix/contribute.rst:51
+msgid "Along the top of the page, create the module heading:"
+msgstr "En la parte superior de la página, cree el encabezamiento del módulo:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:53
+msgid "write a first line of asterisks (``*``)."
+msgstr "escribir una primera línea de asteriscos (``*``)."
+
+#: ../../docs/training_manual/appendix/contribute.rst:54
+msgid ""
+"Follow this with a line containing the markup phrase ``Module:``, followed "
+"by the name of your module."
+msgstr ""
+"Siga esto con una línea que contenga la frase de marcado ``Módulo:``, "
+"seguida del nombre de su módulo."
+
+#: ../../docs/training_manual/appendix/contribute.rst:56
+msgid "End this off with another line of same number of asterisks."
+msgstr "Termine esto con otra línea del mismo número de asteriscos."
+
+#: ../../docs/training_manual/appendix/contribute.rst:58
+msgid ""
+"The underline and the overline should not be shorter than the line "
+"containing the module title."
+msgstr ""
+"El subrayado y el sobretitulado no deben ser más cortos que la línea que "
+"contiene el título del módulo."
 
 #: ../../docs/training_manual/appendix/contribute.rst:61
 msgid "Leave a line open beneath this."
@@ -98,6 +196,14 @@ msgstr ""
 #: ../../docs/training_manual/appendix/contribute.rst:63
 msgid "Leave one line open, then add the following text::"
 msgstr "Deja una línea abierta, luego añade el texto siguiente:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:71
+msgid ""
+"... where ``lesson1``, ``lesson2``, etc., are the names of your planned "
+"lessons."
+msgstr ""
+"... donde ``lección1``, ``lección2``, etc., son los nombres de las lecciones"
+" planificadas."
 
 #: ../../docs/training_manual/appendix/contribute.rst:73
 msgid "The module-level index file will look like this:"
@@ -115,9 +221,56 @@ msgstr "Para añadir una lección a un módulo existente:"
 msgid "Open the module directory."
 msgstr "Abre el directorio del módulo."
 
+#: ../../docs/training_manual/appendix/contribute.rst:95
+msgid ""
+"Open the :file:`index.rst` file (created above in the case of new modules)."
+msgstr ""
+"Abra el archivo :file:`index.rst` (creado anteriormente en el caso de "
+"módulos nuevos)."
+
+#: ../../docs/training_manual/appendix/contribute.rst:96
+msgid ""
+"Ensure that the name of the planned lesson is listed underneath the "
+":file:`toctree` directive, as shown above."
+msgstr ""
+"Asegúrese de que el nombre de la lección planificada aparece debajo de la "
+"directiva :file:`toctree`, como se muestra arriba."
+
 #: ../../docs/training_manual/appendix/contribute.rst:98
 msgid "Create a new file under the module directory."
 msgstr "Crea un archivo nuevo en el directorio del módulo."
+
+#: ../../docs/training_manual/appendix/contribute.rst:99
+msgid ""
+"Name this file exactly the same as the name you provided in the module's "
+":file:`index.rst` file, and add the extension :file:`.rst`."
+msgstr ""
+"Asigne a este archivo el mismo nombre que al archivo :file:`index.rst` del "
+"módulo y añádale la extensión :file:`.rst`."
+
+#: ../../docs/training_manual/appendix/contribute.rst:102
+msgid ""
+"For editing purposes, a :file:`.rst` file works exactly like a normal text "
+"file (:file:`.txt`)."
+msgstr ""
+"A efectos de edición, un archivo :file:`.rst` funciona exactamente igual que"
+" un archivo de texto normal (:file:`.txt`)."
+
+#: ../../docs/training_manual/appendix/contribute.rst:105
+msgid ""
+"To begin writing the lesson, write the markup phrase ``Lesson``, followed by"
+" the lesson name."
+msgstr ""
+"Para empezar a escribir la lección, escriba la frase de marcado ``Lección``,"
+" seguida del nombre de la lección."
+
+#: ../../docs/training_manual/appendix/contribute.rst:107
+msgid ""
+"In the next line, write a line of equal signs (``=``), not shorter than the "
+"lesson title."
+msgstr ""
+"En la línea siguiente, escriba una línea de signos iguales (``=``), no más "
+"corta que el título de la lección."
 
 #: ../../docs/training_manual/appendix/contribute.rst:108
 msgid "Leave a line open after this."
@@ -178,6 +331,26 @@ msgstr ""
 " direcciones clic por clic tan claramente como sea posible, intercaladas con"
 " capturas de pantalla."
 
+#: ../../docs/training_manual/appendix/contribute.rst:131
+msgid ""
+"A \"try yourself\" section gives the reader a short assignment to try by "
+"themselves. It is usually associated with an entry in the answer box "
+"beneath, which will show or explain how to complete the assignment, and will"
+" show the expected outcome if possible."
+msgstr ""
+"La sección \"Inténtalo tú mismo\" ofrece al lector una breve tarea que puede"
+" intentar por sí mismo. Suele ir asociada a una entrada en el cuadro de "
+"respuestas situado debajo, que mostrará o explicará cómo completar la tarea "
+"y, si es posible, mostrará el resultado esperado."
+
+#: ../../docs/training_manual/appendix/contribute.rst:136
+msgid ""
+"Every section comes with a difficulty level. An easy section is denoted by "
+"``★☆☆``, moderate by ``★★☆``, and advanced by ``★★★``."
+msgstr ""
+"Cada sección tiene un nivel de dificultad. Una sección fácil se indica con "
+"``★☆☆``, moderada con ``★★☆`` y avanzada con ``★★★``."
+
 #: ../../docs/training_manual/appendix/contribute.rst:140
 msgid "Adding a \"follow along\" section"
 msgstr "Añadir una sección \"sique los pasos\""
@@ -191,6 +364,10 @@ msgstr ""
 "Para comenzar esta lección, escribe la frase de marcado de la dificultad del"
 " nivel (como se muestra arriba)."
 
+#: ../../docs/training_manual/appendix/contribute.rst:144
+msgid "Leave a space and then write ``Follow Along:``."
+msgstr "Deje un espacio y escriba ``Seguir:``."
+
 #: ../../docs/training_manual/appendix/contribute.rst:145
 msgid ""
 "Leave another space and write the name of the section (use only an initial "
@@ -198,6 +375,15 @@ msgid ""
 msgstr ""
 "Deja otro espacio y escribe el nombre de la lección (utiliza solo una "
 "inicial en mayúsculas, así como las mayúsculas para nombres propios)."
+
+#: ../../docs/training_manual/appendix/contribute.rst:147
+#: ../../docs/training_manual/appendix/contribute.rst:161
+msgid ""
+"In the next line, write a line of minuses/dashes (``-``), not shorter than "
+"the section title."
+msgstr ""
+"En la línea siguiente, escriba una línea de menos/guiones (``-``), no más "
+"corta que el título de la sección."
 
 #: ../../docs/training_manual/appendix/contribute.rst:148
 msgid ""
@@ -228,6 +414,10 @@ msgstr ""
 msgid "Adding a \"try yourself\" section"
 msgstr "Añadir una sección \"prueba tú mismo\""
 
+#: ../../docs/training_manual/appendix/contribute.rst:160
+msgid "Leave a space and then write ``Try Yourself:``."
+msgstr "Deje un espacio y escriba ``Pruébese:``."
+
 #: ../../docs/training_manual/appendix/contribute.rst:162
 msgid ""
 "Explain the exercise that you want the reader to complete. Refer to previous"
@@ -244,9 +434,55 @@ msgstr ""
 "Incluye capturas de pantalla para clarificar los requisitos si alguna "
 "descripción textual no está clara."
 
+#: ../../docs/training_manual/appendix/contribute.rst:167
+msgid ""
+"In most cases, you will want to provide an answer regarding how to complete "
+"the assignment given in this section. To do so, you will need to create and "
+"feed an answer block beneath the instructions."
+msgstr ""
+"En la mayoría de los casos, querrá dar una respuesta sobre cómo completar la"
+" tarea dada en esta sección. Para ello, deberá crear y alimentar un bloque "
+"de respuesta debajo de las instrucciones."
+
+#: ../../docs/training_manual/appendix/contribute.rst:171
+msgid "First, create the custom collapsible widget that contains the answer::"
+msgstr ""
+"En primer lugar, cree el widget plegable personalizado que contiene la "
+"respuesta::"
+
+#: ../../docs/training_manual/appendix/contribute.rst:176
+msgid ""
+"Keeping an indentation with regard to the above block, write the "
+"instructions on how to complete the assignment, using links and images where"
+" needed."
+msgstr ""
+"Manteniendo una sangría con respecto al bloque anterior, escriba las "
+"instrucciones sobre cómo completar la tarea, utilizando enlaces e imágenes "
+"cuando sea necesario."
+
 #: ../../docs/training_manual/appendix/contribute.rst:181
 msgid "Add a Conclusion"
 msgstr "Añadir una Conclusión"
+
+#: ../../docs/training_manual/appendix/contribute.rst:183
+msgid "To end a lesson:"
+msgstr "Para terminar una lección:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:185
+msgid ""
+"Write the phrase ``In Conclusion``, followed by a new line of minuses/dashes"
+" (``-``)."
+msgstr ""
+"Escriba la frase ``En conclusión``, seguida de una nueva línea de "
+"menos/guiones (``-``)."
+
+#: ../../docs/training_manual/appendix/contribute.rst:186
+msgid ""
+"Write a conclusion for the lesson, explaining which concepts have been "
+"covered in the lesson."
+msgstr ""
+"Escribe una conclusión para la lección, explicando qué conceptos se han "
+"tratado en la lección."
 
 #: ../../docs/training_manual/appendix/contribute.rst:189
 msgid "Add a Further Reading Section"
@@ -256,6 +492,14 @@ msgstr "Añadir una Sección de Lectura Adicional"
 msgid "This section is optional."
 msgstr "Esta sección es opcional."
 
+#: ../../docs/training_manual/appendix/contribute.rst:193
+msgid ""
+"Write the phrase ``Further Reading``, followed by a new line of "
+"minuses/dashes (``-``)."
+msgstr ""
+"Escriba la frase ``Lectura adicional``, seguida de una nueva línea de "
+"menos/guiones (``-``)."
+
 #: ../../docs/training_manual/appendix/contribute.rst:195
 msgid "Include links to appropriate external websites."
 msgstr "Incluye enlaces a webs externas apropiadas."
@@ -263,6 +507,14 @@ msgstr "Incluye enlaces a webs externas apropiadas."
 #: ../../docs/training_manual/appendix/contribute.rst:198
 msgid "Add a What's Next Section"
 msgstr "Añade un Cuál es la Próxima Sección"
+
+#: ../../docs/training_manual/appendix/contribute.rst:200
+msgid ""
+"Write the phrase ``What's Next?``, followed by a new line of minuses/dashes "
+"(``-``)."
+msgstr ""
+"Escribe la frase ``¿Qué sigue?``, seguida de una nueva línea de "
+"menos/guiones (``-``)."
 
 #: ../../docs/training_manual/appendix/contribute.rst:201
 msgid ""
@@ -299,9 +551,25 @@ msgstr ""
 msgid "New concepts"
 msgstr "Nuevos conceptos"
 
+#: ../../docs/training_manual/appendix/contribute.rst:216
+msgid ""
+"If you are explaining a new concept, you will need to write the new "
+"concept's name in italics by enclosing it in asterisks (``*``)."
+msgstr ""
+"Si está explicando un nuevo concepto, deberá escribir el nombre del nuevo "
+"concepto en cursiva encerrándolo entre asteriscos (``*``)."
+
 #: ../../docs/training_manual/appendix/contribute.rst:224
 msgid "Emphasis"
 msgstr "Énfasis"
+
+#: ../../docs/training_manual/appendix/contribute.rst:226
+msgid ""
+"To emphasize a crucial term which is not a new concept, write the term in "
+"bold by enclosing it in double asterisks (``**``)."
+msgstr ""
+"Para destacar un término crucial que no sea un concepto nuevo, escríbalo en "
+"negrita encerrándolo entre dos asteriscos (``**``)."
 
 #: ../../docs/training_manual/appendix/contribute.rst:228
 msgid ""
@@ -314,6 +582,14 @@ msgstr ""
 #: ../../docs/training_manual/appendix/contribute.rst:238
 msgid "Images"
 msgstr "Imágenes"
+
+#: ../../docs/training_manual/appendix/contribute.rst:240
+msgid ""
+"When adding an image, save it to an :file:`img` folder next to the lesson "
+"file."
+msgstr ""
+"Cuando añada una imagen, guárdela en una carpeta :file:`img` junto al "
+"archivo de la lección."
 
 #: ../../docs/training_manual/appendix/contribute.rst:241
 msgid "Include it in the document like this::"
@@ -340,6 +616,10 @@ msgstr ""
 msgid "Remember to leave a line open above and below this line."
 msgstr "Recuerda dejar una línea abierta sobre y bajo esta línea."
 
+#: ../../docs/training_manual/appendix/contribute.rst:257
+msgid "To create a link, refer to it as below::"
+msgstr "Para crear un enlace, diríjase a él como se indica a continuación::"
+
 #: ../../docs/training_manual/appendix/contribute.rst:262
 msgid "External links"
 msgstr "Enlaces externos"
@@ -351,6 +631,16 @@ msgstr "Para crear un enlace externo, escribelo así::"
 #: ../../docs/training_manual/appendix/contribute.rst:269
 msgid "Using monospaced text"
 msgstr "Utilizar el texto monoespaciado"
+
+#: ../../docs/training_manual/appendix/contribute.rst:271
+msgid ""
+"When you are writing text that the user needs to enter, a path name, or the "
+"name of a database element such as a table or column name, you must write it"
+" in ``monospaced text``. For example::"
+msgstr ""
+"Cuando escriba un texto que el usuario deba introducir, un nombre de ruta o "
+"el nombre de un elemento de la base de datos, como el nombre de una tabla o "
+"columna, debe escribirlo en ``texto monoespaciado``. Por ejemplo::"
 
 #: ../../docs/training_manual/appendix/contribute.rst:278
 msgid "Labeling GUI items"
@@ -388,6 +678,15 @@ msgstr ""
 msgid "Adding notes"
 msgstr "Añadir notas"
 
+#: ../../docs/training_manual/appendix/contribute.rst:300
+msgid ""
+"You might need to add a note in the text, which explains extra details that "
+"can't easily be made part of the flow of the lesson. This is the markup::"
+msgstr ""
+"Es posible que tenga que añadir una nota en el texto, que explique detalles "
+"adicionales que no se pueden incluir fácilmente en el flujo de la lección. "
+"Este es el marcado::"
+
 #: ../../docs/training_manual/appendix/contribute.rst:313
 msgid "Adding a sponsorship/authorship note"
 msgstr "Añadir una nota de patrocinio/autoría"
@@ -405,6 +704,26 @@ msgstr ""
 "notificar al lector el nombre del patrocinador y debe aparecer bajo el "
 "título del módulo, lección o sección que han patrocinado. Sin embargo, puede"
 " ser un anuncios de su empresa."
+
+#: ../../docs/training_manual/appendix/contribute.rst:321
+msgid ""
+"If you have volunteered to write a module, lesson or section in your own "
+"capacity, and not on behalf of a sponsor, you may include an authorship note"
+" below the heading of the module, lesson or section that you authored. This "
+"must take the form ``This [module/lesson/section] contributed by [author "
+"name].`` Do not add further text, contact details, etc. Such details are to "
+"be added in the \"Contributors\" section of the Foreword, along with the "
+"name(s) of the part(s) you added. If you only made enhancements, corrections"
+" and/or additions, list yourself as an editor."
+msgstr ""
+"Si se ha ofrecido voluntario para escribir un módulo, lección o sección a "
+"título personal, y no en nombre de un patrocinador, puede incluir una nota "
+"de autoría debajo del título del módulo, lección o sección de su autoría. "
+"Esta nota debe ser del tipo \"Este [módulo/lección/sección] ha sido escrito "
+"por [nombre del autor]\". Estos datos deben añadirse en la sección "
+"\"Colaboradores\" del Prólogo, junto con el nombre de la(s) parte(s) que ha "
+"añadido. Si sólo ha realizado mejoras, correcciones y/o añadidos, indíquese "
+"como editor."
 
 #: ../../docs/training_manual/appendix/contribute.rst:331
 msgid "Thank You!"
