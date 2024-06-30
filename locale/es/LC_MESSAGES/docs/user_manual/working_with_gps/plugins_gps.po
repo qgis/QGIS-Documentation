@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,6 +96,10 @@ msgstr ""
 msgid "Transferring or loading GPS data"
 msgstr "Transferencia o carga de datos GPS"
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:39
+msgid "Loading a GPX file"
+msgstr "Cargar un archivo GPX"
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:41
 msgid ""
 "There are dozens of different file formats for storing GPS data. The format "
@@ -167,6 +171,44 @@ msgstr ""
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:63
 msgid "Loading GPS Data dialog"
 msgstr "Diálogo de carga de datos GPS"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:69
+msgid "Loading to or from a device"
+msgstr "Carga hacia o desde un dispositivo"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:71
+msgid ""
+"There are lots of different types of GPS devices and formats. Since QGIS "
+"uses GPX files, you need a way to convert other GPS file formats to GPX. "
+"QGIS can do that using the free program `GPSBabel "
+"<https://www.gpsbabel.org>`_. GPSBabel can help you convert waypoints, "
+"tracks, and routes between popular GPS receivers such as Garmin or Magellan "
+"and mapping programs like Google Earth or Basecamp. Literally hundreds of "
+"GPS receivers and programs are supported. It can also transfer GPS data "
+"between your computer and a GPS device."
+msgstr ""
+"Existen muchos tipos diferentes de dispositivos y formatos GPS. Dado que "
+"QGIS utiliza archivos GPX, se necesita una forma de convertir otros formatos"
+" de archivo GPS a GPX. QGIS puede hacerlo utilizando el programa gratuito "
+"`GPSBabel <https://www.gpsbabel.org>`_. GPSBabel puede ayudarte a convertir "
+"waypoints, tracks y rutas entre receptores GPS populares como Garmin o "
+"Magellan y programas de mapas como Google Earth o Basecamp. Es compatible "
+"con cientos de receptores GPS y programas. También puede transferir datos "
+"GPS entre tu ordenador y un dispositivo GPS."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:79
+msgid ""
+"Under :menuselection:`Settings -->` |options| :menuselection:`Options -->` "
+"|gps| :menuselection:`GPS -->` |gps| :menuselection:`GPSBabel`, QGIS allows "
+"you to define your own device type and set parameters of conversion that "
+"could later be used by the :ref:`Processing GPS algorithms "
+"<gps_algorithms>`."
+msgstr ""
+"En :menuselection:`Configuración -->` |options| :menuselection:`Opciones "
+"-->` |gps| :menuselection:`GPS -->` |gps| :menuselection:`GPSBabel`, QGIS le"
+" permite definir su propio tipo de dispositivo y establecer parámetros de "
+"conversión que más tarde podrían ser utilizados por el :ref:`Procesamiento "
+"de algoritmos GPS <gps_algorithms>`."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:140
 msgid "options"
@@ -253,6 +295,21 @@ msgstr ""
 "cualquier otro programa de línea de comandos que pueda crear un archivo GPX."
 " QGIS sustituirá las palabras claves ``%type``,``%in``, y ``%out`` cuando "
 "ejecuta el comando."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:109
+#, python-format
+msgid ""
+"As an example, if you create a device type with the download command "
+"``gpsbabel %type -i garmin -o gpx %in %out`` and then use it to download "
+"waypoints from port ``/dev/ttyS0`` to the file :file:`output.gpx`, QGIS will"
+" replace the keywords and run the command ``gpsbabel -w -i garmin -o gpx "
+"/dev/ttyS0 output.gpx``."
+msgstr ""
+"Por ejemplo, si crea un tipo de dispositivo con el comando de descarga "
+"``gpsbabel %type -i garmin -o gpx %in %out`` y luego lo usa para descargar "
+"puntos de ruta desde el puerto ``/dev/ttyS0`` al archivo "
+":file:`output.gpx``, QGIS reemplazará las palabras clave y ejecutará el "
+"comando ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:115
 msgid ""
