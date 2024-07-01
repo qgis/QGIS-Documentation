@@ -1223,6 +1223,13 @@ The following parameters can be entered:
   only for tables and views that are owned by the user that connects to the
   database.
 
+* |checkbox| :guilabel:`Use estimated table metadata`: If checked, estimated
+  table metadata will be used if available. For large tables, this avoids slow
+  table loads and potentially expensive computations, but may result in
+  incorrect layer properties such as layer extent. The fast extent estimation
+  is available starting with QRC1/2024 and SP8 in HANA Cloud and HANA On-Premise
+  respectively.
+
 * |checkbox| :guilabel:`Also list tables with no geometries`: If checked, QGIS
   searches also for tables and views that do not contain a spatial column.
 
