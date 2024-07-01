@@ -366,6 +366,14 @@ msgstr ""
 msgid "Build virtual point cloud (VPC)"
 msgstr "Crear una nube de puntos virtual (VPC)"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:85
+msgid ""
+"Creates a :ref:`virtual point cloud (VPC) <virtual_point_cloud>` from input "
+"point cloud data."
+msgstr ""
+"Crea una :ref:`nube de puntos virtual (VPC) <virtual_point_cloud>` a partir "
+"de los datos de la nube de puntos de entrada."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:87
 msgid ""
 "If you leave the optional parameters unchecked, the VPC file will be built "
@@ -612,6 +620,17 @@ msgstr "``FILTER_EXPRESSION``"
 msgid "[expression]"
 msgstr "[expresión]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:234
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:474
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:664
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:763
+msgid ""
+"A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of "
+"features in the point cloud data"
+msgstr ""
+"Una :ref:`expresión PDAL <pdal_expressions>` para seleccionar un subconjunto"
+" de objetos espaciales en los datos de la nube de puntos"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:235
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:475
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:665
@@ -839,6 +858,29 @@ msgid "Output point cloud layer merging all the input files."
 msgstr ""
 "Capa de nube de puntos de salida que fusiona todos los archivos de entrada."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:505
+msgid "**Algorithm ID**: ``pdal:merge``"
+msgstr "**ID Algoritmo**: ``pdal:merge``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:515
+msgid "Reproject"
+msgstr "Reproyectar"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:517
+msgid ""
+"Reprojects a point cloud to a different Coordinate Reference System (CRS)."
+msgstr ""
+"Reproyecta una nube de puntos a un Sistema de Referencia de Coordenadas "
+"(SRC) diferente."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:519
+msgid ":ref:`pdalassignprojection`"
+msgstr ":ref:`pdalassignprojection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:535
+msgid "Input point cloud layer to reproject to a different CRS"
+msgstr "Capa de nube de puntos de entrada para reproyectar a un SRC diferente"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:536
 msgid "**Target CRS**"
 msgstr "**SRC destino**"
@@ -847,13 +889,72 @@ msgstr "**SRC destino**"
 msgid "**Reprojected**"
 msgstr "**Reproyectado**"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:545
+msgid "Specify the reprojected point cloud file. One of:"
+msgstr "Especifique el archivo de nube de puntos reproyectado. Uno de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:562
+msgid "**Coordinate operation**"
+msgstr "**Operación de coordenadas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:565
 msgid "``OPERATION``"
 msgstr "``OPERATION``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:566
+msgid "[datum]"
+msgstr "[datum]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:567
+msgid ""
+"The :ref:`datum transformation <datum_transformation>` to use to reproject "
+"the data between the origin and target systems."
+msgstr ""
+"La :ref:`transformación de datum <datum_transformation>` que se utilizará "
+"para reproyectar los datos entre los sistemas de origen y destino."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:581
+msgid "**REPROJECTED**"
+msgstr "**REPROJECTED**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:584
+msgid "Output point cloud layer in the target CRS."
+msgstr "Capa de nube de puntos de salida en el SRC de destino."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:589
+msgid "**Algorithm ID**: ``pdal:reproject``"
+msgstr "**ID Algoritmo**: ``pdal:reproject``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:599
+msgid "Thin (by sampling radius)"
+msgstr "Delgado (por radio de muestreo)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:601
+msgid ""
+"Creates a thinned version of the point cloud by performing sampling by "
+"distance point (reduces the number of points within a certain radius)."
+msgstr ""
+"Crea una versión adelgazada de la nube de puntos realizando un muestreo por "
+"punto de distancia (reduce el número de puntos dentro de un radio "
+"determinado)."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:609
+msgid "Thining point cloud (by sampling radius)"
+msgstr "Nube de puntos reducida (por radio de muestreo)"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:611
 msgid ":ref:`pdalthinbydecimate`"
 msgstr ":ref:`pdalthinbydecimate`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:630
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:729
+msgid "Input point cloud layer to create a thinned version from"
+msgstr ""
+"Capa de nube de puntos de entrada para crear una versión diluida a partir de"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:631
+msgid "**Sampling radius (in map units)**"
+msgstr "**Radio de muestreo (en unidades cartográficas)"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:632
 msgid "``SAMPLING_RADIUS``"
@@ -868,6 +969,29 @@ msgstr "[número]"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:635
 msgid "Default: 1.0"
 msgstr "Predeterminado: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:636
+msgid "Distance within which points are sampled to a unique point"
+msgstr "Distancia dentro de la cual se muestrean los puntos a un punto único"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:637
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:687
+msgid "**Thinned (by radius)**"
+msgstr "**Reducido (por radio)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:642
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:741
+msgid "Specify the output point cloud with reduced points. One of:"
+msgstr "Especifique la nube de puntos de salida con puntos reducidos. Una de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:690
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:789
+msgid "Output point cloud layer with reduced points."
+msgstr "Capa de nube de puntos de salida con puntos reducidos."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:695
+msgid "**Algorithm ID**: ``pdal:thinbyradius``"
+msgstr "**ID Algoritmo**: ``pdal:thinbyradius``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:705
 msgid "Thin (by skipping points)"
@@ -927,10 +1051,45 @@ msgstr ""
 msgid ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"
 msgstr ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:828
+msgid "Input point cloud layers to create tiles from"
+msgstr ""
+"Capas de nubes de puntos de entrada para crear teselas a partir de ellas"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:829
+msgid "**Tile length**"
+msgstr "**Longitud de tesela**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:830
 msgid "``LENGTH``"
 msgstr "``LENGTH``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:833
+msgid "Default: 1000.0"
+msgstr "Predeterminado: 1000.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:834
+msgid "Size of the edge of each generated tile"
+msgstr "Tamaño del borde de cada tesela generada"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:839
 msgid "Default: ``[Save to temporary folder]``"
 msgstr "Predeterminado: ``[Guardar en directorio temporal]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:840
+msgid "Specify the folder to store the generated tiles. One of:"
+msgstr "Especifique la carpeta para almacenar las teselas generadas. Una de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:857
+msgid "**Assign CRS**"
+msgstr "**Asignar SRC**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:878
+msgid "Output folder containing the tiles generated from input files."
+msgstr ""
+"Carpeta de salida que contiene las teselas generadas a partir de los "
+"archivos de entrada."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:883
+msgid "**Algorithm ID**: ``pdal:tile``"
+msgstr "**ID Algoritmo**: ``pdal:tile``"
