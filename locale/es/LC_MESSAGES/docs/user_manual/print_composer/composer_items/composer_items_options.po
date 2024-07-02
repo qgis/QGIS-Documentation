@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -221,6 +221,42 @@ msgstr ""
 msgid "Moving and resizing items"
 msgstr "Moviendo y redimensionando elementos"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:91
+msgid ""
+"Unless :menuselection:`View --> Show Bounding Boxes` option is unchecked, a "
+"selected item will show squares on its boundaries; moving one of them with "
+"the mouse will resize the item in the corresponding direction. While "
+"resizing, holding :kbd:`Shift` will maintain the aspect ratio. Holding "
+":kbd:`Alt` will resize from the item center."
+msgstr ""
+"A menos que la opción :menuselection:`Vista --> Mostrar cuadros "
+"delimitadores` esté desmarcada, un elemento seleccionado mostrará cuadros en"
+" sus límites; al mover uno de ellos con el ratón se redimensionará el "
+"elemento en la dirección correspondiente. Mientras redimensiona, si mantiene"
+" pulsado :kbd:`Mayús` se mantendrá la relación de aspecto. Si mantiene "
+"pulsado :kbd:`Alt`, el elemento se redimensionará desde el centro."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:97
+msgid ""
+"To move a layout item, select it with the mouse and move while holding the "
+"left button. If you need to constrain the movements to the horizontal or "
+"vertical axis, hold the :kbd:`Shift` button on the keyboard while moving the"
+" mouse. You can also move a selected item using the :kbd:`Arrow keys` on the"
+" keyboard; if the movement is too slow, you can speed it up by holding "
+":kbd:`Shift`. If you need better precision, use the :guilabel:`Position and "
+"size` properties, or grid/guides snapping as explained above for item's "
+"creation."
+msgstr ""
+"Para mover un elemento de la presentación, selecciónelo con el ratón y "
+"muévalo manteniendo pulsado el botón izquierdo. Si necesita limitar los "
+"movimientos al eje horizontal o vertical, mantenga pulsada la tecla "
+":kbd:`Mayús` del teclado mientras mueve el ratón. También puede mover un "
+"elemento seleccionado utilizando las teclas :kbd:`Flecha` del teclado; si el"
+" movimiento es demasiado lento, puede acelerarlo manteniendo pulsada la "
+"tecla :kbd:`Mayús`. Si necesita mayor precisión, utilice las propiedades "
+":guilabel:`Posición y tamaño`, o el ajuste de cuadrícula/guías como se "
+"explicó anteriormente para la creación de elementos."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:105
 msgid ""
 "Resizing or moving several items at once is made the same way as for a "
@@ -264,6 +300,14 @@ msgstr "resizeWidest"
 msgid "resizeNarrowest"
 msgstr "resizeNarrowest"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:111
+msgid ""
+"resizes items to |resizeSquare| squares: each item is enlarged to shape a "
+"square."
+msgstr ""
+"cambia el tamaño de los elementos a cuadrados |resizeSquare|: cada elemento "
+"se amplía para dar forma a un cuadrado."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:350
 msgid "resizeSquare"
 msgstr "resizeSquare"
@@ -301,6 +345,25 @@ msgstr ""
 "fuera uno solo: puede cambiar el tamaño, mover, eliminar y copiar fácilmente"
 " los elementos como un todo."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:128
+msgid ""
+"To create a group of items, select more than one and press the |groupItems| "
+":guilabel:`Group` button on the :menuselection:`Items` menu or the "
+":guilabel:`Actions` toolbar, or from the right-click menu. A row named "
+"``Group`` is added to the :menuselection:`Items` panel and can be locked or "
+"hidden like any other :ref:`Items panel's object <layout_items_panel>`. "
+"Grouped items are **not individually** selectable on the canvas; use the "
+"Items panel for direct selection and access the item's properties panel."
+msgstr ""
+"Para crear un grupo de elementos, seleccione más de uno y pulse el botón "
+"|groupItems| :guilabel:`Grupo` del menú :menuselection:`Items` o de la barra"
+" de herramientas :guilabel:`Acciones`, o desde el menú contextual. Una fila "
+"llamada ``Grupo`` se añade al panel :menuselection:`Items` y puede "
+"bloquearse u ocultarse como cualquier otro :ref:`objeto del panel de "
+"elementos <layout_items_panel>`. Los elementos agrupados **no se pueden "
+"seleccionar individualmente** en el lienzo; utilice el panel Elementos para "
+"la selección directa y acceda al panel de propiedades del elemento."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:338
 msgid "groupItems"
 msgstr "groupItems"
@@ -308,6 +371,21 @@ msgstr "groupItems"
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:138
 msgid "Locking items"
 msgstr "Bloqueando elementos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:140
+msgid ""
+"Once you have found the correct position for an item, you can lock it by "
+"using the |locked| :guilabel:`Lock selected items` button in the "
+":menuselection:`Items` menu or the :guilabel:`Actions` toolbar, or ticking "
+"the box next to the item in the :menuselection:`Items` panel. Locked items "
+"are **not** selectable on the canvas."
+msgstr ""
+"Una vez que haya encontrado la posición correcta para un elemento, puede "
+"bloquearlo utilizando el botón |bloqueado| :guilabel:`Bloquear elementos "
+"seleccionados` del menú :menuselection:`Elementos` o de la barra de "
+"herramientas :guilabel:`Acciones`, o marcando la casilla situada junto al "
+"elemento en el panel :menuselection:`Elementos`. Los elementos bloqueados "
+"**no** se pueden seleccionar en el lienzo."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:340
 msgid "locked"
@@ -326,6 +404,25 @@ msgstr ""
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:152
 msgid "Alignment and distribution"
 msgstr "Alineación y distribución"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:154
+msgid ""
+"Tools for raising or lowering the Z position of items in the layout are "
+"inside the |raiseItems| :sup:`Raise selected items` pull-down menu. Choose "
+"an element on the print layout canvas and select the matching functionality "
+"to raise or lower the selected element over the other elements. This order "
+"is shown in the :menuselection:`Items` panel. You can also raise or lower "
+"objects in the :menuselection:`Items` panel by clicking and dragging an "
+"object's label in this list."
+msgstr ""
+"Las herramientas para subir o bajar la posición Z de los elementos de la "
+"maqueta se encuentran dentro del menú desplegable |raiseItems| :sup:`Subir "
+"elementos seleccionados`. Elija un elemento en el lienzo de la maqueta de "
+"impresión y seleccione la funcionalidad correspondiente para subir o bajar "
+"el elemento seleccionado sobre los demás elementos. Este orden se muestra en"
+" el panel :menuselection:`Elementos`. También puede subir o bajar objetos en"
+" el panel :menuselection:`Elementos` haciendo clic y arrastrando la etiqueta"
+" de un objeto en esta lista."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:344
 msgid "raiseItems"
@@ -491,6 +588,18 @@ msgstr "distributeVSpace"
 msgid "Items Common Properties"
 msgstr "Propiedades comunes de elementos"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:195
+msgid ""
+"Layout items have a set of common properties you will find at the bottom of "
+"the :guilabel:`Item Properties` panel: Position and size, Rotation, Frame, "
+"Background, Item ID, Variables and Rendering (see "
+":numref:`figure_layout_common`)."
+msgstr ""
+"Los elementos de diseño tienen un conjunto de propiedades comunes que "
+"encontrará en la parte inferior del panel :guilabel:`Propiedades del "
+"elemento`: Posición y tamaño, Rotación, Marco, Fondo, ID de elemento, "
+"Variables y Renderizado (véase :numref:`figure_layout_common`)."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:204
 msgid "Common Item Properties groups"
 msgstr "Grupos de propiedades de elementos comunes"
@@ -542,6 +651,16 @@ msgstr ""
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:318
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:222
+msgid ""
+"In the :guilabel:`Background` group you can create or pick a background "
+":guilabel:`Color`. Transparency can be adjusted through altering the alpha "
+"field settings."
+msgstr ""
+"En el grupo :guilabel:`Fondo` se puede crear o elegir un :guilabel:`Color` "
+"de fondo. La transparencia puede ajustarse modificando la configuración del "
+"campo alfa."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:224
 msgid ""
@@ -650,9 +769,61 @@ msgstr ""
 "acuerdo con el modo establecido (consulte :ref:`blend-modes` para obtener "
 "una descripción de cada efecto)."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:277
+msgid ""
+":guilabel:`Opacity`: You can make the underlying item in the layout visible "
+"with this tool. Use the slider to adapt the visibility of your item to your "
+"needs. You can also make a precise definition of the percentage of "
+"visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`Opacidad`: Con esta herramienta puede hacer visible el elemento "
+"subyacente en el diseño. Utilice el control deslizante para adaptar la "
+"visibilidad del elemento a sus necesidades. También puede definir con "
+"precisión el porcentaje de visibilidad en el menú situado junto al control "
+"deslizante."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:280
+msgid ""
+"|checkbox| :guilabel:`Exclude item from exports`: Combined with data-defined"
+" expressions, you can decide to make an item invisible in some exports. "
+"After activating this checkbox, the item will not be included in export to "
+"PDF, print etc.."
+msgstr ""
+"|checkbox| :guilabel:`Excluir elemento de las exportaciones`: Combinado con "
+"expresiones definidas por datos, puede decidir que un elemento sea invisible"
+" en algunas exportaciones. Tras activar esta casilla, el elemento no se "
+"incluirá en la exportación a PDF, impresión, etc."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:285
 msgid "Variables"
 msgstr "Variables"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:287
+msgid ""
+"The :guilabel:`Variables` lists all the variables available at the layout "
+"item's level (which includes all global, project and layout's variables). "
+"Layout map items alhave an additional :guilabel:`Map settings` section for "
+"variables that provide easy access to values like the map's scale, extent, "
+"and so on."
+msgstr ""
+"La sección :guilabel:`Variables` enumera todas las variables disponibles a "
+"nivel del elemento de diseño (que incluye todas las variables globales, de "
+"proyecto y de diseño). Los elementos de diseño de mapa tienen una sección "
+":guilabel:`Configuración del mapa` adicional para variables que facilitan el"
+" acceso a valores como la escala del mapa, su extensión, etc."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:292
+msgid ""
+"In :guilabel:`Variables`, it's also possible to manage layout item level "
+"variables. Click the |symbologyAdd| button to add a new custom variable. "
+"Likewise, select any custom item-level variable from the list and click the "
+"|symbologyRemove| button to remove it."
+msgstr ""
+"En :guilabel:`Variables`, también es posible gestionar variables a nivel de "
+"elemento de diseño. Haga clic en el botón |symbologyAdd| para añadir una "
+"nueva variable personalizada. Del mismo modo, seleccione cualquier variable "
+"personalizada a nivel de elemento de la lista y haga clic en el botón "
+"|symbologyRemove| para eliminarla."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_items_options.rst:358
 msgid "symbologyAdd"
