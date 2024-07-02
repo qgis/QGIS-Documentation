@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,6 +48,17 @@ msgstr "これらのツールは、モデルデザイナーでのみ利用可能
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:21
 msgid "|334|"
 msgstr "|334|"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:23
+msgid ""
+"It calculates the result of a QGIS expression and eliminates the need to use"
+" the same expression multiple times throughout a model when the same result "
+"is required more than once. Additionally, it enables use cases that would "
+"otherwise not be possible. For instance, you can generate a timestamp value "
+"once and use it multiple times within the model, if the timestamp were "
+"recalculated every time, the values would vary during the model's runtime."
+msgstr ""
+"QGIS式の結果を計算し、同じ結果が複数回必要な場合に、モデル全体で同じ式を複数回使用する必要をなくします。さらに、他の方法では不可能なユースケースを可能にします。例えば、タイムスタンプ値を一度生成し、それをモデル内で複数回使用することができます。もしタイムスタンプが毎回再計算されるのであれば、その値はモデルのランタイム中に変化してしまうでしょう。"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:33
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:87
@@ -217,6 +228,12 @@ msgstr "**値**"
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:62
+msgid ""
+"Calculated result value, the data type of the output will vary based on the "
+"specific expression used in the algorithm."
+msgstr "計算結果の値。出力のデータ型は、アルゴリズムで使用される特定の式によって異なります。"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:67
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:112
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:163
@@ -233,6 +250,10 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:779
 msgid "Python code"
 msgstr "Python コード"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:69
+msgid "**Algorithm ID**: ``native:calculateexpression``"
+msgstr "**Algorithm ID**: ``native:calculateexpression``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -322,6 +343,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:141
 msgid "**Directory path**"
 msgstr "**ディレクトリパス**"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:142
+msgid "``PATH``"
+msgstr "``PATH``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:144
 msgid "Folder path to create"
@@ -441,6 +466,10 @@ msgstr "**ベクタ地物**"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:465
 msgid "Optional"
 msgstr "オプション"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:271
+msgid "``VECTOR``"
+msgstr "``VECTOR``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:272
 msgid "[vector]"

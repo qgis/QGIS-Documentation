@@ -41,10 +41,32 @@ msgstr ""
 msgid "Raster tools"
 msgstr "Herramientas de ráster"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:14
+msgid "Align raster"
+msgstr "Alinear ráster"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:15
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:138
 msgid "|334|"
 msgstr "|334|"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:17
+msgid ""
+"Aligns raster by resampling it to the same cell size and reprojecting to the"
+" same CRS as a reference raster."
+msgstr ""
+"Alinea el ráster remuestreándolo al mismo tamaño de celda y reproyectándolo "
+"al mismo SRC que un ráster de referencia."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:20
+msgid ""
+"**This algorithm is ONLY available in the** :ref:`Model Designer "
+"<processing.modeler>` context. For other contexts, use instead "
+":ref:`qgisalignrasters`."
+msgstr ""
+"**Este algoritmo SOLO está disponible en el contexto** :ref:`Model Designer "
+"<processing.modeler>`. Para otros contextos, utilice en su lugar "
+":ref:`qgisalignrasters`."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:24
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:147
@@ -142,9 +164,17 @@ msgstr "``INPUT``"
 msgid "[raster]"
 msgstr "[ráster]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:38
+msgid "Input raster layer to align"
+msgstr "Capa ráster de entrada para alinear"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:39
 msgid "**Resampling method**"
 msgstr "**Método de remuestreo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:40
+msgid "``RESAMPLING_METHOD``"
+msgstr "``RESAMPLING_METHOD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:41
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:318
@@ -159,6 +189,15 @@ msgstr "[enumeración]"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:729
 msgid "Default: 0"
 msgstr "Predeterminado: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:175
+msgid ""
+"Method to use for input layer resampling. :class:`Available options "
+"<qgis.analysis.Qgis.GdalResampleAlgorithm>` are:"
+msgstr ""
+"Método a utilizar para el remuestreo de la capa de entrada. :class:`Las "
+"opciones disponibles <qgis.analysis.Qgis.GdalResampleAlgorithm>` son:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:6
 msgid "0 --- Nearest Neighbour"
@@ -208,6 +247,14 @@ msgstr "10 --- Primer cuartil (Q1)"
 msgid "11 --- Third quartile (Q3)"
 msgstr "11 --- Tercer cuartil (Q3)"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:51
+msgid "**Rescale values according to the cell size**"
+msgstr "**Reduzca la escala de los valores según el tamaño de la celda**."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:52
+msgid "``RESCALE``"
+msgstr "``RESCALE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:309
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:508
@@ -216,6 +263,10 @@ msgstr "11 --- Tercer cuartil (Q3)"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:721
 msgid "[boolean]"
 msgstr "[booleano]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:55
+msgid "Default: No"
+msgstr "Predeterminado: No"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:57
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:184
@@ -226,6 +277,20 @@ msgstr "**Capa de referencia**"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:185
 msgid "``REFERENCE_LAYER``"
 msgstr "``REFERENCE_LAYER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:187
+msgid ""
+"A raster layer that will be used to fetch extent, cell size and CRS that "
+"will be applied to input layers."
+msgstr ""
+"Una capa ráster que se utilizará para obtener la extensión, el tamaño de "
+"celda y el SRC que se aplicarán a las capas de entrada."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:189
+msgid "**Override reference CRS**"
+msgstr "**Anular referencia SRC**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:64
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:70
@@ -268,6 +333,21 @@ msgstr "``CRS``"
 msgid "[crs]"
 msgstr "[src]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:194
+msgid "CRS to be used instead of the reference layer's"
+msgstr "SRC que se utilizará en lugar de la capa de referencia"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:68
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:195
+msgid "**Override reference cell size X**"
+msgstr "**Anular tamaño de celda de referencia X**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:198
+msgid "``CELL_SIZE_X``"
+msgstr "``CELL_SIZE_X``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:72
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:78
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:84
@@ -294,6 +374,65 @@ msgstr "[src]"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:747
 msgid "[number]"
 msgstr "[número]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:200
+msgid "Cell size in X direction to be used instead of the reference layer's"
+msgstr ""
+"Tamaño de celda en dirección X que se utilizará en lugar del de la capa de "
+"referencia"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:74
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:201
+msgid "**Override reference cell size Y**"
+msgstr "**Anular tamaño de celda de referencia Y**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:204
+msgid "``CELL_SIZE_Y``"
+msgstr "``CELL_SIZE_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:206
+msgid "Cell size in Y direction to be used instead of the reference layer's"
+msgstr ""
+"Tamaño de celda en dirección Y que se utilizará en lugar del de la capa de "
+"referencia"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:80
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:207
+msgid "**Override reference grid offset X**"
+msgstr "**Desplazamiento de la cuadrícula de referencia X**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:83
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:210
+msgid "``GRID_OFFSET_X``"
+msgstr "``GRID_OFFSET_X``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:212
+msgid "Offset in X direction to apply to cells grid"
+msgstr "Desplazamiento en dirección X para aplicar a la cuadrícula de celdas"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:86
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:213
+msgid "**Override reference grid offset Y**"
+msgstr "**Anular desplazamiento de cuadrícula de referencia Y**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:89
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:216
+msgid "``GRID_OFFSET_Y``"
+msgstr "``GRID_OFFSET_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:218
+msgid "Offset in Y direction to apply to cells grid"
+msgstr "Desplazamiento en dirección Y para aplicar a la cuadrícula de celdas"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:92
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:219
+msgid "**Clip to extent**"
+msgstr "**Cortar por extensión**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:95
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:222
@@ -364,6 +503,11 @@ msgstr ""
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Ingresar las coordenadas como ``xmin, xmax, ymin, ymax``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:119
+msgid "**Aligned raster**"
+msgstr "**Ráster alineado**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:104
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:120
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:328
@@ -372,6 +516,11 @@ msgstr "Ingresar las coordenadas como ``xmin, xmax, ymin, ymax``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:430
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:106
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:122
+msgid "output raster with pixels resampled"
+msgstr "ráster de salida con píxeles remuestreados"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:109
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:232
@@ -391,6 +540,10 @@ msgstr "Salidas"
 msgid "Python code"
 msgstr "Código Python"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:127
+msgid "**Algorithm ID**: ``native:alignsingleraster``"
+msgstr "**ID Algoritmo**: ``native:alignsingleraster``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -404,6 +557,27 @@ msgstr ""
 " para obtener detalles sobre cómo ejecutar algoritmos de procesamiento desde"
 " la consola de Python."
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:137
+msgid "Align rasters"
+msgstr "Alinear rásters"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:140
+msgid ""
+"Aligns rasters by resampling them to the same cell size and reprojecting to "
+"the same CRS as a reference raster."
+msgstr ""
+"Alinea los rásteres remuestreándolos al mismo tamaño de celda y "
+"reproyectándolos al mismo SRC que un ráster de referencia."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:143
+msgid ""
+"**This algorithm is NOT available in the** :ref:`Model Designer "
+"<processing.modeler>` context. Use instead :ref:`qgisalignsingleraster`."
+msgstr ""
+"**Este algoritmo NO está disponible en el contexto** :ref:`Diseñador de "
+"modelo <processing.modeler>`. Utilice en su lugar "
+":ref:`qgisalignsingleraster`."
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:158
 msgid "**Input layers**"
 msgstr "**Capas de entrada**"
@@ -413,9 +587,60 @@ msgstr "**Capas de entrada**"
 msgid "[raster] [list]"
 msgstr "[ráster] [lista]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:161
+msgid ""
+"List of input raster layers with resampling options associated (filled as a "
+":class:`QgsProcessingParameterAlignRasterLayers "
+"<qgis.core.QgsProcessingParameterAlignRasterLayers>` item --- done in GUI by"
+" pressing :guilabel:`Configure Raster...` button for each selected layer):"
+msgstr ""
+"Lista de capas ráster de entrada con opciones de remuestreo asociadas "
+"(rellenada como un elemento :class:`QgsProcessingParameterAlignRasterLayers "
+"<qgis.core.QgsProcessingParameterAlignRasterLayers>` --- hecho en GUI "
+"pulsando el botón :guilabel:`Configurar Ráster...` para cada capa "
+"seleccionada):"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:169
+msgid "**Input layer** [string] (``inputFile``)"
+msgstr "**Capa de entrada** [cadena] (``archivo de entrada``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:169
+msgid "Full path of the input layer to align"
+msgstr "Ruta completa de la capa de entrada a alinear"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:172
+msgid "**Output file** [string] (``outputFile``)"
+msgstr "**Archivo de salida** [cadena] (``archivo de salida``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:172
+msgid "Full path of the corresponding aligned output layer"
+msgstr "Ruta completa de la capa de salida alineada correspondiente"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:180
+msgid "**Resampling method** [enumeration] (``resampleMethod``)"
+msgstr "**Método de remuestreo** [enumeración] (``resampleMethod``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:182
+msgid "**Rescale values according to the cell size** [boolean] (``rescale``)"
+msgstr ""
+"**Redimensionar los valores según el tamaño de la celda** [booleano] "
+"(``rescale``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:242
+msgid "**Aligned rasters**"
+msgstr "**Rásters alineados**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:243
 msgid "``OUTPUT_LAYERS``"
 msgstr "``OUTPUT_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:245
+msgid "output rasters with pixels resampled"
+msgstr "rásters de salida con píxeles remuestreados"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:250
+msgid "**Algorithm ID**: ``native:alignrasters``"
+msgstr "**ID Algoritmo**: ``native:alignrasters``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:260
 msgid "Convert map to raster"
@@ -656,6 +881,14 @@ msgid ""
 msgstr ""
 "Genera teselas ráster “XYZ” usando el proyecto actual de QGIS como imágenes "
 "individuales en una estructura de directorio."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:452
+msgid ""
+"Optionally, a Leaflet HTML output file using the generated tiles as a map "
+"layer could be created."
+msgstr ""
+"Opcionalmente, se puede crear un archivo de salida Leaflet HTML utilizando "
+"los mosaicos generados como capa cartográfica."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:459
 msgid "Basic parameters"
@@ -938,6 +1171,18 @@ msgstr "Especificación del archivo HTML saliente. Uno de:"
 msgid "Advanced parameters"
 msgstr "Parámetros avanzados"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:594
+msgid "|330|"
+msgstr "|330|"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:605
+msgid "**Leaflet HTML output title**"
+msgstr "**Título de la salida HTML de Leaflet**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:608
+msgid "``HTML_TITLE``"
+msgstr "``HTML_TITLE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:609
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:617
 msgid "[string]"
@@ -947,6 +1192,41 @@ msgstr "[cadena de texto]"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:619
 msgid "Default: Not set"
 msgstr "Predeterminado: No establecido"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:613
+msgid "**Leaflet HTML output attribution**"
+msgstr "**Atribución de la salida HTML de Leaflet**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:616
+msgid "``HTML_ATTRIBUTION``"
+msgstr "``HTML_ATTRIBUTION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:620
+msgid ""
+"Custom map attribution used for the Leaflet HTML output file. HTML links are"
+" possible."
+msgstr ""
+"Atribución de mapa personalizada utilizada para el archivo de salida HTML de"
+" Leaflet. Son posibles los enlaces HTML."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:622
+msgid "**Include OpenStreetMap basemap in Leaflet HTML output**"
+msgstr ""
+"**Incluir el mapa base de OpenStreetMap en la salida HTML de Leaflet**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:625
+msgid "``HTML_OSM``"
+msgstr "``HTML_OSM``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:629
+msgid ""
+"An OpenStreetMap basemap layer (source: https://tile.openstreetmap.org) is "
+"included in the Leaflet HTML output file. Proper map attribution is added "
+"automatically."
+msgstr ""
+"Se incluye una capa de mapa base de OpenStreetMap (fuente: "
+"https://tile.openstreetmap.org) en el archivo de salida HTML de Leaflet. La "
+"atribución correcta del mapa se añade automáticamente."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:647
 msgid "Output directory (for the tiles)"

@@ -8,20 +8,22 @@
 # Harrissou Sant-anna, 2024
 # Joern G <j.gutzeit@umwelt-it.de>, 2024
 # Transifex Bot <>, 2024
+# stefan wolff <wolff@mellum.de>, 2024
+# Andreas Kaufmann, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-05-24 19:09+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Andreas Kaufmann, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -47,7 +49,7 @@ msgstr ""
 "*über* QGIS. Stellen Sie daher sicher, dass QGIS Desktop mit GRASS "
 "Unterstützung installiert ist."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:335
+#: ../../docs/training_manual/grass/grass_setup.rst:334
 msgid "win"
 msgstr "win"
 
@@ -59,27 +61,12 @@ msgstr "**Ziel dieser Übung:** Erstellung eines GRASS Projektes in QGIS."
 msgid "First, open a new QGIS project."
 msgstr "Öffne zuerst ein neues QGIS Projekt."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:21
-msgid ""
-"In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:"
-msgstr ""
-"Wir schalten dazu im :guilabel:`Plugin Manager` die Erweiterung "
-":guilabel:`GRASS` ein:"
-
 #: ../../docs/training_manual/grass/grass_setup.rst:27
 msgid "The GRASS toolbar and the GRASS panel will appear:"
 msgstr ""
 "Die GRASS Werkzeugleiste und das GRASS Bedienfeld werden nun angezeigt:"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:32
-msgid "GRASS toolbar"
-msgstr "GRASS Werkzeugleiste"
-
-#: ../../docs/training_manual/grass/grass_setup.rst:37
-msgid "GRASS Panel"
-msgstr "GRASS Bedienfeld"
-
-#: ../../docs/training_manual/grass/grass_setup.rst:39
+#: ../../docs/training_manual/grass/grass_setup.rst:34
 msgid ""
 "The GRASS panel is not active because, before you can use GRASS, you need to"
 " create a ``Mapset``. GRASS always works in a database environment, which "
@@ -91,7 +78,7 @@ msgstr ""
 "bedeutet, dass die Daten die verwendet werden sollen, in die Datenbank "
 "importiert werden müssen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:43
+#: ../../docs/training_manual/grass/grass_setup.rst:38
 msgid ""
 "The GRASS database has a straightforward structure, even if at a first look "
 "it seems very complicated. The most important thing you should know is that "
@@ -109,29 +96,29 @@ msgstr ""
 "erstellt. Jedes ``Mapset`` enthält die Daten (Raster, Vektor usw.) in einer "
 "bestimmten Struktur, aber keine Sorge, darum kümmert sich GRASS."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:57
+#: ../../docs/training_manual/grass/grass_setup.rst:52
 msgid "GRASS database structure (from GRASS docs)"
 msgstr "Die GRASS Datenbankstruktur (aus der GRASS Hilfe)"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:67
+#: ../../docs/training_manual/grass/grass_setup.rst:62
 msgid "You'll be asked to choose the location of the GRASS database."
 msgstr "Du wirst nun nach dem GRASS Datenbankverzeichnis gefragt."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:69
+#: ../../docs/training_manual/grass/grass_setup.rst:64
 msgid ""
 "Set it as the directory that will be used by GRASS to set up its database:"
 msgstr ""
 "Wir geben das Verzeichnis ein, das GRASS für die Einrichtung seiner "
 "Datenbank verwenden wird."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:74
-#: ../../docs/training_manual/grass/grass_setup.rst:89
-#: ../../docs/training_manual/grass/grass_setup.rst:95
-#: ../../docs/training_manual/grass/grass_setup.rst:102
+#: ../../docs/training_manual/grass/grass_setup.rst:69
+#: ../../docs/training_manual/grass/grass_setup.rst:84
+#: ../../docs/training_manual/grass/grass_setup.rst:90
+#: ../../docs/training_manual/grass/grass_setup.rst:97
 msgid "Click :guilabel:`Next`."
 msgstr "Klicken Sie auf :guilabel:`Weiter`."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:76
+#: ../../docs/training_manual/grass/grass_setup.rst:71
 msgid ""
 "GRASS needs to create a ``Location``, which describes the maximum extent of "
 "the geographic area you'll be working in, also known as Grass ``Region``."
@@ -139,7 +126,7 @@ msgstr ""
 "GRASS muss eine ``Location`` erstellen, die die maximale Ausdehnung des "
 "Arbeitsgebietes beschreibt und auch GRASS ``Region`` genannt wird."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:79
+#: ../../docs/training_manual/grass/grass_setup.rst:74
 msgid ""
 "the Region is extremely important for GRASS because it describes the area in"
 " which all layers will be taken into account for GRASS. Everything that is "
@@ -151,16 +138,16 @@ msgstr ""
 "berücksichtigt. Keine Sorge, man kann die Ausdehnung der GRASS Region immer "
 "auch nach der Erstellung ändern."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:84
+#: ../../docs/training_manual/grass/grass_setup.rst:79
 msgid "Call the new location ``SouthAfrica``:"
 msgstr "Wir nennen die neue location ``SouthAfrica``:"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:90
+#: ../../docs/training_manual/grass/grass_setup.rst:85
 msgid "We'll be working with ``WGS 84``, so search for and select this CRS:"
 msgstr ""
 "Wir werden mit ``WGS 84`` arbeiten, d.h. wir suchen und wählen dieses KBS:"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:96
+#: ../../docs/training_manual/grass/grass_setup.rst:91
 msgid ""
 "Now select the region :guilabel:`South Africa` from the dropdown and click "
 ":guilabel:`Set`:"
@@ -168,11 +155,11 @@ msgstr ""
 "Wähle nun die Region :guilabel:`South Africa` aus dem dropdown Menü und "
 "klicke auf :guilabel:`Setzen`:"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:103
+#: ../../docs/training_manual/grass/grass_setup.rst:98
 msgid "Create a mapset, which is the map file that you'll be working with."
 msgstr "Wir erstellen ein mapset, d.h. die Kartendatei in der wir arbeiten."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:108
+#: ../../docs/training_manual/grass/grass_setup.rst:103
 msgid ""
 "Once you're done, you'll see a dialog asking with a summary of all the "
 "information entered."
@@ -180,15 +167,15 @@ msgstr ""
 "Wenn wir fertig sind, wird ein Dialogfenster mit einer Zusammenfassung der "
 "eingegebenen Informationen angezeigt. "
 
-#: ../../docs/training_manual/grass/grass_setup.rst:114
+#: ../../docs/training_manual/grass/grass_setup.rst:109
 msgid "Click :guilabel:`Finish`."
 msgstr "Klicke auf :guilabel:`Abschließen`."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:115
+#: ../../docs/training_manual/grass/grass_setup.rst:110
 msgid "Click :guilabel:`OK` on the success dialog."
 msgstr "Klicke in der Erfolgsmeldung auf :guilabel:`OK`."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:117
+#: ../../docs/training_manual/grass/grass_setup.rst:112
 msgid ""
 "You will see that the GRASS Panel will become active and you can start to "
 "use all GRASS tools."
@@ -196,7 +183,7 @@ msgstr ""
 "Das GRASS Bedienfeld wird jetzt aktiviert und wir können alle GRASS "
 "Werkzeuge nutzen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:123
+#: ../../docs/training_manual/grass/grass_setup.rst:118
 msgid ""
 "You have now a blank map and before you can start to use all the GRASS tools"
 " you have to load data into the GRASS database, specifically into the "
@@ -208,7 +195,7 @@ msgstr ""
 "``Mapset``. Man kann GRASS Werkzeuge nicht mit Layern verwenden, die nicht "
 "in einem GRASS ``Mapset`` geladen sind."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:127
+#: ../../docs/training_manual/grass/grass_setup.rst:122
 msgid ""
 "There are many different ways to load data in the GRASS database. Let's "
 "start with the first one."
@@ -216,7 +203,7 @@ msgstr ""
 "Es gibt verschiedene Möglichkeiten, Daten in die GRASS Datenbank zu laden. "
 "Wir beginnen mit der Ersten."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:136
+#: ../../docs/training_manual/grass/grass_setup.rst:131
 msgid ""
 "In section :ref:`browser_panel_tm` we saw that the easiest and quickest way "
 "to load the data in QGIS is the Browser Panel."
@@ -224,7 +211,7 @@ msgstr ""
 "Im Kapitel :ref:`browser_panel_tm` sahen wir, dass das Browser Bedienfeld "
 "der einfachste Weg ist, um Daten in QGIS zu laden."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:139
+#: ../../docs/training_manual/grass/grass_setup.rst:134
 msgid ""
 "GRASS data are recognized from the QGIS Browser as *real* GRASS data and you"
 " can notice it because you will see the GRASS icon next to the GRASS Mapset."
@@ -235,11 +222,11 @@ msgstr ""
 "erkennt man am GRASS Icon neben dem GRASS Mapset. Außerdem wird das "
 "|grassMapsetOpen| Icon neben einem geöffneten Mapset angezeigt."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:332
+#: ../../docs/training_manual/grass/grass_setup.rst:329
 msgid "grassMapsetOpen"
 msgstr "grassMapsetOpen"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:146
+#: ../../docs/training_manual/grass/grass_setup.rst:141
 msgid ""
 "You will see a replication of the GRASS Location as normal folder: GRASS "
 "``Mapset`` data are those within the |grassLogo| folder"
@@ -247,18 +234,18 @@ msgstr ""
 "Man sieht eine Kopie der GRASS Location als normalen Ordner: die GRASS "
 "``Mapset`` Daten liegen im |grassLogo| Ordner"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:330
+#: ../../docs/training_manual/grass/grass_setup.rst:327
 msgid "grassLogo"
 msgstr "grassLogo"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:149
+#: ../../docs/training_manual/grass/grass_setup.rst:144
 msgid ""
 "You can easily **drag and drop** layers from a folder to the GRASS Mapset."
 msgstr ""
 "Layer aus einem Ordner können mit **drag and drop** einfach in das GRASS "
 "Mapset gezogen werden."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:160
+#: ../../docs/training_manual/grass/grass_setup.rst:155
 msgid ""
 "That's it! If you expand the Mapset you will see the imported :file:`roads` "
 "layer. You can now load in QGIS the imported layer like all the other "
@@ -268,7 +255,7 @@ msgstr ""
 "Layer :file:`roads`. Man den importierten Layer nun wie jeden anderen Layer "
 "in QGIS laden."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:163
+#: ../../docs/training_manual/grass/grass_setup.rst:158
 msgid ""
 "You can also load layers from the Layer Legend Panel to Mapset in the "
 "Browser Panel. This will speed up incredibly your workflow!"
@@ -276,7 +263,7 @@ msgstr ""
 "Man kann außerdem Layer direkt aus dem Layerinhaltsverzeichnis in ein Mapset"
 " im Browser Bedienfeld ziehen. Damit wird der Workflow stark vereinfacht!"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:170
+#: ../../docs/training_manual/grass/grass_setup.rst:165
 msgid ""
 "We will use now the *long* method to load the :file:`rivers.shp` layer into "
 "the same Mapset."
@@ -284,7 +271,7 @@ msgstr ""
 "Wir werden nun die *lange* Methode zum laden des Layers :file:`rivers.shp` "
 "in das Mapset nutzen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:173
+#: ../../docs/training_manual/grass/grass_setup.rst:168
 msgid ""
 "Load data into QGIS as usual. Use the :file:`rivers.shp` dataset (found in "
 "the :file:`exercise_data/shapefile/` folder)"
@@ -294,23 +281,13 @@ msgstr ""
 
 #: ../../docs/training_manual/grass/grass_setup.rst:175
 msgid ""
-"As soon as it is loaded, click on the :guilabel:`Filter` box of the ``GRASS "
-"Panel`` and find the vector import tool by entering the term "
-"``v.in.ogr.qgis``:"
-msgstr ""
-"Sobald die Daten in QGIS geladen sind, klicken wir auf den "
-":guilabel:`Filter` Kasten im ``GRASS Bedienfeld`` und suchen das "
-"Vektorimportwerkzeug indem wir ``v.in.ogr.qgis`` im Filterkasten eingeben:"
-
-#: ../../docs/training_manual/grass/grass_setup.rst:178
-msgid ""
 "There are 2 similar tools: ``v.in.ogr.qgis`` and ``v.in.ogr.qgis.loc``. We "
 "are looking for the **first** one."
 msgstr ""
 "Es werden 2 ähnliche Werkzeuge angezeigt: ``v.in.ogr.qgis`` und "
 "``v.in.ogr.qgis.loc``. Wir verwenden das **erste** Werkzeug."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:184
+#: ../../docs/training_manual/grass/grass_setup.rst:181
 msgid ""
 "The ``v`` stands for *vector*, ``in`` means a function to import data into "
 "the GRASS database, ``ogr`` is the software library used to read vector "
@@ -322,7 +299,7 @@ msgstr ""
 "Laden von Vektordaten verwendet wird und ``qgis`` bedeutet, dass das "
 "Werkzeug nach bereits in QGIS geladenen Layern sucht."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:189
+#: ../../docs/training_manual/grass/grass_setup.rst:186
 msgid ""
 "Once you've found this tool, click on it to bring up the tool itself. Choose"
 " the :guilabel:`rivers` layer in the :guilabel:`Loaded Layer` box and type "
@@ -333,11 +310,11 @@ msgstr ""
 ":guilabel:`Geladener Layer` und vergeben für die Ausgabe den Namen "
 ":file:`g_rivers`, um Verwechslungen vorzubeugen:"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:200
+#: ../../docs/training_manual/grass/grass_setup.rst:197
 msgid "Click :guilabel:`Run` to begin the import."
 msgstr "Klicken Sie auf :guilabel:`Starten` um den Import zu beginnen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:201
+#: ../../docs/training_manual/grass/grass_setup.rst:198
 msgid ""
 "When it's done, click the :guilabel:`View output` button to see the newly "
 "imported GRASS layer in the map."
@@ -345,7 +322,7 @@ msgstr ""
 "Drücken Sie nach Abschluss des Imports auf den Knopf :guilabel:`Ergebnis "
 "visualisieren`, um den in GRASS importierten Layer in der Karte anzuzeigen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:203
+#: ../../docs/training_manual/grass/grass_setup.rst:200
 msgid ""
 "Close first the import tool (click the :guilabel:`Close` button to the "
 "immediate right of :guilabel:`View output`), then close the :guilabel:`GRASS"
@@ -355,11 +332,11 @@ msgstr ""
 ":guilabel:`Schließen` im rechten Bereich neben dem Knopf :guilabel:`Ergebnis"
 " visualisieren`) und danach das :guilabel:`GRASS Werkzeuge` Fenster."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:206
+#: ../../docs/training_manual/grass/grass_setup.rst:203
 msgid "Remove the original :guilabel:`rivers` layer."
 msgstr "Entfernen Sie das Original des Layers :guilabel:`rivers`."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:208
+#: ../../docs/training_manual/grass/grass_setup.rst:205
 msgid ""
 "Now you are left with only the imported GRASS layer as displayed in your "
 "QGIS map."
@@ -367,16 +344,16 @@ msgstr ""
 "In unserer QGIS Karte wird jetzt nur noch der in GRASS importierte Layer "
 "angezeigt."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:214
+#: ../../docs/training_manual/grass/grass_setup.rst:211
 msgid ""
 "You can import a raster layer in the same ways we imported vector layers."
 msgstr "Rasterdaten importiert man auf dieselbe Weise wie Vektordaten."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:216
+#: ../../docs/training_manual/grass/grass_setup.rst:213
 msgid "We are going to import in the GRASS Mapset the layer |srtmFileName|."
 msgstr "Wir werden in das GRASS Mapset den Layer |srtmFileName| importieren."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:218
+#: ../../docs/training_manual/grass/grass_setup.rst:215
 msgid ""
 "the raster layer is already in the correct CRS, ``WGS 84``. If you have "
 "layers in different CRS you must reproject them in the same CRS of the GRASS"
@@ -386,27 +363,15 @@ msgstr ""
 "abweichendem KBS müssen vorher in das KBS des GRASS Mapsets reprojiziert "
 "weden."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:223
+#: ../../docs/training_manual/grass/grass_setup.rst:220
 msgid "Load the |srtmFileName| layer in QGIS"
 msgstr "Laden Sie den Layer |srtmFileName| in QGIS"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:224
+#: ../../docs/training_manual/grass/grass_setup.rst:221
 msgid "Open the :guilabel:`GRASS Tools` dialog again."
 msgstr "Öffnen Sie erneut das Fenster :guilabel:`GRASS Werkzeuge`."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:225
-msgid "Click on the :guilabel:`Modules List` tab."
-msgstr "Klicken Sie auf den Reiter :guilabel:`Module`."
-
 #: ../../docs/training_manual/grass/grass_setup.rst:226
-msgid ""
-"Search for ``r.in.gdal.qgis`` and double click the tool to open the tool's "
-"dialog."
-msgstr ""
-"Suchen Sie nach ``r.in.gdal.qgis`` und klicken doppelt auf das Werkzeug, um "
-"sein Dialogfenster zu öffnen."
-
-#: ../../docs/training_manual/grass/grass_setup.rst:228
 msgid ""
 "Set it up so that the input layer is |srtmFileName| and the output is "
 ":file:`g_dem`."
@@ -414,17 +379,17 @@ msgstr ""
 "Geben Sie für den Eingabelayer |srtmFileName| und für den Ausgabelayer "
 ":file:`g_dem` vor."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:233
+#: ../../docs/training_manual/grass/grass_setup.rst:231
 msgid "Click :guilabel:`Run`."
 msgstr "Klicken Sie auf :guilabel:`Starten`."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:234
+#: ../../docs/training_manual/grass/grass_setup.rst:232
 msgid "When the process is done, click :guilabel:`View output`."
 msgstr ""
 "Klicken Sie nach dem Abschluss des Prozesses auf :guilabel:`Ergebnis "
 "visualisieren`."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:235
+#: ../../docs/training_manual/grass/grass_setup.rst:233
 msgid ""
 ":guilabel:`Close` the current tab, and then :guilabel:`Close` the whole "
 "dialog."
@@ -432,11 +397,11 @@ msgstr ""
 ":guilabel:`Schließen` Sie den Reiter und nocheinmal mit "
 ":guilabel:`Schließen` den gesamten Dialog."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:241
+#: ../../docs/training_manual/grass/grass_setup.rst:239
 msgid "You may now remove the original |srtmFileName| layer."
 msgstr "Wir können den originalen Layer |srtmFileName| nun entfernen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:246
+#: ../../docs/training_manual/grass/grass_setup.rst:244
 msgid ""
 "Try to import in the GRASS Mapset the vector layers :file:`water.shp` and "
 ":file:`places.shp` from the :file:`exercise_data/shapefile/` folder. As we "
@@ -448,7 +413,7 @@ msgstr ""
 "importieren. Benennen Sie die Layer wie beim vorherigen Import mit "
 ":file:`g_water` und :file:`g_places` um einer Verwechselung vorzubeugen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:260
+#: ../../docs/training_manual/grass/grass_setup.rst:258
 msgid ""
 "If you have an existing GRASS Mapset you can easily reopen it in another "
 "session of QGIS."
@@ -456,14 +421,14 @@ msgstr ""
 "Wenn bereits ein GRASS Mapset vorliegt, können Sie es einfach in einer "
 "anderen QGIS-Sitzung öffnen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:263
+#: ../../docs/training_manual/grass/grass_setup.rst:261
 msgid ""
 "You have several method to open a GRASS Mapset, let's explore some of them."
 msgstr ""
 "Es gibt verschiedene Methoden, ein GRASS Mapset zu öffnen. Wir werden nun "
 "einige untersuchen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:265
+#: ../../docs/training_manual/grass/grass_setup.rst:263
 msgid ""
 "Let's close the Mapset by clicking on the :guilabel:`Close Mapset` button of"
 " the :guilabel:`GRASS Tools` window."
@@ -472,16 +437,6 @@ msgstr ""
 ":guilabel:`Schließe Mapset` im Fenster :guilabel:`GRASS-Werkzeuge`."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:272
-msgid ""
-"Click on the :guilabel:`Plugins --> GRASS --> Open Mapset` menu next to the "
-":guilabel:`Plugins --> GRASS --> New Mapset` menu that we saw in the "
-"previous section."
-msgstr ""
-"Klicken Sie im Menü auf :guilabel:`Erweiterungen --> GRASS --> Mapset "
-"öffnen` über dem Menüeintrag :guilabel:`Plugins --> GRASS --> Neues Mapset` "
-"den wir in der vorherigen Übung verwendet haben."
-
-#: ../../docs/training_manual/grass/grass_setup.rst:275
 msgid ""
 "Browse to the GRASS database folder: be careful! You must choose the parent "
 "folder, not the GRASS Mapset one. Indeed GRASS will read all the "
@@ -492,7 +447,7 @@ msgstr ""
 "Mapset. GRASS liest alle ``Locations`` der Datenbank und alle ``Mapsets`` "
 "einer ``Location`` ein:"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:282
+#: ../../docs/training_manual/grass/grass_setup.rst:279
 msgid ""
 "Choose the ``Location`` :guilabel:`SouthAfrica` and the ``Mapset`` "
 ":guilabel:`grass_mapset` that we have created before."
@@ -500,7 +455,7 @@ msgstr ""
 "Wählen Sie die ``Location`` :guilabel:`SouthAfrica` und das ``Mapset`` "
 ":guilabel:`grass_mapset` das wir vorher erstellt haben."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:285
+#: ../../docs/training_manual/grass/grass_setup.rst:282
 msgid ""
 "That's it! The GRASS Panel will become active meaning that the Mapset has "
 "been correctly opened."
@@ -508,13 +463,13 @@ msgstr ""
 "Das war's. Das GRASS Bedienfeld wird aktiv, was bedeutet, dass das Mapset "
 "korrekt geladen wurde."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:292
+#: ../../docs/training_manual/grass/grass_setup.rst:289
 msgid "Even faster and easier is opening a ``Mapset`` using the QGIS Browser:"
 msgstr ""
 "Noch einfacher kann ein ``Mapset`` mit Hilfe des QGIS Browsers geöffnet "
 "werden:"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:294
+#: ../../docs/training_manual/grass/grass_setup.rst:291
 msgid ""
 "Close the Mapset (if it is open) by clicking on the :guilabel:`Close Mapset`"
 " button of the :guilabel:`GRASS Tools` window."
@@ -523,11 +478,11 @@ msgstr ""
 "Schaltfläche :guilabel:`Schließe Mapset` im :guilabel:`GRASS-Werkzeuge` "
 "Fenster."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:296
+#: ../../docs/training_manual/grass/grass_setup.rst:293
 msgid "In the QGIS Browser, browse to the folder of the GRASS database."
 msgstr "Gehen Sie im QGIS Browser zum Ordner der GRASS Datenbank."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:297
+#: ../../docs/training_manual/grass/grass_setup.rst:294
 msgid ""
 "Right click on the Mapset (remember, the Mapset has the |grassLogo| GRASS "
 "icon next to it). You will see some options."
@@ -536,15 +491,15 @@ msgstr ""
 "|grassLogo| GRASS Icon neben dem Namen). Es werden einige Optionen "
 "angezeigt."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:299
+#: ../../docs/training_manual/grass/grass_setup.rst:296
 msgid "Click on :guilabel:`Open mapset`:"
 msgstr "Klicke Sie auf :guilabel:`Mapset öffnen`:"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:304
+#: ../../docs/training_manual/grass/grass_setup.rst:301
 msgid "The Mapset is now open and ready to use!"
 msgstr "Das Mapset ist nun geöffent und kann verwendet werden!"
 
-#: ../../docs/training_manual/grass/grass_setup.rst:306
+#: ../../docs/training_manual/grass/grass_setup.rst:303
 msgid ""
 "Right click on a GRASS Mapset offers you a lot of different settings. Try to"
 " explore them and see all the useful options."
@@ -552,7 +507,11 @@ msgstr ""
 "Nach Klick mit rechten Maustaste auf ein Mapset werden viele verschiedene "
 "Optionen abgeboten. Untersuchen Sie auch die anderen Optionen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:312
+#: ../../docs/training_manual/grass/grass_setup.rst:307
+msgid "In Conclusion"
+msgstr "Zusammengefasst"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:309
 msgid ""
 "The GRASS workflow for ingesting data is somewhat different from the QGIS "
 "method because GRASS loads its data into a spatial database structure. "
@@ -564,7 +523,11 @@ msgstr ""
 "Trotzdem kann QGIS als Frontend die Verwaltung eines GRASS Mapsets durch die"
 " Verwendung von QGIS Layern als Datenquellen für QGIS vereinfachen."
 
-#: ../../docs/training_manual/grass/grass_setup.rst:320
+#: ../../docs/training_manual/grass/grass_setup.rst:315
+msgid "What's Next?"
+msgstr "Was als nächstes?"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:317
 msgid ""
 "Now that the data is imported into GRASS, we can look at the advanced "
 "analysis operations that GRASS offers."

@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
 # Harrissou Sant-anna, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-15 08:28+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,53 +39,203 @@ msgstr ""
 msgid "Live GPS tracking"
 msgstr "ライブGPS追跡"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:12
+msgid ""
+"QGIS can help you do field mapping with a GPS receiver. Such a live tracking"
+" operation is done using the :ref:`GPS Toolbar <gps_toolbar>`. Some "
+":ref:`device configuration <gps_options>` may be needed before connecting "
+"QGIS and the GPS receiver."
+msgstr ""
+"QGISはGPS受信機を使ったフィールドマッピングを支援することができます。そのようなライブトラッキングの操作は :ref:`GPSツールバー "
+"<gps_toolbar>` を使って行われます。QGISとGPS受信機を接続する前に、いくつかの :ref:`デバイスの設定 "
+"<gps_options>` が必要かもしれません。"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:21
+msgid "GPS toolbar"
+msgstr "GPSツールバー"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:23
+msgid ""
+"The :guilabel:`GPS Toolbar` provides the main tools to control a live "
+"tracking session. It can be activated from :menuselection:`View --> Toolbars"
+" --> GPS`. It follows the state of the project, GPS, and current GPS track, "
+"and enables actions only when they make sense. Once a device is detected by "
+"QGIS, you will be able to interact with it:"
+msgstr ""
+":guilabel:`GPSツールバー` はライブトラッキングセッションを制御するための主要なツールを提供します。これは "
+":menuselection:`ビュー --> ツールボックス --> GPS` "
+"から起動できます。プロジェクト、GPS、現在のGPSトラックの状態を追跡し、意味のある時だけアクションを有効にします。QGISによってデバイスが検出されると、そのデバイスと対話できるようになります:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:29
+msgid "|gpsConnect| :sup:`Connect to GPS`"
+msgstr "|gpsConnect| :sup:`GPSに接続`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:335
 msgid "gpsConnect"
 msgstr "gpsConnect"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:30
+msgid "|gpsDisconnect| :sup:`Disconnect from GPS`"
+msgstr "|gpsDisconnect| :sup:`GPSから切断`"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:339
 msgid "gpsDisconnect"
 msgstr "gpsDisconnect"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:31
+msgid ""
+"|recenter| :sup:`Recenter map on GPS location`: the map will immediately "
+"recenter on the current GPS position regardless of the :ref:`automatic "
+"recentering parameter <gps_recenter>`."
+msgstr ""
+"|recenter| :sup:`GPS位置に地図を再センタリング`: :ref:`automatic recentering parameter "
+"`に関係なく、マップは直ちに現在のGPS位置に再センタリングされます。"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:351
 msgid "recenter"
 msgstr "recenter"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:34
+msgid ""
+"|gpsDestinationLayer| :sup:`Set destination layer for GPS digitized "
+"features`: By default, QGIS will :guilabel:`Follow active layer` for feature"
+" digitizing, meaning that GPS digitizing tools will adapt to the layer "
+"selected in :guilabel:`Layers` panel and created features will be stored in "
+"it accordingly. While this may be useful in some contexts, it also implies "
+"careful interaction with other layers to avoid storing inadvertently "
+"features in undesired layers. This option allows you to explicitly indicate "
+"a layer for the data storage during the live tracking session, and you could"
+" switch depending on your needs. Exposed tools will adapt as well to the "
+"selected layer type."
+msgstr ""
+"|gpsDestinationLayer| :sup:`GPSデジタイズ用レイヤを設定`： QGISは地物をデジタイズするため、デフォルトで "
+":guilabel:`アクティブレイヤに従う`、つまり、GPSデジタイジングツールは :guilabel:`レイヤ` "
+"パネルで選択されたレイヤーに適応し、作成された地物はそのレイヤに保存されます。これは便利な場合もありますが、望んでいないレイヤに地物を保存するのを避けるには、他のレイヤとの相互作用に注意する必要があることを意味します。このオプションは、ライブトラッキングセッション中に、データ保存用のレイヤを明示的に指定することができ、必要に応じて切り替えることができます。露出されたツールは、選択されたレイヤのタイプに適応します。"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:337
 msgid "gpsDestinationLayer"
 msgstr "gpsDestinationLayer"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:47
+msgid "actions for feature creation:"
+msgstr "地物を作成するアクション:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:49
+msgid ""
+"|addTrackPoint| :sup:`Add vertex to GPS track using GPS current location`"
+msgstr "|addTrackPoint| :sup:`GPS位置のトラック点を追加`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:327
 msgid "addTrackPoint"
 msgstr "addTrackPoint"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:50
+msgid ""
+"|capturePoint| :sup:`Create a new point feature at current GPS location`"
+msgstr "|capturePoint| :sup:`現在のGPS位置に点地物を作成`"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:329
 msgid "capturePoint"
 msgstr "capturePoint"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:51
+msgid ""
+"|captureLine| :sup:`Create a new line feature using the current GPS track`"
+msgstr "|captureLine| :sup:`現在のGPSトラックから線地物を作成`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:331
 msgid "captureLine"
 msgstr "captureLine"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:52
+msgid ""
+"|capturePolygon| :sup:`Create a new polygon feature using the current GPS "
+"track`"
+msgstr "|capturePolygon| :sup:`現在のGPSトラックからポリゴン地物を作成`"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:333
 msgid "capturePolygon"
 msgstr "capturePolygon"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:53
+msgid "|reset| :sup:`Reset track`"
+msgstr "|reset| :sup:`トラックをリセット`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:353
 msgid "reset"
 msgstr "reset"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:55
+msgid ""
+"|metadata| :sup:`Show GPS information`: opens the :ref:`GPS Information "
+"<gps_information_panel>` panel"
+msgstr ""
+"|metadata| :sup:`GPS情報パネルを表示`: :ref:`GPS情報 <gps_information_panel>` パネルを開きます"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:343
 msgid "metadata"
 msgstr "metadata"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:60
+msgid "|unchecked| :sup:`Show location`"
+msgstr "|unchecked| :sup:`位置を表示`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:355
 msgid "unchecked"
 msgstr "unchecked"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:61
+msgid "|unchecked| :sup:`Show altitude (Geoid)`"
+msgstr "|unchecked| :sup:`ジオイド高を表示`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:62
+msgid "|unchecked| :sup:`Show altitude (WGS 84 ellipsoid)`"
+msgstr "|unchecked| :sup:`標高（WGS84楕円体高）を表示`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:63
+msgid "|unchecked| :sup:`Show ground speed`"
+msgstr "|unchecked| :sup:`地上速度を表示`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:64
+msgid "|unchecked| :sup:`Show bearing`"
+msgstr "|unchecked| :sup:`方位を表示`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:65
+msgid "|unchecked| :sup:`Show total track length`"
+msgstr "|unchecked| :sup:`合計トラック長を表示`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:66
+msgid "|unchecked| :sup:`Show distance from start of track`"
+msgstr "|unchecked| :sup:`始点からの距離を表示`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:345
 msgid "options"
 msgstr "options"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:73
+msgid "|unchecked| :guilabel:`Show location marker`"
+msgstr "|unchecked| :guilabel:`位置マーカーを表示`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:74
+msgid "|unchecked| :guilabel:`Show bearing line`"
+msgstr "|unchecked| :guilabel:`方位線を表示`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:75
+msgid "|unchecked| :guilabel:`Rotate map to match GPS direction`"
+msgstr "|unchecked| :guilabel:`GPSの方角に合わせて地図を回転`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:79
+msgid "Options to control map recentering:"
+msgstr "マップの再センタリングを制御するオプション:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:81
+msgid ""
+"|radioButtonOff| :guilabel:`Always recenter map` when the GPS position is "
+"offset from the map canvas center by a certain distance (as a ratio of the "
+"map canvas extent)"
+msgstr ""
+"GPS位置がマップキャンバスの中心から一定の距離（マップキャンバスの範囲に対する比率）だけオフセットしているとき、|radioButtonOff| "
+":guilabel:`Always recenter map` "
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:347
 msgid "radioButtonOff"
@@ -94,6 +244,36 @@ msgstr "radioButtonOff"
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:349
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:86
+msgid ""
+"|unchecked| :guilabel:`Automatically add track vertices` whenever new "
+"locations are received from the GPS device."
+msgstr "GPSデバイスから新しい位置を受信するたびに、|unchecked| :guilabel:`トラックの点を自動追加` します。"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:88
+msgid ""
+"|unchecked| :guilabel:`Automatically save added features`: features created "
+"from GPS locations are immediately committed to their target layers "
+"(skipping the usual layer edit buffer)"
+msgstr ""
+"|unchecked| :guilabel:`追加された地物を自動保存`: "
+"GPS位置から作成された地物は、対象レイヤに即座にコミットされます（通常のレイヤ編集バッファはスキップされます）"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:91
+msgid ""
+":guilabel:`Time stamp destination` to adjust the field for time fix storage"
+msgstr ":guilabel:`タイムスタンプ先` は時間固定ストレージのフィールドを調節します"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:101
+msgid ""
+"All incoming GPS messages will be logged to the ``gps_points`` layer, along "
+"with speed, bearing, altitude and accuracy information from the GPS."
+msgstr "受信したすべてのGPSメッセージは、GPSからの速度、方位、高度、正確度情報とともに ``gps_points`` レイヤーに記録される。"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:125
+msgid "GPS Information Panel"
+msgstr "GPS情報パネル"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:138
 msgid ""
@@ -111,6 +291,22 @@ msgstr "位置と追加属性"
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:155
 msgid "GPS tracking position and additional attributes"
 msgstr "GPS追跡位置と追加属性"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:166
+msgid ":guilabel:`Speed`: Ground speed"
+msgstr ":guilabel:`Speed`: 対地速度"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:169
+msgid ":guilabel:`HDOP`: Horizontal dilution of precision"
+msgstr ":guilabel:`HDOP`: 水平精度低下率"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:170
+msgid ":guilabel:`VDOP`: Vertical dilution of precision"
+msgstr ":guilabel:`VDOP`: 垂直精度低下率"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:171
+msgid ":guilabel:`PDOP`: Dilution of precision"
+msgstr ":guilabel:`PDOP`: 位置精度低下率"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:196
 msgid "GPS tracking signal strength"

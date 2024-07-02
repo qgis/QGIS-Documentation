@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
 # Transifex Bot <>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,6 +90,85 @@ msgstr ""
 "El panel :guilabel:`Capas` (también llamado `leyenda del mapa`) lista todas "
 "las capas del proyecto y le ayuda a gestionar su visibilidad y a dar forma "
 "al mapa. Puede mostrar u ocultar el panel pulsando :kbd:`Ctrl+1`."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:52
+msgid "QGIS provides a variety of ways to add layers to a project:"
+msgstr "QGIS ofrece varias formas de añadir capas a un proyecto:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:54
+msgid ""
+"using the :guilabel:`Add` button from the dedicated data provider tab in the"
+" :ref:`Data source manager <opening_data>` dialog"
+msgstr ""
+"utilizando el botón :guilabel:`Añadir` de la pestaña dedicada al proveedor "
+"de datos en el diálogo :ref:`Administrador de fuentes de datos "
+"<opening_data>`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:58
+msgid "drag-and-drop files from the Operating System files explorer onto QGIS"
+msgstr ""
+"arrastrar y soltar archivos desde el explorador de archivos del sistema "
+"operativo a QGIS"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:60
+msgid ""
+"In all these scenarios, you can open one or many layers at a time. New "
+"layers are added to the :guilabel:`Layers` panel:"
+msgstr ""
+"En todos estos escenarios, puede abrir una o varias capas a la vez. Las "
+"nuevas capas se añaden al panel :guilabel:`Capas`:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:63
+msgid ""
+"if dropped over the :guilabel:`Layers` panel, at the exact location they are"
+" released"
+msgstr ""
+"si se sueltan sobre el panel :guilabel:`Capas`, en el lugar exacto donde se "
+"sueltan"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:64
+msgid ""
+"in the other cases, at a location that respects the global :ref:`behavior "
+"used when adding new layers <layer_tree_insertion_methods>` setting"
+msgstr ""
+"en los demás casos, en un lugar que respete los ajustes globales "
+":ref:`comportamiento utilizado al añadir nuevas capas "
+"<layer_tree_insertion_methods>`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:66
+msgid ""
+"and in case of multiple layers, they are sorted in a way that increases the "
+"chance of their stacking being logical and features being visible as most as"
+" possible, using the following logic (top to bottom):"
+msgstr ""
+"y en caso de capas múltiples, se ordenan de forma que aumente la "
+"probabilidad de que su apilamiento sea lógico y las características sean "
+"visibles el mayor tiempo posible, utilizando la siguiente lógica (de arriba "
+"a abajo):"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:70
+msgid "vector point layers"
+msgstr "capas de puntos vectoriales"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:71
+msgid "vector line layers"
+msgstr "capas de líneas vectoriales"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:72
+msgid "vector polygon layers"
+msgstr "capas de polígonos vectoriales"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:73
+msgid "point cloud layers"
+msgstr "capas de nubes de puntos"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:74
+msgid "mesh layers"
+msgstr "capas de malla"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:75
+msgid "raster layers"
+msgstr "capas ráster"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:77
 msgid "At the top of the :guilabel:`Layers` panel, a toolbar allows you to:"
@@ -516,6 +595,10 @@ msgstr "Capa de malla"
 #: ../../docs/user_manual/introduction/general_tools.rst:208
 msgid "Point Cloud Layer"
 msgstr "Capa de nubes de puntos"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:208
+msgid "3D Layer"
+msgstr "Capa 3D"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:210
 msgid "|zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`"
@@ -1624,6 +1707,14 @@ msgstr ""
 msgid "elevationscale"
 msgstr "elevationscale"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:506
+msgid ""
+"Enable and configure :ref:`global map shading <global_map_shading>` "
+"properties"
+msgstr ""
+"Activar y configurar las propiedades :ref:`sombreado global de mapas "
+"<global_map_shading>`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:507
 msgid ""
 "Manage the associated style(s) in the |stylePreset| :guilabel:`Style "
@@ -2005,9 +2096,44 @@ msgstr "networkAndProxy"
 msgid "|dbManager| :guilabel:`Query Logger`"
 msgstr "|dbManager| :guilabel:`Registrador de consultas`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:679
+msgid ""
+"|stopwatch| :guilabel:`Profiler` - under this tab you can choose one out of "
+"these categories:"
+msgstr ""
+"|stopwatch| :guilabel:`Perfilador` - en esta pestaña puede elegir una de "
+"estas categorías:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2413
 msgid "stopwatch"
 msgstr "stopwatch"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:682
+msgid ""
+":guilabel:`Startup` helps you diagnose (and fix) occasional long startup "
+"times of QGIS."
+msgstr ""
+":guilabel:`Inicio` le ayuda a diagnosticar (y solucionar) los largos tiempos"
+" de inicio ocasionales de QGIS."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:684
+msgid ""
+":guilabel:`Project Load` allows you to get a breakdown of the various stages"
+" of project load, in order to identify the causes of slow project load "
+"times."
+msgstr ""
+":guilabel:`Carga del proyecto` le permite obtener un desglose de las "
+"distintas etapas de la carga del proyecto, con el fin de identificar las "
+"causas de los tiempos de carga lentos del proyecto."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:687
+msgid ""
+":guilabel:`Map Render` tool allows you to identify pain points in your map "
+"rendering and track down exactly which layers are causing long map redraws."
+msgstr ""
+"La herramienta de :guilabel:`Renderizador de mapas` le permite identificar "
+"los puntos débiles en el renderizado de sus mapas y localizar exactamente "
+"qué capas están causando largos redibujados de mapas."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:691
 msgid ""
@@ -2604,6 +2730,17 @@ msgstr ""
 msgid "selectLocation"
 msgstr "selectLocation"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:934
+msgid ""
+"|selectDistance| :sup:`Select within distance` to select features wherever "
+"they are within the specified maximum distance from referenced features - "
+"see :ref:`qgisselectwithindistance`)"
+msgstr ""
+"|selectDistance| :sup:`Seleccionar dentro de la distancia` para seleccionar "
+"características siempre que se encuentren dentro de la distancia máxima "
+"especificada desde las características referenciadas - véase "
+":ref:`qgisselectwithindistance`)"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2393
 msgid "selectDistance"
 msgstr "selectDistance"
@@ -2847,6 +2984,21 @@ msgstr ""
 msgid "Identifying Features"
 msgstr "Identificando entidades"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1040
+msgid ""
+"The |identify| :sup:`Identify Features` tool allows you to interact with the"
+" map canvas and get information on features or pixels in a pop-up window. It"
+" can be used to query most of the layer types supported by QGIS (vector, "
+"raster, mesh, point cloud, wms, wfs, ...). To identify an element, use "
+"either:"
+msgstr ""
+"La herramienta |identify| :sup:`Identificar objetos espaciales` permite "
+"interactuar con el lienzo del mapa y obtener información sobre "
+"características o píxeles en una ventana emergente. Se puede utilizar para "
+"consultar la mayoría de los tipos de capas soportados por QGIS (vector, "
+"ráster, malla, nube de puntos, wms, wfs, ...). Para identificar un elemento,"
+" utilice"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2327
 msgid "identify"
 msgstr "identify"
@@ -2859,6 +3011,27 @@ msgstr ":menuselection:`Ver --> Identificar Entidades`"
 msgid ":kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),"
 msgstr ":kbd:`Ctrl+Shift+I` (o |osx| :kbd:`Cmd+Shift+I`),"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1048
+msgid ""
+"|identify| :sup:`Identify Features` button on the :guilabel:`Attributes` "
+"toolbar"
+msgstr ""
+"|identify| :sup:`Identificar objetos espaciales` de la barra de herramientas"
+" :guilabel:`Atributos`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1050
+msgid ""
+"Then click on a feature or pixel of the active layer. The identified item "
+"gets highlighted in the map canvas while the :guilabel:`Identify Results` "
+"dialog opens with detailed information on it. The dialog also shows a set of"
+" buttons for advanced configuration."
+msgstr ""
+"A continuación, haga clic en un objeto espacial o píxel de la capa activa. "
+"El elemento identificado se resalta en el lienzo del mapa mientras se abre "
+"el cuadro de diálogo :guilabel:`Identificar resultados` con información "
+"detallada sobre el mismo. El diálogo también muestra un conjunto de botones "
+"para la configuración avanzada."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1057
 msgid "The Identify Results dialog"
 msgstr "El Dialogo de resultados de la identificación"
@@ -2866,6 +3039,92 @@ msgstr "El Dialogo de resultados de la identificación"
 #: ../../docs/user_manual/introduction/general_tools.rst:1064
 msgid "Identify Results dialog"
 msgstr "Dialogo de resultados de la identificación"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1066
+msgid "From bottom to top:"
+msgstr "De abajo a arriba:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1070
+msgid ""
+"The :guilabel:`View` controls the general aspect of the dialog and the "
+"formatting of the results; it can be set as:"
+msgstr ""
+"La :guilabel:`Vista` controla el aspecto general del cuadro de diálogo y el "
+"formato de los resultados; puede establecerse como:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1073
+msgid ""
+"**Tree**: this is the default view, and returns the results in a tree-"
+"structure"
+msgstr ""
+"**Árbol**: Esta es la vista predeterminada, devuelve los resultados en forma"
+" de árbol."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1074
+msgid ""
+"**Table**: available only for raster-based layers, it allows to display the "
+"results as a table whose columns are ``Layer``, ``FID``, ``Attribute`` and "
+"``Value``"
+msgstr ""
+"**Tabla**: disponible sólo para capas basadas en ráster, permite mostrar los"
+" resultados como una tabla cuyas columnas son ``Layer``, ``FID``, "
+"``Atribute`` y ``Value``."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1076
+msgid "or **Graph**: available only for raster-based layers"
+msgstr "o **Gráfico**: disponible sólo para capas basadas en ráster."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1082
+msgid ""
+"The :guilabel:`Mode` helps you select the layers from which results could be"
+" returned. These layers should be set visible, displaying data in the map "
+"canvas, and set :ref:`identifiable <project_layer_capabilities>` from the "
+":menuselection:`Project properties --> Data Sources --> Layers "
+"capabilities`. Available modes are:"
+msgstr ""
+"La etiqueta :guilabel:`Modo` le ayuda a seleccionar las capas de las que "
+"pueden obtenerse resultados. Estas capas deben establecerse visibles, "
+"mostrando los datos en el lienzo del mapa, y establecerse "
+":ref:`identificable <project_layer_capabilities>` desde las "
+":menuselección:`Propiedades del proyecto --> Fuentes de datos --> "
+"Capacidades de las capas`. Los modos disponibles son:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1088
+msgid ""
+"**Current layer**: only the layer(s) selected in the :guilabel:`Layers` "
+"panel return results. If a group is selected, then results are picked from "
+"its leaf layers."
+msgstr ""
+"**Capa actual**: sólo la(s) capa(s) seleccionada(s) en el panel "
+":guilabel:`Capas` devuelve(n) resultados. Si se selecciona un grupo, los "
+"resultados se obtienen de sus capas hoja."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1091
+msgid ""
+"**Top down, stop at first**: results are from the layer of the top most "
+"feature or pixel under the mouse."
+msgstr ""
+"**De arriba abajo, deténgase al principio**: los resultados se obtienen a "
+"partir de la capa de la prestación o píxel situado más arriba bajo el ratón."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1093
+msgid ""
+"**Top down**: results are from the layers with feature or pixel under the "
+"mouse."
+msgstr ""
+"**Arriba abajo**: los resultados proceden de las capas con objeto espacial o"
+" píxel bajo el ratón."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1094
+msgid ""
+"**Layer selection**: opens a contextual menu where the user selects the "
+"layer to identify features from. If only a single feature is under the "
+"mouse, then the results are automatically displayed."
+msgstr ""
+"**Selección de capa**: abre un menú contextual en el que el usuario "
+"selecciona la capa desde la que identificar los objetos espaciales. Si sólo "
+"hay un objeto espacial bajo el ratón, los resultados se muestran "
+"automáticamente."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1103
 msgid "|formView| :sup:`Open Form` of the current feature"
@@ -2900,9 +3159,68 @@ msgstr "expandNewTree"
 msgid "|deselectAll| :sup:`Clear Results`"
 msgstr "|deselectAll| :sup:`Limpiar Resultados`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1109
+msgid ""
+"|editCopy| :sup:`Copy the identified feature to clipboard`, suitable for "
+"pasting in a spreadsheet."
+msgstr ""
+"|editCopy| :sup:`Copiar el objeto espacial identificado al portapapeles`, "
+"adecuado para pegar en una hoja de cálculo."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1110
+msgid ""
+"|filePrint| :sup:`Print selected HTML response`: a text-based formatting of "
+"the results to print on paper or save as a :file:`.PDF` file"
+msgstr ""
+"|filePrint| :sup:`Imprimir respuesta HTML seleccionada`: un formato basado "
+"en texto de los resultados para imprimir en papel o guardar como archivo "
+":file:`.PDF`."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2305
 msgid "filePrint"
 msgstr "filePrint"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1112
+msgid ""
+"the :ref:`interactive identifying tools <identify_selection>`: a drop-down "
+"menu with tools for selecting on the map canvas features or pixels to "
+"identify"
+msgstr ""
+"las :ref:`herramientas de identificación interactiva <identify_selection>`: "
+"un menú desplegable con herramientas para seleccionar en el lienzo del mapa "
+"objetos espaciales o píxeles que identificar"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1114
+msgid "Under |options| :sup:`Identify Settings`, you can activate whether to:"
+msgstr ""
+"En |options| :sup:`Identificar configuración`, puede activar si desea:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1116
+msgid ""
+"|checkbox| :guilabel:`Auto open form for single feature results`: If "
+"checked, each time a single feature is identified, a form opens showing its "
+"attributes. This is a handy way to quickly edit a feature's attributes."
+msgstr ""
+"|checkbox| :guilabel:`Abrir formulario automáticamente para resultados de "
+"características individuales`: Si se marca, cada vez que se identifique una "
+"característica, se abrirá un formulario mostrando sus atributos. Es una "
+"forma práctica de editar rápidamente los atributos de un objeto espacial."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1119
+msgid ""
+"|unchecked| :guilabel:`Hide derived attributes from results` to only show "
+"fields actually defined in the layer"
+msgstr ""
+"|unchecked| :guilabel:`Ocultar atributos derivados de los resultados` para "
+"mostrar sólo los campos realmente definidos en la capa"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1121
+msgid "|unchecked| :guilabel:`Hide NULL values from results`"
+msgstr "|unchecked| :guilabel:`Ocultar valores NULL de los resultados`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1123
+msgid "|helpContents|:sup:`Help` to access the current documentation"
+msgstr "|helpContents|:sup:`Ayuda` para acceder a la documentación actual"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2317
 msgid "helpContents"
@@ -2912,21 +3230,140 @@ msgstr "helpContents"
 msgid "Using the Identify Features tool"
 msgstr "Usando la herramienta de identificación de entidades"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1135
+msgid ""
+"|identifyByRectangle| :sup:`Identify Feature(s)` by single click or click-"
+"and-drag"
+msgstr ""
+"|identifyByRectangle| :sup:`Identificar objeto(s) espacial(es)` con un solo "
+"clic o haciendo clic y arrastrando"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2337
 msgid "identifyByRectangle"
 msgstr "identifyByRectangle"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1137
+msgid ""
+"single click or click-and-drag: overlaying features in the target layers are"
+" returned"
+msgstr ""
+"un solo clic o hacer clic y arrastrar: se devuelven los objetos espaciales "
+"superpuestos en las capas de destino"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1138
+msgid ""
+"right-click: overlaying features from target layers are listed in the "
+"contextual menu, grouped by layers. You can then choose to:"
+msgstr ""
+"clic con el botón derecho: los objetos espaciales superpuestos de las capas "
+"de destino aparecen en el menú contextual, agrupadas por capas. A "
+"continuación, puede elegir:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1141
+msgid "display the result for a specific feature,"
+msgstr "mostrar el resultado de un objeto espacial concreto,"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1142
+msgid "display the result for all the features of a specific layer,"
+msgstr ""
+"mostrar el resultado para todas los objetos espaciales de una capa "
+"específica,"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1143
+msgid ""
+"for vector layers, it is also possible to open its attribute table filtered "
+"to the returned features"
+msgstr ""
+"para las capas vectoriales, también es posible abrir su tabla de atributos "
+"filtrada a los objetos espaciales devueltos"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1145
+msgid "or show all of the returned features."
+msgstr "o mostrar todos los objetos espaciales devueltos."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1146
+msgid ""
+"|identifyByMouseOver| :sup:`Identify Features on Mouse over`: move over the "
+"map canvas and hovered items in the target layers get highlighted and "
+"returned in the results panel."
+msgstr ""
+"|identifyByMouseOver| :sup:`Identificar objetos espaciales al pasar el ratón"
+" por encima`: al pasar el ratón por encima del lienzo del mapa, los "
+"elementos sobre los que se pase el ratón en las capas de destino se "
+"resaltarán y aparecerán en el panel de resultados."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2331
 msgid "identifyByMouseOver"
 msgstr "identifyByMouseOver"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1149
+msgid ""
+"|identifyByPolygon| :sup:`Identify Features by Polygon`: returns items "
+"overlapping a drawn or selected polygon."
+msgstr ""
+"|identifyByPolygon| :sup:`Identificar objetos espaciales por polígono`: "
+"devuelve elementos superpuestos a un polígono dibujado o seleccionado."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2333
 msgid "identifyByPolygon"
 msgstr "identifyByPolygon"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1152
+msgid ""
+"Draw a polygon (left click to add point, right click to close the polygon) "
+"and all the overlaying features from target layers are highlighted and "
+"returned in the results panel."
+msgstr ""
+"Dibuje un polígono (clic izquierdo para añadir un punto, clic derecho para "
+"cerrar el polígono) y todos los objetos espaciales superpuestos de las capas"
+" de destino se resaltarán y aparecerán en el panel de resultados."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1155
+msgid ""
+"Right-click and you get the list of all visible polygon features in the "
+"project under the click. Pick an entry and QGIS will return all the features"
+" from the target layers that overlap the selected polygon."
+msgstr ""
+"Haga clic con el botón derecho y obtendrá la lista de todos los objetos "
+"espaciales polígono visibles en el proyecto bajo el clic. Elija una entrada "
+"y QGIS devolverá todas los objetos espaciales de las capas de destino que se"
+" solapan con el polígono seleccionado."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1159
+msgid ""
+"|identifyByFreehand| :sup:`Identify Features by Freehand`: returns items "
+"overlapping a polygon drawn by freehand. Draw a polygon (left-click to "
+"start, move the pointer to shape the area and right-click to close the "
+"polygon). All the overlaying features from target layers are highlighted and"
+" returned in the results panel."
+msgstr ""
+"|identifyByFreehand| :sup:`Identificar objetos espaciales a mano alzada`: "
+"devuelve elementos superpuestos a un polígono dibujado a mano alzada. Dibuje"
+" un polígono (haga clic con el botón izquierdo para empezar, mueva el "
+"puntero para dar forma al área y haga clic con el botón derecho para cerrar "
+"el polígono). Todas las prestaciones superpuestas de las capas de destino se"
+" resaltan y se devuelven en el panel de resultados."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2329
 msgid "identifyByFreehand"
 msgstr "identifyByFreehand"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1165
+msgid ""
+"|identifyByRadius| :sup:`Identify Features by Radius` returns items "
+"overlapping a drawn circle. Draw a cercle (left-click to indicate the center"
+" point, move the pointer to shape the area or enter the radius in the pop-up"
+" text box and left-click or press :kbd:`Enter` to validate the circle). All "
+"the overlaying features from target layers are highlighted and returned in "
+"the results panel."
+msgstr ""
+"|identifyByRadius| :sup:`Identificar objetos espaciales por radio` devuelve "
+"elementos superpuestos a un círculo dibujado. Dibuje un círculo (haga clic "
+"con el botón izquierdo para indicar el punto central, mueva el puntero para "
+"dar forma al área o introduzca el radio en el cuadro de texto emergente y "
+"haga clic con el botón izquierdo o pulse :kbd:`Intro` para validar el "
+"círculo). Todas las prestaciones superpuestas de las capas de destino se "
+"resaltan y aparecen en el panel de resultados."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2335
 msgid "identifyByRadius"
@@ -2937,9 +3374,62 @@ msgid "**Filter the layers to query with the Identify Features tool**"
 msgstr ""
 "**Filtre las capas para consultar con la herramienta Identificar entidades**"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1175
+msgid ""
+"Under :menuselection:`Project --> Properties... --> Data Sources --> Layer "
+"Capabilities`, uncheck the :guilabel:`Identifiable` column next to a layer "
+"to avoid it being queried when using the |identify| :sup:`Identify Features`"
+" tool. This is a handy way to return features from only layers that are of "
+"interest to you."
+msgstr ""
+"En :menuselection:`Proyecto --> Propiedades... --> Fuentes de Datos --> "
+"Capacidades de Capa`, desmarque la columna :guilabel:`Identificable` junto a"
+" una capa para evitar que sea consultada cuando utilice la herramienta "
+"|identify| :sup:`Identificar objetos espaciales`. Esta es una forma práctica"
+" de devolver objetos espaciales sólo de las capas que sean de su interés."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1184
 msgid "Feature information"
 msgstr "Información de Entidad"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1186
+msgid ""
+"When you identify a data in the map canvas, the :guilabel:`Identify Results`"
+" dialog will list information about the items clicked (or hovered over, "
+"depending on the tool in use). The default view is a tree view in which the "
+"first item is the name of the layer and its children are its identified "
+"feature(s). Each feature is described by the name of a field along with its "
+"value. This field is the one set in :menuselection:`Layer Properties --> "
+"Display`. All the other information about the feature follows."
+msgstr ""
+"Al identificar un dato en el lienzo del mapa, el cuadro de diálogo "
+":guilabel:`Identificar resultados` mostrará información sobre los elementos "
+"en los que se ha hecho clic (o sobre los que se ha pasado el ratón, "
+"dependiendo de la herramienta utilizada). La vista predeterminada es una "
+"vista de árbol en la que el primer elemento es el nombre de la capa y sus "
+"hijos son su(s) obejto(s) espacial(es) identificado(s). Cada objeto espacial"
+" se describe mediante el nombre de un campo y su valor. Este campo es el "
+"establecido en :menuselection:`Propiedades de la capa --> Mostrar`. El resto"
+" de la información sobre el objeto espacial viene a continuación."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1194
+msgid ""
+"The feature information displayed by the identify tool will depend on the "
+"type of layer you have selected, whether it is a vector layer (including "
+"vector tiles or point cloud data) or raster layer. If your layer is raster, "
+"clicking on a location on the map canvas with identify tool will highlight "
+"the identified raster pixel. The Identify Results dialog can be customized "
+"to display custom fields, but by default it will display the following "
+"information:"
+msgstr ""
+"La información de objeto espacial mostrada por la herramienta de "
+"identificación dependerá del tipo de capa que haya seleccionado, ya sea una "
+"capa vectorial (incluidos mosaicos vectoriales o datos de nubes de puntos) o"
+" una capa ráster. Si su capa es ráster, al hacer clic en una ubicación del "
+"lienzo del mapa con la herramienta de identificación se resaltará el píxel "
+"ráster identificado. El cuadro de diálogo Identificar resultados puede "
+"personalizarse para mostrar campos personalizados, pero por omisión mostrará"
+" la siguiente información:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1203
 msgid "The feature :ref:`display name <maptips>`;"
@@ -3086,6 +3576,10 @@ msgstr ""
 "Se puede hacer click en los enlaces de los atributos de la función desde el "
 "panel :guilabel:`Identificar resultados` y se abrirá en su navegador web "
 "predeterminado."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1248
+msgid "Results contextual menu"
+msgstr "Menú contextual de resultados"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1250
 msgid ""
@@ -3656,6 +4150,17 @@ msgstr ""
 msgid "Metadata load/save options"
 msgstr "Opciones de carga/guardado de metadatos"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1500
+msgid ""
+"The \"Default\" location used by :guilabel:`Save to Default Location` and "
+":guilabel:`Restore from Default Location` changes depending on the "
+"underlying data source and on its configuration:"
+msgstr ""
+"La ubicación \"Predeterminada\" utilizada por :guilabel:`Guardar en "
+"Ubicación Predeterminada` y :guilabel:`Restaurar desde Ubicación "
+"Predeterminada` cambia dependiendo de la fuente de datos subyacente y de su "
+"configuración:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1506
 msgid ""
 "For PostgreSQL data sources if the configuration option :guilabel:`Allow "
@@ -3667,6 +4172,15 @@ msgstr ""
 "datos` está marcada los metadatos se almacenan dentro de una tabla dedicada "
 "en la base de datos."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1511
+msgid ""
+"For GeoPackage data sources :guilabel:`Save to Default Location` always "
+"saves the metadata in the internal metadata tables of the GeoPackage."
+msgstr ""
+"Para fuentes de datos GeoPackage :guilabel:`Guardar en Ubicación "
+"Predeterminada` siempre guarda los metadatos en las tablas de metadatos "
+"internas del GeoPackage."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1514
 msgid ""
 "When metadata are saved into the internal tables of PostgreSQL or GeoPackage"
@@ -3677,6 +4191,23 @@ msgstr ""
 "GeoPackage pueden llegar a estar disponibles para búsquedas y filtrado en el"
 " navegador y en el panel :ref:`búsqueda de metadatos de capa "
 "<layer_metadata_search_panel>`."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1518
+msgid ""
+"For all other file based data sources :guilabel:`Save to Default Location` "
+"saves the metadata in a :file:`.qmd` file alongside the file."
+msgstr ""
+"Para el resto de fuentes de datos basadas en ficheros :guilabel:`Guardar en "
+"ubicación Predeterminada` guarda los metadatos en un fichero :file:`.qmd` "
+"junto al fichero."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1521
+msgid ""
+"In all other cases :guilabel:`Save to Default Location` saves the metadata "
+"in a local :file:`.sqlite` database."
+msgstr ""
+"En todos los demás casos :guilabel:`Guardar en ubicación Predeterminada` "
+"guarda los metadatos en una base de datos local :file:`.sqlite`."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1528
 msgid "Layer notes"
@@ -4393,6 +4924,48 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:1844
 msgid "Pressing the arrow will provide you with a menu to:"
 msgstr "Presionar la flecha le proporcionará un menú para:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1846
+msgid ""
+":guilabel:`Select File…`, to load the file from the file system. The file is"
+" identified through the file path and QGIS needs to resolve the path in "
+"order to display the corresponding image"
+msgstr ""
+":guilabel:`Seleccionar Archivo...`, para cargar el archivo desde el sistema "
+"de archivos. El archivo se identifica a través de la ruta del archivo y QGIS"
+" necesita resolver la ruta para mostrar la imagen correspondiente."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1848
+msgid ""
+":guilabel:`From URL…`, to load the file from a remote URL. As above, the "
+"image will only be loaded on successful retrieval of the remote resource"
+msgstr ""
+":guilabel:`Desde URL...`, para cargar el archivo desde una URL remota. Como "
+"en el caso anterior, la imagen sólo se cargará cuando se recupere "
+"correctamente el recurso remoto."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1850
+msgid ""
+":guilabel:`Embed File…`, to embed the file inside the current project, style"
+" database, or print layout template. The file is then always rendered as "
+"part of the item. This is a convenient way to create self-contained projects"
+" with custom symbols which can be easily shared amongst different users and "
+"installations of QGIS."
+msgstr ""
+":guilabel:`Incorporar archivo...`, para incrustar el archivo dentro del "
+"proyecto actual, la base de datos de estilos o la plantilla de diseño de "
+"impresión. El archivo siempre se muestra como parte del elemento. Esta es "
+"una forma conveniente de crear proyectos autónomos con símbolos "
+"personalizados que pueden ser fácilmente compartidos entre diferentes "
+"usuarios e instalaciones de QGIS."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1855
+msgid ""
+":guilabel:`Extract Embedded File…`, to extract the embedded file from the "
+"widget and save it on disk."
+msgstr ""
+":guilabel:`Extraer archivo incrustado...`, para extraer el archivo "
+"incrustado del widget y guardarlo en disco."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1861
 msgid "Visibility Scale Selector"
@@ -5148,6 +5721,14 @@ msgstr ""
 ":guilabel:`Descripción ...` que indica si la opción está habilitada, qué "
 "entrada se espera, el tipo de entrada válido y la definición actual. Al "
 "pasar el cursor sobre el widget también aparece esta información."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2157
+msgid ""
+":guilabel:`Store data in the project`: a button allowing the property to be "
+"stored using the :ref:`vector_auxiliary_storage` mechanism."
+msgstr ""
+":guilabel:`Almacenar datos en el proyecto`: un botón que permite almacenar "
+"la propiedad utilizando el mecanismo :ref:`vector_auxiliary_storage`."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2159
 msgid ""

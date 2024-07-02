@@ -8,6 +8,8 @@
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
 # Joern G <j.gutzeit@umwelt-it.de>, 2024
+# stefan wolff <wolff@mellum.de>, 2024
+# Andreas Kaufmann, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-11 01:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
+"Last-Translator: Andreas Kaufmann, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,46 +37,498 @@ msgstr ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. Diese Seite ist aktuell zu  |translation progress| übersetzt."
 
+#: ../../docs/training_manual/basic_map/preparation.rst:2
+msgid "Lesson: Adding your first layers"
+msgstr "Lektion: Hinzufügen der ersten Layer"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:4
+msgid ""
+"We will start the application, and create a basic map to use for examples "
+"and exercises."
+msgstr ""
+"Wir werden die Anwendung starten und eine grundlegende Karte erstellen, die "
+"wir für Beispiele und Übungen verwenden."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:7
+msgid "**The goal for this lesson:** To get started with an example map."
+msgstr "**Das Ziel dieser Lektion:** Eine Beispielkarte erstellen"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:9
+msgid ""
+"Before starting this exercise, QGIS must be installed on your computer. "
+"Also, you should have downloaded the :ref:`sample data <data_downloadlink>` "
+"to use."
+msgstr ""
+"Bevor Sie mit dieser Übung beginnen, muss QGIS auf Ihrem Computer "
+"installiert sein. Außerdem sollten Sie die :ref:`sample data 1` zur "
+"Verwendung heruntergeladen haben."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:13
+msgid ""
+"Launch QGIS from its desktop shortcut, menu item, etc., depending on how you"
+" configured its installation."
+msgstr ""
+"Starten Sie QGIS über die Desktop-Verknüpfung, den Menüpunkt usw., je "
+"nachdem, wie Sie die Installation konfiguriert haben."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:16
+msgid ""
+"The screenshots for this course were taken in QGIS 3.4 running on Linux. "
+"Depending on your setup, the screens you encounter may well appear somewhat "
+"different. However, all the same buttons will still be available, and the "
+"instructions will work on any OS. You will need QGIS 3.4 (the latest version"
+" at time of writing) to use this course."
+msgstr ""
+"Die Bildschirmfotos für diesen Kurs wurden mit QGIS 3.4 unter Linux "
+"aufgenommen. Abhängig von Ihrer Konfiguration können die Bildschirme, die "
+"Sie sehen, etwas anders aussehen. Alle Schaltflächen sind jedoch weiterhin "
+"verfügbar, und die Anweisungen funktionieren auf jedem Betriebssystem. Sie "
+"benötigen QGIS 3.4 (die neueste Version zum Zeitpunkt der Erstellung), um "
+"diesen Kurs zu nutzen."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:22
+msgid "Let's get started right away!"
+msgstr "Fangen wir gleich an!"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:27
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Prepare a map"
+msgstr ":abbr:`★☆☆ (Grundstufe)` Mitmachen: Eine Karte vorbereiten"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:29
+msgid "Open QGIS. You will have a new, blank map."
+msgstr "Öffnen Sie QGIS. Sie erhalten eine neue, leere Karte."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:35
+msgid ""
+"The :guilabel:`Data Source Manager` dialog allows you to choose the data to "
+"load depending on the data type. We'll use it to load our dataset: click the"
+" |dataSourceManager| :sup:`Open Data Source Manager` button."
+msgstr ""
+"Im Dialogfeld :guilabel:`Data Source Manager` können Sie die zu ladenden "
+"Daten je nach Datentyp auswählen. Wir verwenden es, um unseren Datensatz zu "
+"laden: Klicken sie den |dataSourceManager| :sup:`Open Data Source Manager` "
+"Knopf."
+
 #: ../../docs/training_manual/basic_map/preparation.rst:269
 msgid "dataSourceManager"
 msgstr "dataSourceManager"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:39
+msgid ""
+"If you can't find the icon, check that the :guilabel:`Data Source Manager` "
+"toolbar is enabled in the :menuselection:`View --> Toolbars` menu."
+msgstr ""
+"Wenn Sie das Symbol nicht finden können, überprüfen Sie, ob die Symbolleiste"
+" :guilabel:`Datenquellenmanager` im Menü :menuselection:`Ansicht --> "
+"Symbolleisten` aktiviert ist."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:46
+msgid "Load the :file:`protected_areas.shp` vector dataset:"
+msgstr "Laden Sie den Vektordatensatz :file:`protected_areas.shp`:"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:48
+msgid "Click on the :guilabel:`Vector` tab."
+msgstr "Klicken Sie auf den Reiter :guilabel:`Vektor`."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:49
+msgid "Enable the |radioButtonOn|:guilabel:`File` source type."
+msgstr "Aktivieren Sie den Quellentyp |radioButtonOn|:guilabel:`File`."
 
 #: ../../docs/training_manual/basic_map/preparation.rst:283
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:50
+msgid ""
+"Press the :guilabel:`...` button next to :guilabel:`Vector Dataset(s)`."
+msgstr ""
+"Drücken Sie die Schaltfläche :guilabel:`...` neben "
+":guilabel:`Vektordatensatz(e)`."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:51
+msgid ""
+"Select the :file:`exercise_data/shapefile/protected_areas.shp` file in your "
+"training directory."
+msgstr ""
+"Wählen Sie die Datei :file:`exercise_data/shapefile/protected_areas.shp` in "
+"Ihrem Trainingsverzeichnis."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:53
+msgid ""
+"Click :guilabel:`Open`. You will see the original dialog, with the file path"
+" filled in."
+msgstr ""
+"Klicken Sie auf :guilabel:`Öffnen`. Sie sehen das ursprüngliche Dialogfeld, "
+"in das der Dateipfad eingegeben wurde."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:59
+msgid ""
+"Click :guilabel:`Add` here as well. The data you specified will now load: "
+"you can see a ``protected_areas`` item in the :guilabel:`Layers` panel "
+"(bottom left) with its features shown in the main map canvas."
+msgstr ""
+"Klicken Sie auch hier auf :guilabel:`Hinzufügen`. Die Daten, die Sie "
+"angegeben haben, werden nun geladen: Sie können ein Element "
+"``protected_areas`` im :guilabel:`Layers`-Panel (unten links) sehen, dessen "
+"Merkmale in der Hauptkarte angezeigt werden."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:67
+msgid ""
+"Congratulations! You now have a basic map. Now would be a good time to save "
+"your work."
+msgstr ""
+"Herzlichen Glückwunsch! Sie haben jetzt eine Grundkarte. Jetzt wäre ein "
+"guter Zeitpunkt, um Ihre Arbeit zu speichern."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:70
+msgid "Click on the :guilabel:`Save As` button: |fileSaveAs|"
+msgstr ""
+"Klicken Sie auf die Schaltfläche :guilabel:`Speichern unter`: |fileSaveAs|"
+
 #: ../../docs/training_manual/basic_map/preparation.rst:275
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:71
+msgid ""
+"Save the map under a :file:`solution` folder next to :file:`exercise_data` "
+"and call it :file:`basic_map.qgz`."
+msgstr ""
+"Speichern Sie die Karte in einem Ordner :file:`solution` neben "
+":file:`exercise_data` und nennen Sie sie :file:`basic_map.qgz`."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:77
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
+msgstr ":abbr:`★☆☆ (Grundstufe)` Probieren Sie es selbst:"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:79
+msgid ""
+"Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp` "
+"layers from the same folder (:file:`exercise_data/shapefile`) to the map."
+msgstr ""
+"Wiederholen Sie die obigen Schritte, um die Layer :file:`places.shp` und "
+":file:`rivers.shp` aus demselben Ordner (:file:`exercise_data/shapefile`) "
+"zur Karte hinzuzufügen."
 
 #: ../../docs/training_manual/basic_map/preparation.rst:82
 #: ../../docs/training_manual/basic_map/preparation.rst:197
 msgid "Answer"
 msgstr "Answer"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:85
+msgid ""
+"In the main area of the dialog you should see many shapes with different "
+"colors. Each shape belongs to a layer you can identify by its color in the "
+"left panel (your colors may be different from the ones in "
+":numref:`figure_basic_map` below):"
+msgstr ""
+"Im Hauptbereich des Dialogs sollten Sie viele Formen mit unterschiedlichen "
+"Farben sehen. Jede Form gehört zu einer Ebene, die Sie anhand ihrer Farbe im"
+" linken Bereich erkennen können (Ihre Farben können sich von denen in "
+":numref:`figure_basic_map` unten unterscheiden):"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:94
+msgid "A basic map"
+msgstr "Eine Grundkarte"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:99
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Loading vector data from a "
+"GeoPackage Database"
+msgstr ""
+":abbr:`★☆☆ (Grundstufe)` Mitmachen: Vektor Daten aus einer GeoPackage "
+"Datenbank laden."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:101
+msgid ""
+"Databases allow you to store a large volume of associated data in one file. "
+"You may already be familiar with a database management system (DBMS) such as"
+" Libreoffice Base or MS Access. GIS applications can also make use of "
+"databases. GIS-specific DBMSes (such as PostGIS) have extra functions, "
+"because they need to handle spatial data."
+msgstr ""
+"Datenbanken ermöglichen es Ihnen, eine große Menge zusammengehöriger Daten "
+"in einer Datei zu speichern. Vielleicht sind Sie bereits mit einem "
+"Datenbankmanagementsystem (DBMS) wie Libreoffice Base oder MS Access "
+"vertraut. Auch GIS-Anwendungen können auf Datenbanken zurückgreifen. GIS-"
+"spezifische DBMS (wie PostGIS) haben zusätzliche Funktionen, da sie "
+"räumliche Daten verarbeiten müssen."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:107
+msgid ""
+"The `GeoPackage <https://www.geopackage.org/>`_ open format is a container "
+"that allows you to store GIS data (layers) in a single file. Unlike the ESRI"
+" Shapefile format (e.g. the :file:`protected_areas.shp` dataset you loaded "
+"earlier), a single GeoPackage file can contain various data (both vector and"
+" raster data) in different coordinate reference systems, as well as tables "
+"without spatial information; all these features allow you to share data "
+"easily and avoid file duplication."
+msgstr ""
+"Das offene Format `GeoPackage <https://www.geopackage.org/>`_ ist ein "
+"Container, der es Ihnen ermöglicht, GIS-Daten (Layer) in einer einzigen "
+"Datei zu speichern. Im Gegensatz zum ESRI Shapefile-Format (z. B. der zuvor "
+"geladene Datensatz :file:`protected_areas.shp`) kann eine einzelne "
+"GeoPackage-Datei verschiedene Daten (sowohl Vektor- als auch Rasterdaten) in"
+" verschiedenen Koordinatenreferenzsystemen sowie Tabellen ohne räumliche "
+"Informationen enthalten; all diese Funktionen ermöglichen eine einfache "
+"gemeinsame Nutzung von Daten und die Vermeidung von Dateiduplikaten."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:115
+msgid ""
+"In order to load a layer from a GeoPackage, you will first need to create "
+"the connection to it:"
+msgstr ""
+"Um einen Layer aus einem GeoPackage zu laden, müssen Sie zunächst die "
+"Verbindung zu diesem herstellen:"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:118
+msgid ""
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button."
+msgstr ""
+"Klicken Sie auf die Schaltfläche |dataSourceManager| "
+":sup:`Datenquellenverwaltung öffnen`."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:119
+msgid ""
+"On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab."
+msgstr ""
+"Klicken Sie auf der linken Seite auf den Reiter |newGeoPackageLayer| "
+":guilabel:`GeoPackage`."
+
 #: ../../docs/training_manual/basic_map/preparation.rst:279
 msgid "newGeoPackageLayer"
 msgstr "newGeoPackageLayer"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:120
+msgid ""
+"Click on the :guilabel:`New` button and browse to the "
+":file:`training_data.gpkg` file in the :file:`exercise_data` folder you "
+"downloaded before."
+msgstr ""
+"Klicken Sie auf die Schaltfläche :guilabel:`Neu` und suchen Sie die Datei "
+":file:`training_data.gpkg` im Ordner :file:`exercise_data`, den Sie zuvor "
+"heruntergeladen haben."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:122
+msgid ""
+"Select the file and press :guilabel:`Open`. The file path is now added to "
+"the Geopackage connections list, and appears in the drop-down menu."
+msgstr ""
+"Wählen Sie die Datei aus und drücken Sie :guilabel:`Öffnen`. Der Dateipfad "
+"wird nun zur Liste der Geopaketverbindungen hinzugefügt und erscheint im "
+"Dropdown-Menü."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:125
+msgid "You are now ready to add any layer from this GeoPackage to QGIS."
+msgstr ""
+"Sie sind nun bereit, einen beliebigen Layer aus diesem GeoPackage zu QGIS "
+"hinzuzufügen."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:127
+msgid ""
+"Click on the :guilabel:`Connect` button. In the central part of the window "
+"you should now see the list of all the layers contained in the GeoPackage "
+"file."
+msgstr ""
+"Klicken Sie auf die Schaltfläche :guilabel:`Verbinden`. Im mittleren Teil "
+"des Fensters sollten Sie nun die Liste aller in der GeoPackage-Datei "
+"enthaltenen Layer sehen."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:130
+msgid ""
+"Select the :guilabel:`roads` layer and click on the :guilabel:`Add` button."
+msgstr ""
+"Wählen Sie den Layer :guilabel:`roads` und klicken Sie auf die Schaltfläche "
+":guilabel:`Hinzufügen`."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:135
+msgid ""
+"A :guilabel:`roads` layer is added to the :guilabel:`Layers` panel with "
+"features displayed on the map canvas."
+msgstr ""
+"Eine :guilabel:`roads`-Ebene wird zum :guilabel:`Layers`-Panel hinzugefügt, "
+"und die Merkmale werden auf der Karte angezeigt."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:137
+msgid "Click on :guilabel:`Close`."
+msgstr "Klicken Sie auf :guilabel:`Schließen`."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:139
+msgid "Congratulations! You have loaded the first layer from a GeoPackage."
+msgstr ""
+"Herzlichen Glückwunsch! Sie haben den ersten Layer aus einem GeoPackage "
+"geladen."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:145
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Loading vector data from a "
+"SpatiaLite Database with the Browser"
+msgstr ""
+":abbr:`★☆☆ (Grundstufe)` Mitmachen: Laden von Vektordaten aus einer "
+"SpatiaLite Datenbank mit dem Browser"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:147
+msgid ""
+"QGIS provides access to many other database formats. Like GeoPackage, the "
+"SpatiaLite database format is an extension of the SQLite library. And adding"
+" a layer from a SpatiaLite provider follows the same rules as described "
+"above: Create the connection --> Enable it --> Add the layer(s)."
+msgstr ""
+"QGIS bietet Zugang zu vielen anderen Datenbankformaten. Wie GeoPackage ist "
+"auch das Datenbankformat SpatiaLite eine Erweiterung der SQLite-Bibliothek. "
+"Das Hinzufügen eines Layers von einem SpatiaLite-Anbieter folgt den gleichen"
+" Regeln wie oben beschrieben: Erstellen Sie die Verbindung --> Aktivieren "
+"Sie sie --> Fügen Sie die Layer hinzu."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:152
+msgid ""
+"While this is one way to add SpatiaLite data to your map, let's explore "
+"another powerful way to add data: the :guilabel:`Browser`."
+msgstr ""
+"Während dies eine Möglichkeit ist, SpatiaLite-Daten zu Ihrer Karte "
+"hinzuzufügen, lassen Sie uns eine andere leistungsfähige Möglichkeit zum "
+"Hinzufügen von Daten erkunden: den :guilabel:`Browser`."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:156
+msgid ""
+"Click the |dataSourceManager| icon to open the :guilabel:`Data Source "
+"Manager` window."
+msgstr ""
+"Klicken Sie auf die Schaltfläche |dataSourceManager| um das Fenster "
+":guildlabe:`Datenquellenverwaltung` zu öffnen."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:158
+msgid "Click on the |fileOpen| :guilabel:`Browser` tab."
+msgstr "Klicken Sie auf die Registerkarte |fileOpen| :guilabel:`Browser`."
 
 #: ../../docs/training_manual/basic_map/preparation.rst:273
 msgid "fileOpen"
 msgstr "fileOpen"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:159
+msgid ""
+"In this tab you can see all the storage disks connected to your computer as "
+"well as entries for most of the tabs in the left. These allow quick access "
+"to connected databases or folders."
+msgstr ""
+"Auf dieser Registerkarte sehen Sie alle an Ihren Computer angeschlossenen "
+"Speichermedien sowie Einträge für die meisten der Registerkarten auf der "
+"linken Seite. Diese ermöglichen den schnellen Zugriff auf verbundene "
+"Datenbanken oder Ordner."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:163
+msgid ""
+"For example, click on the drop-down icon next to the |geoPackage| "
+":guilabel:`GeoPackage` entry. You'll see the :file:`training-data.gpkg` file"
+" we previously connected to (and its layers, if expanded)."
+msgstr ""
+"Klicken Sie zum Beispiel auf das Dropdown-Symbol neben dem Eintrag "
+"|geoPackage| :guilabel:`GeoPackage`. Sie sehen dann die Datei "
+":file:`training-data.gpkg`, mit der wir zuvor eine Verbindung hergestellt "
+"haben (und deren Layer, falls erweitert)."
+
 #: ../../docs/training_manual/basic_map/preparation.rst:277
 msgid "geoPackage"
 msgstr "geoPackage"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:166
+msgid ""
+"Right-click the |spatialite| :guilabel:`SpatiaLite` entry and select "
+":guilabel:`New Connection...`."
+msgstr ""
+"Klicken Sie mit der rechten Maustaste auf den Eintrag |spatialite| "
+":guilabel:`SpatiaLite` und wählen Sie :guilabel:`Neue Verbindung...`."
 
 #: ../../docs/training_manual/basic_map/preparation.rst:285
 msgid "spatialite"
 msgstr "spatialite"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:168
+msgid ""
+"Navigate to the :file:`exercise_data` folder, select the "
+":file:`landuse.sqlite` file and click :guilabel:`Open`."
+msgstr ""
+"Navigieren Sie zum Ordner :file:`exercise_data`, wählen Sie die Datei "
+":file:`landuse.sqlite` und klicken Sie auf :guilabel:`Öffnen`."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:171
+msgid ""
+"Notice that a |dbSchema| :guilabel:`landuse.sqlite` entry has been added "
+"under the :guilabel:`SpatiaLite` one."
+msgstr ""
+"Beachten Sie, dass ein |dbSchema| :guilabel:`landuse.sqlite` Eintrag unter "
+"dem :guilabel:`SpatiaLite` Eintrag hinzugefügt wurde."
+
 #: ../../docs/training_manual/basic_map/preparation.rst:271
 msgid "dbSchema"
 msgstr "dbSchema"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:173
+msgid "Expand the |dbSchema| :guilabel:`landuse.sqlite` entry."
+msgstr "Erweitern Sie den Eintrag |dbSchema| :guilabel:`landuse.sqlite`."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:174
+msgid ""
+"Double-click the |polygonLayer| :guilabel:`landuse` layer or select and "
+"drag-and-drop it onto the map canvas. A new layer is added to the "
+":guilabel:`Layers` panel and its features are displayed on the map canvas."
+msgstr ""
+"Doppelklicken Sie auf die Ebene |polygonLayer| :guilabel:`landuse` oder "
+"wählen Sie sie aus und ziehen Sie sie auf die Kartenfläche. Ein neuer Layer "
+"wird dem :guilabel:`Layers`-Panel hinzugefügt und dessen Merkmale werden auf"
+" der Karte angezeigt."
+
 #: ../../docs/training_manual/basic_map/preparation.rst:281
 msgid "polygonLayer"
 msgstr "polygonLayer"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:181
+msgid ""
+"Enable the :guilabel:`Browser` panel in :menuselection:`View --> Panels -->`"
+" and use it to add your data. It's a handy shortcut for the "
+":menuselection:`Data Source Manager --> Browser` tab, with the same "
+"functionality."
+msgstr ""
+"Aktivieren Sie das :guilabel:`Browser`-Panel in :menuselection:`Ansicht --> "
+"Bedienfelder -->` und verwenden Sie es, um Ihre Daten hinzuzufügen. Es ist "
+"eine praktische Abkürzung für die Registerkarte "
+":menuselection:`Datenquellenmanager --> Browser`, mit der gleichen "
+"Funktionalität."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:185
+msgid ""
+"Remember to save your project frequently! The project file doesn't contain "
+"any of the data itself, but it remembers which layers you loaded into your "
+"map."
+msgstr ""
+"Denken Sie daran, Ihr Projekt regelmäßig zu speichern! Die Projektdatei "
+"enthält keine eigentlichen Daten, aber sie speichert, welche Layer Sie in "
+"Ihre Karte geladen haben."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:189
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Load More Vector Data"
+msgstr ""
+":abbr:`★★☆ (Mittlere Stufe)` Versuchen Sie es selbst: Mehr Vektordaten laden"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:191
+msgid ""
+"Load the following datasets from the :file:`exercise_data` folder into your "
+"map using any of the methods explained above:"
+msgstr ""
+"Laden Sie die folgenden Datensätze aus dem Ordner :file:`exercise_data` in "
+"Ihre Karte, indem Sie eine der oben beschriebenen Methoden anwenden:"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:194
+msgid ":guilabel:`buildings`"
+msgstr ":guilabel:`buildings`"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:195
+msgid ":guilabel:`water`"
+msgstr ":guilabel:`water`"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:200
+msgid "Your map should have seven layers:"
+msgstr "Ihre Karte sollte sieben Layer haben:"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:202
 msgid ":guilabel:`protected_areas`"
@@ -95,3 +549,99 @@ msgstr ":guilabel:`roads`"
 #: ../../docs/training_manual/basic_map/preparation.rst:206
 msgid ":guilabel:`landuse`"
 msgstr ":guilabel:`landuse`"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:207
+msgid ":guilabel:`buildings` (taken from :file:`training_data.gpkg`) and"
+msgstr ":guilabel:`buildings` (entnommen aus :file:`training_data.gpkg`) und"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:208
+msgid ":guilabel:`water` (taken from :file:`exercise_data/shapefile`)."
+msgstr ":guilabel:`water` (entnommen aus :file:`exercise_data/shapefile`)."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:212
+msgid "Follow Along: Reordering the Layers"
+msgstr "Mitmachen: Neuordnung der Layer"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:214
+msgid ""
+"The layers in your Layers list are drawn on the map in a certain order. The "
+"layer at the bottom of the list is drawn first, and the layer at the top is "
+"drawn last. By changing the order that they are shown on the list, you can "
+"change the order they are drawn in."
+msgstr ""
+"Die Layer in Ihrer Layerliste werden in einer bestimmten Reihenfolge auf der"
+" Karte gezeichnet. Der Layer am unteren Ende der Liste wird zuerst "
+"gezeichnet und der Layer am oberen Ende wird zuletzt gezeichnet. Durch "
+"Ändern der Reihenfolge, in der sie in der Liste angezeigt werden, können Sie"
+" die Reihenfolge ändern, in der sie gezeichnet werden."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:223
+msgid ""
+"The order in which the layers have been loaded into the map is probably not "
+"logical at this stage. It's possible that the road layer is completely "
+"hidden because other layers are on top of it."
+msgstr ""
+"Die Reihenfolge, in der die Layer in die Karte geladen wurden, ist in diesem"
+" Stadium wahrscheinlich nicht logisch. Es ist möglich, dass der Layer "
+"„Straße“ komplett ausgeblendet ist, weil andere Layer über ihm liegen."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:227
+msgid "For example, this layer order..."
+msgstr "Zum Beispiel diese Layer-Reihenfolge..."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:232
+msgid ""
+"... would result in roads and places being hidden as they run *underneath* "
+"the polygons of the landuse layer."
+msgstr ""
+"... würde dazu führen, dass Straßen und Orte ausgeblendet werden, da sie "
+"*unter* den Polygonen der Landnutzungsebene verlaufen."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:235
+msgid "To resolve this problem:"
+msgstr "Um dieses Problem zu lösen:"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:237
+msgid "Click and drag on a layer in the Layers list."
+msgstr "Klicken und verschieben Sie einen Layer in der Layer-Liste."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:238
+msgid "Reorder them to look like this:"
+msgstr "Ordnen Sie sie so an, dass sie wie folgt aussehen:"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:243
+msgid ""
+"You'll see that the map now makes more sense visually, with roads and "
+"buildings appearing above the land use regions."
+msgstr ""
+"Sie werden sehen, dass die Karte jetzt visuell mehr Sinn macht, da Straßen "
+"und Gebäude über den Landnutzungsregionen erscheinen."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:248
+msgid "In Conclusion"
+msgstr "Zusammengefasst"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:250
+msgid ""
+"Now you've added all the layers you need from several different sources and "
+"created a basic map!"
+msgstr ""
+"etzt haben Sie alle benötigten Ebenen aus verschiedenen Quellen hinzugefügt "
+"und eine grundlegende Karte erstellt!"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:255
+msgid "What's Next?"
+msgstr "Was kommt als Nächstes?"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:257
+msgid ""
+"Now you're familiar with the basic function of the :guilabel:`Open Data "
+"Source Manager` button, but what about all the others? How does this "
+"interface work? Before we go on, let's take a look at some basic interaction"
+" with the QGIS interface. This is the topic of the next lesson."
+msgstr ""
+"Die grundlegende Funktion der Schaltfläche :guilabel:`Datenquellen-Manager "
+"öffnen` ist Ihnen nun bekannt, aber was ist mit all den anderen? Wie "
+"funktioniert diese Oberfläche? Bevor wir weitermachen, lassen Sie uns einen "
+"Blick auf die grundlegende Interaktion mit der QGIS-Oberfläche werfen. Dies "
+"ist das Thema der nächsten Lektion."

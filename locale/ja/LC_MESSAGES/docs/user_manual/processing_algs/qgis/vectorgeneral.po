@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1600,6 +1600,12 @@ msgstr "**Algorithm ID**: ``native:dropgeometries``"
 msgid "Execute SQL"
 msgstr "SQLの実行"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:880
+msgid ""
+"Runs a simple or complex query based only on SELECT with ``SQL`` syntax on "
+"the source layer."
+msgstr "``SQL`` の構文を持つSELECTのみに基づいて、単純または複雑なクエリをソースレイヤ上で実行します。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:883
 msgid ""
 "Input datasources are identified with ``input1``, ``input2``... ``inputN`` "
@@ -1814,6 +1820,10 @@ msgstr "エクスポートしたい入力ベクタレイヤ"
 msgid "**Symbology mode**"
 msgstr "**シンボロジーモード**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1022
+msgid "``SYMBOLOGY_MODE``"
+msgstr "``SYMBOLOGY_MODE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1026
 msgid "Type of symbology to apply to output layers. You can choose between:"
 msgstr "出力レイヤに適用するシンボロジの種類。次から選ぶことができます:"
@@ -1833,6 +1843,10 @@ msgstr "2 -- シンボルレイヤシンボロジ"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1032
 msgid "**Symbology scale**"
 msgstr "**シンボルのスケール**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1033
+msgid "``SYMBOLOGY_SCALE``"
+msgstr "``SYMBOLOGY_SCALE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1034
 msgid "[scale]"
@@ -1868,6 +1882,10 @@ msgstr "出力レイヤのCRSを選びます"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1046
 msgid "**Use layer title as name**"
 msgstr "**レイヤ名を名前に使用**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1047
+msgid "``USE_LAYER_TITLE``"
+msgstr "``USE_LAYER_TITLE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1048
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1055
@@ -1905,9 +1923,17 @@ msgstr "レイヤ名の代わりに（QGISで付けられた）レイヤタイ�
 msgid "**Force 2D**"
 msgstr "**二次元出力を強制**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1054
+msgid "``FORCE_2D``"
+msgstr "``FORCE_2D``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1059
 msgid "**Export labels as MTEXT elements**"
 msgstr "**ラベルをMTEXT要素としてエクスポートする**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1060
+msgid "``MTEXT``"
+msgstr "``MTEXT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1064
 msgid "Exports labels as MTEXT or TEXT elements"
@@ -3148,9 +3174,23 @@ msgstr "``TARGET_CRS``"
 msgid "Destination coordinate reference system"
 msgstr "変換先の座標参照系"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2242
+msgid "**Convert curved geometries to straight segments**"
+msgstr "**曲線ジオメトリを直線セグメントに変換**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2244
 msgid "|332|"
 msgstr "|332|"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2247
+msgid "``CONVERT_CURVED_GEOMETRIES``"
+msgstr "``CONVERT_CURVED_GEOMETRIES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2251
+msgid ""
+"If checked, curved geometries will be converted to straight segments in the "
+"process, avoiding potential distortion issues."
+msgstr "チェックした場合、曲線ジオメトリは直線セグメントに変換され、潜在的な歪みの問題を避けることができます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2253
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2298
@@ -3210,8 +3250,7 @@ msgid ""
 "format."
 msgstr ""
 "レイヤをサポートするデータセット形式では、オプションとしてレイヤ名パラメータにカスタム文字列を指定することができます。また、オプションとして、GDALで定義されているデータセット作成オプションやレイヤ作成オプションを指定することもできます。これに関する詳細については、その形式に関するオンラインの"
-" `GDAL documentation <https://gdal.org/drivers/vector/index.html>`_ "
-"を参照してください。"
+" `GDALドキュメント <https://gdal.org/drivers/vector/index.html>`_ を参照してください。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2339
 msgid "**Vector features**"
@@ -3272,6 +3311,10 @@ msgid ""
 "GDAL layer creation options of the output format. Separate individual "
 "options with semicolons."
 msgstr "出力ファイル形式に関するGDALレイヤ作成オプション。複数ある場合は各オプションをセミコロンで区切ります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2387
+msgid "``ACTION_ON_EXISTING_FILE``"
+msgstr "``ACTION_ON_EXISTING_FILE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2412
 msgid "Vector layer with the saved features."
@@ -3460,6 +3503,10 @@ msgstr "ディレクトリに保存します"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2637
 msgid "**Output file type**"
 msgstr "**出力ファイル型**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2640
+msgid "``FILE_TYPE``"
+msgstr "``FILE_TYPE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2643
 msgid "Default: ``gpkg`` in the dialog window"

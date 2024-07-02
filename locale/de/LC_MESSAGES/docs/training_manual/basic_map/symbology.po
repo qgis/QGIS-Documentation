@@ -8,15 +8,18 @@
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
 # Joern G <j.gutzeit@umwelt-it.de>, 2024
+# Leberkas Lover, 2024
+# stefan wolff <wolff@mellum.de>, 2024
+# Andreas Kaufmann, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-04-28 17:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
+"Last-Translator: Andreas Kaufmann, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,9 +38,229 @@ msgstr ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. Diese Seite ist aktuell zu  |translation progress| übersetzt."
 
+#: ../../docs/training_manual/basic_map/symbology.rst:2
+msgid "Lesson: Symbology"
+msgstr "Übung: Symbolisierung"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:4
+msgid ""
+"The symbology of a layer is its visual appearance on the map. The basic "
+"strength of GIS over other ways of representing data with spatial aspects is"
+" that with GIS, you have a dynamic visual representation of the data you're "
+"working with."
+msgstr ""
+"Die Symbolisierung eines Layers ist sein Aussehen auf der Karte. Der "
+"wichtigste Vorteil gegenüber anderen Methoden zur Darstellung von "
+"gegografischen Daten besteht darin, dass Sie mit GIS eine dynamische "
+"visuelle Darstellung der Daten haben, mit denen sie arbeiten."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:9
+msgid ""
+"Therefore, the visual appearance of the map (which depends on the symbology "
+"of the individual layers) is very important. The end user of the maps you "
+"produce will need to be able to easily see what the map represents. Equally "
+"as important, you need to be able to explore the data as you're working with"
+" it, and good symbology helps a lot."
+msgstr ""
+"Daher ist die visuelle Darstellung der Karte (die von der Symbolisierung der"
+" inidividuellen Layer abhängt) sehr wichtig. Der Anwender, der Ihre Karten "
+"benutzt, soll direkt eindeutig sehen, was die Karte zeigt. Ebenso müssen Sie"
+" die Daten untersuchen können, während Sie damit arbeiten. Dabei ist die "
+"richtige Symbolisierung von großer Bedeutung."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:15
+msgid ""
+"In other words, having proper symbology is not a luxury or just nice to "
+"have. In fact, it's essential for you to use a GIS properly and produce maps"
+" and information that people will be able to use."
+msgstr ""
+"Mit anderen Worten: Eine gute Symbolisierung ist kein Luxus oder nur "
+"schmückendes Beiwerk. Sie ist sogar unerlässlich, um ein GIS richtig zu "
+"benutzen, Karten zu erstellen und Informationen bereitzustellen, die "
+"Menschen nutzen können."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:19
+msgid ""
+"**The goal for this lesson:** To be able to create any symbology you want "
+"for any vector layer."
+msgstr ""
+"**Das Ziel dieser Lektion:** Jede beliebige Symbolisierung erstellen und auf"
+" jeden beliebigen Vektorlayer anwenden können."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:23
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Changing Colors"
+msgstr ":abbr:`★☆☆ (Basisniveau)` Mitmachen: Farben ändern"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:25
+msgid ""
+"To change a layer's symbology, open its :guilabel:`Layer Properties`. Let's "
+"begin by changing the color of the ``landuse`` layer."
+msgstr ""
+"Um die Symbolisierung eines Layers zu ändern, öffnen Sie dessen "
+":guilabel:`Layereigenschaften`. Beginnen wir mit dem Ändern der Farbe des ``"
+" landuse``-Layers."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:28
+msgid "Right-click on the ``landuse`` layer in the layers list."
+msgstr ""
+"Klicken Sie mit der rechten Maustaste auf den Layer ``landuse`` in der "
+"Layerliste."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:29
+msgid ""
+"Select the menu item :guilabel:`Properties...` in the menu that appears."
+msgstr ""
+"Wählen Sie den Menüeintrag :guilabel:`Eigenschaften...` im Kontextmenü aus."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:31
+msgid ""
+"By default, you can also access a layer's properties by double-clicking on "
+"the layer in the Layers list."
+msgstr ""
+"Standardmäßig können Sie die Layereigenschaften auch per Doppelklick auf den"
+" Layer in der Layerliste aufrufen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:34
+msgid ""
+"The |symbology| button at the top of the :guilabel:`Layers` panel will open "
+"the :guilabel:`Layer Styling` panel. You can use this panel to change some "
+"properties of the layer: by default, changes will be applied immediately!"
+msgstr ""
+"Die Schaltfläche |symbology| am oberen Rand des Bedienfelds "
+":guilabel:`Layer` öffnet das Bedienfeld :guilabel:`Layergestaltungsfenster "
+"öffnen`. In diesem Fenster können Sie einige Eigenschaften des Layers "
+"ändern: Standartmäßig werden Änderungen sofort angewandt."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:698
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:39
+msgid ""
+"In the :guilabel:`Layer Properties` window, select the |symbology| "
+":guilabel:`Symbology` tab:"
+msgstr ""
+"Wählen Sie im Fenster :guilabel:`Layereigenschaften` den Tab |symbology| "
+":guilabel:`Symbolisierung`:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:45
+msgid ""
+"Click the color select button next to the :guilabel:`Color` label. A "
+"standard color dialog will appear."
+msgstr ""
+"Klicken Sie auf die Farbauswahl-Schaltfläche neben dem Feld `Farbe`. Ein "
+"Standardfarbdialog wird angezeigt."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:47
+msgid "Choose a gray color and click :guilabel:`OK`."
+msgstr ""
+"Wählen Sie eine graue Farbe aus und bestätigen Sie mit :guilabel:`OK`."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:48
+msgid ""
+"Click :guilabel:`OK` again in the :guilabel:`Layer Properties` window, and "
+"you will see the color change being applied to the layer."
+msgstr ""
+"Drücken Sie im Fenster :guilabel:`Layereigenschaften` erneut :guilabel:`OK`,"
+" und Sie werden sehen, wie die Farbänderung auf den Layer angewandt wird."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:52
+#: ../../docs/training_manual/basic_map/symbology.rst:102
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
+msgstr ":abbr:`★☆☆ (Basisniveau)` Probieren Sie es selbst:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:54
+msgid ""
+"Change the color of the ``water`` layer to light blue. Try to use the "
+":guilabel:`Layer Styling` panel instead of the :guilabel:`Layer Properties` "
+"menu."
+msgstr ""
+"Ändern Sie die Farbe des ``water``-Layers auf hellblau. Probieren Sie, das "
+":guilabel:`Layergestaltungsfenster` anstelle des "
+"`Layereigenschaften`-Fensters zu benutzen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:57
+msgid "Solution"
+msgstr "Lösung"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:60
+msgid "Verify that the colors are changing as you expect them to change."
+msgstr "Überprüfen Sie, ob sich die Farben wie erwartet verändern."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:61
+msgid ""
+"It is enough to select the ``water`` layer in the legend and then click on "
+"the |symbology| :sup:`Open the Layer Styling panel` button. Change the color"
+" to one that fits the water layer."
+msgstr ""
+"Es genügt, die Ebene ``water`` in der Legende zu markieren und dann auf die "
+"Schaltfläche |symbology| :sup:`Layergestaltungsfenster öffnen`` zu klicken. "
+"Ändern Sie die Farbe in eine solche, die zum ``water``-Layer passt."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:68
+msgid ""
+"If you want to work on only one layer at a time and don't want the other "
+"layers to distract you, you can hide a layer by clicking in the checkbox "
+"next to its name in the layers list. If the box is blank, then the layer is "
+"hidden."
+msgstr ""
+"Wenn Sie jeweils nur an einem Layer arbeiten möchten und nicht wollen, dass "
+"die anderen Layer Sie ablenken, können Sie einen Layer ausblenden, indem Sie"
+" in der Layerliste auf das Kontrollkästchen neben dem Namen des Layers "
+"klicken. Wenn das Kästchen nicht ausgefüllt ist, ist der Layer ausgeblendet."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:75
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Changing Symbol Structure"
+msgstr ":abbr:`★☆☆ (Basisniveau)` Mitmachen: Symbolstruktur verändern"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:77
+msgid ""
+"This is good stuff so far, but there's more to a layer's symbology than just"
+" its color. Next we want to eliminate the lines between the different land "
+"use areas so as to make the map less visually cluttered."
+msgstr ""
+"Das ist soweit gut, aber zur Symbolisierung eines Layers gehört mehr als nur"
+" ihre Farbe. Als Nächstes wollen wir die Linien zwischen den verschiedenen "
+"landuse-Gebieten entfernen, um die Karte optisch übersichtlicher zu machen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:81
+msgid ""
+"Open the :guilabel:`Layer Properties` window for the ``landuse`` layer."
+msgstr ""
+"Öffnen Sie das :guilabel:`Layereigenschaften`-Fenster für den "
+"``landuse``-Layer."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:84
+msgid ""
+"Under the |symbology| :guilabel:`Symbology` tab, you will see the same kind "
+"of dialog as before. This time, however, you're doing more than just quickly"
+" changing the color."
+msgstr ""
+"Im Tab :guilabel:`Symbolisierung` sehen Sie die gleiche Art von Dialog wie "
+"zuvor. Diesmal geht es jedoch um mehr als nur um das Ändern der Farbe."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:87
+msgid ""
+"In the symbol layers tree, expand the :guilabel:`Fill` dropdown and select "
+"the :guilabel:`Simple fill` option."
+msgstr ""
+"Wählen Sie im Dropdown-Menü :guilabel:`Füllung` des Symbollayerbaums die "
+"Option :guilabel:`Einfache Füllung` aus."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:89
+msgid ""
+"Click on the :guilabel:`Stroke style` dropdown. At the moment, it should be "
+"showing a short line and the words :guilabel:`Solid Line`."
+msgstr ""
+"Klicken Sie auf das Dropdown-Menü :guilabel:`Strichstil`. Im Moment sollte "
+"eine kurze Linie und die Worte :guilabel:`Durchgezogene Linie` angezeigt "
+"werden."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:96
+#: ../../docs/training_manual/basic_map/symbology.rst:161
+#: ../../docs/training_manual/basic_map/symbology.rst:217
+msgid "Click :guilabel:`OK`."
+msgstr "Klicken Sie :guilabel:`OK`."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:696
 msgid "rendering"
@@ -70,3 +293,11 @@ msgstr "arrowDown"
 #: ../../docs/training_manual/basic_map/symbology.rst:636
 msgid "In QGIS:"
 msgstr "In QGIS:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:660
+msgid "In Conclusion"
+msgstr "Zusammengefasst"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:673
+msgid "What's Next?"
+msgstr "Was als nächstes?"

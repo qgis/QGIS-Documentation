@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Eric Armijo, 2024
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-08 11:43+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -274,6 +274,20 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:896
 msgid "iconView"
 msgstr "iconView"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:102
+msgid ""
+"Press the :guilabel:`Save Symbol` button to open the :guilabel:`Save New "
+"Symbol` dialog. Here, you can choose the :guilabel:`Destination` where you "
+"want to add the symbol being edited, give it a :guilabel:`Name` and add "
+":guilabel:`Tag(s)`. You also have the option to |checkbox| :sup:`Add to "
+"favorites` your new symbol."
+msgstr ""
+"Pulse el botón :guilabel:`Guardar símbolo` para abrir el cuadro de diálogo "
+":guilabel:`Guardar nuevo símbolo`. Aquí puede elegir el :guilabel:`Destino` "
+"donde desea añadir el símbolo que está editando, darle un :guilabel:`Nombre`"
+" y añadir :guilabel:`Etiqueta(s)`. También tiene la opción de marcar "
+":sup:`Añadir a favoritos` su nuevo símbolo."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:890
 msgid "checkbox"
@@ -539,6 +553,10 @@ msgstr ""
 ":guilabel:`Punto de anclaje`: definiendo el punto cuadrante sobre el símbolo"
 " a asentar como origen de colocación. Este es el punto sobre el que se "
 "aplica la :guilabel:`Compensación`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:206
+msgid "**Animated marker** (see :ref:`animated_marker`)"
+msgstr "**Marcador animado** (véase :ref:`animated_marker`)"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:207
 msgid ""
@@ -1617,6 +1635,23 @@ msgstr ""
 msgid "Parametrizable SVG"
 msgstr "SVG parametrizable"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:664
+msgid ""
+"You have the possibility to change the colors of a :guilabel:`SVG marker`. "
+"You have to add the placeholders ``param(fill)`` for fill color, "
+"``param(fill-opacity)`` for fill opacity, ``param(outline)`` and "
+"``param(outline-opacity)`` for stroke color and opacity respectively, and "
+"``param(outline-width)`` for stroke width. These placeholders can optionally"
+" be followed by a default value, e.g.:"
+msgstr ""
+"Tiene la posibilidad de cambiar los colores de un :guilabel:`marcador SVG`. "
+"Tiene que añadir los marcadores de posición ``param(fill)`` para el color de"
+" relleno, ``param(fill-opacity)`` para la opacidad de relleno, "
+"``param(outline)`` y ``param(outline-opacity)`` para el color y la opacidad "
+"del trazo respectivamente, y ``param(outline-width)`` para el ancho del "
+"trazo. Estos marcadores de posición pueden ir seguidos opcionalmente de un "
+"valor predeterminado, por ejemplo:"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:677
 msgid ""
 "More generally, SVG can be freely parametrized using ``param(param_name)``. "
@@ -1638,6 +1673,22 @@ msgstr ""
 msgid "Dynamic SVG parameters table"
 msgstr "Tabla de parámetros SVG dinámicos"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:696
+msgid ""
+"QGIS is looking for a complete SVG node. So if your parameter is within a "
+"more complex node, you need to inject the complete node with the expression."
+" For instance, ``transform=\"rotate(param(angle)\"`` will not work. Instead,"
+" you need to do ``transform=\"param(rotation)\"`` and ``rotation`` parameter"
+" will be defined with the expression ``'rotate(' || coalesce(my_field, 0) ||"
+" ')'``."
+msgstr ""
+"QGIS busca un nodo SVG completo. Así que si su parámetro se encuentra dentro"
+" de un nodo más complejo, es necesario inyectar el nodo completo con la "
+"expresión. Por ejemplo, ``transform=«rotate(param(angle)»`` no funcionará. "
+"En su lugar, necesitas hacer ``transform=«param(rotation)»`` y el parámetro "
+"``rotation`` se definirá con la expresión ``'rotate(' || coalesce(my_field, "
+"0) || ')'``."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:705
 msgid "The Geometry Generator"
 msgstr "El generador de Geometría"
@@ -1656,6 +1707,35 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:717
 msgid "Some examples:"
 msgstr "Algunos ejemplos:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:720
+msgid "Render symbol as the centroid of a feature"
+msgstr "Renderizar el símbolo como el centroide de un objeto espacial"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:726
+msgid ""
+"Visually overlap features within a 100 map units distance from a point "
+"feature, i.e generate a 100m buffer around the point"
+msgstr ""
+"Superponer visualmente los elementos situados a una distancia de 100 "
+"unidades cartográficas de un elemento puntual, es decir, generar un búfer de"
+" 100 m alrededor del punto."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:733
+msgid ""
+"Create a radial effect of points surrounding the central feature point when "
+"used as a MultiPoint geometry generator"
+msgstr ""
+"Crea un efecto radial de puntos que rodean el punto de objeto espacial "
+"central cuando se utiliza como generador de geometría MultiPunto."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:751
+msgid ""
+"Create a radial effect of points surrounding the central feature point. The "
+"number of points varies based on a field."
+msgstr ""
+"Crea un efecto radial de puntos que rodean el punto central del objeto "
+"espacial. El número de puntos varía en función de un campo."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:811
 msgid "The Vector Field Marker"
@@ -1715,3 +1795,93 @@ msgid ""
 msgstr ""
 "La magnitud del campo se puede ampliar o reducir a un tamaño apropiado para "
 "ver el campo."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:838
+msgid "Animated marker"
+msgstr "Marcador animado"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:840
+msgid ""
+"Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,"
+" :file:`.MNG`, etc. animation file to represent points on your map. You can "
+"specify:"
+msgstr ""
+"El tipo de símbolo de marcador animado le permite utilizar un archivo de "
+"animación :file:`.GIF`, :file:`.WebP`, :file:`.MNG`, etc. para representar "
+"puntos en su mapa. Puede especificar:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:844
+msgid ":guilabel:`File` path,"
+msgstr ":guilabel:`Archivo` ruta,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:845
+msgid ""
+":guilabel:`Frame rate`: number of steps that are shown per second, "
+"indicating how fast the animation is played,"
+msgstr ""
+":guilabel:`Tasa de fotogramas`: número de pasos que se muestran por segundo,"
+" indicando la velocidad a la que se reproduce la animación,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:847
+msgid ":guilabel:`Size` in any :ref:`supported unit <unit_selector>`,"
+msgstr ""
+":guilabel:`Tamaño` en cualquier :ref:`unidad admitida <unit_selector>`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:848
+msgid ":guilabel:`Opacity`,"
+msgstr ":guilabel:`Opacidad`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:849
+msgid ":guilabel:`Rotation`,"
+msgstr ":guilabel:`Rotación`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:850
+msgid ""
+":guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions from the "
+"marker position,"
+msgstr ""
+":guilabel:`Desplazamiento` en las direcciones :guilabel:`x` y :guilabel:`y` "
+"desde la posición del marcador,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:852
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`Punto de anclaje`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:854
+msgid "There are two ways to handle animated symbols:"
+msgstr "Hay dos formas de manejar los símbolos animados:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:856
+msgid ""
+"**When your map is not configured as an animation** (i.e. it's a standard "
+"QGIS project without animations), the frame for the animated markers will be"
+" determined solely by the current timestamp."
+msgstr ""
+"**Cuando su mapa no está configurado como una animación** (es decir, es un "
+"proyecto QGIS estándar sin animaciones), el marco para los marcadores "
+"animados será determinado únicamente por la marca de tiempo actual."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:866
+msgid "Animated marker when map is not configured as animation"
+msgstr "Marcador animado cuando el mapa no está configurado como animación"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:868
+msgid ""
+"**When your map is** :ref:`configured as an animation <maptimecontrol>`, the"
+" animated markers will sync with the animation's timeline. This means that "
+"animated markers will pause when the animation is paused, progress with the "
+"animation, and so forth. The map will also be redrawn according to the frame"
+" rate established for temporal animation. This mode is also applied when "
+"exporting an animation using the temporal controller."
+msgstr ""
+"**Cuando su mapa está** :ref:`configurado como una animación "
+"<maptimecontrol>`, los marcadores animados se sincronizarán con la línea de "
+"tiempo de la animación. Esto significa que los marcadores animados se "
+"pausarán cuando la animación se detenga, progresarán con la animación, etc. "
+"El mapa también se redibujará según la velocidad de fotogramas establecida "
+"para la animación temporal. Este modo también se aplica al exportar una "
+"animación utilizando el controlador temporal."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:881
+msgid "Animated marker when map is configured as animation"
+msgstr "Marcador animado cuando el mapa está configurado como animación"

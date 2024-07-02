@@ -15,14 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 11:43+0000\n"
+"POT-Creation-Date: 2024-05-19 15:55+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -626,6 +626,18 @@ msgstr ""
 " entorno actuales` y es posible filtrarlas activando |checkbox| "
 ":guilabel:`MOstrar solo las variables específicas de QGIS`."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:233
+msgid "User Profiles Settings"
+msgstr "Configuración de los perfiles de usuario"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:235
+msgid ""
+"For more information on how to manage user profiles, please read the "
+"dedicated section at :ref:`user_profiles`."
+msgstr ""
+"Para más información sobre cómo gestionar los perfiles de usuario, lea la "
+"sección dedicada en :ref:`user_profiles`."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:242
 msgid "CRS and Transforms Settings"
 msgstr "Configuración de CRS y Transformaciones"
@@ -891,7 +903,7 @@ msgstr ""
 msgid "**Definition**"
 msgstr "**Definición**"
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:373
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:371
 msgid ":guilabel:`Format`"
 msgstr ":guilabel:`Formato`"
 
@@ -903,7 +915,7 @@ msgstr "WKT (Recomendado)"
 msgid "Proj String (Legacy - Not Recommended)"
 msgstr "Cadena Proj (Legado - No Recomendado)"
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:377
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:375
 msgid ":guilabel:`Parameters`"
 msgstr ":guilabel:`Parámetros`"
 
@@ -1495,6 +1507,25 @@ msgstr ""
 "Con :guilabel:`Selección de la banda RGB`, puede definir el numero para la "
 "banda Roja, Verde y Azul. "
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:652
+msgid ""
+"The :guilabel:`Zoomed in resampling` and the :guilabel:`Zoomed out "
+"resampling` methods can be defined. For :guilabel:`Zoomed in resampling` you"
+" can choose between three resampling methods: 'Nearest neighbour', 'Bilinear"
+" (2x2 kernel)' and 'Cubic (4x4 kernel)'. For :guilabel:`Zoomed out "
+"resampling` you can choose between 'Nearest Neighbour' and 'Average'. You "
+"can also set the :guilabel:`Oversampling` value (between 0.0 and 99.99 - a "
+"large value means more work for QGIS - the default value is 2.0)."
+msgstr ""
+"Se pueden definir los métodos :guilabel:`Remuestreo con zoom` y "
+":guilabel:`Remuestreo con zoom`. Para :guilabel:`Remuestreo con zoom` se "
+"puede elegir entre tres métodos de remuestreo: 'Vecino más cercano', "
+"'Bilineal (núcleo 2x2)' y 'Cúbico (núcleo 4x4)'. Para :guilabel:`Remuestreo "
+"con zoom` puede elegir entre 'Vecino más cercano' y 'Promedio'. También "
+"puede establecer el valor de :guilabel:`Sobremuestreo` (entre 0.0 y 99.99 - "
+"un valor grande significa más trabajo para QGIS - el valor predeterminado es"
+" 2.0)."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:660
 msgid ""
 "|checkbox| :guilabel:`Early resampling`: allows to calculate the raster "
@@ -1826,6 +1857,14 @@ msgstr ""
 "`Radianes`, `Gon/gradianes`, `Minutos de arco`, `Segundos de arco`, "
 "`Giros/revoluciones`, miliradianes (definición SI) o mil (OTAN/definición "
 "militar)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:797
+msgid ""
+"Some of these options can be overridden at the :ref:`project level "
+"<measurements_ellipsoid>`."
+msgstr ""
+"Algunas de estas opciones pueden anularse a :ref:`nivel de proyecto "
+"<measurements_ellipsoid>`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:801
 msgid "**Measure Tool Copy Settings**"
@@ -2177,6 +2216,25 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:938
 msgid "Elevation settings"
 msgstr "Ajustes de elevación"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:940
+msgid ""
+"In |elevationProfile| :guilabel:`Elevation` menu, you can set a specific "
+"color to use as the :guilabel:`Background color` for :ref:`elevation "
+"profiles <label_elevation_profile_view>`. This can make the chart more "
+"readable for certain datasets, e.g. point clouds with RGB coloring, where "
+"the default background color is too similar to point colors to be easily "
+"discernable. If unchanged, the elevation profiles will continue to display "
+"using the standard system background color."
+msgstr ""
+"En el menú |elevationProfile| :guilabel:`Elevación`, puede establecer un "
+"color específico para utilizarlo como :guilabel:`Color de fondo` para los "
+":ref:`perfiles de elevación <label_elevation_profile_view>`. Esto puede "
+"hacer que el gráfico sea más legible para ciertos conjuntos de datos, por "
+"ejemplo, nubes de puntos con coloración RGB, donde el color de fondo "
+"predeterminado es demasiado similar a los colores de los puntos para ser "
+"fácilmente discernible. Si no se modifica, los perfiles de elevación "
+"seguirán mostrándose con el color de fondo estándar del sistema."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2696
 msgid "elevationProfile"
@@ -2859,6 +2917,24 @@ msgstr ""
 "(metros)` para mantener el cursor aún activo cuando el receptor se encuentre"
 " en condiciones estáticas."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1248
+msgid ""
+"Under :guilabel:`Geometry Options`, the :guilabel:`Store in M values` option"
+" allows to create geometries with M values from the inbuilt GPS logging "
+"tools. This applies to both features digitized from GPS logs and from the "
+":ref:`Log to Geopackage/SpatiaLite <gps_logging>` functionality... Options "
+"include storing timestamps (as ms since epoch), ground speed, altitudes, "
+"bearings, and accuracy components as m values."
+msgstr ""
+"En :guilabel:`Opciones de geometría`, la opción :guilabel:`Almacenar en "
+"valores M` permite crear geometrías con valores M a partir de las "
+"herramientas de registro GPS incorporadas. Esto se aplica tanto a los "
+"objetos espaciales digitalizados a partir de los registros GPS como a los "
+"obtenidos mediante funcionalidad :ref:`Acceder a Geopackage/SpatiaLite "
+"<gps_logging>` ... Las opciones incluyen el almacenamiento de marcas de "
+"tiempo (como ms desde la época), velocidad sobre el terreno, altitudes, "
+"rumbos y componentes de precisión como valores m."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1255
 msgid ":guilabel:`GPS Location Marker`"
 msgstr ":guilabel:`Marcador de Localización GPS`"
@@ -2918,6 +2994,17 @@ msgid ""
 msgstr ""
 ":guilabel:`Centrado y rotación del mapa`: define cuándo se actualiza el "
 "lienzo del mapa según el desplazamiento del usuario sobre el campo:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1272
+msgid ""
+":guilabel:`Threshold for automatic map centering`: defines the minimal "
+"offset of the GPS position from the map canvas center to trigger an "
+"automatic :ref:`map recentering <gps_recenter>` if enabled."
+msgstr ""
+":guilabel:`Umbral para el centrado automático del mapa`: define el "
+"desplazamiento mínimo de la posición GPS desde el centro del lienzo del mapa"
+" para activar un :ref:`recentrado de mapa <gps_recenter>` automático, si "
+"está habilitado."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1275
 msgid ""
@@ -3619,8 +3706,12 @@ msgstr ""
 "defecto``. Pero puede crear tantos perfiles de usuario como quiera:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1580
-msgid "Click the :guilabel:`New profile...` entry."
-msgstr "Click en la entrada :guilabel:`New profile...`."
+msgid ""
+"Click the :menuselection:`Settings --> User Profiles --> New profile...` "
+"entry."
+msgstr ""
+"Haga clic en la opción :menuselection:`Configuración --> Perfiles de usuario"
+" --> Nuevo perfil...`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1581
 msgid ""
@@ -3974,6 +4065,18 @@ msgstr ""
 "o uno existente de una lista predefinida (Clarke 1866, Clarke 1880 IGN, New "
 "International 1967, WGS 84...)."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1708
+msgid ""
+"the :guilabel:`Units for distance measurements` for length and perimeter, "
+"and the :guilabel:`Units for area measurements`. These settings which "
+"default to their corresponding :ref:`global options <global_measure_tool>` "
+"override them in the current project. They are used in:"
+msgstr ""
+"las :guilabel:`Unidades para medidas de distancia` para longitud y "
+"perímetro, y las :guilabel:`Unidades para medidas de área`. Estos ajustes "
+"que están predeterminadas a sus correspondientes :ref:`opciones globales "
+"<global_measure_tool>` prevalecen en el proyecto actual. Se utilizan en:"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1714
 msgid "Attribute table field update bar"
 msgstr "Barra de actualización de campo de tabla de atributos"
@@ -3981,6 +4084,21 @@ msgstr "Barra de actualización de campo de tabla de atributos"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1715
 msgid "Field calculator calculations"
 msgstr "Cálculos de calculadora de campo"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1716
+msgid ""
+":ref:`Identify tool <identify>` derived length, perimeter and area values"
+msgstr ""
+":ref:`Herramienta de identificación <identify>` valores derivados de "
+"longitud, perímetro y área"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1717
+msgid ":ref:`measure dialog <sec_measure>`"
+msgstr ":ref:`diálogo de medida <sec_measure>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1718
+msgid ":ref:`scale bar decoration <scalebar_decoration>`"
+msgstr ":ref:`decoración de barra de escala <scalebar_decoration>`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1722
 msgid ""
@@ -4806,6 +4924,22 @@ msgstr "Pestaña Temporal del proyecto"
 msgid "Terrain Properties"
 msgstr "Propiedades del terreno"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2102
+msgid ""
+"The |layoutItem3DMap| :guilabel:`Terrain` tab helps you configure default "
+"settings for the terrain and elevation. When any new :ref:`3d map "
+"<label_3dmapview>` is created in the project, the map will default to using "
+"the same terrain settings as are defined for the project. The project "
+"elevation settings will also be respected by the :ref:`elevation profile "
+"<label_elevation_profile_view>` tool."
+msgstr ""
+"La pestaña |layoutItem3DMap| :guilabel:`Terreno` le ayuda a configurar los "
+"parámetros predeterminados para el terreno y la elevación. Cuando un nuevo "
+":ref:`mapa 3D <label_3dmapview>` es creado en el proyecto, el mapa estará "
+"predeterminado a utilizar los mismos ajustes de terreno definidos para el "
+"proyecto. Los ajustes de elevación del proyecto también serán respetados por"
+" la herramienta :ref:`perfil de elevación <label_elevation_profile_view>`."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2720
 msgid "layoutItem3DMap"
 msgstr "layoutItem3DMap"
@@ -4862,6 +4996,18 @@ msgstr ""
 "aplica un efecto de sombreado global al mapa, basado en la elevación de "
 "todas las capas activas que tengan activadas las propiedades de elevación, "
 "incluyendo:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2134
+msgid ":ref:`raster layers <raster_elevation>`"
+msgstr ":ref:`capas ráster <raster_elevation>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2135
+msgid ":ref:`mesh layers <meshelevation>`"
+msgstr ":ref:`capas malla <meshelevation>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2136
+msgid ":ref:`point cloud layers <point_clouds_elevation>`"
+msgstr ":ref:`capas de nubes de puntos <point_clouds_elevation>`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2138
 msgid ""

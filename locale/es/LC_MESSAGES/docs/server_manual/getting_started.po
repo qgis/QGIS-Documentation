@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Ever Medina <ever.medinaftal@gmail.com>, 2024
+# Eric Armijo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2024\n"
+"Last-Translator: Eric Armijo, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -671,6 +672,17 @@ msgid "Apache is not directly installed as a service on Windows. You need to:"
 msgstr ""
 "Apache no se instala directamente como servicio en Windows. Es necesario:"
 
+#: ../../docs/server_manual/getting_started.rst:638
+msgid ""
+"Right-click the :file:`OSGeo4W.bat` file at the root of the "
+":file:`C:\\\\OSGeo4W\\\\` folder (if the default installation paths have "
+"been used) and select :guilabel:`Run as administrator`"
+msgstr ""
+"Haga clic con el botón derecho del ratón en el archivo :file:`OSGeo4W.bat` "
+"situado en la raíz de la carpeta :file:`C:`OSGeo4W\\\\` (si se han utilizado"
+" las rutas de instalación predeterminadas) y seleccione :guilabel:`Ejecutar "
+"como administrador`."
+
 #: ../../docs/server_manual/getting_started.rst:641
 msgid "In the console, run ``apache-install.bat``, which will output"
 msgstr ""
@@ -684,6 +696,14 @@ msgstr ""
 "El servicio se ha iniciado como se puede observar en el informe. Pero el "
 "servidor puede fallar en su ejecución debido a la falta de configuración "
 "personalizada."
+
+#: ../../docs/server_manual/getting_started.rst:654
+msgid ""
+"Edit the :file:`C:\\\\OSGeo4w\\\\apps\\\\apache\\\\conf\\\\httpd.conf` file "
+"with the following changes (various other combinations are possible):"
+msgstr ""
+"Edite el archivo :file:`C:\\OSGeo4w\\\\apps\\apache\\conf\\httpd.conf` con "
+"los siguientes cambios (otras combinaciones son posibles):"
 
 #: ../../docs/server_manual/getting_started.rst:661
 msgid "Purpose"
@@ -900,6 +920,24 @@ msgstr "Capacidades WMS"
 msgid "Definitions in the WMS tab"
 msgstr "Definiciones en la pestaña WMS"
 
+#: ../../docs/server_manual/getting_started.rst:856
+msgid ""
+"By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict in "
+"which coordinate reference systems (CRS) QGIS Server will offer to render "
+"maps. It is recommended that you restrict the offered CRS as this reduces "
+"the size of the WMS GetCapabilities response. Use the |symbologyAdd| button "
+"below to select those CRSs from the Coordinate Reference System Selector, or"
+" click :guilabel:`Used` to add the CRSs used in the QGIS project to the "
+"list."
+msgstr ""
+"Marcando |checkbox| :guilabel:`Restricciones SRC`, puede restringir en qué "
+"sistemas de referencia de coordenadas (SRC) ofrecerá QGIS Server la "
+"representación de mapas. Se recomienda restringir los CRS ofrecidos, ya que "
+"esto reduce el tamaño de la respuesta GetCapabilities de WMS. Utilice el "
+"botón |symbologyAdd| para seleccionar los CRS del selector de sistemas de "
+"referencia de coordenadas, o haga clic en :guilabel:`Usado` para añadir a la"
+" lista los CRS utilizados en el proyecto QGIS."
+
 #: ../../docs/server_manual/getting_started.rst:1058
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
@@ -995,6 +1033,21 @@ msgstr ""
 "mostrando la geometría de una característica (por ejemplo, para resaltar la "
 "entidad). Debe marcar la casilla de verificación |checkbox| "
 ":guilabel:`Segmentize feature info geometry` para activar la opción."
+
+#: ../../docs/server_manual/getting_started.rst:903
+msgid ""
+"When a layer group is passed to ``GetLegendGraphic`` request, all of its "
+"leaf layers are added to the legend picture (however without the groups' "
+"labels). Check the |checkbox| :guilabel:`Add layer groups in "
+"GetLegendGraphic` option if you want to also insert the layer groups (and "
+"subgroups) names into the layer tree, just like in QGIS Desktop legend."
+msgstr ""
+"Cuando se pasa un grupo de capas a la petición ``GetLegendGraphic``, todas "
+"sus capas hoja se añaden a la imagen de la leyenda (sin embargo, sin las "
+"etiquetas de los grupos). Marque la casilla |checkbox| :guilabel:`Añadir "
+"grupos de capas en GetLegendGraphic` si desea insertar también los nombres "
+"de los grupos de capas (y subgrupos) en el árbol de capas, al igual que en "
+"la leyenda de QGIS Desktop."
 
 #: ../../docs/server_manual/getting_started.rst:909
 msgid ""

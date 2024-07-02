@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-06 17:56+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -886,9 +886,42 @@ msgstr ":guilabel:`開く` ボタンを押し、選択したファイルを :gui
 msgid "Loading a Shapefile with open options"
 msgstr "オプション付きでシェープファイルをロードする"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:380
+msgid ""
+"Press :guilabel:`Add` to load the file in QGIS and display them in the map "
+"view. When adding vector datasets containing multiple layers, the "
+":guilabel:`Select Items to Add` dialog will appear. In this dialog, you can "
+"choose the specific layers from your dataset that you want to add. Also, "
+"under :guilabel:`Options` you can choose to:"
+msgstr ""
+":guilabel:`追加` "
+"を押すとQGISにファイルが読み込まれ、マップビューに表示されます。複数のレイヤを含んでいるベクタデータセットを追加する場合、 "
+":guilabel:`追加するアイテムを選択` "
+"ダイアログが表示されます。このダイアログでは、データセットから追加したい特定のレイヤを選択することができます。また、:guilabel:`オプション` "
+"では以下の選択ができます："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:386
+msgid "|checkbox|:guilabel:`Add layers to a group`"
+msgstr "|checkbox|:guilabel:`グループにレイヤを追加する`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1657
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:387
+msgid "|checkbox|:guilabel:`Show system and internal tables`"
+msgstr "|checkbox|:guilabel:`システム内部テーブルを表示`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:388
+msgid "|checkbox|:guilabel:`Show empty vector layers`."
+msgstr "|checkbox|:guilabel:`空のベクタレイヤを表示`。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:390
+msgid ""
+":numref:`figure_vector_loaded` shows QGIS after loading the "
+":file:`alaska.shp` file."
+msgstr ""
+":numref:`figure_vector_loaded` は、:file:`alaska.shp` ファイルを読み込んだ後のQGISの様子です。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:397
 msgid "QGIS with Shapefile of Alaska loaded"
@@ -1453,10 +1486,50 @@ msgid ""
 msgstr ""
 ":guilabel:`DWG/DXFのインポート` ダイアログでは、図面ファイルの内容をインポートするために以下の情報を入力する必要があります："
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:662
+msgid ""
+"Input the location of the :guilabel:`Source drawing`, i.e. the DWG/DXF "
+"drawing file to import."
+msgstr ":guilabel:`ソースの図面` の場所、つまりインポートするDWG/DXF図面ファイルを入力します。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:664
 msgid ""
 "Specify the coordinate reference system of the data in the drawing file."
 msgstr "図面ファイルのデータの座標参照系を指定します。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:665
+msgid ""
+"Input the location of the :guilabel:`Target package`, i.e. the GeoPackage "
+"file that will store the data. If an existing file is provided, then it will"
+" be overwritten."
+msgstr ""
+":guilabel:`ターゲットパッケージ` "
+"、つまりデータが保存されるGeoPackageファイルの場所を入力します。既存のファイルを指定した場合には、ファイルは上書きされます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:668
+msgid "Choose how to import ``blocks`` with the dedicated combobox:"
+msgstr "専用のコンボボックスで ``ブロック`` のインポート方法を選択します:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:670
+msgid ""
+":guilabel:`Expand Block Geometries`: imports the blocks in the drawing file "
+"as normal elements."
+msgstr ":guilabel:`ブロックジオメトリを展開`: 描画ファイル内のブロックを通常の要素としてインポートします。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:671
+msgid ""
+":guilabel:`Expand Block Geometries and Add Insert Points`: imports the "
+"blocks in the drawing file as normal elements and adds the insertion point "
+"as a point layer."
+msgstr ""
+":guilabel:`ブロックジオメトリを展開し挿入点を追加`: "
+"図面ファイルのブロックを通常の要素として読み込み、挿入点をポイントレイヤとして追加します。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:672
+msgid ""
+":guilabel:`Add Only Insert Points`: adds the blocks insertion point as a "
+"point layer."
+msgstr ":guilabel:`挿入点だけを追加`: ブロックの挿入点をポイントレイヤとして追加します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:674
 msgid ""
@@ -1465,6 +1538,16 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`カーブを使用する` をチェックすると、インポートされたレイヤを ``カーブ`` "
 "ジオメトリタイプに変換します。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:676
+msgid ""
+"Use the :guilabel:`Import` button to import the drawing into the destination"
+" GeoPackage file. The GeoPackage database will be automatically populated "
+"with the drawing file content. Depending on the size of the file, this can "
+"take some time."
+msgstr ""
+":guilabel:`インポート` "
+"ボタンを使用して、図面をGeoPackageファイルにインポートします。図面ファイルの内容がGeoPackageデータベースに自動的に追加されます。ファイルのサイズにもよりますが、これには時間がかかる場合があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:682
 msgid ""
@@ -1475,6 +1558,14 @@ msgid ""
 msgstr ""
 ":file:`.dwg` ファイルまたは :file:`.dxf` "
 "ファイルのデータがGeoPackageデータベースへとインポートされたら、ダイアログの下半分にあるフレームにインポートファイルからのレイヤのリストが表示されます。ここからQGISプロジェクトに追加したいレイヤを選択できます："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:687
+msgid ""
+"At the top, set a :guilabel:`Group name` to group the drawing files in the "
+"project. By default this is set to the filename of the source drawing file."
+msgstr ""
+"一番上に、プロジェクト内の図面ファイルをグループ化するための :guilabel:`グループ名` "
+"を設定します。デフォルトでは、これはソース図面ファイルのファイル名に設定されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:689
 msgid ""
@@ -2022,6 +2113,18 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:956
 msgid "The service file can look like this::"
 msgstr "サービスファイルは以下のようなものです::"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:970
+msgid ""
+"There are two services in the above example: ``water_service`` and "
+"``wastewater_service``. You can use these to connect from QGIS, pgAdmin, "
+"etc. by specifying only the name of the service you want to connect to "
+"(without the enclosing brackets). If you want to use the service with "
+"``psql``, you can do ``psql service=water_service``."
+msgstr ""
+"上の例には、 ``water_service`` と ``wastewater_service`` の2つのサービスがあります。 "
+"接続したいサービスの名前（囲みブラケットは除く）を指定するだけで、QGISやpgAdmin等からサービスに接続することができます。 ``psql`` "
+"でこのサービスを使用したい場合には、``psql service=water_service`` とできます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:976
 msgid ""

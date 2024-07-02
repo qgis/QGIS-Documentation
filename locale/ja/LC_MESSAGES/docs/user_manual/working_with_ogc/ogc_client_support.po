@@ -7,6 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # tomoya miyoshi, 2024
+# Mihiro Takizawa, 2024
+# mapconcierge <mapconcierge@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: tomoya miyoshi, 2024\n"
+"Last-Translator: mapconcierge <mapconcierge@gmail.com>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -276,7 +278,7 @@ msgstr "WMTSを読んだときに,  WMS-C についても考えるでしょう."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:159
 msgid "Selecting WMS/WMTS Servers"
-msgstr " WMS/WMTS サーバーを選択する"
+msgstr "WMS/WMTS サーバーを選択する"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:161
 msgid ""
@@ -335,7 +337,7 @@ msgid ""
 "Press :guilabel:`New` from the :guilabel:`Layers` tab. The :guilabel:`Create"
 " a New WMS/WMTS Connection...` dialog appears."
 msgstr ""
-":guilabel:`レイヤ` タブから :guilabel:`新規` を押します。 :guilabel:`新規WMS/ 接続を作成` "
+":guilabel:`レイヤ` タブから :guilabel:`新規` を押します。 :guilabel:`新規WMS/WMTS接続を作成...` "
 "ダイアログが表示されます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:177
@@ -346,7 +348,7 @@ msgid ""
 "Connection...` dialog."
 msgstr ""
 ":ref:`ブラウザパネル <label_browserpanel>` 内の |wms| :guilabel:`WMS/WMTS` "
-"エントリーを右クリックして、 :guilabel:`新規接続...` を選択すると、 :guilabel:`新規WMS/ 接続を作成` "
+"エントリーを右クリックして、 :guilabel:`新規接続...` を選択すると、 :guilabel:`新規WMS/WMTS接続を作成...` "
 "ダイアログが表示されます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:181
@@ -364,7 +366,7 @@ msgid ""
 ":guilabel:`Name`: A name for the connection. This name will be used in the "
 "Server Connections drop-down box so that you can distinguish it from other "
 "WMS servers."
-msgstr ":guilabel:`名前`: 接続の名前。この名前はWMSサーバーを見分けられるよう、サーバー接続ドロップダウンボックスで使われます。"
+msgstr ":guilabel:`名称`: 接続の名称。この名称はWMSサーバーを見分けられるよう、サーバー接続ドロップダウンボックスで使われます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:195
 msgid ""
@@ -375,8 +377,8 @@ msgid ""
 "``version=1.0.0`` in your URL."
 msgstr ""
 ":guilabel:`URL`: "
-"データを提供するサーバーのURL。これは解決可能なホスト名でなければなりません。telnet接続を開いたりホストにpingするときに使うものと同じように、ベースURLだけの形式です。たとえば"
-" ``request=GetCapabilities`` や ``version=1.0.0`` のようなフラグメントがURLにあってはいけません。"
+"データを提供するサーバーのURL。これは解決可能なホスト名でなければなりません。telnet接続を開いたりホストにpingするときに使うものと同じように、ベースURLだけの形式です。たとえばURLに"
+" ``request=GetCapabilities`` や ``version=1.0.0`` のようなフラグメントがあってはいけません。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:200
 msgid ""
@@ -414,6 +416,17 @@ msgid ""
 msgstr ""
 ":guilabel:`WMS DPI-Mode`: 有効なオプションは、 **すべて**, **オフ**, **QGIS**, **UMN** および "
 "**GeoServer** です"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:217
+msgid ""
+":guilabel:`WMTS server-side tile pixel ratio`:  When rendering WMTS layers, "
+"allows to scale up or down the tiles based on the device screen DPI. "
+"Available options are :guilabel:`Undefined (not scaled)`, "
+":guilabel:`Standard (96 DPI)` and :guilabel:`High (192 DPI)`."
+msgstr ""
+":guilabel:`WMTS サーバーサイドピクセル比`: "
+"WMTSレイヤをレンダリングする際に、デバイスのスクリーンDPIに基づいてタイルを拡大縮小します。有効なオプションは :guilabel:`未定義 "
+"(未スケール)`、 :guilabel:`標準 (96 dpi)`、 :guilabel:`高精細 (192 dpi)` です。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:221
 msgid ""
@@ -463,6 +476,16 @@ msgstr "|unchecked| :guilabel:`Smooth pixmap transformation`"
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:234
 msgid "Press :guilabel:`OK`"
 msgstr ":guilabel:`OK` を押します"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:236
+msgid ""
+"Once the new WMS/WMTS server connection has been created, it will be "
+"preserved for future QGIS sessions. Note that it is also possible to "
+":guilabel:`Load` the connection parameters from a :file:`.XML` file or "
+":guilabel:`Save` them to a :file:`.XML` file."
+msgstr ""
+"一度新しいWMS/WMTSサーバー接続が作成されると、将来のQGISセッションのために保存されます。接続パラメータを :file:`.XML` "
+"ファイルから :guilabel:`読み込む` ことも :file:`.XML` ファイルに :guilabel:`保存` することもできます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:243
 msgid ""
@@ -760,8 +783,8 @@ msgid ""
 "selection made. The results of the query are returned in plain text. The "
 "formatting of this text is dependent on the particular WMS server used."
 msgstr ""
-"一度WMSサーバーを追加してしまい、WMSサーバーからのすべてのレイヤが照会可能であるならば、 |identify| :sup:`識別` "
-"ツールを使用して地図キャンバス上でピクセルを選択できます。クエリが行われた各選択のためのWMSサーバーに行われます。クエリの結果はテキスト形式で返されます。このテキストの書式は、使用される特定のWMSサーバーに依存しています。"
+"一度WMSサーバーを追加し、WMSサーバーからのいずれかのレイヤが照会可能ならば、 |identify| :sup:`識別` "
+"ツールを使ってマップキャンバス上のピクセルを選択できます。選択するたびにクエリがWMSサーバーに行われます。クエリの結果はテキスト形式で返されます。このテキストの書式は、使用される特定のWMSサーバーに依存します。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:791
 msgid "identify"
@@ -794,8 +817,8 @@ msgid ""
 "layer. See the example setup of the UMN Mapserver below to support "
 "GetFeatureInfo in GML format."
 msgstr ""
-"|identify| :sup:`識別`ツールは、GML形式でWMSサーバーの応答（GetFeatureInfo）を（それはこの文脈ではQGIS "
-"GUIでの地物と呼ばれる）をサポートしています。「地物」フォーマットがサーバーによってサポートされており、選択された場合は、識別ツールの結果は、通常のベクタレイヤからのように、ベクタ地物です。単一の地物をツリーで選択された場合、それは地図で強調表示され、それがクリップボードにコピーされ、別のベクタレイヤに貼り付けできます。GML形式でGetFeatureInfoをサポートするために、以下のUMN"
+"|identify| :sup:`識別` ツールは、GML形式によるWMSサーバーの応答（GetFeatureInfo）（この文脈ではQGIS "
+"GUIでの地物と呼ばれる）をサポートしています。「地物」フォーマットがサーバーによってサポートされており、選択された場合は、識別ツールの結果は、通常のベクタレイヤからのように、ベクタ地物です。ツリーの中から単一の地物が選択された場合、それは地図で強調表示され、それがクリップボードにコピーされ、別のベクタレイヤに貼り付けできます。GML形式でGetFeatureInfoをサポートするには、以下のUMN"
 " Mapserverの設定例を参照してください。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:452
@@ -1001,6 +1024,44 @@ msgstr ""
 ":guilabel:`Start date` と :guilabel:`End date` "
 "が必須です。予想されるフォーマットは、プロバイダが連続した期間のデータを持っているかどうかに応じて、参照時間オプション（下記参照）から推測することができます。"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:543
+msgid ""
+":guilabel:`Follow project's temporal range` as defined in the project's "
+"properties dialog"
+msgstr ""
+":guilabel:`Follow project's temporal "
+"range`プロジェクトのプロパティダイアログで定義されたプロジェクトの時間的範囲に従います。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:553
+msgid ""
+"Whatever temporal data control is in use, there are some :guilabel:`WMS-T "
+"Settings` to help display the correct temporal data:"
+msgstr ""
+"どのような時間データコントロールを使用するにしても、正しい時間データを表示するための :guilabel:`WMS-T Settings` があります:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:556
+msgid ":guilabel:`Time slice mode` which can be:"
+msgstr ":guilabel:`Time slice mode`タイムスライスモードができます:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:564
+msgid ""
+":guilabel:`Ignore time components (use dates only)`: If checked, the time "
+"component of temporal queries will be discarded and only the date component "
+"will be used in server requests."
+msgstr ""
+":guilabel:`Ignore time components (use dates "
+"only)`:時間コンポーネントを無視します。チェックした場合、時系列クエリの時間コンポーネントは破棄され、日付コンポーネントのみがサーバリクエストで使用されます。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:568
+msgid ""
+"You can also |checkbox| :guilabel:`Use Specific WMS-T Reference Time` picked"
+" from times reported in the layer's capabilities. Convenient for servers "
+"which expose a non-contiguous set of date time instances (instead of a range"
+" of dates)."
+msgstr ""
+"|checkbox| :guilabel:`特定のWMS-"
+"T基準時刻を使用する`レイヤーの機能で報告された時刻から選択することもできます。(日付の範囲ではなく)連続しない日付時刻インスタンスのセットを公開するサーバーに便利です。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:576
 msgid "QGIS Server properties"
 msgstr "QGIS Serverのプロパティ"
@@ -1140,6 +1201,32 @@ msgstr ""
 msgid "WFS and WFS-T Client"
 msgstr "WFS および WFS-T クライアント"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:659
+msgid ""
+"In QGIS, a WFS layer behaves pretty much like any other vector layer. You "
+"can identify and select features, and view the attribute table. QGIS "
+"supports WFS 1.0.0, 1.1.0, 2.0 and OGC API - Features (OAPIF), including "
+"editing (through WFS-T). QGIS also supports background download and "
+"progressive rendering, on-disk caching of downloaded features and version "
+"autodetection."
+msgstr ""
+"QGISでは、WFSレイヤは他のベクタレイヤとほとんど同じように振る舞います。地物を特定して選択することや、属性テーブルを表示することができます。QGISはWFS"
+" 1.0.0、1.1.0、2.0、OGC API - Features (OAPIF)をサポートしており、編集も可能です（WFS-"
+"Tを使用）。QGISは、バックグラウンド・ダウンロードとプログレッシブ・レンダリング、ダウンロードした地物のオンディスク・キャッシュ、バージョン自動検出もサポートしています。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:666
+msgid ""
+"Layers of servers implementing `OGC API - Features - Part 4: Create, "
+"Replace, Update and Delete <https://docs.ogc.org/DRAFTS/20-002.html>`_ can "
+"be turned into editing mode to allow creating, modifying and deleting "
+"features. Note that each created/modified/deleted feature requires a "
+"dedicated network request, so performance might suffer in case of "
+"simultaneous modification of hundreds or more features at a time."
+msgstr ""
+"OGC API - Features - Part 4: Create, Replace, Update and Delete "
+"<https://docs.ogc.org/DRAFTS/20-002.html>`_ "
+"を実装しているサーバーのレイヤは、編集モードにして、地物の作成、変更、削除を行うことができます。作成・変更・削除された地物はそれぞれ専用のネットワークリクエストを必要とするため、一度に数百以上の地物を同時に変更する場合、パフォーマンスが低下する可能性があることに注意してください。"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:673
 msgid ""
 "In general, adding a WFS layer is very similar to the procedure used with "
@@ -1173,6 +1260,10 @@ msgid ""
 msgstr ""
 "|dataSourceManager| :sup:`データソースマネージャを開く` を押して :guilabel:`データソースマネージャ` "
 "ダイアログを開きます"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:692
+msgid "Enable the |addWfsLayer| :guilabel:`WFS / OGC API - Features` tab"
+msgstr "|addWfsLayer| :guilabel:`WFS / OGC API - 地物` タブを有効にします"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:783
 msgid "addWfsLayer"
@@ -1250,6 +1341,16 @@ msgstr ":guilabel:`トランザクションにGML2を使う`。"
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:734
 msgid "Press :guilabel:`OK` to create the connection."
 msgstr ":guilabel:`OK` を押して接続を作成します。"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:736
+msgid ""
+"Note that any proxy settings you may have set in your preferences are also "
+"recognized. Also note that it is possible to :guilabel:`Load` the connection"
+" parameters from a :file:`.XML` file or :guilabel:`Save` them to a "
+":file:`.XML` file."
+msgstr ""
+"環境設定で設定したプロキシ設定も認識されることに注意してください。また、接続パラメータを :file:`.XML` ファイルから "
+":guilabel:`読み込む` ことも、 :file:`.XML` ファイルに :guilabel:`保存` することもできます。"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:740
 msgid "Now we are ready to load WFS layers from the above connection."

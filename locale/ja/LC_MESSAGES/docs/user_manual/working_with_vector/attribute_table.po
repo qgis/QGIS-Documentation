@@ -1570,6 +1570,18 @@ msgstr ""
 ":ref:` 同じ手順 <vector_field_calculator>` に従います。|checkbox| "
 ":guilabel:`仮想フィールドを作成` オプションをチェックし、式が生成するデータと互換性のあるフィールド型を使用することだけ忘れないでください。"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:600
+msgid ""
+"Editing a virtual field is done through the |sourceFields| "
+":guilabel:`Fields` tab of the layer properties dialog (see "
+":ref:`vector_fields_menu`). The expression defining the field is exposed in "
+"the :guilabel:`Comment` column, and pressing the |expression| button next to"
+" it opens an expression editor window for update."
+msgstr ""
+"仮想フィールドの編集は、レイヤプロパティダイアログの |sourceFields| :guilabel:`フィールド` タブから行います（ "
+":ref:`vector_fields_menu` を参照）。フィールドを定義する式は :guilabel:`コメント` 列に表示され、その横にある "
+"|expression| ボタンを押すと式エディタウィンドウが開いて更新できます。"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:941
 msgid "sourceFields"
 msgstr "sourceFields"
@@ -1770,9 +1782,113 @@ msgstr ""
 "複数編集モードは「自動生成」または「ドラッグ＆ドロップ」のフォームでのみ利用可能です（ :ref:`customize_form` "
 "参照）。カスタムUIフォームではサポートされていません。"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:707
+msgid "Exploring features attributes through the Identify Tool"
+msgstr "地物情報表示ツールを使って地物属性を詳しくみる"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:709
+msgid ""
+"The |identify| :ref:`Identify features <identify>` tool can be used to "
+"display all attributes of a feature in the map canvas. It is a quick way to "
+"view and verify all data without having to search for it in the attribute "
+"table."
+msgstr ""
+"|identify| :ref:`地物情報表示 <identify>` "
+"ツールは、マップキャンバスにある地物の全属性を表示するために使用できます。これは、属性テーブルでデータを検索することなく、全てのデータを表示し確認する手早い方法です。"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:897
 msgid "identify"
 msgstr "identify"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:713
+msgid ""
+"To use the :guilabel:`Identify features` tool for vector layers, follow "
+"these steps:"
+msgstr "ベクタレイヤに :guilabel:`地物情報表示` ツールを使うには、以下の手順で行います:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:715
+msgid "Select the vector layer in the Layers panel."
+msgstr "レイヤパネルでベクタレイヤを選択します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:716
+msgid ""
+"Click on the :guilabel:`Identify features` tool in the toolbar or press "
+":kbd:`Ctrl+Shift+I`."
+msgstr "ツールバーの :guilabel:`地物情報表示` ツールをクリックするか、 :kbd:`Ctrl+Shift+I` を押します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:717
+msgid "Click on a feature in the map view."
+msgstr "マップビューの地物の上でクリックします。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:719
+msgid ""
+"The :guilabel:`Identify results` panel will display different features "
+"information depending on the layer type. There are two columns in the panel,"
+" on the left side you can see :guilabel:`Feature` and on the right side "
+":guilabel:`Value`. Under the :guilabel:`Feature` column, panel will display "
+"following information:"
+msgstr ""
+":guilabel:`地物情報結果` パネルには、レイヤの種類によって異なる地物情報が表示されます。パネルには2つの列があり、左側に "
+":guilabel:`地物`、右側に :guilabel:`値` が表示されます。:guilabel:`地物` 列の下には以下の情報が表示されます:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:724
+msgid ""
+"**Derived** section - those are the information calculated or derived from "
+"other information in the layer. For example, the area of a polygon or the "
+"length of a line. General information that can be found in this section:"
+msgstr ""
+"**（派生した属性）** セクション - "
+"レイヤの他の情報から計算または派生した情報です。例えば、ポリゴンの面積や線の長さです。このセクションで見られる一般的な情報は:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:728
+msgid ""
+"Depending on the geometry type, cartesian measurements of length, perimeter,"
+" or area in the layer's CRS units. For 3D line vectors, the cartesian line "
+"length is available."
+msgstr ""
+"ジオメトリのタイプに応じて、レイヤのCRSの単位で表示した長さ、周長、面積のデカルト計測値。3Dラインベクタでは、デカルト線長が利用可能です。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:730
+msgid ""
+"Depending on the geometry type and if an ellipsoid is set in the "
+":guilabel:`Project Properties` dialog (:menuselection:`General --> "
+"Measurements`), ellipsoidal values of length, perimeter, or area using the "
+"specified units."
+msgstr ""
+"ジオメトリのタイプと、:guilabel:`プロジェクトのプロパティ` ダイアログ（:menuselection:`一般情報 --> "
+"計測`）で楕円体が設定されているかどうかに応じて、指定された単位で表示した長さ、周長、面積の楕円体値。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:733
+msgid ""
+"The count of geometry parts in the feature and the number of the part "
+"clicked."
+msgstr "地物内のジオメトリパーツの数と、クリックされたパーツの番号"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:734
+msgid "The count of vertices in the feature."
+msgstr "地物内の頂点数"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:736
+msgid "Coordinate information that can be found in this section:"
+msgstr "このセクションにある座標の情報"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:738
+msgid "X and Y coordinate values of the clicked point."
+msgstr "クリックした点のXとY座標値"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:739
+msgid "The number of the closest vertex to the clicked point."
+msgstr "クリックした点に最も近い頂点の番号"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:740
+msgid "X and Y coordinate values of the closest vertex."
+msgstr "最も近い頂点のXとY座標値"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:741
+msgid ""
+"If you click on a curved segment, the radius of that section is also "
+"displayed."
+msgstr "曲線セグメントをクリックした場合には、その部分の曲率半径も表示されます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:743
 msgid ""
