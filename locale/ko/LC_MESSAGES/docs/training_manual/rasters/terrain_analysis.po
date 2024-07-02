@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-05-14 08:58+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:2
+msgid "Lesson: Terrain Analysis"
+msgstr "수업: 지형 분석"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:4
 msgid ""
@@ -42,21 +46,97 @@ msgid ""
 "out more about the study area for the proposed residential development from "
 "earlier."
 msgstr ""
-"래스터가 표현하고 있는 지형에 대해 더 깊이 이해할 수 있게 해주는 특정한 래스터 형식이 있습니다. 수치 표고 모델(DEM)이 이런 "
-"점에서 특히 유용합니다. 이 강의에서는 지형 분석을 이용해서, 이전 모듈에서 다뤘던 주거 구역 개발에 대해 더 자세히 알아보도록 "
-"하겠습니다."
+"래스터가 표현하고 있는 지형에 대해 더 깊이 이해할 수 있게 해주는 특정한 래스터 유형들이 있습니다. 수치표고모델(DEM)이 이런 점에서"
+" 특히 유용합니다. 이 수업에서는 지형 분석을 이용해서, 이전 강의에서 다뤘던 주거 구역 개발이라는 관점에서 이 연구 지역에 대해 더 "
+"자세히 알아보도록 하겠습니다."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:12
 msgid ""
 "**The goal for this lesson:** To use terrain analysis tools to derive more "
 "information about the terrain."
-msgstr "**이 강의의 목표:** 지형 분석을 이용해서 지형에 대해 더 많은 정보를 끌어내기."
+msgstr "**이 수업의 목표:** 지형 분석을 이용해서 지형에 대해 더 많은 정보를 끌어내기."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:16
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Calculating a Hillshade"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 음영기복을 계산하기"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:18
+msgid ""
+"We are going to use the same DEM layer as in the previous lesson. If you are"
+" starting this chapter from scratch, use the :guilabel:`Browser` panel and "
+"load the :file:`raster/SRTM/srtm_41_19.tif`."
+msgstr ""
+"이전 수업에서와 동일한 DEM 레이어를 사용할 것입니다. 이 수업을 아무 준비 없이 시작하는 경우, :guilabel:`Browser` "
+"패널을 사용해서 :file:`raster/SRTM/srtm_41_19.tif` 파일을 불러오십시오"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:23
+msgid ""
+"The DEM layer shows you the elevation of the terrain, but it can sometimes "
+"seem a little abstract. It contains all the 3D information about the terrain"
+" that you need, but it doesn't look like a 3D object. To get a better "
+"impression of the terrain, it is possible to calculate a *hillshade*, which "
+"is a raster that maps the terrain using light and shadow to create a "
+"3D-looking image."
+msgstr ""
+"DEM 레이어는 지형의 표고를 보여주지만, 조금 추상적으로 느껴질 때도 종종 있습니다. 여러분이 필요로 하는 지형에 대한 모든 3차원 "
+"정보를 담고 있지만 3차원 객체로 보이지는 않기 때문이죠. 이 지형에 대해 더 나은 인상을 받기 위해 *음영기복(hillshade)* 을"
+" 계산해볼 수 있습니다. 음영기복이란 3차원으로 보이는 이미지를 생성하기 위해 빛과 그림자를 사용한 지형을 매핑한 래스터를 말합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:31
+msgid ""
+"We are going to use algorithms in the :menuselection:`Raster --> Raster "
+"terrain analysis` menu."
+msgstr ""
+":menuselection:`Raster --> Raster terrain analysis` 메뉴에 있는 알고리즘들을 사용할 것입니다"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:34
+msgid "Click on the :menuselection:`Hillshade` menu"
+msgstr ":menuselection:`Hillshade` 메뉴를 클릭하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:35
+msgid ""
+"The algorithm allows you to specify the position of the light source: "
+":guilabel:`Azimuth` has values from 0 (North) through 90 (East), 180 (South)"
+" and 270 (West), while the :guilabel:`Vertical angle` sets how high the "
+"light source is (0 to 90 degrees)."
+msgstr ""
+"이 알고리즘은 광원의 위치를 지정할 수 있게 해줍니다: :guilabel:`Azimuth` 는 0(북쪽)에서 90(동쪽), "
+"180(남쪽), 270(서쪽) 사이의 값을 가질 수 있는 반면, :guilabel:`Vertical angle` 은 광원이 얼마나 높이 "
+"있는지를 (0도에서 90도 사이의 값으로) 설정합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:40
+msgid "We will use the following values:"
+msgstr "다음 값들을 사용할 것입니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:42
+msgid ":guilabel:`Z factor` at ``1.0``"
+msgstr ":guilabel:`Z factor` 는 ``1.0``"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:43
+msgid ":guilabel:`Azimuth (horizontal angle)` at ``300.0``\\°"
+msgstr ":guilabel:`Azimuth (horizontal angle)` 는 ``300.0``\\°"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:44
+msgid ":guilabel:`Vertical angle` at ``40.0``\\°"
+msgstr ":guilabel:`Vertical angle` 은 ``40.0``\\°"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:49
+msgid ""
+"Save the file in a new folder :file:`exercise_data/raster_analysis/` with "
+"the name ``hillshade.tif``"
+msgstr ""
+"새로운 :file:`exercise_data/raster_analysis/` 폴더에 이 파일을 ``hillshade.tif`` 라는 "
+"이름으로 저장하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:51
+msgid "Finally click on :guilabel:`Run`"
+msgstr "마지막으로 :guilabel:`Run` 을 클릭하십시오."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:53
 msgid ""
 "You will now have a new layer called :guilabel:`hillshade` that looks like "
 "this:"
-msgstr "이제 다음과 같이 :guilabel:`hillshade` 라는 새 레이어가 생성되었습니다."
+msgstr "이제 다음과 같이 ``hillshade`` 라는 새 레이어가 생성되었습니다:"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:59
 msgid ""
@@ -65,8 +145,13 @@ msgid ""
 "other, more colorful rasters somehow? Of course we can, by using the "
 "hillshade as an overlay."
 msgstr ""
-"멋진 3D로 보입니다만, 좀 더 향상시킬 수 있을까요? 음영기복도 그 자체로는 마치 석고 모형처럼 보입니다. 다른, 좀 더 다채로운 "
-"래스터들과 어떻게 함께 사용할 수는 없을까요? 물론 할 수 있습니다. 음영기복도를 오버레이로서 사용한다면 말이죠."
+"멋진 3D로 보입니다만, 좀 더 향상시킬 수는 없을까요? 음영기복도 그 자체로는 마치 석고 모형처럼 보입니다. 다른, 좀 더 다채로운 "
+"래스터들과 어떻게 함께 사용할 수는 없을까요? 물론 할 수 있습니다. 음영기복도를 오버레이로 사용한다면 말이죠."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:65
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Using a Hillshade as an Overlay"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 음영기복도를 오버레이로 사용하기"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:67
 msgid ""
@@ -78,6 +163,49 @@ msgstr ""
 "음영기복도는 낮 동안의 특정 시간의 햇빛에 대한 유용한 정보를 제공할 수 있습니다. 하지만 맵을 더 보기 좋게 하기 위한 심미적 목적을 "
 "위해서도 사용할 수 있습니다. 이렇게 하려면 음영기복도를 거의 투명하게 설정하면 됩니다."
 
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:72
+msgid ""
+"Change the symbology of the original :guilabel:`srtm_41_19` layer to use the"
+" :guilabel:`Pseudocolor` scheme as in the previous exercise"
+msgstr ""
+"이전 예제에서처럼 :guilabel:`Pseudocolor` 스키마를 사용해서 원본 ``srtm_41_19`` 레이어의 심볼을 "
+"변경하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:74
+msgid ""
+"Hide all the layers except the :guilabel:`srtm_41_19` and "
+":guilabel:`hillshade` layers"
+msgstr "``srtm_41_19`` 및 ``hillshade`` 레이어를 제외한 모든 레이어를 숨기십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:76
+msgid ""
+"Click and drag the :guilabel:`srtm_41_19` to be beneath the "
+":guilabel:`hillshade` layer in the :guilabel:`Layers` panel"
+msgstr ""
+":guilabel:`Layers` 패널에서 ``srtm_41_19`` 레이어를 클릭해서 ``hillshade`` 레이어 밑으로 "
+"드래그하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:78
+msgid ""
+"Set the :guilabel:`hillshade` layer to be transparent by clicking on the "
+":guilabel:`Transparency` tab in the layer properties"
+msgstr ""
+"레이어 속성의 :guilabel:`Transparency` 탭을 클릭해서 ``hillshade`` 레이어를 투명하게 설정하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:80
+msgid "Set the :guilabel:`Global opacity` to ``50%``."
+msgstr ":guilabel:`Global opacity` 를 ``50%`` 로 설정하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:82
+msgid "You'll get a result like this:"
+msgstr "결과는 다음과 같을 것입니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:87
+msgid ""
+"Switch the :guilabel:`hillshade` layer off and back on in the "
+":guilabel:`Layers` panel to see the difference it makes."
+msgstr ":guilabel:`Layers` 패널에서 ``hillshade`` 레이어를 켜고 끄면서 그 차이점을 살펴보십시오."
+
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:90
 msgid ""
 "Using a hillshade in this way, it's possible to enhance the topography of "
@@ -86,34 +214,516 @@ msgid ""
 "the brighter the hillshade becomes, the dimmer the colors behind it will be."
 " You will need to find a balance that works for you."
 msgstr ""
-"음영기복도를 이런 식으로 사용하면 경관의 지형을 향상시킬 수 있습니다. 만약 그 효과가 미미하다고 느껴진다면, "
-":guilabel:`hillshade` 레이어의 투명도를 조절할 수 있습니다. 하지만 물론, 음영기복도가 밝아질수록 그 아래의 색상은 "
-"침침해질 것입니다. 여러분이 만족할 수 있는 균형을 찾아야 합니다."
+"음영기복도를 이런 식으로 사용하면 경관의 지형을 향상시킬 수 있습니다. 만약 그 효과가 미미하다고 느껴진다면, ``hillshade`` "
+"레이어의 투명도를 조절할 수 있습니다. 하지만 물론, 음영기복도가 밝아질수록 그 아래의 색상은 침침해질 것입니다. 여러분이 만족할 수 "
+"있는 균형을 찾아야 합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:96
+msgid "Remember to save the project when you are done."
+msgstr "작업 완료 시 프로젝트를 저장하는 것을 잊지 마세요."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:99
+msgid "Follow Along: Finding the best areas"
+msgstr "따라해보세요: 최적 지역 찾기"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:101
+msgid ""
+"Think back to the estate agent problem, which we last addressed in the "
+"*Vector Analysis* lesson. Let us imagine that the buyers now wish to "
+"purchase a building and build a smaller cottage on the property. In the "
+"Southern Hemisphere, we know that an ideal plot for development needs to "
+"have areas on it that:"
+msgstr ""
+"우리가 *벡터 분석* 수업에서 소개했던 부동산 업자 문제를 다시 생각해보십시오. 구매자들이 이제 건물을 구입해서 해당 부지에 작은 "
+"오두막을 짓고 싶어 한다고 상상해보죠. 남반구에서 이상적인 개발 도면은 다음과 같은 지역을 기반으로 해야 한다는 사실을 우리는 알고 "
+"있습니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:108
+msgid "are north-facing"
+msgstr "북향"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:109
+msgid "with a slope of less than 5 degrees"
+msgstr "5도 미만의 경사"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:110
+msgid ""
+"But if the slope is less than 2 degrees, then the aspect doesn't matter."
+msgstr "그러나 경사가 2도 미만인 경우, 경사 방향은 문제가 되지 않습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:112
+msgid "Let's find the best areas for them."
+msgstr "이 기준을 만족시키는 최적 지역을 찾아봅시다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:115
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Calculating the Slope"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 경사를 계산하기"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:117
+msgid ""
+"*Slope* informs about how steep the terrain is. If, for example, you want to"
+" build houses on the land there, then you need land that is relatively flat."
+msgstr ""
+"*경사(slope)* 는 지형이 얼마나 가파른지 알려줍니다. 예를 들어 해당 지형의 땅 위에 집을 짓는 경우, 상대적으로 평평한 땅이 "
+"필요할 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:121
+msgid ""
+"To calculate the slope, you need to use the :menuselection:`Slope` algorithm"
+" of the :menuselection:`Processing --> Raster terrain analysis`."
+msgstr ""
+"경사를 계산하려면, :menuselection:`Processing --> Raster terrain analysis` 메뉴에 있는 "
+":menuselection:`Slope` 알고리즘을 사용해야 합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:124
+msgid "Open the algorithm"
+msgstr "알고리즘을 여십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:125
+msgid "Choose :guilabel:`srtm_41_19` as the :guilabel:`Elevation layer`"
+msgstr ":guilabel:`Elevation layer` 에 ``srtm_41_19`` 를 선택하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:126
+msgid "Keep the :guilabel:`Z factor` at ``1.0``"
+msgstr ":guilabel:`Z factor` 는 ``1.0`` 으로 유지하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:127
+msgid ""
+"Save the output as a file with the name ``slope.tif`` in the same folder as "
+"the ``hillshade.tif``"
+msgstr ""
+":file:`hillshade.tif` 와 같은 폴더에 산출 파일을 :file:`slope.tif` 라는 이름으로 저장하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:129
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:436
+msgid "Click on :guilabel:`Run`"
+msgstr ":guilabel:`Run` 을 클릭하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:131
+msgid ""
+"Now you'll see the slope of the terrain, each pixel holding the "
+"corresponding slope value. Black pixels show flat terrain and white pixels, "
+"steep terrain:"
+msgstr ""
+"이제 각 픽셀이 해당하는 경사 값을 담고 있는 지형의 경사를 볼 수 있습니다. 지형이 평평할수록 픽셀이 검은색, 지형이 가파를수록 픽셀이"
+" 하얀색에 가까워집니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:139
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Calculating the aspect"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 경사 방향을 계산하기"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:141
+msgid ""
+"*Aspect* is the compass direction that the slope of the terrain faces. An "
+"aspect of 0 means that the slope is North-facing, 90 East-facing, 180 South-"
+"facing, and 270 West-facing."
+msgstr ""
+"*경사 방향(aspect)* 이란 해당 지형의 경사가 바라보는 나침반 방향을 말합니다. 경사 방향이 0이면 경사가 북향이고, 90이면 "
+"동향, 180이면 남향, 270이면 서향이라는 뜻입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:145
+msgid ""
+"Since this study is taking place in the Southern Hemisphere, properties "
+"should ideally be built on a north-facing slope so that they can remain in "
+"the sunlight."
+msgstr "연구 지역이 남반구에 존재하기 때문에, 건물이 햇빛을 받을 수 있으려면 북향 경사에 짓는 것이 이상적일 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:149
+msgid ""
+"Use the :guilabel:`Aspect` algorithm of the :menuselection:`Processing --> "
+"Raster terrain analysis` to get the ``aspect.tif`` layer saved along with "
+"the ``slope.tif``."
+msgstr ""
+":menuselection:`Processing --> Raster terrain analysis` 메뉴의 "
+":guilabel:`Aspect` 알고리즘을 사용해서 :file:`slope.tif` 와 같은 폴더에 :file:`aspect.tif` "
+"레이어를 저장하십시오."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:153
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:249
 msgid "Answer"
 msgstr "해답"
 
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:156
+msgid "Set your :guilabel:`Aspect` dialog up like this:"
+msgstr ":guilabel:`Aspect` 대화창에서 다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:161
+msgid "Your result:"
+msgstr "결과물은 다음과 같습니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:167
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Finding the north-facing aspect"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 북쪽을 바라보는 경사 방향을 찾기"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:169
+msgid ""
+"Now, you have rasters showing you the slope as well as the aspect, but you "
+"have no way of knowing where ideal conditions are satisfied at once. How "
+"could this analysis be done?"
+msgstr ""
+"이제 경사는 물론 경사 방향도 보여주는 래스터들을 얻었지만, 이상적인 조건들을 한번에 만족시키는 곳을 알 도리가 없습니다. 이 분석은 "
+"어떻게 하는 것일까요?"
+
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:174
 msgid "The answer lies with the :guilabel:`Raster calculator`."
 msgstr "그 답은 :guilabel:`Raster calculator` 가 가지고 있습니다."
 
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:176
+msgid "QGIS has different raster calculators available:"
+msgstr "QGIS는 서로 다른 래스터 계산기들을 제공합니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:178
+msgid ":menuselection:`Raster --> Raster Calculator`"
+msgstr ":menuselection:`Raster --> Raster Calculator`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:179
+msgid "In processing:"
+msgstr "공간 처리에서:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:181
+msgid ":menuselection:`Raster Analysis --> Raster calculator`"
+msgstr ":menuselection:`Raster Analysis --> Raster calculator`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:182
+msgid ":menuselection:`GDAL --> Raster miscellaneous --> Raster calculator`"
+msgstr ":menuselection:`GDAL --> Raster miscellaneous --> Raster calculator`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:183
+msgid ":menuselection:`SAGA --> Raster calculus --> Raster calculator`"
+msgstr ":menuselection:`SAGA --> Raster calculus --> Raster calculator`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:185
+msgid ""
+"Each tool is leading to the same results, but the syntax may be slightly "
+"different and the availability of operators may vary."
+msgstr "각각의 도구는 동일한 결과를 내지만, 문법이 살짝 다를 수도 있고 사용할 수 있는 연산자들도 다를 수 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:188
+msgid ""
+"We will use :menuselection:`Raster Analysis --> Raster calculator` in the "
+"*Processing Toolbox*"
+msgstr ""
+"우리는 *공간 처리 툴박스* 에 있는 :menuselection:`Raster Analysis --> Raster calculator` "
+"를 사용할 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:191
+msgid "Open the tool by double clicking on it."
+msgstr "래스터 계산기를 더블 클릭해서 여십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:193
+msgid ""
+"The upper left part of the dialog lists all the loaded raster layers as "
+"``name@N``, where ``name`` is the name of the layer and ``N`` is the band."
+msgstr ""
+"대화창의 좌상단 부분에 불러온 모든 래스터 레이어들을 ``name@N`` 으로 표현한 목록이 있습니다. 이때 ``name`` 은 레이어 "
+"이름이고 ``N`` 은 밴드 번호입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:196
+msgid ""
+"In the upper right part you will see a lot of different operators. Stop for "
+"a moment to think that a raster is an image. You should see it as a 2D "
+"matrix filled with numbers."
+msgstr ""
+"우상단 부분에서는 서로 다른 많은 연산자들이 보일 것입니다. 래스터가 이미지라는 사실을 잠깐 생각해보세요. 여러분은 래스터를 숫자로 "
+"채워진 2차원 행렬로 보아야 합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:200
+msgid ""
+"North is at 0 (zero) degrees, so for the terrain to face north, its aspect "
+"needs to be greater than 270 degrees or less than 90 degrees. Therefore the "
+"formula is::"
+msgstr ""
+"북쪽은 0도이기 때문에, 북쪽을 바라보는 지형의 경우 그 경사 방향이 270도 이상이며 90도 이하여야 합니다. 따라서 공식은 다음과 "
+"같습니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:207
+msgid ""
+"Now you have to set up the raster details, like the cell size, extent and "
+"CRS. This can be done manually or it can be automatically set by choosing a "
+"``Reference layer``. Choose this last option by clicking on the "
+":guilabel:`...` button next to the :guilabel:`Reference layer(s)` parameter."
+msgstr ""
+"이제 셀 크기, 범위 및 좌표계 같은 래스터 상세 정보를 설정해줘야 합니다. 직접 할 수도 있고 ``Reference layer`` 를 "
+"선택함으로써 자동 설정할 수도 있습니다. :guilabel:`Reference layer(s)` 파라미터 옆에 있는 "
+":guilabel:`...` 버튼을 클릭해서 후자를 선택하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:213
+msgid ""
+"In the dialog, choose the :guilabel:`aspect` layer, because we want to "
+"obtain a layer with the same resolution."
+msgstr "대화창에서 ``aspect`` 레이어를 선택하십시오. 동일한 해상도를 가진 레이어를 원하기 때문입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:215
+msgid "Save the layer as ``aspect_north.tif``."
+msgstr "이 레이어를 :file:`aspect_north.tif` 로 저장하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:217
+msgid "The dialog should look like:"
+msgstr "대화창이 다음과 같이 보여야 합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:222
+msgid "Finally click on :guilabel:`Run`."
+msgstr "마지막으로 :guilabel:`Run` 을 클릭하십시오."
+
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:224
 msgid "Your result will be this:"
-msgstr "결과는 다음과 같을 것입니다."
+msgstr "결과물이 다음과 같을 것입니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:229
+msgid ""
+"The output values are ``0`` or ``1``. What does it mean? For each pixel in "
+"the raster, the formula we wrote returns whether it matches the conditions "
+"or not. Therefore the final result will be **False** (0) and **True** (1)."
+msgstr ""
+"산출 값들은 ``0`` 또는 ``1`` 입니다. 이게 무슨 뜻일까요? 우리가 작성한 공식이 래스터에 있는 각 픽셀에 대해 해당 픽셀이 "
+"조건을 만족시키는지 아닌지를 반환합니다. 따라서 최종 결과물은 **거짓** (0) 그리고 **참** (1)이 되는 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:237
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: More criteria"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 더 많은 기준들"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:239
+msgid "Now that you have done the aspect, create two new layers from the DEM."
+msgstr "이제 경사 방향 작업이 끝났으니, DEM으로부터 새 레이어 2개를 생성하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:242
+msgid ""
+"The first shall identify areas where the slope is less than or equal to "
+"``2`` degrees"
+msgstr "첫 번째 레이어는 경사가 ``2`` 도 이하인 지역을 나타내야 합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:244
+msgid ""
+"The second is similar, but the slope should be less than or equal to ``5`` "
+"degrees."
+msgstr "두 번째 레이어도 비슷하지만, 경사가 ``5`` 도 이하여야 합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:246
+msgid ""
+"Save them under :file:`exercise_data/raster_analysis` as "
+":file:`slope_lte2.tif` and :file:`slope_lte5.tif`."
+msgstr ""
+":file:`exercise_data/raster_analysis` 디렉터리에 두 레이어를 각각 :file:`slope_lte2.tif`"
+" 와 :file:`slope_lte5.tif` 로 저장하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:252
+msgid "Set your :guilabel:`Raster calculator` dialog up with:"
+msgstr ":guilabel:`Raster calculator` 대화창에서 다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:254
+msgid "the following expression: ``slope@1 <= 2``"
+msgstr "표현식은 다음과 같습니다: ``slope@1 <= 2``"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:255
+msgid "the ``slope`` layer as the :guilabel:`Reference layer(s)`"
+msgstr ":guilabel:`Reference layer(s)` 에 ``slope`` 레이어를 선택합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:260
+msgid ""
+"For the 5 degree version, replace the ``2`` in the expression and file name "
+"with ``5``."
+msgstr "5도 버전의 경우, 표현식과 파일 이름의 ``2`` 를 ``5`` 로 바꿉니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:263
+msgid "Your results:"
+msgstr "결과물은 다음과 같습니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:265
+msgid "2 degrees:"
+msgstr "2도:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:270
+msgid "5 degrees:"
+msgstr "5도:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:277
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Combining Raster Analysis Results"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 래스터 분석 결과들을 결합하기"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:279
+msgid "Now you have generated three raster layers from the DEM:"
+msgstr "이제 DEM으로부터 래스터 레이어 3개를 생성했습니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:281
+msgid ":guilabel:`aspect_north`: terrain facing north"
+msgstr "``aspect_north``: 북향 지형"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:282
+msgid ":guilabel:`slope_lte2`: slope equal to or below 2 degrees"
+msgstr "``slope_lte2``: 2도 이하의 경사"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:283
+msgid ":guilabel:`slope_lte5`: slope equal to or below 5 degrees"
+msgstr "``slope_lte5``: 5도 이하의 경사"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:285
+msgid ""
+"Where the condition is met, the pixel value is ``1``. Elsewhere, it is "
+"``0``. Therefore, if you multiply these rasters, the pixels that have a "
+"value of ``1`` for all of them will get a value of ``1`` (the rest will get "
+"``0``)."
+msgstr ""
+"조건을 만족시키는 장소의 픽셀 값은 ``1`` 입니다. 만족시키지 못하는 픽셀의 값은 ``0`` 입니다. 따라서 이 래스터들을 곱하면 "
+"모든 래스터에서 값이 ``1`` 인 픽셀의 값이 ``1`` 이 될 것입니다. (나머지 픽셀들의 값은 ``0`` 이 될 것입니다.)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:291
+msgid "The conditions to be met are:"
+msgstr "만족시켜야 할 조건들은 다음과 같습니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:293
+msgid "at or below 5 degrees of slope, the terrain must face north"
+msgstr "경사가 5도 이하인 곳의 지형은 북향이어야만 합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:294
+msgid ""
+"at or below 2 degrees of slope, the direction that the terrain faces does "
+"not matter."
+msgstr "경사가 2도 이하인 곳은 지형이 바라보는 방향이 어느 쪽이든 상관없습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:297
+msgid ""
+"Therefore, you need to find areas where the slope is at or below five "
+"degrees ``AND`` the terrain is facing north, ``OR`` the slope is at or below"
+" 2 degrees. Such terrain would be suitable for development."
+msgstr ""
+"따라서 경사가 5도 이하 ``AND`` 지형이 북향, ``OR`` 경사가 2도 이하인 지역을 찾아야 합니다. 이런 지형이 개발에 적합할 "
+"것입니다."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:301
 msgid "To calculate the areas that satisfy these criteria:"
-msgstr "이 기준들을 만족하는 지역을 계산하려면,"
+msgstr "이 기준들을 만족시키는 지역을 계산하려면:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:303
+msgid "Open the :guilabel:`Raster calculator` again"
+msgstr "다시 :guilabel:`Raster calculator` 를 여십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:304
+msgid "Use this expression in :guilabel:`Expression`::"
+msgstr ":guilabel:`Expression` 에 다음 표현식을 입력하십시오:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:308
+msgid ""
+"Set the :guilabel:`Reference layer(s)` parameter to ``aspect_north`` (it "
+"does not matter if you choose another - they have all been calculated from "
+"``srtm_41_19``)"
+msgstr ""
+":guilabel:`Reference layer(s)` 파라미터를 ``aspect_north`` 로 설정하십시오. (다른 레이어를 "
+"선택해도 상관없습니다 --- 모두 ``srtm_41_19`` 레이어로부터 계산된 레이어들이기 때문입니다.)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:311
+msgid ""
+"Save the output under :file:`exercise_data/raster_analysis/` as "
+":file:`all_conditions.tif`"
+msgstr ""
+":file:`exercise_data/raster_analysis/` 디렉터리에 산출 파일을 "
+":file:`all_conditions.tif` 로 저장하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:313
+msgid "Click :guilabel:`Run`"
+msgstr ":guilabel:`Run` 을 클릭하십시오."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:315
 msgid "The result:"
-msgstr "결과물은 다음과 같습니다."
+msgstr "결과물은 다음과 같습니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:320
+msgid ""
+"The previous steps could have been simplified using the following command::"
+msgstr "다음 명령어를 사용하면 이전 단계들을 단순화시킬 수 있습니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:327
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Simplifying the Raster"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 래스터를 단순화시키기"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:329
+msgid ""
+"As you can see from the image above, the combined analysis has left us with "
+"many, very small areas where the conditions are met (in white). But these "
+"aren't really useful for our analysis, since they are too small to build "
+"anything on. Let us get rid of all these tiny unusable areas."
+msgstr ""
+"앞의 이미지를 보면 알 수 있듯이, 결합된 분석의 결과물에서 조건들을 만족시키는 (하얀색) 지역들이 아주, 아주 작습니다. 그러나 이런 "
+"지역들은 실제 분석에 유용하지 않습니다. 무언가를 짓기에는 너무 작은 부지들이기 때문입니다. 이렇게 너무 작아서 사용할 수 없는 지역들을"
+" 모두 제거해봅시다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:335
+msgid ""
+"Open the :guilabel:`Sieve` tool (:menuselection:`GDAL --> Raster Analysis` "
+"in the :guilabel:`Processing Toolbox`)"
+msgstr ""
+":guilabel:`Sieve` 도구를 여십시오. (:guilabel:`Processing Toolbox` 의 "
+":menuselection:`GDAL --> Raster Analysis` 메뉴에 있습니다.)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:338
+msgid ""
+"Set the :guilabel:`Input file` to ``all_conditions``, and the "
+":guilabel:`Sieved` to :file:`all_conditions_sieve.tif` (under "
+":file:`exercise_data/raster_analysis/`)."
+msgstr ""
+":guilabel:`Input file` 을 ``all_conditions`` 로, :guilabel:`Sieved` 를 "
+"(:file:`exercise_data/raster_analysis/` 아래) :file:`all_conditions_sieve.tif`"
+" 로 설정하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:341
+msgid ""
+"Set the :guilabel:`Threshold` to 8 (minimum eight contiguous pixels), and "
+"check :guilabel:`Use 8-connectedness`."
+msgstr ""
+":guilabel:`Threshold` 를 8로 (연속하는 픽셀을 최소 8개로) 설정하고, :guilabel:`Use "
+"8-connectedness` 옵션을 체크하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:347
+msgid "Once processing is done, the new layer will be loaded."
+msgstr "처리 과정이 완료되면 새 레이어를 불러올 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:352
+msgid "What is going on? The answer lies in the new raster file's metadata."
+msgstr "무슨 일이 일어난 것일까요? 그 답은 새 래스터 파일의 메타데이터에 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:355
+msgid ""
+"View the metadata under the :guilabel:`Information` tab of the "
+":guilabel:`Layer Properties` dialog. Look the ``STATISTICS_MINIMUM`` value:"
+msgstr ""
+":guilabel:`Layer Properties` 대화창의 :guilabel:`Information` 탭에서 메타데이터를 "
+"검토해보십시오. ``STATISTICS_MINIMUM`` 값을 찾아보세요:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:362
+msgid ""
+"This raster, like the one it is derived from, should only feature the values"
+" ``1`` and ``0``, but it has also a very large negative number. "
+"Investigation of the data shows that this number acts as a null value. Since"
+" we are only after areas that weren't filtered out, let us set these null "
+"values to zero."
+msgstr ""
+"이 래스터는 이 래스터를 파생시킨 래스터와 같이 ``1`` 과 ``0`` 값만 가지고 있어야 하지만, 매우 큰 음수도 가지고 있습니다. "
+"데이터를 검토해보면 이 숫자가 NULL 값 역할을 한다는 사실을 알 수 있습니다. 필터링을 통과한 지역만 필요하기 때문에, 이 NULL "
+"값들을 0으로 설정합시다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:370
+msgid "Open the :guilabel:`Raster Calculator`, and build this expression::"
+msgstr ":guilabel:`Raster Calculator` 를 열어서 다음 표현식을 작성하십시오:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:374
+msgid ""
+"This will maintain all non-negative values, and set the negative numbers to "
+"zero, leaving all the areas with value ``1`` intact."
+msgstr ""
+"이 표현식은 음수가 아닌 값들을 모두 유지하고 음수들을 0으로 설정해서, ``1`` 값을 가진 지역들을 모두 온전히 유지할 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:376
+msgid ""
+"Save the output under ``exercise_data/raster_analysis/`` as "
+":file:`all_conditions_simple.tif`."
+msgstr ""
+":file:`exercise_data/raster_analysis/` 디렉터리에 산출 파일을 "
+":file:`all_conditions_simple.tif` 로 저장하십시오."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:379
 msgid "Your output looks like this:"
-msgstr "산출물은 다음과 같습니다."
+msgstr "산출물은 다음과 같습니다:"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:384
 msgid ""
@@ -122,12 +732,278 @@ msgid ""
 "viewing the metadata (and vector attributes, if applicable) can prove "
 "essential to solving the problem."
 msgstr ""
-"우리가 기대한 산출물입니다. 이전 결과물을 단순화시킨 버전이죠. 어떤 도구의 결과물이 기대했던 것과 다를 경우, 문제를 해결 하는 데 "
-"메타데이터(및, 적용 가능할 경우 벡터 속성)을 살펴보는 작업이 필수적일 수도 있습니다."
+"우리가 기대한 산출물입니다. 이전 결과물을 단순화시킨 버전이죠. 어떤 도구의 결과물이 예상했던 것과 다를 경우, 문제를 해결하는 데 "
+"메타데이터(그리고 적용할 수 있는 경우 벡터 속성)을 살펴보는 작업이 필수적일 수 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:392
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Reclassifying the Raster"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 래스터를 재범주화하기"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:394
+msgid ""
+"We have used the *Raster calculator* to do calculations on raster layers. "
+"There is another powerful tool that we can use to extract information from "
+"existing layers."
+msgstr ""
+"래스터 레이어에 대한 계산을 하기 위해 *래스터 계산기* 를 사용했습니다. 기존 레이어에서 정보를 추출하는 데 사용할 수 있는 강력한 "
+"도구가 또 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:399
+msgid ""
+"Back to the ``aspect`` layer. We know now that it has numerical values "
+"within a range from 0 through 360. What we want to do is to *reclassify* "
+"this layer to other discrete values (from 1 to 4), depending on the aspect:"
+msgstr ""
+"``aspect`` 레이어로 돌아가십시오. 이제 이 레이어가 0에서 360 사이에 있는 숫자 값들을 가지고 있다는 사실을 알고 있습니다."
+" 우리가 하고자 하는 작업은 이 레이어를 경사 방향에 따라 다른 개별 값들로 (1에서 4까지의 숫자로) *재범주화(reclassify)*"
+" 하는 것입니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:405
+msgid "1 = North (from 0 to 45 and from 315 to 360);"
+msgstr "1 = 북향 (0에서 45 그리고 315에서 360까지)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:406
+msgid "2 = East (from 45 to 135)"
+msgstr "2 = 동향 (45에서 135까지)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:407
+msgid "3 = South (from 135 to 225)"
+msgstr "3 = 남향 (135에서 225까지)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:408
+msgid "4 = West (from 225 to 315)"
+msgstr "4 = 서향 (225에서 315까지)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:410
+msgid ""
+"This operation can be achieved with the raster calculator, but the formula "
+"would become very very large."
+msgstr "래스터 계산기를 통해 이 연산을 할 수도 있지만, 공식이 아주 아주 커질 겁니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:413
+msgid ""
+"The alternative tool is the :guilabel:`Reclassify by table` tool in "
+":menuselection:`Raster analysis` in the :guilabel:`Processing Toolbox`."
+msgstr ""
+"이를 대체할 수 있는 도구가 :guilabel:`Processing Toolbox` 의 :menuselection:`Raster "
+"analysis` 메뉴에 있는 :guilabel:`Reclassify by table` 도구입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:417
+msgid "Open the tool"
+msgstr "도구를 여십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:418
+msgid "Choose :guilabel:`aspect` as the ``Input raster layer``"
+msgstr ":guilabel:`Input raster layer` 에 ``aspect`` 를 선택하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:419
+msgid ""
+"Click on the :guilabel:`...` of :guilabel:`Reclassification table`. A table-"
+"like dialog will pop up, where you can choose the minimum, maximum and new "
+"values for each class."
+msgstr ""
+":guilabel:`Reclassification table` 의 :guilabel:`...` 버튼을 클릭하십시오. 테이블 모양의 "
+"대화창이 열리고 각 범주에 대한 최소값, 최대값 및 새 값들을 선택할 수 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:422
+msgid ""
+"Click on the :guilabel:`Add row` button and add 5 rows. Fill in each row as "
+"the following picture and click :guilabel:`OK`:"
+msgstr ""
+":guilabel:`Add row` 버튼을 클릭하고 행 5개를 추가하십시오. 각 행을 다음 그림과 같이 채운 다음 "
+":guilabel:`OK` 를 클릭하십시오:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:428
+msgid ""
+"The method used by the algorithm to treat the threshold values of each class"
+" is defined by the :guilabel:`Range boundaries`."
+msgstr ""
+"각 범주의 한계값을 처리하기 위해 이 알고리즘이 사용한 메소드는 :guilabel:`Range boundaries` 가 정의합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:430
+msgid ""
+"Save the layer as :file:`reclassified.tif` in the "
+":file:`exercise_data/raster_analysis/` folder"
+msgstr ""
+":file:`exercise_data/raster_analysis/` 폴더에 이 레이어를 :file:`reclassified.tif` 로"
+" 저장하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:438
+msgid ""
+"If you compare the native :guilabel:`aspect` layer with the "
+":guilabel:`reclassified` one, there are not big differences. But by looking "
+"at the legend, you can see that the values go from ``1`` to ``4``."
+msgstr ""
+"네이티브 ``aspect`` 레이어를 ``reclassified`` 레이어와 비교해보면, 큰 차이가 없습니다. 그러나 범례를 보면 "
+"``1`` 에서 ``4`` 까지의 값들을 볼 수 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:443
+msgid "Let us give this layer a better style."
+msgstr "이 레이어에 좀 더 나은 스타일을 적용해봅시다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:445
+msgid "Open the :guilabel:`Layer Styling` panel"
+msgstr ":guilabel:`Layer Styling` 패널을 여십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:446
+msgid ""
+"Choose :guilabel:`Paletted/Unique values`, instead of :guilabel:`Singleband "
+"gray`"
+msgstr ""
+":guilabel:`Singleband gray` 대신 :guilabel:`Paletted/Unique values` 를 선택하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:448
+msgid ""
+"Click on the :guilabel:`Classify` button to automatically fetch the values "
+"and assign them random colors:"
+msgstr ":guilabel:`Classify` 버튼을 클릭하면 자동으로 값들을 가져와서 랜덤한 색상을 할당합니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:454
+msgid ""
+"The output should look like this (you can have different colors given that "
+"they have been randomly generated):"
+msgstr "산출물이 다음처럼 보일 것입니다(색상이 랜덤하게 생성되기 때문에 다른 색상을 보게 될 수도 있습니다):"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:460
+msgid ""
+"With this reclassification and the paletted style applied to the layer, you "
+"can immediately differentiate the aspect areas."
+msgstr "이 재범주화 작업과 레이어에 적용된 색상표 스타일 덕분에, 각각의 경사 방향 지역을 즉시 구분할 수 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:465
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Querying the raster"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 래스터를 쿼리하기"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:467
+msgid ""
+"Unlike vector layers, raster layers don't have an attribute table. Each "
+"pixel contains one or more numerical values (singleband or multiband "
+"rasters)."
+msgstr ""
+"벡터 레이어와는 달리, 래스터 레이어는 속성 테이블을 가지고 있지 않습니다. 각 픽셀이 (래스터가 단일 밴드인지 또는 다중 밴드인지에 "
+"따라) 하나 이상의 숫자 값을 담고 있을 뿐입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:471
+msgid ""
+"All the raster layers we used in this exercise consist of just one band. "
+"Depending on the layer, pixel values may represent elevation, aspect or "
+"slope values."
+msgstr ""
+"이번 예제에서 우리가 사용했던 모든 래스터 레이어는 밴드 하나만으로 구성돼 있습니다. 픽셀 값은 레이어에 따라 표고, 경사 방향, 또는 "
+"경사 값을 표현할 수도 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:476
+msgid ""
+"How can we query the raster layer to get the value of a pixel? We can use "
+"the |identify| :sup:`Identify Features` button!"
+msgstr ""
+"픽셀 하나의 값을 얻으려면 래스터 레이어를 어떻게 쿼리하면 될까요? |identify| :sup:`Identify Features` "
+"버튼을 사용하면 됩니다!"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:558
 msgid "identify"
 msgstr "identify"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:479
+msgid "Select the tool from the Attributes toolbar."
+msgstr "속성 툴바에서 이 도구를 선택하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:480
+msgid ""
+"Click on a random location of the :guilabel:`srtm_41_19` layer. "
+":guilabel:`Identify Results` will appear with the value of the band at the "
+"clicked location:"
+msgstr ""
+"``srtm_41_19`` 레이어에서 아무 위치나 클릭해보십시오. 클릭한 위치의 밴드 값을 가진 :guilabel:`Identify "
+"Results` 창이 뜰 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:487
+msgid ""
+"You can change the output of the :guilabel:`Identify Results` panel from the"
+" current ``tree`` mode to a ``table`` one by selecting :guilabel:`Table` in "
+"the :guilabel:`View` menu at the bottom of the panel:"
+msgstr ""
+":guilabel:`Identify Results` 패널 최하단에 있는 :guilabel:`View` 메뉴에서 "
+":guilabel:`Table` 을 선택하면 식별 결과를 현재의 ``tree`` 모드에서 ``table`` 모드로 변경할 수 있습니다:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:495
+msgid ""
+"Clicking each pixel to get the value of the raster could become annoying "
+"after a while. We can use the *Value Tool* plugin to solve this problem."
+msgstr ""
+"래스터의 값을 얻기 위해 픽셀 하나하나를 클릭하는 것은 좀 짜증이 날 수도 있습니다. 이 문제를 해결할 수 있는 *값 도구(Value "
+"Tool)* 플러그인이 존재합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:499
+msgid "Go to :menuselection:`Plugins --> Manage/Install Plugins...`"
+msgstr ":menuselection:`Plugins --> Manage/Install Plugins...` 메뉴 항목을 클릭하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:500
+msgid "In the :guilabel:`All` tab, type ``value t`` in the search box"
+msgstr ":guilabel:`All` 탭에 있는 검색란에 ``value t`` 라고 입력하십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:501
+msgid ""
+"Select the *Value Tool* plugin, press :guilabel:`Install Plugin` and then "
+":guilabel:`Close` the dialog."
+msgstr ""
+"*Value Tool* 플러그인을 선택하고, :guilabel:`Install Plugin` 버튼을 누른 다음 "
+":guilabel:`Close` 를 눌러 대화창을 닫으십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:507
+msgid "The new :guilabel:`Value Tool` panel will appear."
+msgstr "새로운 :guilabel:`Value Tool` 패널이 나타날 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:509
+msgid ""
+"If you close the panel you can reopen it by enabling it in the "
+":menuselection:`View --> Panels --> Value Tool` or by clicking on the icon "
+"in the toolbar."
+msgstr ""
+"이 패널을 닫았다면, :menuselection:`View --> Panels --> Value Tool` 메뉴 항목을 선택해서 또는 "
+"툴바에 있는 아이콘을 클릭해서 활성화시켜 다시 열 수 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:513
+msgid ""
+"To use the plugin just check the :guilabel:`Enable` checkbox and be sure "
+"that the ``srtm_41_19`` layer is active (checked) in the :guilabel:`Layers` "
+"panel."
+msgstr ""
+"이 플러그인을 사용하려면 그냥 :guilabel:`Enable` 체크박스를 체크한 다음 :guilabel:`Layers` 패널에서 "
+"``srtm_41_19`` 레이어가 활성화(체크)된 상태인지 확인하기만 하면 됩니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:516
+msgid "Move the cursor over the map to see the value of the pixels."
+msgstr "맵 위에 마우스 커서를 가져가서 픽셀들의 값을 살펴보십시오."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:521
+msgid ""
+"But there is more. The Value Tool plugin allows you to query **all** the "
+"active raster layers in the :guilabel:`Layers` panel. Set the "
+":guilabel:`aspect` and :guilabel:`slope` layers active again and hover the "
+"mouse on the map:"
+msgstr ""
+"더 많은 기능이 있습니다. 값 도구 플러그인은 :guilabel:`Layers` 패널에 있는 **모든** 활성 래스터 레이어들을 쿼리할 "
+"수 있게 해줍니다. ``aspect`` 와 ``slope`` 레이어를 다시 활성화시킨 다음 맵 위에 커서를 가져가보십시오:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:532
+msgid "In Conclusion"
+msgstr "결론"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:534
+msgid ""
+"You've seen how to derive all kinds of analysis products from a DEM. These "
+"include hillshade, slope and aspect calculations. You've also seen how to "
+"use the raster calculator to further analyze and combine these results. "
+"Finally you learned how to reclassify a layer and how to query the results."
+msgstr ""
+"DEM으로부터 어떻게 모든 종류의 분석 결과를 추출할 수 있는지 배웠습니다. 이 분석 결과에는 음영기복, 경사, 그리고 경사 방향 계산이"
+" 포함됩니다. 래스터 계산기를 사용해서 이 결과들을 심도 있게 분석하고 결합하는 방법도 배웠습니다. 마지막으로, 레이어를 재범주화시키는 "
+"방법과 그 결과물을 쿼리하는 방법을 배웠습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:542
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:544
 msgid ""
@@ -138,4 +1014,4 @@ msgid ""
 "the next module."
 msgstr ""
 "이제 여러분은 두 가지 분석을 할 수 있습니다. 벡터 분석은 잠재적으로 적합한 계획을 보여주며, 래스터 분석은 잠재적으로 적합한 지형을 "
-"보여줍니다. 이들을 어떻게 결합해야 문제에 대한 최종 결론을 얻을 수 있을까요? 이것이 다음 모듈에서 시작하는 강의의 주제입니다."
+"보여줍니다. 이들을 어떻게 결합해야 문제에 대한 최종 결론을 얻을 수 있을까요? 이것이 다음 강의에서 시작하는 수업의 주제입니다."
