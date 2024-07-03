@@ -5,7 +5,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
 # Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
@@ -32,7 +31,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:2
+msgid "Lesson: Raster to Vector Conversion"
+msgstr "수업: 래스터 - 벡터 변환"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:4
 msgid ""
@@ -42,9 +45,9 @@ msgid ""
 "increases the flexibility you have when considering data sources and "
 "processing methods for solving a GIS problem."
 msgstr ""
-"래스터와 백터 형식을 서로 변환하는 작업을 통해 GIS 문제 해결 시 래스터와 벡터 데이터를 동시에 사용할 수 있는 것은 물론, 이 두 "
-"지리 데이터 형식에 각각 특화된 다양한 분석 방법도 함께 사용할 수 있게 됩니다. GIS 문제 해결에 쓰이는 데이터소스 및 처리 방법을 "
-"고려할 때, 이 변환 작업으로 유연성이 향상됩니다."
+"래스터와 백터 포맷을 서로 변환하는 작업을 통해 GIS 문제 해결 시 래스터와 벡터 데이터를 동시에 사용할 수 있는 것은 물론, 이 두 "
+"지리 데이터 형식에 각각 특화된 다양한 분석 방법도 함께 사용할 수 있게 됩니다. GIS 문제 해결에 쓰이는 데이터 소스 및 공간 처리 "
+"방법을 고려할 때, 이 변환 작업으로 유연성이 향상됩니다."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:10
 msgid ""
@@ -52,13 +55,20 @@ msgid ""
 " data to the other. Let's convert the raster result of the previous lesson "
 "to a vector."
 msgstr ""
-"래스터 및 벡터 분석을 결합하려면, 한 데이터 형식을 다른 형식으로 변환해야 합니다. 이전 강의의 결과물인 래스터를 벡터로 변환해봅시다."
+"래스터 분석과 벡터 분석을 결합하려면, 한 데이터 형식을 다른 형식으로 변환해야 합니다. 이전 수업의 결과물인 래스터를 벡터로 "
+"변환해봅시다."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:14
 msgid ""
 "**The goal for this lesson:** To get the raster result into a vector that "
 "can be used to complete the analysis."
-msgstr "**이 강의의 목표:** 래스터 결과물을 분석을 완성하는 데 쓰일 수 있는 벡터로 변환하기"
+msgstr "**이 수업의 목표:** 래스터 결과물을 분석을 완성하는 데 쓰일 수 있는 벡터로 변환하기."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:18
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: The :guilabel:`Raster to Vector` "
+"Tool"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: :guilabel:`Raster to Vector` 도구"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:20
 msgid ""
@@ -66,42 +76,156 @@ msgid ""
 "you should have the :kbd:`all_conditions_simple.tif` calculated during the "
 "previous exercises."
 msgstr ""
-"이전 모듈에사 사용한 :kbd:`raster_analysis.qgs` 맵에서 시작합니다. 이 맵에 이전 실습에서 계산했던 "
-":kbd:`all_conditions_simple.tif` 파일이 포함되어 있을 것입니다."
+"이전 강의에서 사용한 :file:`raster_analysis.qgs` 맵에서 시작합니다. 이 맵에 이전 예제에서 계산했던 "
+":file:`all_conditions_simple.tif` 파일이 포함되어 있을 것입니다."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:24
 msgid ""
 "Click on :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
 "Vector)`. The tool dialog will appear."
 msgstr ""
-"메뉴에서 :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
-"Vector)` 를 클릭하십시오. 도구 대화 창이 뜰 것입니다."
+":menuselection:`Raster --> Conversion --> Polygonize (Raster to Vector)` 메뉴 "
+"항목을 클릭하십시오. 도구 대화 창이 열릴 것입니다."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:26
 msgid "Set it up like this:"
-msgstr "다음과 같이 설정하십시오."
+msgstr "다음과 같이 설정하십시오:"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:31
 msgid ""
 "Change the field name (describing the values of the raster) to "
 ":guilabel:`suitable`."
-msgstr "래스터의 값을 설명하는 :guilabel:`Field name` 을 :kbd:`suitable` 로 변경하십시오."
+msgstr "래스터의 값을 설명하는 :guilabel:`Field name` 을 ``suitable`` 로 변경하십시오."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:33
+msgid ""
+"Save the layer under :file:`exercise_data/residential_development` as "
+":file:`all_terrain.shp`."
+msgstr ""
+":file:`exercise_data/residential_development` 디렉터리에 레이어를 "
+":file:`all_terrain.shp` 파일로 저장하십시오."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:36
+msgid ""
+"Now you have a vector file which contains all the values of the raster, but "
+"the only areas you're interested in are those that are suitable; i.e., those"
+" polygons where the value of :guilabel:`suitable` is ``1``. You can change "
+"the style of this layer if you want to have a clearer visualization of it."
+msgstr ""
+"이제 래스터의 값들을 모두 담고 있는 벡터 파일을 만들었습니다. 그러나 여러분이 관심을 가진 것은 예를 들면 ``suitable`` "
+"필드의 값이 ``1`` 인 폴리곤들처럼 지역에서 적합한 영역들 뿐입니다. 이 벡터 파일을 좀 더 명확하게 가시화하고 싶은 경우, 이 "
+"레이어의 스타일을 변경하면 됩니다."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:43
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요:"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:45
 msgid "Refer back to the module on vector analysis."
-msgstr "벡터 분석에 대한 모듈을 다시 참조하십시오."
+msgstr "벡터 분석에 대한 강의를 다시 참조하십시오."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:47
+msgid ""
+"Create a new vector file that contains only the polygons where "
+":guilabel:`suitable` has the value of ``1``."
+msgstr "``suitable`` 필드의 값이 ``1`` 인 폴리곤만 담고 있는 새로운 벡터 파일을 생성하십시오."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:49
+msgid ""
+"Save the new file under :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain.shp`."
+msgstr ""
+":file:`exercise_data/residential_development` 디렉터리에 새 파일을 "
+":file:`suitable_terrain.shp` 로 저장하십시오."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:52
 msgid "Answer"
 msgstr "해답"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:56
+msgid ""
+"Open the :guilabel:`Query Builder` by right-clicking on the "
+":guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting"
+" the :menuselection:`Properties --> Source` tab."
+msgstr ""
+":guilabel:`Layers` 패널에서 ``all_terrain`` 레이어를 오른쪽 클릭해서 :guilabel:`Query "
+"Builder` 를 열고, :menuselection:`Properties --> Source` 탭을 선택하십시오."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:59
+msgid "Then build the query ``\"suitable\" = 1``."
+msgstr "그 다음 ``\"suitable\" = 1`` 이라는 쿼리를 작성하십시오."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:60
+msgid ""
+"Click :guilabel:`OK` to filter out all the polygons where this condition "
+"isn't met. When viewed over the original raster, the areas should overlap "
+"perfectly:"
+msgstr ""
+":guilabel:`OK` 를 클릭해서 이 조건을 만족시키지 못하는 폴리곤들을 전부 필터링하십시오. 원본 래스터와 겹쳐서 살펴보면, "
+"영역들이 완벽하게 중첩하고 있을 것입니다:"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:67
+msgid ""
+"You can save this layer by right-clicking on the :guilabel:`all_terrain` "
+"layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`, "
+"then continue as per the instructions."
+msgstr ""
+":guilabel:`Layers` 패널에서 ``all_terrain`` 레이어를 오른쪽 클릭하고 :guilabel:`Save As...`"
+" 를 선택하면 이 레이어를 저장할 수 있습니다. 그리고 지침을 따라 계속하십시오."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:72
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: The :guilabel:`Vector to Raster` "
+"Tool"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: :guilabel:`Vector to Raster` 도구"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:74
+msgid ""
+"Although unnecessary for our current problem, it's useful to know about the "
+"opposite conversion from the one performed above. Convert to raster the "
+":file:`suitable_terrain.shp` vector file you just created in previous step."
+msgstr ""
+"우리가 현재 다루는 문제에는 필요 없긴 하지만, 앞에서 수행했던 변환과는 반대되는 변환에 대해 알아두는 편이 유용합니다. 여러분이 이전 "
+"단계에서 생성했던 :file:`suitable_terrain.shp` 벡터 파일을 래스터로 변환해보십시오."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:78
 msgid ""
 "Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to "
 "Raster)` to start this tool, then set it up as in the screenshot below:"
 msgstr ""
-"메뉴에서 :menuselection:`Raster --> Conversion --> Rasterize (Vector to Raster)`"
-" 를 클릭해서 도구를 실행한 다음, 다음 스크린샷과 동일하게 설정하십시오."
+":menuselection:`Raster --> Conversion --> Rasterize (Vector to Raster)` 메뉴 "
+"항목을 클릭해서 도구를 실행한 다음, 다음 스크린샷과 동일하게 설정하십시오:"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:84
+msgid ":guilabel:`Input layer` is :guilabel:`all_terrain`."
+msgstr ":guilabel:`Input layer` 는 ``all_terrain`` 입니다."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:85
+msgid "Field name is :guilabel:`suitable`."
+msgstr "필드 이름은 ``suitable`` 입니다."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:86
+msgid ":guilabel:`Output raster size units` is :guilabel:`Pixels`."
+msgstr ":guilabel:`Output raster size units` 는 ``Pixels`` 입니다."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:87
+msgid ""
+":guilabel:`Width` and :guilabel:`Height` are ``837`` and ``661``, "
+"respectively."
+msgstr ":guilabel:`Width` 와 :guilabel:`Height` 는 각각 ``837`` 과 ``661`` 입니다."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:89
+msgid ""
+"Get the :guilabel:`Output extent` from the :guilabel:`all_terrain` layer."
+msgstr ":guilabel:`Output extent` 는 ``all_terrain`` 레이어에서 가져옵니다."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:90
+msgid ""
+"Set output file :guilabel:`Rasterized` to "
+":file:`exercise_data/residential_development/raster_conversion.tif`."
+msgstr ""
+":guilabel:`Rasterized` 산출 파일을 "
+":file:`exercise_data/residential_development/raster_conversion.tif` 로 설정합니다."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:93
 msgid ""
@@ -110,25 +234,33 @@ msgid ""
 "open its metadata (:guilabel:`Metadata` tab in the :guilabel:`Layer "
 "Properties`)."
 msgstr ""
-"여기서 설정한 산출 이미지의 크기는 벡터화되었던 원래 래스터와 동일합니다. 이미지의 크기를 보려면 해당 이미지의 메타데이터( "
-":guilabel:`Layer Properties` 에 있는 :guilabel:`Metadata` 탭)를 열어보십시오."
+"여기에서 지정한 산출 이미지의 크기는 벡터화되었던 원본 래스터와 동일합니다. 이미지의 크기를 보려면 해당 이미지의 "
+"메타데이터(:guilabel:`Layer Properties` 에 있는 :guilabel:`Metadata` 탭)를 열어보십시오."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:98
 msgid "Click :guilabel:`OK` on the dialog to begin the conversion process."
-msgstr "대화 창의 :guilabel:`OK` 를 클릭해서 변환 처리 과정을 시작합니다."
+msgstr "대화창의 :guilabel:`OK` 를 클릭해서 변환 처리 과정을 시작하십시오."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:99
 msgid ""
 "When it is complete, gauge its success by comparing the new raster with the "
 "original one.  They should match up exactly, pixel for pixel."
 msgstr ""
-"변환 완료 시, 새 래스터와 원래 래스터를 비교해서 성공률을 측정해보십시오. 두 래스터는 픽셀 단위까지 완전히 일치해야 정상입니다."
+"변환이 완료되면, 새 래스터와 원래 래스터를 비교해서 성공률을 측정해보십시오. 두 래스터는 픽셀 단위까지 완전히 일치해야 정상입니다."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:103
+msgid "In Conclusion"
+msgstr "결론"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:105
 msgid ""
 "Converting between raster and vector formats allows you to widen the "
 "applicability of data, and need not lead to data degradation."
-msgstr "래스터와 벡터 형식을 서로 변환하는 작업을 통해 데이터의 질적 저하 없이 그 응용성을 넓힐 수 있습니다."
+msgstr "래스터와 벡터 포맷을 서로 변환하는 작업을 통해 데이터의 질적 저하 없이 그 응용성을 넓힐 수 있습니다."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:109
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:111
 msgid ""
@@ -136,5 +268,5 @@ msgid ""
 "format, they can be used to solve the problem of which buildings we should "
 "consider for the residential development."
 msgstr ""
-"이제 벡터 형식으로부터도 지형 분석 결과를 얻을 수 있으니, 주거 구역 개발을 위해 어떤 건물들을 골라야 하는지에 대한 문제를 해결하는 "
-"데 이 분석 결과를 쓸 수 있습니다."
+"이제 벡터 포맷으로도 지형 분석 결과를 얻을 수 있으니, 주거 구역 개발을 위해 어떤 건물들을 골라야 하는지에 대한 문제를 해결하는 데 "
+"이 분석 결과를 쓸 수 있습니다."
