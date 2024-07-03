@@ -82,6 +82,11 @@ Provided information are:
   last save time and size, the used provider
 * custom properties, used to store additional information about certain objects, such as map layers.
   These properties are created and managed using PyQGIS, specifically through the `setCustomProperty` method.
+  An example of a useful custom property is :guilabel:`Identify/format`, which influences how the results from using
+  |identify| :ref:`identify features <identify>` tool over a raster layer are formatted. When using the
+  |identify| :ref:`identify features <identify>` tool on different types of layers, such as XYZ or WMS layers,
+  you might notice that the :guilabel:`Identify/format` value differs. This is because each layer can have its
+  own default format for displaying identify results.
 * based on the provider of the layer: extent, width and height, data type,
   GDAL driver, bands statistics
 * the Coordinate Reference System: name, units, method, accuracy, reference
