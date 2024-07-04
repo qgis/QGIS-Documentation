@@ -752,15 +752,15 @@ the rendering of the layer over time. Such dynamic rendering requires the
 Check the |checkbox| :guilabel:`Dynamic Temporal Control` option and
 set whether the layer redraw should be:
 
-* :guilabel:`Automatic`: the rendering is controlled by the underlying
-  data provider if it suppports temporal data handling. E.g. this can be used
-  with WMS-T layers or PostGIS rasters.
-
-  .. A bit more info on this automatic option would be necessary.
-   I guess it has to do with wms-t that I don't use so precision welcome
-
 * :guilabel:`Fixed time range`: only show the raster layer if the animation
   time is within a :guilabel:`Start date` and :guilabel:`End date` range
+* :guilabel:`Fixed Time Range Per Band`: only shows a band when the current animation time
+  is between its :guilabel:`Begin` and :guilabel:`End` date range. This option allows
+  you to either manually set these time ranges for each band or use :guilabel:`Expression`
+  to automatically generate datetime values, enabling detailed temporal analysis and visualization.
+* :guilabel:`Represents Temporal Values`: interprets each pixel in the raster layer as a datetime value.
+  When this temporal mode is active, pixels that do not fall whitin the temporal range specified in the
+  render context will be hidden, ensuring that only temporally relevant data is displayed.
 * :guilabel:`Redraw layer only`: the layer is redrawn at each new animation
   frame. It's useful when the layer uses time-based expression values for
   renderer settings (e.g. data-defined renderer opacity, to fade in/out
