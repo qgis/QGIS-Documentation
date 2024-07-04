@@ -394,7 +394,7 @@ To use categorized symbology for a layer:
 
 #. Configure the :ref:`Symbol <symbol-selector>`, which will be used as
    base symbol for all the classes;
-#. Indicate the :ref:`Color ramp <color-ramp>`, ie the range of colors from which
+#. Indicate the :ref:`Color ramp <color-ramp>`, i.e. the range of colors from which
    the color applied to each symbol is selected.
 
    Besides the common options of the :ref:`color ramp widget <color_ramp_widget>`,
@@ -1777,7 +1777,7 @@ The current core implementation of diagrams provides support for:
 * |piechart| :guilabel:`Pie chart`, a circular statistical graphic divided into
   slices to illustrate numerical proportion. The arc length of each slice is
   proportional to the quantity it represents;
-* |text| :guilabel:`Text diagram`, a horizontally divided circle showing statistics
+* |text| :guilabel:`Text diagram`, a horizontally divided circle showing statistic
   values inside;
 * |histogram| :guilabel:`Histogram`, bars of varying colors for each attribute
   aligned next to each other
@@ -1854,8 +1854,8 @@ In this tab, you can also manage and fine tune the diagram visibility with
 different options:
 
 * :guilabel:`Diagram z-index`: controls how diagrams are drawn on top of each
-  other and on top of labels. A diagram with a high index is drawn over diagrams
-  and labels;
+  other and on top of labels. A diagram with a high index is drawn over other
+  diagrams and labels;
 * |checkbox| :guilabel:`Show all diagrams`: shows all the diagrams even if they
   overlap each other;
 * :guilabel:`Show diagram`: allows only specific diagrams to be rendered;
@@ -1934,12 +1934,12 @@ The information can also be filled using the :ref:`Move labels and diagrams
 <label_toolbar>` tool.
 
 In the :guilabel:`Priority` section, you can define the placement priority rank
-of each diagram, ie if there are different diagrams or labels candidates for the
+of each diagram, i.e. if there are different diagrams or labels candidates for the
 same location, the item with the higher priority will be displayed and the
 others could be left out.
 
 :guilabel:`Discourage diagrams and labels from covering features` defines
-features to use as :ref:`obstacles <labels_obstacles>`, ie QGIS will try to not
+features to use as :ref:`obstacles <labels_obstacles>`, i.e. QGIS will try to not
 place diagrams nor labels over these features.
 The priority rank is then used to evaluate whether a diagram could be omitted
 due to a greater weighted obstacle feature.
@@ -2218,7 +2218,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
 
    #. The first step is to use the |symbologyAdd| :sup:`Add a new tab or group to the form layout` icon.
       Fields and other groups will be displayed in it.
-   #. Then set the properties of the container, ie:
+   #. Then set the properties of the container, i.e.:
 
       * the :guilabel:`Label`: the title that will be used for the container
       * the :guilabel:`Container Type`: it can be a :guilabel:`Tab`,
