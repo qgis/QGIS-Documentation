@@ -1036,6 +1036,8 @@ Parameters
        **Allow data defined symbol blocks** [boolean] (``buildDataDefinedBlocks``)
 
        **Maximum number of symbol blocks** [number] (``dataDefinedBlocksMaximumNumberOfClasses``)
+         ``-1`` means no limitation.
+
    * - **Symbology mode**
      - ``SYMBOLOGY_MODE``
      - [enumeration]
