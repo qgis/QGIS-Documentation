@@ -454,11 +454,11 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   and raster data from servers that implement the OGC API standards.
   To use this option:
   
-  * Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source Manager`
-    dialog.
-  * Enter the endpoint of the OGC API service you want to connect to. Note that you
-    don't need to prefix the endpoint with "OGCAPI:".
-  * Click :guilabel:`Connect` to establish a connection to the server.
+  #. Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source Manager`
+     dialog.
+  #. Enter the endpoint of the OGC API service you want to connect to. Note that you
+     don't need to prefix the endpoint with "OGCAPI:".
+  #. Click :guilabel:`Connect` to establish a connection to the server.
 
 
 .. _mesh_loading:
