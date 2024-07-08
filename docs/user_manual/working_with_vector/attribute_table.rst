@@ -489,17 +489,9 @@ If you want to use attribute data in external programs (such as Excel,
 LibreOffice, or a custom web application), select one or more row(s) and
 use the |copySelected| :sup:`Copy selected rows to clipboard` button
 or press :kbd:`Ctrl+C`.
-
-In :menuselection:`Settings --> Options --> Data Sources` menu you can
-define the format to paste to with :guilabel:`Copy features as` dropdown list:
-
-* :guilabel:`Plain text, no geometry`: attributes are copied as text
-  but the geometry is skipped
-* :guilabel:`Plain text, WKT geometry`: attributes are copied as text
-  and the geometry is returned in WKT
-* :guilabel:`Plain text, WKB geometry`: attributes are copied as text
-  and the geometry is returned in WKB (hex format)
-* :guilabel:`GeoJSON`: attributes and geometry are formatted as GeoJSON data
+Moreover, in :menuselection:`Settings --> Options --> Data Sources` menu
+you can define the format to paste to with the :guilabel:`Copy features as` option.
+More details at :ref:`datasources_options`.
 
 
 .. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
