@@ -399,7 +399,7 @@ Data Sources settings
 
 * |checkbox| :guilabel:`Open attribute table as docked window`
 * :guilabel:`Copy features as`: defines the format to use for data when pasting
-  features in other applications. 
+  features in other applications.
 
   * :guilabel:`Plain text, no geometry`: attributes are copied as text
     but the geometry is skipped
@@ -2107,23 +2107,29 @@ panel` to manage the map canvas :ref:`temporal navigation <maptimecontrol>`.
 .. index:: Terrain; Elevation
 .. _project_terrain:
 
-Terrain Properties
-------------------
+Elevation Properties
+--------------------
 
-The |layoutItem3DMap| :guilabel:`Terrain` tab helps you configure default settings
+The |elevationscale| :guilabel:`Elevation` tab helps you configure default settings
 for the terrain and elevation.
 When any new :ref:`3d map <label_3dmapview>` is created in the project,
 the map will default to using the same terrain settings as are defined for the project.
 The project elevation settings will also be respected
 by the :ref:`elevation profile <label_elevation_profile_view>` tool.
 
-
 .. _figure_terrain_tab:
 
-.. figure:: img/project_terrain.png
+.. figure:: img/project_elevation.png
    :align: center
 
-   Project Terrain tab
+   Project Elevation tab
+
+* :guilabel:`Vertical Reference System`
+* :guilabel:`Elevation Range`: helps you define the :guilabel:`Lower` and :guilabel:`Upper` limits
+  for the elevation controller in the project.
+
+  .. todo: add url to elevation controller chapter, i.e.
+   for the :ref:`elevation controller <elevation_controller>` in the project.
 
 * :guilabel:`Terrain` and elevation options are available for:
 
@@ -2708,6 +2714,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |elevationProfile| image:: /static/common/mActionElevationProfile.png
    :width: 1.5em
+.. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
@@ -2729,8 +2737,6 @@ in the QGIS user profile.
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
-   :width: 1.5em
-.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
