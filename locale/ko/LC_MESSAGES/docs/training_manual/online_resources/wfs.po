@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:2
+msgid "Lesson: Web Feature Services"
+msgstr "수업: WFS(Web Feature Service)"
 
 #: ../../docs/training_manual/online_resources/wfs.rst:4
 msgid ""
@@ -41,22 +45,34 @@ msgid ""
 "a map which you can't edit, a WFS gives you access to the features "
 "themselves."
 msgstr ""
-"WFS(Web Feature Service)는 사용자가 QGIS에 직접 불러올 수 있는 형식으로 GIS 데이터를 제공합니다. 사용자가 "
+"WFS(Web Feature Service)는 GIS 데이터를 사용자가 QGIS에 직접 불러올 수 있는 포맷으로 제공합니다. 사용자가 "
 "편집할 수 없는 맵만을 제공하는 WMS와는 달리, WFS는 피처 그 자체에 접근할 수 있도록 해줍니다."
 
 #: ../../docs/training_manual/online_resources/wfs.rst:8
 msgid ""
 "**The goal for this lesson:** To use a WFS and understand how it differs "
 "from a WMS."
-msgstr "**이 강의의 목표:** WFS를 사용하고 WMS와의 차이점을 이해하기."
+msgstr "**이 수업의 목표:** WFS를 사용하고 WMS와의 차이점을 이해하기."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:12
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Loading a WFS Layer"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: WFS 레이어 불러오기"
 
 #: ../../docs/training_manual/online_resources/wfs.rst:14
 msgid "Start a new map. This is for demo purposes and won't be saved."
 msgstr "새 맵을 시작하십시오. 이 맵은 시연 용이기 때문에 저장하지 않을 겁니다."
 
+#: ../../docs/training_manual/online_resources/wfs.rst:15
+msgid "Click the |dataSourceManager| :sup:`Open Data Source Manager` button."
+msgstr "|dataSourceManager| :sup:`Open Data Source Manager` 버튼을 클릭하십시오."
+
 #: ../../docs/training_manual/online_resources/wfs.rst:172
 msgid "dataSourceManager"
 msgstr "dataSourceManager"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:16
+msgid "Enable the |wfs| :guilabel:`WFS / OGC API - Features` tab."
+msgstr "|wfs| :guilabel:`WFS / OGC API - Features` 탭을 선택하십시오."
 
 #: ../../docs/training_manual/online_resources/wfs.rst:176
 msgid "wfs"
@@ -65,6 +81,15 @@ msgstr "wfs"
 #: ../../docs/training_manual/online_resources/wfs.rst:17
 msgid "Click the :guilabel:`New` button."
 msgstr ":guilabel:`New` 버튼을 클릭합니다."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:18
+msgid ""
+"In the dialog that appears, enter the :guilabel:`Name` as ``nsidc.org`` and "
+"the :guilabel:`URL` as ``https://nsidc.org/cgi-"
+"bin/atlas_south?version=1.1.0``."
+msgstr ""
+"대화창이 열리면, :guilabel:`Name` 에 ``nsidc.org`` 를 그리고 :guilabel:`URL` 에 "
+"``https://nsidc.org/cgi-bin/atlas_south?version=1.1.0`` 을 입력하십시오."
 
 #: ../../docs/training_manual/online_resources/wfs.rst:25
 msgid ""
@@ -76,21 +101,71 @@ msgstr ""
 #: ../../docs/training_manual/online_resources/wfs.rst:27
 msgid ""
 "Click the :guilabel:`Connect`. A list of the available layers will appear:"
-msgstr ":guilabel:`Connect` 를 클릭하면 사용 가능한 레이어들의 목록이 나타납니다."
+msgstr ":guilabel:`Connect` 를 클릭하십시오. 사용할 수 있는 레이어들의 목록이 나타날 것입니다:"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:32
+msgid ""
+"Uncheck the :guilabel:`Only request features overlapping the view extent` "
+"option below the layers list, since your current map canvas may not cover "
+"our area of interest: Antarctica."
+msgstr ""
+"레이어 목록 아래 있는 :guilabel:`Only request features overlapping the view extent` "
+"옵션을 체크 해제하십시오. 여러분의 현재 맵 캔버스가 관심 지역인 남극을 커버하고 있지 않을 수도 있기 때문입니다."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:35
+msgid ""
+"Find the layer :guilabel:`antarctica_country_border`. You can use the "
+":guilabel:`Filter` box at the top."
+msgstr ""
+"``antarctica_country_border`` 레이어를 찾으십시오. 상단의 :guilabel:`Filter` 텍스트란을 사용해도 "
+"됩니다."
 
 #: ../../docs/training_manual/online_resources/wfs.rst:37
 msgid "Click on the layer to select it:"
-msgstr "해당 레이어를 클릭해서 선택한 다음,"
+msgstr "해당 레이어를 클릭해서 선택한 다음:"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:38
+msgid ""
+"Find and select also the layer :guilabel:`south_poles_wfs`. You might need "
+"to hold :kbd:`Ctrl`."
+msgstr ""
+"``south_poles_wfs`` 레이어도 찾아서 선택하십시오. :kbd:`Ctrl` 키를 누른 채 선택해야 할 수도 있습니다."
 
 #: ../../docs/training_manual/online_resources/wfs.rst:44
 msgid "Click :guilabel:`Add`."
 msgstr ":guilabel:`Add` 를 클릭하십시오."
 
+#: ../../docs/training_manual/online_resources/wfs.rst:46
+msgid ""
+"It may take a while to load the layers. When they are loaded, they will "
+"appear in the map, showing the outlines of Antarctica and a few points over."
+msgstr ""
+"레이어들을 불러오는 데 시간이 조금 걸릴 겁니다. 불러오기가 완료되면, 남극의 윤곽선과 그 안에 있는 몇몇 포인트들을 보여주는 레이어들이"
+" 맵에 나타날 것입니다."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:52
+msgid "How is this different from having a WMS layer?"
+msgstr "이들과 WMS 레이어는 어떤 점이 다를까요?"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:54
+msgid ""
+"Select any of the layers and you'll notice that feature selection and "
+"attribute table tools are enabled. These are vector layers."
+msgstr ""
+"레이어들 가운데 하나를 선택하면 피처 선택 및 속성 테이블 도구가 활성화되는 것을 알 수 있을 것입니다. 이 레이어들은 벡터 "
+"레이어입니다."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:56
+msgid ""
+"Select the :guilabel:`south_poles_wfs` layer and open its attribute table. "
+"You should see this:"
+msgstr "``south_poles_wfs`` 레이어를 선택한 다음 속성 테이블을 여십시오. 다음을 보게 될 것입니다:"
+
 #: ../../docs/training_manual/online_resources/wfs.rst:62
 msgid ""
 "Since the points have attributes, we are able to label them, as well as "
 "change their symbology. Here's an example:"
-msgstr "포인트에 속성이 부여돼 있으므로, 라벨을 붙이는 것은 물론 심볼도 변경할 수 있습니다. 다음은 그 예입니다."
+msgstr "포인트에 속성이 부여돼 있으므로, 라벨을 붙이는 것은 물론 심볼도 변경할 수 있습니다. 다음은 그 예입니다:"
 
 #: ../../docs/training_manual/online_resources/wfs.rst:70
 msgid "Differences from WMS layers"
@@ -107,9 +182,13 @@ msgid ""
 "typically take a very long time to load because of this."
 msgstr ""
 "WFS는 레이어를 렌더링한 맵이 아니라 레이어 그 자체를 반환합니다. 데이터에 직접 접근할 수 있기 때문에, 레이어의 심볼을 변경하거나 "
-"분석 기능을 실행할 수 있습니다. 하지만 훨씬 많은 데이터를 전송해야 한다는 단점도 있습니다. 사용자가 불러오는 레이어가 복잡한 형태, "
-"많은 속성들, 또는 많은 피처를 담고 있을 경우나 단순히 많은 레이어를 불러오는 경우 이 단점이 특히 두드러지게 됩니다. 이 때문에 "
-"WFS 레이어를 불러오는 데에는 일반적으로 긴 시간이 걸립니다."
+"분석 기능을 실행할 수 있습니다. 하지만 훨씬 많은 데이터를 전송해야 한다는 단점도 있습니다. 사용자가 불러오는 레이어가 복잡한 "
+"형태이거나, 많은 속성들이나 피처를 담고 있을 경우, 또는 단순히 많은 레이어를 불러오는 경우 이 단점이 특히 두드러지게 됩니다. 이 "
+"때문에 WFS 레이어를 불러오는 데에는 일반적으로 긴 시간이 걸립니다."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:81
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Querying a WFS Layer"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: WFS 레이어 쿼리하기"
 
 #: ../../docs/training_manual/online_resources/wfs.rst:83
 msgid ""
@@ -128,9 +207,9 @@ msgid ""
 "layer (and perhaps also the :guilabel:`antarctica_country_border` layer) "
 "that's already been loaded."
 msgstr ""
-"예를 들어, 현재 사용 중인 WFS 서버 상에 :guilabel:`countries (excluding Antarctica)` 라는 "
-"레이어가 있습니다. 여기서 (아마도 :guilabel:`antarctica_country_border` 레이어와 함께) 이미 불러온 "
-":guilabel:`south_poles_wfs` 레이어의 위치와 남아프리카 공화국의 위치를 비교해보고 싶다고 해봅시다."
+"예를 들어, 현재 사용 중인 WFS 서버 상에 ``countries (excluding Antarctica)`` 라는 레이어가 있습니다."
+" 여기서 (아마도 ``antarctica_country_border`` 레이어와 함께) 이미 불러온 ``south_poles_wfs`` "
+"레이어의 위치와 남아프리카 공화국의 위치를 비교해보고 싶다고 해봅시다."
 
 #: ../../docs/training_manual/online_resources/wfs.rst:93
 msgid ""
@@ -140,15 +219,78 @@ msgid ""
 " the data for South Africa seems a bit wasteful of bandwidth. Depending on "
 "your connection, this dataset can take several minutes to load."
 msgstr ""
-"두 가지 방법이 있습니다. 먼저 :guilabel:`countries ...` 레이어 전체를 불러온 다음, 평소와 마찬가지로 쿼리를 "
-"작성할 수 있습니다. 하지만 전 세계의 모든 나라들의 데이터를 전송받아 남아프리카 공화국의 데이터만 이용하는 것은 대역폭을 조금 낭비하는"
-" 것 같군요. 사용자의 인터넷 연결 속도에 따라 이 데이터를 불러오는 데 몇 분이 걸릴 수도 있습니다."
+"두 가지 방법이 있습니다. 첫 번째는 ``countries (excluding Antarctica)`` 레이어 전체를 불러온 다음, "
+"평소와 마찬가지로 쿼리를 작성할 수 있습니다. 하지만 전 세계의 모든 나라들의 데이터를 전송받아 남아프리카 공화국의 데이터만 이용하는 "
+"것은 대역폭을 조금 낭비하는 것 같군요. 사용자의 인터넷 연결 속도에 따라 이 데이터를 불러오는 데 몇 분이 걸릴 수도 있습니다."
 
 #: ../../docs/training_manual/online_resources/wfs.rst:99
 msgid ""
 "The alternative is to build the query as a filter before even loading the "
 "layer from the server."
-msgstr "두 번째는 서버에서 레이어를 불러오기도 전에 필터 역할을 하는 쿼리를 작성하는  방법입니다."
+msgstr "두 번째는 서버에서 레이어를 불러오기도 전에 필터 역할을 하는 쿼리를 작성하는 방법입니다."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:102
+msgid ""
+"Enable the :guilabel:`WFS / OGC API Features` tab in the :guilabel:`Data "
+"Source Manager` dialog"
+msgstr ""
+":guilabel:`Data Source Manager` 대화창의 :guilabel:`WFS / OGC API Features` 탭을 "
+"여십시오."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:104
+msgid ""
+"Connect to the server we used before and you should see the list of "
+"available layers."
+msgstr "이전에 사용했던 서버에 연결하면 사용할 수 있는 레이어들의 목록을 볼 수 있을 것입니다."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:105
+msgid ""
+"Find and double-click the :guilabel:`countries (excluding Antarctica)` "
+"layer. The layer name is ``country_borders_excluding_antarctica``. You can "
+"also select the layer and press :guilabel:`Build query` button at the bottom"
+" of the dialog:"
+msgstr ""
+"``countries (excluding Antarctica)`` 레이어를 찾아서 더블클릭하십시오. 레이어 이름이 "
+"``country_borders_excluding_antarctica`` 입니다. 레이어를 선택한 다음 대화창 하단에 있는 "
+":guilabel:`Build query` 버튼을 눌러도 됩니다:"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:113
+msgid ""
+"In the dialog that appears, type the following ``SELECT * FROM "
+"country_borders_excluding_antarctica WHERE \"Countryeng\" = 'South Africa'``"
+" query in the :guilabel:`SQL Statement` box."
+msgstr ""
+"대화창이 열리면, :guilabel:`SQL Statement` 란에 다음 ``SELECT * FROM "
+"country_borders_excluding_antarctica WHERE \"Countryeng\" = 'South Africa'``"
+" 쿼리를 입력하십시오."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:120
+msgid "Press :guilabel:`OK`."
+msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/training_manual/online_resources/wfs.rst:121
+msgid ""
+"The expression used will appear as the :guilabel:`Sql` value of the target "
+"layer:"
+msgstr "사용한 표현식이 대상 레이어의 :guilabel:`Sql` 값으로 나타날 것입니다:"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:126
+msgid ""
+"Click :guilabel:`Add` with the layer selected as above. Only the country "
+"with the ``Countryeng`` value of ``South Africa`` will load from that layer:"
+msgstr ""
+"앞 그림과 같이 레이어를 선택하고 :guilabel:`Add` 버튼을 클릭하십시오. 해당 레이어에서 ``Countryeng`` 의 값이 "
+"``South Africa`` 인 국가만 불러올 것입니다:"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:133
+msgid ""
+"Did you notice the |indicatorFilter| icon next to the "
+"``country_borders_excluding_antarctica`` layer? It indicates that the loaded"
+" layer is filtered and does not display in the project all of its features."
+msgstr ""
+"``country_borders_excluding_antarctica`` 레이어 옆에 |indicatorFilter| 아이콘이 생겼다는 "
+"사실을 알아차렸나요? 불러온 레이어가 필터링되었기 때문에 프로젝트에 레이어의 피처들이 전부 보이는 것이 아니라는 사실을 알려주는 "
+"역할입니다."
 
 #: ../../docs/training_manual/online_resources/wfs.rst:174
 msgid "indicatorFilter"
@@ -204,3 +346,7 @@ msgstr ""
 #: ../../docs/training_manual/online_resources/wfs.rst:161
 msgid "What's Next?"
 msgstr "다음은 무엇을 배우게 될까요?"
+
+#: ../../docs/training_manual/online_resources/wfs.rst:163
+msgid "Next, you'll see how to use QGIS Server to provide OGC services."
+msgstr "다음 강의에서는 QGIS 서버를 사용해서 OGC 서비스를 제공하는 방법을 배울 것입니다."
