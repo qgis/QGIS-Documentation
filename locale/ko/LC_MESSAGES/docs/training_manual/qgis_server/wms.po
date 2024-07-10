@@ -32,8 +32,447 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:2
+msgid "Lesson: Serving WMS"
+msgstr "수업: WMS 서비스하기"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:4
+msgid ""
+"The data used for this exercise are available in the :file:`qgis-server-"
+"tutorial-data` subdirectory of the :ref:`training data <data_downloadlink>` "
+"you downloaded. For convenience and to avoid possible permissions problems, "
+"we will assume that these files are stored in :file:`/home/qgis/projects` "
+"directory. Hence, adapt the following instructions to your path."
+msgstr ""
+"이 예제에 쓰이는 데이터는 여러분이 다운로드한 :ref:`교육 데이터 <data_downloadlink>` 의 :file:`qgis-"
+"server-tutorial-data` 하위 디렉터리에 있습니다. 편의를 위해 그리고 발생할 수도 있는 권한 문제를 피하기 위해, 우리는"
+" 이 파일들이 :file:`/home/qgis/projects` 디렉터리에 저장되어 있다고 가정할 것입니다. 따라서 여러분의 경로에 다음"
+" 지침을 적용하십시오."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:10
+msgid ""
+"The demo data contains a QGIS project named :file:`world.qgs` that is "
+"already prepared to be served with QGIS Server. If you want to use your own "
+"project or you want to learn how a project is prepared see the "
+":ref:`Creatingwmsfromproject` section."
+msgstr ""
+"이 시연 데이터는 이미 QGIS 서버를 통해 서비스될 준비가 되어 있는 :file:`world.qgs` 라는 QGIS 프로젝트를 담고 "
+"있습니다. 여러분 자신의 프로젝트를 사용하고 싶거나 프로젝트를 어떻게 준비해야 하는지 알고 싶은 경우, "
+":ref:`Creatingwmsfromproject` 절을 참조하세요."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:17
+msgid ""
+"This module presents the URLs so that the audience can easily distinguish "
+"the parameters and parameters values. While the normal format is:"
+msgstr ""
+"이 강의에서는 독자들이 파라미터와 파라미터 값을 쉽게 구분할 수 있도록 URL을 보여줍니다. 즉 일반적인 서식이 다음과 같다면:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:24
+msgid "this tutorial uses:"
+msgstr "이 교재에서는 다음 서식을 사용합니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:32
+msgid ""
+"Pasting them into Mozilla Firefox works properly but other web browsers like"
+" Chrome may add unwanted spaces between the ``field:parameter`` pairs. So, "
+"if you encounter this issue you can either use Firefox or modify the URLs so"
+" that they're in one line format."
+msgstr ""
+"이 내용을 모질라 파이어폭스에 붙여넣으면 제대로 작동할 것이지만, 크롬 같은 다른 웹 브라우저들의 경우 "
+"``field:parameter`` 쌍 사이에 원치 않는 공백을 삽입할 수도 있습니다. 따라서 이런 문제가 발생하는 경우 파이어폭스를 "
+"사용하거나 또는 URL을 한 줄 서식으로 수정하면 됩니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:37
+msgid ""
+"Let's make a WMS GetCapabilities request in the web browser or with curl:"
+msgstr ""
+"웹 브라우저에서 또는 `cURL <https://curl.se/>`_ 을 사용해서 WMS GetCapabilities 요청을 "
+"생성해봅시다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:47
+msgid ""
+"In the Apache config from the previous lesson the ``QGIS_PROJECT_FILE`` "
+"variable sets the default project to :file:`/home/qgis/projects/world.qgs`. "
+"However, in the above request we made use of the **map** parameter to be "
+"explicit and to show it can be used to point at any project. If you delete "
+"the **map** parameter from the above request QGIS Server will output the "
+"same response."
+msgstr ""
+"이전 수업의 아파치 환경설정에서는 ``QGIS_PROJECT_FILE`` 변수가 기본 프로젝트를 "
+":file:`/home/qgis/projects/world.qgs` 로 설정했습니다. 하지만 앞의 요청에서는 **map** 파라미터를 "
+"명시적으로 사용해서 이 파라미터가 어떤 프로젝트라도 가리킬 수 있다는 것을 보였습니다. 앞의 요청에서 **map** 파라미터를 "
+"삭제하더라도 QGIS 서버는 동일한 응답을 산출할 것입니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:53
+msgid ""
+"By pointing any WMS client to the ``GetCapabilities`` URL, the client gets "
+"in response an XML document with metadata of the Web Map Server’s "
+"information, e.g. what layers does it serve, the geographical coverage, in "
+"what format, what version of WMS etc."
+msgstr ""
+"어떤 WMS 클라이언트든 ``GetCapabilities`` URL을 가리키면, 예를 들어 해당 서버가 어떤 레이어들을 가지고 있는지, "
+"지리적으로 커버하는 영역이 어떻게 되는지, 어떤 포맷인지, WMS의 버전은 무엇인지 등등의 웹 맵 서버의 정보의 메타데이터를 가진 XML"
+" 문서 형식의 응답을 받습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:58
+msgid ""
+"As QGIS is also a :ref:`ogc-wms` you can create a new WMS server connection "
+"with the help of the above GetCapabilities url. See the :ref:`wms-services` "
+"or the  :ref:`ogc-wms-servers` section on how to do it."
+msgstr ""
+"QGIS도 :ref:`ogc-wms` 이기 때문에 앞의 GetCapabilities URL을 사용해서 새 WMS 서버 연결을 생성할 수 "
+"있습니다. 그 방법을 알고 싶다면 :ref:`wms-services` 또는 :ref:`ogc-wms-servers` 절을 참고하세요."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:62
+msgid ""
+"By adding the ``countries`` WMS layer to your QGIS project you should get an"
+" image like the one below:"
+msgstr "여러분의 QGIS 프로젝트에 ``countries`` WMS 레이어를 추가하면 다음 그림과 같은 이미지를 얻게 될 것입니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:68
+msgid "QGIS Desktop consuming the QGIS Server countries layer WMS service"
+msgstr "QGIS 서버의 WMS 서비스로부터 ``countries`` 레이어를 사용하는 QGIS 데스크탑"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:72
+msgid ""
+"QGIS Server serves layers that are defined in the :file:`world.qgs` project."
+" By opening the project with QGIS you can see there are multiple styles for "
+"the countries layer. QGIS Server is also aware of this and you can choose "
+"the style you want in your request.  The ``classified_by_population`` style "
+"was chosen in the above image."
+msgstr ""
+"QGIS 서버는 :file:`world.qgs` 프로젝트에 정의되어 있는 레이어들을 서비스합니다. QGIS로 이 프로젝트 파일을 열면 "
+"``countries`` 레이어의 스타일이 여러 가지 있다는 사실을 알 수 있습니다. QGIS 서버도 이 사실을 알고 있기 때문에 "
+"요청에서 원하는 스타일을 선택할 수 있습니다. 이 이미지는 ``classified_by_population`` 스타일을 선택한 것입니다."
 
 #: ../../docs/training_manual/qgis_server/wms.rst:79
 msgid "Logging"
 msgstr "로그 작업"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:81
+msgid ""
+"When you're setting up a server, the logs are always important as they show "
+"you what's going on. We have setup in the :file:`*.conf` file the following "
+"logs:"
+msgstr ""
+"서버를 설정할 때, 로그 기록은 언제나 중요합니다. 어떤 일이 일어나고 있는지 보여주기 때문입니다. 이 프로젝트에서는 "
+":file:`*.conf` 파일에 다음 로그들을 설정했습니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:84
+msgid "QGIS Server log at :file:`/logs/qgisserver.log`"
+msgstr "QGIS 서버 로그: :file:`/logs/qgisserver.log`"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:85
+msgid ""
+"``qgisplatform.demo`` Apache access log at "
+":file:`qgisplatform.demo.access.log`"
+msgstr "``qgisplatform.demo`` 아파치 접근 로그: :file:`qgisplatform.demo.access.log`"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:86
+msgid ""
+"``qgisplatform.demo`` Apache error log at "
+":file:`qgisplatform.demo.error.log`"
+msgstr "``qgisplatform.demo`` 아파치 오류 로그: :file:`qgisplatform.demo.error.log`"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:88
+msgid ""
+"The log files are simply text files so you can use a text editor to check "
+"them out. You can also use the ``tail`` command in a terminal: ``sudo tail "
+"-f /logs/qgisserver.log``."
+msgstr ""
+"이 로그 파일들은 단순 텍스트 파일들이기 때문에 텍스트 편집기를 사용해서 확인할 수 있습니다. 터미널에서 ``tail`` 명령어를 다음과"
+" 같이 사용해도 됩니다: ``sudo tail -f /logs/qgisserver.log``"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:92
+msgid ""
+"This will continuously output in the terminal what's written in that log "
+"file. You can also have three terminals opened for each of the log files "
+"like so:"
+msgstr ""
+"이 명령어를 실행하면 터미널에 해당 로그 파일에 작성되는 내용을 계속 출력할 것입니다. 각 로그 파일에 대해 다음과 같이 터미널 3개를 "
+"열어놓을 수도 있습니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:98
+msgid "Using the ``tail`` command to visualise QGIS Server logs output"
+msgstr "QGIS 서버 로그 출력을 가시화하기 위해 ``tail`` 명령어를 사용하기"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:100
+msgid ""
+"When you use QGIS Desktop to consume the QGIS Server WMS services you will "
+"see all the requests QGIS sends to the Server in the access log, the errors "
+"of QGIS Server in the QGIS Server log etc."
+msgstr ""
+"QGIS 서버의 WMS 서비스를 사용하기 위해 QGIS 데스크탑을 사용할 때, 접근 로그에서 QGIS가 전송하는 모든 요청을 보게 될 "
+"것이고, QGIS 서버 로그에서는 QGIS 서버의 오류를 보게 될 것입니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:106
+msgid ""
+"If you look at the logs in the following sections you should get a better "
+"understanding on what's happening."
+msgstr "다음 절들에 나오는 로그들을 살펴보면 어떤 일이 일어나고 있는지에 대해 더 잘 이해하게 될 것입니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:108
+msgid ""
+"By restarting Apache while looking in the QGIS Server log you can find some "
+"extra pointers on how things work."
+msgstr "QGIS 서버 로그를 살펴보면서 아파치를 다시 시작하면, 작동 방식에 대한 몇 가지 추가 정보를 얻을 수 있습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:112
+msgid "GetMap requests"
+msgstr "GetMap 요청"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:114
+msgid ""
+"In order to display the ``countries`` layer, QGIS Desktop, like any other "
+"WMS client, is using ``GetMap`` requests."
+msgstr ""
+"QGIS 데스크탑은 다른 모든 WMS 클라이언트처럼 ``countries`` 레이어를 보기 위해 ``GetMap`` 요청을 사용합니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:117
+msgid "A simple request looks like:"
+msgstr "단순 요청은 다음처럼 보입니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:133
+#: ../../docs/training_manual/qgis_server/wms.rst:190
+msgid "The above request should output the following image:"
+msgstr "이 요청은 다음 이미지를 출력할 것입니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:135
+msgid "**Figure: simple GetMap request to QGIS Server**"
+msgstr "**그림: QGIS 서버에 전송된 단순 GetMap 요청**"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:140
+msgid "Qgis Server response after a simple GetMap request"
+msgstr "단순 GetMap 요청에 대한 QGIS 서버의 응답"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:143
+msgid ""
+":abbr:`★★☆ (Moderate level)` Try Yourself: Change the Image and Layers "
+"parameters"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 이미지와 레이어 파라미터 변경하기"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:145
+msgid ""
+"Based on the request above, let's replace the ``countries`` layer with "
+"another."
+msgstr "앞의 요청을 바탕으로, ``countries`` 레이어를 다른 레이어로 바꿔봅시다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:147
+msgid ""
+"In order to see what other layers are available you could open up the "
+":file:`world.qgs` project in QGIS and look at its contents. Keep in mind "
+"though that the WMS clients don't have access to the QGIS project, they just"
+" look at the capabilities document contents."
+msgstr ""
+"어떤 다른 레이어들을 사용할 수 있는지를 알아보려면 QGIS에서 :file:`world.qgs` 프로젝트 파일을 열어 그 내용을 살펴보면"
+" 됩니다. 다만 WMS 클라이언트는 QGIS 프로젝트에 접근할 수 없다는 사실을 기억하십시오. WMS 클라이언트는 그저 케이퍼빌리티 "
+"문서의 내용만 볼 수 있을 뿐입니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:152
+msgid ""
+"Also, there's a configuration option so that some of the layers existing in "
+"the QGIS project are ignored by QGIS when serving the WMS service."
+msgstr ""
+"또한 환경설정 옵션도 있기 때문에, WMS 서비스를 서비스할 때 QGIS가 QGIS 프로젝트에 있는 기존 파일 가운데 일부를 무시합니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:155
+msgid ""
+"So, you could look at the layer list when you point QGIS Desktop to the "
+"``GetCapabilities`` URL or you could try yourself finding other layer names "
+"in the ``GetCapabilities`` XML response."
+msgstr ""
+"따라서 QGIS 데스크탑에서 ``GetCapabilities`` URL을 가리킬 때 레이어 목록을 살펴보거나 또는 "
+"``GetCapabilities`` XML 응답에서 다른 레이어 이름들을 찾아보면 됩니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:159
+msgid ""
+"One of the layer names that you could find and works is "
+"``countries_shapeburst``. You may find others but keep in mind some may not "
+"be visible at such a small scale so you could get a blank image as response."
+msgstr ""
+"여러분이 찾을 수 있고 또 작동하는 레이어 이름들 가운데 하나가 ``countries_shapeburst`` 입니다. 다른 이름들도 찾을"
+" 수 있겠지만, 이런 소축척에서는 가시화되지 않을 수도 있기 때문에 응답으로 비어 있는 이미지를 얻을 수 있다는 사실을 잊지 마십시오."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:163
+msgid ""
+"You can also play around with others parameters from above, like changing "
+"the returned image type to ``image/png``."
+msgstr "반환되는 이미지의 유형을 ``image/png`` 로 변경하는 등 앞의 요청에서 다른 파라미터들을 건드려봐도 좋습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:167
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Use Filter, Opacities and Styles "
+"parameters"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 필터, 불투명도 및 스타일 파라미터 사용하기"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:169
+msgid ""
+"Let's do another request that adds another layer, some :ref:`basic "
+"parameters <services_basics>`, **FILTER** and **OPACITIES**, but also uses "
+"the standard STYLES parameter."
+msgstr ""
+"또다른 레이어, 몇몇 :ref:`기본 파라미터들 <services_basics>`, **FILTER** 및 **OPACITIES** 를 "
+"추가하는 또다른 요청을 생성해봅시다. 다만 표준 STYLES 파라미터를 사용해서 말이죠."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:195
+msgid "Response to a GetMap request with FILTER and OPACITIES parameters"
+msgstr "FILTER와 OPACITIES 파라미터를 사용한 요청에 대한 응답"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:197
+msgid ""
+"As you can see from the above image, among other things, we told QGIS Server"
+" to render only **Germany** and **Italy** from the countries layer."
+msgstr ""
+"이 이미지에서 볼 수 있는 대로, QGIS 서버에 다른 것들도 있지만 무엇보다 ``countries`` 레이어에서 **Germany** "
+"와 **Italy** 만 렌더링하도록 요청했습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:201
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Use Redlining"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 레드라이닝 사용하기"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:203
+msgid ""
+"Let's do another GetMap request that makes use of the :ref:`redlining "
+"<wms_redlining>` feature and of the **SELECTION** parameter detailed in the "
+":ref:`Basics <services_basics>` section:"
+msgstr ""
+":ref:`레드라이닝(redlining) <wms_redlining>` 기능과 :ref:`기본 사항 <services_basics>` "
+"절에서 자세히 설명하는 **SELECTION** 파라미터를 사용하는 또다른 GetMap 요청을 생성해봅시다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:229
+msgid ""
+"Pasting the above request in your web browser should output the following "
+"image:"
+msgstr "웹 브라우저에 이 요청을 붙여넣으면 다음 이미지를 출력할 것입니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:234
+msgid ""
+"Response to a request with the REDLINING feature and SELECTION parameter"
+msgstr "REDLINING 기능과 SELECTION 파라미터를 사용한 요청에 대한 응답"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:236
+msgid ""
+"You can see from the above image that the countries with the 171 and 65 ids "
+"were highlighted in yellow (Romania and France) by using the **SELECTION** "
+"parameter and we used the **REDLINING** feature to overlay a rectangle with "
+"the **QGIS Tutorial** label."
+msgstr ""
+"이 이미지에서, **SELECTION** 파라미터를 사용해서 ID가 171과 65인 나라들을 (루마니아와 프랑스를) 노란색으로 강조했고 "
+"**REDLINING** 기능을 사용해서 **QGIS Tutorial** 이라는 직사각형 라벨을 중첩시켰다는 사실을 알 수 있습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:242
+msgid "GetPrint requests"
+msgstr "GetPrint 요청"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:244
+msgid ""
+"One very nice feature of QGIS Server is that it makes use of the QGIS "
+"Desktop print layouts. You can learn about it in the :ref:`wms_getprint` "
+"section."
+msgstr ""
+"QGIS 서버의 멋진 기능들 가운데 하나가 QGIS 데스크탑의 인쇄 조판(print layout)을 사용할 수 있다는 것입니다. "
+":ref:`wms_getprint` 절에서 이에 대해 배울 수 있습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:247
+msgid ""
+"If you open the :file:`world.qgs` project with QGIS Desktop you will find a "
+"print layout named ``Population distribution``. A simplified ``GetPrint`` "
+"request that exemplifies this amazing feature is:"
+msgstr ""
+"QGIS 데스크탑으로 :file:`world.qgs` 프로젝트를 열어보면 ``Population distribution`` 이라는 이름의"
+" 인쇄 조판을 찾을 수 있습니다. 이 놀라운 기능을 보여주는 단순화된 ``GetPrint`` 요청은 다음과 같습니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:269
+msgid "Shows the pdf resulted from the above GetPrint request"
+msgstr "앞의 GetPrint 요청으로 반환된 PDF 화면"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:271
+msgid ""
+"Naturally, it's hard to write your ``GetMap``, ``GetPrint`` etc. requests."
+msgstr "여러분이 ``GetMap``, ``GetPrint`` 등등의 요청들을 작성하는 일은 당연히 어렵습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:273
+msgid ""
+"`QGIS Web Client <https://github.com/qgis/qgis-web-client>`_ or QWC is a Web"
+" client project that can work alongside QGIS Server so that you can publish "
+"your projects on the Web or help you create QGIS Server requests for a "
+"better understanding about the possibilities."
+msgstr ""
+"`QGIS 웹 클라이언트(Web Client) <https://github.com/qgis/qgis-web-client>`_ 줄여서 "
+"QWC는 QGIS 서버와 함께 사용할 수 있는 웹 클라이언트 프로젝트로, 여러분이 웹 상에 자신의 프로젝트를 공개하거나 또는 그 가능성을"
+" 더 잘 이해할 수 있도록 QGIS 서버 요청을 생성하는 데 도움을 줄 수 있습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:278
+msgid "You can install it like this:"
+msgstr "다음과 같이 설치하면 됩니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:280
+msgid "As user ``qgis`` go to the home directory with ``cd /home/qgis``."
+msgstr "``qgis`` 사용자로서, ``cd /home/qgis`` 명령어를 사용해서 홈 디렉터리로 가십시오."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:281
+msgid ""
+"Download the QWC project from `here <https://github.com/qgis/QGIS-Web-"
+"Client/archive/master.zip>`_ and unzip it."
+msgstr ""
+"`여기 <https://github.com/qgis/QGIS-Web-Client/archive/master.zip>`_ 에서 QWC "
+"프로젝트를 다운로드해서 압축 해제하십시오."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:282
+msgid ""
+"Make a symbolic link to the ``/var/www/html`` directory as it's the "
+"``DocumentRoot`` that we've setup in the virtual host configuration. If you "
+"unzipped the archive under :file:`/home/qgis/Downloads/QGIS-Web-Client-"
+"master` we can do that with ``sudo ln -s /home/qgis/Downloads/QGIS-Web-"
+"Client-master /var/www/html/``."
+msgstr ""
+"``/var/www/html`` 디렉터리를 가리키는 심볼릭 링크(symbolic link)를 생성하십시오. 이 디렉터리가 가상 호스트 "
+"환경설정에 설정한 ``DocumentRoot`` 입니다. 압축 파일을 :file:`/home/qgis/Downloads/QGIS-Web-"
+"Client-master` 폴더에 압축해제 했다면 ``sudo ln -s /home/qgis/Downloads/QGIS-Web-"
+"Client-master /var/www/html/`` 명령어로 심볼릭 링크를 생성할 수 있습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:286
+msgid ""
+"Access http://qgisplatform.demo/QGIS-Web-Client-"
+"master/site/qgiswebclient.html?map=/home/qgis/projects/world.qgs from your "
+"Web browser."
+msgstr ""
+"웹 브라우저에서 http://qgisplatform.demo/QGIS-Web-Client-"
+"master/site/qgiswebclient.html?map=/home/qgis/projects/world.qgs 에 접속하십시오."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:289
+msgid "Now you should be able to see the Map as in the following figure:"
+msgstr "이제 다음 그림과 같은 맵을 볼 수 있을 것입니다:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:294
+msgid "QGIS Web Client consuming the world.qgs project"
+msgstr "``world.qgs`` 프로젝트를 사용하는 QGIS 웹 클라이언트"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:296
+msgid ""
+"If you click the Print button in QWC you can interactively create "
+"``GetPrint`` requests. You can also click the ``?`` icon in the QWC to "
+"access the available help so that you can better discover the QWC "
+"possibilities."
+msgstr ""
+"QWC에서 인쇄 버튼을 클릭하는 경우 ``GetPrint`` 요청을 쌍방향 작업으로 생성할 수 있습니다. QWC에서 ``?`` 아이콘을 "
+"클릭하면 QWC의 가능성을 더 잘 발견할 수 있게 해주는 도움말도 볼 수 있습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:301
+msgid "In Conclusion"
+msgstr "결론"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:303
+msgid "You learned how use QGIS Server to provide WMS Services."
+msgstr "QGIS 서버를 사용해서 WMS 서비스를 제공하는 방법을 배웠습니다."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:306
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:308
+msgid ""
+"Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS."
+msgstr "QGIS를 유명한 GRASS GIS의 프론트엔드로 사용하는 방법을 배울 것입니다."
