@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:6
+msgid "Lesson: Install QGIS Server"
+msgstr "수업: QGIS 서버 설치하기"
 
 #: ../../docs/training_manual/qgis_server/install.rst:8
 msgid ""
@@ -40,8 +44,8 @@ msgid ""
 "Debian Stretch. With negligible variations you can also follow it for any "
 "Debian based distribution like Ubuntu and its derivatives."
 msgstr ""
-"**이 강의의 목표:** 데비안 계열 리눅스에 **QGIS 서버** 를 설치하는 방법을 배웁니다. 우분투 및 우분투에서 파생된 리눅스 "
-"같은 모든 데비안 기반 배포판에서도 이 방법을 따르면 됩니다. 각 배포판에 따른 차이는 무시해도 될 정도입니다."
+"**이 수업의 목표:** 데비안 계열 리눅스에 **QGIS 서버** 를 설치하는 방법을 배우기. 우분투 및 우분투에서 파생된 리눅스 같은"
+" 모든 데비안 기반 배포판에서도 이 방법을 따르면 됩니다. 각 배포판에 따른 차이는 무시해도 될 정도입니다."
 
 #: ../../docs/training_manual/qgis_server/install.rst:12
 msgid ""
@@ -50,7 +54,11 @@ msgid ""
 "without using ``sudo``."
 msgstr ""
 "우분투에서는 운영자(admin) 권한이 필요한 명령어 앞에 ``sudo`` 를 추가하면 일반 사용자도 설치할 수 있습니다. 데비안에서는 "
-"``sudo`` 를 추가할 필요없는 운영자(``root``)로 작업하면 됩니다."
+"``sudo`` 를 사용할 필요가 없는 운영자(``root``)로 작업하면 됩니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:17
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Install from packages"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 패키지로부터 설치하기"
 
 #: ../../docs/training_manual/qgis_server/install.rst:19
 msgid ""
@@ -62,14 +70,19 @@ msgstr ""
 
 #: ../../docs/training_manual/qgis_server/install.rst:22
 msgid "Install QGIS Server with:"
-msgstr "다음과 같이 QGIS 서버를 설치하십시오:"
+msgstr "다음 명령어를 사용해서 QGIS 서버를 설치하십시오:"
 
 #: ../../docs/training_manual/qgis_server/install.rst:31
 msgid ""
 "QGIS Server should be used in production without QGIS Desktop (with the "
 "accompanying X Server) installed on the same machine."
 msgstr ""
-"QGIS 서버를 사용하려면 동일한 기기에 (X.Org 서버와 함께 설치되는) QGIS 데스크탑 소프트웨어를 함께 설치해서는 안 됩니다."
+"QGIS 서버는 동일한 기기에 (`X.Org <https://x.org/wiki/>`_ 서버와 함께 설치되는) QGIS 데스크탑 "
+"소프트웨어가 설치되어 있지 않은 환경에서 사용해야 합니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:35
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: QGIS Server Executable"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: QGIS 서버 실행 파일"
 
 #: ../../docs/training_manual/qgis_server/install.rst:37
 msgid ""
@@ -87,8 +100,16 @@ msgid ""
 "the ``/usr/lib/cgi-bin/qgis_mapserv.fcgi --version`` command which should "
 "output something like:"
 msgstr ""
-"선택적으로, 지금 명령줄 테스트를 수행하려면 다음과 같은 명령을 출력하는 ``/usr/lib/cgi-"
-"bin/qgis_mapserv.fcgi --version`` 명령을 실행할 수 있습니다:"
+"지금 명령줄 테스트를 수행하려면 다음과 같은 산출물을 출력하는 ``/usr/lib/cgi-bin/qgis_mapserv.fcgi "
+"--version`` 명령을 실행할 수도 있습니다:"
+
+#: ../../docs/training_manual/qgis_server/install.rst:59
+msgid "We'll see later on how to make WMS requests."
+msgstr "WMS 요청을 생성하는 방법은 다음 수업에서 배울 것입니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:62
+msgid ":abbr:`★★★ (Advanced level)` HTTP Server Configuration"
+msgstr ":abbr:`★★★ (고급 수준)` HTTP 서버 환경설정"
 
 #: ../../docs/training_manual/qgis_server/install.rst:64
 msgid ""
@@ -96,8 +117,8 @@ msgid ""
 "need to use an HTTP server. The Apache HTTP Server installation process is "
 "detailed in :ref:`httpserver` section."
 msgstr ""
-"인터넷 브라우저에서 설치된 QGIS 서버에 접근하기 위해서는 HTTP 서버를 이용해야 합니다. 아파치 HTTP 서버 설치 과정은 "
-":ref:`httpserver` 절에서 자세히 설명하고 있습니다."
+"인터넷 브라우저에서 QGIS 서버 설치본에 접근하기 위해서는 HTTP 서버를 이용해야 합니다. :ref:`httpserver` 절에서 "
+"아파치 HTTP 서버 설치 과정을 자세히 설명하고 있습니다."
 
 #: ../../docs/training_manual/qgis_server/install.rst:69
 msgid ""
@@ -109,6 +130,10 @@ msgstr ""
 "QGIS 서버를 (리눅스 데스크탑에 포함돼 있는) X 서버를 실행하지 않고 설치했는데 ``GetPrint`` 명령어도 사용하고 싶다면, "
 "가상 X 서버를 설치해서 QGIS가 이 가상 X 서버를 사용하도록 해야 합니다. :ref:`Xvfb 설치 과정 <xvfb>` 을 따라 이"
 " 작업을 완료할 수 있습니다."
+
+#: ../../docs/training_manual/qgis_server/install.rst:76
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Create another virtual host"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 또다른 가상 호스트 생성하기"
 
 #: ../../docs/training_manual/qgis_server/install.rst:78
 msgid ""
@@ -148,7 +173,7 @@ msgid ""
 "from your Debian box browser. You will probably get:"
 msgstr ""
 "``myhost`` 사이트에서 QGIS 서버에 접근할 수 있는지 확인해볼까요? ``curl http://myhost/cgi-"
-"bin/qgis_mapserv.fcgi`` 명령어를 실행하거나, 데비안 기본 브라우저에서 해당 URL을 접근해보면 됩니다. 아마 다음과 "
+"bin/qgis_mapserv.fcgi`` 명령어를 실행하거나, 데비안 기본 브라우저에서 해당 URL에 접근해보면 됩니다. 아마 다음과 "
 "같은 내용을 보게 될 겁니다:"
 
 #: ../../docs/training_manual/qgis_server/install.rst:112
@@ -165,7 +190,7 @@ msgstr ""
 " 간단한 방법은 :file:`/etc/apache2/sites-available` 디렉터리에 ``myhost.conf`` 파일을 만드는 "
 "것이겠죠. 이 파일의 내용은 :file:`qgis.demo.conf` 파일의 내용과 동일해야 합니다. 단 하나, "
 "``ServerName`` 줄이 ``ServerName myhost`` 가 되어야 한다는 것만 제외하면 말이죠. 로그를 저장할 위치도 "
-"바꿀 수 있는데, 바꾸지 않으면 두 가상 호스트의 로그들이 동일한 위치에 저장될 겁니다. 물론 바꾸지 않아도 됩니다."
+"바꿀 수 있는데, 바꾸지 않으면 두 가상 호스트들의 로그가 동일한 위치에 저장될 겁니다. 물론 바꾸지 않아도 됩니다."
 
 #: ../../docs/training_manual/qgis_server/install.rst:119
 msgid ""
@@ -180,7 +205,7 @@ msgid ""
 "If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url "
 "you'll notice everything is working now!"
 msgstr ""
-"다시 http://myhost/cgi-bin/qgis_mapserv.fcgi URL을 접근해보면 모든 게 제대로 작동한다는 사실을 알 수"
+"http://myhost/cgi-bin/qgis_mapserv.fcgi URL에 다시 접근해보면 모든 게 제대로 작동한다는 사실을 알 수"
 " 있을 겁니다!"
 
 #: ../../docs/training_manual/qgis_server/install.rst:125
@@ -192,7 +217,7 @@ msgid ""
 "You learned how to install different QGIS Server versions from packages, how"
 " to configure Apache with QGIS Server, on Debian based Linux distros."
 msgstr ""
-"여러분은 데비안 기반 리눅스 배포판에 여러 버전의 QGIS 서버를 패키지로 설치하고 QGIS 서버와 아파치를 환경설정하는 방법을 "
+"여러분은 데비안 기반 리눅스 배포판에 여러 버전의 QGIS 서버를 패키지로부터 설치하고 QGIS 서버와 아파치를 환경설정하는 방법을 "
 "배웠습니다."
 
 #: ../../docs/training_manual/qgis_server/install.rst:131
@@ -207,4 +232,4 @@ msgid ""
 "services."
 msgstr ""
 "이제 QGIS 서버를 설치했고 HTTP 프로토콜을 통해 서버에 접근할 수 있으니, 서버가 제공하는 몇몇 서비스에 접근하는 방법을 배워야 "
-"합니다. 다음 강의에서는 QGIS 서버 WMS 서비스에 어떻게 접근하는지를 배울 것입니다."
+"합니다. 다음 수업에서는 QGIS 서버 WMS 서비스에 어떻게 접근하는지를 배울 것입니다."
