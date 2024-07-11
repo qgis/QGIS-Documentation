@@ -33,7 +33,29 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:2
+msgid "Lesson: GRASS Setup"
+msgstr "수업: GRASS 설정하기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:4
+msgid ""
+"Using GRASS in QGIS requires you to think of the interface in a slightly "
+"different way. Remember that you're not working in QGIS directly, but "
+"working in GRASS *via* QGIS. Hence, make sure you have installed QGIS "
+"Desktop with Grass support."
+msgstr ""
+"QGIS에서 GRASS를 사용하려면 인터페이스를 조금 다른 방식으로 생각해야 합니다. QGIS에서 직접 작업하는 것이 아니라 QGIS를 "
+"*통해서* GRASS에서 작업하는 것이라는 사실을 기억하십시오. 따라서 QGIS를 GRASS 지원과 함께 설치했는지 확인하십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:9
+msgid ""
+"|win| To open a QGIS session with GRASS available on Windows you have to "
+"click on the ``QGIS Desktop with GRASS`` icon."
+msgstr ""
+"|win| 윈도우 상에서 GRASS와 함께 사용할 수 있는 QGIS 세션을 열려면 ``QGIS Desktop with GRASS`` "
+"아이콘을 클릭해야 합니다."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:334
 msgid "win"
@@ -41,16 +63,99 @@ msgstr "win"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:12
 msgid "**The goal for this lesson:** To begin a GRASS project in QGIS."
-msgstr "**이 강의의 목표:** QGIS에서 GRASS 프로젝트를 시작하기."
+msgstr "**이 수업의 목표:** QGIS에서 GRASS 프로젝트를 시작하기."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:15
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Start a New GRASS Session"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 새 GRASS 세션 시작하기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:17
+msgid ""
+"To launch GRASS from within QGIS, you need to activate it as with any other "
+"plugin:"
+msgstr "QGIS 내에서 GRASS를 실행하려면, 다른 모든 플러그인처럼 GRASS를 활성화시켜야 합니다:"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:20
+msgid "First, open a new QGIS project."
+msgstr "먼저 새 QGIS 프로젝트를 여십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:21
+msgid ""
+"In the :guilabel:`Plugin Manager`, enable |grassTools| :guilabel:`GRASS 8` "
+"in the list:"
+msgstr ""
+":guilabel:`Plugin Manager` 의 목록에서 |grassTools| :guilabel:`GRASS 8` 을 "
+"활성화하십시오."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:331
 msgid "grassTools"
 msgstr "grassTools"
 
+#: ../../docs/training_manual/grass/grass_setup.rst:27
+msgid "The GRASS toolbar and the GRASS panel will appear:"
+msgstr "GRASS 툴바와 GRASS 패널이 나타날 것입니다:"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:32
+msgid "GRASS Toolbar and Panel"
+msgstr "GRASS 툴바와 패널"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:34
+msgid ""
+"The GRASS panel is not active because, before you can use GRASS, you need to"
+" create a ``Mapset``. GRASS always works in a database environment, which "
+"means that you need to import all the data you want to use into a GRASS "
+"database."
+msgstr ""
+"GRASS 패널이 활성화되어 있지 않은 이유는, GRASS를 사용할 수 있으려면 먼저 ``Mapset`` 을 생성해야 하기 때문입니다. "
+"GRASS는 항상 데이터베이스 환경에서 작동합니다. 즉 여러분이 사용하고자 하는 데이터를 모두 GRASS 데이터베이스로 가져와야 한다는 "
+"뜻입니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:38
+msgid ""
+"The GRASS database has a straightforward structure, even if at a first look "
+"it seems very complicated. The most important thing you should know is that "
+"the upper level of the database is the ``Location``. Each ``Location`` can "
+"contain different ``Mapset``: in **every** ``Mapset`` you will find the "
+"``PERMANENT`` Mapset because it is created by default by GRASS. Each "
+"``Mapset`` contains the data (raster, vector, etc) in a particular "
+"structure, but don't worry, GRASS will take care of this for you."
+msgstr ""
+"GRASS 데이터베이스의 구조는 간단합니다. 비록 첫눈에는 아주 복잡해 보이지만 말이죠. 여러분이 알고 있어야 할 가장 중요한 점은 "
+"데이터베이스의 상위 수준(upper level)이 ``Location`` 이라는 것입니다. 각 ``Location`` 이 서로 다른 "
+"``Mapset`` 을 담고 있을 수 있습니다. **모든** ``Mapset`` 에서 ``PERMANENT`` 맵셋을 찾을 수 있을 "
+"겁니다. GRASS가 기본적으로 생성하는 맵셋이기 때문입니다. 각 ``Mapset`` 은 (래스터, 벡터 등등의) 데이터를 독특한 구조로"
+" 담고 있지만, 걱정하지 마십시오. GRASS가 처리해줄 것입니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:46
+msgid ""
+"Just remember: ``Location`` contains ``Mapset`` that contains the data. For "
+"more information visit the `GRASS website "
+"<https://grass.osgeo.org/grass82/manuals/grass_database.html>`_."
+msgstr ""
+"이것만 기억하십시오 --- ``Location`` 이 ``Mapset`` 을 담고 있고, ``Mapset`` 이 데이터를 담고 있습니다."
+" 더 자세한 정보를 알고 싶다면 `GRASS 웹사이트 "
+"<https://grass.osgeo.org/grass82/manuals/grass_database.html>`_ 를 방문해보세요."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:52
+msgid "GRASS database structure (from GRASS docs)"
+msgstr "GRASS 데이터베이스 구조 (GRASS 문서에서 발췌)"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:55
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Start a New GRASS Project"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 새 GRASS 프로젝트 시작하기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:57
+msgid "Click on the :menuselection:`Plugins --> GRASS --> New Mapset` menu:"
+msgstr ":menuselection:`Plugins --> GRASS --> New Mapset` 메뉴를 클릭하십시오:"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:62
+msgid "You'll be asked to choose the location of the GRASS database."
+msgstr "GRASS 데이터베이스의 경로를 선택하라는 메시지를 보게 될 것입니다."
+
 #: ../../docs/training_manual/grass/grass_setup.rst:64
 msgid ""
 "Set it as the directory that will be used by GRASS to set up its database:"
-msgstr "GRASS의 데이터베이스를 설정하는 데 다음과 같이 이 디렉터리를 설정하십시오."
+msgstr "GRASS의 데이터베이스를 설정하는 데 사용될 디렉터리를 다음과 같이 설정하십시오:"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:69
 #: ../../docs/training_manual/grass/grass_setup.rst:84
@@ -58,6 +163,33 @@ msgstr "GRASS의 데이터베이스를 설정하는 데 다음과 같이 이 디
 #: ../../docs/training_manual/grass/grass_setup.rst:97
 msgid "Click :guilabel:`Next`."
 msgstr ":guilabel:`Next` 를 클릭합니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:71
+msgid ""
+"GRASS needs to create a ``Location``, which describes the maximum extent of "
+"the geographic area you'll be working in, also known as Grass ``Region``."
+msgstr ""
+"GRASS는 여러분이 작업하게 될 지리적 영역의 최대 범위를 설명하는 ``Location`` 을 생성해야 합니다. 달리 GRASS "
+"``Region`` 이라고도 하죠."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:74
+msgid ""
+"the Region is extremely important for GRASS because it describes the area in"
+" which all layers will be taken into account for GRASS. Everything that is "
+"outside will not be considered. Don't worry, you can always change the "
+"extent of the GRASS Region after the Location has been created"
+msgstr ""
+"이 영역(region)이 GRASS에서 극히 중요한 이유는 GRASS에서 모든 레이어가 계산될 지역을 설명하기 때문입니다. 무엇이든 이 "
+"영역 바깥에 있다면 연산에 넣지 않을 것입니다. 걱정하지 않아도 됩니다 --- 로케이션을 생성한 다음 언제라도 GRASS 영역의 범위를 "
+"변경할 수 있으니까요."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:79
+msgid "Call the new location ``SouthAfrica``:"
+msgstr "새 ``SouthAfrica`` 로케이션을 생성하십시오:"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:85
+msgid "We'll be working with ``WGS 84``, so search for and select this CRS:"
+msgstr "``WGS 84`` 를 사용할 것이므로, 이 좌표계를 찾아서 선택하십시오:"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:91
 msgid ""
@@ -70,21 +202,188 @@ msgstr ""
 msgid "Create a mapset, which is the map file that you'll be working with."
 msgstr "여러분이 작업하게 될 맵 파일인 맵셋을 생성하십시오."
 
+#: ../../docs/training_manual/grass/grass_setup.rst:103
+msgid ""
+"Once you're done, you'll see a dialog asking with a summary of all the "
+"information entered."
+msgstr "설정을 완료하면, 모든 정보의 요약과 함께 맵셋을 생성할 것인지 묻는 대화창이 열릴 것입니다."
+
 #: ../../docs/training_manual/grass/grass_setup.rst:109
 msgid "Click :guilabel:`Finish`."
 msgstr ":guilabel:`Finish` 를 클릭합니다."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:110
 msgid "Click :guilabel:`OK` on the success dialog."
-msgstr "이어지는 대화 창의 :guilabel:`OK` 를 클릭합니다."
+msgstr "이어지는 대화창에 있는 :guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:112
+msgid ""
+"You will see that the GRASS Panel will become active and you can start to "
+"use all GRASS tools."
+msgstr "GRASS 패널이 활성화되어 모든 GRASS 도구들을 사용할 수 있게 될 것입니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:116
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Loading Vector Data into GRASS"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: GRASS에 벡터 데이터 불러오기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:118
+msgid ""
+"You have now a blank map and before you can start to use all the GRASS tools"
+" you have to load data into the GRASS database, specifically into the "
+"``Mapset``. You cannot use GRASS tools with layer that are not loaded into a"
+" GRASS ``Mapset``."
+msgstr ""
+"이제 비어 있는 맵이 준비됐습니다. 여러분이 모든 GRASS 도구들을 사용할 수 있게 되기 전에 GRASS 데이터베이스로, 특히 "
+"``Mapset`` 으로 데이터를 불러와야 합니다. GRASS ``Mapset`` 으로 불러오지 않은 레이어에 GRASS 도구를 사용할 "
+"수는 없습니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:122
+msgid ""
+"There are many different ways to load data in the GRASS database. Let's "
+"start with the first one."
+msgstr "데이터를 GRASS 데이터베이스로 불러오는 방법은 많이 있습니다. 첫 번째 방법으로 시작해봅시다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:129
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Load data using the QGIS Browser"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: QGIS 탐색기를 사용해서 데이터 불러오기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:131
+msgid ""
+"In section :ref:`browser_panel_tm` we saw that the easiest and quickest way "
+"to load the data in QGIS is the Browser Panel."
+msgstr ""
+":ref:`browser_panel_tm` 절에서 QGIS에 데이터를 불러오는 가장 쉽고 빠른 방법은 탐색기 패널이라는 사실을 "
+"배웠습니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:134
+msgid ""
+"GRASS data are recognized from the QGIS Browser as *real* GRASS data and you"
+" can notice it because you will see the GRASS icon next to the GRASS Mapset."
+" Moreover you will see the |grassMapsetOpen| icon next to the Mapset that is"
+" opened."
+msgstr ""
+"QGIS 탐색기는 GRASS 데이터를 *실제로* GRASS 데이터로 인식합니다. GRASS 맵셋 옆에 있는 GRASS 아이콘을 보면 알 "
+"수 있습니다. 또한 |grassMapsetOpen| 아이콘이 열려 있는 맵셋 옆에 나타난 것도 볼 수 있을 것입니다."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:329
 msgid "grassMapsetOpen"
 msgstr "grassMapsetOpen"
 
+#: ../../docs/training_manual/grass/grass_setup.rst:141
+msgid ""
+"You will see a replication of the GRASS Location as normal folder: GRASS "
+"``Mapset`` data are those within the |grassLogo| folder"
+msgstr ""
+"GRASS 로케이션이 일반적인 폴더로 복제된 것을 보게 될 것입니다. GRASS ``Mapset`` 데이터는 |grassLogo| 폴더 "
+"안에 있는 데이터입니다."
+
 #: ../../docs/training_manual/grass/grass_setup.rst:327
 msgid "grassLogo"
 msgstr "grassLogo"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:144
+msgid ""
+"You can easily **drag and drop** layers from a folder to the GRASS Mapset."
+msgstr "레이어들을 폴더에서 GRASS 맵셋으로 쉽게 *드래그&드롭* 할 수 있습니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:146
+msgid ""
+"Let's try to import the :file:`roads` layer into the ``grass_mapset`` Mapset"
+" of the ``SouthAfrica`` Location."
+msgstr ""
+":file:`roads` 레이어를 ``SouthAfrica`` 로케이션의 ``grass_mapset`` 맵셋으로 가져와봅시다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:149
+msgid ""
+"Go to the Browser, and simply drag the :file:`roads` layer  from the "
+":file:`training_data.gpkg` GeoPackage file into the ``grass_mapset`` Mapset."
+msgstr ""
+"탐색기로 가서, 그냥 :file:`training_data.gpkg` GeoPackage 파일에서 :file:`roads` 레이어를 "
+"``grass_mapset`` 맵셋으로 드래그하십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:155
+msgid ""
+"That's it! If you expand the Mapset you will see the imported :file:`roads` "
+"layer. You can now load in QGIS the imported layer like all the other "
+"layers."
+msgstr ""
+"이게 다입니다! 맵셋을 펼치면 가져온 :file:`roads` 레이어를 보게 될 겁니다. 이제 가져온 레이어를 다른 모든 레이어들처럼 "
+"QGIS에서 불러올 수 있습니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:158
+msgid ""
+"You can also load layers from the Layer Legend Panel to Mapset in the "
+"Browser Panel. This will speed up incredibly your workflow!"
+msgstr ""
+"레이어 범례 패널에서도 레이어들을 탐색기 패널에 있는 맵셋으로 불러올 수 있습니다. 이렇게 하면 워크플로 속도가 엄청나게 빨라집니다!"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:163
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Load data using the GRASS Panel"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: GRASS 패널을 사용해서 데이터 불러오기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:165
+msgid ""
+"We will use now the *long* method to load the :file:`rivers.shp` layer into "
+"the same Mapset."
+msgstr "이제 *시간이 걸리는* 방법을 사용해서 :file:`rivers.shp` 레이어를 같은 맵셋으로 불러올 것입니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:168
+msgid ""
+"Load data into QGIS as usual. Use the :file:`rivers.shp` dataset (found in "
+"the :file:`exercise_data/shapefile/` folder)"
+msgstr ""
+"평소대로 데이터를 QGIS로 불러오십시오. (:file:`exercise_data/shapefile/` 폴더에 있는) "
+":file:`rivers.shp` 데이터셋을 사용하십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:170
+msgid ""
+"As soon as it is loaded, click on the :guilabel:`Filter` box of the ``GRASS "
+"Panel`` and find the vector import tool by entering the term "
+"``v.in.ogr.qgis`` (available under :menuselection:`File management --> "
+"Import into GRASS --> Import vector into GRASS`):"
+msgstr ""
+"해당 레이어를 불러오면, ``GRASS Panel`` 의 :guilabel:`Filter` 란을 클릭한 다음 "
+"``v.in.ogr.qgis`` 를 입력해서 벡터 가져오기 도구를 찾으십시오. (:menuselection:`File management"
+" --> Import into GRASS --> Import vector into GRASS` 메뉴 항목을 사용해도 됩니다.)"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:175
+msgid ""
+"There are 2 similar tools: ``v.in.ogr.qgis`` and ``v.in.ogr.qgis.loc``. We "
+"are looking for the **first** one."
+msgstr ""
+"``v.in.ogr.qgis`` 도구는 ``v.in.ogr.qgis.loc`` 도구와 비슷합니다. 이 예제에서는 **첫 번째** 도구를 "
+"찾습니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:181
+msgid ""
+"The ``v`` stands for *vector*, ``in`` means a function to import data into "
+"the GRASS database, ``ogr`` is the software library used to read vector "
+"data, and ``qgis`` means that the tool will look for a vector from among the"
+" vectors already loaded into QGIS."
+msgstr ""
+"``v`` 는 *벡터(vector)* 를, ``in`` 은 데이터를 GRASS 데이터베이스로 가져오기(import)하는 함수를, "
+"``ogr`` 은 벡터 데이터를 읽는 데 쓰이는 소프트웨어 라이브러리를, 그리고 ``qgis`` 는 이 도구가 QGIS에 이미 불러온 "
+"벡터들 사이에서 벡터를 검색할 것을 뜻합니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:186
+msgid ""
+"Once you've found this tool, click on it to bring up the tool itself. Choose"
+" the :guilabel:`rivers` layer in the :guilabel:`Loaded Layer` box and type "
+"and name it :file:`g_rivers` to prevent confusion:"
+msgstr ""
+"이 도구를 찾았다면, 해당 도구를 클릭해서 도구 자체를 여십시오. :guilabel:`Loaded Layer` 란에서 "
+":file:`rivers` 레이어를 선택한 다음 혼동을 피하기 위해 이름을 :file:`g_rivers` 로 입력하십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:193
+msgid ""
+":abbr:`★★★ (Advanced level)` Note the extra import options provided under "
+":guilabel:`Advanced Options`. These include the ability to add a WHERE "
+"clause for the SQL query used for importing the data."
+msgstr ""
+":abbr:`★★★ (고급 수준)` :guilabel:`Advanced Options` 아래 있는 추가적인 가져오기 옵션들을 "
+"살펴보십시오. 이 옵션들 중에는 데이터를 가져오는 데 쓰이는 SQL 쿼리에 WHERE 구문을 추가할 수 있는 기능도 있습니다."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:197
 msgid "Click :guilabel:`Run` to begin the import."
@@ -103,18 +402,69 @@ msgid ""
 "immediate right of :guilabel:`View output`), then close the :guilabel:`GRASS"
 " Tools` window."
 msgstr ""
-"첫 번째 가져오기 도구를 ( :guilabel:`View output` 바로 옆에 있는 :guilabel:`Close` 버튼을 클릭해서)"
-" 닫은 다음, :guilabel:`GRASS Tools` 창을 닫으십시오."
+"첫 번째 가져오기 도구를 (:guilabel:`View output` 바로 옆에 있는 :guilabel:`Close` 버튼을 클릭해서) "
+"닫은 다음, :guilabel:`GRASS Tools` 창을 닫으십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:203
+msgid "Remove the original :guilabel:`rivers` layer."
+msgstr "원본 :file:`rivers` 레이어를 제거하십시오."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:205
 msgid ""
 "Now you are left with only the imported GRASS layer as displayed in your "
 "QGIS map."
-msgstr "이제 사용자의 QGIS 맵에 가져온 GRASS 레이어만 보이게 됩니다."
+msgstr "이제 여러분의 QGIS 맵에 가져온 GRASS 레이어만 보이게 됩니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:209
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Loading Raster Data into GRASS"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: GRASS에 래스터 데이터 불러오기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:211
+msgid ""
+"You can import a raster layer in the same ways we imported vector layers."
+msgstr "벡터 레이어 가져오기와 동일한 방법으로 래스터 레이어를 가져올 수 있습니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:213
+msgid "We are going to import in the GRASS Mapset the layer |srtmFileName|."
+msgstr "GRASS 맵셋에 |srtmFileName| 레이어를 가져올 것입니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:215
+msgid ""
+"the raster layer is already in the correct CRS, ``WGS 84``. If you have "
+"layers in different CRS you must reproject them in the same CRS of the GRASS"
+" Mapset"
+msgstr ""
+"이 래스터 레이어는 이미 올바른 ``WGS 84`` 좌표계를 사용하고 있습니다. 다른 좌표계를 사용하는 레이어인 경우 반드시 GRASS "
+"맵셋과 동일한 좌표계로 재투영해야만 합니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:220
+msgid "Load the |srtmFileName| layer in QGIS"
+msgstr "|srtmFileName| 레이어를 QGIS로 불러오십시오."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:221
 msgid "Open the :guilabel:`GRASS Tools` dialog again."
-msgstr ":guilabel:`GRASS Tools` 대화 창을 다시 여십시오."
+msgstr ":guilabel:`GRASS Tools` 대화창을 다시 여십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:222
+msgid "Click on the :guilabel:`Modules` tab."
+msgstr ":guilabel:`Modules` 탭을 클릭하십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:223
+msgid ""
+"Search for ``r.in.gdal.qgis`` (available under :menuselection:`File "
+"management --> Import into GRASS --> Import raster into GRASS --> Import "
+"raster into GRASS from QGIS view`) and double click the tool to open the "
+"tool's dialog."
+msgstr ""
+"``r.in.gdal.qgis`` 를 검색한 다음 (:menuselection:`File management --> Import into"
+" GRASS --> Import raster into GRASS --> Import raster into GRASS from QGIS "
+"view` 메뉴 항목을 사용해도 됩니다) 해당 도구를 더블클릭해서 도구 대화창을 여십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:226
+msgid ""
+"Set it up so that the input layer is |srtmFileName| and the output is "
+":file:`g_dem`."
+msgstr "입력 레이어를 |srtmFileName| 로, 산출물을 :file:`g_dem` 으로 설정하십시오."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:231
 msgid "Click :guilabel:`Run`."
@@ -128,12 +478,138 @@ msgstr "처리가 끝나면 :guilabel:`View output` 을 클릭하십시오."
 msgid ""
 ":guilabel:`Close` the current tab, and then :guilabel:`Close` the whole "
 "dialog."
+msgstr "현재 탭의 :guilabel:`Close` 를 클릭한 다음, 전체 대화창의 :guilabel:`Close` 를 클릭하십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:239
+msgid "You may now remove the original |srtmFileName| layer."
+msgstr "이제 원본 |srtmFileName| 레이어를 제거해도 됩니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:243
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Add Layers to Mapset"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 맵셋에 레이어 추가하기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:244
+msgid ""
+"Try to import in the GRASS Mapset the vector layers :file:`water.shp` and "
+":file:`places.shp` from the :file:`exercise_data/shapefile/` folder. As we "
+"did for :file:`rivers` rename the imported layer as :file:`g_water` and "
+":file:`g_places` to avoid confusion"
 msgstr ""
-"현재 탭의 :guilabel:`Close` 를 클릭한 다음, 전체 대화 창의 :guilabel:`Close` 를 클릭하십시오."
+":file:`exercise_data/shapefile/` 폴더에서 :file:`water.shp` 와 :file:`places.shp`"
+" 벡터 레이어들을 GRASS 맵셋으로 가져와보십시오. :file:`rivers` 와 마찬가지로, 혼동을 피하기 위해 가져온 레이어의 "
+"이름을 :file:`g_water` 및 :file:`g_places` 로 바꾸십시오."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:249
 msgid "Answer"
 msgstr "해답"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:252
+msgid ""
+"You can add layers (both vector and raster) into a GRASS Mapset by drag and "
+"drop them in the Browser (see :ref:`grass_browser`) or by using the "
+"``v.in.gdal.qgis`` for vector and ``r.in.gdal.qgis`` for raster layers."
+msgstr ""
+"탐색기에서 (벡터 및 래스터 둘 다) 레이어들을 드래그&드롭하면 GRASS 맵셋에 추가할 수 있습니다. "
+"(:ref:`grass_browser` 를 참조하세요.) 또는 벡터의 경우 ``v.in.gdal.qgis``, 래스터의 경우 "
+"``r.in.gdal.qgis`` 도구를 사용해도 됩니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:257
+msgid ":abbr:`★☆☆ (Basic level)` Open an existing GRASS Mapset"
+msgstr ":abbr:`★☆☆ (초급 수준)` 기존 GRASS 맵셋 열기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:258
+msgid ""
+"If you have an existing GRASS Mapset you can easily reopen it in another "
+"session of QGIS."
+msgstr "기존 GRASS 맵셋을 가지고 있다면, QGIS의 또다른 세션에서 쉽게 다시 열 수 있습니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:261
+msgid ""
+"You have several method to open a GRASS Mapset, let's explore some of them."
+msgstr "GRASS 맵셋을 열 수 있는 방법이 몇 가지 있습니다. 그중에서 몇 가지를 알아봅시다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:263
+msgid ""
+"Let's close the Mapset by clicking on the :guilabel:`Close Mapset` button of"
+" the :guilabel:`GRASS Tools` window."
+msgstr ""
+":guilabel:`GRASS Tools` 창의 :guilabel:`Close Mapset` 버튼을 클릭해서 맵셋을 닫으십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:268
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Using the GRASS plugin"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: GRASS 플러그인 사용하기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:270
+msgid "Click on the :menuselection:`Plugins --> GRASS --> Open Mapset` menu."
+msgstr ":menuselection:`Plugins --> GRASS --> Open Mapset` 메뉴를 클릭하십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:272
+msgid ""
+"Browse to the GRASS database folder: be careful! You must choose the parent "
+"folder, not the GRASS Mapset one. Indeed GRASS will read all the "
+"``Locations`` of the database and all the ``Mapsets`` of each ``Location``:"
+msgstr ""
+"GRASS 데이터베이스 폴더를 찾으십시오 --- 조심하세요! GRASS 맵셋 폴더가 아니라 반드시 그 상위 폴더를 선택해야만 합니다. "
+"GRASS는 실제로 데이터베이스의 모든 ``Location`` 들과 각 ``Location`` 의 ``Mapset`` 들을 읽을 "
+"것입니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:279
+msgid ""
+"Choose the ``Location`` :guilabel:`SouthAfrica` and the ``Mapset`` "
+":guilabel:`grass_mapset` that we have created before."
+msgstr ""
+"``Location`` 을 :guilabel:`SouthAfrica` 로 선택하고 ``Mapset`` 을 앞에서 생성한 "
+":guilabel:`grass_mapset` 으로 선택하십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:282
+msgid ""
+"That's it! The GRASS Panel will become active meaning that the Mapset has "
+"been correctly opened."
+msgstr "끝났습니다! GRASS 패널이 활성화될 것입니다. 다시 말해 맵셋을 올바로 열었다는 뜻입니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:287
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Using the QGIS Browser"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: QGIS 탐색기 사용하기"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:289
+msgid "Even faster and easier is opening a ``Mapset`` using the QGIS Browser:"
+msgstr "더 빠르고 쉬운 방법은 QGIS 탐색기를 사용해서 ``Mapset`` 을 여는 것입니다:"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:291
+msgid ""
+"Close the Mapset (if it is open) by clicking on the :guilabel:`Close Mapset`"
+" button of the :guilabel:`GRASS Tools` window."
+msgstr ""
+"(열려 있는 경우) :guilabel:`GRASS Tools` 창의 :guilabel:`Close Mapset` 버튼을 클릭해서 맵셋을 "
+"닫으십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:293
+msgid "In the QGIS Browser, browse to the folder of the GRASS database."
+msgstr "QGIS 탐색기에서 GRASS 데이터베이스의 폴더로 가십시오."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:294
+msgid ""
+"Right click on the Mapset (remember, the Mapset has the |grassLogo| GRASS "
+"icon next to it). You will see some options."
+msgstr ""
+"맵셋을 오른쪽 클릭하십시오. (맵셋 옆에 |grassLogo| GRASS 아이콘이 있다는 사실을 잊지 마세요.) 컨텍스트 메뉴가 나타날 "
+"것입니다."
+
+#: ../../docs/training_manual/grass/grass_setup.rst:296
+msgid "Click on :guilabel:`Open mapset`:"
+msgstr ":guilabel:`Open mapset` 을 클릭하십시오:"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:301
+msgid "The Mapset is now open and ready to use!"
+msgstr "이제 맵셋이 열려서 사용할 수 있습니다!"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:303
+msgid ""
+"Right click on a GRASS Mapset offers you a lot of different settings. Try to"
+" explore them and see all the useful options."
+msgstr ""
+"GRASS 맵셋을 오른쪽 클릭하면 서로 다른 많은 설정들을 사용할 수 있습니다. 이 설정들을 탐색해서 유용한 옵션들을 모두 살펴보도록 "
+"하십시오."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:307
 msgid "In Conclusion"
@@ -146,9 +622,9 @@ msgid ""
 "However, by using QGIS as a frontend, you can make the setup of a GRASS "
 "mapset easier by using existing layers in QGIS as data sources for GRASS."
 msgstr ""
-"GRASS는 데이터를 공간 데이터베이스 구조로 불러온다는 점에서 GRASS의 데이터 획득 작업 흐름은 QGIS의 방법과 약간 다릅니다. "
-"하지만 QGIS를 프론트엔드로 사용하면, QGIS의 기존 레이어를 GRASS를 위한 데이터소스로 이용할 수 있기 때문에 GRASS 맵셋을"
-" 더 쉽게 설정할 수 있게 됩니다."
+"GRASS는 데이터를 공간 데이터베이스 구조로 불러온다는 점에서 GRASS의 데이터 획득 워크플로는 QGIS의 방법과 약간 다릅니다. "
+"하지만 QGIS를 프론트엔드로 사용하면, QGIS의 기존 레이어를 GRASS를 위한 데이터 소스로 이용할 수 있기 때문에 GRASS "
+"맵셋을 더 쉽게 설정할 수 있게 됩니다."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:315
 msgid "What's Next?"
