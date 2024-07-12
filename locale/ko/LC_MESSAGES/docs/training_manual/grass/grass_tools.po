@@ -32,25 +32,356 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:2
+msgid "Lesson: GRASS Tools"
+msgstr "수업: GRASS 도구"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:4
 msgid ""
 "In this lesson we will present a selection of tools to give you an idea of "
 "the capabilities of GRASS."
-msgstr "이번 강의에서는 여러분이 GRASS의 능력을 잘 알 수 있는 여러 도구들을 소개하겠습니다."
+msgstr "이번 수업에서는 여러분이 GRASS의 능력을 잘 알 수 있게 하는 여러 도구들을 소개하겠습니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:11
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Create an aspect map"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 경사 방향 맵 생성하기"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:13
+#: ../../docs/training_manual/grass/grass_tools.rst:36
+msgid "Open the :guilabel:`GRASS Tools` tab"
+msgstr ":guilabel:`GRASS Tools` 탭을 여십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:14
+#: ../../docs/training_manual/grass/grass_tools.rst:37
+msgid ""
+"Load the :file:`g_dem` raster layer from the :guilabel:`grass_mapset` Mapset"
+msgstr ":guilabel:`grass_mapset` 맵셋으로부터 :file:`g_dem` 래스터 레이어를 불러오십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:15
+msgid ""
+"Look for the :guilabel:`r.aspect` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+":guilabel:`Modules List` 탭의 :guilabel:`Filter` 란에서 ``r.aspect`` 모듈을 검색해서 "
+"찾으십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:17
+msgid ""
+"Open the tool and set it up like this and click on the :guilabel:`Run` "
+"button:"
+msgstr "해당 도구를 열고 다음과 같이 설정한 다음 :guilabel:`Run` 버튼을 클릭하십시오:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:22
+msgid ""
+"When the process is finished click on :guilabel:`View Output` to load the "
+"resulting layer in the canvas:"
+msgstr "처리 과정이 완료되면 :guilabel:`View Output` 을 클릭해서 캔버스에 산출 레이어를 불러오십시오:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:28
+msgid ""
+"The :file:`g_aspect` layer is stored within the :guilabel:`grass_mapset` "
+"Mapset so you can remove the layer from the canvas and reload it whenever "
+"you want."
+msgstr ""
+":file:`g_aspect` 레이어가 :guilabel:`grass_mapset` 맵셋 안에 저장되기 때문에 원할 때마다 캔버스에서 "
+"레이어를 제거하고 다시 불러올 수 있습니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:32
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Get basic statistic of raster layer"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 래스터 레이어의 기본 통계 구하기"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:34
+msgid ""
+"We want to know some basic statistics of the :file:`g_dem` raster layer."
+msgstr ":file:`g_dem` 래스터 레이어의 몇몇 기본 통계를 알고자 합니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:38
+msgid ""
+"Look for the :guilabel:`r.info` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+":guilabel:`Modules List` 탭의 :guilabel:`Filter` 란에서 ``r.info`` 모듈을 검색해서 "
+"찾으십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:40
+msgid "Set up the tool like this and click on :guilabel:`Run`:"
+msgstr "해당 도구를 다음과 같이 설정한 다음 :guilabel:`Run` 버튼을 클릭하십시오:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:45
+msgid ""
+"Within the Output tab you will see some raster information printed, like the"
+" path of the file, the number of rows and columns and other useful "
+"information:"
+msgstr ""
+":guilabel:`Output` 탭 안에 파일 경로, 행 및 열의 개수, 그리고 기타 유용한 정보 같은 래스터 정보가 출력된 것을 볼 "
+"수 있을 겁니다:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:53
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: The Reclass Tool"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: 재범주화 도구"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:55
+msgid ""
+"Reclassifying a raster layer is a very useful task. We just created the "
+":file:`g_aspect` layer from the :file:`g_dem` one. The value range gets from"
+" 0 (North) passing through 90 (East), 180 (South), 270 (West) and finally to"
+" 360 (North again). We can reclassify the :file:`g_aspect` layer to have "
+"just 4 **categories** following specific *rules* (North = 1, East = 2, South"
+" = 3 and West = 4)."
+msgstr ""
+"래스터 레이어를 재범주화하는 작업은 매우 유용합니다. 방금 :file:`g_dem` 레이어로부터 :file:`g_aspect` 레이어를 "
+"생성했습니다. 값의 범위는 0(북쪽)에서 90(동쪽), 180(남쪽), 270(서쪽), 그리고 마지막으로 360(다시 북쪽)까지 "
+"아우릅니다. :file:`g_aspect` 레이어가 특정 *규칙* 을 따르는 **카테고리** 들만 (북향=1, 동향=2, 남향=3, "
+"서향=4) 가지도록 재범주화시킬 수 있습니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:62
+msgid ""
+"Grass reclassify tool accepts a ``txt`` file with the defined rules. Writing"
+" the rules is very simple and the GRASS Manual contains very good "
+"description."
+msgstr ""
+"GRASS 재범주화 도구는 정의된 규칙을 담고 있는 :file:`.txt` 파일을 입력받습니다. 규칙은 매우 간단하게 작성할 수 있으며 "
+"작성 방법은 GRASS :guilabel:`Manual` 에 잘 설명되어 있습니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:65
+msgid ""
+"Each GRASS tool has its own Manual tab. Take the time to read the "
+"description of the tool you are using to don't miss some useful parameters"
+msgstr ""
+"각각의 GRASS 도구는 자신만의 :guilabel:`Manual` 탭을 가지고 있습니다. 유용한 파라미터들을 놓치지 않으려면 여러분이 "
+"사용하는 도구의 설명을 시간을 들여 읽어보십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:69
+msgid ""
+"Load the :file:`g_aspect` layer or, if you don't have create it, go back to "
+"the :ref:`grass_aspect` section."
+msgstr ""
+":file:`g_aspect` 레이어를 불러오십시오. 또는 아직 생성하지 않은 경우, :ref:`grass_aspect` 절로 다시 "
+"돌아가십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:71
+msgid ""
+"Look for the :guilabel:`r.reclass` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+":guilabel:`Modules List` 탭의 :guilabel:`Filter` 란에서 ``r.reclass`` 모듈을 검색해서 "
+"찾으십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:73
+msgid ""
+"Open the tool and set it up like the following picture. The file containing "
+"the rules is in the :file:`exercise_data/grass/` folder, named "
+":file:`reclass_aspect.txt`."
+msgstr ""
+"도구를 열어 다음 그림과 같이 설정하십시오. 규칙을 담고 있는 파일은 :file:`exercise_data/grass/` 폴더에 있는 "
+":file:`reclass_aspect.txt` 입니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:75
+msgid "Click on :guilabel:`Run` and wait until the process is finished:"
+msgstr ":guilabel:`Run` 을 클릭한 다음 처리 과정이 종료될 때까지 기다리십시오:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:80
+msgid ""
+"Click on :guilabel:`View Output` to load the reclassified raster in the "
+"canvas"
+msgstr ":guilabel:`View Output` 을 클릭해서 캔버스에 재범주화된 래스터를 불러오십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:82
+msgid ""
+"The new layer is made up by just 4 values (1, 2, 3, and 4) and it is easier "
+"to manage and to process."
+msgstr "새 레이어는 값 4개(1, 2, 3, 4)로만 이루어져 있기 때문에 더 쉽게 관리 및 처리를 할 수 있습니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:88
+msgid ""
+"Open the :file:`reclass_aspect.txt` with a text editor to see the rules and "
+"to start becoming used to them. Moreover, take a deep look at the GRASS "
+"manual: a lot of different examples are pointed out."
+msgstr ""
+"텍스트 편집기로 :file:`reclass_aspect.txt` 파일을 열어서 규칙을 살펴보고 익숙해지십시오. 또한 GRASS "
+":guilabel:`Manual` 을 자세히 살펴보십시오. 서로 다른 많은 예시를 보여주고 있습니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:94
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Reclassify with your rules"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 사용자 정의 규칙으로 재범주화하기"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:96
+msgid "Try to reclassify the :file:`g_dem` layer into 3 new categories:"
+msgstr ":file:`g_dem` 레이어를 다음 새 카테고리 3개로 재범주화해보십시오:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:98
+msgid "from 0 to 1000, new value = 1"
+msgstr "0에서 1,000까지, 새 값은 1"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:99
+msgid "from 1000 to 1400, new value = 2"
+msgstr "1,000에서 1,400까지, 새 값은 2"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:100
+msgid "from 1400 to the maximum raster value, new value = 3"
+msgstr "1,400에서 래스터 최대값까지, 새 값은 3"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:102
 msgid "Answer"
 msgstr "해답"
 
+#: ../../docs/training_manual/grass/grass_tools.rst:105
+msgid ""
+"To discover the maximum value of the raster run the ``r.info`` tool: in the "
+"console you will see that the maximum value is 1699. You are now ready to "
+"write the rules."
+msgstr ""
+"래스터의 최대값을 찾으려면 ``r.info`` 도구를 실행하십시오. 콘솔에서 최대값이 1,699라는 사실을 알 수 있을 겁니다. 이제 "
+"규칙을 작성할 준비가 끝났습니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:109
+msgid "Open a text editor and add the following rules::"
+msgstr "텍스트 편집기를 열어서 다음 규칙들을 추가하십시오:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:115
+msgid "Save the file as ``my_rules.txt`` file and close the text editor."
+msgstr "파일을 ``my_rules.txt`` 라는 이름으로 저장한 다음 텍스트 편집기를 닫으십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:116
+msgid ""
+"Run the ``r.reclass`` tool: choose the ``g_dem`` layer and load the file "
+"containing the rules you just have saved."
+msgstr ""
+"``r.reclass`` 도구를 실행하십시오. ``g_dem`` 레이어를 선택한 다음 방금 저장한, 규칙을 담고 있는 파일을 "
+"불러오십시오."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:118
+msgid ""
+"Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change"
+" the colors and the final result should look like the following picture:"
+msgstr ""
+":guilabel:`Run` 을 클릭한 다음 :guilabel:`View Output` 을 클릭하십시오. 색상은 변경할 수 있습니다. "
+"최종 결과물은 다음 그림처럼 보여야 할 것입니다:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:126
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: The Mapcalc Tool"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요: Mapcalc 도구"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:128
+msgid ""
+"The Mapcalc tools is similar to the Raster Calculator of QGIS. You can "
+"perform mathematical operation on one or more raster layers and the final "
+"result will be a new layer with the calculated values."
+msgstr ""
+"Mapcalc 도구는 QGIS의 래스터 계산기와 비슷합니다. 하나 이상의 래스터 레이어에 대해 수학 연산을 수행할 수 있으며, 최종 "
+"결과물은 계산된 값들을 가진 새 레이어가 될 것입니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:132
+msgid ""
+"The aim of the next exercise is to extract the values greater than 1000 from"
+" the :file:`g_dem` raster layer."
+msgstr "다음 예제의 목적은 :file:`g_dem` 래스터 레이어에서 1,000 이상의 값들을 추출하는 것입니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:135
+msgid ""
+"Look for the :guilabel:`r.mapcalc` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab."
+msgstr ""
+":guilabel:`Modules List` 탭의 :guilabel:`Filter` 란에서 ``r.mapcalc`` 모듈을 검색해서 "
+"찾으십시오."
+
 #: ../../docs/training_manual/grass/grass_tools.rst:137
 msgid "Start the tool."
 msgstr "도구를 실행하십시오."
 
+#: ../../docs/training_manual/grass/grass_tools.rst:139
+msgid ""
+"The :guilabel:`Mapcalc` dialog allows you to construct a sequence of "
+"analyses to be performed on a raster, or collection of rasters. You will use"
+" these tools to do so:"
+msgstr ""
+":guilabel:`Mapcalc` 대화창에서 래스터 하나 또는 래스터 집합에 대해 수행할 일련의 분석들을 구성할 수 있습니다. 이를 "
+"위해 다음 도구들을 사용할 것입니다:"
+
 #: ../../docs/training_manual/grass/grass_tools.rst:146
 msgid "In order, they are:"
 msgstr "순서대로,"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:148
+msgid ":guilabel:`Add map`: Add a raster file from your current GRASS mapset."
+msgstr ":guilabel:`Add map`: 현재 GRASS 맵셋으로부터 래스터 파일을 추가합니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:149
+msgid ""
+":guilabel:`Add constant value`: Add a constant value to be used in "
+"functions, 1000 in this case"
+msgstr ":guilabel:`Add constant value`: 함수에 사용될 상수 값을 추가합니다. 이 경우엔 1,000입니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:151
+msgid ""
+":guilabel:`Add operator or function`: Add an operator or function to be "
+"connected to inputs and outputs, we will use the operator ``greater equals "
+"than``"
+msgstr ""
+":guilabel:`Add operator or function`: 입력물과 산출물에 연결될 연산자 또는 함수를 추가합니다. 이 경우 "
+"``greater equals than`` 연산자를 사용할 것입니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:153
+msgid ""
+":guilabel:`Add connection`: Connect elements. Using this tool, click and "
+"drag from the red dot on one item to the red dot on another item. Dots that "
+"are correctly connected to a connector line will turn gray. If the line or "
+"dot is red, it is not properly connected!"
+msgstr ""
+":guilabel:`Add connection`: 요소들을 연결합니다. 이 도구를 사용해서 한 항목의 빨간 점에서 다른 항목의 빨간 "
+"점으로 클릭&드래그하십시오. 점들이 연결 라인에 올바르게 연결됐다면 회색으로 변할 것입니다. 라인 또는 점이 빨간색을 유지한다면 제대로 "
+"연결되지 않은 것입니다!"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:157
+msgid ":guilabel:`Select item`: Select an item and move selected items."
+msgstr ":guilabel:`Select item`: 항목 하나를 선택합니다. 선택된 항목들을 이동시킵니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:158
+msgid ""
+":guilabel:`Delete selected item`: Removes the selected item from the current"
+" mapcalc sheet, but not from the mapset (if it is an existing raster)"
+msgstr ""
+":guilabel:`Delete selected item`: 현재 ``r.mapcalc`` 시트에서 선택한 항목을 제거합니다. 다만 "
+"(해당 항목이 기존 래스터인 경우) 맵셋에서 제거하는 것은 아닙니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:160
+msgid ":guilabel:`Open`: Open an existing file with the operation defined"
+msgstr ":guilabel:`Open`: 연산이 정의된 기존 파일을 엽니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:161
+msgid ":guilabel:`Save`: Save all the operation in a file"
+msgstr ":guilabel:`Save`: 모든 연산을 파일로 저장합니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:162
+msgid ""
+":guilabel:`Save as`: Save all the operations as a new file on the disk."
+msgstr ":guilabel:`Save as`: 디스크 상에 모든 연산을 새 파일로 저장합니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:164
+msgid "Using these tools, construct the following algorithm:"
+msgstr "이 도구들을 사용해서 다음 알고리즘을 구성하십시오:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:169
+msgid ""
+"Click on :guilabel:`Run` and then on :guilabel:`View output` to see the "
+"output displayed in your map:"
+msgstr ""
+":guilabel:`Run` 을 클릭한 다음 :guilabel:`View output` 을 클릭해서 여러분의 맵에 산출물이 나타는 것을 "
+"보십시오:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:175
+msgid "This shows all the areas where the terrain is higher than 1000 meters."
+msgstr "이렇게 하면 표고가 1,000미터보다 높은 모든 지역을 볼 수 있습니다."
+
+#: ../../docs/training_manual/grass/grass_tools.rst:177
+msgid ""
+"You can also save the formula you have created and load it in another QGIS "
+"project by clicking on the last button on the GRASS Mapcalc toolbar."
+msgstr ""
+"GRASS Mapcalc 툴바의 마지막 버튼을 클릭하면 생성한 공식을 저장하고 또다른 QGIS 프로젝트에 불러올 수 있습니다."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:181
 msgid "In Conclusion"
