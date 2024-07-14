@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/assessment/index.rst:3
+msgid "Module: Assessment"
+msgstr "수업: 평가"
 
 #: ../../docs/training_manual/assessment/index.rst:5
 msgid "Use your own data for this section. You will need:"
@@ -42,7 +46,7 @@ msgstr "이 강의에서는 사용자의 데이터를 사용합니다. 다음과
 msgid ""
 "a point vector dataset of points of interest, with point names and multiple "
 "categories"
-msgstr "포인트 명칭 및 복수의 카테고리 속성을 가진, 관심 지점의 포인트 벡터 데이터셋"
+msgstr "포인트 이름 및 복수의 카테고리 속성을 가진, 관심 지점의 포인트 벡터 데이터셋"
 
 #: ../../docs/training_manual/assessment/index.rst:9
 msgid "a line vector dataset of roads"
@@ -60,27 +64,33 @@ msgstr "(항공사진 같은) 가시 스펙트럼 이미지"
 msgid ""
 "a DEM (downloadable from `the CGIAR-CSI <http://srtm.csi.cgiar.org/>`_ if "
 "you don't have your own)"
-msgstr "DEM (보유하지 않은 경우 CGIAR-CSI <http://srtm.csi.cgiar.org/>`에서 다운로드 가능)"
+msgstr "DEM (보유하지 않은 경우 `CGIAR-CSI <http://srtm.csi.cgiar.org/>`_ 에서 다운로드 가능)"
 
 #: ../../docs/training_manual/assessment/index.rst:16
 msgid "Create a base map"
-msgstr "베이스지도 생성"
+msgstr "기반 맵 생성하기"
 
 #: ../../docs/training_manual/assessment/index.rst:18
 msgid ""
 "Before doing any data analysis, you will need a base map, which will provide"
 " your analysis result with context."
-msgstr "데이터 분석전 컨텍스트의 결과를 분석할 베이스지도가 필요합니다."
+msgstr "데이터를 분석하기 전에 분석 결과에 맥락을 제공할 기반 맵(base map)이 필요합니다."
 
 #: ../../docs/training_manual/assessment/index.rst:22
 msgid "Add the point layer"
-msgstr "포인트 레이어 추가"
+msgstr "포인트 레이어 추가하기"
 
 #: ../../docs/training_manual/assessment/index.rst:24
 msgid ""
 "Add in the point layer. Based on the level that you're doing the course at, "
 "do only what is listed in the appropriate section below:"
-msgstr "포인트 레이어를 추가하십시오. 코스의 레벨에 따라 적절한 섹션이 하단에 표시됩니다:"
+msgstr "포인트 레이어를 추가하십시오. 강의를 진행하는 수준에 따라 다음에서 해당하는 절에 나열된 작업만 수행합니다:"
+
+#: ../../docs/training_manual/assessment/index.rst:28
+#: ../../docs/training_manual/assessment/index.rst:65
+#: ../../docs/training_manual/assessment/index.rst:98
+msgid ":abbr:`★☆☆ (Basic level)`"
+msgstr ":abbr:`★☆☆ (초급 수준)`"
 
 #: ../../docs/training_manual/assessment/index.rst:30
 msgid ""
@@ -88,8 +98,8 @@ msgid ""
 "a small font and keep the labels inconspicuous. The information should be "
 "available, but shouldn't be a main feature of the map."
 msgstr ""
-"지명과 같은 유일한 속성을 이용해서 포인트에 라벨을 부여하십시오. 작은 폰트를 사용해서 라벨을 눈에 띄지 않게 하십시오. 정보를 사용할 "
-"수 있어야 하지만, 맵의 주요 특성이 되어서는 안 됩니다."
+"지명(地名)과 같은 유일한 속성을 이용해서 포인트에 라벨을 부여하십시오. 작은 글꼴을 사용해서 라벨을 눈에 띄지 않게 하십시오. 정보를 "
+"사용할 수 있어야 하지만, 맵의 주요 특성이 되어서는 안 됩니다."
 
 #: ../../docs/training_manual/assessment/index.rst:33
 msgid ""
@@ -100,20 +110,37 @@ msgstr ""
 "포인트 자체를 카테고리에 따라 다른 색상으로 범주화하십시오. 예를 들면 \"관광 명소\", \"경찰서\", \"도심\" 같은 카테고리를 "
 "포함시킬 수 있습니다."
 
+#: ../../docs/training_manual/assessment/index.rst:38
+#: ../../docs/training_manual/assessment/index.rst:71
+#: ../../docs/training_manual/assessment/index.rst:103
+msgid ":abbr:`★★☆ (Moderate level)`"
+msgstr ":abbr:`★★☆ (중급 수준)`"
+
+#: ../../docs/training_manual/assessment/index.rst:40
+msgid "Do the same as the :abbr:`★☆☆ (Basic level)` section."
+msgstr ":abbr:`★☆☆ (초급 수준)` 절과 동일한 작업을 하십시오."
+
 #: ../../docs/training_manual/assessment/index.rst:41
 msgid ""
 "Classify the point size by importance: the more significant a feature, the "
 "larger its point. However, don't exceed the point size of :kbd:`2.00`."
 msgstr ""
-"해당 피처가 중요할수록 포인트가 커지도록 중요도에 따라 포인트 크기를 범주화하십시오. 그러나 포인트 크기가 :kbd:`2.00` 을 넘지"
-" 않도록 합니다."
+"피처가 중요할수록 포인트가 커지도록 중요도에 따라 포인트 크기를 범주화하십시오. 그러나 포인트 크기가 :kbd:`2.00` 을 넘지 "
+"않도록 합니다."
 
 #: ../../docs/training_manual/assessment/index.rst:43
 msgid ""
 "For features that aren't located at a single point (for example, "
 "provincial/regional names, or town names at a large scale), don't assign any"
 " point at all."
-msgstr "단일 지점에 위치하지 않은 피처의 경우(예를 들어 지방/지역 명칭이나 대축척에서의 도시명 등), 포인트를 할당하지 마십시오."
+msgstr ""
+"단일 지점에 위치하지 않은 (예를 들어 지방/지역 이름이나 대축척에서의 도시 이름 등의) 피처의 경우, 포인트를 할당하지 마십시오."
+
+#: ../../docs/training_manual/assessment/index.rst:48
+#: ../../docs/training_manual/assessment/index.rst:85
+#: ../../docs/training_manual/assessment/index.rst:110
+msgid ":abbr:`★★★ (Advanced level)`"
+msgstr ":abbr:`★★★ (고급 수준)`"
 
 #: ../../docs/training_manual/assessment/index.rst:50
 msgid ""
@@ -136,12 +163,12 @@ msgid ""
 "to populate the new columns, based on appropriate existing values in the "
 "dataset."
 msgstr ""
-"필요할 경우 속성 데이터에 적절한 열을 추가하십시오. 이때 가상 데이터를 생성해서는 안 됩니다. 데이터셋의 적절한 기존 값을 이용해서 "
-":guilabel:`Field Calculator` 로 새 열의 값을 채우도록 합니다."
+"필요할 경우 속성 데이터에 적절한 열을 추가하십시오. 이때 가상 데이터를 생성해서는 안 됩니다. 데이터셋에서 알맞은 기존 값을 이용해서 "
+":guilabel:`Field Calculator` 로 새 열의 값을 채우십시오."
 
 #: ../../docs/training_manual/assessment/index.rst:60
 msgid "Add the line layer"
-msgstr "라인 레이어 추가"
+msgstr "라인 레이어 추가하기"
 
 #: ../../docs/training_manual/assessment/index.rst:62
 msgid ""
@@ -161,7 +188,7 @@ msgid ""
 "black line with a thin white solid line running down the center. It can be "
 "more elaborate as well, but the resulting map should not look too busy."
 msgstr ""
-"다중 심볼 레이어로 심볼을 생성하십시오. 결과적으로 심볼이 실재 도로처럼 보여야 합니다. 이를 위해 단순 심볼을 사용할 수도 있습니다. "
+"다중 심볼 레이어로 심볼을 생성하십시오. 결과적으로 심볼이 실제 도로처럼 보여야 합니다. 이를 위해 단순 심볼을 사용할 수도 있습니다. "
 "예를 들면 검은 라인의 가운데에 가느다란 흰 실선을 두거나 해서 말이죠. 더 정교하게 만들어도 되지만, 결과적으로 맵이 너무 번잡해져서는"
 " 안 됩니다."
 
@@ -172,7 +199,7 @@ msgid ""
 " and a simpler symbol at smaller scales. (Use scale-based visibility to make"
 " them switch out at appropriate scales.)"
 msgstr ""
-"여러분이 맵을 보여주고자 하는 축척에서 여러분의 데이터셋의 도로 밀도가 너무 높을 경우, 실재 도로 같은 정교한 심볼 및 소축척에서 쓰일"
+"여러분이 맵을 보여주고자 하는 축척에서 여러분의 데이터셋의 도로 밀도가 너무 높을 경우, 실제 도로 같은 정교한 심볼 및 소축척에서 쓰일"
 " 더 단순한 심볼을 가진 두 개의 도로 레이어를 만들어야 합니다. (적절한 축척에서 서로 바뀌도록 해주는 축척 기반 시각화 기능을 "
 "사용하십시오.)"
 
@@ -182,18 +209,22 @@ msgid ""
 "display correctly."
 msgstr "모든 심볼에 다중 심볼 레이어를 이용하십시오. 심볼을 써서 피처가 정확하게 표현되도록 하십시오."
 
+#: ../../docs/training_manual/assessment/index.rst:87
+msgid "Do the same as in the :abbr:`★★☆ (Moderate level)` section above."
+msgstr ":abbr:`★★☆ (중급 수준)` 절과 동일한 작업을 하십시오."
+
 #: ../../docs/training_manual/assessment/index.rst:88
 msgid ""
 "In addition, roads should be classified. When using realistic road-like "
 "symbols, each type of road should have an appropriate symbol; for example, a"
 " highway should appear to have two lanes in either direction."
 msgstr ""
-"그에 더해 도로를 범주화해야 합니다. 실재 도로 같은 심볼을 사용할 경우, 각 도로 유형에 걸맞는 심볼을 사용해야 합니다. 예를 들어 "
+"그에 더해 도로를 범주화해야 합니다. 실제 도로 같은 심볼을 사용할 경우, 각 도로 유형에 걸맞는 심볼을 사용해야 합니다. 예를 들어 "
 "고속도로라면 양 방향으로 차선이 각각 두 개씩이어야 할 것입니다."
 
 #: ../../docs/training_manual/assessment/index.rst:93
 msgid "Add the polygon layer"
-msgstr "폴리곤 레이어 추가"
+msgstr "폴리곤 레이어 추가하기"
 
 #: ../../docs/training_manual/assessment/index.rst:95
 msgid "Add the land use layer and change its symbology."
@@ -209,7 +240,7 @@ msgid ""
 "symbol layers, different symbol types, etc. Keep the results looking subdued"
 " and uniform, however. Keep in mind that this will be part of a backdrop!"
 msgstr ""
-"토지이용 유형에 따라 레이어를 범주화하십시오. 적합하다고 생각될 때 심볼 레이어, 서로 다른 심볼 유형 등을 사용하십시오. 하지만 "
+"토지이용 유형에 따라 레이어를 범주화하십시오. 적합하다고 생각되는 경우 심볼 레이어, 서로 다른 심볼 유형 등을 사용하십시오. 하지만 "
 "결과물은 은은하고 균일해 보여야 합니다. 이 레이어는 배경의 일부라는 것을 명심하십시오!"
 
 #: ../../docs/training_manual/assessment/index.rst:112
@@ -220,7 +251,7 @@ msgstr "규칙 기반 범주화 기능을 써서 토지이용도를 \"도심\", 
 
 #: ../../docs/training_manual/assessment/index.rst:116
 msgid "Create the raster backdrop"
-msgstr "래스터 배경 생성"
+msgstr "래스터 배경 생성하기"
 
 #: ../../docs/training_manual/assessment/index.rst:118
 msgid ""
@@ -233,7 +264,7 @@ msgstr ""
 
 #: ../../docs/training_manual/assessment/index.rst:123
 msgid "Finalize the base map"
-msgstr "기본 맵 완성"
+msgstr "기반 맵 완성하기"
 
 #: ../../docs/training_manual/assessment/index.rst:125
 msgid ""
@@ -241,12 +272,12 @@ msgid ""
 "layers. This map should include all the basic information needed to orient "
 "the user, as well as being visually unified / \"simple\"."
 msgstr ""
-"앞에서 준비한 자원들을 사용해서 레이어들의 일부 또는 전체를 이용하는 기본 맵을 생성하십시오. 이 맵은 사용자가 자기 위치를 알 수 있게"
+"앞에서 준비한 자원들을 사용해서 레이어들의 일부 또는 전체를 이용하는 기반 맵을 생성하십시오. 이 맵은 사용자가 자기 위치를 알 수 있게"
 " 하는 데 필요한 기본 정보를 포함하는 것은 물론, 시각적으로 통일되고 \"간결\"해야 합니다."
 
 #: ../../docs/training_manual/assessment/index.rst:130
 msgid "Analyze the data"
-msgstr "데이터 분석"
+msgstr "데이터 분석하기"
 
 #: ../../docs/training_manual/assessment/index.rst:132
 msgid "You are looking for a property that satisfies certain criteria."
@@ -267,19 +298,24 @@ msgstr "목표 부지는 토지이용도의 특정한 유형(들)이어야 합�
 #: ../../docs/training_manual/assessment/index.rst:137
 msgid ""
 "it should be within a given distance from roads, or be crossed by a road"
-msgstr "도로로부터 주어진 거리 안에 있거나, 도로와 교차해야 합니다."
+msgstr "도로로부터 지정한 거리 안에 있거나, 도로와 교차해야 합니다."
 
 #: ../../docs/training_manual/assessment/index.rst:138
 msgid ""
 "it should be within a given distance from some category of points, like a "
 "hospital for example"
-msgstr "어떤 카테고리의 (예를 들어 병원 같은) 포인트로부터 주어진 거리 안에 있어야 합니다."
+msgstr "어떤 카테고리의 (예를 들어 병원 같은) 포인트로부터 지정한 거리 안에 있어야 합니다."
+
+#: ../../docs/training_manual/assessment/index.rst:142
+msgid ":abbr:`★★☆ (Moderate level)` / :abbr:`★★★ (Advanced level)`"
+msgstr ":abbr:`★★☆ (중급 수준)` / :abbr:`★★★ (고급 수준)`"
 
 #: ../../docs/training_manual/assessment/index.rst:144
 msgid ""
 "Include raster analysis in your results. Consider at least one derived "
 "property of the raster, such as its aspect or slope."
-msgstr "여러분의 결과물에 래스터 분석을 포함시키십시오. 래스터의 향이나 경사도 같은, 적어도 한 가지 속성을 추출하도록 합니다."
+msgstr ""
+"여러분의 결과물에 래스터 분석을 포함시키십시오. 래스터의 경사 방향이나 경사도 같은, 적어도 한 가지 속성을 추출하도록 합니다."
 
 #: ../../docs/training_manual/assessment/index.rst:148
 msgid "Final Map"
@@ -289,7 +325,7 @@ msgstr "최종 맵"
 msgid ""
 "Use the :guilabel:`Print Layout` to create a final map, which incorporates "
 "your analysis results."
-msgstr ":guilabel:`Print Layout` 을 통해 여러분의 분석 결과를 종합하는 최종 맵을 생성하십시오."
+msgstr ":guilabel:`Print Layout` 을 사용해서 여러분의 분석 결과를 종합하는 최종 맵을 생성하십시오."
 
 #: ../../docs/training_manual/assessment/index.rst:152
 msgid ""
@@ -298,7 +334,7 @@ msgid ""
 "layers which you feel are the least necessary."
 msgstr ""
 "이 맵을 여러분이 문서화한 기준과 함께 문서에 포함시키십시오. 추가된 레이어(들) 때문에 맵이 시각적으로 너무 번잡해졌다면, 여러분이 "
-"보기에 가장 필요하지 않은 레이어들을 해제하십시오."
+"보기에 가장 필요하지 않은 레이어들을 선택 해제하십시오."
 
 #: ../../docs/training_manual/assessment/index.rst:155
 msgid "Your map must include a title and a legend."
