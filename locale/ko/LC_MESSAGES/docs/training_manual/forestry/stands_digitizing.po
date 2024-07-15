@@ -33,7 +33,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:2
+msgid "Lesson: Digitizing Forest Stands"
+msgstr "수업: 수종경계 디지타이즈하기"
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:4
 msgid ""
@@ -46,17 +50,28 @@ msgid ""
 "an aerial image, you will use your georeferenced map."
 msgstr ""
 "여러분이 지리참조시킨 맵을 단순히 배경 맵으로 사용할 생각이 아니라면, 다음 단계는 자연스럽게 맵의 요소들을 디지털화하는 일이 됩니다. "
-"여러분은 이미 :doc:`../create_vector_data/create_new_vector` 강의에서 학교 부지를 디지타이즈해서 "
-"벡터 데이터를 생성하는 실습을 해봤습니다. 이번 강의에서는, 맵 위에 녹색 라인으로 표출된 수종경계(forest stands)의 경계선을"
-" 디지털화하게 될 것입니다. 다만 이번에는 항공사진이 아니라 여러분이 지리참조시킨 맵을 사용할 것입니다."
+"여러분은 이미 :doc:`../create_vector_data/create_new_vector` 에서 학교 부지를 디지타이즈해서 벡터 "
+"데이터를 생성하는 실습을 해봤습니다. 이번 수업에서는, 맵 위에 녹색 라인으로 나타난 수종경계(forest stands)의 경계선을 "
+"디지털화하게 될 것입니다. 다만 이번에는 항공사진이 아니라 여러분이 지리참조시킨 맵을 사용할 것입니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:11
 msgid ""
 "**The goal for this lesson:** Learn a technique to help the digitizing task,"
 " digitizing forest stands and finally adding the inventory data to them."
 msgstr ""
-"**이 강의의 목표:** 디지타이즈 작업, 수종경계 디지타이즈, 그리고 디지타이즈된 수종경계에 목록 데이터 추가하는 데 도움이 되는 "
+"**이 수업의 목표:** 디지타이즈 작업, 수종경계 디지타이즈, 그리고 디지타이즈된 수종경계에 현황 데이터를 추가하는 데 도움이 되는 "
 "기술을 배우기."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:15
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Extracting the Forest Stands Borders"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 수종경계 경계선을 추출하기"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:17
+msgid ""
+"Open your :file:`map_digitizing.qgs` project in QGIS, that you saved from "
+"the previous lesson."
+msgstr "QGIS에서, 이전 수업에서 저장했던 :file:`map_digitizing.qgs` 프로젝트를 여십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:20
 msgid ""
@@ -77,7 +92,7 @@ msgid ""
 " <https://www.gimp.org/>`_. Such separate images can be used to assist the "
 "digitizing, as you will see below."
 msgstr ""
-"이번 경우처럼 디지타이즈할 이미지가 괜찮은 맵이라면, 각 요소 유형마다 서로 다른 색상이 부여된 라인으로 정보가 명확히 표출되어 있을 "
+"이번 경우처럼 디지타이즈할 이미지가 괜찮은 맵이라면, 정보가 각 요소 유형마다 서로 다른 색상이 부여된 라인으로 명확히 나타나 있을 "
 "것입니다. `GIMP <https://www.gimp.org/>`_ 같은 이미지 처리 소프트웨어를 사용하면 이 색상들을 상대적으로 쉽게 "
 "개별 이미지로 추출할 수 있습니다. 다음 단계에서 나오겠지만, 이렇게 분리된 이미지는 디지타이즈 작업에 도움이 될 수 있습니다."
 
@@ -94,23 +109,43 @@ msgstr ""
 msgid ""
 "Open GIMP (if you don't have it installed yet, download it from the internet"
 " or ask your teacher)."
-msgstr "GIMP를 실행하십시오. (아직 설치하지 않았다면 인터넷에서 다운로드하든지 강사에게 문의하십시오.)"
+msgstr "GIMP를 실행하십시오. (아직 설치하지 않았다면 인터넷에서 다운로드하거나 강사에게 문의하십시오.)"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:37
+msgid ""
+"Open the original map image, :menuselection:`File --> Open`, "
+":file:`rautjarvi_map.tif` in the :file:`exercise_data/forestry` folder. Note"
+" that the forest stands are represented as green lines (with the number of "
+"the stand also in green inside each polygon)."
+msgstr ""
+":menuselection:`File --> Open` 메뉴를 클릭해서 :file:`exercise_data/forestry` 폴더에 "
+"있는 :file:`rautjarvi_map.tif` 원본 지도 이미지를 여십시오. 수종경계는 녹색 선으로 표현되어 있습니다. (각 "
+"수종경계의 번호도 각 다각형 내부에 녹색으로 쓰여 있습니다.)"
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:47
 msgid ""
 "Now you can select the pixels in the image that are making up the forest "
 "stands' borders (the greenish pixels):"
-msgstr "이제 이미지에서 수종경계의 경계선을 표시하는 픽셀(녹색 픽셀)을 선택할 수 있습니다."
+msgstr "이제 이미지에서 수종경계의 경계선을 이루고 있는 (녹색) 픽셀을 선택할 수 있습니다:"
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:50
 msgid "Open the tool :menuselection:`Select --> By color`."
 msgstr "메뉴에서 :menuselection:`Select --> By color` 도구를 실행하십시오."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:51
+msgid ""
+"With the tool active, zoom into the image (:kbd:`Ctrl` + mouse wheel) so "
+"that a forest stand line is close enough to differentiate the pixels forming"
+" the line. See the left image below."
+msgstr ""
+"이 도구가 활성화되면, 수종경계 경계선을 이루고 있는 픽셀들을 구분할 수 있을 정도로 이미지를 확대(:kbd:`Ctrl` + 마우스 "
+"휠)하십시오. 다음 왼쪽 그림을 참조하세요."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:54
 msgid ""
 "Click and drag the mouse cursor in the middle of the line so that the tool "
 "will collect several pixel color values."
-msgstr "도구가 픽셀의 색상값을 수집할 수 있도록 선 가운데에 마우스 커서를 클릭&드래그하십시오."
+msgstr "도구가 픽셀의 색상값을 수집할 수 있도록 선 가운데를 마우스 커서로 클릭&드래그하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:56
 msgid ""
@@ -122,7 +157,7 @@ msgstr "마우스에서 손을 떼고 몇 초 정도 기다리십시오. 도구�
 msgid ""
 "Zoom out to see how the greenish pixels have been selected throughout the "
 "image."
-msgstr "줌아웃해서 이미지 전체에서 녹색 픽셀들이 어떻게 선택되었는지 살펴보십시오."
+msgstr "이미지 전체에서 녹색 픽셀들이 어떻게 선택되었는지 살펴보려면 축소하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:59
 msgid ""
@@ -131,13 +166,28 @@ msgstr "결과물이 마음에 들지 않는다면, 클릭&드래그 작업을 �
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:60
 msgid "Your pixel selection should look something like the right image below."
-msgstr "여러분이 선택한 픽셀들은 다음 오른쪽 이미지와 비슷하게 보여야 합니다."
+msgstr "여러분이 선택한 픽셀들이 다음 오른쪽 이미지와 비슷하게 보여야 합니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:67
 msgid ""
 "Once you are done with the selection you need to copy this selection as a "
 "new layer and then save it as separate image file:"
-msgstr "선택 작업이 완료됐으면 이 선택한 픽셀들을 새 레이어로 복사해서 개별 이미지 파일로 저장해야 합니다."
+msgstr "선택 작업이 완료됐으면 이 선택한 픽셀들을 새 레이어로 복사해서 개별 이미지 파일로 저장해야 합니다:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:70
+msgid ""
+"Copy (:kbd:`Ctrl+C` or :menuselection:`Edit --> Copy`) the selected pixels."
+msgstr "선택한 픽셀들을 복사(:kbd:`Ctrl+C` 또는 :menuselection:`Edit --> Copy`)하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:71
+msgid ""
+"And paste the pixels directly as a new layer (:menuselection:`Edit --> Paste"
+" as --> New Layer`). GIMP will display the pasted pixels as a new layer "
+"(``Pasted Layer``) in the :guilabel:`Layers` panel."
+msgstr ""
+":menuselection:`Edit --> Paste as --> New Layer` 메뉴 항목을 선택해서 이 픽셀들을 직접 새 "
+"레이어로 붙여넣으십시오. GIMP가 :guilabel:`Layers` 패널에 이 붙여넣은 픽셀들을 새 레이어(``Pasted "
+"Layer``)로 보여줄 것입니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:73
 msgid ""
@@ -146,6 +196,18 @@ msgid ""
 msgstr ""
 "원본 이미지 레이어 옆에 있는 \"눈\" 아이콘을 클릭해서 레이어를 끄십시오. :guilabel:`Pasted Layer` 만 보이게 "
 "됩니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:81
+msgid ""
+"Finally, select :menuselection:`File --> Export As...`, set "
+":guilabel:`Select File Type (By Extension)` as a :guilabel:`TIFF image`, "
+"select the :file:`digitizing` folder and name it "
+":file:`rautjarvi_map_green.tif`. Select no compression when asked."
+msgstr ""
+"마지막으로 :menuselection:`File --> Export As...` 메뉴를 클릭하고 :guilabel:`Select File"
+" Type (By Extension)` 을 :guilabel:`TIFF image` 로 설정한 다음 :file:`digitizing` "
+"폴더를 선택하고 파일 이름을 :file:`rautjarvi_map_green.tif` 로 지정하십시오. 대화창이 뜨면 어떤 압축도 "
+"선택하지 마십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:86
 msgid ""
@@ -157,26 +219,59 @@ msgstr ""
 "원본 이미지의 다른 요소들도 동일한 과정을 거쳐 추출할 수 있습니다. 예를 들어 도로를 표시하는 검정색 선이나 지형의 등고선을 표시하는 "
 "갈색 선을 추출할 수 있습니다. 하지만 이번 강의에서는 수종경계만 사용할 것입니다."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:91
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Georeference the Green Pixels Image"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 녹색 픽셀 이미지를 지리참조시키기"
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:93
 msgid ""
 "As you did in the previous lesson, you need to georeference this new image "
 "to be able to use it with the rest of your data."
-msgstr "이전 강의에서와 마찬가지로, 이 새 이미지를 다른 데이터와 함께 사용하려면 이미지를 지리참조시켜야 합니다."
+msgstr "이전 수업에서와 마찬가지로, 이 새 이미지를 다른 데이터와 함께 사용하려면 이미지를 지리참조시켜야 합니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:96
+msgid ""
+"Note that you don't need to digitize the ground control points anymore "
+"because this image is basically the same image as the original map image, as"
+" far as the Georeferencer tool is concerned. Here are some things you should"
+" remember:"
+msgstr ""
+"지리참조 도구의 관점에서는 이 새 이미지가 기본적으로 원본 맵 이미지와 동일하기 때문에 새로 GCP를 디지타이즈할 필요는 없습니다. 다음"
+" 사항들을 기억하십시오:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:100
+msgid "This image is also, of course, in ``KKJ / Finland zone 2`` CRS."
+msgstr "이 이미지도 당연히 ``KKJ / Finland zone 2`` 좌표계를 사용합니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:101
 msgid ""
 "You should use the ground control points you saved, :menuselection:`File -->"
 " Load GCP points`."
 msgstr ""
-":menuselection:`File --> Load GCP points` 메뉴를 통해 이전에 저장했던 지상기준점을 사용해야 합니다."
+":menuselection:`File --> Load GCP points` 메뉴를 통해 이전에 저장했던 GCP를 사용해야 합니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:103
 msgid "Remember to review the :guilabel:`Transformation settings`."
-msgstr ":guilabel:`Transformation settings` 를 살펴보는 것을 잊지 마십시오."
+msgstr ":guilabel:`Transformation settings` 를 검토하는 것을 잊지 마십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:104
+msgid ""
+"Name the output raster as :file:`rautjarvi_green_georef.tif` in the "
+":file:`digitizing` folder."
+msgstr ""
+"산출 래스터를 :file:`digitizing` 폴더의 :file:`rautjarvi_green_georef.tif` 라는 파일로 "
+"지정하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:107
 msgid "Check that the new raster is fitting nicely with the original map."
 msgstr "새 래스터가 원본 맵과 잘 겹치는지 확인하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:111
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Creating Supporting Points for "
+"Digitizing"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 디지타이즈에 도움이 되는 포인트들을 생성하기"
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:113
 msgid ""
@@ -188,7 +283,7 @@ msgid ""
 msgstr ""
 "QGIS의 디지타이즈 작업 도구를 떠올려본다면, 디지타이즈 작업을 하는 동안 녹색 픽셀에 스냅하도록 하는 것이 도움이 될 거라고 이미 "
 "생각하고 있을 겁니다. 다음 단계는 바로 그렇게 디지타이즈 작업 시 수종경계 경계선을 따라 녹색 픽셀로부터 포인트를 생성하도록 QGIS의"
-" 스냅 도구를 이용할 것입니다."
+" 스냅 도구를 이용하는 것입니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:119
 msgid ""
@@ -199,21 +294,85 @@ msgid ""
 msgstr ""
 ":menuselection:`Raster --> Conversion --> Polygonize (Raster to Vector)` 메뉴를"
 " 실행해서 녹색 선을 폴리곤으로 벡터화하십시오. 어떻게 하는지 기억이 안 난다면, "
-":doc:`../complete_analysis/raster_to_vector` 강의를 참조해도 됩니다."
+":doc:`../complete_analysis/raster_to_vector` 을 참조해도 됩니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:122
+msgid ""
+"Save as :file:`rautjarvi_green_polygon.shp` inside the :file:`digitizing` "
+"folder."
+msgstr ""
+"생성된 폴리곤을 :file:`digitizing` 폴더의 :file:`rautjarvi_green_polygon.shp` 라는 파일로 "
+"저장하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:124
 msgid ""
 "Zoom in and see what the polygons look like. You will get something like "
 "this:"
-msgstr "줌인해서 폴리곤이 어떻게 생겼는지 살펴보십시오. 다음 그림처럼 보일 것입니다."
+msgstr "확대해서 폴리곤이 어떻게 생겼는지 살펴보십시오. 다음 그림처럼 보일 것입니다:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:131
+msgid ""
+"Next option to get points out of those polygons is to get their centroids:"
+msgstr "다음으로, 이 폴리곤들로부터 포인트들을 얻는 방법 가운데 하나는 폴리곤의 중심점(centroid)들을 구하는 것입니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:133
+msgid "Open :menuselection:`Vector --> Geometry Tools --> Centroids...`."
+msgstr ""
+":menuselection:`Vector --> Geometry Tools --> Centroids...` 도구를 실행하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:134
+msgid ""
+"Set :guilabel:`Input Layer` to |polygonLayer| "
+":guilabel:`rautjarvi_green_polygon` (the polygon layer you have just "
+"created)"
+msgstr ""
+":guilabel:`Input Layer` 를 (여러분이 방금 생성한) |polygonLayer| "
+":guilabel:`rautjarvi_green_polygon` 으로 설정하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:422
 msgid "polygonLayer"
 msgstr "polygonLayer"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:136
+msgid ""
+"Set :guilabel:`Centroids` output to :file:`green_centroids.shp` file within "
+"the folder :file:`digitizing`"
+msgstr ""
+":guilabel:`Centroids` 산출물을 :file:`digitizing` 폴더의 "
+":file:`green_centroids.shp` 파일로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:138
+msgid ""
+"Check |checkbox| :menuselection:`Open output file after running algorithm`"
+msgstr ""
+"|checkbox| :menuselection:`Open output file after running algorithm` 옵션을 "
+"체크하십시오."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:416
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:139
+msgid ""
+"Press :guilabel:`Run`. This will calculate the centroids for the polygons as"
+" a new layer and add it to the project."
+msgstr ":guilabel:`Run` 을 누르십시오. 프로젝트에 폴리곤의 중심점을 계산한 새 레이어를 추가할 것입니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:147
+msgid ""
+"Now you can remove the |polygonLayer| ``rautjarvi_green_polygon`` layer from"
+" the TOC."
+msgstr "이제 목록에서 |polygonLayer| ``rautjarvi_green_polygon`` 레이어를 제거해도 됩니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:149
+msgid "Change the symbology of the centroids layer as follows:"
+msgstr "중심점 레이어의 심볼을 다음과 같이 변경하십시오:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:151
+msgid ""
+"Open the :guilabel:`Layer Properties` for |pointLayer| ``green_centroids``."
+msgstr ""
+"|pointLayer| ``green_centroids`` 레이어의 :guilabel:`Layer Properties` 를 엽니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:420
 msgid "pointLayer"
@@ -222,6 +381,11 @@ msgstr "pointLayer"
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:152
 msgid "Go to the :guilabel:`Symbology` tab."
 msgstr ":guilabel:`Symbology` 탭을 선택합니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:153
+msgid "Set :guilabel:`Size` to ``1.00`` and choose :menuselection:`Map Units`"
+msgstr ""
+":guilabel:`Size` 를 ``1.00`` 으로 설정하고 :menuselection:`Map Units` 를 선택하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:156
 msgid ""
@@ -232,6 +396,10 @@ msgstr ""
 "각 포인트를 서로 구분지을 필요는 없습니다. 다만 스냅 도구가 포인트를 사용할 수 있기만 하면 됩니다. 이제 이 포인트들을 사용해서 훨씬"
 " 쉽게 원본의 선을 딸 수 있을 겁니다."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:161
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Digitize the Forest Stands"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 수종경계를 디지타이즈하기"
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:163
 msgid ""
 "Now you are ready to start with the actual digitizing work. You would start "
@@ -241,26 +409,130 @@ msgid ""
 "that are left between the main roads (wide pink lines) and the lake:"
 msgstr ""
 "이제 실제 디지타이즈 작업을 시작할 준비를 마쳤습니다. 먼저 :guilabel:`polygon type` 의 벡터 파일을 생성해도 "
-"되지만, 이 예제에서는 이미 관심 지역의 일부를 디지털화한 shapefile이 존재합니다. 여러분은 주요 도로(굵은 분홍색 선)와 호수 "
-"사이에 남아 있는 절반 정도의 수종경계만 디지타이즈하면 됩니다. "
+"되지만, 이 예제에서는 이미 관심 지역의 일부를 디지털화한 셰이프파일이 존재합니다. 여러분은 주요 도로(굵은 분홍색 선)와 호수 사이에 "
+"남아 있는 절반 정도의 수종경계만 디지타이즈하면 됩니다:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:174
+msgid "Go to the :file:`digitizing` folder using your file manager browser."
+msgstr "파일 탐색기를 사용해서 :file:`digitizing` 폴더를 찾으십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:175
+msgid "Drag and drop the :file:`forest_stands.shp` vector file to your map."
+msgstr ":file:`forest_stands.shp` 벡터 파일을 맵으로 드래그&드롭하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:177
+msgid ""
+"Change the new layer's symbology so that it will be easier to see the "
+"polygons that have already been digitized."
+msgstr "새로운 레이어의 심볼을 변경해서 어떤 폴리곤이 이미 디지타이즈되었는지 알기 쉽게 만듭시다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:180
+msgid ""
+"Set :guilabel:`Fill color` to green - and change the :guilabel:`Opacity` to "
+"``50%``."
+msgstr ""
+":guilabel:`Fill color` 를 녹색으로 설정한 다음, :guilabel:`Opacity` 를 ``50%`` 로 "
+"변경하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:181
+msgid ""
+"Select :guilabel:`Simple Fill` and set :guilabel:`Stroke width` to ``1.00 "
+"mm``."
+msgstr ""
+":guilabel:`Simple Fill` 을 선택하고 :guilabel:`Stroke width` 를 ``1.00 mm`` 로 "
+"설정하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:183
 msgid ""
 "Now, if you remember past modules, we have to set up and activate the "
 "snapping options:"
-msgstr "이전 강의들을 기억한다면, 이제 스냅 옵션을 설정하고 활성화할 차례입니다."
+msgstr "이전 강의들을 기억한다면, 이제 스냅 옵션을 설정하고 활성화해야 할 차례입니다:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:185
+msgid "Go to :menuselection:`Project --> Snapping options...`"
+msgstr ":menuselection:`Project --> Snapping options...` 메뉴 항목을 선택하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:186
+msgid ""
+"Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced "
+"Configuration`"
+msgstr ""
+"|snapping| :sup:`Enable Snapping` 버튼을 누르고 :guilabel:`Advanced Configuration`"
+" 을 선택하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:424
 msgid "snapping"
 msgstr "snapping"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:187
+msgid ""
+"Check the :guilabel:`green_centroids` and :guilabel:`forest_stands` layers"
+msgstr "``green_centroids`` 레이어와 ``forest_stands`` 레이어를 체크하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:188
+msgid "Set :guilabel:`Type` for each layer to :guilabel:`Vertex`"
+msgstr "각 레이어의 :guilabel:`Type` 을 :guilabel:`Vertex` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:189
+msgid "Set :guilabel:`Tolerance` for each layer to ``10``"
+msgstr "각 레이어의 :guilabel:`Tolerance` 를 ``10`` 으로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:190
+msgid "Set :guilabel:`Units` for each layer to :guilabel:`pixels`"
+msgstr "각 레이어의 :guilabel:`Units` 를 :guilabel:`pixels` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:191
+msgid ""
+"Check |checkbox| :guilabel:`Avoid Overlap` for the :guilabel:`forest_stands`"
+" layer"
+msgstr ""
+"``forest_stands`` 레이어의 |checkbox| :guilabel:`Avoid Overlap` 옵션을 체크하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:192
+msgid "Press |topologicalEditing| :guilabel:`Topological editing`"
+msgstr "|topologicalEditing| :guilabel:`Topological editing` 버튼을 누르십시오."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:430
 msgid "topologicalEditing"
 msgstr "topologicalEditing"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:193
+msgid ""
+"Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`"
+msgstr ""
+"|avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration` 을 "
+"선택하십시오."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:412
 msgid "avoidIntersectionsLayers"
 msgstr "avoidIntersectionsLayers"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:194
+msgid "Close the pop-up"
+msgstr "팝업창을 닫습니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:200
+msgid ""
+"With these snapping settings, whenever you are digitizing and get close "
+"enough to one of the points in the centroids layer or any vertex of your "
+"digitized polygons, a pink square will appear on the point that will be "
+"snapped to."
+msgstr ""
+"스냅 옵션을 이렇게 설정하면 여러분이 디지타이즈 작업을 할 때, 마우스가 중심점 레이어에 있는 포인트 또는 여러분이 디지타이즈한 폴리곤의"
+" 꼭지점에 가까이 갈 경우 포인트에 분홍색 정사각형이 나타나면서 스냅할 수 있게 됩니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:204
+msgid ""
+"Finally, turn off the visibility of all the layers except "
+":guilabel:`forest_stands` and :guilabel:`rautjarvi_georef`. Make sure that "
+"the map image has not transparency any more."
+msgstr ""
+"마지막으로 ``forest_stands`` 와 ``rautjarvi_georef`` 레이어를 제외한 다른 레이어들을 전부 보이지 않도록 "
+"끄십시오. 맵 이미지 또한 더 이상 투명하지 않도록 확인하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:207
+msgid "A few important things to note before you start digitizing:"
+msgstr "디지타이즈 작업을 시작하기 전에 확인해야 할 중요한 사항들이 몇 가지 있습니다:"
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:209
 msgid "Don't try to be too accurate with the digitizing of the borders."
@@ -270,7 +542,7 @@ msgstr "경계선 디지타이즈 작업 시 너무 정확하게 선을 따려 �
 msgid ""
 "If a border is a straight line, digitize it with just two nodes. In general,"
 " digitize using as few nodes as possible."
-msgstr "경계선이 직선일 경우, 노드 2개만 써서 디지타이즈하십시오. 대개의 경우, 가능한 한 적은 노드를 써서 디지타이즈하십시오."
+msgstr "경계선이 직선일 경우, 노드 2개만 써서 디지타이즈하십시오. 일반적으로 가능한 한 적은 노드를 써서 디지타이즈하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:212
 msgid ""
@@ -284,7 +556,7 @@ msgstr ""
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:215
 msgid ""
 "Use the mouse's middle button to zoom in/out and to pan as you digitize."
-msgstr "디지타이즈 작업 시 마우스 휠을 통해 확대/축소 및 이동을 하십시오."
+msgstr "디지타이즈 작업 시 마우스 휠을 사용해서 확대/축소 및 이동을 하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:216
 msgid "Digitize only one polygon at a time."
@@ -294,44 +566,137 @@ msgstr "한 번에 폴리곤 하나만 디지타이즈하십시오."
 msgid ""
 "After digitizing one polygon, write the forest stand id that you can see "
 "from the map."
-msgstr "하나의 폴리곤 작업이 끝날 때마다 맵 상에 보이는 수종경계 ID를 입력하십시오."
+msgstr "폴리곤 하나의 작업이 끝날 때마다 맵 상에 보이는 수종경계 ID를 입력하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:219
 msgid "Now you can start digitizing:"
-msgstr "이제 디지타이즈 작업을 시작해봅시다."
+msgstr "이제 디지타이즈 작업을 시작해봅시다:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:221
+msgid "Locate the forest stand number ``357`` in the map window."
+msgstr "맵 창에서 수종경계 번호 ``357`` 을 찾으십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:222
+msgid "Select the ``forest_stands`` layer."
+msgstr "``forest_stands`` 레이어를 선택하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:223
+msgid ""
+"Click the |toggleEditing| :sup:`Toggle Editing` button to enable editing"
+msgstr "|toggleEditing| :sup:`Toggle Editing` 버튼을 클릭해서 편집 모드를 활성화하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:428
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:224
+msgid "Select |capturePolygon| :sup:`Add Polygon Feature` tool."
+msgstr "|capturePolygon| :sup:`Add Polygon Feature` 도구를 선택하십시오."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:414
 msgid "capturePolygon"
 msgstr "capturePolygon"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:225
+msgid ""
+"Start digitizing the stand ``357`` by connecting some of the dots. Note the "
+"pink crosses indicating the snapping."
+msgstr ""
+"몇 개의 점들을 연결시키는 것을 시작으로 ``357`` 번 수종경계를 디지타이즈하십시오. 분홍색 정사각형이 스냅할 수 있는 포인트를 "
+"나타낸다는 사실을 기억하세요."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:233
+msgid "When you are done:"
+msgstr "디지타이즈 종료 시:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:235
+msgid "Right click to end digitizing that polygon."
+msgstr "오른쪽 클릭으로 해당 폴리곤의 디지타이즈 작업을 끝내십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:236
+msgid ""
+"Enter the forest stand :guilabel:`ID` within the form (in this case "
+"``357``)."
+msgstr "양식 안에 수종경계 :guilabel:`ID` 를 (이 경우 ``357`` 을) 입력하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:237
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` 를 클릭하십시오."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:239
+msgid ""
+"If a form did not appear when you finished digitizing the polygon, go to "
+":menuselection:`Settings --> Options --> Digitizing` and make sure that the "
+":guilabel:`Suppress attribute form pop-up after feature creation` is not "
+"checked."
+msgstr ""
+"폴리곤 디지타이즈 작업이 끝났을 때 양식이 열리지 않는 경우, :menuselection:`Settings --> Options --> "
+"Digitizing` 메뉴를 클릭하고 :guilabel:`Suppress attribute form pop-up after feature"
+" creation` 옵션이 체크 해제되어 있는지 확인하십시오."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:243
 msgid "Your digitized polygon will look like this:"
-msgstr "여러분이 디지타이즈한 폴리곤은 다음 그림처럼 보일 것입니다."
+msgstr "여러분이 디지타이즈한 폴리곤은 다음 그림처럼 보일 것입니다:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:250
+msgid ""
+"Now for the second polygon, pick up the stand number 358. Make sure that "
+"|checkbox| :guilabel:`Avoid Overlap` is checked for the "
+":guilabel:`forest_stands` layer (as shown above). This option ensures "
+"polygons do not overlap. So, if you digitize over an existing polygon, the "
+"new polygon will be trimmed to meet the border of the existing polygons. You"
+" can use this option to automatically obtain a common border."
+msgstr ""
+"이제 두 번째 폴리곤으로 수종경계 번호 ``358`` 을 찾아보십시오. (앞에서 설명한 대로) ``forest_stands`` 레이어의 "
+"|checkbox| :guilabel:`Avoid Overlap` 옵션이 체크되어 있는지 확인하세요. 이 옵션은 디지타이즈 작업 시 "
+"폴리곤들이 서로 중첩하지 않도록 막아줍니다. 따라서 기존 폴리곤 위에 겹쳐서 디지타이즈할 경우, 새 폴리곤이 기존 폴리곤의 경계선을 "
+"접하도록 잘릴 것입니다. 이 특성을 이용하면 공통 경계선을 자동적으로 얻을 수 있습니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:257
 msgid ""
 "Begin digitizing the stand 358 at one of the common corners with the stand "
 "357."
-msgstr "수종경계 357과 맞닿은 모서리 가운데 하나로부터 수종경계 358의 디지타이즈 작업을 시작하십시오."
+msgstr "수종경계 ``357`` 과 맞닿은 모서리 가운데 하나로부터 수종경계 ``358`` 의 디지타이즈 작업을 시작하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:258
+msgid ""
+"Continue normally until you get to the other common corner for both stands."
+msgstr "두 수종경계가 맞닿는 다른 모서리까지 디지타이즈를 계속하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:259
 msgid ""
 "Finally, digitize a few points inside polygon 357 making sure that the "
 "common border is not intersected. See left image below."
 msgstr ""
-"마지막으로 맞닿는 모서리가 서로 교차하지 않도록 폴리곤 357 내부에 포인트를 몇 개 디지타이즈하십시오. 다음 왼쪽 이미지를 참조하세요."
+"마지막으로 공통 경계선이 교차하지 않도록 폴리곤 ``357`` 내부에 포인트를 몇 개 디지타이즈하십시오. 다음 왼쪽 이미지를 참조하세요."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:261
 msgid "Right click to finish editing the forest stand 358."
-msgstr "오른쪽 클릭해서 수종경계 358의 편집을 끝냅니다."
+msgstr "오른쪽 클릭해서 수종경계 ``358`` 의 편집을 끝냅니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:262
+msgid "Enter the :guilabel:`ID` as ``358``."
+msgstr ":guilabel:`ID` 에 ``358`` 을 입력하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:263
+msgid ""
+"Click :guilabel:`OK`. Your new polygon should have a common border with the "
+"stand 357 as you can see in the image below."
+msgstr ""
+":guilabel:`OK` 를 클릭합니다. 다음 오른쪽 그림처럼 새 폴리곤이 수종경계 ``357`` 과 공통 경계선을 가지는 것을 볼 수"
+" 있습니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:271
+msgid ""
+"The part of the polygon that was overlapping the existing polygon has been "
+"automatically trimmed and you are left with a common border - as you "
+"intended it to be."
+msgstr "기존 폴리곤과 중첩했던 폴리곤 부분이 자동적으로 잘려나가, 의도한 대로 공통 경계선만 남게 되었습니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:277
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Finish Digitizing the Forest Stands"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 수종경계 디지타이즈 작업을 마무리하기"
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:279
 msgid ""
@@ -372,6 +737,10 @@ msgstr ""
 msgid "Your result will look like this:"
 msgstr "여러분의 산출물이 다음 그림처럼 보여야 합니다."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:302
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Joining the Forest Stand Data"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 수종경계 데이터를 결합하기"
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:304
 msgid ""
 "It is possible that the forest inventory data you have for you map is also "
@@ -380,30 +749,197 @@ msgid ""
 "inventory for 1994 (the same inventory as the map) is ready as a comma "
 "separated text (csv) file."
 msgstr ""
-"여러분의 맵에 대해 여러분이 가진 삼림 목록 데이터 또한 종이에 기록된 정보일 수도 있습니다. 이럴 경우, 먼저 해당 데이터를 텍스트 "
-"파일이나 스프레드시트로 입력해야 합니다. 이번 예제에서는, (맵과 동일한 연도인) 1994년 목록 정보를 쉼표로 구분된 텍스트 "
+"여러분이 여러분의 맵에 대해 가진 삼림 현황 데이터 또한 종이에 기록된 정보일 수도 있습니다. 이럴 경우, 먼저 해당 데이터를 텍스트 "
+"파일이나 스프레드시트로 입력해야 합니다. 이번 예제에서는, (맵과 동일한 연도인) 1994년 현황 정보를 쉼표로 구분된 텍스트 "
 "파일(csv)로 준비했습니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:309
+msgid ""
+"Open the :file:`rautjarvi_1994.csv` file from the "
+":file:`exercise_data\\\\forestry` directory in a text editor and note that "
+"the inventory data file has an attribute called :guilabel:`ID` that has the "
+"numbers of the forest stands. Those numbers are the same as the forest "
+"stands ids you have entered for your polygons and can be used to link the "
+"data from the text file to your vector file. You can see the metadata for "
+"this inventory data in the file :file:`rautjarvi_1994_legend.txt` in the "
+"same folder."
+msgstr ""
+"텍스트 편집기에서 :file:`exercise_data\\\\forestry` 폴더에 있는 "
+":file:`rautjarvi_1994.csv` 파일을 여십시오. 이 현황 데이터 파일은 수종경계의 번호를 가진 "
+":guilabel:`ID` 라는 속성을 담고 있습니다. 이 번호들은 여러분이 폴리곤에 입력한 수종경계 ID와 동일하며, 텍스트 파일에 "
+"들어 있는 데이터를 여러분의 벡터 파일과 링크시키는 데 이용할 수 있습니다. 이 현황 데이터의 메타데이터를 같은 폴더에 있는 "
+":file:`rautjarvi_1994_legend.txt` 파일 안에서 살펴볼 수 있습니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:317
+msgid "Now add this file into the project:"
+msgstr "이제 프로젝트에 이 파일을 추가하십시오:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:319
+msgid ""
+"Use the |addDelimitedTextLayer| :sup:`Add Delimited Text Layer` tool. This "
+"is accessed via :menuselection:`Layer --> Add Layer --> Add Delimited Text "
+"Layer...`."
+msgstr ""
+"|addDelimitedTextLayer| :sup:`Add Delimited Text Layer` 도구를 사용하십시오. "
+":menuselection:`Layer --> Add Layer --> Add Delimited Text Layer...` 메뉴를 통해 "
+"이 도구를 실행할 수 있습니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:410
 msgid "addDelimitedTextLayer"
 msgstr "addDelimitedTextLayer"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:321
+msgid "Set details in the dialog as follows:"
+msgstr "대화창에서 상세 사항을 다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:327
+msgid ""
+"Press :guilabel:`Add` to load the formatted :file:`csv` file in the project."
+msgstr ":guilabel:`Add` 버튼을 눌러 프로젝트에 서식화된 :file:`csv` 파일을 불러오십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:329
+msgid ""
+"To link the data from the :file:`.csv` file with the digitized polygons, "
+"create a join between the two layers:"
+msgstr ""
+":file:`csv` 파일에서 나온 데이터를 디지타이즈한 폴리곤에 링크시키려면, 두 레이어 사이에 결합(join)을 생성하십시오:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:332
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:347
+msgid "Open the Layer Properties for the ``forest_stands`` layer."
+msgstr "``forest_stands`` 레이어의 :guilabel:`Layer Properties` 를 엽니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:333
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:348
 msgid "Go to the :guilabel:`Joins` tab."
 msgstr ":guilabel:`Joins` 탭을 선택합니다."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:334
+msgid ""
+"Click |symbologyAdd| :sup:`Add new join` on the bottom of the dialog box."
+msgstr "대화창 하단에 있는 |symbologyAdd| :sup:`Add new join` 버튼을 클릭하십시오."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:426
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:335
+msgid "Select :guilabel:`rautjarvi_1994.csv` as the :guilabel:`Join layer`"
+msgstr ":guilabel:`Join layer` 에 :file:`rautjarvi_1994.csv` 를 선택하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:336
+msgid "Set the :guilabel:`Join` field to :guilabel:`ID`"
+msgstr ":guilabel:`Join` 란에 :guilabel:`ID` 를 설정하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:337
+msgid "Set the :guilabel:`Target` field to :guilabel:`ID`"
+msgstr ":guilabel:`Target` 란에 :guilabel:`ID` 를 설정하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:338
 msgid "Click :guilabel:`OK` two times."
 msgstr ":guilabel:`OK` 를 두 번 클릭합니다."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:340
+msgid ""
+"The data from the text file should be now linked to your vector file. To see"
+" what has happened, select the ``forest_stands`` layer and use |openTable| "
+":sup:`Open Attribute Table`. You can see that all the attributes from the "
+"inventory data file are now linked to your digitized vector layer."
+msgstr ""
+"텍스트 파일에 있는 데이터가 이제 벡터 파일에 링크됐을 겁니다. 어떻게 됐는지 살펴보려면, ``forest_stands`` 레이어를 "
+"선택한 다음 |openTable| :sup:`Open Attribute Table` 을 클릭하십시오. 현황 데이터 파일에 있는 모든 "
+"속성이 이제 디지타이즈한 벡터 레이어에 링크됐다는 사실을 알 수 있습니다."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:418
 msgid "openTable"
 msgstr "openTable"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:345
+msgid ""
+"You will see that the field names are prefixed with ``rautjarvi_1994_``. To "
+"change this:"
+msgstr "필드 이름 앞에 ``rautjarvi_1994_`` 접두어가 붙었다는 것을 알 수 있습니다. 이를 변경하려면:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:349
+msgid "Select :guilabel:`Join Layer` :guilabel:`rautjarvi_1994`"
+msgstr ":guilabel:`Join Layer` :guilabel:`rautjarvi_1994` 를 선택하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:350
+msgid ""
+"Click the |toggleEditing| :sup:`Edit selected join` button to enable editing"
+msgstr "|toggleEditing| :sup:`Edit selected join` 버튼을 클릭해서 편집 모드를 활성화하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:351
+msgid ""
+"Under |checkbox| :guilabel:`Custom field name prefix` remove the prefix name"
+msgstr "|checkbox| :guilabel:`Custom field name prefix` 옵션에서 접두어를 제거하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:357
+msgid ""
+"The data from the :file:`.csv` file is just linked to your vector file. To "
+"make this link permanent, so that the data is actually recorded to the "
+"vector file you need to save the ``forest_stands`` layer as a new vector "
+"file. To do this:"
+msgstr ""
+":file:`.csv` 파일에 있는 데이터는 벡터 파일에 단순히 링크만 되어 있을 뿐입니다. 이 연결을 영구적으로 만들어 데이터가 벡터 "
+"파일에 실제로 기록되도록 하려면, ``forest_stands`` 레이어를 새로운 벡터 파일로 저장해야 합니다. 이렇게 하려면:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:361
+msgid "Right click on ``forest_stands`` layer"
+msgstr "``forest_stands`` 레이어를 오른쪽 클릭하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:362
+msgid "Choose :menuselection:`Export --> Save Features As...`"
+msgstr ":menuselection:`Export --> Save Features As...` 메뉴 항목을 선택하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:363
+msgid "Set :guilabel:`Format` to :guilabel:`ESRI Shapefile`"
+msgstr ":guilabel:`Format` 을 :guilabel:`ESRI Shapefile` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:364
+msgid ""
+"Set file name to :file:`forest_stands_1994.shp` under the :file:`forestry` "
+"folder"
+msgstr ""
+"경로를 :file:`forestry` 폴더로, 파일 이름을 :file:`forest_stands_1994.shp` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:365
+msgid ""
+"To include the new file as a layer in the project, check |checkbox| "
+":guilabel:`Add saved file to map`"
+msgstr ""
+"프로젝트에 이 새 파일을 레이어로 포함시키려면, |checkbox| :guilabel:`Add saved file to map` 옵션을 "
+"체크하십시오."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:374
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Adding Area and Perimeter"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 면적 및 둘레를 추가하기"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:376
+msgid ""
+"To finish gathering the information related to these forest stands, you "
+"might calculate the area and the perimeter of the stands. You calculated "
+"areas for polygons in :doc:`../complete_analysis/analysis_exercise`. Go back"
+" to that lesson if you need to and calculate the areas for the forest "
+"stands. Name the new attribute ``Area`` and make sure that the values "
+"calculated are in hectares. You could also do the same for the perimeter."
+msgstr ""
+"이 수종경계들과 관련된 정보 수집을 완료하려면, 각 수종경계의 면적 및 둘레를 계산해야 할 수도 있습니다. "
+":doc:`../complete_analysis/analysis_exercise` 에서 폴리곤의 면적을 계산해봤습니다. 필요한 경우 해당"
+" 수업을 다시 읽어보고, 수종경계의 면적을 계산하십시오. 새 속성의 이름을 ``Area`` 로 지정하고 계산값의 단위가 헥타르가 맞는지 "
+"확인하십시오. 둘레에 대해서도 동일한 작업을 하면 됩니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:383
+msgid ""
+"Now your ``forest_stands_1994`` layer is ready and packed with all the "
+"available information."
+msgstr "이제 ``forest_stands_1994`` 레이어가 사용할 수 있는 정보와 함께 준비가 끝났습니다."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:386
+msgid ""
+"Save your project to keep the current map layers in case you need to come "
+"back later to it."
+msgstr "향후 다시 필요할 경우에 대비해서 현재 맵 레이어들을 유지할 수 있도록 프로젝트를 저장하십시오."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:390
 msgid "In Conclusion"
@@ -413,7 +949,7 @@ msgstr "결론"
 msgid ""
 "It has taken a few clicks of the mouse but you now have your old inventory "
 "data in digital format and ready for use in QGIS."
-msgstr "마우스 클릭을 많이 해야 했지만, 이제 옛날 목록 데이터를 디지털 형식으로 바꾸어 QGIS에서 이용할 준비를 끝냈습니다."
+msgstr "마우스 클릭을 많이 해야 했지만, 이제 옛날 현황 데이터를 디지털 형식으로 바꾸어 QGIS에서 이용할 준비를 끝냈습니다."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:396
 msgid "What's Next?"
@@ -428,4 +964,4 @@ msgid ""
 " your dataset."
 msgstr ""
 "새로 만든 데이터셋으로 다른 분석을 할 수도 있지만, 좀 더 최신 정보로 업데이트된 데이터셋으로 분석을 수행하고 싶을 것입니다. 다음 "
-"강의의 주제는 최신 항공사진을 이용해서 수종경계를 생성하고 몇몇 관련 정보를 사용자의 데이터셋에 추가하는 것입니다."
+"수업의 주제는 최신 항공사진을 이용해서 수종경계를 생성하고 여러분의 데이터셋에 몇몇 관련 정보를 추가하는 것입니다."
