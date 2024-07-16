@@ -33,13 +33,93 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:2
+msgid "Lesson: Updating Forest Stands"
+msgstr "수업: 수종경계 업데이트하기"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:4
+msgid ""
+"Now that you have digitized the information from the old inventory maps and "
+"added the corresponding information to the forest stands, the next step is "
+"to create the inventory of the current state of the forest."
+msgstr ""
+"이제 옛날 현황 지도로부터 정보를 디지털화하고 수종경계에 관련 정보를 추가했습니다. 다음 단계는 삼림의 현재 상태의 현황 정보를 생성하는"
+" 것입니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:8
+msgid ""
+"You will digitize new forest stands using an aerial photo. As with the "
+"previous lesson, you will use an aerial Color Infrared (CIR) photograph. "
+"This type of imagery, where the infrared light is recorded instead of the "
+"blue light, is widely used to study vegetated areas."
+msgstr ""
+"항공 사진을 사용해서 새로운 수종경계를 디지타이즈할 것입니다. 이전 수업에서와 마찬가지로, 컬러 적외선(Color Infrared, "
+"CIR) 항공 사진을 사용할 것입니다. 청색광 대신 적외선광을 기록한 이 이미지 유형은 식생 지역 연구에 널리 활용되고 있습니다."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:13
 msgid ""
 "After digitizing the forest stands, you will add information such as new "
 "constraints given by conservation regulations."
 msgstr "수종경계 디지타이즈 작업이 끝나면 삼림 보존 규제에 따른 새로운 제약 사항과 같은 정보를 추가할 것입니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:16
+msgid ""
+"**The goal for this lesson:** To digitize a new set of forest stands from "
+"CIR aerial photographs and add information from other datasets."
+msgstr ""
+"**이 수업의 목표:** CIR 항공 사진을 바탕으로 새로운 수종경계들을 디지타이즈하고 다른 데이터셋으로부터 정보를 추가하기."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:21
+msgid ""
+":abbr:`★☆☆ (Basic level)` Comparing the Old Forest Stands to Current Aerial "
+"Photographs"
+msgstr ":abbr:`★☆☆ (초급 수준)` 옛날 수종경계를 최신 항공 사진과 비교하기"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:23
+msgid ""
+"The National Land Survey of Finland has an open data policy that allows you "
+"downloading a variety of geographical data like aerial imagery, traditional "
+"topographic maps, DEM, LiDAR data, etc. The service can be accessed in "
+"English `here "
+"<https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en>`_. The "
+"aerial image used in this exercise has been created from two orthorectified "
+"CIR images downloaded from that service (M4134F_21062012 and "
+"M4143E_21062012)."
+msgstr ""
+"핀란드 국립토지측량청은 여러분이 항공 사진, 전통적인 지형 지도, DEM, LiDAR 데이터 등 다양한 지리 정보를 다운로드할 수 있게 "
+"하는 오픈 데이터 정책을 취하고 있습니다. `여기 "
+"<https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en>`_ 에서 영문 "
+"서비스에 접근할 수 있습니다. 이번 예제에서 사용할 항공 사진은 해당 서비스에서 다운로드한 정사보정(orthorectified) CIR "
+"이미지(M4134F_21062012 및 M4143E_21062012)로부터 생성된 것입니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:30
+msgid ""
+"Open QGIS and set the project's CRS to :guilabel:`ETRS89 / ETRS-TM35FIN` in "
+":menuselection:`Project --> Properties... --> CRS`"
+msgstr ""
+"QGIS를 실행하고 :menuselection:`Project --> Properties... --> CRS` 메뉴에서 프로젝트의 "
+"좌표계를 :guilabel:`ETRS89 / ETRS-TM35FIN` 으로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:32
+msgid "Add the CIR image :file:`rautjarvi_aerial.tif` to the project:"
+msgstr "프로젝트에 :file:`rautjarvi_aerial.tif` CIR 이미지를 추가하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:34
+#: ../../docs/training_manual/forestry/updating_stands.rst:43
+msgid ""
+"Go to the :file:`exercise_data\\\\forestry\\\\` folder using your file "
+"manager browser"
+msgstr "파일 탐색기를 사용해서 :file:`exercise_data\\\\forestry\\\\` 폴더를 찾으십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:35
+msgid "Drag and drop the file :file:`rautjarvi_aerial.tif` onto your project"
+msgstr ":file:`rautjarvi_aerial.tif` 파일을 프로젝트로 드래그&드롭하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:36
+msgid "Save the QGIS project as :file:`digitizing_2012.qgs`"
+msgstr "이 QGIS 프로젝트를 :file:`digitizing_2012.qgs` 라는 이름으로 저장하십시오."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:38
 msgid ""
@@ -48,16 +128,58 @@ msgid ""
 msgstr ""
 "이 CIR 이미지는 2012년도에 촬영된 것입니다. 1994년에 생성된 수종경계를 거의 20년 뒤의 상황과 비교해볼 수 있습니다."
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:41
+msgid ""
+"Add the :file:`forest_stands_1994.shp` layer created in the previous lesson:"
+msgstr "이전 수업에서 생성한 :file:`forest_stands_1994.shp` 레이어를 추가하십시오:"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:44
+msgid ""
+"Drag and drop the file :file:`forest_stands_1994.shp` onto your project"
+msgstr ":file:`forest_stands_1994.shp` 파일을 프로젝트로 드래그&드롭하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:45
+msgid ""
+"Set the symbology for the layer so that you can see through your polygons:"
+msgstr "폴리곤이 비쳐보이도록 레이어의 심볼을 설정하십시오:"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:47
+msgid "Right click :guilabel:`forest_stands_1994`"
+msgstr "``forest_stands_1994`` 레이어를 오른쪽 클릭합니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:48
+msgid "Select :guilabel:`Properties`"
+msgstr ":guilabel:`Properties` 를 선택하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:49
+#: ../../docs/training_manual/forestry/updating_stands.rst:81
+msgid "Go to the |symbology| :guilabel:`Symbology` tab"
+msgstr "|symbology| :guilabel:`Symbology` 탭을 클릭합니다."
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:311
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:50
+#: ../../docs/training_manual/forestry/updating_stands.rst:82
+msgid "Set :guilabel:`Fill color` to transparent fill"
+msgstr ":guilabel:`Fill color` 를 투명 채우기로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:51
+msgid "Set :guilabel:`Stroke color` to purple"
+msgstr ":guilabel:`Stroke color` 를 보라색으로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:52
+#: ../../docs/training_manual/forestry/updating_stands.rst:84
+msgid "Set :guilabel:`Stroke width` to ``0.50 mm``"
+msgstr ":guilabel:`Stroke width` 를 ``0.50 mm`` 로 설정하십시오."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:53
 msgid ""
 "Review how the old forest stands follow (or not) what you might visually "
 "interpret as an homogeneous forest."
 msgstr ""
-"사용자가 육안으로 동종 삼림으로 해석할 수 있는 지역과 옛날 수종경계가 얼마나 일치하는지 (또는 일치하지 않는지) 살펴보십시오."
+"여러분이 육안으로 동종 삼림으로 해석할 수 있는 지역과 옛날 수종경계가 얼마나 일치하는지 (또는 일치하지 않는지) 검토해보십시오."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:55
 msgid ""
@@ -68,12 +190,29 @@ msgstr ""
 "해당 지역을 확대/축소 및 이동해보십시오. 옛날 수종경계 가운데 일부는 지금도 이미지와 일치할 수도 있지만, 일치하지 않는 수종경계도 "
 "있다는 것을 알 수 있을 것입니다."
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:58
+msgid ""
+"This is a normal situation, as some 20 years have passed and different "
+"forest operations have been carried out (harvesting, thinning...). It is "
+"also possible that the forest stands looked homogeneous back in 1992 to the "
+"person who digitized them but as time has passed some forest has developed "
+"in different ways. It is also possible that that forest inventory priorities"
+" back then were different from those of today."
+msgstr ""
+"이는 자연스러운 상황입니다. 20년에 가까운 시간이 지나는 사이 여러 삼림 작업(벌채, 간벌 등)이 이루어졌기 때문입니다. 또 "
+"1994년에 수종경계를 디지타이즈한 사람의 눈에는 동종 삼림으로 보였지만, 시간이 흐르면서 삼림 일부가 다른 방향으로 천이했을 가능성도 "
+"있습니다. 과거의 삼림 현황 정보의 우선순위가 현재와 다른 것일 수도 있습니다."
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:64
 msgid ""
 "Next, you will create new forest stands for this image without using the old"
 " ones. Later you can compare them to see the differences."
 msgstr ""
 "이제 옛날 수종경계 없이 이 이미지로부터 새로운 수종경계를 생성해보겠습니다. 나중에 두 수종경계의 차이를 비교해볼 수 있을 겁니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:69
+msgid ":abbr:`★☆☆ (Basic level)` Interpreting the CIR Image"
+msgstr ":abbr:`★☆☆ (초급 수준)` CIR 이미지 해석하기"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:71
 msgid ""
@@ -82,12 +221,82 @@ msgid ""
 "the previous exercise you can start with a vector file that already contains"
 " most of the forest stands."
 msgstr ""
-"도로와 호수 사이로 제한돼 있는 예전 목록 정보가 커버하는 지역을 디지타이즈해봅시다. 전체 지역을 디지타이즈할 필요는 없습니다. 이전 "
-"강의에서와 마찬가지로 대부분의 수종경계를 이미 담고 있는 벡터 파일을 사용할 수 있습니다."
+"도로와 호수 사이로 제한돼 있는 예전 현황 정보가 커버하는 지역을 디지타이즈해봅시다. 전체 지역을 디지타이즈할 필요는 없습니다. 이전 "
+"수업에서와 마찬가지로 대부분의 수종경계를 이미 담고 있는 벡터 파일을 사용할 수 있습니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:76
+msgid "Remove the layer |polygonLayer| :guilabel:`forest_stands_1994`"
+msgstr "|polygonLayer| :guilabel:`forest_stands_1994` 레이어를 제거하십시오."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:307
 msgid "polygonLayer"
 msgstr "polygonLayer"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:77
+msgid ""
+"Add the file :file:`exercise_data\\\\forestry\\\\forest_stands_2012.shp` to "
+"the project"
+msgstr "프로젝트에 :file:`exercise_data\\\\forestry\\\\forest_stands_2012.shp` 파일을 추가하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:78
+msgid ""
+"Set the styling of this layer so that the polygons have no fill and the "
+"borders are visible"
+msgstr "폴리곤의 면은 투명하고 경계선은 보이도록 이 레이어의 스타일을 조정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:80
+msgid "Open :guilabel:`Properties` dialog of the ``forest_stands_2012`` layer"
+msgstr "``forest_stands_2012`` 레이어의 :guilabel:`Properties` 대화창을 여십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:83
+msgid "Set :guilabel:`Stroke color` to green"
+msgstr ":guilabel:`Stroke color` 를 녹색으로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:91
+msgid ""
+"You can see that the northern section of the inventory area is still "
+"missing. Your task is to digitize the missing forest stands."
+msgstr "현황 정보 지역 가운데 북쪽이 아직 비어 있는 것을 볼 수 있습니다. 여러분은 이 누락된 수종경계를 디지타이즈해야 합니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:94
+msgid ""
+"Before you start, spend some time reviewing the forest stands already "
+"digitized and the corresponding forest in the image. Try to get an idea "
+"about how the stands borders are decided, it helps if you have some forestry"
+" knowledge."
+msgstr ""
+"시작하기 전에, 이미 디지타이즈된 수종경계와 이미지에서 그에 대응하는 삼림을 천천히 검토해보십시오. 수종경계의 경계선을 어떤 기준으로 "
+"결정했는지 알아보십시오. 삼림관리에 대한 지식이 있다면 도움이 될 것입니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:98
+msgid "Some points to consider:"
+msgstr "다음은 고려해야 할 사항들입니다:"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:100
+msgid ""
+"Which forests have deciduous species (in Finland these are mostly birch "
+"forests) and which ones have conifers (in this area these are pine or "
+"spruce)? In CIR images, deciduous species usually show up as a bright red "
+"color whereas conifers show as a dark green color."
+msgstr ""
+"어떤 삼림이 낙엽수종인지 (핀란드에서는 대부분 자작나무 삼림입니다) 그리고 어떤 삼림이 침엽수종인지 (이 지역에서는 소나무 또는 "
+"가문비나무입니다) 알 수 있습니다. CIR 이미지에서는, 낙엽수종은 대부분 밝은 빨간색으로 나오는 반면 침엽수종은 어두운 녹색으로 "
+"나옵니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:104
+msgid ""
+"How old is the forest? The size of the tree crowns can be identified in the "
+"imagery."
+msgstr "이미지에서 수관(樹冠)의 크기를 측정하면 삼림의 수령(樹齡)을 알 수 있습니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:105
+msgid ""
+"How dense are the different forest stands? A forest stand where a thinning "
+"operation has recently been done would show spaces between the tree crowns "
+"and should be easy to differentiate from other forest stands around it."
+msgstr ""
+"서로 다른 수종경계의 밀도 차이를 알 수 있습니다. 예를 들어 최근 간벌 작업이 이루어진 수종경계는 수관 사이에 공간이 뚜렷이 보이기 "
+"때문에 주변의 수종경계와 쉽게 구별됩니다."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:108
 msgid ""
@@ -95,29 +304,163 @@ msgid ""
 "have not started to grow etc."
 msgstr "푸르스름한 지역은 황무지, 도로, 시가지, 아직 자라나지 않은 경작지 등을 의미합니다."
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:110
+msgid ""
+"Don't use zooms too close to the image when trying to identify forest "
+"stands. A scale between 1:3 000 and 1:5 000 should be enough for this "
+"imagery. See the image below (1:4000 scale):"
+msgstr ""
+"수종경계를 식별하려 할 때 이미지를 너무 크게 확대하지 마십시오. 이 이미지의 경우 1:3,000에서 1:5,000 사이의 축척이면 "
+"충분합니다. 다음 이미지(축척 1:4,000)를 참조하세요."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:119
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Digitizing Forest Stands from CIR "
+"Imagery"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: CIR 이미지를 바탕으로 수종경계 디지타이즈하기"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:121
+msgid ""
+"When digitizing the forest stands, you should try to get forest areas that "
+"are as homogeneous as possible in terms of tree species, forest age, stand "
+"density... Don't be too detailed though, or you will end up making hundreds "
+"of small forest stands - and that would not be useful at all. You should try"
+" to get stands that are meaningful in the context of forestry, not too small"
+" (at least 0.5 ha) but not too big either (no more than 3 ha)."
+msgstr ""
+"수종경계 디지타이즈 작업 시 수종, 수령, 밀도 등등의 관점에서 가능한 한 동질의 삼림 지역을 식별하려 해야 합니다. 그러나 너무 자세히"
+" 식별해서도 안 됩니다. 결국 전혀 쓸모없는 조그만 수종경계 수백 개를 만들게 될 테니까요. 삼림관리라는 맥락에서 의미 있는 수종경계를 "
+"얻으려면, 너무 작아서도 안 되고 (최소 0.5헥타르 이상) 그렇다고 너무 커서도 (최대 3헥타르 미만) 안 됩니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:128
+msgid ""
+"With these points in mind, you can now digitize the missing forest stands."
+msgstr "이런 지침들을 염두에 두고 이제 누락된 수종경계를 디지타이즈해보십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:130
+msgid "Set up the snapping and topology options:"
+msgstr "스냅 작업 및 위상 옵션을 다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:132
+msgid "Go to :menuselection:`Project --> Snapping options...`"
+msgstr ":menuselection:`Project --> Snapping options...` 메뉴 항목을 선택하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:133
+msgid ""
+"Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced "
+"Configuration`"
+msgstr ""
+"|snapping| :sup:`Enable Snapping` 아이콘을 클릭하고 :guilabel:`Advanced "
+"Configuration` 을 선택하십시오."
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:309
 msgid "snapping"
 msgstr "snapping"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:134
+msgid "Check the |checkbox| :guilabel:`forest_stands_2012` layer"
+msgstr "|checkbox| :guilabel:`forest_stands_2012` 레이어를 체크하십시오."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:301
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:136
+msgid "Set :guilabel:`Type` to :guilabel:`Vertex`"
+msgstr ":guilabel:`Type` 을 :guilabel:`Vertex` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:137
+msgid "Set :guilabel:`Tolerance` to ``10``"
+msgstr ":guilabel:`Tolerance` 를 ``10`` 으로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:138
+msgid "Set :guilabel:`Units` to :guilabel:`pixels`"
+msgstr ":guilabel:`Units` 를 :guilabel:`pixels` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:139
+msgid "Check the box under :guilabel:`Avoid Overlap`"
+msgstr ":guilabel:`Avoid Overlap` 아래 있는 체크박스를 체크하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:140
+msgid "Press |topologicalEditing| :guilabel:`Topological editing`"
+msgstr "|topologicalEditing| :guilabel:`Topological editing` 버튼을 누르십시오."
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:315
 msgid "topologicalEditing"
 msgstr "topologicalEditing"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:141
+msgid ""
+"Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`"
+msgstr ""
+"|avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration` 을 "
+"선택하십시오."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:299
 msgid "avoidIntersectionsLayers"
 msgstr "avoidIntersectionsLayers"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:142
+msgid "Close the pop-up"
+msgstr "팝업창을 닫습니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:147
+msgid "Select the :guilabel:`forest_stands_2012` layer on the Layers list"
+msgstr "레이어 목록에서 ``forest_stands_2012`` 레이어를 선택하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:148
+msgid ""
+"Click the |toggleEditing| :sup:`Toggle Editing` button to enable editing"
+msgstr "|toggleEditing| :sup:`Toggle Editing` 버튼을 클릭해서 편집 모드를 활성화하십시오."
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:313
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:149
+msgid ""
+"Start digitizing using the same techniques as in the previous lesson. The "
+"only difference is that you don't have any point layer that you are snapping"
+" to. For this area you should get around 14 new forest stands. While "
+"digitizing, fill in the ``StandID`` field with numbers starting at ``901``."
+msgstr ""
+"이전 수업과 동일한 방식으로 디지타이즈 작업을 시작하십시오. 유일한 차이점은 스냅할 수 있는 포인트 레이어가 없다는 것입니다. 여러분은 "
+"이 지역에서 약 14개의 새 수종경계를 생성해야 합니다. 디지타이즈하는 동안 ``StandID`` 필드를 ``901`` 부터 차례대로 "
+"입력하십시오."
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:153
 msgid "When you are finished your layer should look something like:"
-msgstr "작업 완료 시 여러분의 레이어가 다음처럼 보여야 합니다."
+msgstr "작업 완료 시 여러분의 레이어가 다음처럼 보여야 합니다:"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:158
+msgid ""
+"Now you have a new set of polygons showing the different forest stands in "
+"2012 - as interpreted from the CIR images. However, you are missing the "
+"forest inventory data. For that you will need to visit the forest and get "
+"some sample data that you will use to estimate the forest attributes for "
+"each of the forest stands. You will see how to do that in the next lesson."
+msgstr ""
+"이제 CIR 이미지에서 해석한, 2012년의 다른 수종경계들을 보여주는 일련의 폴리곤들을 만들었습니다. 하지만 삼림 현황 데이터가 "
+"없군요. 이를 해결하려면 여러분이 숲을 방문해서 각 수종경계의 삼림 속성을 추정하는 데 사용할 샘플 데이터를 수집해야 합니다. 다음 "
+"수업에서 그 방법을 배울 것입니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:164
+msgid ""
+"You can add some extra information about conservation regulations that need "
+"to be taken into account for this area."
+msgstr "이 지역에 적용해야 할 삼림 보존 규제 관련 추가 정보를 추가할 수 있습니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:168
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Updating Forest Stands with "
+"Conservation Information"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 보존 정보를 사용해서 수종경계 업데이트하기"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:170
+msgid ""
+"For the area you are working in, there are some conservation regulations "
+"that must be taken into account when doing the forest planning:"
+msgstr "현재 작업 중인 지역을 조사한 결과, 삼림 계획 수립 시 다음 보존 규제를 지켜야만 한다는 사실이 밝혀졌습니다:"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:173
 msgid ""
@@ -127,6 +470,38 @@ msgid ""
 msgstr ""
 "보호종인 시베리아 하늘다람쥐(Pteromys volans)의 서식지가 2곳 발견되었습니다. 규제에 따르면, 서식지에서 반경 15m 구역을"
 " 절대 보존해야 합니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:175
+msgid ""
+"A riparian forest of special interest that is growing along a stream in the "
+"area must be protected. In a visit to the field, it was found that 20 meters"
+" to both sides of the stream must be protected."
+msgstr ""
+"지역 내의 하천을 따라 식생하고 있는 하안(河岸) 숲은 특별 관심 대상으로 보호해야만 합니다. 현장 조사를 통해 하천의 양쪽 20m "
+"구역을 보호해야만 한다는 사실이 밝혀졌습니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:178
+msgid ""
+"You have a vector file containing the information about the squirrel "
+"locations and another containing the digitized stream running from the North"
+" area towards the lake."
+msgstr ""
+"다람쥐의 서식지에 대한 정보를 담고 있는 벡터 파일과 북쪽에서 호수를 향해 흐르는 하천을 디지타이즈한 또다른 벡터 파일이 있습니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:181
+msgid ""
+"From the :file:`exercise_data\\\\forestry\\\\` folder, add the "
+":file:`squirrel.shp` and :file:`stream.shp` files to the project."
+msgstr ""
+"프로젝트에 :file:`exercise_data\\\\forestry\\\\` 폴더에 있는 :file:`squirrel.shp` 및 "
+":file:`stream.shp` 파일을 추가하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:183
+msgid ""
+"Use the |openTable| :sup:`Open Attribute Table` tool to view the "
+"``squirrel`` layer"
+msgstr ""
+"|openTable| :sup:`Open Attribute Table` 도구를 사용해서 ``squirrel`` 레이어를 살펴보십시오."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:303
 msgid "openTable"
@@ -140,27 +515,210 @@ msgid ""
 msgstr ""
 "시베리아 하늘다람쥐로 정의된 위치가 2곳 있고, 보호해야 할 지역은 해당 위치에서 반경 15m까지라는 것을 알 수 있을 겁니다."
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:188
+msgid ""
+"Let's more accurately delimitate that area to protect. We will create a "
+"buffer around the point locations, using the protection distance."
+msgstr "보호 구역을 더 정확하게 구분해봅시다. 이 포인트 위치 주변에 보호 거리를 사용해서 버퍼를 생성할 것입니다."
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:191
 msgid "Open :menuselection:`Vector --> Geoprocessing Tools --> Buffer`."
 msgstr ""
 "메뉴에서 :menuselection:`Vector --> Geoprocessing Tools --> Buffer` 를 클릭하십시오."
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:192
+msgid "Set :guilabel:`Input layer` to |pointLayer| :guilabel:`squirrel`"
+msgstr ":guilabel:`Input layer` 에 |pointLayer| :guilabel:`squirrel` 을 설정하십시오."
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:305
 msgid "pointLayer"
 msgstr "pointLayer"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:193
+msgid "Set :guilabel:`Distance` to ``15 meters``"
+msgstr ":guilabel:`Distance` 를 ``15 meters`` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:194
+msgid ""
+"Set :guilabel:`Buffered` to "
+":file:`exercise_data\\\\forestry\\\\squirrel_15m.shp`"
+msgstr ""
+":guilabel:`Buffered` 에 :file:`exercise_data\\\\forestry\\\\squirrel_15m.shp`"
+" 를 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:195
+#: ../../docs/training_manual/forestry/updating_stands.rst:228
+msgid "Check |checkbox| :guilabel:`Open output file afer running algorithm`"
+msgstr ""
+"|checkbox| :guilabel:`Open output file afer running algorithm` 옵션을 체크하십시오."
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:196
 #: ../../docs/training_manual/forestry/updating_stands.rst:229
 msgid "Click :guilabel:`Run`"
-msgstr ":guilabel:`Run` 을 클릭하십시오."
+msgstr ":guilabel:`Run` 을 클릭합니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:197
+msgid "Once the process is completed, click :guilabel:`Close`"
+msgstr "처리가 끝나면 :guilabel:`Close` 를 클릭하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:202
+msgid ""
+"If you zoom in to the location in the northern part of the area, you will "
+"notice that the buffer area extends over two neighbouring stands. This means"
+" that whenever a forest operation takes place in that stand, the protected "
+"location should also be taken into account."
+msgstr ""
+"해당 지역의 북쪽을 확대해보면, 버퍼 영역이 주변 수종경계까지 넘어간다는 사실을 알 수 있을 겁니다. 즉 그 주변 수종경계에 대해 삼림 "
+"작업을 할 때마다 보호 구역에 대한 고려를 해야 한다는 의미입니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:212
+msgid ""
+"For the protection of the squirrels locations, you are going to add a new "
+"attribute (column) to your new forest stands that will contain information "
+"about locations that have to be protected. This information will then be "
+"available whenever a forest operation is planned, and the field team will be"
+" able to mark the area that has to be left untouched before the work starts."
+msgstr ""
+"다람쥐 서식지를 보호하기 위해 여러분은 최신 수종경계 레이어에 보호해야 할 포인트의 위치를 담고 있는 새로운 속성(열)을 추가할 "
+"것입니다. 앞으로 언제든 삼림 계획을 세울 때마다 이 정보를 사용할 수 있게 될 것이고, 현장 팀은 작업을 시작하기 전에 건드려서는 안 "
+"되는 지역을 표시할 수 있을 것입니다. "
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:218
+msgid ""
+"To join the information about the squirrels to your forest stands, you can "
+"use the :guilabel:`Join attributes by location` algorithm:"
+msgstr ""
+"수종경계 레이어에 다람쥐 관련 정보를 결합하려면, :guilabel:`Join attributes by location` 알고리즘을 "
+"사용하면 됩니다:"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:221
 msgid ""
 "Open :menuselection:`Vector --> Data Management Tools --> Join attributes by"
 " location`."
 msgstr ""
-"메뉴에서 :menuselection:`Vector --> Data Management Tools --> Join attributes by"
-" location` 을 클릭하십시오."
+":menuselection:`Vector --> Data Management Tools --> Join attributes by "
+"location` 메뉴 항목을 클릭하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:222
+msgid ""
+"Set :guilabel:`Join to features in` to |polygonLayer| "
+":guilabel:`forest_stands_2012`"
+msgstr ""
+":guilabel:`Join to features in` 에 |polygonLayer| "
+":guilabel:`forest_stands_2012` 를 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:223
+msgid ""
+"In :guilabel:`Geometric predicate`, check |checkbox| :guilabel:`intersect`"
+msgstr ""
+":guilabel:`Geometric predicate` 에서 |checkbox| :guilabel:`intersect` 옵션을 "
+"체크하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:224
+msgid ""
+"Set :guilabel:`By comparing to` to |polygonLayer| :guilabel:`squirrel_15m`"
+msgstr ""
+":guilabel:`By comparing to` 에 |polygonLayer| :guilabel:`squirrel_15m` 를 "
+"설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:225
+msgid ""
+"Set :guilabel:`Join type` as :guilabel:`Take attributes of the first "
+"matching feature only (one-to-one)`"
+msgstr ""
+":guilabel:`Join type` 을 :guilabel:`Take attributes of the first matching "
+"feature only (one-to-one)` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:226
+msgid "Leave unchecked :guilabel:`Discard records which could not be joined`"
+msgstr ""
+":guilabel:`Discard records which could not be joined` 옵션을 체크 해제된 상태로 두십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:227
+msgid ""
+"Set :guilabel:`Joined layer` to "
+":file:`exercise_data\\\\forestry\\\\stands_squirrel.shp`"
+msgstr ""
+":guilabel:`Joined layer` 에 "
+":file:`exercise_data\\\\forestry\\\\stands_squirrel.shp` 를 설정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:230
+msgid "Once the process is completed, you can :guilabel:`Close` the dialog."
+msgstr "처리가 끝나면 :guilabel:`Close` 를 클릭해서 대화창을 닫으십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:235
+msgid ""
+"Now you have a new forest stands layer, :file:`stands_squirrel.shp` showing "
+"the protection information for the Siberian flying squirrel."
+msgstr ""
+"이제 시베리아 하늘다람쥐 관련 보호 정보를 보여주는 새로운 :file:`stands_squirrel.shp` 수종경계 레이어를 "
+"만들었습니다."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:238
+msgid "Open the attribute table of the ``stands_squirrel`` layer"
+msgstr "``stands_squirrel`` 레이어의 속성 테이블을 여십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:239
+msgid ""
+"Sort the table by clicking on :guilabel:`point_pr` field in the table "
+"header."
+msgstr "테이블 헤더에 있는 :guilabel:`point_pr` 항목을 클릭해서 테이블을 정렬하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:244
+msgid ""
+"You can see that there are some forest stands that have the information "
+"about the protection locations. The information in the forest stands data "
+"will indicate to the forest manager that there are protection considerations"
+" to be taken into account. Then he or she can get the location from the "
+":guilabel:`squirrel` dataset, and visit the area to mark the corresponding "
+"buffer around the location so that the operators in the field can avoid "
+"disturbing the squirrels environment."
+msgstr ""
+"보호 구역 관련 정보를 가지고 있는 수종경계 몇 개를 볼 수 있습니다. 삼림 관리자가 이 수종경계 데이터에 담긴 정보를 보고 보호 구역을"
+" 고려해야 한다는 사실을 알 수 있을 것입니다. 그러면 그 또는 그녀가 :kbd:`squirrel` 데이터셋에서 해당 위치를 확인하고 "
+"현장을 방문, 대응하는 버퍼를 표시해서 현장 작업자가 다람쥐의 서식 환경을 어지럽히는 일을 피할 수 있게 되겠죠."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:257
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Updating Forest Stands with Distance"
+" to the Stream"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 하천까지의 거리를 사용해서 수종경계 업데이트하기"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:259
+msgid ""
+"Following the same approach as for the protected squirrel locations you can "
+"now update your forest stands with protection information related to the "
+"stream. A few points:"
+msgstr ""
+"다람쥐 보호 구역에서와 동일한 접근 방식으로, 현장에서 식별된 하천 관련 보호 정보를 통해 수종경계를 업데이트할 수 있습니다. 다음 "
+"사항들을 고려해야 합니다:"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:263
+msgid "Remember the buffer is ``20`` meters around the stream"
+msgstr "버퍼가 하천 양쪽으로 ``20`` 미터라는 사실을 기억하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:264
+msgid ""
+"You want to have all the protection information in the same vector file, so "
+"use :file:`stands_squirrel.shp` as the base layer"
+msgstr ""
+"하나의 벡터 파일에 모든 보호 정보를 담는 편이 좋기 때문에, :file:`stands_squirrel.shp` 파일을 기반 레이어로 "
+"사용하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:266
+msgid "Name your output as :file:`forest_stands_2012_protect.shp`"
+msgstr "산출물의 이름을 :file:`forest_stands_2012_protect.shp` 로 지정하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:268
+msgid ""
+"Once the process is completed, open the attribute table of the output layer "
+"and confirm that you have all the protection information for the riparian "
+"forest stands associated with the stream."
+msgstr "처리가 끝나면, 산출 레이어의 속성 테이블을 열어서 하천과 관련된 하안 삼림의 보호 정보를 모두 가지고 있는지 확인하십시오."
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:272
+msgid "When you are happy with the results, save your QGIS project."
+msgstr "결과물이 마음에 든다면 QGIS 프로젝트를 저장하십시오."
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:275
 msgid "In Conclusion"
@@ -191,5 +749,5 @@ msgid ""
 "estimate of forest parameters."
 msgstr ""
 "여러분이 디지타이즈한 수종경계는 향후 삼림 작업 계획을 위해 사용될 것입니다. 그러나 삼림에 대한 더 많은 정보가 필요합니다. 다음 "
-"강의에서는 여러분이 방금 디지털화한 삼림 지역을 목록화하는 데 필요한 표본구 집합과 함께, 삼림 파라미터의 종합 평가를 구하는 방법을 "
-"배울 것입니다."
+"수업에서는 여러분이 방금 디지타이즈한 삼림 지역을 목록화하는 데 필요한 표본구(sampling plot) 집합을 계획하는 방법과, 삼림 "
+"파라미터의 종합 평가를 구하는 방법을 배울 것입니다."
