@@ -80,13 +80,11 @@ Provided information are:
 
 * general such as name in the project, source path, list of auxiliary files,
   last save time and size, the used provider
-* custom properties, used to store additional information about certain objects, such as map layers.
-  These properties are created and managed using PyQGIS, specifically through the `setCustomProperty` method.
-  An example of a useful custom property is :guilabel:`Identify/format`, which influences how the results from using
-  |identify| :ref:`identify features <identify>` tool over a raster layer are formatted. When using the
-  |identify| :ref:`identify features <identify>` tool on different types of layers, such as XYZ or WMS layers,
-  you might notice that the :guilabel:`Identify/format` value differs. This is because each layer can have its
-  own default format for displaying identify results.
+* custom properties, used to store in the active project additional information about the layer.
+  Default custom properties include :guilabel:`Identify/format`, which influences how the results from using
+  the |identify| :ref:`Identify features <raster_identify>` tool over a raster layer are formatted.
+  More properties can be created and managed using PyQGIS, specifically through
+  the :pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` method.
 * based on the provider of the layer: extent, width and height, data type,
   GDAL driver, bands statistics
 * the Coordinate Reference System: name, units, method, accuracy, reference
@@ -1001,8 +999,15 @@ To use the |identify|:guilabel:`Identify features` tool:
 
 The Identify Results panel will open in its default ``Tree`` view
 and display information about the clicked point.
-Below the name of the raster layer, you have on the left the band(s) of the clicked pixel,
-and on the right their respective value.
+Formatting of the results vary depending on the provider of the layer. For example:
+
+* For a local raster layer: below the name of the layer,
+  you have on the left the band(s) of the clicked pixel,
+  and on the right their respective value.
+* For a remote layer such as WMS, a :guilabel:`Format` menu allows you to select
+  whether the information should be displayed as :guilabel:`HTML`, :guilabel:`Feature`
+  or :guilabel:`Text`.
+
 These values can also be rendered (from the :guilabel:`View` menu located at the bottom of the panel) in:
 
 * a ``Table`` view - organizes the information about the identified features
@@ -1014,7 +1019,7 @@ Under the pixel attributes, you will find the :guilabel:`Derived` information,
 such as:
 
 * ``X`` and ``Y`` coordinate values of the point clicked
-* Column and row of the point clicked (pixel)
+* Column and row of the point clicked (pixel) when compatible
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

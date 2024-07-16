@@ -82,7 +82,7 @@ Provided information are:
 
 * general such as name in the project, source path, list of auxiliary files,
   last save time and size, the used provider
-* custom properties, used to store additional information about layers, in the active project.
+* custom properties, used to store in the active project additional information about the layer.
   Default custom properties may include :ref:`layer notes <layer_notes>`,
   :ref:`legend widgets <vectorlegendmenu>`, :ref:`layer variables <general_tools_variables>`,
   :ref:`form properties <vector_attributes_menu>`...
