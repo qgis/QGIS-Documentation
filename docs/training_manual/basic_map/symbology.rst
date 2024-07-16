@@ -751,7 +751,7 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
 
    #. Go to the |mask| :guilabel:`Masks` tab.
 
-      the black line part of lines checkbox from masked symbol layers is already checked from our previous
+      The black line part of lines checkbox from masked symbol layers is already checked from our previous
       configuration.
 
    #. Uncheck the :guilabel:`Label mask` ``polys`` checkbox and check both ``B52`` and ``Jet`` :guilabel:`Mask symbol layer`
