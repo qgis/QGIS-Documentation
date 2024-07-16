@@ -703,65 +703,61 @@ yellow part.
 .. figure:: img/label_masking.png
    :align: center
 
-:abbr:`★★☆ (Moderate level)` Try Yourself:
+:abbr:`★★☆ (Moderate level)` Follow Along: Masking using points symbols
 -------------------------------------------------------------------------------
 
 We want now to mask the black part of lines using only black planes that represent the ``points`` layer.
 For the sake of visibility, you can switch off ``polys`` layer visibility.
 
-.. admonition:: Solution
-   :class: dropdown
+#. Open the :guilabel:`Layer Properties` window for the ``points``
+   layer.
 
+   Under the |symbology| :guilabel:`Symbology` tab, you will see that a |categorized| :guilabel:`Categorized` renderer has
+   been defined with 3 different symbols depending on the ``Class`` field value.
 
-   #. Open the :guilabel:`Layer Properties` window for the ``points``
-      layer.
+#. Double click on ``B52`` plane icon, within the :guilabel:`Symbol` column
 
-      Under the |symbology| :guilabel:`Symbology` tab, you will see that a |categorized| :guilabel:`Categorized` renderer has
-      been defined with 3 different symbols depending on the ``Class`` field value.
-
-   #. Double click on ``B52`` plane icon, within the :guilabel:`Symbol` column
-
-      .. figure:: img/plane_symbology.png
-	 :align: center
-
-   #. Click the |symbologyAdd| :sup:`Add symbol layer` button and select the ``Mask`` :guilabel:`Symbol layer type`
-
-      A new hierarchy ``Mask`` :sup:`symbol layer` > ``Marker`` :sup:`symbol` > ``Simple Marker`` :sup:`symbol layer` appear below the root symbol ``Marker``.
-      
-      Now, let's define a mask that is identical to our plane marker but a little bit bigger.
-
-   #. Select newly created ``Simple Marker`` symbol layer and change its :guilabel:`Symbol layer type` to ``SVG marker``
-   
-   #. Set the SVG file path to be the same as the already existing SVG marker, and the size to be bigger (24 millimeters
-      is a pretty good choice for this use case).
-
-      Mask color doesn't matter here, only the shape is used in masking. Symbol layer order is also irrelevant in that
-      situation.
-
-      You should get something like that:
-   
-      .. figure:: img/point_masking.png
-	 :align: center
-
-   #. Repeat the same operations on ``Jet`` symbol.
-	   
-   #. Click :guilabel:`OK`
-   #. Open the :guilabel:`Layer Properties` window for the ``lines``
-      layer.
-
-   #. Go to the |mask| :guilabel:`Masks` tab.
-
-      The black line part of lines checkbox from masked symbol layers is already checked from our previous
-      configuration.
-
-   #. Uncheck the :guilabel:`Label mask` ``polys`` checkbox and check both ``B52`` and ``Jet`` :guilabel:`Mask symbol layer`
-   
-   #. Click :guilabel:`OK`
-
-   You now see that black planes are masking the black part of lines, with only the yellow part visible.
-
-   .. figure:: img/points_masking.png
+   .. figure:: img/plane_symbology.png
       :align: center
+
+#. Click the |symbologyAdd| :sup:`Add symbol layer` button and select the ``Mask`` :guilabel:`Symbol layer type`
+
+   A new hierarchy ``Mask`` :sup:`symbol layer` > ``Marker`` :sup:`symbol` > ``Simple Marker`` :sup:`symbol layer` appear below the root symbol ``Marker``.
+      
+   Now, let's define a mask that is identical to our plane marker but a little bit bigger.
+
+#. Select newly created ``Simple Marker`` symbol layer and change its :guilabel:`Symbol layer type` to ``SVG marker``
+   
+#. Set the SVG file path to be the same as the already existing SVG marker, and the size to be bigger (24 millimeters
+   is a pretty good choice for this use case).
+
+   Mask color doesn't matter here, only the shape is used in masking. Symbol layer order is also irrelevant in that
+   situation.
+
+   You should get something like that:
+   
+   .. figure:: img/point_masking.png
+      :align: center
+
+#. Repeat the same operations on ``Jet`` symbol.
+	   
+#. Click :guilabel:`OK`
+#. Open the :guilabel:`Layer Properties` window for the ``lines``
+   layer.
+
+#. Go to the |mask| :guilabel:`Masks` tab.
+
+   The black line part of lines checkbox from masked symbol layers is already checked from our previous
+   configuration.
+
+#. Uncheck the :guilabel:`Label mask` ``polys`` checkbox and check both ``B52`` and ``Jet`` :guilabel:`Mask symbol layer`
+   
+#. Click :guilabel:`OK`
+
+You now see that black planes are masking the black part of lines, with only the yellow part visible.
+
+.. figure:: img/points_masking.png
+   :align: center
 
 
 In Conclusion
