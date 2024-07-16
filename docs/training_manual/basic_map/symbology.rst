@@ -659,7 +659,7 @@ canvas or set in the layer properties a bigger :guilabel:`Texture width`.
 :abbr:`★★☆ (Moderate level)` Follow Along: Masking
 -------------------------------------------------------------------------------
 
-Masking feature allows you to mask some symbol layer using an other symbol layer or label.
+Masking feature allows you to mask some symbol layer using another symbol layer or label.
 
 In the following exercise, we want to configure renderering so polygon labels will mask the black part
 of lines layer.
