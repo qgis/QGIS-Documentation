@@ -763,12 +763,12 @@ set whether the layer redraw should be:
   time is within a :guilabel:`Start date` and :guilabel:`End date` range
 * :guilabel:`Fixed Time Range Per Band`: only shows a band when the current animation time
   is between its :guilabel:`Begin` and :guilabel:`End` date range. This option allows
-  you to either manually set these time ranges for each band or use |expression| :guilabel:`Expression`
+  you to either manually set these time ranges for each band or use the |expression| button
   to automatically generate datetime values, enabling detailed temporal analysis and visualization.
   This mode is particularly useful for working with raster layers where each band corresponds to a specific time
   period, such as NetCDF files.
 
-.. only:: html
+  .. only:: html
 
    .. figure:: img/temporal_time_range_per_band.gif
       :align: center
@@ -781,12 +781,12 @@ set whether the layer redraw should be:
   render context will be hidden, ensuring that only temporally relevant data is displayed.
   This mode is effective for:
 
-   * Analyzing land use changes, like observing deforestation patterns.
-   * Studying flooding by comparing water coverage across different times.
-   * Evaluating movement costs in terrain analysis, for example,
-     using GRASS GIS's r.walk tool to calculate travel costs across a landscape.
+  * Analyzing land use changes, like observing deforestation patterns.
+  * Studying flooding by comparing water coverage across different times.
+  * Evaluating movement costs in terrain analysis, for example,
+    using GRASS GIS's r.walk tool to calculate travel costs across a landscape.
 
-.. only:: html
+  .. only:: html
 
    .. figure:: img/temporal_pixel_value.gif
       :align: center
