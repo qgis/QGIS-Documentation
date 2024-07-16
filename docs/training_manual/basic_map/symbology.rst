@@ -692,7 +692,7 @@ of lines layer.
 
 #. Click on ``polys`` :guilabel:`Label mask` checkbox
 
-   The message disappear, you can now safely save your configuration.
+   The message disappears, you can now safely save your configuration.
 
 #. Click :guilabel:`OK`
 
