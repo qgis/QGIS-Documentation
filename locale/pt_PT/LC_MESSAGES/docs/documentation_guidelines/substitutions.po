@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
+# Alexandre Neto <senhor.neto@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: Alexandre Neto <senhor.neto@gmail.com>, 2024\n"
 "Language-Team: Portuguese (Portugal) (https://app.transifex.com/qgis/teams/6144/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,17 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 "Language: pt_PT\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"A tradução é um esforço comunitário `você pode contribuir  "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Esta página está atualmente traduzida em |translation "
+"progress|."
 
 #: ../../docs/documentation_guidelines/substitutions.rst:5
 msgid "Substitutions"
@@ -32,9 +44,74 @@ msgstr "Substituições"
 msgid "Usage"
 msgstr "Utilização"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:13
+msgid ""
+"To ease the use of icons in QGIS manuals, replacements are defined for each "
+"icon in :file:`/source/substitutions.txt` file at `QGIS-Documentation "
+"repository <https://github.com/qgis/QGIS-Documentation>`_ and some of these "
+"substitutions are listed below. Thus, when you want to use an icon from QGIS"
+" application in the documentation there is a big chance that there is "
+"already a substitution that can/should be used."
+msgstr ""
+"Para facilitar o uso de ícones nos manuais do QGIS, foram definidas "
+"substituições para cada ícone no ficheiro :file:`/source/substitutions.txt` "
+"no` repositório de documentação do QGIS <https://github.com/qgis/QGIS-"
+"Documentation>`_ e algumas dessas substituições estão listadas abaixo. "
+"Portanto, quando desejar usar um ícone da aplicação QGIS na documentação, há"
+" uma grande probabilidade de que já exista uma substituição que possa/deva "
+"ser usada. "
+
 #: ../../docs/documentation_guidelines/substitutions.rst:20
 msgid "If no replacement exists:"
 msgstr "Se não existir substituição:"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:22
+msgid ""
+"check the documentation repository whether the icon is available in "
+":file:`/static/common` folder. If no image, then you need to find and copy "
+"the icon image file from `QGIS repository <https://github.com/qgis/QGIS>`_ "
+"(often under :source:`default themes <images/themes/default>` folder) and "
+"paste (in ``.png`` format) under :file:`/static/common` folder. For "
+"convenience and update, it's advised to keep filename when possible."
+msgstr ""
+"verifique no repositório de documentação se o ícone está disponível na pasta"
+" :file:`/static/common`. Se não existir imagem, será necessário encontrar e "
+"copiar o ficheiro da imagem do ícone do `repositório QGIS "
+"<https://github.com/qgis/QGIS>`_ (geralmente em "
+":source:`images/themes/default``) e colar (no formato ``.png``) na pasta "
+":file:`/static/common`. Por conveniência e atualização, é recomendável "
+"manter o nome do ficheiro sempre que possível. "
+
+#: ../../docs/documentation_guidelines/substitutions.rst:28
+msgid ""
+"create the reference to the substitution in the :file:`/substitutions.txt` "
+"file following the example below. The replacement text should be derived "
+"from file name and in camelCase:"
+msgstr ""
+"crie a referência para a substituição no ficheiro "
+":file:`/source/substitutions.txt` seguindo o exemplo abaixo. O texto de "
+"substituição deve estar em camelCase:"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:39
+msgid "Update the target section(s) of the docs, using your new substitution."
+msgstr ""
+"Actualize a(s) secção(ões) relevantes dos documentos, usando a nova "
+"substituição."
+
+#: ../../docs/documentation_guidelines/substitutions.rst:40
+msgid ""
+"(optional but highly desirable) add the substitution to the list below."
+msgstr ""
+"(opcional mas muito desejável) adicione a substituição na lista abaixo. "
+
+#: ../../docs/documentation_guidelines/substitutions.rst:41
+msgid ""
+"Add the new substitution reference in the substitutions list at the end of "
+"the file(s) it is used in, or run the convenient "
+":file:`scripts/find_set_subst.py` script."
+msgstr ""
+"Adicione a referência à substituição na lista de substituições no final "
+"do(s) ficheiro(s), ou execute o script file:`scripts/find_set_subst.py`."
 
 #: ../../docs/documentation_guidelines/substitutions.rst:50
 msgid "Common Substitutions"
@@ -2267,6 +2344,10 @@ msgstr "snappingSelf"
 msgid "``|snappingSelf|``"
 msgstr "``|snappingSelf|``"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:214
+msgid "Mesh"
+msgstr "Mesh"
+
 #: ../../docs/documentation_guidelines/substitutions.rst:219
 msgid "|meshDigitizing|"
 msgstr "|meshDigitizing|"
@@ -2734,6 +2815,10 @@ msgstr "newElevationProfile"
 msgid "``|newElevationProfile|``"
 msgstr "``|newElevationProfile|``"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:252
+msgid "Selection and Expressions"
+msgstr "Seleção e Expressões"
+
 #: ../../docs/documentation_guidelines/substitutions.rst:257
 msgid "|selectRectangle|"
 msgstr "|selectRectangle|"
@@ -3029,6 +3114,10 @@ msgstr "filterMap"
 #: ../../docs/documentation_guidelines/substitutions.rst:270
 msgid "``|filterMap|``"
 msgstr "``|filterMap|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:275
+msgid "Labels and Diagrams"
+msgstr "Etiquetas e Diagramas"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:280
 #: ../../docs/documentation_guidelines/substitutions.rst:454
@@ -3629,6 +3718,10 @@ msgstr "contextHelp"
 #: ../../docs/documentation_guidelines/substitutions.rst:321
 msgid "``|contextHelp|``"
 msgstr "``|contextHelp|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:325
+msgid "Colors"
+msgstr "Cores"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:330
 msgid "|colorBox|"
@@ -4493,6 +4586,10 @@ msgstr "fullHistogramStretch"
 #: ../../docs/documentation_guidelines/substitutions.rst:401
 msgid "``|fullHistogramStretch|``"
 msgstr "``|fullHistogramStretch|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:406
+msgid "Print Layout"
+msgstr "Layout de impressão"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:411
 msgid "|newLayout|"
@@ -6897,6 +6994,10 @@ msgstr "terminal"
 #: ../../docs/documentation_guidelines/substitutions.rst:537
 msgid "``|terminal|``"
 msgstr "``|terminal|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:541
+msgid "Various Core Plugins"
+msgstr "Vários Plugins Core"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:543
 msgid ""
