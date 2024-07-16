@@ -716,8 +716,8 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
    #. Open the :guilabel:`Layer Properties` window for the ``points``
       layer.
 
-      Under the |symbology| :guilabel:`Symbology` tab, you will see that a |categorized| :guilabel:`Categorized` renderer have
-      been defined with 3 different symbol depending on the ``Class`` field value.
+      Under the |symbology| :guilabel:`Symbology` tab, you will see that a |categorized| :guilabel:`Categorized` renderer has
+      been defined with 3 different symbols depending on the ``Class`` field value.
 
    #. Double click on ``B52`` plane icon, within the :guilabel:`Symbol` column
 
