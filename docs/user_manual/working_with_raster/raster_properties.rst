@@ -761,6 +761,39 @@ set whether the layer redraw should be:
 
 * :guilabel:`Fixed time range`: only show the raster layer if the animation
   time is within a :guilabel:`Start date` and :guilabel:`End date` range
+* :guilabel:`Fixed Time Range Per Band`: only shows a band when the current animation time
+  is between its :guilabel:`Begin` and :guilabel:`End` date range. This option allows
+  you to either manually set these time ranges for each band or use the |expression| button
+  to automatically generate datetime values, enabling detailed temporal analysis and visualization.
+  This mode is particularly useful for working with raster layers where each band corresponds to a specific time
+  period, such as NetCDF files.
+
+  .. only:: html
+
+   .. figure:: img/temporal_time_range_per_band.gif
+      :align: center
+      :width: 100%
+
+      Example of using the Fixed Time Range Per Band mode
+
+* :guilabel:`Represents Temporal Values`: interprets each pixel in the raster layer as a datetime value.
+  When this temporal mode is active, pixels that do not fall within the temporal range specified in the
+  render context will be hidden, ensuring that only temporally relevant data is displayed.
+  This mode is effective for:
+
+  * Analyzing land use changes, like observing deforestation patterns.
+  * Studying flooding by comparing water coverage across different times.
+  * Evaluating movement costs in terrain analysis, for example,
+    using GRASS GIS's r.walk tool to calculate travel costs across a landscape.
+
+  .. only:: html
+
+   .. figure:: img/temporal_pixel_value.gif
+      :align: center
+      :width: 100%
+
+      Application of the Represents Temporal Values mode - analyzing GLAD deforestation alerts
+
 * :guilabel:`Redraw layer only`: the layer is redrawn at each new animation
   frame. It's useful when the layer uses time-based expression values for
   renderer settings (e.g. data-defined renderer opacity, to fade in/out
@@ -1035,6 +1068,8 @@ such as:
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
