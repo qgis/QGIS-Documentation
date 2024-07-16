@@ -676,8 +676,8 @@ of lines layer.
    
 #. Enable label mask by checking the |unchecked| :guilabel:`Enable mask` option
 
-   .. note:: A message tells you that the now defined label mask shape can be later selected as a mask source to
-	     mask other symbol layers.
+   A message tells you that the now defined label mask shape can be later selected as a mask source to
+   mask other symbol layers. Let's do that.
 
 #. Click :guilabel:`OK`
 #. Open the :guilabel:`Layer Properties` window for the ``lines``
