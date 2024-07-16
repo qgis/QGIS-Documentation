@@ -661,7 +661,7 @@ canvas or set in the layer properties a bigger :guilabel:`Texture width`.
 
 Masking feature allows you to mask some symbol layer using another symbol layer or label.
 
-In the following exercise, we want to configure renderering so polygon labels will mask the black part
+In the following exercise, we want to configure rendering so that polygon labels will mask the black part
 of lines layer.
 
 #. Load the :file:`selective_masking.qgs` from dataset in directory :file:`exercise_data/masking`.
