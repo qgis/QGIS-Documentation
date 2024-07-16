@@ -669,10 +669,10 @@ of lines layer.
 #. Open the :guilabel:`Layer Properties` window for the ``polys``
    layer.
 
-   Under the |labels| :guilabel:`Labels` tab, you will see that |labels| :guilabel:`Single Labels` have
+   Under the |labelingSingle| :guilabel:`Labels` tab, you will see that |labelingSingle| :guilabel:`Single Labels` have
    already been defined.
 
-#. From the :guilabel:`Labels` tab, select the |mask| :guilabel:`Mask` (and not :guilabel:`Masks` in general category list)
+#. From the :guilabel:`Labels` tab, select the |labelmask| :guilabel:`Mask` (and not :guilabel:`Masks` in general category list)
    
 #. Enable label mask by checking the |unchecked| :guilabel:`Enable mask` option
 
@@ -683,7 +683,7 @@ of lines layer.
 #. Open the :guilabel:`Layer Properties` window for the ``lines``
    layer.
 
-#. Go to the |mask| :guilabel:`Masks` tab
+#. Go to the |labelmask| :guilabel:`Masks` tab
 
 #. Click on the black line part of lines checkbox from masked symbol layers
 
@@ -712,7 +712,7 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
 #. Open the :guilabel:`Layer Properties` window for the ``points``
    layer.
 
-   Under the |symbology| :guilabel:`Symbology` tab, you will see that a |categorized| :guilabel:`Categorized` renderer has
+   Under the |symbology| :guilabel:`Symbology` tab, you will see that a |categorizedSymbol| :guilabel:`Categorized` renderer has
    been defined with 3 different symbols depending on the ``Class`` field value.
 
 #. Double click on ``B52`` plane icon, within the :guilabel:`Symbol` column
@@ -745,7 +745,7 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
 #. Open the :guilabel:`Layer Properties` window for the ``lines``
    layer.
 
-#. Go to the |mask| :guilabel:`Masks` tab.
+#. Go to the |labelmask| :guilabel:`Masks` tab.
 
    The black line part of lines checkbox from masked symbol layers is already checked from our previous
    configuration.
@@ -794,15 +794,15 @@ map.
 
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
-.. |categorized| image:: /static/common/rendererCategorizedSymbol.png
-   :width: 1.3em
+.. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |labels| image:: /static/common/labelingSingle.png
-   :width: 1.3em
+.. |labelingSingle| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
+   :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |mask| image:: /static/common/labelmask.png
-   :width: 1.3em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
