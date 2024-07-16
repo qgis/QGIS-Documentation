@@ -687,8 +687,8 @@ of lines layer.
 
 #. Click on the black line part of lines checkbox from masked symbol layers
 
-   .. note::  A message warns you that you have to select both sources and symbol layers to be able to save
-	      masking configuration
+   A message warns you that you have to select both masking and masked symbol layers to be able to save
+   masking configuration. Again, let's do that.
 
 #. Click on ``polys`` :guilabel:`Label mask` checkbox
 
