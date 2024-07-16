@@ -707,7 +707,7 @@ yellow part.
 -------------------------------------------------------------------------------
 
 We want now to mask the black part of lines using black only planes that represent the ``points`` layer.
-For the sake of visibility, you can switch off ``polys`` visibility.
+For the sake of visibility, you can switch off ``polys`` layer visibility.
 
 .. admonition:: Solution
    :class: dropdown
