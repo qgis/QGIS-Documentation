@@ -706,7 +706,7 @@ yellow part.
 :abbr:`★★☆ (Moderate level)` Try Yourself:
 -------------------------------------------------------------------------------
 
-We want now to mask the black part of lines using black only planes that represent the ``points`` layer.
+We want now to mask the black part of lines using only black planes that represent the ``points`` layer.
 For the sake of visibility, you can switch off ``polys`` layer visibility.
 
 .. admonition:: Solution
