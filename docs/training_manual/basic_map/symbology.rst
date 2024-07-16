@@ -749,7 +749,7 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
    #. Open the :guilabel:`Layer Properties` window for the ``lines``
       layer.
 
-   #. Go to the |mask| :guilabel:`Masks` tab
+   #. Go to the |mask| :guilabel:`Masks` tab.
 
       the black line part of lines checkbox from masked symbol layers is already checked from our previous
       configuration.
