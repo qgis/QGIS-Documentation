@@ -726,7 +726,7 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
       
    Now, let's define a mask that is identical to our plane marker but a little bit bigger.
 
-#. Select newly created ``Simple Marker`` symbol layer and change its :guilabel:`Symbol layer type` to ``SVG marker``
+#. Select the newly created ``Simple Marker`` symbol layer and change its :guilabel:`Symbol layer type` to ``SVG marker``
    
 #. Set the SVG file path to be the same as the already existing SVG marker, and the size to be bigger (24 millimeters
    is a pretty good choice for this use case).
