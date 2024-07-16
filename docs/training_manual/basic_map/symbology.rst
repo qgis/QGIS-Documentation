@@ -697,7 +697,7 @@ of lines layer.
 #. Click :guilabel:`OK`
 
 
-At the right zoom level you can see that labels are masking the black part of lines, remaining only the
+You can see now that labels are masking the black part of lines, leaving only the
 yellow part.
    
 .. figure:: img/label_masking.png
@@ -740,7 +740,7 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
 
       You should get something like that:
    
-      .. figure:: img/plane_symbology.png
+      .. figure:: img/point_masking.png
 	 :align: center
 
    #. Repeat the same operations on ``Jet`` symbol.
@@ -813,6 +813,8 @@ map.
    :width: 2em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png
