@@ -694,6 +694,9 @@ of lines layer.
 
    The message disappears, you can now safely save your configuration.
 
+   .. figure:: img/mask_selection.png
+      :align: center
+   
 #. Click :guilabel:`OK`
 
 
