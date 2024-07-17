@@ -709,7 +709,7 @@ yellow part.
 :abbr:`★★☆ (Moderate level)` Follow Along: Masking using points symbols
 -------------------------------------------------------------------------------
 
-We want now to mask the black part of lines using only black planes that represent the ``points`` layer.
+We want now to mask the black part of lines using only black planes that represent the ``points`` layer (i.e. ``B52`` and ``Jet`` points categories).
 For the sake of visibility, you can switch off ``polys`` layer visibility.
 
 #. Open the :guilabel:`Layer Properties` window for the ``points``
