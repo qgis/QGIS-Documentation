@@ -725,8 +725,11 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
 
 #. Click the |symbologyAdd| :sup:`Add symbol layer` button and select the ``Mask`` :guilabel:`Symbol layer type`
 
-   A new hierarchy ``Mask`` :sup:`symbol layer` > ``Marker`` :sup:`symbol` > ``Simple Marker`` :sup:`symbol layer` appear below the root symbol ``Marker``.
-      
+   A new hierarchy ``Mask`` (`symbol layer`) > ``Marker`` (`symbol`) > ``Simple Marker`` (`symbol layer`) appear below the root symbol ``Marker``.
+
+   .. figure:: img/mask_hierarchy.png
+      :align: center
+   
    Now, let's define a mask that is identical to our plane marker but a little bit bigger.
 
 #. Select the newly created ``Simple Marker`` symbol layer and change its :guilabel:`Symbol layer type` to ``SVG marker``
