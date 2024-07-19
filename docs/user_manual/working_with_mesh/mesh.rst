@@ -165,6 +165,9 @@ Provided information are:
 
 * general such as  name in the project, source path, list of auxiliary files,
   last save time and size, the used provider
+* custom properties, used to store in the active project additional information about the layer.
+  More properties can be created and managed using PyQGIS, specifically through
+  the :pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` method.
 * based on the provider of the layer: extent, vertex, face, edges
   and/or dataset groups count
 * the Coordinate Reference System: name, units, method, accuracy, reference
@@ -172,6 +175,7 @@ Provided information are:
 * extracted from filled :ref:`metadata <meshmetadata>`: access, extents,
   links, contacts, history...
 
+.. Change screenshot to show Custom properties
 
 .. _meshsource:
 
