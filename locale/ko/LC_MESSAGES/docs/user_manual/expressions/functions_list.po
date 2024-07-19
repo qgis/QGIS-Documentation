@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Transifex Bot <>, 2024
-# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # Harrissou Sant-anna, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-29 19:47+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -7248,6 +7248,18 @@ msgstr ""
 "186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 "
 "28, 22 64, 30 112))'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid "Concave hulls with increasing target_percent parameter"
+msgstr "target_percent 파라미터가 증가하는 오목 껍질"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:340
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_convex_hull`, "
+":ref:`qgisconcavehull` algorithm"
+msgstr ""
+"더 읽어볼 거리: :ref:`expression_function_GeometryGroup_convex_hull`, "
+":ref:`qgisconcavehull` 알고리즘"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "contains"
 msgstr "contains"
@@ -7308,6 +7320,10 @@ msgid ""
 msgstr ""
 "``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) "
 ")`` → 'POLYGON((3 3, 4 10, 4 4, 3 3))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid "Black lines identify the convex hull for each feature"
+msgstr "각 피처의 볼록 껍질을 표현하는 검은 선"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:353
 msgid ""
@@ -7559,6 +7575,18 @@ msgstr ""
 "``geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → "
 "'Point (0 2)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
+msgid "End point of a line feature"
+msgstr "라인 피처의 종단 포인트"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:390
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_start_point`, "
+":ref:`qgisextractspecificvertices` algorithm"
+msgstr ""
+"더 읽어볼 거리: :ref:`expression_function_GeometryGroup_start_point`, "
+":ref:`qgisextractspecificvertices` 알고리즘"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "exif_geotag"
 msgstr "exif_geotag"
@@ -7661,6 +7689,10 @@ msgstr ""
 " -1),( 0.1 0.1, 0.1 0.2, 0.2 0.2, 0.2, 0.1, 0.1 0.1))')))`` → 'LineString "
 "(-1 -1, 4 0, 4 2, 0 2, -1 -1)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid "The dashed line represents the exterior ring of the polygon"
+msgstr "폴리곤의 외곽 고리를 표현하는 파선(dashed line)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "extrude"
 msgstr "extrude"
@@ -7704,6 +7736,11 @@ msgstr ""
 "``geom_to_wkt(extrude(geom_from_wkt('MultiLineString((1 2, 3 2), (4 3, 8 "
 "3))'), 1, 2))`` → 'MultiPolygon (((1 2, 3 2, 4 4, 2 4, 1 2)),((4 3, 8 3, 9 "
 "5, 5 5, 4 3)))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
+msgid ""
+"Generating a polygon by extruding a line with offset in x and y directions"
+msgstr "라인을 X 및 Y 방향 오프셋으로 압출해서 폴리곤 생성하기"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
 msgid "flip_coordinates"
@@ -9522,6 +9559,10 @@ msgstr ""
 "``geom_to_wkt( minimal_circle( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ),"
 " 4 ) )`` → 'Polygon ((3 4, 3 2, 1 2, 1 4, 3 4))'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid "Minimal enclosing circle of each feature"
+msgstr "각 피처의 최소 외함 원"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:488
 msgid "Further reading: :ref:`qgisminimumenclosingcircle` algorithm"
 msgstr "더 읽어볼 거리: :ref:`qgisminimumenclosingcircle` 알고리즘"
@@ -9564,6 +9605,10 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(nodes_to_points(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, "
 "-1 -1))'),true))`` → 'MultiPoint ((-1 -1),(4 0),(4 2),(0 2))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid "Multi-point feature extracted from vertices"
+msgstr "꼭짓점들로부터 추출한 멀티포인트 피처"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:494
 msgid "Further reading: :ref:`qgisextractvertices` algorithm"
@@ -11296,6 +11341,11 @@ msgstr ""
 "``geom_to_wkt(simplify(geometry:=geom_from_wkt('LineString(0 0, 5 0.1, 10 "
 "0)'),tolerance:=5))`` → 'LineString(0 0, 10 0)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
+msgid ""
+"From left to right, source layer and increasing simplification tolerances"
+msgstr "왼쪽에서 오른쪽으로: 소스 레이어와 증가하는 단순화 허용 오차"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:616
 #: ../../docs/user_manual/expressions/functions_list.rst:622
 msgid "Further reading: :ref:`qgissimplifygeometries` algorithm"
@@ -11540,6 +11590,10 @@ msgstr ""
 "``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → 라인스트링을 따라 "
 "파장이 3이고 진폭이 1인 정사각 파형을 생성"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid "Symbolizing features with square waves"
+msgstr "피처에 정사각 파형 심볼 적용하기"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
 msgid "square_wave_randomized"
 msgstr "square_wave_randomized"
@@ -11596,6 +11650,10 @@ msgstr ""
 "``square_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, "
 "0.2)`` → 라인스트링을 따라 파장이 2에서 3 사이이고 진폭이 0.1에서 0.2 사이의 임의 크기의 정사각 파형을 생성"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
+msgid "Symbolizing features with square randomized waves"
+msgstr "피처에 임의의 정사각 파형 심볼 적용하기"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
 msgid "start_point"
 msgstr "start_point"
@@ -11615,6 +11673,18 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(start_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → "
 "'Point (4 0)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:86
+msgid "Starting point of a line feature"
+msgstr "라인 피처의 시작 포인트"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:640
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_end_point`, "
+":ref:`qgisextractspecificvertices` algorithm"
+msgstr ""
+"더 읽어볼 거리: :ref:`expression_function_GeometryGroup_end_point`, "
+":ref:`qgisextractspecificvertices` 알고리즘"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "straight_distance_2d"
@@ -11867,6 +11937,10 @@ msgstr ""
 "``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → 라인스트링을 "
 "따라 파장이 3이고 진폭이 1인 삼각 파형을 생성"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid "Symbolizing features with triangular waves"
+msgstr "피처에 삼각 파형 심볼 적용하기"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
 msgid "triangular_wave_randomized"
 msgstr "triangular_wave_randomized"
@@ -11892,6 +11966,10 @@ msgid ""
 msgstr ""
 "``triangular_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, "
 "0.1, 0.2)`` → 라인스트링을 따라 파장이 2에서 3 사이이고 진폭이 0.1에서 0.2 사이의 임의 크기의 삼각 파형을 생성"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
+msgid "Symbolizing features with triangular randomized waves"
+msgstr "피처에 임의의 삼각 파형 심볼 적용하기"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
 msgid "union"
@@ -11954,6 +12032,10 @@ msgstr ""
 "``wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → 라인스트링을 따라 파장이 3이고 "
 "진폭이 1인 사인 곡선 같은 파형을 생성"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:112
+msgid "Symbolizing features with waves"
+msgstr "피처에 둥근 파형 심볼 적용하기"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:119
 msgid "wave_randomized"
 msgstr "wave_randomized"
@@ -11980,6 +12062,10 @@ msgid ""
 msgstr ""
 "``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` "
 "→ 라인스트링을 따라 파장이 2에서 3 사이이고 진폭이 0.1에서 0.2 사이의 임의 크기의 만곡 파형을 생성"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:144
+msgid "Symbolizing features with randomized waves"
+msgstr "피처에 임의의 둥근 파형 심볼 적용하기"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:151
 msgid "wedge_buffer"
@@ -12027,6 +12113,10 @@ msgstr ""
 "``wedge_buffer(center:=geom_from_wkt('POINT(1 "
 "2)'),azimuth:=90,width:=180,outer_radius:=1)`` → 포인트 (1,2)를 중심으로 동쪽을 향한 너비 "
 "180도, 외부 반경 1인 쐐기 모양 버퍼"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:175
+msgid "Wedge buffering features"
+msgstr "쐐기형 버퍼를 적용한 피처들"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:683
 msgid "Further reading: :ref:`qgiswedgebuffers` algorithm"
