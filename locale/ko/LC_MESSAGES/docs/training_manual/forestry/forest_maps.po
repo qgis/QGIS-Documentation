@@ -33,7 +33,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:2
+msgid "Lesson: Creating Detailed Maps with the Atlas Tool"
+msgstr "수업: 지도책 도구로 상세 지도 생성하기"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:4
 msgid ""
@@ -46,17 +50,22 @@ msgid ""
 "You can use the Atlas tool to automatically generate a number of maps with a"
 " common format."
 msgstr ""
-"체계적인 표본 조사구 설계를 완료했고 현장 팀도 내비게이션 기기에 GPS 좌표를 입력했습니다. 또한 표본 조사구에서 산정된 정보를 "
+"체계적인 표본 조사구 설계를 완료했고 현장 팀도 내비게이션 장치에 GPS 좌표를 입력했습니다. 또한 표본 조사구에서 산정된 정보를 "
 "수집하는 데 쓰일 현장 조사 양식도 준비됐습니다. 그런데 현장 팀이 보다 쉽게 표본 조사구를 찾을 수 있도록 해당 지역에 대한 대략적인 "
-"정보와 함께 몇몇 표본 조사구를 기준으로 지상에 대한 정보를 확실히 알아볼 수 있는 상세지도 여러 장을 요청했습니다. 여러분은 "
-"지도책(atlas) 도구를 이용해서 양식이 공통된 지도 여러 장을 자동적으로 생성할 수 있습니다."
+"정보와 함께 몇몇 표본 조사구를 기준으로 지상에 대한 정보를 확실히 알아볼 수 있는 상세 지도 여러 장을 요청했습니다. 여러분은 "
+"지도책(atlas) 도구를 이용해서 공통 양식을 가진 지도 여러 장을 자동적으로 생성할 수 있습니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:12
 msgid ""
 "**The goal for this lesson:** Learn to use the Atlas tool in QGIS to "
 "generate detailed printable maps to assist in the field inventory work."
 msgstr ""
-"**이 강의의 목표:** QGIS에서 지도책 도구를 사용하여 현장 목록화 작업에 도움이 될, 인쇄할 수 있는 상세한 맵을 생성하기."
+"**이 수업의 목표:** 현장에서 현황 정보 수집 작업에 도움이 될, 인쇄할 수 있는 상세한 맵을 QGIS 지도책 도구를 사용해서 "
+"생성하기."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:16
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Preparing the Print Layout"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 인쇄 조판 준비하기"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:18
 msgid ""
@@ -66,8 +75,22 @@ msgid ""
 "styled but, as you have seen before, you will also need to add lots of other"
 " elements that complete the printed map."
 msgstr ""
-"삼림 지역 및 표본 조사구의 상세한 맵을 자동생산하기 전에, 현장 조사에 도움이 될 모든 요소들을 갖춘 지도 템플릿을 만들어야 합니다. "
-"물론 적절한 스타일을 적용하는 일이 가장 중요하지만, 이전에 경험했듯이, 인쇄 지도를 완성하기 위해서는 다른 요소들도 많이 필요합니다."
+"삼림 지역 및 표본 조사구의 상세한 맵을 자동 생산하기 전에, 현장 조사에 도움이 될 모든 요소들을 갖춘 맵 템플릿을 만들어야 합니다. "
+"물론 알맞은 스타일을 적용하는 일이 가장 중요하지만, 이전에 경험했듯이 인쇄 지도를 완성하기 위해서는 다른 요소들도 많이 필요합니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:24
+msgid ""
+"Open the QGIS project from the previous lesson :file:`forest_inventory.qgs`."
+" You should have at least the following layers:"
+msgstr ""
+"이전 수업에서 만들었던 :file:`forest_inventory.qgs` QGIS 프로젝트를 여십시오. 적어도 다음 레이어들이 들어 "
+"있을 것입니다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:27
+msgid ""
+":guilabel:`forest_stands_2012` (with a 50% transparency, green fill and "
+"darker green border lines)"
+msgstr ":guilabel:`forest_stands_2012` (투명도 50%, 녹색 채우기, 어두운 녹색 경계선)"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:29
 msgid ":guilabel:`systematic_plots_clip`"
@@ -77,25 +100,100 @@ msgstr ":guilabel:`systematic_plots_clip`"
 msgid ":guilabel:`rautjarvi_aerial`"
 msgstr ":guilabel:`rautjarvi_aerial`"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:32
+msgid "Save the project with a new name, :file:`map_creation.qgs`."
+msgstr "프로젝트를 :file:`map_creation.qgs` 라는 이름으로 새로 저장하십시오."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:34
 msgid ""
 "To create a printable map, remember that you use the :guilabel:`Layout "
 "Manager`:"
 msgstr "인쇄할 수 있는 맵을 생성하려면 :guilabel:`Layout Manager` 도구를 사용하면 됩니다."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:36
+msgid ""
+"Open :menuselection:`Project -->` |layoutManager| :guilabel:`Layout "
+"Manager...`."
+msgstr ""
+":menuselection:`Project -->` |layoutManager| :guilabel:`Layout Manager...` "
+"메뉴를 클릭하십시오."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:488
 msgid "layoutManager"
 msgstr "layoutManager"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:37
+msgid "In the :guilabel:`Layout manager` dialog:"
+msgstr ":guilabel:`Layout manager` 대화 창에서:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:39
+msgid ""
+"Under :guilabel:`New from template`, press the :guilabel:`Create...` button "
+"next to the :guilabel:`Empty layout` entry"
+msgstr ""
+":guilabel:`New from template` 아래 있는 :guilabel:`Empty layout` 항목 옆에 있는 "
+":guilabel:`Create...` 버튼을 누르십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:41
+msgid "Name your print layout ``forest_map``."
+msgstr "인쇄 조판의 이름을 ``forest_map`` 으로 지정하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:42
+msgid ""
+"Press :guilabel:`OK`. A new print layout is created and opened, showing a "
+"blank paper."
+msgstr ":guilabel:`OK` 를 누르십시오. 새 인쇄 조판이 생성되어 비어 있는 용지가 열립니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:44
+msgid "In the print Layout window, ensure properties are set for an A4 paper:"
+msgstr "인쇄 조판 팡에서 속성이 A4 용지로 설정되어 있는지 확인하십시오:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:46
+msgid ""
+"Right-click over the paper and select :guilabel:`Page properties`. The "
+":guilabel:`Page properties` panel is open on the right side of the layout."
+msgstr ""
+"용지를 오른쪽 클릭하고 :guilabel:`Page properties` 를 선택하십시오. 조판 오른쪽에 :guilabel:`Page "
+"properties` 패널이 열립니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:48
+msgid "Check :guilabel:`Size` is :guilabel:`A4`."
+msgstr ":guilabel:`Size` 가 :guilabel:`A4` 인지 확인하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:49
+msgid "Check :guilabel:`Orientation` is :guilabel:`Landscape`."
+msgstr ":guilabel:`Orientation` 이 :guilabel:`Landscape` 인지 확인하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:50
+msgid ""
+"Enable the :guilabel:`Layout` tab next to the :guilabel:`Page properties` "
+"panel and set :guilabel:`Export resolution` to ``300 dpi``."
+msgstr ""
+":guilabel:`Page properties` 패널 옆에 있는 :guilabel:`Layout` 탭을 활성화하고 "
+":guilabel:`Export resolution` 을 ``300 dpi`` 로 설정하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:53
 msgid ""
 "Composing a map is easier if you make use of the canvas grid to position the"
 " different elements. Review the settings for the layout grid:"
-msgstr "서로 다른 요소들을 배치하는 데 캔버스 그리드를 사용하면 맵 작성 작업이 더 쉬워집니다. 조판기 그리드 설정을 살펴봅시다."
+msgstr "서로 다른 요소들을 배치하는 데 캔버스 그리드를 사용하면 맵 작성 작업이 더 쉬워집니다. 조판기 그리드 설정을 검토해봅시다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:56
+msgid ""
+"In the :guilabel:`Layout` tab expand the :guilabel:`Guides and Grid` region."
+msgstr ":guilabel:`Layout` 탭에서 :guilabel:`Guides and Grid` 부분을 펼치십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:57
+msgid ""
+"Check that :guilabel:`Grid spacing` is set to ``10 mm`` and that "
+":guilabel:`Snap tolerance` is set to ``5 px``."
+msgstr ""
+":guilabel:`Grid spacing` 이 ``10 mm`` 로 그리고 :guilabel:`Snap tolerance` 가 ``5 "
+"px`` 로 설정되어 있는지 확인하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:60
 msgid "You need to activate the use of the grid:"
-msgstr "그리드 사용을 활성화해야 합니다."
+msgstr "그리드 사용을 활성화해야 합니다:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:62
 msgid "Open the :menuselection:`View` menu."
@@ -108,6 +206,15 @@ msgstr ":guilabel:`Show grid` 체크박스를 체크합니다."
 #: ../../docs/training_manual/forestry/forest_maps.rst:64
 msgid "Check :guilabel:`Snap to grid`."
 msgstr ":guilabel:`Snap to grid` 체크박스를 체크합니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:65
+msgid ""
+"Notice that options for using :guilabel:`Guides` are checked by default, "
+"which allows you to see guiding lines when you are moving elements in the "
+"layout."
+msgstr ""
+":guilabel:`Guides` 를 사용하기 위한 옵션은 기본적으로 체크되어 있습니다. 여러분이 조판기 안에서 요소를 이동시킬 때 "
+"지시선을 볼 수 있게 해주는 옵션입니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:68
 msgid ""
@@ -129,7 +236,7 @@ msgstr "addMap"
 #: ../../docs/training_manual/forestry/forest_maps.rst:73
 msgid ""
 "Click and drag a box on the canvas so that the map occupies most of it."
-msgstr "캔버스 위에 클릭&드래그로 맵이 들어갈 사각형을 크게 그리십시오."
+msgstr "캔버스 위에 맵이 들어갈 사각형을 클릭&드래그로 크게 그리십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:78
 msgid ""
@@ -141,15 +248,32 @@ msgid ""
 msgstr ""
 "마우스 커서가 캔버스 그리드에 스냅되어 붙는 걸 알 수 있을 겁니다. 다른 요소를 추가할 때 이 기능을 사용하십시오. 좀 더 정확히 "
 "작업하고 싶다면, 그리드의 :guilabel:`Spacing` 설정을 변경하십시오. 작업 도중 어떤 이유로든 그리드에 스냅하고 싶지 않게"
-" 될 경우, :menuselection:`View` 메뉴에서 언제든지 체크/해제할 수 있습니다."
+" 될 경우, :menuselection:`View` 메뉴에서 언제든지 체크 또는 체크 해제할 수 있습니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:86
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Adding Background Map"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 배경 맵 추가하기"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:88
+msgid ""
+"Leave the layout open but go back to the map. Let's add some background data"
+" and create some styling so that the map content is as clear as possible."
+msgstr ""
+"조판을 그대로 열어둔 채로 맵으로 돌아가십시오. 맵의 내용을 가능한 한 명확하게 하기 위해 몇몇 배경 데이터를 추가하고 스타일을 "
+"생성해봅시다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:91
 msgid ""
 "Add the background raster :file:`basic_map.tif` that you can find in the "
 ":file:`exercise_data\\\\forestry\\\\` folder."
 msgstr ""
-":file:`exercise_data\\\\forestry\\\\` 폴더에 있는 배경 래스터 파일 :file:`basic_map.tif`"
-" 를 추가하십시오."
+":file:`exercise_data\\\\forestry\\\\` 폴더에 있는 :file:`basic_map.tif` 배경 래스터 "
+"파일을 추가하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:93
+msgid ""
+"If prompted select the :guilabel:`ETRS89 / ETRS-TM35FIN` CRS for the raster."
+msgstr "좌표계 대화창이 뜨면 :guilabel:`ETRS89 / ETRS-TM35FIN` 좌표계를 선택합니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:95
 msgid ""
@@ -160,14 +284,37 @@ msgid ""
 "result."
 msgstr ""
 "배경 맵에 이미 스타일이 적용된 걸 알 수 있습니다. 이렇게 미리 준비된 유형의 지도 제작용 래스터는 많이 있습니다. 이 배경 맵은 벡터"
-" 데이터를 기반으로 생성되어 표준 포맷 스타일을 적용해서, 여러 벡터 레이어에 일일이 스타일을 적용하면서 괜찮은 결과가 나올지 걱정할 "
+" 데이터를 기반으로 생성되어 표준 서식 스타일을 적용해서, 여러 벡터 레이어에 일일이 스타일을 적용하면서 괜찮은 결과가 나올지 걱정할 "
 "필요가 없도록 래스터로 저장된 파일입니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:100
 msgid ""
 "Now zoom to your sample plots, so that you can see only about four or five "
 "lines of plots."
-msgstr "이제 조사구 주변에 서너 개의 라인만 보일 때까지 표본 조사구를 확대해보십시오."
+msgstr "이제 표본 조사구의 라인이 서너 개만 보일 때까지 확대해보십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:103
+msgid "The current styling of the sample plots is not the best:"
+msgstr "표본 조사구에 현재 적용된 스타일이 최선이 아닌 듯합니다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:108
+msgid ""
+"While during the last exercises, the white buffer was OK on top of the "
+"aerial image, now that the background image is mostly white you barely can "
+"see the labels. But how does it look in the print layout? Let's check it:"
+msgstr ""
+"지난 예제에서는 항공사진 위에서 흰색 버퍼가 괜찮게 보였지만, 이번에는 배경 이미지가 거의 흰색이기 때문에 라벨을 보기 힘듭니다. 하지만"
+" 인쇄 조판에서는 어떻게 보일까요? 확인해봅시다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:112
+msgid "Go to the print layout window."
+msgstr "인쇄 조판 창으로 가십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:113
+msgid ""
+"Use the |select| :sup:`Select/Move item` button to select the map element in"
+" the layout."
+msgstr "|select| :sup:`Select/Move item` 버튼을 사용해서 조판기에서 맵 요소를 선택하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:494
 msgid "select"
@@ -178,13 +325,38 @@ msgstr "select"
 msgid "Go to the :guilabel:`Item properties` tab."
 msgstr ":guilabel:`Item properties` 탭으로 이동합니다."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:116
+msgid ""
+"Click on |setToCanvasExtent| :guilabel:`Set map extent to match main canvas "
+"extent`."
+msgstr ""
+"|setToCanvasExtent| :guilabel:`Set map extent to match main canvas extent` 를"
+" 클릭해서 맵의 범위를 주 캔버스 범위와 일치시킵니다."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:496
 msgid "setToCanvasExtent"
 msgstr "setToCanvasExtent"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:117
+msgid ""
+"If you need to refresh the element, click on |refresh| :guilabel:`Update map"
+" preview`."
+msgstr "요소를 새로고침해야 할 경우, |refresh| :guilabel:`Update map preview` 를 클릭하십시오."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:492
 msgid "refresh"
 msgstr "refresh"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:121
+msgid ""
+"Obviously this is not good enough; you want to make the plot numbers as "
+"clearly visible as possible for the field teams."
+msgstr "현재 상태로는 이 지도를 사용할 수 없습니다. 현장 조사팀이 조사구 번호를 가능한 한 뚜렷이 볼 수 있도록 만들어야 합니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:126
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Changing the Symbology of the Layers"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 레이어들의 심볼을 변경하기"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:128
 msgid ""
@@ -195,10 +367,34 @@ msgid ""
 "clearly visible as possible but always allowing to see the background map "
 "elements. You can take some guidance from this image:"
 msgstr ""
-":doc:`../basic_map/index` 강의에서 심볼에 대해, :doc:`../vector_classification/index`"
-" 강의에서 라벨에 대해 배웠습니다. 필요하다면 다시 해당 강의들을 복습해서 사용할 수 있는 옵션 및 도구에 대한 기억을 되살리십시오. "
-"이번 예제의 목표는 가능한 한 조사구의 위치와 명칭을 뚜렷이 보이게 만들지만 동시에 언제나 배경 맵의 요소들도 볼 수 있도록 만드는 "
-"일입니다. 다음 그림을 기준으로 삼아도 좋습니다."
+":doc:`../basic_map/index` 에서 심볼에 대해, :doc:`../vector_classification/index` "
+"에서 라벨에 대해 배웠습니다. 필요하다면 다시 해당 강의들을 복습해서 사용할 수 있는 옵션 및 도구에 대한 기억을 되살리십시오. 이번 "
+"예제의 목표는 가능한 한 조사구의 위치와 명칭을 뚜렷이 보이게 만들지만 동시에 언제나 배경 맵의 요소들도 볼 수 있도록 하는 일입니다. "
+"다음 그림을 기준으로 삼아도 좋습니다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:138
+msgid ""
+"You will use later the the green styling of the ``forest_stands_2012`` "
+"layer. In order to keep it, and have a visualization of it that shows only "
+"the stand borders:"
+msgstr ""
+"나중에 ``forest_stands_2012`` 레이어의 녹색 스타일을 사용하게 될 것입니다. 해당 스타일을 유지하면서 수종경계 경계선만"
+" 보이도록 하려면:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:141
+msgid ""
+"Right click on :guilabel:`forest_stands_2012` and select "
+":guilabel:`Duplicate`"
+msgstr ""
+"``forest_stands_2012`` 레이어를 오른쪽 클릭한 다음 :guilabel:`Duplicate` 를 선택하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:142
+msgid ""
+"You get a new layer named ``forest_stands_2012 copy`` that you can use to "
+"define a different style, for example with no filling and red borders."
+msgstr ""
+"새로운 ``forest_stands_2012 copy`` 레이어가 생성되었습니다. 이 레이어에 예를 들면 채우기 없음 및 빨간색 경계선 "
+"등 다른 스타일을 적용할 수 있습니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:145
 msgid ""
@@ -208,33 +404,79 @@ msgstr ""
 "이제 수종경계를 두 가지 서로 다른 스타일로 보여줄 수 있게 되었습니다. 상세지도에 어떤 스타일을 사용할지, 여러분이 선택할 수 "
 "있습니다."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:151
+msgid ""
+"Go back to the print layout window often to see what the map would look "
+"like. For the purposes of creating detailed maps, you are looking for a "
+"symbology that looks good not at the scale of the whole forest area (left "
+"image below) but at a closer scale (right image below). Remember to use "
+"|refresh| :sup:`Update map preview` and |setToCanvasExtent| :guilabel:`Set "
+"map extent to match main canvas extent` whenever you change the zoom in your"
+" map or the layout."
+msgstr ""
+"작업 중 종종 :guilabel:`Print Layout` 창을 확인해서 지도가 어떻게 보이는지 확인하십시오. 상세지도를 생성하는 목적에"
+" 맞춰 삼림 지역 전체가 보이는 축척(다음 오른쪽 그림)이 아니라 더 확대된 축척(다음 왼쪽 그림)에서 괜찮게 보이는 심볼을 찾아 "
+"적용해야 합니다. 맵이나 조판기에서 확대/축소할 때마다 |refresh| :sup:`Update map preview` 및 "
+"|setToCanvasExtent| :guilabel:`Set map extent to match main canvas extent` 를"
+" 사용해야 한다는 사실을 잊지 마십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:163
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Create a Basic Map Template"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 기본 맵 템플릿 생성하기"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:165
+msgid ""
+"Once you have a symbology you are happy with, you are ready to add some more"
+" information to your printed map. Add at least the following elements:"
+msgstr ""
+"만족할 만한 심볼을 결정했다면, 인쇄할 맵에 몇 가지 정보를 더 추가할 준비가 된 것입니다. 최소한 다음 요소들은 추가해주십시오:"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:168
 msgid "Title."
 msgstr "제목"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:169
 msgid "A scale bar."
-msgstr "스케일바"
+msgstr "축척막대"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:170
 msgid "Grid frame for your map."
-msgstr "사용자 맵을 위한 격자 테두리"
+msgstr "맵 용 그리드 프레임"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:171
 msgid "Coordinates on the sides of the grid."
-msgstr "격자 주위의 좌표 표시"
+msgstr "그리드 옆 좌표 표시"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:173
+msgid ""
+"You have created a similar layout already in :doc:`../map_composer/index`. "
+"Go back to that module as you need. You can look at this example image for "
+"reference:"
+msgstr ""
+"여러분은 :doc:`../map_composer/index` 에서 이미 비슷한 맵을 작성해본 경험이 있습니다. 필요하다면 해당 강의를 "
+"복습해보십시오. 다음 예시 이미지를 참조해도 좋습니다:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:179
 msgid "Export your map as an image and look at it."
-msgstr "여러분의 맵을 이미지 파일로 내보내기 한 다음 살펴보십시오."
+msgstr "여러분의 맵을 이미지 파일로 내보낸 다음 살펴보십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:181
 msgid ":menuselection:`Layout --> Export as Image...`."
 msgstr "메뉴에서 :menuselection:`Layout --> Export as Image...` 를 클릭합니다."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:182
+msgid "Use for example the :guilabel:`JPG format`."
+msgstr ":guilabel:`JPG format` 등 익숙한 이미지 유형을 사용합니다."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:184
 msgid "That is what it will look like when printed."
-msgstr "맵을 인쇄하면 바로 이렇게 보일 것입니다."
+msgstr "맵을 인쇄하면 바로 예시 이미지처럼 보일 것입니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:187
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Adding More Elements to the Print "
+"Layout"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 인쇄 조판에 더 많은 요소들을 추가하기"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:189
 msgid ""
@@ -244,14 +486,14 @@ msgid ""
 " an overview map and some text boxes could add value to the map."
 msgstr ""
 "예시로 보여드린 맵 템플릿 이미지에서 아마 알아차렸을 테지만, 캔버스 오른쪽에 공간이 많이 남아 있습니다. 이 공간에 어떤 것들을 넣을 "
-"수 있는지 알아봅시다. 이번 강의의 목적을 생각하면 범례가 꼭 필요하지는 않지만, 개요(overview) 맵과 텍스트 상자 몇 개를 "
+"수 있는지 알아봅시다. 이번 수업의 목적을 생각하면 범례가 꼭 필요하지는 않지만, 오버뷰(overview) 맵과 텍스트 상자 몇 개를 "
 "추가하면 맵이 훨씬 쓸 만해질 것입니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:194
 msgid ""
 "The overview map will help the field teams place the detail map inside the "
 "general forest area:"
-msgstr "현장 팀이 전체 삼림 지역 안에서 상세지도가 어느 곳을 가리키는지 파악하는 데 개요 맵이 도움이 됩니다."
+msgstr "오버뷰 맵은 현장 조사팀이 상세 지도가 전체 삼림 지역 안에서 어느 곳을 가리키는지 파악하는 데 도움이 됩니다:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:197
 msgid "Add another map element to the canvas, right under the title text."
@@ -273,6 +515,14 @@ msgstr ""
 ":guilabel:`Overview frame` 을 :guilabel:`Map 0` 로 설정합니다. 이렇게 하면 상세 맵이 개요 맵 "
 "어디에 위치하는지 그 범위를 어두운 사각형으로 표시해줍니다."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:202
+msgid ""
+"Check also the :guilabel:`Frame` option with a black color and a "
+":guilabel:`Thickness` of ``0.30``."
+msgstr ""
+"또 :guilabel:`Frame` 옵션의 색상을 검정색으로, :guilabel:`Thickness` 를 ``0.30`` 으로 "
+"설정하십시오."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:208
 msgid ""
 "Notice that your overview map is not really giving an overview of the forest"
@@ -282,13 +532,78 @@ msgid ""
 " you want to lock its view so it does not change anymore whenever you change"
 " the visibility or order of the layers."
 msgstr ""
-"지금 개요 맵은 여러분이 바라는 대로 삼림 지역 전체를 보여주고 있지 않습니다. 개요 맵은 삼림 지역 전체를 보여주면서 "
-":file:`forest_stands_2012` 레이어와 배경 맵만을 표출해야 합니다. 개요 맵에 표본 조사구는 필요없습니다. 또 "
-"여러분이 레이어들의 가시성이나 순서를 변경할 때마다 개요 맵이 바뀌지 않도록 개요 맵의 뷰를 고정해야 합니다."
+"지금 오버뷰 맵은 여러분이 바라는 대로 삼림 지역 전체를 보여주고 있지 않습니다. 오버뷰 맵은 삼림 지역 전체를 보여주면서 "
+":file:`forest_stands_2012` 레이어와 배경 맵만 가시화해야 합니다. 오버뷰 맵에 표본 조사구는 필요없습니다. 또 "
+"여러분이 레이어들의 가시성이나 순서를 변경할 때마다 오버뷰가 바뀌지 않도록 오버뷰의 뷰를 고정해야 합니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:215
 msgid "Go back to the map, but don't close the :guilabel:`Print Layout`."
-msgstr "다시 프로젝트의 맵으로 이동하십시오. 이때 :guilabel:`Print Layout` 을 끄면 안 됩니다."
+msgstr "다시 프로젝트 맵으로 이동하십시오. 이때 :guilabel:`Print Layout` 창을 닫으면 안 됩니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:216
+msgid ""
+"Right click the :guilabel:`forest_stands_2012` layer and click on "
+":guilabel:`Zoom to Layer Extent`."
+msgstr ""
+"``forest_stands_2012`` 레이어를 오른쪽 클릭한 다음 :guilabel:`Zoom to Layer Extent` 를 "
+"클릭하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:218
+msgid ""
+"Deactivate all layers except for :guilabel:`basic_map` and "
+":guilabel:`forest_stands_2012`."
+msgstr "``basic_map`` 과 `` forest_stands_2012`` 를 제외한 모든 레이어를 비활성화시키십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:219
+msgid ""
+"Expand the :sup:`Manage map themes` tool on the :guilabel:`Layers` panel and"
+" select :guilabel:`Add theme`."
+msgstr ""
+":guilabel:`Layers` 패널에 있는 :sup:`Manage map themes` 도구를 펼친 다음 :guilabel:`Add "
+"theme` 을 선택하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:221
+msgid "Name it ``basic_overview``."
+msgstr "테마 이름을 ``basic_overview`` 로 지정하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:222
+#: ../../docs/training_manual/forestry/forest_maps.rst:303
+msgid "Go back to the print layout."
+msgstr "인쇄 조판 창으로 돌아가십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:223
+msgid ""
+"With the small map selected, click the :guilabel:`Set map extent to match "
+"main canvas extent` to set its extents to what you can see in the map "
+"window."
+msgstr ""
+"오버뷰를 선택한 다음, :guilabel:`Set map extent to match main canvas extent` 를 클릭해서 "
+"오버뷰 맵의 범위를 프로젝트 맵 창에서 볼 수 있는 범위로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:225
+msgid ""
+"Lock the view for the overview map by checking :guilabel:`Follow map theme` "
+"and selecting ``basic_overview`` under :guilabel:`Main properties`."
+msgstr ""
+":guilabel:`Follow map theme` 를 체크하고 :guilabel:`Main properties` 아래 있는 "
+"``basic_overview`` 를 선택해서 오버뷰 맵의 뷰를 고정합니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:228
+msgid ""
+"Now your overview map is more what you expected and its view will not change"
+" anymore. But, of course, now your detail map is not showing anymore the "
+"stand borders nor the sample plots. Let's fix that:"
+msgstr ""
+"이제 오버뷰가 기대치에 가까워졌고 그 뷰도 더 이상 바뀌지 않을 겁니다. 그러나 또한, 상세 맵에 수종경계 경계선이나 표본 조사구가 "
+"보이지 않을 겁니다. 이 문제를 해결해볼까요:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:232
+msgid ""
+"Go to the map window again and select the layers you want to be visible "
+"(``systematic_plots_clip``, ``forest_stands_2012 copy`` and ``Basic_map``)."
+msgstr ""
+"프로젝트 맵 창으로 가서 가시화시키고자 하는 레이어들을 (``systematic_plots_clip``, "
+"``forest_stands_2012 copy`` 및 ``Basic_map``) 선택하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:234
 msgid "Zoom again to have only a few lines of sample plots visible."
@@ -298,17 +613,29 @@ msgstr "다시 표본 조사구의 라인이 서너 개만 보일 때까지 확�
 msgid "Go back to the :guilabel:`Print Layout` window."
 msgstr ":guilabel:`Print Layout` 창으로 이동합니다."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:236
+msgid "Select the bigger map in your layout."
+msgstr "조판기에서 큰 맵을 선택하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:237
+msgid ""
+"In :guilabel:`Item properties` click on :guilabel:`Update preview` and "
+":guilabel:`Set map extent to match main canvas extent`."
+msgstr ""
+":guilabel:`Item properties` 에서 :guilabel:`Update preview` 와 :guilabel:`Set "
+"map extent to match main canvas extent` 를 클릭하십시오."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:240
 msgid ""
 "Notice that only the bigger map is displaying the current map view, and the "
 "small overview map is keeping the same view you had when you locked it."
-msgstr "상세 맵만 현재 맵 뷰에 보이는 대로 표출되고, 개요 맵은 여러분이 고정한 대로 변하지 않는다는 사실을 잘 기억해두세요."
+msgstr "상세 맵만 현재 맵 뷰에 보이는 대로 표출되고, 오버뷰 맵은 여러분이 고정한 대로 변하지 않는다는 사실을 잘 기억해두세요."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:243
 msgid ""
 "Note also that the overview is showing a shaded frame for the extent shown "
 "in the detail map."
-msgstr "또한 상세 맵의 범위가 개요 맵에 어두운 사각형으로 표시된다는 것도 기억하세요."
+msgstr "또한 상세 맵의 범위가 오버뷰 맵에 어두운 사각형으로 표시된다는 것도 기억하세요."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:248
 msgid ""
@@ -321,22 +648,51 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:252
 msgid "You can also add a North arrow to the overview map:"
-msgstr "또 개요 맵에 북쪽을 가리키는 화살표를 추가해도 됩니다."
+msgstr "또 오버뷰 맵에 북쪽을 가리키는 화살표를 추가해도 됩니다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:254
+msgid "Select the |northArrow| :sup:`Add North Arrow` tool."
+msgstr "|northArrow| :sup:`Add North Arrow` 도구를 선택하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:490
 msgid "northArrow"
 msgstr "northArrow"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:255
+msgid ""
+"Click and drag a rectangle at the upper right corner of the overview map."
+msgstr "오버뷰 맵의 우상단에 직사각형을 클릭&드래그하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:256
+msgid "In :guilabel:`Item properties` Check :guilabel:`SVG image`"
+msgstr ":guilabel:`Item properties` 에서 :guilabel:`SVG image` 를 체크하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:257
+msgid "Browse :menuselection:`SVG Browser --> SVG Groups` for an arrow image."
+msgstr ":menuselection:`SVG Browser --> SVG Groups` 를 탐색해서 방위표 이미지를 찾으십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:258
+msgid ""
+"Under :guilabel:`Image rotation`, check the :guilabel:`Sync with map` and "
+"select :guilabel:`Map 1` (the overview map)."
+msgstr ""
+":guilabel:`Image rotation` 아래 있는 :guilabel:`Sync with map` 옵션을 체크하고 "
+":guilabel:`Map 1` (오버뷰 맵)을 선택하십시오."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:260
 msgid "Resize the arrow image to a size that looks good on the small map."
-msgstr "개요 맵에 잘 어울리도록 화살표 이미지의 크기를 조정합니다."
+msgstr "오버뷰 맵에 잘 어울리도록 화살표 이미지의 크기를 조정합니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:262
 msgid ""
 "The basic map layout is ready, now you want to make use of the Atlas tool to"
 " generate as many detail maps in this format as you consider necessary."
 msgstr ""
-"인쇄 조판기의 기본적인 준비가 끝났습니다. 이제 지도책 도구를 통해 이 양식의 상세지도를 필요한 만큼 얼마든지 생성할 수 있습니다."
+"인쇄 조판기의 기본적인 준비가 끝났습니다. 이제 지도책 도구를 사용해서 이 양식의 상세지도를 필요한 만큼 얼마든지 생성할 수 있습니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:267
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Creating an Atlas Coverage"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 지도책 커버리지 생성하기"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:269
 msgid ""
@@ -345,8 +701,8 @@ msgid ""
 "what you will do next, here is a full set of detail maps for the forest "
 "area:"
 msgstr ""
-"지도책 커버리지란 해당 커버리지 안에 있는 모든 피처를 표출 하는 하나의 맵, 상세지도를 생성하는 데 쓰일 벡터 레이어일 뿐입니다. 다음"
-" 단계가 어떤 작업일지 알고 싶다면, 삼림 지역에 대한 모든 상세지도를 모아놓은 다음 그림을 살펴보십시오."
+"지도책 커버리지란 해당 커버리지 안에 있는 모든 피처를 가시화한 하나의 맵으로, 상세 지도를 생성하는 데 쓰일 벡터 레이어일 뿐입니다. "
+"다음 단계가 어떤 작업일지 알고 싶다면, 삼림 지역에 대한 모든 상세 지도를 모아놓은 다음 그림을 살펴보십시오:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:276
 msgid ""
@@ -354,8 +710,16 @@ msgid ""
 " create one for the specific purpose. Let's create a grid of polygons "
 "covering the forest area:"
 msgstr ""
-"어떤 기존 레이어도 커버리지가 될 수 있지만, 이 특정한 목적을 위한 새 레이어를 생성하는 편이 더 합당할 것입니다. 삼림 지역을 "
-"커버하는 폴리곤 그리드를 생성해봅시다."
+"기존의 어떤 레이어도 커버리지가 될 수 있지만, 이 특정한 목적을 위한 새 레이어를 생성하는 편이 더 합당할 것입니다. 삼림 지역을 "
+"커버하는 폴리곤 그리드를 생성해봅시다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:280
+msgid ""
+"In the QGIS map view, open :menuselection:`Vector --> Research Tools -->` "
+"|vectorGrid| :menuselection:`Create grid`."
+msgstr ""
+"QGIS 맵 뷰에서 :menuselection:`Vector --> Research Tools -->` |vectorGrid| "
+":menuselection:`Create grid` 메뉴 항목을 선택하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:498
 msgid "vectorGrid"
@@ -363,26 +727,40 @@ msgstr "vectorGrid"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:282
 msgid "Set the tool as shown in this image:"
-msgstr "다음 그림처럼 도구를 설정하십시오."
+msgstr "도구를 다음 그림처럼 설정하십시오:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:289
+msgid "Save the output as :file:`atlas_coverage.shp`."
+msgstr "산출물을 :file:`atlas_coverage.shp` 라는 이름으로 저장하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:290
+msgid ""
+"Style the new ``atlas_coverage`` layer so that the polygons have no filling."
+msgstr "새 ``atlas_coverage`` 레이어의 스타일을 변경해서 폴리곤의 면을 투명하게 만드십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:292
 msgid ""
 "The new polygons are covering the whole forest area and they give you an "
 "idea of what each map (created from each polygon) will contain."
 msgstr ""
-"새로운 폴리곤들은 삼림 지역 전체를 커버하며, (각 폴리곤으로부터 생성된) 각각의 상세지도가 어떤 내용을 담게 될지 알 수 있습니다."
+"새로운 폴리곤들은 삼림 지역 전체를 커버하며, (각 폴리곤으로부터 생성된) 각각의 상세 지도가 어떤 내용을 담게 될지 알 수 있게 "
+"해줍니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:299
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Setting Up the Atlas Tool"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 지도책 도구 설정하기"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:301
 msgid "The last step is to set up the Atlas tool:"
-msgstr "마지막 단계는 지도책 도구를 설정하는 것입니다."
+msgstr "마지막 단계는 지도책 도구를 설정하는 것입니다:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:304
 msgid "In the panel on the right, go to the :guilabel:`Atlas generation` tab."
-msgstr "오른쪽 패널에 있는 :guilabel:`Atlas generation` 탭을 선택합니다."
+msgstr "오른쪽 패널에서 :guilabel:`Atlas generation` 탭을 선택합니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:305
 msgid "Set the options as follows:"
-msgstr "다음과 같이 옵션을 설정하십시오."
+msgstr "옵션을 다음과 같이 설정하십시오:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:312
 msgid ""
@@ -391,9 +769,9 @@ msgid ""
 " map for every feature in the layer. The :guilabel:`Hidden coverage layer` "
 "tells the Atlas to not show the polygons in the output maps."
 msgstr ""
-"이렇게 하면 지도책 도구가 :file:`atlas_coverage` 레이어 안에 있는 피처(폴리곤들)를 모든 상세지도의 맵 범위로 "
-"이용하게 됩니다. 레이어의 각 피처가 상세지도 하나를 산출할 것입니다. :guilabel:`Hidden coverage layer` "
-"옵션은 산출된 맵에 폴리곤을 보이지 않게 하는 역할을 합니다."
+"이렇게 하면 지도책 도구가 :file:`atlas_coverage` 레이어 안에 있는 피처(폴리곤들)를 모든 상세 지도의 중심으로 "
+"이용하게 됩니다. 레이어의 각 피처가 상세 지도 하나를 산출할 것입니다. :guilabel:`Hidden coverage layer` "
+"옵션은 산출된 맵에 폴리곤을 보이지 않게 합니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:317
 msgid ""
@@ -403,18 +781,33 @@ msgid ""
 "prepared to contain detail views of the sample plots, that is the bigger map"
 " element in your canvas:"
 msgstr ""
-"한 가지 더 해야 할 일이 있습니다. 모든 상세지도에 어떤 맵 요소를 업데이트할지 지도책 도구를 설정해야 합니다. 지금쯤이면 캔버스에서 "
-"더 상위 요소인 표본 조사구의 상세 뷰를 담도록 여러분이 준비해온 맵이 각 폴리곤에 따라 업데이트돼야 한다는 사실을 알 수 있을 겁니다."
+"한 가지 더 해야 할 일이 있습니다. 모든 상세 지도에 어떤 맵 요소를 업데이트할지 지도책 도구를 설정해야 합니다. 지금쯤이면 각 "
+"폴리곤에 따라 업데이트돼야 할 맵이 여러분이 표본 조사구의 상세 뷰를 담도록 준비해온 맵, 즉 캔버스에 있는 큰 맵 요소라는 사실을 알 "
+"수 있을 겁니다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:323
+msgid "Select the bigger map element (``Map 0``)."
+msgstr "더 큰 맵 요소(``Map 0``)를 선택하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:325
 msgid "In the list, check :guilabel:`Controlled by atlas`."
 msgstr "목록에서 :guilabel:`Controlled by atlas` 체크박스를 체크합니다."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:326
+#, python-format
+msgid ""
+"And set the :guilabel:`Marging around feature` to ``10%``. The view extent "
+"will be 10% bigger than the polygons, which means that your detail maps will"
+" have a 10% overlap."
+msgstr ""
+"그리고 :guilabel:`Marging around feature` 를 ``10%`` 로 설정하십시오. 뷰의 범위가 폴리곤보다 10% "
+"더 넓어집니다. 다시 말해 상세 지도들이 10%씩 중첩하게 될 것이라는 뜻입니다."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:333
 msgid ""
 "Now you can use the preview tool for Atlas maps to review what your maps "
 "will look like:"
-msgstr "이제 지도책 맵에 대해 미리보기 도구를 사용해서 여러분의 맵이 어떻게 보일지 살펴볼 수 있습니다."
+msgstr "이제 지도책 맵에 미리보기 도구를 사용해서 여러분의 맵이 어떻게 보일지 검토할 수 있습니다:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:335
 msgid ""
@@ -434,6 +827,18 @@ msgid ""
 ":menuselection:`Atlas` menu to move through maps that will be created."
 msgstr "지도책 툴바 또는 :menuselection:`Atlas` 메뉴의 화살표를 이용해서 생성될 맵을 둘러볼 수 있습니다. "
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:340
+msgid ""
+"Note that some of them cover areas that are not interesting. Let's do "
+"something about it and save some trees by not printing those useless maps."
+msgstr ""
+"생성될 맵들 가운데 일부가 커버하는 지역이 관심 지역이 아니라는 사실을 알 수 있습니다. 쓸모없는 맵을 인쇄하여 나무 몇 그루를 낭비하지"
+" 않도록 조치를 취해봅시다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:344
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Editing the Coverage Layer"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 커버리지 레이어 편집하기"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:346
 msgid ""
 "Besides removing the polygons for those areas that are not interesting, you "
@@ -441,15 +846,19 @@ msgid ""
 "from the :guilabel:`Attribute table` of your coverage layer:"
 msgstr ""
 "관심 지역이 아닌 지역의 폴리곤을 제거하는 작업 외에도, 여러분의 맵 안에 있는 텍스트 라벨을 사용자 지정해서 커버리지 레이어의 "
-":guilabel:`Attribute table` 안의 내용으로 생성할 수 있습니다."
+":guilabel:`Attribute table` 에 있는 내용으로 생성할 수 있습니다:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:353
 msgid "Go back to the map view."
-msgstr "맵뷰로 다시 이동하십시오."
+msgstr "맵 뷰로 돌아가십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:354
+msgid "Enable editing for the :guilabel:`atlas_coverage` layer."
+msgstr "``atlas_coverage`` 레이어의 편집 모드를 활성화하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:355
 msgid "Select the polygons that are selected (in yellow) in the image below."
-msgstr "다음 그림에서 (노랑색으로) 선택된 폴리곤들을 선택하십시오."
+msgstr "다음 그림에서 (노란색으로) 선택된 폴리곤들을 선택하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:356
 msgid "Remove the selected polygons."
@@ -459,6 +868,12 @@ msgstr "선택한 폴리곤들을 제거합니다."
 msgid "Disable editing and save the edits."
 msgstr "편집 모드를 해제하고 변경 사항을 저장하십시오."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:362
+msgid ""
+"You can go back to the print layout and check that the previews of the Atlas"
+" use only the polygons you left in the layer."
+msgstr "인쇄 조판 창으로 돌아가서 지도책 미리보기에 여러분이 레이어에 남겨둔 폴리곤들만 보이는지 확인하십시오."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:365
 msgid ""
 "The coverage layer you are using does not yet have useful information that "
@@ -467,8 +882,15 @@ msgid ""
 "areas and a field with some remarks for the field teams to have into "
 "account:"
 msgstr ""
-"현재 사용 중인 커버리지 레이어는 상세 맵의 라벨 내용으로 사용자 지정할 수 있는 쓸모 있는 정보를 담고 있지 않습니다. 그런 정보를 "
-"생성하는 첫 번째 단계로, 예를 들어 폴리곤 지역의 구역 번호와 현장 팀이 고려해야 할 의견을 담은 항목을 추가할 수 있을 것입니다."
+"현재 사용 중인 커버리지 레이어는 상세 맵의 라벨 내용을 사용자 지정하는 데 사용할 수 있는 유용한 정보를 담고 있지 않습니다. 그런 "
+"정보를 생성하는 첫 번째 단계로, 예를 들어 폴리곤 지역의 구역 번호와 현장 조사팀이 고려해야 할 의견을 담은 필드를 추가할 수 있을 "
+"것입니다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:370
+msgid ""
+"Open the :guilabel:`Attribute table` for the :guilabel:`atlas_coverage` "
+"layer."
+msgstr "``atlas_coverage`` 레이어의 :guilabel:`Attribute table` 을 여십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:371
 msgid "Enable editing."
@@ -478,19 +900,97 @@ msgstr "편집 모드를 활성화합니다."
 msgid ""
 "Use the |calculateField| calculator to create and populate the following two"
 " fields."
-msgstr "|calculateField| 계산기를 이용해서 다음 두 항목을 생성하고 내용을 입력해봅시다."
+msgstr "|calculateField| 계산기를 이용해서 다음 두 필드를 생성하고 내용을 입력해봅시다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:484
 msgid "calculateField"
 msgstr "calculateField"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:373
+msgid ""
+"Create a field named ``Zone`` of type :guilabel:`Whole number (integer)`."
+msgstr "``Zone`` 이라는 이름의 필드를 :guilabel:`Whole number (integer)` 유형으로 생성하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:374
+msgid ""
+"In the :guilabel:`Expression` box write/copy/construct ``@row_number``."
+msgstr ":guilabel:`Expression` 란에 ``@row_number`` 를 입력/복사/작성하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:375
+msgid ""
+"Create another field named ``Remarks``, of type :guilabel:`Text (string)` "
+"and a width of ``255``."
+msgstr ""
+"``Remarks`` 라는 또다른 필드를 ``255`` 문자 길이를 가진 :guilabel:`Text (string)` 유형으로 "
+"생성하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:377
+msgid ""
+"In the :guilabel:`Expression` box write ``'No remarks.'``. This will set all"
+" the default value for all the polygons."
+msgstr ""
+":guilabel:`Expression` 란에 ``'No remarks.'`` 라고 입력하십시오. 모든 폴리곤에 대한 기본값으로 설정될 "
+"것입니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:380
+msgid ""
+"The forest manager will have some information about the area that might be "
+"useful when visiting the area. For example, the existence of a bridge, a "
+"swamp or the location of a protected species. The :guilabel:`atlas_coverage`"
+" layer is probably in edit mode still, add the following text in the "
+":guilabel:`Remarks` field to the corresponding polygons (double click the "
+"cell to edit it):"
+msgstr ""
+"삼림 관리자는 해당 지역 방문 시 유용할 수도 있는 정보를 가지고 있을 겁니다. 예를 들면 다리, 늪의 존재 여부나 보호종의 서식지 위치"
+" 등을 말입니다. ``atlas_coverage`` 레이어가 편집 모드인지 확인한 다음, 각 폴리곤의 ``Remarks`` 필드에 다음 "
+"텍스트를 (편집하려면 해당 셀을 더블클릭해서) 입력하십시오:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:387
+msgid ""
+"For the :guilabel:`Zone` 2: ``Bridge to the North of plot 19. Siberian "
+"squirrel between p_13 and p_14.``"
+msgstr ""
+":guilabel:`Zone` 2의 경우: ``Bridge to the North of plot 19. Siberian squirrel "
+"between p_13 and p_14.``"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:389
+msgid ""
+"For the :guilabel:`Zone` 6: `Difficult to transit in swamp to the North of "
+"the lake.``"
+msgstr ""
+":guilabel:`Zone` 6의 경우: ``Difficult to transit in swamp to the North of the "
+"lake.``"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:390
+msgid ""
+"For the :guilabel:`Zone` 7: ``Siberian squirrel to the South East of p_94.``"
+msgstr ""
+":guilabel:`Zone` 7의 경우: ``Siberian squirrel to the South East of p_94.``"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:391
 msgid "Disable editing and save your edits."
 msgstr "편집 모드를 해제하고 변경 사항을 저장하십시오."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:393
+msgid ""
+"Almost ready, now you have to tell the Atlas tool that you want some of the "
+"text labels to use the information from the :guilabel:`atlas_coverage` "
+"layer's attribute table."
+msgstr ""
+"준비가 거의 끝났습니다. 이제 ``atlas_coverage`` 레이어의 속성 테이블에 담긴 정보를 이용해서 텍스트 라벨을 표시하도록 "
+"지도책 도구를 설정해야 합니다."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:396
 msgid "Go back to the :guilabel:`Print Layout`."
-msgstr ":guilabel:`Print Layout` 으로 이동합니다."
+msgstr ":guilabel:`Print Layout` 창으로 이동합니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:397
+msgid "Select the text label containing ``Detailed map...``."
+msgstr "``Detailed map...`` 텍스트 라벨을 선택하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:398
+msgid "Set the :guilabel:`Font` size to ``12``."
+msgstr ":guilabel:`Font` 의 크기를 ``12`` 로 설정하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:399
 msgid "Set the cursor at the end of the text in the label."
@@ -501,12 +1001,32 @@ msgid ""
 "In  the :guilabel:`Item properties` tab, inside the :guilabel:`Main "
 "properties` click on :guilabel:`Insert or Edit an Expression...`."
 msgstr ""
-":guilabel:`Item properties` 탭으로 이동, :guilabel:`Main properties` 안에 있는 "
+":guilabel:`Item properties` 탭으로 가서 :guilabel:`Main properties` 안에 있는 "
 ":guilabel:`Insert or Edit an Expression...` 을 클릭하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:402
+msgid ""
+"In the :guilabel:`Function list` double-click on the field :guilabel:`Zone` "
+"under :guilabel:`Field and Values`."
+msgstr ""
+":guilabel:`Function list` 에서 :guilabel:`Field and Values` 아래 있는 ``Zone`` 필드를"
+" 더블클릭하십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:404
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:405
+msgid ""
+"The text inside the box in the :guilabel:`Item properties` should show "
+"``Detail map inventory zone: [% \"Zone\" %]``. Note that the ``[% \"Zone\" "
+"%]`` will be substituted by the value of the field :guilabel:`Zone` for the "
+"corresponding feature from the layer :guilabel:`atlas_coverage`."
+msgstr ""
+":guilabel:`Item properties` 에 있는 상자 안의 텍스트가 ``Detail map inventory zone: [% "
+"\"Zone\" %]`` 으로 보일 겁니다. 이때 ``[% \"Zone\" %]`` 부분이 "
+":guilabel:`atlas_coverage` 레이어에 있는 대응하는 피처의 :guilabel:`Zone` 필드의 값으로 대체되는지 "
+"확인하세요."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:410
 msgid ""
@@ -514,11 +1034,25 @@ msgid ""
 "maps."
 msgstr "각각의 지도책 미리보기를 살펴 라벨의 내용이 제대로 표출되는지 확인하십시오."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:411
+msgid ""
+"Do the same for the labels with the text :guilabel:`Remarks:` using the "
+"field with the zone information. You can leave a break line before you enter"
+" the expression. You can see the result for the preview of zone 2 in the "
+"image below:"
+msgstr ""
+"구역 정보가 담긴 필드를 사용해서 :guilabel:`Remarks:` 텍스트에 대해 동일한 라벨 작업을 하십시오. 표현식을 입력하기 "
+"전에 줄바꿈을 남길 수도 있습니다. 다음 그림은 이 작업을 마친 구역 2의 미리보기입니다:"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:418
 msgid ""
 "Use the Atlas preview to browse through all the maps you will be creating "
 "soon and enjoy!"
 msgstr "이제 곧 인쇄에 들어갈 맵들을 지도책 미리보기를 통해 살펴보세요."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:422
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Printing the Maps"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 맵을 인쇄하기"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:424
 msgid ""
@@ -547,16 +1081,24 @@ msgid ""
 "possible`. This will put all the maps together into a PDF file, if this "
 "option is not checked you will get one file for every map."
 msgstr ""
-":guilabel:`Output` 아래에 있는 :guilabel:`Single file export when possible` 체크박스를"
-" 체크하십시오. 모든 맵을 하나의 PDF 파일로 출력합니다. 이 옵션이 해제된 경우, 맵 하나마다 PDF 파일 하나씩 출력됩니다."
+":guilabel:`Output` 아래에 있는 :guilabel:`Single file export when possible` 옵션을 "
+"체크하십시오. 모든 맵을 하나의 PDF 파일로 출력합니다. 이 옵션이 해제된 경우, 맵 하나마다 PDF 파일 하나씩 출력됩니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:435
 msgid "Open :menuselection:`Layout --> Export as PDF...`."
 msgstr ":menuselection:`Layout --> Export as PDF...` 메뉴를 실행하십시오."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:436
+msgid ""
+"Save the PDF file as :file:`inventory_2012_maps.pdf` in your "
+":file:`exercise_data\\\\forestry\\\\samplig\\\\map_creation\\\\` folder."
+msgstr ""
+"PDF 파일을 :file:`exercise_data\\\\forestry\\\\samplig\\\\map_creation\\\\` 폴더의"
+" :file:`inventory_2012_maps.pdf` 로 저장하십시오."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:438
 msgid "Open the PDF file to check that everything went as expected."
-msgstr "모든 작업이 제대로 됐는지 PDF 파일을 열어 확인해보십시오."
+msgstr "PDF 파일을 열어서 모든 작업이 제대로 됐는지 확인해보십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:439
 msgid ""
@@ -564,12 +1106,39 @@ msgid ""
 "uncheck the single file creation), here you can see the thumbnails of the "
 "images that would be created:"
 msgstr ""
-"모든 맵을 개별 이미지로 쉽게 출력할 수 있습니다. (파일 하나로 생성 옵션을 해제하면 됩니다.) 다음은 그렇게 출력한 이미지의 "
-"썸네일들입니다."
+"모든 맵을 개별 이미지로 쉽게 출력할 수 있습니다. (단일 파일로 생성 옵션을 해제하면 됩니다.) 다음은 그렇게 출력한 이미지의 "
+"썸네일들입니다:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:446
+msgid ""
+"In the :guilabel:`Print Layout`, press |fileSave| :sup:`Save` in order to "
+"save your print layout changes in the project. This also saves the project "
+"file. You can reopen the project at any time and run or edit the atlas."
+msgstr ""
+"프로젝트에 여러분의 인쇄 조판 변경 사항을 저장하려면 :guilabel:`Print Layout` 창에서 |fileSave| "
+":sup:`Save` 버튼을 누르십시오. 이 버튼을 누르면 프로젝트 파일도 저장합니다. 언제라도 프로젝트를 다시 열어서 지도책을 실행 "
+"또는 편집할 수 있습니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:486
 msgid "fileSave"
 msgstr "fileSave"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:450
+msgid ""
+"It is also possible to save your map as a layout template as "
+":file:`forestry_atlas.qpt` in your "
+":file:`exercise_data\\\\forestry\\\\map_creation\\\\` folder. Use "
+":menuselection:`Layout --> Save as Template`. You will be able to use this "
+"template again and again in other projects."
+msgstr ""
+":menuselection:`Layout --> Save as Template` 메뉴를 사용해서 여러분의 맵을 "
+":file:`exercise_data\\\\forestry\\\\map_creation\\\\` 폴더의 "
+":file:`forestry_atlas.qpt`, 즉 조판 템플릿 파일로 저장할 수도 있습니다. 이렇게 저장한 템플릿은 다른 "
+"프로젝트들에서 두고두고 다시 사용할 수 있습니다."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:455
+msgid "Close the :guilabel:`Print Layout` and the project."
+msgstr ":guilabel:`Print Layout` 창을 닫고 QGIS 프로젝트도 끄십시오."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:459
 msgid "In Conclusion"
@@ -583,10 +1152,18 @@ msgid ""
 "will come when you need to create similar maps for other regions and you can"
 " use the template you just saved."
 msgstr ""
-"여러분은 현장에서 여러 곳의 표본 조사구를 찾아가는 데 쓰일 상세지도를 자동적으로 생성할 수 있는 맵 템플릿을 생성했습니다. 여러분도 "
+"여러분은 현장에서 여러 곳의 표본 조사구를 찾아가는 데 쓰일 상세 지도를 자동적으로 생성할 수 있는 맵 템플릿을 생성했습니다. 여러분도 "
 "경험했듯이 쉬운 작업은 아니었지만, 이렇게 저장한 템플릿은 향후 여러분이 다른 지역의 유사한 지도를 생성해야 할 때 큰 도움이 될 "
 "겁니다."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:468
 msgid "What's Next?"
 msgstr "다음은 무엇을 배우게 될까요?"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:470
+msgid ""
+"In the next lesson, you will see how you can use LiDAR data to create a DEM "
+"and then use it to enhance your data and maps visibility."
+msgstr ""
+"다음 수업에서는 LiDAR 데이터를 이용해서 DEM을 생성하는 방법과, DEM을 통해 여러분의 데이터와 맵의 시인성을 향상시키는 방법을 "
+"배울 것입니다."
