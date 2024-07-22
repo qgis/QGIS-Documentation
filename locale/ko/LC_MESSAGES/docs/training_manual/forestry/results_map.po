@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/forestry/results_map.rst:2
+msgid "Lesson: Map Presentation"
+msgstr "수업: 맵 프레젠테이션"
 
 #: ../../docs/training_manual/forestry/results_map.rst:4
 msgid ""
@@ -41,8 +45,8 @@ msgid ""
 "created maps for the field work and calculated forest parameters from the "
 "field measurements."
 msgstr ""
-"이전 강의들에서 여러분은 옛날 삼림 목록 정보를 임포트하고, 현재 상황에 맞게 업데이트하고, 삼림 목록화 작업을 설계하고, 현장 작업을 "
-"위한 맵을 생성하고 현장 측정값으로부터 삼림 파라미터를 계산했습니다."
+"이전 수업들에서 여러분은 옛날 삼림 현황 정보를 가져오고, 현재 상황에 맞게 업데이트하고, 삼림 현황 정보 수집 작업을 설계하고, 현장 "
+"작업을 위한 맵을 생성하고 현장 측정값으로부터 삼림 파라미터를 계산했습니다."
 
 #: ../../docs/training_manual/forestry/results_map.rst:8
 msgid ""
@@ -51,41 +55,45 @@ msgid ""
 "anyone to have a good idea of what the results are in a quick glance, "
 "without looking at the specific numbers."
 msgstr ""
-"GIS 프로젝트의 결과물로 맵을 생성하는 일은 중요합니다. 삼림 목록화 작업의 결과를 보여주는 맵이 있다면 누구라도 특정한 숫자들을 "
-"들여다 볼 필요없이 한 눈에 어떤 결과가 나왔는지 쉽게 알 수 있게 됩니다."
+"GIS 프로젝트의 결과물을 맵으로 생성하는 일은 중요합니다. 삼림 현황 정보 수집 작업의 결과를 보여주는 맵이 있다면 누구라도 특정한 "
+"숫자들을 들여다 볼 필요없이 한 눈에 어떤 결과가 나왔는지 쉽게 알 수 있게 됩니다."
 
 #: ../../docs/training_manual/forestry/results_map.rst:13
 msgid ""
 "**The goal for this lesson:** Create a map to present the inventory results "
 "using a hillshade raster as background."
-msgstr "**이 강의의 목표:** 음영기복도 래스터를 배경으로 목록화 작업 결과를 보여주는 맵 생성하기."
+msgstr "**이 수업의 목표:** 음영기복도 래스터를 배경으로 현황 정보 수집 작업 결과를 보여주는 맵 생성하기."
+
+#: ../../docs/training_manual/forestry/results_map.rst:17
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Preparing the Map Data"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 맵 데이터 준비하기"
 
 #: ../../docs/training_manual/forestry/results_map.rst:19
 msgid ""
 "Open the QGIS project from the parameters calculations lesson, "
 ":kbd:`forest_inventory.qgs`. Keep at least the following layers:"
 msgstr ""
-"파라미터 계산 강의에서 저장했던 :kbd:`forest_inventory.qgs` QGIS 프로젝트를 여십시오. 적어도 다음 레이어들은 "
-"유지하십시오."
+"파라미터 계산 수업에서 저장했던 :file:`forest_inventory.qgs` QGIS 프로젝트를 여십시오. 적어도 다음 레이어들은"
+" 유지하십시오:"
 
 #: ../../docs/training_manual/forestry/results_map.rst:22
 msgid ":kbd:`forest_stands_2012_results`."
-msgstr ":kbd:`forest_stands_2012_results` 레이어"
+msgstr ":file:`forest_stands_2012_results` 레이어"
 
 #: ../../docs/training_manual/forestry/results_map.rst:23
 msgid ":kbd:`basic_map`."
-msgstr ":kbd:`basic_map` 레이어"
+msgstr ":file:`basic_map` 레이어"
 
 #: ../../docs/training_manual/forestry/results_map.rst:24
 msgid ":kbd:`rautjarvi_aerial`."
-msgstr ":kbd:`rautjarvi_aerial` 레이어"
+msgstr ":file:`rautjarvi_aerial` 레이어"
 
 #: ../../docs/training_manual/forestry/results_map.rst:25
 msgid ""
 ":kbd:`lakes` (if you don't have it, add it from the "
 ":kbd:`exercise_data\\\\forestry\\\\` folder)."
 msgstr ""
-":kbd:`lakes` 레이어 (프로젝트에 이 레이어가 없을 경우 :kbd:`exercise_data\\\\forestry\\\\` "
+":file:`lakes` 레이어 (프로젝트에 이 레이어가 없을 경우 :file:`exercise_data\\\\forestry\\\\` "
 "폴더에서 추가하십시오.)"
 
 #: ../../docs/training_manual/forestry/results_map.rst:27
@@ -98,14 +106,14 @@ msgid ""
 ":kbd:`-999`, knowing that those negative numbers mean there is no data for "
 "those polygons."
 msgstr ""
-"여러분은 맵에 수종경계의 평균 목재 부피를 보여줄 것입니다. :kbd:`forest_stands_2012_results` 레이어의 "
-":guilabel:`Attribute table` 을 열면 정보가 없는 수종경계의 :kbd:`NULL` 값을 볼 수 있습니다. 이 "
-"수종경계들에도 심볼을 적용하려면 :kbd:`NULL` 값을 해당 폴리곤에 데이터가 없다는 사실을 알 수 있는 음수로, 예를 들면 "
-":kbd:`-999` 로 변경해야 합니다."
+"여러분은 맵에 수종경계의 평균 목재 부피를 보여줄 것입니다. :file:`forest_stands_2012_results` 레이어의 "
+":guilabel:`Attribute table` 을 열면 정보가 없는 수종경계의 :file:`NULL` 값을 볼 수 있습니다. 이 "
+"수종경계들에도 심볼을 적용하려면 :file:`NULL` 값을 해당 폴리곤에 데이터가 없다는 사실을 알 수 있는 음수로, 예를 들면 "
+":file:`-999` 로 변경해야 합니다."
 
 #: ../../docs/training_manual/forestry/results_map.rst:34
 msgid "For the :kbd:`forest_stands_2012_results` layer:"
-msgstr ":kbd:`forest_stands_2012_results` 레이어에 대해,"
+msgstr ":file:`forest_stands_2012_results` 레이어에 대해,"
 
 #: ../../docs/training_manual/forestry/results_map.rst:36
 msgid "Open the :guilabel:`Attribute table` and enable editing."
@@ -113,13 +121,14 @@ msgstr ":guilabel:`Attribute table` 을 열고 편집 모드를 활성화하십�
 
 #: ../../docs/training_manual/forestry/results_map.rst:37
 msgid "Select the polygons with :kbd:`NULL` values."
-msgstr ":kbd:`NULL` 값을 가진 폴리곤들을 선택하십시오."
+msgstr ":file:`NULL` 값을 가진 폴리곤들을 선택하십시오."
 
 #: ../../docs/training_manual/forestry/results_map.rst:38
 msgid ""
 "Use the calculator to update the values of the :kbd:`MEANVol` field to "
 ":kbd:`-999` only for the selected features."
-msgstr "계산기를 이용해서 선택한 피처에 대해서만 :kbd:`MEANVol` 항목의 값을 :kbd:`-999` 로 업데이트하십시오. "
+msgstr ""
+"계산기를 이용해서 선택한 피처에 대해서만 :file:`MEANVol` 항목의 값을 :file:`-999` 로 업데이트하십시오. "
 
 #: ../../docs/training_manual/forestry/results_map.rst:40
 msgid "Disable editing and save the changes."
@@ -142,8 +151,8 @@ msgid ""
 "Select the :kbd:`forest_stands_2012_results.qml` from the "
 ":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
 msgstr ""
-":kbd:`exercise_data\\\\forestry\\\\results\\\\` 폴더에서 "
-":kbd:`forest_stands_2012_results.qml` 을 선택하십시오."
+":file:`exercise_data\\\\forestry\\\\results\\\\` 폴더에서 "
+":file:`forest_stands_2012_results.qml` 을 선택하십시오."
 
 #: ../../docs/training_manual/forestry/results_map.rst:47
 msgid "Click :guilabel:`OK`."
@@ -152,6 +161,10 @@ msgstr ":guilabel:`OK` 를 클릭합니다."
 #: ../../docs/training_manual/forestry/results_map.rst:52
 msgid "Your map will look something like this:"
 msgstr "사용자 맵이 다음과 비슷하게 보일 것입니다:"
+
+#: ../../docs/training_manual/forestry/results_map.rst:59
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Try Different Blending Modes"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 서로 다른 혼합 모드들을 시험해보기"
 
 #: ../../docs/training_manual/forestry/results_map.rst:61
 msgid "The style you loaded:"
@@ -165,9 +178,9 @@ msgid ""
 "forest stands are used. You can read about these modes in the :ref:`User "
 "Guide <blend-modes>`."
 msgstr ""
-":guilabel:`Layer blending mode` 에 :kbd:`Hard light` 모드를 사용하고 있습니다. 서로 다른 모드는"
-" 아래위 레이어를 결합하는 데 서로 다른 필터를 적용한다는 사실을 유념하십시오. 이 경우에는 음영기복도 래스터와 수종경계 레이어입니다. "
-"`사용자 지침서 <blend-modes>`_ 에서 이 모드들에 대해 알아볼 수 있습니다."
+":guilabel:`Layer blending mode` 에 :file:`Hard light` 모드를 사용하고 있습니다. 서로 다른 "
+"모드는 아래위 레이어를 결합하는 데 서로 다른 필터를 적용한다는 사실을 유념하십시오. 이 경우에는 음영기복도 래스터와 수종경계 "
+"레이어입니다. `사용자 지침서 <blend-modes>`_ 에서 이 모드들에 대해 알아볼 수 있습니다."
 
 #: ../../docs/training_manual/forestry/results_map.rst:71
 msgid ""
@@ -176,6 +189,12 @@ msgid ""
 msgstr ""
 "서로 다른 모드들을 적용해 보고 맵이 어떻게 달라지는지 살펴보십시오. 그 다음 마지막 맵에 가장 어울린다고 생각되는 모드를 선택하십시오."
 
+#: ../../docs/training_manual/forestry/results_map.rst:76
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Using a Layout Template to Create "
+"the Map result"
+msgstr ":abbr:`★☆☆ (초급 수준)` 혼자서 해보세요: 조판 템플릿을 사용해서 맵 결과물을 생성하기"
+
 #: ../../docs/training_manual/forestry/results_map.rst:78
 msgid ""
 "Use a template prepared in advanced to present the results. The template "
@@ -183,8 +202,8 @@ msgid ""
 ":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder. Load it using the "
 ":menuselection:`Project --> Layout Manager...` dialog."
 msgstr ""
-"고급 과정에서 준비한 템플릿을 이용해서 결과물을 생성하십시오. :kbd:`forest_map.qpt` 템플릿은 "
-":kbd:`exercise_data\\\\forestry\\\\results\\\\` 폴더에 있습니다. 메뉴의 "
+"고급 과정에서 준비한 템플릿을 이용해서 결과물을 생성하십시오. :file:`forest_map.qpt` 템플릿은 "
+":file:`exercise_data\\\\forestry\\\\results\\\\` 폴더에 있습니다. 메뉴의 "
 ":menuselection:`Project --> Layout Manager...` 대화 창을 통해 불러오십시오."
 
 #: ../../docs/training_manual/forestry/results_map.rst:85
@@ -213,6 +232,6 @@ msgid ""
 "given you a good starting point to explore how you could achieve the "
 "specific results you need."
 msgstr ""
-"이 강의를 통해 여러분은 기본적인 삼림 목록화 작업을 어떻게 계획하고 QGIS를 통해 보여줄 수 있는지 배웠습니다. 여러분이 사용할 수 "
-"있는 여러 가지 도구들을 통해 더 많은 삼림 분석이 가능합니다만, 이 교재에서 여러분이 어떻게 필요한 특정 결과물을 얻을 수 있는지에 "
-"대한 굳건한 첫 발걸음을 디디게 되었기를 바랍니다."
+"이 강의를 통해 여러분은 기본적인 삼림 현황 정보 수집 작업을 어떻게 계획하고 QGIS를 통해 보여줄 수 있는지 배웠습니다. 여러분이 "
+"사용할 수 있는 여러 가지 도구들을 통해 더 많은 삼림 분석이 가능합니다만, 이 교재에서 여러분이 어떻게 필요한 특정 결과물을 얻을 수 "
+"있는지에 대한 굳건한 첫 발걸음을 디디게 되었기를 바랍니다."
