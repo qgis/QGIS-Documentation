@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:2
+msgid "Lesson: Calculating the Forest Parameters"
+msgstr "수업: 삼림 파라미터 계산하기"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:4
 msgid ""
@@ -41,28 +45,70 @@ msgid ""
 "information gathered in the field to calculate the forest parameters, for "
 "the whole forest first, and then for the stands you digitized before."
 msgstr ""
-"삼림 목록화 작업의 목표는 삼림 파라미터를 계측하는 것입니다. 지난 강의 예제에 이어서, 현장에서 수집한 목록 정보를 통해 먼저 삼림 "
-"전체의, 그 다음 이전에 디지털화한 수종경계의 파라미터를 계산할 것입니다."
+"삼림 현황 정보 작업의 목표는 삼림 파라미터를 계측하는 것입니다. 지난 수업 예제에 이어서, 현장에서 수집한 현황 정보를 통해 먼저 삼림"
+" 전체의, 그 다음 이전에 디지타이즈한 수종경계의 파라미터를 계산할 것입니다."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:9
 msgid ""
 "**The goal for this lesson:** Calculate forest parameters at general and "
 "stand level."
-msgstr "**이 강의의 목표:** 전체 및 수종경계 수준의 삼림 파라미터를 계산하기."
+msgstr "**이 수업의 목표:** 전체 및 수종경계 수준의 삼림 파라미터를 계산하기."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:12
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Adding the Inventory Results"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 현황 정보 수집 결과 추가하기"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:14
 msgid ""
 "The field teams visited the forest and with the help of the information you "
 "provided, gathered information about the forest at every sample plot."
-msgstr "현장 팀이 삼림에 나가 여러분이 제공한 정보를 바탕으로 모든 표본 조사구에서 삼림에 관한 정보를 수집했습니다."
+msgstr "현장 조사팀이 삼림에 나가 여러분이 제공한 정보를 바탕으로 모든 표본 조사구에서 삼림에 관한 정보를 수집했습니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:17
+msgid ""
+"Most often the information will be collected into paper forms in the field, "
+"then typed to a spreadsheet. The sample plots information has been condensed"
+" into a :file:`.csv` file that can be easily open in QGIS."
+msgstr ""
+"대부분의 경우 현장에서 수집된 정보는 종이 양식에 기록되며, 그 다음 스프레드시트에 입력될 것입니다. 표본 조사구 정보는 QGIS에서 "
+"쉽게 열어볼 수 있는 :file:`.csv` 파일로 간추려졌습니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:21
+msgid ""
+"Continue with the QGIS project from the lesson about designing the "
+"inventory, you probably named it :file:`forest_inventory.qgs`."
+msgstr ""
+"현황 정보 설계에 관한 수업에서 만든 QGIS 프로젝트를 여십시오. 아마도 :file:`forest_inventory.qgs` 라는 "
+"이름의 파일일 겁니다."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:24
 msgid "First, add the sample plots measurements to your QGIS project:"
 msgstr "먼저 QGIS 프로젝트에 표본 조사구 측정값을 추가해봅시다."
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:26
+msgid ""
+"Go to :menuselection:`Layer --> Add Layer --> Add Delimited Text Layer...`."
+msgstr ""
+"메뉴에서 :menuselection:`Layer --> Add Layer --> Add Delimited Text Layer...` 를 "
+"선택합니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:27
+msgid ""
+"Browse to the file :file:`systematic_inventory_results.csv` located in "
+":file:`exercise_data/forestry/results/`."
+msgstr ""
+":file:`exercise_data/forestry/results/` 폴더에 있는 "
+":file:`systematic_inventory_results.csv` 파일을 찾으십시오."
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:29
 msgid "Make sure that the :guilabel:`Point coordinates` option is checked."
-msgstr ":guilabel:`Point coordinates` 체크박스를 체크했는지 확인하십시오."
+msgstr ":guilabel:`Point coordinates` 옵션을 체크했는지 확인하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:30
+msgid ""
+"Set the fields for the coordinates to the :guilabel:`X` and :guilabel:`Y` "
+"fields."
+msgstr "좌표 용 필드들을 :guilabel:`X` 와 :guilabel:`Y` 로 설정하십시오."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:31
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:64
@@ -72,21 +118,110 @@ msgstr ":guilabel:`Point coordinates` 체크박스를 체크했는지 확인하�
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` 를 클릭합니다."
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:32
+msgid "When prompted, select :guilabel:`ETRS89 / ETRS-TM35FIN` as the CRS."
+msgstr "좌표계 대화창이 뜨면 :guilabel:`ETRS89 / ETRS-TM35FIN` 좌표계를 선택합니다."
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:33
 msgid ""
 "Open the new layer's :guilabel:`Attribute table` and have a look at the "
 "data."
 msgstr "새 레이어의 :guilabel:`Attribute table` 을 열고 데이터를 살펴보십시오."
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:35
+msgid ""
+"You can read the type of data that is contained in the sample plots "
+"measurements in the text file :file:`legend_2012_inventorydata.txt` located "
+"in the :file:`exercise_data/forestry/results/` folder."
+msgstr ""
+":file:`exercise_data/forestry/results/` 폴더에 있는 "
+":file:`legend_2012_inventorydata.txt` 텍스트 파일의 표본 조사구 측정값에 담겨 있는 데이터 유형을 읽을 수"
+" 있습니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:39
+msgid ""
+"The :file:`systematic_inventory_results` layer you just added is actually "
+"just a virtual representation of the text information in the :file:`.csv` "
+"file. Before you continue, convert the inventory results to a real spatial "
+"dataset:"
+msgstr ""
+"여러분이 방금 추가한 :file:`systematic_inventory_results` 레이어는 실제로는 단지 :file:`.csv` "
+"파일에 있는 텍스트 정보를 가상으로 표현한 것일 뿐입니다. 계속하기 전에, 현황 정보 결과를 실제 공간 데이터셋으로 변환하십시오:"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:43
+msgid "Right click on the :file:`systematic_inventory_results` layer."
+msgstr ":file:`systematic_inventory_results` 레이어를 오른쪽 클릭하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:44
+msgid "Browse to :file:`exercise_data/forestry/results/` folder."
+msgstr ":file:`exercise_data/forestry/results/` 폴더로 가십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:45
+msgid "Name the file :file:`sample_plots_results.shp`."
+msgstr "파일 이름을 :file:`sample_plots_results.shp` 로 지정하십시오."
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:46
 msgid "Check :guilabel:`Add saved file to map`."
 msgstr ":guilabel:`Add saved file to map` 체크박스를 체크하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:47
+msgid ""
+"Remove the :file:`systematic_inventory_results` layer from your project."
+msgstr "프로젝트에서 :file:`systematic_inventory_results` 레이어를 제거하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:50
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Whole Forest Parameters Estimation"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 전체 삼림 파라미터 계측하기"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:52
+msgid ""
+"You can calculate the averages for this whole forest area from the inventory"
+" results for the some interesting parameters, like the volume and the number"
+" of stems per hectare. Since the systematic sample plots represent equal "
+"areas, you can directly calculate the averages of the volumes and number of "
+"stems per hectare from the :file:`sample_plots_results` layer."
+msgstr ""
+"이 현황 정보 결과로부터 전체 삼림 지역의 헥타르 당 수간(樹幹)의 부피와 개수 같은 흥미로운 몇몇 파라미터들의 평균값을 계산할 수 "
+"있습니다. 체계적인 표본 조사구들이 동일한 면적을 가졌기 때문에, :file:`sample_plots_results` 레이어로부터 헥타르"
+" 당 수간의 부피와 개수의 평균값을 직접 계산할 수 있습니다."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:58
 msgid ""
 "You can calculate the average of a field in a vector layer using the "
 ":guilabel:`Basic statistics` tool:"
-msgstr ":guilabel:`Basic statistics` 도구를 통해 벡터 레이어가 담고 있는 항목의 평균값을 계산할 수 있죠."
+msgstr ""
+":guilabel:`Basic statistics` 도구를 사용하면 벡터 레이어가 담고 있는 필드의 평균값을 계산할 수 있죠."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:61
+msgid ""
+"Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
+"Fields`."
+msgstr ""
+":menuselection:`Vector --> Analysis Tools --> Basic statistics for Fields` "
+"도구를 여십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:62
+msgid "Select ``sample_plots_results`` as the :guilabel:`Input Vector Layer`."
+msgstr ":guilabel:`Input Vector Layer` 에 ``sample_plots_results`` 를 선택하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:63
+msgid "Select ``Vol`` as :guilabel:`Target field`."
+msgstr ":guilabel:`Target field` 에 ``Vol`` 을 선택하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:66
+msgid "The average volume in the forest is ``135.2 m3/ha``."
+msgstr "삼림에 있는 나무들의 평균 부피는 ``135.2 m3/ha`` 입니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:68
+msgid ""
+"You can calculate the average for the number of stems in the same way, "
+"``2745 stems/ha``."
+msgstr "수간들의 평균 개수도 같은 방법으로 계산할 수 있습니다. ``2745 stems/ha`` 입니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:74
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Estimating Stand Parameters"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 수종경계 파라미터 계측하기"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:76
 msgid ""
@@ -101,10 +236,10 @@ msgid ""
 "number of stands just using the planned plots."
 msgstr ""
 "이 체계적인 표본 조사구를 이용하면 여러분이 이전 강의에서 디지타이즈했던 각각의 수종경계의 계측값을 계산할 수 있습니다. 수종경계들 "
-"가운데 일부는 그 안에 위치한 표본 조사구가 없어 관련 정보를 얻을 수 없었습니다. 체계적인 목록화 작업을 계획했을 때 이를 위해 몇몇 "
-"추가 표본 조사구를 설계해서 현장 팀이 해당 추가 조사구를 측정하게 했을 수도 있습니다. 또는 나중에 현장 팀을 다시 보내 정보가 없는 "
-"수종경계를 조사하게 해서 수종경계 목록화 작업을 완성시킬 수도 있을 겁니다. 어쨌든, 계획된 표본 조사구만으로도 대부분의 수종경계에 대한"
-" 정보를 얻을 수 있습니다."
+"가운데 일부는 그 안에 위치한 표본 조사구가 없어 관련 정보를 얻을 수 없었습니다. 체계적인 현황 정보 수집 작업을 계획했을 때 이를 "
+"위해 몇몇 추가 표본 조사구를 설계해서 현장 팀이 해당 추가 조사구를 측정하게 했을 수도 있습니다. 또는 나중에 현장 팀을 다시 보내 "
+"정보가 없는 수종경계를 조사하게 해서 수종경계 현황 정보 수집 작업을 완성시킬 수도 있을 겁니다. 어쨌든, 계획된 표본 조사구만으로도 "
+"대부분의 수종경계에 대한 정보를 얻을 수 있습니다."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:85
 msgid ""
@@ -113,7 +248,7 @@ msgid ""
 " on their relative locations, you perform a spatial join:"
 msgstr ""
 "여러분이 해야 할 일은 각 수종경계 안에 위치한 표본 조사구들의 평균값을 구하는 것입니다. 상대적인 위치를 바탕으로 정보를 종합하고자 할"
-" 경우, 공간 결합(join) 작업을 수행해야 합니다."
+" 경우, 공간 결합(spatial join) 작업을 수행해야 합니다:"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:89
 msgid ""
@@ -123,6 +258,22 @@ msgstr ""
 "메뉴에서 :menuselection:`Vector --> Data Management --> Join attributes by "
 "location` 을 클릭하십시오."
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:91
+msgid ""
+"Set ``forest_stands_2012`` as the :guilabel:`Target vector layer`. The layer"
+" you want the results for."
+msgstr ""
+":guilabel:`Target vector layer` 에 ``forest_stands_2012`` 를 설정하십시오. 여러분이 결과물을"
+" 보길 원하는 레이어입니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:93
+msgid ""
+"Set ``sample_plots_results`` as the :guilabel:`Join vector layer`. The layer"
+" you want to calculate estimates from."
+msgstr ""
+":guilabel:`Join vector layer` 에 ``sample_plots_results`` 를 설정하십시오. 여러분이 계측값을"
+" 계산하려는 레이어입니다."
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:95
 msgid "Check :guilabel:`Take summary of intersecting features`."
 msgstr ":guilabel:`Take summary of intersecting features` 체크박스를 체크하십시오."
@@ -130,6 +281,14 @@ msgstr ":guilabel:`Take summary of intersecting features` 체크박스를 체크
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:96
 msgid "Check to calculate only the :guilabel:`Mean`."
 msgstr ":guilabel:`Mean` 만 계산하도록 체크하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:97
+msgid ""
+"Name the result as :file:`forest_stands_2012_results.shp` and save it in the"
+" :file:`exercise_data/forestry/results/` folder."
+msgstr ""
+"결과물의 이름을 :file:`forest_stands_2012_results.shp` 로 지정하고, "
+":file:`exercise_data/forestry/results/` 폴더에 저장하십시오."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:99
 msgid ""
@@ -141,17 +300,44 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:102
 msgid "Accept adding the new layer to your project when prompted."
-msgstr "대화 창이 뜨면 새 레이어를 프로젝트에 추가하도록 선택하십시오."
+msgstr "대화창이 뜨면 프로젝트에 새 레이어를 추가하도록 선택하십시오."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:103
 msgid "Close the :guilabel:`Join attributes by location` tool."
 msgstr ":guilabel:`Join attributes by location` 도구를 닫으십시오."
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:105
+msgid ""
+"Open the :guilabel:`Attribute table` for "
+":guilabel:`forest_stands_2012_results` and review the results you got. Note "
+"that a number of forest stands have ``NULL`` as the value for the "
+"calculations, those are the ones having no sample plots. Select them all and"
+" view them in the map, they are some of the smaller stands:"
+msgstr ""
+"``forest_stands_2012_results`` 레이어의 :guilabel:`Attribute table` 을 열어 결과물을 "
+"검토하십시오. 계산한 값이 ``NULL`` 인 삼림 수종경계들의 번호를 기억해두세요. 표본 조사구가 없는 수종경계들입니다. 이 "
+"수종경계들을 모두 선택한 다음 맵에서 살펴보십시오. 면적이 작은 편인 수종경계들일 겁니다:"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:114
+msgid ""
+"Let's calculate now the same averages for the whole forest as you did "
+"before, only this time you will use the averages you got for the stands as "
+"the bases for the calculation. Remember that in the previous situation, each"
+" sample plot represented a theoretical stand of ``80x80 m``. Now you have to"
+" consider the area of each of the stands individually instead. That way, "
+"again, the average values of the parameters that are in, for example, m3/ha "
+"for the volumes are converted to total volumes for the stands."
+msgstr ""
+"이제 전체 삼림에 대해 이전과 같은 방법으로 동일한 평균값을 계산해봅시다. 다만 이번에는 수종경계에서 얻은 평균값들을 기반으로 계산할 "
+"것입니다. 이전 상황에서 각 표본 조사구가 ``80x80 m`` 크기의 이론적인 수종경계를 나타냈다는 사실을 기억하십시오. 이번에는 그게"
+" 아니라 각 수종경계의 면적을 개별적으로 연산에 넣어야 합니다. 이렇게 하면, 예를 들어 부피의 경우 ㎥/ha 당 파라미터 평균값이 "
+"수종경계의 총 부피로 변환됩니다."
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:122
 msgid ""
 "You need to first calculate the areas for the stands and then calculate "
 "total volumes and stem numbers for each of them:"
-msgstr "먼저 각 수종경계의 면적을 계산한 다음 각 수종경계의 전체 목재 부피와 수간 개수를 계산해야 합니다."
+msgstr "먼저 각 수종경계의 면적을 계산한 다음 각 수종경계의 목재의 총 부피와 수간 개수를 계산해야 합니다:"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:125
 msgid "In the :guilabel:`Attribute table` enable editing."
@@ -161,19 +347,51 @@ msgstr ":guilabel:`Attribute table` 의 편집 모드를 활성화하십시오."
 msgid "Open the :guilabel:`Field calculator`."
 msgstr ":guilabel:`Field calculator` 를 실행하십시오."
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:127
+msgid "Create a new field called ``area``."
+msgstr "``area`` 라는 새 필드를 생성하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:128
+msgid "Set the :guilabel:`Output field type` to ``Decimal number (real)``."
+msgstr ":guilabel:`Output field type` 을 ``Decimal number (real)`` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:129
+msgid "Set the :guilabel:`Precision` to ``2``."
+msgstr ":guilabel:`Precision` 을 ``2`` 로 설정하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:130
+msgid ""
+"In the :guilabel:`Expression` box, write ``$area / 10000``. This will "
+"calculate the area of the forest stands in ha."
+msgstr ""
+":guilabel:`Expression` 란에 ``$area / 10000`` 이라고 입력하십시오. 이 공식이 수종경계의 면적을 헥타르 "
+"단위로 계산하게 할 것입니다."
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:134
 msgid ""
 "Now calculate a field with the total volumes and number of stems estimated "
 "for every stand:"
-msgstr "이제 모든 수종경계에 대해 전체 목재 부피와 수간 개수의 계측값을 계산해봅시다."
+msgstr "이제 모든 수종경계에 대해 목재 총 부피와 수간 개수의 계측값을 계산해봅시다:"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:136
+msgid "Name the fields ``s_vol`` and ``s_stem``."
+msgstr "``s_vol`` 과 ``s_stem`` 이라는 새 필드를 생성하십시오."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:137
 msgid "The fields can be integer numbers or you can use real numbers also."
-msgstr "이 항목들을 정수형으로 설정해도 되고, 실수형으로 설정해도 됩니다."
+msgstr "이 필드들을 정수형으로 설정해도 되고, 실수형으로 설정해도 됩니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:138
+msgid ""
+"Use the expressions ``\"area\"  *  \"MEANVol\"`` and ``\"area\"  *  "
+"\"MEANStems\"`` for total volumes and total stems respectively."
+msgstr ""
+"총 부피와 수간 개수에 대해 각각 ``\"area\" * \"MEANVol\"`` 과 ``\"area\" * \"MEANStems\"``"
+" 라는 표현식을 사용하십시오."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:140
 msgid "Save the edits when you are finished."
-msgstr "입력을 완료하면 변경 사항을 저장하십시오."
+msgstr "작업을 완료하면 변경 사항을 저장하십시오."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:141
 msgid "Disable editing."
@@ -187,14 +405,71 @@ msgid ""
 "volumes or number of stems by the sum of the areas of the stands containing "
 "information."
 msgstr ""
-"이전 단계에서 모든 표본 조사구의 면적은 동일했기 때문에 표본 조사구의 평균값을 계산하는 것만으로 충분했습니다. 이번 단계에서 계측값을 "
-"계산하기 위해서는, 수종경계의 목재 부피 또는 수간 개수의 합을 정보를 담고 있는 수종경계들의 면적의 합으로 나눠주어야 합니다."
+"이전 단계에서는 모든 표본 조사구의 면적이 동일했기 때문에 표본 조사구의 평균값을 계산하는 것만으로 충분했습니다. 이번 단계에서 계측값을"
+" 계산하기 위해서는, 수종경계의 목재 부피 또는 수간 개수의 합을 정보를 담고 있는 수종경계들의 면적의 합으로 나눠주어야 합니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:148
+msgid ""
+"In the :guilabel:`Attribute table` for the "
+":file:`forest_stands_2012_results` layer, select all the stands containing "
+"information."
+msgstr ""
+"``forest_stands_2012_results`` 레이어의 :guilabel:`Attribute table` 에서 정보를 담고 있는"
+" 수종경계들을 전부 선택하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:150
+msgid ""
+"Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
+"fields`."
+msgstr ""
+":menuselection:`Vector --> Analysis Tools --> Basic statistics for Fields` "
+"도구를 여십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:151
+msgid ""
+"Select the :file:`forest_stands_2012_results` as the :guilabel:`Input "
+"layer`."
+msgstr ":guilabel:`Input layer` 에 ``forest_stands_2012_results`` 를 선택하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:152
+msgid "Select ``area`` as :guilabel:`Field to calculate statistics on`."
+msgstr ":guilabel:`Field to calculate statistics on` 에 ``area`` 를 선택하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:153
+msgid "Check the :guilabel:`Selected features only`"
+msgstr ":guilabel:`Selected features only` 옵션을 체크하십시오."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:159
+msgid ""
+"As you can see, the total sum of the stands' areas is ``66.04 ha``. Note "
+"that the area of the missing forest stands is only about ``7 ha``."
+msgstr "수종경계들의 면적의 총합은 ``66.04 ha`` 입니다. 누락된 수종경계들의 면적은 약 ``7 ha`` 뿐입니다."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:162
+msgid ""
+"In the same way, you can calculate that the total volume for these stands is"
+" ``8908 m3/ha`` and the total number of stems is ``179594 stems``."
+msgstr ""
+"동일한 방법으로, 이 수종경계들의 목재 총 부피가 ``8908 m3/ha`` 이며 수간 개수는 ``179594 stems`` 라고 계산할"
+" 수 있습니다."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:165
 msgid ""
 "Using the information from the forest stands, instead of directly using that"
 " from the sample plots, gives the following average estimates:"
-msgstr "표본 조사구의 정보를 그대로 이용하는 대신, 수종경계의 정보를 이용하면 다음 평균 계측값을 얻을 수 있습니다."
+msgstr "표본 조사구의 정보를 그대로 사용하는 대신, 수종경계의 정보를 직접 이용하면 다음 평균 계측값을 얻을 수 있습니다:"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:168
+msgid "``184.9 m3/ha`` and"
+msgstr "``184.9 m3/ha``"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:169
+msgid "``2719 stems/ha``."
+msgstr "``2719 stems/ha``"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:171
+msgid "Save your QGIS project, :file:`forest_inventory.qgs`."
+msgstr "여러분의 QGIS 프로젝트인 :file:`forest_inventory.qgs` 파일을 저장하십시오."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:174
 msgid "In Conclusion"
@@ -209,9 +484,9 @@ msgid ""
 "the particular stands, which could be used to plan the management of the "
 "forest in the coming years."
 msgstr ""
-"여러분의 체계적인 표본 조사구의 정보를 통해, 먼저 삼림의 특성을 고려하지 않고 항공사진을 해석해 수종경계를 생성한 것을 이용하지 않은 "
-"채, 전체 삼림에 대한 계측값을 계산해보았습니다. 그리고 또 특정 수종경계에 대한 귀중한 정보도 얻었습니다. 향후 몇 년 간 이 정보를 "
-"사용해 삼림관리 계획을 수립할 수 있을 것입니다."
+"여러분의 체계적인 표본 조사구의 정보를 통해, 먼저 삼림의 특성을 고려하지 않고 그리고 항공사진을 해석해 생성한 수종경계를 이용하지 "
+"않고서 전체 삼림에 대한 계측값을 계산해보았습니다. 그리고 또 특정 수종경계에 대한 귀중한 정보도 얻었습니다. 향후 몇 년 간 이 정보를"
+" 사용해 삼림관리 계획을 수립할 수 있을 것입니다."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:183
 msgid "What's Next?"
@@ -223,5 +498,5 @@ msgid ""
 " LiDAR dataset which you will use to prepare a map presentation with the "
 "forest results you just calculated."
 msgstr ""
-"다음 강의에서는, 먼저 LiDAR 데이터셋을 기반으로 음영기복도 배경을 생성한 다음 여러분이 방금 계산한 결과와 함께 사용해서 맵 "
+"다음 수업에서는, 먼저 LiDAR 데이터셋을 기반으로 음영기복 배경을 생성한 다음 여러분이 방금 계산한 결과물과 함께 사용해서 맵 "
 "프리젠테이션을 준비할 것입니다."
