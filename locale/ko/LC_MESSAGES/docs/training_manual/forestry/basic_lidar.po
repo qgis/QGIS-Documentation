@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:2
+msgid "Lesson: DEM from LiDAR Data"
+msgstr "수업: LiDAR 데이터로부터 DEM 생성하기"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:4
 msgid ""
@@ -40,23 +44,26 @@ msgid ""
 "You could use the basic map or the aerial image you have been using before, "
 "but a hillshade raster of the terrain will look nicer in some situations."
 msgstr ""
-"다른 배경 이미지를 이용해서 맵의 외관을 향상시킬 수 있습니다. 기본 맵이나 이전에 사용했던 항공사진을 쓸 수도 있지만, 어떤 상황에서는"
-" 해당 지형의 음영기복도 래스터가 나을 수도 있습니다."
+"서로 다른 배경 이미지들을 사용해서 맵의 외관을 향상시킬 수 있습니다. 기본 맵이나 이전에 사용했던 항공사진을 쓸 수도 있지만, 어떤 "
+"상황에서는 해당 지형의 음영기복 래스터가 나을 수도 있습니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:8
 msgid ""
 "You will use LAStools to extract a DEM from a LiDAR dataset and then create "
 "a hillshade raster to use in your map presentation later."
 msgstr ""
-"LAStools 를 이용해서 LiDAR 데이터셋으로부터 DEM을 추출한 다음, 맵 프리젠테이션에 사용할 음영기복도 래스터를 생성할 "
+"LAStools 를 이용해서 LiDAR 데이터셋으로부터 DEM을 추출한 다음, 맵 프리젠테이션에 사용할 음영기복 래스터를 생성할 "
 "것입니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:11
 msgid ""
 "**The goal for this lesson:** Install LAStools and calculate a DEM from "
 "LiDAR data and a hillshade raster."
-msgstr ""
-"**이 강의의 목표:** LAStools를 설치하고 LiDAR 데이터로부터 DEM을 추출한 다음 음영기복도 래스터를 계산하기."
+msgstr "**이 수업의 목표:** LAStools를 설치하고 LiDAR 데이터로부터 DEM을 추출한 다음 음영기복 래스터를 계산하기."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:16
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Installing Lastools"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: LAStools 설치하기"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:18
 msgid ""
@@ -66,7 +73,7 @@ msgid ""
 "qgis>`_."
 msgstr ""
 "`LAStools <https://rapidlasso.com/2013/09/29/how-to-install-lastools-"
-"toolbox-in-qgis>`_ 가 제공하는 공간처리 프레임워크와 알고리듬을 이용하면 QGIS에서 LiDAR 데이터를 다룰 수 있게 "
+"toolbox-in-qgis>`_ 가 제공하는 공간 처리 프레임워크와 알고리즘을 이용하면 QGIS에서 LiDAR 데이터를 다룰 수 있게 "
 "됩니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:21
@@ -76,8 +83,8 @@ msgid ""
 "presentation purposes. First you will have to set up the "
 ":guilabel:`Processing` framework settings to properly work with LAStools:"
 msgstr ""
-"LiDAR 포인트 클라우드로부터 디지털 표고 모델(DEM)을 얻어 프리젠테이션을 위해 시각적으로 좀 더 직관적인 음영기복도 래스터를 "
-"생성할 수 있습니다. 먼저 LAStools를 제대로 다루기 위한 :guilabel:`Processing` 프레임워크를 설정해야 합니다."
+"LiDAR 점구름으로부터 디지털 표고 모델(DEM)을 얻어 프리젠테이션을 위해 시각적으로 좀 더 직관적인 음영기복 래스터를 생성할 수 "
+"있습니다. 먼저 LAStools를 제대로 다루기 위한 :guilabel:`Processing` 프레임워크를 설정해야 합니다:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:26
 msgid "Close QGIS, if you have already started it."
@@ -151,8 +158,8 @@ msgid ""
 "almost ready to use, you just need to set up the Processing framework to "
 "start using them:"
 msgstr ""
-"이제 플러그인 및 실제 알고리듬들을 여러분의 컴퓨터에 설치해서 사용할 준비가 거의 끝났습니다. 이 플러그인 및 실제 알고리듬들을 "
-"사용하려면 공간처리 프레임워크를 설정하기만 하면 됩니다."
+"이제 플러그인 및 실제 알고리즘들을 여러분의 컴퓨터에 설치해서 사용할 준비가 거의 끝났습니다. 이 플러그인 및 실제 알고리즘들을 "
+"사용하려면 공간 처리 프레임워크를 설정하기만 하면 됩니다:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:55
 msgid "Open a new project in QGIS."
@@ -168,7 +175,7 @@ msgstr "이 프로젝트를 :kbd:`forest_lidar.qgs` 라는 이름으로 저장�
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:59
 msgid "To setup the LAStools in QGIS:"
-msgstr "QGIS에서 LAStools를 설정해봅시다."
+msgstr "QGIS에서 LAStools를 설정해봅시다:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:61
 msgid "Go to :menuselection:`Processing --> Options and configuration`."
@@ -195,15 +202,20 @@ msgstr ""
 ":guilabel:`LAStools folder` 를 :kbd:`c:\\\\lastools\\\\` (또는 여러분이 LAStools를 "
 "압축 해제한 폴더)로 설정하십시오."
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:72
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Calculating a DEM with LAStools"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: LAStools를 사용해서 DEM 계산하기"
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:74
 msgid ""
 "You have already used the :menuselection:`Processing` toolbox in "
 ":doc:`../vector_analysis/spatial_statistics` to run some SAGA algorithms. "
 "Now you are going to use it to run LAStools programs:"
 msgstr ""
-"여러분은 :doc:`../vector_analysis/spatial_statistics` 강의에서 몇몇 SAGA 알고리듬을 실행하기 위해"
-" :menuselection:`Processing` 툴박스를 사용해본 경험이 있습니다. 이제 이 툴박스를 이용해서 LAStools "
-"프로그램을 실행해봅시다."
+"여러분은 :doc:`../vector_analysis/spatial_statistics` 에서 몇몇 SAGA 알고리즘을 실행하기 위해 "
+":menuselection:`Processing` 툴박스를 사용해본 경험이 있습니다. 이제 이 툴박스를 이용해서 LAStools "
+"프로그램을 실행해봅시다:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:77
 msgid "Open :menuselection:`Processing --> Toolbox`."
@@ -212,7 +224,7 @@ msgstr "메뉴에서 :menuselection:`Processing --> Toolbox` 를 클릭하십시
 #: ../../docs/training_manual/forestry/basic_lidar.rst:78
 msgid ""
 "In the dropdown menu at the bottom, select :guilabel:`Advanced interface`."
-msgstr "맨 아래의 드롭다운 메뉴에서 :guilabel:`Advanced interface` 를 선택하십시오."
+msgstr "하단에 있는 드롭다운 메뉴에서 :guilabel:`Advanced interface` 를 선택하십시오."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:79
 msgid "You should see the :guilabel:`Tools for LiDAR data` category."
@@ -223,14 +235,14 @@ msgid ""
 "Expand it to see the tools available, and expand also the "
 ":guilabel:`LAStools` category (the number of algorithms may vary)."
 msgstr ""
-"사용할 수 있는 도구가 보이도록 확장한 다음, :guilabel:`LAStools` 카테고리(알고리듬의 수는 변할 수 있습니다)도 "
-"확장하십시오."
+"사용할 수 있는 도구가 보이도록 펼친 다음, :guilabel:`LAStools` 카테고리(알고리즘의 개수는 변할 수 있습니다)도 "
+"펼치십시오."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:86
 msgid ""
 "Scroll down until you find the :guilabel:`lasview` algorithm, double click "
 "it to open."
-msgstr ":guilabel:`lasview` 알고리듬이 보일 때까지 스크롤한 뒤, 해당 알고리듬을 더블클릭하십시오."
+msgstr ":guilabel:`lasview` 알고리즘이 보일 때까지 스크롤한 뒤, 해당 알고리즘을 더블클릭하십시오."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:87
 msgid ""
@@ -251,7 +263,7 @@ msgid ""
 "Now you can see the LiDAR data in the :guilabel:`just a little LAS and LAZ "
 "viewer` dialog window:"
 msgstr ""
-"이제 :guilabel:`just a little LAS and LAZ viewer` 대화 창에서 LiDAR 데이터를 볼 수 있습니다."
+"이제 :guilabel:`just a little LAS and LAZ viewer` 대화창에서 LiDAR 데이터를 볼 수 있습니다:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:100
 msgid ""
@@ -259,8 +271,8 @@ msgid ""
 "just click and drag on the viewer to pan the LiDAR point cloud to see what "
 "it looks like."
 msgstr ""
-"이 뷰어 안에서 할 수 있는 작업은 많지만, 지금은 뷰어 상에서 LiDAR 데이터 클라우드를 클릭&드래그해서 이동시키면서 어떻게 이루어져"
-" 있는지 살펴보십시오."
+"이 뷰어 안에서 할 수 있는 작업은 많지만, 지금은 뷰어 상에서 LiDAR 점구름을 클릭&드래그해서 이동시키면서 어떻게 이루어져 있는지 "
+"살펴보십시오."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:103
 msgid ""
@@ -271,7 +283,7 @@ msgid ""
 msgstr ""
 "LAStools 사용법에 대해 더 자세히 알고 싶다면, :file:`C:\\\\lastools\\\\bin\\\\` 폴더에 있는 각 "
 "도구에 대한 :file:`README` 텍스트 파일을 읽어보십시오. 실습 예제 및 다른 자료는 `Rapidlasso 웹페이지 "
-"<https://rapidlasso.com/>`_ 에서 찾을 수 있습니다."
+"<https://rapidlasso.com/>`_ 에서 찾아볼 수 있습니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:107
 msgid "Close the viewer when you are ready."
@@ -283,7 +295,7 @@ msgid ""
 " the point cloud into :kbd:`ground` and :kbd:`no ground` points and then "
 "calculating a DEM using only the :kbd:`ground` points."
 msgstr ""
-"LAStools로 DEM을 생성하는 작업은 두 단계로 이루어집니다. 먼저 포인트 클라우드를 :kbd:`ground` 와 :kbd:`no "
+"LAStools로 DEM을 생성하는 작업은 두 단계로 이루어집니다. 먼저 점구름을 :kbd:`ground` 와 :kbd:`no "
 "ground` 포인트로 분류한 다음, :kbd:`ground` 포인트만으로 DEM을 생성하는 것입니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:113
@@ -298,7 +310,7 @@ msgstr ":guilabel:`Search...` 란을 찾아 :kbd:`lasground` 라고 입력하십
 msgid ""
 "Double click to open the :guilabel:`lasground` tool and set it as shown in "
 "this image:"
-msgstr "더블클릭해서 :guilabel:`lasground` 도구를 열고 다음 그림처럼 설정하십시오."
+msgstr ":guilabel:`lasground` 도구를 더블클릭해서 열고 다음 그림처럼 설정하십시오:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:120
 msgid ""
@@ -341,13 +353,13 @@ msgstr ":guilabel:`Processing Toolbox` 에서 :kbd:`las2dem` 을 검색하십시
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:139
 msgid "Open the :guilabel:`las2dem` tool and set it as shown in this image:"
-msgstr ":guilabel:`las2dem` 도구를 실행한 다음 다음 그림처럼 설정하십시오."
+msgstr ":guilabel:`las2dem` 도구를 실행한 다음 다음 그림처럼 설정하십시오:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:144
 msgid ""
 "The result DEM is added to your map with the generic name :kbd:`Output "
 "raster file`."
-msgstr "산출된 DEM이 기본 명칭 :kbd:`Output raster file` 로 맵에 추가됩니다."
+msgstr "산출된 DEM이 맵에 :kbd:`Output raster file` 이라는 기본 이름으로 추가됩니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:146
 msgid ""
@@ -356,7 +368,11 @@ msgid ""
 "get the diagonals you can appreciate in the image results."
 msgstr ""
 ":guilabel:`lasground` 와 :guilabel:`las2dem` 도구에는 라이선스가 필요합니다. 라이선스 파일에 나와 있는"
-" 대로 라이선스 없이 도구를 사용할 수도 있지만, 산출된 이미지에 사선이 표출될 것입니다."
+" 대로 라이선스 없이 도구를 사용할 수도 있지만, 산출된 이미지에 사선이 생성될 것입니다."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:151
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Creating a Terrain Hillshade"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요: 지형 음영기복 생성하기"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:154
 msgid ""
@@ -379,7 +395,7 @@ msgid ""
 ":file:`hillshade.tif`."
 msgstr ""
 ":guilabel:`Output layer` 에서 :file:`exercise_data\\\\forestry\\\\lidar\\\\` "
-"폴더를 찾은 다음 파일명을 :file:`hillshade.tif` 로 입력하십시오."
+"폴더를 찾은 다음 파일 이름을 :file:`hillshade.tif` 로 입력하십시오."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:159
 msgid "Leave the rest of parameters with the default settings."
@@ -398,6 +414,10 @@ msgstr ""
 "래스터 산출물에 여전히 사선이 보이긴 하지만, 해당 지역의 정확한 기복을 뚜렷이 볼 수 있습니다. 심지어 삼림 내부에 패인 여러 토양 "
 "배수로(soil drain)도 볼 수 있을 겁니다."
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:175
+msgid "In Conclusion"
+msgstr "결론"
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:177
 msgid ""
 "Using LiDAR data to get a DEM, specially in forested areas, gives good "
@@ -406,14 +426,18 @@ msgid ""
 "<https://srtm.csi.cgiar.org/srtmdata/>`_. Either way, you can use them to "
 "create a hillshade raster to use in your map presentations."
 msgstr ""
-"DEM 추출에 LiDAR 데이터를, 특히 삼림 지역에서, 사용하면 큰 수고를 들이지 않고 훌륭한 결과물을 얻을 수 있습니다. 또는 "
-"`SRTM 9m resolution DEMs <https://srtm.csi.cgiar.org/srtmdata/>`_ 와 같은 기존 "
-"LiDAR 기반 DEM이나 다른 소스를 사용할 수도 있습니다. 어떤 소스를 쓰던 간에, DEM을 이용해서 맵 프리젠테이션에 사용할 "
+"DEM 추출에 LiDAR 데이터를 --- 특히 삼림 지역에서 --- 사용하면 큰 수고를 들이지 않고 훌륭한 결과물을 얻을 수 있습니다. "
+"또는 `SRTM 9m resolution DEMs <https://srtm.csi.cgiar.org/srtmdata/>`_ 와 같은 기존"
+" LiDAR 기반 DEM이나 다른 소스를 사용할 수도 있습니다. 어떤 소스를 쓰던 간에, DEM을 이용해서 맵 프리젠테이션에 사용할 "
 "음영기복도를 생성할 수 있습니다."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:184
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:186
 msgid ""
 "In the next, and final step in this module, lesson you will use the "
 "hillshade raster and the forest inventory results to create a map "
 "presentation of the results."
-msgstr "마지막 강의에서는, 음영기복도 래스터와 삼림 목록화 작업 결과를 이용해서 결과물의 맵 프리젠테이션을 생성할 것입니다."
+msgstr "마지막 강의에서는, 음영기복 래스터와 삼림 현황 정보 수집 결과를 이용해서 결과물의 맵 프리젠테이션을 생성할 것입니다."
