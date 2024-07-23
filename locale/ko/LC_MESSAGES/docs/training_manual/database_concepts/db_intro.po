@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:2
+msgid "Lesson: Introduction to Databases"
+msgstr "수업: 데이터베이스의 기초"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:4
 msgid ""
@@ -46,7 +50,7 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/db_intro.rst:8
 msgid ""
 "**The goal for this lesson:** To understand fundamental database concepts."
-msgstr "**이 강의의 목표:** 핵심적인 데이터베이스 개념들을 이해하기."
+msgstr "**이 수업의 목표:** 핵심적인 데이터베이스 개념들을 이해하기."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:11
 msgid "What is a Database?"
@@ -70,7 +74,7 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:23
 msgid "Tables"
-msgstr "표"
+msgstr "테이블"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:25
 msgid ""
@@ -81,9 +85,9 @@ msgid ""
 "by the values appearing in a particular column subset which has been "
 "identified as a candidate key. *- Wikipedia*"
 msgstr ""
-"관계형 데이터베이스 및 플랫 파일 데이터베이스에서, 테이블이란 (명칭으로 식별되는) 수직 열과 수평 행의 모델을 사용해 조직된 데이터 "
-"요소(값)들의 집합이다. 테이블의 열은 지정된 개수이지만, 행은 무한대로 확장될 수 있다. 각 행은 후보 키라고 식별되는 특정 열 "
-"서브셋에 나타나는 값으로 식별된다. *- 위키백과*"
+"관계형 데이터베이스 및 플랫 파일 데이터베이스에서, 테이블이란 (이름으로 식별되는) 수직 열과 수평 행 모델을 사용해 조직된 데이터 "
+"요소(값)들의 집합이다. 테이블의 열은 지정된 개수이지만, 행은 무한대로 확장될 수 있다. 각 행은 후보 키라고 식별되는 특정 열 하위 "
+"집합에 나타나는 값으로 식별된다. *- 위키백과*"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:40
 msgid "In SQL databases a table is also known as a **relation.**"
@@ -102,8 +106,8 @@ msgid ""
 "refer specifically to the single item that exists at the intersection "
 "between one row and one column. *- Wikipedia*"
 msgstr ""
-"열이란 테이블의 각 행의 하나씩을 차지하는, 특정 단순형 데이터 값들의 집합이다. 열은 어떤 행들로 이루어지느냐에 따르는 구조를 "
-"제공한다. 필드라는 용어는 종종 열과 바꿔 쓰이기도 하지만, 많은 이들은 필드(또는 필드 값)을 한 행과 한 열의 교차 지점에 있는 단일"
+"열이란 테이블의 각 행의 하나씩을 차지하는, 특정 단순 유형 데이터 값들의 집합이다. 열은 어떤 행들로 이루어지느냐에 따르는 구조를 "
+"제공한다. 필드라는 용어는 종종 열과 바꿔 쓰이기도 하지만, 많은 이들은 필드(또는 필드 값)를 한 행과 한 열의 교차 지점에 있는 단일"
 " 값을 특별히 지칭하는 용어라고 간주한다. *- 위키백과*"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:52
@@ -122,7 +126,7 @@ msgstr "레코드"
 msgid ""
 "A record is the information stored in a table row. Each record will have a "
 "field for each of the columns in the table."
-msgstr "레코드란 테이블의 행에 저장된 정보를 말합니다. 각 레코드는 테이블 안 각 열에 대한 필드를 차지하게 됩니다."
+msgstr "레코드란 테이블의 행에 저장된 정보를 말합니다. 각 레코드는 테이블에 있는 각 열의 필드를 차지하게 됩니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:78
 msgid "Datatypes"
@@ -132,11 +136,11 @@ msgstr "데이터형"
 msgid ""
 "Datatypes restrict the kind of information that can be stored in a column. "
 "*- Tim and Horst*"
-msgstr "데이터형이란 열에 저장될 수 있는 정보의 유형을 제한한다. *- Tim & Horst*"
+msgstr "데이터형이란 열에 저장될 수 있는 정보의 유형을 제한한다. *- 팀(Tim)과 호르스트(Horst)*"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:83
 msgid "There are many kinds of datatypes. Let's focus on the most common:"
-msgstr "여러 유형의 데이터형이 있습니다. 가장 흔히 쓰이는 데이터형에 대해 알아봅시다."
+msgstr "여러 유형의 데이터형이 있습니다. 가장 흔히 쓰이는 데이터형에 대해 알아봅시다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:85
 msgid "``String`` - to store free-form text data"
@@ -152,7 +156,7 @@ msgstr "``실수(real)`` - 십진수(decimal number)를 저장"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:88
 msgid "``Date`` - to store Horst's birthday so no one forgets"
-msgstr "``날짜(date)`` - 아무도 잊지 않도록 Horst의 생일을 저장"
+msgstr "``날짜(date)`` - 아무도 잊지 않도록 호르스트(Horst)의 생일을 저장"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:89
 msgid "``Boolean`` - to store simple true/false values"
@@ -164,12 +168,12 @@ msgid ""
 "there is nothing in a field, then the field content is referred to as a "
 "**'null' value**:"
 msgstr ""
-"데이터베이스가 필드에 아무것도 저장하지 않도록 할 수도 있습니다. 필드에 아무것도 없을 경우, 필드의 내용을 **'널(null)' 값**"
+"데이터베이스가 필드에 아무것도 저장하지 않도록 할 수도 있습니다. 필드에 아무것도 없을 경우, 필드의 내용을 **'널(Null)' 값**"
 " 이라고 합니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:101
 msgid "Result:"
-msgstr "결과 :"
+msgstr "결과:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:112
 msgid ""
@@ -181,13 +185,18 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:116
 msgid "Modelling an Address Database"
-msgstr "주소 데이터베이스 모델링"
+msgstr "주소 데이터베이스 모델 작업"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:118
 msgid ""
 "Let's use a simple case study to see how a database is constructed. We want "
 "to create an address database."
 msgstr "간단한 예제를 통해 데이터베이스가 어떻게 구성되는지 알아봅시다. 주소 데이터베이스를 생성하겠습니다."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:122
+#: ../../docs/training_manual/database_concepts/db_intro.rst:209
+msgid "Try Yourself: :abbr:`★☆☆ (Basic level)`"
+msgstr "혼자서 해보세요: :abbr:`★☆☆ (초급 수준)`"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:124
 msgid ""
@@ -200,6 +209,21 @@ msgstr "단순한 주소를 적어보고, 어떤 요소로 이루어져 있는�
 #: ../../docs/training_manual/database_concepts/db_intro.rst:345
 msgid "Answer"
 msgstr "해답"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:130
+msgid ""
+"For our theoretical address table, we might want to store the following "
+"properties::"
+msgstr "이 이론적인 주소 테이블에 다음 속성들을 저장하길 원할 수도 있겠죠:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:140
+msgid ""
+"When creating the table to represent an address object, we would create "
+"columns to represent each of these properties and we would name them with "
+"SQL-compliant and possibly shortened names::"
+msgstr ""
+"주소 객체를 표현하는 테이블을 생성할 때, 이 속성들 각각을 나타내는 열들을 생성하고 SQL을 준수하며 가능하면 단축시킨 이름을 지정할 "
+"것입니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:152
 msgid "Address Structure"
@@ -224,8 +248,8 @@ msgid ""
 "world; taking real world concepts and representing them in the database as "
 "entities."
 msgstr ""
-"데이터베이스를 생성하는 과정은 실재 세계의 모형을 생성하는 것입니다. 실재 세계의 개념을 취해서 데이터베이스에 엔티티로서 표현하는 "
-"것입니다."
+"데이터베이스를 생성하는 과정은 실제 세계의 모형을 생성하는 것입니다. 실제 세계의 개념을 취해서 데이터베이스에 엔티티(entity)로서 "
+"표현하는 것입니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:165
 msgid "Normalisation"
@@ -237,8 +261,8 @@ msgid ""
 "redundancy. The process of removing redundancy from a database is called "
 "Normalisation."
 msgstr ""
-"데이터베이스의 주요 아이디어 가운데 하나는 데이터의 복제/중복을 피하자는 것입니다. 데이터베이스에서 중복을 제거하는 과정을 정규화라고 "
-"합니다."
+"데이터베이스의 주요 아이디어 가운데 하나는 데이터의 복제/중복을 피하자는 것입니다. 데이터베이스에서 중복을 제거하는 과정을 "
+"정규화(normalization)라고 합니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:170
 msgid ""
@@ -247,16 +271,16 @@ msgid ""
 "characteristics - insertion, update, and deletion anomalies - that could "
 "lead to a loss of data integrity. *- Wikipedia*"
 msgstr ""
-"정규화란 데이터베이스의 구조가 범용 쿼리 및, 데이터 무결성을 잃을 수 있는 바람직하지 않은 특정 특성들 - 삽입, 업데이트, 삭제 이상"
-" - 을 피하는 데 적합한지 확인하는 체계적인 방법이다. *- 위키백과*"
+"정규화란 데이터베이스의 구조가 범용 쿼리에 적합한지 그리고 데이터 무결성을 잃을 수 있는 바람직하지 않은 특성들 --- 삽입, 업데이트 "
+"및 삭제 이상 --- 을 피하는 데 적합한지 확인하는 체계적인 방법이다. *- 위키백과*"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:175
 msgid "There are different kinds of normalisation 'forms'."
-msgstr "정규화 '서식'에는 서로 다른 유형들이 있습니다."
+msgstr "정규화 '형태'에는 서로 다른 유형들이 있습니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:177
 msgid "Let's take a look at a simple example:"
-msgstr "간단한 예를 살펴보겠습니다:"
+msgstr "간단한 예를 살펴봅시다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:204
 msgid ""
@@ -264,23 +288,46 @@ msgid ""
 "this data is duplicated, it consumes space. Worse still, if a city name "
 "changes, you have to do a lot of work to update your database."
 msgstr ""
-"동일한 도로명 또는 도시명을 가진 친구들이 많다고 상상해보십시오. 이 데이터가 복제될 때마다 용량을 소비하게 됩니다. 더구나 도시명이 "
-"변경될 경우, 데이터베이스를 업데이트하는 데 많은 작업을 해야 합니다."
+"동일한 도로 이름 또는 도시 이름을 가진 친구들이 많다고 상상해보십시오. 이 데이터가 복제될 때마다 용량을 소비하게 됩니다. 더구나 도시"
+" 이름이 바뀔 경우, 데이터베이스를 업데이트하기 위해 많은 작업을 해야 합니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:210
 msgid ""
 "Redesign the theoretical `people` table above to reduce duplication and to "
 "normalise the data structure."
-msgstr "복제를 줄이고 데이터 구조를 정규화하기 위해 앞의 이론적인 'people' 테이블을 재설계해보십시오."
+msgstr "복제를 줄이고 데이터 구조를 정규화하기 위해 앞의 이론적인 ``people`` 테이블을 재설계해보십시오."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:213
 msgid ""
 "You can read more about database normalisation `here "
 "<https://en.wikipedia.org/wiki/Database_normalization>`_"
 msgstr ""
-"데이터베이스 정규화에 대해 `이곳 "
+"`여기 "
 "<https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%EC%A0%95%EA%B7%9C%ED%99%94>`_"
-" 에서 더 읽어볼 수 있습니다."
+" 에서 데이터베이스 정규화에 대해 더 읽어볼 수 있습니다."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:219
+msgid ""
+"The major problem with the *people* table is that there is a single address "
+"field which contains a person's entire address. Thinking about our "
+"theoretical *address* table earlier in this lesson, we know that an address "
+"is made up of many different properties. By storing all these properties in "
+"one field, we make it much harder to update and query our data. We therefore"
+" need to split the address field into the various properties. This would "
+"give us a table which has the following structure::"
+msgstr ""
+"``people`` 테이블의 가장 큰 문제는 단일 주소 필드에 한 사람의 전체 주소를 담고 있다는 점입니다. 앞에서 언급했던 이론적인 "
+"``address`` 테이블을 생각해보면, 우리는 주소가 서로 다른 많은 속성들로 이루어져 있다는 사실을 알고 있죠. 필드 하나에 이 "
+"속성들을 전부 저장하면 데이터를 업데이트하거나 쿼리하는 작업이 훨씬 어려워집니다. 따라서 주소 필드를 다양한 속성들로 분할해야 합니다. "
+"이 작업을 통해 다음과 같은 구조를 가진 테이블을 얻게 될 것입니다:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:233
+msgid ""
+"In the next section, you will learn about Foreign Key relationships which "
+"could be used in this example to further improve our database's structure."
+msgstr ""
+"다음 절에서 이 데이터베이스의 구조를 한 단계 더 향상시키기 위해 이 예제에 사용할 수 있는 외래 키(Foreign Key) 관계에 대해"
+" 배울 것입니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:237
 msgid "Indexes"
@@ -290,7 +337,7 @@ msgstr "인덱스"
 msgid ""
 "A database index is a data structure that improves the speed of data "
 "retrieval operations on a database table. *- Wikipedia*"
-msgstr "데이터베이스 인덱스란 데이터베이스 테이블에서 데이터 검색 작업의 속도를 향상시키는 데이터 구조이다. *- 위키백과*"
+msgstr "데이터베이스 인덱스란 데이터베이스 테이블 상에서 데이터 검색 작업의 속도를 향상시키는 데이터 구조이다. *- 위키백과*"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:242
 msgid ""
@@ -300,12 +347,12 @@ msgid ""
 "information you need. The index at the back of a book helps you to jump "
 "quickly to the page with the relevant information:"
 msgstr ""
-"교과서를 읽다가 어떤 개념에 대한 설명을 찾는다고 상상해보십시오 - 그런데 교과서에 색인이 없군요! 여러분은 필요한 정보를 찾을 때까지 "
-"표지부터 책 전체를 다시 훑어야 할 겁니다. 책의 끝부분에 있는 색인은 관련 정보가 있는 페이지를 빨리 찾을 수 있게 해줍니다:"
+"교과서를 읽다가 어떤 개념에 대한 설명을 찾는다고 상상해보십시오 --- 그런데 교과서에 색인이 없군요! 여러분은 필요한 정보를 찾을 "
+"때까지 표지부터 책 전체를 다시 훑어야 할 겁니다. 책의 끝부분에 있는 색인은 관련 정보가 있는 페이지를 빨리 찾을 수 있게 해줍니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:252
 msgid "Now searches on name will be faster:"
-msgstr "이제 성명 검색이 빨라질 겁니다:"
+msgstr "이제 이름 검색이 빨라질 겁니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:271
 msgid "Sequences"
@@ -321,7 +368,7 @@ msgstr "시퀀스란 유일 숫자 생성기입니다. 보통 테이블의 어�
 msgid ""
 "In this example, id is a sequence - the number is incremented each time a "
 "record is added to the table:"
-msgstr "이 예제에서는 id가 시퀀스입니다. 테이블에 레코드가 추가될 때마다 숫자가 증가합니다:"
+msgstr "이 예제에서는 ``id`` 가 시퀀스입니다. 테이블에 레코드가 추가될 때마다 숫자가 증가합니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:287
 msgid "Entity Relationship Diagramming"
@@ -334,39 +381,44 @@ msgid ""
 "dependencies between the relations. Consider our non-normalised `people` "
 "table from earlier in the lesson:"
 msgstr ""
-"정규화된 데이터베이스는 일반적으로 많은 관계(테이블)을 가지게 됩니다. 이 관계들 사이의 논리적 의존성을 설계하는 데 엔티티-관계 "
-"도표(ER Diagram)를 사용합니다. 이전 단계의 아직 정규화되지 않은 'people' 테이블을 생각해보십시오:"
+"정규화된 데이터베이스는 일반적으로 많은 관계(테이블)를 가지게 됩니다. 이 관계들 사이의 논리적 의존성을 설계하는 데 엔티티-관계 "
+"도표(ER Diagram)를 사용합니다. 이전 단계의 아직 정규화되지 않은 ``people`` 테이블을 생각해보십시오:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:304
 msgid ""
 "With a little work we can split it into two tables, removing the need to "
 "repeat the street name for individuals who live in the same street:"
-msgstr "같은 거리에 사는 개인들에 대해 도로명을 반복할 필요가 없도록 이 테이블을 손쉽게 두 테이블로 나눌 수 있습니다:"
+msgstr "같은 거리에 사는 개인들에 대해 도로 이름을 반복할 필요가 없도록 이 테이블을 손쉽게 두 테이블로 분할할 수 있습니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:316
 msgid "and:"
-msgstr "이렇게 하면,"
+msgstr "이렇게 하면:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:327
 msgid ""
 "We can then link the two tables using the 'keys' :kbd:`streets.id` and "
 ":kbd:`people.streets_id`."
 msgstr ""
-"이 두 테이블을 :kbd:`streets.id` 와 :kbd:`people.streets_id` 라는 '키'를 이용해서 연결할 수 "
+"이 두 테이블을 :kbd:`streets.id` 와 :kbd:`people.streets_id` 라는 '키'들을 이용해서 연결할 수 "
 "있습니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:330
 msgid ""
 "If we draw an ER Diagram for these two tables it would look something like "
 "this:"
-msgstr "이 두 테이블에 대해 ER 도표를 그린다면 다음과 같이 보일 것입니다."
+msgstr "이 두 테이블에 대해 ER 도표를 그린다면 다음과 같이 보일 것입니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:336
 msgid ""
 "The ER Diagram helps us to express 'one to many' relationships. In this case"
 " the arrow symbol show that one street can have many people living on it."
 msgstr ""
-"ER 도표를 통해 '일대다' 관계를 표현할 수 있습니다. 이 예제에서 화살표는 한 도로에 많은 사람이 살 수 있다는 사실을 보여줍니다."
+"ER 도표를 통해 '일대다(one to many)' 관계를 표현할 수 있습니다. 이 예제에서 화살표는 한 도로에 많은 사람이 살 수 "
+"있다는 사실을 보여줍니다."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:340
+msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
+msgstr "혼자서 해보세요: :abbr:`★★☆ (중급 수준)`"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:342
 msgid ""
@@ -375,6 +427,39 @@ msgid ""
 msgstr ""
 "이 'people' 모델에는 아직 몇몇 정규화 문제가 남아 있습니다. 사용자 스스로 더 정규화를 진행시킬 수 있을지 생각해보고, ER "
 "도표로 사용자의 생각을 표현해보십시오."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:349
+msgid "Our *people* table currently looks like this::"
+msgstr "``people`` 테이블은 현재 이렇게 생겼습니다:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:355
+msgid ""
+"The :guilabel:`street_id` column represents a 'one to many' relationship "
+"between the people object and the related street object, which is in the "
+"*streets* table."
+msgstr ""
+":guilabel:`street_id` 열은 사람 객체와 ``streets`` 테이블에 있는 관련 도로 객체 사이의 '일대다' 관계를 "
+"나타냅니다."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:358
+msgid ""
+"One way to further normalise the table is to split the name field into "
+"*first_name* and *last_name*::"
+msgstr ""
+"이 테이블을 한 단계 더 정규화하는 방법 가운데 하나는 이름 필드를 ``first_name`` 과 ``last_name`` 으로 분할하는"
+" 것입니다:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:365
+msgid ""
+"We can also create separate tables for the town or city name and country, "
+"linking them to our *people* table via 'one to many' relationships::"
+msgstr ""
+"또 마을 또는 도시 그리고 나라 이름을 위한 개별 테이블을 생성해서 '일대다' 관계를 통해 ``people`` 테이블에 연결시킬 수 "
+"있습니다:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:373
+msgid "An ER Diagram to represent this would look like this:"
+msgstr "이를 표현하는 ER 도표는 다음과 같이 보일 것입니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:379
 msgid "Constraints, Primary Keys and Foreign Keys"
@@ -387,7 +472,7 @@ msgid ""
 "on your postal code could ensure that the number falls between :kbd:`1000` "
 "and :kbd:`9999`."
 msgstr ""
-"데이터베이스 제약 조건은 관계 안에 있는 데이터가 어떻게 데이터가 저장되어야 하는지에 대한 모델러의 시각과 일치하는지 확인하는 데 "
+"데이터베이스 제약 조건은 관계 안에 있는 데이터가 모델 작성자의 데이터가 어떻게 저장되어야 하는지에 대한 시각과 일치하는지 확인하는 데 "
 "쓰입니다. 예를 들어 우편번호에 대한 제약 조건으로 :kbd:`1000` 과 :kbd:`9999` 사이의 숫자만 저장되도록 할 수 "
 "있습니다."
 
@@ -396,19 +481,21 @@ msgid ""
 "A Primary key is one or more field values that make a record unique. Usually"
 " the primary key is called id and is a sequence."
 msgstr ""
-"기본 키는 레코드를 유일하게 만들어주는 하나 이상의 필드 값입니다. 기본 키를 보통 id라고 하며, 시퀀스인 경우가 대부분입니다."
+"기본 키(Primary Key)는 레코드를 유일하게 만들어주는 하나 이상의 필드 값입니다. 기본 키를 보통 ``id`` 라고 하며, "
+"시퀀스인 경우가 대부분입니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:389
 msgid ""
 "A Foreign key is used to refer to a unique record on another table (using "
 "that other table's primary key)."
-msgstr "외래 키는 유일한 레코드를 (해당 테이블의 기본 키를 써서) 다른 테이블에 참조시키는 데 쓰입니다."
+msgstr ""
+"외래 키(Foreign Key)는 다른 테이블에 있는 유일한 레코드를 (해당 테이블의 기본 키를 사용해서) 참조하는 데 쓰입니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:392
 msgid ""
 "In ER Diagramming, the linkage between tables is normally based on Foreign "
 "keys linking to Primary keys."
-msgstr "ER 도표를 그릴 때, 테이블 사이의 연결은 보통 기본 키와 연결되는 외래 키에 기반하고 있습니다."
+msgstr "ER 도표를 그릴 때, 테이블 사이의 연결은 보통 기본 키와 연결되는 외래 키에 기반합니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:395
 msgid ""
@@ -416,8 +503,8 @@ msgid ""
 " column is a foreign key that references the primary key on the streets "
 "table:"
 msgstr ""
-"이 'people' 예제를 보면, 테이블 정의에서 street 열이 streets 테이블의 기본 키를 참조하는 외래 키라는 사실을 "
-"보여주고 있습니다:"
+"이 'people' 예제를 보면, 테이블 정의에서 ``street`` 열이 ``streets`` 테이블의 기본 키를 참조하는 외래 키라는"
+" 사실을 보여주고 있습니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:416
 msgid "Transactions"
@@ -432,7 +519,7 @@ msgid ""
 "modifications to the database did not run as planned."
 msgstr ""
 "데이터베이스에서 데이터를 추가, 변경, 삭제할 때 뭔가 문제가 발생해도 데이터베이스는 언제나 양호한 상태로 남아 있어야 합니다. 대부분의"
-" 데이터베이스는 트랜잭션 지원이라는 기능을 제공합니다. 트랜잭션은 데이터베이스에 대한 사용자의 수정 작업이 계획대로 되지 않았을 경우 "
+" 데이터베이스는 트랜잭션 지원이라는 기능을 제공합니다. 트랜잭션은 데이터베이스에 대한 여러분의 수정 작업이 계획대로 되지 않았을 경우 "
 "되돌아갈 수 있는 복원 지점을 생성할 수 있게 해줍니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:424
@@ -441,8 +528,8 @@ msgid ""
 "funds from one account and add them to another. The sequence of steps would "
 "go like this:"
 msgstr ""
-"사용자가 은행 계좌 시스템을 가지고 있다고 생각해보십시오. 어떤 계좌에서 다른 계좌로 자금을 전송해야 합니다. 이 일련의 단계를 다음과 "
-"같이 가정해볼 수 있습니다."
+"여러분이 은행 계좌 시스템을 가지고 있다고 생각해보십시오. 어떤 계좌에서 다른 계좌로 자금을 전송해야 합니다. 이 일련의 단계를 다음과 "
+"같이 가정해볼 수 있습니다:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:428
 msgid "remove R20 from Joe"
@@ -456,7 +543,7 @@ msgstr "앤에게 R20을 입금"
 msgid ""
 "If something goes wrong during the process (e.g. power failure), the "
 "transaction will be rolled back."
-msgstr "이 과정에서 무언가 (정전 같은) 문제가 생길 경우, 트랜잭션이 이전으로 복원됩니다."
+msgstr "이 과정에서 무언가 (정전 같은) 문제가 생길 경우, 트랜잭션이 이전으로 복원될 것입니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:435
 msgid "In Conclusion"
@@ -466,7 +553,7 @@ msgstr "결론"
 msgid ""
 "Databases allow you to manage data in a structured way using simple code "
 "structures."
-msgstr "데이터베이스를 이용하면 간단한 코드 구조를 써서 데이터를 구조화된 방법으로 관리할 수 있습니다."
+msgstr "데이터베이스는 단순한 코드 구조를 사용해서 데이터를 구조화된 방법으로 관리할 수 있게 해줍니다."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:441
 msgid "What's Next?"
@@ -477,4 +564,4 @@ msgid ""
 "Now that we've looked at how databases work in theory, let's create a new "
 "database to implement the theory we've covered."
 msgstr ""
-"이제 데이터베이스가 이론적으로 어떻게 작동하는지 알아봤으니, 지금 배운 이론을 시행할 수 있는 새 데이터베이스를 생성해봅시다."
+"이제 데이터베이스가 이론적으로 어떻게 작동하는지 알아봤으니, 지금 배운 이론을 구현할 수 있는 새 데이터베이스를 생성해봅시다."
