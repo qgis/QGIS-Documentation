@@ -32,20 +32,24 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:2
+msgid "Lesson: Queries"
+msgstr "수업: 쿼리"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:4
 msgid ""
 "When you write a :kbd:`SELECT ...` command it is commonly known as a query -"
 " you are interrogating the database for information."
 msgstr ""
-":kbd:`SELECT ...` 명령을 작성할 때 이를 흔히 쿼리라고 합니다. 사용자가 데이터베이스에서 정보를 얻는 행위입니다."
+":kbd:`SELECT ...` 명령어를 작성할 때 이를 흔히 쿼리라고 합니다. 여러분이 데이터베이스에서 정보를 얻는 행위입니다."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:7
 msgid ""
 "**The goal of this lesson:** To learn how to create queries that will return"
 " useful information."
-msgstr "**이 강의의 목표:** 유용한 정보를 반환하는 쿼리를 생성하는 방법을 배우기."
+msgstr "**이 수업의 목표:** 유용한 정보를 반환하는 쿼리를 생성하는 방법을 배우기."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:10
 msgid ""
@@ -54,12 +58,16 @@ msgid ""
 "foreign key constraints, you will need to add the 'Main Road' object to your"
 " streets table first"
 msgstr ""
-"이전 강의에서 벌써 하지 않았다면, 사용자의 :kbd:`people` 테이블에 다음 인물 오브젝트들을 추가하십시오. 외래 키 제약 조건에"
-" 관한 오류를 반환받았을 경우, 먼저 streets 테이블에 'Main Road' 오브젝트를 추가해야 합니다."
+"이전 수업에서 이미 해두지 않은 경우, 여러분의 :kbd:`people` 테이블에 다음 사람 객체들을 추가하십시오. 외래 키 제약 조건에"
+" 관한 오류를 반환받았다면, 먼저 'streets' 테이블에 'Main Road' 객체를 추가해야 합니다."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:28
 msgid "Ordering Results"
-msgstr "결과물 정렬"
+msgstr "결과물 정렬시키기"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:30
+msgid "Let's retrieve a list of people ordered by their house numbers:"
+msgstr "지번(地番)으로 정렬된 사람들 목록을 구해봅시다:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:36
 #: ../../docs/training_manual/database_concepts/queries.rst:54
@@ -68,11 +76,15 @@ msgstr "결과물 정렬"
 #: ../../docs/training_manual/database_concepts/queries.rst:242
 #: ../../docs/training_manual/database_concepts/queries.rst:259
 msgid "Result:"
-msgstr "결과 :"
+msgstr "결과:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:48
+msgid "You can sort the results by the values of more than one column:"
+msgstr "결과물을 하나 이상의 열의 값들로 정렬시킬 수 있습니다:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:68
 msgid "Filtering"
-msgstr "필터링"
+msgstr "필터링하기"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:70
 msgid ""
@@ -80,8 +92,24 @@ msgid ""
 " if there are thousands of records and you are only interested in seeing one"
 " or two."
 msgstr ""
-"대부분의 경우 데이터베이스에 있는 모든 레코드를 하나하나 보고 싶지는 않을 겁니다. 특히 레코드가 수 천 개 있는데 그 중 하나나 두 "
-"개에만 관심이 있을 때는 말이죠."
+"대부분의 경우 데이터베이스에 있는 모든 레코드를 하나하나 보고 싶지는 않을 겁니다. 특히 레코드가 수 천 개 있는데 그 중 하나나 둘에만"
+" 관심이 있을 때는 말이죠."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:74
+msgid ""
+"Here is an example of a numerical filter which only returns objects whose "
+"``house_no`` is less than 50:"
+msgstr "다음은 ``house_no`` 가 50 미만인 객체들만 반환하는 숫자 필터의 예시입니다:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:87
+msgid ""
+"You can combine filters (defined using the ``WHERE`` clause) with sorting "
+"(defined using the ``ORDER BY`` clause):"
+msgstr "(``WHERE`` 구문으로 정의된) 필터를 (``ORDER BY`` 구문으로 정의된) 정렬과 합칠 수도 있습니다:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:100
+msgid "You can also filter based on text data:"
+msgstr "텍스트 데이터를 바탕으로 필터링할 수도 있습니다:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:112
 msgid ""
@@ -89,12 +117,34 @@ msgid ""
 "them. You'll notice that this query is case-sensitive, so the :kbd:`Sally "
 "Norman` entry has not been returned."
 msgstr ""
-"이 예시에서 :kbd:`LIKE` 구문을 이용해 :kbd:`s` 가 들어간 모든 성명을 찾았습니다. 이 쿼리가 대소문자를 구분하기 때문에"
-" :kbd:`Sally Norman` 항목을 반환하지 않았다는 사실을 알아차리셨을 겁니다."
+"이 예시에서는 :kbd:`LIKE` 구문을 사용해서 :kbd:`s` 가 들어간 모든 이름을 찾았습니다. 이 쿼리가 대소문자를 구분하기 "
+"때문에 :kbd:`Sally Norman` 항목을 반환하지 않았다는 사실을 알아차렸을 겁니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:116
+msgid ""
+"If you want to search for a string of letters regardless of case, you can do"
+" a case in-sensitive search using the :kbd:`ILIKE` clause:"
+msgstr ""
+"대소문자에 상관없이 문자열을 검색하고 싶다면, :kbd:`ILIKE` 구문을 사용해서 대소문자를 구분하지 않는 검색을 하면 됩니다:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:129
+msgid ""
+"That query returned every **people** object with an :kbd:`r` or :kbd:`R` in "
+"their name."
+msgstr "이 쿼리는 이름에 :kbd:`r` 또는 :kbd:`R` 가 들어간 **people** 객체를 전부 반환했습니다."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:133
 msgid "Joins"
 msgstr "결합"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:135
+msgid ""
+"What if you want to see the person's details and their street's name instead"
+" of the ID? In order to do that, you need to join the two tables together in"
+" a single query. Lets look at an example:"
+msgstr ""
+"여러분이 ID 대신 사람들의 상세 정보와 그들이 사는 도로 이름을 보고 싶은 경우엔 어떻게 할까요? 그러려면 단일 쿼리에서 두 테이블을 "
+"결합(join)해야 합니다. 다음 예시를 보십시오:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:145
 msgid ""
@@ -108,6 +158,10 @@ msgstr ""
 " 키(기본 키와 외래 키)가 일치해야만 하는지도 지정해야 합니다. 키를 지정하지 않을 경우 'people'과 'streets'의 가능한 "
 "모든 조합의 목록을 받게 되지만, 누가 실제로 어디에 사는지 알 수 있는 방법이 없습니다!"
 
+#: ../../docs/training_manual/database_concepts/queries.rst:151
+msgid "Here is what the correct output will look like:"
+msgstr "다음은 올바른 산출물의 예시입니다:"
+
 #: ../../docs/training_manual/database_concepts/queries.rst:163
 msgid ""
 "We will revisit joins as we create more complex queries later. Just remember"
@@ -119,7 +173,7 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/queries.rst:167
 msgid "Sub-Select"
-msgstr "내부 선택"
+msgstr "서브셀렉트"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:169
 msgid ""
@@ -127,8 +181,25 @@ msgid ""
 "from another table which is linked via a foreign key relationship. In our "
 "case, we want to find people who live on a specific street."
 msgstr ""
-"내부 선택을 사용하면 외래 키 관계를 통해 연결된 다른 테이블의 데이터를 기반으로 테이블에서 오브젝트를 선택할 수 있습니다. 이 "
-"예시에서는 특정 거리에 사는 인물을 찾고자 합니다."
+"서브셀렉트(sub-select)를 사용하면 어떤 테이블에서 외래 키 관계를 통해 연결된 또다른 테이블의 데이터를 기반으로 객체를 선택할 "
+"수 있습니다. 이 예시에서는 특정 거리에 사는 사람을 찾고자 합니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:173
+msgid "First, let's do a little tweaking of our data:"
+msgstr "먼저 데이터를 조금 조정해볼까요:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:183
+msgid ""
+"Let's take a quick look at our data after those changes: we can reuse our "
+"query from the previous section:"
+msgstr "이런 변경 사항 후에 데이터가 어떻게 변했는지 살펴봅시다. 이전 절에서 사용했던 쿼리를 다시 사용하면 됩니다:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:204
+msgid ""
+"Now let's show you a sub-selection on this data. We want to show only people"
+" who live in ``street_id`` number :kbd:`1`:"
+msgstr ""
+"이제 이 데이터에 서브셀렉트를 사용해볼까요? ``street_id`` 가 :kbd:`1` 인 곳에 사는 사람들만 보고 싶다면:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:227
 msgid ""
@@ -136,28 +207,64 @@ msgid ""
 "sets, it illustrates how useful and important sub-selections can be when "
 "querying large and complex data-sets."
 msgstr ""
-"이 예시가 매우 단순하며 여러분의 작은 데이터셋에서는 불필요하긴 하지만, 복잡한 대용량 데이터셋을 쿼리할 때 내부 선택이 얼마나 유용하고"
+"이 예시는 너무 단순해서 여러분의 작은 데이터셋에서는 불필요하긴 하지만, 복잡한 대용량 데이터셋을 쿼리할 때 서브셀렉트가 얼마나 유용하고"
 " 중요할 수 있는지를 보여줍니다."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:232
 msgid "Aggregate Queries"
 msgstr "집계 쿼리"
 
+#: ../../docs/training_manual/database_concepts/queries.rst:234
+msgid ""
+"One of the powerful features of a database is its ability to summarise the "
+"data in its tables. These summaries are called aggregate queries. Here is a "
+"typical example which tells us how many people objects are in our people "
+"table:"
+msgstr ""
+"데이터베이스의 강력한 기능 가운데 하나는 데이터베이스 테이블에 있는 데이터를 요약할 수 있는 능력입니다. 이런 요약을 "
+"집계(aggregate) 쿼리라고 합니다. 다음은 'people' 테이블에 사람 객체가 얼마나 많이 있는지를 말해주는 전형적인 "
+"예시입니다:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:251
+msgid "If we want the counts to be summarised by street name we can do this:"
+msgstr "도로 이름별로 개수를 요약하려면 다음과 같이 하면 됩니다:"
+
 #: ../../docs/training_manual/database_concepts/queries.rst:270
 msgid ""
 "Because we have not used an :kbd:`ORDER BY` clause, the order of your "
 "results may not match what is shown here."
-msgstr ":kbd:`ORDER BY` 구문을 쓰지 않았기 때문에, 사용자의 결과물 순서가 예시와 일치하지 않을 수도 있습니다."
+msgstr ":kbd:`ORDER BY` 구문을 쓰지 않았기 때문에, 여러분의 결과물 순서가 예시와 일치하지 않을 수도 있습니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:274
+msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
+msgstr "혼자서 해보세요: :abbr:`★★☆ (중급 수준)`"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:276
 msgid ""
 "Summarise the people by street name and show the actual street names instead"
 " of the street_ids."
-msgstr "도로명으로 인물을 요약하고 'street_id' 대신 실제 도로명을 나타내도록 하십시오."
+msgstr "사람들을 도로 이름으로 요약하고 'street_id' 대신 실제 도로 이름을 나타내도록 하십시오."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:279
 msgid "Answer"
 msgstr "해답"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:282
+msgid "Here is the correct SQL statement you should use::"
+msgstr "여러분이 사용해야 할 올바른 SQL 선언문은 다음과 같습니다:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:289
+msgid "Result::"
+msgstr "결과:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:298
+msgid ""
+"You will notice that we have prefixed field names with table names (e.g. "
+"people.name and streets.name). This needs to be done whenever the field name"
+" is ambiguous (i.e. not unique across all tables in the database)."
+msgstr ""
+"필드 이름 앞에 테이블 이름을 접두어로 붙였다는 (예: 'people.name'과 'streets.name') 사실을 알아차렸을 겁니다."
+" 필드 이름이 모호한 경우 (예를 들면 데이터베이스에 있는 모든 테이블에서 유일한 이름이 아닌 경우) 항상 이렇게 해야 합니다."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:304
 msgid "In Conclusion"
@@ -168,7 +275,7 @@ msgid ""
 "You've seen how to use queries to return the data in your database in a way "
 "that allows you to extract useful information from it."
 msgstr ""
-"어떻게 데이터베이스에서 유용한 정보를 추출할 수 있게 해주는 방식으로 쿼리를 사용해서 데이터베이스의 데이터를 반환받을 수 있는지 "
+"어떻게 쿼리를 데이터베이스에서 유용한 정보를 추출할 수 있게 해주는 방식으로 사용해서 데이터베이스의 데이터를 반환받을 수 있는지 "
 "배웠습니다."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:310
@@ -178,4 +285,4 @@ msgstr "다음은 무엇을 배우게 될까요?"
 #: ../../docs/training_manual/database_concepts/queries.rst:312
 msgid ""
 "Next you'll see how to create views from the queries that you've written."
-msgstr "다음 강의에서 사용자가 작성한 쿼리에서 뷰를 생성하는 방법을 배워보겠습니다."
+msgstr "다음 수업에서는 여러분이 작성한 쿼리로부터 뷰를 생성하는 방법을 배워보겠습니다."
