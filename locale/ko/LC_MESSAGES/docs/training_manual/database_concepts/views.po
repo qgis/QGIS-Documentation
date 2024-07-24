@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/database_concepts/views.rst:2
+msgid "Lesson: Views"
+msgstr "수업: 뷰"
 
 #: ../../docs/training_manual/database_concepts/views.rst:4
 msgid ""
@@ -40,16 +44,16 @@ msgid ""
 "formulating it. With views, you can save the definition of an SQL query in a"
 " reusable 'virtual table'."
 msgstr ""
-"쿼리 작성 시 쿼리를 구성하는 데 많은 시간과 노력을 들여야 합니다. 뷰를 사용하면 SQL 쿼리의 정의를 재사용할 수 있는 '가상 "
-"테이블'에 저장할 수 있습니다."
+"쿼리를 작성할 때, 쿼리를 구성하는 데 많은 시간과 노력을 들여야 합니다. 뷰를 사용하면 재사용할 수 있는 '가상 테이블'에 SQL "
+"쿼리의 정의를 저장할 수 있습니다."
 
 #: ../../docs/training_manual/database_concepts/views.rst:8
 msgid "**The goal for this lesson:** To save a query as a view."
-msgstr "**이 강의의 목표:** 쿼리를 뷰로 저장하기."
+msgstr "**이 수업의 목표:** 쿼리를 뷰로 저장하기."
 
 #: ../../docs/training_manual/database_concepts/views.rst:11
 msgid "Creating a View"
-msgstr "뷰 생성"
+msgstr "뷰 생성하기"
 
 #: ../../docs/training_manual/database_concepts/views.rst:13
 msgid ""
@@ -62,30 +66,30 @@ msgid ""
 "As you can see the only change is the :kbd:`create view roads_count_v as` "
 "part at the beginning. We can now select data from that view:"
 msgstr ""
-"보시면 알겠지만 단 하나 달라진 점은 시작 부분의 :kbd:`create view roads_count_v as` 뿐입니다. 이제 이 "
+"보면 알겠지만 단 하나 달라진 점은 시작 부분의 :kbd:`create view roads_count_v as` 뿐입니다. 이제 이 "
 "뷰에서 데이터를 선택할 수 있습니다:"
 
 #: ../../docs/training_manual/database_concepts/views.rst:30
 msgid "Result:"
-msgstr "결과 :"
+msgstr "결과:"
 
 #: ../../docs/training_manual/database_concepts/views.rst:42
 msgid "Modifying a View"
-msgstr "뷰 수정"
+msgstr "뷰 수정하기"
 
 #: ../../docs/training_manual/database_concepts/views.rst:44
 msgid ""
 "A view is not fixed, and it contains no 'real data'. This means you can "
 "easily change it without impacting on any data in your database:"
 msgstr ""
-"뷰는 고정되지 않았으며, '실제 데이터' 를 담고 있지도 않습니다. 즉 사용자 데이터베이스에 있는 어떤 데이터도 건드리지 않고 뷰를 "
+"뷰는 고정되어 있지 않으며, '실제 데이터'를 담고 있지도 않습니다. 즉 여러분의 데이터베이스에 있는 어떤 데이터도 건드리지 않고 뷰를 "
 "변경할 수 있다는 뜻입니다:"
 
 #: ../../docs/training_manual/database_concepts/views.rst:55
 msgid ""
 "(This example also shows the best practice convention of using UPPER CASE "
 "for all SQL keywords.)"
-msgstr "(또한 이 예시는 모든 SQL 키워드에 **대문자** 를 사용하는 모범적인 실행 관습을 보여주고 있습니다.)"
+msgstr "(또한 이 예시는 모든 SQL 키워드에 **대문자** 를 사용하는 모범적인 실행 규범을 보여주고 있습니다.)"
 
 #: ../../docs/training_manual/database_concepts/views.rst:58
 msgid ""
@@ -95,7 +99,7 @@ msgstr ":kbd:`ORDER BY` 구문을 추가해서 뷰의 행들이 알파벳 순서
 
 #: ../../docs/training_manual/database_concepts/views.rst:73
 msgid "Dropping a View"
-msgstr "뷰 삭제"
+msgstr "뷰 삭제하기"
 
 #: ../../docs/training_manual/database_concepts/views.rst:75
 msgid "If you no longer need a view, you can delete it like this:"
@@ -109,7 +113,7 @@ msgstr "결론"
 msgid ""
 "Using views, you can save a query and access its results as if it were a "
 "table."
-msgstr "뷰를 이용하면 쿼리를 저장하고, 그 쿼리가 마치 테이블인 것처럼 결과물에 접근할 수 있습니다."
+msgstr "뷰를 이용하면 쿼리를 저장하고, 그 쿼리의 결과물에 마치 쿼리가 테이블인 것처럼 접근할 수 있습니다."
 
 #: ../../docs/training_manual/database_concepts/views.rst:87
 msgid "What's Next?"
@@ -120,5 +124,5 @@ msgid ""
 "Sometimes, when changing data, you want your changes to have effects "
 "elsewhere in the database. The next lesson will show you how to do this."
 msgstr ""
-"데이터 변경 시, 가끔 변경 사항이 데이터베이스의 다른 부분에 영향을 주기를 바랄 수도 있습니다. 다음 강의에서 그 방법을 "
+"데이터를 변경할 때, 가끔 변경 사항이 데이터베이스의 다른 부분에 영향을 주기를 바랄 수도 있습니다. 다음 수업에서 그 방법을 "
 "배워보겠습니다."
