@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:2
 msgid "Lesson: PostGIS Setup"
-msgstr "수업: PostGIS 설정"
+msgstr "수업: PostGIS 설정하기"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:4
 msgid ""
@@ -58,13 +58,13 @@ msgid ""
 "documentation for your platform for help with installation and database "
 "configuration."
 msgstr ""
-"이번 예제에서는 PostGIS 2.1 이후 버전을 사용한다고 가정합니다. 설치 및 데이터베이스 설정은 이전 버전과 다르지만, 이 모듈에서"
+"이번 예제에서는 PostGIS 2.1 이후 버전을 사용한다고 가정합니다. 설치 및 데이터베이스 설정이 이전 버전과 다르지만, 이 강의에서"
 " 소개하는 다른 기능을 실행하는 데 문제는 없을 겁니다. 설치 및 데이터베이스 설정에 대한 도움말은 사용자 플랫폼에 대한 PostGIS "
 "문서를 참조하십시오."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:17
 msgid "Installing under Ubuntu"
-msgstr "우분투 설치"
+msgstr "우분투에 설치하기"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:19
 msgid "Postgis is easily installed from apt."
@@ -81,19 +81,18 @@ msgid ""
 "you can check the version by issuing a ``select PostGIS_full_version();`` "
 "query with psql or another tool."
 msgstr ""
-"사용자의 우분투 버전 및 환경 설정한 저장소에 따라 설치될 정확한 버전이 달라질 것입니다. 설치 후, psql이나 다른 도구에서 "
+"여러분의 우분투 버전 및 환경설정한 저장소에 따라 설치될 정확한 버전이 달라질 것입니다. 설치 후, psql이나 다른 도구를 통해 "
 "``select PostGIS_full_version();`` 쿼리를 실행하면 설치된 버전을 알 수 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:32
 msgid ""
 "To install a specific version (eg, PostgreSQL version 13 and PostGIS 3), you"
 " can use the following commands."
-msgstr ""
-"특정 버전을 (예를 들면 PostgreSQL version 13 및 PostGIS 3을) 설치하려면, 다음 명령어를 사용하면 됩니다."
+msgstr "특정 버전을 (예를 들면 PostgreSQL 13 및 PostGIS 3을) 설치하려면, 다음 명령어를 사용하면 됩니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:46
 msgid "Installing under Windows"
-msgstr "윈도우 설치"
+msgstr "윈도우에 설치하기"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:48
 msgid ""
@@ -121,7 +120,7 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:57
 msgid "Installing on Other Platforms"
-msgstr "다른 플랫폼 설치"
+msgstr "기타 플랫폼에 설치하기"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:59
 msgid ""
@@ -130,11 +129,11 @@ msgid ""
 " Linux distributions"
 msgstr ""
 "`PostGIS 웹사이트 다운로드 페이지 <https://postgis.net/install/>`_ 에 맥OS 및 다른 리눅스 배포판을 "
-"포함한 다른 플랫폼 설치에 대한 정보가 있습니다."
+"포함한 기타 플랫폼 설치에 대한 정보가 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:63
 msgid "Configuring Databases to use PostGIS"
-msgstr "PostGIS를 사용하기 위한 데이터베이스 설정"
+msgstr "PostGIS를 사용하기 위해 데이터베이스 환경설정하기"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:65
 msgid ""
@@ -143,8 +142,8 @@ msgid ""
 "simple as issuing the following command with psql using the address database"
 " from our previous exercise."
 msgstr ""
-"PostGIS 설치가 끝나면 이 확장 프로그램을 사용하기 위해 사용자 데이터베이스를 설정해줘야 합니다. PostGIS 2.0 버전 이상을"
-" 설치했다면, 이전 모듈에서 사용했던 주소 데이터베이스를 사용하는 다음 psql 명령어를 실행해서 손쉽게 설정할 수 있습니다."
+"PostGIS 설치가 끝나면 이 확장 프로그램을 사용하기 위해 사용자 데이터베이스를 환경설정해줘야 합니다. PostGIS 2.0 이상 "
+"버전을 설치했다면, 이전 강의에서 사용했던 주소 데이터베이스를 사용하는 다음 psql 명령어를 실행해서 손쉽게 환경설정할 수 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:74
 msgid ""
@@ -168,7 +167,7 @@ msgid ""
 "order to do this, a number of functions are installed into the database."
 msgstr ""
 "PostGIS를 PostgreSQL의 핵심 기능을 공간 데이터를 다룰 수 있도록 확장하는 데이터베이스 내장 기능들의 집합으로 생각할 수 "
-"있습니다. '다룬다'라는 말은 저장, 추출, 쿼리, 조작을 뜻합니다. 이를 위해, 데이터베이스에 많은 기능들이 설치되어 있습니다."
+"있습니다. '다룬다'라는 말은 저장, 검색, 쿼리, 조작을 뜻합니다. 이를 위해, 데이터베이스에 많은 기능들이 설치되어 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:86
 msgid ""
@@ -179,10 +178,10 @@ msgid ""
 "relating to point. If you are not already connected to the ``address`` "
 "database, do so now. Then run:"
 msgstr ""
-"PostGIS 덕분에 이제 사용자의 PostgreSQL ``address`` 데이터베이스가 공간 데이터를 다룰 수 있게 되었습니다. 다음"
+"PostGIS 덕분에 이제 여러분의 PostgreSQL ``address`` 데이터베이스가 공간 데이터를 다룰 수 있게 되었습니다. 다음"
 " 강의에서 이를 심도 있게 살펴보겠지만, 먼저 간단한 예를 들어보겠습니다. 텍스트에서 포인트를 생성하려 한다고 해봅시다. 먼저 포인트에 "
 "관련된 기능을 찾기 위해 psql 명령어를 사용합니다. 아직 ``address`` 데이터베이스에 접속하지 않았다면 지금 하십시오. 그리고"
-" 다음 명령어를 실행합니다."
+" 다음 명령어를 실행합니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:96
 msgid ""
@@ -195,23 +194,23 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:99
 msgid "Try running this command:"
-msgstr "다음 명령어를 실행해보십시오."
+msgstr "다음 명령어를 실행해보십시오:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:105
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:139
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:206
 msgid "Result:"
-msgstr "결과 :"
+msgstr "결과:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:114
 msgid "Three things to note:"
-msgstr "세 가지 사실을 알 수 있습니다."
+msgstr "세 가지 사실을 알 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:116
 msgid ""
 "We defined a point at position 1,1 (EPSG:4326 is assumed) using "
 ":kbd:`POINT(1 1)`,"
-msgstr ":kbd:`POINT(1 1)` 을 통해 1,1 위치에 (EPSG:4326 투영체를 적용) 포인트를 정의했습니다."
+msgstr ":kbd:`POINT(1 1)` 을 사용해서 (EPSG:4326 투영체를 가정한) 1,1 위치에 포인트를 정의했습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:118
 msgid ""
@@ -228,14 +227,14 @@ msgid ""
 "The resulting row is in the OGC format called 'Well Known Binary' (WKB). We "
 "will look at this format in detail in the next section."
 msgstr ""
-"결과물 행은 'WKB(Well Known Binary)'라는 OGC 포맷으로 되어 있습니다. 다음 강의에서 이 포맷을 자세히 살펴볼 "
+"결과물 행은 'WKB(Well Known Binary)'라는 OGC 포맷으로 되어 있습니다. 다음 수업에서 이 포맷을 자세히 살펴볼 "
 "것입니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:125
 msgid ""
 "To get the results back as text, we can do a quick scan through the function"
 " list for something that returns text:"
-msgstr "결과물을 텍스트로 받아보려면, 텍스트를 반환하는 기능을 찾아 기능 목록을 검색해볼 수 있습니다:"
+msgstr "결과물을 텍스트로 받아보려면, 텍스트를 반환하는 기능을 찾기 위해 기능 목록을 검색해보면 됩니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:132
 msgid ""
@@ -261,7 +260,7 @@ msgstr "다음은 PostGIS 사용법을 자세히 알아보기 전, 마지막 예
 msgid ""
 "What did that do? It created a buffer of 1 degree around our point, and "
 "returned the result as text."
-msgstr "어떤 의미일까요? 이 명령은 포인트 주변에 1˚의 버퍼를 생성하고 그 결과를 텍스트로 반환시킵니다."
+msgstr "어떤 의미일까요? 이 명령은 포인트 주변에 1˚의 버퍼를 생성하고 그 결과를 텍스트로 반환합니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:163
 msgid "Spatial Reference Systems"
