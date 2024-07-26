@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:2
+msgid "Lesson: Spatial Queries"
+msgstr "수업: 공간 쿼리"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:4
 msgid ""
@@ -41,14 +45,14 @@ msgid ""
 " PostGIS in our database, we have additional functions to query our "
 "database."
 msgstr ""
-"공간 쿼리는 다른 데이터베이스 쿼리와 크게 다르지 않습니다. 도형 열도 다른 어떤 데이터베이스 열과 똑같이 사용할 수 있습니다. "
+"공간 쿼리는 다른 데이터베이스 쿼리와 크게 다르지 않습니다. 도형 열도 다른 모든 데이터베이스 열과 똑같이 사용할 수 있습니다. "
 "데이터베이스에 PostGIS를 설치하면, 데이터베이스를 쿼리할 수 있는 추가적인 기능들이 생깁니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:8
 msgid ""
 "**The goal for this lesson:** To see how spatial functions are implemented "
 "similarly to \"normal\" non-spatial functions."
-msgstr "**이 강의의 목표:** 공간 기능이 얼마나 \"일반적인\" 비공간 기능과 비슷하게 시행되는지 보기."
+msgstr "**이 수업의 목표:** 공간 기능이 얼마나 \"일반적인\" 비공간 기능과 비슷하게 구현되는지 알아보기."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:13
 msgid "Spatial Operators"
@@ -58,7 +62,7 @@ msgstr "공간 연산자"
 msgid ""
 "When you want to know which points are within a distance of 2 degrees to a "
 "point(X,Y) you can do this with:"
-msgstr "포인트(X,Y)에서 2˚ 거리 안에 어떤 포인트가 있는지 알고 싶을 경우 다음과 같이 쿼리할 수 있습니다."
+msgstr "포인트(X,Y)에서 2˚ 거리 안에 어떤 포인트가 있는지 알고 싶을 경우 다음과 같이 쿼리할 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:24
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:67
@@ -66,7 +70,7 @@ msgstr "포인트(X,Y)에서 2˚ 거리 안에 어떤 포인트가 있는지 알
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:200
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:301
 msgid "Result:"
-msgstr "결과 :"
+msgstr "결과:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:33
 msgid ""
@@ -75,20 +79,39 @@ msgid ""
 "you did in the section \"View a point as WKT\", above."
 msgstr ""
 "앞의 'the_geom' 값은 이 페이지의 공간을 절약하기 위해 중간에서 잘랐습니다. 사람이 읽을 수 있는 좌표로 포인트를 보려면, 앞의"
-" \"View a point as WKT\" 부분에서 한 작업과 비슷하게 해보십시오."
+" \"포인트를 WKT로 보기\" 부분에서 한 작업과 비슷하게 해보십시오."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:37
 msgid ""
 "How do we know that the query above returns all the points within 2 "
 "*degrees*? Why not 2 *meters*? Or any other unit, for that matter?"
 msgstr ""
-"이 쿼리가 *2˚* 내에 있는 모든 포인트를 반환하는지 어떻게 알 수 있을까요? 왜 2m가 아닐까요? 다른 단위를 쓸 수도 있지 "
+"이 쿼리가 *2˚* 내에 있는 모든 포인트를 반환하는지 어떻게 알 수 있을까요? 왜 *2m* 가 아닐까요? 다른 단위를 쓸 수도 있지 "
 "않을까요?"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:40
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:96
 msgid "Answer"
 msgstr "해답"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:43
+msgid ""
+"The units being used by the example query are degrees, because the CRS that "
+"the layer is using is WGS 84. This is a Geographic CRS, which means that its"
+" units are in degrees. A Projected CRS, like the UTM projections, is in "
+"meters."
+msgstr ""
+"이 예제 쿼리는 도 단위를 사용합니다. 레이어가 사용하는 좌표계가 WGS84이기 때문입니다. WGS84는 지리 좌표계로, 다시 말해 도 "
+"단위를 사용한다는 뜻입니다. UTM 투영체 같은 투영 좌표계가 미터 단위를 사용합니다."
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:47
+msgid ""
+"Remember that when you write a query, you need to know which units the "
+"layer's CRS is in. This will allow you to write a query that will return the"
+" results that you expect."
+msgstr ""
+"여러분이 쿼리를 작성할 때 레이어의 좌표계가 어떤 단위를 사용하는지 알고 있어야 한다는 점을 기억하십시오. 단위를 알고 있어야 여러분이 "
+"기대하는 결과를 반환하는 쿼리를 작성할 수 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:53
 msgid "Spatial Indexes"
@@ -99,8 +122,12 @@ msgid ""
 "We also can define spatial indexes. A spatial index makes your spatial "
 "queries much faster. To create a spatial index on the geometry column use:"
 msgstr ""
-"사용자가 공간 인덱스도 정의할 수 있습니다. 공간 인덱스는 사용자의 공간 쿼리를 더 빠르게 해줍니다. 도형 열에 대해 공간 인덱스를 "
-"생성하려면 다음 선언문을 이용하십시오:"
+"여러분이 공간 인덱스도 정의할 수 있습니다. 공간 인덱스는 공간 쿼리를 더 빠르게 해줍니다. 도형 열에 대해 공간 인덱스를 생성하려면 "
+"다음 선언문을 사용하십시오:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:93
+msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
+msgstr "혼자서 해보세요: :abbr:`★★☆ (중급 수준)`"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:94
 msgid "Modify the cities table so its geometry column is spatially indexed."
@@ -134,7 +161,7 @@ msgid ""
 msgstr ""
 "두 번째로, :kbd:`exercise_data/postgis/` 디렉터리에서 제공하는 데이터를 가져오십시오. 이전 강의에서 배운 "
 "내용대로 하되, 새 데이터베이스에는 새 PostGIS 연결을 생성해야 한다는 것을 기억하십시오. 터미널에서 또는 데이터베이스 관리자를 "
-"통해 가져올 수 있습니다. 다음 데이터베이스 테이블에 파일을 가져오십시오:"
+"통해 데이터를 가져올 수 있습니다. 파일을 다음 데이터베이스 테이블로 가져오십시오:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:131
 msgid ":kbd:`points.shp` into :kbd:`building`"
@@ -142,11 +169,11 @@ msgstr ":kbd:`points.shp` 를 :kbd:`building` 테이블로"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:132
 msgid ":kbd:`lines.shp` into :kbd:`road`"
-msgstr ":kbd:`lines.shp` 파일을 :kbd:`road` 테이블로"
+msgstr ":kbd:`lines.shp` 를 :kbd:`road` 테이블로"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:133
 msgid ":kbd:`polygons.shp` into :kbd:`region`"
-msgstr ":kbd:`polygons.shp` 파일을 :kbd:`region` 테이블로"
+msgstr ":kbd:`polygons.shp` 를 :kbd:`region` 테이블로"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:135
 msgid ""
@@ -156,16 +183,16 @@ msgid ""
 " PostGIS import."
 msgstr ""
 "평상시대로 :guilabel:`Add PostGIS Layers` 대화 창을 통해 이 세 데이터베이스 레이어를 QGIS로 불러오십시오. "
-"이 레이어들의 속성 테이블을 열면, :kbd:`id` 필드와 함께 PostGIS 임포트 과정에서 생성된 :kbd:`gid` 필드를 둘 다"
-" 가지고 있다는 사실을 알 수 있습니다."
+"이 레이어들의 속성 테이블을 열면, :kbd:`id` 필드와 함께 PostGIS 가져오기 과정에서 생성된 :kbd:`gid` 필드를 둘 "
+"다 가지고 있다는 사실을 알 수 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:140
 msgid ""
 "Now that the tables are imported, we can use PostGIS to query the data. Go "
 "back to your terminal (command line) and enter the psql prompt by running::"
 msgstr ""
-"이제 테이블을 임포트했으니, PostGIS를 사용해서 데이터를 쿼리할 수 있습니다. 다시 터미널(커맨드 입력 창)으로 가서 다음 명령을 "
-"실행해서 psql 프롬프트로 들어가십시오."
+"이제 테이블을 가져왔으니, PostGIS를 사용해서 데이터를 쿼리할 수 있습니다. 다시 터미널(명령줄 창)로 가서 다음 명령을 실행해서 "
+"psql 프롬프트로 들어가십시오:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:145
 msgid ""
@@ -175,11 +202,11 @@ msgstr "다음 선택된 선언문들을 시연해서 뷰를 생성하겠습니�
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:149
 msgid "Select by location"
-msgstr "위치에 따른 선택"
+msgstr "위치로 선택하기"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:151
 msgid "Get all the buildings in the KwaZulu region:"
-msgstr "KwaZulu 지역에 있는 모든 건물을 가져오십시오:"
+msgstr "KwaZulu 지역에 있는 모든 건물을 선택하십시오:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:173
 msgid "Or, if we create a view from it:"
@@ -191,15 +218,15 @@ msgstr "QGIS에 뷰를 레이어로 추가해서 볼 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:189
 msgid "Select neighbors"
-msgstr "인접 검색"
+msgstr "이웃 선택하기"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:191
 msgid "Show a list of all the names of regions adjoining the Hokkaido region:"
-msgstr "Hokkaido 지역에 붙어 있는 모든 지역들의 명칭 목록을 가져오십시오:"
+msgstr "Hokkaido 지역에 인접한 모든 지역들의 이름 목록을 봅시다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:211
 msgid "As a view:"
-msgstr "뷰 생성:"
+msgstr "뷰를 생성하려면:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:221
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:266
@@ -213,9 +240,9 @@ msgid ""
 "solve this enigma without getting caught up in the anomalies the data may "
 "have, we could use a buffer intersect instead:"
 msgstr ""
-"오류 지역(Queensland)이 보이십니까? 위상 오류 때문일지도 모릅니다. 이런 오류는 데이터 안에 어떤 잠재적인 문제가 있다고 "
-"경고해주는 것일 수 있습니다. 데이터에 있을지도 모르는 이상을 피해 이 수수께끼를 풀려면, 대신 버퍼 교차(buffer "
-"intersect)를 이용할 수 있습니다:"
+"누락된 지역(Queensland)이 보이십니까? 위상 오류 때문일지도 모릅니다. 이런 오류는 데이터 안에 어떤 잠재적인 문제가 있다고 "
+"경고해주는 것일 수 있습니다. 데이터에 있을지도 모르는 이상을 피해 이 수수께끼를 풀려면, 버퍼 교차(buffer intersect)를 "
+"대신 사용할 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:238
 msgid "This creates a buffer of 100 meters around the region Hokkaido."
@@ -237,30 +264,30 @@ msgid ""
 "that intersects it. However, Hokkaido itself is excluded from this select "
 "statement, because we don't want it; we only want the regions adjoining it."
 msgstr ""
-"이 쿼리에서 다른 어떤 테이블과도 마찬가지로 원래 버퍼 뷰를 사용했습니다. 뷰에 :kbd:`a` 라는 가칭을 부여하고, "
-":kbd:`a.the_geom` 이라는 해당 뷰의 도형 필드를 사용해서 :kbd:`region` 테이블(가칭 :kbd:`b` )에서 뷰와"
-" 교차하는 모든 폴리곤을 선택했습니다. 그러나 Hokkaido 자체는 이 선택 선언문에서 제외되었습니다. 해당 지역이 아니라 인접한 "
-"지역만을 원하기 때문입니다."
+"이 쿼리에서 다른 어떤 테이블과도 마찬가지로 원본 버퍼 뷰를 사용했습니다. 뷰에 :kbd:`a` 라는 별명을 부여하고, 해당 뷰의 "
+":kbd:`a.the_geom` 이라는 도형 필드를 사용해서 :kbd:`region` 테이블(별명 :kbd:`b`)에서 뷰와 교차하는 "
+"모든 폴리곤을 선택했습니다. 그러나 Hokkaido 자체는 이 선택 선언문에서 제외되었습니다. 해당 지역이 아니라 인접한 지역만을 원하기"
+" 때문입니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:271
 msgid ""
 "It is also possible to select all objects within a given distance, without "
 "the extra step of creating a buffer:"
-msgstr "버퍼 생성이라는 추가적인 단계 없이 어떤 주어진 거리 안에 있는 모든 객체를 선택할 수도 있습니다:"
+msgstr "버퍼를 생성한다는 추가 단계 없이 지정한 거리 안에 있는 모든 객체를 선택할 수도 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:283
 msgid ""
 "This achieves the same result, without need for the interim buffer step:"
-msgstr "이렇게 하면 임시적인 버퍼 단계 없이도 동일한 결과를 달성할 수 있습니다."
+msgstr "이렇게 하면 중간 버퍼 단계 없이도 동일한 결과를 달성할 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:290
 msgid "Select unique values"
-msgstr "유일 값 선택"
+msgstr "유일 값 선택하기"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:292
 msgid ""
 "Show a list of unique town names for all buildings in the Queensland region:"
-msgstr "Queensland 지역에 있는 모든 건물들에 대해 유일한 도시 이름 목록을 가져오십시오:"
+msgstr "Queensland 지역에 있는 모든 건물들에 대해 유일한 도시 이름 목록을 봅시다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:314
 msgid "Further examples ..."
@@ -274,7 +301,7 @@ msgstr "결론"
 msgid ""
 "You have seen how to query spatial objects using the new database functions "
 "from PostGIS."
-msgstr "PostGIS의 새로운 데이터베이스 기능을 사용해 공간 오브젝트를 쿼리하는 방법을 배웠습니다."
+msgstr "PostGIS의 새로운 데이터베이스 기능을 사용해서 공간 객체를 쿼리하는 방법을 배웠습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:381
 msgid "What's Next?"
@@ -284,4 +311,4 @@ msgstr "다음은 무엇을 배우게 될까요?"
 msgid ""
 "Next we're going to investigate the structures of more complex geometries "
 "and how to create them using PostGIS."
-msgstr "다음으로 좀 더 복잡한 도형의 구조 및 PostGIS를 써서 생성하는 방법을 알아보겠습니다."
+msgstr "다음으로 좀 더 복잡한 도형들의 구조를 살펴보고 PostGIS를 사용해서 이들을 생성하는 방법을 알아보겠습니다."
