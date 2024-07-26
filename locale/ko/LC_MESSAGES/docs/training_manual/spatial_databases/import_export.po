@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:2
+msgid "Lesson: Import and Export"
+msgstr "수업: 가져오기와 내보내기"
 
 #: ../../docs/training_manual/spatial_databases/import_export.rst:4
 msgid ""
@@ -47,17 +51,84 @@ msgstr ""
 msgid "shp2pgsql"
 msgstr "shp2pgsql"
 
+#: ../../docs/training_manual/spatial_databases/import_export.rst:11
+msgid ""
+"shp2pgsql is a commandline tool to import ESRI Shapefile to the database. "
+"Under Unix, you can use the following command for importing a new PostGIS "
+"table:"
+msgstr ""
+"shp2pgsql은 ESRI 셰이프파일을 데이터베이스로 가져오기 위한 명령줄 도구입니다. 유닉스 환경에서 새 PostGIS 테이블을 "
+"가져오려면 다음 명령어를 사용하면 됩니다:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:20
+msgid "Under Windows, you have to perform the import process in two steps:"
+msgstr "윈도우에서는, 가져오기 과정을 두 단계로 수행해야 합니다:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:27
+msgid "You may encounter this error:"
+msgstr "다음 오류가 발생할 수도 있습니다:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:34
+msgid ""
+"This is a known issue regarding the creation *in situ* of a spatial index "
+"for the data you're importing. To avoid the error, exclude the ``-I`` "
+"parameter. This will mean that no spatial index is being created directly, "
+"and you'll need to create it in the database after the data have been "
+"imported. (The creation of a spatial index will be covered in the next "
+"lesson.)"
+msgstr ""
+"여러분이 가져오는 데이터에 대한 공간 인덱스의 생성 *원위치(in situ)* 와 관련된, 잘 알려진 문제점입니다. 이 오류를 피하려면 "
+"``-I`` 파라미터를 빼십시오. 이렇게 하면 공간 인덱스를 자동으로 생성하지 않고, 데이터를 가져온 다음 여러분이 데이터베이스에 직접 "
+"생성해줘야 합니다. (공간 인덱스 생성에 대해서는 다음 수업에서 배울 것입니다.)"
+
 #: ../../docs/training_manual/spatial_databases/import_export.rst:41
 msgid "pgsql2shp"
 msgstr "pgsql2shp"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:43
+msgid ""
+"pgsql2shp is a commandline tool to export PostGIS Tables, Views or SQL "
+"select queries. To do this under Unix:"
+msgstr ""
+"pgsql2shp는 PostGIS 테이블, 뷰, 또는 SQL 선택 쿼리를 내보내기 위한 명령줄 도구입니다. 유닉스 환경에서 이들을 "
+"내보내려면:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:51
+msgid "To export the data using a query:"
+msgstr "쿼리를 사용해서 데이터를 내보내려면:"
 
 #: ../../docs/training_manual/spatial_databases/import_export.rst:59
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
 
+#: ../../docs/training_manual/spatial_databases/import_export.rst:61
+msgid ""
+"ogr2ogr is a very powerful tool to convert data into and from postgis to "
+"many data formats. ogr2ogr is part of the GDAL library and has to be "
+"installed separately. To export a table from PostGIS to GML, you can use "
+"this command:"
+msgstr ""
+"ogr2ogr는 수많은 데이터 포맷들을 변환해서 PostGIS에 가져오거나 PostGIS에서 내보내기 위한 매우 강력한 도구입니다. "
+"ogr2ogr는 GDAL 라이브러리의 일부로써, 개별적으로 설치해줘야 합니다. PostGIS에서 테이블을 GML으로 내보내려면, 다음 "
+"명령어를 사용하면 됩니다:"
+
 #: ../../docs/training_manual/spatial_databases/import_export.rst:71
 msgid "DB Manager"
 msgstr "DB 관리자"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:73
+msgid ""
+"You may have noticed another option in the :guilabel:`Database` menu labeled"
+" :guilabel:`DB Manager`. This is a tool that provides a unified interface "
+"for interacting with spatial databases including PostGIS. It also allows you"
+" to import and export from databases to other formats. Since the next module"
+" is largely devoted to using this tool, we will only briefly mention it "
+"here."
+msgstr ""
+":guilabel:`Database` 메뉴에 있는 :guilabel:`DB Manager` 라는 또다른 옵션을 눈치챘을 수도 있겠네요. "
+"DB 관리자는 PostGIS를 포함하는 공간 데이터베이스와 쌍방향 작업을 하기 위한 통합 인터페이스를 제공하는 도구입니다. 데이터베이스에"
+" 다른 포맷들을 가져오거나 데이터베이스에서 다른 포맷들로 내보낼 수 있게도 해줍니다. 다음 강의에서 이 도구를 중점적으로 사용할 것이기 "
+"때문에, 여기에서는 간단하게 언급만 해두겠습니다."
 
 #: ../../docs/training_manual/spatial_databases/import_export.rst:82
 msgid "In Conclusion"
@@ -69,8 +140,8 @@ msgid ""
 "various ways. Especially when using disparate data sources, you will "
 "probably use these functions (or others like them) on a regular basis."
 msgstr ""
-"데이터베이스에(서) 데이터를 임포트하거나 엑스포트하는 방법은 여러 가지가 있습니다. 특히 서로 전혀 다른 데이터소스를 이용할 경우, "
-"상시적으로 이 기능들, 또는 다른 비슷한 기능들을 사용하게 될 것입니다."
+"데이터베이스에 데이터를 가져오거나 데이터베이스에서 내보내는 방법은 여러 가지가 있습니다. 특히 서로 전혀 다른 데이터 소스를 이용할 "
+"경우, 이 기능들을 (또는 다른 비슷한 기능들을) 상시적으로 사용하게 될 것입니다."
 
 #: ../../docs/training_manual/spatial_databases/import_export.rst:89
 msgid "What's Next?"
