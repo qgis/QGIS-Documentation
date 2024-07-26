@@ -32,7 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:2
+msgid "Lesson: Geometry Construction"
+msgstr "수업: 도형 작성하기"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:4
 msgid ""
@@ -42,19 +46,19 @@ msgid ""
 "however, understanding how they are formulated can be handy for writing "
 "queries and understanding how the database is assembled."
 msgstr ""
-"이 강의에서 우리는 SQL로 단순한 도형을 구성하는 방법에 대해 좀 더 깊이 알아볼 것입니다. 실제 상황에서는 아마도 QGIS 같은 "
-"GIS의 디지타이즈 작업 도구를 사용해서 복잡한 도형을 생성할 테지만, 도형이 어떻게 구성되는지 이해한다면 쿼리 작성 및 데이터베이스가 "
+"이 수업에서 우리는 SQL로 단순 도형을 작성하는 방법에 대해 좀 더 깊이 알아볼 것입니다. 실제 상황에서는 아마도 QGIS 같은 "
+"GIS의 디지타이즈 작업 도구를 사용해서 복잡 도형을 생성할 테지만, 도형이 어떻게 작성되는지 이해한다면 쿼리를 작성하고 데이터베이스가 "
 "어떻게 조성되는지 이해하는 데 도움이 될 수 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:10
 msgid ""
 "**The goal of this lesson:** To better understand how to create spatial "
 "entities directly in PostgreSQL/PostGIS."
-msgstr "**이 강의의 목표:** PostgreSQL/PostGIS에서 직접 공간 엔티티를 생성하는 방법을 더 잘 이해하기."
+msgstr "**이 수업의 목표:** PostgreSQL/PostGIS에서 공간 엔티티를 직접 생성하는 방법을 더 잘 이해하기."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:15
 msgid "Creating Linestrings"
-msgstr "라인스트링 생성"
+msgstr "라인스트링 생성하기"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:17
 msgid ""
@@ -63,13 +67,17 @@ msgid ""
 " an entry in the geometry_columns table."
 msgstr ""
 ":kbd:`address` 데이터베이스로 돌아가서, 'streets' 테이블을 다른 테이블과 일치시켜봅시다. 다시 말하자면 도형에 제약 "
-"조건을 걸고, 'geometry_columns' 테이블에 인덱스 및 항목을 추가해봅시다."
+"조건을 걸고, 'geometry_columns' 테이블에 인덱스와 항목을 추가해봅시다."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:22
+msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
+msgstr "혼자서 해보세요: :abbr:`★★☆ (중급 수준)`"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:24
 msgid ""
 "Modify the :kbd:`streets` table so that it has a geometry column of type "
 "ST_LineString."
-msgstr ":kbd:`streets` 테이블을 수정해서 'ST_LineString' 유형의 도형 열을 생성하십시오."
+msgstr ":kbd:`streets` 테이블이 'ST_LineString' 유형의 도형 열을 가지도록 수정하십시오."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:26
 msgid ""
@@ -80,7 +88,7 @@ msgstr "도형 열 테이블에 수반되는 업데이트를 적용해야 합니
 msgid ""
 "Also add a constraint to prevent any geometries being added that are not "
 "LINESTRINGS or null."
-msgstr "또 LINESTRINGS 또는 null이 아닌 도형이 추가되는 일을 방지하기 위해 제약 조건을 추가하십시오."
+msgstr "또 LINESTRINGS 또는 NULL이 아닌 도형이 추가되는 일을 방지하기 위해 제약 조건을 추가하십시오."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:30
 msgid "Create a spatial index on the new geometry column"
@@ -95,7 +103,7 @@ msgstr "해답"
 msgid ""
 "Now let's insert a linestring into our streets table. In this case we will "
 "update an existing street record:"
-msgstr "이제 'streets' 테이블에 라인스트링을 인서트해봅시다. 이 경우, 다음과 같이 기존 도로 레코드를 업데이트할 것입니다:"
+msgstr "이제 'streets' 테이블에 라인스트링을 삽입해봅시다. 이 경우, 다음과 같이 기존 도로 레코드를 업데이트할 것입니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:57
 msgid ""
@@ -109,11 +117,11 @@ msgstr ""
 msgid ""
 "Now create some more streets entries - some in QGIS and some from the "
 "command line."
-msgstr "이제 QGIS에서 그리고 커맨드 입력 창에서 더 많은 도로 항목을 생성하십시오."
+msgstr "이제 QGIS에서 그리고 명령줄 창에서 더 많은 도로 항목을 생성해보십시오."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:65
 msgid "Creating Polygons"
-msgstr "폴리곤 생성"
+msgstr "폴리곤 생성하기"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:67
 msgid ""
@@ -121,8 +129,8 @@ msgid ""
 "definition, polygons have at least four vertices, with the last and first "
 "being co-located:"
 msgstr ""
-"폴리곤 생성 작업도 아주 쉽습니다. 다만 한 가지, 폴리곤은 정의상 적어도 네 꼭짓점을 가지며, 첫 번째와 마지막 꼭짓점이 동일한 위치에"
-" 있다는 사실을 기억해야 합니다:"
+"폴리곤 생성 작업도 매우 쉽습니다. 다만 한 가지, 폴리곤은 정의상 적어도 네 꼭짓점을 가지며, 처음과 마지막 꼭짓점이 동일한 위치에 "
+"있다는 사실을 기억해야 합니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:75
 msgid ""
@@ -131,7 +139,7 @@ msgid ""
 "instance"
 msgstr ""
 "폴리곤의 좌표 목록에 이중 괄호를 사용해야 합니다. 이렇게 하면 서로 연결되지 않은 복수의 영역을 가진 복잡한 폴리곤을 추가할 수 "
-"있습니다. 다음은 그 예입니다."
+"있습니다. 다음이 그 예입니다."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:87
 msgid ""
@@ -144,11 +152,11 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:93
 msgid "Exercise: Linking Cities to People"
-msgstr "예제 : 도시와 인물을 연결"
+msgstr "예제 : 도시와 인물을 연결하기"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:95
 msgid "For this exercise you should do the following:"
-msgstr "이 예제를 위해 다음 단계를 거쳐야 합니다."
+msgstr "이 예제를 위해 다음 단계를 거쳐야 합니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:97
 msgid "Delete all data from your people table."
@@ -158,7 +166,7 @@ msgstr "'people' 테이블에서 모든 데이터를 삭제하십시오."
 msgid ""
 "Add a foreign key column to people that references the primary key of the "
 "cities table."
-msgstr "'people' 테이블에 'cities' 테이블의 기본 키를 참조하는 외래 키를 추가하십시오."
+msgstr "'people' 테이블에 'cities' 테이블의 기본 키를 참조하는 외래 키 열을 추가하십시오."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:100
 msgid "Use QGIS to capture some cities."
@@ -168,31 +176,52 @@ msgstr "QGIS를 사용해 몇몇 도시를 디지타이즈하십시오."
 msgid ""
 "Use SQL to insert some new people records, ensuring that each has an "
 "associated street and city."
-msgstr "SQL을 이용해서 새 인물 레코드를 몇 개 인서트하고, 각 레코드가 관련 도로 및 도시 정보를 갖고 있는지 확인하십시오."
+msgstr "SQL을 이용해서 새로운 사람 레코드를 몇 개 삽입하고, 각 레코드가 관련 도로 및 도시 정보를 갖고 있는지 확인하십시오."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:104
 msgid "Your updated people schema should look something like this:"
-msgstr "사용자가 업데이트한 'people' 스키마가 다음과 비슷해야 합니다:"
+msgstr "여러분이 업데이트한 'people' 테이블의 스키마가 다음처럼 보여야 합니다:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:140
+msgid "(capture cities in QGIS)"
+msgstr "(QGIS에서 디지타이즈한 도시들)"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:168
+msgid "If you're getting the following error message:"
+msgstr "다음과 같은 오류 메시지가 뜨는 경우:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:176
+msgid ""
+"then it means that while experimenting with creating polygons for the cities"
+" table, you must have deleted some of them and started over. Just check the "
+"entries in your cities table and use any :guilabel:`id` which exists."
+msgstr ""
+"'cities' 테이블에 폴리곤을 생성해보는 도중에 몇몇 폴리곤을 삭제하고 다시 시작했음이 틀림없다는 뜻입니다. 'cities' 테이블에"
+" 있는 항목들을 확인하고 존재하는 모든 :guilabel:`id` 를 사용하십시오."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:183
 msgid "Looking at Our Schema"
-msgstr "사용자 스키마 살펴보기"
+msgstr "스키마 살펴보기"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:185
 msgid "By now our schema should be looking like this:"
-msgstr "이 시점에서 사용자의 스키마가 이렇게 보여야 합니다."
+msgstr "이 시점에서 여러분의 스키마가 이렇게 보여야 합니다:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:192
+msgid "Try Yourself: :abbr:`★★★ (Advanced level)`"
+msgstr "혼자서 해보세요: :abbr:`★★★ (고급 수준)`"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:194
 msgid ""
 "Create city boundaries by computing the minimum convex hull of all addresses"
 " for that city and computing a buffer around that area."
 msgstr ""
-"해당 도시의 주소를 모두 포함하는 최소 컨벡스 헐(minimum convex hull) 영역 및 해당 영역 주변의 버퍼를 계산해서 도시 "
+"해당 도시의 주소를 모두 포함하는 최소 볼록 껍질(minimum convex hull) 영역 및 해당 영역 주변의 버퍼를 계산해서 도시 "
 "경계를 생성하십시오."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:199
 msgid "Access Sub-Objects"
-msgstr "하위 오브젝트에 접근"
+msgstr "하위 객체에 접근하기"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:201
 msgid ""
@@ -201,8 +230,8 @@ msgid ""
 "point of every polygon geometry in the table myPolygonTable, you have to do "
 "this in this way:"
 msgstr ""
-"SFS 모델 기능을 통해 SFS 도형의 하위 오브젝트에 접근할 수 있는 광범위한 옵션을 쓸 수 있습니다. 'myPolygonTable' "
-"테이블의 모든 폴리곤 도형의 첫 번째 꼭짓점을 선택하고 싶다면, 다음과 같은 방법을 사용해야 합니다."
+"SFS 모델 기능을 사용하면, SFS 도형의 하위 객체에 접근할 수 있는 광범위한 옵션을 쓸 수 있습니다. 'myPolygonTable'"
+" 테이블의 모든 폴리곤 도형의 첫 번째 꼭짓점을 선택하고 싶다면, 다음과 같은 방법을 사용해야 합니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:206
 msgid "Transform the polygon boundary to a linestring:"
@@ -214,30 +243,30 @@ msgstr "그 결과 생성된 라인스트링의 첫 번째 꼭짓점을 선택�
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:224
 msgid "Data Processing"
-msgstr "데이터 처리"
+msgstr "데이터 처리 작업"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:226
 msgid ""
 "PostGIS supports all OGC SFS/MM standard conform functions. All these "
 "functions start with ``ST_``."
 msgstr ""
-"PostGIS는 OGC SFS/MM 표준을 따르는 모든 기능을 지원합니다. 이 기능들의 명칭은 모두 :kbd:`ST_` 로 시작합니다."
+"PostGIS는 OGC SFS/MM 표준을 준수하는 모든 함수를 지원합니다. 이 함수들의 이름은 모두 ``ST_`` 로 시작합니다."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:230
 msgid "Clipping"
-msgstr "클리핑"
+msgstr "잘라내기"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:232
 msgid ""
 "To clip a subpart of your data you can use the ``ST_INTERSECT()`` function. "
 "To avoid empty geometries, use:"
 msgstr ""
-":kbd:`ST_INTERSECT()` 기능을 사용해서 사용자 데이터의 하위 부분을 오려낼 수 있습니다. 비어 있는 도형을 오려내지 "
-"않으려면 다음 조건문을 사용하십시오:"
+":kbd:`ST_INTERSECT()` 함수를 사용하면 데이터의 하위 부분을 잘라낼 수 있습니다. 비어 있는 도형을 잘라내는 일을 "
+"피하려면, 다음 조건문을 사용하십시오:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:253
 msgid "Building Geometries from Other Geometries"
-msgstr "다른 도형에서 도형 생성"
+msgstr "다른 도형으로부터 도형 작성하기"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:255
 msgid ""
@@ -246,14 +275,14 @@ msgid ""
 " timestamp, such as the one you get when you capture waypoints with a GPS "
 "receiver."
 msgstr ""
-"어떤 주어진 포인트 테이블에서 라인스트링을 생성하고자 합니다. 포인트의 순서는 :kbd:`id` 로 정의됩니다. 또다른 배열 방법으로, "
-"GPS 수신기로 웨이포인트를 캡처할 때 얻게 되는 것과 같은 타임스탬프를 쓸 수도 있습니다."
+"지정한 포인트 테이블로부터 라인스트링을 생성하고자 합니다. 포인트의 순서는 포인트의 :kbd:`id` 로 정의됩니다. 또다른 정렬 "
+"방법으로, GPS 수신기로 웨이포인트를 캡처할 때 얻게 되는 것과 같은 타임스탬프를 쓸 수도 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:263
 msgid ""
 "To create a linestring from a new point layer called 'points', you can run "
 "the following command:"
-msgstr "'points' 라는 새 포인트 레이어에서 라인스트링을 생성하려면, 다음 명령어를 실행하면 됩니다:"
+msgstr "'points' 라는 새 포인트 레이어로부터 라인스트링을 생성하려면, 다음 명령어를 실행하면 됩니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:275
 msgid ""
@@ -266,33 +295,33 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:283
 msgid "Geometry Cleaning"
-msgstr "도형 청소"
+msgstr "도형 정리하기"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:285
 msgid ""
 "You can get more information for this topic in `this blog entry "
 "<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_."
 msgstr ""
-"이 주제에 대해 `이 블로그 포스트 "
-"<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_ 에서 더 "
-"자세한 정보를 얻을 수 있습니다."
+"`이 블로그 포스트 "
+"<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_ 에서 이 "
+"주제에 대한 더 자세한 정보를 얻을 수 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:289
 msgid "Differences between tables"
-msgstr "테이블 사이의 차이점"
+msgstr "테이블들 간의 차이점"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:291
 msgid ""
 "To detect the difference between two tables with the same structure, you can"
 " use the PostgreSQL keyword ``EXCEPT``:"
 msgstr ""
-"동일한 구조를 가진 두 테이블 간의 차이점을 알아내려면 PostgreSQL 키워드인 :kbd:`EXCEPT` 를 사용하면 됩니다:"
+"동일한 구조를 가진 두 테이블들 간의 차이점을 알아내려면 PostgreSQL 키워드인 ``EXCEPT`` 를 사용하면 됩니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:300
 msgid ""
 "As the result, you will get all records from table_a which are not stored in"
 " table_b."
-msgstr "이렇게 하면 table_a의 레코드 가운데 table_b에는 없는 모든 레코드를 얻을 수 있습니다."
+msgstr "이렇게 하면 'table_a'의 레코드 가운데 'table_b'에는 없는 모든 레코드를 얻을 수 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:304
 msgid "Tablespaces"
@@ -302,13 +331,13 @@ msgstr "테이블스페이스"
 msgid ""
 "You can define where postgres should store its data on disk by creating "
 "tablespaces:"
-msgstr "사용자가 테이블스페이스를 생성해서 PostgreSQL이 디스크 어디에 데이터를 저장해야 하는지 정의할 수 있습니다:"
+msgstr "여러분이 테이블스페이스를 생성해서 PostgreSQL이 디스크 상의 어디에 데이터를 저장해야 하는지 정의할 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:313
 msgid ""
 "When you create a database, you can then specify which tablespace to use "
 "e.g.::"
-msgstr "데이터베이스 생성 시, 다음과 같은 명령어를 통해 사용할 테이블스페이스를 지정할 수 있습니다:"
+msgstr "데이터베이스를 생성할 때, 다음과 같은 명령어를 사용해서 사용할 테이블스페이스를 지정할 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:318
 msgid "In Conclusion"
@@ -326,4 +355,4 @@ msgstr ""
 "PostGIS 선언문을 사용해서 좀 더 복잡한 도형을 생성하는 방법을 배웠습니다. 이 강의는 대부분 GIS 프론트엔드를 통해 지리공간 "
 "기능이 활성화된 데이터베이스와 작업할 때를 위해 사용자의 관습적인 지식을 향상시키기 위한 것이라는 사실을 기억하십시오. 보통 이런 "
 "선언문들을 수작업으로 입력해야 할 경우는 거의 없지만, 도형의 구조를 대강이나마 아는 것은 GIS를 사용할 때 도움이 될 것입니다. 특히"
-" 구조를 모르는 경우 암호문처럼 보일 오류를 맞닥뜨렸을 때 말입니다."
+" 도형 구조를 모르는 경우 암호문처럼 보일 오류를 맞닥뜨렸을 때 말입니다."
