@@ -1179,7 +1179,8 @@ Network settings
 * Define :guilabel:`Default expiration period for WMS-C/WMTS tiles (hours)` -
   default is 24
 * Define :guilabel:`Max retry in case of tile or feature request errors`
-* Define :guilabel:`User-Agent`
+* Define :guilabel:`User-Agent` which defaults to ``Mozilla/5.0``.
+  In case of customization, a ``QGIS/{version}/{OS}`` text will be appended to the new value. 
 
 .. _figure_network_tab:
 
